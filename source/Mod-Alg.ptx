@@ -1,0 +1,4138 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <docinfo>
+    <macros>
+      % Operators
+      \newcommand{\ann}{\operatorname{ann}}
+      \newcommand{\Ass}{\operatorname{Ass}}
+      \newcommand\Aut{\operatorname{Aut}}
+      \newcommand\can{{\mathrm {can}}}
+      \newcommand\char{\operatorname{char}}
+      \newcommand\cp{\operatorname{CharPoly}}
+      \newcommand\codim{\operatorname{codim}}
+      \def\coker{\operatorname{coker}}
+      \DeclareMathOperator*{\colim}{colim}
+      \def\cont{\operatorname{cont}}
+      \def\diam{\operatorname{diam}}
+      \def\dm{\operatorname{dim}}
+      \DeclareMathOperator{\edim}{embdim}
+      \def\End{\operatorname{End}}
+      \def\eval{\operatorname{eval}}
+      \def\Ext{\operatorname{Ext}}
+      \def\Frac{\operatorname{Frac}}
+      \def\Fun{\operatorname{Fun}}
+      \def\Gal{\operatorname{Gal}}
+      \def\gcd{\operatorname{gcd}}
+      \newcommand{\GL}{\operatorname{GL}}
+      \newcommand{\ht}{\operatorname{height}}
+      \def\Hom{\operatorname{Hom}}
+      \def\im{\operatorname{im}}
+      \def\Inn{\operatorname{Inn}}
+      \def\ker{\operatorname{ker}}
+      \def\lcm{\operatorname{lcm}}
+      \def\Mat{\operatorname{Mat}}
+      \newcommand{\Min}{\operatorname{Min}}
+      \def\mp{\operatorname{MinPoly}}
+      \def\mSpec{\operatorname{mSpec}}
+      \def\MSpec{\operatorname{MSpec}}
+      \def\null{\operatorname{Nul}}
+      \DeclareMathOperator{\ns}{nullspace}
+      \newcommand{\opp}{\operatorname{opp}}
+      \def\Orb{\operatorname{Orb}}
+      \def\Out{\operatorname{Out}}
+      \def\Perm{\operatorname{Perm}}
+      \def\ptstab{\operatorname{PtStab}}
+      \def\rad{\operatorname{rad}}
+      \DeclareMathOperator{\range}{range}
+      \def\rank{\operatorname{rank}}
+      \def\res{\operatorname{res}}
+      \def\setstab{\operatorname{SetStab}}
+      \def\sign{{\operatorname{sign}}}
+      \newcommand{\SL}{\operatorname{SL}}
+      \def\Span{\operatorname{Span}}
+      \def\Spec{\operatorname{Spec}}
+      \def\Stab{\operatorname{Stab}}
+      \DeclareMathOperator{\Supp}{Supp}
+      \def\Syl{\operatorname{Syl}}
+      \def\Tor{\operatorname{Tor}}
+      \def\trace{\operatorname{trace}}
+      \def\uSpec{\operatorname{\underline{Spec}}}
+      %Letters - Mathbb
+      \newcommand{\A}{\mathbb A}
+      \newcommand{\B}{\mathbb B}
+      \newcommand{\C}{\mathbb C}
+      \newcommand{\D}{\mathbb D}
+      \newcommand{\E}{\mathbb E}
+      \newcommand{\F}{\mathbb F}
+      \newcommand{\G}{\mathbb G}
+      \newcommand{\H}{\mathbb H}
+      \newcommand{\I}{\mathbb I}
+      \newcommand{\J}{\mathbb J}
+      \newcommand{\K}{\mathbb K}
+      \newcommand{\L}{\mathbb L}
+      \newcommand{\M}{\mathbb M}
+      \newcommand{\N}{\mathbb N}
+      \newcommand{\O}{\mathbb O}
+      \newcommand{\P}{\mathbb P}
+      \newcommand{\Q}{\mathbb Q}
+      \newcommand{\R}{\mathbb R}
+      \newcommand{\S}{\mathbb S}
+      \newcommand{\T}{\mathbb T}
+      \newcommand{\U}{\mathbb U}
+      \newcommand{\V}{\mathbb V}
+      \newcommand{\W}{\mathbb W}
+      \newcommand{\X}{\mathbb X}
+      \newcommand{\Y}{\mathbb Y}
+      \newcommand{\Z}{\mathbb Z}
+      
+    </macros>
+    <latex-image-preamble>
+      \usepackage{tikz}
+    </latex-image-preamble>
+  </docinfo>
+
+  <book xml:id="compendium-makkematica">
+    <title>Compendium Makkematica</title>
+    <!-- <subtitle>All in one Place</subtitle> -->
+
+    <frontmatter xml:id="frontmatter">
+      <titlepage>
+        <author>
+          <personname>Sam Macdonald</personname>
+          <department>Department of Mathematics</department>
+          <institution>University of Nebraska -- Lincoln</institution>
+        </author>
+        <date>
+          <today />
+        </date>
+      </titlepage>
+
+      <colophon>
+
+        <website>
+          <name>
+            <c>smakdonald.github</c>
+          </name>
+          <address>https://smakdonald.github.io/index.html</address>
+        </website>
+
+        <copyright>
+          <year>2020<ndash />2023</year>
+          <holder>Sam Macdonald</holder>
+          <shortlicense> 
+            This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit <url href="http://creativecommons.org/licenses/by-sa/4.0/" visual="creativecommons.org/licenses/by-sa/4.0"> CreativeCommons.org</url>
+          </shortlicense>
+        </copyright>
+      </colophon>
+
+    </frontmatter>
+
+    <part xml:id="part-group">
+      <title>Group Theory</title>
+      
+    <!--
+    <xi:include href="./intro-groups.xml" />
+    -->
+
+      <chapter xml:id="intro-groups">
+        <title>Groups</title>
+
+        <section xml:id="group-first-definitions">
+          <title>First Definitions </title>
+
+          <subsection xml:id="subsec-grps">
+            <title>Groups</title>
+
+
+            <definition xml:id="def-binop">
+              <title>Binary Operation</title>
+              <statement>
+                <p>
+                  A <em>binary operation</em> on a set <m>S</m> is a function
+                  <me>
+                    -\cdot-:S\times S\to S,\text{given by } (x,y)\to x\cdot y.
+                  </me>
+                </p>
+              </statement>
+            </definition>
+    
+            <remark>
+              We often write <m>xy</m> instead of <m>x\cdot y</m> for simplicity. 
+            </remark>
+    
+            <definition xml:id="def-group">
+              <statement>
+                <p>
+                  A <em>group</em> is a pair <m>(G, \cdot)</m> where <m>G</m> is a set and <m>\cdot</m> is a <xref text="title" ref="def-binop"/> on <m>G</m>, called <em>group multiplication</em>, satisfying the following properties:
+                  <ol>
+                    <li>
+                      <p>
+                        (Associativity) for all <m>x,y,z\in G</m> we have <m>(x\cdot y)\cdot z=x\cdot (y\cdot z)</m> 
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        (Identity Element) there exists <m>e\in G</m> such that <m>e·x=x·e=x</m> for all <m>x\in G</m>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        (Inverses) for each <m>x\in G</m>, there is an element <m>y\in G</m> such that <m>xy=e=yx</m>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+            </definition>
+    
+            <remark>
+              Although a group is a pair, we will usually refer to the group by only naming the underlying set, <m>G</m>.
+            </remark>
+    
+            <remark>
+              We say that <q><m>S</m> is closed under the operation <m>\cdot</m></q>, when we want to emphasize that for any <m>x,y\in S</m> the result of the operation, <m>xy</m>, is an element of <m>S</m>. However note that closure is really part of the definition of a binary operation on a set, and it is implicitly assumed whenever we consider such an operation.
+            </remark>
+    
+            <definition xml:id="def-abelian">
+              <statement>
+                <p>
+                  A group <m>G</m> is an <em>abelian group</em> if <m>\cdot</m> is commutative; i.e., <m>x \cdot y = y \cdot x</m> for all <m>x,y \in G</m>. Often, but not always, the group operation for an abelian group is written as <m>+</m> instead of <m>\cdot</m>. In this case the inverse of an element <m>x</m> is written <m>-x</m>.
+                </p>
+              </statement>
+            </definition>
+
+            <proposition xml:id="prop-unique-identity">
+              <statement>
+                <p>
+                  In a group <m>G</m>, the element <m>e</m> satisfying the second axiom of <xref ref="def-group" /> is unique, and we thus refer to it as the <em>identity element</em> of <m>G</m>.
+                </p>
+              </statement>
+              <proof>
+                <p>
+                  If <m>ex = x = xe</m> and <m>e'x = x = xe'</m> for all <m>x</m>, then <m>e = ee' = e'</m>.
+                </p>
+              </proof>
+            </proposition>
+    
+            <proposition xml:id="prop-unique-inverse">
+              <statement>
+                <p>
+                  In a group <m>G</m>, for each <m>x</m>, the element <m>y</m> satisfying the last axiom of <xref ref="def-group" /> is unique.
+                </p>
+              </statement>
+              <proof>
+                <p>
+                  Proof. For a given <m>x</m>, if <m>yx = xy = e</m> and <m>zx = xz = e</m> fo some <m>y</m> and <m>z</m>, then <m>z = ez = (yx)z = y(xz) = ye = y</m>.
+                </p>
+              </proof>
+            </proposition>
+    
+            <remark>
+              We will call the element <m>y</m> satisfying the last axiom of <xref ref="def-group" /> <em>the inverse</em> of <m>x</m> and we will henceforth denote it by <m>x^{-1}</m>.
+            </remark>  
+    
+            <lemma xml:id="lem-group-props">
+              <title>Properties of Groups</title>
+              
+              
+              <statement>
+                <p>
+                  If <m>G</m> is a group and <m>x,y,z, a_1,\ldots,a_n \in G</m>, then:
+                  <ol>
+                    <li>
+                      <p>
+                        if <m>xy = xz</m>, then <m>y=z</m>.
+                      </p>
+                    </li>
+            
+                    <li>
+                      <p>
+                        if <m>yx = zx</m>, then <m>y = z</m>.
+                      </p>
+                    </li>
+            
+                    <li>
+                      <p>
+                        <m>(x^{-1})^{-1} = x</m>.
+                      </p>
+                    </li>
+            
+                    <li>
+                      <p>
+                        <m>(a_1 \dots a_n)^{-1} = a_n^{-1} \dots a_1^{-1}</m>.
+                      </p>
+                    </li>
+            
+                    <li>
+                      <p>
+                        <m>(x^{-1}yx)^n = x^{-1}y^nx</m>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+              <proof>
+                <p>
+                  
+                </p>
+              </proof>
+            </lemma>
+                  
+          </subsection>
+
+          <subsection xml:id="subsec-gpex">
+            <title>Examples</title>
+
+            <proposition xml:id="prop-gpex">
+              <statement>
+                <p>
+                  Prove that the following are groups:
+                    <ul>
+                      <li>
+                        <p>
+                          The <term>trivial subgroup</term> is the group with a single element <m>\{e\}</m>
+                        </p>
+                      </li>
+
+                      <li>
+                        <p>
+                          For any set <m>S</m>, the permutations on <m>S</m> <me>\rm{Perm}(S)=\{f:S\to S \ | \ f \text{ is a bijection}\}</me> form a non-abelian group under composition.
+                        </p>
+                      </li>
+
+                      <li>
+                        <p>
+                          For any field <m>F</m> and positive integer <m>n</m>, let <me>\operatorname{GL}_n(F)=\{ \text{invertible }  n \times n \text{ matrices with entries in } F\}.</me> By invertible I mean those matrices that have two-sided inverses, but in turns out that if an <m>n \times n</m> matrix has a left inverse then it it is automatically a right inverse too, and vice versa. Then <m>\operatorname{GL}_n(F)</m> is a non-abelian group under matrix multiplication.
+                        </p>
+                      </li>
+                    </ul>
+
+                    <li>
+                      <p>
+                        For any <m>n</m>, let <m>\mathbb{Z}/(n)</m> denote the integers modulo <m>n</m>. Then <m>(\mathbb{Z}/(n), +)</m> is an abelian group where <m>+</m> denotes addition modulo <m>n</m>.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        For any field <m>F</m> (e.g., <m>\mathbb{Q}</m>, <m>{\mathbb{R}}</m>, <m>\mathbb{C}</m> or <m>\mathbb{Z}/p</m> for a prime <m>p</m>), the set <m>F^\times := F \setminus \{0\}</m> is an abelian group under the usual multiplication.
+                      </p>
+                    </li>
+                </p>
+              </statement>
+            </proposition>
+
+            <problem>
+              <statement>
+                <p>
+                  These example are infinite if <m>F</m> is infinite, but if we take <m>F = \mathbb{Z}/p</m> for a prime <m>p</m>, then <m>\operatorname{GL}_n(\mathbb{Z}/p)</m> is a finite group. Can you find its cardinality?
+                </p>
+              </statement>
+              <solution>
+                <p>
+                  
+                </p>
+              </solution>
+            </problem>
+
+            <problem>
+              <statement>
+                <p>
+                  Give an example of a pair <m>(G,\cdot)</m> that satisfies axioms 1 and 2 of <xref ref="def-group" /> and an element of <m>G</m> that has a <em>left</em> inverse but not a <em>right</em> inverse.
+                </p>
+              </statement>
+              <solution>
+                <p>
+    
+                </p>
+              </solution>
+            </problem>
+
+            <theorem xml:id="thm-dirprop-gp">
+              <statement>
+                <p>
+                  
+                </p>
+              </statement>
+            </theorem>
+            
+            
+          </subsection>
+
+          <subsection xml:id="subsec-d2n">
+            <title>Dihedral Groups</title>
+            
+            <p>
+              We now discuss the important example of dihedral groups in detail.
+            </p>
+    
+    
+            <definition xml:id="def-iso-and-sym">
+              <statement>
+                <p>
+                  For any integer <m>n \geq 3</m>, let <m>P_n</m> denote a regular <m>n</m>-gon.
+    
+                  An <em>isometry</em> of the plane is a function <m>f: {\mathbb{R}}^2 \to {\mathbb{R}}^2</m> that is a bijection and preserves the Euclideal distance <m>(d(f(A),f(B))=d(A,B)</m> for any <m>A,B\in {\mathbb{R}}^2</m>).
+    
+                  A <em>symmetry</em> of <m>P_n</m> is an isometry that maps <m>P_n</m> to itself.
+                </p>
+              </statement>
+            </definition>
+    
+            <remark>
+              By the latter I don't mean that <m>f</m> fixes each of the points of <m>P_n</m>, but rather that <m>f(P_n) = P_n</m>, that is every point of <m>P_n</m> is mapped to a (possibly different) point of <m>P_n</m> and every point of <m>P_n</m> is the image of some point in <m>P_n</m> via <m>f</m>. It is clear that the composition of two symmetries of <m>P_n</m> is again a symmetry of <m>P_n</m>, so that composition is a binary operation on <m>D_n</m>.
+            </remark>
+    
+            <definition xml:id="def-d2n">
+              <statement>
+                <p>
+                  The <em>dihedral group</em> <m>D_{2n}</m> is the set of symmetries of the regular <m>n</m>-gon <m>P_n</m> equipped with the binary operation given by composition. 
+                </p>
+              </statement>
+            </definition>
+    
+            <problem>
+              <p>
+                Prove that the dihedral group <m>D_{2n}</m> is indeed a group.
+              </p>
+            </problem>
+    
+          </subsection>
+
+          <subsection xml:id="subsec-symmetric">
+            <title>Symmetric Groups</title>
+    
+            <p>
+              Let's introduce another very important example: symmetric groups.
+            </p>
+    
+            <definition xml:id="def-permutation">
+              <statement>
+                <p>
+                  A <em>permutation</em> of a set <m>X</m> is a bijective function <m>\sigma:X\to X</m>.
+                </p>
+              </statement>
+            </definition>
+    
+            <definition xml:id="def-perm-group">
+              <statement>
+                <p>
+                  For any <m>n\in\N</m>, the <em>symmetric group</em> is the set <m>S_n</m> of all permutations of the set <m>\{1,\dots,n\}</m> equipped with the composition of functions as its binary operation.
+                </p>
+              </statement>
+            </definition>
+    
+            <remark>
+              For any finite set <m>|X|=n</m>, we may think of <m>S_n</m> as the <em>permutation group</em> of <m>X</m>, which is sometimes written <m>\operatorname{Perm}(X)</m>.
+            </remark>
+    
+            <problem>
+              <p>
+                Prove that <m>S_n</m> is indeed a group for all <m>n\in\N</m>.
+              </p>
+            </problem>
+    
+            <p>
+              We can write an element <m>\sigma</m> of <m>S_n</m> as a table of values: 
+              <me>
+                \begin{pmatrix} 
+                  1 &amp; 2 &amp; 3 &amp; \cdots &amp; n \\
+                  \sigma(1) &amp; \sigma(2) &amp; \sigma(3) &amp; \cdots &amp; \sigma(n)
+                \end{pmatrix}
+              </me>
+            </p>
+    
+    
+            <definition xml:id="def-cycle">
+              <statement>
+                <p>
+                  If <m>i_1, \dots, i_m</m> are distinct integers between <m>1</m> and <m>n</m>, then <m>\sigma=(i_1 \, i_2 \, \dots i_m)</m> denotes the element of <m>S_n</m> that satisfies <me>\sigma(i_1)=i_2, \sigma(i_2)=i_3, \dots, \sigma(i_{m-1})=i_m, \sigma(i_m)=i_1 \text{ and } \sigma(k)=k \text{ for } k\in[n] \setminus \{i_1, \dots, i_m\}.</me> Such a permutation is called a <em>cycle</em> or an <m>m</m><em>-cycle</em> if we want to emphasize its length. A <m>2</m>-cycle is often called a <em>transposition</em>.
+                </p>
+              </statement>
+            </definition>
+            
+            <problem>
+              <p>
+                Determine the number of <m>1</m>-cycles in <m>S_n</m>. 
+              </p>
+            </problem>
+    
+            <remark>
+              Note that distinct lists of integers represent the same cycle if they are cyclical rearrangements of each other, e.g., <m>(1 \, 2 \, 3) = (2 \, 3 \, 1)</m>. However, <m>(1 \, 2 \, 3) \neq (2 \, 1 \, 3)</m>.
+            </remark>
+    
+            <problem>
+              <p>
+                Disjoint cycles commute, that is, if <m>i_1 , i_2 \, \dots i_m, j_1 , j_2 \, \dots j_k\in [n]</m>, <me>\sigma_1=(i_1 \, i_2 \, \dots i_m), \quad \sigma_2=(j_1 \, j_2 \, \dots j_k)</me> and <me>\{i_1 , i_2 , \dots i_m\}\cap \{j_1 , j_2 , \dots j_k\}=\emptyset</me> then <m>\sigma_1 \circ \sigma_2=\sigma_2\circ \sigma_1</m>.
+              </p>
+            </problem>
+    
+            <proposition xml:id="prop-cycledecomp">
+              <statement>
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        Each <m>\sigma\in S_n</m> can be written as a product (composition) of disjoint cycles, and such a factorization is unique up to the ordering of the factors.
+                      </p>
+                    </li>
+    
+                    <li>
+                      <p>
+                        Each <m>\sigma\in S_n</m> can be written a product of transpositions; i.e., <m>S_n</m> is generated by transpositions.                  
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+            </proposition>
+    
+            <remark>
+              For the uniqueness part of statement (1) in the above proposition one needs to establish a convention regarding 1-cycles, that is one needs to stipulate either that the 1-cycles will not be recorded (which gives the shortest such factorization) or that all the 1-cycles will be recorded (which gives the longest such factorization, but also the only one that makes it clear what the number <m>n</m> is).
+            </remark>
+    
+          </subsection>
+
+          <subsection xml:id="subsec-quat">
+            <title>The Quaternions</title>
+    
+            <p>
+              For our last example we mention the group of <em>quaternions</em>, written <m>Q_8</m>.
+            </p>
+            
+            <definition xml:id="def-quaternions">
+              <statement>
+                <p>
+                  The quaternion group <m>Q_8</m> is a group with <m>8</m> elements <me>Q_8=\{ 1, -1, i, -i, j, -j, k, -k \}</me> satisfying the following relations: <m>1</m> is the identity element and <me>i^2 = -1, j^2 = -1, k^2 =-1, ij = k, jk = i, ki = j,</me> <me>(-1)i = -i, (-1)j = -j, (-1)k = -k, (-1)(-1) = 1.</me>
+                </p>
+              </statement>
+            </definition>
+    
+            <problem>
+              <p>
+                Verify that <m>Q_8</m> is a group. Provide a specific example to show that <m>Q_8</m> is not an abelian group.
+              </p>
+            </problem>
+          </subsection> 
+
+          <subsection xml:id="subsec-order">
+            <title>Order</title>
+            
+            <definition xml:id="def-element-order">
+              <statement>
+                <p>
+                  In a group <m>G</m>, the <em>order of an element</em> <m>x</m> is the least positive integer <m>n</m> such that <m>x^n = e</m>. If no such <m>n</m> exists, we say <m>x</m> has infinite order. We write <m>|x|</m> for the order of <m>x</m>.
+                </p>
+              </statement>
+            </definition>
+
+            <definition xml:id="def-order-group">
+              <statement>
+                <p>
+                  The <em>order of a group</em> <m>G</m> is the cardinality of the set <m>G</m>, denoted <m>|G|</m>.
+                </p>
+              </statement>
+            </definition>
+
+            <problem>
+              <statement>
+                <p>
+                  Prove that any group of order <m>4</m> is abelian.
+                </p>
+              </statement>
+              <solution>
+                <p>
+                  
+                </p>
+              </solution>
+            </problem>
+
+            <proposition xml:id="prop-orderelgp">
+              <statement>
+                <p>
+                  Let <m>G</m> be a group and <m>x \in G</m> any element. 
+                    <ol>
+                      <li>
+                        <p>
+                          Prove that if <m>|x| = n</m>, then <m>e, x, \dots, x^{n-1}</m> are all distinct elements of <m>G</m>.
+                        </p>
+                      </li>
+                          
+                      <li>
+                        <p>
+                          Prove that if <m>|x| = \infty</m>, then <m>x^i \ne x^j</m> for all integers (positive or negative) <m>,j</m> with <m>i \ne j</m>.
+                        </p>
+                      </li>
+
+                      <li>
+                        <p>
+                          Conclude <m>|x| \leq |G|</m> in all cases.
+                        </p>
+                      </li>
+                    </ol>
+                </p>
+              </statement>
+            </proposition>
+
+            <problem>
+              <p>
+                Prove <m>|S_n|=n!</m>.
+              </p>
+            </problem>
+
+            <problem>
+              <p>
+                Prove that the order of a permutation is the least common multiple of the lengths of the cycles it is a product of.
+              </p>
+            </problem>
+
+            <problem>
+              <p>
+                Let <m>G, H</m> be groups and let <m>x, y</m> be elements of <m>G</m>. 
+                <ol>
+                  <li>
+                    <p>
+                      Prove that <m>|x|=\left|\{x^n \ | n\in \Z \}\right|</m> and in particular <m>|x| \leq |G|</m>.
+                    </p>
+                  </li>
+                      
+                  <li>
+                    <p>
+                      Prove or disprove: if <m>x,y</m> have finite order then <m>xy</m> has finite order. 
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </problem>
+
+            <problem>
+              <p>
+                Let <m>G</m> be a group. 
+                <ol>
+                  <li>
+                    <p>
+                      Let <m>g \in G</m> be an element of finite order. Show that <m>g^m</m> has finite order for any integer <m>m \geq 0</m>, and in fact <me> |g^m| = \frac{\lcm(m,|g|)}{m} = \frac{|g|}{\gcd(m, |g|))}.</me> 
+                    </p>
+                  </li>
+                      
+                  <li>
+                    <p>
+                      Prove that for all <m>g, h</m> in <m>G</m>, <m>|gh| = |hg|</m> holds.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </problem>
+
+            <proposition xml:id="prop-d2n-order">
+              <statement>
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        Every element in <m>D_{2n}</m> can be written as <m>r^j</m> or <m>r^js</m> for <m>0 \leq j \leq n-1</m>.
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <m>|D_{2n}|=2n</m>
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+            </proposition>
+
+            <lemma xml:id="lem-group-element-order">
+              <statement>
+                <p>
+                  If <m>x^m = e</m> then <m>|x| \mid m</m>.
+                </p>
+              </statement>
+            </lemma>
+
+
+          </subsection>
+
+        </section>
+
+        <section xml:id="sec-gen-cyclic-gp">
+          <title>Generators and Cyclic Groups</title>
+
+          <definition xml:id="def-groupgenerate">
+            <statement>
+              <p>
+                A subset <m>S</m> of a group <m>G</m> is said to <em>generate</em> <m>G</m> if every element of <m>G</m> is equal to a product of elements of <m>S</m> and their inverses (with repetitions allowed). 
+              </p>
+            </statement>
+          </definition>
+
+          <p>
+            Assume that the regular <m>n</m>-gon <m>P_n</m> is drawn in the plane with its center at the origin and one vertex on the <m>x</m> axis. If <m>r</m> denotes rotation about the origin by <m>\frac{2\pi}{n}</m> radians counter-clockwise, then <m>r \in D_{2n}</m>. It’s inverse is rotation by <m>2 \pi/n</m> clock-wise. For another example, for any line of symmetry of <m>P_n</m>, reflection about that line gives an element of <m>D_{2n}</m>. By our convention for how to draw <m>P_n</m>, the <m>x</m>-axis is a line of symmetry for <m>P_n</m>, and we let <m>s</m> denote reflection about the <m>x</m>-axis.
+          </p>
+
+          <problem>
+            <p>
+              <ol>
+                <li>
+                  <p>
+                    Prove <m>|r|=n</m> and <m>|s|=2</m>.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Prove that <m>sr</m> is a reflection and hence that <m>srsr=1_{{\mathbb{R}}^2}</m>.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </problem>
+
+          <problem>
+            <p>
+              <ol>
+                <li>
+                  <p>
+                    Prove that <m>D_{2n}</m> is generated by <m>r</m> and any reflection. 
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Prove that if <m>p\ge 3</m> is prime then <m>D_{2p}</m> is generated by any two distinct reflections.               
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </problem>
+
+          <problem>
+            <p>
+              For <m>n\ge 2</m> prove that <m>S_n</m> is generated by <m>(12)</m> and the <m>n</m>-cycle <m>(12\cdots n)</m>.
+            </p>
+          </problem>
+
+
+          <subsection xml:id="subsec-cyclic-gp">
+            <title>Cyclic Groups</title>
+            
+            <definition xml:id="def-cyclic-group">
+              <statement>
+                <p>
+                  If <m>G</m> is a generated by a single element, i.e. <m>G   = \langle x \rangle</m> for some <m>x \in G</m>, then <m>G</m> is called a <em>cyclic group</em>.
+                </p>
+              </statement>
+            </definition>
+
+            <problem>
+              <p>
+                Let <m>G=\langle x\rangle</m> be a cyclic group. Then <m>G=\langle x^{-1}\rangle</m>.
+              </p>
+            </problem>
+
+            <problem>
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      Prove <m>(\mathbb{Z},+)</m> is generated by <m>1</m> or <m>-1</m>
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Prove <m>(\mathbb{Z}/(n),+)</m> is generated by <m>[a]_n</m> for any integer <m>a</m> such that <m>\operatorname{gcd}(a,n)=1</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </problem>
+
+            <problem>
+              <p>
+                Prove that <m>(\mathbb Q, +)</m> is not a cyclic group.
+              </p>
+            </problem>
+
+            <proposition xml:id="prop-cyclicabelian">
+              <statement>
+                <p>
+                  Prove that any cyclic group is abelian.
+                </p>
+              </statement>
+            </proposition>
+
+            <problem>
+              <p>
+                Prove that <m>\operatorname{GL}_2(\mathbb Z/(2))</m> is not cyclic.
+              </p>
+            </problem>
+
+          </subsection>
+
+        </section>
+
+        <section xml:id="sec-subgroups">
+          <title>Subgroups</title>
+    
+          <subsection xml:id="subsec-subgrp-defn-ex">
+            <title>Definition and Examples</title>
+
+            <definition xml:id="def-subgroup">
+              <statement>
+                <p>
+                  A nonempty subset <m>H</m> of a group <m>G</m> is called a <em>subgroup</em> provided <m>H</m> is a group under the multiplication law of <m>G</m>. The fact that <m>H</m> is a subgroup of <m>G</m> is denoted <m>H\leq G</m> or <m>H&lt;G</m> if we also mean that <m>H\neq G</m>.
+                </p>
+              </statement>
+            </definition>
+
+            <lemma xml:id="lem-subgrouptest">
+              <title>Subgroup Tests</title>
+              
+              
+              <statement>
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        If a subset <m>H</m> of a group <m>G</m> is nonempty and closed under multiplication and inversion, then <m>H</m> is a subgroup.
+                      </p>
+                    </li>
+          
+                    <li>
+                      <p>
+                        If a subset <m>H</m> of a group <m>G</m> is nonempty and satisfies for all <m>x,y \in H</m>, <m>xy^{-1} \in H</m>, then <m>H</m> is a subgroup.
+                      </p>
+                    </li>
+          
+                  </ol>
+                </p>
+              </statement>
+            </lemma>
+
+            <example>
+              <p>
+                Prove the following:
+                <ol>
+                  <li>
+                    <p>
+                      <m>\{e_G\}</m> and <m>G</m> are the <em>trivial subgroups</em> of <m>G</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>\Z\leq\Q\leq\R\leq\C</m>
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>\Z^\times\leq\Q^\times\leq\R^\times\leq\C^\times</m>
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Let <m>n\in\N</m> and define <m>n\Z=\{x\in\Z|x=nk\;\text{for some}\;k\in\Z\}</m>. Prove <m>n\Z\leq\Z</m> for all <m>n</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      If <m>H</m> is a subgroup of <m>G</m> and <m>K</m> is a subgroup of <m>H</m>, then <m>K</m> is a subgroup of <m>G</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      If <m>H_\alpha</m> is a subgroup of <m>G</m> for all <m>\alpha</m> in an index set <m>J</m>, then <m>H=\bigcap_{\alpha\in J} H_\alpha</m> is a subgroup of <m>G</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Let <m>G</m> be a group. For any <m>g\in G</m>, prove that the set <m>Z_G(g)=\{x\in G|gx=xg\}</m> is a subgroup of <m>G</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </example>
+
+            <problem>
+              <p>
+                Let <m>G</m> be a group and <m>H</m>, <m>H'</m> subgroups. Prove that <m>H\cup H'</m> is a subgroup if and only if <m>H\subseteq H'</m> or <m>H'\subseteq H</m>.
+              </p>
+            </problem>
+
+            <problem>
+              <p>
+                Let <m>H</m> be a [[Mathematics/Definitions/Subgroup|subgroup]] of <m>G</m> and fix some element <m>g\in G</m>. Prove that <m>gHg^{-1}=\{ghg^{-1} \mid h\in H\}</m> is a subgroup of <m>G</m> of the same [[Mathematics/Definitions/Order|order]] as <m>H</m>.
+              </p>
+            </problem>
+
+            <definition xml:id="def-altgroup">
+              <statement>
+                <p>
+                  The <em>alternating group</em> <m>A_n</m> is the subset of all even cycles of <m>S_n</m>.
+                </p>
+              </statement>
+            </definition>
+
+            <problem>
+              <p>
+                Prove that <m>A_n</m> is a subgroup of <m>S_n</m>.
+              </p>
+            </problem>
+
+            <definition xml:id="def-slg">
+              <statement>
+                <p>
+                  For any field <m>F</m>, the <em>special linear group</em>
+                  <me>
+                    \SL_n(F)=\{A \mid A = n\times n \;\text{matrix with entries in}\; F, \det(A)=1_F\}
+                  </me>
+                </p>
+              </statement>
+            </definition>
+
+            <problem>
+              <p>
+                Prove that <m>SL_n(F)</m> is a subgroup of <m>GL_n(F)</m>.
+              </p>
+            </problem>
+            
+          </subsection>
+
+          <subsection xml:id="subsec-center">
+            <title>The Center of a Group</title>
+
+            <definition xml:id="def-gpcenter">
+              <statement>
+                <p>
+                  The <em>center</em> of a group <m>G</m> often written <m>Z(G)</m>, is the set of elements of <m>G</m> that commute with every element of <m>G</m>. That is, 
+                  <me>
+                    Z(G)=\{x \in G \, | \, xy = yx\,\text{ for all $y \in G$}\}.
+                  </me>
+                </p>
+              </statement>
+            </definition>
+
+            <problem>
+              <p>
+                Prove that <m>Z(G)</m> is an abelian subgroup for any group <m>G</m>.
+              </p>
+            </problem>
+            
+
+            <problem>
+              <p>
+                Find <m>Z(D_{2n})</m> for <m>n \geq 3</m>. Your answer will depend on whether <m>n</m> is even or odd.
+              </p>
+            </problem>
+
+
+          </subsection>
+
+          <subsection xml:id="subsec-gensubgp">
+            <title>Generated Subgroups</title>
+
+
+            <definition xml:id="def-gensubgp">
+              <statement>
+                <p>
+                  Given a group <m>G</m> and a subset <m>X</m> of <m>G</m>, the <em>subgroup of <m>G</m> generated by <m>X</m></em> is <me>\langle X \rangle := \bigcap_{H \leq G, H \supseteq X} H.</me> If <m>X=\{x\}</m> is a set with one element then we write <m>\langle X \rangle=\langle x \rangle</m> and we refer to this as the <em>cyclic subgroup generated by</em> <m>x</m>.
+                </p>
+              </statement>
+            </definition>
+
+
+            <lemma xml:id="lem-gensubgp">
+              <statement>
+                <p>
+                  For a subset <m>X</m> of <m>G</m>, the elements of <m>\langle X \rangle</m> can be described as: <me>\langle X \rangle = \left\{x_1^{j_1} \cdots x_m^{j_m} \mid m \geq 0, j_1, \dots, j_m \in \mathbb{Z}\text{ and }x_1, \dots, x_m \in X \right\}.</me>
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  Let <m>S= \left\{x_1^{j_1} \cdots x_m^{j_m} \mid m \geq 0, j_1, \dots, j_m \in \mathbb{Z}\text{ and }x_1, \dots, x_m \in X \right\}</m>. Since <m>\langle X \rangle</m> is a subgroup that contains <m>X</m>, it is closed under products and inverses, and thus must contain all elements of <m>S</m>.
+                </p>
+                <p>
+                  For the opposite containment, we just need to show the set <m>S</m> really is a subgroup. We use the one step test:
+                </p>
+        
+                <p>
+                  <ul>
+                    <li>
+                      <p>
+                        <m>S \ne \emptyset</m> since we allow <m>m = 0</m> and declare the empty product to be <m>e_G</m>.
+                      </p>
+                    </li>
+        
+                    <li>
+                      <p>
+                        If <m>x_1^{j_1} \cdots x_m^{j_m}</m> and <m>y_1^{i_1} \cdots y_n^{i_m}</m> are in <m>S</m> then 
+                        <me>
+                          x_1^{j_1} \cdots x_m^{j_m}(y_1^{i_1} \cdots y_n^{i_m})^{-1}=x_1^{j_1} \cdots x_m^{j_m} y_n^{-i_m} \cdots y_1^{-i_1}
+                        </me> 
+                        is also in <m>S</m>.
+                      </p>
+                    </li>
+                  </ul>
+                </p>
+          
+                  <p>
+                    Therefore <m>S\leq G</m> and <m>X\subseteq S</m> (by taking <m>m=1</m> and <m>j_1=1</m>) and by the minimality of <m>\langle X \rangle</m> we obtain <m>\langle X \rangle\subseteq S</m>.
+                  </p>
+              </proof>
+            </lemma>
+
+            <problem>
+              <p>
+                The Lemma implies that for an element <m>x</m> of a group <m>G</m>, <m>\langle x\rangle=\{x^j \mid j\in \mathbb{Z}\}</m>.
+              </p>
+            </problem>
+
+            <problem>
+              <p>
+                Verify <m>D_{2n}=\langle r,s \rangle</m>, meaning that <m>D_{2n}</m> is the subgroup of <m>D_{2n}</m> generated by <m>\{r,s\}</m>.
+              </p>
+            </problem>
+
+            <problem>
+              <p>
+                Prove that <m>A_n</m> is the subgroup of <m>S_n</m> generated by all produts of <m>2</m>-cyclies (disjoint or not). In symbols, 
+                <me>
+                  A_n=\langle (i \ j )(k \ l) \mid i,j,k,l \in \{1, \ldots, n\}\rangle.
+                </me>
+                
+              </p>
+            </problem>
+
+
+            <problem>
+              <p>
+                Consider the set <m>\mu=\{z\in \C \setminus \{0\} \mid z^n = 1 \text{ for some integer }n \geq 1\}</m>, which is a subgroup of <m>( \C \setminus \{0\} , \cdot)</m> (a fact you need not prove).
+                <ol>
+                  <li>
+                    <p>
+                      Prove that for each integer <m>m \geq 1</m>, there is a unique subgroup <m>H_m\leq \mu</m> with <m>|H_m|=m</m> and that <m>H_m</m> is cyclic. 
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Prove that every finitely generated subgroup of <m>\mu</m> has finitely many elements. 
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Prove that <m>\mu</m> is not finitely generated.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </problem>
+
+          </subsection>
+
+        </section>
+      </chapter> 
+
+      <chapter xml:id="gp-homs">
+        <title>Homomorphisms and Isomorphisms</title>
+
+        <section xml:id="sec-gphoms">
+          <title>Group Homomorphisms</title>
+          
+
+          <definition xml:id="def-gphom">
+            <statement>
+              <p>
+                If <m>G</m> and <m>H</m> are groups, a <em>homomorphism</em> from <m>G</m> is <m>H</m> is a function <m>f: G \to H</m> such that <m>f(x \cdot_G y) = f(x) \cdot_H f(y)</m>, where <m>\cdot_G</m> and <m>\cdot_H</m> denote the multiplication rules for <m>G</m> and <m>H</m>, respectively.
+              </p>
+            </statement>
+          </definition>
+
+          <example>
+            <p>
+              Prove the following
+              <ol>
+                <li>
+                  <p>
+                    The identity map is a group isomomorphism for any group <m>G</m>.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    The exponential map <m>\exp: ({\mathbb{R}}, +) \to ({\mathbb{R}}\setminus \{0\}, \cdot)</m> is a homomorphism. So is <m>\ln: ({\mathbb{R}}_{&gt;0}, \cdot) \to ({\mathbb{R}}, +)</m>. In fact, these maps are inverse to each other so we obtain an isomorphism . <m>({\mathbb{R}}, +)\cong ({\mathbb{R}}_{&gt;0}, \cdot)</m>.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    For any positive integer <m>n</m> and field <m>F</m>, the map determinant map <m>\det: \operatorname{GL}_n(F) \to (F \setminus \{0\}, \cdot)</m> is a group homomorphism.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </example>
+
+          <lemma xml:id="lem-grphomom-prop">
+            <statement>
+              <p>
+                If <m>f: G \to H</m> is a homomorphism of groups, then
+                <ol>
+                  <li>
+                    <p>
+                      <m>f(e_G) = e_H</m> and
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>f(x^{-1}) = f(x)^{-1}</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+          </lemma>
+
+          <corollary xml:id="cor-unique-Z-homom">
+            <statement>
+              <p>
+                Let <m>G</m> be a group. Prove there exists a unique group homomorphism <m>\varphi:G\to\Z</m>.
+              </p>
+            </statement>
+          </corollary>
+
+          <definition xml:id="def-gpker">
+            <statement>
+              <p>
+                Let <m>\varphi: G \to H</m> is a homomorphism of groups. The <em>kernel</em> of <m>\varphi</m> is the set 
+                <me>
+                  \ker(\varphi) := \{g\in G \mid \varphi(g)=e_H\}.
+                </me>
+              </p>
+            </statement>
+          </definition>
+
+          <definition xml:id="def-gpimage">
+            <statement>
+              <p>
+                Let <m>\varphi: G \to H</m> is a homomorphism of groups. The <em>image</em> of <m>\varphi</m> is the set 
+                <me>
+                  \im(\varphi) := \{\varphi(g) \mid g \in G\}.
+                </me>
+              </p>
+            </statement>
+          </definition>
+
+          <proposition xml:id="prop-homsubgp">
+            <statement>
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      If <m>f: G \to H</m> is a homomorphism of groups, then the set-theoretic image of <m>f</m> is a subgroup of <m>H</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      If <m>f: G \to H</m> is a homomorphism of groups, then the kernel of <m>f</m> is a subgroup of <m>G</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Prove that if <m>f:G\to H</m> is a group homomorphism and <m>K\leq H</m> then the preimage of <m>K</m>, defined as <m>f^{-1}(K)=\{g\in G | f(g)\in K\}</m>, is a subgroup of <m>G</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+          </proposition>
+
+          <proposition xml:id="prop-grptrivialkernel">
+            <statement>
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      A group homomorphism <m>f: G \to H</m> is injective if and only if <m>\operatorname{ker}(f) = \{e_G\}</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      A group homomorphism <m>f: G \to H</m> is surjective if and only if <m>\operatorname{im}(f) = H</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+          </proposition>
+                 
+
+          <problem>
+            <p>
+              <ol>
+                <li>
+                  Find, with justification, an injective group homomorphism <m>f:S_n \to \GL_n(\R)</m>.
+                </li>
+
+                <li>
+                  Find, with justification, an injective group homomorphism <m>g:D_{2n}\to S_n</m>.
+                </li>
+              </ol>
+            </p>
+          </problem>
+
+        </section>
+
+        <section xml:id="sec-gpisos">
+          <title>Group Isomorphisms</title>
+
+          <definition xml:id="def-gpiso">
+            <statement>
+              <p>
+                A homomorphism <m>f: G \to H</m> is called an <em>isomorphism</em> if there exists a homomorphism <m>g: H \to G</m> such that <m>f \circ g = \text{id}_H</m> and <m>g \circ f = \text{id}_G</m>.
+              </p>
+
+              <p>
+                If <m>f:G\to H</m> is an isomorphism, <m>G</m> and <m>H</m> are called <em>isomorphic</em>, written <m>G\cong H</m>.
+              </p>
+            </statement>
+          </definition>
+
+          <remark>
+            I have defined the notion of isomorphism in Definition <xref ref="def-gpiso" /> differently than given in the textbook. The reason is that the correct meaning of the word <q>isomorphism</q> in any context (sets, groups, rings, fields, topological spaces, whatever) is always <q>a morphism that has a two-sided inverse</q>. In many contexts, such as sets, groups, rings and fields this turns out to be equivalent to the notion of being <q>one-to-one and onto</q>. But there are contexts in which this is not the case. For example a one-to-one and onto continuous map of topological spaces need not be a homeomorphism. (A homeomorphism is a term one uses for isomorphism of topological spaces, for historical reasons.)
+          </remark>
+
+          <proposition xml:id="prop-iso-def">
+            <statement>
+              <p>
+                Suppose <m>f: G \to H</m> is a group homomorphism. Then <m>f</m> an isomorphism if and only if <m>f</m> is bijective (one-to-one and onto).
+              </p>
+            </statement>
+          </proposition>
+
+          <definition xml:id="def-iso-inv">
+            <statement>
+              <p>
+                An <em>isomorphism invariant</em> is a property <m>P</m> such that whenever <m>G \cong H</m> and <m>G</m> has <m>P</m> then <m>H</m> has <m>P</m>.
+              </p>
+            </statement>
+          </definition>
+
+          <theorem xml:id="thm-iso-inv">
+            <statement>
+              <p>
+                The following are isomorphism invariants:
+              </p>
+
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      the order of the group,
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      the set of orders of elements in the group,
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      being abelian,
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      the order of the center of the group,
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      being finitely generated,
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+          </theorem>
+
+          <problem>
+            <p>
+              Decide whether the groups <m>Q_8</m> and <m>D_8</m> are isomorphic or not, with justification.
+            </p>
+          </problem>
+
+          <problem>
+            <p>
+              <ol>
+                <li>
+                  <p>
+                    <m>S_n\cong S_m</m> if and only if <m>n=m</m>.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>\mathbb{Z}/6\ncong S_3</m>
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>D_{24}\ncong S_4</m>
+                  </p>
+                </li>
+              </ol>
+              
+            </p>
+          </problem>
+
+          <definition xml:id="def-gp-automorphism">
+            <statement>
+              <p>
+                Let <m>G</m> be a group. An isomorphism <m>\phi:G\to G</m> is called an <em>automorphism</em> of <m>G</m>.
+              </p>
+            </statement>
+          </definition>
+
+          <problem>
+            <p>
+              Prove that the set of automorphisms of <m>G</m>, denoted <m>\operatorname{Aut}(G)</m>, is a group under composition.
+            </p>
+          </problem>
+
+          <problem>
+            <p>
+              Let <m>G</m> be a group. Prove that the map <m>f:G\to G</m> given by <m>f(a)=a^{-1}</m> for all <m>a\in G</m> is an automorphism if and only if <m>G</m> is abelian.
+            </p>
+          </problem>
+
+          <problem>
+            <p>
+              Let <m>G</m> be a group and <m>x\in G</m>. Define a map <m>\psi_x:G\to G</m> by <m>\psi_x(a)=xax^{-1}</m> for all <m>a\in G</m>. 
+              <ol>
+                <li>
+                  <p>
+                    Prove that <m>\psi_x\in \operatorname{Aut}(G)</m> for all <m>x\in G</m>. 
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Prove that <m>\{\psi_x\mid x\in G\}</m> is a subgroup of <m>\operatorname{Aut}(G)</m>.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </problem>
+
+          <problem>
+            <p>
+              Prove that if groups <m>G</m> and <m>H</m> are isomorphic then: 
+              <ol>
+                <li>
+                  <p>
+                    <m>Z(G)\cong Z(H)</m> and 
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>\Aut(G)\cong \Aut(H)</m>.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </problem>
+        
+
+          <problem>
+            <p>
+              Find an example of groups <m>G,H</m> such that there is an isomorphism <m>G\times H\cong G</m> but <m>H</m> is not trivial. Note: since <m>G\times H\cong G</m> can be rewritten as <m>G\times H\cong G\times \{e\}</m>, the above shows that in general one cannot cancel groups in isomorphisms between direct products.
+            </p>
+          </problem>
+
+        </section>
+
+        <section xml:id="sec-cylic-homoms">
+          <title>Cyclic Groups: Revisited</title>
+
+          <problem>
+            <p>
+              Prove that if <m>m,n</m> are positive integers such that <m>\gcd(m,n)=1</m> then there is a group isomorphism <m>C_{mn}=C_m\times C_n</m>.
+            </p>
+          </problem>
+
+          <theorem xml:id="thm-cyclic-relprime">
+            <statement>
+              <p>
+                Let <m>G=\langle x\rangle</m>, where <m>x</m> has finite order <m>n</m>. Then
+                <ol>
+                  <li>
+                    <p>
+                      <m>G=\{e,x,\ldots,x^{n-1}\}</m>.
+                    </p>
+                  </li>
+        
+                  <li>
+                    <p>
+                      There is a bijection 
+                        <me>
+                          \Psi : \{\text{divisors of } |G|\} \to \{\text{subgroups of } G\} \text{ given by } \Psi(d) = \langle x^{\frac{|G|}{d}}  \rangle
+                        </me> 
+                        for each divisor <m>d</m> of <m>|G|</m>. Moreover, for each subgroup <m>H</m> of <m>G</m>, <m>\Psi^{-1}(H) = |H|</m>. In particular, all subgroups of <m>G</m> are cyclic and there is a unique subgroup of each order.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+          </theorem>
+
+          <proposition xml:id="prop-ump-cyclic">
+            <title>Universal Mapping Property (UMP) for Cyclic Groups</title>
+            
+            <statement>
+              <p>
+                Assume <m>G = \langle x \rangle</m> and let <m>H</m> be any group. If <m>|x| = n &lt; \infty</m>, then for each <m>y \in H</m> such that <m>y^n = e</m>, there is a unique group homomorphism <me>f: G \to H</me> such that <m>f(x) = y</m>. If <m>|x| = \infty</m>, then for each <m>y \in H</m>, there is a unique group homomorphism <me>f: G \to H</me> such that <m>f(x) = y</m>. In both cases this unique group homomorphism is given by <m>f(x^i)=y^i</m> for any <m>i</m>.
+              </p>
+            </statement>
+          </proposition>
+
+          <remark>
+            This is a particular case of the universal mapping property of a presentation (which we will covered later), since a cyclic group is either presented by <m>\langle x | x^n = e \rangle</m> or <m>\langle x \mid  -\rangle</m>.
+          </remark>
+
+          <theorem xml:id="thm-cyclic-classification">
+            <title>Classification Theorem for Cyclic Groups</title>
+            
+            <statement>
+              <p>
+                Every infinite cyclic group is isomorphic to <m>C_\infty</m>. Every cyclic group of order <m>n</m> is isomorphic to <m>C_n</m>.
+              </p>
+            </statement>
+          </theorem>
+          
+        </section>
+
+      </chapter>
+
+      <chapter xml:id="quotient-groups">
+        <title>Quotient Groups</title>
+
+        <section xml:id="sec-cosets">
+          <title>Cosets and Equivalence Relations</title>
+          
+          <definition xml:id="def-coset">
+            <statement>
+              <p>
+                For any <m>N\leq G</m> and any g\in G let 
+                <me>
+                  gN=\{gn|n\in N\}\;\text{and}\; Ng=\{ng|n\in N\}
+                </me>
+                be defined as a <em>left coset</em> and <em>right coset</em> of <m>N</m> in <m>G</m>, respectfully.
+              </p>
+            </statement>
+          </definition>
+
+          <lemma xml:id="lem-cosetfacts">
+            <statement>
+              <p>
+                Let <m>H \leq G</m>. The following facts about left cosets are equivalent for <m>x,y \in G</m>:
+                <ol>
+                  <li>
+                    <p>
+                      <m>x</m> and <m>y</m> belong to the same left coset of <m>H</m> in <m>G</m>,
+                    </p>
+                  </li>
+        
+                  <li>
+                    <p>
+                      <m>x = yh</m> for some <m>h \in H</m>,
+                    </p>
+                  </li>
+        
+                  <li>
+                    <p>
+                      <m>y = xh</m> for some <m>h \in H</m>,
+                    </p>
+                  </li>
+        
+                  <li>
+                    <p>
+                      <m>y^{-1}x \in H</m>,
+                    </p>
+                  </li>
+        
+                  <li>
+                    <p>
+                      <m>x^{-1}y \in H</m>,
+                    </p>
+                  </li>
+        
+                  <li>
+                    <p>
+                      <m>xH = yH</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+          </lemma>
+
+          <lemma xml:id="lem-cosetpartition">
+            <statement>
+              <p>
+                For <m>H \leq G</m>, the collection of left cosets of <m>H</m> in <m>G</m> form a partition of <m>G</m>, and similarly for the collection of right cosets. That is,
+
+                <ul>
+                  <li>
+                    <p>
+                      for all <m>x,y \in G</m>, either <m>xH = yH</m> or <m>xH \cap yH = \emptyset</m>
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>\bigcup_{x\in G} xH=G</m>,                    
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>\bigcup_{x\in G} xH=G</m>,                    
+                    </p>
+                  </li>
+                </ul>
+                and similarly for right cosets. Moreover all left and right cosets have the same cardinality: <m>|xH| = |Hx|=|H|</m> for any <m>x\in G</m>.
+              </p>
+            </statement>
+          </lemma>
+
+          <corollary xml:id="cor-left-right-cosets">
+            <statement>
+              <p>
+                If <m>G</m> is a finite group and <m>H \leq G</m>, then 
+                <me>
+                  \begin{aligned}
+                  |G| &amp; = |H| \cdot (\text{the number of left cosets of $H$ in $G$}) \\
+                  &amp; = |H| \cdot (\text{the number of right cosets of $H$ in $G$}). \\
+                  \end{aligned}
+                </me> 
+                In particular the number of left cosets of <m>H</m> in <m>G</m> is equal to the number of right cosets of <m>H</m> in <m>G</m>.
+              </p>
+            </statement>
+          </corollary>
+
+          <theorem xml:id="thm-lagrange">
+            <title>Lagrange's Theorem</title>
+            
+            <statement>
+              <p>
+                If <m>H</m> is a subgroup of a finite group <m>G</m>, then <m>|H|</m> divides <m>|G|</m>.
+              </p>
+            </statement>
+          </theorem>
+
+          <corollary xml:id="cor-lagrange">
+            <statement>
+              <p>
+                If <m>x\in G</m> and <m>G</m> is a finite group, then <m>|x|</m> divides <m>|G|</m>.
+              </p>
+            </statement>
+          </corollary>
+
+        </section>
+
+        <section xml:id="sec-normal-subgroups">
+          <title>Normal Subgroups</title>
+
+
+
+          
+        </section>
+
+        <section xml:id="sec-isomorphism-thms">
+          <title>The Isomorphism Theorems</title>
+          
+        </section>
+
+        <section xml:id="sec-grp-presentations">
+          <title>Presentations as Quotient Groups</title>
+          
+        </section>
+
+      </chapter>
+      
+      <chapter xml:id="group-actions">
+        <title>Group Actions</title>
+
+        <section xml:id="graction">
+          <title>Group Actions</title>
+
+          <definition xml:id="def-graction">
+            <statement>
+              <p>
+                For a group <m>(G, \cdot)</m> and set <m>S</m>, an <em>action</em> of <m>G</m> on <m>S</m> is a function <me>G \times S \to S,</me> typically written as <m>(g,s) \mapsto g \cdot s</m>, such that
+              </p>
+          
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      <m>g \cdot (g' \cdot s) = (g g') \cdot s</m> for all <m>g,g' \in G</m> and <m>s\in S</m>.
+                    </p>
+                  </li>
+        
+                  <li>
+                    <p>
+                      <m>e_G \cdot s = s</m> for all <m>s \in S</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+          </definition>
+
+          <remark>
+            To make the first axiom clearer, throughout this section we will write <m>\cdot</m> for the action of <m>G</m> on <m>S</m> and no symbol (concatenation) for the multiplication of two elements in the group <m>G</m>.
+          </remark>
+
+          <example>
+            <title>Trivial Action</title>
+            
+            <p>
+              For any group <m>G</m> and any set <m>S</m>, <m>g \cdot s := s</m> defines an action, the <em>trivial action</em>. The associated group homomorphism is <m>G \to \operatorname{Perm}(S)</m> by <m>g\mapsto \text{id}_S</m>.
+            </p>
+          </example>
+
+          <theorem xml:id="thm-permrep">
+            <title>Permutation Representation</title>
+            
+            <statement>
+              <p>
+                Assume <m>(G, \cdot)</m> is a group and <m>S</m> is a set.
+              </p>
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      If <m>\cdot</m> is an action of <m>G</m> on <m>S</m>, then the function <m>\rho: G \to \operatorname{Perm}(S)</m> defined as <m>\rho(g) = \sigma_g</m>, where <m>\sigma_g:S\to S</m> is the function given by <m>\sigma_g(s)=g \cdot s</m>, is a well defined homomorphism of groups.
+                    </p>
+                  </li>
+        
+                  <li>
+                    <p>
+                      Conversely, if <m>\rho: G \to \operatorname{Perm}(S)</m> is a group homomorphism, the rule <m>g \cdot s := \rho(g)(s)</m> defines an action of <m>G</m> on <m>S</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                We have 
+                <me>
+                  \begin{aligned}
+                  (\sigma_g\circ\sigma_{g^{-1}})(s) &amp;=\sigma_g(\sigma_{g^{-1}}(s)) &amp; \text{ (def of composition)}\\
+                  &amp;=g\cdot (g^{-1} \cdot s) &amp; \text{ (def for } \sigma_g \text{ and } \sigma_{g^{-1}})\\
+                  &amp;=(gg^{-1})\cdot s &amp; \text{ (first property of a group action)}\\
+                  &amp;=e_G\cdot s &amp; \text{ (group axiom)}\\
+                  &amp;= s &amp;\text{ (second property of a group action)}
+                  \end{aligned}
+                </me> 
+                thus <m>\sigma_g\circ\sigma_{g^{-1}}=\text{id}_S</m> and a similar argument shows that <m>\sigma_{g^{-1}}\circ\sigma_{g}=\text{id}_S</m>
+              </p>
+                  
+              <p>
+                Finally, we wish to show <m>\rho(gg')=\rho(g) \circ \rho(g')</m>, equivalently <m>\sigma_{gg'}=\sigma_g\circ\sigma_{g'}</m>. Since <me>\sigma_{gg'}(s) = (gg')\cdot s = g\cdot(g'\cdots) =\sigma_g\left(\sigma_{g'}(s)\right) = (\sigma_g\circ\sigma_{g'})(s),</me> holds for all <m>s</m>, this proves <m>\rho</m> is a homomorphism.
+              </p>
+                  
+              <p>
+                Given a homomorphism <m>\rho</m>, the function <m>G \times S \to S</m> defined as <m>g \cdot s = \rho(g)(s)</m> is an action because <m>g'(gs) = \rho(g')(\rho(g)(s)) = (\rho(g') \circ\rho(g))(s) = \rho(gg')(s) = (gg')s</m>, and <m>e_G s = \rho(e_G)(s) = \text{id}(s) = s</m>.
+              </p>
+            </proof>
+          </theorem>
+
+          <definition xml:id="def-faithful">
+            <statement>
+              <p>
+                An action of a group <m>G</m> on a set <m>S</m> is called <em>faithful</em> if the associated group homomorphism is injective. Equivalently, an action is faithful if and only if for a given <m>g \in G</m>, whenever <m>g \cdot s = s</m> for all <m>s \in S</m>, it must be that <m>g = e_G</m>.
+              </p>
+            </statement>
+          </definition>
+
+          <example xml:id="ex-leftreg">
+            <title>Left Regular Action</title>
+            
+            <p>
+              Let <m>G</m> be any group and define an action <m>\cdot</m> of <m>G</m> on <m>G</m> (regarded as just a set) by the rule 
+              <me>
+                g \cdot x = g  x, \text{ for $g \in G$ and $x \in G$.}
+              </me>
+            </p>
+          </example>
+
+          <problem>
+            <p>
+              Prove that the left regular action is faithful.
+            </p>
+          </problem>
+
+          
+        </section>
+
+        <section xml:id="sec-lois">
+          <title>LOIS and Orbit-Stabilizer</title>
+
+          <definition xml:id="def-orbit">
+            <statement>
+              <p>
+                Let <m>G</m> be a group acting on a set <m>X</m>. For an element <m>s\in X</m> the orbit of <m>s</m> is 
+                <me>
+                  \operatorname{Orbit}_G(s)=\{g\cdot s \mid g\in G\}
+                </me>
+              </p>
+            </statement>
+          </definition>
+
+          <lemma xml:id="lem-orbits-partition">
+            <statement>
+              <p>
+                Let <m>G</m> be a group acting on a set <m>S</m>. Then
+			        </p>
+
+			        <p>
+                <ol>
+				          <li>
+							      <p>
+				              <m>\sim_G</m> is an equivalence relation
+			              </p>
+				          </li>
+
+				          <li>
+							      <p>
+				              for any <m>s,s'\in S</m> either <m>\operatorname{Orbit}_G(s)=\operatorname{Orbit}_G(s')</m> or <m>\operatorname{Orbit}_G(s)\cap \operatorname{Orbit}_G(s')=\emptyset</m>
+			              </p>
+				          </li>
+
+				          <li>
+							      <p>
+				              <m>S=\bigcup_{\text{pairwise disjoint orbits}} \operatorname{Orbit}_G(s)</m>
+			              </p>
+				          </li>
+			          </ol>
+              </p>
+            </statement>
+          </lemma>
+
+          <definition xml:id="def-stab">
+            <statement>
+              <p>
+                Let <m>G</m> be a group acting on a set <m>X</m>. For an element <m>s\in X</m> the stabilizer is 
+                <me>
+                  \operatorname{Stab}_G(s)=\{g\in G \mid g\cdot s=s\}.
+                </me>
+              </p>
+            </statement>
+          </definition>
+
+          <problem>
+            <p>
+              The stabilizer <m>\operatorname{Stab}_G(s)</m> is a subgroup of <m>G</m>.
+            </p>
+          </problem>
+
+          <theorem xml:id="thm-LOIS">
+            <title>The Length of the Orbit is the Index of the Stabilizer (LOIS)</title>
+            
+            <statement>
+              <p>
+                Let <m>G</m> be a group that acts on a finite set <m>S</m> via <m>\cdot</m>. For any <m>s \in S</m> we have <me>|\operatorname{Orbit}_G(s)| = [G: \operatorname{Stab}_G(s)]</me>
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                Let <m>\mathcal L</m> be the collection of left cosets of <m>\operatorname{Stab}_G(s)</m> in <m>G</m>. Define a function 
+                <me>
+                  \alpha: \mathcal L\to \operatorname{Orbit}_G(s)
+                </me> 
+                by <m>\alpha(x \operatorname{Stab}_G(s)) = x \cdot s</m>. This function is well defined and one-to-one: 
+                <me>
+                  x \operatorname{Stab}_G(s) = y \operatorname{Stab}_G(s)\iff x^{-1}y \in \operatorname{Stab}_G(s) \iff x^{-1}y \cdot s = s \iff y \cdot s = x \cdot s.
+                </me> 
+                The function <m>\alpha</m> is onto by definition of <m>\operatorname{Orbit}_G(s)</m>. Thus <m>\alpha</m> is a bijection and it yields equalities 
+                <me>
+                  [G: \operatorname{Stab}_G(s)]=|\mathcal L|=|\operatorname{Orbit}_G(s)|.
+                </me>
+              </p>
+            </proof>
+          </theorem>
+
+          <corollary xml:id="cor-orbit-stabilizer">
+            <title>Orbit-Stabilizer Theorem</title>
+            
+            <statement>
+              <p>
+                Let <m>G</m> be a finite group that acts on a finite set <m>S</m> via <m>\cdot</m>. For any <m>s \in S</m> we have 
+                <me>
+                  |G|=|\operatorname{Orbit}_G(s)|\cdot |\operatorname{Stab}_G(s)].
+                </me>
+              </p>
+            </statement>
+          </corollary>
+
+          <definition xml:id="def-faithful-action">
+            <statement>
+              <p>
+                An action is <em>transitive</em> if for all <m>p,q \in S</m> there is a <m>g \in G</m> such that <m>q=g\cdot p</m>. Equivalently, an action is transitive if <m>\operatorname{Orbit}_G(p)=S</m> for any <m>p\in S</m>.
+              </p>
+            </statement>
+          </definition>
+          
+        </section>
+
+        <section xml:id="sec-self-conjugation">
+          <title>Self Conjugation</title>
+
+          <example>
+            <title>Conjugation Action</title>
+            
+            <p>
+              Let <m>G</m> be any group and fix an element <m>g \in G</m>. Define <em>the conjugation action</em> of <m>G</m> on itself by setting 
+              <me>
+                g\cdot x=gxg^{-1} \text{ for any } g,x\in G.
+              </me> 
+              The action of <m>G</m> on itself by conjugation <term>is not necessarily faithful</term>. In fact the kernel of the permutation representation for the conjugation action is the center <m>Z(G)</m>. In detail, if <m>\rho:G\to \operatorname{Perm}(G)</m> is the permutation representation for <m>G</m> acting on <m>G</m> by conjugation, then 
+              <me>
+                g\in \operatorname{Ker}\rho\iff g\cdot x=x, \forall x\in G \iff gxg^{-1}=x, \forall x\in G
+              </me>
+              <me>
+                \iff gx=xg, \forall x\in G \iff g\in Z(G).
+              </me>
+            </p>
+          </example>
+
+          <definition xml:id="def-conjugacy-class">
+            <statement>
+              <p>
+                The <em>conjugacy class</em> of an element <m>g \in G</m> is <m>C_g = \{hgh^{-1} \mid h \in G\}</m>, i.e. the orbit of <m>g</m> under conjugation.              
+              </p>
+            </statement>
+          </definition>
+
+          <definition xml:id="def-conjugate">
+            <statement>
+              <p>
+                Let <m>G</m> be a group. Two elements <m>g,g' \in G</m> are <em>conjugate</em> if there is <m>h \in G</m> with <m>g' = hgh^{-1}</m> (equivalently <m>g</m> and <m>g'</m> are in the same orbit of the conjugation action).
+              </p>
+
+              <p>
+                Two subsets <m>S,S' \subseteq G</m> are conjugate if there is <m>h \in G</m> with <m>S' = hSh^{-1}</m>.
+              </p>
+            </statement>
+          </definition>
+
+          <proposition xml:id="prop-normal-conjugacy">
+            <statement>
+              <p>
+                Let <m>N\mathrel{\unlhd}G</m>. The conjugation action of <m>G</m> on itself induces an action by conjugation of <m>G</m> on <m>N</m>. On particular, <m>N</m> is the disjoint union of some of the conjugacy classes in <m>G</m>.
+              </p>
+            </statement>
+          </proposition>
+        </section>
+
+        <section xml:id="sec-class-eq">
+          <title>The Class Equation</title>
+          
+          <definition xml:id="def-centralizer">
+            <statement>
+              <p>
+                Let <m>G</m> be a group. For any <m>g \in G</m>, 
+                <me>
+                  Z_G(g):= \{g \in G \mid gx = xg\}
+                </me> 
+                is called the <em>centralizer</em> of <m>g</m> in <m>G</m> 
+                
+                
+                and for any <m>S \subseteq G</m>, <me>N_G(S):= \{g \in G \mid gSg^{-1}=S\}</me> is called the <em>normalizer</em> of <m>S</m> in <m>G</m>.
+              </p>
+            </statement>
+          </definition>
+
+          <definition xml:id="def-normalizer">
+            <statement>
+              <p>
+                Let <m>G</m> be a group. For any <m>S \subseteq G</m>, 
+                <me>
+                  N_G(S):= \{g \in G \mid gSg^{-1}=S\}
+                </me> 
+                is called the <em>normalizer</em> of <m>S</m> in <m>G</m>.
+              </p>
+            </statement>
+          </definition>
+
+          <theorem xml:id="thm-conjclass">
+            <statement>
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      Then <m>G</m> acts on <m>G</m> by conjugation (<m>g \cdot g' = gg'g^{-1}</m>). For all <m>g \in G</m>, the orbit of <m>g</m> is the conjugacy class of <m>g</m>, <m>\operatorname{Stab}_G(g)=C_G(G)</m> and <m>|[g]_c| = |G : C_G(g)|</m>.
+                    </p>
+                  </li>
+        
+                  <li>
+                    <p>
+                      Then <m>G</m> acts on the power set <m>P(G)=\{S\mid S\subseteq G\}</m> by conjugation (<m>g \cdot S = gSg^{-1}</m>). For all <m>S \in P(G)</m>, <m>\operatorname{Stab}_G(S)=N_G(S)</m> and <m>|\operatorname{Orbit}_G(S)| = |G : N_G(S)|</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+          </theorem>
+
+          <corollary xml:id="cor-conjclass">
+            <statement>
+              <p>
+                For a finite group <m>G</m>, the size of any conjugacy class divides <m>|G|</m>.
+              </p>
+            </statement>
+          </corollary>
+
+          <theorem xml:id="thm-class-eq">
+            <title>The Class Equation</title>
+            
+            <statement>
+              <p>
+                Let <m>G</m> be a finite group and let <m>g_1,\ldots g_r \in G</m> be a list of unique representatives of all of the conjugacy classes of <m>G</m> of size greater than 1. Then 
+                <me>
+                  |G| = |Z(G)| + \sum_i^r |G : C_G(g_i)|
+                </me>.
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                The elements of <m>Z(G)</m> are precisely the group elements that are conjugate to only themselves; that is, they are the one-element orbits for the conjugation action. Because the conjugacy classes (orbits of the conjugation action) partition <m>G</m> we have 
+                <me>
+                  |G| = |Z(G)| + \sum_i^r [g_i]_c.
+                </me> 
+                For each <m>g_i</m> as in the statement, by Theorem <xref ref="thm-conjclass" />, we have <m>[G: C_G(g_i)] =[g_i]_c</m>. The class equation follows from substituting this into the equation above.
+              </p>
+            </proof>
+          </theorem>
+
+        </section>
+
+      </chapter>
+
+      <chapter xml:id="sylow">
+        <title>Sylow Theory</title>       
+
+        <section xml:id="sec-pgroups">
+          <title><m>p</m>-groups</title>
+          
+          <definition xml:id="def-pgroup">
+            <statement>
+              <p>
+                For a prime number <m>p</m>, a <m>p</m>-group is a group of order <m>p^m</m> for some <m>m\in \mathbb{Z},m &gt; 0</m>.
+              </p>
+            </statement>
+          </definition>
+  
+          <theorem xml:id="thm-center-pgroup">
+            <statement>
+              <p>
+                If <m>p</m> is a prime number and <m>G</m> is a finite group of order <m>p^m</m> for some <m>m &gt; 0</m>, then <m>Z(G)</m> is not the trivial group (In fact <m>|Z(G)|=p^a</m> for some <m>a&gt;0</m>).
+              </p>
+            </statement>
+  
+            <proof>
+              <p>
+                Let <m>g_1,\ldots g_r \in G</m> be a list of unique representatives of all of the conjugacy classes of <m>G</m> of size greater than 1 as in the class equation. Then for each <m>i</m>, <m>C_G(g_i)\neq G</m> so <m>[G:C_G(g_i)]\neq 1</m>. Since <m>1\neq [G:C_G(g_i)] \mid |G|=p^m</m>, it follows that <m>p\mid [G:C_G(g_i)]</m> for each <m>i</m>. From the Class equation we deduce that <m>p\mid |Z(G)|</m> so, <m>|Z(G)|\neq 1</m>.
+              </p>
+            </proof>
+          </theorem>
+
+          <definition xml:id="def-sylow-subgroup">
+            <statement>
+              <p>
+                Let <m>G</m> be a finite group and <m>p</m> a prime. Write the order of <m>G</m> as <m>|G| = p^e m</m> where <m>p \nmid m</m>. A <em>Sylow <m>p</m>-subgroup</em> of <m>G</m> is a subgroup <m>H \leq G</m> such that <m>|H| = p^e</m>. That is, a Sylow <m>p</m>-subgroup of <m>G</m> is a subgroup whose order is the highest conceivable power of <m>p</m> according to Lagrange's Theorem.
+              </p>
+
+              <p>
+                We set <m>\operatorname{Syl}_p(G)</m> to be the collection of all Sylow <m>p</m>-subgroups of <m>G</m> and <m>n_p=|\operatorname{Syl}_p(G)|</m> to be the number of Sylow <m>p</m>-subgroups.
+              </p>
+            </statement>
+          </definition>
+
+          <remark>
+            <p>
+              We allow the case when <m>p\nmid |G|</m>, in which case <m>e = 0</m> and <m>G</m> has a unique Sylow <m>p</m>-subgroup, namely <m>\{e\}</m> which has order <m>p^0</m>.
+            </p>
+          </remark>
+
+          <problem>
+            <p>
+              In <m>D_{2p}</m> for a prime <m>p</m>, <m>\langle r \rangle</m> is a Sylow <m>p</m>-subgroup. If <m>p &gt; 2</m>, there is only one Sylow <m>p</m>-subgroup of <m>D_{2p}</m>, so <m>n_p=1</m>.
+            </p>
+
+            <p>
+              In <m>D_{2n}</m> for <m>n</m> odd, each of the subgroups <m>\langle sr^j \rangle</m>, for <m>j = 0, \dots, n-1</m> is a Sylow <m>2</m>-subgroup, so <m>n_2=p</m>.
+            </p>
+          </problem>
+
+          <problem>
+            <p>
+              In <m>S_5</m>, the Sylow <m>5</m>-subgroups are the cyclic groups <m>\langle \sigma \rangle</m> for any five cycle <m>\sigma</m>, so <m>n_5=6</m> because there are 24 five cycles, but there are four of these in every Sylow 5-subgroup. The Sylow <m>3</m>-subgroups are the cyclic groups <m>\langle \sigma \rangle</m> for any three cycle <m>\sigma</m>, so <m>n_3=10</m> because there are 20 three cycles, but there are two of these in every Sylow 3-subgroup.
+            </p>
+            <p>
+              A Sylow <m>2</m>-subgroup of <m>S_5</m> is any subgroup of order <m>8</m>. For example <m>\langle (1 \, 4)(2 \, 3) , (1 \, 2 \, 3 \, 4) \rangle</m> is a Sylow <m>2</m>-subgroup. There are many others.
+            </p>
+          </problem>
+
+          <theorem xml:id="thm-cauchy">
+            <title>Cauchy's Theorem</title>
+            
+            <statement>
+              <p>
+                If <m>G</m> is a finite group and <m>p</m> is a prime number dividing <m>|G|</m>, then <m>G</m> has an element of order <m>p</m>. (In fact, at least <m>p-1</m> elements of order <m>p</m>.)
+              </p>
+            </statement>
+          </theorem>
+          
+
+        </section>
+
+        <section xml:id="sec-sylowthm">
+          <title>Sylow's Theorem</title>
+
+          <lemma xml:id="lem-Sylaction">
+            <statement>
+              <p>
+                Suppose <m>G</m> is a group and <m>n</m> is a positive integer. Then
+                <ol>
+                  <li>
+                    <p>
+                      If <m>H\leq G</m> is a subgroup of order <m>n</m>, then <m>gHg^{-1}\leq G</m> is a subgroup of order <m>n</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      If there is a unique subgroup <m>H</m> of <m>G</m> of order <m>n</m>, then <m>H \unlhd G</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+          </lemma>
+
+          <lemma xml:id="lem-Syl-lem">
+            <statement>
+              <p>
+                Let <m>G</m> be a finite group, <m>p</m> a prime, <m>P</m> a Sylow <m>p</m>-subgroup of <m>G</m>, and <m>Q</m> any <m>p</m>-subgroup of <m>G</m>. Then <m>Q \cap N_G(P) = Q \cap P</m>.
+              </p>
+            </statement>
+          </lemma>
+
+          <theorem xml:id="thm-sylow">
+            <title>Sylow's Theorem</title>
+            
+            <statement>
+              <p>
+                Assume <m>G</m> is a group of order <m>p^e m</m> where <m>p</m> is prime, <m>e \geq 0</m>, and <m>\operatorname{gcd}(p,m) = 1</m>.
+
+                <ol>
+                  <li>
+                    <p>
+                      <m>\operatorname{Syl}_p(G) \ne \emptyset</m> (there exists at least one Sylow <m>p</m>-subgroup of <m>G</m>).
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      If <m>P</m> is a Sylow <m>p</m>-subgroup of <m>G</m> and <m>Q \leq G</m> is any <m>p</m>-subgroup of <m>G</m> (i.e., a subgroup whose order is some power of <m>p</m>), then there is a <m>g</m> such that <m>Q \leq gPg^{-1}</m>. In particular, the action of <m>G</m> on <m>\operatorname{Syl}_p(G)</m> by conjugation is transitive — i.e., any two Sylow <m>p</m>-subgroups are conjugate.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      We have <me>| \operatorname{Syl}_p(G)| \equiv 1 \mod{p}.</me>
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      For any <m>P \in \operatorname{Syl}_p(G)</m>, 
+                      <me>
+                        |\operatorname{Syl}_p(G)| = [G: N_G(P)],
+                      </me> 
+                      and hence 
+                      <me>
+                        | \operatorname{Syl}_p(G)| \mid m.
+                      </me>
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+          </theorem>
+          
+        </section>
+
+        <section xml:id="sec-simple-groups">
+          <title>Simple Groups</title>
+
+          <definition xml:id="def-simple-group">
+            <statement>
+              <p>
+                A group is called <em>simple</em> if it has only two normal subgroups: itself and the trivial subgroup.
+              </p>
+            </statement>
+          </definition>
+
+          <problem>
+            <p>
+              Let us prove that no group or order <m>12</m> is simple. Let <m>G</m> be any group of order <m>12</m>. We will prove that <m>G</m> must have either a normal subgroup of order <m>3</m> or a normal subgroups of oder <m>4</m>.
+            </p>
+
+            <p>
+              Sylow theory gives that <m>n_2=|\operatorname{Syl}_2(G)|</m> is either <m>1</m> or <m>3</m> and <m>n_3= |\operatorname{Syl}_3(G)|</m> is either <m>1</m> or <m>4</m>. If either of these numbers is <m>1</m>, we have a unique subgroup of order <m>4</m> or of order <m>3</m>, and such a subgroup must be normal. Suppose these numbers are <m>3</m> and <m>4</m>, respectively. We deduce a contradition by <q>counting elements</q>.
+            </p>
+    
+            <p>
+              In detail, say <m>P_1, \dots, P_4</m> are the <m>4</m> Sylow <m>3</m>-subgroups. By Lagrange <m>P_i \cap P_j = \{e\}</m> for all <m>i \ne j</m>. Thus the <em>set</em> <m>T := \bigcup_{i=1}^4 P_i</m> has <m>9</m> elements, one of which is <m>e</m> and the other <m>8</m> of which must have order <m>3</m>. That is, there are <m>8</m> elements of order <m>3</m> in <m>G</m>. But now consider the three Sylow <m>2</m>-subgroups <m>Q_1, Q_2, Q_3</m>. Each has order <m>4</m> and <m>Q_i \cap T = \{e\}</m> for all <m>i</m>. It follows that <m>Q_i = \{e\} \cup (G \setminus T)</m> for all <m>i</m>, and thus <m>Q_1 = Q_2 = Q_3</m>, a contradiction.
+            </p>
+          </problem>
+
+          <remark>
+            <p>
+              In the previous example, it would not be so easy to count elements of order <m>2</m> and <m>4</m>. We do know that every element in <m>S := \cup_i Q_i</m> has order <m>1</m>, <m>2</m> or <m>4</m> (any only one has order <m>1</m>), but the size of this set is harder to calculate. For notice that <m>Q_i \cap Q_j</m> might have order <m>2</m>. The most one can say for sure is that <m>S</m> has at least <m>4 + 4 - 2 = 6</m> elements.
+            </p>
+          </remark>
+
+          <problem>
+            <p>
+              No group of order <m>80=5 \cdot 16</m> is simple.
+            </p>
+          </problem>
+          
+        </section>
+
+      </chapter>
+
+      <chapter xml:id="group-products">
+        <title>Constructions</title>
+
+        <section xml:id="sec-grp-dps">
+          <title>Direct Products</title>
+          
+        </section>
+
+        <section xml:id="sec-grp-spds">
+          <title>Semidirect Products</title>
+          
+        </section>
+
+        <section xml:id="sec-order-pq">
+          <title>Groups of Order <m>pq</m></title>
+          
+        </section>
+      </chapter>
+
+      <chapter xml:id="ch-classifications">
+        <title>Classifications</title>
+
+        <section xml:id="sec-ftfgag">
+          <title>Group Decompositions</title>
+
+        </section>
+
+        <section xml:id="sec-classifications">
+          <title>Groups Up to Isomorphism</title>
+          
+        </section>
+        
+      </chapter>
+
+      <chapter xml:id="ch-extras">
+        <title>Extras</title>
+
+        <section xml:id="sec-solve">
+          <title>Solvable Groups</title>
+          
+        </section>
+
+        <section xml:id="sec-smallorder">
+          <title>Groups of Small Order</title>
+          
+        </section>
+        
+      </chapter>
+    </part>
+
+    <part xml:id="part-rings">
+      <title>Ring Theory</title>
+    
+      <chapter xml:id="ch-ringsubring">
+        <title>Rings</title>
+
+        <section xml:id="sec-defn-ex">
+          <title>Definition and Examples</title>
+          
+        </section>
+
+        <section xml:id="sec-subrings">
+          <title>Subrings</title>
+          
+        </section>
+
+        <section xml:id="sec-unitass">
+          <title>Units and Associates</title>
+          
+        </section>
+
+        <section xml:id="sec-ring-hom">
+          <title>Homomorohisms</title>
+          
+        </section>
+      </chapter>
+
+      <chapter xml:id="ch-idealquot">
+        <title>Ideals and Quotient Rings</title>
+        
+        <section xml:id="sec-ideals">
+          <title>Ideals</title>
+          
+        </section>
+
+        <section xml:id="sec-ring-quotients">
+          <title>Quotient Rings</title>
+          
+        </section>
+
+        <section xml:id="sec-ring-iso">
+          <title>Ring Isomorphism Theorems</title>
+          
+        </section>
+      </chapter>
+
+      <chapter xml:id="sec-commrings">
+        <title>Commutative Rings</title>
+
+        <section xml:id="subsec-primemax-ideals">
+          <title>Prime and Maximal Ideals</title>
+          
+        </section>
+
+        <section xml:id="subsec-polyrings">
+          <title>Polynomial Rings</title>
+          
+        </section>
+        
+      </chapter>
+
+      <chapter xml:id="domains">
+        <title>Domains</title>
+
+        <section xml:id="sec-eds">
+          <title>Euclidian Domains</title>
+          
+        </section>
+
+        <section xml:id="sec-pids">
+          <title>Principal Ideal Domains</title>
+          
+        </section>
+
+        <section xml:id="subsec-ufds">
+          <title>Unique Factorization Domains</title>
+          
+        </section>
+
+        <section xml:id="subsec-noeth">
+          <title>Noetherian Domains</title>
+          
+        </section>
+        
+      </chapter>
+
+    <chapter xml:id="sec-irreducible">
+      <title>Irreducibility</title>
+
+      <section xml:id="sec-roots">
+        <title>Roots of Unity</title>
+      </section>
+
+      <section xml:id="sec-irrpoly">
+        <title>Irredicuble Polynomials</title>
+        
+      </section>
+
+  
+    </chapter>
+
+    <chapter xml:id="ch-Extras">
+      <title>Extras</title>
+
+      <section xml:id="sec-gpring">
+        <title>Group Rings</title>
+        
+      </section>
+      
+    </chapter>
+
+    
+
+
+    </part>
+
+    <part xml:id="part-fields">
+      <title>Field Theory</title>
+
+      <chapter xml:id="ch-fields">
+        <title>Fields</title>
+
+        <section xml:id="sec-defnfield">
+          <title>Definition and Examples</title>
+          
+        </section>
+
+        <section xml:id="sec-interactions">
+          <title>Interactions</title>
+          
+        </section>
+      </chapter>
+
+      <chapter xml:id="ch-extensions">
+        <title>Field Extensions</title>
+
+          <section xml:id="sec-firstprops">
+            <title>First Properties</title>
+          
+          </section>
+
+          <section xml:id="sec-albebraic">
+            <title>Algebraic Extensions</title>
+          
+          </section>
+
+          <section xml:id="sec-closure">
+            <title>Algebraic Closures</title>
+          
+          </section>
+
+          <section xml:id="sec-splitting">
+            <title>Splitting Fields</title>
+          
+          </section>
+        
+      </chapter>
+
+      <chapter xml:id="ch-galois">
+        <title>Galois Theory</title>
+
+        <section xml:id="sec-separable">
+          <title>Separability</title>
+          
+        </section>
+
+        <section xml:id="sec-galext">
+          <title>Galois Extensions</title>
+          
+        </section>
+
+        <section xml:id="sec-ftgt">
+          <title>The Fundamental Theorem of Galois Theory</title>
+          
+        </section>
+        
+      </chapter>
+
+    </part>
+
+    <part xml:id="part-modules">
+      <title>Module Theory</title>
+
+      <chapter xml:id="ch-mod">
+        <title>Modules</title>
+
+        <section xml:id="sec-defmod">
+          <title>Definition and Examples</title>
+          
+        </section>
+
+        <section xml:id="sec-modhom">
+          <title>Module Homomorphisms</title>
+          
+        </section>
+
+        <section xml:id="sec-quote">
+          <title>Quotient Modules</title>
+          
+        </section>
+
+      </chapter>
+
+      <chapter xml:id="ch-freemod">
+        <title>Free Modules</title>
+
+        <section xml:id="sec-linear">
+          <title>Linear Independence</title>
+          
+        </section>
+        
+        <section xml:id="sec-modgen">
+          <title>Generated Modules</title>
+
+        </section>
+
+        <section xml:id="sec-bases">
+          <title>Bases</title>
+            
+        </section>
+
+      </chapter>
+
+      <chapter xml:id="ch-vectors">
+        <title>Vector Spaces</title>
+
+        <section xml:id="sec-vecbasis">
+          <title>Existence of Bases</title>
+          
+        </section>
+
+        <section xml:id="sec-ranknul">
+          <title>Rank-Nullity</title>
+          
+        </section>
+
+      </chapter>
+
+      <chapter xml:id="sec-transforms">
+        <title>Linear Transformations</title>
+
+        <section xml:id="sec-basics">
+          <title>Basics</title>
+          
+        </section>
+
+        <section xml:id="sec-cob">
+          <title>Change of Basis</title>
+          
+        </section>
+
+        <section xml:id="sec-elematix">
+          <title>Elementary Matrices</title>
+          
+        </section>
+
+        <section xml:id="sec-operator">
+          <title>Linear Operators on Free Modules</title>
+          
+        </section>
+
+        <section xml:id="sec-det">
+          <title>Determinants</title>
+          
+        </section>
+        
+      </chapter>
+
+      <chapter xml:id="ch-modgen">
+        <title>Finitely Generated Modules over PIDs</title>
+
+        <section xml:id="sec-modpres">
+          <title>Finitely Presented Modules</title>
+          
+        </section>
+
+        <section xml:id="sec-snf">
+          <title>Smith Normal Form</title>
+          
+        </section>
+
+        <section xml:id="sec-modclass">
+          <title>Classifications</title>
+          
+        </section>
+        
+      </chapter>
+
+      <chapter xml:id="ch-canform">
+        <title>Canonical Forms</title>
+
+        <section xml:id="sec-modpoly">
+          <title>Modules over Polynomial Rings</title>
+          
+        </section>
+
+        <section xml:id="sec-rcf">
+          <title>Rational Canonical Form</title>
+          
+        </section>
+
+        <section xml:id="sec-jcf">
+          <title>Jordan Canonical Form</title>
+          
+        </section>
+        
+      </chapter>
+    
+    </part>
+
+    <part xml:id="part-representation">
+      <title>Representation Theory</title>
+      
+      <chapter xml:id="ch-grouprings">
+        <title>Group Rings and Representations</title>
+        
+        <section xml:id="sec-representations">
+          <title>Representations</title>
+
+          <definition xml:id="def-representation">
+            <statement>
+              <p>
+                Let <m>G</m> be a group. A <em>representation</em> of <m>G</m> over a field <m>K</m> is a <m>K</m>-vector space <m>V</m> equipped with a group homomorphism <m>\rho:G\to \operatorname{Aut}_K(V)</m>. More generally, a representation of <m>G</m> over a ring <m>R</m> is an <m>R</m>-module <m>V</m> equipped with group homomorphism <m>\rho:G\to \operatorname{Aut}_R(V)</m>. We may also say that <m>G</m> <em>acts linearly</em> on <m>V</m>.
+              </p>
+            </statement>
+          </definition>
+
+          <remark>
+            <p>
+              
+            We can think of this data in a number of different ways.
+				</p>
+
+				<p><ol>
+					<li>
+									<p>
+					Given a representation <m>(V,\rho)</m>, the map 
+          <me>
+            xy matrix
+</me> satisfies the properties
+				</p>
+
+				<p><ol>
+					<li>
+									<p>
+					<m>e \cdot v= v</m>
+				</p>
+					</li>
+
+					<li>
+									<p>
+					<m>gh \cdot v = g \cdot (h \cdot v)</m>
+				</p>
+					</li>
+
+					<li>
+									<p>
+					<m>g \cdot (v+w)=(g \cdot v) + (g \cdot w)</m>
+				</p>
+					</li>
+
+					<li>
+									<p>
+					<m>g \cdot rv = r (g\cdot v)</m>,
+				</p>
+					</li>
+
+				</ol></p>
+
+				<p>
+					In particular, the first two conditions say that <m>G</m> acts on <m>V</m> in the sense of group action on a set, and the last two say that the action of any element is by an <m>R</m>-linear map. Conversely, any such function <m>\psi</m> yields a representation <m>(V,\rho)</m>.
+				</p>
+					</li>
+
+					<li>
+									<p>
+					If <m>V=R^n</m> is free, then <m>\operatorname{Aut}_R(V) \cong \operatorname{GL}_n(R)</m>, where <m>\operatorname{GL}_n(R)</m> is the group of <m>n\times n</m> invertible matrices with entries in <m>R</m>. By a slight abuse of notation, we will say that a group homomorphism <m>G\to \operatorname{GL}_n(V)</m> is a representation of <m>G</m>.
+				</p>
+					</li>
+
+				</ol></p>
+          </remark>
+
+          <example>
+            <p><ol>
+              <li>
+                      <p>
+              For any group <m>G</m>, and any <m>R</m>-module <m>V</m>, there is the <em>trivial representation</em> <m>\rho:G\to \operatorname{Aut}_R(V)</m> where <m>\rho(g)=1_V</m> for all <m>g\in G</m>. In this action, every element acts trivially on <m>M</m>.
+            </p>
+              </li>
+    
+              <li>
+                      <p>
+              Any representation on <m>V = R</m> is determined by specifying a group homomorphism <m>\rho:G \to \operatorname{Aut}_R(R)\cong R^\times</m>.
+            </p>
+    
+            <p>
+              For example, if <m>G = C_n=\langle g\rangle</m> (the multiplicative cyclic group of order <m>n</m>) and <m>R = \mathbb{C}</m>, there are <m>n</m> possible such homomorphisms, determined by <m>\rho(g)=e^\frac{2\pi k i}{n}</m> where <m>0 \leq k \leq n-1</m>.
+            </p>
+    
+            <p>
+              Another important example of a rank 1 representation is the <em>sign representation</em> of the symmetric group <m>S_n</m>, given by the group homomorphism which assigns to each permutation its sign, regarded as an element of the arbitrary ring <m>R</m>.
+            </p>
+              </li>
+    
+              <li>
+                      <p>
+              The symmetric group <m>S_n</m> acts on a free <m>R</m>-module with basis <m>b_1,\dots,b_n</m> by permuting coordinates: <m>\rho(\sigma)(b_i) = b_{\sigma(i)}</m>. For a concrete example, <m>S_3</m> acts on <m>{\mathbb{R}}^3</m>, where, for example <m>(132) \cdot (a_1,a_2,a_3) = (a_2,a_3,a_1)</m>.
+            </p>
+              </li>
+    
+              <li>
+                      <p>
+              Let <m>G = D_{2n}</m>, symmetries of the equilateral polygon on <m>n</m> vertices. Then <m>G</m> acts linearly on <m>V={\mathbb{R}}^2</m> by rotations and reflections. If <m>G</m> is generated by <m>r</m> (rotation by <m>2\pi/n</m>) and <m>l</m> (reflection about the <m>y</m>-axis), then the associated group homomorphism <m>\rho: G \to\operatorname{GL}_2({\mathbb{R}})</m> maps <me>\rho(r)=\begin{bmatrix}
+          \cos(2 \pi/n) &amp; -\sin(2 \pi/n)  \\ \sin(2 \pi/n)  &amp; \cos(2 \pi/n)  \end{bmatrix}
+          \qquad
+    \rho(l)=\begin{bmatrix}
+          -1  &amp; 0 \\ 0 &amp; 1 \end{bmatrix}.</me>
+            </p>
+              </li>
+    
+              <li>
+                      <p>
+              Let <m>R=K</m> be a field,<m>V =K^2</m>, and let <m>G=(K,+)</m>. We see that the assignment <me>\rho:G\to  \operatorname{GL}_2(K) \quad 
+    \rho(\lambda)=\begin{bmatrix} 
+    1 &amp; 0  \\ \lambda &amp; 1
+    \end{bmatrix}</me> is a representation. In particular, if <m>K=\mathbb{F}_p</m>, this is a representation of <m>C_p</m>.
+            </p>
+              </li>
+    
+            </ol></p>
+          </example>
+
+          <definition xml:id="def-equivariant-map">
+            <statement>
+              <p>
+                If <m>\rho:G \to \operatorname{Aut}_R(V)</m> and <m>\omega:G\to \operatorname{Aut}_R(W)</m> are <m>R</m>-linear representations of <m>G</m> on <m>V</m> and <m>W</m> respectively then a <em><m>G</m>-equivariant map</em> from <m>V</m> to <m>W</m> is an <m>R</m>-module homomorphism <m>f: V \to W</m> such that <m>f(gv)=gf(v)</m> for all <m>v\in V</m>. Equivalently the following diagram commutes: 
+                <me>
+                  xy matrix
+                </me>
+              </p>
+            </statement>
+          </definition>
+
+          <definition xml:id="def-stable-mod">
+            <statement>
+              <p>
+                If <m>\rho:G \to \operatorname{Aut}_R(V)</m> is a representation, a submodule <m>W\leq V</m> is <em><m>G</m>-stable</em> if <m>\rho(g)(W)\subseteq W</m> for all <m>g\in G</m>.
+				</p>
+            </statement>
+          </definition>
+    
+          <example>
+            <p>
+              For <m>G=S_n</m> acting by permuting a basis as above, <m>\{(\lambda,\dots,\lambda) \ | \ \lambda\in K\}</m> and <me>\{(\lambda_1,\dots,\lambda_n) \ | \ \lambda_1+\cdots+\lambda_n=0\}</me> are stable subspaces.
+            </p>
+          </example>
+
+          <example>
+            <p>
+              For <m>G=(K,+)</m> acting on <m>K^2</m> as above, <m>\{(0,\lambda) \ | \ \lambda\in K\}</m> is a stable subspace.
+            </p>
+          </example>
+
+          <proposition xml:id="prop-equimaps-category">
+            <statement>
+              <p>
+                Fix a group <m>G</m> and a ring <m>R</m>. The collection of left <m>R</m>-linear representations of <m>G</m> and <m>G</m>-equivariant maps between them forms a category which we will denote <m>\mathbf{Rep}_{R}(G)</m>.
+              </p>
+            </statement>
+          </proposition>
+
+        </section>
+
+        <section xml:id="sec-group-rings-and-modules">
+          <title>Group Rings and Modules</title>
+
+          <definition xml:id="def-groupring">
+            <statement>
+              <p>
+                For any ring <m>R</m> and group <m>G</m>, we define the <em>group ring</em> <m>R[G]</m> as follows: As a set, <m>R[G]</m> is the free left <m>R</m>-module with basis <m>G</m>; that is, 
+                <me>
+                  R[G]=\left\{ \sum_g r_g g \mid  r_g = 0_R \text{ for all by a finite number of }g's \right\}.
+                </me> 
+                We define addition as module addition; that is, 
+                <me>
+                  \left(\sum_g r_g g \right) + \left(\sum_h s_h h \right) = \sum_{f \in G} \left(r_f + s_f \right) f.
+                </me> 
+                Multiplication is the unique pairing that obeys the distributive laws and is such that <m>R</m> is a subring, <m>1_RG</m> is a subgroup of <m>(R[G]^\times, \cdot)</m>, and every element of <m>R</m> commutes with every element of <m>G</m>. In general, we have 
+                <me>
+                  \left(\sum_g r_g g\right) \cdot \left(\sum_h s_h h \right) = \sum_{f \in G} \left(\sum_{\substack{(g,h) \in G \times G\\ gh= f}} r_gs_h\right)   f.
+                </me> 
+                where the inner sum is over pairs of group elements whose product is <m>f</m>.
+              </p>
+            </statement>
+          </definition>
+
+          <remark>
+            As a matter of notation, the element <m>1_R g</m> will be written as just <m>g</m> and the element <m>r e_G</m> as just <m>r</m>, so that we will regard <m>G</m> and <m>R</m> as subsets of <m>R[G]</m>. They overlap in the one element <m>1_R e_G</m> which will be written as just <m>1</m>.
+          </remark>
+
+          <remark>
+            When <m>R</m> is commutative (in particular when <m>R</m> is a field), <m>R[G]</m> is an <m>R</m>-algebra called the <em>group <m>R</m>-algebra</em> of <m>G</m>.
+          </remark>
+
+          <problem>
+            <p>
+              For any ring <m>R</m> and <m>G = C_n</m>, prove there is a ring isomorphism 
+              <me>
+                R[C_n] \cong R[x]/(x^n -1).
+              </me>
+            </p>
+          </problem>
+
+          <proposition xml:id="prop-ump-groupring">
+            <title>Universal Mapping Property of Group Rings</title>
+            
+            <statement>
+              <p>
+                Let <m>R, A</m> be rings and <m>G</m> a group. Given a ring homomorphism <m>\iota: R \to A</m> and a group homomorphism <m>f: G \to (A^\times, \cdot)</m>, such that for every <m>r\in R, g\in G</m> we have that <m>\iota(r)</m> and <m>f(g)</m> commute in <m>(A,\cdot)</m>, there is a unique ring homomorphism <m>\alpha: R[G] \to A</m> such that <m>\alpha|_R = \iota</m> and <m>\alpha|_G = f</m>. Explicitly, <m>\alpha</m> is given by 
+                <me>
+                  \alpha\left(\sum_g r_g g\right) = \sum_g \iota(r_g) f(g).
+                </me>
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                Most of this follows from noticing that <m>R[G]</m> is a coproduct. Indeed, we can vie <m>R[G]</m> as an internal direct sum <m>R[G]=\bigoplus_{g\in G} Rg</m> and hence it is the coproduct for the family <m>\{Rg\}_{g\in G}</m> where each <m>Rg\cong R</m>. For each <m>g\in G</m> set up an <m>R</m>-module homomorphism <m>f_g: Rg\to A</m> by mapping <m>f_g(r_gg)=\iota(r_g)f(g)</m>. Then the definition of coproduct gives a unique <m>R</m>-module homomorphism <me>\alpha: R[G]=\bigoplus_{g\in G} Rg \to A \text{ such that } \alpha|_{Rg}=f_g.</me> From the way we defined the maps <m>f_g</m> we can deduce that <m>\alpha|_R = \iota</m> and <m>\alpha|_G = f</m> and <me>\alpha\left(\sum_g r_g g\right) = \sum_g \iota(r_g) f(g).</me> It remains to check that this map is in fact a ring homomorphism, i.e. it preserves multiplication. This can be done using the formula for <m>\alpha</m> above and the fact that <m>\iota(R)</m> and <m>f(G)</m> commute in <m>A</m>.
+              </p>
+            </proof>
+          </proposition>
+
+          <remark>
+            If we assumed that <m>A</m> is an <m>R</m>-algebra in the proposition above, then we would not need the commutativity condition as <m>\iota(R)</m> is in the center of <m>A</m> so it commutes with everything.
+          </remark>
+
+          <lemma xml:id="lem-repsmods">
+            <statement>
+              <p>
+                Let <m>R</m> be a ring, <m>V</m> a left <m>R</m>-module, and <m>G</m> a group. There is a bijection <me>xy matrix</me>
+              </p>
+              <p>
+                Moreover, if <m>V</m> and <m>W</m> are representations, then <m>\psi:V\to W</m> is <m>G</m>-equivariant if and only if it is <m>R[G]</m>-linear.
+              </p>
+
+            </statement>
+
+            <proof>
+              <p>
+                Given an <m>R[G]</m>-module structure on <m>V</m>, for every <m>g\in G</m>, there is a map <m>m_g: V\to V</m> given by <m>v\mapsto g\cdot v</m>. We have <m>m_g  (rv) = g (rv) = rg (v) = r m_g(v)</m>, so <m>m_g</m> is <m>R</m>-linear. Moreover, the map <m>\rho:G\to \operatorname{End}_R(V)</m> that sends <m>g\mapsto m_g</m> preserves multiplication and identity: <m>\rho(gh)(v) = gh v = g(hv) = \rho(g) \rho(h) (v)</m> and <m>\rho(e)(v) = v</m>. Thus, we obtain an <m>R</m>-linear representation <m>\rho:G\to \operatorname{Aut}_R(V)</m>.
+              </p>
+
+              <p>
+                Conversely, recall that a module structure on an abelian group is equivalent to a ring homomorphism to its endomorphism ring over <m>\mathbb{Z}</m>. Given a representation <m>\rho:G\to \operatorname{Aut}_R(V)</m> by considering <m>\operatorname{Aut}_R(V)\subseteq \operatorname{End}_\mathbb{Z}(V)</m> we get a group homomorphism <m>f</m> to the unit subgroup of <m>\operatorname{End}_\mathbb{Z}(V)</m>. The action of <m>R</m> on <m>V</m> gives a ring homomorphism <m>\iota: R \to \operatorname{End}_\mathbb{Z}(V)</m>. For <m>r\in R</m> and <m>g\in G</m>, we have <me>(f(g) \circ \iota(r))(v) = f(g)(rv) = \rho(g)(rv) = r \rho(g)(v) = (\iota(r) \circ f(g))(v)</me> for all <m>v\in V</m>. Thus, by the universal property, we get a well-defined ring homomorphism <m>R[G] \to \operatorname{End}_\mathbb{Z}(V)</m>, and hence an <m>R[G]</m>-module structure, which is easily seen to follow the formula above.
+              </p>
+      
+              <p>
+                We leave the final claim as an exercise.
+              </p>
+            </proof>
+          </lemma>
+
+          <remark>
+            We can think of these bijections as yielding mutually inverse functors <m>F:\mathbf{Rep}_{R}(G) \to R[G]-\mathbf{Mod}</m> and <m>F^{-1}:R[G]-\mathbf{Mod} \to \mathbf{Rep}_{R}(G)</m>.
+          </remark>
+        </section>
+      </chapter>
+
+      <chapter xml:id="ch-simple-modules">
+        <title>Simple Modules</title>
+
+        <section xml:id="sec-simple-modules">
+          <title>Simple Modules</title>
+          
+
+          <p>
+            Now we proceed to discuss some smallness conditions on modules. The first key notion is that of a simple module. Simple modules are the atoms in module theory.
+          </p>
+
+          <definition xml:id="def-simple-module">
+            <statement>
+              <p>
+                An <m>R</m>-module <m>M</m> is <em>simple</em> if there are no nonzero proper submodules of <m>M</m>.
+              </p>
+            </statement>
+          </definition>
+
+          <lemma xml:id="lem-equiv-simple-mod">
+            <statement>
+              <p>
+                Let <m>M</m> be a nonzero <m>R</m>-module. The following are equivalent:
+                <ol>
+                  <li>
+                    <p>
+                      <m>M</m> is simple
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>Rm= M</m> for all <m>m\in M\smallsetminus 0</m>
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>M\cong R/I</m> for some maximal left ideal <m>I</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                For a left ideal <m>I</m>, the submodules of <m>R/I</m> are in bijective correspondence with the left <m>R</m>-submodules of <m>R</m> that contain <m>I</m>, i.e., the left ideals that contain <m>I</m>. It is then clear that if <m>I</m> is a maximal left ideal, then <m>R/I</m> is simple, so (3) implies (1). On the other hand, if <m>M</m> is simple then it is cyclic (since (1) implies (2)), so <m>M\cong R/I</m> for some left ideal <m>I</m>, and if <m>I \subsetneqq J</m> for some proper left ideal <m>J</m>, then <m>0 \neq J/I \subsetneqq R/I</m>; thus (1) implies (3).
+              </p>
+            </proof>
+          </lemma>
+
+          <example>
+            <ol>
+              <li>
+                <p>
+                  If <m>K</m> is a field, a <m>K</m>-vector space is simple if and only if it is <m>1</m>-dimensional. Moreover, if <m>R</m> is a <m>K</m>-algebra, then any <m>R</m>-module that is <m>1</m>-dimensional as a vector space is a simple <m>R</m>-module as well.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  If <m>R</m> is commutative, then an <m>R</m>-module <m>M</m> is simple if and only if <m>M</m> is isomorphic to a field.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Let <m>R={\mathbb{R}}[D_{2n}]</m>, and <m>V</m> be the natural <m>2</m>-dimensional representation by reflections and rotations. Then <m>V</m> is a simple <m>R</m>-module, since there are no <m>D_{2n}</m>-stable subspaces.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Let <m>K</m> be a field, or more generally a division ring, and let <m>R=M_n(K) \cong \operatorname{End}_K(K^n)</m>. The module <m>M=K^n</m> of column vectors is a simple <m>R</m>-module Indeed, if <m>v=(a_1,\dots,a_n)\neq 0</m>, say <m>a_i\neq 0</m>; then <m>a_i^{-1} E_{ij} v = e_i \in M</m>, and since <m>M</m> is generated by the standard vectors <m>e_i</m>, <m>M = Rv</m>.
+                </p>
+              </li>
+            </ol>
+          </example>
+
+          <lemma xml:id="lem-schurs">
+            <title>Schur's Lemma</title>
+            
+            <statement>
+              <p>
+                Let <m>R</m> be a ring, and <m>M,N</m> be two simple <m>R</m>-modules. Then every nonzero <m>R</m>-module homomorphism <m>\phi:M\to N</m> is an isomorphism. In particular, <m>\operatorname{End}_R(M)</m> is a division ring.
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                For the first assertion, let <m>f:M\to N</m> be <m>R</m>-linear and nonzero. Then <m>\operatorname{ker}(f)\neq M</m>, so <m>\operatorname{ker}(f)=0</m> by simplicity, and <m>\operatorname{im}(f) \neq 0</m>, so <m>\operatorname{im}(f) = N</m>.
+              </p>
+
+              <p>
+                For the second, recall that <m>\operatorname{End}_R(M)</m> is a ring. If <m>f\in \operatorname{End}_R(M)</m> is nonzero, then by the first part, it is an isomorphism, so it has a two-sided inverse in <m>\operatorname{End}_R(M)</m>.
+              </p>
+            </proof>
+          </lemma>
+        </section>
+
+        <section xml:id="sec-fl-modules">
+          <title>Finite Length Modules</title>
+
+          <definition xml:id="def-finite-length">
+            <statement>
+              <p>
+                Given a short exact sequence 
+                <me>
+                  0 \to A \to B \to C \to 0
+                </me> 
+                we may think of the middle module <m>B</m> as built out of <m>A</m> and <m>C</m>; we call <m>B</m> an <em>extension</em> of <m>A</m> and <m>C</m>. Suppose that a module has a finite sequence of submodules 
+                <me>
+                  0 = M_0 \subseteq M_1 \subseteq M_2 \subseteq \cdots \subseteq M_n = M
+                </me> we call such a sequence a <em>filtration</em>. Then <m>M_1</m> is an extension of <m>M_0</m> and <m>M_1/M_0</m>, <m>M_2</m> is an extension of <m>M_1=M_1/M_0</m> and <m>M_2/M_1</m>, and so on. We might think of <m>M</m> as built from <m>M_1/M_0, M_2/M_1,\dots,M_n/M_{n-1}</m> like so.
+              </p>
+            </statement>
+          </definition>
+
+          <definition xml:id="def-">
+            <statement>
+              <p>
+                A module <m>M</m> has <em>finite length</em> if it has a filtration of the form 
+                <me>
+                  0 = M_0 \subseteq M_1 \subseteq M_2 \subseteq \cdots \subseteq M_n = M
+                </me> 
+                with <m>M_{i+1}/M_i</m> simple for each <m>i</m>; such a filtration is called a <em>composition series</em> of <em>length</em> <m>n</m>. We say a composition series is <em>strict</em> if <m>M_i \neq M_{i+1}</m> for all <m>i</m>. Two composition series are <em>equivalent</em> if the collections of composition factors <m>M_{i+1}/M_i</m> are the same up to reordering. The <em>length</em> of a finite length module <m>M</m>, denoted <m>\ell(M)</m> , is the minimum of the lengths of a composition series of <m>M</m>. If <m>M</m> has does not have finite length, we say that <m>M</m> has infinite length, or <m>\ell(M) = \infty</m>.
+              </p>
+            </statement>
+          </definition>
+
+          <example>
+            Let <m>K</m> be a field and <m>V=K^2</m>. Then any filtration of the form <m>0 \subseteq W \subseteq V</m> where <m>W</m> is a line through the origin is a strict composition series.
+          </example>
+
+          <remark>
+            <p>
+              Let 
+              <me>
+                0 \to A \xrightarrow{i} B \xrightarrow{p} C\to 0
+              </me> 
+              be a short exact sequence. Given filtrations / composition series / strict composition series 
+              <me>
+                A_\bullet: \qquad 0 = A_0 \subseteq A_1 \subseteq A_2 \subseteq \cdots \subseteq A_n = A
+              </me> 
+              and 
+              <me>
+                C_\bullet: \qquad 0 = C_0 \subseteq C_1 \subseteq C_2 \subseteq \cdots \subseteq C_n = C
+              </me> 
+              we can make a filtration / composition series / strict composition series of <m>B</m> by 
+              <me>
+                0 = i(A_0) \subseteq i(A_1) \subseteq i(A_2) \subseteq \cdots \subseteq i(A_n) = i(A) = p^{-1}(C_0) \subseteq p^{-1}(C_1) \subseteq p^{-1}(C_2) \subseteq \cdots \subseteq p^{-1}(C_n) = B.
+              </me>
+            </p>
+
+            <p>
+              Conversely, given a filtration / composition series / strict composition series of <m>B</m> that contains <m>i(L)</m> as a term, we can obtain filtrations / composition series / strict composition series of <m>A</m> and <m>C</m> by applying <m>i^{-1}</m> to the terms up through <m>i(L)</m> and applying <m>p</m> to the terms from <m>i(L)</m> on. However, not every filtration / composition series of a module will contain a fixed submodule as a term.
+            </p>
+          </remark>
+
+          <theorem xml:id="thm-jordan-holder">
+            <title>JOrdan-Holder Theorem</title>
+            
+            
+            <statement>
+              <p>
+                Let <m>M</m> be a module of finite length.
+              </p>
+
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      If <m>L\subseteq M</m> is a proper submodule, then <m>\ell(L) &lt; \ell(M)</m>.
+                    </p>
+                  </li>
+                  
+                  <li>
+                    <p>
+                      If <m>L\subseteq M</m> is a nonzero submodule and <m>\overline{M}=M/L</m>, then <m>\ell(\overline{M})&lt; \ell(M)</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Any filtration of <m>M</m> can be refined to a composition series.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      All strict composition series for <m>M</m> are equivalent, and hence have the same length.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                If <m>m := \ell(M)</m>, consider a strict composition series of <m>M</m> of length <m>m</m>, say <me>M_\bullet: \qquad  0 = M_0 \subsetneqq M_1 \subsetneqq M_2 \subsetneqq \cdots \subsetneqq M_m = M.</me>
+              </p>
+              
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      Consider the filtration 
+                      <me>
+                        L_\bullet: \qquad  0 = M_0 \cap L \subseteq M_1 \cap L \subseteq M_2 \cap L \subseteq \cdots \subseteq M_m \cap L = L.
+                      </me> 
+                      By the Second Isomorphism Theorem, its composition factors satisfy 
+                      <me>
+                        \frac{M_{i+1} \cap L}{M_i \cap L} = \frac{M_{i+1} \cap L}{(M_{i+1} \cap L) \cap M_i} \cong \frac{M_{i+1} \cap L + M_i} {M_i}.
+                      </me> 
+                      The right hand side is a submodule of <m>M_{i+1}/M_i</m>, which by assumption is simple, so our filtration is in fact a composition series of length <m>n</m>. Then for any <m>i</m> either 
+                      <me>
+                        \frac{M_{i+1} \cap L}{M_i \cap L} = 0 \quad \textrm{ or } \quad \frac{M_{i+1} \cap L}{M_i \cap L}\cong \frac{M_{i+1}}{M_i}.
+                      </me> 
+                      We claim that the latter case does not hold for all <m>i</m>: if it did, we would have <m>0=M_0 = M_0 \cap L</m>, and inductively <m>M_{i+1} \cap L = M_{i+1}</m> for all <m>i</m> and in particular for <m>i=m-1</m>, we have <m>M = M\cap L</m>, contradicting that <m>L</m> is proper. Thus, for some <m>i</m>, the first case holds. We can then skip that <m>i</m> and obtain a composition series of length less than <m>n</m>, so <m>\ell(L)&lt;m</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Consider the filtration <me>\overline{M}_\bullet: \qquad 0 = \frac{M_0 + L }{L} \subseteq \frac{M_1 + L }{L} \subseteq \cdots \subseteq \frac{M_n + L }{L} = \overline{M}.</me> The factors satisfy <me>\frac{(M_{i+1} + L )/ L }{(M_i + L) / L} \cong \frac{M_{i+1} + L}{M_{i} + L} \cong \frac{M_{i+1} + (M_i+L)}{M_i+L}\cong \frac{M_{i+1} }{M_{i+1} \cap( M_i + L)},</me> and since <m>M_i \subseteq M_{i+1} \cap (M_i+L)</m>, these are quotient modules of the simple module <m>M_{i+1}/M_i</m>, so this is a composition series. Then for any <m>i</m> either <me>\frac{(M_{i+1} + L )/ L }{(M_i + L) / L}  = 0 \quad \textrm{ or } \quad \frac{M_{i+1} }{M_{i+1} \cap( M_i + L)}  \cong  \frac{M_{i+1}}{M_i}.</me>
+                    </p>
+
+                    <p>
+                      We claim that the latter case does not hold for all <m>i</m>: if it did, we would have then <m>M_{i+1} \cap (M_i+L) = M_{i}</m> for all <m>i</m>, so <me>\frac{M_{i+1} + L}{M_{i+1}} \cong \frac{L+M_i}{(L+M_i) \cap M_{i+1}} =\frac{L+M_i}{M_i}</me> for all <m>i</m>, and hence <m>L \cong (L+M_0)/M_0 \cong (L+M_n)/M_n \cong 0</m>, contradicting that <m>L\neq 0</m>. Thus, for some <m>i</m>, the first case holds, and we can skip that <m>i</m> to obtain a composition series of length less than <m>n</m>, so <m>\ell(\overline{M})&lt;m</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      We proceed by induction on length again. Given a filtration of <m>M</m>, we can suppose that there is some nonzero proper submodule <m>L</m> in the filtration, since otherwise we could just take any composition series. Then <m>L</m> and <m>\overline{M}</m> has length less than <m>M</m>. The filtration up to <m>L</m> can be refined to a strict composition series by the induction hypothesis, and the filtration from <m>L</m> to <m>M</m> taken mod <m>L</m> can be refined to a strict composition series for <m>\overline{M}</m>; pulling back as in the remark above, we get the strict composition series we want.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      We show by induction on <m>m</m> that for any module of length <m>m</m>, all of its strict composition series are equivalent. Assume that <m>\ell(M)=m</m>. If <m>m=1</m>, the claim is clear since we are dealing with a simple module. Suppose that <me>N_\bullet: \qquad 0 = N_0 \subsetneqq N_1 \subsetneqq \cdots \subsetneqq N_n = M</me> is another strict composition series for <m>M</m>, so <m>n\geq m</m>. If <m>N_{n-1}=M_{m-1}</m>, then since <m>\ell(M_{m-1})\leq m-1</m> the two composition series we have for <m>M_{m-1}</m> are equivalent by induction, so the two given series are equivalent.
+                    </p>
+
+                    <p>
+                      If <m>N_{n-1} \neq M_{m-1}</m>, since <m>M/M_{m-1}</m> is simple, <m>M_{m-1}</m> is not properly contained in <m>N_{n-1}</m>, so the image of <m>M_{m-1}</m> in <m>M/N_{n-1}</m> is nonzero, so equals all of <m>M</m>, which means that <m>N_{n-1}+M_{m-1} = M</m>. Set <m>K=N_{n-1}\cap M_{m-1}</m>. By the second isomorphism theorem, we then have <me>\frac{M}{M_{m-1}} = \frac{M_{m-1}+N_{n-1}}{M_{m-1}} \cong \frac{N_{n-1}}{K}</me> and similarly <m>M/N_{n-1} \cong M_{m-1} / K</m>, and both of these modules are simple.
+                    </p>
+
+                    <p>
+                      Fix a strict composition series for <m>K</m>: <me>K_{\bullet}: \qquad 0 = K_0 \subsetneqq K_1 \subsetneqq \cdots \subsetneqq K_k = K</me> and extend to a strict composition series for <m>M_{m-1}</m>: <me>K'_{\bullet}: \qquad 0 = K_0 \subsetneqq K_1 \subsetneqq \cdots \subsetneqq K_k = K \subsetneqq M_{m-1}.</me> Since we also have the strict composition series <me>M_{\bullet \leq m-1} : \qquad 0 = M_0 \subsetneqq M_1 \subsetneqq M_2 \subsetneqq \cdots \subsetneqq M_{m-1}</me> of length <m>m-1</m>, we must have that <m>k=m-2</m> and <m>K'_{\bullet}</m> is equivalent to <m>M_{\bullet \leq n-1}</m>. Thus, the composition factors of <m>M_{\bullet \leq m-1}</m> are those of <m>K</m> plus one copy of <m>M_{m-1} / K \cong M/N_{n-1}</m>.
+                    </p>
+
+                    <p>
+                      Now, <me>K''_{\bullet}: \qquad  0 = K_0 \subsetneqq K_1 \subsetneqq \cdots \subsetneqq K_{m-2} = K \subsetneqq N_{n-1}</me> is a strict composition series for <m>N_{n-1}</m>, so <m>n=m</m>. Then, <m>K''_{\bullet}</m> is equivalent to the strict composition series <me>N_{\bullet \leq n-1}: \qquad 0 = N_0 \subsetneqq N_1 \subsetneqq \cdots \subsetneqq N_{n-1}.</me> Thus, the composition factors of <m>N_{\bullet \leq n-1}</m> are those of <m>K</m> plus one copy of <m>N_{n-1} / K \cong M/M_{n-1}</m>.
+                    </p>
+
+                    <p>
+                      It follows that the composition series <m>M_\bullet</m> and <m>N_\bullet</m> are equivalent.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </proof>
+          </theorem>
+
+          <example>
+            <p>
+              <ol>
+                <li>
+                        <p>
+                If <m>K</m> is a field, then a <m>K</m>-vector space of dimension <m>n</m> is a <m>K</m>-module of length <m>n</m>.
+              </p>
+                </li>
+      
+                <li>
+                        <p>
+                If <m>R</m> is a <m>K</m>-algebra, and <m>M</m> is an <m>R</m>-module that as a <m>K</m>-vector space has dimension <m>n</m>, then <m>\ell(M)\leq n</m>, since the vector space dimension of a proper submodule is strictly smaller.
+              </p>
+                </li>
+      
+                <li>
+                        <p>
+                The ring <m>R=K[x]</m> does not have finite length as a module over itself.
+              </p>
+                </li>
+      
+                <li>
+                        <p>
+                <m>\mathbb{Z}/p^n</m> has length <m>n</m> as a <m>\mathbb{Z}</m>-module, with strict composition series <me>0 \subseteq \langle \overline{p^{n-1}} \rangle \subseteq \cdots \subseteq \langle \overline{p} \rangle \subseteq \mathbb{Z}/p^n.</me>
+              </p>
+                </li>
+      
+              </ol>
+            </p>
+          </example>
+          
+          
+        </section>
+      </chapter>
+
+      <exercises xml:id="exercises-rep1">
+        Let <m>F</m> be a field, let <m>G</m> be a finite group and let <m>n\in\Z^+</m>.
+        <exercise number="1">
+          
+        </exercise>
+
+
+
+      </exercises>
+
+      <chapter xml:id="sec-chain-conditions">
+        <title>Chain Conditions</title>
+
+        <definition xml:id="def-acc">
+          <statement>
+            <p>
+              We say a poset <m>(P,\leq)</m> satisfies the <em>ascending chain condition</em> or <em>ACC</em> if every totally ordered nonempty subset of <m>P</m> has a maximum element.
+            </p>
+          </statement>
+        </definition>
+
+        <definition xml:id="def-dcc">
+          <statement>
+            <p>
+              We say a poset <m>(P,\leq)</m> satisfies the <em>descending chain condition</em> or <em>DCC</em> if every totally ordered nonempty subset of <m>P</m> has a minimum element.
+            </p>
+          </statement>
+        </definition>
+
+        <remark>
+          <p>
+            For a poset <m>(P,\leq)</m>, the following are equivalent:
+          </p>
+
+          <p>
+            <ol>
+              <li>
+                <p>
+                  Every totally ordered nonempty subset has a maximum element (i.e., <m>P</m> has ACC)
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Every totally ordered subset indexed by <m>\mathbb{N}</m>, <m>p_1 \leq p_2 \leq p_3 \leq \cdots</m> has a maximum element (i.e., <m>\exists k: p_k=p_{k+1} = \cdots</m>)
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Every nonempty subset of <m>P</m> has a maximum element.
+                </p>
+              </li>
+            </ol>
+          </p>
+
+          <p>
+            Indeed, (3) <m>\Rightarrow</m> (1) <m>\Rightarrow</m> (2) is clear. Given a totally ordered nonempty subset with no maximum, one can inductively keep choosing larger elements and obtain a countable such subset, so (2) <m>\Rightarrow</m> (1). If any totally ordered nonempty subset of <m>P</m> has a maximum element, then the same property holds for any nonempty subset <m>Q</m> of <m>P</m>, so by Zorn’s Lemma, such a <m>Q</m> has a maximum element. The analogous equivalences hold with DCC.
+          </p>
+        </remark>
+
+        <p>
+          Note that the condition (3) asserts that any nonempty subset of <m>P</m> has an element that is maximal <em>within the subset</em>, not maximal <em>within <m>P</m></em>.
+        </p>
+
+        <definition xml:id="def-noeth-art-mod">
+          <statement>
+            <p>
+              Let <m>R</m> be a ring and <m>M</m> be an <m>R</m>-module.
+
+              <ol>
+                <li>
+                  <p>
+                    We say that <m>M</m> is <em>Noetherian</em> if the poset of submodules of <m>M</m> partially ordered by containment has ACC.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    We say that <m>M</m> is <em>Artinian</em> if the poset of submodules of <m>M</m> partially ordered by containment has DCC.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    We say that <m>R</m> is <em>left Noetherian</em> if <m>R</m> is Noetherian as a left <m>R</m>-module; i.e., the poset of left ideals of <m>R</m> under containment has ACC.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    We say that <m>R</m> is <em>left Artinian</em> if <m>R</m> is Artinian as a left <m>R</m>-module; i.e., the poset of left ideals of <m>R</m> under containment has DCC.
+                  </p>
+                </li>
+              </ol>
+            </p>
+
+            <p>
+              If <m>R</m> is commutative, left ideals and right ideals are the same, so we will just say <m>R</m> is Noetherian or Artinian.
+            </p>
+          </statement>
+        </definition>
+
+        <example>
+          <p>
+            <ol>
+              <li>
+                    <p>
+              A division ring <m>D</m> is both left Noetherian and left Artinian.
+            </p>
+              </li>
+      
+              <li>
+                    <p>
+              If <m>R</m> is a PID but not a field (e.g., <m>R=\mathbb{Z}</m> or <m>R=K[x]</m>), then <m>R</m> is Noetherian but not Artinian. To see <m>R</m> is Noetherian, note that any ideal is of the form <m>I=(p_1^{e_1} \cdots p_t^{e_t})</m> for some irreducible elements <m>p_i</m> and positive integers <m>e_i</m>. An ideal contains <m>I</m> if it corresponds to a product of the same irreducibles with smaller or equal multiplicities; there are only finitely many of these so an ascending chain must stablilize. To see <m>R</m> is not Artinian, take some irreducible <m>p</m> and take the chain <me>(p) \supsetneqq (p^2) \supsetneqq (p^3) \supsetneqq (p^4) \supsetneqq \cdots .</me>
+            </p>
+              </li>
+      
+              <li>
+                    <p>
+              A polynomial ring in infinitely many variables is neither Noetherian nor Artinian: there is an ascending chain <me>(x_1) \subsetneqq (x_1,x_2)  \subsetneqq (x_1,x_2,x_3)  \subsetneqq (x_1,x_2,x_3,x_4) \subsetneqq \cdots</me> and take a descending chain as in the last example.
+            </p>
+              </li>
+      
+              <li>
+                    <p>
+              The <m>\mathbb{Z}</m>-module <m>M=\displaystyle \frac{\mathbb{Z}[\frac12]}{\mathbb{Z}}</m>, where <m>\mathbb{Z}[\frac12]</m> is the subring of <m>\mathbb{Q}</m> generated by <m>\mathbb{Z}</m> and <m>\frac12</m>, is Artinian but not Noetherian. Suppose that <m>N\subseteq M</m> is generated by <m>\displaystyle \big\{ \big[\frac{a_\lambda}{2^{n_\lambda}}\big]\big\}</m>, where each <m>a_\lambda</m> is odd (we can write any element in <m>\mathbb{Z}[\frac12]</m> like so). Observe that for each <m>\lambda</m>, there are integers <m>s,t</m> such that <m>\displaystyle s a_\lambda + t 2^{n_\lambda} = 1</m>, so <m>\displaystyle s \big[\frac{a_\lambda}{2^{n_\lambda}}\big] = \big[\frac{1}{2^{n_\lambda}}\big]</m>. Thus, <m>N</m> is generated by <m>\displaystyle \big\{ \big[\frac{1}{2^{n_\lambda}}\big]\big\}</m>. Thus, the submodules of <m>M</m> are <m>M</m> itself, <m>0</m>, and <m>M_i = \displaystyle \frac{\mathbb{Z}\cdot \frac{1}{2^n}}{\mathbb{Z}}</m> for <m>i&gt;0</m>. We have <m>0 \subsetneqq M_1 \subsetneqq M_2 \subsetneqq \cdots</m> so <m>M</m> is not Noetherian. However, any descending chain is either always equal to <m>M</m>, or else has some <m>M_i</m> as a term, and there are finitely many submodules of such an <m>M_i</m>, so must stabilize.
+            </p>
+              </li>
+      
+              <li>
+                    <p>
+              The subring of <m>M_2(\mathbb{Q})</m> given as <me>\left\{ \begin{bmatrix} a &amp; 0 \\ b &amp; c \end{bmatrix} \ \big| \ a\in \mathbb{Z}, b,c\in \mathbb{Q}\right\}</me> is left Noetherian but not right Noetherian.
+            </p>
+              </li>
+      
+            </ol>
+          </p>
+        </example>
+
+        <problem>
+          <p>
+            Let <m>0 \to M' \to M \to M''\to0</m> be a short exact sequence. Then <m>M</m> has ACC (resp DCC) if and only if <m>M'</m> and <m>M''</m> have ACC (resp. DCC).
+          </p>
+        </problem>
+
+        <p>
+          The Noetherian condition is intimately tied to finite generation.
+        </p>
+
+        <proposition xml:id="prop-noeth-fg-mod">
+          <statement>
+            <p>
+              Let <m>M</m> be an <m>R</m>-module. Then <m>M</m> has ACC if and only if every submodule of <m>M</m> is finitely generated.
+            </p>
+          </statement>
+
+          <proof>
+            <p>
+              Suppose that <m>N\subseteq M</m> is not finitely generated. Then we can construct an ascending chain of submodules of <m>M</m> given by setting <m>N_0=0</m>, and <m>N_{i+i} = N_i + n_{i+1}</m> for some <m>n_{i+1}\in N\smallsetminus N_i</m>; we can do this since each <m>N_i</m> is a finitely generated submodule of <m>N</m>, so is not equal to <m>N</m>.
+            </p>
+
+            <p>
+              Now suppose that every submodule of <m>M</m> is finitely generated. Given a countable ascending chain of submodules <me>M_1 \subseteq M_2 \subseteq M_3 \subseteq M_4 \subseteq \cdots</me> let <m>N=\bigcup _{n\in \mathbb{N}} M_n</m>; this is a submodule of <m>M</m>. Take a finite generating set <m>\{n_1,\dots,n_t\}</m> for <m>N</m>. For each <m>i=1,\dots,t</m>, we have <m>n_i \in M_j</m> for some <m>j</m>. Since there are finitely many <m>n_i</m>'s there is some <m>M_j</m> that contains them all. But then <m>M_j=N</m>, so the chain stabilizes (i.e., achieves a maximum element).
+            </p>
+          </proof>
+        </proposition>
+
+        <proposition xml:id="prop-lnoeth-fg-mod">
+          <statement>
+            <p>
+              Let <m>R</m> be left Noetherian. Then a module is finitely generated if and only if it is left Noetherian. In particular, in a left Noetherian ring, every submodule of a finitely generated module is finitely generated.
+            </p>
+          </statement>
+
+          <proof>
+            <p>
+              For the first statement, the <q>if</q> implication holds in general without the hypothesis on <m>R</m>. For the other implication, observe that there are short exact sequences <me>0 \to R^{n-1} \to R^{n} \to R \to 0</me> for all <m>n&gt;0</m>. So, by the exercise above and induction on <m>n</m>, every finitely generated free module is Noetherian. Now, if <m>M</m> is finitely generated, there is a short exact sequence of the form <me>0 \to K \to R^{n} \to M \to 0</me> so by the exercise above again, <m>M</m> is Noetherian.
+            </p>
+
+            <p>
+              The second statement follows from the first as a submodule of a Noetherian module is Noetherian, again by the exercise
+            </p>
+          </proof>
+        </proposition>
+
+        <p>
+          Now we tie these chain conditions to length.
+        </p>
+
+        <proposition xml:id="prop-fl-mod-iff">
+          <statement>
+            <p>
+              A module <m>M</m> has finite length if and only if it is both Noetherian and Artinian.
+            </p>
+          </statement>
+
+          <proof>
+            <p>
+              Assume that <m>M</m> has finite length. Suppose that <m>M</m> is not Noetherian. Then there is a chain <me>M_0 \subsetneqq M_1 \subsetneqq M_2 \subsetneqq  \cdots</me> Since each <m>M_i</m> is a submodule of <m>M</m>, its length is finite, and is a nonnegative integer. Then <m>\ell(M_0) &lt; \ell(M_1) &lt; \ell(M_2) &lt; \cdots \leq \ell(M)</m>, which yields a contradiction. The argument that <m>M</m> is Artinian is similar.
+            </p>
+
+            <p>
+              Now assume that <m>M</m> is both Noetherian and Artinian. We will construct a composition series for <m>M</m>. We can assume that <m>M\neq 0</m>. Consider the collection of proper submodules of <m>M</m>. This is nonempty, so has a maximal element <m>M^1</m> by the Noetherian hypothesis. We must have <m>M/M^1</m> is simple, or else there is a module in between <m>M^1</m> and <m>M</m>. Using Noetherianity again, if <m>M^1\neq 0</m> (we’re done otherwise), there is a maximal proper submodule of <m>M^1</m>; call it <m>M^2</m>. This process yields a descending chain with simple quotients, and this must stop (i.e., yield <m>M^i=0</m> for some <m>i</m>) by the Artinian hypothesis. Thus, there is a composition series for <m>M</m>.
+            </p>
+          </proof>
+        </proposition>
+        
+      </chapter>
+
+      <chapter xml:id="ch-semisimple-mod">
+        <title>Semisimple Modules</title>
+        
+        <p>
+          We now study an important condition that is somewhat orthogonal (yet somewhat related) to our chain conditions. The condition of finite length, and to some extent the Noetherian and Artinian conditions, were related to how a module is made out of building blocks, or how big it is in terms of its pieces. The condition of semisimplicity says that a module is composed of basic building blocks in the simplest possible way.
+        </p>
+
+        <definition xml:id="def-semisimple-mod">
+          <statement>
+            <p>
+              For any ring <m>R</m>, a left <m>R</m>-module <m>M</m> is called <em>semisimple</em> if it is a (possibly infinite) direct sum of simple modules. The empty direct sum is allowed, so that the <m>0</m> module <em>is</em> considered to be semisimple.
+            </p>
+          </statement>
+        </definition>
+
+        <example>
+          <p>
+            Let <m>M</m> be a finitely generated <m>\mathbb{Z}</m>-module. Then by the FTFGAG, <m>M</m> is isomorphic to <m>\mathbb{Z}^r \oplus \mathbb{Z}/p_1^{e_1} \oplus \cdots \oplus \mathbb{Z}/p_n^{e_n}</m> for some <m>r \geq 0</m>, <m>n \geq 0</m>, primes <m>p_i</m> and positive integers <m>e_i</m>. Such a module is semisimple if and only if <m>r = 0</m> and <m>e_i = 1</m> for all <m>i</m>.
+          </p>
+        </example>
+
+        <example>
+          <p>
+            Every module over a division ring <m>D</m> is semisimple because any such module has a basis, hence it is a free module.
+          </p>
+        </example>
+
+        <lemma xml:id="lem-matrixsemisimple">
+          <statement>
+            <p>
+              Let <m>D</m> be a division ring and set <m>R = M_n(D)</m> for some <m>n \geq 1</m>. I claim <m>R</m> is semisimple as a left module over itself.
+            </p>
+          </statement>
+
+          <proof>
+            <p>
+              For each <m>1 \leq i \leq n</m>, let <m>I_i</m> denote the subset of <m>R</m> consisting of matrices whose only nonzero entires belong to the <m>i</m>-th column. The rules for matrix addition and multiplication show that <m>I_i</m> is a left ideal (i.e., a left submodule) of <m>R</m>. Moreover, there is evident bijection between <m>I_i</m> and <m>D^n</m> (column vectors) and this bijection is an isomorphism of left <m>R</m>-modules. We proved <m>D^n</m> is simple as an <m>R</m>-module and hence so is <m>I_i</m>. Finally, <m>R</m> is the internal direct sum of <m>I_1, \dots, I_n</m>: <me>R=I_1\oplus \cdots \oplus I_n</me> because each matrix <m>X</m> is uniquely a sum of the form <m>X_1 + \cdots + X_n</m> with <m>X_i \in M_i</m>.
+            </p>
+          </proof>
+        </lemma>
+
+        <problem>
+          <p>
+            Let <m>\{M_\lambda\}_{\lambda\in \Lambda}</m> be an infinite collection of nonzero modules. Then <m>\bigoplus_{\lambda\in \Lambda} M_\lambda</m> is not finitely generated.
+          </p>
+        </problem>
+
+        <remark>
+          <p>
+            As a consequence of the above exercise, a module is a finitely generated semisimple module if and only if it is a finite direct sum of simple modules. In this case if we write <m>M=M_1 \oplus \cdots \oplus M_n</m> as a sum of simple modules, there is a strict composition series <me>0\subset M_1 \subset M_1 \oplus M_2 \subset \cdots \subset M_1 \oplus \cdots \oplus M_{n-1} \subset M</me> so <m>M</m> has finite length, namely length <m>n</m>, and the composition factors are the modules <m>M_i</m>.
+          </p>
+        </remark>
+
+        <proposition xml:id="prop-ks-semisimple-mod">
+          <title>Krull-Schmidt for Semisimple Modules</title>
+            
+          <statement>
+            <p>
+              Let <m>M</m> be a finitely generated semisimple module. Given two direct sum decompositions as simple modules <me>M = M_1 \oplus  \cdots  \oplus M_m = N_1 \oplus  \cdots  \oplus N_n</me> then <m>m=n</m>, and there is a permutation <m>\sigma</m> such that <m>M_{\sigma(i)} \cong N_i</m> for all <m>i</m>
+            </p>
+          </statement>
+
+          <proof>
+            <p>
+              Follows from the previous remark and the Jordan-Holder theorem.
+            </p>
+          </proof>
+        </proposition>
+
+        <theorem xml:id="thm-equiv-semisimp-mod">
+          <title>Equivalent Conditions for Semisimple Modules</title>
+          
+          <statement>
+            <p>
+              For any ring <m>R</m> and left <m>R</m>-module <m>M</m>, the following are equivalent:
+            </p>
+
+            <p>
+              <ol>
+                <li>
+                  <p>
+                    <m>M</m> is semisimple,
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    very submodule of <m>M</m> is a summand; i.e., for every submodule <m>N</m> of <m>M</m> there is a submodule <m>N'</m> such that <m>M=N\oplus N'</m> is the internal direct sum of <m>N</m> and <m>N'</m>,
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    every injective <m>R</m>-map <m>i: M' \to M</m> is split has a left inverse,
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    every SES of the form <m>0 \to M' \to M \to M'' \to 0</m> is split exact,
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    every surjective <m>R</m>-map <m>p: M \to M''</m> has a right inverse.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+
+          <proof>
+            <p>
+              The equivalence of (3), (4), and (5) is given by the Splitting Theorem.
+            </p>
+
+            <p>
+              <m>(2) \Rightarrow (3)</m> holds since given an injective map <m>i</m> as in (3), we have by (2) that <m>i(M')</m> is a summand of <m>M</m>, hence there is a projection homomorphism <m>\pi:M\to i(M')</m> that splits the inclusion of the summand into <m>M</m>, that is <m>\pi|_{i(M')}=\mathrm{id}_{i(M')}</m>. Now <m>i:M'\to i(M')</m> is an isomorphism so we may consider the <m>R</m>-module homomorphism <m>i^{-1}:i(M')\to M'</m> and set <m>q:M\to M'</m> to be <m>q=i^{-1}\circ \pi</m>. Then <me>q\circ i=i^{-1}\circ \pi \circ i=i^{-1}\circ \pi_{i(M')} \circ i= i^{-1}\circ i=\mathrm{id}_{M'}.</me>
+            </p>
+
+            <p>
+              <m>(3) \Rightarrow (2)</m> holds since we can split the inclusion <m>N\to M</m> and thus also the SES <me>0\to N\to M\to M/N \to 0.</me> Therefore the Splitting Theorem yields <m>M=N\oplus s(M/N)</m> where <m>s</m> denotes the splitting of the quotient map <m>M\to M/N</m>.
+            </p>
+
+            <p>
+              The hard part is proving <m>(1) \Leftrightarrow (2)</m>. <m>(1) \Rightarrow (2)</m> Assume (1), so that <m>M = \oplus_{\lambda \in \Lambda} M_\lambda</m> for some collection of simple submodules <m>M_\lambda</m>, and let <m>N \subseteq M</m> be any submodule. (It is important to note that it does not necessarily follow that <m>N</m> is a sum of some subcollection of the <m>M_\lambda</m>) . Consider the collection <m>\mathcal S</m> of subsets <m>\Gamma</m> of <m>\Lambda</m> such that <m>N \cap M_\Gamma = 0</m> where we define <m>M_\Gamma := \oplus_{\lambda \in \Gamma} M_\lambda</m>. View <m>\mathcal S</m> as a poset by inclusion. It is nonempty since <m>J = \emptyset</m> belongs to <m>\mathcal S</m>. If <m>\{\Gamma_\alpha\}</m> is a totally ordered subcollection of <m>\mathcal S</m>, let <m>\Gamma = \cup_\alpha \Gamma_\alpha</m>. I claim <m>M_\Gamma \cap N = 0</m>. If not, there is a nonzero element <m>(m_\gamma) \in M_\Gamma \cap N</m>. But since <m>m_\gamma = 0</m> for all but a finite number of <m>\gamma</m>’s and since the collection of <m>\Gamma_\alpha</m>’s was totally ordered, there is some <m>\alpha</m> such that <m>(m_\gamma) \in M_{\Gamma_\alpha} \cap N</m>, a contradiction. We may thus apply Zorn’s Lemma to get a maximal <m>\Gamma \in \mathcal S</m>.
+            </p>
+
+            <p>
+              I claim <m>M</m> is the internal direct sum of <m>N</m> and <m>M_\Gamma</m>. We have <m>N \cap M_\Gamma = 0</m> since <m>\Gamma\in\mathcal S</m> and so it suffices to prove <m>N + M_\Gamma = M</m>. Since <m>M = \sum_{\lambda \in \Lambda} M_\lambda</m>, the latter is equivalent to proving that <m>M_\lambda \subseteq N + M_\Gamma</m> for all <m>\lambda \in \Lambda</m>. If this fails for some <m>\lambda</m>, then since <m>M_\lambda \cap (N + M_\Gamma)</m> is a proper submodule of <m>M_\lambda</m>, which is simple, and hence <m>M_\lambda \cap (N + M_\Gamma) = 0</m>. But then <m>N \cap (M_{\Gamma} \oplus M_\lambda) = 0</m> (if <m>n \in N</m> and <m>n = m + m'</m>, with <m>m\in M_\Gamma</m> and <m>m'\in M_\lambda</m>, then <m>m'=n-m</m> so <m>m'=0</m> and <m>n=m</m>, and then <m>n=0</m>.) So, <m>\Gamma\cup\{ \lambda\}</m> is a member of <m>\mathcal S</m> that strictly contains <m>\Gamma</m>, a contradiction. It must be thar <m>M = N \oplus M_\Gamma</m>.
+            </p>
+
+            <p>
+              <m>(2) \Rightarrow (1)</m> Now assume that every submodule of <m>M</m> is a summand. We proceed in three steps:
+            </p>
+
+            <p>
+              (i) We claim that every submodule <m>T</m> of <m>M</m> inherits this property; i.e., every submodule of <m>T</m> is a summand of <m>T</m>. For say <m>U \subseteq T</m> is a submodule. By assumption on <m>M</m>, we have <m>M = U \oplus V</m> (internal direct sum) for some <m>V</m>. Since <m>U \subseteq T</m>, it follows that <m>T = U + (V \cap T)</m>. (Given <m>t \in T</m>, we have <m>t  =  u +v</m> for some <m>u \in U, v \in V</m>. Since <m>U \subseteq T</m>, <m>v =
+              t-u \in V \cap T</m>.) Since <m>U \cap (V \cap T) = 0</m>, this shows <m>T = U \oplus (V \cap T)</m>.
+            </p>
+
+            <p>
+              (ii) We claim that every nonzero submodule <m>T</m> of <m>M</m> contains a simple summand. Pick <m>0 \ne x \in T</m> and apply Zorn’s Lemma to show that there is a maximal submodule <m>U</m> of <m>T</m> with respect to the property that <m>x \notin U</m>. We have <m>T = U \oplus W</m> by (i) for some <m>W \neq 0</m>. If <m>W</m> is not simple, then <m>W</m> contains a nonzero, proper submodule <m>W_1</m> and hence, by using (i) again, we get that <m>W = W_1 \oplus W_2</m> for some proper nonzero submodule <m>W_2</m>.
+            </p>
+
+            <p>
+              These properties implies that <m>(U \oplus W_1) \cap (U \oplus W_2) = U</m>. One containment is clear. If <m>v</m> belongs to the left side, then <m>v = u + w_1 = u' + w_2</m>. It follows that <m>w_1 - w_2 = u - u' \in U \cap W = 0</m> and so <m>w_1 = w_2 \in W_1 \cap W_2 = 0</m>, and hence <m>w_1  = w_2 = 0</m>. So, either <m>x \notin U \oplus W_1</m> or <m>x \notin U \oplus W_2</m>, and either way we reach a contradiction to the maximality of <m>U</m>.
+            </p>
+
+            <p>
+              (iii) Let <m>\mathscr G</m> be the set of all simple submodules of <m>M</m>, and let <me>\mathscr  F= \{ \Omega \subseteq \mathscr G\ | \ \textrm{for all distinct} \ \omega_0, \omega_1, \dots, \omega_t \in \Omega, \omega_0 \cap (\omega_1 + \cdots + \omega_t) = 0\}.</me> Equivalently, the module generated by the modules in <m>\Omega</m> their direct sum. The set <m>\mathscr  F</m> is partially ordered by inclusion. It is nonempty, since <m>\varnothing \in \mathscr  F</m> (or some singleton is in there by (ii)). Given a chain <m>\{ \Omega_\alpha\}</m> in <m>\mathscr  F</m>, <m>\bigcup_\alpha \Omega_\alpha</m> is again an element of <m>\mathscr  F</m>, so there is a maximal element in <m>\mathscr  F</m>; call it <m>\Omega</m>. Let <m>U</m> be the direct sum of <m>\Omega</m>.
+            </p>
+
+            <p>
+              We claim that <m>U=M</m>. By hypothesis we have <m>M = U \oplus V</m> for some <m>V</m>. If <m>V = 0</m> we are done. Otherwise by (ii) (and (i) again) we have <m>V = S \oplus V'</m> for some simple submodule <m>S</m>. But then <m>\Omega \cup \{ U\} \in \mathscr  F</m>, contradicting maximality of <m>\Omega</m>.
+            </p>
+          </proof>
+        </theorem>
+
+        <corollary xml:id="cor-semisimple-quotient">
+          <statement>
+            <p>
+              If <m>M</m> semisimple, so is every submodule and quotient module of <m>M</m>.
+            </p>
+          </statement>
+
+          <proof>
+            <p>
+              Say <m>N \subseteq M</m> is a submodule. By the claim marked (i) in the proof of Theorem <xref ref="prop93b" /> every submodule of <m>N</m> is a summand, and hence <m>N</m> is semisimple by Theorem <xref ref="prop93b" /> <m>(2)\Rightarrow (1)</m>.
+            </p>
+
+            <p>
+              Given a surjection <m>M \twoheadrightarrow P</m>, it splits by Theorem <xref ref="prop93b" />, so that <m>P</m> is isomorphic to a submodule of <m>M</m>, namely the image of <m>P</m> under the splitting map. Hence <m>P</m> is semisimple by the case already proven.
+            </p>
+          </proof>
+        </corollary>
+
+        <p>
+          A major source of semisimple modules comes from group rings.
+        </p>
+      </chapter>
+
+      <chapter xml:id="ch-artin-wedd">
+        <title>Artin-Wedderburn Theorem</title>
+
+        <section xml:id="sec-semisimple-rings">
+          <title>Semisimple Rings</title>
+
+          <definition xml:id="def-semisimple-ring">
+            <statement>
+              <p>
+                A ring <m>R</m> is <em>left semisimple</em> if <m>R</m> is semisimple as a left module over itself. <m>R</m> is <em>right semisimple</em> if <m>R</m> is semisimple as a right modules over itself.
+              </p>
+            </statement>
+          </definition>
+
+          <remark>
+            <p>
+              Recall that submodules of <m>R</m> are left ideals and the simple ones are the minimal (nonzero) left ideals. So, <m>R</m> is left semisimple if and only if <m>R</m> is the internal direct sum of some collection of minimal left ideals <m>I_j</m>: <me>R = \bigoplus_{j \in J} I_j.</me> Moreover, <m>R</m> is f.g. as a module over itself, and so this must be a finite direct sum. So, <m>R</m> is left semisimple if and only if <m>R</m> decomposes as an internal direct sum of the form <m>R = I_1 \oplus \cdots \oplus I_m</m> for some finite collection <m>I_1, \dots, I_m</m> of minimal left ideals.
+            </p>
+          </remark>
+
+          <example>
+            <p>
+              For any <m>n \geq 0</m> and division ring <m>D</m>, the matrix ring <m>M_n(D)</m> is left semisimple. This was shown earlier. It is also right semisimple.
+            </p>
+          </example>
+
+          <example>
+            <p>
+              If <m>R=K_1 \times \cdots \times K_t</m> is a finite product of fields, then each <m>K_i</m> is a simple <m>R</m>-module, and <m>R</m> is the direct sum of these, so <m>R</m> is (left) semisimple.
+            </p>
+          </example>
+
+          <proposition xml:id="prop-equivcond-semisimple-ring">
+            <statement>
+              <p>
+                For a ring <m>R</m>, the following conditions are equivalent:
+
+                <ol>
+                  <li>
+                    <p>
+                      <m>R</m> is a left semisimple ring.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Every left <m>R</m>-module is semisimple.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Every SES of left <m>R</m>-modules is split.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Every injection <m>i: M' \hookrightarrow M</m> of left <m>R</m>-modules splits
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Every surjection <m>p: M \twoheadrightarrow M''</m> of left <m>R</m>-modules splits.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Every left <m>R</m>-module is projective.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Every left <m>R</m>-module is injective.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                The equivalence of (2)-(5) follows from Proposition <xref ref="prop93b" />. The equivalence of (4) and (7) follows from the characterization of injective modules in Proposition <xref ref="prop:injective" /> and the equivalence of (5) and (6) follows from the characterization of projective modules in Proposition <xref ref="prop1111" />. The implication (2) <m>\Rightarrow</m> (1) is obvious.
+              </p>
+
+              <p>
+                Now for <m>(1)\Rightarrow (2)</m>: Assume (1) and let <m>M</m> be any left <m>R</m>-module. It follows from the definition that an arbitrary coproduct of semisimple modules is again semisimple, and so the free module <m>\bigoplus_\Lambda R</m> is semisimple for any indexing set <m>\Lambda</m>. By choosing a generating set of <m>M</m> , we may find a surjection of the form <m>p: \oplus_\Lambda R \twoheadrightarrow M</m>. By Corollary <xref ref="cor93" />, it follows that <m>M</m> is semisimple since it is a quotient of a semisimple module <m>M\cong \oplus_\Lambda R/\operatorname{ker}(p)</m>.
+              </p>
+            </proof>
+          </proposition>
+
+          <proposition xml:id="prop-ds-semisimple">
+            <statement>
+              <p>
+                Let <m>R</m> be a left semisimple ring and write <m>R = I_1 \oplus \cdots \oplus I_m</m> as an internal direct sum with <m>I_1, \dots, I_m</m> minimal left ideals. Let <m>J_1, \dots, J_n</m> be a complete list of representatives of isomorphism classes as left <m>R</m>-modules taken from the list <m>I_1, \dots, I_m</m>; so, for each <m>i</m> with <m>1 \leq i \leq m</m>, there is a unique <m>j</m> with <m>1 \leq j \leq l</m> so that <m>I_i \cong J_j</m> as left <m>R</m>-modules.
+              </p>
+
+              <p>
+                Then every <m>R</m>-module is isomorphic to <m>J_1^{\oplus \Lambda_1} \oplus \cdots \oplus J_n^{\oplus \Lambda_n}</m> for some index sets <m>\Lambda_1,\dots,\Lambda_n</m>.
+              </p>
+
+              <p>
+                If <m>M</m> is finitely generated, <m>M</m> is isomorphic to <m>J_1^{\oplus e_1} \oplus \cdots \oplus J_n^{\oplus e_n}</m> for a unique list <m>e_1, \dots, e_n</m> of nonnegative integers.
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                If <m>M</m> is finitely generated there is a surjection <m>R^a \twoheadrightarrow M</m>. Using Proposition <xref ref="prop916" /> this surjection splits, so that <m>R^n \cong M \oplus N</m> for some <m>N</m>, and each of <m>M</m> and <m>N</m> is semisimple and finitely generated. So <m>M = \oplus_{i=1}^s M_i</m> and <m>N = \oplus_{j=1}^s N_j</m> with <m>M_i, N_j</m> simple. Clearly <m>R^n</m> is isomorphic to a finite direct sum of copies of the <m>J_i</m>’s, and so the result follows from the Krull-Schmidt Theorem for semisimple modules.
+              </p>
+
+              <p>
+                In the general case, we know that <m>M</m> is a direct sum of simple modules; if some simple summand <m>N</m> of <m>M</m> is not isomorphic to one of the <m>J_i</m>, then <m>N</m> is a finitely generated counterexample to the f.g. case.
+              </p>
+            </proof>
+          </proposition>
+
+          <p>
+            In short, if <m>R</m> is left semisimple, and we know the simple decomposition of <m>R</m> itself, then we have a complete classification of <em>all</em> <m>R</m>-modules: they are just direct sums of the simple summands of <m>R</m>!
+          </p>
+
+          <p>
+            Much of the interest in semisimple rings arises from the following:
+          </p>
+
+          <theorem xml:id="thm-Maschke">
+            <title>Maschke's Theorem</title>
+            
+            
+            <statement>
+              <p>
+                If <m>K</m> is a field and <m>G</m> is a finite group such that <m>\mathrm{char}(K)</m> does not divide <m>|G|</m>, then the group ring <m>K[G]</m> is left semisimple.
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                Let <m>i: N \to M</m> be any injection of left <m>K[G]</m>-modules. It suffices to prove that there is an <m>K[G]</m>-linear map <m>p: M \to N</m> such that <m>p \circ i = \mathrm{id}_N</m>. By restriction of scalars along the inclusion <m>K \subseteq K[G]</m>, we may regard <m>i</m> as a <m>K</m>-linear map between <m>K</m>-vector spaces. As such it admits a <m>K</m>-linear splitting <m>f: M \twoheadrightarrow N</m> (since <m>K</m> is semisimple). There is no reason that <m>f</m> will be <m>K[G]</m>-linear, but we can modify it so that it becomes so: Define <m>p: M \to N</m> by <me>p(m) = \frac{1}{|G|} \sum_{g \in G} g^{-1} f(g m).</me> Note that the formula makes sense since <m>|G|</m> is invertible in <m>K</m> by assumption.
+              </p>
+
+              <p>
+                Then <m>p</m> is still a <m>K</m>-linear map (since <m>f</m> is <m>K</m>-linear and the group action is <m>K</m>-linear). For any <m>h \in G</m> we have <me>p(hm) = \frac{1}{|G|} \sum_{g \in G} g^{-1} f(g hm) = \frac{1}{|G|} \sum_{x \in G} hx^{-1} f(xm)
+                  = h p(m),</me> where the second equality is given by identifying <m>x</m> with <m>gh</m>. These conditions ensure that <m>p</m> is <m>K[G]</m>-linear. Finally, <me>p(i(n))= \frac{1}{|G|} \sum_{g \in G} g^{-1} f(g i(n))
+                  = \frac{1}{|G|} \sum_{g \in G} g^{-1} f(i(gn)) 
+                  = \frac{1}{|G|} \sum_{g \in G} g^{-1} gn
+                  = \frac{1}{|G|} \sum_{g \in G} n  = n</me> where the second equality uses that <m>i</m> is <m>K[G]</m>-linear and the third one uses that <m>f \circ i =
+                  \mathrm{id}</m>.
+              </p>
+            </proof>
+          </theorem>
+
+          <remark>
+            <p>
+              The proof actually shows that <m>K[G]</m> is semisimple provided <m>K</m> is and <m>|G|</m> is invertible in <m>K</m>.
+            </p>
+          </remark>
+
+          <example>
+            <p>
+              The group ring <m>R=\mathbb{F}_p[C_p]</m> does not satisfy the hypotheses of Maschke’s theorem, since the order of the group is zero in the field. In fact, <m>\mathbb{F}_p[C_p]</m> is not semisimple: let <m>V=\mathbb{F}_p^2</m> be the <m>{C_p= \langle g\rangle}</m> representation <m>g^n \mapsto \begin{bmatrix} 1 &amp; 0 \\ \lambda n &amp; 1\end{bmatrix}</m>; i.e., as a <m>\mathbb{F}_p[C_p]</m>-module, we have <m>g \cdot \begin{bmatrix} a \\ b\end{bmatrix} =  \begin{bmatrix} a \\ a+b\end{bmatrix}</m>. We claim that <m>{U=\left\{ \begin{bmatrix} 0 \\ b \end{bmatrix}\right\}}</m> is the unique nonzero proper submodule of <m>V</m>. Let <m>W\subseteq V</m> be a nonzero submodule and suppose that <m>U\neq W</m>. Then, there is some element <m>v=\begin{bmatrix} a \\ b\end{bmatrix} \in W</m> with <m>a\neq 0</m>. Then <m>v</m> and <m>gv</m> are linearly independent, so we must have <m>W=V</m>. It follows that <m>V</m> is not semisimple: it is not simple since <m>0\subsetneqq U \subsetneqq V</m>, but <m>V</m> is not a direct sum of simple modules.
+            </p>
+          </example>
+
+          <p>
+            Let <m>G</m> be a finite group and <m>K</m> a field. The representation of <m>G</m> corresponding to <m>K[G]</m> viewed as a left module over itself can be described explicitly as following: As a <m>K</m>-vector space, <m>K[G]</m> has <m>G</m> as a basis: <m>K[G] = \oplus_{g \in G} k \cdot g</m>. <m>G</m> acts on this vector space by permuting the basis via left multiplication: <m>h \cdot (\sum_g c_g g) = \sum_g c_g (hg)</m>. This is sometimes called the <em>(left) regular representation of <m>G</m></em>.
+          </p>
+
+          <corollary xml:id="cor-Maschke">
+            <title>Corollary of Maschke's Theorem</title>
+            
+            <statement>
+              <p>
+                If <m>G</m> is a finite group and <m>K</m> is a field such that <m>\mathrm{char}(K) \nmid |G|</m>, then every <m>K</m>-linear representation of <m>G</m> is a direct sum of irreducible representations, and every finite dimensional representation is uniquely a finite direct sum of irreducible ones.
+              </p>
+
+              <p>
+                Moreover, every irreducible representation arises as a summand of the left regular representation.
+              </p>
+            </statement>
+          </corollary>
+
+          <example>
+            <p>
+              Let <m>G=C_3</m>. We can use Maschke’s Theorem and the theory of semisimple rings so far to classify every representation of <m>G</m> over <m>{\mathbb{R}}</m> or over <m>\mathbb{C}</m> (or more generally over any field of characteristic not equal to 3). In any case, the left regular representation <m>V</m> of <m>C_3</m> is the three-dimensional representation with basis <m>\{1,g,g^2\}</m> such that <m>g\cdot 1 = g, g\cdot g=g^2, g\cdot g^2 =1</m>, i.e., <me>g \mapsto \begin{bmatrix} 0 &amp; 0 &amp; 1 \\ 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0\end{bmatrix}</me> in this basis. Also in any case, the subspace <m>W</m> spanned by <m>1+g+g^2</m>, which is the vector <m>(1,1,1)</m> in these coordinates, is a 1-dimensional <m>G</m>-stable subspace, so a simple subrepresentation. Moreover, this is the trivial representation, since this vector is fixed by <m>g</m>. Then <m>V/W</m> obtains the structure of a representation. We can take <m>1+W,g+W</m> as a basis for <m>V/W</m>, and <m>g\cdot (1+W) = g+W</m>, and <m>g\cdot (g+W) = g^2+W = -1-g +W</m>, i.e., in our coordinates, <me>g\mapsto \begin{bmatrix} 0 &amp; -1 \\ 1 &amp; -1 \end{bmatrix}.</me> A <m>G</m>-stable subspace must correspond to an eigenvector of <m>g</m> (which is equivalently an eigenvector of <m>g^{-1}</m>). The characteristic equation of this matrix shows that the eigenvalues are precisely the primitive cube roots of unity.
+            </p>
+
+            <p>
+              If <m>K={\mathbb{R}}</m> (or more generally if there are no primitive cube roots of unity), then the <m>2</m>-dimensional representation <m>V/W</m> we just found is simple since there are no stable subspaces. If <m>K=\mathbb{C}</m> (or more generally if there are primitive cube roots of unity), let <m>\omega</m> be a primitive cube root of unity. The <m>2</m>-dimensional representation <m>V/W</m> has <m>\omega</m> and <m>\omega^2</m> as eigenvalues, and there are corresponding eigenvectors, so <m>V/W</m> is a direct sum of two 1-dimensional stable subspaces <m>T, T'</m> such that <m>g\cdot t= \omega t</m> for all <m>t\in T</m> and <m>g\cdot t' = \omega^2 t'</m> for all <m>t'\in T'</m>.
+            </p>
+
+            <p>
+              We conclude that <em>every</em> real representation of <m>C_3</m> is isomorphic to a direct sum of copies of the trivial representation and copies of <m>V/W</m>. That is, for any such representation <m>U</m>, there is a basis of <m>U</m>, <m>\{e_\alpha \}_{\alpha\in A}</m>, <m>\{e'_\beta, e''_\beta\}_{\beta\in B}</m>, such that <m>g\cdot e_\alpha = e_\alpha</m>, <m>g\cdot e'_\beta = e''_\beta</m>, and <m>g\cdot e''_\beta = - e'_\beta - e''_\beta</m>.
+            </p>
+    
+            <p>
+              We conclude that <em>every</em> complex representation of <m>C_3</m> is isomorphic to a direct sum of copies of the trivial representation, <m>T</m>, and <m>T'</m>. That is, for any such representation <m>U</m>, there is a basis of <m>U</m>, <m>\{e_\alpha \}_{\alpha\in A}</m>, <m>\{e'_\beta\}_{\beta\in B}</m>, <m>\{e''_\gamma\}_{\gamma\in C}</m>, such that <m>g\cdot e_\alpha = e_\alpha</m>, <m>g\cdot e'_\beta = \omega e'_\beta</m>, and <m>g\cdot e''_\gamma = e''_\gamma</m>.
+            </p>
+          </example>
+        </section>
+
+        <section xml:id="sec-art-wedd">
+          <title>Artin-Wedderburn Theorem</title>
+
+          <p>
+            We will now give a classification of <em>all</em> left semisimple rings. To start, we collect some examples.
+          </p>
+
+          <lemma xml:id="lem-lsemisimple-product">
+            <statement>
+              <p>
+                If <m>R</m> and <m>S</m> are left semisimple, so is the product ring <m>R \times S</m>.
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                Say we have internal direct sum decompositions <m>R = I_1 \oplus \cdots \oplus I_m</m> and <m>S = J_1 \oplus \cdots \oplus J_n</m> involving minimal left ideals. Then for all <m>a</m> and <m>b</m>, <m>I_a \times \{0\}</m> and <m>\{0\} \times J_b</m> are minimal left ideals of <m>R \times S</m> and they determine an internal direct sum decomposition of <m>R \times S</m>.
+              </p>
+            </proof>
+          </lemma>
+
+          <example>
+            <p>
+              The previous lemma and Lemma <xref ref="lem:matrixsemisimple" /> show that for any integer <m>m \geq 0</m>, list of division rings <m>D_1, \dots, D_m</m> and positive integers <m>n_1, \dots, n_m</m>, the ring <me>R =\operatorname{Mat}_{n_1}(D_1) \times \cdots \times \operatorname{Mat}_{n_m}(D_m)</me> is left semisimple.
+            </p>
+          </example>
+
+          <p>
+            The Artin-Wedderburn Theorem asserts that the last example accounts for <em>all</em> examples!
+          </p>
+
+          <theorem xml:id="thm-art-wedd">
+            <title>Artin-Wedderburn Theorem</title>
+            
+            <statement>
+              <p>
+                Let <m>R</m> be a left semisimple ring. Then for some <m>m \geq 0</m>, positive integers <m>n_1, \dots, n_m</m>, and division rings <m>D_1, \dots, D_m</m>, there is a ring isomorphism <me>R \cong \operatorname{Mat}_{n_1}(D_1) \times \cdots \times \operatorname{Mat}_{n_m}(D_m).</me>
+              </p>
+
+              <p>
+                Moreover,
+                <ol>
+                  <li>
+                    <p>
+                      <m>m</m> is the number of isomorphism classes of simple left <m>R</m>-modules.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Say <m>M_1, \dots, M_m</m> are simple modules forming a complete set of representatives of these isomorphism classes. Then, after reordering, <m>D_i\cong \operatorname{End}_R(M_i)^{\mathrm{op}}</m> and
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>n_j</m> is the number of times summands isomorphic to <m>M_j</m> occur in the decomposition of <m>R</m> into a direct sum of simple left modules.
+                    </p>
+                  </li>
+                </ol>
+                Moreover, the data <m>(m; n_1, \dots, n_m; D_1, \dots, D_m)</m> is unique up to a permutation of <m>\{1, \dots, m\}</m> and isomorphisms of division rings.
+              </p>
+            </statement>
+          </theorem>
+
+          <example>
+            <p>
+              We saw before that the module decomposition in terms of simple modules is <m>{\mathbb{R}}[C_3] = W \oplus U</m>, where <m>W</m> is the one-dimensional trivial representation, and <m>U</m> is the <m>2</m>-dimensional representation given by <m>g \mapsto \begin{bmatrix} 0  &amp; -1 \\ 1 &amp; -1\end{bmatrix}</m>. On the other hand, as rings, <me>{\mathbb{R}}[C_3] \cong {\mathbb{R}}[g]/(g^3-1) \cong {\mathbb{R}}[g]/(g-1) \times {\mathbb{R}}[g]/ (g^2+g+1) \cong {\mathbb{R}}\times \mathbb{C}.</me>
+            </p>
+
+            <p>
+              To reconcile these decompositions by the Artin-Wedderburn Theorem, one can check that <m>\operatorname{End}_{{\mathbb{R}}[C_3]}(W) \cong {\mathbb{R}}</m> and <m>\operatorname{End}_{{\mathbb{R}}[C_3]}(V/W) \cong \mathbb{C}</m>.
+            </p>
+
+            <p>
+              We have <m>\operatorname{End}_{{\mathbb{R}}[C_3]}(W) \cong {\mathbb{R}}</m>. To compute the endomorphism ring of <m>V/W</m>, observe that an <m>{\mathbb{R}}</m>-linear endomorphism of <m>V/W</m> is <m>{\mathbb{R}}[C_3]</m>-linear if and only if it commutes with the action of <m>g</m>. We can write any <m>{\mathbb{R}}</m>-linear endomorphism of <m>V/W</m> as a <m>2\times 2</m> matrix; for it to commute with <m>g</m> means it commutes with <m>\begin{bmatrix} 0  &amp; -1 \\ 1 &amp; -1\end{bmatrix}</m>. We have <me>\begin{bmatrix} a &amp; b \\ c&amp; d \end{bmatrix} \begin{bmatrix} 0  &amp; -1 \\ 1 &amp; -1\end{bmatrix} - \begin{bmatrix} 0  &amp; -1 \\ 1 &amp; -1\end{bmatrix}  \begin{bmatrix} a &amp; b \\ c&amp; d \end{bmatrix} = \begin{bmatrix} b + c &amp; -a-b+d \\ d -a + c &amp; -b-c \end{bmatrix},</me> so the matrices we seek are of the form <me>\begin{bmatrix} a &amp; -c \\ c &amp; a-c \end{bmatrix}= a \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1\end{bmatrix} + c \begin{bmatrix} 0 &amp; -1 \\ 1 &amp; -1\end{bmatrix}.</me> Any pair of matrices in this set commutes (since the two vectorspace generators do) so they form a commutative ring and hence a field by Schur’s Lemma; any matrix in this collection is algebraic over the subring of scalar matrices (since both generators are). It follows that this collection of matrices is isomorphic as a ring to <m>\mathbb{C}</m>.
+            </p>
+          </example>
+
+          <lemma xml:id="lem-semisimple-end">
+            <statement>
+              <p>
+                Let <m>M</m> be an <m>R</m>-module. The map 
+                <me>\xymatrix@R=1mm{ \operatorname{End}_R(M^{\oplus n}) \ar[r]^-{\Theta} &amp; \operatorname{Mat}_n(\operatorname{End}_R(M)) \\
+                  \phi \ar@{|-&gt;}[r] &amp; [\pi_i \phi  \iota_j]_{i,j} }
+                </me> 
+                is a ring isomorphism, where <m>\iota_k</m> and <m>\pi_k</m> denote the natural inclusion and projection maps.
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+              It is clear that this map is additive, as each <m>\iota_i</m> and <m>\pi_j</m> is. Observe that <m>\pi_j  \iota_i</m> is the identity on <m>M</m> if <m>i=j</m>, and the zero map otherwise and that <m>1_{M^{\oplus n}} = \sum_{k} \iota_k  \pi_k</m>.
+              </p>
+
+              <p>
+                The map <me>\xymatrix@R=1mm{ \operatorname{End}_R(M^{\oplus n}) &amp;\ar[l]_-{\zeta}  \operatorname{Mat}_n(\operatorname{End}_R(M)) \\
+                \sum_{i,j} \iota_i  \alpha_{i,j}  \pi_j &amp; \ar@{|-&gt;}[l]  [\alpha_{i,j}]_{i,j} }</me> is a two-sided inverse for <m>\Theta</m>: <me>\zeta (\Theta(\phi)) = \zeta ( [\pi_i  \phi  \iota_j]_{i,j} ) = \sum_{i,j} \iota_i \pi_i  \phi  \iota_j \pi_j =(\sum_i \iota_i \pi_i) \phi (\sum_j \iota_j \pi_j)=\phi, \quad\text{and}</me> <me>\Theta(\zeta([\alpha_{i,j}]_{i,j}]))_{k,\ell} = \Theta ( \sum_{i,j} \iota_i  \alpha_{i,j}  \pi_j)_{k,\ell} = \pi_k (\sum_{i,j} \iota_i  \alpha_{i,j}  \pi_j) \iota_\ell = \sum_{i,j}  (\pi_k \iota_i) \alpha_{i,j} (\pi_j \iota_\ell) = \alpha_{k,\ell}.</me>
+              </p>
+
+              <p>
+                To see that <m>\Theta</m> respects multiplication, we have <me>[\Theta (\psi) \Theta(\phi) ]_{i,j}= \sum_k (\pi_i  \psi  \iota_k) (\pi_k  \phi  \iota_j) = \pi_i  \psi\phi  \iota_j = \Theta(\psi \phi)_{i,j}.\qedhere</me>
+              </p>
+            </proof>
+          </lemma>
+
+          <problem>
+            <p>
+              Let <m>D</m> be a division ring. Then <m>\operatorname{End}_{\operatorname{Mat}_n(D)}(D^n)\cong D^{\mathrm{op}}</m>, where <m>D^n</m> is the simple module of column vectors.
+            </p>
+          </problem>
+
+          <theorem xml:id="thm-whoknows">
+            <statement>
+              <p>
+                ???
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                Since <m>R</m> is left semisimple, we have <m>R \cong I_1 \oplus \cdots \oplus I_t</m> with each <m>I_i</m> is simple (in fact a minimal ideal). Group by isomorphism to rewrite this as <m>R \cong M_1^{\oplus n_1} \oplus \cdots \oplus M_m^{\oplus n_m}</m> with each <m>M_i</m> simple, <m>n_j \geq 1</m>, and such that <m>M_i</m> is not isomorphic to <m>M_j</m> for all <m>i \ne j</m>. We compute the endomorphisms of both sides:
+              </p>
+
+              <p>
+                <me>\begin{aligned}
+      \label{E912}
+        \operatorname{End}_R(R) &amp;=&amp; \mathrm{Hom}_R(\bigoplus_{i=1}^m M_i^{\oplus n_i}, \prod_{j=1}^m M_j^{\oplus n_j}) \cong  \prod_j \mathrm{Hom}_R(M_i^{\oplus n_i}, \prod_i  M_i^{\oplus n_j})\\
+        &amp;\cong&amp;  \prod_{i=1}^m \prod_{j=1}^m \mathrm{Hom}_R(M_i^{\oplus n_i}, M_j^{\oplus n_j}) \\
+        &amp;=&amp; \prod_{i=1}^m \mathrm{Hom}_R(M_i^{\oplus n_i}, M_i^{\oplus n_i}) \\
+        &amp;=&amp; \prod_{i=1}^m  \operatorname{End}_R(M_i^{\oplus n_i})\cong \prod_{i=1}^m  \operatorname{Mat}_{n_i}(\operatorname{End}_R(M_i)).
+      \end{aligned}</me>
+              </p>
+
+              <p>
+                Above the second line follows from the first by properties of <m>\mathrm{Hom}</m>, the third follows because Schur’s lemma gives that <m>\mathrm{Hom}_R(M_i,M_j)=0</m>, and consequently <m>\mathrm{Hom}_R(M_i^{\oplus n_i},M_j^{\oplus n_j})=0</m>, when <m>i\neq j</m>. The final isomorphism is the previous lemma.
+              </p>
+
+              <p>
+                On the one hand, we have <m>\operatorname{End}_R(R) \cong R^{\mathrm{op}}</m> by a problem from the homework. On the other hand, applying Schur’s Lemma again, <m>D'_i := \operatorname{End}_R(M_i)</m> is a division ring for all <m>i</m>.
+              </p>
+
+              <p>
+                Combining these gives <me>R^{\mathrm{op}} \cong \operatorname{Mat}_{n_1}(D'_1) \times \cdots \times \operatorname{Mat}_{n_m}(D'_m)</me> and hence, also by a homework problem, we have <me>R \cong
+      \left(\operatorname{Mat}_{n_1}(D'_1) \times \cdots \times \operatorname{Mat}_{n_m}(D'_m)\right)^{\mathrm{op}} \cong
+      \operatorname{Mat}_{n_1}(D_1) \times \cdots \times \operatorname{Mat}_{n_m}(D_m)</me> with <m>D_i := (D_i')^{\mathrm{op}}=\operatorname{End}_R(M_i)^\mathrm{op}</m>.
+              </p>
+
+              <p>
+                This shows that given a decomposition of <m>R</m> as a left semisimple module, there is a ring decomposition as a product of matrix rings over division rings, and the data of division rings and matrix sizes is related to the data of simple modules and multiplicities by the formulas (1)–(3). We just need to prove uniqueness.
+              </p>
+
+              <p>
+                Say we are given an isomorphism of rings <m>R \cong \prod_{i=1}^k \operatorname{Mat}_{t_i}(Q_i)</m> for some division rings <m>Q_1,\dots,Q_k</m>. Then since <m>\operatorname{Mat}_{t_i}(Q_i)</m> decomposes as a direct sum of <m>t_i</m> copies of <m>N_i:=Q_i^{t_i}</m>, and <m>N_i</m> is a simple <m>\operatorname{Mat}_{t_i}(Q_i)</m>-module, hence also a simple <m>R</m>-module, we have a semisimple <m>R</m>-module decomposition of <m>R</m> as <me>M_1^{\oplus n_1} \oplus  \cdots \oplus M_m^{\oplus n_m} \cong R \cong N_1^{\oplus t_1} \oplus \cdots \oplus N_k^{\oplus t_k}.</me> By Krull-Schmidt, we must have <m>m=k</m>, and after a permutation, <m>M_i \cong N_i = Q_i^{\oplus t_i}</m> and <m>n_i=t_i</m> for each <m>i</m>.
+              </p>
+
+              <p>
+                Moreover, we have <me>D_i\cong  \operatorname{End}_R(M_i)^{\mathrm{op}} \cong  \operatorname{End}_R(N_i)^{\mathrm{op}}.</me> We recall that <m>N_i\cong Q_i^{\oplus n_i}</m>, with the natural column vector action from <m>\operatorname{Mat}_{n_i}(Q_i)</m>, and the trivial action from the other factors. Thus, <me>\operatorname{End}_R(N_i)^{\mathrm{op}} = \operatorname{End}_{\operatorname{Mat}_{n_i}(Q_i)} (Q_i^{\oplus n_i}) ^{\mathrm{op}}\cong Q_i,</me> using the exercise above.
+              </p>
+            </proof>
+          </theorem>
+          
+          <corollary xml:id="cor-lr-semisimple">
+            <statement>
+              <p>
+                A ring is left semisimple if and only if it is right semisimple.
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                The claim is equivalent to showing <m>R</m> is left semisimple if and only <m>R^\mathrm{op}</m> is, which in turn follows from just one of the implications. If <m>R</m> is left semisimple, then <m>R\cong \prod_{i} \operatorname{Mat}_{n_i}(D_i)</m>, so <m>R^{\mathrm{op}} \cong \prod_i \operatorname{Mat}_{n_i}(D_i)^{\mathrm{op}} \cong \prod_i \operatorname{Mat}_{n_i}(D_i^{\mathrm{op}})</m> so <m>R^{\mathrm{op}}</m> is left semisimple.
+              </p>
+            </proof>
+          </corollary>
+          
+          <p>
+            Henceforth, we just say that <m>R</m> is <em>semisimple</em> if it is left semisimple.
+          </p>
+          
+        </section>
+        
+      </chapter>
+
+      <chapter xml:id="ch-applications">
+        <title>Applications to Representation Theory</title>
+
+        <section xml:id="sec-spplications">
+          <title>Applications</title>
+          
+          <p>
+            Let us start by restating the Artin-Wedderburn theorem in the context of group rings.
+          </p>
+
+          <theorem xml:id="thm-art-wedd-gr">
+            <title>Artin-Wedderburn for Group Rings</title>
+            
+            
+            <statement>
+              <p>
+                If <m>G</m> is a finite group and <m>K</m> is a field such that <m>\mathrm{char}(K) \nmid |G|</m>, then there is an isomorphism of rings <me>K[G] \cong \operatorname{Mat}_{n_1}(D_1) \times \cdots \times \operatorname{Mat}_{n_m}(D_m),</me> where <m>D_1, \dots, D_m</m> are division rings. Furthermore, each <m>D_i</m> contains <m>K</m> (up to isomorphism) as a subring of its center and the above isomorphism is <m>K</m>-linear. In particular, <m>\dim_K(D_i) &lt; \infty</m>.
+              </p>
+
+              <p>
+                Moroever, we have:
+                <ol>
+                  <li>
+                    <p>
+                      <m>m</m> is the number of irreducible <m>k</m>-linear representation of <m>G</m> (up to isomorphism),
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      the <m>D_i</m>'s are the opposite rings of the endomorphism rings of these representations,
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      the <m>n_j</m>'s give the number of times each irreducible representation occurs in the decomposition of the regular representation of <m>G</m>,
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      the numbers <m>n_1 \cdot \dim_k(D_1), \dots, n_m \cdot \dim_k(D_m)</m> give the dimensions of these representations, and
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>n_1^2 \cdot \dim_k(D_1) + \cdots + n_m^2 \cdot \dim_k(D_m) = |G|</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                This mostly follows from Artin-Wedderburn and Maschke's Theorem. What needs to be noted is that each division ring here contains a copy of <m>K</m> in its center. Indeed, we recall that each <m>D_i</m> is given as the opposite ring of <m>\operatorname{End}_{K[G]}(M_i)</m> for some simple module <m>M_i</m>. For <m>\lambda\in K</m>, we have the map <m>M_i \xrightarrow{\lambda \cdot} M_i</m> which commutes with any <m>K[G]</m>-linear map from <m>M_i</m> to itself.
+              </p>
+            </proof>
+          </theorem>
+
+          <corollary xml:id="cor-ab-iff-gr-fieldprod">
+            <statement>
+              <p>
+                Let <m>G</m> be a finite group, and <m>K</m> be a field such that <m>\mathrm{char}(K) \nmid |G|</m>. Then <m>G</m> is abelian if and only if <m>K[G]</m> is isomorphic to a product of fields.
+              </p>
+            </statement>
+          </corollary>
+
+          <lemma xml:id="lem-gring-and-iso">
+            <statement>
+              <p>
+                Let <m>G</m> be any group and <m>K</m> any field. Given two group homomorphisms <m>\rho_1, \rho_2: G \to K^\times = \operatorname{GL}_1(K)</m>, the associated <m>K[G]</m>-modules <m>M_1</m> and <m>M_2</m> are isomorphic if and only if <m>\rho_1 =\rho_2</m>.
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                Suppose that <m>\alpha:M_1 \to M_2</m> is an isomorphism of <m>K[G]</m>-modules. Identifying <m>M_1=M_2=K</m> as vector spaces, we have <m>\alpha(k) = ck</m> for some <m>c\neq 0</m>. Then, <me>c \rho_1(g) (k) = \alpha \rho_1(g) (k) = \rho_2(g) \alpha(k) = \rho_2(g) (ck) = c \rho_2(g) (k)</me> for all <m>k\in K</m>, so <m>\rho_1(g)(k)=\rho_2(g)(k)</m> for all <m>k\in K</m>.
+              </p>
+            </proof>
+          </lemma>
+
+          <proposition xml:id="prop-dring-and-C">
+            <statement>
+              <p>
+                If <m>D</m> is a division ring that contains <m>{\mathbb{R}}</m> in its center and <m>\dim_{\mathbb{R}}(D) =2</m>, then <m>D \cong \mathbb{C}</m> .
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                Pick <m>x \in D \smallsetminus {\mathbb{R}}</m>. Then <m>{\mathbb{R}}\subsetneqq {\mathbb{R}}[x] \subseteq D</m>, and since <m>{\mathbb{R}}[x]</m> is an <m>{\mathbb{R}}</m>-vectorspace, we must have <m>{\mathbb{R}}[x] = D</m> for dimension reasons. Thus <m>D</m> is commutative and is a field. Since <m>D</m> is a finite extension of <m>{\mathbb{R}}</m>, it is algebraic, so <m>{\mathbb{R}}\subsetneqq D \subseteq \mathbb{C}</m>, and we must have <m>D=\mathbb{C}</m>.
+              </p>
+            </proof>
+          </proposition>
+
+          <example>
+              <p>
+            Let <m>k = {\mathbb{R}}</m> and <m>G = S_3</m>. We find all the simple modules over the ring <m>{\mathbb{R}}[S_3]</m> or, equivalently, all irreducible <m>{\mathbb{R}}</m>-linear representations of <m>S_3</m>. We also find the Artin-Wedderburn decomposition of <m>{\mathbb{R}}[S_3]</m>.
+              </p>
+
+              <p>
+                The one dimensional represenatations are given by group homomorphisms of the form <m>S_3 \to {\mathbb{R}}^\times</m>, and any such map factors as <me>S_3 \twoheadrightarrow S_3^{\mathrm{ab}} \to {\mathbb{R}}^\times.</me> Note that <m>S_3^{\mathrm{ab}} = S_3/A_3 \cong C_2</m> and there are two group homomorphisms <m>C_2 \to {\mathbb{R}}^\times</m>, sending the generator to either <m>1</m> or <m>-1</m> (the only elements of <m>{\mathbb{R}}^\times</m> of order <m>1</m> or <m>2</m>). This gives two representations: <m>M_1 = {\mathbb{R}}</m> with <m>S_3</m> acting trivially and <m>M_2 = {\mathbb{R}}</m> with <m>S_3</m> acting by the sign representation. These are not isomorphic by the previous lemma.
+              </p>
+
+              <p>
+                We have that <m>1= \dim_{{\mathbb{R}}}(M_1) = n_1 \cdot \dim_{{\mathbb{R}}}(D_1)</m> so <m>n_1=1</m> and <m>\dim_{{\mathbb{R}}}(D_1)=1</m>, and likewise <m>1= \dim_{{\mathbb{R}}}(M_2) = n_2 \cdot \dim_{{\mathbb{R}}}(D_2)</m> so <m>n_2=1</m> and <m>\dim_{{\mathbb{R}}}(D_2)=1</m>. So, the Artin-Wedderburn decomposition starts as
+              </p>
+
+              <p>
+                <me>{\mathbb{R}}[S_3] \cong {\mathbb{R}}\times {\mathbb{R}}\times \cdots.</me>
+              </p>
+
+              <p>
+                Note that there are no further factors of <m>{\mathbb{R}}</m>, since we found all of the one-dimensional simple modules.
+              </p>
+
+              <p>
+                Recall also that <m>S_3</m> acts on <m>{\mathbb{R}}^3</m> by permuting the basis (corresponding to the group homomorphism <m>S_3 \to \operatorname{GL}_3({\mathbb{R}})</m> sending a permutation to its associated permutation matrix). The subspace <m>M_3 = \{(a,b,c) \in {\mathbb{R}}^3 \mid a + b + c = 0\}</m> is a subrepresenation of <m>{\mathbb{R}}^3</m> of dimension <m>2</m>. We claim it is irreducible: Say <m>0 \ne (a,b,c) \in M_3</m>.
+              </p>
+
+              <p>
+                By applying a permutation and scaling appropriately we obtain an element of the form <m>(1,x,-1-x) \in M_3</m> and hence <m>(1, -1-x, x) \in M_3</m>. Adding these gives <m>(2,-1,-1) \in M_3</m> and hence <m>(-1, 2,-1) \in M_3</m>. The latter two are linearly independent and so must span <m>M_3</m>. This proves <m>(a,b,c)</m> generates <m>M_3</m> as a left <m>{\mathbb{R}}[S_3]</m>-module and hence that <m>M_3</m> is simple. Note that <m>M_3</m> is not isomorphic to either <m>M_1</m> nor <m>M_2</m> by dimension considerations.
+              </p>
+
+              <p>
+                We have that <m>2=\dim{{\mathbb{R}}}(M_3) = n_3 \cdot \dim_{{\mathbb{R}}}(D_3)</m>, so there are two possibilities.
+              </p>
+
+              <p><ol>
+                <li>
+                      <p>
+                One possibility is <m>n_3=1</m> and <m>\dim_{{\mathbb{R}}}(D_3)=2</m>, in which case <m>D_3\cong \mathbb{C}</m>, so the Artin-Wedderburn decomposition reads as <me>{\mathbb{R}}[S_3] \cong {\mathbb{R}}\times {\mathbb{R}}\times \mathbb{C}\times S</me> for some <m>S</m>. We must have <m>\dim_{{\mathbb{R}}}(S)=2</m>. We know that <m>S</m> cannot have any one-dimensional simple modules (since we already accounted for all of the one-dimensional simple modules for <m>{\mathbb{R}}[S_3]</m>), so <m>S</m> cannot be <m>{\mathbb{R}}\times {\mathbb{R}}</m>. Then, for dimension reasons, we must have that <m>S\cong D_4</m> with <m>\dim_{{\mathbb{R}}}(D_4)=2</m>, so <m>S\cong \mathbb{C}</m>. But then <me>{\mathbb{R}}[S_3] \cong {\mathbb{R}}\times {\mathbb{R}}\times \mathbb{C}\times \mathbb{C}</me> would be commutative, which it is not, as <m>S_3</m> is not abelian.
+              </p>
+                </li>
+
+                <li>
+                      <p>
+                The other possibility is <m>n_3=2</m> and <m>D_3={\mathbb{R}}</m>. We obtain the AW decomposition <me>{\mathbb{R}}[S_3] \cong {\mathbb{R}}\times{\mathbb{R}}\times \operatorname{Mat}_2({\mathbb{R}}).</me>
+              </p>
+                </li>
+
+              </ol></p>
+
+              <p>
+                (Alternatively, we could compute the endomorphism ring of <m>M_3</m> and see that it contains only scalars.)
+              </p>
+
+              <p>
+                We have found the AW decomposition of <m>{\mathbb{R}}[S_3]</m>. As a consequence, we have identified all of the irreducible real representations of <m>S_3</m>.
+              </p>
+          </example>
+
+        </section>
+
+        <section xml:id="sec-rep-closed-fields">
+          <title>Algebraically Closed Fields</title>
+
+          <p>
+            When working over an algebraically closed field, the Artin-Wedderburn Theorem takes a simpler form.
+          </p>
+
+          <corollary xml:id="cor-art-wedd-gring-alg-closed">
+            <title>Artin-Wedderburn for Group Rings over Algebraically Closed Fields</title>
+            
+            
+            <statement>
+              <p>
+                If <m>G</m> is a finite group and <m>K</m> is an algebraically closed field such that <m>\mathrm{char}(K) \nmid |G|</m>, then there is an isomorphism of rings <me>k[G] \cong \operatorname{Mat}_{n_1}(K) \times \cdots \times \operatorname{Mat}_{n_m}(K).</me>
+              </p>
+
+              <p>
+                Moroever, we have:
+
+                <ol>
+                  <li>
+                    <p>
+                      <m>m</m> is the number of irreducible <m>K</m>-linear representation of <m>G</m> (up to isomorphism),
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      the <m>D_i</m>'s are the opposite rings of the endomorphism rings of these representations,
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      the <m>n_j</m>'s give the number of times each irreducible representation occurs in the decomposition of the regular representation of <m>G</m>,
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      the <m>n_j</m>'s also give the dimensions of these representations, and
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>n_1^2  + \cdots + n_m^2 = |G|</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                The point is that in this setting, for each irreducible representation <m>M_i</m>, <m>D_i \cong \operatorname{End}_{K[G]}(M_i)^{\mathrm{op}}</m> is equal to <m>K</m>. Let <m>\theta\in \operatorname{End}_{K[G]}(M_i)</m>. In particular, <m>\theta</m> is a <m>K</m>-linear endomorphism of the finite dimensional vector space <m>M_i</m>. Since <m>K</m> is algebraically closed, <m>\theta</m> has an eigenvaluse, say <m>\lambda</m>. Then <m>\theta-\lambda 1_{M_i}</m> is a <m>K[G]</m>-linear endomorphism of <m>M_i</m> that is not injective, so by Schur’s Lemma is must be <m>0</m>. Thus, <m>\theta = \lambda 1_{M_i}</m>
+              </p>
+            </proof>
+          </corollary>
+
+          <example>
+            <p>
+              Let <m>k = \mathbb{C}</m> and consider the alternating group <m>G = A_4</m> of order 12. We find all the simple modules over the ring <m>\mathbb{C}[A_4]</m> or, equivalently, all irreducible <m>\mathbb{C}</m>-linear representations of <m>A_4</m>. We also find the Artin-Wedderburn decomposition of <m>\mathbb{C}[A_4]</m>.
+            </p>
+
+            <p>
+              As before we start by finding 1-dimensional representations given by group homomorphisms of the form <m>A_4 \to \mathbb{C}^\times</m>. Any such map factors as <me>A_4 \twoheadrightarrow A_4^{\mathrm{ab}}\cong C_3 \to \mathbb{C}^\times</me> and thus there are three nonisomorphic 1-dimensional representations given by <m>\rho_i:C_3=\langle g\rangle \to \mathbb{C}^\times</m>, <m>\rho_i(g)=e^\frac{2\pi i}{3}</m>, with <m>i=0,1,2</m>. Note that <m>\rho_0</m> corresponds to the trivial representation. Also <m>\rho_1</m> and <m>\rho_2</m> make essential use of the fact that we are working over <m>\mathbb{C}</m> as opposed to, say, <m>{\mathbb{R}}</m> where there are no primitive cubic roots of 1.
+            </p>
+
+            <p>
+              With respect to the Artin-Wedderburn decomposition we have so far <me>\mathbb{C}[A_4] \cong \mathbb{C}\times \mathbb{C}\times \mathbb{C}\times \operatorname{Mat}_{n_4}(\mathbb{C})\times \cdots \times \operatorname{Mat}_{n_m}(\mathbb{C}).</me> where <m>n_3, \ldots, n_m\geq 2</m> because we have already found all the 1-dimensional representations (<m>n_i=1</m>) above. Counting dimensions we obtain <me>12= 1+ 1 + 1 +\sum_{i=4}^m {n_i}^2.</me> It is easy to see there is only one solution: <m>m=4</m> and <m>n_4=3</m>. Hence there is a unique up to isomorphism <m>\mathbb{C}</m>-linear irreducible representation of <m>A_4</m> which is a 3 dimensional <m>\mathbb{C}</m>-vector space.
+            </p>
+
+            <p>
+              To exhibit such a representation, let <m>A_4</m> act on <m>V=\mathbb{C}^4</m> by permuting the standard basis elements and thus any vector in <m>V</m>. The subspace <m>W\subseteq V</m> given by <me>W = \{ (a,b,c,d) \ | \ a+b+c+d=0\}</me> is an <m>A_4</m>-stable subspace. This is an irreducible representation: if <m>v\in W\smallsetminus 0</m>, after permuting and scaling, we can write <m>v=(1,x,y,-1-x-y)</m>. We also have <m>(1,-1-x-y,x,y)</m> and <m>(1,y,-1-x-y,x)</m> in <m>\langle v \rangle</m>, so the sum <m>(3,-1,-1,-1)\in \langle v \rangle</m>. Then <m>(-1,3,-1,-1)</m> and <m>(-1,-1,3,-1)</m> are also in <m>\langle v \rangle</m>, and these are three linearly independent vectors, so we must have <m>\langle v \rangle=W</m>.
+            </p>
+          </example>
+
+          <remark>
+            <p>
+              Let's consider what the Artin-Wedderburn Theorem says about complex representations of finite abelian groups: the group ring must be a product of copies of <m>\mathbb{C}</m>, so every irreducible representation is one-dimensional. Thus, every representation is a sum of one-dimensional representations. Concretely, this means that there is a basis in which every group element acts as a diagonal matrix.
+            </p>
+
+            <p>
+					    This special case actually just follows from basic facts in linear algebra. Let <m>\rho:G\to \operatorname{GL}_n(\mathbb{C})</m> be a representation. Then every <m>g\in G</m> has finite order, so <m>g^k-1</m> for some <m>k</m>. This implies that the matrix <m>\rho(g)</m> satisfies <m>\rho(g)^k = I_n</m>, so its minimal polynomial divides <m>x^k-1</m>. This polynomial splits into distinct linear factors over <m>\mathbb{C}</m>, so <m>\rho(g)</m> is diagonalizable for every <m>g\in G</m>. (So far, we’ve only used that <m>G</m> is finite.) Now, since <m>g</m> is abelian, we have <m>gh=hg</m> for all <m>g,h\in G</m>, so <m>\rho(g) \rho(h) = \rho(h) \rho(g)</m>; i.e., the matrices commute. Commuting diagonalizable matrices are simultaneously diagonalizable; i.e., there is a basis as above.
+            </p>
+          </remark>
+
+          <proposition xml:id="prop-art-wedd-decomp">
+            <statement>
+              <p>
+                Let <m>G</m> be a finite group. The number of one-dimensional complex representations of <m>G</m> (up to isomorphism) is <m>|G^{\mathrm{ab}}|</m>. Thus, in the Artin-Wedderburn decomposition of <m>\mathbb{C}[G]</m>, there are exactly <m>|G^{\mathrm{ab}}|</m> copies of <m>\mathbb{C}</m>.
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                We have that <m>\mathrm{Hom}_{\mathbf{Grp}}(G,\mathbb{C}^\times) \cong \mathrm{Hom}_{\mathbf{Ab}}(G^{\mathrm{ab}},\mathbb{C}^\times)</m>, and by the discussion above, there are <m>|G^{\mathrm{ab}}|</m> distinct one-dimensional representations of <m>G^{\mathrm{ab}}</m>.
+              </p>
+            </proof>
+          </proposition>
+
+          <proposition xml:id="prop-reps-and-conjclass">
+            <statement>
+              <p>
+                For any finite group <m>G</m>, the number of irreducible complex representations (up to isomorphism) is equal to the number of conjugacy classes.
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                We have <me>\mathbb{C}[G] \cong \operatorname{Mat}_{n_1}(\mathbb{C}) \times \cdots \times \operatorname{Mat}_{n_m}(\mathbb{C})</me> and <m>m</m> is the number of irreducible complex representations up to isomorphism. A key point is that the center of the right side is <m>\mathbb{C}I_{n_1} \times \cdots \times \mathbb{C}I_{n_m}</m>, which has dimension <m>m</m> as a complex vector space. Since this ring isomorphism is <m>\mathbb{C}</m>-linear, it induces a <m>\mathbb{C}</m>-linear isomorphism of the centers, and thus we just need to show that <m>\dim_\mathbb{C}(Z(\mathbb{C}[G]))</m> is equal to the number of conjugacy classes.
+              </p>
+
+              <p>
+                Let <m>C_1, \dots, C_h</m> denote the conjugacy classes of <m>G</m> (i.e., the orbits for the action of <m>G</m> on itself by conjugation). For each <m>i</m> set <m>z_i = \sum_{g \in C_i} g \in \mathbb{C}[G]</m>. Then for all <m>x \in G</m>, <m>x z_i x ^{-1}  = \sum_{g \in C_i} x g x^{-1} = z_i</m> and it follows that <m>z_i \in Z(\mathbb{C}[G])</m>. Since that <m>z_i</m>’s are sums of disjoint subsets of a basis of <m>\mathbb{C}[G]</m>, they are linearly independent. Now say <m>\sum_g c_g g</m> belongs to the center. Then for each <m>x \in G</m>, <me>\sum_g c_g xgx^{-1} =
+                x(\sum_g c_g g)x^{-1} = \sum_g c_g g</me> and it follows that <m>c_g = c_h</m> whenever <m>g,h</m> are conjugate. This proves that <m>Z(\mathbb{C}[G])</m> is spanned by <m>z_1, \dots, z_h</m>. We conclude that <m>h = \dim_\mathbb{C}(Z(\mathbb{C}[G])) = m</m>.
+              </p>
+            </proof>
+          </proposition>
+          
+        </section>
+      </chapter>
+      
+
+    </part>
+
+    <backmatter xml:id="backmatter">
+      <title>Backmatter</title>
+
+      <colophon>
+        <p> This book was authored in <pretext />. </p>
+      </colophon>
+
+    </backmatter>
+
+  </book>
+</pretext>
