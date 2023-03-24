@@ -2,9 +2,12 @@
 
 <pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
 
+  <xi:include href="./bookinfo.xml" />
+  
+  <!-- 
   <docinfo>
+
     <macros>
-      % Operators
       \newcommand{\ann}{\operatorname{ann}}
       \newcommand{\Ass}{\operatorname{Ass}}
       \newcommand\Aut{\operatorname{Aut}}
@@ -59,7 +62,7 @@
       \def\Tor{\operatorname{Tor}}
       \def\trace{\operatorname{trace}}
       \def\uSpec{\operatorname{\underline{Spec}}}
-      %Letters - Mathbb
+
       \newcommand{\A}{\mathbb A}
       \newcommand{\B}{\mathbb B}
       \newcommand{\C}{\mathbb C}
@@ -92,9 +95,10 @@
       \usepackage{tikz}
     </latex-image-preamble>
   </docinfo>
+  -->
 
-  <book xml:id="compendium-makkematica">
-    <title>Compendium Makkematica</title>
+  <book xml:id="modern-algebra">
+    <title>Compendium Algebraica</title>
     <!-- <subtitle>All in one Place</subtitle> -->
 
     <frontmatter xml:id="frontmatter">
@@ -3061,15 +3065,6 @@
         </section>
       </chapter>
 
-      <exercises xml:id="exercises-rep1">
-        Let <m>F</m> be a field, let <m>G</m> be a finite group and let <m>n\in\Z^+</m>.
-        <exercise number="1">
-          
-        </exercise>
-
-
-
-      </exercises>
 
       <chapter xml:id="sec-chain-conditions">
         <title>Chain Conditions</title>
@@ -4135,4 +4130,5 @@
     </backmatter>
 
   </book>
+
 </pretext>

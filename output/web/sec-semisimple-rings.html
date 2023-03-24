@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Semisimple Rings</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Compendium Algebraica">
+<meta property="book:author" content="Sam Macdonald">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.98,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.6/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="modern-algebra.html"><span class="title">Compendium Algebraica</span></a></h1>
+<p class="byline">Sam Macdonald</p>
+</div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>No results.</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="theavatarbutton" class="name">You!</span><div id="preferences_menu_holder" class="hidden"><ol id="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="ch-artin-wedd.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-artin-wedd.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="sec-art-wedd.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{{\not{\mid}}}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar"><nav id="ptx-toc" class="depth3 parts"><ul class="structural">
+<li><div class="toc-item"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li>
+<div class="toc-item"><a href="part-group.html" class="internal"><span class="codenumber">I</span> <span class="title">Group Theory</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="intro-groups.html" class="internal"><span class="codenumber">1</span> <span class="title">Groups</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="group-first-definitions.html" class="internal"><span class="codenumber">1.1</span> <span class="title">First Definitions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="group-first-definitions.html#subsec-grps" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Groups</span></a></div></li>
+<li><div class="toc-item"><a href="group-first-definitions.html#subsec-gpex" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Examples</span></a></div></li>
+<li><div class="toc-item"><a href="group-first-definitions.html#subsec-d2n" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Dihedral Groups</span></a></div></li>
+<li><div class="toc-item"><a href="group-first-definitions.html#subsec-symmetric" class="internal"><span class="codenumber">1.1.4</span> <span class="title">Symmetric Groups</span></a></div></li>
+<li><div class="toc-item"><a href="group-first-definitions.html#subsec-quat" class="internal"><span class="codenumber">1.1.5</span> <span class="title">The Quaternions</span></a></div></li>
+<li><div class="toc-item"><a href="group-first-definitions.html#subsec-order" class="internal"><span class="codenumber">1.1.6</span> <span class="title">Order</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-gen-cyclic-gp.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Generators and Cyclic Groups</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#subsec-cyclic-gp" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Cyclic Groups</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-subgroups.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Subgroups</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-subgroups.html#subsec-subgrp-defn-ex" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Definition and Examples</span></a></div></li>
+<li><div class="toc-item"><a href="sec-subgroups.html#subsec-center" class="internal"><span class="codenumber">1.3.2</span> <span class="title">The Center of a Group</span></a></div></li>
+<li><div class="toc-item"><a href="sec-subgroups.html#subsec-gensubgp" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Generated Subgroups</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="gp-homs.html" class="internal"><span class="codenumber">2</span> <span class="title">Homomorphisms and Isomorphisms</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-gphoms.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Group Homomorphisms</span></a></div></li>
+<li><div class="toc-item"><a href="sec-gpisos.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Group Isomorphisms</span></a></div></li>
+<li><div class="toc-item"><a href="sec-cylic-homoms.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Cyclic Groups: Revisited</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="quotient-groups.html" class="internal"><span class="codenumber">3</span> <span class="title">Quotient Groups</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-cosets.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Cosets and Equivalence Relations</span></a></div></li>
+<li><div class="toc-item"><a href="sec-normal-subgroups.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Normal Subgroups</span></a></div></li>
+<li><div class="toc-item"><a href="sec-isomorphism-thms.html" class="internal"><span class="codenumber">3.3</span> <span class="title">The Isomorphism Theorems</span></a></div></li>
+<li><div class="toc-item"><a href="sec-grp-presentations.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Presentations as Quotient Groups</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="group-actions.html" class="internal"><span class="codenumber">4</span> <span class="title">Group Actions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="graction.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Group Actions</span></a></div></li>
+<li><div class="toc-item"><a href="sec-lois.html" class="internal"><span class="codenumber">4.2</span> <span class="title">LOIS and Orbit-Stabilizer</span></a></div></li>
+<li><div class="toc-item"><a href="sec-self-conjugation.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Self Conjugation</span></a></div></li>
+<li><div class="toc-item"><a href="sec-class-eq.html" class="internal"><span class="codenumber">4.4</span> <span class="title">The Class Equation</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sylow.html" class="internal"><span class="codenumber">5</span> <span class="title">Sylow Theory</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-pgroups.html" class="internal"><span class="codenumber">5.1</span> <span class="title"><span class="process-math">\(p\)</span>-groups</span></a></div></li>
+<li><div class="toc-item"><a href="sec-sylowthm.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Sylow's Theorem</span></a></div></li>
+<li><div class="toc-item"><a href="sec-simple-groups.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Simple Groups</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="group-products.html" class="internal"><span class="codenumber">6</span> <span class="title">Constructions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-grp-dps.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Direct Products</span></a></div></li>
+<li><div class="toc-item"><a href="sec-grp-spds.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Semidirect Products</span></a></div></li>
+<li><div class="toc-item"><a href="sec-order-pq.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Groups of Order <span class="process-math">\(pq\)</span></span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch-classifications.html" class="internal"><span class="codenumber">7</span> <span class="title">Classifications</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-ftfgag.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Group Decompositions</span></a></div></li>
+<li><div class="toc-item"><a href="sec-classifications.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Groups Up to Isomorphism</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch-extras.html" class="internal"><span class="codenumber">8</span> <span class="title">Extras</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-solve.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Solvable Groups</span></a></div></li>
+<li><div class="toc-item"><a href="sec-smallorder.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Groups of Small Order</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="part-rings.html" class="internal"><span class="codenumber">II</span> <span class="title">Ring Theory</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="ch-ringsubring.html" class="internal"><span class="codenumber">9</span> <span class="title">Rings</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-defn-ex.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Definition and Examples</span></a></div></li>
+<li><div class="toc-item"><a href="sec-subrings.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Subrings</span></a></div></li>
+<li><div class="toc-item"><a href="sec-unitass.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Units and Associates</span></a></div></li>
+<li><div class="toc-item"><a href="sec-ring-hom.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Homomorohisms</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch-idealquot.html" class="internal"><span class="codenumber">10</span> <span class="title">Ideals and Quotient Rings</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-ideals.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Ideals</span></a></div></li>
+<li><div class="toc-item"><a href="sec-ring-quotients.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Quotient Rings</span></a></div></li>
+<li><div class="toc-item"><a href="sec-ring-iso.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Ring Isomorphism Theorems</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-commrings.html" class="internal"><span class="codenumber">11</span> <span class="title">Commutative Rings</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="subsec-primemax-ideals.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Prime and Maximal Ideals</span></a></div></li>
+<li><div class="toc-item"><a href="subsec-polyrings.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Polynomial Rings</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="domains.html" class="internal"><span class="codenumber">12</span> <span class="title">Domains</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-eds.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Euclidian Domains</span></a></div></li>
+<li><div class="toc-item"><a href="sec-pids.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Principal Ideal Domains</span></a></div></li>
+<li><div class="toc-item"><a href="subsec-ufds.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Unique Factorization Domains</span></a></div></li>
+<li><div class="toc-item"><a href="subsec-noeth.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Noetherian Domains</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-irreducible.html" class="internal"><span class="codenumber">13</span> <span class="title">Irreducibility</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-roots.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Roots of Unity</span></a></div></li>
+<li><div class="toc-item"><a href="sec-irrpoly.html" class="internal"><span class="codenumber">13.2</span> <span class="title">Irredicuble Polynomials</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch-Extras.html" class="internal"><span class="codenumber">14</span> <span class="title">Extras</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-gpring.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Group Rings</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="part-fields.html" class="internal"><span class="codenumber">III</span> <span class="title">Field Theory</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="ch-fields.html" class="internal"><span class="codenumber">15</span> <span class="title">Fields</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-defnfield.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Definition and Examples</span></a></div></li>
+<li><div class="toc-item"><a href="sec-interactions.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Interactions</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch-extensions.html" class="internal"><span class="codenumber">16</span> <span class="title">Field Extensions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-firstprops.html" class="internal"><span class="codenumber">16.1</span> <span class="title">First Properties</span></a></div></li>
+<li><div class="toc-item"><a href="sec-albebraic.html" class="internal"><span class="codenumber">16.2</span> <span class="title">Algebraic Extensions</span></a></div></li>
+<li><div class="toc-item"><a href="sec-closure.html" class="internal"><span class="codenumber">16.3</span> <span class="title">Algebraic Closures</span></a></div></li>
+<li><div class="toc-item"><a href="sec-splitting.html" class="internal"><span class="codenumber">16.4</span> <span class="title">Splitting Fields</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch-galois.html" class="internal"><span class="codenumber">17</span> <span class="title">Galois Theory</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-separable.html" class="internal"><span class="codenumber">17.1</span> <span class="title">Separability</span></a></div></li>
+<li><div class="toc-item"><a href="sec-galext.html" class="internal"><span class="codenumber">17.2</span> <span class="title">Galois Extensions</span></a></div></li>
+<li><div class="toc-item"><a href="sec-ftgt.html" class="internal"><span class="codenumber">17.3</span> <span class="title">The Fundamental Theorem of Galois Theory</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="part-modules.html" class="internal"><span class="codenumber">IV</span> <span class="title">Module Theory</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="ch-mod.html" class="internal"><span class="codenumber">18</span> <span class="title">Modules</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-defmod.html" class="internal"><span class="codenumber">18.1</span> <span class="title">Definition and Examples</span></a></div></li>
+<li><div class="toc-item"><a href="sec-modhom.html" class="internal"><span class="codenumber">18.2</span> <span class="title">Module Homomorphisms</span></a></div></li>
+<li><div class="toc-item"><a href="sec-quote.html" class="internal"><span class="codenumber">18.3</span> <span class="title">Quotient Modules</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch-freemod.html" class="internal"><span class="codenumber">19</span> <span class="title">Free Modules</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-linear.html" class="internal"><span class="codenumber">19.1</span> <span class="title">Linear Independence</span></a></div></li>
+<li><div class="toc-item"><a href="sec-modgen.html" class="internal"><span class="codenumber">19.2</span> <span class="title">Generated Modules</span></a></div></li>
+<li><div class="toc-item"><a href="sec-bases.html" class="internal"><span class="codenumber">19.3</span> <span class="title">Bases</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch-vectors.html" class="internal"><span class="codenumber">20</span> <span class="title">Vector Spaces</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-vecbasis.html" class="internal"><span class="codenumber">20.1</span> <span class="title">Existence of Bases</span></a></div></li>
+<li><div class="toc-item"><a href="sec-ranknul.html" class="internal"><span class="codenumber">20.2</span> <span class="title">Rank-Nullity</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-transforms.html" class="internal"><span class="codenumber">21</span> <span class="title">Linear Transformations</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-basics.html" class="internal"><span class="codenumber">21.1</span> <span class="title">Basics</span></a></div></li>
+<li><div class="toc-item"><a href="sec-cob.html" class="internal"><span class="codenumber">21.2</span> <span class="title">Change of Basis</span></a></div></li>
+<li><div class="toc-item"><a href="sec-elematix.html" class="internal"><span class="codenumber">21.3</span> <span class="title">Elementary Matrices</span></a></div></li>
+<li><div class="toc-item"><a href="sec-operator.html" class="internal"><span class="codenumber">21.4</span> <span class="title">Linear Operators on Free Modules</span></a></div></li>
+<li><div class="toc-item"><a href="sec-det.html" class="internal"><span class="codenumber">21.5</span> <span class="title">Determinants</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch-modgen.html" class="internal"><span class="codenumber">22</span> <span class="title">Finitely Generated Modules over PIDs</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-modpres.html" class="internal"><span class="codenumber">22.1</span> <span class="title">Finitely Presented Modules</span></a></div></li>
+<li><div class="toc-item"><a href="sec-snf.html" class="internal"><span class="codenumber">22.2</span> <span class="title">Smith Normal Form</span></a></div></li>
+<li><div class="toc-item"><a href="sec-modclass.html" class="internal"><span class="codenumber">22.3</span> <span class="title">Classifications</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch-canform.html" class="internal"><span class="codenumber">23</span> <span class="title">Canonical Forms</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-modpoly.html" class="internal"><span class="codenumber">23.1</span> <span class="title">Modules over Polynomial Rings</span></a></div></li>
+<li><div class="toc-item"><a href="sec-rcf.html" class="internal"><span class="codenumber">23.2</span> <span class="title">Rational Canonical Form</span></a></div></li>
+<li><div class="toc-item"><a href="sec-jcf.html" class="internal"><span class="codenumber">23.3</span> <span class="title">Jordan Canonical Form</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="part-representation.html" class="internal"><span class="codenumber">V</span> <span class="title">Representation Theory</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="ch-grouprings.html" class="internal"><span class="codenumber">24</span> <span class="title">Group Rings and Representations</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-representations.html" class="internal"><span class="codenumber">24.1</span> <span class="title">Representations</span></a></div></li>
+<li><div class="toc-item"><a href="sec-group-rings-and-modules.html" class="internal"><span class="codenumber">24.2</span> <span class="title">Group Rings and Modules</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch-simple-modules.html" class="internal"><span class="codenumber">25</span> <span class="title">Simple Modules</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-simple-modules.html" class="internal"><span class="codenumber">25.1</span> <span class="title">Simple Modules</span></a></div></li>
+<li><div class="toc-item"><a href="sec-fl-modules.html" class="internal"><span class="codenumber">25.2</span> <span class="title">Finite Length Modules</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="sec-chain-conditions.html" class="internal"><span class="codenumber">26</span> <span class="title">Chain Conditions</span></a></div></li>
+<li><div class="toc-item"><a href="ch-semisimple-mod.html" class="internal"><span class="codenumber">27</span> <span class="title">Semisimple Modules</span></a></div></li>
+<li>
+<div class="toc-item"><a href="ch-artin-wedd.html" class="internal"><span class="codenumber">28</span> <span class="title">Artin-Wedderburn Theorem</span></a></div>
+<ul class="structural">
+<li class="active"><div class="toc-item"><a href="sec-semisimple-rings.html" class="internal"><span class="codenumber">28.1</span> <span class="title">Semisimple Rings</span></a></div></li>
+<li><div class="toc-item"><a href="sec-art-wedd.html" class="internal"><span class="codenumber">28.2</span> <span class="title">Artin-Wedderburn Theorem</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch-applications.html" class="internal"><span class="codenumber">29</span> <span class="title">Applications to Representation Theory</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-spplications.html" class="internal"><span class="codenumber">29.1</span> <span class="title">Applications</span></a></div></li>
+<li><div class="toc-item"><a href="sec-rep-closed-fields.html" class="internal"><span class="codenumber">29.2</span> <span class="title">Algebraically Closed Fields</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-semisimple-rings"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">28.1</span> <span class="title">Semisimple Rings</span>
+</h2>
+<article class="definition definition-like" id="def-semisimple-ring"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">28.1</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-418">A ring <span class="process-math">\(R\)</span> is <em class="emphasis">left semisimple</em> if <span class="process-math">\(R\)</span> is semisimple as a left module over itself. <span class="process-math">\(R\)</span> is <em class="emphasis">right semisimple</em> if <span class="process-math">\(R\)</span> is semisimple as a right modules over itself.</div></article><article class="remark remark-like" id="remark-22"><h3 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">28.2</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-419">
+<div class="para">Recall that submodules of <span class="process-math">\(R\)</span> are left ideals and the simple ones are the minimal (nonzero) left ideals. So, <span class="process-math">\(R\)</span> is left semisimple if and only if <span class="process-math">\(R\)</span> is the internal direct sum of some collection of minimal left ideals <span class="process-math">\(I_j\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+R = \bigoplus_{j \in J} I_j.
+\end{equation*}
+</div>
+<div class="para">Moreover, <span class="process-math">\(R\)</span> is f.g. as a module over itself, and so this must be a finite direct sum. So, <span class="process-math">\(R\)</span> is left semisimple if and only if <span class="process-math">\(R\)</span> decomposes as an internal direct sum of the form <span class="process-math">\(R = I_1 \oplus \cdots \oplus I_m\)</span> for some finite collection <span class="process-math">\(I_1, \dots, I_m\)</span> of minimal left ideals.</div>
+</div></article><article class="example example-like" id="example-15"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">28.3</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-420">For any <span class="process-math">\(n \geq 0\)</span> and division ring <span class="process-math">\(D\text{,}\)</span> the matrix ring <span class="process-math">\(M_n(D)\)</span> is left semisimple. This was shown earlier. It is also right semisimple.</div></article><article class="example example-like" id="example-16"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">28.4</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-421">If <span class="process-math">\(R=K_1 \times \cdots \times K_t\)</span> is a finite product of fields, then each <span class="process-math">\(K_i\)</span> is a simple <span class="process-math">\(R\)</span>-module, and <span class="process-math">\(R\)</span> is the direct sum of these, so <span class="process-math">\(R\)</span> is (left) semisimple.</div></article><article class="proposition theorem-like" id="prop-equivcond-semisimple-ring"><h3 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">28.5</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-422">
+<div class="para">For a ring <span class="process-math">\(R\text{,}\)</span> the following conditions are equivalent:</div>
+<ol class="decimal">
+<li id="li-145"><div class="para" id="p-423">
+<span class="process-math">\(R\)</span> is a left semisimple ring.</div></li>
+<li id="li-146"><div class="para" id="p-424">Every left <span class="process-math">\(R\)</span>-module is semisimple.</div></li>
+<li id="li-147"><div class="para" id="p-425">Every SES of left <span class="process-math">\(R\)</span>-modules is split.</div></li>
+<li id="li-148"><div class="para" id="p-426">Every injection <span class="process-math">\(i: M' \hookrightarrow M\)</span> of left <span class="process-math">\(R\)</span>-modules splits</div></li>
+<li id="li-149"><div class="para" id="p-427">Every surjection <span class="process-math">\(p: M \twoheadrightarrow M''\)</span> of left <span class="process-math">\(R\)</span>-modules splits.</div></li>
+<li id="li-150"><div class="para" id="p-428">Every left <span class="process-math">\(R\)</span>-module is projective.</div></li>
+<li id="li-151"><div class="para" id="p-429">Every left <span class="process-math">\(R\)</span>-module is injective.</div></li>
+</ol>
+</div></article><article class="hiddenproof" id="proof-21"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-21"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-21"><article class="hiddenproof"><div class="para" id="p-430">The equivalence of (2)-(5) follows from Proposition <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "prop93b" missing or not unique]</code>. The equivalence of (4) and (7) follows from the characterization of injective modules in Proposition <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "prop:injective" missing or not unique]</code> and the equivalence of (5) and (6) follows from the characterization of projective modules in Proposition <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "prop1111" missing or not unique]</code>. The implication (2) <span class="process-math">\(\Rightarrow\)</span> (1) is obvious.</div> <div class="para" id="p-431">Now for <span class="process-math">\((1)\Rightarrow (2)\text{:}\)</span> Assume (1) and let <span class="process-math">\(M\)</span> be any left <span class="process-math">\(R\)</span>-module. It follows from the definition that an arbitrary coproduct of semisimple modules is again semisimple, and so the free module <span class="process-math">\(\bigoplus_\Lambda R\)</span> is semisimple for any indexing set <span class="process-math">\(\Lambda\text{.}\)</span> By choosing a generating set of <span class="process-math">\(M\)</span> , we may find a surjection of the form <span class="process-math">\(p: \oplus_\Lambda R \twoheadrightarrow M\text{.}\)</span> By Corollary <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "cor93" missing or not unique]</code>, it follows that <span class="process-math">\(M\)</span> is semisimple since it is a quotient of a semisimple module <span class="process-math">\(M\cong \oplus_\Lambda R/\operatorname{ker}(p)\text{.}\)</span>
+</div></article></div>
+<article class="proposition theorem-like" id="prop-ds-semisimple"><h3 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">28.6</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-432">Let <span class="process-math">\(R\)</span> be a left semisimple ring and write <span class="process-math">\(R = I_1 \oplus \cdots \oplus I_m\)</span> as an internal direct sum with <span class="process-math">\(I_1, \dots, I_m\)</span> minimal left ideals. Let <span class="process-math">\(J_1, \dots, J_n\)</span> be a complete list of representatives of isomorphism classes as left <span class="process-math">\(R\)</span>-modules taken from the list <span class="process-math">\(I_1, \dots, I_m\text{;}\)</span> so, for each <span class="process-math">\(i\)</span> with <span class="process-math">\(1 \leq i \leq m\text{,}\)</span> there is a unique <span class="process-math">\(j\)</span> with <span class="process-math">\(1 \leq j \leq l\)</span> so that <span class="process-math">\(I_i \cong J_j\)</span> as left <span class="process-math">\(R\)</span>-modules.</div> <div class="para" id="p-433">Then every <span class="process-math">\(R\)</span>-module is isomorphic to <span class="process-math">\(J_1^{\oplus \Lambda_1} \oplus \cdots \oplus J_n^{\oplus \Lambda_n}\)</span> for some index sets <span class="process-math">\(\Lambda_1,\dots,\Lambda_n\text{.}\)</span>
+</div> <div class="para" id="p-434">If <span class="process-math">\(M\)</span> is finitely generated, <span class="process-math">\(M\)</span> is isomorphic to <span class="process-math">\(J_1^{\oplus e_1} \oplus \cdots \oplus J_n^{\oplus e_n}\)</span> for a unique list <span class="process-math">\(e_1, \dots, e_n\)</span> of nonnegative integers.</div></article><article class="hiddenproof" id="proof-22"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-22"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-22"><article class="hiddenproof"><div class="para" id="p-435">If <span class="process-math">\(M\)</span> is finitely generated there is a surjection <span class="process-math">\(R^a \twoheadrightarrow M\text{.}\)</span> Using Proposition <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "prop916" missing or not unique]</code> this surjection splits, so that <span class="process-math">\(R^n \cong M \oplus N\)</span> for some <span class="process-math">\(N\text{,}\)</span> and each of <span class="process-math">\(M\)</span> and <span class="process-math">\(N\)</span> is semisimple and finitely generated. So <span class="process-math">\(M = \oplus_{i=1}^s M_i\)</span> and <span class="process-math">\(N = \oplus_{j=1}^s N_j\)</span> with <span class="process-math">\(M_i, N_j\)</span> simple. Clearly <span class="process-math">\(R^n\)</span> is isomorphic to a finite direct sum of copies of the <span class="process-math">\(J_i\)</span>’s, and so the result follows from the Krull-Schmidt Theorem for semisimple modules.</div> <div class="para" id="p-436">In the general case, we know that <span class="process-math">\(M\)</span> is a direct sum of simple modules; if some simple summand <span class="process-math">\(N\)</span> of <span class="process-math">\(M\)</span> is not isomorphic to one of the <span class="process-math">\(J_i\text{,}\)</span> then <span class="process-math">\(N\)</span> is a finitely generated counterexample to the f.g. case.</div></article></div>
+<div class="para" id="p-437">In short, if <span class="process-math">\(R\)</span> is left semisimple, and we know the simple decomposition of <span class="process-math">\(R\)</span> itself, then we have a complete classification of <em class="emphasis">all</em> <span class="process-math">\(R\)</span>-modules: they are just direct sums of the simple summands of <span class="process-math">\(R\text{!}\)</span>
+</div>
+<div class="para" id="p-438">Much of the interest in semisimple rings arises from the following:</div>
+<article class="theorem theorem-like" id="thm-Maschke"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">28.7</span><span class="period">.</span><span class="space"> </span><span class="title">Maschke's Theorem.</span>
+</h3>
+<div class="para" id="p-439">If <span class="process-math">\(K\)</span> is a field and <span class="process-math">\(G\)</span> is a finite group such that <span class="process-math">\(\mathrm{char}(K)\)</span> does not divide <span class="process-math">\(|G|\text{,}\)</span> then the group ring <span class="process-math">\(K[G]\)</span> is left semisimple.</div></article><article class="hiddenproof" id="proof-23"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-23"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-23"><article class="hiddenproof"><div class="para logical" id="p-440">
+<div class="para">Let <span class="process-math">\(i: N \to M\)</span> be any injection of left <span class="process-math">\(K[G]\)</span>-modules. It suffices to prove that there is an <span class="process-math">\(K[G]\)</span>-linear map <span class="process-math">\(p: M \to N\)</span> such that <span class="process-math">\(p \circ i = \mathrm{id}_N\text{.}\)</span> By restriction of scalars along the inclusion <span class="process-math">\(K \subseteq K[G]\text{,}\)</span> we may regard <span class="process-math">\(i\)</span> as a <span class="process-math">\(K\)</span>-linear map between <span class="process-math">\(K\)</span>-vector spaces. As such it admits a <span class="process-math">\(K\)</span>-linear splitting <span class="process-math">\(f: M \twoheadrightarrow N\)</span> (since <span class="process-math">\(K\)</span> is semisimple). There is no reason that <span class="process-math">\(f\)</span> will be <span class="process-math">\(K[G]\)</span>-linear, but we can modify it so that it becomes so: Define <span class="process-math">\(p: M \to N\)</span> by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+p(m) = \frac{1}{|G|} \sum_{g \in G} g^{-1} f(g m).
+\end{equation*}
+</div>
+<div class="para">Note that the formula makes sense since <span class="process-math">\(|G|\)</span> is invertible in <span class="process-math">\(K\)</span> by assumption.</div>
+</div> <div class="para logical" id="p-441">
+<div class="para">Then <span class="process-math">\(p\)</span> is still a <span class="process-math">\(K\)</span>-linear map (since <span class="process-math">\(f\)</span> is <span class="process-math">\(K\)</span>-linear and the group action is <span class="process-math">\(K\)</span>-linear). For any <span class="process-math">\(h \in G\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+p(hm) = \frac{1}{|G|} \sum_{g \in G} g^{-1} f(g hm) = \frac{1}{|G|} \sum_{x \in G} hx^{-1} f(xm)
+= h p(m),
+\end{equation*}
+</div>
+<div class="para">where the second equality is given by identifying <span class="process-math">\(x\)</span> with <span class="process-math">\(gh\text{.}\)</span> These conditions ensure that <span class="process-math">\(p\)</span> is <span class="process-math">\(K[G]\)</span>-linear. Finally,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+p(i(n))= \frac{1}{|G|} \sum_{g \in G} g^{-1} f(g i(n))
+= \frac{1}{|G|} \sum_{g \in G} g^{-1} f(i(gn)) 
+= \frac{1}{|G|} \sum_{g \in G} g^{-1} gn
+= \frac{1}{|G|} \sum_{g \in G} n  = n
+\end{equation*}
+</div>
+<div class="para">where the second equality uses that <span class="process-math">\(i\)</span> is <span class="process-math">\(K[G]\)</span>-linear and the third one uses that <span class="process-math">\(f \circ i =
+\mathrm{id}\text{.}\)</span>
+</div>
+</div></article></div>
+<article class="remark remark-like" id="remark-23"><h3 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">28.8</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-442">The proof actually shows that <span class="process-math">\(K[G]\)</span> is semisimple provided <span class="process-math">\(K\)</span> is and <span class="process-math">\(|G|\)</span> is invertible in <span class="process-math">\(K\text{.}\)</span>
+</div></article><article class="example example-like" id="example-17"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">28.9</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-443">The group ring <span class="process-math">\(R=\mathbb{F}_p[C_p]\)</span> does not satisfy the hypotheses of Maschke’s theorem, since the order of the group is zero in the field. In fact, <span class="process-math">\(\mathbb{F}_p[C_p]\)</span> is not semisimple: let <span class="process-math">\(V=\mathbb{F}_p^2\)</span> be the <span class="process-math">\({C_p= \langle g\rangle}\)</span> representation <span class="process-math">\(g^n \mapsto \begin{bmatrix} 1 &amp; 0 \\ \lambda n &amp; 1\end{bmatrix}\text{;}\)</span> i.e., as a <span class="process-math">\(\mathbb{F}_p[C_p]\)</span>-module, we have <span class="process-math">\(g \cdot \begin{bmatrix} a \\ b\end{bmatrix} =  \begin{bmatrix} a \\ a+b\end{bmatrix}\text{.}\)</span> We claim that <span class="process-math">\({U=\left\{ \begin{bmatrix} 0 \\ b \end{bmatrix}\right\}}\)</span> is the unique nonzero proper submodule of <span class="process-math">\(V\text{.}\)</span> Let <span class="process-math">\(W\subseteq V\)</span> be a nonzero submodule and suppose that <span class="process-math">\(U\neq W\text{.}\)</span> Then, there is some element <span class="process-math">\(v=\begin{bmatrix} a \\ b\end{bmatrix} \in W\)</span> with <span class="process-math">\(a\neq 0\text{.}\)</span> Then <span class="process-math">\(v\)</span> and <span class="process-math">\(gv\)</span> are linearly independent, so we must have <span class="process-math">\(W=V\text{.}\)</span> It follows that <span class="process-math">\(V\)</span> is not semisimple: it is not simple since <span class="process-math">\(0\subsetneqq U \subsetneqq V\text{,}\)</span> but <span class="process-math">\(V\)</span> is not a direct sum of simple modules.</div></article><div class="para" id="p-444">Let <span class="process-math">\(G\)</span> be a finite group and <span class="process-math">\(K\)</span> a field. The representation of <span class="process-math">\(G\)</span> corresponding to <span class="process-math">\(K[G]\)</span> viewed as a left module over itself can be described explicitly as following: As a <span class="process-math">\(K\)</span>-vector space, <span class="process-math">\(K[G]\)</span> has <span class="process-math">\(G\)</span> as a basis: <span class="process-math">\(K[G] = \oplus_{g \in G} k \cdot g\text{.}\)</span> <span class="process-math">\(G\)</span> acts on this vector space by permuting the basis via left multiplication: <span class="process-math">\(h \cdot (\sum_g c_g g) = \sum_g c_g (hg)\text{.}\)</span> This is sometimes called the <em class="emphasis">(left) regular representation of <span class="process-math">\(G\)</span></em>.</div>
+<article class="corollary theorem-like" id="cor-Maschke"><h3 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">28.10</span><span class="period">.</span><span class="space"> </span><span class="title">Corollary of Maschke's Theorem.</span>
+</h3>
+<div class="para" id="p-445">If <span class="process-math">\(G\)</span> is a finite group and <span class="process-math">\(K\)</span> is a field such that <span class="process-math">\(\mathrm{char}(K) \nmid |G|\text{,}\)</span> then every <span class="process-math">\(K\)</span>-linear representation of <span class="process-math">\(G\)</span> is a direct sum of irreducible representations, and every finite dimensional representation is uniquely a finite direct sum of irreducible ones.</div> <div class="para" id="p-446">Moreover, every irreducible representation arises as a summand of the left regular representation.</div></article><article class="example example-like" id="example-18"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">28.11</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-447">
+<div class="para">Let <span class="process-math">\(G=C_3\text{.}\)</span> We can use Maschke’s Theorem and the theory of semisimple rings so far to classify every representation of <span class="process-math">\(G\)</span> over <span class="process-math">\({\mathbb{R}}\)</span> or over <span class="process-math">\(\mathbb{C}\)</span> (or more generally over any field of characteristic not equal to 3). In any case, the left regular representation <span class="process-math">\(V\)</span> of <span class="process-math">\(C_3\)</span> is the three-dimensional representation with basis <span class="process-math">\(\{1,g,g^2\}\)</span> such that <span class="process-math">\(g\cdot 1 = g, g\cdot g=g^2, g\cdot g^2 =1\text{,}\)</span> i.e.,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g \mapsto \begin{bmatrix} 0 &amp; 0 &amp; 1 \\ 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0\end{bmatrix}
+\end{equation*}
+</div>
+<div class="para">in this basis. Also in any case, the subspace <span class="process-math">\(W\)</span> spanned by <span class="process-math">\(1+g+g^2\text{,}\)</span> which is the vector <span class="process-math">\((1,1,1)\)</span> in these coordinates, is a 1-dimensional <span class="process-math">\(G\)</span>-stable subspace, so a simple subrepresentation. Moreover, this is the trivial representation, since this vector is fixed by <span class="process-math">\(g\text{.}\)</span> Then <span class="process-math">\(V/W\)</span> obtains the structure of a representation. We can take <span class="process-math">\(1+W,g+W\)</span> as a basis for <span class="process-math">\(V/W\text{,}\)</span> and <span class="process-math">\(g\cdot (1+W) = g+W\text{,}\)</span> and <span class="process-math">\(g\cdot (g+W) = g^2+W = -1-g +W\text{,}\)</span> i.e., in our coordinates,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g\mapsto \begin{bmatrix} 0 &amp; -1 \\ 1 &amp; -1 \end{bmatrix}.
+\end{equation*}
+</div>
+<div class="para">A <span class="process-math">\(G\)</span>-stable subspace must correspond to an eigenvector of <span class="process-math">\(g\)</span> (which is equivalently an eigenvector of <span class="process-math">\(g^{-1}\)</span>). The characteristic equation of this matrix shows that the eigenvalues are precisely the primitive cube roots of unity.</div>
+</div> <div class="para" id="p-448">If <span class="process-math">\(K={\mathbb{R}}\)</span> (or more generally if there are no primitive cube roots of unity), then the <span class="process-math">\(2\)</span>-dimensional representation <span class="process-math">\(V/W\)</span> we just found is simple since there are no stable subspaces. If <span class="process-math">\(K=\mathbb{C}\)</span> (or more generally if there are primitive cube roots of unity), let <span class="process-math">\(\omega\)</span> be a primitive cube root of unity. The <span class="process-math">\(2\)</span>-dimensional representation <span class="process-math">\(V/W\)</span> has <span class="process-math">\(\omega\)</span> and <span class="process-math">\(\omega^2\)</span> as eigenvalues, and there are corresponding eigenvectors, so <span class="process-math">\(V/W\)</span> is a direct sum of two 1-dimensional stable subspaces <span class="process-math">\(T, T'\)</span> such that <span class="process-math">\(g\cdot t= \omega t\)</span> for all <span class="process-math">\(t\in T\)</span> and <span class="process-math">\(g\cdot t' = \omega^2 t'\)</span> for all <span class="process-math">\(t'\in T'\text{.}\)</span>
+</div> <div class="para" id="p-449">We conclude that <em class="emphasis">every</em> real representation of <span class="process-math">\(C_3\)</span> is isomorphic to a direct sum of copies of the trivial representation and copies of <span class="process-math">\(V/W\text{.}\)</span> That is, for any such representation <span class="process-math">\(U\text{,}\)</span> there is a basis of <span class="process-math">\(U\text{,}\)</span> <span class="process-math">\(\{e_\alpha \}_{\alpha\in A}\text{,}\)</span> <span class="process-math">\(\{e'_\beta, e''_\beta\}_{\beta\in B}\text{,}\)</span> such that <span class="process-math">\(g\cdot e_\alpha = e_\alpha\text{,}\)</span> <span class="process-math">\(g\cdot e'_\beta = e''_\beta\text{,}\)</span> and <span class="process-math">\(g\cdot e''_\beta = - e'_\beta - e''_\beta\text{.}\)</span>
+</div> <div class="para" id="p-450">We conclude that <em class="emphasis">every</em> complex representation of <span class="process-math">\(C_3\)</span> is isomorphic to a direct sum of copies of the trivial representation, <span class="process-math">\(T\text{,}\)</span> and <span class="process-math">\(T'\text{.}\)</span> That is, for any such representation <span class="process-math">\(U\text{,}\)</span> there is a basis of <span class="process-math">\(U\text{,}\)</span> <span class="process-math">\(\{e_\alpha \}_{\alpha\in A}\text{,}\)</span> <span class="process-math">\(\{e'_\beta\}_{\beta\in B}\text{,}\)</span> <span class="process-math">\(\{e''_\gamma\}_{\gamma\in C}\text{,}\)</span> such that <span class="process-math">\(g\cdot e_\alpha = e_\alpha\text{,}\)</span> <span class="process-math">\(g\cdot e'_\beta = \omega e'_\beta\text{,}\)</span> and <span class="process-math">\(g\cdot e''_\gamma = e''_\gamma\text{.}\)</span>
+</div></article></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="ch-artin-wedd.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-art-wedd.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>
