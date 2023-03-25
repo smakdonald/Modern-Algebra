@@ -12,24 +12,17 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para logical">
-<div class="para">Combining these gives</div>
-<div class="displaymath process-math">
+<div class="para logical"><div class="displaymath process-math">
 \begin{equation*}
-R^{\mathrm{op}} \cong \operatorname{Mat}_{n_1}(D'_1) \times \cdots \times \operatorname{Mat}_{n_m}(D'_m)
+\begin{aligned}
+\label{E912}
+\operatorname{End}_R(R) &amp;=&amp; \mathrm{Hom}_R(\bigoplus_{i=1}^m M_i^{\oplus n_i}, \prod_{j=1}^m M_j^{\oplus n_j}) \cong  \prod_j \mathrm{Hom}_R(M_i^{\oplus n_i}, \prod_i  M_i^{\oplus n_j})\\
+&amp;\cong&amp;  \prod_{i=1}^m \prod_{j=1}^m \mathrm{Hom}_R(M_i^{\oplus n_i}, M_j^{\oplus n_j}) \\
+&amp;=&amp; \prod_{i=1}^m \mathrm{Hom}_R(M_i^{\oplus n_i}, M_i^{\oplus n_i}) \\
+&amp;=&amp; \prod_{i=1}^m  \operatorname{End}_R(M_i^{\oplus n_i})\cong \prod_{i=1}^m  \operatorname{Mat}_{n_i}(\operatorname{End}_R(M_i)).
+\end{aligned}
 \end{equation*}
-</div>
-<div class="para">and hence, also by a homework problem, we have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-R \cong
-\left(\operatorname{Mat}_{n_1}(D'_1) \times \cdots \times \operatorname{Mat}_{n_m}(D'_m)\right)^{\mathrm{op}} \cong
-\operatorname{Mat}_{n_1}(D_1) \times \cdots \times \operatorname{Mat}_{n_m}(D_m)
-\end{equation*}
-</div>
-<div class="para">with <span class="process-math">\(D_i := (D_i')^{\mathrm{op}}=\operatorname{End}_R(M_i)^\mathrm{op}\text{.}\)</span>
-</div>
-</div>
+</div></div>
 <span class="incontext"><a href="sec-art-wedd.html#p-664" class="internal">in-context</a></span>
 </body>
 </html>

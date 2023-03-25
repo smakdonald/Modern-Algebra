@@ -467,16 +467,18 @@ window.MathJax = {
 <div class="toc-item"><a href="group-first-definitions.html" class="internal"><span class="codenumber">1.1</span> <span class="title">First Definitions</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="group-first-definitions.html#subsec-grps" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Groups</span></a></div></li>
-<li><div class="toc-item"><a href="group-first-definitions.html#subsec-gpex" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Examples</span></a></div></li>
-<li><div class="toc-item"><a href="group-first-definitions.html#subsec-d2n" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Dihedral Groups</span></a></div></li>
-<li><div class="toc-item"><a href="group-first-definitions.html#subsec-symmetric" class="internal"><span class="codenumber">1.1.4</span> <span class="title">Symmetric Groups</span></a></div></li>
-<li><div class="toc-item"><a href="group-first-definitions.html#subsec-quat" class="internal"><span class="codenumber">1.1.5</span> <span class="title">The Quaternions</span></a></div></li>
-<li><div class="toc-item"><a href="group-first-definitions.html#subsec-order" class="internal"><span class="codenumber">1.1.6</span> <span class="title">Order</span></a></div></li>
+<li><div class="toc-item"><a href="group-first-definitions.html#subsec-d2n" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Dihedral Groups</span></a></div></li>
+<li><div class="toc-item"><a href="group-first-definitions.html#subsec-symmetric" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Symmetric Groups</span></a></div></li>
+<li><div class="toc-item"><a href="group-first-definitions.html#subsec-quat" class="internal"><span class="codenumber">1.1.4</span> <span class="title">The Quaternions</span></a></div></li>
+<li><div class="toc-item"><a href="group-first-definitions.html#subsec-order" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Order</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-gen-cyclic-gp.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Generators and Cyclic Groups</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#subsec-cyclic-gp" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Cyclic Groups</span></a></div></li></ul>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#subsec-gp-generators" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Generators</span></a></div></li>
+<li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#subsec-cyclic-gp" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Cyclic Groups</span></a></div></li>
+</ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-subgroups.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Subgroups</span></a></div>
@@ -550,8 +552,9 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="ch-extras.html" class="internal"><span class="codenumber">8</span> <span class="title">Extras</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-solve.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Solvable Groups</span></a></div></li>
-<li><div class="toc-item"><a href="sec-smallorder.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Groups of Small Order</span></a></div></li>
+<li><div class="toc-item"><a href="sec-quals.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Qualifying Exams</span></a></div></li>
+<li><div class="toc-item"><a href="sec-solve.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Solvable Groups</span></a></div></li>
+<li><div class="toc-item"><a href="sec-smallorder.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Groups of Small Order</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -731,7 +734,7 @@ window.MathJax = {
 <article class="definition definition-like" id="def-orbit"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.12</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-265">
+<div class="para logical" id="p-268">
 <div class="para">Let <span class="process-math">\(G\)</span> be a group acting on a set <span class="process-math">\(X\text{.}\)</span> For an element <span class="process-math">\(s\in X\)</span> the orbit of <span class="process-math">\(s\)</span> is</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -741,37 +744,37 @@ window.MathJax = {
 </div></article><article class="lemma theorem-like" id="lem-orbits-partition"><h3 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">4.13</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-266">Let <span class="process-math">\(G\)</span> be a group acting on a set <span class="process-math">\(S\text{.}\)</span> Then</div> <div class="para logical" id="p-267"><ol class="decimal">
-<li id="li-89"><div class="para" id="p-268">
+<div class="para" id="p-269">Let <span class="process-math">\(G\)</span> be a group acting on a set <span class="process-math">\(S\text{.}\)</span> Then</div> <div class="para logical" id="p-270"><ol class="decimal">
+<li id="li-92"><div class="para" id="p-271">
 <span class="process-math">\(\sim_G\)</span> is an equivalence relation</div></li>
-<li id="li-90"><div class="para" id="p-269">for any <span class="process-math">\(s,s'\in S\)</span> either <span class="process-math">\(\operatorname{Orbit}_G(s)=\operatorname{Orbit}_G(s')\)</span> or <span class="process-math">\(\operatorname{Orbit}_G(s)\cap \operatorname{Orbit}_G(s')=\emptyset\)</span>
+<li id="li-93"><div class="para" id="p-272">for any <span class="process-math">\(s,s'\in S\)</span> either <span class="process-math">\(\operatorname{Orbit}_G(s)=\operatorname{Orbit}_G(s')\)</span> or <span class="process-math">\(\operatorname{Orbit}_G(s)\cap \operatorname{Orbit}_G(s')=\emptyset\)</span>
 </div></li>
-<li id="li-91"><div class="para" id="p-270"><span class="process-math">\(\displaystyle S=\bigcup_{\text{pairwise disjoint orbits}} \operatorname{Orbit}_G(s)\)</span></div></li>
+<li id="li-94"><div class="para" id="p-273"><span class="process-math">\(\displaystyle S=\bigcup_{\text{pairwise disjoint orbits}} \operatorname{Orbit}_G(s)\)</span></div></li>
 </ol></div></article><article class="definition definition-like" id="def-stab"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.14</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-271">
+<div class="para logical" id="p-274">
 <div class="para">Let <span class="process-math">\(G\)</span> be a group acting on a set <span class="process-math">\(X\text{.}\)</span> For an element <span class="process-math">\(s\in X\)</span> the stabilizer is</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \operatorname{Stab}_G(s)=\{g\in G \mid g\cdot s=s\}.
 \end{equation*}
 </div>
-</div></article><article class="problem example-like" id="problem-69"><h3 class="heading">
+</div></article><article class="problem example-like" id="problem-68"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.15</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-272">The stabilizer <span class="process-math">\(\operatorname{Stab}_G(s)\)</span> is a subgroup of <span class="process-math">\(G\text{.}\)</span>
+<div class="para" id="p-275">The stabilizer <span class="process-math">\(\operatorname{Stab}_G(s)\)</span> is a subgroup of <span class="process-math">\(G\text{.}\)</span>
 </div></article><article class="theorem theorem-like" id="thm-LOIS"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.16</span><span class="period">.</span><span class="space"> </span><span class="title">The Length of the Orbit is the Index of the Stabilizer (LOIS).</span>
 </h3>
-<div class="para logical" id="p-273">
+<div class="para logical" id="p-276">
 <div class="para">Let <span class="process-math">\(G\)</span> be a group that acts on a finite set <span class="process-math">\(S\)</span> via <span class="process-math">\(\cdot\text{.}\)</span> For any <span class="process-math">\(s \in S\)</span> we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
 |\operatorname{Orbit}_G(s)| = [G: \operatorname{Stab}_G(s)]
 \end{equation*}
 </div>
-</div></article><article class="hiddenproof" id="proof-10"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-10"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-10"><article class="hiddenproof"><div class="para logical" id="p-274">
+</div></article><article class="hiddenproof" id="proof-11"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-11"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-11"><article class="hiddenproof"><div class="para logical" id="p-277">
 <div class="para">Let <span class="process-math">\(\mathcal L\)</span> be the collection of left cosets of <span class="process-math">\(\operatorname{Stab}_G(s)\)</span> in <span class="process-math">\(G\text{.}\)</span> Define a function</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -794,7 +797,7 @@ x \operatorname{Stab}_G(s) = y \operatorname{Stab}_G(s)\iff x^{-1}y \in \operato
 <article class="corollary theorem-like" id="cor-orbit-stabilizer"><h3 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">4.17</span><span class="period">.</span><span class="space"> </span><span class="title">Orbit-Stabilizer Theorem.</span>
 </h3>
-<div class="para logical" id="p-275">
+<div class="para logical" id="p-278">
 <div class="para">Let <span class="process-math">\(G\)</span> be a finite group that acts on a finite set <span class="process-math">\(S\)</span> via <span class="process-math">\(\cdot\text{.}\)</span> For any <span class="process-math">\(s \in S\)</span> we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -804,20 +807,20 @@ x \operatorname{Stab}_G(s) = y \operatorname{Stab}_G(s)\iff x^{-1}y \in \operato
 </div></article><article class="definition definition-like" id="def-faithful-action"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.18</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-276">An action is <em class="emphasis">transitive</em> if for all <span class="process-math">\(p,q \in S\)</span> there is a <span class="process-math">\(g \in G\)</span> such that <span class="process-math">\(q=g\cdot p\text{.}\)</span> Equivalently, an action is transitive if <span class="process-math">\(\operatorname{Orbit}_G(p)=S\)</span> for any <span class="process-math">\(p\in S\text{.}\)</span>
-</div></article><article class="problem example-like" id="problem-70"><h3 class="heading">
+<div class="para" id="p-279">An action is <em class="emphasis">transitive</em> if for all <span class="process-math">\(p,q \in S\)</span> there is a <span class="process-math">\(g \in G\)</span> such that <span class="process-math">\(q=g\cdot p\text{.}\)</span> Equivalently, an action is transitive if <span class="process-math">\(\operatorname{Orbit}_G(p)=S\)</span> for any <span class="process-math">\(p\in S\text{.}\)</span>
+</div></article><article class="problem example-like" id="problem-69"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.19</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-277">Let <span class="process-math">\(G\)</span> be a group acting transitively on a set <span class="process-math">\(S\text{.}\)</span> For <span class="process-math">\(a\in S\text{,}\)</span> let <span class="process-math">\(G_a = \{g\in G | ga = a\}\)</span> be the stabilizer of <span class="process-math">\(a\)</span> under the action from <span class="process-math">\(G\text{.}\)</span>
-</div> <div class="para logical" id="p-278"><ol class="decimal">
-<li id="li-92"><div class="para" id="p-derived-li-92">Let <span class="process-math">\(a, b\in S\text{.}\)</span> Prove there exists <span class="process-math">\(g\in G\)</span> such that <span class="process-math">\(G_b = gG_ag\inv\text{.}\)</span>
+<div class="para" id="p-280">Let <span class="process-math">\(G\)</span> be a group acting transitively on a set <span class="process-math">\(S\text{.}\)</span> For <span class="process-math">\(a\in S\text{,}\)</span> let <span class="process-math">\(G_a = \{g\in G | ga = a\}\)</span> be the stabilizer of <span class="process-math">\(a\)</span> under the action from <span class="process-math">\(G\text{.}\)</span>
+</div> <div class="para logical" id="p-281"><ol class="decimal">
+<li id="li-95"><div class="para" id="p-derived-li-95">Let <span class="process-math">\(a, b\in S\text{.}\)</span> Prove there exists <span class="process-math">\(g\in G\)</span> such that <span class="process-math">\(G_b = gG_ag\inv\text{.}\)</span>
 </div></li>
-<li id="li-93"><div class="para" id="p-derived-li-93">Suppose <span class="process-math">\(S\)</span> has more than one element and that <span class="process-math">\(G\)</span> is finite. Prove that there exists <span class="process-math">\(g\in G\)</span> which has no fixed point, that is, for all <span class="process-math">\(a\in S, ga\neq a\)</span>
+<li id="li-96"><div class="para" id="p-derived-li-96">Suppose <span class="process-math">\(S\)</span> has more than one element and that <span class="process-math">\(G\)</span> is finite. Prove that there exists <span class="process-math">\(g\in G\)</span> which has no fixed point, that is, for all <span class="process-math">\(a\in S, ga\neq a\)</span>
 </div></li>
-</ol></div> <article class="hiddenproof" id="proof-11"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-11"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-11"><article class="hiddenproof"><div class="para" id="p-279">Let <span class="process-math">\(G\)</span> be a group acting transitively on a set <span class="process-math">\(S\text{.}\)</span>
-</div> <div class="para" id="p-280">The action is transitive, so there exists some <span class="process-math">\(g\in G\)</span> such that <span class="process-math">\(ga=b\text{.}\)</span>
-</div> <div class="para" id="p-281">Let <span class="process-math">\(x\in\Stab(a)\text{,}\)</span> consider <span class="process-math">\(gxg\inv\)</span>b. Since <span class="process-math">\(g\inv b=a\text{,}\)</span> we have <span class="process-math">\(gxa\text{,}\)</span> <span class="process-math">\(x\)</span> stabilizes <span class="process-math">\(a\)</span> so now <span class="process-math">\(ga\text{,}\)</span> but <span class="process-math">\(ga=b\text{.}\)</span> So <span class="process-math">\(g\Stab(a)g\inv\subseteq\Stab(b)\text{.}\)</span>
-</div> <div class="para" id="p-282">Let <span class="process-math">\(x\in\Stab(b)\text{.}\)</span> We know <span class="process-math">\(xb=b\)</span> and also <span class="process-math">\(ga=b\text{,}\)</span> and so <span class="process-math">\(xga=ga\text{.}\)</span> Applying <span class="process-math">\(g\inv\)</span> to both to see <span class="process-math">\(g\inv xga=a\text{.}\)</span> This puts <span class="process-math">\(g\inv xg\in\Stab(a)\text{.}\)</span> Thus <span class="process-math">\(x\in g\Stab(a)g\inv\text{,}\)</span> completing the proof.</div> <div class="para" id="p-283">The action is transitive, so there is only one orbit, and so <span class="process-math">\(\Orb(a)=\Orb(b)=G\text{.}\)</span> Since <span class="process-math">\(G\)</span> is finite, the Orbit-Stabilizer Theorem tells us <span class="process-math">\(|\Orb(a)|=|G|/|\Stab(a)|\text{.}\)</span> Since every orbit has the same order as <span class="process-math">\(G\text{,}\)</span> we see <span class="process-math">\(\Stab(a)=\{e\}\)</span> for all <span class="process-math">\(a\in S\text{.}\)</span> Thus there cannot exist any fixed points.</div></article></div></article></section></div>
+</ol></div> <article class="hiddenproof" id="proof-12"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-12"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-12"><article class="hiddenproof"><div class="para" id="p-282">Let <span class="process-math">\(G\)</span> be a group acting transitively on a set <span class="process-math">\(S\text{.}\)</span>
+</div> <div class="para" id="p-283">The action is transitive, so there exists some <span class="process-math">\(g\in G\)</span> such that <span class="process-math">\(ga=b\text{.}\)</span>
+</div> <div class="para" id="p-284">Let <span class="process-math">\(x\in\Stab(a)\text{,}\)</span> consider <span class="process-math">\(gxg\inv\)</span>b. Since <span class="process-math">\(g\inv b=a\text{,}\)</span> we have <span class="process-math">\(gxa\text{,}\)</span> <span class="process-math">\(x\)</span> stabilizes <span class="process-math">\(a\)</span> so now <span class="process-math">\(ga\text{,}\)</span> but <span class="process-math">\(ga=b\text{.}\)</span> So <span class="process-math">\(g\Stab(a)g\inv\subseteq\Stab(b)\text{.}\)</span>
+</div> <div class="para" id="p-285">Let <span class="process-math">\(x\in\Stab(b)\text{.}\)</span> We know <span class="process-math">\(xb=b\)</span> and also <span class="process-math">\(ga=b\text{,}\)</span> and so <span class="process-math">\(xga=ga\text{.}\)</span> Applying <span class="process-math">\(g\inv\)</span> to both to see <span class="process-math">\(g\inv xga=a\text{.}\)</span> This puts <span class="process-math">\(g\inv xg\in\Stab(a)\text{.}\)</span> Thus <span class="process-math">\(x\in g\Stab(a)g\inv\text{,}\)</span> completing the proof.</div> <div class="para" id="p-286">The action is transitive, so there is only one orbit, and so <span class="process-math">\(\Orb(a)=\Orb(b)=G\text{.}\)</span> Since <span class="process-math">\(G\)</span> is finite, the Orbit-Stabilizer Theorem tells us <span class="process-math">\(|\Orb(a)|=|G|/|\Stab(a)|\text{.}\)</span> Since every orbit has the same order as <span class="process-math">\(G\text{,}\)</span> we see <span class="process-math">\(\Stab(a)=\{e\}\)</span> for all <span class="process-math">\(a\in S\text{.}\)</span> Thus there cannot exist any fixed points.</div></article></div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="graction.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-conjugation.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

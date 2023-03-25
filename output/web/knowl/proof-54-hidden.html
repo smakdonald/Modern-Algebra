@@ -10,19 +10,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para logical">
-<div class="para">For the first statement, the “if” implication holds in general without the hypothesis on <span class="process-math">\(R\text{.}\)</span> For the other implication, observe that there are short exact sequences</div>
+<body class="ignore-math"><article class="hiddenproof"><div class="para">Suppose that <span class="process-math">\(N\subseteq M\)</span> is not finitely generated. Then we can construct an ascending chain of submodules of <span class="process-math">\(M\)</span> given by setting <span class="process-math">\(N_0=0\text{,}\)</span> and <span class="process-math">\(N_{i+i} = N_i + n_{i+1}\)</span> for some <span class="process-math">\(n_{i+1}\in N\smallsetminus N_i\text{;}\)</span> we can do this since each <span class="process-math">\(N_i\)</span> is a finitely generated submodule of <span class="process-math">\(N\text{,}\)</span> so is not equal to <span class="process-math">\(N\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Now suppose that every submodule of <span class="process-math">\(M\)</span> is finitely generated. Given a countable ascending chain of submodules</div>
 <div class="displaymath process-math">
 \begin{equation*}
-0 \to R^{n-1} \to R^{n} \to R \to 0
+M_1 \subseteq M_2 \subseteq M_3 \subseteq M_4 \subseteq \cdots
 \end{equation*}
 </div>
-<div class="para">for all <span class="process-math">\(n&gt;0\text{.}\)</span> So, by the exercise above and induction on <span class="process-math">\(n\text{,}\)</span> every finitely generated free module is Noetherian. Now, if <span class="process-math">\(M\)</span> is finitely generated, there is a short exact sequence of the form</div>
-<div class="displaymath process-math">
-\begin{equation*}
-0 \to K \to R^{n} \to M \to 0
-\end{equation*}
-</div>
-<div class="para">so by the exercise above again, <span class="process-math">\(M\)</span> is Noetherian.</div>
-</div> <div class="para">The second statement follows from the first as a submodule of a Noetherian module is Noetherian, again by the exercise</div></article></body>
+<div class="para">let <span class="process-math">\(N=\bigcup _{n\in \mathbb{N}} M_n\text{;}\)</span> this is a submodule of <span class="process-math">\(M\text{.}\)</span> Take a finite generating set <span class="process-math">\(\{n_1,\dots,n_t\}\)</span> for <span class="process-math">\(N\text{.}\)</span> For each <span class="process-math">\(i=1,\dots,t\text{,}\)</span> we have <span class="process-math">\(n_i \in M_j\)</span> for some <span class="process-math">\(j\text{.}\)</span> Since there are finitely many <span class="process-math">\(n_i\)</span>'s there is some <span class="process-math">\(M_j\)</span> that contains them all. But then <span class="process-math">\(M_j=N\text{,}\)</span> so the chain stabilizes (i.e., achieves a maximum element).</div>
+</div></article></body>
 </html>

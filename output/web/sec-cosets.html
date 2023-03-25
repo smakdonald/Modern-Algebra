@@ -467,16 +467,18 @@ window.MathJax = {
 <div class="toc-item"><a href="group-first-definitions.html" class="internal"><span class="codenumber">1.1</span> <span class="title">First Definitions</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="group-first-definitions.html#subsec-grps" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Groups</span></a></div></li>
-<li><div class="toc-item"><a href="group-first-definitions.html#subsec-gpex" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Examples</span></a></div></li>
-<li><div class="toc-item"><a href="group-first-definitions.html#subsec-d2n" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Dihedral Groups</span></a></div></li>
-<li><div class="toc-item"><a href="group-first-definitions.html#subsec-symmetric" class="internal"><span class="codenumber">1.1.4</span> <span class="title">Symmetric Groups</span></a></div></li>
-<li><div class="toc-item"><a href="group-first-definitions.html#subsec-quat" class="internal"><span class="codenumber">1.1.5</span> <span class="title">The Quaternions</span></a></div></li>
-<li><div class="toc-item"><a href="group-first-definitions.html#subsec-order" class="internal"><span class="codenumber">1.1.6</span> <span class="title">Order</span></a></div></li>
+<li><div class="toc-item"><a href="group-first-definitions.html#subsec-d2n" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Dihedral Groups</span></a></div></li>
+<li><div class="toc-item"><a href="group-first-definitions.html#subsec-symmetric" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Symmetric Groups</span></a></div></li>
+<li><div class="toc-item"><a href="group-first-definitions.html#subsec-quat" class="internal"><span class="codenumber">1.1.4</span> <span class="title">The Quaternions</span></a></div></li>
+<li><div class="toc-item"><a href="group-first-definitions.html#subsec-order" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Order</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-gen-cyclic-gp.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Generators and Cyclic Groups</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#subsec-cyclic-gp" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Cyclic Groups</span></a></div></li></ul>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#subsec-gp-generators" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Generators</span></a></div></li>
+<li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#subsec-cyclic-gp" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Cyclic Groups</span></a></div></li>
+</ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-subgroups.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Subgroups</span></a></div>
@@ -550,8 +552,9 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="ch-extras.html" class="internal"><span class="codenumber">8</span> <span class="title">Extras</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-solve.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Solvable Groups</span></a></div></li>
-<li><div class="toc-item"><a href="sec-smallorder.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Groups of Small Order</span></a></div></li>
+<li><div class="toc-item"><a href="sec-quals.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Qualifying Exams</span></a></div></li>
+<li><div class="toc-item"><a href="sec-solve.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Solvable Groups</span></a></div></li>
+<li><div class="toc-item"><a href="sec-smallorder.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Groups of Small Order</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -731,7 +734,7 @@ window.MathJax = {
 <article class="definition definition-like" id="def-coset"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-174">
+<div class="para logical" id="p-175">
 <div class="para">For any <span class="process-math">\(N\leq G\)</span> and any g\in G let</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -742,40 +745,40 @@ gN=\{gn|n\in N\}\;\text{and}\; Ng=\{ng|n\in N\}
 </div></article><article class="lemma theorem-like" id="lem-cosetfacts"><h3 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">3.2</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-175">
+<div class="para logical" id="p-176">
 <div class="para">Let <span class="process-math">\(H \leq G\text{.}\)</span> The following facts about left cosets are equivalent for <span class="process-math">\(x,y \in G\text{:}\)</span>
 </div>
 <ol class="decimal">
-<li id="li-74"><div class="para" id="p-176">
+<li id="li-75"><div class="para" id="p-177">
 <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> belong to the same left coset of <span class="process-math">\(H\)</span> in <span class="process-math">\(G\text{,}\)</span>
 </div></li>
-<li id="li-75"><div class="para" id="p-177">
+<li id="li-76"><div class="para" id="p-178">
 <span class="process-math">\(x = yh\)</span> for some <span class="process-math">\(h \in H\text{,}\)</span>
 </div></li>
-<li id="li-76"><div class="para" id="p-178">
+<li id="li-77"><div class="para" id="p-179">
 <span class="process-math">\(y = xh\)</span> for some <span class="process-math">\(h \in H\text{,}\)</span>
 </div></li>
-<li id="li-77"><div class="para" id="p-179"><span class="process-math">\(y^{-1}x \in H\text{,}\)</span></div></li>
-<li id="li-78"><div class="para" id="p-180"><span class="process-math">\(x^{-1}y \in H\text{,}\)</span></div></li>
-<li id="li-79"><div class="para" id="p-181"><span class="process-math">\(xH = yH\text{.}\)</span></div></li>
+<li id="li-78"><div class="para" id="p-180"><span class="process-math">\(y^{-1}x \in H\text{,}\)</span></div></li>
+<li id="li-79"><div class="para" id="p-181"><span class="process-math">\(x^{-1}y \in H\text{,}\)</span></div></li>
+<li id="li-80"><div class="para" id="p-182"><span class="process-math">\(xH = yH\text{.}\)</span></div></li>
 </ol>
 </div></article><article class="lemma theorem-like" id="lem-cosetpartition"><h3 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">3.3</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-182">
+<div class="para logical" id="p-183">
 <div class="para">For <span class="process-math">\(H \leq G\text{,}\)</span> the collection of left cosets of <span class="process-math">\(H\)</span> in <span class="process-math">\(G\)</span> form a partition of <span class="process-math">\(G\text{,}\)</span> and similarly for the collection of right cosets. That is,</div>
 <ul class="disc">
-<li id="li-80"><div class="para" id="p-183">for all <span class="process-math">\(x,y \in G\text{,}\)</span> either <span class="process-math">\(xH = yH\)</span> or <span class="process-math">\(xH \cap yH = \emptyset\)</span>
+<li id="li-81"><div class="para" id="p-184">for all <span class="process-math">\(x,y \in G\text{,}\)</span> either <span class="process-math">\(xH = yH\)</span> or <span class="process-math">\(xH \cap yH = \emptyset\)</span>
 </div></li>
-<li id="li-81"><div class="para" id="p-184"><span class="process-math">\(\bigcup_{x\in G} xH=G\text{,}\)</span></div></li>
 <li id="li-82"><div class="para" id="p-185"><span class="process-math">\(\bigcup_{x\in G} xH=G\text{,}\)</span></div></li>
+<li id="li-83"><div class="para" id="p-186"><span class="process-math">\(\bigcup_{x\in G} xH=G\text{,}\)</span></div></li>
 </ul>
 <div class="para">and similarly for right cosets. Moreover all left and right cosets have the same cardinality: <span class="process-math">\(|xH| = |Hx|=|H|\)</span> for any <span class="process-math">\(x\in G\text{.}\)</span>
 </div>
 </div></article><article class="corollary theorem-like" id="cor-left-right-cosets"><h3 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">3.4</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-186">
+<div class="para logical" id="p-187">
 <div class="para">If <span class="process-math">\(G\)</span> is a finite group and <span class="process-math">\(H \leq G\text{,}\)</span> then</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -790,22 +793,22 @@ gN=\{gn|n\in N\}\;\text{and}\; Ng=\{ng|n\in N\}
 </div></article><article class="theorem theorem-like" id="thm-lagrange"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.5</span><span class="period">.</span><span class="space"> </span><span class="title">Lagrange's Theorem.</span>
 </h3>
-<div class="para" id="p-187">If <span class="process-math">\(H\)</span> is a subgroup of a finite group <span class="process-math">\(G\text{,}\)</span> then <span class="process-math">\(|H|\)</span> divides <span class="process-math">\(|G|\text{.}\)</span>
+<div class="para" id="p-188">If <span class="process-math">\(H\)</span> is a subgroup of a finite group <span class="process-math">\(G\text{,}\)</span> then <span class="process-math">\(|H|\)</span> divides <span class="process-math">\(|G|\text{.}\)</span>
 </div></article><article class="corollary theorem-like" id="cor-lagrange"><h3 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">3.6</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-188">If <span class="process-math">\(x\in G\)</span> and <span class="process-math">\(G\)</span> is a finite group, then <span class="process-math">\(|x|\)</span> divides <span class="process-math">\(|G|\text{.}\)</span>
+<div class="para" id="p-189">If <span class="process-math">\(x\in G\)</span> and <span class="process-math">\(G\)</span> is a finite group, then <span class="process-math">\(|x|\)</span> divides <span class="process-math">\(|G|\text{.}\)</span>
 </div></article><article class="definition definition-like" id="def-index"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.7</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-189"><div class="para" id="p-190">If finite groups, the common number of left or right cosets of a subgroup <span class="process-math">\(H\)</span> in a group <span class="process-math">\(G\)</span> is denoted as <span class="process-math">\([G:H]\)</span> and is called the <em class="emphasis"><span class="process-math">\(\defnn{index}\)</span></em> of <span class="process-math">\(H\)</span> in <span class="process-math">\(G\text{.}\)</span>
-</div></div></article><article class="problem example-like" id="problem-41"><h3 class="heading">
+<div class="para" id="p-190"><div class="para" id="p-191">If finite groups, the common number of left or right cosets of a subgroup <span class="process-math">\(H\)</span> in a group <span class="process-math">\(G\)</span> is denoted as <span class="process-math">\([G:H]\)</span> and is called the <em class="emphasis"><span class="process-math">\(\defnn{index}\)</span></em> of <span class="process-math">\(H\)</span> in <span class="process-math">\(G\text{.}\)</span>
+</div></div></article><article class="problem example-like" id="problem-40"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">3.8</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-191">Even if <span class="process-math">\(G\)</span> is not finite the number of left and right cosets of a subgroup <span class="process-math">\(H\leq G\)</span> is still the same. <em class="emphasis">(Hint</em>: consider the map <span class="process-math">\(gH\mapsto Hg^{-1}\)</span> and show it’s a bijection. Why is the inverse needed?)</div></article><article class="problem example-like" id="problem-42"><h3 class="heading">
+<div class="para" id="p-192">Even if <span class="process-math">\(G\)</span> is not finite the number of left and right cosets of a subgroup <span class="process-math">\(H\leq G\)</span> is still the same. <em class="emphasis">(Hint</em>: consider the map <span class="process-math">\(gH\mapsto Hg^{-1}\)</span> and show it’s a bijection. Why is the inverse needed?)</div></article><article class="problem example-like" id="problem-41"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">3.9</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-192">Prove the converse to Lagrange's theorem is false: find a group <span class="process-math">\(G\)</span> and an integer <span class="process-math">\(d&gt;0\)</span> such that <span class="process-math">\(d\)</span> divides the order of <span class="process-math">\(G\)</span> but <span class="process-math">\(G\)</span> does not have any subgroups of order <span class="process-math">\(d\text{.}\)</span> <em class="emphasis">Hint</em>: Take <span class="process-math">\(G=A_5\text{.}\)</span>
+<div class="para" id="p-193">Prove the converse to Lagrange's theorem is false: find a group <span class="process-math">\(G\)</span> and an integer <span class="process-math">\(d&gt;0\)</span> such that <span class="process-math">\(d\)</span> divides the order of <span class="process-math">\(G\)</span> but <span class="process-math">\(G\)</span> does not have any subgroups of order <span class="process-math">\(d\text{.}\)</span> <em class="emphasis">Hint</em>: Take <span class="process-math">\(G=A_5\text{.}\)</span>
 </div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="normal-quotient-groups.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-normal-subgroups.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

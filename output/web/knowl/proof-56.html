@@ -13,15 +13,14 @@
 <body class="ignore-math">
 <article class="hiddenproof"><h2 class="heading"><span class="type">Proof</span></h2>
 <div class="para logical">
-<div class="para">For each <span class="process-math">\(1 \leq i \leq n\text{,}\)</span> let <span class="process-math">\(I_i\)</span> denote the subset of <span class="process-math">\(R\)</span> consisting of matrices whose only nonzero entires belong to the <span class="process-math">\(i\)</span>-th column. The rules for matrix addition and multiplication show that <span class="process-math">\(I_i\)</span> is a left ideal (i.e., a left submodule) of <span class="process-math">\(R\text{.}\)</span> Moreover, there is evident bijection between <span class="process-math">\(I_i\)</span> and <span class="process-math">\(D^n\)</span> (column vectors) and this bijection is an isomorphism of left <span class="process-math">\(R\)</span>-modules. We proved <span class="process-math">\(D^n\)</span> is simple as an <span class="process-math">\(R\)</span>-module and hence so is <span class="process-math">\(I_i\text{.}\)</span> Finally, <span class="process-math">\(R\)</span> is the internal direct sum of <span class="process-math">\(I_1, \dots, I_n\text{:}\)</span>
-</div>
+<div class="para">Assume that <span class="process-math">\(M\)</span> has finite length. Suppose that <span class="process-math">\(M\)</span> is not Noetherian. Then there is a chain</div>
 <div class="displaymath process-math">
 \begin{equation*}
-R=I_1\oplus \cdots \oplus I_n
+M_0 \subsetneqq M_1 \subsetneqq M_2 \subsetneqq  \cdots
 \end{equation*}
 </div>
-<div class="para">because each matrix <span class="process-math">\(X\)</span> is uniquely a sum of the form <span class="process-math">\(X_1 + \cdots + X_n\)</span> with <span class="process-math">\(X_i \in M_i\text{.}\)</span>
-</div>
-</div></article><span class="incontext"><a href="ch-semisimple-mod.html#proof-56" class="internal">in-context</a></span>
+<div class="para">Since each <span class="process-math">\(M_i\)</span> is a submodule of <span class="process-math">\(M\text{,}\)</span> its length is finite, and is a nonnegative integer. Then <span class="process-math">\(\ell(M_0) &lt; \ell(M_1) &lt; \ell(M_2) &lt; \cdots \leq \ell(M)\text{,}\)</span> which yields a contradiction. The argument that <span class="process-math">\(M\)</span> is Artinian is similar.</div>
+</div> <div class="para">Now assume that <span class="process-math">\(M\)</span> is both Noetherian and Artinian. We will construct a composition series for <span class="process-math">\(M\text{.}\)</span> We can assume that <span class="process-math">\(M\neq 0\text{.}\)</span> Consider the collection of proper submodules of <span class="process-math">\(M\text{.}\)</span> This is nonempty, so has a maximal element <span class="process-math">\(M^1\)</span> by the Noetherian hypothesis. We must have <span class="process-math">\(M/M^1\)</span> is simple, or else there is a module in between <span class="process-math">\(M^1\)</span> and <span class="process-math">\(M\text{.}\)</span> Using Noetherianity again, if <span class="process-math">\(M^1\neq 0\)</span> (we’re done otherwise), there is a maximal proper submodule of <span class="process-math">\(M^1\text{;}\)</span> call it <span class="process-math">\(M^2\text{.}\)</span> This process yields a descending chain with simple quotients, and this must stop (i.e., yield <span class="process-math">\(M^i=0\)</span> for some <span class="process-math">\(i\)</span>) by the Artinian hypothesis. Thus, there is a composition series for <span class="process-math">\(M\text{.}\)</span>
+</div></article><span class="incontext"><a href="sec-chain-conditions.html#proof-56" class="internal">in-context</a></span>
 </body>
 </html>

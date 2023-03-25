@@ -1,0 +1,446 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+
+<chapter xml:id="normal-quotient-groups">
+    <title>Normal and Quotient Groups</title>
+
+    <section xml:id="sec-cosets">
+      <title>Cosets and Equivalence Relations</title>
+      
+      <definition xml:id="def-coset">
+        <statement>
+          <p>
+            For any <m>N\leq G</m> and any g\in G let 
+            <me>
+              gN=\{gn|n\in N\}\;\text{and}\; Ng=\{ng|n\in N\}
+            </me>
+            be defined as a <em>left coset</em> and <em>right coset</em> of <m>N</m> in <m>G</m>, respectfully.
+          </p>
+        </statement>
+      </definition>
+
+      <lemma xml:id="lem-cosetfacts">
+        <statement>
+          <p>
+            Let <m>H \leq G</m>. The following facts about left cosets are equivalent for <m>x,y \in G</m>:
+            <ol>
+              <li>
+                <p>
+                  <m>x</m> and <m>y</m> belong to the same left coset of <m>H</m> in <m>G</m>,
+                </p>
+              </li>
+    
+              <li>
+                <p>
+                  <m>x = yh</m> for some <m>h \in H</m>,
+                </p>
+              </li>
+    
+              <li>
+                <p>
+                  <m>y = xh</m> for some <m>h \in H</m>,
+                </p>
+              </li>
+    
+              <li>
+                <p>
+                  <m>y^{-1}x \in H</m>,
+                </p>
+              </li>
+    
+              <li>
+                <p>
+                  <m>x^{-1}y \in H</m>,
+                </p>
+              </li>
+    
+              <li>
+                <p>
+                  <m>xH = yH</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </lemma>
+
+      <lemma xml:id="lem-cosetpartition">
+        <statement>
+          <p>
+            For <m>H \leq G</m>, the collection of left cosets of <m>H</m> in <m>G</m> form a partition of <m>G</m>, and similarly for the collection of right cosets. That is,
+
+            <ul>
+              <li>
+                <p>
+                  for all <m>x,y \in G</m>, either <m>xH = yH</m> or <m>xH \cap yH = \emptyset</m>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>\bigcup_{x\in G} xH=G</m>,                    
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>\bigcup_{x\in G} xH=G</m>,                    
+                </p>
+              </li>
+            </ul>
+            and similarly for right cosets. Moreover all left and right cosets have the same cardinality: <m>|xH| = |Hx|=|H|</m> for any <m>x\in G</m>.
+          </p>
+        </statement>
+      </lemma>
+
+      <corollary xml:id="cor-left-right-cosets">
+        <statement>
+          <p>
+            If <m>G</m> is a finite group and <m>H \leq G</m>, then 
+            <me>
+              \begin{aligned}
+              |G| &amp; = |H| \cdot (\text{the number of left cosets of $H$ in $G$}) \\
+              &amp; = |H| \cdot (\text{the number of right cosets of $H$ in $G$}). \\
+              \end{aligned}
+            </me> 
+            In particular the number of left cosets of <m>H</m> in <m>G</m> is equal to the number of right cosets of <m>H</m> in <m>G</m>.
+          </p>
+        </statement>
+      </corollary>
+
+      <theorem xml:id="thm-lagrange">
+        <title>Lagrange's Theorem</title>
+        
+        <statement>
+          <p>
+            If <m>H</m> is a subgroup of a finite group <m>G</m>, then <m>|H|</m> divides <m>|G|</m>.
+          </p>
+        </statement>
+      </theorem>
+
+      <corollary xml:id="cor-lagrange">
+        <statement>
+          <p>
+            If <m>x\in G</m> and <m>G</m> is a finite group, then <m>|x|</m> divides <m>|G|</m>.
+          </p>
+        </statement>
+      </corollary>
+
+      <definition xml:id="def-index">
+        <statement>
+          <p>
+            <p>
+              If finite groups, the common number of left or right cosets of a subgroup <m>H</m> in a group <m>G</m> is denoted as <m>[G:H]</m> and is called the <em><m>\defnn{index}</m></em> of <m>H</m> in <m>G</m>.
+            </p>
+          </p>
+        </statement>
+      </definition>
+
+      <problem>
+        <p>
+          Even if <m>G</m> is not finite the number of left and right cosets of a subgroup <m>H\leq G</m> is still the same. <em>(Hint</em>: consider the map <m>gH\mapsto Hg^{-1}</m> and show it’s a bijection. Why is the inverse needed?)
+        </p>
+      </problem>
+
+      <problem>
+        <p>
+          Prove the converse to Lagrange's theorem is false: find a group <m>G</m> and an integer <m>d&gt;0</m> such that <m>d</m> divides the order of <m>G</m> but <m>G</m> does not have any subgroups of order <m>d</m>. <em>Hint</em>: Take <m>G=A_5</m>.
+        </p>
+      </problem>
+
+    </section>
+
+    <section xml:id="sec-normal-subgroups">
+      <title>Normal Subgroups</title>
+
+      <definition xml:id="def-normal-subgroup">
+        <statement>
+          <p>
+            A subgroup <m>N</m> of a group <m>G</m> is <em>normal</em> in <m>G</m>, written <m>N\nsg G</m>, if <m>gNg^{-1} = N</m> for all <m>g \in G</m>. 
+          </p>
+        </statement>
+      </definition>
+
+      <proposition xml:id="prop-equivdef-normal">
+        <title>Equivalent Normal Definitions</title>
+        
+        
+        <statement>
+          <p>
+            Let <m>N</m> be a subgroup of a group <m>G</m>. The following are equivalent: 
+            1. <m>N \nsg G</m>[^1] 
+            2. <m>gNg^{-1}\subseteq N</m> for all <m>g \in G</m>. 
+            3. <m>gN = Ng</m>[^2] for all <m>g \in G</m>. 
+          </p>
+        </statement>
+      </proposition>
+
+      <problem>
+        <p>
+          The trivial subgroups <m>\{e\}</m>, <m>G</m> of a group <m>G</m> are normal. 
+        </p>
+      </problem>
+
+      <problem>
+        <p>
+          Any subgroup of an abelian group is normal. 
+        </p>
+      </problem>
+
+      <problem>
+        <p>
+          For any group <m>G</m>, <m>Z(G)\nsg G</m>. 
+        </p>
+      </problem>
+
+      <problem>
+        <p>
+          Being a normal subgroup is not a transitive relation. For example, for <me>V=\{e, (1 2)(3 4), (1 3)(2 4), (1 4)(2 3)\}</me> one can show that <m>V \nsg S_4</m> and, since <m>V</m> is abelian (all groups with 4 elements are abelian), the subgroup <m>H = \{e,(12)(34)\}</m> is normal in <m>V</m>. But <m>H</m> is {} normal in <m>S_4</m>, since for example 
+          <me>
+            (1 3) [(1 2)(3 4)] (1 3)^{-1} = (3 2)(1 4) \notin H.
+          </me> 
+        </p>
+      </problem>
+
+      <problem>
+        <p>
+          Prove that if <m>f:G\to H</m> is a group homomorphism and <m>K\nsg H</m> then the preimage of <m>K</m>, <m>f^{-1}(K)=\{g\in G | f(g)\in K\}</m>, is a normal subgroup of <m>G</m>. 2. Show that if <m>f:G\to H</m> is a group homomorphism and <m>L \nsg G</m> then <m>f(L)</m> need not be a normal subgroup of <m>H</m>.
+        </p>
+      </problem>
+
+      <problem>
+        <p>
+          Show that any subgroup of index two is normal. This means: show that if <m>G</m> is a group, <m>H</m> is a subgroup and <m>[G:H]=2</m>, i.e the number of left (or right) cosets of <m>H</m> in <m>G</m> is two, then <m>H</m> is normal. 
+        </p>
+      </problem>
+
+      <problem>
+        <p>
+          Let <m>H</m> be a subgroup and <m>x\in G</m>.
+          (a) Prove that <m>xHx^{-1}</m> is a subgroup of <m>G</m>. 
+          (b) Prove that <m>H\cong xHx^{-1}</m> 
+          (c) Suppose <m>|H|=n</m> and <m>H</m> is the only subgroup of <m>G</m> of order <m>n</m>. Prove that <m>H</m> is normal.
+        </p>
+      </problem>
+
+      <problem>
+        <p>
+          Let <m>H</m> and <m>K</m> be normal subgroups of a group <m>G</m> such that <m>H\cap K=\{1\}</m>. Prove that <m>xy=yx</m> for all <m>x\in H, y\in K</m>.
+        </p>
+      </problem>
+
+      <problem>
+        <p>
+          Let <m>G</m> be a group and <m>S</m> a subset of <m>G</m>. Let <m>H=\langle S \rangle</m>. Prove that <m>H\nsg G</m> if and only if <m>gsg^{-1}\in H</m> for every <m>s\in S</m> and <m>g\in G</m>.
+        </p>
+      </problem>
+
+      <problem>
+        <p>
+          Let <m>G</m> be a group and let <m>A \subseteq G</m> be a set. The {}, denoted <m>\langle A \rangle ^N</m>, is the intersection of all the normal subgroups of <m>G</m> that contain <m>A</m>. 1. Show that <m>\langle A \rangle ^N</m> is a normal subgroup of <m>G</m>. 2. Show that the elements of <m>\langle A \rangle ^N</m> can be described as 
+          <me>
+            \langle A \rangle ^N= \{ g_1a_1^{i_1}g_1^{-1} \dots g_ma_m^{i_m}g_m^{-1} \mid m \geq 0, a_j \in A, g_j \in G, i_j \in \{1,-1\}, \forall 1\leq j\leq m\}.
+          </me> 
+        </p>
+      </problem>
+      
+      <problem>
+        <p>
+          Let <m>G</m> be a group, <m>S=\{aba^{-1}b^{-1}\mid a,b\in G\}</m>, and <m>H=\langle S \rangle</m>. Prove that <m>H\nsg G</m>.
+        </p>
+      </problem>
+
+      <problem>
+        <p>
+          Let <m>G</m> be a group with subgroups <m>H, K</m>. Recall the notation <me>HK=\{hk \mid h\in H, k\in K\}.</me> (a) Prove that <m>HK\leq G</m> if and only if <m>HK=KH</m>. (b) Prove that if either one of <m>H</m> or <m>K</m> is a normal subgroup of <m>G</m>, then <m>HK\leq G</m> and <m>HK=KH=\langle H\cup K\rangle</m>.
+        </p>
+      </problem>
+
+      <problem>
+        <p>
+          In <m>D_{2n}</m>[^1], let <m>H=\langle s\rangle</m> and <m>K=\langle r\rangle</m>. Then <m>HK=KH=D_{2n}</m> but of course <m>r</m> and <m>s</m> do not commute. The fact that <m>HK=KH</m> can also be justified by observing that <m>K\nsg D_{2n}</m>.
+        </p>
+      </problem>
+
+      <problem>
+        <p>
+          Let <m>H</m> be a subgroup of <m>G</m> and fix some element <m>g\in G</m>. 
+          (a) Prove that <m>gHg^{-1}=\{ghg^{-1} \mid h\in H\}</m> is a subgroup of <m>G</m> of the same order as <m>H</m>. 
+          (b) Deduce that if <m>H</m> is the unique subgroup of <m>G</m> of order <m>|H|</m> then <m>H\nsg G</m>.
+        </p>
+      </problem>
+
+      <problem>
+        <p>
+          Let <m>G</m> be a group and <m>\operatorname{Aut}(G)</m> be its automorphism group. In Problem 7 on HW # 2, you proved that for each <m>g\in G</m>, the function <m>\psi_g:G\to G</m> defined by <m>\psi_g(x)=gxg^{-1}</m> for all <m>x\in G</m> is an automorphism of <m>G</m>. Further, you proved the set <m>\operatorname{Inn}(G):=\{\psi_g \mid g\in G\}</m>, called the set of <em>inner automorphisms</em> of <m>G</m>, is a subgroup of <m>\operatorname{Aut}(G)</m>. Prove that <m>\operatorname{Inn}(G)\triangleleft \operatorname{Aut}(G)</m>.
+        </p>
+      </problem>
+
+      <problem>
+        <p>
+          Let <m>G</m> be a finite group. Prove that the number of elements in the set <m>S=\{g\in G\mid g\neq g^{-1}\}</m> is even. Conclude that a group of even order must have an element of order <m>2</m>.
+        </p>
+      </problem>
+
+      <problem>
+        <p>
+          Let <m>G</m> be a finite group, <m>H</m> and <m>N</m> subgroups such that <m>|H|</m> and <m>[G : N]</m> = are relatively prime and <m>N\nsg G</m> . Prove that <m>H \subseteq N</m>.
+        </p>
+      </problem>
+
+      <problem>
+          <p>
+            Let <m>G</m> be a group. A subgroup <m>H</m> of <m>G</m> is called a <em>characteristic subgroup</em> of <m>G</m> if <m>\a(H)=H</m> for every automorphism <m>\a</m> of <m>G</m>. Show that if <m>H</m> is a characteristic subgroup of <m>N</m> and <m>N</m> is a normal subgroup of <m>G</m>, then <m>H</m> is a normal subgroup of <m>G</m>.
+          </p>
+
+          <solution>
+            <p>
+              Let <m>G</m> be a group, <m>N</m> is a normal subgroup of <m>G</m>, and <m>H</m> a characteristic subgroup of <m>N</m>. Let <m>g\in G</m> and consider the automorphism <m>a_g:G\to G</m> given by <m>a_g(g')=gg'g^{-1}</m>.
+            </p>
+  
+            <p>
+              Let <m>n\in N</m> and notice <m>a_g(n)=gng\inv\in N</m>, as <m>N\nsg G</m>. Thus <m>a_g:N\to N</m> is well defined. Let <m>n\in N</m>. As <m>gNg\inv=N</m>, we can write <m>n=gn'g\inv</m> for some <m>n'\in N</m>. Then <m>a_g(n')=gn'g\inv=n</m>, making <m>a_g</m> surjective. As <m>|N|=|N|</m> we see that <m>a_g</m> is a bijection. The homomorphism piece we get for free from <m>G</m>, making <m>a_g\in\Aut(N)</m>.
+            </p>
+  
+            <p>
+              Let <m>h\in H</m>. As <m>H</m> is a characteristic subgroup of <m>N</m>, we see that <m>a_g(h)=ghg\inv=h</m> for all <m>h\in H</m> and for all <m>g\in G</m>. Thus <m>H</m> is normal in <m>G</m>.
+            </p>
+          </solution>
+      </problem>
+
+      <problem>
+        <p>
+          Let <m>G</m> be a group with a subgroup <m>H</m> so that <m>[G : H] = n &lt; \infty</m>. (a) Prove that there is a normal subgroup of <m>G, N</m> , so that <m>N\subseteq H</m> and <m>[G : N ] \leq n!.</m> (b) Prove that if <m>G</m> is finitely generated, there are most finitely many subgroups with index <m>n</m>.(Hint: you might want to consider maps <m>G\to S_n</m>.)
+        </p>
+      </problem>
+
+      <problem>
+        <p>
+					Let <m>G</m> be a group, and <m>H, K \leq G</m> be subgroups of <m>G</m>. 
+          (a) Give an example of <m>G, H,</m> and <m>K</m> such that <m>HK</m> is not a subgroup of <m>G</m>. 
+          (b) Suppose now that <m>H\nsg G</m> and <m>[G : H] = p</m>, where <m>p</m> is prime. Prove that either <m>K \leq H</m> or <m>G = KH</m>.
+				</p>
+
+        <proof>
+          <p>
+            Let <m>G=S_3</m>, <m>H=\langle(12)\rangle</m>, and <m>K=\langle(13)\rangle</m>. Notice that <m>H\cap K=\{e\}</m>, and thus <m>|HK|=4</m>, which does not divide <m>6</m>. Thus <m>HK</m> is not a subgroup of <m>G</m>.
+          </p>
+
+          <p>
+            Suppose there exists some <m>k\in K</m> such that <m>k\not\in H</m>. We examine <m>kH\in G/H</m>. Notice that since <m>G/H</m> has prime order it is cyclic, and thus generated by any non-identity element, such as <m>kH</m>. Thus any element in <m>G/H</m> can be written in the form <m>k^iH</m>, and any element in <m>G</m> can subsequently be written as <m>k^ih</m> for some <m>h\in H</m>. Thus <m>G=KH</m>.
+          </p>
+        </proof>
+      </problem>
+
+      
+    </section>
+
+    <section xml:id="sec-quotient-groups">
+      <title>Quotient Groups</title>
+
+
+
+
+      <problem>
+        <p>
+					Let <m>G</m> be a group (not necessarily finite) and <m>H</m> a nonempty subset of <m>G</m> that is closed under multiplication. Suppose that for all <m>g\in G</m> we have <m>g^2\in H</m>. Prove the following: 
+          (a) <m>H</m> is a subgroup of <m>G</m> 
+          (b) <m>H</m> is normal 
+          (c) <m>G/H</m> is abelian.
+				</p>
+
+        <proof>
+          <p>
+            Let <m>G</m> be a group, <m>H</m> a multiplicatively closed subset of <m>G</m>, and suppose that <m>g^2\in H</m> for all <m>g\in G</m>.
+          </p>
+
+          <p>
+            First, notice that <m>e^2=e\in H</m>. Let <m>x\in H</m>, and consider <m>x\inv</m>. Notice that <m>(x{\inv})^2=x^{-2}\in H</m>. As <m>H</m> is multiplicatively closed, we see that <m>xx^{-2}=x\inv\in H</m>. Thus <m>H</m> is a subgroup of <m>G</m> by the subgroup test.
+          </p>
+
+          <p>
+            Let <m>g\in G</m>, <m>h\in H</m>, and consider <m>gh</m>. Notice that <m>(gh)^2=ghgh\in H</m>. Multiplying by <m>h\inv</m> on the right we see <m>ghg\in H</m>, as it is multiplicatively closed and <m>h\inv\in H</m>. We rewrite <m>ghg=ghggg\inv=ghg\inv g^2</m>, given that elements always commute with their inverses. As <m>g^2\in H</m>, we see that <m>ghg\inv\in H</m> as well. Thus <m>H</m> is normal in <m>G</m>.
+          </p>
+
+          <p>
+            Let <m>x,y\in G/H</m>. As <m>g^2\in H</m> for every <m>g\in G</m>, every element <m>G/H</m> has order <m>2</m>. Thus <m>xyxy=e</m> and so <m>xy=(xy)\inv=yx</m>, making the group abelian.
+          </p>
+        </proof>
+      </problem>
+      
+    </section>
+
+    <section xml:id="sec-isomorphism-thms">
+      <title>The Isomorphism Theorems</title>
+
+
+      <exercises xml:id="exercises-gp-isos">
+        <exercise>
+          <p>
+            Let <m>G</m> be a (not necessarily finite) group and <m>H</m> and <m>K</m> normal subgroups such that <m>G = HK</m>. Prove that <m>G/(H\cap K)\cong G/H \times G/K.</m>
+          </p>
+
+          <proof>
+            <p>
+              Let <m>f:G\to G/H\times G/K</m> defined such that <m>f(g)=(gH, gK)</m>. Let <m>x,y\in G</m>. Then <me>f(xy)=(xyH,xyK)=(xHyH,xKyK)=(xH,yH)\cdot(xKyK)=f(x)f(y),</me> showing <m>f</m> is a homomorphism.
+            </p>
+  
+            <p>
+              Let <m>(xH,yK)\in G/H\times G/K</m>. As <m>x,y\in G=HK</m>, we have <m>x=hk</m> and <m>y=h'k'</m> with <m>h,h'\in H</m> and <m>k,k'\in K</m>. As <m>k'\in K</m> and <m>h\in H</m> we see <m>(xH,yK)=(kH,h'K)</m>.
+            </p>
+  
+            <p>
+              Consider <m>g=kh'\in G</m> and <me>f(g)=f(kh')=(kh'H,kh'K)=(kH,h'K)=(xH,yK),</me>making <m>f</m> surjective as well.
+            </p>
+  
+            <p>
+              Let <m>g\in H\cap K</m>. Then <m>f(g)=(gH,gK)=(H,K)</m>, and so <m>g\in\ker(f)</m>. Let <m>g\in\ker(f)</m>. Then <m>f(g)=(H,K)</m>, so <m>gH=H</m> and <m>gK=K</m>, placing <m>g\in H\cap K</m>. Thus, by the First Isomorphism Theorem, we have <m>G/(H\cap K)\cong G/H \times G/K.</m>
+            </p>
+          </proof>
+        </exercise>
+
+        <exercise>
+          <p>
+            Let <m>G</m> be a finite group. 
+
+            <ol>
+              <li>
+                <p>
+                  If <m>N</m> is a normal subgroup of <m>G</m> and <m>|N | = 2</m>, prove that <m>N</m> is contained in the center <m>Z(G)</m> of <m>G</m>. 
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Suppose that <m>| Z(G)|</m> is odd and that <m>G</m> contains a non-trivial simple subgroup <m>H</m> with <m>[G : H] = 2</m>. Prove that <m>H</m> is the only non-trivial proper normal subgroup of <m>G</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+
+          <proof>
+            <p>
+              Let <m>x\in N</m> and let <m>g\in G</m>. As <m>N</m> is normal, we see <m>gxg\inv\in N</m>, and thus one of the following must be true: - <m>gxg\inv=e</m>, where <m>e</m> is the identity element of <m>G</m>, or - <m>gxg\inv=x</m>, the only other element of <m>N</m>. However, in the first case we would have <m>x=e</m> by multiplying <m>g</m> and <m>g\inv</m> over, and thus it must be the case that <m>gxg\inv=x</m>, or <m>gx=xg</m>. Thus <m>x\in Z(G)</m>.
+            </p>
+
+            <p>
+              From Lagrange's Theorem we know that <m>|G|/|H|=2</m>, meaning that <m>G</m> has an even number of elements. Thus <m>2</m> is the smallest prime dividing the order of <m>G</m>, making <m>H</m> normal in <m>G</m> (See: ).
+            </p>
+
+            <p>
+              Suppose by way of contradiction there exists some non-trivial proper normal subgroup <m>N</m> of <m>G</m> that is not <m>H</m>. As <m>H</m> is normal, by the Second Isomorphism Theorem we have <m>H\cap N\nsg H</m>. However, as <m>H</m> is simple, this means that <m>H\cap N=\{e\}</m>. SIT also tells us that <m>HN\leq G</m>. As <m>|H|=|G|/2</m>, this makes <m>|N|=2</m> and <m>G=HN</m>. From part (a), <m>N\leq Z(G)</m>. However, this contradicts Lagrange’s Theorem, as <m>2</m> does not divide any odd numbers.
+            </p>
+          </proof>
+        </exercise>
+
+
+      </exercises>
+      
+    </section>
+
+    <section xml:id="sec-grp-presentations">
+      <title>Presentations as Quotient Groups</title>
+      
+    </section>
+
+  </chapter>

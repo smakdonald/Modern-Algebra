@@ -1,0 +1,421 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<chapter xml:id="gp-homs">
+    <title>Homomorphisms and Isomorphisms</title>
+
+    <section xml:id="sec-gphoms">
+      <title>Group Homomorphisms</title>
+      
+
+      <definition xml:id="def-gphom">
+        <statement>
+          <p>
+            If <m>G</m> and <m>H</m> are groups, a <em>homomorphism</em> from <m>G</m> is <m>H</m> is a function <m>f: G \to H</m> such that <m>f(x \cdot_G y) = f(x) \cdot_H f(y)</m>, where <m>\cdot_G</m> and <m>\cdot_H</m> denote the multiplication rules for <m>G</m> and <m>H</m>, respectively.
+          </p>
+        </statement>
+      </definition>
+
+      <example>
+        <p>
+          Prove the following
+          <ol>
+            <li>
+              <p>
+                The identity map is a group isomomorphism for any group <m>G</m>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                The exponential map <m>\exp: ({\mathbb{R}}, +) \to ({\mathbb{R}}\setminus \{0\}, \cdot)</m> is a homomorphism. So is <m>\ln: ({\mathbb{R}}_{&gt;0}, \cdot) \to ({\mathbb{R}}, +)</m>. In fact, these maps are inverse to each other so we obtain an isomorphism . <m>({\mathbb{R}}, +)\cong ({\mathbb{R}}_{&gt;0}, \cdot)</m>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                For any positive integer <m>n</m> and field <m>F</m>, the map determinant map <m>\det: \operatorname{GL}_n(F) \to (F \setminus \{0\}, \cdot)</m> is a group homomorphism.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </example>
+
+      <lemma xml:id="lem-grphomom-prop">
+        <statement>
+          <p>
+            If <m>f: G \to H</m> is a homomorphism of groups, then
+            <ol>
+              <li>
+                <p>
+                  <m>f(e_G) = e_H</m> and
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>f(x^{-1}) = f(x)^{-1}</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </lemma>
+
+      <corollary xml:id="cor-unique-Z-homom">
+        <statement>
+          <p>
+            Let <m>G</m> be a group. Prove there exists a unique group homomorphism <m>\varphi:G\to\Z</m>.
+          </p>
+        </statement>
+      </corollary>
+
+      <definition xml:id="def-gpker">
+        <statement>
+          <p>
+            Let <m>\varphi: G \to H</m> is a homomorphism of groups. The <em>kernel</em> of <m>\varphi</m> is the set 
+            <me>
+              \ker(\varphi) := \{g\in G \mid \varphi(g)=e_H\}.
+            </me>
+          </p>
+        </statement>
+      </definition>
+
+      <definition xml:id="def-gpimage">
+        <statement>
+          <p>
+            Let <m>\varphi: G \to H</m> is a homomorphism of groups. The <em>image</em> of <m>\varphi</m> is the set 
+            <me>
+              \im(\varphi) := \{\varphi(g) \mid g \in G\}.
+            </me>
+          </p>
+        </statement>
+      </definition>
+
+      <proposition xml:id="prop-homsubgp">
+        <statement>
+          <p>
+            <ol>
+              <li>
+                <p>
+                  If <m>f: G \to H</m> is a homomorphism of groups, then the set-theoretic image of <m>f</m> is a subgroup of <m>H</m>.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  If <m>f: G \to H</m> is a homomorphism of groups, then the kernel of <m>f</m> is a subgroup of <m>G</m>.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Prove that if <m>f:G\to H</m> is a group homomorphism and <m>K\leq H</m> then the preimage of <m>K</m>, defined as <m>f^{-1}(K)=\{g\in G | f(g)\in K\}</m>, is a subgroup of <m>G</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </proposition>
+
+      <proposition xml:id="prop-grptrivialkernel">
+        <statement>
+          <p>
+            <ol>
+              <li>
+                <p>
+                  A group homomorphism <m>f: G \to H</m> is injective if and only if <m>\operatorname{ker}(f) = \{e_G\}</m>.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  A group homomorphism <m>f: G \to H</m> is surjective if and only if <m>\operatorname{im}(f) = H</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </proposition>
+             
+
+      <problem>
+        <p>
+          <ol>
+            <li>
+              Find, with justification, an injective group homomorphism <m>f:S_n \to \GL_n(\R)</m>.
+            </li>
+
+            <li>
+              Find, with justification, an injective group homomorphism <m>g:D_{2n}\to S_n</m>.
+            </li>
+          </ol>
+        </p>
+      </problem>
+
+    </section>
+
+    <section xml:id="sec-gpisos">
+      <title>Group Isomorphisms</title>
+
+      <definition xml:id="def-gpiso">
+        <statement>
+          <p>
+            A homomorphism <m>f: G \to H</m> is called an <em>isomorphism</em> if there exists a homomorphism <m>g: H \to G</m> such that <m>f \circ g = \text{id}_H</m> and <m>g \circ f = \text{id}_G</m>.
+          </p>
+
+          <p>
+            If <m>f:G\to H</m> is an isomorphism, <m>G</m> and <m>H</m> are called <em>isomorphic</em>, written <m>G\cong H</m>.
+          </p>
+        </statement>
+      </definition>
+
+      <remark>
+        I have defined the notion of isomorphism in Definition <xref ref="def-gpiso" /> differently than given in the textbook. The reason is that the correct meaning of the word <q>isomorphism</q> in any context (sets, groups, rings, fields, topological spaces, whatever) is always <q>a morphism that has a two-sided inverse</q>. In many contexts, such as sets, groups, rings and fields this turns out to be equivalent to the notion of being <q>one-to-one and onto</q>. But there are contexts in which this is not the case. For example a one-to-one and onto continuous map of topological spaces need not be a homeomorphism. (A homeomorphism is a term one uses for isomorphism of topological spaces, for historical reasons.)
+      </remark>
+
+      <proposition xml:id="prop-iso-def">
+        <statement>
+          <p>
+            Suppose <m>f: G \to H</m> is a group homomorphism. Then <m>f</m> an isomorphism if and only if <m>f</m> is bijective (one-to-one and onto).
+          </p>
+        </statement>
+      </proposition>
+
+      <definition xml:id="def-iso-inv">
+        <statement>
+          <p>
+            An <em>isomorphism invariant</em> is a property <m>P</m> such that whenever <m>G \cong H</m> and <m>G</m> has <m>P</m> then <m>H</m> has <m>P</m>.
+          </p>
+        </statement>
+      </definition>
+
+      <theorem xml:id="thm-iso-inv">
+        <statement>
+          <p>
+            The following are isomorphism invariants:
+          </p>
+
+          <p>
+            <ol> 
+              <li>
+                <p>
+                  the order of the group,
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  the set of orders of elements in the group,
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  being abelian,
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  the order of the center of the group,
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  being finitely generated,
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </theorem>
+
+      <problem>
+        <p>
+          Decide whether the groups <m>Q_8</m> and <m>D_8</m> are isomorphic or not, with justification.
+        </p>
+      </problem>
+
+      <problem>
+        <p>
+          <ol>
+            <li>
+              <p>
+                <m>S_n\cong S_m</m> if and only if <m>n=m</m>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\mathbb{Z}/6\ncong S_3</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>D_{24}\ncong S_4</m>
+              </p>
+            </li>
+          </ol>
+          
+        </p>
+      </problem>
+
+      <definition xml:id="def-gp-automorphism">
+        <statement>
+          <p>
+            Let <m>G</m> be a group. An isomorphism <m>\phi:G\to G</m> is called an <em>automorphism</em> of <m>G</m>.
+          </p>
+        </statement>
+      </definition>
+
+      <problem>
+        <p>
+          Prove that the set of automorphisms of <m>G</m>, denoted <m>\operatorname{Aut}(G)</m>, is a group under composition.
+        </p>
+      </problem>
+
+      <problem>
+        <p>
+          Let <m>G</m> be a group. Prove that the map <m>f:G\to G</m> given by <m>f(a)=a^{-1}</m> for all <m>a\in G</m> is an automorphism if and only if <m>G</m> is abelian.
+        </p>
+      </problem>
+
+      <problem>
+        <p>
+          Let <m>G</m> be a group and <m>x\in G</m>. Define a map <m>\psi_x:G\to G</m> by <m>\psi_x(a)=xax^{-1}</m> for all <m>a\in G</m>. 
+          <ol>
+            <li>
+              <p>
+                Prove that <m>\psi_x\in \operatorname{Aut}(G)</m> for all <m>x\in G</m>. 
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Prove that <m>\{\psi_x\mid x\in G\}</m> is a subgroup of <m>\operatorname{Aut}(G)</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </problem>
+
+      <problem>
+        <p>
+          Prove that if groups <m>G</m> and <m>H</m> are isomorphic then: 
+          <ol>
+            <li>
+              <p>
+                <m>Z(G)\cong Z(H)</m> and 
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\Aut(G)\cong \Aut(H)</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </problem>
+    
+
+      <problem>
+        <p>
+          Find an example of groups <m>G,H</m> such that there is an isomorphism <m>G\times H\cong G</m> but <m>H</m> is not trivial. Note: since <m>G\times H\cong G</m> can be rewritten as <m>G\times H\cong G\times \{e\}</m>, the above shows that in general one cannot cancel groups in isomorphisms between direct products.
+        </p>
+      </problem>
+
+      <problem>
+        <p>
+          Prove that there are group isomorphisms between the following pairs of groups: 
+          (a) <m>\left(\Q/\Z, +\right)\cong \left(\mu,\cdot\right)</m>, where <m>\mu=\{z\in \C \mid z^n=1 \text{ for some integer } n\}</m>. 
+          (b) <m>(\C^\times,\cdot)/\mu_m\cong (\C^\times,\cdot)</m> for any integer <m>m\geq 1</m>, where <m>\mu_m=\{z\in \C \mid z^m=1\}</m>.
+        </p>
+      </problem>
+
+      <problem>
+        <p>
+          Let <m>G</m> be a group of order <m>2m</m> for some odd integer <m>m &gt; 1</m>. Let <m>\Perm(G)</m> be the group<!-- linebreak -->of permutations on the elements of <m>G</m> (i.e., the group of bijective functions from G to G). You may use without proof that <m>\Perm(G)\cong S_{2m}</m>.
+        </p>
+
+        <p><ol>
+          <li>
+          Let <m>f : G → \Perm(G)</m> be given by <m>f (g) = λg</m> for all <m>g ∈ G</m>, where <m>λg : G → G</m> is defined by <m>λg(a) = ga</m> for all <m>a ∈ G</m>. Prove that <m>f</m> is an injective group homomorphism.
+          </li>
+
+          <li>
+          Prove that if <m>g ∈ G</m> is an element of order <m>2</m> then <m>λg</m> is a product of <m>m</m> transpositions.
+          </li>
+
+          <li>
+          Prove <m>G</m> contains a subgroup of index <m>2</m> and is consequently not simple. (Tip: Consider the inverse image under <m>f</m> of the subgroup of <m>\Perm(G)</m> consisting of the even permutations.)
+          </li>
+
+        </ol></p>
+      </problem>
+
+    </section>
+
+    <section xml:id="sec-cylic-homoms">
+      <title>Cyclic Groups: Revisited</title>
+
+      <problem>
+        <p>
+          Prove that if <m>m,n</m> are positive integers such that <m>\gcd(m,n)=1</m> then there is a group isomorphism <m>C_{mn}=C_m\times C_n</m>.
+        </p>
+      </problem>
+
+      <theorem xml:id="thm-cyclic-relprime">
+        <statement>
+          <p>
+            Let <m>G=\langle x\rangle</m>, where <m>x</m> has finite order <m>n</m>. Then
+            <ol>
+              <li>
+                <p>
+                  <m>G=\{e,x,\ldots,x^{n-1}\}</m>.
+                </p>
+              </li>
+    
+              <li>
+                <p>
+                  There is a bijection 
+                    <me>
+                      \Psi : \{\text{divisors of } |G|\} \to \{\text{subgroups of } G\} \text{ given by } \Psi(d) = \langle x^{\frac{|G|}{d}}  \rangle
+                    </me> 
+                    for each divisor <m>d</m> of <m>|G|</m>. Moreover, for each subgroup <m>H</m> of <m>G</m>, <m>\Psi^{-1}(H) = |H|</m>. In particular, all subgroups of <m>G</m> are cyclic and there is a unique subgroup of each order.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </theorem>
+
+      <proposition xml:id="prop-ump-cyclic">
+        <title>Universal Mapping Property (UMP) for Cyclic Groups</title>
+        
+        <statement>
+          <p>
+            Assume <m>G = \langle x \rangle</m> and let <m>H</m> be any group. If <m>|x| = n &lt; \infty</m>, then for each <m>y \in H</m> such that <m>y^n = e</m>, there is a unique group homomorphism <me>f: G \to H</me> such that <m>f(x) = y</m>. If <m>|x| = \infty</m>, then for each <m>y \in H</m>, there is a unique group homomorphism <me>f: G \to H</me> such that <m>f(x) = y</m>. In both cases this unique group homomorphism is given by <m>f(x^i)=y^i</m> for any <m>i</m>.
+          </p>
+        </statement>
+      </proposition>
+
+      <remark>
+        This is a particular case of the universal mapping property of a presentation (which we will covered later), since a cyclic group is either presented by <m>\langle x | x^n = e \rangle</m> or <m>\langle x \mid  -\rangle</m>.
+      </remark>
+
+      <theorem xml:id="thm-cyclic-classification">
+        <title>Classification Theorem for Cyclic Groups</title>
+        
+        <statement>
+          <p>
+            Every infinite cyclic group is isomorphic to <m>C_\infty</m>. Every cyclic group of order <m>n</m> is isomorphic to <m>C_n</m>.
+          </p>
+        </statement>
+      </theorem>
+      
+    </section>
+
+  </chapter>
