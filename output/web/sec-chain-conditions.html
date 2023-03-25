@@ -179,17 +179,275 @@ window.MathJax = {
 </li>
 </ol></div></button><span class="treebuttons"><a class="previous-button button" href="sec-fl-modules.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="part-representation.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="ch-semisimple-mod.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
 <input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
-</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\identity}{\mathrm{id}}
-\newcommand{\notdivide}{{\not{\mid}}}
-\newcommand{\notsubset}{\not\subset}
-\newcommand{\lcm}{\operatorname{lcm}}
-\newcommand{\gf}{\operatorname{GF}}
-\newcommand{\inn}{\operatorname{Inn}}
-\newcommand{\aut}{\operatorname{Aut}}
-\newcommand{\Hom}{\operatorname{Hom}}
-\newcommand{\cis}{\operatorname{cis}}
-\newcommand{\chr}{\operatorname{char}}
-\newcommand{\Null}{\operatorname{Null}}
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\def\ann{\operatorname{ann}}
+\newcommand{\Ass}{\operatorname{Ass}}
+\def\Aut{\operatorname{Aut}}
+\def\can{{\mathrm {can}}}
+\def\char{\operatorname{char}}
+\def\cp{\operatorname{CharPoly}}
+\def\codim{\operatorname{codim}} 
+\def\coker{\operatorname{coker}}
+\DeclareMathOperator*{\colim}{colim} 
+\def\cont{\operatorname{cont}} 
+\def\diam{\operatorname{diam}} 
+\def\dm{\operatorname{dim}} 
+\DeclareMathOperator{\edim}{embdim} 
+\def\End{\operatorname{End}} 
+\def\eval{\operatorname{eval}} 
+\def\Ext{\operatorname{Ext}} 
+\def\Frac{\operatorname{Frac}}
+\def\Fun{\operatorname{Fun}}
+\def\Gal{\operatorname{Gal}}
+\def\gcd{\operatorname{gcd}}
+\newcommand{\GL}{\operatorname{GL}} 
+\newcommand{\ht}{\operatorname{height}} 
+\def\Hom{\operatorname{Hom}} 
+\def\im{\operatorname{id}} 
+\def\im{\operatorname{im}} 
+\def\Inn{\operatorname{Inn}}
+\def\ker{\operatorname{ker}}
+\def\lcm{\operatorname{lcm}} 
+\def\Mat{\operatorname{Mat}}
+\newcommand{\Min}{\operatorname{Min}}
+\def\mp{\operatorname{MinPoly}}
+\def\mSpec{\operatorname{mSpec}}
+\def\MSpec{\operatorname{MSpec}}
+\def\null{\operatorname{Nul}}
+\DeclareMathOperator{\ns}{nullspace}
+\newcommand{\opp}{\operatorname{opp}}
+\def\Orb{\operatorname{Orb}} 
+\def\Out{\operatorname{Out}}
+\def\Perm{\operatorname{Perm}}
+\def\ptstab{\operatorname{PtStab}} 
+\def\rad{\operatorname{rad}}
+\DeclareMathOperator{\range}{range}
+\def\rank{\operatorname{rank}}
+\def\res{\operatorname{res}}
+\def\setstab{\operatorname{SetStab}}
+\def\sign{{\operatorname{sign}}}
+\newcommand{\SL}{\operatorname{SL}}
+\def\Span{\operatorname{Span}}
+\def\Spec{\operatorname{Spec}}
+\def\Stab{\operatorname{Stab}} 
+\DeclareMathOperator{\Supp}{Supp}
+\def\Syl{\operatorname{Syl}}
+\def\Tor{\operatorname{Tor}}
+\def\trace{\operatorname{trace}}
+\def\uSpec{\operatorname{\underline{Spec}}}
+
+\newcommand{\Ob}{\mathrm{Ob}}
+\newcommand{\Set}{\mathbf{Set}}
+\newcommand{\Grp}{\mathbf{Grp}}
+\newcommand{\Ab}{\mathbf{Ab}}
+\newcommand{\Sgrp}{\mathbf{Sgrp}}
+\newcommand{\Ring}{\mathbf{Ring}} 
+\newcommand{\Fld}{\mathbf{Fld}}
+\newcommand{\cRing}{\mathbf{cRing}}
+\newcommand{\Mod}[1]{#1-\mathbf{Mod}} 
+\newcommand{\Cx}[1]{#1-\mathbf{Comp}} 
+\newcommand{\vs}[1]{#1-\mathbf{vect}}
+\newcommand{\Vs}[1]{#1-\mathbf{Vect}}
+\newcommand{\vsp}[1]{#1-\mathbf{vect}^+} 
+\newcommand{\Top}{\mathbf{Top}} 
+\newcommand{\Setp}{\mathbf{Set}_*} 
+\newcommand{\Alg}[1]{#1-\mathbf{Alg}} 
+\newcommand{\cAlg}[1]{#1-\mathbf{cAlg}} 
+\newcommand{\PO}{\mathbf{PO}}
+\newcommand{\Cont}{\mathrm{Cont}}
+\newcommand{\MaT}[1]{\mathbf{Mat}_{#1}}
+\newcommand{\Rep}[2]{\mathbf{Rep}_{#1}(#2)}
+
+\def\l{\lambda}
+\def\lx{\lambda_x}
+\def\a{\alpha}
+\def\b{\beta}
+\def\d{\delta}
+\def\e{\varepsilon}
+\def\g{\gamma}
+\def\t{\theta}
+\def\s{\sigma}
+\def\z{\zeta}
+\def\vp{\varphi}
+
+
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\B}{\mathbb{B}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\G}{\mathbb{G}}
+\newcommand{\H}{\mathbb{H}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\J}{\mathbb{J}}
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\L}{\mathbb{L}} 
+\newcommand{\M}{\mathbb{M}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\O}{\mathbb{O}}
+\newcommand{\P}{\mathbb{P}}
+\newcommand{\Q}{\mathbb{Q}} 
+\newcommand{\R}{\mathbb{R}} 
+\newcommand{\S}{\mathbb{S}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\U}{\mathbb{U}}
+\newcommand{\V}{\mathbb{V}}
+\newcommand{\W}{\mathbb{W}}
+\newcommand{\X}{\mathbb{X}}
+\newcommand{\Y}{\mathbb{Y}}
+\newcommand{\Z}{\mathbb{Z}} 
+\newcommand{\ON}{\mathbb{ON}}
+
+\def\cA{\mathcal A} 
+\def\cB{\mathcal B} 
+\def\cC{\mathcal C} 
+\def\cD{\mathcal D} 
+\def\cE{\mathcal E} 
+\def\cF{\mathcal F} 
+\def\cG{\mathcal G} 
+\def\cH{\mathcal H} 
+\def\cI{\mathcal I} 
+\def\cJ{\mathcal J} 
+\def\cK{\mathcal K} 
+\def\cL{\mathcal L}
+\def\cM{\mathcal M} 
+\def\cN{\mathcal N} 
+\def\cO{\mathcal O} 
+\def\cP{\mathcal P} 
+\def\cQ{\mathcal Q} 
+\def\cR{\mathcal R} 
+\def\cS{\mathcal S} 
+\def\cT{\mathcal T} 
+\def\cU{\mathcal U} 
+\def\cV{\mathcal V} 
+\def\cW{\mathcal W} 
+\def\cX{\mathcal X} 
+\def\cY{\mathcal Y} 
+\def\cZ{\mathcal Z} 
+
+\newcommand{\fa}{{\mathfrak a}} 
+\newcommand{\fb}{{\mathfrak b}} 
+\newcommand{\fc}{{\mathfrak c}} 
+\newcommand{\fd}{{\mathfrak d}} 
+\newcommand{\fe}{{\mathfrak e}}
+\newcommand{\fm}{{\mathfrak m}} 
+\newcommand{\fp}{{\mathfrak p}} 
+\newcommand{\fq}{{\mathfrak q}} 
+\newcommand{\fK}{{\mathfrak K}} 
+\newcommand{\fR}{{\mathfrak R}} 
+
+\def\sA{\mathscr A} 
+\def\sB{\mathscr B} 
+\def\sC{\mathscr C} 
+\def\sD{\mathscr D} 
+\def\sE{\mathscr E} 
+\def\sF{\mathscr F} 
+\def\sG{\mathscr G} 
+\def\sH{\mathscr H} 
+\def\sI{\mathscr I} 
+\def\sJ{\mathscr J} 
+\def\sK{\mathscr K} 
+\def\sL{\mathscr L}
+\def\sM{\mathscr M}
+\def\sN{\mathscr N}
+\def\sO{\mathscr O}
+\def\sP{\mathscr P}
+\def\sQ{\mathscr Q}
+\def\sR{\mathscr R}
+\def\sS{\mathscr S}
+\def\sT{\mathscr T}
+\def\sZ{\mathscr Z}
+
+\def\tS{\tilde{S}}
+
+
+\def\sdp{\rtimes}
+\newcommand{\tensor}{\otimes} 
+\newcommand{\igen}[1]{\langle #1 \rangle} 
+\def\nsg{\unlhd} 
+\def\kval{{k-\mathrm{valued}}} 
+\def\kalg{{k-\mathrm{alg}}}
+\newcommand\GG[2]{\Gal(#1/#2)}
+
+\newcommand{\MF}[3]{\Mat_{#1\times #2}(#3)}
+\newcommand{\vectwo}[2]{\begin{bmatrix} #1 \\ #2 \end{bmatrix}} 
+\newcommand{\vecthree}[3]{\begin{bmatrix} #1 \\ #2 \\ #3\end{bmatrix}} 
+\def\ob{{\mathfrak{ob}} }
+
+
+\def\qed{\square}
+\def\sse{\subseteq}
+\def\ss{\subset} 
+\def\ssne{\subsetneq}
+\def\sm{\setminus}
+\def\inv{^{-1}} 
+\newcommand{\es}{\emptyset} 
+\newcommand{\Zm}[1]{\Z/({#1})} 
+\def\ov#1{\overline{#1}} 
+\def\xdots{x_1, \dots, x_n} 
+\def\adots{a_1, \dots, a_n} 
+\def\bdots{b_1, \dots, b_n} 
+\def\udots{u_1, \dots, u_n} 
+\newcommand{\leg}[2]{\left(\frac{{#1}}{{#2}}\right)} 
+\def\th{^{th}} 
+\def\htpy{\simeq_{\mathrm{htpc}}} 
+
+\def\textand{ \, \text{and} \, } 
+\def\textor{ \, \text{or} \, } 
+\def\textfor{ \, \text{for} \, } 
+\def\textfa{ \, \text{for all} \, } 
+\def\textst{ \, \text{such that} \, } 
+\def\textin{ \, \text{in} \, } 
+\def\fg{ \, \text{finitely generated} \, }
+\newcommand{\op}{\mathrm{op}}
+
+\newcommand{\xra}[1]{\xrightarrow{#1}} 
+\newcommand{\xora}[1]{\xtwoheadrightarrow{#1}} 
+\newcommand{\xira}[1]{\xhookrightarrow{#1}} 
+\newcommand{\xla}[1]{\xleftarrow{#1}} 
+\def\lra{\longrightarrow}
+\def\into{\hookrightarrow}
+\def\onto{\twoheadrightarrow}
+
+\newcommand{\vv}[1]{\mathbf{#1}}
+\newcommand{\lm}[2]{{#1}\,\l + {#2}\,\mu} 
+\renewcommand{\v}{\vv{v}}
+\renewcommand{\u}{\vv{u}}
+\newcommand{\w}{\vv{w}}
+\newcommand{\x}{\vv{x}}
+\renewcommand{\k}{\vv{k}}
+\newcommand{\0}{\vv{0}}
+\newcommand{\1}{\vv{1}}
+\newcommand{\vecs}[2]{#1_1,#1_2,\dots,#1_{#2}}
+\newcommand{\us}[1][n]{\vecs{\u}{#1}}
+\newcommand{\vs}[1][n]{\vecs{\v}{#1}}
+\newcommand{\ws}[1][n]{\vecs{\w}{#1}}
+\newcommand{\vps}[1][n']{\vecs{\v'}{#1}}
+\newcommand{\ls}[1][n]{\vecs{\l}{#1}}
+\newcommand{\mus}[1][n]{\vecs{\mu}{#1}} 
+\newcommand{\lps}[1][n]{\vecs{\l'}{#1}}
+\def\td{\tilde{\delta}}
+\def\oo{\overline{\omega}}
+\def\ctJ{\tilde{\mathcal J}}
+\def\tPhi{\tilde{\Phi}}
+\def\te{\tilde{e}}
+\def\M{\operatorname{M}}
+\newcommand{\homotopic}{\simeq}
+\newcommand{\homeq}{\cong}
+\newcommand{\iso}{\approx}
+\newcommand{\dual}{\vee} 
+\DeclarePairedDelimiter{\abs}{|}{|}
+\newcommand{\bv}{{\bar{v}}}
+\newcommand{\bu}{{\bar{u}}}
+\newcommand{\bw}{{\bar{w}}}
+\newcommand{\by}{{\bar{y}}}
+\newcommand{\ba}{{\bar{a}}}
+\newcommand{\bb}{{\bar{b}}}
+\newcommand{\bx}{{\bar{x}}}
+\DeclarePairedDelimiterX\setof[2]{\{}{\}}{#1\,|\,#2}
+\newcommand{\vx}{\underline{x}}
+\renewcommand{mod}[1]{\text{(mod }{#1})}
+\newcommand{\Slv}[3]{\sum_{{#2}=1}^{{#3}} {#1}_{{#2}} \v_{{#2}}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -239,12 +497,16 @@ window.MathJax = {
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="quotient-groups.html" class="internal"><span class="codenumber">3</span> <span class="title">Quotient Groups</span></a></div>
+<div class="toc-item"><a href="normal-quotient-groups.html" class="internal"><span class="codenumber">3</span> <span class="title">Normal and Quotient Groups</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-cosets.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Cosets and Equivalence Relations</span></a></div></li>
 <li><div class="toc-item"><a href="sec-normal-subgroups.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Normal Subgroups</span></a></div></li>
-<li><div class="toc-item"><a href="sec-isomorphism-thms.html" class="internal"><span class="codenumber">3.3</span> <span class="title">The Isomorphism Theorems</span></a></div></li>
-<li><div class="toc-item"><a href="sec-grp-presentations.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Presentations as Quotient Groups</span></a></div></li>
+<li><div class="toc-item"><a href="sec-quotient-groups.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Quotient Groups</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-isomorphism-thms.html" class="internal"><span class="codenumber">3.4</span> <span class="title">The Isomorphism Theorems</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-isomorphism-thms.html#exercises-gp-isos" class="internal"><span class="codenumber">3.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="sec-grp-presentations.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Presentations as Quotient Groups</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -252,7 +514,7 @@ window.MathJax = {
 <ul class="structural">
 <li><div class="toc-item"><a href="graction.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Group Actions</span></a></div></li>
 <li><div class="toc-item"><a href="sec-lois.html" class="internal"><span class="codenumber">4.2</span> <span class="title">LOIS and Orbit-Stabilizer</span></a></div></li>
-<li><div class="toc-item"><a href="sec-self-conjugation.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Self Conjugation</span></a></div></li>
+<li><div class="toc-item"><a href="sec-conjugation.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Conjugation</span></a></div></li>
 <li><div class="toc-item"><a href="sec-class-eq.html" class="internal"><span class="codenumber">4.4</span> <span class="title">The Class Equation</span></a></div></li>
 </ul>
 </li>
@@ -261,7 +523,10 @@ window.MathJax = {
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-pgroups.html" class="internal"><span class="codenumber">5.1</span> <span class="title"><span class="process-math">\(p\)</span>-groups</span></a></div></li>
 <li><div class="toc-item"><a href="sec-sylowthm.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Sylow's Theorem</span></a></div></li>
-<li><div class="toc-item"><a href="sec-simple-groups.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Simple Groups</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-simple-groups.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Simple Groups</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-simple-groups.html#exercises-simplegps" class="internal"><span class="codenumber">5.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
 </ul>
 </li>
 <li>
@@ -275,7 +540,10 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="ch-classifications.html" class="internal"><span class="codenumber">7</span> <span class="title">Classifications</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-ftfgag.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Group Decompositions</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-ftfgag.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Group Decompositions</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-ftfgag.html#exercises-decomp" class="internal"><span class="codenumber">7.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
 <li><div class="toc-item"><a href="sec-classifications.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Groups Up to Isomorphism</span></a></div></li>
 </ul>
 </li>
@@ -463,34 +731,34 @@ window.MathJax = {
 <article class="definition definition-like" id="def-acc"><h2 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">26.1</span><span class="period">.</span>
 </h2>
-<div class="para" id="p-353">We say a poset <span class="process-math">\((P,\leq)\)</span> satisfies the <em class="emphasis">ascending chain condition</em> or <em class="emphasis">ACC</em> if every totally ordered nonempty subset of <span class="process-math">\(P\)</span> has a maximum element.</div></article><article class="definition definition-like" id="def-dcc"><h2 class="heading">
+<div class="para" id="p-543">We say a poset <span class="process-math">\((P,\leq)\)</span> satisfies the <em class="emphasis">ascending chain condition</em> or <em class="emphasis">ACC</em> if every totally ordered nonempty subset of <span class="process-math">\(P\)</span> has a maximum element.</div></article><article class="definition definition-like" id="def-dcc"><h2 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">26.2</span><span class="period">.</span>
 </h2>
-<div class="para" id="p-354">We say a poset <span class="process-math">\((P,\leq)\)</span> satisfies the <em class="emphasis">descending chain condition</em> or <em class="emphasis">DCC</em> if every totally ordered nonempty subset of <span class="process-math">\(P\)</span> has a minimum element.</div></article><article class="remark remark-like" id="remark-20"><h2 class="heading">
+<div class="para" id="p-544">We say a poset <span class="process-math">\((P,\leq)\)</span> satisfies the <em class="emphasis">descending chain condition</em> or <em class="emphasis">DCC</em> if every totally ordered nonempty subset of <span class="process-math">\(P\)</span> has a minimum element.</div></article><article class="remark remark-like" id="remark-20"><h2 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">26.3</span><span class="period">.</span>
 </h2>
-<div class="para" id="p-355">For a poset <span class="process-math">\((P,\leq)\text{,}\)</span> the following are equivalent:</div> <div class="para logical" id="p-356"><ol class="decimal">
-<li id="li-128"><div class="para" id="p-357">Every totally ordered nonempty subset has a maximum element (i.e., <span class="process-math">\(P\)</span> has ACC)</div></li>
-<li id="li-129"><div class="para" id="p-358">Every totally ordered subset indexed by <span class="process-math">\(\mathbb{N}\text{,}\)</span> <span class="process-math">\(p_1 \leq p_2 \leq p_3 \leq \cdots\)</span> has a maximum element (i.e., <span class="process-math">\(\exists k: p_k=p_{k+1} = \cdots\)</span>)</div></li>
-<li id="li-130"><div class="para" id="p-359">Every nonempty subset of <span class="process-math">\(P\)</span> has a maximum element.</div></li>
-</ol></div> <div class="para" id="p-360">Indeed, (3) <span class="process-math">\(\Rightarrow\)</span> (1) <span class="process-math">\(\Rightarrow\)</span> (2) is clear. Given a totally ordered nonempty subset with no maximum, one can inductively keep choosing larger elements and obtain a countable such subset, so (2) <span class="process-math">\(\Rightarrow\)</span> (1). If any totally ordered nonempty subset of <span class="process-math">\(P\)</span> has a maximum element, then the same property holds for any nonempty subset <span class="process-math">\(Q\)</span> of <span class="process-math">\(P\text{,}\)</span> so by Zorn’s Lemma, such a <span class="process-math">\(Q\)</span> has a maximum element. The analogous equivalences hold with DCC.</div></article><div class="para" id="p-361">Note that the condition (3) asserts that any nonempty subset of <span class="process-math">\(P\)</span> has an element that is maximal <em class="emphasis">within the subset</em>, not maximal <em class="emphasis">within <span class="process-math">\(P\)</span></em>.</div>
+<div class="para" id="p-545">For a poset <span class="process-math">\((P,\leq)\text{,}\)</span> the following are equivalent:</div> <div class="para logical" id="p-546"><ol class="decimal">
+<li id="li-150"><div class="para" id="p-547">Every totally ordered nonempty subset has a maximum element (i.e., <span class="process-math">\(P\)</span> has ACC)</div></li>
+<li id="li-151"><div class="para" id="p-548">Every totally ordered subset indexed by <span class="process-math">\(\mathbb{N}\text{,}\)</span> <span class="process-math">\(p_1 \leq p_2 \leq p_3 \leq \cdots\)</span> has a maximum element (i.e., <span class="process-math">\(\exists k: p_k=p_{k+1} = \cdots\)</span>)</div></li>
+<li id="li-152"><div class="para" id="p-549">Every nonempty subset of <span class="process-math">\(P\)</span> has a maximum element.</div></li>
+</ol></div> <div class="para" id="p-550">Indeed, (3) <span class="process-math">\(\Rightarrow\)</span> (1) <span class="process-math">\(\Rightarrow\)</span> (2) is clear. Given a totally ordered nonempty subset with no maximum, one can inductively keep choosing larger elements and obtain a countable such subset, so (2) <span class="process-math">\(\Rightarrow\)</span> (1). If any totally ordered nonempty subset of <span class="process-math">\(P\)</span> has a maximum element, then the same property holds for any nonempty subset <span class="process-math">\(Q\)</span> of <span class="process-math">\(P\text{,}\)</span> so by Zorn’s Lemma, such a <span class="process-math">\(Q\)</span> has a maximum element. The analogous equivalences hold with DCC.</div></article><div class="para" id="p-551">Note that the condition (3) asserts that any nonempty subset of <span class="process-math">\(P\)</span> has an element that is maximal <em class="emphasis">within the subset</em>, not maximal <em class="emphasis">within <span class="process-math">\(P\)</span></em>.</div>
 <article class="definition definition-like" id="def-noeth-art-mod"><h2 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">26.4</span><span class="period">.</span>
 </h2>
-<div class="para logical" id="p-362">
+<div class="para logical" id="p-552">
 <div class="para">Let <span class="process-math">\(R\)</span> be a ring and <span class="process-math">\(M\)</span> be an <span class="process-math">\(R\)</span>-module.</div>
 <ol class="decimal">
-<li id="li-131"><div class="para" id="p-363">We say that <span class="process-math">\(M\)</span> is <em class="emphasis">Noetherian</em> if the poset of submodules of <span class="process-math">\(M\)</span> partially ordered by containment has ACC.</div></li>
-<li id="li-132"><div class="para" id="p-364">We say that <span class="process-math">\(M\)</span> is <em class="emphasis">Artinian</em> if the poset of submodules of <span class="process-math">\(M\)</span> partially ordered by containment has DCC.</div></li>
-<li id="li-133"><div class="para" id="p-365">We say that <span class="process-math">\(R\)</span> is <em class="emphasis">left Noetherian</em> if <span class="process-math">\(R\)</span> is Noetherian as a left <span class="process-math">\(R\)</span>-module; i.e., the poset of left ideals of <span class="process-math">\(R\)</span> under containment has ACC.</div></li>
-<li id="li-134"><div class="para" id="p-366">We say that <span class="process-math">\(R\)</span> is <em class="emphasis">left Artinian</em> if <span class="process-math">\(R\)</span> is Artinian as a left <span class="process-math">\(R\)</span>-module; i.e., the poset of left ideals of <span class="process-math">\(R\)</span> under containment has DCC.</div></li>
+<li id="li-153"><div class="para" id="p-553">We say that <span class="process-math">\(M\)</span> is <em class="emphasis">Noetherian</em> if the poset of submodules of <span class="process-math">\(M\)</span> partially ordered by containment has ACC.</div></li>
+<li id="li-154"><div class="para" id="p-554">We say that <span class="process-math">\(M\)</span> is <em class="emphasis">Artinian</em> if the poset of submodules of <span class="process-math">\(M\)</span> partially ordered by containment has DCC.</div></li>
+<li id="li-155"><div class="para" id="p-555">We say that <span class="process-math">\(R\)</span> is <em class="emphasis">left Noetherian</em> if <span class="process-math">\(R\)</span> is Noetherian as a left <span class="process-math">\(R\)</span>-module; i.e., the poset of left ideals of <span class="process-math">\(R\)</span> under containment has ACC.</div></li>
+<li id="li-156"><div class="para" id="p-556">We say that <span class="process-math">\(R\)</span> is <em class="emphasis">left Artinian</em> if <span class="process-math">\(R\)</span> is Artinian as a left <span class="process-math">\(R\)</span>-module; i.e., the poset of left ideals of <span class="process-math">\(R\)</span> under containment has DCC.</div></li>
 </ol>
-</div> <div class="para" id="p-367">If <span class="process-math">\(R\)</span> is commutative, left ideals and right ideals are the same, so we will just say <span class="process-math">\(R\)</span> is Noetherian or Artinian.</div></article><article class="example example-like" id="example-12"><h2 class="heading">
+</div> <div class="para" id="p-557">If <span class="process-math">\(R\)</span> is commutative, left ideals and right ideals are the same, so we will just say <span class="process-math">\(R\)</span> is Noetherian or Artinian.</div></article><article class="example example-like" id="example-12"><h2 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">26.5</span><span class="period">.</span>
 </h2>
-<div class="para logical" id="p-368"><ol class="decimal">
-<li id="li-135"><div class="para" id="p-369">A division ring <span class="process-math">\(D\)</span> is both left Noetherian and left Artinian.</div></li>
-<li id="li-136"><div class="para logical" id="p-370">
+<div class="para logical" id="p-558"><ol class="decimal">
+<li id="li-157"><div class="para" id="p-559">A division ring <span class="process-math">\(D\)</span> is both left Noetherian and left Artinian.</div></li>
+<li id="li-158"><div class="para logical" id="p-560">
 <div class="para">If <span class="process-math">\(R\)</span> is a PID but not a field (e.g., <span class="process-math">\(R=\mathbb{Z}\)</span> or <span class="process-math">\(R=K[x]\)</span>), then <span class="process-math">\(R\)</span> is Noetherian but not Artinian. To see <span class="process-math">\(R\)</span> is Noetherian, note that any ideal is of the form <span class="process-math">\(I=(p_1^{e_1} \cdots p_t^{e_t})\)</span> for some irreducible elements <span class="process-math">\(p_i\)</span> and positive integers <span class="process-math">\(e_i\text{.}\)</span> An ideal contains <span class="process-math">\(I\)</span> if it corresponds to a product of the same irreducibles with smaller or equal multiplicities; there are only finitely many of these so an ascending chain must stablilize. To see <span class="process-math">\(R\)</span> is not Artinian, take some irreducible <span class="process-math">\(p\)</span> and take the chain</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -498,7 +766,7 @@ window.MathJax = {
 \end{equation*}
 </div>
 </div></li>
-<li id="li-137"><div class="para logical" id="p-371">
+<li id="li-159"><div class="para logical" id="p-561">
 <div class="para">A polynomial ring in infinitely many variables is neither Noetherian nor Artinian: there is an ascending chain</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -507,8 +775,8 @@ window.MathJax = {
 </div>
 <div class="para">and take a descending chain as in the last example.</div>
 </div></li>
-<li id="li-138"><div class="para" id="p-372">The <span class="process-math">\(\mathbb{Z}\)</span>-module <span class="process-math">\(M=\displaystyle \frac{\mathbb{Z}[\frac12]}{\mathbb{Z}}\text{,}\)</span> where <span class="process-math">\(\mathbb{Z}[\frac12]\)</span> is the subring of <span class="process-math">\(\mathbb{Q}\)</span> generated by <span class="process-math">\(\mathbb{Z}\)</span> and <span class="process-math">\(\frac12\text{,}\)</span> is Artinian but not Noetherian. Suppose that <span class="process-math">\(N\subseteq M\)</span> is generated by <span class="process-math">\(\displaystyle \big\{ \big[\frac{a_\lambda}{2^{n_\lambda}}\big]\big\}\text{,}\)</span> where each <span class="process-math">\(a_\lambda\)</span> is odd (we can write any element in <span class="process-math">\(\mathbb{Z}[\frac12]\)</span> like so). Observe that for each <span class="process-math">\(\lambda\text{,}\)</span> there are integers <span class="process-math">\(s,t\)</span> such that <span class="process-math">\(\displaystyle s a_\lambda + t 2^{n_\lambda} = 1\text{,}\)</span> so <span class="process-math">\(\displaystyle s \big[\frac{a_\lambda}{2^{n_\lambda}}\big] = \big[\frac{1}{2^{n_\lambda}}\big]\text{.}\)</span> Thus, <span class="process-math">\(N\)</span> is generated by <span class="process-math">\(\displaystyle \big\{ \big[\frac{1}{2^{n_\lambda}}\big]\big\}\text{.}\)</span> Thus, the submodules of <span class="process-math">\(M\)</span> are <span class="process-math">\(M\)</span> itself, <span class="process-math">\(0\text{,}\)</span> and <span class="process-math">\(M_i = \displaystyle \frac{\mathbb{Z}\cdot \frac{1}{2^n}}{\mathbb{Z}}\)</span> for <span class="process-math">\(i&gt;0\text{.}\)</span> We have <span class="process-math">\(0 \subsetneqq M_1 \subsetneqq M_2 \subsetneqq \cdots\)</span> so <span class="process-math">\(M\)</span> is not Noetherian. However, any descending chain is either always equal to <span class="process-math">\(M\text{,}\)</span> or else has some <span class="process-math">\(M_i\)</span> as a term, and there are finitely many submodules of such an <span class="process-math">\(M_i\text{,}\)</span> so must stabilize.</div></li>
-<li id="li-139"><div class="para logical" id="p-373">
+<li id="li-160"><div class="para" id="p-562">The <span class="process-math">\(\mathbb{Z}\)</span>-module <span class="process-math">\(M=\displaystyle \frac{\mathbb{Z}[\frac12]}{\mathbb{Z}}\text{,}\)</span> where <span class="process-math">\(\mathbb{Z}[\frac12]\)</span> is the subring of <span class="process-math">\(\mathbb{Q}\)</span> generated by <span class="process-math">\(\mathbb{Z}\)</span> and <span class="process-math">\(\frac12\text{,}\)</span> is Artinian but not Noetherian. Suppose that <span class="process-math">\(N\subseteq M\)</span> is generated by <span class="process-math">\(\displaystyle \big\{ \big[\frac{a_\lambda}{2^{n_\lambda}}\big]\big\}\text{,}\)</span> where each <span class="process-math">\(a_\lambda\)</span> is odd (we can write any element in <span class="process-math">\(\mathbb{Z}[\frac12]\)</span> like so). Observe that for each <span class="process-math">\(\lambda\text{,}\)</span> there are integers <span class="process-math">\(s,t\)</span> such that <span class="process-math">\(\displaystyle s a_\lambda + t 2^{n_\lambda} = 1\text{,}\)</span> so <span class="process-math">\(\displaystyle s \big[\frac{a_\lambda}{2^{n_\lambda}}\big] = \big[\frac{1}{2^{n_\lambda}}\big]\text{.}\)</span> Thus, <span class="process-math">\(N\)</span> is generated by <span class="process-math">\(\displaystyle \big\{ \big[\frac{1}{2^{n_\lambda}}\big]\big\}\text{.}\)</span> Thus, the submodules of <span class="process-math">\(M\)</span> are <span class="process-math">\(M\)</span> itself, <span class="process-math">\(0\text{,}\)</span> and <span class="process-math">\(M_i = \displaystyle \frac{\mathbb{Z}\cdot \frac{1}{2^n}}{\mathbb{Z}}\)</span> for <span class="process-math">\(i&gt;0\text{.}\)</span> We have <span class="process-math">\(0 \subsetneqq M_1 \subsetneqq M_2 \subsetneqq \cdots\)</span> so <span class="process-math">\(M\)</span> is not Noetherian. However, any descending chain is either always equal to <span class="process-math">\(M\text{,}\)</span> or else has some <span class="process-math">\(M_i\)</span> as a term, and there are finitely many submodules of such an <span class="process-math">\(M_i\text{,}\)</span> so must stabilize.</div></li>
+<li id="li-161"><div class="para logical" id="p-563">
 <div class="para">The subring of <span class="process-math">\(M_2(\mathbb{Q})\)</span> given as</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -517,15 +785,15 @@ window.MathJax = {
 </div>
 <div class="para">is left Noetherian but not right Noetherian.</div>
 </div></li>
-</ol></div></article><article class="problem example-like" id="problem-69"><h2 class="heading">
+</ol></div></article><article class="problem example-like" id="problem-99"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">26.6</span><span class="period">.</span>
 </h2>
-<div class="para" id="p-374">Let <span class="process-math">\(0 \to M' \to M \to M''\to0\)</span> be a short exact sequence. Then <span class="process-math">\(M\)</span> has ACC (resp DCC) if and only if <span class="process-math">\(M'\)</span> and <span class="process-math">\(M''\)</span> have ACC (resp. DCC).</div></article><div class="para" id="p-375">The Noetherian condition is intimately tied to finite generation.</div>
+<div class="para" id="p-564">Let <span class="process-math">\(0 \to M' \to M \to M''\to0\)</span> be a short exact sequence. Then <span class="process-math">\(M\)</span> has ACC (resp DCC) if and only if <span class="process-math">\(M'\)</span> and <span class="process-math">\(M''\)</span> have ACC (resp. DCC).</div></article><div class="para" id="p-565">The Noetherian condition is intimately tied to finite generation.</div>
 <article class="proposition theorem-like" id="prop-noeth-fg-mod"><h2 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">26.7</span><span class="period">.</span>
 </h2>
-<div class="para" id="p-376">Let <span class="process-math">\(M\)</span> be an <span class="process-math">\(R\)</span>-module. Then <span class="process-math">\(M\)</span> has ACC if and only if every submodule of <span class="process-math">\(M\)</span> is finitely generated.</div></article><article class="hiddenproof" id="proof-14"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-14"><h2 class="heading"><span class="type">Proof<span class="period">.</span></span></h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-14"><article class="hiddenproof"><div class="para" id="p-377">Suppose that <span class="process-math">\(N\subseteq M\)</span> is not finitely generated. Then we can construct an ascending chain of submodules of <span class="process-math">\(M\)</span> given by setting <span class="process-math">\(N_0=0\text{,}\)</span> and <span class="process-math">\(N_{i+i} = N_i + n_{i+1}\)</span> for some <span class="process-math">\(n_{i+1}\in N\smallsetminus N_i\text{;}\)</span> we can do this since each <span class="process-math">\(N_i\)</span> is a finitely generated submodule of <span class="process-math">\(N\text{,}\)</span> so is not equal to <span class="process-math">\(N\text{.}\)</span>
-</div> <div class="para logical" id="p-378">
+<div class="para" id="p-566">Let <span class="process-math">\(M\)</span> be an <span class="process-math">\(R\)</span>-module. Then <span class="process-math">\(M\)</span> has ACC if and only if every submodule of <span class="process-math">\(M\)</span> is finitely generated.</div></article><article class="hiddenproof" id="proof-53"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-53"><h2 class="heading"><span class="type">Proof<span class="period">.</span></span></h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-53"><article class="hiddenproof"><div class="para" id="p-567">Suppose that <span class="process-math">\(N\subseteq M\)</span> is not finitely generated. Then we can construct an ascending chain of submodules of <span class="process-math">\(M\)</span> given by setting <span class="process-math">\(N_0=0\text{,}\)</span> and <span class="process-math">\(N_{i+i} = N_i + n_{i+1}\)</span> for some <span class="process-math">\(n_{i+1}\in N\smallsetminus N_i\text{;}\)</span> we can do this since each <span class="process-math">\(N_i\)</span> is a finitely generated submodule of <span class="process-math">\(N\text{,}\)</span> so is not equal to <span class="process-math">\(N\text{.}\)</span>
+</div> <div class="para logical" id="p-568">
 <div class="para">Now suppose that every submodule of <span class="process-math">\(M\)</span> is finitely generated. Given a countable ascending chain of submodules</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -537,7 +805,7 @@ M_1 \subseteq M_2 \subseteq M_3 \subseteq M_4 \subseteq \cdots
 <article class="proposition theorem-like" id="prop-lnoeth-fg-mod"><h2 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">26.8</span><span class="period">.</span>
 </h2>
-<div class="para" id="p-379">Let <span class="process-math">\(R\)</span> be left Noetherian. Then a module is finitely generated if and only if it is left Noetherian. In particular, in a left Noetherian ring, every submodule of a finitely generated module is finitely generated.</div></article><article class="hiddenproof" id="proof-15"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-15"><h2 class="heading"><span class="type">Proof<span class="period">.</span></span></h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-15"><article class="hiddenproof"><div class="para logical" id="p-380">
+<div class="para" id="p-569">Let <span class="process-math">\(R\)</span> be left Noetherian. Then a module is finitely generated if and only if it is left Noetherian. In particular, in a left Noetherian ring, every submodule of a finitely generated module is finitely generated.</div></article><article class="hiddenproof" id="proof-54"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-54"><h2 class="heading"><span class="type">Proof<span class="period">.</span></span></h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-54"><article class="hiddenproof"><div class="para logical" id="p-570">
 <div class="para">For the first statement, the “if” implication holds in general without the hypothesis on <span class="process-math">\(R\text{.}\)</span> For the other implication, observe that there are short exact sequences</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -551,12 +819,12 @@ M_1 \subseteq M_2 \subseteq M_3 \subseteq M_4 \subseteq \cdots
 \end{equation*}
 </div>
 <div class="para">so by the exercise above again, <span class="process-math">\(M\)</span> is Noetherian.</div>
-</div> <div class="para" id="p-381">The second statement follows from the first as a submodule of a Noetherian module is Noetherian, again by the exercise</div></article></div>
-<div class="para" id="p-382">Now we tie these chain conditions to length.</div>
+</div> <div class="para" id="p-571">The second statement follows from the first as a submodule of a Noetherian module is Noetherian, again by the exercise</div></article></div>
+<div class="para" id="p-572">Now we tie these chain conditions to length.</div>
 <article class="proposition theorem-like" id="prop-fl-mod-iff"><h2 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">26.9</span><span class="period">.</span>
 </h2>
-<div class="para" id="p-383">A module <span class="process-math">\(M\)</span> has finite length if and only if it is both Noetherian and Artinian.</div></article><article class="hiddenproof" id="proof-16"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-16"><h2 class="heading"><span class="type">Proof<span class="period">.</span></span></h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-16"><article class="hiddenproof"><div class="para logical" id="p-384">
+<div class="para" id="p-573">A module <span class="process-math">\(M\)</span> has finite length if and only if it is both Noetherian and Artinian.</div></article><article class="hiddenproof" id="proof-55"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-55"><h2 class="heading"><span class="type">Proof<span class="period">.</span></span></h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-55"><article class="hiddenproof"><div class="para logical" id="p-574">
 <div class="para">Assume that <span class="process-math">\(M\)</span> has finite length. Suppose that <span class="process-math">\(M\)</span> is not Noetherian. Then there is a chain</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -564,7 +832,7 @@ M_0 \subsetneqq M_1 \subsetneqq M_2 \subsetneqq  \cdots
 \end{equation*}
 </div>
 <div class="para">Since each <span class="process-math">\(M_i\)</span> is a submodule of <span class="process-math">\(M\text{,}\)</span> its length is finite, and is a nonnegative integer. Then <span class="process-math">\(\ell(M_0) &lt; \ell(M_1) &lt; \ell(M_2) &lt; \cdots \leq \ell(M)\text{,}\)</span> which yields a contradiction. The argument that <span class="process-math">\(M\)</span> is Artinian is similar.</div>
-</div> <div class="para" id="p-385">Now assume that <span class="process-math">\(M\)</span> is both Noetherian and Artinian. We will construct a composition series for <span class="process-math">\(M\text{.}\)</span> We can assume that <span class="process-math">\(M\neq 0\text{.}\)</span> Consider the collection of proper submodules of <span class="process-math">\(M\text{.}\)</span> This is nonempty, so has a maximal element <span class="process-math">\(M^1\)</span> by the Noetherian hypothesis. We must have <span class="process-math">\(M/M^1\)</span> is simple, or else there is a module in between <span class="process-math">\(M^1\)</span> and <span class="process-math">\(M\text{.}\)</span> Using Noetherianity again, if <span class="process-math">\(M^1\neq 0\)</span> (we’re done otherwise), there is a maximal proper submodule of <span class="process-math">\(M^1\text{;}\)</span> call it <span class="process-math">\(M^2\text{.}\)</span> This process yields a descending chain with simple quotients, and this must stop (i.e., yield <span class="process-math">\(M^i=0\)</span> for some <span class="process-math">\(i\)</span>) by the Artinian hypothesis. Thus, there is a composition series for <span class="process-math">\(M\text{.}\)</span>
+</div> <div class="para" id="p-575">Now assume that <span class="process-math">\(M\)</span> is both Noetherian and Artinian. We will construct a composition series for <span class="process-math">\(M\text{.}\)</span> We can assume that <span class="process-math">\(M\neq 0\text{.}\)</span> Consider the collection of proper submodules of <span class="process-math">\(M\text{.}\)</span> This is nonempty, so has a maximal element <span class="process-math">\(M^1\)</span> by the Noetherian hypothesis. We must have <span class="process-math">\(M/M^1\)</span> is simple, or else there is a module in between <span class="process-math">\(M^1\)</span> and <span class="process-math">\(M\text{.}\)</span> Using Noetherianity again, if <span class="process-math">\(M^1\neq 0\)</span> (we’re done otherwise), there is a maximal proper submodule of <span class="process-math">\(M^1\text{;}\)</span> call it <span class="process-math">\(M^2\text{.}\)</span> This process yields a descending chain with simple quotients, and this must stop (i.e., yield <span class="process-math">\(M^i=0\)</span> for some <span class="process-math">\(i\)</span>) by the Artinian hypothesis. Thus, there is a composition series for <span class="process-math">\(M\text{.}\)</span>
 </div></article></div></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-fl-modules.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="ch-semisimple-mod.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

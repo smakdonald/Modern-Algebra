@@ -179,17 +179,275 @@ window.MathJax = {
 </li>
 </ol></div></button><span class="treebuttons"><a class="previous-button button" href="sec-spplications.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-applications.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
 <input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
-</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\identity}{\mathrm{id}}
-\newcommand{\notdivide}{{\not{\mid}}}
-\newcommand{\notsubset}{\not\subset}
-\newcommand{\lcm}{\operatorname{lcm}}
-\newcommand{\gf}{\operatorname{GF}}
-\newcommand{\inn}{\operatorname{Inn}}
-\newcommand{\aut}{\operatorname{Aut}}
-\newcommand{\Hom}{\operatorname{Hom}}
-\newcommand{\cis}{\operatorname{cis}}
-\newcommand{\chr}{\operatorname{char}}
-\newcommand{\Null}{\operatorname{Null}}
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\def\ann{\operatorname{ann}}
+\newcommand{\Ass}{\operatorname{Ass}}
+\def\Aut{\operatorname{Aut}}
+\def\can{{\mathrm {can}}}
+\def\char{\operatorname{char}}
+\def\cp{\operatorname{CharPoly}}
+\def\codim{\operatorname{codim}} 
+\def\coker{\operatorname{coker}}
+\DeclareMathOperator*{\colim}{colim} 
+\def\cont{\operatorname{cont}} 
+\def\diam{\operatorname{diam}} 
+\def\dm{\operatorname{dim}} 
+\DeclareMathOperator{\edim}{embdim} 
+\def\End{\operatorname{End}} 
+\def\eval{\operatorname{eval}} 
+\def\Ext{\operatorname{Ext}} 
+\def\Frac{\operatorname{Frac}}
+\def\Fun{\operatorname{Fun}}
+\def\Gal{\operatorname{Gal}}
+\def\gcd{\operatorname{gcd}}
+\newcommand{\GL}{\operatorname{GL}} 
+\newcommand{\ht}{\operatorname{height}} 
+\def\Hom{\operatorname{Hom}} 
+\def\im{\operatorname{id}} 
+\def\im{\operatorname{im}} 
+\def\Inn{\operatorname{Inn}}
+\def\ker{\operatorname{ker}}
+\def\lcm{\operatorname{lcm}} 
+\def\Mat{\operatorname{Mat}}
+\newcommand{\Min}{\operatorname{Min}}
+\def\mp{\operatorname{MinPoly}}
+\def\mSpec{\operatorname{mSpec}}
+\def\MSpec{\operatorname{MSpec}}
+\def\null{\operatorname{Nul}}
+\DeclareMathOperator{\ns}{nullspace}
+\newcommand{\opp}{\operatorname{opp}}
+\def\Orb{\operatorname{Orb}} 
+\def\Out{\operatorname{Out}}
+\def\Perm{\operatorname{Perm}}
+\def\ptstab{\operatorname{PtStab}} 
+\def\rad{\operatorname{rad}}
+\DeclareMathOperator{\range}{range}
+\def\rank{\operatorname{rank}}
+\def\res{\operatorname{res}}
+\def\setstab{\operatorname{SetStab}}
+\def\sign{{\operatorname{sign}}}
+\newcommand{\SL}{\operatorname{SL}}
+\def\Span{\operatorname{Span}}
+\def\Spec{\operatorname{Spec}}
+\def\Stab{\operatorname{Stab}} 
+\DeclareMathOperator{\Supp}{Supp}
+\def\Syl{\operatorname{Syl}}
+\def\Tor{\operatorname{Tor}}
+\def\trace{\operatorname{trace}}
+\def\uSpec{\operatorname{\underline{Spec}}}
+
+\newcommand{\Ob}{\mathrm{Ob}}
+\newcommand{\Set}{\mathbf{Set}}
+\newcommand{\Grp}{\mathbf{Grp}}
+\newcommand{\Ab}{\mathbf{Ab}}
+\newcommand{\Sgrp}{\mathbf{Sgrp}}
+\newcommand{\Ring}{\mathbf{Ring}} 
+\newcommand{\Fld}{\mathbf{Fld}}
+\newcommand{\cRing}{\mathbf{cRing}}
+\newcommand{\Mod}[1]{#1-\mathbf{Mod}} 
+\newcommand{\Cx}[1]{#1-\mathbf{Comp}} 
+\newcommand{\vs}[1]{#1-\mathbf{vect}}
+\newcommand{\Vs}[1]{#1-\mathbf{Vect}}
+\newcommand{\vsp}[1]{#1-\mathbf{vect}^+} 
+\newcommand{\Top}{\mathbf{Top}} 
+\newcommand{\Setp}{\mathbf{Set}_*} 
+\newcommand{\Alg}[1]{#1-\mathbf{Alg}} 
+\newcommand{\cAlg}[1]{#1-\mathbf{cAlg}} 
+\newcommand{\PO}{\mathbf{PO}}
+\newcommand{\Cont}{\mathrm{Cont}}
+\newcommand{\MaT}[1]{\mathbf{Mat}_{#1}}
+\newcommand{\Rep}[2]{\mathbf{Rep}_{#1}(#2)}
+
+\def\l{\lambda}
+\def\lx{\lambda_x}
+\def\a{\alpha}
+\def\b{\beta}
+\def\d{\delta}
+\def\e{\varepsilon}
+\def\g{\gamma}
+\def\t{\theta}
+\def\s{\sigma}
+\def\z{\zeta}
+\def\vp{\varphi}
+
+
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\B}{\mathbb{B}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\G}{\mathbb{G}}
+\newcommand{\H}{\mathbb{H}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\J}{\mathbb{J}}
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\L}{\mathbb{L}} 
+\newcommand{\M}{\mathbb{M}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\O}{\mathbb{O}}
+\newcommand{\P}{\mathbb{P}}
+\newcommand{\Q}{\mathbb{Q}} 
+\newcommand{\R}{\mathbb{R}} 
+\newcommand{\S}{\mathbb{S}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\U}{\mathbb{U}}
+\newcommand{\V}{\mathbb{V}}
+\newcommand{\W}{\mathbb{W}}
+\newcommand{\X}{\mathbb{X}}
+\newcommand{\Y}{\mathbb{Y}}
+\newcommand{\Z}{\mathbb{Z}} 
+\newcommand{\ON}{\mathbb{ON}}
+
+\def\cA{\mathcal A} 
+\def\cB{\mathcal B} 
+\def\cC{\mathcal C} 
+\def\cD{\mathcal D} 
+\def\cE{\mathcal E} 
+\def\cF{\mathcal F} 
+\def\cG{\mathcal G} 
+\def\cH{\mathcal H} 
+\def\cI{\mathcal I} 
+\def\cJ{\mathcal J} 
+\def\cK{\mathcal K} 
+\def\cL{\mathcal L}
+\def\cM{\mathcal M} 
+\def\cN{\mathcal N} 
+\def\cO{\mathcal O} 
+\def\cP{\mathcal P} 
+\def\cQ{\mathcal Q} 
+\def\cR{\mathcal R} 
+\def\cS{\mathcal S} 
+\def\cT{\mathcal T} 
+\def\cU{\mathcal U} 
+\def\cV{\mathcal V} 
+\def\cW{\mathcal W} 
+\def\cX{\mathcal X} 
+\def\cY{\mathcal Y} 
+\def\cZ{\mathcal Z} 
+
+\newcommand{\fa}{{\mathfrak a}} 
+\newcommand{\fb}{{\mathfrak b}} 
+\newcommand{\fc}{{\mathfrak c}} 
+\newcommand{\fd}{{\mathfrak d}} 
+\newcommand{\fe}{{\mathfrak e}}
+\newcommand{\fm}{{\mathfrak m}} 
+\newcommand{\fp}{{\mathfrak p}} 
+\newcommand{\fq}{{\mathfrak q}} 
+\newcommand{\fK}{{\mathfrak K}} 
+\newcommand{\fR}{{\mathfrak R}} 
+
+\def\sA{\mathscr A} 
+\def\sB{\mathscr B} 
+\def\sC{\mathscr C} 
+\def\sD{\mathscr D} 
+\def\sE{\mathscr E} 
+\def\sF{\mathscr F} 
+\def\sG{\mathscr G} 
+\def\sH{\mathscr H} 
+\def\sI{\mathscr I} 
+\def\sJ{\mathscr J} 
+\def\sK{\mathscr K} 
+\def\sL{\mathscr L}
+\def\sM{\mathscr M}
+\def\sN{\mathscr N}
+\def\sO{\mathscr O}
+\def\sP{\mathscr P}
+\def\sQ{\mathscr Q}
+\def\sR{\mathscr R}
+\def\sS{\mathscr S}
+\def\sT{\mathscr T}
+\def\sZ{\mathscr Z}
+
+\def\tS{\tilde{S}}
+
+
+\def\sdp{\rtimes}
+\newcommand{\tensor}{\otimes} 
+\newcommand{\igen}[1]{\langle #1 \rangle} 
+\def\nsg{\unlhd} 
+\def\kval{{k-\mathrm{valued}}} 
+\def\kalg{{k-\mathrm{alg}}}
+\newcommand\GG[2]{\Gal(#1/#2)}
+
+\newcommand{\MF}[3]{\Mat_{#1\times #2}(#3)}
+\newcommand{\vectwo}[2]{\begin{bmatrix} #1 \\ #2 \end{bmatrix}} 
+\newcommand{\vecthree}[3]{\begin{bmatrix} #1 \\ #2 \\ #3\end{bmatrix}} 
+\def\ob{{\mathfrak{ob}} }
+
+
+\def\qed{\square}
+\def\sse{\subseteq}
+\def\ss{\subset} 
+\def\ssne{\subsetneq}
+\def\sm{\setminus}
+\def\inv{^{-1}} 
+\newcommand{\es}{\emptyset} 
+\newcommand{\Zm}[1]{\Z/({#1})} 
+\def\ov#1{\overline{#1}} 
+\def\xdots{x_1, \dots, x_n} 
+\def\adots{a_1, \dots, a_n} 
+\def\bdots{b_1, \dots, b_n} 
+\def\udots{u_1, \dots, u_n} 
+\newcommand{\leg}[2]{\left(\frac{{#1}}{{#2}}\right)} 
+\def\th{^{th}} 
+\def\htpy{\simeq_{\mathrm{htpc}}} 
+
+\def\textand{ \, \text{and} \, } 
+\def\textor{ \, \text{or} \, } 
+\def\textfor{ \, \text{for} \, } 
+\def\textfa{ \, \text{for all} \, } 
+\def\textst{ \, \text{such that} \, } 
+\def\textin{ \, \text{in} \, } 
+\def\fg{ \, \text{finitely generated} \, }
+\newcommand{\op}{\mathrm{op}}
+
+\newcommand{\xra}[1]{\xrightarrow{#1}} 
+\newcommand{\xora}[1]{\xtwoheadrightarrow{#1}} 
+\newcommand{\xira}[1]{\xhookrightarrow{#1}} 
+\newcommand{\xla}[1]{\xleftarrow{#1}} 
+\def\lra{\longrightarrow}
+\def\into{\hookrightarrow}
+\def\onto{\twoheadrightarrow}
+
+\newcommand{\vv}[1]{\mathbf{#1}}
+\newcommand{\lm}[2]{{#1}\,\l + {#2}\,\mu} 
+\renewcommand{\v}{\vv{v}}
+\renewcommand{\u}{\vv{u}}
+\newcommand{\w}{\vv{w}}
+\newcommand{\x}{\vv{x}}
+\renewcommand{\k}{\vv{k}}
+\newcommand{\0}{\vv{0}}
+\newcommand{\1}{\vv{1}}
+\newcommand{\vecs}[2]{#1_1,#1_2,\dots,#1_{#2}}
+\newcommand{\us}[1][n]{\vecs{\u}{#1}}
+\newcommand{\vs}[1][n]{\vecs{\v}{#1}}
+\newcommand{\ws}[1][n]{\vecs{\w}{#1}}
+\newcommand{\vps}[1][n']{\vecs{\v'}{#1}}
+\newcommand{\ls}[1][n]{\vecs{\l}{#1}}
+\newcommand{\mus}[1][n]{\vecs{\mu}{#1}} 
+\newcommand{\lps}[1][n]{\vecs{\l'}{#1}}
+\def\td{\tilde{\delta}}
+\def\oo{\overline{\omega}}
+\def\ctJ{\tilde{\mathcal J}}
+\def\tPhi{\tilde{\Phi}}
+\def\te{\tilde{e}}
+\def\M{\operatorname{M}}
+\newcommand{\homotopic}{\simeq}
+\newcommand{\homeq}{\cong}
+\newcommand{\iso}{\approx}
+\newcommand{\dual}{\vee} 
+\DeclarePairedDelimiter{\abs}{|}{|}
+\newcommand{\bv}{{\bar{v}}}
+\newcommand{\bu}{{\bar{u}}}
+\newcommand{\bw}{{\bar{w}}}
+\newcommand{\by}{{\bar{y}}}
+\newcommand{\ba}{{\bar{a}}}
+\newcommand{\bb}{{\bar{b}}}
+\newcommand{\bx}{{\bar{x}}}
+\DeclarePairedDelimiterX\setof[2]{\{}{\}}{#1\,|\,#2}
+\newcommand{\vx}{\underline{x}}
+\renewcommand{mod}[1]{\text{(mod }{#1})}
+\newcommand{\Slv}[3]{\sum_{{#2}=1}^{{#3}} {#1}_{{#2}} \v_{{#2}}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -239,12 +497,16 @@ window.MathJax = {
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="quotient-groups.html" class="internal"><span class="codenumber">3</span> <span class="title">Quotient Groups</span></a></div>
+<div class="toc-item"><a href="normal-quotient-groups.html" class="internal"><span class="codenumber">3</span> <span class="title">Normal and Quotient Groups</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-cosets.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Cosets and Equivalence Relations</span></a></div></li>
 <li><div class="toc-item"><a href="sec-normal-subgroups.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Normal Subgroups</span></a></div></li>
-<li><div class="toc-item"><a href="sec-isomorphism-thms.html" class="internal"><span class="codenumber">3.3</span> <span class="title">The Isomorphism Theorems</span></a></div></li>
-<li><div class="toc-item"><a href="sec-grp-presentations.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Presentations as Quotient Groups</span></a></div></li>
+<li><div class="toc-item"><a href="sec-quotient-groups.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Quotient Groups</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-isomorphism-thms.html" class="internal"><span class="codenumber">3.4</span> <span class="title">The Isomorphism Theorems</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-isomorphism-thms.html#exercises-gp-isos" class="internal"><span class="codenumber">3.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="sec-grp-presentations.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Presentations as Quotient Groups</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -252,7 +514,7 @@ window.MathJax = {
 <ul class="structural">
 <li><div class="toc-item"><a href="graction.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Group Actions</span></a></div></li>
 <li><div class="toc-item"><a href="sec-lois.html" class="internal"><span class="codenumber">4.2</span> <span class="title">LOIS and Orbit-Stabilizer</span></a></div></li>
-<li><div class="toc-item"><a href="sec-self-conjugation.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Self Conjugation</span></a></div></li>
+<li><div class="toc-item"><a href="sec-conjugation.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Conjugation</span></a></div></li>
 <li><div class="toc-item"><a href="sec-class-eq.html" class="internal"><span class="codenumber">4.4</span> <span class="title">The Class Equation</span></a></div></li>
 </ul>
 </li>
@@ -261,7 +523,10 @@ window.MathJax = {
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-pgroups.html" class="internal"><span class="codenumber">5.1</span> <span class="title"><span class="process-math">\(p\)</span>-groups</span></a></div></li>
 <li><div class="toc-item"><a href="sec-sylowthm.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Sylow's Theorem</span></a></div></li>
-<li><div class="toc-item"><a href="sec-simple-groups.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Simple Groups</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-simple-groups.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Simple Groups</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-simple-groups.html#exercises-simplegps" class="internal"><span class="codenumber">5.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
 </ul>
 </li>
 <li>
@@ -275,7 +540,10 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="ch-classifications.html" class="internal"><span class="codenumber">7</span> <span class="title">Classifications</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-ftfgag.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Group Decompositions</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-ftfgag.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Group Decompositions</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-ftfgag.html#exercises-decomp" class="internal"><span class="codenumber">7.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
 <li><div class="toc-item"><a href="sec-classifications.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Groups Up to Isomorphism</span></a></div></li>
 </ul>
 </li>
@@ -460,35 +728,35 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-rep-closed-fields"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">29.2</span> <span class="title">Algebraically Closed Fields</span>
 </h2>
-<div class="para" id="p-508">When working over an algebraically closed field, the Artin-Wedderburn Theorem takes a simpler form.</div>
+<div class="para" id="p-698">When working over an algebraically closed field, the Artin-Wedderburn Theorem takes a simpler form.</div>
 <article class="corollary theorem-like" id="cor-art-wedd-gring-alg-closed"><h3 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">29.6</span><span class="period">.</span><span class="space"> </span><span class="title">Artin-Wedderburn for Group Rings over Algebraically Closed Fields.</span>
 </h3>
-<div class="para logical" id="p-509">
+<div class="para logical" id="p-699">
 <div class="para">If <span class="process-math">\(G\)</span> is a finite group and <span class="process-math">\(K\)</span> is an algebraically closed field such that <span class="process-math">\(\mathrm{char}(K) \nmid |G|\text{,}\)</span> then there is an isomorphism of rings</div>
 <div class="displaymath process-math">
 \begin{equation*}
 k[G] \cong \operatorname{Mat}_{n_1}(K) \times \cdots \times \operatorname{Mat}_{n_m}(K).
 \end{equation*}
 </div>
-</div> <div class="para logical" id="p-510">
+</div> <div class="para logical" id="p-700">
 <div class="para">Moroever, we have:</div>
 <ol class="decimal">
-<li id="li-162"><div class="para" id="p-511">
+<li id="li-184"><div class="para" id="p-701">
 <span class="process-math">\(m\)</span> is the number of irreducible <span class="process-math">\(K\)</span>-linear representation of <span class="process-math">\(G\)</span> (up to isomorphism),</div></li>
-<li id="li-163"><div class="para" id="p-512">the <span class="process-math">\(D_i\)</span>'s are the opposite rings of the endomorphism rings of these representations,</div></li>
-<li id="li-164"><div class="para" id="p-513">the <span class="process-math">\(n_j\)</span>'s give the number of times each irreducible representation occurs in the decomposition of the regular representation of <span class="process-math">\(G\text{,}\)</span>
+<li id="li-185"><div class="para" id="p-702">the <span class="process-math">\(D_i\)</span>'s are the opposite rings of the endomorphism rings of these representations,</div></li>
+<li id="li-186"><div class="para" id="p-703">the <span class="process-math">\(n_j\)</span>'s give the number of times each irreducible representation occurs in the decomposition of the regular representation of <span class="process-math">\(G\text{,}\)</span>
 </div></li>
-<li id="li-165"><div class="para" id="p-514">the <span class="process-math">\(n_j\)</span>'s also give the dimensions of these representations, and</div></li>
-<li id="li-166"><div class="para" id="p-515"><span class="process-math">\(n_1^2  + \cdots + n_m^2 = |G|\text{.}\)</span></div></li>
+<li id="li-187"><div class="para" id="p-704">the <span class="process-math">\(n_j\)</span>'s also give the dimensions of these representations, and</div></li>
+<li id="li-188"><div class="para" id="p-705"><span class="process-math">\(n_1^2  + \cdots + n_m^2 = |G|\text{.}\)</span></div></li>
 </ol>
-</div></article><article class="hiddenproof" id="proof-31"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-31"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-31"><article class="hiddenproof"><div class="para" id="p-516">The point is that in this setting, for each irreducible representation <span class="process-math">\(M_i\text{,}\)</span> <span class="process-math">\(D_i \cong \operatorname{End}_{K[G]}(M_i)^{\mathrm{op}}\)</span> is equal to <span class="process-math">\(K\text{.}\)</span> Let <span class="process-math">\(\theta\in \operatorname{End}_{K[G]}(M_i)\text{.}\)</span> In particular, <span class="process-math">\(\theta\)</span> is a <span class="process-math">\(K\)</span>-linear endomorphism of the finite dimensional vector space <span class="process-math">\(M_i\text{.}\)</span> Since <span class="process-math">\(K\)</span> is algebraically closed, <span class="process-math">\(\theta\)</span> has an eigenvaluse, say <span class="process-math">\(\lambda\text{.}\)</span> Then <span class="process-math">\(\theta-\lambda 1_{M_i}\)</span> is a <span class="process-math">\(K[G]\)</span>-linear endomorphism of <span class="process-math">\(M_i\)</span> that is not injective, so by Schur’s Lemma is must be <span class="process-math">\(0\text{.}\)</span> Thus, <span class="process-math">\(\theta = \lambda 1_{M_i}\)</span>
+</div></article><article class="hiddenproof" id="proof-70"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-70"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-70"><article class="hiddenproof"><div class="para" id="p-706">The point is that in this setting, for each irreducible representation <span class="process-math">\(M_i\text{,}\)</span> <span class="process-math">\(D_i \cong \operatorname{End}_{K[G]}(M_i)^{\mathrm{op}}\)</span> is equal to <span class="process-math">\(K\text{.}\)</span> Let <span class="process-math">\(\theta\in \operatorname{End}_{K[G]}(M_i)\text{.}\)</span> In particular, <span class="process-math">\(\theta\)</span> is a <span class="process-math">\(K\)</span>-linear endomorphism of the finite dimensional vector space <span class="process-math">\(M_i\text{.}\)</span> Since <span class="process-math">\(K\)</span> is algebraically closed, <span class="process-math">\(\theta\)</span> has an eigenvaluse, say <span class="process-math">\(\lambda\text{.}\)</span> Then <span class="process-math">\(\theta-\lambda 1_{M_i}\)</span> is a <span class="process-math">\(K[G]\)</span>-linear endomorphism of <span class="process-math">\(M_i\)</span> that is not injective, so by Schur’s Lemma is must be <span class="process-math">\(0\text{.}\)</span> Thus, <span class="process-math">\(\theta = \lambda 1_{M_i}\)</span>
 </div></article></div>
 <article class="example example-like" id="example-22"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">29.7</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-517">Let <span class="process-math">\(k = \mathbb{C}\)</span> and consider the alternating group <span class="process-math">\(G = A_4\)</span> of order 12. We find all the simple modules over the ring <span class="process-math">\(\mathbb{C}[A_4]\)</span> or, equivalently, all irreducible <span class="process-math">\(\mathbb{C}\)</span>-linear representations of <span class="process-math">\(A_4\text{.}\)</span> We also find the Artin-Wedderburn decomposition of <span class="process-math">\(\mathbb{C}[A_4]\text{.}\)</span>
-</div> <div class="para logical" id="p-518">
+<div class="para" id="p-707">Let <span class="process-math">\(k = \mathbb{C}\)</span> and consider the alternating group <span class="process-math">\(G = A_4\)</span> of order 12. We find all the simple modules over the ring <span class="process-math">\(\mathbb{C}[A_4]\)</span> or, equivalently, all irreducible <span class="process-math">\(\mathbb{C}\)</span>-linear representations of <span class="process-math">\(A_4\text{.}\)</span> We also find the Artin-Wedderburn decomposition of <span class="process-math">\(\mathbb{C}[A_4]\text{.}\)</span>
+</div> <div class="para logical" id="p-708">
 <div class="para">As before we start by finding 1-dimensional representations given by group homomorphisms of the form <span class="process-math">\(A_4 \to \mathbb{C}^\times\text{.}\)</span> Any such map factors as</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -496,7 +764,7 @@ A_4 \twoheadrightarrow A_4^{\mathrm{ab}}\cong C_3 \to \mathbb{C}^\times
 \end{equation*}
 </div>
 <div class="para">and thus there are three nonisomorphic 1-dimensional representations given by <span class="process-math">\(\rho_i:C_3=\langle g\rangle \to \mathbb{C}^\times\text{,}\)</span> <span class="process-math">\(\rho_i(g)=e^\frac{2\pi i}{3}\text{,}\)</span> with <span class="process-math">\(i=0,1,2\text{.}\)</span> Note that <span class="process-math">\(\rho_0\)</span> corresponds to the trivial representation. Also <span class="process-math">\(\rho_1\)</span> and <span class="process-math">\(\rho_2\)</span> make essential use of the fact that we are working over <span class="process-math">\(\mathbb{C}\)</span> as opposed to, say, <span class="process-math">\({\mathbb{R}}\)</span> where there are no primitive cubic roots of 1.</div>
-</div> <div class="para logical" id="p-519">
+</div> <div class="para logical" id="p-709">
 <div class="para">With respect to the Artin-Wedderburn decomposition we have so far</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -510,7 +778,7 @@ A_4 \twoheadrightarrow A_4^{\mathrm{ab}}\cong C_3 \to \mathbb{C}^\times
 \end{equation*}
 </div>
 <div class="para">It is easy to see there is only one solution: <span class="process-math">\(m=4\)</span> and <span class="process-math">\(n_4=3\text{.}\)</span> Hence there is a unique up to isomorphism <span class="process-math">\(\mathbb{C}\)</span>-linear irreducible representation of <span class="process-math">\(A_4\)</span> which is a 3 dimensional <span class="process-math">\(\mathbb{C}\)</span>-vector space.</div>
-</div> <div class="para logical" id="p-520">
+</div> <div class="para logical" id="p-710">
 <div class="para">To exhibit such a representation, let <span class="process-math">\(A_4\)</span> act on <span class="process-math">\(V=\mathbb{C}^4\)</span> by permuting the standard basis elements and thus any vector in <span class="process-math">\(V\text{.}\)</span> The subspace <span class="process-math">\(W\subseteq V\)</span> given by</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -522,16 +790,16 @@ W = \{ (a,b,c,d) \ | \ a+b+c+d=0\}
 </div></article><article class="remark remark-like" id="remark-24"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">29.8</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-521">Let's consider what the Artin-Wedderburn Theorem says about complex representations of finite abelian groups: the group ring must be a product of copies of <span class="process-math">\(\mathbb{C}\text{,}\)</span> so every irreducible representation is one-dimensional. Thus, every representation is a sum of one-dimensional representations. Concretely, this means that there is a basis in which every group element acts as a diagonal matrix.</div> <div class="para" id="p-522">This special case actually just follows from basic facts in linear algebra. Let <span class="process-math">\(\rho:G\to \operatorname{GL}_n(\mathbb{C})\)</span> be a representation. Then every <span class="process-math">\(g\in G\)</span> has finite order, so <span class="process-math">\(g^k-1\)</span> for some <span class="process-math">\(k\text{.}\)</span> This implies that the matrix <span class="process-math">\(\rho(g)\)</span> satisfies <span class="process-math">\(\rho(g)^k = I_n\text{,}\)</span> so its minimal polynomial divides <span class="process-math">\(x^k-1\text{.}\)</span> This polynomial splits into distinct linear factors over <span class="process-math">\(\mathbb{C}\text{,}\)</span> so <span class="process-math">\(\rho(g)\)</span> is diagonalizable for every <span class="process-math">\(g\in G\text{.}\)</span> (So far, we’ve only used that <span class="process-math">\(G\)</span> is finite.) Now, since <span class="process-math">\(g\)</span> is abelian, we have <span class="process-math">\(gh=hg\)</span> for all <span class="process-math">\(g,h\in G\text{,}\)</span> so <span class="process-math">\(\rho(g) \rho(h) = \rho(h) \rho(g)\text{;}\)</span> i.e., the matrices commute. Commuting diagonalizable matrices are simultaneously diagonalizable; i.e., there is a basis as above.</div></article><article class="proposition theorem-like" id="prop-art-wedd-decomp"><h3 class="heading">
+<div class="para" id="p-711">Let's consider what the Artin-Wedderburn Theorem says about complex representations of finite abelian groups: the group ring must be a product of copies of <span class="process-math">\(\mathbb{C}\text{,}\)</span> so every irreducible representation is one-dimensional. Thus, every representation is a sum of one-dimensional representations. Concretely, this means that there is a basis in which every group element acts as a diagonal matrix.</div> <div class="para" id="p-712">This special case actually just follows from basic facts in linear algebra. Let <span class="process-math">\(\rho:G\to \operatorname{GL}_n(\mathbb{C})\)</span> be a representation. Then every <span class="process-math">\(g\in G\)</span> has finite order, so <span class="process-math">\(g^k-1\)</span> for some <span class="process-math">\(k\text{.}\)</span> This implies that the matrix <span class="process-math">\(\rho(g)\)</span> satisfies <span class="process-math">\(\rho(g)^k = I_n\text{,}\)</span> so its minimal polynomial divides <span class="process-math">\(x^k-1\text{.}\)</span> This polynomial splits into distinct linear factors over <span class="process-math">\(\mathbb{C}\text{,}\)</span> so <span class="process-math">\(\rho(g)\)</span> is diagonalizable for every <span class="process-math">\(g\in G\text{.}\)</span> (So far, we’ve only used that <span class="process-math">\(G\)</span> is finite.) Now, since <span class="process-math">\(g\)</span> is abelian, we have <span class="process-math">\(gh=hg\)</span> for all <span class="process-math">\(g,h\in G\text{,}\)</span> so <span class="process-math">\(\rho(g) \rho(h) = \rho(h) \rho(g)\text{;}\)</span> i.e., the matrices commute. Commuting diagonalizable matrices are simultaneously diagonalizable; i.e., there is a basis as above.</div></article><article class="proposition theorem-like" id="prop-art-wedd-decomp"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">29.9</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-523">Let <span class="process-math">\(G\)</span> be a finite group. The number of one-dimensional complex representations of <span class="process-math">\(G\)</span> (up to isomorphism) is <span class="process-math">\(|G^{\mathrm{ab}}|\text{.}\)</span> Thus, in the Artin-Wedderburn decomposition of <span class="process-math">\(\mathbb{C}[G]\text{,}\)</span> there are exactly <span class="process-math">\(|G^{\mathrm{ab}}|\)</span> copies of <span class="process-math">\(\mathbb{C}\text{.}\)</span>
-</div></article><article class="hiddenproof" id="proof-32"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-32"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-32"><article class="hiddenproof"><div class="para" id="p-524">We have that <span class="process-math">\(\mathrm{Hom}_{\mathbf{Grp}}(G,\mathbb{C}^\times) \cong \mathrm{Hom}_{\mathbf{Ab}}(G^{\mathrm{ab}},\mathbb{C}^\times)\text{,}\)</span> and by the discussion above, there are <span class="process-math">\(|G^{\mathrm{ab}}|\)</span> distinct one-dimensional representations of <span class="process-math">\(G^{\mathrm{ab}}\text{.}\)</span>
+<div class="para" id="p-713">Let <span class="process-math">\(G\)</span> be a finite group. The number of one-dimensional complex representations of <span class="process-math">\(G\)</span> (up to isomorphism) is <span class="process-math">\(|G^{\mathrm{ab}}|\text{.}\)</span> Thus, in the Artin-Wedderburn decomposition of <span class="process-math">\(\mathbb{C}[G]\text{,}\)</span> there are exactly <span class="process-math">\(|G^{\mathrm{ab}}|\)</span> copies of <span class="process-math">\(\mathbb{C}\text{.}\)</span>
+</div></article><article class="hiddenproof" id="proof-71"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-71"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-71"><article class="hiddenproof"><div class="para" id="p-714">We have that <span class="process-math">\(\mathrm{Hom}_{\mathbf{Grp}}(G,\mathbb{C}^\times) \cong \mathrm{Hom}_{\mathbf{Ab}}(G^{\mathrm{ab}},\mathbb{C}^\times)\text{,}\)</span> and by the discussion above, there are <span class="process-math">\(|G^{\mathrm{ab}}|\)</span> distinct one-dimensional representations of <span class="process-math">\(G^{\mathrm{ab}}\text{.}\)</span>
 </div></article></div>
 <article class="proposition theorem-like" id="prop-reps-and-conjclass"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">29.10</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-525">For any finite group <span class="process-math">\(G\text{,}\)</span> the number of irreducible complex representations (up to isomorphism) is equal to the number of conjugacy classes.</div></article><article class="hiddenproof" id="proof-33"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-33"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-33"><article class="hiddenproof"><div class="para logical" id="p-526">
+<div class="para" id="p-715">For any finite group <span class="process-math">\(G\text{,}\)</span> the number of irreducible complex representations (up to isomorphism) is equal to the number of conjugacy classes.</div></article><article class="hiddenproof" id="proof-72"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-72"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-72"><article class="hiddenproof"><div class="para logical" id="p-716">
 <div class="para">We have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -539,7 +807,7 @@ W = \{ (a,b,c,d) \ | \ a+b+c+d=0\}
 \end{equation*}
 </div>
 <div class="para">and <span class="process-math">\(m\)</span> is the number of irreducible complex representations up to isomorphism. A key point is that the center of the right side is <span class="process-math">\(\mathbb{C}I_{n_1} \times \cdots \times \mathbb{C}I_{n_m}\text{,}\)</span> which has dimension <span class="process-math">\(m\)</span> as a complex vector space. Since this ring isomorphism is <span class="process-math">\(\mathbb{C}\)</span>-linear, it induces a <span class="process-math">\(\mathbb{C}\)</span>-linear isomorphism of the centers, and thus we just need to show that <span class="process-math">\(\dim_\mathbb{C}(Z(\mathbb{C}[G]))\)</span> is equal to the number of conjugacy classes.</div>
-</div> <div class="para logical" id="p-527">
+</div> <div class="para logical" id="p-717">
 <div class="para">Let <span class="process-math">\(C_1, \dots, C_h\)</span> denote the conjugacy classes of <span class="process-math">\(G\)</span> (i.e., the orbits for the action of <span class="process-math">\(G\)</span> on itself by conjugation). For each <span class="process-math">\(i\)</span> set <span class="process-math">\(z_i = \sum_{g \in C_i} g \in \mathbb{C}[G]\text{.}\)</span> Then for all <span class="process-math">\(x \in G\text{,}\)</span> <span class="process-math">\(x z_i x ^{-1}  = \sum_{g \in C_i} x g x^{-1} = z_i\)</span> and it follows that <span class="process-math">\(z_i \in Z(\mathbb{C}[G])\text{.}\)</span> Since that <span class="process-math">\(z_i\)</span>’s are sums of disjoint subsets of a basis of <span class="process-math">\(\mathbb{C}[G]\text{,}\)</span> they are linearly independent. Now say <span class="process-math">\(\sum_g c_g g\)</span> belongs to the center. Then for each <span class="process-math">\(x \in G\text{,}\)</span>
 </div>
 <div class="displaymath process-math">

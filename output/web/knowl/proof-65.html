@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
+<div class="para">Since <span class="process-math">\(R\)</span> is left semisimple, we have <span class="process-math">\(R \cong I_1 \oplus \cdots \oplus I_t\)</span> with each <span class="process-math">\(I_i\)</span> is simple (in fact a minimal ideal). Group by isomorphism to rewrite this as <span class="process-math">\(R \cong M_1^{\oplus n_1} \oplus \cdots \oplus M_m^{\oplus n_m}\)</span> with each <span class="process-math">\(M_i\)</span> simple, <span class="process-math">\(n_j \geq 1\text{,}\)</span> and such that <span class="process-math">\(M_i\)</span> is not isomorphic to <span class="process-math">\(M_j\)</span> for all <span class="process-math">\(i \ne j\text{.}\)</span> We compute the endomorphisms of both sides:</div> <div class="para logical"><div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\label{E912}
+\operatorname{End}_R(R) &amp;=&amp; \mathrm{Hom}_R(\bigoplus_{i=1}^m M_i^{\oplus n_i}, \prod_{j=1}^m M_j^{\oplus n_j}) \cong  \prod_j \mathrm{Hom}_R(M_i^{\oplus n_i}, \prod_i  M_i^{\oplus n_j})\\
+&amp;\cong&amp;  \prod_{i=1}^m \prod_{j=1}^m \mathrm{Hom}_R(M_i^{\oplus n_i}, M_j^{\oplus n_j}) \\
+&amp;=&amp; \prod_{i=1}^m \mathrm{Hom}_R(M_i^{\oplus n_i}, M_i^{\oplus n_i}) \\
+&amp;=&amp; \prod_{i=1}^m  \operatorname{End}_R(M_i^{\oplus n_i})\cong \prod_{i=1}^m  \operatorname{Mat}_{n_i}(\operatorname{End}_R(M_i)).
+\end{aligned}
+\end{equation*}
+</div></div> <div class="para">Above the second line follows from the first by properties of <span class="process-math">\(\mathrm{Hom}\text{,}\)</span> the third follows because Schur’s lemma gives that <span class="process-math">\(\mathrm{Hom}_R(M_i,M_j)=0\text{,}\)</span> and consequently <span class="process-math">\(\mathrm{Hom}_R(M_i^{\oplus n_i},M_j^{\oplus n_j})=0\text{,}\)</span> when <span class="process-math">\(i\neq j\text{.}\)</span> The final isomorphism is the previous lemma.</div> <div class="para">On the one hand, we have <span class="process-math">\(\operatorname{End}_R(R) \cong R^{\mathrm{op}}\)</span> by a problem from the homework. On the other hand, applying Schur’s Lemma again, <span class="process-math">\(D'_i := \operatorname{End}_R(M_i)\)</span> is a division ring for all <span class="process-math">\(i\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Combining these gives</div>
+<div class="displaymath process-math">
+\begin{equation*}
+R^{\mathrm{op}} \cong \operatorname{Mat}_{n_1}(D'_1) \times \cdots \times \operatorname{Mat}_{n_m}(D'_m)
+\end{equation*}
+</div>
+<div class="para">and hence, also by a homework problem, we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+R \cong
+\left(\operatorname{Mat}_{n_1}(D'_1) \times \cdots \times \operatorname{Mat}_{n_m}(D'_m)\right)^{\mathrm{op}} \cong
+\operatorname{Mat}_{n_1}(D_1) \times \cdots \times \operatorname{Mat}_{n_m}(D_m)
+\end{equation*}
+</div>
+<div class="para">with <span class="process-math">\(D_i := (D_i')^{\mathrm{op}}=\operatorname{End}_R(M_i)^\mathrm{op}\text{.}\)</span>
+</div>
+</div> <div class="para">This shows that given a decomposition of <span class="process-math">\(R\)</span> as a left semisimple module, there is a ring decomposition as a product of matrix rings over division rings, and the data of division rings and matrix sizes is related to the data of simple modules and multiplicities by the formulas (1)–(3). We just need to prove uniqueness.</div> <div class="para logical">
+<div class="para">Say we are given an isomorphism of rings <span class="process-math">\(R \cong \prod_{i=1}^k \operatorname{Mat}_{t_i}(Q_i)\)</span> for some division rings <span class="process-math">\(Q_1,\dots,Q_k\text{.}\)</span> Then since <span class="process-math">\(\operatorname{Mat}_{t_i}(Q_i)\)</span> decomposes as a direct sum of <span class="process-math">\(t_i\)</span> copies of <span class="process-math">\(N_i:=Q_i^{t_i}\text{,}\)</span> and <span class="process-math">\(N_i\)</span> is a simple <span class="process-math">\(\operatorname{Mat}_{t_i}(Q_i)\)</span>-module, hence also a simple <span class="process-math">\(R\)</span>-module, we have a semisimple <span class="process-math">\(R\)</span>-module decomposition of <span class="process-math">\(R\)</span> as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+M_1^{\oplus n_1} \oplus  \cdots \oplus M_m^{\oplus n_m} \cong R \cong N_1^{\oplus t_1} \oplus \cdots \oplus N_k^{\oplus t_k}.
+\end{equation*}
+</div>
+<div class="para">By Krull-Schmidt, we must have <span class="process-math">\(m=k\text{,}\)</span> and after a permutation, <span class="process-math">\(M_i \cong N_i = Q_i^{\oplus t_i}\)</span> and <span class="process-math">\(n_i=t_i\)</span> for each <span class="process-math">\(i\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">Moreover, we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+D_i\cong  \operatorname{End}_R(M_i)^{\mathrm{op}} \cong  \operatorname{End}_R(N_i)^{\mathrm{op}}.
+\end{equation*}
+</div>
+<div class="para">We recall that <span class="process-math">\(N_i\cong Q_i^{\oplus n_i}\text{,}\)</span> with the natural column vector action from <span class="process-math">\(\operatorname{Mat}_{n_i}(Q_i)\text{,}\)</span> and the trivial action from the other factors. Thus,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\operatorname{End}_R(N_i)^{\mathrm{op}} = \operatorname{End}_{\operatorname{Mat}_{n_i}(Q_i)} (Q_i^{\oplus n_i}) ^{\mathrm{op}}\cong Q_i,
+\end{equation*}
+</div>
+<div class="para">using the exercise above.</div>
+</div></article><span class="incontext"><a href="sec-art-wedd.html#proof-65" class="internal">in-context</a></span>
+</body>
+</html>

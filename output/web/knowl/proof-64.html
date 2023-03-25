@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
+<div class="para">It is clear that this map is additive, as each <span class="process-math">\(\iota_i\)</span> and <span class="process-math">\(\pi_j\)</span> is. Observe that <span class="process-math">\(\pi_j  \iota_i\)</span> is the identity on <span class="process-math">\(M\)</span> if <span class="process-math">\(i=j\text{,}\)</span> and the zero map otherwise and that <span class="process-math">\(1_{M^{\oplus n}} = \sum_{k} \iota_k  \pi_k\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">The map</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\xymatrix@R=1mm{ \operatorname{End}_R(M^{\oplus n}) &amp;\ar[l]_-{\zeta}  \operatorname{Mat}_n(\operatorname{End}_R(M)) \\
+\sum_{i,j} \iota_i  \alpha_{i,j}  \pi_j &amp; \ar@{|-&gt;}[l]  [\alpha_{i,j}]_{i,j} }
+\end{equation*}
+</div>
+<div class="para">is a two-sided inverse for <span class="process-math">\(\Theta\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\zeta (\Theta(\phi)) = \zeta ( [\pi_i  \phi  \iota_j]_{i,j} ) = \sum_{i,j} \iota_i \pi_i  \phi  \iota_j \pi_j =(\sum_i \iota_i \pi_i) \phi (\sum_j \iota_j \pi_j)=\phi, \quad\text{and}
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Theta(\zeta([\alpha_{i,j}]_{i,j}]))_{k,\ell} = \Theta ( \sum_{i,j} \iota_i  \alpha_{i,j}  \pi_j)_{k,\ell} = \pi_k (\sum_{i,j} \iota_i  \alpha_{i,j}  \pi_j) \iota_\ell = \sum_{i,j}  (\pi_k \iota_i) \alpha_{i,j} (\pi_j \iota_\ell) = \alpha_{k,\ell}.
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">To see that <span class="process-math">\(\Theta\)</span> respects multiplication, we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+[\Theta (\psi) \Theta(\phi) ]_{i,j}= \sum_k (\pi_i  \psi  \iota_k) (\pi_k  \phi  \iota_j) = \pi_i  \psi\phi  \iota_j = \Theta(\psi \phi)_{i,j}.\qedhere
+\end{equation*}
+</div>
+</div></article><span class="incontext"><a href="sec-art-wedd.html#proof-64" class="internal">in-context</a></span>
+</body>
+</html>

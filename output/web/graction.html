@@ -179,17 +179,275 @@ window.MathJax = {
 </li>
 </ol></div></button><span class="treebuttons"><a class="previous-button button" href="group-actions.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="group-actions.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="sec-lois.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
 <input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
-</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\identity}{\mathrm{id}}
-\newcommand{\notdivide}{{\not{\mid}}}
-\newcommand{\notsubset}{\not\subset}
-\newcommand{\lcm}{\operatorname{lcm}}
-\newcommand{\gf}{\operatorname{GF}}
-\newcommand{\inn}{\operatorname{Inn}}
-\newcommand{\aut}{\operatorname{Aut}}
-\newcommand{\Hom}{\operatorname{Hom}}
-\newcommand{\cis}{\operatorname{cis}}
-\newcommand{\chr}{\operatorname{char}}
-\newcommand{\Null}{\operatorname{Null}}
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\def\ann{\operatorname{ann}}
+\newcommand{\Ass}{\operatorname{Ass}}
+\def\Aut{\operatorname{Aut}}
+\def\can{{\mathrm {can}}}
+\def\char{\operatorname{char}}
+\def\cp{\operatorname{CharPoly}}
+\def\codim{\operatorname{codim}} 
+\def\coker{\operatorname{coker}}
+\DeclareMathOperator*{\colim}{colim} 
+\def\cont{\operatorname{cont}} 
+\def\diam{\operatorname{diam}} 
+\def\dm{\operatorname{dim}} 
+\DeclareMathOperator{\edim}{embdim} 
+\def\End{\operatorname{End}} 
+\def\eval{\operatorname{eval}} 
+\def\Ext{\operatorname{Ext}} 
+\def\Frac{\operatorname{Frac}}
+\def\Fun{\operatorname{Fun}}
+\def\Gal{\operatorname{Gal}}
+\def\gcd{\operatorname{gcd}}
+\newcommand{\GL}{\operatorname{GL}} 
+\newcommand{\ht}{\operatorname{height}} 
+\def\Hom{\operatorname{Hom}} 
+\def\im{\operatorname{id}} 
+\def\im{\operatorname{im}} 
+\def\Inn{\operatorname{Inn}}
+\def\ker{\operatorname{ker}}
+\def\lcm{\operatorname{lcm}} 
+\def\Mat{\operatorname{Mat}}
+\newcommand{\Min}{\operatorname{Min}}
+\def\mp{\operatorname{MinPoly}}
+\def\mSpec{\operatorname{mSpec}}
+\def\MSpec{\operatorname{MSpec}}
+\def\null{\operatorname{Nul}}
+\DeclareMathOperator{\ns}{nullspace}
+\newcommand{\opp}{\operatorname{opp}}
+\def\Orb{\operatorname{Orb}} 
+\def\Out{\operatorname{Out}}
+\def\Perm{\operatorname{Perm}}
+\def\ptstab{\operatorname{PtStab}} 
+\def\rad{\operatorname{rad}}
+\DeclareMathOperator{\range}{range}
+\def\rank{\operatorname{rank}}
+\def\res{\operatorname{res}}
+\def\setstab{\operatorname{SetStab}}
+\def\sign{{\operatorname{sign}}}
+\newcommand{\SL}{\operatorname{SL}}
+\def\Span{\operatorname{Span}}
+\def\Spec{\operatorname{Spec}}
+\def\Stab{\operatorname{Stab}} 
+\DeclareMathOperator{\Supp}{Supp}
+\def\Syl{\operatorname{Syl}}
+\def\Tor{\operatorname{Tor}}
+\def\trace{\operatorname{trace}}
+\def\uSpec{\operatorname{\underline{Spec}}}
+
+\newcommand{\Ob}{\mathrm{Ob}}
+\newcommand{\Set}{\mathbf{Set}}
+\newcommand{\Grp}{\mathbf{Grp}}
+\newcommand{\Ab}{\mathbf{Ab}}
+\newcommand{\Sgrp}{\mathbf{Sgrp}}
+\newcommand{\Ring}{\mathbf{Ring}} 
+\newcommand{\Fld}{\mathbf{Fld}}
+\newcommand{\cRing}{\mathbf{cRing}}
+\newcommand{\Mod}[1]{#1-\mathbf{Mod}} 
+\newcommand{\Cx}[1]{#1-\mathbf{Comp}} 
+\newcommand{\vs}[1]{#1-\mathbf{vect}}
+\newcommand{\Vs}[1]{#1-\mathbf{Vect}}
+\newcommand{\vsp}[1]{#1-\mathbf{vect}^+} 
+\newcommand{\Top}{\mathbf{Top}} 
+\newcommand{\Setp}{\mathbf{Set}_*} 
+\newcommand{\Alg}[1]{#1-\mathbf{Alg}} 
+\newcommand{\cAlg}[1]{#1-\mathbf{cAlg}} 
+\newcommand{\PO}{\mathbf{PO}}
+\newcommand{\Cont}{\mathrm{Cont}}
+\newcommand{\MaT}[1]{\mathbf{Mat}_{#1}}
+\newcommand{\Rep}[2]{\mathbf{Rep}_{#1}(#2)}
+
+\def\l{\lambda}
+\def\lx{\lambda_x}
+\def\a{\alpha}
+\def\b{\beta}
+\def\d{\delta}
+\def\e{\varepsilon}
+\def\g{\gamma}
+\def\t{\theta}
+\def\s{\sigma}
+\def\z{\zeta}
+\def\vp{\varphi}
+
+
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\B}{\mathbb{B}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\G}{\mathbb{G}}
+\newcommand{\H}{\mathbb{H}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\J}{\mathbb{J}}
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\L}{\mathbb{L}} 
+\newcommand{\M}{\mathbb{M}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\O}{\mathbb{O}}
+\newcommand{\P}{\mathbb{P}}
+\newcommand{\Q}{\mathbb{Q}} 
+\newcommand{\R}{\mathbb{R}} 
+\newcommand{\S}{\mathbb{S}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\U}{\mathbb{U}}
+\newcommand{\V}{\mathbb{V}}
+\newcommand{\W}{\mathbb{W}}
+\newcommand{\X}{\mathbb{X}}
+\newcommand{\Y}{\mathbb{Y}}
+\newcommand{\Z}{\mathbb{Z}} 
+\newcommand{\ON}{\mathbb{ON}}
+
+\def\cA{\mathcal A} 
+\def\cB{\mathcal B} 
+\def\cC{\mathcal C} 
+\def\cD{\mathcal D} 
+\def\cE{\mathcal E} 
+\def\cF{\mathcal F} 
+\def\cG{\mathcal G} 
+\def\cH{\mathcal H} 
+\def\cI{\mathcal I} 
+\def\cJ{\mathcal J} 
+\def\cK{\mathcal K} 
+\def\cL{\mathcal L}
+\def\cM{\mathcal M} 
+\def\cN{\mathcal N} 
+\def\cO{\mathcal O} 
+\def\cP{\mathcal P} 
+\def\cQ{\mathcal Q} 
+\def\cR{\mathcal R} 
+\def\cS{\mathcal S} 
+\def\cT{\mathcal T} 
+\def\cU{\mathcal U} 
+\def\cV{\mathcal V} 
+\def\cW{\mathcal W} 
+\def\cX{\mathcal X} 
+\def\cY{\mathcal Y} 
+\def\cZ{\mathcal Z} 
+
+\newcommand{\fa}{{\mathfrak a}} 
+\newcommand{\fb}{{\mathfrak b}} 
+\newcommand{\fc}{{\mathfrak c}} 
+\newcommand{\fd}{{\mathfrak d}} 
+\newcommand{\fe}{{\mathfrak e}}
+\newcommand{\fm}{{\mathfrak m}} 
+\newcommand{\fp}{{\mathfrak p}} 
+\newcommand{\fq}{{\mathfrak q}} 
+\newcommand{\fK}{{\mathfrak K}} 
+\newcommand{\fR}{{\mathfrak R}} 
+
+\def\sA{\mathscr A} 
+\def\sB{\mathscr B} 
+\def\sC{\mathscr C} 
+\def\sD{\mathscr D} 
+\def\sE{\mathscr E} 
+\def\sF{\mathscr F} 
+\def\sG{\mathscr G} 
+\def\sH{\mathscr H} 
+\def\sI{\mathscr I} 
+\def\sJ{\mathscr J} 
+\def\sK{\mathscr K} 
+\def\sL{\mathscr L}
+\def\sM{\mathscr M}
+\def\sN{\mathscr N}
+\def\sO{\mathscr O}
+\def\sP{\mathscr P}
+\def\sQ{\mathscr Q}
+\def\sR{\mathscr R}
+\def\sS{\mathscr S}
+\def\sT{\mathscr T}
+\def\sZ{\mathscr Z}
+
+\def\tS{\tilde{S}}
+
+
+\def\sdp{\rtimes}
+\newcommand{\tensor}{\otimes} 
+\newcommand{\igen}[1]{\langle #1 \rangle} 
+\def\nsg{\unlhd} 
+\def\kval{{k-\mathrm{valued}}} 
+\def\kalg{{k-\mathrm{alg}}}
+\newcommand\GG[2]{\Gal(#1/#2)}
+
+\newcommand{\MF}[3]{\Mat_{#1\times #2}(#3)}
+\newcommand{\vectwo}[2]{\begin{bmatrix} #1 \\ #2 \end{bmatrix}} 
+\newcommand{\vecthree}[3]{\begin{bmatrix} #1 \\ #2 \\ #3\end{bmatrix}} 
+\def\ob{{\mathfrak{ob}} }
+
+
+\def\qed{\square}
+\def\sse{\subseteq}
+\def\ss{\subset} 
+\def\ssne{\subsetneq}
+\def\sm{\setminus}
+\def\inv{^{-1}} 
+\newcommand{\es}{\emptyset} 
+\newcommand{\Zm}[1]{\Z/({#1})} 
+\def\ov#1{\overline{#1}} 
+\def\xdots{x_1, \dots, x_n} 
+\def\adots{a_1, \dots, a_n} 
+\def\bdots{b_1, \dots, b_n} 
+\def\udots{u_1, \dots, u_n} 
+\newcommand{\leg}[2]{\left(\frac{{#1}}{{#2}}\right)} 
+\def\th{^{th}} 
+\def\htpy{\simeq_{\mathrm{htpc}}} 
+
+\def\textand{ \, \text{and} \, } 
+\def\textor{ \, \text{or} \, } 
+\def\textfor{ \, \text{for} \, } 
+\def\textfa{ \, \text{for all} \, } 
+\def\textst{ \, \text{such that} \, } 
+\def\textin{ \, \text{in} \, } 
+\def\fg{ \, \text{finitely generated} \, }
+\newcommand{\op}{\mathrm{op}}
+
+\newcommand{\xra}[1]{\xrightarrow{#1}} 
+\newcommand{\xora}[1]{\xtwoheadrightarrow{#1}} 
+\newcommand{\xira}[1]{\xhookrightarrow{#1}} 
+\newcommand{\xla}[1]{\xleftarrow{#1}} 
+\def\lra{\longrightarrow}
+\def\into{\hookrightarrow}
+\def\onto{\twoheadrightarrow}
+
+\newcommand{\vv}[1]{\mathbf{#1}}
+\newcommand{\lm}[2]{{#1}\,\l + {#2}\,\mu} 
+\renewcommand{\v}{\vv{v}}
+\renewcommand{\u}{\vv{u}}
+\newcommand{\w}{\vv{w}}
+\newcommand{\x}{\vv{x}}
+\renewcommand{\k}{\vv{k}}
+\newcommand{\0}{\vv{0}}
+\newcommand{\1}{\vv{1}}
+\newcommand{\vecs}[2]{#1_1,#1_2,\dots,#1_{#2}}
+\newcommand{\us}[1][n]{\vecs{\u}{#1}}
+\newcommand{\vs}[1][n]{\vecs{\v}{#1}}
+\newcommand{\ws}[1][n]{\vecs{\w}{#1}}
+\newcommand{\vps}[1][n']{\vecs{\v'}{#1}}
+\newcommand{\ls}[1][n]{\vecs{\l}{#1}}
+\newcommand{\mus}[1][n]{\vecs{\mu}{#1}} 
+\newcommand{\lps}[1][n]{\vecs{\l'}{#1}}
+\def\td{\tilde{\delta}}
+\def\oo{\overline{\omega}}
+\def\ctJ{\tilde{\mathcal J}}
+\def\tPhi{\tilde{\Phi}}
+\def\te{\tilde{e}}
+\def\M{\operatorname{M}}
+\newcommand{\homotopic}{\simeq}
+\newcommand{\homeq}{\cong}
+\newcommand{\iso}{\approx}
+\newcommand{\dual}{\vee} 
+\DeclarePairedDelimiter{\abs}{|}{|}
+\newcommand{\bv}{{\bar{v}}}
+\newcommand{\bu}{{\bar{u}}}
+\newcommand{\bw}{{\bar{w}}}
+\newcommand{\by}{{\bar{y}}}
+\newcommand{\ba}{{\bar{a}}}
+\newcommand{\bb}{{\bar{b}}}
+\newcommand{\bx}{{\bar{x}}}
+\DeclarePairedDelimiterX\setof[2]{\{}{\}}{#1\,|\,#2}
+\newcommand{\vx}{\underline{x}}
+\renewcommand{mod}[1]{\text{(mod }{#1})}
+\newcommand{\Slv}[3]{\sum_{{#2}=1}^{{#3}} {#1}_{{#2}} \v_{{#2}}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -239,12 +497,16 @@ window.MathJax = {
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="quotient-groups.html" class="internal"><span class="codenumber">3</span> <span class="title">Quotient Groups</span></a></div>
+<div class="toc-item"><a href="normal-quotient-groups.html" class="internal"><span class="codenumber">3</span> <span class="title">Normal and Quotient Groups</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-cosets.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Cosets and Equivalence Relations</span></a></div></li>
 <li><div class="toc-item"><a href="sec-normal-subgroups.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Normal Subgroups</span></a></div></li>
-<li><div class="toc-item"><a href="sec-isomorphism-thms.html" class="internal"><span class="codenumber">3.3</span> <span class="title">The Isomorphism Theorems</span></a></div></li>
-<li><div class="toc-item"><a href="sec-grp-presentations.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Presentations as Quotient Groups</span></a></div></li>
+<li><div class="toc-item"><a href="sec-quotient-groups.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Quotient Groups</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-isomorphism-thms.html" class="internal"><span class="codenumber">3.4</span> <span class="title">The Isomorphism Theorems</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-isomorphism-thms.html#exercises-gp-isos" class="internal"><span class="codenumber">3.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="sec-grp-presentations.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Presentations as Quotient Groups</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -252,7 +514,7 @@ window.MathJax = {
 <ul class="structural">
 <li class="active"><div class="toc-item"><a href="graction.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Group Actions</span></a></div></li>
 <li><div class="toc-item"><a href="sec-lois.html" class="internal"><span class="codenumber">4.2</span> <span class="title">LOIS and Orbit-Stabilizer</span></a></div></li>
-<li><div class="toc-item"><a href="sec-self-conjugation.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Self Conjugation</span></a></div></li>
+<li><div class="toc-item"><a href="sec-conjugation.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Conjugation</span></a></div></li>
 <li><div class="toc-item"><a href="sec-class-eq.html" class="internal"><span class="codenumber">4.4</span> <span class="title">The Class Equation</span></a></div></li>
 </ul>
 </li>
@@ -261,7 +523,10 @@ window.MathJax = {
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-pgroups.html" class="internal"><span class="codenumber">5.1</span> <span class="title"><span class="process-math">\(p\)</span>-groups</span></a></div></li>
 <li><div class="toc-item"><a href="sec-sylowthm.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Sylow's Theorem</span></a></div></li>
-<li><div class="toc-item"><a href="sec-simple-groups.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Simple Groups</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-simple-groups.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Simple Groups</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-simple-groups.html#exercises-simplegps" class="internal"><span class="codenumber">5.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
 </ul>
 </li>
 <li>
@@ -275,7 +540,10 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="ch-classifications.html" class="internal"><span class="codenumber">7</span> <span class="title">Classifications</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-ftfgag.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Group Decompositions</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-ftfgag.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Group Decompositions</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-ftfgag.html#exercises-decomp" class="internal"><span class="codenumber">7.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
 <li><div class="toc-item"><a href="sec-classifications.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Groups Up to Isomorphism</span></a></div></li>
 </ul>
 </li>
@@ -463,7 +731,7 @@ window.MathJax = {
 <article class="definition definition-like" id="def-graction"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.1</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-214">
+<div class="para logical" id="p-234">
 <div class="para">For a group <span class="process-math">\((G, \cdot)\)</span> and set <span class="process-math">\(S\text{,}\)</span> an <em class="emphasis">action</em> of <span class="process-math">\(G\)</span> on <span class="process-math">\(S\)</span> is a function</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -471,26 +739,26 @@ G \times S \to S,
 \end{equation*}
 </div>
 <div class="para">typically written as <span class="process-math">\((g,s) \mapsto g \cdot s\text{,}\)</span> such that</div>
-</div> <div class="para logical" id="p-215"><ol class="decimal">
-<li id="li-83"><div class="para" id="p-216">
+</div> <div class="para logical" id="p-235"><ol class="decimal">
+<li id="li-83"><div class="para" id="p-236">
 <span class="process-math">\(g \cdot (g' \cdot s) = (g g') \cdot s\)</span> for all <span class="process-math">\(g,g' \in G\)</span> and <span class="process-math">\(s\in S\text{.}\)</span>
 </div></li>
-<li id="li-84"><div class="para" id="p-217">
+<li id="li-84"><div class="para" id="p-237">
 <span class="process-math">\(e_G \cdot s = s\)</span> for all <span class="process-math">\(s \in S\text{.}\)</span>
 </div></li>
 </ol></div></article><article class="remark remark-like" id="remark-11"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">4.2</span><span class="period">.</span>
 </h3>To make the first axiom clearer, throughout this section we will write <span class="process-math">\(\cdot\)</span> for the action of <span class="process-math">\(G\)</span> on <span class="process-math">\(S\)</span> and no symbol (concatenation) for the multiplication of two elements in the group <span class="process-math">\(G\text{.}\)</span></article><article class="example example-like" id="example-3"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.3</span><span class="period">.</span><span class="space"> </span><span class="title">Trivial Action.</span>
-</h3> <div class="para" id="p-218">For any group <span class="process-math">\(G\)</span> and any set <span class="process-math">\(S\text{,}\)</span> <span class="process-math">\(g \cdot s := s\)</span> defines an action, the <em class="emphasis">trivial action</em>. The associated group homomorphism is <span class="process-math">\(G \to \operatorname{Perm}(S)\)</span> by <span class="process-math">\(g\mapsto \text{id}_S\text{.}\)</span>
+</h3> <div class="para" id="p-238">For any group <span class="process-math">\(G\)</span> and any set <span class="process-math">\(S\text{,}\)</span> <span class="process-math">\(g \cdot s := s\)</span> defines an action, the <em class="emphasis">trivial action</em>. The associated group homomorphism is <span class="process-math">\(G \to \operatorname{Perm}(S)\)</span> by <span class="process-math">\(g\mapsto \text{id}_S\text{.}\)</span>
 </div></article><article class="theorem theorem-like" id="thm-permrep"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.4</span><span class="period">.</span><span class="space"> </span><span class="title">Permutation Representation.</span>
 </h3>
-<div class="para" id="p-219">Assume <span class="process-math">\((G, \cdot)\)</span> is a group and <span class="process-math">\(S\)</span> is a set.</div> <div class="para logical" id="p-220"><ol class="decimal">
-<li id="li-85"><div class="para" id="p-221">If <span class="process-math">\(\cdot\)</span> is an action of <span class="process-math">\(G\)</span> on <span class="process-math">\(S\text{,}\)</span> then the function <span class="process-math">\(\rho: G \to \operatorname{Perm}(S)\)</span> defined as <span class="process-math">\(\rho(g) = \sigma_g\text{,}\)</span> where <span class="process-math">\(\sigma_g:S\to S\)</span> is the function given by <span class="process-math">\(\sigma_g(s)=g \cdot s\text{,}\)</span> is a well defined homomorphism of groups.</div></li>
-<li id="li-86"><div class="para" id="p-222">Conversely, if <span class="process-math">\(\rho: G \to \operatorname{Perm}(S)\)</span> is a group homomorphism, the rule <span class="process-math">\(g \cdot s := \rho(g)(s)\)</span> defines an action of <span class="process-math">\(G\)</span> on <span class="process-math">\(S\text{.}\)</span>
+<div class="para" id="p-239">Assume <span class="process-math">\((G, \cdot)\)</span> is a group and <span class="process-math">\(S\)</span> is a set.</div> <div class="para logical" id="p-240"><ol class="decimal">
+<li id="li-85"><div class="para" id="p-241">If <span class="process-math">\(\cdot\)</span> is an action of <span class="process-math">\(G\)</span> on <span class="process-math">\(S\text{,}\)</span> then the function <span class="process-math">\(\rho: G \to \operatorname{Perm}(S)\)</span> defined as <span class="process-math">\(\rho(g) = \sigma_g\text{,}\)</span> where <span class="process-math">\(\sigma_g:S\to S\)</span> is the function given by <span class="process-math">\(\sigma_g(s)=g \cdot s\text{,}\)</span> is a well defined homomorphism of groups.</div></li>
+<li id="li-86"><div class="para" id="p-242">Conversely, if <span class="process-math">\(\rho: G \to \operatorname{Perm}(S)\)</span> is a group homomorphism, the rule <span class="process-math">\(g \cdot s := \rho(g)(s)\)</span> defines an action of <span class="process-math">\(G\)</span> on <span class="process-math">\(S\text{.}\)</span>
 </div></li>
-</ol></div></article><article class="hiddenproof" id="proof-5"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-5"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-5"><article class="hiddenproof"><div class="para logical" id="p-223">
+</ol></div></article><article class="hiddenproof" id="proof-8"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-8"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-8"><article class="hiddenproof"><div class="para logical" id="p-243">
 <div class="para">We have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -505,7 +773,7 @@ G \times S \to S,
 </div>
 <div class="para">thus <span class="process-math">\(\sigma_g\circ\sigma_{g^{-1}}=\text{id}_S\)</span> and a similar argument shows that <span class="process-math">\(\sigma_{g^{-1}}\circ\sigma_{g}=\text{id}_S\)</span>
 </div>
-</div> <div class="para logical" id="p-224">
+</div> <div class="para logical" id="p-244">
 <div class="para">Finally, we wish to show <span class="process-math">\(\rho(gg')=\rho(g) \circ \rho(g')\text{,}\)</span> equivalently <span class="process-math">\(\sigma_{gg'}=\sigma_g\circ\sigma_{g'}\text{.}\)</span> Since</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -513,25 +781,77 @@ G \times S \to S,
 \end{equation*}
 </div>
 <div class="para">holds for all <span class="process-math">\(s\text{,}\)</span> this proves <span class="process-math">\(\rho\)</span> is a homomorphism.</div>
-</div> <div class="para" id="p-225">Given a homomorphism <span class="process-math">\(\rho\text{,}\)</span> the function <span class="process-math">\(G \times S \to S\)</span> defined as <span class="process-math">\(g \cdot s = \rho(g)(s)\)</span> is an action because <span class="process-math">\(g'(gs) = \rho(g')(\rho(g)(s)) = (\rho(g') \circ\rho(g))(s) = \rho(gg')(s) = (gg')s\text{,}\)</span> and <span class="process-math">\(e_G s = \rho(e_G)(s) = \text{id}(s) = s\text{.}\)</span>
+</div> <div class="para" id="p-245">Given a homomorphism <span class="process-math">\(\rho\text{,}\)</span> the function <span class="process-math">\(G \times S \to S\)</span> defined as <span class="process-math">\(g \cdot s = \rho(g)(s)\)</span> is an action because <span class="process-math">\(g'(gs) = \rho(g')(\rho(g)(s)) = (\rho(g') \circ\rho(g))(s) = \rho(gg')(s) = (gg')s\text{,}\)</span> and <span class="process-math">\(e_G s = \rho(e_G)(s) = \text{id}(s) = s\text{.}\)</span>
 </div></article></div>
 <article class="definition definition-like" id="def-faithful"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.5</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-226">An action of a group <span class="process-math">\(G\)</span> on a set <span class="process-math">\(S\)</span> is called <em class="emphasis">faithful</em> if the associated group homomorphism is injective. Equivalently, an action is faithful if and only if for a given <span class="process-math">\(g \in G\text{,}\)</span> whenever <span class="process-math">\(g \cdot s = s\)</span> for all <span class="process-math">\(s \in S\text{,}\)</span> it must be that <span class="process-math">\(g = e_G\text{.}\)</span>
+<div class="para" id="p-246">An action of a group <span class="process-math">\(G\)</span> on a set <span class="process-math">\(S\)</span> is called <em class="emphasis">faithful</em> if the associated group homomorphism is injective. Equivalently, an action is faithful if and only if for a given <span class="process-math">\(g \in G\text{,}\)</span> whenever <span class="process-math">\(g \cdot s = s\)</span> for all <span class="process-math">\(s \in S\text{,}\)</span> it must be that <span class="process-math">\(g = e_G\text{.}\)</span>
 </div></article><article class="example example-like" id="ex-leftreg"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.6</span><span class="period">.</span><span class="space"> </span><span class="title">Left Regular Action.</span>
-</h3> <div class="para logical" id="p-227">
+</h3> <div class="para logical" id="p-247">
 <div class="para">Let <span class="process-math">\(G\)</span> be any group and define an action <span class="process-math">\(\cdot\)</span> of <span class="process-math">\(G\)</span> on <span class="process-math">\(G\)</span> (regarded as just a set) by the rule</div>
 <div class="displaymath process-math">
 \begin{equation*}
 g \cdot x = g  x, \text{ for $g \in G$ and $x \in G$.}
 \end{equation*}
 </div>
-</div></article><article class="problem example-like" id="problem-62"><h3 class="heading">
+</div></article><article class="problem example-like" id="problem-64"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.7</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-228">Prove that the left regular action is faithful.</div></article></section></div>
+<div class="para" id="p-248">Prove that the left regular action is faithful.</div></article><article class="problem example-like" id="problem-65"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.8</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-249">
+<div class="para">Let <span class="process-math">\(G\)</span> be a group and <span class="process-math">\(H\)</span> a subgroup of <span class="process-math">\(G\text{.}\)</span> Recall that the centralizer of <span class="process-math">\(H\)</span> in <span class="process-math">\(G\)</span> is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C_H(G)=\{g\in G|gh=hg\text{ for all }h\in H\}
+\end{equation*}
+</div>
+<div class="para">Prove that if <span class="process-math">\(H\)</span> is normal in <span class="process-math">\(G\text{,}\)</span> then so is <span class="process-math">\(C_G(H)\)</span> and that <span class="process-math">\(G/C_G(H)\)</span> is isomorphic to a subgroup of the automorphism group of <span class="process-math">\(H\text{.}\)</span>
+</div>
+</div> <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like">
+<div class="para" id="p-250">Let <span class="process-math">\(G\)</span> be a group and <span class="process-math">\(H\nsg G\text{.}\)</span> Let <span class="process-math">\(x\in C_H(G)\text{,}\)</span> and consider <span class="process-math">\(gxg\inv\text{.}\)</span> Let <span class="process-math">\(h\in H\text{.}\)</span> As <span class="process-math">\(H\nsg G\)</span> we have <span class="process-math">\(h=gh'g\inv\)</span> for some <span class="process-math">\(h\in H\text{,}\)</span> and thus that 1. <span class="process-math">\(g\inv h=h'g\inv\)</span> and 2. <span class="process-math">\(hg=gh'\text{.}\)</span> Consider <span class="process-math">\(gxg\inv h\text{.}\)</span> By (1), we see <span class="process-math">\(gxg\inv h=gxh'g\inv\text{.}\)</span> As <span class="process-math">\(x\)</span> commutes with everything in <span class="process-math">\(H\)</span> we have <span class="process-math">\(gh'xg\inv\text{,}\)</span> and by (2) we have <span class="process-math">\(hgxg\inv\text{.}\)</span> Thus <span class="process-math">\(C_H(G)\nsg G\text{.}\)</span>
+</div> <div class="para" id="p-251">Let <span class="process-math">\(G\)</span> act on the left cosets of <span class="process-math">\(C_G(H)\)</span> by left multiplication, giving rise to the permutation representation homomorphism <span class="process-math">\(\rho:G/C_G(H)\to\Aut(H)\text{.}\)</span> By the First Isomorphism Theorem we see that <span class="process-math">\(G/C_G(H)\)</span> is isomorphic to a subgroup of the automorphism group of <span class="process-math">\(H\text{.}\)</span>
+</div>
+</div></div></article><article class="problem example-like" id="problem-66"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.9</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-252">
+<div class="para">Recall that the centralizer of a subgroup <span class="process-math">\(H\)</span> in a group <span class="process-math">\(G\)</span> is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C_G(H) = \{g ∈ G | gh = hg \text{ for all }h ∈ H\}.
+\end{equation*}
+</div>
+<div class="para">(a) Prove that if <span class="process-math">\(H\)</span> is normal in <span class="process-math">\(G\text{,}\)</span> then <span class="process-math">\(C_G(H)\)</span> is normal in <span class="process-math">\(G\text{.}\)</span> (b) Prove that if <span class="process-math">\(H\)</span> is normal in <span class="process-math">\(G\text{,}\)</span> then <span class="process-math">\(G/C_G(H)\)</span> is isomorphic to a subgroup of <span class="process-math">\(\Aut(H)\)</span> (the group of automorphisms of H)</div>
+</div> <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-7" id="solution-7"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-7"><div class="solution solution-like">
+<div class="para" id="p-253">Let <span class="process-math">\(G\)</span> act on <span class="process-math">\(H\)</span> by conjugation, yielding the homomorphism <span class="process-math">\(\rho\)</span> via the permutation representation that maps <span class="process-math">\(g\)</span> to <span class="process-math">\(\s_g\text{,}\)</span> where <span class="process-math">\(\s_g(h)=ghg\inv\text{.}\)</span> This is the trivial permutation exactly when <span class="process-math">\(g\in C_G(H)\text{,}\)</span> making <span class="process-math">\(C_G(H)\)</span> the kernel of <span class="process-math">\(\rho\text{.}\)</span> Thus <span class="process-math">\(C_G(H)\)</span> is normal in <span class="process-math">\(G\text{.}\)</span>
+</div> <div class="para" id="p-254">From the above permutation representation we have a homomorphism <span class="process-math">\(\rho: G\to S_{|H|}\cong\Aut(H)\text{.}\)</span> As <span class="process-math">\(C_G(H)=\ker(\rho)\text{,}\)</span> by the First Isomorphism Theorem we have <span class="process-math">\(G/C_G(H)\cong\im(\rho))\text{,}\)</span> a subgroup of <span class="process-math">\(\Aut(H)\text{.}\)</span>
+</div>
+</div></div></article><article class="problem example-like" id="problem-67"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.10</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-255">Let <span class="process-math">\(H\)</span> be a subgroup of a group <span class="process-math">\(G\text{.}\)</span> Recall that the centralizer of <span class="process-math">\(H\)</span> is the subgroup of <span class="process-math">\(G\)</span> defined by <span class="process-math">\(C_G(H) = \{g \in G | gh = hg ∀h \in H\}\)</span> and the normalizer of <span class="process-math">\(H\)</span> is the subgroup of <span class="process-math">\(G\)</span> defined by <span class="process-math">\(N_G(H) = \{g \in G | gHg\inv = H\}\text{.}\)</span>
+</div> <div class="para logical" id="p-256"><ol class="decimal">
+<li id="li-87"><div class="para" id="p-derived-li-87">Show that the centralizer <span class="process-math">\(C_G(H)\)</span> of <span class="process-math">\(H\)</span> in <span class="process-math">\(G\)</span> is a normal subgroup of the normalizer <span class="process-math">\(N_G(H)\)</span> of <span class="process-math">\(H\)</span> in <span class="process-math">\(G\text{.}\)</span>
+</div></li>
+<li id="li-88"><div class="para" id="p-derived-li-88">Show that the quotient <span class="process-math">\(N_G(H)/C_G(H)\)</span> is isomorphic to a subgroup of the automorphism group <span class="process-math">\(\Aut(H)\)</span> of <span class="process-math">\(H\text{.}\)</span>
+</div></li>
+</ol></div></article><a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-8" id="solution-8"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-8"><div class="solution solution-like"><div class="para" id="p-257">
+<div class="para" id="p-258">Let <span class="process-math">\(H\)</span> be a subgroup of a group <span class="process-math">\(G\text{.}\)</span>
+</div> <section class="paragraphs" id="part-a"><h3 class="heading"><span class="title">Part (a).</span></h3> <div class="para" id="p-259">Let <span class="process-math">\(G\)</span> act on <span class="process-math">\(H\)</span> by conjugation. Thus the associated permutation homomorphism <span class="process-math">\(\rho\)</span> is defined such that <span class="process-math">\(\rho(g)=\phi_g\text{,}\)</span> where <span class="process-math">\(\phi_g(h)=ghg\inv\text{.}\)</span> Notice that when <span class="process-math">\(x\in C_G(H)\)</span> we have <span class="process-math">\(\phi_x(h)=xhx\inv=h\)</span> for all <span class="process-math">\(h\in H\text{,}\)</span> and thus <span class="process-math">\(x\in\ker(\rho)\text{.}\)</span> If <span class="process-math">\(x\in\ker(\rho)\)</span> then <span class="process-math">\(xhx\inv=h\)</span> for all <span class="process-math">\(h\in H\text{,}\)</span> and thus <span class="process-math">\(x\in C_G(H)\text{.}\)</span> Thus <span class="process-math">\(C_G(H)=\ker(\rho)\)</span> and <span class="process-math">\(C_G(H)\nsg N_G(H)\text{.}\)</span>
+</div> <section class="paragraphs" id="part-b"><h4 class="heading"><span class="title">Part (b).</span></h4> <div class="para" id="p-260">From the above permutation representation we have a homomorphism <span class="process-math">\(\rho: G\to S_{|H|}\cong\Aut(H)\text{.}\)</span> As <span class="process-math">\(C_G(H)=\ker(\rho)\text{,}\)</span> by the First Isomorphism Theorem we have <span class="process-math">\(G/C_G(H)\cong\im(\rho))\text{,}\)</span> a subgroup of <span class="process-math">\(\Aut(H)\text{.}\)</span>
+</div></section></section>
+</div></div></div>
+<article class="problem example-like" id="problem-68"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.11</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-261">Let <span class="process-math">\(G\)</span> be a finite group and let <span class="process-math">\(H\)</span> be a subgroup of <span class="process-math">\(G\)</span> of index <span class="process-math">\(p\text{,}\)</span> where <span class="process-math">\(p\)</span> is the smallest prime divisor of the order of <span class="process-math">\(G\text{.}\)</span> Prove that <span class="process-math">\(H\)</span> is normal in <span class="process-math">\(G\text{.}\)</span>
+</div> <article class="hiddenproof" id="proof-9"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-9"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-9"><article class="hiddenproof"><div class="para" id="p-262">Let <span class="process-math">\(S=G/H\)</span> and note that <span class="process-math">\(|S|=p\text{.}\)</span> Let <span class="process-math">\(K\)</span> denote the kernel of the permutation representation generated by <span class="process-math">\(G\)</span> acting on <span class="process-math">\(S\)</span> by left multiplication.</div> <div class="para" id="p-263">The First Isomorphism Theorem tells us that <span class="process-math">\(G/K\cong\im(\rho)\leq S_p\text{.}\)</span> Thus <span class="process-math">\(|K|\big|p!\)</span> by Lagrange’s Theorem. Let <span class="process-math">\(k\in K\text{.}\)</span> Then <span class="process-math">\(kgH=gH\)</span> for all <span class="process-math">\(g\in G\text{,}\)</span> making <span class="process-math">\(k\in gHg\inv\)</span> for all <span class="process-math">\(g\in G,\)</span> including <span class="process-math">\(e\text{.}\)</span> Thus <span class="process-math">\(K\nsg H\text{.}\)</span>
+</div> <div class="para" id="p-264">This yields <span class="process-math">\([G:K]=[G:H][H:K]\text{.}\)</span> Let <span class="process-math">\(h=[H:K]\text{,}\)</span> giving us <span class="process-math">\([G:K]=ph\text{.}\)</span> As <span class="process-math">\(|K|\big|p!\)</span> we have <span class="process-math">\(h|(p-1)!\text{,}\)</span> so <span class="process-math">\(h&lt;p\text{.}\)</span> But <span class="process-math">\(p\)</span> is the smallest prime dividing the order of <span class="process-math">\(G\text{,}\)</span> and thus <span class="process-math">\(h=1\text{,}\)</span> making <span class="process-math">\(H=K\)</span> and <span class="process-math">\(H\nsg G\text{.}\)</span>
+</div></article></div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="group-actions.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-lois.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

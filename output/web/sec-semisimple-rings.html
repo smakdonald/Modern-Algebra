@@ -179,17 +179,275 @@ window.MathJax = {
 </li>
 </ol></div></button><span class="treebuttons"><a class="previous-button button" href="ch-artin-wedd.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-artin-wedd.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="sec-art-wedd.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
 <input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
-</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\identity}{\mathrm{id}}
-\newcommand{\notdivide}{{\not{\mid}}}
-\newcommand{\notsubset}{\not\subset}
-\newcommand{\lcm}{\operatorname{lcm}}
-\newcommand{\gf}{\operatorname{GF}}
-\newcommand{\inn}{\operatorname{Inn}}
-\newcommand{\aut}{\operatorname{Aut}}
-\newcommand{\Hom}{\operatorname{Hom}}
-\newcommand{\cis}{\operatorname{cis}}
-\newcommand{\chr}{\operatorname{char}}
-\newcommand{\Null}{\operatorname{Null}}
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\def\ann{\operatorname{ann}}
+\newcommand{\Ass}{\operatorname{Ass}}
+\def\Aut{\operatorname{Aut}}
+\def\can{{\mathrm {can}}}
+\def\char{\operatorname{char}}
+\def\cp{\operatorname{CharPoly}}
+\def\codim{\operatorname{codim}} 
+\def\coker{\operatorname{coker}}
+\DeclareMathOperator*{\colim}{colim} 
+\def\cont{\operatorname{cont}} 
+\def\diam{\operatorname{diam}} 
+\def\dm{\operatorname{dim}} 
+\DeclareMathOperator{\edim}{embdim} 
+\def\End{\operatorname{End}} 
+\def\eval{\operatorname{eval}} 
+\def\Ext{\operatorname{Ext}} 
+\def\Frac{\operatorname{Frac}}
+\def\Fun{\operatorname{Fun}}
+\def\Gal{\operatorname{Gal}}
+\def\gcd{\operatorname{gcd}}
+\newcommand{\GL}{\operatorname{GL}} 
+\newcommand{\ht}{\operatorname{height}} 
+\def\Hom{\operatorname{Hom}} 
+\def\im{\operatorname{id}} 
+\def\im{\operatorname{im}} 
+\def\Inn{\operatorname{Inn}}
+\def\ker{\operatorname{ker}}
+\def\lcm{\operatorname{lcm}} 
+\def\Mat{\operatorname{Mat}}
+\newcommand{\Min}{\operatorname{Min}}
+\def\mp{\operatorname{MinPoly}}
+\def\mSpec{\operatorname{mSpec}}
+\def\MSpec{\operatorname{MSpec}}
+\def\null{\operatorname{Nul}}
+\DeclareMathOperator{\ns}{nullspace}
+\newcommand{\opp}{\operatorname{opp}}
+\def\Orb{\operatorname{Orb}} 
+\def\Out{\operatorname{Out}}
+\def\Perm{\operatorname{Perm}}
+\def\ptstab{\operatorname{PtStab}} 
+\def\rad{\operatorname{rad}}
+\DeclareMathOperator{\range}{range}
+\def\rank{\operatorname{rank}}
+\def\res{\operatorname{res}}
+\def\setstab{\operatorname{SetStab}}
+\def\sign{{\operatorname{sign}}}
+\newcommand{\SL}{\operatorname{SL}}
+\def\Span{\operatorname{Span}}
+\def\Spec{\operatorname{Spec}}
+\def\Stab{\operatorname{Stab}} 
+\DeclareMathOperator{\Supp}{Supp}
+\def\Syl{\operatorname{Syl}}
+\def\Tor{\operatorname{Tor}}
+\def\trace{\operatorname{trace}}
+\def\uSpec{\operatorname{\underline{Spec}}}
+
+\newcommand{\Ob}{\mathrm{Ob}}
+\newcommand{\Set}{\mathbf{Set}}
+\newcommand{\Grp}{\mathbf{Grp}}
+\newcommand{\Ab}{\mathbf{Ab}}
+\newcommand{\Sgrp}{\mathbf{Sgrp}}
+\newcommand{\Ring}{\mathbf{Ring}} 
+\newcommand{\Fld}{\mathbf{Fld}}
+\newcommand{\cRing}{\mathbf{cRing}}
+\newcommand{\Mod}[1]{#1-\mathbf{Mod}} 
+\newcommand{\Cx}[1]{#1-\mathbf{Comp}} 
+\newcommand{\vs}[1]{#1-\mathbf{vect}}
+\newcommand{\Vs}[1]{#1-\mathbf{Vect}}
+\newcommand{\vsp}[1]{#1-\mathbf{vect}^+} 
+\newcommand{\Top}{\mathbf{Top}} 
+\newcommand{\Setp}{\mathbf{Set}_*} 
+\newcommand{\Alg}[1]{#1-\mathbf{Alg}} 
+\newcommand{\cAlg}[1]{#1-\mathbf{cAlg}} 
+\newcommand{\PO}{\mathbf{PO}}
+\newcommand{\Cont}{\mathrm{Cont}}
+\newcommand{\MaT}[1]{\mathbf{Mat}_{#1}}
+\newcommand{\Rep}[2]{\mathbf{Rep}_{#1}(#2)}
+
+\def\l{\lambda}
+\def\lx{\lambda_x}
+\def\a{\alpha}
+\def\b{\beta}
+\def\d{\delta}
+\def\e{\varepsilon}
+\def\g{\gamma}
+\def\t{\theta}
+\def\s{\sigma}
+\def\z{\zeta}
+\def\vp{\varphi}
+
+
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\B}{\mathbb{B}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\G}{\mathbb{G}}
+\newcommand{\H}{\mathbb{H}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\J}{\mathbb{J}}
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\L}{\mathbb{L}} 
+\newcommand{\M}{\mathbb{M}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\O}{\mathbb{O}}
+\newcommand{\P}{\mathbb{P}}
+\newcommand{\Q}{\mathbb{Q}} 
+\newcommand{\R}{\mathbb{R}} 
+\newcommand{\S}{\mathbb{S}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\U}{\mathbb{U}}
+\newcommand{\V}{\mathbb{V}}
+\newcommand{\W}{\mathbb{W}}
+\newcommand{\X}{\mathbb{X}}
+\newcommand{\Y}{\mathbb{Y}}
+\newcommand{\Z}{\mathbb{Z}} 
+\newcommand{\ON}{\mathbb{ON}}
+
+\def\cA{\mathcal A} 
+\def\cB{\mathcal B} 
+\def\cC{\mathcal C} 
+\def\cD{\mathcal D} 
+\def\cE{\mathcal E} 
+\def\cF{\mathcal F} 
+\def\cG{\mathcal G} 
+\def\cH{\mathcal H} 
+\def\cI{\mathcal I} 
+\def\cJ{\mathcal J} 
+\def\cK{\mathcal K} 
+\def\cL{\mathcal L}
+\def\cM{\mathcal M} 
+\def\cN{\mathcal N} 
+\def\cO{\mathcal O} 
+\def\cP{\mathcal P} 
+\def\cQ{\mathcal Q} 
+\def\cR{\mathcal R} 
+\def\cS{\mathcal S} 
+\def\cT{\mathcal T} 
+\def\cU{\mathcal U} 
+\def\cV{\mathcal V} 
+\def\cW{\mathcal W} 
+\def\cX{\mathcal X} 
+\def\cY{\mathcal Y} 
+\def\cZ{\mathcal Z} 
+
+\newcommand{\fa}{{\mathfrak a}} 
+\newcommand{\fb}{{\mathfrak b}} 
+\newcommand{\fc}{{\mathfrak c}} 
+\newcommand{\fd}{{\mathfrak d}} 
+\newcommand{\fe}{{\mathfrak e}}
+\newcommand{\fm}{{\mathfrak m}} 
+\newcommand{\fp}{{\mathfrak p}} 
+\newcommand{\fq}{{\mathfrak q}} 
+\newcommand{\fK}{{\mathfrak K}} 
+\newcommand{\fR}{{\mathfrak R}} 
+
+\def\sA{\mathscr A} 
+\def\sB{\mathscr B} 
+\def\sC{\mathscr C} 
+\def\sD{\mathscr D} 
+\def\sE{\mathscr E} 
+\def\sF{\mathscr F} 
+\def\sG{\mathscr G} 
+\def\sH{\mathscr H} 
+\def\sI{\mathscr I} 
+\def\sJ{\mathscr J} 
+\def\sK{\mathscr K} 
+\def\sL{\mathscr L}
+\def\sM{\mathscr M}
+\def\sN{\mathscr N}
+\def\sO{\mathscr O}
+\def\sP{\mathscr P}
+\def\sQ{\mathscr Q}
+\def\sR{\mathscr R}
+\def\sS{\mathscr S}
+\def\sT{\mathscr T}
+\def\sZ{\mathscr Z}
+
+\def\tS{\tilde{S}}
+
+
+\def\sdp{\rtimes}
+\newcommand{\tensor}{\otimes} 
+\newcommand{\igen}[1]{\langle #1 \rangle} 
+\def\nsg{\unlhd} 
+\def\kval{{k-\mathrm{valued}}} 
+\def\kalg{{k-\mathrm{alg}}}
+\newcommand\GG[2]{\Gal(#1/#2)}
+
+\newcommand{\MF}[3]{\Mat_{#1\times #2}(#3)}
+\newcommand{\vectwo}[2]{\begin{bmatrix} #1 \\ #2 \end{bmatrix}} 
+\newcommand{\vecthree}[3]{\begin{bmatrix} #1 \\ #2 \\ #3\end{bmatrix}} 
+\def\ob{{\mathfrak{ob}} }
+
+
+\def\qed{\square}
+\def\sse{\subseteq}
+\def\ss{\subset} 
+\def\ssne{\subsetneq}
+\def\sm{\setminus}
+\def\inv{^{-1}} 
+\newcommand{\es}{\emptyset} 
+\newcommand{\Zm}[1]{\Z/({#1})} 
+\def\ov#1{\overline{#1}} 
+\def\xdots{x_1, \dots, x_n} 
+\def\adots{a_1, \dots, a_n} 
+\def\bdots{b_1, \dots, b_n} 
+\def\udots{u_1, \dots, u_n} 
+\newcommand{\leg}[2]{\left(\frac{{#1}}{{#2}}\right)} 
+\def\th{^{th}} 
+\def\htpy{\simeq_{\mathrm{htpc}}} 
+
+\def\textand{ \, \text{and} \, } 
+\def\textor{ \, \text{or} \, } 
+\def\textfor{ \, \text{for} \, } 
+\def\textfa{ \, \text{for all} \, } 
+\def\textst{ \, \text{such that} \, } 
+\def\textin{ \, \text{in} \, } 
+\def\fg{ \, \text{finitely generated} \, }
+\newcommand{\op}{\mathrm{op}}
+
+\newcommand{\xra}[1]{\xrightarrow{#1}} 
+\newcommand{\xora}[1]{\xtwoheadrightarrow{#1}} 
+\newcommand{\xira}[1]{\xhookrightarrow{#1}} 
+\newcommand{\xla}[1]{\xleftarrow{#1}} 
+\def\lra{\longrightarrow}
+\def\into{\hookrightarrow}
+\def\onto{\twoheadrightarrow}
+
+\newcommand{\vv}[1]{\mathbf{#1}}
+\newcommand{\lm}[2]{{#1}\,\l + {#2}\,\mu} 
+\renewcommand{\v}{\vv{v}}
+\renewcommand{\u}{\vv{u}}
+\newcommand{\w}{\vv{w}}
+\newcommand{\x}{\vv{x}}
+\renewcommand{\k}{\vv{k}}
+\newcommand{\0}{\vv{0}}
+\newcommand{\1}{\vv{1}}
+\newcommand{\vecs}[2]{#1_1,#1_2,\dots,#1_{#2}}
+\newcommand{\us}[1][n]{\vecs{\u}{#1}}
+\newcommand{\vs}[1][n]{\vecs{\v}{#1}}
+\newcommand{\ws}[1][n]{\vecs{\w}{#1}}
+\newcommand{\vps}[1][n']{\vecs{\v'}{#1}}
+\newcommand{\ls}[1][n]{\vecs{\l}{#1}}
+\newcommand{\mus}[1][n]{\vecs{\mu}{#1}} 
+\newcommand{\lps}[1][n]{\vecs{\l'}{#1}}
+\def\td{\tilde{\delta}}
+\def\oo{\overline{\omega}}
+\def\ctJ{\tilde{\mathcal J}}
+\def\tPhi{\tilde{\Phi}}
+\def\te{\tilde{e}}
+\def\M{\operatorname{M}}
+\newcommand{\homotopic}{\simeq}
+\newcommand{\homeq}{\cong}
+\newcommand{\iso}{\approx}
+\newcommand{\dual}{\vee} 
+\DeclarePairedDelimiter{\abs}{|}{|}
+\newcommand{\bv}{{\bar{v}}}
+\newcommand{\bu}{{\bar{u}}}
+\newcommand{\bw}{{\bar{w}}}
+\newcommand{\by}{{\bar{y}}}
+\newcommand{\ba}{{\bar{a}}}
+\newcommand{\bb}{{\bar{b}}}
+\newcommand{\bx}{{\bar{x}}}
+\DeclarePairedDelimiterX\setof[2]{\{}{\}}{#1\,|\,#2}
+\newcommand{\vx}{\underline{x}}
+\renewcommand{mod}[1]{\text{(mod }{#1})}
+\newcommand{\Slv}[3]{\sum_{{#2}=1}^{{#3}} {#1}_{{#2}} \v_{{#2}}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -239,12 +497,16 @@ window.MathJax = {
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="quotient-groups.html" class="internal"><span class="codenumber">3</span> <span class="title">Quotient Groups</span></a></div>
+<div class="toc-item"><a href="normal-quotient-groups.html" class="internal"><span class="codenumber">3</span> <span class="title">Normal and Quotient Groups</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-cosets.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Cosets and Equivalence Relations</span></a></div></li>
 <li><div class="toc-item"><a href="sec-normal-subgroups.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Normal Subgroups</span></a></div></li>
-<li><div class="toc-item"><a href="sec-isomorphism-thms.html" class="internal"><span class="codenumber">3.3</span> <span class="title">The Isomorphism Theorems</span></a></div></li>
-<li><div class="toc-item"><a href="sec-grp-presentations.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Presentations as Quotient Groups</span></a></div></li>
+<li><div class="toc-item"><a href="sec-quotient-groups.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Quotient Groups</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-isomorphism-thms.html" class="internal"><span class="codenumber">3.4</span> <span class="title">The Isomorphism Theorems</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-isomorphism-thms.html#exercises-gp-isos" class="internal"><span class="codenumber">3.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="sec-grp-presentations.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Presentations as Quotient Groups</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -252,7 +514,7 @@ window.MathJax = {
 <ul class="structural">
 <li><div class="toc-item"><a href="graction.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Group Actions</span></a></div></li>
 <li><div class="toc-item"><a href="sec-lois.html" class="internal"><span class="codenumber">4.2</span> <span class="title">LOIS and Orbit-Stabilizer</span></a></div></li>
-<li><div class="toc-item"><a href="sec-self-conjugation.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Self Conjugation</span></a></div></li>
+<li><div class="toc-item"><a href="sec-conjugation.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Conjugation</span></a></div></li>
 <li><div class="toc-item"><a href="sec-class-eq.html" class="internal"><span class="codenumber">4.4</span> <span class="title">The Class Equation</span></a></div></li>
 </ul>
 </li>
@@ -261,7 +523,10 @@ window.MathJax = {
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-pgroups.html" class="internal"><span class="codenumber">5.1</span> <span class="title"><span class="process-math">\(p\)</span>-groups</span></a></div></li>
 <li><div class="toc-item"><a href="sec-sylowthm.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Sylow's Theorem</span></a></div></li>
-<li><div class="toc-item"><a href="sec-simple-groups.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Simple Groups</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-simple-groups.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Simple Groups</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-simple-groups.html#exercises-simplegps" class="internal"><span class="codenumber">5.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
 </ul>
 </li>
 <li>
@@ -275,7 +540,10 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="ch-classifications.html" class="internal"><span class="codenumber">7</span> <span class="title">Classifications</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-ftfgag.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Group Decompositions</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-ftfgag.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Group Decompositions</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-ftfgag.html#exercises-decomp" class="internal"><span class="codenumber">7.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
 <li><div class="toc-item"><a href="sec-classifications.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Groups Up to Isomorphism</span></a></div></li>
 </ul>
 </li>
@@ -463,10 +731,10 @@ window.MathJax = {
 <article class="definition definition-like" id="def-semisimple-ring"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">28.1</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-418">A ring <span class="process-math">\(R\)</span> is <em class="emphasis">left semisimple</em> if <span class="process-math">\(R\)</span> is semisimple as a left module over itself. <span class="process-math">\(R\)</span> is <em class="emphasis">right semisimple</em> if <span class="process-math">\(R\)</span> is semisimple as a right modules over itself.</div></article><article class="remark remark-like" id="remark-22"><h3 class="heading">
+<div class="para" id="p-608">A ring <span class="process-math">\(R\)</span> is <em class="emphasis">left semisimple</em> if <span class="process-math">\(R\)</span> is semisimple as a left module over itself. <span class="process-math">\(R\)</span> is <em class="emphasis">right semisimple</em> if <span class="process-math">\(R\)</span> is semisimple as a right modules over itself.</div></article><article class="remark remark-like" id="remark-22"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">28.2</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-419">
+<div class="para logical" id="p-609">
 <div class="para">Recall that submodules of <span class="process-math">\(R\)</span> are left ideals and the simple ones are the minimal (nonzero) left ideals. So, <span class="process-math">\(R\)</span> is left semisimple if and only if <span class="process-math">\(R\)</span> is the internal direct sum of some collection of minimal left ideals <span class="process-math">\(I_j\text{:}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -478,38 +746,38 @@ R = \bigoplus_{j \in J} I_j.
 </div></article><article class="example example-like" id="example-15"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">28.3</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-420">For any <span class="process-math">\(n \geq 0\)</span> and division ring <span class="process-math">\(D\text{,}\)</span> the matrix ring <span class="process-math">\(M_n(D)\)</span> is left semisimple. This was shown earlier. It is also right semisimple.</div></article><article class="example example-like" id="example-16"><h3 class="heading">
+<div class="para" id="p-610">For any <span class="process-math">\(n \geq 0\)</span> and division ring <span class="process-math">\(D\text{,}\)</span> the matrix ring <span class="process-math">\(M_n(D)\)</span> is left semisimple. This was shown earlier. It is also right semisimple.</div></article><article class="example example-like" id="example-16"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">28.4</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-421">If <span class="process-math">\(R=K_1 \times \cdots \times K_t\)</span> is a finite product of fields, then each <span class="process-math">\(K_i\)</span> is a simple <span class="process-math">\(R\)</span>-module, and <span class="process-math">\(R\)</span> is the direct sum of these, so <span class="process-math">\(R\)</span> is (left) semisimple.</div></article><article class="proposition theorem-like" id="prop-equivcond-semisimple-ring"><h3 class="heading">
+<div class="para" id="p-611">If <span class="process-math">\(R=K_1 \times \cdots \times K_t\)</span> is a finite product of fields, then each <span class="process-math">\(K_i\)</span> is a simple <span class="process-math">\(R\)</span>-module, and <span class="process-math">\(R\)</span> is the direct sum of these, so <span class="process-math">\(R\)</span> is (left) semisimple.</div></article><article class="proposition theorem-like" id="prop-equivcond-semisimple-ring"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">28.5</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-422">
+<div class="para logical" id="p-612">
 <div class="para">For a ring <span class="process-math">\(R\text{,}\)</span> the following conditions are equivalent:</div>
 <ol class="decimal">
-<li id="li-145"><div class="para" id="p-423">
+<li id="li-167"><div class="para" id="p-613">
 <span class="process-math">\(R\)</span> is a left semisimple ring.</div></li>
-<li id="li-146"><div class="para" id="p-424">Every left <span class="process-math">\(R\)</span>-module is semisimple.</div></li>
-<li id="li-147"><div class="para" id="p-425">Every SES of left <span class="process-math">\(R\)</span>-modules is split.</div></li>
-<li id="li-148"><div class="para" id="p-426">Every injection <span class="process-math">\(i: M' \hookrightarrow M\)</span> of left <span class="process-math">\(R\)</span>-modules splits</div></li>
-<li id="li-149"><div class="para" id="p-427">Every surjection <span class="process-math">\(p: M \twoheadrightarrow M''\)</span> of left <span class="process-math">\(R\)</span>-modules splits.</div></li>
-<li id="li-150"><div class="para" id="p-428">Every left <span class="process-math">\(R\)</span>-module is projective.</div></li>
-<li id="li-151"><div class="para" id="p-429">Every left <span class="process-math">\(R\)</span>-module is injective.</div></li>
+<li id="li-168"><div class="para" id="p-614">Every left <span class="process-math">\(R\)</span>-module is semisimple.</div></li>
+<li id="li-169"><div class="para" id="p-615">Every SES of left <span class="process-math">\(R\)</span>-modules is split.</div></li>
+<li id="li-170"><div class="para" id="p-616">Every injection <span class="process-math">\(i: M' \hookrightarrow M\)</span> of left <span class="process-math">\(R\)</span>-modules splits</div></li>
+<li id="li-171"><div class="para" id="p-617">Every surjection <span class="process-math">\(p: M \twoheadrightarrow M''\)</span> of left <span class="process-math">\(R\)</span>-modules splits.</div></li>
+<li id="li-172"><div class="para" id="p-618">Every left <span class="process-math">\(R\)</span>-module is projective.</div></li>
+<li id="li-173"><div class="para" id="p-619">Every left <span class="process-math">\(R\)</span>-module is injective.</div></li>
 </ol>
-</div></article><article class="hiddenproof" id="proof-21"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-21"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-21"><article class="hiddenproof"><div class="para" id="p-430">The equivalence of (2)-(5) follows from Proposition <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "prop93b" missing or not unique]</code>. The equivalence of (4) and (7) follows from the characterization of injective modules in Proposition <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "prop:injective" missing or not unique]</code> and the equivalence of (5) and (6) follows from the characterization of projective modules in Proposition <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "prop1111" missing or not unique]</code>. The implication (2) <span class="process-math">\(\Rightarrow\)</span> (1) is obvious.</div> <div class="para" id="p-431">Now for <span class="process-math">\((1)\Rightarrow (2)\text{:}\)</span> Assume (1) and let <span class="process-math">\(M\)</span> be any left <span class="process-math">\(R\)</span>-module. It follows from the definition that an arbitrary coproduct of semisimple modules is again semisimple, and so the free module <span class="process-math">\(\bigoplus_\Lambda R\)</span> is semisimple for any indexing set <span class="process-math">\(\Lambda\text{.}\)</span> By choosing a generating set of <span class="process-math">\(M\)</span> , we may find a surjection of the form <span class="process-math">\(p: \oplus_\Lambda R \twoheadrightarrow M\text{.}\)</span> By Corollary <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "cor93" missing or not unique]</code>, it follows that <span class="process-math">\(M\)</span> is semisimple since it is a quotient of a semisimple module <span class="process-math">\(M\cong \oplus_\Lambda R/\operatorname{ker}(p)\text{.}\)</span>
+</div></article><article class="hiddenproof" id="proof-60"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-60"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-60"><article class="hiddenproof"><div class="para" id="p-620">The equivalence of (2)-(5) follows from Proposition <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "prop93b" missing or not unique]</code>. The equivalence of (4) and (7) follows from the characterization of injective modules in Proposition <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "prop:injective" missing or not unique]</code> and the equivalence of (5) and (6) follows from the characterization of projective modules in Proposition <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "prop1111" missing or not unique]</code>. The implication (2) <span class="process-math">\(\Rightarrow\)</span> (1) is obvious.</div> <div class="para" id="p-621">Now for <span class="process-math">\((1)\Rightarrow (2)\text{:}\)</span> Assume (1) and let <span class="process-math">\(M\)</span> be any left <span class="process-math">\(R\)</span>-module. It follows from the definition that an arbitrary coproduct of semisimple modules is again semisimple, and so the free module <span class="process-math">\(\bigoplus_\Lambda R\)</span> is semisimple for any indexing set <span class="process-math">\(\Lambda\text{.}\)</span> By choosing a generating set of <span class="process-math">\(M\)</span> , we may find a surjection of the form <span class="process-math">\(p: \oplus_\Lambda R \twoheadrightarrow M\text{.}\)</span> By Corollary <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "cor93" missing or not unique]</code>, it follows that <span class="process-math">\(M\)</span> is semisimple since it is a quotient of a semisimple module <span class="process-math">\(M\cong \oplus_\Lambda R/\operatorname{ker}(p)\text{.}\)</span>
 </div></article></div>
 <article class="proposition theorem-like" id="prop-ds-semisimple"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">28.6</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-432">Let <span class="process-math">\(R\)</span> be a left semisimple ring and write <span class="process-math">\(R = I_1 \oplus \cdots \oplus I_m\)</span> as an internal direct sum with <span class="process-math">\(I_1, \dots, I_m\)</span> minimal left ideals. Let <span class="process-math">\(J_1, \dots, J_n\)</span> be a complete list of representatives of isomorphism classes as left <span class="process-math">\(R\)</span>-modules taken from the list <span class="process-math">\(I_1, \dots, I_m\text{;}\)</span> so, for each <span class="process-math">\(i\)</span> with <span class="process-math">\(1 \leq i \leq m\text{,}\)</span> there is a unique <span class="process-math">\(j\)</span> with <span class="process-math">\(1 \leq j \leq l\)</span> so that <span class="process-math">\(I_i \cong J_j\)</span> as left <span class="process-math">\(R\)</span>-modules.</div> <div class="para" id="p-433">Then every <span class="process-math">\(R\)</span>-module is isomorphic to <span class="process-math">\(J_1^{\oplus \Lambda_1} \oplus \cdots \oplus J_n^{\oplus \Lambda_n}\)</span> for some index sets <span class="process-math">\(\Lambda_1,\dots,\Lambda_n\text{.}\)</span>
-</div> <div class="para" id="p-434">If <span class="process-math">\(M\)</span> is finitely generated, <span class="process-math">\(M\)</span> is isomorphic to <span class="process-math">\(J_1^{\oplus e_1} \oplus \cdots \oplus J_n^{\oplus e_n}\)</span> for a unique list <span class="process-math">\(e_1, \dots, e_n\)</span> of nonnegative integers.</div></article><article class="hiddenproof" id="proof-22"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-22"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-22"><article class="hiddenproof"><div class="para" id="p-435">If <span class="process-math">\(M\)</span> is finitely generated there is a surjection <span class="process-math">\(R^a \twoheadrightarrow M\text{.}\)</span> Using Proposition <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "prop916" missing or not unique]</code> this surjection splits, so that <span class="process-math">\(R^n \cong M \oplus N\)</span> for some <span class="process-math">\(N\text{,}\)</span> and each of <span class="process-math">\(M\)</span> and <span class="process-math">\(N\)</span> is semisimple and finitely generated. So <span class="process-math">\(M = \oplus_{i=1}^s M_i\)</span> and <span class="process-math">\(N = \oplus_{j=1}^s N_j\)</span> with <span class="process-math">\(M_i, N_j\)</span> simple. Clearly <span class="process-math">\(R^n\)</span> is isomorphic to a finite direct sum of copies of the <span class="process-math">\(J_i\)</span>’s, and so the result follows from the Krull-Schmidt Theorem for semisimple modules.</div> <div class="para" id="p-436">In the general case, we know that <span class="process-math">\(M\)</span> is a direct sum of simple modules; if some simple summand <span class="process-math">\(N\)</span> of <span class="process-math">\(M\)</span> is not isomorphic to one of the <span class="process-math">\(J_i\text{,}\)</span> then <span class="process-math">\(N\)</span> is a finitely generated counterexample to the f.g. case.</div></article></div>
-<div class="para" id="p-437">In short, if <span class="process-math">\(R\)</span> is left semisimple, and we know the simple decomposition of <span class="process-math">\(R\)</span> itself, then we have a complete classification of <em class="emphasis">all</em> <span class="process-math">\(R\)</span>-modules: they are just direct sums of the simple summands of <span class="process-math">\(R\text{!}\)</span>
+<div class="para" id="p-622">Let <span class="process-math">\(R\)</span> be a left semisimple ring and write <span class="process-math">\(R = I_1 \oplus \cdots \oplus I_m\)</span> as an internal direct sum with <span class="process-math">\(I_1, \dots, I_m\)</span> minimal left ideals. Let <span class="process-math">\(J_1, \dots, J_n\)</span> be a complete list of representatives of isomorphism classes as left <span class="process-math">\(R\)</span>-modules taken from the list <span class="process-math">\(I_1, \dots, I_m\text{;}\)</span> so, for each <span class="process-math">\(i\)</span> with <span class="process-math">\(1 \leq i \leq m\text{,}\)</span> there is a unique <span class="process-math">\(j\)</span> with <span class="process-math">\(1 \leq j \leq l\)</span> so that <span class="process-math">\(I_i \cong J_j\)</span> as left <span class="process-math">\(R\)</span>-modules.</div> <div class="para" id="p-623">Then every <span class="process-math">\(R\)</span>-module is isomorphic to <span class="process-math">\(J_1^{\oplus \Lambda_1} \oplus \cdots \oplus J_n^{\oplus \Lambda_n}\)</span> for some index sets <span class="process-math">\(\Lambda_1,\dots,\Lambda_n\text{.}\)</span>
+</div> <div class="para" id="p-624">If <span class="process-math">\(M\)</span> is finitely generated, <span class="process-math">\(M\)</span> is isomorphic to <span class="process-math">\(J_1^{\oplus e_1} \oplus \cdots \oplus J_n^{\oplus e_n}\)</span> for a unique list <span class="process-math">\(e_1, \dots, e_n\)</span> of nonnegative integers.</div></article><article class="hiddenproof" id="proof-61"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-61"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-61"><article class="hiddenproof"><div class="para" id="p-625">If <span class="process-math">\(M\)</span> is finitely generated there is a surjection <span class="process-math">\(R^a \twoheadrightarrow M\text{.}\)</span> Using Proposition <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "prop916" missing or not unique]</code> this surjection splits, so that <span class="process-math">\(R^n \cong M \oplus N\)</span> for some <span class="process-math">\(N\text{,}\)</span> and each of <span class="process-math">\(M\)</span> and <span class="process-math">\(N\)</span> is semisimple and finitely generated. So <span class="process-math">\(M = \oplus_{i=1}^s M_i\)</span> and <span class="process-math">\(N = \oplus_{j=1}^s N_j\)</span> with <span class="process-math">\(M_i, N_j\)</span> simple. Clearly <span class="process-math">\(R^n\)</span> is isomorphic to a finite direct sum of copies of the <span class="process-math">\(J_i\)</span>’s, and so the result follows from the Krull-Schmidt Theorem for semisimple modules.</div> <div class="para" id="p-626">In the general case, we know that <span class="process-math">\(M\)</span> is a direct sum of simple modules; if some simple summand <span class="process-math">\(N\)</span> of <span class="process-math">\(M\)</span> is not isomorphic to one of the <span class="process-math">\(J_i\text{,}\)</span> then <span class="process-math">\(N\)</span> is a finitely generated counterexample to the f.g. case.</div></article></div>
+<div class="para" id="p-627">In short, if <span class="process-math">\(R\)</span> is left semisimple, and we know the simple decomposition of <span class="process-math">\(R\)</span> itself, then we have a complete classification of <em class="emphasis">all</em> <span class="process-math">\(R\)</span>-modules: they are just direct sums of the simple summands of <span class="process-math">\(R\text{!}\)</span>
 </div>
-<div class="para" id="p-438">Much of the interest in semisimple rings arises from the following:</div>
+<div class="para" id="p-628">Much of the interest in semisimple rings arises from the following:</div>
 <article class="theorem theorem-like" id="thm-Maschke"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">28.7</span><span class="period">.</span><span class="space"> </span><span class="title">Maschke's Theorem.</span>
 </h3>
-<div class="para" id="p-439">If <span class="process-math">\(K\)</span> is a field and <span class="process-math">\(G\)</span> is a finite group such that <span class="process-math">\(\mathrm{char}(K)\)</span> does not divide <span class="process-math">\(|G|\text{,}\)</span> then the group ring <span class="process-math">\(K[G]\)</span> is left semisimple.</div></article><article class="hiddenproof" id="proof-23"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-23"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-23"><article class="hiddenproof"><div class="para logical" id="p-440">
+<div class="para" id="p-629">If <span class="process-math">\(K\)</span> is a field and <span class="process-math">\(G\)</span> is a finite group such that <span class="process-math">\(\mathrm{char}(K)\)</span> does not divide <span class="process-math">\(|G|\text{,}\)</span> then the group ring <span class="process-math">\(K[G]\)</span> is left semisimple.</div></article><article class="hiddenproof" id="proof-62"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-62"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-62"><article class="hiddenproof"><div class="para logical" id="p-630">
 <div class="para">Let <span class="process-math">\(i: N \to M\)</span> be any injection of left <span class="process-math">\(K[G]\)</span>-modules. It suffices to prove that there is an <span class="process-math">\(K[G]\)</span>-linear map <span class="process-math">\(p: M \to N\)</span> such that <span class="process-math">\(p \circ i = \mathrm{id}_N\text{.}\)</span> By restriction of scalars along the inclusion <span class="process-math">\(K \subseteq K[G]\text{,}\)</span> we may regard <span class="process-math">\(i\)</span> as a <span class="process-math">\(K\)</span>-linear map between <span class="process-math">\(K\)</span>-vector spaces. As such it admits a <span class="process-math">\(K\)</span>-linear splitting <span class="process-math">\(f: M \twoheadrightarrow N\)</span> (since <span class="process-math">\(K\)</span> is semisimple). There is no reason that <span class="process-math">\(f\)</span> will be <span class="process-math">\(K[G]\)</span>-linear, but we can modify it so that it becomes so: Define <span class="process-math">\(p: M \to N\)</span> by</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -517,7 +785,7 @@ p(m) = \frac{1}{|G|} \sum_{g \in G} g^{-1} f(g m).
 \end{equation*}
 </div>
 <div class="para">Note that the formula makes sense since <span class="process-math">\(|G|\)</span> is invertible in <span class="process-math">\(K\)</span> by assumption.</div>
-</div> <div class="para logical" id="p-441">
+</div> <div class="para logical" id="p-631">
 <div class="para">Then <span class="process-math">\(p\)</span> is still a <span class="process-math">\(K\)</span>-linear map (since <span class="process-math">\(f\)</span> is <span class="process-math">\(K\)</span>-linear and the group action is <span class="process-math">\(K\)</span>-linear). For any <span class="process-math">\(h \in G\)</span> we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -541,18 +809,18 @@ p(i(n))= \frac{1}{|G|} \sum_{g \in G} g^{-1} f(g i(n))
 <article class="remark remark-like" id="remark-23"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">28.8</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-442">The proof actually shows that <span class="process-math">\(K[G]\)</span> is semisimple provided <span class="process-math">\(K\)</span> is and <span class="process-math">\(|G|\)</span> is invertible in <span class="process-math">\(K\text{.}\)</span>
+<div class="para" id="p-632">The proof actually shows that <span class="process-math">\(K[G]\)</span> is semisimple provided <span class="process-math">\(K\)</span> is and <span class="process-math">\(|G|\)</span> is invertible in <span class="process-math">\(K\text{.}\)</span>
 </div></article><article class="example example-like" id="example-17"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">28.9</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-443">The group ring <span class="process-math">\(R=\mathbb{F}_p[C_p]\)</span> does not satisfy the hypotheses of Maschke’s theorem, since the order of the group is zero in the field. In fact, <span class="process-math">\(\mathbb{F}_p[C_p]\)</span> is not semisimple: let <span class="process-math">\(V=\mathbb{F}_p^2\)</span> be the <span class="process-math">\({C_p= \langle g\rangle}\)</span> representation <span class="process-math">\(g^n \mapsto \begin{bmatrix} 1 &amp; 0 \\ \lambda n &amp; 1\end{bmatrix}\text{;}\)</span> i.e., as a <span class="process-math">\(\mathbb{F}_p[C_p]\)</span>-module, we have <span class="process-math">\(g \cdot \begin{bmatrix} a \\ b\end{bmatrix} =  \begin{bmatrix} a \\ a+b\end{bmatrix}\text{.}\)</span> We claim that <span class="process-math">\({U=\left\{ \begin{bmatrix} 0 \\ b \end{bmatrix}\right\}}\)</span> is the unique nonzero proper submodule of <span class="process-math">\(V\text{.}\)</span> Let <span class="process-math">\(W\subseteq V\)</span> be a nonzero submodule and suppose that <span class="process-math">\(U\neq W\text{.}\)</span> Then, there is some element <span class="process-math">\(v=\begin{bmatrix} a \\ b\end{bmatrix} \in W\)</span> with <span class="process-math">\(a\neq 0\text{.}\)</span> Then <span class="process-math">\(v\)</span> and <span class="process-math">\(gv\)</span> are linearly independent, so we must have <span class="process-math">\(W=V\text{.}\)</span> It follows that <span class="process-math">\(V\)</span> is not semisimple: it is not simple since <span class="process-math">\(0\subsetneqq U \subsetneqq V\text{,}\)</span> but <span class="process-math">\(V\)</span> is not a direct sum of simple modules.</div></article><div class="para" id="p-444">Let <span class="process-math">\(G\)</span> be a finite group and <span class="process-math">\(K\)</span> a field. The representation of <span class="process-math">\(G\)</span> corresponding to <span class="process-math">\(K[G]\)</span> viewed as a left module over itself can be described explicitly as following: As a <span class="process-math">\(K\)</span>-vector space, <span class="process-math">\(K[G]\)</span> has <span class="process-math">\(G\)</span> as a basis: <span class="process-math">\(K[G] = \oplus_{g \in G} k \cdot g\text{.}\)</span> <span class="process-math">\(G\)</span> acts on this vector space by permuting the basis via left multiplication: <span class="process-math">\(h \cdot (\sum_g c_g g) = \sum_g c_g (hg)\text{.}\)</span> This is sometimes called the <em class="emphasis">(left) regular representation of <span class="process-math">\(G\)</span></em>.</div>
+<div class="para" id="p-633">The group ring <span class="process-math">\(R=\mathbb{F}_p[C_p]\)</span> does not satisfy the hypotheses of Maschke’s theorem, since the order of the group is zero in the field. In fact, <span class="process-math">\(\mathbb{F}_p[C_p]\)</span> is not semisimple: let <span class="process-math">\(V=\mathbb{F}_p^2\)</span> be the <span class="process-math">\({C_p= \langle g\rangle}\)</span> representation <span class="process-math">\(g^n \mapsto \begin{bmatrix} 1 &amp; 0 \\ \lambda n &amp; 1\end{bmatrix}\text{;}\)</span> i.e., as a <span class="process-math">\(\mathbb{F}_p[C_p]\)</span>-module, we have <span class="process-math">\(g \cdot \begin{bmatrix} a \\ b\end{bmatrix} =  \begin{bmatrix} a \\ a+b\end{bmatrix}\text{.}\)</span> We claim that <span class="process-math">\({U=\left\{ \begin{bmatrix} 0 \\ b \end{bmatrix}\right\}}\)</span> is the unique nonzero proper submodule of <span class="process-math">\(V\text{.}\)</span> Let <span class="process-math">\(W\subseteq V\)</span> be a nonzero submodule and suppose that <span class="process-math">\(U\neq W\text{.}\)</span> Then, there is some element <span class="process-math">\(v=\begin{bmatrix} a \\ b\end{bmatrix} \in W\)</span> with <span class="process-math">\(a\neq 0\text{.}\)</span> Then <span class="process-math">\(v\)</span> and <span class="process-math">\(gv\)</span> are linearly independent, so we must have <span class="process-math">\(W=V\text{.}\)</span> It follows that <span class="process-math">\(V\)</span> is not semisimple: it is not simple since <span class="process-math">\(0\subsetneqq U \subsetneqq V\text{,}\)</span> but <span class="process-math">\(V\)</span> is not a direct sum of simple modules.</div></article><div class="para" id="p-634">Let <span class="process-math">\(G\)</span> be a finite group and <span class="process-math">\(K\)</span> a field. The representation of <span class="process-math">\(G\)</span> corresponding to <span class="process-math">\(K[G]\)</span> viewed as a left module over itself can be described explicitly as following: As a <span class="process-math">\(K\)</span>-vector space, <span class="process-math">\(K[G]\)</span> has <span class="process-math">\(G\)</span> as a basis: <span class="process-math">\(K[G] = \oplus_{g \in G} k \cdot g\text{.}\)</span> <span class="process-math">\(G\)</span> acts on this vector space by permuting the basis via left multiplication: <span class="process-math">\(h \cdot (\sum_g c_g g) = \sum_g c_g (hg)\text{.}\)</span> This is sometimes called the <em class="emphasis">(left) regular representation of <span class="process-math">\(G\)</span></em>.</div>
 <article class="corollary theorem-like" id="cor-Maschke"><h3 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">28.10</span><span class="period">.</span><span class="space"> </span><span class="title">Corollary of Maschke's Theorem.</span>
 </h3>
-<div class="para" id="p-445">If <span class="process-math">\(G\)</span> is a finite group and <span class="process-math">\(K\)</span> is a field such that <span class="process-math">\(\mathrm{char}(K) \nmid |G|\text{,}\)</span> then every <span class="process-math">\(K\)</span>-linear representation of <span class="process-math">\(G\)</span> is a direct sum of irreducible representations, and every finite dimensional representation is uniquely a finite direct sum of irreducible ones.</div> <div class="para" id="p-446">Moreover, every irreducible representation arises as a summand of the left regular representation.</div></article><article class="example example-like" id="example-18"><h3 class="heading">
+<div class="para" id="p-635">If <span class="process-math">\(G\)</span> is a finite group and <span class="process-math">\(K\)</span> is a field such that <span class="process-math">\(\mathrm{char}(K) \nmid |G|\text{,}\)</span> then every <span class="process-math">\(K\)</span>-linear representation of <span class="process-math">\(G\)</span> is a direct sum of irreducible representations, and every finite dimensional representation is uniquely a finite direct sum of irreducible ones.</div> <div class="para" id="p-636">Moreover, every irreducible representation arises as a summand of the left regular representation.</div></article><article class="example example-like" id="example-18"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">28.11</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-447">
+<div class="para logical" id="p-637">
 <div class="para">Let <span class="process-math">\(G=C_3\text{.}\)</span> We can use Maschke’s Theorem and the theory of semisimple rings so far to classify every representation of <span class="process-math">\(G\)</span> over <span class="process-math">\({\mathbb{R}}\)</span> or over <span class="process-math">\(\mathbb{C}\)</span> (or more generally over any field of characteristic not equal to 3). In any case, the left regular representation <span class="process-math">\(V\)</span> of <span class="process-math">\(C_3\)</span> is the three-dimensional representation with basis <span class="process-math">\(\{1,g,g^2\}\)</span> such that <span class="process-math">\(g\cdot 1 = g, g\cdot g=g^2, g\cdot g^2 =1\text{,}\)</span> i.e.,</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -566,9 +834,9 @@ g\mapsto \begin{bmatrix} 0 &amp; -1 \\ 1 &amp; -1 \end{bmatrix}.
 \end{equation*}
 </div>
 <div class="para">A <span class="process-math">\(G\)</span>-stable subspace must correspond to an eigenvector of <span class="process-math">\(g\)</span> (which is equivalently an eigenvector of <span class="process-math">\(g^{-1}\)</span>). The characteristic equation of this matrix shows that the eigenvalues are precisely the primitive cube roots of unity.</div>
-</div> <div class="para" id="p-448">If <span class="process-math">\(K={\mathbb{R}}\)</span> (or more generally if there are no primitive cube roots of unity), then the <span class="process-math">\(2\)</span>-dimensional representation <span class="process-math">\(V/W\)</span> we just found is simple since there are no stable subspaces. If <span class="process-math">\(K=\mathbb{C}\)</span> (or more generally if there are primitive cube roots of unity), let <span class="process-math">\(\omega\)</span> be a primitive cube root of unity. The <span class="process-math">\(2\)</span>-dimensional representation <span class="process-math">\(V/W\)</span> has <span class="process-math">\(\omega\)</span> and <span class="process-math">\(\omega^2\)</span> as eigenvalues, and there are corresponding eigenvectors, so <span class="process-math">\(V/W\)</span> is a direct sum of two 1-dimensional stable subspaces <span class="process-math">\(T, T'\)</span> such that <span class="process-math">\(g\cdot t= \omega t\)</span> for all <span class="process-math">\(t\in T\)</span> and <span class="process-math">\(g\cdot t' = \omega^2 t'\)</span> for all <span class="process-math">\(t'\in T'\text{.}\)</span>
-</div> <div class="para" id="p-449">We conclude that <em class="emphasis">every</em> real representation of <span class="process-math">\(C_3\)</span> is isomorphic to a direct sum of copies of the trivial representation and copies of <span class="process-math">\(V/W\text{.}\)</span> That is, for any such representation <span class="process-math">\(U\text{,}\)</span> there is a basis of <span class="process-math">\(U\text{,}\)</span> <span class="process-math">\(\{e_\alpha \}_{\alpha\in A}\text{,}\)</span> <span class="process-math">\(\{e'_\beta, e''_\beta\}_{\beta\in B}\text{,}\)</span> such that <span class="process-math">\(g\cdot e_\alpha = e_\alpha\text{,}\)</span> <span class="process-math">\(g\cdot e'_\beta = e''_\beta\text{,}\)</span> and <span class="process-math">\(g\cdot e''_\beta = - e'_\beta - e''_\beta\text{.}\)</span>
-</div> <div class="para" id="p-450">We conclude that <em class="emphasis">every</em> complex representation of <span class="process-math">\(C_3\)</span> is isomorphic to a direct sum of copies of the trivial representation, <span class="process-math">\(T\text{,}\)</span> and <span class="process-math">\(T'\text{.}\)</span> That is, for any such representation <span class="process-math">\(U\text{,}\)</span> there is a basis of <span class="process-math">\(U\text{,}\)</span> <span class="process-math">\(\{e_\alpha \}_{\alpha\in A}\text{,}\)</span> <span class="process-math">\(\{e'_\beta\}_{\beta\in B}\text{,}\)</span> <span class="process-math">\(\{e''_\gamma\}_{\gamma\in C}\text{,}\)</span> such that <span class="process-math">\(g\cdot e_\alpha = e_\alpha\text{,}\)</span> <span class="process-math">\(g\cdot e'_\beta = \omega e'_\beta\text{,}\)</span> and <span class="process-math">\(g\cdot e''_\gamma = e''_\gamma\text{.}\)</span>
+</div> <div class="para" id="p-638">If <span class="process-math">\(K={\mathbb{R}}\)</span> (or more generally if there are no primitive cube roots of unity), then the <span class="process-math">\(2\)</span>-dimensional representation <span class="process-math">\(V/W\)</span> we just found is simple since there are no stable subspaces. If <span class="process-math">\(K=\mathbb{C}\)</span> (or more generally if there are primitive cube roots of unity), let <span class="process-math">\(\omega\)</span> be a primitive cube root of unity. The <span class="process-math">\(2\)</span>-dimensional representation <span class="process-math">\(V/W\)</span> has <span class="process-math">\(\omega\)</span> and <span class="process-math">\(\omega^2\)</span> as eigenvalues, and there are corresponding eigenvectors, so <span class="process-math">\(V/W\)</span> is a direct sum of two 1-dimensional stable subspaces <span class="process-math">\(T, T'\)</span> such that <span class="process-math">\(g\cdot t= \omega t\)</span> for all <span class="process-math">\(t\in T\)</span> and <span class="process-math">\(g\cdot t' = \omega^2 t'\)</span> for all <span class="process-math">\(t'\in T'\text{.}\)</span>
+</div> <div class="para" id="p-639">We conclude that <em class="emphasis">every</em> real representation of <span class="process-math">\(C_3\)</span> is isomorphic to a direct sum of copies of the trivial representation and copies of <span class="process-math">\(V/W\text{.}\)</span> That is, for any such representation <span class="process-math">\(U\text{,}\)</span> there is a basis of <span class="process-math">\(U\text{,}\)</span> <span class="process-math">\(\{e_\alpha \}_{\alpha\in A}\text{,}\)</span> <span class="process-math">\(\{e'_\beta, e''_\beta\}_{\beta\in B}\text{,}\)</span> such that <span class="process-math">\(g\cdot e_\alpha = e_\alpha\text{,}\)</span> <span class="process-math">\(g\cdot e'_\beta = e''_\beta\text{,}\)</span> and <span class="process-math">\(g\cdot e''_\beta = - e'_\beta - e''_\beta\text{.}\)</span>
+</div> <div class="para" id="p-640">We conclude that <em class="emphasis">every</em> complex representation of <span class="process-math">\(C_3\)</span> is isomorphic to a direct sum of copies of the trivial representation, <span class="process-math">\(T\text{,}\)</span> and <span class="process-math">\(T'\text{.}\)</span> That is, for any such representation <span class="process-math">\(U\text{,}\)</span> there is a basis of <span class="process-math">\(U\text{,}\)</span> <span class="process-math">\(\{e_\alpha \}_{\alpha\in A}\text{,}\)</span> <span class="process-math">\(\{e'_\beta\}_{\beta\in B}\text{,}\)</span> <span class="process-math">\(\{e''_\gamma\}_{\gamma\in C}\text{,}\)</span> such that <span class="process-math">\(g\cdot e_\alpha = e_\alpha\text{,}\)</span> <span class="process-math">\(g\cdot e'_\beta = \omega e'_\beta\text{,}\)</span> and <span class="process-math">\(g\cdot e''_\gamma = e''_\gamma\text{.}\)</span>
 </div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="ch-artin-wedd.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-art-wedd.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

@@ -179,17 +179,275 @@ window.MathJax = {
 </li>
 </ol></div></button><span class="treebuttons"><a class="previous-button button" href="ch-applications.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-applications.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="sec-rep-closed-fields.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
 <input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
-</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\identity}{\mathrm{id}}
-\newcommand{\notdivide}{{\not{\mid}}}
-\newcommand{\notsubset}{\not\subset}
-\newcommand{\lcm}{\operatorname{lcm}}
-\newcommand{\gf}{\operatorname{GF}}
-\newcommand{\inn}{\operatorname{Inn}}
-\newcommand{\aut}{\operatorname{Aut}}
-\newcommand{\Hom}{\operatorname{Hom}}
-\newcommand{\cis}{\operatorname{cis}}
-\newcommand{\chr}{\operatorname{char}}
-\newcommand{\Null}{\operatorname{Null}}
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\def\ann{\operatorname{ann}}
+\newcommand{\Ass}{\operatorname{Ass}}
+\def\Aut{\operatorname{Aut}}
+\def\can{{\mathrm {can}}}
+\def\char{\operatorname{char}}
+\def\cp{\operatorname{CharPoly}}
+\def\codim{\operatorname{codim}} 
+\def\coker{\operatorname{coker}}
+\DeclareMathOperator*{\colim}{colim} 
+\def\cont{\operatorname{cont}} 
+\def\diam{\operatorname{diam}} 
+\def\dm{\operatorname{dim}} 
+\DeclareMathOperator{\edim}{embdim} 
+\def\End{\operatorname{End}} 
+\def\eval{\operatorname{eval}} 
+\def\Ext{\operatorname{Ext}} 
+\def\Frac{\operatorname{Frac}}
+\def\Fun{\operatorname{Fun}}
+\def\Gal{\operatorname{Gal}}
+\def\gcd{\operatorname{gcd}}
+\newcommand{\GL}{\operatorname{GL}} 
+\newcommand{\ht}{\operatorname{height}} 
+\def\Hom{\operatorname{Hom}} 
+\def\im{\operatorname{id}} 
+\def\im{\operatorname{im}} 
+\def\Inn{\operatorname{Inn}}
+\def\ker{\operatorname{ker}}
+\def\lcm{\operatorname{lcm}} 
+\def\Mat{\operatorname{Mat}}
+\newcommand{\Min}{\operatorname{Min}}
+\def\mp{\operatorname{MinPoly}}
+\def\mSpec{\operatorname{mSpec}}
+\def\MSpec{\operatorname{MSpec}}
+\def\null{\operatorname{Nul}}
+\DeclareMathOperator{\ns}{nullspace}
+\newcommand{\opp}{\operatorname{opp}}
+\def\Orb{\operatorname{Orb}} 
+\def\Out{\operatorname{Out}}
+\def\Perm{\operatorname{Perm}}
+\def\ptstab{\operatorname{PtStab}} 
+\def\rad{\operatorname{rad}}
+\DeclareMathOperator{\range}{range}
+\def\rank{\operatorname{rank}}
+\def\res{\operatorname{res}}
+\def\setstab{\operatorname{SetStab}}
+\def\sign{{\operatorname{sign}}}
+\newcommand{\SL}{\operatorname{SL}}
+\def\Span{\operatorname{Span}}
+\def\Spec{\operatorname{Spec}}
+\def\Stab{\operatorname{Stab}} 
+\DeclareMathOperator{\Supp}{Supp}
+\def\Syl{\operatorname{Syl}}
+\def\Tor{\operatorname{Tor}}
+\def\trace{\operatorname{trace}}
+\def\uSpec{\operatorname{\underline{Spec}}}
+
+\newcommand{\Ob}{\mathrm{Ob}}
+\newcommand{\Set}{\mathbf{Set}}
+\newcommand{\Grp}{\mathbf{Grp}}
+\newcommand{\Ab}{\mathbf{Ab}}
+\newcommand{\Sgrp}{\mathbf{Sgrp}}
+\newcommand{\Ring}{\mathbf{Ring}} 
+\newcommand{\Fld}{\mathbf{Fld}}
+\newcommand{\cRing}{\mathbf{cRing}}
+\newcommand{\Mod}[1]{#1-\mathbf{Mod}} 
+\newcommand{\Cx}[1]{#1-\mathbf{Comp}} 
+\newcommand{\vs}[1]{#1-\mathbf{vect}}
+\newcommand{\Vs}[1]{#1-\mathbf{Vect}}
+\newcommand{\vsp}[1]{#1-\mathbf{vect}^+} 
+\newcommand{\Top}{\mathbf{Top}} 
+\newcommand{\Setp}{\mathbf{Set}_*} 
+\newcommand{\Alg}[1]{#1-\mathbf{Alg}} 
+\newcommand{\cAlg}[1]{#1-\mathbf{cAlg}} 
+\newcommand{\PO}{\mathbf{PO}}
+\newcommand{\Cont}{\mathrm{Cont}}
+\newcommand{\MaT}[1]{\mathbf{Mat}_{#1}}
+\newcommand{\Rep}[2]{\mathbf{Rep}_{#1}(#2)}
+
+\def\l{\lambda}
+\def\lx{\lambda_x}
+\def\a{\alpha}
+\def\b{\beta}
+\def\d{\delta}
+\def\e{\varepsilon}
+\def\g{\gamma}
+\def\t{\theta}
+\def\s{\sigma}
+\def\z{\zeta}
+\def\vp{\varphi}
+
+
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\B}{\mathbb{B}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\G}{\mathbb{G}}
+\newcommand{\H}{\mathbb{H}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\J}{\mathbb{J}}
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\L}{\mathbb{L}} 
+\newcommand{\M}{\mathbb{M}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\O}{\mathbb{O}}
+\newcommand{\P}{\mathbb{P}}
+\newcommand{\Q}{\mathbb{Q}} 
+\newcommand{\R}{\mathbb{R}} 
+\newcommand{\S}{\mathbb{S}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\U}{\mathbb{U}}
+\newcommand{\V}{\mathbb{V}}
+\newcommand{\W}{\mathbb{W}}
+\newcommand{\X}{\mathbb{X}}
+\newcommand{\Y}{\mathbb{Y}}
+\newcommand{\Z}{\mathbb{Z}} 
+\newcommand{\ON}{\mathbb{ON}}
+
+\def\cA{\mathcal A} 
+\def\cB{\mathcal B} 
+\def\cC{\mathcal C} 
+\def\cD{\mathcal D} 
+\def\cE{\mathcal E} 
+\def\cF{\mathcal F} 
+\def\cG{\mathcal G} 
+\def\cH{\mathcal H} 
+\def\cI{\mathcal I} 
+\def\cJ{\mathcal J} 
+\def\cK{\mathcal K} 
+\def\cL{\mathcal L}
+\def\cM{\mathcal M} 
+\def\cN{\mathcal N} 
+\def\cO{\mathcal O} 
+\def\cP{\mathcal P} 
+\def\cQ{\mathcal Q} 
+\def\cR{\mathcal R} 
+\def\cS{\mathcal S} 
+\def\cT{\mathcal T} 
+\def\cU{\mathcal U} 
+\def\cV{\mathcal V} 
+\def\cW{\mathcal W} 
+\def\cX{\mathcal X} 
+\def\cY{\mathcal Y} 
+\def\cZ{\mathcal Z} 
+
+\newcommand{\fa}{{\mathfrak a}} 
+\newcommand{\fb}{{\mathfrak b}} 
+\newcommand{\fc}{{\mathfrak c}} 
+\newcommand{\fd}{{\mathfrak d}} 
+\newcommand{\fe}{{\mathfrak e}}
+\newcommand{\fm}{{\mathfrak m}} 
+\newcommand{\fp}{{\mathfrak p}} 
+\newcommand{\fq}{{\mathfrak q}} 
+\newcommand{\fK}{{\mathfrak K}} 
+\newcommand{\fR}{{\mathfrak R}} 
+
+\def\sA{\mathscr A} 
+\def\sB{\mathscr B} 
+\def\sC{\mathscr C} 
+\def\sD{\mathscr D} 
+\def\sE{\mathscr E} 
+\def\sF{\mathscr F} 
+\def\sG{\mathscr G} 
+\def\sH{\mathscr H} 
+\def\sI{\mathscr I} 
+\def\sJ{\mathscr J} 
+\def\sK{\mathscr K} 
+\def\sL{\mathscr L}
+\def\sM{\mathscr M}
+\def\sN{\mathscr N}
+\def\sO{\mathscr O}
+\def\sP{\mathscr P}
+\def\sQ{\mathscr Q}
+\def\sR{\mathscr R}
+\def\sS{\mathscr S}
+\def\sT{\mathscr T}
+\def\sZ{\mathscr Z}
+
+\def\tS{\tilde{S}}
+
+
+\def\sdp{\rtimes}
+\newcommand{\tensor}{\otimes} 
+\newcommand{\igen}[1]{\langle #1 \rangle} 
+\def\nsg{\unlhd} 
+\def\kval{{k-\mathrm{valued}}} 
+\def\kalg{{k-\mathrm{alg}}}
+\newcommand\GG[2]{\Gal(#1/#2)}
+
+\newcommand{\MF}[3]{\Mat_{#1\times #2}(#3)}
+\newcommand{\vectwo}[2]{\begin{bmatrix} #1 \\ #2 \end{bmatrix}} 
+\newcommand{\vecthree}[3]{\begin{bmatrix} #1 \\ #2 \\ #3\end{bmatrix}} 
+\def\ob{{\mathfrak{ob}} }
+
+
+\def\qed{\square}
+\def\sse{\subseteq}
+\def\ss{\subset} 
+\def\ssne{\subsetneq}
+\def\sm{\setminus}
+\def\inv{^{-1}} 
+\newcommand{\es}{\emptyset} 
+\newcommand{\Zm}[1]{\Z/({#1})} 
+\def\ov#1{\overline{#1}} 
+\def\xdots{x_1, \dots, x_n} 
+\def\adots{a_1, \dots, a_n} 
+\def\bdots{b_1, \dots, b_n} 
+\def\udots{u_1, \dots, u_n} 
+\newcommand{\leg}[2]{\left(\frac{{#1}}{{#2}}\right)} 
+\def\th{^{th}} 
+\def\htpy{\simeq_{\mathrm{htpc}}} 
+
+\def\textand{ \, \text{and} \, } 
+\def\textor{ \, \text{or} \, } 
+\def\textfor{ \, \text{for} \, } 
+\def\textfa{ \, \text{for all} \, } 
+\def\textst{ \, \text{such that} \, } 
+\def\textin{ \, \text{in} \, } 
+\def\fg{ \, \text{finitely generated} \, }
+\newcommand{\op}{\mathrm{op}}
+
+\newcommand{\xra}[1]{\xrightarrow{#1}} 
+\newcommand{\xora}[1]{\xtwoheadrightarrow{#1}} 
+\newcommand{\xira}[1]{\xhookrightarrow{#1}} 
+\newcommand{\xla}[1]{\xleftarrow{#1}} 
+\def\lra{\longrightarrow}
+\def\into{\hookrightarrow}
+\def\onto{\twoheadrightarrow}
+
+\newcommand{\vv}[1]{\mathbf{#1}}
+\newcommand{\lm}[2]{{#1}\,\l + {#2}\,\mu} 
+\renewcommand{\v}{\vv{v}}
+\renewcommand{\u}{\vv{u}}
+\newcommand{\w}{\vv{w}}
+\newcommand{\x}{\vv{x}}
+\renewcommand{\k}{\vv{k}}
+\newcommand{\0}{\vv{0}}
+\newcommand{\1}{\vv{1}}
+\newcommand{\vecs}[2]{#1_1,#1_2,\dots,#1_{#2}}
+\newcommand{\us}[1][n]{\vecs{\u}{#1}}
+\newcommand{\vs}[1][n]{\vecs{\v}{#1}}
+\newcommand{\ws}[1][n]{\vecs{\w}{#1}}
+\newcommand{\vps}[1][n']{\vecs{\v'}{#1}}
+\newcommand{\ls}[1][n]{\vecs{\l}{#1}}
+\newcommand{\mus}[1][n]{\vecs{\mu}{#1}} 
+\newcommand{\lps}[1][n]{\vecs{\l'}{#1}}
+\def\td{\tilde{\delta}}
+\def\oo{\overline{\omega}}
+\def\ctJ{\tilde{\mathcal J}}
+\def\tPhi{\tilde{\Phi}}
+\def\te{\tilde{e}}
+\def\M{\operatorname{M}}
+\newcommand{\homotopic}{\simeq}
+\newcommand{\homeq}{\cong}
+\newcommand{\iso}{\approx}
+\newcommand{\dual}{\vee} 
+\DeclarePairedDelimiter{\abs}{|}{|}
+\newcommand{\bv}{{\bar{v}}}
+\newcommand{\bu}{{\bar{u}}}
+\newcommand{\bw}{{\bar{w}}}
+\newcommand{\by}{{\bar{y}}}
+\newcommand{\ba}{{\bar{a}}}
+\newcommand{\bb}{{\bar{b}}}
+\newcommand{\bx}{{\bar{x}}}
+\DeclarePairedDelimiterX\setof[2]{\{}{\}}{#1\,|\,#2}
+\newcommand{\vx}{\underline{x}}
+\renewcommand{mod}[1]{\text{(mod }{#1})}
+\newcommand{\Slv}[3]{\sum_{{#2}=1}^{{#3}} {#1}_{{#2}} \v_{{#2}}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -239,12 +497,16 @@ window.MathJax = {
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="quotient-groups.html" class="internal"><span class="codenumber">3</span> <span class="title">Quotient Groups</span></a></div>
+<div class="toc-item"><a href="normal-quotient-groups.html" class="internal"><span class="codenumber">3</span> <span class="title">Normal and Quotient Groups</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-cosets.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Cosets and Equivalence Relations</span></a></div></li>
 <li><div class="toc-item"><a href="sec-normal-subgroups.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Normal Subgroups</span></a></div></li>
-<li><div class="toc-item"><a href="sec-isomorphism-thms.html" class="internal"><span class="codenumber">3.3</span> <span class="title">The Isomorphism Theorems</span></a></div></li>
-<li><div class="toc-item"><a href="sec-grp-presentations.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Presentations as Quotient Groups</span></a></div></li>
+<li><div class="toc-item"><a href="sec-quotient-groups.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Quotient Groups</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-isomorphism-thms.html" class="internal"><span class="codenumber">3.4</span> <span class="title">The Isomorphism Theorems</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-isomorphism-thms.html#exercises-gp-isos" class="internal"><span class="codenumber">3.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="sec-grp-presentations.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Presentations as Quotient Groups</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -252,7 +514,7 @@ window.MathJax = {
 <ul class="structural">
 <li><div class="toc-item"><a href="graction.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Group Actions</span></a></div></li>
 <li><div class="toc-item"><a href="sec-lois.html" class="internal"><span class="codenumber">4.2</span> <span class="title">LOIS and Orbit-Stabilizer</span></a></div></li>
-<li><div class="toc-item"><a href="sec-self-conjugation.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Self Conjugation</span></a></div></li>
+<li><div class="toc-item"><a href="sec-conjugation.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Conjugation</span></a></div></li>
 <li><div class="toc-item"><a href="sec-class-eq.html" class="internal"><span class="codenumber">4.4</span> <span class="title">The Class Equation</span></a></div></li>
 </ul>
 </li>
@@ -261,7 +523,10 @@ window.MathJax = {
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-pgroups.html" class="internal"><span class="codenumber">5.1</span> <span class="title"><span class="process-math">\(p\)</span>-groups</span></a></div></li>
 <li><div class="toc-item"><a href="sec-sylowthm.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Sylow's Theorem</span></a></div></li>
-<li><div class="toc-item"><a href="sec-simple-groups.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Simple Groups</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-simple-groups.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Simple Groups</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-simple-groups.html#exercises-simplegps" class="internal"><span class="codenumber">5.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
 </ul>
 </li>
 <li>
@@ -275,7 +540,10 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="ch-classifications.html" class="internal"><span class="codenumber">7</span> <span class="title">Classifications</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-ftfgag.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Group Decompositions</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-ftfgag.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Group Decompositions</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-ftfgag.html#exercises-decomp" class="internal"><span class="codenumber">7.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
 <li><div class="toc-item"><a href="sec-classifications.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Groups Up to Isomorphism</span></a></div></li>
 </ul>
 </li>
@@ -460,11 +728,11 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-spplications"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">29.1</span> <span class="title">Applications</span>
 </h2>
-<div class="para" id="p-481">Let us start by restating the Artin-Wedderburn theorem in the context of group rings.</div>
+<div class="para" id="p-671">Let us start by restating the Artin-Wedderburn theorem in the context of group rings.</div>
 <article class="theorem theorem-like" id="thm-art-wedd-gr"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">29.1</span><span class="period">.</span><span class="space"> </span><span class="title">Artin-Wedderburn for Group Rings.</span>
 </h3>
-<div class="para logical" id="p-482">
+<div class="para logical" id="p-672">
 <div class="para">If <span class="process-math">\(G\)</span> is a finite group and <span class="process-math">\(K\)</span> is a field such that <span class="process-math">\(\mathrm{char}(K) \nmid |G|\text{,}\)</span> then there is an isomorphism of rings</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -473,26 +741,26 @@ K[G] \cong \operatorname{Mat}_{n_1}(D_1) \times \cdots \times \operatorname{Mat}
 </div>
 <div class="para">where <span class="process-math">\(D_1, \dots, D_m\)</span> are division rings. Furthermore, each <span class="process-math">\(D_i\)</span> contains <span class="process-math">\(K\)</span> (up to isomorphism) as a subring of its center and the above isomorphism is <span class="process-math">\(K\)</span>-linear. In particular, <span class="process-math">\(\dim_K(D_i) &lt; \infty\text{.}\)</span>
 </div>
-</div> <div class="para logical" id="p-483">
+</div> <div class="para logical" id="p-673">
 <div class="para">Moroever, we have:</div>
 <ol class="decimal">
-<li id="li-155"><div class="para" id="p-484">
+<li id="li-177"><div class="para" id="p-674">
 <span class="process-math">\(m\)</span> is the number of irreducible <span class="process-math">\(k\)</span>-linear representation of <span class="process-math">\(G\)</span> (up to isomorphism),</div></li>
-<li id="li-156"><div class="para" id="p-485">the <span class="process-math">\(D_i\)</span>'s are the opposite rings of the endomorphism rings of these representations,</div></li>
-<li id="li-157"><div class="para" id="p-486">the <span class="process-math">\(n_j\)</span>'s give the number of times each irreducible representation occurs in the decomposition of the regular representation of <span class="process-math">\(G\text{,}\)</span>
+<li id="li-178"><div class="para" id="p-675">the <span class="process-math">\(D_i\)</span>'s are the opposite rings of the endomorphism rings of these representations,</div></li>
+<li id="li-179"><div class="para" id="p-676">the <span class="process-math">\(n_j\)</span>'s give the number of times each irreducible representation occurs in the decomposition of the regular representation of <span class="process-math">\(G\text{,}\)</span>
 </div></li>
-<li id="li-158"><div class="para" id="p-487">the numbers <span class="process-math">\(n_1 \cdot \dim_k(D_1), \dots, n_m \cdot \dim_k(D_m)\)</span> give the dimensions of these representations, and</div></li>
-<li id="li-159"><div class="para" id="p-488"><span class="process-math">\(n_1^2 \cdot \dim_k(D_1) + \cdots + n_m^2 \cdot \dim_k(D_m) = |G|\text{.}\)</span></div></li>
+<li id="li-180"><div class="para" id="p-677">the numbers <span class="process-math">\(n_1 \cdot \dim_k(D_1), \dots, n_m \cdot \dim_k(D_m)\)</span> give the dimensions of these representations, and</div></li>
+<li id="li-181"><div class="para" id="p-678"><span class="process-math">\(n_1^2 \cdot \dim_k(D_1) + \cdots + n_m^2 \cdot \dim_k(D_m) = |G|\text{.}\)</span></div></li>
 </ol>
-</div></article><article class="hiddenproof" id="proof-28"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-28"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-28"><article class="hiddenproof"><div class="para" id="p-489">This mostly follows from Artin-Wedderburn and Maschke's Theorem. What needs to be noted is that each division ring here contains a copy of <span class="process-math">\(K\)</span> in its center. Indeed, we recall that each <span class="process-math">\(D_i\)</span> is given as the opposite ring of <span class="process-math">\(\operatorname{End}_{K[G]}(M_i)\)</span> for some simple module <span class="process-math">\(M_i\text{.}\)</span> For <span class="process-math">\(\lambda\in K\text{,}\)</span> we have the map <span class="process-math">\(M_i \xrightarrow{\lambda \cdot} M_i\)</span> which commutes with any <span class="process-math">\(K[G]\)</span>-linear map from <span class="process-math">\(M_i\)</span> to itself.</div></article></div>
+</div></article><article class="hiddenproof" id="proof-67"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-67"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-67"><article class="hiddenproof"><div class="para" id="p-679">This mostly follows from Artin-Wedderburn and Maschke's Theorem. What needs to be noted is that each division ring here contains a copy of <span class="process-math">\(K\)</span> in its center. Indeed, we recall that each <span class="process-math">\(D_i\)</span> is given as the opposite ring of <span class="process-math">\(\operatorname{End}_{K[G]}(M_i)\)</span> for some simple module <span class="process-math">\(M_i\text{.}\)</span> For <span class="process-math">\(\lambda\in K\text{,}\)</span> we have the map <span class="process-math">\(M_i \xrightarrow{\lambda \cdot} M_i\)</span> which commutes with any <span class="process-math">\(K[G]\)</span>-linear map from <span class="process-math">\(M_i\)</span> to itself.</div></article></div>
 <article class="corollary theorem-like" id="cor-ab-iff-gr-fieldprod"><h3 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">29.2</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-490">Let <span class="process-math">\(G\)</span> be a finite group, and <span class="process-math">\(K\)</span> be a field such that <span class="process-math">\(\mathrm{char}(K) \nmid |G|\text{.}\)</span> Then <span class="process-math">\(G\)</span> is abelian if and only if <span class="process-math">\(K[G]\)</span> is isomorphic to a product of fields.</div></article><article class="lemma theorem-like" id="lem-gring-and-iso"><h3 class="heading">
+<div class="para" id="p-680">Let <span class="process-math">\(G\)</span> be a finite group, and <span class="process-math">\(K\)</span> be a field such that <span class="process-math">\(\mathrm{char}(K) \nmid |G|\text{.}\)</span> Then <span class="process-math">\(G\)</span> is abelian if and only if <span class="process-math">\(K[G]\)</span> is isomorphic to a product of fields.</div></article><article class="lemma theorem-like" id="lem-gring-and-iso"><h3 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">29.3</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-491">Let <span class="process-math">\(G\)</span> be any group and <span class="process-math">\(K\)</span> any field. Given two group homomorphisms <span class="process-math">\(\rho_1, \rho_2: G \to K^\times = \operatorname{GL}_1(K)\text{,}\)</span> the associated <span class="process-math">\(K[G]\)</span>-modules <span class="process-math">\(M_1\)</span> and <span class="process-math">\(M_2\)</span> are isomorphic if and only if <span class="process-math">\(\rho_1 =\rho_2\text{.}\)</span>
-</div></article><article class="hiddenproof" id="proof-29"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-29"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-29"><article class="hiddenproof"><div class="para logical" id="p-492">
+<div class="para" id="p-681">Let <span class="process-math">\(G\)</span> be any group and <span class="process-math">\(K\)</span> any field. Given two group homomorphisms <span class="process-math">\(\rho_1, \rho_2: G \to K^\times = \operatorname{GL}_1(K)\text{,}\)</span> the associated <span class="process-math">\(K[G]\)</span>-modules <span class="process-math">\(M_1\)</span> and <span class="process-math">\(M_2\)</span> are isomorphic if and only if <span class="process-math">\(\rho_1 =\rho_2\text{.}\)</span>
+</div></article><article class="hiddenproof" id="proof-68"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-68"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-68"><article class="hiddenproof"><div class="para logical" id="p-682">
 <div class="para">Suppose that <span class="process-math">\(\alpha:M_1 \to M_2\)</span> is an isomorphism of <span class="process-math">\(K[G]\)</span>-modules. Identifying <span class="process-math">\(M_1=M_2=K\)</span> as vector spaces, we have <span class="process-math">\(\alpha(k) = ck\)</span> for some <span class="process-math">\(c\neq 0\text{.}\)</span> Then,</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -505,13 +773,13 @@ c \rho_1(g) (k) = \alpha \rho_1(g) (k) = \rho_2(g) \alpha(k) = \rho_2(g) (ck) = 
 <article class="proposition theorem-like" id="prop-dring-and-C"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">29.4</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-493">If <span class="process-math">\(D\)</span> is a division ring that contains <span class="process-math">\({\mathbb{R}}\)</span> in its center and <span class="process-math">\(\dim_{\mathbb{R}}(D) =2\text{,}\)</span> then <span class="process-math">\(D \cong \mathbb{C}\)</span> .</div></article><article class="hiddenproof" id="proof-30"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-30"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-30"><article class="hiddenproof"><div class="para" id="p-494">Pick <span class="process-math">\(x \in D \smallsetminus {\mathbb{R}}\text{.}\)</span> Then <span class="process-math">\({\mathbb{R}}\subsetneqq {\mathbb{R}}[x] \subseteq D\text{,}\)</span> and since <span class="process-math">\({\mathbb{R}}[x]\)</span> is an <span class="process-math">\({\mathbb{R}}\)</span>-vectorspace, we must have <span class="process-math">\({\mathbb{R}}[x] = D\)</span> for dimension reasons. Thus <span class="process-math">\(D\)</span> is commutative and is a field. Since <span class="process-math">\(D\)</span> is a finite extension of <span class="process-math">\({\mathbb{R}}\text{,}\)</span> it is algebraic, so <span class="process-math">\({\mathbb{R}}\subsetneqq D \subseteq \mathbb{C}\text{,}\)</span> and we must have <span class="process-math">\(D=\mathbb{C}\text{.}\)</span>
+<div class="para" id="p-683">If <span class="process-math">\(D\)</span> is a division ring that contains <span class="process-math">\({\mathbb{R}}\)</span> in its center and <span class="process-math">\(\dim_{\mathbb{R}}(D) =2\text{,}\)</span> then <span class="process-math">\(D \cong \mathbb{C}\)</span> .</div></article><article class="hiddenproof" id="proof-69"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-69"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-69"><article class="hiddenproof"><div class="para" id="p-684">Pick <span class="process-math">\(x \in D \smallsetminus {\mathbb{R}}\text{.}\)</span> Then <span class="process-math">\({\mathbb{R}}\subsetneqq {\mathbb{R}}[x] \subseteq D\text{,}\)</span> and since <span class="process-math">\({\mathbb{R}}[x]\)</span> is an <span class="process-math">\({\mathbb{R}}\)</span>-vectorspace, we must have <span class="process-math">\({\mathbb{R}}[x] = D\)</span> for dimension reasons. Thus <span class="process-math">\(D\)</span> is commutative and is a field. Since <span class="process-math">\(D\)</span> is a finite extension of <span class="process-math">\({\mathbb{R}}\text{,}\)</span> it is algebraic, so <span class="process-math">\({\mathbb{R}}\subsetneqq D \subseteq \mathbb{C}\text{,}\)</span> and we must have <span class="process-math">\(D=\mathbb{C}\text{.}\)</span>
 </div></article></div>
 <article class="example example-like" id="example-21"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">29.5</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-495">Let <span class="process-math">\(k = {\mathbb{R}}\)</span> and <span class="process-math">\(G = S_3\text{.}\)</span> We find all the simple modules over the ring <span class="process-math">\({\mathbb{R}}[S_3]\)</span> or, equivalently, all irreducible <span class="process-math">\({\mathbb{R}}\)</span>-linear representations of <span class="process-math">\(S_3\text{.}\)</span> We also find the Artin-Wedderburn decomposition of <span class="process-math">\({\mathbb{R}}[S_3]\text{.}\)</span>
-</div> <div class="para logical" id="p-496">
+<div class="para" id="p-685">Let <span class="process-math">\(k = {\mathbb{R}}\)</span> and <span class="process-math">\(G = S_3\text{.}\)</span> We find all the simple modules over the ring <span class="process-math">\({\mathbb{R}}[S_3]\)</span> or, equivalently, all irreducible <span class="process-math">\({\mathbb{R}}\)</span>-linear representations of <span class="process-math">\(S_3\text{.}\)</span> We also find the Artin-Wedderburn decomposition of <span class="process-math">\({\mathbb{R}}[S_3]\text{.}\)</span>
+</div> <div class="para logical" id="p-686">
 <div class="para">The one dimensional represenatations are given by group homomorphisms of the form <span class="process-math">\(S_3 \to {\mathbb{R}}^\times\text{,}\)</span> and any such map factors as</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -519,13 +787,13 @@ S_3 \twoheadrightarrow S_3^{\mathrm{ab}} \to {\mathbb{R}}^\times.
 \end{equation*}
 </div>
 <div class="para">Note that <span class="process-math">\(S_3^{\mathrm{ab}} = S_3/A_3 \cong C_2\)</span> and there are two group homomorphisms <span class="process-math">\(C_2 \to {\mathbb{R}}^\times\text{,}\)</span> sending the generator to either <span class="process-math">\(1\)</span> or <span class="process-math">\(-1\)</span> (the only elements of <span class="process-math">\({\mathbb{R}}^\times\)</span> of order <span class="process-math">\(1\)</span> or <span class="process-math">\(2\)</span>). This gives two representations: <span class="process-math">\(M_1 = {\mathbb{R}}\)</span> with <span class="process-math">\(S_3\)</span> acting trivially and <span class="process-math">\(M_2 = {\mathbb{R}}\)</span> with <span class="process-math">\(S_3\)</span> acting by the sign representation. These are not isomorphic by the previous lemma.</div>
-</div> <div class="para" id="p-497">We have that <span class="process-math">\(1= \dim_{{\mathbb{R}}}(M_1) = n_1 \cdot \dim_{{\mathbb{R}}}(D_1)\)</span> so <span class="process-math">\(n_1=1\)</span> and <span class="process-math">\(\dim_{{\mathbb{R}}}(D_1)=1\text{,}\)</span> and likewise <span class="process-math">\(1= \dim_{{\mathbb{R}}}(M_2) = n_2 \cdot \dim_{{\mathbb{R}}}(D_2)\)</span> so <span class="process-math">\(n_2=1\)</span> and <span class="process-math">\(\dim_{{\mathbb{R}}}(D_2)=1\text{.}\)</span> So, the Artin-Wedderburn decomposition starts as</div> <div class="para logical" id="p-498"><div class="displaymath process-math">
+</div> <div class="para" id="p-687">We have that <span class="process-math">\(1= \dim_{{\mathbb{R}}}(M_1) = n_1 \cdot \dim_{{\mathbb{R}}}(D_1)\)</span> so <span class="process-math">\(n_1=1\)</span> and <span class="process-math">\(\dim_{{\mathbb{R}}}(D_1)=1\text{,}\)</span> and likewise <span class="process-math">\(1= \dim_{{\mathbb{R}}}(M_2) = n_2 \cdot \dim_{{\mathbb{R}}}(D_2)\)</span> so <span class="process-math">\(n_2=1\)</span> and <span class="process-math">\(\dim_{{\mathbb{R}}}(D_2)=1\text{.}\)</span> So, the Artin-Wedderburn decomposition starts as</div> <div class="para logical" id="p-688"><div class="displaymath process-math">
 \begin{equation*}
 {\mathbb{R}}[S_3] \cong {\mathbb{R}}\times {\mathbb{R}}\times \cdots.
 \end{equation*}
-</div></div> <div class="para" id="p-499">Note that there are no further factors of <span class="process-math">\({\mathbb{R}}\text{,}\)</span> since we found all of the one-dimensional simple modules.</div> <div class="para" id="p-500">Recall also that <span class="process-math">\(S_3\)</span> acts on <span class="process-math">\({\mathbb{R}}^3\)</span> by permuting the basis (corresponding to the group homomorphism <span class="process-math">\(S_3 \to \operatorname{GL}_3({\mathbb{R}})\)</span> sending a permutation to its associated permutation matrix). The subspace <span class="process-math">\(M_3 = \{(a,b,c) \in {\mathbb{R}}^3 \mid a + b + c = 0\}\)</span> is a subrepresenation of <span class="process-math">\({\mathbb{R}}^3\)</span> of dimension <span class="process-math">\(2\text{.}\)</span> We claim it is irreducible: Say <span class="process-math">\(0 \ne (a,b,c) \in M_3\text{.}\)</span>
-</div> <div class="para" id="p-501">By applying a permutation and scaling appropriately we obtain an element of the form <span class="process-math">\((1,x,-1-x) \in M_3\)</span> and hence <span class="process-math">\((1, -1-x, x) \in M_3\text{.}\)</span> Adding these gives <span class="process-math">\((2,-1,-1) \in M_3\)</span> and hence <span class="process-math">\((-1, 2,-1) \in M_3\text{.}\)</span> The latter two are linearly independent and so must span <span class="process-math">\(M_3\text{.}\)</span> This proves <span class="process-math">\((a,b,c)\)</span> generates <span class="process-math">\(M_3\)</span> as a left <span class="process-math">\({\mathbb{R}}[S_3]\)</span>-module and hence that <span class="process-math">\(M_3\)</span> is simple. Note that <span class="process-math">\(M_3\)</span> is not isomorphic to either <span class="process-math">\(M_1\)</span> nor <span class="process-math">\(M_2\)</span> by dimension considerations.</div> <div class="para" id="p-502">We have that <span class="process-math">\(2=\dim{{\mathbb{R}}}(M_3) = n_3 \cdot \dim_{{\mathbb{R}}}(D_3)\text{,}\)</span> so there are two possibilities.</div> <div class="para logical" id="p-503"><ol class="decimal">
-<li id="li-160"><div class="para logical" id="p-504">
+</div></div> <div class="para" id="p-689">Note that there are no further factors of <span class="process-math">\({\mathbb{R}}\text{,}\)</span> since we found all of the one-dimensional simple modules.</div> <div class="para" id="p-690">Recall also that <span class="process-math">\(S_3\)</span> acts on <span class="process-math">\({\mathbb{R}}^3\)</span> by permuting the basis (corresponding to the group homomorphism <span class="process-math">\(S_3 \to \operatorname{GL}_3({\mathbb{R}})\)</span> sending a permutation to its associated permutation matrix). The subspace <span class="process-math">\(M_3 = \{(a,b,c) \in {\mathbb{R}}^3 \mid a + b + c = 0\}\)</span> is a subrepresenation of <span class="process-math">\({\mathbb{R}}^3\)</span> of dimension <span class="process-math">\(2\text{.}\)</span> We claim it is irreducible: Say <span class="process-math">\(0 \ne (a,b,c) \in M_3\text{.}\)</span>
+</div> <div class="para" id="p-691">By applying a permutation and scaling appropriately we obtain an element of the form <span class="process-math">\((1,x,-1-x) \in M_3\)</span> and hence <span class="process-math">\((1, -1-x, x) \in M_3\text{.}\)</span> Adding these gives <span class="process-math">\((2,-1,-1) \in M_3\)</span> and hence <span class="process-math">\((-1, 2,-1) \in M_3\text{.}\)</span> The latter two are linearly independent and so must span <span class="process-math">\(M_3\text{.}\)</span> This proves <span class="process-math">\((a,b,c)\)</span> generates <span class="process-math">\(M_3\)</span> as a left <span class="process-math">\({\mathbb{R}}[S_3]\)</span>-module and hence that <span class="process-math">\(M_3\)</span> is simple. Note that <span class="process-math">\(M_3\)</span> is not isomorphic to either <span class="process-math">\(M_1\)</span> nor <span class="process-math">\(M_2\)</span> by dimension considerations.</div> <div class="para" id="p-692">We have that <span class="process-math">\(2=\dim{{\mathbb{R}}}(M_3) = n_3 \cdot \dim_{{\mathbb{R}}}(D_3)\text{,}\)</span> so there are two possibilities.</div> <div class="para logical" id="p-693"><ol class="decimal">
+<li id="li-182"><div class="para logical" id="p-694">
 <div class="para">One possibility is <span class="process-math">\(n_3=1\)</span> and <span class="process-math">\(\dim_{{\mathbb{R}}}(D_3)=2\text{,}\)</span> in which case <span class="process-math">\(D_3\cong \mathbb{C}\text{,}\)</span> so the Artin-Wedderburn decomposition reads as</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -540,7 +808,7 @@ S_3 \twoheadrightarrow S_3^{\mathrm{ab}} \to {\mathbb{R}}^\times.
 </div>
 <div class="para">would be commutative, which it is not, as <span class="process-math">\(S_3\)</span> is not abelian.</div>
 </div></li>
-<li id="li-161"><div class="para logical" id="p-505">
+<li id="li-183"><div class="para logical" id="p-695">
 <div class="para">The other possibility is <span class="process-math">\(n_3=2\)</span> and <span class="process-math">\(D_3={\mathbb{R}}\text{.}\)</span> We obtain the AW decomposition</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -548,7 +816,7 @@ S_3 \twoheadrightarrow S_3^{\mathrm{ab}} \to {\mathbb{R}}^\times.
 \end{equation*}
 </div>
 </div></li>
-</ol></div> <div class="para" id="p-506">(Alternatively, we could compute the endomorphism ring of <span class="process-math">\(M_3\)</span> and see that it contains only scalars.)</div> <div class="para" id="p-507">We have found the AW decomposition of <span class="process-math">\({\mathbb{R}}[S_3]\text{.}\)</span> As a consequence, we have identified all of the irreducible real representations of <span class="process-math">\(S_3\text{.}\)</span>
+</ol></div> <div class="para" id="p-696">(Alternatively, we could compute the endomorphism ring of <span class="process-math">\(M_3\)</span> and see that it contains only scalars.)</div> <div class="para" id="p-697">We have found the AW decomposition of <span class="process-math">\({\mathbb{R}}[S_3]\text{.}\)</span> As a consequence, we have identified all of the irreducible real representations of <span class="process-math">\(S_3\text{.}\)</span>
 </div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="ch-applications.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-rep-closed-fields.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

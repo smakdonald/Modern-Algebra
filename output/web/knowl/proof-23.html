@@ -11,35 +11,15 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<div class="para logical">
-<div class="para">Let <span class="process-math">\(i: N \to M\)</span> be any injection of left <span class="process-math">\(K[G]\)</span>-modules. It suffices to prove that there is an <span class="process-math">\(K[G]\)</span>-linear map <span class="process-math">\(p: M \to N\)</span> such that <span class="process-math">\(p \circ i = \mathrm{id}_N\text{.}\)</span> By restriction of scalars along the inclusion <span class="process-math">\(K \subseteq K[G]\text{,}\)</span> we may regard <span class="process-math">\(i\)</span> as a <span class="process-math">\(K\)</span>-linear map between <span class="process-math">\(K\)</span>-vector spaces. As such it admits a <span class="process-math">\(K\)</span>-linear splitting <span class="process-math">\(f: M \twoheadrightarrow N\)</span> (since <span class="process-math">\(K\)</span> is semisimple). There is no reason that <span class="process-math">\(f\)</span> will be <span class="process-math">\(K[G]\)</span>-linear, but we can modify it so that it becomes so: Define <span class="process-math">\(p: M \to N\)</span> by</div>
-<div class="displaymath process-math">
-\begin{equation*}
-p(m) = \frac{1}{|G|} \sum_{g \in G} g^{-1} f(g m).
-\end{equation*}
-</div>
-<div class="para">Note that the formula makes sense since <span class="process-math">\(|G|\)</span> is invertible in <span class="process-math">\(K\)</span> by assumption.</div>
-</div> <div class="para logical">
-<div class="para">Then <span class="process-math">\(p\)</span> is still a <span class="process-math">\(K\)</span>-linear map (since <span class="process-math">\(f\)</span> is <span class="process-math">\(K\)</span>-linear and the group action is <span class="process-math">\(K\)</span>-linear). For any <span class="process-math">\(h \in G\)</span> we have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-p(hm) = \frac{1}{|G|} \sum_{g \in G} g^{-1} f(g hm) = \frac{1}{|G|} \sum_{x \in G} hx^{-1} f(xm)
-= h p(m),
-\end{equation*}
-</div>
-<div class="para">where the second equality is given by identifying <span class="process-math">\(x\)</span> with <span class="process-math">\(gh\text{.}\)</span> These conditions ensure that <span class="process-math">\(p\)</span> is <span class="process-math">\(K[G]\)</span>-linear. Finally,</div>
-<div class="displaymath process-math">
-\begin{equation*}
-p(i(n))= \frac{1}{|G|} \sum_{g \in G} g^{-1} f(g i(n))
-= \frac{1}{|G|} \sum_{g \in G} g^{-1} f(i(gn)) 
-= \frac{1}{|G|} \sum_{g \in G} g^{-1} gn
-= \frac{1}{|G|} \sum_{g \in G} n  = n
-\end{equation*}
-</div>
-<div class="para">where the second equality uses that <span class="process-math">\(i\)</span> is <span class="process-math">\(K[G]\)</span>-linear and the third one uses that <span class="process-math">\(f \circ i =
-\mathrm{id}\text{.}\)</span>
-</div>
-</div></article><span class="incontext"><a href="sec-semisimple-rings.html#proof-23" class="internal">in-context</a></span>
+<article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>
+<div class="para">
+<div class="para">Let <span class="process-math">\(G\)</span> be a group of order <span class="process-math">\(p^n\text{,}\)</span> for some prime <span class="process-math">\(p\text{,}\)</span> acting on a finite set <span class="process-math">\(X\text{.}\)</span>
+</div> <section class="paragraphs"><h4 class="heading"><span class="title">Part (a).</span></h4> <div class="para">Suppose there is no element in <span class="process-math">\(X\)</span> that is fixed by all elements of <span class="process-math">\(G\text{.}\)</span>
+</div> <div class="para">By Orbit-Stabilizer we know that <span class="process-math">\(|\Orb_G(x)|\big||G|\)</span> for all <span class="process-math">\(x\in X\text{.}\)</span> Thus every orbit under this action has an order dividing <span class="process-math">\(p^n\text{,}\)</span> so either <span class="process-math">\(1\)</span> or some positive power of <span class="process-math">\(p.\)</span> However, as no element of <span class="process-math">\(X\)</span> is fixed by every element of <span class="process-math">\(G\text{,}\)</span> there exists no stabilizer which is all of <span class="process-math">\(G\text{,}\)</span> and thus there exist no orbits that have order <span class="process-math">\(1\text{.}\)</span>
+</div> <div class="para">Recall that the orbits of this action partition <span class="process-math">\(X\text{,}\)</span> and thus <span class="process-math">\(|X|=\sum_{x\in X}|\Orb_G(x)|\text{.}\)</span> As every orbit is divisible by <span class="process-math">\(p\text{,}\)</span> so too must be <span class="process-math">\(X\text{.}\)</span>
+</div> <section class="paragraphs"><h5 class="heading"><span class="title">Part (b).</span></h5> <div class="para">Suppose <span class="process-math">\(G\)</span> acts faithfully on <span class="process-math">\(X\text{.}\)</span> Thus the permutation representation homomorphism <span class="process-math">\(\rho:G\to\Perm(X)\)</span> is injective. Let <span class="process-math">\(k\)</span> denote the order of <span class="process-math">\(X\text{.}\)</span> Then <span class="process-math">\(\Perm(X)\cong S_k\text{,}\)</span> which as order <span class="process-math">\(k!\text{.}\)</span> As <span class="process-math">\(G\)</span> is injective, we see that <span class="process-math">\(|G|=|\im\rho|\leq S_k\text{,}\)</span> and thus <span class="process-math">\(p^n|k!\text{.}\)</span>
+</div> <div class="para">Thus <span class="process-math">\(p\)</span> must show up in the factorization of <span class="process-math">\(k!\)</span> at least <span class="process-math">\(n\)</span> times, meaning that <span class="process-math">\(|X| \geq np\text{.}\)</span>
+</div></section></section>
+</div></article><span class="incontext"><a href="sec-pgroups.html#proof-23" class="internal">in-context</a></span>
 </body>
 </html>

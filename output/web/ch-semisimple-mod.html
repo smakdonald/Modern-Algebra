@@ -179,17 +179,275 @@ window.MathJax = {
 </li>
 </ol></div></button><span class="treebuttons"><a class="previous-button button" href="sec-chain-conditions.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="part-representation.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="ch-artin-wedd.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
 <input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
-</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\identity}{\mathrm{id}}
-\newcommand{\notdivide}{{\not{\mid}}}
-\newcommand{\notsubset}{\not\subset}
-\newcommand{\lcm}{\operatorname{lcm}}
-\newcommand{\gf}{\operatorname{GF}}
-\newcommand{\inn}{\operatorname{Inn}}
-\newcommand{\aut}{\operatorname{Aut}}
-\newcommand{\Hom}{\operatorname{Hom}}
-\newcommand{\cis}{\operatorname{cis}}
-\newcommand{\chr}{\operatorname{char}}
-\newcommand{\Null}{\operatorname{Null}}
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\def\ann{\operatorname{ann}}
+\newcommand{\Ass}{\operatorname{Ass}}
+\def\Aut{\operatorname{Aut}}
+\def\can{{\mathrm {can}}}
+\def\char{\operatorname{char}}
+\def\cp{\operatorname{CharPoly}}
+\def\codim{\operatorname{codim}} 
+\def\coker{\operatorname{coker}}
+\DeclareMathOperator*{\colim}{colim} 
+\def\cont{\operatorname{cont}} 
+\def\diam{\operatorname{diam}} 
+\def\dm{\operatorname{dim}} 
+\DeclareMathOperator{\edim}{embdim} 
+\def\End{\operatorname{End}} 
+\def\eval{\operatorname{eval}} 
+\def\Ext{\operatorname{Ext}} 
+\def\Frac{\operatorname{Frac}}
+\def\Fun{\operatorname{Fun}}
+\def\Gal{\operatorname{Gal}}
+\def\gcd{\operatorname{gcd}}
+\newcommand{\GL}{\operatorname{GL}} 
+\newcommand{\ht}{\operatorname{height}} 
+\def\Hom{\operatorname{Hom}} 
+\def\im{\operatorname{id}} 
+\def\im{\operatorname{im}} 
+\def\Inn{\operatorname{Inn}}
+\def\ker{\operatorname{ker}}
+\def\lcm{\operatorname{lcm}} 
+\def\Mat{\operatorname{Mat}}
+\newcommand{\Min}{\operatorname{Min}}
+\def\mp{\operatorname{MinPoly}}
+\def\mSpec{\operatorname{mSpec}}
+\def\MSpec{\operatorname{MSpec}}
+\def\null{\operatorname{Nul}}
+\DeclareMathOperator{\ns}{nullspace}
+\newcommand{\opp}{\operatorname{opp}}
+\def\Orb{\operatorname{Orb}} 
+\def\Out{\operatorname{Out}}
+\def\Perm{\operatorname{Perm}}
+\def\ptstab{\operatorname{PtStab}} 
+\def\rad{\operatorname{rad}}
+\DeclareMathOperator{\range}{range}
+\def\rank{\operatorname{rank}}
+\def\res{\operatorname{res}}
+\def\setstab{\operatorname{SetStab}}
+\def\sign{{\operatorname{sign}}}
+\newcommand{\SL}{\operatorname{SL}}
+\def\Span{\operatorname{Span}}
+\def\Spec{\operatorname{Spec}}
+\def\Stab{\operatorname{Stab}} 
+\DeclareMathOperator{\Supp}{Supp}
+\def\Syl{\operatorname{Syl}}
+\def\Tor{\operatorname{Tor}}
+\def\trace{\operatorname{trace}}
+\def\uSpec{\operatorname{\underline{Spec}}}
+
+\newcommand{\Ob}{\mathrm{Ob}}
+\newcommand{\Set}{\mathbf{Set}}
+\newcommand{\Grp}{\mathbf{Grp}}
+\newcommand{\Ab}{\mathbf{Ab}}
+\newcommand{\Sgrp}{\mathbf{Sgrp}}
+\newcommand{\Ring}{\mathbf{Ring}} 
+\newcommand{\Fld}{\mathbf{Fld}}
+\newcommand{\cRing}{\mathbf{cRing}}
+\newcommand{\Mod}[1]{#1-\mathbf{Mod}} 
+\newcommand{\Cx}[1]{#1-\mathbf{Comp}} 
+\newcommand{\vs}[1]{#1-\mathbf{vect}}
+\newcommand{\Vs}[1]{#1-\mathbf{Vect}}
+\newcommand{\vsp}[1]{#1-\mathbf{vect}^+} 
+\newcommand{\Top}{\mathbf{Top}} 
+\newcommand{\Setp}{\mathbf{Set}_*} 
+\newcommand{\Alg}[1]{#1-\mathbf{Alg}} 
+\newcommand{\cAlg}[1]{#1-\mathbf{cAlg}} 
+\newcommand{\PO}{\mathbf{PO}}
+\newcommand{\Cont}{\mathrm{Cont}}
+\newcommand{\MaT}[1]{\mathbf{Mat}_{#1}}
+\newcommand{\Rep}[2]{\mathbf{Rep}_{#1}(#2)}
+
+\def\l{\lambda}
+\def\lx{\lambda_x}
+\def\a{\alpha}
+\def\b{\beta}
+\def\d{\delta}
+\def\e{\varepsilon}
+\def\g{\gamma}
+\def\t{\theta}
+\def\s{\sigma}
+\def\z{\zeta}
+\def\vp{\varphi}
+
+
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\B}{\mathbb{B}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\G}{\mathbb{G}}
+\newcommand{\H}{\mathbb{H}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\J}{\mathbb{J}}
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\L}{\mathbb{L}} 
+\newcommand{\M}{\mathbb{M}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\O}{\mathbb{O}}
+\newcommand{\P}{\mathbb{P}}
+\newcommand{\Q}{\mathbb{Q}} 
+\newcommand{\R}{\mathbb{R}} 
+\newcommand{\S}{\mathbb{S}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\U}{\mathbb{U}}
+\newcommand{\V}{\mathbb{V}}
+\newcommand{\W}{\mathbb{W}}
+\newcommand{\X}{\mathbb{X}}
+\newcommand{\Y}{\mathbb{Y}}
+\newcommand{\Z}{\mathbb{Z}} 
+\newcommand{\ON}{\mathbb{ON}}
+
+\def\cA{\mathcal A} 
+\def\cB{\mathcal B} 
+\def\cC{\mathcal C} 
+\def\cD{\mathcal D} 
+\def\cE{\mathcal E} 
+\def\cF{\mathcal F} 
+\def\cG{\mathcal G} 
+\def\cH{\mathcal H} 
+\def\cI{\mathcal I} 
+\def\cJ{\mathcal J} 
+\def\cK{\mathcal K} 
+\def\cL{\mathcal L}
+\def\cM{\mathcal M} 
+\def\cN{\mathcal N} 
+\def\cO{\mathcal O} 
+\def\cP{\mathcal P} 
+\def\cQ{\mathcal Q} 
+\def\cR{\mathcal R} 
+\def\cS{\mathcal S} 
+\def\cT{\mathcal T} 
+\def\cU{\mathcal U} 
+\def\cV{\mathcal V} 
+\def\cW{\mathcal W} 
+\def\cX{\mathcal X} 
+\def\cY{\mathcal Y} 
+\def\cZ{\mathcal Z} 
+
+\newcommand{\fa}{{\mathfrak a}} 
+\newcommand{\fb}{{\mathfrak b}} 
+\newcommand{\fc}{{\mathfrak c}} 
+\newcommand{\fd}{{\mathfrak d}} 
+\newcommand{\fe}{{\mathfrak e}}
+\newcommand{\fm}{{\mathfrak m}} 
+\newcommand{\fp}{{\mathfrak p}} 
+\newcommand{\fq}{{\mathfrak q}} 
+\newcommand{\fK}{{\mathfrak K}} 
+\newcommand{\fR}{{\mathfrak R}} 
+
+\def\sA{\mathscr A} 
+\def\sB{\mathscr B} 
+\def\sC{\mathscr C} 
+\def\sD{\mathscr D} 
+\def\sE{\mathscr E} 
+\def\sF{\mathscr F} 
+\def\sG{\mathscr G} 
+\def\sH{\mathscr H} 
+\def\sI{\mathscr I} 
+\def\sJ{\mathscr J} 
+\def\sK{\mathscr K} 
+\def\sL{\mathscr L}
+\def\sM{\mathscr M}
+\def\sN{\mathscr N}
+\def\sO{\mathscr O}
+\def\sP{\mathscr P}
+\def\sQ{\mathscr Q}
+\def\sR{\mathscr R}
+\def\sS{\mathscr S}
+\def\sT{\mathscr T}
+\def\sZ{\mathscr Z}
+
+\def\tS{\tilde{S}}
+
+
+\def\sdp{\rtimes}
+\newcommand{\tensor}{\otimes} 
+\newcommand{\igen}[1]{\langle #1 \rangle} 
+\def\nsg{\unlhd} 
+\def\kval{{k-\mathrm{valued}}} 
+\def\kalg{{k-\mathrm{alg}}}
+\newcommand\GG[2]{\Gal(#1/#2)}
+
+\newcommand{\MF}[3]{\Mat_{#1\times #2}(#3)}
+\newcommand{\vectwo}[2]{\begin{bmatrix} #1 \\ #2 \end{bmatrix}} 
+\newcommand{\vecthree}[3]{\begin{bmatrix} #1 \\ #2 \\ #3\end{bmatrix}} 
+\def\ob{{\mathfrak{ob}} }
+
+
+\def\qed{\square}
+\def\sse{\subseteq}
+\def\ss{\subset} 
+\def\ssne{\subsetneq}
+\def\sm{\setminus}
+\def\inv{^{-1}} 
+\newcommand{\es}{\emptyset} 
+\newcommand{\Zm}[1]{\Z/({#1})} 
+\def\ov#1{\overline{#1}} 
+\def\xdots{x_1, \dots, x_n} 
+\def\adots{a_1, \dots, a_n} 
+\def\bdots{b_1, \dots, b_n} 
+\def\udots{u_1, \dots, u_n} 
+\newcommand{\leg}[2]{\left(\frac{{#1}}{{#2}}\right)} 
+\def\th{^{th}} 
+\def\htpy{\simeq_{\mathrm{htpc}}} 
+
+\def\textand{ \, \text{and} \, } 
+\def\textor{ \, \text{or} \, } 
+\def\textfor{ \, \text{for} \, } 
+\def\textfa{ \, \text{for all} \, } 
+\def\textst{ \, \text{such that} \, } 
+\def\textin{ \, \text{in} \, } 
+\def\fg{ \, \text{finitely generated} \, }
+\newcommand{\op}{\mathrm{op}}
+
+\newcommand{\xra}[1]{\xrightarrow{#1}} 
+\newcommand{\xora}[1]{\xtwoheadrightarrow{#1}} 
+\newcommand{\xira}[1]{\xhookrightarrow{#1}} 
+\newcommand{\xla}[1]{\xleftarrow{#1}} 
+\def\lra{\longrightarrow}
+\def\into{\hookrightarrow}
+\def\onto{\twoheadrightarrow}
+
+\newcommand{\vv}[1]{\mathbf{#1}}
+\newcommand{\lm}[2]{{#1}\,\l + {#2}\,\mu} 
+\renewcommand{\v}{\vv{v}}
+\renewcommand{\u}{\vv{u}}
+\newcommand{\w}{\vv{w}}
+\newcommand{\x}{\vv{x}}
+\renewcommand{\k}{\vv{k}}
+\newcommand{\0}{\vv{0}}
+\newcommand{\1}{\vv{1}}
+\newcommand{\vecs}[2]{#1_1,#1_2,\dots,#1_{#2}}
+\newcommand{\us}[1][n]{\vecs{\u}{#1}}
+\newcommand{\vs}[1][n]{\vecs{\v}{#1}}
+\newcommand{\ws}[1][n]{\vecs{\w}{#1}}
+\newcommand{\vps}[1][n']{\vecs{\v'}{#1}}
+\newcommand{\ls}[1][n]{\vecs{\l}{#1}}
+\newcommand{\mus}[1][n]{\vecs{\mu}{#1}} 
+\newcommand{\lps}[1][n]{\vecs{\l'}{#1}}
+\def\td{\tilde{\delta}}
+\def\oo{\overline{\omega}}
+\def\ctJ{\tilde{\mathcal J}}
+\def\tPhi{\tilde{\Phi}}
+\def\te{\tilde{e}}
+\def\M{\operatorname{M}}
+\newcommand{\homotopic}{\simeq}
+\newcommand{\homeq}{\cong}
+\newcommand{\iso}{\approx}
+\newcommand{\dual}{\vee} 
+\DeclarePairedDelimiter{\abs}{|}{|}
+\newcommand{\bv}{{\bar{v}}}
+\newcommand{\bu}{{\bar{u}}}
+\newcommand{\bw}{{\bar{w}}}
+\newcommand{\by}{{\bar{y}}}
+\newcommand{\ba}{{\bar{a}}}
+\newcommand{\bb}{{\bar{b}}}
+\newcommand{\bx}{{\bar{x}}}
+\DeclarePairedDelimiterX\setof[2]{\{}{\}}{#1\,|\,#2}
+\newcommand{\vx}{\underline{x}}
+\renewcommand{mod}[1]{\text{(mod }{#1})}
+\newcommand{\Slv}[3]{\sum_{{#2}=1}^{{#3}} {#1}_{{#2}} \v_{{#2}}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -239,12 +497,16 @@ window.MathJax = {
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="quotient-groups.html" class="internal"><span class="codenumber">3</span> <span class="title">Quotient Groups</span></a></div>
+<div class="toc-item"><a href="normal-quotient-groups.html" class="internal"><span class="codenumber">3</span> <span class="title">Normal and Quotient Groups</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-cosets.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Cosets and Equivalence Relations</span></a></div></li>
 <li><div class="toc-item"><a href="sec-normal-subgroups.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Normal Subgroups</span></a></div></li>
-<li><div class="toc-item"><a href="sec-isomorphism-thms.html" class="internal"><span class="codenumber">3.3</span> <span class="title">The Isomorphism Theorems</span></a></div></li>
-<li><div class="toc-item"><a href="sec-grp-presentations.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Presentations as Quotient Groups</span></a></div></li>
+<li><div class="toc-item"><a href="sec-quotient-groups.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Quotient Groups</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-isomorphism-thms.html" class="internal"><span class="codenumber">3.4</span> <span class="title">The Isomorphism Theorems</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-isomorphism-thms.html#exercises-gp-isos" class="internal"><span class="codenumber">3.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="sec-grp-presentations.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Presentations as Quotient Groups</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -252,7 +514,7 @@ window.MathJax = {
 <ul class="structural">
 <li><div class="toc-item"><a href="graction.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Group Actions</span></a></div></li>
 <li><div class="toc-item"><a href="sec-lois.html" class="internal"><span class="codenumber">4.2</span> <span class="title">LOIS and Orbit-Stabilizer</span></a></div></li>
-<li><div class="toc-item"><a href="sec-self-conjugation.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Self Conjugation</span></a></div></li>
+<li><div class="toc-item"><a href="sec-conjugation.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Conjugation</span></a></div></li>
 <li><div class="toc-item"><a href="sec-class-eq.html" class="internal"><span class="codenumber">4.4</span> <span class="title">The Class Equation</span></a></div></li>
 </ul>
 </li>
@@ -261,7 +523,10 @@ window.MathJax = {
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-pgroups.html" class="internal"><span class="codenumber">5.1</span> <span class="title"><span class="process-math">\(p\)</span>-groups</span></a></div></li>
 <li><div class="toc-item"><a href="sec-sylowthm.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Sylow's Theorem</span></a></div></li>
-<li><div class="toc-item"><a href="sec-simple-groups.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Simple Groups</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-simple-groups.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Simple Groups</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-simple-groups.html#exercises-simplegps" class="internal"><span class="codenumber">5.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
 </ul>
 </li>
 <li>
@@ -275,7 +540,10 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="ch-classifications.html" class="internal"><span class="codenumber">7</span> <span class="title">Classifications</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-ftfgag.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Group Decompositions</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-ftfgag.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Group Decompositions</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-ftfgag.html#exercises-decomp" class="internal"><span class="codenumber">7.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
 <li><div class="toc-item"><a href="sec-classifications.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Groups Up to Isomorphism</span></a></div></li>
 </ul>
 </li>
@@ -460,21 +728,21 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="ch-semisimple-mod"><h2 class="heading">
 <span class="type">Chapter</span> <span class="codenumber">27</span> <span class="title">Semisimple Modules</span>
 </h2>
-<div class="para" id="p-386">We now study an important condition that is somewhat orthogonal (yet somewhat related) to our chain conditions. The condition of finite length, and to some extent the Noetherian and Artinian conditions, were related to how a module is made out of building blocks, or how big it is in terms of its pieces. The condition of semisimplicity says that a module is composed of basic building blocks in the simplest possible way.</div>
+<div class="para" id="p-576">We now study an important condition that is somewhat orthogonal (yet somewhat related) to our chain conditions. The condition of finite length, and to some extent the Noetherian and Artinian conditions, were related to how a module is made out of building blocks, or how big it is in terms of its pieces. The condition of semisimplicity says that a module is composed of basic building blocks in the simplest possible way.</div>
 <article class="definition definition-like" id="def-semisimple-mod"><h2 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">27.1</span><span class="period">.</span>
 </h2>
-<div class="para" id="p-387">For any ring <span class="process-math">\(R\text{,}\)</span> a left <span class="process-math">\(R\)</span>-module <span class="process-math">\(M\)</span> is called <em class="emphasis">semisimple</em> if it is a (possibly infinite) direct sum of simple modules. The empty direct sum is allowed, so that the <span class="process-math">\(0\)</span> module <em class="emphasis">is</em> considered to be semisimple.</div></article><article class="example example-like" id="example-13"><h2 class="heading">
+<div class="para" id="p-577">For any ring <span class="process-math">\(R\text{,}\)</span> a left <span class="process-math">\(R\)</span>-module <span class="process-math">\(M\)</span> is called <em class="emphasis">semisimple</em> if it is a (possibly infinite) direct sum of simple modules. The empty direct sum is allowed, so that the <span class="process-math">\(0\)</span> module <em class="emphasis">is</em> considered to be semisimple.</div></article><article class="example example-like" id="example-13"><h2 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">27.2</span><span class="period">.</span>
 </h2>
-<div class="para" id="p-388">Let <span class="process-math">\(M\)</span> be a finitely generated <span class="process-math">\(\mathbb{Z}\)</span>-module. Then by the FTFGAG, <span class="process-math">\(M\)</span> is isomorphic to <span class="process-math">\(\mathbb{Z}^r \oplus \mathbb{Z}/p_1^{e_1} \oplus \cdots \oplus \mathbb{Z}/p_n^{e_n}\)</span> for some <span class="process-math">\(r \geq 0\text{,}\)</span> <span class="process-math">\(n \geq 0\text{,}\)</span> primes <span class="process-math">\(p_i\)</span> and positive integers <span class="process-math">\(e_i\text{.}\)</span> Such a module is semisimple if and only if <span class="process-math">\(r = 0\)</span> and <span class="process-math">\(e_i = 1\)</span> for all <span class="process-math">\(i\text{.}\)</span>
+<div class="para" id="p-578">Let <span class="process-math">\(M\)</span> be a finitely generated <span class="process-math">\(\mathbb{Z}\)</span>-module. Then by the FTFGAG, <span class="process-math">\(M\)</span> is isomorphic to <span class="process-math">\(\mathbb{Z}^r \oplus \mathbb{Z}/p_1^{e_1} \oplus \cdots \oplus \mathbb{Z}/p_n^{e_n}\)</span> for some <span class="process-math">\(r \geq 0\text{,}\)</span> <span class="process-math">\(n \geq 0\text{,}\)</span> primes <span class="process-math">\(p_i\)</span> and positive integers <span class="process-math">\(e_i\text{.}\)</span> Such a module is semisimple if and only if <span class="process-math">\(r = 0\)</span> and <span class="process-math">\(e_i = 1\)</span> for all <span class="process-math">\(i\text{.}\)</span>
 </div></article><article class="example example-like" id="example-14"><h2 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">27.3</span><span class="period">.</span>
 </h2>
-<div class="para" id="p-389">Every module over a division ring <span class="process-math">\(D\)</span> is semisimple because any such module has a basis, hence it is a free module.</div></article><article class="lemma theorem-like" id="lem-matrixsemisimple"><h2 class="heading">
+<div class="para" id="p-579">Every module over a division ring <span class="process-math">\(D\)</span> is semisimple because any such module has a basis, hence it is a free module.</div></article><article class="lemma theorem-like" id="lem-matrixsemisimple"><h2 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">27.4</span><span class="period">.</span>
 </h2>
-<div class="para" id="p-390">Let <span class="process-math">\(D\)</span> be a division ring and set <span class="process-math">\(R = M_n(D)\)</span> for some <span class="process-math">\(n \geq 1\text{.}\)</span> I claim <span class="process-math">\(R\)</span> is semisimple as a left module over itself.</div></article><article class="hiddenproof" id="proof-17"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-17"><h2 class="heading"><span class="type">Proof<span class="period">.</span></span></h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-17"><article class="hiddenproof"><div class="para logical" id="p-391">
+<div class="para" id="p-580">Let <span class="process-math">\(D\)</span> be a division ring and set <span class="process-math">\(R = M_n(D)\)</span> for some <span class="process-math">\(n \geq 1\text{.}\)</span> I claim <span class="process-math">\(R\)</span> is semisimple as a left module over itself.</div></article><article class="hiddenproof" id="proof-56"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-56"><h2 class="heading"><span class="type">Proof<span class="period">.</span></span></h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-56"><article class="hiddenproof"><div class="para logical" id="p-581">
 <div class="para">For each <span class="process-math">\(1 \leq i \leq n\text{,}\)</span> let <span class="process-math">\(I_i\)</span> denote the subset of <span class="process-math">\(R\)</span> consisting of matrices whose only nonzero entires belong to the <span class="process-math">\(i\)</span>-th column. The rules for matrix addition and multiplication show that <span class="process-math">\(I_i\)</span> is a left ideal (i.e., a left submodule) of <span class="process-math">\(R\text{.}\)</span> Moreover, there is evident bijection between <span class="process-math">\(I_i\)</span> and <span class="process-math">\(D^n\)</span> (column vectors) and this bijection is an isomorphism of left <span class="process-math">\(R\)</span>-modules. We proved <span class="process-math">\(D^n\)</span> is simple as an <span class="process-math">\(R\)</span>-module and hence so is <span class="process-math">\(I_i\text{.}\)</span> Finally, <span class="process-math">\(R\)</span> is the internal direct sum of <span class="process-math">\(I_1, \dots, I_n\text{:}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -485,13 +753,13 @@ R=I_1\oplus \cdots \oplus I_n
 <div class="para">because each matrix <span class="process-math">\(X\)</span> is uniquely a sum of the form <span class="process-math">\(X_1 + \cdots + X_n\)</span> with <span class="process-math">\(X_i \in M_i\text{.}\)</span>
 </div>
 </div></article></div>
-<article class="problem example-like" id="problem-70"><h2 class="heading">
+<article class="problem example-like" id="problem-100"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">27.5</span><span class="period">.</span>
 </h2>
-<div class="para" id="p-392">Let <span class="process-math">\(\{M_\lambda\}_{\lambda\in \Lambda}\)</span> be an infinite collection of nonzero modules. Then <span class="process-math">\(\bigoplus_{\lambda\in \Lambda} M_\lambda\)</span> is not finitely generated.</div></article><article class="remark remark-like" id="remark-21"><h2 class="heading">
+<div class="para" id="p-582">Let <span class="process-math">\(\{M_\lambda\}_{\lambda\in \Lambda}\)</span> be an infinite collection of nonzero modules. Then <span class="process-math">\(\bigoplus_{\lambda\in \Lambda} M_\lambda\)</span> is not finitely generated.</div></article><article class="remark remark-like" id="remark-21"><h2 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">27.6</span><span class="period">.</span>
 </h2>
-<div class="para logical" id="p-393">
+<div class="para logical" id="p-583">
 <div class="para">As a consequence of the above exercise, a module is a finitely generated semisimple module if and only if it is a finite direct sum of simple modules. In this case if we write <span class="process-math">\(M=M_1 \oplus \cdots \oplus M_n\)</span> as a sum of simple modules, there is a strict composition series</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -503,7 +771,7 @@ R=I_1\oplus \cdots \oplus I_n
 </div></article><article class="proposition theorem-like" id="prop-ks-semisimple-mod"><h2 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">27.7</span><span class="period">.</span><span class="space"> </span><span class="title">Krull-Schmidt for Semisimple Modules.</span>
 </h2>
-<div class="para logical" id="p-394">
+<div class="para logical" id="p-584">
 <div class="para">Let <span class="process-math">\(M\)</span> be a finitely generated semisimple module. Given two direct sum decompositions as simple modules</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -512,19 +780,19 @@ M = M_1 \oplus  \cdots  \oplus M_m = N_1 \oplus  \cdots  \oplus N_n
 </div>
 <div class="para">then <span class="process-math">\(m=n\text{,}\)</span> and there is a permutation <span class="process-math">\(\sigma\)</span> such that <span class="process-math">\(M_{\sigma(i)} \cong N_i\)</span> for all <span class="process-math">\(i\)</span>
 </div>
-</div></article><article class="hiddenproof" id="proof-18"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-18"><h2 class="heading"><span class="type">Proof<span class="period">.</span></span></h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-18"><article class="hiddenproof"><div class="para" id="p-395">Follows from the previous remark and the Jordan-Holder theorem.</div></article></div>
+</div></article><article class="hiddenproof" id="proof-57"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-57"><h2 class="heading"><span class="type">Proof<span class="period">.</span></span></h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-57"><article class="hiddenproof"><div class="para" id="p-585">Follows from the previous remark and the Jordan-Holder theorem.</div></article></div>
 <article class="theorem theorem-like" id="thm-equiv-semisimp-mod"><h2 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">27.8</span><span class="period">.</span><span class="space"> </span><span class="title">Equivalent Conditions for Semisimple Modules.</span>
 </h2>
-<div class="para" id="p-396">For any ring <span class="process-math">\(R\)</span> and left <span class="process-math">\(R\)</span>-module <span class="process-math">\(M\text{,}\)</span> the following are equivalent:</div> <div class="para logical" id="p-397"><ol class="decimal">
-<li id="li-140"><div class="para" id="p-398">
+<div class="para" id="p-586">For any ring <span class="process-math">\(R\)</span> and left <span class="process-math">\(R\)</span>-module <span class="process-math">\(M\text{,}\)</span> the following are equivalent:</div> <div class="para logical" id="p-587"><ol class="decimal">
+<li id="li-162"><div class="para" id="p-588">
 <span class="process-math">\(M\)</span> is semisimple,</div></li>
-<li id="li-141"><div class="para" id="p-399">very submodule of <span class="process-math">\(M\)</span> is a summand; i.e., for every submodule <span class="process-math">\(N\)</span> of <span class="process-math">\(M\)</span> there is a submodule <span class="process-math">\(N'\)</span> such that <span class="process-math">\(M=N\oplus N'\)</span> is the internal direct sum of <span class="process-math">\(N\)</span> and <span class="process-math">\(N'\text{,}\)</span>
+<li id="li-163"><div class="para" id="p-589">very submodule of <span class="process-math">\(M\)</span> is a summand; i.e., for every submodule <span class="process-math">\(N\)</span> of <span class="process-math">\(M\)</span> there is a submodule <span class="process-math">\(N'\)</span> such that <span class="process-math">\(M=N\oplus N'\)</span> is the internal direct sum of <span class="process-math">\(N\)</span> and <span class="process-math">\(N'\text{,}\)</span>
 </div></li>
-<li id="li-142"><div class="para" id="p-400">every injective <span class="process-math">\(R\)</span>-map <span class="process-math">\(i: M' \to M\)</span> is split has a left inverse,</div></li>
-<li id="li-143"><div class="para" id="p-401">every SES of the form <span class="process-math">\(0 \to M' \to M \to M'' \to 0\)</span> is split exact,</div></li>
-<li id="li-144"><div class="para" id="p-402">every surjective <span class="process-math">\(R\)</span>-map <span class="process-math">\(p: M \to M''\)</span> has a right inverse.</div></li>
-</ol></div></article><article class="hiddenproof" id="proof-19"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-19"><h2 class="heading"><span class="type">Proof<span class="period">.</span></span></h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-19"><article class="hiddenproof"><div class="para" id="p-403">The equivalence of (3), (4), and (5) is given by the Splitting Theorem.</div> <div class="para logical" id="p-404">
+<li id="li-164"><div class="para" id="p-590">every injective <span class="process-math">\(R\)</span>-map <span class="process-math">\(i: M' \to M\)</span> is split has a left inverse,</div></li>
+<li id="li-165"><div class="para" id="p-591">every SES of the form <span class="process-math">\(0 \to M' \to M \to M'' \to 0\)</span> is split exact,</div></li>
+<li id="li-166"><div class="para" id="p-592">every surjective <span class="process-math">\(R\)</span>-map <span class="process-math">\(p: M \to M''\)</span> has a right inverse.</div></li>
+</ol></div></article><article class="hiddenproof" id="proof-58"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-58"><h2 class="heading"><span class="type">Proof<span class="period">.</span></span></h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-58"><article class="hiddenproof"><div class="para" id="p-593">The equivalence of (3), (4), and (5) is given by the Splitting Theorem.</div> <div class="para logical" id="p-594">
 <div class="para">
 <span class="process-math">\((2) \Rightarrow (3)\)</span> holds since given an injective map <span class="process-math">\(i\)</span> as in (3), we have by (2) that <span class="process-math">\(i(M')\)</span> is a summand of <span class="process-math">\(M\text{,}\)</span> hence there is a projection homomorphism <span class="process-math">\(\pi:M\to i(M')\)</span> that splits the inclusion of the summand into <span class="process-math">\(M\text{,}\)</span> that is <span class="process-math">\(\pi|_{i(M')}=\mathrm{id}_{i(M')}\text{.}\)</span> Now <span class="process-math">\(i:M'\to i(M')\)</span> is an isomorphism so we may consider the <span class="process-math">\(R\)</span>-module homomorphism <span class="process-math">\(i^{-1}:i(M')\to M'\)</span> and set <span class="process-math">\(q:M\to M'\)</span> to be <span class="process-math">\(q=i^{-1}\circ \pi\text{.}\)</span> Then</div>
 <div class="displaymath process-math">
@@ -532,7 +800,7 @@ M = M_1 \oplus  \cdots  \oplus M_m = N_1 \oplus  \cdots  \oplus N_n
 q\circ i=i^{-1}\circ \pi \circ i=i^{-1}\circ \pi_{i(M')} \circ i= i^{-1}\circ i=\mathrm{id}_{M'}.
 \end{equation*}
 </div>
-</div> <div class="para logical" id="p-405">
+</div> <div class="para logical" id="p-595">
 <div class="para">
 <span class="process-math">\((3) \Rightarrow (2)\)</span> holds since we can split the inclusion <span class="process-math">\(N\to M\)</span> and thus also the SES</div>
 <div class="displaymath process-math">
@@ -542,14 +810,14 @@ q\circ i=i^{-1}\circ \pi \circ i=i^{-1}\circ \pi_{i(M')} \circ i= i^{-1}\circ i=
 </div>
 <div class="para">Therefore the Splitting Theorem yields <span class="process-math">\(M=N\oplus s(M/N)\)</span> where <span class="process-math">\(s\)</span> denotes the splitting of the quotient map <span class="process-math">\(M\to M/N\text{.}\)</span>
 </div>
-</div> <div class="para" id="p-406">The hard part is proving <span class="process-math">\((1) \Leftrightarrow (2)\text{.}\)</span> <span class="process-math">\((1) \Rightarrow (2)\)</span> Assume (1), so that <span class="process-math">\(M = \oplus_{\lambda \in \Lambda} M_\lambda\)</span> for some collection of simple submodules <span class="process-math">\(M_\lambda\text{,}\)</span> and let <span class="process-math">\(N \subseteq M\)</span> be any submodule. (It is important to note that it does not necessarily follow that <span class="process-math">\(N\)</span> is a sum of some subcollection of the <span class="process-math">\(M_\lambda\)</span>) . Consider the collection <span class="process-math">\(\mathcal S\)</span> of subsets <span class="process-math">\(\Gamma\)</span> of <span class="process-math">\(\Lambda\)</span> such that <span class="process-math">\(N \cap M_\Gamma = 0\)</span> where we define <span class="process-math">\(M_\Gamma := \oplus_{\lambda \in \Gamma} M_\lambda\text{.}\)</span> View <span class="process-math">\(\mathcal S\)</span> as a poset by inclusion. It is nonempty since <span class="process-math">\(J = \emptyset\)</span> belongs to <span class="process-math">\(\mathcal S\text{.}\)</span> If <span class="process-math">\(\{\Gamma_\alpha\}\)</span> is a totally ordered subcollection of <span class="process-math">\(\mathcal S\text{,}\)</span> let <span class="process-math">\(\Gamma = \cup_\alpha \Gamma_\alpha\text{.}\)</span> I claim <span class="process-math">\(M_\Gamma \cap N = 0\text{.}\)</span> If not, there is a nonzero element <span class="process-math">\((m_\gamma) \in M_\Gamma \cap N\text{.}\)</span> But since <span class="process-math">\(m_\gamma = 0\)</span> for all but a finite number of <span class="process-math">\(\gamma\)</span>’s and since the collection of <span class="process-math">\(\Gamma_\alpha\)</span>’s was totally ordered, there is some <span class="process-math">\(\alpha\)</span> such that <span class="process-math">\((m_\gamma) \in M_{\Gamma_\alpha} \cap N\text{,}\)</span> a contradiction. We may thus apply Zorn’s Lemma to get a maximal <span class="process-math">\(\Gamma \in \mathcal S\text{.}\)</span>
-</div> <div class="para" id="p-407">I claim <span class="process-math">\(M\)</span> is the internal direct sum of <span class="process-math">\(N\)</span> and <span class="process-math">\(M_\Gamma\text{.}\)</span> We have <span class="process-math">\(N \cap M_\Gamma = 0\)</span> since <span class="process-math">\(\Gamma\in\mathcal S\)</span> and so it suffices to prove <span class="process-math">\(N + M_\Gamma = M\text{.}\)</span> Since <span class="process-math">\(M = \sum_{\lambda \in \Lambda} M_\lambda\text{,}\)</span> the latter is equivalent to proving that <span class="process-math">\(M_\lambda \subseteq N + M_\Gamma\)</span> for all <span class="process-math">\(\lambda \in \Lambda\text{.}\)</span> If this fails for some <span class="process-math">\(\lambda\text{,}\)</span> then since <span class="process-math">\(M_\lambda \cap (N + M_\Gamma)\)</span> is a proper submodule of <span class="process-math">\(M_\lambda\text{,}\)</span> which is simple, and hence <span class="process-math">\(M_\lambda \cap (N + M_\Gamma) = 0\text{.}\)</span> But then <span class="process-math">\(N \cap (M_{\Gamma} \oplus M_\lambda) = 0\)</span> (if <span class="process-math">\(n \in N\)</span> and <span class="process-math">\(n = m + m'\text{,}\)</span> with <span class="process-math">\(m\in M_\Gamma\)</span> and <span class="process-math">\(m'\in M_\lambda\text{,}\)</span> then <span class="process-math">\(m'=n-m\)</span> so <span class="process-math">\(m'=0\)</span> and <span class="process-math">\(n=m\text{,}\)</span> and then <span class="process-math">\(n=0\text{.}\)</span>) So, <span class="process-math">\(\Gamma\cup\{ \lambda\}\)</span> is a member of <span class="process-math">\(\mathcal S\)</span> that strictly contains <span class="process-math">\(\Gamma\text{,}\)</span> a contradiction. It must be thar <span class="process-math">\(M = N \oplus M_\Gamma\text{.}\)</span>
-</div> <div class="para" id="p-408">
-<span class="process-math">\((2) \Rightarrow (1)\)</span> Now assume that every submodule of <span class="process-math">\(M\)</span> is a summand. We proceed in three steps:</div> <div class="para" id="p-409">(i) We claim that every submodule <span class="process-math">\(T\)</span> of <span class="process-math">\(M\)</span> inherits this property; i.e., every submodule of <span class="process-math">\(T\)</span> is a summand of <span class="process-math">\(T\text{.}\)</span> For say <span class="process-math">\(U \subseteq T\)</span> is a submodule. By assumption on <span class="process-math">\(M\text{,}\)</span> we have <span class="process-math">\(M = U \oplus V\)</span> (internal direct sum) for some <span class="process-math">\(V\text{.}\)</span> Since <span class="process-math">\(U \subseteq T\text{,}\)</span> it follows that <span class="process-math">\(T = U + (V \cap T)\text{.}\)</span> (Given <span class="process-math">\(t \in T\text{,}\)</span> we have <span class="process-math">\(t  =  u +v\)</span> for some <span class="process-math">\(u \in U, v \in V\text{.}\)</span> Since <span class="process-math">\(U \subseteq T\text{,}\)</span> <span class="process-math">\(v =
+</div> <div class="para" id="p-596">The hard part is proving <span class="process-math">\((1) \Leftrightarrow (2)\text{.}\)</span> <span class="process-math">\((1) \Rightarrow (2)\)</span> Assume (1), so that <span class="process-math">\(M = \oplus_{\lambda \in \Lambda} M_\lambda\)</span> for some collection of simple submodules <span class="process-math">\(M_\lambda\text{,}\)</span> and let <span class="process-math">\(N \subseteq M\)</span> be any submodule. (It is important to note that it does not necessarily follow that <span class="process-math">\(N\)</span> is a sum of some subcollection of the <span class="process-math">\(M_\lambda\)</span>) . Consider the collection <span class="process-math">\(\mathcal S\)</span> of subsets <span class="process-math">\(\Gamma\)</span> of <span class="process-math">\(\Lambda\)</span> such that <span class="process-math">\(N \cap M_\Gamma = 0\)</span> where we define <span class="process-math">\(M_\Gamma := \oplus_{\lambda \in \Gamma} M_\lambda\text{.}\)</span> View <span class="process-math">\(\mathcal S\)</span> as a poset by inclusion. It is nonempty since <span class="process-math">\(J = \emptyset\)</span> belongs to <span class="process-math">\(\mathcal S\text{.}\)</span> If <span class="process-math">\(\{\Gamma_\alpha\}\)</span> is a totally ordered subcollection of <span class="process-math">\(\mathcal S\text{,}\)</span> let <span class="process-math">\(\Gamma = \cup_\alpha \Gamma_\alpha\text{.}\)</span> I claim <span class="process-math">\(M_\Gamma \cap N = 0\text{.}\)</span> If not, there is a nonzero element <span class="process-math">\((m_\gamma) \in M_\Gamma \cap N\text{.}\)</span> But since <span class="process-math">\(m_\gamma = 0\)</span> for all but a finite number of <span class="process-math">\(\gamma\)</span>’s and since the collection of <span class="process-math">\(\Gamma_\alpha\)</span>’s was totally ordered, there is some <span class="process-math">\(\alpha\)</span> such that <span class="process-math">\((m_\gamma) \in M_{\Gamma_\alpha} \cap N\text{,}\)</span> a contradiction. We may thus apply Zorn’s Lemma to get a maximal <span class="process-math">\(\Gamma \in \mathcal S\text{.}\)</span>
+</div> <div class="para" id="p-597">I claim <span class="process-math">\(M\)</span> is the internal direct sum of <span class="process-math">\(N\)</span> and <span class="process-math">\(M_\Gamma\text{.}\)</span> We have <span class="process-math">\(N \cap M_\Gamma = 0\)</span> since <span class="process-math">\(\Gamma\in\mathcal S\)</span> and so it suffices to prove <span class="process-math">\(N + M_\Gamma = M\text{.}\)</span> Since <span class="process-math">\(M = \sum_{\lambda \in \Lambda} M_\lambda\text{,}\)</span> the latter is equivalent to proving that <span class="process-math">\(M_\lambda \subseteq N + M_\Gamma\)</span> for all <span class="process-math">\(\lambda \in \Lambda\text{.}\)</span> If this fails for some <span class="process-math">\(\lambda\text{,}\)</span> then since <span class="process-math">\(M_\lambda \cap (N + M_\Gamma)\)</span> is a proper submodule of <span class="process-math">\(M_\lambda\text{,}\)</span> which is simple, and hence <span class="process-math">\(M_\lambda \cap (N + M_\Gamma) = 0\text{.}\)</span> But then <span class="process-math">\(N \cap (M_{\Gamma} \oplus M_\lambda) = 0\)</span> (if <span class="process-math">\(n \in N\)</span> and <span class="process-math">\(n = m + m'\text{,}\)</span> with <span class="process-math">\(m\in M_\Gamma\)</span> and <span class="process-math">\(m'\in M_\lambda\text{,}\)</span> then <span class="process-math">\(m'=n-m\)</span> so <span class="process-math">\(m'=0\)</span> and <span class="process-math">\(n=m\text{,}\)</span> and then <span class="process-math">\(n=0\text{.}\)</span>) So, <span class="process-math">\(\Gamma\cup\{ \lambda\}\)</span> is a member of <span class="process-math">\(\mathcal S\)</span> that strictly contains <span class="process-math">\(\Gamma\text{,}\)</span> a contradiction. It must be thar <span class="process-math">\(M = N \oplus M_\Gamma\text{.}\)</span>
+</div> <div class="para" id="p-598">
+<span class="process-math">\((2) \Rightarrow (1)\)</span> Now assume that every submodule of <span class="process-math">\(M\)</span> is a summand. We proceed in three steps:</div> <div class="para" id="p-599">(i) We claim that every submodule <span class="process-math">\(T\)</span> of <span class="process-math">\(M\)</span> inherits this property; i.e., every submodule of <span class="process-math">\(T\)</span> is a summand of <span class="process-math">\(T\text{.}\)</span> For say <span class="process-math">\(U \subseteq T\)</span> is a submodule. By assumption on <span class="process-math">\(M\text{,}\)</span> we have <span class="process-math">\(M = U \oplus V\)</span> (internal direct sum) for some <span class="process-math">\(V\text{.}\)</span> Since <span class="process-math">\(U \subseteq T\text{,}\)</span> it follows that <span class="process-math">\(T = U + (V \cap T)\text{.}\)</span> (Given <span class="process-math">\(t \in T\text{,}\)</span> we have <span class="process-math">\(t  =  u +v\)</span> for some <span class="process-math">\(u \in U, v \in V\text{.}\)</span> Since <span class="process-math">\(U \subseteq T\text{,}\)</span> <span class="process-math">\(v =
 t-u \in V \cap T\text{.}\)</span>) Since <span class="process-math">\(U \cap (V \cap T) = 0\text{,}\)</span> this shows <span class="process-math">\(T = U \oplus (V \cap T)\text{.}\)</span>
-</div> <div class="para" id="p-410">(ii) We claim that every nonzero submodule <span class="process-math">\(T\)</span> of <span class="process-math">\(M\)</span> contains a simple summand. Pick <span class="process-math">\(0 \ne x \in T\)</span> and apply Zorn’s Lemma to show that there is a maximal submodule <span class="process-math">\(U\)</span> of <span class="process-math">\(T\)</span> with respect to the property that <span class="process-math">\(x \notin U\text{.}\)</span> We have <span class="process-math">\(T = U \oplus W\)</span> by (i) for some <span class="process-math">\(W \neq 0\text{.}\)</span> If <span class="process-math">\(W\)</span> is not simple, then <span class="process-math">\(W\)</span> contains a nonzero, proper submodule <span class="process-math">\(W_1\)</span> and hence, by using (i) again, we get that <span class="process-math">\(W = W_1 \oplus W_2\)</span> for some proper nonzero submodule <span class="process-math">\(W_2\text{.}\)</span>
-</div> <div class="para" id="p-411">These properties implies that <span class="process-math">\((U \oplus W_1) \cap (U \oplus W_2) = U\text{.}\)</span> One containment is clear. If <span class="process-math">\(v\)</span> belongs to the left side, then <span class="process-math">\(v = u + w_1 = u' + w_2\text{.}\)</span> It follows that <span class="process-math">\(w_1 - w_2 = u - u' \in U \cap W = 0\)</span> and so <span class="process-math">\(w_1 = w_2 \in W_1 \cap W_2 = 0\text{,}\)</span> and hence <span class="process-math">\(w_1  = w_2 = 0\text{.}\)</span> So, either <span class="process-math">\(x \notin U \oplus W_1\)</span> or <span class="process-math">\(x \notin U \oplus W_2\text{,}\)</span> and either way we reach a contradiction to the maximality of <span class="process-math">\(U\text{.}\)</span>
-</div> <div class="para logical" id="p-412">
+</div> <div class="para" id="p-600">(ii) We claim that every nonzero submodule <span class="process-math">\(T\)</span> of <span class="process-math">\(M\)</span> contains a simple summand. Pick <span class="process-math">\(0 \ne x \in T\)</span> and apply Zorn’s Lemma to show that there is a maximal submodule <span class="process-math">\(U\)</span> of <span class="process-math">\(T\)</span> with respect to the property that <span class="process-math">\(x \notin U\text{.}\)</span> We have <span class="process-math">\(T = U \oplus W\)</span> by (i) for some <span class="process-math">\(W \neq 0\text{.}\)</span> If <span class="process-math">\(W\)</span> is not simple, then <span class="process-math">\(W\)</span> contains a nonzero, proper submodule <span class="process-math">\(W_1\)</span> and hence, by using (i) again, we get that <span class="process-math">\(W = W_1 \oplus W_2\)</span> for some proper nonzero submodule <span class="process-math">\(W_2\text{.}\)</span>
+</div> <div class="para" id="p-601">These properties implies that <span class="process-math">\((U \oplus W_1) \cap (U \oplus W_2) = U\text{.}\)</span> One containment is clear. If <span class="process-math">\(v\)</span> belongs to the left side, then <span class="process-math">\(v = u + w_1 = u' + w_2\text{.}\)</span> It follows that <span class="process-math">\(w_1 - w_2 = u - u' \in U \cap W = 0\)</span> and so <span class="process-math">\(w_1 = w_2 \in W_1 \cap W_2 = 0\text{,}\)</span> and hence <span class="process-math">\(w_1  = w_2 = 0\text{.}\)</span> So, either <span class="process-math">\(x \notin U \oplus W_1\)</span> or <span class="process-math">\(x \notin U \oplus W_2\text{,}\)</span> and either way we reach a contradiction to the maximality of <span class="process-math">\(U\text{.}\)</span>
+</div> <div class="para logical" id="p-602">
 <div class="para">(iii) Let <span class="process-math">\(\mathscr G\)</span> be the set of all simple submodules of <span class="process-math">\(M\text{,}\)</span> and let</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -558,15 +826,15 @@ t-u \in V \cap T\text{.}\)</span>) Since <span class="process-math">\(U \cap (V 
 </div>
 <div class="para">Equivalently, the module generated by the modules in <span class="process-math">\(\Omega\)</span> their direct sum. The set <span class="process-math">\(\mathscr  F\)</span> is partially ordered by inclusion. It is nonempty, since <span class="process-math">\(\varnothing \in \mathscr  F\)</span> (or some singleton is in there by (ii)). Given a chain <span class="process-math">\(\{ \Omega_\alpha\}\)</span> in <span class="process-math">\(\mathscr  F\text{,}\)</span> <span class="process-math">\(\bigcup_\alpha \Omega_\alpha\)</span> is again an element of <span class="process-math">\(\mathscr  F\text{,}\)</span> so there is a maximal element in <span class="process-math">\(\mathscr  F\text{;}\)</span> call it <span class="process-math">\(\Omega\text{.}\)</span> Let <span class="process-math">\(U\)</span> be the direct sum of <span class="process-math">\(\Omega\text{.}\)</span>
 </div>
-</div> <div class="para" id="p-413">We claim that <span class="process-math">\(U=M\text{.}\)</span> By hypothesis we have <span class="process-math">\(M = U \oplus V\)</span> for some <span class="process-math">\(V\text{.}\)</span> If <span class="process-math">\(V = 0\)</span> we are done. Otherwise by (ii) (and (i) again) we have <span class="process-math">\(V = S \oplus V'\)</span> for some simple submodule <span class="process-math">\(S\text{.}\)</span> But then <span class="process-math">\(\Omega \cup \{ U\} \in \mathscr  F\text{,}\)</span> contradicting maximality of <span class="process-math">\(\Omega\text{.}\)</span>
+</div> <div class="para" id="p-603">We claim that <span class="process-math">\(U=M\text{.}\)</span> By hypothesis we have <span class="process-math">\(M = U \oplus V\)</span> for some <span class="process-math">\(V\text{.}\)</span> If <span class="process-math">\(V = 0\)</span> we are done. Otherwise by (ii) (and (i) again) we have <span class="process-math">\(V = S \oplus V'\)</span> for some simple submodule <span class="process-math">\(S\text{.}\)</span> But then <span class="process-math">\(\Omega \cup \{ U\} \in \mathscr  F\text{,}\)</span> contradicting maximality of <span class="process-math">\(\Omega\text{.}\)</span>
 </div></article></div>
 <article class="corollary theorem-like" id="cor-semisimple-quotient"><h2 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">27.9</span><span class="period">.</span>
 </h2>
-<div class="para" id="p-414">If <span class="process-math">\(M\)</span> semisimple, so is every submodule and quotient module of <span class="process-math">\(M\text{.}\)</span>
-</div></article><article class="hiddenproof" id="proof-20"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-20"><h2 class="heading"><span class="type">Proof<span class="period">.</span></span></h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-20"><article class="hiddenproof"><div class="para" id="p-415">Say <span class="process-math">\(N \subseteq M\)</span> is a submodule. By the claim marked (i) in the proof of Theorem <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "prop93b" missing or not unique]</code> every submodule of <span class="process-math">\(N\)</span> is a summand, and hence <span class="process-math">\(N\)</span> is semisimple by Theorem <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "prop93b" missing or not unique]</code> <span class="process-math">\((2)\Rightarrow (1)\text{.}\)</span>
-</div> <div class="para" id="p-416">Given a surjection <span class="process-math">\(M \twoheadrightarrow P\text{,}\)</span> it splits by Theorem <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "prop93b" missing or not unique]</code>, so that <span class="process-math">\(P\)</span> is isomorphic to a submodule of <span class="process-math">\(M\text{,}\)</span> namely the image of <span class="process-math">\(P\)</span> under the splitting map. Hence <span class="process-math">\(P\)</span> is semisimple by the case already proven.</div></article></div>
-<div class="para" id="p-417">A major source of semisimple modules comes from group rings.</div></section></div>
+<div class="para" id="p-604">If <span class="process-math">\(M\)</span> semisimple, so is every submodule and quotient module of <span class="process-math">\(M\text{.}\)</span>
+</div></article><article class="hiddenproof" id="proof-59"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-59"><h2 class="heading"><span class="type">Proof<span class="period">.</span></span></h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-59"><article class="hiddenproof"><div class="para" id="p-605">Say <span class="process-math">\(N \subseteq M\)</span> is a submodule. By the claim marked (i) in the proof of Theorem <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "prop93b" missing or not unique]</code> every submodule of <span class="process-math">\(N\)</span> is a summand, and hence <span class="process-math">\(N\)</span> is semisimple by Theorem <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "prop93b" missing or not unique]</code> <span class="process-math">\((2)\Rightarrow (1)\text{.}\)</span>
+</div> <div class="para" id="p-606">Given a surjection <span class="process-math">\(M \twoheadrightarrow P\text{,}\)</span> it splits by Theorem <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "prop93b" missing or not unique]</code>, so that <span class="process-math">\(P\)</span> is isomorphic to a submodule of <span class="process-math">\(M\text{,}\)</span> namely the image of <span class="process-math">\(P\)</span> under the splitting map. Hence <span class="process-math">\(P\)</span> is semisimple by the case already proven.</div></article></div>
+<div class="para" id="p-607">A major source of semisimple modules comes from group rings.</div></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-chain-conditions.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="ch-artin-wedd.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

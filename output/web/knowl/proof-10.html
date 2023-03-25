@@ -12,15 +12,25 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<div class="para">Given an <span class="process-math">\(R[G]\)</span>-module structure on <span class="process-math">\(V\text{,}\)</span> for every <span class="process-math">\(g\in G\text{,}\)</span> there is a map <span class="process-math">\(m_g: V\to V\)</span> given by <span class="process-math">\(v\mapsto g\cdot v\text{.}\)</span> We have <span class="process-math">\(m_g  (rv) = g (rv) = rg (v) = r m_g(v)\text{,}\)</span> so <span class="process-math">\(m_g\)</span> is <span class="process-math">\(R\)</span>-linear. Moreover, the map <span class="process-math">\(\rho:G\to \operatorname{End}_R(V)\)</span> that sends <span class="process-math">\(g\mapsto m_g\)</span> preserves multiplication and identity: <span class="process-math">\(\rho(gh)(v) = gh v = g(hv) = \rho(g) \rho(h) (v)\)</span> and <span class="process-math">\(\rho(e)(v) = v\text{.}\)</span> Thus, we obtain an <span class="process-math">\(R\)</span>-linear representation <span class="process-math">\(\rho:G\to \operatorname{Aut}_R(V)\text{.}\)</span>
-</div> <div class="para logical">
-<div class="para">Conversely, recall that a module structure on an abelian group is equivalent to a ring homomorphism to its endomorphism ring over <span class="process-math">\(\mathbb{Z}\text{.}\)</span> Given a representation <span class="process-math">\(\rho:G\to \operatorname{Aut}_R(V)\)</span> by considering <span class="process-math">\(\operatorname{Aut}_R(V)\subseteq \operatorname{End}_\mathbb{Z}(V)\)</span> we get a group homomorphism <span class="process-math">\(f\)</span> to the unit subgroup of <span class="process-math">\(\operatorname{End}_\mathbb{Z}(V)\text{.}\)</span> The action of <span class="process-math">\(R\)</span> on <span class="process-math">\(V\)</span> gives a ring homomorphism <span class="process-math">\(\iota: R \to \operatorname{End}_\mathbb{Z}(V)\text{.}\)</span> For <span class="process-math">\(r\in R\)</span> and <span class="process-math">\(g\in G\text{,}\)</span> we have</div>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(\mathcal L\)</span> be the collection of left cosets of <span class="process-math">\(\operatorname{Stab}_G(s)\)</span> in <span class="process-math">\(G\text{.}\)</span> Define a function</div>
 <div class="displaymath process-math">
 \begin{equation*}
-(f(g) \circ \iota(r))(v) = f(g)(rv) = \rho(g)(rv) = r \rho(g)(v) = (\iota(r) \circ f(g))(v)
+\alpha: \mathcal L\to \operatorname{Orbit}_G(s)
 \end{equation*}
 </div>
-<div class="para">for all <span class="process-math">\(v\in V\text{.}\)</span> Thus, by the universal property, we get a well-defined ring homomorphism <span class="process-math">\(R[G] \to \operatorname{End}_\mathbb{Z}(V)\text{,}\)</span> and hence an <span class="process-math">\(R[G]\)</span>-module structure, which is easily seen to follow the formula above.</div>
-</div> <div class="para">We leave the final claim as an exercise.</div></article><span class="incontext"><a href="sec-group-rings-and-modules.html#proof-10" class="internal">in-context</a></span>
+<div class="para">by <span class="process-math">\(\alpha(x \operatorname{Stab}_G(s)) = x \cdot s\text{.}\)</span> This function is well defined and one-to-one:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x \operatorname{Stab}_G(s) = y \operatorname{Stab}_G(s)\iff x^{-1}y \in \operatorname{Stab}_G(s) \iff x^{-1}y \cdot s = s \iff y \cdot s = x \cdot s.
+\end{equation*}
+</div>
+<div class="para">The function <span class="process-math">\(\alpha\)</span> is onto by definition of <span class="process-math">\(\operatorname{Orbit}_G(s)\text{.}\)</span> Thus <span class="process-math">\(\alpha\)</span> is a bijection and it yields equalities</div>
+<div class="displaymath process-math">
+\begin{equation*}
+[G: \operatorname{Stab}_G(s)]=|\mathcal L|=|\operatorname{Orbit}_G(s)|.
+\end{equation*}
+</div>
+</div></article><span class="incontext"><a href="sec-lois.html#proof-10" class="internal">in-context</a></span>
 </body>
 </html>

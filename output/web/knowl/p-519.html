@@ -13,20 +13,31 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">With respect to the Artin-Wedderburn decomposition we have so far</div>
+<div class="para">Let</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\mathbb{C}[A_4] \cong \mathbb{C}\times \mathbb{C}\times \mathbb{C}\times \operatorname{Mat}_{n_4}(\mathbb{C})\times \cdots \times \operatorname{Mat}_{n_m}(\mathbb{C}).
+0 \to A \xrightarrow{i} B \xrightarrow{p} C\to 0
 \end{equation*}
 </div>
-<div class="para">where <span class="process-math">\(n_3, \ldots, n_m\geq 2\)</span> because we have already found all the 1-dimensional representations (<span class="process-math">\(n_i=1\)</span>) above. Counting dimensions we obtain</div>
+<div class="para">be a short exact sequence. Given filtrations / composition series / strict composition series</div>
 <div class="displaymath process-math">
 \begin{equation*}
-12= 1+ 1 + 1 +\sum_{i=4}^m {n_i}^2.
+A_\bullet: \qquad 0 = A_0 \subseteq A_1 \subseteq A_2 \subseteq \cdots \subseteq A_n = A
 \end{equation*}
 </div>
-<div class="para">It is easy to see there is only one solution: <span class="process-math">\(m=4\)</span> and <span class="process-math">\(n_4=3\text{.}\)</span> Hence there is a unique up to isomorphism <span class="process-math">\(\mathbb{C}\)</span>-linear irreducible representation of <span class="process-math">\(A_4\)</span> which is a 3 dimensional <span class="process-math">\(\mathbb{C}\)</span>-vector space.</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C_\bullet: \qquad 0 = C_0 \subseteq C_1 \subseteq C_2 \subseteq \cdots \subseteq C_n = C
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec-rep-closed-fields.html#p-519" class="internal">in-context</a></span>
+<div class="para">we can make a filtration / composition series / strict composition series of <span class="process-math">\(B\)</span> by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0 = i(A_0) \subseteq i(A_1) \subseteq i(A_2) \subseteq \cdots \subseteq i(A_n) = i(A) = p^{-1}(C_0) \subseteq p^{-1}(C_1) \subseteq p^{-1}(C_2) \subseteq \cdots \subseteq p^{-1}(C_n) = B.
+\end{equation*}
+</div>
+</div>
+<span class="incontext"><a href="sec-fl-modules.html#p-519" class="internal">in-context</a></span>
 </body>
 </html>

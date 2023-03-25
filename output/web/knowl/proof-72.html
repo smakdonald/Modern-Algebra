@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
+<div class="para logical">
+<div class="para">We have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathbb{C}[G] \cong \operatorname{Mat}_{n_1}(\mathbb{C}) \times \cdots \times \operatorname{Mat}_{n_m}(\mathbb{C})
+\end{equation*}
+</div>
+<div class="para">and <span class="process-math">\(m\)</span> is the number of irreducible complex representations up to isomorphism. A key point is that the center of the right side is <span class="process-math">\(\mathbb{C}I_{n_1} \times \cdots \times \mathbb{C}I_{n_m}\text{,}\)</span> which has dimension <span class="process-math">\(m\)</span> as a complex vector space. Since this ring isomorphism is <span class="process-math">\(\mathbb{C}\)</span>-linear, it induces a <span class="process-math">\(\mathbb{C}\)</span>-linear isomorphism of the centers, and thus we just need to show that <span class="process-math">\(\dim_\mathbb{C}(Z(\mathbb{C}[G]))\)</span> is equal to the number of conjugacy classes.</div>
+</div> <div class="para logical">
+<div class="para">Let <span class="process-math">\(C_1, \dots, C_h\)</span> denote the conjugacy classes of <span class="process-math">\(G\)</span> (i.e., the orbits for the action of <span class="process-math">\(G\)</span> on itself by conjugation). For each <span class="process-math">\(i\)</span> set <span class="process-math">\(z_i = \sum_{g \in C_i} g \in \mathbb{C}[G]\text{.}\)</span> Then for all <span class="process-math">\(x \in G\text{,}\)</span> <span class="process-math">\(x z_i x ^{-1}  = \sum_{g \in C_i} x g x^{-1} = z_i\)</span> and it follows that <span class="process-math">\(z_i \in Z(\mathbb{C}[G])\text{.}\)</span> Since that <span class="process-math">\(z_i\)</span>’s are sums of disjoint subsets of a basis of <span class="process-math">\(\mathbb{C}[G]\text{,}\)</span> they are linearly independent. Now say <span class="process-math">\(\sum_g c_g g\)</span> belongs to the center. Then for each <span class="process-math">\(x \in G\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_g c_g xgx^{-1} =
+x(\sum_g c_g g)x^{-1} = \sum_g c_g g
+\end{equation*}
+</div>
+<div class="para">and it follows that <span class="process-math">\(c_g = c_h\)</span> whenever <span class="process-math">\(g,h\)</span> are conjugate. This proves that <span class="process-math">\(Z(\mathbb{C}[G])\)</span> is spanned by <span class="process-math">\(z_1, \dots, z_h\text{.}\)</span> We conclude that <span class="process-math">\(h = \dim_\mathbb{C}(Z(\mathbb{C}[G])) = m\text{.}\)</span>
+</div>
+</div></article><span class="incontext"><a href="sec-rep-closed-fields.html#proof-72" class="internal">in-context</a></span>
+</body>
+</html>

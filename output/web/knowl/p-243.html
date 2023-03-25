@@ -12,7 +12,22 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Let <span class="process-math">\(G\)</span> be a group. Two elements <span class="process-math">\(g,g' \in G\)</span> are <em class="emphasis">conjugate</em> if there is <span class="process-math">\(h \in G\)</span> with <span class="process-math">\(g' = hgh^{-1}\)</span> (equivalently <span class="process-math">\(g\)</span> and <span class="process-math">\(g'\)</span> are in the same orbit of the conjugation action).</div>
-<span class="incontext"><a href="sec-self-conjugation.html#p-243" class="internal">in-context</a></span>
+<div class="para logical">
+<div class="para">We have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+(\sigma_g\circ\sigma_{g^{-1}})(s) &amp;=\sigma_g(\sigma_{g^{-1}}(s)) &amp; \text{ (def of composition)}\\
+&amp;=g\cdot (g^{-1} \cdot s) &amp; \text{ (def for } \sigma_g \text{ and } \sigma_{g^{-1}})\\
+&amp;=(gg^{-1})\cdot s &amp; \text{ (first property of a group action)}\\
+&amp;=e_G\cdot s &amp; \text{ (group axiom)}\\
+&amp;= s &amp;\text{ (second property of a group action)}
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">thus <span class="process-math">\(\sigma_g\circ\sigma_{g^{-1}}=\text{id}_S\)</span> and a similar argument shows that <span class="process-math">\(\sigma_{g^{-1}}\circ\sigma_{g}=\text{id}_S\)</span>
+</div>
+</div>
+<span class="incontext"><a href="graction.html#p-243" class="internal">in-context</a></span>
 </body>
 </html>
