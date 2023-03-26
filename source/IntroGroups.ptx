@@ -93,13 +93,18 @@
         </proof>
       </proposition>
 
+      <problem xml:id="order-4-abelian">
+        <p>
+          Every group of order <m>4</m> is abelian.
+        </p>
+      </problem>
+
       <remark>
         We will call the element <m>y</m> satisfying the last axiom of <xref ref="def-group" /> <em>the inverse</em> of <m>x</m> and we will henceforth denote it by <m>x^{-1}</m>.
       </remark>  
 
       <lemma xml:id="lem-group-props">
         <title>Properties of Groups</title>
-        
         
         <statement>
           <p>
@@ -142,33 +147,29 @@
             
           </p>
         </proof>
-      </lemma>
-            
-   
+      </lemma>          
 
       <proposition xml:id="prop-gpex">
         <statement>
           <p>
-            Prove that the following are groups:
-              <ul>
-                <li>
-                  <p>
-                    The <term>trivial subgroup</term> is the group with a single element <m>\{e\}</m>
-                  </p>
-                </li>
+            <ul>
+              <li>
+                <p>
+                  The <term>trivial subgroup</term> is the group with a single element <m>\{e\}</m>
+                </p>
+              </li>
 
-                <li>
-                  <p>
-                    For any set <m>S</m>, the permutations on <m>S</m> <me>\rm{Perm}(S)=\{f:S\to S \ | \ f \text{ is a bijection}\}</me> form a non-abelian group under composition.
-                  </p>
-                </li>
+              <li>
+                <p>
+                  For any set <m>S</m>, the permutations on <m>S</m> <me>\rm{Perm}(S)=\{f:S\to S \ | \ f \text{ is a bijection}\}</me> form a non-abelian group under composition.
+                </p>
+              </li>
 
-                <li>
-                  <p>
-                    For any field <m>F</m> and positive integer <m>n</m>, let <me>\operatorname{GL}_n(F)=\{ \text{invertible }  n \times n \text{ matrices with entries in } F\}.</me> By invertible I mean those matrices that have two-sided inverses, but in turns out that if an <m>n \times n</m> matrix has a left inverse then it it is automatically a right inverse too, and vice versa. Then <m>\operatorname{GL}_n(F)</m> is a non-abelian group under matrix multiplication.
-                  </p>
-                </li>
-              </ul>
+              <li>
+                <p>
+                  For any field <m>F</m> and positive integer <m>n</m>, let <me>\operatorname{GL}_n(F)=\{ \text{invertible }  n \times n \text{ matrices with entries in } F\}.</me> By invertible I mean those matrices that have two-sided inverses, but in turns out that if an <m>n \times n</m> matrix has a left inverse then it it is automatically a right inverse too, and vice versa. Then <m>\operatorname{GL}_n(F)</m> is a non-abelian group under matrix multiplication.
+                </p>
+              </li>
 
               <li>
                 <p>
@@ -181,6 +182,7 @@
                   For any field <m>F</m> (e.g., <m>\mathbb{Q}</m>, <m>{\mathbb{R}}</m>, <m>\mathbb{C}</m> or <m>\mathbb{Z}/p</m> for a prime <m>p</m>), the set <m>F^\times := F \setminus \{0\}</m> is an abelian group under the usual multiplication.
                 </p>
               </li>
+            </ul>
           </p>
         </statement>
       </proposition>
@@ -214,11 +216,10 @@
       <theorem xml:id="thm-dirprop-gp">
         <statement>
           <p>
-            
+            Direct products of groups are groups
           </p>
         </statement>
       </theorem>
-      
       
     </subsection>
 

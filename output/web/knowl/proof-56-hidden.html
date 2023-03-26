@@ -11,13 +11,18 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><article class="hiddenproof"><div class="para logical">
-<div class="para">Assume that <span class="process-math">\(M\)</span> has finite length. Suppose that <span class="process-math">\(M\)</span> is not Noetherian. Then there is a chain</div>
+<div class="para">For the first statement, the “if” implication holds in general without the hypothesis on <span class="process-math">\(R\text{.}\)</span> For the other implication, observe that there are short exact sequences</div>
 <div class="displaymath process-math">
 \begin{equation*}
-M_0 \subsetneqq M_1 \subsetneqq M_2 \subsetneqq  \cdots
+0 \to R^{n-1} \to R^{n} \to R \to 0
 \end{equation*}
 </div>
-<div class="para">Since each <span class="process-math">\(M_i\)</span> is a submodule of <span class="process-math">\(M\text{,}\)</span> its length is finite, and is a nonnegative integer. Then <span class="process-math">\(\ell(M_0) &lt; \ell(M_1) &lt; \ell(M_2) &lt; \cdots \leq \ell(M)\text{,}\)</span> which yields a contradiction. The argument that <span class="process-math">\(M\)</span> is Artinian is similar.</div>
-</div> <div class="para">Now assume that <span class="process-math">\(M\)</span> is both Noetherian and Artinian. We will construct a composition series for <span class="process-math">\(M\text{.}\)</span> We can assume that <span class="process-math">\(M\neq 0\text{.}\)</span> Consider the collection of proper submodules of <span class="process-math">\(M\text{.}\)</span> This is nonempty, so has a maximal element <span class="process-math">\(M^1\)</span> by the Noetherian hypothesis. We must have <span class="process-math">\(M/M^1\)</span> is simple, or else there is a module in between <span class="process-math">\(M^1\)</span> and <span class="process-math">\(M\text{.}\)</span> Using Noetherianity again, if <span class="process-math">\(M^1\neq 0\)</span> (we’re done otherwise), there is a maximal proper submodule of <span class="process-math">\(M^1\text{;}\)</span> call it <span class="process-math">\(M^2\text{.}\)</span> This process yields a descending chain with simple quotients, and this must stop (i.e., yield <span class="process-math">\(M^i=0\)</span> for some <span class="process-math">\(i\)</span>) by the Artinian hypothesis. Thus, there is a composition series for <span class="process-math">\(M\text{.}\)</span>
-</div></article></body>
+<div class="para">for all <span class="process-math">\(n&gt;0\text{.}\)</span> So, by the exercise above and induction on <span class="process-math">\(n\text{,}\)</span> every finitely generated free module is Noetherian. Now, if <span class="process-math">\(M\)</span> is finitely generated, there is a short exact sequence of the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0 \to K \to R^{n} \to M \to 0
+\end{equation*}
+</div>
+<div class="para">so by the exercise above again, <span class="process-math">\(M\)</span> is Noetherian.</div>
+</div> <div class="para">The second statement follows from the first as a submodule of a Noetherian module is Noetherian, again by the exercise</div></article></body>
 </html>

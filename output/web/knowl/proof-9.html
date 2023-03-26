@@ -11,31 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<div class="para logical">
-<div class="para">We have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{aligned}
-(\sigma_g\circ\sigma_{g^{-1}})(s) &amp;=\sigma_g(\sigma_{g^{-1}}(s)) &amp; \text{ (def of composition)}\\
-&amp;=g\cdot (g^{-1} \cdot s) &amp; \text{ (def for } \sigma_g \text{ and } \sigma_{g^{-1}})\\
-&amp;=(gg^{-1})\cdot s &amp; \text{ (first property of a group action)}\\
-&amp;=e_G\cdot s &amp; \text{ (group axiom)}\\
-&amp;= s &amp;\text{ (second property of a group action)}
-\end{aligned}
-\end{equation*}
-</div>
-<div class="para">thus <span class="process-math">\(\sigma_g\circ\sigma_{g^{-1}}=\text{id}_S\)</span> and a similar argument shows that <span class="process-math">\(\sigma_{g^{-1}}\circ\sigma_{g}=\text{id}_S\)</span>
-</div>
-</div> <div class="para logical">
-<div class="para">Finally, we wish to show <span class="process-math">\(\rho(gg')=\rho(g) \circ \rho(g')\text{,}\)</span> equivalently <span class="process-math">\(\sigma_{gg'}=\sigma_g\circ\sigma_{g'}\text{.}\)</span> Since</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\sigma_{gg'}(s) = (gg')\cdot s = g\cdot(g'\cdots) =\sigma_g\left(\sigma_{g'}(s)\right) = (\sigma_g\circ\sigma_{g'})(s),
-\end{equation*}
-</div>
-<div class="para">holds for all <span class="process-math">\(s\text{,}\)</span> this proves <span class="process-math">\(\rho\)</span> is a homomorphism.</div>
-</div> <div class="para">Given a homomorphism <span class="process-math">\(\rho\text{,}\)</span> the function <span class="process-math">\(G \times S \to S\)</span> defined as <span class="process-math">\(g \cdot s = \rho(g)(s)\)</span> is an action because <span class="process-math">\(g'(gs) = \rho(g')(\rho(g)(s)) = (\rho(g') \circ\rho(g))(s) = \rho(gg')(s) = (gg')s\text{,}\)</span> and <span class="process-math">\(e_G s = \rho(e_G)(s) = \text{id}(s) = s\text{.}\)</span>
-</div></article><span class="incontext"><a href="graction.html#proof-9" class="internal">in-context</a></span>
+<article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5>
+<div class="para">Let <span class="process-math">\(x\in N\)</span> and let <span class="process-math">\(g\in G\text{.}\)</span> As <span class="process-math">\(N\)</span> is normal, we see <span class="process-math">\(gxg\inv\in N\text{,}\)</span> and thus one of the following must be true: - <span class="process-math">\(gxg\inv=e\text{,}\)</span> where <span class="process-math">\(e\)</span> is the identity element of <span class="process-math">\(G\text{,}\)</span> or - <span class="process-math">\(gxg\inv=x\text{,}\)</span> the only other element of <span class="process-math">\(N\text{.}\)</span> However, in the first case we would have <span class="process-math">\(x=e\)</span> by multiplying <span class="process-math">\(g\)</span> and <span class="process-math">\(g\inv\)</span> over, and thus it must be the case that <span class="process-math">\(gxg\inv=x\text{,}\)</span> or <span class="process-math">\(gx=xg\text{.}\)</span> Thus <span class="process-math">\(x\in Z(G)\text{.}\)</span>
+</div> <div class="para">From Lagrange's Theorem we know that <span class="process-math">\(|G|/|H|=2\text{,}\)</span> meaning that <span class="process-math">\(G\)</span> has an even number of elements. Thus <span class="process-math">\(2\)</span> is the smallest prime dividing the order of <span class="process-math">\(G\text{,}\)</span> making <span class="process-math">\(H\)</span> normal in <span class="process-math">\(G\)</span> (See: ).</div> <div class="para">Suppose by way of contradiction there exists some non-trivial proper normal subgroup <span class="process-math">\(N\)</span> of <span class="process-math">\(G\)</span> that is not <span class="process-math">\(H\text{.}\)</span> As <span class="process-math">\(H\)</span> is normal, by the Second Isomorphism Theorem we have <span class="process-math">\(H\cap N\nsg H\text{.}\)</span> However, as <span class="process-math">\(H\)</span> is simple, this means that <span class="process-math">\(H\cap N=\{e\}\text{.}\)</span> SIT also tells us that <span class="process-math">\(HN\leq G\text{.}\)</span> As <span class="process-math">\(|H|=|G|/2\text{,}\)</span> this makes <span class="process-math">\(|N|=2\)</span> and <span class="process-math">\(G=HN\text{.}\)</span> From part (a), <span class="process-math">\(N\leq Z(G)\text{.}\)</span> However, this contradicts Lagrange’s Theorem, as <span class="process-math">\(2\)</span> does not divide any odd numbers.</div></article><span class="incontext"><a href="sec-isomorphism-thms.html#proof-9" class="internal">in-context</a></span>
 </body>
 </html>

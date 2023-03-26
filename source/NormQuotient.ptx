@@ -108,6 +108,12 @@
         </statement>
       </corollary>
 
+      <problem>
+        <p>
+          Even if <m>G</m> is not finite the number of left and right cosets of a subgroup <m>H\leq G</m> is still the same. <em>(Hint</em>: consider the map <m>gH\mapsto Hg^{-1}</m> and show it's a bijection. Why is the inverse needed?)
+        </p>
+      </problem>
+
       <theorem xml:id="thm-lagrange">
         <title>Lagrange's Theorem</title>
         
@@ -130,15 +136,18 @@
         <statement>
           <p>
             <p>
-              If finite groups, the common number of left or right cosets of a subgroup <m>H</m> in a group <m>G</m> is denoted as <m>[G:H]</m> and is called the <em><m>\defnn{index}</m></em> of <m>H</m> in <m>G</m>.
+              In finite groups, the common number of left or right cosets of a subgroup <m>H</m> in a group <m>G</m> is denoted as <m>[G:H]</m> and is called the <em>index</em> of <m>H</m> in <m>G</m>.
             </p>
           </p>
         </statement>
       </definition>
 
       <problem>
-        <p>
-          Even if <m>G</m> is not finite the number of left and right cosets of a subgroup <m>H\leq G</m> is still the same. <em>(Hint</em>: consider the map <m>gH\mapsto Hg^{-1}</m> and show it’s a bijection. Why is the inverse needed?)
+        <p> 
+          If <m>G</m> is a finite group, then 
+          <me>
+            [G:H]=\frac{|G|}{|H|}
+          </me>
         </p>
       </problem>
 
@@ -168,43 +177,83 @@
         <statement>
           <p>
             Let <m>N</m> be a subgroup of a group <m>G</m>. The following are equivalent: 
-            1. <m>N \nsg G</m>[^1] 
-            2. <m>gNg^{-1}\subseteq N</m> for all <m>g \in G</m>. 
-            3. <m>gN = Ng</m>[^2] for all <m>g \in G</m>. 
+            <ol>
+              <li>
+                <p>
+                  <m>N \nsg G</m>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>gNg^{-1}\subseteq N</m> for all <m>g \in G</m>. 
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>gN = Ng</m> for all <m>g \in G</m>. 
+                </p>
+              </li>
+            </ol>
           </p>
         </statement>
       </proposition>
 
+      <example>
+        <p>
+          <ol>
+            <li>
+              <p>
+                The trivial subgroups <m>\{e\}</m>, <m>G</m> of a group <m>G</m> are normal. 
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Any subgroup of an abelian group is normal. 
+              </p>
+            </li>
+
+            <li>
+              <p>
+                For any group <m>G</m>, <m>Z(G)\nsg G</m>. 
+              </p>
+            </li>
+          </ol>
+        </p>
+      </example>
+
       <problem>
         <p>
-          The trivial subgroups <m>\{e\}</m>, <m>G</m> of a group <m>G</m> are normal. 
+          Show that being a normal subgroup is not a transitive relation.
         </p>
+
+        <proof>
+          <p>
+            Consider <me>V=\{e, (1 2)(3 4), (1 3)(2 4), (1 4)(2 3)\}</me> one can show that <m>V \nsg S_4</m> and, since <m>V</m> is abelian (<xref ref="order-4-abelian"/>), the subgroup <m>H = \{e,(12)(34)\}</m> is normal in <m>V</m>. But <m>H</m> is not normal in <m>S_4</m>, since for example
+            <me>
+              (1 3) [(1 2)(3 4)] (1 3)^{-1} = (3 2)(1 4) \notin H.
+            </me> 
+          </p>
+        </proof>
       </problem>
 
       <problem>
         <p>
-          Any subgroup of an abelian group is normal. 
-        </p>
-      </problem>
-
-      <problem>
-        <p>
-          For any group <m>G</m>, <m>Z(G)\nsg G</m>. 
-        </p>
-      </problem>
-
-      <problem>
-        <p>
-          Being a normal subgroup is not a transitive relation. For example, for <me>V=\{e, (1 2)(3 4), (1 3)(2 4), (1 4)(2 3)\}</me> one can show that <m>V \nsg S_4</m> and, since <m>V</m> is abelian (all groups with 4 elements are abelian), the subgroup <m>H = \{e,(12)(34)\}</m> is normal in <m>V</m>. But <m>H</m> is {} normal in <m>S_4</m>, since for example 
-          <me>
-            (1 3) [(1 2)(3 4)] (1 3)^{-1} = (3 2)(1 4) \notin H.
-          </me> 
-        </p>
-      </problem>
-
-      <problem>
-        <p>
-          Prove that if <m>f:G\to H</m> is a group homomorphism and <m>K\nsg H</m> then the preimage of <m>K</m>, <m>f^{-1}(K)=\{g\in G | f(g)\in K\}</m>, is a normal subgroup of <m>G</m>. 2. Show that if <m>f:G\to H</m> is a group homomorphism and <m>L \nsg G</m> then <m>f(L)</m> need not be a normal subgroup of <m>H</m>.
+          <ol>
+            <li>
+              <p>
+                Prove that if <m>f:G\to H</m> is a group homomorphism and <m>K\nsg H</m> then the preimage of <m>K</m>, <m>f^{-1}(K)=\{g\in G | f(g)\in K\}</m>, is a normal subgroup of <m>G</m>. 
+              </p>
+            </li>
+            
+            <li>
+              <p>
+                Show that if <m>f:G\to H</m> is a group homomorphism and <m>L \nsg G</m> then <m>f(L)</m> need not be a normal subgroup of <m>H</m>.
+              </p>
+            </li>
+          </ol>
         </p>
       </problem>
 
@@ -217,9 +266,25 @@
       <problem>
         <p>
           Let <m>H</m> be a subgroup and <m>x\in G</m>.
-          (a) Prove that <m>xHx^{-1}</m> is a subgroup of <m>G</m>. 
-          (b) Prove that <m>H\cong xHx^{-1}</m> 
-          (c) Suppose <m>|H|=n</m> and <m>H</m> is the only subgroup of <m>G</m> of order <m>n</m>. Prove that <m>H</m> is normal.
+          <ol>
+            <li>
+              <p>
+                Prove that <m>xHx^{-1}</m> is a subgroup of <m>G</m>. 
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Prove that <m>H\cong xHx^{-1}</m> 
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Suppose <m>|H|=n</m> and <m>H</m> is the only subgroup of <m>G</m> of order <m>n</m>. Prove that <m>H</m> is normal.
+              </p>
+            </li>
+          </ol>
         </p>
       </problem>
 
@@ -237,10 +302,23 @@
 
       <problem>
         <p>
-          Let <m>G</m> be a group and let <m>A \subseteq G</m> be a set. The {}, denoted <m>\langle A \rangle ^N</m>, is the intersection of all the normal subgroups of <m>G</m> that contain <m>A</m>. 1. Show that <m>\langle A \rangle ^N</m> is a normal subgroup of <m>G</m>. 2. Show that the elements of <m>\langle A \rangle ^N</m> can be described as 
-          <me>
-            \langle A \rangle ^N= \{ g_1a_1^{i_1}g_1^{-1} \dots g_ma_m^{i_m}g_m^{-1} \mid m \geq 0, a_j \in A, g_j \in G, i_j \in \{1,-1\}, \forall 1\leq j\leq m\}.
-          </me> 
+          Let <m>G</m> be a group and let <m>A \subseteq G</m> be a set. The <em>normal subgroup generated by <m>A</m></em>, denoted <m>\langle A \rangle ^N</m>, is the intersection of all the normal subgroups of <m>G</m> that contain <m>A</m>. 
+          <ol>
+            <li>
+              <p>
+                Show that <m>\langle A \rangle ^N</m> is a normal subgroup of <m>G</m>. 
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Show that the elements of <m>\langle A \rangle ^N</m> can be described as 
+                <me>
+                  \langle A \rangle ^N= \{ g_1a_1^{i_1}g_1^{-1} \dots g_ma_m^{i_m}g_m^{-1} \mid m \geq 0, a_j \in A, g_j \in G, i_j \in \{1,-1\}, \forall 1\leq j\leq m\}.
+                </me> 
+              </p>
+            </li>
+          </ol>
         </p>
       </problem>
       
@@ -252,21 +330,26 @@
 
       <problem>
         <p>
-          Let <m>G</m> be a group with subgroups <m>H, K</m>. Recall the notation <me>HK=\{hk \mid h\in H, k\in K\}.</me> (a) Prove that <m>HK\leq G</m> if and only if <m>HK=KH</m>. (b) Prove that if either one of <m>H</m> or <m>K</m> is a normal subgroup of <m>G</m>, then <m>HK\leq G</m> and <m>HK=KH=\langle H\cup K\rangle</m>.
+          Let <m>G</m> be a group with subgroups <m>H, K</m>. Recall the notation <me>HK=\{hk \mid h\in H, k\in K\}.</me> 
+          <ol>
+            <li>
+              <p>
+                Prove that <m>HK\leq G</m> if and only if <m>HK=KH</m>. 
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Prove that if either one of <m>H</m> or <m>K</m> is a normal subgroup of <m>G</m>, then <m>HK\leq G</m> and <m>HK=KH=\langle H\cup K\rangle</m>.
+              </p>
+            </li>
+          </ol>
         </p>
       </problem>
 
       <problem>
         <p>
-          In <m>D_{2n}</m>[^1], let <m>H=\langle s\rangle</m> and <m>K=\langle r\rangle</m>. Then <m>HK=KH=D_{2n}</m> but of course <m>r</m> and <m>s</m> do not commute. The fact that <m>HK=KH</m> can also be justified by observing that <m>K\nsg D_{2n}</m>.
-        </p>
-      </problem>
-
-      <problem>
-        <p>
-          Let <m>H</m> be a subgroup of <m>G</m> and fix some element <m>g\in G</m>. 
-          (a) Prove that <m>gHg^{-1}=\{ghg^{-1} \mid h\in H\}</m> is a subgroup of <m>G</m> of the same order as <m>H</m>. 
-          (b) Deduce that if <m>H</m> is the unique subgroup of <m>G</m> of order <m>|H|</m> then <m>H\nsg G</m>.
+          In <m>D_{2n}</m>, let <m>H=\langle s\rangle</m> and <m>K=\langle r\rangle</m>. Then <m>HK=KH=D_{2n}</m> but of course <m>r</m> and <m>s</m> do not commute. The fact that <m>HK=KH</m> can also be justified by observing that <m>K\nsg D_{2n}</m>.
         </p>
       </problem>
 
@@ -317,18 +400,36 @@
       <problem>
         <p>
 					Let <m>G</m> be a group, and <m>H, K \leq G</m> be subgroups of <m>G</m>. 
-          (a) Give an example of <m>G, H,</m> and <m>K</m> such that <m>HK</m> is not a subgroup of <m>G</m>. 
-          (b) Suppose now that <m>H\nsg G</m> and <m>[G : H] = p</m>, where <m>p</m> is prime. Prove that either <m>K \leq H</m> or <m>G = KH</m>.
+          <ol>
+            <li>
+              <p>
+                Give an example of <m>G, H,</m> and <m>K</m> such that <m>HK</m> is not a subgroup of <m>G</m>. 
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Suppose now that <m>H\nsg G</m> and <m>[G : H] = p</m>, where <m>p</m> is prime. Prove that either <m>K \leq H</m> or <m>G = KH</m>.
+              </p>
+            </li>
+          </ol>
 				</p>
 
         <proof>
-          <p>
-            Let <m>G=S_3</m>, <m>H=\langle(12)\rangle</m>, and <m>K=\langle(13)\rangle</m>. Notice that <m>H\cap K=\{e\}</m>, and thus <m>|HK|=4</m>, which does not divide <m>6</m>. Thus <m>HK</m> is not a subgroup of <m>G</m>.
-          </p>
 
-          <p>
-            Suppose there exists some <m>k\in K</m> such that <m>k\not\in H</m>. We examine <m>kH\in G/H</m>. Notice that since <m>G/H</m> has prime order it is cyclic, and thus generated by any non-identity element, such as <m>kH</m>. Thus any element in <m>G/H</m> can be written in the form <m>k^iH</m>, and any element in <m>G</m> can subsequently be written as <m>k^ih</m> for some <m>h\in H</m>. Thus <m>G=KH</m>.
-          </p>
+          <ol>
+            <li>
+              <p>
+                Let <m>G=S_3</m>, <m>H=\langle(12)\rangle</m>, and <m>K=\langle(13)\rangle</m>. Notice that <m>H\cap K=\{e\}</m>, and thus <m>|HK|=4</m>, (<xref provisional="empty"/>) which does not divide <m>6</m>. Thus <m>HK</m> is not a subgroup of <m>G</m>, as this would contradict <xref text="title" ref="thm-lagrange" />.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Suppose there exists some <m>k\in K</m> such that <m>k\not\in H</m>. We examine <m>kH\in G/H</m>. Notice that since <m>G/H</m> has prime order it is cyclic, and thus generated by any non-identity element, such as <m>kH</m>. Thus any element in <m>G/H</m> can be written in the form <m>k^iH</m>, and any element in <m>G</m> can subsequently be written as <m>k^ih</m> for some <m>h\in H</m>. Thus <m>G=KH</m>.
+              </p>
+            </li>
+          </ol>
         </proof>
       </problem>
 

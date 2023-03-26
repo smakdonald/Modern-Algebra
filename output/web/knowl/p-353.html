@@ -11,9 +11,23 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">By Orbit-Stabilizer we know that <span class="process-math">\(|\Orb_G(x)|\big||G|\)</span> for all <span class="process-math">\(x\in X\text{.}\)</span> Thus every orbit under this action has an order dividing <span class="process-math">\(p^n\text{,}\)</span> so either <span class="process-math">\(1\)</span> or some positive power of <span class="process-math">\(p.\)</span> However, as no element of <span class="process-math">\(X\)</span> is fixed by every element of <span class="process-math">\(G\text{,}\)</span> there exists no stabilizer which is all of <span class="process-math">\(G\text{,}\)</span> and thus there exist no orbits that have order <span class="process-math">\(1\text{.}\)</span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">The Class Equation tells us</div>
+<div class="displaymath process-math">
+\begin{equation*}
+|G|=|Z(G)|+\sum\limits_{g\in G}[G:C_G(g)],
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec-pgroups.html#p-353" class="internal">in-context</a></span>
+<div class="para">where <span class="process-math">\(C_G(g)\)</span> are the centralizers with more than one element. Notice that this means <span class="process-math">\(|C_G(g)|\big||G|\text{,}\)</span> and thus each centralizer is a power of <span class="process-math">\(p\text{.}\)</span> Thus we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+p^n=|Z(G)|+pk
+\end{equation*}
+</div>
+<div class="para">for some <span class="process-math">\(k\in\N\text{.}\)</span> Thus the center of <span class="process-math">\(G\)</span> cannot be trivial, else we would not be able to sum to a power of <span class="process-math">\(p\text{.}\)</span>
+</div>
+</div>
+<span class="incontext"><a href="sec-class-eq.html#p-353" class="internal">in-context</a></span>
 </body>
 </html>

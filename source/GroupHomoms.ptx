@@ -15,30 +15,6 @@
         </statement>
       </definition>
 
-      <example>
-        <p>
-          Prove the following
-          <ol>
-            <li>
-              <p>
-                The identity map is a group isomomorphism for any group <m>G</m>.
-              </p>
-            </li>
-
-            <li>
-              <p>
-                The exponential map <m>\exp: ({\mathbb{R}}, +) \to ({\mathbb{R}}\setminus \{0\}, \cdot)</m> is a homomorphism. So is <m>\ln: ({\mathbb{R}}_{&gt;0}, \cdot) \to ({\mathbb{R}}, +)</m>. In fact, these maps are inverse to each other so we obtain an isomorphism . <m>({\mathbb{R}}, +)\cong ({\mathbb{R}}_{&gt;0}, \cdot)</m>.
-              </p>
-            </li>
-
-            <li>
-              <p>
-                For any positive integer <m>n</m> and field <m>F</m>, the map determinant map <m>\det: \operatorname{GL}_n(F) \to (F \setminus \{0\}, \cdot)</m> is a group homomorphism.
-              </p>
-            </li>
-          </ol>
-        </p>
-      </example>
 
       <lemma xml:id="lem-grphomom-prop">
         <statement>
@@ -330,14 +306,26 @@
       <problem>
         <p>
           Prove that there are group isomorphisms between the following pairs of groups: 
-          (a) <m>\left(\Q/\Z, +\right)\cong \left(\mu,\cdot\right)</m>, where <m>\mu=\{z\in \C \mid z^n=1 \text{ for some integer } n\}</m>. 
-          (b) <m>(\C^\times,\cdot)/\mu_m\cong (\C^\times,\cdot)</m> for any integer <m>m\geq 1</m>, where <m>\mu_m=\{z\in \C \mid z^m=1\}</m>.
+
+          <ol>
+            <li>
+              <p>
+                <m>\left(\Q/\Z, +\right)\cong \left(\mu,\cdot\right)</m>, where <m>\mu=\{z\in \C \mid z^n=1 \text{ for some integer } n\}</m>. 
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>(\C^\times,\cdot)/\mu_m\cong (\C^\times,\cdot)</m> for any integer <m>m\geq 1</m>, where <m>\mu_m=\{z\in \C \mid z^m=1\}</m>.
+              </p>
+            </li>
+          </ol>
         </p>
       </problem>
 
       <problem>
         <p>
-          Let <m>G</m> be a group of order <m>2m</m> for some odd integer <m>m &gt; 1</m>. Let <m>\Perm(G)</m> be the group<!-- linebreak -->of permutations on the elements of <m>G</m> (i.e., the group of bijective functions from G to G). You may use without proof that <m>\Perm(G)\cong S_{2m}</m>.
+          Let <m>G</m> be a group of order <m>2m</m> for some odd integer <m>m &gt; 1</m>. Let <m>\Perm(G)</m> be the group of permutations on the elements of <m>G</m> (i.e., the group of bijective functions from G to G). You may use without proof that <m>\Perm(G)\cong S_{2m}</m>.
         </p>
 
         <p><ol>
@@ -354,6 +342,31 @@
           </li>
 
         </ol></p>
+      </problem>
+
+      <problem>
+        <p>
+          Prove the following
+          <ol>
+            <li>
+              <p>
+                The identity map is a group isomomorphism for any group <m>G</m>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                The exponential map <m>\exp: ({\mathbb{R}}, +) \to ({\mathbb{R}}\setminus \{0\}, \cdot)</m> is a homomorphism. So is <m>\ln: ({\mathbb{R}}_{&gt;0}, \cdot) \to ({\mathbb{R}}, +)</m>. In fact, these maps are inverse to each other so we obtain an isomorphism . <m>({\mathbb{R}}, +)\cong ({\mathbb{R}}_{&gt;0}, \cdot)</m>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                For any positive integer <m>n</m> and field <m>F</m>, the map determinant map <m>\det: \operatorname{GL}_n(F) \to (F \setminus \{0\}, \cdot)</m> is a group homomorphism.
+              </p>
+            </li>
+          </ol>
+        </p>
       </problem>
 
     </section>
