@@ -445,9 +445,25 @@
       <problem>
         <p>
 					Let <m>G</m> be a group (not necessarily finite) and <m>H</m> a nonempty subset of <m>G</m> that is closed under multiplication. Suppose that for all <m>g\in G</m> we have <m>g^2\in H</m>. Prove the following: 
-          (a) <m>H</m> is a subgroup of <m>G</m> 
-          (b) <m>H</m> is normal 
-          (c) <m>G/H</m> is abelian.
+          <ol>
+            <li>
+              <p>
+                <m>H</m> is a subgroup of <m>G</m> 
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>H</m> is normal 
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>G/H</m> is abelian.
+              </p>
+            </li>
+          </ol>
 				</p>
 
         <proof>

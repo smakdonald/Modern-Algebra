@@ -259,7 +259,7 @@ window.MathJax = {
 
 \def\l{\lambda}
 \def\lx{\lambda_x}
-\def\a{\alpha}
+\newcommand{\a}{\alpha}
 \def\b{\beta}
 \def\d{\delta}
 \def\e{\varepsilon}
@@ -734,7 +734,7 @@ window.MathJax = {
 <article class="definition definition-like" id="def-finite-length"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">25.5</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-539">
+<div class="para logical" id="p-542">
 <div class="para">Given a short exact sequence</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -751,7 +751,7 @@ window.MathJax = {
 </div></article><article class="definition definition-like" id="def-"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">25.6</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-540">
+<div class="para logical" id="p-543">
 <div class="para">A module <span class="process-math">\(M\)</span> has <em class="emphasis">finite length</em> if it has a filtration of the form</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -765,7 +765,7 @@ window.MathJax = {
 </h3>Let <span class="process-math">\(K\)</span> be a field and <span class="process-math">\(V=K^2\text{.}\)</span> Then any filtration of the form <span class="process-math">\(0 \subseteq W \subseteq V\)</span> where <span class="process-math">\(W\)</span> is a line through the origin is a strict composition series.</article><article class="remark remark-like" id="remark-19"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">25.8</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-541">
+<div class="para logical" id="p-544">
 <div class="para">Let</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -790,25 +790,25 @@ C_\bullet: \qquad 0 = C_0 \subseteq C_1 \subseteq C_2 \subseteq \cdots \subseteq
 0 = i(A_0) \subseteq i(A_1) \subseteq i(A_2) \subseteq \cdots \subseteq i(A_n) = i(A) = p^{-1}(C_0) \subseteq p^{-1}(C_1) \subseteq p^{-1}(C_2) \subseteq \cdots \subseteq p^{-1}(C_n) = B.
 \end{equation*}
 </div>
-</div> <div class="para" id="p-542">Conversely, given a filtration / composition series / strict composition series of <span class="process-math">\(B\)</span> that contains <span class="process-math">\(i(L)\)</span> as a term, we can obtain filtrations / composition series / strict composition series of <span class="process-math">\(A\)</span> and <span class="process-math">\(C\)</span> by applying <span class="process-math">\(i^{-1}\)</span> to the terms up through <span class="process-math">\(i(L)\)</span> and applying <span class="process-math">\(p\)</span> to the terms from <span class="process-math">\(i(L)\)</span> on. However, not every filtration / composition series of a module will contain a fixed submodule as a term.</div></article><article class="theorem theorem-like" id="thm-jordan-holder"><h3 class="heading">
+</div> <div class="para" id="p-545">Conversely, given a filtration / composition series / strict composition series of <span class="process-math">\(B\)</span> that contains <span class="process-math">\(i(L)\)</span> as a term, we can obtain filtrations / composition series / strict composition series of <span class="process-math">\(A\)</span> and <span class="process-math">\(C\)</span> by applying <span class="process-math">\(i^{-1}\)</span> to the terms up through <span class="process-math">\(i(L)\)</span> and applying <span class="process-math">\(p\)</span> to the terms from <span class="process-math">\(i(L)\)</span> on. However, not every filtration / composition series of a module will contain a fixed submodule as a term.</div></article><article class="theorem theorem-like" id="thm-jordan-holder"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">25.9</span><span class="period">.</span><span class="space"> </span><span class="title">JOrdan-Holder Theorem.</span>
 </h3>
-<div class="para" id="p-543">Let <span class="process-math">\(M\)</span> be a module of finite length.</div> <div class="para logical" id="p-544"><ol class="decimal">
-<li id="li-162"><div class="para" id="p-545">If <span class="process-math">\(L\subseteq M\)</span> is a proper submodule, then <span class="process-math">\(\ell(L) &lt; \ell(M)\text{.}\)</span>
+<div class="para" id="p-546">Let <span class="process-math">\(M\)</span> be a module of finite length.</div> <div class="para logical" id="p-547"><ol class="decimal">
+<li id="li-165"><div class="para" id="p-548">If <span class="process-math">\(L\subseteq M\)</span> is a proper submodule, then <span class="process-math">\(\ell(L) &lt; \ell(M)\text{.}\)</span>
 </div></li>
-<li id="li-163"><div class="para" id="p-546">If <span class="process-math">\(L\subseteq M\)</span> is a nonzero submodule and <span class="process-math">\(\overline{M}=M/L\text{,}\)</span> then <span class="process-math">\(\ell(\overline{M})&lt; \ell(M)\text{.}\)</span>
+<li id="li-166"><div class="para" id="p-549">If <span class="process-math">\(L\subseteq M\)</span> is a nonzero submodule and <span class="process-math">\(\overline{M}=M/L\text{,}\)</span> then <span class="process-math">\(\ell(\overline{M})&lt; \ell(M)\text{.}\)</span>
 </div></li>
-<li id="li-164"><div class="para" id="p-547">Any filtration of <span class="process-math">\(M\)</span> can be refined to a composition series.</div></li>
-<li id="li-165"><div class="para" id="p-548">All strict composition series for <span class="process-math">\(M\)</span> are equivalent, and hence have the same length.</div></li>
-</ol></div></article><article class="hiddenproof" id="proof-54"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-54"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-54"><article class="hiddenproof"><div class="para logical" id="p-549">
+<li id="li-167"><div class="para" id="p-550">Any filtration of <span class="process-math">\(M\)</span> can be refined to a composition series.</div></li>
+<li id="li-168"><div class="para" id="p-551">All strict composition series for <span class="process-math">\(M\)</span> are equivalent, and hence have the same length.</div></li>
+</ol></div></article><article class="hiddenproof" id="proof-54"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-54"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-54"><article class="hiddenproof"><div class="para logical" id="p-552">
 <div class="para">If <span class="process-math">\(m := \ell(M)\text{,}\)</span> consider a strict composition series of <span class="process-math">\(M\)</span> of length <span class="process-math">\(m\text{,}\)</span> say</div>
 <div class="displaymath process-math">
 \begin{equation*}
 M_\bullet: \qquad  0 = M_0 \subsetneqq M_1 \subsetneqq M_2 \subsetneqq \cdots \subsetneqq M_m = M.
 \end{equation*}
 </div>
-</div> <div class="para logical" id="p-550"><ol class="decimal">
-<li id="li-166"><div class="para logical" id="p-551">
+</div> <div class="para logical" id="p-553"><ol class="decimal">
+<li id="li-169"><div class="para logical" id="p-554">
 <div class="para">Consider the filtration</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -830,8 +830,8 @@ L_\bullet: \qquad  0 = M_0 \cap L \subseteq M_1 \cap L \subseteq M_2 \cap L \sub
 <div class="para">We claim that the latter case does not hold for all <span class="process-math">\(i\text{:}\)</span> if it did, we would have <span class="process-math">\(0=M_0 = M_0 \cap L\text{,}\)</span> and inductively <span class="process-math">\(M_{i+1} \cap L = M_{i+1}\)</span> for all <span class="process-math">\(i\)</span> and in particular for <span class="process-math">\(i=m-1\text{,}\)</span> we have <span class="process-math">\(M = M\cap L\text{,}\)</span> contradicting that <span class="process-math">\(L\)</span> is proper. Thus, for some <span class="process-math">\(i\text{,}\)</span> the first case holds. We can then skip that <span class="process-math">\(i\)</span> and obtain a composition series of length less than <span class="process-math">\(n\text{,}\)</span> so <span class="process-math">\(\ell(L)&lt;m\text{.}\)</span>
 </div>
 </div></li>
-<li id="li-167">
-<div class="para logical" id="p-552">
+<li id="li-170">
+<div class="para logical" id="p-555">
 <div class="para">Consider the filtration</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -851,7 +851,7 @@ L_\bullet: \qquad  0 = M_0 \cap L \subseteq M_1 \cap L \subseteq M_2 \cap L \sub
 \end{equation*}
 </div>
 </div>
-<div class="para logical" id="p-553">
+<div class="para logical" id="p-556">
 <div class="para">We claim that the latter case does not hold for all <span class="process-math">\(i\text{:}\)</span> if it did, we would have then <span class="process-math">\(M_{i+1} \cap (M_i+L) = M_{i}\)</span> for all <span class="process-math">\(i\text{,}\)</span> so</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -862,9 +862,9 @@ L_\bullet: \qquad  0 = M_0 \cap L \subseteq M_1 \cap L \subseteq M_2 \cap L \sub
 </div>
 </div>
 </li>
-<li id="li-168"><div class="para" id="p-554">We proceed by induction on length again. Given a filtration of <span class="process-math">\(M\text{,}\)</span> we can suppose that there is some nonzero proper submodule <span class="process-math">\(L\)</span> in the filtration, since otherwise we could just take any composition series. Then <span class="process-math">\(L\)</span> and <span class="process-math">\(\overline{M}\)</span> has length less than <span class="process-math">\(M\text{.}\)</span> The filtration up to <span class="process-math">\(L\)</span> can be refined to a strict composition series by the induction hypothesis, and the filtration from <span class="process-math">\(L\)</span> to <span class="process-math">\(M\)</span> taken mod <span class="process-math">\(L\)</span> can be refined to a strict composition series for <span class="process-math">\(\overline{M}\text{;}\)</span> pulling back as in the remark above, we get the strict composition series we want.</div></li>
-<li id="li-169">
-<div class="para logical" id="p-555">
+<li id="li-171"><div class="para" id="p-557">We proceed by induction on length again. Given a filtration of <span class="process-math">\(M\text{,}\)</span> we can suppose that there is some nonzero proper submodule <span class="process-math">\(L\)</span> in the filtration, since otherwise we could just take any composition series. Then <span class="process-math">\(L\)</span> and <span class="process-math">\(\overline{M}\)</span> has length less than <span class="process-math">\(M\text{.}\)</span> The filtration up to <span class="process-math">\(L\)</span> can be refined to a strict composition series by the induction hypothesis, and the filtration from <span class="process-math">\(L\)</span> to <span class="process-math">\(M\)</span> taken mod <span class="process-math">\(L\)</span> can be refined to a strict composition series for <span class="process-math">\(\overline{M}\text{;}\)</span> pulling back as in the remark above, we get the strict composition series we want.</div></li>
+<li id="li-172">
+<div class="para logical" id="p-558">
 <div class="para">We show by induction on <span class="process-math">\(m\)</span> that for any module of length <span class="process-math">\(m\text{,}\)</span> all of its strict composition series are equivalent. Assume that <span class="process-math">\(\ell(M)=m\text{.}\)</span> If <span class="process-math">\(m=1\text{,}\)</span> the claim is clear since we are dealing with a simple module. Suppose that</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -873,7 +873,7 @@ N_\bullet: \qquad 0 = N_0 \subsetneqq N_1 \subsetneqq \cdots \subsetneqq N_n = M
 </div>
 <div class="para">is another strict composition series for <span class="process-math">\(M\text{,}\)</span> so <span class="process-math">\(n\geq m\text{.}\)</span> If <span class="process-math">\(N_{n-1}=M_{m-1}\text{,}\)</span> then since <span class="process-math">\(\ell(M_{m-1})\leq m-1\)</span> the two composition series we have for <span class="process-math">\(M_{m-1}\)</span> are equivalent by induction, so the two given series are equivalent.</div>
 </div>
-<div class="para logical" id="p-556">
+<div class="para logical" id="p-559">
 <div class="para">If <span class="process-math">\(N_{n-1} \neq M_{m-1}\text{,}\)</span> since <span class="process-math">\(M/M_{m-1}\)</span> is simple, <span class="process-math">\(M_{m-1}\)</span> is not properly contained in <span class="process-math">\(N_{n-1}\text{,}\)</span> so the image of <span class="process-math">\(M_{m-1}\)</span> in <span class="process-math">\(M/N_{n-1}\)</span> is nonzero, so equals all of <span class="process-math">\(M\text{,}\)</span> which means that <span class="process-math">\(N_{n-1}+M_{m-1} = M\text{.}\)</span> Set <span class="process-math">\(K=N_{n-1}\cap M_{m-1}\text{.}\)</span> By the second isomorphism theorem, we then have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -882,7 +882,7 @@ N_\bullet: \qquad 0 = N_0 \subsetneqq N_1 \subsetneqq \cdots \subsetneqq N_n = M
 </div>
 <div class="para">and similarly <span class="process-math">\(M/N_{n-1} \cong M_{m-1} / K\text{,}\)</span> and both of these modules are simple.</div>
 </div>
-<div class="para logical" id="p-557">
+<div class="para logical" id="p-560">
 <div class="para">Fix a strict composition series for <span class="process-math">\(K\text{:}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -906,7 +906,7 @@ M_{\bullet \leq m-1} : \qquad 0 = M_0 \subsetneqq M_1 \subsetneqq M_2 \subsetneq
 <div class="para">of length <span class="process-math">\(m-1\text{,}\)</span> we must have that <span class="process-math">\(k=m-2\)</span> and <span class="process-math">\(K'_{\bullet}\)</span> is equivalent to <span class="process-math">\(M_{\bullet \leq n-1}\text{.}\)</span> Thus, the composition factors of <span class="process-math">\(M_{\bullet \leq m-1}\)</span> are those of <span class="process-math">\(K\)</span> plus one copy of <span class="process-math">\(M_{m-1} / K \cong M/N_{n-1}\text{.}\)</span>
 </div>
 </div>
-<div class="para logical" id="p-558">
+<div class="para logical" id="p-561">
 <div class="para">Now,</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -922,18 +922,18 @@ N_{\bullet \leq n-1}: \qquad 0 = N_0 \subsetneqq N_1 \subsetneqq \cdots \subsetn
 <div class="para">Thus, the composition factors of <span class="process-math">\(N_{\bullet \leq n-1}\)</span> are those of <span class="process-math">\(K\)</span> plus one copy of <span class="process-math">\(N_{n-1} / K \cong M/M_{n-1}\text{.}\)</span>
 </div>
 </div>
-<div class="para" id="p-559">It follows that the composition series <span class="process-math">\(M_\bullet\)</span> and <span class="process-math">\(N_\bullet\)</span> are equivalent.</div>
+<div class="para" id="p-562">It follows that the composition series <span class="process-math">\(M_\bullet\)</span> and <span class="process-math">\(N_\bullet\)</span> are equivalent.</div>
 </li>
 </ol></div></article></div>
 <article class="example example-like" id="example-11"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">25.10</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-560"><ol class="decimal">
-<li id="li-170"><div class="para" id="p-561">If <span class="process-math">\(K\)</span> is a field, then a <span class="process-math">\(K\)</span>-vector space of dimension <span class="process-math">\(n\)</span> is a <span class="process-math">\(K\)</span>-module of length <span class="process-math">\(n\text{.}\)</span>
+<div class="para logical" id="p-563"><ol class="decimal">
+<li id="li-173"><div class="para" id="p-564">If <span class="process-math">\(K\)</span> is a field, then a <span class="process-math">\(K\)</span>-vector space of dimension <span class="process-math">\(n\)</span> is a <span class="process-math">\(K\)</span>-module of length <span class="process-math">\(n\text{.}\)</span>
 </div></li>
-<li id="li-171"><div class="para" id="p-562">If <span class="process-math">\(R\)</span> is a <span class="process-math">\(K\)</span>-algebra, and <span class="process-math">\(M\)</span> is an <span class="process-math">\(R\)</span>-module that as a <span class="process-math">\(K\)</span>-vector space has dimension <span class="process-math">\(n\text{,}\)</span> then <span class="process-math">\(\ell(M)\leq n\text{,}\)</span> since the vector space dimension of a proper submodule is strictly smaller.</div></li>
-<li id="li-172"><div class="para" id="p-563">The ring <span class="process-math">\(R=K[x]\)</span> does not have finite length as a module over itself.</div></li>
-<li id="li-173"><div class="para logical" id="p-564">
+<li id="li-174"><div class="para" id="p-565">If <span class="process-math">\(R\)</span> is a <span class="process-math">\(K\)</span>-algebra, and <span class="process-math">\(M\)</span> is an <span class="process-math">\(R\)</span>-module that as a <span class="process-math">\(K\)</span>-vector space has dimension <span class="process-math">\(n\text{,}\)</span> then <span class="process-math">\(\ell(M)\leq n\text{,}\)</span> since the vector space dimension of a proper submodule is strictly smaller.</div></li>
+<li id="li-175"><div class="para" id="p-566">The ring <span class="process-math">\(R=K[x]\)</span> does not have finite length as a module over itself.</div></li>
+<li id="li-176"><div class="para logical" id="p-567">
 <div class="para">
 <span class="process-math">\(\mathbb{Z}/p^n\)</span> has length <span class="process-math">\(n\)</span> as a <span class="process-math">\(\mathbb{Z}\)</span>-module, with strict composition series</div>
 <div class="displaymath process-math">

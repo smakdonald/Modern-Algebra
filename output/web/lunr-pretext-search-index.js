@@ -1231,7 +1231,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.3",
   "title": "Quotient Groups",
-  "body": " Quotient Groups   Let be a group (not necessarily finite) and a nonempty subset of that is closed under multiplication. Suppose that for all we have . Prove the following: (a) is a subgroup of (b) is normal (c) is abelian.   Let be a group, a multiplicatively closed subset of , and suppose that for all .  First, notice that . Let , and consider . Notice that . As is multiplicatively closed, we see that . Thus is a subgroup of by the subgroup test.  Let , , and consider . Notice that . Multiplying by on the right we see , as it is multiplicatively closed and . We rewrite , given that elements always commute with their inverses. As , we see that as well. Thus is normal in .  Let . As for every , every element has order . Thus and so , making the group abelian.    "
+  "body": " Quotient Groups   Let be a group (not necessarily finite) and a nonempty subset of that is closed under multiplication. Suppose that for all we have . Prove the following:    is a subgroup of      is normal     is abelian.      Let be a group, a multiplicatively closed subset of , and suppose that for all .  First, notice that . Let , and consider . Notice that . As is multiplicatively closed, we see that . Thus is a subgroup of by the subgroup test.  Let , , and consider . Notice that . Multiplying by on the right we see , as it is multiplicatively closed and . We rewrite , given that elements always commute with their inverses. As , we see that as well. Thus is normal in .  Let . As for every , every element has order . Thus and so , making the group abelian.    "
 },
 {
   "id": "problem-61",
@@ -1240,7 +1240,7 @@ var ptx_lunr_docs = [
   "type": "Problem",
   "number": "3.30",
   "title": "",
-  "body": " Let be a group (not necessarily finite) and a nonempty subset of that is closed under multiplication. Suppose that for all we have . Prove the following: (a) is a subgroup of (b) is normal (c) is abelian.   Let be a group, a multiplicatively closed subset of , and suppose that for all .  First, notice that . Let , and consider . Notice that . As is multiplicatively closed, we see that . Thus is a subgroup of by the subgroup test.  Let , , and consider . Notice that . Multiplying by on the right we see , as it is multiplicatively closed and . We rewrite , given that elements always commute with their inverses. As , we see that as well. Thus is normal in .  Let . As for every , every element has order . Thus and so , making the group abelian.   "
+  "body": " Let be a group (not necessarily finite) and a nonempty subset of that is closed under multiplication. Suppose that for all we have . Prove the following:    is a subgroup of      is normal     is abelian.      Let be a group, a multiplicatively closed subset of , and suppose that for all .  First, notice that . Let , and consider . Notice that . As is multiplicatively closed, we see that . Thus is a subgroup of by the subgroup test.  Let , , and consider . Notice that . Multiplying by on the right we see , as it is multiplicatively closed and . We rewrite , given that elements always commute with their inverses. As , we see that as well. Thus is normal in .  Let . As for every , every element has order . Thus and so , making the group abelian.   "
 },
 {
   "id": "sec-isomorphism-thms",

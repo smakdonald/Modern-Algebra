@@ -11,8 +11,28 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">Let <span class="process-math">\(G\)</span> be a finite group and <span class="process-math">\(K\)</span> a field. The representation of <span class="process-math">\(G\)</span> corresponding to <span class="process-math">\(K[G]\)</span> viewed as a left module over itself can be described explicitly as following: As a <span class="process-math">\(K\)</span>-vector space, <span class="process-math">\(K[G]\)</span> has <span class="process-math">\(G\)</span> as a basis: <span class="process-math">\(K[G] = \oplus_{g \in G} k \cdot g\text{.}\)</span> <span class="process-math">\(G\)</span> acts on this vector space by permuting the basis via left multiplication: <span class="process-math">\(h \cdot (\sum_g c_g g) = \sum_g c_g (hg)\text{.}\)</span> This is sometimes called the <em class="emphasis">(left) regular representation of <span class="process-math">\(G\)</span></em>.</div>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">Then <span class="process-math">\(p\)</span> is still a <span class="process-math">\(K\)</span>-linear map (since <span class="process-math">\(f\)</span> is <span class="process-math">\(K\)</span>-linear and the group action is <span class="process-math">\(K\)</span>-linear). For any <span class="process-math">\(h \in G\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+p(hm) = \frac{1}{|G|} \sum_{g \in G} g^{-1} f(g hm) = \frac{1}{|G|} \sum_{x \in G} hx^{-1} f(xm)
+= h p(m),
+\end{equation*}
+</div>
+<div class="para">where the second equality is given by identifying <span class="process-math">\(x\)</span> with <span class="process-math">\(gh\text{.}\)</span> These conditions ensure that <span class="process-math">\(p\)</span> is <span class="process-math">\(K[G]\)</span>-linear. Finally,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+p(i(n))= \frac{1}{|G|} \sum_{g \in G} g^{-1} f(g i(n))
+= \frac{1}{|G|} \sum_{g \in G} g^{-1} f(i(gn)) 
+= \frac{1}{|G|} \sum_{g \in G} g^{-1} gn
+= \frac{1}{|G|} \sum_{g \in G} n  = n
+\end{equation*}
+</div>
+<div class="para">where the second equality uses that <span class="process-math">\(i\)</span> is <span class="process-math">\(K[G]\)</span>-linear and the third one uses that <span class="process-math">\(f \circ i =
+\mathrm{id}\text{.}\)</span>
+</div>
+</div>
 <span class="incontext"><a href="sec-semisimple-rings.html#p-656" class="internal">in-context</a></span>
 </body>
 </html>
