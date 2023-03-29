@@ -12,7 +12,15 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Let <span class="process-math">\(G\)</span> be a finite group and <span class="process-math">\(p\)</span> a prime. Write the order of <span class="process-math">\(G\)</span> as <span class="process-math">\(|G| = p^e m\)</span> where <span class="process-math">\(p \nmid m\text{.}\)</span> A <em class="emphasis">Sylow <span class="process-math">\(p\)</span>-subgroup</em> of <span class="process-math">\(G\)</span> is a subgroup <span class="process-math">\(H \leq G\)</span> such that <span class="process-math">\(|H| = p^e\text{.}\)</span> That is, a Sylow <span class="process-math">\(p\)</span>-subgroup of <span class="process-math">\(G\)</span> is a subgroup whose order is the highest conceivable power of <span class="process-math">\(p\)</span> according to Lagrange's Theorem.</div>
-<span class="incontext"><a href="sec-pgroups.html#p-362" class="internal">in-context</a></span>
+<div class="para logical">
+<div class="para">The elements of <span class="process-math">\(Z(G)\)</span> are precisely the group elements that are conjugate to only themselves; that is, they are the one-element orbits for the conjugation action. Because the conjugacy classes (orbits of the conjugation action) partition <span class="process-math">\(G\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-conjclass.html">
+\begin{equation*}
+|G| = |Z(G)| + \sum_i^r [g_i]_c.
+\end{equation*}
+</div>
+<div class="para">For each <span class="process-math">\(g_i\)</span> as in the statement, by Theorem <a href="" class="xref" data-knowl="./knowl/thm-conjclass.html" title="Theorem 4.34">Theorem 4.34</a>, we have <span class="process-math">\([G: C_G(g_i)] =[g_i]_c\text{.}\)</span> The class equation follows from substituting this into the equation above.</div>
+</div>
+<span class="incontext"><a href="sec-class-eq.html#p-362" class="internal">in-context</a></span>
 </body>
 </html>

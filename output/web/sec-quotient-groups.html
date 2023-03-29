@@ -552,7 +552,43 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="ch-extras.html" class="internal"><span class="codenumber">8</span> <span class="title">Extras</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-quals.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Qualifying Exams</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-quals.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Qualifying Exams</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec-quals.html#subsection-11" class="internal"><span class="codenumber">8.1.1</span> <span class="title">Winter 2023</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-quals.html#subsubsection-1" class="internal"><span class="codenumber">8.1.1.1</span> <span class="title">Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="sec-quals.html#subsubsection-2" class="internal"><span class="codenumber">8.1.1.2</span> <span class="title">Rings, Modules, Linear Algebra</span></a></div></li>
+<li><div class="toc-item"><a href="sec-quals.html#subsubsection-3" class="internal"><span class="codenumber">8.1.1.3</span> <span class="title">Fields and Galois Theory</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-quals.html#subsection-12" class="internal"><span class="codenumber">8.1.2</span> <span class="title">Summer 2023</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-quals.html#subsubsection-4" class="internal"><span class="codenumber">8.1.2.1</span> <span class="title">Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="sec-quals.html#subsubsection-5" class="internal"><span class="codenumber">8.1.2.2</span> <span class="title">Rings, Modules, Linear Algebra</span></a></div></li>
+<li><div class="toc-item"><a href="sec-quals.html#subsubsection-6" class="internal"><span class="codenumber">8.1.2.3</span> <span class="title">Fields and Galois Theory</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-quals.html#subsection-13" class="internal"><span class="codenumber">8.1.3</span> <span class="title">Winter 2022</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-quals.html#subsubsection-7" class="internal"><span class="codenumber">8.1.3.1</span> <span class="title">Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="sec-quals.html#subsubsection-8" class="internal"><span class="codenumber">8.1.3.2</span> <span class="title">Rings, Modules, Linear Algebra</span></a></div></li>
+<li><div class="toc-item"><a href="sec-quals.html#subsubsection-9" class="internal"><span class="codenumber">8.1.3.3</span> <span class="title">Fields and Galois Theory</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-quals.html#subsection-14" class="internal"><span class="codenumber">8.1.4</span> <span class="title">Summer 2022</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-quals.html#subsubsection-10" class="internal"><span class="codenumber">8.1.4.1</span> <span class="title">Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="sec-quals.html#subsubsection-11" class="internal"><span class="codenumber">8.1.4.2</span> <span class="title">Rings, Modules, Linear Algebra</span></a></div></li>
+<li><div class="toc-item"><a href="sec-quals.html#subsubsection-12" class="internal"><span class="codenumber">8.1.4.3</span> <span class="title">Fields and Galois Theory</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><div class="toc-item"><a href="sec-solve.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Solvable Groups</span></a></div></li>
 <li><div class="toc-item"><a href="sec-smallorder.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Groups of Small Order</span></a></div></li>
 </ul>
@@ -731,23 +767,43 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-quotient-groups"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.3</span> <span class="title">Quotient Groups</span>
 </h2>
-<article class="problem example-like" id="problem-61"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">3.30</span><span class="period">.</span>
+<article class="lemma theorem-like" id="lem-quotient-surj-hom"><h3 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">3.32</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-240">
+<div class="para" id="p-249">For any group <span class="process-math">\(G\)</span> and normal subgroup <span class="process-math">\(N\)</span> of <span class="process-math">\(G\text{,}\)</span> the map <span class="process-math">\(\pi:G \to G/N\)</span> defined by <span class="process-math">\(\pi(g)=gN\)</span> is a surjective group homomorphism with kernel <span class="process-math">\(\operatorname{Ker}(\pi)=N\text{.}\)</span>
+</div></article><article class="hiddenproof" id="proof-10"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-10"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-10"><article class="hiddenproof"><div class="para logical" id="p-250">
+<div class="para">Surjectivity is immediate from the definition. The group homomorphism property follows from the computation below which uses the definition of <span class="process-math">\(\pi\)</span> and the rule for multiplying cosets in <span class="process-math">\(G/N\text{:}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\pi(gg')=(gg')N=gN\cdot g'N=\pi(g)\pi(g').
+\end{equation*}
+</div>
+<div class="para">Finally, using Lemma <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "lem:cosets" missing or not unique]</code>, we have <span class="process-math">\(\operatorname{Ker}(\pi)=\{g\in G\mid gN=e_GN\}=N\text{.}\)</span>
+</div>
+</div></article></div>
+<article class="corollary theorem-like" id="cor-norm-iff-ker"><h3 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">3.33</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-251">A subgroup <span class="process-math">\(N\)</span> of a group <span class="process-math">\(G\)</span> is normal in <span class="process-math">\(G\)</span> if and only if <span class="process-math">\(N\)</span> is the kernel of a homomorphism with domain <span class="process-math">\(G\)</span>
+</div></article><article class="hiddenproof" id="proof-11"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-11"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-11"><article class="hiddenproof"><div class="para" id="p-252">empty</div></article></div>
+<article class="problem example-like" id="problem-62"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">3.34</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-253">
 <div class="para">Let <span class="process-math">\(G\)</span> be a group (not necessarily finite) and <span class="process-math">\(H\)</span> a nonempty subset of <span class="process-math">\(G\)</span> that is closed under multiplication. Suppose that for all <span class="process-math">\(g\in G\)</span> we have <span class="process-math">\(g^2\in H\text{.}\)</span> Prove the following:</div>
 <ol class="decimal">
-<li id="li-105"><div class="para" id="p-241">
+<li id="li-105"><div class="para" id="p-254">
 <span class="process-math">\(H\)</span> is a subgroup of <span class="process-math">\(G\)</span>
 </div></li>
-<li id="li-106"><div class="para" id="p-242">
+<li id="li-106"><div class="para" id="p-255">
 <span class="process-math">\(H\)</span> is normal</div></li>
-<li id="li-107"><div class="para" id="p-243">
+<li id="li-107"><div class="para" id="p-256">
 <span class="process-math">\(G/H\)</span> is abelian.</div></li>
 </ol>
-</div> <article class="hiddenproof" id="proof-7"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-7"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-7"><article class="hiddenproof"><div class="para" id="p-244">Let <span class="process-math">\(G\)</span> be a group, <span class="process-math">\(H\)</span> a multiplicatively closed subset of <span class="process-math">\(G\text{,}\)</span> and suppose that <span class="process-math">\(g^2\in H\)</span> for all <span class="process-math">\(g\in G\text{.}\)</span>
-</div> <div class="para" id="p-245">First, notice that <span class="process-math">\(e^2=e\in H\text{.}\)</span> Let <span class="process-math">\(x\in H\text{,}\)</span> and consider <span class="process-math">\(x\inv\text{.}\)</span> Notice that <span class="process-math">\((x{\inv})^2=x^{-2}\in H\text{.}\)</span> As <span class="process-math">\(H\)</span> is multiplicatively closed, we see that <span class="process-math">\(xx^{-2}=x\inv\in H\text{.}\)</span> Thus <span class="process-math">\(H\)</span> is a subgroup of <span class="process-math">\(G\)</span> by the subgroup test.</div> <div class="para" id="p-246">Let <span class="process-math">\(g\in G\text{,}\)</span> <span class="process-math">\(h\in H\text{,}\)</span> and consider <span class="process-math">\(gh\text{.}\)</span> Notice that <span class="process-math">\((gh)^2=ghgh\in H\text{.}\)</span> Multiplying by <span class="process-math">\(h\inv\)</span> on the right we see <span class="process-math">\(ghg\in H\text{,}\)</span> as it is multiplicatively closed and <span class="process-math">\(h\inv\in H\text{.}\)</span> We rewrite <span class="process-math">\(ghg=ghggg\inv=ghg\inv g^2\text{,}\)</span> given that elements always commute with their inverses. As <span class="process-math">\(g^2\in H\text{,}\)</span> we see that <span class="process-math">\(ghg\inv\in H\)</span> as well. Thus <span class="process-math">\(H\)</span> is normal in <span class="process-math">\(G\text{.}\)</span>
-</div> <div class="para" id="p-247">Let <span class="process-math">\(x,y\in G/H\text{.}\)</span> As <span class="process-math">\(g^2\in H\)</span> for every <span class="process-math">\(g\in G\text{,}\)</span> every element <span class="process-math">\(G/H\)</span> has order <span class="process-math">\(2\text{.}\)</span> Thus <span class="process-math">\(xyxy=e\)</span> and so <span class="process-math">\(xy=(xy)\inv=yx\text{,}\)</span> making the group abelian.</div></article></div></article></section></div>
+</div> <article class="hiddenproof" id="proof-12"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-12"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-12"><article class="hiddenproof"><div class="para" id="p-257">Let <span class="process-math">\(G\)</span> be a group, <span class="process-math">\(H\)</span> a multiplicatively closed subset of <span class="process-math">\(G\text{,}\)</span> and suppose that <span class="process-math">\(g^2\in H\)</span> for all <span class="process-math">\(g\in G\text{.}\)</span>
+</div> <div class="para" id="p-258">First, notice that <span class="process-math">\(e^2=e\in H\text{.}\)</span> Let <span class="process-math">\(x\in H\text{,}\)</span> and consider <span class="process-math">\(x\inv\text{.}\)</span> Notice that <span class="process-math">\((x{\inv})^2=x^{-2}\in H\text{.}\)</span> As <span class="process-math">\(H\)</span> is multiplicatively closed, we see that <span class="process-math">\(xx^{-2}=x\inv\in H\text{.}\)</span> Thus <span class="process-math">\(H\)</span> is a subgroup of <span class="process-math">\(G\)</span> by the subgroup test.</div> <div class="para" id="p-259">Let <span class="process-math">\(g\in G\text{,}\)</span> <span class="process-math">\(h\in H\text{,}\)</span> and consider <span class="process-math">\(gh\text{.}\)</span> Notice that <span class="process-math">\((gh)^2=ghgh\in H\text{.}\)</span> Multiplying by <span class="process-math">\(h\inv\)</span> on the right we see <span class="process-math">\(ghg\in H\text{,}\)</span> as it is multiplicatively closed and <span class="process-math">\(h\inv\in H\text{.}\)</span> We rewrite <span class="process-math">\(ghg=ghggg\inv=ghg\inv g^2\text{,}\)</span> given that elements always commute with their inverses. As <span class="process-math">\(g^2\in H\text{,}\)</span> we see that <span class="process-math">\(ghg\inv\in H\)</span> as well. Thus <span class="process-math">\(H\)</span> is normal in <span class="process-math">\(G\text{.}\)</span>
+</div> <div class="para" id="p-260">Let <span class="process-math">\(x,y\in G/H\text{.}\)</span> As <span class="process-math">\(g^2\in H\)</span> for every <span class="process-math">\(g\in G\text{,}\)</span> every element <span class="process-math">\(G/H\)</span> has order <span class="process-math">\(2\text{.}\)</span> Thus <span class="process-math">\(xyxy=e\)</span> and so <span class="process-math">\(xy=(xy)\inv=yx\text{,}\)</span> making the group abelian.</div></article></div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-normal-subgroups.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-isomorphism-thms.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

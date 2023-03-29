@@ -11,17 +11,9 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5>
-<div class="para">Let <span class="process-math">\(G\)</span> be a group of order <span class="process-math">\(2835\text{.}\)</span>
-</div> <div class="para">By Sylow's Theorem we know that <span class="process-math">\(n_3=1\mod{3}\)</span> and <span class="process-math">\(n_3|35\text{.}\)</span> The possible options are thus <span class="process-math">\(1\)</span> and <span class="process-math">\(7\text{.}\)</span>
-</div> <div class="para logical">
-<div class="para">Suppose by way of contradiction that <span class="process-math">\(G\)</span> is simple. Thus <span class="process-math">\(n_3\neq 1\text{,}\)</span> so <span class="process-math">\(n_3=7\text{.}\)</span> Let <span class="process-math">\(G\)</span> act on the <span class="process-math">\(\Syl_3(G)\)</span> by conjugation, yielding the homomorphism</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\rho: G\to S_7
-\end{equation*}
-</div>
-<div class="para">granted via the permutation representation. By (2) in Sylow’s Theorem we see that <span class="process-math">\(\rho\)</span> is not trivial. As <span class="process-math">\(|S_7|=7!\)</span> we see that <span class="process-math">\(|G|\not\big||S_7|\text{,}\)</span> meaning that the <span class="process-math">\(\ker(\rho)\)</span> is non-trivial, yielding a non-trivial normal subgroup of <span class="process-math">\(G\text{,}\)</span> a contradiction.</div>
-</div></article><span class="incontext"><a href="sec-simple-groups.html#proof-35" class="internal">in-context</a></span>
+<article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>
+<div class="para">Let <span class="process-math">\(G\)</span> be a group of order <span class="process-math">\(231(= 3^2 · 7 · 11)\)</span>
+</div> <div class="para">By Sylow’s Theorem we know <span class="process-math">\(n_{11}|21\)</span> and is congruent to <span class="process-math">\(1\mod{11}\text{.}\)</span> The only possibility for such is <span class="process-math">\(1\text{,}\)</span> meaning that <span class="process-math">\(G\)</span> has exactly <span class="process-math">\(1\)</span> Sylow <span class="process-math">\(11\)</span>-subgroup.</div> <div class="para">By the First Isomorphism Theorem we know that <span class="process-math">\(G/\ker(\rho)\cong\im(\rho)=\Aut(P)\text{.}\)</span> However, <span class="process-math">\(\Aut(P)\cong\Aut(\Z_{11})\cong \Z^x\text{,}\)</span> which has order <span class="process-math">\(10\text{.}\)</span> As this is a homomorphism, we see the order of <span class="process-math">\(G/\ker(\rho)\)</span> must divide both <span class="process-math">\(10\)</span> and <span class="process-math">\(231\text{,}\)</span> two numbers that are relatively prime. Thus <span class="process-math">\(\ker(\rho)=1\text{,}\)</span> meaning that conjugation is equivalent to the identity map, or that <span class="process-math">\(gxg\inv=x\)</span> for all <span class="process-math">\(g\in G\text{.}\)</span> Thus <span class="process-math">\(P\in Z(G)\text{.}\)</span>
+</div></article><span class="incontext"><a href="sec-sylowthm.html#proof-35" class="internal">in-context</a></span>
 </body>
 </html>

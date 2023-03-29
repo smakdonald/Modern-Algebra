@@ -11,17 +11,9 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para logical">
-<div class="para">Recall that submodules of <span class="process-math">\(R\)</span> are left ideals and the simple ones are the minimal (nonzero) left ideals. So, <span class="process-math">\(R\)</span> is left semisimple if and only if <span class="process-math">\(R\)</span> is the internal direct sum of some collection of minimal left ideals <span class="process-math">\(I_j\text{:}\)</span>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para">The hard part is proving <span class="process-math">\((1) \Leftrightarrow (2)\text{.}\)</span> <span class="process-math">\((1) \Rightarrow (2)\)</span> Assume (1), so that <span class="process-math">\(M = \oplus_{\lambda \in \Lambda} M_\lambda\)</span> for some collection of simple submodules <span class="process-math">\(M_\lambda\text{,}\)</span> and let <span class="process-math">\(N \subseteq M\)</span> be any submodule. (It is important to note that it does not necessarily follow that <span class="process-math">\(N\)</span> is a sum of some subcollection of the <span class="process-math">\(M_\lambda\)</span>) . Consider the collection <span class="process-math">\(\mathcal S\)</span> of subsets <span class="process-math">\(\Gamma\)</span> of <span class="process-math">\(\Lambda\)</span> such that <span class="process-math">\(N \cap M_\Gamma = 0\)</span> where we define <span class="process-math">\(M_\Gamma := \oplus_{\lambda \in \Gamma} M_\lambda\text{.}\)</span> View <span class="process-math">\(\mathcal S\)</span> as a poset by inclusion. It is nonempty since <span class="process-math">\(J = \emptyset\)</span> belongs to <span class="process-math">\(\mathcal S\text{.}\)</span> If <span class="process-math">\(\{\Gamma_\alpha\}\)</span> is a totally ordered subcollection of <span class="process-math">\(\mathcal S\text{,}\)</span> let <span class="process-math">\(\Gamma = \cup_\alpha \Gamma_\alpha\text{.}\)</span> I claim <span class="process-math">\(M_\Gamma \cap N = 0\text{.}\)</span> If not, there is a nonzero element <span class="process-math">\((m_\gamma) \in M_\Gamma \cap N\text{.}\)</span> But since <span class="process-math">\(m_\gamma = 0\)</span> for all but a finite number of <span class="process-math">\(\gamma\)</span>’s and since the collection of <span class="process-math">\(\Gamma_\alpha\)</span>’s was totally ordered, there is some <span class="process-math">\(\alpha\)</span> such that <span class="process-math">\((m_\gamma) \in M_{\Gamma_\alpha} \cap N\text{,}\)</span> a contradiction. We may thus apply Zorn’s Lemma to get a maximal <span class="process-math">\(\Gamma \in \mathcal S\text{.}\)</span>
 </div>
-<div class="displaymath process-math">
-\begin{equation*}
-R = \bigoplus_{j \in J} I_j.
-\end{equation*}
-</div>
-<div class="para">Moreover, <span class="process-math">\(R\)</span> is f.g. as a module over itself, and so this must be a finite direct sum. So, <span class="process-math">\(R\)</span> is left semisimple if and only if <span class="process-math">\(R\)</span> decomposes as an internal direct sum of the form <span class="process-math">\(R = I_1 \oplus \cdots \oplus I_m\)</span> for some finite collection <span class="process-math">\(I_1, \dots, I_m\)</span> of minimal left ideals.</div>
-</div>
-<span class="incontext"><a href="sec-semisimple-rings.html#p-634" class="internal">in-context</a></span>
+<span class="incontext"><a href="ch-semisimple-mod.html#p-634" class="internal">in-context</a></span>
 </body>
 </html>

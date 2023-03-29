@@ -62,6 +62,36 @@
             </ol>
           </p>
         </statement>
+
+        <proof>
+          <p>
+            We only prove the statements about left cosets.
+          </p>
+
+          <p>
+            <m>1. \Rightarrow 2.:</m> if <m>x</m> and <m>y</m> belong to the same left coset <m>gH</m> of <m>H</m> in <m>G</m> then <m>x=gh'</m> and <m>y=gh''</m> for some <m>h',h''\in H</m>, so <m>g=y(h'')^{-1}</m> and therefore <m>x=y(h'')^{-1}h'=yh</m> where <m>h=(h'')^{-1}h'\in H</m>.
+          </p>
+  
+          <p>
+            <m>2. \iff 3.:</m> <m>x=yh</m> for some <m>h \in H</m> <m>\iff</m> <m>y = xh^{-1}</m> and <m>h^{-1} \in H</m>.
+          </p>
+  
+          <p>
+            <m>2. \iff 4.:</m> <m>x=yh</m> for some <m>h \in H</m> <m>\iff</m> <m>y^{-1} x=h\in H</m>.
+          </p>
+  
+          <p>
+            <m>4. \iff 5.:</m> <m>y^{-1} x\in H \iff (y^{-1} x)^{-1}\in H \iff x^{-1}y\in H</m>.
+          </p>
+  
+          <p>
+            <m>2. \Rightarrow 6.:</m> Suppose <m>x = yh</m> for some <m>h \in H</m>, then by <m>2. \Rightarrow 3.</m> we also have <m>y = xh''</m> for some <m>h'' \in H</m>. Then we have <me>xH=\{xh'\mid h'\in H\}=\{yhh'\mid h'\in H\}\subset yH \text{ and}</me> <me>yH=\{yh'\mid h'\in H\}=\{xh''h'\mid h'\in H\}\subset xH,</me> thus <m>xH=yH</m>.
+          </p>
+  
+          <p>
+            <m>6. \Rightarrow 1.:</m> Since <m>e_G=e_H\in H</m>, we have <m>x=xe_G\in xH</m> and <m>y=ye_G\in yH</m>. If <m>xH=yH</m> then, <m>x</m> and <m>y</m> belong to the same left coset.
+          </p>
+        </proof>
       </lemma>
 
       <lemma xml:id="lem-cosetpartition">
@@ -91,6 +121,12 @@
             and similarly for right cosets. Moreover all left and right cosets have the same cardinality: <m>|xH| = |Hx|=|H|</m> for any <m>x\in G</m>.
           </p>
         </statement>
+
+        <proof>
+          <p>
+            Let me prove the assertions for right cosets. Clearly every element <m>g</m> of <m>G</m> belongs to at least one right coset, since <m>g \in Hg</m> (since <m>e \in H</m>). We need to show any two cosets are either identical or disjoint: if <m>Hx</m> and <m>Hy</m> share an element, then it follows from <m>1.\Rightarrow 6.</m> of Lemma <xref ref="lem:cosets" /> that <m>Hx=Hy</m>. This proves that the right cosets partition <m>G</m>. To see that all right cosets have the same cardinality as <m>H</m>, define a function <me>\rho: H \to Hg</me> by <m>\rho(h) = hg</m>. Clearly <m>\rho</m> is onto and if <m>\rho(h) = \rho(h')</m> then <m>hg = h'g</m> and hence <m>h = h'</m>, so that <m>\rho</m> is also one-to-one.
+          </p>
+        </proof>
       </lemma>
 
       <corollary xml:id="cor-left-right-cosets">
@@ -153,7 +189,19 @@
 
       <problem>
         <p>
+          Let <m>G</m> be a group (possibly infinite) and <m>H \leq K</m> subgroups of <m>G</m>. Suppose <m>[G : H]</m> is finite. Prove that <m>[G : H] = [G : K][K : H].</m> (Hint: First prove this in the case <m>G</m> is a<!-- linebreak -->finite group. Then prove you can reduce to the finite case.)
+        </p>
+      </problem>
+
+      <problem>
+        <p>
           Prove the converse to Lagrange's theorem is false: find a group <m>G</m> and an integer <m>d&gt;0</m> such that <m>d</m> divides the order of <m>G</m> but <m>G</m> does not have any subgroups of order <m>d</m>. <em>Hint</em>: Take <m>G=A_5</m>.
+        </p>
+      </problem>
+
+      <problem>
+        <p>
+          Let <m>G</m> be a finite group and <m>K</m> a subgroup of <m>G</m> such that: <m>[G : K] = 2</m>, <m>K</m> is simple, and <m>Z(G) = \{e\}</m>. Prove that the only normal subgroups of <m>G</m> are <m>\{e\}, K</m>, and <m>G</m>. (Hint: Let H be a normal subgroup of G. Then H ∩K is a normal subgroup of K.)
         </p>
       </problem>
 
@@ -439,7 +487,33 @@
     <section xml:id="sec-quotient-groups">
       <title>Quotient Groups</title>
 
+      <lemma xml:id="lem-quotient-surj-hom">
+        <statement>
+          <p>
+            For any group <m>G</m> and normal subgroup <m>N</m> of <m>G</m>, the map <m>\pi:G \to G/N</m> defined by <m>\pi(g)=gN</m> is a surjective group homomorphism with kernel <m>\operatorname{Ker}(\pi)=N</m>.
+          </p>
+        </statement>
 
+        <proof>
+          <p>
+            Surjectivity is immediate from the definition. The group homomorphism property follows from the computation below which uses the definition of <m>\pi</m> and the rule for multiplying cosets in <m>G/N</m>: <me>\pi(gg')=(gg')N=gN\cdot g'N=\pi(g)\pi(g').</me> Finally, using Lemma <xref ref="lem:cosets" />, we have <m>\operatorname{Ker}(\pi)=\{g\in G\mid gN=e_GN\}=N</m>.
+          </p>
+        </proof>
+      </lemma>
+
+      <corollary xml:id="cor-norm-iff-ker">
+        <statement>
+          <p>
+            A subgroup <m>N</m> of a group <m>G</m> is normal in <m>G</m> if and only if <m>N</m> is the kernel of a homomorphism with domain <m>G</m>
+          </p>
+        </statement>
+
+        <proof>
+          <p>
+            empty
+          </p>
+        </proof>
+      </corollary>
 
 
       <problem>

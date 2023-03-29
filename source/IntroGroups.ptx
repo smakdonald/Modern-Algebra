@@ -59,14 +59,6 @@
         We say that <q><m>S</m> is closed under the operation <m>\cdot</m></q>, when we want to emphasize that for any <m>x,y\in S</m> the result of the operation, <m>xy</m>, is an element of <m>S</m>. However note that closure is really part of the definition of a binary operation on a set, and it is implicitly assumed whenever we consider such an operation.
       </remark>
 
-      <definition xml:id="def-abelian">
-        <statement>
-          <p>
-            A group <m>G</m> is an <em>abelian group</em> if <m>\cdot</m> is commutative; i.e., <m>x \cdot y = y \cdot x</m> for all <m>x,y \in G</m>. Often, but not always, the group operation for an abelian group is written as <m>+</m> instead of <m>\cdot</m>. In this case the inverse of an element <m>x</m> is written <m>-x</m>.
-          </p>
-        </statement>
-      </definition>
-
       <proposition xml:id="prop-unique-identity">
         <statement>
           <p>
@@ -93,16 +85,30 @@
         </proof>
       </proposition>
 
-      <problem xml:id="order-4-abelian">
-        <p>
-          Every group of order <m>4</m> is abelian.
-        </p>
-      </problem>
-
       <remark>
         We will call the element <m>y</m> satisfying the last axiom of <xref ref="def-group" /> <em>the inverse</em> of <m>x</m> and we will henceforth denote it by <m>x^{-1}</m>.
       </remark>  
 
+      <definition xml:id="def-abelian">
+        <statement>
+          <p>
+            A group <m>G</m> is an <em>abelian group</em> if <m>\cdot</m> is commutative; i.e., <m>x \cdot y = y \cdot x</m> for all <m>x,y \in G</m>. Often, but not always, the group operation for an abelian group is written as <m>+</m> instead of <m>\cdot</m>. In this case the inverse of an element <m>x</m> is written <m>-x</m>.
+          </p>
+        </statement>
+      </definition>
+
+      <problem xml:id="order-4-abelian">
+        <p>
+          Every group of order <m>4</m> is abelian.
+        </p>
+
+        <proof>
+          <p>
+            Let <m>G</m> be a group with <m>4</m> elements, and suppose there are elements <m>a,b\in G</m> such that <m>ab\neq ba</m> for some elements <m>a, b\in G</m>. Since <m>ab \neq ba</m>, we must have <m>a \neq b</m>, <m>a \neq e</m>, and <m>b\neq e</m>. Since <m>G</m> has only <m>4</m> elements and <m>ab \neq ba</m>, either <m>ab \in \{e, a, b\}</m> or <m>ba \in\{e, a, b\}</m>. Without loss, say the former occurs. But <m>ab = e</m> implies <m>b=a\inv</m> and we know <m>a\inv</m> commutes with <m>a</m>, and hence this is not possible. If <m>ab = a</m>, then <m>b = e</m> and if <m>ab = b</m> then <m>a = 1</m>, both of which are impossible. Since a, b were arbitrary, G must be abelian.
+          </p>
+        </proof>
+      </problem>
+      
       <lemma xml:id="lem-group-props">
         <title>Properties of Groups</title>
         
@@ -167,7 +173,11 @@
 
               <li>
                 <p>
-                  For any field <m>F</m> and positive integer <m>n</m>, let <me>\operatorname{GL}_n(F)=\{ \text{invertible }  n \times n \text{ matrices with entries in } F\}.</me> By invertible I mean those matrices that have two-sided inverses, but in turns out that if an <m>n \times n</m> matrix has a left inverse then it it is automatically a right inverse too, and vice versa. Then <m>\operatorname{GL}_n(F)</m> is a non-abelian group under matrix multiplication.
+                  For any field <m>F</m> and positive integer <m>n</m>, let 
+                  <me>
+                    \operatorname{GL}_n(F)=\{ \text{invertible }  n \times n \text{ matrices with entries in } F\}.
+                  </me> 
+                  By invertible I mean those matrices that have two-sided inverses, but in turns out that if an <m>n \times n</m> matrix has a left inverse then it it is automatically a right inverse too, and vice versa. Then <m>\operatorname{GL}_n(F)</m> is a non-abelian group under matrix multiplication.
                 </p>
               </li>
 
@@ -187,18 +197,15 @@
         </statement>
       </proposition>
 
+      <!--  
       <problem>
         <statement>
           <p>
-            These example are infinite if <m>F</m> is infinite, but if we take <m>F = \mathbb{Z}/p</m> for a prime <m>p</m>, then <m>\operatorname{GL}_n(\mathbb{Z}/p)</m> is a finite group. Can you find its cardinality?
+            These examples are infinite if <m>F</m> is infinite, but if we take <m>F = \mathbb{Z}/p</m> for a prime <m>p</m>, then <m>\operatorname{GL}_n(\mathbb{Z}/p)</m> is a finite group. Can you find its cardinality?
           </p>
         </statement>
-        <solution>
-          <p>
-            
-          </p>
-        </solution>
       </problem>
+      -->
 
       <problem>
         <statement>

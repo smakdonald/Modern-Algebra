@@ -10,14 +10,20 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para">Suppose that <span class="process-math">\(N\subseteq M\)</span> is not finitely generated. Then we can construct an ascending chain of submodules of <span class="process-math">\(M\)</span> given by setting <span class="process-math">\(N_0=0\text{,}\)</span> and <span class="process-math">\(N_{i+i} = N_i + n_{i+1}\)</span> for some <span class="process-math">\(n_{i+1}\in N\smallsetminus N_i\text{;}\)</span> we can do this since each <span class="process-math">\(N_i\)</span> is a finitely generated submodule of <span class="process-math">\(N\text{,}\)</span> so is not equal to <span class="process-math">\(N\text{.}\)</span>
-</div> <div class="para logical">
-<div class="para">Now suppose that every submodule of <span class="process-math">\(M\)</span> is finitely generated. Given a countable ascending chain of submodules</div>
+<body class="ignore-math"><article class="hiddenproof"><div class="para logical">
+<div class="para">Most of this follows from noticing that <span class="process-math">\(R[G]\)</span> is a coproduct. Indeed, we can vie <span class="process-math">\(R[G]\)</span> as an internal direct sum <span class="process-math">\(R[G]=\bigoplus_{g\in G} Rg\)</span> and hence it is the coproduct for the family <span class="process-math">\(\{Rg\}_{g\in G}\)</span> where each <span class="process-math">\(Rg\cong R\text{.}\)</span> For each <span class="process-math">\(g\in G\)</span> set up an <span class="process-math">\(R\)</span>-module homomorphism <span class="process-math">\(f_g: Rg\to A\)</span> by mapping <span class="process-math">\(f_g(r_gg)=\iota(r_g)f(g)\text{.}\)</span> Then the definition of coproduct gives a unique <span class="process-math">\(R\)</span>-module homomorphism</div>
 <div class="displaymath process-math">
 \begin{equation*}
-M_1 \subseteq M_2 \subseteq M_3 \subseteq M_4 \subseteq \cdots
+\alpha: R[G]=\bigoplus_{g\in G} Rg \to A \text{ such that } \alpha|_{Rg}=f_g.
 \end{equation*}
 </div>
-<div class="para">let <span class="process-math">\(N=\bigcup _{n\in \mathbb{N}} M_n\text{;}\)</span> this is a submodule of <span class="process-math">\(M\text{.}\)</span> Take a finite generating set <span class="process-math">\(\{n_1,\dots,n_t\}\)</span> for <span class="process-math">\(N\text{.}\)</span> For each <span class="process-math">\(i=1,\dots,t\text{,}\)</span> we have <span class="process-math">\(n_i \in M_j\)</span> for some <span class="process-math">\(j\text{.}\)</span> Since there are finitely many <span class="process-math">\(n_i\)</span>'s there is some <span class="process-math">\(M_j\)</span> that contains them all. But then <span class="process-math">\(M_j=N\text{,}\)</span> so the chain stabilizes (i.e., achieves a maximum element).</div>
+<div class="para">From the way we defined the maps <span class="process-math">\(f_g\)</span> we can deduce that <span class="process-math">\(\alpha|_R = \iota\)</span> and <span class="process-math">\(\alpha|_G = f\)</span> and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\alpha\left(\sum_g r_g g\right) = \sum_g \iota(r_g) f(g).
+\end{equation*}
+</div>
+<div class="para">It remains to check that this map is in fact a ring homomorphism, i.e. it preserves multiplication. This can be done using the formula for <span class="process-math">\(\alpha\)</span> above and the fact that <span class="process-math">\(\iota(R)\)</span> and <span class="process-math">\(f(G)\)</span> commute in <span class="process-math">\(A\text{.}\)</span>
+</div>
 </div></article></body>
 </html>
