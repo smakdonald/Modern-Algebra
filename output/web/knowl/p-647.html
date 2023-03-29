@@ -11,17 +11,16 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
+<h5 class="heading"><span class="type">Paragraph</span></h5>
 <div class="para logical">
-<div class="para">Recall that submodules of <span class="process-math">\(R\)</span> are left ideals and the simple ones are the minimal (nonzero) left ideals. So, <span class="process-math">\(R\)</span> is left semisimple if and only if <span class="process-math">\(R\)</span> is the internal direct sum of some collection of minimal left ideals <span class="process-math">\(I_j\text{:}\)</span>
-</div>
+<div class="para">Ignoring <span class="process-math">\(\cdot\)</span> for a minute, we know that there is a unique homomorphism <span class="process-math">\(\overline{f}\)</span> of abelian groups from <span class="process-math">\((R/I, +)\)</span> to <span class="process-math">\((S, +)\)</span> such that <span class="process-math">\(\overline{f} (r+I) = f(r)\text{.}\)</span> It remains only to check that <span class="process-math">\(\overline{f}\)</span> preserves multiplication: Given elements <span class="process-math">\(r + I, s + I \in R/I\text{,}\)</span> their product is <span class="process-math">\(rs + I\text{,}\)</span> and we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
-R = \bigoplus_{j \in J} I_j.
+\overline{f}(rs + I) = f(rs) = f(r)f(s) = f(r + I) f(s +I),
 \end{equation*}
 </div>
-<div class="para">Moreover, <span class="process-math">\(R\)</span> is f.g. as a module over itself, and so this must be a finite direct sum. So, <span class="process-math">\(R\)</span> is left semisimple if and only if <span class="process-math">\(R\)</span> decomposes as an internal direct sum of the form <span class="process-math">\(R = I_1 \oplus \cdots \oplus I_m\)</span> for some finite collection <span class="process-math">\(I_1, \dots, I_m\)</span> of minimal left ideals.</div>
+<div class="para">since <span class="process-math">\(f\)</span> preserves multiplication.</div>
 </div>
-<span class="incontext"><a href="sec-semisimple-rings.html#p-647" class="internal">in-context</a></span>
+<span class="incontext"><a href="sec-ring-quotients.html#p-647" class="internal">in-context</a></span>
 </body>
 </html>

@@ -11,9 +11,18 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="remark remark-like"><h3 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">29.8</span><span class="period">.</span>
-</h3>
-<div class="para">Let's consider what the Artin-Wedderburn Theorem says about complex representations of finite abelian groups: the group ring must be a product of copies of <span class="process-math">\(\mathbb{C}\text{,}\)</span> so every irreducible representation is one-dimensional. Thus, every representation is a sum of one-dimensional representations. Concretely, this means that there is a basis in which every group element acts as a diagonal matrix.</div> <div class="para">This special case actually just follows from basic facts in linear algebra. Let <span class="process-math">\(\rho:G\to \operatorname{GL}_n(\mathbb{C})\)</span> be a representation. Then every <span class="process-math">\(g\in G\)</span> has finite order, so <span class="process-math">\(g^k-1\)</span> for some <span class="process-math">\(k\text{.}\)</span> This implies that the matrix <span class="process-math">\(\rho(g)\)</span> satisfies <span class="process-math">\(\rho(g)^k = I_n\text{,}\)</span> so its minimal polynomial divides <span class="process-math">\(x^k-1\text{.}\)</span> This polynomial splits into distinct linear factors over <span class="process-math">\(\mathbb{C}\text{,}\)</span> so <span class="process-math">\(\rho(g)\)</span> is diagonalizable for every <span class="process-math">\(g\in G\text{.}\)</span> (So far, we’ve only used that <span class="process-math">\(G\)</span> is finite.) Now, since <span class="process-math">\(g\)</span> is abelian, we have <span class="process-math">\(gh=hg\)</span> for all <span class="process-math">\(g,h\in G\text{,}\)</span> so <span class="process-math">\(\rho(g) \rho(h) = \rho(h) \rho(g)\text{;}\)</span> i.e., the matrices commute. Commuting diagonalizable matrices are simultaneously diagonalizable; i.e., there is a basis as above.</div></article><span class="incontext"><a href="sec-rep-closed-fields.html#remark-24" class="internal">in-context</a></span>
+<article class="remark remark-like"><h2 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">27.6</span><span class="period">.</span>
+</h2>
+<div class="para logical">
+<div class="para">As a consequence of the above exercise, a module is a finitely generated semisimple module if and only if it is a finite direct sum of simple modules. In this case if we write <span class="process-math">\(M=M_1 \oplus \cdots \oplus M_n\)</span> as a sum of simple modules, there is a strict composition series</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0\subset M_1 \subset M_1 \oplus M_2 \subset \cdots \subset M_1 \oplus \cdots \oplus M_{n-1} \subset M
+\end{equation*}
+</div>
+<div class="para">so <span class="process-math">\(M\)</span> has finite length, namely length <span class="process-math">\(n\text{,}\)</span> and the composition factors are the modules <span class="process-math">\(M_i\text{.}\)</span>
+</div>
+</div></article><span class="incontext"><a href="ch-semisimple-mod.html#remark-24" class="internal">in-context</a></span>
 </body>
 </html>

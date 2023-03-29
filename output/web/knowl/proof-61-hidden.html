@@ -11,18 +11,12 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><article class="hiddenproof"><div class="para logical">
-<div class="para">For the first statement, the “if” implication holds in general without the hypothesis on <span class="process-math">\(R\text{.}\)</span> For the other implication, observe that there are short exact sequences</div>
+<div class="para">Ignoring <span class="process-math">\(\cdot\)</span> for a minute, we know that there is a unique homomorphism <span class="process-math">\(\overline{f}\)</span> of abelian groups from <span class="process-math">\((R/I, +)\)</span> to <span class="process-math">\((S, +)\)</span> such that <span class="process-math">\(\overline{f} (r+I) = f(r)\text{.}\)</span> It remains only to check that <span class="process-math">\(\overline{f}\)</span> preserves multiplication: Given elements <span class="process-math">\(r + I, s + I \in R/I\text{,}\)</span> their product is <span class="process-math">\(rs + I\text{,}\)</span> and we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
-0 \to R^{n-1} \to R^{n} \to R \to 0
+\overline{f}(rs + I) = f(rs) = f(r)f(s) = f(r + I) f(s +I),
 \end{equation*}
 </div>
-<div class="para">for all <span class="process-math">\(n&gt;0\text{.}\)</span> So, by the exercise above and induction on <span class="process-math">\(n\text{,}\)</span> every finitely generated free module is Noetherian. Now, if <span class="process-math">\(M\)</span> is finitely generated, there is a short exact sequence of the form</div>
-<div class="displaymath process-math">
-\begin{equation*}
-0 \to K \to R^{n} \to M \to 0
-\end{equation*}
-</div>
-<div class="para">so by the exercise above again, <span class="process-math">\(M\)</span> is Noetherian.</div>
-</div> <div class="para">The second statement follows from the first as a submodule of a Noetherian module is Noetherian, again by the exercise</div></article></body>
+<div class="para">since <span class="process-math">\(f\)</span> preserves multiplication.</div>
+</div></article></body>
 </html>

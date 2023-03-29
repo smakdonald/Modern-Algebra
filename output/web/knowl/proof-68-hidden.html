@@ -10,5 +10,22 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para">If <span class="process-math">\(M\)</span> is finitely generated there is a surjection <span class="process-math">\(R^a \twoheadrightarrow M\text{.}\)</span> Using Proposition <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "prop916" missing or not unique]</code> this surjection splits, so that <span class="process-math">\(R^n \cong M \oplus N\)</span> for some <span class="process-math">\(N\text{,}\)</span> and each of <span class="process-math">\(M\)</span> and <span class="process-math">\(N\)</span> is semisimple and finitely generated. So <span class="process-math">\(M = \oplus_{i=1}^s M_i\)</span> and <span class="process-math">\(N = \oplus_{j=1}^s N_j\)</span> with <span class="process-math">\(M_i, N_j\)</span> simple. Clearly <span class="process-math">\(R^n\)</span> is isomorphic to a finite direct sum of copies of the <span class="process-math">\(J_i\)</span>’s, and so the result follows from the Krull-Schmidt Theorem for semisimple modules.</div> <div class="para">In the general case, we know that <span class="process-math">\(M\)</span> is a direct sum of simple modules; if some simple summand <span class="process-math">\(N\)</span> of <span class="process-math">\(M\)</span> is not isomorphic to one of the <span class="process-math">\(J_i\text{,}\)</span> then <span class="process-math">\(N\)</span> is a finitely generated counterexample to the f.g. case.</div></article></body>
+<body class="ignore-math"><article class="hiddenproof"><div class="para logical"><ol class="decimal">
+<li>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(x,y\in I\text{.}\)</span> Thus there exists integers <span class="process-math">\(n,m\)</span> such that <span class="process-math">\(xn=0=ym\text{.}\)</span> Consider</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(xy)(nm)=(xn)(ym)=0.
+\end{equation*}
+</div>
+<div class="para">Thus <span class="process-math">\(xy\in I\text{.}\)</span> Additionally, <span class="process-math">\(x+y(mn)=xmn+ymn=0+0=0\text{,}\)</span> and so <span class="process-math">\(x+y\in I\)</span> as well.</div>
+</div>
+<div class="para">We now consider <span class="process-math">\(I\)</span> as an additive group. Notice that <span class="process-math">\(0n=0\)</span> and thus the identity is in there. Let <span class="process-math">\(x\in I.\)</span> We examine <span class="process-math">\(x\inv\text{.}\)</span> Since <span class="process-math">\(xn=0\)</span> we have <span class="process-math">\((xn)\inv=0\)</span> and so <span class="process-math">\(x\inv n\inv=0\text{.}\)</span> So <span class="process-math">\(x\inv\in I\text{.}\)</span> Perfect. We have ourselves a subring.</div>
+</li>
+<li>
+<div class="para">Suppose now that <span class="process-math">\(R/I\)</span> is a field. Luckily for us, this makes <span class="process-math">\(I\)</span> a maximal ideal.</div>
+<div class="para">Let <span class="process-math">\(r\in R\text{.}\)</span> If <span class="process-math">\(r\in I\text{,}\)</span> great. Suppose its not. Then in <span class="process-math">\(R/I\)</span> <span class="process-math">\(r\)</span> is a unit, since we’re in a field now. So <span class="process-math">\(ru\in I\)</span> for some <span class="process-math">\(u\in R\text{.}\)</span> Thus <span class="process-math">\(run=0\)</span> for some <span class="process-math">\(n\in\Z\text{.}\)</span> Since <span class="process-math">\(ru\in I\)</span> and <span class="process-math">\(I\)</span> a maximal and thus prime ideal, we have <span class="process-math">\(u\in I\)</span> or <span class="process-math">\(r\in I\text{,}\)</span> a contradiction.</div>
+</li>
+</ol></div></article></body>
 </html>

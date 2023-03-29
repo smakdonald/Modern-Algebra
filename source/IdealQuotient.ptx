@@ -1,0 +1,558 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<chapter xml:id="ch-idealquot">
+    <title>Ideals and Quotient Rings</title>
+    
+    <section xml:id="sec-ideals">
+      <title>Ideals</title>
+
+      <subsection xml:id="subsec-ideal-def">
+        <title>Definition and First Properties</title>
+        
+        <definition xml:id="def-ideal">
+          <statement>
+            <p>
+              For a ring <m>R</m>, an <em>ideal</em> (or a <em>two sided ideal</em>) of <m>R</m> is a non empty subset <m>I</m> such that 
+              <ol>
+                <li>
+                  <p>
+                    <m>(I,+)</m> is a subgroup of <m>(R,+)</m> and 
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    for all <m>r \in R</m> and <m>a \in I</m>, we have <m>ra \in I</m> and <m>ar \in I</m> (we can write this concisely as for all <m>r \in R,</m> <m>rI\subseteq I</m> and <m>Ir\subseteq I</m> ). This is often called <em>absorption</em>.
+                  </p>
+                </li>
+              </ol>
+
+              For a ring <m>R</m>, a <em>proper ideal</em> is an ideal <m>I</m> such that <m>I\neq R</m>.
+            </p>
+          </statement>
+        </definition>
+
+        <example xml:id="ex-ideal-examples">
+          <p>
+            <ul>
+              <li>
+                In any ring <m>R</m>, <m>\{0\}</m> and <m>R</m> itself are ideals.
+              </li>
+  
+              <li>
+                The ideals of <m>\Z</m> are <m>n\Z</m>.
+              </li>
+  
+              <li>
+                The sets <m>R_i=\left\{\begin{bmatrix} 0 &amp; 0 &amp; \cdots &amp; 0\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots \\ a_{i1} &amp; a_{i2} &amp; \cdots &amp;a_{in} \\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots \\ 0 &amp; 0 &amp; \cdots &amp;0\end{bmatrix}\right\}</m> and <m>L_j=\left\{\begin{bmatrix} 0 &amp; \cdots &amp; a_{j1} &amp;\cdots &amp; 0\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots \\0 &amp; \cdots &amp; a_{ji} &amp;\cdots &amp; 0\\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots \\ 0 &amp; \cdots &amp; a_{jn} &amp;\cdots &amp; 0\\\end{bmatrix}\right\}</m> are a right ideal and a left ideal of <m>\M_n(R)</m> respectively. Neither are two-sided ideals.
+              </li>
+  
+              <li>
+                The set <m>\cR</m> of all nilpotent elements in a ring <m>A</m> is an ideal, and <m>A/\cR</m> has no nonzero nilpotent elements.
+              </li>
+
+              <li>
+                <p>
+                  Let <m>R</m> be a commutative ring, and set <m>I = \{r ∈ R | rn = 0 \;\text{for some integer}\; n\}</m>. Then <m>I</m> is an ideal in <m>R</m>.
+                </p>
+              </li>
+            </ul>
+          </p>
+        </example>
+
+        <proposition xml:id="prop-proper-ideals">
+          <statement>
+            <p>
+              An ideal <m>I</m> of a unital ring <m>R</m> is proper if and only if <m>I</m> contains no units. Moreover, if <m>F</m> is a field it has only two ideals <m>\{0\}</m> and <m>F</m>.
+            </p>
+          </statement>
+        </proposition>
+
+        <proposition xml:id="prop-ideals-are-subrings">
+          <statement>
+            <p>
+              Any ideal <m>I</m> of a ring <m>R</m> is a subring of <m>R</m>
+            </p>
+          </statement>
+        </proposition>
+
+        <problem>
+          <p>
+            Any ideal <m>I</m> of a ring <m>R</m> is a subring of <m>R</m>, but not any subring is an ideal.
+          </p>
+
+          <proof>
+            <p>
+              For example, in <m>\R[x]</m>, the set <m>S</m> of polynomials for which every term has even degree is a subring (it’s closed under subtraction and multiplication), but it is not an ideal because it is not closed under multiplication by arbitrary polynomials. Indeed, <m>p(x)=x^2\in S</m>, but <m>xp(x)=x^3\not\in S</m>.
+            </p>
+          </proof>
+        </problem>
+
+        <proposition xml:id="prop-properties-of-ideals">
+          <statement>
+            <p>
+              Let <m>R</m> be a ring and let <m>I,J</m> be ideals of <m>R</m>. Then 
+              <ol>
+                <li>
+                  <p>
+                    <m>I + J := \{a + b \mid a \in I, b \in J\}</m> is an ideal 
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>I\cap J</m> is an ideal 
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>IJ=\{\sum_{i=1}^n a_ib_j \mid n\geq 0, a_i\in I, b_j\in J\}</m> is an ideal and <m>IJ\subseteq I\cap J</m>. 
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    The intersection <m>\bigcap_{\a\in J} I_\a</m> of any collection of ideals <m>I_\a</m> of <m>R</m> is an ideal. 
+                  </p>
+                </li>
+              </ol>
+              
+              The set of all ideals of a ring <m>R</m> is a lattice with respect to the partial order given by containment. In this lattice, the supremum of a pair of ideals <m>I,J</m> is <m>I+J</m> and the infimum is <m>I\cap J</m>.
+            </p>
+          </statement>
+        </proposition>
+
+        <problem xml:id="exe-ideals-are-commutative-and-associative">
+          <p>
+            Let <m>I,J,K</m> be ideals in <m>R</m>. Then 
+            <ul>
+              <li>
+                <p>
+                  <m>I+J=J+I</m> 
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>(I+J)+K=I+(J+K)</m> 
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>I\cap J=J\cap I</m> 
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>(I\cap J)\cap K=I\cap(J\cap K)</m> 
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>IJ=JI</m> 
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>(IJ)K=I(JK)</m>
+                </p>
+              </li>
+            </ul>
+          </p>
+        </problem>
+
+        <proposition xml:id="prop-homomorphisms-and-ideals">
+          <statement>
+            <p>
+              If <m>f: R \to S</m> is a ring homomorphism, then 
+              <ol>
+                <li>
+                  <p>
+                    the image of <m>f</m> is a subring of <m>S</m> and 
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    the kernel of <m>f</m> is an ideal of <m>R</m>. 
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>f</m> is injective if and only if <m>\ker(f)=\{0\}</m>. 
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    if <m>I</m> is an ideal of <m>R</m> then <m>f(I)</m> is an ideal of <m>f(R)</m>. 
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    if <m>J</m> is an ideal of <m>S</m> then <m>f^{-1}(J)</m> is an ideal of <m>R</m>.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+
+          <proof>
+            <p>
+              <ol>
+                <li>
+                Since <m>f</m> is a ring homomorphism, it is in particular a group homomorphism <m>(R,+)\to (S,+)</m>. We know the kernel of a group homomorphism is a subgroup, so <m>\ker(f)\leq (S,+)</m>. All that remains to be shown is that for any <m>r\in R</m> <m>r\ker(f)\subseteq \ker(f)</m> and <m>\ker(f)r\subseteq \ker(f)</m>. Let <m>x\in \ker(f)</m>; then <m>f(x)=0</m> and <m>f(rx)=f(r)f(x)=0</m>, <m>f(xr)=f(x)f(r)=0</m> show <m>rx,xr\in \ker(f)</m>.
+                </li>
+              </ol>
+            </p>
+          </proof>
+        </proposition>
+
+        <problem xml:id="exe-the-union-of-ideals-need-not-be-an-ideal">
+          <p>
+          Give an example
+          </p>
+        </problem>
+
+        <problem xml:id="exe-ideals-distribute-in-z">
+          <p>
+            Let <m>I,J,K</m> be ideals in <m>\Z</m>. Then 
+            <me>
+              I(J+K)=IJ+IK
+            </me>
+          </p>
+        </problem>
+
+        <problem xml:id="exe-ideals-do-not-distribute-in-general">
+          <p>
+            Give an example of a ring where ideals do not distribute.
+          </p>
+        </problem>
+
+        <problem xml:id="exe-modular-law">
+          <p>
+            Let <m>I,J,K</m> be ideals in <m>R</m> such that <m>J\sse I</m> or <m>K\sse I</m>. Then 
+            <me>
+              I\cap(J+K)=I\cap J+I\cap K
+            </me>
+          </p>
+        </problem>
+
+      </subsection>
+
+      <subsection xml:id="subsec-generated-ideals">
+        <title>Generated Ideals</title>
+
+        <definition xml:id="def-generated-ideal">
+          <statement>
+            <p>
+              If <m>A</m> is any subset of a ring <m>R</m>, the <em>ideal generated by</em> <m>A</m>, denoted <m>(A)</m>, is the intersection of all ideals of <m>R</m> that contain <m>A</m>: 
+              <me>
+                (A)=\bigcap_{I\;\text{ideal of}\;R, A\subseteq I} I.
+              </me>
+                An ideal <m>I</m> is <em>finitely generated</em> if <m>I = (A)</m> for some finite subset <m>A</m> of <m>R</m>.
+            </p>
+          </statement>
+        </definition>
+
+        <remark>
+          <p>
+            By Proposition, <m>(A)</m> is an ideal and it is the smallest ideal of <m>R</m> that contains <m>A</m>.
+          </p>
+        </remark>
+
+        <lemma xml:id="lem-formula-for-generated-ideal">
+          <statement>
+            <p>
+              For a subset <m>A</m> of a ring <m>R</m> with <m>1</m>, the ideal generated by <m>A</m> is given by 
+              <me>
+                (A)=\left\{\sum_{i=1}^n x_i a_i y_i \mid a_i \in A, x_i, y_i \in R\right\}.
+              </me> 
+              If <m>R</m> is commutative and <m>A</m> is any subset, then there is a simpler formula 
+              <me>
+                (A)=\left\{\sum_{i=1}^n r_i a_i \mid n \geq 0, r_i \in R, a_i \in A\right\}.
+              </me>
+            </p>
+          </statement>
+        </lemma>
+
+        <problem xml:id="exe-generated-ideals-and-z">
+          <p>
+            <ul>
+              <li>
+                <p>
+                  In the commutative ring <m>\Z</m>, we have <m>(2,3)=(1)=\Z</m>. Indeed any element <m>n\in \Z</m> can be written as <m>n=(-n)\cdot 2+n\cdot 3=n\cdot 1</m>. Note that <m>1=\gcd(2,3)</m>.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  In the commutative ring <m>\Z</m>, we have <m>(2,4)=(2)=2\Z</m>, the set of all even integers. Notice this shows that different sets can generate the same ideal. Also note that <m>2=\gcd(2,4)</m>.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  In <m>\Z[x]</m>, we have <m>(2,x)=\{a+xp(x) \mid a \;\text{is even}, p(x)\in\Z[x]\}</m> and this ideal cannot be generated by a single element.
+                </p>
+              </li>
+            </ul>
+          </p>
+        </problem>
+
+        <definition xml:id="def-principal-ideal">
+          <statement>
+            <p>
+              Let <m>I</m> be an ideal of a ring <m>R</m>. The ideal <m>I</m> is <em>principal</em> if <m>I = (a)</m> for some <m>a \in R</m>, that is, <m>I</m> is generated by a set with a single element.
+            </p>
+          </statement>
+        </definition>
+
+        <example xml:id="ex-principal-ideals">
+          <p>
+            <ul>
+              <li>
+                every ideal of <m>\Z</m> is principal with <m>I=(n)</m> for some <m>n\in \Z</m> (<m>\Z</m> is a PID)
+              </li>
+
+              <li>
+                for any field <m>F</m>, every ideal of <m>F[x]</m> is principal (<m>F[x]</m> is a PID)
+              </li>
+
+              <li>
+                for any field <m>F</m>, every ideal in <m>F[x_1,\ldots,x_n]</m> is finitely generated, but not necessarily principal. This is a consequence of a deep theorem called the Hilbert Basis Theorem, which you will see in Math 905.
+              </li>
+            </ul>
+          </p>
+        </example>
+
+        <problem xml:id="exe-properties-of-principal-ideals-in-z">
+          Let <m>(x),(y)</m> be ideals in <m>\Z</m>. Then
+          <p>
+            <ul>
+              <li>
+                <m>(m)+(n)=(\gcd(m,n))</m>
+              </li>
+
+              <li>
+                <m>(m)\cap(n)=(\lcm(m,n))</m>
+              </li>
+
+              <li>
+                <m>(m)(n)=(mn)</m> Conclude that <m>(m)(n)=(m)\cap(n)</m> if and only if <m>m</m> and <m>n</m> are relatively prime.
+              </li>
+                        </ul>
+          </p>
+        </problem>
+        
+      </subsection>
+      
+    </section>
+
+    <section xml:id="sec-ring-quotients">
+      <title>Quotient Rings</title>
+      
+      <subsection xml:id="subsec-quotient-rings">
+        <title>Quotient Rings</title>
+
+        <definition xml:id="def-quotient-ring">
+          <statement>
+            <p>
+              For a two-sided ideal <m>I</m> of <m>R</m>, the set of additive cosets modulo <m>I</m> is <m>R/I=\{r+I : r\in R\}.</m> This is an abelian group with respect to addition given by <m>(r + I) + (s + I) = (r +s ) + I</m>. The <em>quotient ring</em> of <m>R</m> modulo <m>I</m> is the set <m>R/I</m> with addition defined as above and multiplication given by <m>(r + I) \cdot (s + I) = (rs) + I.</m>
+            </p>
+          </statement>
+        </definition>
+
+        <problem xml:id="exe-quotient-ring-is-ring">
+          <p>
+            Given a two-sided ideal <m>I</m> of <m>R</m>, prove that the quotient ring <m>R/I</m> is indeed a ring.
+          </p>
+        </problem>
+
+        <example xml:id="ex-quotient-of-z">
+          <p>
+            If <m>I=(n)</m> is an ideal in the ring <m>\Z</m>, then the quotient ring <m>\Z/(n)</m> is the familiar ring <m>\Z/n</m>.
+          </p>
+        </example>
+
+        <problem xml:id="quotient-map-is-surjective-homomorphism">
+          <p>
+            Prove that the canonical quotient map <m>q:R\to R/I</m> is a surjective ring homomorphism.
+          </p>
+        </problem>
+
+        <proposition xml:id="prop-ideal-iff-kernel-of-ring-map">
+          <statement>
+            <p>
+              Let <m>R</m> be a ring. A subset <m>I</m> of <m>R</m> is an ideal of <m>R</m> if and only if there exists a ring homomorphism <m>\varphi</m> such that <m>\ker(\varphi)=I</m>
+            </p>
+          </statement>
+        </proposition>
+
+        <theorem xml:id="thm-ump-for-quotient-rings">
+          <title>Universal Mapping Property for Quotient Rings</title>
+          
+          <statement>
+            <p>
+              If <m>f: R \to S</m> is a ring homomorphism and <m>I \subseteq R</m> is an ideal such that <m>I \subseteq \ker(f)</m>[^1], there exists a well defined ring homomorphism <m>\overline{f}: R/I \to S</m> such that <m>\overline{f} (r+I) = f(r)</m>. Furthermore, if <m>f</m> is surjective then <m>\overline{f}</m> is surjective and if <m>I=\ker(f)</m> then <m>\overline{f}</m> is injective.
+            </p>
+          </statement>
+
+          <proof>
+            <p>
+              Ignoring <m>\cdot</m> for a minute, we know that there is a unique homomorphism <m>\overline{f}</m> of abelian groups from <m>(R/I, +)</m> to <m>(S, +)</m> such that <m>\overline{f} (r+I) = f(r)</m>. It remains only to check that <m>\overline{f}</m> preserves multiplication: Given elements <m>r + I, s + I \in R/I</m>, their product is <m>rs + I</m>, and we have 
+              <me>
+                \overline{f}(rs + I) = f(rs) = f(r)f(s) = f(r + I) f(s +I),
+              </me> 
+              since <m>f</m> preserves multiplication.
+            </p>
+          </proof>
+        </theorem>
+        
+      </subsection>
+
+      <subsection xml:id="subsec-ring-iso-thms">
+        <title>The Ring Isomorphism Theorems</title>
+
+        <theorem xml:id="thm-ring-fit">
+          <title>First Isomorphism Theorem for Rings</title>
+          
+          
+          <statement>
+            <p>
+              If <m>f: R \to S</m> is a ring homomorphism, then <m>R/\ker(f)\cong \im(f)</m> via the map <m>\overline{f}</m> given by <m>\ov{f}(r + \ker(f)) = f(r)</m>.
+            </p>
+          </statement>
+
+          <proof>
+            <p>
+              The map <m>\overline{f}</m> is a well-defined ring homomorphism by the UMP for quotient rings. By the First Isomorphism Theorem for groups, the map <m>\ov{f}</m> is bijective, finishing the proof.
+            </p>
+          </proof>
+        </theorem>
+
+        <theorem xml:id="thm-ring-sit">
+          <title>Second Isomorphism Theorem for Rings</title>
+
+          
+          <statement>
+            <p>
+              Let <m>S</m> be a subring and let <m>I</m> be an ideal of <m>R</m>. Then <m>S + I = \{s + i \mid s \in S, i \in I\}</m> is a subring of <m>R</m>, <m>S \cap I</m> is an ideal of <m>S</m>, and 
+              <me>
+                \frac{S+I}{I}\cong \frac{S}{S\cap I}.
+              </me>                
+            </p>
+          </statement>
+        </theorem>
+
+        <theorem xml:id="thm-ring-tit">
+          <title>Third Isomorphism Theorem for Rings</title>
+
+          
+          <statement>
+            <p>
+              If <m>R</m> is a ring and <m>I \subseteq J</m> are two ideals of <m>R</m>, then <m>J/I</m>[^4] is an ideal of <m>R/I</m> and 
+              <me>
+                \frac{R/I}{J/I} \cong R/J \text{ via } (r + I) + J/I \mapsto r + J.
+              </me>          
+            </p>
+          </statement>
+        </theorem>
+
+        <theorem xml:id="thm-ring-lit">
+          <title>Lattive Isomorphism Theorem for Quotient Rings</title>
+
+          
+          <statement>
+            <p>
+              Suppose <m>R</m> is a ring and <m>I</m> is a two-sided ideal of <m>R,</m> and write <m>\pi: R \to R/I</m> for the quotient ring homomorphism. There is a bijection 
+              <me>
+                \Psi:\{\text{subrings of }R\text{ containing }I\}\to \{\text{subrings of }R/I\}, \Psi(S)=\pi(S)=S/I
+              </me> 
+              with inverse 
+              <me>
+                \Phi:\{\text{subrings of }R/I\}\to\{\text{subrings of }R\text{ containing }I\}, \Phi(S)=\pi^{-1}(S).
+              </me> 
+              Moreover this bijection induces a bijection between 
+              <me>
+                \{\text{ideals of}\;R\text{ containing }I\}\leftrightarrow \{\text{ideals of }R/I\}
+              </me> 
+              since <m>J</m> is an ideal of <m>R</m> containing <m>I</m> if and only if <m>\Psi(J)</m> is an ideal of <m>R/I</m>.
+            </p>
+          </statement>
+        </theorem>
+
+        <problem xml:id="special-case-of-sun-tzus-theorem">
+          <p>
+            Let <m>R</m> be a commutative ring with identity, and assume <m>1\neq0</m>. Let <m>I</m> and <m>J</m> be ideals such that <m>I + J = R</m>.
+          </p>
+  
+          <p>
+            <ol>
+              <li>
+                Prove <m>IJ = I\cap J</m>.
+              </li>
+  
+              <li>
+                Prove the following special case of the Sun Tzu's Theorem: There is an isomorphism of rings of the form <m>R/(I \cap J)\cong R/I \times R/J</m>.
+              </li>
+            </ol>
+          </p>
+          
+          <proof>
+            <p>
+              Let <m>R</m> be a commutative ring with identity, and assume <m>1\neq0</m>. Let <m>I</m> and <m>J</m> be ideals such that <m>I + J = R</m>.
+            </p>
+
+            <p>
+              First, note that both <m>IJ</m> and <m>I\cap J</m> are ideals by <xref provisional="combinations of ideals"/>
+            </p>
+  
+            <p>
+              Let <m>x\in IJ</m>. Thus <m>x=\sum a_ib_j</m>, where each <m>a_i\in I</m> and <m>b_j\in J</m>. As <m>I</m> and <m>J</m> are both ideals, each term in this sum is contained both in <m>I</m> and <m>J</m>. Thus, by absorption, <m>x\in I\cap J</m>. Hence <m>IJ\subseteq I\cap J</m>.
+            </p>
+  
+            <p>
+              Let <m>x\in I\cap J</m>. Thus <m>x\in I</m> and <m>x\in J</m>. Note that as <m>I+J=R</m>, there exists some <m>a\in I</m> and <m>b\in J</m> such that <m>a+b=1</m>. So <m>x=x1=xa+xb</m>. As <m>x\in I\cap J</m> we see that <m>x=ax+xb</m>, with <m>a,x\in I</m> and <m>b,x\in J</m>. Thus <m>x\in IJ</m>, yielding <m>IJ=I\cap J</m>.
+            </p>
+  
+            <p>
+              Let <m>f:R\to R/I\times R/J</m> be defined by <m>f(x)=(x+I,x+J)</m>.
+            </p>
+  
+            <p>
+              Notice that if <m>x\in I\cap J</m>, we have <m>f(x)=(I,J)</m>, and so <m>x\in\ker(f)</m>. (See: [[Mathematics/Definitions/Kernel]]) Let <m>x\in\ker(f)</m>. Thus <m>x+I=I</m> and <m>x+J=J</m>, and so <m>x\in I</m> and <m>x\in J</m>. Hence <m>x\in I\cap J</m>, and so <m>\ker(f)=I\cap J</m>.
+            </p>
+  
+            <p>
+              Observe <me>f(x+y)=((x+y)+I,(x+y)+J)=((x+I)+(y+I),(x+J)+(y+J))=((x+I),(x+J))+(y+I),(y+J))=f(x)+f(y),</me> making <m>f</m> a homomorphism of rings.
+            </p>
+  
+            <p>
+              Let <m>(a+I,b+J)\in R/I\times R/J</m>. As <m>R=I+J</m>, we can write <m>a</m> and <m>b</m> as <m>a_i+a_j</m> and <m>b_i+b_j</m>. However, as <m>a_i\in I</m> and <m>b_j\in J</m>, we have <m>(a+I,b+J)=(a_j+I, b_i+J)</m>.
+            </p>
+  
+            <p>
+              Consider the element <m>x=(a_j+b_i)\in R</m>, and observe <me>f(x)=f(a_j+b_i)=(a_j+b_i+I, b_i+a_j+J).</me>However, as <m>b_i\in I</m> and <m>a_j\in J</m>, we see <me>(a_j+b_i+I, b_i+a_j+J)=(a_j+I,b_i+J)=(a+I,b+J).</me> Thus <m>f</m> is a surjective homomorphism. Hence, by the First Isomorphism Theorem, we see <m>R/(I \cap J)\cong R/I \times R/J</m>.
+            </p>
+          </proof>
+        </problem>
+
+        <problem>
+          <p>
+            Let <m>d</m> be a square-free integer. The ring <m>\Q(\sqrt d)</m> is the subring of <m>\C</m> defined by <me>\Q(\sqrt d) = \{a + b\sqrt d | a, b \in \Q\}.</me> Show that there is a ring isomorphism <m>\Q[x]/(x^2-d)\cong\Q(\sqrt d)</m>.
+          </p>
+        </problem>
+        
+      </subsection>
+
+    </section>
+
+  </chapter>
