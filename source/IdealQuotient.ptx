@@ -307,6 +307,32 @@
           </p>
         </problem>
 
+        <problem xml:id="exe-finite-generated-ideal-and-nilpotent">
+          <p>
+            Let <m>I</m> be a finitely generated ideal of <m>R</m>. Suppose every element of <m>I</m> is nilpotent. Prove that there exists an integer <m>n\geq 1</m> such that <m>b^n=0</m> for all <m>b\in I</m>.
+          </p>
+        </problem>
+
+        <problem>
+          <p>
+            Let <m>I=\{f\in C[0,1]|f(x)=0\text{ on } [0,b]\;\text{for some}\; b&gt;0\}</m>
+
+            <ol>
+              <li>
+                <p>
+                  Prove that <m>I</m> is an ideal of <m>C[0,1]</m>.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Prove that <m>I</m> is not finitely generated.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </problem>
+
         <definition xml:id="def-principal-ideal">
           <statement>
             <p>

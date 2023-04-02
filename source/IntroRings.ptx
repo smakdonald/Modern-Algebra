@@ -106,46 +106,74 @@
                     For any ring <m>R</m> and all <m>a,b \in R</m> we have:
                 </p>
 
-                <p><ol>
+                <p>
+                  <ol>
                     <li>
-                            <p>
-                    <em><m>a \cdot 0 = 0 = 0 \cdot a</m>,</em>
-                </p>
+                      <p>
+                        <m>a \cdot 0 = 0 = 0 \cdot a</m>,
+                      </p>
                     </li>
         
                     <li>
-                            <p>
-                    <em><m>(-a)b = -(ab) = a(-b)</m>,</em>
-                </p>
+                      <p>
+                        <m>(-a)b = -(ab) = a(-b)</m>,
+                      </p>
                     </li>
         
                     <li>
-                            <p>
-                    <em><m>(-a)(-b) = ab</m>.</em>
-                </p>
+                      <p>
+                        <m>(-a)(-b) = ab</m>.
+                      </p>
                     </li>
-        
-                </ol></p>
+                  </ol>
+                </p>
         
                 <p>
-                    <em>If moreover <m>R</m> is unital, then</em>
+                  If moreover <m>R</m> is unital, then
                 </p>
-        
-                <p><ol>
+          
+                <p>
+                  <ol>
                     <li>
-                            <p>
-                    <em><m>1</m> is unique, and</em>
-                </p>
+                      <p>
+                        <m>1</m> is unique, and
+                      </p>
                     </li>
         
                     <li>
-                            <p>
-                    <em><m>(-1)a = -a</m>.</em>
-                </p>
+                      <p>
+                        <m>(-1)a = -a</m>.
+                      </p>
                     </li>
-        
-                </ol></p>
+                  </ol>
+                </p>
                 </statement>
+
+                <proof>
+                  <p>
+                    Let <m>R</m> be a ring with identity.
+
+                    <ol>
+                      <li>
+                        <p>
+                          Let <m>a\in R</m>. Observe that <m>0a=(0+0)a=0a+0a</m> by the distributive law. Subtracting <m>0a</m> from both sides we have <m>0=0a</m>. A similar argument shows that <m>0=a0</m>.
+                        </p>
+                      </li>
+
+                      <li>
+                        <p>
+                          Let <m>a\in R</m>. Note that <m>-a+a=0</m>. Consider <m>(-1)a+a</m>. Using the distributive law we see that <m>(-1)a+a=a(-1+1)=a(0)=0</m>. Thus <m>-a</m> and <m>(-1)a</m> are both additive inverses of <m>a,</m> making them unique.
+                        </p>
+                      </li>
+
+                      <li>
+                        <p>
+                          
+                        </p>
+                      </li>
+                    </ol>
+                  </p>
+                </proof>
             </proposition>
 
             <example xml:id="ex-ring-examples">
@@ -226,7 +254,7 @@
 
         </subsection>  
 
-        <subsection>
+        <subsection xml:id="subsec-units">
             <title>Units, Zero Divisors, Integral Domains</title>
 
             <definition xml:id="def-unit">
@@ -305,7 +333,7 @@
                 </p>
             </example>
 
-            <problem>
+            <problem xml:id="ex-finite-domains-fields">
                 <p>
                     Prove that a finite integral domain <m>D</m> must be a field.
                 </p>
@@ -331,6 +359,17 @@
             </proof>
             </lemma>
 
+            <problem xml:id="exe-neither-zero-divisor-nor-unit">
+              <p>
+                Give an example of a ring <m>R</m> and an element <m>a\in R</m> which is neither a unit nor a zero-divisor.
+              </p>
+            </problem>
+
+            <problem xml:id="exe-zero-divisor-or-unit-if-finite">
+              <p>
+                Prove that if <m>R</m> is finite then every element is either a unit of a zero-divisor.
+              </p>
+            </problem>
 
             <definition xml:id="def-nilpotent">
             <statement>
@@ -353,9 +392,127 @@
                 Let <m>x</m> be a nilpotent element] of a ring. Show that <m>1 + x</m> is a unit of <m>A.</m> Deduce that the sum of a nilpotent element and a unit is a unit.
             </p>
             </problem>
+
+            <definition xml:id="def-idempotent">
+              <statement>
+                <p>
+                  Let <m>R</m> be a ring with identity. An element <m>e\in R</m> is called <em>idempotent</em> if <m>e^2=e</m>.
+                </p>
+              </statement>
+            </definition>
+
+            <problem>
+              <p>
+                Let <m>R</m> be a ring with identity.
+
+                <ol>
+                  <li>
+                    <p>
+                      Give an example of a ring which has an idempotent other than <m>0</m> or <m>1</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Prove that if <m>e</m> is idempotent, so is <m>1-e</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Suppose <m>R</m> is commutative and <m>e</m> an idempotent. Let <m>Re:=\{re\mid r\in R\}</m>. Prove that <m>Re</m> is a commutative ring (with identity <m>e</m>).
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </problem>
+
+            <problem xml:id="exe-gaussian-units">
+              <p>
+                Let <m>\Z[i] = \{a + bi \mid a,b \in \Z\}</m> be the ring of Gaussian integers. Define a function 
+                <me>
+                  N:\Z[i]\to\Z, N(a+bi)=a^2+b^2.
+                </me>
+
+              
+              <ol>
+                <li>
+                  <p>
+                    Prove that <m>N(\a\b)=N(\a)N(\b)</m> for any <m>\a,\b\in \Z[i]</m>.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Use the function <m>N</m> to determine the units of <m>\Z[i]</m>.
+                  </p>
+                </li>
+              </ol>
+
+            </p>
+
+            <proof>
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      Let <m>\alpha,\beta\in\Z[i]</m> and behold <m>\begin{align}N(\alpha\beta)&amp;=N((a+bi)(c+di))\\&amp;=N(ac-bd+adi+bci)\\&amp;=(ac-bd)^2+(ad+bc)^2\\&amp;=((ac)^2-2acbd+(bd)^2)+((ad)^2+2abcd+(bc^2))\\&amp;=a^2c^2+b^2d^2+a^2d^2+b^2c^2\\&amp;=(a^2c^2+a^2d^2)+(b^2c^2+b^2d^2)\\&amp;=a^2(c^2+d^2)+b^2(c^2+d^2)\\N(\alpha)N(\beta)&amp;=(a^2+b^2)(c^2+d^2).\end{align}</m> So there's that done.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Suppose <m>\alpha\beta=1</m>. Then by Part (a) we know 
+                      <me>
+                        N(\alpha)N(\beta)=N(\alpha\beta)=N(1)=1,
+                      </me> 
+                      so <m>(a^2+b^2)(c^2+d^2)=1</m>, with <m>a,b,c,d\in\Z</m>. Thus we have <m>a^2+b^2=1=c^2+d^2</m>. So the units of <m>\Z[i]</m> are <m>\{\pm 1,\pm i\}</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </proof>
+
+            </problem>
+
+            <problem xml:id="exe-integral-hamiltonian-quaternions">
+              <p>
+                Let <m>S=\{a+bi+cj+dk \mid a,b,c,d \in \Z\}</m> be the ring of integral Hamiltonian quaternions, where multiplication is defined using the same rules as in <m>\mathbb{H}</m>. Define a function 
+                <me>
+                  N:S\to\Z, N(a+bi+cj+dk)=a^2+b^2+c^2+d^2.
+                </me>
+  
+                <ol>
+                  <li>
+                    <p>
+                      For any <m>\a=a+bi+cj+dk\in S</m>, denote <m>\bar\a=a-bi-cj-dk</m>. Show that <m>\overline{\a\b}=\bar \b \bar\a</m> for all <m>\a,\b\in \mathbb{H}</m>.
+                    </p>
+                  </li>
+  
+                  <li>
+                    <p>
+                      Prove that <m>N(\a)=\a\bar\a</m> and <m>N(\a\b)=N(\a)N(\b)</m> for any <m>\a,\b\in S</m>.
+                    </p>
+                  </li>
+  
+                  <li>
+                    <p>
+                      Prove that <m>\a\in S^\times</m> if and only if <m>N(\a)=1</m>.
+                    </p>
+                  </li>
+  
+                  <li>
+                    <p>
+                      Show that there is a group isomorphism <m>(S^\times,\cdot)\cong Q_8</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </problem>
+
+
         
         </subsection>
-      
     </section>
 
     <section xml:id="sec-subrings">
@@ -425,10 +582,16 @@
       <lemma xml:id="lem-center-is-subring">
         <statement>
           <p>
-            The center <m>Z(R)</m> is a subring of <m>R</m>.
+            The center <m>Z(R)</m> is a subring of <m>R</m>. If <m>R</m> is a ring with identity <m>1</m> then <m>Z(R)</m> is a subring that contains the same <m>1</m>.
           </p>
         </statement>
       </lemma>
+
+      <problem xml:id="exe-center-of-quaternion-ring">
+        <p>
+          Determine the center of the real quaternion ring <m>\mathbb{H}</m>.
+        </p>
+      </problem>
 
       <lemma xml:id="lem-quadratic-field">
         <statement>
@@ -621,6 +784,32 @@
       <problem xml:id="exe-equivalent-field-definitions">
         <p>
           Let <m>A</m> be a nontrivial ring. Then <m>A</m> is a field if and only if every homomorphism of <m>A</m> into a nonzero ring <m>B</m> is injective.
+        </p>
+      </problem>
+
+      <problem>
+        <p>
+          Suppose <m>R</m> is commutative and <m>e</m> an idempotent. Let <m>Re:=\{re\mid r\in R\}</m>. Prove that the map <m>\phi:R\to Re \times R(1-e)</m> given by <m>\phi(r)=(re, r(1-e))</m> is a ring isomorphism.
+        </p>
+      </problem>
+
+      <problem>
+        <p>
+          Let <m>a, b</m> be squarefree integers and set <m>R=\Z[\sqrt{a}]</m> and <m>S=\Z[\sqrt{b}]</m>.
+
+          <ol>
+            <li>
+              <p>
+                There is a group isomorphism <m>(R,+) \cong (S,+)</m>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                There is a ring isomorphism <m>R \cong S</m> if and only if <m>a = b</m>.
+              </p>
+            </li>
+          </ol>
         </p>
       </problem>
       

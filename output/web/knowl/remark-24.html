@@ -11,18 +11,34 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="remark remark-like"><h2 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">27.6</span><span class="period">.</span>
-</h2>
+<article class="remark remark-like"><h4 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">25.8</span><span class="period">.</span>
+</h4>
 <div class="para logical">
-<div class="para">As a consequence of the above exercise, a module is a finitely generated semisimple module if and only if it is a finite direct sum of simple modules. In this case if we write <span class="process-math">\(M=M_1 \oplus \cdots \oplus M_n\)</span> as a sum of simple modules, there is a strict composition series</div>
+<div class="para">Let</div>
 <div class="displaymath process-math">
 \begin{equation*}
-0\subset M_1 \subset M_1 \oplus M_2 \subset \cdots \subset M_1 \oplus \cdots \oplus M_{n-1} \subset M
+0 \to A \xrightarrow{i} B \xrightarrow{p} C\to 0
 \end{equation*}
 </div>
-<div class="para">so <span class="process-math">\(M\)</span> has finite length, namely length <span class="process-math">\(n\text{,}\)</span> and the composition factors are the modules <span class="process-math">\(M_i\text{.}\)</span>
+<div class="para">be a short exact sequence. Given filtrations / composition series / strict composition series</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A_\bullet: \qquad 0 = A_0 \subseteq A_1 \subseteq A_2 \subseteq \cdots \subseteq A_n = A
+\end{equation*}
 </div>
-</div></article><span class="incontext"><a href="ch-semisimple-mod.html#remark-24" class="internal">in-context</a></span>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C_\bullet: \qquad 0 = C_0 \subseteq C_1 \subseteq C_2 \subseteq \cdots \subseteq C_n = C
+\end{equation*}
+</div>
+<div class="para">we can make a filtration / composition series / strict composition series of <span class="process-math">\(B\)</span> by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0 = i(A_0) \subseteq i(A_1) \subseteq i(A_2) \subseteq \cdots \subseteq i(A_n) = i(A) = p^{-1}(C_0) \subseteq p^{-1}(C_1) \subseteq p^{-1}(C_2) \subseteq \cdots \subseteq p^{-1}(C_n) = B.
+\end{equation*}
+</div>
+</div> <div class="para">Conversely, given a filtration / composition series / strict composition series of <span class="process-math">\(B\)</span> that contains <span class="process-math">\(i(L)\)</span> as a term, we can obtain filtrations / composition series / strict composition series of <span class="process-math">\(A\)</span> and <span class="process-math">\(C\)</span> by applying <span class="process-math">\(i^{-1}\)</span> to the terms up through <span class="process-math">\(i(L)\)</span> and applying <span class="process-math">\(p\)</span> to the terms from <span class="process-math">\(i(L)\)</span> on. However, not every filtration / composition series of a module will contain a fixed submodule as a term.</div></article><span class="incontext"><a href="ch-simple-modules.html#remark-24" class="internal">in-context</a></span>
 </body>
 </html>
