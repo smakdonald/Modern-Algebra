@@ -9,7 +9,7 @@
 <publication>
   <common>
     <!-- Level at which are html files generated (chapter/section/etc): -->
-    <chunking level="2" />
+    <chunking level="3" />
     <!-- Depth for table of contents.  0 means no TOC -->
     <tableofcontents level="3" />
     <!-- Visibility of exercise components where they first appear.          -->
@@ -46,7 +46,7 @@
     <!-- numbering should appear.                                     -->
     <!-- For use with a book organized by part, you can set the -->
     <!--  @part-structure to "decorative" or "structural" -->
-    <!-- <divisions part-structure="decorative" chapter-start="1" level="3"/> -->
+    <divisions part-structure="structural" chapter-start="1" level="3"/>
     <!-- The next elements say how the levels deep to break up the    -->
     <!-- numbering of the respective elements. Can't be more than the -->
     <!-- @level on divisions above.                                   -->

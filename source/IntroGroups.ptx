@@ -23,7 +23,7 @@
       </definition>
 
       <remark>
-        We often write <m>xy</m> instead of <m>x\cdot y</m> for simplicity. 
+        We often write <m>xy</m> instead of <m>x\cdot y</m> for simplicity.
       </remark>
 
       <definition xml:id="def-group">
