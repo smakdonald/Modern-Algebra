@@ -4,7 +4,6 @@
 
   <xi:include href="./bookinfo.xml" />
   
-  -->
   <book xml:id="modern-algebra">
     <title>Compendium Algebraica</title>
     <!-- <subtitle>All in one Place</subtitle> -->
@@ -694,7 +693,9 @@
           </problem>
 
           <problem xml:id="exe-nonzero-primes-maximal-in-pid">
-            If <m>R</m> is a PID, then every non-zero prime ideal is maximal.
+            <p>
+              If <m>R</m> is a PID, then every non-zero prime ideal is maximal.
+            </p>
           </problem>
 
           <definition xml:id="def-associate">
@@ -759,9 +760,7 @@
           <definition xml:id="def-prime-element">
             <statement>
               <p>
-                <p>
-                  Suppose <m>R</m> is a domain. An element <m>p \in R</m> is a <em>prime</em> element if <m>p \neq 0</m> and the ideal <m>(p)</m> is a prime ideal.
-                </p>
+                Suppose <m>R</m> is a domain. An element <m>p \in R</m> is a <em>prime</em> element if <m>p \neq 0</m> and the ideal <m>(p)</m> is a prime ideal.
               </p>
             </statement>
           </definition>
@@ -867,23 +866,6 @@
               </p>
 
               <p>
-                Let <m>\alpha,\beta\in\Z[\sqrt{10}]</m> and behold 
-                <me>
-                  \begin{align}
-                  N(\alpha\beta)&=N((a+b\sqrt{10})(c+d\sqrt{10}))\\
-                                              &=N(ac+10bd+(ad+bc)(\sqrt{10}))\\
-                                              &=(ac+10bd)^2-10(ad+bc)^2\\
-                                              &=((ac)^2+20acbd+100(bd)^2)+(-10(ad)^2-20abcd-10(bc)^2)\\
-                                              &=a^2c^2+100b^2d^2-10a^2d^2-10b^2c^2\\
-                                              &=(a^2c^2-10a^2d^2)+(-10b^2c^2-100b^2d^2)\\
-                                              &=a^2(c^2-10d^2)-10b^2(c^2-10d^2)\\
-                  N(\alpha)N(\beta)&=(a^2-10b^2)(c^2-10d^2).
-                  \end{align}
-                </me> 
-                So there's that done.
-              </p>
-
-              <p>
                 Suppose by way of contradiction there exist <m>\a,\b</m> such that <m>2=\a\b</m>. Then <m>\a=a+b\sqrt{10}</m> and <m>\b=c+d\sqrt{10}</m>, and <me>N(2)=4=N(\a\b)=N(\a)N(\b)=(a^2-10b^2)(c^2-10d^2).</me> Thus <m>(a^2-10b^2)=\pm1,\pm2,</m> or <m>\pm4</m>, as these are the only integer divisors of <m>4</m>. However, there do not exist integers <m>a,b</m> such that this is true. Thus <m>2</m> is irreducible in <m>\Z[\sqrt{10}]</m>.
               </p>
   
@@ -903,7 +885,9 @@
             </p>
 
             <proof>
+              <!--
               <p>
+                
                 First, notice that <m>2\cdot 2=6=(1+\sqrt{-3})(1-\sqrt{-3})</m>. Define a function <me>N:\Z[\sqrt{-3}]\to\Z, N(a+b \sqrt{-3})=a^2+3b^2.</me> Let <m>\alpha,\beta\in\Z[i]</m> and behold <me>\begin{align}
     N(\alpha\beta)
     &amp;=N((a+b \sqrt{-3})(c+d \sqrt{-3}))\\
@@ -915,6 +899,7 @@
     &amp;=a^2(c^2+3d^2)+3b^2(c^2+3d^2)\\
     N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there’s that done.
               </p>
+              -->
     
               <p>
                 Suppose by way of contradiction there exist <m>\a,\b</m> such that <m>2=\a\b</m>. Then <m>\a=a+b\sqrt{-3}</m> and <m>\b=c+d\sqrt{-3}</m>, and <me>N(2)=4=N(\a\b)=N(\a)N(\b)=(a^2+3b^2)(c^2+3d^2).</me> Thus <m>(a^2+3b^2)=\pm1,\pm2,</m> or <m>\pm4</m>, as these are the only integer divisors of <m>4</m>. However, there do not exist integers <m>a,b</m> such that this is true. Thus <m>2</m> is irreducible in <m>\Z[\sqrt{-3}]</m>.
@@ -965,37 +950,39 @@
                 Let <m>R</m> be a commutative ring with <m>1</m> and Let <m>N</m> be the set of nilpotent elements of <m>R</m>.
               </p>
 
-              <ol>
-                <li>
-                  <p>
-                    Let <m>r,s\in N</m>. Then <m>r^n=0</m> and <m>s^m=0</m> for <m>n,m\in\N</m>. Consider <m>(r+s)^{mn}</m>, which, by the binomial theorem, has each term raised to either the <m>n</m>th or <m>m</m>th power, sending the whole thing to <m>0</m>.
-                  </p>
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      Let <m>r,s\in N</m>. Then <m>r^n=0</m> and <m>s^m=0</m> for <m>n,m\in\N</m>. Consider <m>(r+s)^{mn}</m>, which, by the binomial theorem, has each term raised to either the <m>n</m>th or <m>m</m>th power, sending the whole thing to <m>0</m>.
+                    </p>
 
-                  <p>
-                    Additionally, if <m>r\in N</m> consider <m>r\inv=-r</m> when viewed as an additive group. Notice <m>-r^{2n}=r(2n)=0</m>. Finally, let <m>x\not\in N</m> and consider <m>(rx)^n=r^nx^n=0</m>, so <m>rx\in N</m>. Thus we have our ideal.
-                  </p>
-                </li>
+                    <p>
+                      Additionally, if <m>r\in N</m> consider <m>r\inv=-r</m> when viewed as an additive group. Notice <m>-r^{2n}=r(2n)=0</m>. Finally, let <m>x\not\in N</m> and consider <m>(rx)^n=r^nx^n=0</m>, so <m>rx\in N</m>. Thus we have our ideal.
+                    </p>
+                  </li>
 
-                <li>
-                  <p>
-                    Let <m>rN</m> be a nilpotent element in <m>R/N</m>. Then <m>r^nN=N</m>, meaning <m>r^n\in N</m>. This means there exists some <m>m\in\N</m> such that <m>r^{n^m}=r^{nm}=0</m>, placing <m>r\in N</m>. Thus all nilpotent elements in <m>R/N</m> are actually <m>0</m> (possibly four <m>0</m>’s in a trench coat).
-                  </p>
-                </li>
+                  <li>
+                    <p>
+                      Let <m>rN</m> be a nilpotent element in <m>R/N</m>. Then <m>r^nN=N</m>, meaning <m>r^n\in N</m>. This means there exists some <m>m\in\N</m> such that <m>r^{n^m}=r^{nm}=0</m>, placing <m>r\in N</m>. Thus all nilpotent elements in <m>R/N</m> are actually <m>0</m> (possibly four <m>0</m>’s in a trench coat).
+                    </p>
+                  </li>
 
-                <li>
-                  <p>
-                    Let <m>f\in R[x]</m>.
-                  </p>
+                  <li>
+                    <p>
+                      Let <m>f\in R[x]</m>.
+                    </p>
 
-                  <p>
-                    First, suppose <m>f</m> is a nilpotent element of <m>R[x]</m>. Thus <m>f^n=0</m> for some <m>n\in\N</m>. By the binomial shenanigans every product of coefficients must to go <m>0</m>.
-                  </p>
-    
-                  <p>
-                    Next, suppose every coefficient of <m>f</m> is nilpotent. Let <m>n</m> be equal to the product of all the smallest powers that send each coefficient to <m>0</m>. Thus by more binomial shenanigans we have <m>f^n=0</m>.
-                  </p>
-                </li>
-              </ol>
+                    <p>
+                      First, suppose <m>f</m> is a nilpotent element of <m>R[x]</m>. Thus <m>f^n=0</m> for some <m>n\in\N</m>. By the binomial shenanigans every product of coefficients must to go <m>0</m>.
+                    </p>
+      
+                    <p>
+                      Next, suppose every coefficient of <m>f</m> is nilpotent. Let <m>n</m> be equal to the product of all the smallest powers that send each coefficient to <m>0</m>. Thus by more binomial shenanigans we have <m>f^n=0</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
             </proof>
           </problem>
 
@@ -1157,16 +1144,7 @@
                   <li>
                     <p>
                       <p>
-                        First, notice that <m>2\cdot 3=6=(1+\sqrt{-5})(1-\sqrt{-5})</m>. Define a function <me>N:\Z[\sqrt{-5}]\to\Z, N(a+b \sqrt{-5})=a^2+5b^2.</me> Let <m>\alpha,\beta\in\Z[\sqrt{-5}]</m> and behold <me>\begin{align}
-        N(\alpha\beta)
-        &amp;=N((a+b \sqrt{-5})(c+d \sqrt{-5}))\\
-        &amp;=N(ac-5bd+ad \sqrt{-5}+bc \sqrt{-5})\\
-        &amp;=(ac-5bd)^2+5(ad+bc)^2\\
-        &amp;=((ac)^2-10acbd+25(bd)^2)+5((ad)^2+2abcd+(bc^2))\\
-        &amp;=a^2c^2+25b^2d^2+5a^2d^2+5b^2c^2\\
-        &amp;=(a^2c^2+5a^2d^2)+(5b^2c^2+25b^2d^2)\\
-        &amp;=a^2(c^2+5d^2)+5b^2(c^2+5d^2)\\
-        N(\alpha)N(\beta)&amp;=(a^2+5b^2)(c^2+5d^2).\end{align}</me>So there’s that done.
+                        First, notice that <m>2\cdot 3=6=(1+\sqrt{-5})(1-\sqrt{-5})</m>. Define a function <me>N:\Z[\sqrt{-5}]\to\Z, N(a+b \sqrt{-5})=a^2+5b^2.</me> Let <m>\alpha,\beta\in\Z[\sqrt{-5}]</m> and behold
                       </p>
         
                       <p>
