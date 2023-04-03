@@ -225,10 +225,14 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         \def\sR{\mathscr R}
         \def\sS{\mathscr S}
         \def\sT{\mathscr T}
+        \def\sU{\mathscr U}
+        \def\sV{\mathscr V}
+        \def\sW{\mathscr W}
+        \def\sX{\mathscr X}
+        \def\sY{\mathscr Y}
         \def\sZ{\mathscr Z}
         <!-- Tildes     -->
         \def\tS{\tilde{S}}
-
         <!-- Algebra     -->
         \def\sdp{\rtimes}
         \newcommand{\tensor}{\otimes} 
@@ -242,7 +246,6 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         \newcommand{\vectwo}[2]{\begin{bmatrix} #1 \\ #2 \end{bmatrix}} 
         \newcommand{\vecthree}[3]{\begin{bmatrix} #1 \\ #2 \\ #3\end{bmatrix}} 
         \def\ob{{\mathfrak{ob}} }
-
         <!-- Misc     -->
         \def\qed{\square}
         \def\sse{\subseteq}

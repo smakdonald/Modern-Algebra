@@ -97,27 +97,23 @@
             <p>
               Let <m>G</m> be a group of order <m>p^n</m>, for some prime <m>p</m>, acting on a finite set <m>X</m>.
             </p>
-  
-  
-            <paragraphs xml:id="part-a-3">
-              <title>Part (a)</title>
-  
-              <p>
-                Suppose there is no element in <m>X</m> that is fixed by all elements of <m>G</m>.
-              </p>
-  
-              <p>
-                By Orbit-Stabilizer we know that <m>|\Orb_G(x)|\big||G|</m> for all <m>x\in X</m>. Thus every orbit under this action has an order dividing <m>p^n</m>, so either <m>1</m> or some positive power of <m>p.</m> However, as no element of <m>X</m> is fixed by every element of <m>G</m>, there exists no stabilizer which is all of <m>G</m>, and thus there exist no orbits that have order <m>1</m>.
-              </p>
-  
-              <p>
-                Recall that the orbits of this action partition <m>X</m>, and thus <m>|X|=\sum_{x\in X}|\Orb_G(x)|</m>. As every orbit is divisible by <m>p</m>, so too must be <m>X</m>.
-              </p>
-  
-  
-              <paragraphs xml:id="part-b-3">
-                <title>Part (b)</title>
-  
+
+            <ol>
+              <li>
+                <p>
+                  Suppose there is no element in <m>X</m> that is fixed by all elements of <m>G</m>.
+                </p>
+    
+                <p>
+                  By Orbit-Stabilizer we know that <m>|\Orb_G(x)|\big||G|</m> for all <m>x\in X</m>. Thus every orbit under this action has an order dividing <m>p^n</m>, so either <m>1</m> or some positive power of <m>p.</m> However, as no element of <m>X</m> is fixed by every element of <m>G</m>, there exists no stabilizer which is all of <m>G</m>, and thus there exist no orbits that have order <m>1</m>.
+                </p>
+    
+                <p>
+                  Recall that the orbits of this action partition <m>X</m>, and thus <m>|X|=\sum_{x\in X}|\Orb_G(x)|</m>. As every orbit is divisible by <m>p</m>, so too must be <m>X</m>.
+                </p>  
+              </li>
+
+              <li>
                 <p>
                   Suppose <m>G</m> acts faithfully on <m>X</m>. Thus the permutation representation homomorphism <m>\rho:G\to\Perm(X)</m> is injective. Let <m>k</m> denote the order of <m>X</m>. Then <m>\Perm(X)\cong S_k</m>, which as order <m>k!</m>. As <m>G</m> is injective, we see that <m>|G|=|\im\rho|\leq S_k</m>, and thus <m>p^n|k!</m>.
                 </p>
@@ -125,18 +121,11 @@
                 <p>
                   Thus <m>p</m> must show up in the factorization of <m>k!</m> at least <m>n</m> times, meaning that <m>|X| \geq np</m>.
                 </p>
-  
-              </paragraphs>
-            </paragraphs>
+              </li>
+            </ol>
           </p>
         </proof>
       </problem>
-
-      <problem>
-        
-      </problem>
-      
-
     </section>
 
     <section xml:id="sec-sylowthm">
@@ -217,8 +206,19 @@
       <problem>
         <p>
           Let <m>G</m> be a finite group. 
-          (a) Suppose every subgroup of <m>G</m> is normal. Prove that given any positive divisor <m>d</m> of <m>|G|</m> there exists a subgroup of <m>G</m> of order <m>d</m>. 
-          (b) Give an example, with justification, of a finite group <m>G</m> and a positive divisor <m>d</m> of <m>|G|</m> such that <m>G</m> has no subgroup of order <m>d</m>.
+          <ol>
+            <li>
+              <p>
+                Suppose every subgroup of <m>G</m> is normal. Prove that given any positive divisor <m>d</m> of <m>|G|</m> there exists a subgroup of <m>G</m> of order <m>d</m>. 
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Give an example, with justification, of a finite group <m>G</m> and a positive divisor <m>d</m> of <m>|G|</m> such that <m>G</m> has no subgroup of order <m>d</m>.
+              </p>
+            </li>
+          </ol>
         </p>
 
         <proof>
@@ -254,9 +254,20 @@
 
       <problem>
         <p>
-					Let <m>G</m> be a finite group, <m>p</m> a prime dividing the order of <m>G</m>, and <m>H</m> a normal subgroup of order <m>p^m</m> for some <m>m &gt; 0</m>. Prove the following statements. 
-          (a) <m>H</m> is contained in every Sylow <m>p</m>-subgroup of <m>G</m>. 
-          (b) <m>H</m> contains a nontrivial abelian subgroup that is normal in <m>G</m>.
+					Let <m>G</m> be a finite group, <m>p</m> a prime dividing the order of <m>G</m>, and <m>H</m> a normal subgroup of order <m>p^m</m> for some <m>m &gt; 0</m>. Prove the following statements.
+          <ol>
+            <li>
+              <p>
+                <m>H</m> is contained in every Sylow <m>p</m>-subgroup of <m>G</m>. 
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>H</m> contains a nontrivial abelian subgroup that is normal in <m>G</m>.
+              </p>
+            </li>
+          </ol> 
 				</p>
 
         <proof>
@@ -269,7 +280,7 @@
           </p>
 
           <p>
-            Consider <m>Z(H)</m>, which is abelian in <m>H</m>. The center of <m>p</m>-groups are nontrivial so that’s good. Let <m>g\in G</m>, <m>h\in Z(H)</m>, and consider <m>ghg\inv</m>. As <m>H\nsg G</m> we know <m>ghg\inv\in H</m>. Let <m>h'\in H</m>. We see <m>ghg\inv h'=ghh''g\inv</m>, since <m>H</m> is still normal. <m>h\in Z(G)</m> so we have <m>gh''hg\inv</m>.
+            Consider <m>Z(H)</m>, which is abelian in <m>H</m>. The center of <m>p</m>-groups are nontrivial so that's good. Let <m>g\in G</m>, <m>h\in Z(H)</m>, and consider <m>ghg\inv</m>. As <m>H\nsg G</m> we know <m>ghg\inv\in H</m>. Let <m>h'\in H</m>. We see <m>ghg\inv h'=ghh''g\inv</m>, since <m>H</m> is still normal. <m>h\in Z(G)</m> so we have <m>gh''hg\inv</m>.
           </p>
 
           <p>
@@ -290,7 +301,7 @@
 					</p>
 
 					<p>
-						Let <m>G</m> act on <m>\Syl_p(G)</m> by conjugation, which is a transitive action by part (2) of Sylow’s Theorem. Therefore <m>H</m> acts transitively on this set as well. Under this action, <m>N_G(P)=\Stab_G(P)</m>.
+						Let <m>G</m> act on <m>\Syl_p(G)</m> by conjugation, which is a transitive action by part (2) of Sylow's Theorem. Therefore <m>H</m> acts transitively on this set as well. Under this action, <m>N_G(P)=\Stab_G(P)</m>.
 					</p>
 
 					<p>
@@ -323,8 +334,19 @@
       <problem>
         <p>
 					Let <m>G</m> be a group of order <m>231(= 3 · 7 · 11)</m> 
-          (a) Prove that <m>G</m> has a unique <m>11</m>-Sylow subgroup 
-          (b) Prove that the <m>11</m>-Sylow subgroup is contained in the center of <m>G</m>.
+          <ol>
+            <li>
+              <p>
+                Prove that <m>G</m> has a unique <m>11</m>-Sylow subgroup
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Prove that the <m>11</m>-Sylow subgroup is contained in the center of <m>G</m>.
+              </p>
+            </li>
+          </ol>
 				</p>
 
         <proof>
@@ -333,7 +355,7 @@
           </p>
 
           <p>
-            By Sylow’s Theorem we know <m>n_{11}|21</m> and is congruent to <m>1\mod{11}</m>. The only possibility for such is <m>1</m>, meaning that <m>G</m> has exactly <m>1</m> Sylow <m>11</m>-subgroup.
+            By Sylow's Theorem we know <m>n_{11}|21</m> and is congruent to <m>1\mod{11}</m>. The only possibility for such is <m>1</m>, meaning that <m>G</m> has exactly <m>1</m> Sylow <m>11</m>-subgroup.
           </p>
 
           <p>
@@ -349,7 +371,7 @@
 
         <proof>
           <p>
-            Let <m>G</m> be a group of order <m>385 = 5 · 7 · 11</m>. By Sylow’s Theorem we know the <m>n_{11}|35</m> and <m>n_11\equiv 1\mod{11}</m>, and so <m>n_{11}=1</m>, making <m>P</m>, the unique Sylow <m>11</m>-subgroup of <m>G</m>, normal in <m>G</m>. Things are looking good thus far. We also know the following: - <m>n_7|55</m> and <m>n_7\equiv 1\mod{7}</m>, so <m>n_7=1</m> as well. Yeehaw.
+            Let <m>G</m> be a group of order <m>385 = 5 · 7 · 11</m>. By Sylow's Theorem we know the <m>n_{11}|35</m> and <m>n_11\equiv 1\mod{11}</m>, and so <m>n_{11}=1</m>, making <m>P</m>, the unique Sylow <m>11</m>-subgroup of <m>G</m>, normal in <m>G</m>. Things are looking good thus far. We also know the following: - <m>n_7|55</m> and <m>n_7\equiv 1\mod{7}</m>, so <m>n_7=1</m> as well. Yeehaw.
           </p>
 
           <p>
@@ -413,7 +435,7 @@
 
           <proof>
             <p>
-							Let <m>G</m> be a simple group of order <m>60=2^2\cdot3\cdot 5.</m> By Sylow’s Theorem we know that <m>n_5|12</m> and that <m>n_5\equiv 1\mod{5}</m>. Thus the options for <m>n_5</m> are <m>1</m> and <m>6</m>. Since <m>G</m> is simple we see that <m>n_5=6</m>. As each Sylow <m>5</m>-subgroup of <m>G</m> has <m>4</m> unique elements of order <m>5</m> and the identity we see that the number of elements or order <m>5</m> in <m>G</m> is <m>(5-1)\cdot 6=24</m>.
+							Let <m>G</m> be a simple group of order <m>60=2^2\cdot3\cdot 5.</m> By Sylow's Theorem we know that <m>n_5|12</m> and that <m>n_5\equiv 1\mod{5}</m>. Thus the options for <m>n_5</m> are <m>1</m> and <m>6</m>. Since <m>G</m> is simple we see that <m>n_5=6</m>. As each Sylow <m>5</m>-subgroup of <m>G</m> has <m>4</m> unique elements of order <m>5</m> and the identity we see that the number of elements or order <m>5</m> in <m>G</m> is <m>(5-1)\cdot 6=24</m>.
 						</p>
 
 						<p>
@@ -425,8 +447,19 @@
         <exercise>
           <p>
             Suppose <m>G</m> is a simple group of order <m>168 = 2^3 · 3 · 7.</m> (Yes, there is such a group.) 
-            (a) How many elements of order <m>7</m> does <m>G</m> have? 
-            (b) Show that <m>G</m> has at least <m>14</m> elements of order <m>3</m>
+            <ol>
+              <li>
+                <p>
+                  How many elements of order <m>7</m> does <m>G</m> have? 
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Show that <m>G</m> has at least <m>14</m> elements of order <m>3</m>
+                </p>
+              </li>
+            </ol>
           </p>
 
           <proof>
@@ -447,7 +480,7 @@
 
           <proof>
             <p>
-							Let <m>G</m> be a group of order <m>90 = 2 · 3^2 · 5</m> and let <m>\Syl_3(G)</m> denote the set of<!-- linebreak -->Sylow <m>3</m>-subgroups of <m>G</m>. ###### Part (a) Suppose by way of contradiction that <m>G</m> is simple. By Sylow’s Theorem we know the following: - <m>n_3|10</m> and is congruent to <m>1\mod{3}</m>. As <m>G</m> is simple there must be ten of the fuckers. - <m>n_5|18</m> and is congruent to <m>1\mod 5</m>. As <m>G</m> is simple there must be six of them. Since each Sylow <m>3</m>-subgroup will have <m>3^2-1=8</m> non-identity elements and they are all distinct that accounts for <m>80</m> elements of order <m>3</m>. However, there are also <m>24</m> elements or order <m>5</m> to account for, which is a problem. Thus <m>G</m> cannot be simple.
+							Let <m>G</m> be a group of order <m>90 = 2 · 3^2 · 5</m> and let <m>\Syl_3(G)</m> denote the set of<!-- linebreak -->Sylow <m>3</m>-subgroups of <m>G</m>. ###### Part (a) Suppose by way of contradiction that <m>G</m> is simple. By Sylow's Theorem we know the following: - <m>n_3|10</m> and is congruent to <m>1\mod{3}</m>. As <m>G</m> is simple there must be ten of the fuckers. - <m>n_5|18</m> and is congruent to <m>1\mod 5</m>. As <m>G</m> is simple there must be six of them. Since each Sylow <m>3</m>-subgroup will have <m>3^2-1=8</m> non-identity elements and they are all distinct that accounts for <m>80</m> elements of order <m>3</m>. However, there are also <m>24</m> elements or order <m>5</m> to account for, which is a problem. Thus <m>G</m> cannot be simple.
 						</p>
 
             <p>
@@ -455,7 +488,7 @@
             </p>
 
             <p>
-              We now consider the normalizer of <m>Q \cap Q'</m>, which we denote <m>N</m> for simplicity. As <m>N</m> is a subgroup of <m>G</m> its order must divide <m>90</m> by Lagrange’s Theorem. However, <m>QQ'\leq N</m>, and so <m>N</m> must have at least <m>27</m> elements, leaving the options of <m>45</m> and <m>90</m>. If <m>|N|=90</m> then <m>N=G</m>, making <m>Q\cap Q'</m> normal in <m>G</m>, a problem.
+              We now consider the normalizer of <m>Q \cap Q'</m>, which we denote <m>N</m> for simplicity. As <m>N</m> is a subgroup of <m>G</m> its order must divide <m>90</m> by Lagrange's Theorem. However, <m>QQ'\leq N</m>, and so <m>N</m> must have at least <m>27</m> elements, leaving the options of <m>45</m> and <m>90</m>. If <m>|N|=90</m> then <m>N=G</m>, making <m>Q\cap Q'</m> normal in <m>G</m>, a problem.
             </p>
 
             <p>
@@ -491,7 +524,7 @@
 						</p>
 
             <p>
-              Suppose by way of contradiction that <m>G</m> is simple. Thus <m>n_3\neq 1</m>, so <m>n_3=7</m>. Let <m>G</m> act on the <m>\Syl_3(G)</m> by conjugation, yielding the homomorphism <me>\rho: G\to S_7</me>granted via the permutation representation. By (2) in Sylow’s Theorem we see that <m>\rho</m> is not trivial. As <m>|S_7|=7!</m> we see that <m>|G|\not\big||S_7|</m>, meaning that the <m>\ker(\rho)</m> is non-trivial, yielding a non-trivial normal subgroup of <m>G</m>, a contradiction.
+              Suppose by way of contradiction that <m>G</m> is simple. Thus <m>n_3\neq 1</m>, so <m>n_3=7</m>. Let <m>G</m> act on the <m>\Syl_3(G)</m> by conjugation, yielding the homomorphism <me>\rho: G\to S_7</me>granted via the permutation representation. By (2) in Sylow's Theorem we see that <m>\rho</m> is not trivial. As <m>|S_7|=7!</m> we see that <m>|G|\not\big||S_7|</m>, meaning that the <m>\ker(\rho)</m> is non-trivial, yielding a non-trivial normal subgroup of <m>G</m>, a contradiction.
             </p>
           </proof>
         </exercise>
@@ -503,7 +536,7 @@
 
           <proof>
             <p>
-              Let <m>G</m> be a finite group of order <m>p^2q</m> with <m>p &lt; q</m> prime numbers, and suppose by way of contradiction that <m>G</m> is simple. By Sylow’s Theorem we have the following: - <m>n_p|q</m> and <m>n_p\cong 1\mod{p}</m>, and thus <m>n_p=q</m>. - <m>n_q|p^2</m> and <m>n_q\cong 1\mod{q}</m>, and thus <m>n_q=p^2</m>. From this information we see that there are <m>p^2(q-1)</m> elements of order <m>q</m> and <m>(p^2-1)q</m> elements of order <m>p</m>, for a lovely total of <m>p^2q-p^2+p^2q-q</m> elements, which is too many.
+              Let <m>G</m> be a finite group of order <m>p^2q</m> with <m>p &lt; q</m> prime numbers, and suppose by way of contradiction that <m>G</m> is simple. By Sylow's Theorem we have the following: - <m>n_p|q</m> and <m>n_p\cong 1\mod{p}</m>, and thus <m>n_p=q</m>. - <m>n_q|p^2</m> and <m>n_q\cong 1\mod{q}</m>, and thus <m>n_q=p^2</m>. From this information we see that there are <m>p^2(q-1)</m> elements of order <m>q</m> and <m>(p^2-1)q</m> elements of order <m>p</m>, for a lovely total of <m>p^2q-p^2+p^2q-q</m> elements, which is too many.
             </p>
           </proof>
         </exercise>
@@ -519,11 +552,11 @@
             </p>
 
             <p>
-							Let <m>G</m> act on <m>\Syl_p(G)</m> by conjugation, inducing the homomorphism <m>\rho: G\to S_{n_p}</m> via the permutation representation. Notice that the order of <m>S_{n_p}</m> is conspicuously <m>n_p!</m>. The kernel of this map is a normal subgroup of <m>G</m>. Note that since <m>G</m> is simple the only normal subgroups of <m>G</m> are the trivial subgroup and <m>G</m> itself. However, the kernel cannot be all of <m>G</m> as this would make <m>\rho</m> trivial, which cannot be the case given that our action is transitive by Part (2) of Sylow’s Theorem. Thus <m>\ker(\rho)=\{e\}</m>, making <m>\rho</m> injective. Thus <m>|\im(\rho)|=|G|</m>. As the image is a subgroup of <m>S_{n_p}</m>, the result follows from Lagrange’s Theorem.
+							Let <m>G</m> act on <m>\Syl_p(G)</m> by conjugation, inducing the homomorphism <m>\rho: G\to S_{n_p}</m> via the permutation representation. Notice that the order of <m>S_{n_p}</m> is conspicuously <m>n_p!</m>. The kernel of this map is a normal subgroup of <m>G</m>. Note that since <m>G</m> is simple the only normal subgroups of <m>G</m> are the trivial subgroup and <m>G</m> itself. However, the kernel cannot be all of <m>G</m> as this would make <m>\rho</m> trivial, which cannot be the case given that our action is transitive by Part (2) of Sylow's Theorem. Thus <m>\ker(\rho)=\{e\}</m>, making <m>\rho</m> injective. Thus <m>|\im(\rho)|=|G|</m>. As the image is a subgroup of <m>S_{n_p}</m>, the result follows from Lagrange's Theorem.
 						</p>
 
             <p>
-              Let <m>G</m> be a group of order <m>1,000,000</m>. Suppose by way of contradiction that <m>G</m> is simple. <m>1,000,000=10^6=2^6\cdot 5^6</m>. Thus the number of Sylow-<m>5</m> subgroups is congruent to <m>1\mod 5</m> and divides <m>2^6=64</m>, the options of which are 1 and 16 (See: Sylow’s Theorem). As <m>|G|</m> does not divide <m>16!,</m> this contradicts part (a). Thus there are no simple groups of order <m>1,000,000</m>.
+              Let <m>G</m> be a group of order <m>1,000,000</m>. Suppose by way of contradiction that <m>G</m> is simple. <m>1,000,000=10^6=2^6\cdot 5^6</m>. Thus the number of Sylow-<m>5</m> subgroups is congruent to <m>1\mod 5</m> and divides <m>2^6=64</m>, the options of which are 1 and 16 (See: Sylow's Theorem). As <m>|G|</m> does not divide <m>16!,</m> this contradicts part (a). Thus there are no simple groups of order <m>1,000,000</m>.
             </p>
           </proof>
         </exercise>
@@ -535,11 +568,11 @@
 
           <proof>
             <p>
-              Let <m>G</m> be a group of order <m>36=2^2\cdot 3^2</m>. By Sylow’s Theorem we have <m>n_3|4</m> and <m>n_3\equiv 1\mod{3}</m>, and thus <m>n_3=1,4</m>. If <m>n_3=1</m> then the unique Sylow <m>3</m>-subgroup is normal, giving us a normal subgroup of order <m>9</m>.
+              Let <m>G</m> be a group of order <m>36=2^2\cdot 3^2</m>. By Sylow's Theorem we have <m>n_3|4</m> and <m>n_3\equiv 1\mod{3}</m>, and thus <m>n_3=1,4</m>. If <m>n_3=1</m> then the unique Sylow <m>3</m>-subgroup is normal, giving us a normal subgroup of order <m>9</m>.
             </p>
   
             <p>
-              Suppose then that <m>n_3=4</m>, let <m>P</m> be one of the subgroups of order <m>9</m>, and let <m>G</m> act on the cosets of <m>H</m> by left multiplication, inducing the homomorphism <m>\rho:G\to S_4</m>. This is because there are <m>9</m> elements in <m>P</m>, and thus there are <m>4</m> left cosets by Lagrange’s Theorem.
+              Suppose then that <m>n_3=4</m>, let <m>P</m> be one of the subgroups of order <m>9</m>, and let <m>G</m> act on the cosets of <m>H</m> by left multiplication, inducing the homomorphism <m>\rho:G\to S_4</m>. This is because there are <m>9</m> elements in <m>P</m>, and thus there are <m>4</m> left cosets by Lagrange's Theorem.
             </p>
   
             <p>
@@ -555,7 +588,7 @@
             </p>
   
             <p>
-              Thus <m>N\subseteq\Stab(xP)</m>, which has order 9
+              Thus <m>N\subseteq\Stab(xP)</m>, which has order <m>9</m>
             </p>
           </proof>
         </exercise>
@@ -567,7 +600,7 @@
 
           <proof>
             <p>
-              Let <m>G</m> be a group of order <m>150</m> and suppose by way of contradiction that <m>G</m> is simple. Notice that <m>150=2\cdot 3\cdot 5^2</m>. By Sylow’s Theorem, we know <m>|\Syl_5(G)|\equiv 1\mod{5}</m> and divides <m>6</m>, the only options are thus <m>1</m> and <m>6</m>. Since <m>G</m> is simple, there must be exactly <m>n_5=6</m>, where <m>n_5=\Syl_5(G)</m>. Let <m>G</m> act on <m>\Syl_5(G)</m> by conjugation. Thus <m>\rho: G\to S_6</m> is a group homomorphism. Note that <m>|S_6|=720</m>, and that the order of <m>G</m> does not divide <m>720</m>. By Part (2) of Sylow’s Theorem this action is transitive, meaning that the kernel of <m>\rho</m> cannot be trivial. Thus <m>\ker(\rho)</m> is a nontrivial normal subgroup of <m>G</m>, a contradiction. Thus no group of order <m>150</m> is simple.
+              Let <m>G</m> be a group of order <m>150</m> and suppose by way of contradiction that <m>G</m> is simple. Notice that <m>150=2\cdot 3\cdot 5^2</m>. By Sylow's Theorem, we know <m>|\Syl_5(G)|\equiv 1\mod{5}</m> and divides <m>6</m>, the only options are thus <m>1</m> and <m>6</m>. Since <m>G</m> is simple, there must be exactly <m>n_5=6</m>, where <m>n_5=\Syl_5(G)</m>. Let <m>G</m> act on <m>\Syl_5(G)</m> by conjugation. Thus <m>\rho: G\to S_6</m> is a group homomorphism. Note that <m>|S_6|=720</m>, and that the order of <m>G</m> does not divide <m>720</m>. By Part (2) of Sylow's Theorem this action is transitive, meaning that the kernel of <m>\rho</m> cannot be trivial. Thus <m>\ker(\rho)</m> is a nontrivial normal subgroup of <m>G</m>, a contradiction. Thus no group of order <m>150</m> is simple.
             </p>
           </proof>
         </exercise>
@@ -579,11 +612,11 @@
 
           <proof>
             <p>
-              By Sylow’s Theorem we know that <m>\Syl_7(G)\equiv 1\mod{7}</m> and <m>\Syl_7(G)|2^5=32</m>. Thus our options are <m>1</m> and <m>8</m>. Suppose that <m>\Syl_7(G)=8</m>.
+              By Sylow's Theorem we know that <m>\Syl_7(G)\equiv 1\mod{7}</m> and <m>\Syl_7(G)|2^5=32</m>. Thus our options are <m>1</m> and <m>8</m>. Suppose that <m>\Syl_7(G)=8</m>.
             </p>
   
             <p>
-              Let <m>G</m> act on <m>\Syl_7(G)</m> by conjugation, yielding the homomorphism <me>\rho: G \to S_8</me>via the permutation representation. This map is non-trivial from part (2) of Sylow’s Theorem, but <m>2^5\cdot 7^3</m> does not divide <m>|S_8|=8!</m>, and thus <m>\rho</m> cannot be injective. Then the kernel of this homomorphism is non-trivial, normal subgroup of <m>G</m>. Thus <m>G</m> is not simple.
+              Let <m>G</m> act on <m>\Syl_7(G)</m> by conjugation, yielding the homomorphism <me>\rho: G \to S_8</me>via the permutation representation. This map is non-trivial from part (2) of Sylow's Theorem, but <m>2^5\cdot 7^3</m> does not divide <m>|S_8|=8!</m>, and thus <m>\rho</m> cannot be injective. Then the kernel of this homomorphism is non-trivial, normal subgroup of <m>G</m>. Thus <m>G</m> is not simple.
             </p>
           </proof>
         </exercise>
@@ -595,7 +628,7 @@
 
           <proof>
             <p>
-              Let <m>G</m> be a group of order <m>2^m \cdot 5</m> with <m>m \leq 1</m>, and suppose by way of contradiction that <m>G</m> is simple. By Sylow’s Theorem we know the following: - <m>n_{5}|2^m</m> and <m>n_5\equiv1\mod{5}</m>, and - <m>n_{2}|5</m> and <m>n_{2}\equiv1\mod{2}</m>, so our options are <m>3</m> and <m>5</m>. Suppose its <m>3</m>. Let <m>G</m> act on <m>\Syl_2(P)</m> by conjugation, yielding the permutation representation homomorphism <m>\rho:G\to S_{3}</m>. The kernel of this homomorphism cannot be trivial as the conjugation action on Sylow subgroups is transitive by Part (2) of Sylow’s Theorem. Notice <m>|G|</m> does not divide the order of <m>S_{3}</m>, so our kernel cannot be all of <m>G</m>, making <m>\ker(\rho)</m> a nontrivial normal subgroup of <m>G</m>.
+              Let <m>G</m> be a group of order <m>2^m \cdot 5</m> with <m>m \leq 1</m>, and suppose by way of contradiction that <m>G</m> is simple. By Sylow's Theorem we know the following: - <m>n_{5}|2^m</m> and <m>n_5\equiv1\mod{5}</m>, and - <m>n_{2}|5</m> and <m>n_{2}\equiv1\mod{2}</m>, so our options are <m>3</m> and <m>5</m>. Suppose its <m>3</m>. Let <m>G</m> act on <m>\Syl_2(P)</m> by conjugation, yielding the permutation representation homomorphism <m>\rho:G\to S_{3}</m>. The kernel of this homomorphism cannot be trivial as the conjugation action on Sylow subgroups is transitive by Part (2) of Sylow's Theorem. Notice <m>|G|</m> does not divide the order of <m>S_{3}</m>, so our kernel cannot be all of <m>G</m>, making <m>\ker(\rho)</m> a nontrivial normal subgroup of <m>G</m>.
             </p>
 
             <p>
@@ -619,11 +652,11 @@
             </p>
   
             <p>
-              By Sylow’s Theorem we know the following: - <m>n_{7}|2^m</m> and <m>n_7\equiv1\mod{7}</m>, and - <m>n_{2}|7</m> and <m>n_{2}\equiv1\mod{2}</m>, so our options are <m>3,5,7</m>.
+              By Sylow's Theorem we know the following: - <m>n_{7}|2^m</m> and <m>n_7\equiv1\mod{7}</m>, and - <m>n_{2}|7</m> and <m>n_{2}\equiv1\mod{2}</m>, so our options are <m>3,5,7</m>.
             </p>
   
             <p>
-              Let <m>G</m> act on <m>\Syl_2(P)</m> by conjugation, yielding the permutation representation homomorphism <m>\rho:G\to S_{n_2}</m>. The kernel of this homomorphism cannot be trivial as the conjugation action on Sylow subgroups is transitive by Part (2) of Sylow’s Theorem. Notice that if <m>n_2</m> is <m>3</m> or <m>5</m> then <m>|G|</m> does not divide the order of <m>S_{n_2}</m>, so our kernel cannot be all of <m>G</m>, making <m>\ker(\rho)</m> a nontrivial normal subgroup of <m>G</m>.
+              Let <m>G</m> act on <m>\Syl_2(P)</m> by conjugation, yielding the permutation representation homomorphism <m>\rho:G\to S_{n_2}</m>. The kernel of this homomorphism cannot be trivial as the conjugation action on Sylow subgroups is transitive by Part (2) of Sylow's Theorem. Notice that if <m>n_2</m> is <m>3</m> or <m>5</m> then <m>|G|</m> does not divide the order of <m>S_{n_2}</m>, so our kernel cannot be all of <m>G</m>, making <m>\ker(\rho)</m> a nontrivial normal subgroup of <m>G</m>.
             </p>
   
             <p>
