@@ -261,7 +261,7 @@
         
       </chapter>
 
-      <chapter xml:id="ch-extras">
+      <chapter xml:id="ch-gp-extras">
         <title>Extras</title>
 
         <section xml:id="sec-quals">
@@ -604,7 +604,7 @@
   
     </chapter>
 
-    <chapter xml:id="ch-Extras">
+    <chapter xml:id="ch-ring-extras">
       <title>Extras</title>
 
       <section xml:id="sec-gpring">
