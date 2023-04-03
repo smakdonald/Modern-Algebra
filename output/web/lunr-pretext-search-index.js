@@ -1690,7 +1690,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.1",
   "title": "<span class=\"process-math\">\\(p\\)<\/span>-groups",
-  "body": " -groups    For a prime number , a -group is a group of order for some .      If is a prime number and is a finite group of order for some , then is not the trivial group (In fact for some ).    Let be a list of unique representatives of all of the conjugacy classes of of size greater than 1 as in the class equation. Then for each , so . Since , it follows that for each . From the Class equation we deduce that so, .      Let be a finite group and a prime. Write the order of as where . A Sylow -subgroup of is a subgroup such that . That is, a Sylow -subgroup of is a subgroup whose order is the highest conceivable power of according to Lagrange's Theorem.  We set to be the collection of all Sylow -subgroups of and to be the number of Sylow -subgroups.     We allow the case when , in which case and has a unique Sylow -subgroup, namely which has order .    In for a prime , is a Sylow -subgroup. If , there is only one Sylow -subgroup of , so .  In for odd, each of the subgroups , for is a Sylow -subgroup, so .    In , the Sylow -subgroups are the cyclic groups for any five cycle , so because there are 24 five cycles, but there are four of these in every Sylow 5-subgroup. The Sylow -subgroups are the cyclic groups for any three cycle , so because there are 20 three cycles, but there are two of these in every Sylow 3-subgroup.  A Sylow -subgroup of is any subgroup of order . For example is a Sylow -subgroup. There are many others.    Cauchy's Theorem   If is a finite group and is a prime number dividing , then has an element of order . (In fact, at least elements of order .)     Let be a group of order for some prime acting on a finite set .    Suppose does not divide . Prove that there exists some element of fixed by all elements of .  Suppose acts faithfully on . Prove that .      Let be a group of order , for some prime , acting on a finite set .   Part (a)  Suppose there is no element in that is fixed by all elements of .  By Orbit-Stabilizer we know that for all . Thus every orbit under this action has an order dividing , so either or some positive power of However, as no element of is fixed by every element of , there exists no stabilizer which is all of , and thus there exist no orbits that have order .  Recall that the orbits of this action partition , and thus . As every orbit is divisible by , so too must be .   Part (b)  Suppose acts faithfully on . Thus the permutation representation homomorphism is injective. Let denote the order of . Then , which as order . As is injective, we see that , and thus .  Thus must show up in the factorization of at least times, meaning that .         "
+  "body": " -groups    For a prime number , a -group is a group of order for some .      If is a prime number and is a finite group of order for some , then is not the trivial group (In fact for some ).    Let be a list of unique representatives of all of the conjugacy classes of of size greater than 1 as in the class equation. Then for each , so . Since , it follows that for each . From the Class equation we deduce that so, .      Let be a finite group and a prime. Write the order of as where . A Sylow -subgroup of is a subgroup such that . That is, a Sylow -subgroup of is a subgroup whose order is the highest conceivable power of according to Lagrange's Theorem.  We set to be the collection of all Sylow -subgroups of and to be the number of Sylow -subgroups.     We allow the case when , in which case and has a unique Sylow -subgroup, namely which has order .    In for a prime , is a Sylow -subgroup. If , there is only one Sylow -subgroup of , so .  In for odd, each of the subgroups , for is a Sylow -subgroup, so .    In , the Sylow -subgroups are the cyclic groups for any five cycle , so because there are 24 five cycles, but there are four of these in every Sylow 5-subgroup. The Sylow -subgroups are the cyclic groups for any three cycle , so because there are 20 three cycles, but there are two of these in every Sylow 3-subgroup.  A Sylow -subgroup of is any subgroup of order . For example is a Sylow -subgroup. There are many others.    Cauchy's Theorem   If is a finite group and is a prime number dividing , then has an element of order . (In fact, at least elements of order .)     Let be a group of order for some prime acting on a finite set .    Suppose does not divide . Prove that there exists some element of fixed by all elements of .  Suppose acts faithfully on . Prove that .      Let be a group of order , for some prime , acting on a finite set .    Suppose there is no element in that is fixed by all elements of .  By Orbit-Stabilizer we know that for all . Thus every orbit under this action has an order dividing , so either or some positive power of However, as no element of is fixed by every element of , there exists no stabilizer which is all of , and thus there exist no orbits that have order .  Recall that the orbits of this action partition , and thus . As every orbit is divisible by , so too must be .    Suppose acts faithfully on . Thus the permutation representation homomorphism is injective. Let denote the order of . Then , which as order . As is injective, we see that , and thus .  Thus must show up in the factorization of at least times, meaning that .       "
 },
 {
   "id": "def-pgroup",
@@ -1762,16 +1762,7 @@ var ptx_lunr_docs = [
   "type": "Problem",
   "number": "5.8",
   "title": "",
-  "body": " Let be a group of order for some prime acting on a finite set .    Suppose does not divide . Prove that there exists some element of fixed by all elements of .  Suppose acts faithfully on . Prove that .      Let be a group of order , for some prime , acting on a finite set .   Part (a)  Suppose there is no element in that is fixed by all elements of .  By Orbit-Stabilizer we know that for all . Thus every orbit under this action has an order dividing , so either or some positive power of However, as no element of is fixed by every element of , there exists no stabilizer which is all of , and thus there exist no orbits that have order .  Recall that the orbits of this action partition , and thus . As every orbit is divisible by , so too must be .   Part (b)  Suppose acts faithfully on . Thus the permutation representation homomorphism is injective. Let denote the order of . Then , which as order . As is injective, we see that , and thus .  Thus must show up in the factorization of at least times, meaning that .      "
-},
-{
-  "id": "problem-83",
-  "level": "2",
-  "url": "sec-pgroups.html#problem-83",
-  "type": "Problem",
-  "number": "5.9",
-  "title": "",
-  "body": " "
+  "body": " Let be a group of order for some prime acting on a finite set .    Suppose does not divide . Prove that there exists some element of fixed by all elements of .  Suppose acts faithfully on . Prove that .      Let be a group of order , for some prime , acting on a finite set .    Suppose there is no element in that is fixed by all elements of .  By Orbit-Stabilizer we know that for all . Thus every orbit under this action has an order dividing , so either or some positive power of However, as no element of is fixed by every element of , there exists no stabilizer which is all of , and thus there exist no orbits that have order .  Recall that the orbits of this action partition , and thus . As every orbit is divisible by , so too must be .    Suppose acts faithfully on . Thus the permutation representation homomorphism is injective. Let denote the order of . Then , which as order . As is injective, we see that , and thus .  Thus must show up in the factorization of at least times, meaning that .      "
 },
 {
   "id": "sec-sylowthm",
@@ -1780,14 +1771,14 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.2",
   "title": "Sylow's Theorem",
-  "body": " Sylow's Theorem    Suppose is a group and is a positive integer. Then   If is a subgroup of order , then is a subgroup of order .    If there is a unique subgroup of of order , then .         Let be a finite group, a prime, a Sylow -subgroup of , and any -subgroup of . Then .     Sylow's Theorem   Assume is a group of order where is prime, , and .    (there exists at least one Sylow -subgroup of ).    If is a Sylow -subgroup of and is any -subgroup of (i.e., a subgroup whose order is some power of ), then there is a such that . In particular, the action of on by conjugation is transitive — i.e., any two Sylow -subgroups are conjugate.    We have     For any , and hence         Let be a finite group. (a) Suppose every subgroup of is normal. Prove that given any positive divisor of there exists a subgroup of of order . (b) Give an example, with justification, of a finite group and a positive divisor of such that has no subgroup of order .   Let be a finite group.  Suppose every subgroup of is normal. Let be a positive divisor of . For every prime dividing the order of there is exactly one Sylow -subgroup of , given that Sylow -subgroups are normal if and only if they are unique. Thus can be written as a direct product of its Sylow -subgroups. Given the prime factorization of , the direct product of the Sylow -subgroups such that is 1. A subgroup of as each Sylow -subgroup is normal, and 2. A direct product of cyclic groups of relatively prime order, yielding an element of order . The subgroup generated by this element is a subgroup of of order .  We take a peak at with . Suppose had a subgroup of order , . First, note that , the smallest prime dividing the order of , making normal in .  As there are eight -cycles in , there exists some -cycle, , such that . Consider then and in . Since , it must be the case that either or .    If then . As we have , but as is a subgroup this would mean , which is not the case.  If then , but , and so we have a contradiction. Thus cannot exist, and has no subgroup of order .       Let be a finite group, a prime dividing the order of , and a normal subgroup of order for some . Prove the following statements. (a) is contained in every Sylow -subgroup of . (b) contains a nontrivial abelian subgroup that is normal in .   Let be a finite group, a prime dividing the order of , and a normal subgroup of order for some .  As is normal we have for all . As it is a group it is contained in some Sylow -subgroup. All Sylow -subgroups are conjugate to each other, but is fixed by conjugation so its actually in all of them.  Consider , which is abelian in . The center of -groups are nontrivial so that’s good. Let , , and consider . As we know . Let . We see , since is still normal. so we have .  Notice that , and thus . Thus , and so we can substitute the last line in the previous paragraph to see . Thus we have normality!     Let be a normal subgroup of a finite group , a prime dividing the order of , and a Sylow -subgroup of . Prove that  Hint : For , consider the subgroup .   First, note that .  Let act on by conjugation, which is a transitive action by part (2) of Sylow’s Theorem. Therefore acts transitively on this set as well. Under this action, .  Let , and let . Consider . As the action by is transitive there exists some such that . This means that stabilizes . Then stabilizes as well, so . But notice that , where and . Thus .     We proceed via the contrapositive. Let be a Sylow -subgroup, and suppose . Thus    Let be a finite group and a prime dividing the order of . Let P be a Sylow -subgroup.  Note that and both have elements, where is the largest power of that divides the order of . Recall . As is the largest power of that divides the order of , we see that must be at least . Thus .  First, note that . Note that is the largest subgroup of such that is normal in , making the only Sylow -subgroup of . Let . Notice that , but as we have . As is a Sylow -subgroup that is contained in , we see that , placing . Thus .     Let be a group of order (a) Prove that has a unique -Sylow subgroup (b) Prove that the -Sylow subgroup is contained in the center of .   Let be a group of order   By Sylow’s Theorem we know and is congruent to . The only possibility for such is , meaning that has exactly Sylow -subgroup.  By the First Isomorphism Theorem we know that . However, , which has order . As this is a homomorphism, we see the order of must divide both and , two numbers that are relatively prime. Thus , meaning that conjugation is equivalent to the identity map, or that for all . Thus .     Let be a group of order . Prove that has a normal subgroup of order and that the center of contains a subgroup of order    Let be a group of order . By Sylow’s Theorem we know the and , and so , making , the unique Sylow -subgroup of , normal in . Things are looking good thus far. We also know the following: - and , so as well. Yeehaw.  Let denote the unique Sylow -subgroup, and let act on by conjugation. Thus . The First Isomorphism Theorem tells us that , where is the kernel of . However, , meaning that the order of must divide both and , which cannot happen. Thus must be trivial, meaning that for every and , making a subgroup of of order .    "
+  "body": " Sylow's Theorem    Suppose is a group and is a positive integer. Then   If is a subgroup of order , then is a subgroup of order .    If there is a unique subgroup of of order , then .         Let be a finite group, a prime, a Sylow -subgroup of , and any -subgroup of . Then .     Sylow's Theorem   Assume is a group of order where is prime, , and .    (there exists at least one Sylow -subgroup of ).    If is a Sylow -subgroup of and is any -subgroup of (i.e., a subgroup whose order is some power of ), then there is a such that . In particular, the action of on by conjugation is transitive — i.e., any two Sylow -subgroups are conjugate.    We have     For any , and hence         Let be a finite group.   Suppose every subgroup of is normal. Prove that given any positive divisor of there exists a subgroup of of order .    Give an example, with justification, of a finite group and a positive divisor of such that has no subgroup of order .      Let be a finite group.  Suppose every subgroup of is normal. Let be a positive divisor of . For every prime dividing the order of there is exactly one Sylow -subgroup of , given that Sylow -subgroups are normal if and only if they are unique. Thus can be written as a direct product of its Sylow -subgroups. Given the prime factorization of , the direct product of the Sylow -subgroups such that is 1. A subgroup of as each Sylow -subgroup is normal, and 2. A direct product of cyclic groups of relatively prime order, yielding an element of order . The subgroup generated by this element is a subgroup of of order .  We take a peak at with . Suppose had a subgroup of order , . First, note that , the smallest prime dividing the order of , making normal in .  As there are eight -cycles in , there exists some -cycle, , such that . Consider then and in . Since , it must be the case that either or .    If then . As we have , but as is a subgroup this would mean , which is not the case.  If then , but , and so we have a contradiction. Thus cannot exist, and has no subgroup of order .       Let be a finite group, a prime dividing the order of , and a normal subgroup of order for some . Prove the following statements.    is contained in every Sylow -subgroup of .     contains a nontrivial abelian subgroup that is normal in .      Let be a finite group, a prime dividing the order of , and a normal subgroup of order for some .  As is normal we have for all . As it is a group it is contained in some Sylow -subgroup. All Sylow -subgroups are conjugate to each other, but is fixed by conjugation so its actually in all of them.  Consider , which is abelian in . The center of -groups are nontrivial so that's good. Let , , and consider . As we know . Let . We see , since is still normal. so we have .  Notice that , and thus . Thus , and so we can substitute the last line in the previous paragraph to see . Thus we have normality!     Let be a normal subgroup of a finite group , a prime dividing the order of , and a Sylow -subgroup of . Prove that  Hint : For , consider the subgroup .   First, note that .  Let act on by conjugation, which is a transitive action by part (2) of Sylow's Theorem. Therefore acts transitively on this set as well. Under this action, .  Let , and let . Consider . As the action by is transitive there exists some such that . This means that stabilizes . Then stabilizes as well, so . But notice that , where and . Thus .     We proceed via the contrapositive. Let be a Sylow -subgroup, and suppose . Thus    Let be a finite group and a prime dividing the order of . Let P be a Sylow -subgroup.  Note that and both have elements, where is the largest power of that divides the order of . Recall . As is the largest power of that divides the order of , we see that must be at least . Thus .  First, note that . Note that is the largest subgroup of such that is normal in , making the only Sylow -subgroup of . Let . Notice that , but as we have . As is a Sylow -subgroup that is contained in , we see that , placing . Thus .     Let be a group of order    Prove that has a unique -Sylow subgroup    Prove that the -Sylow subgroup is contained in the center of .      Let be a group of order   By Sylow's Theorem we know and is congruent to . The only possibility for such is , meaning that has exactly Sylow -subgroup.  By the First Isomorphism Theorem we know that . However, , which has order . As this is a homomorphism, we see the order of must divide both and , two numbers that are relatively prime. Thus , meaning that conjugation is equivalent to the identity map, or that for all . Thus .     Let be a group of order . Prove that has a normal subgroup of order and that the center of contains a subgroup of order    Let be a group of order . By Sylow's Theorem we know the and , and so , making , the unique Sylow -subgroup of , normal in . Things are looking good thus far. We also know the following: - and , so as well. Yeehaw.  Let denote the unique Sylow -subgroup, and let act on by conjugation. Thus . The First Isomorphism Theorem tells us that , where is the kernel of . However, , meaning that the order of must divide both and , which cannot happen. Thus must be trivial, meaning that for every and , making a subgroup of of order .    "
 },
 {
   "id": "lem-Sylaction",
   "level": "2",
   "url": "sec-sylowthm.html#lem-Sylaction",
   "type": "Lemma",
-  "number": "5.10",
+  "number": "5.9",
   "title": "",
   "body": "  Suppose is a group and is a positive integer. Then   If is a subgroup of order , then is a subgroup of order .    If there is a unique subgroup of of order , then .      "
 },
@@ -1796,7 +1787,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sylowthm.html#lem-Syl-lem",
   "type": "Lemma",
-  "number": "5.11",
+  "number": "5.10",
   "title": "",
   "body": "  Let be a finite group, a prime, a Sylow -subgroup of , and any -subgroup of . Then .   "
 },
@@ -1805,9 +1796,18 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sylowthm.html#thm-sylow",
   "type": "Theorem",
-  "number": "5.12",
+  "number": "5.11",
   "title": "Sylow's Theorem.",
   "body": " Sylow's Theorem   Assume is a group of order where is prime, , and .    (there exists at least one Sylow -subgroup of ).    If is a Sylow -subgroup of and is any -subgroup of (i.e., a subgroup whose order is some power of ), then there is a such that . In particular, the action of on by conjugation is transitive — i.e., any two Sylow -subgroups are conjugate.    We have     For any , and hence       "
+},
+{
+  "id": "problem-83",
+  "level": "2",
+  "url": "sec-sylowthm.html#problem-83",
+  "type": "Problem",
+  "number": "5.12",
+  "title": "",
+  "body": " Let be a finite group.   Suppose every subgroup of is normal. Prove that given any positive divisor of there exists a subgroup of of order .    Give an example, with justification, of a finite group and a positive divisor of such that has no subgroup of order .      Let be a finite group.  Suppose every subgroup of is normal. Let be a positive divisor of . For every prime dividing the order of there is exactly one Sylow -subgroup of , given that Sylow -subgroups are normal if and only if they are unique. Thus can be written as a direct product of its Sylow -subgroups. Given the prime factorization of , the direct product of the Sylow -subgroups such that is 1. A subgroup of as each Sylow -subgroup is normal, and 2. A direct product of cyclic groups of relatively prime order, yielding an element of order . The subgroup generated by this element is a subgroup of of order .  We take a peak at with . Suppose had a subgroup of order , . First, note that , the smallest prime dividing the order of , making normal in .  As there are eight -cycles in , there exists some -cycle, , such that . Consider then and in . Since , it must be the case that either or .    If then . As we have , but as is a subgroup this would mean , which is not the case.  If then , but , and so we have a contradiction. Thus cannot exist, and has no subgroup of order .     "
 },
 {
   "id": "problem-84",
@@ -1816,7 +1816,7 @@ var ptx_lunr_docs = [
   "type": "Problem",
   "number": "5.13",
   "title": "",
-  "body": " Let be a finite group. (a) Suppose every subgroup of is normal. Prove that given any positive divisor of there exists a subgroup of of order . (b) Give an example, with justification, of a finite group and a positive divisor of such that has no subgroup of order .   Let be a finite group.  Suppose every subgroup of is normal. Let be a positive divisor of . For every prime dividing the order of there is exactly one Sylow -subgroup of , given that Sylow -subgroups are normal if and only if they are unique. Thus can be written as a direct product of its Sylow -subgroups. Given the prime factorization of , the direct product of the Sylow -subgroups such that is 1. A subgroup of as each Sylow -subgroup is normal, and 2. A direct product of cyclic groups of relatively prime order, yielding an element of order . The subgroup generated by this element is a subgroup of of order .  We take a peak at with . Suppose had a subgroup of order , . First, note that , the smallest prime dividing the order of , making normal in .  As there are eight -cycles in , there exists some -cycle, , such that . Consider then and in . Since , it must be the case that either or .    If then . As we have , but as is a subgroup this would mean , which is not the case.  If then , but , and so we have a contradiction. Thus cannot exist, and has no subgroup of order .     "
+  "body": " Let be a finite group, a prime dividing the order of , and a normal subgroup of order for some . Prove the following statements.    is contained in every Sylow -subgroup of .     contains a nontrivial abelian subgroup that is normal in .      Let be a finite group, a prime dividing the order of , and a normal subgroup of order for some .  As is normal we have for all . As it is a group it is contained in some Sylow -subgroup. All Sylow -subgroups are conjugate to each other, but is fixed by conjugation so its actually in all of them.  Consider , which is abelian in . The center of -groups are nontrivial so that's good. Let , , and consider . As we know . Let . We see , since is still normal. so we have .  Notice that , and thus . Thus , and so we can substitute the last line in the previous paragraph to see . Thus we have normality!   "
 },
 {
   "id": "problem-85",
@@ -1825,7 +1825,7 @@ var ptx_lunr_docs = [
   "type": "Problem",
   "number": "5.14",
   "title": "",
-  "body": " Let be a finite group, a prime dividing the order of , and a normal subgroup of order for some . Prove the following statements. (a) is contained in every Sylow -subgroup of . (b) contains a nontrivial abelian subgroup that is normal in .   Let be a finite group, a prime dividing the order of , and a normal subgroup of order for some .  As is normal we have for all . As it is a group it is contained in some Sylow -subgroup. All Sylow -subgroups are conjugate to each other, but is fixed by conjugation so its actually in all of them.  Consider , which is abelian in . The center of -groups are nontrivial so that’s good. Let , , and consider . As we know . Let . We see , since is still normal. so we have .  Notice that , and thus . Thus , and so we can substitute the last line in the previous paragraph to see . Thus we have normality!   "
+  "body": " Let be a normal subgroup of a finite group , a prime dividing the order of , and a Sylow -subgroup of . Prove that  Hint : For , consider the subgroup .   First, note that .  Let act on by conjugation, which is a transitive action by part (2) of Sylow's Theorem. Therefore acts transitively on this set as well. Under this action, .  Let , and let . Consider . As the action by is transitive there exists some such that . This means that stabilizes . Then stabilizes as well, so . But notice that , where and . Thus .   "
 },
 {
   "id": "problem-86",
@@ -1834,7 +1834,7 @@ var ptx_lunr_docs = [
   "type": "Problem",
   "number": "5.15",
   "title": "",
-  "body": " Let be a normal subgroup of a finite group , a prime dividing the order of , and a Sylow -subgroup of . Prove that  Hint : For , consider the subgroup .   First, note that .  Let act on by conjugation, which is a transitive action by part (2) of Sylow’s Theorem. Therefore acts transitively on this set as well. Under this action, .  Let , and let . Consider . As the action by is transitive there exists some such that . This means that stabilizes . Then stabilizes as well, so . But notice that , where and . Thus .   "
+  "body": " We proceed via the contrapositive. Let be a Sylow -subgroup, and suppose . Thus    Let be a finite group and a prime dividing the order of . Let P be a Sylow -subgroup.  Note that and both have elements, where is the largest power of that divides the order of . Recall . As is the largest power of that divides the order of , we see that must be at least . Thus .  First, note that . Note that is the largest subgroup of such that is normal in , making the only Sylow -subgroup of . Let . Notice that , but as we have . As is a Sylow -subgroup that is contained in , we see that , placing . Thus .   "
 },
 {
   "id": "problem-87",
@@ -1843,7 +1843,7 @@ var ptx_lunr_docs = [
   "type": "Problem",
   "number": "5.16",
   "title": "",
-  "body": " We proceed via the contrapositive. Let be a Sylow -subgroup, and suppose . Thus    Let be a finite group and a prime dividing the order of . Let P be a Sylow -subgroup.  Note that and both have elements, where is the largest power of that divides the order of . Recall . As is the largest power of that divides the order of , we see that must be at least . Thus .  First, note that . Note that is the largest subgroup of such that is normal in , making the only Sylow -subgroup of . Let . Notice that , but as we have . As is a Sylow -subgroup that is contained in , we see that , placing . Thus .   "
+  "body": " Let be a group of order    Prove that has a unique -Sylow subgroup    Prove that the -Sylow subgroup is contained in the center of .      Let be a group of order   By Sylow's Theorem we know and is congruent to . The only possibility for such is , meaning that has exactly Sylow -subgroup.  By the First Isomorphism Theorem we know that . However, , which has order . As this is a homomorphism, we see the order of must divide both and , two numbers that are relatively prime. Thus , meaning that conjugation is equivalent to the identity map, or that for all . Thus .   "
 },
 {
   "id": "problem-88",
@@ -1852,16 +1852,7 @@ var ptx_lunr_docs = [
   "type": "Problem",
   "number": "5.17",
   "title": "",
-  "body": " Let be a group of order (a) Prove that has a unique -Sylow subgroup (b) Prove that the -Sylow subgroup is contained in the center of .   Let be a group of order   By Sylow’s Theorem we know and is congruent to . The only possibility for such is , meaning that has exactly Sylow -subgroup.  By the First Isomorphism Theorem we know that . However, , which has order . As this is a homomorphism, we see the order of must divide both and , two numbers that are relatively prime. Thus , meaning that conjugation is equivalent to the identity map, or that for all . Thus .   "
-},
-{
-  "id": "problem-89",
-  "level": "2",
-  "url": "sec-sylowthm.html#problem-89",
-  "type": "Problem",
-  "number": "5.18",
-  "title": "",
-  "body": " Let be a group of order . Prove that has a normal subgroup of order and that the center of contains a subgroup of order    Let be a group of order . By Sylow’s Theorem we know the and , and so , making , the unique Sylow -subgroup of , normal in . Things are looking good thus far. We also know the following: - and , so as well. Yeehaw.  Let denote the unique Sylow -subgroup, and let act on by conjugation. Thus . The First Isomorphism Theorem tells us that , where is the kernel of . However, , meaning that the order of must divide both and , which cannot happen. Thus must be trivial, meaning that for every and , making a subgroup of of order .   "
+  "body": " Let be a group of order . Prove that has a normal subgroup of order and that the center of contains a subgroup of order    Let be a group of order . By Sylow's Theorem we know the and , and so , making , the unique Sylow -subgroup of , normal in . Things are looking good thus far. We also know the following: - and , so as well. Yeehaw.  Let denote the unique Sylow -subgroup, and let act on by conjugation. Thus . The First Isomorphism Theorem tells us that , where is the kernel of . However, , meaning that the order of must divide both and , which cannot happen. Thus must be trivial, meaning that for every and , making a subgroup of of order .   "
 },
 {
   "id": "sec-simple-groups",
@@ -1870,23 +1861,23 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.3",
   "title": "Simple Groups",
-  "body": " Simple Groups    A group is called simple if it has only two normal subgroups: itself and the trivial subgroup.     Let us prove that no group or order is simple. Let be any group of order . We will prove that must have either a normal subgroup of order or a normal subgroups of oder .  Sylow theory gives that is either or and is either or . If either of these numbers is , we have a unique subgroup of order or of order , and such a subgroup must be normal. Suppose these numbers are and , respectively. We deduce a contradition by counting elements .  In detail, say are the Sylow -subgroups. By Lagrange for all . Thus the set  has elements, one of which is and the other of which must have order . That is, there are elements of order in . But now consider the three Sylow -subgroups . Each has order and for all . It follows that for all , and thus , a contradiction.    In the previous example, it would not be so easy to count elements of order and . We do know that every element in has order , or (any only one has order ), but the size of this set is harder to calculate. For notice that might have order . The most one can say for sure is that has at least elements.    No group of order is simple.     Let G be a simple group of order 60. Determine the number of elements of G of order 5.  Show that there is no simple group of order 30.   Let be a simple group of order By Sylow’s Theorem we know that and that . Thus the options for are and . Since is simple we see that . As each Sylow -subgroup of has unique elements of order and the identity we see that the number of elements or order in is .  Suppose by way of contradiction that is a simple group of order . Similarly to above, , yielding elements of order . Now, and , so , yielding far too many elements to fit in .   Suppose is a simple group of order (Yes, there is such a group.) (a) How many elements of order does have? (b) Show that has at least elements of order   By Sylow's Theorem, and divides . Thus the only options are and . However, as is simple there cannot be only one Sylow -Subgroup, as it would be normal. Thus there are , each having unique elements and the identity. Thus there are elements of order .  By Sylow's Theorem, and divides . As is simple there cannot be one, so there must be at least , each with non-identity elements. Thus there must be at least elements of order .   Let be a group of order and let denote the set of Sylow -subgroups of . (a) Suppose for any either or Prove that is not simple. (b) Suppose there exists such that . Prove that is not simple. (Hint: Consider the normalizer of .)  Let be a group of order and let denote the set of Sylow -subgroups of . ###### Part (a) Suppose by way of contradiction that is simple. By Sylow’s Theorem we know the following: - and is congruent to . As is simple there must be ten of the fuckers. - and is congruent to . As is simple there must be six of them. Since each Sylow -subgroup will have non-identity elements and they are all distinct that accounts for elements of order . However, there are also elements or order to account for, which is a problem. Thus cannot be simple.  Suppose now that there exists such that . . Given this intersection, we know that . Additionally, note that as is a subgroup of both and with index 3 in both, the smallest prime dividing the order or both, that is normal in both.  We now consider the normalizer of , which we denote for simplicity. As is a subgroup of its order must divide by Lagrange’s Theorem. However, , and so must have at least elements, leaving the options of and . If then , making normal in , a problem.  If then , the smallest prime dividing . Thus is still normal, which is still a problem. Thus cannot be simple.   Let be a group of order .  Show that there are at most two options for , the number of Sylow -subgroups of and list them.  Prove that is not simple.   Let be a group of order .  By Sylow's Theorem we know that and . The possible options are thus and .  Suppose by way of contradiction that is simple. Thus , so . Let act on the by conjugation, yielding the homomorphism granted via the permutation representation. By (2) in Sylow’s Theorem we see that is not trivial. As we see that , meaning that the is non-trivial, yielding a non-trivial normal subgroup of , a contradiction.   Let be a finite group of order with prime numbers. Show that is not a simple group.  Let be a finite group of order with prime numbers, and suppose by way of contradiction that is simple. By Sylow’s Theorem we have the following: - and , and thus . - and , and thus . From this information we see that there are elements of order and elements of order , for a lovely total of elements, which is too many.   Let be a group and let be the number of Sylow -subgroups of , where is a prime dividing the order of . (a) Prove that if is simple then (b) Deduce that there is no simple group of order .  Let be a group, a prime dividing the order of , and the number of Sylow -subgroups of .  Let act on by conjugation, inducing the homomorphism via the permutation representation. Notice that the order of is conspicuously . The kernel of this map is a normal subgroup of . Note that since is simple the only normal subgroups of are the trivial subgroup and itself. However, the kernel cannot be all of as this would make trivial, which cannot be the case given that our action is transitive by Part (2) of Sylow’s Theorem. Thus , making injective. Thus . As the image is a subgroup of , the result follows from Lagrange’s Theorem.  Let be a group of order . Suppose by way of contradiction that is simple. . Thus the number of Sylow- subgroups is congruent to and divides , the options of which are 1 and 16 (See: Sylow’s Theorem). As does not divide this contradicts part (a). Thus there are no simple groups of order .   Prove that any group of order has a normal subgroup of order or .  Let be a group of order . By Sylow’s Theorem we have and , and thus . If then the unique Sylow -subgroup is normal, giving us a normal subgroup of order .  Suppose then that , let be one of the subgroups of order , and let act on the cosets of by left multiplication, inducing the homomorphism . This is because there are elements in , and thus there are left cosets by Lagrange’s Theorem.  As , we see that cannot be injective and thus is a non-trivial normal subgroup of .  Recall that the action of on its cosets by left multiplication is always a transitive action, meaning there is exactly one orbit, for some , which must then have all elements of in it. By Orbit-Stabilizer, , and thus . So there are elements in that fix for any .  Let and . Notice that . As , We know that yields the identity permutation, and thus that .  Thus , which has order 9   Prove that no group of order 150 is simple.  Let be a group of order and suppose by way of contradiction that is simple. Notice that . By Sylow’s Theorem, we know and divides , the only options are thus and . Since is simple, there must be exactly , where . Let act on by conjugation. Thus is a group homomorphism. Note that , and that the order of does not divide . By Part (2) of Sylow’s Theorem this action is transitive, meaning that the kernel of cannot be trivial. Thus is a nontrivial normal subgroup of , a contradiction. Thus no group of order is simple.   Let G be a group of order . Prove that is not simple.  By Sylow’s Theorem we know that and . Thus our options are and . Suppose that .  Let act on by conjugation, yielding the homomorphism via the permutation representation. This map is non-trivial from part (2) of Sylow’s Theorem, but does not divide , and thus cannot be injective. Then the kernel of this homomorphism is non-trivial, normal subgroup of . Thus is not simple.   Prove that no group of order with is simple.  Let be a group of order with , and suppose by way of contradiction that is simple. By Sylow’s Theorem we know the following: - and , and - and , so our options are and . Suppose its . Let act on by conjugation, yielding the permutation representation homomorphism . The kernel of this homomorphism cannot be trivial as the conjugation action on Sylow subgroups is transitive by Part (2) of Sylow’s Theorem. Notice does not divide the order of , so our kernel cannot be all of , making a nontrivial normal subgroup of .  If , then must divide , meaning that . However, by the cyclic subgroup generated by an element of order has index in , making it normal.  Thus cannot be simple.   Prove that no group of order with is simple.  Let be a group of order with and suppose by way of contradiction that is simple.  By Sylow’s Theorem we know the following: - and , and - and , so our options are .  Let act on by conjugation, yielding the permutation representation homomorphism . The kernel of this homomorphism cannot be trivial as the conjugation action on Sylow subgroups is transitive by Part (2) of Sylow’s Theorem. Notice that if is or then does not divide the order of , so our kernel cannot be all of , making a nontrivial normal subgroup of .  If , then must divide , meaning that . However, by the cyclic subgroup generated by an element of order has index in , making it normal.  Thus cannot be simple.    "
+  "body": " Simple Groups    A group is called simple if it has only two normal subgroups: itself and the trivial subgroup.     Let us prove that no group or order is simple. Let be any group of order . We will prove that must have either a normal subgroup of order or a normal subgroups of oder .  Sylow theory gives that is either or and is either or . If either of these numbers is , we have a unique subgroup of order or of order , and such a subgroup must be normal. Suppose these numbers are and , respectively. We deduce a contradition by counting elements .  In detail, say are the Sylow -subgroups. By Lagrange for all . Thus the set  has elements, one of which is and the other of which must have order . That is, there are elements of order in . But now consider the three Sylow -subgroups . Each has order and for all . It follows that for all , and thus , a contradiction.    In the previous example, it would not be so easy to count elements of order and . We do know that every element in has order , or (any only one has order ), but the size of this set is harder to calculate. For notice that might have order . The most one can say for sure is that has at least elements.    No group of order is simple.     Let G be a simple group of order 60. Determine the number of elements of G of order 5.  Show that there is no simple group of order 30.   Let be a simple group of order By Sylow's Theorem we know that and that . Thus the options for are and . Since is simple we see that . As each Sylow -subgroup of has unique elements of order and the identity we see that the number of elements or order in is .  Suppose by way of contradiction that is a simple group of order . Similarly to above, , yielding elements of order . Now, and , so , yielding far too many elements to fit in .   Suppose is a simple group of order (Yes, there is such a group.)   How many elements of order does have?    Show that has at least elements of order      By Sylow's Theorem, and divides . Thus the only options are and . However, as is simple there cannot be only one Sylow -Subgroup, as it would be normal. Thus there are , each having unique elements and the identity. Thus there are elements of order .  By Sylow's Theorem, and divides . As is simple there cannot be one, so there must be at least , each with non-identity elements. Thus there must be at least elements of order .   Let be a group of order and let denote the set of Sylow -subgroups of . (a) Suppose for any either or Prove that is not simple. (b) Suppose there exists such that . Prove that is not simple. (Hint: Consider the normalizer of .)  Let be a group of order and let denote the set of Sylow -subgroups of . ###### Part (a) Suppose by way of contradiction that is simple. By Sylow's Theorem we know the following: - and is congruent to . As is simple there must be ten of the fuckers. - and is congruent to . As is simple there must be six of them. Since each Sylow -subgroup will have non-identity elements and they are all distinct that accounts for elements of order . However, there are also elements or order to account for, which is a problem. Thus cannot be simple.  Suppose now that there exists such that . . Given this intersection, we know that . Additionally, note that as is a subgroup of both and with index 3 in both, the smallest prime dividing the order or both, that is normal in both.  We now consider the normalizer of , which we denote for simplicity. As is a subgroup of its order must divide by Lagrange's Theorem. However, , and so must have at least elements, leaving the options of and . If then , making normal in , a problem.  If then , the smallest prime dividing . Thus is still normal, which is still a problem. Thus cannot be simple.   Let be a group of order .  Show that there are at most two options for , the number of Sylow -subgroups of and list them.  Prove that is not simple.   Let be a group of order .  By Sylow's Theorem we know that and . The possible options are thus and .  Suppose by way of contradiction that is simple. Thus , so . Let act on the by conjugation, yielding the homomorphism granted via the permutation representation. By (2) in Sylow's Theorem we see that is not trivial. As we see that , meaning that the is non-trivial, yielding a non-trivial normal subgroup of , a contradiction.   Let be a finite group of order with prime numbers. Show that is not a simple group.  Let be a finite group of order with prime numbers, and suppose by way of contradiction that is simple. By Sylow's Theorem we have the following: - and , and thus . - and , and thus . From this information we see that there are elements of order and elements of order , for a lovely total of elements, which is too many.   Let be a group and let be the number of Sylow -subgroups of , where is a prime dividing the order of . (a) Prove that if is simple then (b) Deduce that there is no simple group of order .  Let be a group, a prime dividing the order of , and the number of Sylow -subgroups of .  Let act on by conjugation, inducing the homomorphism via the permutation representation. Notice that the order of is conspicuously . The kernel of this map is a normal subgroup of . Note that since is simple the only normal subgroups of are the trivial subgroup and itself. However, the kernel cannot be all of as this would make trivial, which cannot be the case given that our action is transitive by Part (2) of Sylow's Theorem. Thus , making injective. Thus . As the image is a subgroup of , the result follows from Lagrange's Theorem.  Let be a group of order . Suppose by way of contradiction that is simple. . Thus the number of Sylow- subgroups is congruent to and divides , the options of which are 1 and 16 (See: Sylow's Theorem). As does not divide this contradicts part (a). Thus there are no simple groups of order .   Prove that any group of order has a normal subgroup of order or .  Let be a group of order . By Sylow's Theorem we have and , and thus . If then the unique Sylow -subgroup is normal, giving us a normal subgroup of order .  Suppose then that , let be one of the subgroups of order , and let act on the cosets of by left multiplication, inducing the homomorphism . This is because there are elements in , and thus there are left cosets by Lagrange's Theorem.  As , we see that cannot be injective and thus is a non-trivial normal subgroup of .  Recall that the action of on its cosets by left multiplication is always a transitive action, meaning there is exactly one orbit, for some , which must then have all elements of in it. By Orbit-Stabilizer, , and thus . So there are elements in that fix for any .  Let and . Notice that . As , We know that yields the identity permutation, and thus that .  Thus , which has order    Prove that no group of order 150 is simple.  Let be a group of order and suppose by way of contradiction that is simple. Notice that . By Sylow's Theorem, we know and divides , the only options are thus and . Since is simple, there must be exactly , where . Let act on by conjugation. Thus is a group homomorphism. Note that , and that the order of does not divide . By Part (2) of Sylow's Theorem this action is transitive, meaning that the kernel of cannot be trivial. Thus is a nontrivial normal subgroup of , a contradiction. Thus no group of order is simple.   Let G be a group of order . Prove that is not simple.  By Sylow's Theorem we know that and . Thus our options are and . Suppose that .  Let act on by conjugation, yielding the homomorphism via the permutation representation. This map is non-trivial from part (2) of Sylow's Theorem, but does not divide , and thus cannot be injective. Then the kernel of this homomorphism is non-trivial, normal subgroup of . Thus is not simple.   Prove that no group of order with is simple.  Let be a group of order with , and suppose by way of contradiction that is simple. By Sylow's Theorem we know the following: - and , and - and , so our options are and . Suppose its . Let act on by conjugation, yielding the permutation representation homomorphism . The kernel of this homomorphism cannot be trivial as the conjugation action on Sylow subgroups is transitive by Part (2) of Sylow's Theorem. Notice does not divide the order of , so our kernel cannot be all of , making a nontrivial normal subgroup of .  If , then must divide , meaning that . However, by the cyclic subgroup generated by an element of order has index in , making it normal.  Thus cannot be simple.   Prove that no group of order with is simple.  Let be a group of order with and suppose by way of contradiction that is simple.  By Sylow's Theorem we know the following: - and , and - and , so our options are .  Let act on by conjugation, yielding the permutation representation homomorphism . The kernel of this homomorphism cannot be trivial as the conjugation action on Sylow subgroups is transitive by Part (2) of Sylow's Theorem. Notice that if is or then does not divide the order of , so our kernel cannot be all of , making a nontrivial normal subgroup of .  If , then must divide , meaning that . However, by the cyclic subgroup generated by an element of order has index in , making it normal.  Thus cannot be simple.    "
 },
 {
   "id": "def-simple-group",
   "level": "2",
   "url": "sec-simple-groups.html#def-simple-group",
   "type": "Definition",
-  "number": "5.19",
+  "number": "5.18",
   "title": "",
   "body": "  A group is called simple if it has only two normal subgroups: itself and the trivial subgroup.   "
 },
 {
-  "id": "problem-90",
+  "id": "problem-89",
   "level": "2",
-  "url": "sec-simple-groups.html#problem-90",
+  "url": "sec-simple-groups.html#problem-89",
   "type": "Problem",
-  "number": "5.20",
+  "number": "5.19",
   "title": "",
   "body": " Let us prove that no group or order is simple. Let be any group of order . We will prove that must have either a normal subgroup of order or a normal subgroups of oder .  Sylow theory gives that is either or and is either or . If either of these numbers is , we have a unique subgroup of order or of order , and such a subgroup must be normal. Suppose these numbers are and , respectively. We deduce a contradition by counting elements .  In detail, say are the Sylow -subgroups. By Lagrange for all . Thus the set  has elements, one of which is and the other of which must have order . That is, there are elements of order in . But now consider the three Sylow -subgroups . Each has order and for all . It follows that for all , and thus , a contradiction.  "
 },
@@ -1895,16 +1886,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-simple-groups.html#remark-13",
   "type": "Remark",
-  "number": "5.21",
+  "number": "5.20",
   "title": "",
   "body": " In the previous example, it would not be so easy to count elements of order and . We do know that every element in has order , or (any only one has order ), but the size of this set is harder to calculate. For notice that might have order . The most one can say for sure is that has at least elements.  "
 },
 {
-  "id": "problem-91",
+  "id": "problem-90",
   "level": "2",
-  "url": "sec-simple-groups.html#problem-91",
+  "url": "sec-simple-groups.html#problem-90",
   "type": "Problem",
-  "number": "5.22",
+  "number": "5.21",
   "title": "",
   "body": " No group of order is simple.  "
 },
@@ -1915,7 +1906,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "5.3.1",
   "title": "",
-  "body": " Let G be a simple group of order 60. Determine the number of elements of G of order 5.  Show that there is no simple group of order 30.   Let be a simple group of order By Sylow’s Theorem we know that and that . Thus the options for are and . Since is simple we see that . As each Sylow -subgroup of has unique elements of order and the identity we see that the number of elements or order in is .  Suppose by way of contradiction that is a simple group of order . Similarly to above, , yielding elements of order . Now, and , so , yielding far too many elements to fit in .  "
+  "body": " Let G be a simple group of order 60. Determine the number of elements of G of order 5.  Show that there is no simple group of order 30.   Let be a simple group of order By Sylow's Theorem we know that and that . Thus the options for are and . Since is simple we see that . As each Sylow -subgroup of has unique elements of order and the identity we see that the number of elements or order in is .  Suppose by way of contradiction that is a simple group of order . Similarly to above, , yielding elements of order . Now, and , so , yielding far too many elements to fit in .  "
 },
 {
   "id": "exercise-4",
@@ -1924,7 +1915,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "5.3.2",
   "title": "",
-  "body": "Suppose is a simple group of order (Yes, there is such a group.) (a) How many elements of order does have? (b) Show that has at least elements of order   By Sylow's Theorem, and divides . Thus the only options are and . However, as is simple there cannot be only one Sylow -Subgroup, as it would be normal. Thus there are , each having unique elements and the identity. Thus there are elements of order .  By Sylow's Theorem, and divides . As is simple there cannot be one, so there must be at least , each with non-identity elements. Thus there must be at least elements of order .  "
+  "body": "Suppose is a simple group of order (Yes, there is such a group.)   How many elements of order does have?    Show that has at least elements of order      By Sylow's Theorem, and divides . Thus the only options are and . However, as is simple there cannot be only one Sylow -Subgroup, as it would be normal. Thus there are , each having unique elements and the identity. Thus there are elements of order .  By Sylow's Theorem, and divides . As is simple there cannot be one, so there must be at least , each with non-identity elements. Thus there must be at least elements of order .  "
 },
 {
   "id": "exercise-5",
@@ -1933,7 +1924,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "5.3.3",
   "title": "",
-  "body": "Let be a group of order and let denote the set of Sylow -subgroups of . (a) Suppose for any either or Prove that is not simple. (b) Suppose there exists such that . Prove that is not simple. (Hint: Consider the normalizer of .)  Let be a group of order and let denote the set of Sylow -subgroups of . ###### Part (a) Suppose by way of contradiction that is simple. By Sylow’s Theorem we know the following: - and is congruent to . As is simple there must be ten of the fuckers. - and is congruent to . As is simple there must be six of them. Since each Sylow -subgroup will have non-identity elements and they are all distinct that accounts for elements of order . However, there are also elements or order to account for, which is a problem. Thus cannot be simple.  Suppose now that there exists such that . . Given this intersection, we know that . Additionally, note that as is a subgroup of both and with index 3 in both, the smallest prime dividing the order or both, that is normal in both.  We now consider the normalizer of , which we denote for simplicity. As is a subgroup of its order must divide by Lagrange’s Theorem. However, , and so must have at least elements, leaving the options of and . If then , making normal in , a problem.  If then , the smallest prime dividing . Thus is still normal, which is still a problem. Thus cannot be simple.  "
+  "body": "Let be a group of order and let denote the set of Sylow -subgroups of . (a) Suppose for any either or Prove that is not simple. (b) Suppose there exists such that . Prove that is not simple. (Hint: Consider the normalizer of .)  Let be a group of order and let denote the set of Sylow -subgroups of . ###### Part (a) Suppose by way of contradiction that is simple. By Sylow's Theorem we know the following: - and is congruent to . As is simple there must be ten of the fuckers. - and is congruent to . As is simple there must be six of them. Since each Sylow -subgroup will have non-identity elements and they are all distinct that accounts for elements of order . However, there are also elements or order to account for, which is a problem. Thus cannot be simple.  Suppose now that there exists such that . . Given this intersection, we know that . Additionally, note that as is a subgroup of both and with index 3 in both, the smallest prime dividing the order or both, that is normal in both.  We now consider the normalizer of , which we denote for simplicity. As is a subgroup of its order must divide by Lagrange's Theorem. However, , and so must have at least elements, leaving the options of and . If then , making normal in , a problem.  If then , the smallest prime dividing . Thus is still normal, which is still a problem. Thus cannot be simple.  "
 },
 {
   "id": "exercise-6",
@@ -1942,7 +1933,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "5.3.4",
   "title": "",
-  "body": "Let be a group of order .  Show that there are at most two options for , the number of Sylow -subgroups of and list them.  Prove that is not simple.   Let be a group of order .  By Sylow's Theorem we know that and . The possible options are thus and .  Suppose by way of contradiction that is simple. Thus , so . Let act on the by conjugation, yielding the homomorphism granted via the permutation representation. By (2) in Sylow’s Theorem we see that is not trivial. As we see that , meaning that the is non-trivial, yielding a non-trivial normal subgroup of , a contradiction.  "
+  "body": "Let be a group of order .  Show that there are at most two options for , the number of Sylow -subgroups of and list them.  Prove that is not simple.   Let be a group of order .  By Sylow's Theorem we know that and . The possible options are thus and .  Suppose by way of contradiction that is simple. Thus , so . Let act on the by conjugation, yielding the homomorphism granted via the permutation representation. By (2) in Sylow's Theorem we see that is not trivial. As we see that , meaning that the is non-trivial, yielding a non-trivial normal subgroup of , a contradiction.  "
 },
 {
   "id": "exercise-7",
@@ -1951,7 +1942,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "5.3.5",
   "title": "",
-  "body": "Let be a finite group of order with prime numbers. Show that is not a simple group.  Let be a finite group of order with prime numbers, and suppose by way of contradiction that is simple. By Sylow’s Theorem we have the following: - and , and thus . - and , and thus . From this information we see that there are elements of order and elements of order , for a lovely total of elements, which is too many.  "
+  "body": "Let be a finite group of order with prime numbers. Show that is not a simple group.  Let be a finite group of order with prime numbers, and suppose by way of contradiction that is simple. By Sylow's Theorem we have the following: - and , and thus . - and , and thus . From this information we see that there are elements of order and elements of order , for a lovely total of elements, which is too many.  "
 },
 {
   "id": "exercise-8",
@@ -1960,7 +1951,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "5.3.6",
   "title": "",
-  "body": "Let be a group and let be the number of Sylow -subgroups of , where is a prime dividing the order of . (a) Prove that if is simple then (b) Deduce that there is no simple group of order .  Let be a group, a prime dividing the order of , and the number of Sylow -subgroups of .  Let act on by conjugation, inducing the homomorphism via the permutation representation. Notice that the order of is conspicuously . The kernel of this map is a normal subgroup of . Note that since is simple the only normal subgroups of are the trivial subgroup and itself. However, the kernel cannot be all of as this would make trivial, which cannot be the case given that our action is transitive by Part (2) of Sylow’s Theorem. Thus , making injective. Thus . As the image is a subgroup of , the result follows from Lagrange’s Theorem.  Let be a group of order . Suppose by way of contradiction that is simple. . Thus the number of Sylow- subgroups is congruent to and divides , the options of which are 1 and 16 (See: Sylow’s Theorem). As does not divide this contradicts part (a). Thus there are no simple groups of order .  "
+  "body": "Let be a group and let be the number of Sylow -subgroups of , where is a prime dividing the order of . (a) Prove that if is simple then (b) Deduce that there is no simple group of order .  Let be a group, a prime dividing the order of , and the number of Sylow -subgroups of .  Let act on by conjugation, inducing the homomorphism via the permutation representation. Notice that the order of is conspicuously . The kernel of this map is a normal subgroup of . Note that since is simple the only normal subgroups of are the trivial subgroup and itself. However, the kernel cannot be all of as this would make trivial, which cannot be the case given that our action is transitive by Part (2) of Sylow's Theorem. Thus , making injective. Thus . As the image is a subgroup of , the result follows from Lagrange's Theorem.  Let be a group of order . Suppose by way of contradiction that is simple. . Thus the number of Sylow- subgroups is congruent to and divides , the options of which are 1 and 16 (See: Sylow's Theorem). As does not divide this contradicts part (a). Thus there are no simple groups of order .  "
 },
 {
   "id": "exercise-9",
@@ -1969,7 +1960,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "5.3.7",
   "title": "",
-  "body": "Prove that any group of order has a normal subgroup of order or .  Let be a group of order . By Sylow’s Theorem we have and , and thus . If then the unique Sylow -subgroup is normal, giving us a normal subgroup of order .  Suppose then that , let be one of the subgroups of order , and let act on the cosets of by left multiplication, inducing the homomorphism . This is because there are elements in , and thus there are left cosets by Lagrange’s Theorem.  As , we see that cannot be injective and thus is a non-trivial normal subgroup of .  Recall that the action of on its cosets by left multiplication is always a transitive action, meaning there is exactly one orbit, for some , which must then have all elements of in it. By Orbit-Stabilizer, , and thus . So there are elements in that fix for any .  Let and . Notice that . As , We know that yields the identity permutation, and thus that .  Thus , which has order 9  "
+  "body": "Prove that any group of order has a normal subgroup of order or .  Let be a group of order . By Sylow's Theorem we have and , and thus . If then the unique Sylow -subgroup is normal, giving us a normal subgroup of order .  Suppose then that , let be one of the subgroups of order , and let act on the cosets of by left multiplication, inducing the homomorphism . This is because there are elements in , and thus there are left cosets by Lagrange's Theorem.  As , we see that cannot be injective and thus is a non-trivial normal subgroup of .  Recall that the action of on its cosets by left multiplication is always a transitive action, meaning there is exactly one orbit, for some , which must then have all elements of in it. By Orbit-Stabilizer, , and thus . So there are elements in that fix for any .  Let and . Notice that . As , We know that yields the identity permutation, and thus that .  Thus , which has order   "
 },
 {
   "id": "exercise-10",
@@ -1978,7 +1969,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "5.3.8",
   "title": "",
-  "body": "Prove that no group of order 150 is simple.  Let be a group of order and suppose by way of contradiction that is simple. Notice that . By Sylow’s Theorem, we know and divides , the only options are thus and . Since is simple, there must be exactly , where . Let act on by conjugation. Thus is a group homomorphism. Note that , and that the order of does not divide . By Part (2) of Sylow’s Theorem this action is transitive, meaning that the kernel of cannot be trivial. Thus is a nontrivial normal subgroup of , a contradiction. Thus no group of order is simple.  "
+  "body": "Prove that no group of order 150 is simple.  Let be a group of order and suppose by way of contradiction that is simple. Notice that . By Sylow's Theorem, we know and divides , the only options are thus and . Since is simple, there must be exactly , where . Let act on by conjugation. Thus is a group homomorphism. Note that , and that the order of does not divide . By Part (2) of Sylow's Theorem this action is transitive, meaning that the kernel of cannot be trivial. Thus is a nontrivial normal subgroup of , a contradiction. Thus no group of order is simple.  "
 },
 {
   "id": "exercise-11",
@@ -1987,7 +1978,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "5.3.9",
   "title": "",
-  "body": "Let G be a group of order . Prove that is not simple.  By Sylow’s Theorem we know that and . Thus our options are and . Suppose that .  Let act on by conjugation, yielding the homomorphism via the permutation representation. This map is non-trivial from part (2) of Sylow’s Theorem, but does not divide , and thus cannot be injective. Then the kernel of this homomorphism is non-trivial, normal subgroup of . Thus is not simple.  "
+  "body": "Let G be a group of order . Prove that is not simple.  By Sylow's Theorem we know that and . Thus our options are and . Suppose that .  Let act on by conjugation, yielding the homomorphism via the permutation representation. This map is non-trivial from part (2) of Sylow's Theorem, but does not divide , and thus cannot be injective. Then the kernel of this homomorphism is non-trivial, normal subgroup of . Thus is not simple.  "
 },
 {
   "id": "exercise-12",
@@ -1996,7 +1987,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "5.3.10",
   "title": "",
-  "body": "Prove that no group of order with is simple.  Let be a group of order with , and suppose by way of contradiction that is simple. By Sylow’s Theorem we know the following: - and , and - and , so our options are and . Suppose its . Let act on by conjugation, yielding the permutation representation homomorphism . The kernel of this homomorphism cannot be trivial as the conjugation action on Sylow subgroups is transitive by Part (2) of Sylow’s Theorem. Notice does not divide the order of , so our kernel cannot be all of , making a nontrivial normal subgroup of .  If , then must divide , meaning that . However, by the cyclic subgroup generated by an element of order has index in , making it normal.  Thus cannot be simple.  "
+  "body": "Prove that no group of order with is simple.  Let be a group of order with , and suppose by way of contradiction that is simple. By Sylow's Theorem we know the following: - and , and - and , so our options are and . Suppose its . Let act on by conjugation, yielding the permutation representation homomorphism . The kernel of this homomorphism cannot be trivial as the conjugation action on Sylow subgroups is transitive by Part (2) of Sylow's Theorem. Notice does not divide the order of , so our kernel cannot be all of , making a nontrivial normal subgroup of .  If , then must divide , meaning that . However, by the cyclic subgroup generated by an element of order has index in , making it normal.  Thus cannot be simple.  "
 },
 {
   "id": "exercise-13",
@@ -2005,7 +1996,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "5.3.11",
   "title": "",
-  "body": "Prove that no group of order with is simple.  Let be a group of order with and suppose by way of contradiction that is simple.  By Sylow’s Theorem we know the following: - and , and - and , so our options are .  Let act on by conjugation, yielding the permutation representation homomorphism . The kernel of this homomorphism cannot be trivial as the conjugation action on Sylow subgroups is transitive by Part (2) of Sylow’s Theorem. Notice that if is or then does not divide the order of , so our kernel cannot be all of , making a nontrivial normal subgroup of .  If , then must divide , meaning that . However, by the cyclic subgroup generated by an element of order has index in , making it normal.  Thus cannot be simple.  "
+  "body": "Prove that no group of order with is simple.  Let be a group of order with and suppose by way of contradiction that is simple.  By Sylow's Theorem we know the following: - and , and - and , so our options are .  Let act on by conjugation, yielding the permutation representation homomorphism . The kernel of this homomorphism cannot be trivial as the conjugation action on Sylow subgroups is transitive by Part (2) of Sylow's Theorem. Notice that if is or then does not divide the order of , so our kernel cannot be all of , making a nontrivial normal subgroup of .  If , then must divide , meaning that . However, by the cyclic subgroup generated by an element of order has index in , making it normal.  Thus cannot be simple.  "
 },
 {
   "id": "sec-grp-dps",
@@ -2017,9 +2008,9 @@ var ptx_lunr_docs = [
   "body": " Direct Products   Let be a group that acts on a set , and a subgroup of such that for any there exists a unique with . (a) Prove that for every and , where (b) Prove that if then for every , is the internal direct product of and     Let be a group that acts on a set , and a subgroup of such that for any there exists a unique with .  Suppose there exists some such that . Then . But by the definition of group action. As the is unique, we see . Thus .  Let and . If then we can write , as . Suppose and for some . There exists an such that . Then , so , so . Thankfully, we can know write ), and so .  If then we have , which means . From Part (a) we have a trivial intersection, making the internal direct product of and .   "
 },
 {
-  "id": "problem-92",
+  "id": "problem-91",
   "level": "2",
-  "url": "sec-grp-dps.html#problem-92",
+  "url": "sec-grp-dps.html#problem-91",
   "type": "Problem",
   "number": "6.1",
   "title": "",
@@ -2107,36 +2098,36 @@ var ptx_lunr_docs = [
   "body": " Groups Up to Isomorphism   Determine all of the groups of order , up to isomorphism.   By Sylow's Theorem we know the following: - and , so . - and , so as well. Thus there is exactly one Sylow -subgroup, , and exactly one Sylow -subgroup, . Both are normal in . Notice that has order , a prime squared. Thus is abelian. By the FTFGAG, is either isomorphic to or . Thus or .     Let be any positive prime integer. Prove that the number of groups of order , up to isomorphism, is exactly    Let be any positive prime integer.  First, suppose . Thus is a group of order , making it abelian. So the only groups of order are and . The same applies when , where the groups are and .  Let be a Sylow -subgroup of , and note that , the smallest prime dividing the order of , making . Let denote a Sylow -subgroup of . As and are groups of relatively prime order we have and thus , where . Notice that since , we have . Thus, by the First Isomorphism Theorem As has three elements, the kernel of must be either all of or trivial. However, the order of the image must divide , which is only possible when . Thus when this is the case there are two groups of order , otherwise the kernel is always trivial and we have as the only group.     Let be a group of order and suppose contains an element of order . Prove that is abelian.   First, note that , not . You hate to see it. Anyway, let be an element of order and consider , a cyclic subgroup of order . The possible number of Sylow -subgroups of is exactly , making this subgroup and thus normal in . Let be a Sylow subgroup, it intersects trivially and thus , where . The order of is , which is relatively prime to , making trivial and and thus abelian.     Let be a group. A subgroup of is called maximal if (that is, is a proper subgroup of ) and whenever is another subgroup of containing , either or . Show that every nontrivial finitely generated group possesses maximal subgroups.   Let be a group.  Let be the poset of all proper subgroups of ordered in terms of inclusion. Consider a string of these. Consider the union of them all. Luckily, unions of subgroups are subgroups if and only if there is containment, which there is, since everything is in the union. Thus its a subgroup. Since union in and yields an upper bound, by Zorn’s Lemma we a maximal element. Thus possesses maximal subgroups.    "
 },
 {
-  "id": "problem-93",
+  "id": "problem-92",
   "level": "2",
-  "url": "sec-classifications.html#problem-93",
+  "url": "sec-classifications.html#problem-92",
   "type": "Problem",
   "number": "7.1",
   "title": "",
   "body": " Determine all of the groups of order , up to isomorphism.   By Sylow's Theorem we know the following: - and , so . - and , so as well. Thus there is exactly one Sylow -subgroup, , and exactly one Sylow -subgroup, . Both are normal in . Notice that has order , a prime squared. Thus is abelian. By the FTFGAG, is either isomorphic to or . Thus or .   "
 },
 {
-  "id": "problem-94",
+  "id": "problem-93",
   "level": "2",
-  "url": "sec-classifications.html#problem-94",
+  "url": "sec-classifications.html#problem-93",
   "type": "Problem",
   "number": "7.2",
   "title": "",
   "body": " Let be any positive prime integer. Prove that the number of groups of order , up to isomorphism, is exactly    Let be any positive prime integer.  First, suppose . Thus is a group of order , making it abelian. So the only groups of order are and . The same applies when , where the groups are and .  Let be a Sylow -subgroup of , and note that , the smallest prime dividing the order of , making . Let denote a Sylow -subgroup of . As and are groups of relatively prime order we have and thus , where . Notice that since , we have . Thus, by the First Isomorphism Theorem As has three elements, the kernel of must be either all of or trivial. However, the order of the image must divide , which is only possible when . Thus when this is the case there are two groups of order , otherwise the kernel is always trivial and we have as the only group.   "
 },
 {
-  "id": "problem-95",
+  "id": "problem-94",
   "level": "2",
-  "url": "sec-classifications.html#problem-95",
+  "url": "sec-classifications.html#problem-94",
   "type": "Problem",
   "number": "7.3",
   "title": "",
   "body": " Let be a group of order and suppose contains an element of order . Prove that is abelian.   First, note that , not . You hate to see it. Anyway, let be an element of order and consider , a cyclic subgroup of order . The possible number of Sylow -subgroups of is exactly , making this subgroup and thus normal in . Let be a Sylow subgroup, it intersects trivially and thus , where . The order of is , which is relatively prime to , making trivial and and thus abelian.   "
 },
 {
-  "id": "problem-96",
+  "id": "problem-95",
   "level": "2",
-  "url": "sec-classifications.html#problem-96",
+  "url": "sec-classifications.html#problem-95",
   "type": "Problem",
   "number": "7.4",
   "title": "",
@@ -2152,324 +2143,324 @@ var ptx_lunr_docs = [
   "body": " Qualifying Exams   Winter 2023   Group Theory   Problem 1    Problem 2    Problem 3     Rings, Modules, Linear Algebra   Problem 4    Problem 5    Problem 6     Fields and Galois Theory   Problem 7    Problem 8    Problem 9      Summer 2023   Group Theory   Problem 1    Problem 2    Problem 3     Rings, Modules, Linear Algebra   Problem 4    Problem 5    Problem 6     Fields and Galois Theory   Problem 7    Problem 8    Problem 9      Winter 2022   Group Theory   Problem 1    Problem 2    Problem 3     Rings, Modules, Linear Algebra   Problem 4    Problem 5    Problem 6     Fields and Galois Theory   Problem 7    Problem 8    Problem 9      Summer 2022   Group Theory   Problem 1    Problem 2    Problem 3     Rings, Modules, Linear Algebra   Problem 4    Problem 5    Problem 6     Fields and Galois Theory   Problem 7    Problem 8    Problem 9     "
 },
 {
-  "id": "problem-97",
+  "id": "problem-96",
   "level": "2",
-  "url": "sec-quals.html#problem-97",
+  "url": "sec-quals.html#problem-96",
   "type": "Problem",
   "number": "8.1",
   "title": "Problem 1.",
   "body": " Problem 1  "
 },
 {
-  "id": "problem-98",
+  "id": "problem-97",
   "level": "2",
-  "url": "sec-quals.html#problem-98",
+  "url": "sec-quals.html#problem-97",
   "type": "Problem",
   "number": "8.2",
   "title": "Problem 2.",
   "body": " Problem 2  "
 },
 {
-  "id": "problem-99",
+  "id": "problem-98",
   "level": "2",
-  "url": "sec-quals.html#problem-99",
+  "url": "sec-quals.html#problem-98",
   "type": "Problem",
   "number": "8.3",
   "title": "Problem 3.",
   "body": " Problem 3  "
 },
 {
-  "id": "problem-100",
+  "id": "problem-99",
   "level": "2",
-  "url": "sec-quals.html#problem-100",
+  "url": "sec-quals.html#problem-99",
   "type": "Problem",
   "number": "8.4",
   "title": "Problem 4.",
   "body": " Problem 4  "
 },
 {
-  "id": "problem-101",
+  "id": "problem-100",
   "level": "2",
-  "url": "sec-quals.html#problem-101",
+  "url": "sec-quals.html#problem-100",
   "type": "Problem",
   "number": "8.5",
   "title": "Problem 5.",
   "body": " Problem 5  "
 },
 {
-  "id": "problem-102",
+  "id": "problem-101",
   "level": "2",
-  "url": "sec-quals.html#problem-102",
+  "url": "sec-quals.html#problem-101",
   "type": "Problem",
   "number": "8.6",
   "title": "Problem 6.",
   "body": " Problem 6  "
 },
 {
-  "id": "problem-103",
+  "id": "problem-102",
   "level": "2",
-  "url": "sec-quals.html#problem-103",
+  "url": "sec-quals.html#problem-102",
   "type": "Problem",
   "number": "8.7",
   "title": "Problem 7.",
   "body": " Problem 7  "
 },
 {
-  "id": "problem-104",
+  "id": "problem-103",
   "level": "2",
-  "url": "sec-quals.html#problem-104",
+  "url": "sec-quals.html#problem-103",
   "type": "Problem",
   "number": "8.8",
   "title": "Problem 8.",
   "body": " Problem 8  "
 },
 {
-  "id": "problem-105",
+  "id": "problem-104",
   "level": "2",
-  "url": "sec-quals.html#problem-105",
+  "url": "sec-quals.html#problem-104",
   "type": "Problem",
   "number": "8.9",
   "title": "Problem 9.",
   "body": " Problem 9  "
 },
 {
-  "id": "problem-106",
+  "id": "problem-105",
   "level": "2",
-  "url": "sec-quals.html#problem-106",
+  "url": "sec-quals.html#problem-105",
   "type": "Problem",
   "number": "8.10",
   "title": "Problem 1.",
   "body": " Problem 1  "
 },
 {
-  "id": "problem-107",
+  "id": "problem-106",
   "level": "2",
-  "url": "sec-quals.html#problem-107",
+  "url": "sec-quals.html#problem-106",
   "type": "Problem",
   "number": "8.11",
   "title": "Problem 2.",
   "body": " Problem 2  "
 },
 {
-  "id": "problem-108",
+  "id": "problem-107",
   "level": "2",
-  "url": "sec-quals.html#problem-108",
+  "url": "sec-quals.html#problem-107",
   "type": "Problem",
   "number": "8.12",
   "title": "Problem 3.",
   "body": " Problem 3  "
 },
 {
-  "id": "problem-109",
+  "id": "problem-108",
   "level": "2",
-  "url": "sec-quals.html#problem-109",
+  "url": "sec-quals.html#problem-108",
   "type": "Problem",
   "number": "8.13",
   "title": "Problem 4.",
   "body": " Problem 4  "
 },
 {
-  "id": "problem-110",
+  "id": "problem-109",
   "level": "2",
-  "url": "sec-quals.html#problem-110",
+  "url": "sec-quals.html#problem-109",
   "type": "Problem",
   "number": "8.14",
   "title": "Problem 5.",
   "body": " Problem 5  "
 },
 {
-  "id": "problem-111",
+  "id": "problem-110",
   "level": "2",
-  "url": "sec-quals.html#problem-111",
+  "url": "sec-quals.html#problem-110",
   "type": "Problem",
   "number": "8.15",
   "title": "Problem 6.",
   "body": " Problem 6  "
 },
 {
-  "id": "problem-112",
+  "id": "problem-111",
   "level": "2",
-  "url": "sec-quals.html#problem-112",
+  "url": "sec-quals.html#problem-111",
   "type": "Problem",
   "number": "8.16",
   "title": "Problem 7.",
   "body": " Problem 7  "
 },
 {
-  "id": "problem-113",
+  "id": "problem-112",
   "level": "2",
-  "url": "sec-quals.html#problem-113",
+  "url": "sec-quals.html#problem-112",
   "type": "Problem",
   "number": "8.17",
   "title": "Problem 8.",
   "body": " Problem 8  "
 },
 {
-  "id": "problem-114",
+  "id": "problem-113",
   "level": "2",
-  "url": "sec-quals.html#problem-114",
+  "url": "sec-quals.html#problem-113",
   "type": "Problem",
   "number": "8.18",
   "title": "Problem 9.",
   "body": " Problem 9  "
 },
 {
-  "id": "problem-115",
+  "id": "problem-114",
   "level": "2",
-  "url": "sec-quals.html#problem-115",
+  "url": "sec-quals.html#problem-114",
   "type": "Problem",
   "number": "8.19",
   "title": "Problem 1.",
   "body": " Problem 1  "
 },
 {
-  "id": "problem-116",
+  "id": "problem-115",
   "level": "2",
-  "url": "sec-quals.html#problem-116",
+  "url": "sec-quals.html#problem-115",
   "type": "Problem",
   "number": "8.20",
   "title": "Problem 2.",
   "body": " Problem 2  "
 },
 {
-  "id": "problem-117",
+  "id": "problem-116",
   "level": "2",
-  "url": "sec-quals.html#problem-117",
+  "url": "sec-quals.html#problem-116",
   "type": "Problem",
   "number": "8.21",
   "title": "Problem 3.",
   "body": " Problem 3  "
 },
 {
-  "id": "problem-118",
+  "id": "problem-117",
   "level": "2",
-  "url": "sec-quals.html#problem-118",
+  "url": "sec-quals.html#problem-117",
   "type": "Problem",
   "number": "8.22",
   "title": "Problem 4.",
   "body": " Problem 4  "
 },
 {
-  "id": "problem-119",
+  "id": "problem-118",
   "level": "2",
-  "url": "sec-quals.html#problem-119",
+  "url": "sec-quals.html#problem-118",
   "type": "Problem",
   "number": "8.23",
   "title": "Problem 5.",
   "body": " Problem 5  "
 },
 {
-  "id": "problem-120",
+  "id": "problem-119",
   "level": "2",
-  "url": "sec-quals.html#problem-120",
+  "url": "sec-quals.html#problem-119",
   "type": "Problem",
   "number": "8.24",
   "title": "Problem 6.",
   "body": " Problem 6  "
 },
 {
-  "id": "problem-121",
+  "id": "problem-120",
   "level": "2",
-  "url": "sec-quals.html#problem-121",
+  "url": "sec-quals.html#problem-120",
   "type": "Problem",
   "number": "8.25",
   "title": "Problem 7.",
   "body": " Problem 7  "
 },
 {
-  "id": "problem-122",
+  "id": "problem-121",
   "level": "2",
-  "url": "sec-quals.html#problem-122",
+  "url": "sec-quals.html#problem-121",
   "type": "Problem",
   "number": "8.26",
   "title": "Problem 8.",
   "body": " Problem 8  "
 },
 {
-  "id": "problem-123",
+  "id": "problem-122",
   "level": "2",
-  "url": "sec-quals.html#problem-123",
+  "url": "sec-quals.html#problem-122",
   "type": "Problem",
   "number": "8.27",
   "title": "Problem 9.",
   "body": " Problem 9  "
 },
 {
-  "id": "problem-124",
+  "id": "problem-123",
   "level": "2",
-  "url": "sec-quals.html#problem-124",
+  "url": "sec-quals.html#problem-123",
   "type": "Problem",
   "number": "8.28",
   "title": "Problem 1.",
   "body": " Problem 1  "
 },
 {
-  "id": "problem-125",
+  "id": "problem-124",
   "level": "2",
-  "url": "sec-quals.html#problem-125",
+  "url": "sec-quals.html#problem-124",
   "type": "Problem",
   "number": "8.29",
   "title": "Problem 2.",
   "body": " Problem 2  "
 },
 {
-  "id": "problem-126",
+  "id": "problem-125",
   "level": "2",
-  "url": "sec-quals.html#problem-126",
+  "url": "sec-quals.html#problem-125",
   "type": "Problem",
   "number": "8.30",
   "title": "Problem 3.",
   "body": " Problem 3  "
 },
 {
-  "id": "problem-127",
+  "id": "problem-126",
   "level": "2",
-  "url": "sec-quals.html#problem-127",
+  "url": "sec-quals.html#problem-126",
   "type": "Problem",
   "number": "8.31",
   "title": "Problem 4.",
   "body": " Problem 4  "
 },
 {
-  "id": "problem-128",
+  "id": "problem-127",
   "level": "2",
-  "url": "sec-quals.html#problem-128",
+  "url": "sec-quals.html#problem-127",
   "type": "Problem",
   "number": "8.32",
   "title": "Problem 5.",
   "body": " Problem 5  "
 },
 {
-  "id": "problem-129",
+  "id": "problem-128",
   "level": "2",
-  "url": "sec-quals.html#problem-129",
+  "url": "sec-quals.html#problem-128",
   "type": "Problem",
   "number": "8.33",
   "title": "Problem 6.",
   "body": " Problem 6  "
 },
 {
-  "id": "problem-130",
+  "id": "problem-129",
   "level": "2",
-  "url": "sec-quals.html#problem-130",
+  "url": "sec-quals.html#problem-129",
   "type": "Problem",
   "number": "8.34",
   "title": "Problem 7.",
   "body": " Problem 7  "
 },
 {
-  "id": "problem-131",
+  "id": "problem-130",
   "level": "2",
-  "url": "sec-quals.html#problem-131",
+  "url": "sec-quals.html#problem-130",
   "type": "Problem",
   "number": "8.35",
   "title": "Problem 8.",
   "body": " Problem 8  "
 },
 {
-  "id": "problem-132",
+  "id": "problem-131",
   "level": "2",
-  "url": "sec-quals.html#problem-132",
+  "url": "sec-quals.html#problem-131",
   "type": "Problem",
   "number": "8.36",
   "title": "Problem 9.",
@@ -2692,9 +2683,9 @@ var ptx_lunr_docs = [
   "body": "  Let be a ring with identity. An element is called idempotent if .   "
 },
 {
-  "id": "problem-140",
+  "id": "problem-139",
   "level": "2",
-  "url": "sec-defn-ex.html#problem-140",
+  "url": "sec-defn-ex.html#problem-139",
   "type": "Problem",
   "number": "1.22",
   "title": "",
@@ -2872,18 +2863,18 @@ var ptx_lunr_docs = [
   "body": " Let be a nontrivial ring. Then is a field if and only if every homomorphism of into a nonzero ring is injective.  "
 },
 {
-  "id": "problem-147",
+  "id": "problem-146",
   "level": "2",
-  "url": "sec-ring-hom.html#problem-147",
+  "url": "sec-ring-hom.html#problem-146",
   "type": "Problem",
   "number": "1.40",
   "title": "",
   "body": " Suppose is commutative and an idempotent. Let . Prove that the map given by is a ring isomorphism.  "
 },
 {
-  "id": "problem-148",
+  "id": "problem-147",
   "level": "2",
-  "url": "sec-ring-hom.html#problem-148",
+  "url": "sec-ring-hom.html#problem-147",
   "type": "Problem",
   "number": "1.41",
   "title": "",
@@ -2935,9 +2926,9 @@ var ptx_lunr_docs = [
   "body": "  Any ideal of a ring is a subring of    "
 },
 {
-  "id": "problem-149",
+  "id": "problem-148",
   "level": "2",
-  "url": "sec-ideals.html#problem-149",
+  "url": "sec-ideals.html#problem-148",
   "type": "Problem",
   "number": "2.5",
   "title": "",
@@ -3052,9 +3043,9 @@ var ptx_lunr_docs = [
   "body": " Let be a finitely generated ideal of . Suppose every element of is nilpotent. Prove that there exists an integer such that for all .  "
 },
 {
-  "id": "problem-157",
+  "id": "problem-156",
   "level": "2",
-  "url": "sec-ideals.html#problem-157",
+  "url": "sec-ideals.html#problem-156",
   "type": "Problem",
   "number": "2.18",
   "title": "",
@@ -3196,9 +3187,9 @@ var ptx_lunr_docs = [
   "body": " Let be a commutative ring with identity, and assume . Let and be ideals such that .    Prove .  Prove the following special case of the Sun Tzu's Theorem: There is an isomorphism of rings of the form .     Let be a commutative ring with identity, and assume . Let and be ideals such that .  First, note that both and are ideals by   Let . Thus , where each and . As and are both ideals, each term in this sum is contained both in and . Thus, by absorption, . Hence .  Let . Thus and . Note that as , there exists some and such that . So . As we see that , with and . Thus , yielding .  Let be defined by .  Notice that if , we have , and so . (See: [[Mathematics\/Definitions\/Kernel]]) Let . Thus and , and so and . Hence , and so .  Observe making a homomorphism of rings.  Let . As , we can write and as and . However, as and , we have .  Consider the element , and observe However, as and , we see Thus is a surjective homomorphism. Hence, by the First Isomorphism Theorem, we see .   "
 },
 {
-  "id": "problem-162",
+  "id": "problem-161",
   "level": "2",
-  "url": "sec-ring-quotients.html#problem-162",
+  "url": "sec-ring-quotients.html#problem-161",
   "type": "Problem",
   "number": "2.33",
   "title": "",
@@ -3367,9 +3358,9 @@ var ptx_lunr_docs = [
   "body": " Let be a commutative ring in which every element satisfies for some Show that every prime ideal in R is maximal.   Let be a commutative ring in which every element satisfies for some Let be a prime ideal in .  Let , meaning . Then for some . As is a domain we can cancel an to see that , and thus , making a unit in . Thus is a field, making maximal in .   "
 },
 {
-  "id": "problem-172",
+  "id": "problem-171",
   "level": "2",
-  "url": "subsec-primemax-ideals.html#problem-172",
+  "url": "subsec-primemax-ideals.html#problem-171",
   "type": "Problem",
   "number": "3.18",
   "title": "",
@@ -3529,18 +3520,18 @@ var ptx_lunr_docs = [
   "body": " Find all the ideals of that contain , the ideal of generated by and . For each such ideal, give an explicit list of generators, and determine whether the ideal is prime, maximal, or neither.   First, notice that is irreducible in as it is a cyclotomic polynomial. Thus the possibilities are the following:    ,     ,     ,     .   Notice that , which is neither prime nor maximal, as those ideals must be proper. The ideal is not maximal as it is contained in both and , nor is it prime, given that but neither nor are in .  Both and are generated with irreducible elements, making them irreducible ideals and thus maximal.   "
 },
 {
-  "id": "problem-184",
+  "id": "problem-183",
   "level": "2",
-  "url": "subsec-polyrings.html#problem-184",
+  "url": "subsec-polyrings.html#problem-183",
   "type": "Problem",
   "number": "3.35",
   "title": "",
   "body": " Find, with justification, all the ideals of the ring that contain the ideal .  "
 },
 {
-  "id": "problem-185",
+  "id": "problem-184",
   "level": "2",
-  "url": "subsec-polyrings.html#problem-185",
+  "url": "subsec-polyrings.html#problem-184",
   "type": "Problem",
   "number": "3.36",
   "title": "",
@@ -3616,7 +3607,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.1",
   "title": "Euclidian Domains",
-  "body": " Euclidian Domains    A Euclidean domain (ED) is a domain together with a function such that and the following property holds: for any two elements with , there are elements and of such that      A degenerate example is a field equipped with the trivial norm for all . Given with , we have . Note that in this example there is no need to include in the description of the division algorithm, since implies . This is not the case in other examples. Also observe that as we've defined remainders they are {} unique. For example, in dividing by , both are considered valid. This calculation shows, more generally, that if is a unit, then for all there exists an equation with , not matter what norm is used. One could make remainders (and hence quotients) unique for by insisting that remainders always be non-negative, but this is not part of the abstract theory since it doesn’t generalize to all cases well.    The ring of Gaussian integers is a Euclidean domain with being the usual complex (Euclidean) square norm . Let ,  and let (here we use that the fraction field of is ). Now pick so that and . We have Set and set and notice that because and by closure. If we’re good, and if then, using that the complex squared norm is multiplicative as well as the Pythagorean Theorem and the choice for , we have Thus the norm function makes into a Euclidean domain.    The next classical example is with a field and where we define the norm to be degree: if and . This ring is a ED because of the familiar long division for polynomials.     Given elements , not both , of a Euclidean domain with Euclidean norm , a of and is an element such that:    and ; and    If and , then .        Note that is equivalent to .   "
+  "body": " Euclidian Domains    A Euclidean domain (ED) is a domain together with a function such that and the following property holds: for any two elements with , there are elements and of such that      A \"degenerate example\" is a field equipped with the trivial norm for all . Given with , we have . Note that in this example there is no need to include in the description of the division algorithm, since implies . This is not the case in other examples. Also observe that as we've defined remainders they are {} unique. For example, in dividing by , both are considered valid. This calculation shows, more generally, that if is a unit, then for all there exists an equation with , not matter what norm is used. One could make remainders (and hence quotients) unique for by insisting that remainders always be non-negative, but this is not part of the abstract theory since it doesn’t generalize to all cases well.    The ring of Gaussian integers is a Euclidean domain with being the usual complex (Euclidean) square norm . Let ,  and let (here we use that the fraction field of is ). Now pick so that and . We have Set and set and notice that because and by closure. If we’re good, and if then, using that the complex squared norm is multiplicative as well as the Pythagorean Theorem and the choice for , we have Thus the norm function makes into a Euclidean domain.    The next classical example is with a field and where we define the norm to be degree: if and . This ring is a ED because of the familiar long division for polynomials.     Given elements , not both , of a Euclidean domain with Euclidean norm , a of and is an element such that:    and ; and    If and , then .        Note that is equivalent to .   "
 },
 {
   "id": "def-ed",
@@ -3634,7 +3625,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "4.2",
   "title": "",
-  "body": " A degenerate example is a field equipped with the trivial norm for all . Given with , we have . Note that in this example there is no need to include in the description of the division algorithm, since implies . This is not the case in other examples. Also observe that as we've defined remainders they are {} unique. For example, in dividing by , both are considered valid. This calculation shows, more generally, that if is a unit, then for all there exists an equation with , not matter what norm is used. One could make remainders (and hence quotients) unique for by insisting that remainders always be non-negative, but this is not part of the abstract theory since it doesn’t generalize to all cases well.  "
+  "body": " A \"degenerate example\" is a field equipped with the trivial norm for all . Given with , we have . Note that in this example there is no need to include in the description of the division algorithm, since implies . This is not the case in other examples. Also observe that as we've defined remainders they are {} unique. For example, in dividing by , both are considered valid. This calculation shows, more generally, that if is a unit, then for all there exists an equation with , not matter what norm is used. One could make remainders (and hence quotients) unique for by insisting that remainders always be non-negative, but this is not part of the abstract theory since it doesn’t generalize to all cases well.  "
 },
 {
   "id": "ex-gaussian-integers-are-an-ed",
@@ -3679,7 +3670,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.2",
   "title": "Principal Ideal Domains",
-  "body": " Principal Ideal Domains    A ring is called a principal ideal domain (PID) if it is a domain with the property that every ideal is principal, i.e., for each ideal , we have for some      For any field , every ideal of is principal ( is a PID)     If is a Euclidean domain, then is a PID.    Let be the norm function making into a Euclidean domain. Pick an ideal . If is the zero ideal, . Otherwise pick a non-zero element of with as small as possible. (Such a exists by the well-ordering of .) I claim . It is clear that . Pick . Then and either or . But note that , and we cannot have both and by our choice of . So it must be that , and hence .     The ring is a PID, but not a Euclidean domain. It is the simplest example of such a ring, but the proofs of these claims are not easy. I will not cover a proof of this fact.   If is a PID, then every non-zero prime ideal is maximal.    Let be a domain. Two elements are associates if there is a unit of R such that .      Two elements of a domain are associates if and only if .    If then and so for some . Similarly and hence . Since is a domain, either or . If , then and otherwise is a unit.  If for a unit , then and so and , from which is follows that and .      If is a PID and , then    for some and any such is a gcd of and     the gcd of and is unique up to multiplication by a unit.       The existence of is granted by definition in a PID. Now gives that and . If and we have that , so by minimality. This gives , hence .     If is not only a PID but a Euclidean domain with norm function , then the Euclidean algorithm can be used to compute a gcd of any two nonzero .      Suppose is a domain. An element is a prime element if and the ideal is a prime ideal.       Suppose is a domain. An element is irreducible if , is not a unit, and whenever with then either or is a unit.       the prime elements of are the prime integers and their negatives; they are also irreducible  any element with a prime integer is irreducible e.g. is irreducible  the element is not irreducible in   the polynomial is irreducible; indeed if it factors nontrivially, it must factor as a product of two linear polynomials: . Then is a root for . But neither nor are roots for this polynomial, a contradiction.      In the domain the element is irreducible but not prime.   Note that and thus . However we claim that neither nor are in . If then for some and so , a contradiction. Thus is not prime.     In the ring the element is irreducible but not prime.   Since this ring is a domain. The element is irreducible for degree reasons. The ideal contains but doesn't contain so is not prime.      Let be a domain and let . 1. If is a prime element, then is irreducible. 2. If is a PID and is irreducible, then is a prime element.    Suppose is an integral domain and that is prime. Then and is not a unit. Suppose . Then and hence by definition either or . If , we have for some and so . Since , , and is an integral domain, we must have , showing that is a unit.  Assume is a PID and that is irreducible. Since is not a unit, is a proper ideal and hence is contained in a maximal ideal by Theorem . We show and hence is prime. Since is a PID, for some . So for some . But is irreducible and is not a unit, which forces to be a unit and hence .     Let be a commutative ring and an indeterminant. Prove that is a PID if and only if is a field.   First, suppose is a PID. Let be a nonzero ideal in , and consider the ideal . As is a PID we see for some . Then , but is an indeterminant and thus irreducible, so must be a unit or itself. But also generates , so can’t be , so is a unit, meaning and so . Thus the only ideals of are and , making a field.  Next, suppose is a field. Let be an ideal in . If then or , both of which are principal. Thus , and so , making principal as well. Hence is a PID.     Consider the subring of . Show that is irreducible but not prime in Hint: Consider the function .   Consider and the function .  Suppose by way of contradiction there exist such that . Then and , and Thus or , as these are the only integer divisors of . However, there do not exist integers such that this is true. Thus is irreducible in .  Suppose by way of contradiction that is prime in . Note that . Thus divides one of these factors.  First, suppose there exists some such that . Thus , and so . However, is not an integer, and thus cannot divide either of these factors. Thus is not prime in .     In the commutative ring , show that the element is irreducible but not prime.    Suppose by way of contradiction there exist such that . Then and , and Thus or , as these are the only integer divisors of . However, there do not exist integers such that this is true. Thus is irreducible in .  Suppose by way of contradiction that is prime in . Note that . Thus divides one of these factors.  First, suppose there exists some such that . Thus , and so . However, is not an integer, and thus cannot divide either of these factors. Thus is not prime in .     Prove is not a PID. Hint: One method is to use (with proof) the fact that is irreducible in this ring.    Let be a commutative ring with . Recall that is called nilpotent if for some integer Let be the set of nilpotent elements of .   Show that is an ideal of .    Show that the ring has no nonzero nilpotent elements.    For a polynomial , prove that is a nilpotent element of if and only if every coefficient of is nilpotent.      Let be a commutative ring with and Let be the set of nilpotent elements of .    Let . Then and for . Consider , which, by the binomial theorem, has each term raised to either the th or th power, sending the whole thing to .  Additionally, if consider when viewed as an additive group. Notice . Finally, let and consider , so . Thus we have our ideal.    Let be a nilpotent element in . Then , meaning . This means there exists some such that , placing . Thus all nilpotent elements in are actually (possibly four ’s in a trench coat).    Let .  First, suppose is a nilpotent element of . Thus for some . By the binomial shenanigans every product of coefficients must to go .  Next, suppose every coefficient of is nilpotent. Let be equal to the product of all the smallest powers that send each coefficient to . Thus by more binomial shenanigans we have .       Let be a PID and a multiplicatively closed subset of such that . Prove that is also a PID. Tip: Given an ideal of , consider .   Let be a PID, a multiplicatively closed subset of such that , and an ideal in . Consider , which is an ideal in and is thus generated by some .     Let be an integral domain with field of fractions . Let be a prime ideal of and let    Show that is a subring of .    Show that is a prime ideal of .      "
+  "body": " Principal Ideal Domains    A ring is called a principal ideal domain (PID) if it is a domain with the property that every ideal is principal, i.e., for each ideal , we have for some      For any field , every ideal of is principal ( is a PID)     If is a Euclidean domain, then is a PID.    Let be the norm function making into a Euclidean domain. Pick an ideal . If is the zero ideal, . Otherwise pick a non-zero element of with as small as possible. (Such a exists by the well-ordering of .) I claim . It is clear that . Pick . Then and either or . But note that , and we cannot have both and by our choice of . So it must be that , and hence .     The ring is a PID, but not a Euclidean domain. It is the simplest example of such a ring, but the proofs of these claims are not easy. I will not cover a proof of this fact.    If is a PID, then every non-zero prime ideal is maximal.     Let be a domain. Two elements are associates if there is a unit of R such that .      Two elements of a domain are associates if and only if .    If then and so for some . Similarly and hence . Since is a domain, either or . If , then and otherwise is a unit.  If for a unit , then and so and , from which is follows that and .      If is a PID and , then    for some and any such is a gcd of and     the gcd of and is unique up to multiplication by a unit.       The existence of is granted by definition in a PID. Now gives that and . If and we have that , so by minimality. This gives , hence .     If is not only a PID but a Euclidean domain with norm function , then the Euclidean algorithm can be used to compute a gcd of any two nonzero .     Suppose is a domain. An element is a prime element if and the ideal is a prime ideal.      Suppose is a domain. An element is irreducible if , is not a unit, and whenever with then either or is a unit.       the prime elements of are the prime integers and their negatives; they are also irreducible  any element with a prime integer is irreducible e.g. is irreducible  the element is not irreducible in   the polynomial is irreducible; indeed if it factors nontrivially, it must factor as a product of two linear polynomials: . Then is a root for . But neither nor are roots for this polynomial, a contradiction.      In the domain the element is irreducible but not prime.   Note that and thus . However we claim that neither nor are in . If then for some and so , a contradiction. Thus is not prime.     In the ring the element is irreducible but not prime.   Since this ring is a domain. The element is irreducible for degree reasons. The ideal contains but doesn't contain so is not prime.      Let be a domain and let . 1. If is a prime element, then is irreducible. 2. If is a PID and is irreducible, then is a prime element.    Suppose is an integral domain and that is prime. Then and is not a unit. Suppose . Then and hence by definition either or . If , we have for some and so . Since , , and is an integral domain, we must have , showing that is a unit.  Assume is a PID and that is irreducible. Since is not a unit, is a proper ideal and hence is contained in a maximal ideal by Theorem . We show and hence is prime. Since is a PID, for some . So for some . But is irreducible and is not a unit, which forces to be a unit and hence .     Let be a commutative ring and an indeterminant. Prove that is a PID if and only if is a field.   First, suppose is a PID. Let be a nonzero ideal in , and consider the ideal . As is a PID we see for some . Then , but is an indeterminant and thus irreducible, so must be a unit or itself. But also generates , so can’t be , so is a unit, meaning and so . Thus the only ideals of are and , making a field.  Next, suppose is a field. Let be an ideal in . If then or , both of which are principal. Thus , and so , making principal as well. Hence is a PID.     Consider the subring of . Show that is irreducible but not prime in Hint: Consider the function .   Consider and the function .  Suppose by way of contradiction there exist such that . Then and , and Thus or , as these are the only integer divisors of . However, there do not exist integers such that this is true. Thus is irreducible in .  Suppose by way of contradiction that is prime in . Note that . Thus divides one of these factors.  First, suppose there exists some such that . Thus , and so . However, is not an integer, and thus cannot divide either of these factors. Thus is not prime in .     In the commutative ring , show that the element is irreducible but not prime.    Suppose by way of contradiction there exist such that . Then and , and Thus or , as these are the only integer divisors of . However, there do not exist integers such that this is true. Thus is irreducible in .  Suppose by way of contradiction that is prime in . Note that . Thus divides one of these factors.  First, suppose there exists some such that . Thus , and so . However, is not an integer, and thus cannot divide either of these factors. Thus is not prime in .     Prove is not a PID. Hint: One method is to use (with proof) the fact that is irreducible in this ring.    Let be a commutative ring with . Recall that is called nilpotent if for some integer Let be the set of nilpotent elements of .   Show that is an ideal of .    Show that the ring has no nonzero nilpotent elements.    For a polynomial , prove that is a nilpotent element of if and only if every coefficient of is nilpotent.      Let be a commutative ring with and Let be the set of nilpotent elements of .     Let . Then and for . Consider , which, by the binomial theorem, has each term raised to either the th or th power, sending the whole thing to .  Additionally, if consider when viewed as an additive group. Notice . Finally, let and consider , so . Thus we have our ideal.    Let be a nilpotent element in . Then , meaning . This means there exists some such that , placing . Thus all nilpotent elements in are actually (possibly four ’s in a trench coat).    Let .  First, suppose is a nilpotent element of . Thus for some . By the binomial shenanigans every product of coefficients must to go .  Next, suppose every coefficient of is nilpotent. Let be equal to the product of all the smallest powers that send each coefficient to . Thus by more binomial shenanigans we have .        Let be a PID and a multiplicatively closed subset of such that . Prove that is also a PID. Tip: Given an ideal of , consider .   Let be a PID, a multiplicatively closed subset of such that , and an ideal in . Consider , which is an ideal in and is thus generated by some .     Let be an integral domain with field of fractions . Let be a prime ideal of and let    Show that is a subring of .    Show that is a prime ideal of .      "
 },
 {
   "id": "def-pid",
@@ -3724,7 +3715,7 @@ var ptx_lunr_docs = [
   "type": "Problem",
   "number": "4.11",
   "title": "",
-  "body": "If is a PID, then every non-zero prime ideal is maximal. "
+  "body": " If is a PID, then every non-zero prime ideal is maximal.  "
 },
 {
   "id": "def-associate",
@@ -3769,7 +3760,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "4.16",
   "title": "",
-  "body": "   Suppose is a domain. An element is a prime element if and the ideal is a prime ideal.    "
+  "body": "  Suppose is a domain. An element is a prime element if and the ideal is a prime ideal.   "
 },
 {
   "id": "def-irreducible",
@@ -3844,36 +3835,36 @@ var ptx_lunr_docs = [
   "body": " In the commutative ring , show that the element is irreducible but not prime.    Suppose by way of contradiction there exist such that . Then and , and Thus or , as these are the only integer divisors of . However, there do not exist integers such that this is true. Thus is irreducible in .  Suppose by way of contradiction that is prime in . Note that . Thus divides one of these factors.  First, suppose there exists some such that . Thus , and so . However, is not an integer, and thus cannot divide either of these factors. Thus is not prime in .   "
 },
 {
-  "id": "problem-197",
+  "id": "problem-196",
   "level": "2",
-  "url": "sec-pids.html#problem-197",
+  "url": "sec-pids.html#problem-196",
   "type": "Problem",
   "number": "4.25",
   "title": "",
   "body": " Prove is not a PID. Hint: One method is to use (with proof) the fact that is irreducible in this ring.  "
 },
 {
-  "id": "problem-198",
+  "id": "problem-197",
   "level": "2",
-  "url": "sec-pids.html#problem-198",
+  "url": "sec-pids.html#problem-197",
   "type": "Problem",
   "number": "4.26",
   "title": "",
-  "body": " Let be a commutative ring with . Recall that is called nilpotent if for some integer Let be the set of nilpotent elements of .   Show that is an ideal of .    Show that the ring has no nonzero nilpotent elements.    For a polynomial , prove that is a nilpotent element of if and only if every coefficient of is nilpotent.      Let be a commutative ring with and Let be the set of nilpotent elements of .    Let . Then and for . Consider , which, by the binomial theorem, has each term raised to either the th or th power, sending the whole thing to .  Additionally, if consider when viewed as an additive group. Notice . Finally, let and consider , so . Thus we have our ideal.    Let be a nilpotent element in . Then , meaning . This means there exists some such that , placing . Thus all nilpotent elements in are actually (possibly four ’s in a trench coat).    Let .  First, suppose is a nilpotent element of . Thus for some . By the binomial shenanigans every product of coefficients must to go .  Next, suppose every coefficient of is nilpotent. Let be equal to the product of all the smallest powers that send each coefficient to . Thus by more binomial shenanigans we have .     "
+  "body": " Let be a commutative ring with . Recall that is called nilpotent if for some integer Let be the set of nilpotent elements of .   Show that is an ideal of .    Show that the ring has no nonzero nilpotent elements.    For a polynomial , prove that is a nilpotent element of if and only if every coefficient of is nilpotent.      Let be a commutative ring with and Let be the set of nilpotent elements of .     Let . Then and for . Consider , which, by the binomial theorem, has each term raised to either the th or th power, sending the whole thing to .  Additionally, if consider when viewed as an additive group. Notice . Finally, let and consider , so . Thus we have our ideal.    Let be a nilpotent element in . Then , meaning . This means there exists some such that , placing . Thus all nilpotent elements in are actually (possibly four ’s in a trench coat).    Let .  First, suppose is a nilpotent element of . Thus for some . By the binomial shenanigans every product of coefficients must to go .  Next, suppose every coefficient of is nilpotent. Let be equal to the product of all the smallest powers that send each coefficient to . Thus by more binomial shenanigans we have .      "
 },
 {
-  "id": "problem-199",
+  "id": "problem-198",
   "level": "2",
-  "url": "sec-pids.html#problem-199",
+  "url": "sec-pids.html#problem-198",
   "type": "Problem",
   "number": "4.27",
   "title": "",
   "body": " Let be a PID and a multiplicatively closed subset of such that . Prove that is also a PID. Tip: Given an ideal of , consider .   Let be a PID, a multiplicatively closed subset of such that , and an ideal in . Consider , which is an ideal in and is thus generated by some .   "
 },
 {
-  "id": "problem-200",
+  "id": "problem-199",
   "level": "2",
-  "url": "sec-pids.html#problem-200",
+  "url": "sec-pids.html#problem-199",
   "type": "Problem",
   "number": "4.28",
   "title": "",
@@ -3886,7 +3877,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.3",
   "title": "Unique Factorization Domains",
-  "body": " Unique Factorization Domains    A ring is called a unique factorization domain , or UFD for short, if is an integral domain and every element that is non-zero and not a unit can be written as a finite product of (not necessarily distinct) irreducible elements of in a way that is unique up to ordering and associates. That is, if also holds with each irreducible, then and there is a permutation such that, for all , we have and are associates.       is a UFD by the Fundamental Theorem of Arithmetic.   where is a field is a UFD. This is the case because is a Euclidean domain and Euclidean domains are UFD’s (we’ll prove this shortly).  We will eventually prove that if is a UFD then so is . It follows that is a UFD for all . Note that if , this ring is not a PID and hence not a Euclidean domain.      is not a PID hence also not a Euclidean domain. For , this can be seen because the ideal is not a principal ideal. It is a UFD because is a UFD (based on the result that if is a UFD then so is which we will prove shortly).     is a domain that is not a UFD.   Consider and each of are irreducible by a norm argument (exercise). Notice also that contains elements that are irreducible but not prime: is irreducible, by a norm argument. But it is not prime since but neither nor is in       If is a PID then is a UFD.      Assume is a PID is non zero and not a unit and are two different irreducible factorization of . Then and there is a permutation such that, for all , we have and are associates.    Without loss of generality, assume . We induct on .  If then as well since and would yield , a contradiction. If we have and there is nothing more to prove.  Assume and that irreducible factorizations with factors are unique up to reordering factors and taking associates.  Since is a PID, irreducible elements are prime by Theorem . Since we have that and since is a prime ideal it follows that for some . Upon reordering, we may as well assume . Thus for some . Since is irreducible and is not a unit, must be a unit. We get and hence, since is an integral domain, we may divide by to obtain Notice that is a prime ideal so is irreducible by Theorem .  By the inductive hypothesis we deduce that hence and also that are associates to in some order. This together with associate to establishes the claim.      Prove that in a UFD an element is irreducible if and only if the ideal [^1] is prime.  Prove that is not a UFD.       Let be a UFD.  First, suppose is irreducible, and consider the ideal . Let such that . Thus , so there exists some such that . As we are in a UFD the elements and all have unique (up to associates) factorizations of irreducible elements. Thus must be an associate of one of the irreducible elements in the factorization of or , and so or , making prime.  Now suppose that is prime and that for some . Thus and , so either or , as is a prime ideal. Assume without loss of generality that . Thus for some . Thus and As UFDs are integral domains we see , making a unit. Thus is irreducible.     First, notice that . Define a function Let and behold  Suppose by way of contradiction there exist such that . Then and , and Thus or , as these are the only integer divisors of . However, there do not exist integers such that this is true. Thus is irreducible in .  Suppose by way of contradiction that is prime in . Note that . Thus divides one of these factors.  First, suppose there exists some such that . Thus , and so . However, is not an integer, and thus cannot divide either of these factors. Thus is not prime in . By Part (a), this is not a UFD.        "
+  "body": " Unique Factorization Domains    A ring is called a unique factorization domain , or UFD for short, if is an integral domain and every element that is non-zero and not a unit can be written as a finite product of (not necessarily distinct) irreducible elements of in a way that is unique up to ordering and associates. That is, if also holds with each irreducible, then and there is a permutation such that, for all , we have and are associates.       is a UFD by the Fundamental Theorem of Arithmetic.   where is a field is a UFD. This is the case because is a Euclidean domain and Euclidean domains are UFD’s (we’ll prove this shortly).  We will eventually prove that if is a UFD then so is . It follows that is a UFD for all . Note that if , this ring is not a PID and hence not a Euclidean domain.      is not a PID hence also not a Euclidean domain. For , this can be seen because the ideal is not a principal ideal. It is a UFD because is a UFD (based on the result that if is a UFD then so is which we will prove shortly).     is a domain that is not a UFD.   Consider and each of are irreducible by a norm argument (exercise). Notice also that contains elements that are irreducible but not prime: is irreducible, by a norm argument. But it is not prime since but neither nor is in       If is a PID then is a UFD.      Assume is a PID is non zero and not a unit and are two different irreducible factorization of . Then and there is a permutation such that, for all , we have and are associates.    Without loss of generality, assume . We induct on .  If then as well since and would yield , a contradiction. If we have and there is nothing more to prove.  Assume and that irreducible factorizations with factors are unique up to reordering factors and taking associates.  Since is a PID, irreducible elements are prime by Theorem . Since we have that and since is a prime ideal it follows that for some . Upon reordering, we may as well assume . Thus for some . Since is irreducible and is not a unit, must be a unit. We get and hence, since is an integral domain, we may divide by to obtain Notice that is a prime ideal so is irreducible by Theorem .  By the inductive hypothesis we deduce that hence and also that are associates to in some order. This together with associate to establishes the claim.      Prove that in a UFD an element is irreducible if and only if the ideal [^1] is prime.  Prove that is not a UFD.       Let be a UFD.  First, suppose is irreducible, and consider the ideal . Let such that . Thus , so there exists some such that . As we are in a UFD the elements and all have unique (up to associates) factorizations of irreducible elements. Thus must be an associate of one of the irreducible elements in the factorization of or , and so or , making prime.  Now suppose that is prime and that for some . Thus and , so either or , as is a prime ideal. Assume without loss of generality that . Thus for some . Thus and As UFDs are integral domains we see , making a unit. Thus is irreducible.    First, notice that . Define a function Let and behold  Suppose by way of contradiction there exist such that . Then and , and Thus or , as these are the only integer divisors of . However, there do not exist integers such that this is true. Thus is irreducible in .  Suppose by way of contradiction that is prime in . Note that . Thus divides one of these factors.  First, suppose there exists some such that . Thus , and so . However, is not an integer, and thus cannot divide either of these factors. Thus is not prime in . By Part (a), this is not a UFD.       "
 },
 {
   "id": "def-ufd",
@@ -3949,7 +3940,7 @@ var ptx_lunr_docs = [
   "type": "Problem",
   "number": "4.35",
   "title": "",
-  "body": "  Prove that in a UFD an element is irreducible if and only if the ideal [^1] is prime.  Prove that is not a UFD.       Let be a UFD.  First, suppose is irreducible, and consider the ideal . Let such that . Thus , so there exists some such that . As we are in a UFD the elements and all have unique (up to associates) factorizations of irreducible elements. Thus must be an associate of one of the irreducible elements in the factorization of or , and so or , making prime.  Now suppose that is prime and that for some . Thus and , so either or , as is a prime ideal. Assume without loss of generality that . Thus for some . Thus and As UFDs are integral domains we see , making a unit. Thus is irreducible.     First, notice that . Define a function Let and behold  Suppose by way of contradiction there exist such that . Then and , and Thus or , as these are the only integer divisors of . However, there do not exist integers such that this is true. Thus is irreducible in .  Suppose by way of contradiction that is prime in . Note that . Thus divides one of these factors.  First, suppose there exists some such that . Thus , and so . However, is not an integer, and thus cannot divide either of these factors. Thus is not prime in . By Part (a), this is not a UFD.       "
+  "body": "  Prove that in a UFD an element is irreducible if and only if the ideal [^1] is prime.  Prove that is not a UFD.       Let be a UFD.  First, suppose is irreducible, and consider the ideal . Let such that . Thus , so there exists some such that . As we are in a UFD the elements and all have unique (up to associates) factorizations of irreducible elements. Thus must be an associate of one of the irreducible elements in the factorization of or , and so or , making prime.  Now suppose that is prime and that for some . Thus and , so either or , as is a prime ideal. Assume without loss of generality that . Thus for some . Thus and As UFDs are integral domains we see , making a unit. Thus is irreducible.    First, notice that . Define a function Let and behold  Suppose by way of contradiction there exist such that . Then and , and Thus or , as these are the only integer divisors of . However, there do not exist integers such that this is true. Thus is irreducible in .  Suppose by way of contradiction that is prime in . Note that . Thus divides one of these factors.  First, suppose there exists some such that . Thus , and so . However, is not an integer, and thus cannot divide either of these factors. Thus is not prime in . By Part (a), this is not a UFD.      "
 },
 {
   "id": "subsec-noeth",
@@ -4357,45 +4348,45 @@ var ptx_lunr_docs = [
   "body": "  Fix a group and a ring . The collection of left -linear representations of and -equivariant maps between them forms a category which we will denote .   "
 },
 {
-  "id": "problem-205",
+  "id": "problem-204",
   "level": "2",
-  "url": "sec-representations.html#problem-205",
+  "url": "sec-representations.html#problem-204",
   "type": "Problem",
   "number": "1.9",
   "title": "",
   "body": " Prove that if is any representation, then gives a faithful representation of .  "
 },
 {
-  "id": "problem-206",
+  "id": "problem-205",
   "level": "2",
-  "url": "sec-representations.html#problem-206",
+  "url": "sec-representations.html#problem-205",
   "type": "Problem",
   "number": "1.10",
   "title": "",
   "body": " Let be a matrix representation. Prove that the map is a degree representation.  "
 },
 {
-  "id": "problem-207",
+  "id": "problem-206",
   "level": "2",
-  "url": "sec-representations.html#problem-207",
+  "url": "sec-representations.html#problem-206",
   "type": "Problem",
   "number": "1.11",
   "title": "",
   "body": " Prove that the degree representations of are in bijective correspondence with the degree representations of the abelian group (where is the commutator subgroup of ).  "
 },
 {
-  "id": "problem-208",
+  "id": "problem-207",
   "level": "2",
-  "url": "sec-representations.html#problem-208",
+  "url": "sec-representations.html#problem-207",
   "type": "Problem",
   "number": "1.12",
   "title": "",
   "body": " Let be a (possibly infinite dimensional) -module ( is a finite group). Prove that for each there is an -submodule containing of dimension .  "
 },
 {
-  "id": "problem-209",
+  "id": "problem-208",
   "level": "2",
-  "url": "sec-representations.html#problem-209",
+  "url": "sec-representations.html#problem-208",
   "type": "Problem",
   "number": "1.13",
   "title": "",
@@ -4438,9 +4429,9 @@ var ptx_lunr_docs = [
   "body": "When is commutative (in particular when is a field), is an -algebra called the group -algebra of . "
 },
 {
-  "id": "problem-210",
+  "id": "problem-209",
   "level": "2",
-  "url": "sec-group-rings-and-modules.html#problem-210",
+  "url": "sec-group-rings-and-modules.html#problem-209",
   "type": "Problem",
   "number": "1.17",
   "title": "",
@@ -4645,9 +4636,9 @@ var ptx_lunr_docs = [
   "body": "    A division ring is both left Noetherian and left Artinian.    If is a PID but not a field (e.g., or ), then is Noetherian but not Artinian. To see is Noetherian, note that any ideal is of the form for some irreducible elements and positive integers . An ideal contains if it corresponds to a product of the same irreducibles with smaller or equal multiplicities; there are only finitely many of these so an ascending chain must stablilize. To see is not Artinian, take some irreducible and take the chain     A polynomial ring in infinitely many variables is neither Noetherian nor Artinian: there is an ascending chain and take a descending chain as in the last example.    The -module , where is the subring of generated by and , is Artinian but not Noetherian. Suppose that is generated by , where each is odd (we can write any element in like so). Observe that for each , there are integers such that , so . Thus, is generated by . Thus, the submodules of are itself, , and for . We have so is not Noetherian. However, any descending chain is either always equal to , or else has some as a term, and there are finitely many submodules of such an , so must stabilize.    The subring of given as is left Noetherian but not right Noetherian.     "
 },
 {
-  "id": "problem-211",
+  "id": "problem-210",
   "level": "2",
-  "url": "sec-chain-conditions.html#problem-211",
+  "url": "sec-chain-conditions.html#problem-210",
   "type": "Problem",
   "number": "3.6",
   "title": "",
@@ -4726,9 +4717,9 @@ var ptx_lunr_docs = [
   "body": "  Let be a division ring and set for some . I claim is semisimple as a left module over itself.    For each , let denote the subset of consisting of matrices whose only nonzero entires belong to the -th column. The rules for matrix addition and multiplication show that is a left ideal (i.e., a left submodule) of . Moreover, there is evident bijection between and (column vectors) and this bijection is an isomorphism of left -modules. We proved is simple as an -module and hence so is . Finally, is the internal direct sum of : because each matrix is uniquely a sum of the form with .   "
 },
 {
-  "id": "problem-212",
+  "id": "problem-211",
   "level": "2",
-  "url": "ch-semisimple-mod.html#problem-212",
+  "url": "ch-semisimple-mod.html#problem-211",
   "type": "Problem",
   "number": "4.5",
   "title": "",
@@ -4933,9 +4924,9 @@ var ptx_lunr_docs = [
   "body": "  Let be an -module. The map is a ring isomorphism, where and denote the natural inclusion and projection maps.    It is clear that this map is additive, as each and is. Observe that is the identity on if , and the zero map otherwise and that .  The map is a two-sided inverse for :    To see that respects multiplication, we have    "
 },
 {
-  "id": "problem-213",
+  "id": "problem-212",
   "level": "2",
-  "url": "sec-art-wedd.html#problem-213",
+  "url": "sec-art-wedd.html#problem-212",
   "type": "Problem",
   "number": "5.17",
   "title": "",

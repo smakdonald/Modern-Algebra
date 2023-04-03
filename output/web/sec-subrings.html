@@ -356,10 +356,14 @@ window.MathJax = {
 \def\sR{\mathscr R}
 \def\sS{\mathscr S}
 \def\sT{\mathscr T}
+\def\sU{\mathscr U}
+\def\sV{\mathscr V}
+\def\sW{\mathscr W}
+\def\sX{\mathscr X}
+\def\sY{\mathscr Y}
 \def\sZ{\mathscr Z}
 
 \def\tS{\tilde{S}}
-
 
 \def\sdp{\rtimes}
 \newcommand{\tensor}{\otimes} 
@@ -373,7 +377,6 @@ window.MathJax = {
 \newcommand{\vectwo}[2]{\begin{bmatrix} #1 \\ #2 \end{bmatrix}} 
 \newcommand{\vecthree}[3]{\begin{bmatrix} #1 \\ #2 \\ #3\end{bmatrix}} 
 \def\ob{{\mathfrak{ob}} }
-
 
 \def\qed{\square}
 \def\sse{\subseteq}
@@ -550,7 +553,7 @@ window.MathJax = {
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="ch-extras.html" class="internal"><span class="codenumber">8</span> <span class="title">Extras</span></a></div>
+<div class="toc-item"><a href="ch-gp-extras.html" class="internal"><span class="codenumber">8</span> <span class="title">Extras</span></a></div>
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-quals.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Qualifying Exams</span></a></div>
@@ -662,7 +665,7 @@ window.MathJax = {
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="ch-Extras.html" class="internal"><span class="codenumber">6</span> <span class="title">Extras</span></a></div>
+<div class="toc-item"><a href="ch-ring-extras.html" class="internal"><span class="codenumber">6</span> <span class="title">Extras</span></a></div>
 <ul class="structural"><li><div class="toc-item"><a href="sec-gpring.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Group Rings</span></a></div></li></ul>
 </li>
 </ul>
@@ -671,7 +674,7 @@ window.MathJax = {
 <div class="toc-item"><a href="part-fields.html" class="internal"><span class="codenumber">III</span> <span class="title">Field Theory</span></a></div>
 <ul class="structural">
 <li>
-<div class="toc-item"><a href="ch-fields.html" class="internal"><span class="codenumber">1</span> <span class="title">Fields</span></a></div>
+<div class="toc-item"><a href="ch-fields.html" class="internal"><span class="codenumber">1</span> <span class="title">Field Extensions</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-defnfield.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Definition and Examples</span></a></div></li>
 <li><div class="toc-item"><a href="sec-interactions.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Interactions</span></a></div></li>
@@ -794,35 +797,35 @@ window.MathJax = {
 <article class="definition definition-like" id="def-subring"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.25</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-588">A <em class="emphasis">subring</em> of a ring <span class="process-math">\(R\)</span> is a subset <span class="process-math">\(S \subset R\)</span> such that <span class="process-math">\(S\)</span> is a ring under the operations of <span class="process-math">\(R\text{.}\)</span> When <span class="process-math">\(R\)</span> is a field we call <span class="process-math">\(S\)</span> a <em class="emphasis"><span class="process-math">\(subfield\)</span></em> of <span class="process-math">\(R\text{.}\)</span>
+<div class="para" id="p-596">A <em class="emphasis">subring</em> of a ring <span class="process-math">\(R\)</span> is a subset <span class="process-math">\(S \subset R\)</span> such that <span class="process-math">\(S\)</span> is a ring under the operations of <span class="process-math">\(R\text{.}\)</span> When <span class="process-math">\(R\)</span> is a field we call <span class="process-math">\(S\)</span> a <em class="emphasis"><span class="process-math">\(subfield\)</span></em> of <span class="process-math">\(R\text{.}\)</span>
 </div></article><article class="lemma theorem-like" id="lem-subring-test"><h3 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">1.26</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-589">
+<div class="para logical" id="p-597">
 <div class="para">A nonempty subset <span class="process-math">\(S\)</span> of a ring <span class="process-math">\(R\)</span> is a subring iff either one of the following hold:</div>
 <ol class="decimal">
-<li id="li-183"><div class="para" id="p-590">
+<li id="li-193"><div class="para" id="p-598">
 <span class="process-math">\(S\)</span> is a subgroup of <span class="process-math">\(R\)</span> closed under multiplication.</div></li>
-<li id="li-184"><div class="para" id="p-591">
+<li id="li-194"><div class="para" id="p-599">
 <span class="process-math">\(S\)</span> is closed under subtraction and multiplication.</div></li>
 </ol>
 </div></article><article class="example example-like" id="ex-subring-examples"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.27</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-592"><ul class="disc">
-<li id="li-185"><div class="para" id="p-derived-li-185">
+<div class="para logical" id="p-600"><ul class="disc">
+<li id="li-195"><div class="para" id="p-derived-li-195">
 <span class="process-math">\(\Z\)</span> is a subring of <span class="process-math">\(\Q\text{,}\)</span> which is a subring of <span class="process-math">\(\R\text{,}\)</span> which is a subring of <span class="process-math">\(\C\text{.}\)</span>
 </div></li>
-<li id="li-186"><div class="para" id="p-derived-li-186">
+<li id="li-196"><div class="para" id="p-derived-li-196">
 <span class="process-math">\(2\Z\)</span> is a subring without <span class="process-math">\(1\)</span> of the ring <span class="process-math">\(Z\)</span> with <span class="process-math">\(1\text{.}\)</span>
 </div></li>
-<li id="li-187"><div class="para" id="p-derived-li-187">The set of continuous functions mapping <span class="process-math">\([0,1]\to \R\)</span> is a subring of <span class="process-math">\(\Fun([0,1],\R)\text{,}\)</span> denoted <span class="process-math">\(\cC([0,1])\text{.}\)</span>
+<li id="li-197"><div class="para" id="p-derived-li-197">The set of continuous functions mapping <span class="process-math">\([0,1]\to \R\)</span> is a subring of <span class="process-math">\(\Fun([0,1],\R)\text{,}\)</span> denoted <span class="process-math">\(\cC([0,1])\text{.}\)</span>
 </div></li>
-<li id="li-188"><div class="para" id="p-derived-li-188">The set <span class="process-math">\(\Z[i]=\left\{a+bi\mid a,b \in \Z\right\}\)</span> is a subring of <span class="process-math">\(\C\)</span> called the ring of Gaussian integers.</div></li>
+<li id="li-198"><div class="para" id="p-derived-li-198">The set <span class="process-math">\(\Z[i]=\left\{a+bi\mid a,b \in \Z\right\}\)</span> is a subring of <span class="process-math">\(\C\)</span> called the ring of Gaussian integers.</div></li>
 </ul></div></article><article class="definition definition-like" id="def-center-ring"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.28</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-593">
+<div class="para logical" id="p-601">
 <div class="para">The <em class="emphasis">center</em> of a ring <span class="process-math">\(R\)</span> is the set</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -832,15 +835,15 @@ Z(R)=\{z \in R \mid zr = rz \text{ for all }r \in R\}.
 </div></article><article class="lemma theorem-like" id="lem-center-is-subring"><h3 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">1.29</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-594">The center <span class="process-math">\(Z(R)\)</span> is a subring of <span class="process-math">\(R\text{.}\)</span> If <span class="process-math">\(R\)</span> is a ring with identity <span class="process-math">\(1\)</span> then <span class="process-math">\(Z(R)\)</span> is a subring that contains the same <span class="process-math">\(1\text{.}\)</span>
+<div class="para" id="p-602">The center <span class="process-math">\(Z(R)\)</span> is a subring of <span class="process-math">\(R\text{.}\)</span> If <span class="process-math">\(R\)</span> is a ring with identity <span class="process-math">\(1\)</span> then <span class="process-math">\(Z(R)\)</span> is a subring that contains the same <span class="process-math">\(1\text{.}\)</span>
 </div></article><article class="problem example-like" id="exe-center-of-quaternion-ring"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">1.30</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-595">Determine the center of the real quaternion ring <span class="process-math">\(\mathbb{H}\text{.}\)</span>
+<div class="para" id="p-603">Determine the center of the real quaternion ring <span class="process-math">\(\mathbb{H}\text{.}\)</span>
 </div></article><article class="lemma theorem-like" id="lem-quadratic-field"><h3 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">1.31</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-596">
+<div class="para logical" id="p-604">
 <div class="para">Let <span class="process-math">\(d\)</span> be a squarefree integer (that is, the prime factorization of <span class="process-math">\(d\)</span> has no repeated primes). Then the subset</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -849,8 +852,8 @@ Z(R)=\{z \in R \mid zr = rz \text{ for all }r \in R\}.
 </div>
 <div class="para">of <span class="process-math">\(\C\)</span> is a subring that is a field (called a <em class="emphasis">quadratic field</em>), and <span class="process-math">\(\Z[\sqrt{d}] = \{a + b\sqrt{d} | a,b \in \Z\}\)</span> is a subring of <span class="process-math">\(\Q(\sqrt{d})\text{.}\)</span>
 </div>
-</div></article><article class="hiddenproof" id="proof-59"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-59"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-59"><article class="hiddenproof"><div class="para" id="p-597">Both <span class="process-math">\(\Q(\sqrt {d})\)</span> and <span class="process-math">\(\Z[\sqrt{d}]\)</span> are closed under subtraction and multiplication, so they are subrings of <span class="process-math">\(\C\text{.}\)</span>
-</div> <div class="para logical" id="p-598">
+</div></article><article class="hiddenproof" id="proof-59"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-59"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-59"><article class="hiddenproof"><div class="para" id="p-605">Both <span class="process-math">\(\Q(\sqrt {d})\)</span> and <span class="process-math">\(\Z[\sqrt{d}]\)</span> are closed under subtraction and multiplication, so they are subrings of <span class="process-math">\(\C\text{.}\)</span>
+</div> <div class="para logical" id="p-606">
 <div class="para">The fact that <span class="process-math">\(\Q(\sqrt {d})\)</span> is a {} follows since <span class="process-math">\(\Q(\sqrt {d})\)</span> is also closed under taking inverses. Indeed the inverse of <span class="process-math">\(r + q \sqrt{d}\)</span> (from <span class="process-math">\(\C\)</span>) turns out to be</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -863,21 +866,21 @@ Z(R)=\{z \in R \mid zr = rz \text{ for all }r \in R\}.
 <article class="problem example-like" id="exe-finding-subring-counterexamples"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">1.32</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-599">
+<div class="para logical" id="p-607">
 <div class="para">If <span class="process-math">\(R\)</span> is a ring and <span class="process-math">\(S\)</span> is a subring of <span class="process-math">\(R\text{,}\)</span> it can happen that</div>
 <ol class="decimal">
-<li id="li-189"><div class="para" id="p-600">
+<li id="li-199"><div class="para" id="p-608">
 <span class="process-math">\(R\)</span> is unital but <span class="process-math">\(S\)</span> is not (e.g. <span class="process-math">\(S=2\Z\subset R= \Z\)</span>)</div></li>
-<li id="li-190"><div class="para" id="p-601">
+<li id="li-200"><div class="para" id="p-609">
 <span class="process-math">\(S\)</span> is unital but <span class="process-math">\(R\)</span> is not</div></li>
-<li id="li-191"><div class="para" id="p-602">both <span class="process-math">\(R\)</span> and <span class="process-math">\(S\)</span> are unital but <span class="process-math">\(1_R\neq 1_S\)</span>
+<li id="li-201"><div class="para" id="p-610">both <span class="process-math">\(R\)</span> and <span class="process-math">\(S\)</span> are unital but <span class="process-math">\(1_R\neq 1_S\)</span>
 </div></li>
 </ol>
 <div class="para">Find examples for each of these situations!</div>
 </div></article><article class="problem example-like" id="exe-subring-preservations"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">1.33</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-603">Any subring of a commutative ring is a commutative ring. Any unital subring of an integral domain is an integral domain.</div></article></section></div>
+<div class="para" id="p-611">Any subring of a commutative ring is a commutative ring. Any unital subring of an integral domain is an integral domain.</div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-defn-ex.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-ring-hom.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

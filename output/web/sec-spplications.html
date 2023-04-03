@@ -356,10 +356,14 @@ window.MathJax = {
 \def\sR{\mathscr R}
 \def\sS{\mathscr S}
 \def\sT{\mathscr T}
+\def\sU{\mathscr U}
+\def\sV{\mathscr V}
+\def\sW{\mathscr W}
+\def\sX{\mathscr X}
+\def\sY{\mathscr Y}
 \def\sZ{\mathscr Z}
 
 \def\tS{\tilde{S}}
-
 
 \def\sdp{\rtimes}
 \newcommand{\tensor}{\otimes} 
@@ -373,7 +377,6 @@ window.MathJax = {
 \newcommand{\vectwo}[2]{\begin{bmatrix} #1 \\ #2 \end{bmatrix}} 
 \newcommand{\vecthree}[3]{\begin{bmatrix} #1 \\ #2 \\ #3\end{bmatrix}} 
 \def\ob{{\mathfrak{ob}} }
-
 
 \def\qed{\square}
 \def\sse{\subseteq}
@@ -550,7 +553,7 @@ window.MathJax = {
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="ch-extras.html" class="internal"><span class="codenumber">8</span> <span class="title">Extras</span></a></div>
+<div class="toc-item"><a href="ch-gp-extras.html" class="internal"><span class="codenumber">8</span> <span class="title">Extras</span></a></div>
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-quals.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Qualifying Exams</span></a></div>
@@ -662,7 +665,7 @@ window.MathJax = {
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="ch-Extras.html" class="internal"><span class="codenumber">6</span> <span class="title">Extras</span></a></div>
+<div class="toc-item"><a href="ch-ring-extras.html" class="internal"><span class="codenumber">6</span> <span class="title">Extras</span></a></div>
 <ul class="structural"><li><div class="toc-item"><a href="sec-gpring.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Group Rings</span></a></div></li></ul>
 </li>
 </ul>
@@ -671,7 +674,7 @@ window.MathJax = {
 <div class="toc-item"><a href="part-fields.html" class="internal"><span class="codenumber">III</span> <span class="title">Field Theory</span></a></div>
 <ul class="structural">
 <li>
-<div class="toc-item"><a href="ch-fields.html" class="internal"><span class="codenumber">1</span> <span class="title">Fields</span></a></div>
+<div class="toc-item"><a href="ch-fields.html" class="internal"><span class="codenumber">1</span> <span class="title">Field Extensions</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-defnfield.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Definition and Examples</span></a></div></li>
 <li><div class="toc-item"><a href="sec-interactions.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Interactions</span></a></div></li>
@@ -791,11 +794,11 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-spplications"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">6.1</span> <span class="title">Applications</span>
 </h2>
-<div class="para" id="p-1104">Let us start by restating the Artin-Wedderburn theorem in the context of group rings.</div>
+<div class="para" id="p-1112">Let us start by restating the Artin-Wedderburn theorem in the context of group rings.</div>
 <article class="theorem theorem-like" id="thm-art-wedd-gr"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.1</span><span class="period">.</span><span class="space"> </span><span class="title">Artin-Wedderburn for Group Rings.</span>
 </h3>
-<div class="para logical" id="p-1105">
+<div class="para logical" id="p-1113">
 <div class="para">If <span class="process-math">\(G\)</span> is a finite group and <span class="process-math">\(K\)</span> is a field such that <span class="process-math">\(\mathrm{char}(K) \nmid |G|\text{,}\)</span> then there is an isomorphism of rings</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -804,26 +807,26 @@ K[G] \cong \operatorname{Mat}_{n_1}(D_1) \times \cdots \times \operatorname{Mat}
 </div>
 <div class="para">where <span class="process-math">\(D_1, \dots, D_m\)</span> are division rings. Furthermore, each <span class="process-math">\(D_i\)</span> contains <span class="process-math">\(K\)</span> (up to isomorphism) as a subring of its center and the above isomorphism is <span class="process-math">\(K\)</span>-linear. In particular, <span class="process-math">\(\dim_K(D_i) &lt; \infty\text{.}\)</span>
 </div>
-</div> <div class="para logical" id="p-1106">
+</div> <div class="para logical" id="p-1114">
 <div class="para">Moroever, we have:</div>
 <ol class="decimal">
-<li id="li-359"><div class="para" id="p-1107">
+<li id="li-369"><div class="para" id="p-1115">
 <span class="process-math">\(m\)</span> is the number of irreducible <span class="process-math">\(k\)</span>-linear representation of <span class="process-math">\(G\)</span> (up to isomorphism),</div></li>
-<li id="li-360"><div class="para" id="p-1108">the <span class="process-math">\(D_i\)</span>'s are the opposite rings of the endomorphism rings of these representations,</div></li>
-<li id="li-361"><div class="para" id="p-1109">the <span class="process-math">\(n_j\)</span>'s give the number of times each irreducible representation occurs in the decomposition of the regular representation of <span class="process-math">\(G\text{,}\)</span>
+<li id="li-370"><div class="para" id="p-1116">the <span class="process-math">\(D_i\)</span>'s are the opposite rings of the endomorphism rings of these representations,</div></li>
+<li id="li-371"><div class="para" id="p-1117">the <span class="process-math">\(n_j\)</span>'s give the number of times each irreducible representation occurs in the decomposition of the regular representation of <span class="process-math">\(G\text{,}\)</span>
 </div></li>
-<li id="li-362"><div class="para" id="p-1110">the numbers <span class="process-math">\(n_1 \cdot \dim_k(D_1), \dots, n_m \cdot \dim_k(D_m)\)</span> give the dimensions of these representations, and</div></li>
-<li id="li-363"><div class="para" id="p-1111"><span class="process-math">\(n_1^2 \cdot \dim_k(D_1) + \cdots + n_m^2 \cdot \dim_k(D_m) = |G|\text{.}\)</span></div></li>
+<li id="li-372"><div class="para" id="p-1118">the numbers <span class="process-math">\(n_1 \cdot \dim_k(D_1), \dots, n_m \cdot \dim_k(D_m)\)</span> give the dimensions of these representations, and</div></li>
+<li id="li-373"><div class="para" id="p-1119"><span class="process-math">\(n_1^2 \cdot \dim_k(D_1) + \cdots + n_m^2 \cdot \dim_k(D_m) = |G|\text{.}\)</span></div></li>
 </ol>
-</div></article><article class="hiddenproof" id="proof-114"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-114"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-114"><article class="hiddenproof"><div class="para" id="p-1112">This mostly follows from Artin-Wedderburn and Maschke's Theorem. What needs to be noted is that each division ring here contains a copy of <span class="process-math">\(K\)</span> in its center. Indeed, we recall that each <span class="process-math">\(D_i\)</span> is given as the opposite ring of <span class="process-math">\(\operatorname{End}_{K[G]}(M_i)\)</span> for some simple module <span class="process-math">\(M_i\text{.}\)</span> For <span class="process-math">\(\lambda\in K\text{,}\)</span> we have the map <span class="process-math">\(M_i \xrightarrow{\lambda \cdot} M_i\)</span> which commutes with any <span class="process-math">\(K[G]\)</span>-linear map from <span class="process-math">\(M_i\)</span> to itself.</div></article></div>
+</div></article><article class="hiddenproof" id="proof-114"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-114"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-114"><article class="hiddenproof"><div class="para" id="p-1120">This mostly follows from Artin-Wedderburn and Maschke's Theorem. What needs to be noted is that each division ring here contains a copy of <span class="process-math">\(K\)</span> in its center. Indeed, we recall that each <span class="process-math">\(D_i\)</span> is given as the opposite ring of <span class="process-math">\(\operatorname{End}_{K[G]}(M_i)\)</span> for some simple module <span class="process-math">\(M_i\text{.}\)</span> For <span class="process-math">\(\lambda\in K\text{,}\)</span> we have the map <span class="process-math">\(M_i \xrightarrow{\lambda \cdot} M_i\)</span> which commutes with any <span class="process-math">\(K[G]\)</span>-linear map from <span class="process-math">\(M_i\)</span> to itself.</div></article></div>
 <article class="corollary theorem-like" id="cor-ab-iff-gr-fieldprod"><h3 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">6.2</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1113">Let <span class="process-math">\(G\)</span> be a finite group, and <span class="process-math">\(K\)</span> be a field such that <span class="process-math">\(\mathrm{char}(K) \nmid |G|\text{.}\)</span> Then <span class="process-math">\(G\)</span> is abelian if and only if <span class="process-math">\(K[G]\)</span> is isomorphic to a product of fields.</div></article><article class="lemma theorem-like" id="lem-gring-and-iso"><h3 class="heading">
+<div class="para" id="p-1121">Let <span class="process-math">\(G\)</span> be a finite group, and <span class="process-math">\(K\)</span> be a field such that <span class="process-math">\(\mathrm{char}(K) \nmid |G|\text{.}\)</span> Then <span class="process-math">\(G\)</span> is abelian if and only if <span class="process-math">\(K[G]\)</span> is isomorphic to a product of fields.</div></article><article class="lemma theorem-like" id="lem-gring-and-iso"><h3 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">6.3</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1114">Let <span class="process-math">\(G\)</span> be any group and <span class="process-math">\(K\)</span> any field. Given two group homomorphisms <span class="process-math">\(\rho_1, \rho_2: G \to K^\times = \operatorname{GL}_1(K)\text{,}\)</span> the associated <span class="process-math">\(K[G]\)</span>-modules <span class="process-math">\(M_1\)</span> and <span class="process-math">\(M_2\)</span> are isomorphic if and only if <span class="process-math">\(\rho_1 =\rho_2\text{.}\)</span>
-</div></article><article class="hiddenproof" id="proof-115"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-115"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-115"><article class="hiddenproof"><div class="para logical" id="p-1115">
+<div class="para" id="p-1122">Let <span class="process-math">\(G\)</span> be any group and <span class="process-math">\(K\)</span> any field. Given two group homomorphisms <span class="process-math">\(\rho_1, \rho_2: G \to K^\times = \operatorname{GL}_1(K)\text{,}\)</span> the associated <span class="process-math">\(K[G]\)</span>-modules <span class="process-math">\(M_1\)</span> and <span class="process-math">\(M_2\)</span> are isomorphic if and only if <span class="process-math">\(\rho_1 =\rho_2\text{.}\)</span>
+</div></article><article class="hiddenproof" id="proof-115"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-115"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-115"><article class="hiddenproof"><div class="para logical" id="p-1123">
 <div class="para">Suppose that <span class="process-math">\(\alpha:M_1 \to M_2\)</span> is an isomorphism of <span class="process-math">\(K[G]\)</span>-modules. Identifying <span class="process-math">\(M_1=M_2=K\)</span> as vector spaces, we have <span class="process-math">\(\alpha(k) = ck\)</span> for some <span class="process-math">\(c\neq 0\text{.}\)</span> Then,</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -836,13 +839,13 @@ c \rho_1(g) (k) = \alpha \rho_1(g) (k) = \rho_2(g) \alpha(k) = \rho_2(g) (ck) = 
 <article class="proposition theorem-like" id="prop-dring-and-C"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">6.4</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1116">If <span class="process-math">\(D\)</span> is a division ring that contains <span class="process-math">\({\mathbb{R}}\)</span> in its center and <span class="process-math">\(\dim_{\mathbb{R}}(D) =2\text{,}\)</span> then <span class="process-math">\(D \cong \mathbb{C}\)</span> .</div></article><article class="hiddenproof" id="proof-116"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-116"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-116"><article class="hiddenproof"><div class="para" id="p-1117">Pick <span class="process-math">\(x \in D \smallsetminus {\mathbb{R}}\text{.}\)</span> Then <span class="process-math">\({\mathbb{R}}\subsetneqq {\mathbb{R}}[x] \subseteq D\text{,}\)</span> and since <span class="process-math">\({\mathbb{R}}[x]\)</span> is an <span class="process-math">\({\mathbb{R}}\)</span>-vectorspace, we must have <span class="process-math">\({\mathbb{R}}[x] = D\)</span> for dimension reasons. Thus <span class="process-math">\(D\)</span> is commutative and is a field. Since <span class="process-math">\(D\)</span> is a finite extension of <span class="process-math">\({\mathbb{R}}\text{,}\)</span> it is algebraic, so <span class="process-math">\({\mathbb{R}}\subsetneqq D \subseteq \mathbb{C}\text{,}\)</span> and we must have <span class="process-math">\(D=\mathbb{C}\text{.}\)</span>
+<div class="para" id="p-1124">If <span class="process-math">\(D\)</span> is a division ring that contains <span class="process-math">\({\mathbb{R}}\)</span> in its center and <span class="process-math">\(\dim_{\mathbb{R}}(D) =2\text{,}\)</span> then <span class="process-math">\(D \cong \mathbb{C}\)</span> .</div></article><article class="hiddenproof" id="proof-116"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-116"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-116"><article class="hiddenproof"><div class="para" id="p-1125">Pick <span class="process-math">\(x \in D \smallsetminus {\mathbb{R}}\text{.}\)</span> Then <span class="process-math">\({\mathbb{R}}\subsetneqq {\mathbb{R}}[x] \subseteq D\text{,}\)</span> and since <span class="process-math">\({\mathbb{R}}[x]\)</span> is an <span class="process-math">\({\mathbb{R}}\)</span>-vectorspace, we must have <span class="process-math">\({\mathbb{R}}[x] = D\)</span> for dimension reasons. Thus <span class="process-math">\(D\)</span> is commutative and is a field. Since <span class="process-math">\(D\)</span> is a finite extension of <span class="process-math">\({\mathbb{R}}\text{,}\)</span> it is algebraic, so <span class="process-math">\({\mathbb{R}}\subsetneqq D \subseteq \mathbb{C}\text{,}\)</span> and we must have <span class="process-math">\(D=\mathbb{C}\text{.}\)</span>
 </div></article></div>
 <article class="example example-like" id="example-35"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">6.5</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1118">Let <span class="process-math">\(k = {\mathbb{R}}\)</span> and <span class="process-math">\(G = S_3\text{.}\)</span> We find all the simple modules over the ring <span class="process-math">\({\mathbb{R}}[S_3]\)</span> or, equivalently, all irreducible <span class="process-math">\({\mathbb{R}}\)</span>-linear representations of <span class="process-math">\(S_3\text{.}\)</span> We also find the Artin-Wedderburn decomposition of <span class="process-math">\({\mathbb{R}}[S_3]\text{.}\)</span>
-</div> <div class="para logical" id="p-1119">
+<div class="para" id="p-1126">Let <span class="process-math">\(k = {\mathbb{R}}\)</span> and <span class="process-math">\(G = S_3\text{.}\)</span> We find all the simple modules over the ring <span class="process-math">\({\mathbb{R}}[S_3]\)</span> or, equivalently, all irreducible <span class="process-math">\({\mathbb{R}}\)</span>-linear representations of <span class="process-math">\(S_3\text{.}\)</span> We also find the Artin-Wedderburn decomposition of <span class="process-math">\({\mathbb{R}}[S_3]\text{.}\)</span>
+</div> <div class="para logical" id="p-1127">
 <div class="para">The one dimensional represenatations are given by group homomorphisms of the form <span class="process-math">\(S_3 \to {\mathbb{R}}^\times\text{,}\)</span> and any such map factors as</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -850,13 +853,13 @@ S_3 \twoheadrightarrow S_3^{\mathrm{ab}} \to {\mathbb{R}}^\times.
 \end{equation*}
 </div>
 <div class="para">Note that <span class="process-math">\(S_3^{\mathrm{ab}} = S_3/A_3 \cong C_2\)</span> and there are two group homomorphisms <span class="process-math">\(C_2 \to {\mathbb{R}}^\times\text{,}\)</span> sending the generator to either <span class="process-math">\(1\)</span> or <span class="process-math">\(-1\)</span> (the only elements of <span class="process-math">\({\mathbb{R}}^\times\)</span> of order <span class="process-math">\(1\)</span> or <span class="process-math">\(2\)</span>). This gives two representations: <span class="process-math">\(M_1 = {\mathbb{R}}\)</span> with <span class="process-math">\(S_3\)</span> acting trivially and <span class="process-math">\(M_2 = {\mathbb{R}}\)</span> with <span class="process-math">\(S_3\)</span> acting by the sign representation. These are not isomorphic by the previous lemma.</div>
-</div> <div class="para" id="p-1120">We have that <span class="process-math">\(1= \dim_{{\mathbb{R}}}(M_1) = n_1 \cdot \dim_{{\mathbb{R}}}(D_1)\)</span> so <span class="process-math">\(n_1=1\)</span> and <span class="process-math">\(\dim_{{\mathbb{R}}}(D_1)=1\text{,}\)</span> and likewise <span class="process-math">\(1= \dim_{{\mathbb{R}}}(M_2) = n_2 \cdot \dim_{{\mathbb{R}}}(D_2)\)</span> so <span class="process-math">\(n_2=1\)</span> and <span class="process-math">\(\dim_{{\mathbb{R}}}(D_2)=1\text{.}\)</span> So, the Artin-Wedderburn decomposition starts as</div> <div class="para logical" id="p-1121"><div class="displaymath process-math">
+</div> <div class="para" id="p-1128">We have that <span class="process-math">\(1= \dim_{{\mathbb{R}}}(M_1) = n_1 \cdot \dim_{{\mathbb{R}}}(D_1)\)</span> so <span class="process-math">\(n_1=1\)</span> and <span class="process-math">\(\dim_{{\mathbb{R}}}(D_1)=1\text{,}\)</span> and likewise <span class="process-math">\(1= \dim_{{\mathbb{R}}}(M_2) = n_2 \cdot \dim_{{\mathbb{R}}}(D_2)\)</span> so <span class="process-math">\(n_2=1\)</span> and <span class="process-math">\(\dim_{{\mathbb{R}}}(D_2)=1\text{.}\)</span> So, the Artin-Wedderburn decomposition starts as</div> <div class="para logical" id="p-1129"><div class="displaymath process-math">
 \begin{equation*}
 {\mathbb{R}}[S_3] \cong {\mathbb{R}}\times {\mathbb{R}}\times \cdots.
 \end{equation*}
-</div></div> <div class="para" id="p-1122">Note that there are no further factors of <span class="process-math">\({\mathbb{R}}\text{,}\)</span> since we found all of the one-dimensional simple modules.</div> <div class="para" id="p-1123">Recall also that <span class="process-math">\(S_3\)</span> acts on <span class="process-math">\({\mathbb{R}}^3\)</span> by permuting the basis (corresponding to the group homomorphism <span class="process-math">\(S_3 \to \operatorname{GL}_3({\mathbb{R}})\)</span> sending a permutation to its associated permutation matrix). The subspace <span class="process-math">\(M_3 = \{(a,b,c) \in {\mathbb{R}}^3 \mid a + b + c = 0\}\)</span> is a subrepresenation of <span class="process-math">\({\mathbb{R}}^3\)</span> of dimension <span class="process-math">\(2\text{.}\)</span> We claim it is irreducible: Say <span class="process-math">\(0 \ne (a,b,c) \in M_3\text{.}\)</span>
-</div> <div class="para" id="p-1124">By applying a permutation and scaling appropriately we obtain an element of the form <span class="process-math">\((1,x,-1-x) \in M_3\)</span> and hence <span class="process-math">\((1, -1-x, x) \in M_3\text{.}\)</span> Adding these gives <span class="process-math">\((2,-1,-1) \in M_3\)</span> and hence <span class="process-math">\((-1, 2,-1) \in M_3\text{.}\)</span> The latter two are linearly independent and so must span <span class="process-math">\(M_3\text{.}\)</span> This proves <span class="process-math">\((a,b,c)\)</span> generates <span class="process-math">\(M_3\)</span> as a left <span class="process-math">\({\mathbb{R}}[S_3]\)</span>-module and hence that <span class="process-math">\(M_3\)</span> is simple. Note that <span class="process-math">\(M_3\)</span> is not isomorphic to either <span class="process-math">\(M_1\)</span> nor <span class="process-math">\(M_2\)</span> by dimension considerations.</div> <div class="para" id="p-1125">We have that <span class="process-math">\(2=\dim{{\mathbb{R}}}(M_3) = n_3 \cdot \dim_{{\mathbb{R}}}(D_3)\text{,}\)</span> so there are two possibilities.</div> <div class="para logical" id="p-1126"><ol class="decimal">
-<li id="li-364"><div class="para logical" id="p-1127">
+</div></div> <div class="para" id="p-1130">Note that there are no further factors of <span class="process-math">\({\mathbb{R}}\text{,}\)</span> since we found all of the one-dimensional simple modules.</div> <div class="para" id="p-1131">Recall also that <span class="process-math">\(S_3\)</span> acts on <span class="process-math">\({\mathbb{R}}^3\)</span> by permuting the basis (corresponding to the group homomorphism <span class="process-math">\(S_3 \to \operatorname{GL}_3({\mathbb{R}})\)</span> sending a permutation to its associated permutation matrix). The subspace <span class="process-math">\(M_3 = \{(a,b,c) \in {\mathbb{R}}^3 \mid a + b + c = 0\}\)</span> is a subrepresenation of <span class="process-math">\({\mathbb{R}}^3\)</span> of dimension <span class="process-math">\(2\text{.}\)</span> We claim it is irreducible: Say <span class="process-math">\(0 \ne (a,b,c) \in M_3\text{.}\)</span>
+</div> <div class="para" id="p-1132">By applying a permutation and scaling appropriately we obtain an element of the form <span class="process-math">\((1,x,-1-x) \in M_3\)</span> and hence <span class="process-math">\((1, -1-x, x) \in M_3\text{.}\)</span> Adding these gives <span class="process-math">\((2,-1,-1) \in M_3\)</span> and hence <span class="process-math">\((-1, 2,-1) \in M_3\text{.}\)</span> The latter two are linearly independent and so must span <span class="process-math">\(M_3\text{.}\)</span> This proves <span class="process-math">\((a,b,c)\)</span> generates <span class="process-math">\(M_3\)</span> as a left <span class="process-math">\({\mathbb{R}}[S_3]\)</span>-module and hence that <span class="process-math">\(M_3\)</span> is simple. Note that <span class="process-math">\(M_3\)</span> is not isomorphic to either <span class="process-math">\(M_1\)</span> nor <span class="process-math">\(M_2\)</span> by dimension considerations.</div> <div class="para" id="p-1133">We have that <span class="process-math">\(2=\dim{{\mathbb{R}}}(M_3) = n_3 \cdot \dim_{{\mathbb{R}}}(D_3)\text{,}\)</span> so there are two possibilities.</div> <div class="para logical" id="p-1134"><ol class="decimal">
+<li id="li-374"><div class="para logical" id="p-1135">
 <div class="para">One possibility is <span class="process-math">\(n_3=1\)</span> and <span class="process-math">\(\dim_{{\mathbb{R}}}(D_3)=2\text{,}\)</span> in which case <span class="process-math">\(D_3\cong \mathbb{C}\text{,}\)</span> so the Artin-Wedderburn decomposition reads as</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -871,7 +874,7 @@ S_3 \twoheadrightarrow S_3^{\mathrm{ab}} \to {\mathbb{R}}^\times.
 </div>
 <div class="para">would be commutative, which it is not, as <span class="process-math">\(S_3\)</span> is not abelian.</div>
 </div></li>
-<li id="li-365"><div class="para logical" id="p-1128">
+<li id="li-375"><div class="para logical" id="p-1136">
 <div class="para">The other possibility is <span class="process-math">\(n_3=2\)</span> and <span class="process-math">\(D_3={\mathbb{R}}\text{.}\)</span> We obtain the AW decomposition</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -879,7 +882,7 @@ S_3 \twoheadrightarrow S_3^{\mathrm{ab}} \to {\mathbb{R}}^\times.
 \end{equation*}
 </div>
 </div></li>
-</ol></div> <div class="para" id="p-1129">(Alternatively, we could compute the endomorphism ring of <span class="process-math">\(M_3\)</span> and see that it contains only scalars.)</div> <div class="para" id="p-1130">We have found the AW decomposition of <span class="process-math">\({\mathbb{R}}[S_3]\text{.}\)</span> As a consequence, we have identified all of the irreducible real representations of <span class="process-math">\(S_3\text{.}\)</span>
+</ol></div> <div class="para" id="p-1137">(Alternatively, we could compute the endomorphism ring of <span class="process-math">\(M_3\)</span> and see that it contains only scalars.)</div> <div class="para" id="p-1138">We have found the AW decomposition of <span class="process-math">\({\mathbb{R}}[S_3]\text{.}\)</span> As a consequence, we have identified all of the irreducible real representations of <span class="process-math">\(S_3\text{.}\)</span>
 </div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="ch-applications.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-rep-closed-fields.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

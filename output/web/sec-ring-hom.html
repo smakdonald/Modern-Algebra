@@ -356,10 +356,14 @@ window.MathJax = {
 \def\sR{\mathscr R}
 \def\sS{\mathscr S}
 \def\sT{\mathscr T}
+\def\sU{\mathscr U}
+\def\sV{\mathscr V}
+\def\sW{\mathscr W}
+\def\sX{\mathscr X}
+\def\sY{\mathscr Y}
 \def\sZ{\mathscr Z}
 
 \def\tS{\tilde{S}}
-
 
 \def\sdp{\rtimes}
 \newcommand{\tensor}{\otimes} 
@@ -373,7 +377,6 @@ window.MathJax = {
 \newcommand{\vectwo}[2]{\begin{bmatrix} #1 \\ #2 \end{bmatrix}} 
 \newcommand{\vecthree}[3]{\begin{bmatrix} #1 \\ #2 \\ #3\end{bmatrix}} 
 \def\ob{{\mathfrak{ob}} }
-
 
 \def\qed{\square}
 \def\sse{\subseteq}
@@ -550,7 +553,7 @@ window.MathJax = {
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="ch-extras.html" class="internal"><span class="codenumber">8</span> <span class="title">Extras</span></a></div>
+<div class="toc-item"><a href="ch-gp-extras.html" class="internal"><span class="codenumber">8</span> <span class="title">Extras</span></a></div>
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-quals.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Qualifying Exams</span></a></div>
@@ -662,7 +665,7 @@ window.MathJax = {
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="ch-Extras.html" class="internal"><span class="codenumber">6</span> <span class="title">Extras</span></a></div>
+<div class="toc-item"><a href="ch-ring-extras.html" class="internal"><span class="codenumber">6</span> <span class="title">Extras</span></a></div>
 <ul class="structural"><li><div class="toc-item"><a href="sec-gpring.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Group Rings</span></a></div></li></ul>
 </li>
 </ul>
@@ -671,7 +674,7 @@ window.MathJax = {
 <div class="toc-item"><a href="part-fields.html" class="internal"><span class="codenumber">III</span> <span class="title">Field Theory</span></a></div>
 <ul class="structural">
 <li>
-<div class="toc-item"><a href="ch-fields.html" class="internal"><span class="codenumber">1</span> <span class="title">Fields</span></a></div>
+<div class="toc-item"><a href="ch-fields.html" class="internal"><span class="codenumber">1</span> <span class="title">Field Extensions</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-defnfield.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Definition and Examples</span></a></div></li>
 <li><div class="toc-item"><a href="sec-interactions.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Interactions</span></a></div></li>
@@ -794,54 +797,54 @@ window.MathJax = {
 <article class="definition definition-like" id="def-ring-homomorphism"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.34</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-604">
+<div class="para logical" id="p-612">
 <div class="para">If <span class="process-math">\(R\)</span> and <span class="process-math">\(S\)</span> are rings, a <em class="emphasis">ring homomorphism</em> from <span class="process-math">\(R\)</span> to <span class="process-math">\(S\)</span> is a function <span class="process-math">\(f: R \to S\)</span> that satisfies:</div>
 <ol class="decimal">
-<li id="li-192"><div class="para" id="p-605">
+<li id="li-202"><div class="para" id="p-613">
 <span class="process-math">\(f(x + y) = f(x) + f(y)\)</span> for all <span class="process-math">\(x,y \in R\text{,}\)</span>
 </div></li>
-<li id="li-193"><div class="para" id="p-606">
+<li id="li-203"><div class="para" id="p-614">
 <span class="process-math">\(f(x \cdot y) = f(x) \cdot f(y)\)</span> for all <span class="process-math">\(x,y \in R\text{.}\)</span>
 </div></li>
 </ol>
 </div></article><article class="definition definition-like" id="def-ring-isomorphism"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.35</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-607">A ring homomorphism <span class="process-math">\(f: R \to S\)</span> that is bijective is called a <em class="emphasis">ring isomorphism</em>. Two rings <span class="process-math">\(R\)</span> and <span class="process-math">\(S\)</span> are <em class="emphasis">isomorphic</em>, written <span class="process-math">\(R \cong S\text{,}\)</span> if there is an isomorphism from <span class="process-math">\(R\)</span> to <span class="process-math">\(S\text{.}\)</span>
+<div class="para" id="p-615">A ring homomorphism <span class="process-math">\(f: R \to S\)</span> that is bijective is called a <em class="emphasis">ring isomorphism</em>. Two rings <span class="process-math">\(R\)</span> and <span class="process-math">\(S\)</span> are <em class="emphasis">isomorphic</em>, written <span class="process-math">\(R \cong S\text{,}\)</span> if there is an isomorphism from <span class="process-math">\(R\)</span> to <span class="process-math">\(S\text{.}\)</span>
 </div></article><article class="proposition theorem-like" id="prop-ring-isomorphism-invariants"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.36</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-608">
+<div class="para logical" id="p-616">
 <div class="para">The following are ring isomorphism invariants:</div>
 <ol class="decimal">
-<li id="li-194"><div class="para" id="p-609">all group isomorphism invariants of the additive group, including the isomorphism class (i.e., if <span class="process-math">\(R\cong S\)</span> then <span class="process-math">\((R,+)\cong(S,+)\)</span>).</div></li>
-<li id="li-195"><div class="para" id="p-610">being unital, being commutative, division ring, field, integral domain</div></li>
-<li id="li-196"><div class="para" id="p-611">the number of zero divisors.</div></li>
-<li id="li-197"><div class="para" id="p-612">if <span class="process-math">\(R\)</span> is unital, all group isomorphism invariants of the group of units, including the isomorphism class (i.e., if <span class="process-math">\(R\cong S\)</span> then <span class="process-math">\((R^\times,\cdot)\cong(S^\times,\cdot)\)</span>).</div></li>
-<li id="li-198"><div class="para" id="p-613">the isomorphism type of the center (i.e., if <span class="process-math">\(R\cong S\)</span> then <span class="process-math">\(Z(R)\cong Z(S)\)</span>).</div></li>
+<li id="li-204"><div class="para" id="p-617">all group isomorphism invariants of the additive group, including the isomorphism class (i.e., if <span class="process-math">\(R\cong S\)</span> then <span class="process-math">\((R,+)\cong(S,+)\)</span>).</div></li>
+<li id="li-205"><div class="para" id="p-618">being unital, being commutative, division ring, field, integral domain</div></li>
+<li id="li-206"><div class="para" id="p-619">the number of zero divisors.</div></li>
+<li id="li-207"><div class="para" id="p-620">if <span class="process-math">\(R\)</span> is unital, all group isomorphism invariants of the group of units, including the isomorphism class (i.e., if <span class="process-math">\(R\cong S\)</span> then <span class="process-math">\((R^\times,\cdot)\cong(S^\times,\cdot)\)</span>).</div></li>
+<li id="li-208"><div class="para" id="p-621">the isomorphism type of the center (i.e., if <span class="process-math">\(R\cong S\)</span> then <span class="process-math">\(Z(R)\cong Z(S)\)</span>).</div></li>
 </ol>
 </div></article><article class="example example-like" id="exe-ring-homomorphisms-examples"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.37</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-614"><ol class="decimal">
-<li id="li-199"><div class="para" id="p-derived-li-199">The identity map is a ring isomorphism.</div></li>
-<li id="li-200"><div class="para" id="p-derived-li-200">Let <span class="process-math">\(S\)</span> be a subring of a ring <span class="process-math">\(R\text{.}\)</span> The inclusion mapping of <span class="process-math">\(S\)</span> into <span class="process-math">\(A\)</span> is a ring homomorphism.</div></li>
-<li id="li-201"><div class="para" id="p-derived-li-201">Projection maps are ring homomorphisms.</div></li>
+<div class="para logical" id="p-622"><ol class="decimal">
+<li id="li-209"><div class="para" id="p-derived-li-209">The identity map is a ring isomorphism.</div></li>
+<li id="li-210"><div class="para" id="p-derived-li-210">Let <span class="process-math">\(S\)</span> be a subring of a ring <span class="process-math">\(R\text{.}\)</span> The inclusion mapping of <span class="process-math">\(S\)</span> into <span class="process-math">\(A\)</span> is a ring homomorphism.</div></li>
+<li id="li-211"><div class="para" id="p-derived-li-211">Projection maps are ring homomorphisms.</div></li>
 </ol></div></article><article class="lemma theorem-like" id="lem-ring-homomorphism-properties"><h3 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">1.38</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-615">
+<div class="para logical" id="p-623">
 <div class="para">If <span class="process-math">\(f: R \to S\)</span> is a ring homomorphism, then</div>
 <ol class="decimal">
-<li id="li-202"><div class="para" id="p-616">
+<li id="li-212"><div class="para" id="p-624">
 <span class="process-math">\(f(0_R) = 0_S\)</span> and <span class="process-math">\(f(-x)=-f(x)\text{.}\)</span>
 </div></li>
-<li id="li-203"><div class="para" id="p-617">if <span class="process-math">\(R\text{,}\)</span> <span class="process-math">\(S\)</span> are unital then <span class="process-math">\(f(1_R)\)</span> can be either <span class="process-math">\(0_S, 1_S\)</span> or a zero divisor.</div></li>
-<li id="li-204"><div class="para" id="p-618">If <span class="process-math">\(f(1_R)=1_S\)</span> and <span class="process-math">\(u\in R^\times\)</span> then <span class="process-math">\(f(u^{-1})=f(u)^{-1}\text{.}\)</span>
+<li id="li-213"><div class="para" id="p-625">if <span class="process-math">\(R\text{,}\)</span> <span class="process-math">\(S\)</span> are unital then <span class="process-math">\(f(1_R)\)</span> can be either <span class="process-math">\(0_S, 1_S\)</span> or a zero divisor.</div></li>
+<li id="li-214"><div class="para" id="p-626">If <span class="process-math">\(f(1_R)=1_S\)</span> and <span class="process-math">\(u\in R^\times\)</span> then <span class="process-math">\(f(u^{-1})=f(u)^{-1}\text{.}\)</span>
 </div></li>
-<li id="li-205"><div class="para" id="p-619">If <span class="process-math">\(f: R \to S\)</span> and <span class="process-math">\(g:S\to T\)</span> are ring homomorphisms (or isomorphisms, respectively), then <span class="process-math">\(g\circ f:R\to T\)</span> is a ring homomorphism (or isomorphism).</div></li>
+<li id="li-215"><div class="para" id="p-627">If <span class="process-math">\(f: R \to S\)</span> and <span class="process-math">\(g:S\to T\)</span> are ring homomorphisms (or isomorphisms, respectively), then <span class="process-math">\(g\circ f:R\to T\)</span> is a ring homomorphism (or isomorphism).</div></li>
 </ol>
-</div></article><article class="hiddenproof" id="proof-60"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-60"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-60"><article class="hiddenproof"><div class="para logical" id="p-620"><ol class="decimal"><li id="li-206"><div class="para" id="p-derived-li-206">Since <span class="process-math">\(1_R1_R=1_R\)</span> we have <span class="process-math">\(f(1_R)f(1_R)=f(1_R)\text{,}\)</span> thus<div class="displaymath process-math">
+</div></article><article class="hiddenproof" id="proof-60"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-60"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-60"><article class="hiddenproof"><div class="para logical" id="p-628"><ol class="decimal"><li id="li-216"><div class="para" id="p-derived-li-216">Since <span class="process-math">\(1_R1_R=1_R\)</span> we have <span class="process-math">\(f(1_R)f(1_R)=f(1_R)\text{,}\)</span> thus<div class="displaymath process-math">
 \begin{equation*}
 f(1_R)(f(1_R)-1_S)=0_S.
 \end{equation*}
@@ -849,19 +852,19 @@ f(1_R)(f(1_R)-1_S)=0_S.
 <article class="problem example-like" id="exe-equivalent-field-definitions"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">1.39</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-621">Let <span class="process-math">\(A\)</span> be a nontrivial ring. Then <span class="process-math">\(A\)</span> is a field if and only if every homomorphism of <span class="process-math">\(A\)</span> into a nonzero ring <span class="process-math">\(B\)</span> is injective.</div></article><article class="problem example-like" id="problem-147"><h3 class="heading">
+<div class="para" id="p-629">Let <span class="process-math">\(A\)</span> be a nontrivial ring. Then <span class="process-math">\(A\)</span> is a field if and only if every homomorphism of <span class="process-math">\(A\)</span> into a nonzero ring <span class="process-math">\(B\)</span> is injective.</div></article><article class="problem example-like" id="problem-146"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">1.40</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-622">Suppose <span class="process-math">\(R\)</span> is commutative and <span class="process-math">\(e\)</span> an idempotent. Let <span class="process-math">\(Re:=\{re\mid r\in R\}\text{.}\)</span> Prove that the map <span class="process-math">\(\phi:R\to Re \times R(1-e)\)</span> given by <span class="process-math">\(\phi(r)=(re, r(1-e))\)</span> is a ring isomorphism.</div></article><article class="problem example-like" id="problem-148"><h3 class="heading">
+<div class="para" id="p-630">Suppose <span class="process-math">\(R\)</span> is commutative and <span class="process-math">\(e\)</span> an idempotent. Let <span class="process-math">\(Re:=\{re\mid r\in R\}\text{.}\)</span> Prove that the map <span class="process-math">\(\phi:R\to Re \times R(1-e)\)</span> given by <span class="process-math">\(\phi(r)=(re, r(1-e))\)</span> is a ring isomorphism.</div></article><article class="problem example-like" id="problem-147"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">1.41</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-623">
+<div class="para logical" id="p-631">
 <div class="para">Let <span class="process-math">\(a, b\)</span> be squarefree integers and set <span class="process-math">\(R=\Z[\sqrt{a}]\)</span> and <span class="process-math">\(S=\Z[\sqrt{b}]\text{.}\)</span>
 </div>
 <ol class="decimal">
-<li id="li-207"><div class="para" id="p-624">There is a group isomorphism <span class="process-math">\((R,+) \cong (S,+)\text{.}\)</span>
+<li id="li-217"><div class="para" id="p-632">There is a group isomorphism <span class="process-math">\((R,+) \cong (S,+)\text{.}\)</span>
 </div></li>
-<li id="li-208"><div class="para" id="p-625">There is a ring isomorphism <span class="process-math">\(R \cong S\)</span> if and only if <span class="process-math">\(a = b\text{.}\)</span>
+<li id="li-218"><div class="para" id="p-633">There is a ring isomorphism <span class="process-math">\(R \cong S\)</span> if and only if <span class="process-math">\(a = b\text{.}\)</span>
 </div></li>
 </ol>
 </div></article></section></div>

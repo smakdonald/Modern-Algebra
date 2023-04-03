@@ -356,10 +356,14 @@ window.MathJax = {
 \def\sR{\mathscr R}
 \def\sS{\mathscr S}
 \def\sT{\mathscr T}
+\def\sU{\mathscr U}
+\def\sV{\mathscr V}
+\def\sW{\mathscr W}
+\def\sX{\mathscr X}
+\def\sY{\mathscr Y}
 \def\sZ{\mathscr Z}
 
 \def\tS{\tilde{S}}
-
 
 \def\sdp{\rtimes}
 \newcommand{\tensor}{\otimes} 
@@ -373,7 +377,6 @@ window.MathJax = {
 \newcommand{\vectwo}[2]{\begin{bmatrix} #1 \\ #2 \end{bmatrix}} 
 \newcommand{\vecthree}[3]{\begin{bmatrix} #1 \\ #2 \\ #3\end{bmatrix}} 
 \def\ob{{\mathfrak{ob}} }
-
 
 \def\qed{\square}
 \def\sse{\subseteq}
@@ -550,7 +553,7 @@ window.MathJax = {
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="ch-extras.html" class="internal"><span class="codenumber">8</span> <span class="title">Extras</span></a></div>
+<div class="toc-item"><a href="ch-gp-extras.html" class="internal"><span class="codenumber">8</span> <span class="title">Extras</span></a></div>
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-quals.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Qualifying Exams</span></a></div>
@@ -662,7 +665,7 @@ window.MathJax = {
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="ch-Extras.html" class="internal"><span class="codenumber">6</span> <span class="title">Extras</span></a></div>
+<div class="toc-item"><a href="ch-ring-extras.html" class="internal"><span class="codenumber">6</span> <span class="title">Extras</span></a></div>
 <ul class="structural"><li><div class="toc-item"><a href="sec-gpring.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Group Rings</span></a></div></li></ul>
 </li>
 </ul>
@@ -671,7 +674,7 @@ window.MathJax = {
 <div class="toc-item"><a href="part-fields.html" class="internal"><span class="codenumber">III</span> <span class="title">Field Theory</span></a></div>
 <ul class="structural">
 <li>
-<div class="toc-item"><a href="ch-fields.html" class="internal"><span class="codenumber">1</span> <span class="title">Fields</span></a></div>
+<div class="toc-item"><a href="ch-fields.html" class="internal"><span class="codenumber">1</span> <span class="title">Field Extensions</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-defnfield.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Definition and Examples</span></a></div></li>
 <li><div class="toc-item"><a href="sec-interactions.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Interactions</span></a></div></li>
@@ -791,14 +794,14 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-grp-dps"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">6.1</span> <span class="title">Direct Products</span>
 </h2>
-<article class="problem example-like" id="problem-92"><h3 class="heading">
+<article class="problem example-like" id="problem-91"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">6.1</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-477">Let <span class="process-math">\(G\)</span> be a group that acts on a set <span class="process-math">\(A\text{,}\)</span> and <span class="process-math">\(H\)</span> a subgroup of <span class="process-math">\(G\)</span> such that for any <span class="process-math">\(a, b \in A\)</span> there exists a unique <span class="process-math">\(h \in H\)</span> with <span class="process-math">\(ha = b\text{.}\)</span> (a) Prove that for every <span class="process-math">\(a \in A, G = HG_a\)</span> and <span class="process-math">\(H \cap Ga = \{1\}\text{,}\)</span> where <span class="process-math">\(G_a = \{g \in G | ga = a\}.\)</span> (b) Prove that if <span class="process-math">\(H \subseteq Z(G)\)</span> then for every <span class="process-math">\(a \in A\text{,}\)</span> <span class="process-math">\(G\)</span> is the internal direct product of <span class="process-math">\(H\)</span> and <span class="process-math">\(G_a.\)</span>
-</div></article><article class="hiddenproof" id="proof-48"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-48"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-48"><article class="hiddenproof"><div class="para" id="p-478">Let <span class="process-math">\(G\)</span> be a group that acts on a set <span class="process-math">\(A\text{,}\)</span> and <span class="process-math">\(H\)</span> a subgroup of <span class="process-math">\(G\)</span> such thatfor any <span class="process-math">\(a, b \in A\)</span> there exists a unique <span class="process-math">\(h \in H\)</span> with <span class="process-math">\(ha = b\text{.}\)</span>
-</div> <div class="para" id="p-479">Suppose there exists some <span class="process-math">\(h\in H\)</span> such that <span class="process-math">\(h\in G_a\text{.}\)</span> Then <span class="process-math">\(ha=a\text{.}\)</span> But <span class="process-math">\(ea=a\)</span> by the definition of group action. As the <span class="process-math">\(h\in G_a\)</span> is unique, we see <span class="process-math">\(h=e\text{.}\)</span> Thus <span class="process-math">\(H\cap G_a=\{e\}\text{.}\)</span>
-</div> <div class="para" id="p-480">Let <span class="process-math">\(g\in G\)</span> and <span class="process-math">\(a\in A\text{.}\)</span> If <span class="process-math">\(g\in H\)</span> then we can write <span class="process-math">\(g=ge\text{,}\)</span> as <span class="process-math">\(e\in G_a\text{.}\)</span> Suppose <span class="process-math">\(g\not\in H\)</span> and <span class="process-math">\(ga=b\)</span> for some <span class="process-math">\(b\in A\text{.}\)</span> There exists an <span class="process-math">\(h\in H\)</span> such that <span class="process-math">\(ha=b\text{.}\)</span> Then <span class="process-math">\(ha=ga\text{,}\)</span> so <span class="process-math">\(h\inv g a=a\text{,}\)</span> so <span class="process-math">\(h\inv g\in G_a\text{.}\)</span> Thankfully, we can know write <span class="process-math">\(g=h(h\inv g\)</span>), and so <span class="process-math">\(G=HG_a\text{.}\)</span>
-</div> <div class="para" id="p-481">If <span class="process-math">\(H\subseteq Z(G)\)</span> then we have <span class="process-math">\(HG_a=G_aH\text{,}\)</span> which means <span class="process-math">\(HG_a\leq G\text{.}\)</span> From Part (a) we have a trivial intersection, making <span class="process-math">\(G\)</span> the internal direct product of <span class="process-math">\(H\)</span> and <span class="process-math">\(G_a\text{.}\)</span>
+<div class="para" id="p-485">Let <span class="process-math">\(G\)</span> be a group that acts on a set <span class="process-math">\(A\text{,}\)</span> and <span class="process-math">\(H\)</span> a subgroup of <span class="process-math">\(G\)</span> such that for any <span class="process-math">\(a, b \in A\)</span> there exists a unique <span class="process-math">\(h \in H\)</span> with <span class="process-math">\(ha = b\text{.}\)</span> (a) Prove that for every <span class="process-math">\(a \in A, G = HG_a\)</span> and <span class="process-math">\(H \cap Ga = \{1\}\text{,}\)</span> where <span class="process-math">\(G_a = \{g \in G | ga = a\}.\)</span> (b) Prove that if <span class="process-math">\(H \subseteq Z(G)\)</span> then for every <span class="process-math">\(a \in A\text{,}\)</span> <span class="process-math">\(G\)</span> is the internal direct product of <span class="process-math">\(H\)</span> and <span class="process-math">\(G_a.\)</span>
+</div></article><article class="hiddenproof" id="proof-48"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-48"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-48"><article class="hiddenproof"><div class="para" id="p-486">Let <span class="process-math">\(G\)</span> be a group that acts on a set <span class="process-math">\(A\text{,}\)</span> and <span class="process-math">\(H\)</span> a subgroup of <span class="process-math">\(G\)</span> such thatfor any <span class="process-math">\(a, b \in A\)</span> there exists a unique <span class="process-math">\(h \in H\)</span> with <span class="process-math">\(ha = b\text{.}\)</span>
+</div> <div class="para" id="p-487">Suppose there exists some <span class="process-math">\(h\in H\)</span> such that <span class="process-math">\(h\in G_a\text{.}\)</span> Then <span class="process-math">\(ha=a\text{.}\)</span> But <span class="process-math">\(ea=a\)</span> by the definition of group action. As the <span class="process-math">\(h\in G_a\)</span> is unique, we see <span class="process-math">\(h=e\text{.}\)</span> Thus <span class="process-math">\(H\cap G_a=\{e\}\text{.}\)</span>
+</div> <div class="para" id="p-488">Let <span class="process-math">\(g\in G\)</span> and <span class="process-math">\(a\in A\text{.}\)</span> If <span class="process-math">\(g\in H\)</span> then we can write <span class="process-math">\(g=ge\text{,}\)</span> as <span class="process-math">\(e\in G_a\text{.}\)</span> Suppose <span class="process-math">\(g\not\in H\)</span> and <span class="process-math">\(ga=b\)</span> for some <span class="process-math">\(b\in A\text{.}\)</span> There exists an <span class="process-math">\(h\in H\)</span> such that <span class="process-math">\(ha=b\text{.}\)</span> Then <span class="process-math">\(ha=ga\text{,}\)</span> so <span class="process-math">\(h\inv g a=a\text{,}\)</span> so <span class="process-math">\(h\inv g\in G_a\text{.}\)</span> Thankfully, we can know write <span class="process-math">\(g=h(h\inv g\)</span>), and so <span class="process-math">\(G=HG_a\text{.}\)</span>
+</div> <div class="para" id="p-489">If <span class="process-math">\(H\subseteq Z(G)\)</span> then we have <span class="process-math">\(HG_a=G_aH\text{,}\)</span> which means <span class="process-math">\(HG_a\leq G\text{.}\)</span> From Part (a) we have a trivial intersection, making <span class="process-math">\(G\)</span> the internal direct product of <span class="process-math">\(H\)</span> and <span class="process-math">\(G_a\text{.}\)</span>
 </div></article></div></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="group-products.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-grp-spds.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

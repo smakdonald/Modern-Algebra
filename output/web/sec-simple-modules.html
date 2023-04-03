@@ -356,10 +356,14 @@ window.MathJax = {
 \def\sR{\mathscr R}
 \def\sS{\mathscr S}
 \def\sT{\mathscr T}
+\def\sU{\mathscr U}
+\def\sV{\mathscr V}
+\def\sW{\mathscr W}
+\def\sX{\mathscr X}
+\def\sY{\mathscr Y}
 \def\sZ{\mathscr Z}
 
 \def\tS{\tilde{S}}
-
 
 \def\sdp{\rtimes}
 \newcommand{\tensor}{\otimes} 
@@ -373,7 +377,6 @@ window.MathJax = {
 \newcommand{\vectwo}[2]{\begin{bmatrix} #1 \\ #2 \end{bmatrix}} 
 \newcommand{\vecthree}[3]{\begin{bmatrix} #1 \\ #2 \\ #3\end{bmatrix}} 
 \def\ob{{\mathfrak{ob}} }
-
 
 \def\qed{\square}
 \def\sse{\subseteq}
@@ -550,7 +553,7 @@ window.MathJax = {
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="ch-extras.html" class="internal"><span class="codenumber">8</span> <span class="title">Extras</span></a></div>
+<div class="toc-item"><a href="ch-gp-extras.html" class="internal"><span class="codenumber">8</span> <span class="title">Extras</span></a></div>
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-quals.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Qualifying Exams</span></a></div>
@@ -662,7 +665,7 @@ window.MathJax = {
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="ch-Extras.html" class="internal"><span class="codenumber">6</span> <span class="title">Extras</span></a></div>
+<div class="toc-item"><a href="ch-ring-extras.html" class="internal"><span class="codenumber">6</span> <span class="title">Extras</span></a></div>
 <ul class="structural"><li><div class="toc-item"><a href="sec-gpring.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Group Rings</span></a></div></li></ul>
 </li>
 </ul>
@@ -671,7 +674,7 @@ window.MathJax = {
 <div class="toc-item"><a href="part-fields.html" class="internal"><span class="codenumber">III</span> <span class="title">Field Theory</span></a></div>
 <ul class="structural">
 <li>
-<div class="toc-item"><a href="ch-fields.html" class="internal"><span class="codenumber">1</span> <span class="title">Fields</span></a></div>
+<div class="toc-item"><a href="ch-fields.html" class="internal"><span class="codenumber">1</span> <span class="title">Field Extensions</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-defnfield.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Definition and Examples</span></a></div></li>
 <li><div class="toc-item"><a href="sec-interactions.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Interactions</span></a></div></li>
@@ -791,41 +794,41 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-simple-modules"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.1</span> <span class="title">Simple Modules</span>
 </h2>
-<div class="para" id="p-936">Now we proceed to discuss some smallness conditions on modules. The first key notion is that of a simple module. Simple modules are the atoms in module theory.</div>
+<div class="para" id="p-944">Now we proceed to discuss some smallness conditions on modules. The first key notion is that of a simple module. Simple modules are the atoms in module theory.</div>
 <article class="definition definition-like" id="def-simple-module"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-937">An <span class="process-math">\(R\)</span>-module <span class="process-math">\(M\)</span> is <em class="emphasis">simple</em> if there are no nonzero proper submodules of <span class="process-math">\(M\text{.}\)</span>
+<div class="para" id="p-945">An <span class="process-math">\(R\)</span>-module <span class="process-math">\(M\)</span> is <em class="emphasis">simple</em> if there are no nonzero proper submodules of <span class="process-math">\(M\text{.}\)</span>
 </div></article><article class="lemma theorem-like" id="lem-equiv-simple-mod"><h3 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">2.2</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-938">
+<div class="para logical" id="p-946">
 <div class="para">Let <span class="process-math">\(M\)</span> be a nonzero <span class="process-math">\(R\)</span>-module. The following are equivalent:</div>
 <ol class="decimal">
-<li id="li-313"><div class="para" id="p-939">
+<li id="li-323"><div class="para" id="p-947">
 <span class="process-math">\(M\)</span> is simple</div></li>
-<li id="li-314"><div class="para" id="p-940">
+<li id="li-324"><div class="para" id="p-948">
 <span class="process-math">\(Rm= M\)</span> for all <span class="process-math">\(m\in M\smallsetminus 0\)</span>
 </div></li>
-<li id="li-315"><div class="para" id="p-941">
+<li id="li-325"><div class="para" id="p-949">
 <span class="process-math">\(M\cong R/I\)</span> for some maximal left ideal <span class="process-math">\(I\text{.}\)</span>
 </div></li>
 </ol>
-</div></article><article class="hiddenproof" id="proof-97"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-97"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-97"><article class="hiddenproof"><div class="para" id="p-942">For a left ideal <span class="process-math">\(I\text{,}\)</span> the submodules of <span class="process-math">\(R/I\)</span> are in bijective correspondence with the left <span class="process-math">\(R\)</span>-submodules of <span class="process-math">\(R\)</span> that contain <span class="process-math">\(I\text{,}\)</span> i.e., the left ideals that contain <span class="process-math">\(I\text{.}\)</span> It is then clear that if <span class="process-math">\(I\)</span> is a maximal left ideal, then <span class="process-math">\(R/I\)</span> is simple, so (3) implies (1). On the other hand, if <span class="process-math">\(M\)</span> is simple then it is cyclic (since (1) implies (2)), so <span class="process-math">\(M\cong R/I\)</span> for some left ideal <span class="process-math">\(I\text{,}\)</span> and if <span class="process-math">\(I \subsetneqq J\)</span> for some proper left ideal <span class="process-math">\(J\text{,}\)</span> then <span class="process-math">\(0 \neq J/I \subsetneqq R/I\text{;}\)</span> thus (1) implies (3).</div></article></div>
+</div></article><article class="hiddenproof" id="proof-97"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-97"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-97"><article class="hiddenproof"><div class="para" id="p-950">For a left ideal <span class="process-math">\(I\text{,}\)</span> the submodules of <span class="process-math">\(R/I\)</span> are in bijective correspondence with the left <span class="process-math">\(R\)</span>-submodules of <span class="process-math">\(R\)</span> that contain <span class="process-math">\(I\text{,}\)</span> i.e., the left ideals that contain <span class="process-math">\(I\text{.}\)</span> It is then clear that if <span class="process-math">\(I\)</span> is a maximal left ideal, then <span class="process-math">\(R/I\)</span> is simple, so (3) implies (1). On the other hand, if <span class="process-math">\(M\)</span> is simple then it is cyclic (since (1) implies (2)), so <span class="process-math">\(M\cong R/I\)</span> for some left ideal <span class="process-math">\(I\text{,}\)</span> and if <span class="process-math">\(I \subsetneqq J\)</span> for some proper left ideal <span class="process-math">\(J\text{,}\)</span> then <span class="process-math">\(0 \neq J/I \subsetneqq R/I\text{;}\)</span> thus (1) implies (3).</div></article></div>
 <article class="example example-like" id="example-23"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3</span><span class="period">.</span>
 </h3>
 <ol class="decimal">
-<li id="li-316"><div class="para" id="p-943">If <span class="process-math">\(K\)</span> is a field, a <span class="process-math">\(K\)</span>-vector space is simple if and only if it is <span class="process-math">\(1\)</span>-dimensional. Moreover, if <span class="process-math">\(R\)</span> is a <span class="process-math">\(K\)</span>-algebra, then any <span class="process-math">\(R\)</span>-module that is <span class="process-math">\(1\)</span>-dimensional as a vector space is a simple <span class="process-math">\(R\)</span>-module as well.</div></li>
-<li id="li-317"><div class="para" id="p-944">If <span class="process-math">\(R\)</span> is commutative, then an <span class="process-math">\(R\)</span>-module <span class="process-math">\(M\)</span> is simple if and only if <span class="process-math">\(M\)</span> is isomorphic to a field.</div></li>
-<li id="li-318"><div class="para" id="p-945">Let <span class="process-math">\(R={\mathbb{R}}[D_{2n}]\text{,}\)</span> and <span class="process-math">\(V\)</span> be the natural <span class="process-math">\(2\)</span>-dimensional representation by reflections and rotations. Then <span class="process-math">\(V\)</span> is a simple <span class="process-math">\(R\)</span>-module, since there are no <span class="process-math">\(D_{2n}\)</span>-stable subspaces.</div></li>
-<li id="li-319"><div class="para" id="p-946">Let <span class="process-math">\(K\)</span> be a field, or more generally a division ring, and let <span class="process-math">\(R=M_n(K) \cong \operatorname{End}_K(K^n)\text{.}\)</span> The module <span class="process-math">\(M=K^n\)</span> of column vectors is a simple <span class="process-math">\(R\)</span>-module Indeed, if <span class="process-math">\(v=(a_1,\dots,a_n)\neq 0\text{,}\)</span> say <span class="process-math">\(a_i\neq 0\text{;}\)</span> then <span class="process-math">\(a_i^{-1} E_{ij} v = e_i \in M\text{,}\)</span> and since <span class="process-math">\(M\)</span> is generated by the standard vectors <span class="process-math">\(e_i\text{,}\)</span> <span class="process-math">\(M = Rv\text{.}\)</span>
+<li id="li-326"><div class="para" id="p-951">If <span class="process-math">\(K\)</span> is a field, a <span class="process-math">\(K\)</span>-vector space is simple if and only if it is <span class="process-math">\(1\)</span>-dimensional. Moreover, if <span class="process-math">\(R\)</span> is a <span class="process-math">\(K\)</span>-algebra, then any <span class="process-math">\(R\)</span>-module that is <span class="process-math">\(1\)</span>-dimensional as a vector space is a simple <span class="process-math">\(R\)</span>-module as well.</div></li>
+<li id="li-327"><div class="para" id="p-952">If <span class="process-math">\(R\)</span> is commutative, then an <span class="process-math">\(R\)</span>-module <span class="process-math">\(M\)</span> is simple if and only if <span class="process-math">\(M\)</span> is isomorphic to a field.</div></li>
+<li id="li-328"><div class="para" id="p-953">Let <span class="process-math">\(R={\mathbb{R}}[D_{2n}]\text{,}\)</span> and <span class="process-math">\(V\)</span> be the natural <span class="process-math">\(2\)</span>-dimensional representation by reflections and rotations. Then <span class="process-math">\(V\)</span> is a simple <span class="process-math">\(R\)</span>-module, since there are no <span class="process-math">\(D_{2n}\)</span>-stable subspaces.</div></li>
+<li id="li-329"><div class="para" id="p-954">Let <span class="process-math">\(K\)</span> be a field, or more generally a division ring, and let <span class="process-math">\(R=M_n(K) \cong \operatorname{End}_K(K^n)\text{.}\)</span> The module <span class="process-math">\(M=K^n\)</span> of column vectors is a simple <span class="process-math">\(R\)</span>-module Indeed, if <span class="process-math">\(v=(a_1,\dots,a_n)\neq 0\text{,}\)</span> say <span class="process-math">\(a_i\neq 0\text{;}\)</span> then <span class="process-math">\(a_i^{-1} E_{ij} v = e_i \in M\text{,}\)</span> and since <span class="process-math">\(M\)</span> is generated by the standard vectors <span class="process-math">\(e_i\text{,}\)</span> <span class="process-math">\(M = Rv\text{.}\)</span>
 </div></li>
 </ol></article><article class="lemma theorem-like" id="lem-schurs"><h3 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Schur's Lemma.</span>
 </h3>
-<div class="para" id="p-947">Let <span class="process-math">\(R\)</span> be a ring, and <span class="process-math">\(M,N\)</span> be two simple <span class="process-math">\(R\)</span>-modules. Then every nonzero <span class="process-math">\(R\)</span>-module homomorphism <span class="process-math">\(\phi:M\to N\)</span> is an isomorphism. In particular, <span class="process-math">\(\operatorname{End}_R(M)\)</span> is a division ring.</div></article><article class="hiddenproof" id="proof-98"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-98"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-98"><article class="hiddenproof"><div class="para" id="p-948">For the first assertion, let <span class="process-math">\(f:M\to N\)</span> be <span class="process-math">\(R\)</span>-linear and nonzero. Then <span class="process-math">\(\operatorname{ker}(f)\neq M\text{,}\)</span> so <span class="process-math">\(\operatorname{ker}(f)=0\)</span> by simplicity, and <span class="process-math">\(\operatorname{im}(f) \neq 0\text{,}\)</span> so <span class="process-math">\(\operatorname{im}(f) = N\text{.}\)</span>
-</div> <div class="para" id="p-949">For the second, recall that <span class="process-math">\(\operatorname{End}_R(M)\)</span> is a ring. If <span class="process-math">\(f\in \operatorname{End}_R(M)\)</span> is nonzero, then by the first part, it is an isomorphism, so it has a two-sided inverse in <span class="process-math">\(\operatorname{End}_R(M)\text{.}\)</span>
+<div class="para" id="p-955">Let <span class="process-math">\(R\)</span> be a ring, and <span class="process-math">\(M,N\)</span> be two simple <span class="process-math">\(R\)</span>-modules. Then every nonzero <span class="process-math">\(R\)</span>-module homomorphism <span class="process-math">\(\phi:M\to N\)</span> is an isomorphism. In particular, <span class="process-math">\(\operatorname{End}_R(M)\)</span> is a division ring.</div></article><article class="hiddenproof" id="proof-98"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-98"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-98"><article class="hiddenproof"><div class="para" id="p-956">For the first assertion, let <span class="process-math">\(f:M\to N\)</span> be <span class="process-math">\(R\)</span>-linear and nonzero. Then <span class="process-math">\(\operatorname{ker}(f)\neq M\text{,}\)</span> so <span class="process-math">\(\operatorname{ker}(f)=0\)</span> by simplicity, and <span class="process-math">\(\operatorname{im}(f) \neq 0\text{,}\)</span> so <span class="process-math">\(\operatorname{im}(f) = N\text{.}\)</span>
+</div> <div class="para" id="p-957">For the second, recall that <span class="process-math">\(\operatorname{End}_R(M)\)</span> is a ring. If <span class="process-math">\(f\in \operatorname{End}_R(M)\)</span> is nonzero, then by the first part, it is an isomorphism, so it has a two-sided inverse in <span class="process-math">\(\operatorname{End}_R(M)\text{.}\)</span>
 </div></article></div></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="ch-simple-modules.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-fl-modules.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

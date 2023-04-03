@@ -356,10 +356,14 @@ window.MathJax = {
 \def\sR{\mathscr R}
 \def\sS{\mathscr S}
 \def\sT{\mathscr T}
+\def\sU{\mathscr U}
+\def\sV{\mathscr V}
+\def\sW{\mathscr W}
+\def\sX{\mathscr X}
+\def\sY{\mathscr Y}
 \def\sZ{\mathscr Z}
 
 \def\tS{\tilde{S}}
-
 
 \def\sdp{\rtimes}
 \newcommand{\tensor}{\otimes} 
@@ -373,7 +377,6 @@ window.MathJax = {
 \newcommand{\vectwo}[2]{\begin{bmatrix} #1 \\ #2 \end{bmatrix}} 
 \newcommand{\vecthree}[3]{\begin{bmatrix} #1 \\ #2 \\ #3\end{bmatrix}} 
 \def\ob{{\mathfrak{ob}} }
-
 
 \def\qed{\square}
 \def\sse{\subseteq}
@@ -550,7 +553,7 @@ window.MathJax = {
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="ch-extras.html" class="internal"><span class="codenumber">8</span> <span class="title">Extras</span></a></div>
+<div class="toc-item"><a href="ch-gp-extras.html" class="internal"><span class="codenumber">8</span> <span class="title">Extras</span></a></div>
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-quals.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Qualifying Exams</span></a></div>
@@ -662,7 +665,7 @@ window.MathJax = {
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="ch-Extras.html" class="internal"><span class="codenumber">6</span> <span class="title">Extras</span></a></div>
+<div class="toc-item"><a href="ch-ring-extras.html" class="internal"><span class="codenumber">6</span> <span class="title">Extras</span></a></div>
 <ul class="structural"><li><div class="toc-item"><a href="sec-gpring.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Group Rings</span></a></div></li></ul>
 </li>
 </ul>
@@ -671,7 +674,7 @@ window.MathJax = {
 <div class="toc-item"><a href="part-fields.html" class="internal"><span class="codenumber">III</span> <span class="title">Field Theory</span></a></div>
 <ul class="structural">
 <li>
-<div class="toc-item"><a href="ch-fields.html" class="internal"><span class="codenumber">1</span> <span class="title">Fields</span></a></div>
+<div class="toc-item"><a href="ch-fields.html" class="internal"><span class="codenumber">1</span> <span class="title">Field Extensions</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-defnfield.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Definition and Examples</span></a></div></li>
 <li><div class="toc-item"><a href="sec-interactions.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Interactions</span></a></div></li>
@@ -794,13 +797,13 @@ window.MathJax = {
 <article class="definition definition-like" id="def-representation"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-898">Let <span class="process-math">\(G\)</span> be a group. A <em class="emphasis">representation</em> of <span class="process-math">\(G\)</span> over a field <span class="process-math">\(K\)</span> is a <span class="process-math">\(K\)</span>-vector space <span class="process-math">\(V\)</span> equipped with a group homomorphism <span class="process-math">\(\rho:G\to \operatorname{Aut}_K(V)\text{.}\)</span> More generally, a representation of <span class="process-math">\(G\)</span> over a ring <span class="process-math">\(R\)</span> is an <span class="process-math">\(R\)</span>-module <span class="process-math">\(V\)</span> equipped with group homomorphism <span class="process-math">\(\rho:G\to \operatorname{Aut}_R(V)\text{.}\)</span> We may also say that <span class="process-math">\(G\)</span> <em class="emphasis">acts linearly</em> on <span class="process-math">\(V\text{.}\)</span>
+<div class="para" id="p-906">Let <span class="process-math">\(G\)</span> be a group. A <em class="emphasis">representation</em> of <span class="process-math">\(G\)</span> over a field <span class="process-math">\(K\)</span> is a <span class="process-math">\(K\)</span>-vector space <span class="process-math">\(V\)</span> equipped with a group homomorphism <span class="process-math">\(\rho:G\to \operatorname{Aut}_K(V)\text{.}\)</span> More generally, a representation of <span class="process-math">\(G\)</span> over a ring <span class="process-math">\(R\)</span> is an <span class="process-math">\(R\)</span>-module <span class="process-math">\(V\)</span> equipped with group homomorphism <span class="process-math">\(\rho:G\to \operatorname{Aut}_R(V)\text{.}\)</span> We may also say that <span class="process-math">\(G\)</span> <em class="emphasis">acts linearly</em> on <span class="process-math">\(V\text{.}\)</span>
 </div></article><article class="remark remark-like" id="remark-19"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.2</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-899">We can think of this data in a number of different ways.</div> <div class="para logical" id="p-900"><ol class="decimal">
-<li id="li-302">
-<div class="para logical" id="p-901">
+<div class="para" id="p-907">We can think of this data in a number of different ways.</div> <div class="para logical" id="p-908"><ol class="decimal">
+<li id="li-312">
+<div class="para logical" id="p-909">
 <div class="para">Given a representation <span class="process-math">\((V,\rho)\text{,}\)</span> the map</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -809,34 +812,34 @@ xy matrix
 </div>
 <div class="para">satisfies the properties</div>
 </div>
-<div class="para logical" id="p-902"><ol class="lower-alpha">
-<li id="li-303"><div class="para" id="p-903"><span class="process-math">\(\displaystyle e \cdot v= v\)</span></div></li>
-<li id="li-304"><div class="para" id="p-904"><span class="process-math">\(\displaystyle gh \cdot v = g \cdot (h \cdot v)\)</span></div></li>
-<li id="li-305"><div class="para" id="p-905"><span class="process-math">\(\displaystyle g \cdot (v+w)=(g \cdot v) + (g \cdot w)\)</span></div></li>
-<li id="li-306"><div class="para" id="p-906"><span class="process-math">\(g \cdot rv = r (g\cdot v)\text{,}\)</span></div></li>
+<div class="para logical" id="p-910"><ol class="lower-alpha">
+<li id="li-313"><div class="para" id="p-911"><span class="process-math">\(\displaystyle e \cdot v= v\)</span></div></li>
+<li id="li-314"><div class="para" id="p-912"><span class="process-math">\(\displaystyle gh \cdot v = g \cdot (h \cdot v)\)</span></div></li>
+<li id="li-315"><div class="para" id="p-913"><span class="process-math">\(\displaystyle g \cdot (v+w)=(g \cdot v) + (g \cdot w)\)</span></div></li>
+<li id="li-316"><div class="para" id="p-914"><span class="process-math">\(g \cdot rv = r (g\cdot v)\text{,}\)</span></div></li>
 </ol></div>
-<div class="para" id="p-907">In particular, the first two conditions say that <span class="process-math">\(G\)</span> acts on <span class="process-math">\(V\)</span> in the sense of group action on a set, and the last two say that the action of any element is by an <span class="process-math">\(R\)</span>-linear map. Conversely, any such function <span class="process-math">\(\psi\)</span> yields a representation <span class="process-math">\((V,\rho)\text{.}\)</span>
+<div class="para" id="p-915">In particular, the first two conditions say that <span class="process-math">\(G\)</span> acts on <span class="process-math">\(V\)</span> in the sense of group action on a set, and the last two say that the action of any element is by an <span class="process-math">\(R\)</span>-linear map. Conversely, any such function <span class="process-math">\(\psi\)</span> yields a representation <span class="process-math">\((V,\rho)\text{.}\)</span>
 </div>
 </li>
-<li id="li-307"><div class="para" id="p-908">If <span class="process-math">\(V=R^n\)</span> is free, then <span class="process-math">\(\operatorname{Aut}_R(V) \cong \operatorname{GL}_n(R)\text{,}\)</span> where <span class="process-math">\(\operatorname{GL}_n(R)\)</span> is the group of <span class="process-math">\(n\times n\)</span> invertible matrices with entries in <span class="process-math">\(R\text{.}\)</span> By a slight abuse of notation, we will say that a group homomorphism <span class="process-math">\(G\to \operatorname{GL}_n(V)\)</span> is a representation of <span class="process-math">\(G\text{.}\)</span>
+<li id="li-317"><div class="para" id="p-916">If <span class="process-math">\(V=R^n\)</span> is free, then <span class="process-math">\(\operatorname{Aut}_R(V) \cong \operatorname{GL}_n(R)\text{,}\)</span> where <span class="process-math">\(\operatorname{GL}_n(R)\)</span> is the group of <span class="process-math">\(n\times n\)</span> invertible matrices with entries in <span class="process-math">\(R\text{.}\)</span> By a slight abuse of notation, we will say that a group homomorphism <span class="process-math">\(G\to \operatorname{GL}_n(V)\)</span> is a representation of <span class="process-math">\(G\text{.}\)</span>
 </div></li>
 </ol></div></article><article class="example example-like" id="example-20"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-909"><ol class="decimal">
-<li id="li-308"><div class="para" id="p-910">For any group <span class="process-math">\(G\text{,}\)</span> and any <span class="process-math">\(R\)</span>-module <span class="process-math">\(V\text{,}\)</span> there is the <em class="emphasis">trivial representation</em> <span class="process-math">\(\rho:G\to \operatorname{Aut}_R(V)\)</span> where <span class="process-math">\(\rho(g)=1_V\)</span> for all <span class="process-math">\(g\in G\text{.}\)</span> In this action, every element acts trivially on <span class="process-math">\(M\text{.}\)</span>
+<div class="para logical" id="p-917"><ol class="decimal">
+<li id="li-318"><div class="para" id="p-918">For any group <span class="process-math">\(G\text{,}\)</span> and any <span class="process-math">\(R\)</span>-module <span class="process-math">\(V\text{,}\)</span> there is the <em class="emphasis">trivial representation</em> <span class="process-math">\(\rho:G\to \operatorname{Aut}_R(V)\)</span> where <span class="process-math">\(\rho(g)=1_V\)</span> for all <span class="process-math">\(g\in G\text{.}\)</span> In this action, every element acts trivially on <span class="process-math">\(M\text{.}\)</span>
 </div></li>
-<li id="li-309">
-<div class="para" id="p-911">Any representation on <span class="process-math">\(V = R\)</span> is determined by specifying a group homomorphism <span class="process-math">\(\rho:G \to \operatorname{Aut}_R(R)\cong R^\times\text{.}\)</span>
+<li id="li-319">
+<div class="para" id="p-919">Any representation on <span class="process-math">\(V = R\)</span> is determined by specifying a group homomorphism <span class="process-math">\(\rho:G \to \operatorname{Aut}_R(R)\cong R^\times\text{.}\)</span>
 </div>
-<div class="para" id="p-912">For example, if <span class="process-math">\(G = C_n=\langle g\rangle\)</span> (the multiplicative cyclic group of order <span class="process-math">\(n\)</span>) and <span class="process-math">\(R = \mathbb{C}\text{,}\)</span> there are <span class="process-math">\(n\)</span> possible such homomorphisms, determined by <span class="process-math">\(\rho(g)=e^\frac{2\pi k i}{n}\)</span> where <span class="process-math">\(0 \leq k \leq n-1\text{.}\)</span>
+<div class="para" id="p-920">For example, if <span class="process-math">\(G = C_n=\langle g\rangle\)</span> (the multiplicative cyclic group of order <span class="process-math">\(n\)</span>) and <span class="process-math">\(R = \mathbb{C}\text{,}\)</span> there are <span class="process-math">\(n\)</span> possible such homomorphisms, determined by <span class="process-math">\(\rho(g)=e^\frac{2\pi k i}{n}\)</span> where <span class="process-math">\(0 \leq k \leq n-1\text{.}\)</span>
 </div>
-<div class="para" id="p-913">Another important example of a rank 1 representation is the <em class="emphasis">sign representation</em> of the symmetric group <span class="process-math">\(S_n\text{,}\)</span> given by the group homomorphism which assigns to each permutation its sign, regarded as an element of the arbitrary ring <span class="process-math">\(R\text{.}\)</span>
+<div class="para" id="p-921">Another important example of a rank 1 representation is the <em class="emphasis">sign representation</em> of the symmetric group <span class="process-math">\(S_n\text{,}\)</span> given by the group homomorphism which assigns to each permutation its sign, regarded as an element of the arbitrary ring <span class="process-math">\(R\text{.}\)</span>
 </div>
 </li>
-<li id="li-310"><div class="para" id="p-914">The symmetric group <span class="process-math">\(S_n\)</span> acts on a free <span class="process-math">\(R\)</span>-module with basis <span class="process-math">\(b_1,\dots,b_n\)</span> by permuting coordinates: <span class="process-math">\(\rho(\sigma)(b_i) = b_{\sigma(i)}\text{.}\)</span> For a concrete example, <span class="process-math">\(S_3\)</span> acts on <span class="process-math">\({\mathbb{R}}^3\text{,}\)</span> where, for example <span class="process-math">\((132) \cdot (a_1,a_2,a_3) = (a_2,a_3,a_1)\text{.}\)</span>
+<li id="li-320"><div class="para" id="p-922">The symmetric group <span class="process-math">\(S_n\)</span> acts on a free <span class="process-math">\(R\)</span>-module with basis <span class="process-math">\(b_1,\dots,b_n\)</span> by permuting coordinates: <span class="process-math">\(\rho(\sigma)(b_i) = b_{\sigma(i)}\text{.}\)</span> For a concrete example, <span class="process-math">\(S_3\)</span> acts on <span class="process-math">\({\mathbb{R}}^3\text{,}\)</span> where, for example <span class="process-math">\((132) \cdot (a_1,a_2,a_3) = (a_2,a_3,a_1)\text{.}\)</span>
 </div></li>
-<li id="li-311"><div class="para logical" id="p-915">
+<li id="li-321"><div class="para logical" id="p-923">
 <div class="para">Let <span class="process-math">\(G = D_{2n}\text{,}\)</span> symmetries of the equilateral polygon on <span class="process-math">\(n\)</span> vertices. Then <span class="process-math">\(G\)</span> acts linearly on <span class="process-math">\(V={\mathbb{R}}^2\)</span> by rotations and reflections. If <span class="process-math">\(G\)</span> is generated by <span class="process-math">\(r\)</span> (rotation by <span class="process-math">\(2\pi/n\)</span>) and <span class="process-math">\(l\)</span> (reflection about the <span class="process-math">\(y\)</span>-axis), then the associated group homomorphism <span class="process-math">\(\rho: G \to\operatorname{GL}_2({\mathbb{R}})\)</span> maps</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -848,7 +851,7 @@ xy matrix
 \end{equation*}
 </div>
 </div></li>
-<li id="li-312"><div class="para logical" id="p-916">
+<li id="li-322"><div class="para logical" id="p-924">
 <div class="para">Let <span class="process-math">\(R=K\)</span> be a field,<span class="process-math">\(V =K^2\text{,}\)</span> and let <span class="process-math">\(G=(K,+)\text{.}\)</span> We see that the assignment</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -864,7 +867,7 @@ xy matrix
 </ol></div></article><article class="definition definition-like" id="def-equivariant-map"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.4</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-917">
+<div class="para logical" id="p-925">
 <div class="para">If <span class="process-math">\(\rho:G \to \operatorname{Aut}_R(V)\)</span> and <span class="process-math">\(\omega:G\to \operatorname{Aut}_R(W)\)</span> are <span class="process-math">\(R\)</span>-linear representations of <span class="process-math">\(G\)</span> on <span class="process-math">\(V\)</span> and <span class="process-math">\(W\)</span> respectively then a <em class="emphasis"><span class="process-math">\(G\)</span>-equivariant map</em> from <span class="process-math">\(V\)</span> to <span class="process-math">\(W\)</span> is an <span class="process-math">\(R\)</span>-module homomorphism <span class="process-math">\(f: V \to W\)</span> such that <span class="process-math">\(f(gv)=gf(v)\)</span> for all <span class="process-math">\(v\in V\text{.}\)</span> Equivalently the following diagram commutes:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -874,11 +877,11 @@ xy matrix
 </div></article><article class="definition definition-like" id="def-stable-mod"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.5</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-918">If <span class="process-math">\(\rho:G \to \operatorname{Aut}_R(V)\)</span> is a representation, a submodule <span class="process-math">\(W\leq V\)</span> is <em class="emphasis"><span class="process-math">\(G\)</span>-stable</em> if <span class="process-math">\(\rho(g)(W)\subseteq W\)</span> for all <span class="process-math">\(g\in G\text{.}\)</span>
+<div class="para" id="p-926">If <span class="process-math">\(\rho:G \to \operatorname{Aut}_R(V)\)</span> is a representation, a submodule <span class="process-math">\(W\leq V\)</span> is <em class="emphasis"><span class="process-math">\(G\)</span>-stable</em> if <span class="process-math">\(\rho(g)(W)\subseteq W\)</span> for all <span class="process-math">\(g\in G\text{.}\)</span>
 </div></article><article class="example example-like" id="example-21"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.6</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-919">
+<div class="para logical" id="p-927">
 <div class="para">For <span class="process-math">\(G=S_n\)</span> acting by permuting a basis as above, <span class="process-math">\(\{(\lambda,\dots,\lambda) \ | \ \lambda\in K\}\)</span> and</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -889,28 +892,28 @@ xy matrix
 </div></article><article class="example example-like" id="example-22"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.7</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-920">For <span class="process-math">\(G=(K,+)\)</span> acting on <span class="process-math">\(K^2\)</span> as above, <span class="process-math">\(\{(0,\lambda) \ | \ \lambda\in K\}\)</span> is a stable subspace.</div></article><article class="proposition theorem-like" id="prop-equimaps-category"><h3 class="heading">
+<div class="para" id="p-928">For <span class="process-math">\(G=(K,+)\)</span> acting on <span class="process-math">\(K^2\)</span> as above, <span class="process-math">\(\{(0,\lambda) \ | \ \lambda\in K\}\)</span> is a stable subspace.</div></article><article class="proposition theorem-like" id="prop-equimaps-category"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.8</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-921">Fix a group <span class="process-math">\(G\)</span> and a ring <span class="process-math">\(R\text{.}\)</span> The collection of left <span class="process-math">\(R\)</span>-linear representations of <span class="process-math">\(G\)</span> and <span class="process-math">\(G\)</span>-equivariant maps between them forms a category which we will denote <span class="process-math">\(\mathbf{Rep}_{R}(G)\text{.}\)</span>
-</div></article><article class="problem example-like" id="problem-205"><h3 class="heading">
+<div class="para" id="p-929">Fix a group <span class="process-math">\(G\)</span> and a ring <span class="process-math">\(R\text{.}\)</span> The collection of left <span class="process-math">\(R\)</span>-linear representations of <span class="process-math">\(G\)</span> and <span class="process-math">\(G\)</span>-equivariant maps between them forms a category which we will denote <span class="process-math">\(\mathbf{Rep}_{R}(G)\text{.}\)</span>
+</div></article><article class="problem example-like" id="problem-204"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">1.9</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-922">Prove that if <span class="process-math">\(\varphi:G\to GL(V)\)</span> is any representation, then <span class="process-math">\(varphi\)</span> gives a faithful representation of <span class="process-math">\(G/\ker\varphi\text{.}\)</span>
-</div></article><article class="problem example-like" id="problem-206"><h3 class="heading">
+<div class="para" id="p-930">Prove that if <span class="process-math">\(\varphi:G\to GL(V)\)</span> is any representation, then <span class="process-math">\(varphi\)</span> gives a faithful representation of <span class="process-math">\(G/\ker\varphi\text{.}\)</span>
+</div></article><article class="problem example-like" id="problem-205"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">1.10</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-923">Let <span class="process-math">\(\varphi:G\to GL_n(F)\)</span> be a matrix representation. Prove that the map <span class="process-math">\(g\mapsto\det(\varphi(g))\)</span> is a degree <span class="process-math">\(1\)</span> representation.</div></article><article class="problem example-like" id="problem-207"><h3 class="heading">
+<div class="para" id="p-931">Let <span class="process-math">\(\varphi:G\to GL_n(F)\)</span> be a matrix representation. Prove that the map <span class="process-math">\(g\mapsto\det(\varphi(g))\)</span> is a degree <span class="process-math">\(1\)</span> representation.</div></article><article class="problem example-like" id="problem-206"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">1.11</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-924">Prove that the degree <span class="process-math">\(1\)</span> representations of <span class="process-math">\(G\)</span> are in bijective correspondence with the degree <span class="process-math">\(1\)</span> representations of the abelian group <span class="process-math">\(G/G'\)</span> (where <span class="process-math">\(G'\)</span> is the commutator subgroup of <span class="process-math">\(G\)</span>).</div></article><article class="problem example-like" id="problem-208"><h3 class="heading">
+<div class="para" id="p-932">Prove that the degree <span class="process-math">\(1\)</span> representations of <span class="process-math">\(G\)</span> are in bijective correspondence with the degree <span class="process-math">\(1\)</span> representations of the abelian group <span class="process-math">\(G/G'\)</span> (where <span class="process-math">\(G'\)</span> is the commutator subgroup of <span class="process-math">\(G\)</span>).</div></article><article class="problem example-like" id="problem-207"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">1.12</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-925">Let <span class="process-math">\(V\)</span> be a (possibly infinite dimensional) <span class="process-math">\(FG\)</span>-module (<span class="process-math">\(G\)</span> is a finite group). Prove that for each <span class="process-math">\(v\in V\)</span> there is an <span class="process-math">\(FG\)</span>-submodule containing <span class="process-math">\(v\)</span> of dimension <span class="process-math">\(/leq|G|\text{.}\)</span>
-</div></article><article class="problem example-like" id="problem-209"><h3 class="heading">
+<div class="para" id="p-933">Let <span class="process-math">\(V\)</span> be a (possibly infinite dimensional) <span class="process-math">\(FG\)</span>-module (<span class="process-math">\(G\)</span> is a finite group). Prove that for each <span class="process-math">\(v\in V\)</span> there is an <span class="process-math">\(FG\)</span>-submodule containing <span class="process-math">\(v\)</span> of dimension <span class="process-math">\(/leq|G|\text{.}\)</span>
+</div></article><article class="problem example-like" id="problem-208"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">1.13</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-926">Prove that if <span class="process-math">\(|G|&gt;1\)</span> then every simple <span class="process-math">\(FG\)</span>-module has dimension less than <span class="process-math">\(|G|\text{.}\)</span>
+<div class="para" id="p-934">Prove that if <span class="process-math">\(|G|&gt;1\)</span> then every simple <span class="process-math">\(FG\)</span>-module has dimension less than <span class="process-math">\(|G|\text{.}\)</span>
 </div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="ch-grouprings.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-group-rings-and-modules.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
