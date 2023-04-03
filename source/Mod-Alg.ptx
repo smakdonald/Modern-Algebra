@@ -616,70 +616,6 @@
 
     </part>
 
-    <part xml:id="part-fields">
-      <title>Field Theory</title>
-
-      <chapter xml:id="ch-fields">
-        <title>Field Extensions</title>
-
-        <section xml:id="sec-defnfield">
-          <title>Definition and Examples</title>
-          
-        </section>
-
-        <section xml:id="sec-interactions">
-          <title>Interactions</title>
-          
-        </section>
-      </chapter>
-
-      <chapter xml:id="ch-extensions">
-        <title>Field Extensions</title>
-
-          <section xml:id="sec-firstprops">
-            <title>First Properties</title>
-          
-          </section>
-
-          <section xml:id="sec-albebraic">
-            <title>Algebraic Extensions</title>
-          
-          </section>
-
-          <section xml:id="sec-closure">
-            <title>Algebraic Closures</title>
-          
-          </section>
-
-          <section xml:id="sec-splitting">
-            <title>Splitting Fields</title>
-          
-          </section>
-        
-      </chapter>
-
-      <chapter xml:id="ch-galois">
-        <title>Galois Theory</title>
-
-        <section xml:id="sec-separable">
-          <title>Separability</title>
-          
-        </section>
-
-        <section xml:id="sec-galext">
-          <title>Galois Extensions</title>
-          
-        </section>
-
-        <section xml:id="sec-ftgt">
-          <title>The Fundamental Theorem of Galois Theory</title>
-          
-        </section>
-        
-      </chapter>
-
-    </part>
-
     <part xml:id="part-modules">
       <title>Module Theory</title>
 
@@ -687,7 +623,7 @@
         <title>Modules</title>
 
         <section xml:id="sec-defmod">
-          <title>Definition and Examples</title>
+          <title>Module Basics</title>
           
         </section>
 
@@ -809,6 +745,72 @@
       </chapter>
     
     </part>
+
+    <part xml:id="part-fields">
+      <title>Field Theory</title>
+
+      <chapter xml:id="ch-fields">
+        <title>Field Extensions</title>
+
+        <section xml:id="sec-defnfield">
+          <title>Definition and Examples</title>
+          
+        </section>
+
+        <section xml:id="sec-interactions">
+          <title>Interactions</title>
+          
+        </section>
+      </chapter>
+
+      <chapter xml:id="ch-extensions">
+        <title>Field Extensions</title>
+
+          <section xml:id="sec-firstprops">
+            <title>First Properties</title>
+          
+          </section>
+
+          <section xml:id="sec-albebraic">
+            <title>Algebraic Extensions</title>
+          
+          </section>
+
+          <section xml:id="sec-closure">
+            <title>Algebraic Closures</title>
+          
+          </section>
+
+          <section xml:id="sec-splitting">
+            <title>Splitting Fields</title>
+          
+          </section>
+        
+      </chapter>
+
+      <chapter xml:id="ch-galois">
+        <title>Galois Theory</title>
+
+        <section xml:id="sec-separable">
+          <title>Separability</title>
+          
+        </section>
+
+        <section xml:id="sec-galext">
+          <title>Galois Extensions</title>
+          
+        </section>
+
+        <section xml:id="sec-ftgt">
+          <title>The Fundamental Theorem of Galois Theory</title>
+          
+        </section>
+        
+      </chapter>
+
+    </part>
+
+
 
     <part xml:id="part-representation">
       <title>Representation Theory</title>
