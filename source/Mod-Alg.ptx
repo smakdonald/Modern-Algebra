@@ -749,20 +749,6 @@
     <part xml:id="part-fields">
       <title>Field Theory</title>
 
-      <chapter xml:id="ch-fields">
-        <title>Field Extensions</title>
-
-        <section xml:id="sec-defnfield">
-          <title>Definition and Examples</title>
-          
-        </section>
-
-        <section xml:id="sec-interactions">
-          <title>Interactions</title>
-          
-        </section>
-      </chapter>
-
       <chapter xml:id="ch-extensions">
         <title>Field Extensions</title>
 

@@ -199,30 +199,27 @@
           <proof>
             <p>
               <ol>
-            <li>
-              <p>
+                <li>
+                  <p>
+                    Let <m>x,y\in I</m>. Thus there exists integers <m>n,m</m> such that <m>xn=0=ym</m>. Consider <me>(xy)(nm)=(xn)(ym)=0.</me> Thus <m>xy\in I</m>. Additionally, <m>x+y(mn)=xmn+ymn=0+0=0</m>, and so <m>x+y\in I</m> as well.
+                  </p>
 
-            Let <m>x,y\in I</m>. Thus there exists integers <m>n,m</m> such that <m>xn=0=ym</m>. Consider <me>(xy)(nm)=(xn)(ym)=0.</me> Thus <m>xy\in I</m>. Additionally, <m>x+y(mn)=xmn+ymn=0+0=0</m>, and so <m>x+y\in I</m> as well.
-          </p>
-
-            <p>
-              We now consider <m>I</m> as an additive group. Notice that <m>0n=0</m> and thus the identity is in there. Let <m>x\in I.</m> We examine <m>x\inv</m>. Since <m>xn=0</m> we have <m>(xn)\inv=0</m> and so <m>x\inv n\inv=0</m>. So <m>x\inv\in I</m>. Perfect. We have ourselves a subring.
-            </p>
-          </li>
-
-
+                  <p>
+                    We now consider <m>I</m> as an additive group. Notice that <m>0n=0</m> and thus the identity is in there. Let <m>x\in I.</m> We examine <m>x\inv</m>. Since <m>xn=0</m> we have <m>(xn)\inv=0</m> and so <m>x\inv n\inv=0</m>. So <m>x\inv\in I</m>. Perfect. We have ourselves a subring.
+                  </p>
+                </li>
       
-            <li>
-              <p>
-                  Suppose now that <m>R/I</m> is a field. Luckily for us, this makes <m>I</m> a maximal ideal.
-              </p>
+                <li>
+                  <p>
+                    Suppose now that <m>R/I</m> is a field. Luckily for us, this makes <m>I</m> a maximal ideal.
+                  </p>
 
-              <p>
-                  Let <m>r\in R</m>. If <m>r\in I</m>, great. Suppose its not. Then in <m>R/I</m> <m>r</m> is a unit, since we’re in a field now. So <m>ru\in I</m> for some <m>u\in R</m>. Thus <m>run=0</m> for some <m>n\in\Z</m>. Since <m>ru\in I</m> and <m>I</m> a maximal and thus prime ideal, we have <m>u\in I</m> or <m>r\in I</m>, a contradiction.
-                </p>
-            </li>
-
-      </ol></p>
+                  <p>
+                    Let <m>r\in R</m>. If <m>r\in I</m>, great. Suppose its not. Then in <m>R/I</m> <m>r</m> is a unit, since we’re in a field now. So <m>ru\in I</m> for some <m>u\in R</m>. Thus <m>run=0</m> for some <m>n\in\Z</m>. Since <m>ru\in I</m> and <m>I</m> a maximal and thus prime ideal, we have <m>u\in I</m> or <m>r\in I</m>, a contradiction.
+                  </p>
+                </li>
+              </ol>
+            </p>
 
 
           </proof>
