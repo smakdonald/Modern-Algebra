@@ -5181,8 +5181,8 @@ var ptx_lunr_docs = [
   "url": "sec-solvable-by-radicals.html",
   "type": "Section",
   "number": "3.1",
-  "title": "Solvable by Radicals",
-  "body": " Solvable by Radicals  "
+  "title": "Solvability by Radicals",
+  "body": " Solvability by Radicals  "
 },
 {
   "id": "sec-transcendental-elements",
