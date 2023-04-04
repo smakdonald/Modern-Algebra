@@ -728,27 +728,29 @@ window.MathJax = {
 <div class="toc-item"><a href="part-fields.html" class="internal"><span class="codenumber">IV</span> <span class="title">Field Theory</span></a></div>
 <ul class="structural">
 <li>
-<div class="toc-item"><a href="ch-fields.html" class="internal"><span class="codenumber">1</span> <span class="title">Field Extensions</span></a></div>
+<div class="toc-item"><a href="ch-extensions.html" class="internal"><span class="codenumber">1</span> <span class="title">Field Extensions</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-defnfield.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Definition and Examples</span></a></div></li>
-<li><div class="toc-item"><a href="sec-interactions.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Interactions</span></a></div></li>
+<li><div class="toc-item"><a href="field-extension-basics.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Field Extension Basics</span></a></div></li>
+<li><div class="toc-item"><a href="sec-algebraic.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Algebraic Extensions</span></a></div></li>
+<li><div class="toc-item"><a href="sec-closure.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Algebraic Closures</span></a></div></li>
+<li><div class="toc-item"><a href="sec-splitting.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Splitting Fields</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="ch-extensions.html" class="internal"><span class="codenumber">2</span> <span class="title">Field Extensions</span></a></div>
+<div class="toc-item"><a href="ch-galois.html" class="internal"><span class="codenumber">2</span> <span class="title">Galois Theory</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-firstprops.html" class="internal"><span class="codenumber">2.1</span> <span class="title">First Properties</span></a></div></li>
-<li><div class="toc-item"><a href="sec-albebraic.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Algebraic Extensions</span></a></div></li>
-<li><div class="toc-item"><a href="sec-closure.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Algebraic Closures</span></a></div></li>
-<li><div class="toc-item"><a href="sec-splitting.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Splitting Fields</span></a></div></li>
+<li><div class="toc-item"><a href="sec-separable.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Separability</span></a></div></li>
+<li><div class="toc-item"><a href="sec-galext.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Galois Extensions</span></a></div></li>
+<li><div class="toc-item"><a href="sec-ftgt.html" class="internal"><span class="codenumber">2.3</span> <span class="title">The Fundamental Theorem of Galois Theory</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="ch-galois.html" class="internal"><span class="codenumber">3</span> <span class="title">Galois Theory</span></a></div>
+<div class="toc-item"><a href="ch-field-extras.html" class="internal"><span class="codenumber">3</span> <span class="title">extras</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-separable.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Separability</span></a></div></li>
-<li><div class="toc-item"><a href="sec-galext.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Galois Extensions</span></a></div></li>
-<li><div class="toc-item"><a href="sec-ftgt.html" class="internal"><span class="codenumber">3.3</span> <span class="title">The Fundamental Theorem of Galois Theory</span></a></div></li>
+<li><div class="toc-item"><a href="sec-solvable-by-radicals.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Solvable by Radicals</span></a></div></li>
+<li><div class="toc-item"><a href="sec-transcendental-elements.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Transcendental Elements</span></a></div></li>
+<li><div class="toc-item"><a href="sec-advanced-galois.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Advanced Galois Theory</span></a></div></li>
+<li><div class="toc-item"><a href="sec-inverse-galois.html" class="internal"><span class="codenumber">3.4</span> <span class="title">The Inverse Galois Problem</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -797,7 +799,7 @@ window.MathJax = {
 <article class="definition definition-like" id="def-ed"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.1</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-813">
+<div class="para logical" id="p-816">
 <div class="para">A <em class="emphasis">Euclidean domain (ED)</em> is a domain <span class="process-math">\(R\)</span> together with a function <span class="process-math">\(N: R \to \Z_{\geq 0}\)</span> such that <span class="process-math">\(N(0) = 0\)</span> and the following property holds: for any two elements <span class="process-math">\(a, b \in R\)</span> with <span class="process-math">\(b \ne 0\text{,}\)</span> there are elements <span class="process-math">\(q\)</span> and <span class="process-math">\(r\)</span> of <span class="process-math">\(R\)</span> such that</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -807,7 +809,7 @@ a = qb + r \;\text{and either}\; r = 0 \;\text{or}\; N(r) &lt; N(b).
 </div></article><article class="example example-like" id="ex-trivial-norm"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-814">
+<div class="para logical" id="p-817">
 <div class="para">A "degenerate example" is a field <span class="process-math">\(F\)</span> equipped with the trivial norm <span class="process-math">\(N(r) = 0\)</span> for all <span class="process-math">\(r\text{.}\)</span> Given <span class="process-math">\(a,b \in F\)</span> with <span class="process-math">\(b \ne 0\text{,}\)</span> we have <span class="process-math">\(a =(ab^{-1})b + 0\text{.}\)</span> Note that in this example there is no need to include <span class="process-math">\(r=0\)</span> in the description of the division algorithm, since <span class="process-math">\(b \ne 0\)</span> implies <span class="process-math">\(|0| &lt; |b|\text{.}\)</span> This is not the case in other examples. Also observe that as we've defined remainders they are {} unique. For example, in dividing <span class="process-math">\(13\)</span> by <span class="process-math">\(5\text{,}\)</span> both</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -818,7 +820,7 @@ a = qb + r \;\text{and either}\; r = 0 \;\text{or}\; N(r) &lt; N(b).
 </div></article><article class="problem example-like" id="ex-gaussian-integers-are-an-ed"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.3</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-815">
+<div class="para logical" id="p-818">
 <div class="para">The ring <span class="process-math">\(R = \Z[i]\)</span> of Gaussian integers is a Euclidean domain with <span class="process-math">\(N\)</span> being the usual complex (Euclidean) square norm <span class="process-math">\(N(a+bi)=a^2+b^2\text{.}\)</span> Let <span class="process-math">\(\alpha\text{,}\)</span> <span class="process-math">\(\beta\)</span> <span class="process-math">\(\in \Z[i]\)</span> and let <span class="process-math">\(\frac{\alpha}{\beta}=p+qi \in \Q(i)\)</span> (here we use that the fraction field of <span class="process-math">\(\Z[i]\)</span> is <span class="process-math">\(\Q(i)\)</span>). Now pick <span class="process-math">\(s,t\in\Z\)</span> so that <span class="process-math">\(|p-s|\leq 1/2\)</span> and <span class="process-math">\(|q-t|\leq 1/2\text{.}\)</span> We have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -835,21 +837,21 @@ N(r)=N(\beta(s+ti-(p+qi)))=N(\beta)N(s+ti-(p+qi))\leq N(\beta)\cdot(1/4+1/4)&lt;
 </div></article><article class="problem example-like" id="ex-degree-and-norm"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.4</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-816">The next classical example is <span class="process-math">\(R = F[x]\)</span> with <span class="process-math">\(F\)</span> a field and where we define the norm to be degree: <span class="process-math">\(N(f(x)) = \deg(f(x))\)</span> if <span class="process-math">\(f\neq 0\)</span> and <span class="process-math">\(N(0)=0\text{.}\)</span> This ring is a ED because of the familiar long division for polynomials.</div></article><article class="definition definition-like" id="def-ed-gcd"><h3 class="heading">
+<div class="para" id="p-819">The next classical example is <span class="process-math">\(R = F[x]\)</span> with <span class="process-math">\(F\)</span> a field and where we define the norm to be degree: <span class="process-math">\(N(f(x)) = \deg(f(x))\)</span> if <span class="process-math">\(f\neq 0\)</span> and <span class="process-math">\(N(0)=0\text{.}\)</span> This ring is a ED because of the familiar long division for polynomials.</div></article><article class="definition definition-like" id="def-ed-gcd"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.5</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-817">
+<div class="para logical" id="p-820">
 <div class="para">Given elements <span class="process-math">\(a, b\text{,}\)</span> not both <span class="process-math">\(0\text{,}\)</span> of a Euclidean domain <span class="process-math">\(R\)</span> with Euclidean norm <span class="process-math">\(N\text{,}\)</span> a <span class="process-math">\(\gcd\)</span> of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> is an element <span class="process-math">\(g \in\R\)</span> such that:</div>
 <ol class="decimal">
-<li id="li-289"><div class="para" id="p-818">
+<li id="li-289"><div class="para" id="p-821">
 <span class="process-math">\(g | a\)</span> and <span class="process-math">\(g | b\text{;}\)</span> and</div></li>
-<li id="li-290"><div class="para" id="p-819">If <span class="process-math">\(d | a\)</span> and <span class="process-math">\(d | b\text{,}\)</span> then <span class="process-math">\(N (d) \leq N (g)\text{.}\)</span>
+<li id="li-290"><div class="para" id="p-822">If <span class="process-math">\(d | a\)</span> and <span class="process-math">\(d | b\text{,}\)</span> then <span class="process-math">\(N (d) \leq N (g)\text{.}\)</span>
 </div></li>
 </ol>
 </div></article><article class="remark remark-like" id="remark-17"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">4.6</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-820">Note that <span class="process-math">\(b\mid a\)</span> is equivalent to <span class="process-math">\(b\in(a)\text{.}\)</span>
+<div class="para" id="p-823">Note that <span class="process-math">\(b\mid a\)</span> is equivalent to <span class="process-math">\(b\in(a)\text{.}\)</span>
 </div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="domains.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-pids.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

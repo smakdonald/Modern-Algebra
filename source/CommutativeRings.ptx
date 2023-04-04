@@ -795,6 +795,30 @@
           </ol>
         </p>
       </example>
+
+      <proposition xml:id="prop-fof-1">
+        <statement>
+          <p>
+            Let <m>R</m> be a domain and let <m>F</m> be its fraction field. Show that <m>F</m> has the following universal property: if <m>K</m> is any field and <m>f\!: R \to K</m> is any injective ring homomorphism, then <m>f</m> extends to an injective ring homomorphism <m>\overline{f}\!: F \to K</m>, so that <m>\overline{f}|_R=f</m>.
+          </p>
+        </statement>
+      </proposition>
+
+      <proposition xml:id="prop-fof-2">
+        <statement>
+          <p>
+            Let <m>R</m> be an integral domain with field of fractions <m>Q</m>. Let <m>P</m> be a prime ideal of <m>R</m> and let <me>S =  \bigg\{ \frac rd\in Q|d\not\in P\bigg\}.</me>(a) Show that <m>S</m> is a subring of <m>Q</m>. (b) Show that <me>I =  \bigg\{ \frac pd|p\in P, d\not\in P\bigg\}</me> is a prime ideal of <m>S</m>.
+          </p>
+        </statement>
+      </proposition>
+
+      <proposition xml:id="prop-fof-3">
+        <statement>
+          <p>
+            Let <m>R</m> be a commutative integral domain and <m>K</m> its field of fractions. Let <m>a</m> and <m>b</m> be nonzero elements of <m>R</m>, such that <m>(a) \cap(b) = (ab)</m>. Let <m>f : R[x] \to K</m> be the unique ring homomorphism with <m>f (r) = \frac{r}{1}</m> for <m>r \in R</m> and <m>f (x) = \frac{b}{a}</m>. Prove that a polynomial <m>p(x) \in R[x]</m> satisfies <m>f(p(x))=0</m> if and only if <m>p(x) = (ax - b)q(x)</m> for some polynomial <m>q(x) \in R[x]</m>. (Hint: one way is to use induction on deg(p(x)).)
+          </p>
+        </statement>
+      </proposition>
       
 
     </section>

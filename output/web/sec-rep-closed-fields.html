@@ -728,27 +728,29 @@ window.MathJax = {
 <div class="toc-item"><a href="part-fields.html" class="internal"><span class="codenumber">IV</span> <span class="title">Field Theory</span></a></div>
 <ul class="structural">
 <li>
-<div class="toc-item"><a href="ch-fields.html" class="internal"><span class="codenumber">1</span> <span class="title">Field Extensions</span></a></div>
+<div class="toc-item"><a href="ch-extensions.html" class="internal"><span class="codenumber">1</span> <span class="title">Field Extensions</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-defnfield.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Definition and Examples</span></a></div></li>
-<li><div class="toc-item"><a href="sec-interactions.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Interactions</span></a></div></li>
+<li><div class="toc-item"><a href="field-extension-basics.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Field Extension Basics</span></a></div></li>
+<li><div class="toc-item"><a href="sec-algebraic.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Algebraic Extensions</span></a></div></li>
+<li><div class="toc-item"><a href="sec-closure.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Algebraic Closures</span></a></div></li>
+<li><div class="toc-item"><a href="sec-splitting.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Splitting Fields</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="ch-extensions.html" class="internal"><span class="codenumber">2</span> <span class="title">Field Extensions</span></a></div>
+<div class="toc-item"><a href="ch-galois.html" class="internal"><span class="codenumber">2</span> <span class="title">Galois Theory</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-firstprops.html" class="internal"><span class="codenumber">2.1</span> <span class="title">First Properties</span></a></div></li>
-<li><div class="toc-item"><a href="sec-albebraic.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Algebraic Extensions</span></a></div></li>
-<li><div class="toc-item"><a href="sec-closure.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Algebraic Closures</span></a></div></li>
-<li><div class="toc-item"><a href="sec-splitting.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Splitting Fields</span></a></div></li>
+<li><div class="toc-item"><a href="sec-separable.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Separability</span></a></div></li>
+<li><div class="toc-item"><a href="sec-galext.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Galois Extensions</span></a></div></li>
+<li><div class="toc-item"><a href="sec-ftgt.html" class="internal"><span class="codenumber">2.3</span> <span class="title">The Fundamental Theorem of Galois Theory</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="ch-galois.html" class="internal"><span class="codenumber">3</span> <span class="title">Galois Theory</span></a></div>
+<div class="toc-item"><a href="ch-field-extras.html" class="internal"><span class="codenumber">3</span> <span class="title">extras</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-separable.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Separability</span></a></div></li>
-<li><div class="toc-item"><a href="sec-galext.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Galois Extensions</span></a></div></li>
-<li><div class="toc-item"><a href="sec-ftgt.html" class="internal"><span class="codenumber">3.3</span> <span class="title">The Fundamental Theorem of Galois Theory</span></a></div></li>
+<li><div class="toc-item"><a href="sec-solvable-by-radicals.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Solvable by Radicals</span></a></div></li>
+<li><div class="toc-item"><a href="sec-transcendental-elements.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Transcendental Elements</span></a></div></li>
+<li><div class="toc-item"><a href="sec-advanced-galois.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Advanced Galois Theory</span></a></div></li>
+<li><div class="toc-item"><a href="sec-inverse-galois.html" class="internal"><span class="codenumber">3.4</span> <span class="title">The Inverse Galois Problem</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -794,35 +796,35 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-rep-closed-fields"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">6.2</span> <span class="title">Algebraically Closed Fields</span>
 </h2>
-<div class="para" id="p-1139">When working over an algebraically closed field, the Artin-Wedderburn Theorem takes a simpler form.</div>
+<div class="para" id="p-1459">When working over an algebraically closed field, the Artin-Wedderburn Theorem takes a simpler form.</div>
 <article class="corollary theorem-like" id="cor-art-wedd-gring-alg-closed"><h3 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">6.6</span><span class="period">.</span><span class="space"> </span><span class="title">Artin-Wedderburn for Group Rings over Algebraically Closed Fields.</span>
 </h3>
-<div class="para logical" id="p-1140">
+<div class="para logical" id="p-1460">
 <div class="para">If <span class="process-math">\(G\)</span> is a finite group and <span class="process-math">\(K\)</span> is an algebraically closed field such that <span class="process-math">\(\mathrm{char}(K) \nmid |G|\text{,}\)</span> then there is an isomorphism of rings</div>
 <div class="displaymath process-math">
 \begin{equation*}
 k[G] \cong \operatorname{Mat}_{n_1}(K) \times \cdots \times \operatorname{Mat}_{n_m}(K).
 \end{equation*}
 </div>
-</div> <div class="para logical" id="p-1141">
+</div> <div class="para logical" id="p-1461">
 <div class="para">Moroever, we have:</div>
 <ol class="decimal">
-<li id="li-376"><div class="para" id="p-1142">
+<li id="li-449"><div class="para" id="p-1462">
 <span class="process-math">\(m\)</span> is the number of irreducible <span class="process-math">\(K\)</span>-linear representation of <span class="process-math">\(G\)</span> (up to isomorphism),</div></li>
-<li id="li-377"><div class="para" id="p-1143">the <span class="process-math">\(D_i\)</span>'s are the opposite rings of the endomorphism rings of these representations,</div></li>
-<li id="li-378"><div class="para" id="p-1144">the <span class="process-math">\(n_j\)</span>'s give the number of times each irreducible representation occurs in the decomposition of the regular representation of <span class="process-math">\(G\text{,}\)</span>
+<li id="li-450"><div class="para" id="p-1463">the <span class="process-math">\(D_i\)</span>'s are the opposite rings of the endomorphism rings of these representations,</div></li>
+<li id="li-451"><div class="para" id="p-1464">the <span class="process-math">\(n_j\)</span>'s give the number of times each irreducible representation occurs in the decomposition of the regular representation of <span class="process-math">\(G\text{,}\)</span>
 </div></li>
-<li id="li-379"><div class="para" id="p-1145">the <span class="process-math">\(n_j\)</span>'s also give the dimensions of these representations, and</div></li>
-<li id="li-380"><div class="para" id="p-1146"><span class="process-math">\(n_1^2  + \cdots + n_m^2 = |G|\text{.}\)</span></div></li>
+<li id="li-452"><div class="para" id="p-1465">the <span class="process-math">\(n_j\)</span>'s also give the dimensions of these representations, and</div></li>
+<li id="li-453"><div class="para" id="p-1466"><span class="process-math">\(n_1^2  + \cdots + n_m^2 = |G|\text{.}\)</span></div></li>
 </ol>
-</div></article><article class="hiddenproof" id="proof-117"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-117"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-117"><article class="hiddenproof"><div class="para" id="p-1147">The point is that in this setting, for each irreducible representation <span class="process-math">\(M_i\text{,}\)</span> <span class="process-math">\(D_i \cong \operatorname{End}_{K[G]}(M_i)^{\mathrm{op}}\)</span> is equal to <span class="process-math">\(K\text{.}\)</span> Let <span class="process-math">\(\theta\in \operatorname{End}_{K[G]}(M_i)\text{.}\)</span> In particular, <span class="process-math">\(\theta\)</span> is a <span class="process-math">\(K\)</span>-linear endomorphism of the finite dimensional vector space <span class="process-math">\(M_i\text{.}\)</span> Since <span class="process-math">\(K\)</span> is algebraically closed, <span class="process-math">\(\theta\)</span> has an eigenvaluse, say <span class="process-math">\(\lambda\text{.}\)</span> Then <span class="process-math">\(\theta-\lambda 1_{M_i}\)</span> is a <span class="process-math">\(K[G]\)</span>-linear endomorphism of <span class="process-math">\(M_i\)</span> that is not injective, so by Schur’s Lemma is must be <span class="process-math">\(0\text{.}\)</span> Thus, <span class="process-math">\(\theta = \lambda 1_{M_i}\)</span>
+</div></article><article class="hiddenproof" id="proof-160"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-160"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-160"><article class="hiddenproof"><div class="para" id="p-1467">The point is that in this setting, for each irreducible representation <span class="process-math">\(M_i\text{,}\)</span> <span class="process-math">\(D_i \cong \operatorname{End}_{K[G]}(M_i)^{\mathrm{op}}\)</span> is equal to <span class="process-math">\(K\text{.}\)</span> Let <span class="process-math">\(\theta\in \operatorname{End}_{K[G]}(M_i)\text{.}\)</span> In particular, <span class="process-math">\(\theta\)</span> is a <span class="process-math">\(K\)</span>-linear endomorphism of the finite dimensional vector space <span class="process-math">\(M_i\text{.}\)</span> Since <span class="process-math">\(K\)</span> is algebraically closed, <span class="process-math">\(\theta\)</span> has an eigenvaluse, say <span class="process-math">\(\lambda\text{.}\)</span> Then <span class="process-math">\(\theta-\lambda 1_{M_i}\)</span> is a <span class="process-math">\(K[G]\)</span>-linear endomorphism of <span class="process-math">\(M_i\)</span> that is not injective, so by Schur’s Lemma is must be <span class="process-math">\(0\text{.}\)</span> Thus, <span class="process-math">\(\theta = \lambda 1_{M_i}\)</span>
 </div></article></div>
-<article class="example example-like" id="example-36"><h3 class="heading">
+<article class="example example-like" id="example-62"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">6.7</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1148">Let <span class="process-math">\(k = \mathbb{C}\)</span> and consider the alternating group <span class="process-math">\(G = A_4\)</span> of order 12. We find all the simple modules over the ring <span class="process-math">\(\mathbb{C}[A_4]\)</span> or, equivalently, all irreducible <span class="process-math">\(\mathbb{C}\)</span>-linear representations of <span class="process-math">\(A_4\text{.}\)</span> We also find the Artin-Wedderburn decomposition of <span class="process-math">\(\mathbb{C}[A_4]\text{.}\)</span>
-</div> <div class="para logical" id="p-1149">
+<div class="para" id="p-1468">Let <span class="process-math">\(k = \mathbb{C}\)</span> and consider the alternating group <span class="process-math">\(G = A_4\)</span> of order 12. We find all the simple modules over the ring <span class="process-math">\(\mathbb{C}[A_4]\)</span> or, equivalently, all irreducible <span class="process-math">\(\mathbb{C}\)</span>-linear representations of <span class="process-math">\(A_4\text{.}\)</span> We also find the Artin-Wedderburn decomposition of <span class="process-math">\(\mathbb{C}[A_4]\text{.}\)</span>
+</div> <div class="para logical" id="p-1469">
 <div class="para">As before we start by finding 1-dimensional representations given by group homomorphisms of the form <span class="process-math">\(A_4 \to \mathbb{C}^\times\text{.}\)</span> Any such map factors as</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -830,7 +832,7 @@ A_4 \twoheadrightarrow A_4^{\mathrm{ab}}\cong C_3 \to \mathbb{C}^\times
 \end{equation*}
 </div>
 <div class="para">and thus there are three nonisomorphic 1-dimensional representations given by <span class="process-math">\(\rho_i:C_3=\langle g\rangle \to \mathbb{C}^\times\text{,}\)</span> <span class="process-math">\(\rho_i(g)=e^\frac{2\pi i}{3}\text{,}\)</span> with <span class="process-math">\(i=0,1,2\text{.}\)</span> Note that <span class="process-math">\(\rho_0\)</span> corresponds to the trivial representation. Also <span class="process-math">\(\rho_1\)</span> and <span class="process-math">\(\rho_2\)</span> make essential use of the fact that we are working over <span class="process-math">\(\mathbb{C}\)</span> as opposed to, say, <span class="process-math">\({\mathbb{R}}\)</span> where there are no primitive cubic roots of 1.</div>
-</div> <div class="para logical" id="p-1150">
+</div> <div class="para logical" id="p-1470">
 <div class="para">With respect to the Artin-Wedderburn decomposition we have so far</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -844,7 +846,7 @@ A_4 \twoheadrightarrow A_4^{\mathrm{ab}}\cong C_3 \to \mathbb{C}^\times
 \end{equation*}
 </div>
 <div class="para">It is easy to see there is only one solution: <span class="process-math">\(m=4\)</span> and <span class="process-math">\(n_4=3\text{.}\)</span> Hence there is a unique up to isomorphism <span class="process-math">\(\mathbb{C}\)</span>-linear irreducible representation of <span class="process-math">\(A_4\)</span> which is a 3 dimensional <span class="process-math">\(\mathbb{C}\)</span>-vector space.</div>
-</div> <div class="para logical" id="p-1151">
+</div> <div class="para logical" id="p-1471">
 <div class="para">To exhibit such a representation, let <span class="process-math">\(A_4\)</span> act on <span class="process-math">\(V=\mathbb{C}^4\)</span> by permuting the standard basis elements and thus any vector in <span class="process-math">\(V\text{.}\)</span> The subspace <span class="process-math">\(W\subseteq V\)</span> given by</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -853,19 +855,19 @@ W = \{ (a,b,c,d) \ | \ a+b+c+d=0\}
 </div>
 <div class="para">is an <span class="process-math">\(A_4\)</span>-stable subspace. This is an irreducible representation: if <span class="process-math">\(v\in W\smallsetminus 0\text{,}\)</span> after permuting and scaling, we can write <span class="process-math">\(v=(1,x,y,-1-x-y)\text{.}\)</span> We also have <span class="process-math">\((1,-1-x-y,x,y)\)</span> and <span class="process-math">\((1,y,-1-x-y,x)\)</span> in <span class="process-math">\(\langle v \rangle\text{,}\)</span> so the sum <span class="process-math">\((3,-1,-1,-1)\in \langle v \rangle\text{.}\)</span> Then <span class="process-math">\((-1,3,-1,-1)\)</span> and <span class="process-math">\((-1,-1,3,-1)\)</span> are also in <span class="process-math">\(\langle v \rangle\text{,}\)</span> and these are three linearly independent vectors, so we must have <span class="process-math">\(\langle v \rangle=W\text{.}\)</span>
 </div>
-</div></article><article class="remark remark-like" id="remark-29"><h3 class="heading">
+</div></article><article class="remark remark-like" id="remark-37"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">6.8</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1152">Let's consider what the Artin-Wedderburn Theorem says about complex representations of finite abelian groups: the group ring must be a product of copies of <span class="process-math">\(\mathbb{C}\text{,}\)</span> so every irreducible representation is one-dimensional. Thus, every representation is a sum of one-dimensional representations. Concretely, this means that there is a basis in which every group element acts as a diagonal matrix.</div> <div class="para" id="p-1153">This special case actually just follows from basic facts in linear algebra. Let <span class="process-math">\(\rho:G\to \operatorname{GL}_n(\mathbb{C})\)</span> be a representation. Then every <span class="process-math">\(g\in G\)</span> has finite order, so <span class="process-math">\(g^k-1\)</span> for some <span class="process-math">\(k\text{.}\)</span> This implies that the matrix <span class="process-math">\(\rho(g)\)</span> satisfies <span class="process-math">\(\rho(g)^k = I_n\text{,}\)</span> so its minimal polynomial divides <span class="process-math">\(x^k-1\text{.}\)</span> This polynomial splits into distinct linear factors over <span class="process-math">\(\mathbb{C}\text{,}\)</span> so <span class="process-math">\(\rho(g)\)</span> is diagonalizable for every <span class="process-math">\(g\in G\text{.}\)</span> (So far, we’ve only used that <span class="process-math">\(G\)</span> is finite.) Now, since <span class="process-math">\(g\)</span> is abelian, we have <span class="process-math">\(gh=hg\)</span> for all <span class="process-math">\(g,h\in G\text{,}\)</span> so <span class="process-math">\(\rho(g) \rho(h) = \rho(h) \rho(g)\text{;}\)</span> i.e., the matrices commute. Commuting diagonalizable matrices are simultaneously diagonalizable; i.e., there is a basis as above.</div></article><article class="proposition theorem-like" id="prop-art-wedd-decomp"><h3 class="heading">
+<div class="para" id="p-1472">Let's consider what the Artin-Wedderburn Theorem says about complex representations of finite abelian groups: the group ring must be a product of copies of <span class="process-math">\(\mathbb{C}\text{,}\)</span> so every irreducible representation is one-dimensional. Thus, every representation is a sum of one-dimensional representations. Concretely, this means that there is a basis in which every group element acts as a diagonal matrix.</div> <div class="para" id="p-1473">This special case actually just follows from basic facts in linear algebra. Let <span class="process-math">\(\rho:G\to \operatorname{GL}_n(\mathbb{C})\)</span> be a representation. Then every <span class="process-math">\(g\in G\)</span> has finite order, so <span class="process-math">\(g^k-1\)</span> for some <span class="process-math">\(k\text{.}\)</span> This implies that the matrix <span class="process-math">\(\rho(g)\)</span> satisfies <span class="process-math">\(\rho(g)^k = I_n\text{,}\)</span> so its minimal polynomial divides <span class="process-math">\(x^k-1\text{.}\)</span> This polynomial splits into distinct linear factors over <span class="process-math">\(\mathbb{C}\text{,}\)</span> so <span class="process-math">\(\rho(g)\)</span> is diagonalizable for every <span class="process-math">\(g\in G\text{.}\)</span> (So far, we’ve only used that <span class="process-math">\(G\)</span> is finite.) Now, since <span class="process-math">\(g\)</span> is abelian, we have <span class="process-math">\(gh=hg\)</span> for all <span class="process-math">\(g,h\in G\text{,}\)</span> so <span class="process-math">\(\rho(g) \rho(h) = \rho(h) \rho(g)\text{;}\)</span> i.e., the matrices commute. Commuting diagonalizable matrices are simultaneously diagonalizable; i.e., there is a basis as above.</div></article><article class="proposition theorem-like" id="prop-art-wedd-decomp"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">6.9</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1154">Let <span class="process-math">\(G\)</span> be a finite group. The number of one-dimensional complex representations of <span class="process-math">\(G\)</span> (up to isomorphism) is <span class="process-math">\(|G^{\mathrm{ab}}|\text{.}\)</span> Thus, in the Artin-Wedderburn decomposition of <span class="process-math">\(\mathbb{C}[G]\text{,}\)</span> there are exactly <span class="process-math">\(|G^{\mathrm{ab}}|\)</span> copies of <span class="process-math">\(\mathbb{C}\text{.}\)</span>
-</div></article><article class="hiddenproof" id="proof-118"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-118"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-118"><article class="hiddenproof"><div class="para" id="p-1155">We have that <span class="process-math">\(\mathrm{Hom}_{\mathbf{Grp}}(G,\mathbb{C}^\times) \cong \mathrm{Hom}_{\mathbf{Ab}}(G^{\mathrm{ab}},\mathbb{C}^\times)\text{,}\)</span> and by the discussion above, there are <span class="process-math">\(|G^{\mathrm{ab}}|\)</span> distinct one-dimensional representations of <span class="process-math">\(G^{\mathrm{ab}}\text{.}\)</span>
+<div class="para" id="p-1474">Let <span class="process-math">\(G\)</span> be a finite group. The number of one-dimensional complex representations of <span class="process-math">\(G\)</span> (up to isomorphism) is <span class="process-math">\(|G^{\mathrm{ab}}|\text{.}\)</span> Thus, in the Artin-Wedderburn decomposition of <span class="process-math">\(\mathbb{C}[G]\text{,}\)</span> there are exactly <span class="process-math">\(|G^{\mathrm{ab}}|\)</span> copies of <span class="process-math">\(\mathbb{C}\text{.}\)</span>
+</div></article><article class="hiddenproof" id="proof-161"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-161"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-161"><article class="hiddenproof"><div class="para" id="p-1475">We have that <span class="process-math">\(\mathrm{Hom}_{\mathbf{Grp}}(G,\mathbb{C}^\times) \cong \mathrm{Hom}_{\mathbf{Ab}}(G^{\mathrm{ab}},\mathbb{C}^\times)\text{,}\)</span> and by the discussion above, there are <span class="process-math">\(|G^{\mathrm{ab}}|\)</span> distinct one-dimensional representations of <span class="process-math">\(G^{\mathrm{ab}}\text{.}\)</span>
 </div></article></div>
 <article class="proposition theorem-like" id="prop-reps-and-conjclass"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">6.10</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1156">For any finite group <span class="process-math">\(G\text{,}\)</span> the number of irreducible complex representations (up to isomorphism) is equal to the number of conjugacy classes.</div></article><article class="hiddenproof" id="proof-119"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-119"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-119"><article class="hiddenproof"><div class="para logical" id="p-1157">
+<div class="para" id="p-1476">For any finite group <span class="process-math">\(G\text{,}\)</span> the number of irreducible complex representations (up to isomorphism) is equal to the number of conjugacy classes.</div></article><article class="hiddenproof" id="proof-162"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-162"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-162"><article class="hiddenproof"><div class="para logical" id="p-1477">
 <div class="para">We have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -873,7 +875,7 @@ W = \{ (a,b,c,d) \ | \ a+b+c+d=0\}
 \end{equation*}
 </div>
 <div class="para">and <span class="process-math">\(m\)</span> is the number of irreducible complex representations up to isomorphism. A key point is that the center of the right side is <span class="process-math">\(\mathbb{C}I_{n_1} \times \cdots \times \mathbb{C}I_{n_m}\text{,}\)</span> which has dimension <span class="process-math">\(m\)</span> as a complex vector space. Since this ring isomorphism is <span class="process-math">\(\mathbb{C}\)</span>-linear, it induces a <span class="process-math">\(\mathbb{C}\)</span>-linear isomorphism of the centers, and thus we just need to show that <span class="process-math">\(\dim_\mathbb{C}(Z(\mathbb{C}[G]))\)</span> is equal to the number of conjugacy classes.</div>
-</div> <div class="para logical" id="p-1158">
+</div> <div class="para logical" id="p-1478">
 <div class="para">Let <span class="process-math">\(C_1, \dots, C_h\)</span> denote the conjugacy classes of <span class="process-math">\(G\)</span> (i.e., the orbits for the action of <span class="process-math">\(G\)</span> on itself by conjugation). For each <span class="process-math">\(i\)</span> set <span class="process-math">\(z_i = \sum_{g \in C_i} g \in \mathbb{C}[G]\text{.}\)</span> Then for all <span class="process-math">\(x \in G\text{,}\)</span> <span class="process-math">\(x z_i x ^{-1}  = \sum_{g \in C_i} x g x^{-1} = z_i\)</span> and it follows that <span class="process-math">\(z_i \in Z(\mathbb{C}[G])\text{.}\)</span> Since that <span class="process-math">\(z_i\)</span>’s are sums of disjoint subsets of a basis of <span class="process-math">\(\mathbb{C}[G]\text{,}\)</span> they are linearly independent. Now say <span class="process-math">\(\sum_g c_g g\)</span> belongs to the center. Then for each <span class="process-math">\(x \in G\text{,}\)</span>
 </div>
 <div class="displaymath process-math">
