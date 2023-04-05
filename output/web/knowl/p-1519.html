@@ -12,8 +12,15 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">The point is that in this setting, for each irreducible representation <span class="process-math">\(M_i\text{,}\)</span> <span class="process-math">\(D_i \cong \operatorname{End}_{K[G]}(M_i)^{\mathrm{op}}\)</span> is equal to <span class="process-math">\(K\text{.}\)</span> Let <span class="process-math">\(\theta\in \operatorname{End}_{K[G]}(M_i)\text{.}\)</span> In particular, <span class="process-math">\(\theta\)</span> is a <span class="process-math">\(K\)</span>-linear endomorphism of the finite dimensional vector space <span class="process-math">\(M_i\text{.}\)</span> Since <span class="process-math">\(K\)</span> is algebraically closed, <span class="process-math">\(\theta\)</span> has an eigenvaluse, say <span class="process-math">\(\lambda\text{.}\)</span> Then <span class="process-math">\(\theta-\lambda 1_{M_i}\)</span> is a <span class="process-math">\(K[G]\)</span>-linear endomorphism of <span class="process-math">\(M_i\)</span> that is not injective, so by Schur’s Lemma is must be <span class="process-math">\(0\text{.}\)</span> Thus, <span class="process-math">\(\theta = \lambda 1_{M_i}\)</span>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(i: N \to M\)</span> be any injection of left <span class="process-math">\(K[G]\)</span>-modules. It suffices to prove that there is an <span class="process-math">\(K[G]\)</span>-linear map <span class="process-math">\(p: M \to N\)</span> such that <span class="process-math">\(p \circ i = \mathrm{id}_N\text{.}\)</span> By restriction of scalars along the inclusion <span class="process-math">\(K \subseteq K[G]\text{,}\)</span> we may regard <span class="process-math">\(i\)</span> as a <span class="process-math">\(K\)</span>-linear map between <span class="process-math">\(K\)</span>-vector spaces. As such it admits a <span class="process-math">\(K\)</span>-linear splitting <span class="process-math">\(f: M \twoheadrightarrow N\)</span> (since <span class="process-math">\(K\)</span> is semisimple). There is no reason that <span class="process-math">\(f\)</span> will be <span class="process-math">\(K[G]\)</span>-linear, but we can modify it so that it becomes so: Define <span class="process-math">\(p: M \to N\)</span> by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+p(m) = \frac{1}{|G|} \sum_{g \in G} g^{-1} f(g m).
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec-rep-closed-fields.html#p-1519" class="internal">in-context</a></span>
+<div class="para">Note that the formula makes sense since <span class="process-math">\(|G|\)</span> is invertible in <span class="process-math">\(K\)</span> by assumption.</div>
+</div>
+<span class="incontext"><a href="sec-semisimple-rings.html#p-1519" class="internal">in-context</a></span>
 </body>
 </html>

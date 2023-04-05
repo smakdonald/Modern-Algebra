@@ -11,17 +11,9 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para logical">
-<div class="para">If <span class="process-math">\(G\)</span> is a finite group and <span class="process-math">\(K\)</span> is a field such that <span class="process-math">\(\mathrm{char}(K) \nmid |G|\text{,}\)</span> then there is an isomorphism of rings</div>
-<div class="displaymath process-math">
-\begin{equation*}
-K[G] \cong \operatorname{Mat}_{n_1}(D_1) \times \cdots \times \operatorname{Mat}_{n_m}(D_m),
-\end{equation*}
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para">The hard part is proving <span class="process-math">\((1) \Leftrightarrow (2)\text{.}\)</span> <span class="process-math">\((1) \Rightarrow (2)\)</span> Assume (1), so that <span class="process-math">\(M = \oplus_{\lambda \in \Lambda} M_\lambda\)</span> for some collection of simple submodules <span class="process-math">\(M_\lambda\text{,}\)</span> and let <span class="process-math">\(N \subseteq M\)</span> be any submodule. (It is important to note that it does not necessarily follow that <span class="process-math">\(N\)</span> is a sum of some subcollection of the <span class="process-math">\(M_\lambda\)</span>) . Consider the collection <span class="process-math">\(\mathcal S\)</span> of subsets <span class="process-math">\(\Gamma\)</span> of <span class="process-math">\(\Lambda\)</span> such that <span class="process-math">\(N \cap M_\Gamma = 0\)</span> where we define <span class="process-math">\(M_\Gamma := \oplus_{\lambda \in \Gamma} M_\lambda\text{.}\)</span> View <span class="process-math">\(\mathcal S\)</span> as a poset by inclusion. It is nonempty since <span class="process-math">\(J = \emptyset\)</span> belongs to <span class="process-math">\(\mathcal S\text{.}\)</span> If <span class="process-math">\(\{\Gamma_\alpha\}\)</span> is a totally ordered subcollection of <span class="process-math">\(\mathcal S\text{,}\)</span> let <span class="process-math">\(\Gamma = \cup_\alpha \Gamma_\alpha\text{.}\)</span> I claim <span class="process-math">\(M_\Gamma \cap N = 0\text{.}\)</span> If not, there is a nonzero element <span class="process-math">\((m_\gamma) \in M_\Gamma \cap N\text{.}\)</span> But since <span class="process-math">\(m_\gamma = 0\)</span> for all but a finite number of <span class="process-math">\(\gamma\)</span>’s and since the collection of <span class="process-math">\(\Gamma_\alpha\)</span>’s was totally ordered, there is some <span class="process-math">\(\alpha\)</span> such that <span class="process-math">\((m_\gamma) \in M_{\Gamma_\alpha} \cap N\text{,}\)</span> a contradiction. We may thus apply Zorn’s Lemma to get a maximal <span class="process-math">\(\Gamma \in \mathcal S\text{.}\)</span>
 </div>
-<div class="para">where <span class="process-math">\(D_1, \dots, D_m\)</span> are division rings. Furthermore, each <span class="process-math">\(D_i\)</span> contains <span class="process-math">\(K\)</span> (up to isomorphism) as a subring of its center and the above isomorphism is <span class="process-math">\(K\)</span>-linear. In particular, <span class="process-math">\(\dim_K(D_i) &lt; \infty\text{.}\)</span>
-</div>
-</div>
-<span class="incontext"><a href="sec-spplications.html#p-1485" class="internal">in-context</a></span>
+<span class="incontext"><a href="ch-semisimple-mod.html#p-1485" class="internal">in-context</a></span>
 </body>
 </html>

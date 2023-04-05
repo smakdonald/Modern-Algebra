@@ -11,9 +11,17 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">Let <span class="process-math">\(G\)</span> be a simple group of order <span class="process-math">\(60=2^2\cdot3\cdot 5.\)</span> By Sylow's Theorem we know that <span class="process-math">\(n_5|12\)</span> and that <span class="process-math">\(n_5\equiv 1\mod{5}\text{.}\)</span> Thus the options for <span class="process-math">\(n_5\)</span> are <span class="process-math">\(1\)</span> and <span class="process-math">\(6\text{.}\)</span> Since <span class="process-math">\(G\)</span> is simple we see that <span class="process-math">\(n_5=6\text{.}\)</span> As each Sylow <span class="process-math">\(5\)</span>-subgroup of <span class="process-math">\(G\)</span> has <span class="process-math">\(4\)</span> unique elements of order <span class="process-math">\(5\)</span> and the identity we see that the number of elements or order <span class="process-math">\(5\)</span> in <span class="process-math">\(G\)</span> is <span class="process-math">\((5-1)\cdot 6=24\text{.}\)</span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">First, we show that the center of <span class="process-math">\(G\)</span> is nontrivial. Suppose by way of contradiction that <span class="process-math">\(Z(G)=\{e\}\text{.}\)</span> We examine the conjugacy classes of <span class="process-math">\(G\text{.}\)</span> From the Class Equation, we know</div>
+<div class="displaymath process-math">
+\begin{equation*}
+|G| = |Z(G)| + \sum_i^r |G : C_G(g_i)|.
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec-simple-groups.html#p-485" class="internal">in-context</a></span>
+<div class="para">Note that <span class="process-math">\(|G|=p^n\)</span> for some <span class="process-math">\(n\in\N\text{,}\)</span> meaning that the only divisors of <span class="process-math">\(|G|\)</span> are powers of <span class="process-math">\(p\text{.}\)</span> In finite groups, each conjugacy class must divide the order of the group. By Lagrange’s Theorem, <span class="process-math">\(|G : C_G(g_i)|=\frac{|G|}{|C_G(g_i)|}=\frac{p^n}{p^m}=p^k\text{,}\)</span> where <span class="process-math">\(m,k\in\N\text{.}\)</span> Since |Z(G)|=1, we see that <span class="process-math">\(\sum_i^r |G : C_G(g_i)|\bigg|p^n-1\text{,}\)</span> which is impossible given that <span class="process-math">\(p^n-1 \not|p^n\text{.}\)</span> Thus <span class="process-math">\(Z(G)\neq\{e\}\text{.}\)</span>
+</div>
+</div>
+<span class="incontext"><a href="sec-class-eq.html#p-485" class="internal">in-context</a></span>
 </body>
 </html>

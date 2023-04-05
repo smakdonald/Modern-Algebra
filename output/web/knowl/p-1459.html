@@ -11,15 +11,22 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(R\)</span> be a left semisimple ring. Then for some <span class="process-math">\(m \geq 0\text{,}\)</span> positive integers <span class="process-math">\(n_1, \dots, n_m\text{,}\)</span> and division rings <span class="process-math">\(D_1, \dots, D_m\text{,}\)</span> there is a ring isomorphism</div>
+<div class="para">For the first statement, the “if” implication holds in general without the hypothesis on <span class="process-math">\(R\text{.}\)</span> For the other implication, observe that there are short exact sequences</div>
 <div class="displaymath process-math">
 \begin{equation*}
-R \cong \operatorname{Mat}_{n_1}(D_1) \times \cdots \times \operatorname{Mat}_{n_m}(D_m).
+0 \to R^{n-1} \to R^{n} \to R \to 0
 \end{equation*}
 </div>
+<div class="para">for all <span class="process-math">\(n&gt;0\text{.}\)</span> So, by the exercise above and induction on <span class="process-math">\(n\text{,}\)</span> every finitely generated free module is Noetherian. Now, if <span class="process-math">\(M\)</span> is finitely generated, there is a short exact sequence of the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0 \to K \to R^{n} \to M \to 0
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec-art-wedd.html#p-1459" class="internal">in-context</a></span>
+<div class="para">so by the exercise above again, <span class="process-math">\(M\)</span> is Noetherian.</div>
+</div>
+<span class="incontext"><a href="sec-chain-conditions.html#p-1459" class="internal">in-context</a></span>
 </body>
 </html>

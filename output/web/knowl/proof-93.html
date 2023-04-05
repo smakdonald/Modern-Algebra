@@ -11,36 +11,22 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>
-<div class="para logical"><ol class="decimal">
-<li>
-<div class="para">Let <span class="process-math">\(R\)</span> be a UFD.</div>
-<div class="para">First, suppose <span class="process-math">\(p\)</span> is irreducible, and consider the ideal <span class="process-math">\((p)\text{.}\)</span> Let <span class="process-math">\(a,b\in R\)</span> such that <span class="process-math">\(ab\in(p)\text{.}\)</span> Thus <span class="process-math">\(p|ab\text{,}\)</span> so there exists some <span class="process-math">\(k\in R\)</span> such that <span class="process-math">\(pk=ab\text{.}\)</span> As we are in a UFD the elements <span class="process-math">\(a,b,\)</span> and <span class="process-math">\(k\)</span> all have unique (up to associates) factorizations of irreducible elements. Thus <span class="process-math">\(p\)</span> must be an associate of one of the irreducible elements in the factorization of <span class="process-math">\(a\)</span> or <span class="process-math">\(b\text{,}\)</span> and so <span class="process-math">\(a\in(p)\)</span> or <span class="process-math">\(b\in(p)\text{,}\)</span> making <span class="process-math">\((p)\)</span> prime.</div>
-<div class="para">Now suppose that <span class="process-math">\((p)\)</span> is prime and that <span class="process-math">\(p=ab\)</span> for some <span class="process-math">\(ab\in R\text{.}\)</span> Thus <span class="process-math">\(p|ab\)</span> and <span class="process-math">\(ab\in(p)\text{,}\)</span> so either <span class="process-math">\(a\in(p)\)</span> or <span class="process-math">\(b\in(p)\text{,}\)</span> as <span class="process-math">\((p)\)</span> is a prime ideal. Assume without loss of generality that <span class="process-math">\(a|p\text{.}\)</span> Thus <span class="process-math">\(ak=p\)</span> for some <span class="process-math">\(k\in R\text{.}\)</span> Thus <span class="process-math">\(ab=pkb\)</span> and <span class="process-math">\(p=pkb\)</span> As UFDs are integral domains we see <span class="process-math">\(kb=1\text{,}\)</span> making <span class="process-math">\(b\)</span> a unit. Thus <span class="process-math">\(p\)</span> is irreducible.</div>
-</li>
-<li>
-<div class="para logical">
-<div class="para">First, notice that <span class="process-math">\(2\cdot 3=6=(1+\sqrt{-5})(1-\sqrt{-5})\text{.}\)</span> Define a function</div>
+<article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
+<div class="para">Without loss of generality, assume <span class="process-math">\(n \leq m\text{.}\)</span> We induct on <span class="process-math">\(m\text{.}\)</span>
+</div> <div class="para">If <span class="process-math">\(m =1\)</span> then <span class="process-math">\(n=1\)</span> as well since <span class="process-math">\(n\leq m\)</span> and <span class="process-math">\(n=0\)</span> would yield <span class="process-math">\(r = p_1 \cdots p_n =1\text{,}\)</span> a contradiction. If <span class="process-math">\(n=m=1\)</span> we have <span class="process-math">\(p_1=q_1\)</span> and there is nothing more to prove.</div> <div class="para">Assume <span class="process-math">\(m &gt; 1\)</span> and that irreducible factorizations with <span class="process-math">\(\leq m\)</span> factors are unique up to reordering factors and taking associates.</div> <div class="para logical">
+<div class="para">Since <span class="process-math">\(R\)</span> is a PID, irreducible elements are prime by Theorem . Since <span class="process-math">\(p_1 \cdots p_n\in (p_n)\)</span> we have that <span class="process-math">\(q_1 \cdots q_m\in (p_n)\)</span> and since <span class="process-math">\((p_n)\)</span> is a prime ideal it follows that <span class="process-math">\(q_i \in (p_n)\)</span> for some <span class="process-math">\(i\text{.}\)</span> Upon reordering, we may as well assume <span class="process-math">\(q_m\in (p_n)\text{.}\)</span> Thus <span class="process-math">\(q_m = p_n u\)</span> for some <span class="process-math">\(u \in R\text{.}\)</span> Since <span class="process-math">\(q_m\)</span> is irreducible and <span class="process-math">\(p_n\)</span> is not a unit, <span class="process-math">\(u\)</span> must be a unit. We get</div>
 <div class="displaymath process-math">
 \begin{equation*}
-N:\Z[\sqrt{-5}]\to\Z, N(a+b \sqrt{-5})=a^2+5b^2.
+p_1 \cdots p_n = q_1 \cdots q_{m-1} up_n
 \end{equation*}
 </div>
-<div class="para">Let <span class="process-math">\(\alpha,\beta\in\Z[\sqrt{-5}]\)</span> and behold</div>
-</div>
-<div class="para logical">
-<div class="para">Suppose by way of contradiction there exist <span class="process-math">\(\a,\b\)</span> such that <span class="process-math">\(2=\a\b\text{.}\)</span> Then <span class="process-math">\(\a=a+b\sqrt{-5}\)</span> and <span class="process-math">\(\b=c+d\sqrt{-5}\text{,}\)</span> and</div>
+<div class="para">and hence, since <span class="process-math">\(R\)</span> is an integral domain, we may divide by <span class="process-math">\(p_n\)</span> to obtain</div>
 <div class="displaymath process-math">
 \begin{equation*}
-N(2)=4=N(\a\b)=N(\a)N(\b)=(a^2+5b^2)(c^2+5d^2).
+p_1 \cdots p_{n-1}   = q_1 \cdots q_{m-2} (q_{m-1}u).
 \end{equation*}
 </div>
-<div class="para">Thus <span class="process-math">\((a^2+5b^2)=\pm1,\pm2,\)</span> or <span class="process-math">\(\pm4\text{,}\)</span> as these are the only integer divisors of <span class="process-math">\(4\text{.}\)</span> However, there do not exist integers <span class="process-math">\(a,b\)</span> such that this is true. Thus <span class="process-math">\(2\)</span> is irreducible in <span class="process-math">\(\Z[\sqrt{-5}]\text{.}\)</span>
-</div>
-</div>
-<div class="para">Suppose by way of contradiction that <span class="process-math">\(2\)</span> is prime in <span class="process-math">\(\Z[\sqrt{-5}]\text{.}\)</span> Note that <span class="process-math">\(2|6=(1+\sqrt{-5})(1-\sqrt{-5})\text{.}\)</span> Thus <span class="process-math">\(2\)</span> divides one of these factors.</div>
-<div class="para">First, suppose there exists some <span class="process-math">\(a+b\sqrt{-5}\)</span> such that <span class="process-math">\(2(a+b\sqrt{-5})=(1\pm\sqrt{-5})\text{.}\)</span> Thus <span class="process-math">\(2a+2b\sqrt{-5}=1\pm\sqrt{-5}\text{,}\)</span> and so <span class="process-math">\(2a=\pm1\text{.}\)</span> However, <span class="process-math">\(\pm\frac12\)</span> is not an integer, and thus <span class="process-math">\(2\)</span> cannot divide either of these factors. Thus <span class="process-math">\(2\)</span> is not prime in <span class="process-math">\(\Z[\sqrt{-5}]\text{.}\)</span> By Part (a), this is not a UFD.</div>
-</li>
-</ol></div></article><span class="incontext"><a href="subsec-ufds.html#proof-93" class="internal">in-context</a></span>
+<div class="para">Notice that <span class="process-math">\((q_{m-1}u)=(q_{m-1})\)</span> is a prime ideal so <span class="process-math">\(q_{m-1}u\)</span> is irreducible by Theorem .</div>
+</div> <div class="para">By the inductive hypothesis we deduce that <span class="process-math">\(n-1=m-1\)</span> hence <span class="process-math">\(n=m\)</span> and also that <span class="process-math">\(p_1, \ldots, p_{n-1}\)</span> are associates to <span class="process-math">\(q_1, \ldots, q_{m-2}, q_{m-1}u\)</span> in some order. This together with <span class="process-math">\(p_n\)</span> associate to <span class="process-math">\(q_m\)</span> establishes the claim.</div></article><span class="incontext"><a href="subsec-ufds.html#proof-93" class="internal">in-context</a></span>
 </body>
 </html>

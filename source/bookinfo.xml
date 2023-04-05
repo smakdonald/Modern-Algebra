@@ -71,7 +71,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         \newcommand{\GL}{\operatorname{GL}} 
         \newcommand{\ht}{\operatorname{height}} 
         \def\Hom{\operatorname{Hom}} 
-        \def\im{\operatorname{id}} 
+        \def\id{\operatorname{id}} 
         \def\im{\operatorname{im}} 
         \def\Inn{\operatorname{Inn}}
         \def\ker{\operatorname{ker}}

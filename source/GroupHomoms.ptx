@@ -6,6 +6,12 @@
     <section xml:id="sec-gphoms">
       <title>Group Homomorphisms</title>
       
+      <blockquote>
+        <p>
+          <q>In the end, the character of a civilization is encased in its structures.</q>
+        </p>
+        <attribution>Frank Gehry</attribution>
+      </blockquote>
 
       <definition xml:id="def-gphom">
         <statement>
@@ -15,27 +21,66 @@
         </statement>
       </definition>
 
+      <p>
+        Intuitively, a group homomorphism preserves the algebraic structure of the group, while allowing us to compare and relate different groups. In this way, group homomorphisms allow us to study the properties of groups by comparing them to other groups that we already understand well.
+      </p>
 
-      <lemma xml:id="lem-grphomom-prop">
+      <example xml:id="ex-group-homom-examples">
+        <title>Homormophism Examples</title>
+        <p>
+          <ol>
+            <li>
+              <p>
+                The identity map is a group homomorphism for any group <m>G</m>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                The exponential map <m>\exp: ({\mathbb{R}}, +) \to ({\mathbb{R}}\setminus \{0\}, \cdot)</m> is a homomorphism.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                The natural log map <m>\ln: ({\mathbb{R}}_{&gt;0}, \cdot) \to ({\mathbb{R}}, +)</m> is a homomorphism.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                For any positive integer <m>n</m> the map determinant map <m>\det: \operatorname{GL}_n(\C) \to (\C^\times, \cdot)</m> is a group homomorphism.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </example>
+
+      <p>
+        Specifically, the homomorphism will preserve the additive structure, such as the identity element and inverse elements.
+      </p>
+
+      <theorem xml:id="thm-grphomom-prop">
+        <title>Homomorphism Preservations</title>
         <statement>
           <p>
-            If <m>f: G \to H</m> is a homomorphism of groups, then
+            If <m>\varphi: G \to H</m> is a homomorphism of groups, then
             <ol>
               <li>
                 <p>
-                  <m>f(e_G) = e_H</m> and
+                  <m>\varphi(e_G) = e_H</m> and
                 </p>
               </li>
 
               <li>
                 <p>
-                  <m>f(x^{-1}) = f(x)^{-1}</m>.
+                  <m>\varphi(x^{-1}) = \varphi(x)^{-1}</m>.
                 </p>
               </li>
             </ol>
           </p>
         </statement>
-      </lemma>
+      </theorem>
 
       <corollary xml:id="cor-unique-Z-homom">
         <statement>
@@ -45,7 +90,7 @@
         </statement>
       </corollary>
 
-      <definition xml:id="def-gpker">
+      <definition xml:id="def-group-kernel">
         <statement>
           <p>
             Let <m>\varphi: G \to H</m> is a homomorphism of groups. The <em>kernel</em> of <m>\varphi</m> is the set 
@@ -56,7 +101,7 @@
         </statement>
       </definition>
 
-      <definition xml:id="def-gpimage">
+      <definition xml:id="def-group-image">
         <statement>
           <p>
             Let <m>\varphi: G \to H</m> is a homomorphism of groups. The <em>image</em> of <m>\varphi</m> is the set 
@@ -67,71 +112,118 @@
         </statement>
       </definition>
 
-      <proposition xml:id="prop-homsubgp">
-        <statement>
-          <p>
-            <ol>
-              <li>
-                <p>
-                  If <m>f: G \to H</m> is a homomorphism of groups, then the set-theoretic image of <m>f</m> is a subgroup of <m>H</m>.
-                </p>
-              </li>
-
-              <li>
-                <p>
-                  If <m>f: G \to H</m> is a homomorphism of groups, then the kernel of <m>f</m> is a subgroup of <m>G</m>.
-                </p>
-              </li>
-
-              <li>
-                <p>
-                  Prove that if <m>f:G\to H</m> is a group homomorphism and <m>K\leq H</m> then the preimage of <m>K</m>, defined as <m>f^{-1}(K)=\{g\in G | f(g)\in K\}</m>, is a subgroup of <m>G</m>.
-                </p>
-              </li>
-            </ol>
-          </p>
-        </statement>
-      </proposition>
-
-      <proposition xml:id="prop-grptrivialkernel">
-        <statement>
-          <p>
-            <ol>
-              <li>
-                <p>
-                  A group homomorphism <m>f: G \to H</m> is injective if and only if <m>\operatorname{ker}(f) = \{e_G\}</m>.
-                </p>
-              </li>
-
-              <li>
-                <p>
-                  A group homomorphism <m>f: G \to H</m> is surjective if and only if <m>\operatorname{im}(f) = H</m>.
-                </p>
-              </li>
-            </ol>
-          </p>
-        </statement>
-      </proposition>
-             
-
-      <problem>
+      <remark>
         <p>
-          <ol>
-            <li>
-              Find, with justification, an injective group homomorphism <m>f:S_n \to \GL_n(\R)</m>.
-            </li>
-
-            <li>
-              Find, with justification, an injective group homomorphism <m>g:D_{2n}\to S_n</m>.
-            </li>
-          </ol>
+          This is identical to the set-theoretic image.
         </p>
-      </problem>
+      </remark>
+
+      <theorem xml:id="thm-properties-of-group-homoms">
+        <title>Properties of Group Homomorphisms</title>
+        
+        <statement>
+          <p>
+            <ol>
+              <li>
+                <p>
+                  If <m>\varphi: G \to H</m> is a homomorphism of groups, then the image of <m>\varphi</m> is a subgroup of <m>H</m>.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  If <m>\varphi: G \to H</m> is a homomorphism of groups, then the kernel of <m>\varphi</m> is a subgroup of <m>G</m>.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Prove that if <m>\varphi:G\to H</m> is a group homomorphism and <m>K\leq H</m> then the preimage of <m>K</m>, defined as <m>\varphi^{-1}(K)=\{g\in G | \varphi(g)\in K\}</m>, is a subgroup of <m>G</m>.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                    If <m>\varphi:G\to H</m> and <m>\phi:H\to K</m> are group homomorphisms, the composition <m>\phi\circ\varphi:G\to K</m> is a group homomorphism.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  A group homomorphism <m>\varphi: G \to H</m> is injective if and only if <m>\operatorname{ker}(\varphi) = \{e_G\}</m>.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  A group homomorphism <m>\varphi: G \to H</m> is surjective if and only if <m>\operatorname{im}(\varphi) = H</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </theorem>
+
+      <exercises>
+
+        <exercise>
+          <title>Group Homomorphisms</title>
+          
+          <p>
+            Prove that each of the following are group homomorphisms
+
+            <ol>
+              <li>
+                <p>
+                  The function <m>f: \Z\to \Z</m> defined by <m>f(n) = 2n</m>.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  The function <m>f: \R \to \R</m> defined by <m>f(x) = x^2</m>.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  The function <m>f: \Z/(6)\to\Z/(3)</m> defined by <m>f([n]_6) = [n]_3</m>
+                </p>
+              </li>
+            </ol>
+          </p>
+
+        </exercise>
+
+        <exercise>
+          <title>Finding Injective Homomorphisms</title>
+          
+          <p>
+            <ol>
+              <li>
+                Find, with justification, an injective group homomorphism <m>f:S_n \to \GL_n(\R)</m>.
+              </li>
+  
+              <li>
+                Find, with justification, an injective group homomorphism <m>g:D_{2n}\to S_n</m>.
+              </li>
+            </ol>
+          </p>
+        </exercise>
+        
+      </exercises>
 
     </section>
 
     <section xml:id="sec-gpisos">
       <title>Group Isomorphisms</title>
+
+      <blockquote>
+        <p>
+          <q>Self preservation is the first law of nature.</q>
+        </p>
+        <attribution>Samuel Butler</attribution>
+      </blockquote>
 
       <definition xml:id="def-gpiso">
         <statement>
@@ -146,207 +238,36 @@
       </definition>
 
       <remark>
-        I have defined the notion of isomorphism in Definition <xref ref="def-gpiso" /> differently than given in the textbook. The reason is that the correct meaning of the word <q>isomorphism</q> in any context (sets, groups, rings, fields, topological spaces, whatever) is always <q>a morphism that has a two-sided inverse</q>. In many contexts, such as sets, groups, rings and fields this turns out to be equivalent to the notion of being <q>one-to-one and onto</q>. But there are contexts in which this is not the case. For example a one-to-one and onto continuous map of topological spaces need not be a homeomorphism. (A homeomorphism is a term one uses for isomorphism of topological spaces, for historical reasons.)
+        <p>
+          I have defined the notion of isomorphism in <xref ref="def-gpiso" /> differently than given in the textbook. The reason is that the correct meaning of the word <q>isomorphism</q> in any context (sets, groups, rings, fields, topological spaces, whatever) is always <q>a morphism that has a two-sided inverse</q>. In many contexts, such as sets, groups, rings and fields this turns out to be equivalent to the notion of being <q>one-to-one and onto</q>. But there are contexts in which this is not the case. For example a one-to-one and onto continuous map of topological spaces need not be a homeomorphism. (A homeomorphism is a term one uses for isomorphism of topological spaces, for historical reasons.)
+        </p>
       </remark>
 
-      <proposition xml:id="prop-iso-def">
+      <p>
+        Intuitively, a group isomorphism establishes a one-to-one correspondence between the elements of two groups, such that they have exactly the same algebraic structure. This means that the groups are essentially the same, up to a relabeling of their elements.
+      </p>
+
+      <p>
+        Group isomorphisms are important because they allow us to identify different groups that have the same algebraic structure. This can simplify the study of groups by reducing the number of cases that need to be considered, and it can also provide insight into the connections between seemingly unrelated groups.
+      </p>
+
+      <theorem xml:id="thm-iso-def">
         <statement>
           <p>
-            Suppose <m>f: G \to H</m> is a group homomorphism. Then <m>f</m> an isomorphism if and only if <m>f</m> is bijective (one-to-one and onto).
-          </p>
-        </statement>
-      </proposition>
-
-      <definition xml:id="def-iso-inv">
-        <statement>
-          <p>
-            An <em>isomorphism invariant</em> is a property <m>P</m> such that whenever <m>G \cong H</m> and <m>G</m> has <m>P</m> then <m>H</m> has <m>P</m>.
-          </p>
-        </statement>
-      </definition>
-
-      <theorem xml:id="thm-iso-inv">
-        <statement>
-          <p>
-            The following are isomorphism invariants:
-          </p>
-
-          <p>
-            <ol> 
-              <li>
-                <p>
-                  the order of the group,
-                </p>
-              </li>
-
-              <li>
-                <p>
-                  the set of orders of elements in the group,
-                </p>
-              </li>
-
-              <li>
-                <p>
-                  being abelian,
-                </p>
-              </li>
-
-              <li>
-                <p>
-                  the order of the center of the group,
-                </p>
-              </li>
-
-              <li>
-                <p>
-                  being finitely generated,
-                </p>
-              </li>
-            </ol>
+            Suppose <m>\varphi: G \to H</m> is a group homomorphism. Then <m>\varphi</m> an isomorphism if and only if <m>\varphi</m> is bijective (one-to-one and onto).
           </p>
         </statement>
       </theorem>
 
-      <problem>
+      <remark>
         <p>
-          Decide whether the groups <m>Q_8</m> and <m>D_8</m> are isomorphic or not, with justification.
+          Moving forward, we will essentially treat <xref ref="thm-iso-def"/> as the de-facto definition of a group isomorphism. Rather than end every proof with a reference to <xref ref="thm-iso-def"/>, we will instead enshrine its monumental achievements of <xref ref="thm-iso-def"/> within this remark. To alleviate some of the corresponding guilt asociated with this decision I have am referencing <xref ref="thm-iso-def"/> as many times as possible, as <xref ref="thm-iso-def"/> is important and <xref ref="thm-iso-def"/> should not be forgotten. 
         </p>
-      </problem>
+      </remark>
 
-      <problem>
+      <example xml:id="ex-group-iso-examples">
+        <title>Isomorphism Examples</title>
         <p>
-          <ol>
-            <li>
-              <p>
-                <m>S_n\cong S_m</m> if and only if <m>n=m</m>.
-              </p>
-            </li>
-
-            <li>
-              <p>
-                <m>\mathbb{Z}/6\ncong S_3</m>
-              </p>
-            </li>
-
-            <li>
-              <p>
-                <m>D_{24}\ncong S_4</m>
-              </p>
-            </li>
-          </ol>
-          
-        </p>
-      </problem>
-
-      <definition xml:id="def-gp-automorphism">
-        <statement>
-          <p>
-            Let <m>G</m> be a group. An isomorphism <m>\phi:G\to G</m> is called an <em>automorphism</em> of <m>G</m>.
-          </p>
-        </statement>
-      </definition>
-
-      <problem>
-        <p>
-          Prove that the set of automorphisms of <m>G</m>, denoted <m>\operatorname{Aut}(G)</m>, is a group under composition.
-        </p>
-      </problem>
-
-      <problem>
-        <p>
-          Let <m>G</m> be a group. Prove that the map <m>f:G\to G</m> given by <m>f(a)=a^{-1}</m> for all <m>a\in G</m> is an automorphism if and only if <m>G</m> is abelian.
-        </p>
-      </problem>
-
-      <problem>
-        <p>
-          Let <m>G</m> be a group and <m>x\in G</m>. Define a map <m>\psi_x:G\to G</m> by <m>\psi_x(a)=xax^{-1}</m> for all <m>a\in G</m>. 
-          <ol>
-            <li>
-              <p>
-                Prove that <m>\psi_x\in \operatorname{Aut}(G)</m> for all <m>x\in G</m>. 
-              </p>
-            </li>
-
-            <li>
-              <p>
-                Prove that <m>\{\psi_x\mid x\in G\}</m> is a subgroup of <m>\operatorname{Aut}(G)</m>.
-              </p>
-            </li>
-          </ol>
-        </p>
-      </problem>
-
-      <problem>
-        <p>
-          Prove that if groups <m>G</m> and <m>H</m> are isomorphic then: 
-          <ol>
-            <li>
-              <p>
-                <m>Z(G)\cong Z(H)</m> and 
-              </p>
-            </li>
-
-            <li>
-              <p>
-                <m>\Aut(G)\cong \Aut(H)</m>.
-              </p>
-            </li>
-          </ol>
-        </p>
-      </problem>
-    
-
-      <problem>
-        <p>
-          Find an example of groups <m>G,H</m> such that there is an isomorphism <m>G\times H\cong G</m> but <m>H</m> is not trivial. Note: since <m>G\times H\cong G</m> can be rewritten as <m>G\times H\cong G\times \{e\}</m>, the above shows that in general one cannot cancel groups in isomorphisms between direct products.
-        </p>
-      </problem>
-
-      <problem>
-        <p>
-          Prove that there are group isomorphisms between the following pairs of groups: 
-
-          <ol>
-            <li>
-              <p>
-                <m>\left(\Q/\Z, +\right)\cong \left(\mu,\cdot\right)</m>, where <m>\mu=\{z\in \C \mid z^n=1 \text{ for some integer } n\}</m>. 
-              </p>
-            </li>
-
-            <li>
-              <p>
-                <m>(\C^\times,\cdot)/\mu_m\cong (\C^\times,\cdot)</m> for any integer <m>m\geq 1</m>, where <m>\mu_m=\{z\in \C \mid z^m=1\}</m>.
-              </p>
-            </li>
-          </ol>
-        </p>
-      </problem>
-
-      <problem>
-        <p>
-          Let <m>G</m> be a group of order <m>2m</m> for some odd integer <m>m &gt; 1</m>. Let <m>\Perm(G)</m> be the group of permutations on the elements of <m>G</m> (i.e., the group of bijective functions from G to G). You may use without proof that <m>\Perm(G)\cong S_{2m}</m>.
-        </p>
-
-        <p><ol>
-          <li>
-          Let <m>f : G → \Perm(G)</m> be given by <m>f (g) = λg</m> for all <m>g ∈ G</m>, where <m>λg : G → G</m> is defined by <m>λg(a) = ga</m> for all <m>a ∈ G</m>. Prove that <m>f</m> is an injective group homomorphism.
-          </li>
-
-          <li>
-          Prove that if <m>g ∈ G</m> is an element of order <m>2</m> then <m>λg</m> is a product of <m>m</m> transpositions.
-          </li>
-
-          <li>
-          Prove <m>G</m> contains a subgroup of index <m>2</m> and is consequently not simple. (Tip: Consider the inverse image under <m>f</m> of the subgroup of <m>\Perm(G)</m> consisting of the even permutations.)
-          </li>
-
-        </ol></p>
-      </problem>
-
-      <problem>
-        <p>
-          Prove the following
           <ol>
             <li>
               <p>
@@ -356,31 +277,461 @@
 
             <li>
               <p>
-                The exponential map <m>\exp: ({\mathbb{R}}, +) \to ({\mathbb{R}}\setminus \{0\}, \cdot)</m> is a homomorphism. So is <m>\ln: ({\mathbb{R}}_{&gt;0}, \cdot) \to ({\mathbb{R}}, +)</m>. In fact, these maps are inverse to each other so we obtain an isomorphism . <m>({\mathbb{R}}, +)\cong ({\mathbb{R}}_{&gt;0}, \cdot)</m>.
-              </p>
-            </li>
-
-            <li>
-              <p>
-                For any positive integer <m>n</m> and field <m>F</m>, the map determinant map <m>\det: \operatorname{GL}_n(F) \to (F \setminus \{0\}, \cdot)</m> is a group homomorphism.
+                The exponential and natural logarithm maps from <xref ref="ex-group-homom-examples"/> are actually isomorphisms.
               </p>
             </li>
           </ol>
         </p>
-      </problem>
+      </example>
+
+      <theorem xml:id="thm-iso-inv">
+        <statement>
+          <p>
+            Let <m>G</m> and <m>H</m> be groups. If <m>\varphi:G\to H</m> is an isomorphism, then the following hold:
+          </p>
+
+          <p>
+            <ol> 
+              <li>
+                <p>
+                  <m>|G|=|H|</m>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>|g|=|\varphi(g)|</m> for all <m>g\in G</m> and <m>|h|=|\varphi\inv(h)|</m> for all <m>h\in H</m>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>G</m> is abelian if and only if <m>H</m> is abelian
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>|Z(G)|=|Z(H)|</m>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>G</m> is finitely generated if and only if <m>H</m> is finitely generated.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </theorem>
+
+      <remark>
+        <p>
+          These properties sometimes referred to as <term>isomorphism invariants</term>, though not within this text.
+        </p>
+      </remark>
+
+      <p>
+        Now seems like an exceptional time to recall Part (4) of <xref ref="thm-properties-of-group-homoms"/>.
+      </p>
+
+      <corollary xml:id="cor-composition-of-isos">
+        <statement>
+          <p>
+            Prove that the composition of two isomorphisms is an isomorphism.
+          </p>
+        </statement>
+      </corollary>
+
+      <definition xml:id="def-gp-automorphism">
+        <statement>
+          <p>
+            Let <m>G</m> be a group. An isomorphism <m>\varphi:G\to G</m> is called an <em>automorphism</em> of <m>G</m>.
+          </p>
+        </statement>
+      </definition>
+
+      <example xml:id="ex-identity-automorphism">
+        <p>
+          In <xref ref="ex-group-iso-examples"/> we saw that the identity map is a group isomomorphism from a group to itself, making <m>\id</m> an automorphism. This may prove (pun intended) useful in the following proposition.
+        </p>
+      </example>
+        
+      <proposition xml:id="prop-aut-is-group">
+        <statement>
+          <p>
+            Prove that the set of automorphisms of <m>G</m>, denoted <m>\operatorname{Aut}(G)</m>, is a group under composition.
+          </p>
+        </statement>
+      </proposition>
+
+      <remark>
+        <p>
+          Notice that we have actually shown that the composition of automorphisms is an automorphism, both through <xref ref="cor-composition-of-isos"/> (as automorphisms are isomorphisms) and <xref ref="prop-aut-is-group"/> (as groups are closed under their operation)
+        </p>
+      </remark>
+
+      <p>
+        We have collected several new methods of determining when two groups are isomorphic. Let's express them explicitly.
+      </p>
+
+      <proposition xml:id="prop-aut-properties">
+        <statement>
+            <p>
+              Suppose <m>G\cong H</m>. Then
+              <ol>
+                <li>
+                  <p>
+                    <m>Z(G)\cong Z(H)</m> and 
+                  </p>
+                </li>
+    
+                <li>
+                  <p>
+                    <m>\Aut(G)\cong \Aut(H)</m>.
+                  </p>
+                </li>
+              </ol>
+          </p>
+        </statement>
+      </proposition>
+
+      <proposition xml:id="prop-inverse-map-and-abelian">
+        <statement>
+          <p>
+            Let <m>G</m> be a group. Prove that the map <m>\varphi:G\to G</m> given by <m>\varphi(a)=a^{-1}</m> for all <m>a\in G</m> is an automorphism if and only if <m>G</m> is abelian.
+          </p>
+        </statement>
+      </proposition>
+      
+      <proposition xml:id="prop-conjugation-automorphism">
+        <statement>
+          <p>
+            Let <m>G</m> be a group and <m>x\in G</m>. Define a map <m>\psi_x:G\to G</m> by <m>\psi_x(a)=xax^{-1}</m> for all <m>a\in G</m>. 
+            <ol>
+              <li>
+                <p>
+                  Prove that <m>\psi_x\in \operatorname{Aut}(G)</m> for all <m>x\in G</m>. 
+                </p>
+              </li>
+  
+              <li>
+                <p>
+                  Prove that <m>\{\psi_x\mid x\in G\}</m> is a subgroup of <m>\operatorname{Aut}(G)</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </proposition>
+
+      <remark>
+        <p>
+          Note that as <m>\psi_x:G\to G</m> is bijective it is, by definition, a permutation of <m>G</m>. This might come up later...
+        </p>
+      </remark>
+
+      <exercises>
+
+        <exercisegroup>
+          <title>Deepening Isomorphism Understanding</title>
+
+          <introduction>
+            <p>
+              
+            </p>
+          </introduction>
+
+          <exercise>
+            <p>
+              Prove the following:
+              <ol>
+                <li>
+                  <p>
+                    The group of integers under addition is isomorphic to the group of even integers under addition 
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    The group of real numbers under addition is isomorphic to the group of non-zero real numbers under multiplication
+                  </p>
+                </li>
+              </ol>
+            </p>
+
+          </exercise>
+
+          <exercise>
+            <p>
+              Decide whether the groups <m>Q_8</m> and <m>D_8</m> are isomorphic or not, with justification.
+            </p>
+          </exercise>
+
+          <exercise>
+            <p>
+              Prove the following:
+              <ol>
+                <li>
+                  <p>
+                    <m>S_n\cong S_m</m> if and only if <m>n=m</m>.
+                  </p>
+                </li>
+    
+                <li>
+                  <p>
+                    <m>\mathbb{Z}/(6)\ncong S_3</m>
+                  </p>
+                </li>
+    
+                <li>
+                  <p>
+                    <m>D_{24}\ncong S_4</m>
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>({\mathbb{R}}, +)\cong ({\mathbb{R}}_{&gt;0}, \cdot)</m>.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </exercise>
+
+          <!--
+          <exercise>
+            <p>
+              Prove that there are group isomorphisms between the following pairs of groups: 
+    
+              <ol>
+                <li>
+                  <p>
+                    <m>\left(\Q/\Z, +\right)\cong \left(\mu,\cdot\right)</m>, where <m>\mu=\{z\in \C \mid z^n=1 \text{ for some integer } n\}</m>. 
+                  </p>
+                </li>
+    
+                <li>
+                  <p>
+                    <m>(\C^\times,\cdot)/\mu_m\cong (\C^\times,\cdot)</m> for any integer <m>m\geq 1</m>, where <m>\mu_m=\{z\in \C \mid z^m=1\}</m>.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </exercise>
+          -->
+
+          <exercise>
+            <p>
+              Find an example of groups <m>G,H</m> such that there is an isomorphism <m>G\times H\cong G</m> but <m>H</m> is not trivial. Note: since <m>G\times H\cong G</m> can be rewritten as <m>G\times H\cong G\times \{e\}</m>, the above shows that in general one cannot cancel groups in isomorphisms between direct products.
+            </p>
+          </exercise>
+
+        </exercisegroup>
+
+        <exercisegroup>
+          <title>Section Results</title>
+          
+          <introduction>
+            <p>
+              
+            </p>
+          </introduction>
+
+          <exercise>
+            <statement>
+            
+            <p>
+              Prove <xref ref="thm-iso-def"/>.
+            </p>
+          </statement>
+
+          <hint>
+            <p>
+              Coming soon to an OER near you!
+            </p>
+          </hint>
+
+          </exercise>
+
+          <exercise>
+          <statement>
+            <p>
+              Prove <xref ref="thm-iso-inv"/>.
+            </p>
+          </statement>
+
+          <hint>
+            <p>
+              Coming soon to an OER near you!
+            </p>
+          </hint>
+          </exercise>
+
+          <exercise>
+          <statement>
+            <p>
+              Prove <xref ref="cor-composition-of-isos"/>.
+            </p>
+          </statement>
+
+          <hint>
+            <p>
+              Coming soon to an OER near you!
+            </p>
+          </hint>
+          </exercise>
+
+          <exercise>
+          <statement>
+            <p>
+              Prove <xref ref="prop-aut-is-group"/>.
+            </p>
+          </statement>
+
+          <hint>
+            <p>
+              Coming soon to an OER near you!
+            </p>
+          </hint>
+          </exercise>
+
+          <exercise>
+          <statement>
+            <p>
+              Prove <xref ref="prop-aut-properties"/>.
+            </p>
+          </statement>
+
+          <hint>
+            <p>
+              Coming soon to an OER near you!
+            </p>
+          </hint>
+          </exercise>
+
+          <exercise>
+          <statement>
+            <p>
+              Prove <xref ref="prop-inverse-map-and-abelian"/>.
+            </p>
+          </statement>
+
+          <hint>
+            <p>
+              Coming soon to an OER near you!
+            </p>
+          </hint>
+          </exercise>
+
+          <exercise>
+          <statement>
+            <p>
+              Prove <xref ref="prop-inverse-map-and-abelian"/>.
+            </p>
+          </statement>
+
+          <hint>
+            <p>
+              Coming soon to an OER near you!
+            </p>
+          </hint>
+          </exercise>
+
+          <exercise>
+          <statement>
+            <p>
+              
+              Prove <xref ref="prop-conjugation-automorphism"/>.
+            </p>
+          </statement>
+
+          <hint>
+            <p>
+              Coming soon to an OER near you!
+            </p>
+          </hint>
+          </exercise>
+
+
+        </exercisegroup>
+
+        <exercisegroup>
+          <title>Qualifying Exam Problems</title>
+
+          <introduction>
+            <p>
+              These problems are from old qualifying exams
+            </p>
+          </introduction>
+
+          <exercise number="1">
+            <title>June 2020 Problem 2</title>
+            
+            
+            <p>
+              Let <m>G</m> be a group of order <m>2m</m> for some odd integer <m>m &gt; 1</m>. Let <m>\Perm(G)</m> be the group of permutations on the elements of <m>G</m> (i.e., the group of bijective functions from G to G). You may use without proof that <m>\Perm(G)\cong S_{2m}</m>.
+            </p>
+    
+            <p><ol>
+              <li>
+              Let <m>f : G → \Perm(G)</m> be given by <m>f (g) = λg</m> for all <m>g ∈ G</m>, where <m>λg : G → G</m> is defined by <m>λg(a) = ga</m> for all <m>a ∈ G</m>. Prove that <m>f</m> is an injective group homomorphism.
+              </li>
+    
+              <li>
+              Prove that if <m>g ∈ G</m> is an element of order <m>2</m> then <m>λg</m> is a product of <m>m</m> transpositions.
+              </li>
+    
+              <li>
+              Prove <m>G</m> contains a subgroup of index <m>2</m> and is consequently not simple. (Tip: Consider the inverse image under <m>f</m> of the subgroup of <m>\Perm(G)</m> consisting of the even permutations.)
+              </li>
+            </ol></p>
+          </exercise>
+
+          <exercise>
+            <title>May 2018 Problem 1(b)</title>
+
+            <p>
+              Give an example, with justification, of groups <m>H</m> and <m>K</m> for which <m>\Aut(H)\times\Aut(K)</m> is not isomorphic to <m>\Aut(H \times K)</m>.
+            </p>
+
+          </exercise>
+          
+        </exercisegroup>
+        
+      </exercises>
 
     </section>
 
     <section xml:id="sec-cylic-homoms">
       <title>Cyclic Groups: Revisited</title>
-
-      <problem>
+      <blockquote>
         <p>
-          Prove that if <m>m,n</m> are positive integers such that <m>\gcd(m,n)=1</m> then there is a group isomorphism <m>C_{mn}=C_m\times C_n</m>.
+          <q>There is no way to be in cyclic existence without creating the causes of suffering.</q>
         </p>
-      </problem>
+        <attribution>Jetsunma Ahkon Lhamo</attribution>
+      </blockquote>
+
+      <blockquote>
+        <p>
+          <q>I used to wonder when my boomerang would come back to me. Then it hit me.</q>
+        </p>
+        <attribution>Ancient Proverb</attribution>
+      </blockquote>
 
       <theorem xml:id="thm-cyclic-relprime">
+        <title>Cyclic Groups of Relatively Prime Order</title>
+        <statement>
+          <p>
+            Prove that if <m>m,n</m> are positive integers such that <m>\gcd(m,n)=1</m> then there is a group isomorphism <m>C_{mn}=C_m\times C_n</m>.
+          </p>
+        </statement>
+       
+      </theorem>
+
+      <theorem xml:id="thm-cyclic-divisors-and-subgroups">
+        
         <statement>
           <p>
             Let <m>G=\langle x\rangle</m>, where <m>x</m> has finite order <m>n</m>. Then
@@ -416,7 +767,9 @@
       </proposition>
 
       <remark>
-        This is a particular case of the universal mapping property of a presentation (which we will covered later), since a cyclic group is either presented by <m>\langle x | x^n = e \rangle</m> or <m>\langle x \mid  -\rangle</m>.
+        <p>
+          This is a particular case of the universal mapping property of a presentation (which we will covered later), since a cyclic group is either presented by <m>\langle x | x^n = e \rangle</m> or <m>\langle x \mid  -\rangle</m>.
+        </p>
       </remark>
 
       <theorem xml:id="thm-cyclic-classification">

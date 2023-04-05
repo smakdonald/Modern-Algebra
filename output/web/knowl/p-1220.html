@@ -12,7 +12,22 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">By Corollary  there is an isomorphism <span class="process-math">\(\phi: F(\a_n) \xra{\cong} F(\a_n')\)</span> that fixes <span class="process-math">\(F\text{.}\)</span> Note that <span class="process-math">\(f(x)\)</span> factors as <span class="process-math">\((x-\a_n) g(x)\)</span> in <span class="process-math">\(F(\a_n)[x]\)</span> and that <span class="process-math">\(L\)</span> is the splitting field of <span class="process-math">\(g(x)\)</span> over <span class="process-math">\(F(\a_n)\text{,}\)</span> and similarly <span class="process-math">\(f(x)\)</span> factors as <span class="process-math">\((x-\a'_n) g'(x)\)</span> in <span class="process-math">\(F(\a'_n)[x]\)</span> and that <span class="process-math">\(L\)</span> is the splitting field of <span class="process-math">\(g'(x)\)</span> over <span class="process-math">\(F(\a'_n)\text{.}\)</span> If we blur our eyes slightly and pretend <span class="process-math">\(\phi\)</span> is the identity map, we can apply the inductive hypothesis, since <span class="process-math">\(\deg(g) &lt; \deg(f)\text{,}\)</span> to conclude that there is an isomorphism <span class="process-math">\(\s\)</span> as in the statement. I leave a more rigorous argument to your imaginations.</div>
-<span class="incontext"><a href="sec-splitting.html#p-1220" class="internal">in-context</a></span>
+<div class="para logical">
+<div class="para">We already know that <span class="process-math">\(\alpha_1+\alpha_4=\sqrt[4]{20}\text{,}\)</span> and thus all that remains is to show that <span class="process-math">\(i\)</span> can be expressed in terms of the <span class="process-math">\(\alpha\text{.}\)</span> Observe</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{align}
+\alpha_1+\alpha_2&amp;=e^{\pi i/4}\sqrt[4]{5}+e^{3\pi i/4}\sqrt[4]{5}\\
+&amp;=(\cos(\frac{\pi}{4})+i\sin(\frac{\pi}{4}))\sqrt[4]{5}+(\cos(\frac{3\pi}{4})+i\sin(\frac{3\pi}{4}))\sqrt[4]{5}\\
+&amp;=(\frac{\sqrt{2}}{2}+i\frac{\sqrt{2}}{2})\sqrt[4]{5}+(\frac{\sqrt{2}}{2}+i\frac{\sqrt{2}}{2})\sqrt[4]{5}\\
+&amp;=\sqrt{2}\sqrt[4]{5}\\
+&amp;=\sqrt[4]{20}i,
+\end{align}
+\end{equation*}
+</div>
+<div class="para">and thus that <span class="process-math">\((\alpha_1+\alpha_2)(\alpha_1+\alpha_4)\inv=i\text{.}\)</span> Thus <span class="process-math">\(F(i)\subseteq E\text{,}\)</span> and <span class="process-math">\(F(i)=E\text{.}\)</span> Hence <span class="process-math">\([E:\Q]=8\text{.}\)</span>
+</div>
+</div>
+<span class="incontext"><a href="sec-algebraic.html#p-1220" class="internal">in-context</a></span>
 </body>
 </html>

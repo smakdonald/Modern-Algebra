@@ -12,7 +12,20 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Since <span class="process-math">\(\C[x,y]/(x^2-y^3)\cong \C[t^3, t^2]\subseteq \C[t]\)</span> this ring is a domain. The element <span class="process-math">\(y\)</span> is irreducible for degree reasons. The ideal <span class="process-math">\((y)\)</span> contains <span class="process-math">\(x^2\)</span> but doesn't contain <span class="process-math">\(x\)</span> so <span class="process-math">\(y\)</span> is not prime.</div>
-<span class="incontext"><a href="sec-pids.html#p-890" class="internal">in-context</a></span>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(R\)</span> and <span class="process-math">\(S\)</span> be commutative rings, <span class="process-math">\(\phi: R \to S\)</span> is a ring homomorphism and <span class="process-math">\(s_1, \dots, s_n\)</span> arbitrary elements of <span class="process-math">\(S\text{.}\)</span> Then there exists a unique ring homomorphism</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\tilde{\phi}: R[x_1, \dots, x_n] \to S
+\end{equation*}
+</div>
+<div class="para">such that <span class="process-math">\(\tilde{\phi}|_R = \phi\)</span> and <span class="process-math">\(\tilde{\phi}(x_i) = s_i\)</span> for all <span class="process-math">\(i\text{,}\)</span> namely</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\tilde{\phi}\left(\sum_{e_1, \dots, e_n \geq 0} r_{e_1, \dots, e_n} x_1^{e_1} \cdots x_n^{e_n}\right) =\sum_{e_1, \dots, e_n \geq 0} \phi(r_{e_1, \dots, e_n}) s_1^{e_1} \cdots s_n^{e_n}
+\end{equation*}
+</div>
+</div>
+<span class="incontext"><a href="subsec-polyrings.html#p-890" class="internal">in-context</a></span>
 </body>
 </html>

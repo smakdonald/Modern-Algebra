@@ -6,11 +6,18 @@
 
     <section xml:id="sec-cosets">
       <title>Cosets and Equivalence Relations</title>
+
+      <blockquote>
+        <p>
+          <q>Too much may be the equivalent of none at all.</q>
+        </p>
+        <attribution>Lee Loevinger</attribution>
+      </blockquote>
       
       <definition xml:id="def-coset">
         <statement>
           <p>
-            For any <m>N\leq G</m> and any g\in G let 
+            For any <m>N\leq G</m> and any <m>g\in G</m> let 
             <me>
               gN=\{gn|n\in N\}\;\text{and}\; Ng=\{ng|n\in N\}
             </me>
@@ -19,7 +26,14 @@
         </statement>
       </definition>
 
+      <remark>
+        <p>
+          Though mostly a matter of preference as aesthetics, we will focus primarily on left cosets.
+        </p>
+      </remark>
+
       <lemma xml:id="lem-cosetfacts">
+        <title>Coset Equivalencies</title>
         <statement>
           <p>
             Let <m>H \leq G</m>. The following facts about left cosets are equivalent for <m>x,y \in G</m>:
@@ -64,9 +78,6 @@
         </statement>
 
         <proof>
-          <p>
-            We only prove the statements about left cosets.
-          </p>
 
           <p>
             <m>1. \Rightarrow 2.:</m> if <m>x</m> and <m>y</m> belong to the same left coset <m>gH</m> of <m>H</m> in <m>G</m> then <m>x=gh'</m> and <m>y=gh''</m> for some <m>h',h''\in H</m>, so <m>g=y(h'')^{-1}</m> and therefore <m>x=y(h'')^{-1}h'=yh</m> where <m>h=(h'')^{-1}h'\in H</m>.
@@ -124,7 +135,7 @@
 
         <proof>
           <p>
-            Let me prove the assertions for right cosets. Clearly every element <m>g</m> of <m>G</m> belongs to at least one right coset, since <m>g \in Hg</m> (since <m>e \in H</m>). We need to show any two cosets are either identical or disjoint: if <m>Hx</m> and <m>Hy</m> share an element, then it follows from <m>1.\Rightarrow 6.</m> of Lemma <xref ref="lem:cosets" /> that <m>Hx=Hy</m>. This proves that the right cosets partition <m>G</m>. To see that all right cosets have the same cardinality as <m>H</m>, define a function <me>\rho: H \to Hg</me> by <m>\rho(h) = hg</m>. Clearly <m>\rho</m> is onto and if <m>\rho(h) = \rho(h')</m> then <m>hg = h'g</m> and hence <m>h = h'</m>, so that <m>\rho</m> is also one-to-one.
+            Let me prove the assertions for right cosets. Clearly every element <m>g</m> of <m>G</m> belongs to at least one right coset, since <m>g \in Hg</m> (since <m>e \in H</m>). We need to show any two cosets are either identical or disjoint: if <m>Hx</m> and <m>Hy</m> share an element, then it follows from <m>1.\Rightarrow 6.</m> of Lemma <xref ref="lem-cosetfacts" /> that <m>Hx=Hy</m>. This proves that the right cosets partition <m>G</m>. To see that all right cosets have the same cardinality as <m>H</m>, define a function <me>\rho: H \to Hg</me> by <m>\rho(h) = hg</m>. Clearly <m>\rho</m> is onto and if <m>\rho(h) = \rho(h')</m> then <m>hg = h'g</m> and hence <m>h = h'</m>, so that <m>\rho</m> is also one-to-one.
           </p>
         </proof>
       </lemma>
@@ -141,14 +152,21 @@
             </me> 
             In particular the number of left cosets of <m>H</m> in <m>G</m> is equal to the number of right cosets of <m>H</m> in <m>G</m>.
           </p>
+
+          <p>
+            Furthermore, even if <m>G</m> is not finite the number of left and right cosets of a subgroup <m>H\leq G</m> is still the same. <em>(Hint</em>: consider the map <m>gH\mapsto Hg^{-1}</m> and show it's a bijection. Why is the inverse needed?)
+
+          </p>
         </statement>
       </corollary>
 
-      <problem>
-        <p>
-          Even if <m>G</m> is not finite the number of left and right cosets of a subgroup <m>H\leq G</m> is still the same. <em>(Hint</em>: consider the map <m>gH\mapsto Hg^{-1}</m> and show it's a bijection. Why is the inverse needed?)
-        </p>
-      </problem>
+      <definition xml:id="def-index">
+        <statement>
+          <p>
+            In finite groups, the common number of left or right cosets of a subgroup <m>H</m> in a group <m>G</m> is denoted as <m>[G:H]</m> and is called the <em>index</em> of <m>H</m> in <m>G</m>.
+          </p>
+        </statement>
+      </definition>
 
       <theorem xml:id="thm-lagrange">
         <title>Lagrange's Theorem</title>
@@ -168,47 +186,145 @@
         </statement>
       </corollary>
 
-      <definition xml:id="def-index">
+      <corollary xml:id="cor-lagrange-index">
         <statement>
           <p>
-            <p>
-              In finite groups, the common number of left or right cosets of a subgroup <m>H</m> in a group <m>G</m> is denoted as <m>[G:H]</m> and is called the <em>index</em> of <m>H</m> in <m>G</m>.
-            </p>
+            If <m>G</m> is a finite group, then 
+            <me>
+              [G:H]=\frac{|G|}{|H|}
+            </me>
           </p>
         </statement>
-      </definition>
+      </corollary>
 
-      <problem>
-        <p> 
-          If <m>G</m> is a finite group, then 
-          <me>
-            [G:H]=\frac{|G|}{|H|}
-          </me>
-        </p>
-      </problem>
+      <theorem xml:id="thm-index-tower">
+        <statement>
+          <p>
+            Let <m>G</m> be a group (possibly infinite) and <m>H \leq K</m> subgroups of <m>G</m>. Suppose <m>[G : H]</m> is finite. Prove that <m>[G : H] = [G : K][K : H].</m> (Hint: First prove this in the case <m>G</m> is a finite group. Then prove you can reduce to the finite case.)
+          </p>
+        </statement>
+      </theorem>
 
-      <problem>
-        <p>
-          Let <m>G</m> be a group (possibly infinite) and <m>H \leq K</m> subgroups of <m>G</m>. Suppose <m>[G : H]</m> is finite. Prove that <m>[G : H] = [G : K][K : H].</m> (Hint: First prove this in the case <m>G</m> is a<!-- linebreak -->finite group. Then prove you can reduce to the finite case.)
-        </p>
-      </problem>
+      <exercises>
 
-      <problem>
+        <exercisegroup>
+          <title>Section Results</title>
+          
+          <introduction>
+            <p>
+              
+            </p>
+          </introduction>
+
+          <exercise>
+            <statement>
+            
+            <p>
+              Prove <xref ref="lem-cosetfacts"/>.
+            </p>
+          </statement>
+
+          <hint>
+            <p>
+              Coming soon to an OER near you!
+            </p>
+          </hint>
+
+          </exercise>
+
+          <exercise>
+          <statement>
+            <p>
+              Prove <xref ref="lem-cosetpartition"/>.
+            </p>
+          </statement>
+
+          <hint>
+            <p>
+              Coming soon to an OER near you!
+            </p>
+          </hint>
+          </exercise>
+
+          <exercise>
+          <statement>
+            <p>
+              Prove <xref ref="cor-left-right-cosets"/>.
+            </p>
+          </statement>
+
+          <hint>
+            <p>
+              Coming soon to an OER near you!
+            </p>
+          </hint>
+          </exercise>
+
+          <exercise>
+          <statement>
+            <p>
+              Prove <xref ref="thm-lagrange"/>.
+            </p>
+          </statement>
+
+          <hint>
+            <p>
+              Coming soon to an OER near you!
+            </p>
+          </hint>
+          </exercise>
+
+          <exercise>
+          <statement>
+            <p>
+              Prove <xref ref="cor-lagrange"/>.
+            </p>
+          </statement>
+
+          <hint>
+            <p>
+              Coming soon to an OER near you!
+            </p>
+          </hint>
+          </exercise>
+
+          <exercise>
+          <statement>
+            <p>
+              Prove <xref ref="thm-index-tower"/>.
+            </p>
+          </statement>
+
+          <hint>
+            <p>
+              Coming soon to an OER near you!
+            </p>
+          </hint>
+          </exercise>
+
+
+        </exercisegroup>
+
+      <exercise>
         <p>
           Prove the converse to Lagrange's theorem is false: find a group <m>G</m> and an integer <m>d&gt;0</m> such that <m>d</m> divides the order of <m>G</m> but <m>G</m> does not have any subgroups of order <m>d</m>. <em>Hint</em>: Take <m>G=A_5</m>.
         </p>
-      </problem>
+      </exercise>
 
-      <problem>
-        <p>
-          Let <m>G</m> be a finite group and <m>K</m> a subgroup of <m>G</m> such that: <m>[G : K] = 2</m>, <m>K</m> is simple, and <m>Z(G) = \{e\}</m>. Prove that the only normal subgroups of <m>G</m> are <m>\{e\}, K</m>, and <m>G</m>. (Hint: Let H be a normal subgroup of G. Then H ∩K is a normal subgroup of K.)
-        </p>
-      </problem>
+    </exercises>
+
 
     </section>
 
     <section xml:id="sec-normal-subgroups">
       <title>Normal Subgroups</title>
+
+      <blockquote>
+        <p>
+          <q>If you are always trying to be normal, you will never know how amazing you can be.</q>
+        </p>
+        <attribution>Maya Angelou</attribution>
+      </blockquote>
 
       <definition xml:id="def-normal-subgroup">
         <statement>
@@ -481,6 +597,12 @@
         </proof>
       </problem>
 
+      <problem>
+        <p>
+          Let <m>G</m> be a finite group and <m>K</m> a subgroup of <m>G</m> such that: <m>[G : K] = 2</m>, <m>K</m> is simple, and <m>Z(G) = \{e\}</m>. Prove that the only normal subgroups of <m>G</m> are <m>\{e\}, K</m>, and <m>G</m>. (Hint: Let H be a normal subgroup of G. Then H ∩K is a normal subgroup of K.)
+        </p>
+      </problem>
+
       
     </section>
 
@@ -626,11 +748,6 @@
 
 
       </exercises>
-      
-    </section>
-
-    <section xml:id="sec-grp-presentations">
-      <title>Presentations as Quotient Groups</title>
       
     </section>
 

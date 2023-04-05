@@ -574,7 +574,6 @@
           <title>Groups of Small Order</title>
           
             <blockquote>
-              <title>Lorem ipsum</title>
               <p>
                 <q>Transformation happens in small groups.</q>
               </p>
@@ -2965,7 +2964,13 @@
         <title>History</title>
 
         <p>
-          Abel
+          Abelian groups are named after Norwegian mathematician Niels Henrik Abel, who made significant contributions to the study of group theory in the early 19th century. Abel was one of the first mathematicians to investigate the properties of groups, which are sets of elements that can be combined under an operation (such as addition or multiplication) that satisfies certain axioms.
+        </p>
+        <p>
+          In particular, Abel studied groups in which the operation is commutative, meaning that the order in which elements are combined does not affect the result. Such groups had been studied before Abel's time, but he was the first to recognize their importance and to develop a systematic theory for them. Abel's work on these groups was influential in the development of abstract algebra, a branch of mathematics that deals with algebraic structures like groups, rings, and fields.
+        </p>
+        <p>
+          The term "Abelian" was coined in honor of Abel's contributions to the study of commutative groups. The adjective "Abelian" is now used to describe any algebraic structure (not just groups) in which the operation is commutative.
         </p>
 
 

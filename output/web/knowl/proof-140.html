@@ -12,15 +12,21 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<div class="para">Given an <span class="process-math">\(R[G]\)</span>-module structure on <span class="process-math">\(V\text{,}\)</span> for every <span class="process-math">\(g\in G\text{,}\)</span> there is a map <span class="process-math">\(m_g: V\to V\)</span> given by <span class="process-math">\(v\mapsto g\cdot v\text{.}\)</span> We have <span class="process-math">\(m_g  (rv) = g (rv) = rg (v) = r m_g(v)\text{,}\)</span> so <span class="process-math">\(m_g\)</span> is <span class="process-math">\(R\)</span>-linear. Moreover, the map <span class="process-math">\(\rho:G\to \operatorname{End}_R(V)\)</span> that sends <span class="process-math">\(g\mapsto m_g\)</span> preserves multiplication and identity: <span class="process-math">\(\rho(gh)(v) = gh v = g(hv) = \rho(g) \rho(h) (v)\)</span> and <span class="process-math">\(\rho(e)(v) = v\text{.}\)</span> Thus, we obtain an <span class="process-math">\(R\)</span>-linear representation <span class="process-math">\(\rho:G\to \operatorname{Aut}_R(V)\text{.}\)</span>
-</div> <div class="para logical">
-<div class="para">Conversely, recall that a module structure on an abelian group is equivalent to a ring homomorphism to its endomorphism ring over <span class="process-math">\(\mathbb{Z}\text{.}\)</span> Given a representation <span class="process-math">\(\rho:G\to \operatorname{Aut}_R(V)\)</span> by considering <span class="process-math">\(\operatorname{Aut}_R(V)\subseteq \operatorname{End}_\mathbb{Z}(V)\)</span> we get a group homomorphism <span class="process-math">\(f\)</span> to the unit subgroup of <span class="process-math">\(\operatorname{End}_\mathbb{Z}(V)\text{.}\)</span> The action of <span class="process-math">\(R\)</span> on <span class="process-math">\(V\)</span> gives a ring homomorphism <span class="process-math">\(\iota: R \to \operatorname{End}_\mathbb{Z}(V)\text{.}\)</span> For <span class="process-math">\(r\in R\)</span> and <span class="process-math">\(g\in G\text{,}\)</span> we have</div>
+<div class="para logical">
+<div class="para">Most of this follows from noticing that <span class="process-math">\(R[G]\)</span> is a coproduct. Indeed, we can vie <span class="process-math">\(R[G]\)</span> as an internal direct sum <span class="process-math">\(R[G]=\bigoplus_{g\in G} Rg\)</span> and hence it is the coproduct for the family <span class="process-math">\(\{Rg\}_{g\in G}\)</span> where each <span class="process-math">\(Rg\cong R\text{.}\)</span> For each <span class="process-math">\(g\in G\)</span> set up an <span class="process-math">\(R\)</span>-module homomorphism <span class="process-math">\(f_g: Rg\to A\)</span> by mapping <span class="process-math">\(f_g(r_gg)=\iota(r_g)f(g)\text{.}\)</span> Then the definition of coproduct gives a unique <span class="process-math">\(R\)</span>-module homomorphism</div>
 <div class="displaymath process-math">
 \begin{equation*}
-(f(g) \circ \iota(r))(v) = f(g)(rv) = \rho(g)(rv) = r \rho(g)(v) = (\iota(r) \circ f(g))(v)
+\alpha: R[G]=\bigoplus_{g\in G} Rg \to A \text{ such that } \alpha|_{Rg}=f_g.
 \end{equation*}
 </div>
-<div class="para">for all <span class="process-math">\(v\in V\text{.}\)</span> Thus, by the universal property, we get a well-defined ring homomorphism <span class="process-math">\(R[G] \to \operatorname{End}_\mathbb{Z}(V)\text{,}\)</span> and hence an <span class="process-math">\(R[G]\)</span>-module structure, which is easily seen to follow the formula above.</div>
-</div> <div class="para">We leave the final claim as an exercise.</div></article><span class="incontext"><a href="sec-group-rings-and-modules.html#proof-140" class="internal">in-context</a></span>
+<div class="para">From the way we defined the maps <span class="process-math">\(f_g\)</span> we can deduce that <span class="process-math">\(\alpha|_R = \iota\)</span> and <span class="process-math">\(\alpha|_G = f\)</span> and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\alpha\left(\sum_g r_g g\right) = \sum_g \iota(r_g) f(g).
+\end{equation*}
+</div>
+<div class="para">It remains to check that this map is in fact a ring homomorphism, i.e. it preserves multiplication. This can be done using the formula for <span class="process-math">\(\alpha\)</span> above and the fact that <span class="process-math">\(\iota(R)\)</span> and <span class="process-math">\(f(G)\)</span> commute in <span class="process-math">\(A\text{.}\)</span>
+</div>
+</div></article><span class="incontext"><a href="sec-group-rings-and-modules.html#proof-140" class="internal">in-context</a></span>
 </body>
 </html>

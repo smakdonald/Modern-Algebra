@@ -202,7 +202,7 @@ window.MathJax = {
 \newcommand{\GL}{\operatorname{GL}} 
 \newcommand{\ht}{\operatorname{height}} 
 \def\Hom{\operatorname{Hom}} 
-\def\im{\operatorname{id}} 
+\def\id{\operatorname{id}} 
 \def\im{\operatorname{im}} 
 \def\Inn{\operatorname{Inn}}
 \def\ker{\operatorname{ker}}
@@ -503,22 +503,30 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="gp-homs.html" class="internal"><span class="codenumber">2</span> <span class="title">Homomorphisms and Isomorphisms</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-gphoms.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Group Homomorphisms</span></a></div></li>
-<li><div class="toc-item"><a href="sec-gpisos.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Group Isomorphisms</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-gphoms.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Group Homomorphisms</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-gphoms.html#exercises-5" class="internal"><span class="codenumber">2.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-gpisos.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Group Isomorphisms</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-gpisos.html#exercises-6" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
 <li><div class="toc-item"><a href="sec-cylic-homoms.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Cyclic Groups: Revisited</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="normal-quotient-groups.html" class="internal"><span class="codenumber">3</span> <span class="title">Normal and Quotient Groups</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-cosets.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Cosets and Equivalence Relations</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-cosets.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Cosets and Equivalence Relations</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-cosets.html#exercises-7" class="internal"><span class="codenumber">3.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
 <li><div class="toc-item"><a href="sec-normal-subgroups.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Normal Subgroups</span></a></div></li>
 <li><div class="toc-item"><a href="sec-quotient-groups.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Quotient Groups</span></a></div></li>
 <li>
 <div class="toc-item"><a href="sec-isomorphism-thms.html" class="internal"><span class="codenumber">3.4</span> <span class="title">The Isomorphism Theorems</span></a></div>
 <ul class="structural"><li><div class="toc-item"><a href="sec-isomorphism-thms.html#exercises-gp-isos" class="internal"><span class="codenumber">3.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
-<li><div class="toc-item"><a href="sec-grp-presentations.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Presentations as Quotient Groups</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -740,7 +748,7 @@ window.MathJax = {
 <li><div class="toc-item"><a href="field-extension-basics.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Field Extension Basics</span></a></div></li>
 <li>
 <div class="toc-item"><a href="sec-algebraic.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Algebraic Extensions</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-algebraic.html#exercises-8" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-algebraic.html#exercises-11" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li><div class="toc-item"><a href="sec-closure.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Algebraic Closures</span></a></div></li>
 <li><div class="toc-item"><a href="sec-splitting.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Splitting Fields</span></a></div></li>
@@ -923,8 +931,7 @@ e = ee' = e'.
 </div></li>
 <li id="li-19"><div class="para" id="p-31">
 <span class="process-math">\((\Z,+), (\Q,+), (\R,+),\text{,}\)</span> and <span class="process-math">\((\C,+)\)</span> are all abelian groups, where <span class="process-math">\(+\)</span> denotes traditional addition.</div></li>
-<li id="permutation-group">
-<span class="heading"><span class="title">Permutation Group.</span></span><div class="para logical" id="p-32">
+<li id="permutation-group"><div class="para logical" id="p-32">
 <div class="para">For any set <span class="process-math">\(S\text{,}\)</span> the permutations on <span class="process-math">\(S\)</span>
 </div>
 <div class="displaymath process-math">
@@ -933,16 +940,15 @@ e = ee' = e'.
 \end{equation*}
 </div>
 <div class="para">form a non-abelian group under composition.</div>
-</div>
-</li>
+</div></li>
 <li id="li-21"><div class="para logical" id="p-33">
-<div class="para">For any field <span class="process-math">\(F\)</span> and positive integer <span class="process-math">\(n\text{,}\)</span> let</div>
+<div class="para">For any positive integer <span class="process-math">\(n\text{,}\)</span> let</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\operatorname{GL}_n(F)=\{ \text{invertible } n \times n \;\text{matrices with entries in}\; F\}.
+\operatorname{GL}_n(\C)=\{ \text{invertible } n \times n \;\text{matrices with entries in}\; \C\}.
 \end{equation*}
 </div>
-<div class="para">By invertible I mean those matrices that have two-sided inverses, but in turns out that if an <span class="process-math">\(n \times n\)</span> matrix has a left inverse then it it is automatically a right inverse too, and vice versa. Then <span class="process-math">\(\operatorname{GL}_n(F)\)</span> is a non-abelian group under matrix multiplication.</div>
+<div class="para">By invertible I mean those matrices that have two-sided inverses, but in turns out that if an <span class="process-math">\(n \times n\)</span> matrix has a left inverse then it it is automatically a right inverse too, and vice versa. Then <span class="process-math">\(\operatorname{GL}_n(\C)\)</span> is a non-abelian group under matrix multiplication.</div>
 </div></li>
 <li id="li-22"><div class="para" id="p-34">For any <span class="process-math">\(n\text{,}\)</span> let <span class="process-math">\(\mathbb{Z}/(n)\)</span> denote the integers modulo <span class="process-math">\(n\text{.}\)</span> Then <span class="process-math">\((\mathbb{Z}/(n), +)\)</span> is an abelian group where <span class="process-math">\(+\)</span> denotes addition modulo <span class="process-math">\(n\text{.}\)</span>
 </div></li>
@@ -973,7 +979,7 @@ e = ee' = e'.
 </div></article><article class="proposition theorem-like" id="prop-order-4-abelian"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.14</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-41">Every group of order <span class="process-math">\(4\)</span> is abelian.</div></article><article class="hiddenproof" id="proof-5"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-5"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-5"><article class="hiddenproof"><div class="para" id="p-42">Let <span class="process-math">\(G\)</span> be a group with <span class="process-math">\(4\)</span> elements, and suppose there are elements <span class="process-math">\(a,b\in G\)</span> such that <span class="process-math">\(ab\neq ba\)</span> for some elements <span class="process-math">\(a, b\in G\text{.}\)</span> Since <span class="process-math">\(ab \neq ba\text{,}\)</span> we must have <span class="process-math">\(a \neq b\text{,}\)</span> <span class="process-math">\(a \neq e\text{,}\)</span> and <span class="process-math">\(b\neq e\text{.}\)</span> Since <span class="process-math">\(G\)</span> has only <span class="process-math">\(4\)</span> elements and <span class="process-math">\(ab \neq ba\text{,}\)</span> either <span class="process-math">\(ab \in \{e, a, b\}\)</span> or <span class="process-math">\(ba \in\{e, a, b\}\text{.}\)</span> Without loss, say the former occurs. But <span class="process-math">\(ab = e\)</span> implies <span class="process-math">\(b=a\inv\)</span> and we know <span class="process-math">\(a\inv\)</span> commutes with <span class="process-math">\(a\text{,}\)</span> and hence this is not possible. If <span class="process-math">\(ab = a\text{,}\)</span> then <span class="process-math">\(b = e\)</span> and if <span class="process-math">\(ab = b\)</span> then <span class="process-math">\(a = 1\text{,}\)</span> both of which are impossible. Since a, b were arbitrary, G must be abelian.</div></article></div>
+<div class="para" id="p-41">Every group of order <span class="process-math">\(4\)</span> is abelian.</div></article><article class="hiddenproof" id="proof-5"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-5"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-5"><article class="hiddenproof"><div class="para" id="p-42">Let <span class="process-math">\(G\)</span> be a group with <span class="process-math">\(4\)</span> elements, and suppose there are elements <span class="process-math">\(a,b\in G\)</span> such that <span class="process-math">\(ab\neq ba\)</span> for some elements <span class="process-math">\(a, b\in G\text{.}\)</span> Since <span class="process-math">\(ab \neq ba\text{,}\)</span> we must have <span class="process-math">\(a \neq b\text{,}\)</span> <span class="process-math">\(a \neq e\text{,}\)</span> and <span class="process-math">\(b\neq e\text{.}\)</span> Since <span class="process-math">\(G\)</span> has only <span class="process-math">\(4\)</span> elements and <span class="process-math">\(ab \neq ba\text{,}\)</span> either <span class="process-math">\(ab \in \{e, a, b\}\)</span> or <span class="process-math">\(ba \in\{e, a, b\}\text{.}\)</span> Without loss, say the former occurs. But <span class="process-math">\(ab = e\)</span> implies <span class="process-math">\(b=a\inv\)</span> and we know <span class="process-math">\(a\inv\)</span> commutes with <span class="process-math">\(a\text{,}\)</span> and hence this is not possible. If <span class="process-math">\(ab = a\text{,}\)</span> then <span class="process-math">\(b = e\)</span> and if <span class="process-math">\(ab = b\)</span> then <span class="process-math">\(a = 1\text{,}\)</span> both of which are impossible. Since <span class="process-math">\(a, b\)</span> were arbitrary, <span class="process-math">\(G\)</span> must be abelian.</div></article></div>
 <article class="proposition theorem-like" id="prop-orderelgp"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.15</span><span class="period">.</span>
 </h3>
@@ -986,8 +992,8 @@ e = ee' = e'.
 </div></li>
 <li id="li-25"><div class="para" id="p-46">Conclude <span class="process-math">\(|x| \leq |G|\)</span> in all cases.</div></li>
 </ol>
-</div></article><article class="problem example-like" id="problem-1"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">1.16</span><span class="period">.</span>
+</div></article><article class="proposition theorem-like" id="prop-"><h3 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.16</span><span class="period">.</span>
 </h3>
 <div class="para logical" id="p-47">
 <div class="para">Let <span class="process-math">\(G, H\)</span> be groups and let <span class="process-math">\(x, y\)</span> be elements of <span class="process-math">\(G\text{.}\)</span>
@@ -997,13 +1003,47 @@ e = ee' = e'.
 </div></li>
 <li id="li-27"><div class="para" id="p-49">Prove or disprove: if <span class="process-math">\(x,y\)</span> have finite order then <span class="process-math">\(xy\)</span> has finite order.</div></li>
 </ol>
-</div></article><article class="problem example-like" id="problem-2"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">1.17</span><span class="period">.</span>
+</div></article><article class="lemma theorem-like" id="lem-group-element-order"><h3 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">1.17</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-50">
-<div class="para">Let <span class="process-math">\(G\)</span> be a group.</div>
-<ol class="decimal">
-<li id="li-28"><div class="para logical" id="p-51">
+<div class="para" id="p-50">If <span class="process-math">\(x^m = e\)</span> then <span class="process-math">\(|x| \mid m\text{.}\)</span>
+</div></article><section class="exercises" id="exercises-1"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<div class="exercisegroup" id="exercisegroup-1">
+<h4 class="heading"><span class="title">Group Examples.</span></h4>
+<div class="introduction" id="introduction-1"><div class="para" id="p-51">For each of the following, prove that the given set and operation forms a group.</div></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-1"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<div class="para" id="p-52">Prove that each of the groups given in <a href="" class="xref" data-knowl="./knowl/ex-group-examples.html" title="Example 1.9: Group Examples">Example 1.9</a> are indeed groups.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like"><div class="para logical" id="p-53"><ol class="lower-alpha">
+<li id="li-28"><div class="para" id="p-54">Coming soon to an OER near you!</div></li>
+<li id="li-29"><div class="para" id="p-55">Coming soon to an OER near you!</div></li>
+<li id="li-30"><div class="para" id="p-56">Coming soon to an OER near you!</div></li>
+<li id="li-31"><div class="para" id="p-57">Coming soon to an OER near you!</div></li>
+</ol></div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-2"><h5 class="heading">
+<span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">Groups of Units.</span>
+</h5>
+<div class="para logical" id="p-58">
+<ol class="lower-alpha">
+<li id="li-32"><div class="para" id="p-59">
+<span class="process-math">\(\Q^\times=\Q\setminus\{0\}\text{,}\)</span> <span class="process-math">\(\R^\times=\R\setminus\{0\}\text{,}\)</span> and <span class="process-math">\(\C^\times=\C\setminus\{0\}\)</span> are each abelian groups under multiplicaton.</div></li>
+<li id="li-33"><div class="para" id="p-60">Let <span class="process-math">\(p\)</span> be a prime integer. Then <span class="process-math">\(\mathbb{Z}/(p)^\times=\mathbb{Z}/(p)\setminus\{0\}\)</span> is an abelian group under multiplicaton.</div></li>
+</ol>
+<div class="para">These are examples of <dfn class="terminology">groups of units</dfn>, which will be defined explicitely and explored more generally later on See: <code class="code-inline tex2jax_ignore">[provisional cross-reference: def-group-of-units]</code>
+</div>
+</div></article><article class="exercise exercise-like" id="exercise-3"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<div class="para" id="p-61">Give an example of a pair <span class="process-math">\((G,\cdot)\)</span> that satisfies axioms 1 and 2 of <a href="" class="xref" data-knowl="./knowl/def-group.html" title="Definition 1.3">Definition 1.3</a> and an element of <span class="process-math">\(G\)</span> that has a <em class="emphasis">left</em> inverse but not a <em class="emphasis">right</em> inverse.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like"><div class="para" id="p-62">Coming soon to an OER near you!</div></div></div>
+</div></article>
+</div>
+</div>
+<article class="exercise exercise-like" id="exercise-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para" id="p-63">Let <span class="process-math">\(G\)</span> be a group.</div> <div class="para logical" id="p-64"><ol class="lower-alpha">
+<li id="li-34"><div class="para logical" id="p-65">
 <div class="para">Let <span class="process-math">\(g \in G\)</span> be an element of finite order. Show that <span class="process-math">\(g^m\)</span> has finite order for any integer <span class="process-math">\(m \geq 0\text{,}\)</span> and in fact</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1011,44 +1051,8 @@ e = ee' = e'.
 \end{equation*}
 </div>
 </div></li>
-<li id="li-29"><div class="para" id="p-52">Prove that for all <span class="process-math">\(g, h\)</span> in <span class="process-math">\(G\text{,}\)</span> <span class="process-math">\(|gh| = |hg|\)</span> holds.</div></li>
-</ol>
-</div></article><article class="lemma theorem-like" id="lem-group-element-order"><h3 class="heading">
-<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">1.18</span><span class="period">.</span>
-</h3>
-<div class="para" id="p-53">If <span class="process-math">\(x^m = e\)</span> then <span class="process-math">\(|x| \mid m\text{.}\)</span>
-</div></article><section class="exercises" id="exercises-1"><h3 class="heading hide-type">
-<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
-</h3>
-<div class="exercisegroup" id="exercisegroup-1">
-<h4 class="heading"><span class="title">Group Examples.</span></h4>
-<div class="introduction" id="introduction-1"><div class="para" id="p-54">For each of the following, prove that the given set and operation forms a group.</div></div>
-<div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="exercise-1"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
-<div class="para" id="p-55">Prove that each of the groups given in <a href="" class="xref" data-knowl="./knowl/ex-group-examples.html" title="Example 1.9: Group Examples">Example 1.9</a> are indeed groups.</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like"><div class="para logical" id="p-56"><ol class="lower-alpha">
-<li id="li-30"><div class="para" id="p-57">We show the <a href="" class="xref" data-knowl="./knowl/trivial-group.html" title="Item 1">Item 1</a> is indeed a group.</div></li>
-<li id="li-31"><div class="para" id="p-58"></div></li>
-<li id="li-32"><div class="para" id="p-59"></div></li>
-<li id="li-33"><div class="para" id="p-60"></div></li>
-</ol></div></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-2"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
-<div class="para logical" id="p-61">
-<ol class="lower-alpha">
-<li id="li-34"><div class="para" id="p-62">
-<span class="process-math">\(\Q^\times=\Q\setminus\{0\}\text{,}\)</span> <span class="process-math">\(\R^\times=\R\setminus\{0\}\text{,}\)</span> and <span class="process-math">\(\C^\times=\C\setminus\{0\}\)</span> are each abelian groups under multiplicaton.</div></li>
-<li id="li-35"><div class="para" id="p-63">Let <span class="process-math">\(p\)</span> be a prime integer. Then <span class="process-math">\(\mathbb{Z}/(p)^\times=\mathbb{Z}/(p)\setminus\{0\}\)</span> is an abelian group under multiplicaton.</div></li>
-</ol>
-<div class="para">These are examples of <dfn class="terminology">groups of units</dfn>, which will be defined explicitely and explored more generally later on See: <code class="code-inline tex2jax_ignore">[provisional cross-reference: def-group-of-units]</code>
-</div>
-</div></article><article class="exercise exercise-like" id="exercise-3"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
-<div class="para" id="p-64">Give an example of a pair <span class="process-math">\((G,\cdot)\)</span> that satisfies axioms 1 and 2 of <a href="" class="xref" data-knowl="./knowl/def-group.html" title="Definition 1.3">Definition 1.3</a> and an element of <span class="process-math">\(G\)</span> that has a <em class="emphasis">left</em> inverse but not a <em class="emphasis">right</em> inverse.</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like"><div class="para" id="p-65">Coming soon to an OER near you!</div></div></div>
-</div></article>
-</div>
-</div></section></section></div>
+<li id="li-35"><div class="para" id="p-66">Prove that for all <span class="process-math">\(g, h\)</span> in <span class="process-math">\(G\text{,}\)</span> <span class="process-math">\(|gh| = |hg|\)</span> holds.</div></li>
+</ol></div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="intro-groups.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-common-groups.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

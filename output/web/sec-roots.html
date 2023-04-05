@@ -202,7 +202,7 @@ window.MathJax = {
 \newcommand{\GL}{\operatorname{GL}} 
 \newcommand{\ht}{\operatorname{height}} 
 \def\Hom{\operatorname{Hom}} 
-\def\im{\operatorname{id}} 
+\def\id{\operatorname{id}} 
 \def\im{\operatorname{im}} 
 \def\Inn{\operatorname{Inn}}
 \def\ker{\operatorname{ker}}
@@ -503,22 +503,30 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="gp-homs.html" class="internal"><span class="codenumber">2</span> <span class="title">Homomorphisms and Isomorphisms</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-gphoms.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Group Homomorphisms</span></a></div></li>
-<li><div class="toc-item"><a href="sec-gpisos.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Group Isomorphisms</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-gphoms.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Group Homomorphisms</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-gphoms.html#exercises-5" class="internal"><span class="codenumber">2.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-gpisos.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Group Isomorphisms</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-gpisos.html#exercises-6" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
 <li><div class="toc-item"><a href="sec-cylic-homoms.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Cyclic Groups: Revisited</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="normal-quotient-groups.html" class="internal"><span class="codenumber">3</span> <span class="title">Normal and Quotient Groups</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-cosets.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Cosets and Equivalence Relations</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-cosets.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Cosets and Equivalence Relations</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-cosets.html#exercises-7" class="internal"><span class="codenumber">3.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
 <li><div class="toc-item"><a href="sec-normal-subgroups.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Normal Subgroups</span></a></div></li>
 <li><div class="toc-item"><a href="sec-quotient-groups.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Quotient Groups</span></a></div></li>
 <li>
 <div class="toc-item"><a href="sec-isomorphism-thms.html" class="internal"><span class="codenumber">3.4</span> <span class="title">The Isomorphism Theorems</span></a></div>
 <ul class="structural"><li><div class="toc-item"><a href="sec-isomorphism-thms.html#exercises-gp-isos" class="internal"><span class="codenumber">3.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
-<li><div class="toc-item"><a href="sec-grp-presentations.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Presentations as Quotient Groups</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -740,7 +748,7 @@ window.MathJax = {
 <li><div class="toc-item"><a href="field-extension-basics.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Field Extension Basics</span></a></div></li>
 <li>
 <div class="toc-item"><a href="sec-algebraic.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Algebraic Extensions</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-algebraic.html#exercises-8" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-algebraic.html#exercises-11" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li><div class="toc-item"><a href="sec-closure.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Algebraic Closures</span></a></div></li>
 <li><div class="toc-item"><a href="sec-splitting.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Splitting Fields</span></a></div></li>
@@ -838,7 +846,7 @@ window.MathJax = {
 <article class="proposition theorem-like" id="prop-"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">5.1</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-954">
+<div class="para logical" id="p-1030">
 <div class="para">Fix a prime number <span class="process-math">\(p\text{,}\)</span> and let <span class="process-math">\(A\)</span> denote the abelian group of all complex roots of unity whose orders are powers of <span class="process-math">\(p\text{;}\)</span> that is</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -847,14 +855,14 @@ A = \{z \in \C | z^{p^n} = 1 \text{ for some integer } n \leq 1\} .
 </div>
 <div class="para">Prove the following statements.</div>
 <ol class="decimal">
-<li id="li-338"><div class="para" id="p-955">Every non-trivial subgroup of <span class="process-math">\(A\)</span> contains the group of <span class="process-math">\(p^{\text{th}}\)</span> roots of unity.</div></li>
-<li id="li-339"><div class="para" id="p-956">Every proper subgroup of <span class="process-math">\(A\)</span> is cyclic.</div></li>
-<li id="li-340"><div class="para" id="p-957">If <span class="process-math">\(B\)</span> and <span class="process-math">\(C\)</span> are subgroups of <span class="process-math">\(A\text{,}\)</span> then either <span class="process-math">\(B \subseteq C\)</span> or <span class="process-math">\(C \subseteq B\text{.}\)</span>
+<li id="li-345"><div class="para" id="p-1031">Every non-trivial subgroup of <span class="process-math">\(A\)</span> contains the group of <span class="process-math">\(p^{\text{th}}\)</span> roots of unity.</div></li>
+<li id="li-346"><div class="para" id="p-1032">Every proper subgroup of <span class="process-math">\(A\)</span> is cyclic.</div></li>
+<li id="li-347"><div class="para" id="p-1033">If <span class="process-math">\(B\)</span> and <span class="process-math">\(C\)</span> are subgroups of <span class="process-math">\(A\text{,}\)</span> then either <span class="process-math">\(B \subseteq C\)</span> or <span class="process-math">\(C \subseteq B\text{.}\)</span>
 </div></li>
-<li id="li-341"><div class="para" id="p-958">For each <span class="process-math">\(n \geq 0\)</span> there exists a unique subgroup of <span class="process-math">\(A\)</span> with <span class="process-math">\(p^n\)</span> elements.</div></li>
+<li id="li-348"><div class="para" id="p-1034">For each <span class="process-math">\(n \geq 0\)</span> there exists a unique subgroup of <span class="process-math">\(A\)</span> with <span class="process-math">\(p^n\)</span> elements.</div></li>
 </ol>
-</div></article><article class="hiddenproof" id="proof-96"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-96"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-96"><article class="hiddenproof"><div class="para" id="p-959">Let <span class="process-math">\(H\)</span> be a non-trivial subgroup of <span class="process-math">\(A\text{.}\)</span> Then there exists some <span class="process-math">\(z\)</span> such that <span class="process-math">\(z^{p^n}=1\text{.}\)</span> Then <span class="process-math">\(z^{p^{n-1}}\)</span> yields a primitive <span class="process-math">\(p\th\)</span> root of unity, which can be used to generate the other roots as well. Thus <span class="process-math">\(H\)</span> contains the <span class="process-math">\(p\th\)</span> roots of unity.</div> <div class="para" id="p-960">Suppose <span class="process-math">\(H\)</span> is a proper subgroup of <span class="process-math">\(A\text{,}\)</span> meaning it is missing some <span class="process-math">\(p^{n{\th}}\)</span> root of unity. But the subgroup of those roots of unity is cyclic and is generated by every element, so that entire subgroup must be missing. But that subgroup can be generated with any primitive root of a higher power of <span class="process-math">\(p\text{,}\)</span> so <span class="process-math">\(H\)</span> must be finite and there must be some element of maximum order, which can be used to generate the whole group. Thus <span class="process-math">\(H\)</span> is cyclic.</div> <div class="para" id="p-961">Suppose <span class="process-math">\(B\)</span> and <span class="process-math">\(C\)</span> are subgroups of <span class="process-math">\(A\)</span> such that <span class="process-math">\(B\not\subseteq C\text{.}\)</span> Then <span class="process-math">\(C\)</span> is a proper subgroup of <span class="process-math">\(A\text{,}\)</span> making it finite as seen above. If there exists a higher power of <span class="process-math">\(p\)</span> in <span class="process-math">\(B\)</span> then it generates <span class="process-math">\(C\text{.}\)</span>
-</div> <div class="para" id="p-962">Let <span class="process-math">\(n\geq 0\text{.}\)</span> Then the subgroup generated by the <span class="process-math">\(p^{n^{\th}}\)</span> roots of unity have <span class="process-math">\(p^n\)</span> elements, and it is unique since it is generated by every such root.</div></article></div></section></div>
+</div></article><article class="hiddenproof" id="proof-97"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-97"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-97"><article class="hiddenproof"><div class="para" id="p-1035">Let <span class="process-math">\(H\)</span> be a non-trivial subgroup of <span class="process-math">\(A\text{.}\)</span> Then there exists some <span class="process-math">\(z\)</span> such that <span class="process-math">\(z^{p^n}=1\text{.}\)</span> Then <span class="process-math">\(z^{p^{n-1}}\)</span> yields a primitive <span class="process-math">\(p\th\)</span> root of unity, which can be used to generate the other roots as well. Thus <span class="process-math">\(H\)</span> contains the <span class="process-math">\(p\th\)</span> roots of unity.</div> <div class="para" id="p-1036">Suppose <span class="process-math">\(H\)</span> is a proper subgroup of <span class="process-math">\(A\text{,}\)</span> meaning it is missing some <span class="process-math">\(p^{n{\th}}\)</span> root of unity. But the subgroup of those roots of unity is cyclic and is generated by every element, so that entire subgroup must be missing. But that subgroup can be generated with any primitive root of a higher power of <span class="process-math">\(p\text{,}\)</span> so <span class="process-math">\(H\)</span> must be finite and there must be some element of maximum order, which can be used to generate the whole group. Thus <span class="process-math">\(H\)</span> is cyclic.</div> <div class="para" id="p-1037">Suppose <span class="process-math">\(B\)</span> and <span class="process-math">\(C\)</span> are subgroups of <span class="process-math">\(A\)</span> such that <span class="process-math">\(B\not\subseteq C\text{.}\)</span> Then <span class="process-math">\(C\)</span> is a proper subgroup of <span class="process-math">\(A\text{,}\)</span> making it finite as seen above. If there exists a higher power of <span class="process-math">\(p\)</span> in <span class="process-math">\(B\)</span> then it generates <span class="process-math">\(C\text{.}\)</span>
+</div> <div class="para" id="p-1038">Let <span class="process-math">\(n\geq 0\text{.}\)</span> Then the subgroup generated by the <span class="process-math">\(p^{n^{\th}}\)</span> roots of unity have <span class="process-math">\(p^n\)</span> elements, and it is unique since it is generated by every such root.</div></article></div></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-irreducible.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-irrpoly.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

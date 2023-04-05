@@ -13,15 +13,33 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(\phi: F[x] \to L\)</span> be the evaluation homomorphism, given by sending <span class="process-math">\(f(x)\)</span> to <span class="process-math">\(f(\a)\)</span> <code class="code-inline tex2jax_ignore">[provisional cross-reference: empty]</code>. Note that <span class="process-math">\(\phi\)</span> satisfies <span class="process-math">\(\phi|_F = \id_F\)</span> and <span class="process-math">\(\phi(x) = \alpha\text{.}\)</span> We have <span class="process-math">\(\im(\phi) = F[\a]\)</span> by definition of the latter. The First Isomorphism Theorem for rings <code class="code-inline tex2jax_ignore">[provisional cross-reference: empty]</code> thus gives that <span class="process-math">\(\phi\)</span> induces a ring isomorphism</div>
-<div class="displaymath process-math" data-contains-math-knowls="   ">
+<div class="para">Upon modding out by <span class="process-math">\(p\)</span> we get</div>
+<div class="displaymath process-math">
 \begin{equation*}
-\ov{\phi}: \frac{F[x]}{I}  \xra{\cong} F[\a]
+\ov{f} = \ov{g} \ov{h} \in (R/p)[x].
 \end{equation*}
 </div>
-<div class="para">given by <span class="process-math">\(\ov{\phi}(f(x)+(p(x)))={\phi}(f(x))=f(\a)\text{.}\)</span> In particular, since <span class="process-math">\(F[\a]\)</span> is a subring of <span class="process-math">\(L\text{,}\)</span> it is an integral domain, <code class="code-inline tex2jax_ignore">[provisional cross-reference: empty]</code> and hence <span class="process-math">\(I\)</span> must be a prime ideal (possibly the <span class="process-math">\(0\)</span> ideal). <code class="code-inline tex2jax_ignore">[provisional cross-reference: empty]</code>
+<div class="para">The assumptions on <span class="process-math">\(f\)</span> give that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\ov{f} = \ov{a_n} x^n
+\end{equation*}
+</div>
+<div class="para">with <span class="process-math">\(\ov{a_n} \ne 0\text{.}\)</span> Since <span class="process-math">\(R/p\)</span> is a domain, it follows that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\ov{g} = \ov{b_m} x^m \, \text{ and  } \, \ov{h} = \ov{c_l} x^l
+\end{equation*}
+</div>
+<div class="para">On the other hand, we also have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a_0 = b_0c_0,
+\end{equation*}
+</div>
+<div class="para">and since <span class="process-math">\(p^2 \nmid a_0\text{,}\)</span> we have that <span class="process-math">\(p \nmid b_0\)</span> or <span class="process-math">\(p \nmid c_0\text{.}\)</span> So <span class="process-math">\(\ov{b_0} \ne 0\)</span> or <span class="process-math">\(\ov{c_0} \ne 0\text{.}\)</span> This can only occur if <span class="process-math">\(m = 0\)</span> or <span class="process-math">\(l = 0\text{.}\)</span>
 </div>
 </div>
-<span class="incontext"><a href="sec-algebraic.html#p-1061" class="internal">in-context</a></span>
+<span class="incontext"><a href="sec-irrpoly.html#p-1061" class="internal">in-context</a></span>
 </body>
 </html>

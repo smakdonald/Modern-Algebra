@@ -202,7 +202,7 @@ window.MathJax = {
 \newcommand{\GL}{\operatorname{GL}} 
 \newcommand{\ht}{\operatorname{height}} 
 \def\Hom{\operatorname{Hom}} 
-\def\im{\operatorname{id}} 
+\def\id{\operatorname{id}} 
 \def\im{\operatorname{im}} 
 \def\Inn{\operatorname{Inn}}
 \def\ker{\operatorname{ker}}
@@ -503,22 +503,30 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="gp-homs.html" class="internal"><span class="codenumber">2</span> <span class="title">Homomorphisms and Isomorphisms</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-gphoms.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Group Homomorphisms</span></a></div></li>
-<li><div class="toc-item"><a href="sec-gpisos.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Group Isomorphisms</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-gphoms.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Group Homomorphisms</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-gphoms.html#exercises-5" class="internal"><span class="codenumber">2.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-gpisos.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Group Isomorphisms</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-gpisos.html#exercises-6" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
 <li><div class="toc-item"><a href="sec-cylic-homoms.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Cyclic Groups: Revisited</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="normal-quotient-groups.html" class="internal"><span class="codenumber">3</span> <span class="title">Normal and Quotient Groups</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-cosets.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Cosets and Equivalence Relations</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-cosets.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Cosets and Equivalence Relations</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-cosets.html#exercises-7" class="internal"><span class="codenumber">3.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
 <li><div class="toc-item"><a href="sec-normal-subgroups.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Normal Subgroups</span></a></div></li>
 <li><div class="toc-item"><a href="sec-quotient-groups.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Quotient Groups</span></a></div></li>
 <li>
 <div class="toc-item"><a href="sec-isomorphism-thms.html" class="internal"><span class="codenumber">3.4</span> <span class="title">The Isomorphism Theorems</span></a></div>
 <ul class="structural"><li><div class="toc-item"><a href="sec-isomorphism-thms.html#exercises-gp-isos" class="internal"><span class="codenumber">3.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
-<li><div class="toc-item"><a href="sec-grp-presentations.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Presentations as Quotient Groups</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -740,7 +748,7 @@ window.MathJax = {
 <li><div class="toc-item"><a href="field-extension-basics.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Field Extension Basics</span></a></div></li>
 <li>
 <div class="toc-item"><a href="sec-algebraic.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Algebraic Extensions</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-algebraic.html#exercises-8" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-algebraic.html#exercises-11" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li><div class="toc-item"><a href="sec-closure.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Algebraic Closures</span></a></div></li>
 <li><div class="toc-item"><a href="sec-splitting.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Splitting Fields</span></a></div></li>
@@ -835,17 +843,17 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-art-wedd"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">5.2</span> <span class="title">Artin-Wedderburn Theorem</span>
 </h2>
-<div class="para" id="p-1454">We will now give a classification of <em class="emphasis">all</em> left semisimple rings. To start, we collect some examples.</div>
+<div class="para" id="p-1530">We will now give a classification of <em class="emphasis">all</em> left semisimple rings. To start, we collect some examples.</div>
 <article class="lemma theorem-like" id="lem-lsemisimple-product"><h3 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">5.12</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1455">If <span class="process-math">\(R\)</span> and <span class="process-math">\(S\)</span> are left semisimple, so is the product ring <span class="process-math">\(R \times S\text{.}\)</span>
-</div></article><article class="hiddenproof" id="proof-154"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-154"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-154"><article class="hiddenproof"><div class="para" id="p-1456">Say we have internal direct sum decompositions <span class="process-math">\(R = I_1 \oplus \cdots \oplus I_m\)</span> and <span class="process-math">\(S = J_1 \oplus \cdots \oplus J_n\)</span> involving minimal left ideals. Then for all <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{,}\)</span> <span class="process-math">\(I_a \times \{0\}\)</span> and <span class="process-math">\(\{0\} \times J_b\)</span> are minimal left ideals of <span class="process-math">\(R \times S\)</span> and they determine an internal direct sum decomposition of <span class="process-math">\(R \times S\text{.}\)</span>
+<div class="para" id="p-1531">If <span class="process-math">\(R\)</span> and <span class="process-math">\(S\)</span> are left semisimple, so is the product ring <span class="process-math">\(R \times S\text{.}\)</span>
+</div></article><article class="hiddenproof" id="proof-155"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-155"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-155"><article class="hiddenproof"><div class="para" id="p-1532">Say we have internal direct sum decompositions <span class="process-math">\(R = I_1 \oplus \cdots \oplus I_m\)</span> and <span class="process-math">\(S = J_1 \oplus \cdots \oplus J_n\)</span> involving minimal left ideals. Then for all <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{,}\)</span> <span class="process-math">\(I_a \times \{0\}\)</span> and <span class="process-math">\(\{0\} \times J_b\)</span> are minimal left ideals of <span class="process-math">\(R \times S\)</span> and they determine an internal direct sum decomposition of <span class="process-math">\(R \times S\text{.}\)</span>
 </div></article></div>
-<article class="example example-like" id="example-60"><h3 class="heading">
+<article class="example example-like" id="example-64"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.13</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-1457">
+<div class="para logical" id="p-1533">
 <div class="para">The previous lemma and Lemma <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "lem:matrixsemisimple" missing or not unique]</code> show that for any integer <span class="process-math">\(m \geq 0\text{,}\)</span> list of division rings <span class="process-math">\(D_1, \dots, D_m\)</span> and positive integers <span class="process-math">\(n_1, \dots, n_m\text{,}\)</span> the ring</div>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
@@ -853,39 +861,39 @@ R =\operatorname{Mat}_{n_1}(D_1) \times \cdots \times \operatorname{Mat}_{n_m}(D
 \end{equation*}
 </div>
 <div class="para">is left semisimple.</div>
-</div></article><div class="para" id="p-1458">The Artin-Wedderburn Theorem asserts that the last example accounts for <em class="emphasis">all</em> examples!</div>
+</div></article><div class="para" id="p-1534">The Artin-Wedderburn Theorem asserts that the last example accounts for <em class="emphasis">all</em> examples!</div>
 <article class="theorem theorem-like" id="thm-art-wedd"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.14</span><span class="period">.</span><span class="space"> </span><span class="title">Artin-Wedderburn Theorem.</span>
 </h3>
-<div class="para logical" id="p-1459">
+<div class="para logical" id="p-1535">
 <div class="para">Let <span class="process-math">\(R\)</span> be a left semisimple ring. Then for some <span class="process-math">\(m \geq 0\text{,}\)</span> positive integers <span class="process-math">\(n_1, \dots, n_m\text{,}\)</span> and division rings <span class="process-math">\(D_1, \dots, D_m\text{,}\)</span> there is a ring isomorphism</div>
 <div class="displaymath process-math">
 \begin{equation*}
 R \cong \operatorname{Mat}_{n_1}(D_1) \times \cdots \times \operatorname{Mat}_{n_m}(D_m).
 \end{equation*}
 </div>
-</div> <div class="para logical" id="p-1460">
+</div> <div class="para logical" id="p-1536">
 <div class="para">Moreover,</div>
 <ol class="decimal">
-<li id="li-468"><div class="para" id="p-1461">
+<li id="li-475"><div class="para" id="p-1537">
 <span class="process-math">\(m\)</span> is the number of isomorphism classes of simple left <span class="process-math">\(R\)</span>-modules.</div></li>
-<li id="li-469"><div class="para" id="p-1462">Say <span class="process-math">\(M_1, \dots, M_m\)</span> are simple modules forming a complete set of representatives of these isomorphism classes. Then, after reordering, <span class="process-math">\(D_i\cong \operatorname{End}_R(M_i)^{\mathrm{op}}\)</span> and</div></li>
-<li id="li-470"><div class="para" id="p-1463">
+<li id="li-476"><div class="para" id="p-1538">Say <span class="process-math">\(M_1, \dots, M_m\)</span> are simple modules forming a complete set of representatives of these isomorphism classes. Then, after reordering, <span class="process-math">\(D_i\cong \operatorname{End}_R(M_i)^{\mathrm{op}}\)</span> and</div></li>
+<li id="li-477"><div class="para" id="p-1539">
 <span class="process-math">\(n_j\)</span> is the number of times summands isomorphic to <span class="process-math">\(M_j\)</span> occur in the decomposition of <span class="process-math">\(R\)</span> into a direct sum of simple left modules.</div></li>
 </ol>
 <div class="para">Moreover, the data <span class="process-math">\((m; n_1, \dots, n_m; D_1, \dots, D_m)\)</span> is unique up to a permutation of <span class="process-math">\(\{1, \dots, m\}\)</span> and isomorphisms of division rings.</div>
-</div></article><article class="example example-like" id="example-61"><h3 class="heading">
+</div></article><article class="example example-like" id="example-65"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.15</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-1464">
+<div class="para logical" id="p-1540">
 <div class="para">We saw before that the module decomposition in terms of simple modules is <span class="process-math">\({\mathbb{R}}[C_3] = W \oplus U\text{,}\)</span> where <span class="process-math">\(W\)</span> is the one-dimensional trivial representation, and <span class="process-math">\(U\)</span> is the <span class="process-math">\(2\)</span>-dimensional representation given by <span class="process-math">\(g \mapsto \begin{bmatrix} 0  &amp; -1 \\ 1 &amp; -1\end{bmatrix}\text{.}\)</span> On the other hand, as rings,</div>
 <div class="displaymath process-math">
 \begin{equation*}
 {\mathbb{R}}[C_3] \cong {\mathbb{R}}[g]/(g^3-1) \cong {\mathbb{R}}[g]/(g-1) \times {\mathbb{R}}[g]/ (g^2+g+1) \cong {\mathbb{R}}\times \mathbb{C}.
 \end{equation*}
 </div>
-</div> <div class="para" id="p-1465">To reconcile these decompositions by the Artin-Wedderburn Theorem, one can check that <span class="process-math">\(\operatorname{End}_{{\mathbb{R}}[C_3]}(W) \cong {\mathbb{R}}\)</span> and <span class="process-math">\(\operatorname{End}_{{\mathbb{R}}[C_3]}(V/W) \cong \mathbb{C}\text{.}\)</span>
-</div> <div class="para logical" id="p-1466">
+</div> <div class="para" id="p-1541">To reconcile these decompositions by the Artin-Wedderburn Theorem, one can check that <span class="process-math">\(\operatorname{End}_{{\mathbb{R}}[C_3]}(W) \cong {\mathbb{R}}\)</span> and <span class="process-math">\(\operatorname{End}_{{\mathbb{R}}[C_3]}(V/W) \cong \mathbb{C}\text{.}\)</span>
+</div> <div class="para logical" id="p-1542">
 <div class="para">We have <span class="process-math">\(\operatorname{End}_{{\mathbb{R}}[C_3]}(W) \cong {\mathbb{R}}\text{.}\)</span> To compute the endomorphism ring of <span class="process-math">\(V/W\text{,}\)</span> observe that an <span class="process-math">\({\mathbb{R}}\)</span>-linear endomorphism of <span class="process-math">\(V/W\)</span> is <span class="process-math">\({\mathbb{R}}[C_3]\)</span>-linear if and only if it commutes with the action of <span class="process-math">\(g\text{.}\)</span> We can write any <span class="process-math">\({\mathbb{R}}\)</span>-linear endomorphism of <span class="process-math">\(V/W\)</span> as a <span class="process-math">\(2\times 2\)</span> matrix; for it to commute with <span class="process-math">\(g\)</span> means it commutes with <span class="process-math">\(\begin{bmatrix} 0  &amp; -1 \\ 1 &amp; -1\end{bmatrix}\text{.}\)</span> We have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -903,7 +911,7 @@ R \cong \operatorname{Mat}_{n_1}(D_1) \times \cdots \times \operatorname{Mat}_{n
 </div></article><article class="lemma theorem-like" id="lem-semisimple-end"><h3 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">5.16</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-1467">
+<div class="para logical" id="p-1543">
 <div class="para">Let <span class="process-math">\(M\)</span> be an <span class="process-math">\(R\)</span>-module. The map</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -912,8 +920,8 @@ R \cong \operatorname{Mat}_{n_1}(D_1) \times \cdots \times \operatorname{Mat}_{n
 \end{equation*}
 </div>
 <div class="para">is a ring isomorphism, where <span class="process-math">\(\iota_k\)</span> and <span class="process-math">\(\pi_k\)</span> denote the natural inclusion and projection maps.</div>
-</div></article><article class="hiddenproof" id="proof-155"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-155"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-155"><article class="hiddenproof"><div class="para" id="p-1468">It is clear that this map is additive, as each <span class="process-math">\(\iota_i\)</span> and <span class="process-math">\(\pi_j\)</span> is. Observe that <span class="process-math">\(\pi_j  \iota_i\)</span> is the identity on <span class="process-math">\(M\)</span> if <span class="process-math">\(i=j\text{,}\)</span> and the zero map otherwise and that <span class="process-math">\(1_{M^{\oplus n}} = \sum_{k} \iota_k  \pi_k\text{.}\)</span>
-</div> <div class="para logical" id="p-1469">
+</div></article><article class="hiddenproof" id="proof-156"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-156"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-156"><article class="hiddenproof"><div class="para" id="p-1544">It is clear that this map is additive, as each <span class="process-math">\(\iota_i\)</span> and <span class="process-math">\(\pi_j\)</span> is. Observe that <span class="process-math">\(\pi_j  \iota_i\)</span> is the identity on <span class="process-math">\(M\)</span> if <span class="process-math">\(i=j\text{,}\)</span> and the zero map otherwise and that <span class="process-math">\(1_{M^{\oplus n}} = \sum_{k} \iota_k  \pi_k\text{.}\)</span>
+</div> <div class="para logical" id="p-1545">
 <div class="para">The map</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -933,7 +941,7 @@ R \cong \operatorname{Mat}_{n_1}(D_1) \times \cdots \times \operatorname{Mat}_{n
 \Theta(\zeta([\alpha_{i,j}]_{i,j}]))_{k,\ell} = \Theta ( \sum_{i,j} \iota_i  \alpha_{i,j}  \pi_j)_{k,\ell} = \pi_k (\sum_{i,j} \iota_i  \alpha_{i,j}  \pi_j) \iota_\ell = \sum_{i,j}  (\pi_k \iota_i) \alpha_{i,j} (\pi_j \iota_\ell) = \alpha_{k,\ell}.
 \end{equation*}
 </div>
-</div> <div class="para logical" id="p-1470">
+</div> <div class="para logical" id="p-1546">
 <div class="para">To see that <span class="process-math">\(\Theta\)</span> respects multiplication, we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -941,13 +949,13 @@ R \cong \operatorname{Mat}_{n_1}(D_1) \times \cdots \times \operatorname{Mat}_{n
 \end{equation*}
 </div>
 </div></article></div>
-<article class="problem example-like" id="problem-181"><h3 class="heading">
+<article class="problem example-like" id="problem-162"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">5.17</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1471">Let <span class="process-math">\(D\)</span> be a division ring. Then <span class="process-math">\(\operatorname{End}_{\operatorname{Mat}_n(D)}(D^n)\cong D^{\mathrm{op}}\text{,}\)</span> where <span class="process-math">\(D^n\)</span> is the simple module of column vectors.</div></article><article class="theorem theorem-like" id="thm-whoknows"><h3 class="heading">
+<div class="para" id="p-1547">Let <span class="process-math">\(D\)</span> be a division ring. Then <span class="process-math">\(\operatorname{End}_{\operatorname{Mat}_n(D)}(D^n)\cong D^{\mathrm{op}}\text{,}\)</span> where <span class="process-math">\(D^n\)</span> is the simple module of column vectors.</div></article><article class="theorem theorem-like" id="thm-whoknows"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.18</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1472">???</div></article><article class="hiddenproof" id="proof-156"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-156"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-156"><article class="hiddenproof"><div class="para" id="p-1473">Since <span class="process-math">\(R\)</span> is left semisimple, we have <span class="process-math">\(R \cong I_1 \oplus \cdots \oplus I_t\)</span> with each <span class="process-math">\(I_i\)</span> is simple (in fact a minimal ideal). Group by isomorphism to rewrite this as <span class="process-math">\(R \cong M_1^{\oplus n_1} \oplus \cdots \oplus M_m^{\oplus n_m}\)</span> with each <span class="process-math">\(M_i\)</span> simple, <span class="process-math">\(n_j \geq 1\text{,}\)</span> and such that <span class="process-math">\(M_i\)</span> is not isomorphic to <span class="process-math">\(M_j\)</span> for all <span class="process-math">\(i \ne j\text{.}\)</span> We compute the endomorphisms of both sides:</div> <div class="para logical" id="p-1474"><div class="displaymath process-math">
+<div class="para" id="p-1548">???</div></article><article class="hiddenproof" id="proof-157"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-157"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-157"><article class="hiddenproof"><div class="para" id="p-1549">Since <span class="process-math">\(R\)</span> is left semisimple, we have <span class="process-math">\(R \cong I_1 \oplus \cdots \oplus I_t\)</span> with each <span class="process-math">\(I_i\)</span> is simple (in fact a minimal ideal). Group by isomorphism to rewrite this as <span class="process-math">\(R \cong M_1^{\oplus n_1} \oplus \cdots \oplus M_m^{\oplus n_m}\)</span> with each <span class="process-math">\(M_i\)</span> simple, <span class="process-math">\(n_j \geq 1\text{,}\)</span> and such that <span class="process-math">\(M_i\)</span> is not isomorphic to <span class="process-math">\(M_j\)</span> for all <span class="process-math">\(i \ne j\text{.}\)</span> We compute the endomorphisms of both sides:</div> <div class="para logical" id="p-1550"><div class="displaymath process-math">
 \begin{equation*}
 \begin{aligned}
 \label{E912}
@@ -957,8 +965,8 @@ R \cong \operatorname{Mat}_{n_1}(D_1) \times \cdots \times \operatorname{Mat}_{n
 &amp;=&amp; \prod_{i=1}^m  \operatorname{End}_R(M_i^{\oplus n_i})\cong \prod_{i=1}^m  \operatorname{Mat}_{n_i}(\operatorname{End}_R(M_i)).
 \end{aligned}
 \end{equation*}
-</div></div> <div class="para" id="p-1475">Above the second line follows from the first by properties of <span class="process-math">\(\mathrm{Hom}\text{,}\)</span> the third follows because Schur’s lemma gives that <span class="process-math">\(\mathrm{Hom}_R(M_i,M_j)=0\text{,}\)</span> and consequently <span class="process-math">\(\mathrm{Hom}_R(M_i^{\oplus n_i},M_j^{\oplus n_j})=0\text{,}\)</span> when <span class="process-math">\(i\neq j\text{.}\)</span> The final isomorphism is the previous lemma.</div> <div class="para" id="p-1476">On the one hand, we have <span class="process-math">\(\operatorname{End}_R(R) \cong R^{\mathrm{op}}\)</span> by a problem from the homework. On the other hand, applying Schur’s Lemma again, <span class="process-math">\(D'_i := \operatorname{End}_R(M_i)\)</span> is a division ring for all <span class="process-math">\(i\text{.}\)</span>
-</div> <div class="para logical" id="p-1477">
+</div></div> <div class="para" id="p-1551">Above the second line follows from the first by properties of <span class="process-math">\(\mathrm{Hom}\text{,}\)</span> the third follows because Schur’s lemma gives that <span class="process-math">\(\mathrm{Hom}_R(M_i,M_j)=0\text{,}\)</span> and consequently <span class="process-math">\(\mathrm{Hom}_R(M_i^{\oplus n_i},M_j^{\oplus n_j})=0\text{,}\)</span> when <span class="process-math">\(i\neq j\text{.}\)</span> The final isomorphism is the previous lemma.</div> <div class="para" id="p-1552">On the one hand, we have <span class="process-math">\(\operatorname{End}_R(R) \cong R^{\mathrm{op}}\)</span> by a problem from the homework. On the other hand, applying Schur’s Lemma again, <span class="process-math">\(D'_i := \operatorname{End}_R(M_i)\)</span> is a division ring for all <span class="process-math">\(i\text{.}\)</span>
+</div> <div class="para logical" id="p-1553">
 <div class="para">Combining these gives</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -975,7 +983,7 @@ R \cong
 </div>
 <div class="para">with <span class="process-math">\(D_i := (D_i')^{\mathrm{op}}=\operatorname{End}_R(M_i)^\mathrm{op}\text{.}\)</span>
 </div>
-</div> <div class="para" id="p-1478">This shows that given a decomposition of <span class="process-math">\(R\)</span> as a left semisimple module, there is a ring decomposition as a product of matrix rings over division rings, and the data of division rings and matrix sizes is related to the data of simple modules and multiplicities by the formulas (1)–(3). We just need to prove uniqueness.</div> <div class="para logical" id="p-1479">
+</div> <div class="para" id="p-1554">This shows that given a decomposition of <span class="process-math">\(R\)</span> as a left semisimple module, there is a ring decomposition as a product of matrix rings over division rings, and the data of division rings and matrix sizes is related to the data of simple modules and multiplicities by the formulas (1)–(3). We just need to prove uniqueness.</div> <div class="para logical" id="p-1555">
 <div class="para">Say we are given an isomorphism of rings <span class="process-math">\(R \cong \prod_{i=1}^k \operatorname{Mat}_{t_i}(Q_i)\)</span> for some division rings <span class="process-math">\(Q_1,\dots,Q_k\text{.}\)</span> Then since <span class="process-math">\(\operatorname{Mat}_{t_i}(Q_i)\)</span> decomposes as a direct sum of <span class="process-math">\(t_i\)</span> copies of <span class="process-math">\(N_i:=Q_i^{t_i}\text{,}\)</span> and <span class="process-math">\(N_i\)</span> is a simple <span class="process-math">\(\operatorname{Mat}_{t_i}(Q_i)\)</span>-module, hence also a simple <span class="process-math">\(R\)</span>-module, we have a semisimple <span class="process-math">\(R\)</span>-module decomposition of <span class="process-math">\(R\)</span> as</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -984,7 +992,7 @@ M_1^{\oplus n_1} \oplus  \cdots \oplus M_m^{\oplus n_m} \cong R \cong N_1^{\oplu
 </div>
 <div class="para">By Krull-Schmidt, we must have <span class="process-math">\(m=k\text{,}\)</span> and after a permutation, <span class="process-math">\(M_i \cong N_i = Q_i^{\oplus t_i}\)</span> and <span class="process-math">\(n_i=t_i\)</span> for each <span class="process-math">\(i\text{.}\)</span>
 </div>
-</div> <div class="para logical" id="p-1480">
+</div> <div class="para logical" id="p-1556">
 <div class="para">Moreover, we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1002,8 +1010,8 @@ D_i\cong  \operatorname{End}_R(M_i)^{\mathrm{op}} \cong  \operatorname{End}_R(N_
 <article class="corollary theorem-like" id="cor-lr-semisimple"><h3 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">5.19</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1481">A ring is left semisimple if and only if it is right semisimple.</div></article><article class="hiddenproof" id="proof-157"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-157"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-157"><article class="hiddenproof"><div class="para" id="p-1482">The claim is equivalent to showing <span class="process-math">\(R\)</span> is left semisimple if and only <span class="process-math">\(R^\mathrm{op}\)</span> is, which in turn follows from just one of the implications. If <span class="process-math">\(R\)</span> is left semisimple, then <span class="process-math">\(R\cong \prod_{i} \operatorname{Mat}_{n_i}(D_i)\text{,}\)</span> so <span class="process-math">\(R^{\mathrm{op}} \cong \prod_i \operatorname{Mat}_{n_i}(D_i)^{\mathrm{op}} \cong \prod_i \operatorname{Mat}_{n_i}(D_i^{\mathrm{op}})\)</span> so <span class="process-math">\(R^{\mathrm{op}}\)</span> is left semisimple.</div></article></div>
-<div class="para" id="p-1483">Henceforth, we just say that <span class="process-math">\(R\)</span> is <em class="emphasis">semisimple</em> if it is left semisimple.</div></section></div>
+<div class="para" id="p-1557">A ring is left semisimple if and only if it is right semisimple.</div></article><article class="hiddenproof" id="proof-158"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-158"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-158"><article class="hiddenproof"><div class="para" id="p-1558">The claim is equivalent to showing <span class="process-math">\(R\)</span> is left semisimple if and only <span class="process-math">\(R^\mathrm{op}\)</span> is, which in turn follows from just one of the implications. If <span class="process-math">\(R\)</span> is left semisimple, then <span class="process-math">\(R\cong \prod_{i} \operatorname{Mat}_{n_i}(D_i)\text{,}\)</span> so <span class="process-math">\(R^{\mathrm{op}} \cong \prod_i \operatorname{Mat}_{n_i}(D_i)^{\mathrm{op}} \cong \prod_i \operatorname{Mat}_{n_i}(D_i^{\mathrm{op}})\)</span> so <span class="process-math">\(R^{\mathrm{op}}\)</span> is left semisimple.</div></article></div>
+<div class="para" id="p-1559">Henceforth, we just say that <span class="process-math">\(R\)</span> is <em class="emphasis">semisimple</em> if it is left semisimple.</div></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-semisimple-rings.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="ch-applications.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
