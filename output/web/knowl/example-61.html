@@ -12,47 +12,31 @@
 </head>
 <body class="ignore-math">
 <article class="example example-like"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.5</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.15</span><span class="period">.</span>
 </h3>
-<div class="para">Let <span class="process-math">\(k = {\mathbb{R}}\)</span> and <span class="process-math">\(G = S_3\text{.}\)</span> We find all the simple modules over the ring <span class="process-math">\({\mathbb{R}}[S_3]\)</span> or, equivalently, all irreducible <span class="process-math">\({\mathbb{R}}\)</span>-linear representations of <span class="process-math">\(S_3\text{.}\)</span> We also find the Artin-Wedderburn decomposition of <span class="process-math">\({\mathbb{R}}[S_3]\text{.}\)</span>
+<div class="para logical">
+<div class="para">We saw before that the module decomposition in terms of simple modules is <span class="process-math">\({\mathbb{R}}[C_3] = W \oplus U\text{,}\)</span> where <span class="process-math">\(W\)</span> is the one-dimensional trivial representation, and <span class="process-math">\(U\)</span> is the <span class="process-math">\(2\)</span>-dimensional representation given by <span class="process-math">\(g \mapsto \begin{bmatrix} 0  &amp; -1 \\ 1 &amp; -1\end{bmatrix}\text{.}\)</span> On the other hand, as rings,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+{\mathbb{R}}[C_3] \cong {\mathbb{R}}[g]/(g^3-1) \cong {\mathbb{R}}[g]/(g-1) \times {\mathbb{R}}[g]/ (g^2+g+1) \cong {\mathbb{R}}\times \mathbb{C}.
+\end{equation*}
+</div>
+</div> <div class="para">To reconcile these decompositions by the Artin-Wedderburn Theorem, one can check that <span class="process-math">\(\operatorname{End}_{{\mathbb{R}}[C_3]}(W) \cong {\mathbb{R}}\)</span> and <span class="process-math">\(\operatorname{End}_{{\mathbb{R}}[C_3]}(V/W) \cong \mathbb{C}\text{.}\)</span>
 </div> <div class="para logical">
-<div class="para">The one dimensional represenatations are given by group homomorphisms of the form <span class="process-math">\(S_3 \to {\mathbb{R}}^\times\text{,}\)</span> and any such map factors as</div>
+<div class="para">We have <span class="process-math">\(\operatorname{End}_{{\mathbb{R}}[C_3]}(W) \cong {\mathbb{R}}\text{.}\)</span> To compute the endomorphism ring of <span class="process-math">\(V/W\text{,}\)</span> observe that an <span class="process-math">\({\mathbb{R}}\)</span>-linear endomorphism of <span class="process-math">\(V/W\)</span> is <span class="process-math">\({\mathbb{R}}[C_3]\)</span>-linear if and only if it commutes with the action of <span class="process-math">\(g\text{.}\)</span> We can write any <span class="process-math">\({\mathbb{R}}\)</span>-linear endomorphism of <span class="process-math">\(V/W\)</span> as a <span class="process-math">\(2\times 2\)</span> matrix; for it to commute with <span class="process-math">\(g\)</span> means it commutes with <span class="process-math">\(\begin{bmatrix} 0  &amp; -1 \\ 1 &amp; -1\end{bmatrix}\text{.}\)</span> We have</div>
 <div class="displaymath process-math">
 \begin{equation*}
-S_3 \twoheadrightarrow S_3^{\mathrm{ab}} \to {\mathbb{R}}^\times.
+\begin{bmatrix} a &amp; b \\ c&amp; d \end{bmatrix} \begin{bmatrix} 0  &amp; -1 \\ 1 &amp; -1\end{bmatrix} - \begin{bmatrix} 0  &amp; -1 \\ 1 &amp; -1\end{bmatrix}  \begin{bmatrix} a &amp; b \\ c&amp; d \end{bmatrix} = \begin{bmatrix} b + c &amp; -a-b+d \\ d -a + c &amp; -b-c \end{bmatrix},
 \end{equation*}
 </div>
-<div class="para">Note that <span class="process-math">\(S_3^{\mathrm{ab}} = S_3/A_3 \cong C_2\)</span> and there are two group homomorphisms <span class="process-math">\(C_2 \to {\mathbb{R}}^\times\text{,}\)</span> sending the generator to either <span class="process-math">\(1\)</span> or <span class="process-math">\(-1\)</span> (the only elements of <span class="process-math">\({\mathbb{R}}^\times\)</span> of order <span class="process-math">\(1\)</span> or <span class="process-math">\(2\)</span>). This gives two representations: <span class="process-math">\(M_1 = {\mathbb{R}}\)</span> with <span class="process-math">\(S_3\)</span> acting trivially and <span class="process-math">\(M_2 = {\mathbb{R}}\)</span> with <span class="process-math">\(S_3\)</span> acting by the sign representation. These are not isomorphic by the previous lemma.</div>
-</div> <div class="para">We have that <span class="process-math">\(1= \dim_{{\mathbb{R}}}(M_1) = n_1 \cdot \dim_{{\mathbb{R}}}(D_1)\)</span> so <span class="process-math">\(n_1=1\)</span> and <span class="process-math">\(\dim_{{\mathbb{R}}}(D_1)=1\text{,}\)</span> and likewise <span class="process-math">\(1= \dim_{{\mathbb{R}}}(M_2) = n_2 \cdot \dim_{{\mathbb{R}}}(D_2)\)</span> so <span class="process-math">\(n_2=1\)</span> and <span class="process-math">\(\dim_{{\mathbb{R}}}(D_2)=1\text{.}\)</span> So, the Artin-Wedderburn decomposition starts as</div> <div class="para logical"><div class="displaymath process-math">
-\begin{equation*}
-{\mathbb{R}}[S_3] \cong {\mathbb{R}}\times {\mathbb{R}}\times \cdots.
-\end{equation*}
-</div></div> <div class="para">Note that there are no further factors of <span class="process-math">\({\mathbb{R}}\text{,}\)</span> since we found all of the one-dimensional simple modules.</div> <div class="para">Recall also that <span class="process-math">\(S_3\)</span> acts on <span class="process-math">\({\mathbb{R}}^3\)</span> by permuting the basis (corresponding to the group homomorphism <span class="process-math">\(S_3 \to \operatorname{GL}_3({\mathbb{R}})\)</span> sending a permutation to its associated permutation matrix). The subspace <span class="process-math">\(M_3 = \{(a,b,c) \in {\mathbb{R}}^3 \mid a + b + c = 0\}\)</span> is a subrepresenation of <span class="process-math">\({\mathbb{R}}^3\)</span> of dimension <span class="process-math">\(2\text{.}\)</span> We claim it is irreducible: Say <span class="process-math">\(0 \ne (a,b,c) \in M_3\text{.}\)</span>
-</div> <div class="para">By applying a permutation and scaling appropriately we obtain an element of the form <span class="process-math">\((1,x,-1-x) \in M_3\)</span> and hence <span class="process-math">\((1, -1-x, x) \in M_3\text{.}\)</span> Adding these gives <span class="process-math">\((2,-1,-1) \in M_3\)</span> and hence <span class="process-math">\((-1, 2,-1) \in M_3\text{.}\)</span> The latter two are linearly independent and so must span <span class="process-math">\(M_3\text{.}\)</span> This proves <span class="process-math">\((a,b,c)\)</span> generates <span class="process-math">\(M_3\)</span> as a left <span class="process-math">\({\mathbb{R}}[S_3]\)</span>-module and hence that <span class="process-math">\(M_3\)</span> is simple. Note that <span class="process-math">\(M_3\)</span> is not isomorphic to either <span class="process-math">\(M_1\)</span> nor <span class="process-math">\(M_2\)</span> by dimension considerations.</div> <div class="para">We have that <span class="process-math">\(2=\dim{{\mathbb{R}}}(M_3) = n_3 \cdot \dim_{{\mathbb{R}}}(D_3)\text{,}\)</span> so there are two possibilities.</div> <div class="para logical"><ol class="decimal">
-<li><div class="para logical">
-<div class="para">One possibility is <span class="process-math">\(n_3=1\)</span> and <span class="process-math">\(\dim_{{\mathbb{R}}}(D_3)=2\text{,}\)</span> in which case <span class="process-math">\(D_3\cong \mathbb{C}\text{,}\)</span> so the Artin-Wedderburn decomposition reads as</div>
+<div class="para">so the matrices we seek are of the form</div>
 <div class="displaymath process-math">
 \begin{equation*}
-{\mathbb{R}}[S_3] \cong {\mathbb{R}}\times {\mathbb{R}}\times \mathbb{C}\times S
+\begin{bmatrix} a &amp; -c \\ c &amp; a-c \end{bmatrix}= a \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1\end{bmatrix} + c \begin{bmatrix} 0 &amp; -1 \\ 1 &amp; -1\end{bmatrix}.
 \end{equation*}
 </div>
-<div class="para">for some <span class="process-math">\(S\text{.}\)</span> We must have <span class="process-math">\(\dim_{{\mathbb{R}}}(S)=2\text{.}\)</span> We know that <span class="process-math">\(S\)</span> cannot have any one-dimensional simple modules (since we already accounted for all of the one-dimensional simple modules for <span class="process-math">\({\mathbb{R}}[S_3]\)</span>), so <span class="process-math">\(S\)</span> cannot be <span class="process-math">\({\mathbb{R}}\times {\mathbb{R}}\text{.}\)</span> Then, for dimension reasons, we must have that <span class="process-math">\(S\cong D_4\)</span> with <span class="process-math">\(\dim_{{\mathbb{R}}}(D_4)=2\text{,}\)</span> so <span class="process-math">\(S\cong \mathbb{C}\text{.}\)</span> But then</div>
-<div class="displaymath process-math">
-\begin{equation*}
-{\mathbb{R}}[S_3] \cong {\mathbb{R}}\times {\mathbb{R}}\times \mathbb{C}\times \mathbb{C}
-\end{equation*}
+<div class="para">Any pair of matrices in this set commutes (since the two vectorspace generators do) so they form a commutative ring and hence a field by Schur’s Lemma; any matrix in this collection is algebraic over the subring of scalar matrices (since both generators are). It follows that this collection of matrices is isomorphic as a ring to <span class="process-math">\(\mathbb{C}\text{.}\)</span>
 </div>
-<div class="para">would be commutative, which it is not, as <span class="process-math">\(S_3\)</span> is not abelian.</div>
-</div></li>
-<li><div class="para logical">
-<div class="para">The other possibility is <span class="process-math">\(n_3=2\)</span> and <span class="process-math">\(D_3={\mathbb{R}}\text{.}\)</span> We obtain the AW decomposition</div>
-<div class="displaymath process-math">
-\begin{equation*}
-{\mathbb{R}}[S_3] \cong {\mathbb{R}}\times{\mathbb{R}}\times \operatorname{Mat}_2({\mathbb{R}}).
-\end{equation*}
-</div>
-</div></li>
-</ol></div> <div class="para">(Alternatively, we could compute the endomorphism ring of <span class="process-math">\(M_3\)</span> and see that it contains only scalars.)</div> <div class="para">We have found the AW decomposition of <span class="process-math">\({\mathbb{R}}[S_3]\text{.}\)</span> As a consequence, we have identified all of the irreducible real representations of <span class="process-math">\(S_3\text{.}\)</span>
-</div></article><span class="incontext"><a href="sec-spplications.html#example-61" class="internal">in-context</a></span>
+</div></article><span class="incontext"><a href="sec-art-wedd.html#example-61" class="internal">in-context</a></span>
 </body>
 </html>

@@ -11,34 +11,13 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="remark remark-like"><h3 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.8</span><span class="period">.</span>
-</h3>
-<div class="para logical">
-<div class="para">Let</div>
-<div class="displaymath process-math">
-\begin{equation*}
-0 \to A \xrightarrow{i} B \xrightarrow{p} C\to 0
-\end{equation*}
-</div>
-<div class="para">be a short exact sequence. Given filtrations / composition series / strict composition series</div>
-<div class="displaymath process-math">
-\begin{equation*}
-A_\bullet: \qquad 0 = A_0 \subseteq A_1 \subseteq A_2 \subseteq \cdots \subseteq A_n = A
-\end{equation*}
-</div>
-<div class="para">and</div>
-<div class="displaymath process-math">
-\begin{equation*}
-C_\bullet: \qquad 0 = C_0 \subseteq C_1 \subseteq C_2 \subseteq \cdots \subseteq C_n = C
-\end{equation*}
-</div>
-<div class="para">we can make a filtration / composition series / strict composition series of <span class="process-math">\(B\)</span> by</div>
-<div class="displaymath process-math">
-\begin{equation*}
-0 = i(A_0) \subseteq i(A_1) \subseteq i(A_2) \subseteq \cdots \subseteq i(A_n) = i(A) = p^{-1}(C_0) \subseteq p^{-1}(C_1) \subseteq p^{-1}(C_2) \subseteq \cdots \subseteq p^{-1}(C_n) = B.
-\end{equation*}
-</div>
-</div> <div class="para">Conversely, given a filtration / composition series / strict composition series of <span class="process-math">\(B\)</span> that contains <span class="process-math">\(i(L)\)</span> as a term, we can obtain filtrations / composition series / strict composition series of <span class="process-math">\(A\)</span> and <span class="process-math">\(C\)</span> by applying <span class="process-math">\(i^{-1}\)</span> to the terms up through <span class="process-math">\(i(L)\)</span> and applying <span class="process-math">\(p\)</span> to the terms from <span class="process-math">\(i(L)\)</span> on. However, not every filtration / composition series of a module will contain a fixed submodule as a term.</div></article><span class="incontext"><a href="sec-fl-modules.html#remark-32" class="internal">in-context</a></span>
+<article class="remark remark-like"><h2 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">3.3</span><span class="period">.</span>
+</h2>
+<div class="para">For a poset <span class="process-math">\((P,\leq)\text{,}\)</span> the following are equivalent:</div> <div class="para logical"><ol class="decimal">
+<li><div class="para">Every totally ordered nonempty subset has a maximum element (i.e., <span class="process-math">\(P\)</span> has ACC)</div></li>
+<li><div class="para">Every totally ordered subset indexed by <span class="process-math">\(\mathbb{N}\text{,}\)</span> <span class="process-math">\(p_1 \leq p_2 \leq p_3 \leq \cdots\)</span> has a maximum element (i.e., <span class="process-math">\(\exists k: p_k=p_{k+1} = \cdots\)</span>)</div></li>
+<li><div class="para">Every nonempty subset of <span class="process-math">\(P\)</span> has a maximum element.</div></li>
+</ol></div> <div class="para">Indeed, (3) <span class="process-math">\(\Rightarrow\)</span> (1) <span class="process-math">\(\Rightarrow\)</span> (2) is clear. Given a totally ordered nonempty subset with no maximum, one can inductively keep choosing larger elements and obtain a countable such subset, so (2) <span class="process-math">\(\Rightarrow\)</span> (1). If any totally ordered nonempty subset of <span class="process-math">\(P\)</span> has a maximum element, then the same property holds for any nonempty subset <span class="process-math">\(Q\)</span> of <span class="process-math">\(P\text{,}\)</span> so by Zorn’s Lemma, such a <span class="process-math">\(Q\)</span> has a maximum element. The analogous equivalences hold with DCC.</div></article><span class="incontext"><a href="sec-chain-conditions.html#remark-32" class="internal">in-context</a></span>
 </body>
 </html>

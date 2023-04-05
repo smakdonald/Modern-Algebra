@@ -573,6 +573,14 @@
         <section xml:id="sec-smallorder">
           <title>Groups of Small Order</title>
           
+            <blockquote>
+              <title>Lorem ipsum</title>
+              <p>
+                <q>Transformation happens in small groups.</q>
+              </p>
+              <attribution>Gloria Steinem</attribution>
+            </blockquote>
+
         </section>
         
       </chapter>
@@ -1202,7 +1210,7 @@
       </chapter>
 
       <chapter xml:id="ch-field-extras">
-        <title>extras</title>
+        <title>Extras</title>
 
         <section xml:id="sec-solvable-by-radicals">
           <title>Solvability by Radicals</title>
@@ -1227,7 +1235,6 @@
       </chapter>
 
     </part>
-
 
 
     <part xml:id="part-representation">
@@ -2894,6 +2901,81 @@
 
     <backmatter xml:id="backmatter">
       <title>Backmatter</title>
+
+      <appendix>
+        <title>Foundational Knowledge</title>
+
+        <section xml:id="sec-">
+          <title>Sets, Functions, Constructions</title>
+
+          <subsection xml:id="subsec-sets">
+            <title>Sets</title>
+            
+            <p>hi</p>
+          </subsection>
+
+          <subsection xml:id="subsec-functions">
+            <title>Functions</title>
+            
+            <p>hi</p>
+          </subsection>
+
+          <subsection xml:id="subsec-set-constructions">
+            <title>Set Constructions</title>
+
+            <subsubsection xml:id="subsubsec-subsets">
+              <title>Subsets</title>
+
+              <p>hi</p>
+            </subsubsection>
+
+            <subsubsection xml:id="subsubsec-product-sets">
+              <title>Product Sets</title>
+              
+              <p>hi</p>
+            </subsubsection>
+
+            <subsubsection xml:id="subsubsec-quotient-sets">
+              <title>Quotient Sets</title>
+              
+              <p>hi</p>
+            </subsubsection>
+            
+
+          </subsection>          
+        </section>
+
+        <section xml:id="sec-numbers-and-cardinality">
+          <title>Number Systems and Cardinality</title>
+
+          <p>hi</p>
+          
+        </section>
+
+        <section xml:id="sec-matrices">
+          <title>Matrices</title>
+
+          <p>hi</p>
+          
+        </section>
+
+      </appendix>
+
+      <appendix>
+        <title>History</title>
+
+        <p>
+          Abel
+        </p>
+
+
+      </appendix>
+
+      <appendix>
+        <title>Notation</title>
+
+        <notation-list/>
+      </appendix>
 
       <colophon>
         <p> This book was authored in <pretext />. </p>

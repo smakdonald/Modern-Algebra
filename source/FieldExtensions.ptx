@@ -902,9 +902,9 @@
     </ol>
   </p>
 </statement>
-</proposition>
+        </proposition>
 
-<proposition>
+        <proposition>
 <statement>
   <p>
     Let <m>L</m> be the splitting field over <m>\Q</m> of the polynomial <m>f(x) = x^5 + 2 \in \Q[x].</m>
@@ -937,7 +937,7 @@
     Let <m>\z=e^{\frac{\pi i}{5}}</m> be a primitive <m>10\th</m> root of unity. This is the root a cyclotomic polynomial of degree <m>9</m> which is irreducible in <m>\Q[x]</m>. As this has relatively prime order to <m>F</m> it is irreducible there as well. Let <m>K=F(\z)</m>, and notice <m>[K:\Q]=40</m>. Notice that <m>\a_1\cdot\a_3\inv=\z</m>, and so <m>L=K</m>, completing the proof.
   </p>
 </proof>
-</proposition>
+        </proposition>
          
         <proposition>
           <statement>
@@ -985,6 +985,59 @@
           </proof>
         </proposition>
         
+        <exercises>
+
+            <exercise>
+                <title>Qual</title>
+                
+                
+                <statement>
+                    <p>
+                        Let <m>E, K,</m> and <m>L</m> be subfields of a field <m>F</m> with <m>E \subseteq K</m> and <m>E \subseteq L</m>. Let <m>k = [K : E]</m> and <m>\ell = [L : E]</m>. Recall that <m>KL</m> denotes the smallest (with respect to containment) subfield of <m>F</m> which satisfies <m>K\subseteq KL</m> and <m>L\subseteq KL</m>.
+                              </p>
+      
+                              <p><ol>
+                                  <li>
+                                  Show that <m>[KL : E] \leq k\ell</m>.
+                                  </li>
+      
+                                  <li>
+                                  Show that if <m>\gcd(k,\ell) = 1</m> then <m>[KL : E] = k\ell.</m>
+                                  </li>
+      
+                                  <li>
+                                  Give an example satisfying <m>[KL : E] &lt; k\ell</m>
+                                  </li>
+      
+                              </ol>
+                    </p>
+                </statement>
+
+                <solution>
+                    <p>
+                        Let <m>E, K,</m> and <m>L</m> be subfields of a field <m>F</m> with <m>E \subseteq K</m> and <m>E \subseteq L</m>. Let <m>k = [K : E]</m> and <m>\ell = [L : E]</m>.
+                      </p>
+          
+                      <p>
+                        We're going to go slightly out of order. By Part (b), we see <m>[KL : E] = k\ell</m> when <m>\gcd(k,\ell) = 1</m>. This is the largest possible size of <m>KL</m>, as everything is irreducible where it can be. Thus <m>[KL : E] \leq k\ell</m>
+                      </p>
+          
+                      <p>
+                        Suppose <m>\gcd(k,\ell) = 1</m>. As <m>K</m> and <m>L</m> are finite extensions of <m>E</m> they are also algebraic. Thus there exists <m>\a\in K</m> and <m>\b\in L</m> such that <m>\mp_\a(x)</m> has degree <m>k</m> and <m>\mp_\b(x)</m> has degree <m>\ell</m>.
+                      </p>
+          
+                      <p>
+                        Thus <m>\gcd(\deg\mp_\a(x),\ell) = 1</m>, making <m>\mp_\a(x)</m> irreducible in <m>L[x]</m>. Thus <m>[L(\a):L]=k</m>. Notice that <m>E(\a,\b)=KL</m>, as it is the smallest (with respect to containment) subfield of <m>F</m> which satisfies <m>K\subseteq KL</m> and <m>L\subseteq KL</m>. Thus we have <m>[KL:E]=k\ell</m>, as desired.
+                      </p>
+          
+                      <p>
+                        Let <m>E=\Q</m>, <m>L=K=\Q(\sqrt2)</m>, and <m>F=\Q(\sqrt2,i)</m> Notice that <m>KL=K=L</m>, and thus <m>[KL:E]=[L:E]=\ell&lt;\ell^2=k\ell</m>.
+                      </p>
+                </solution>
+            
+            </exercise>
+            
+        </exercises>
       
       </section>
 

@@ -1,17 +1,22 @@
 <?xml version='1.0' encoding='utf-8'?>
 
 <chapter xml:id="intro-groups">
-  <title>Groups</title>
+  <title>Intro to Groups</title>
 
-  <section xml:id="group-first-definitions">
-    <title>First Definitions </title>
+  <section xml:id="group-basics">
+    <title>Group Basics </title>
 
-    <subsection xml:id="subsec-grps">
-      <title>Groups</title>
+      <blockquote>
+        <p>
+          <q>Most great learning happens in groups.</q>
+        </p>
+        <attribution>Ken Robinson</attribution>
+      </blockquote>
 
+    <definition xml:id="def-binop">
+        <title>Binary Operation</title> 
+        <idx><h>binary-operation</h></idx>
 
-      <definition xml:id="def-binop">
-        <title>Binary Operation</title>
         <statement>
           <p>
             A <em>binary operation</em> on a set <m>S</m> is a function
@@ -23,7 +28,9 @@
       </definition>
 
       <remark>
-        We often write <m>xy</m> instead of <m>x\cdot y</m> for simplicity.
+        <p>
+          We often write <m>xy</m> instead of <m>x\cdot y</m> for simplicity.
+        </p>
       </remark>
 
       <definition xml:id="def-group">
@@ -52,42 +59,59 @@
       </definition>
 
       <remark>
-        Although a group is a pair, we will usually refer to the group by only naming the underlying set, <m>G</m>.
+        <p>
+          Although a group is a pair, we will usually refer to the group by only naming the underlying set, <m>G</m>.
+        </p>
       </remark>
 
       <remark>
-        We say that <q><m>S</m> is closed under the operation <m>\cdot</m></q>, when we want to emphasize that for any <m>x,y\in S</m> the result of the operation, <m>xy</m>, is an element of <m>S</m>. However note that closure is really part of the definition of a binary operation on a set, and it is implicitly assumed whenever we consider such an operation.
+        <p>
+          We say that <q><m>S</m> is closed under the operation <m>\cdot</m></q>, when we want to emphasize that for any <m>x,y\in S</m> the result of the operation, <m>xy</m>, is an element of <m>S</m>. However note that closure is really part of the definition of a binary operation on a set, and it is implicitly assumed whenever we consider such an operation.
+        </p>
       </remark>
 
-      <proposition xml:id="prop-unique-identity">
+      <theorem xml:id="thm-properties-of-groups">
+        <title>Properties of Groups</title>
         <statement>
           <p>
-            In a group <m>G</m>, the element <m>e</m> satisfying the second axiom of <xref ref="def-group" /> is unique, and we thus refer to it as the <em>identity element</em> of <m>G</m>.
+            <ol>
+              <li>
+                <p xml:id="part-unique-group-identity">
+                  In a group <m>G</m>, the element <m>e</m> satisfying the second axiom of <xref ref="def-group" /> is unique, and we thus refer to it as the <em>identity element</em> of <m>G</m>.
+                </p>
+              </li>
+
+              <li>
+                <p xml:id="part-unique-group-inverse">
+                  In a group <m>G</m>, for each <m>x</m>, the element <m>y</m> satisfying the last axiom of <xref ref="def-group" /> is unique, and we thus refer to it as the <em>the inverse</em> of <m>x</m> and we will henceforth denote it by <m>x^{-1}</m>.
+                </p>
+              </li>
+            </ol>
           </p>
         </statement>
+
         <proof>
           <p>
-            If <m>ex = x = xe</m> and <m>e'x = x = xe'</m> for all <m>x</m>, then <m>e = ee' = e'</m>.
+            <ol>
+              <li>
+                <p>
+                  Suppose there exist two elements <m>e</m> and <m>e'</m> such that <m>ex = x = xe</m> and <m>e'x = x = xe'</m> for all <m>x</m>. Then 
+                  <me>
+                    e = ee' = e'.
+                  </me>
+                  Thus only one element can satisfy this property, making the identity element unique.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  For a given <m>x</m>, if <m>yx = xy = e</m> and <m>zx = xz = e</m> fo some <m>y</m> and <m>z</m>, then <m>z = ez = (yx)z = y(xz) = ye = y</m>.
+                </p>
+              </li>
+            </ol>
           </p>
         </proof>
-      </proposition>
-
-      <proposition xml:id="prop-unique-inverse">
-        <statement>
-          <p>
-            In a group <m>G</m>, for each <m>x</m>, the element <m>y</m> satisfying the last axiom of <xref ref="def-group" /> is unique.
-          </p>
-        </statement>
-        <proof>
-          <p>
-            Proof. For a given <m>x</m>, if <m>yx = xy = e</m> and <m>zx = xz = e</m> fo some <m>y</m> and <m>z</m>, then <m>z = ez = (yx)z = y(xz) = ye = y</m>.
-          </p>
-        </proof>
-      </proposition>
-
-      <remark>
-        We will call the element <m>y</m> satisfying the last axiom of <xref ref="def-group" /> <em>the inverse</em> of <m>x</m> and we will henceforth denote it by <m>x^{-1}</m>.
-      </remark>  
+      </theorem>
 
       <definition xml:id="def-abelian">
         <statement>
@@ -96,21 +120,9 @@
           </p>
         </statement>
       </definition>
-
-      <problem xml:id="order-4-abelian">
-        <p>
-          Every group of order <m>4</m> is abelian.
-        </p>
-
-        <proof>
-          <p>
-            Let <m>G</m> be a group with <m>4</m> elements, and suppose there are elements <m>a,b\in G</m> such that <m>ab\neq ba</m> for some elements <m>a, b\in G</m>. Since <m>ab \neq ba</m>, we must have <m>a \neq b</m>, <m>a \neq e</m>, and <m>b\neq e</m>. Since <m>G</m> has only <m>4</m> elements and <m>ab \neq ba</m>, either <m>ab \in \{e, a, b\}</m> or <m>ba \in\{e, a, b\}</m>. Without loss, say the former occurs. But <m>ab = e</m> implies <m>b=a\inv</m> and we know <m>a\inv</m> commutes with <m>a</m>, and hence this is not possible. If <m>ab = a</m>, then <m>b = e</m> and if <m>ab = b</m> then <m>a = 1</m>, both of which are impossible. Since a, b were arbitrary, G must be abelian.
-          </p>
-        </proof>
-      </problem>
       
-      <lemma xml:id="lem-group-props">
-        <title>Properties of Groups</title>
+      <lemma xml:id="lem-group-arithmetic">
+        <title>Group Arithmetic</title>
         
         <statement>
           <p>
@@ -150,16 +162,47 @@
         </statement>
         <proof>
           <p>
-            
+            <ol>
+              <li>
+                <p>
+                  Coming soon to an OER near you!
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Coming soon to an OER near you!
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Coming soon to an OER near you!
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Coming soon to an OER near you!
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Coming soon to an OER near you!
+                </p>
+              </li>
+            </ol>
           </p>
         </proof>
       </lemma>          
 
-      <proposition xml:id="prop-gpex">
-        <statement>
+      <example xml:id="ex-group-examples">
+        <title>Group Examples</title>
+      
           <p>
-            <ul>
-              <li>
+            <ol>
+              <li xml:id="trivial-group"> 
                 <p>
                   The <term>trivial subgroup</term> is the group with a single element <m>\{e\}</m>
                 </p>
@@ -167,17 +210,27 @@
 
               <li>
                 <p>
-                  For any set <m>S</m>, the permutations on <m>S</m> <me>\rm{Perm}(S)=\{f:S\to S \ | \ f \text{ is a bijection}\}</me> form a non-abelian group under composition.
+                  <m>(\Z,+), (\Q,+), (\R,+),</m>, and <m>(\C,+)</m> are all abelian groups, where <m>+</m> denotes traditional addition.
+                </p>
+              </li>
+
+              <li xml:id="permutation-group">
+                <p>
+                  For any set <m>S</m>, the permutations on <m>S</m> 
+                  <me>
+                    \rm{Perm}(S)=\{f:S\to S \ | \ f \text{ is a bijection}\}
+                  </me> 
+                  form a non-abelian group under composition.
                 </p>
               </li>
 
               <li>
                 <p>
-                  For any field <m>F</m> and positive integer <m>n</m>, let 
+                  For any positive integer <m>n</m>, let 
                   <me>
-                    \operatorname{GL}_n(F)=\{ \text{invertible }  n \times n \text{ matrices with entries in } F\}.
+                    \operatorname{GL}_n(\C)=\{ \text{invertible } n \times n \;\text{matrices with entries in}\; \C\}.
                   </me> 
-                  By invertible I mean those matrices that have two-sided inverses, but in turns out that if an <m>n \times n</m> matrix has a left inverse then it it is automatically a right inverse too, and vice versa. Then <m>\operatorname{GL}_n(F)</m> is a non-abelian group under matrix multiplication.
+                  By invertible I mean those matrices that have two-sided inverses, but in turns out that if an <m>n \times n</m> matrix has a left inverse then it it is automatically a right inverse too, and vice versa. Then <m>\operatorname{GL}_n(\C)</m> is a non-abelian group under matrix multiplication.
                 </p>
               </li>
 
@@ -186,16 +239,9 @@
                   For any <m>n</m>, let <m>\mathbb{Z}/(n)</m> denote the integers modulo <m>n</m>. Then <m>(\mathbb{Z}/(n), +)</m> is an abelian group where <m>+</m> denotes addition modulo <m>n</m>.
                 </p>
               </li>
-
-              <li>
-                <p>
-                  For any field <m>F</m> (e.g., <m>\mathbb{Q}</m>, <m>{\mathbb{R}}</m>, <m>\mathbb{C}</m> or <m>\mathbb{Z}/p</m> for a prime <m>p</m>), the set <m>F^\times := F \setminus \{0\}</m> is an abelian group under the usual multiplication.
-                </p>
-              </li>
-            </ul>
+            </ol>
           </p>
-        </statement>
-      </proposition>
+      </example>
 
       <!--  
       <problem>
@@ -207,28 +253,242 @@
       </problem>
       -->
 
-      <problem>
+      <lemma xml:id="lem-direct-product-group">
         <statement>
           <p>
-            Give an example of a pair <m>(G,\cdot)</m> that satisfies axioms 1 and 2 of <xref ref="def-group" /> and an element of <m>G</m> that has a <em>left</em> inverse but not a <em>right</em> inverse.
+            Let <m>(G,+)</m> and <m>(H,\times)</m> be groups. Then <m>G\times H</m> is a group, where <m>(G\times H,*)</m> denotes the Cartesian Product of <m>G</m> and <m>H</m>, and the operation <m>*</m> is defined 
+            <me>
+              (g_1,h_1)*(g_2,h_2)=(g_1+g_2,h_1\times h_2).
+            </me>
           </p>
         </statement>
-        <solution>
-          <p>
 
+        <proof>
+          <p>
+            Coming soon to an OER near you!
           </p>
-        </solution>
-      </problem>
+        </proof>
+      </lemma>
 
       <theorem xml:id="thm-dirprop-gp">
         <statement>
           <p>
-            Direct products of groups are groups
+            Let <m>G_1,\dots,G_n</m> be groups. Then <m>G_1\times\cdots\times G_n</m> is a group, with its operation defined similary to that in <xref ref="lem-direct-product-group"/>
           </p>
         </statement>
+
+        <proof>
+          <p>
+            Coming soon to an OER near you!
+          </p>
+        </proof>
       </theorem>
+
+      <definition xml:id="def-element-order">
+        <statement>
+          <p>
+            In a group <m>G</m>, the <em>order of an element</em> <m>x</m> is the least positive integer <m>n</m> such that <m>x^n = e</m>. If no such <m>n</m> exists, we say <m>x</m> has infinite order. We write <m>|x|</m> for the order of <m>x</m>.
+          </p>
+        </statement>
+      </definition>
+  
+      <definition xml:id="def-order-group">
+        <statement>
+          <p>
+            The <em>order of a group</em> <m>G</m> is the cardinality of the set <m>G</m>, denoted <m>|G|</m>.
+          </p>
+        </statement>
+      </definition>
+  
+      <proposition xml:id="prop-order-4-abelian">
+        <statement>
+          <p>
+            Every group of order <m>4</m> is abelian.
+          </p>
+        </statement>
+  
+        <proof>
+          <p>
+            Let <m>G</m> be a group with <m>4</m> elements, and suppose there are elements <m>a,b\in G</m> such that <m>ab\neq ba</m> for some elements <m>a, b\in G</m>. Since <m>ab \neq ba</m>, we must have <m>a \neq b</m>, <m>a \neq e</m>, and <m>b\neq e</m>. Since <m>G</m> has only <m>4</m> elements and <m>ab \neq ba</m>, either <m>ab \in \{e, a, b\}</m> or <m>ba \in\{e, a, b\}</m>. Without loss, say the former occurs. But <m>ab = e</m> implies <m>b=a\inv</m> and we know <m>a\inv</m> commutes with <m>a</m>, and hence this is not possible. If <m>ab = a</m>, then <m>b = e</m> and if <m>ab = b</m> then <m>a = 1</m>, both of which are impossible. Since <m>a, b</m> were arbitrary, <m>G</m> must be abelian.
+          </p>
+        </proof>
+      </proposition>
+
+      <proposition xml:id="prop-orderelgp">
+        <statement>
+          <p>
+            Let <m>G</m> be a group and <m>x \in G</m> any element. 
+              <ol>
+                <li>
+                  <p>
+                    Prove that if <m>|x| = n</m>, then <m>e, x, \dots, x^{n-1}</m> are all distinct elements of <m>G</m>.
+                  </p>
+                </li>
+                    
+                <li>
+                  <p>
+                    Prove that if <m>|x| = \infty</m>, then <m>x^i \ne x^j</m> for all integers (positive or negative) <m>,j</m> with <m>i \ne j</m>.
+                  </p>
+                </li>
+  
+                <li>
+                  <p>
+                    Conclude <m>|x| \leq |G|</m> in all cases.
+                  </p>
+                </li>
+              </ol>
+          </p>
+        </statement>
+      </proposition>
+
+      <problem>
+        <p>
+          Let <m>G, H</m> be groups and let <m>x, y</m> be elements of <m>G</m>. 
+          <ol>
+            <li>
+              <p>
+                Prove that <m>|x|=\left|\{x^n \ | n\in \Z \}\right|</m> and in particular <m>|x| \leq |G|</m>.
+              </p>
+            </li>
+                
+            <li>
+              <p>
+                Prove or disprove: if <m>x,y</m> have finite order then <m>xy</m> has finite order. 
+              </p>
+            </li>
+          </ol>
+        </p>
+      </problem>
+  
+      <problem>
+        <p>
+          Let <m>G</m> be a group. 
+          <ol>
+            <li>
+              <p>
+                Let <m>g \in G</m> be an element of finite order. Show that <m>g^m</m> has finite order for any integer <m>m \geq 0</m>, and in fact <me> |g^m| = \frac{\lcm(m,|g|)}{m} = \frac{|g|}{\gcd(m, |g|))}.</me> 
+              </p>
+            </li>
+                
+            <li>
+              <p>
+                Prove that for all <m>g, h</m> in <m>G</m>, <m>|gh| = |hg|</m> holds.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </problem>
+
+      <lemma xml:id="lem-group-element-order">
+        <statement>
+          <p>
+            If <m>x^m = e</m> then <m>|x| \mid m</m>.
+          </p>
+        </statement>
+      </lemma>
+
+      <exercises>
+        <exercisegroup>
+          <title>Group Examples</title>
+        
+          <introduction>
+            <p>
+              For each of the following, prove that the given set and operation forms a group.
+            </p>
+          </introduction>
+        
+          <exercise>
+            <statement>
+              <p>
+                Prove that each of the groups given in <xref ref="ex-group-examples"/> are indeed groups.
+              </p>
+            </statement>
+
+            <solution>
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      We show the <xref ref="trivial-group"/> is indeed a group.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </solution>
+          </exercise>
+
+          <exercise>
+            <title>Groups of Units</title>
+            
+            <statement>
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      <m>\Q^\times=\Q\setminus\{0\}</m>, <m>\R^\times=\R\setminus\{0\}</m>, and <m>\C^\times=\C\setminus\{0\}</m> are each abelian groups under multiplicaton.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Let <m>p</m> be a prime integer. Then <m>\mathbb{Z}/(p)^\times=\mathbb{Z}/(p)\setminus\{0\}</m> is an abelian group under multiplicaton.
+                    </p>
+                  </li>
+                </ol>
+                These are examples of <term>groups of units</term>, which will be defined explicitely and explored more generally later on See: <xref provisional="def-group-of-units"/>
+            </p>
+            </statement>
+          </exercise>
+
+          <exercise>
+            <statement>
+              <p>
+                Give an example of a pair <m>(G,\cdot)</m> that satisfies axioms 1 and 2 of <xref ref="def-group" /> and an element of <m>G</m> that has a <em>left</em> inverse but not a <em>right</em> inverse.
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Coming soon to an OER near you!
+              </p>
+            </solution>
+          </exercise>
+        
+        </exercisegroup>
+        
+      </exercises>
       
-    </subsection>
+    </section>
+
+  <section xml:id="sec-common-groups">
+    <title>Common Groups</title>
+
+    <introduction>
+      <blockquote>
+        <title>Lorem ipsum</title>
+        <p>
+          <q>Reality prefers symmetry.</q>
+        </p>
+        <attribution>Jorge Luis Borges</attribution>
+      </blockquote>
+    </introduction>
 
     <subsection xml:id="subsec-d2n">
       <title>Dihedral Groups</title>
@@ -251,7 +511,9 @@
       </definition>
 
       <remark>
-        By the latter I don't mean that <m>f</m> fixes each of the points of <m>P_n</m>, but rather that <m>f(P_n) = P_n</m>, that is every point of <m>P_n</m> is mapped to a (possibly different) point of <m>P_n</m> and every point of <m>P_n</m> is the image of some point in <m>P_n</m> via <m>f</m>. It is clear that the composition of two symmetries of <m>P_n</m> is again a symmetry of <m>P_n</m>, so that composition is a binary operation on <m>D_n</m>.
+        <p>
+          By the latter I don't mean that <m>f</m> fixes each of the points of <m>P_n</m>, but rather that <m>f(P_n) = P_n</m>, that is every point of <m>P_n</m> is mapped to a (possibly different) point of <m>P_n</m> and every point of <m>P_n</m> is the image of some point in <m>P_n</m> via <m>f</m>. It is clear that the composition of two symmetries of <m>P_n</m> is again a symmetry of <m>P_n</m>, so that composition is a binary operation on <m>D_n</m>.
+        </p>
       </remark>
 
       <definition xml:id="def-d2n">
@@ -262,9 +524,43 @@
         </statement>
       </definition>
 
+      <proposition xml:id="prop-d2n-order">
+        <statement>
+          <p>
+            <ol>
+              <li>
+                <p>
+                  Every element in <m>D_{2n}</m> can be written as <m>r^j</m> or <m>r^js</m> for <m>0 \leq j \leq n-1</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>|D_{2n}|=2n</m>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </proposition>
+
       <problem>
         <p>
-          Prove that the dihedral group <m>D_{2n}</m> is indeed a group.
+          Assume that the regular <m>n</m>-gon <m>P_n</m> is drawn in the plane with its center at the origin and one vertex on the <m>x</m> axis. If <m>r</m> denotes rotation about the origin by <m>\frac{2\pi}{n}</m> radians counter-clockwise, then <m>r \in D_{2n}</m>. It's inverse is rotation by <m>2 \pi/n</m> clock-wise. For another example, for any line of symmetry of <m>P_n</m>, reflection about that line gives an element of <m>D_{2n}</m>. By our convention for how to draw <m>P_n</m>, the <m>x</m>-axis is a line of symmetry for <m>P_n</m>, and we let <m>s</m> denote reflection about the <m>x</m>-axis.
+        </p>
+
+        <p>
+          <ol>
+            <li>
+              <p>
+                Prove <m>|r|=n</m> and <m>|s|=2</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Prove that <m>sr</m> is a reflection and hence that <m>srsr=1_{{\mathbb{R}}^2}</m>.
+              </p>
+            </li>
+          </ol>
         </p>
       </problem>
 
@@ -294,14 +590,10 @@
       </definition>
 
       <remark>
-        For any finite set <m>|X|=n</m>, we may think of <m>S_n</m> as the <em>permutation group</em> of <m>X</m>, which is sometimes written <m>\operatorname{Perm}(X)</m>.
-      </remark>
-
-      <problem>
         <p>
-          Prove that <m>S_n</m> is indeed a group for all <m>n\in\N</m>.
+          For any finite set <m>|X|=n</m>, we may think of <m>S_n</m> as the <em>permutation group</em> of <m>X</m>, which is sometimes written <m>\operatorname{Perm}(X)</m>.
         </p>
-      </problem>
+      </remark>
 
       <p>
         We can write an element <m>\sigma</m> of <m>S_n</m> as a table of values: 
@@ -329,14 +621,27 @@
       </problem>
 
       <remark>
-        Note that distinct lists of integers represent the same cycle if they are cyclical rearrangements of each other, e.g., <m>(1 \, 2 \, 3) = (2 \, 3 \, 1)</m>. However, <m>(1 \, 2 \, 3) \neq (2 \, 1 \, 3)</m>.
+        <p>
+          Note that distinct lists of integers represent the same cycle if they are cyclical rearrangements of each other, e.g., <m>(1 \, 2 \, 3) = (2 \, 3 \, 1)</m>. However, <m>(1 \, 2 \, 3) \neq (2 \, 1 \, 3)</m>.
+        </p>
       </remark>
 
-      <problem>
-        <p>
-          Disjoint cycles commute, that is, if <m>i_1 , i_2 \, \dots i_m, j_1 , j_2 \, \dots j_k\in [n]</m>, <me>\sigma_1=(i_1 \, i_2 \, \dots i_m), \quad \sigma_2=(j_1 \, j_2 \, \dots j_k)</me> and <me>\{i_1 , i_2 , \dots i_m\}\cap \{j_1 , j_2 , \dots j_k\}=\emptyset</me> then <m>\sigma_1 \circ \sigma_2=\sigma_2\circ \sigma_1</m>.
-        </p>
-      </problem>
+      <proposition xml:id="prop-disjoint-cycles-commute">
+        <statement>
+          <p>
+            Disjoint cycles commute, that is, if <m>i_1 , i_2 \, \dots i_m, j_1 , j_2 \, \dots j_k\in [n]</m>, 
+          <me>
+            \sigma_1=(i_1 \, i_2 \, \dots i_m), \quad \sigma_2=(j_1 \, j_2 \, \dots j_k)
+          </me> 
+          and 
+          <me>
+            \{i_1 , i_2 , \dots i_m\}\cap \{j_1 , j_2 , \dots j_k\}=\emptyset
+          </me> 
+          then <m>\sigma_1 \circ \sigma_2=\sigma_2\circ \sigma_1</m>.
+          </p>
+        </statement>
+      </proposition>
+
 
       <proposition xml:id="prop-cycledecomp">
         <statement>
@@ -359,8 +664,22 @@
       </proposition>
 
       <remark>
-        For the uniqueness part of statement (1) in the above proposition one needs to establish a convention regarding 1-cycles, that is one needs to stipulate either that the 1-cycles will not be recorded (which gives the shortest such factorization) or that all the 1-cycles will be recorded (which gives the longest such factorization, but also the only one that makes it clear what the number <m>n</m> is).
+        <p>
+          For the uniqueness part of statement (1) in the above proposition one needs to establish a convention regarding 1-cycles, that is one needs to stipulate either that the 1-cycles will not be recorded (which gives the shortest such factorization) or that all the 1-cycles will be recorded (which gives the longest such factorization, but also the only one that makes it clear what the number <m>n</m> is).
+        </p>
       </remark>
+
+      <problem>
+        <p>
+          Prove <m>|S_n|=n!</m>.
+        </p>
+      </problem>
+  
+      <problem>
+        <p>
+          Prove that the order of a permutation is the least common multiple of the lengths of the cycles it is a product of.
+        </p>
+      </problem>
 
     </subsection>
 
@@ -374,161 +693,75 @@
       <definition xml:id="def-quaternions">
         <statement>
           <p>
-            The quaternion group <m>Q_8</m> is a group with <m>8</m> elements <me>Q_8=\{ 1, -1, i, -i, j, -j, k, -k \}</me> satisfying the following relations: <m>1</m> is the identity element and <me>i^2 = -1, j^2 = -1, k^2 =-1, ij = k, jk = i, ki = j,</me> <me>(-1)i = -i, (-1)j = -j, (-1)k = -k, (-1)(-1) = 1.</me>
+            The <em>quaternion group</em> <m>Q_8</m> is a set with <m>8</m> elements 
+            <me>
+              Q_8=\{ 1, -1, i, -i, j, -j, k, -k \}
+            </me> 
+            satisfying the following relations: <m>1</m> is the identity element and 
+            <me>
+              i^2 = -1, j^2 = -1, k^2 =-1, ij = k, jk = i, ki = j,
+            </me> 
+            <me>
+              (-1)i = -i, (-1)j = -j, (-1)k = -k, (-1)(-1) = 1.
+            </me>
           </p>
         </statement>
       </definition>
 
-      <problem>
-        <p>
-          Verify that <m>Q_8</m> is a group. Provide a specific example to show that <m>Q_8</m> is not an abelian group.
-        </p>
-      </problem>
-    </subsection> 
-
-    <subsection xml:id="subsec-order">
-      <title>Order</title>
-      
-      <definition xml:id="def-element-order">
-        <statement>
-          <p>
-            In a group <m>G</m>, the <em>order of an element</em> <m>x</m> is the least positive integer <m>n</m> such that <m>x^n = e</m>. If no such <m>n</m> exists, we say <m>x</m> has infinite order. We write <m>|x|</m> for the order of <m>x</m>.
-          </p>
-        </statement>
-      </definition>
-
-      <definition xml:id="def-order-group">
-        <statement>
-          <p>
-            The <em>order of a group</em> <m>G</m> is the cardinality of the set <m>G</m>, denoted <m>|G|</m>.
-          </p>
-        </statement>
-      </definition>
-
-      <problem>
-        <statement>
-          <p>
-            Prove that any group of order <m>4</m> is abelian.
-          </p>
-        </statement>
-        <solution>
-          <p>
-            
-          </p>
-        </solution>
-      </problem>
-
-      <proposition xml:id="prop-orderelgp">
-        <statement>
-          <p>
-            Let <m>G</m> be a group and <m>x \in G</m> any element. 
-              <ol>
-                <li>
-                  <p>
-                    Prove that if <m>|x| = n</m>, then <m>e, x, \dots, x^{n-1}</m> are all distinct elements of <m>G</m>.
-                  </p>
-                </li>
-                    
-                <li>
-                  <p>
-                    Prove that if <m>|x| = \infty</m>, then <m>x^i \ne x^j</m> for all integers (positive or negative) <m>,j</m> with <m>i \ne j</m>.
-                  </p>
-                </li>
-
-                <li>
-                  <p>
-                    Conclude <m>|x| \leq |G|</m> in all cases.
-                  </p>
-                </li>
-              </ol>
-          </p>
-        </statement>
-      </proposition>
-
-      <problem>
-        <p>
-          Prove <m>|S_n|=n!</m>.
-        </p>
-      </problem>
-
-      <problem>
-        <p>
-          Prove that the order of a permutation is the least common multiple of the lengths of the cycles it is a product of.
-        </p>
-      </problem>
-
-      <problem>
-        <p>
-          Let <m>G, H</m> be groups and let <m>x, y</m> be elements of <m>G</m>. 
-          <ol>
-            <li>
-              <p>
-                Prove that <m>|x|=\left|\{x^n \ | n\in \Z \}\right|</m> and in particular <m>|x| \leq |G|</m>.
-              </p>
-            </li>
-                
-            <li>
-              <p>
-                Prove or disprove: if <m>x,y</m> have finite order then <m>xy</m> has finite order. 
-              </p>
-            </li>
-          </ol>
-        </p>
-      </problem>
-
-      <problem>
-        <p>
-          Let <m>G</m> be a group. 
-          <ol>
-            <li>
-              <p>
-                Let <m>g \in G</m> be an element of finite order. Show that <m>g^m</m> has finite order for any integer <m>m \geq 0</m>, and in fact <me> |g^m| = \frac{\lcm(m,|g|)}{m} = \frac{|g|}{\gcd(m, |g|))}.</me> 
-              </p>
-            </li>
-                
-            <li>
-              <p>
-                Prove that for all <m>g, h</m> in <m>G</m>, <m>|gh| = |hg|</m> holds.
-              </p>
-            </li>
-          </ol>
-        </p>
-      </problem>
-
-      <proposition xml:id="prop-d2n-order">
-        <statement>
-          <p>
-            <ol>
-              <li>
-                <p>
-                  Every element in <m>D_{2n}</m> can be written as <m>r^j</m> or <m>r^js</m> for <m>0 \leq j \leq n-1</m>.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <m>|D_{2n}|=2n</m>
-                </p>
-              </li>
-            </ol>
-          </p>
-        </statement>
-      </proposition>
-
-      <lemma xml:id="lem-group-element-order">
-        <statement>
-          <p>
-            If <m>x^m = e</m> then <m>|x| \mid m</m>.
-          </p>
-        </statement>
-      </lemma>
-
+      <p>
+        There isn't much for us to do with <m>Q_8</m> right now, but you'd be surprised by the unusual places this group manages to crop up in...
+      </p>
 
     </subsection>
 
+    <exercises>
+      
+      <exercise>
+        <p>
+          Verify that the following are indeed groups:
+          <ol>
+            <li>
+              <p>
+                The dihedral group <m>D_{2n}</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                The symmetric group <m>S_n</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                The quaternion group <m>Q_8</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </exercise>
+
+      <exercise>
+        <p>
+          Provide explicit examples to show <m>D_{2n}, S_n</m>, and <m>Q_8</m> are <em>not</em> abelian groups.
+        </p>
+      </exercise>
+    </exercises>
+    
   </section>
 
   <section xml:id="sec-gen-cyclic-gp">
     <title>Generators and Cyclic Groups</title>
+
+    <introduction>
+      <blockquote>
+        <title>Lorem ipsum</title>
+        <p>
+          <q>How often misused words generate misleading thoughts.</q>
+        </p>
+        <attribution>Herbert Spencer</attribution>
+      </blockquote>
+    </introduction>
 
     <subsection xml:id="subsec-gp-generators">
       <title>Generators</title>
@@ -541,50 +774,33 @@
       </statement>
     </definition>
 
-    <p>
-      Assume that the regular <m>n</m>-gon <m>P_n</m> is drawn in the plane with its center at the origin and one vertex on the <m>x</m> axis. If <m>r</m> denotes rotation about the origin by <m>\frac{2\pi}{n}</m> radians counter-clockwise, then <m>r \in D_{2n}</m>. It’s inverse is rotation by <m>2 \pi/n</m> clock-wise. For another example, for any line of symmetry of <m>P_n</m>, reflection about that line gives an element of <m>D_{2n}</m>. By our convention for how to draw <m>P_n</m>, the <m>x</m>-axis is a line of symmetry for <m>P_n</m>, and we let <m>s</m> denote reflection about the <m>x</m>-axis.
-    </p>
-
-    <problem>
-      <p>
-        <ol>
-          <li>
-            <p>
-              Prove <m>|r|=n</m> and <m>|s|=2</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              Prove that <m>sr</m> is a reflection and hence that <m>srsr=1_{{\mathbb{R}}^2}</m>.
-            </p>
-          </li>
-        </ol>
-      </p>
-    </problem>
-
-    <problem>
-      <p>
-        <ol>
-          <li>
-            <p>
-              Prove that <m>D_{2n}</m> is generated by <m>r</m> and any reflection. 
-            </p>
-          </li>
-
-          <li>
-            <p>
-              Prove that if <m>p\ge 3</m> is prime then <m>D_{2p}</m> is generated by any two distinct reflections.               
-            </p>
-          </li>
-        </ol>
-      </p>
-    </problem>
-
-    <problem>
-      <p>
-        For <m>n\ge 2</m> prove that <m>S_n</m> is generated by <m>(12)</m> and the <m>n</m>-cycle <m>(12\cdots n)</m>.
-      </p>
-    </problem>
+    <proposition xml:id="prop-d2n-generation">
+      <statement>
+        <p>
+          <ol>
+            <li>
+              <p>
+                Prove that <m>D_{2n}</m> is generated by <m>r</m> and any reflection. 
+              </p>
+            </li>
+  
+            <li>
+              <p>
+                Prove that if <m>p\ge 3</m> is prime then <m>D_{2p}</m> is generated by any two distinct reflections.               
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </proposition>
+   
+    <theorem xml:id="thm-generating-sn">
+      <statement>
+        <p>
+          For <m>n\ge 2</m> prove that <m>S_n</m> is generated by <m>(12)</m> and the <m>n</m>-cycle <m>(12\cdots n)</m>.
+        </p>
+      </statement>
+    </theorem>
     
     </subsection>
 
@@ -594,76 +810,107 @@
       <definition xml:id="def-cyclic-group">
         <statement>
           <p>
-            If <m>G</m> is a generated by a single element, i.e. <m>G   = \langle x \rangle</m> for some <m>x \in G</m>, then <m>G</m> is called a <em>cyclic group</em>.
+            If <m>G</m> is a generated by a single element, i.e. <m>G= \langle x \rangle</m> for some <m>x \in G</m>, then <m>G</m> is called a <em>cyclic group</em>.
           </p>
         </statement>
       </definition>
 
-      <problem>
-        <p>
-          Let <m>G=\langle x\rangle</m> be a cyclic group. Then <m>G=\langle x^{-1}\rangle</m>.
-        </p>
-      </problem>
-
-      <problem>
-        <p>
-          <ol>
-            <li>
-              <p>
-                Prove <m>(\mathbb{Z},+)</m> is generated by <m>1</m> or <m>-1</m>
-              </p>
-            </li>
-
-            <li>
-              <p>
-                Prove <m>(\mathbb{Z}/(n),+)</m> is generated by <m>[a]_n</m> for any integer <m>a</m> such that <m>\operatorname{gcd}(a,n)=1</m>.
-              </p>
-            </li>
-          </ol>
-        </p>
-      </problem>
-
-      <problem>
-        <p>
-          Prove that <m>(\mathbb Q, +)</m> is not a cyclic group.
-        </p>
-      </problem>
-
-      <proposition xml:id="prop-cyclicabelian">
+      <proposition xml:id="prop-non-unique-cyclic-generators">
+        <title>Cyclic Generators Need not be Unique</title>
+        
         <statement>
           <p>
-            Prove that any cyclic group is abelian.
+            Let <m>G=\langle x\rangle</m> be a cyclic group. Then <m>G=\langle x^{-1}\rangle</m>.
           </p>
         </statement>
       </proposition>
 
-      <problem>
-        <p>
-          Prove that <m>\operatorname{GL}_2(\mathbb Z/(2))</m> is not cyclic.
-        </p>
-      </problem>
+      <proposition xml:id="prop-cyclic-groups-and-z">
+        <statement>
+          <p>
+            <ol>
+              <li>
+                <p>
+                  Prove <m>(\mathbb{Z},+)</m> is generated by <m>1</m> or <m>-1</m>
+                </p>
+              </li>
+  
+              <li>
+                <p>
+                  Prove <m>(\mathbb{Z}/(n),+)</m> is generated by <m>[a]_n</m> for any integer <m>a</m> such that <m>\operatorname{gcd}(a,n)=1</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </proposition>
+
+      <theorem xml:id="thm-cyclic-abelian">
+        <statement>
+          <p>
+            Every cyclic group is abelian.
+          </p>
+        </statement>
+      </theorem>
 
     </subsection>
+
+    <exercises>
+
+      <exercise>
+        <title>Not Quite Cyclic Groups</title>
+        <p>
+          <ol>
+            <li>
+              <p>
+                Prove that <m>(\mathbb Q, +)</m> is not a cyclic group.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Prove that <m>\operatorname{GL}_2(\mathbb Z/(2))</m> is not cyclic.
+              </p>
+            </li>
+          </ol>
+        </p>
+
+      </exercise>
+      
+    </exercises>
 
   </section>
 
   <section xml:id="sec-subgroups">
     <title>Subgroups</title>
 
+    <introduction>
+      <blockquote>
+        <title>Lorem ipsum</title>
+        <p>
+          <q>I have this fear of falling in front of large groups of people. That's why I tend not to wear heels.</q>
+        </p>
+        <attribution>Taylor Swift</attribution>
+      </blockquote>
+    </introduction>
+
     <subsection xml:id="subsec-subgrp-defn-ex">
-      <title>Definition and Examples</title>
+      <title>Subgroup Basics</title>
 
       <definition xml:id="def-subgroup">
         <statement>
           <p>
-            A nonempty subset <m>H</m> of a group <m>G</m> is called a <em>subgroup</em> provided <m>H</m> is a group under the multiplication law of <m>G</m>. The fact that <m>H</m> is a subgroup of <m>G</m> is denoted <m>H\leq G</m> or <m>H&lt;G</m> if we also mean that <m>H\neq G</m>.
+            A nonempty subset <m>H</m> of a group <m>G</m> is called a <em>subgroup</em>, denoted <m>H\leq G</m>, <notation><usage><m>\leq</m></usage><description>subgroup</description></notation> provided <m>H</m> is a group under the multiplication law of <m>G</m>.
+          </p>
+
+          <p>
+            A subgroup <m>H</m> of a group <m>G</m> is a <em>proper</em> subgroup, denoted <m>H&lt;G</m> if <m>H\neq G</m>.
           </p>
         </statement>
       </definition>
 
       <lemma xml:id="lem-subgrouptest">
         <title>Subgroup Tests</title>
-        
         
         <statement>
           <p>
@@ -679,19 +926,36 @@
                   If a subset <m>H</m> of a group <m>G</m> is nonempty and satisfies for all <m>x,y \in H</m>, <m>xy^{-1} \in H</m>, then <m>H</m> is a subgroup.
                 </p>
               </li>
-    
             </ol>
           </p>
         </statement>
+
+        <proof>
+          <p>
+            We prove the one-step test first.
+          </p>
+
+          <p>
+            Assume <m>H</m> is non-empty and for all <m>x,y \in H</m>, <m>xy^{-1} \in H</m>. Since <m>H</m> is non-empty, there is an <m>h \in H</m> and hence <m>e_G = hh^{-1} \in H</m>. Since <m>e_Gx=x=xe_G</m> for any <m>x\in H</m>, <m>e_G</m> is an identity element for <m>H</m>. For any <m>h \in H</m>, <m>h^{-1} = eh^{-1}  \in H</m>, and so every element of <m>H</m> has an inverse inside <m>H</m>. For <m>x,y  \in H</m> we have <m>y^{-1} \in H</m> and thus <m>xy = x(y^{-1})^{-1} \in H</m> and hence <m>H</m> is closed under <m>\cdot</m>. This means that the restriction of the group operation of <m>G</m> to <m>H</m> is a well-defined group operation. This operation is associative by the axioms for the group <m>G</m>. The axioms of a group have now been established for <m>(H, \cdot)</m>.
+          </p>
+
+          <p>
+            Now we prove the two step test.
+          </p>
+
+          <p>
+					Assume <m>H</m> is non-empty and closed under multiplication and inversion. Then, for <m>x,y\in H</m> we have <m>y^{-1}\in H</m> and <m>xy^{-1}\in H</m>. Since the hypothesis of the one-step test is satisfied, <m>H</m> is a subgroup of <m>G</m>.
+        </p>
+        </proof>
       </lemma>
 
       <example>
+        <title>Common Subgroups</title>
         <p>
-          Prove the following:
           <ol>
             <li>
               <p>
-                <m>\{e_G\}</m> and <m>G</m> are the <em>trivial subgroups</em> of <m>G</m>.
+                <m>\{e_G\}</m> and <m>G</m> are the <term>trivial subgroups</term> of <m>G</m>.
               </p>
             </li>
 
@@ -703,48 +967,65 @@
 
             <li>
               <p>
-                <m>\Z^\times\leq\Q^\times\leq\R^\times\leq\C^\times</m>
+                <m>\Q^\times\leq\R^\times\leq\C^\times</m>
               </p>
             </li>
 
             <li>
               <p>
-                Let <m>n\in\N</m> and define <m>n\Z=\{x\in\Z|x=nk\;\text{for some}\;k\in\Z\}</m>. Prove <m>n\Z\leq\Z</m> for all <m>n</m>.
-              </p>
-            </li>
-
-            <li>
-              <p>
-                Let <m>G</m> be a group. For any <m>g\in G</m>, prove that the set <m>Z_G(g)=\{x\in G|gx=xg\}</m> is a subgroup of <m>G</m>.
+                Let <m>n\in\N</m> and define <m>n\Z=\{x\in\Z|x=nk\;\text{for some}\;k\in\Z\}</m>. Then <m>n\Z\leq\Z</m> for all <m>n</m>.
               </p>
             </li>
           </ol>
         </p>
       </example>
 
-      <proposition xml:id="prop-subgroup-properties">
+      <theorem xml:id="thm-subgroup-properties">
         <title>Properties of Subgroups</title>
-        
         
         <statement>
           <p>
             <ol>
               <li>
+                <title>Transitivity of Subgroups</title>
                 <p>
                   If <m>H</m> is a subgroup of <m>G</m> and <m>K</m> is a subgroup of <m>H</m>, then <m>K</m> is a subgroup of <m>G</m>.
                 </p>
               </li>
 
               <li>
+                <title>Intersections of Subgroups</title>
                 <p>
                   If <m>H_\alpha</m> is a subgroup of <m>G</m> for all <m>\alpha</m> in an index set <m>J</m>, then <m>H=\bigcap_{\alpha\in J} H_\alpha</m> is a subgroup of <m>G</m>.
                 </p>
               </li>
 
               <li>
+                <title>Unions of Subgroups</title>
                 <p>
                   Let <m>G</m> be a group and <m>H</m>, <m>H'</m> subgroups. Prove that <m>H\cup H'</m> is a subgroup if and only if <m>H\subseteq H'</m> or <m>H'\subseteq H</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </theorem>
 
+      <proposition xml:id="prop-abelian-and-cyclic-subgroups">
+        <title>Subgroups of Abelian and Cyclic Groups</title>
+        <statement>
+          <p>
+            Let <m>H</m> be a subgroup of a group <m>G</m>.
+            <ol>
+              <li>
+                <p>
+                  Prove that if <m>G</m> is abelian then so is <m>H</m>.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Prove that if <m>G</m> is cyclic then so is <m>H</m>.
                 </p>
               </li>
             </ol>
@@ -752,14 +1033,15 @@
         </statement>
       </proposition>
 
+      <lemma xml:id="lem-groups-contained-in-groups-are-subgroups">
+        <statement>
+          <p>
+            Let <m>H</m> and <m>G</m> be groups. If <m>H\sse G</m>, then <m>H\leq G</m>
+          </p>
+        </statement>
+      </lemma>
 
-      <problem>
-        <p>
-          Let <m>H</m> be a subgroup of <m>G</m> and fix some element <m>g\in G</m>. Prove that <m>gHg^{-1}=\{ghg^{-1} \mid h\in H\}</m> is a subgroup of <m>G</m> of the same order as <m>H</m>.
-        </p>
-      </problem>
-
-      <definition xml:id="def-altgroup">
+      <definition xml:id="def-alternating-group">
         <statement>
           <p>
             The <em>alternating group</em> <m>A_n</m> is the subset of all even cycles of <m>S_n</m>.
@@ -767,13 +1049,15 @@
         </statement>
       </definition>
 
-      <problem>
-        <p>
-          Prove that <m>A_n</m> is a subgroup of <m>S_n</m>.
-        </p>
-      </problem>
+      <proposition xml:id="prop-alternating-group-is-subgroup">
+        <statement>
+          <p>
+            Prove that <m>A_n</m> is a subgroup of <m>S_n</m>.
+          </p>
+        </statement>
+      </proposition>
 
-      <definition xml:id="def-slg">
+      <definition xml:id="def-special-linear-group">
         <statement>
           <p>
             For any field <m>F</m>, the <em>special linear group</em>
@@ -784,21 +1068,23 @@
         </statement>
       </definition>
 
-      <problem>
-        <p>
-          Prove that <m>SL_n(F)</m> is a subgroup of <m>GL_n(F)</m>.
-        </p>
-      </problem>
+      <proposition xml:id="prop-slg-subgroup">
+        <statement>
+          <p>
+            Prove that <m>SL_n(F)</m> is a subgroup of <m>GL_n(F)</m>.
+          </p>
+        </statement>
+      </proposition>
       
     </subsection>
 
     <subsection xml:id="subsec-center">
       <title>The Center of a Group</title>
 
-      <definition xml:id="def-gpcenter">
+      <definition xml:id="def-group-pcenter">
         <statement>
           <p>
-            The <em>center</em> of a group <m>G</m> often written <m>Z(G)</m>, is the set of elements of <m>G</m> that commute with every element of <m>G</m>. That is, 
+            The <em>center</em> of a group <m>G</m>, often written <m>Z(G)</m>, is the set of elements of <m>G</m> that commute with every element of <m>G</m>. That is, 
             <me>
               Z(G)=\{x \in G \, | \, xy = yx\,\text{ for all $y \in G$}\}.
             </me>
@@ -806,25 +1092,33 @@
         </statement>
       </definition>
 
-      <problem>
-        <p>
-          Prove that <m>Z(G)</m> is an abelian subgroup for any group <m>G</m>.
-        </p>
-      </problem>
-      
+      <proposition xml:id="prop-center-is-subgroup">
+        <statement>
+          <p>
+            Prove that <m>Z(G)</m> is an abelian subgroup for any group <m>G</m>.
+          </p>
+        </statement>
+      </proposition>
 
-      <problem>
-        <p>
-          Find <m>Z(D_{2n})</m> for <m>n \geq 3</m>. Your answer will depend on whether <m>n</m> is even or odd.
-        </p>
-      </problem>
+      <proposition xml:id="prop-center-is-group-iff-abelian">
+        <statement>
+          <p>
+            Let <m>G</m> be a group. Prove <m>G</m> is abelian if any only if <m>G=Z(G)</m>.
+          </p>
+        </statement>
+      </proposition>
 
-
+      <proposition xml:id="prop-centers-and-subgroups">
+        <statement>
+          <p>
+            Let <m>H\leq G</m> be a subgroup. Prove <m>Z(H)\leq Z(G)</m>.
+          </p>
+        </statement>
+      </proposition>
     </subsection>
 
     <subsection xml:id="subsec-gensubgp">
       <title>Generated Subgroups</title>
-
 
       <definition xml:id="def-gensubgp">
         <statement>
@@ -834,11 +1128,13 @@
         </statement>
       </definition>
 
-
       <lemma xml:id="lem-gensubgp">
         <statement>
           <p>
-            For a subset <m>X</m> of <m>G</m>, the elements of <m>\langle X \rangle</m> can be described as: <me>\langle X \rangle = \left\{x_1^{j_1} \cdots x_m^{j_m} \mid m \geq 0, j_1, \dots, j_m \in \mathbb{Z}\text{ and }x_1, \dots, x_m \in X \right\}.</me>
+            For a subset <m>X</m> of <m>G</m>, the elements of <m>\langle X \rangle</m> can be described as: 
+            <me>
+              \langle X \rangle = \left\{x_1^{j_1} \cdots x_m^{j_m} \mid m \geq 0, j_1, \dots, j_m \in \mathbb{Z}\text{ and }x_1, \dots, x_m \in X \right\}.
+            </me>
           </p>
         </statement>
 
@@ -870,59 +1166,131 @@
             </ul>
           </p>
     
-            <p>
-              Therefore <m>S\leq G</m> and <m>X\subseteq S</m> (by taking <m>m=1</m> and <m>j_1=1</m>) and by the minimality of <m>\langle X \rangle</m> we obtain <m>\langle X \rangle\subseteq S</m>.
-            </p>
+          <p>
+            Therefore <m>S\leq G</m> and <m>X\subseteq S</m> (by taking <m>m=1</m> and <m>j_1=1</m>) and by the minimality of <m>\langle X \rangle</m> we obtain <m>\langle X \rangle\subseteq S</m>.
+          </p>
         </proof>
       </lemma>
 
-      <problem>
+      <corollary>
+        <statement>
         <p>
-          <xref ref="lem-gensubgp"/> implies that for an element <m>x</m> of a group <m>G</m>, <m>\langle x\rangle=\{x^j \mid j\in \mathbb{Z}\}</m>.
+           <m>\langle x\rangle=\{x^j \mid j\in \mathbb{Z}\}</m>.
         </p>
-      </problem>
+      </statement>
+      </corollary>
 
-      <problem>
-        <p>
-          Verify <m>D_{2n}=\langle r,s \rangle</m>, meaning that <m>D_{2n}</m> is the subgroup of <m>D_{2n}</m> generated by <m>\{r,s\}</m>.
-        </p>
-      </problem>
-
-      <problem>
-        <p>
-          Prove that <m>A_n</m> is the subgroup of <m>S_n</m> generated by all produts of <m>2</m>-cyclies (disjoint or not). In symbols, 
+      <proposition xml:id="prop-generating-an">
+        <statement>
+          <p>
+            Prove that <m>A_n</m> is the subgroup of <m>S_n</m> generated by all produts of <m>2</m>-cyclies (disjoint or not). In symbols, 
           <me>
             A_n=\langle (i \ j )(k \ l) \mid i,j,k,l \in \{1, \ldots, n\}\rangle.
           </me>
-          
-        </p>
-      </problem>
+          </p>
+        </statement>
+      </proposition>
 
+      <exercises>
 
-      <problem>
-        <p>
-          Consider the set <m>\mu=\{z\in \C \setminus \{0\} \mid z^n = 1 \text{ for some integer }n \geq 1\}</m>, which is a subgroup of <m>( \C \setminus \{0\} , \cdot)</m> (a fact you need not prove).
-          <ol>
-            <li>
+        <exercisegroup>
+          <title>Future Subgroups</title>
+        
+          <introduction>
+            <p>
+              Throughout this course we will encounter numerous important subgroups that will need to be verified as such. We do so here. While these subgroups may seem random now, they will prove to be exceedingly useful in the future.
+            </p>
+          </introduction>
+        
+          <exercise>
+            <statement>
               <p>
-                Prove that for each integer <m>m \geq 1</m>, there is a unique subgroup <m>H_m\leq \mu</m> with <m>|H_m|=m</m> and that <m>H_m</m> is cyclic. 
+                For any <m>g\in G</m>, prove that the set <m>Z_G(g)=\{x\in G|gx=xg\}</m> is a subgroup of <m>G</m>.<fn>The set <m>Z_G(g)</m> is known as the <em>centralizer</em> of <m>g</m> in <m>G</m>, and is explored in greater depth later.</fn>
               </p>
-            </li>
+            </statement>
+          </exercise>
 
-            <li>
+          <exercise>
+            <statement>
               <p>
-                Prove that every finitely generated subgroup of <m>\mu</m> has finitely many elements. 
+                Let <m>H</m> be a subgroup of <m>G</m> and fix some element <m>g\in G</m>. Prove that <m>gHg^{-1}=\{ghg^{-1} \mid h\in H\}</m> is a subgroup of <m>G</m> of the same order as <m>H</m>.
               </p>
-            </li>
+            </statement>
+          </exercise>
+        
+        </exercisegroup>
 
-            <li>
-              <p>
-                Prove that <m>\mu</m> is not finitely generated.
-              </p>
-            </li>
-          </ol>
-        </p>
-      </problem>
+        <exercise>
+          <title>Finding Centers</title>
+          <p>
+            Determine the following:
+            <ol>
+              <li>
+                <p>
+                  <m>Z(D_{2n})</m> for <m>n \geq 3</m>. Your answer will depend on whether <m>n</m> is even or odd.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>Z(S_n)</m> for <m>n \geq 3</m>.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>Z(A_n)</m> for <m>n \geq 3</m>.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>Z(\GL_n(\C))</m>.
+                </p>
+              </li>
+            </ol>
+            
+          </p>
+        </exercise>
+
+        <exercise>
+          <p>
+            Verify <m>D_{2n}=\langle r,s \rangle</m>, meaning that <m>D_{2n}</m> is the subgroup of <m>D_{2n}</m> generated by <m>\{r,s\}</m>.
+          </p>
+        </exercise>
+
+        <exercise>
+          <p>
+            Consider the set <m>\mu=\{z\in \C^\times \mid z^n = 1 \;\text{for some integer}\;n \geq 1\}</m>.
+            <ol>
+              <li>
+                <p>
+                  Prove that <m>\mu\leq\C^\times</m>.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Prove that for each integer <m>m \geq 1</m>, there is a unique subgroup <m>H_m\leq \mu</m> with <m>|H_m|=m</m> and that <m>H_m</m> is cyclic. 
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Prove that every finitely generated subgroup of <m>\mu</m> has finitely many elements. 
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Prove that <m>\mu</m> is not finitely generated.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </exercise>
+        
+      </exercises>
 
     </subsection>
 

@@ -11,14 +11,46 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><article class="hiddenproof"><div class="para logical">
-<div class="para">First, notice that <span class="process-math">\(x^2+x+1\)</span> is irreducible in <span class="process-math">\(\Z[x]\)</span> as it is a cyclotomic polynomial. Thus the possibilities are the following:</div>
-<ol class="decimal">
-<li><div class="para"><span class="process-math">\(I=(3,x^2+x+1)\text{,}\)</span></div></li>
-<li><div class="para"><span class="process-math">\(J=(2,x^2+x+1)\text{,}\)</span></div></li>
-<li><div class="para"><span class="process-math">\(L=(6,x^2+x+1)\text{,}\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\Z[x]\text{.}\)</span></div></li>
-</ol>
-<div class="para">Notice that <span class="process-math">\(\Z[x]=(1)\text{,}\)</span> which is neither prime nor maximal, as those ideals must be proper. The ideal <span class="process-math">\(L\)</span> is not maximal as it is contained in both <span class="process-math">\(I\)</span> and <span class="process-math">\(J\text{,}\)</span> nor is it prime, given that <span class="process-math">\(3\cdot2\in L\)</span> but neither <span class="process-math">\(3\)</span> nor <span class="process-math">\(2\)</span> are in <span class="process-math">\(L\text{.}\)</span>
+<div class="para">Let’s observe first that if such a map exists it is unique. For if <span class="process-math">\(\tilde\phi: R[x_1, \dots, x_n] \to S\)</span> is a ring map extending <span class="process-math">\(\phi\)</span> and sending <span class="process-math">\(x_i\)</span> to <span class="process-math">\(s_i\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{align*}
+\tilde\phi(\sum_{e_1, \dots, e_n \geq 0} r_{e_1, \dots, e_n} x_1^{e_1} \cdots x_n^{e_n}) &amp;=
+\sum_{e_1, \dots, e_n \geq 0} \phi(r_{e_1, \dots, e_n}) \phi(x_1)^{e_1} \cdots \phi(x_n)^{e_n}) \\
+&amp;=
+\sum_{e_1, \dots, e_n \geq 0} \phi(r_{e_1, \dots, e_n}) s_1^{e_1} \cdots s_n^{e_n},
+\end{align*}
+\end{equation*}
 </div>
-</div> <div class="para">Both <span class="process-math">\(I\)</span> and <span class="process-math">\(J\)</span> are generated with irreducible elements, making them irreducible ideals and thus maximal.</div></article></body>
+<div class="para">using that <span class="process-math">\(\tilde\phi\)</span> preserves <span class="process-math">\(+\)</span> and <span class="process-math">\(\cdot\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">For existence, let's assume <span class="process-math">\(n = 1\)</span> at first. Given <span class="process-math">\(\phi: R \to S\)</span> and <span class="process-math">\(s \in S\text{,}\)</span> define</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\tilde{\phi}: R[x] \to S
+\end{equation*}
+</div>
+<div class="para">by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\tilde{\phi}(\sum_i r_i x^i) = \sum_i \phi(r_i) s^i.
+\end{equation*}
+</div>
+<div class="para">It is elementary (but tedious) to check <span class="process-math">\(\tilde{\phi}\)</span> really is a ring homomorphism. The fact that it restricts to <span class="process-math">\(\phi\)</span> is clear, however.</div>
+</div> <div class="para logical">
+<div class="para">For the general case, we proceed by induction on the number of variables <span class="process-math">\(n\text{.}\)</span> The induction hypothesis shows that there is a ring homomorphism</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\psi: R[x_1, \dots, x_{n-1}] \to S
+\end{equation*}
+</div>
+<div class="para">such that <span class="process-math">\(\psi|_R = \phi\)</span> and <span class="process-math">\(\psi(x_i) = s_i\text{,}\)</span> <span class="process-math">\(i = 1, \dots, n-1\text{.}\)</span> Applying the <span class="process-math">\(n=1\)</span> case to <span class="process-math">\(\psi\)</span> gives</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\tilde{\psi}: (R[x_1, \dots, x_{n-1}])[x_n] \to S
+\end{equation*}
+</div>
+<div class="para">with <span class="process-math">\(\tilde\psi|_{R[x_1, \dots, x_{n-1}]} = \psi\)</span> and <span class="process-math">\(\tilde{\psi}(x_n) = s_n\text{.}\)</span> Setting <span class="process-math">\(\tilde\phi=\tilde\psi\)</span> gives a map <span class="process-math">\(\tilde{\phi}\)</span> with the needed properties.</div>
+</div></article></body>
 </html>

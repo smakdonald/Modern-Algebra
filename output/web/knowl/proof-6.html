@@ -11,31 +11,23 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<div class="para">We only prove the statements about left cosets.</div> <div class="para">
-<span class="process-math">\(1. \Rightarrow 2.:\)</span> if <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> belong to the same left coset <span class="process-math">\(gH\)</span> of <span class="process-math">\(H\)</span> in <span class="process-math">\(G\)</span> then <span class="process-math">\(x=gh'\)</span> and <span class="process-math">\(y=gh''\)</span> for some <span class="process-math">\(h',h''\in H\text{,}\)</span> so <span class="process-math">\(g=y(h'')^{-1}\)</span> and therefore <span class="process-math">\(x=y(h'')^{-1}h'=yh\)</span> where <span class="process-math">\(h=(h'')^{-1}h'\in H\text{.}\)</span>
-</div> <div class="para">
-<span class="process-math">\(2. \iff 3.:\)</span> <span class="process-math">\(x=yh\)</span> for some <span class="process-math">\(h \in H\)</span> <span class="process-math">\(\iff\)</span> <span class="process-math">\(y = xh^{-1}\)</span> and <span class="process-math">\(h^{-1} \in H\text{.}\)</span>
-</div> <div class="para">
-<span class="process-math">\(2. \iff 4.:\)</span> <span class="process-math">\(x=yh\)</span> for some <span class="process-math">\(h \in H\)</span> <span class="process-math">\(\iff\)</span> <span class="process-math">\(y^{-1} x=h\in H\text{.}\)</span>
-</div> <div class="para">
-<span class="process-math">\(4. \iff 5.:\)</span> <span class="process-math">\(y^{-1} x\in H \iff (y^{-1} x)^{-1}\in H \iff x^{-1}y\in H\text{.}\)</span>
-</div> <div class="para logical">
-<div class="para">
-<span class="process-math">\(2. \Rightarrow 6.:\)</span> Suppose <span class="process-math">\(x = yh\)</span> for some <span class="process-math">\(h \in H\text{,}\)</span> then by <span class="process-math">\(2. \Rightarrow 3.\)</span> we also have <span class="process-math">\(y = xh''\)</span> for some <span class="process-math">\(h'' \in H\text{.}\)</span> Then we have</div>
+<article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>
+<div class="para">Let <span class="process-math">\(S= \left\{x_1^{j_1} \cdots x_m^{j_m} \mid m \geq 0, j_1, \dots, j_m \in \mathbb{Z}\text{ and }x_1, \dots, x_m \in X \right\}\text{.}\)</span> Since <span class="process-math">\(\langle X \rangle\)</span> is a subgroup that contains <span class="process-math">\(X\text{,}\)</span> it is closed under products and inverses, and thus must contain all elements of <span class="process-math">\(S\text{.}\)</span>
+</div> <div class="para">For the opposite containment, we just need to show the set <span class="process-math">\(S\)</span> really is a subgroup. We use the one step test:</div> <div class="para logical"><ul class="disc">
+<li><div class="para">
+<span class="process-math">\(S \ne \emptyset\)</span> since we allow <span class="process-math">\(m = 0\)</span> and declare the empty product to be <span class="process-math">\(e_G\text{.}\)</span>
+</div></li>
+<li><div class="para logical">
+<div class="para">If <span class="process-math">\(x_1^{j_1} \cdots x_m^{j_m}\)</span> and <span class="process-math">\(y_1^{i_1} \cdots y_n^{i_m}\)</span> are in <span class="process-math">\(S\)</span> then</div>
 <div class="displaymath process-math">
 \begin{equation*}
-xH=\{xh'\mid h'\in H\}=\{yhh'\mid h'\in H\}\subset yH \text{ and}
+x_1^{j_1} \cdots x_m^{j_m}(y_1^{i_1} \cdots y_n^{i_m})^{-1}=x_1^{j_1} \cdots x_m^{j_m} y_n^{-i_m} \cdots y_1^{-i_1}
 \end{equation*}
 </div>
-<div class="displaymath process-math">
-\begin{equation*}
-yH=\{yh'\mid h'\in H\}=\{xh''h'\mid h'\in H\}\subset xH,
-\end{equation*}
+<div class="para">is also in <span class="process-math">\(S\text{.}\)</span>
 </div>
-<div class="para">thus <span class="process-math">\(xH=yH\text{.}\)</span>
-</div>
-</div> <div class="para">
-<span class="process-math">\(6. \Rightarrow 1.:\)</span> Since <span class="process-math">\(e_G=e_H\in H\text{,}\)</span> we have <span class="process-math">\(x=xe_G\in xH\)</span> and <span class="process-math">\(y=ye_G\in yH\text{.}\)</span> If <span class="process-math">\(xH=yH\)</span> then, <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> belong to the same left coset.</div></article><span class="incontext"><a href="sec-cosets.html#proof-6" class="internal">in-context</a></span>
+</div></li>
+</ul></div> <div class="para">Therefore <span class="process-math">\(S\leq G\)</span> and <span class="process-math">\(X\subseteq S\)</span> (by taking <span class="process-math">\(m=1\)</span> and <span class="process-math">\(j_1=1\)</span>) and by the minimality of <span class="process-math">\(\langle X \rangle\)</span> we obtain <span class="process-math">\(\langle X \rangle\subseteq S\text{.}\)</span>
+</div></article><span class="incontext"><a href="sec-subgroups.html#proof-6" class="internal">in-context</a></span>
 </body>
 </html>

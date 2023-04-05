@@ -5,6 +5,14 @@
 
     <section xml:id="graction">
       <title>Group Actions</title>
+      
+      <blockquote>
+        <title>Lorem ipsum</title>
+        <p>
+          <q>You may never know what results come of your action, but if you do nothing there will be no results.</q>
+        </p>
+        <attribution>Ghandi</attribution>
+      </blockquote>
 
       <definition xml:id="def-graction">
         <statement>

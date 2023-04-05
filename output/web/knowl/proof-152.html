@@ -12,34 +12,6 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<div class="para logical">
-<div class="para">Let <span class="process-math">\(i: N \to M\)</span> be any injection of left <span class="process-math">\(K[G]\)</span>-modules. It suffices to prove that there is an <span class="process-math">\(K[G]\)</span>-linear map <span class="process-math">\(p: M \to N\)</span> such that <span class="process-math">\(p \circ i = \mathrm{id}_N\text{.}\)</span> By restriction of scalars along the inclusion <span class="process-math">\(K \subseteq K[G]\text{,}\)</span> we may regard <span class="process-math">\(i\)</span> as a <span class="process-math">\(K\)</span>-linear map between <span class="process-math">\(K\)</span>-vector spaces. As such it admits a <span class="process-math">\(K\)</span>-linear splitting <span class="process-math">\(f: M \twoheadrightarrow N\)</span> (since <span class="process-math">\(K\)</span> is semisimple). There is no reason that <span class="process-math">\(f\)</span> will be <span class="process-math">\(K[G]\)</span>-linear, but we can modify it so that it becomes so: Define <span class="process-math">\(p: M \to N\)</span> by</div>
-<div class="displaymath process-math">
-\begin{equation*}
-p(m) = \frac{1}{|G|} \sum_{g \in G} g^{-1} f(g m).
-\end{equation*}
-</div>
-<div class="para">Note that the formula makes sense since <span class="process-math">\(|G|\)</span> is invertible in <span class="process-math">\(K\)</span> by assumption.</div>
-</div> <div class="para logical">
-<div class="para">Then <span class="process-math">\(p\)</span> is still a <span class="process-math">\(K\)</span>-linear map (since <span class="process-math">\(f\)</span> is <span class="process-math">\(K\)</span>-linear and the group action is <span class="process-math">\(K\)</span>-linear). For any <span class="process-math">\(h \in G\)</span> we have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-p(hm) = \frac{1}{|G|} \sum_{g \in G} g^{-1} f(g hm) = \frac{1}{|G|} \sum_{x \in G} hx^{-1} f(xm)
-= h p(m),
-\end{equation*}
-</div>
-<div class="para">where the second equality is given by identifying <span class="process-math">\(x\)</span> with <span class="process-math">\(gh\text{.}\)</span> These conditions ensure that <span class="process-math">\(p\)</span> is <span class="process-math">\(K[G]\)</span>-linear. Finally,</div>
-<div class="displaymath process-math">
-\begin{equation*}
-p(i(n))= \frac{1}{|G|} \sum_{g \in G} g^{-1} f(g i(n))
-= \frac{1}{|G|} \sum_{g \in G} g^{-1} f(i(gn)) 
-= \frac{1}{|G|} \sum_{g \in G} g^{-1} gn
-= \frac{1}{|G|} \sum_{g \in G} n  = n
-\end{equation*}
-</div>
-<div class="para">where the second equality uses that <span class="process-math">\(i\)</span> is <span class="process-math">\(K[G]\)</span>-linear and the third one uses that <span class="process-math">\(f \circ i =
-\mathrm{id}\text{.}\)</span>
-</div>
-</div></article><span class="incontext"><a href="sec-semisimple-rings.html#proof-152" class="internal">in-context</a></span>
+<div class="para">If <span class="process-math">\(M\)</span> is finitely generated there is a surjection <span class="process-math">\(R^a \twoheadrightarrow M\text{.}\)</span> Using Proposition <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "prop916" missing or not unique]</code> this surjection splits, so that <span class="process-math">\(R^n \cong M \oplus N\)</span> for some <span class="process-math">\(N\text{,}\)</span> and each of <span class="process-math">\(M\)</span> and <span class="process-math">\(N\)</span> is semisimple and finitely generated. So <span class="process-math">\(M = \oplus_{i=1}^s M_i\)</span> and <span class="process-math">\(N = \oplus_{j=1}^s N_j\)</span> with <span class="process-math">\(M_i, N_j\)</span> simple. Clearly <span class="process-math">\(R^n\)</span> is isomorphic to a finite direct sum of copies of the <span class="process-math">\(J_i\)</span>’s, and so the result follows from the Krull-Schmidt Theorem for semisimple modules.</div> <div class="para">In the general case, we know that <span class="process-math">\(M\)</span> is a direct sum of simple modules; if some simple summand <span class="process-math">\(N\)</span> of <span class="process-math">\(M\)</span> is not isomorphic to one of the <span class="process-math">\(J_i\text{,}\)</span> then <span class="process-math">\(N\)</span> is a finitely generated counterexample to the f.g. case.</div></article><span class="incontext"><a href="sec-semisimple-rings.html#proof-152" class="internal">in-context</a></span>
 </body>
 </html>

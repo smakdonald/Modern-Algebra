@@ -13,14 +13,26 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">As before we start by finding 1-dimensional representations given by group homomorphisms of the form <span class="process-math">\(A_4 \to \mathbb{C}^\times\text{.}\)</span> Any such map factors as</div>
+<div class="para">The map</div>
 <div class="displaymath process-math">
 \begin{equation*}
-A_4 \twoheadrightarrow A_4^{\mathrm{ab}}\cong C_3 \to \mathbb{C}^\times
+\xymatrix@R=1mm{ \operatorname{End}_R(M^{\oplus n}) &amp;\ar[l]_-{\zeta}  \operatorname{Mat}_n(\operatorname{End}_R(M)) \\
+\sum_{i,j} \iota_i  \alpha_{i,j}  \pi_j &amp; \ar@{|-&gt;}[l]  [\alpha_{i,j}]_{i,j} }
 \end{equation*}
 </div>
-<div class="para">and thus there are three nonisomorphic 1-dimensional representations given by <span class="process-math">\(\rho_i:C_3=\langle g\rangle \to \mathbb{C}^\times\text{,}\)</span> <span class="process-math">\(\rho_i(g)=e^\frac{2\pi i}{3}\text{,}\)</span> with <span class="process-math">\(i=0,1,2\text{.}\)</span> Note that <span class="process-math">\(\rho_0\)</span> corresponds to the trivial representation. Also <span class="process-math">\(\rho_1\)</span> and <span class="process-math">\(\rho_2\)</span> make essential use of the fact that we are working over <span class="process-math">\(\mathbb{C}\)</span> as opposed to, say, <span class="process-math">\({\mathbb{R}}\)</span> where there are no primitive cubic roots of 1.</div>
+<div class="para">is a two-sided inverse for <span class="process-math">\(\Theta\text{:}\)</span>
 </div>
-<span class="incontext"><a href="sec-rep-closed-fields.html#p-1469" class="internal">in-context</a></span>
+<div class="displaymath process-math">
+\begin{equation*}
+\zeta (\Theta(\phi)) = \zeta ( [\pi_i  \phi  \iota_j]_{i,j} ) = \sum_{i,j} \iota_i \pi_i  \phi  \iota_j \pi_j =(\sum_i \iota_i \pi_i) \phi (\sum_j \iota_j \pi_j)=\phi, \quad\text{and}
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Theta(\zeta([\alpha_{i,j}]_{i,j}]))_{k,\ell} = \Theta ( \sum_{i,j} \iota_i  \alpha_{i,j}  \pi_j)_{k,\ell} = \pi_k (\sum_{i,j} \iota_i  \alpha_{i,j}  \pi_j) \iota_\ell = \sum_{i,j}  (\pi_k \iota_i) \alpha_{i,j} (\pi_j \iota_\ell) = \alpha_{k,\ell}.
+\end{equation*}
+</div>
+</div>
+<span class="incontext"><a href="sec-art-wedd.html#p-1469" class="internal">in-context</a></span>
 </body>
 </html>

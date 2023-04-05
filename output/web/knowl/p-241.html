@@ -12,8 +12,15 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Let <span class="process-math">\(n\in N\)</span> and notice <span class="process-math">\(a_g(n)=gng\inv\in N\text{,}\)</span> as <span class="process-math">\(N\nsg G\text{.}\)</span> Thus <span class="process-math">\(a_g:N\to N\)</span> is well defined. Let <span class="process-math">\(n\in N\text{.}\)</span> As <span class="process-math">\(gNg\inv=N\text{,}\)</span> we can write <span class="process-math">\(n=gn'g\inv\)</span> for some <span class="process-math">\(n'\in N\text{.}\)</span> Then <span class="process-math">\(a_g(n')=gn'g\inv=n\text{,}\)</span> making <span class="process-math">\(a_g\)</span> surjective. As <span class="process-math">\(|N|=|N|\)</span> we see that <span class="process-math">\(a_g\)</span> is a bijection. The homomorphism piece we get for free from <span class="process-math">\(G\text{,}\)</span> making <span class="process-math">\(a_g\in\Aut(N)\text{.}\)</span>
+<div class="para logical">
+<div class="para">Let me prove the assertions for right cosets. Clearly every element <span class="process-math">\(g\)</span> of <span class="process-math">\(G\)</span> belongs to at least one right coset, since <span class="process-math">\(g \in Hg\)</span> (since <span class="process-math">\(e \in H\)</span>). We need to show any two cosets are either identical or disjoint: if <span class="process-math">\(Hx\)</span> and <span class="process-math">\(Hy\)</span> share an element, then it follows from <span class="process-math">\(1.\Rightarrow 6.\)</span> of Lemma <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "lem:cosets" missing or not unique]</code> that <span class="process-math">\(Hx=Hy\text{.}\)</span> This proves that the right cosets partition <span class="process-math">\(G\text{.}\)</span> To see that all right cosets have the same cardinality as <span class="process-math">\(H\text{,}\)</span> define a function</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\rho: H \to Hg
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec-normal-subgroups.html#p-241" class="internal">in-context</a></span>
+<div class="para">by <span class="process-math">\(\rho(h) = hg\text{.}\)</span> Clearly <span class="process-math">\(\rho\)</span> is onto and if <span class="process-math">\(\rho(h) = \rho(h')\)</span> then <span class="process-math">\(hg = h'g\)</span> and hence <span class="process-math">\(h = h'\text{,}\)</span> so that <span class="process-math">\(\rho\)</span> is also one-to-one.</div>
+</div>
+<span class="incontext"><a href="sec-cosets.html#p-241" class="internal">in-context</a></span>
 </body>
 </html>
