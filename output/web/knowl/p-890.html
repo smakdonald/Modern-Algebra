@@ -11,21 +11,29 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
+<h5 class="heading"><span class="type">Paragraph</span></h5>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(R\)</span> and <span class="process-math">\(S\)</span> be commutative rings, <span class="process-math">\(\phi: R \to S\)</span> is a ring homomorphism and <span class="process-math">\(s_1, \dots, s_n\)</span> arbitrary elements of <span class="process-math">\(S\text{.}\)</span> Then there exists a unique ring homomorphism</div>
+<div class="para">Suppose <span class="process-math">\(R\)</span> is a ring and <span class="process-math">\(I\)</span> is a two-sided ideal of <span class="process-math">\(R,\)</span> and write <span class="process-math">\(\pi: R \to R/I\)</span> for the quotient ring homomorphism. There is a bijection</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\tilde{\phi}: R[x_1, \dots, x_n] \to S
+\Psi:\{\text{subrings of }R\text{ containing }I\}\to \{\text{subrings of }R/I\}, \Psi(S)=\pi(S)=S/I
 \end{equation*}
 </div>
-<div class="para">such that <span class="process-math">\(\tilde{\phi}|_R = \phi\)</span> and <span class="process-math">\(\tilde{\phi}(x_i) = s_i\)</span> for all <span class="process-math">\(i\text{,}\)</span> namely</div>
+<div class="para">with inverse</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\tilde{\phi}\left(\sum_{e_1, \dots, e_n \geq 0} r_{e_1, \dots, e_n} x_1^{e_1} \cdots x_n^{e_n}\right) =\sum_{e_1, \dots, e_n \geq 0} \phi(r_{e_1, \dots, e_n}) s_1^{e_1} \cdots s_n^{e_n}
+\Phi:\{\text{subrings of }R/I\}\to\{\text{subrings of }R\text{ containing }I\}, \Phi(S)=\pi^{-1}(S).
 \end{equation*}
 </div>
+<div class="para">Moreover this bijection induces a bijection between</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\{\text{ideals of}\;R\text{ containing }I\}\leftrightarrow \{\text{ideals of }R/I\}
+\end{equation*}
 </div>
-<span class="incontext"><a href="subsec-polyrings.html#p-890" class="internal">in-context</a></span>
+<div class="para">since <span class="process-math">\(J\)</span> is an ideal of <span class="process-math">\(R\)</span> containing <span class="process-math">\(I\)</span> if and only if <span class="process-math">\(\Psi(J)\)</span> is an ideal of <span class="process-math">\(R/I\text{.}\)</span>
+</div>
+</div>
+<span class="incontext"><a href="sec-ring-quotients.html#p-890" class="internal">in-context</a></span>
 </body>
 </html>

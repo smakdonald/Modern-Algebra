@@ -12,8 +12,15 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Note that <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\)</span> both have <span class="process-math">\(p^k\)</span> elements, where <span class="process-math">\(p^k\)</span> is the largest power of <span class="process-math">\(p\)</span> that divides the order of <span class="process-math">\(G\text{.}\)</span> Recall <span class="process-math">\(|PQ|=\frac{|P||Q|}{|P\cap Q|}=\frac{p^{2k}}{|P\cap Q|}\text{.}\)</span> As <span class="process-math">\(p^k\)</span> is the largest power of <span class="process-math">\(p\)</span> that divides the order of <span class="process-math">\(G\text{,}\)</span> we see that <span class="process-math">\(|P\cap Q|\)</span> must be at least <span class="process-math">\(p^k\text{.}\)</span> Thus <span class="process-math">\(P=Q\text{.}\)</span>
+<div class="para logical">
+<div class="para">The elements of <span class="process-math">\(Z(G)\)</span> are precisely the group elements that are conjugate to only themselves; that is, they are the one-element orbits for the conjugation action. Because the conjugacy classes (orbits of the conjugation action) partition <span class="process-math">\(G\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-conjclass.html">
+\begin{equation*}
+|G| = |Z(G)| + \sum_i^r [g_i]_c.
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec-sylowthm.html#p-542" class="internal">in-context</a></span>
+<div class="para">For each <span class="process-math">\(g_i\)</span> as in the statement, by Theorem <a href="" class="xref" data-knowl="./knowl/thm-conjclass.html" title="Theorem 4.34">Theorem 4.34</a>, we have <span class="process-math">\([G: C_G(g_i)] =[g_i]_c\text{.}\)</span> The class equation follows from substituting this into the equation above.</div>
+</div>
+<span class="incontext"><a href="sec-class-eq.html#p-542" class="internal">in-context</a></span>
 </body>
 </html>

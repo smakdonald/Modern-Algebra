@@ -12,8 +12,22 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">By the First Isomorphism Theorem we know that <span class="process-math">\(G/\ker(\rho)\cong\im(\rho)=\Aut(P)\text{.}\)</span> However, <span class="process-math">\(\Aut(P)\cong\Aut(\Z_{11})\cong \Z^x\text{,}\)</span> which has order <span class="process-math">\(10\text{.}\)</span> As this is a homomorphism, we see the order of <span class="process-math">\(G/\ker(\rho)\)</span> must divide both <span class="process-math">\(10\)</span> and <span class="process-math">\(231\text{,}\)</span> two numbers that are relatively prime. Thus <span class="process-math">\(\ker(\rho)=1\text{,}\)</span> meaning that conjugation is equivalent to the identity map, or that <span class="process-math">\(gxg\inv=x\)</span> for all <span class="process-math">\(g\in G\text{.}\)</span> Thus <span class="process-math">\(P\in Z(G)\text{.}\)</span>
+<div class="para logical">
+<div class="para">The Class Equation tells us</div>
+<div class="displaymath process-math">
+\begin{equation*}
+|G|=|Z(G)|+\sum\limits_{g\in G}[G:C_G(g)],
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec-sylowthm.html#p-549" class="internal">in-context</a></span>
+<div class="para">where <span class="process-math">\(C_G(g)\)</span> are the centralizers with more than one element. Notice that this means <span class="process-math">\(|C_G(g)|\big||G|\text{,}\)</span> and thus each centralizer is a power of <span class="process-math">\(p\text{.}\)</span> Thus we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+p^n=|Z(G)|+pk
+\end{equation*}
+</div>
+<div class="para">for some <span class="process-math">\(k\in\N\text{.}\)</span> Thus the center of <span class="process-math">\(G\)</span> cannot be trivial, else we would not be able to sum to a power of <span class="process-math">\(p\text{.}\)</span>
+</div>
+</div>
+<span class="incontext"><a href="sec-class-eq.html#p-549" class="internal">in-context</a></span>
 </body>
 </html>

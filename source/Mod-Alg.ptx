@@ -2973,6 +2973,54 @@
           The term "Abelian" was coined in honor of Abel's contributions to the study of commutative groups. The adjective "Abelian" is now used to describe any algebraic structure (not just groups) in which the operation is commutative.
         </p>
 
+        <exercises>
+
+          <exercisegroup>
+            <title>Computations and Examples</title>
+            <introduction>
+              <p>
+              </p>
+            </introduction>
+        
+            <exercise>
+              <p>
+                Coming soon to an OER near you!
+              </p>
+            </exercise>
+        
+          </exercisegroup>
+        
+          <exercisegroup>
+            <title>Formal Proofs</title>
+            <introduction>
+              <p>
+              </p>
+            </introduction>
+        
+            <exercise>
+              <p>
+                Coming soon to an OER near you!
+              </p>
+            </exercise>
+        
+          </exercisegroup>
+        
+          <exercisegroup>
+            <title>Qualifying Exam Problems</title>
+            <introduction>
+              <p>
+              </p>
+            </introduction>
+        
+            <exercise>
+              <p>
+                Coming soon to an OER near you!
+              </p>
+            </exercise>
+        
+          </exercisegroup>
+        </exercises>
+
 
       </appendix>
 
@@ -2986,8 +3034,11 @@
         <p> This book was authored in <pretext />. </p>
       </colophon>
 
+      
+
     </backmatter>
 
   </book>
 
 </pretext>
+

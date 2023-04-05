@@ -166,51 +166,89 @@
 
       <exercises>
 
-        <exercise>
-          <title>Group Homomorphisms</title>
-          
-          <p>
-            Prove that each of the following are group homomorphisms
-
-            <ol>
-              <li>
-                <p>
-                  The function <m>f: \Z\to \Z</m> defined by <m>f(n) = 2n</m>.
-                </p>
-              </li>
-
-              <li>
-                <p>
-                  The function <m>f: \R \to \R</m> defined by <m>f(x) = x^2</m>.
-                </p>
-              </li>
-
-              <li>
-                <p>
-                  The function <m>f: \Z/(6)\to\Z/(3)</m> defined by <m>f([n]_6) = [n]_3</m>
-                </p>
-              </li>
-            </ol>
-          </p>
-
-        </exercise>
-
-        <exercise>
-          <title>Finding Injective Homomorphisms</title>
-          
-          <p>
-            <ol>
-              <li>
-                Find, with justification, an injective group homomorphism <m>f:S_n \to \GL_n(\R)</m>.
-              </li>
+        <exercisegroup>
+          <title>Computations and Examples</title>
+          <introduction>
+            <p>
+            </p>
+          </introduction>
+      
+          <exercise>
+            <p>
+              Coming soon to an OER near you!
+            </p>
+          </exercise>
+      
+        </exercisegroup>
+      
+        <exercisegroup>
+          <title>Formal Proofs</title>
+          <introduction>
+            <p>
+            </p>
+          </introduction>
+      
+          <exercise>
+            <title>Group Homomorphisms</title>
+            
+            <p>
+              Prove that each of the following are group homomorphisms
   
-              <li>
-                Find, with justification, an injective group homomorphism <m>g:D_{2n}\to S_n</m>.
-              </li>
-            </ol>
-          </p>
-        </exercise>
-        
+              <ol>
+                <li>
+                  <p>
+                    The function <m>f: \Z\to \Z</m> defined by <m>f(n) = 2n</m>.
+                  </p>
+                </li>
+  
+                <li>
+                  <p>
+                    The function <m>f: \R \to \R</m> defined by <m>f(x) = x^2</m>.
+                  </p>
+                </li>
+  
+                <li>
+                  <p>
+                    The function <m>f: \Z/(6)\to\Z/(3)</m> defined by <m>f([n]_6) = [n]_3</m>
+                  </p>
+                </li>
+              </ol>
+            </p>
+  
+          </exercise>
+
+          <exercise>
+            <title>Finding Injective Homomorphisms</title>
+            
+            <p>
+              <ol>
+                <li>
+                  Find, with justification, an injective group homomorphism <m>f:S_n \to \GL_n(\R)</m>.
+                </li>
+    
+                <li>
+                  Find, with justification, an injective group homomorphism <m>g:D_{2n}\to S_n</m>.
+                </li>
+              </ol>
+            </p>
+          </exercise>
+      
+        </exercisegroup>
+      
+        <exercisegroup>
+          <title>Qualifying Exam Problems</title>
+          <introduction>
+            <p>
+            </p>
+          </introduction>
+      
+          <exercise>
+            <p>
+              Coming soon to an OER near you!
+            </p>
+          </exercise>
+      
+        </exercisegroup>
       </exercises>
 
     </section>
@@ -781,6 +819,54 @@
           </p>
         </statement>
       </theorem>
+
+      <exercises>
+
+        <exercisegroup>
+          <title>Computations and Examples</title>
+          <introduction>
+            <p>
+            </p>
+          </introduction>
+      
+          <exercise>
+            <p>
+              Coming soon to an OER near you!
+            </p>
+          </exercise>
+      
+        </exercisegroup>
+      
+        <exercisegroup>
+          <title>Formal Proofs</title>
+          <introduction>
+            <p>
+            </p>
+          </introduction>
+      
+          <exercise>
+            <p>
+              Coming soon to an OER near you!
+            </p>
+          </exercise>
+      
+        </exercisegroup>
+      
+        <exercisegroup>
+          <title>Qualifying Exam Problems</title>
+          <introduction>
+            <p>
+            </p>
+          </introduction>
+      
+          <exercise>
+            <p>
+              Coming soon to an OER near you!
+            </p>
+          </exercise>
+      
+        </exercisegroup>
+      </exercises>
       
     </section>
 

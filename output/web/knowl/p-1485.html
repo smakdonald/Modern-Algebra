@@ -11,9 +11,17 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">The hard part is proving <span class="process-math">\((1) \Leftrightarrow (2)\text{.}\)</span> <span class="process-math">\((1) \Rightarrow (2)\)</span> Assume (1), so that <span class="process-math">\(M = \oplus_{\lambda \in \Lambda} M_\lambda\)</span> for some collection of simple submodules <span class="process-math">\(M_\lambda\text{,}\)</span> and let <span class="process-math">\(N \subseteq M\)</span> be any submodule. (It is important to note that it does not necessarily follow that <span class="process-math">\(N\)</span> is a sum of some subcollection of the <span class="process-math">\(M_\lambda\)</span>) . Consider the collection <span class="process-math">\(\mathcal S\)</span> of subsets <span class="process-math">\(\Gamma\)</span> of <span class="process-math">\(\Lambda\)</span> such that <span class="process-math">\(N \cap M_\Gamma = 0\)</span> where we define <span class="process-math">\(M_\Gamma := \oplus_{\lambda \in \Gamma} M_\lambda\text{.}\)</span> View <span class="process-math">\(\mathcal S\)</span> as a poset by inclusion. It is nonempty since <span class="process-math">\(J = \emptyset\)</span> belongs to <span class="process-math">\(\mathcal S\text{.}\)</span> If <span class="process-math">\(\{\Gamma_\alpha\}\)</span> is a totally ordered subcollection of <span class="process-math">\(\mathcal S\text{,}\)</span> let <span class="process-math">\(\Gamma = \cup_\alpha \Gamma_\alpha\text{.}\)</span> I claim <span class="process-math">\(M_\Gamma \cap N = 0\text{.}\)</span> If not, there is a nonzero element <span class="process-math">\((m_\gamma) \in M_\Gamma \cap N\text{.}\)</span> But since <span class="process-math">\(m_\gamma = 0\)</span> for all but a finite number of <span class="process-math">\(\gamma\)</span>’s and since the collection of <span class="process-math">\(\Gamma_\alpha\)</span>’s was totally ordered, there is some <span class="process-math">\(\alpha\)</span> such that <span class="process-math">\((m_\gamma) \in M_{\Gamma_\alpha} \cap N\text{,}\)</span> a contradiction. We may thus apply Zorn’s Lemma to get a maximal <span class="process-math">\(\Gamma \in \mathcal S\text{.}\)</span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">A module <span class="process-math">\(M\)</span> has <em class="emphasis">finite length</em> if it has a filtration of the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0 = M_0 \subseteq M_1 \subseteq M_2 \subseteq \cdots \subseteq M_n = M
+\end{equation*}
 </div>
-<span class="incontext"><a href="ch-semisimple-mod.html#p-1485" class="internal">in-context</a></span>
+<div class="para">with <span class="process-math">\(M_{i+1}/M_i\)</span> simple for each <span class="process-math">\(i\text{;}\)</span> such a filtration is called a <em class="emphasis">composition series</em> of <em class="emphasis">length</em> <span class="process-math">\(n\text{.}\)</span> We say a composition series is <em class="emphasis">strict</em> if <span class="process-math">\(M_i \neq M_{i+1}\)</span> for all <span class="process-math">\(i\text{.}\)</span> Two composition series are <em class="emphasis">equivalent</em> if the collections of composition factors <span class="process-math">\(M_{i+1}/M_i\)</span> are the same up to reordering. The <em class="emphasis">length</em> of a finite length module <span class="process-math">\(M\text{,}\)</span> denoted <span class="process-math">\(\ell(M)\)</span> , is the minimum of the lengths of a composition series of <span class="process-math">\(M\text{.}\)</span> If <span class="process-math">\(M\)</span> has does not have finite length, we say that <span class="process-math">\(M\)</span> has infinite length, or <span class="process-math">\(\ell(M) = \infty\text{.}\)</span>
+</div>
+</div>
+<span class="incontext"><a href="sec-fl-modules.html#p-1485" class="internal">in-context</a></span>
 </body>
 </html>

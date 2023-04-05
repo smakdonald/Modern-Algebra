@@ -11,9 +11,23 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">Now assume that <span class="process-math">\(M\)</span> is both Noetherian and Artinian. We will construct a composition series for <span class="process-math">\(M\text{.}\)</span> We can assume that <span class="process-math">\(M\neq 0\text{.}\)</span> Consider the collection of proper submodules of <span class="process-math">\(M\text{.}\)</span> This is nonempty, so has a maximal element <span class="process-math">\(M^1\)</span> by the Noetherian hypothesis. We must have <span class="process-math">\(M/M^1\)</span> is simple, or else there is a module in between <span class="process-math">\(M^1\)</span> and <span class="process-math">\(M\text{.}\)</span> Using Noetherianity again, if <span class="process-math">\(M^1\neq 0\)</span> (we’re done otherwise), there is a maximal proper submodule of <span class="process-math">\(M^1\text{;}\)</span> call it <span class="process-math">\(M^2\text{.}\)</span> This process yields a descending chain with simple quotients, and this must stop (i.e., yield <span class="process-math">\(M^i=0\)</span> for some <span class="process-math">\(i\)</span>) by the Artinian hypothesis. Thus, there is a composition series for <span class="process-math">\(M\text{.}\)</span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">Most of this follows from noticing that <span class="process-math">\(R[G]\)</span> is a coproduct. Indeed, we can vie <span class="process-math">\(R[G]\)</span> as an internal direct sum <span class="process-math">\(R[G]=\bigoplus_{g\in G} Rg\)</span> and hence it is the coproduct for the family <span class="process-math">\(\{Rg\}_{g\in G}\)</span> where each <span class="process-math">\(Rg\cong R\text{.}\)</span> For each <span class="process-math">\(g\in G\)</span> set up an <span class="process-math">\(R\)</span>-module homomorphism <span class="process-math">\(f_g: Rg\to A\)</span> by mapping <span class="process-math">\(f_g(r_gg)=\iota(r_g)f(g)\text{.}\)</span> Then the definition of coproduct gives a unique <span class="process-math">\(R\)</span>-module homomorphism</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\alpha: R[G]=\bigoplus_{g\in G} Rg \to A \text{ such that } \alpha|_{Rg}=f_g.
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec-chain-conditions.html#p-1464" class="internal">in-context</a></span>
+<div class="para">From the way we defined the maps <span class="process-math">\(f_g\)</span> we can deduce that <span class="process-math">\(\alpha|_R = \iota\)</span> and <span class="process-math">\(\alpha|_G = f\)</span> and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\alpha\left(\sum_g r_g g\right) = \sum_g \iota(r_g) f(g).
+\end{equation*}
+</div>
+<div class="para">It remains to check that this map is in fact a ring homomorphism, i.e. it preserves multiplication. This can be done using the formula for <span class="process-math">\(\alpha\)</span> above and the fact that <span class="process-math">\(\iota(R)\)</span> and <span class="process-math">\(f(G)\)</span> commute in <span class="process-math">\(A\text{.}\)</span>
+</div>
+</div>
+<span class="incontext"><a href="sec-group-rings-and-modules.html#p-1464" class="internal">in-context</a></span>
 </body>
 </html>

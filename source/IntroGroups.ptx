@@ -341,7 +341,7 @@
         </statement>
       </proposition>
 
-      <proposition xml:id="prop-">
+      <proposition xml:id="prop-group-element-order">
         <statement>
           <p>
             Let <m>G, H</m> be groups and let <m>x, y</m> be elements of <m>G</m>. 
@@ -371,12 +371,26 @@
       </lemma>
 
       <exercises>
+
         <exercisegroup>
-          <title>Group Examples</title>
-        
+          <title>Computations and Examples</title>
           <introduction>
             <p>
-              For each of the following, prove that the given set and operation forms a group.
+            </p>
+          </introduction>
+
+          <exercise>
+            <p>
+              Coming soon to an OER near you!
+            </p>
+          </exercise>
+
+        </exercisegroup>
+
+        <exercisegroup>
+          <title>Formal Proofs</title>
+          <introduction>
+            <p>
             </p>
           </introduction>
         
@@ -426,6 +440,12 @@
                 <ol>
                   <li>
                     <p>
+                      The subset <m>Z^\times=\{-1,1\}\sse\Z</m> is an abelian group under multiplication.
+                    </p>
+                  </li>
+                  
+                  <li>
+                    <p>
                       <m>\Q^\times=\Q\setminus\{0\}</m>, <m>\R^\times=\R\setminus\{0\}</m>, and <m>\C^\times=\C\setminus\{0\}</m> are each abelian groups under multiplicaton.
                     </p>
                   </li>
@@ -437,7 +457,7 @@
                   </li>
                 </ol>
                 These are examples of <term>groups of units</term>, which will be defined explicitely and explored more generally later on See: <xref provisional="def-group-of-units"/>
-            </p>
+              </p>
             </statement>
           </exercise>
 
@@ -726,52 +746,100 @@
     </subsection>
 
     <exercises>
-      
-      <exercise>
-        <p>
-          Verify that the following are indeed groups:
-          <ol>
-            <li>
-              <p>
-                The dihedral group <m>D_{2n}</m>
-              </p>
-            </li>
 
-            <li>
-              <p>
-                The symmetric group <m>S_n</m>
-              </p>
-            </li>
+      <exercisegroup>
+        <title>Computations and Examples</title>
+        <introduction>
+          <p>
+          </p>
+        </introduction>
 
-            <li>
-              <p>
-                The quaternion group <m>Q_8</m>
-              </p>
-            </li>
-          </ol>
-        </p>
-      </exercise>
+        <exercise>
+          <p>
+            Provide explicit examples to show <m>D_{2n}, S_n</m>, and <m>Q_8</m> are <em>not</em> abelian groups.
+          </p>
+        </exercise>
 
-      <exercise>
-        <p>
-          Provide explicit examples to show <m>D_{2n}, S_n</m>, and <m>Q_8</m> are <em>not</em> abelian groups.
-        </p>
-      </exercise>
+        <exercise>
+          <title>Element Orders</title>
+          <p>
+            Find the order 
+          </p>
 
-      <exercise>
-        <title>Uncommon Groups</title>
-      
-        <p>
-          <ol>
-            <li>
-              <p>
-                The Rubik's Cube Group
-              </p>
-            </li>
-          </ol>
-        </p>
-      </exercise>
+        </exercise>
 
+      </exercisegroup>
+
+      <exercisegroup>
+        <title>Formal Proofs</title>
+        <introduction>
+          <p>
+            
+          </p>
+        </introduction>
+
+        <exercise>
+          <p>
+            Verify that the following are indeed groups:
+            <ol>
+              <li>
+                <p>
+                  The dihedral group <m>D_{2n}</m>
+                </p>
+              </li>
+  
+              <li>
+                <p>
+                  The symmetric group <m>S_n</m>
+                </p>
+              </li>
+  
+              <li>
+                <p>
+                  The quaternion group <m>Q_8</m>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </exercise>
+
+        <exercise>
+          <title>Uncommon Groups</title>
+        
+          <p>
+            <ol>
+              <li>
+                <p>
+                  The Rubik's Cube Group (coming soon)
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Juggling Groups (coming soon)
+                </p>
+              </li>
+            </ol>
+          </p>
+        </exercise>
+
+      </exercisegroup>
+
+      <exercisegroup>
+        <title>Qualifying Exam Problems</title>
+        <introduction>
+          <p>
+
+          </p>
+        </introduction>
+
+        <exercise>
+          <p>
+            (coming soon)
+          </p>
+        </exercise>
+
+      </exercisegroup>
     </exercises>
 
     
@@ -883,28 +951,67 @@
     </subsection>
 
     <exercises>
+      <exercisegroup>
+        <title>Computations and Examples</title>
+        <introduction>
+          <p>
+          </p>
+        </introduction>
 
-      <exercise>
-        <title>Not Quite Cyclic Groups</title>
-        <p>
-          <ol>
-            <li>
-              <p>
-                Prove that <m>(\mathbb Q, +)</m> is not a cyclic group.
-              </p>
-            </li>
+        <exercise>
+          <p>
+            Coming soon to an OER near you!
+          </p>
+        </exercise>
 
-            <li>
-              <p>
-                Prove that <m>\operatorname{GL}_2(\mathbb Z/(2))</m> is not cyclic.
-              </p>
-            </li>
-          </ol>
-        </p>
+      </exercisegroup>
 
-      </exercise>
-      
+      <exercisegroup>
+        <title>Formal Proofs</title>
+        <introduction>
+          <p>
+          </p>
+        </introduction>
+
+        <exercise>
+          <title>Not Quite Cyclic Groups</title>
+          <p>
+            <ol>
+              <li>
+                <p>
+                  Prove that <m>(\mathbb Q, +)</m> is not a cyclic group.
+                </p>
+              </li>
+  
+              <li>
+                <p>
+                  Prove that <m>\operatorname{GL}_2(\mathbb Z/(2))</m> is not cyclic.
+                </p>
+              </li>
+            </ol>
+          </p>
+  
+        </exercise>
+
+      </exercisegroup>
+
+      <exercisegroup>
+        <title>Qualifying Exam Problems</title>
+        <introduction>
+          <p>
+          </p>
+        </introduction>
+
+        <exercise>
+          <p>
+            Coming soon to an OER near you!
+          </p>
+        </exercise>
+
+      </exercisegroup>
     </exercises>
+
+    
 
   </section>
 
@@ -1213,151 +1320,189 @@
       <exercises>
 
         <exercisegroup>
-          <title>Future Subgroups</title>
-        
+          <title>Computations and Examples</title>
           <introduction>
             <p>
-              Throughout this course we will encounter numerous important subgroups that will need to be verified as such. We do so here. While these subgroups may seem random now, they will prove to be exceedingly useful in the future.
             </p>
           </introduction>
-        
+      
           <exercise>
-            <statement>
-              <p>
-                For any <m>g\in G</m>, prove that the set <m>Z_G(g)=\{x\in G|gx=xg\}</m> is a subgroup of <m>G</m>.<fn>The set <m>Z_G(g)</m> is known as the <em>centralizer</em> of <m>g</m> in <m>G</m>, and is explored in greater depth later.</fn>
-              </p>
-            </statement>
-          </exercise>
-
-          <exercise>
-            <statement>
-              <p>
-                Let <m>H</m> be a subgroup of <m>G</m> and fix some element <m>g\in G</m>. Prove that <m>gHg^{-1}=\{ghg^{-1} \mid h\in H\}</m> is a subgroup of <m>G</m> of the same order as <m>H</m>.
-              </p>
-            </statement>
-          </exercise>
-
-          <exercise>
-            <statement>
-              <p>
-                Let <m>G</m> be a group with subgroups <m>H, K</m>. Then the set 
-                <me>
-                  HK=\{hk|h\in H,k\in K\}
-                </me>
-                is a subgroup of <m>G</m> if and only if <m>HK=KH</m>, where 
-                <me>
-                  KH=\{kh|k\in K,h\in H\}
-                </me>
-              </p>
-            </statement>
-          </exercise>
-        
-        </exercisegroup>
-
-        <exercise>
-          <title>Finding Centers</title>
-          <p>
-            Determine the following:
-            <ol>
-              <li>
-                <p>
-                  <m>Z(D_{2n})</m> for <m>n \geq 3</m>. Your answer will depend on whether <m>n</m> is even or odd.
-                </p>
-              </li>
-
-              <li>
-                <p>
-                  <m>Z(S_n)</m> for <m>n \geq 3</m>.
-                </p>
-              </li>
-
-              <li>
-                <p>
-                  <m>Z(A_n)</m> for <m>n \geq 3</m>.
-                </p>
-              </li>
-
-              <li>
-                <p>
-                  <m>Z(\GL_n(\C))</m>.
-                </p>
-              </li>
-            </ol>
+            <title>
+              Future Subgroups
+            </title>
             
-          </p>
-        </exercise>
+            <p>
+              Throughout this course we will encounter numerous important subgroups that will need to be verified as such. We do so here. While these subgroups may seem random now, they will prove to be exceedingly useful in the future.
 
-        <exercise>
-          <p>
-            Verify <m>D_{2n}=\langle r,s \rangle</m>, meaning that <m>D_{2n}</m> is the subgroup of <m>D_{2n}</m> generated by <m>\{r,s\}</m>.
-          </p>
-        </exercise>
+              <ol>
+                <li>
+                  <p>
+                    For any <m>g\in G</m>, prove that the set <m>Z_G(g)=\{x\in G|gx=xg\}</m> is a subgroup of <m>G</m>.<fn>The set <m>Z_G(g)</m> is known as the <em>centralizer</em> of <m>g</m> in <m>G</m>, and is explored in greater depth later.</fn>
+                  </p>
+                </li>
 
-        <exercise>
-          <p>
-            Consider the set <m>\mu=\{z\in \C^\times \mid z^n = 1 \;\text{for some integer}\;n \geq 1\}</m>.
-            <ol>
-              <li>
-                <p>
-                  Prove that <m>\mu\leq\C^\times</m>.
-                </p>
-              </li>
+                <li>
+                  <p>
+                    Let <m>H</m> be a subgroup of <m>G</m> and fix some element <m>g\in G</m>. Prove that <m>gHg^{-1}=\{ghg^{-1} \mid h\in H\}</m> is a subgroup of <m>G</m> of the same order as <m>H</m>.
+                  </p>
+                </li>
 
-              <li>
-                <p>
-                  Prove that for each integer <m>m \geq 1</m>, there is a unique subgroup <m>H_m\leq \mu</m> with <m>|H_m|=m</m> and that <m>H_m</m> is cyclic. 
-                </p>
-              </li>
-
-              <li>
-                <p>
-                  Prove that every finitely generated subgroup of <m>\mu</m> has finitely many elements. 
-                </p>
-              </li>
-
-              <li>
-                <p>
-                  Prove that <m>\mu</m> is not finitely generated.
-                </p>
-              </li>
-            </ol>
-          </p>
-        </exercise>
-
+                <li>
+                  <p>
+                    Let <m>G</m> be a group with subgroups <m>H, K</m>. Then the set 
+                    <me>
+                      HK=\{hk|h\in H,k\in K\}
+                    </me>
+                    is a subgroup of <m>G</m> if and only if <m>HK=KH</m>, where 
+                    <me>
+                      KH=\{kh|k\in K,h\in H\}
+                    </me>                  
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </exercise>
+      
+        </exercisegroup>
+      
+        <exercisegroup>
+          <title>Formal Proofs</title>
+          <introduction>
+            <p>
+            </p>
+          </introduction>
+      
+          <exercise>
+            <title>Finding Centers</title>
+            <p>
+              Determine the following:
+              <ol>
+                <li>
+                  <p>
+                    <m>Z(D_{2n})</m> for <m>n \geq 3</m>. Your answer will depend on whether <m>n</m> is even or odd.
+                  </p>
+                </li>
+  
+                <li>
+                  <p>
+                    <m>Z(S_n)</m> for <m>n \geq 3</m>.
+                  </p>
+                </li>
+  
+                <li>
+                  <p>
+                    <m>Z(A_n)</m> for <m>n \geq 3</m>.
+                  </p>
+                </li>
+  
+                <li>
+                  <p>
+                    <m>Z(\GL_n(\C))</m>.
+                  </p>
+                </li>
+              </ol>
+              
+            </p>
+          </exercise>
+  
+          <exercise>
+            <p>
+              Verify <m>D_{2n}=\langle r,s \rangle</m>, meaning that <m>D_{2n}</m> is the subgroup of <m>D_{2n}</m> generated by <m>\{r,s\}</m>.
+            </p>
+          </exercise>
+  
+          <exercise>
+            <p>
+              Consider the set <m>\mu=\{z\in \C^\times \mid z^n = 1 \;\text{for some integer}\;n \geq 1\}</m>.
+              <ol>
+                <li>
+                  <p>
+                    Prove that <m>\mu\leq\C^\times</m>.
+                  </p>
+                </li>
+  
+                <li>
+                  <p>
+                    Prove that for each integer <m>m \geq 1</m>, there is a unique subgroup <m>H_m\leq \mu</m> with <m>|H_m|=m</m> and that <m>H_m</m> is cyclic. 
+                  </p>
+                </li>
+  
+                <li>
+                  <p>
+                    Prove that every finitely generated subgroup of <m>\mu</m> has finitely many elements. 
+                  </p>
+                </li>
+  
+                <li>
+                  <p>
+                    Prove that <m>\mu</m> is not finitely generated.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </exercise>
+      
+        </exercisegroup>
+      
         <exercisegroup>
           <title>Qualifying Exam Problems</title>
           <introduction>
             <p>
-              
             </p>
           </introduction>
-
+      
           <exercise number="1">
             <title>May 2021 Problem (1a)</title>
-            
-            <p>
-              Let <m>G</m> be a group (not necessarily finite) and <m>H</m> a nonempty subset of <m>G</m> that is closed under multiplication. Suppose that for all <m>g\in G</m> we have <m>g^2\in H</m>. Prove <m>H</m> is a subgroup of <m>G</m>. 
-            </p>
 
+            <statement>
+              <p>
+                Let <m>G</m> be a group (not necessarily finite) and <m>H</m> a nonempty subset of <m>G</m> that is closed under multiplication. Suppose that for all <m>g\in G</m> we have <m>g^2\in H</m>. Prove <m>H</m> is a subgroup of <m>G</m>. 
+              </p>  
+            </statement>
+
+            <hint>
+              <p>
+                Coming soon to an OER near you!
+              </p>
+            </hint>
+
+            <solution>
+              <p>
+                Coming soon to an OER near you!
+              </p>
+            </solution>
+            
+            
           </exercise>
 
           <exercise number="2">
             <title>January 2022 Problem (1a)</title>
+
+            <statement>
+              <p>
+                Let <m>G</m> be a group, and <m>H, K \leq G</m> be subgroups of <m>G</m>. Give an example of <m>G, H,</m> and <m>K</m> such that <m>HK</m> is not a subgroup of <m>G</m>.
+              </p>
+            </statement>
             
-            <p>
-              Let <m>G</m> be a group, and <m>H, K \leq G</m> be subgroups of <m>G</m>. Give an example of <m>G, H,</m> and <m>K</m> such that <m>HK</m> is not a subgroup of <m>G</m>.
-            </p>
-            
+            <hint>
+              <p>
+                Coming soon to an OER near you!
+              </p>
+            </hint>
+
+            <solution>
+              <p>
+                Coming soon to an OER near you!
+              </p>
+            </solution>
 
           </exercise>
-          
-          
-
+      
         </exercisegroup>
-        
       </exercises>
 
     </subsection>
 
   </section>
 </chapter> 
+
