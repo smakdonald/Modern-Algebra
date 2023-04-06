@@ -1235,7 +1235,7 @@
 
     </part>
 
-
+<!--
     <part xml:id="part-representation">
       <title>Representation Theory</title>
       
@@ -2897,6 +2897,7 @@
       
 
     </part>
+-->
 
     <backmatter xml:id="backmatter">
       <title>Backmatter</title>

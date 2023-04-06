@@ -337,7 +337,7 @@
       <proposition xml:id="prop-equivdef-normal">
         <title>Equivalent Normal Definitions</title>
         
-        
+      
         <statement>
           <p>
             Let <m>N</m> be a subgroup of a group <m>G</m>. The following are equivalent: 
@@ -365,17 +365,19 @@
       </proposition>
 
       <example>
+        <title>Examples of Normal Subgroups</title>
+        
         <p>
           <ol>
             <li>
               <p>
-                The trivial subgroups <m>\{e\}</m>, <m>G</m> of a group <m>G</m> are normal. 
+                The trivial subgroups <m>\{e\}</m>, <m>G</m> of a group <m>G</m> are normal subgroups of <m>G</m>. 
               </p>
             </li>
 
             <li>
               <p>
-                Any subgroup of an abelian group is normal. 
+                Any subgroup of an abelian group is a normal subgroup. 
               </p>
             </li>
 
@@ -388,44 +390,26 @@
         </p>
       </example>
 
-      <problem>
-        <p>
-          Show that being a normal subgroup is not a transitive relation.
-        </p>
-
-        <proof>
-          <p>
-            Consider <me>V=\{e, (1 2)(3 4), (1 3)(2 4), (1 4)(2 3)\}</me> one can show that <m>V \nsg S_4</m> and, since <m>V</m> is abelian (<xref ref="order-4-abelian"/>), the subgroup <m>H = \{e,(12)(34)\}</m> is normal in <m>V</m>. But <m>H</m> is not normal in <m>S_4</m>, since for example
-            <me>
-              (1 3) [(1 2)(3 4)] (1 3)^{-1} = (3 2)(1 4) \notin H.
-            </me> 
-          </p>
-        </proof>
-      </problem>
 
       <problem>
         <p>
           <ol>
             <li>
               <p>
-                Prove that if <m>f:G\to H</m> is a group homomorphism and <m>K\nsg H</m> then the preimage of <m>K</m>, <m>f^{-1}(K)=\{g\in G | f(g)\in K\}</m>, is a normal subgroup of <m>G</m>. 
+                Prove that if <m>\varphi:G\to H</m> is a group homomorphism and <m>K\nsg H</m> then the preimage of <m>K</m>, <m>\varphi^{-1}(K)=\{g\in G | \varphi(g)\in K\}</m>, is a normal subgroup of <m>G</m>. 
               </p>
             </li>
             
             <li>
               <p>
-                Show that if <m>f:G\to H</m> is a group homomorphism and <m>L \nsg G</m> then <m>f(L)</m> need not be a normal subgroup of <m>H</m>.
+                Show that if <m>\varphi:G\to H</m> is a group homomorphism and <m>L \nsg G</m> then <m>\varphi(L)</m> need not be a normal subgroup of <m>H</m>.
               </p>
             </li>
           </ol>
         </p>
       </problem>
 
-      <problem>
-        <p>
-          Show that any subgroup of index two is normal. This means: show that if <m>G</m> is a group, <m>H</m> is a subgroup and <m>[G:H]=2</m>, i.e the number of left (or right) cosets of <m>H</m> in <m>G</m> is two, then <m>H</m> is normal. 
-        </p>
-      </problem>
+      
 
       <problem>
         <p>
@@ -535,35 +519,11 @@
         </p>
       </problem>
 
-      <problem>
+    
+      <exercise>
+        <statement>
           <p>
-            Let <m>G</m> be a group. A subgroup <m>H</m> of <m>G</m> is called a <em>characteristic subgroup</em> of <m>G</m> if <m>\a(H)=H</m> for every automorphism <m>\a</m> of <m>G</m>. Show that if <m>H</m> is a characteristic subgroup of <m>N</m> and <m>N</m> is a normal subgroup of <m>G</m>, then <m>H</m> is a normal subgroup of <m>G</m>.
-          </p>
-
-          <solution>
-            <p>
-              Let <m>G</m> be a group, <m>N</m> is a normal subgroup of <m>G</m>, and <m>H</m> a characteristic subgroup of <m>N</m>. Let <m>g\in G</m> and consider the automorphism <m>a_g:G\to G</m> given by <m>a_g(g')=gg'g^{-1}</m>.
-            </p>
-  
-            <p>
-              Let <m>n\in N</m> and notice <m>a_g(n)=gng\inv\in N</m>, as <m>N\nsg G</m>. Thus <m>a_g:N\to N</m> is well defined. Let <m>n\in N</m>. As <m>gNg\inv=N</m>, we can write <m>n=gn'g\inv</m> for some <m>n'\in N</m>. Then <m>a_g(n')=gn'g\inv=n</m>, making <m>a_g</m> surjective. As <m>|N|=|N|</m> we see that <m>a_g</m> is a bijection. The homomorphism piece we get for free from <m>G</m>, making <m>a_g\in\Aut(N)</m>.
-            </p>
-  
-            <p>
-              Let <m>h\in H</m>. As <m>H</m> is a characteristic subgroup of <m>N</m>, we see that <m>a_g(h)=ghg\inv=h</m> for all <m>h\in H</m> and for all <m>g\in G</m>. Thus <m>H</m> is normal in <m>G</m>.
-            </p>
-          </solution>
-      </problem>
-
-      <problem>
-        <p>
-          Let <m>G</m> be a group with a subgroup <m>H</m> so that <m>[G : H] = n &lt; \infty</m>. (a) Prove that there is a normal subgroup of <m>G, N</m> , so that <m>N\subseteq H</m> and <m>[G : N ] \leq n!.</m> (b) Prove that if <m>G</m> is finitely generated, there are most finitely many subgroups with index <m>n</m>.(Hint: you might want to consider maps <m>G\to S_n</m>.)
-        </p>
-      </problem>
-
-      <problem>
-        <p>
-					Let <m>G</m> be a group, and <m>H, K \leq G</m> be subgroups of <m>G</m>. 
+            Let <m>G</m> be a group, and <m>H, K \leq G</m> be subgroups of <m>G</m>. 
           <ol>
             <li>
               <p>
@@ -577,11 +537,12 @@
               </p>
             </li>
           </ol>
-				</p>
+          </p>
+        </statement>
 
-        <proof>
-
-          <ol>
+        <solution>
+          <p>
+            <ol>
             <li>
               <p>
                 Let <m>G=S_3</m>, <m>H=\langle(12)\rangle</m>, and <m>K=\langle(13)\rangle</m>. Notice that <m>H\cap K=\{e\}</m>, and thus <m>|HK|=4</m>, (<xref provisional="empty"/>) which does not divide <m>6</m>. Thus <m>HK</m> is not a subgroup of <m>G</m>, as this would contradict <xref text="title" ref="thm-lagrange" />.
@@ -594,14 +555,24 @@
               </p>
             </li>
           </ol>
-        </proof>
-      </problem>
-
-      <problem>
-        <p>
-          Let <m>G</m> be a finite group and <m>K</m> a subgroup of <m>G</m> such that: <m>[G : K] = 2</m>, <m>K</m> is simple, and <m>Z(G) = \{e\}</m>. Prove that the only normal subgroups of <m>G</m> are <m>\{e\}, K</m>, and <m>G</m>. (Hint: Let H be a normal subgroup of G. Then H ∩K is a normal subgroup of K.)
         </p>
-      </problem>
+      </solution>
+
+    </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Let <m>G</m> be a finite group and <m>K</m> a subgroup of <m>G</m> such that: <m>[G : K] = 2</m>, <m>K</m> is simple, and <m>Z(G) = \{e\}</m>. Prove that the only normal subgroups of <m>G</m> are <m>\{e\}, K</m>, and <m>G</m>.
+          </p>
+        </statement>
+        
+        <hint>
+          <p>
+            Let <m>H</m> be a normal subgroup of <m>G</m>. Then <m>H\cap K</m> is a normal subgroup of <m>K</m>.
+          </p>
+        </hint>
+      </exercise>
 
       <exercises>
 
@@ -628,10 +599,83 @@
           </introduction>
       
           <exercise>
+            <statement>
             <p>
-              Coming soon to an OER near you!
+              Show that any subgroup of index two is normal. This means: show that if <m>G</m> is a group, <m>H</m> is a subgroup and <m>[G:H]=2</m>, i.e the number of left (or right) cosets of <m>H</m> in <m>G</m> is two, then <m>H</m> is normal. 
             </p>
+            </statement>
+
+            <hint>
+              <p>
+                Coming soon to an OER near you!
+              </p>
+            </hint>
+
+            <solution>
+              <p>
+                Coming soon to an OER near you!
+              </p>
+            </solution>
           </exercise>
+
+          <exercise>
+            <statement>
+              <p>
+                Let <m>G</m> be a group with a subgroup <m>H</m> so that <m>[G : H] = n &lt; \infty</m>. 
+                <ol>
+                  <li>
+                    <p>
+                      Prove that there is a normal subgroup of <m>G, N</m> , so that <m>N\subseteq H</m> and <m>[G : N ] \leq n!.</m> 
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Prove that if <m>G</m> is finitely generated, there are most finitely many subgroups with index <m>n</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+
+            <hint>
+              <p>
+                You might want to consider maps <m>G\to S_n</m>.
+              </p>
+            </hint>
+
+            <solution>
+              <p>
+                Coming soon to an OER near you!
+              </p>
+            </solution>
+          </exercise>
+
+          <exercise>
+            <statement>
+              <p>
+                Show that being a normal subgroup is not a transitive relation. In other words, find groups <m>K\leq H\leq G</m> such that <m>K\nsg H</m> and <m>H\nsg G</m>, but <m>K\not\nsg G</m>.
+              </p>
+            </statement>
+    
+            <hint>
+              <p>
+                <m>S_4</m> is a good place to start routing around in.
+              </p>
+            </hint>
+    
+            <solution>
+              <p>
+                Consider <me>V=\{e, (1 2)(3 4), (1 3)(2 4), (1 4)(2 3)\}</me> one can show that <m>V \nsg S_4</m> and, since <m>V</m> is abelian (<xref ref="prop-order-4-abelian"/>), the subgroup <m>H = \{e,(12)(34)\}</m> is normal in <m>V</m>. But <m>H</m> is not normal in <m>S_4</m>, since for example
+              <me>
+                (1 3) [(1 2)(3 4)] (1 3)^{-1} = (3 2)(1 4) \not\in H.
+              </me> 
+              </p>
+            </solution>
+            
+          </exercise>
+          
+
       
         </exercisegroup>
       
@@ -643,13 +687,181 @@
           </introduction>
       
           <exercise>
+            <title>January 2019 Problem (1)</title>
+            
+            
+          <statement>
             <p>
-              Coming soon to an OER near you!
+              Let <m>G</m> be a group. A subgroup <m>H</m> of <m>G</m> is called a <em>characteristic subgroup</em> of <m>G</m> if <m>\a(H)=H</m> for every automorphism <m>\a</m> of <m>G</m>. Show that if <m>H</m> is a characteristic subgroup of <m>N</m> and <m>N</m> is a normal subgroup of <m>G</m>, then <m>H</m> is a normal subgroup of <m>G</m>.
             </p>
+          </statement>
+
+          <solution>
+            <p>
+              Let <m>G</m> be a group, <m>N</m> is a normal subgroup of <m>G</m>, and <m>H</m> a characteristic subgroup of <m>N</m>. Let <m>g\in G</m> and consider the automorphism <m>a_g:G\to G</m> given by <m>a_g(g')=gg'g^{-1}</m>.
+            </p>
+  
+            <p>
+              Let <m>n\in N</m> and notice <m>a_g(n)=gng\inv\in N</m>, as <m>N\nsg G</m>. Thus <m>a_g:N\to N</m> is well defined. Let <m>n\in N</m>. As <m>gNg\inv=N</m>, we can write <m>n=gn'g\inv</m> for some <m>n'\in N</m>. Then <m>a_g(n')=gn'g\inv=n</m>, making <m>a_g</m> surjective. As <m>|N|=|N|</m> we see that <m>a_g</m> is a bijection. The homomorphism piece we get for free from <m>G</m>, making <m>a_g\in\Aut(N)</m>.
+            </p>
+  
+            <p>
+              Let <m>h\in H</m>. As <m>H</m> is a characteristic subgroup of <m>N</m>, we see that <m>a_g(h)=ghg\inv=h</m> for all <m>h\in H</m> and for all <m>g\in G</m>. Thus <m>H</m> is normal in <m>G</m>.
+            </p>
+          </solution>
+
           </exercise>
-      
+
+          <exercise>
+            <title>May 2019 Problem (2a)</title>
+            
+            
+            <statement>
+
+              <p>
+                Let <m>H</m> be a subgroup of a group <m>G</m>. Recall that the centralizer of <m>H</m> is the subgroup of <m>G</m> defined by <m>C_G(H) = \{g \in G | gh = hg ∀h \in H\}</m> and the normalizer of <m>H</m> is the subgroup of <m>G</m> defined by <m>N_G(H) = \{g \in G | gHg\inv = H\}</m>. Show that the centralizer <m>C_G(H)</m> of <m>H</m> in <m>G</m> is a normal subgroup of the normalizer <m>N_G(H)</m> of <m>H</m> in <m>G</m>.
+
+              </p>
+            </statement>
+          </exercise>
+
+          <exercise>
+            <title>May 2021 Problem (1ab)</title>
+    
+            <statement>
+              <p>
+                Let <m>G</m> be a group (not necessarily finite) and <m>H</m> a nonempty subset of <m>G</m> that is closed under multiplication. Suppose that for all <m>g\in G</m> we have <m>g^2\in H</m>. Prove the following:
+                <ol>
+                  <li>
+                    <p>
+                      <m>H</m> is a subgroup of <m>G</m>. 
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>H</m> is normal. 
+                    </p>
+                  </li>
+                </ol>
+              </p>  
+            </statement>
+    
+            <hint>
+              <p>
+                Coming soon to an OER near you!
+              </p>
+            </hint>
+    
+            <solution>
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      See: <xref provisional="old qual"/> 
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </solution>
+            
+            
+          </exercise>
+
+          <exercise>
+            <title>Jan 2022 Problem (1)</title>
+    
+            <statement>
+              <p>
+                Let <m>G</m> be a group, and <m>H, K \leq G</m> be subgroups of <m>G</m>.                
+                <ol>
+                  <li>
+                    <p>
+                       Give an example of <m>G, H,</m> and <m>K</m> such that <m>HK</m> is not a subgroup of <m>G</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                     Suppose now that <m>H\nsg G</m> and <m>[G:H]=p</m>, where <m>p</m> is prime. Prove that either <m>K\leq H</m> or <m>G=KH</m>
+                    </p>
+                  </li>
+                </ol>
+              </p>  
+            </statement>
+    
+            <hint>
+              <p>
+                Coming soon to an OER near you!
+              </p>
+            </hint>
+    
+            <solution>
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      See: <xref provisional="old qual"/> 
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </solution>
+            
+            
+          </exercise>
+
+          <exercise>
+            <title>Jan 2022 Problem (3)</title>
+    
+            <statement>
+              <p>
+                Let <m>K</m> be a subgroup of a group <m>G</m>. Prove <m>H, K \leq G</m> be subgroups of <m>G</m>.                
+                <ol>
+                  <li>
+                    <p>
+                      Give an example of <m>G, H,</m> and <m>K</m> such that <m>HK</m> is not a subgroup of <m>G</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      That damned matrix problem
+                    </p>
+                  </li>
+                </ol>
+              </p>  
+            </statement>
+    
+            <hint>
+              <p>
+                Coming soon to an OER near you!
+              </p>
+            </hint>
+    
+            <solution>
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      See: <xref provisional="old qual"/> 
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </solution>
+            
+            
+          </exercise>
+
+          
+
         </exercisegroup>
       </exercises>
+
+      
+
+      
 
       
     </section>

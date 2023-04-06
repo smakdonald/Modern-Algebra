@@ -1334,12 +1334,23 @@
             <p>
               Throughout this course we will encounter numerous important subgroups that will need to be verified as such. We do so here. While these subgroups may seem random now, they will prove to be exceedingly useful in the future.
 
+              <!-- Centralizer-->
               <ol>
                 <li>
                   <p>
-                    For any <m>g\in G</m>, prove that the set <m>Z_G(g)=\{x\in G|gx=xg\}</m> is a subgroup of <m>G</m>.<fn>The set <m>Z_G(g)</m> is known as the <em>centralizer</em> of <m>g</m> in <m>G</m>, and is explored in greater depth later.</fn>
+                    Let <m>H\leq G</m>. Prove that the set <m>Z_G(H)=\{g\in G|gh=xh\forall h\in H\}</m> is a subgroup of <m>G</m>.
+                    <fn>The set <m>Z_G(g)</m> is known as the <em>centralizer</em> of <m>g</m> in <m>G</m>, and is explored in greater depth later.</fn>
                   </p>
                 </li>
+
+                <!-- Normalizer-->
+                <li>
+                  <p>
+                    Let <m>H\leq G</m>. Prove that the set <m>N_G(H)=\{g\in G|gHg\inv=H\}</m> is a subgroup of <m>G</m>.
+                    <fn>The set <m>N_G(H)</m> is known as the <em>centralizer</em> of <m>H</m> in <m>G</m>, and is explored in greater depth later.</fn>
+                  </p>
+                </li>
+
 
                 <li>
                   <p>
@@ -1347,6 +1358,7 @@
                   </p>
                 </li>
 
+                <!-- HK-->
                 <li>
                   <p>
                     Let <m>G</m> be a group with subgroups <m>H, K</m>. Then the set 
@@ -1477,6 +1489,29 @@
 
           <exercise number="2">
             <title>January 2022 Problem (1a)</title>
+
+            <statement>
+              <p>
+                Let <m>G</m> be a group, and <m>H, K \leq G</m> be subgroups of <m>G</m>. Give an example of <m>G, H,</m> and <m>K</m> such that <m>HK</m> is not a subgroup of <m>G</m>.
+              </p>
+            </statement>
+            
+            <hint>
+              <p>
+                Coming soon to an OER near you!
+              </p>
+            </hint>
+
+            <solution>
+              <p>
+                Coming soon to an OER near you!
+              </p>
+            </solution>
+
+          </exercise>
+
+          <exercise number="3">
+            <title>January 2020 Problem (1b)</title>
 
             <statement>
               <p>
