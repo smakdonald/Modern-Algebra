@@ -271,6 +271,7 @@
 
           <p>
             If <m>f:G\to H</m> is an isomorphism, <m>G</m> and <m>H</m> are called <em>isomorphic</em>, written <m>G\cong H</m>.
+            <notation><usage><m>\cong</m></usage><description>Isomorphic</description></notation> 
           </p>
         </statement>
       </definition>

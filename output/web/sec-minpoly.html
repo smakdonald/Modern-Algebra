@@ -1,0 +1,1635 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The Minimum Polynomial</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Compendium Algebraica">
+<meta property="book:author" content="Sam Macdonald">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.98,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.6/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="modern-algebra.html"><span class="title">Compendium Algebraica</span></a></h1>
+<p class="byline">Sam Macdonald</p>
+</div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>No results.</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="theavatarbutton" class="name">You!</span><div id="preferences_menu_holder" class="hidden"><ol id="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="sec-rcf.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-canform.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="sec-jcf.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\def\ann{\operatorname{ann}}
+\newcommand{\Ass}{\operatorname{Ass}}
+\def\Aut{\operatorname{Aut}}
+\def\can{{\mathrm {can}}}
+\def\char{\operatorname{char}}
+\def\cp{\operatorname{CharPoly}}
+\def\codim{\operatorname{codim}} 
+\def\coker{\operatorname{coker}}
+\DeclareMathOperator*{\colim}{colim} 
+\def\cont{\operatorname{cont}} 
+\def\diam{\operatorname{diam}} 
+\def\dm{\operatorname{dim}} 
+\DeclareMathOperator{\edim}{embdim} 
+\def\End{\operatorname{End}} 
+\def\eval{\operatorname{eval}} 
+\def\Ext{\operatorname{Ext}} 
+\def\Frac{\operatorname{Frac}}
+\def\Fun{\operatorname{Fun}}
+\def\Gal{\operatorname{Gal}}
+\def\gcd{\operatorname{gcd}}
+\newcommand{\GL}{\operatorname{GL}} 
+\newcommand{\ht}{\operatorname{height}} 
+\def\Hom{\operatorname{Hom}} 
+\def\id{\operatorname{id}} 
+\def\im{\operatorname{im}} 
+\def\Inn{\operatorname{Inn}}
+\def\ker{\operatorname{ker}}
+\def\lcm{\operatorname{lcm}} 
+\def\Mat{\operatorname{Mat}}
+\newcommand{\Min}{\operatorname{Min}}
+\def\mp{\operatorname{MinPoly}}
+\def\mSpec{\operatorname{mSpec}}
+\def\MSpec{\operatorname{MSpec}}
+\def\null{\operatorname{Nul}}
+\DeclareMathOperator{\ns}{nullspace}
+\newcommand{\opp}{\operatorname{opp}}
+\def\Orb{\operatorname{Orb}} 
+\def\Out{\operatorname{Out}}
+\def\Perm{\operatorname{Perm}}
+\def\ptstab{\operatorname{PtStab}} 
+\def\rad{\operatorname{rad}}
+\DeclareMathOperator{\range}{range}
+\def\rank{\operatorname{rank}}
+\def\res{\operatorname{res}}
+\def\setstab{\operatorname{SetStab}}
+\def\sign{{\operatorname{sign}}}
+\newcommand{\SL}{\operatorname{SL}}
+\def\Span{\operatorname{Span}}
+\def\Spec{\operatorname{Spec}}
+\def\Stab{\operatorname{Stab}} 
+\DeclareMathOperator{\Supp}{Supp}
+\def\Syl{\operatorname{Syl}}
+\def\Tor{\operatorname{Tor}}
+\def\trace{\operatorname{trace}}
+\def\uSpec{\operatorname{\underline{Spec}}}
+
+\newcommand{\Ob}{\mathrm{Ob}}
+\newcommand{\Set}{\mathbf{Set}}
+\newcommand{\Grp}{\mathbf{Grp}}
+\newcommand{\Ab}{\mathbf{Ab}}
+\newcommand{\Sgrp}{\mathbf{Sgrp}}
+\newcommand{\Ring}{\mathbf{Ring}} 
+\newcommand{\Fld}{\mathbf{Fld}}
+\newcommand{\cRing}{\mathbf{cRing}}
+\newcommand{\Mod}[1]{#1-\mathbf{Mod}} 
+\newcommand{\Cx}[1]{#1-\mathbf{Comp}} 
+\newcommand{\vs}[1]{#1-\mathbf{vect}}
+\newcommand{\Vs}[1]{#1-\mathbf{Vect}}
+\newcommand{\vsp}[1]{#1-\mathbf{vect}^+} 
+\newcommand{\Top}{\mathbf{Top}} 
+\newcommand{\Setp}{\mathbf{Set}_*} 
+\newcommand{\Alg}[1]{#1-\mathbf{Alg}} 
+\newcommand{\cAlg}[1]{#1-\mathbf{cAlg}} 
+\newcommand{\PO}{\mathbf{PO}}
+\newcommand{\Cont}{\mathrm{Cont}}
+\newcommand{\MaT}[1]{\mathbf{Mat}_{#1}}
+\newcommand{\Rep}[2]{\mathbf{Rep}_{#1}(#2)}
+
+\def\l{\lambda}
+\def\lx{\lambda_x}
+\newcommand{\a}{\alpha}
+\def\b{\beta}
+\def\d{\delta}
+\def\e{\varepsilon}
+\def\g{\gamma}
+\def\t{\theta}
+\def\s{\sigma}
+\def\z{\zeta}
+\def\vp{\varphi}
+
+
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\B}{\mathbb{B}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\G}{\mathbb{G}}
+\newcommand{\H}{\mathbb{H}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\J}{\mathbb{J}}
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\L}{\mathbb{L}} 
+\newcommand{\M}{\mathbb{M}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\O}{\mathbb{O}}
+\newcommand{\P}{\mathbb{P}}
+\newcommand{\Q}{\mathbb{Q}} 
+\newcommand{\R}{\mathbb{R}} 
+\newcommand{\S}{\mathbb{S}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\U}{\mathbb{U}}
+\newcommand{\V}{\mathbb{V}}
+\newcommand{\W}{\mathbb{W}}
+\newcommand{\X}{\mathbb{X}}
+\newcommand{\Y}{\mathbb{Y}}
+\newcommand{\Z}{\mathbb{Z}} 
+\newcommand{\ON}{\mathbb{ON}}
+
+\def\cA{\mathcal A} 
+\def\cB{\mathcal B} 
+\def\cC{\mathcal C} 
+\def\cD{\mathcal D} 
+\def\cE{\mathcal E} 
+\def\cF{\mathcal F} 
+\def\cG{\mathcal G} 
+\def\cH{\mathcal H} 
+\def\cI{\mathcal I} 
+\def\cJ{\mathcal J} 
+\def\cK{\mathcal K} 
+\def\cL{\mathcal L}
+\def\cM{\mathcal M} 
+\def\cN{\mathcal N} 
+\def\cO{\mathcal O} 
+\def\cP{\mathcal P} 
+\def\cQ{\mathcal Q} 
+\def\cR{\mathcal R} 
+\def\cS{\mathcal S} 
+\def\cT{\mathcal T} 
+\def\cU{\mathcal U} 
+\def\cV{\mathcal V} 
+\def\cW{\mathcal W} 
+\def\cX{\mathcal X} 
+\def\cY{\mathcal Y} 
+\def\cZ{\mathcal Z} 
+
+\newcommand{\fa}{{\mathfrak a}} 
+\newcommand{\fb}{{\mathfrak b}} 
+\newcommand{\fc}{{\mathfrak c}} 
+\newcommand{\fd}{{\mathfrak d}} 
+\newcommand{\fe}{{\mathfrak e}}
+\newcommand{\fm}{{\mathfrak m}} 
+\newcommand{\fp}{{\mathfrak p}} 
+\newcommand{\fq}{{\mathfrak q}} 
+\newcommand{\fK}{{\mathfrak K}} 
+\newcommand{\fR}{{\mathfrak R}} 
+
+\def\sA{\mathscr A} 
+\def\sB{\mathscr B} 
+\def\sC{\mathscr C} 
+\def\sD{\mathscr D} 
+\def\sE{\mathscr E} 
+\def\sF{\mathscr F} 
+\def\sG{\mathscr G} 
+\def\sH{\mathscr H} 
+\def\sI{\mathscr I} 
+\def\sJ{\mathscr J} 
+\def\sK{\mathscr K} 
+\def\sL{\mathscr L}
+\def\sM{\mathscr M}
+\def\sN{\mathscr N}
+\def\sO{\mathscr O}
+\def\sP{\mathscr P}
+\def\sQ{\mathscr Q}
+\def\sR{\mathscr R}
+\def\sS{\mathscr S}
+\def\sT{\mathscr T}
+\def\sU{\mathscr U}
+\def\sV{\mathscr V}
+\def\sW{\mathscr W}
+\def\sX{\mathscr X}
+\def\sY{\mathscr Y}
+\def\sZ{\mathscr Z}
+
+\def\tS{\tilde{S}}
+
+\def\sdp{\rtimes}
+\newcommand{\tensor}{\otimes} 
+\newcommand{\igen}[1]{\langle #1 \rangle} 
+\def\nsg{\unlhd} 
+\def\kval{{k-\mathrm{valued}}} 
+\def\kalg{{k-\mathrm{alg}}}
+\newcommand\GG[2]{\Gal(#1/#2)}
+
+\newcommand{\MF}[3]{\Mat_{#1\times #2}(#3)}
+\newcommand{\vectwo}[2]{\begin{bmatrix} #1 \\ #2 \end{bmatrix}} 
+\newcommand{\vecthree}[3]{\begin{bmatrix} #1 \\ #2 \\ #3\end{bmatrix}} 
+\def\ob{{\mathfrak{ob}} }
+
+\def\qed{\square}
+\def\sse{\subseteq}
+\def\ss{\subset} 
+\def\ssne{\subsetneq}
+\def\sm{\setminus}
+\def\inv{^{-1}} 
+\newcommand{\es}{\emptyset} 
+\newcommand{\Zm}[1]{\Z/({#1})} 
+\def\ov#1{\overline{#1}} 
+\def\xdots{x_1, \dots, x_n} 
+\def\adots{a_1, \dots, a_n} 
+\def\bdots{b_1, \dots, b_n} 
+\def\udots{u_1, \dots, u_n} 
+\newcommand{\leg}[2]{\left(\frac{{#1}}{{#2}}\right)} 
+\def\th{^{th}} 
+\def\htpy{\simeq_{\mathrm{htpc}}} 
+
+\def\textand{ \, \text{and} \, } 
+\def\textor{ \, \text{or} \, } 
+\def\textfor{ \, \text{for} \, } 
+\def\textfa{ \, \text{for all} \, } 
+\def\textst{ \, \text{such that} \, } 
+\def\textin{ \, \text{in} \, } 
+\def\fg{ \, \text{finitely generated} \, }
+\newcommand{\op}{\mathrm{op}}
+
+\newcommand{\xra}[1]{\xrightarrow{#1}} 
+\newcommand{\xora}[1]{\xtwoheadrightarrow{#1}} 
+\newcommand{\xira}[1]{\xhookrightarrow{#1}} 
+\newcommand{\xla}[1]{\xleftarrow{#1}} 
+\def\lra{\longrightarrow}
+\def\into{\hookrightarrow}
+\def\onto{\twoheadrightarrow}
+
+\newcommand{\vv}[1]{\mathbf{#1}}
+\newcommand{\lm}[2]{{#1}\,\l + {#2}\,\mu} 
+\renewcommand{\v}{\vv{v}}
+\renewcommand{\u}{\vv{u}}
+\newcommand{\w}{\vv{w}}
+\newcommand{\x}{\vv{x}}
+\renewcommand{\k}{\vv{k}}
+\newcommand{\0}{\vv{0}}
+\newcommand{\1}{\vv{1}}
+\newcommand{\vecs}[2]{#1_1,#1_2,\dots,#1_{#2}}
+\newcommand{\us}[1][n]{\vecs{\u}{#1}}
+\newcommand{\vs}[1][n]{\vecs{\v}{#1}}
+\newcommand{\ws}[1][n]{\vecs{\w}{#1}}
+\newcommand{\vps}[1][n']{\vecs{\v'}{#1}}
+\newcommand{\ls}[1][n]{\vecs{\l}{#1}}
+\newcommand{\mus}[1][n]{\vecs{\mu}{#1}} 
+\newcommand{\lps}[1][n]{\vecs{\l'}{#1}}
+\def\td{\tilde{\delta}}
+\def\oo{\overline{\omega}}
+\def\ctJ{\tilde{\mathcal J}}
+\def\tPhi{\tilde{\Phi}}
+\def\te{\tilde{e}}
+\def\M{\operatorname{M}}
+\newcommand{\homotopic}{\simeq}
+\newcommand{\homeq}{\cong}
+\newcommand{\iso}{\approx}
+\newcommand{\dual}{\vee} 
+\DeclarePairedDelimiter{\abs}{|}{|}
+\newcommand{\bv}{{\bar{v}}}
+\newcommand{\bu}{{\bar{u}}}
+\newcommand{\bw}{{\bar{w}}}
+\newcommand{\by}{{\bar{y}}}
+\newcommand{\ba}{{\bar{a}}}
+\newcommand{\bb}{{\bar{b}}}
+\newcommand{\bx}{{\bar{x}}}
+\DeclarePairedDelimiterX\setof[2]{\{}{\}}{#1\,|\,#2}
+\newcommand{\vx}{\underline{x}}
+\renewcommand{mod}[1]{\text{(mod }{#1})}
+\newcommand{\Slv}[3]{\sum_{{#2}=1}^{{#3}} {#1}_{{#2}} \v_{{#2}}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar"><nav id="ptx-toc" class="depth3 parts"><ul class="structural">
+<li><div class="toc-item"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li>
+<div class="toc-item"><a href="part-group.html" class="internal"><span class="codenumber">I</span> <span class="title">Group Theory</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="intro-groups.html" class="internal"><span class="codenumber">1</span> <span class="title">Intro to Groups</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="group-basics.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Group Basics</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="group-basics.html#exercises-1" class="internal"><span class="codenumber">1.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-common-groups.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Common Groups</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-common-groups.html#subsec-d2n" class="internal"><span class="title">Dihedral Groups</span></a></div></li>
+<li><div class="toc-item"><a href="sec-common-groups.html#subsec-symmetric" class="internal"><span class="title">Symmetric Groups</span></a></div></li>
+<li><div class="toc-item"><a href="sec-common-groups.html#subsec-quat" class="internal"><span class="title">The Quaternions</span></a></div></li>
+<li><div class="toc-item"><a href="sec-common-groups.html#exercises-2" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-gen-cyclic-gp.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Generators and Cyclic Groups</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#subsec-gp-generators" class="internal"><span class="title">Generators</span></a></div></li>
+<li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#subsec-cyclic-gp" class="internal"><span class="title">Cyclic Groups</span></a></div></li>
+<li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#exercises-3" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-subgroups.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Subgroups</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-subgroups.html#subsec-subgrp-defn-ex" class="internal"><span class="title">Subgroup Basics</span></a></div></li>
+<li><div class="toc-item"><a href="sec-subgroups.html#subsec-center" class="internal"><span class="title">The Center of a Group</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-subgroups.html#subsec-gensubgp" class="internal"><span class="title">Generated Subgroups</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-subgroups.html#exercises-4" class="internal"><span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="gp-homs.html" class="internal"><span class="codenumber">2</span> <span class="title">Homomorphisms and Isomorphisms</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec-gphoms.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Group Homomorphisms</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-gphoms.html#exercises-5" class="internal"><span class="codenumber">2.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-gpisos.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Group Isomorphisms</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-gpisos.html#exercises-6" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-cylic-homoms.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Classifying Cyclic Groups</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-cylic-homoms.html#exercises-7" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="normal-quotient-groups.html" class="internal"><span class="codenumber">3</span> <span class="title">Normal and Quotient Groups</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec-cosets.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Cosets and Conjugations</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-cosets.html#exercises-8" class="internal"><span class="codenumber">3.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-normal-subgroups.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Normal Subgroups</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-normal-subgroups.html#exercises-9" class="internal"><span class="codenumber">3.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-quotient-groups.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Quotient Groups</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-quotient-groups.html#exercises-10" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-isomorphism-thms.html" class="internal"><span class="codenumber">3.4</span> <span class="title">The Isomorphism Theorems</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-isomorphism-thms.html#exercises-gp-isos" class="internal"><span class="codenumber">3.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="group-actions.html" class="internal"><span class="codenumber">4</span> <span class="title">Group Actions</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="graction.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Group Actions</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="graction.html#exercises-12" class="internal"><span class="codenumber">4.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-conjugation.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Left Multiplication and Conjugation</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-conjugation.html#exercises-13" class="internal"><span class="codenumber">4.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-lois.html" class="internal"><span class="codenumber">4.3</span> <span class="title">LOIS and Orbit-Stabilizer</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-lois.html#exercises-14" class="internal"><span class="codenumber">4.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-class-eq.html" class="internal"><span class="codenumber">4.4</span> <span class="title">The Class Equation</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-class-eq.html#exercises-15" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sylow.html" class="internal"><span class="codenumber">5</span> <span class="title">Sylow Theory</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec-pgroups.html" class="internal"><span class="codenumber">5.1</span> <span class="title"><span class="process-math">\(p\)</span>-groups</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-pgroups.html#exercises-16" class="internal"><span class="codenumber">5.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-sylowthm.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Sylow's Theorem</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-sylowthm.html#exercises-17" class="internal"><span class="codenumber">5.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-simple-groups.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Simple Groups</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-simple-groups.html#exercises-simplegps" class="internal"><span class="codenumber">5.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="group-products.html" class="internal"><span class="codenumber">6</span> <span class="title">Constructions</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec-grp-dps.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Direct Products</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-grp-dps.html#exercises-19" class="internal"><span class="codenumber">6.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-grp-spds.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Semidirect Products</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-grp-spds.html#exercises-20" class="internal"><span class="codenumber">6.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-order-pq.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Groups of Order <span class="process-math">\(pq\)</span></span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-order-pq.html#exercises-21" class="internal"><span class="codenumber">6.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch-classifications.html" class="internal"><span class="codenumber">7</span> <span class="title">Classifications</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec-ftfgag.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Group Decompositions</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-ftfgag.html#exercises-decomp" class="internal"><span class="codenumber">7.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-classifications.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Groups Up to Isomorphism</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-classifications.html#exercises-23" class="internal"><span class="codenumber">7.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch-gp-extras.html" class="internal"><span class="codenumber">8</span> <span class="title">Extras</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec-quals.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Qualifying Exams</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec-quals.html#subsection-9" class="internal"><span class="title">Winter 2023</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-quals.html#subsubsection-1" class="internal"><span class="title">Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="sec-quals.html#subsubsection-2" class="internal"><span class="title">Rings, Modules, Linear Algebra</span></a></div></li>
+<li><div class="toc-item"><a href="sec-quals.html#subsubsection-3" class="internal"><span class="title">Fields and Galois Theory</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-quals.html#subsection-10" class="internal"><span class="title">Summer 2023</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-quals.html#subsubsection-4" class="internal"><span class="title">Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="sec-quals.html#subsubsection-5" class="internal"><span class="title">Rings, Modules, Linear Algebra</span></a></div></li>
+<li><div class="toc-item"><a href="sec-quals.html#subsubsection-6" class="internal"><span class="title">Fields and Galois Theory</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-quals.html#subsection-11" class="internal"><span class="title">Winter 2022</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-quals.html#subsubsection-7" class="internal"><span class="title">Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="sec-quals.html#subsubsection-8" class="internal"><span class="title">Rings, Modules, Linear Algebra</span></a></div></li>
+<li><div class="toc-item"><a href="sec-quals.html#subsubsection-9" class="internal"><span class="title">Fields and Galois Theory</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-quals.html#subsection-12" class="internal"><span class="title">Summer 2022</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-quals.html#subsubsection-10" class="internal"><span class="title">Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="sec-quals.html#subsubsection-11" class="internal"><span class="title">Rings, Modules, Linear Algebra</span></a></div></li>
+<li><div class="toc-item"><a href="sec-quals.html#subsubsection-12" class="internal"><span class="title">Fields and Galois Theory</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="sec-solve.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Solvable Groups</span></a></div></li>
+<li><div class="toc-item"><a href="sec-smallorder.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Groups of Small Order</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="part-rings.html" class="internal"><span class="codenumber">II</span> <span class="title">Ring Theory</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="ch-ringsubring.html" class="internal"><span class="codenumber">1</span> <span class="title">Rings</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec-defn-ex.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Intro to Rings</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-defn-ex.html#subsec-first-ex" class="internal"><span class="title">Definition and First Properties</span></a></div></li>
+<li><div class="toc-item"><a href="sec-defn-ex.html#subsec-units" class="internal"><span class="title">Units, Zero Divisors, Integral Domains</span></a></div></li>
+<li><div class="toc-item"><a href="sec-defn-ex.html#exercises-24" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-subrings.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Subrings</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-subrings.html#exercises-25" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-ring-hom.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Homomorphisms</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-ring-hom.html#exercises-26" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch-idealquot.html" class="internal"><span class="codenumber">2</span> <span class="title">Ideals and Quotient Rings</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec-ideals.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Ideals</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-ideals.html#subsec-ideal-def" class="internal"><span class="title">Definition and First Properties</span></a></div></li>
+<li><div class="toc-item"><a href="sec-ideals.html#subsec-generated-ideals" class="internal"><span class="title">Generated Ideals</span></a></div></li>
+<li><div class="toc-item"><a href="sec-ideals.html#exercises-27" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-ring-quotients.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Quotient Rings</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-ring-quotients.html#subsec-quotient-rings" class="internal"><span class="title">Quotient Rings</span></a></div></li>
+<li><div class="toc-item"><a href="sec-ring-quotients.html#subsec-ring-iso-thms" class="internal"><span class="title">The Ring Isomorphism Theorems</span></a></div></li>
+<li><div class="toc-item"><a href="sec-ring-quotients.html#exercises-28" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-commrings.html" class="internal"><span class="codenumber">3</span> <span class="title">Commutative Rings</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="subsec-primemax-ideals.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Prime and Maximal Ideals</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="subsec-primemax-ideals.html#subsec-prime-ideals" class="internal"><span class="title">Prime Ideals</span></a></div></li>
+<li><div class="toc-item"><a href="subsec-primemax-ideals.html#subsec-maximal-ideals" class="internal"><span class="title">Maximal Ideals</span></a></div></li>
+<li><div class="toc-item"><a href="subsec-primemax-ideals.html#exercises-29" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="subsec-polyrings.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Polynomial Rings</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="subsec-polyrings.html#exercises-30" class="internal"><span class="codenumber">3.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-field-of-fractions.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Fields of Fractions</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-field-of-fractions.html#exercises-31" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="domains.html" class="internal"><span class="codenumber">4</span> <span class="title">Domains</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec-eds.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Euclidian Domains</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-eds.html#exercises-32" class="internal"><span class="codenumber">4.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-pids.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Principal Ideal Domains</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-pids.html#exercises-33" class="internal"><span class="codenumber">4.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="subsec-ufds.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Unique Factorization Domains</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="subsec-ufds.html#exercises-34" class="internal"><span class="codenumber">4.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="subsec-noeth.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Noetherian Domains</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="subsec-noeth.html#exercises-35" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-irreducible.html" class="internal"><span class="codenumber">5</span> <span class="title">Irreducibility</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec-roots.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Roots of Unity</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-roots.html#exercises-36" class="internal"><span class="codenumber">5.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-irrpoly.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Irredicuble Polynomials</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-irrpoly.html#exercises-37" class="internal"><span class="codenumber">5.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch-ring-extras.html" class="internal"><span class="codenumber">6</span> <span class="title">Extras</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-gpring.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Group Rings</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="part-modules.html" class="internal"><span class="codenumber">III</span> <span class="title">Module Theory</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="ch-mod.html" class="internal"><span class="codenumber">1</span> <span class="title">Modules</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec-defmod.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Module Basics</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-defmod.html#module-basics" class="internal"><span class="title">Module Basics</span></a></div></li>
+<li><div class="toc-item"><a href="sec-defmod.html#exercises-38" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-modhom.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Module Homomorphisms</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-modhom.html#exercises-39" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-quote.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Quotient Modules</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-quote.html#quotient-modules" class="internal"><span class="title">Quotient Modules</span></a></div></li>
+<li><div class="toc-item"><a href="sec-quote.html#exercises-40" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch-freemod.html" class="internal"><span class="codenumber">2</span> <span class="title">Free Modules</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec-linear.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Linear Independence</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-linear.html#generated-modules" class="internal"><span class="title">Generated Modules</span></a></div></li>
+<li><div class="toc-item"><a href="sec-linear.html#exercises-41" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-modgen.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Generated Modules</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-modgen.html#exercises-42" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-bases.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Bases</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-bases.html#exercises-43" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch-vectors.html" class="internal"><span class="codenumber">3</span> <span class="title">Vector Spaces</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec-vecbasis.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Existence of Bases</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-vecbasis.html#bases-of-vector-spaces-and-dimension" class="internal"><span class="title">Bases of Vector Spaces and Dimension</span></a></div></li>
+<li><div class="toc-item"><a href="sec-vecbasis.html#exercises-44" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-ranknul.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Rank-Nullity</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-ranknul.html#exercises-45" class="internal"><span class="codenumber">3.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-transforms.html" class="internal"><span class="codenumber">4</span> <span class="title">Linear Transformations</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec-basics.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Basics</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-basics.html#linear-transformations" class="internal"><span class="title">Linear Transformations</span></a></div></li>
+<li><div class="toc-item"><a href="sec-basics.html#exercises-46" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-cob.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Change of Basis</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-cob.html#change-of-basis" class="internal"><span class="title">Change of Basis</span></a></div></li>
+<li><div class="toc-item"><a href="sec-cob.html#exercises-47" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-elematix.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Elementary Matrices</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-elematix.html#elementary-matrices" class="internal"><span class="title">Elementary Matrices</span></a></div></li>
+<li><div class="toc-item"><a href="sec-elematix.html#exercises-48" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-operator.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Linear Operators on Free Modules</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-operator.html#linear-operators-on-free-modules" class="internal"><span class="title">Linear Operators on Free Modules</span></a></div></li>
+<li><div class="toc-item"><a href="sec-operator.html#exercises-49" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-det.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Determinants</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-det.html#determinants" class="internal"><span class="title">Determinants</span></a></div></li>
+<li><div class="toc-item"><a href="sec-det.html#exercises-50" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch-modgen.html" class="internal"><span class="codenumber">5</span> <span class="title">Finitely Generated Modules over PIDs</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec-modpres.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Finitely Presented Modules</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-modpres.html#module-presentations" class="internal"><span class="title">Module Presentations</span></a></div></li>
+<li><div class="toc-item"><a href="sec-modpres.html#exercises-51" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-snf.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Smith Normal Form</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-snf.html#smith-normal-form" class="internal"><span class="title">Smith Normal Form</span></a></div></li>
+<li><div class="toc-item"><a href="sec-snf.html#exercises-52" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-noeth.html" class="internal"><span class="codenumber">5.3</span> <span class="title">noeth</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-noeth.html#commutative-noetherian-rings" class="internal"><span class="title">Commutative Noetherian Rings</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-modclass.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Classifications</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-modclass.html#classification-of-finitely-generated-modules-over-pids" class="internal"><span class="title">Classification of Finitely Generated Modules over PIDs</span></a></div></li>
+<li><div class="toc-item"><a href="sec-modclass.html#exercises-53" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch-canform.html" class="internal"><span class="codenumber">6</span> <span class="title">Canonical Forms</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec-rcf.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Rational Canonical Form</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-rcf.html#rcf" class="internal"><span class="title">RCF</span></a></div></li>
+<li><div class="toc-item"><a href="sec-rcf.html#exercises-54" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="active">
+<div class="toc-item"><a href="sec-minpoly.html" class="internal"><span class="codenumber">6.2</span> <span class="title">The Minimum Polynomial</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-minpoly.html#the-minimum-polynomial-of-an-operator" class="internal"><span class="title">The Minimum Polynomial of an Operator</span></a></div></li>
+<li><div class="toc-item"><a href="sec-minpoly.html#exercises-55" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-jcf.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Jordan Canonical Form</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-jcf.html#exercises-56" class="internal"><span class="codenumber">6.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="part-fields.html" class="internal"><span class="codenumber">IV</span> <span class="title">Field Theory</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="ch-extensions.html" class="internal"><span class="codenumber">1</span> <span class="title">Field Extensions</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="field-extension-basics.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Field Extension Basics</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="field-extension-basics.html#exercises-57" class="internal"><span class="codenumber">1.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-algebraic.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Algebraic Extensions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-algebraic.html#exercises-58" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="sec-algebraic.html#exercises-59" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-closure.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Algebraic Closures</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-closure.html#exercises-60" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-splitting.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Splitting Fields</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-splitting.html#exercises-61" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch-galois.html" class="internal"><span class="codenumber">2</span> <span class="title">Galois Theory</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec-separable.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Separability</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-separable.html#exercises-62" class="internal"><span class="codenumber">2.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-galext.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Galois Extensions</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-galext.html#exercises-63" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-ftgt.html" class="internal"><span class="codenumber">2.3</span> <span class="title">The Fundamental Theorem of Galois Theory</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-ftgt.html#exercises-64" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch-field-extras.html" class="internal"><span class="codenumber">3</span> <span class="title">Extras</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-solvable-by-radicals.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Solvability by Radicals</span></a></div></li>
+<li><div class="toc-item"><a href="sec-transcendental-elements.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Transcendental Elements</span></a></div></li>
+<li><div class="toc-item"><a href="sec-advanced-galois.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Advanced Galois Theory</span></a></div></li>
+<li><div class="toc-item"><a href="sec-inverse-galois.html" class="internal"><span class="codenumber">3.4</span> <span class="title">The Inverse Galois Problem</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="appendix-1.html" class="internal"><span class="codenumber">A</span> <span class="title">Foundational Knowledge</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec-.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Sets, Functions, Constructions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-.html#subsec-sets" class="internal"><span class="title">Sets</span></a></div></li>
+<li><div class="toc-item"><a href="sec-.html#subsec-functions" class="internal"><span class="title">Functions</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-.html#subsec-set-constructions" class="internal"><span class="title">Set Constructions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-.html#subsubsec-subsets" class="internal"><span class="title">Subsets</span></a></div></li>
+<li><div class="toc-item"><a href="sec-.html#subsubsec-product-sets" class="internal"><span class="title">Product Sets</span></a></div></li>
+<li><div class="toc-item"><a href="sec-.html#subsubsec-quotient-sets" class="internal"><span class="title">Quotient Sets</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="sec-numbers-and-cardinality.html" class="internal"><span class="codenumber">A.2</span> <span class="title">Number Systems and Cardinality</span></a></div></li>
+<li><div class="toc-item"><a href="sec-matrices.html" class="internal"><span class="codenumber">A.3</span> <span class="title">Matrices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="appendix-2.html" class="internal"><span class="codenumber">B</span> <span class="title">History</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="exercises-65.html" class="internal"><span class="codenumber">B</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="appendix-3.html" class="internal"><span class="codenumber">C</span> <span class="title">Notation</span></a></div></li>
+<li><div class="toc-item"><a href="colophon-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-minpoly"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">6.2</span> <span class="title">The Minimum Polynomial</span>
+</h2>
+<section class="subsection" id="the-minimum-polynomial-of-an-operator"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">The Minimum Polynomial of an Operator</span>
+</h3>
+<section class="paragraphs" id="rem-60"><h4 class="heading"><span class="title"><span class="process-math">\(\rem\)</span>.</span></h4> <div class="para" id="p-2248">Given a square matrix <span class="process-math">\(A\)</span> and polynomial <span class="process-math">\(g(x) = \sum_i a_i x^i\text{,}\)</span> recall that <span class="process-math">\(g(A)\)</span> refers to the square matrix <span class="process-math">\(\sum_i a_i A^i\text{.}\)</span>
+</div> <section class="paragraphs" id="prop-ideals-and-gx"><h5 class="heading"><span class="title"><span class="process-math">\(\prop\)</span> – Ideals and <span class="process-math">\(g(x)\)</span>.</span></h5> <div class="para" id="p-2249">Given a <span class="process-math">\(n \times n\)</span> matrix <span class="process-math">\(A\)</span> with entries in a field <span class="process-math">\(F\text{,}\)</span> the set <span class="process-math">\(I := \{g(x) \mid g(A) = 0 \}\)</span> forms a non-zero ideal of <span class="process-math">\(F[x]\)</span>[^1].</div> <section class="paragraphs" id="proof.-133"><h6 class="heading"><span class="title"><em class="emphasis">Proof.</em>.</span></h6> <div class="para" id="p-2250">
+<span class="process-math">\(I\)</span> is an ideal since the result of evaluating the sum of two polynomials <span class="process-math">\(g(x) + f(x)\)</span> at <span class="process-math">\(x = A\)</span> is <span class="process-math">\(g(A) f(A)\text{.}\)</span> the result of evaluating the product <span class="process-math">\(g(x) f(x)\)</span> at <span class="process-math">\(x = A\)</span> is <span class="process-math">\(g(A) f(A)\text{.}\)</span>
+</div> <div class="para" id="p-2251">To show it is non-zero, consider the matrices <span class="process-math">\(I_n, A, A^2, \dots, A^{n^2}\text{.}\)</span> This is a collection of <span class="process-math">\(n^2 + 1\)</span> matrices in the <span class="process-math">\(n^2\)</span> dimensional <span class="process-math">\(F\)</span>-vector space <span class="process-math">\(\Mat_{n \times n}(F)\text{,}\)</span> and hence the must be linearly dependent: there are <span class="process-math">\(a_0, \dots, a_{n^2+1} \in F\text{,}\)</span> not all of which are <span class="process-math">\(0\text{,}\)</span> such that <span class="process-math">\(\sum_i a_i A^i = 0\text{.}\)</span> This proves <span class="process-math">\(\sum_i a_i x^i \in I\text{.}\)</span>
+</div></section></section> <section class="paragraphs" id="defn-minimum-polynomial-matrix"><h5 class="heading"><span class="title"><span class="process-math">\(\defn\)</span> – Minimum Polynomial (Matrix).</span></h5> <div class="para" id="p-2252">Let <span class="process-math">\(F\)</span> be a field and let <span class="process-math">\(A \in \Mat_{n \times n}(F)\text{.}\)</span> The <em class="emphasis"><span class="process-math">\(\defnn{minimum polynomial}\)</span></em> of <span class="process-math">\(A\text{,}\)</span> denoted <span class="process-math">\(\mp_A(x)\text{,}\)</span> is the unique monic generator of the ideal <span class="process-math">\(\{g(x) \in F[x] \, \mid \, g(A) = 0\}\text{.}\)</span> Equivalently, <span class="process-math">\(\mp_A(x)\)</span> is the monic polynomial of least degree such that <span class="process-math">\(\mp_A(A) = 0\text{.}\)</span>
+</div></section> <section class="paragraphs" id="prop-ga0-iff-gx-annihilates-fn_a"><h5 class="heading"><span class="title"><span class="process-math">\(\prop\)</span> – <span class="process-math">\(g(A)=0\)</span> iff <span class="process-math">\(g(x)\)</span> Annihilates <span class="process-math">\(F^n_A\)</span>.</span></h5> <div class="para" id="p-2253">Given an <span class="process-math">\(n \times n\)</span> matrix <span class="process-math">\(A\)</span> and polynomial <span class="process-math">\(g(x)\in F[x]\)</span>[^2], we have <span class="process-math">\(g(A) = 0\)</span> if and only if <span class="process-math">\(g(x)\)</span> annihilates the <span class="process-math">\(F[x]\)</span>-module <span class="process-math">\(F^n_A\text{.}\)</span>
+</div> <div class="para logical" id="p-2254">
+<div class="para">In particular, <span class="process-math">\(\mp_A(x)\)</span>[^1] is the unique monic generator of the annihilator ideal</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\ann_{F[x]}(F^n_A) := \{ g(x) \in F[x] \mid g(x) \cdot v = 0 \text{ for all $v \in F^n_A$}\}.
+\end{equation*}
+</div>
+<div class="para">###### <em class="emphasis">Proof.</em> If <span class="process-math">\(g(A) = 0\text{,}\)</span> then for each <span class="process-math">\(v \in F^n\text{,}\)</span> by definition of the action of <span class="process-math">\(F[x]\)</span> on <span class="process-math">\(F^n_A\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g(x) \cdot v = g(A) v = 0
+\end{equation*}
+</div>
+<div class="para">and so <span class="process-math">\(g(x)\)</span> annihilates <span class="process-math">\(F^n_A\text{.}\)</span> Conversely, if <span class="process-math">\(g(x)\)</span> annihilates <span class="process-math">\(F^n_A\text{,}\)</span> then <span class="process-math">\(g(A) \cdot v = 0\)</span> for all <span class="process-math">\(v \in F^n\text{.}\)</span> Taking <span class="process-math">\(v = e_i\)</span> for each <span class="process-math">\(i\text{,}\)</span> this says that each column of <span class="process-math">\(g(A)\)</span> is <span class="process-math">\(0\)</span> and hence <span class="process-math">\(g(A)\)</span> is the zero matrix.</div>
+</div></section> <section class="paragraphs" id="defn-minimum-polynomial-linear-transformation"><h5 class="heading"><span class="title"><span class="process-math">\(\defn\)</span> – Minimum Polynomial (Linear Transformation).</span></h5> <div class="para" id="p-2255">More generally, let <span class="process-math">\(V\)</span> be an <span class="process-math">\(F\)</span>-vector space of dimension <span class="process-math">\(n\text{,}\)</span> and let <span class="process-math">\(g: V \to V\)</span> be a linear transformation. The <em class="emphasis"><span class="process-math">\(\defnn{minimum polynomial}\)</span></em> of <span class="process-math">\(g\text{,}\)</span> denoted <span class="process-math">\(\mp_g(x)\text{,}\)</span> is the unique monic polynomial generating the ideal <span class="process-math">\(\{f(x) \in F[x] \mid f(g) = 0\}\)</span> or, equivalently, the annihilator ideal <span class="process-math">\({\ann}_{F[x]}(V_g)\text{.}\)</span>
+</div></section> <section class="paragraphs" id="theorem-cayley-hamilton-thm"><h5 class="heading"><span class="title">Theorem – Cayley-Hamilton <span class="process-math">\(\thm\)</span>.</span></h5> <div class="para logical" id="p-2256">
+<div class="para">Let <span class="process-math">\(F\)</span> be a field, <span class="process-math">\(V\)</span> a finite dimensional <span class="process-math">\(F\)</span>-vector space, and <span class="process-math">\(g: V \to V\)</span> an <span class="process-math">\(F\)</span>-linear operator. Let <span class="process-math">\(f_1(x), \dots, f_s(x)\)</span> be the invariant factors of <span class="process-math">\(g\text{.}\)</span> 1. The product of the invariant factors of <span class="process-math">\(g\)</span> equals the characteristic polynomial of <span class="process-math">\(g\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\cp_g(x) = f_1(x) \cdots f_s(x).
+\end{equation*}
+</div>
+<div class="para">2. The largest invariant factor of <span class="process-math">\(g\)</span> is equal to the minimum polynomial of <span class="process-math">\(g\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mp_g(x) = f_s(x).
+\end{equation*}
+</div>
+<div class="para">3. (The Cayley-Hamilton Theorem) The minimum polynomial of <span class="process-math">\(g\)</span> divides its characteristic polynomial. In particular, <span class="process-math">\(g\)</span> satisfies its characteristic polynomial:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\cp_g(g) = 0.
+\end{equation*}
+</div>
+<div class="para">###### <em class="emphasis">Proof.</em> The first assertion is a consequence of Corollary , since the product of the diagonal elements of the Smith Normal Form of <span class="process-math">\(xI_n - A\)</span> is equal to the determinant of <span class="process-math">\(xI_n - A\text{.}\)</span> (Technically, we can only conclude at first that they are only associates, but since each is monic, they must be equal.)</div>
+</div> <div class="para logical" id="p-2257">
+<div class="para">For the second, we use the isomorphism of <span class="process-math">\(F[x]\)</span>-modules</div>
+<div class="displaymath process-math">
+\begin{equation*}
+V_g \cong F[x]/(f_1(x)) \oplus \cdots \oplus F[x]/(f_s(x)). 
+\end{equation*}
+</div>
+<div class="para">Note that a polynomial <span class="process-math">\(p(x)\)</span> annihilates <span class="process-math">\(F[x]/(f_i(x))\)</span> if and only if <span class="process-math">\(f_i(x)\)</span> divides <span class="process-math">\(p(x)\text{.}\)</span> Since <span class="process-math">\(f_1 \mid \cdots \mid f_s\text{,}\)</span> the annihilator of the <span class="process-math">\(F[x]\)</span>-module <span class="process-math">\(F[x]/(f_1(x)) \oplus \cdots \oplus F[x]/(f_s(x))\)</span> is generated by <span class="process-math">\(f_s(x)\text{.}\)</span> Thus the annihilator of <span class="process-math">\(V_t\)</span> is also generated by <span class="process-math">\(f_s(x)\text{,}\)</span> and by the Proposition  <span class="process-math">\(f_s(x)\)</span> is the minimum polynomial of <span class="process-math">\(t\text{.}\)</span>
+</div>
+</div> <div class="para" id="p-2258">The third assertion is an immediate consequence of the first two.</div></section> <section class="paragraphs" id="exe-finding-minimum-polynomial"><h5 class="heading"><span class="title"><span class="process-math">\(\exe\)</span> – Finding Minimum Polynomial.</span></h5> <div class="para logical" id="p-2259">
+<div class="para">Let’s find the minimum polynomial of</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{bmatrix}
+1 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 1 &amp; 0 \\
+0 &amp;  0 &amp; 1 &amp; 1 \\
+0 &amp;  0 &amp; 0 &amp; 1 \\
+\end{bmatrix}
+\end{equation*}
+</div>
+</div> <div class="para logical" id="p-2260">
+<div class="para">We apply the Cayley-Hamilton Theorem: <span class="process-math">\(\mp_A(x) \mid \cp_A(x)\text{.}\)</span> The polynomial <span class="process-math">\(\cp_A(x)\)</span> is easy to compute since this matrix is upper-triangular:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\cp_A(x) =\det(xI_4 - A) = (x-1)^4.
+\end{equation*}
+</div>
+<div class="para">So <span class="process-math">\(\mp_A(x) = (x-1)^j\)</span> for some <span class="process-math">\(j \leq 4\text{.}\)</span> By brute-force, we verify that <span class="process-math">\((A-I_4)^3 \ne 0\)</span> and thus it must be the case that <span class="process-math">\(\mp_A(x) = \cp_A(x) = (x-1)^4\text{.}\)</span>
+</div>
+</div></section> <section class="paragraphs" id="exe-finding-minimum-polynomial-2"><h5 class="heading"><span class="title"><span class="process-math">\(\exe\)</span> – Finding Minimum Polynomial (2).</span></h5> <div class="para logical" id="p-2261">
+<div class="para">Let’s find the minimum polynomial of</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{bmatrix}
+1 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp;  0 &amp; 1 &amp; 1 \\
+0 &amp;  0 &amp; 0 &amp; 1 \\
+\end{bmatrix}
+\end{equation*}
+</div>
+<div class="para">As in the previous example, <span class="process-math">\(\cp_A(x) = (x-1)^4\)</span> and so by the Cayley-Hamilton Theorem <span class="process-math">\(\mp_A(x) = (x-1)^j\)</span> for some <span class="process-math">\(j \leq 4\text{.}\)</span> This time we notice that <span class="process-math">\((A-I_4)^2 = 0\)</span> and so, since <span class="process-math">\((A-I_4) \ne 0\text{,}\)</span> <span class="process-math">\(\mp_A(x) = \cp_A(x) = (x-1)^2\text{.}\)</span>
+</div>
+</div></section> <section class="paragraphs" id="problem-6-similarity-classes-and-charpoly"><h5 class="heading"><span class="title">Problem 6 – Similarity Classes and CharPoly.</span></h5> <div class="para" id="p-2262">Determine all similarity classes of matrices with entries in <span class="process-math">\(\Q\)</span> with characteristic polynomial <span class="process-math">\((x^4-1)(x^2-1)\text{.}\)</span> Provide an explicit representative for each of these similarity classes.</div> <section class="paragraphs" id="proof.-134"><h6 class="heading"><span class="title"><em class="emphasis">Proof</em>..</span></h6> <div class="para" id="p-2263">Let <span class="process-math">\(A\)</span> be a matrix with entries in <span class="process-math">\(\Q\)</span> with characteristic polynomial <span class="process-math">\((x^4- 1)(x^2 -1)\text{.}\)</span>
+</div> <div class="para" id="p-2264">By this Corollary we know that every matrix is similar to a unique matrix in RCF. Note that RCF is based on the invariant factors if a matrix, and thus if two matrices have the same invariant factors they will have the same RCF, making them both similar to the same (unique) matrix, making them similar to each other. By part (1) of this Theorem, the characteristic polynomial of a matrix is equal to the product of the invariant factors of that same matrix.</div> <div class="para logical" id="p-2265">
+<div class="para">Recall that the invariant factors must divide all preceding invariant factors in RCF, and observe that <span class="process-math">\((x^4-1)\)</span> factors as <span class="process-math">\((x^2-1)(x^2+1)\)</span> and <span class="process-math">\((x^2-1)\)</span> factors as <span class="process-math">\((x-1)(x+1)\text{.}\)</span> Given this information, after some fiddling with the factors, we find four possible options for invariant factors of <span class="process-math">\(A\text{:}\)</span> 1. <span class="process-math">\(x^6-x^4-x^2+1=(x^2 -1)(x^4- 1)\text{,}\)</span> 2. <span class="process-math">\((x^2-1),(x^4-1)\text{,}\)</span> 3. <span class="process-math">\((x+1), (x-1)(x^4-1)\text{,}\)</span> and 4. <span class="process-math">\((x-1),(x+1)(x^4-1)\text{.}\)</span> Let <span class="process-math">\(f(x)=x^6-x^4-x^2+1, g(x)=(x^4-1),\)</span> <span class="process-math">\(h(x)=x^2-1\text{,}\)</span> <span class="process-math">\(j(x)=(x-1),\)</span> and <span class="process-math">\(k(x)=(x+1)\text{.}\)</span> Observe the companion matrices of each of these polynomials:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C(f)=\begin{bmatrix}
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; -1\\
+1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 1\\
+0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 1\\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0\\
+\end{bmatrix},
+C(g)=\begin{bmatrix}
+0 &amp; 0 &amp; 0 &amp; 1\\
+1 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 1 &amp; 0\\
+\end{bmatrix},
+C(h)=\begin{bmatrix}
+0 &amp; 1\\
+1 &amp; 0\\
+\end{bmatrix},
+C(j)=\begin{bmatrix}
+1\\ 
+\end{bmatrix}\textrm{ and } 
+C(k)=\begin{bmatrix}
+-1\\ 
+\end{bmatrix}
+\end{equation*}
+</div>
+<div class="para">Behold: explicit representatives of each similarity class: 1. <span class="process-math">\(C(f)\text{,}\)</span> 2. <span class="process-math">\(C(g)\oplus C(h)\text{,}\)</span> 3. <span class="process-math">\(C(k)\oplus C(gj)\text{,}\)</span> and 4. <span class="process-math">\(C(j)\oplus C(gk)\text{.}\)</span>
+</div>
+</div></section></section> <section class="paragraphs" id="problem-6-similarity-of-3-x-3-matrices"><h5 class="heading"><span class="title">Problem 6 – Similarity of 3 x 3 Matrices.</span></h5> <div class="para" id="p-2266">Let <span class="process-math">\(F\)</span> be any field.</div> <div class="para logical" id="p-2267"><ol class="decimal">
+<li id="li-435"><div class="para" id="p-derived-li-435">Let <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> be two <span class="process-math">\(3\times 3\)</span> matrices with entries in <span class="process-math">\(F\text{.}\)</span> Prove <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are similar if and only if they have the same characteristic polynomial and the same minimum polynomial.</div></li>
+<li id="li-436"><div class="para" id="p-derived-li-436">Show, by way of an example with justification, that the previous part would become false if “<span class="process-math">\(3\times 3\)</span>” were replaced by “<span class="process-math">\(4\times 4\)</span>”.</div></li>
+<li id="li-437"><div class="para" id="p-derived-li-437">Give an example of a field <span class="process-math">\(F\)</span> and two <span class="process-math">\(3\times 3\)</span> matrices with entries in <span class="process-math">\(F\)</span> having the same minimum polynomial that are not similar.</div></li>
+</ol></div> <section class="paragraphs" id="proof.-135"><h6 class="heading"><span class="title"><em class="emphasis">Proof</em>..</span></h6> <div class="para" id="p-2268">Let <span class="process-math">\(F\)</span> be any field.</div> <section class="paragraphs" id="part-a-34"><h6 class="heading"><span class="title">Part (a).</span></h6> <div class="para" id="p-2269">Let <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> be two <span class="process-math">\(3\times 3\)</span> matrices with entries in <span class="process-math">\(F\text{.}\)</span> First, suppose that <span class="process-math">\(A\sim B\)</span> . Matrices are similar if and only if they share the same invariant factors. As minimum polynomial is an invariant factor and the characteristic polynomial is a product of the invariant factors, we see that <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> must share the same invariant factors.</div> <div class="para" id="p-2270">Next suppose that <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> share the same characteristic polynomial and the same minimal polynomial. As <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are <span class="process-math">\(3\times 3\)</span> matrices, the characteristic polynomial of both <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> must be a degree <span class="process-math">\(3\)</span> polynomial. We proceed via cases based on the degree of <span class="process-math">\(\mp_{A,B}(x)\text{.}\)</span> - First, suppose <span class="process-math">\(\deg\mp_{A,B}(x)=3\text{.}\)</span> Then <span class="process-math">\(\mp_{A,B}(x)=\cp_{A,B}(x)\text{,}\)</span> making <span class="process-math">\(\cp_{A,B}(x)\)</span> the only invariant factor of both <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{.}\)</span> Thus <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> have the same invariant factors and are therefore similar. - Next, suppose <span class="process-math">\(\deg\mp_{A,B}(x)=2\text{.}\)</span> As <span class="process-math">\(\mp|\cp\)</span> and the degrees of all invariant factors must sum to the <span class="process-math">\(\deg\cp\text{,}\)</span> we know that <span class="process-math">\(\cp=\mp\cdot k(x)\text{,}\)</span> where <span class="process-math">\(k(x)\)</span> is a degree <span class="process-math">\(1\)</span> polynomial, which we denote <span class="process-math">\(f(x)\)</span> for <span class="process-math">\(A\)</span> and <span class="process-math">\(g(x)\)</span> for <span class="process-math">\(B\text{..}\)</span> Since <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> share the same minimum and characteristic polynomials, we see <span class="process-math">\(\mp\cdot f=\cp\)</span> and <span class="process-math">\(\mp\cdot g=\cp\text{,}\)</span> and thus that <span class="process-math">\(f=g\text{.}\)</span> Hence <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> share the same invariant factors, making <span class="process-math">\(A\sim B\text{.}\)</span> - Finally, suppose <span class="process-math">\(\deg\mp=1\text{.}\)</span> The minimum polynomial is the largest invariant factor, and thus the invariant factors of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> must be <span class="process-math">\(\{\mp,\mp\mp\}\text{,}\)</span> making them similar.</div></section> <section class="paragraphs" id="part-b-31"><h6 class="heading"><span class="title">Part (b).</span></h6> <div class="para logical" id="p-2271">
+<div class="para">If we replaced <span class="process-math">\(3\times 3\)</span> with <span class="process-math">\(4\times 4\)</span> then this would allow for <span class="process-math">\(\cp_{A,B}(x)=x^4\)</span> and <span class="process-math">\(\mp_{A,B}(x)=x^2\text{,}\)</span> allowing two sets of invariant factors: <span class="process-math">\(\{x^2,x^2\}\)</span> <span class="process-math">\(\{x,x,x^2\}\text{,}\)</span> Notice that <span class="process-math">\(C(x)=\begin{bmatrix}0\end{bmatrix}\)</span> and <span class="process-math">\(C(x^2)=\begin{bmatrix}0&amp;0\\1&amp;0\end{bmatrix}\text{.}\)</span> Set <span class="process-math">\(A=C(x^2)\oplus C(x^2)\)</span> and <span class="process-math">\(B=C(x)\oplus C(x)\oplus C(x^2)\text{,}\)</span> so</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A=\begin{bmatrix}0 &amp; 0 &amp; 0 &amp; 0 \\1 &amp; 0 &amp; 0 &amp; 0 \\0 &amp; 0 &amp; 0 &amp; 0\\ 0 &amp; 0 &amp; 1 &amp; 0\end{bmatrix} \text{ and } B=\begin{bmatrix}0 &amp; 0 &amp; 0 &amp; 0 \\0 &amp; 0 &amp; 0 &amp; 0 \\0 &amp; 0 &amp; 0 &amp; 0\\ 0 &amp; 0 &amp; 1 &amp; 0\end{bmatrix}.
+\end{equation*}
+</div>
+<div class="para">These matrices have the same <span class="process-math">\(\cp\)</span> and <span class="process-math">\(\mp\)</span> but are not similar.</div>
+</div></section> <section class="paragraphs" id="part-c-5"><h6 class="heading"><span class="title">Part (c).</span></h6> <div class="para" id="p-2272">Let <span class="process-math">\(F=\Q\text{.}\)</span> We define <span class="process-math">\(A=C(x-1)\oplus C(x^2-1)\)</span> and <span class="process-math">\(B=C(x+1)\oplus C(x^2-1)\text{.}\)</span> Notice that these matrices are in RCF. However, the invariant factors of <span class="process-math">\(A\)</span> are <span class="process-math">\(\{(x+1), (x^2-1)\}\)</span> and the invariant factors of <span class="process-math">\(B\)</span> are <span class="process-math">\(\{(x-1)(x^2-1)\}\text{.}\)</span> Thus <span class="process-math">\(A\)</span> is not similar to <span class="process-math">\(B\text{,}\)</span> but the minimal polynomial of both is <span class="process-math">\(x^2-1\text{.}\)</span> #### Problem 6 – Unipotent 4 x 4 Matrices Let <span class="process-math">\(F\)</span> be a field and <span class="process-math">\(n\)</span> a positive integer. We say an <span class="process-math">\(n\times n\)</span> matrix <span class="process-math">\(A\)</span> with entries in <span class="process-math">\(F\)</span> is <em class="emphasis">unipotent</em> if <span class="process-math">\(A-In\)</span> is nilpotent (i.e., <span class="process-math">\((A-In)^k = 0\)</span> for some <span class="process-math">\(k \geq 1\)</span>). For the field <span class="process-math">\(F = \Q\text{,}\)</span> find (with complete justification) the number of similarity classes of <span class="process-math">\(4\times 4\)</span> unipotent matrices and give an explicit representative for each class.</div></section> <section class="paragraphs" id="proof.-136"><h6 class="heading"><span class="title"><em class="emphasis">Proof</em>..</span></h6> <div class="para" id="p-2273">Let <span class="process-math">\(F=\Q\text{,}\)</span> <span class="process-math">\(n\)</span> a positive integer, and <span class="process-math">\(A\)</span> a unipotent <span class="process-math">\(4\times 4\)</span> matrix with entries in <span class="process-math">\(F\text{.}\)</span> Thus <span class="process-math">\(A-I\)</span> is nilpotent. Let <span class="process-math">\(\l\)</span> be an eigenvalue of <span class="process-math">\(A-I\text{.}\)</span> Then <span class="process-math">\((A-I)v=\l v\text{,}\)</span> so <span class="process-math">\(Av-Iv=\l v\)</span> and <span class="process-math">\(Av=\l v+Iv\text{.}\)</span> As <span class="process-math">\(Iv=v\text{,}\)</span> we have <span class="process-math">\(Av=\l v+v\)</span> and <span class="process-math">\(Av=(\l+1)v\text{.}\)</span>
+</div> <div class="para" id="p-2274">Notice that as <span class="process-math">\(\l\)</span> is an eigenvalue of <span class="process-math">\(I\text{,}\)</span> we have <span class="process-math">\(\l +1\)</span> as an eigenvalue of <span class="process-math">\(A\text{.}\)</span>
+</div> <div class="para logical" id="p-2275">
+<div class="para">Assume inductively that <span class="process-math">\(\l^{n-1}\)</span> is an eigenvalue of <span class="process-math">\((A-I)^{n-1}\text{.}\)</span> Notice</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(A+I)^nv=(A+I)(A+I)^{n-1}v=(A+I)\l^{n-1}v=\l^{n-1}(A+I)v=\l^{n-1}\l=\l^n,
+\end{equation*}
+</div>
+<div class="para">making <span class="process-math">\(\l\)</span> an eigenvalue of <span class="process-math">\((A+I)^n\text{.}\)</span> Thus if <span class="process-math">\(\l\)</span> is an eigenvalue of <span class="process-math">\(A-I\text{,}\)</span> it is an eigenvalue of <span class="process-math">\((A-I)^n\)</span> as well. As <span class="process-math">\((A-I)\)</span> is nilpotent, there exists some <span class="process-math">\(k\)</span> such that <span class="process-math">\((A-I)^k=0\text{.}\)</span> This means that <span class="process-math">\(\l^kv=0\text{.}\)</span> As <span class="process-math">\(v\neq 0\)</span> and <span class="process-math">\(\l^k\)</span> is a scalar in a field (and hence integral domain) we have <span class="process-math">\(\l=0\text{.}\)</span> Thus the only eigenvalue of <span class="process-math">\((A-I)\)</span> is <span class="process-math">\(0\text{,}\)</span> meaning that the only eigenvalue of <span class="process-math">\(A\)</span> is <span class="process-math">\(1\text{.}\)</span>
+</div>
+</div> <div class="para" id="p-2276">Eigenvalues of <span class="process-math">\(A\)</span> correspond to the roots of <span class="process-math">\(\cp_A(x)\text{,}\)</span> which is a monic quartic polynomial, as <span class="process-math">\(A\)</span> is a <span class="process-math">\(4\times 4\)</span> matrix. Thus <span class="process-math">\(\cp_A(x)=(x-1)^4\text{,}\)</span> as all roots must be <span class="process-math">\(1\text{.}\)</span>
+</div> <div class="para logical" id="p-2277">
+<div class="para">Two matrices are similar if and only if they share the same invariant factors. Given that invariant factors divide <span class="process-math">\(\cp_A(x)\)</span> and each invariant factor must divide the following one, the possible sets of invariant factors for <span class="process-math">\(A\)</span> are the following: - <span class="process-math">\(\{(x-1)^4\}\text{,}\)</span> - <span class="process-math">\(\{(x-1),(x-1)^3\}\text{,}\)</span> - <span class="process-math">\(\{(x-1), (x-1), (x-1)^2\}\text{,}\)</span> - <span class="process-math">\(\{(x-1)^2, (x-1)^2\}\text{,}\)</span> and - <span class="process-math">\(\{(x-1), (x-1), (x-1), (x-1)\}\text{.}\)</span> We identify the companion matrices for each possible invariant factor:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C(x-1)=\begin{bmatrix} 1 \end{bmatrix},
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C((x-1)^2)=C(x^2-2x+1)=\begin{bmatrix} 0 &amp; -1 \\ 1 &amp; 2\end{bmatrix},
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C((x-1)^3)=C(x^3+3x^2+3x-1)=\begin{bmatrix} 0 &amp; 0 &amp; 1 \\ 1 &amp; 0 &amp; -3 \\ 0 &amp; 1 &amp; -3\end{bmatrix},
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C((x-1)^4)=C(x^4-4x^3+6x^2-4x+1)=\begin{bmatrix} 0 &amp; 0 &amp; 0 &amp; -1 \\ 1 &amp; 0 &amp; 0 &amp; 4 \\ 0 &amp; 1 &amp; 0 &amp; -6 \\ 0 &amp; 0 &amp; 1 &amp; 4\end{bmatrix}.
+\end{equation*}
+</div>
+<div class="para">We define the following: 1. <span class="process-math">\(B=C((x-1)^4)\text{,}\)</span> 2. <span class="process-math">\(C=C(x-1)\oplus C((x-1)^3)\text{,}\)</span> 3. <span class="process-math">\(D=C(x-1)\oplus C(x-1)\oplus C((x-1)^2)\text{,}\)</span> 4. <span class="process-math">\(E=C((x-1)^2)\oplus C((x-1)^2)\text{,}\)</span> and 5. <span class="process-math">\(F=C(x-1)\oplus C(x-1)\oplus C(x-1)\oplus C(x-1)\text{.}\)</span> As each of these matrices is in RCF, they are explicit representatives for each similarity class.</div>
+</div></section></section></section> <section class="paragraphs" id="problem-45"><h5 class="heading"><span class="title">Problem.</span></h5> <div class="para" id="p-2278">Let <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> be <span class="process-math">\(n \times n\)</span> matrices with entries in <span class="process-math">\(\Q\text{.}\)</span> Prove <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are similar in <span class="process-math">\(\Mat_{n \times n}(\Q)\)</span> if and only if <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are similar in <span class="process-math">\(\Mat_{n \times n}(\R)\text{.}\)</span> (That is, show there is a <span class="process-math">\(P \in GL_n(\Q)\)</span> such that <span class="process-math">\(A = PBP^{-1}\)</span> if and only if there is a <span class="process-math">\(R \in GL_n(\R)\)</span> such that <span class="process-math">\(A = RBR^{-1}\text{.}\)</span>) {}: Use the Theorem on Rational Canonical Forms.</div></section> <section class="paragraphs" id="problem-46"><h5 class="heading"><span class="title">Problem.</span></h5> <div class="para" id="p-2279">Similarity of two-by-two matrices: 1. Let <span class="process-math">\(F\)</span> be any field and <span class="process-math">\(A, B \in \Mat_{2 \times 2}(F)\text{,}\)</span> and assume that neither <span class="process-math">\(A\)</span> nor <span class="process-math">\(B\)</span> is a scalar matrix. (Recall that a scalar matrix is one of the form <span class="process-math">\(c I_n\)</span> for some <span class="process-math">\(c \in F\text{.}\)</span>) Prove <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are similar if and only if they have the same determinant and the same trace. 2. Let <span class="process-math">\(F\)</span> be a finite field with <span class="process-math">\(q\)</span> elements. Find, with justification, the number of similarity classes of <span class="process-math">\(2 \times 2\)</span> matrices with entries in <span class="process-math">\(F\text{.}\)</span> 3. Let <span class="process-math">\(F\)</span> be a finite field with <span class="process-math">\(q\)</span> elements. Find, with justification, the number of conjugacy classes of the group <span class="process-math">\(GL_2(F)\text{.}\)</span>
+</div></section> <section class="paragraphs" id="problem-47"><h5 class="heading"><span class="title">Problem.</span></h5> <div class="para logical" id="p-2280">
+<div class="para">Let <span class="process-math">\(F\)</span> be any field. Up to similarity, how many matrices in <span class="process-math">\(\Mat_{5 \times 5}(F)\)</span> of the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A = \begin{bmatrix}
+1 &amp; * &amp; * &amp; * &amp; * \\
+0 &amp; 1 &amp; * &amp; * &amp; * \\
+0 &amp; 0 &amp; 1 &amp; * &amp; * \\
+0 &amp; 0 &amp; 0 &amp; 1 &amp; * \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 \\
+\end{bmatrix}
+\end{equation*}
+</div>
+<div class="para">are there? Justify.</div>
+</div></section> <section class="paragraphs" id="problem-48"><h5 class="heading"><span class="title">Problem.</span></h5> <div class="para" id="p-2281">Let <span class="process-math">\(F\)</span> be a field, <span class="process-math">\(V\)</span> a finite dimensional <span class="process-math">\(F\)</span>-vector space, and <span class="process-math">\(g: V \to V\)</span> an <span class="process-math">\(F\)</span>-linear operator. Prove that the following are equivalent for an element <span class="process-math">\(\lambda \in F\text{:}\)</span> 1. <span class="process-math">\(\lambda\)</span> is an eigenvalue of <span class="process-math">\(g\text{.}\)</span> 2. <span class="process-math">\(\lambda\)</span> is a root of the minimum polynomial <span class="process-math">\(\mp_g(x)\)</span> of <span class="process-math">\(g\text{.}\)</span> 3. <span class="process-math">\(\lambda\)</span> is a root of the characteristic polynomial <span class="process-math">\(\cp_g(x)\)</span> of <span class="process-math">\(g\text{.}\)</span> (Recall that <span class="process-math">\(\lambda \in F\)</span> is a {} of <span class="process-math">\(F\)</span> provided <span class="process-math">\(g(v) = \lambda \cdot v\)</span> for some non-zero vector <span class="process-math">\(v \in V\text{.}\)</span>)</div></section> <section class="paragraphs" id="problem-7-unfinished-3"><h5 class="heading"><span class="title">Problem 7 #unfinished.</span></h5> <div class="para" id="p-2282">Suppose <span class="process-math">\(F\)</span> is any field. Recall that a square matrix <span class="process-math">\(A\)</span> with entries in <span class="process-math">\(F\)</span> is nilpotent if<span class="process-math">\(A^j = 0\)</span> for some positive integer j.</div> <div class="para logical" id="p-2283"><ol class="decimal">
+<li id="li-438"><div class="para" id="p-derived-li-438">Prove that if <span class="process-math">\(A\in Mat_{n\times n}(F)\)</span> and <span class="process-math">\(A\)</span> is nilpotent, then <span class="process-math">\(A^n = 0\text{.}\)</span>
+</div></li>
+<li id="li-439"><div class="para" id="p-derived-li-439">Find, with justification, the number of similarity classes of <span class="process-math">\(5 \times 5\)</span> nilpotent matrices with entries in <span class="process-math">\(F\text{.}\)</span> #### Problem 9 #unfinished Find, with justification, a complete and non-redundant list of conjugacy class representatives for the group <span class="process-math">\(\GL_2(\F_3)\text{,}\)</span> where <span class="process-math">\(\F_3\)</span> is the field with three elements. ## JCF #### <span class="process-math">\(\exe\)</span> – Companion Matrix and Jordan Blocks Let us consider the companion matrix of <span class="process-math">\((x-2)^3 = x^3 -6x^2 + 12x -8\text{:}\)</span><div class="displaymath process-math">
+\begin{equation*}
+A =
+\begin{bmatrix}
+0 &amp; 0 &amp; 8 \\
+1 &amp; 0 &amp; -12 \\
+0 &amp; 1 &amp; 6 
+\end{bmatrix}=C((x-2)^3)\in \M_{3 \times 3}(\Q).
+\end{equation*}
+</div>We can interpret this matrix as arising from the linear transformation <span class="process-math">\(g\)</span> on<div class="displaymath process-math">
+\begin{equation*}
+V := \Q[x]/(x-2)^3
+\end{equation*}
+</div>defined as multiplication by <span class="process-math">\(x\text{.}\)</span> Recall that the ordered basis of <span class="process-math">\(V\)</span> that gives the matrix <span class="process-math">\(A\)</span> is the “obvious one’’:<div class="displaymath process-math">
+\begin{equation*}
+B=\{\ov{1}, \ov{x}, \ov{x^2}\}.
+\end{equation*}
+</div>But notice that<div class="displaymath process-math">
+\begin{equation*}
+B'=\{\ov{1}, \ov{x-2}, \ov{(x-2)^2}\}
+\end{equation*}
+</div>is also a basis of <span class="process-math">\(V\text{.}\)</span> Let us calculate what the operator <span class="process-math">\(g\)</span> does to this alternative basis. We could work this out by brute force, but a cleaner way is to first compute what the operator <span class="process-math">\(g -2 \cdot \id_V\)</span> does. Since <span class="process-math">\(g - 2 \cdot \id_V\)</span> is multiplication by <span class="process-math">\(x-2\text{,}\)</span> it sends each basis element to the next one, except for the last one, which is sent to <span class="process-math">\(0\text{.}\)</span> It follows that the matrix of this operator relative to the ordered basis <span class="process-math">\(B'\)</span> is<div class="displaymath process-math">
+\begin{equation*}
+[g - 2 \cdot \id_V]_{B'}^{B'} = 
+\begin{bmatrix}
+0 &amp; 0 &amp; 0 \\
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+\end{bmatrix}
+\end{equation*}
+</div>and hence the matrix for <span class="process-math">\(g\)</span> itself for this basis is<div class="displaymath process-math">
+\begin{equation*}
+[g]_{B'}^{B'} = 
+\begin{bmatrix}
+2 &amp; 0 &amp; 0 \\
+1 &amp; 2 &amp; 0 \\
+0 &amp; 1 &amp; 2 \\
+\end{bmatrix} =: J_3(2).
+\end{equation*}
+</div>This is what’s known as a Jordan Block.</div></li>
+</ol></div></section> <section class="paragraphs" id="rem-61"><h5 class="heading"><span class="title"><span class="process-math">\(\rem\)</span>.</span></h5> <div class="para" id="p-2284">In this example, if we used the basis <span class="process-math">\(\{ \ov{(x-2)^2}, \ov{x-2}, \ov{1}\}\)</span> instead we would have gotten the transpose of <span class="process-math">\(J_3(2)\text{.}\)</span>
+</div></section> <section class="paragraphs" id="defn-jordan-block"><h5 class="heading"><span class="title"><span class="process-math">\(\defn\)</span> – Jordan Block.</span></h5> <div class="para logical" id="p-2285">
+<div class="para">Given a field <span class="process-math">\(F\text{,}\)</span> and integer <span class="process-math">\(n \geq 1\text{,}\)</span> and an element <span class="process-math">\(r\in F\text{,}\)</span> the <em class="emphasis"><span class="process-math">\(\defnn{Jordan block}\)</span></em> <span class="process-math">\(J_n(r)\)</span> is the <span class="process-math">\(n \times n\)</span> with entries in <span class="process-math">\(F\)</span> such that its diagonal entries are all <span class="process-math">\(r\text{,}\)</span> each entry just below the diagonal is a <span class="process-math">\(1\text{,}\)</span> and all other entries are <span class="process-math">\(0\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+J_n(r) = 
+\begin{bmatrix}
+r &amp; 0 &amp; 0 &amp; \cdots &amp; 0 \\
+1 &amp; r &amp; 0 &amp; \cdots &amp; 0 \\
+0 &amp; \ddots &amp; \ddots &amp;&amp; \vdots \\
+\vdots &amp;&amp; \ddots &amp; \ddots &amp; 0\\
+0 &amp; \cdots &amp; 0 &amp; 1 &amp; r \\
+\end{bmatrix}.
+\end{equation*}
+</div>
+<div class="para">(More precisely, <span class="process-math">\(a_{i,i} = r\)</span> for all <span class="process-math">\(1 \leq i \leq n\text{,}\)</span> <span class="process-math">\(a_{i,i-1} = 1\)</span> for all <span class="process-math">\(2 \leq i \leq n\text{,}\)</span> and <span class="process-math">\(a_{i,j} = 0\)</span> for all other <span class="process-math">\(i,j\text{.}\)</span>)</div>
+</div></section> <section class="paragraphs" id="rem-62"><h5 class="heading"><span class="title"><span class="process-math">\(\rem\)</span>.</span></h5> <div class="para" id="p-2286">Some people (including I think the authors or our text) defined a Jordan block to be the transpose of what I have defined it to be.</div></section> <section class="paragraphs" id="thm-jordan-canonical-form"><h5 class="heading"><span class="title"><span class="process-math">\(\thm\)</span> – Jordan Canonical Form.</span></h5> <div class="para logical" id="p-2287">
+<div class="para">Let <span class="process-math">\(F\)</span> be a field, let <span class="process-math">\(V\)</span> be a finite dimensional <span class="process-math">\(F\)</span>-vector space, and let <span class="process-math">\(g: V \to V\)</span> be a linear transformation satisfying the property that the characteristic polynomial <span class="process-math">\(\cp_g(x)\)</span> of <span class="process-math">\(g\)</span> factors completely in <span class="process-math">\(F[x]\)</span>[^1] into linear factors. Then there is an ordered basis <span class="process-math">\(B\)</span> for <span class="process-math">\(V\)</span> such that[^3]</div>
+<div class="displaymath process-math">
+\begin{equation*}
+[g]_B^B = J_{e_1}(r_1) \oplus \dots \oplus J_{e_s}(r_s)=
+\begin{bmatrix}
+J_{e_1}(r_1) &amp; 0 &amp; 0 &amp; \cdots &amp; 0 \\
+0 &amp;  J_{e_2}(r_2)  &amp; 0 &amp; \cdots &amp; 0 \\
+\vdots &amp; \vdots &amp; \ddots &amp;  &amp; \vdots \\
+0 &amp; 0 &amp; \cdots &amp; 0 &amp;  J_{e_m}(r_m) \\
+\end{bmatrix},
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(m\text{,}\)</span> the <span class="process-math">\(e_i\)</span>’s, and the <span class="process-math">\(r_i\)</span>’s are such that <span class="process-math">\((x - r_1)^{e_1}, \ldots, (x - r_m)^{e^m}\)</span> are the elementary divisors of the <span class="process-math">\(F[x]\)</span>-module <span class="process-math">\(V_g\)</span>[^2]. Moreover, this matrix is unique up to ordering of the Jordan Blocks, and it is known as “the’’ <em class="emphasis">Jordan Canonical Form</em> of <span class="process-math">\(g\text{.}\)</span>
+</div>
+</div> <section class="paragraphs" id="proof.-137"><h6 class="heading"><span class="title"><em class="emphasis">Proof.</em>.</span></h6> <div class="para" id="p-2288">The proof is similar to the proof the RCF theorem, using the idea of Example  above, but starting with the FTFGMPIDEDF (instead of the FTFGMPIDIFF). Here are the details:</div> <div class="para logical" id="p-2289">
+<div class="para">We consider the <span class="process-math">\(F[x]\)</span>-module <span class="process-math">\(V_g\text{.}\)</span> Since we assume <span class="process-math">\(\cp_g(x)\)</span> factors completely, the only irreducible polynomials in its factorization are linear. Thus the invariant factors of <span class="process-math">\(V_g\)</span> are products of polynomials of the form <span class="process-math">\((x-r)^e\)</span> for various <span class="process-math">\(r \in F\)</span> and integers <span class="process-math">\(e \geq 1\text{.}\)</span> It follows that the elementary divisors have this form too. The FTFGMPIDEDF therefore gives an isomorphism of <span class="process-math">\(F[x]\)</span>-modules</div>
+<div class="displaymath process-math">
+\begin{equation*}
+V_g\cong \frac{F[x]}{(x - r_1)^{e_1}} \oplus \frac{F[x]}{(x -r_2)^{e_2}} \oplus \cdots \oplus\frac{F[x]}{(x - r_s)^{e_s}}. 
+\end{equation*}
+</div>
+<div class="para">Now pick ordered bases <span class="process-math">\(B_i=\{\ov{1}, \ov{x-r_i}, \ldots, \ov{(x-r_i)^{e_i-1}}\}\)</span> for each of the summands and set <span class="process-math">\(B\)</span> to be their “ordered union’’ just as we did for the proof of the Theorem on RCF. By the same argument as in Example  applied to each summand individually, the matrix representing multiplication by <span class="process-math">\(x\)</span> on each summand is <span class="process-math">\(J_{e_i}(r_i)\text{.}\)</span> This gives the existence of the JCF.</div>
+</div> <div class="para" id="p-2290">The uniqueness follows from the uniqueness clause in the FTFGMPIDEDF.</div></section></section> <section class="paragraphs" id="rem-63"><h5 class="heading"><span class="title"><span class="process-math">\(\rem\)</span>.</span></h5> <div class="para" id="p-2291">Not every operator has a Jordan Canonical Form: The Theorem only applies if <span class="process-math">\(\cp_g(x)\)</span> factors completely, and, conversely, if an operator <span class="process-math">\(g\)</span> is represented by any lower-triangular matrix, then its characteristic polynomial must be a product of linear polynomials. For algebraically closed fields, such as <span class="process-math">\(\C\text{,}\)</span> every linear operator does indeed have a JCF.</div></section> <section class="paragraphs" id="rem-64"><h5 class="heading"><span class="title"><span class="process-math">\(\rem\)</span>.</span></h5> <div class="para" id="p-2292">If we flip the order of each <span class="process-math">\(B_i\)</span> in the proof, we would end up with the transpose of what I have defined the JCF to be. This is what our text does, and it defines the JCF as the transpose of what I have defined it to be.</div></section> <section class="paragraphs" id="cor-jcf-exists-if-charpoly-factors-linearly"><h5 class="heading"><span class="title"><span class="process-math">\(\cor\)</span> – JCF Exists if CharPoly Factors Linearly.</span></h5> <div class="para" id="p-2293">If <span class="process-math">\(A\)</span> is an <span class="process-math">\(n \times n\)</span> matrix with entries in a field <span class="process-math">\(F\)</span> and <span class="process-math">\(\cp_A(x)\)</span>[^1] factors completely into linear factors, then <span class="process-math">\(A\)</span> is similar to a matrix in Jordan Canonical Form, and this matrix is unique up to the ordering of the Jordan Blocks.</div></section> <section class="paragraphs" id="exe-finding-jcf"><h5 class="heading"><span class="title"><span class="process-math">\(\exe\)</span> – Finding JCF.</span></h5> <div class="para logical" id="p-2294">
+<div class="para">Let us find the Jordan Canonical Form of</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A = 
+\begin{bmatrix} 
+1 &amp; -1 &amp; 1 \\
+0 &amp; 0 &amp; 1 \\
+0 &amp; 1 &amp; 0 \\
+\end{bmatrix}
+\in \Mat_{3 \times 3}(\Q).
+\end{equation*}
+</div>
+</div> <div class="para logical" id="p-2295">
+<div class="para">We found the Rational Canonical Form of this matrix before. In the process we showed that we have an isomorphism of <span class="process-math">\(\Q[x]\)</span>-module.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Q^3_A \cong \Q[x]/(x-1) \oplus \Q[x]/(x^2-1).
+\end{equation*}
+</div>
+<div class="para">By the Sunzi Remainder Theorem</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Q[x]/(x-1) \oplus \Q[x]/(x^2-1) \cong \Q[x]/(x-1) \oplus \Q[x]/(x-1) \oplus \Q[x]/(x+1)
+\end{equation*}
+</div>
+<div class="para">and thus the elementary divisors of <span class="process-math">\(\Q^3_A\)</span> are <span class="process-math">\(x-1, x-1, x+1\text{.}\)</span> By the Theorem this shows that the JCF of <span class="process-math">\(A\)</span> is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+J_1(1) \oplus J_1(1) \oplus J_1(-1) = \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; -1 \end{bmatrix}.
+\end{equation*}
+</div>
+</div></section> <section class="paragraphs" id="defn-diagonalizable"><h5 class="heading"><span class="title"><span class="process-math">\(\defn\)</span> – Diagonalizable.</span></h5> <div class="para" id="p-2296">Let <span class="process-math">\(V\)</span> be a finite dimensional vector space over a field <span class="process-math">\(F\)</span> and let <span class="process-math">\(g: V \to V\)</span> be an <span class="process-math">\(F\)</span>-linear operator. We say <span class="process-math">\(g\)</span> is <em class="emphasis"><span class="process-math">\(\defnn{diagonalizable}\)</span></em> if there is a basis <span class="process-math">\(B\)</span> for <span class="process-math">\(V\)</span> such that the matrix <span class="process-math">\([g]_B^B\)</span>[^1] is a diagonal matrix.</div></section> <section class="paragraphs" id="problem-7-diagonalizable-if-minpoly-splits"><h5 class="heading"><span class="title">Problem 7 – Diagonalizable if MinPoly Splits.</span></h5> <div class="para" id="p-2297">Let <span class="process-math">\(V\)</span> be a finite dimensional vector space over a field <span class="process-math">\(F\)</span> and let <span class="process-math">\(\t : V \to V\)</span> be an <span class="process-math">\(F\)</span>-linear operator on <span class="process-math">\(V\text{.}\)</span> Prove <span class="process-math">\(\t\)</span> is diagonalizable over <span class="process-math">\(F\)</span> if and only if its minimum polynomial <span class="process-math">\(p(x)\)</span> factors into distinct linear terms in <span class="process-math">\(F[x]\)</span>[^1].</div> <section class="paragraphs" id="proof.-138"><h6 class="heading"><span class="title"><em class="emphasis">Proof</em>..</span></h6> <div class="para" id="p-2298">
+<span class="process-math">\((\Rightarrow)\)</span> Suppose that <span class="process-math">\(g\)</span> is diagonalizable. Thus there exists a change of basis matrix <span class="process-math">\(A\)</span> such that <span class="process-math">\(A\)</span> is diagonal. As it is diagonal, its diagonal entries are the eigenvalues of <span class="process-math">\(g\text{,}\)</span> and thus the roots of the minimal polynomial of <span class="process-math">\(g\text{.}\)</span> Using row and column operations we can rearrange <span class="process-math">\(A\)</span> so that all repeated linear factors are next to each other in the diagonal, for convenience.</div> <div class="para" id="p-2299">We know that <span class="process-math">\(\mp_A(x)\)</span> is the smallest monic polynomial that sends <span class="process-math">\(A\)</span> to 0. Take all the distinct eigenvalues <span class="process-math">\(\lambda_i\)</span> and consider <span class="process-math">\(q(x)=\prod(x-\lambda_i)\text{.}\)</span>
+</div> <div class="para" id="p-2300">We examine <span class="process-math">\(q(A)\text{.}\)</span> It will be a product of matrices, one for each <span class="process-math">\(\lambda_i\text{.}\)</span> First, take the first matrix in this product, <span class="process-math">\((A-\lambda_1I)\text{,}\)</span> and note that it sends all <span class="process-math">\(\lambda_1\)</span> in <span class="process-math">\(A\)</span> to 0. Thus all of the rows and columns that contained a <span class="process-math">\(\lambda_1\)</span> are now 0, and thus all these rows and columns will be 0 in the final product <span class="process-math">\(q(A)\text{.}\)</span> As this is we set <span class="process-math">\(q(x)=\prod(x-\lambda_i)\)</span> for all <span class="process-math">\(l\lambda_i\in A\text{,}\)</span> we see that for each row and column in <span class="process-math">\(A\)</span> there will exist a matrix <span class="process-math">\(A-\lambda_iI\)</span> in the product <span class="process-math">\(q(A)\)</span> such that the row and column will be 0. Thus the entire matrix will be 0, and <span class="process-math">\(q(A)=0\text{.}\)</span>
+</div> <div class="para" id="p-2301">Note that if any <span class="process-math">\(\lambda_i\)</span> were excluded from <span class="process-math">\(q(x)\)</span> there would exist a non-zero row and column for every matrix in the product, and thus <span class="process-math">\(q\)</span> would not send <span class="process-math">\(A\)</span> to 0. Thus <span class="process-math">\(q(x)\)</span> is indeed the minimal polynomial of <span class="process-math">\(A\text{.}\)</span> As <span class="process-math">\(q(x)=\prod(x-\lambda_i)\text{,}\)</span> we see it does indeed factor into distinct linear terms.</div> <div class="para" id="p-2302">
+<span class="process-math">\((\Leftarrow)\)</span> Suppose the minimum polynomial of <span class="process-math">\(g\)</span> factors completely into distinct linear factors, each of which has the form <span class="process-math">\(x-\lambda_i\)</span> for some <span class="process-math">\(\lambda_i\in F\text{.}\)</span> As each <span class="process-math">\(\lambda_i\)</span> is distinct, each elementary divisor is of the form <span class="process-math">\((x-\lambda_i)^1\text{.}\)</span>
+</div> <div class="para" id="p-2303">We construct the Jordan Canonical Form of <span class="process-math">\(g\text{.}\)</span> As the elementary divisors are linear the Jordan blocks are <span class="process-math">\(1\times1\)</span> matrices, making the <span class="process-math">\(JCF\)</span> a diagonal matrix. As the JCF is itself a change of basis matrix, we see that <span class="process-math">\(g\)</span> is diagonalizable.</div></section></section> <section class="paragraphs" id="problem-6-derivative-linear-operator"><h5 class="heading"><span class="title">Problem 6 – Derivative Linear Operator.</span></h5> <div class="para logical" id="p-2304">
+<div class="para">Consider the <span class="process-math">\(\C\)</span>-vector space <span class="process-math">\(V = {p \in \C[x] : \deg(p) \leq n - 1}\text{.}\)</span> (You may assume without proof that <span class="process-math">\(V\)</span> is n-dimensional.) Consider the following linear maps <span class="process-math">\(V \to V\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+D : V \to V \hspace{4cm} T : V \to V
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+p\mapsto p'\hspace{4cm} p\mapsto xp'
+\end{equation*}
+</div>
+<div class="para">(where p′ denotes the derivative of p). Determine the JCF of (a) <span class="process-math">\(D\)</span> (b) <span class="process-math">\(B\)</span>
+</div>
+</div> <section class="paragraphs" id="proof.-139"><h6 class="heading"><span class="title"><em class="emphasis">Proof</em>..</span></h6> <section class="paragraphs" id="part-a-35"><h6 class="heading"><span class="title">Part (a).</span></h6> <div class="para" id="p-2305">For any integer <span class="process-math">\(n \geq 1\text{,}\)</span> consider the <span class="process-math">\(\C\)</span>-vector space <span class="process-math">\(V = \{p \in \C[x] : \deg(p) \leq n - 1\}\text{.}\)</span>
+</div> <div class="para logical" id="p-2306">
+<div class="para">Let <span class="process-math">\(T:V \to V\)</span> be the linear operator given by <span class="process-math">\(T(p) = xp'\)</span> (where <span class="process-math">\(p'\)</span> denotes the derivative of <span class="process-math">\(p\)</span>). Note that the change of basis matrix for this operator is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{bmatrix}
+0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; \cdots &amp; 0 &amp; 0 \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\
+0 &amp; 0 &amp; \cdots &amp; 0 &amp; n-1 \\   
+\end{bmatrix},
+\end{equation*}
+</div>
+<div class="para">with the basis <span class="process-math">\(\{1,x,\dots,x^{n-1}\}\text{.}\)</span> Thus <span class="process-math">\(\cp_A(x)\)</span>[^1] will be given by the determinant of the matrix</div>
+</div> <div class="para logical" id="p-2307"><div class="displaymath process-math">
+\begin{equation*}
+\begin{bmatrix}
+x &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
+0 &amp; x-1 &amp; \cdots &amp; 0 &amp; 0 \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\
+0 &amp; 0 &amp; \cdots &amp; 0 &amp; x-(n-1) \\   
+\end{bmatrix},
+\end{equation*}
+</div></div> <div class="para logical" id="p-2308">
+<div class="para">which is diagonal. Hence</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\cp_AT(x)=\displaystyle\prod_{i=0}^{n-1}(x-i).
+\end{equation*}
+</div>
+<div class="para">Thus <span class="process-math">\(\cp_AT(x)\)</span> factors into distinct linear polynomials, each of which is in the form <span class="process-math">\((x-i)\)</span> for <span class="process-math">\(0\leq i\leq n-1\text{.}\)</span> Thus each linear term is an elementary divisor, making each Jordan Block a <span class="process-math">\(1\times1\)</span> matrix with <span class="process-math">\(i\)</span> as the only entry. Thus the Jordan Canonical form is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{bmatrix}
+0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; \cdots &amp; 0 &amp; 0 \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\
+0 &amp; 0 &amp; \cdots &amp; 0 &amp; n-1 \\   
+\end{bmatrix}.
+\end{equation*}
+</div>
+</div></section> <section class="paragraphs" id="part-b-32"><h6 class="heading"><span class="title">Part (b).</span></h6> <div class="para" id="p-2309">This time around the change of basis matrix (denoted <span class="process-math">\(B\)</span> and using the same basis as above) for this matrix has 0s along the diagonal, and increasing natural numbers (starting at 0, sorry) along the upper diagonal. Thus <span class="process-math">\(\cp_B(x)=x^n\text{.}\)</span>
+</div> <div class="para" id="p-2310">Recall that the minimum polynomial corresponding to <span class="process-math">\(B\)</span> will be the the smallest monic polynomial such that <span class="process-math">\(B\)</span> is sent to 0. Note that as <span class="process-math">\(D\)</span> is the operator sending <span class="process-math">\(p\)</span> to its derivative, and that <span class="process-math">\(D^{(2)}=D(D(p))=p''=p^{(2)}\text{.}\)</span> Thus <span class="process-math">\(B^2\)</span> can be viewed as a change of basis matrix for taking the second derivative of the basis, and so on.</div> <div class="para" id="p-2311">As the basis extends to <span class="process-math">\(x^{n-1}\text{,}\)</span> it requires <span class="process-math">\(n\)</span> derivatives to make this polynomial become 0. Thus the minimal polynomial of <span class="process-math">\(B\)</span> must be <span class="process-math">\(x^n\text{,}\)</span> as it it monic and <span class="process-math">\(B^n=0\text{.}\)</span> As the degree of the invariant factors must sum to <span class="process-math">\(n\)</span> and <span class="process-math">\(\mp_B(x)=x^n\text{,}\)</span> which is itself an invariant factor, we see that it must in fact be the only one.</div> <div class="para" id="p-2312">As <span class="process-math">\(x^n\)</span> is already a power of a prime, it is the only elementary divisor as well. Thus the Jordan Canonical Form for <span class="process-math">\(B\)</span> is an <span class="process-math">\(n\times n\)</span> Jordan Block with 0s along the diagonal and 1s along the sub-diagonal.</div></section></section></section> <section class="paragraphs" id="problem-6-jcf-and-rcf-of-derivative-operator"><h5 class="heading"><span class="title">Problem 6 – JCF and RCF of Derivative Operator.</span></h5> <div class="para" id="p-2313">Let <span class="process-math">\(n\)</span> be a positive integer. Consider the real vector space <span class="process-math">\(V = \{p \in R[x] | \deg(p) \leq n\}\)</span> and the linear transformation <span class="process-math">\(T : V \to V, T (p) = p'\text{,}\)</span> where <span class="process-math">\(p'(x)\)</span> is the derivative of p(x).</div> <div class="para logical" id="p-2314"><ol class="decimal">
+<li id="li-440"><div class="para" id="p-derived-li-440">Find the characteristic polynomial and the minimum polynomial for <span class="process-math">\(T\text{.}\)</span>
+</div></li>
+<li id="li-441"><div class="para" id="p-derived-li-441">Find the invariant factors and the elementary divisors for <span class="process-math">\(T\text{.}\)</span>
+</div></li>
+<li id="li-442"><div class="para" id="p-derived-li-442">Find the RCF and the Jordan Canonical Form for <span class="process-math">\(T\text{.}\)</span>
+</div></li>
+</ol></div> <section class="paragraphs" id="proof.-140"><h6 class="heading"><span class="title"><em class="emphasis">Proof.</em>.</span></h6> <div class="para" id="p-2315">Let <span class="process-math">\(T:V \to V\)</span> be the linear operator given by <span class="process-math">\(T(p) = xp'\)</span> (where <span class="process-math">\(p'\)</span> denotes the derivative of <span class="process-math">\(p).\)</span>
+</div> <section class="paragraphs" id="part-a-36"><h6 class="heading"><span class="title">Part (a).</span></h6> <div class="para logical" id="p-2316">
+<div class="para">Note that the change of basis matrix for this operator is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{bmatrix}
+0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; \cdots &amp; 0 &amp; 0 \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\
+0 &amp; 0 &amp; \cdots &amp; 0 &amp; n-1 \\   
+\end{bmatrix},
+\end{equation*}
+</div>
+<div class="para">with the basis <span class="process-math">\(\{1,x,\dots,x^{n-1}\}\text{.}\)</span> Thus <span class="process-math">\(\cp_A(x)\)</span> will be given by the determinant of the matrix</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{bmatrix}
+x &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
+0 &amp; x-1 &amp; \cdots &amp; 0 &amp; 0 \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\
+0 &amp; 0 &amp; \cdots &amp; 0 &amp; x-(n-1) \\   
+\end{bmatrix},
+\end{equation*}
+</div>
+<div class="para">which is diagonal. Hence <span class="process-math">\(\cp_AT(x)=\displaystyle\prod_{i=0}^{n-1}(x-i)\text{.}\)</span>
+</div>
+</div></section> <section class="paragraphs" id="part-b-33"><h6 class="heading"><span class="title">Part (b).</span></h6> <div class="para" id="p-2317">Our <span class="process-math">\(\cp_AT(x)\)</span> factors into distinct linear polynomials, each of which is in the form <span class="process-math">\((x-i)^1\)</span> for <span class="process-math">\(0\leq i\leq n-1\text{.}\)</span> Thus each linear term is an elementary divisor. However, as none of these elementary divisors divide any of the others, we see that the only invariant factor is <span class="process-math">\(\cp_AT(x)\)</span> itself.</div></section> <section class="paragraphs" id="part-c-6"><h6 class="heading"><span class="title">Part (c).</span></h6> <div class="para logical" id="p-2318">
+<div class="para">As each linear term is an elementary divisor, each Jordan block a <span class="process-math">\(1\times1\)</span> matrix with <span class="process-math">\(i\)</span> as the only entry. Thus the Jordan Canonical form is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{bmatrix}
+0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; \cdots &amp; 0 &amp; 0 \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\
+0 &amp; 0 &amp; \cdots &amp; 0 &amp; n-1 \\   
+\end{bmatrix}.
+\end{equation*}
+</div>
+<div class="para">As the only invariant factor is <span class="process-math">\(\cp_AT(x)\text{,}\)</span> we see that the Rational Canonical Form of <span class="process-math">\(T\)</span> is <span class="process-math">\(C(\cp_AT(x))\text{.}\)</span>
+</div>
+</div></section></section></section> <section class="paragraphs" id="problem-4-jcf-and-similarity"><h5 class="heading"><span class="title">Problem 4 – JCF and Similarity.</span></h5> <div class="para logical" id="p-2319">
+<div class="para">Let <span class="process-math">\(A\)</span> be the matrix with entries in <span class="process-math">\(\C\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A=\begin{bmatrix}
+3 &amp; 0 &amp; 0 &amp; 0\\
+1 &amp; 3 &amp; 0 &amp; 0\\
+1 &amp; 0 &amp; 3 &amp; 0\\
+0 &amp; 2 &amp; 1 &amp; 3\\
+\end{bmatrix}
+\end{equation*}
+</div>
+<div class="para">(a) Find the Jordan Canonical Form of A. (b) Is <span class="process-math">\(A\)</span> similar to</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{bmatrix}
+0 &amp; -9 &amp; 0 &amp; 0\\
+1 &amp; 6 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; -9\\
+0 &amp; 0 &amp; 1&amp; 6\\
+\end{bmatrix}?
+\end{equation*}
+</div>
+</div> <section class="paragraphs" id="proof.-141"><h6 class="heading"><span class="title"><em class="emphasis">Proof.</em>.</span></h6> <section class="paragraphs" id="part-a-37"><h6 class="heading"><span class="title">Part (a).</span></h6> <div class="para logical" id="p-2320">
+<div class="para">First, notice that <span class="process-math">\(A\)</span> is upwards triangular, and thus <span class="process-math">\(\cp_A(x)=(x-3)^4\text{.}\)</span> By the Cayley Hamilton Theorem the minimum polynomial divides the characteristic polynomial, and from the definition of minimum polynomial we know <span class="process-math">\(\mp_A(x)\)</span> is the smallest polynomial such that <span class="process-math">\(\mp_A(A) = 0\text{.}\)</span> Since <span class="process-math">\(\mp_A(x)\)</span> must be a power of <span class="process-math">\((x-3)^n\)</span> with <span class="process-math">\(n\leq 4\text{,}\)</span> we plug in values of <span class="process-math">\(n\)</span> until we get <span class="process-math">\(0\text{.}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(A-3I)^1=\begin{bmatrix}
+0 &amp; 0 &amp; 0 &amp; 0\\
+1 &amp; 0 &amp; 0 &amp; 0\\
+1 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 2 &amp; 1 &amp; 0\\
+\end{bmatrix}
+\end{equation*}
+</div>
+<div class="para">Shucks. Moving on,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(A-3I)^2=\begin{bmatrix}
+0 &amp; 0 &amp; 0 &amp; 0\\
+1 &amp; 0 &amp; 0 &amp; 0\\
+1 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 2 &amp; 1 &amp; 0\\
+\end{bmatrix}\cdot\begin{bmatrix}
+0 &amp; 0 &amp; 0 &amp; 0\\
+1 &amp; 0 &amp; 0 &amp; 0\\
+1 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 2 &amp; 1 &amp; 0\\
+\end{bmatrix}=\begin{bmatrix}
+0 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 0\\
+3 &amp; 0 &amp; 0 &amp; 0\\
+\end{bmatrix},
+\end{equation*}
+</div>
+<div class="para">which is also not <span class="process-math">\(0\text{.}\)</span> However, multiplying one more time we see <span class="process-math">\(\mp_A(x)=(x-3)^3\text{.}\)</span> By part (2) of this theorem <span class="process-math">\((x-3)^3\)</span> is an invariant factor. By part (1) of that same theorem, invariant factors must multiply to <span class="process-math">\(\cp_A(x)\text{,}\)</span> and so the invariant factors are <span class="process-math">\(x-3\)</span> and <span class="process-math">\((x-3)^3\text{.}\)</span> These are also the elementary divisors. So</div>
+</div> <div class="para logical" id="p-2321"><div class="displaymath process-math">
+\begin{equation*}
+J_1(3)\oplus J_3(3)=\begin{bmatrix}
+3 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 3 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 3 &amp; 0\\
+0 &amp; 0 &amp; 1 &amp; 3\\
+\end{bmatrix}.
+\end{equation*}
+</div></div></section> <section class="paragraphs" id="part-b-34"><h6 class="heading"><span class="title">Part (b).</span></h6> <div class="para logical" id="p-2322">
+<div class="para">Let</div>
+<div class="displaymath process-math">
+\begin{equation*}
+B=\begin{bmatrix}
+0 &amp; -9 &amp; 0 &amp; 0\\
+1 &amp; 6 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; -9\\
+0 &amp; 0 &amp; 1&amp; 6\\
+\end{bmatrix}
+\end{equation*}
+</div>
+<div class="para">And notice that <span class="process-math">\((B-3I)^2=0\text{.}\)</span> Thus <span class="process-math">\((x-3)^3\)</span> cannot be the minimal polynomial of <span class="process-math">\(B\text{.}\)</span> Two matrices are only similar if they share the same invariant factors (and thus the same minimum polynomial), so <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are not similar.</div>
+</div></section></section></section> <section class="paragraphs" id="problem-6-rcf-and-determining-existence-of-jcf"><h5 class="heading"><span class="title">Problem 6 – RCF and Determining Existence of JCF.</span></h5> <div class="para logical" id="p-2323">
+<div class="para">For the matrix</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A=\begin{bmatrix} 0 &amp; -1 &amp; 2 \\ 1 &amp; 0 &amp; 0 \\0 &amp; 1 &amp; -2\end{bmatrix}
+\end{equation*}
+</div>
+<div class="para">in <span class="process-math">\(\Mat_{3\times3}(\R)\text{:}\)</span> (a) Find the RCF of <span class="process-math">\(A\text{.}\)</span> (b) Determine whether or not <span class="process-math">\(A\)</span> has a Jordan Canonical Form, and if so, find this form.</div>
+</div> <section class="paragraphs" id="proof.-142"><h6 class="heading"><span class="title"><em class="emphasis">Proof</em>..</span></h6> <section class="paragraphs" id="part-a-38"><h6 class="heading"><span class="title">Part (a).</span></h6> <div class="para logical" id="p-2324">
+<div class="para">Notice <span class="process-math">\(\cp_A(x)=\det(A-xI)\text{.}\)</span> So we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{align}\cp_A(x)&amp;=-x\det\begin{bmatrix} -x &amp; 0 \\ 1 &amp; -2-x\end{bmatrix}-(-1)\det\begin{bmatrix} 1 &amp; 0 \\ 0 &amp; -2-x\end{bmatrix}+2\det\begin{bmatrix} 1 &amp; -x \\ 0 &amp; 1\end{bmatrix}\\&amp;=-x(-x(-2-x))+(-2-x)+2(1)\\&amp;=-x^3-2x^2-x\\&amp;-x(x^2+2x+1)\\&amp;=-x(x+1)^2.\end{align}
+\end{equation*}
+</div>
+<div class="para">Not so bad! Now, the invariant factors all divide the characteristic polynomial and must divide the following factor, so our options for sets of invariant factors are the following: - <span class="process-math">\(\{-x(x+1)^2\}\)</span> - <span class="process-math">\(\{(x+1),-x(x+1)\}\)</span> However, the largest invariant factor is also the minimal polynomial. So we check to see if <span class="process-math">\(-A(A+I)=0\text{.}\)</span> Luckily, the very first calculation shows that this is not the case. Thus the minimum polynomial is the characteristic polynomial is the only invariant factor of <span class="process-math">\(A\text{.}\)</span> Thus the RCF of <span class="process-math">\(A\)</span> is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C(-x^3-2x^2-x)=\begin{bmatrix} 0 &amp; 0 &amp; 0 \\ 1 &amp; 0 &amp; 1 \\0 &amp; 1 &amp; 2\end{bmatrix}.
+\end{equation*}
+</div>
+</div></section> <section class="paragraphs" id="part-b-35"><h6 class="heading"><span class="title">Part (b).</span></h6> <div class="para logical" id="p-2325">
+<div class="para">Luckily for us, <span class="process-math">\(\cp_A(x)\)</span> factors completely into linear terms! So our elementary divisors are <span class="process-math">\(-x\)</span> and <span class="process-math">\((x+1)^2\text{.}\)</span> We see <span class="process-math">\(J_1(0)=\begin{bmatrix} 0 \end{bmatrix}\)</span> and <span class="process-math">\(J_2(-1)=\begin{bmatrix} -1 &amp; 0 \\ 1 &amp; -1\end{bmatrix}\text{,}\)</span> so the Jordan Canonical form of <span class="process-math">\(A\)</span> is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+J=\begin{bmatrix} 0 &amp; 0 &amp; 0 \\ 0 &amp; -1 &amp; 0 \\0 &amp; 1 &amp; -1\end{bmatrix}.
+\end{equation*}
+</div>
+</div></section></section></section> <section class="paragraphs" id="problem-9-transpose-similarity"><h5 class="heading"><span class="title">Problem 9 – Transpose Similarity.</span></h5> <div class="para" id="p-2326">Let <span class="process-math">\(F\)</span> be a field and <span class="process-math">\(A\)</span> a square matrix with entries from <span class="process-math">\(F\text{.}\)</span> Prove that <span class="process-math">\(A\)</span> is similar to its transpose.</div> <section class="paragraphs" id="proof.-143"><h6 class="heading"><span class="title"><em class="emphasis">Proof.</em>.</span></h6> <div class="para" id="p-2327">Let <span class="process-math">\(L\)</span> be the algebraic closure of <span class="process-math">\(F\text{.}\)</span> Thus <span class="process-math">\(A\)</span> has a Jordan Canonical Form in <span class="process-math">\(L\text{.}\)</span> For each Jordan block <span class="process-math">\(J_i\)</span> in the JCF of <span class="process-math">\(A\text{,}\)</span> let <span class="process-math">\(B_i\)</span> denote the transpose of the identity matrix, and notice that <span class="process-math">\(B_iJ_iB_i\inv=J_i^T\text{.}\)</span> As this is the case for every Jordan block, we see that the JCF of <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(J\text{,}\)</span> is similar to its transpose. As the <span class="process-math">\(A\)</span> is similar to <span class="process-math">\(J\text{,}\)</span> <span class="process-math">\(A^T\)</span> is similar to <span class="process-math">\(J^T\text{,}\)</span> and <span class="process-math">\(J\)</span> is similar to <span class="process-math">\(J^T\text{,}\)</span> we see that <span class="process-math">\(A\sim A^T\)</span> in <span class="process-math">\(L\)</span> by transitivity.</div> <div class="para" id="p-2328">Suppose <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are similar in <span class="process-math">\(\Mat_{n \times n}(L)\text{.}\)</span> As <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> have entries in <span class="process-math">\(F\text{,}\)</span> then they are both in <span class="process-math">\(\Mat_{n \times n}(F)\text{.}\)</span> Thus there exist matrices <span class="process-math">\(C,D\in\Mat_{n \times n}(F)\)</span> in RCF such that <span class="process-math">\(A\)</span> is similar to <span class="process-math">\(C\)</span> and that <span class="process-math">\(B\)</span> is similar to <span class="process-math">\(D\text{.}\)</span> However, <span class="process-math">\(A\)</span> is similar to <span class="process-math">\(C\)</span> and that <span class="process-math">\(B\)</span> is similar to <span class="process-math">\(D\)</span> in <span class="process-math">\(\Mat_{n \times n}(L)\)</span> as well. Notice <span class="process-math">\(C\)</span> and <span class="process-math">\(D\)</span> are still in RCF. However, as the RCF is unique, this means that <span class="process-math">\(C=D\)</span> in <span class="process-math">\(\Mat_{n \times n}(L)\text{,}\)</span> making them equal in <span class="process-math">\(\Mat_{n \times n}(F)\)</span> as well. Thus <span class="process-math">\(A\)</span> is similar to <span class="process-math">\(B\text{,}\)</span> as similarity is transitive.</div> <div class="para" id="p-2329">This yields <span class="process-math">\(A\sim A^T\)</span> in <span class="process-math">\(F\text{.}\)</span>
+</div></section></section> <section class="paragraphs" id="problem-49"><h5 class="heading"><span class="title">Problem.</span></h5> <div class="para logical" id="p-2330">
+<div class="para">Let <span class="process-math">\(V = \R^3\)</span> with the standard basis <span class="process-math">\(B=\{e_1,e_2,e_3\}\)</span> and let <span class="process-math">\(t: V \to V\)</span> be the linear transformation represented by the matrix</div>
+<div class="displaymath process-math">
+\begin{equation*}
+[t]_B^B =
+\begin{bmatrix}
+0   &amp;   -1  &amp;   0\\
+-1  &amp;   0   &amp;   3\\ 
+0   &amp;   0   &amp;   1   
+\end{bmatrix}.
+\end{equation*}
+</div>
+<div class="para">1. Find the invariant factor decomposition of the <span class="process-math">\(\R[x]\)</span>-module <span class="process-math">\(V_t\text{.}\)</span> 2. Find the characteristic and minimal polynomials of <span class="process-math">\(t\text{.}\)</span> 3. Find the rational canonical form of <span class="process-math">\(t\text{.}\)</span> 4. Find the Jordan canonical form of <span class="process-math">\(t\text{.}\)</span>
+</div>
+</div></section> <section class="paragraphs" id="problem-8-unfinished-2"><h5 class="heading"><span class="title">Problem 8 #unfinished.</span></h5> <div class="para logical" id="p-2331">
+<div class="para">Consider the following matrix:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A=\begin{bmatrix} -1 &amp; 3 &amp; 0\\0 &amp; 2 &amp; 0\\2 &amp; 1 &amp; -1\end{bmatrix}.
+\end{equation*}
+</div>
+<div class="para">(a) Find the rational canonical form of <span class="process-math">\(A\text{.}\)</span> (b) Find the Jordan canonical form of <span class="process-math">\(A\text{.}\)</span>
+</div>
+</div></section> <section class="paragraphs" id="problem-6-unfinished"><h5 class="heading"><span class="title">Problem 6 #unfinished.</span></h5> <div class="para" id="p-2332">Let <span class="process-math">\(n\)</span> be a positive integer and let <span class="process-math">\(J = J_{2n}(0)\)</span> be the Jordan block matrix of size <span class="process-math">\(2n \times 2n\)</span> with eigenvalue 0 in <span class="process-math">\(M_{2n\times2n}(\C)\text{.}\)</span>
+</div> <div class="para logical" id="p-2333"><ol class="decimal">
+<li id="li-443"><div class="para" id="p-derived-li-443">Find the minimal polynomials for <span class="process-math">\(J\)</span> and for <span class="process-math">\(J^2\text{,}\)</span> with justification.</div></li>
+<li id="li-444"><div class="para" id="p-derived-li-444">Find the Jordan canonical form of <span class="process-math">\(J^2\text{,}\)</span> with justification. <em class="emphasis">Hint</em>: consider the kernel of <span class="process-math">\(J^2\text{.}\)</span>
+</div></li>
+</ol></div> <section class="paragraphs" id="proof.-144"><h6 class="heading"><span class="title"><em class="emphasis">Proof.</em>.</span></h6> <div class="para" id="p-2334">Let <span class="process-math">\(n\)</span> be a positive integer and let <span class="process-math">\(J = J_{2n}(0)\)</span> be the Jordan block matrix of size <span class="process-math">\(2n \times 2n\)</span> with eigenvalue 0 in <span class="process-math">\(M_{2n\times2n}(\C)\text{.}\)</span>
+</div> <section class="paragraphs" id="part-a-39"><h6 class="heading"><span class="title">Part (a).</span></h6> <div class="para" id="p-2335">Notice that <span class="process-math">\(J\)</span> is a triangular matrix with <span class="process-math">\(0\)</span>’s along the diagonal. Thus <span class="process-math">\(\cp_J(x)=x^{2n}\text{,}\)</span> the product of the diagonal entries of the matrix <span class="process-math">\(J-xI\text{.}\)</span>
+</div> <div class="para" id="p-2336">Squaring a triangular matrix moves everything one down (Proof?), and so <span class="process-math">\(x^{2n-1}\)</span> should do it. Squaring <span class="process-math">\(J\)</span> just moves us one closer, so <span class="process-math">\(x^{2n-2}\)</span>
+</div></section> <section class="paragraphs" id="part-b-36"><h6 class="heading"><span class="title">Part (b).</span></h6> <div class="para" id="p-2337">As <span class="process-math">\(\cp_{J^2}(x)=x^{2n}\text{,}\)</span> the only roots of it are <span class="process-math">\(0\text{,}\)</span> and thus these are the only elementary divisors of <span class="process-math">\(J^2\text{.}\)</span>
+</div></section></section></section> <section class="paragraphs" id="problem-7-unfinished-4"><h5 class="heading"><span class="title">Problem 7 #unfinished.</span></h5> <div class="para logical" id="p-2338">
+<div class="para">On canonical forms (a) Consider the <span class="process-math">\(\Q[x]\)</span>-module</div>
+<div class="displaymath process-math">
+\begin{equation*}
+M=\frac{\Q[x]}{(x^4-1)}\oplus\frac{\Q[x]}{x^2(x-1)}
+\end{equation*}
+</div>
+<div class="para">and let <span class="process-math">\(V\)</span> the <span class="process-math">\(\Q\)</span>-vector space obtained from <span class="process-math">\(M\)</span> by restriction of scalars along the evident inclusion <span class="process-math">\(\Q ⊆ \Q[x]\)</span> and let <span class="process-math">\(t : V → V\)</span> be the <span class="process-math">\(\Q\)</span>-linear transformation given as multiplication by <span class="process-math">\(x\text{.}\)</span> Find, with justification, the rational canonical form of <span class="process-math">\(t\text{.}\)</span> (b) Consider the <span class="process-math">\(\C[x]\)</span>-module</div>
+<div class="displaymath process-math">
+\begin{equation*}
+N=\frac{\C[x]}{(x^4-1)}\oplus\frac{\Q[x]}{x^2(x-1)}
+\end{equation*}
+</div>
+<div class="para">and let <span class="process-math">\(W\)</span> the <span class="process-math">\(\C\)</span>-vector space obtained from <span class="process-math">\(N\)</span> by restriction of scalars along <span class="process-math">\(\C ⊆ \C[x]\)</span> and let <span class="process-math">\(t : W → W\)</span> be the <span class="process-math">\(\C\)</span>-linear transformation given as multiplication by <span class="process-math">\(x\text{.}\)</span> Find, with justification, the Jordan canonical form of <span class="process-math">\(t\text{.}\)</span>
+</div>
+</div></section> <section class="paragraphs" id="problem-9-unfinished-2"><h5 class="heading"><span class="title">Problem 9 #unfinished.</span></h5> <div class="para logical" id="p-2339">
+<div class="para">Consider the following matrix over <span class="process-math">\(\Q\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{bmatrix}-1&amp;0&amp;0&amp;0\\0&amp;-1&amp;0&amp;0\\-2&amp;-2&amp;0&amp;1\\-2&amp;0&amp;-1&amp;-2\end{bmatrix}
+\end{equation*}
+</div>
+<div class="para">(a) Show that the characteristic and minimal polynomials of <span class="process-math">\(A\)</span> are, respectively, <span class="process-math">\((x + 1)^4\)</span> and <span class="process-math">\((x + 1)^3\text{.}\)</span> (b) Find the rational canonical form <span class="process-math">\(R\)</span> of <span class="process-math">\(A\)</span> and the Jordan canonical form <span class="process-math">\(J\)</span> of <span class="process-math">\(A\text{.}\)</span> (c) Find an invertible matrix <span class="process-math">\(P\)</span> such that <span class="process-math">\(P\inv AP = J\text{.}\)</span>
+</div>
+</div> <section class="paragraphs" id="proof.-145"><h6 class="heading"><span class="title"><em class="emphasis">Proof</em>..</span></h6> <section class="paragraphs" id="part-a-40"><h6 class="heading"><span class="title">Part (a).</span></h6> <div class="para" id="p-2340">Let <span class="process-math">\(A\)</span> denote the above matrix.</div></section> <section class="paragraphs" id="part-b-37"><h6 class="heading"><span class="title">Part (b).</span></h6> <div class="para" id="p-2341">As <span class="process-math">\(\cp_A(x)=(x + 1)^4\)</span> and <span class="process-math">\(\mp_A(x)=(x + 1)^3\text{,}\)</span> we know that our characteristic polynomial factors into linear factors, so <span class="process-math">\(A\)</span> does indeed have a JCF. This also means that <span class="process-math">\(A\)</span> only has one elementary divisor, <span class="process-math">\((x + 1)^4\text{,}\)</span> which corresponds to the Jordan Block <span class="process-math">\(J_4(-1)\text{,}\)</span> a matrix with <span class="process-math">\(-1\)</span>s along the diagonal, <span class="process-math">\(1\)</span>s along the subdiagonal, and <span class="process-math">\(0\)</span> everywhere else. This is the JCF of <span class="process-math">\(A\text{.}\)</span>
+</div></section> <section class="paragraphs" id="part-c-7"><h6 class="heading"><span class="title">Part (c).</span></h6></section></section></section> <section class="paragraphs" id="problem-5-why-is-this-true-unfinished"><h5 class="heading"><span class="title">Problem 5 (why is this true?) #unfinished.</span></h5> <div class="para" id="p-2342">Let <span class="process-math">\(F\)</span> be a field and <span class="process-math">\(f(x) \in F[x]\)</span> a monic polynomial of degree <span class="process-math">\(n\text{.}\)</span> Prove: all matrices in <span class="process-math">\(M_{n\times n}(F)\)</span> having characteristic polynomial <span class="process-math">\(f (x)\)</span> are similar if and only if the irreducible factorization of <span class="process-math">\(f(x)\)</span> has no repeated factors.</div></section></section></section><section class="exercises" id="exercises-55"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<div class="exercisegroup" id="exercisegroup-151">
+<h4 class="heading"><span class="title">Computations and Examples.</span></h4>
+<div class="introduction" id="introduction-154"><div class="para" id="p-2343"></div></div>
+<div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-210"><h5 class="heading">
+<span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
+</h5>
+<div class="para" id="p-2344">Coming soon to an OER near you!</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-130" id="hint-130"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-130"><div class="hint solution-like"><div class="para" id="p-2345">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-134" id="solution-134"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-134"><div class="solution solution-like"><div class="para" id="p-2346">Coming soon to an OER near you!</div></div></div>
+</div></article></div>
+</div>
+<div class="exercisegroup" id="exercisegroup-152">
+<h4 class="heading"><span class="title">Formal Proofs.</span></h4>
+<div class="introduction" id="introduction-155"><div class="para" id="p-2347"></div></div>
+<div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-211"><h5 class="heading">
+<span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
+</h5>
+<div class="para" id="p-2348">Coming soon to an OER near you!</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-131" id="hint-131"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-131"><div class="hint solution-like"><div class="para" id="p-2349">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-135" id="solution-135"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-135"><div class="solution solution-like"><div class="para" id="p-2350">Coming soon to an OER near you!</div></div></div>
+</div></article></div>
+</div>
+<div class="exercisegroup" id="exercisegroup-153">
+<h4 class="heading"><span class="title">Qualifying Exam Problems.</span></h4>
+<div class="introduction" id="introduction-156"><div class="para" id="p-2351"></div></div>
+<div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-212"><h5 class="heading">
+<span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
+</h5>
+<div class="para" id="p-2352">Coming soon to an OER near you!</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-132" id="hint-132"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-132"><div class="hint solution-like"><div class="para" id="p-2353">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-136" id="solution-136"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-136"><div class="solution solution-like"><div class="para" id="p-2354">Coming soon to an OER near you!</div></div></div>
+</div></article></div>
+</div></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="sec-rcf.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-jcf.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

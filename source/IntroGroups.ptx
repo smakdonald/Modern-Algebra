@@ -221,6 +221,7 @@
                     \rm{Perm}(S)=\{f:S\to S \ | \ f \text{ is a bijection}\}
                   </me> 
                   form a non-abelian group under composition.
+                  <notation><usage><m>\Perm(S)</m></usage><description>Permutation group of a set <m>S</m></description></notation> 
                 </p>
               </li>
 
@@ -231,6 +232,7 @@
                     \operatorname{GL}_n(\C)=\{ \text{invertible } n \times n \;\text{matrices with entries in}\; \C\}.
                   </me> 
                   By invertible I mean those matrices that have two-sided inverses, but in turns out that if an <m>n \times n</m> matrix has a left inverse then it it is automatically a right inverse too, and vice versa. Then <m>\operatorname{GL}_n(\C)</m> is a non-abelian group under matrix multiplication.
+                  <notation><usage><m>\GL</m></usage><description>General linear group</description></notation> 
                 </p>
               </li>
 
@@ -288,6 +290,7 @@
         <statement>
           <p>
             In a group <m>G</m>, the <em>order of an element</em> <m>x</m> is the least positive integer <m>n</m> such that <m>x^n = e</m>. If no such <m>n</m> exists, we say <m>x</m> has infinite order. We write <m>|x|</m> for the order of <m>x</m>.
+            <notation><usage><m>|x|</m></usage><description>Order of an element <m>x</m></description></notation> 
           </p>
         </statement>
       </definition>
@@ -296,6 +299,7 @@
         <statement>
           <p>
             The <em>order of a group</em> <m>G</m> is the cardinality of the set <m>G</m>, denoted <m>|G|</m>.
+            <notation><usage><m>|G|</m></usage><description>Order of a group <m>G</m></description></notation> 
           </p>
         </statement>
       </definition>
@@ -547,6 +551,7 @@
         <statement>
           <p>
             The <em>dihedral group</em> <m>D_{2n}</m> is the set of symmetries of the regular <m>n</m>-gon <m>P_n</m> equipped with the binary operation given by composition. 
+            <notation><usage><m>D_{2n}</m></usage><description>Dihedral Group</description></notation> 
           </p>
         </statement>
       </definition>
@@ -612,6 +617,7 @@
         <statement>
           <p>
             For any <m>n\in\N</m>, the <em>symmetric group</em> is the set <m>S_n</m> of all permutations of the set <m>\{1,\dots,n\}</m> equipped with the composition of functions as its binary operation.
+            <notation><usage><m>S_n</m></usage><description>Symmetric group</description></notation> 
           </p>
         </statement>
       </definition>
@@ -636,7 +642,11 @@
       <definition xml:id="def-cycle">
         <statement>
           <p>
-            If <m>i_1, \dots, i_m</m> are distinct integers between <m>1</m> and <m>n</m>, then <m>\sigma=(i_1 \, i_2 \, \dots i_m)</m> denotes the element of <m>S_n</m> that satisfies <me>\sigma(i_1)=i_2, \sigma(i_2)=i_3, \dots, \sigma(i_{m-1})=i_m, \sigma(i_m)=i_1 \text{ and } \sigma(k)=k \text{ for } k\in[n] \setminus \{i_1, \dots, i_m\}.</me> Such a permutation is called a <em>cycle</em> or an <m>m</m><em>-cycle</em> if we want to emphasize its length. A <m>2</m>-cycle is often called a <em>transposition</em>.
+            If <m>i_1, \dots, i_m</m> are distinct integers between <m>1</m> and <m>n</m>, then <m>\sigma=(i_1 \, i_2 \, \dots i_m)</m> denotes the element of <m>S_n</m> that satisfies 
+            <me>
+              \sigma(i_1)=i_2, \sigma(i_2)=i_3, \dots, \sigma(i_{m-1})=i_m, \sigma(i_m)=i_1 \text{ and } \sigma(k)=k \text{ for } k\in[n] \setminus \{i_1, \dots, i_m\}.
+            </me> 
+            Such a permutation is called a <em>cycle</em> or an <m>m</m><em>-cycle</em> if we want to emphasize its length. A <m>2</m>-cycle is often called a <em>transposition</em>.
           </p>
         </statement>
       </definition>
@@ -1033,7 +1043,9 @@
       <definition xml:id="def-subgroup">
         <statement>
           <p>
-            A nonempty subset <m>H</m> of a group <m>G</m> is called a <em>subgroup</em>, denoted <m>H\leq G</m>, <notation><usage><m>\leq</m></usage><description>subgroup</description></notation> provided <m>H</m> is a group under the multiplication law of <m>G</m>.
+            A nonempty subset <m>H</m> of a group <m>G</m> is called a <em>subgroup</em>, denoted <m>H\leq G</m>, 
+            <notation><usage><m>\leq</m></usage><description>Subgroup</description></notation> 
+            provided <m>H</m> is a group under the multiplication law of <m>G</m>.
           </p>
 
           <p>
@@ -1112,6 +1124,17 @@
           </ol>
         </p>
       </example>
+
+      <definition xml:id="def-HK">
+        <statement>
+          <p>
+            Let <m>H</m> and <m>K</m> be subgroups of a group and define the set 
+            <me>
+              HK = \{hk \mid h \in H, k\in K\}.
+            </me>
+          </p>
+        </statement>
+      </definition>
 
       <theorem xml:id="thm-subgroup-properties">
         <title>Properties of Subgroups</title>

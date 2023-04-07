@@ -11,14 +11,17 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><article class="hiddenproof"><div class="para logical">
-<div class="para">Surjectivity is immediate from the definition. The group homomorphism property follows from the computation below which uses the definition of <span class="process-math">\(\pi\)</span> and the rule for multiplying cosets in <span class="process-math">\(G/N\text{:}\)</span>
-</div>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para">1. If such a <span class="process-math">\(\overline{f}\)</span> exists, it is necessarily unique since <span class="process-math">\(G \twoheadrightarrow G/N\)</span> is onto. In fact, if <span class="process-math">\(f=\pi\circ \overline{f}\)</span> then <span class="process-math">\(\overline{f}\)</span> has to be given by the formula</div>
+<div class="displaymath process-math">
 \begin{equation*}
-\pi(gg')=(gg')N=gN\cdot g'N=\pi(g)\pi(g').
+\overline{f}(gN) = f(g).
 \end{equation*}
 </div>
-<div class="para">Finally, using Lemma <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "lem:cosets" missing or not unique]</code>, we have <span class="process-math">\(\operatorname{Ker}(\pi)=\{g\in G\mid gN=e_GN\}=N\text{.}\)</span>
+<div class="para">We now need to show that this formula determines a well-defined homomorphism: If <span class="process-math">\(xN = yN\text{,}\)</span> then <span class="process-math">\(y^{-1}x \in N \subseteq \operatorname{Ker}(f)\)</span> and so <span class="process-math">\(f(y)^{-1} f(x) = e\text{,}\)</span> whence <span class="process-math">\(f(y) = f(x)\text{.}\)</span> For any <span class="process-math">\(x,y\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\overline{f}(xNyN) = \overline{f}(xyN) = f(xy) = f(x)f(y) =\overline{f}(xN) \overline{f}(yN).
+\end{equation*}
 </div>
-</div></article></body>
+</div> <div class="para">2. The formula for <span class="process-math">\(\overline{f}\)</span> given above ensures that <span class="process-math">\(\operatorname{Im}f=\operatorname{Im}\overline{f}\)</span> hence <span class="process-math">\(f\)</span> is surjective if and only if <span class="process-math">\(\overline{f}\)</span> is surjective.</div> <div class="para">3. We have <span class="process-math">\(\overline{f}(xN) = e_H\)</span> iff <span class="process-math">\(f(x) = e_H\)</span> iff <span class="process-math">\(x \in \operatorname{Ker}(f)\)</span> iff <span class="process-math">\(xN \in  \operatorname{Ker}(f)/N\text{.}\)</span> If <span class="process-math">\(xN \in \operatorname{Ker}(f)/N\)</span> for some <span class="process-math">\(x \in G\text{,}\)</span> then <span class="process-math">\(xN = yN\)</span> for some <span class="process-math">\(y \in \operatorname{Ker}(f)\)</span> and hence <span class="process-math">\(x = yz\)</span> for some <span class="process-math">\(z \in N\text{.}\)</span> Since <span class="process-math">\(N \subseteq \operatorname{Ker}(f)\text{,}\)</span> we have <span class="process-math">\(x \in \operatorname{Ker}(f)\text{.}\)</span> ◻</div></article></body>
 </html>

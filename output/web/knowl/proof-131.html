@@ -12,21 +12,63 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<div class="para">For (1), let <span class="process-math">\(\ov{F}\)</span> be an algebraic closure of <span class="process-math">\(F\text{,}\)</span> which exists by the previous Theorem. Let <span class="process-math">\(\a_1, \dots, \a_m\)</span> be the roots of <span class="process-math">\(f(x)\)</span> in <span class="process-math">\(\ov{F}\text{,}\)</span> and set <span class="process-math">\(L = F(\a_1, \dots, \a_m)\text{.}\)</span>
-</div> <div class="para">It is clear <span class="process-math">\(L\)</span> is a splitting field.</div> <div class="para">To prove (2), we proceed by induction on the degree of <span class="process-math">\(f(x)\text{.}\)</span> If <span class="process-math">\(f\)</span> is linear, then the only splitting field of <span class="process-math">\(f\)</span> over <span class="process-math">\(F\)</span> is <span class="process-math">\(F\)</span> itself and so the result is clear in this case. Say <span class="process-math">\(\a_1, \dots, \a_m\)</span> and <span class="process-math">\(\a'_1, \dots, \a'_m\)</span> are the roots of <span class="process-math">\(f(x)\)</span> in <span class="process-math">\(L\)</span> and <span class="process-math">\(L'\text{,}\)</span> respectively, and say they are ordered so that, <span class="process-math">\(\a_m\)</span> and <span class="process-math">\(\a'_m\)</span> are roots of the same irreducible factor of <span class="process-math">\(f(x)\)</span> in <span class="process-math">\(F[x]\text{.}\)</span>
-</div> <div class="para">By Corollary  there is an isomorphism <span class="process-math">\(\phi: F(\a_n) \xra{\cong} F(\a_n')\)</span> that fixes <span class="process-math">\(F\text{.}\)</span> Note that <span class="process-math">\(f(x)\)</span> factors as <span class="process-math">\((x-\a_n) g(x)\)</span> in <span class="process-math">\(F(\a_n)[x]\)</span> and that <span class="process-math">\(L\)</span> is the splitting field of <span class="process-math">\(g(x)\)</span> over <span class="process-math">\(F(\a_n)\text{,}\)</span> and similarly <span class="process-math">\(f(x)\)</span> factors as <span class="process-math">\((x-\a'_n) g'(x)\)</span> in <span class="process-math">\(F(\a'_n)[x]\)</span> and that <span class="process-math">\(L\)</span> is the splitting field of <span class="process-math">\(g'(x)\)</span> over <span class="process-math">\(F(\a'_n)\text{.}\)</span> If we blur our eyes slightly and pretend <span class="process-math">\(\phi\)</span> is the identity map, we can apply the inductive hypothesis, since <span class="process-math">\(\deg(g) &lt; \deg(f)\text{,}\)</span> to conclude that there is an isomorphism <span class="process-math">\(\s\)</span> as in the statement. I leave a more rigorous argument to your imaginations.</div> <div class="para">To prove (3), we also proceed by induction on the degree of <span class="process-math">\(f\text{,}\)</span> using the same notation as in the proof of (2).</div> <div class="para logical">
-<div class="para">Since <span class="process-math">\(\a_n\)</span> is a root of <span class="process-math">\(f(x)\text{,}\)</span> we have <span class="process-math">\(m_{F,\a_n} \mid f(x)\)</span> and hence</div>
+<div class="para">Note that from the previous homework, we know that <span class="process-math">\([E:\Q]=8\text{,}\)</span> and that <span class="process-math">\(E=\Q(\sqrt[4]{20},i)\text{.}\)</span> Additionally, we know the following: - <span class="process-math">\(\a_1 = e^{\pi i/4}\sqrt[4]{5} = \cos(\frac{\pi}{4})+i\sin(\frac{\pi}{4})\sqrt[4]{5} = \frac{\sqrt{2}}{2}\sqrt[4]{5}+i\frac{\sqrt{2}}{2}\sqrt[4]{5}=\sqrt[4]{5/4}(1+i)\text{,}\)</span> - <span class="process-math">\(\a_2 = e^{3\pi i/4}\sqrt[4]{5} = \cos(\frac{3\pi}{4})+i\sin(\frac{3\pi}{4})\sqrt[4]{5} = \frac{-\sqrt{2}}{2}\sqrt[4]{5}-i\frac{\sqrt{2}}{2}\sqrt[4]{5}=\sqrt[4]{5/4}(-1+i)\text{,}\)</span> - <span class="process-math">\(\a_3 = e^{5\pi i/4}\sqrt[4]{5} = \cos(\frac{5\pi}{4})+i\sin(\frac{5\pi}{4})\sqrt[4]{5} = \frac{\sqrt{2}}{2}\sqrt[4]{5}+i\frac{\sqrt{2}}{2}\sqrt[4]{5}=\sqrt[4]{5/4}(-1-i)\text{,}\)</span> and - <span class="process-math">\(\a_4 = e^{7\pi i/4}\sqrt[4]{5} = \cos(\frac{7\pi}{4})+i\sin(\frac{7\pi}{4})\sqrt[4]{5} = \frac{\sqrt{2}}{2}\sqrt[4]{5}-i\frac{\sqrt{2}}{2}\sqrt[4]{5}=\sqrt[4]{5/4}(1-i)\text{.}\)</span> Note that by Eisenstein's Criterion using <span class="process-math">\(p=5\)</span> we see that <span class="process-math">\(x^4+5\)</span> is irreducible in <span class="process-math">\(\Q\text{.}\)</span> As <span class="process-math">\(\Q\)</span> has characteristic 0, we see that <span class="process-math">\(x^4+5\)</span> is separable as well.</div> <div class="para">As <span class="process-math">\(E\)</span> is the splitting field of an irreducible polynomial in <span class="process-math">\(F[x]\text{,}\)</span> by Theorem 2.90 we see that <span class="process-math">\(|\Aut(E/\Q)|=[E:\Q]=8\text{.}\)</span> In the Gaussian integers, it is known that if both <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are nonzero then, <span class="process-math">\(a+bi\)</span> is a Gaussian prime if and only if <span class="process-math">\(a^2+b^2\)</span> is an ordinary prime. Note that <span class="process-math">\(5=(2-i)(2+i)\text{,}\)</span> and that <span class="process-math">\(2^2+i^2=3\text{,}\)</span> which is prime. Thus <span class="process-math">\(2+i\)</span> is prime in <span class="process-math">\(\Z[i]\text{.}\)</span> Thus we may invoke Eisenstein's Criterion using <span class="process-math">\(p=2+i\)</span> to see that <span class="process-math">\(x^4+5\)</span> is irreducible in <span class="process-math">\(\Q(i)\text{,}\)</span> as <span class="process-math">\((2+i)^2=3-2i\)</span> does not divide 5, but we'll prove it just to be sure.</div> <div class="para">Suppose <span class="process-math">\((3+2i)|5\text{.}\)</span> Then <span class="process-math">\((3+2i)(a+bi)=5\text{,}\)</span> so <span class="process-math">\(3a+3bi+2ai-2b=5\text{,}\)</span> and thus <span class="process-math">\(3a-2b+(2a+3b)i=5\text{.}\)</span> As 5 has no imaginary component, it must be the case that <span class="process-math">\(2a+3b=0\text{,}\)</span> and thus that <span class="process-math">\(a=-\frac{3}{2}b\text{.}\)</span> Substituting in, we see that <span class="process-math">\(-\frac{9}{2}b-3b=5\text{,}\)</span> and thus that <span class="process-math">\(b=-\frac{10}{3}\text{,}\)</span> which has historically not been an integer.</div> <div class="para">Anyway, we may thus apply Porism 2.61 to see that there exists some <span class="process-math">\(\tau\in\Aut(E/\Q(i))\)</span> such that <span class="process-math">\(\tau(\alpha_1)=\alpha_2\text{.}\)</span> We may regard <span class="process-math">\(\tau\)</span> as an element of <span class="process-math">\(\Aut(E/\Q)\)</span> since, by definition, <span class="process-math">\(\Aut(E/\Q(i))\)</span> is a subgroup of <span class="process-math">\(\Aut(E/\Q)\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">As <span class="process-math">\(\tau(\alpha_1)=\alpha_2\text{,}\)</span> observe the following glory:</div>
 <div class="displaymath process-math">
 \begin{equation*}
-[F(\a_n): F] = \deg(m_{F,\a_n})  \leq n.
+\begin{align}
+\tau(\alpha_1)&amp;=\alpha_2\\
+\tau(\sqrt[4]{5/4}(1+i))&amp;=\sqrt[4]{5/4}(-1+i)\\
+\tau(\sqrt[4]{5/4})\tau(1+i)&amp;=\sqrt[4]{5/4}(-1+i)\\
+\tau(\sqrt[4]{5/4})(1+i)&amp;=\sqrt[4]{5/4}(-1+i)\\
+\tau(\sqrt[4]{5/4})&amp;=\frac{\sqrt[4]{5/4}(-1+i)}{(1+i)}\\
+\tau(\sqrt[4]{5/4})&amp;=\frac{\sqrt[4]{5/4}(-1+i)}{(1+i)}\frac{(1-i)}{(1-i)}\\
+\tau(\sqrt[4]{5/4})&amp;=\frac{\sqrt[4]{5/4}(2i)}{2}\\
+\tau(\sqrt[4]{5/4})&amp;=\sqrt[4]{5/4}i
+\end{align}
 \end{equation*}
 </div>
-<div class="para">In <span class="process-math">\(F(\a_n)\)</span> we have <span class="process-math">\(f(x) = (x-\a_n) g(x)\)</span> with <span class="process-math">\(g(x) \in F(\a_n)[x]\)</span> and, as before, <span class="process-math">\(L\)</span> is the splitting field of <span class="process-math">\(g(x)\)</span> over <span class="process-math">\(F(\a_n)\text{,}\)</span> so that by induction <span class="process-math">\([L: F(\a_n)] \leq (n-1)!\text{.}\)</span> By the degree formula</div>
+<div class="para">With that in mind, we examine</div>
 <div class="displaymath process-math">
 \begin{equation*}
-[L: F] = [L: F(\a_n)][F(\a_n): F] \leq (n-1)! \cdot n = n!.
+\begin{align}
+\tau(\alpha_2)&amp;=\tau(\sqrt[4]{5/4}(-1+i))\\
+&amp;=\tau(\sqrt[4]{5/4})\tau(-1+i)\\
+&amp;=\tau(\sqrt[4]{5/4})(-1+i)\\
+&amp;=\sqrt[4]{5/4}i(-1+i)\\
+&amp;=\sqrt[4]{5/4}(-1-i)\\
+&amp;=\alpha_3,
+\end{align}
 \end{equation*}
 </div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{align}
+\tau(\alpha_3)&amp;=\tau(\sqrt[4]{5/4}(-1-i))\\
+&amp;=\tau(\sqrt[4]{5/4})\tau(-1-i)\\
+&amp;=\tau(\sqrt[4]{5/4})(-1-i)\\
+&amp;=\sqrt[4]{5/4}i(-1-i)\\
+&amp;=\sqrt[4]{5/4}(1-i)\\
+&amp;=\alpha_4,
+\end{align}
+\end{equation*}
+</div>
+<div class="para">and don't forget</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{align}
+\tau(\alpha_4)&amp;=\tau(\sqrt[4]{5/4}(1-i))\\
+&amp;=\tau(\sqrt[4]{5/4})\tau(1-i)\\
+&amp;=\tau(\sqrt[4]{5/4})(1-i)\\
+&amp;=\sqrt[4]{5/4}i(1-i)\\
+&amp;=\sqrt[4]{5/4}(1+i)\\
+&amp;=\alpha_1,
+\end{align}
+\end{equation*}
+</div>
+<div class="para">So <span class="process-math">\(\tau\)</span> corresponds to the permutation (1 2 3 4). We have proven that <span class="process-math">\(\Aut(E/\Q(i))\)</span> is isomorphic to a subgroup of <span class="process-math">\(S_4\)</span> having order at most 8 and that it contains an element or order 2 and (1 2 3 4), an element of order 4. Since the subgroup generated by these two elements has order 8, we see that <span class="process-math">\(\Aut(E/\Q) \cong D_8\text{.}\)</span> (Also by Sylow's Theorem, <span class="process-math">\(S_4\)</span> only has one subgroup of order 8, and it is <span class="process-math">\(D_8\)</span>).</div>
 </div></article><span class="incontext"><a href="sec-splitting.html#proof-131" class="internal">in-context</a></span>
 </body>
 </html>

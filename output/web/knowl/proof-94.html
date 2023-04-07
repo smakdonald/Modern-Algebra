@@ -11,36 +11,31 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>
-<div class="para logical"><ol class="decimal">
-<li>
-<div class="para">Let <span class="process-math">\(R\)</span> be a UFD.</div>
-<div class="para">First, suppose <span class="process-math">\(p\)</span> is irreducible, and consider the ideal <span class="process-math">\((p)\text{.}\)</span> Let <span class="process-math">\(a,b\in R\)</span> such that <span class="process-math">\(ab\in(p)\text{.}\)</span> Thus <span class="process-math">\(p|ab\text{,}\)</span> so there exists some <span class="process-math">\(k\in R\)</span> such that <span class="process-math">\(pk=ab\text{.}\)</span> As we are in a UFD the elements <span class="process-math">\(a,b,\)</span> and <span class="process-math">\(k\)</span> all have unique (up to associates) factorizations of irreducible elements. Thus <span class="process-math">\(p\)</span> must be an associate of one of the irreducible elements in the factorization of <span class="process-math">\(a\)</span> or <span class="process-math">\(b\text{,}\)</span> and so <span class="process-math">\(a\in(p)\)</span> or <span class="process-math">\(b\in(p)\text{,}\)</span> making <span class="process-math">\((p)\)</span> prime.</div>
-<div class="para">Now suppose that <span class="process-math">\((p)\)</span> is prime and that <span class="process-math">\(p=ab\)</span> for some <span class="process-math">\(ab\in R\text{.}\)</span> Thus <span class="process-math">\(p|ab\)</span> and <span class="process-math">\(ab\in(p)\text{,}\)</span> so either <span class="process-math">\(a\in(p)\)</span> or <span class="process-math">\(b\in(p)\text{,}\)</span> as <span class="process-math">\((p)\)</span> is a prime ideal. Assume without loss of generality that <span class="process-math">\(a|p\text{.}\)</span> Thus <span class="process-math">\(ak=p\)</span> for some <span class="process-math">\(k\in R\text{.}\)</span> Thus <span class="process-math">\(ab=pkb\)</span> and <span class="process-math">\(p=pkb\)</span> As UFDs are integral domains we see <span class="process-math">\(kb=1\text{,}\)</span> making <span class="process-math">\(b\)</span> a unit. Thus <span class="process-math">\(p\)</span> is irreducible.</div>
-</li>
-<li>
+<article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
 <div class="para logical">
-<div class="para">First, notice that <span class="process-math">\(2\cdot 3=6=(1+\sqrt{-5})(1-\sqrt{-5})\text{.}\)</span> Define a function</div>
+<div class="para">Suppose <span class="process-math">\(f = gh\)</span> with <span class="process-math">\(g, h \in F[x]\text{.}\)</span> We can find an element <span class="process-math">\(M\)</span> of <span class="process-math">\(R\)</span> such that <span class="process-math">\(M \cdot g(x) \in R[x]\text{.}\)</span> (We can take <span class="process-math">\(M\)</span> to be the product of all the denominators of the coefficients of <span class="process-math">\(g\text{,}\)</span> for example; this is called “clearing denominators’’.) Similarly, there is an <span class="process-math">\(N \in R\)</span> such that <span class="process-math">\(N \cdot h(x) \in R[x]\text{.}\)</span> Further, write <span class="process-math">\(M \cdot g(x) = a \cdot l(x)\)</span> where <span class="process-math">\(a = \cont(M g(x)) \in R\text{,}\)</span> <span class="process-math">\(l(x) \in R[x]\text{,}\)</span> and <span class="process-math">\(\cont(l) = 1,\)</span> and similarly <span class="process-math">\(N \cdot g(x) = b \cdot m(x)\)</span> where <span class="process-math">\(b = \cont(N h(x)) \in R\text{,}\)</span> <span class="process-math">\(m(x) \in R[x]\text{,}\)</span> and <span class="process-math">\(\cont(m) = 1\text{.}\)</span> We have</div>
 <div class="displaymath process-math">
 \begin{equation*}
-N:\Z[\sqrt{-5}]\to\Z, N(a+b \sqrt{-5})=a^2+5b^2.
+abl(x)m(x) = MN f(x)
 \end{equation*}
 </div>
-<div class="para">Let <span class="process-math">\(\alpha,\beta\in\Z[\sqrt{-5}]\)</span> and behold</div>
-</div>
-<div class="para logical">
-<div class="para">Suppose by way of contradiction there exist <span class="process-math">\(\a,\b\)</span> such that <span class="process-math">\(2=\a\b\text{.}\)</span> Then <span class="process-math">\(\a=a+b\sqrt{-5}\)</span> and <span class="process-math">\(\b=c+d\sqrt{-5}\text{,}\)</span> and</div>
+<div class="para">Using Gauss’s Lemma, Part 1, we have <span class="process-math">\(\cont(lm) = \cont(l) \cont(m) = 1\)</span> and hence</div>
 <div class="displaymath process-math">
 \begin{equation*}
-N(2)=4=N(\a\b)=N(\a)N(\b)=(a^2+5b^2)(c^2+5d^2).
+\cont(ab l(x) m(x)) = ab \cont(l(x) m(x)) = ab.
 \end{equation*}
 </div>
-<div class="para">Thus <span class="process-math">\((a^2+5b^2)=\pm1,\pm2,\)</span> or <span class="process-math">\(\pm4\text{,}\)</span> as these are the only integer divisors of <span class="process-math">\(4\text{.}\)</span> However, there do not exist integers <span class="process-math">\(a,b\)</span> such that this is true. Thus <span class="process-math">\(2\)</span> is irreducible in <span class="process-math">\(\Z[\sqrt{-5}]\text{.}\)</span>
+<div class="para">We also have <span class="process-math">\(\cont(MNf(x)) = MN\cont(f) = MN\)</span> (since we’ve already proven that <span class="process-math">\(\cont(f) = 1\)</span>).</div>
+</div> <div class="para logical">
+<div class="para">So <span class="process-math">\(ab = MN\)</span> and thus by dividing we arrive at</div>
+<div class="displaymath process-math">
+\begin{equation*}
+l(x) m(x) = f(x).
+\end{equation*}
 </div>
+<div class="para">But <span class="process-math">\(f(x)\)</span> is irreducible in <span class="process-math">\(R[x]\text{.}\)</span> It follows that either <span class="process-math">\(l\)</span> or <span class="process-math">\(m\)</span> must be a unit in <span class="process-math">\(R[x]\)</span> (i.e., a unit in <span class="process-math">\(R\)</span>) and it follows that either <span class="process-math">\(g(x)\)</span> or <span class="process-math">\(h(x)\)</span> is a unit in <span class="process-math">\(F[x]\text{.}\)</span> This proves <span class="process-math">\(f(x)\)</span> is irreducible in <span class="process-math">\(F[x]\text{.}\)</span>
 </div>
-<div class="para">Suppose by way of contradiction that <span class="process-math">\(2\)</span> is prime in <span class="process-math">\(\Z[\sqrt{-5}]\text{.}\)</span> Note that <span class="process-math">\(2|6=(1+\sqrt{-5})(1-\sqrt{-5})\text{.}\)</span> Thus <span class="process-math">\(2\)</span> divides one of these factors.</div>
-<div class="para">First, suppose there exists some <span class="process-math">\(a+b\sqrt{-5}\)</span> such that <span class="process-math">\(2(a+b\sqrt{-5})=(1\pm\sqrt{-5})\text{.}\)</span> Thus <span class="process-math">\(2a+2b\sqrt{-5}=1\pm\sqrt{-5}\text{,}\)</span> and so <span class="process-math">\(2a=\pm1\text{.}\)</span> However, <span class="process-math">\(\pm\frac12\)</span> is not an integer, and thus <span class="process-math">\(2\)</span> cannot divide either of these factors. Thus <span class="process-math">\(2\)</span> is not prime in <span class="process-math">\(\Z[\sqrt{-5}]\text{.}\)</span> By Part (a), this is not a UFD.</div>
-</li>
-</ol></div></article><span class="incontext"><a href="subsec-ufds.html#proof-94" class="internal">in-context</a></span>
+</div> <div class="para">(<span class="process-math">\(\Leftarrow\)</span>) Say <span class="process-math">\(f(x) \in R[x]\)</span> irreducible in <span class="process-math">\(F[x]\)</span> and <span class="process-math">\(\cont(f) = 1\text{.}\)</span> If <span class="process-math">\(f = q(x) r(x)\)</span> with <span class="process-math">\(q,r \in R[x]\)</span> then, since <span class="process-math">\(f\)</span> is irreducible in <span class="process-math">\(F[x]\text{,}\)</span> one of <span class="process-math">\(q\)</span> or <span class="process-math">\(r\)</span> must be a constant. But since <span class="process-math">\(\cont(f) = 1\text{,}\)</span> this constant must be <span class="process-math">\(1\text{.}\)</span>
+</div></article><span class="incontext"><a href="sec-irrpoly.html#proof-94" class="internal">in-context</a></span>
 </body>
 </html>

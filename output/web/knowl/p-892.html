@@ -13,11 +13,72 @@
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
 <div class="para logical"><ol class="decimal">
-<li><div class="para">Prove <span class="process-math">\(IJ = I\cap J\text{.}\)</span>
+<li><div class="para">
+<span class="process-math">\(R=\{0\}\)</span> is called the <em class="emphasis">trivial ring</em>. Notice that in the trivial ring <span class="process-math">\(0=1\text{.}\)</span> Conversely, if <span class="process-math">\(1 = 0\)</span> in a ring, then <span class="process-math">\(R = \{0\}\text{,}\)</span> since in this case for all <span class="process-math">\(a\text{,}\)</span> we have <span class="process-math">\(a \cdot 0 = 0\)</span> and hence <span class="process-math">\(a = a \cdot 1 = a \cdot 0 = 0\text{.}\)</span>
 </div></li>
-<li><div class="para">Prove the following special case of the Sun Tzu's Theorem: There is an isomorphism of rings of the form <span class="process-math">\(R/(I \cap J)\cong R/I \times R/J\text{.}\)</span>
+<li><div class="para">
+<span class="process-math">\(\mathbb{Z}\)</span> is a commutative ring.</div></li>
+<li><div class="para">
+<span class="process-math">\(\mathbb{Z}/n\)</span> is a commutative ring under addition and multiplication modulo <span class="process-math">\(n\text{.}\)</span> Note that <span class="process-math">\(\mathbb{Z}/n\)</span> is a field if any only if <span class="process-math">\(n\)</span> is prime.</div></li>
+<li><div class="para">The familiar sets of “numbers" <span class="process-math">\(\mathbb{Q}, {\mathbb{R}}, \mathbb{C}\)</span> are fields.</div></li>
+<li><div class="para">(<dfn class="terminology">Matrix ring</dfn>) If <span class="process-math">\(R\)</span> is any ring (not necessarily commutative), so is <span class="process-math">\(\operatorname{M}_{n}(R)\)</span> for any natural number <span class="process-math">\(n\text{,}\)</span> using the usual rules for addition and multiplication of square matrices.</div></li>
+<li>
+<div class="para logical">
+<div class="para">(<dfn class="terminology">The real Hamiltonian quaternion ring</dfn>) Let <span class="process-math">\(i,j,k\)</span> be formal symbols and set <span class="process-math">\({\mathbb{H}}\)</span> to be the four dimensional <span class="process-math">\({\mathbb{R}}\)</span>-vector space consisting of all expressions of the form <span class="process-math">\(a + bi + cj + dk\)</span> with <span class="process-math">\(a,b,c,d \in {\mathbb{R}}\text{.}\)</span> Addition is vector space addition:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(a + bi + cj + dk) +(a' + b'i + c'j + d'k) =
+(a + a') + (b + b') i + (c + c')j + (d + d')k.
+\end{equation*}
+</div>
+<div class="para">Multiplication is uniquely determined by the axioms of a ring together with the rules</div>
+<div class="displaymath process-math">
+\begin{equation*}
+i^2 = j^2 = k^2 = -1, -ji = ij = k, -kj = jk = i, -ik = ki = j.
+\end{equation*}
+</div>
+<div class="para">and the fact that the real coefficients commute with each other and <span class="process-math">\(i,j,k\text{.}\)</span>
+</div>
+</div>
+<div class="para">It's not obvious that the multiplication defined in this way satisfies associativity, but in fact it does (this amounts conditions very similar to the associativity of the group <span class="process-math">\(Q_8\)</span>).</div>
+<div class="para logical">
+<div class="para">
+<span class="process-math">\({\mathbb{H}}\)</span> is a division ring, since one can check that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(a + bi + cj + dk)^{-1} = \frac{a -  bi -  cj - dk}{\|a + bi + cj + dk\|}
+\end{equation*}
+</div>
+<div class="para">where</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\|a + bi + cj + dk \| := a^2 + b^2 + c^2 + d^2.
+\end{equation*}
+</div>
+</div>
+<div class="para">In the equation above <span class="process-math">\(\|a + bi + cj + dk \|\)</span> is non-zero real number if <span class="process-math">\(a + bi + cj + dk\)</span> is not the zero element. The quantity <span class="process-math">\(\|a + bi + cj + dk \|\)</span> is called the <em class="emphasis">norm</em> of the quaternion <span class="process-math">\(a + bi + cj + dk\text{.}\)</span>
+</div>
+</li>
+<li><div class="para logical">
+<div class="para">(<dfn class="terminology">Direct product of rings</dfn>) The cartesian product <span class="process-math">\(R\times R'\)</span> of two rings <span class="process-math">\(R\)</span> and <span class="process-math">\(R'\)</span> has a natural ring structure with addition and multiplication defined componentwise:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(a,b)+(c,d)=(a+c,b+d)
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(a,b)\cdot(c,d)=(a\cdot c,b\cdot d)
+\end{equation*}
+</div>
 </div></li>
+<li><div class="para">If <span class="process-math">\(X\)</span> is a set and <span class="process-math">\(R\)</span> is a ring, let <span class="process-math">\(\operatorname{Fun}(X, R)\)</span> be the collection of set theoretic functions from <span class="process-math">\(X\)</span> to <span class="process-math">\(R\text{,}\)</span> and define <span class="process-math">\((f + g)(x) = f(x) + g(x)\)</span> and <span class="process-math">\((f \cdot g)(x) := f(x) \cdot g(x)\text{.}\)</span> Then <span class="process-math">\(\operatorname{Fun}(X,R)\)</span> is a ring. If <span class="process-math">\(X\)</span> is a finite set and <span class="process-math">\(|X|=n\text{,}\)</span> then <span class="process-math">\(\operatorname{Fun}(X,R)\)</span> may be identified with <span class="process-math">\(R^n=\underbrace{R \times \cdots \times R}_n\text{,}\)</span> the direct product of <span class="process-math">\(n\)</span> copies of <span class="process-math">\(R\text{.}\)</span>
+</div></li>
+<li>
+<div class="para">(<dfn class="terminology">Endomorphism ring</dfn>) If <span class="process-math">\(A = (A, +)\)</span> is any abelian group, set <span class="process-math">\(\operatorname{End}_{Ab}(A)\)</span> to be the collection of endomorphisms of <span class="process-math">\(A\)</span> — that is, the set of group homomorphisms <span class="process-math">\(f: A \to A\)</span> from <span class="process-math">\(A\)</span> to itself.</div>
+<div class="para">Then <span class="process-math">\(\operatorname{End}_{Ab}(A)\)</span> is a ring with addition <span class="process-math">\((f + g)(a) := f(a) + g(a)\)</span> and multiplication <span class="process-math">\(f \cdot g := f \circ g\text{.}\)</span> This is almost always a non-commutative ring.</div>
+</li>
 </ol></div>
-<span class="incontext"><a href="sec-ring-quotients.html#p-892" class="internal">in-context</a></span>
+<span class="incontext"><a href="sec-defn-ex.html#p-892" class="internal">in-context</a></span>
 </body>
 </html>

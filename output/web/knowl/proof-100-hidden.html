@@ -10,49 +10,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para">We have <span class="process-math">\(f(x) = \cont(f) \cdot l(x)\)</span> with <span class="process-math">\(l(x) \in R[x]\)</span> and <span class="process-math">\(\cont(l) = 1\text{.}\)</span> Since <span class="process-math">\(p\)</span> does not divide the leading coefficient of <span class="process-math">\(f\text{,}\)</span> we have <span class="process-math">\(p \nmid \cont(f)\text{.}\)</span> It therefore follows that the three assumptions involving the coefficients of <span class="process-math">\(f(x)\)</span> are also satisfied by the coefficients <span class="process-math">\(l(x)\text{.}\)</span> Moreover, <span class="process-math">\(f\)</span> is irreducible in <span class="process-math">\(F[x]\)</span> if and only if <span class="process-math">\(l(x)\)</span> is irreducible in <span class="process-math">\(F[x]\text{.}\)</span> We may therefore assume without loss of generality that <span class="process-math">\(\cont(f) = 1\text{.}\)</span>
-</div> <div class="para logical">
-<div class="para">By Gauss’s Lemma we just need to prove it is irreducible in <span class="process-math">\(R[x]\text{.}\)</span> Suppose <span class="process-math">\(f(x) = g(x)h(x)\)</span> with <span class="process-math">\(g(x), h(x) \in R[x]\text{,}\)</span> where</div>
-<div class="displaymath process-math">
-\begin{equation*}
-g(x) = b_m x^m + b_{m-1} x^{m-1} + \cdots + b_0
-\end{equation*}
-</div>
-<div class="para">and</div>
-<div class="displaymath process-math">
-\begin{equation*}
-h(x) = c_l x^l + c_{l-1} x^{l-1} + \cdots + c_0
-\end{equation*}
-</div>
-<div class="para">where <span class="process-math">\(m+l = n\)</span> and <span class="process-math">\(b_m c_l = a_n\text{.}\)</span>
-</div>
-</div> <div class="para logical">
-<div class="para">Upon modding out by <span class="process-math">\(p\)</span> we get</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\ov{f} = \ov{g} \ov{h} \in (R/p)[x].
-\end{equation*}
-</div>
-<div class="para">The assumptions on <span class="process-math">\(f\)</span> give that</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\ov{f} = \ov{a_n} x^n
-\end{equation*}
-</div>
-<div class="para">with <span class="process-math">\(\ov{a_n} \ne 0\text{.}\)</span> Since <span class="process-math">\(R/p\)</span> is a domain, it follows that</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\ov{g} = \ov{b_m} x^m \, \text{ and  } \, \ov{h} = \ov{c_l} x^l
-\end{equation*}
-</div>
-<div class="para">On the other hand, we also have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-a_0 = b_0c_0,
-\end{equation*}
-</div>
-<div class="para">and since <span class="process-math">\(p^2 \nmid a_0\text{,}\)</span> we have that <span class="process-math">\(p \nmid b_0\)</span> or <span class="process-math">\(p \nmid c_0\text{.}\)</span> So <span class="process-math">\(\ov{b_0} \ne 0\)</span> or <span class="process-math">\(\ov{c_0} \ne 0\text{.}\)</span> This can only occur if <span class="process-math">\(m = 0\)</span> or <span class="process-math">\(l = 0\text{.}\)</span>
-</div>
-</div> <div class="para">We have shown that if <span class="process-math">\(f\)</span> factors in <span class="process-math">\(R[x]\)</span> as <span class="process-math">\(f = g \cdot h\text{,}\)</span> then at least one of <span class="process-math">\(g\)</span> of <span class="process-math">\(h\)</span> must be a constant polynomial. Since <span class="process-math">\(\cont(f) = 1\text{,}\)</span> this factor must be a unit. So <span class="process-math">\(f\)</span> is irreducible in <span class="process-math">\(R[x]\text{.}\)</span>
+<body class="ignore-math"><article class="hiddenproof"><div class="para">Let <span class="process-math">\(F\)</span> be a field and <span class="process-math">\(f\subseteq F [x]\)</span> be irreducible. Thus <span class="process-math">\(f\)</span> is prime[^3], making <span class="process-math">\((f)\)</span> a prime ideal in <span class="process-math">\(F[x]\)</span>[^4] and <span class="process-math">\(F[x]/(f)\)</span> a domain[^5]. Suppose that there existed a proper ideal <span class="process-math">\(I\)</span> such that <span class="process-math">\((f)\subseteq I\text{.}\)</span> However, as <span class="process-math">\(F\)</span> is a field we know that <span class="process-math">\(F[x]\)</span> is a PID[^6], meaning <span class="process-math">\(I=(g)\)</span> for some <span class="process-math">\(g\in F[x]\)</span>[^7]. If <span class="process-math">\(f\in(g)\)</span> then <span class="process-math">\(g|f\)</span>[^8], meaning that <span class="process-math">\(f=g\text{.}\)</span> Thus <span class="process-math">\((f)\)</span> is a maximal ideal and we have <span class="process-math">\(F[x]/(f)\)</span> a field[^9].</div> <div class="para">Let <span class="process-math">\(F=\F_2\text{.}\)</span> Let <span class="process-math">\(f=x^4+x+1\text{.}\)</span> Suppose <span class="process-math">\(f=gh\)</span> with <span class="process-math">\(g,h\)</span> irreducible. Thus either both <span class="process-math">\(g\)</span> and <span class="process-math">\(h\)</span> have degree <span class="process-math">\(2\)</span> or one of them has degree <span class="process-math">\(1\text{.}\)</span> As <span class="process-math">\(f\neq (x^2+x+1)^2\text{,}\)</span> we see that without loss of generality <span class="process-math">\(\deg g=1\text{.}\)</span> Then <span class="process-math">\(g=x\)</span> or <span class="process-math">\(x+1\text{,}\)</span> but neither divide <span class="process-math">\(f\text{.}\)</span> Thus <span class="process-math">\(f\)</span> is irreducible, making <span class="process-math">\(F[x]/(f)\)</span> a field, the elements of which are: 1. 0 2. 1 3. <span class="process-math">\(x\)</span> 4. <span class="process-math">\(x+1\)</span> 5. <span class="process-math">\(x^2\)</span> 6. <span class="process-math">\(x^2+1\)</span> 7. <span class="process-math">\(x^2+x\)</span> 8. <span class="process-math">\(x^2+x+1\)</span> 9. <span class="process-math">\(x^3\)</span> 10. <span class="process-math">\(x^3+1\)</span> 11. <span class="process-math">\(x^3+x\)</span> 12. <span class="process-math">\(x^3+x^2\)</span> 13. <span class="process-math">\(x^3+x+1\)</span> 14. <span class="process-math">\(x^3+x^2+1\)</span> 15. <span class="process-math">\(x^3+x^2+x\)</span> 16. <span class="process-math">\(x^3+x^2+x+1\text{,}\)</span> making it a field of order <span class="process-math">\(16\text{.}\)</span>
 </div></article></body>
 </html>

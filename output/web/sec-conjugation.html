@@ -8,7 +8,7 @@
 <html lang="en-US">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Conjugation</title>
+<title>Left Multiplication and Conjugation</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -177,7 +177,7 @@ window.MathJax = {
 <span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
 </ol>
 </li>
-</ol></div></button><span class="treebuttons"><a class="previous-button button" href="sec-lois.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="group-actions.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="sec-class-eq.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="graction.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="group-actions.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="sec-lois.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
 <input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
 </div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\def\ann{\operatorname{ann}}
 \newcommand{\Ass}{\operatorname{Ass}}
@@ -512,7 +512,7 @@ window.MathJax = {
 <ul class="structural"><li><div class="toc-item"><a href="sec-gpisos.html#exercises-6" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
-<div class="toc-item"><a href="sec-cylic-homoms.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Cyclic Groups: Revisited</span></a></div>
+<div class="toc-item"><a href="sec-cylic-homoms.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Classifying Cyclic Groups</span></a></div>
 <ul class="structural"><li><div class="toc-item"><a href="sec-cylic-homoms.html#exercises-7" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
@@ -521,7 +521,7 @@ window.MathJax = {
 <div class="toc-item"><a href="normal-quotient-groups.html" class="internal"><span class="codenumber">3</span> <span class="title">Normal and Quotient Groups</span></a></div>
 <ul class="structural">
 <li>
-<div class="toc-item"><a href="sec-cosets.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Cosets and Equivalence Relations</span></a></div>
+<div class="toc-item"><a href="sec-cosets.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Cosets and Conjugations</span></a></div>
 <ul class="structural"><li><div class="toc-item"><a href="sec-cosets.html#exercises-8" class="internal"><span class="codenumber">3.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
@@ -545,13 +545,13 @@ window.MathJax = {
 <div class="toc-item"><a href="graction.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Group Actions</span></a></div>
 <ul class="structural"><li><div class="toc-item"><a href="graction.html#exercises-12" class="internal"><span class="codenumber">4.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
-<li>
-<div class="toc-item"><a href="sec-lois.html" class="internal"><span class="codenumber">4.2</span> <span class="title">LOIS and Orbit-Stabilizer</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-lois.html#exercises-13" class="internal"><span class="codenumber">4.2</span> <span class="title">Exercises</span></a></div></li></ul>
-</li>
 <li class="active">
-<div class="toc-item"><a href="sec-conjugation.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Conjugation</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-conjugation.html#exercises-14" class="internal"><span class="codenumber">4.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-item"><a href="sec-conjugation.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Left Multiplication and Conjugation</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-conjugation.html#exercises-13" class="internal"><span class="codenumber">4.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-lois.html" class="internal"><span class="codenumber">4.3</span> <span class="title">LOIS and Orbit-Stabilizer</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-lois.html#exercises-14" class="internal"><span class="codenumber">4.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-class-eq.html" class="internal"><span class="codenumber">4.4</span> <span class="title">The Class Equation</span></a></div>
@@ -579,9 +579,18 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="group-products.html" class="internal"><span class="codenumber">6</span> <span class="title">Constructions</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-grp-dps.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Direct Products</span></a></div></li>
-<li><div class="toc-item"><a href="sec-grp-spds.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Semidirect Products</span></a></div></li>
-<li><div class="toc-item"><a href="sec-order-pq.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Groups of Order <span class="process-math">\(pq\)</span></span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-grp-dps.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Direct Products</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-grp-dps.html#exercises-19" class="internal"><span class="codenumber">6.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-grp-spds.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Semidirect Products</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-grp-spds.html#exercises-20" class="internal"><span class="codenumber">6.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-order-pq.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Groups of Order <span class="process-math">\(pq\)</span></span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-order-pq.html#exercises-21" class="internal"><span class="codenumber">6.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
 </ul>
 </li>
 <li>
@@ -591,7 +600,10 @@ window.MathJax = {
 <div class="toc-item"><a href="sec-ftfgag.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Group Decompositions</span></a></div>
 <ul class="structural"><li><div class="toc-item"><a href="sec-ftfgag.html#exercises-decomp" class="internal"><span class="codenumber">7.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
-<li><div class="toc-item"><a href="sec-classifications.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Groups Up to Isomorphism</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-classifications.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Groups Up to Isomorphism</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-classifications.html#exercises-23" class="internal"><span class="codenumber">7.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
 </ul>
 </li>
 <li>
@@ -651,10 +663,17 @@ window.MathJax = {
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-defn-ex.html#subsec-first-ex" class="internal"><span class="title">Definition and First Properties</span></a></div></li>
 <li><div class="toc-item"><a href="sec-defn-ex.html#subsec-units" class="internal"><span class="title">Units, Zero Divisors, Integral Domains</span></a></div></li>
+<li><div class="toc-item"><a href="sec-defn-ex.html#exercises-24" class="internal"><span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li><div class="toc-item"><a href="sec-subrings.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Subrings</span></a></div></li>
-<li><div class="toc-item"><a href="sec-ring-hom.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Homomorphisms</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-subrings.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Subrings</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-subrings.html#exercises-25" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-ring-hom.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Homomorphisms</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-ring-hom.html#exercises-26" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
 </ul>
 </li>
 <li>
@@ -665,6 +684,7 @@ window.MathJax = {
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-ideals.html#subsec-ideal-def" class="internal"><span class="title">Definition and First Properties</span></a></div></li>
 <li><div class="toc-item"><a href="sec-ideals.html#subsec-generated-ideals" class="internal"><span class="title">Generated Ideals</span></a></div></li>
+<li><div class="toc-item"><a href="sec-ideals.html#exercises-27" class="internal"><span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -672,6 +692,7 @@ window.MathJax = {
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-ring-quotients.html#subsec-quotient-rings" class="internal"><span class="title">Quotient Rings</span></a></div></li>
 <li><div class="toc-item"><a href="sec-ring-quotients.html#subsec-ring-iso-thms" class="internal"><span class="title">The Ring Isomorphism Theorems</span></a></div></li>
+<li><div class="toc-item"><a href="sec-ring-quotients.html#exercises-28" class="internal"><span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -684,26 +705,51 @@ window.MathJax = {
 <ul class="structural">
 <li><div class="toc-item"><a href="subsec-primemax-ideals.html#subsec-prime-ideals" class="internal"><span class="title">Prime Ideals</span></a></div></li>
 <li><div class="toc-item"><a href="subsec-primemax-ideals.html#subsec-maximal-ideals" class="internal"><span class="title">Maximal Ideals</span></a></div></li>
+<li><div class="toc-item"><a href="subsec-primemax-ideals.html#exercises-29" class="internal"><span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li><div class="toc-item"><a href="subsec-polyrings.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Polynomial Rings</span></a></div></li>
-<li><div class="toc-item"><a href="sec-field-of-fractions.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Fields of Fractions</span></a></div></li>
+<li>
+<div class="toc-item"><a href="subsec-polyrings.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Polynomial Rings</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="subsec-polyrings.html#exercises-30" class="internal"><span class="codenumber">3.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-field-of-fractions.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Fields of Fractions</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-field-of-fractions.html#exercises-31" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="domains.html" class="internal"><span class="codenumber">4</span> <span class="title">Domains</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-eds.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Euclidian Domains</span></a></div></li>
-<li><div class="toc-item"><a href="sec-pids.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Principal Ideal Domains</span></a></div></li>
-<li><div class="toc-item"><a href="subsec-ufds.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Unique Factorization Domains</span></a></div></li>
-<li><div class="toc-item"><a href="subsec-noeth.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Noetherian Domains</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-eds.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Euclidian Domains</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-eds.html#exercises-32" class="internal"><span class="codenumber">4.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-pids.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Principal Ideal Domains</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-pids.html#exercises-33" class="internal"><span class="codenumber">4.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="subsec-ufds.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Unique Factorization Domains</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="subsec-ufds.html#exercises-34" class="internal"><span class="codenumber">4.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="subsec-noeth.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Noetherian Domains</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="subsec-noeth.html#exercises-35" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-irreducible.html" class="internal"><span class="codenumber">5</span> <span class="title">Irreducibility</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-roots.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Roots of Unity</span></a></div></li>
-<li><div class="toc-item"><a href="sec-irrpoly.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Irredicuble Polynomials</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-roots.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Roots of Unity</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-roots.html#exercises-36" class="internal"><span class="codenumber">5.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-irrpoly.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Irredicuble Polynomials</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-irrpoly.html#exercises-37" class="internal"><span class="codenumber">5.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
 </ul>
 </li>
 <li>
@@ -718,50 +764,153 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="ch-mod.html" class="internal"><span class="codenumber">1</span> <span class="title">Modules</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-defmod.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Module Basics</span></a></div></li>
-<li><div class="toc-item"><a href="sec-modhom.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Module Homomorphisms</span></a></div></li>
-<li><div class="toc-item"><a href="sec-quote.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Quotient Modules</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-defmod.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Module Basics</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-defmod.html#module-basics" class="internal"><span class="title">Module Basics</span></a></div></li>
+<li><div class="toc-item"><a href="sec-defmod.html#exercises-38" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-modhom.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Module Homomorphisms</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-modhom.html#exercises-39" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-quote.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Quotient Modules</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-quote.html#quotient-modules" class="internal"><span class="title">Quotient Modules</span></a></div></li>
+<li><div class="toc-item"><a href="sec-quote.html#exercises-40" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="ch-freemod.html" class="internal"><span class="codenumber">2</span> <span class="title">Free Modules</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-linear.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Linear Independence</span></a></div></li>
-<li><div class="toc-item"><a href="sec-modgen.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Generated Modules</span></a></div></li>
-<li><div class="toc-item"><a href="sec-bases.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Bases</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-linear.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Linear Independence</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-linear.html#generated-modules" class="internal"><span class="title">Generated Modules</span></a></div></li>
+<li><div class="toc-item"><a href="sec-linear.html#exercises-41" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-modgen.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Generated Modules</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-modgen.html#exercises-42" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-bases.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Bases</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-bases.html#exercises-43" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="ch-vectors.html" class="internal"><span class="codenumber">3</span> <span class="title">Vector Spaces</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-vecbasis.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Existence of Bases</span></a></div></li>
-<li><div class="toc-item"><a href="sec-ranknul.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Rank-Nullity</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-vecbasis.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Existence of Bases</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-vecbasis.html#bases-of-vector-spaces-and-dimension" class="internal"><span class="title">Bases of Vector Spaces and Dimension</span></a></div></li>
+<li><div class="toc-item"><a href="sec-vecbasis.html#exercises-44" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-ranknul.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Rank-Nullity</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-ranknul.html#exercises-45" class="internal"><span class="codenumber">3.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-transforms.html" class="internal"><span class="codenumber">4</span> <span class="title">Linear Transformations</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-basics.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Basics</span></a></div></li>
-<li><div class="toc-item"><a href="sec-cob.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Change of Basis</span></a></div></li>
-<li><div class="toc-item"><a href="sec-elematix.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Elementary Matrices</span></a></div></li>
-<li><div class="toc-item"><a href="sec-operator.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Linear Operators on Free Modules</span></a></div></li>
-<li><div class="toc-item"><a href="sec-det.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Determinants</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-basics.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Basics</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-basics.html#linear-transformations" class="internal"><span class="title">Linear Transformations</span></a></div></li>
+<li><div class="toc-item"><a href="sec-basics.html#exercises-46" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-cob.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Change of Basis</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-cob.html#change-of-basis" class="internal"><span class="title">Change of Basis</span></a></div></li>
+<li><div class="toc-item"><a href="sec-cob.html#exercises-47" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-elematix.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Elementary Matrices</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-elematix.html#elementary-matrices" class="internal"><span class="title">Elementary Matrices</span></a></div></li>
+<li><div class="toc-item"><a href="sec-elematix.html#exercises-48" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-operator.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Linear Operators on Free Modules</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-operator.html#linear-operators-on-free-modules" class="internal"><span class="title">Linear Operators on Free Modules</span></a></div></li>
+<li><div class="toc-item"><a href="sec-operator.html#exercises-49" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-det.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Determinants</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-det.html#determinants" class="internal"><span class="title">Determinants</span></a></div></li>
+<li><div class="toc-item"><a href="sec-det.html#exercises-50" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="ch-modgen.html" class="internal"><span class="codenumber">5</span> <span class="title">Finitely Generated Modules over PIDs</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-modpres.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Finitely Presented Modules</span></a></div></li>
-<li><div class="toc-item"><a href="sec-snf.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Smith Normal Form</span></a></div></li>
-<li><div class="toc-item"><a href="sec-modclass.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Classifications</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-modpres.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Finitely Presented Modules</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-modpres.html#module-presentations" class="internal"><span class="title">Module Presentations</span></a></div></li>
+<li><div class="toc-item"><a href="sec-modpres.html#exercises-51" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-snf.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Smith Normal Form</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-snf.html#smith-normal-form" class="internal"><span class="title">Smith Normal Form</span></a></div></li>
+<li><div class="toc-item"><a href="sec-snf.html#exercises-52" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-noeth.html" class="internal"><span class="codenumber">5.3</span> <span class="title">noeth</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-noeth.html#commutative-noetherian-rings" class="internal"><span class="title">Commutative Noetherian Rings</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-modclass.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Classifications</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-modclass.html#classification-of-finitely-generated-modules-over-pids" class="internal"><span class="title">Classification of Finitely Generated Modules over PIDs</span></a></div></li>
+<li><div class="toc-item"><a href="sec-modclass.html#exercises-53" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="ch-canform.html" class="internal"><span class="codenumber">6</span> <span class="title">Canonical Forms</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-modpoly.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Modules over Polynomial Rings</span></a></div></li>
-<li><div class="toc-item"><a href="sec-rcf.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Rational Canonical Form</span></a></div></li>
-<li><div class="toc-item"><a href="sec-jcf.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Jordan Canonical Form</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-rcf.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Rational Canonical Form</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-rcf.html#rcf" class="internal"><span class="title">RCF</span></a></div></li>
+<li><div class="toc-item"><a href="sec-rcf.html#exercises-54" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-minpoly.html" class="internal"><span class="codenumber">6.2</span> <span class="title">The Minimum Polynomial</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-minpoly.html#the-minimum-polynomial-of-an-operator" class="internal"><span class="title">The Minimum Polynomial of an Operator</span></a></div></li>
+<li><div class="toc-item"><a href="sec-minpoly.html#exercises-55" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-jcf.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Jordan Canonical Form</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-jcf.html#exercises-56" class="internal"><span class="codenumber">6.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -772,21 +921,42 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="ch-extensions.html" class="internal"><span class="codenumber">1</span> <span class="title">Field Extensions</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="field-extension-basics.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Field Extension Basics</span></a></div></li>
+<li>
+<div class="toc-item"><a href="field-extension-basics.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Field Extension Basics</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="field-extension-basics.html#exercises-57" class="internal"><span class="codenumber">1.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
 <li>
 <div class="toc-item"><a href="sec-algebraic.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Algebraic Extensions</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-algebraic.html#exercises-20" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-algebraic.html#exercises-58" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="sec-algebraic.html#exercises-59" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li>
+</ul>
 </li>
-<li><div class="toc-item"><a href="sec-closure.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Algebraic Closures</span></a></div></li>
-<li><div class="toc-item"><a href="sec-splitting.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Splitting Fields</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-closure.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Algebraic Closures</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-closure.html#exercises-60" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-splitting.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Splitting Fields</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-splitting.html#exercises-61" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="ch-galois.html" class="internal"><span class="codenumber">2</span> <span class="title">Galois Theory</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-separable.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Separability</span></a></div></li>
-<li><div class="toc-item"><a href="sec-galext.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Galois Extensions</span></a></div></li>
-<li><div class="toc-item"><a href="sec-ftgt.html" class="internal"><span class="codenumber">2.3</span> <span class="title">The Fundamental Theorem of Galois Theory</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-separable.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Separability</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-separable.html#exercises-62" class="internal"><span class="codenumber">2.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-galext.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Galois Extensions</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-galext.html#exercises-63" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-ftgt.html" class="internal"><span class="codenumber">2.3</span> <span class="title">The Fundamental Theorem of Galois Theory</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-ftgt.html#exercises-64" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
 </ul>
 </li>
 <li>
@@ -798,42 +968,6 @@ window.MathJax = {
 <li><div class="toc-item"><a href="sec-inverse-galois.html" class="internal"><span class="codenumber">3.4</span> <span class="title">The Inverse Galois Problem</span></a></div></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="part-representation.html" class="internal"><span class="codenumber">V</span> <span class="title">Representation Theory</span></a></div>
-<ul class="structural">
-<li>
-<div class="toc-item"><a href="ch-grouprings.html" class="internal"><span class="codenumber">1</span> <span class="title">Group Rings and Representations</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="sec-representations.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Representations</span></a></div></li>
-<li><div class="toc-item"><a href="sec-group-rings-and-modules.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Group Rings and Modules</span></a></div></li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="ch-simple-modules.html" class="internal"><span class="codenumber">2</span> <span class="title">Simple Modules</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="sec-simple-modules.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Simple Modules</span></a></div></li>
-<li><div class="toc-item"><a href="sec-fl-modules.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Finite Length Modules</span></a></div></li>
-</ul>
-</li>
-<li><div class="toc-item"><a href="sec-chain-conditions.html" class="internal"><span class="codenumber">3</span> <span class="title">Chain Conditions</span></a></div></li>
-<li><div class="toc-item"><a href="ch-semisimple-mod.html" class="internal"><span class="codenumber">4</span> <span class="title">Semisimple Modules</span></a></div></li>
-<li>
-<div class="toc-item"><a href="ch-artin-wedd.html" class="internal"><span class="codenumber">5</span> <span class="title">Artin-Wedderburn Theorem</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="sec-semisimple-rings.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Semisimple Rings</span></a></div></li>
-<li><div class="toc-item"><a href="sec-art-wedd.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Artin-Wedderburn Theorem</span></a></div></li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="ch-applications.html" class="internal"><span class="codenumber">6</span> <span class="title">Applications to Representation Theory</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="sec-spplications.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Applications</span></a></div></li>
-<li><div class="toc-item"><a href="sec-rep-closed-fields.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Algebraically Closed Fields</span></a></div></li>
-</ul>
-</li>
-<li><div class="toc-item"><a href="ch-character.html" class="internal"><span class="codenumber">7</span> <span class="title">Character Theory</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -863,7 +997,7 @@ window.MathJax = {
 </li>
 <li>
 <div class="toc-item"><a href="appendix-2.html" class="internal"><span class="codenumber">B</span> <span class="title">History</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="exercises-21.html" class="internal"><span class="codenumber">B</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="exercises-65.html" class="internal"><span class="codenumber">B</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li><div class="toc-item"><a href="appendix-3.html" class="internal"><span class="codenumber">C</span> <span class="title">Notation</span></a></div></li>
 <li><div class="toc-item"><a href="colophon-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
@@ -871,29 +1005,31 @@ window.MathJax = {
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-conjugation"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">4.3</span> <span class="title">Conjugation</span>
+<span class="type">Section</span> <span class="codenumber">4.2</span> <span class="title">Left Multiplication and Conjugation</span>
 </h2>
-<article class="example example-like" id="example-10"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.20</span><span class="period">.</span><span class="space"> </span><span class="title">Conjugation Action.</span>
-</h3> <div class="para logical" id="p-496">
+<article class="example example-like" id="example-13"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.12</span><span class="period">.</span><span class="space"> </span><span class="title">Conjugation Action.</span>
+</h3> <div class="para logical" id="p-568">
 <div class="para">Let <span class="process-math">\(G\)</span> be any group and fix an element <span class="process-math">\(g \in G\text{.}\)</span> Define <em class="emphasis">the conjugation action</em> of <span class="process-math">\(G\)</span> on itself by setting</div>
 <div class="displaymath process-math">
 \begin{equation*}
-g\cdot x=gxg^{-1} \text{ for any } g,x\in G.
+g\cdot x=gxg^{-1} \;\text{for any}\; g,x\in G.
 \end{equation*}
 </div>
-</div></article><article class="problem example-like" id="problem-30"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.21</span><span class="period">.</span>
+</div></article><article class="theorem theorem-like" id="thm-conjugation-action"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.13</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-497"><ol class="lower-alpha">
-<li id="li-159"><div class="para" id="p-498">Prove that the conjugation action of of <span class="process-math">\(G\)</span> on itself is a well-defined group action.</div></li>
-<li id="li-160"><div class="para" id="p-499">Show <span class="process-math">\(G\)</span> acts on <span class="process-math">\(H\)</span> via conjugation for any <span class="process-math">\(H\leq G\text{.}\)</span>
+<div class="para logical" id="p-569"><ol class="decimal">
+<li id="li-187"><div class="para" id="p-570">Prove that the conjugation action of of <span class="process-math">\(G\)</span> on itself is a well-defined group action.</div></li>
+<li id="li-188"><div class="para" id="p-571">Show <span class="process-math">\(G\)</span> acts on <span class="process-math">\(H\)</span> via conjugation for any <span class="process-math">\(H\leq G\text{.}\)</span>
 </div></li>
-</ol></div></article><article class="problem example-like" id="problem-31"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.22</span><span class="period">.</span>
+<li id="li-189"><div class="para" id="p-572">Let <span class="process-math">\(N\mathrel{\unlhd}G\text{.}\)</span> The conjugation action of <span class="process-math">\(G\)</span> on itself induces an action by conjugation of <span class="process-math">\(G\)</span> on <span class="process-math">\(N\text{.}\)</span> In particular, <span class="process-math">\(N\)</span> is the disjoint union of some of the conjugacy classes in <span class="process-math">\(G\text{.}\)</span>
+</div></li>
+</ol></div></article><article class="proposition theorem-like" id="prop-kernel-of-conjugation-action"><h3 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">4.14</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-500">The kernel of the permutation representation for the conjugation action is the center <span class="process-math">\(Z(G)\text{.}\)</span>
-</div> <article class="hiddenproof" id="proof-21"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-21"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-21"><article class="hiddenproof"><div class="para logical" id="p-501">
+<div class="para" id="p-573">The kernel of the permutation representation for the conjugation action is the center <span class="process-math">\(Z(G)\text{.}\)</span>
+</div></article><article class="hiddenproof" id="proof-19"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-19"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-19"><article class="hiddenproof"><div class="para logical" id="p-574">
 <div class="para">If <span class="process-math">\(\rho:G\to \operatorname{Perm}(G)\)</span> is the permutation representation for <span class="process-math">\(G\)</span> acting on <span class="process-math">\(G\)</span> by conjugation, then</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -905,47 +1041,58 @@ g\in \operatorname{Ker}\rho\iff g\cdot x=x, \forall x\in G \iff gxg^{-1}=x, \for
 \iff gx=xg, \forall x\in G \iff g\in Z(G).
 \end{equation*}
 </div>
-</div></article></div></article><article class="problem example-like" id="problem-32"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.23</span><span class="period">.</span>
+</div></article></div>
+<article class="corollary theorem-like" id="cor-faithful-conjugation"><h3 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">4.15</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-502">The action of <span class="process-math">\(G\)</span> on itself by conjugation is faithful if and only if <span class="process-math">\(Z(G)=\{e\}\text{.}\)</span>
+<div class="para" id="p-575">The action of <span class="process-math">\(G\)</span> on itself by conjugation is faithful if and only if <span class="process-math">\(Z(G)=\{e\}\text{.}\)</span>
 </div></article><article class="definition definition-like" id="def-conjugacy-class"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.24</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.16</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-503">The <em class="emphasis">conjugacy class</em> of an element <span class="process-math">\(g \in G\)</span> is <span class="process-math">\(C_g = \{hgh^{-1} \mid h \in G\}\text{,}\)</span> i.e. the orbit of <span class="process-math">\(g\)</span> under conjugation.</div></article><article class="definition definition-like" id="def-conjugate"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.25</span><span class="period">.</span>
+<div class="para" id="p-576">The <em class="emphasis">conjugacy class</em> of an element <span class="process-math">\(g \in G\)</span> is <span class="process-math">\(C_g = \{hgh^{-1} \mid h \in G\}\text{,}\)</span> i.e. the orbit of <span class="process-math">\(g\)</span> under conjugation.</div></article><article class="definition definition-like" id="def-conjugate"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.17</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-504">Let <span class="process-math">\(G\)</span> be a group. Two elements <span class="process-math">\(g,g' \in G\)</span> are <em class="emphasis">conjugate</em> if there is <span class="process-math">\(h \in G\)</span> with <span class="process-math">\(g' = hgh^{-1}\)</span> (equivalently <span class="process-math">\(g\)</span> and <span class="process-math">\(g'\)</span> are in the same orbit of the conjugation action).</div> <div class="para" id="p-505">Two subsets <span class="process-math">\(S,S' \subseteq G\)</span> are conjugate if there is <span class="process-math">\(h \in G\)</span> with <span class="process-math">\(S' = hSh^{-1}\text{.}\)</span>
-</div></article><article class="problem example-like" id="problem-33"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.26</span><span class="period">.</span>
+<div class="para" id="p-577">Let <span class="process-math">\(G\)</span> be a group. Two elements <span class="process-math">\(g,g' \in G\)</span> are <em class="emphasis">conjugate</em> if there is <span class="process-math">\(h \in G\)</span> with <span class="process-math">\(g' = hgh^{-1}\)</span> (equivalently <span class="process-math">\(g\)</span> and <span class="process-math">\(g'\)</span> are in the same orbit of the conjugation action).</div> <div class="para" id="p-578">Two subsets <span class="process-math">\(S,S' \subseteq G\)</span> are conjugate if there is <span class="process-math">\(h \in G\)</span> with <span class="process-math">\(S' = hSh^{-1}\text{.}\)</span>
+</div></article><article class="problem example-like" id="problem-20"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.18</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-506">Let <span class="process-math">\(G = A_7\)</span> and <span class="process-math">\(S\)</span> be the set of elements of <span class="process-math">\(G\)</span> of order <span class="process-math">\(7\text{.}\)</span> Prove that <span class="process-math">\(S\)</span> is not a conjugacy class of <span class="process-math">\(G\text{.}\)</span>
-</div> <article class="hiddenproof" id="proof-22"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-22"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-22"><article class="hiddenproof"><div class="para" id="p-507">Elements of order <span class="process-math">\(7\)</span> in <span class="process-math">\(G\)</span> must permute all <span class="process-math">\(7\)</span> elements, making them of the form <span class="process-math">\((abcdefg)\text{.}\)</span> There are <span class="process-math">\(6!\)</span> such permutations, given that we can always reorder them so that <span class="process-math">\(a\)</span> is first, leaving <span class="process-math">\(6\)</span> remaining spots without replacement. Let <span class="process-math">\(S\)</span> denote the set of these <span class="process-math">\(6!\)</span> elements.</div> <div class="para" id="p-508">Suppose by way of contradiction there existed some <span class="process-math">\(s\in G\)</span> such that <span class="process-math">\(S=C_s(G)\text{.}\)</span> Let <span class="process-math">\(G\)</span> act on itself through conjugation, making <span class="process-math">\(S=C_s(G)=\Orb(s)\)</span> by the definition of conjugacy class. The Orbit-Stabilizer Theorem tells us that <span class="process-math">\(|G|=|\Orb(s)|\cdot|\Stab(s)|\text{,}\)</span> meaning that the order of <span class="process-math">\(S\)</span> must divide the order of <span class="process-math">\(G\text{.}\)</span> However, <span class="process-math">\(|G|=\frac{7!}{2}\)</span> and <span class="process-math">\(|S|=6!\text{,}\)</span> so this is a contradiction. Thus <span class="process-math">\(S\)</span> is not a conjugacy class of <span class="process-math">\(G\text{.}\)</span>
-</div></article></div></article><article class="proposition theorem-like" id="prop-normal-conjugacy"><h3 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">4.27</span><span class="period">.</span>
-</h3>
-<div class="para" id="p-509">Let <span class="process-math">\(N\mathrel{\unlhd}G\text{.}\)</span> The conjugation action of <span class="process-math">\(G\)</span> on itself induces an action by conjugation of <span class="process-math">\(G\)</span> on <span class="process-math">\(N\text{.}\)</span> In particular, <span class="process-math">\(N\)</span> is the disjoint union of some of the conjugacy classes in <span class="process-math">\(G\text{.}\)</span>
-</div></article><article class="problem example-like" id="problem-34"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.28</span><span class="period">.</span>
-</h3>
-<div class="para" id="p-510">Let <span class="process-math">\(H\)</span> be a subgroup of a group <span class="process-math">\(G\text{.}\)</span> Recall that the centralizer of <span class="process-math">\(H\)</span> is the subgroup of <span class="process-math">\(G\)</span> defined by <span class="process-math">\(C_G(H) = \{g \in G | gh = hg ∀h \in H\}\)</span> and the normalizer of <span class="process-math">\(H\)</span> is the subgroup of <span class="process-math">\(G\)</span> defined by <span class="process-math">\(N_G(H) = \{g \in G | gHg\inv = H\}\text{.}\)</span>
-</div> <div class="para logical" id="p-511"><ol class="lower-alpha">
-<li id="li-161"><div class="para" id="p-derived-li-161">Show that the centralizer <span class="process-math">\(C_G(H)\)</span> of <span class="process-math">\(H\)</span> in <span class="process-math">\(G\)</span> is a normal subgroup of the normalizer <span class="process-math">\(N_G(H)\)</span> of <span class="process-math">\(H\)</span> in <span class="process-math">\(G\text{.}\)</span>
+<div class="para" id="p-579">Let <span class="process-math">\(G\)</span> be a finite group and let <span class="process-math">\(H\)</span> be a proper subgroup of <span class="process-math">\(G\)</span> with <span class="process-math">\([G:H]=h\text{.}\)</span>
+</div> <div class="para logical" id="p-580"><ol class="decimal">
+<li id="li-190"><div class="para" id="p-derived-li-190">Prove that <span class="process-math">\(H\)</span> has at most <span class="process-math">\(h\)</span> distinct conjugate sets <span class="process-math">\(gHg^{-1}\)</span> for <span class="process-math">\(g\in G\text{.}\)</span>
 </div></li>
-<li id="li-162"><div class="para" id="p-derived-li-162">Show that the quotient <span class="process-math">\(N_G(H)/C_G(H)\)</span> is isomorphic to a subgroup of the automorphism group <span class="process-math">\(\Aut(H)\)</span> of <span class="process-math">\(H\text{.}\)</span>
+<li id="li-191"><div class="para" id="p-derived-li-191">Prove that <span class="process-math">\(G\neq \bigcup_{g\in G} gHg^{-1}\text{.}\)</span>
 </div></li>
-</ol></div> <article class="hiddenproof" id="proof-23"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-23"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-23"><article class="hiddenproof"><div class="para" id="p-512">Let <span class="process-math">\(H\)</span> be a subgroup of a group <span class="process-math">\(G\text{.}\)</span>
-</div> <ol class="lower-alpha">
-<li id="li-163"><div class="para" id="p-513">Let <span class="process-math">\(G\)</span> act on <span class="process-math">\(H\)</span> by conjugation. Thus the associated permutation homomorphism <span class="process-math">\(\rho\)</span> is defined such that <span class="process-math">\(\rho(g)=\phi_g\text{,}\)</span> where <span class="process-math">\(\phi_g(h)=ghg\inv\text{.}\)</span> Notice that when <span class="process-math">\(x\in C_G(H)\)</span> we have <span class="process-math">\(\phi_x(h)=xhx\inv=h\)</span> for all <span class="process-math">\(h\in H\text{,}\)</span> and thus <span class="process-math">\(x\in\ker(\rho)\text{.}\)</span> If <span class="process-math">\(x\in\ker(\rho)\)</span> then <span class="process-math">\(xhx\inv=h\)</span> for all <span class="process-math">\(h\in H\text{,}\)</span> and thus <span class="process-math">\(x\in C_G(H)\text{.}\)</span> Thus <span class="process-math">\(C_G(H)=\ker(\rho)\)</span> and <span class="process-math">\(C_G(H)\nsg N_G(H)\text{.}\)</span>
-</div></li>
-<li id="li-164"><div class="para" id="p-514">From the above permutation representation we have a homomorphism <span class="process-math">\(\rho: G\to S_{|H|}\cong\Aut(H)\text{.}\)</span> As <span class="process-math">\(C_G(H)=\ker(\rho)\text{,}\)</span> by the First Isomorphism Theorem we have <span class="process-math">\(G/C_G(H)\cong\im(\rho))\text{,}\)</span> a subgroup of <span class="process-math">\(\Aut(H)\text{.}\)</span>
-</div></li>
-</ol></article></div> <article class="hiddenproof" id="proof-24"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-24"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-24"><article class="hiddenproof"><div class="para" id="p-515">Let <span class="process-math">\(G\)</span> be a group and <span class="process-math">\(H\nsg G\text{.}\)</span> Let <span class="process-math">\(x\in C_H(G)\text{,}\)</span> and consider <span class="process-math">\(gxg\inv\text{.}\)</span> Let <span class="process-math">\(h\in H\text{.}\)</span> As <span class="process-math">\(H\nsg G\)</span> we have <span class="process-math">\(h=gh'g\inv\)</span> for some <span class="process-math">\(h\in H\text{,}\)</span> and thus that 1. <span class="process-math">\(g\inv h=h'g\inv\)</span> and 2. <span class="process-math">\(hg=gh'\text{.}\)</span> Consider <span class="process-math">\(gxg\inv h\text{.}\)</span> By (1), we see <span class="process-math">\(gxg\inv h=gxh'g\inv\text{.}\)</span> As <span class="process-math">\(x\)</span> commutes with everything in <span class="process-math">\(H\)</span> we have <span class="process-math">\(gh'xg\inv\text{,}\)</span> and by (2) we have <span class="process-math">\(hgxg\inv\text{.}\)</span> Thus <span class="process-math">\(C_H(G)\nsg G\text{.}\)</span>
-</div> <div class="para" id="p-516">Let <span class="process-math">\(G\)</span> act on the left cosets of <span class="process-math">\(C_G(H)\)</span> by left multiplication, giving rise to the permutation representation homomorphism <span class="process-math">\(\rho:G/C_G(H)\to\Aut(H)\text{.}\)</span> By the First Isomorphism Theorem we see that <span class="process-math">\(G/C_G(H)\)</span> is isomorphic to a subgroup of the automorphism group of <span class="process-math">\(H\text{.}\)</span>
-</div></article></div></article><article class="problem example-like" id="problem-35"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.29</span><span class="period">.</span>
+</ol></div> <article class="hiddenproof" id="proof-20"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-20"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-20"><article class="hiddenproof"><div class="para" id="p-581">Let <span class="process-math">\(f:G/H\to gHg\inv\)</span> be defined by <span class="process-math">\(f(gH)=gHg\inv\text{.}\)</span> Suppose <span class="process-math">\(xH=yH\text{.}\)</span> Notice that <span class="process-math">\(f(xH)=xHx\inv\)</span> and <span class="process-math">\(f(H)=yHy\inv\text{,}\)</span> but as <span class="process-math">\(x=y\)</span> we have equality, and thus <span class="process-math">\(f\)</span> is well defined. Let <span class="process-math">\(gHg\inv\)</span> be a conjugate set, and let <span class="process-math">\(gH\in G/H\text{.}\)</span> Then <span class="process-math">\(f(gH)=gHg\inv\text{,}\)</span> and so we have surjectivity. As <span class="process-math">\(|G/H|=|[G:H]|=h\text{,}\)</span> there can be at most <span class="process-math">\(h\)</span> distinct conjugate sets for <span class="process-math">\(g\in G\text{.}\)</span>
+</div> <div class="para" id="p-582">Let <span class="process-math">\(G\)</span> act on <span class="process-math">\(H\)</span> by conjugation. We know that the orbits of this action partition <span class="process-math">\(H\text{.}\)</span> However, under this action the orbits are exactly the conjugacy classes of <span class="process-math">\(H\text{.}\)</span> There are at most <span class="process-math">\(h\)</span> conjugacy classes. Each conjugacy class has at most <span class="process-math">\(|H|\)</span> elements in it, and each one has the identity. As there are at most <span class="process-math">\(h\)</span> of them then when we add all of their orders we get at most <span class="process-math">\(h(|H|-1)\text{,}\)</span> which is less than the order of <span class="process-math">\(G\text{.}\)</span>
+</div></article></div></article><section class="exercises" id="exercises-13"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
-<div class="para logical" id="p-517">
+<div class="exercisegroup" id="exercisegroup-31">
+<h4 class="heading"><span class="title">Computations and Examples.</span></h4>
+<div class="introduction" id="introduction-34"><div class="para" id="p-583"></div></div>
+<div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-72"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<div class="para" id="p-584">Coming soon to an OER near you!</div></article></div>
+</div>
+<div class="exercisegroup" id="exercisegroup-32">
+<h4 class="heading"><span class="title">Formal Proofs.</span></h4>
+<div class="introduction" id="introduction-35"><div class="para" id="p-585"></div></div>
+<div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-73"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div class="para" id="p-586">Coming soon to an OER near you!</div></article></div>
+</div>
+<div class="exercisegroup" id="exercisegroup-33">
+<h4 class="heading"><span class="title">Qualifying Exam Problems.</span></h4>
+<div class="introduction" id="introduction-36"><div class="para" id="p-587"></div></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-74"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<div class="para" id="p-588">Let <span class="process-math">\(G = A_7\)</span> and <span class="process-math">\(S\)</span> be the set of elements of <span class="process-math">\(G\)</span> of order <span class="process-math">\(7\text{.}\)</span> Prove that <span class="process-math">\(S\)</span> is not a conjugacy class of <span class="process-math">\(G\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-22" id="solution-22"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-22"><div class="solution solution-like">
+<div class="para" id="p-589">Elements of order <span class="process-math">\(7\)</span> in <span class="process-math">\(G\)</span> must permute all <span class="process-math">\(7\)</span> elements, making them of the form <span class="process-math">\((abcdefg)\text{.}\)</span> There are <span class="process-math">\(6!\)</span> such permutations, given that we can always reorder them so that <span class="process-math">\(a\)</span> is first, leaving <span class="process-math">\(6\)</span> remaining spots without replacement. Let <span class="process-math">\(S\)</span> denote the set of these <span class="process-math">\(6!\)</span> elements.</div> <div class="para" id="p-590">Suppose by way of contradiction there existed some <span class="process-math">\(s\in G\)</span> such that <span class="process-math">\(S=C_s(G)\text{.}\)</span> Let <span class="process-math">\(G\)</span> act on itself through conjugation, making <span class="process-math">\(S=C_s(G)=\Orb(s)\)</span> by the definition of conjugacy class. The Orbit-Stabilizer Theorem tells us that <span class="process-math">\(|G|=|\Orb(s)|\cdot|\Stab(s)|\text{,}\)</span> meaning that the order of <span class="process-math">\(S\)</span> must divide the order of <span class="process-math">\(G\text{.}\)</span> However, <span class="process-math">\(|G|=\frac{7!}{2}\)</span> and <span class="process-math">\(|S|=6!\text{,}\)</span> so this is a contradiction. Thus <span class="process-math">\(S\)</span> is not a conjugacy class of <span class="process-math">\(G\text{.}\)</span>
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-75"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
+<div class="para logical" id="p-591">
 <div class="para">Let <span class="process-math">\(G\)</span> be a (not necessarily finite) group and <span class="process-math">\(K \leq G\)</span> a subgroup of index <span class="process-math">\(n &lt; \infty\text{.}\)</span> Define</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -954,50 +1101,52 @@ N=\bigcap_{g\in G}gKg\inv
 </div>
 <div class="para">(i.e., <span class="process-math">\(N\)</span> is the intersection of all the conjugates of K<span class="process-math">\()\)</span>
 </div>
-</div> <div class="para logical" id="p-518"><ol class="decimal">
-<li id="li-165"><div class="para" id="p-derived-li-165">Prove <span class="process-math">\(N\)</span> is a the largest normal subgroup of <span class="process-math">\(G\)</span> that is contained in <span class="process-math">\(K\text{.}\)</span>
+</div> <div class="para logical" id="p-592"><ol class="lower-alpha">
+<li id="li-192"><div class="para" id="p-derived-li-192">Prove <span class="process-math">\(N\)</span> is a the largest normal subgroup of <span class="process-math">\(G\)</span> that is contained in <span class="process-math">\(K\text{.}\)</span>
 </div></li>
-<li id="li-166"><div class="para" id="p-derived-li-166">Prove <span class="process-math">\([G : N ]\)</span> divides <span class="process-math">\(n!\text{.}\)</span>
+<li id="li-193"><div class="para" id="p-derived-li-193">Prove <span class="process-math">\([G : N ]\)</span> divides <span class="process-math">\(n!\text{.}\)</span>
 </div></li>
-</ol></div> <article class="hiddenproof" id="proof-25"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-25"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-25"><article class="hiddenproof"><div class="para" id="p-519">Let <span class="process-math">\(G\)</span> act on the left cosets of <span class="process-math">\(K\)</span> in <span class="process-math">\(G\)</span> by left multiplication, yielding the permutation representation homomorphism <span class="process-math">\(\rho:G\to S_n\text{.}\)</span> Let <span class="process-math">\(N\)</span> conspicuously denote the kernel of this function.</div> <div class="para" id="p-520">Let <span class="process-math">\(x\in N\text{.}\)</span> Then <span class="process-math">\(\rho(n)\text{,}\)</span> the automorphism <span class="process-math">\(\s:G/K\to G/K\)</span> defined by <span class="process-math">\(\s(gK)=xgK\)</span> is precisely the identity permutation. Thus <span class="process-math">\(xgK=gK\)</span> for all <span class="process-math">\(g\in G\)</span> and <span class="process-math">\(g\inv xgK=K\)</span> for all <span class="process-math">\(g\in G\text{,}\)</span> so <span class="process-math">\(x\in\)</span> This means the elements of <span class="process-math">\(N\)</span> are precisely those that are in the conjugacy class of <span class="process-math">\(gKg\inv\)</span> for all <span class="process-math">\(g\in G\text{.}\)</span> There cannot exist a larger normal subgroup of <span class="process-math">\(G\)</span> contained in <span class="process-math">\(K\text{,}\)</span> as it would contain an element that was not in some conjugacy class for <span class="process-math">\(G\text{,}\)</span> negating the definition of a normal subgroup.</div> <div class="para" id="p-521">Recall the permutation representation homomorphism <span class="process-math">\(\rho:G\to S_n\text{.}\)</span> The First Isomorphism Theorem tells us <span class="process-math">\(G/N\cong\im(\rho)\leq S_n\text{,}\)</span> which has order <span class="process-math">\(n!\text{.}\)</span> Thus <span class="process-math">\([G:N]|n!\text{.}\)</span>
-</div></article></div></article><article class="problem example-like" id="problem-36"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.30</span><span class="period">.</span>
-</h3>
-<div class="para" id="p-522">Prove that if <span class="process-math">\(G\)</span> is a finite group of odd order, then for any non-identity element <span class="process-math">\(x\in G\text{,}\)</span> <span class="process-math">\(x\)</span> is not conjugate to <span class="process-math">\(x\inv\text{.}\)</span>
-</div> <article class="hiddenproof" id="proof-26"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-26"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-26"><article class="hiddenproof"><div class="para" id="p-523">Let <span class="process-math">\(G\)</span> be a finite group of odd order, and let <span class="process-math">\(G\)</span> act on itself via conjugation. Under this action, the orbit of an element is exactly its conjugacy class. By the Orbit-Stabilizer Theorem we have <span class="process-math">\(|G|=|\Orb(x)|\cdot|\Stab(x)|\text{.}\)</span> Thus the order of an element divides the order of the group, and so every orbit must have odd order.</div> <div class="para" id="p-524">Suppose there exists an element <span class="process-math">\(x\)</span> such that <span class="process-math">\(gxg\inv=x\inv\)</span> for some <span class="process-math">\(g\in G\text{.}\)</span> Thus <span class="process-math">\(x\inv\in\Orb(x)\text{.}\)</span> Let <span class="process-math">\(y\in\Orb(x)\text{.}\)</span> Thus <span class="process-math">\(y=hxh\inv\)</span> for some <span class="process-math">\(h\in G\text{.}\)</span> Then <span class="process-math">\(y\inv=h\inv x\inv h\text{.}\)</span> However, as <span class="process-math">\(x\inv=gxg\inv\text{,}\)</span> we have <span class="process-math">\(y\inv=h\inv gxg\inv h\text{.}\)</span> As <span class="process-math">\(h\inv g\)</span> and <span class="process-math">\(g\inv h\)</span> are both in <span class="process-math">\(G\text{,}\)</span> we see that <span class="process-math">\(y\inv\in\Orb(x)\)</span> as well. As <span class="process-math">\(e\in\Stab(x)\text{,}\)</span> we see that this means that the orbit of <span class="process-math">\(x\)</span> would have even order, which is not possible.</div></article></div></article><article class="problem example-like" id="problem-37"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.31</span><span class="period">.</span>
-</h3>
-<div class="para" id="p-525">Let <span class="process-math">\(G\)</span> be a finite group and let <span class="process-math">\(H\)</span> be a proper subgroup of <span class="process-math">\(G\)</span> with <span class="process-math">\([G:H]=h\text{.}\)</span>
-</div> <div class="para logical" id="p-526"><ol class="decimal">
-<li id="li-167"><div class="para" id="p-derived-li-167">Prove that <span class="process-math">\(H\)</span> has at most <span class="process-math">\(h\)</span> distinct conjugate sets <span class="process-math">\(gHg^{-1}\)</span> for <span class="process-math">\(g\in G\text{.}\)</span>
-</div></li>
-<li id="li-168"><div class="para" id="p-derived-li-168">Prove that <span class="process-math">\(G\neq \bigcup_{g\in G} gHg^{-1}\text{.}\)</span>
-</div></li>
-</ol></div> <article class="hiddenproof" id="proof-27"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-27"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-27"><article class="hiddenproof"><div class="para" id="p-527">Let <span class="process-math">\(f:G/H\to gHg\inv\)</span> be defined by <span class="process-math">\(f(gH)=gHg\inv\text{.}\)</span> Suppose <span class="process-math">\(xH=yH\text{.}\)</span> Notice that <span class="process-math">\(f(xH)=xHx\inv\)</span> and <span class="process-math">\(f(H)=yHy\inv\text{,}\)</span> but as <span class="process-math">\(x=y\)</span> we have equality, and thus <span class="process-math">\(f\)</span> is well defined. Let <span class="process-math">\(gHg\inv\)</span> be a conjugate set, and let <span class="process-math">\(gH\in G/H\text{.}\)</span> Then <span class="process-math">\(f(gH)=gHg\inv\text{,}\)</span> and so we have surjectivity. As <span class="process-math">\(|G/H|=|[G:H]|=h\text{,}\)</span> there can be at most <span class="process-math">\(h\)</span> distinct conjugate sets for <span class="process-math">\(g\in G\text{.}\)</span>
-</div> <div class="para" id="p-528">Let <span class="process-math">\(G\)</span> act on <span class="process-math">\(H\)</span> by conjugation. We know that the orbits of this action partition <span class="process-math">\(H\text{.}\)</span> However, under this action the orbits are exactly the conjugacy classes of <span class="process-math">\(H\text{.}\)</span> There are at most <span class="process-math">\(h\)</span> conjugacy classes. Each conjugacy class has at most <span class="process-math">\(|H|\)</span> elements in it, and each one has the identity. As there are at most <span class="process-math">\(h\)</span> of them then when we add all of their orders we get at most <span class="process-math">\(h(|H|-1)\text{,}\)</span> which is less than the order of <span class="process-math">\(G\text{.}\)</span>
-</div></article></div></article><section class="exercises" id="exercises-14"><h3 class="heading hide-type">
-<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
-</h3>
-<div class="exercisegroup" id="exercisegroup-34">
-<h4 class="heading"><span class="title">Computations and Examples.</span></h4>
-<div class="introduction" id="introduction-37"><div class="para" id="p-529"></div></div>
-<div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-62"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
-<div class="para" id="p-530">Coming soon to an OER near you!</div></article></div>
+</ol></div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-23" id="solution-23"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-23"><div class="solution solution-like">
+<div class="para" id="p-593">Let <span class="process-math">\(G\)</span> act on the left cosets of <span class="process-math">\(K\)</span> in <span class="process-math">\(G\)</span> by left multiplication, yielding the permutation representation homomorphism <span class="process-math">\(\rho:G\to S_n\text{.}\)</span> Let <span class="process-math">\(N\)</span> conspicuously denote the kernel of this function.</div> <div class="para" id="p-594">Let <span class="process-math">\(x\in N\text{.}\)</span> Then <span class="process-math">\(\rho(n)\text{,}\)</span> the automorphism <span class="process-math">\(\s:G/K\to G/K\)</span> defined by <span class="process-math">\(\s(gK)=xgK\)</span> is precisely the identity permutation. Thus <span class="process-math">\(xgK=gK\)</span> for all <span class="process-math">\(g\in G\)</span> and <span class="process-math">\(g\inv xgK=K\)</span> for all <span class="process-math">\(g\in G\text{,}\)</span> so <span class="process-math">\(x\in\)</span> This means the elements of <span class="process-math">\(N\)</span> are precisely those that are in the conjugacy class of <span class="process-math">\(gKg\inv\)</span> for all <span class="process-math">\(g\in G\text{.}\)</span> There cannot exist a larger normal subgroup of <span class="process-math">\(G\)</span> contained in <span class="process-math">\(K\text{,}\)</span> as it would contain an element that was not in some conjugacy class for <span class="process-math">\(G\text{,}\)</span> negating the definition of a normal subgroup.</div> <div class="para" id="p-595">Recall the permutation representation homomorphism <span class="process-math">\(\rho:G\to S_n\text{.}\)</span> The First Isomorphism Theorem tells us <span class="process-math">\(G/N\cong\im(\rho)\leq S_n\text{,}\)</span> which has order <span class="process-math">\(n!\text{.}\)</span> Thus <span class="process-math">\([G:N]|n!\text{.}\)</span>
 </div>
-<div class="exercisegroup" id="exercisegroup-35">
-<h4 class="heading"><span class="title">Formal Proofs.</span></h4>
-<div class="introduction" id="introduction-38"><div class="para" id="p-531"></div></div>
-<div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-63"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
-<div class="para" id="p-532">Coming soon to an OER near you!</div></article></div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-76"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
+<div class="para" id="p-596">Prove that if <span class="process-math">\(G\)</span> is a finite group of odd order, then for any non-identity element <span class="process-math">\(x\in G\text{,}\)</span> <span class="process-math">\(x\)</span> is not conjugate to <span class="process-math">\(x\inv\text{.}\)</span>
 </div>
-<div class="exercisegroup" id="exercisegroup-36">
-<h4 class="heading"><span class="title">Qualifying Exam Problems.</span></h4>
-<div class="introduction" id="introduction-39"><div class="para" id="p-533"></div></div>
-<div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-64"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
-<div class="para" id="p-534">Coming soon to an OER near you!</div></article></div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-24" id="solution-24"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-24"><div class="solution solution-like">
+<div class="para" id="p-597">Let <span class="process-math">\(G\)</span> be a finite group of odd order, and let <span class="process-math">\(G\)</span> act on itself via conjugation. Under this action, the orbit of an element is exactly its conjugacy class. By the Orbit-Stabilizer Theorem we have <span class="process-math">\(|G|=|\Orb(x)|\cdot|\Stab(x)|\text{.}\)</span> Thus the order of an element divides the order of the group, and so every orbit must have odd order.</div> <div class="para" id="p-598">Suppose there exists an element <span class="process-math">\(x\)</span> such that <span class="process-math">\(gxg\inv=x\inv\)</span> for some <span class="process-math">\(g\in G\text{.}\)</span> Thus <span class="process-math">\(x\inv\in\Orb(x)\text{.}\)</span> Let <span class="process-math">\(y\in\Orb(x)\text{.}\)</span> Thus <span class="process-math">\(y=hxh\inv\)</span> for some <span class="process-math">\(h\in G\text{.}\)</span> Then <span class="process-math">\(y\inv=h\inv x\inv h\text{.}\)</span> However, as <span class="process-math">\(x\inv=gxg\inv\text{,}\)</span> we have <span class="process-math">\(y\inv=h\inv gxg\inv h\text{.}\)</span> As <span class="process-math">\(h\inv g\)</span> and <span class="process-math">\(g\inv h\)</span> are both in <span class="process-math">\(G\text{,}\)</span> we see that <span class="process-math">\(y\inv\in\Orb(x)\)</span> as well. As <span class="process-math">\(e\in\Stab(x)\text{,}\)</span> we see that this means that the orbit of <span class="process-math">\(x\)</span> would have even order, which is not possible.</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-77"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
+<div class="para" id="p-599">Let <span class="process-math">\(H\)</span> be a subgroup of a group <span class="process-math">\(G\text{.}\)</span> Recall that the centralizer of <span class="process-math">\(H\)</span> is the subgroup of <span class="process-math">\(G\)</span> defined by <span class="process-math">\(C_G(H) = \{g \in G | gh = hg ∀h \in H\}\)</span> and the normalizer of <span class="process-math">\(H\)</span> is the subgroup of <span class="process-math">\(G\)</span> defined by <span class="process-math">\(N_G(H) = \{g \in G | gHg\inv = H\}\text{.}\)</span>
+</div> <div class="para logical" id="p-600"><ol class="lower-alpha">
+<li id="li-194"><div class="para" id="p-derived-li-194">Show that the centralizer <span class="process-math">\(C_G(H)\)</span> of <span class="process-math">\(H\)</span> in <span class="process-math">\(G\)</span> is a normal subgroup of the normalizer <span class="process-math">\(N_G(H)\)</span> of <span class="process-math">\(H\)</span> in <span class="process-math">\(G\text{.}\)</span>
+</div></li>
+<li id="li-195"><div class="para" id="p-derived-li-195">Show that the quotient <span class="process-math">\(N_G(H)/C_G(H)\)</span> is isomorphic to a subgroup of the automorphism group <span class="process-math">\(\Aut(H)\)</span> of <span class="process-math">\(H\text{.}\)</span>
+</div></li>
+</ol></div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-25" id="solution-25"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-25"><div class="solution solution-like">
+<div class="para" id="p-601">Let <span class="process-math">\(H\)</span> be a subgroup of a group <span class="process-math">\(G\text{.}\)</span>
+</div> <div class="para logical" id="p-602"><ol class="lower-alpha">
+<li id="li-196"><div class="para" id="p-603">Let <span class="process-math">\(G\)</span> act on <span class="process-math">\(H\)</span> by conjugation. Thus the associated permutation homomorphism <span class="process-math">\(\rho\)</span> is defined such that <span class="process-math">\(\rho(g)=\phi_g\text{,}\)</span> where <span class="process-math">\(\phi_g(h)=ghg\inv\text{.}\)</span> Notice that when <span class="process-math">\(x\in C_G(H)\)</span> we have <span class="process-math">\(\phi_x(h)=xhx\inv=h\)</span> for all <span class="process-math">\(h\in H\text{,}\)</span> and thus <span class="process-math">\(x\in\ker(\rho)\text{.}\)</span> If <span class="process-math">\(x\in\ker(\rho)\)</span> then <span class="process-math">\(xhx\inv=h\)</span> for all <span class="process-math">\(h\in H\text{,}\)</span> and thus <span class="process-math">\(x\in C_G(H)\text{.}\)</span> Thus <span class="process-math">\(C_G(H)=\ker(\rho)\)</span> and <span class="process-math">\(C_G(H)\nsg N_G(H)\text{.}\)</span>
+</div></li>
+<li id="li-197"><div class="para" id="p-604">From the above permutation representation we have a homomorphism <span class="process-math">\(\rho: G\to S_{|H|}\cong\Aut(H)\text{.}\)</span> As <span class="process-math">\(C_G(H)=\ker(\rho)\text{,}\)</span> by the First Isomorphism Theorem we have <span class="process-math">\(G/C_G(H)\cong\im(\rho))\text{,}\)</span> a subgroup of <span class="process-math">\(\Aut(H)\text{.}\)</span>
+</div></li>
+</ol></div>
+</div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-26" id="solution-26"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-26"><div class="solution solution-like">
+<div class="para" id="p-605">Let <span class="process-math">\(G\)</span> be a group and <span class="process-math">\(H\nsg G\text{.}\)</span> Let <span class="process-math">\(x\in C_H(G)\text{,}\)</span> and consider <span class="process-math">\(gxg\inv\text{.}\)</span> Let <span class="process-math">\(h\in H\text{.}\)</span> As <span class="process-math">\(H\nsg G\)</span> we have <span class="process-math">\(h=gh'g\inv\)</span> for some <span class="process-math">\(h\in H\text{,}\)</span> and thus that 1. <span class="process-math">\(g\inv h=h'g\inv\)</span> and 2. <span class="process-math">\(hg=gh'\text{.}\)</span> Consider <span class="process-math">\(gxg\inv h\text{.}\)</span> By (1), we see <span class="process-math">\(gxg\inv h=gxh'g\inv\text{.}\)</span> As <span class="process-math">\(x\)</span> commutes with everything in <span class="process-math">\(H\)</span> we have <span class="process-math">\(gh'xg\inv\text{,}\)</span> and by (2) we have <span class="process-math">\(hgxg\inv\text{.}\)</span> Thus <span class="process-math">\(C_H(G)\nsg G\text{.}\)</span>
+</div> <div class="para" id="p-606">Let <span class="process-math">\(G\)</span> act on the left cosets of <span class="process-math">\(C_G(H)\)</span> by left multiplication, giving rise to the permutation representation homomorphism <span class="process-math">\(\rho:G/C_G(H)\to\Aut(H)\text{.}\)</span> By the First Isomorphism Theorem we see that <span class="process-math">\(G/C_G(H)\)</span> is isomorphic to a subgroup of the automorphism group of <span class="process-math">\(H\text{.}\)</span>
+</div>
+</div></div>
+</div></article>
+</div>
 </div></section></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="sec-lois.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-class-eq.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+<a class="previous-button button" href="graction.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-lois.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer">

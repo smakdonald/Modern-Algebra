@@ -10,6 +10,37 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para">Let <span class="process-math">\(x\in N\)</span> and let <span class="process-math">\(g\in G\text{.}\)</span> As <span class="process-math">\(N\)</span> is normal, we see <span class="process-math">\(gxg\inv\in N\text{,}\)</span> and thus one of the following must be true: - <span class="process-math">\(gxg\inv=e\text{,}\)</span> where <span class="process-math">\(e\)</span> is the identity element of <span class="process-math">\(G\text{,}\)</span> or - <span class="process-math">\(gxg\inv=x\text{,}\)</span> the only other element of <span class="process-math">\(N\text{.}\)</span> However, in the first case we would have <span class="process-math">\(x=e\)</span> by multiplying <span class="process-math">\(g\)</span> and <span class="process-math">\(g\inv\)</span> over, and thus it must be the case that <span class="process-math">\(gxg\inv=x\text{,}\)</span> or <span class="process-math">\(gx=xg\text{.}\)</span> Thus <span class="process-math">\(x\in Z(G)\text{.}\)</span>
-</div> <div class="para">From Lagrange's Theorem we know that <span class="process-math">\(|G|/|H|=2\text{,}\)</span> meaning that <span class="process-math">\(G\)</span> has an even number of elements. Thus <span class="process-math">\(2\)</span> is the smallest prime dividing the order of <span class="process-math">\(G\text{,}\)</span> making <span class="process-math">\(H\)</span> normal in <span class="process-math">\(G\)</span> (See: ).</div> <div class="para">Suppose by way of contradiction there exists some non-trivial proper normal subgroup <span class="process-math">\(N\)</span> of <span class="process-math">\(G\)</span> that is not <span class="process-math">\(H\text{.}\)</span> As <span class="process-math">\(H\)</span> is normal, by the Second Isomorphism Theorem we have <span class="process-math">\(H\cap N\nsg H\text{.}\)</span> However, as <span class="process-math">\(H\)</span> is simple, this means that <span class="process-math">\(H\cap N=\{e\}\text{.}\)</span> SIT also tells us that <span class="process-math">\(HN\leq G\text{.}\)</span> As <span class="process-math">\(|H|=|G|/2\text{,}\)</span> this makes <span class="process-math">\(|N|=2\)</span> and <span class="process-math">\(G=HN\text{.}\)</span> From part (a), <span class="process-math">\(N\leq Z(G)\text{.}\)</span> However, this contradicts Lagrange’s Theorem, as <span class="process-math">\(2\)</span> does not divide any odd numbers.</div></article></body>
+<body class="ignore-math"><article class="hiddenproof"><div class="para">We have previously shown that the quotient map <span class="process-math">\(\pi:G\to G/N\)</span> is a surjective group homomorphism. We show:</div> <div class="para logical"><ul class="disc">
+<li><div class="para">
+<span class="process-math">\(\Psi\)</span> is well defined (correct codomain) since for <span class="process-math">\(H\leq G\)</span> we have <span class="process-math">\(\pi(H)\leq G/N\)</span> (since images of subgroups through group homomorphisms are subgroups).</div></li>
+<li><div class="para logical">
+<div class="para">
+<span class="process-math">\(\Phi\)</span> is well defined (correct codomain) since for <span class="process-math">\(\mathcal{H}\leq G\)</span> we have <span class="process-math">\(\pi^{-1}(\mathcal{H})\leq G\)</span> (since preimages of subgroups through group homomorphisms are subgroups) and for any <span class="process-math">\(\mathcal{H}\leq G\)</span> we have <span class="process-math">\(\{e_GN\}\subseteq \mathcal{H}\text{,}\)</span> hence</div>
+<div class="displaymath process-math">
+\begin{equation*}
+N=\operatorname{Ker}(\pi)=\pi^{-1}(\{e_GN\})\subseteq \pi^{-1}(\mathcal{H})=\Phi(\mathcal{H}).
+\end{equation*}
+</div>
+</div></li>
+<li><div class="para logical">
+<div class="para">
+<span class="process-math">\(\Phi\)</span> and <span class="process-math">\(\Psi\)</span> are mutual inverses: <span class="process-math">\((\Psi\circ\Phi)(\mathcal{H})=\pi(\pi^{-1}(\mathcal{H}))=\mathcal{H}\)</span> since <span class="process-math">\(\pi\)</span> is surjective and <span class="process-math">\((\Phi\circ\Psi)(H)=\pi^{-1}(\pi(H))=\pi^{-1}(H/N)=H\text{,}\)</span> with the last equality justified by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+x\in \pi^{-1}(H/N) &amp;\iff \pi(x)\in H/N \iff xN=hN \text{ for some } h\in H \\
+&amp; \iff x\in hN \text{ for some } h\in H \iff x\in H \text{ (using that } N\subseteq H).\\
+\end{aligned}
+\end{equation*}
+</div>
+</div></li>
+</ul></div> <div class="para">Thus, the two functions defined in the statement are well-defined and are mutually inverse.</div> <div class="para">Since <span class="process-math">\(\pi\)</span> and <span class="process-math">\(\pi^{-1}\)</span> preserve containments, each of <span class="process-math">\(\Psi\text{,}\)</span> <span class="process-math">\(\Psi^{-1}\)</span> preserves the order relation of containment.</div> <div class="para">I will only prove some parts of statements (1), (2), (3) in the theorem.</div> <div class="para">(1) If <span class="process-math">\(N \leq H \leq G\)</span> and <span class="process-math">\(H \unlhd G\text{,}\)</span> then <span class="process-math">\(H/N \unlhd G/N\)</span> holds by part of the 3rd Isomorphism Theorem or by the exercise below, since <span class="process-math">\(\pi\)</span> is surjective. The fact that the inverse function also sends normal subgroups to normal subgroups is a consequence of the statement that inverse images of normal subgroups are normal subgroups (see HW 4).</div> <div class="para logical">
+<div class="para">(2) In the interest of time, I’ll only prove the assertion about indices in the special case when <span class="process-math">\(H\)</span> is normal. In that case this fact is also an immediate consequence of the Third Isomorhism Theorem since for <span class="process-math">\(N \leq H \leq G\)</span> with <span class="process-math">\(H \unlhd G\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+[G:H] = |G/H| = \left|(G/N)/(H/N)\right| = [G/N: H/N]=[\overline{G}:\overline{H}].
+\end{equation*}
+</div>
+<div class="para">The general case is a consequence of an exercise from HW 5.</div>
+</div> <div class="para">(3) The proof of (3) is omitted.</div></article></body>
 </html>

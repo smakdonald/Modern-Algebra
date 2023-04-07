@@ -11,9 +11,16 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">Suppose by way of contradiction that <span class="process-math">\(G\)</span> is a simple group of order <span class="process-math">\(30\text{.}\)</span> Similarly to above, <span class="process-math">\(n_5=6\text{,}\)</span> yielding <span class="process-math">\(24\)</span> elements of order <span class="process-math">\(5\text{.}\)</span> Now, <span class="process-math">\(n_3|10\)</span> and <span class="process-math">\(n_3\equiv 1\mod{3}\text{,}\)</span> so <span class="process-math">\(n_3=10\text{,}\)</span> yielding far too many elements to fit in <span class="process-math">\(G\text{.}\)</span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">The elements of <span class="process-math">\(Z(G)\)</span> are precisely the group elements that are conjugate to only themselves; that is, they are the one-element orbits for the conjugation action. Because the conjugacy classes (orbits of the conjugation action) partition <span class="process-math">\(G\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-conjclass.html">
+\begin{equation*}
+|G| = |Z(G)| + \sum_i^r [g_i]_c.
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec-simple-groups.html#p-639" class="internal">in-context</a></span>
+<div class="para">For each <span class="process-math">\(g_i\)</span> as in the statement, by Theorem <a href="" class="xref" data-knowl="./knowl/thm-conjclass.html" title="Theorem 4.29">Theorem 4.29</a>, we have <span class="process-math">\([G: C_G(g_i)] =[g_i]_c\text{.}\)</span> The class equation follows from substituting this into the equation above.</div>
+</div>
+<span class="incontext"><a href="sec-class-eq.html#p-639" class="internal">in-context</a></span>
 </body>
 </html>

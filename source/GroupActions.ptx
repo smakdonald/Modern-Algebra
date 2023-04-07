@@ -7,7 +7,6 @@
       <title>Group Actions</title>
       
       <blockquote>
-        <title>Lorem ipsum</title>
         <p>
           <q>You may never know what results come of your action, but if you do nothing there will be no results.</q>
         </p>
@@ -39,7 +38,9 @@
       </definition>
 
       <remark>
-        To make the first axiom clearer, throughout this section we will write <m>\cdot</m> for the action of <m>G</m> on <m>S</m> and no symbol (concatenation) for the multiplication of two elements in the group <m>G</m>.
+        <p>
+          To make the first axiom clearer, throughout this section we will write <m>\cdot</m> for the action of <m>G</m> on <m>S</m> and no symbol (concatenation) for the multiplication of two elements in the group <m>G</m>.
+        </p>
       </remark>
 
       <example>
@@ -125,9 +126,11 @@
       </problem>
 
       <problem>
-        <p>
-					Let <m>G</m> be a group and <m>H</m> a subgroup of <m>G</m>. Recall that the centralizer of <m>H</m> in <m>G</m> is <me>C_H(G)=\{g\in G|gh=hg\text{ for all }h\in H\}</me>Prove that if <m>H</m> is normal in <m>G</m>, then so is <m>C_G(H)</m> and that <m>G/C_G(H)</m> is isomorphic to a subgroup of the automorphism group of <m>H</m>.
-				</p>
+        <statement>
+          <p>
+            Let <m>G</m> be a group and <m>H</m> a subgroup of <m>G</m>. Recall that the centralizer of <m>H</m> in <m>G</m> is <me>C_H(G)=\{g\in G|gh=hg\text{ for all }h\in H\}</me>Prove that if <m>H</m> is normal in <m>G</m>, then so is <m>C_G(H)</m> and that <m>G/C_G(H)</m> is isomorphic to a subgroup of the automorphism group of <m>H</m>.
+          </p>
+        </statement>
 
         <solution>
           <p>
@@ -141,9 +144,28 @@
       </problem>
 
       <problem>
-        <p>
-					Recall that the centralizer of a subgroup <m>H</m> in a group <m>G</m> is <me>C_G(H) = \{g ∈ G | gh = hg \text{ for all }h ∈ H\}.</me>(a) Prove that if <m>H</m> is normal in <m>G</m>, then <m>C_G(H)</m> is normal in <m>G</m>. (b) Prove that if <m>H</m> is normal in <m>G</m>, then <m>G/C_G(H)</m> is isomorphic to a subgroup of <m>\Aut(H)</m> (the group of automorphisms of H)
-				</p>
+        <statement>
+          <p>
+            Recall that the centralizer of a subgroup <m>H</m> in a group <m>G</m> is 
+            <me>
+              C_G(H) = \{g ∈ G | gh = hg \text{ for all }h ∈ H\}.
+            </me>
+            <ol>
+              <li>
+                <p>
+                  Prove that if <m>H</m> is normal in <m>G</m>, then <m>C_G(H)</m> is normal in <m>G</m>. 
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Prove that if <m>H</m> is normal in <m>G</m>, then <m>G/C_G(H)</m> is isomorphic to a subgroup of <m>\Aut(H)</m> (the group of automorphisms of H)
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+        
 
         <solution>
           <p>
@@ -157,6 +179,8 @@
       </problem>
 
       <problem>
+
+        <statement>
         <p>
 					Let <m>H</m> be a subgroup of a group <m>G</m>. Recall that the centralizer of <m>H</m> is the subgroup of <m>G</m> defined by <m>C_G(H) = \{g \in G | gh = hg ∀h \in H\}</m> and the normalizer of <m>H</m> is the subgroup of <m>G</m> defined by <m>N_G(H) = \{g \in G | gHg\inv = H\}</m>.
 				</p>
@@ -172,34 +196,31 @@
             </li>
 				  </ol>
         </p>
-      </problem>
+      </statement>
 
-      <solution>
-        <p>
+        <solution>
           <p>
 						Let <m>H</m> be a subgroup of a group <m>G</m>.
-					</p>
+					
 
+          <ol>
+            <li>
+              <p>
+                Let <m>G</m> act on <m>H</m> by conjugation. Thus the associated permutation homomorphism <m>\rho</m> is defined such that <m>\rho(g)=\phi_g</m>, where <m>\phi_g(h)=ghg\inv</m>. Notice that when <m>x\in C_G(H)</m> we have <m>\phi_x(h)=xhx\inv=h</m> for all <m>h\in H</m>, and thus <m>x\in\ker(\rho)</m>. If <m>x\in\ker(\rho)</m> then <m>xhx\inv=h</m> for all <m>h\in H</m>, and thus <m>x\in C_G(H)</m>. Thus <m>C_G(H)=\ker(\rho)</m> and <m>C_G(H)\nsg N_G(H)</m>.
+              </p>
+            </li>
 
-					<paragraphs xml:id="part-a">
-						<title>Part (a)</title>
-
-						<p>
-							Let <m>G</m> act on <m>H</m> by conjugation. Thus the associated permutation homomorphism <m>\rho</m> is defined such that <m>\rho(g)=\phi_g</m>, where <m>\phi_g(h)=ghg\inv</m>. Notice that when <m>x\in C_G(H)</m> we have <m>\phi_x(h)=xhx\inv=h</m> for all <m>h\in H</m>, and thus <m>x\in\ker(\rho)</m>. If <m>x\in\ker(\rho)</m> then <m>xhx\inv=h</m> for all <m>h\in H</m>, and thus <m>x\in C_G(H)</m>. Thus <m>C_G(H)=\ker(\rho)</m> and <m>C_G(H)\nsg N_G(H)</m>.
-						</p>
-
-
-						<paragraphs xml:id="part-b">
-							<title>Part (b)</title>
-
-							<p>
+            <li>
+              <p>
 								From the above permutation representation we have a homomorphism <m>\rho: G\to S_{|H|}\cong\Aut(H)</m>. As <m>C_G(H)=\ker(\rho)</m>, by the First Isomorphism Theorem we have <m>G/C_G(H)\cong\im(\rho))</m>, a subgroup of <m>\Aut(H)</m>.
-							</p>
-
-						</paragraphs>
-					</paragraphs>
+              </p>
+            </li>
+          </ol>
         </p>
       </solution>
+      </problem>
+
+     
 
       <problem>
         <p>
@@ -271,6 +292,264 @@
 
     </section>
 
+    <section xml:id="sec-conjugation">
+      <title>Left Multiplication and Conjugation</title>
+
+      <example>
+        <title>Conjugation Action</title>
+        
+        <p>
+          Let <m>G</m> be any group and fix an element <m>g \in G</m>. Define <em>the conjugation action</em> of <m>G</m> on itself by setting 
+          <me>
+            g\cdot x=gxg^{-1} \;\text{for any}\; g,x\in G.
+          </me> 
+        </p>
+      </example>
+
+      <theorem xml:id="thm-conjugation-action">
+        <statement>
+          <p>
+            <ol>
+              <li>
+                <p>
+                  Prove that the conjugation action of of <m>G</m> on itself is a well-defined group action.
+                </p>
+              </li>
+  
+              <li>
+                <p>
+                  Show <m>G</m> acts on <m>H</m> via conjugation for any <m>H\leq G</m>.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Let <m>N\mathrel{\unlhd}G</m>. The conjugation action of <m>G</m> on itself induces an action by conjugation of <m>G</m> on <m>N</m>. In particular, <m>N</m> is the disjoint union of some of the conjugacy classes in <m>G</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </theorem>
+
+      <proposition xml:id="prop-conjugation-conjugacy-class">
+        <statement>
+          <p>
+            Let <m>G</m> be a group acting on itself via conjugation. Under this action, the orbit of an element is exactly its conjugacy class.
+          </p>
+        </statement>
+      </proposition>
+
+      <proposition xml:id="prop-kernel-of-conjugation-action">
+        <statement>
+          <p>
+            The kernel of the permutation representation for the conjugation action is the center <m>Z(G)</m>. 
+          </p>
+        </statement>
+
+        <proof>
+          <p>
+            If <m>\rho:G\to \operatorname{Perm}(G)</m> is the permutation representation for <m>G</m> acting on <m>G</m> by conjugation, then 
+            <me>
+              g\in \operatorname{Ker}\rho\iff g\cdot x=x, \forall x\in G \iff gxg^{-1}=x, \forall x\in G
+            </me>
+            <me>
+              \iff gx=xg, \forall x\in G \iff g\in Z(G).
+            </me>
+          </p>
+        </proof>
+      </proposition>
+
+      <corollary xml:id="cor-faithful-conjugation">
+        <statement>
+          <p>
+            The action of <m>G</m> on itself by conjugation is faithful if and only if <m>Z(G)=\{e\}</m>.
+          </p>
+        </statement>
+      </corollary>
+
+      <definition xml:id="def-conjugacy-class">
+        <statement>
+          <p>
+            The <em>conjugacy class</em> of an element <m>g \in G</m> is <m>C_g = \{hgh^{-1} \mid h \in G\}</m>, i.e. the orbit of <m>g</m> under conjugation.              
+          </p>
+        </statement>
+      </definition>
+
+      <definition xml:id="def-conjugate">
+        <statement>
+          <p>
+            Let <m>G</m> be a group. Two elements <m>g,g' \in G</m> are <em>conjugate</em> if there is <m>h \in G</m> with <m>g' = hgh^{-1}</m> (equivalently <m>g</m> and <m>g'</m> are in the same orbit of the conjugation action).
+          </p>
+
+          <p>
+            Two subsets <m>S,S' \subseteq G</m> are conjugate if there is <m>h \in G</m> with <m>S' = hSh^{-1}</m>.
+          </p>
+        </statement>
+      </definition>
+    
+
+      <problem>
+        <p> 
+          Let <m>G</m> be a finite group and let <m>H</m> be a proper subgroup of <m>G</m> with <m>[G:H]=h</m>.
+        </p>
+
+        <p><ol>
+          <li>
+          Prove that <m>H</m> has at most <m>h</m> distinct conjugate sets <m>gHg^{-1}</m> for <m>g\in G</m>.
+          </li>
+
+          <li>
+          Prove that <m>G\neq \bigcup_{g\in G} gHg^{-1}</m>.
+          </li>
+
+        </ol></p>
+
+        <proof>
+          <p>
+            Let <m>f:G/H\to gHg\inv</m> be defined by <m>f(gH)=gHg\inv</m>. Suppose <m>xH=yH</m>. Notice that <m>f(xH)=xHx\inv</m> and <m>f(H)=yHy\inv</m>, but as <m>x=y</m> we have equality, and thus <m>f</m> is well defined. Let <m>gHg\inv</m> be a conjugate set, and let <m>gH\in G/H</m>. Then <m>f(gH)=gHg\inv</m>, and so we have surjectivity. As <m>|G/H|=|[G:H]|=h</m>, there can be at most <m>h</m> distinct conjugate sets for <m>g\in G</m>.
+          </p>
+
+          <p>
+            Let <m>G</m> act on <m>H</m> by conjugation. We know that the orbits of this action partition <m>H</m>. However, under this action the orbits are exactly the conjugacy classes of <m>H</m>. There are at most <m>h</m> conjugacy classes. Each conjugacy class has at most <m>|H|</m> elements in it, and each one has the identity. As there are at most <m>h</m> of them then when we add all of their orders we get at most <m>h(|H|-1)</m>, which is less than the order of <m>G</m>.
+          </p>
+        </proof>
+      </problem>
+
+
+      <exercises>
+
+        <exercisegroup>
+          <title>Computations and Examples</title>
+          <introduction>
+            <p>
+            </p>
+          </introduction>
+      
+          <exercise>
+            <p>
+              Coming soon to an OER near you!
+            </p>
+          </exercise>
+      
+        </exercisegroup>
+      
+        <exercisegroup>
+          <title>Formal Proofs</title>
+          <introduction>
+            <p>
+            </p>
+          </introduction>
+      
+          <exercise>
+            <p>
+              Coming soon to an OER near you!
+            </p>
+          </exercise>
+      
+        </exercisegroup>
+      
+        <exercisegroup>
+          <title>Qualifying Exam Problems</title>
+          <introduction>
+            <p>
+            </p>
+          </introduction>
+
+          <exercise>
+            <statement>
+              <p>
+                Let <m>G</m> be a (not necessarily finite) group and <m>K \leq G</m> a subgroup of index <m>n &lt; \infty</m>. Define <me>N=\bigcap_{g\in G}gKg\inv</me>(i.e., <m>N</m> is the intersection of all the conjugates of K<m>)</m>
+              </p>
+      
+              <p><ol>
+                <li>
+                Prove <m>N</m> is a the largest normal subgroup of <m>G</m> that is contained in <m>K</m>.
+                </li>
+      
+                <li>
+                Prove <m>[G : N ]</m> divides <m>n!</m>.
+                </li>
+      
+              </ol></p>
+            </statement>
+
+            <solution>
+              <p>
+                Let <m>G</m> act on the left cosets of <m>K</m> in <m>G</m> by left multiplication, yielding the permutation representation homomorphism <m>\rho:G\to S_n</m>. Let <m>N</m> conspicuously denote the kernel of this function.
+              </p>
+    
+              <p>
+                Let <m>x\in N</m>. Then <m>\rho(n)</m>, the automorphism <m>\s:G/K\to G/K</m> defined by <m>\s(gK)=xgK</m> is precisely the identity permutation. Thus <m>xgK=gK</m> for all <m>g\in G</m> and <m>g\inv xgK=K</m> for all <m>g\in G</m>, so <m>x\in</m> This means the elements of <m>N</m> are precisely those that are in the conjugacy class of <m>gKg\inv</m> for all <m>g\in G</m>. There cannot exist a larger normal subgroup of <m>G</m> contained in <m>K</m>, as it would contain an element that was not in some conjugacy class for <m>G</m>, negating the definition of a normal subgroup.
+              </p>
+       
+              <p>
+                Recall the permutation representation homomorphism <m>\rho:G\to S_n</m>. The First Isomorphism Theorem tells us <m>G/N\cong\im(\rho)\leq S_n</m>, which has order <m>n!</m>. Thus <m>[G:N]|n!</m>.
+              </p>
+            </solution>
+
+          </exercise>
+
+          <exercise>
+            <statement>
+              <p>
+                Let <m>H</m> be a subgroup of a group <m>G</m>. Recall that the centralizer of <m>H</m> is the subgroup of <m>G</m> defined by <m>C_G(H) = \{g \in G | gh = hg ∀h \in H\}</m> and the normalizer of <m>H</m> is the subgroup of <m>G</m> defined by <m>N_G(H) = \{g \in G | gHg\inv = H\}</m>.
+              </p>
+
+              <p>
+                <ol>
+                  <li>
+                    Show that the centralizer <m>C_G(H)</m> of <m>H</m> in <m>G</m> is a normal subgroup of the normalizer <m>N_G(H)</m> of <m>H</m> in <m>G</m>.
+                  </li>
+      
+                  <li>
+                    Show that the quotient <m>N_G(H)/C_G(H)</m> is isomorphic to a subgroup of the automorphism group <m>\Aut(H)</m> of <m>H</m>.
+                  </li>
+                </ol>
+              </p>
+            </statement>
+
+            <solution>
+              <p>
+                Let <m>H</m> be a subgroup of a group <m>G</m>.
+              </p>
+              
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      Let <m>G</m> act on <m>H</m> by conjugation. Thus the associated permutation homomorphism <m>\rho</m> is defined such that <m>\rho(g)=\phi_g</m>, where <m>\phi_g(h)=ghg\inv</m>. Notice that when <m>x\in C_G(H)</m> we have <m>\phi_x(h)=xhx\inv=h</m> for all <m>h\in H</m>, and thus <m>x\in\ker(\rho)</m>. If <m>x\in\ker(\rho)</m> then <m>xhx\inv=h</m> for all <m>h\in H</m>, and thus <m>x\in C_G(H)</m>. Thus <m>C_G(H)=\ker(\rho)</m> and <m>C_G(H)\nsg N_G(H)</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      From the above permutation representation we have a homomorphism <m>\rho: G\to S_{|H|}\cong\Aut(H)</m>. As <m>C_G(H)=\ker(\rho)</m>, by the First Isomorphism Theorem we have <m>G/C_G(H)\cong\im(\rho))</m>, a subgroup of <m>\Aut(H)</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+             
+            </solution>
+
+            <solution>
+              <p>
+                Let <m>G</m> be a group and <m>H\nsg G</m>. Let <m>x\in C_H(G)</m>, and consider <m>gxg\inv</m>. Let <m>h\in H</m>. As <m>H\nsg G</m> we have <m>h=gh'g\inv</m> for some <m>h\in H</m>, and thus that 1. <m>g\inv h=h'g\inv</m> and 2. <m>hg=gh'</m>. Consider <m>gxg\inv h</m>. By (1), we see <m>gxg\inv h=gxh'g\inv</m>. As <m>x</m> commutes with everything in <m>H</m> we have <m>gh'xg\inv</m>, and by (2) we have <m>hgxg\inv</m>. Thus <m>C_H(G)\nsg G</m>.
+              </p>
+    
+              <p>
+                Let <m>G</m> act on the left cosets of <m>C_G(H)</m> by left multiplication, giving rise to the permutation representation homomorphism <m>\rho:G/C_G(H)\to\Aut(H)</m>. By the First Isomorphism Theorem we see that <m>G/C_G(H)</m> is isomorphic to a subgroup of the automorphism group of <m>H</m>.
+              </p>
+            </solution>
+          </exercise>
+
+      
+        </exercisegroup>
+      </exercises>
+
+
+    </section>
+
     <section xml:id="sec-lois">
       <title>LOIS and Orbit-Stabilizer</title>
 
@@ -289,28 +568,28 @@
         <statement>
           <p>
             Let <m>G</m> be a group acting on a set <m>S</m>. Then
-                </p>
+          </p>
 
-                <p>
+          <p>
             <ol>
-                      <li>
-                              <p>
-                          <m>\sim_G</m> is an equivalence relation
-                      </p>
-                      </li>
+              <li>
+                <p>
+                  <m>\sim_G</m> is an equivalence relation
+                </p>
+              </li>
 
-                      <li>
-                              <p>
-                          for any <m>s,s'\in S</m> either <m>\operatorname{Orbit}_G(s)=\operatorname{Orbit}_G(s')</m> or <m>\operatorname{Orbit}_G(s)\cap \operatorname{Orbit}_G(s')=\emptyset</m>
-                      </p>
-                      </li>
+              <li>
+                <p>
+                  for any <m>s,s'\in S</m> either <m>\operatorname{Orbit}_G(s)=\operatorname{Orbit}_G(s')</m> or <m>\operatorname{Orbit}_G(s)\cap \operatorname{Orbit}_G(s')=\emptyset</m>
+                </p>
+              </li>
 
-                      <li>
-                              <p>
-                          <m>S=\bigcup_{\text{pairwise disjoint orbits}} \operatorname{Orbit}_G(s)</m>
-                      </p>
-                      </li>
-                  </ol>
+              <li>
+                <p>
+                  <m>S=\bigcup_{\text{pairwise disjoint orbits}} \operatorname{Orbit}_G(s)</m>
+                </p>
+              </li>
+            </ol>
           </p>
         </statement>
       </lemma>
@@ -385,16 +664,17 @@
 					Let <m>G</m> be a group acting transitively on a set <m>S</m>. For <m>a\in S</m>, let <m>G_a = \{g\in G | ga = a\}</m> be the stabilizer of <m>a</m> under the action from <m>G</m>.
 				</p>
 
-				<p><ol>
-					<li>
-					Let <m>a, b\in S</m>. Prove there exists <m>g\in G</m> such that <m>G_b = gG_ag\inv</m>.
-					</li>
+				<p>
+          <ol>
+            <li>
+              Let <m>a, b\in S</m>. Prove there exists <m>g\in G</m> such that <m>G_b = gG_ag\inv</m>.
+            </li>
 
-					<li>
-					Suppose <m>S</m> has more than one element and that <m>G</m> is finite. Prove that there exists <m>g\in G</m> which has no fixed point, that is, for all <m>a\in S, ga\neq a</m>
-					</li>
-
-				</ol></p>
+            <li>
+              Suppose <m>S</m> has more than one element and that <m>G</m> is finite. Prove that there exists <m>g\in G</m> which has no fixed point, that is, for all <m>a\in S, ga\neq a</m>
+            </li>
+          </ol>
+        </p>
 
         <proof>
           <p>
@@ -461,9 +741,43 @@
           </introduction>
       
           <exercise>
-            <p>
-              Coming soon to an OER near you!
-            </p>
+
+            <statement>
+              <p>
+                Let <m>G = A_7</m> and <m>S</m> be the set of elements of <m>G</m> of order <m>7</m>. Prove that <m>S</m> is not a conjugacy class of <m>G</m>.
+              </p>
+
+            </statement>
+
+            <solution>
+              <p>
+                Elements of order <m>7</m> in <m>G</m> must permute all <m>7</m> elements, making them of the form <m>(abcdefg)</m>. There are <m>6!</m> such permutations, given that we can always reorder them so that <m>a</m> is first, leaving <m>6</m> remaining spots without replacement. Let <m>S</m> denote the set of these <m>6!</m> elements.
+              </p>
+
+              <p>
+                Suppose by way of contradiction there existed some <m>s\in G</m> such that <m>S=C_s(G)</m>. Let <m>G</m> act on itself through conjugation, making <m>S=C_s(G)=\Orb(s)</m> by the definition of conjugacy class. The Orbit-Stabilizer Theorem tells us that <m>|G|=|\Orb(s)|\cdot|\Stab(s)|</m>, meaning that the order of <m>S</m> must divide the order of <m>G</m>. However, <m>|G|=\frac{7!}{2}</m> and <m>|S|=6!</m>, so this is a contradiction. Thus <m>S</m> is not a conjugacy class of <m>G</m>.
+              </p>
+            </solution>
+       
+          </exercise>
+
+          <exercise>
+            <statement>
+              <p>
+                Prove that if <m>G</m> is a finite group of odd order, then for any non-identity element <m>x\in G</m>, <m>x</m> is not conjugate to <m>x\inv</m>.
+              </p>
+            </statement>
+
+            <solution>
+              <p>
+                Let <m>G</m> be a finite group of odd order, and let <m>G</m> act on itself via conjugation. Under this action, the orbit of an element is exactly its conjugacy class. By the Orbit-Stabilizer Theorem we have <m>|G|=|\Orb(x)|\cdot|\Stab(x)|</m>. Thus the order of an element divides the order of the group, and so every orbit must have odd order.
+              </p>
+    
+              <p>
+                Suppose there exists an element <m>x</m> such that <m>gxg\inv=x\inv</m> for some <m>g\in G</m>. Thus <m>x\inv\in\Orb(x)</m>. Let <m>y\in\Orb(x)</m>. Thus <m>y=hxh\inv</m> for some <m>h\in G</m>. Then <m>y\inv=h\inv x\inv h</m>. However, as <m>x\inv=gxg\inv</m>, we have <m>y\inv=h\inv gxg\inv h</m>. As <m>h\inv g</m> and <m>g\inv h</m> are both in <m>G</m>, we see that <m>y\inv\in\Orb(x)</m> as well. As <m>e\in\Stab(x)</m>, we see that this means that the orbit of <m>x</m> would have even order, which is not possible.
+              </p>
+            </solution>
+
           </exercise>
       
         </exercisegroup>
@@ -471,284 +785,7 @@
       
     </section>
     
-    <section xml:id="sec-conjugation">
-      <title>Conjugation</title>
-
-      <example>
-        <title>Conjugation Action</title>
-        
-        <p>
-          Let <m>G</m> be any group and fix an element <m>g \in G</m>. Define <em>the conjugation action</em> of <m>G</m> on itself by setting 
-          <me>
-            g\cdot x=gxg^{-1} \text{ for any } g,x\in G.
-          </me> 
-        </p>
-      </example>
-
-      <problem>
-        <p>
-          <ol marker="a">
-            <li>
-              <p>
-                Prove that the conjugation action of of <m>G</m> on itself is a well-defined group action.
-              </p>
-            </li>
-
-            <li>
-              <p>
-                Show <m>G</m> acts on <m>H</m> via conjugation for any <m>H\leq G</m>.
-              </p>
-            </li>
-          </ol>
-        </p>
-      </problem>
-
-      <problem>
-        <p>
-          The kernel of the permutation representation for the conjugation action is the center <m>Z(G)</m>. 
-        </p>
-
-        <proof>
-          <p>
-            If <m>\rho:G\to \operatorname{Perm}(G)</m> is the permutation representation for <m>G</m> acting on <m>G</m> by conjugation, then 
-            <me>
-              g\in \operatorname{Ker}\rho\iff g\cdot x=x, \forall x\in G \iff gxg^{-1}=x, \forall x\in G
-            </me>
-            <me>
-              \iff gx=xg, \forall x\in G \iff g\in Z(G).
-            </me>
-          </p>
-        </proof>
-      </problem>
-
-      <problem>
-        <p>
-          The action of <m>G</m> on itself by conjugation is faithful if and only if <m>Z(G)=\{e\}</m>.
-        </p>
-      </problem>
-
-      <definition xml:id="def-conjugacy-class">
-        <statement>
-          <p>
-            The <em>conjugacy class</em> of an element <m>g \in G</m> is <m>C_g = \{hgh^{-1} \mid h \in G\}</m>, i.e. the orbit of <m>g</m> under conjugation.              
-          </p>
-        </statement>
-      </definition>
-
-      <definition xml:id="def-conjugate">
-        <statement>
-          <p>
-            Let <m>G</m> be a group. Two elements <m>g,g' \in G</m> are <em>conjugate</em> if there is <m>h \in G</m> with <m>g' = hgh^{-1}</m> (equivalently <m>g</m> and <m>g'</m> are in the same orbit of the conjugation action).
-          </p>
-
-          <p>
-            Two subsets <m>S,S' \subseteq G</m> are conjugate if there is <m>h \in G</m> with <m>S' = hSh^{-1}</m>.
-          </p>
-        </statement>
-      </definition>
-
-      <problem>
-        <p>
-					Let <m>G = A_7</m> and <m>S</m> be the set of elements of <m>G</m> of order <m>7</m>. Prove that <m>S</m> is not a conjugacy class of <m>G</m>.
-				</p>
-
-        <proof>
-          <p>
-						Elements of order <m>7</m> in <m>G</m> must permute all <m>7</m> elements, making them of the form <m>(abcdefg)</m>. There are <m>6!</m> such permutations, given that we can always reorder them so that <m>a</m> is first, leaving <m>6</m> remaining spots without replacement. Let <m>S</m> denote the set of these <m>6!</m> elements.
-					</p>
-
-					<p>
-						Suppose by way of contradiction there existed some <m>s\in G</m> such that <m>S=C_s(G)</m>. Let <m>G</m> act on itself through conjugation, making <m>S=C_s(G)=\Orb(s)</m> by the definition of conjugacy class. The Orbit-Stabilizer Theorem tells us that <m>|G|=|\Orb(s)|\cdot|\Stab(s)|</m>, meaning that the order of <m>S</m> must divide the order of <m>G</m>. However, <m>|G|=\frac{7!}{2}</m> and <m>|S|=6!</m>, so this is a contradiction. Thus <m>S</m> is not a conjugacy class of <m>G</m>.
-					</p>
-        </proof>
-      </problem>
-
-      <proposition xml:id="prop-normal-conjugacy">
-        <statement>
-          <p>
-            Let <m>N\mathrel{\unlhd}G</m>. The conjugation action of <m>G</m> on itself induces an action by conjugation of <m>G</m> on <m>N</m>. In particular, <m>N</m> is the disjoint union of some of the conjugacy classes in <m>G</m>.
-          </p>
-        </statement>
-      </proposition>
-
-
-      <problem>
-        <p>
-					Let <m>H</m> be a subgroup of a group <m>G</m>. Recall that the centralizer of <m>H</m> is the subgroup of <m>G</m> defined by <m>C_G(H) = \{g \in G | gh = hg ∀h \in H\}</m> and the normalizer of <m>H</m> is the subgroup of <m>G</m> defined by <m>N_G(H) = \{g \in G | gHg\inv = H\}</m>.
-				</p>
-
-				<p>
-          <ol marker="(a)">
-            <li>
-            Show that the centralizer <m>C_G(H)</m> of <m>H</m> in <m>G</m> is a normal subgroup of the normalizer <m>N_G(H)</m> of <m>H</m> in <m>G</m>.
-            </li>
-
-            <li>
-            Show that the quotient <m>N_G(H)/C_G(H)</m> is isomorphic to a subgroup of the automorphism group <m>\Aut(H)</m> of <m>H</m>.
-            </li>
-				</ol>
-      </p>
-
-
-        <proof>
-
-          <p>
-						Let <m>H</m> be a subgroup of a group <m>G</m>.
-					</p>
-          
-          <ol marker="(a)">
-            <li>
-              <p>
-                Let <m>G</m> act on <m>H</m> by conjugation. Thus the associated permutation homomorphism <m>\rho</m> is defined such that <m>\rho(g)=\phi_g</m>, where <m>\phi_g(h)=ghg\inv</m>. Notice that when <m>x\in C_G(H)</m> we have <m>\phi_x(h)=xhx\inv=h</m> for all <m>h\in H</m>, and thus <m>x\in\ker(\rho)</m>. If <m>x\in\ker(\rho)</m> then <m>xhx\inv=h</m> for all <m>h\in H</m>, and thus <m>x\in C_G(H)</m>. Thus <m>C_G(H)=\ker(\rho)</m> and <m>C_G(H)\nsg N_G(H)</m>.
-              </p>
-            </li>
-            <li>
-              <p>
-                From the above permutation representation we have a homomorphism <m>\rho: G\to S_{|H|}\cong\Aut(H)</m>. As <m>C_G(H)=\ker(\rho)</m>, by the First Isomorphism Theorem we have <m>G/C_G(H)\cong\im(\rho))</m>, a subgroup of <m>\Aut(H)</m>.
-              </p>
-            </li>
-          </ol>
-        </proof>
-
-        <proof>
-          <p>
-						Let <m>G</m> be a group and <m>H\nsg G</m>. Let <m>x\in C_H(G)</m>, and consider <m>gxg\inv</m>. Let <m>h\in H</m>. As <m>H\nsg G</m> we have <m>h=gh'g\inv</m> for some <m>h\in H</m>, and thus that 1. <m>g\inv h=h'g\inv</m> and 2. <m>hg=gh'</m>. Consider <m>gxg\inv h</m>. By (1), we see <m>gxg\inv h=gxh'g\inv</m>. As <m>x</m> commutes with everything in <m>H</m> we have <m>gh'xg\inv</m>, and by (2) we have <m>hgxg\inv</m>. Thus <m>C_H(G)\nsg G</m>.
-					</p>
-
-					<p>
-						Let <m>G</m> act on the left cosets of <m>C_G(H)</m> by left multiplication, giving rise to the permutation representation homomorphism <m>\rho:G/C_G(H)\to\Aut(H)</m>. By the First Isomorphism Theorem we see that <m>G/C_G(H)</m> is isomorphic to a subgroup of the automorphism group of <m>H</m>.
-					</p>
-        </proof>
-          
-
-      </problem>
-
-      <problem>
-        <p>
-					Let <m>G</m> be a (not necessarily finite) group and <m>K \leq G</m> a subgroup of index <m>n &lt; \infty</m>. Define <me>N=\bigcap_{g\in G}gKg\inv</me>(i.e., <m>N</m> is the intersection of all the conjugates of K<m>)</m>
-				</p>
-
-				<p><ol>
-					<li>
-					Prove <m>N</m> is a the largest normal subgroup of <m>G</m> that is contained in <m>K</m>.
-					</li>
-
-					<li>
-					Prove <m>[G : N ]</m> divides <m>n!</m>.
-					</li>
-
-				</ol></p>
-
-        <proof>
-
-          <p>
-            Let <m>G</m> act on the left cosets of <m>K</m> in <m>G</m> by left multiplication, yielding the permutation representation homomorphism <m>\rho:G\to S_n</m>. Let <m>N</m> conspicuously denote the kernel of this function.
-          </p>
-
-          <p>
-            Let <m>x\in N</m>. Then <m>\rho(n)</m>, the automorphism <m>\s:G/K\to G/K</m> defined by <m>\s(gK)=xgK</m> is precisely the identity permutation. Thus <m>xgK=gK</m> for all <m>g\in G</m> and <m>g\inv xgK=K</m> for all <m>g\in G</m>, so <m>x\in</m> This means the elements of <m>N</m> are precisely those that are in the conjugacy class of <m>gKg\inv</m> for all <m>g\in G</m>. There cannot exist a larger normal subgroup of <m>G</m> contained in <m>K</m>, as it would contain an element that was not in some conjugacy class for <m>G</m>, negating the definition of a normal subgroup.
-          </p>
    
-          <p>
-            Recall the permutation representation homomorphism <m>\rho:G\to S_n</m>. The First Isomorphism Theorem tells us <m>G/N\cong\im(\rho)\leq S_n</m>, which has order <m>n!</m>. Thus <m>[G:N]|n!</m>.
-          </p>
-        </proof>
-      </problem>
-
-      <problem>
-        <p>
-					Prove that if <m>G</m> is a finite group of odd order, then for any non-identity element <m>x\in G</m>, <m>x</m> is not conjugate to <m>x\inv</m>.
-				</p>
-
-        <proof>
-          <p>
-						Let <m>G</m> be a finite group of odd order, and let <m>G</m> act on itself via conjugation. Under this action, the orbit of an element is exactly its conjugacy class. By the Orbit-Stabilizer Theorem we have <m>|G|=|\Orb(x)|\cdot|\Stab(x)|</m>. Thus the order of an element divides the order of the group, and so every orbit must have odd order.
-					</p>
-
-					<p>
-						Suppose there exists an element <m>x</m> such that <m>gxg\inv=x\inv</m> for some <m>g\in G</m>. Thus <m>x\inv\in\Orb(x)</m>. Let <m>y\in\Orb(x)</m>. Thus <m>y=hxh\inv</m> for some <m>h\in G</m>. Then <m>y\inv=h\inv x\inv h</m>. However, as <m>x\inv=gxg\inv</m>, we have <m>y\inv=h\inv gxg\inv h</m>. As <m>h\inv g</m> and <m>g\inv h</m> are both in <m>G</m>, we see that <m>y\inv\in\Orb(x)</m> as well. As <m>e\in\Stab(x)</m>, we see that this means that the orbit of <m>x</m> would have even order, which is not possible.
-					</p>
-        </proof>
-      </problem>
-
-      <problem>
-        <p> 
-          Let <m>G</m> be a finite group and let <m>H</m> be a proper subgroup of <m>G</m> with <m>[G:H]=h</m>.
-        </p>
-
-        <p><ol>
-          <li>
-          Prove that <m>H</m> has at most <m>h</m> distinct conjugate sets <m>gHg^{-1}</m> for <m>g\in G</m>.
-          </li>
-
-          <li>
-          Prove that <m>G\neq \bigcup_{g\in G} gHg^{-1}</m>.
-          </li>
-
-        </ol></p>
-
-        <proof>
-          <p>
-            Let <m>f:G/H\to gHg\inv</m> be defined by <m>f(gH)=gHg\inv</m>. Suppose <m>xH=yH</m>. Notice that <m>f(xH)=xHx\inv</m> and <m>f(H)=yHy\inv</m>, but as <m>x=y</m> we have equality, and thus <m>f</m> is well defined. Let <m>gHg\inv</m> be a conjugate set, and let <m>gH\in G/H</m>. Then <m>f(gH)=gHg\inv</m>, and so we have surjectivity. As <m>|G/H|=|[G:H]|=h</m>, there can be at most <m>h</m> distinct conjugate sets for <m>g\in G</m>.
-          </p>
-
-          <p>
-            Let <m>G</m> act on <m>H</m> by conjugation. We know that the orbits of this action partition <m>H</m>. However, under this action the orbits are exactly the conjugacy classes of <m>H</m>. There are at most <m>h</m> conjugacy classes. Each conjugacy class has at most <m>|H|</m> elements in it, and each one has the identity. As there are at most <m>h</m> of them then when we add all of their orders we get at most <m>h(|H|-1)</m>, which is less than the order of <m>G</m>.
-          </p>
-        </proof>
-      </problem>
-
-
-      <exercises>
-
-        <exercisegroup>
-          <title>Computations and Examples</title>
-          <introduction>
-            <p>
-            </p>
-          </introduction>
-      
-          <exercise>
-            <p>
-              Coming soon to an OER near you!
-            </p>
-          </exercise>
-      
-        </exercisegroup>
-      
-        <exercisegroup>
-          <title>Formal Proofs</title>
-          <introduction>
-            <p>
-            </p>
-          </introduction>
-      
-          <exercise>
-            <p>
-              Coming soon to an OER near you!
-            </p>
-          </exercise>
-      
-        </exercisegroup>
-      
-        <exercisegroup>
-          <title>Qualifying Exam Problems</title>
-          <introduction>
-            <p>
-            </p>
-          </introduction>
-      
-          <exercise>
-            <p>
-              Coming soon to an OER near you!
-            </p>
-          </exercise>
-      
-        </exercisegroup>
-      </exercises>
-
-
-    </section>
 
     <section xml:id="sec-class-eq">
       <title>The Class Equation</title>

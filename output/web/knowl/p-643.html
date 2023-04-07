@@ -11,9 +11,17 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">By Sylow's Theorem, <span class="process-math">\(|\Syl_7(G)|\equiv 1\mod{7}\)</span> and divides <span class="process-math">\(2^3\cdot 3=24\text{.}\)</span> Thus the only options are <span class="process-math">\(1\)</span> and <span class="process-math">\(8\text{.}\)</span> However, as <span class="process-math">\(G\)</span> is simple there cannot be only one Sylow <span class="process-math">\(7\)</span>-Subgroup, as it would be normal. Thus there are <span class="process-math">\(8\text{,}\)</span> each having <span class="process-math">\(7\)</span> unique elements and the identity. Thus there are <span class="process-math">\(49\)</span> elements of order <span class="process-math">\(7\text{.}\)</span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">As <span class="process-math">\(N\nsg G\)</span> it is a union of conjugacy classes of the elements it contains, one of which is <span class="process-math">\(e\text{.}\)</span> Assume by way of contradiction that <span class="process-math">\(N\cap Z(G)={e}\text{,}\)</span> meaning that <span class="process-math">\(e\)</span> is the only element in <span class="process-math">\(N\)</span> whose conjugacy class is a singleton. This yields</div>
+<div class="displaymath process-math">
+\begin{equation*}
+|N| = 1+ \sum_i^r |G : C_G(n_i)|.
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec-simple-groups.html#p-643" class="internal">in-context</a></span>
+<div class="para">However, by Lagrange’s Theorem <span class="process-math">\(N\)</span> must also be a <span class="process-math">\(p-\)</span>group, and thus by an analogous element counting argument as above we see that there exists some <span class="process-math">\(x\in N\)</span> such that <span class="process-math">\(C_G(x)=\{x\}\text{,}\)</span> or that <span class="process-math">\(gxg\inv=x\)</span> for all <span class="process-math">\(g\in G\text{.}\)</span> Thankfully, this means that <span class="process-math">\(x\in Z(G)\text{,}\)</span> and thus we have <span class="process-math">\(Z(G)\cap N\neq 1\text{.}\)</span>
+</div>
+</div>
+<span class="incontext"><a href="sec-class-eq.html#p-643" class="internal">in-context</a></span>
 </body>
 </html>
