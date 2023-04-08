@@ -567,7 +567,7 @@ window.MathJax = {
 <div class="toc-item"><a href="sylow.html" class="internal"><span class="codenumber">5</span> <span class="title">Sylow Theory</span></a></div>
 <ul class="structural">
 <li>
-<div class="toc-item"><a href="sec-pgroups.html" class="internal"><span class="codenumber">5.1</span> <span class="title"><span class="process-math">\(p\)</span>-groups</span></a></div>
+<div class="toc-item"><a href="sec-pgroups.html" class="internal"><span class="codenumber">5.1</span> <span class="title"><span class="process-math">\(p\)</span>-groups and Sylow Subgroups</span></a></div>
 <ul class="structural"><li><div class="toc-item"><a href="sec-pgroups.html#exercises-16" class="internal"><span class="codenumber">5.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
@@ -1015,54 +1015,54 @@ window.MathJax = {
 <article class="definition definition-like" id="def-ring-homomorphism"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.34</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-974">
+<div class="para logical" id="p-1032">
 <div class="para">If <span class="process-math">\(R\)</span> and <span class="process-math">\(S\)</span> are rings, a <em class="emphasis">ring homomorphism</em> from <span class="process-math">\(R\)</span> to <span class="process-math">\(S\)</span> is a function <span class="process-math">\(f: R \to S\)</span> that satisfies:</div>
 <ol class="decimal">
-<li id="li-270"><div class="para" id="p-975">
+<li id="li-287"><div class="para" id="p-1033">
 <span class="process-math">\(f(x + y) = f(x) + f(y)\)</span> for all <span class="process-math">\(x,y \in R\text{,}\)</span>
 </div></li>
-<li id="li-271"><div class="para" id="p-976">
+<li id="li-288"><div class="para" id="p-1034">
 <span class="process-math">\(f(x \cdot y) = f(x) \cdot f(y)\)</span> for all <span class="process-math">\(x,y \in R\text{.}\)</span>
 </div></li>
 </ol>
 </div></article><article class="definition definition-like" id="def-ring-isomorphism"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.35</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-977">A ring homomorphism <span class="process-math">\(f: R \to S\)</span> that is bijective is called a <em class="emphasis">ring isomorphism</em>. Two rings <span class="process-math">\(R\)</span> and <span class="process-math">\(S\)</span> are <em class="emphasis">isomorphic</em>, written <span class="process-math">\(R \cong S\text{,}\)</span> if there is an isomorphism from <span class="process-math">\(R\)</span> to <span class="process-math">\(S\text{.}\)</span>
+<div class="para" id="p-1035">A ring homomorphism <span class="process-math">\(f: R \to S\)</span> that is bijective is called a <em class="emphasis">ring isomorphism</em>. Two rings <span class="process-math">\(R\)</span> and <span class="process-math">\(S\)</span> are <em class="emphasis">isomorphic</em>, written <span class="process-math">\(R \cong S\text{,}\)</span> if there is an isomorphism from <span class="process-math">\(R\)</span> to <span class="process-math">\(S\text{.}\)</span>
 </div></article><article class="proposition theorem-like" id="prop-ring-isomorphism-invariants"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.36</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-978">
+<div class="para logical" id="p-1036">
 <div class="para">The following are ring isomorphism invariants:</div>
 <ol class="decimal">
-<li id="li-272"><div class="para" id="p-979">all group isomorphism invariants of the additive group, including the isomorphism class (i.e., if <span class="process-math">\(R\cong S\)</span> then <span class="process-math">\((R,+)\cong(S,+)\)</span>).</div></li>
-<li id="li-273"><div class="para" id="p-980">being unital, being commutative, division ring, field, integral domain</div></li>
-<li id="li-274"><div class="para" id="p-981">the number of zero divisors.</div></li>
-<li id="li-275"><div class="para" id="p-982">if <span class="process-math">\(R\)</span> is unital, all group isomorphism invariants of the group of units, including the isomorphism class (i.e., if <span class="process-math">\(R\cong S\)</span> then <span class="process-math">\((R^\times,\cdot)\cong(S^\times,\cdot)\)</span>).</div></li>
-<li id="li-276"><div class="para" id="p-983">the isomorphism type of the center (i.e., if <span class="process-math">\(R\cong S\)</span> then <span class="process-math">\(Z(R)\cong Z(S)\)</span>).</div></li>
+<li id="li-289"><div class="para" id="p-1037">all group isomorphism invariants of the additive group, including the isomorphism class (i.e., if <span class="process-math">\(R\cong S\)</span> then <span class="process-math">\((R,+)\cong(S,+)\)</span>).</div></li>
+<li id="li-290"><div class="para" id="p-1038">being unital, being commutative, division ring, field, integral domain</div></li>
+<li id="li-291"><div class="para" id="p-1039">the number of zero divisors.</div></li>
+<li id="li-292"><div class="para" id="p-1040">if <span class="process-math">\(R\)</span> is unital, all group isomorphism invariants of the group of units, including the isomorphism class (i.e., if <span class="process-math">\(R\cong S\)</span> then <span class="process-math">\((R^\times,\cdot)\cong(S^\times,\cdot)\)</span>).</div></li>
+<li id="li-293"><div class="para" id="p-1041">the isomorphism type of the center (i.e., if <span class="process-math">\(R\cong S\)</span> then <span class="process-math">\(Z(R)\cong Z(S)\)</span>).</div></li>
 </ol>
 </div></article><article class="example example-like" id="exe-ring-homomorphisms-examples"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.37</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-984"><ol class="decimal">
-<li id="li-277"><div class="para" id="p-derived-li-277">The identity map is a ring isomorphism.</div></li>
-<li id="li-278"><div class="para" id="p-derived-li-278">Let <span class="process-math">\(S\)</span> be a subring of a ring <span class="process-math">\(R\text{.}\)</span> The inclusion mapping of <span class="process-math">\(S\)</span> into <span class="process-math">\(A\)</span> is a ring homomorphism.</div></li>
-<li id="li-279"><div class="para" id="p-derived-li-279">Projection maps are ring homomorphisms.</div></li>
+<div class="para logical" id="p-1042"><ol class="decimal">
+<li id="li-294"><div class="para" id="p-derived-li-294">The identity map is a ring isomorphism.</div></li>
+<li id="li-295"><div class="para" id="p-derived-li-295">Let <span class="process-math">\(S\)</span> be a subring of a ring <span class="process-math">\(R\text{.}\)</span> The inclusion mapping of <span class="process-math">\(S\)</span> into <span class="process-math">\(A\)</span> is a ring homomorphism.</div></li>
+<li id="li-296"><div class="para" id="p-derived-li-296">Projection maps are ring homomorphisms.</div></li>
 </ol></div></article><article class="lemma theorem-like" id="lem-ring-homomorphism-properties"><h3 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">1.38</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-985">
+<div class="para logical" id="p-1043">
 <div class="para">If <span class="process-math">\(f: R \to S\)</span> is a ring homomorphism, then</div>
 <ol class="decimal">
-<li id="li-280"><div class="para" id="p-986">
+<li id="li-297"><div class="para" id="p-1044">
 <span class="process-math">\(f(0_R) = 0_S\)</span> and <span class="process-math">\(f(-x)=-f(x)\text{.}\)</span>
 </div></li>
-<li id="li-281"><div class="para" id="p-987">if <span class="process-math">\(R\text{,}\)</span> <span class="process-math">\(S\)</span> are unital then <span class="process-math">\(f(1_R)\)</span> can be either <span class="process-math">\(0_S, 1_S\)</span> or a zero divisor.</div></li>
-<li id="li-282"><div class="para" id="p-988">If <span class="process-math">\(f(1_R)=1_S\)</span> and <span class="process-math">\(u\in R^\times\)</span> then <span class="process-math">\(f(u^{-1})=f(u)^{-1}\text{.}\)</span>
+<li id="li-298"><div class="para" id="p-1045">if <span class="process-math">\(R\text{,}\)</span> <span class="process-math">\(S\)</span> are unital then <span class="process-math">\(f(1_R)\)</span> can be either <span class="process-math">\(0_S, 1_S\)</span> or a zero divisor.</div></li>
+<li id="li-299"><div class="para" id="p-1046">If <span class="process-math">\(f(1_R)=1_S\)</span> and <span class="process-math">\(u\in R^\times\)</span> then <span class="process-math">\(f(u^{-1})=f(u)^{-1}\text{.}\)</span>
 </div></li>
-<li id="li-283"><div class="para" id="p-989">If <span class="process-math">\(f: R \to S\)</span> and <span class="process-math">\(g:S\to T\)</span> are ring homomorphisms (or isomorphisms, respectively), then <span class="process-math">\(g\circ f:R\to T\)</span> is a ring homomorphism (or isomorphism).</div></li>
+<li id="li-300"><div class="para" id="p-1047">If <span class="process-math">\(f: R \to S\)</span> and <span class="process-math">\(g:S\to T\)</span> are ring homomorphisms (or isomorphisms, respectively), then <span class="process-math">\(g\circ f:R\to T\)</span> is a ring homomorphism (or isomorphism).</div></li>
 </ol>
-</div></article><article class="hiddenproof" id="proof-56"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-56"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-56"><article class="hiddenproof"><div class="para logical" id="p-990"><ol class="decimal"><li id="li-284"><div class="para" id="p-derived-li-284">Since <span class="process-math">\(1_R1_R=1_R\)</span> we have <span class="process-math">\(f(1_R)f(1_R)=f(1_R)\text{,}\)</span> thus<div class="displaymath process-math">
+</div></article><article class="hiddenproof" id="proof-47"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-47"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-47"><article class="hiddenproof"><div class="para logical" id="p-1048"><ol class="decimal"><li id="li-301"><div class="para" id="p-derived-li-301">Since <span class="process-math">\(1_R1_R=1_R\)</span> we have <span class="process-math">\(f(1_R)f(1_R)=f(1_R)\text{,}\)</span> thus<div class="displaymath process-math">
 \begin{equation*}
 f(1_R)(f(1_R)-1_S)=0_S.
 \end{equation*}
@@ -1070,58 +1070,58 @@ f(1_R)(f(1_R)-1_S)=0_S.
 <article class="problem example-like" id="exe-equivalent-field-definitions"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">1.39</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-991">Let <span class="process-math">\(A\)</span> be a nontrivial ring. Then <span class="process-math">\(A\)</span> is a field if and only if every homomorphism of <span class="process-math">\(A\)</span> into a nonzero ring <span class="process-math">\(B\)</span> is injective.</div></article><article class="problem example-like" id="problem-85"><h3 class="heading">
+<div class="para" id="p-1049">Let <span class="process-math">\(A\)</span> be a nontrivial ring. Then <span class="process-math">\(A\)</span> is a field if and only if every homomorphism of <span class="process-math">\(A\)</span> into a nonzero ring <span class="process-math">\(B\)</span> is injective.</div></article><article class="problem example-like" id="problem-75"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">1.40</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-992">Suppose <span class="process-math">\(R\)</span> is commutative and <span class="process-math">\(e\)</span> an idempotent. Let <span class="process-math">\(Re:=\{re\mid r\in R\}\text{.}\)</span> Prove that the map <span class="process-math">\(\phi:R\to Re \times R(1-e)\)</span> given by <span class="process-math">\(\phi(r)=(re, r(1-e))\)</span> is a ring isomorphism.</div></article><article class="problem example-like" id="problem-86"><h3 class="heading">
+<div class="para" id="p-1050">Suppose <span class="process-math">\(R\)</span> is commutative and <span class="process-math">\(e\)</span> an idempotent. Let <span class="process-math">\(Re:=\{re\mid r\in R\}\text{.}\)</span> Prove that the map <span class="process-math">\(\phi:R\to Re \times R(1-e)\)</span> given by <span class="process-math">\(\phi(r)=(re, r(1-e))\)</span> is a ring isomorphism.</div></article><article class="problem example-like" id="problem-76"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">1.41</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-993">
+<div class="para logical" id="p-1051">
 <div class="para">Let <span class="process-math">\(a, b\)</span> be squarefree integers and set <span class="process-math">\(R=\Z[\sqrt{a}]\)</span> and <span class="process-math">\(S=\Z[\sqrt{b}]\text{.}\)</span>
 </div>
 <ol class="decimal">
-<li id="li-285"><div class="para" id="p-994">There is a group isomorphism <span class="process-math">\((R,+) \cong (S,+)\text{.}\)</span>
+<li id="li-302"><div class="para" id="p-1052">There is a group isomorphism <span class="process-math">\((R,+) \cong (S,+)\text{.}\)</span>
 </div></li>
-<li id="li-286"><div class="para" id="p-995">There is a ring isomorphism <span class="process-math">\(R \cong S\)</span> if and only if <span class="process-math">\(a = b\text{.}\)</span>
+<li id="li-303"><div class="para" id="p-1053">There is a ring isomorphism <span class="process-math">\(R \cong S\)</span> if and only if <span class="process-math">\(a = b\text{.}\)</span>
 </div></li>
 </ol>
 </div></article><section class="exercises" id="exercises-26"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
-<div class="exercisegroup" id="exercisegroup-64">
+<div class="exercisegroup" id="exercisegroup-67">
 <h4 class="heading"><span class="title">Computations and Examples.</span></h4>
-<div class="introduction" id="introduction-67"><div class="para" id="p-996"></div></div>
-<div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-123"><h5 class="heading">
+<div class="introduction" id="introduction-71"><div class="para" id="p-1054"></div></div>
+<div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-132"><h5 class="heading">
 <span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
 </h5>
-<div class="para" id="p-997">Coming soon to an OER near you!</div>
+<div class="para" id="p-1055">Coming soon to an OER near you!</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-43" id="hint-43"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-43"><div class="hint solution-like"><div class="para" id="p-998">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-45" id="solution-45"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-45"><div class="solution solution-like"><div class="para" id="p-999">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-45" id="hint-45"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-45"><div class="hint solution-like"><div class="para" id="p-1056">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-56" id="solution-56"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-56"><div class="solution solution-like"><div class="para" id="p-1057">Coming soon to an OER near you!</div></div></div>
 </div></article></div>
 </div>
-<div class="exercisegroup" id="exercisegroup-65">
+<div class="exercisegroup" id="exercisegroup-68">
 <h4 class="heading"><span class="title">Formal Proofs.</span></h4>
-<div class="introduction" id="introduction-68"><div class="para" id="p-1000"></div></div>
-<div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-124"><h5 class="heading">
+<div class="introduction" id="introduction-72"><div class="para" id="p-1058"></div></div>
+<div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-133"><h5 class="heading">
 <span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
 </h5>
-<div class="para" id="p-1001">Coming soon to an OER near you!</div>
+<div class="para" id="p-1059">Coming soon to an OER near you!</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-44" id="hint-44"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-44"><div class="hint solution-like"><div class="para" id="p-1002">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-46" id="solution-46"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-46"><div class="solution solution-like"><div class="para" id="p-1003">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-46" id="hint-46"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-46"><div class="hint solution-like"><div class="para" id="p-1060">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-57" id="solution-57"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-57"><div class="solution solution-like"><div class="para" id="p-1061">Coming soon to an OER near you!</div></div></div>
 </div></article></div>
 </div>
-<div class="exercisegroup" id="exercisegroup-66">
+<div class="exercisegroup" id="exercisegroup-69">
 <h4 class="heading"><span class="title">Qualifying Exam Problems.</span></h4>
-<div class="introduction" id="introduction-69"><div class="para" id="p-1004"></div></div>
-<div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-125"><h5 class="heading">
+<div class="introduction" id="introduction-73"><div class="para" id="p-1062"></div></div>
+<div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-134"><h5 class="heading">
 <span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
 </h5>
-<div class="para" id="p-1005">Coming soon to an OER near you!</div>
+<div class="para" id="p-1063">Coming soon to an OER near you!</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-45" id="hint-45"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-45"><div class="hint solution-like"><div class="para" id="p-1006">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-47" id="solution-47"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-47"><div class="solution solution-like"><div class="para" id="p-1007">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-47" id="hint-47"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-47"><div class="hint solution-like"><div class="para" id="p-1064">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-58" id="solution-58"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-58"><div class="solution solution-like"><div class="para" id="p-1065">Coming soon to an OER near you!</div></div></div>
 </div></article></div>
 </div></section></section></div>
 <div class="ptx-content-footer">

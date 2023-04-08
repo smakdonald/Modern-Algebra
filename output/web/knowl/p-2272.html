@@ -13,20 +13,20 @@
 <body class="ignore-math">
 <h6 class="heading"><span class="type">Paragraph</span></h6>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(F\)</span> be any field. Up to similarity, how many matrices in <span class="process-math">\(\Mat_{5 \times 5}(F)\)</span> of the form</div>
+<div class="para">Next, observe</div>
 <div class="displaymath process-math">
 \begin{equation*}
-A = \begin{bmatrix}
-1 &amp; * &amp; * &amp; * &amp; * \\
-0 &amp; 1 &amp; * &amp; * &amp; * \\
-0 &amp; 0 &amp; 1 &amp; * &amp; * \\
-0 &amp; 0 &amp; 0 &amp; 1 &amp; * \\
-0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 \\
-\end{bmatrix}
+\begin{align}
+\rank(AP\inv)&amp;=\rank((AP\inv)^T)\\
+&amp;=\rank(P^{-1^T}A^T)\\
+&amp;=\rank(A^T)\\
+&amp;=\rank(A),
+\end{align}
 \end{equation*}
 </div>
-<div class="para">are there? Justify.</div>
+<div class="para">as <span class="process-math">\((P^{-1})^T\)</span> is an invertible matrix. Thus <span class="process-math">\(\rank(B)=\rank(PAP\inv)=\rank(A)\text{.}\)</span>
 </div>
-<span class="incontext"><a href="sec-minpoly.html#p-2272" class="internal">in-context</a></span>
+</div>
+<span class="incontext"><a href="sec-rcf.html#p-2272" class="internal">in-context</a></span>
 </body>
 </html>

@@ -11,10 +11,15 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>
-<div class="para">Let <span class="process-math">\(G\)</span> be a group acting transitively on a set <span class="process-math">\(S\text{.}\)</span>
-</div> <div class="para">The action is transitive, so there exists some <span class="process-math">\(g\in G\)</span> such that <span class="process-math">\(ga=b\text{.}\)</span>
-</div> <div class="para">Let <span class="process-math">\(x\in\Stab(a)\text{,}\)</span> consider <span class="process-math">\(gxg\inv\)</span>b. Since <span class="process-math">\(g\inv b=a\text{,}\)</span> we have <span class="process-math">\(gxa\text{,}\)</span> <span class="process-math">\(x\)</span> stabilizes <span class="process-math">\(a\)</span> so now <span class="process-math">\(ga\text{,}\)</span> but <span class="process-math">\(ga=b\text{.}\)</span> So <span class="process-math">\(g\Stab(a)g\inv\subseteq\Stab(b)\text{.}\)</span>
-</div> <div class="para">Let <span class="process-math">\(x\in\Stab(b)\text{.}\)</span> We know <span class="process-math">\(xb=b\)</span> and also <span class="process-math">\(ga=b\text{,}\)</span> and so <span class="process-math">\(xga=ga\text{.}\)</span> Applying <span class="process-math">\(g\inv\)</span> to both to see <span class="process-math">\(g\inv xga=a\text{.}\)</span> This puts <span class="process-math">\(g\inv xg\in\Stab(a)\text{.}\)</span> Thus <span class="process-math">\(x\in g\Stab(a)g\inv\text{,}\)</span> completing the proof.</div> <div class="para">The action is transitive, so there is only one orbit, and so <span class="process-math">\(\Orb(a)=\Orb(b)=G\text{.}\)</span> Since <span class="process-math">\(G\)</span> is finite, the Orbit-Stabilizer Theorem tells us <span class="process-math">\(|\Orb(a)|=|G|/|\Stab(a)|\text{.}\)</span> Since every orbit has the same order as <span class="process-math">\(G\text{,}\)</span> we see <span class="process-math">\(\Stab(a)=\{e\}\)</span> for all <span class="process-math">\(a\in S\text{.}\)</span> Thus there cannot exist any fixed points.</div></article><span class="incontext"><a href="sec-lois.html#proof-21" class="internal">in-context</a></span>
+<article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
+<div class="para logical">
+<div class="para">The elements of <span class="process-math">\(Z(G)\)</span> are precisely the group elements that are conjugate to only themselves; that is, they are the one-element orbits for the conjugation action. Because the conjugacy classes (orbits of the conjugation action) partition <span class="process-math">\(G\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-conjclass.html">
+\begin{equation*}
+|G| = |Z(G)| + \sum_i^r [g_i]_c.
+\end{equation*}
+</div>
+<div class="para">For each <span class="process-math">\(g_i\)</span> as in the statement, by Theorem <a href="" class="xref" data-knowl="./knowl/thm-conjclass.html" title="Theorem 4.36">Theorem 4.36</a>, we have <span class="process-math">\([G: C_G(g_i)] =[g_i]_c\text{.}\)</span> The class equation follows from substituting this into the equation above.</div>
+</div></article><span class="incontext"><a href="sec-class-eq.html#proof-21" class="internal">in-context</a></span>
 </body>
 </html>

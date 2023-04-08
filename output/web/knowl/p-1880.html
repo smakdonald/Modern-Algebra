@@ -11,8 +11,34 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para"></div>
-<span class="incontext"><a href="sec-cob.html#p-1880" class="internal">in-context</a></span>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(P_n\)</span> denote the the <span class="process-math">\(\R\)</span>-vector space of polynomials of degree at most <span class="process-math">\(n\)</span> (including the zero polynomial) and consider the linear transformation <span class="process-math">\(\phi :P_3\to P_2\)</span> given by <span class="process-math">\(\phi(f)=f'\text{,}\)</span> i.e. taking the derivative. Take <span class="process-math">\(B=\{1,x,x^2,x^3\}\)</span> for an ordered basis of <span class="process-math">\(P_3\)</span> and <span class="process-math">\(C = \{1,x,x^2\}\)</span> for an ordered basis of <span class="process-math">\(P_2\text{.}\)</span> Then for <span class="process-math">\(p(x) = 5 + 3x + 2x^2 - 7x^3\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+[p(x)]^B = \begin{bmatrix} 5 \\ 3 \\ 2 \\ -7\end{bmatrix}
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+[\phi]_B^C= 
+\begin{bmatrix}
+0 &amp; 1 &amp;0 &amp; 0 \\
+0 &amp;0 &amp; 2 &amp; 0 \\
+0&amp; 0&amp; 0&amp; 3 \\
+\end{bmatrix}.
+\end{equation*}
+</div>
+<div class="para">We have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+[\phi]_B^C \cdot [p(x)]^B =  
+\begin{bmatrix} 3 \\ 4 \\ -21 \end{bmatrix} = [p'(x)]^C = [\phi(p(x))]^C
+\end{equation*}
+</div>
+<div class="para">confirming in this example one of the assertions of the Lemma.</div>
+</div>
+<span class="incontext"><a href="sec-basics.html#p-1880" class="internal">in-context</a></span>
 </body>
 </html>

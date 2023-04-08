@@ -567,7 +567,7 @@ window.MathJax = {
 <div class="toc-item"><a href="sylow.html" class="internal"><span class="codenumber">5</span> <span class="title">Sylow Theory</span></a></div>
 <ul class="structural">
 <li>
-<div class="toc-item"><a href="sec-pgroups.html" class="internal"><span class="codenumber">5.1</span> <span class="title"><span class="process-math">\(p\)</span>-groups</span></a></div>
+<div class="toc-item"><a href="sec-pgroups.html" class="internal"><span class="codenumber">5.1</span> <span class="title"><span class="process-math">\(p\)</span>-groups and Sylow Subgroups</span></a></div>
 <ul class="structural"><li><div class="toc-item"><a href="sec-pgroups.html#exercises-16" class="internal"><span class="codenumber">5.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
@@ -1012,52 +1012,52 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-grp-dps"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">6.1</span> <span class="title">Direct Products</span>
 </h2>
-<article class="problem example-like" id="problem-30"><h3 class="heading">
+<article class="problem example-like" id="problem-20"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">6.1</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-770">Let <span class="process-math">\(G\)</span> be a group that acts on a set <span class="process-math">\(A\text{,}\)</span> and <span class="process-math">\(H\)</span> a subgroup of <span class="process-math">\(G\)</span> such that for any <span class="process-math">\(a, b \in A\)</span> there exists a unique <span class="process-math">\(h \in H\)</span> with <span class="process-math">\(ha = b\text{.}\)</span> (a) Prove that for every <span class="process-math">\(a \in A, G = HG_a\)</span> and <span class="process-math">\(H \cap Ga = \{1\}\text{,}\)</span> where <span class="process-math">\(G_a = \{g \in G | ga = a\}.\)</span> (b) Prove that if <span class="process-math">\(H \subseteq Z(G)\)</span> then for every <span class="process-math">\(a \in A\text{,}\)</span> <span class="process-math">\(G\)</span> is the internal direct product of <span class="process-math">\(H\)</span> and <span class="process-math">\(G_a.\)</span>
-</div></article><article class="hiddenproof" id="proof-44"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-44"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-44"><article class="hiddenproof"><div class="para" id="p-771">Let <span class="process-math">\(G\)</span> be a group that acts on a set <span class="process-math">\(A\text{,}\)</span> and <span class="process-math">\(H\)</span> a subgroup of <span class="process-math">\(G\)</span> such thatfor any <span class="process-math">\(a, b \in A\)</span> there exists a unique <span class="process-math">\(h \in H\)</span> with <span class="process-math">\(ha = b\text{.}\)</span>
-</div> <div class="para" id="p-772">Suppose there exists some <span class="process-math">\(h\in H\)</span> such that <span class="process-math">\(h\in G_a\text{.}\)</span> Then <span class="process-math">\(ha=a\text{.}\)</span> But <span class="process-math">\(ea=a\)</span> by the definition of group action. As the <span class="process-math">\(h\in G_a\)</span> is unique, we see <span class="process-math">\(h=e\text{.}\)</span> Thus <span class="process-math">\(H\cap G_a=\{e\}\text{.}\)</span>
-</div> <div class="para" id="p-773">Let <span class="process-math">\(g\in G\)</span> and <span class="process-math">\(a\in A\text{.}\)</span> If <span class="process-math">\(g\in H\)</span> then we can write <span class="process-math">\(g=ge\text{,}\)</span> as <span class="process-math">\(e\in G_a\text{.}\)</span> Suppose <span class="process-math">\(g\not\in H\)</span> and <span class="process-math">\(ga=b\)</span> for some <span class="process-math">\(b\in A\text{.}\)</span> There exists an <span class="process-math">\(h\in H\)</span> such that <span class="process-math">\(ha=b\text{.}\)</span> Then <span class="process-math">\(ha=ga\text{,}\)</span> so <span class="process-math">\(h\inv g a=a\text{,}\)</span> so <span class="process-math">\(h\inv g\in G_a\text{.}\)</span> Thankfully, we can know write <span class="process-math">\(g=h(h\inv g\)</span>), and so <span class="process-math">\(G=HG_a\text{.}\)</span>
-</div> <div class="para" id="p-774">If <span class="process-math">\(H\subseteq Z(G)\)</span> then we have <span class="process-math">\(HG_a=G_aH\text{,}\)</span> which means <span class="process-math">\(HG_a\leq G\text{.}\)</span> From Part (a) we have a trivial intersection, making <span class="process-math">\(G\)</span> the internal direct product of <span class="process-math">\(H\)</span> and <span class="process-math">\(G_a\text{.}\)</span>
+<div class="para" id="p-828">Let <span class="process-math">\(G\)</span> be a group that acts on a set <span class="process-math">\(A\text{,}\)</span> and <span class="process-math">\(H\)</span> a subgroup of <span class="process-math">\(G\)</span> such that for any <span class="process-math">\(a, b \in A\)</span> there exists a unique <span class="process-math">\(h \in H\)</span> with <span class="process-math">\(ha = b\text{.}\)</span> (a) Prove that for every <span class="process-math">\(a \in A, G = HG_a\)</span> and <span class="process-math">\(H \cap Ga = \{1\}\text{,}\)</span> where <span class="process-math">\(G_a = \{g \in G | ga = a\}.\)</span> (b) Prove that if <span class="process-math">\(H \subseteq Z(G)\)</span> then for every <span class="process-math">\(a \in A\text{,}\)</span> <span class="process-math">\(G\)</span> is the internal direct product of <span class="process-math">\(H\)</span> and <span class="process-math">\(G_a.\)</span>
+</div></article><article class="hiddenproof" id="proof-35"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-35"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-35"><article class="hiddenproof"><div class="para" id="p-829">Let <span class="process-math">\(G\)</span> be a group that acts on a set <span class="process-math">\(A\text{,}\)</span> and <span class="process-math">\(H\)</span> a subgroup of <span class="process-math">\(G\)</span> such thatfor any <span class="process-math">\(a, b \in A\)</span> there exists a unique <span class="process-math">\(h \in H\)</span> with <span class="process-math">\(ha = b\text{.}\)</span>
+</div> <div class="para" id="p-830">Suppose there exists some <span class="process-math">\(h\in H\)</span> such that <span class="process-math">\(h\in G_a\text{.}\)</span> Then <span class="process-math">\(ha=a\text{.}\)</span> But <span class="process-math">\(ea=a\)</span> by the definition of group action. As the <span class="process-math">\(h\in G_a\)</span> is unique, we see <span class="process-math">\(h=e\text{.}\)</span> Thus <span class="process-math">\(H\cap G_a=\{e\}\text{.}\)</span>
+</div> <div class="para" id="p-831">Let <span class="process-math">\(g\in G\)</span> and <span class="process-math">\(a\in A\text{.}\)</span> If <span class="process-math">\(g\in H\)</span> then we can write <span class="process-math">\(g=ge\text{,}\)</span> as <span class="process-math">\(e\in G_a\text{.}\)</span> Suppose <span class="process-math">\(g\not\in H\)</span> and <span class="process-math">\(ga=b\)</span> for some <span class="process-math">\(b\in A\text{.}\)</span> There exists an <span class="process-math">\(h\in H\)</span> such that <span class="process-math">\(ha=b\text{.}\)</span> Then <span class="process-math">\(ha=ga\text{,}\)</span> so <span class="process-math">\(h\inv g a=a\text{,}\)</span> so <span class="process-math">\(h\inv g\in G_a\text{.}\)</span> Thankfully, we can know write <span class="process-math">\(g=h(h\inv g\)</span>), and so <span class="process-math">\(G=HG_a\text{.}\)</span>
+</div> <div class="para" id="p-832">If <span class="process-math">\(H\subseteq Z(G)\)</span> then we have <span class="process-math">\(HG_a=G_aH\text{,}\)</span> which means <span class="process-math">\(HG_a\leq G\text{.}\)</span> From Part (a) we have a trivial intersection, making <span class="process-math">\(G\)</span> the internal direct product of <span class="process-math">\(H\)</span> and <span class="process-math">\(G_a\text{.}\)</span>
 </div></article></div>
 <section class="exercises" id="exercises-19"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
-<div class="exercisegroup" id="exercisegroup-46">
+<div class="exercisegroup" id="exercisegroup-49">
 <h4 class="heading"><span class="title">Computations and Examples.</span></h4>
-<div class="introduction" id="introduction-49"><div class="para" id="p-775"></div></div>
-<div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-101"><h5 class="heading">
+<div class="introduction" id="introduction-53"><div class="para" id="p-833"></div></div>
+<div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-110"><h5 class="heading">
 <span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
 </h5>
-<div class="para" id="p-776">Coming soon to an OER near you!</div>
+<div class="para" id="p-834">Coming soon to an OER near you!</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-25" id="hint-25"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-25"><div class="hint solution-like"><div class="para" id="p-777">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-25" id="solution-25"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-25"><div class="solution solution-like"><div class="para" id="p-778">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-27" id="hint-27"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-27"><div class="hint solution-like"><div class="para" id="p-835">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-36" id="solution-36"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-36"><div class="solution solution-like"><div class="para" id="p-836">Coming soon to an OER near you!</div></div></div>
 </div></article></div>
 </div>
-<div class="exercisegroup" id="exercisegroup-47">
+<div class="exercisegroup" id="exercisegroup-50">
 <h4 class="heading"><span class="title">Formal Proofs.</span></h4>
-<div class="introduction" id="introduction-50"><div class="para" id="p-779"></div></div>
-<div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-102"><h5 class="heading">
+<div class="introduction" id="introduction-54"><div class="para" id="p-837"></div></div>
+<div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-111"><h5 class="heading">
 <span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
 </h5>
-<div class="para" id="p-780">Coming soon to an OER near you!</div>
+<div class="para" id="p-838">Coming soon to an OER near you!</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-26" id="hint-26"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-26"><div class="hint solution-like"><div class="para" id="p-781">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-26" id="solution-26"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-26"><div class="solution solution-like"><div class="para" id="p-782">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-28" id="hint-28"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-28"><div class="hint solution-like"><div class="para" id="p-839">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-37" id="solution-37"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-37"><div class="solution solution-like"><div class="para" id="p-840">Coming soon to an OER near you!</div></div></div>
 </div></article></div>
 </div>
-<div class="exercisegroup" id="exercisegroup-48">
+<div class="exercisegroup" id="exercisegroup-51">
 <h4 class="heading"><span class="title">Qualifying Exam Problems.</span></h4>
-<div class="introduction" id="introduction-51"><div class="para" id="p-783"></div></div>
-<div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-103"><h5 class="heading">
+<div class="introduction" id="introduction-55"><div class="para" id="p-841"></div></div>
+<div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-112"><h5 class="heading">
 <span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
 </h5>
-<div class="para" id="p-784">Coming soon to an OER near you!</div>
+<div class="para" id="p-842">Coming soon to an OER near you!</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-27" id="hint-27"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-27"><div class="hint solution-like"><div class="para" id="p-785">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-27" id="solution-27"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-27"><div class="solution solution-like"><div class="para" id="p-786">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-29" id="hint-29"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-29"><div class="hint solution-like"><div class="para" id="p-843">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-38" id="solution-38"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-38"><div class="solution solution-like"><div class="para" id="p-844">Coming soon to an OER near you!</div></div></div>
 </div></article></div>
 </div></section></section></div>
 <div class="ptx-content-footer">

@@ -12,14 +12,18 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<div class="para logical">
-<div class="para">Consider and ascending chain of ideals of <span class="process-math">\(R\text{;}\)</span> it must have the form</div>
+<div class="para">Let <span class="process-math">\(\Q(i) = \{a + bi \mid a, b \in \Q\}\)</span> and <span class="process-math">\(\Z[i] = \{a + ib \mid a, b \in \Z\}\text{.}\)</span>
+</div> <div class="para">Suppose by way of contradiction that <span class="process-math">\(7\)</span> is not prime in <span class="process-math">\(\Z[i]\text{.}\)</span> Thus <span class="process-math">\(7=\alpha\beta\text{,}\)</span> with <span class="process-math">\(\alpha,\beta\)</span> non-units and where <span class="process-math">\(\alpha=a+bi\)</span> and <span class="process-math">\(\beta=c+di\text{,}\)</span> for <span class="process-math">\(a,b,c,d\in Z\text{.}\)</span> Thus <span class="process-math">\(\overline{7}=\overline{\alpha\beta}=\overline{\alpha}\overline{\beta}\text{.}\)</span> As <span class="process-math">\(\overline{7+0i}=49\text{,}\)</span> we see that <span class="process-math">\(\overline{\alpha}=(a^2+b^2)|49\text{.}\)</span> Note that the possible factorizations of 49 in <span class="process-math">\(\Z\)</span> are <span class="process-math">\((1)(49)\)</span> and <span class="process-math">\((7)(7)\text{.}\)</span>
+</div> <div class="para">However, if <span class="process-math">\(\overline{\alpha}=49\)</span> then <span class="process-math">\(\overline{\beta}=1\text{,}\)</span> making it a unit. So <span class="process-math">\(\overline{\alpha}=7\)</span> and thus <span class="process-math">\(a^2+b^2=7\text{.}\)</span> As <span class="process-math">\(a^2, b^2\leq0\text{,}\)</span> either <span class="process-math">\(a=0\)</span> or <span class="process-math">\(b=0\text{.}\)</span> But then either <span class="process-math">\(a^2=7\)</span> or <span class="process-math">\(b^2=7\text{,}\)</span> and as <span class="process-math">\(\sqrt{7}\not\in\Z\text{,}\)</span> we have a contradiction. Thus <span class="process-math">\(7\)</span> is prime in <span class="process-math">\(\Z[i]\text{.}\)</span> Using Eisenstein’s Criterion with <span class="process-math">\(p=7\text{,}\)</span> we see that <span class="process-math">\(x^6 + 7\)</span> is irreducible in <span class="process-math">\(\Q(i)[x]\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Using Eisenstein’s Criterion with <span class="process-math">\(p=2\text{,}\)</span> we see that <span class="process-math">\(x^4 - 6x^2 + 10\)</span> is irreducible in <span class="process-math">\(\Q[x]\text{.}\)</span> However, in <span class="process-math">\(\Q(i)[x]\)</span> observe that</div>
 <div class="displaymath process-math">
 \begin{equation*}
-(a_1)\subseteq (a_2) \subseteq (a_3) \subseteq \cdots \subseteq (a_i)\subseteq (a_{i+1})\subseteq \cdots.
+x^4-6x^2+10=(x^2-(3+i))(x^2-(3-i)).
 \end{equation*}
 </div>
-<div class="para">Consider <span class="process-math">\(I=\bigcup_{i\geq 1} (a_i)\)</span> which is an ideal of <span class="process-math">\(R\)</span> by the argument given in Theorem . Since <span class="process-math">\(R\)</span> is a PID, <span class="process-math">\(I=(b)\)</span> for some <span class="process-math">\(b\in R\text{.}\)</span> Since <span class="process-math">\(b\in I=\bigcup_{i\geq 1} (a_i)\text{,}\)</span> we must have <span class="process-math">\(b\in (a_n)\)</span> for some <span class="process-math">\(n\text{.}\)</span> Then we see that <span class="process-math">\(I=(b)\subseteq (a_n)\subseteq (a_{n+1})\subseteq \cdots (a_j) \subseteq \cdots \subseteq I\)</span> for all <span class="process-math">\(j\geq n\text{,}\)</span> thus <span class="process-math">\(I=(a_j)\)</span> for <span class="process-math">\(j\geq n\)</span> and the chain stabilizes as desired.</div>
-</div></article><span class="incontext"><a href="subsec-noeth.html#proof-89" class="internal">in-context</a></span>
+<div class="para">As neither <span class="process-math">\((x^2-(3+i))\)</span> nor <span class="process-math">\((x^2-(3-i))\)</span> are units in <span class="process-math">\(\Q(i)[x]\)</span> (as <span class="process-math">\(x\)</span> has no inverse), we see that <span class="process-math">\(x^4-6x^2+10\)</span> is reducible in <span class="process-math">\(\Q(i)[x]\text{.}\)</span>
+</div>
+</div></article><span class="incontext"><a href="sec-irrpoly.html#proof-89" class="internal">in-context</a></span>
 </body>
 </html>

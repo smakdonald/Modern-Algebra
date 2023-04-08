@@ -13,19 +13,13 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Next, observe</div>
+<div class="para">To prove linear independence, it suffices to prove that if <span class="process-math">\(a_1, \dots, a_m\)</span> and <span class="process-math">\(b_1, \dots, b_n\)</span> be distinct elements of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> respectively, then the set <span class="process-math">\(\{a_ib_j\}\)</span> is linearly independent. Suppose <span class="process-math">\(\sum_{i,j} f_{i,j} a_i b_j = 0\)</span> for some <span class="process-math">\(f_{i,j} \in F\text{.}\)</span> Since the <span class="process-math">\(b_j\)</span>'s are <span class="process-math">\(L\)</span>-linearly independent and</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\begin{align}
-\alpha_1+\alpha_4&amp;=e^{\pi i/4}\sqrt[4]{5}+e^{7\pi i/4}\sqrt[4]{5}\\
-&amp;=(\cos(\frac{\pi}{4})+i\sin(\frac{\pi}{4}))\sqrt[4]{5}+(\cos(\frac{7\pi}{4})+i\sin(\frac{7\pi}{4}))\sqrt[4]{5}\\
-&amp;=(\frac{\sqrt{2}}{2}+i\frac{\sqrt{2}}{2})\sqrt[4]{5}+(\frac{\sqrt{2}}{2}-i\frac{\sqrt{2}}{2})\sqrt[4]{5}\\
-&amp;=\sqrt{2}\sqrt[4]{5}\\
-&amp;=\sqrt[4]{20},
-\end{align}
+\sum_{i,j} f_{i,j} a_i b_j = \sum_j (\sum_i f_{i,j} a_i) b_j
 \end{equation*}
 </div>
-<div class="para">and thus that <span class="process-math">\(F\subseteq E\text{.}\)</span>
+<div class="para">and <span class="process-math">\(f_{i,j} a_i \in L\text{,}\)</span> we get that, for each <span class="process-math">\(j\text{,}\)</span> <span class="process-math">\(\sum_i f_{i,j} a_i = 0\text{.}\)</span> Using now that the <span class="process-math">\(a_i\)</span>'s are <span class="process-math">\(F\)</span>-linearly independent, we have that for all <span class="process-math">\(j\)</span> and all <span class="process-math">\(i\text{,}\)</span> <span class="process-math">\(f_{i,j} = 0\text{.}\)</span> This proves <span class="process-math">\(\{a_i b_j \mid i = 1, \dots, m, j = 1, \dots, n\}\)</span> is linearly independent over <span class="process-math">\(F\text{,}\)</span> and hence <span class="process-math">\(AB\)</span> is linearly independent over <span class="process-math">\(F\text{.}\)</span>
 </div>
 </div>
 <span class="incontext"><a href="sec-algebraic.html#p-2488" class="internal">in-context</a></span>

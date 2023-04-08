@@ -13,14 +13,37 @@
 <body class="ignore-math">
 <h6 class="heading"><span class="type">Paragraph</span></h6>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(R\)</span> be a ring, and let <span class="process-math">\(M\)</span> be a <span class="process-math">\(R\)</span>-module. - (UMP for Quotient Modules) Let <span class="process-math">\(N\)</span> be a submodule of <span class="process-math">\(M\text{,}\)</span> let <span class="process-math">\(T\)</span> be an <span class="process-math">\(R\)</span>-module, and let <span class="process-math">\(f: M \to T\)</span> be an <span class="process-math">\(R\)</span>-module homomorphism. If <span class="process-math">\(f(M) = 0\)</span> (i.e., if <span class="process-math">\(N \subseteq \ker(f)\)</span>) then the function <span class="process-math">\(\ov{f}: M/N \to T\)</span> given by <span class="process-math">\(\ov{f}(m + N) = f(m)\)</span> is a well-defined, <span class="process-math">\(R\)</span>-module homomorphism. In fact, <span class="process-math">\(\ov{f}: M/N \to T\)</span> is the unique <span class="process-math">\(R\)</span>-module homomorphism such that <span class="process-math">\(\ov{f}\circ \can = f\)</span> where <span class="process-math">\(\can\)</span> denotes the canonical surjection <span class="process-math">\(M \onto M/N\text{.}\)</span>- (First Isomorphism Theorem) Let <span class="process-math">\(T\)</span> be an <span class="process-math">\(R\)</span>-module and let <span class="process-math">\(h: M \to T\)</span> be an <span class="process-math">\(R\)</span>-module homomorphism. Then <span class="process-math">\(\ker(h)\)</span> is a submodule of <span class="process-math">\(M\)</span> and there is an <span class="process-math">\(R\)</span>-module isomorphism <span class="process-math">\(M/\ker(h) \cong \im(h)\)</span> given by <span class="process-math">\(m + \ker(h) \mapsto h(m)\text{.}\)</span> - (Second Isomorphism Theorem) Let <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> be submodules of <span class="process-math">\(M\text{,}\)</span> and define <span class="process-math">\(A + B = \{a+b \mid a \in A, b \in B\}\text{.}\)</span> Then <span class="process-math">\(A + B\)</span> is a submodule of <span class="process-math">\(M\text{,}\)</span> <span class="process-math">\(A \cap B\)</span> is a submodule of <span class="process-math">\(A\text{,}\)</span> and there is an <span class="process-math">\(R\)</span>-module isomorphism <span class="process-math">\((A + B)/B \cong A/(A \cap B)\text{.}\)</span> - (Third Isomorphism Theorem) Let <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> be submodules of <span class="process-math">\(M\)</span> with <span class="process-math">\(A \subseteq B\text{.}\)</span> Then <span class="process-math">\(B/A\)</span> is a submodule of <span class="process-math">\(M/A\)</span> and there is an <span class="process-math">\(R\)</span>-module isomorphism <span class="process-math">\((M/A)/(B/A) \cong M/B\)</span> given by sending <span class="process-math">\((m + A) + B/A\)</span> to <span class="process-math">\(m + B\text{.}\)</span> - (Lattice Isomorphism Theorem) Let <span class="process-math">\(R\)</span> be a ring, let <span class="process-math">\(N\)</span> be a R-submodule of <span class="process-math">\(M\text{,}\)</span> and let <span class="process-math">\(\pi: M \to M/N\)</span> be the canonical quotient map. Then the function</div>
+<div class="para">Let <span class="process-math">\(\phi: R \to S\)</span> be a ring homomorphism. Any left <span class="process-math">\(S\)</span>-module <span class="process-math">\(M\)</span> may be regarded via <em class="emphasis">restriction of scalars</em> as a left <span class="process-math">\(R\)</span>-module with the following structure: - the rule for addition <span class="process-math">\(+\)</span> on <span class="process-math">\(M\)</span> is the same as in the original structure and - the rule for scaling by elements of <span class="process-math">\(R\)</span> is</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\Psi : \{R-\text{submodules of } M \text{ containing }N\} \to \{R-\text{submodules of }M/N\}
+r \cdot m := \phi(r)m \text{ for any }r \in R \text{ and }m\in M.
 \end{equation*}
 </div>
-<div class="para">defined by <span class="process-math">\(\Psi(K) = K/N\)</span> is a bijection, with inverse given by <span class="process-math">\(\Psi^{-1}(T) = \pi^{-1}(T)\)</span> for each <span class="process-math">\(R\)</span> submodule <span class="process-math">\(T\)</span> of <span class="process-math">\(M/N\text{.}\)</span> Moreover, <span class="process-math">\(\Psi\)</span> and <span class="process-math">\(\Psi^{-1}\)</span> preserve sums and intersections.</div>
+<div class="para">###### <em class="emphasis">Proof.</em> Let <span class="process-math">\(x,y \in R\)</span> and <span class="process-math">\(m,n \in M\text{.}\)</span> One checks that the properties in the definition of module hold for the given action using properties of ring homomorphisms. In detail,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(x+y)m =\phi(x + y)m= (\phi(x)+\phi(y))m=\phi(x)m + \phi(y)m=xm+ym,
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec-quote.html#p-1551" class="internal">in-context</a></span>
+<div class="para">since <span class="process-math">\(\phi\)</span> preserves addition,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x(ym)=\phi(x) (\phi(y)m) = (\phi(x) \phi(y)) m = \phi(xy) m = (xy) m,
+\end{equation*}
+</div>
+<div class="para">since <span class="process-math">\(\phi\)</span> preserves multiplication, and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+1 \cdot m = \phi(1) m = 1_S m = m
+\end{equation*}
+</div>
+<div class="para">since <span class="process-math">\(\phi\)</span> preserves multiplicative identities. This gives three of the axioms. The final also holds:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x(m + n) = \phi(x) (m+n) = \phi(x)m + \phi(x)n = xm + xn.
+\end{equation*}
+</div>
+</div>
+<span class="incontext"><a href="sec-defmod.html#p-1551" class="internal">in-context</a></span>
 </body>
 </html>

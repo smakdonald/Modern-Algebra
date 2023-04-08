@@ -11,8 +11,21 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">Case I: There is such a <span class="process-math">\(b\)</span> belonging to the first row of <span class="process-math">\(A\text{.}\)</span> In this case we we may implement the Euclidean algorithm in the form of suitable column operations to replace <span class="process-math">\(a\)</span> by <span class="process-math">\(\gcd(a,b)\)</span> and <span class="process-math">\(b\)</span> by <span class="process-math">\(0\text{,}\)</span> as in the example above. Since <span class="process-math">\(a \nmid b\text{,}\)</span> <span class="process-math">\(\gcd(a,b)\)</span> is a proper divisor of <span class="process-math">\(a\text{,}\)</span> and it follows that the number of factors in a prime factorization of <span class="process-math">\(\gcd(a,b)/g\)</span> is smaller than <span class="process-math">\(l\text{,}\)</span> and we are done by induction.</div>
-<span class="incontext"><a href="sec-snf.html#p-2081" class="internal">in-context</a></span>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<div class="para logical">
+<div class="para">Similarly, we may consider the field extension <span class="process-math">\(\Q \subseteq \Q(\sqrt{-2})\text{.}\)</span> For any <span class="process-math">\(a + b \sqrt{-2}\)</span> in the larger field, define <span class="process-math">\(g: \Q(\sqrt{-2}) \to \Q(\sqrt{-2})\)</span> to be multiplication by <span class="process-math">\(a + b \sqrt{-2}\text{.}\)</span> Then <span class="process-math">\(\Q(\sqrt{-2})\)</span> is a <span class="process-math">\(\Q\)</span>-vector space and <span class="process-math">\(g\)</span> is a <span class="process-math">\(\Q\)</span>-linear operator. A <span class="process-math">\(\Q\)</span>-basis of <span class="process-math">\(\Q(\sqrt{-2}\)</span> is given by <span class="process-math">\(B = \{1, \sqrt{-2}\}\)</span> and relative to this basis the matrix representing <span class="process-math">\(g\)</span> is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+[g]_B^B = 
+\begin{bmatrix}
+a &amp; -2b \\ 
+b &amp; a   \\
+\end{bmatrix}
+\end{equation*}
+</div>
+<div class="para">and hence <span class="process-math">\(\det(g) = a^2 + 2b^2\text{,}\)</span> once again the square of the of usual complex norm of the element <span class="process-math">\(a + b \sqrt{-2}\text{.}\)</span>
+</div>
+</div>
+<span class="incontext"><a href="sec-det.html#p-2081" class="internal">in-context</a></span>
 </body>
 </html>

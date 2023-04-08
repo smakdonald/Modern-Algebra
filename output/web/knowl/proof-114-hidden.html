@@ -10,41 +10,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para">Let <span class="process-math">\(E\)</span> be the field extension of <span class="process-math">\(\Q\)</span> obtained by adjoining to <span class="process-math">\(\Q\)</span> all four complex roots of the polynomial <span class="process-math">\(x^4 + 5\text{.}\)</span>
-</div> <div class="para">Let <span class="process-math">\(F=\Q(\sqrt[4]{20})\text{.}\)</span> Note that by Eisenstein's Criterion using <span class="process-math">\(p=5\)</span> we see that <span class="process-math">\(\sqrt[4]{20}\)</span> is the root of an irreducible polynomial <span class="process-math">\(x^4-20\)</span> in <span class="process-math">\(\Q\text{.}\)</span> Thus by Theorem 2.31 we see that <span class="process-math">\([F:\Q]\)</span> is the degree of the minimum polynomial of this extension. However, as <span class="process-math">\(x^4-20\)</span> is monic and of degree 4, we see that it is the minimal polynomial and thus that <span class="process-math">\([F:\Q]=4\text{.}\)</span> As <span class="process-math">\(\sqrt[4]{20}\in\R-\Q\text{,}\)</span> this extension will be contained in the real numbers, and thus that <span class="process-math">\(F\subseteq\R\text{.}\)</span>
-</div> <div class="para logical">
-<div class="para">Next, observe</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{align}
-\alpha_1+\alpha_4&amp;=e^{\pi i/4}\sqrt[4]{5}+e^{7\pi i/4}\sqrt[4]{5}\\
-&amp;=(\cos(\frac{\pi}{4})+i\sin(\frac{\pi}{4}))\sqrt[4]{5}+(\cos(\frac{7\pi}{4})+i\sin(\frac{7\pi}{4}))\sqrt[4]{5}\\
-&amp;=(\frac{\sqrt{2}}{2}+i\frac{\sqrt{2}}{2})\sqrt[4]{5}+(\frac{\sqrt{2}}{2}-i\frac{\sqrt{2}}{2})\sqrt[4]{5}\\
-&amp;=\sqrt{2}\sqrt[4]{5}\\
-&amp;=\sqrt[4]{20},
-\end{align}
-\end{equation*}
-</div>
-<div class="para">and thus that <span class="process-math">\(F\subseteq E\text{.}\)</span>
-</div>
-</div> <div class="para">Note that <span class="process-math">\(i\)</span> is the root of <span class="process-math">\(x^2+1\text{,}\)</span> and since <span class="process-math">\(F\subseteq\R\)</span> and <span class="process-math">\(i\not\in\R\text{,}\)</span> we see that <span class="process-math">\(x^2+1\)</span> is irreducible in <span class="process-math">\(F\)</span> due to it having degree 2. As <span class="process-math">\(x^2+1\)</span> is monic and degree 2 we see its the minimal polynomial of <span class="process-math">\([F(i):F]=2\text{.}\)</span> By the Degree Formula, we see that <span class="process-math">\([F(i):\Q]=[F(i):F][F:\Q]=(2)(4)=8\text{.}\)</span>
-</div> <div class="para">Note that</div> <div class="para"><span class="process-math">\(\a_1 = e^{\pi i/4}\sqrt[4]{5} = \cos(\frac{\pi}{4})+i\sin(\frac{\pi}{4})\sqrt[4]{5} = \frac{\sqrt{2}}{2}\sqrt[4]{5}+i\frac{\sqrt{2}}{2}\sqrt[4]{5}=\sqrt[4]{20}(1+i)\text{,}\)</span></div> <div class="para"><span class="process-math">\(\a_2 = e^{3\pi i/4}\sqrt[4]{5} = \cos(\frac{3\pi}{4})+i\sin(\frac{3\pi}{4})\sqrt[4]{5} = \frac{-\sqrt{2}}{2}\sqrt[4]{5}-i\frac{\sqrt{2}}{2}\sqrt[4]{5}=\sqrt[4]{20}(-1+i)\text{,}\)</span></div> <div class="para">
-<span class="process-math">\(\a_3 = e^{5\pi i/4}\sqrt[4]{5} = \cos(\frac{5\pi}{4})+i\sin(\frac{5\pi}{4})\sqrt[4]{5} = \frac{\sqrt{2}}{2}\sqrt[4]{5}+i\frac{\sqrt{2}}{2}\sqrt[4]{5}=\sqrt[4]{20}(-1-i)\text{,}\)</span> and</div> <div class="para">
-<span class="process-math">\(\a_4 = e^{7\pi i/4}\sqrt[4]{5} = \cos(\frac{7\pi}{4})+i\sin(\frac{7\pi}{4})\sqrt[4]{5} = \frac{\sqrt{2}}{2}\sqrt[4]{5}-i\frac{\sqrt{2}}{2}\sqrt[4]{5}=\sqrt[4]{20}(1-i)\text{,}\)</span> all of which can be written with <span class="process-math">\(i\)</span> and <span class="process-math">\(\sqrt[4]{20}\text{.}\)</span> Thus <span class="process-math">\(E\subseteq F(i)\text{.}\)</span>
-</div> <div class="para logical">
-<div class="para">We already know that <span class="process-math">\(\alpha_1+\alpha_4=\sqrt[4]{20}\text{,}\)</span> and thus all that remains is to show that <span class="process-math">\(i\)</span> can be expressed in terms of the <span class="process-math">\(\alpha\text{.}\)</span> Observe</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{align}
-\alpha_1+\alpha_2&amp;=e^{\pi i/4}\sqrt[4]{5}+e^{3\pi i/4}\sqrt[4]{5}\\
-&amp;=(\cos(\frac{\pi}{4})+i\sin(\frac{\pi}{4}))\sqrt[4]{5}+(\cos(\frac{3\pi}{4})+i\sin(\frac{3\pi}{4}))\sqrt[4]{5}\\
-&amp;=(\frac{\sqrt{2}}{2}+i\frac{\sqrt{2}}{2})\sqrt[4]{5}+(\frac{\sqrt{2}}{2}+i\frac{\sqrt{2}}{2})\sqrt[4]{5}\\
-&amp;=\sqrt{2}\sqrt[4]{5}\\
-&amp;=\sqrt[4]{20}i,
-\end{align}
-\end{equation*}
-</div>
-<div class="para">and thus that <span class="process-math">\((\alpha_1+\alpha_2)(\alpha_1+\alpha_4)\inv=i\text{.}\)</span> Thus <span class="process-math">\(F(i)\subseteq E\text{,}\)</span> and <span class="process-math">\(F(i)=E\text{.}\)</span> Hence <span class="process-math">\([E:\Q]=8\text{.}\)</span>
-</div>
+<body class="ignore-math"><article class="hiddenproof"><div class="para">Let <span class="process-math">\(p\)</span> be any positive prime integer.</div> <div class="para">Suppose <span class="process-math">\(p = k^2 + 1\)</span> for some integer <span class="process-math">\(k\text{.}\)</span> As <span class="process-math">\((k-i)(k+i)=p\text{,}\)</span> <span class="process-math">\(p\)</span> is not an irreducible element of <span class="process-math">\(\Z[i]\text{.}\)</span>
+</div> <div class="para">As <span class="process-math">\(x^4-p\)</span> is irreducible in <span class="process-math">\(Q\)</span> (Eisenstein, <span class="process-math">\(p=p\)</span>) and <span class="process-math">\(x^4-p\)</span> is monic, we see that <span class="process-math">\([\Q(\sqrt[4]{p}):\Q]=4\text{.}\)</span> As <span class="process-math">\(x^2+1\)</span> is irreducible and monic, we see that <span class="process-math">\([\Q(\sqrt[4]{p},i):\Q(\sqrt[4]{p})]=2\text{.}\)</span> By the Degree Formula we have <span class="process-math">\([\Q(\sqrt[4]{p},i):\Q]=8\text{.}\)</span> Note that the four roots of <span class="process-math">\((x^4 - p)\)</span> are the following: - <span class="process-math">\(\sqrt[4]{p}\text{,}\)</span> - <span class="process-math">\(-\sqrt[4]{p}\text{,}\)</span> - <span class="process-math">\(\sqrt[4]{p}i,\)</span> and - <span class="process-math">\(-\sqrt[4]{p}i\text{.}\)</span> As <span class="process-math">\(\frac{\sqrt[4]{p}i}{\sqrt[4]{p}}=i\text{,}\)</span> we see that <span class="process-math">\(\Q(\sqrt[4]{p})\)</span> is the splitting field of <span class="process-math">\(F\text{.}\)</span> Note then that as <span class="process-math">\([\Q(i):\Q]=2\)</span> and the degree of the splitting field is 8, by the Degree Formula we see that the degree of the splitting field of <span class="process-math">\(x^4-p\)</span> over <span class="process-math">\(\Q(i)=4\text{.}\)</span> As <span class="process-math">\(x^4-p\)</span> is monic and degree <span class="process-math">\(4\text{,}\)</span> it must be the minimal polynomial of the second extension and thus irreducible in <span class="process-math">\(\Q(i)[x]\text{.}\)</span>
 </div></article></body>
 </html>

@@ -5,12 +5,19 @@
 
     <section xml:id="graction">
       <title>Group Actions</title>
-      
+
       <blockquote>
         <p>
-          <q>You may never know what results come of your action, but if you do nothing there will be no results.</q>
+          <q>Actions speak louder than words.</q>
         </p>
-        <attribution>Ghandi</attribution>
+        <attribution>Anthony of Padua</attribution>
+      </blockquote>
+
+      <blockquote>
+        <p>
+          <q>Actions speak louder than words.</q>
+        </p>
+        <attribution>Anthony of Padua</attribution>
       </blockquote>
 
       <definition xml:id="def-graction">
@@ -112,6 +119,61 @@
         </statement>
       </definition>
 
+      <definition xml:id="def-faithful-action">
+        <statement>
+          <p>
+            An action is <em>transitive</em> if for all <m>p,q \in S</m> there is a <m>g \in G</m> such that <m>q=g\cdot p</m>.
+          </p>
+        </statement>
+      </definition>
+
+      <p>
+        Transitive and faithful actions are important concepts in group theory because they allow us to understand the structure of a group by examining its action on a set, and they correspond to important situations where a group is acting in a way that respects the symmetry and structure of a mathematical object.
+      </p>
+
+      <remark>
+        <p>
+          In many cases, transitivity and faithfulness are related concepts. As we will see later, if a group action is transitive on a set <m>X</m>, then the action is faithful if and only if the stabilizer of any element of <m>X</m> is trivial. In these situations we can identify the group with a subgroup of the symmetric group on <m>X</m>, and use this identification to study the group.
+        </p>
+      </remark>
+
+      <example xml:id="ex-transitive-faithful-actions">
+        <title>Transitive and Faithful Actions</title>
+        <p>
+          <ol>
+            <li>
+              <p>
+                The action of the group of rotational symmetries of a regular polygon on the vertices of the polygon is transitive. Any vertex can be sent to any other vertex by a rotation of the polygon.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                The action of the group of rigid motions of three-dimensional space on the points of a sphere is transitive. Any point on the sphere can be sent to any other point by a rotation or translation of space.              
+              </p>
+            </li>
+
+            <li>
+              <p>
+                The action of the group of invertible <m>2\times2</m> matrices on the complex plane by multiplication is faithful. Every non-identity matrix corresponds to a different transformation of the complex plane.              
+              </p>
+            </li>
+
+            <li>
+              <p>
+                The action of the group of permutations of a set <m>X</m> on the set <m>X</m> itself by permutation is faithful. Every permutation corresponds to a unique rearrangement of the elements of <m>X</m>.              
+              </p>
+            </li>
+
+            <li>
+              <p>
+                The action of the group of permutations of a set <m>X</m> on the set of all subsets of <m>X</m> by permutation is both transitive and faithful. Any subset can be sent to any other subset by permuting the elements of <m>X</m>, and every non-identity permutation corresponds to a different permutation of the subsets of <m>X</m>.             
+               </p>
+            </li>
+          </ol>
+        </p>
+
+      </example>
 
       <exercises>
 
@@ -166,8 +228,37 @@
     <section xml:id="sec-self-actions">
       <title>Self Actions</title>
 
+      <introduction>
+        <blockquote>
+          <p>
+            <q>You may never know what results come of your action, but if you do nothing there will be no results.</q>
+          </p>
+          <attribution>Ghandi</attribution>
+        </blockquote>
+      </introduction>
+
       <subsection xml:id="subsec-conjugation-action">
         <title>Self Conjugation</title>
+
+        <definition xml:id="def-conjugacy-class">
+          <statement>
+            <p>
+              The <em>conjugacy class</em> of an element <m>g \in G</m> is <m>C_g = \{hgh^{-1} \mid h \in G\}</m>, i.e. the orbit of <m>g</m> under conjugation.              
+            </p>
+          </statement>
+        </definition>
+  
+        <definition xml:id="def-conjugate">
+          <statement>
+            <p>
+              Let <m>G</m> be a group. Two elements <m>g,g' \in G</m> are <em>conjugate</em> if there is <m>h \in G</m> with <m>g' = hgh^{-1}</m> (equivalently <m>g</m> and <m>g'</m> are in the same orbit of the conjugation action).
+            </p>
+  
+            <p>
+              Two subsets <m>S,S' \subseteq G</m> are conjugate if there is <m>h \in G</m> with <m>S' = hSh^{-1}</m>.
+            </p>
+          </statement>
+        </definition>
         
 
         <example>
@@ -243,25 +334,6 @@
           </statement>
         </corollary>
   
-        <definition xml:id="def-conjugacy-class">
-          <statement>
-            <p>
-              The <em>conjugacy class</em> of an element <m>g \in G</m> is <m>C_g = \{hgh^{-1} \mid h \in G\}</m>, i.e. the orbit of <m>g</m> under conjugation.              
-            </p>
-          </statement>
-        </definition>
-  
-        <definition xml:id="def-conjugate">
-          <statement>
-            <p>
-              Let <m>G</m> be a group. Two elements <m>g,g' \in G</m> are <em>conjugate</em> if there is <m>h \in G</m> with <m>g' = hgh^{-1}</m> (equivalently <m>g</m> and <m>g'</m> are in the same orbit of the conjugation action).
-            </p>
-  
-            <p>
-              Two subsets <m>S,S' \subseteq G</m> are conjugate if there is <m>h \in G</m> with <m>S' = hSh^{-1}</m>.
-            </p>
-          </statement>
-        </definition>
       </subsection>
 
       <subsection xml:id="subsec-left-multiplication">
@@ -273,12 +345,18 @@
           <p>
             Let <m>G</m> be any group and define an action <m>\cdot</m> of <m>G</m> on <m>G</m> (regarded as just a set) by the rule 
             <me>
-              g \cdot x = g  x, \text{ for $g \in G$ and $x \in G$.}
+              g \cdot x = g  x, \;\text{for}\; g \in G \;\text{and}\; x \in G.
             </me>
           </p>
         </example>
 
-        <proposition xml:id="prop-">
+        <remark>
+          <p>
+            This action is often referred to as left multiplcation.
+          </p>
+        </remark>
+
+        <proposition xml:id="prop-left-mult-well-defined">
           <statement>
             <p>
               <ol>
@@ -294,6 +372,40 @@
                   </p>
                 </li>
               </ol>
+            </p>
+          </statement>
+        </proposition>
+
+        <lemma xml:id="lem-largest-normal-subgroup">
+          <statement>
+            <p>
+              Let <m>H</m> be a subgroup of a group <m>G</m>, and let <m>G</m> act on the set <m>G/H</m> of left cosets by left multiplication <m>g \cdot (g'H) = (gg')H</m>. Let <m>\rho: G\to \Perm(G/H)</m> denote the permutation representation associated to this action. Then
+						</p>
+
+						<p>
+              <ol>
+							<li>
+							the action described above is transitive
+							</li>
+
+							<li>
+							<m>\ker(\rho) = \bigcap_{g \in G} gHg^{-1}</m>
+							</li>
+
+							<li>
+							the subgroup described in (a) is the largest (with respect to containment) normal subgroup of <m>G</m> contained in <m>H</m>.
+							</li>
+
+						</ol>
+          </p>
+
+          </statement>
+        </lemma>
+
+        <proposition xml:id="prop-normal-subgroups-and-index">
+          <statement>
+            <p>
+              Let <m>G</m> be a group, and let <m>H</m> be a subgroup of <m>G</m> of finite index <m>[G:H] = n</m>. Show that there exists a normal subgroup <m>N\norm G</m> such that <m>N \leq H</m> and <m>[G:N] \leq n!</m>
             </p>
           </statement>
         </proposition>
@@ -319,6 +431,12 @@
             </p>
           </proof>
          </theorem>
+
+         <remark>
+          <p>
+            Proving this theorem was Problem () on the Qual and Problem () on the Qual
+          </p>
+         </remark>
 
 
       </subsection>
@@ -487,6 +605,20 @@
     <section xml:id="sec-lois">
       <title>LOIS and Orbit-Stabilizer</title>
 
+      <blockquote>
+        <p>
+          <q>Once you are in the orbit of your destiny, weightlessness is the only result.</q>
+        </p>
+        <attribution>Arthur Wellesley</attribution>
+      </blockquote>
+
+      <blockquote>
+        <p>
+          <q>Being born in a stable does not make one a horse.</q>
+        </p>
+        <attribution>Arthur Wellesley</attribution>
+      </blockquote>
+
       <definition xml:id="def-orbit">
         <statement>
           <p>
@@ -528,6 +660,34 @@
         </statement>
       </lemma>
 
+      <proposition xml:id="prop-orbit-left-multiplication">
+        <statement>
+          <p>
+            If <m>H</m> is a subgroup of <m>G</m>, then the left cosets of <m>H</m> in <m>G</m> correspond precisely to the orbits of <m>H</m> under the left regular action of <m>G</m> on itself.
+          </p>
+        </statement>
+      </proposition>
+
+      <proposition xml:id="prop-orbit-conjugation">
+        <statement>
+          <p>
+            <ol>
+              <li>
+                <p>
+                  Two elements <m>g,g' \in G</m> are conjugate if and only if <m>g</m> and <m>g'</m> are in the same orbit of the conjugation action.          
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>C_G(g)</m> is exactly the orbit of <m>g</m> under conjugation.                
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </proposition>
+
       <definition xml:id="def-stab">
         <statement>
           <p>
@@ -539,11 +699,13 @@
         </statement>
       </definition>
 
-      <problem>
-        <p>
-          The stabilizer <m>\operatorname{Stab}_G(s)</m> is a subgroup of <m>G</m>.
-        </p>
-      </problem>
+      <proposition xml:id="prop-stabilizer-is-subgroup">
+        <statement>
+          <p>
+            The stabilizer <m>\operatorname{Stab}_G(s)</m> is a subgroup of <m>G</m>.
+          </p>
+        </statement>
+      </proposition>
 
       <theorem xml:id="thm-LOIS">
         <title>The Length of the Orbit is the Index of the Stabilizer (LOIS)</title>
@@ -585,55 +747,44 @@
         </statement>
       </corollary>
 
-      <definition xml:id="def-faithful-action">
+      <warning>
+        <p>
+          Take note that LOIS and Orbit-Stabilizer only apply when <m>G</m> is a <em>finite</em> group.
+        </p>
+      </warning>
+
+      <theorem xml:id="thm-conjugation-and-lois">
         <statement>
           <p>
-            An action is <em>transitive</em> if for all <m>p,q \in S</m> there is a <m>g \in G</m> such that <m>q=g\cdot p</m>. Equivalently, an action is transitive if <m>\operatorname{Orbit}_G(p)=S</m> for any <m>p\in S</m>.
+            Let <m>G</m> be a group.
+				  </p>
+
+				  <p>
+            <ol>
+					    <li>
+								<p>
+					        Then <m>G</m> acts on <m>G</m> by conjugation (<m>g \cdot g' = gg'g^{-1}</m>). For all <m>g \in G</m>, the orbit of <m>g</m> is the conjugacy class of <m>g</m>, <m>\operatorname{Stab}_G(g)=C_G(G)</m> and <m>|[g]_c| = |G : C_G(g)|</m>.
+				        </p>
+					    </li>
+
+					    <li>
+						    <p>
+					        Then <m>G</m> acts on the power set <m>P(G)=\{S\mid S\subseteq G\}</m> by conjugation (<m>g \cdot S = gSg^{-1}</m>). For all <m>S \in P(G)</m>, <m>\operatorname{Stab}_G(S)=N_G(S)</m> and <m>|\operatorname{Orbit}_G(S)| = |G : N_G(S)|</m>.
+				        </p>
+              </li>
+            </ol>
           </p>
         </statement>
-      </definition>
+      </theorem>
 
-      <problem>
-        <p>
-					Let <m>G</m> be a group acting transitively on a set <m>S</m>. For <m>a\in S</m>, let <m>G_a = \{g\in G | ga = a\}</m> be the stabilizer of <m>a</m> under the action from <m>G</m>.
-				</p>
-
-				<p>
-          <ol>
-            <li>
-              Let <m>a, b\in S</m>. Prove there exists <m>g\in G</m> such that <m>G_b = gG_ag\inv</m>.
-            </li>
-
-            <li>
-              Suppose <m>S</m> has more than one element and that <m>G</m> is finite. Prove that there exists <m>g\in G</m> which has no fixed point, that is, for all <m>a\in S, ga\neq a</m>
-            </li>
-          </ol>
-        </p>
-
-        <proof>
+      <corollary xml:id="cor-conjugacy-divides-order">
+        <statement>
           <p>
-            Let <m>G</m> be a group acting transitively on a set <m>S</m>.
+            For a finite group <m>G</m>, the size of any conjugacy class divides <m>|G|</m>.
           </p>
-
-          <p>
-            The action is transitive, so there exists some <m>g\in G</m> such that <m>ga=b</m>.
-          </p>
-
-          <p>
-            Let <m>x\in\Stab(a)</m>, consider <m>gxg\inv</m>b. Since <m>g\inv b=a</m>, we have <m>gxa</m>, <m>x</m> stabilizes <m>a</m> so now <m>ga</m>, but <m>ga=b</m>. So <m>g\Stab(a)g\inv\subseteq\Stab(b)</m>.
-          </p>
-
-          <p>
-            Let <m>x\in\Stab(b)</m>. We know <m>xb=b</m> and also <m>ga=b</m>, and so <m>xga=ga</m>. Applying <m>g\inv</m> to both to see <m>g\inv xga=a</m>. This puts <m>g\inv xg\in\Stab(a)</m>. Thus <m>x\in g\Stab(a)g\inv</m>, completing the proof.
-          </p>
-
-          <p>
-            The action is transitive, so there is only one orbit, and so <m>\Orb(a)=\Orb(b)=G</m>. Since <m>G</m> is finite, the Orbit-Stabilizer Theorem tells us <m>|\Orb(a)|=|G|/|\Stab(a)|</m>. Since every orbit has the same order as <m>G</m>, we see <m>\Stab(a)=\{e\}</m> for all <m>a\in S</m>. Thus there cannot exist any fixed points.
-          </p>
-
-
-        </proof>
-      </problem>
+        </statement>
+      </corollary>
+    
 
       <exercises>
 
@@ -675,7 +826,6 @@
           </introduction>
       
           <exercise>
-
             <statement>
               <p>
                 Let <m>G = A_7</m> and <m>S</m> be the set of elements of <m>G</m> of order <m>7</m>. Prove that <m>S</m> is not a conjugacy class of <m>G</m>.
@@ -713,6 +863,48 @@
             </solution>
 
           </exercise>
+
+          <exercise>
+            <statement>
+              <p>
+                Let <m>G</m> be a group acting transitively on a set <m>S</m>. For <m>a\in S</m>, let <m>G_a = \{g\in G | ga = a\}</m> be the stabilizer of <m>a</m> under the action from <m>G</m>.
+              </p>
+      
+              <p>
+                <ol>
+                  <li>
+                    Let <m>a, b\in S</m>. Prove there exists <m>g\in G</m> such that <m>G_b = gG_ag\inv</m>.
+                  </li>
+      
+                  <li>
+                    Suppose <m>S</m> has more than one element and that <m>G</m> is finite. Prove that there exists <m>g\in G</m> which has no fixed point, that is, for all <m>a\in S, ga\neq a</m>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+
+            <solution>
+              <p>
+                Let <m>G</m> be a group acting transitively on a set <m>S</m>.
+              </p>
+    
+              <p>
+                The action is transitive, so there exists some <m>g\in G</m> such that <m>ga=b</m>.
+              </p>
+    
+              <p>
+                Let <m>x\in\Stab(a)</m>, consider <m>gxg\inv</m>b. Since <m>g\inv b=a</m>, we have <m>gxa</m>, <m>x</m> stabilizes <m>a</m> so now <m>ga</m>, but <m>ga=b</m>. So <m>g\Stab(a)g\inv\subseteq\Stab(b)</m>.
+              </p>
+    
+              <p>
+                Let <m>x\in\Stab(b)</m>. We know <m>xb=b</m> and also <m>ga=b</m>, and so <m>xga=ga</m>. Applying <m>g\inv</m> to both to see <m>g\inv xga=a</m>. This puts <m>g\inv xg\in\Stab(a)</m>. Thus <m>x\in g\Stab(a)g\inv</m>, completing the proof.
+              </p>
+    
+              <p>
+                The action is transitive, so there is only one orbit, and so <m>\Orb(a)=\Orb(b)=G</m>. Since <m>G</m> is finite, the Orbit-Stabilizer Theorem tells us <m>|\Orb(a)|=|G|/|\Stab(a)|</m>. Since every orbit has the same order as <m>G</m>, we see <m>\Stab(a)=\{e\}</m> for all <m>a\in S</m>. Thus there cannot exist any fixed points.
+              </p>
+            </solution>
+          </exercise>
       
         </exercisegroup>
       </exercises>
@@ -721,6 +913,20 @@
 
     <section xml:id="sec-class-eq">
       <title>The Class Equation</title>
+
+      <blockquote>
+        <p>
+          <q>Let the others have the charisma. I've got the class.</q>
+        </p>
+        <attribution>George H. W. Bush</attribution>
+      </blockquote>
+
+      <blockquote>
+        <p>
+          <q>Class is the sure-footedness that comes with having proved you can meet life.</q>
+        </p>
+        <attribution>Ann Landers</attribution>
+      </blockquote>
       
       <definition xml:id="def-centralizer">
         <statement>
@@ -799,52 +1005,6 @@
           </p>
         </proof>
       </theorem>
-
-      <problem>
-        <p>
-					Let <m>G</m> be a finite <m>p</m>-group and <m>Z</m> its center. If <m>N\neq \{e\}</m> is a normal subgroup of <m>G</m>, prove that <m>N\cap Z\neq\{e\}</m>.
-				</p>
-        
-        <proof>
-    			<p>
-						Let <m>G</m> be a finite <m>p</m>-group for some prime <m>p</m> and <m>N\neq {1}</m> a normal subgroup of <m>G</m>.
-					</p>
-
-					<p>
-						First, we show that the center of <m>G</m> is nontrivial. Suppose by way of contradiction that <m>Z(G)=\{e\}</m>. We examine the conjugacy classes of <m>G</m>. From the Class Equation, we know<me>|G| = |Z(G)| + \sum_i^r |G : C_G(g_i)|.</me>Note that <m>|G|=p^n</m> for some <m>n\in\N</m>, meaning that the only divisors of <m>|G|</m> are powers of <m>p</m>. In finite groups, each conjugacy class must divide the order of the group. By Lagrange’s Theorem, <m>|G : C_G(g_i)|=\frac{|G|}{|C_G(g_i)|}=\frac{p^n}{p^m}=p^k</m>, where <m>m,k\in\N</m>. Since |Z(G)|=1, we see that <m>\sum_i^r |G : C_G(g_i)|\bigg|p^n-1</m>, which is impossible given that <m>p^n-1 \not|p^n</m>. Thus <m>Z(G)\neq\{e\}</m>.
-					</p>
-
-					<p>
-						As <m>N\nsg G</m> it is a union of conjugacy classes of the elements it contains, one of which is <m>e</m>. Assume by way of contradiction that <m>N\cap Z(G)={e}</m>, meaning that <m>e</m> is the only element in <m>N</m> whose conjugacy class is a singleton. This yields <me>|N| = 1+ \sum_i^r |G : C_G(n_i)|.</me> However, by Lagrange’s Theorem <m>N</m> must also be a <m>p-</m>group, and thus by an analogous element counting argument as above we see that there exists some <m>x\in N</m> such that <m>C_G(x)=\{x\}</m>, or that <m>gxg\inv=x</m> for all <m>g\in G</m>. Thankfully, this means that <m>x\in Z(G)</m>, and thus we have <m>Z(G)\cap N\neq 1</m>.
-					</p>
-        </proof>
-      </problem>
-
-      <problem>
-        <p>
-					Let <m>G</m> be a group of order <m>p^n</m> where <m>p</m> is a prime and <m>n \geq 1</m>. 
-          (a) Prove the center of G is not trivial. 
-          (b) Prove there exists a subgroup of order <m>p^j</m> for each <m>j</m> satisfying <m>0 \leq j \leq n.</m>
-				</p>
-
-        <proof>
-          <p>
-            Let <m>G</m> be a group of order <m>p^n</m> where <m>p</m> is a prime and <m>n \geq 1</m>.
-          </p>
-
-          <p>
-            The Class Equation tells us <me>|G|=|Z(G)|+\sum\limits_{g\in G}[G:C_G(g)],</me>where <m>C_G(g)</m> are the centralizers with more than one element. Notice that this means <m>|C_G(g)|\big||G|</m>, and thus each centralizer is a power of <m>p</m>. Thus we have <me>p^n=|Z(G)|+pk</me>for some <m>k\in\N</m>. Thus the center of <m>G</m> cannot be trivial, else we would not be able to sum to a power of <m>p</m>.
-          </p>
-
-          <p>
-            The trivial subgroup has order <m>1=p^0</m>. Suppose inductively that there exists a subgroup of order <m>p^{j}</m> that has a subgroup for every power of <m>p</m> in between.
-          </p>
-
-          <p>
-            Consider, if you will, a group of order <m>p^{j+1}</m>, <m>H</m>. As this is a <m>p</m>-group, by Part (a) the center is nontrivial, making it a <m>p</m> group as well, and thus it has a subgroup of order <m>p</m>, <m>K</m>, which is normal in <m>H</m> as it lies within the center, so we mod out by <m>K</m> to see that <m>H</m> has a subgroup of order <m>p^j</m>, which has subgroups of all the other powers by the induction hypothesis.
-          </p>
-        </proof>
-      </problem>
 
       <exercises>
 

@@ -12,6 +12,14 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>
-<div class="para">Let <span class="process-math">\(G\)</span> be a group.</div> <div class="para">Let <span class="process-math">\(S\)</span> be the poset of all proper subgroups of <span class="process-math">\(G\)</span> ordered in terms of inclusion. Consider a string of these. Consider the union of them all. Luckily, unions of subgroups are subgroups if and only if there is containment, which there is, since everything is in the union. Thus its a subgroup. Since union in <span class="process-math">\(S\)</span> and yields an upper bound, by Zorn’s Lemma we a maximal element. Thus <span class="process-math">\(G\)</span> possesses maximal subgroups.</div></article><span class="incontext"><a href="sec-classifications.html#proof-50" class="internal">in-context</a></span>
+<div class="para logical">
+<div class="para">Ignoring <span class="process-math">\(\cdot\)</span> for a minute, we know that there is a unique homomorphism <span class="process-math">\(\overline{f}\)</span> of abelian groups from <span class="process-math">\((R/I, +)\)</span> to <span class="process-math">\((S, +)\)</span> such that <span class="process-math">\(\overline{f} (r+I) = f(r)\text{.}\)</span> It remains only to check that <span class="process-math">\(\overline{f}\)</span> preserves multiplication: Given elements <span class="process-math">\(r + I, s + I \in R/I\text{,}\)</span> their product is <span class="process-math">\(rs + I\text{,}\)</span> and we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\overline{f}(rs + I) = f(rs) = f(r)f(s) = f(r + I) f(s +I),
+\end{equation*}
+</div>
+<div class="para">since <span class="process-math">\(f\)</span> preserves multiplication.</div>
+</div></article><span class="incontext"><a href="sec-ring-quotients.html#proof-50" class="internal">in-context</a></span>
 </body>
 </html>

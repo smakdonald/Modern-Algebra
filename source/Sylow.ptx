@@ -4,7 +4,14 @@
     <title>Sylow Theory</title>       
 
     <section xml:id="sec-pgroups">
-      <title><m>p</m>-groups</title>
+      <title><m>p</m>-groups and Sylow Subgroups</title>
+
+      <blockquote>
+        <p>
+          <q>The greatest weakness of most humans is their hesitancy to tell others how much they love them while they're still alive.</q>
+        </p>
+        <attribution>Optimus Prime</attribution>
+      </blockquote>
       
       <definition xml:id="def-pgroup">
         <statement>
@@ -38,13 +45,25 @@
             We set <m>\operatorname{Syl}_p(G)</m> to be the collection of all Sylow <m>p</m>-subgroups of <m>G</m> and <m>n_p=|\operatorname{Syl}_p(G)|</m> to be the number of Sylow <m>p</m>-subgroups.
           </p>
         </statement>
+        
       </definition>
+
+      <historical>
+        <p>
+          Sylow subgroups are named after the Norwegian mathematician Ludwig Sylow, who was the first to systematically study their properties in the late 19th century.
+        </p>
+
+        <p>
+          Sylow was interested in understanding the structure of finite groups and in particular, how the existence of certain subgroups of prime power order could provide information about the structure of the group as a whole. He introduced the concept of a Sylow <m>p</m>-subgroupa and showed that such subgroups play a crucial role in the structure of finite groups.
+        </p>
+      </historical>
 
       <remark>
         <p>
           We allow the case when <m>p\nmid |G|</m>, in which case <m>e = 0</m> and <m>G</m> has a unique Sylow <m>p</m>-subgroup, namely <m>\{e\}</m> which has order <m>p^0</m>.
         </p>
       </remark>
+        
 
       <problem>
         <p>
@@ -75,57 +94,23 @@
         </statement>
       </theorem>
 
-      <problem>
+      <historical>
         <p>
-					Let <m>G</m> be a group of order <m>p^n</m> for some prime <m>p</m> acting on a finite set <m>X</m>.
-				</p>
-
-				<p>
-          <ol>
-            <li>
-              Suppose <m>p</m> does not divide <m>|X|</m>. Prove that there exists some element of <m>X</m> fixed by all elements of <m>G</m>.
-            </li>
-
-            <li>
-              Suppose <m>G</m> acts faithfully on <m>X</m>. Prove that <m>|X| \geq np</m>.
-            </li>
-				  </ol>
+          Augustin-Louis Cauchy was a French mathematician who made important contributions to various branches of mathematics, including analysis, number theory, and geometry. He lived from 1789 to 1857 and is considered one of the greatest mathematicians of the 19th century. Cauchy proved his eponymous theorem in the early 19th century as part of his investigations into the theory of permutation groups. He was interested in understanding the structure of groups and their subgroups, and he realized that certain primes played a special role in this context.
         </p>
+      </historical>
 
-        <proof>
-          <p>
-            <p>
-              Let <m>G</m> be a group of order <m>p^n</m>, for some prime <m>p</m>, acting on a finite set <m>X</m>.
-            </p>
+      <p>
+        Cauchy's Theorem allows us to conclude the existence of certain elements in a group based solely on its order, which can be a powerful tool in studying the structure of groups. 
+      </p>
 
-            <ol>
-              <li>
-                <p>
-                  Suppose there is no element in <m>X</m> that is fixed by all elements of <m>G</m>.
-                </p>
-    
-                <p>
-                  By Orbit-Stabilizer we know that <m>|\Orb_G(x)|\big||G|</m> for all <m>x\in X</m>. Thus every orbit under this action has an order dividing <m>p^n</m>, so either <m>1</m> or some positive power of <m>p.</m> However, as no element of <m>X</m> is fixed by every element of <m>G</m>, there exists no stabilizer which is all of <m>G</m>, and thus there exist no orbits that have order <m>1</m>.
-                </p>
-    
-                <p>
-                  Recall that the orbits of this action partition <m>X</m>, and thus <m>|X|=\sum_{x\in X}|\Orb_G(x)|</m>. As every orbit is divisible by <m>p</m>, so too must be <m>X</m>.
-                </p>  
-              </li>
+      <p>
+        For example, it can be used to prove the existence of subgroups of a given order in a group, and it is a key ingredient in the proof of Sylow's theorems, which provide information about the structure of finite groups. 
+      </p>
 
-              <li>
-                <p>
-                  Suppose <m>G</m> acts faithfully on <m>X</m>. Thus the permutation representation homomorphism <m>\rho:G\to\Perm(X)</m> is injective. Let <m>k</m> denote the order of <m>X</m>. Then <m>\Perm(X)\cong S_k</m>, which as order <m>k!</m>. As <m>G</m> is injective, we see that <m>|G|=|\im\rho|\leq S_k</m>, and thus <m>p^n|k!</m>.
-                </p>
-  
-                <p>
-                  Thus <m>p</m> must show up in the factorization of <m>k!</m> at least <m>n</m> times, meaning that <m>|X| \geq np</m>.
-                </p>
-              </li>
-            </ol>
-          </p>
-        </proof>
-      </problem>
+      <p>
+        Cauchy's theorem has since been generalized and extended in many ways, and it is now a fundamental result in the theory of finite groups, where it plays a central role in the classification of groups of small order.
+      </p>
 
       <exercises>
 
@@ -167,9 +152,117 @@
           </introduction>
       
           <exercise>
+
+            <statement>
             <p>
-              Coming soon to an OER near you!
+              Let <m>G</m> be a group of order <m>p^n</m> where <m>p</m> is a prime and <m>n \geq 1</m>. 
+              <ol>
+                <li>
+                  <p>
+                    Prove the center of <m>G</m> is not trivial. 
+                  </p>
+                </li>
+    
+                <li>
+                  <p>
+                    Prove there exists a subgroup of order <m>p^j</m> for each <m>j</m> satisfying <m>0 \leq j \leq n.</m>
+                  </p>
+                </li>
+              </ol>
             </p>
+          </statement>
+
+            <solution>
+              <p>
+                Let <m>G</m> be a group of order <m>p^n</m> where <m>p</m> is a prime and <m>n \geq 1</m>.
+              </p>
+    
+              <p>
+                The Class Equation tells us <me>|G|=|Z(G)|+\sum\limits_{g\in G}[G:C_G(g)],</me>where <m>C_G(g)</m> are the centralizers with more than one element. Notice that this means <m>|C_G(g)|\big||G|</m>, and thus each centralizer is a power of <m>p</m>. Thus we have <me>p^n=|Z(G)|+pk</me>for some <m>k\in\N</m>. Thus the center of <m>G</m> cannot be trivial, else we would not be able to sum to a power of <m>p</m>.
+              </p>
+    
+              <p>
+                The trivial subgroup has order <m>1=p^0</m>. Suppose inductively that there exists a subgroup of order <m>p^{j}</m> that has a subgroup for every power of <m>p</m> in between.
+              </p>
+    
+              <p>
+                Consider, if you will, a group of order <m>p^{j+1}</m>, <m>H</m>. As this is a <m>p</m>-group, by Part (a) the center is nontrivial, making it a <m>p</m> group as well, and thus it has a subgroup of order <m>p</m>, <m>K</m>, which is normal in <m>H</m> as it lies within the center, so we mod out by <m>K</m> to see that <m>H</m> has a subgroup of order <m>p^j</m>, which has subgroups of all the other powers by the induction hypothesis.
+              </p>
+            </solution>
+          </exercise>
+
+          <exercise>
+            <statement>
+              <p>
+                Let <m>G</m> be a finite <m>p</m>-group and <m>Z</m> its center. If <m>N\neq \{e\}</m> is a normal subgroup of <m>G</m>, prove that <m>N\cap Z\neq\{e\}</m>.
+              </p>
+            </statement>
+            
+            <solution>
+              <p>
+                Let <m>G</m> be a finite <m>p</m>-group for some prime <m>p</m> and <m>N\neq {1}</m> a normal subgroup of <m>G</m>.
+              </p>
+    
+              <p>
+                First, we show that the center of <m>G</m> is nontrivial. Suppose by way of contradiction that <m>Z(G)=\{e\}</m>. We examine the conjugacy classes of <m>G</m>. From the Class Equation, we know<me>|G| = |Z(G)| + \sum_i^r |G : C_G(g_i)|.</me>Note that <m>|G|=p^n</m> for some <m>n\in\N</m>, meaning that the only divisors of <m>|G|</m> are powers of <m>p</m>. In finite groups, each conjugacy class must divide the order of the group. By Lagrange’s Theorem, <m>|G : C_G(g_i)|=\frac{|G|}{|C_G(g_i)|}=\frac{p^n}{p^m}=p^k</m>, where <m>m,k\in\N</m>. Since |Z(G)|=1, we see that <m>\sum_i^r |G : C_G(g_i)|\bigg|p^n-1</m>, which is impossible given that <m>p^n-1 \not|p^n</m>. Thus <m>Z(G)\neq\{e\}</m>.
+              </p>
+    
+              <p>
+                As <m>N\nsg G</m> it is a union of conjugacy classes of the elements it contains, one of which is <m>e</m>. Assume by way of contradiction that <m>N\cap Z(G)={e}</m>, meaning that <m>e</m> is the only element in <m>N</m> whose conjugacy class is a singleton. This yields <me>|N| = 1+ \sum_i^r |G : C_G(n_i)|.</me> However, by Lagrange’s Theorem <m>N</m> must also be a <m>p-</m>group, and thus by an analogous element counting argument as above we see that there exists some <m>x\in N</m> such that <m>C_G(x)=\{x\}</m>, or that <m>gxg\inv=x</m> for all <m>g\in G</m>. Thankfully, this means that <m>x\in Z(G)</m>, and thus we have <m>Z(G)\cap N\neq 1</m>.
+              </p>
+            </solution>
+          </exercise>
+
+          <exercise>
+            <statement>
+              <p>
+                Let <m>G</m> be a group of order <m>p^n</m> for some prime <m>p</m> acting on a finite set <m>X</m>.
+              </p>
+      
+              <p>
+                <ol>
+                  <li>
+                    Suppose <m>p</m> does not divide <m>|X|</m>. Prove that there exists some element of <m>X</m> fixed by all elements of <m>G</m>.
+                  </li>
+      
+                  <li>
+                    Suppose <m>G</m> acts faithfully on <m>X</m>. Prove that <m>|X| \geq np</m>.
+                  </li>
+                </ol>
+              </p>
+            </statement>
+
+            <solution>
+              <p>
+                Let <m>G</m> be a group of order <m>p^n</m>, for some prime <m>p</m>, acting on a finite set <m>X</m>.
+    
+                <ol>
+                  <li>
+                    <p>
+                      Suppose there is no element in <m>X</m> that is fixed by all elements of <m>G</m>.
+                    </p>
+        
+                    <p>
+                      By Orbit-Stabilizer we know that <m>|\Orb_G(x)|\big||G|</m> for all <m>x\in X</m>. Thus every orbit under this action has an order dividing <m>p^n</m>, so either <m>1</m> or some positive power of <m>p.</m> However, as no element of <m>X</m> is fixed by every element of <m>G</m>, there exists no stabilizer which is all of <m>G</m>, and thus there exist no orbits that have order <m>1</m>.
+                    </p>
+        
+                    <p>
+                      Recall that the orbits of this action partition <m>X</m>, and thus <m>|X|=\sum_{x\in X}|\Orb_G(x)|</m>. As every orbit is divisible by <m>p</m>, so too must be <m>X</m>.
+                    </p>  
+                  </li>
+    
+                  <li>
+                    <p>
+                      Suppose <m>G</m> acts faithfully on <m>X</m>. Thus the permutation representation homomorphism <m>\rho:G\to\Perm(X)</m> is injective. Let <m>k</m> denote the order of <m>X</m>. Then <m>\Perm(X)\cong S_k</m>, which as order <m>k!</m>. As <m>G</m> is injective, we see that <m>|G|=|\im\rho|\leq S_k</m>, and thus <m>p^n|k!</m>.
+                    </p>
+      
+                    <p>
+                      Thus <m>p</m> must show up in the factorization of <m>k!</m> at least <m>n</m> times, meaning that <m>|X| \geq np</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </solution>
           </exercise>
       
         </exercisegroup>
@@ -178,6 +271,28 @@
 
     <section xml:id="sec-sylowthm">
       <title>Sylow's Theorem</title>
+<!--
+      <blockquote>
+        <p>
+          <q>Who wants to be normal when you can be unique?.</q>
+        </p>
+        <attribution>Helena Bonham Carter</attribution>
+      </blockquote>
+
+      <blockquote>
+        <p>
+          <q>Being normal is the same as being unique, of course, if everybody would be themselves.</q>
+        </p>
+        <attribution>Blin Varfi</attribution>
+      </blockquote>
+-->
+
+      <blockquote>
+        <p>
+          <q>What makes me unique is that, I'm normal.</q>
+        </p>
+        <attribution>Scotty Mccreery</attribution>
+      </blockquote>
 
       <lemma xml:id="lem-Sylaction">
         <statement>
@@ -251,112 +366,10 @@
         </statement>
       </theorem>
 
-      <problem>
-        <p>
-          Let <m>G</m> be a finite group. 
-          <ol>
-            <li>
-              <p>
-                Suppose every subgroup of <m>G</m> is normal. Prove that given any positive divisor <m>d</m> of <m>|G|</m> there exists a subgroup of <m>G</m> of order <m>d</m>. 
-              </p>
-            </li>
+      <p>
+        Sylow's theorems provide a systematic way of analyzing the subgroups of a finite group. They allow us to determine the number of subgroups of a given order, which is useful in many applications, such as studying the structure of solvable and simple groups. The theorems also provide information about the normalizers of subgroups, which can be used to study normal subgroups and quotient groups.
+      </p>
 
-            <li>
-              <p>
-                Give an example, with justification, of a finite group <m>G</m> and a positive divisor <m>d</m> of <m>|G|</m> such that <m>G</m> has no subgroup of order <m>d</m>.
-              </p>
-            </li>
-          </ol>
-        </p>
-
-        <proof>
-            <p>
-							Let <m>G</m> be a finite group.
-						</p>
-
-						<p>
-							Suppose every subgroup of <m>G</m> is normal. Let <m>d</m> be a positive divisor of <m>|G|</m>. For every prime <m>p</m> dividing the order of <m>G</m> there is exactly one Sylow <m>p</m>-subgroup of <m>G</m>, given that Sylow <m>p</m>-subgroups are normal if and only if they are unique. Thus <m>G</m> can be written as a direct product of its Sylow <m>p</m>-subgroups. Given the prime factorization of <m>d</m>, the direct product of the Sylow <m>p</m>-subgroups such that <m>p|d</m> is 1. A subgroup of <m>G</m> as each Sylow <m>p</m>-subgroup is normal, and 2. A direct product of cyclic groups of relatively prime order, yielding an element of order <m>d</m>. The subgroup generated by this element is a subgroup of <m>G</m> of order <m>d</m>.
-						</p>
-
-						<p>
-							We take a peak at <m>G=A_4</m> with <m>d=6</m>. Suppose <m>A_4</m> had a subgroup of order <m>6</m>, <m>H</m>. First, note that <m>[G:H]=2</m>, the smallest prime dividing the order of <m>G</m>, making <m>H</m> normal in <m>G</m>.
-						</p>
-
-            <p>
-              As there are eight <m>3</m>-cycles in <m>G</m>, there exists some <m>3</m>-cycle, <m>\sigma</m>, such that <m>\s\not\in H</m>. Consider then <m>H, \s H,</m> and <m>\s^2 H</m> in <m>G/H</m>. Since <m>|G/H|=\frac{|G|}{|H|}=2</m>, it must be the case that either <m>\s^2H=\s H</m> or <m>\s^2H=H</m>.
-            </p>
-
-						<p>
-              <ul>
-								<li>
-								  If <m>\s^2 H=H</m> then <m>\s^2\in H</m>. As <m>|\s|=3</m> we have <m>\s^2=\s\inv</m>, but as <m>H</m> is a subgroup this would mean <m>(\s\inv)\inv=\s\in H</m>, which is not the case.
-								</li>
-
-								<li>
-								  If <m>\s^2 H=\s H</m> then <m>\s\inv\s^2\in H</m>, but <m>\s\inv\s^2=\s</m>, and so we have a contradiction. Thus <m>H</m> cannot exist, and <m>G</m> has no subgroup of order <m>6</m>.
-								</li>
-							</ul>
-            </p>
-        </proof>
-      </problem>
-
-      <problem>
-        <p>
-					Let <m>G</m> be a finite group, <m>p</m> a prime dividing the order of <m>G</m>, and <m>H</m> a normal subgroup of order <m>p^m</m> for some <m>m &gt; 0</m>. Prove the following statements.
-          <ol>
-            <li>
-              <p>
-                <m>H</m> is contained in every Sylow <m>p</m>-subgroup of <m>G</m>. 
-              </p>
-            </li>
-
-            <li>
-              <p>
-                <m>H</m> contains a nontrivial abelian subgroup that is normal in <m>G</m>.
-              </p>
-            </li>
-          </ol> 
-				</p>
-
-        <proof>
-          <p>
-						Let <m>G</m> be a finite group, <m>p</m> a prime dividing the order of <m>G</m>, and <m>H</m> a normal<!-- linebreak -->subgroup of order <m>pm</m> for some <m>m &gt; 0</m>.
-					</p>
-
-          <p>
-            As <m>H</m> is normal we have <m>gHg\inv=H</m> for all <m>g\in G</m>. As it is a <m>p</m> group it is contained in some Sylow <m>p</m>-subgroup. All Sylow <m>p</m>-subgroups are conjugate to each other, but <m>H</m> is fixed by conjugation so its actually in all of them.
-          </p>
-
-          <p>
-            Consider <m>Z(H)</m>, which is abelian in <m>H</m>. The center of <m>p</m>-groups are nontrivial so that's good. Let <m>g\in G</m>, <m>h\in Z(H)</m>, and consider <m>ghg\inv</m>. As <m>H\nsg G</m> we know <m>ghg\inv\in H</m>. Let <m>h'\in H</m>. We see <m>ghg\inv h'=ghh''g\inv</m>, since <m>H</m> is still normal. <m>h\in Z(G)</m> so we have <m>gh''hg\inv</m>.
-          </p>
-
-          <p>
-            Notice that <m>h''g\inv=g\inv h'</m>, and thus <m>h'=gh''g\inv</m>. Thus <m>gh''=h'g</m>, and so we can substitute the last line in the previous paragraph to see <m>h'ghg'\inv</m>. Thus we have normality!
-          </p>
-        </proof>
-      </problem>
-
-      <problem>
-        <p>
-					Let <m>H</m> be a normal subgroup of a finite group <m>G</m>, <m>p</m> a prime dividing the order of <m>H</m>, and <m>P</m> a Sylow <m>p</m>-subgroup of <m>H</m>. Prove that <m>G = H N_G(P )</m> <em>Hint</em>: For <m>g \in G</m>, consider the subgroup <m>gPg\inv</m>.
-				</p>
-
-        <proof>
-          
-					<p>
-						First, note that <m>N_G(P)=\{g\in G|gPg\inv=P\}</m>.
-					</p>
-
-					<p>
-						Let <m>G</m> act on <m>\Syl_p(G)</m> by conjugation, which is a transitive action by part (2) of Sylow's Theorem. Therefore <m>H</m> acts transitively on this set as well. Under this action, <m>N_G(P)=\Stab_G(P)</m>.
-					</p>
-
-					<p>
-						Let <m>g\in G</m>, and let <m>x\in N_G(P)</m>. Consider <m>g\inv x</m>. As the action by <m>H</m> is transitive there exists some <m>h\in H</m> such that <m>hg\inv\cdot x=x</m>. This means that <m>hg\inv</m> stabilizes <m>x</m>. Then <m>(hg\inv)\inv=gh\inv</m> stabilizes <m>x</m> as well, so <m>gh\inv\cdot x=x</m>. But notice that <m>gh\inv h=g</m>, where <m>gh\inv\in N_G(P)</m> and <m>h\in H</m>. Thus <m>G = H N_G(P )</m>.
-					</p>
-        </proof>
-      </problem>
 
 
       <problem>
@@ -379,54 +392,6 @@
         </proof>
       </problem>
 
-      <problem>
-        <p>
-					Let <m>G</m> be a group of order <m>231(= 3 · 7 · 11)</m> 
-          <ol>
-            <li>
-              <p>
-                Prove that <m>G</m> has a unique <m>11</m>-Sylow subgroup
-              </p>
-            </li>
-
-            <li>
-              <p>
-                Prove that the <m>11</m>-Sylow subgroup is contained in the center of <m>G</m>.
-              </p>
-            </li>
-          </ol>
-				</p>
-
-        <proof>
-          <p>
-            Let <m>G</m> be a group of order <m>231(= 3^2 · 7 · 11)</m>
-          </p>
-
-          <p>
-            By Sylow's Theorem we know <m>n_{11}|21</m> and is congruent to <m>1\mod{11}</m>. The only possibility for such is <m>1</m>, meaning that <m>G</m> has exactly <m>1</m> Sylow <m>11</m>-subgroup.
-          </p>
-
-          <p>
-            By the First Isomorphism Theorem we know that <m>G/\ker(\rho)\cong\im(\rho)=\Aut(P)</m>. However, <m>\Aut(P)\cong\Aut(\Z_{11})\cong \Z^x</m>, which has order <m>10</m>. As this is a homomorphism, we see the order of <m>G/\ker(\rho)</m> must divide both <m>10</m> and <m>231</m>, two numbers that are relatively prime. Thus <m>\ker(\rho)=1</m>, meaning that conjugation is equivalent to the identity map, or that <m>gxg\inv=x</m> for all <m>g\in G</m>. Thus <m>P\in Z(G)</m>.
-          </p>
-        </proof>
-      </problem>
-
-      <problem>
-        <p>
-					Let <m>G</m> be a group of order <m>385 = 5 · 7 · 11</m>. Prove that <m>G</m> has a normal subgroup of order <m>11</m> and that the center of <m>G</m> contains a subgroup of order <m>7.</m>
-				</p>
-
-        <proof>
-          <p>
-            Let <m>G</m> be a group of order <m>385 = 5 · 7 · 11</m>. By Sylow's Theorem we know the <m>n_{11}|35</m> and <m>n_11\equiv 1\mod{11}</m>, and so <m>n_{11}=1</m>, making <m>P</m>, the unique Sylow <m>11</m>-subgroup of <m>G</m>, normal in <m>G</m>. Things are looking good thus far. We also know the following: - <m>n_7|55</m> and <m>n_7\equiv 1\mod{7}</m>, so <m>n_7=1</m> as well. Yeehaw.
-          </p>
-
-          <p>
-						Let <m>P</m> denote the unique Sylow <m>7</m>-subgroup, and let <m>G</m> act on <m>P</m> by conjugation. Thus <m>\rho:G\to S_7</m>. The First Isomorphism Theorem tells us that <m>G/K\cong\im(\rho)\leq\Aut(P)</m>, where <m>K</m> is the kernel of <m>\rho</m>. However, <m>\Aut(P)=\Z_{7}^\times=\Z_6</m>, meaning that the order of <m>K</m> must divide both <m>385</m> and <m>6</m>, which cannot happen. Thus <m>K</m> must be trivial, meaning that <m>gxg\inv=x</m> for every <m>g\in G</m> and <m>x\in P</m>, making <m>P</m> a subgroup of <m>Z(G)</m> of order <m>7</m>.
-					</p>
-        </proof>
-      </problem>
 
       <exercises>
 
@@ -468,9 +433,172 @@
           </introduction>
       
           <exercise>
-            <p>
-              Coming soon to an OER near you!
-            </p>
+            <statement>
+              <p>
+                Let <m>G</m> be a group of order <m>385 = 5 · 7 · 11</m>. Prove that <m>G</m> has a normal subgroup of order <m>11</m> and that the center of <m>G</m> contains a subgroup of order <m>7.</m>
+              </p>
+            </statement>
+
+            <solution>
+              <p>
+                Let <m>G</m> be a group of order <m>385 = 5 · 7 · 11</m>. By Sylow's Theorem we know the <m>n_{11}|35</m> and <m>n_11\equiv 1\mod{11}</m>, and so <m>n_{11}=1</m>, making <m>P</m>, the unique Sylow <m>11</m>-subgroup of <m>G</m>, normal in <m>G</m>. Things are looking good thus far. We also know the following: - <m>n_7|55</m> and <m>n_7\equiv 1\mod{7}</m>, so <m>n_7=1</m> as well. Yeehaw.
+              </p>
+    
+              <p>
+                Let <m>P</m> denote the unique Sylow <m>7</m>-subgroup, and let <m>G</m> act on <m>P</m> by conjugation. Thus <m>\rho:G\to S_7</m>. The First Isomorphism Theorem tells us that <m>G/K\cong\im(\rho)\leq\Aut(P)</m>, where <m>K</m> is the kernel of <m>\rho</m>. However, <m>\Aut(P)=\Z_{7}^\times=\Z_6</m>, meaning that the order of <m>K</m> must divide both <m>385</m> and <m>6</m>, which cannot happen. Thus <m>K</m> must be trivial, meaning that <m>gxg\inv=x</m> for every <m>g\in G</m> and <m>x\in P</m>, making <m>P</m> a subgroup of <m>Z(G)</m> of order <m>7</m>.
+              </p>
+            </solution>
+            
+          </exercise>
+
+          <exercise>
+            <statement>
+              <p>
+                Let <m>G</m> be a group of order <m>231(= 3 · 7 · 11)</m> 
+                <ol>
+                  <li>
+                    <p>
+                      Prove that <m>G</m> has a unique <m>11</m>-Sylow subgroup
+                    </p>
+                  </li>
+      
+                  <li>
+                    <p>
+                      Prove that the <m>11</m>-Sylow subgroup is contained in the center of <m>G</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+
+            <solution>
+              <p>
+                Let <m>G</m> be a group of order <m>231(= 3^2 · 7 · 11)</m>
+              </p>
+    
+              <p>
+                By Sylow's Theorem we know <m>n_{11}|21</m> and is congruent to <m>1\mod{11}</m>. The only possibility for such is <m>1</m>, meaning that <m>G</m> has exactly <m>1</m> Sylow <m>11</m>-subgroup.
+              </p>
+    
+              <p>
+                By the First Isomorphism Theorem we know that <m>G/\ker(\rho)\cong\im(\rho)=\Aut(P)</m>. However, <m>\Aut(P)\cong\Aut(\Z_{11})\cong \Z^x</m>, which has order <m>10</m>. As this is a homomorphism, we see the order of <m>G/\ker(\rho)</m> must divide both <m>10</m> and <m>231</m>, two numbers that are relatively prime. Thus <m>\ker(\rho)=1</m>, meaning that conjugation is equivalent to the identity map, or that <m>gxg\inv=x</m> for all <m>g\in G</m>. Thus <m>P\in Z(G)</m>.
+              </p>
+            </solution>
+            
+          </exercise>
+
+          <exercise>
+            <statement>
+              <p>
+                Let <m>H</m> be a normal subgroup of a finite group <m>G</m>, <m>p</m> a prime dividing the order of <m>H</m>, and <m>P</m> a Sylow <m>p</m>-subgroup of <m>H</m>. Prove that <m>G = H N_G(P )</m> <em>Hint</em>: For <m>g \in G</m>, consider the subgroup <m>gPg\inv</m>.
+              </p>
+            </statement>
+
+            <solution>
+              <p>
+                First, note that <m>N_G(P)=\{g\in G|gPg\inv=P\}</m>.
+              </p>
+    
+              <p>
+                Let <m>G</m> act on <m>\Syl_p(G)</m> by conjugation, which is a transitive action by part (2) of Sylow's Theorem. Therefore <m>H</m> acts transitively on this set as well. Under this action, <m>N_G(P)=\Stab_G(P)</m>.
+              </p>
+    
+              <p>
+                Let <m>g\in G</m>, and let <m>x\in N_G(P)</m>. Consider <m>g\inv x</m>. As the action by <m>H</m> is transitive there exists some <m>h\in H</m> such that <m>hg\inv\cdot x=x</m>. This means that <m>hg\inv</m> stabilizes <m>x</m>. Then <m>(hg\inv)\inv=gh\inv</m> stabilizes <m>x</m> as well, so <m>gh\inv\cdot x=x</m>. But notice that <m>gh\inv h=g</m>, where <m>gh\inv\in N_G(P)</m> and <m>h\in H</m>. Thus <m>G = H N_G(P )</m>.
+              </p>
+            </solution>
+            
+          </exercise>
+
+          <exercise>
+            <statement>
+              <p>
+                Let <m>G</m> be a finite group, <m>p</m> a prime dividing the order of <m>G</m>, and <m>H</m> a normal subgroup of order <m>p^m</m> for some <m>m &gt; 0</m>. Prove the following statements.
+                <ol>
+                  <li>
+                    <p>
+                      <m>H</m> is contained in every Sylow <m>p</m>-subgroup of <m>G</m>. 
+                    </p>
+                  </li>
+      
+                  <li>
+                    <p>
+                      <m>H</m> contains a nontrivial abelian subgroup that is normal in <m>G</m>.
+                    </p>
+                  </li>
+                </ol> 
+              </p>
+            </statement>
+
+            <solution>
+              <p>
+                Let <m>G</m> be a finite group, <m>p</m> a prime dividing the order of <m>G</m>, and <m>H</m> a normal<!-- linebreak -->subgroup of order <m>pm</m> for some <m>m &gt; 0</m>.
+              </p>
+    
+              <p>
+                As <m>H</m> is normal we have <m>gHg\inv=H</m> for all <m>g\in G</m>. As it is a <m>p</m> group it is contained in some Sylow <m>p</m>-subgroup. All Sylow <m>p</m>-subgroups are conjugate to each other, but <m>H</m> is fixed by conjugation so its actually in all of them.
+              </p>
+    
+              <p>
+                Consider <m>Z(H)</m>, which is abelian in <m>H</m>. The center of <m>p</m>-groups are nontrivial so that's good. Let <m>g\in G</m>, <m>h\in Z(H)</m>, and consider <m>ghg\inv</m>. As <m>H\nsg G</m> we know <m>ghg\inv\in H</m>. Let <m>h'\in H</m>. We see <m>ghg\inv h'=ghh''g\inv</m>, since <m>H</m> is still normal. <m>h\in Z(G)</m> so we have <m>gh''hg\inv</m>.
+              </p>
+    
+              <p>
+                Notice that <m>h''g\inv=g\inv h'</m>, and thus <m>h'=gh''g\inv</m>. Thus <m>gh''=h'g</m>, and so we can substitute the last line in the previous paragraph to see <m>h'ghg'\inv</m>. Thus we have normality!
+              </p>
+            </solution>
+            
+          </exercise>
+
+          <exercise>
+            <statement>
+              <p>
+                Let <m>G</m> be a finite group. 
+                <ol>
+                  <li>
+                    <p>
+                      Suppose every subgroup of <m>G</m> is normal. Prove that given any positive divisor <m>d</m> of <m>|G|</m> there exists a subgroup of <m>G</m> of order <m>d</m>. 
+                    </p>
+                  </li>
+      
+                  <li>
+                    <p>
+                      Give an example, with justification, of a finite group <m>G</m> and a positive divisor <m>d</m> of <m>|G|</m> such that <m>G</m> has no subgroup of order <m>d</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+
+            <solution>
+              <p>
+                Let <m>G</m> be a finite group.
+              </p>
+  
+              <p>
+                Suppose every subgroup of <m>G</m> is normal. Let <m>d</m> be a positive divisor of <m>|G|</m>. For every prime <m>p</m> dividing the order of <m>G</m> there is exactly one Sylow <m>p</m>-subgroup of <m>G</m>, given that Sylow <m>p</m>-subgroups are normal if and only if they are unique. Thus <m>G</m> can be written as a direct product of its Sylow <m>p</m>-subgroups. Given the prime factorization of <m>d</m>, the direct product of the Sylow <m>p</m>-subgroups such that <m>p|d</m> is 1. A subgroup of <m>G</m> as each Sylow <m>p</m>-subgroup is normal, and 2. A direct product of cyclic groups of relatively prime order, yielding an element of order <m>d</m>. The subgroup generated by this element is a subgroup of <m>G</m> of order <m>d</m>.
+              </p>
+  
+              <p>
+                We take a peak at <m>G=A_4</m> with <m>d=6</m>. Suppose <m>A_4</m> had a subgroup of order <m>6</m>, <m>H</m>. First, note that <m>[G:H]=2</m>, the smallest prime dividing the order of <m>G</m>, making <m>H</m> normal in <m>G</m>.
+              </p>
+  
+              <p>
+                As there are eight <m>3</m>-cycles in <m>G</m>, there exists some <m>3</m>-cycle, <m>\sigma</m>, such that <m>\s\not\in H</m>. Consider then <m>H, \s H,</m> and <m>\s^2 H</m> in <m>G/H</m>. Since <m>|G/H|=\frac{|G|}{|H|}=2</m>, it must be the case that either <m>\s^2H=\s H</m> or <m>\s^2H=H</m>.
+              </p>
+  
+              <p>
+                <ul>
+                  <li>
+                    If <m>\s^2 H=H</m> then <m>\s^2\in H</m>. As <m>|\s|=3</m> we have <m>\s^2=\s\inv</m>, but as <m>H</m> is a subgroup this would mean <m>(\s\inv)\inv=\s\in H</m>, which is not the case.
+                  </li>
+  
+                  <li>
+                    If <m>\s^2 H=\s H</m> then <m>\s\inv\s^2\in H</m>, but <m>\s\inv\s^2=\s</m>, and so we have a contradiction. Thus <m>H</m> cannot exist, and <m>G</m> has no subgroup of order <m>6</m>.
+                  </li>
+                </ul>
+              </p>
+            </solution>
           </exercise>
       
         </exercisegroup>
@@ -480,6 +608,13 @@
 
     <section xml:id="sec-simple-groups">
       <title>Simple Groups</title>
+
+      <blockquote>
+        <p>
+          <q>It is always the simple that produces the marvelous</q>
+        </p>
+        <attribution>Amelia Barr</attribution>
+      </blockquote>
 
       <definition xml:id="def-simple-group">
         <statement>

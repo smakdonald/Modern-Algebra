@@ -12,8 +12,28 @@
 </head>
 <body class="ignore-math">
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<div class="para">Assume <span class="process-math">\(\cT\)</span> is non-empty. Let <span class="process-math">\(Z = \bigcup_{Y \in \cT} Y\text{.}\)</span> I claim <span class="process-math">\(Z \in \cP\text{.}\)</span> Given <span class="process-math">\(z_1, \dots, z_m \in Z\text{,}\)</span> for each <span class="process-math">\(i\)</span> we have <span class="process-math">\(z_i \in Y_i\)</span> for some <span class="process-math">\(Y_{i} \in \cT\text{.}\)</span> Since <span class="process-math">\(\cT\)</span> is totally ordered, one of <span class="process-math">\(Y_1, \dots, Y_m\)</span> contains all the others and hence it contains all the <span class="process-math">\(z_i\)</span>’s. Since each <span class="process-math">\(Y_i\)</span> is linearly independent, this shows <span class="process-math">\(z_1, \dots, z_m\)</span> are linearly independent. We have shown that every finite subset of <span class="process-math">\(Z\)</span> is linearly independent, and hence <span class="process-math">\(Z\)</span> is linearly independent. Since <span class="process-math">\(\cT\)</span> is non-empty, <span class="process-math">\(Z \supseteq I\text{.}\)</span> Since each member of <span class="process-math">\(\cT\)</span> is contained in <span class="process-math">\(S\text{,}\)</span> <span class="process-math">\(Z \subseteq S\text{.}\)</span> Thus, <span class="process-math">\(Z \in \cP\text{,}\)</span> and it is clearly an upper bound for <span class="process-math">\(\cT\text{.}\)</span>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(R\)</span> be a commutative ring, let <span class="process-math">\(F, E, G\)</span> be free <span class="process-math">\(R\)</span>-modules having finite bases <span class="process-math">\(X = \{x_1, \dots, x_m\}, Y = \{y_1, \dots, y_n\}, Z = \{z_1, \dots, z_p\}\)</span> of size <span class="process-math">\(m,n,p\text{,}\)</span> respectively. Given a <span class="process-math">\(n \times m\)</span> matrix <span class="process-math">\(A\)</span> and a <span class="process-math">\(p \times n\)</span> matrix <span class="process-math">\(B\text{,}\)</span> let <span class="process-math">\(AB\)</span> denote the <span class="process-math">\(p \times m\)</span> matrix obtained by the usual formula for matrix multiplication, and let <span class="process-math">\(T_A^{X,Y}: F \to E\text{,}\)</span> <span class="process-math">\(T_B^{Y,Z}: E \to G\)</span> and <span class="process-math">\(T_{BA}^{X,Z}: F \to G\)</span> be the maps associated to these matrices relative to the specified bases, as given in Proposition . Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+T^{Y,Z}_B \circ T_A^{X,Y} = T_{BA}^{X,Z}.
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec-vecbasis.html#p-1730" class="internal">in-context</a></span>
+<div class="para">In particular, matrix multiplication is associative. ###### <em class="emphasis">Proof.</em> For the first assertion we just need to check the two maps agree on <span class="process-math">\(x_j\)</span> for all <span class="process-math">\(j\text{:}\)</span> We have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+T_B(T_A(x_j)) = T_B(\sum_i a_{i,j} y_i) = \sum_i a_{i,j} T_B(y_i) 
+= \sum_i \sum _l a_{i, j} b_{k, i} z_k
+\end{equation*}
+</div>
+<div class="para">(with the second equation using that <span class="process-math">\(T_B\)</span> is an <span class="process-math">\(R\)</span>-map) and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+T_{BA}(x_j) = \sum_k (BA)_{k,j} z_k = \sum_k \left(\sum _i b_{k, i} a_{i, j}\right) z_k.
+\end{equation*}
+</div>
+<div class="para">(I have left off the superscripts <span class="process-math">\((X,Y)\)</span> etc. for the sake of my sanity.) These two expressions agree since <span class="process-math">\(R\)</span> is commutative.</div>
+</div>
+<span class="incontext"><a href="sec-linear.html#p-1730" class="internal">in-context</a></span>
 </body>
 </html>

@@ -12,50 +12,28 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<div class="para">We have <span class="process-math">\(f(x) = \cont(f) \cdot l(x)\)</span> with <span class="process-math">\(l(x) \in R[x]\)</span> and <span class="process-math">\(\cont(l) = 1\text{.}\)</span> Since <span class="process-math">\(p\)</span> does not divide the leading coefficient of <span class="process-math">\(f\text{,}\)</span> we have <span class="process-math">\(p \nmid \cont(f)\text{.}\)</span> It therefore follows that the three assumptions involving the coefficients of <span class="process-math">\(f(x)\)</span> are also satisfied by the coefficients <span class="process-math">\(l(x)\text{.}\)</span> Moreover, <span class="process-math">\(f\)</span> is irreducible in <span class="process-math">\(F[x]\)</span> if and only if <span class="process-math">\(l(x)\)</span> is irreducible in <span class="process-math">\(F[x]\text{.}\)</span> We may therefore assume without loss of generality that <span class="process-math">\(\cont(f) = 1\text{.}\)</span>
-</div> <div class="para logical">
-<div class="para">By Gauss’s Lemma we just need to prove it is irreducible in <span class="process-math">\(R[x]\text{.}\)</span> Suppose <span class="process-math">\(f(x) = g(x)h(x)\)</span> with <span class="process-math">\(g(x), h(x) \in R[x]\text{,}\)</span> where</div>
-<div class="displaymath process-math">
+<div class="para">All parts use the following construction:</div> <div class="para logical">
+<div class="para">Let <span class="process-math">\(\phi: F[x] \to L\)</span> be the evaluation homomorphism, given by sending <span class="process-math">\(f(x)\)</span> to <span class="process-math">\(f(\a)\)</span> <code class="code-inline tex2jax_ignore">[provisional cross-reference: empty]</code>. Note that <span class="process-math">\(\phi\)</span> satisfies <span class="process-math">\(\phi|_F = \id_F\)</span> and <span class="process-math">\(\phi(x) = \alpha\text{.}\)</span> We have <span class="process-math">\(\im(\phi) = F[\a]\)</span> by definition of the latter. The First Isomorphism Theorem for rings <code class="code-inline tex2jax_ignore">[provisional cross-reference: empty]</code> thus gives that <span class="process-math">\(\phi\)</span> induces a ring isomorphism</div>
+<div class="displaymath process-math" data-contains-math-knowls="   ">
 \begin{equation*}
-g(x) = b_m x^m + b_{m-1} x^{m-1} + \cdots + b_0
+\ov{\phi}: \frac{F[x]}{I}  \xra{\cong} F[\a]
 \end{equation*}
 </div>
-<div class="para">and</div>
-<div class="displaymath process-math">
+<div class="para">given by <span class="process-math">\(\ov{\phi}(f(x)+(p(x)))={\phi}(f(x))=f(\a)\text{.}\)</span> In particular, since <span class="process-math">\(F[\a]\)</span> is a subring of <span class="process-math">\(L\text{,}\)</span> it is an integral domain, <code class="code-inline tex2jax_ignore">[provisional cross-reference: empty]</code> and hence <span class="process-math">\(I\)</span> must be a prime ideal (possibly the <span class="process-math">\(0\)</span> ideal). <code class="code-inline tex2jax_ignore">[provisional cross-reference: empty]</code>
+</div>
+</div> <div class="para">Let us now prove the various parts:</div> <div class="para logical"><ol class="decimal">
+<li><div class="para">holds because <span class="process-math">\(I\)</span> is the kernel of the ring map <span class="process-math">\(\phi\text{.}\)</span>
+</div></li>
+<li><div class="para">is by definition.</div></li>
+</ol></div> <div class="para">For (3) assume <span class="process-math">\(\a\)</span> is algebraic. Then <span class="process-math">\(I \ne 0\)</span> and hence it has a unique monic generator, which we write <span class="process-math">\(m_{\a, F}(x)\text{.}\)</span> Since <span class="process-math">\(I\)</span> is prime, <span class="process-math">\(m_{\a, F}(x)\)</span> is irreducible <code class="code-inline tex2jax_ignore">[provisional cross-reference: empty]</code>; this proves (3a). Also, this shows that <span class="process-math">\(\frac{F[x]}{(m_{\a,F}(x))}\)</span> is a field <code class="code-inline tex2jax_ignore">[provisional cross-reference: empty]</code> and hence so is <span class="process-math">\(F[\a]\text{.}\)</span> Since <span class="process-math">\(F[\a] \subseteq F(\a)\text{,}\)</span> <span class="process-math">\(F[\a]\)</span> contains <span class="process-math">\(F\)</span> and <span class="process-math">\(\a\text{,}\)</span> and <span class="process-math">\(F[\a]\)</span> is a field, we must have <span class="process-math">\(F[\a] = F(\a)\text{.}\)</span> This proves (3b) and (3c).</div> <div class="para">For (4), if <span class="process-math">\(\a\)</span> is algebraic over <span class="process-math">\(F\text{,}\)</span> then <span class="process-math">\([F(\a):F] = \deg(m_{\a, F}(x)) &lt; \infty\)</span> by (3b) and Proposition <code class="code-inline tex2jax_ignore">[provisional cross-reference: empty]</code>. For the converse, if <span class="process-math">\([F(\a): F] &lt; \infty\text{,}\)</span> then the infinite list <span class="process-math">\(1, \a, \a^2, \dots\)</span> of elements of <span class="process-math">\(F(\a)\)</span> cannot be <span class="process-math">\(F\)</span>-linearly independent <code class="code-inline tex2jax_ignore">[provisional cross-reference: empty]</code>. So, <span class="process-math">\(a_0 + a_1 \a + \cdots a_n \a^n = 0\)</span> for some <span class="process-math">\(n\)</span> and some <span class="process-math">\(a_0, \dots, a_n \in F\)</span> not all of which are <span class="process-math">\(0\text{.}\)</span> This shows <span class="process-math">\(\a\)</span> is the root of a non-zero polynomial.</div> <div class="para logical">
+<div class="para">For (5), if <span class="process-math">\(\a\)</span> is transcendental, then <span class="process-math">\(I = 0\)</span> and so <span class="process-math">\(\phi: F[x] \into L\)</span> is injective. Since <span class="process-math">\(L\)</span> is a field, <span class="process-math">\(F[x]\)</span> is a domain <code class="code-inline tex2jax_ignore">[provisional cross-reference: empty]</code>, and <span class="process-math">\(\phi\)</span> is injective <code class="code-inline tex2jax_ignore">[provisional cross-reference: empty]</code>, it can be extended to the field of fractions <span class="process-math">\(F(x)\)</span> of <span class="process-math">\(F[x]\text{,}\)</span> i.e. there is a ring homomorphism</div>
+<div class="displaymath process-math" data-contains-math-knowls="  ">
 \begin{equation*}
-h(x) = c_l x^l + c_{l-1} x^{l-1} + \cdots + c_0
+\tilde{\phi}: F(x) \to L
 \end{equation*}
 </div>
-<div class="para">where <span class="process-math">\(m+l = n\)</span> and <span class="process-math">\(b_m c_l = a_n\text{.}\)</span>
+<div class="para">given by <span class="process-math">\(\tilde{\phi} \left(\frac{f(x)}{g(x)}\right) = \frac{f(\a)}{g(\a)}\)</span> for all <span class="process-math">\(f(x), g(x) \in F[x]\)</span> with <span class="process-math">\(g(x) \ne 0\text{.}\)</span> The image of <span class="process-math">\(\tilde{\phi}\)</span> is precisely <span class="process-math">\(F(\a)\text{.}\)</span> The map <span class="process-math">\(\tilde{\phi}\)</span> is injective since it is a ring homomorphism whose source is a field. <code class="code-inline tex2jax_ignore">[provisional cross-reference: empty]</code>
 </div>
-</div> <div class="para logical">
-<div class="para">Upon modding out by <span class="process-math">\(p\)</span> we get</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\ov{f} = \ov{g} \ov{h} \in (R/p)[x].
-\end{equation*}
-</div>
-<div class="para">The assumptions on <span class="process-math">\(f\)</span> give that</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\ov{f} = \ov{a_n} x^n
-\end{equation*}
-</div>
-<div class="para">with <span class="process-math">\(\ov{a_n} \ne 0\text{.}\)</span> Since <span class="process-math">\(R/p\)</span> is a domain, it follows that</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\ov{g} = \ov{b_m} x^m \, \text{ and  } \, \ov{h} = \ov{c_l} x^l
-\end{equation*}
-</div>
-<div class="para">On the other hand, we also have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-a_0 = b_0c_0,
-\end{equation*}
-</div>
-<div class="para">and since <span class="process-math">\(p^2 \nmid a_0\text{,}\)</span> we have that <span class="process-math">\(p \nmid b_0\)</span> or <span class="process-math">\(p \nmid c_0\text{.}\)</span> So <span class="process-math">\(\ov{b_0} \ne 0\)</span> or <span class="process-math">\(\ov{c_0} \ne 0\text{.}\)</span> This can only occur if <span class="process-math">\(m = 0\)</span> or <span class="process-math">\(l = 0\text{.}\)</span>
-</div>
-</div> <div class="para">We have shown that if <span class="process-math">\(f\)</span> factors in <span class="process-math">\(R[x]\)</span> as <span class="process-math">\(f = g \cdot h\text{,}\)</span> then at least one of <span class="process-math">\(g\)</span> of <span class="process-math">\(h\)</span> must be a constant polynomial. Since <span class="process-math">\(\cont(f) = 1\text{,}\)</span> this factor must be a unit. So <span class="process-math">\(f\)</span> is irreducible in <span class="process-math">\(R[x]\text{.}\)</span>
-</div></article><span class="incontext"><a href="sec-irrpoly.html#proof-94" class="internal">in-context</a></span>
+</div></article><span class="incontext"><a href="sec-algebraic.html#proof-94" class="internal">in-context</a></span>
 </body>
 </html>

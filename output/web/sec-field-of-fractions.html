@@ -567,7 +567,7 @@ window.MathJax = {
 <div class="toc-item"><a href="sylow.html" class="internal"><span class="codenumber">5</span> <span class="title">Sylow Theory</span></a></div>
 <ul class="structural">
 <li>
-<div class="toc-item"><a href="sec-pgroups.html" class="internal"><span class="codenumber">5.1</span> <span class="title"><span class="process-math">\(p\)</span>-groups</span></a></div>
+<div class="toc-item"><a href="sec-pgroups.html" class="internal"><span class="codenumber">5.1</span> <span class="title"><span class="process-math">\(p\)</span>-groups and Sylow Subgroups</span></a></div>
 <ul class="structural"><li><div class="toc-item"><a href="sec-pgroups.html#exercises-16" class="internal"><span class="codenumber">5.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
@@ -1015,26 +1015,26 @@ window.MathJax = {
 <article class="definition definition-like" id="def-multiplicatively-closed"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.38</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1211">Suppose <span class="process-math">\(R\)</span> is a commutative ring and <span class="process-math">\(S \subseteq R\)</span> is a subset such that</div> <div class="para logical" id="p-1212"><ol class="decimal">
-<li id="li-349"><div class="para" id="p-1213"><span class="process-math">\(1 \in S\text{,}\)</span></div></li>
-<li id="li-350"><div class="para" id="p-1214">
+<div class="para" id="p-1269">Suppose <span class="process-math">\(R\)</span> is a commutative ring and <span class="process-math">\(S \subseteq R\)</span> is a subset such that</div> <div class="para logical" id="p-1270"><ol class="decimal">
+<li id="li-366"><div class="para" id="p-1271"><span class="process-math">\(1 \in S\text{,}\)</span></div></li>
+<li id="li-367"><div class="para" id="p-1272">
 <span class="process-math">\(S\)</span> is closed under multiplication (i.e., if <span class="process-math">\(x,y \in S\text{,}\)</span> then <span class="process-math">\(xy \in S\)</span>), and</div></li>
-<li id="li-351"><div class="para" id="p-1215">
+<li id="li-368"><div class="para" id="p-1273">
 <span class="process-math">\(S\)</span> does not contain <span class="process-math">\(0\)</span> nor any zero divisors.</div></li>
-</ol></div> <div class="para" id="p-1216">Such a subset <span class="process-math">\(S\)</span> is called a <em class="emphasis">multiplicatively closed subset of non zero divisors</em> of <span class="process-math">\(R\text{.}\)</span>
-</div></article><article class="example example-like" id="example-23"><h3 class="heading">
+</ol></div> <div class="para" id="p-1274">Such a subset <span class="process-math">\(S\)</span> is called a <em class="emphasis">multiplicatively closed subset of non zero divisors</em> of <span class="process-math">\(R\text{.}\)</span>
+</div></article><article class="example example-like" id="example-24"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.39</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-1217">
+<div class="para logical" id="p-1275">
 <div class="para">Two types of multiplicatively closed sets are most commonly used in practice:</div>
 <ul class="disc">
-<li id="li-352"><div class="para" id="p-1218">If <span class="process-math">\(R\)</span> is a field then <span class="process-math">\(S=R\setminus \{0\}\)</span> is a multiplicatively closed set of non zero divisors.</div></li>
-<li id="li-353"><div class="para" id="p-1219">If <span class="process-math">\(R\)</span> is an arbitrary ring with <span class="process-math">\(1\neq 0\)</span> and <span class="process-math">\(x\in R\)</span> is a non zero divisor then the set of non negative powers of <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(S=\{x^n \mid n\in \mathbb{Z}, n\geq 0\}\text{,}\)</span> is multiplicatively closed.</div></li>
+<li id="li-369"><div class="para" id="p-1276">If <span class="process-math">\(R\)</span> is a field then <span class="process-math">\(S=R\setminus \{0\}\)</span> is a multiplicatively closed set of non zero divisors.</div></li>
+<li id="li-370"><div class="para" id="p-1277">If <span class="process-math">\(R\)</span> is an arbitrary ring with <span class="process-math">\(1\neq 0\)</span> and <span class="process-math">\(x\in R\)</span> is a non zero divisor then the set of non negative powers of <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(S=\{x^n \mid n\in \mathbb{Z}, n\geq 0\}\text{,}\)</span> is multiplicatively closed.</div></li>
 </ul>
 </div></article><article class="definition definition-like" id="def-field-of-fractions"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.40</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-1220">
+<div class="para logical" id="p-1278">
 <div class="para">If <span class="process-math">\(R\)</span> is an integral domain and <span class="process-math">\(S\)</span> is a multiplicatively closed subset of nonzerodivisors, the <em class="emphasis">field of fractions</em> <span class="process-math">\(S^{-1}R\)</span> is the set of equivalence classes</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1047,7 +1047,7 @@ S^{-1}R=\left\{\frac{r}{s} \mid r\in R,s\in S\right\}/\sim
 \frac{r}{s}\sim\frac{r'}{s'} \;\text{if and only if}\; rs'=r's.
 \end{equation*}
 </div>
-</div> <div class="para" id="p-1221">From now on we just write <span class="process-math">\(=\)</span> instead of <span class="process-math">\(\sim\)</span> when dealing with fractions.</div> <div class="para logical" id="p-1222">
+</div> <div class="para" id="p-1279">From now on we just write <span class="process-math">\(=\)</span> instead of <span class="process-math">\(\sim\)</span> when dealing with fractions.</div> <div class="para logical" id="p-1280">
 <div class="para">Addition and multiplication on <span class="process-math">\(S^{-1}R\)</span> are given by</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1057,7 +1057,7 @@ S^{-1}R=\left\{\frac{r}{s} \mid r\in R,s\in S\right\}/\sim
 </div></article><article class="theorem theorem-like" id="thm-field-of-fractions-is-field"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.41</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1223">If <span class="process-math">\(R\)</span> is an integral domain and <span class="process-math">\(S\)</span> is a multiplicatively closed subset of nonzerodivisors, the rules given in the above definition for <span class="process-math">\(+\)</span> and <span class="process-math">\(\cdot\)</span> make <span class="process-math">\(S^{-1} R\)</span> into a field. Moreover, the function <span class="process-math">\(R\to S^{-1}R\)</span> sending <span class="process-math">\(r\)</span> to <span class="process-math">\(\frac{r}{1}\)</span> is an injective ring homomorphism.</div></article><article class="hiddenproof" id="proof-74"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-74"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-74"><article class="hiddenproof"><div class="para" id="p-1224">There is a lot of small things to check and we'll just do a few. Right off the bat we need to be sure the given equivalence relation really is one. The reflexive and symmetric properties are clear. But the proof of transitivity illustrates a key point: Say <span class="process-math">\(\frac{r}{s} \sim \frac{r'}{s'} \sim \frac{r''}{s''}\text{.}\)</span> Then <span class="process-math">\(rs'= r's\)</span> and <span class="process-math">\(r's'' = r''s'\text{.}\)</span> We need to deduce that <span class="process-math">\(rs'' = r''s\text{.}\)</span> The given equations imply <span class="process-math">\(rs's'' = r'ss'' = r''ss'\)</span> and since <span class="process-math">\(s'\)</span> is a nonzerodivisor we conclude <span class="process-math">\(rs'' = r''s\text{.}\)</span> This is in fact the only time that the fact that <span class="process-math">\(S\)</span> consists of nonzerodivisors is used.</div> <div class="para logical" id="p-1225">
+<div class="para" id="p-1281">If <span class="process-math">\(R\)</span> is an integral domain and <span class="process-math">\(S\)</span> is a multiplicatively closed subset of nonzerodivisors, the rules given in the above definition for <span class="process-math">\(+\)</span> and <span class="process-math">\(\cdot\)</span> make <span class="process-math">\(S^{-1} R\)</span> into a field. Moreover, the function <span class="process-math">\(R\to S^{-1}R\)</span> sending <span class="process-math">\(r\)</span> to <span class="process-math">\(\frac{r}{1}\)</span> is an injective ring homomorphism.</div></article><article class="hiddenproof" id="proof-65"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-65"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-65"><article class="hiddenproof"><div class="para" id="p-1282">There is a lot of small things to check and we'll just do a few. Right off the bat we need to be sure the given equivalence relation really is one. The reflexive and symmetric properties are clear. But the proof of transitivity illustrates a key point: Say <span class="process-math">\(\frac{r}{s} \sim \frac{r'}{s'} \sim \frac{r''}{s''}\text{.}\)</span> Then <span class="process-math">\(rs'= r's\)</span> and <span class="process-math">\(r's'' = r''s'\text{.}\)</span> We need to deduce that <span class="process-math">\(rs'' = r''s\text{.}\)</span> The given equations imply <span class="process-math">\(rs's'' = r'ss'' = r''ss'\)</span> and since <span class="process-math">\(s'\)</span> is a nonzerodivisor we conclude <span class="process-math">\(rs'' = r''s\text{.}\)</span> This is in fact the only time that the fact that <span class="process-math">\(S\)</span> consists of nonzerodivisors is used.</div> <div class="para logical" id="p-1283">
 <div class="para">We also need to be sure our rules for <span class="process-math">\(+\)</span> and <span class="process-math">\(\cdot\)</span> make sense and are independent of representation. They “make sense” since we assume <span class="process-math">\(S\)</span> is closed under <span class="process-math">\(\cdot\text{.}\)</span> To show <span class="process-math">\(+\)</span> is independent of representations, say <span class="process-math">\(\frac{r}{s} \sim \frac{r''}{s''}\text{,}\)</span> so that <span class="process-math">\(rs'' = r''s\text{.}\)</span> Then</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1071,28 +1071,28 @@ S^{-1}R=\left\{\frac{r}{s} \mid r\in R,s\in S\right\}/\sim
 \end{equation*}
 </div>
 <div class="para">and so we need to show <span class="process-math">\((rs' + r's)(s''s') \sim (r''s' + r's'')(ss')\text{.}\)</span> This is clear upon expaning out both sides and using <span class="process-math">\(rs'' = r''s\text{.}\)</span> In a similar way one shows <span class="process-math">\(\cdot\)</span> is well-defined.</div>
-</div> <div class="para" id="p-1226">From now on we just write <span class="process-math">\(=\)</span> instead of <span class="process-math">\(\sim\)</span> when dealing with fractions.</div> <div class="para" id="p-1227">The associative and distributive axioms involve a straightfoward but tedious check, and we skip them entirely. The fact that <span class="process-math">\(+\)</span> and <span class="process-math">\(\cdot\)</span> are commutative is clear from their definitions. <span class="process-math">\(S^{-1}R\)</span> is a group under addition since it has a <span class="process-math">\(0\)</span> element, namely <span class="process-math">\(\frac{0}{1}\text{,}\)</span> and <span class="process-math">\(\frac{r}{s} +
-\frac{-r}{s} = \frac{rs - rs}{s^2} = \frac{0}{s^2} = \frac{0}{1}\text{,}\)</span> with the last equality holding since <span class="process-math">\(0 \cdot 1 = s^2 \cdot 0\text{.}\)</span> The <span class="process-math">\(1\)</span> element is <span class="process-math">\(\frac{1}{1}\text{.}\)</span> (Note that we have used that <span class="process-math">\(1 \in S\)</span> a couple times here — indeed, without this assumption <span class="process-math">\(S\)</span> could be empty and then <span class="process-math">\(S^{-1}R\)</span> would be the empty set.)</div> <div class="para" id="p-1228">
-<span class="process-math">\(R\)</span> being a domain means <span class="process-math">\(xy=0\)</span> implies (<span class="process-math">\(x=0\)</span> or <span class="process-math">\(y=0\)</span>). The contrapositive to this statement is: if <span class="process-math">\(x\neq 0\)</span> and <span class="process-math">\(y\neq 0\)</span> then <span class="process-math">\(xy\neq 0\text{,}\)</span> which shows <span class="process-math">\(S\)</span> is a multiplicatively closed set of nonzerodivisors.</div> <div class="para" id="p-1229">It remains only to show every non-zero element of <span class="process-math">\(S^{-1}R\)</span> is a unit. Given <span class="process-math">\(\frac{r}{s} \ne 0\text{,}\)</span> note that <span class="process-math">\(r \ne 0\)</span> and hence <span class="process-math">\(r \in S\text{.}\)</span> So <span class="process-math">\(\frac{s}{r}\)</span> is also an element of <span class="process-math">\(S^{-1}R\text{.}\)</span> We have <span class="process-math">\(\frac{r}{s} \frac{s}{r} = \frac{sr}{sr} = \frac{1}{1}\text{,}\)</span> where the last equation holds by the definition of <span class="process-math">\(\sim\text{.}\)</span>
-</div> <div class="para" id="p-1230">The fact that <span class="process-math">\(r \mapsto \frac{r}{1}\)</span> is a ring homomorphism is straightforward to check. Its injective since <span class="process-math">\(\frac{r}{1} = \frac{0}{1}\)</span> implies <span class="process-math">\(r = 0\text{.}\)</span>
+</div> <div class="para" id="p-1284">From now on we just write <span class="process-math">\(=\)</span> instead of <span class="process-math">\(\sim\)</span> when dealing with fractions.</div> <div class="para" id="p-1285">The associative and distributive axioms involve a straightfoward but tedious check, and we skip them entirely. The fact that <span class="process-math">\(+\)</span> and <span class="process-math">\(\cdot\)</span> are commutative is clear from their definitions. <span class="process-math">\(S^{-1}R\)</span> is a group under addition since it has a <span class="process-math">\(0\)</span> element, namely <span class="process-math">\(\frac{0}{1}\text{,}\)</span> and <span class="process-math">\(\frac{r}{s} +
+\frac{-r}{s} = \frac{rs - rs}{s^2} = \frac{0}{s^2} = \frac{0}{1}\text{,}\)</span> with the last equality holding since <span class="process-math">\(0 \cdot 1 = s^2 \cdot 0\text{.}\)</span> The <span class="process-math">\(1\)</span> element is <span class="process-math">\(\frac{1}{1}\text{.}\)</span> (Note that we have used that <span class="process-math">\(1 \in S\)</span> a couple times here — indeed, without this assumption <span class="process-math">\(S\)</span> could be empty and then <span class="process-math">\(S^{-1}R\)</span> would be the empty set.)</div> <div class="para" id="p-1286">
+<span class="process-math">\(R\)</span> being a domain means <span class="process-math">\(xy=0\)</span> implies (<span class="process-math">\(x=0\)</span> or <span class="process-math">\(y=0\)</span>). The contrapositive to this statement is: if <span class="process-math">\(x\neq 0\)</span> and <span class="process-math">\(y\neq 0\)</span> then <span class="process-math">\(xy\neq 0\text{,}\)</span> which shows <span class="process-math">\(S\)</span> is a multiplicatively closed set of nonzerodivisors.</div> <div class="para" id="p-1287">It remains only to show every non-zero element of <span class="process-math">\(S^{-1}R\)</span> is a unit. Given <span class="process-math">\(\frac{r}{s} \ne 0\text{,}\)</span> note that <span class="process-math">\(r \ne 0\)</span> and hence <span class="process-math">\(r \in S\text{.}\)</span> So <span class="process-math">\(\frac{s}{r}\)</span> is also an element of <span class="process-math">\(S^{-1}R\text{.}\)</span> We have <span class="process-math">\(\frac{r}{s} \frac{s}{r} = \frac{sr}{sr} = \frac{1}{1}\text{,}\)</span> where the last equation holds by the definition of <span class="process-math">\(\sim\text{.}\)</span>
+</div> <div class="para" id="p-1288">The fact that <span class="process-math">\(r \mapsto \frac{r}{1}\)</span> is a ring homomorphism is straightforward to check. Its injective since <span class="process-math">\(\frac{r}{1} = \frac{0}{1}\)</span> implies <span class="process-math">\(r = 0\text{.}\)</span>
 </div></article></div>
-<article class="example example-like" id="example-24"><h3 class="heading">
+<article class="example example-like" id="example-25"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.42</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-1231"><ol class="decimal">
-<li id="li-354"><div class="para" id="p-1232">For a specific example, the field of fractions of <span class="process-math">\(\mathbb{Z}\)</span> is <span class="process-math">\(\mathbb{Q}\text{.}\)</span>
+<div class="para logical" id="p-1289"><ol class="decimal">
+<li id="li-371"><div class="para" id="p-1290">For a specific example, the field of fractions of <span class="process-math">\(\mathbb{Z}\)</span> is <span class="process-math">\(\mathbb{Q}\text{.}\)</span>
 </div></li>
-<li id="li-355"><div class="para" id="p-1233">or another, if <span class="process-math">\(d\)</span> is a squarefree integer and <span class="process-math">\(R = \mathbb{Z}[\sqrt{d}]\)</span> is an integral domain and we will show soon that its field of fractions is (isomorphic to) the field <span class="process-math">\(\mathbb{Q}(\sqrt{d})\text{.}\)</span>
+<li id="li-372"><div class="para" id="p-1291">or another, if <span class="process-math">\(d\)</span> is a squarefree integer and <span class="process-math">\(R = \mathbb{Z}[\sqrt{d}]\)</span> is an integral domain and we will show soon that its field of fractions is (isomorphic to) the field <span class="process-math">\(\mathbb{Q}(\sqrt{d})\text{.}\)</span>
 </div></li>
-<li id="li-356"><div class="para" id="p-1234">For yet another, <span class="process-math">\({\mathbb{R}}[x]\)</span> is an integral domain. Its field of fractions, usually denoted <span class="process-math">\({\mathbb{R}}(x)\)</span> constists of all <em class="emphasis">rational functions</em>. This last example could be generalized by replacing <span class="process-math">\({\mathbb{R}}\)</span> with any field and also by using any number of variables.</div></li>
+<li id="li-373"><div class="para" id="p-1292">For yet another, <span class="process-math">\({\mathbb{R}}[x]\)</span> is an integral domain. Its field of fractions, usually denoted <span class="process-math">\({\mathbb{R}}(x)\)</span> constists of all <em class="emphasis">rational functions</em>. This last example could be generalized by replacing <span class="process-math">\({\mathbb{R}}\)</span> with any field and also by using any number of variables.</div></li>
 </ol></div></article><article class="proposition theorem-like" id="prop-fof-1"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.43</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1235">Let <span class="process-math">\(R\)</span> be a domain and let <span class="process-math">\(F\)</span> be its fraction field. Show that <span class="process-math">\(F\)</span> has the following universal property: if <span class="process-math">\(K\)</span> is any field and <span class="process-math">\(f\!: R \to K\)</span> is any injective ring homomorphism, then <span class="process-math">\(f\)</span> extends to an injective ring homomorphism <span class="process-math">\(\overline{f}\!: F \to K\text{,}\)</span> so that <span class="process-math">\(\overline{f}|_R=f\text{.}\)</span>
+<div class="para" id="p-1293">Let <span class="process-math">\(R\)</span> be a domain and let <span class="process-math">\(F\)</span> be its fraction field. Show that <span class="process-math">\(F\)</span> has the following universal property: if <span class="process-math">\(K\)</span> is any field and <span class="process-math">\(f\!: R \to K\)</span> is any injective ring homomorphism, then <span class="process-math">\(f\)</span> extends to an injective ring homomorphism <span class="process-math">\(\overline{f}\!: F \to K\text{,}\)</span> so that <span class="process-math">\(\overline{f}|_R=f\text{.}\)</span>
 </div></article><article class="proposition theorem-like" id="prop-fof-2"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.44</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-1236">
+<div class="para logical" id="p-1294">
 <div class="para">Let <span class="process-math">\(R\)</span> be an integral domain with field of fractions <span class="process-math">\(Q\text{.}\)</span> Let <span class="process-math">\(P\)</span> be a prime ideal of <span class="process-math">\(R\)</span> and let</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1110,43 +1110,43 @@ I =  \bigg\{ \frac pd|p\in P, d\not\in P\bigg\}
 </div></article><article class="proposition theorem-like" id="prop-fof-3"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.45</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1237">Let <span class="process-math">\(R\)</span> be a commutative integral domain and <span class="process-math">\(K\)</span> its field of fractions. Let <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> be nonzero elements of <span class="process-math">\(R\text{,}\)</span> such that <span class="process-math">\((a) \cap(b) = (ab)\text{.}\)</span> Let <span class="process-math">\(f : R[x] \to K\)</span> be the unique ring homomorphism with <span class="process-math">\(f (r) = \frac{r}{1}\)</span> for <span class="process-math">\(r \in R\)</span> and <span class="process-math">\(f (x) = \frac{b}{a}\text{.}\)</span> Prove that a polynomial <span class="process-math">\(p(x) \in R[x]\)</span> satisfies <span class="process-math">\(f(p(x))=0\)</span> if and only if <span class="process-math">\(p(x) = (ax - b)q(x)\)</span> for some polynomial <span class="process-math">\(q(x) \in R[x]\text{.}\)</span> (Hint: one way is to use induction on deg(p(x)).)</div></article><section class="exercises" id="exercises-31"><h3 class="heading hide-type">
+<div class="para" id="p-1295">Let <span class="process-math">\(R\)</span> be a commutative integral domain and <span class="process-math">\(K\)</span> its field of fractions. Let <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> be nonzero elements of <span class="process-math">\(R\text{,}\)</span> such that <span class="process-math">\((a) \cap(b) = (ab)\text{.}\)</span> Let <span class="process-math">\(f : R[x] \to K\)</span> be the unique ring homomorphism with <span class="process-math">\(f (r) = \frac{r}{1}\)</span> for <span class="process-math">\(r \in R\)</span> and <span class="process-math">\(f (x) = \frac{b}{a}\text{.}\)</span> Prove that a polynomial <span class="process-math">\(p(x) \in R[x]\)</span> satisfies <span class="process-math">\(f(p(x))=0\)</span> if and only if <span class="process-math">\(p(x) = (ax - b)q(x)\)</span> for some polynomial <span class="process-math">\(q(x) \in R[x]\text{.}\)</span> (Hint: one way is to use induction on deg(p(x)).)</div></article><section class="exercises" id="exercises-31"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
-<div class="exercisegroup" id="exercisegroup-79">
+<div class="exercisegroup" id="exercisegroup-82">
 <h4 class="heading"><span class="title">Computations and Examples.</span></h4>
-<div class="introduction" id="introduction-82"><div class="para" id="p-1238"></div></div>
-<div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-138"><h5 class="heading">
+<div class="introduction" id="introduction-86"><div class="para" id="p-1296"></div></div>
+<div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-147"><h5 class="heading">
 <span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
 </h5>
-<div class="para" id="p-1239">Coming soon to an OER near you!</div>
+<div class="para" id="p-1297">Coming soon to an OER near you!</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-58" id="hint-58"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-58"><div class="hint solution-like"><div class="para" id="p-1240">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-60" id="solution-60"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-60"><div class="solution solution-like"><div class="para" id="p-1241">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-60" id="hint-60"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-60"><div class="hint solution-like"><div class="para" id="p-1298">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-71" id="solution-71"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-71"><div class="solution solution-like"><div class="para" id="p-1299">Coming soon to an OER near you!</div></div></div>
 </div></article></div>
 </div>
-<div class="exercisegroup" id="exercisegroup-80">
+<div class="exercisegroup" id="exercisegroup-83">
 <h4 class="heading"><span class="title">Formal Proofs.</span></h4>
-<div class="introduction" id="introduction-83"><div class="para" id="p-1242"></div></div>
-<div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-139"><h5 class="heading">
+<div class="introduction" id="introduction-87"><div class="para" id="p-1300"></div></div>
+<div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-148"><h5 class="heading">
 <span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
 </h5>
-<div class="para" id="p-1243">Coming soon to an OER near you!</div>
+<div class="para" id="p-1301">Coming soon to an OER near you!</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-59" id="hint-59"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-59"><div class="hint solution-like"><div class="para" id="p-1244">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-61" id="solution-61"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-61"><div class="solution solution-like"><div class="para" id="p-1245">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-61" id="hint-61"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-61"><div class="hint solution-like"><div class="para" id="p-1302">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-72" id="solution-72"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-72"><div class="solution solution-like"><div class="para" id="p-1303">Coming soon to an OER near you!</div></div></div>
 </div></article></div>
 </div>
-<div class="exercisegroup" id="exercisegroup-81">
+<div class="exercisegroup" id="exercisegroup-84">
 <h4 class="heading"><span class="title">Qualifying Exam Problems.</span></h4>
-<div class="introduction" id="introduction-84"><div class="para" id="p-1246"></div></div>
-<div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-140"><h5 class="heading">
+<div class="introduction" id="introduction-88"><div class="para" id="p-1304"></div></div>
+<div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-149"><h5 class="heading">
 <span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
 </h5>
-<div class="para" id="p-1247">Coming soon to an OER near you!</div>
+<div class="para" id="p-1305">Coming soon to an OER near you!</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-60" id="hint-60"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-60"><div class="hint solution-like"><div class="para" id="p-1248">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-62" id="solution-62"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-62"><div class="solution solution-like"><div class="para" id="p-1249">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-62" id="hint-62"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-62"><div class="hint solution-like"><div class="para" id="p-1306">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-73" id="solution-73"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-73"><div class="solution solution-like"><div class="para" id="p-1307">Coming soon to an OER near you!</div></div></div>
 </div></article></div>
 </div></section></section></div>
 <div class="ptx-content-footer">

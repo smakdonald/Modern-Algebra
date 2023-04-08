@@ -13,15 +13,16 @@
 <body class="ignore-math">
 <h6 class="heading"><span class="type">Paragraph</span></h6>
 <div class="para logical">
-<div class="para">Given a finite dimensional <span class="process-math">\(F\)</span>-vector space <span class="process-math">\(V\)</span> and an <span class="process-math">\(F\)</span>-linear operator <span class="process-math">\(g: V \to V\text{,}\)</span> there is a basis <span class="process-math">\(B\)</span> of <span class="process-math">\(V\)</span> such that the matrix representing <span class="process-math">\(g\)</span> relative to <span class="process-math">\(B\)</span> is</div>
+<div class="para">Given an ideal <span class="process-math">\(I\subseteq R[x]\text{,}\)</span> consider the set of leading coefficients of all polynomials in <span class="process-math">\(I\text{,}\)</span>
+</div>
 <div class="displaymath process-math">
 \begin{equation*}
-[g]_B^B = C(f_1) \oplus \cdots \oplus C(f_s)
+J :=  \{ a \in R \ \mid  \ \textrm{there is some } a x^n + \text{lower order terms (with respect to }x) \in I\}.
 \end{equation*}
 </div>
-<div class="para">for monic polynomials <span class="process-math">\(f_1, \dots, f_s\)</span> of degree at least one such that <span class="process-math">\(f_1 | f_2 | \cdots | f_s\)</span>[^1]. Moreover, this matrix is unique, and is known as the <em class="emphasis">rational canonical form</em> of the operator <span class="process-math">\(g\text{.}\)</span>
+<div class="para">By the Hilbert Basis Lemma, we see that this is an ideal of <span class="process-math">\(R\text{.}\)</span> Since <span class="process-math">\(R\)</span> is noetherian, <span class="process-math">\(J\)</span> is finitely generated[^2], so let <span class="process-math">\(J = (a_1,\dots,a_t)\text{.}\)</span> Pick <span class="process-math">\(f_1,\dots,f_t\in R[x]\)</span> such that the leading coefficient of <span class="process-math">\(f_i\)</span> is <span class="process-math">\(a_i\text{,}\)</span> and set <span class="process-math">\(N=\displaystyle\max_i \{\deg{f_i} \}\text{.}\)</span>
 </div>
 </div>
-<span class="incontext"><a href="sec-rcf.html#p-2181" class="internal">in-context</a></span>
+<span class="incontext"><a href="sec-noeth.html#p-2181" class="internal">in-context</a></span>
 </body>
 </html>

@@ -11,8 +11,22 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>
-<div class="para">Consider <span class="process-math">\(6=(1 + \sqrt{-5}) (1 - \sqrt{-5})=2\cdot 3\)</span> and each of <span class="process-math">\(1 + \sqrt{-5},1 - \sqrt{-5},2, 3\)</span> are irreducible by a norm argument (exercise). Notice also that <span class="process-math">\(\Z[\sqrt{-5}]\)</span> contains elements that are irreducible but not prime: <span class="process-math">\(2\)</span> is irreducible, by a norm argument. But it is not prime since <span class="process-math">\((1 + \sqrt{-5}) (1 - \sqrt{-5})\in (2)\)</span> but neither <span class="process-math">\(1 + \sqrt{-5}\)</span> nor <span class="process-math">\(1 - \sqrt{-5}\)</span> is in <span class="process-math">\((2).\)</span>
-</div></article><span class="incontext"><a href="subsec-ufds.html#proof-86" class="internal">in-context</a></span>
+<article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
+<div class="para logical">
+<div class="para">Consider the ring isomorphism <span class="process-math">\(\phi: \Q[x] \xra{\cong} \Q[y]\)</span> given by <span class="process-math">\(\phi(h(x)) = h(y+1)\text{.}\)</span> I claim that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi(f(x)) = y^{p-1} + p y^{p-2} + {p \choose 2} y^{p-3} +{p \choose 3} y^{p-4} +\cdots + {p \choose p-1} y + p.
+\end{equation*}
+</div>
+<div class="para">To see this, we note that <span class="process-math">\(f(x) (x-1) = x^p - 1\)</span> and by the binomial theorem we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi(x^p-1) = (y+1)^p - 1 = y^p + p y^{p-1} + {p \choose 2} y^{p-2} + \cdots + py.
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(\phi(x^p-1) = \phi(f(x)) \phi(x-1) = \phi(f(x)) y\text{,}\)</span> the claim follows.</div>
+</div> <div class="para">By Eisenstein, <span class="process-math">\(\phi(f(x))\)</span> is irreducible in <span class="process-math">\(\Q[y]\)</span> and, since <span class="process-math">\(\phi\)</span> is an isomorphism, it follows that <span class="process-math">\(f(x)\)</span> is irreducible in <span class="process-math">\(\Q[x]\text{.}\)</span>
+</div></article><span class="incontext"><a href="sec-irrpoly.html#proof-86" class="internal">in-context</a></span>
 </body>
 </html>

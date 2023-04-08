@@ -961,7 +961,7 @@
       <theorem xml:id="thm-norm-iff-ker">
         <statement>
           <p>
-            A subgroup <m>N</m> of a group <m>G</m> is normal in <m>G</m> if and only if <m>N</m> is the kernel of a homomorphism with domain <m>G</m>
+            A subgroup <m>N</m> of a group <m>G</m> is normal in <m>G</m> if and only if <m>N</m> is the kernel of a homomorphism with domain <m>G</m>.
           </p>
         </statement>
 
@@ -1219,7 +1219,9 @@
         </proof>
       </theorem>
 
-
+      <p>
+        The first isomorphism theorem, also known as the homomorphism theorem, is named as such because it was the first major result in the theory of group homomorphisms and was discovered before the second and third isomorphism theorems. 
+      </p>
 
       <proposition xml:id="prop-normal-hk">
         <statement>
@@ -1253,6 +1255,10 @@
         </p>
       </example>
 
+      <p>
+        The second isomorphism theorem, also known as the diamond isomorphism theorem or the modular law, provides information about the structure of subgroups and their intersections.
+      </p>
+
       <theorem xml:id="thm-sit-group">
         <title>Second Isomorphism Theorem</title>
         
@@ -1284,6 +1290,10 @@
           </p>
         </statement>
       </corollary>
+
+      <p>
+        The third isomorphism theorem, also known as the factor or quotient theorem, gives a relationship between normal subgroups of a group and their quotient groups.
+      </p>
       
       <theorem xml:id="thm-tit-group">
         <title>Third Isomorphism Theorem</title>
@@ -1317,6 +1327,12 @@
           </p>
         </proof>
       </theorem>
+
+      <remark>
+        <p>
+          In the realm of group theory, the First Isomorphism Theorem is by far the most widely used. While important, the Second and Third Isomorphism Theorems do not pop up all that often in this text. 
+        </p>
+      </remark>
 
       <theorem xml:id="thm-lattice-iso-group">
         <title>The Lattice Isomorphism Theorem</title>
@@ -1451,12 +1467,6 @@
           </p>
         </proof>
       </theorem>
-      
-      <exercise>
-        <p>
-          <term>Exercise 1.82</term>.  If <m>f:G\to H</m> is a group homomorphism and <m>K\mathrel{\unlhd}G</m> then <m>f(K)\mathrel{\unlhd}f(G)</m>. In particular, if <m>f</m> is surjective then <m>f(K)\mathrel{\unlhd}H</m> (but this need not be true in the absence of surjectivity, see HW 4).
-        </p>
-      </exercise>
 
 <!-- div attr= class="ex"
       <p>
@@ -1471,83 +1481,180 @@
 
 
       <exercises xml:id="exercises-gp-isos">
-        
-        <exercise>
 
-          <statement>
+        <exercisegroup>
+          <title>Computations and Examples</title>
+          <introduction>
             <p>
-              Let <m>G</m> be a (not necessarily finite) group and <m>H</m> and <m>K</m> normal subgroups such that <m>G = HK</m>. Prove that <m>G/(H\cap K)\cong G/H \times G/K.</m>
             </p>
-          </statement>
-
-          <solution>
-            <p>
-              Let <m>f:G\to G/H\times G/K</m> defined such that <m>f(g)=(gH, gK)</m>. Let <m>x,y\in G</m>. Then <me>f(xy)=(xyH,xyK)=(xHyH,xKyK)=(xH,yH)\cdot(xKyK)=f(x)f(y),</me> showing <m>f</m> is a homomorphism.
-            </p>
-  
-            <p>
-              Let <m>(xH,yK)\in G/H\times G/K</m>. As <m>x,y\in G=HK</m>, we have <m>x=hk</m> and <m>y=h'k'</m> with <m>h,h'\in H</m> and <m>k,k'\in K</m>. As <m>k'\in K</m> and <m>h\in H</m> we see <m>(xH,yK)=(kH,h'K)</m>.
-            </p>
-  
-            <p>
-              Consider <m>g=kh'\in G</m> and <me>f(g)=f(kh')=(kh'H,kh'K)=(kH,h'K)=(xH,yK),</me>making <m>f</m> surjective as well.
-            </p>
-  
-            <p>
-              Let <m>g\in H\cap K</m>. Then <m>f(g)=(gH,gK)=(H,K)</m>, and so <m>g\in\ker(f)</m>. Let <m>g\in\ker(f)</m>. Then <m>f(g)=(H,K)</m>, so <m>gH=H</m> and <m>gK=K</m>, placing <m>g\in H\cap K</m>. Thus, by the First Isomorphism Theorem, we have <m>G/(H\cap K)\cong G/H \times G/K.</m>
-            </p>
-          </solution>
-        </exercise>
-
-        <exercise>
-          <statement>
-          <p>
-            Let <m>G</m> be a finite group. 
-
-            <ol>
-              <li>
-                <p>
-                  If <m>N</m> is a normal subgroup of <m>G</m> and <m>|N | = 2</m>, prove that <m>N</m> is contained in the center <m>Z(G)</m> of <m>G</m>. 
-                </p>
-              </li>
-
-              <li>
-                <p>
-                  Suppose that <m>| Z(G)|</m> is odd and that <m>G</m> contains a non-trivial simple subgroup <m>H</m> with <m>[G : H] = 2</m>. Prove that <m>H</m> is the only non-trivial proper normal subgroup of <m>G</m>.
-                </p>
-              </li>
-            </ol>
-          </p>
-        </statement>
-
-          <solution>
-            <p>
-              Let <m>x\in N</m> and let <m>g\in G</m>. As <m>N</m> is normal, we see <m>gxg\inv\in N</m>, and thus one of the following must be true: - <m>gxg\inv=e</m>, where <m>e</m> is the identity element of <m>G</m>, or - <m>gxg\inv=x</m>, the only other element of <m>N</m>. However, in the first case we would have <m>x=e</m> by multiplying <m>g</m> and <m>g\inv</m> over, and thus it must be the case that <m>gxg\inv=x</m>, or <m>gx=xg</m>. Thus <m>x\in Z(G)</m>.
-            </p>
-
-            <p>
-              From Lagrange's Theorem we know that <m>|G|/|H|=2</m>, meaning that <m>G</m> has an even number of elements. Thus <m>2</m> is the smallest prime dividing the order of <m>G</m>, making <m>H</m> normal in <m>G</m> (See: ).
-            </p>
-
-            <p>
-              Suppose by way of contradiction there exists some non-trivial proper normal subgroup <m>N</m> of <m>G</m> that is not <m>H</m>. As <m>H</m> is normal, by the Second Isomorphism Theorem we have <m>H\cap N\nsg H</m>. However, as <m>H</m> is simple, this means that <m>H\cap N=\{e\}</m>. SIT also tells us that <m>HN\leq G</m>. As <m>|H|=|G|/2</m>, this makes <m>|N|=2</m> and <m>G=HN</m>. From part (a), <m>N\leq Z(G)</m>. However, this contradicts Lagrange’s Theorem, as <m>2</m> does not divide any odd numbers.
-            </p>
-          </solution>
-        </exercise>
-
-        <exercise>
-          <statement>
-            <p>
-              Let <m>G</m> be a group and <m>H</m> a subgroup of <m>G</m>. Recall that the centralizer of <m>H</m> in <m>G</m> is 
-              <me>
-                C_H(G)=\{g\in G|gh=h\;\text{for all}\;h\in H\}
-              </me>
-              Prove that if <m>H</m> is normal in <m>G</m>, then so is <m>C_G(H)</m> and that <m>G/C_G(H)</m> is isomorphic to a subgroup of the automorphism group of <m>H</m>.
-            </p>
+          </introduction>
+      
+          <exercise>
+            <title></title>
             
-          </statement>
+            
+            <statement>
+              <p>
+                Coming soon to an OER near you!
+              </p>
+            </statement>
 
-        </exercise>
+            <hint>
+              <p>
+                Coming soon to an OER near you!
+              </p>
+            </hint>
+
+            <solution>
+              <p>
+                Coming soon to an OER near you!
+              </p>
+            </solution>
+          </exercise>
+      
+        </exercisegroup>
+      
+        <exercisegroup>
+          <title>Formal Proofs</title>
+          <introduction>
+            <p>
+            </p>
+          </introduction>
+      
+          <exercise>
+            <title></title>
+            
+            
+            <statement>
+              <p>
+                Coming soon to an OER near you!
+              </p>
+            </statement>
+
+            <hint>
+              <p>
+                Coming soon to an OER near you!
+              </p>
+            </hint>
+
+            <solution>
+              <p>
+                Coming soon to an OER near you!
+              </p>
+            </solution>
+          </exercise>
+
+          <exercise>
+            <p>
+              <ol>
+                <li>
+                  <p>
+                    If <m>f:G\to H</m> is a group homomorphism and <m>K\mathrel{\unlhd}G</m> then <m>f(K)\mathrel{\unlhd}f(G)</m>.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    In particular, if <m>f</m> is surjective then <m>f(K)\mathrel{\unlhd}H</m>
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Show the statement in part (b) need not be true in the absence of surjectivity.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </exercise>
+      
+        </exercisegroup>
+      
+        <exercisegroup>
+          <title>Qualifying Exam Problems</title>
+          <introduction>
+            <p>
+            </p>
+          </introduction>
+      
+          <exercise>
+
+            <statement>
+              <p>
+                Let <m>G</m> be a (not necessarily finite) group and <m>H</m> and <m>K</m> normal subgroups such that <m>G = HK</m>. Prove that <m>G/(H\cap K)\cong G/H \times G/K.</m>
+              </p>
+            </statement>
+  
+            <solution>
+              <p>
+                Let <m>f:G\to G/H\times G/K</m> defined such that <m>f(g)=(gH, gK)</m>. Let <m>x,y\in G</m>. Then <me>f(xy)=(xyH,xyK)=(xHyH,xKyK)=(xH,yH)\cdot(xKyK)=f(x)f(y),</me> showing <m>f</m> is a homomorphism.
+              </p>
+    
+              <p>
+                Let <m>(xH,yK)\in G/H\times G/K</m>. As <m>x,y\in G=HK</m>, we have <m>x=hk</m> and <m>y=h'k'</m> with <m>h,h'\in H</m> and <m>k,k'\in K</m>. As <m>k'\in K</m> and <m>h\in H</m> we see <m>(xH,yK)=(kH,h'K)</m>.
+              </p>
+    
+              <p>
+                Consider <m>g=kh'\in G</m> and <me>f(g)=f(kh')=(kh'H,kh'K)=(kH,h'K)=(xH,yK),</me>making <m>f</m> surjective as well.
+              </p>
+    
+              <p>
+                Let <m>g\in H\cap K</m>. Then <m>f(g)=(gH,gK)=(H,K)</m>, and so <m>g\in\ker(f)</m>. Let <m>g\in\ker(f)</m>. Then <m>f(g)=(H,K)</m>, so <m>gH=H</m> and <m>gK=K</m>, placing <m>g\in H\cap K</m>. Thus, by the First Isomorphism Theorem, we have <m>G/(H\cap K)\cong G/H \times G/K.</m>
+              </p>
+            </solution>
+          </exercise>
+
+          <exercise>
+            <statement>
+            <p>
+              Let <m>G</m> be a finite group. 
+  
+              <ol>
+                <li>
+                  <p>
+                    If <m>N</m> is a normal subgroup of <m>G</m> and <m>|N | = 2</m>, prove that <m>N</m> is contained in the center <m>Z(G)</m> of <m>G</m>. 
+                  </p>
+                </li>
+  
+                <li>
+                  <p>
+                    Suppose that <m>| Z(G)|</m> is odd and that <m>G</m> contains a non-trivial simple subgroup <m>H</m> with <m>[G : H] = 2</m>. Prove that <m>H</m> is the only non-trivial proper normal subgroup of <m>G</m>.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+  
+            <solution>
+              <p>
+                Let <m>x\in N</m> and let <m>g\in G</m>. As <m>N</m> is normal, we see <m>gxg\inv\in N</m>, and thus one of the following must be true: - <m>gxg\inv=e</m>, where <m>e</m> is the identity element of <m>G</m>, or - <m>gxg\inv=x</m>, the only other element of <m>N</m>. However, in the first case we would have <m>x=e</m> by multiplying <m>g</m> and <m>g\inv</m> over, and thus it must be the case that <m>gxg\inv=x</m>, or <m>gx=xg</m>. Thus <m>x\in Z(G)</m>.
+              </p>
+  
+              <p>
+                From Lagrange's Theorem we know that <m>|G|/|H|=2</m>, meaning that <m>G</m> has an even number of elements. Thus <m>2</m> is the smallest prime dividing the order of <m>G</m>, making <m>H</m> normal in <m>G</m> (See: ).
+              </p>
+  
+              <p>
+                Suppose by way of contradiction there exists some non-trivial proper normal subgroup <m>N</m> of <m>G</m> that is not <m>H</m>. As <m>H</m> is normal, by the Second Isomorphism Theorem we have <m>H\cap N\nsg H</m>. However, as <m>H</m> is simple, this means that <m>H\cap N=\{e\}</m>. SIT also tells us that <m>HN\leq G</m>. As <m>|H|=|G|/2</m>, this makes <m>|N|=2</m> and <m>G=HN</m>. From part (a), <m>N\leq Z(G)</m>. However, this contradicts Lagrange’s Theorem, as <m>2</m> does not divide any odd numbers.
+              </p>
+            </solution>
+          </exercise>
+  
+          <exercise>
+            <statement>
+              <p>
+                Let <m>G</m> be a group and <m>H</m> a subgroup of <m>G</m>. Recall that the centralizer of <m>H</m> in <m>G</m> is 
+                <me>
+                  C_H(G)=\{g\in G|gh=h\;\text{for all}\;h\in H\}
+                </me>
+                Prove that if <m>H</m> is normal in <m>G</m>, then so is <m>C_G(H)</m> and that <m>G/C_G(H)</m> is isomorphic to a subgroup of the automorphism group of <m>H</m>.
+              </p>
+              
+            </statement>
+  
+          </exercise>
+      
+        </exercisegroup>
 
 
       </exercises>
