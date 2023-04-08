@@ -12,7 +12,31 @@
 </head>
 <body class="ignore-math">
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<div class="para">Let <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> be two <span class="process-math">\(3\times 3\)</span> matrices with entries in <span class="process-math">\(F\text{.}\)</span> First, suppose that <span class="process-math">\(A\sim B\)</span> . Matrices are similar if and only if they share the same invariant factors. As minimum polynomial is an invariant factor and the characteristic polynomial is a product of the invariant factors, we see that <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> must share the same invariant factors.</div>
+<div class="para logical">
+<div class="para">Two matrices are similar if and only if they share the same invariant factors. Given that invariant factors divide <span class="process-math">\(\cp_A(x)\)</span> and each invariant factor must divide the following one, the possible sets of invariant factors for <span class="process-math">\(A\)</span> are the following: - <span class="process-math">\(\{(x-1)^4\}\text{,}\)</span> - <span class="process-math">\(\{(x-1),(x-1)^3\}\text{,}\)</span> - <span class="process-math">\(\{(x-1), (x-1), (x-1)^2\}\text{,}\)</span> - <span class="process-math">\(\{(x-1)^2, (x-1)^2\}\text{,}\)</span> and - <span class="process-math">\(\{(x-1), (x-1), (x-1), (x-1)\}\text{.}\)</span> We identify the companion matrices for each possible invariant factor:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C(x-1)=\begin{bmatrix} 1 \end{bmatrix},
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C((x-1)^2)=C(x^2-2x+1)=\begin{bmatrix} 0 &amp; -1 \\ 1 &amp; 2\end{bmatrix},
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C((x-1)^3)=C(x^3+3x^2+3x-1)=\begin{bmatrix} 0 &amp; 0 &amp; 1 \\ 1 &amp; 0 &amp; -3 \\ 0 &amp; 1 &amp; -3\end{bmatrix},
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C((x-1)^4)=C(x^4-4x^3+6x^2-4x+1)=\begin{bmatrix} 0 &amp; 0 &amp; 0 &amp; -1 \\ 1 &amp; 0 &amp; 0 &amp; 4 \\ 0 &amp; 1 &amp; 0 &amp; -6 \\ 0 &amp; 0 &amp; 1 &amp; 4\end{bmatrix}.
+\end{equation*}
+</div>
+<div class="para">We define the following: 1. <span class="process-math">\(B=C((x-1)^4)\text{,}\)</span> 2. <span class="process-math">\(C=C(x-1)\oplus C((x-1)^3)\text{,}\)</span> 3. <span class="process-math">\(D=C(x-1)\oplus C(x-1)\oplus C((x-1)^2)\text{,}\)</span> 4. <span class="process-math">\(E=C((x-1)^2)\oplus C((x-1)^2)\text{,}\)</span> and 5. <span class="process-math">\(F=C(x-1)\oplus C(x-1)\oplus C(x-1)\oplus C(x-1)\text{.}\)</span> As each of these matrices is in RCF, they are explicit representatives for each similarity class.</div>
+</div>
 <span class="incontext"><a href="sec-minpoly.html#p-2269" class="internal">in-context</a></span>
 </body>
 </html>

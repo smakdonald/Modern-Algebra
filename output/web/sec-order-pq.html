@@ -546,8 +546,12 @@ window.MathJax = {
 <ul class="structural"><li><div class="toc-item"><a href="graction.html#exercises-12" class="internal"><span class="codenumber">4.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
-<div class="toc-item"><a href="sec-conjugation.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Left Multiplication and Conjugation</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-conjugation.html#exercises-13" class="internal"><span class="codenumber">4.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-item"><a href="sec-self-actions.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Self Actions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-self-actions.html#subsec-conjugation-action" class="internal"><span class="title">Self Conjugation</span></a></div></li>
+<li><div class="toc-item"><a href="sec-self-actions.html#subsec-left-multiplication" class="internal"><span class="title">Left Regualr Action</span></a></div></li>
+<li><div class="toc-item"><a href="sec-self-actions.html#exercises-13" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-lois.html" class="internal"><span class="codenumber">4.3</span> <span class="title">LOIS and Orbit-Stabilizer</span></a></div>
@@ -613,7 +617,7 @@ window.MathJax = {
 <div class="toc-item"><a href="sec-quals.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Qualifying Exams</span></a></div>
 <ul class="structural">
 <li>
-<div class="toc-item"><a href="sec-quals.html#subsection-9" class="internal"><span class="title">Winter 2023</span></a></div>
+<div class="toc-item"><a href="sec-quals.html#subsection-11" class="internal"><span class="title">Winter 2023</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-quals.html#subsubsection-1" class="internal"><span class="title">Group Theory</span></a></div></li>
 <li><div class="toc-item"><a href="sec-quals.html#subsubsection-2" class="internal"><span class="title">Rings, Modules, Linear Algebra</span></a></div></li>
@@ -621,7 +625,7 @@ window.MathJax = {
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="sec-quals.html#subsection-10" class="internal"><span class="title">Summer 2023</span></a></div>
+<div class="toc-item"><a href="sec-quals.html#subsection-12" class="internal"><span class="title">Summer 2023</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-quals.html#subsubsection-4" class="internal"><span class="title">Group Theory</span></a></div></li>
 <li><div class="toc-item"><a href="sec-quals.html#subsubsection-5" class="internal"><span class="title">Rings, Modules, Linear Algebra</span></a></div></li>
@@ -629,7 +633,7 @@ window.MathJax = {
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="sec-quals.html#subsection-11" class="internal"><span class="title">Winter 2022</span></a></div>
+<div class="toc-item"><a href="sec-quals.html#subsection-13" class="internal"><span class="title">Winter 2022</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-quals.html#subsubsection-7" class="internal"><span class="title">Group Theory</span></a></div></li>
 <li><div class="toc-item"><a href="sec-quals.html#subsubsection-8" class="internal"><span class="title">Rings, Modules, Linear Algebra</span></a></div></li>
@@ -637,7 +641,7 @@ window.MathJax = {
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="sec-quals.html#subsection-12" class="internal"><span class="title">Summer 2022</span></a></div>
+<div class="toc-item"><a href="sec-quals.html#subsection-14" class="internal"><span class="title">Summer 2022</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-quals.html#subsubsection-10" class="internal"><span class="title">Group Theory</span></a></div></li>
 <li><div class="toc-item"><a href="sec-quals.html#subsubsection-11" class="internal"><span class="title">Rings, Modules, Linear Algebra</span></a></div></li>
@@ -647,7 +651,8 @@ window.MathJax = {
 </ul>
 </li>
 <li><div class="toc-item"><a href="sec-solve.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Solvable Groups</span></a></div></li>
-<li><div class="toc-item"><a href="sec-smallorder.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Groups of Small Order</span></a></div></li>
+<li><div class="toc-item"><a href="sec-sn-conjugacy.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Conjugation in <span class="process-math">\(S_n\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec-smallorder.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Groups of Small Order</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -1007,44 +1012,44 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-order-pq"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">6.3</span> <span class="title">Groups of Order <span class="process-math">\(pq\)</span></span>
 </h2>
-<div class="para" id="p-810"></div>
+<div class="para" id="p-800"></div>
 <section class="exercises" id="exercises-21"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
 <div class="exercisegroup" id="exercisegroup-52">
 <h4 class="heading"><span class="title">Computations and Examples.</span></h4>
-<div class="introduction" id="introduction-55"><div class="para" id="p-811"></div></div>
+<div class="introduction" id="introduction-55"><div class="para" id="p-801"></div></div>
 <div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-107"><h5 class="heading">
 <span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
 </h5>
-<div class="para" id="p-812">Coming soon to an OER near you!</div>
+<div class="para" id="p-802">Coming soon to an OER near you!</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-31" id="hint-31"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-31"><div class="hint solution-like"><div class="para" id="p-813">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-33" id="solution-33"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-33"><div class="solution solution-like"><div class="para" id="p-814">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-31" id="hint-31"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-31"><div class="hint solution-like"><div class="para" id="p-803">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-31" id="solution-31"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-31"><div class="solution solution-like"><div class="para" id="p-804">Coming soon to an OER near you!</div></div></div>
 </div></article></div>
 </div>
 <div class="exercisegroup" id="exercisegroup-53">
 <h4 class="heading"><span class="title">Formal Proofs.</span></h4>
-<div class="introduction" id="introduction-56"><div class="para" id="p-815"></div></div>
+<div class="introduction" id="introduction-56"><div class="para" id="p-805"></div></div>
 <div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-108"><h5 class="heading">
 <span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
 </h5>
-<div class="para" id="p-816">Coming soon to an OER near you!</div>
+<div class="para" id="p-806">Coming soon to an OER near you!</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-32" id="hint-32"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-32"><div class="hint solution-like"><div class="para" id="p-817">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-34" id="solution-34"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-34"><div class="solution solution-like"><div class="para" id="p-818">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-32" id="hint-32"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-32"><div class="hint solution-like"><div class="para" id="p-807">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-32" id="solution-32"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-32"><div class="solution solution-like"><div class="para" id="p-808">Coming soon to an OER near you!</div></div></div>
 </div></article></div>
 </div>
 <div class="exercisegroup" id="exercisegroup-54">
 <h4 class="heading"><span class="title">Qualifying Exam Problems.</span></h4>
-<div class="introduction" id="introduction-57"><div class="para" id="p-819"></div></div>
+<div class="introduction" id="introduction-57"><div class="para" id="p-809"></div></div>
 <div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-109"><h5 class="heading">
 <span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
 </h5>
-<div class="para" id="p-820">Coming soon to an OER near you!</div>
+<div class="para" id="p-810">Coming soon to an OER near you!</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-33" id="hint-33"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-33"><div class="hint solution-like"><div class="para" id="p-821">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-35" id="solution-35"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-35"><div class="solution solution-like"><div class="para" id="p-822">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-33" id="hint-33"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-33"><div class="hint solution-like"><div class="para" id="p-811">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-33" id="solution-33"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-33"><div class="solution solution-like"><div class="para" id="p-812">Coming soon to an OER near you!</div></div></div>
 </div></article></div>
 </div></section></section></div>
 <div class="ptx-content-footer">

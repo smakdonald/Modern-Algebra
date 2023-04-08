@@ -546,8 +546,12 @@ window.MathJax = {
 <ul class="structural"><li><div class="toc-item"><a href="graction.html#exercises-12" class="internal"><span class="codenumber">4.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
-<div class="toc-item"><a href="sec-conjugation.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Left Multiplication and Conjugation</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-conjugation.html#exercises-13" class="internal"><span class="codenumber">4.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-item"><a href="sec-self-actions.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Self Actions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-self-actions.html#subsec-conjugation-action" class="internal"><span class="title">Self Conjugation</span></a></div></li>
+<li><div class="toc-item"><a href="sec-self-actions.html#subsec-left-multiplication" class="internal"><span class="title">Left Regualr Action</span></a></div></li>
+<li><div class="toc-item"><a href="sec-self-actions.html#exercises-13" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-lois.html" class="internal"><span class="codenumber">4.3</span> <span class="title">LOIS and Orbit-Stabilizer</span></a></div>
@@ -613,7 +617,7 @@ window.MathJax = {
 <div class="toc-item"><a href="sec-quals.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Qualifying Exams</span></a></div>
 <ul class="structural">
 <li>
-<div class="toc-item"><a href="sec-quals.html#subsection-9" class="internal"><span class="title">Winter 2023</span></a></div>
+<div class="toc-item"><a href="sec-quals.html#subsection-11" class="internal"><span class="title">Winter 2023</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-quals.html#subsubsection-1" class="internal"><span class="title">Group Theory</span></a></div></li>
 <li><div class="toc-item"><a href="sec-quals.html#subsubsection-2" class="internal"><span class="title">Rings, Modules, Linear Algebra</span></a></div></li>
@@ -621,7 +625,7 @@ window.MathJax = {
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="sec-quals.html#subsection-10" class="internal"><span class="title">Summer 2023</span></a></div>
+<div class="toc-item"><a href="sec-quals.html#subsection-12" class="internal"><span class="title">Summer 2023</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-quals.html#subsubsection-4" class="internal"><span class="title">Group Theory</span></a></div></li>
 <li><div class="toc-item"><a href="sec-quals.html#subsubsection-5" class="internal"><span class="title">Rings, Modules, Linear Algebra</span></a></div></li>
@@ -629,7 +633,7 @@ window.MathJax = {
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="sec-quals.html#subsection-11" class="internal"><span class="title">Winter 2022</span></a></div>
+<div class="toc-item"><a href="sec-quals.html#subsection-13" class="internal"><span class="title">Winter 2022</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-quals.html#subsubsection-7" class="internal"><span class="title">Group Theory</span></a></div></li>
 <li><div class="toc-item"><a href="sec-quals.html#subsubsection-8" class="internal"><span class="title">Rings, Modules, Linear Algebra</span></a></div></li>
@@ -637,7 +641,7 @@ window.MathJax = {
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="sec-quals.html#subsection-12" class="internal"><span class="title">Summer 2022</span></a></div>
+<div class="toc-item"><a href="sec-quals.html#subsection-14" class="internal"><span class="title">Summer 2022</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-quals.html#subsubsection-10" class="internal"><span class="title">Group Theory</span></a></div></li>
 <li><div class="toc-item"><a href="sec-quals.html#subsubsection-11" class="internal"><span class="title">Rings, Modules, Linear Algebra</span></a></div></li>
@@ -647,7 +651,8 @@ window.MathJax = {
 </ul>
 </li>
 <li><div class="toc-item"><a href="sec-solve.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Solvable Groups</span></a></div></li>
-<li><div class="toc-item"><a href="sec-smallorder.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Groups of Small Order</span></a></div></li>
+<li><div class="toc-item"><a href="sec-sn-conjugacy.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Conjugation in <span class="process-math">\(S_n\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec-smallorder.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Groups of Small Order</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -1010,7 +1015,7 @@ window.MathJax = {
 <article class="definition definition-like" id="def-ed"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.1</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-1258">
+<div class="para logical" id="p-1250">
 <div class="para">A <em class="emphasis">Euclidean domain (ED)</em> is a domain <span class="process-math">\(R\)</span> together with a function <span class="process-math">\(N: R \to \Z_{\geq 0}\)</span> such that <span class="process-math">\(N(0) = 0\)</span> and the following property holds: for any two elements <span class="process-math">\(a, b \in R\)</span> with <span class="process-math">\(b \ne 0\text{,}\)</span> there are elements <span class="process-math">\(q\)</span> and <span class="process-math">\(r\)</span> of <span class="process-math">\(R\)</span> such that</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1020,7 +1025,7 @@ a = qb + r \;\text{and either}\; r = 0 \;\text{or}\; N(r) &lt; N(b).
 </div></article><article class="example example-like" id="ex-trivial-norm"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-1259">
+<div class="para logical" id="p-1251">
 <div class="para">A "degenerate example" is a field <span class="process-math">\(F\)</span> equipped with the trivial norm <span class="process-math">\(N(r) = 0\)</span> for all <span class="process-math">\(r\text{.}\)</span> Given <span class="process-math">\(a,b \in F\)</span> with <span class="process-math">\(b \ne 0\text{,}\)</span> we have <span class="process-math">\(a =(ab^{-1})b + 0\text{.}\)</span> Note that in this example there is no need to include <span class="process-math">\(r=0\)</span> in the description of the division algorithm, since <span class="process-math">\(b \ne 0\)</span> implies <span class="process-math">\(|0| &lt; |b|\text{.}\)</span> This is not the case in other examples. Also observe that as we've defined remainders they are {} unique. For example, in dividing <span class="process-math">\(13\)</span> by <span class="process-math">\(5\text{,}\)</span> both</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1031,7 +1036,7 @@ a = qb + r \;\text{and either}\; r = 0 \;\text{or}\; N(r) &lt; N(b).
 </div></article><article class="problem example-like" id="ex-gaussian-integers-are-an-ed"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.3</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-1260">
+<div class="para logical" id="p-1252">
 <div class="para">The ring <span class="process-math">\(R = \Z[i]\)</span> of Gaussian integers is a Euclidean domain with <span class="process-math">\(N\)</span> being the usual complex (Euclidean) square norm <span class="process-math">\(N(a+bi)=a^2+b^2\text{.}\)</span> Let <span class="process-math">\(\alpha\text{,}\)</span> <span class="process-math">\(\beta\)</span> <span class="process-math">\(\in \Z[i]\)</span> and let <span class="process-math">\(\frac{\alpha}{\beta}=p+qi \in \Q(i)\)</span> (here we use that the fraction field of <span class="process-math">\(\Z[i]\)</span> is <span class="process-math">\(\Q(i)\)</span>). Now pick <span class="process-math">\(s,t\in\Z\)</span> so that <span class="process-math">\(|p-s|\leq 1/2\)</span> and <span class="process-math">\(|q-t|\leq 1/2\text{.}\)</span> We have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1048,58 +1053,58 @@ N(r)=N(\beta(s+ti-(p+qi)))=N(\beta)N(s+ti-(p+qi))\leq N(\beta)\cdot(1/4+1/4)&lt;
 </div></article><article class="problem example-like" id="ex-degree-and-norm"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.4</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1261">The next classical example is <span class="process-math">\(R = F[x]\)</span> with <span class="process-math">\(F\)</span> a field and where we define the norm to be degree: <span class="process-math">\(N(f(x)) = \deg(f(x))\)</span> if <span class="process-math">\(f\neq 0\)</span> and <span class="process-math">\(N(0)=0\text{.}\)</span> This ring is a ED because of the familiar long division for polynomials.</div></article><article class="definition definition-like" id="def-ed-gcd"><h3 class="heading">
+<div class="para" id="p-1253">The next classical example is <span class="process-math">\(R = F[x]\)</span> with <span class="process-math">\(F\)</span> a field and where we define the norm to be degree: <span class="process-math">\(N(f(x)) = \deg(f(x))\)</span> if <span class="process-math">\(f\neq 0\)</span> and <span class="process-math">\(N(0)=0\text{.}\)</span> This ring is a ED because of the familiar long division for polynomials.</div></article><article class="definition definition-like" id="def-ed-gcd"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.5</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-1262">
+<div class="para logical" id="p-1254">
 <div class="para">Given elements <span class="process-math">\(a, b\text{,}\)</span> not both <span class="process-math">\(0\text{,}\)</span> of a Euclidean domain <span class="process-math">\(R\)</span> with Euclidean norm <span class="process-math">\(N\text{,}\)</span> a <span class="process-math">\(\gcd\)</span> of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> is an element <span class="process-math">\(g \in\R\)</span> such that:</div>
 <ol class="decimal">
-<li id="li-361"><div class="para" id="p-1263">
+<li id="li-357"><div class="para" id="p-1255">
 <span class="process-math">\(g | a\)</span> and <span class="process-math">\(g | b\text{;}\)</span> and</div></li>
-<li id="li-362"><div class="para" id="p-1264">If <span class="process-math">\(d | a\)</span> and <span class="process-math">\(d | b\text{,}\)</span> then <span class="process-math">\(N (d) \leq N (g)\text{.}\)</span>
+<li id="li-358"><div class="para" id="p-1256">If <span class="process-math">\(d | a\)</span> and <span class="process-math">\(d | b\text{,}\)</span> then <span class="process-math">\(N (d) \leq N (g)\text{.}\)</span>
 </div></li>
 </ol>
 </div></article><article class="remark remark-like" id="remark-23"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">4.6</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1265">Note that <span class="process-math">\(b\mid a\)</span> is equivalent to <span class="process-math">\(b\in(a)\text{.}\)</span>
+<div class="para" id="p-1257">Note that <span class="process-math">\(b\mid a\)</span> is equivalent to <span class="process-math">\(b\in(a)\text{.}\)</span>
 </div></article><section class="exercises" id="exercises-32"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
 <div class="exercisegroup" id="exercisegroup-82">
 <h4 class="heading"><span class="title">Computations and Examples.</span></h4>
-<div class="introduction" id="introduction-85"><div class="para" id="p-1266"></div></div>
+<div class="introduction" id="introduction-85"><div class="para" id="p-1258"></div></div>
 <div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-141"><h5 class="heading">
 <span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
 </h5>
-<div class="para" id="p-1267">Coming soon to an OER near you!</div>
+<div class="para" id="p-1259">Coming soon to an OER near you!</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-61" id="hint-61"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-61"><div class="hint solution-like"><div class="para" id="p-1268">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-65" id="solution-65"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-65"><div class="solution solution-like"><div class="para" id="p-1269">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-61" id="hint-61"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-61"><div class="hint solution-like"><div class="para" id="p-1260">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-63" id="solution-63"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-63"><div class="solution solution-like"><div class="para" id="p-1261">Coming soon to an OER near you!</div></div></div>
 </div></article></div>
 </div>
 <div class="exercisegroup" id="exercisegroup-83">
 <h4 class="heading"><span class="title">Formal Proofs.</span></h4>
-<div class="introduction" id="introduction-86"><div class="para" id="p-1270"></div></div>
+<div class="introduction" id="introduction-86"><div class="para" id="p-1262"></div></div>
 <div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-142"><h5 class="heading">
 <span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
 </h5>
-<div class="para" id="p-1271">Coming soon to an OER near you!</div>
+<div class="para" id="p-1263">Coming soon to an OER near you!</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-62" id="hint-62"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-62"><div class="hint solution-like"><div class="para" id="p-1272">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-66" id="solution-66"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-66"><div class="solution solution-like"><div class="para" id="p-1273">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-62" id="hint-62"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-62"><div class="hint solution-like"><div class="para" id="p-1264">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-64" id="solution-64"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-64"><div class="solution solution-like"><div class="para" id="p-1265">Coming soon to an OER near you!</div></div></div>
 </div></article></div>
 </div>
 <div class="exercisegroup" id="exercisegroup-84">
 <h4 class="heading"><span class="title">Qualifying Exam Problems.</span></h4>
-<div class="introduction" id="introduction-87"><div class="para" id="p-1274"></div></div>
+<div class="introduction" id="introduction-87"><div class="para" id="p-1266"></div></div>
 <div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-143"><h5 class="heading">
 <span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
 </h5>
-<div class="para" id="p-1275">Coming soon to an OER near you!</div>
+<div class="para" id="p-1267">Coming soon to an OER near you!</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-63" id="hint-63"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-63"><div class="hint solution-like"><div class="para" id="p-1276">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-67" id="solution-67"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-67"><div class="solution solution-like"><div class="para" id="p-1277">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-63" id="hint-63"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-63"><div class="hint solution-like"><div class="para" id="p-1268">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-65" id="solution-65"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-65"><div class="solution solution-like"><div class="para" id="p-1269">Coming soon to an OER near you!</div></div></div>
 </div></article></div>
 </div></section></section></div>
 <div class="ptx-content-footer">

@@ -967,7 +967,14 @@
 
         <section xml:id="sec-solve">
           <title>Solvable Groups</title>
+          <p></p>
           
+        </section>
+
+        <section xml:id="sec-sn-conjugacy">
+          <title>Conjugation in <m>S_n</m></title>
+          
+          <p></p>
         </section>
 
         <section xml:id="sec-smallorder">

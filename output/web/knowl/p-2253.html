@@ -12,7 +12,20 @@
 </head>
 <body class="ignore-math">
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<div class="para">Given an <span class="process-math">\(n \times n\)</span> matrix <span class="process-math">\(A\)</span> and polynomial <span class="process-math">\(g(x)\in F[x]\)</span>[^2], we have <span class="process-math">\(g(A) = 0\)</span> if and only if <span class="process-math">\(g(x)\)</span> annihilates the <span class="process-math">\(F[x]\)</span>-module <span class="process-math">\(F^n_A\text{.}\)</span>
+<div class="para logical">
+<div class="para">Let’s find the minimum polynomial of</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{bmatrix}
+1 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp;  0 &amp; 1 &amp; 1 \\
+0 &amp;  0 &amp; 0 &amp; 1 \\
+\end{bmatrix}
+\end{equation*}
+</div>
+<div class="para">As in the previous example, <span class="process-math">\(\cp_A(x) = (x-1)^4\)</span> and so by the Cayley-Hamilton Theorem <span class="process-math">\(\mp_A(x) = (x-1)^j\)</span> for some <span class="process-math">\(j \leq 4\text{.}\)</span> This time we notice that <span class="process-math">\((A-I_4)^2 = 0\)</span> and so, since <span class="process-math">\((A-I_4) \ne 0\text{,}\)</span> <span class="process-math">\(\mp_A(x) = \cp_A(x) = (x-1)^2\text{.}\)</span>
+</div>
 </div>
 <span class="incontext"><a href="sec-minpoly.html#p-2253" class="internal">in-context</a></span>
 </body>

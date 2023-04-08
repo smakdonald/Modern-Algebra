@@ -546,8 +546,12 @@ window.MathJax = {
 <ul class="structural"><li><div class="toc-item"><a href="graction.html#exercises-12" class="internal"><span class="codenumber">4.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
-<div class="toc-item"><a href="sec-conjugation.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Left Multiplication and Conjugation</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-conjugation.html#exercises-13" class="internal"><span class="codenumber">4.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-item"><a href="sec-self-actions.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Self Actions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-self-actions.html#subsec-conjugation-action" class="internal"><span class="title">Self Conjugation</span></a></div></li>
+<li><div class="toc-item"><a href="sec-self-actions.html#subsec-left-multiplication" class="internal"><span class="title">Left Regualr Action</span></a></div></li>
+<li><div class="toc-item"><a href="sec-self-actions.html#exercises-13" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-lois.html" class="internal"><span class="codenumber">4.3</span> <span class="title">LOIS and Orbit-Stabilizer</span></a></div>
@@ -613,7 +617,7 @@ window.MathJax = {
 <div class="toc-item"><a href="sec-quals.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Qualifying Exams</span></a></div>
 <ul class="structural">
 <li>
-<div class="toc-item"><a href="sec-quals.html#subsection-9" class="internal"><span class="title">Winter 2023</span></a></div>
+<div class="toc-item"><a href="sec-quals.html#subsection-11" class="internal"><span class="title">Winter 2023</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-quals.html#subsubsection-1" class="internal"><span class="title">Group Theory</span></a></div></li>
 <li><div class="toc-item"><a href="sec-quals.html#subsubsection-2" class="internal"><span class="title">Rings, Modules, Linear Algebra</span></a></div></li>
@@ -621,7 +625,7 @@ window.MathJax = {
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="sec-quals.html#subsection-10" class="internal"><span class="title">Summer 2023</span></a></div>
+<div class="toc-item"><a href="sec-quals.html#subsection-12" class="internal"><span class="title">Summer 2023</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-quals.html#subsubsection-4" class="internal"><span class="title">Group Theory</span></a></div></li>
 <li><div class="toc-item"><a href="sec-quals.html#subsubsection-5" class="internal"><span class="title">Rings, Modules, Linear Algebra</span></a></div></li>
@@ -629,7 +633,7 @@ window.MathJax = {
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="sec-quals.html#subsection-11" class="internal"><span class="title">Winter 2022</span></a></div>
+<div class="toc-item"><a href="sec-quals.html#subsection-13" class="internal"><span class="title">Winter 2022</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-quals.html#subsubsection-7" class="internal"><span class="title">Group Theory</span></a></div></li>
 <li><div class="toc-item"><a href="sec-quals.html#subsubsection-8" class="internal"><span class="title">Rings, Modules, Linear Algebra</span></a></div></li>
@@ -637,7 +641,7 @@ window.MathJax = {
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="sec-quals.html#subsection-12" class="internal"><span class="title">Summer 2022</span></a></div>
+<div class="toc-item"><a href="sec-quals.html#subsection-14" class="internal"><span class="title">Summer 2022</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-quals.html#subsubsection-10" class="internal"><span class="title">Group Theory</span></a></div></li>
 <li><div class="toc-item"><a href="sec-quals.html#subsubsection-11" class="internal"><span class="title">Rings, Modules, Linear Algebra</span></a></div></li>
@@ -647,7 +651,8 @@ window.MathJax = {
 </ul>
 </li>
 <li><div class="toc-item"><a href="sec-solve.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Solvable Groups</span></a></div></li>
-<li><div class="toc-item"><a href="sec-smallorder.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Groups of Small Order</span></a></div></li>
+<li><div class="toc-item"><a href="sec-sn-conjugacy.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Conjugation in <span class="process-math">\(S_n\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec-smallorder.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Groups of Small Order</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -1008,9 +1013,9 @@ window.MathJax = {
 <span class="type">Section</span> <span class="codenumber">4.4</span> <span class="title">The Class Equation</span>
 </h2>
 <article class="definition definition-like" id="def-centralizer"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.27</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.24</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-632">
+<div class="para logical" id="p-622">
 <div class="para">Let <span class="process-math">\(G\)</span> be a group. For any <span class="process-math">\(g \in G\text{,}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -1028,9 +1033,9 @@ N_G(S):= \{g \in G \mid gSg^{-1}=S\}
 <div class="para">is called the <em class="emphasis">normalizer</em> of <span class="process-math">\(S\)</span> in <span class="process-math">\(G\text{.}\)</span>
 </div>
 </div></article><article class="definition definition-like" id="def-normalizer"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.28</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.25</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-633">
+<div class="para logical" id="p-623">
 <div class="para">Let <span class="process-math">\(G\)</span> be a group. For any <span class="process-math">\(S \subseteq G\text{,}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -1041,42 +1046,42 @@ N_G(S):= \{g \in G \mid gSg^{-1}=S\}
 <div class="para">is called the <em class="emphasis">normalizer</em> of <span class="process-math">\(S\)</span> in <span class="process-math">\(G\text{.}\)</span>
 </div>
 </div></article><article class="theorem theorem-like" id="thm-conjclass"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.29</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.26</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-634"><ol class="decimal">
-<li id="li-203"><div class="para" id="p-635">Then <span class="process-math">\(G\)</span> acts on <span class="process-math">\(G\)</span> by conjugation (<span class="process-math">\(g \cdot g' = gg'g^{-1}\)</span>). For all <span class="process-math">\(g \in G\text{,}\)</span> the orbit of <span class="process-math">\(g\)</span> is the conjugacy class of <span class="process-math">\(g\text{,}\)</span> <span class="process-math">\(\operatorname{Stab}_G(g)=C_G(G)\)</span> and <span class="process-math">\(|[g]_c| = |G : C_G(g)|\text{.}\)</span>
+<div class="para logical" id="p-624"><ol class="decimal">
+<li id="li-199"><div class="para" id="p-625">Then <span class="process-math">\(G\)</span> acts on <span class="process-math">\(G\)</span> by conjugation (<span class="process-math">\(g \cdot g' = gg'g^{-1}\)</span>). For all <span class="process-math">\(g \in G\text{,}\)</span> the orbit of <span class="process-math">\(g\)</span> is the conjugacy class of <span class="process-math">\(g\text{,}\)</span> <span class="process-math">\(\operatorname{Stab}_G(g)=C_G(G)\)</span> and <span class="process-math">\(|[g]_c| = |G : C_G(g)|\text{.}\)</span>
 </div></li>
-<li id="li-204"><div class="para" id="p-636">Then <span class="process-math">\(G\)</span> acts on the power set <span class="process-math">\(P(G)=\{S\mid S\subseteq G\}\)</span> by conjugation (<span class="process-math">\(g \cdot S = gSg^{-1}\)</span>). For all <span class="process-math">\(S \in P(G)\text{,}\)</span> <span class="process-math">\(\operatorname{Stab}_G(S)=N_G(S)\)</span> and <span class="process-math">\(|\operatorname{Orbit}_G(S)| = |G : N_G(S)|\text{.}\)</span>
+<li id="li-200"><div class="para" id="p-626">Then <span class="process-math">\(G\)</span> acts on the power set <span class="process-math">\(P(G)=\{S\mid S\subseteq G\}\)</span> by conjugation (<span class="process-math">\(g \cdot S = gSg^{-1}\)</span>). For all <span class="process-math">\(S \in P(G)\text{,}\)</span> <span class="process-math">\(\operatorname{Stab}_G(S)=N_G(S)\)</span> and <span class="process-math">\(|\operatorname{Orbit}_G(S)| = |G : N_G(S)|\text{.}\)</span>
 </div></li>
 </ol></div></article><article class="corollary theorem-like" id="cor-conjclass"><h3 class="heading">
-<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">4.30</span><span class="period">.</span>
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">4.27</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-637">For a finite group <span class="process-math">\(G\text{,}\)</span> the size of any conjugacy class divides <span class="process-math">\(|G|\text{.}\)</span>
+<div class="para" id="p-627">For a finite group <span class="process-math">\(G\text{,}\)</span> the size of any conjugacy class divides <span class="process-math">\(|G|\text{.}\)</span>
 </div></article><article class="theorem theorem-like" id="thm-class-eq"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.31</span><span class="period">.</span><span class="space"> </span><span class="title">The Class Equation.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.28</span><span class="period">.</span><span class="space"> </span><span class="title">The Class Equation.</span>
 </h3>
-<div class="para logical" id="p-638">
+<div class="para logical" id="p-628">
 <div class="para">Let <span class="process-math">\(G\)</span> be a finite group and let <span class="process-math">\(g_1,\ldots g_r \in G\)</span> be a list of unique representatives of all of the conjugacy classes of <span class="process-math">\(G\)</span> of size greater than 1. Then</div>
 <div class="displaymath process-math">
 \begin{equation*}
 |G| = |Z(G)| + \sum_i^r |G : C_G(g_i)|\text{.}
 \end{equation*}
 </div>
-</div></article><article class="hiddenproof" id="proof-23"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-23"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-23"><article class="hiddenproof"><div class="para logical" id="p-639">
+</div></article><article class="hiddenproof" id="proof-22"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-22"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-22"><article class="hiddenproof"><div class="para logical" id="p-629">
 <div class="para">The elements of <span class="process-math">\(Z(G)\)</span> are precisely the group elements that are conjugate to only themselves; that is, they are the one-element orbits for the conjugation action. Because the conjugacy classes (orbits of the conjugation action) partition <span class="process-math">\(G\)</span> we have</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-conjclass.html">
 \begin{equation*}
 |G| = |Z(G)| + \sum_i^r [g_i]_c.
 \end{equation*}
 </div>
-<div class="para">For each <span class="process-math">\(g_i\)</span> as in the statement, by Theorem <a href="" class="xref" data-knowl="./knowl/thm-conjclass.html" title="Theorem 4.29">Theorem 4.29</a>, we have <span class="process-math">\([G: C_G(g_i)] =[g_i]_c\text{.}\)</span> The class equation follows from substituting this into the equation above.</div>
+<div class="para">For each <span class="process-math">\(g_i\)</span> as in the statement, by Theorem <a href="" class="xref" data-knowl="./knowl/thm-conjclass.html" title="Theorem 4.26">Theorem 4.26</a>, we have <span class="process-math">\([G: C_G(g_i)] =[g_i]_c\text{.}\)</span> The class equation follows from substituting this into the equation above.</div>
 </div></article></div>
-<article class="problem example-like" id="problem-23"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.32</span><span class="period">.</span>
+<article class="problem example-like" id="problem-17"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.29</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-640">Let <span class="process-math">\(G\)</span> be a finite <span class="process-math">\(p\)</span>-group and <span class="process-math">\(Z\)</span> its center. If <span class="process-math">\(N\neq \{e\}\)</span> is a normal subgroup of <span class="process-math">\(G\text{,}\)</span> prove that <span class="process-math">\(N\cap Z\neq\{e\}\text{.}\)</span>
-</div> <article class="hiddenproof" id="proof-24"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-24"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-24"><article class="hiddenproof"><div class="para" id="p-641">Let <span class="process-math">\(G\)</span> be a finite <span class="process-math">\(p\)</span>-group for some prime <span class="process-math">\(p\)</span> and <span class="process-math">\(N\neq {1}\)</span> a normal subgroup of <span class="process-math">\(G\text{.}\)</span>
-</div> <div class="para logical" id="p-642">
+<div class="para" id="p-630">Let <span class="process-math">\(G\)</span> be a finite <span class="process-math">\(p\)</span>-group and <span class="process-math">\(Z\)</span> its center. If <span class="process-math">\(N\neq \{e\}\)</span> is a normal subgroup of <span class="process-math">\(G\text{,}\)</span> prove that <span class="process-math">\(N\cap Z\neq\{e\}\text{.}\)</span>
+</div> <article class="hiddenproof" id="proof-23"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-23"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-23"><article class="hiddenproof"><div class="para" id="p-631">Let <span class="process-math">\(G\)</span> be a finite <span class="process-math">\(p\)</span>-group for some prime <span class="process-math">\(p\)</span> and <span class="process-math">\(N\neq {1}\)</span> a normal subgroup of <span class="process-math">\(G\text{.}\)</span>
+</div> <div class="para logical" id="p-632">
 <div class="para">First, we show that the center of <span class="process-math">\(G\)</span> is nontrivial. Suppose by way of contradiction that <span class="process-math">\(Z(G)=\{e\}\text{.}\)</span> We examine the conjugacy classes of <span class="process-math">\(G\text{.}\)</span> From the Class Equation, we know</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1085,7 +1090,7 @@ N_G(S):= \{g \in G \mid gSg^{-1}=S\}
 </div>
 <div class="para">Note that <span class="process-math">\(|G|=p^n\)</span> for some <span class="process-math">\(n\in\N\text{,}\)</span> meaning that the only divisors of <span class="process-math">\(|G|\)</span> are powers of <span class="process-math">\(p\text{.}\)</span> In finite groups, each conjugacy class must divide the order of the group. By Lagrange’s Theorem, <span class="process-math">\(|G : C_G(g_i)|=\frac{|G|}{|C_G(g_i)|}=\frac{p^n}{p^m}=p^k\text{,}\)</span> where <span class="process-math">\(m,k\in\N\text{.}\)</span> Since |Z(G)|=1, we see that <span class="process-math">\(\sum_i^r |G : C_G(g_i)|\bigg|p^n-1\text{,}\)</span> which is impossible given that <span class="process-math">\(p^n-1 \not|p^n\text{.}\)</span> Thus <span class="process-math">\(Z(G)\neq\{e\}\text{.}\)</span>
 </div>
-</div> <div class="para logical" id="p-643">
+</div> <div class="para logical" id="p-633">
 <div class="para">As <span class="process-math">\(N\nsg G\)</span> it is a union of conjugacy classes of the elements it contains, one of which is <span class="process-math">\(e\text{.}\)</span> Assume by way of contradiction that <span class="process-math">\(N\cap Z(G)={e}\text{,}\)</span> meaning that <span class="process-math">\(e\)</span> is the only element in <span class="process-math">\(N\)</span> whose conjugacy class is a singleton. This yields</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1094,12 +1099,12 @@ N_G(S):= \{g \in G \mid gSg^{-1}=S\}
 </div>
 <div class="para">However, by Lagrange’s Theorem <span class="process-math">\(N\)</span> must also be a <span class="process-math">\(p-\)</span>group, and thus by an analogous element counting argument as above we see that there exists some <span class="process-math">\(x\in N\)</span> such that <span class="process-math">\(C_G(x)=\{x\}\text{,}\)</span> or that <span class="process-math">\(gxg\inv=x\)</span> for all <span class="process-math">\(g\in G\text{.}\)</span> Thankfully, this means that <span class="process-math">\(x\in Z(G)\text{,}\)</span> and thus we have <span class="process-math">\(Z(G)\cap N\neq 1\text{.}\)</span>
 </div>
-</div></article></div></article><article class="problem example-like" id="problem-24"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.33</span><span class="period">.</span>
+</div></article></div></article><article class="problem example-like" id="problem-18"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.30</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-644">Let <span class="process-math">\(G\)</span> be a group of order <span class="process-math">\(p^n\)</span> where <span class="process-math">\(p\)</span> is a prime and <span class="process-math">\(n \geq 1\text{.}\)</span> (a) Prove the center of G is not trivial. (b) Prove there exists a subgroup of order <span class="process-math">\(p^j\)</span> for each <span class="process-math">\(j\)</span> satisfying <span class="process-math">\(0 \leq j \leq n.\)</span>
-</div> <article class="hiddenproof" id="proof-25"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-25"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-25"><article class="hiddenproof"><div class="para" id="p-645">Let <span class="process-math">\(G\)</span> be a group of order <span class="process-math">\(p^n\)</span> where <span class="process-math">\(p\)</span> is a prime and <span class="process-math">\(n \geq 1\text{.}\)</span>
-</div> <div class="para logical" id="p-646">
+<div class="para" id="p-634">Let <span class="process-math">\(G\)</span> be a group of order <span class="process-math">\(p^n\)</span> where <span class="process-math">\(p\)</span> is a prime and <span class="process-math">\(n \geq 1\text{.}\)</span> (a) Prove the center of G is not trivial. (b) Prove there exists a subgroup of order <span class="process-math">\(p^j\)</span> for each <span class="process-math">\(j\)</span> satisfying <span class="process-math">\(0 \leq j \leq n.\)</span>
+</div> <article class="hiddenproof" id="proof-24"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-24"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-24"><article class="hiddenproof"><div class="para" id="p-635">Let <span class="process-math">\(G\)</span> be a group of order <span class="process-math">\(p^n\)</span> where <span class="process-math">\(p\)</span> is a prime and <span class="process-math">\(n \geq 1\text{.}\)</span>
+</div> <div class="para logical" id="p-636">
 <div class="para">The Class Equation tells us</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1114,26 +1119,26 @@ p^n=|Z(G)|+pk
 </div>
 <div class="para">for some <span class="process-math">\(k\in\N\text{.}\)</span> Thus the center of <span class="process-math">\(G\)</span> cannot be trivial, else we would not be able to sum to a power of <span class="process-math">\(p\text{.}\)</span>
 </div>
-</div> <div class="para" id="p-647">The trivial subgroup has order <span class="process-math">\(1=p^0\text{.}\)</span> Suppose inductively that there exists a subgroup of order <span class="process-math">\(p^{j}\)</span> that has a subgroup for every power of <span class="process-math">\(p\)</span> in between.</div> <div class="para" id="p-648">Consider, if you will, a group of order <span class="process-math">\(p^{j+1}\text{,}\)</span> <span class="process-math">\(H\text{.}\)</span> As this is a <span class="process-math">\(p\)</span>-group, by Part (a) the center is nontrivial, making it a <span class="process-math">\(p\)</span> group as well, and thus it has a subgroup of order <span class="process-math">\(p\text{,}\)</span> <span class="process-math">\(K\text{,}\)</span> which is normal in <span class="process-math">\(H\)</span> as it lies within the center, so we mod out by <span class="process-math">\(K\)</span> to see that <span class="process-math">\(H\)</span> has a subgroup of order <span class="process-math">\(p^j\text{,}\)</span> which has subgroups of all the other powers by the induction hypothesis.</div></article></div></article><section class="exercises" id="exercises-15"><h3 class="heading hide-type">
+</div> <div class="para" id="p-637">The trivial subgroup has order <span class="process-math">\(1=p^0\text{.}\)</span> Suppose inductively that there exists a subgroup of order <span class="process-math">\(p^{j}\)</span> that has a subgroup for every power of <span class="process-math">\(p\)</span> in between.</div> <div class="para" id="p-638">Consider, if you will, a group of order <span class="process-math">\(p^{j+1}\text{,}\)</span> <span class="process-math">\(H\text{.}\)</span> As this is a <span class="process-math">\(p\)</span>-group, by Part (a) the center is nontrivial, making it a <span class="process-math">\(p\)</span> group as well, and thus it has a subgroup of order <span class="process-math">\(p\text{,}\)</span> <span class="process-math">\(K\text{,}\)</span> which is normal in <span class="process-math">\(H\)</span> as it lies within the center, so we mod out by <span class="process-math">\(K\)</span> to see that <span class="process-math">\(H\)</span> has a subgroup of order <span class="process-math">\(p^j\text{,}\)</span> which has subgroups of all the other powers by the induction hypothesis.</div></article></div></article><section class="exercises" id="exercises-15"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
 <div class="exercisegroup" id="exercisegroup-37">
 <h4 class="heading"><span class="title">Computations and Examples.</span></h4>
-<div class="introduction" id="introduction-40"><div class="para" id="p-649"></div></div>
+<div class="introduction" id="introduction-40"><div class="para" id="p-639"></div></div>
 <div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-81"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
-<div class="para" id="p-650">Coming soon to an OER near you!</div></article></div>
+<div class="para" id="p-640">Coming soon to an OER near you!</div></article></div>
 </div>
 <div class="exercisegroup" id="exercisegroup-38">
 <h4 class="heading"><span class="title">Formal Proofs.</span></h4>
-<div class="introduction" id="introduction-41"><div class="para" id="p-651"></div></div>
+<div class="introduction" id="introduction-41"><div class="para" id="p-641"></div></div>
 <div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-82"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
-<div class="para" id="p-652">Coming soon to an OER near you!</div></article></div>
+<div class="para" id="p-642">Coming soon to an OER near you!</div></article></div>
 </div>
 <div class="exercisegroup" id="exercisegroup-39">
 <h4 class="heading"><span class="title">Qualifying Exam Problems.</span></h4>
-<div class="introduction" id="introduction-42"><div class="para" id="p-653"></div></div>
+<div class="introduction" id="introduction-42"><div class="para" id="p-643"></div></div>
 <div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-83"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
-<div class="para" id="p-654">Coming soon to an OER near you!</div></article></div>
+<div class="para" id="p-644">Coming soon to an OER near you!</div></article></div>
 </div></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-lois.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sylow.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

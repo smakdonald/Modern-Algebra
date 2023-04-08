@@ -12,6 +12,15 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5>
-<div class="para">Let <span class="process-math">\(G\)</span> be a group of order <span class="process-math">\(150\)</span> and suppose by way of contradiction that <span class="process-math">\(G\)</span> is simple. Notice that <span class="process-math">\(150=2\cdot 3\cdot 5^2\text{.}\)</span> By Sylow's Theorem, we know <span class="process-math">\(|\Syl_5(G)|\equiv 1\mod{5}\)</span> and divides <span class="process-math">\(6\text{,}\)</span> the only options are thus <span class="process-math">\(1\)</span> and <span class="process-math">\(6\text{.}\)</span> Since <span class="process-math">\(G\)</span> is simple, there must be exactly <span class="process-math">\(n_5=6\text{,}\)</span> where <span class="process-math">\(n_5=\Syl_5(G)\text{.}\)</span> Let <span class="process-math">\(G\)</span> act on <span class="process-math">\(\Syl_5(G)\)</span> by conjugation. Thus <span class="process-math">\(\rho: G\to S_6\)</span> is a group homomorphism. Note that <span class="process-math">\(|S_6|=720\text{,}\)</span> and that the order of <span class="process-math">\(G\)</span> does not divide <span class="process-math">\(720\text{.}\)</span> By Part (2) of Sylow's Theorem this action is transitive, meaning that the kernel of <span class="process-math">\(\rho\)</span> cannot be trivial. Thus <span class="process-math">\(\ker(\rho)\)</span> is a nontrivial normal subgroup of <span class="process-math">\(G\text{,}\)</span> a contradiction. Thus no group of order <span class="process-math">\(150\)</span> is simple.</div></article><span class="incontext"><a href="sec-simple-groups.html#proof-41" class="internal">in-context</a></span>
+<div class="para">By Sylow's Theorem we know that <span class="process-math">\(\Syl_7(G)\equiv 1\mod{7}\)</span> and <span class="process-math">\(\Syl_7(G)|2^5=32\text{.}\)</span> Thus our options are <span class="process-math">\(1\)</span> and <span class="process-math">\(8\text{.}\)</span> Suppose that <span class="process-math">\(\Syl_7(G)=8\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Let <span class="process-math">\(G\)</span> act on <span class="process-math">\(\Syl_7(G)\)</span> by conjugation, yielding the homomorphism</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\rho: G \to S_8
+\end{equation*}
+</div>
+<div class="para">via the permutation representation. This map is non-trivial from part (2) of Sylow's Theorem, but <span class="process-math">\(2^5\cdot 7^3\)</span> does not divide <span class="process-math">\(|S_8|=8!\text{,}\)</span> and thus <span class="process-math">\(\rho\)</span> cannot be injective. Then the kernel of this homomorphism is non-trivial, normal subgroup of <span class="process-math">\(G\text{.}\)</span> Thus <span class="process-math">\(G\)</span> is not simple.</div>
+</div></article><span class="incontext"><a href="sec-simple-groups.html#proof-41" class="internal">in-context</a></span>
 </body>
 </html>

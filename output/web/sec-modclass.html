@@ -546,8 +546,12 @@ window.MathJax = {
 <ul class="structural"><li><div class="toc-item"><a href="graction.html#exercises-12" class="internal"><span class="codenumber">4.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
-<div class="toc-item"><a href="sec-conjugation.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Left Multiplication and Conjugation</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-conjugation.html#exercises-13" class="internal"><span class="codenumber">4.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-item"><a href="sec-self-actions.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Self Actions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-self-actions.html#subsec-conjugation-action" class="internal"><span class="title">Self Conjugation</span></a></div></li>
+<li><div class="toc-item"><a href="sec-self-actions.html#subsec-left-multiplication" class="internal"><span class="title">Left Regualr Action</span></a></div></li>
+<li><div class="toc-item"><a href="sec-self-actions.html#exercises-13" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-lois.html" class="internal"><span class="codenumber">4.3</span> <span class="title">LOIS and Orbit-Stabilizer</span></a></div>
@@ -613,7 +617,7 @@ window.MathJax = {
 <div class="toc-item"><a href="sec-quals.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Qualifying Exams</span></a></div>
 <ul class="structural">
 <li>
-<div class="toc-item"><a href="sec-quals.html#subsection-9" class="internal"><span class="title">Winter 2023</span></a></div>
+<div class="toc-item"><a href="sec-quals.html#subsection-11" class="internal"><span class="title">Winter 2023</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-quals.html#subsubsection-1" class="internal"><span class="title">Group Theory</span></a></div></li>
 <li><div class="toc-item"><a href="sec-quals.html#subsubsection-2" class="internal"><span class="title">Rings, Modules, Linear Algebra</span></a></div></li>
@@ -621,7 +625,7 @@ window.MathJax = {
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="sec-quals.html#subsection-10" class="internal"><span class="title">Summer 2023</span></a></div>
+<div class="toc-item"><a href="sec-quals.html#subsection-12" class="internal"><span class="title">Summer 2023</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-quals.html#subsubsection-4" class="internal"><span class="title">Group Theory</span></a></div></li>
 <li><div class="toc-item"><a href="sec-quals.html#subsubsection-5" class="internal"><span class="title">Rings, Modules, Linear Algebra</span></a></div></li>
@@ -629,7 +633,7 @@ window.MathJax = {
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="sec-quals.html#subsection-11" class="internal"><span class="title">Winter 2022</span></a></div>
+<div class="toc-item"><a href="sec-quals.html#subsection-13" class="internal"><span class="title">Winter 2022</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-quals.html#subsubsection-7" class="internal"><span class="title">Group Theory</span></a></div></li>
 <li><div class="toc-item"><a href="sec-quals.html#subsubsection-8" class="internal"><span class="title">Rings, Modules, Linear Algebra</span></a></div></li>
@@ -637,7 +641,7 @@ window.MathJax = {
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="sec-quals.html#subsection-12" class="internal"><span class="title">Summer 2022</span></a></div>
+<div class="toc-item"><a href="sec-quals.html#subsection-14" class="internal"><span class="title">Summer 2022</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-quals.html#subsubsection-10" class="internal"><span class="title">Group Theory</span></a></div></li>
 <li><div class="toc-item"><a href="sec-quals.html#subsubsection-11" class="internal"><span class="title">Rings, Modules, Linear Algebra</span></a></div></li>
@@ -647,7 +651,8 @@ window.MathJax = {
 </ul>
 </li>
 <li><div class="toc-item"><a href="sec-solve.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Solvable Groups</span></a></div></li>
-<li><div class="toc-item"><a href="sec-smallorder.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Groups of Small Order</span></a></div></li>
+<li><div class="toc-item"><a href="sec-sn-conjugacy.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Conjugation in <span class="process-math">\(S_n\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec-smallorder.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Groups of Small Order</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -1010,7 +1015,7 @@ window.MathJax = {
 <section class="subsection" id="classification-of-finitely-generated-modules-over-pids"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Classification of Finitely Generated Modules over PIDs</span>
 </h3>
-<section class="paragraphs" id="thm-ftfgmopidiff"><h4 class="heading"><span class="title"><span class="process-math">\(\thm\)</span> – FTFGMOPIDIFF.</span></h4> <div class="para logical" id="p-2144">
+<section class="paragraphs" id="thm-ftfgmopidiff"><h4 class="heading"><span class="title"><span class="process-math">\(\thm\)</span> – FTFGMOPIDIFF.</span></h4> <div class="para logical" id="p-2136">
 <div class="para">Fundamental Theorem of finitely generated modules over a PID, invariant factors form Let <span class="process-math">\(R\)</span> be a PID and let <span class="process-math">\(M\)</span> be a finitely generated module. Then there exist integers <span class="process-math">\(r \geq 0, k \geq 0\text{,}\)</span> and non-zero, non-unit elements <span class="process-math">\(d_1,\ldots, d_k\)</span> of <span class="process-math">\(R\)</span> satisfying <span class="process-math">\(d_1 \mid d_2 \mid \dots \mid d_k\)</span>[^1] such that</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1018,8 +1023,8 @@ M \cong R^r \oplus R/(d_1) \oplus \dots \oplus R/(d_k).
 \end{equation*}
 </div>
 <div class="para">Moreover <span class="process-math">\(r\)</span> and <span class="process-math">\(k\)</span> are uniquely determined by <span class="process-math">\(M\text{,}\)</span> and the <span class="process-math">\(d_i\)</span>’s are unique up to associates.</div>
-</div> <section class="paragraphs" id="defn-invariant-factors"><h5 class="heading"><span class="title"><span class="process-math">\(\defn\)</span> – Invariant Factors.</span></h5> <div class="para" id="p-2145">The polynomials <span class="process-math">\(f_1, \dots, f_s\)</span> occurring in the Theorem are called the {} of the operator <span class="process-math">\(g\text{.}\)</span>
-</div></section> <section class="paragraphs" id="cor-ftfgmopriff"><h5 class="heading"><span class="title"><span class="process-math">\(\cor\)</span> – FTFGMOPRIFF.</span></h5> <div class="para logical" id="p-2146">
+</div> <section class="paragraphs" id="defn-invariant-factors"><h5 class="heading"><span class="title"><span class="process-math">\(\defn\)</span> – Invariant Factors.</span></h5> <div class="para" id="p-2137">The polynomials <span class="process-math">\(f_1, \dots, f_s\)</span> occurring in the Theorem are called the {} of the operator <span class="process-math">\(g\text{.}\)</span>
+</div></section> <section class="paragraphs" id="cor-ftfgmopriff"><h5 class="heading"><span class="title"><span class="process-math">\(\cor\)</span> – FTFGMOPRIFF.</span></h5> <div class="para logical" id="p-2138">
 <div class="para">Let <span class="process-math">\(k\)</span> be a field and <span class="process-math">\(k[x]\)</span> be the ring of polynomials with coefficients in <span class="process-math">\(k\)</span> in one variable <span class="process-math">\(x\text{.}\)</span> If <span class="process-math">\(M\)</span> a finitely generated <span class="process-math">\(k[x]\)</span>-module then</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1027,7 +1032,7 @@ M \cong k[x]^r \oplus k[x]/(f_1(x)) \oplus \cdots \oplus k[x]/(f_s(x))
 \end{equation*}
 </div>
 <div class="para">for some <span class="process-math">\(r \geq 0\text{,}\)</span> <span class="process-math">\(s \geq 0\)</span> and non-constant monic polynomials <span class="process-math">\(f_1, \dots, f_s\)</span> such that <span class="process-math">\(f_1 \mid f_2 \mid \cdots \mid f_s.\)</span> Moreover, <span class="process-math">\(r\text{,}\)</span> <span class="process-math">\(s\)</span> and <span class="process-math">\(f_1, \dots, f_s\)</span> are unique.</div>
-</div> <section class="paragraphs" id="proof.-125"><h6 class="heading"><span class="title"><em class="emphasis">Proof.</em>.</span></h6> <div class="para" id="p-2147">This follows from the Theorem since <span class="process-math">\(k[x]\)</span> is a Euclidean domain and every non-zero polynomial is associate to a unique monic one.</div></section></section> <section class="paragraphs" id="exe-kx-modules-of-dimension-4"><h5 class="heading"><span class="title"><span class="process-math">\(\exe\)</span> – <span class="process-math">\(k[x]\)</span>-Modules of Dimension <span class="process-math">\(4\)</span>.</span></h5> <div class="para" id="p-2148">Let <span class="process-math">\(k\)</span> be a field and <span class="process-math">\(M\)</span> a <span class="process-math">\(k[x]\)</span>-module such that the dimension of <span class="process-math">\(M\)</span> as a <span class="process-math">\(k\)</span>-vector space is <span class="process-math">\(4.\)</span> What are the possibilities for <span class="process-math">\(M\)</span> up to isomorphism?</div> <div class="para logical" id="p-2149">
+</div> <section class="paragraphs" id="proof.-125"><h6 class="heading"><span class="title"><em class="emphasis">Proof.</em>.</span></h6> <div class="para" id="p-2139">This follows from the Theorem since <span class="process-math">\(k[x]\)</span> is a Euclidean domain and every non-zero polynomial is associate to a unique monic one.</div></section></section> <section class="paragraphs" id="exe-kx-modules-of-dimension-4"><h5 class="heading"><span class="title"><span class="process-math">\(\exe\)</span> – <span class="process-math">\(k[x]\)</span>-Modules of Dimension <span class="process-math">\(4\)</span>.</span></h5> <div class="para" id="p-2140">Let <span class="process-math">\(k\)</span> be a field and <span class="process-math">\(M\)</span> a <span class="process-math">\(k[x]\)</span>-module such that the dimension of <span class="process-math">\(M\)</span> as a <span class="process-math">\(k\)</span>-vector space is <span class="process-math">\(4.\)</span> What are the possibilities for <span class="process-math">\(M\)</span> up to isomorphism?</div> <div class="para logical" id="p-2141">
 <div class="para">We have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1035,7 +1040,7 @@ M \cong k[x]^r \oplus k[x]/(f_1(x)) \oplus \cdots \oplus k[x]/(f_s(x))
 \end{equation*}
 </div>
 <div class="para">with <span class="process-math">\(r, s, f_1, \dots, f_s\)</span> as in the Corollary. But <span class="process-math">\(r\)</span> must be <span class="process-math">\(0\)</span> since <span class="process-math">\(k[x]\)</span> is infinite dimensional as a <span class="process-math">\(k\)</span>-vector space. Moreover, <span class="process-math">\(\dim_F k[x]/g = \deg(g)\)</span> for any non-zero polynomial <span class="process-math">\(g\text{.}\)</span> So we must have <span class="process-math">\(\sum_i \deg(f_i) = 4\text{.}\)</span> There are five possibilities: 1. <span class="process-math">\(s = 1\)</span> and <span class="process-math">\(f_1\)</span> is monic of degree <span class="process-math">\(4\text{.}\)</span> 2. <span class="process-math">\(s = 2\text{,}\)</span> <span class="process-math">\(f_1\)</span> is linear, <span class="process-math">\(f_2\)</span> is cubic and <span class="process-math">\(f_1 \mid f_2\text{.}\)</span> (So if <span class="process-math">\(f_1 = x-a\text{,}\)</span> then <span class="process-math">\(a\)</span> must be a root of <span class="process-math">\(f_2\)</span>). 3. <span class="process-math">\(s = 2\text{,}\)</span> <span class="process-math">\(f_1 = f_2\)</span> is quadratic. 4. <span class="process-math">\(s = 3\text{,}\)</span> <span class="process-math">\(f_1 = f_2\)</span> is linear and <span class="process-math">\(f_3\)</span> is quadratic with <span class="process-math">\(f_1 \mid f_3\text{.}\)</span> 5. <span class="process-math">\(s = 4\text{,}\)</span> <span class="process-math">\(f_1 = f_2 = f_3 = f_4\)</span> is linear. Now suppose <span class="process-math">\(k = \Z/p\text{.}\)</span> What is the total number of possibilities? For case <span class="process-math">\(1\text{,}\)</span> there are <span class="process-math">\(p^4\)</span> monic polynomial of degree <span class="process-math">\(4\text{.}\)</span> For case <span class="process-math">\(2\text{,}\)</span> there are <span class="process-math">\(p\)</span> choices for <span class="process-math">\(f_1\)</span> and <span class="process-math">\(p^2\)</span> choices for <span class="process-math">\(f_2\)</span> since <span class="process-math">\(f_2 = f_1 \cdot q\)</span> for a unique quadratic <span class="process-math">\(q\text{,}\)</span> for a total of <span class="process-math">\(p^3\)</span> possibilities. For case <span class="process-math">\(3\)</span> there are <span class="process-math">\(p^2\)</span> choices. For case <span class="process-math">\(4\)</span> there are <span class="process-math">\(p^2\)</span> choices since there are <span class="process-math">\(p\)</span> choices for <span class="process-math">\(f_1 = f_2\)</span> and <span class="process-math">\(f_3 = f_1 \cdot l\)</span> for a unique linear <span class="process-math">\(l\text{.}\)</span> For case <span class="process-math">\(5\text{,}\)</span> there are <span class="process-math">\(p\)</span> choices for <span class="process-math">\(f_1\text{.}\)</span> In total there are <span class="process-math">\(2p + 2p^2 + p^4\)</span> such modules up to isomorphism.</div>
-</div></section> <section class="paragraphs" id="thm-sunzis-remainder-theorem-rings"><h5 class="heading"><span class="title"><span class="process-math">\(\thm\)</span> – Sunzi’s Remainder Theorem (Rings).</span></h5> <div class="para logical" id="p-2150">
+</div></section> <section class="paragraphs" id="thm-sunzis-remainder-theorem-rings"><h5 class="heading"><span class="title"><span class="process-math">\(\thm\)</span> – Sunzi’s Remainder Theorem (Rings).</span></h5> <div class="para logical" id="p-2142">
 <div class="para">Suppose <span class="process-math">\(I\)</span> and <span class="process-math">\(J\)</span> are ideals in a commutative ring <span class="process-math">\(R\)</span> such that <span class="process-math">\(I + J = R\text{.}\)</span> Then <span class="process-math">\(I \cap J = I \cdot J\)</span> (where <span class="process-math">\(I \cdot J\)</span> is defined as the set of all sums of products of the form <span class="process-math">\(ab\)</span> with <span class="process-math">\(a \in I\)</span> and <span class="process-math">\(b \in J\)</span>) and there is an isomorphism of <span class="process-math">\(R\)</span>-modules</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1048,8 +1053,8 @@ R/(I J) \cong R/I \oplus R/J.
 R/(xy) \cong R/x \oplus R/y
 \end{equation*}
 </div>
-</div> <section class="paragraphs" id="proof.-126"><h6 class="heading"><span class="title"><em class="emphasis">Proof.</em>.</span></h6> <div class="para" id="p-2151">Note that <span class="process-math">\(I \cdot J \subseteq I \cap J\)</span> holds in general for any pair of ideals. If <span class="process-math">\(I + J = R\)</span> then <span class="process-math">\(a + b = 1\)</span> for some <span class="process-math">\(a \in I\)</span> and <span class="process-math">\(b \in J\text{.}\)</span> Given <span class="process-math">\(x \in I \cap J\)</span> we have <span class="process-math">\(xa + xb = x\)</span> with <span class="process-math">\(xa \in I \cdot J\)</span> and <span class="process-math">\(xb \in I \cdot J\text{,}\)</span> which proves <span class="process-math">\(x \in I \cdot J\text{.}\)</span>
-</div> <div class="para logical" id="p-2152">
+</div> <section class="paragraphs" id="proof.-126"><h6 class="heading"><span class="title"><em class="emphasis">Proof.</em>.</span></h6> <div class="para" id="p-2143">Note that <span class="process-math">\(I \cdot J \subseteq I \cap J\)</span> holds in general for any pair of ideals. If <span class="process-math">\(I + J = R\)</span> then <span class="process-math">\(a + b = 1\)</span> for some <span class="process-math">\(a \in I\)</span> and <span class="process-math">\(b \in J\text{.}\)</span> Given <span class="process-math">\(x \in I \cap J\)</span> we have <span class="process-math">\(xa + xb = x\)</span> with <span class="process-math">\(xa \in I \cdot J\)</span> and <span class="process-math">\(xb \in I \cdot J\text{,}\)</span> which proves <span class="process-math">\(x \in I \cdot J\text{.}\)</span>
+</div> <div class="para logical" id="p-2144">
 <div class="para">For the second assertion define <span class="process-math">\(g: R \to R/I \oplus R/J\)</span> to be the <span class="process-math">\(R\)</span>-module homomorphism <span class="process-math">\(g(r) = (r +I, r + J)\text{.}\)</span> Note that the kernel of <span class="process-math">\(g\)</span> is <span class="process-math">\(I \cap J\)</span> which equals <span class="process-math">\(I\cdot J\)</span> by the first assertion. I claim <span class="process-math">\(g\)</span> is onto: Pick <span class="process-math">\((x + I, y +J) \in R/I \oplus R/J\text{.}\)</span> With <span class="process-math">\(a,b\)</span> chosen as above, we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1058,8 +1063,8 @@ g(xb + ya) = (xb + ya + I, xb + ya + J) = (xb + I, ya + J) = (x + I, y +J).
 </div>
 <div class="para">The last equation holds since <span class="process-math">\(xa + xb = x\)</span> and thus <span class="process-math">\(xb + I = xb + xa + I = x + I\)</span> and similarly <span class="process-math">\(ya + J = y + J\text{.}\)</span>
 </div>
-</div> <div class="para" id="p-2153">For the final assertion, recall that when <span class="process-math">\(R\)</span> is a UFD, two principle ideals <span class="process-math">\(Rx\)</span> and <span class="process-math">\(Ry\)</span> satisfy <span class="process-math">\(Rx + Ry = R\)</span> if and only if <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are relatively prime. Also, for <span class="process-math">\(I = Rx\)</span> and <span class="process-math">\(J = Ry\text{,}\)</span> we have <span class="process-math">\(I\cdot J = R(xy)\text{.}\)</span>
-</div></section></section> <section class="paragraphs" id="thm-ftfgmopidedf"><h5 class="heading"><span class="title"><span class="process-math">\(\thm\)</span> – FTFGMOPIDEDF.</span></h5> <div class="para logical" id="p-2154">
+</div> <div class="para" id="p-2145">For the final assertion, recall that when <span class="process-math">\(R\)</span> is a UFD, two principle ideals <span class="process-math">\(Rx\)</span> and <span class="process-math">\(Ry\)</span> satisfy <span class="process-math">\(Rx + Ry = R\)</span> if and only if <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are relatively prime. Also, for <span class="process-math">\(I = Rx\)</span> and <span class="process-math">\(J = Ry\text{,}\)</span> we have <span class="process-math">\(I\cdot J = R(xy)\text{.}\)</span>
+</div></section></section> <section class="paragraphs" id="thm-ftfgmopidedf"><h5 class="heading"><span class="title"><span class="process-math">\(\thm\)</span> – FTFGMOPIDEDF.</span></h5> <div class="para logical" id="p-2146">
 <div class="para">Let <span class="process-math">\(R\)</span> be a PID and let <span class="process-math">\(M\)</span> be a finitely generated <span class="process-math">\(R\)</span>-module. Then there exist integers <span class="process-math">\(r \geq 0, k \geq 0\text{,}\)</span> prime elements <span class="process-math">\(p_1,\ldots,p_s\)</span> of <span class="process-math">\(R\)</span> (not necessarily distinct), and integers <span class="process-math">\(e_1,\ldots ,e_s \geq 1\text{,}\)</span> such that</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1067,7 +1072,7 @@ M \cong R^r \oplus R/(p_1^{e_1}) \oplus \cdots \oplus R/(p_s^{e_s}).
 \end{equation*}
 </div>
 <div class="para">Moreover <span class="process-math">\(r\)</span> and <span class="process-math">\(k\)</span> are uniquely determined by <span class="process-math">\(M\text{,}\)</span> and the list <span class="process-math">\(p_1^{e_1},\ldots, p_s^{e_s}\)</span> is unique up to associates and reordering.</div>
-</div> <section class="paragraphs" id="proof.-127"><h6 class="heading"><span class="title"><em class="emphasis">Proof.</em>.</span></h6> <div class="para logical" id="p-2155">
+</div> <section class="paragraphs" id="proof.-127"><h6 class="heading"><span class="title"><em class="emphasis">Proof.</em>.</span></h6> <div class="para logical" id="p-2147">
 <div class="para">First write <span class="process-math">\(M\)</span> in invariant factor form <span class="process-math">\(M \cong R^r \oplus R/(d_1) \oplus \dots \oplus R/(d_k)\text{.}\)</span> For any non-zero, non-unit element <span class="process-math">\(d\)</span> of <span class="process-math">\(R\text{,}\)</span> we have <span class="process-math">\(d = p_1^{e_1} \cdots p_m^{e_m}\)</span> for some distinct (non-associate) prime elements <span class="process-math">\(p_j\)</span> and integers <span class="process-math">\(e_j \geq 1\text{.}\)</span> By the Chinese remainder theorem (applied over and over again) we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1076,8 +1081,8 @@ R/(d)\cong R/(p_1^{e_1})  \oplus \cdots \oplus R/(p_m^{e_m})
 </div>
 <div class="para">Doing this for each fact <span class="process-math">\(R/(d_i)\)</span> in the invariant factor form of <span class="process-math">\(M\)</span> we obtain the existence of an elementary divisor form of <span class="process-math">\(M\text{.}\)</span>
 </div>
-</div> <div class="para" id="p-2156">Uniqueness follows from the uniqueness of the invariant factor form and of the prime factorizations of the <span class="process-math">\(d_i\)</span>’s.</div></section></section> <section class="paragraphs" id="defn-elementary-divisor-module"><h5 class="heading"><span class="title"><span class="process-math">\(\defn\)</span> – Elementary Divisor (Module).</span></h5> <div class="para" id="p-2157">With the notation in the Theorem above, the elements <span class="process-math">\(p_1^{e_1},\ldots, p_s^{e_s}\)</span> of <span class="process-math">\(R\)</span> are the elementary divisors of <span class="process-math">\(M\text{.}\)</span> #fix</div></section> <section class="paragraphs" id="exe-z90"><h5 class="heading"><span class="title"><span class="process-math">\(\exe\)</span> – <span class="process-math">\(\Z/90\)</span>.</span></h5> <div class="para" id="p-2158">Since <span class="process-math">\(\Z/90 \cong \Z/9 \oplus \Z/2 \oplus \Z/5\text{,}\)</span> so the elementary divisors of <span class="process-math">\(\Z/90\)</span> are <span class="process-math">\(9\text{,}\)</span> <span class="process-math">\(2\)</span> and <span class="process-math">\(3\text{.}\)</span> The only invariant factor of <span class="process-math">\(\Z/90\)</span> is <span class="process-math">\(90\text{.}\)</span>
-</div></section> <section class="paragraphs" id="exe-direct-sums-and-z"><h5 class="heading"><span class="title"><span class="process-math">\(\exe\)</span> – Direct Sums and <span class="process-math">\(\Z\)</span>.</span></h5> <div class="para logical" id="p-2159">
+</div> <div class="para" id="p-2148">Uniqueness follows from the uniqueness of the invariant factor form and of the prime factorizations of the <span class="process-math">\(d_i\)</span>’s.</div></section></section> <section class="paragraphs" id="defn-elementary-divisor-module"><h5 class="heading"><span class="title"><span class="process-math">\(\defn\)</span> – Elementary Divisor (Module).</span></h5> <div class="para" id="p-2149">With the notation in the Theorem above, the elements <span class="process-math">\(p_1^{e_1},\ldots, p_s^{e_s}\)</span> of <span class="process-math">\(R\)</span> are the elementary divisors of <span class="process-math">\(M\text{.}\)</span> #fix</div></section> <section class="paragraphs" id="exe-z90"><h5 class="heading"><span class="title"><span class="process-math">\(\exe\)</span> – <span class="process-math">\(\Z/90\)</span>.</span></h5> <div class="para" id="p-2150">Since <span class="process-math">\(\Z/90 \cong \Z/9 \oplus \Z/2 \oplus \Z/5\text{,}\)</span> so the elementary divisors of <span class="process-math">\(\Z/90\)</span> are <span class="process-math">\(9\text{,}\)</span> <span class="process-math">\(2\)</span> and <span class="process-math">\(3\text{.}\)</span> The only invariant factor of <span class="process-math">\(\Z/90\)</span> is <span class="process-math">\(90\text{.}\)</span>
+</div></section> <section class="paragraphs" id="exe-direct-sums-and-z"><h5 class="heading"><span class="title"><span class="process-math">\(\exe\)</span> – Direct Sums and <span class="process-math">\(\Z\)</span>.</span></h5> <div class="para logical" id="p-2151">
 <div class="para">Consider the group <span class="process-math">\(G = \Z/90 \oplus \Z/9 \oplus \Z/6 \oplus \Z/3 \oplus \Z/4\text{.}\)</span> This is neither in IFF nor in EDF. Applying the Sunzi Remainder Theorem, we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1085,7 +1090,7 @@ G \cong \Z/9 \oplus \Z/2 \oplus \Z/5 \oplus \Z/9 \oplus \Z/2 \oplus \Z/3 \oplus 
 \end{equation*}
 </div>
 <div class="para">and this gives the EDF. The elementary divisors of <span class="process-math">\(G\)</span> are <span class="process-math">\(9,2,5,9,2,3,3,4\)</span> (ordering does not matter).</div>
-</div> <div class="para logical" id="p-2160">
+</div> <div class="para logical" id="p-2152">
 <div class="para">To find the IFF we start by finding the largest prime power order for each prime in the list of orders of the summands. These are <span class="process-math">\(9, 5, 4\text{.}\)</span> The CRT gives</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1112,7 +1117,7 @@ G \cong \Z/3 \oplus \Z/6 \oplus \Z/18 \oplus \Z/180.
 </div>
 <div class="para">This is the IFF, and the invariant factors of <span class="process-math">\(G\)</span> are <span class="process-math">\(3,6,18,180\text{.}\)</span>
 </div>
-</div></section> <section class="paragraphs" id="cor-ftfgagedf"><h5 class="heading"><span class="title"><span class="process-math">\(\cor\)</span> – FTFGAGEDF.</span></h5> <div class="para logical" id="p-2161">
+</div></section> <section class="paragraphs" id="cor-ftfgagedf"><h5 class="heading"><span class="title"><span class="process-math">\(\cor\)</span> – FTFGAGEDF.</span></h5> <div class="para logical" id="p-2153">
 <div class="para">Let <span class="process-math">\(G\)</span> be a finitely generated abelian group. Then there exist integers <span class="process-math">\(r,s \geq 0\text{,}\)</span> positive prime integers <span class="process-math">\(p_1, \ldots, p_s\text{,}\)</span> and strictly positive integers <span class="process-math">\(e_i \geq 1\)</span> such that</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1120,7 +1125,7 @@ G \cong \Z^r\oplus\Z/p_1^{e_1} \oplus \dots \oplus \Z/p_s^{e_s}.
 \end{equation*}
 </div>
 <div class="para">Moreover, the <span class="process-math">\(r,p_i\)</span>’s, and <span class="process-math">\(e_i\)</span>’s are uniquely determined by <span class="process-math">\(G\)</span> (up to ordering).</div>
-</div></section> <section class="paragraphs" id="cor-ftfgmopredf"><h5 class="heading"><span class="title"><span class="process-math">\(\cor\)</span> – FTFGMOPREDF.</span></h5> <div class="para logical" id="p-2162">
+</div></section> <section class="paragraphs" id="cor-ftfgmopredf"><h5 class="heading"><span class="title"><span class="process-math">\(\cor\)</span> – FTFGMOPREDF.</span></h5> <div class="para logical" id="p-2154">
 <div class="para">Let <span class="process-math">\(k\)</span> be a field and <span class="process-math">\(k[x]\)</span> be the ring of polynomials with coefficients in <span class="process-math">\(k\)</span> in one variable <span class="process-math">\(x\text{.}\)</span> If <span class="process-math">\(M\)</span> a finitely generated <span class="process-math">\(k[x]\)</span>-module then</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1128,7 +1133,7 @@ M \cong k[x]^r \oplus k[x]/(p_1^{e_1}) \oplus \cdots \oplus k[x]/(p_s^{e_s})
 \end{equation*}
 </div>
 <div class="para">for some <span class="process-math">\(r \geq 0\text{,}\)</span> <span class="process-math">\(s \geq 0\text{,}\)</span> non-constant monic, irreducible polynomials <span class="process-math">\(p_1, \dots, p_s\)</span> and integers <span class="process-math">\(e_1, \dots, e_s\)</span> with <span class="process-math">\(e_i \geq 1\text{,}\)</span> and these are unique up to ordering.</div>
-</div></section> <section class="paragraphs" id="exe-finding-ifs-and-eds"><h5 class="heading"><span class="title"><span class="process-math">\(\exe\)</span> – Finding IFs and EDs.</span></h5> <div class="para logical" id="p-2163">
+</div></section> <section class="paragraphs" id="exe-finding-ifs-and-eds"><h5 class="heading"><span class="title"><span class="process-math">\(\exe\)</span> – Finding IFs and EDs.</span></h5> <div class="para logical" id="p-2155">
 <div class="para">Find the invariant factor form and the elementary divisor form of the <span class="process-math">\(k[x]\)</span>-module</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1137,7 +1142,7 @@ M = k[x]/(x^2-1) \oplus k[x]/(x-1) \oplus k[x]/(x^2 + 1) \oplus k[x]/(x^2 + 2x +
 </div>
 <div class="para">first when (a) <span class="process-math">\(k = \Z/2\text{,}\)</span> (b) <span class="process-math">\(k = \R\)</span> and (c) <span class="process-math">\(k = \C\text{.}\)</span>
 </div>
-</div></section> <section class="paragraphs" id="problem-40"><h5 class="heading"><span class="title">Problem.</span></h5> <div class="para logical" id="p-2164">
+</div></section> <section class="paragraphs" id="problem-40"><h5 class="heading"><span class="title">Problem.</span></h5> <div class="para logical" id="p-2156">
 <div class="para">Let <span class="process-math">\(R\)</span> be a Euclidean domain, <span class="process-math">\(A\)</span> an <span class="process-math">\(m \times n\)</span> matrix with elements from <span class="process-math">\(R\text{,}\)</span> and <span class="process-math">\(A^T\)</span> the transpose matrix of <span class="process-math">\(A\text{.}\)</span> Let <span class="process-math">\(\coker(A)\)</span> denote the quotient of <span class="process-math">\(R^m\)</span> by the submodule generated by the columns of <span class="process-math">\(A\text{.}\)</span> The {} submodule of an <span class="process-math">\(R\)</span>-module <span class="process-math">\(M\)</span> is the submodule</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1146,8 +1151,8 @@ M = k[x]/(x^2-1) \oplus k[x]/(x-1) \oplus k[x]/(x^2 + 1) \oplus k[x]/(x^2 + 2x +
 </div>
 <div class="para">(It is indeed a submodule and you need not prove this.) 1. Prove that the torsion submodules of <span class="process-math">\(\coker(A)\)</span> and <span class="process-math">\(\coker(A^T)\)</span> are isomorphic. 2. Prove that the modules <span class="process-math">\(\coker(A)\)</span> and <span class="process-math">\(\coker(A^T)\)</span> are isomorphic if and only if <span class="process-math">\(m = n\text{.}\)</span>
 </div>
-</div></section> <section class="paragraphs" id="problem-41"><h5 class="heading"><span class="title">Problem –.</span></h5> <div class="para" id="p-2165">Let <span class="process-math">\(R\)</span> be a PID and let <span class="process-math">\(M\)</span> be a finitely generated <span class="process-math">\(R\)</span>-module. 1. Determine a generator for the principal ideal <span class="process-math">\(\ann_R(M)\)</span> in terms of the invariant factors and the free rank of <span class="process-math">\(M\text{.}\)</span> 2. Determine a generator for the principal ideal <span class="process-math">\(\ann_R(M)\)</span> in terms of the elementary divisors and the free rank of <span class="process-math">\(M\text{.}\)</span>
-</div></section> <section class="paragraphs" id="problem-42"><h5 class="heading"><span class="title">Problem –.</span></h5> <div class="para logical" id="p-2166">
+</div></section> <section class="paragraphs" id="problem-41"><h5 class="heading"><span class="title">Problem –.</span></h5> <div class="para" id="p-2157">Let <span class="process-math">\(R\)</span> be a PID and let <span class="process-math">\(M\)</span> be a finitely generated <span class="process-math">\(R\)</span>-module. 1. Determine a generator for the principal ideal <span class="process-math">\(\ann_R(M)\)</span> in terms of the invariant factors and the free rank of <span class="process-math">\(M\text{.}\)</span> 2. Determine a generator for the principal ideal <span class="process-math">\(\ann_R(M)\)</span> in terms of the elementary divisors and the free rank of <span class="process-math">\(M\text{.}\)</span>
+</div></section> <section class="paragraphs" id="problem-42"><h5 class="heading"><span class="title">Problem –.</span></h5> <div class="para logical" id="p-2158">
 <div class="para">Consider the matrix</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1160,7 +1165,7 @@ x &amp; 1 &amp; 0 \\
 \end{equation*}
 </div>
 <div class="para">where <span class="process-math">\(R=\Q[x]\text{.}\)</span> 1. Determine the Smith normal form for <span class="process-math">\(A\text{.}\)</span> 2. Determine the representative in the isomorphism class of the module presented by <span class="process-math">\(A\)</span> which is written in invariant factor form and in elementary divisor form. # Canonical Forms for Linear Operators ## Modules over Polynomial Rings #### <span class="process-math">\(\rem\)</span> Suppose <span class="process-math">\(F\)</span> is a field and <span class="process-math">\(M\)</span> is a <span class="process-math">\(F[x]\)</span>-module. By restriction of scalars along the canonical ring map <span class="process-math">\(F \into F[x]\)</span> we may regard <span class="process-math">\(M\)</span> as a <span class="process-math">\(F\)</span>-vector space — let us write this vector space as <span class="process-math">\(M|_F\)</span> to be precise. Let <span class="process-math">\(\lx: M|_F \to M|_F\)</span> be the map given by <span class="process-math">\(\lx(m) = xm\text{.}\)</span> Then <span class="process-math">\(\lx\)</span> is an <span class="process-math">\(F\)</span>-linear operator on <span class="process-math">\(M|_F\text{.}\)</span> So, to a <span class="process-math">\(F[x]\)</span>-module <span class="process-math">\(M\)</span> we may associate the pair <span class="process-math">\((M|_F, \lx)\)</span> where <span class="process-math">\(M|_F\)</span> is an <span class="process-math">\(F\)</span>-vector space and <span class="process-math">\(\lx\)</span> is an <span class="process-math">\(F\)</span>-linear operator on <span class="process-math">\(M|_F\text{.}\)</span> This process is reversible:</div>
-</div></section> <section class="paragraphs" id="defn-fx-module-v_g"><h5 class="heading"><span class="title"><span class="process-math">\(\defn\)</span> – <span class="process-math">\(F[x]\)</span>-Module <span class="process-math">\(V_g\)</span>.</span></h5> <div class="para logical" id="p-2167">
+</div></section> <section class="paragraphs" id="defn-fx-module-v_g"><h5 class="heading"><span class="title"><span class="process-math">\(\defn\)</span> – <span class="process-math">\(F[x]\)</span>-Module <span class="process-math">\(V_g\)</span>.</span></h5> <div class="para logical" id="p-2159">
 <div class="para">Let <span class="process-math">\(F\)</span> be a field, let <span class="process-math">\(V\)</span> be a finite dimensional vector space over <span class="process-math">\(F\text{,}\)</span> and let <span class="process-math">\(g: V \to V\)</span> be an <span class="process-math">\(F\)</span>-linear operator. The <span class="process-math">\(F[x]\)</span>-module <span class="process-math">\(V_g\)</span> is defined to be the abelian group <span class="process-math">\((V, +)\)</span> equipped with the rule for <span class="process-math">\(F[x]\)</span>[^1] scaling given by</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1169,7 +1174,7 @@ x &amp; 1 &amp; 0 \\
 </div>
 <div class="para">for any polynomial <span class="process-math">\(c_nx^n + \dots + c_0 \in F[x]\)</span> and vector <span class="process-math">\(v \in V\text{.}\)</span>
 </div>
-</div></section> <section class="paragraphs" id="prop-v_g-is-actually-a-fx-module"><h5 class="heading"><span class="title"><span class="process-math">\(\prop\)</span> – <span class="process-math">\(V_g\)</span> is Actually a <span class="process-math">\(F[x]\)</span>-Module.</span></h5> <div class="para" id="p-2168">Given a pair <span class="process-math">\((V, g)\)</span> as in the definition, <span class="process-math">\(V_g\)</span> really is a <span class="process-math">\(F[x]\)</span>-module.</div></section> <section class="paragraphs" id="exe-special-case-of-v_g"><h5 class="heading"><span class="title"><span class="process-math">\(\exe\)</span> – Special Case of <span class="process-math">\(V_g\)</span>.</span></h5> <div class="para" id="p-2169">We have the following special case (it isn’t really special — the general case reduces to this one upon choosing a basis):</div> <div class="para logical" id="p-2170">
+</div></section> <section class="paragraphs" id="prop-v_g-is-actually-a-fx-module"><h5 class="heading"><span class="title"><span class="process-math">\(\prop\)</span> – <span class="process-math">\(V_g\)</span> is Actually a <span class="process-math">\(F[x]\)</span>-Module.</span></h5> <div class="para" id="p-2160">Given a pair <span class="process-math">\((V, g)\)</span> as in the definition, <span class="process-math">\(V_g\)</span> really is a <span class="process-math">\(F[x]\)</span>-module.</div></section> <section class="paragraphs" id="exe-special-case-of-v_g"><h5 class="heading"><span class="title"><span class="process-math">\(\exe\)</span> – Special Case of <span class="process-math">\(V_g\)</span>.</span></h5> <div class="para" id="p-2161">We have the following special case (it isn’t really special — the general case reduces to this one upon choosing a basis):</div> <div class="para logical" id="p-2162">
 <div class="para">Given a matrix <span class="process-math">\(A \in \Mat_{n \times n}(F)\text{,}\)</span> then <span class="process-math">\(F^n_A\)</span> is the <span class="process-math">\(F[x]\)</span>-module whose underlying abelian group is <span class="process-math">\(F^n\)</span> (column vectors) with the usual rule for addition and with the rule for <span class="process-math">\(F[x]\)</span> scaling given by</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1183,7 +1188,7 @@ f(x) \cdot v = f(A) v
 \end{equation*}
 </div>
 <div class="para">for any polynomial <span class="process-math">\(f(x) \in k[x]\text{,}\)</span> where <span class="process-math">\(f(A)\)</span> is the matrix obtained by evaluating <span class="process-math">\(f(x)\)</span> at <span class="process-math">\(x = A\)</span> in the evident sense.</div>
-</div></section> <section class="paragraphs" id="exe-mat_2times-2q"><h5 class="heading"><span class="title"><span class="process-math">\(\exe\)</span> – <span class="process-math">\(\Mat_{2\times 2}(\Q)\)</span>.</span></h5> <div class="para logical" id="p-2171">
+</div></section> <section class="paragraphs" id="exe-mat_2times-2q"><h5 class="heading"><span class="title"><span class="process-math">\(\exe\)</span> – <span class="process-math">\(\Mat_{2\times 2}(\Q)\)</span>.</span></h5> <div class="para logical" id="p-2163">
 <div class="para">Let <span class="process-math">\(A=\begin{bmatrix} 1 &amp; 1 \\ 0 &amp; 1 \end{bmatrix}\in \Mat_{2 \times 2}(\Q)\)</span> and let <span class="process-math">\(M\)</span> be the <span class="process-math">\(\Q[x]\)</span>-module <span class="process-math">\(\Q^2_A\text{.}\)</span> So <span class="process-math">\(M = \Q^2\)</span> as a <span class="process-math">\(\Q\)</span>-vector space, and <span class="process-math">\(x\)</span> acts on <span class="process-math">\(M\)</span> by sending <span class="process-math">\(\vectwo{a}{b} \in M\)</span> to <span class="process-math">\(\vectwo{a+b}{b} \in M\text{.}\)</span> I claim there is an isomorphism</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1191,8 +1196,8 @@ M \cong \Q[x]/(x-1)^2
 \end{equation*}
 </div>
 <div class="para">of <span class="process-math">\(\Q[x]\)</span>-modules.</div>
-</div> <div class="para" id="p-2172">Let <span class="process-math">\(v = \vectwo{0}{1} \in M\text{.}\)</span> Note that <span class="process-math">\(x \cdot v = \vectwo{1}{1}\)</span> and that <span class="process-math">\(v\)</span> and <span class="process-math">\(x \cdot v\)</span> span <span class="process-math">\(\Q^2\)</span> as a <span class="process-math">\(\Q\)</span>-vector space. It follows that <span class="process-math">\(v\)</span> generates <span class="process-math">\(M\)</span> as a <span class="process-math">\(\Q[x]\)</span>-module; in detail, for any <span class="process-math">\(\vectwo{a}{b} \in \Q^2\)</span> we have <span class="process-math">\((b- a + ax)v = \vectwo{0}{a} + \vectwo{a}{a} = \vectwo{a}{b}\text{.}\)</span>
-</div> <div class="para logical" id="p-2173">
+</div> <div class="para" id="p-2164">Let <span class="process-math">\(v = \vectwo{0}{1} \in M\text{.}\)</span> Note that <span class="process-math">\(x \cdot v = \vectwo{1}{1}\)</span> and that <span class="process-math">\(v\)</span> and <span class="process-math">\(x \cdot v\)</span> span <span class="process-math">\(\Q^2\)</span> as a <span class="process-math">\(\Q\)</span>-vector space. It follows that <span class="process-math">\(v\)</span> generates <span class="process-math">\(M\)</span> as a <span class="process-math">\(\Q[x]\)</span>-module; in detail, for any <span class="process-math">\(\vectwo{a}{b} \in \Q^2\)</span> we have <span class="process-math">\((b- a + ax)v = \vectwo{0}{a} + \vectwo{a}{a} = \vectwo{a}{b}\text{.}\)</span>
+</div> <div class="para logical" id="p-2165">
 <div class="para">Define a <span class="process-math">\(\Q[x]\)</span>-module homomorphism</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1212,44 +1217,44 @@ x^2 v = 2x v- v
 \end{equation*}
 </div>
 <div class="para">induced by <span class="process-math">\(\pi\text{.}\)</span> The map <span class="process-math">\(\ov{\pi}\)</span> is onto since <span class="process-math">\(\pi\)</span> is onto. Since the source and target both have dimension two as <span class="process-math">\(\Q\)</span>-vector spaces, <span class="process-math">\(\ov{\pi}\)</span> is <span class="process-math">\(\Q\)</span>-linear, and <span class="process-math">\(\ov{\pi}\)</span> is onto, it must in fact be an isomorphism of <span class="process-math">\(\Q[x]\)</span>-modules (by the Rank-Nullity Theorem).</div>
-</div></section> <section class="paragraphs" id="prop-equality-of-fx-modules"><h5 class="heading"><span class="title"><span class="process-math">\(\prop\)</span> – Equality of <span class="process-math">\(F[x]\)</span>-Modules.</span></h5> <div class="para" id="p-2174">The two assignments <span class="process-math">\(M \mapsto (M|_F, \lx)\)</span> and <span class="process-math">\((V, g) \mapsto V_g\)</span> defined above are mutually inverse: Given a <span class="process-math">\(F[x]\)</span>-module <span class="process-math">\(M\text{,}\)</span> there is an <em class="emphasis">equality</em> of <span class="process-math">\(F[x]\)</span>-modules <span class="process-math">\(M = (M|_F)_{\lx}\)</span> and given a pair <span class="process-math">\((V, g)\)</span> with <span class="process-math">\(V\)</span> an <span class="process-math">\(F\)</span>-vector space and <span class="process-math">\(g\)</span> an <span class="process-math">\(F\)</span>-linear operator on <span class="process-math">\(V\)</span> we have an equality of pairs <span class="process-math">\(((V_g)|_F, \lx) = (V,g)\text{.}\)</span>
-</div></section> <section class="paragraphs" id="rem-57"><h5 class="heading"><span class="title"><span class="process-math">\(\rem\)</span>.</span></h5> <div class="para" id="p-2175">In fact, these rules determine an “isomorphism of categories’’.</div></section></section></section><section class="exercises" id="exercises-53"><h3 class="heading hide-type">
+</div></section> <section class="paragraphs" id="prop-equality-of-fx-modules"><h5 class="heading"><span class="title"><span class="process-math">\(\prop\)</span> – Equality of <span class="process-math">\(F[x]\)</span>-Modules.</span></h5> <div class="para" id="p-2166">The two assignments <span class="process-math">\(M \mapsto (M|_F, \lx)\)</span> and <span class="process-math">\((V, g) \mapsto V_g\)</span> defined above are mutually inverse: Given a <span class="process-math">\(F[x]\)</span>-module <span class="process-math">\(M\text{,}\)</span> there is an <em class="emphasis">equality</em> of <span class="process-math">\(F[x]\)</span>-modules <span class="process-math">\(M = (M|_F)_{\lx}\)</span> and given a pair <span class="process-math">\((V, g)\)</span> with <span class="process-math">\(V\)</span> an <span class="process-math">\(F\)</span>-vector space and <span class="process-math">\(g\)</span> an <span class="process-math">\(F\)</span>-linear operator on <span class="process-math">\(V\)</span> we have an equality of pairs <span class="process-math">\(((V_g)|_F, \lx) = (V,g)\text{.}\)</span>
+</div></section> <section class="paragraphs" id="rem-57"><h5 class="heading"><span class="title"><span class="process-math">\(\rem\)</span>.</span></h5> <div class="para" id="p-2167">In fact, these rules determine an “isomorphism of categories’’.</div></section></section></section><section class="exercises" id="exercises-53"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
 <div class="exercisegroup" id="exercisegroup-145">
 <h4 class="heading"><span class="title">Computations and Examples.</span></h4>
-<div class="introduction" id="introduction-148"><div class="para" id="p-2176"></div></div>
+<div class="introduction" id="introduction-148"><div class="para" id="p-2168"></div></div>
 <div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-204"><h5 class="heading">
 <span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
 </h5>
-<div class="para" id="p-2177">Coming soon to an OER near you!</div>
+<div class="para" id="p-2169">Coming soon to an OER near you!</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-124" id="hint-124"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-124"><div class="hint solution-like"><div class="para" id="p-2178">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-128" id="solution-128"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-128"><div class="solution solution-like"><div class="para" id="p-2179">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-124" id="hint-124"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-124"><div class="hint solution-like"><div class="para" id="p-2170">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-126" id="solution-126"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-126"><div class="solution solution-like"><div class="para" id="p-2171">Coming soon to an OER near you!</div></div></div>
 </div></article></div>
 </div>
 <div class="exercisegroup" id="exercisegroup-146">
 <h4 class="heading"><span class="title">Formal Proofs.</span></h4>
-<div class="introduction" id="introduction-149"><div class="para" id="p-2180"></div></div>
+<div class="introduction" id="introduction-149"><div class="para" id="p-2172"></div></div>
 <div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-205"><h5 class="heading">
 <span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
 </h5>
-<div class="para" id="p-2181">Coming soon to an OER near you!</div>
+<div class="para" id="p-2173">Coming soon to an OER near you!</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-125" id="hint-125"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-125"><div class="hint solution-like"><div class="para" id="p-2182">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-129" id="solution-129"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-129"><div class="solution solution-like"><div class="para" id="p-2183">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-125" id="hint-125"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-125"><div class="hint solution-like"><div class="para" id="p-2174">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-127" id="solution-127"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-127"><div class="solution solution-like"><div class="para" id="p-2175">Coming soon to an OER near you!</div></div></div>
 </div></article></div>
 </div>
 <div class="exercisegroup" id="exercisegroup-147">
 <h4 class="heading"><span class="title">Qualifying Exam Problems.</span></h4>
-<div class="introduction" id="introduction-150"><div class="para" id="p-2184"></div></div>
+<div class="introduction" id="introduction-150"><div class="para" id="p-2176"></div></div>
 <div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-206"><h5 class="heading">
 <span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
 </h5>
-<div class="para" id="p-2185">Coming soon to an OER near you!</div>
+<div class="para" id="p-2177">Coming soon to an OER near you!</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-126" id="hint-126"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-126"><div class="hint solution-like"><div class="para" id="p-2186">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-130" id="solution-130"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-130"><div class="solution solution-like"><div class="para" id="p-2187">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-126" id="hint-126"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-126"><div class="hint solution-like"><div class="para" id="p-2178">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-128" id="solution-128"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-128"><div class="solution solution-like"><div class="para" id="p-2179">Coming soon to an OER near you!</div></div></div>
 </div></article></div>
 </div></section></section></div>
 <div class="ptx-content-footer">

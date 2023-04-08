@@ -13,17 +13,14 @@
 <body class="ignore-math">
 <h6 class="heading"><span class="type">Paragraph</span></h6>
 <div class="para logical">
-<div class="para">A commutative ring <span class="process-math">\(R\)</span> has the <em class="emphasis"><span class="process-math">\(\defnn{ascending chain condition}\)</span></em> (on ideals) if given any chain of ideals in <span class="process-math">\(R\)</span> of the form</div>
+<div class="para">Given an ideal <span class="process-math">\(I\subseteq R[x]\text{,}\)</span> consider the set of leading coefficients of all polynomials in <span class="process-math">\(I\text{,}\)</span>
+</div>
 <div class="displaymath process-math">
 \begin{equation*}
-I_1 \subseteq I_2 \subseteq \cdots
+J :=  \{ a \in R \ \mid  \ \textrm{there is some } a x^n + \text{lower order terms (with respect to }x) \in I\}.
 \end{equation*}
 </div>
-<div class="para">there is an <span class="process-math">\(N\)</span> such that</div>
-<div class="displaymath process-math">
-\begin{equation*}
-I_N = I_{N+1} = \cdots.
-\end{equation*}
+<div class="para">By the Hilbert Basis Lemma, we see that this is an ideal of <span class="process-math">\(R\text{.}\)</span> Since <span class="process-math">\(R\)</span> is noetherian, <span class="process-math">\(J\)</span> is finitely generated[^2], so let <span class="process-math">\(J = (a_1,\dots,a_t)\text{.}\)</span> Pick <span class="process-math">\(f_1,\dots,f_t\in R[x]\)</span> such that the leading coefficient of <span class="process-math">\(f_i\)</span> is <span class="process-math">\(a_i\text{,}\)</span> and set <span class="process-math">\(N=\displaystyle\max_i \{\deg{f_i} \}\text{.}\)</span>
 </div>
 </div>
 <span class="incontext"><a href="sec-noeth.html#p-2123" class="internal">in-context</a></span>

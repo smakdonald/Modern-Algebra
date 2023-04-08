@@ -13,14 +13,26 @@
 <body class="ignore-math">
 <h6 class="heading"><span class="type">Paragraph</span></h6>
 <div class="para logical">
-<div class="para">Suppose <span class="process-math">\(R\)</span> is a ring and <span class="process-math">\(F\)</span> and <span class="process-math">\(E\)</span> are free <span class="process-math">\(R\)</span>-modules with ordered bases <span class="process-math">\(X = \{x_1, \dots, x_m\}\)</span> and <span class="process-math">\(Y = \{y_1, \dots, y_n\}\text{,}\)</span> respectively. There is a bijective correspondence</div>
+<div class="para">Let <span class="process-math">\(R\)</span> be a commutative ring, let <span class="process-math">\(F, E, G\)</span> be free <span class="process-math">\(R\)</span>-modules having finite bases <span class="process-math">\(X = \{x_1, \dots, x_m\}, Y = \{y_1, \dots, y_n\}, Z = \{z_1, \dots, z_p\}\)</span> of size <span class="process-math">\(m,n,p\text{,}\)</span> respectively. Given a <span class="process-math">\(n \times m\)</span> matrix <span class="process-math">\(A\)</span> and a <span class="process-math">\(p \times n\)</span> matrix <span class="process-math">\(B\text{,}\)</span> let <span class="process-math">\(AB\)</span> denote the <span class="process-math">\(p \times m\)</span> matrix obtained by the usual formula for matrix multiplication, and let <span class="process-math">\(T_A^{X,Y}: F \to E\text{,}\)</span> <span class="process-math">\(T_B^{Y,Z}: E \to G\)</span> and <span class="process-math">\(T_{BA}^{X,Z}: F \to G\)</span> be the maps associated to these matrices relative to the specified bases, as given in Proposition . Then</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\Mat_{n \times m}(R) \to \Hom_R(F, E)
+T^{Y,Z}_B \circ T_A^{X,Y} = T_{BA}^{X,Z}.
 \end{equation*}
 </div>
-<div class="para">that sends a matrix <span class="process-math">\(A = (a_{i,j})_{1 \leq i \leq n, 1 \leq j \leq m}\)</span> to the unique <span class="process-math">\(R\)</span>-module homomorphism <span class="process-math">\(T_A: F \to E\)</span> satisfying <span class="process-math">\(T_A(x_j)=\sum_{i= 1}^n a_{i,j} y_i\)</span> for each <span class="process-math">\(1 \leq j \leq m\text{.}\)</span>
+<div class="para">In particular, matrix multiplication is associative. ###### <em class="emphasis">Proof.</em> For the first assertion we just need to check the two maps agree on <span class="process-math">\(x_j\)</span> for all <span class="process-math">\(j\text{:}\)</span> We have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+T_B(T_A(x_j)) = T_B(\sum_i a_{i,j} y_i) = \sum_i a_{i,j} T_B(y_i) 
+= \sum_i \sum _l a_{i, j} b_{k, i} z_k
+\end{equation*}
 </div>
+<div class="para">(with the second equation using that <span class="process-math">\(T_B\)</span> is an <span class="process-math">\(R\)</span>-map) and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+T_{BA}(x_j) = \sum_k (BA)_{k,j} z_k = \sum_k \left(\sum _i b_{k, i} a_{i, j}\right) z_k.
+\end{equation*}
+</div>
+<div class="para">(I have left off the superscripts <span class="process-math">\((X,Y)\)</span> etc. for the sake of my sanity.) These two expressions agree since <span class="process-math">\(R\)</span> is commutative.</div>
 </div>
 <span class="incontext"><a href="sec-linear.html#p-1672" class="internal">in-context</a></span>
 </body>

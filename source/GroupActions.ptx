@@ -100,6 +100,10 @@
         </proof>
       </theorem>
 
+      <p>
+        Permutation representations are one the most essential benefits of group actions. This homomorphism allows us to study the structure of a group <m>G</m> by looking at the permutation group of <m>X</m>, which may be a more manageable group to work with. 
+      </p>
+
       <definition xml:id="def-faithful">
         <statement>
           <p>
@@ -108,139 +112,6 @@
         </statement>
       </definition>
 
-      <example xml:id="ex-leftreg">
-        <title>Left Regular Action</title>
-        
-        <p>
-          Let <m>G</m> be any group and define an action <m>\cdot</m> of <m>G</m> on <m>G</m> (regarded as just a set) by the rule 
-          <me>
-            g \cdot x = g  x, \text{ for $g \in G$ and $x \in G$.}
-          </me>
-        </p>
-      </example>
-
-      <problem>
-        <p>
-          Prove that the left regular action is faithful.
-        </p>
-      </problem>
-
-      <problem>
-        <statement>
-          <p>
-            Let <m>G</m> be a group and <m>H</m> a subgroup of <m>G</m>. Recall that the centralizer of <m>H</m> in <m>G</m> is <me>C_H(G)=\{g\in G|gh=hg\text{ for all }h\in H\}</me>Prove that if <m>H</m> is normal in <m>G</m>, then so is <m>C_G(H)</m> and that <m>G/C_G(H)</m> is isomorphic to a subgroup of the automorphism group of <m>H</m>.
-          </p>
-        </statement>
-
-        <solution>
-          <p>
-						Let <m>G</m> be a group and <m>H\nsg G</m>. Let <m>x\in C_H(G)</m>, and consider <m>gxg\inv</m>. Let <m>h\in H</m>. As <m>H\nsg G</m> we have <m>h=gh'g\inv</m> for some <m>h\in H</m>, and thus that 1. <m>g\inv h=h'g\inv</m> and 2. <m>hg=gh'</m>. Consider <m>gxg\inv h</m>. By (1), we see <m>gxg\inv h=gxh'g\inv</m>. As <m>x</m> commutes with everything in <m>H</m> we have <m>gh'xg\inv</m>, and by (2) we have <m>hgxg\inv</m>. Thus <m>C_H(G)\nsg G</m>.
-					</p>
-
-					<p>
-						Let <m>G</m> act on the left cosets of <m>C_G(H)</m> by left multiplication, giving rise to the permutation representation homomorphism <m>\rho:G/C_G(H)\to\Aut(H)</m>. By the First Isomorphism Theorem we see that <m>G/C_G(H)</m> is isomorphic to a subgroup of the automorphism group of <m>H</m>.
-					</p>
-        </solution>
-      </problem>
-
-      <problem>
-        <statement>
-          <p>
-            Recall that the centralizer of a subgroup <m>H</m> in a group <m>G</m> is 
-            <me>
-              C_G(H) = \{g ∈ G | gh = hg \text{ for all }h ∈ H\}.
-            </me>
-            <ol>
-              <li>
-                <p>
-                  Prove that if <m>H</m> is normal in <m>G</m>, then <m>C_G(H)</m> is normal in <m>G</m>. 
-                </p>
-              </li>
-
-              <li>
-                <p>
-                  Prove that if <m>H</m> is normal in <m>G</m>, then <m>G/C_G(H)</m> is isomorphic to a subgroup of <m>\Aut(H)</m> (the group of automorphisms of H)
-                </p>
-              </li>
-            </ol>
-          </p>
-        </statement>
-        
-
-        <solution>
-          <p>
-						Let <m>G</m> act on <m>H</m> by conjugation, yielding the homomorphism <m>\rho</m> via the permutation representation that maps <m>g</m> to <m>\s_g</m>, where <m>\s_g(h)=ghg\inv</m>. This is the trivial permutation exactly when <m>g\in C_G(H)</m>, making <m>C_G(H)</m> the kernel of <m>\rho</m>. Thus <m>C_G(H)</m> is normal in <m>G</m>.
-					</p>
-
-					<p>
-						From the above permutation representation we have a homomorphism <m>\rho: G\to S_{|H|}\cong\Aut(H)</m>. As <m>C_G(H)=\ker(\rho)</m>, by the First Isomorphism Theorem we have <m>G/C_G(H)\cong\im(\rho))</m>, a subgroup of <m>\Aut(H)</m>.
-					</p>
-        </solution>
-      </problem>
-
-      <problem>
-
-        <statement>
-        <p>
-					Let <m>H</m> be a subgroup of a group <m>G</m>. Recall that the centralizer of <m>H</m> is the subgroup of <m>G</m> defined by <m>C_G(H) = \{g \in G | gh = hg ∀h \in H\}</m> and the normalizer of <m>H</m> is the subgroup of <m>G</m> defined by <m>N_G(H) = \{g \in G | gHg\inv = H\}</m>.
-				</p>
-
-				<p>
-          <ol>
-            <li>
-            Show that the centralizer <m>C_G(H)</m> of <m>H</m> in <m>G</m> is a normal subgroup of the normalizer <m>N_G(H)</m> of <m>H</m> in <m>G</m>.
-            </li>
-
-            <li>
-            Show that the quotient <m>N_G(H)/C_G(H)</m> is isomorphic to a subgroup of the automorphism group <m>\Aut(H)</m> of <m>H</m>.
-            </li>
-				  </ol>
-        </p>
-      </statement>
-
-        <solution>
-          <p>
-						Let <m>H</m> be a subgroup of a group <m>G</m>.
-					
-
-          <ol>
-            <li>
-              <p>
-                Let <m>G</m> act on <m>H</m> by conjugation. Thus the associated permutation homomorphism <m>\rho</m> is defined such that <m>\rho(g)=\phi_g</m>, where <m>\phi_g(h)=ghg\inv</m>. Notice that when <m>x\in C_G(H)</m> we have <m>\phi_x(h)=xhx\inv=h</m> for all <m>h\in H</m>, and thus <m>x\in\ker(\rho)</m>. If <m>x\in\ker(\rho)</m> then <m>xhx\inv=h</m> for all <m>h\in H</m>, and thus <m>x\in C_G(H)</m>. Thus <m>C_G(H)=\ker(\rho)</m> and <m>C_G(H)\nsg N_G(H)</m>.
-              </p>
-            </li>
-
-            <li>
-              <p>
-								From the above permutation representation we have a homomorphism <m>\rho: G\to S_{|H|}\cong\Aut(H)</m>. As <m>C_G(H)=\ker(\rho)</m>, by the First Isomorphism Theorem we have <m>G/C_G(H)\cong\im(\rho))</m>, a subgroup of <m>\Aut(H)</m>.
-              </p>
-            </li>
-          </ol>
-        </p>
-      </solution>
-      </problem>
-
-     
-
-      <problem>
-        <p>
-					Let <m>G</m> be a finite group and let <m>H</m> be a subgroup of <m>G</m> of index <m>p</m>, where <m>p</m> is the smallest prime divisor of the order of <m>G</m>. Prove that <m>H</m> is normal in <m>G</m>.
-				</p>
-
-        <proof>
-          <p>
-            Let <m>S=G/H</m> and note that <m>|S|=p</m>. Let <m>K</m> denote the kernel of the permutation representation generated by <m>G</m> acting on <m>S</m> by left multiplication.
-          </p>
-
-          <p>
-						The First Isomorphism Theorem tells us that <m>G/K\cong\im(\rho)\leq S_p</m>. Thus <m>|K|\big|p!</m> by Lagrange’s Theorem. Let <m>k\in K</m>. Then <m>kgH=gH</m> for all <m>g\in G</m>, making <m>k\in gHg\inv</m> for all <m>g\in G,</m> including <m>e</m>. Thus <m>K\nsg H</m>.
-					</p>
-
-					<p>
-						This yields <m>[G:K]=[G:H][H:K]</m>. Let <m>h=[H:K]</m>, giving us <m>[G:K]=ph</m>. As <m>|K|\big|p!</m> we have <m>h|(p-1)!</m>, so <m>h&lt;p</m>. But <m>p</m> is the smallest prime dividing the order of <m>G</m>, and thus <m>h=1</m>, making <m>H=K</m> and <m>H\nsg G</m>.
-					</p>
-        </proof>
-      </problem>
 
       <exercises>
 
@@ -292,130 +163,165 @@
 
     </section>
 
-    <section xml:id="sec-conjugation">
-      <title>Left Multiplication and Conjugation</title>
+    <section xml:id="sec-self-actions">
+      <title>Self Actions</title>
 
-      <example>
-        <title>Conjugation Action</title>
+      <subsection xml:id="subsec-conjugation-action">
+        <title>Self Conjugation</title>
         
-        <p>
-          Let <m>G</m> be any group and fix an element <m>g \in G</m>. Define <em>the conjugation action</em> of <m>G</m> on itself by setting 
-          <me>
-            g\cdot x=gxg^{-1} \;\text{for any}\; g,x\in G.
-          </me> 
-        </p>
-      </example>
 
-      <theorem xml:id="thm-conjugation-action">
-        <statement>
+        <example>
+          <title>Conjugation Action</title>
+          
           <p>
-            <ol>
-              <li>
-                <p>
-                  Prove that the conjugation action of of <m>G</m> on itself is a well-defined group action.
-                </p>
-              </li>
+            Let <m>G</m> be any group and fix an element <m>g \in G</m>. Define <em>the conjugation action</em> of <m>G</m> on itself by setting 
+            <me>
+              g\cdot x=gxg^{-1} \;\text{for any}\; g,x\in G.
+            </me> 
+          </p>
+        </example>
   
-              <li>
-                <p>
-                  Show <m>G</m> acts on <m>H</m> via conjugation for any <m>H\leq G</m>.
-                </p>
-              </li>
-
-              <li>
-                <p>
-                  Let <m>N\mathrel{\unlhd}G</m>. The conjugation action of <m>G</m> on itself induces an action by conjugation of <m>G</m> on <m>N</m>. In particular, <m>N</m> is the disjoint union of some of the conjugacy classes in <m>G</m>.
-                </p>
-              </li>
-            </ol>
-          </p>
-        </statement>
-      </theorem>
-
-      <proposition xml:id="prop-conjugation-conjugacy-class">
-        <statement>
-          <p>
-            Let <m>G</m> be a group acting on itself via conjugation. Under this action, the orbit of an element is exactly its conjugacy class.
-          </p>
-        </statement>
-      </proposition>
-
-      <proposition xml:id="prop-kernel-of-conjugation-action">
-        <statement>
-          <p>
-            The kernel of the permutation representation for the conjugation action is the center <m>Z(G)</m>. 
-          </p>
-        </statement>
-
-        <proof>
-          <p>
-            If <m>\rho:G\to \operatorname{Perm}(G)</m> is the permutation representation for <m>G</m> acting on <m>G</m> by conjugation, then 
-            <me>
-              g\in \operatorname{Ker}\rho\iff g\cdot x=x, \forall x\in G \iff gxg^{-1}=x, \forall x\in G
-            </me>
-            <me>
-              \iff gx=xg, \forall x\in G \iff g\in Z(G).
-            </me>
-          </p>
-        </proof>
-      </proposition>
-
-      <corollary xml:id="cor-faithful-conjugation">
-        <statement>
-          <p>
-            The action of <m>G</m> on itself by conjugation is faithful if and only if <m>Z(G)=\{e\}</m>.
-          </p>
-        </statement>
-      </corollary>
-
-      <definition xml:id="def-conjugacy-class">
-        <statement>
-          <p>
-            The <em>conjugacy class</em> of an element <m>g \in G</m> is <m>C_g = \{hgh^{-1} \mid h \in G\}</m>, i.e. the orbit of <m>g</m> under conjugation.              
-          </p>
-        </statement>
-      </definition>
-
-      <definition xml:id="def-conjugate">
-        <statement>
-          <p>
-            Let <m>G</m> be a group. Two elements <m>g,g' \in G</m> are <em>conjugate</em> if there is <m>h \in G</m> with <m>g' = hgh^{-1}</m> (equivalently <m>g</m> and <m>g'</m> are in the same orbit of the conjugation action).
-          </p>
-
-          <p>
-            Two subsets <m>S,S' \subseteq G</m> are conjugate if there is <m>h \in G</m> with <m>S' = hSh^{-1}</m>.
-          </p>
-        </statement>
-      </definition>
+        <theorem xml:id="thm-conjugation-action">
+          <statement>
+            <p>
+              <ol>
+                <li>
+                  <p>
+                    Prove that the conjugation action of of <m>G</m> on itself is a well-defined group action.
+                  </p>
+                </li>
     
+                <li>
+                  <p>
+                    Show <m>G</m> acts on <m>H</m> via conjugation for any <m>H\leq G</m>.
+                  </p>
+                </li>
+  
+                <li>
+                  <p>
+                    Let <m>N\mathrel{\unlhd}G</m>. The conjugation action of <m>G</m> on itself induces an action by conjugation of <m>G</m> on <m>N</m>. In particular, <m>N</m> is the disjoint union of some of the conjugacy classes in <m>G</m>.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+        </theorem>
+  
+        <proposition xml:id="prop-conjugation-conjugacy-class">
+          <statement>
+            <p>
+              Let <m>G</m> be a group acting on itself via conjugation. Under this action, the orbit of an element is exactly its conjugacy class.
+            </p>
+          </statement>
+        </proposition>
+  
+        <proposition xml:id="prop-kernel-of-conjugation-action">
+          <statement>
+            <p>
+              The kernel of the permutation representation for the conjugation action is the center <m>Z(G)</m>. 
+            </p>
+          </statement>
+  
+          <proof>
+            <p>
+              If <m>\rho:G\to \operatorname{Perm}(G)</m> is the permutation representation for <m>G</m> acting on <m>G</m> by conjugation, then 
+              <me>
+                g\in \operatorname{Ker}\rho\iff g\cdot x=x, \forall x\in G \iff gxg^{-1}=x, \forall x\in G
+              </me>
+              <me>
+                \iff gx=xg, \forall x\in G \iff g\in Z(G).
+              </me>
+            </p>
+          </proof>
+        </proposition>
+  
+        <corollary xml:id="cor-faithful-conjugation">
+          <statement>
+            <p>
+              The action of <m>G</m> on itself by conjugation is faithful if and only if <m>Z(G)=\{e\}</m>.
+            </p>
+          </statement>
+        </corollary>
+  
+        <definition xml:id="def-conjugacy-class">
+          <statement>
+            <p>
+              The <em>conjugacy class</em> of an element <m>g \in G</m> is <m>C_g = \{hgh^{-1} \mid h \in G\}</m>, i.e. the orbit of <m>g</m> under conjugation.              
+            </p>
+          </statement>
+        </definition>
+  
+        <definition xml:id="def-conjugate">
+          <statement>
+            <p>
+              Let <m>G</m> be a group. Two elements <m>g,g' \in G</m> are <em>conjugate</em> if there is <m>h \in G</m> with <m>g' = hgh^{-1}</m> (equivalently <m>g</m> and <m>g'</m> are in the same orbit of the conjugation action).
+            </p>
+  
+            <p>
+              Two subsets <m>S,S' \subseteq G</m> are conjugate if there is <m>h \in G</m> with <m>S' = hSh^{-1}</m>.
+            </p>
+          </statement>
+        </definition>
+      </subsection>
 
-      <problem>
-        <p> 
-          Let <m>G</m> be a finite group and let <m>H</m> be a proper subgroup of <m>G</m> with <m>[G:H]=h</m>.
-        </p>
+      <subsection xml:id="subsec-left-multiplication">
+        <title>Left Regualr Action</title>
 
-        <p><ol>
-          <li>
-          Prove that <m>H</m> has at most <m>h</m> distinct conjugate sets <m>gHg^{-1}</m> for <m>g\in G</m>.
-          </li>
-
-          <li>
-          Prove that <m>G\neq \bigcup_{g\in G} gHg^{-1}</m>.
-          </li>
-
-        </ol></p>
-
-        <proof>
+        <example xml:id="ex-leftreg">
+          <title>Left Regular Action</title>
+          
           <p>
-            Let <m>f:G/H\to gHg\inv</m> be defined by <m>f(gH)=gHg\inv</m>. Suppose <m>xH=yH</m>. Notice that <m>f(xH)=xHx\inv</m> and <m>f(H)=yHy\inv</m>, but as <m>x=y</m> we have equality, and thus <m>f</m> is well defined. Let <m>gHg\inv</m> be a conjugate set, and let <m>gH\in G/H</m>. Then <m>f(gH)=gHg\inv</m>, and so we have surjectivity. As <m>|G/H|=|[G:H]|=h</m>, there can be at most <m>h</m> distinct conjugate sets for <m>g\in G</m>.
+            Let <m>G</m> be any group and define an action <m>\cdot</m> of <m>G</m> on <m>G</m> (regarded as just a set) by the rule 
+            <me>
+              g \cdot x = g  x, \text{ for $g \in G$ and $x \in G$.}
+            </me>
           </p>
+        </example>
 
-          <p>
-            Let <m>G</m> act on <m>H</m> by conjugation. We know that the orbits of this action partition <m>H</m>. However, under this action the orbits are exactly the conjugacy classes of <m>H</m>. There are at most <m>h</m> conjugacy classes. Each conjugacy class has at most <m>|H|</m> elements in it, and each one has the identity. As there are at most <m>h</m> of them then when we add all of their orders we get at most <m>h(|H|-1)</m>, which is less than the order of <m>G</m>.
-          </p>
-        </proof>
-      </problem>
+        <proposition xml:id="prop-">
+          <statement>
+            <p>
+              <ol>
+                <li>
+                  <p>
+                    Prove that the left regular action is a well defined action.
+                  </p>
+                </li>
 
+                <li>
+                  <p>
+                    Prove that the left regular action is faithful.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+        </proposition>
+       
+        <theorem xml:id="thm-smallest-prime-normal">
+          <statement>
+            <p>
+              Let <m>G</m> be a finite group and let <m>H</m> be a subgroup of <m>G</m> of index <m>p</m>, where <m>p</m> is the smallest prime divisor of the order of <m>G</m>. Prove that <m>H</m> is normal in <m>G</m>.
+            </p>
+          </statement>
+    
+          <proof>
+            <p>
+              Let <m>S=G/H</m> and note that <m>|S|=p</m>. Let <m>K</m> denote the kernel of the permutation representation generated by <m>G</m> acting on <m>S</m> by left multiplication.
+            </p>
+    
+            <p>
+              The First Isomorphism Theorem tells us that <m>G/K\cong\im(\rho)\leq S_p</m>. Thus <m>|K|\big|p!</m> by Lagrange’s Theorem. Let <m>k\in K</m>. Then <m>kgH=gH</m> for all <m>g\in G</m>, making <m>k\in gHg\inv</m> for all <m>g\in G,</m> including <m>e</m>. Thus <m>K\nsg H</m>.
+            </p>
+    
+            <p>
+              This yields <m>[G:K]=[G:H][H:K]</m>. Let <m>h=[H:K]</m>, giving us <m>[G:K]=ph</m>. As <m>|K|\big|p!</m> we have <m>h|(p-1)!</m>, so <m>h&lt;p</m>. But <m>p</m> is the smallest prime dividing the order of <m>G</m>, and thus <m>h=1</m>, making <m>H=K</m> and <m>H\nsg G</m>.
+            </p>
+          </proof>
+         </theorem>
+
+
+      </subsection>
 
       <exercises>
 
@@ -542,8 +448,36 @@
               </p>
             </solution>
           </exercise>
-
+          
+          <exercise>
+            <statement>
+              <p> 
+                Let <m>G</m> be a finite group and let <m>H</m> be a proper subgroup of <m>G</m> with <m>[G:H]=h</m>.
+              </p>
       
+              <p><ol>
+                <li>
+                Prove that <m>H</m> has at most <m>h</m> distinct conjugate sets <m>gHg^{-1}</m> for <m>g\in G</m>.
+                </li>
+      
+                <li>
+                Prove that <m>G\neq \bigcup_{g\in G} gHg^{-1}</m>.
+                </li>
+      
+              </ol></p>
+            </statement>
+
+            <solution>
+              <p>
+                Let <m>f:G/H\to gHg\inv</m> be defined by <m>f(gH)=gHg\inv</m>. Suppose <m>xH=yH</m>. Notice that <m>f(xH)=xHx\inv</m> and <m>f(H)=yHy\inv</m>, but as <m>x=y</m> we have equality, and thus <m>f</m> is well defined. Let <m>gHg\inv</m> be a conjugate set, and let <m>gH\in G/H</m>. Then <m>f(gH)=gHg\inv</m>, and so we have surjectivity. As <m>|G/H|=|[G:H]|=h</m>, there can be at most <m>h</m> distinct conjugate sets for <m>g\in G</m>.
+              </p>
+    
+              <p>
+                Let <m>G</m> act on <m>H</m> by conjugation. We know that the orbits of this action partition <m>H</m>. However, under this action the orbits are exactly the conjugacy classes of <m>H</m>. There are at most <m>h</m> conjugacy classes. Each conjugacy class has at most <m>|H|</m> elements in it, and each one has the identity. As there are at most <m>h</m> of them then when we add all of their orders we get at most <m>h(|H|-1)</m>, which is less than the order of <m>G</m>.
+              </p>
+            </solution>
+
+          </exercise>
         </exercisegroup>
       </exercises>
 
@@ -784,8 +718,6 @@
       </exercises>
       
     </section>
-    
-   
 
     <section xml:id="sec-class-eq">
       <title>The Class Equation</title>

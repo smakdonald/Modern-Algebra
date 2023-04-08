@@ -12,7 +12,15 @@
 </head>
 <body class="ignore-math">
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<div class="para">Suppose <span class="process-math">\(R\)</span> is a commutative ring. The following conditions are equivalent: 1. <span class="process-math">\(R\)</span> has the ascending chain condition on ideals. 2. Every ideal of <span class="process-math">\(R\)</span> is finitely generated — i.e., for every ideal <span class="process-math">\(I\text{,}\)</span> there exists a finite set of elements <span class="process-math">\(x_1, \dots, x_n\)</span> in <span class="process-math">\(I\)</span> such that <span class="process-math">\(I = R \cdot x_1 + \cdots + R \cdot x_n\text{.}\)</span> In this case we say <span class="process-math">\(R\)</span> is <em class="emphasis">Noetherian</em>.</div>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(f \in I\text{.}\)</span> The leading coefficient of <span class="process-math">\(f\)</span> is an <span class="process-math">\(R\)</span>-linear combination of <span class="process-math">\(a_1, \ldots, a_t\text{.}\)</span> If <span class="process-math">\(f\)</span> has degree greater than <span class="process-math">\(N\text{,}\)</span> then we can cancel off the leading term of <span class="process-math">\(f\)</span> by subtracting a suitable combination of the <span class="process-math">\(f_i\text{.}\)</span> Therefore, any <span class="process-math">\(f \in I\)</span> can be written as <span class="process-math">\(f = g+ h\)</span> for some <span class="process-math">\(h \in (f_1, \ldots, f_t)\)</span> and <span class="process-math">\(g \in I\)</span> with degree at most <span class="process-math">\(N\text{.}\)</span> In particular, note that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g \in I \cap \frac{R + Rx + \cdots + R x^N}.
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(I \cap (R + Rx + \cdots + R x^N)\)</span> is a submodule of the finitely generated free <span class="process-math">\(R\)</span>-module <span class="process-math">\(R + Rx + \cdots + R x^N\text{,}\)</span> it must also be finitely generated as an <span class="process-math">\(R\)</span>-module[^3]. Given such a generating set, say <span class="process-math">\(I \cap (R + Rx + \cdots + Rx^N) = (f_{t+1}, \ldots, f_s)\text{,}\)</span> we can write any element <span class="process-math">\(f \in I\)</span> as an <span class="process-math">\(R[x]\)</span>-linear combination of these generators <span class="process-math">\(f_{t+1}, \ldots, f_s\)</span> and the original <span class="process-math">\(f_{1}, \ldots, f_t\text{.}\)</span> Therefore, <span class="process-math">\(I = (f_1, \ldots, f_t, f_{t+1}, \ldots, f_s)\)</span> is finitely generated as an ideal in <span class="process-math">\(R[x]\text{,}\)</span> and <span class="process-math">\(R[x]\)</span> is a noetherian ring.</div>
+</div>
 <span class="incontext"><a href="sec-noeth.html#p-2124" class="internal">in-context</a></span>
 </body>
 </html>
