@@ -13,14 +13,8 @@
         <attribution>Anthony of Padua</attribution>
       </blockquote>
 
-      <blockquote>
-        <p>
-          <q>Actions speak louder than words.</q>
-        </p>
-        <attribution>Anthony of Padua</attribution>
-      </blockquote>
-
       <definition xml:id="def-graction">
+        <title>Group Action</title>
         <statement>
           <p>
             For a group <m>(G, \cdot)</m> and set <m>S</m>, an <em>action</em> of <m>G</m> on <m>S</m> is a function <me>G \times S \to S,</me> typically written as <m>(g,s) \mapsto g \cdot s</m>, such that
@@ -59,7 +53,7 @@
       </example>
 
       <theorem xml:id="thm-permrep">
-        <title>Permutation Representation</title>
+        <title>The Permutation Representation</title>
         
         <statement>
           <p>
@@ -105,13 +99,16 @@
             Given a homomorphism <m>\rho</m>, the function <m>G \times S \to S</m> defined as <m>g \cdot s = \rho(g)(s)</m> is an action because <m>g'(gs) = \rho(g')(\rho(g)(s)) = (\rho(g') \circ\rho(g))(s) = \rho(gg')(s) = (gg')s</m>, and <m>e_G s = \rho(e_G)(s) = \text{id}(s) = s</m>.
           </p>
         </proof>
+
       </theorem>
 
       <p>
         Permutation representations are one the most essential benefits of group actions. This homomorphism allows us to study the structure of a group <m>G</m> by looking at the permutation group of <m>X</m>, which may be a more manageable group to work with. 
+        <notation><usage><m>\rho</m></usage><description>The permutation representation of a group action</description></notation> 
       </p>
 
-      <definition xml:id="def-faithful">
+      <definition xml:id="def-faithful-action">
+        <title>Faithful Action</title>
         <statement>
           <p>
             An action of a group <m>G</m> on a set <m>S</m> is called <em>faithful</em> if the associated group homomorphism is injective. Equivalently, an action is faithful if and only if for a given <m>g \in G</m>, whenever <m>g \cdot s = s</m> for all <m>s \in S</m>, it must be that <m>g = e_G</m>.
@@ -119,7 +116,8 @@
         </statement>
       </definition>
 
-      <definition xml:id="def-faithful-action">
+      <definition xml:id="def-transitive-action">
+        <title>Transitive Action</title>
         <statement>
           <p>
             An action is <em>transitive</em> if for all <m>p,q \in S</m> there is a <m>g \in G</m> such that <m>q=g\cdot p</m>.
@@ -241,14 +239,17 @@
         <title>Self Conjugation</title>
 
         <definition xml:id="def-conjugacy-class">
+          <title>Conjugacy Class</title>
           <statement>
             <p>
-              The <em>conjugacy class</em> of an element <m>g \in G</m> is <m>C_g = \{hgh^{-1} \mid h \in G\}</m>, i.e. the orbit of <m>g</m> under conjugation.              
+              The <em>conjugacy class</em> of an element <m>g \in G</m> is <m>C_G(g) = \{hgh^{-1} \mid h \in G\}</m>.
+              <notation><usage><m>C_G(g)</m></usage><description>the conjugacy class of the element <m>g\in G=\{hgh^{-1} \mid h \in G\}</m></description></notation>          
             </p>
           </statement>
         </definition>
   
         <definition xml:id="def-conjugate">
+          <title>Conjugate</title>
           <statement>
             <p>
               Let <m>G</m> be a group. Two elements <m>g,g' \in G</m> are <em>conjugate</em> if there is <m>h \in G</m> with <m>g' = hgh^{-1}</m> (equivalently <m>g</m> and <m>g'</m> are in the same orbit of the conjugation action).
@@ -273,6 +274,7 @@
         </example>
   
         <theorem xml:id="thm-conjugation-action">
+          <title>Induced Conjugations</title>
           <statement>
             <p>
               <ol>
@@ -298,15 +300,8 @@
           </statement>
         </theorem>
   
-        <proposition xml:id="prop-conjugation-conjugacy-class">
-          <statement>
-            <p>
-              Let <m>G</m> be a group acting on itself via conjugation. Under this action, the orbit of an element is exactly its conjugacy class.
-            </p>
-          </statement>
-        </proposition>
-  
         <proposition xml:id="prop-kernel-of-conjugation-action">
+          <title>Conjugation Kernel</title>
           <statement>
             <p>
               The kernel of the permutation representation for the conjugation action is the center <m>Z(G)</m>. 
@@ -327,6 +322,7 @@
         </proposition>
   
         <corollary xml:id="cor-faithful-conjugation">
+          <title>Faithful Conjugations</title>
           <statement>
             <p>
               The action of <m>G</m> on itself by conjugation is faithful if and only if <m>Z(G)=\{e\}</m>.
@@ -357,6 +353,7 @@
         </remark>
 
         <proposition xml:id="prop-left-mult-well-defined">
+          <title>Left Multiplication is Faithful</title>
           <statement>
             <p>
               <ol>
@@ -411,6 +408,7 @@
         </proposition>
        
         <theorem xml:id="thm-smallest-prime-normal">
+          <title>Smallest Prime Index is Normal</title>
           <statement>
             <p>
               Let <m>G</m> be a finite group and let <m>H</m> be a subgroup of <m>G</m> of index <m>p</m>, where <m>p</m> is the smallest prime divisor of the order of <m>G</m>. Prove that <m>H</m> is normal in <m>G</m>.
@@ -609,7 +607,7 @@
         <p>
           <q>Once you are in the orbit of your destiny, weightlessness is the only result.</q>
         </p>
-        <attribution>Arthur Wellesley</attribution>
+        <attribution>Baba Amte</attribution>
       </blockquote>
 
       <blockquote>
@@ -620,6 +618,7 @@
       </blockquote>
 
       <definition xml:id="def-orbit">
+        <title>Orbit</title>
         <statement>
           <p>
             Let <m>G</m> be a group acting on a set <m>X</m>. For an element <m>s\in X</m> the orbit of <m>s</m> is 
@@ -630,7 +629,41 @@
         </statement>
       </definition>
 
+      <proposition xml:id="prop-orbit-properties">
+        <title>Properties of Orbits</title>
+        <statement>
+          <p>
+            <ol>
+              <li>
+                <p>
+                  If <m>H</m> is a subgroup of <m>G</m>, then the left cosets of <m>H</m> in <m>G</m> correspond precisely to the orbits of <m>H</m> under the left regular action of <m>G</m> on itself.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Two elements <m>g,g' \in G</m> are conjugate if and only if <m>g</m> and <m>g'</m> are in the same orbit of the conjugation action.          
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>C_G(g)</m> is exactly the orbit of <m>g</m> under conjugation.                
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </proposition>
+
+      <remark>
+        <p>
+          Its always been group actions, the whole time.
+        </p>
+      </remark>
+
       <lemma xml:id="lem-orbits-partition">
+        <title>Orbits Partition the Group</title>
         <statement>
           <p>
             Let <m>G</m> be a group acting on a set <m>S</m>. Then
@@ -660,35 +693,9 @@
         </statement>
       </lemma>
 
-      <proposition xml:id="prop-orbit-left-multiplication">
-        <statement>
-          <p>
-            If <m>H</m> is a subgroup of <m>G</m>, then the left cosets of <m>H</m> in <m>G</m> correspond precisely to the orbits of <m>H</m> under the left regular action of <m>G</m> on itself.
-          </p>
-        </statement>
-      </proposition>
-
-      <proposition xml:id="prop-orbit-conjugation">
-        <statement>
-          <p>
-            <ol>
-              <li>
-                <p>
-                  Two elements <m>g,g' \in G</m> are conjugate if and only if <m>g</m> and <m>g'</m> are in the same orbit of the conjugation action.          
-                </p>
-              </li>
-
-              <li>
-                <p>
-                  <m>C_G(g)</m> is exactly the orbit of <m>g</m> under conjugation.                
-                </p>
-              </li>
-            </ol>
-          </p>
-        </statement>
-      </proposition>
 
       <definition xml:id="def-stab">
+        <title>Stabilizer</title>
         <statement>
           <p>
             Let <m>G</m> be a group acting on a set <m>X</m>. For an element <m>s\in X</m> the stabilizer is 
@@ -700,6 +707,7 @@
       </definition>
 
       <proposition xml:id="prop-stabilizer-is-subgroup">
+        <title>Stabilizers are Subgroups</title>
         <statement>
           <p>
             The stabilizer <m>\operatorname{Stab}_G(s)</m> is a subgroup of <m>G</m>.
@@ -754,6 +762,7 @@
       </warning>
 
       <theorem xml:id="thm-conjugation-and-lois">
+        <title>Conjugation Actions and LOIS</title>
         <statement>
           <p>
             Let <m>G</m> be a group.
@@ -778,6 +787,7 @@
       </theorem>
 
       <corollary xml:id="cor-conjugacy-divides-order">
+        <title>Size of Conjugacy Class Divides <m>|G|</m></title>
         <statement>
           <p>
             For a finite group <m>G</m>, the size of any conjugacy class divides <m>|G|</m>.
@@ -929,6 +939,7 @@
       </blockquote>
       
       <definition xml:id="def-centralizer">
+        <title>Centralizer</title>
         <statement>
           <p>
             Let <m>G</m> be a group. For any <m>g \in G</m>, 
@@ -944,6 +955,7 @@
       </definition>
 
       <definition xml:id="def-normalizer">
+        <title>Normalizer</title>
         <statement>
           <p>
             Let <m>G</m> be a group. For any <m>S \subseteq G</m>, 
@@ -961,13 +973,13 @@
             <ol>
               <li>
                 <p>
-                  Then <m>G</m> acts on <m>G</m> by conjugation (<m>g \cdot g' = gg'g^{-1}</m>). For all <m>g \in G</m>, the orbit of <m>g</m> is the conjugacy class of <m>g</m>, <m>\operatorname{Stab}_G(g)=C_G(G)</m> and <m>|[g]_c| = |G : C_G(g)|</m>.
+                  Then <m>G</m> acts on <m>G</m> by conjugation (<m>g \cdot g' = gg'g^{-1}</m>). For all <m>g \in G</m>, the orbit of <m>g</m> is the conjugacy class of <m>g</m>, <m>\operatorname{Stab}_G(g)=C_G(G)</m> and <m>|[g]_c| = [G : C_G(g)]</m>.
                 </p>
               </li>
     
               <li>
                 <p>
-                  Then <m>G</m> acts on the power set <m>P(G)=\{S\mid S\subseteq G\}</m> by conjugation (<m>g \cdot S = gSg^{-1}</m>). For all <m>S \in P(G)</m>, <m>\operatorname{Stab}_G(S)=N_G(S)</m> and <m>|\operatorname{Orbit}_G(S)| = |G : N_G(S)|</m>.
+                  Then <m>G</m> acts on the power set <m>P(G)=\{S\mid S\subseteq G\}</m> by conjugation (<m>g \cdot S = gSg^{-1}</m>). For all <m>S \in P(G)</m>, <m>\operatorname{Stab}_G(S)=N_G(S)</m> and <m>|\operatorname{Orbit}_G(S)| = [G : N_G(S)]</m>.
                 </p>
               </li>
             </ol>

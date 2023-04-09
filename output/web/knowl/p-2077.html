@@ -13,15 +13,20 @@
 <body class="ignore-math">
 <h6 class="heading"><span class="type">Paragraph</span></h6>
 <div class="para logical">
-<div class="para">It is true that trace is invariant under all “cyclic permutations’’ of products of matrices. For instance, <span class="process-math">\(\trace(XYZ) = \trace(ZXY) = \trace(YZX)\)</span> and more generally we have</div>
+<div class="para">Let <span class="process-math">\(F\)</span> be a field and let <span class="process-math">\(A\)</span> be an <span class="process-math">\(n \times n\)</span> invertible matrix for <span class="process-math">\(n \geq 1\text{.}\)</span> Then <span class="process-math">\(A\)</span> can be transformed to a matrix of the form</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\trace(X_1 \cdots X_n) = \trace(X_i X_{i+1} \cdots X_n X_1 X_2 \cdots X_{i-1})
+\begin{bmatrix}
+u &amp; 0 &amp; 0 &amp; \cdots &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; \cdots &amp; 0 \\
+0 &amp; 0 &amp; \ddots &amp; \cdots &amp; 0 \\
+\vdots &amp; &amp; \ddots &amp; \ddots &amp; \vdots  \\
+0 &amp; 0 &amp; \cdots &amp; 0 &amp; 1 \\
+\end{bmatrix}
 \end{equation*}
 </div>
-<div class="para">for all <span class="process-math">\(i\text{.}\)</span>
+<div class="para">for some <span class="process-math">\(u \ne 0\)</span> via elementary column and column operations of type I.</div>
 </div>
-</div>
-<span class="incontext"><a href="sec-det.html#p-2077" class="internal">in-context</a></span>
+<span class="incontext"><a href="sec-elematix.html#p-2077" class="internal">in-context</a></span>
 </body>
 </html>

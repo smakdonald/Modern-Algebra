@@ -10,17 +10,49 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para">Let <span class="process-math">\(\Q(i) = \{a + bi \mid a, b \in \Q\}\)</span> and <span class="process-math">\(\Z[i] = \{a + ib \mid a, b \in \Z\}\text{.}\)</span>
-</div> <div class="para">Suppose by way of contradiction that <span class="process-math">\(7\)</span> is not prime in <span class="process-math">\(\Z[i]\text{.}\)</span> Thus <span class="process-math">\(7=\alpha\beta\text{,}\)</span> with <span class="process-math">\(\alpha,\beta\)</span> non-units and where <span class="process-math">\(\alpha=a+bi\)</span> and <span class="process-math">\(\beta=c+di\text{,}\)</span> for <span class="process-math">\(a,b,c,d\in Z\text{.}\)</span> Thus <span class="process-math">\(\overline{7}=\overline{\alpha\beta}=\overline{\alpha}\overline{\beta}\text{.}\)</span> As <span class="process-math">\(\overline{7+0i}=49\text{,}\)</span> we see that <span class="process-math">\(\overline{\alpha}=(a^2+b^2)|49\text{.}\)</span> Note that the possible factorizations of 49 in <span class="process-math">\(\Z\)</span> are <span class="process-math">\((1)(49)\)</span> and <span class="process-math">\((7)(7)\text{.}\)</span>
-</div> <div class="para">However, if <span class="process-math">\(\overline{\alpha}=49\)</span> then <span class="process-math">\(\overline{\beta}=1\text{,}\)</span> making it a unit. So <span class="process-math">\(\overline{\alpha}=7\)</span> and thus <span class="process-math">\(a^2+b^2=7\text{.}\)</span> As <span class="process-math">\(a^2, b^2\leq0\text{,}\)</span> either <span class="process-math">\(a=0\)</span> or <span class="process-math">\(b=0\text{.}\)</span> But then either <span class="process-math">\(a^2=7\)</span> or <span class="process-math">\(b^2=7\text{,}\)</span> and as <span class="process-math">\(\sqrt{7}\not\in\Z\text{,}\)</span> we have a contradiction. Thus <span class="process-math">\(7\)</span> is prime in <span class="process-math">\(\Z[i]\text{.}\)</span> Using Eisenstein’s Criterion with <span class="process-math">\(p=7\text{,}\)</span> we see that <span class="process-math">\(x^6 + 7\)</span> is irreducible in <span class="process-math">\(\Q(i)[x]\text{.}\)</span>
+<body class="ignore-math"><article class="hiddenproof"><div class="para">We have <span class="process-math">\(f(x) = \cont(f) \cdot l(x)\)</span> with <span class="process-math">\(l(x) \in R[x]\)</span> and <span class="process-math">\(\cont(l) = 1\text{.}\)</span> Since <span class="process-math">\(p\)</span> does not divide the leading coefficient of <span class="process-math">\(f\text{,}\)</span> we have <span class="process-math">\(p \nmid \cont(f)\text{.}\)</span> It therefore follows that the three assumptions involving the coefficients of <span class="process-math">\(f(x)\)</span> are also satisfied by the coefficients <span class="process-math">\(l(x)\text{.}\)</span> Moreover, <span class="process-math">\(f\)</span> is irreducible in <span class="process-math">\(F[x]\)</span> if and only if <span class="process-math">\(l(x)\)</span> is irreducible in <span class="process-math">\(F[x]\text{.}\)</span> We may therefore assume without loss of generality that <span class="process-math">\(\cont(f) = 1\text{.}\)</span>
 </div> <div class="para logical">
-<div class="para">Using Eisenstein’s Criterion with <span class="process-math">\(p=2\text{,}\)</span> we see that <span class="process-math">\(x^4 - 6x^2 + 10\)</span> is irreducible in <span class="process-math">\(\Q[x]\text{.}\)</span> However, in <span class="process-math">\(\Q(i)[x]\)</span> observe that</div>
+<div class="para">By Gauss’s Lemma we just need to prove it is irreducible in <span class="process-math">\(R[x]\text{.}\)</span> Suppose <span class="process-math">\(f(x) = g(x)h(x)\)</span> with <span class="process-math">\(g(x), h(x) \in R[x]\text{,}\)</span> where</div>
 <div class="displaymath process-math">
 \begin{equation*}
-x^4-6x^2+10=(x^2-(3+i))(x^2-(3-i)).
+g(x) = b_m x^m + b_{m-1} x^{m-1} + \cdots + b_0
 \end{equation*}
 </div>
-<div class="para">As neither <span class="process-math">\((x^2-(3+i))\)</span> nor <span class="process-math">\((x^2-(3-i))\)</span> are units in <span class="process-math">\(\Q(i)[x]\)</span> (as <span class="process-math">\(x\)</span> has no inverse), we see that <span class="process-math">\(x^4-6x^2+10\)</span> is reducible in <span class="process-math">\(\Q(i)[x]\text{.}\)</span>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+h(x) = c_l x^l + c_{l-1} x^{l-1} + \cdots + c_0
+\end{equation*}
 </div>
+<div class="para">where <span class="process-math">\(m+l = n\)</span> and <span class="process-math">\(b_m c_l = a_n\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">Upon modding out by <span class="process-math">\(p\)</span> we get</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\ov{f} = \ov{g} \ov{h} \in (R/p)[x].
+\end{equation*}
+</div>
+<div class="para">The assumptions on <span class="process-math">\(f\)</span> give that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\ov{f} = \ov{a_n} x^n
+\end{equation*}
+</div>
+<div class="para">with <span class="process-math">\(\ov{a_n} \ne 0\text{.}\)</span> Since <span class="process-math">\(R/p\)</span> is a domain, it follows that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\ov{g} = \ov{b_m} x^m \, \text{ and  } \, \ov{h} = \ov{c_l} x^l
+\end{equation*}
+</div>
+<div class="para">On the other hand, we also have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a_0 = b_0c_0,
+\end{equation*}
+</div>
+<div class="para">and since <span class="process-math">\(p^2 \nmid a_0\text{,}\)</span> we have that <span class="process-math">\(p \nmid b_0\)</span> or <span class="process-math">\(p \nmid c_0\text{.}\)</span> So <span class="process-math">\(\ov{b_0} \ne 0\)</span> or <span class="process-math">\(\ov{c_0} \ne 0\text{.}\)</span> This can only occur if <span class="process-math">\(m = 0\)</span> or <span class="process-math">\(l = 0\text{.}\)</span>
+</div>
+</div> <div class="para">We have shown that if <span class="process-math">\(f\)</span> factors in <span class="process-math">\(R[x]\)</span> as <span class="process-math">\(f = g \cdot h\text{,}\)</span> then at least one of <span class="process-math">\(g\)</span> of <span class="process-math">\(h\)</span> must be a constant polynomial. Since <span class="process-math">\(\cont(f) = 1\text{,}\)</span> this factor must be a unit. So <span class="process-math">\(f\)</span> is irreducible in <span class="process-math">\(R[x]\text{.}\)</span>
 </div></article></body>
 </html>

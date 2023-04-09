@@ -12,8 +12,14 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">Let <span class="process-math">\(G\)</span> be a group of order <span class="process-math">\(3^2\cdot 11\cdot 17\text{.}\)</span> By Sylow's Theorem we see the following: - <span class="process-math">\(n_{11}|153\)</span> and <span class="process-math">\(n_{11}\equiv 1\mod{11}\text{,}\)</span> and so <span class="process-math">\(n_{11}=1\text{.}\)</span> - <span class="process-math">\(n_{17}|99\)</span> and <span class="process-math">\(n_{17}\equiv 1\mod{17}\text{,}\)</span> and so <span class="process-math">\(n_{17}=1\)</span> as well. - <span class="process-math">\(n_3|187\)</span> and <span class="process-math">\(n_3\cong 1\mod{3}\text{,}\)</span> so actually <span class="process-math">\(n_3=1\)</span> too. Thus the unique Sylow <span class="process-math">\(11\)</span>-subgroup and Sylow <span class="process-math">\(17\)</span>-subgroup, denoted <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\text{,}\)</span> respectively, are normal in <span class="process-math">\(G\text{.}\)</span>
+<div class="para logical">
+<div class="para">If <span class="process-math">\(\operatorname{gcd}(m,n)=1\)</span> then <span class="process-math">\(\mathbb{Z}/m\times \mathbb{Z}/n\cong \mathbb{Z}/mn\text{.}\)</span> Indeed consider the elements <span class="process-math">\(x=(1,0)\)</span> and <span class="process-math">\(y=(0,1)\)</span> in <span class="process-math">\(\mathbb{Z}/m\times \mathbb{Z}/n\text{.}\)</span> Then <span class="process-math">\(|x|=m, |y|=n\)</span> and <span class="process-math">\(x+y=y+x=(1,1)\text{.}\)</span> Therefore <span class="process-math">\(|xy|=\operatorname{lcm}(|x|,|y|)=mn\text{.}\)</span> Since <span class="process-math">\(\langle x+y \rangle \subseteq \mathbb{Z}/m\times \mathbb{Z}/n\)</span> and both of these sets have cardinality <span class="process-math">\(mn\)</span> it must be the case that <span class="process-math">\(\mathbb{Z}/m\times \mathbb{Z}/n=\langle x+y \rangle=\langle (1,1) \rangle\text{.}\)</span> Since <span class="process-math">\(\langle x+y \rangle\)</span> and <span class="process-math">\(\mathbb{Z}/mn\)</span> are both cyclic groups of order <span class="process-math">\(mn\)</span> they are isomorphic. Thus</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathbb{Z}/m\times \mathbb{Z}/n\cong \mathbb{Z}/mn.
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec-ftfgag.html#p-872" class="internal">in-context</a></span>
+</div>
+<span class="incontext"><a href="sec-grp-spds.html#p-872" class="internal">in-context</a></span>
 </body>
 </html>

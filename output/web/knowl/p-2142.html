@@ -12,8 +12,27 @@
 </head>
 <body class="ignore-math">
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<div class="para">Note that some of the diagonal entries could be <span class="process-math">\(0\text{.}\)</span> Recall <span class="process-math">\(s \mid 0\)</span> for all <span class="process-math">\(s \in R\)</span> (including <span class="process-math">\(s = 0\)</span>), and <span class="process-math">\(0\)</span> is the only element that divides <span class="process-math">\(0\text{.}\)</span> So, the “tail’’ end of the sequence could be all <span class="process-math">\(0\)</span>’s, and indeed if <span class="process-math">\(s_{i,i} = 0\)</span> for some <span class="process-math">\(i\)</span> then all subsequent diagonal entries must be <span class="process-math">\(0\text{.}\)</span>
+<div class="para logical">
+<div class="para">We have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\psi(v+w, v+w) = 0
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec-snf.html#p-2142" class="internal">in-context</a></span>
+<div class="para">on the one hand and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\psi(v+w, v+w) = \psi(v, v+w) + \psi(w, v+w) = \psi(v,v) + \psi(v, w) + \psi(w,v) + \psi(w,w) = \psi(v, w) + \psi(w,v)  
+\end{equation*}
+</div>
+<div class="para">on the other hand. It follows that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\psi(v, w) + \psi(w,v)  = 0
+\end{equation*}
+</div>
+<div class="para">which proves the Lemma in this case.</div>
+</div>
+<span class="incontext"><a href="sec-det.html#p-2142" class="internal">in-context</a></span>
 </body>
 </html>

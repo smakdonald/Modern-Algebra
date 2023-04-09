@@ -5,7 +5,7 @@
     <title>Normal and Quotient Groups</title>
 
     <section xml:id="sec-cosets">
-      <title>Cosets and Conjugations</title>
+      <title>Cosets and Lagrange's Theorem</title>
 
       <blockquote>
         <p>
@@ -13,8 +13,16 @@
         </p>
         <attribution>Lee Loevinger</attribution>
       </blockquote>
+
+      <blockquote>
+        <p>
+          <q>If I had inherited a fortune I should probably not have cast my lot with mathematics.</q>
+        </p>
+        <attribution>Joseph-Louis Lagrange</attribution>
+      </blockquote>
       
       <definition xml:id="def-coset">
+        <title>Coset</title>
         <statement>
           <p>
             For any <m>N\leq G</m> and any <m>g\in G</m> let 
@@ -106,6 +114,7 @@
       </lemma>
 
       <lemma xml:id="lem-cosetpartition">
+        <title>Cosets Partition a Group</title>
         <statement>
           <p>
             For <m>H \leq G</m>, the collection of left cosets of <m>H</m> in <m>G</m> form a partition of <m>G</m>, and similarly for the collection of right cosets. That is,
@@ -161,6 +170,7 @@
       </corollary>
 
       <definition xml:id="def-index">
+        <title>Index</title>
         <statement>
           <p>
             In finite groups, the common number of left or right cosets of a subgroup <m>H</m> in a group <m>G</m> is denoted as <m>[G:H]</m> and is called the <em>index</em> of <m>H</m> in <m>G</m>.
@@ -180,53 +190,47 @@
       </theorem>
 
       <corollary xml:id="cor-lagrange">
+        <title>Corollaries to Lagrange's Theorem</title>
+        
         <statement>
           <p>
-            If <m>x\in G</m> and <m>G</m> is a finite group, then <m>|x|</m> divides <m>|G|</m>.
-          </p>
-        </statement>
-      </corollary>
+            <ol>
+              <li>
+                <p>
+                  If <m>x\in G</m> and <m>G</m> is a finite group, then <m>|x|</m> divides <m>|G|</m>.
+                </p>
+              </li>
 
-      <corollary xml:id="cor-lagrange-index">
-        <statement>
-          <p>
-            If <m>G</m> is a finite group, then 
-            <me>
-              [G:H]=\frac{|G|}{|H|}
-            </me>
+              <li>
+                <p>
+                  If <m>G</m> is a finite group, then <m>[G:H]=\frac{|G|}{|H|}</m>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  If <m>|G|=n</m> then <m>g^n=e</m> for all <m>g\in G</m>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  (Groups of prime order are cyclic) If <m>|G|=p</m> for some prime <m>p</m>, then <m>G</m> is cyclic and any non-identity element of <m>G</m> generates <m>G</m>.
+                </p>
+              </li>
+            </ol>
           </p>
         </statement>
       </corollary>
 
       <theorem xml:id="thm-index-tower">
+        <title>The Index Tower</title>
         <statement>
           <p>
             Let <m>G</m> be a group (possibly infinite) and <m>H \leq K</m> subgroups of <m>G</m>. Suppose <m>[G : H]</m> is finite. Prove that <m>[G : H] = [G : K][K : H].</m> (Hint: First prove this in the case <m>G</m> is a finite group. Then prove you can reduce to the finite case.)
           </p>
         </statement>
       </theorem>
-
-      <definition xml:id="def-conjugacy-class">
-        <statement>
-          <p>
-            The <em>conjugacy class</em> of an element <m>g \in G</m> is <m>C_G(g) = \{hgh^{-1} \mid h \in G\}</m>.
-            <notation><usage><m>C_G(g)</m></usage><description>Conjugacy class of <m>g</m> in <m>G</m></description></notation> 
-
-          </p>
-        </statement>
-      </definition>
-
-      <definition xml:id="def-conjugate">
-        <statement>
-          <p>
-            Let <m>G</m> be a group. Two elements <m>g,g' \in G</m> are <em>conjugate</em> if there is <m>h \in G</m> with <m>g' = hgh^{-1}</m>.
-          </p>
-
-          <p>
-            Two subsets <m>S,S' \subseteq G</m> are conjugate if there is <m>h \in G</m> with <m>S' = hSh^{-1}</m>.
-          </p>
-        </statement>
-      </definition>
 
       <exercises>
 
@@ -325,8 +329,15 @@
           </hint>
           </exercise>
 
-
         </exercisegroup>
+
+      <exercise>
+        <statement>
+          <p>
+            Let <m>G</m> be a group of composite order. Then <m>G</m> contains a non-trivial proper subgroup. 
+          </p>
+        </statement>
+      </exercise>
 
       <exercise>
         <p>
@@ -351,6 +362,7 @@
 
 
       <definition xml:id="def-normal-subgroup">
+        <title>Normal Subgroup</title>
         <statement>
           <p>
             A subgroup <m>N</m> of a group <m>G</m> is <em>normal</em> in <m>G</m>, written <m>N\nsg G</m>, if <m>gNg^{-1} = N</m> for all <m>g \in G</m>. 
@@ -420,6 +432,7 @@
       </example>
 
       <proposition xml:id="prop-normal-subgroups-and-homomorphisms">
+        <title>Normal Subgroups and Homomorphisms</title>
         <statement>
           <p>
             <ol>
@@ -891,6 +904,7 @@
 			</p>
 
       <definition xml:id="def-quotient-group">
+        <title>Quotient Group</title>
         <statement>
           <p>
             For any normal subgroup <m>N</m> of a group <m>G</m>, the <em>quotient group</em> <m>G/N</m> is <m>G/\sim_N</m>, where <m>\sim_N</m> is the equivalence relation induced by the left action of <m>N</m> on <m>G</m>. In other words, <m>G/N</m> is the set of right cosets of <m>N</m> in <m>G</m> with multiplication given by <m>Nx\cdot Ny=N(xy)</m>. By part 4. of Proposition <xref ref="prop:normal" />, <m>G/N</m> is also the set of left cosets of <m>N</m> in <m>G</m> with multiplication given by <m>xN\cdot yN=(xy)N</m>.
@@ -899,6 +913,7 @@
       </definition>
 
       <theorem xml:id="thm-quotient-iff-normal">
+        <title>Quotients and Normal Subgroups</title>
         <statement>
           <p>
             Let <m>N\leq G</m>. Then <m>G/N</m> is a group if and only if <m>N\nsg G</m>.
@@ -917,6 +932,7 @@
       </p>
 
       <corollary xml:id="cor-order-of-quotient">
+        <title>Order of Quotient Groups</title>
         <statement>
           <p>
             By Lagrange's Theorem, if <m>G</m> is finite we have <m>\left | G/N\right |=\frac{|G|}{|N|}</m>.
@@ -925,6 +941,7 @@
       </corollary>
 
       <example>
+        <title>The Infinite Dihedral Group</title>
         <p>
           The <em>infinite dihedral group</em> <m>D_\infty</m> is the set <m>D_\infty = \{r^i,r^is \mid i \in \mathbb{Z}\}</m> with multiplication defined by <m>(r^i)(r^j) = r^{i+j}, (r^i)(r^js) = r^{i+j}s, (r^is)(r^j) = r^{i-j}s</m>, and <m>(r^is)(r^js) = r^{i-j}</m>. In other words, <m>D_\infty</m> is the group having presentation <me>D_\infty=\langle r,s \mid s^2=e, srs=r^{-1}\rangle.</me> Then <m>\langle r^n \rangle \mathrel{\unlhd}D_\infty</m> and <m>D_\infty/ \langle r^n \rangle \cong D_{2n}</m> via <m>r\langle r^n \rangle\mapsto r</m> and <m>s\langle r^n \rangle\mapsto s</m>.
         </p>
@@ -937,6 +954,7 @@
       </remark>
 
       <definition xml:id="def-quotient-map">
+        <title>Quotient Map</title>
         <statement>
           <p>
             For any group <m>G</m> and normal subgroup <m>N</m> of <m>G</m> the <em>quotient map</em> <m>\pi:G \to G/N</m> is defined by <m>\pi(g)=gN</m>.
@@ -945,6 +963,7 @@
       </definition>
 
       <lemma xml:id="lem-quotient-surj-hom">
+        <title>Quotient Map is Surjective Homomorphism</title>
         <statement>
           <p>
             For any group <m>G</m> and normal subgroup <m>N</m> of <m>G</m>, the map <m>\pi:G \to G/N</m> defined by <m>\pi(g)=gN</m> is a surjective group homomorphism with kernel <m>\operatorname{Ker}(\pi)=N</m>.
@@ -959,6 +978,7 @@
       </lemma>
 
       <theorem xml:id="thm-norm-iff-ker">
+        <title>Normal Subgroups and Homomorphism Kernels</title>
         <statement>
           <p>
             A subgroup <m>N</m> of a group <m>G</m> is normal in <m>G</m> if and only if <m>N</m> is the kernel of a homomorphism with domain <m>G</m>.

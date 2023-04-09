@@ -11,8 +11,17 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<div class="para">If <span class="process-math">\((x) = (y)\)</span> then <span class="process-math">\(x \in (y)\)</span> and so <span class="process-math">\(x = yu\)</span> for some <span class="process-math">\(u\text{.}\)</span> Similarly <span class="process-math">\(y = xs\)</span> and hence <span class="process-math">\(y = yus\text{.}\)</span> Since <span class="process-math">\(R\)</span> is a domain, either <span class="process-math">\(y = 0\)</span> or <span class="process-math">\(su = 1\text{.}\)</span> If <span class="process-math">\(y= 0\text{,}\)</span> then <span class="process-math">\(x = 0 = 1 y\)</span> and otherwise <span class="process-math">\(u\)</span> is a unit.</div> <div class="para">If <span class="process-math">\(x = uy\)</span> for a unit <span class="process-math">\(u\text{,}\)</span> then <span class="process-math">\(y = u^{-1}x\)</span> and so <span class="process-math">\(x \in (y)\)</span> and <span class="process-math">\(y \in (x)\text{,}\)</span> from which is follows that <span class="process-math">\((x) \subseteq (y)\)</span> and <span class="process-math">\((y) \subseteq (x)\text{.}\)</span>
-</div></article><span class="incontext"><a href="sec-pids.html#proof-67" class="internal">in-context</a></span>
+<article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>
+<div class="para logical">
+<div class="para">First, notice that <span class="process-math">\(x^2+x+1\)</span> is irreducible in <span class="process-math">\(\Z[x]\)</span> as it is a cyclotomic polynomial. Thus the possibilities are the following:</div>
+<ol class="decimal">
+<li><div class="para"><span class="process-math">\(I=(3,x^2+x+1)\text{,}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(J=(2,x^2+x+1)\text{,}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(L=(6,x^2+x+1)\text{,}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\Z[x]\text{.}\)</span></div></li>
+</ol>
+<div class="para">Notice that <span class="process-math">\(\Z[x]=(1)\text{,}\)</span> which is neither prime nor maximal, as those ideals must be proper. The ideal <span class="process-math">\(L\)</span> is not maximal as it is contained in both <span class="process-math">\(I\)</span> and <span class="process-math">\(J\text{,}\)</span> nor is it prime, given that <span class="process-math">\(3\cdot2\in L\)</span> but neither <span class="process-math">\(3\)</span> nor <span class="process-math">\(2\)</span> are in <span class="process-math">\(L\text{.}\)</span>
+</div>
+</div> <div class="para">Both <span class="process-math">\(I\)</span> and <span class="process-math">\(J\)</span> are generated with irreducible elements, making them irreducible ideals and thus maximal.</div></article><span class="incontext"><a href="subsec-polyrings.html#proof-67" class="internal">in-context</a></span>
 </body>
 </html>

@@ -14,9 +14,11 @@
       </blockquote>
 
       <definition xml:id="def-gphom">
+        <title>Group Homomorphism</title>
         <statement>
           <p>
             If <m>G</m> and <m>H</m> are groups, a <em>homomorphism</em> from <m>G</m> is <m>H</m> is a function <m>f: G \to H</m> such that <m>f(x \cdot_G y) = f(x) \cdot_H f(y)</m>, where <m>\cdot_G</m> and <m>\cdot_H</m> denote the multiplication rules for <m>G</m> and <m>H</m>, respectively.
+            <notation><usage><m>\varphi,\phi</m></usage><description>the common symbols we use to denote homomorphisms <m>\cdot</m></description></notation>          
           </p>
         </statement>
       </definition>
@@ -91,23 +93,28 @@
       </corollary>
 
       <definition xml:id="def-group-kernel">
+        <title>Kernel</title>
         <statement>
           <p>
             Let <m>\varphi: G \to H</m> is a homomorphism of groups. The <em>kernel</em> of <m>\varphi</m> is the set 
             <me>
               \ker(\varphi) := \{g\in G \mid \varphi(g)=e_H\}.
             </me>
+            <notation><usage><m>\ker(\varphi)</m></usage><description>the kernel of a homomorphism <m>\varphi</m> <m>\cdot</m></description></notation>          
+
           </p>
         </statement>
       </definition>
 
       <definition xml:id="def-group-image">
+        <title>Image</title>
         <statement>
           <p>
             Let <m>\varphi: G \to H</m> is a homomorphism of groups. The <em>image</em> of <m>\varphi</m> is the set 
             <me>
               \im(\varphi) := \{\varphi(g) \mid g \in G\}.
             </me>
+            <notation><usage><m>\im(\varphi)</m></usage><description>the image of a homomorphism <m>\varphi</m> <m>\cdot</m></description></notation> 
           </p>
         </statement>
       </definition>
@@ -264,6 +271,7 @@
       </blockquote>
 
       <definition xml:id="def-gpiso">
+        <title>Group Ismorphism</title>
         <statement>
           <p>
             A homomorphism <m>f: G \to H</m> is called an <em>isomorphism</em> if there exists a homomorphism <m>g: H \to G</m> such that <m>f \circ g = \text{id}_H</m> and <m>g \circ f = \text{id}_G</m>.
@@ -324,6 +332,7 @@
       </example>
 
       <theorem xml:id="thm-iso-inv">
+        <title>Isomorphism Preservations</title>
         <statement>
           <p>
             Let <m>G</m> and <m>H</m> be groups. If <m>\varphi:G\to H</m> is an isomorphism, then the following hold:
@@ -376,6 +385,7 @@
       </p>
 
       <corollary xml:id="cor-composition-of-isos">
+        <title>Composition of Isomorphisms</title>
         <statement>
           <p>
             Prove that the composition of two isomorphisms is an isomorphism.
@@ -384,6 +394,7 @@
       </corollary>
 
       <definition xml:id="def-gp-automorphism">
+        <title>Group Automorphism</title>
         <statement>
           <p>
             Let <m>G</m> be a group. An isomorphism <m>\varphi:G\to G</m> is called an <em>automorphism</em> of <m>G</m>.
@@ -398,9 +409,11 @@
       </example>
         
       <proposition xml:id="prop-aut-is-group">
+        <title>The Automorphism Group</title>
         <statement>
           <p>
             Prove that the set of automorphisms of <m>G</m>, denoted <m>\operatorname{Aut}(G)</m>, is a group under composition.
+            <notation><usage><m>\Aut(G)</m></usage><description>the automorphism group of a group <m>G</m></description></notation> 
           </p>
         </statement>
       </proposition>
@@ -416,6 +429,7 @@
       </p>
 
       <proposition xml:id="prop-aut-properties">
+        <title>Isomorphism Consequences</title>
         <statement>
             <p>
               Suppose <m>G\cong H</m>. Then
@@ -439,12 +453,26 @@
       <proposition xml:id="prop-inverse-map-and-abelian">
         <statement>
           <p>
-            Let <m>G</m> be a group. Prove that the map <m>\varphi:G\to G</m> given by <m>\varphi(a)=a^{-1}</m> for all <m>a\in G</m> is an automorphism if and only if <m>G</m> is abelian.
+            Let <m>G</m> be a group.
+            <ol>
+              <li>
+                <p>
+                  The map <m>\varphi:G\to G</m> given by <m>\varphi(a)=a^{-1}</m> for all <m>a\in G</m> is an automorphism if and only if <m>G</m> is abelian.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  If <m>\Aut(G)=\{e\}</m> then <m>G</m> is abelian and every non-identity element of <m>G</m> has order <m>2</m>.
+                </p>
+              </li>
+            </ol>
           </p>
         </statement>
       </proposition>
       
       <proposition xml:id="prop-conjugation-automorphism">
+        <title>The Conjugation Automorphism</title>
         <statement>
           <p>
             Let <m>G</m> be a group and <m>x\in G</m>. Define a map <m>\psi_x:G\to G</m> by <m>\psi_x(a)=xax^{-1}</m> for all <m>a\in G</m>. 
@@ -770,6 +798,7 @@
       </theorem>
 
       <theorem xml:id="thm-cyclic-divisors-and-subgroups">
+        <title>Subgroups of Cyclic Groups</title>
         
         <statement>
           <p>

@@ -12,50 +12,15 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<div class="para">We have <span class="process-math">\(f(x) = \cont(f) \cdot l(x)\)</span> with <span class="process-math">\(l(x) \in R[x]\)</span> and <span class="process-math">\(\cont(l) = 1\text{.}\)</span> Since <span class="process-math">\(p\)</span> does not divide the leading coefficient of <span class="process-math">\(f\text{,}\)</span> we have <span class="process-math">\(p \nmid \cont(f)\text{.}\)</span> It therefore follows that the three assumptions involving the coefficients of <span class="process-math">\(f(x)\)</span> are also satisfied by the coefficients <span class="process-math">\(l(x)\text{.}\)</span> Moreover, <span class="process-math">\(f\)</span> is irreducible in <span class="process-math">\(F[x]\)</span> if and only if <span class="process-math">\(l(x)\)</span> is irreducible in <span class="process-math">\(F[x]\text{.}\)</span> We may therefore assume without loss of generality that <span class="process-math">\(\cont(f) = 1\text{.}\)</span>
-</div> <div class="para logical">
-<div class="para">By Gauss’s Lemma we just need to prove it is irreducible in <span class="process-math">\(R[x]\text{.}\)</span> Suppose <span class="process-math">\(f(x) = g(x)h(x)\)</span> with <span class="process-math">\(g(x), h(x) \in R[x]\text{,}\)</span> where</div>
+<div class="para">Pick <span class="process-math">\(x \in R\)</span> with <span class="process-math">\(x \ne 0\)</span> and <span class="process-math">\(x \notin R^\times\text{.}\)</span> If <span class="process-math">\(x\)</span> is irreducible, there is nothing to prove. Otherwise, we have <span class="process-math">\(x = x_1 x_2\)</span> for non-units <span class="process-math">\(x_1, x_2\text{.}\)</span> If both <span class="process-math">\(x_1, x_2\)</span> are irreducible, the proof is complete. Otherwise, one or both of them factors non-trivially. We may express this conveniently by saying that <span class="process-math">\(x_1 = x_3x_4\)</span> and <span class="process-math">\(x_2 = x_5x_6\)</span> such that either <span class="process-math">\(x_3\)</span> and <span class="process-math">\(x_4\)</span> are both non-units or <span class="process-math">\(x_5\)</span> and <span class="process-math">\(x_6\)</span> are both non-units. (E.g., if <span class="process-math">\(x_2\)</span> is irreducible, we could set <span class="process-math">\(x_5 = x_2, x_6 = 1\text{.}\)</span>) Continuing in the this manner, we form a binary tree with <span class="process-math">\(x\)</span> at the top, <span class="process-math">\(x_1, x_2\)</span> one level down, <span class="process-math">\(x_3,x_4,x_5,x_6\)</span> one level below that, etc.</div> <div class="para">We halt the process of building the tree if at some stage all the leaves of the tree are irreducible elements, at which point we will have proven that <span class="process-math">\(x\)</span> factors in to a product of the irreducible elements given by these leaves.</div> <div class="para">We need to rule out the possibility that the process never terminates. If it never terminates, we will have built an infinite binary tree with the property that some route downward through the tree consists of an infinite list of irreducible elements <span class="process-math">\(y_1, y_2, y_3,\dots\)</span> such that <span class="process-math">\(x = y_1z_1\)</span> for a non-unit <span class="process-math">\(z_1\)</span> and, for each <span class="process-math">\(i \geq 1\text{,}\)</span> <span class="process-math">\(y_{i} = y_{i+1} z_{i+1}\)</span> for a non-unit <span class="process-math">\(z_{i+1}\text{.}\)</span> Since <span class="process-math">\(R\)</span> is an integral domain, we have <span class="process-math">\((x) \subsetneq (y_1)\)</span> and <span class="process-math">\((y_i) \subsetneq (y_{i+1})\)</span> for all <span class="process-math">\(i \geq 1\text{.}\)</span> (E.g., if <span class="process-math">\((x) = (y_1)\)</span> then <span class="process-math">\(y_1 = xv\)</span> and hence <span class="process-math">\(x = xvz_1\text{,}\)</span> so that <span class="process-math">\(vz_1 = 1\text{,}\)</span> contrary to <span class="process-math">\(z_1\)</span> being a non-unit.)</div> <div class="para logical">
+<div class="para">But then we have arrived at an infinite ascending chain of ideals in <span class="process-math">\(R\text{,}\)</span>
+</div>
 <div class="displaymath process-math">
 \begin{equation*}
-g(x) = b_m x^m + b_{m-1} x^{m-1} + \cdots + b_0
+(x) \subsetneq (y_1) \subsetneq (y_2) \subsetneq (y_3) \subsetneq \cdots,
 \end{equation*}
 </div>
-<div class="para">and</div>
-<div class="displaymath process-math">
-\begin{equation*}
-h(x) = c_l x^l + c_{l-1} x^{l-1} + \cdots + c_0
-\end{equation*}
-</div>
-<div class="para">where <span class="process-math">\(m+l = n\)</span> and <span class="process-math">\(b_m c_l = a_n\text{.}\)</span>
-</div>
-</div> <div class="para logical">
-<div class="para">Upon modding out by <span class="process-math">\(p\)</span> we get</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\ov{f} = \ov{g} \ov{h} \in (R/p)[x].
-\end{equation*}
-</div>
-<div class="para">The assumptions on <span class="process-math">\(f\)</span> give that</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\ov{f} = \ov{a_n} x^n
-\end{equation*}
-</div>
-<div class="para">with <span class="process-math">\(\ov{a_n} \ne 0\text{.}\)</span> Since <span class="process-math">\(R/p\)</span> is a domain, it follows that</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\ov{g} = \ov{b_m} x^m \, \text{ and  } \, \ov{h} = \ov{c_l} x^l
-\end{equation*}
-</div>
-<div class="para">On the other hand, we also have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-a_0 = b_0c_0,
-\end{equation*}
-</div>
-<div class="para">and since <span class="process-math">\(p^2 \nmid a_0\text{,}\)</span> we have that <span class="process-math">\(p \nmid b_0\)</span> or <span class="process-math">\(p \nmid c_0\text{.}\)</span> So <span class="process-math">\(\ov{b_0} \ne 0\)</span> or <span class="process-math">\(\ov{c_0} \ne 0\text{.}\)</span> This can only occur if <span class="process-math">\(m = 0\)</span> or <span class="process-math">\(l = 0\text{.}\)</span>
-</div>
-</div> <div class="para">We have shown that if <span class="process-math">\(f\)</span> factors in <span class="process-math">\(R[x]\)</span> as <span class="process-math">\(f = g \cdot h\text{,}\)</span> then at least one of <span class="process-math">\(g\)</span> of <span class="process-math">\(h\)</span> must be a constant polynomial. Since <span class="process-math">\(\cont(f) = 1\text{,}\)</span> this factor must be a unit. So <span class="process-math">\(f\)</span> is irreducible in <span class="process-math">\(R[x]\text{.}\)</span>
-</div></article><span class="incontext"><a href="sec-irrpoly.html#proof-85" class="internal">in-context</a></span>
+<div class="para">which is not possible in a Noetherian ring.</div>
+</div></article><span class="incontext"><a href="subsec-noeth.html#proof-85" class="internal">in-context</a></span>
 </body>
 </html>

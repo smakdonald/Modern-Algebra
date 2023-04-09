@@ -12,10 +12,21 @@
 </head>
 <body class="ignore-math">
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<div class="para logical"><ol class="decimal">
-<li><div class="para">Suppose that <span class="process-math">\(A\)</span> is an integral domain that contains a field <span class="process-math">\(F\)</span> as a subring, and that moreover <span class="process-math">\(A\)</span> is finite dimensional as an <span class="process-math">\(F\)</span>-vector space. Prove that <span class="process-math">\(A\)</span> is a field.</div></li>
-<li><div class="para">Give an example to show that the finite dimension condition is necessary.</div></li>
-</ol></div>
-<span class="incontext"><a href="sec-vecbasis.html#p-1843" class="internal">in-context</a></span>
+<div class="para logical">
+<div class="para">Next, I claim that there is an isomorphism</div>
+<div class="displaymath process-math">
+\begin{equation*}
+R^n/IR^n \cong (R/I)^n
+\end{equation*}
+</div>
+<div class="para">of <span class="process-math">\(R/I\)</span>-modules. Define <span class="process-math">\(R^n \to (R/I)^n\)</span> in the evident way (modding out by <span class="process-math">\(I\)</span> entry-wise). It is a surjective map of <span class="process-math">\(R\)</span>-modules with kernel <span class="process-math">\(I R^n\)</span> and thus, by the First Isomorphism Theorem, it induces an isomorphism</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g: R^n/I R^n \xra{\cong} (R/I)^n
+\end{equation*}
+</div>
+<div class="para">given by <span class="process-math">\(g((r_1, \dots, r_n)^\tau + IR^n) = (r_1 + I, \dots, r_n + I)^\tau\)</span> (where <span class="process-math">\(\tau\)</span> denotes taking the transpose).Now, what we have said so far only shows that <span class="process-math">\(g\)</span> is isomorphism of <span class="process-math">\(R\)</span>-modules, but it is easy to see that <span class="process-math">\(g\)</span> is in fact <span class="process-math">\(R/I\)</span>-linear (I’ll leave that to you) and thus it is an isomorphism of <span class="process-math">\(R/I\)</span>-modules.</div>
+</div>
+<span class="incontext"><a href="sec-linear.html#p-1843" class="internal">in-context</a></span>
 </body>
 </html>

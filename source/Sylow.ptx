@@ -14,6 +14,7 @@
       </blockquote>
       
       <definition xml:id="def-pgroup">
+        <title><m>p</m>-group</title>
         <statement>
           <p>
             For a prime number <m>p</m>, a <m>p</m>-group is a group of order <m>p^m</m> for some <m>m\in \mathbb{Z},m &gt; 0</m>.
@@ -22,6 +23,7 @@
       </definition>
 
       <theorem xml:id="thm-center-pgroup">
+        <title>Center of <m>p</m>-group is Nontrivial</title>
         <statement>
           <p>
             If <m>p</m> is a prime number and <m>G</m> is a finite group of order <m>p^m</m> for some <m>m &gt; 0</m>, then <m>Z(G)</m> is not the trivial group (In fact <m>|Z(G)|=p^a</m> for some <m>a&gt;0</m>).
@@ -35,7 +37,14 @@
         </proof>
       </theorem>
 
+      <remark>
+        <p>
+          This theorem is important
+        </p>
+      </remark>
+
       <definition xml:id="def-sylow-subgroup">
+        <title>Sylow <m>p</m>-subgroup</title>
         <statement>
           <p>
             Let <m>G</m> be a finite group and <m>p</m> a prime. Write the order of <m>G</m> as <m>|G| = p^e m</m> where <m>p \nmid m</m>. A <em>Sylow <m>p</m>-subgroup</em> of <m>G</m> is a subgroup <m>H \leq G</m> such that <m>|H| = p^e</m>. That is, a Sylow <m>p</m>-subgroup of <m>G</m> is a subgroup whose order is the highest conceivable power of <m>p</m> according to Lagrange's Theorem.
@@ -63,7 +72,6 @@
           We allow the case when <m>p\nmid |G|</m>, in which case <m>e = 0</m> and <m>G</m> has a unique Sylow <m>p</m>-subgroup, namely <m>\{e\}</m> which has order <m>p^0</m>.
         </p>
       </remark>
-        
 
       <problem>
         <p>
@@ -172,6 +180,12 @@
             </p>
           </statement>
 
+          <hint>
+            <p>
+              For part (b), induction will be key.
+            </p>
+          </hint>
+
             <solution>
               <p>
                 Let <m>G</m> be a group of order <m>p^n</m> where <m>p</m> is a prime and <m>n \geq 1</m>.
@@ -231,6 +245,12 @@
                 </ol>
               </p>
             </statement>
+
+            <hint>
+              <p>
+                We will need <xref ref="thm-center-pgroup"/>. For a qualifying exam you would need to prove this explicitely. The structure of the remainder of the proof is similar to that used in <xref ref="thm-center-pgroup"/>. 
+              </p>
+            </hint>
 
             <solution>
               <p>
@@ -295,6 +315,7 @@
       </blockquote>
 
       <lemma xml:id="lem-Sylaction">
+        <title>Unique Order Subgroups are Normal</title>
         <statement>
           <p>
             Suppose <m>G</m> is a group and <m>n</m> is a positive integer. Then
@@ -316,6 +337,7 @@
       </lemma>
 
       <lemma xml:id="lem-Syl-lem">
+        <title>Sylow's Lemma</title>
         <statement>
           <p>
             Let <m>G</m> be a finite group, <m>p</m> a prime, <m>P</m> a Sylow <m>p</m>-subgroup of <m>G</m>, and <m>Q</m> any <m>p</m>-subgroup of <m>G</m>. Then <m>Q \cap N_G(P) = Q \cap P</m>.
@@ -369,29 +391,6 @@
       <p>
         Sylow's theorems provide a systematic way of analyzing the subgroups of a finite group. They allow us to determine the number of subgroups of a given order, which is useful in many applications, such as studying the structure of solvable and simple groups. The theorems also provide information about the normalizers of subgroups, which can be used to study normal subgroups and quotient groups.
       </p>
-
-
-
-      <problem>
-        <p>
-          We proceed via the contrapositive. Let <m>Q</m> be a Sylow <m>p</m>-subgroup, and suppose <m>PQ\leq G</m>. Thus <m>|PG|\big||G|</m>
-        </p>
-
-        <proof>
-      		<p>
-						Let <m>G</m> be a finite group and <m>p</m> a prime dividing the order of <m>G</m>. Let P be a Sylow <m>p</m>-subgroup.
-					</p>
-
-          <p>
-            Note that <m>P</m> and <m>Q</m> both have <m>p^k</m> elements, where <m>p^k</m> is the largest power of <m>p</m> that divides the order of <m>G</m>. Recall <m>|PQ|=\frac{|P||Q|}{|P\cap Q|}=\frac{p^{2k}}{|P\cap Q|}</m>. As <m>p^k</m> is the largest power of <m>p</m> that divides the order of <m>G</m>, we see that <m>|P\cap Q|</m> must be at least <m>p^k</m>. Thus <m>P=Q</m>.
-          </p>
-
-          <p>
-            First, note that <m>P\leq N_{G}(P)\leq N_G(N_G(P))</m>. Note that <m>N_G(P)</m> is the largest subgroup of <m>G</m> such that <m>P</m> is normal in <m>G</m>, making <m>P</m> the only Sylow <m>p</m>-subgroup of <m>N_G(P)</m>. Let <m>x\in N_G(N_G(P))</m>. Notice that <m>xPx\inv\leq xN_G(P)x\inv</m>, but as <m>x\in N_G(N_G(P))</m> we have <m>xN_G(P)x\inv=N_G(P)</m>. As <m>xPx\inv</m> is a Sylow <m>p</m>-subgroup that is contained in <m>N_G(P)</m>, we see that <m>xPx\inv=P</m>, placing <m>x\in N_G(P)</m>. Thus <m>N_G(P)=N_G(N_G(P))</m>.
-          </p>
-        </proof>
-      </problem>
-
 
       <exercises>
 
@@ -600,6 +599,32 @@
               </p>
             </solution>
           </exercise>
+
+          <exercise>
+            <statement>
+              <p>
+                Let <m>G</m> be a finite group and <m>p</m> a prime dividing the order of <m>G</m>. Let P be a Sylow <m>p</m>-subgroup. (a) Suppose <m>Q</m> is a Sylow <m>p</m>-subgroup distinct from <m>P</m>. Prove that <m>PQ</m>[^1] is not a subgroup of <m>G</m>. (Recall that <m>PQ = {pq | p ∈ P, q ∈ Q}</m>.) (b) Prove that <m>N_G(P ) = N_G(N_G(P ))</m> where <m>N_G(H)</m> denotes the normalizer in <m>G</m> of a subgroup <m>H</m>.
+              </p>
+            </statement>
+
+            <solution>
+              <p>
+                We proceed via the contrapositive. Let <m>Q</m> be a Sylow <m>p</m>-subgroup, and suppose <m>PQ\leq G</m>. Thus <m>|PG|\big||G|</m>
+              </p>
+
+              <p>
+                Let <m>G</m> be a finite group and <m>p</m> a prime dividing the order of <m>G</m>. Let P be a Sylow <m>p</m>-subgroup.
+              </p>
+    
+              <p>
+                Note that <m>P</m> and <m>Q</m> both have <m>p^k</m> elements, where <m>p^k</m> is the largest power of <m>p</m> that divides the order of <m>G</m>. Recall <m>|PQ|=\frac{|P||Q|}{|P\cap Q|}=\frac{p^{2k}}{|P\cap Q|}</m>. As <m>p^k</m> is the largest power of <m>p</m> that divides the order of <m>G</m>, we see that <m>|P\cap Q|</m> must be at least <m>p^k</m>. Thus <m>P=Q</m>.
+              </p>
+    
+              <p>
+                First, note that <m>P\leq N_{G}(P)\leq N_G(N_G(P))</m>. Note that <m>N_G(P)</m> is the largest subgroup of <m>G</m> such that <m>P</m> is normal in <m>G</m>, making <m>P</m> the only Sylow <m>p</m>-subgroup of <m>N_G(P)</m>. Let <m>x\in N_G(N_G(P))</m>. Notice that <m>xPx\inv\leq xN_G(P)x\inv</m>, but as <m>x\in N_G(N_G(P))</m> we have <m>xN_G(P)x\inv=N_G(P)</m>. As <m>xPx\inv</m> is a Sylow <m>p</m>-subgroup that is contained in <m>N_G(P)</m>, we see that <m>xPx\inv=P</m>, placing <m>x\in N_G(P)</m>. Thus <m>N_G(P)=N_G(N_G(P))</m>.
+              </p>
+            </solution>
+          </exercise>
       
         </exercisegroup>
       </exercises>
@@ -617,6 +642,7 @@
       </blockquote>
 
       <definition xml:id="def-simple-group">
+        <title>Simple Groups</title>
         <statement>
           <p>
             A group is called <em>simple</em> if it has only two normal subgroups: itself and the trivial subgroup.

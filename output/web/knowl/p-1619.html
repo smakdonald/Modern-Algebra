@@ -11,9 +11,22 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h6 class="heading"><span class="type">Paragraph</span></h6>
-<div class="para">As <span class="process-math">\(M\neq 0\text{,}\)</span> there exists a non-zero element <span class="process-math">\(m\in M\text{.}\)</span> Let <span class="process-math">\(f:R\to M\)</span> be defined by <span class="process-math">\(f(r)=rm\text{.}\)</span> Since <span class="process-math">\(1\in R\)</span> and <span class="process-math">\(1m=m\in Rm\text{,}\)</span> we have <span class="process-math">\(Rm=M\text{.}\)</span> By the First Isomorphism Theorem we see that <span class="process-math">\(R/\ker(f)\cong M\text{,}\)</span> making <span class="process-math">\(\ker(f)\)</span> an ideal in <span class="process-math">\(R\text{,}\)</span> which we shall conspicuously denote as <span class="process-math">\(I\)</span> henceforth. By the Lattice Isomorphism Theorem the only two ideals of <span class="process-math">\(R/I\)</span> are <span class="process-math">\(0\)</span> and <span class="process-math">\(R/I\text{,}\)</span> making <span class="process-math">\(R/I\)</span> a field, and <span class="process-math">\(I\)</span> a maximal ideal in <span class="process-math">\(R\text{.}\)</span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">Consider the ring isomorphism <span class="process-math">\(\phi: \Q[x] \xra{\cong} \Q[y]\)</span> given by <span class="process-math">\(\phi(h(x)) = h(y+1)\text{.}\)</span> I claim that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi(f(x)) = y^{p-1} + p y^{p-2} + {p \choose 2} y^{p-3} +{p \choose 3} y^{p-4} +\cdots + {p \choose p-1} y + p.
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec-quote.html#p-1619" class="internal">in-context</a></span>
+<div class="para">To see this, we note that <span class="process-math">\(f(x) (x-1) = x^p - 1\)</span> and by the binomial theorem we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi(x^p-1) = (y+1)^p - 1 = y^p + p y^{p-1} + {p \choose 2} y^{p-2} + \cdots + py.
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(\phi(x^p-1) = \phi(f(x)) \phi(x-1) = \phi(f(x)) y\text{,}\)</span> the claim follows.</div>
+</div>
+<span class="incontext"><a href="sec-irrpoly.html#p-1619" class="internal">in-context</a></span>
 </body>
 </html>
