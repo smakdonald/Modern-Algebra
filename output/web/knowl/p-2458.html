@@ -13,22 +13,15 @@
 <body class="ignore-math">
 <h6 class="heading"><span class="type">Paragraph</span></h6>
 <div class="para logical">
-<div class="para">Given a field <span class="process-math">\(F\text{,}\)</span> and integer <span class="process-math">\(n \geq 1\text{,}\)</span> and an element <span class="process-math">\(r\in F\text{,}\)</span> the <em class="emphasis"><span class="process-math">\(\defnn{Jordan block}\)</span></em> <span class="process-math">\(J_n(r)\)</span> is the <span class="process-math">\(n \times n\)</span> with entries in <span class="process-math">\(F\)</span> such that its diagonal entries are all <span class="process-math">\(r\text{,}\)</span> each entry just below the diagonal is a <span class="process-math">\(1\text{,}\)</span> and all other entries are <span class="process-math">\(0\text{:}\)</span>
-</div>
+<div class="para">Let <span class="process-math">\(A\)</span> be an <span class="process-math">\(n \times n\)</span> nilpotent matrix. Let <span class="process-math">\(\lambda\)</span> be some eigenvalue of <span class="process-math">\(A\text{.}\)</span> Thus there exists some vector <span class="process-math">\(v\)</span> such that <span class="process-math">\(A\lambda=\lambda v\text{.}\)</span> Let's consider this the base-case of some rather banal induction. Now assume that for <span class="process-math">\(n\)</span> we have <span class="process-math">\(A^nv=\lambda^nv\text{.}\)</span> Consider</div>
 <div class="displaymath process-math">
 \begin{equation*}
-J_n(r) = 
-\begin{bmatrix}
-r &amp; 0 &amp; 0 &amp; \cdots &amp; 0 \\
-1 &amp; r &amp; 0 &amp; \cdots &amp; 0 \\
-0 &amp; \ddots &amp; \ddots &amp;&amp; \vdots \\
-\vdots &amp;&amp; \ddots &amp; \ddots &amp; 0\\
-0 &amp; \cdots &amp; 0 &amp; 1 &amp; r \\
-\end{bmatrix}.
+A^{n+1}v=A(A^nv)=A(\lambda^n v)=\lambda^n(Av)=\lambda^{n+1}v.
 \end{equation*}
 </div>
-<div class="para">(More precisely, <span class="process-math">\(a_{i,i} = r\)</span> for all <span class="process-math">\(1 \leq i \leq n\text{,}\)</span> <span class="process-math">\(a_{i,i-1} = 1\)</span> for all <span class="process-math">\(2 \leq i \leq n\text{,}\)</span> and <span class="process-math">\(a_{i,j} = 0\)</span> for all other <span class="process-math">\(i,j\text{.}\)</span>)</div>
+<div class="para">Recall that as <span class="process-math">\(A\)</span> is nilpotent, there exists some <span class="process-math">\(m\in\N\)</span> such that <span class="process-math">\(A^m=0\text{.}\)</span> As <span class="process-math">\(\lambda\)</span> is an eigenvalue of <span class="process-math">\(A\text{,}\)</span> by the above induction we see that <span class="process-math">\(\lambda^m\)</span> is an eigenvalue for <span class="process-math">\(A^m=0\text{.}\)</span> As <span class="process-math">\(F\)</span> is a field and thus an integral domain, we see that <span class="process-math">\(\lambda^n=0\)</span> implies that <span class="process-math">\(\lambda=0\)</span> is as well. As this holds in the algebraic closure of <span class="process-math">\(F\)</span> as well, we see that when factored into linear terms all the <span class="process-math">\(\lambda=0\text{.}\)</span> Thus <span class="process-math">\(\cp_A(x)=x^n\text{.}\)</span>
 </div>
-<span class="incontext"><a href="sec-minpoly.html#p-2458" class="internal">in-context</a></span>
+</div>
+<span class="incontext"><a href="sec-rcf.html#p-2458" class="internal">in-context</a></span>
 </body>
 </html>

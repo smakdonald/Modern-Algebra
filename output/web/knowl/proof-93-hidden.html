@@ -10,17 +10,32 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para">Let <span class="process-math">\(\Q(i) = \{a + bi \mid a, b \in \Q\}\)</span> and <span class="process-math">\(\Z[i] = \{a + ib \mid a, b \in \Z\}\text{.}\)</span>
-</div> <div class="para">Suppose by way of contradiction that <span class="process-math">\(7\)</span> is not prime in <span class="process-math">\(\Z[i]\text{.}\)</span> Thus <span class="process-math">\(7=\alpha\beta\text{,}\)</span> with <span class="process-math">\(\alpha,\beta\)</span> non-units and where <span class="process-math">\(\alpha=a+bi\)</span> and <span class="process-math">\(\beta=c+di\text{,}\)</span> for <span class="process-math">\(a,b,c,d\in Z\text{.}\)</span> Thus <span class="process-math">\(\overline{7}=\overline{\alpha\beta}=\overline{\alpha}\overline{\beta}\text{.}\)</span> As <span class="process-math">\(\overline{7+0i}=49\text{,}\)</span> we see that <span class="process-math">\(\overline{\alpha}=(a^2+b^2)|49\text{.}\)</span> Note that the possible factorizations of 49 in <span class="process-math">\(\Z\)</span> are <span class="process-math">\((1)(49)\)</span> and <span class="process-math">\((7)(7)\text{.}\)</span>
-</div> <div class="para">However, if <span class="process-math">\(\overline{\alpha}=49\)</span> then <span class="process-math">\(\overline{\beta}=1\text{,}\)</span> making it a unit. So <span class="process-math">\(\overline{\alpha}=7\)</span> and thus <span class="process-math">\(a^2+b^2=7\text{.}\)</span> As <span class="process-math">\(a^2, b^2\leq0\text{,}\)</span> either <span class="process-math">\(a=0\)</span> or <span class="process-math">\(b=0\text{.}\)</span> But then either <span class="process-math">\(a^2=7\)</span> or <span class="process-math">\(b^2=7\text{,}\)</span> and as <span class="process-math">\(\sqrt{7}\not\in\Z\text{,}\)</span> we have a contradiction. Thus <span class="process-math">\(7\)</span> is prime in <span class="process-math">\(\Z[i]\text{.}\)</span> Using Eisenstein’s Criterion with <span class="process-math">\(p=7\text{,}\)</span> we see that <span class="process-math">\(x^6 + 7\)</span> is irreducible in <span class="process-math">\(\Q(i)[x]\text{.}\)</span>
-</div> <div class="para logical">
-<div class="para">Using Eisenstein’s Criterion with <span class="process-math">\(p=2\text{,}\)</span> we see that <span class="process-math">\(x^4 - 6x^2 + 10\)</span> is irreducible in <span class="process-math">\(\Q[x]\text{.}\)</span> However, in <span class="process-math">\(\Q(i)[x]\)</span> observe that</div>
+<body class="ignore-math"><article class="hiddenproof"><div class="para logical">
+<div class="para">{} Given a function <span class="process-math">\(j: B \to N\text{,}\)</span> define <span class="process-math">\(f: M\to N\)</span> as follows: Given <span class="process-math">\(m \in M\text{,}\)</span> by Lemma  <span class="process-math">\(m\)</span> can be written uniquely as a finite sum <span class="process-math">\(m = \sum_{b \in B} r_b b\text{.}\)</span> We set</div>
 <div class="displaymath process-math">
 \begin{equation*}
-x^4-6x^2+10=(x^2-(3+i))(x^2-(3-i)).
+f(m) = \sum_{b \in B} r_b j(b).
 \end{equation*}
 </div>
-<div class="para">As neither <span class="process-math">\((x^2-(3+i))\)</span> nor <span class="process-math">\((x^2-(3-i))\)</span> are units in <span class="process-math">\(\Q(i)[x]\)</span> (as <span class="process-math">\(x\)</span> has no inverse), we see that <span class="process-math">\(x^4-6x^2+10\)</span> is reducible in <span class="process-math">\(\Q(i)[x]\text{.}\)</span>
+<div class="para">Note that <span class="process-math">\(f\)</span> is a well-defined function by the uniqueness of the equation <span class="process-math">\(m = \sum_{b \in B} r_b b\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">We need to prove <span class="process-math">\(f\)</span> is an <span class="process-math">\(R\)</span>-module homomorphism. I'll just show it preserves scaling — the proof for addition is similar. Given <span class="process-math">\(x \in R\)</span> and <span class="process-math">\(m \in M\text{,}\)</span> we have <span class="process-math">\(m = \sum_{b \in B} r_b b\)</span> for some <span class="process-math">\(r_b \in R\text{,}\)</span> and hence <span class="process-math">\(xm = \sum_b (xr_b) b\text{.}\)</span> By definition of <span class="process-math">\(f\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(xm) = \sum_b (xr_b) j(b) = x \sum_b r_b j(b) = x f(m).
+\end{equation*}
+</div>
+</div> <div class="para">Finally, for any <span class="process-math">\(y \in B\)</span> we have <span class="process-math">\(y = \sum_{b \in B} r_b b\)</span> where <span class="process-math">\(r_b = 1\)</span> if <span class="process-math">\(b = y\)</span> and <span class="process-math">\(r_b = 0\)</span> if <span class="process-math">\(b \ne y\text{.}\)</span> So <span class="process-math">\(f(y) = j(y)\)</span> by construction. This proves existence.</div> <div class="para logical">
+<div class="para">{} Let <span class="process-math">\(g:M\to N\)</span> be another <span class="process-math">\(R\)</span>-module homomorphism such that <span class="process-math">\(g(b)=g(b)\)</span> for each <span class="process-math">\(b \in B\text{.}\)</span> Given <span class="process-math">\(m \in M\)</span> we have <span class="process-math">\(m = \sum_{b \in B} r_b b\)</span> and hence</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g(m) = \sum_b g(r_b (b)  = \sum_b r_b g(b)  = 
+\sum_b r_b j(b) = f(m).
+\end{equation*}
+</div>
+<div class="para">and hence <span class="process-math">\(g = f\text{.}\)</span>
 </div>
 </div></article></body>
 </html>

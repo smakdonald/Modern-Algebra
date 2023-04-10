@@ -12,6 +12,17 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<div class="para">If <span class="process-math">\(M\)</span> is finitely generated there is a surjection <span class="process-math">\(R^a \twoheadrightarrow M\text{.}\)</span> Using Proposition <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "prop916" missing or not unique]</code> this surjection splits, so that <span class="process-math">\(R^n \cong M \oplus N\)</span> for some <span class="process-math">\(N\text{,}\)</span> and each of <span class="process-math">\(M\)</span> and <span class="process-math">\(N\)</span> is semisimple and finitely generated. So <span class="process-math">\(M = \oplus_{i=1}^s M_i\)</span> and <span class="process-math">\(N = \oplus_{j=1}^s N_j\)</span> with <span class="process-math">\(M_i, N_j\)</span> simple. Clearly <span class="process-math">\(R^n\)</span> is isomorphic to a finite direct sum of copies of the <span class="process-math">\(J_i\)</span>’s, and so the result follows from the Krull-Schmidt Theorem for semisimple modules.</div> <div class="para">In the general case, we know that <span class="process-math">\(M\)</span> is a direct sum of simple modules; if some simple summand <span class="process-math">\(N\)</span> of <span class="process-math">\(M\)</span> is not isomorphic to one of the <span class="process-math">\(J_i\text{,}\)</span> then <span class="process-math">\(N\)</span> is a finitely generated counterexample to the f.g. case.</div></article><span class="incontext"><a href="sec-semisimple-rings.html#proof-153" class="internal">in-context</a></span>
+<div class="para">Let <span class="process-math">\(F\subseteq L\)</span> be an algebraic field extension such that every non-constant polynomial in <span class="process-math">\(F[x]\)</span> splits completely into linear factors in <span class="process-math">\(L[x]\text{.}\)</span>
+</div> <div class="para">Let <span class="process-math">\(f\)</span> be a polynomial in <span class="process-math">\(L[x]\text{,}\)</span> so <span class="process-math">\(f=a_nx^n+\dots+a_1x+a_0\text{,}\)</span> with <span class="process-math">\(a_i\in L\text{,}\)</span> and let <span class="process-math">\(\a\)</span> be a root of <span class="process-math">\(f\text{.}\)</span> There [[Theorem – Existence and Uniqueness of Algebraic Closures|exists]] some field extension <span class="process-math">\(L\subseteq K\)</span> such that <span class="process-math">\(K\)</span> is algebraically closed, meaning <span class="process-math">\(\a\in K\text{.}\)</span> Notice that <span class="process-math">\(\a\)</span> is [[Mathematics/Definitions/Algebraic|algebraic]] over <span class="process-math">\(L(\a)\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Consider the chain of field extensions</div>
+<div class="displaymath process-math">
+\begin{equation*}
+F\subseteq L\subseteq L(\a),
+\end{equation*}
+</div>
+<div class="para">making <span class="process-math">\(\a\)</span> algebraic over <span class="process-math">\(F\)</span> as well. As every non-constant polynomial in <span class="process-math">\(F[x]\)</span> splits completely into linear factors in <span class="process-math">\(L[x]\text{,}\)</span> this yields <span class="process-math">\(\a\in L\text{.}\)</span>
+</div>
+</div></article><span class="incontext"><a href="sec-splitting.html#proof-153" class="internal">in-context</a></span>
 </body>
 </html>

@@ -12,17 +12,39 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<div class="para">Let <span class="process-math">\(F \subseteq K\)</span> be a finite extension of fields of degree <span class="process-math">\(n = [K : F ]\text{.}\)</span>
-</div> <div class="para">Suppose that <span class="process-math">\(f \in F[x]\)</span> is irreducible of degree <span class="process-math">\(d\)</span> and <span class="process-math">\(\gcd(d, n) = 1\text{.}\)</span>
+<div class="para">We form <span class="process-math">\(B\)</span> and <span class="process-math">\(C\)</span> in steps.</div> <div class="para">Start by picking an ordered basis <span class="process-math">\(C' = \{w_1, \dots, w_r\}\)</span> of the image of <span class="process-math">\(g\text{.}\)</span> For each <span class="process-math">\(i\)</span> pick <span class="process-math">\(v_i \in V\)</span> such that <span class="process-math">\(g(v_i) = w_i\)</span> and set <span class="process-math">\(B' = \{v_1, \dots, v_r\}\text{.}\)</span> Then pick a basis <span class="process-math">\(B''\)</span> of the kernel of <span class="process-math">\(g\text{.}\)</span> Let us list the elements of <span class="process-math">\(B''\)</span> as <span class="process-math">\(\{v_{r+1}, \dots, v_n\}\text{.}\)</span>
 </div> <div class="para logical">
-<div class="para">First, note that if <span class="process-math">\(d=1\)</span> then <span class="process-math">\(f(x)\)</span> will remain irreducible in <span class="process-math">\(K[x]\)</span> <code class="code-inline tex2jax_ignore">[provisional cross-reference: empty]</code>. Suppose then that <span class="process-math">\(d&gt;1\text{.}\)</span> There exists an algebraically closed extension <span class="process-math">\(\widetilde F\)</span> such that <span class="process-math">\(f\)</span> has a root <span class="process-math">\(r\)</span> <code class="code-inline tex2jax_ignore">[provisional cross-reference: empty]</code>. Consider <span class="process-math">\(K(r)\text{.}\)</span> As <span class="process-math">\(r\)</span> is algebraic in <span class="process-math">\(K(r)\)</span> we know there exists some unique irreducible minimum polynomial <span class="process-math">\(g\)</span> of degree <span class="process-math">\(q\text{,}\)</span> and thus that <span class="process-math">\([K(r):K]=q\)</span> <code class="code-inline tex2jax_ignore">[provisional cross-reference: empty]</code>. Using the Degree Formula <code class="code-inline tex2jax_ignore">[provisional cross-reference: empty]</code> we see that</div>
-<div class="displaymath process-math" data-contains-math-knowls="   ">
+<div class="para">I claim that <span class="process-math">\(B := B' \cup B'' = \{v_1, \dots, v_n\}\)</span> is a basis of <span class="process-math">\(V\text{.}\)</span> (Note that <span class="process-math">\(B' \cap B'' = \emptyset\)</span> since <span class="process-math">\(g(v_i) = w_i \ne 0\)</span> for all <span class="process-math">\(i\)</span> with <span class="process-math">\(1 \leq i \leq r\)</span> and <span class="process-math">\(g(v_i) = 0\)</span> for all <span class="process-math">\(i &gt; r\text{.}\)</span>) Pick <span class="process-math">\(v \in V\text{.}\)</span> Then, since <span class="process-math">\(C'\)</span> spans the image of <span class="process-math">\(g\text{,}\)</span> we have <span class="process-math">\(g(v) = \sum_{i=1}^r a_i w_i\)</span> for some scalars <span class="process-math">\(a_i \in F\text{.}\)</span> It follows that <span class="process-math">\(v - \sum_{i=1}^r a_i v_i \in \ker(g)\)</span> and hence, since the kernel is spanned by <span class="process-math">\(B''\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
 \begin{equation*}
-[K(r):F]=[K(r):K][K:F]=qn.
+v - \sum_{i=1}^r a_i v_i = \sum_{i=r+1}^n a_i v_i,
 \end{equation*}
 </div>
-<div class="para">However, <span class="process-math">\([K(r):F]=[K(r):F(r)][F(r):F]\)</span> and so <span class="process-math">\(qn=md\)</span> for some <span class="process-math">\(m\in\Z\text{,}\)</span> so <span class="process-math">\(d|qn\text{.}\)</span> As <span class="process-math">\(\gcd(n,d)=1\)</span> we must have <span class="process-math">\(d|q\text{.}\)</span> But <span class="process-math">\(q\)</span> was defined to be the degree of <span class="process-math">\(g\text{,}\)</span> which divides <span class="process-math">\(f\text{.}\)</span> As <span class="process-math">\(d|q\)</span> and <span class="process-math">\(q\leq d\text{,}\)</span> we see that <span class="process-math">\(d=q\text{,}\)</span> so so <span class="process-math">\(f=kg\)</span> for some <span class="process-math">\(k\in F\text{.}\)</span> As irreducible polynomials multiplied by a constant are still irreducible, we see that <span class="process-math">\(f\)</span> is indeed irreducible in <span class="process-math">\(K[x]\text{.}\)</span>
+<div class="para">for some <span class="process-math">\(a_{r+1}, \dots, a_n \in F\text{.}\)</span> We rearranging this equation, we conclude <span class="process-math">\(v \in \Span(B)\)</span> and thus <span class="process-math">\(B\)</span> spans <span class="process-math">\(V\text{.}\)</span>
 </div>
-</div> <div class="para">Let <span class="process-math">\(p(x)\)</span> be a non-constant irreducible polynomial of degree <span class="process-math">\(d\)</span> in <span class="process-math">\(F[x]\text{.}\)</span> Let <span class="process-math">\(K=F[x]/p(x)\text{.}\)</span> Because <span class="process-math">\(p(x)\)</span> is irreducible and <span class="process-math">\(F[x]\)</span> is a PID, <span class="process-math">\((p(x))\)</span> is a maximal ideal. Thus <span class="process-math">\(K = F[x]/(p(x))\)</span> is a field <code class="code-inline tex2jax_ignore">[provisional cross-reference: empty]</code>, <span class="process-math">\([K:F]=d\text{,}\)</span> and <span class="process-math">\(x+p(x)\)</span> is a root of <span class="process-math">\(p(x)\)</span> in <span class="process-math">\(K\)</span> <code class="code-inline tex2jax_ignore">[provisional cross-reference: empty]</code>. Hence <span class="process-math">\(p(x)\)</span> is no longer irreducible by Theorem 2.2</div></article><span class="incontext"><a href="sec-algebraic.html#proof-107" class="internal">in-context</a></span>
+</div> <div class="para">Now say <span class="process-math">\(\sum_{i=1}^n c_i v_i = 0\)</span> for some <span class="process-math">\(c_i\)</span>'s in <span class="process-math">\(F\text{.}\)</span> Since <span class="process-math">\(g(v_i) = 0\)</span> for all <span class="process-math">\(i &gt; r\)</span> and <span class="process-math">\(g(v_i) = w_i\)</span> for all <span class="process-math">\(i \leq r\text{,}\)</span> this gives that <span class="process-math">\(0 = g(0) = g(\sum_{i=1}^n c_i v_i) = \sum_{i=1}^n c_i g(v_i) =\sum_{i=1}^r c_i w_i = 0\text{.}\)</span> Since <span class="process-math">\(C'\)</span> is linearly independent, we have <span class="process-math">\(c_i = 0\)</span> for <span class="process-math">\(1 \leq i \leq r\text{.}\)</span> Going back to the original equation</div> <div class="para">
+<span class="process-math">\(\sum_{i=1}^n c_i v_i = 0\text{,}\)</span> we see that <span class="process-math">\(\sum_{i=1}^r c_i v_i = 0\)</span> and hence <span class="process-math">\(c_i=0\)</span> for all <span class="process-math">\(i\text{,}\)</span> since <span class="process-math">\(B''\)</span> is linearly independent.</div> <div class="para">Finally we extend <span class="process-math">\(C'\)</span> to an ordered basis <span class="process-math">\(C = \{w_1, \dots, w_r, w_{r+1}, \dots, w_m\}\)</span> of <span class="process-math">\(W\)</span> arbitrarily.</div> <div class="para logical">
+<div class="para">By our construction, for any <span class="process-math">\(v_i \in B\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g(v_i) = \begin{cases}
+w_i &amp; \text{for $1 \leq i \leq r$ and} \\
+0 &amp; \text{for $r+1 \leq i \leq n$} \\
+\end{cases}
+\end{equation*}
+</div>
+<div class="para">and hence</div>
+<div class="displaymath process-math">
+\begin{equation*}
+[g]_B^C = 
+\begin{bmatrix}
+I_r &amp; 0 \\
+0 &amp; 0 \\
+\end{bmatrix}.
+\end{equation*}
+</div>
+<div class="para">Note that, in our construction, <span class="process-math">\(r = \dim_F(\im(g)) = \rank(g)\text{.}\)</span>
+</div>
+</div></article><span class="incontext"><a href="sec-cob.html#proof-107" class="internal">in-context</a></span>
 </body>
 </html>

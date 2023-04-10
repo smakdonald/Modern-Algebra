@@ -12,14 +12,81 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<div class="para">Let <span class="process-math">\(a,b\in K\text{.}\)</span> Notice that <span class="process-math">\(a\inv, ab,\)</span> and <span class="process-math">\(a+b\)</span> are contained in <span class="process-math">\(F(a,b)\text{.}\)</span> As <span class="process-math">\(b\in K\text{,}\)</span> there exists some polynomial with coefficients in <span class="process-math">\(F\)</span> such that <span class="process-math">\(b\)</span> is a root. However, this polynomial also lives in <span class="process-math">\(F(a)\text{,}\)</span> so we have <span class="process-math">\([F(a,b):F(a)]\)</span> [[Mathematics/Definitions/Algebraic#$ defn$ – Algebraic (Extension)|algebraic]]. As <span class="process-math">\([F(a):F]\)</span> is also algebraic, we have <span class="process-math">\(F[a,b]\)</span> algebraic as well, as it is a finite extension by the [[Proposition – The Degree Formula|Degree Formula]]. Thus <span class="process-math">\(a+b, a\inv,\)</span> and <span class="process-math">\(ab\)</span> are algebraic over <span class="process-math">\(F\)</span> as well, making <span class="process-math">\(K\)</span> a field.</div> <div class="para logical">
-<div class="para">Let <span class="process-math">\(\a\in K\text{.}\)</span> Thus <span class="process-math">\(\a\)</span> is the root of a polynomial <span class="process-math">\(f(x)=a_nx^n+\dots+a_0\text{,}\)</span> where <span class="process-math">\(a_{i}\in F\text{.}\)</span> Notice that <span class="process-math">\(f\)</span> is a polynomial in <span class="process-math">\(F(a_n,\dots,a_0)\)</span> as well, and thus <span class="process-math">\(\a\)</span> is algebraic over this extension as well. Consider the chain of extensions</div>
+<div class="para logical">
+<div class="para">Let us first prove this in the case when <span class="process-math">\(n = 2\)</span> and <span class="process-math">\(\tau\)</span> is the only non-trivial element of <span class="process-math">\(S_2\text{.}\)</span> Say</div>
 <div class="displaymath process-math">
 \begin{equation*}
-F \subseteq F(a_0) \subseteq F(a_0,a_1) \subseteq \cdots \subseteq F(a_0, a_1, \dots, a_{n-1} )\subseteq F(a_0, \dots, a_{n}, \a).
+\psi: V^{\times 2} \to R
 \end{equation*}
 </div>
-<div class="para">As <span class="process-math">\(a_i\)</span> is algebraic over <span class="process-math">\(F\)</span> for all <span class="process-math">\(i\)</span> and <span class="process-math">\(\a\)</span> is algebraic over <span class="process-math">\(F(a_0,\dots,a_n)[x]\)</span> we see that each step in this chain has finite degree by. By the Degree Formula, <span class="process-math">\([F(a_0, \dots, a_{n}, \a): F]\)</span> is finite and thus so is <span class="process-math">\([F(\a):F]\text{.}\)</span> Thus <span class="process-math">\(\a\)</span> is algebraic over <span class="process-math">\(F\text{,}\)</span> hence <span class="process-math">\(\a\in K\text{,}\)</span> making <span class="process-math">\(K\)</span> algebraically closed.</div>
-</div></article><span class="incontext"><a href="sec-closure.html#proof-115" class="internal">in-context</a></span>
+<div class="para">is <span class="process-math">\(R\)</span>-multi-linear (<span class="process-math">\(R\)</span>-bilinear) and alternating. The goal is to prove</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\psi(v,w) = -\psi(w,v)
+\end{equation*}
+</div>
+<div class="para">for any <span class="process-math">\(v,w\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">We have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\psi(v+w, v+w) = 0
+\end{equation*}
+</div>
+<div class="para">on the one hand and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\psi(v+w, v+w) = \psi(v, v+w) + \psi(w, v+w) = \psi(v,v) + \psi(v, w) + \psi(w,v) + \psi(w,w) = \psi(v, w) + \psi(w,v)  
+\end{equation*}
+</div>
+<div class="para">on the other hand. It follows that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\psi(v, w) + \psi(w,v)  = 0
+\end{equation*}
+</div>
+<div class="para">which proves the Lemma in this case.</div>
+</div> <div class="para logical">
+<div class="para">Now let <span class="process-math">\(n\)</span> be arbitrary and <span class="process-math">\(\tau = (i \, j)\)</span> for some <span class="process-math">\(1 \leq i &lt; j \leq n\text{.}\)</span> In this case we need to show</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi(v_1, \dots, v_n) = - \phi(v_1, \dots, v_{i-1}, v_{j}, v_{i+1}, v_{i+2}, \dots, v_{j-1}, v_i, v_{j+1}, \dots, v_n)
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(v_1, \dots, v_n \in V\text{.}\)</span> Fix <span class="process-math">\(n-2\)</span> elements <span class="process-math">\(v_1, \dots, v_{i-1}, v_{i+1}, \dots, v_{j-1}, v_{j+1}, \dots, v_n\)</span> and define</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\psi: V^{\times 2} \to R
+\end{equation*}
+</div>
+<div class="para">by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\psi(v,w) = \phi(v_1, \dots, v_{i-1}, v, v_{i+1}, \dots, v_{j-1}, w,  v_{j+1}, \dots, v_n)
+\end{equation*}
+</div>
+<div class="para">for any <span class="process-math">\(v,w \in V\text{.}\)</span> With this notation the goal is to show</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\psi(v,w) = -\psi(w,v)
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(\phi\)</span> is <span class="process-math">\(R\)</span>-multi-linear and alternating, <span class="process-math">\(\psi: V \times V\to R\)</span> is <span class="process-math">\(R\)</span>-bilinear and alternating, and so the case already proven gives the result.</div>
+</div> <div class="para logical">
+<div class="para">Finally let <span class="process-math">\(n\)</span> and <span class="process-math">\(\tau\)</span> be arbitrary. Then <span class="process-math">\(\tau\)</span> is a product of transpositions — say <span class="process-math">\(\tau = \tau_r \cdots \tau_1\)</span> with each <span class="process-math">\(\tau_i\)</span> a transposition. Proceed by induction on <span class="process-math">\(r\text{.}\)</span> The previous case establishes the result when <span class="process-math">\(r = 1\text{.}\)</span> If <span class="process-math">\(r \geq 2\text{,}\)</span> then using the previous case gives</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\psi(v_\tau(1), \dots, v_\tau(n)) = -\psi(v_\tau'(1), \dots, v_\tau'(n))
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(\tau' = \tau_{r-1} \cdots \tau_1\)</span> and by induction <span class="process-math">\(\psi(v_\tau'(1), \dots, v_\tau'(n)) = (-1)^{r-1}\psi(v_1, \dots, v_n)\text{.}\)</span> Hence</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\psi(v_\tau(1), \dots, v_\tau(n)) = (-1)^{r}\psi(v_1, \dots, v_n)
+\end{equation*}
+</div>
+<div class="para">which proves the result.</div>
+</div></article><span class="incontext"><a href="sec-det.html#proof-115" class="internal">in-context</a></span>
 </body>
 </html>

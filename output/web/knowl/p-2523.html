@@ -12,7 +12,50 @@
 </head>
 <body class="ignore-math">
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<div class="para">Coming soon to an OER near you!</div>
+<div class="para logical"><ol class="decimal">
+<li><div class="para">Prove that if <span class="process-math">\(A\in Mat_{n\times n}(F)\)</span> and <span class="process-math">\(A\)</span> is nilpotent, then <span class="process-math">\(A^n = 0\text{.}\)</span>
+</div></li>
+<li><div class="para">Find, with justification, the number of similarity classes of <span class="process-math">\(5 \times 5\)</span> nilpotent matrices with entries in <span class="process-math">\(F\text{.}\)</span> #### Problem 9 #unfinished Find, with justification, a complete and non-redundant list of conjugacy class representatives for the group <span class="process-math">\(\GL_2(\F_3)\text{,}\)</span> where <span class="process-math">\(\F_3\)</span> is the field with three elements. ## JCF #### <span class="process-math">\(\exe\)</span> - Companion Matrix and Jordan Blocks Let us consider the companion matrix of <span class="process-math">\((x-2)^3 = x^3 -6x^2 + 12x -8\text{:}\)</span><div class="displaymath process-math">
+\begin{equation*}
+A =
+\begin{bmatrix}
+0 &amp; 0 &amp; 8 \\
+1 &amp; 0 &amp; -12 \\
+0 &amp; 1 &amp; 6 
+\end{bmatrix}=C((x-2)^3)\in \M_{3 \times 3}(\Q).
+\end{equation*}
+</div>We can interpret this matrix as arising from the linear transformation <span class="process-math">\(g\)</span> on<div class="displaymath process-math">
+\begin{equation*}
+V := \Q[x]/(x-2)^3
+\end{equation*}
+</div>defined as multiplication by <span class="process-math">\(x\text{.}\)</span> Recall that the ordered basis of <span class="process-math">\(V\)</span> that gives the matrix <span class="process-math">\(A\)</span> is the “obvious one'':<div class="displaymath process-math">
+\begin{equation*}
+B=\{\ov{1}, \ov{x}, \ov{x^2}\}.
+\end{equation*}
+</div>But notice that<div class="displaymath process-math">
+\begin{equation*}
+B'=\{\ov{1}, \ov{x-2}, \ov{(x-2)^2}\}
+\end{equation*}
+</div>is also a basis of <span class="process-math">\(V\text{.}\)</span> Let us calculate what the operator <span class="process-math">\(g\)</span> does to this alternative basis. We could work this out by brute force, but a cleaner way is to first compute what the operator <span class="process-math">\(g -2 \cdot \id_V\)</span> does. Since <span class="process-math">\(g - 2 \cdot \id_V\)</span> is multiplication by <span class="process-math">\(x-2\text{,}\)</span> it sends each basis element to the next one, except for the last one, which is sent to <span class="process-math">\(0\text{.}\)</span> It follows that the matrix of this operator relative to the ordered basis <span class="process-math">\(B'\)</span> is<div class="displaymath process-math">
+\begin{equation*}
+[g - 2 \cdot \id_V]_{B'}^{B'} = 
+\begin{bmatrix}
+0 &amp; 0 &amp; 0 \\
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+\end{bmatrix}
+\end{equation*}
+</div>and hence the matrix for <span class="process-math">\(g\)</span> itself for this basis is<div class="displaymath process-math">
+\begin{equation*}
+[g]_{B'}^{B'} = 
+\begin{bmatrix}
+2 &amp; 0 &amp; 0 \\
+1 &amp; 2 &amp; 0 \\
+0 &amp; 1 &amp; 2 \\
+\end{bmatrix} =: J_3(2).
+\end{equation*}
+</div>This is what's known as a Jordan Block.</div></li>
+</ol></div>
 <span class="incontext"><a href="sec-minpoly.html#p-2523" class="internal">in-context</a></span>
 </body>
 </html>

@@ -12,34 +12,63 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<div class="para logical">
-<div class="para">Let <span class="process-math">\(i: N \to M\)</span> be any injection of left <span class="process-math">\(K[G]\)</span>-modules. It suffices to prove that there is an <span class="process-math">\(K[G]\)</span>-linear map <span class="process-math">\(p: M \to N\)</span> such that <span class="process-math">\(p \circ i = \mathrm{id}_N\text{.}\)</span> By restriction of scalars along the inclusion <span class="process-math">\(K \subseteq K[G]\text{,}\)</span> we may regard <span class="process-math">\(i\)</span> as a <span class="process-math">\(K\)</span>-linear map between <span class="process-math">\(K\)</span>-vector spaces. As such it admits a <span class="process-math">\(K\)</span>-linear splitting <span class="process-math">\(f: M \twoheadrightarrow N\)</span> (since <span class="process-math">\(K\)</span> is semisimple). There is no reason that <span class="process-math">\(f\)</span> will be <span class="process-math">\(K[G]\)</span>-linear, but we can modify it so that it becomes so: Define <span class="process-math">\(p: M \to N\)</span> by</div>
-<div class="displaymath process-math">
-\begin{equation*}
-p(m) = \frac{1}{|G|} \sum_{g \in G} g^{-1} f(g m).
-\end{equation*}
-</div>
-<div class="para">Note that the formula makes sense since <span class="process-math">\(|G|\)</span> is invertible in <span class="process-math">\(K\)</span> by assumption.</div>
+<div class="para">Note that from the previous homework, we know that <span class="process-math">\([E:\Q]=8\text{,}\)</span> and that <span class="process-math">\(E=\Q(\sqrt[4]{20},i)\text{.}\)</span> Additionally, we know the following: - <span class="process-math">\(\a_1 = e^{\pi i/4}\sqrt[4]{5} = \cos(\frac{\pi}{4})+i\sin(\frac{\pi}{4})\sqrt[4]{5} = \frac{\sqrt{2}}{2}\sqrt[4]{5}+i\frac{\sqrt{2}}{2}\sqrt[4]{5}=\sqrt[4]{5/4}(1+i)\text{,}\)</span> - <span class="process-math">\(\a_2 = e^{3\pi i/4}\sqrt[4]{5} = \cos(\frac{3\pi}{4})+i\sin(\frac{3\pi}{4})\sqrt[4]{5} = \frac{-\sqrt{2}}{2}\sqrt[4]{5}-i\frac{\sqrt{2}}{2}\sqrt[4]{5}=\sqrt[4]{5/4}(-1+i)\text{,}\)</span> - <span class="process-math">\(\a_3 = e^{5\pi i/4}\sqrt[4]{5} = \cos(\frac{5\pi}{4})+i\sin(\frac{5\pi}{4})\sqrt[4]{5} = \frac{\sqrt{2}}{2}\sqrt[4]{5}+i\frac{\sqrt{2}}{2}\sqrt[4]{5}=\sqrt[4]{5/4}(-1-i)\text{,}\)</span> and - <span class="process-math">\(\a_4 = e^{7\pi i/4}\sqrt[4]{5} = \cos(\frac{7\pi}{4})+i\sin(\frac{7\pi}{4})\sqrt[4]{5} = \frac{\sqrt{2}}{2}\sqrt[4]{5}-i\frac{\sqrt{2}}{2}\sqrt[4]{5}=\sqrt[4]{5/4}(1-i)\text{.}\)</span> Note that by Eisenstein's Criterion using <span class="process-math">\(p=5\)</span> we see that <span class="process-math">\(x^4+5\)</span> is irreducible in <span class="process-math">\(\Q\text{.}\)</span> As <span class="process-math">\(\Q\)</span> has characteristic 0, we see that <span class="process-math">\(x^4+5\)</span> is separable as well.</div> <div class="para">As <span class="process-math">\(E\)</span> is the splitting field of an irreducible polynomial in <span class="process-math">\(F[x]\text{,}\)</span> by Theorem 2.90 we see that <span class="process-math">\(|\Aut(E/\Q)|=[E:\Q]=8\text{.}\)</span> In the Gaussian integers, it is known that if both <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are nonzero then, <span class="process-math">\(a+bi\)</span> is a Gaussian prime if and only if <span class="process-math">\(a^2+b^2\)</span> is an ordinary prime. Note that <span class="process-math">\(5=(2-i)(2+i)\text{,}\)</span> and that <span class="process-math">\(2^2+i^2=3\text{,}\)</span> which is prime. Thus <span class="process-math">\(2+i\)</span> is prime in <span class="process-math">\(\Z[i]\text{.}\)</span> Thus we may invoke Eisenstein's Criterion using <span class="process-math">\(p=2+i\)</span> to see that <span class="process-math">\(x^4+5\)</span> is irreducible in <span class="process-math">\(\Q(i)\text{,}\)</span> as <span class="process-math">\((2+i)^2=3-2i\)</span> does not divide 5, but we'll prove it just to be sure.</div> <div class="para">Suppose <span class="process-math">\((3+2i)|5\text{.}\)</span> Then <span class="process-math">\((3+2i)(a+bi)=5\text{,}\)</span> so <span class="process-math">\(3a+3bi+2ai-2b=5\text{,}\)</span> and thus <span class="process-math">\(3a-2b+(2a+3b)i=5\text{.}\)</span> As 5 has no imaginary component, it must be the case that <span class="process-math">\(2a+3b=0\text{,}\)</span> and thus that <span class="process-math">\(a=-\frac{3}{2}b\text{.}\)</span> Substituting in, we see that <span class="process-math">\(-\frac{9}{2}b-3b=5\text{,}\)</span> and thus that <span class="process-math">\(b=-\frac{10}{3}\text{,}\)</span> which has historically not been an integer.</div> <div class="para">Anyway, we may thus apply Porism 2.61 to see that there exists some <span class="process-math">\(\tau\in\Aut(E/\Q(i))\)</span> such that <span class="process-math">\(\tau(\alpha_1)=\alpha_2\text{.}\)</span> We may regard <span class="process-math">\(\tau\)</span> as an element of <span class="process-math">\(\Aut(E/\Q)\)</span> since, by definition, <span class="process-math">\(\Aut(E/\Q(i))\)</span> is a subgroup of <span class="process-math">\(\Aut(E/\Q)\text{.}\)</span>
 </div> <div class="para logical">
-<div class="para">Then <span class="process-math">\(p\)</span> is still a <span class="process-math">\(K\)</span>-linear map (since <span class="process-math">\(f\)</span> is <span class="process-math">\(K\)</span>-linear and the group action is <span class="process-math">\(K\)</span>-linear). For any <span class="process-math">\(h \in G\)</span> we have</div>
+<div class="para">As <span class="process-math">\(\tau(\alpha_1)=\alpha_2\text{,}\)</span> observe the following glory:</div>
 <div class="displaymath process-math">
 \begin{equation*}
-p(hm) = \frac{1}{|G|} \sum_{g \in G} g^{-1} f(g hm) = \frac{1}{|G|} \sum_{x \in G} hx^{-1} f(xm)
-= h p(m),
+\begin{align}
+\tau(\alpha_1)&amp;=\alpha_2\\
+\tau(\sqrt[4]{5/4}(1+i))&amp;=\sqrt[4]{5/4}(-1+i)\\
+\tau(\sqrt[4]{5/4})\tau(1+i)&amp;=\sqrt[4]{5/4}(-1+i)\\
+\tau(\sqrt[4]{5/4})(1+i)&amp;=\sqrt[4]{5/4}(-1+i)\\
+\tau(\sqrt[4]{5/4})&amp;=\frac{\sqrt[4]{5/4}(-1+i)}{(1+i)}\\
+\tau(\sqrt[4]{5/4})&amp;=\frac{\sqrt[4]{5/4}(-1+i)}{(1+i)}\frac{(1-i)}{(1-i)}\\
+\tau(\sqrt[4]{5/4})&amp;=\frac{\sqrt[4]{5/4}(2i)}{2}\\
+\tau(\sqrt[4]{5/4})&amp;=\sqrt[4]{5/4}i
+\end{align}
 \end{equation*}
 </div>
-<div class="para">where the second equality is given by identifying <span class="process-math">\(x\)</span> with <span class="process-math">\(gh\text{.}\)</span> These conditions ensure that <span class="process-math">\(p\)</span> is <span class="process-math">\(K[G]\)</span>-linear. Finally,</div>
+<div class="para">With that in mind, we examine</div>
 <div class="displaymath process-math">
 \begin{equation*}
-p(i(n))= \frac{1}{|G|} \sum_{g \in G} g^{-1} f(g i(n))
-= \frac{1}{|G|} \sum_{g \in G} g^{-1} f(i(gn)) 
-= \frac{1}{|G|} \sum_{g \in G} g^{-1} gn
-= \frac{1}{|G|} \sum_{g \in G} n  = n
+\begin{align}
+\tau(\alpha_2)&amp;=\tau(\sqrt[4]{5/4}(-1+i))\\
+&amp;=\tau(\sqrt[4]{5/4})\tau(-1+i)\\
+&amp;=\tau(\sqrt[4]{5/4})(-1+i)\\
+&amp;=\sqrt[4]{5/4}i(-1+i)\\
+&amp;=\sqrt[4]{5/4}(-1-i)\\
+&amp;=\alpha_3,
+\end{align}
 \end{equation*}
 </div>
-<div class="para">where the second equality uses that <span class="process-math">\(i\)</span> is <span class="process-math">\(K[G]\)</span>-linear and the third one uses that <span class="process-math">\(f \circ i =
-\mathrm{id}\text{.}\)</span>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{align}
+\tau(\alpha_3)&amp;=\tau(\sqrt[4]{5/4}(-1-i))\\
+&amp;=\tau(\sqrt[4]{5/4})\tau(-1-i)\\
+&amp;=\tau(\sqrt[4]{5/4})(-1-i)\\
+&amp;=\sqrt[4]{5/4}i(-1-i)\\
+&amp;=\sqrt[4]{5/4}(1-i)\\
+&amp;=\alpha_4,
+\end{align}
+\end{equation*}
 </div>
-</div></article><span class="incontext"><a href="sec-semisimple-rings.html#proof-154" class="internal">in-context</a></span>
+<div class="para">and don't forget</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{align}
+\tau(\alpha_4)&amp;=\tau(\sqrt[4]{5/4}(1-i))\\
+&amp;=\tau(\sqrt[4]{5/4})\tau(1-i)\\
+&amp;=\tau(\sqrt[4]{5/4})(1-i)\\
+&amp;=\sqrt[4]{5/4}i(1-i)\\
+&amp;=\sqrt[4]{5/4}(1+i)\\
+&amp;=\alpha_1,
+\end{align}
+\end{equation*}
+</div>
+<div class="para">So <span class="process-math">\(\tau\)</span> corresponds to the permutation (1 2 3 4). We have proven that <span class="process-math">\(\Aut(E/\Q(i))\)</span> is isomorphic to a subgroup of <span class="process-math">\(S_4\)</span> having order at most 8 and that it contains an element or order 2 and (1 2 3 4), an element of order 4. Since the subgroup generated by these two elements has order 8, we see that <span class="process-math">\(\Aut(E/\Q) \cong D_8\text{.}\)</span> (Also by Sylow's Theorem, <span class="process-math">\(S_4\)</span> only has one subgroup of order 8, and it is <span class="process-math">\(D_8\)</span>).</div>
+</div></article><span class="incontext"><a href="sec-splitting.html#proof-154" class="internal">in-context</a></span>
 </body>
 </html>

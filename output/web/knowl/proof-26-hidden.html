@@ -10,15 +10,19 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para">Let <span class="process-math">\(G\)</span> be a group of order <span class="process-math">\(2835\text{.}\)</span>
-</div> <div class="para">By Sylow's Theorem we know that <span class="process-math">\(n_3=1\mod{3}\)</span> and <span class="process-math">\(n_3|35\text{.}\)</span> The possible options are thus <span class="process-math">\(1\)</span> and <span class="process-math">\(7\text{.}\)</span>
-</div> <div class="para logical">
-<div class="para">Suppose by way of contradiction that <span class="process-math">\(G\)</span> is simple. Thus <span class="process-math">\(n_3\neq 1\text{,}\)</span> so <span class="process-math">\(n_3=7\text{.}\)</span> Let <span class="process-math">\(G\)</span> act on the <span class="process-math">\(\Syl_3(G)\)</span> by conjugation, yielding the homomorphism</div>
+<body class="ignore-math"><article class="hiddenproof"><div class="para logical">
+<div class="para">We have</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\rho: G\to S_7
+\begin{aligned}
+\theta((y_1, x_1) (y_2, x_2))  &amp; = 
+\theta(y_1 c_{x_1}(y_2), x_1 x_2) \\
+&amp; = y_1x_1y_2x_1^{-1} x_1 x_2 \\
+&amp; = y_1x_1y_2x_2 = \theta(y_1, x_1) \theta(y_2, x_2)
+\end{aligned}
 \end{equation*}
 </div>
-<div class="para">granted via the permutation representation. By (2) in Sylow's Theorem we see that <span class="process-math">\(\rho\)</span> is not trivial. As <span class="process-math">\(|S_7|=7!\)</span> we see that <span class="process-math">\(|G|\not\big||S_7|\text{,}\)</span> meaning that the <span class="process-math">\(\ker(\rho)\)</span> is non-trivial, yielding a non-trivial normal subgroup of <span class="process-math">\(G\text{,}\)</span> a contradiction.</div>
+<div class="para">and thus <span class="process-math">\(\theta\)</span> is a homomorphism. It's kernel is <span class="process-math">\(\{(y,x) \mid y = x^{-1}, y\in H, x\in K \}\text{,}\)</span> which is just <span class="process-math">\(\{e\}\)</span> since <span class="process-math">\(H \cap K = \{e\}\text{.}\)</span> The image of <span class="process-math">\(\theta\)</span> is clearly <span class="process-math">\(KH = G\text{.}\)</span> This proves <span class="process-math">\(\theta\)</span> is an isomorphism. It is obvious that <span class="process-math">\(\theta(K') = K\)</span> and <span class="process-math">\(\theta(H')= H\text{.}\)</span>
+</div>
 </div></article></body>
 </html>

@@ -10,28 +10,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para logical">
-<div class="para">It suffices prove that for a given group <span class="process-math">\(G\text{,}\)</span> we can recover its invariant factor form from its elementary divisor form, and vice versa. We will be a bit hand-wavey for this following the ideas from the above examples.</div>
-<div class="displaymath process-math">
+<body class="ignore-math"><article class="hiddenproof"><div class="para logical"><ol class="decimal"><li><div class="para">Since <span class="process-math">\(1_R1_R=1_R\)</span> we have <span class="process-math">\(f(1_R)f(1_R)=f(1_R)\text{,}\)</span> thus<div class="displaymath process-math">
 \begin{equation*}
-G \cong  \mathbb{Z}^r \times \mathbb{Z}/p_1^{e_1} \times \cdots \times \mathbb{Z}/p_l^{e_l}.
+f(1_R)(f(1_R)-1_S)=0_S.
 \end{equation*}
-</div>
-<div class="para">by applying the Chinese Remainder Theorem we have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-G \cong \mathbb{Z}^r \times \mathbb{Z}/d_1 \times \cdots \times \mathbb{Z}/d_n
-\end{equation*}
-</div>
-<div class="para">where <span class="process-math">\(d_1\)</span> is the product of the elementary divisors of highest power for each <em class="emphasis">distinct</em> prime in the list <span class="process-math">\(p_1, \dots, p_l\text{,}\)</span> <span class="process-math">\(d_2\)</span> is the product of the next highest possible prime powers, and so on. We will have that <span class="process-math">\(d_2\mid d_1\)</span> and in general that <span class="process-math">\(d_{i+1}\mid d_i\)</span> since by definition the exponent of <span class="process-math">\(p_j\in d_i\)</span> is greater or equal to the exponent of <span class="process-math">\(p_j\in d_{i+1}\text{.}\)</span>
-</div>
-</div> <div class="para logical">
-<div class="para">Conversely, given</div>
-<div class="displaymath process-math">
-\begin{equation*}
-G \cong \mathbb{Z}^r \times \mathbb{Z}/d_1 \times \cdots \times \mathbb{Z}/d_n
-\end{equation*}
-</div>
-<div class="para">with <span class="process-math">\(d_1 \mid d_2 \mid \cdots \mid d_n\text{,}\)</span> we may apply the CRT to each <span class="process-math">\(\mathbb{Z}/d_i\)</span> to find its elementary divisor form. ◻</div>
-</div></article></body>
+</div>Now either <span class="process-math">\(f(1_R)=0_S\)</span> or <span class="process-math">\(f(1_R)-1_S=0_S\)</span> (which yields <span class="process-math">\(f(1_R)=1_S\)</span>) or both of these are nonzero and then they are complementary zero divisors (in particular, <span class="process-math">\(f(1_R)\)</span> is a zero divisor).</div></li></ol></div></article></body>
 </html>

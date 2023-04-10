@@ -10,21 +10,20 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para">Let <span class="process-math">\(R\)</span> be a commutative ring with <span class="process-math">\(1\)</span> and Let <span class="process-math">\(N\)</span> be the set of nilpotent elements of <span class="process-math">\(R\text{.}\)</span>
-</div> <div class="para logical"><ol class="decimal">
-<li>
-<div class="para">Let <span class="process-math">\(r,s\in N\text{.}\)</span> Then <span class="process-math">\(r^n=0\)</span> and <span class="process-math">\(s^m=0\)</span> for <span class="process-math">\(n,m\in\N\text{.}\)</span> Consider <span class="process-math">\((r+s)^{mn}\text{,}\)</span> which, by the binomial theorem, has each term raised to either the <span class="process-math">\(n\)</span>th or <span class="process-math">\(m\)</span>th power, sending the whole thing to <span class="process-math">\(0\text{.}\)</span>
+<body class="ignore-math"><article class="hiddenproof"><div class="para logical">
+<div class="para">Consider the ring isomorphism <span class="process-math">\(\phi: \Q[x] \xra{\cong} \Q[y]\)</span> given by <span class="process-math">\(\phi(h(x)) = h(y+1)\text{.}\)</span> I claim that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi(f(x)) = y^{p-1} + p y^{p-2} + {p \choose 2} y^{p-3} +{p \choose 3} y^{p-4} +\cdots + {p \choose p-1} y + p.
+\end{equation*}
 </div>
-<div class="para">Additionally, if <span class="process-math">\(r\in N\)</span> consider <span class="process-math">\(r\inv=-r\)</span> when viewed as an additive group. Notice <span class="process-math">\(-r^{2n}=r(2n)=0\text{.}\)</span> Finally, let <span class="process-math">\(x\not\in N\)</span> and consider <span class="process-math">\((rx)^n=r^nx^n=0\text{,}\)</span> so <span class="process-math">\(rx\in N\text{.}\)</span> Thus we have our ideal.</div>
-</li>
-<li><div class="para">Let <span class="process-math">\(rN\)</span> be a nilpotent element in <span class="process-math">\(R/N\text{.}\)</span> Then <span class="process-math">\(r^nN=N\text{,}\)</span> meaning <span class="process-math">\(r^n\in N\text{.}\)</span> This means there exists some <span class="process-math">\(m\in\N\)</span> such that <span class="process-math">\(r^{n^m}=r^{nm}=0\text{,}\)</span> placing <span class="process-math">\(r\in N\text{.}\)</span> Thus all nilpotent elements in <span class="process-math">\(R/N\)</span> are actually <span class="process-math">\(0\)</span> (possibly four <span class="process-math">\(0\)</span>’s in a trench coat).</div></li>
-<li>
-<div class="para">Let <span class="process-math">\(f\in R[x]\text{.}\)</span>
+<div class="para">To see this, we note that <span class="process-math">\(f(x) (x-1) = x^p - 1\)</span> and by the binomial theorem we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi(x^p-1) = (y+1)^p - 1 = y^p + p y^{p-1} + {p \choose 2} y^{p-2} + \cdots + py.
+\end{equation*}
 </div>
-<div class="para">First, suppose <span class="process-math">\(f\)</span> is a nilpotent element of <span class="process-math">\(R[x]\text{.}\)</span> Thus <span class="process-math">\(f^n=0\)</span> for some <span class="process-math">\(n\in\N\text{.}\)</span> By the binomial shenanigans every product of coefficients must to go <span class="process-math">\(0\text{.}\)</span>
-</div>
-<div class="para">Next, suppose every coefficient of <span class="process-math">\(f\)</span> is nilpotent. Let <span class="process-math">\(n\)</span> be equal to the product of all the smallest powers that send each coefficient to <span class="process-math">\(0\text{.}\)</span> Thus by more binomial shenanigans we have <span class="process-math">\(f^n=0\text{.}\)</span>
-</div>
-</li>
-</ol></div></article></body>
+<div class="para">Since <span class="process-math">\(\phi(x^p-1) = \phi(f(x)) \phi(x-1) = \phi(f(x)) y\text{,}\)</span> the claim follows.</div>
+</div> <div class="para">By Eisenstein, <span class="process-math">\(\phi(f(x))\)</span> is irreducible in <span class="process-math">\(\Q[y]\)</span> and, since <span class="process-math">\(\phi\)</span> is an isomorphism, it follows that <span class="process-math">\(f(x)\)</span> is irreducible in <span class="process-math">\(\Q[x]\text{.}\)</span>
+</div></article></body>
 </html>

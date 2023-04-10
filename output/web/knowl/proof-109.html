@@ -12,42 +12,42 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<div class="para">Let <span class="process-math">\(E\)</span> be the field extension of <span class="process-math">\(\Q\)</span> obtained by adjoining to <span class="process-math">\(\Q\)</span> all four complex roots of the polynomial <span class="process-math">\(x^4 + 5\text{.}\)</span>
-</div> <div class="para">Let <span class="process-math">\(F=\Q(\sqrt[4]{20})\text{.}\)</span> Note that by Eisenstein's Criterion using <span class="process-math">\(p=5\)</span> we see that <span class="process-math">\(\sqrt[4]{20}\)</span> is the root of an irreducible polynomial <span class="process-math">\(x^4-20\)</span> in <span class="process-math">\(\Q\text{.}\)</span> Thus by Theorem 2.31 we see that <span class="process-math">\([F:\Q]\)</span> is the degree of the minimum polynomial of this extension. However, as <span class="process-math">\(x^4-20\)</span> is monic and of degree 4, we see that it is the minimal polynomial and thus that <span class="process-math">\([F:\Q]=4\text{.}\)</span> As <span class="process-math">\(\sqrt[4]{20}\in\R-\Q\text{,}\)</span> this extension will be contained in the real numbers, and thus that <span class="process-math">\(F\subseteq\R\text{.}\)</span>
-</div> <div class="para logical">
-<div class="para">Next, observe</div>
+<div class="para logical">
+<div class="para">Each of the maps</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\begin{align}
-\alpha_1+\alpha_4&amp;=e^{\pi i/4}\sqrt[4]{5}+e^{7\pi i/4}\sqrt[4]{5}\\
-&amp;=(\cos(\frac{\pi}{4})+i\sin(\frac{\pi}{4}))\sqrt[4]{5}+(\cos(\frac{7\pi}{4})+i\sin(\frac{7\pi}{4}))\sqrt[4]{5}\\
-&amp;=(\frac{\sqrt{2}}{2}+i\frac{\sqrt{2}}{2})\sqrt[4]{5}+(\frac{\sqrt{2}}{2}-i\frac{\sqrt{2}}{2})\sqrt[4]{5}\\
-&amp;=\sqrt{2}\sqrt[4]{5}\\
-&amp;=\sqrt[4]{20},
-\end{align}
+V \xra{v \mapsto [v]^B} R^n \xra{w \mapsto P^{-1} \cdot w} R^n \xra{(r_1, \dots, r_n)^\tau \mapsto \sum_i r_i b_i} V
 \end{equation*}
 </div>
-<div class="para">and thus that <span class="process-math">\(F\subseteq E\text{.}\)</span>
+<div class="para">is an isomorphism. (The one on the far right is the inverse of the one on the far left. The middle one is since <span class="process-math">\(u \mapsto P \cdot u\)</span> is a two-sided inverse.) So the composition of all three of these maps, let us call it <span class="process-math">\(g\text{,}\)</span> is also an isomorphism. It follows that <span class="process-math">\(C = \{g(b_1), \dots, g(b_n)\}\)</span> is a basis of <span class="process-math">\(V\text{.}\)</span> I leave it as an exercise for you to check that <span class="process-math">\(P = [\id_V]_B^C\text{.}\)</span>
 </div>
-</div> <div class="para">Note that <span class="process-math">\(i\)</span> is the root of <span class="process-math">\(x^2+1\text{,}\)</span> and since <span class="process-math">\(F\subseteq\R\)</span> and <span class="process-math">\(i\not\in\R\text{,}\)</span> we see that <span class="process-math">\(x^2+1\)</span> is irreducible in <span class="process-math">\(F\)</span> due to it having degree 2. As <span class="process-math">\(x^2+1\)</span> is monic and degree 2 we see its the minimal polynomial of <span class="process-math">\([F(i):F]=2\text{.}\)</span> By the Degree Formula, we see that <span class="process-math">\([F(i):\Q]=[F(i):F][F:\Q]=(2)(4)=8\text{.}\)</span>
-</div> <div class="para">Note that</div> <div class="para"><span class="process-math">\(\a_1 = e^{\pi i/4}\sqrt[4]{5} = \cos(\frac{\pi}{4})+i\sin(\frac{\pi}{4})\sqrt[4]{5} = \frac{\sqrt{2}}{2}\sqrt[4]{5}+i\frac{\sqrt{2}}{2}\sqrt[4]{5}=\sqrt[4]{20}(1+i)\text{,}\)</span></div> <div class="para"><span class="process-math">\(\a_2 = e^{3\pi i/4}\sqrt[4]{5} = \cos(\frac{3\pi}{4})+i\sin(\frac{3\pi}{4})\sqrt[4]{5} = \frac{-\sqrt{2}}{2}\sqrt[4]{5}-i\frac{\sqrt{2}}{2}\sqrt[4]{5}=\sqrt[4]{20}(-1+i)\text{,}\)</span></div> <div class="para">
-<span class="process-math">\(\a_3 = e^{5\pi i/4}\sqrt[4]{5} = \cos(\frac{5\pi}{4})+i\sin(\frac{5\pi}{4})\sqrt[4]{5} = \frac{\sqrt{2}}{2}\sqrt[4]{5}+i\frac{\sqrt{2}}{2}\sqrt[4]{5}=\sqrt[4]{20}(-1-i)\text{,}\)</span> and</div> <div class="para">
-<span class="process-math">\(\a_4 = e^{7\pi i/4}\sqrt[4]{5} = \cos(\frac{7\pi}{4})+i\sin(\frac{7\pi}{4})\sqrt[4]{5} = \frac{\sqrt{2}}{2}\sqrt[4]{5}-i\frac{\sqrt{2}}{2}\sqrt[4]{5}=\sqrt[4]{20}(1-i)\text{,}\)</span> all of which can be written with <span class="process-math">\(i\)</span> and <span class="process-math">\(\sqrt[4]{20}\text{.}\)</span> Thus <span class="process-math">\(E\subseteq F(i)\text{.}\)</span>
 </div> <div class="para logical">
-<div class="para">We already know that <span class="process-math">\(\alpha_1+\alpha_4=\sqrt[4]{20}\text{,}\)</span> and thus all that remains is to show that <span class="process-math">\(i\)</span> can be expressed in terms of the <span class="process-math">\(\alpha\text{.}\)</span> Observe</div>
+<div class="para">To show the uniqueness, say <span class="process-math">\(C = \{c_1, \dots, c_n\}\text{,}\)</span> say <span class="process-math">\(C' = \{c'_1, \dots, c'_n\}\)</span> are ordered bases such that <span class="process-math">\([\id_V]_B^{C'} = P = [\id_V]_B^C\text{.}\)</span> Then</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\begin{align}
-\alpha_1+\alpha_2&amp;=e^{\pi i/4}\sqrt[4]{5}+e^{3\pi i/4}\sqrt[4]{5}\\
-&amp;=(\cos(\frac{\pi}{4})+i\sin(\frac{\pi}{4}))\sqrt[4]{5}+(\cos(\frac{3\pi}{4})+i\sin(\frac{3\pi}{4}))\sqrt[4]{5}\\
-&amp;=(\frac{\sqrt{2}}{2}+i\frac{\sqrt{2}}{2})\sqrt[4]{5}+(\frac{\sqrt{2}}{2}+i\frac{\sqrt{2}}{2})\sqrt[4]{5}\\
-&amp;=\sqrt{2}\sqrt[4]{5}\\
-&amp;=\sqrt[4]{20}i,
-\end{align}
+[\id_V]_C^{C'} = [\id_V]_B^{C'} [\id_V]_C^B =  [\id_V]_B^{C'}  \left( [\id_V]_B^{C} \right)^{-1} = PP^{-1}  = I_n.
 \end{equation*}
 </div>
-<div class="para">and thus that <span class="process-math">\((\alpha_1+\alpha_2)(\alpha_1+\alpha_4)\inv=i\text{.}\)</span> Thus <span class="process-math">\(F(i)\subseteq E\text{,}\)</span> and <span class="process-math">\(F(i)=E\text{.}\)</span> Hence <span class="process-math">\([E:\Q]=8\text{.}\)</span>
+<div class="para">For each <span class="process-math">\(i\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+[c_i]^C  =  (0, \dots, 0, 1, 0, \dots, 0)^\tau 
+\end{equation*}
 </div>
-</div></article><span class="incontext"><a href="sec-algebraic.html#proof-109" class="internal">in-context</a></span>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+[c_i]^C  =  I_n [c_i]^C =  [\id_V]_C^{C'} [c_i]^C =  [c_i]^{C'}
+\end{equation*}
+</div>
+<div class="para">so that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+[c_i]^{C'} =  (0, \dots, 0, 1, 0, \dots, 0)^\tau
+\end{equation*}
+</div>
+<div class="para">which gives <span class="process-math">\(c_i = c_i'\text{.}\)</span>
+</div>
+</div></article><span class="incontext"><a href="sec-cob.html#proof-109" class="internal">in-context</a></span>
 </body>
 </html>

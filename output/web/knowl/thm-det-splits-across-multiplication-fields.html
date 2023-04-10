@@ -11,46 +11,16 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<section class="paragraphs"><h5 class="heading"><span class="title"><span class="process-math">\(\thm\)</span> – Det Splits Across Multiplication: Fields.</span></h5> <div class="para logical">
-<div class="para">For a field <span class="process-math">\(F\)</span> and matrices <span class="process-math">\(A, B \in \Mat_{n \times n}(F)\)</span> we have[^1]</div>
+<article class="theorem theorem-like"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.59</span><span class="period">.</span><span class="space"> </span><span class="title">Det Splits Across Multiplication: Fields.</span>
+</h3>
+<div class="para logical">
+<div class="para">For a field <span class="process-math">\(F\)</span> and matrices <span class="process-math">\(A, B \in \Mat_{n \times n}(F)\)</span> we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \det(AB) = \det(A)\det(B).
 \end{equation*}
 </div>
-<div class="para">###### <em class="emphasis">Proof.</em> If <span class="process-math">\(A\)</span> is not invertible, neither is <span class="process-math">\(AB\text{,}\)</span> since <span class="process-math">\(\im(AB) \subseteq \im(A)\text{,}\)</span> and if <span class="process-math">\(B\)</span> is not invertible, neither is is <span class="process-math">\(AB\text{,}\)</span> since <span class="process-math">\(\ker(AB) \supseteq \ker(A)\text{.}\)</span> So, by Corollary , if either <span class="process-math">\(A\)</span> or <span class="process-math">\(B\)</span> is not invertible, both sides of the equation are <span class="process-math">\(0\text{.}\)</span>
-</div>
-</div> <div class="para logical">
-<div class="para">Assume now that <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are both invertible. Then by Corollary  we have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-A = E_1 \cdots E_n
-\end{equation*}
-</div>
-<div class="para">and</div>
-<div class="displaymath process-math">
-\begin{equation*}
-B = F_1 \cdots F_m
-\end{equation*}
-</div>
-<div class="para">and hence</div>
-<div class="displaymath process-math">
-\begin{equation*}
-AB = E_1 \cdots E_n F_1 \cdots F_m
-\end{equation*}
-</div>
-<div class="para">where the <span class="process-math">\(E_i\)</span>’s and <span class="process-math">\(F_j\)</span>’s are elementary matrices. Applying Corollary  repeatedly gives</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\det(AB) = \det(E_1 \cdots E_n F_1 \cdots F_{m-1}) \det(F_m) = \cdots= \det(E_1) \cdots \det(E_n) \det(F_1) \cdots \det(F_m)
-\end{equation*}
-</div>
-<div class="para">and similarly</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\det(A) \det(B) = \left(\det(E_1) \cdots \det(E_n)\right) \left( \det(F_1) \cdots \det(F_m)\right).
-\end{equation*}
-</div>
-</div></section><span class="incontext"><a href="sec-det.html#thm-det-splits-across-multiplication-fields" class="internal">in-context</a></span>
+</div></article><article class="hiddenproof"><a href="" class="proof-knowl original" data-knowl="./knowl/proof-120-hidden.html" title="Proof 4.59.1"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><span class="incontext"><a href="sec-det.html#thm-det-splits-across-multiplication-fields" class="internal">in-context</a></span>
 </body>
 </html>

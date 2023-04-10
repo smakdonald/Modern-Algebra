@@ -11,7 +11,10 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<section class="paragraphs"><h5 class="heading"><span class="title"><span class="process-math">\(\cor\)</span> – Every <span class="process-math">\(m\times n\)</span> Matrix Equivalent to Unique Matrix.</span></h5> <div class="para logical">
+<article class="corollary theorem-like"><h3 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">4.20</span><span class="period">.</span><span class="space"> </span><span class="title">Every <span class="process-math">\(m\times n\)</span> Matrix Equivalent to Unique Matrix.</span>
+</h3>
+<div class="para logical">
 <div class="para">Every <span class="process-math">\(m \times n\)</span> matrix <span class="process-math">\(A\)</span> with entries in a field is equivalent to a unique matrix of the form</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -23,26 +26,6 @@ I_r &amp; 0 \\
 </div>
 <div class="para">where <span class="process-math">\(r\)</span> is the rank of <span class="process-math">\(A\text{.}\)</span>
 </div>
-</div> <section class="paragraphs"><h6 class="heading"><span class="title"><em class="emphasis">Proof.</em>.</span></h6> <div class="para">Let <span class="process-math">\(V = F^n\)</span> and <span class="process-math">\(W = F^m\)</span> and <span class="process-math">\(g: V \to W\)</span> be the linear transformation given by <span class="process-math">\(g(v) = A \cdot v\text{,}\)</span> matrix multiplication. (I have called this map <span class="process-math">\(T_A\)</span> in the past.) If <span class="process-math">\(B'\)</span> and <span class="process-math">\(C'\)</span> are the standard basis of <span class="process-math">\(V\)</span> and <span class="process-math">\(W\)</span> then <span class="process-math">\([g]_{B'}^{C'} = A\text{.}\)</span>
-</div> <div class="para logical">
-<div class="para">The Theorem gives that there are bases <span class="process-math">\(B\)</span> and <span class="process-math">\(C\)</span> of <span class="process-math">\(V\)</span> and <span class="process-math">\(W\)</span> such that</div>
-<div class="displaymath process-math">
-\begin{equation*}
-[g]_B^C = 
-\begin{bmatrix}
-I_r &amp; 0 \\
-0 &amp; 0 \\
-\end{bmatrix}.
-\end{equation*}
-</div>
-<div class="para">So, by Proposition , we have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-A = [g]_{B'}^{C'} = [\id_W]_C^{C'}[g]_B^C [\id_V]_{B'}^{B}=P
-\begin{bmatrix}I_r &amp; 0 \\0 &amp; 0 \\\end{bmatrix}Q
-\end{equation*}
-</div>
-<div class="para">with <span class="process-math">\(P := [\id_W]_C^{C'}\)</span> and <span class="process-math">\(Q := [\id_V]_{B'}^{B}\text{.}\)</span> Note that <span class="process-math">\(P, Q\)</span> are invertible since they are change of basis matrices (see ).</div>
-</div> <div class="para">The uniqueness of <span class="process-math">\(r\)</span> follows from the fact that <span class="process-math">\(r = \rank_F(g)\text{,}\)</span> which does not depend on a choice of bases.</div></section></section><span class="incontext"><a href="sec-cob.html#cor-every-mtimes-n-matrix-equivalent-to-unique-matrix" class="internal">in-context</a></span>
+</div></article><article class="hiddenproof"><a href="" class="proof-knowl original" data-knowl="./knowl/proof-108-hidden.html" title="Proof 4.20.1"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><span class="incontext"><a href="sec-cob.html#cor-every-mtimes-n-matrix-equivalent-to-unique-matrix" class="internal">in-context</a></span>
 </body>
 </html>

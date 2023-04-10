@@ -11,7 +11,106 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5>
-<div class="para">Let <span class="process-math">\(G\)</span> be a group of order <span class="process-math">\(90 = 2 · 3^2 · 5\)</span> and let <span class="process-math">\(\Syl_3(G)\)</span> denote the set ofSylow <span class="process-math">\(3\)</span>-subgroups of <span class="process-math">\(G\text{.}\)</span> ###### Part (a) Suppose by way of contradiction that <span class="process-math">\(G\)</span> is simple. By Sylow's Theorem we know the following: - <span class="process-math">\(n_3|10\)</span> and is congruent to <span class="process-math">\(1\mod{3}\text{.}\)</span> As <span class="process-math">\(G\)</span> is simple there must be ten of the fuckers. - <span class="process-math">\(n_5|18\)</span> and is congruent to <span class="process-math">\(1\mod 5\text{.}\)</span> As <span class="process-math">\(G\)</span> is simple there must be six of them. Since each Sylow <span class="process-math">\(3\)</span>-subgroup will have <span class="process-math">\(3^2-1=8\)</span> non-identity elements and they are all distinct that accounts for <span class="process-math">\(80\)</span> elements of order <span class="process-math">\(3\text{.}\)</span> However, there are also <span class="process-math">\(24\)</span> elements or order <span class="process-math">\(5\)</span> to account for, which is a problem. Thus <span class="process-math">\(G\)</span> cannot be simple.</div> <div class="para">Suppose now that there exists <span class="process-math">\(Q, Q' ∈ \Syl_3(G)\)</span> such that <span class="process-math">\(|Q \cap Q'| = 3\text{.}\)</span> . Given this intersection, we know that <span class="process-math">\(|QQ'|=9\cdot 9/3=27\text{.}\)</span> Additionally, note that as <span class="process-math">\(Q \cap Q'\)</span> is a subgroup of both <span class="process-math">\(Q\)</span> and <span class="process-math">\(Q'\)</span> with index 3 in both, the smallest prime dividing the order or both, that <span class="process-math">\(Q \cap Q'\)</span> is normal in both.</div> <div class="para">We now consider the normalizer of <span class="process-math">\(Q \cap Q'\text{,}\)</span> which we denote <span class="process-math">\(N\)</span> for simplicity. As <span class="process-math">\(N\)</span> is a subgroup of <span class="process-math">\(G\)</span> its order must divide <span class="process-math">\(90\)</span> by Lagrange's Theorem. However, <span class="process-math">\(QQ'\leq N\text{,}\)</span> and so <span class="process-math">\(N\)</span> must have at least <span class="process-math">\(27\)</span> elements, leaving the options of <span class="process-math">\(45\)</span> and <span class="process-math">\(90\text{.}\)</span> If <span class="process-math">\(|N|=90\)</span> then <span class="process-math">\(N=G\text{,}\)</span> making <span class="process-math">\(Q\cap Q'\)</span> normal in <span class="process-math">\(G\text{,}\)</span> a problem.</div> <div class="para">If <span class="process-math">\(|N|=45\)</span> then <span class="process-math">\([G:N]=2\text{,}\)</span> the smallest prime dividing <span class="process-math">\(G\text{.}\)</span> Thus <span class="process-math">\(N\)</span> is still normal, which is still a problem. Thus <span class="process-math">\(G\)</span> cannot be simple.</div></article><span class="incontext"><a href="sec-simple-groups.html#proof-25" class="internal">in-context</a></span>
+<article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>
+<div class="para logical">
+<div class="para">(1.) The proof is straightforward but a bit messy. For associativity, note that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+(y_1,x_1) \left( (y_2, x_2) (y_3, x_3) \right)
+&amp;=
+(y_1,x_1) (y_2\rho(x_2)(y_3), x_2x_3)
+=
+(y_1\rho(x_1)\left(y_2\rho(x_2)(y_3)\right), x_1x_2x_3)\\
+&amp;=
+(y_1\rho(x_1)(y_2)(\rho(x_1)\circ \rho(x_2))(y_3), x_1x_2x_3)\\
+&amp;=
+(y_1\rho(x_1)(y_2)\rho(x_1x_2)(y_3), x_1x_2x_3)\\
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">On the other hand</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\left( (y_1,x_1) (y_2, x_2) \right) (y_3, x_3) 
+&amp; = (y_1 \rho(x_1)(y_2), x_1 x_2)  (y_3, x_3) 
+= (y_1 \rho(x_1)(y_2)\rho(x_1x_2)(y_3), x_1 x_2 x_3).
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">This gives associativity.</div>
+</div> <div class="para">The fact that <span class="process-math">\((e,e)\)</span> is a two-sided identity follows from the fact that <span class="process-math">\(\rho(e)(y) = \text{id}_H(y)=y\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Finally</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+(y,x) (\rho(x^{-1})(y^{-1}) ,x^{-1}) &amp;= (y \rho(x)\left(\rho(x^{-1})(y^{-1}) \right), e)
+= (y (\rho(x)\circ\rho(x^{-1}))(y^{-1}), e) 
+\\ &amp;= (y \rho(e)(y^{-1}), e) = (yy^{-1},e)=(e,e),
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">and similarly</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(\rho(x^{-1})(y^{-1}) ,x^{-1})  (y,x) = (e,e).
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">(2.) Define a funtion</div>
+<div class="displaymath process-math">
+\begin{equation*}
+i: H \to H \rtimes_\rho K
+\end{equation*}
+</div>
+<div class="para">as <span class="process-math">\(i(y) = (y, e)\text{.}\)</span> Then <span class="process-math">\(i\)</span> is a homomorphism, since</div>
+<div class="displaymath process-math">
+\begin{equation*}
+i(y_1) i(y_2) = (y_1,e)(y_2,e) = (y_1\rho(e)(y_2) , ee) = (y_1 y_2, e) = i(y_1y_2).
+\end{equation*}
+</div>
+<div class="para">The map is clearly injective and hence its image is isomorphic to <span class="process-math">\(H\text{.}\)</span> In fact, the image is normal since the second component of</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(y,x) (y_2, e) (\rho(x^{-1})(y^{-1}), x^{-1})
+\end{equation*}
+</div>
+<div class="para">is clearly <span class="process-math">\(e\text{.}\)</span> Let us write this image as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+H' := \{(y,e) \mid y \in H\} \unlhd H \rtimes_\rho K.
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">The function</div>
+<div class="displaymath process-math">
+\begin{equation*}
+j: K \to H \rtimes_\rho K
+\end{equation*}
+</div>
+<div class="para">defined by <span class="process-math">\(j(x) = (e,x)\)</span> is also an injective homomorphism and thus its image</div>
+<div class="displaymath process-math">
+\begin{equation*}
+K' := \{(e,x) \mid x \in H \} \leq H \rtimes_\rho K
+\end{equation*}
+</div>
+<div class="para">is isomorphic to <span class="process-math">\(K\text{.}\)</span> <span class="process-math">\(K'\)</span> is typically <em class="emphasis">not</em> normal, however. Finally, it is easy to see that <span class="process-math">\(H'K'= H \rtimes_\rho K\)</span> and <span class="process-math">\(H' \cap K' = \{e\}\text{.}\)</span> Putting this all together we have</div>
+</div> <div class="para logical"><ul class="disc">
+<li><div class="para"><span class="process-math">\(H' \unlhd H \rtimes_\rho K\text{,}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(K' \leq H \rtimes_\rho K\text{,}\)</span></div></li>
+<li><div class="para">
+<span class="process-math">\(H' K' = H \rtimes_\rho K\text{,}\)</span> and</div></li>
+<li><div class="para"><span class="process-math">\(H'\cap K' = \{e\}\text{.}\)</span></div></li>
+</ul></div> <div class="para logical">
+<div class="para">(3.) Consider the projection onto the second factor <span class="process-math">\(\pi_2:H \rtimes_\rho K \to  K\)</span> given by <span class="process-math">\(\pi_2(y,x)=x\text{.}\)</span> This is a goup homomorphism since the second component of <span class="process-math">\((y_1,x_1)(y_2,x_2)\)</span> is <span class="process-math">\(x_1x_2\)</span> and is surjective by definition. Now</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\operatorname{Ker}(\pi_2)=\{(y,e_K)\mid y\in H\}=H'\cong H.
+\end{equation*}
+</div>
+<div class="para">By the first isomorphism theorem we conclude that <span class="process-math">\((H \rtimes_\rho K )/ H' \cong K\text{.}\)</span> ◻</div>
+</div></article><span class="incontext"><a href="sec-grp-spds.html#proof-25" class="internal">in-context</a></span>
 </body>
 </html>

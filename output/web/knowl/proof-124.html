@@ -12,17 +12,21 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<div class="para">Let <span class="process-math">\(F\subseteq L\)</span> be an algebraic field extension such that every non-constant polynomial in <span class="process-math">\(F[x]\)</span> splits completely into linear factors in <span class="process-math">\(L[x]\text{.}\)</span>
-</div> <div class="para">Let <span class="process-math">\(f\)</span> be a polynomial in <span class="process-math">\(L[x]\text{,}\)</span> so <span class="process-math">\(f=a_nx^n+\dots+a_1x+a_0\text{,}\)</span> with <span class="process-math">\(a_i\in L\text{,}\)</span> and let <span class="process-math">\(\a\)</span> be a root of <span class="process-math">\(f\text{.}\)</span> There [[Theorem – Existence and Uniqueness of Algebraic Closures|exists]] some field extension <span class="process-math">\(L\subseteq K\)</span> such that <span class="process-math">\(K\)</span> is algebraically closed, meaning <span class="process-math">\(\a\in K\text{.}\)</span> Notice that <span class="process-math">\(\a\)</span> is [[Mathematics/Definitions/Algebraic|algebraic]] over <span class="process-math">\(L(\a)\text{.}\)</span>
-</div> <div class="para logical">
-<div class="para">Consider the chain of field extensions</div>
+<div class="para logical">
+<div class="para">If <span class="process-math">\(C\)</span> is another basis, then</div>
 <div class="displaymath process-math">
 \begin{equation*}
-F\subseteq L\subseteq L(\a),
+[\a]_C^C = P [\a]_B^B P^{-1}
 \end{equation*}
 </div>
-<div class="para">making <span class="process-math">\(\a\)</span> algebraic over <span class="process-math">\(F\)</span> as well. As every non-constant polynomial in <span class="process-math">\(F[x]\)</span> splits completely into linear factors in <span class="process-math">\(L[x]\text{,}\)</span> this yields <span class="process-math">\(\a\in L\text{.}\)</span>
+<div class="para">for an invertible matrix <span class="process-math">\(P\)</span> (specifically, <span class="process-math">\(P = [\id]_B^C\)</span>). Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\det([\a]_C^C)  = \det(P [\a]_B^B P^{-1}) = \det(P) \det([\a]_B^B) \det(P^{-1}) =\det(P) \det(P^{-1}) \det([\a]_B^B) 
+\end{equation*}
 </div>
-</div></article><span class="incontext"><a href="sec-splitting.html#proof-124" class="internal">in-context</a></span>
+<div class="para">using the Theorem. Also by the Theorem <span class="process-math">\(\det(P) \det(P^{-1}) = \det(PP^{-1}) = \det(I_n) = 1\text{.}\)</span>
+</div>
+</div></article><span class="incontext"><a href="sec-det.html#proof-124" class="internal">in-context</a></span>
 </body>
 </html>

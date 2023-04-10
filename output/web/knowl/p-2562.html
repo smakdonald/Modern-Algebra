@@ -11,15 +11,21 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
 <div class="para logical">
-<div class="para">The last assertion is tricky only because the notation is confusing. Say <span class="process-math">\(p(x) = a_n x^n + \cdots + a_1 x + a_0\)</span> and just to keep things straight let's set <span class="process-math">\(q(y) = \ov{a_n} y^n + \cdots + \ov{a_0} \in L[y]\text{.}\)</span> We need to show <span class="process-math">\(q(\ov{x}) = 0\text{:}\)</span> We have</div>
+<div class="para">Let</div>
 <div class="displaymath process-math">
 \begin{equation*}
-q(\ov{x}) = \sum_i \ov{a_i} (\ov{x})^i =\sum_i \ov{a_i} (\ov{x^i}) = \ov{\sum_i a_i x_i}= \ov{p(x)}= 0.
+B=\begin{bmatrix}
+0 &amp; -9 &amp; 0 &amp; 0\\
+1 &amp; 6 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; -9\\
+0 &amp; 0 &amp; 1&amp; 6\\
+\end{bmatrix}
 \end{equation*}
 </div>
+<div class="para">And notice that <span class="process-math">\((B-3I)^2=0\text{.}\)</span> Thus <span class="process-math">\((x-3)^3\)</span> cannot be the minimal polynomial of <span class="process-math">\(B\text{.}\)</span> Two matrices are only similar if they share the same invariant factors (and thus the same minimum polynomial), so <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are not similar.</div>
 </div>
-<span class="incontext"><a href="field-extension-basics.html#p-2562" class="internal">in-context</a></span>
+<span class="incontext"><a href="sec-minpoly.html#p-2562" class="internal">in-context</a></span>
 </body>
 </html>
