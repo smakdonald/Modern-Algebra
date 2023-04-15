@@ -10,8 +10,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para logical">
-<div class="para">(1.) The proof is straightforward but a bit messy. For associativity, note that</div>
+<body class="ignore-math"><article class="hiddenproof"><div class="para logical"><ol class="decimal">
+<li>
+<div class="para logical">
+<div class="para">The proof is straightforward but a bit messy. For associativity, note that</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \begin{aligned}
@@ -38,8 +40,10 @@
 \end{equation*}
 </div>
 <div class="para">This gives associativity.</div>
-</div> <div class="para">The fact that <span class="process-math">\((e,e)\)</span> is a two-sided identity follows from the fact that <span class="process-math">\(\rho(e)(y) = \text{id}_H(y)=y\text{.}\)</span>
-</div> <div class="para logical">
+</div>
+<div class="para">The fact that <span class="process-math">\((e,e)\)</span> is a two-sided identity follows from the fact that <span class="process-math">\(\rho(e)(y) = \text{id}_H(y)=y\text{.}\)</span>
+</div>
+<div class="para logical">
 <div class="para">Finally</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -56,8 +60,11 @@
 (\rho(x^{-1})(y^{-1}) ,x^{-1})  (y,x) = (e,e).
 \end{equation*}
 </div>
-</div> <div class="para logical">
-<div class="para">(2.) Define a funtion</div>
+</div>
+</li>
+<li>
+<div class="para logical">
+<div class="para">Define a funtion</div>
 <div class="displaymath process-math">
 \begin{equation*}
 i: H \to H \rtimes_\rho K
@@ -81,7 +88,8 @@ i(y_1) i(y_2) = (y_1,e)(y_2,e) = (y_1\rho(e)(y_2) , ee) = (y_1 y_2, e) = i(y_1y_
 H' := \{(y,e) \mid y \in H\} \unlhd H \rtimes_\rho K.
 \end{equation*}
 </div>
-</div> <div class="para logical">
+</div>
+<div class="para logical">
 <div class="para">The function</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -95,19 +103,23 @@ K' := \{(e,x) \mid x \in H \} \leq H \rtimes_\rho K
 \end{equation*}
 </div>
 <div class="para">is isomorphic to <span class="process-math">\(K\text{.}\)</span> <span class="process-math">\(K'\)</span> is typically <em class="emphasis">not</em> normal, however. Finally, it is easy to see that <span class="process-math">\(H'K'= H \rtimes_\rho K\)</span> and <span class="process-math">\(H' \cap K' = \{e\}\text{.}\)</span> Putting this all together we have</div>
-</div> <div class="para logical"><ul class="disc">
+</div>
+<div class="para logical"><ul class="disc">
 <li><div class="para"><span class="process-math">\(H' \unlhd H \rtimes_\rho K\text{,}\)</span></div></li>
 <li><div class="para"><span class="process-math">\(K' \leq H \rtimes_\rho K\text{,}\)</span></div></li>
 <li><div class="para">
 <span class="process-math">\(H' K' = H \rtimes_\rho K\text{,}\)</span> and</div></li>
 <li><div class="para"><span class="process-math">\(H'\cap K' = \{e\}\text{.}\)</span></div></li>
-</ul></div> <div class="para logical">
-<div class="para">(3.) Consider the projection onto the second factor <span class="process-math">\(\pi_2:H \rtimes_\rho K \to  K\)</span> given by <span class="process-math">\(\pi_2(y,x)=x\text{.}\)</span> This is a goup homomorphism since the second component of <span class="process-math">\((y_1,x_1)(y_2,x_2)\)</span> is <span class="process-math">\(x_1x_2\)</span> and is surjective by definition. Now</div>
+</ul></div>
+</li>
+<li><div class="para logical">
+<div class="para">Consider the projection onto the second factor <span class="process-math">\(\pi_2:H \rtimes_\rho K \to  K\)</span> given by <span class="process-math">\(\pi_2(y,x)=x\text{.}\)</span> This is a goup homomorphism since the second component of <span class="process-math">\((y_1,x_1)(y_2,x_2)\)</span> is <span class="process-math">\(x_1x_2\)</span> and is surjective by definition. Now</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \operatorname{Ker}(\pi_2)=\{(y,e_K)\mid y\in H\}=H'\cong H.
 \end{equation*}
 </div>
 <div class="para">By the first isomorphism theorem we conclude that <span class="process-math">\((H \rtimes_\rho K )/ H' \cong K\text{.}\)</span> ◻</div>
-</div></article></body>
+</div></li>
+</ol></div></article></body>
 </html>

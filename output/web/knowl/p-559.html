@@ -14,13 +14,10 @@
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
 <div class="para">
-<span class="process-math">\(\Phi\)</span> and <span class="process-math">\(\Psi\)</span> are mutual inverses: <span class="process-math">\((\Psi\circ\Phi)(\mathcal{H})=\pi(\pi^{-1}(\mathcal{H}))=\mathcal{H}\)</span> since <span class="process-math">\(\pi\)</span> is surjective and <span class="process-math">\((\Phi\circ\Psi)(H)=\pi^{-1}(\pi(H))=\pi^{-1}(H/N)=H\text{,}\)</span> with the last equality justified by</div>
+<span class="process-math">\(\Phi\)</span> is well defined (correct codomain) since for <span class="process-math">\(\mathcal{H}\leq G\)</span> we have <span class="process-math">\(\pi^{-1}(\mathcal{H})\leq G\)</span> (since preimages of subgroups through group homomorphisms are subgroups) and for any <span class="process-math">\(\mathcal{H}\leq G\)</span> we have <span class="process-math">\(\{e_GN\}\subseteq \mathcal{H}\text{,}\)</span> hence</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\begin{aligned}
-x\in \pi^{-1}(H/N) &amp;\iff \pi(x)\in H/N \iff xN=hN \text{ for some } h\in H \\
-&amp; \iff x\in hN \text{ for some } h\in H \iff x\in H \text{ (using that } N\subseteq H).\\
-\end{aligned}
+N=\operatorname{Ker}(\pi)=\pi^{-1}(\{e_GN\})\subseteq \pi^{-1}(\mathcal{H})=\Phi(\mathcal{H}).
 \end{equation*}
 </div>
 </div>

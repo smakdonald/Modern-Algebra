@@ -12,9 +12,14 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<div class="para">
-<span class="process-math">\(I\)</span> is an ideal since the result of evaluating the sum of two polynomials <span class="process-math">\(g(x) + f(x)\)</span> at <span class="process-math">\(x = A\)</span> is <span class="process-math">\(g(A) f(A)\text{.}\)</span> the result of evaluating the product <span class="process-math">\(g(x) f(x)\)</span> at <span class="process-math">\(x = A\)</span> is <span class="process-math">\(g(A) f(A)\text{.}\)</span>
-</div> <div class="para">To show it is non-zero, consider the matrices <span class="process-math">\(I_n, A, A^2, \dots, A^{n^2}\text{.}\)</span> This is a collection of <span class="process-math">\(n^2 + 1\)</span> matrices in the <span class="process-math">\(n^2\)</span> dimensional <span class="process-math">\(F\)</span>-vector space <span class="process-math">\(\Mat_{n \times n}(F)\text{,}\)</span> and hence the must be linearly dependent: there are <span class="process-math">\(a_0, \dots, a_{n^2+1} \in F\text{,}\)</span> not all of which are <span class="process-math">\(0\text{,}\)</span> such that <span class="process-math">\(\sum_i a_i A^i = 0\text{.}\)</span> This proves <span class="process-math">\(\sum_i a_i x^i \in I\text{.}\)</span>
-</div></article><span class="incontext"><a href="sec-minpoly.html#proof-120" class="internal">in-context</a></span>
+<div class="para">If <span class="process-math">\(A\)</span> is invertible then <span class="process-math">\(1 = \det(I_n) = \det(AA^{-1}) = \det(A) \det(A^{-1})\)</span> by the Theorem, and hence <span class="process-math">\(\det(A)\)</span> is a unit.</div> <div class="para logical">
+<div class="para">If <span class="process-math">\(\det(A)\)</span> is a unit, then, using the equation above, we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A (A^{adj} \cdot \frac{1}{\det(A)}) =I_n = (A^{adj} \cdot \frac{1}{\det(A)}) A
+\end{equation*}
+</div>
+<div class="para">which proves <span class="process-math">\(A\)</span> has a two-sided inverse (namely, <span class="process-math">\(A^{adj} \frac{1}{\det(A)}\)</span>).</div>
+</div></article><span class="incontext"><a href="sec-det.html#proof-120" class="internal">in-context</a></span>
 </body>
 </html>

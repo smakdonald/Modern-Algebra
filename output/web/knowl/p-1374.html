@@ -13,14 +13,19 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Continuing with the previous example, we could have <span class="process-math">\(S = R/I\)</span> for an ideal <span class="process-math">\(I\)</span> of <span class="process-math">\(R\)</span> and <span class="process-math">\(\phi\)</span> could be the quotient map. Then</div>
+<div class="para">For existence, let's assume <span class="process-math">\(n = 1\)</span> at first. Given <span class="process-math">\(\phi: R \to S\)</span> and <span class="process-math">\(s \in S\text{,}\)</span> define</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\tilde{\phi}: R[x_1, \dots, x_n] \to (R/I)[x_1, \dots, x_n]
+\tilde{\phi}: R[x] \to S
 \end{equation*}
 </div>
-<div class="para">takes a polynomial and “reduces’’ its coefficients modulo <span class="process-math">\(I\text{.}\)</span> We will usually denote the image of <span class="process-math">\(f(x)\)</span> through the reduction homomorphism by <span class="process-math">\(\ov{f}(x)\text{.}\)</span>
+<div class="para">by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\tilde{\phi}(\sum_i r_i x^i) = \sum_i \phi(r_i) s^i.
+\end{equation*}
 </div>
+<div class="para">It is elementary (but tedious) to check <span class="process-math">\(\tilde{\phi}\)</span> really is a ring homomorphism. The fact that it restricts to <span class="process-math">\(\phi\)</span> is clear, however.</div>
 </div>
 <span class="incontext"><a href="subsec-polyrings.html#p-1374" class="internal">in-context</a></span>
 </body>

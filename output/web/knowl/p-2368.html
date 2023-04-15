@@ -13,26 +13,15 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">We now address the question of which modules have finite presentations. It is clear than any such module must be finitely generated (since the cosets of <span class="process-math">\(e_1, \dots, e_m\)</span> generate <span class="process-math">\(R^m/\im(T_A)\)</span> for any <span class="process-math">\(m \times n\)</span> matrix <span class="process-math">\(A\)</span>). If <span class="process-math">\(M\)</span> is finitely generated, say by <span class="process-math">\(m\)</span> elements, then we can find a surjective <span class="process-math">\(R\)</span>-module homomorphism</div>
+<div class="para">First write <span class="process-math">\(M\)</span> in invariant factor form <span class="process-math">\(M \cong R^r \oplus R/(d_1) \oplus \dots \oplus R/(d_k)\text{.}\)</span> For any non-zero, non-unit element <span class="process-math">\(d\)</span> of <span class="process-math">\(R\text{,}\)</span> we have <span class="process-math">\(d = p_1^{e_1} \cdots p_m^{e_m}\)</span> for some distinct (non-associate) prime elements <span class="process-math">\(p_j\)</span> and integers <span class="process-math">\(e_j \geq 1\text{.}\)</span> By the Chinese remainder theorem (applied over and over again) we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\pi: R^m \onto M.
+R/(d)\cong R/(p_1^{e_1})  \oplus \cdots \oplus R/(p_m^{e_m})
 \end{equation*}
 </div>
-<div class="para">Provided the kernel of <span class="process-math">\(\pi\)</span> is also finitely generated, say by <span class="process-math">\(n\)</span> elements, then we may find a surjection</div>
-<div class="displaymath process-math">
-\begin{equation*}
-g: R^n \onto \ker(\pi).
-\end{equation*}
+<div class="para">Doing this for each fact <span class="process-math">\(R/(d_i)\)</span> in the invariant factor form of <span class="process-math">\(M\)</span> we obtain the existence of an elementary divisor form of <span class="process-math">\(M\text{.}\)</span>
 </div>
-<div class="para">The composition <span class="process-math">\(R^n \xra{g} \ker(\pi) \subseteq R^m\)</span> is a map between free <span class="process-math">\(R\)</span>-modules and is thus equal to <span class="process-math">\(T_A\)</span> for some <span class="process-math">\(n \times m\)</span> matrix <span class="process-math">\(A\text{.}\)</span> Clearly <span class="process-math">\(\im(T_A) = \ker(\pi)\)</span> and hence by the first isomorphism theorem</div>
-<div class="displaymath process-math">
-\begin{equation*}
-R^m/\im(A) = R^m/\ker(\pi) \cong M,
-\end{equation*}
 </div>
-<div class="para">so that <span class="process-math">\(M\)</span> is finitely presented.</div>
-</div>
-<span class="incontext"><a href="sec-noeth.html#p-2368" class="internal">in-context</a></span>
+<span class="incontext"><a href="sec-modclass.html#p-2368" class="internal">in-context</a></span>
 </body>
 </html>
