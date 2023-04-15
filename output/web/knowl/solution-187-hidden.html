@@ -10,5 +10,43 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like"><div class="para">Coming soon to an OER near you!</div></div></body>
+<body class="ignore-math"><div class="solution solution-like">
+<div class="para">Let <span class="process-math">\(F=\Q\text{,}\)</span> <span class="process-math">\(n\)</span> a positive integer, and <span class="process-math">\(A\)</span> a unipotent <span class="process-math">\(4\times 4\)</span> matrix with entries in <span class="process-math">\(F\text{.}\)</span> Thus <span class="process-math">\(A-I\)</span> is nilpotent. Let <span class="process-math">\(\l\)</span> be an eigenvalue of <span class="process-math">\(A-I\text{.}\)</span> Then <span class="process-math">\((A-I)v=\l v\text{,}\)</span> so <span class="process-math">\(Av-Iv=\l v\)</span> and <span class="process-math">\(Av=\l v+Iv\text{.}\)</span> As <span class="process-math">\(Iv=v\text{,}\)</span> we have <span class="process-math">\(Av=\l v+v\)</span> and <span class="process-math">\(Av=(\l+1)v\text{.}\)</span>
+</div> <div class="para">Notice that as <span class="process-math">\(\l\)</span> is an eigenvalue of <span class="process-math">\(I\text{,}\)</span> we have <span class="process-math">\(\l +1\)</span> as an eigenvalue of <span class="process-math">\(A\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Assume inductively that <span class="process-math">\(\l^{n-1}\)</span> is an eigenvalue of <span class="process-math">\((A-I)^{n-1}\text{.}\)</span> Notice</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(A+I)^nv=(A+I)(A+I)^{n-1}v=(A+I)\l^{n-1}v=\l^{n-1}(A+I)v=\l^{n-1}\l=\l^n,
+\end{equation*}
+</div>
+<div class="para">making <span class="process-math">\(\l\)</span> an eigenvalue of <span class="process-math">\((A+I)^n\text{.}\)</span> Thus if <span class="process-math">\(\l\)</span> is an eigenvalue of <span class="process-math">\(A-I\text{,}\)</span> it is an eigenvalue of <span class="process-math">\((A-I)^n\)</span> as well. As <span class="process-math">\((A-I)\)</span> is nilpotent, there exists some <span class="process-math">\(k\)</span> such that <span class="process-math">\((A-I)^k=0\text{.}\)</span> This means that <span class="process-math">\(\l^kv=0\text{.}\)</span> As <span class="process-math">\(v\neq 0\)</span> and <span class="process-math">\(\l^k\)</span> is a scalar in a field (and hence integral domain) we have <span class="process-math">\(\l=0\text{.}\)</span> Thus the only eigenvalue of <span class="process-math">\((A-I)\)</span> is <span class="process-math">\(0\text{,}\)</span> meaning that the only eigenvalue of <span class="process-math">\(A\)</span> is <span class="process-math">\(1\text{.}\)</span>
+</div>
+</div> <div class="para">Eigenvalues of <span class="process-math">\(A\)</span> correspond to the roots of <span class="process-math">\(\cp_A(x)\text{,}\)</span> which is a monic quartic polynomial, as <span class="process-math">\(A\)</span> is a <span class="process-math">\(4\times 4\)</span> matrix. Thus <span class="process-math">\(\cp_A(x)=(x-1)^4\text{,}\)</span> as all roots must be <span class="process-math">\(1\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Two matrices are similar if and only if they share the same invariant factors. Given that invariant factors divide <span class="process-math">\(\cp_A(x)\)</span> and each invariant factor must divide the following one, the possible sets of invariant factors for <span class="process-math">\(A\)</span> are the following: - <span class="process-math">\(\{(x-1)^4\}\text{,}\)</span> - <span class="process-math">\(\{(x-1),(x-1)^3\}\text{,}\)</span> - <span class="process-math">\(\{(x-1), (x-1), (x-1)^2\}\text{,}\)</span> - <span class="process-math">\(\{(x-1)^2, (x-1)^2\}\text{,}\)</span> and - <span class="process-math">\(\{(x-1), (x-1), (x-1), (x-1)\}\text{.}\)</span> We identify the companion matrices for each possible invariant factor:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C(x-1)=\begin{bmatrix} 1 \end{bmatrix},
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C((x-1)^2)=C(x^2-2x+1)=\begin{bmatrix} 0 &amp; -1 \\ 1 &amp; 2\end{bmatrix},
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C((x-1)^3)=C(x^3+3x^2+3x-1)=\begin{bmatrix} 0 &amp; 0 &amp; 1 \\ 1 &amp; 0 &amp; -3 \\ 0 &amp; 1 &amp; -3\end{bmatrix},
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C((x-1)^4)=C(x^4-4x^3+6x^2-4x+1)=\begin{bmatrix} 0 &amp; 0 &amp; 0 &amp; -1 \\ 1 &amp; 0 &amp; 0 &amp; 4 \\ 0 &amp; 1 &amp; 0 &amp; -6 \\ 0 &amp; 0 &amp; 1 &amp; 4\end{bmatrix}.
+\end{equation*}
+</div>
+<div class="para">We define the following: 1. <span class="process-math">\(B=C((x-1)^4)\text{,}\)</span> 2. <span class="process-math">\(C=C(x-1)\oplus C((x-1)^3)\text{,}\)</span> 3. <span class="process-math">\(D=C(x-1)\oplus C(x-1)\oplus C((x-1)^2)\text{,}\)</span> 4. <span class="process-math">\(E=C((x-1)^2)\oplus C((x-1)^2)\text{,}\)</span> and 5. <span class="process-math">\(F=C(x-1)\oplus C(x-1)\oplus C(x-1)\oplus C(x-1)\text{.}\)</span> As each of these matrices is in RCF, they are explicit representatives for each similarity class.</div>
+</div>
+</div></body>
 </html>

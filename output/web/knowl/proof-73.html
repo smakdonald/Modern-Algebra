@@ -13,13 +13,32 @@
 <body class="ignore-math">
 <article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
 <div class="para logical">
-<div class="para">Consider and ascending chain of ideals of <span class="process-math">\(R\text{;}\)</span> it must have the form</div>
+<div class="para">{} Given a function <span class="process-math">\(j: B \to N\text{,}\)</span> define <span class="process-math">\(f: M\to N\)</span> as follows: Given <span class="process-math">\(m \in M\text{,}\)</span> by Lemma  <span class="process-math">\(m\)</span> can be written uniquely as a finite sum <span class="process-math">\(m = \sum_{b \in B} r_b b\text{.}\)</span> We set</div>
 <div class="displaymath process-math">
 \begin{equation*}
-(a_1)\subseteq (a_2) \subseteq (a_3) \subseteq \cdots \subseteq (a_i)\subseteq (a_{i+1})\subseteq \cdots.
+f(m) = \sum_{b \in B} r_b j(b).
 \end{equation*}
 </div>
-<div class="para">Consider <span class="process-math">\(I=\bigcup_{i\geq 1} (a_i)\)</span> which is an ideal of <span class="process-math">\(R\)</span> by the argument given in Theorem . Since <span class="process-math">\(R\)</span> is a PID, <span class="process-math">\(I=(b)\)</span> for some <span class="process-math">\(b\in R\text{.}\)</span> Since <span class="process-math">\(b\in I=\bigcup_{i\geq 1} (a_i)\text{,}\)</span> we must have <span class="process-math">\(b\in (a_n)\)</span> for some <span class="process-math">\(n\text{.}\)</span> Then we see that <span class="process-math">\(I=(b)\subseteq (a_n)\subseteq (a_{n+1})\subseteq \cdots (a_j) \subseteq \cdots \subseteq I\)</span> for all <span class="process-math">\(j\geq n\text{,}\)</span> thus <span class="process-math">\(I=(a_j)\)</span> for <span class="process-math">\(j\geq n\)</span> and the chain stabilizes as desired.</div>
-</div></article><span class="incontext"><a href="subsec-noeth.html#proof-73" class="internal">in-context</a></span>
+<div class="para">Note that <span class="process-math">\(f\)</span> is a well-defined function by the uniqueness of the equation <span class="process-math">\(m = \sum_{b \in B} r_b b\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">We need to prove <span class="process-math">\(f\)</span> is an <span class="process-math">\(R\)</span>-module homomorphism. I'll just show it preserves scaling — the proof for addition is similar. Given <span class="process-math">\(x \in R\)</span> and <span class="process-math">\(m \in M\text{,}\)</span> we have <span class="process-math">\(m = \sum_{b \in B} r_b b\)</span> for some <span class="process-math">\(r_b \in R\text{,}\)</span> and hence <span class="process-math">\(xm = \sum_b (xr_b) b\text{.}\)</span> By definition of <span class="process-math">\(f\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(xm) = \sum_b (xr_b) j(b) = x \sum_b r_b j(b) = x f(m).
+\end{equation*}
+</div>
+</div> <div class="para">Finally, for any <span class="process-math">\(y \in B\)</span> we have <span class="process-math">\(y = \sum_{b \in B} r_b b\)</span> where <span class="process-math">\(r_b = 1\)</span> if <span class="process-math">\(b = y\)</span> and <span class="process-math">\(r_b = 0\)</span> if <span class="process-math">\(b \ne y\text{.}\)</span> So <span class="process-math">\(f(y) = j(y)\)</span> by construction. This proves existence.</div> <div class="para logical">
+<div class="para">{} Let <span class="process-math">\(g:M\to N\)</span> be another <span class="process-math">\(R\)</span>-module homomorphism such that <span class="process-math">\(g(b)=g(b)\)</span> for each <span class="process-math">\(b \in B\text{.}\)</span> Given <span class="process-math">\(m \in M\)</span> we have <span class="process-math">\(m = \sum_{b \in B} r_b b\)</span> and hence</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g(m) = \sum_b g(r_b (b)  = \sum_b r_b g(b)  = 
+\sum_b r_b j(b) = f(m).
+\end{equation*}
+</div>
+<div class="para">and hence <span class="process-math">\(g = f\text{.}\)</span>
+</div>
+</div></article><span class="incontext"><a href="sec-bases.html#proof-73" class="internal">in-context</a></span>
 </body>
 </html>

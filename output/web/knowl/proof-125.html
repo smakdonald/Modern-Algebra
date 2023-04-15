@@ -12,16 +12,15 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<div class="para">The <span class="process-math">\((i,i)\)</span> entry of <span class="process-math">\(XY\)</span> is <span class="process-math">\(\sum_l x_{i,l} y_{l, i}\)</span> and so <span class="process-math">\(\trace(XY) = \sum_i \sum_l x_{i,l} y_{l,i}\text{.}\)</span> The <span class="process-math">\((j,j)\)</span> entry of <span class="process-math">\(YX\)</span> is <span class="process-math">\(\sum_t y_{j,t} x_{t,j}\)</span> and so <span class="process-math">\(\trace(YX) = \sum_j \sum_t y_{j,t} x_{t,j}\text{.}\)</span> Since <span class="process-math">\(R\)</span> is commutative, these are equal.</div> <div class="para logical">
-<div class="para">Say <span class="process-math">\(B\)</span> and <span class="process-math">\(C\)</span> are two bases of <span class="process-math">\(V\text{.}\)</span> Then <span class="process-math">\([g]_B^B = P [g]_{C}^{C} P^{-1}\)</span> for some invertible matrix <span class="process-math">\(P\)</span> (namely, <span class="process-math">\(P = [\id_V]_C^B\)</span>). Using the first part of the Lemma we have</div>
-<div class="displaymath process-math">
+<div class="para logical">
+<div class="para">Note that <span class="process-math">\(p(x)\)</span> is (up to a non-zero constant factor) the minimum polynomial of both <span class="process-math">\(\a\)</span> and <span class="process-math">\(\a'\text{.}\)</span> So, we may apply (3b) of the Theorem <code class="code-inline tex2jax_ignore">[provisional cross-reference: empty]</code> twice to give a pair of isomorphisms</div>
+<div class="displaymath process-math" data-contains-math-knowls=" ">
 \begin{equation*}
-\trace([g]_B^B) = \trace(P [g]_{C}^{C} P^{-1}) = \trace((P [g]_{C}^{C}) P^{-1}) = 
-\trace(P^{-1} (P [g]_{C}^{C})) =
-\trace((P^{-1} P) [g]_{C}^{C})) =
-\trace([g]_{C}^{C}).
+F(\a) \xla{\cong} F[x]/(p(x)) \xra{\cong} F(\a').
 \end{equation*}
 </div>
-</div></article><span class="incontext"><a href="sec-det.html#proof-125" class="internal">in-context</a></span>
+<div class="para">of fields, given by sending <span class="process-math">\(\ov{f(x)}\)</span> to <span class="process-math">\(f(\a)\)</span> (for the left one) and <span class="process-math">\(f(\a')\)</span> (for the right one). Take <span class="process-math">\(\theta\)</span> to be the inverse of the one on the left composed with the right one. <code class="code-inline tex2jax_ignore">[provisional cross-reference: empty]</code>
+</div>
+</div></article><span class="incontext"><a href="sec-algebraic.html#proof-125" class="internal">in-context</a></span>
 </body>
 </html>

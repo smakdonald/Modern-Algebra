@@ -10,7 +10,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para">Let <span class="process-math">\(R\)</span> be a commutative ring in which every element <span class="process-math">\(x\)</span> satisfies <span class="process-math">\(x^n = x\)</span> for some <span class="process-math">\(n &gt; 1.\)</span> Let <span class="process-math">\(P\)</span> be a prime ideal in <span class="process-math">\(R\text{.}\)</span>
-</div> <div class="para">Let <span class="process-math">\(rP\in R/P\text{,}\)</span> meaning <span class="process-math">\(r\not\in P\text{.}\)</span> Then <span class="process-math">\((rP)^n=r^nP=rP\)</span> for some <span class="process-math">\(n&gt;1\text{.}\)</span> As <span class="process-math">\(R/P\)</span> is a domain <a href="" class="fn-knowl original" data-knowl="./knowl/fn-6-hidden.html" title="Footnote 3.1"><sup> 1 </sup></a> we can cancel an <span class="process-math">\(r\)</span> to see that <span class="process-math">\(r^{n-1}P=P\text{,}\)</span> and thus <span class="process-math">\(rP\cdot r^{n-2}P=P\text{,}\)</span> making <span class="process-math">\(rP\)</span> a unit in <span class="process-math">\(R/P\text{.}\)</span> Thus <span class="process-math">\(R/P\)</span> is a field, making <span class="process-math">\(P\)</span> maximal in <span class="process-math">\(R\text{.}\)</span>
+<body class="ignore-math"><article class="hiddenproof"><div class="para logical">
+<div class="para">Consider and ascending chain of ideals of <span class="process-math">\(R\text{;}\)</span> it must have the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(a_1)\subseteq (a_2) \subseteq (a_3) \subseteq \cdots \subseteq (a_i)\subseteq (a_{i+1})\subseteq \cdots.
+\end{equation*}
+</div>
+<div class="para">Consider <span class="process-math">\(I=\bigcup_{i\geq 1} (a_i)\)</span> which is an ideal of <span class="process-math">\(R\)</span> by the argument given in Theorem . Since <span class="process-math">\(R\)</span> is a PID, <span class="process-math">\(I=(b)\)</span> for some <span class="process-math">\(b\in R\text{.}\)</span> Since <span class="process-math">\(b\in I=\bigcup_{i\geq 1} (a_i)\text{,}\)</span> we must have <span class="process-math">\(b\in (a_n)\)</span> for some <span class="process-math">\(n\text{.}\)</span> Then we see that <span class="process-math">\(I=(b)\subseteq (a_n)\subseteq (a_{n+1})\subseteq \cdots (a_j) \subseteq \cdots \subseteq I\)</span> for all <span class="process-math">\(j\geq n\text{,}\)</span> thus <span class="process-math">\(I=(a_j)\)</span> for <span class="process-math">\(j\geq n\)</span> and the chain stabilizes as desired.</div>
 </div></article></body>
 </html>

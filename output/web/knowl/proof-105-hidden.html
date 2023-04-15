@@ -10,20 +10,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para logical">
-<div class="para">For the first assertion we just need to check the two maps agree on <span class="process-math">\(x_j\)</span> for all <span class="process-math">\(j\text{:}\)</span> We have</div>
+<body class="ignore-math"><article class="hiddenproof"><div class="para">The <span class="process-math">\((i,i)\)</span> entry of <span class="process-math">\(XY\)</span> is <span class="process-math">\(\sum_l x_{i,l} y_{l, i}\)</span> and so <span class="process-math">\(\trace(XY) = \sum_i \sum_l x_{i,l} y_{l,i}\text{.}\)</span> The <span class="process-math">\((j,j)\)</span> entry of <span class="process-math">\(YX\)</span> is <span class="process-math">\(\sum_t y_{j,t} x_{t,j}\)</span> and so <span class="process-math">\(\trace(YX) = \sum_j \sum_t y_{j,t} x_{t,j}\text{.}\)</span> Since <span class="process-math">\(R\)</span> is commutative, these are equal.</div> <div class="para logical">
+<div class="para">Say <span class="process-math">\(B\)</span> and <span class="process-math">\(C\)</span> are two bases of <span class="process-math">\(V\text{.}\)</span> Then <span class="process-math">\([g]_B^B = P [g]_{C}^{C} P^{-1}\)</span> for some invertible matrix <span class="process-math">\(P\)</span> (namely, <span class="process-math">\(P = [\id_V]_C^B\)</span>). Using the first part of the Lemma we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
-T_B(T_A(x_j)) = T_B(\sum_i a_{i,j} y_i) = \sum_i a_{i,j} T_B(y_i) 
-= \sum_i \sum _l a_{i, j} b_{k, i} z_k
+\trace([g]_B^B) = \trace(P [g]_{C}^{C} P^{-1}) = \trace((P [g]_{C}^{C}) P^{-1}) = 
+\trace(P^{-1} (P [g]_{C}^{C})) =
+\trace((P^{-1} P) [g]_{C}^{C})) =
+\trace([g]_{C}^{C}).
 \end{equation*}
 </div>
-<div class="para">(with the second equation using that <span class="process-math">\(T_B\)</span> is an <span class="process-math">\(R\)</span>-map) and</div>
-<div class="displaymath process-math">
-\begin{equation*}
-T_{BA}(x_j) = \sum_k (BA)_{k,j} z_k = \sum_k \left(\sum _i b_{k, i} a_{i, j}\right) z_k.
-\end{equation*}
-</div>
-<div class="para">(I have left off the superscripts <span class="process-math">\((X,Y)\)</span> etc. for the sake of my sanity.) These two expressions agree since <span class="process-math">\(R\)</span> is commutative.</div>
-</div> <div class="para">The second assertion holds since composition of functions is associative.</div></article></body>
+</div></article></body>
 </html>

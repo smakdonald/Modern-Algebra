@@ -12,21 +12,38 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<div class="para">Let <span class="process-math">\(C = \{w_1, \dots, w_m\}\text{.}\)</span> As noted, the sublemma establishes the case <span class="process-math">\(w = 1\)</span> of the Exchange Lemma. The general case proceeds recursively:</div> <div class="para">Suppose that for some <span class="process-math">\(0 \leq k &lt; m\text{,}\)</span> we have found <span class="process-math">\(v_1, \dots, v_k \in B\)</span> such that <span class="process-math">\(B'' := (B \setminus \{v_1, \dots, v_k\}) \cup \{w_1, \dots, w_k\}\)</span> is a basis for some <span class="process-math">\(k &lt; m\text{.}\)</span> We need to show we can “swap out one more''; that is, we need to prove there is a <span class="process-math">\(v_{k+1} \in(B \setminus \{v_1, \dots, v_k\})\)</span> such that <span class="process-math">\((B'' \setminus \{v_{k+1}\}) \cup \{w_{k+1}\}\)</span> is also a basis.</div> <div class="para logical">
-<div class="para">Since <span class="process-math">\(B''\)</span> is a basis, there is a (unique) equation of the form</div>
+<div class="para">If <span class="process-math">\(A\)</span> is not invertible, neither is <span class="process-math">\(AB\text{,}\)</span> since <span class="process-math">\(\im(AB) \subseteq \im(A)\text{,}\)</span> and if <span class="process-math">\(B\)</span> is not invertible, neither is is <span class="process-math">\(AB\text{,}\)</span> since <span class="process-math">\(\ker(AB) \supseteq \ker(A)\text{.}\)</span> So, by Corollary , if either <span class="process-math">\(A\)</span> or <span class="process-math">\(B\)</span> is not invertible, both sides of the equation are <span class="process-math">\(0\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Assume now that <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are both invertible. Then by Corollary  we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
-w_{k+1} = \sum_{i=1}^n a_i u_i
+A = E_1 \cdots E_n
 \end{equation*}
 </div>
-<div class="para">with <span class="process-math">\(u_i \in B''\)</span> and <span class="process-math">\(a_i \ne 0\text{.}\)</span> Now, there must be at least one <span class="process-math">\(u_i\)</span> that is not in <span class="process-math">\(\{w_1, \dots, w_k\}\text{,}\)</span> for otherwise we would have <span class="process-math">\(w_{k+1} \in \Span( w_1, \dots, w_k)\text{,}\)</span> contrary to <span class="process-math">\(C\)</span> being linearly independent. Let <span class="process-math">\(v_{k+1} = u_i\)</span> for such an <span class="process-math">\(i\text{.}\)</span> Then by the sublemma</div>
+<div class="para">and</div>
 <div class="displaymath process-math">
 \begin{equation*}
-(B'' \setminus \{v_{k+1}\}) \cup \{w_{k+1}\}
+B = F_1 \cdots F_m
 \end{equation*}
 </div>
-<div class="para">is a basis of <span class="process-math">\(V\text{.}\)</span>
+<div class="para">and hence</div>
+<div class="displaymath process-math">
+\begin{equation*}
+AB = E_1 \cdots E_n F_1 \cdots F_m
+\end{equation*}
 </div>
-</div></article><span class="incontext"><a href="sec-vecbasis.html#proof-100" class="internal">in-context</a></span>
+<div class="para">where the <span class="process-math">\(E_i\)</span>'s and <span class="process-math">\(F_j\)</span>'s are elementary matrices. Applying Corollary  repeatedly gives</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\det(AB) = \det(E_1 \cdots E_n F_1 \cdots F_{m-1}) \det(F_m) = \cdots= \det(E_1) \cdots \det(E_n) \det(F_1) \cdots \det(F_m)
+\end{equation*}
+</div>
+<div class="para">and similarly</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\det(A) \det(B) = \left(\det(E_1) \cdots \det(E_n)\right) \left( \det(F_1) \cdots \det(F_m)\right).
+\end{equation*}
+</div>
+</div></article><span class="incontext"><a href="sec-det.html#proof-100" class="internal">in-context</a></span>
 </body>
 </html>

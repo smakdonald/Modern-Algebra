@@ -10,20 +10,22 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para">Without loss of generality, assume <span class="process-math">\(n \leq m\text{.}\)</span> We induct on <span class="process-math">\(m\text{.}\)</span>
-</div> <div class="para">If <span class="process-math">\(m =1\)</span> then <span class="process-math">\(n=1\)</span> as well since <span class="process-math">\(n\leq m\)</span> and <span class="process-math">\(n=0\)</span> would yield <span class="process-math">\(r = p_1 \cdots p_n =1\text{,}\)</span> a contradiction. If <span class="process-math">\(n=m=1\)</span> we have <span class="process-math">\(p_1=q_1\)</span> and there is nothing more to prove.</div> <div class="para">Assume <span class="process-math">\(m &gt; 1\)</span> and that irreducible factorizations with <span class="process-math">\(\leq m\)</span> factors are unique up to reordering factors and taking associates.</div> <div class="para logical">
-<div class="para">Since <span class="process-math">\(R\)</span> is a PID, irreducible elements are prime by Theorem . Since <span class="process-math">\(p_1 \cdots p_n\in (p_n)\)</span> we have that <span class="process-math">\(q_1 \cdots q_m\in (p_n)\)</span> and since <span class="process-math">\((p_n)\)</span> is a prime ideal it follows that <span class="process-math">\(q_i \in (p_n)\)</span> for some <span class="process-math">\(i\text{.}\)</span> Upon reordering, we may as well assume <span class="process-math">\(q_m\in (p_n)\text{.}\)</span> Thus <span class="process-math">\(q_m = p_n u\)</span> for some <span class="process-math">\(u \in R\text{.}\)</span> Since <span class="process-math">\(q_m\)</span> is irreducible and <span class="process-math">\(p_n\)</span> is not a unit, <span class="process-math">\(u\)</span> must be a unit. We get</div>
+<body class="ignore-math"><article class="hiddenproof"><div class="para">I leave some of the details as an exercise, but I will check a few of the necessary things:</div> <div class="para logical">
+<div class="para">We already showed that the rule for scaling is well defined, and we know from 817 that the rule for addition is well-defined and that <span class="process-math">\((M/IM, +)\)</span> is an abelian group. To show <span class="process-math">\(M/IM\)</span> is an <span class="process-math">\(R/I\)</span>-module, there remain four axioms to verify. For instance,</div>
 <div class="displaymath process-math">
 \begin{equation*}
-p_1 \cdots p_n = q_1 \cdots q_{m-1} up_n
+((r+I)(s+I))(m +IM) = (rs + I)(m + IM) = (rsm + IM) = (r+I)(sm +IM) = (r+I)((s+I)(m+IM)),
 \end{equation*}
 </div>
-<div class="para">and hence, since <span class="process-math">\(R\)</span> is an integral domain, we may divide by <span class="process-math">\(p_n\)</span> to obtain</div>
+<div class="para">which verifies one of them; the other proofs are similar.</div>
+</div> <div class="para logical">
+<div class="para">Next, let me verify that the function <span class="process-math">\(\ov{f}\)</span> is a well-defined <span class="process-math">\(R/I\)</span>-map: Let <span class="process-math">\(g: M \to N/IN\)</span> be the composition of <span class="process-math">\(R\)</span>-maps <span class="process-math">\(M \xra{f} N \to N/IN\)</span> (the second one being the canonical one), so that <span class="process-math">\(g(m) = f(m) + IN\text{.}\)</span> Since <span class="process-math">\(f(\sum_i a_i m_i) = \sum a_i f(m_i) \in IN\)</span> for any <span class="process-math">\(a_i\)</span>'s belonging to <span class="process-math">\(I\)</span> and <span class="process-math">\(m_i\)</span>'s belonging to <span class="process-math">\(M\text{,}\)</span> we have <span class="process-math">\(IM \subseteq \ker(g)\text{.}\)</span> By the UMP for quotient modules, there is an induced <span class="process-math">\(R\)</span>-map <span class="process-math">\(\ov{f}: M/IM \to N/IN\)</span> given by <span class="process-math">\(\ov{f}(m + IM) = f(m) + IN\text{.}\)</span> The map <span class="process-math">\(\ov{f}\)</span> is so far only known to be an <span class="process-math">\(R\)</span>-map, but it is in fact an <span class="process-math">\(R/I\)</span>-map since</div>
 <div class="displaymath process-math">
 \begin{equation*}
-p_1 \cdots p_{n-1}   = q_1 \cdots q_{m-2} (q_{m-1}u).
+\ov{f}((r + I)(m +IM)) =   \ov{f}(rm +IM) = f(rm) + IN = rf(m) + IN = (r+I)(f(m) + IN).
 \end{equation*}
 </div>
-<div class="para">Notice that <span class="process-math">\((q_{m-1}u)=(q_{m-1})\)</span> is a prime ideal so <span class="process-math">\(q_{m-1}u\)</span> is irreducible by Theorem .</div>
-</div> <div class="para">By the inductive hypothesis we deduce that <span class="process-math">\(n-1=m-1\)</span> hence <span class="process-math">\(n=m\)</span> and also that <span class="process-math">\(p_1, \ldots, p_{n-1}\)</span> are associates to <span class="process-math">\(q_1, \ldots, q_{m-2}, q_{m-1}u\)</span> in some order. This together with <span class="process-math">\(p_n\)</span> associate to <span class="process-math">\(q_m\)</span> establishes the claim.</div></article></body>
+<div class="para">The final assertions are clear from the formula for <span class="process-math">\(\ov{f}\)</span> for an <span class="process-math">\(R\)</span>-map <span class="process-math">\(f\text{.}\)</span>
+</div>
+</div></article></body>
 </html>

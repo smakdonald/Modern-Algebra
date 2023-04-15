@@ -10,5 +10,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para">Let <span class="process-math">\(x\in D\text{,}\)</span> and consider the set <span class="process-math">\(\{x^n|n\in\N\}\text{.}\)</span> As <span class="process-math">\(D\)</span> is finite there must exist <span class="process-math">\(n&lt;m\in\N\)</span> such that <span class="process-math">\(x^n=x^m\text{.}\)</span> In integral domains cancellation is allowed, and thus we can cancel an <span class="process-math">\(x^n\)</span> from both sides, yielding <span class="process-math">\(e=x^{m-n}\text{,}\)</span> and thus <span class="process-math">\(x\cdot x^{m-n-1}=e\text{,}\)</span> making <span class="process-math">\(x\)</span> a unit of <span class="process-math">\(D\text{.}\)</span> Thus <span class="process-math">\(D\)</span> is a field.</div></article></body>
+<body class="ignore-math"><article class="hiddenproof"><div class="para logical">
+<div class="para">Ignoring <span class="process-math">\(\cdot\)</span> for a minute, we know that there is a unique homomorphism <span class="process-math">\(\overline{f}\)</span> of abelian groups from <span class="process-math">\((R/I, +)\)</span> to <span class="process-math">\((S, +)\)</span> such that <span class="process-math">\(\overline{f} (r+I) = f(r)\text{.}\)</span> It remains only to check that <span class="process-math">\(\overline{f}\)</span> preserves multiplication: Given elements <span class="process-math">\(r + I, s + I \in R/I\text{,}\)</span> their product is <span class="process-math">\(rs + I\text{,}\)</span> and we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\overline{f}(rs + I) = f(rs) = f(r)f(s) = f(r + I) f(s +I),
+\end{equation*}
+</div>
+<div class="para">since <span class="process-math">\(f\)</span> preserves multiplication.</div>
+</div></article></body>
 </html>
