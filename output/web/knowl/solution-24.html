@@ -13,20 +13,16 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h5 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.2</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.1</span><span class="period">.</span>
 </h5>
-<div class="para logical">
-<div class="para">Let <span class="process-math">\(G\)</span> be a group and <span class="process-math">\(H\nsg G\text{.}\)</span> Let <span class="process-math">\(x\in C_H(G)\text{,}\)</span> and consider <span class="process-math">\(gxg\inv\text{.}\)</span> Let <span class="process-math">\(h\in H\text{.}\)</span> As <span class="process-math">\(H\nsg G\)</span> we have <span class="process-math">\(h=gh'g\inv\)</span> for some <span class="process-math">\(h\in H\text{,}\)</span> and thus that</div>
-<ol class="lower-alpha">
-<li><div class="para">
-<span class="process-math">\(g\inv h=h'g\inv\)</span> and</div></li>
-<li><div class="para"><span class="process-math">\(hg=gh'\text{.}\)</span></div></li>
-</ol>
-<div class="para">Consider <span class="process-math">\(gxg\inv h\text{.}\)</span> By (1), we see <span class="process-math">\(gxg\inv h=gxh'g\inv\text{.}\)</span> As <span class="process-math">\(x\)</span> commutes with everything in <span class="process-math">\(H\)</span> we have <span class="process-math">\(gh'xg\inv\text{,}\)</span> and by (2) we have <span class="process-math">\(hgxg\inv\text{.}\)</span> Thus <span class="process-math">\(C_H(G)\nsg G\text{.}\)</span>
+<div class="para">Let <span class="process-math">\(H\)</span> be a subgroup of a group <span class="process-math">\(G\text{.}\)</span>
+</div> <div class="para logical"><ol class="lower-alpha">
+<li><div class="para">Let <span class="process-math">\(G\)</span> act on <span class="process-math">\(H\)</span> by conjugation. Thus the associated permutation homomorphism <span class="process-math">\(\rho\)</span> is defined such that <span class="process-math">\(\rho(g)=\phi_g\text{,}\)</span> where <span class="process-math">\(\phi_g(h)=ghg\inv\text{.}\)</span> Notice that when <span class="process-math">\(x\in C_G(H)\)</span> we have <span class="process-math">\(\phi_x(h)=xhx\inv=h\)</span> for all <span class="process-math">\(h\in H\text{,}\)</span> and thus <span class="process-math">\(x\in\ker(\rho)\text{.}\)</span> If <span class="process-math">\(x\in\ker(\rho)\)</span> then <span class="process-math">\(xhx\inv=h\)</span> for all <span class="process-math">\(h\in H\text{,}\)</span> and thus <span class="process-math">\(x\in C_G(H)\text{.}\)</span> Thus <span class="process-math">\(C_G(H)=\ker(\rho)\)</span> and <span class="process-math">\(C_G(H)\nsg N_G(H)\text{.}\)</span>
+</div></li>
+<li><div class="para">From the above permutation representation we have a homomorphism <span class="process-math">\(\rho: G\to S_{|H|}\cong\Aut(H)\text{.}\)</span> As <span class="process-math">\(C_G(H)=\ker(\rho)\text{,}\)</span> by the First Isomorphism Theorem we have <span class="process-math">\(G/C_G(H)\cong\im(\rho))\text{,}\)</span> a subgroup of <span class="process-math">\(\Aut(H)\text{.}\)</span>
+</div></li>
+</ol></div>
 </div>
-</div> <div class="para">Let <span class="process-math">\(G\)</span> act on the left cosets of <span class="process-math">\(C_G(H)\)</span> by left multiplication, giving rise to the permutation representation homomorphism <span class="process-math">\(\rho:G/C_G(H)\to\Aut(H)\text{.}\)</span> By the First Isomorphism Theorem we see that <span class="process-math">\(G/C_G(H)\)</span> is isomorphic to a subgroup of the automorphism group of <span class="process-math">\(H\text{.}\)</span>
-</div>
-</div>
-<span class="incontext"><a href="sec-self-actions.html#solution-24" class="internal">in-context</a></span>
+<span class="incontext"><a href="sec-left-mult-conjugation.html#solution-24" class="internal">in-context</a></span>
 </body>
 </html>

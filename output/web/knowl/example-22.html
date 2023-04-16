@@ -11,10 +11,36 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="example example-like"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.15</span><span class="period">.</span>
-</h4>
-<div class="para">Returning to <span class="process-math">\(D_{2n}\text{,}\)</span> let <span class="process-math">\(H = \langle s \rangle\)</span> and <span class="process-math">\(K = \langle r \rangle\text{.}\)</span> Then <span class="process-math">\(H \leq G\text{,}\)</span> <span class="process-math">\(K \unlhd G\text{,}\)</span> <span class="process-math">\(HK = G\)</span> and <span class="process-math">\(H \cap K =
-\{e\}\text{.}\)</span> So, <span class="process-math">\(G\)</span> is isomorphic to a semi-direct product, as we already showed.</div></article><span class="incontext"><a href="sec-grp-spds.html#example-22" class="internal">in-context</a></span>
+<article class="example example-like"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.26</span><span class="period">.</span>
+</h3>
+<div class="para logical">
+<div class="para">Say I tell you</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-sunzi.html">
+\begin{equation*}
+G \cong \mathbb{Z}^{3} \times \mathbb{Z}/4 \times \mathbb{Z}/8 \times \mathbb{Z}/9 \times \mathbb{Z}/27 \times \mathbb{Z}/25
+\end{equation*}
+</div>
+<div class="para">The Chinese Remainder Theorem <a href="" class="xref" data-knowl="./knowl/thm-sunzi.html" title="Theorem 6.28: Sunzi's Remainder Theorem">Theorem 6.28</a> gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-sunzi.html">
+\begin{equation*}
+\mathbb{Z}/8 \times \mathbb{Z}/27 \times \mathbb{Z}/25 \cong \mathbb{Z}/(8 \cdot 27 \cdot 25)
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-sunzi.html">
+\begin{equation*}
+\mathbb{Z}/4\times \mathbb{Z}/9  \cong \mathbb{Z}/(4 \cdot 9)
+\end{equation*}
+</div>
+<div class="para">so that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-sunzi.html">
+\begin{equation*}
+G \cong \mathbb{Z}^{3} \times \mathbb{Z}/(4 \cdot 9) \times \mathbb{Z}/(8 \cdot 27 \cdot 25).
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(n_2:=(4 \cdot 9) \mid n_1:=(8 \cdot 27 \cdot 25)\text{,}\)</span> this is in invariant factor form, and hence the rank of <span class="process-math">\(A\)</span> is <span class="process-math">\(3\)</span> and the invariant factors of <span class="process-math">\(A\)</span> are <span class="process-math">\(4 \cdot 9\)</span> and <span class="process-math">\(8 \cdot 27 \cdot 25\text{.}\)</span>
+</div>
+</div></article><span class="incontext"><a href="sec-ftfgag.html#example-22" class="internal">in-context</a></span>
 </body>
 </html>

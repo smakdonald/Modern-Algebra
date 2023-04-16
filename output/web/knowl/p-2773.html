@@ -13,13 +13,21 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">The first claim follows from multi-linearity and alternating properties: For notational simplicity say <span class="process-math">\(A = (v_1, v_2, \dots)\)</span> and <span class="process-math">\(B = (v_1 + rv_2, v_2, \dots)\text{.}\)</span> Then</div>
+<div class="para">
+<span class="process-math">\(\phi\)</span> is <span class="process-math">\(R\)</span>-<em class="emphasis">mutli-linear</em> if, for each <span class="process-math">\(i\text{,}\)</span> we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\det(B) = \det(v_1, v_2, \dots) + r \det(v_2, v_2, \dots) = \det(A) + r \cdot 0 = \det(A)
+\phi(v_1, \dots, v_{i-1}, v_i + v'_i, v_{i+1}, \dots, v_n) = \phi(v_1, \dots, v_{i-1}, v_i , v_{i+1}, \dots, v_n) +\phi(v_1, \dots, v_{i-1},  v_i', v_{i+1}, \dots, v_n)
 \end{equation*}
 </div>
-<div class="para">The second is immediate from (the second part of) <span class="process-math">\(R\)</span>-multi-linearity. The last is a special case of Lemma .</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi(v_1, \dots, v_{i-1}, r v_i, v_{i+1}, \dots, v_n) = r \phi(v_1, \dots, v_{i-1},  v_i, v_{i+1}, \dots, v_n) 
+\end{equation*}
+</div>
+<div class="para">for all elements <span class="process-math">\(v_1, \dots, v_n, v_i'\)</span> in <span class="process-math">\(V\)</span> and all <span class="process-math">\(r \in R\text{.}\)</span>
+</div>
 </div>
 <span class="incontext"><a href="sec-det.html#p-2773" class="internal">in-context</a></span>
 </body>

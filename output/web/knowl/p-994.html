@@ -13,14 +13,25 @@
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(G = S_n\text{,}\)</span> <span class="process-math">\(K = A_n\)</span> and <span class="process-math">\(H = \langle (1 \, 2) \rangle\text{.}\)</span> Then <span class="process-math">\(K \unlhd G\text{,}\)</span> <span class="process-math">\(H \leq G\text{,}\)</span> <span class="process-math">\(KH = G\)</span> and <span class="process-math">\(K \cap H  = \{e\}\text{.}\)</span> It follows that</div>
+<div class="para">Indeed, by the universal mapping property for <span class="process-math">\(D_{2n}\)</span> we have a homomorphism</div>
 <div class="displaymath process-math">
 \begin{equation*}
-S_n \cong A_n \rtimes_\rho C_2
+\theta: D_{2n} \to G
 \end{equation*}
 </div>
-<div class="para">where <span class="process-math">\(C_2 = \langle x \rangle\)</span> is cyclic of order <span class="process-math">\(2\)</span> and the action <span class="process-math">\(\rho: C_2 \to \operatorname{Aut}(A_n)\)</span> sends <span class="process-math">\(x\)</span> to conjugation by <span class="process-math">\((1 \, 2)\text{.}\)</span>
+<div class="para">such that <span class="process-math">\(\theta(r) = (y,e_K)\)</span> and <span class="process-math">\(\theta(s) = (x,e_H)\text{.}\)</span> Moreover, <span class="process-math">\(\theta\)</span> is onto since</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\theta(r^is^j)=(y^i, x^j) \text{ for all } 0 \leq i \leq n-1, 0 \leq j \leq 1
+\end{equation*}
 </div>
+<div class="para">and since <span class="process-math">\(|D_{2n}|=|G|=2n\)</span> it follows that <span class="process-math">\(\theta\)</span> is a bijection. So the dihedral group is a semidirect product, in which the two component groups are cyclic of orders <span class="process-math">\(n\)</span> and <span class="process-math">\(2\)</span> respectively:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+D_{2n} \cong \langle y \rangle \rtimes_\rho \langle x \rangle
+\end{equation*}
+</div>
+<div class="para">and <span class="process-math">\(\rho\)</span> is the inversion homomorphism as described above.</div>
 </div>
 <span class="incontext"><a href="sec-grp-spds.html#p-994" class="internal">in-context</a></span>
 </body>

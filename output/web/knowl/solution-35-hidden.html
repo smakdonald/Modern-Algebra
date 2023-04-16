@@ -11,8 +11,25 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<div class="para">Let <span class="process-math">\(G\)</span> be a finite group, <span class="process-math">\(p\)</span> a prime dividing the order of <span class="process-math">\(G\text{,}\)</span> and <span class="process-math">\(H\)</span> a normal subgroup of order <span class="process-math">\(pm\)</span> for some <span class="process-math">\(m &gt; 0\text{.}\)</span>
-</div> <div class="para">As <span class="process-math">\(H\)</span> is normal we have <span class="process-math">\(gHg\inv=H\)</span> for all <span class="process-math">\(g\in G\text{.}\)</span> As it is a <span class="process-math">\(p\)</span> group it is contained in some Sylow <span class="process-math">\(p\)</span>-subgroup. All Sylow <span class="process-math">\(p\)</span>-subgroups are conjugate to each other, but <span class="process-math">\(H\)</span> is fixed by conjugation so its actually in all of them.</div> <div class="para">Consider <span class="process-math">\(Z(H)\text{,}\)</span> which is abelian in <span class="process-math">\(H\text{.}\)</span> The center of <span class="process-math">\(p\)</span>-groups are nontrivial so that's good. Let <span class="process-math">\(g\in G\text{,}\)</span> <span class="process-math">\(h\in Z(H)\text{,}\)</span> and consider <span class="process-math">\(ghg\inv\text{.}\)</span> As <span class="process-math">\(H\nsg G\)</span> we know <span class="process-math">\(ghg\inv\in H\text{.}\)</span> Let <span class="process-math">\(h'\in H\text{.}\)</span> We see <span class="process-math">\(ghg\inv h'=ghh''g\inv\text{,}\)</span> since <span class="process-math">\(H\)</span> is still normal. <span class="process-math">\(h\in Z(G)\)</span> so we have <span class="process-math">\(gh''hg\inv\text{.}\)</span>
-</div> <div class="para">Notice that <span class="process-math">\(h''g\inv=g\inv h'\text{,}\)</span> and thus <span class="process-math">\(h'=gh''g\inv\text{.}\)</span> Thus <span class="process-math">\(gh''=h'g\text{,}\)</span> and so we can substitute the last line in the previous paragraph to see <span class="process-math">\(h'ghg'\inv\text{.}\)</span> Thus we have normality!</div>
+<div class="para">Let <span class="process-math">\(G\)</span> be a finite <span class="process-math">\(p\)</span>-group for some prime <span class="process-math">\(p\)</span> and <span class="process-math">\(N\neq {1}\)</span> a normal subgroup of <span class="process-math">\(G\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">First, we show that the center of <span class="process-math">\(G\)</span> is nontrivial. Suppose by way of contradiction that <span class="process-math">\(Z(G)=\{e\}\text{.}\)</span> We examine the conjugacy classes of <span class="process-math">\(G\text{.}\)</span> From <a href="" class="xref" data-knowl="./knowl/thm-class-eq.html" title="Theorem 4.37: The Class Equation">The Class Equation</a>, we know</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-class-eq.html">
+\begin{equation*}
+|G| = |Z(G)| + \sum_i^r |G : C_G(g_i)|.
+\end{equation*}
+</div>
+<div class="para">Note that <span class="process-math">\(|G|=p^n\)</span> for some <span class="process-math">\(n\in\N\text{,}\)</span> meaning that the only divisors of <span class="process-math">\(|G|\)</span> are powers of <span class="process-math">\(p\text{.}\)</span> In finite groups, each conjugacy class must divide the order of the group. By Lagrange's Theorem, <span class="process-math">\(|G : C_G(g_i)|=\frac{|G|}{|C_G(g_i)|}=\frac{p^n}{p^m}=p^k\text{,}\)</span> where <span class="process-math">\(m,k\in\N\text{.}\)</span> Since |Z(G)|=1, we see that <span class="process-math">\(\sum_i^r |G : C_G(g_i)|\bigg|p^n-1\text{,}\)</span> which is impossible given that <span class="process-math">\(p^n-1 \not|p^n\text{.}\)</span> Thus <span class="process-math">\(Z(G)\neq\{e\}\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">As <span class="process-math">\(N\nsg G\)</span> it is a union of conjugacy classes of the elements it contains, one of which is <span class="process-math">\(e\text{.}\)</span> Assume by way of contradiction that <span class="process-math">\(N\cap Z(G)={e}\text{,}\)</span> meaning that <span class="process-math">\(e\)</span> is the only element in <span class="process-math">\(N\)</span> whose conjugacy class is a singleton. This yields</div>
+<div class="displaymath process-math">
+\begin{equation*}
+|N| = 1+ \sum_i^r |G : C_G(n_i)|.
+\end{equation*}
+</div>
+<div class="para">However, by Lagrange's Theorem <span class="process-math">\(N\)</span> must also be a <span class="process-math">\(p-\)</span>group, and thus by an analogous element counting argument as above we see that there exists some <span class="process-math">\(x\in N\)</span> such that <span class="process-math">\(C_G(x)=\{x\}\text{,}\)</span> or that <span class="process-math">\(gxg\inv=x\)</span> for all <span class="process-math">\(g\in G\text{.}\)</span> Thankfully, this means that <span class="process-math">\(x\in Z(G)\text{,}\)</span> and thus we have <span class="process-math">\(Z(G)\cap N\neq 1\text{.}\)</span>
+</div>
+</div>
 </div></body>
 </html>

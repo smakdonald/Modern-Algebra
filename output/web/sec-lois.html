@@ -177,7 +177,7 @@ window.MathJax = {
 <span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
 </ol>
 </li>
-</ol></div></button><span class="treebuttons"><a class="previous-button button" href="sec-self-actions.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="group-actions.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="sec-class-eq.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="sec-left-mult-conjugation.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="group-actions.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="sec-class-eq.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
 <input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
 </div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\def\ann{\operatorname{ann}}
 \newcommand{\Ass}{\operatorname{Ass}}
@@ -555,11 +555,11 @@ window.MathJax = {
 <ul class="structural"><li><div class="toc-item"><a href="graction.html#exercises-12" class="internal"><span class="codenumber">4.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
-<div class="toc-item"><a href="sec-self-actions.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Self Actions</span></a></div>
+<div class="toc-item"><a href="sec-left-mult-conjugation.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Left Multiplication and Conjugation</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-self-actions.html#subsec-conjugation-action" class="internal"><span class="title">Self Conjugation</span></a></div></li>
-<li><div class="toc-item"><a href="sec-self-actions.html#subsec-left-multiplication" class="internal"><span class="title">Left Regualr Action</span></a></div></li>
-<li><div class="toc-item"><a href="sec-self-actions.html#exercises-13" class="internal"><span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="sec-left-mult-conjugation.html#subsec-conjugation-action" class="internal"><span class="title">Conjugation</span></a></div></li>
+<li><div class="toc-item"><a href="sec-left-mult-conjugation.html#subsec-left-multiplication" class="internal"><span class="title">Left Regular Action</span></a></div></li>
+<li><div class="toc-item"><a href="sec-left-mult-conjugation.html#exercises-13" class="internal"><span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="active">
@@ -576,8 +576,8 @@ window.MathJax = {
 <div class="toc-item"><a href="sylow.html" class="internal"><span class="codenumber">5</span> <span class="title">Sylow Theory</span></a></div>
 <ul class="structural">
 <li>
-<div class="toc-item"><a href="sec-pgroups.html" class="internal"><span class="codenumber">5.1</span> <span class="title"><span class="process-math">\(p\)</span>-groups and Sylow Subgroups</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-pgroups.html#exercises-16" class="internal"><span class="codenumber">5.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-item"><a href="sec-p-groups.html" class="internal"><span class="codenumber">5.1</span> <span class="title"><span class="process-math">\(p\)</span>-groups and Sylow Subgroups</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-p-groups.html#exercises-16" class="internal"><span class="codenumber">5.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-sylowthm.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Sylow's Theorem</span></a></div>
@@ -585,7 +585,7 @@ window.MathJax = {
 </li>
 <li>
 <div class="toc-item"><a href="sec-simple-groups.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Simple Groups</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-simple-groups.html#exercises-simplegps" class="internal"><span class="codenumber">5.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-simple-groups.html#exercises-18" class="internal"><span class="codenumber">5.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -935,14 +935,14 @@ window.MathJax = {
 <span class="type">Section</span> <span class="codenumber">4.3</span> <span class="title">LOIS and Orbit-Stabilizer</span>
 </h2>
 <blockquote class="blockquote" id="blockquote-15">
-<div class="para" id="p-732">“Once you are in the orbit of your destiny, weightlessness is the only result.”</div> <cite class="attribution">―Baba Amte</cite>
+<div class="para" id="p-736">“Once you are in the orbit of your destiny, weightlessness is the only result.”</div> <cite class="attribution">―Baba Amte</cite>
 </blockquote>
 <blockquote class="blockquote" id="blockquote-16">
-<div class="para" id="p-733">“Being born in a stable does not make one a horse.”</div> <cite class="attribution">―Arthur Wellesley</cite>
+<div class="para" id="p-737">“Being born in a stable does not make one a horse.”</div> <cite class="attribution">―Arthur Wellesley</cite>
 </blockquote>
 <article class="definition definition-like" id="def-orbit"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.22</span><span class="period">.</span><span class="space"> </span><span class="title">Orbit.</span>
-</h3> <div class="para logical" id="p-734">
+</h3> <div class="para logical" id="p-738">
 <div class="para">Let <span class="process-math">\(G\)</span> be a group acting on a set <span class="process-math">\(X\text{.}\)</span> For an element <span class="process-math">\(s\in X\)</span> the orbit of <span class="process-math">\(s\)</span> is</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -952,26 +952,26 @@ window.MathJax = {
 </div></article><article class="proposition theorem-like" id="prop-orbit-properties"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">4.23</span><span class="period">.</span><span class="space"> </span><span class="title">Properties of Orbits.</span>
 </h3>
-<div class="para logical" id="p-735"><ol class="decimal">
-<li id="li-265"><div class="para" id="p-736">If <span class="process-math">\(H\)</span> is a subgroup of <span class="process-math">\(G\text{,}\)</span> then the left cosets of <span class="process-math">\(H\)</span> in <span class="process-math">\(G\)</span> correspond precisely to the orbits of <span class="process-math">\(H\)</span> under the left regular action of <span class="process-math">\(G\)</span> on itself.</div></li>
-<li id="li-266"><div class="para" id="p-737">Two elements <span class="process-math">\(g,g' \in G\)</span> are conjugate if and only if <span class="process-math">\(g\)</span> and <span class="process-math">\(g'\)</span> are in the same orbit of the conjugation action.</div></li>
-<li id="li-267"><div class="para" id="p-738">
+<div class="para logical" id="p-739"><ol class="decimal">
+<li id="li-268"><div class="para" id="p-740">If <span class="process-math">\(H\)</span> is a subgroup of <span class="process-math">\(G\text{,}\)</span> then the left cosets of <span class="process-math">\(H\)</span> in <span class="process-math">\(G\)</span> correspond precisely to the orbits of <span class="process-math">\(H\)</span> under the left regular action of <span class="process-math">\(G\)</span> on itself.</div></li>
+<li id="li-269"><div class="para" id="p-741">Two elements <span class="process-math">\(g,g' \in G\)</span> are conjugate if and only if <span class="process-math">\(g\)</span> and <span class="process-math">\(g'\)</span> are in the same orbit of the conjugation action.</div></li>
+<li id="li-270"><div class="para" id="p-742">
 <span class="process-math">\(C_G(g)\)</span> is exactly the orbit of <span class="process-math">\(g\)</span> under conjugation.</div></li>
-</ol></div></article><article class="remark remark-like" id="remark-28"><h3 class="heading">
+</ol></div></article><article class="remark remark-like" id="remark-26"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">4.24</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-739">Its always been group actions, the whole time.</div></article><article class="lemma theorem-like" id="lem-orbits-partition"><h3 class="heading">
+<div class="para" id="p-743">Its always been group actions, the whole time.</div></article><article class="lemma theorem-like" id="lem-orbits-partition"><h3 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">4.25</span><span class="period">.</span><span class="space"> </span><span class="title">Orbits Partition the Group.</span>
 </h3>
-<div class="para" id="p-740">Let <span class="process-math">\(G\)</span> be a group acting on a set <span class="process-math">\(S\text{.}\)</span> Then</div> <div class="para logical" id="p-741"><ol class="decimal">
-<li id="li-268"><div class="para" id="p-742">
+<div class="para" id="p-744">Let <span class="process-math">\(G\)</span> be a group acting on a set <span class="process-math">\(S\text{.}\)</span> Then</div> <div class="para logical" id="p-745"><ol class="decimal">
+<li id="li-271"><div class="para" id="p-746">
 <span class="process-math">\(\sim_G\)</span> is an equivalence relation</div></li>
-<li id="li-269"><div class="para" id="p-743">for any <span class="process-math">\(s,s'\in S\)</span> either <span class="process-math">\(\operatorname{Orbit}_G(s)=\operatorname{Orbit}_G(s')\)</span> or <span class="process-math">\(\operatorname{Orbit}_G(s)\cap \operatorname{Orbit}_G(s')=\emptyset\)</span>
+<li id="li-272"><div class="para" id="p-747">for any <span class="process-math">\(s,s'\in S\)</span> either <span class="process-math">\(\operatorname{Orbit}_G(s)=\operatorname{Orbit}_G(s')\)</span> or <span class="process-math">\(\operatorname{Orbit}_G(s)\cap \operatorname{Orbit}_G(s')=\emptyset\)</span>
 </div></li>
-<li id="li-270"><div class="para" id="p-744"><span class="process-math">\(\displaystyle S=\bigcup_{\text{pairwise disjoint orbits}} \operatorname{Orbit}_G(s)\)</span></div></li>
+<li id="li-273"><div class="para" id="p-748"><span class="process-math">\(\displaystyle S=\bigcup_{\text{pairwise disjoint orbits}} \operatorname{Orbit}_G(s)\)</span></div></li>
 </ol></div></article><article class="definition definition-like" id="def-stab"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.26</span><span class="period">.</span><span class="space"> </span><span class="title">Stabilizer.</span>
-</h3> <div class="para logical" id="p-745">
+</h3> <div class="para logical" id="p-749">
 <div class="para">Let <span class="process-math">\(G\)</span> be a group acting on a set <span class="process-math">\(X\text{.}\)</span> For an element <span class="process-math">\(s\in X\)</span> the stabilizer is</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -981,18 +981,19 @@ window.MathJax = {
 </div></article><article class="proposition theorem-like" id="prop-stabilizer-is-subgroup"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">4.27</span><span class="period">.</span><span class="space"> </span><span class="title">Stabilizers are Subgroups.</span>
 </h3>
-<div class="para" id="p-746">The stabilizer <span class="process-math">\(\operatorname{Stab}_G(s)\)</span> is a subgroup of <span class="process-math">\(G\text{.}\)</span>
-</div></article><article class="theorem theorem-like" id="thm-LOIS"><h3 class="heading">
+<div class="para" id="p-750">The stabilizer <span class="process-math">\(\operatorname{Stab}_G(s)\)</span> is a subgroup of <span class="process-math">\(G\text{.}\)</span>
+</div></article><div class="para" id="p-751">One of the most important facts about the action of a group on a finite set is the following:</div>
+<article class="theorem theorem-like" id="thm-LOIS"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.28</span><span class="period">.</span><span class="space"> </span><span class="title">The Length of the Orbit is the Index of the Stabilizer (LOIS).</span>
 </h3>
-<div class="para logical" id="p-747">
+<div class="para logical" id="p-752">
 <div class="para">Let <span class="process-math">\(G\)</span> be a group that acts on a finite set <span class="process-math">\(S\)</span> via <span class="process-math">\(\cdot\text{.}\)</span> For any <span class="process-math">\(s \in S\)</span> we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
 |\operatorname{Orbit}_G(s)| = [G: \operatorname{Stab}_G(s)]
 \end{equation*}
 </div>
-</div></article><article class="hiddenproof" id="proof-22"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-22"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-22"><article class="hiddenproof"><div class="para logical" id="p-748">
+</div></article><article class="hiddenproof" id="proof-23"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-23"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-23"><article class="hiddenproof"><div class="para logical" id="p-753">
 <div class="para">Let <span class="process-math">\(\mathcal L\)</span> be the collection of left cosets of <span class="process-math">\(\operatorname{Stab}_G(s)\)</span> in <span class="process-math">\(G\text{.}\)</span> Define a function</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1015,7 +1016,7 @@ x \operatorname{Stab}_G(s) = y \operatorname{Stab}_G(s)\iff x^{-1}y \in \operato
 <article class="corollary theorem-like" id="cor-orbit-stabilizer"><h3 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">4.29</span><span class="period">.</span><span class="space"> </span><span class="title">Orbit-Stabilizer Theorem.</span>
 </h3>
-<div class="para logical" id="p-749">
+<div class="para logical" id="p-754">
 <div class="para">Let <span class="process-math">\(G\)</span> be a finite group that acts on a finite set <span class="process-math">\(S\)</span> via <span class="process-math">\(\cdot\text{.}\)</span> For any <span class="process-math">\(s \in S\)</span> we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1025,73 +1026,132 @@ x \operatorname{Stab}_G(s) = y \operatorname{Stab}_G(s)\iff x^{-1}y \in \operato
 </div></article><article class="warning remark-like" id="warning-2"><h3 class="heading">
 <span class="type">Warning</span><span class="space"> </span><span class="codenumber">4.30</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-750">Take note that LOIS and Orbit-Stabilizer only apply when <span class="process-math">\(G\)</span> is a <em class="emphasis">finite</em> group.</div></article><article class="theorem theorem-like" id="thm-conjugation-and-lois"><h3 class="heading">
+<div class="para" id="p-755">Take note that <a href="" class="xref" data-knowl="./knowl/cor-orbit-stabilizer.html" title="Corollary 4.29: Orbit-Stabilizer Theorem">Orbit-Stabilizer Theorem</a> only apply when <span class="process-math">\(G\)</span> is a <em class="emphasis">finite</em> group.</div></article><article class="theorem theorem-like" id="thm-conjugation-and-lois"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.31</span><span class="period">.</span><span class="space"> </span><span class="title">Conjugation Actions and LOIS.</span>
 </h3>
-<div class="para" id="p-751">Let <span class="process-math">\(G\)</span> be a group.</div> <div class="para logical" id="p-752"><ol class="decimal">
-<li id="li-271"><div class="para" id="p-753">Then <span class="process-math">\(G\)</span> acts on <span class="process-math">\(G\)</span> by conjugation (<span class="process-math">\(g \cdot g' = gg'g^{-1}\)</span>). For all <span class="process-math">\(g \in G\text{,}\)</span> the orbit of <span class="process-math">\(g\)</span> is the conjugacy class of <span class="process-math">\(g\text{,}\)</span> <span class="process-math">\(\operatorname{Stab}_G(g)=C_G(G)\)</span> and <span class="process-math">\(|[g]_c| = |G : C_G(g)|\text{.}\)</span>
+<div class="para" id="p-756">Let <span class="process-math">\(G\)</span> be a group.</div> <div class="para logical" id="p-757"><ol class="decimal">
+<li id="li-274"><div class="para" id="p-758">Then <span class="process-math">\(G\)</span> acts on <span class="process-math">\(G\)</span> by conjugation (<span class="process-math">\(g \cdot g' = gg'g^{-1}\)</span>). For all <span class="process-math">\(g \in G\text{,}\)</span> the orbit of <span class="process-math">\(g\)</span> is the conjugacy class of <span class="process-math">\(g\text{,}\)</span> <span class="process-math">\(\operatorname{Stab}_G(g)=C_G(G)\)</span> and <span class="process-math">\(|[g]_c| = [G : C_G(g)]\text{.}\)</span>
 </div></li>
-<li id="li-272"><div class="para" id="p-754">Then <span class="process-math">\(G\)</span> acts on the power set <span class="process-math">\(P(G)=\{S\mid S\subseteq G\}\)</span> by conjugation (<span class="process-math">\(g \cdot S = gSg^{-1}\)</span>). For all <span class="process-math">\(S \in P(G)\text{,}\)</span> <span class="process-math">\(\operatorname{Stab}_G(S)=N_G(S)\)</span> and <span class="process-math">\(|\operatorname{Orbit}_G(S)| = |G : N_G(S)|\text{.}\)</span>
+<li id="li-275"><div class="para" id="p-759">Then <span class="process-math">\(G\)</span> acts on the power set <span class="process-math">\(P(G)=\{S\mid S\subseteq G\}\)</span> by conjugation (<span class="process-math">\(g \cdot S = gSg^{-1}\)</span>). For all <span class="process-math">\(S \in P(G)\text{,}\)</span> <span class="process-math">\(\operatorname{Stab}_G(S)=N_G(S)\)</span> and <span class="process-math">\(|\operatorname{Orbit}_G(S)| = [G : N_G(S)]\text{.}\)</span>
 </div></li>
 </ol></div></article><article class="corollary theorem-like" id="cor-conjugacy-divides-order"><h3 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">4.32</span><span class="period">.</span><span class="space"> </span><span class="title">Size of Conjugacy Class Divides <span class="process-math">\(|G|\)</span>.</span>
 </h3>
-<div class="para" id="p-755">For a finite group <span class="process-math">\(G\text{,}\)</span> the size of any conjugacy class divides <span class="process-math">\(|G|\text{.}\)</span>
+<div class="para" id="p-760">For a finite group <span class="process-math">\(G\text{,}\)</span> the size of any conjugacy class divides <span class="process-math">\(|G|\text{.}\)</span>
 </div></article><section class="exercises" id="exercises-14"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
 <div class="exercisegroup" id="exercisegroup-36">
 <h4 class="heading"><span class="title">Computations and Examples.</span></h4>
-<div class="introduction" id="introduction-41"><div class="para" id="p-756"></div></div>
+<div class="introduction" id="introduction-41"><div class="para" id="p-761"></div></div>
 <div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="exercise-107"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-107"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-107"><article class="exercise exercise-like"><div class="para" id="p-757">Coming soon to an OER near you!</div></article></div>
+<article class="exercise exercise-like" id="exercise-110"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-110"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-110"><article class="exercise exercise-like"><div class="para" id="p-762">Coming soon to an OER near you!</div></article></div>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-37">
 <h4 class="heading"><span class="title">Formal Proofs.</span></h4>
-<div class="introduction" id="introduction-42"><div class="para" id="p-758"></div></div>
+<div class="introduction" id="introduction-42"><div class="para" id="p-763"></div></div>
 <div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="exercise-108"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-108"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-108"><article class="exercise exercise-like"><div class="para" id="p-759">Coming soon to an OER near you!</div></article></div>
+<article class="exercise exercise-like" id="exercise-111"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-111"><h5 class="heading">
+<span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-111"><article class="exercise exercise-like"><div class="para" id="p-764">Let <span class="process-math">\(H\)</span> be a subgroup of a finite group <span class="process-math">\(G\)</span> and consider the set <span class="process-math">\(X=\{xHx^{-1} \mid x\in G\}\text{.}\)</span> Prove that <span class="process-math">\(|X|=[G:N_G(H)]\)</span> where <span class="process-math">\(N_G(H)=\{g\in G\mid gHg^{-1}=H\}\text{.}\)</span> <span class="process-math">\(N_G(H)\)</span> is called the normalizer of <span class="process-math">\(H\)</span> in <span class="process-math">\(G\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-27" id="solution-27"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-27"><div class="solution solution-like"><div class="para" id="p-765">Note that <span class="process-math">\(G\)</span> acts on <span class="process-math">\(X\)</span> by conjugation and that <span class="process-math">\(X = \Orb(H)\text{.}\)</span> Note also that the stabilizer of <span class="process-math">\(H\)</span> under this action is precisely <span class="process-math">\(N_G(H)\text{.}\)</span> The result now follows directly from the Orbit-Stabilizer theorem.</div></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-112"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-112"><h5 class="heading">
+<span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-112"><article class="exercise exercise-like"><div class="para logical" id="p-766">
+<div class="para">Let <span class="process-math">\(G\)</span> be a finite group and <span class="process-math">\(H\)</span> a proper subgroup (i.e., <span class="process-math">\(H\neq G\)</span>). Prove that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\bigcup_{x\in G} xHx^{-1}\neq G.
+\end{equation*}
+</div>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-28" id="solution-28"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-28"><div class="solution solution-like"><div class="para logical" id="p-767">
+<div class="para">Note that <span class="process-math">\(|xHx\inv| = |H|\)</span> for all <span class="process-math">\(x \in  G\text{.}\)</span> Also, by the previous problem, the number of distinct subgroups <span class="process-math">\(xHx\inv\)</span> is <span class="process-math">\([G : NG(H)]\text{.}\)</span> Let <span class="process-math">\(n = [G : N_G(H)]\)</span> and <span class="process-math">\(x_iHx\inv_i\)</span> for <span class="process-math">\(i = 1,\dots,n\)</span> the distinct conjugates of <span class="process-math">\(H\text{.}\)</span> Note first that if <span class="process-math">\(n = 1\)</span> then <span class="process-math">\(H \nsg G\)</span> and result holds since <span class="process-math">\(H \neq G\text{.}\)</span> So assume <span class="process-math">\(n\geq2\text{.}\)</span> Since each conjugate contains <span class="process-math">\(|H|-1\)</span> non-identity elements, we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\bigcup_{x\in G} xHx\inv|= | \bigcup^n_{i=1}  x_iHx\inv_i |\geq1 +  \sum^n_{i=1}  (|H|\inv) = 1 + n|H|-n.
+\end{equation*}
+</div>
+<div class="para">As <span class="process-math">\(n = [G : N_G(H)] \leq[G : H]\)</span> (as <span class="process-math">\(H \sse N_G(H)\)</span>), we have <span class="process-math">\(n|H|≤|[G : H]|H| = |G|\text{.}\)</span> Thus, as <span class="process-math">\(n ≥2, 1 + n|H|-n ≤1 + |G|-n &lt; |G|.\)</span>
+</div>
+</div></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-113"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-113"><h5 class="heading">
+<span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-113"><article class="exercise exercise-like"><div class="para logical" id="p-768">
+<div class="para">Suppose <span class="process-math">\(G\)</span> acts on a set <span class="process-math">\(X\)</span> and let <span class="process-math">\(u,v\in X\text{.}\)</span> Suppose <span class="process-math">\(u\)</span> and <span class="process-math">\(v\)</span> lie in the same orbit. Prove that <span class="process-math">\(G_u=gG_vg^{-1}\)</span> for some <span class="process-math">\(g\in G\text{.}\)</span> Conclude that if the action is transitive (i.e., there is precisely one orbit) then for any <span class="process-math">\(u\in X\)</span> the kernel of the action is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\bigcap_{g\in G} gG_ug^{-1}.
+\end{equation*}
+</div>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-29" id="solution-29"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-29"><div class="solution solution-like">
+<div class="para" id="p-769">Suppose <span class="process-math">\(u,v \in X\)</span> lie in the same orbit. Then <span class="process-math">\(u = gv\)</span> for some <span class="process-math">\(g \in G\text{.}\)</span> Then <span class="process-math">\(a \in  G_u\)</span> if and only <span class="process-math">\(au = u\text{,}\)</span> which is if and only if <span class="process-math">\(agv = gv\text{,}\)</span> which is if and only if <span class="process-math">\((g\inv ag)v = v\text{,}\)</span> which is if and only <span class="process-math">\(if g\inv ag \in Gv\text{,}\)</span> which is if and only if <span class="process-math">\(a \in  gGvg\inv.\)</span>
+</div> <div class="para" id="p-770">Thus, <span class="process-math">\(G_u = gG_vg\inv\text{.}\)</span> Now, if <span class="process-math">\(G\)</span> acts transitively on <span class="process-math">\(X\text{,}\)</span> then <span class="process-math">\(X = \{gv |g \in G\}\)</span> for any <span class="process-math">\(v \in  X\text{.}\)</span> Hence, by the argument above, for any <span class="process-math">\(u \in  X, G_u = gG_vg\inv\)</span> for some <span class="process-math">\(g \in  G\text{.}\)</span>
+</div> <div class="para" id="p-771">Since the kernel of the action is the intersection of all the stabilizers, we obtain the desired conclusion.</div>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-114"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-114"><h5 class="heading">
+<span class="codenumber">5<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-114"><article class="exercise exercise-like"><div class="para" id="p-772">Suppose that <span class="process-math">\(G\)</span> is an abelian group acting transitively and faithfully on a set <span class="process-math">\(X\text{.}\)</span> Prove that <span class="process-math">\(|G|=|X|\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-30" id="solution-30"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-30"><div class="solution solution-like"><div class="para" id="p-773">Let <span class="process-math">\(u \in X\text{.}\)</span> As the action is transitive, by the exercise above we have that the kernel of the action is the intersection of <span class="process-math">\(gG_ug\inv\)</span> over all <span class="process-math">\(g \in G\text{.}\)</span> However, as <span class="process-math">\(G\)</span> is abelian, <span class="process-math">\(gG_ug\inv = G_u\)</span> for all <span class="process-math">\(g \in G\text{.}\)</span> Hence, the kernel of the action is <span class="process-math">\(G_u\)</span> for any <span class="process-math">\(u \in X\text{.}\)</span> On the other hand, the action is faithful, which means the kernel of the action is the identity. It follows that <span class="process-math">\(G_u = \{e\}\)</span> for every <span class="process-math">\(u \in X\text{.}\)</span> Finally, as the action is transitive, <span class="process-math">\(X = \Orb(u)\)</span> for some (any) <span class="process-math">\(u \in X\text{.}\)</span> By the Orbit-Stabilizer theorem, <span class="process-math">\(|X|= |\Orb(u)|= [G : G_u] = |G|\text{.}\)</span>
+</div></div></div>
+</div></article></div>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-38">
 <h4 class="heading"><span class="title">Qualifying Exam Problems.</span></h4>
-<div class="introduction" id="introduction-43"><div class="para" id="p-760"></div></div>
+<div class="introduction" id="introduction-43"><div class="para" id="p-774"></div></div>
 <div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="exercise-109"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-109"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-109"><article class="exercise exercise-like"><div class="para" id="p-761">Let <span class="process-math">\(G = A_7\)</span> and <span class="process-math">\(S\)</span> be the set of elements of <span class="process-math">\(G\)</span> of order <span class="process-math">\(7\text{.}\)</span> Prove that <span class="process-math">\(S\)</span> is not a conjugacy class of <span class="process-math">\(G\text{.}\)</span>
+<article class="exercise exercise-like" id="exercise-115"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-115"><h5 class="heading">
+<span class="codenumber">6<span class="period">.</span></span><span class="space"> </span><span class="title">January 2021 (1).</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-115"><article class="exercise exercise-like"><div class="para" id="p-775">Let <span class="process-math">\(G = A_7\)</span> and <span class="process-math">\(S\)</span> be the set of elements of <span class="process-math">\(G\)</span> of order <span class="process-math">\(7\text{.}\)</span> Prove that <span class="process-math">\(S\)</span> is not a conjugacy class of <span class="process-math">\(G\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-26" id="solution-26"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-26"><div class="solution solution-like">
-<div class="para" id="p-762">Elements of order <span class="process-math">\(7\)</span> in <span class="process-math">\(G\)</span> must permute all <span class="process-math">\(7\)</span> elements, making them of the form <span class="process-math">\((abcdefg)\text{.}\)</span> There are <span class="process-math">\(6!\)</span> such permutations, given that we can always reorder them so that <span class="process-math">\(a\)</span> is first, leaving <span class="process-math">\(6\)</span> remaining spots without replacement. Let <span class="process-math">\(S\)</span> denote the set of these <span class="process-math">\(6!\)</span> elements.</div> <div class="para" id="p-763">Suppose by way of contradiction there existed some <span class="process-math">\(s\in G\)</span> such that <span class="process-math">\(S=C_s(G)\text{.}\)</span> Let <span class="process-math">\(G\)</span> act on itself through conjugation, making <span class="process-math">\(S=C_s(G)=\Orb(s)\)</span> by the definition of conjugacy class. The Orbit-Stabilizer Theorem tells us that <span class="process-math">\(|G|=|\Orb(s)|\cdot|\Stab(s)|\text{,}\)</span> meaning that the order of <span class="process-math">\(S\)</span> must divide the order of <span class="process-math">\(G\text{.}\)</span> However, <span class="process-math">\(|G|=\frac{7!}{2}\)</span> and <span class="process-math">\(|S|=6!\text{,}\)</span> so this is a contradiction. Thus <span class="process-math">\(S\)</span> is not a conjugacy class of <span class="process-math">\(G\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-31" id="solution-31"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-31"><div class="solution solution-like">
+<div class="para" id="p-776">Elements of order <span class="process-math">\(7\)</span> in <span class="process-math">\(G\)</span> must permute all <span class="process-math">\(7\)</span> elements, making them of the form <span class="process-math">\((abcdefg)\text{.}\)</span> There are <span class="process-math">\(6!\)</span> such permutations, given that we can always reorder them so that <span class="process-math">\(a\)</span> is first, leaving <span class="process-math">\(6\)</span> remaining spots without replacement. Let <span class="process-math">\(S\)</span> denote the set of these <span class="process-math">\(6!\)</span> elements.</div> <div class="para" id="p-777">Suppose by way of contradiction there existed some <span class="process-math">\(s\in G\)</span> such that <span class="process-math">\(S=C_s(G)\text{.}\)</span> Let <span class="process-math">\(G\)</span> act on itself through conjugation, making <span class="process-math">\(S=C_s(G)=\Orb(s)\)</span> by the definition of conjugacy class. The <a href="" class="xref" data-knowl="./knowl/cor-orbit-stabilizer.html" title="Corollary 4.29: Orbit-Stabilizer Theorem">Orbit-Stabilizer Theorem</a> tells us that <span class="process-math">\(|G|=|\Orb(s)|\cdot|\Stab(s)|\text{,}\)</span> meaning that the order of <span class="process-math">\(S\)</span> must divide the order of <span class="process-math">\(G\text{.}\)</span> However, <span class="process-math">\(|G|=\frac{7!}{2}\)</span> and <span class="process-math">\(|S|=6!\text{,}\)</span> so this is a contradiction. Thus <span class="process-math">\(S\)</span> is not a conjugacy class of <span class="process-math">\(G\text{.}\)</span>
 </div>
 </div></div>
 </div></article></div>
-<article class="exercise exercise-like" id="exercise-110"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-110"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-110"><article class="exercise exercise-like"><div class="para" id="p-764">Prove that if <span class="process-math">\(G\)</span> is a finite group of odd order, then for any non-identity element <span class="process-math">\(x\in G\text{,}\)</span> <span class="process-math">\(x\)</span> is not conjugate to <span class="process-math">\(x\inv\text{.}\)</span>
+<article class="exercise exercise-like" id="exercise-116"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-116"><h5 class="heading">
+<span class="codenumber">7<span class="period">.</span></span><span class="space"> </span><span class="title">June 2016 (2).</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-116"><article class="exercise exercise-like"><div class="para" id="p-778">Prove that if <span class="process-math">\(G\)</span> is a finite group of odd order, then for any non-identity element <span class="process-math">\(x\in G\text{,}\)</span> <span class="process-math">\(x\)</span> is not conjugate to <span class="process-math">\(x\inv\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-27" id="solution-27"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-27"><div class="solution solution-like">
-<div class="para" id="p-765">Let <span class="process-math">\(G\)</span> be a finite group of odd order, and let <span class="process-math">\(G\)</span> act on itself via conjugation. Under this action, the orbit of an element is exactly its conjugacy class. By the Orbit-Stabilizer Theorem we have <span class="process-math">\(|G|=|\Orb(x)|\cdot|\Stab(x)|\text{.}\)</span> Thus the order of an element divides the order of the group, and so every orbit must have odd order.</div> <div class="para" id="p-766">Suppose there exists an element <span class="process-math">\(x\)</span> such that <span class="process-math">\(gxg\inv=x\inv\)</span> for some <span class="process-math">\(g\in G\text{.}\)</span> Thus <span class="process-math">\(x\inv\in\Orb(x)\text{.}\)</span> Let <span class="process-math">\(y\in\Orb(x)\text{.}\)</span> Thus <span class="process-math">\(y=hxh\inv\)</span> for some <span class="process-math">\(h\in G\text{.}\)</span> Then <span class="process-math">\(y\inv=h\inv x\inv h\text{.}\)</span> However, as <span class="process-math">\(x\inv=gxg\inv\text{,}\)</span> we have <span class="process-math">\(y\inv=h\inv gxg\inv h\text{.}\)</span> As <span class="process-math">\(h\inv g\)</span> and <span class="process-math">\(g\inv h\)</span> are both in <span class="process-math">\(G\text{,}\)</span> we see that <span class="process-math">\(y\inv\in\Orb(x)\)</span> as well. As <span class="process-math">\(e\in\Stab(x)\text{,}\)</span> we see that this means that the orbit of <span class="process-math">\(x\)</span> would have even order, which is not possible.</div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-32" id="solution-32"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-32"><div class="solution solution-like">
+<div class="para" id="p-779">Let <span class="process-math">\(G\)</span> be a finite group of odd order, and let <span class="process-math">\(G\)</span> act on itself via conjugation. Under this action, the orbit of an element is exactly its conjugacy class by <a href="" class="xref" data-knowl="./knowl/prop-orbit-properties.html" title="Proposition 4.23: Properties of Orbits">Proposition 4.23</a>. By the <a href="" class="xref" data-knowl="./knowl/cor-orbit-stabilizer.html" title="Corollary 4.29: Orbit-Stabilizer Theorem">Orbit-Stabilizer Theorem</a> we have <span class="process-math">\(|G|=|\Orb(x)|\cdot|\Stab(x)|\text{.}\)</span> Thus the order of an element divides the order of the group, and so every orbit must have odd order.</div> <div class="para" id="p-780">Suppose there exists an element <span class="process-math">\(x\)</span> such that <span class="process-math">\(gxg\inv=x\inv\)</span> for some <span class="process-math">\(g\in G\text{.}\)</span> Thus <span class="process-math">\(x\inv\in\Orb(x)\text{.}\)</span> Let <span class="process-math">\(y\in\Orb(x)\text{.}\)</span> Thus <span class="process-math">\(y=hxh\inv\)</span> for some <span class="process-math">\(h\in G\text{.}\)</span> Then <span class="process-math">\(y\inv=h\inv x\inv h\text{.}\)</span> However, as <span class="process-math">\(x\inv=gxg\inv\text{,}\)</span> we have <span class="process-math">\(y\inv=h\inv gxg\inv h\text{.}\)</span> As <span class="process-math">\(h\inv g\)</span> and <span class="process-math">\(g\inv h\)</span> are both in <span class="process-math">\(G\text{,}\)</span> we see that <span class="process-math">\(y\inv\in\Orb(x)\)</span> as well. As <span class="process-math">\(e\in\Stab(x)\text{,}\)</span> we see that this means that the orbit of <span class="process-math">\(x\)</span> would have even order, which is not possible.</div>
 </div></div>
 </div></article></div>
-<article class="exercise exercise-like" id="exercise-111"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-111"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-111"><article class="exercise exercise-like"><div class="para" id="p-767">Let <span class="process-math">\(G\)</span> be a group acting transitively on a set <span class="process-math">\(S\text{.}\)</span> For <span class="process-math">\(a\in S\text{,}\)</span> let <span class="process-math">\(G_a = \{g\in G | ga = a\}\)</span> be the stabilizer of <span class="process-math">\(a\)</span> under the action from <span class="process-math">\(G\text{.}\)</span>
-</div> <div class="para logical" id="p-768"><ol class="lower-alpha">
-<li id="li-273"><div class="para" id="p-derived-li-273">Let <span class="process-math">\(a, b\in S\text{.}\)</span> Prove there exists <span class="process-math">\(g\in G\)</span> such that <span class="process-math">\(G_b = gG_ag\inv\text{.}\)</span>
+<article class="exercise exercise-like" id="exercise-117"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-117"><h5 class="heading">
+<span class="codenumber">8<span class="period">.</span></span><span class="space"> </span><span class="title">January 2021 (2).</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-117"><article class="exercise exercise-like"><div class="para" id="p-781">Let <span class="process-math">\(G\)</span> be a group acting transitively on a set <span class="process-math">\(S\text{.}\)</span> For <span class="process-math">\(a\in S\text{,}\)</span> let <span class="process-math">\(G_a = \{g\in G | ga = a\}\)</span> be the stabilizer of <span class="process-math">\(a\)</span> under the action from <span class="process-math">\(G\text{.}\)</span>
+</div> <div class="para logical" id="p-782"><ol class="lower-alpha">
+<li id="li-276"><div class="para" id="p-derived-li-276">Let <span class="process-math">\(a, b\in S\text{.}\)</span> Prove there exists <span class="process-math">\(g\in G\)</span> such that <span class="process-math">\(G_b = gG_ag\inv\text{.}\)</span>
 </div></li>
-<li id="li-274"><div class="para" id="p-derived-li-274">Suppose <span class="process-math">\(S\)</span> has more than one element and that <span class="process-math">\(G\)</span> is finite. Prove that there exists <span class="process-math">\(g\in G\)</span> which has no fixed point, that is, for all <span class="process-math">\(a\in S, ga\neq a\)</span>
+<li id="li-277"><div class="para" id="p-derived-li-277">Suppose <span class="process-math">\(S\)</span> has more than one element and that <span class="process-math">\(G\)</span> is finite. Prove that there exists <span class="process-math">\(g\in G\)</span> which has no fixed point, that is, for all <span class="process-math">\(a\in S, ga\neq a\)</span>
 </div></li>
 </ol></div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-28" id="solution-28"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-28"><div class="solution solution-like">
-<div class="para" id="p-769">Let <span class="process-math">\(G\)</span> be a group acting transitively on a set <span class="process-math">\(S\text{.}\)</span>
-</div> <div class="para" id="p-770">The action is transitive, so there exists some <span class="process-math">\(g\in G\)</span> such that <span class="process-math">\(ga=b\text{.}\)</span>
-</div> <div class="para" id="p-771">Let <span class="process-math">\(x\in\Stab(a)\text{,}\)</span> consider <span class="process-math">\(gxg\inv\)</span>b. Since <span class="process-math">\(g\inv b=a\text{,}\)</span> we have <span class="process-math">\(gxa\text{,}\)</span> <span class="process-math">\(x\)</span> stabilizes <span class="process-math">\(a\)</span> so now <span class="process-math">\(ga\text{,}\)</span> but <span class="process-math">\(ga=b\text{.}\)</span> So <span class="process-math">\(g\Stab(a)g\inv\subseteq\Stab(b)\text{.}\)</span>
-</div> <div class="para" id="p-772">Let <span class="process-math">\(x\in\Stab(b)\text{.}\)</span> We know <span class="process-math">\(xb=b\)</span> and also <span class="process-math">\(ga=b\text{,}\)</span> and so <span class="process-math">\(xga=ga\text{.}\)</span> Applying <span class="process-math">\(g\inv\)</span> to both to see <span class="process-math">\(g\inv xga=a\text{.}\)</span> This puts <span class="process-math">\(g\inv xg\in\Stab(a)\text{.}\)</span> Thus <span class="process-math">\(x\in g\Stab(a)g\inv\text{,}\)</span> completing the proof.</div> <div class="para" id="p-773">The action is transitive, so there is only one orbit, and so <span class="process-math">\(\Orb(a)=\Orb(b)=G\text{.}\)</span> Since <span class="process-math">\(G\)</span> is finite, the Orbit-Stabilizer Theorem tells us <span class="process-math">\(|\Orb(a)|=|G|/|\Stab(a)|\text{.}\)</span> Since every orbit has the same order as <span class="process-math">\(G\text{,}\)</span> we see <span class="process-math">\(\Stab(a)=\{e\}\)</span> for all <span class="process-math">\(a\in S\text{.}\)</span> Thus there cannot exist any fixed points.</div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-33" id="solution-33"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-33"><div class="solution solution-like">
+<div class="para" id="p-783">Let <span class="process-math">\(G\)</span> be a group acting transitively on a set <span class="process-math">\(S\text{.}\)</span>
+</div> <div class="para" id="p-784">The action is transitive, so there exists some <span class="process-math">\(g\in G\)</span> such that <span class="process-math">\(ga=b\text{.}\)</span>
+</div> <div class="para" id="p-785">Let <span class="process-math">\(x\in\Stab(a)\text{,}\)</span> consider <span class="process-math">\(gxg\inv\)</span>b. Since <span class="process-math">\(g\inv b=a\text{,}\)</span> we have <span class="process-math">\(gxa\text{,}\)</span> <span class="process-math">\(x\)</span> stabilizes <span class="process-math">\(a\)</span> so now <span class="process-math">\(ga\text{,}\)</span> but <span class="process-math">\(ga=b\text{.}\)</span> So <span class="process-math">\(g\Stab(a)g\inv\subseteq\Stab(b)\text{.}\)</span>
+</div> <div class="para" id="p-786">Let <span class="process-math">\(x\in\Stab(b)\text{.}\)</span> We know <span class="process-math">\(xb=b\)</span> and also <span class="process-math">\(ga=b\text{,}\)</span> and so <span class="process-math">\(xga=ga\text{.}\)</span> Applying <span class="process-math">\(g\inv\)</span> to both to see <span class="process-math">\(g\inv xga=a\text{.}\)</span> This puts <span class="process-math">\(g\inv xg\in\Stab(a)\text{.}\)</span> Thus <span class="process-math">\(x\in g\Stab(a)g\inv\text{,}\)</span> completing the proof.</div> <div class="para" id="p-787">The action is transitive, so there is only one orbit, and so <span class="process-math">\(\Orb(a)=\Orb(b)=G\text{.}\)</span> Since <span class="process-math">\(G\)</span> is finite, the <a href="" class="xref" data-knowl="./knowl/cor-orbit-stabilizer.html" title="Corollary 4.29: Orbit-Stabilizer Theorem">Orbit-Stabilizer Theorem</a> tells us <span class="process-math">\(|\Orb(a)|=|G|/|\Stab(a)|\text{.}\)</span> Since every orbit has the same order as <span class="process-math">\(G\text{,}\)</span> we see <span class="process-math">\(\Stab(a)=\{e\}\)</span> for all <span class="process-math">\(a\in S\text{.}\)</span> Thus there cannot exist any fixed points.</div>
 </div></div>
 </div></article></div>
 </div>
 </div></section></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="sec-self-actions.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-class-eq.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+<a class="previous-button button" href="sec-left-mult-conjugation.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-class-eq.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer">

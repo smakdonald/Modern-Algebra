@@ -3228,11 +3228,11 @@
         
                 <p><ol>
                   <li>
-                  Let <m>f : G → \Perm(G)</m> be given by <m>f (g) = λg</m> for all <m>g ∈ G</m>, where <m>λg : G → G</m> is defined by <m>λg(a) = ga</m> for all <m>a ∈ G</m>. Prove that <m>f</m> is an injective group homomorphism.
+                  Let <m>f : G → \Perm(G)</m> be given by <m>f (g) = λg</m> for all <m>g \in  G</m>, where <m>λg : G → G</m> is defined by <m>λg(a) = ga</m> for all <m>a \in  G</m>. Prove that <m>f</m> is an injective group homomorphism.
                   </li>
         
                   <li>
-                  Prove that if <m>g ∈ G</m> is an element of order <m>2</m> then <m>λg</m> is a product of <m>m</m> transpositions.
+                  Prove that if <m>g \in  G</m> is an element of order <m>2</m> then <m>λg</m> is a product of <m>m</m> transpositions.
                   </li>
         
                   <li>
@@ -3899,12 +3899,7 @@
               </p>
             </statement>
           </exercise>
-    
-          <exercise>
-            <p>
-              Prove the converse to Lagrange's theorem is false: find a group <m>G</m> and an integer <m>d&gt;0</m> such that <m>d</m> divides the order of <m>G</m> but <m>G</m> does not have any subgroups of order <m>d</m>. <em>Hint</em>: Take <m>G=A_5</m>.
-            </p>
-          </exercise>
+
 
           <exercise>
             <title>Fermat's Little Theorem</title>
@@ -4019,10 +4014,7 @@
                 <li>
                   <p>
                     The set 
-                    <me>
-                      V=\{e, (1 2)(3 4), (1 3)(2 4), (1 4)(2 3)\}
-                    </me> 
-                    is normal in t <m>S_4</m>.
+                    <m> V=\{e, (1 2)(3 4), (1 3)(2 4), (1 4)(2 3)\}</m> is normal in t <m>S_4</m>.
                   </p>
                 </li>
               </ol>
@@ -4033,19 +4025,7 @@
             <title>Normal Subgroups and Homomorphisms</title>
             <statement>
               <p>
-                <ol>
-                  <li>
-                    <p>
-                      Prove that if <m>\varphi:G\to H</m> is a group homomorphism and <m>K\nsg H</m> then the preimage of <m>K</m>, <m>\varphi^{-1}(K)=\{g\in G | \varphi(g)\in K\}</m>, is a normal subgroup of <m>G</m>. 
-                    </p>
-                  </li>
-                  
-                  <li>
-                    <p>
-                      Show that if <m>\varphi:G\to H</m> is a group homomorphism and <m>L \nsg G</m> then <m>\varphi(L)</m> need not be a normal subgroup of <m>H</m>.
-                    </p>
-                  </li>
-                </ol>
+                If <m>\varphi:G\to H</m> is a group homomorphism and <m>K\nsg H</m> then the preimage of <m>K</m>, <m>\varphi^{-1}(K)=\{g\in G | \varphi(g)\in K\}</m>, is a normal subgroup of <m>G</m>.         
               </p>
             </statement>
           </proposition>
@@ -4054,7 +4034,7 @@
             <title>Unique Order Subgroup is Normal</title>
               <statement>
                 <p>
-                  Let <m>H\leq G</m> be the only subgroup of order <m>n</m>. Prove that <m>H</m> is normal.
+                  Let <m>H\leq G</m> be the only subgroup of order <m>n</m>. Then <m>H</m> is normal.
                 </p>
             </statement>
           </proposition>
@@ -4062,7 +4042,10 @@
           <theorem xml:id="hk-normal">
             <statement>
               <p>
-                Let <m>G</m> be a group with subgroups <m>H, K</m>. Recall the notation <me>HK=\{hk \mid h\in H, k\in K\}.</me> 
+                Let <m>G</m> be a group with subgroups <m>H, K</m>. Recall the notation 
+                <me>
+                  HK=\{hk \mid h\in H, k\in K\}.
+                </me> 
                 <ol>
                   <li>
                     <p>
@@ -4079,15 +4062,40 @@
               </p>
             </statement>
           </theorem>
-    
-          <example>
+
+          <warning>
+            <p>
+              The identity <m>HK=KH</m> does not mean that every pair of elements from <m>H</m> and <m>K</m> must commute. You will find such an example in <xref ref="exe-hk-non-commuting-elements"/>
+            </p>
+          </warning>
+
+          <theorem xml:id="thm-hm-normal-2">
             <statement>
               <p>
-                In <m>D_{2n}</m>, let <m>H=\langle s\rangle</m> and <m>K=\langle r\rangle</m>. Then <m>HK=KH=D_{2n}</m> but <m>r</m> and <m>s</m> do not commute. The fact that <m>HK=KH</m> can also be justified by observing that <m>K\nsg D_{2n}</m>.
+                Let <m>G</m> be a group, <m>H \leq G</m> and <m>N \unlhd G</m>. Then 
+                <ol>
+                  <li>
+                    <p>
+                      <m>HN \leq G</m>,
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>N \cap H \unlhd H</m>, and
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>N \unlhd HN</m>.
+                    </p>
+                  </li>
+                </ol>
               </p>
             </statement>
-          </example>
-    
+          </theorem>
+          
           <exercises>
     
             <exercisegroup>  <title>Computations and Examples</title>
@@ -4135,6 +4143,24 @@
                   </p>
                 </solution>
                 
+              </exercise>
+
+              <exercise xml:id="exe-images-need-not-be-normal">
+                <title>Images not Normal in General</title>
+                <statement>
+                  <p>
+                    Show that if <m>\varphi:G\to H</m> is a group homomorphism and <m>L \nsg G</m> then <m>\varphi(L)</m> need not be a normal subgroup of <m>H</m>.
+                  </p>
+                </statement>
+              </exercise>
+
+              <exercise xml:id="exe-hk-non-commuting-elements">
+                <title><m>HK=KH</m> but not Abelian</title>
+                <statement>
+                  <p>
+                    In <m>D_{2n}</m>, let <m>H=\langle s\rangle</m> and <m>K=\langle r\rangle</m>. Then <m>HK=KH=D_{2n}</m> but <m>r</m> and <m>s</m> do not commute. The fact that <m>HK=KH</m> can also be justified by observing that <m>K\nsg D_{2n}</m>.
+                  </p>
+                </statement>
               </exercise>
           
             </exercisegroup>
@@ -4469,7 +4495,7 @@
             <title>Quotient Group</title>
             <statement>
               <p>
-                For any normal subgroup <m>N</m> of a group <m>G</m>, the <em>quotient group</em> <m>G/N</m> is <m>G/\sim_N</m>, where <m>\sim_N</m> is the equivalence relation induced by the left action of <m>N</m> on <m>G</m>. In other words, <m>G/N</m> is the set of right cosets of <m>N</m> in <m>G</m> with multiplication given by <m>Nx\cdot Ny=N(xy)</m>. By part 4. of Proposition <xref ref="thm-equivdef-normal" />, <m>G/N</m> is also the set of left cosets of <m>N</m> in <m>G</m> with multiplication given by <m>xN\cdot yN=(xy)N</m>.
+                For any normal subgroup <m>N</m> of a group <m>G</m>, the <em>quotient group</em> <m>G/N</m> is <m>G/\sim_N</m>, where <m>\sim_N</m> is the equivalence relation induced by the left action of <m>N</m> on <m>G</m>. In other words, <m>G/N</m> is the set of right cosets of <m>N</m> in <m>G</m> with multiplication given by <m>Nx\cdot Ny=N(xy)</m>. By part 4. of <xref ref="thm-equivdef-normal" />, <m>G/N</m> is also the set of left cosets of <m>N</m> in <m>G</m> with multiplication given by <m>xN\cdot yN=(xy)N</m>.
               </p>
             </statement>
           </definition>
@@ -4484,37 +4510,34 @@
             </statement>
           </theorem>
     
-          <remark>
-            <p>
-              Note that the set <m>G/H</m> exists for any subgroup <m>H\leq G</m>. However, this set only satisfies the axioms of a group when the subgroup is normal.
-            </p>
-          </remark>
+          <remark><p>Note that the set <m>G/H</m> exists for any subgroup <m>H\leq G</m>. However, this set only satisfies the axioms of a group when the subgroup is normal.</p></remark>
     
-          <p>
-            Recalling <xref ref="thm-lagrange"/>, we have the following corollary:
-          </p>
+          <p>Recalling <xref text="title" ref="thm-lagrange"/>, we have the following corollary:</p>
     
           <corollary xml:id="cor-order-of-quotient">
             <title>Order of Quotient Groups</title>
             <statement>
               <p>
-                By Lagrange's Theorem, if <m>G</m> is finite we have <m>\left | G/N\right |=\frac{|G|}{|N|}</m>.
+                If <m>G</m> is finite we have <m>\left | G/N\right |=\frac{|G|}{|N|}</m>.
               </p>
             </statement>
           </corollary>
     
+          <!--
           <example xml:id="ex-infinite-dihedral-group">
             <title>The Infinite Dihedral Group</title>
             <p>
               The <em>infinite dihedral group</em> <m>D_\infty</m> is the set <m>D_\infty = \{r^i,r^is \mid i \in \mathbb{Z}\}</m> with multiplication defined by <m>(r^i)(r^j) = r^{i+j}, (r^i)(r^js) = r^{i+j}s, (r^is)(r^j) = r^{i-j}s</m>, and <m>(r^is)(r^js) = r^{i-j}</m>. In other words, <m>D_\infty</m> is the group having presentation <me>D_\infty=\langle r,s \mid s^2=e, srs=r^{-1}\rangle.</me> Then <m>\langle r^n \rangle \mathrel{\unlhd}D_\infty</m> and <m>D_\infty/ \langle r^n \rangle \cong D_{2n}</m> via <m>r\langle r^n \rangle\mapsto r</m> and <m>s\langle r^n \rangle\mapsto s</m>.
             </p>
           </example>
+          
     
           <remark>
             <p>
               In the example above both <m>D_\infty</m> and <m>\langle r^n \rangle</m> are infinite but <m>[D_\infty:\langle r^n \rangle]=\left|D_\infty/\langle r^n \rangle\right|=|D_{2n}|=2n</m>.
             </p>
           </remark>
+          -->
     
           <definition xml:id="def-quotient-map">
             <title>Quotient Map</title>
@@ -4563,12 +4586,6 @@
             </statement>
           </theorem>
           
-          <remark>
-            <p>
-              Remark on how important this theorem is.
-            </p>
-          </remark>
-    
           <exercises>
     
             <exercisegroup> <title>Computations and Examples</title>
@@ -4580,9 +4597,10 @@
           
               <exercise>
                 <p>
-                  Coming soon to an OER near you!
+                  <m>\Z/n\Z\cong\Z/(n)</m> for all <m>n\in\N</m>.
                 </p>
               </exercise>
+              
           
             </exercisegroup>
           
@@ -4594,9 +4612,24 @@
               </introduction>
           
               <exercise>
-                <p>
-                  For any group <m>G</m> we have <m>G/Z(G)\cong\Inn(G)</m>.
-                </p>
+                <title><m>G/Z(G)\cong\Inn(G)</m></title>
+                  <statement>
+                    <p>
+                      For any group <m>G</m> we have <m>G/Z(G)\cong\Inn(G)</m>.
+                    </p>
+                </statement>
+              </exercise>
+
+              <exercise>
+                <title>Quotient of Commutator Subgroup</title>
+                
+                
+                  <statement>
+                    <p>
+                      Let <m>G</m> be a group with commutator subgroup <m>H</m>. Prove <m>G/H</m> is abelian.
+                    </p>
+                  </statement>
+
               </exercise>
           
             </exercisegroup>
@@ -4791,7 +4824,8 @@
             </proof>
           </theorem>
     
-          <example>
+          <example xml:id="thm-abelianization">
+            <title>Abelianization</title>
             <p>
               Let <m>G</m> be any group. For <m>x,y \in G</m>, set <m>[x,y] = xyx^{-1}y^{-1}</m>. Let <m>G'</m> denote the <em>commutator subgroup</em> of <m>G</m> generated by all elements of the form <m>[x,y]</m> for <m>x,y \in G</m>. (Some people write <m>G'</m> as <m>[G,G]</m>.) Then <m>G'</m> is in fact normal: <m>G' \unlhd G</m>. Now let <m>f: G \to A</m> be any group homomorphism from <m>G</m> to an abelian group <m>A</m>. Since <m>f([x,y]) = [f(x),f(y)] = e</m> for all <m>x, y \in G</m> (since <m>A</m> is abelian), we have that <m>\operatorname{Ker}(f)</m> must contain <m>G'</m>. By the UMP for quotients, we get that <m>f</m> factors as <me>f:G \xrightarrow{{\pi}} G/G' \xrightarrow{\overline{f}} A</me> for a unique group homomorphism <m>\overline{f}</m>.
             </p>
@@ -4803,6 +4837,7 @@
           </example>
     
           <theorem xml:id="thm-fit-group">
+            <title>The First Isomorphism Theorem for Groups</title>
             <creator>Jordan, 1870</creator>
             <statement>
               <p>
@@ -4816,10 +4851,6 @@
               </p>
             </proof>
           </theorem>
-    
-          <p>
-            The first isomorphism theorem, also known as the homomorphism theorem, is named as such because it was the first major result in the theory of group homomorphisms and was discovered before the second and third isomorphism theorems. 
-          </p>
 
           <corollary xml:id="cor-homom-finite-groups">
             <statement>
@@ -4828,38 +4859,6 @@
               </p>
             </statement>
           </corollary>
-    
-          <proposition xml:id="prop-normal-hk">
-            <statement>
-              <p>
-                <ol>
-                  <li>
-                    <p>
-                      If <m>H\leq G</m> and <m>K\leq G</m> then <m>HK\leq G</m> if and only if <m>HK=KH</m>.
-                    </p>
-                  </li>
-        
-                  <li>
-                    <p>
-                      If <m>H\leq G</m> and <m>K\leq G</m> and either one of <m>H</m> or <m>K</m> is a normal subgroup then <m>HK\leq G</m> and <m>HK=KH=\langle H\cup K\rangle</m>.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-          </proposition>
-    
-          <warning>
-            <p>
-              The identity <m>HK=KH</m> does not mean that every pair of elements from <m>H</m> and <m>K</m> must commute.
-            </p>
-          </warning>
-    
-          <example>
-            <p>
-              In <m>D_{2n}</m>, let <m>H=\langle s\rangle</m> and <m>K=\langle r\rangle</m>. Then <m>HK=KH=D_{2n}</m> but of course <m>r</m> and <m>s</m> do not commute. The fact that <m>HK=KH</m> can also be justified by observing that <m>K\mathrel{\unlhd}D_{2n}</m>.
-            </p>
-          </example>
     
           <p>
             The second isomorphism theorem, also known as the diamond isomorphism theorem or the modular law, provides information about the structure of subgroups and their intersections.
@@ -4870,7 +4869,7 @@
             
             <statement>
               <p>
-                Let <m>G</m> be a group, <m>H \leq G</m> and <m>N \unlhd G</m>. Then <m>HN \leq G</m>, <m>N \cap H \unlhd H</m>, <m>N \unlhd HN</m> and there is an isomorphism 
+                Let <m>G</m> be a group, <m>H \leq G</m> and <m>N \unlhd G</m>. Then there is an isomorphism
                 <me>
                   \frac{H}{N \cap H} \xrightarrow{\cong} \frac{HN}{N}</me> given by <me>h \cdot (N \cap H) \mapsto hN.
                 </me>
@@ -4933,21 +4932,14 @@
             </proof>
           </theorem>
     
-          <remark>
-            <p>
-              In the realm of group theory, the First Isomorphism Theorem is by far the most widely used. While important, the Second and Third Isomorphism Theorems do not pop up all that often in this text. 
-            </p>
-          </remark>
-    
           <theorem xml:id="thm-lattice-iso-group">
             <title>The Lattice Isomorphism Theorem</title>
-            
             
             <statement>
               <p>
                 Let <m>G</m> be a group and <m>N</m> a normal subgroup with canonical homomorphism <m>\pi:G\to G/N</m>. There is an containment-preserving bijection 
                 <me>
-                  \Psi:\{\text{subgroups of}\; G \;\text{that contain}\; N}\} \xrightarrow{\text{bijective}}\{\text{subgroups of}\; G/N\}
+                  \Psi:\{\text{subgroups of}\; G \;\text{that contain}\; N\} \xrightarrow{\text{bijective}}\{\text{subgroups of}\; G/N\}
                 </me> 
                 given by <m>\Psi(H)= H/N</m> for <m>N \leq H \leq G</m>. The inverse is defined for <m>\mathcal{H}\leq G/N</m> by 
                 <me>
@@ -5248,7 +5240,7 @@
               </exercise>
       
               <exercise>
-                <title>June 2010 (1)</title>
+                <title>June 2010 (1), January 2015 (3)</title>
                 <statement>
                   <p>
                     Let <m>G</m> be a group and <m>H</m> a subgroup of <m>G</m>. Recall that the centralizer of <m>H</m> in <m>G</m> is 
@@ -5272,298 +5264,908 @@
       </chapter>
 
       <chapter xml:id="group-actions">
-      <title>Group Actions</title>
-  
-      <section xml:id="graction">
         <title>Group Actions</title>
   
-        <blockquote>
-          <p>
-            <q>Actions speak louder than words.</q>
-          </p>
-          <attribution>Anthony of Padua</attribution>
-        </blockquote>
-  
-        <definition xml:id="def-graction">
-          <title>Group Action</title>
-          <statement>
-            <p>
-              For a group <m>(G, \cdot)</m> and set <m>S</m>, an <em>action</em> of <m>G</m> on <m>S</m> is a function <me>G \times S \to S,</me> typically written as <m>(g,s) \mapsto g \cdot s</m>, such that
-            </p>
-        
-            <p>
-              <ol>
-                <li>
-                  <p>
-                    <m>g \cdot (g' \cdot s) = (g g') \cdot s</m> for all <m>g,g' \in G</m> and <m>s\in S</m>.
-                  </p>
-                </li>
-      
-                <li>
-                  <p>
-                    <m>e_G \cdot s = s</m> for all <m>s \in S</m>.
-                  </p>
-                </li>
-              </ol>
-            </p>
-          </statement>
-        </definition>
-  
-        <remark>
-          <p>
-            To make the first axiom clearer, throughout this section we will write <m>\cdot</m> for the action of <m>G</m> on <m>S</m> and no symbol (concatenation) for the multiplication of two elements in the group <m>G</m>.
-          </p>
-        </remark>
-  
-        <example>
-          <title>Trivial Action</title>
-          
-          <p>
-            For any group <m>G</m> and any set <m>S</m>, <m>g \cdot s := s</m> defines an action, the <em>trivial action</em>. The associated group homomorphism is <m>G \to \operatorname{Perm}(S)</m> by <m>g\mapsto \text{id}_S</m>.
-          </p>
-        </example>
-  
-        <theorem xml:id="thm-permrep">
-          <title>The Permutation Representation</title>
-          
-          <statement>
-            <p>
-              Assume <m>(G, \cdot)</m> is a group and <m>S</m> is a set.
-            </p>
-            <p>
-              <ol>
-                <li>
-                  <p>
-                    If <m>\cdot</m> is an action of <m>G</m> on <m>S</m>, then the function <m>\rho: G \to \operatorname{Perm}(S)</m> defined as <m>\rho(g) = \sigma_g</m>, where <m>\sigma_g:S\to S</m> is the function given by <m>\sigma_g(s)=g \cdot s</m>, is a well defined homomorphism of groups.
-                  </p>
-                </li>
-      
-                <li>
-                  <p>
-                    Conversely, if <m>\rho: G \to \operatorname{Perm}(S)</m> is a group homomorphism, the rule <m>g \cdot s := \rho(g)(s)</m> defines an action of <m>G</m> on <m>S</m>.
-                  </p>
-                </li>
-              </ol>
-            </p>
-          </statement>
-  
-          <proof>
-            <p>
-              We have 
-              <me>
-                \begin{aligned}
-                (\sigma_g\circ\sigma_{g^{-1}})(s) &amp;=\sigma_g(\sigma_{g^{-1}}(s)) &amp; \text{ (def of composition)}\\
-                &amp;=g\cdot (g^{-1} \cdot s) &amp; \text{ (def for } \sigma_g \text{ and } \sigma_{g^{-1}})\\
-                &amp;=(gg^{-1})\cdot s &amp; \text{ (first property of a group action)}\\
-                &amp;=e_G\cdot s &amp; \text{ (group axiom)}\\
-                &amp;= s &amp;\text{ (second property of a group action)}
-                \end{aligned}
-              </me> 
-              thus <m>\sigma_g\circ\sigma_{g^{-1}}=\text{id}_S</m> and a similar argument shows that <m>\sigma_{g^{-1}}\circ\sigma_{g}=\text{id}_S</m>
-            </p>
-                
-            <p>
-              Finally, we wish to show <m>\rho(gg')=\rho(g) \circ \rho(g')</m>, equivalently <m>\sigma_{gg'}=\sigma_g\circ\sigma_{g'}</m>. Since <me>\sigma_{gg'}(s) = (gg')\cdot s = g\cdot(g'\cdots) =\sigma_g\left(\sigma_{g'}(s)\right) = (\sigma_g\circ\sigma_{g'})(s),</me> holds for all <m>s</m>, this proves <m>\rho</m> is a homomorphism.
-            </p>
-                
-            <p>
-              Given a homomorphism <m>\rho</m>, the function <m>G \times S \to S</m> defined as <m>g \cdot s = \rho(g)(s)</m> is an action because <m>g'(gs) = \rho(g')(\rho(g)(s)) = (\rho(g') \circ\rho(g))(s) = \rho(gg')(s) = (gg')s</m>, and <m>e_G s = \rho(e_G)(s) = \text{id}(s) = s</m>.
-            </p>
-          </proof>
-  
-        </theorem>
-  
-        <p>
-          Permutation representations are one the most essential benefits of group actions. This homomorphism allows us to study the structure of a group <m>G</m> by looking at the permutation group of <m>X</m>, which may be a more manageable group to work with. 
-          <notation><usage><m>\rho</m></usage><description>The permutation representation of a group action</description></notation> 
-        </p>
-  
-        <definition xml:id="def-faithful-action">
-          <title>Faithful Action</title>
-          <statement>
-            <p>
-              An action of a group <m>G</m> on a set <m>S</m> is called <em>faithful</em> if the associated group homomorphism is injective. Equivalently, an action is faithful if and only if for a given <m>g \in G</m>, whenever <m>g \cdot s = s</m> for all <m>s \in S</m>, it must be that <m>g = e_G</m>.
-            </p>
-          </statement>
-        </definition>
-  
-        <definition xml:id="def-transitive-action">
-          <title>Transitive Action</title>
-          <statement>
-            <p>
-              An action is <em>transitive</em> if for all <m>p,q \in S</m> there is a <m>g \in G</m> such that <m>q=g\cdot p</m>.
-            </p>
-          </statement>
-        </definition>
-  
-        <p>
-          Transitive and faithful actions are important concepts in group theory because they allow us to understand the structure of a group by examining its action on a set, and they correspond to important situations where a group is acting in a way that respects the symmetry and structure of a mathematical object.
-        </p>
-  
-        <remark>
-          <p>
-            In many cases, transitivity and faithfulness are related concepts. As we will see later, if a group action is transitive on a set <m>X</m>, then the action is faithful if and only if the stabilizer of any element of <m>X</m> is trivial. In these situations we can identify the group with a subgroup of the symmetric group on <m>X</m>, and use this identification to study the group.
-          </p>
-        </remark>
-  
-        <example xml:id="ex-transitive-faithful-actions">
-          <title>Transitive and Faithful Actions</title>
-          <p>
-            <ol>
-              <li>
-                <p>
-                  The action of the group of rotational symmetries of a regular polygon on the vertices of the polygon is transitive. Any vertex can be sent to any other vertex by a rotation of the polygon.
-                </p>
-              </li>
-  
-              <li>
-                <p>
-                  The action of the group of rigid motions of three-dimensional space on the points of a sphere is transitive. Any point on the sphere can be sent to any other point by a rotation or translation of space.              
-                </p>
-              </li>
-  
-              <li>
-                <p>
-                  The action of the group of invertible <m>2\times2</m> matrices on the complex plane by multiplication is faithful. Every non-identity matrix corresponds to a different transformation of the complex plane.              
-                </p>
-              </li>
-  
-              <li>
-                <p>
-                  The action of the group of permutations of a set <m>X</m> on the set <m>X</m> itself by permutation is faithful. Every permutation corresponds to a unique rearrangement of the elements of <m>X</m>.              
-                </p>
-              </li>
-  
-              <li>
-                <p>
-                  The action of the group of permutations of a set <m>X</m> on the set of all subsets of <m>X</m> by permutation is both transitive and faithful. Any subset can be sent to any other subset by permuting the elements of <m>X</m>, and every non-identity permutation corresponds to a different permutation of the subsets of <m>X</m>.             
-                 </p>
-              </li>
-            </ol>
-          </p>
-  
-        </example>
-  
-        <exercises>
-  
-          <exercisegroup>
-            <title>Computations and Examples</title>
-            <introduction>
-              <p>
-              </p>
-            </introduction>
-        
-            <exercise>
-              <p>
-                Coming soon to an OER near you!
-              </p>
-            </exercise>
-        
-          </exercisegroup>
-        
-          <exercisegroup>
-            <title>Formal Proofs</title>
-            <introduction>
-              <p>
-              </p>
-            </introduction>
-        
-            <exercise>
-              <p>
-                Coming soon to an OER near you!
-              </p>
-            </exercise>
-        
-          </exercisegroup>
-        
-          <exercisegroup>
-            <title>Qualifying Exam Problems</title>
-            <introduction>
-              <p>
-              </p>
-            </introduction>
-        
-            <exercise>
-              <p>
-                Coming soon to an OER near you!
-              </p>
-            </exercise>
-        
-          </exercisegroup>
-        </exercises>
-  
-      </section>
-  
-      <section xml:id="sec-self-actions">
-        <title>Self Actions</title>
-  
-        <introduction>
+        <section xml:id="graction">
+          <title>Group Actions</title>
+    
           <blockquote>
             <p>
-              <q>You may never know what results come of your action, but if you do nothing there will be no results.</q>
+              <q>Actions speak louder than words.</q>
             </p>
-            <attribution>Ghandi</attribution>
+            <attribution>Anthony of Padua</attribution>
           </blockquote>
-        </introduction>
-  
-        <subsection xml:id="subsec-conjugation-action">
-          <title>Self Conjugation</title>
-  
-          <definition xml:id="def-conjugacy-class">
-            <title>Conjugacy Class</title>
+    
+          <definition xml:id="def-graction">
+            <title>Group Action</title>
             <statement>
               <p>
-                The <em>conjugacy class</em> of an element <m>g \in G</m> is <m>C_G(g) = \{hgh^{-1} \mid h \in G\}</m>.
-                <notation><usage><m>C_G(g)</m></usage><description>the conjugacy class of the element <m>g\in G=\{hgh^{-1} \mid h \in G\}</m></description></notation>          
+                For a group <m>(G, \cdot)</m> and set <m>S</m>, an <em>action</em> of <m>G</m> on <m>S</m> is a function 
+                <me>
+                  G \times S \to S,
+                </me> 
+                typically written as <m>(g,s) \mapsto g \cdot s</m>, such that
               </p>
-            </statement>
-          </definition>
-    
-          <definition xml:id="def-conjugate">
-            <title>Conjugate</title>
-            <statement>
-              <p>
-                Let <m>G</m> be a group. Two elements <m>g,g' \in G</m> are <em>conjugate</em> if there is <m>h \in G</m> with <m>g' = hgh^{-1}</m> (equivalently <m>g</m> and <m>g'</m> are in the same orbit of the conjugation action).
-              </p>
-    
-              <p>
-                Two subsets <m>S,S' \subseteq G</m> are conjugate if there is <m>h \in G</m> with <m>S' = hSh^{-1}</m>.
-              </p>
-            </statement>
-          </definition>
           
-  
-          <example>
-            <title>Conjugation Action</title>
-            
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      <m>g \cdot (g' \cdot s) = (g g') \cdot s</m> for all <m>g,g' \in G</m> and <m>s\in S</m>.
+                    </p>
+                  </li>
+        
+                  <li>
+                    <p>
+                      <m>e_G \cdot s = s</m> for all <m>s \in S</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+          </definition>
+    
+          <remark>
             <p>
-              Let <m>G</m> be any group and fix an element <m>g \in G</m>. Define <em>the conjugation action</em> of <m>G</m> on itself by setting 
-              <me>
-                g\cdot x=gxg^{-1} \;\text{for any}\; g,x\in G.
-              </me> 
+              To make the first axiom clearer, throughout this section we will write <m>\cdot</m> for the action of <m>G</m> on <m>S</m> and no symbol (concatenation) for the multiplication of two elements in the group <m>G</m>.
+            </p>
+          </remark>
+    
+          <example xml:id="ex-group-actions">
+            <title>Common Group Actions</title>
+            <p>
+              <ol>
+                <li>
+                  <p>
+                    For any group <m>G</m> and any set <m>S</m>, <m>g \cdot s := s</m> defines an action, the <em>trivial action</em>. The associated group homomorphism is <m>G \to \operatorname{Perm}(S)</m> by <m>g\mapsto \text{id}_S</m>.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    The group <m>S_n</m> acts on the set <m>X=\{1,2,\dots,n\}</m> such that <m>\sigma\cdot i=\sigma(i)</m>.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    For any group <m>G</m> and any set <m>S</m>, <m>g \cdot s := gs</m> defines an action, the <em>left multiplication action</em>. The associated group homomorphism is <m>G \to \operatorname{Perm}(S)</m> by <m>g\mapsto \text{id}_S</m>.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    For any group <m>G</m> and any set <m>S</m>, <m>g \cdot s := gxg\inv</m> defines an action, the <em>conjugation</em>. The associated group homomorphism is <m>G \to \operatorname{Perm}(S)</m> by <m>g\mapsto \text{id}_S</m>.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    The group <m>\GL_n(\R)</m> acts on vectors in <m>\R^n</m> by left multiplication: given <m>A\in\GL_n(\R)</m> and <m>\v\in\R^n</m>, we have <m>A\cdot\v=A\v</m>.
+                  </p>
+                </li>
+              </ol>
             </p>
           </example>
+
+          <remark>
+            <p>
+              Though the set <m>S</m> need not be a group, it certainly can be. Indeed, a group <m>G</m> can act on itself, as we will see in <xref ref="sec-left-mult-conjugation"/>
+            </p>
+          </remark>
+
+          <p>One can also think of group actions as homomorphisms.</p>
+        
+          <theorem xml:id="thm-permrep">
+            <title>The Permutation Representation</title>
+            
+            <statement>
+              <p>
+                Assume <m>(G, \cdot)</m> is a group and <m>S</m> is a set.
+              </p>
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      If <m>\cdot</m> is an action of <m>G</m> on <m>S</m>, then the function <m>\rho: G \to \operatorname{Perm}(S)</m> defined as <m>\rho(g) = \sigma_g</m>, where <m>\sigma_g:S\to S</m> is the function given by <m>\sigma_g(s)=g \cdot s</m>, is a well defined homomorphism of groups.
+                    </p>
+                  </li>
+        
+                  <li>
+                    <p>
+                      Conversely, if <m>\rho: G \to \operatorname{Perm}(S)</m> is a group homomorphism, the rule <m>g \cdot s := \rho(g)(s)</m> defines an action of <m>G</m> on <m>S</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
     
-          <theorem xml:id="thm-conjugation-action">
-            <title>Induced Conjugations</title>
+            <proof>
+              <p>
+                We have 
+                <me>
+                  \begin{aligned}
+                  (\sigma_g\circ\sigma_{g^{-1}})(s) &amp;=\sigma_g(\sigma_{g^{-1}}(s)) &amp; \text{ (def of composition)}\\
+                  &amp;=g\cdot (g^{-1} \cdot s) &amp; \text{ (def for } \sigma_g \text{ and } \sigma_{g^{-1}})\\
+                  &amp;=(gg^{-1})\cdot s &amp; \text{ (first property of a group action)}\\
+                  &amp;=e_G\cdot s &amp; \text{ (group axiom)}\\
+                  &amp;= s &amp;\text{ (second property of a group action)}
+                  \end{aligned}
+                </me> 
+                thus <m>\sigma_g\circ\sigma_{g^{-1}}=\text{id}_S</m> and a similar argument shows that <m>\sigma_{g^{-1}}\circ\sigma_{g}=\text{id}_S</m>
+              </p>
+                  
+              <p>
+                Finally, we wish to show <m>\rho(gg')=\rho(g) \circ \rho(g')</m>, equivalently <m>\sigma_{gg'}=\sigma_g\circ\sigma_{g'}</m>. Since <me>\sigma_{gg'}(s) = (gg')\cdot s = g\cdot(g'\cdots) =\sigma_g\left(\sigma_{g'}(s)\right) = (\sigma_g\circ\sigma_{g'})(s),</me> holds for all <m>s</m>, this proves <m>\rho</m> is a homomorphism.
+              </p>
+                  
+              <p>
+                Given a homomorphism <m>\rho</m>, the function <m>G \times S \to S</m> defined as <m>g \cdot s = \rho(g)(s)</m> is an action because <m>g'(gs) = \rho(g')(\rho(g)(s)) = (\rho(g') \circ\rho(g))(s) = \rho(gg')(s) = (gg')s</m>, and <m>e_G s = \rho(e_G)(s) = \text{id}(s) = s</m>.
+              </p>
+            </proof>
+    
+          </theorem>
+    
+          <p>
+            Permutation representations are one the most essential functions (no pun intended) of group actions. This homomorphism allows us to study the structure of a group <m>G</m> by looking at the permutation group of <m>X</m>, which may be a more manageable group to work with. 
+            <notation><usage><m>\rho</m></usage><description>The permutation representation of a group action</description></notation> 
+          </p>
+    
+          <definition xml:id="def-faithful-action">
+            <title>Faithful Action</title>
+            <statement>
+              <p>
+                An action of a group <m>G</m> on a set <m>S</m> is called <em>faithful</em> if the associated group homomorphism is injective. Equivalently, an action is faithful if and only if for a given <m>g \in G</m>, whenever <m>g \cdot s = s</m> for all <m>s \in S</m>, it must be that <m>g = e_G</m>.
+              </p>
+            </statement>
+          </definition>
+    
+          <definition xml:id="def-transitive-action">
+            <title>Transitive Action</title>
+            <statement>
+              <p>
+                An action is <em>transitive</em> if for all <m>p,q \in S</m> there is a <m>g \in G</m> such that <m>q=g\cdot p</m>.
+              </p>
+            </statement>
+          </definition>
+    
+          <remark>
+            <p>
+              In many cases, transitivity and faithfulness are related concepts. As we will see later, if a group action is transitive on a set <m>X</m>, then the action is faithful if and only if the stabilizer of any element of <m>X</m> is trivial. In these situations we can identify the group with a subgroup of the symmetric group on <m>X</m>, and use this identification to study the group.
+            </p>
+          </remark>
+    
+          <!--
+          <example xml:id="ex-transitive-faithful-actions">
+            <title>Transitive and Faithful Actions</title>
+            <p>
+              <ol>
+                <li>
+                  <p>
+                    The action of the group of rotational symmetries of a regular polygon on the vertices of the polygon is transitive. Any vertex can be sent to any other vertex by a rotation of the polygon.
+                  </p>
+                </li>
+    
+                <li>
+                  <p>
+                    The action of the group of rigid motions of three-dimensional space on the points of a sphere is transitive. Any point on the sphere can be sent to any other point by a rotation or translation of space.              
+                  </p>
+                </li>
+    
+                <li>
+                  <p>
+                    The action of the group of invertible <m>2\times2</m> matrices on the complex plane by multiplication is faithful. Every non-identity matrix corresponds to a different transformation of the complex plane.              
+                  </p>
+                </li>
+    
+                <li>
+                  <p>
+                    The action of the group of permutations of a set <m>X</m> on the set <m>X</m> itself by permutation is faithful. Every permutation corresponds to a unique rearrangement of the elements of <m>X</m>.              
+                  </p>
+                </li>
+    
+                <li>
+                  <p>
+                    The action of the group of permutations of a set <m>X</m> on the set of all subsets of <m>X</m> by permutation is both transitive and faithful. Any subset can be sent to any other subset by permuting the elements of <m>X</m>, and every non-identity permutation corresponds to a different permutation of the subsets of <m>X</m>.             
+                  </p>
+                </li>
+              </ol>
+            </p>
+    
+          </example>
+          -->
+
+          <paragraphs>
+            <title>Applications of Group Actions</title>
+            <p>
+              <ol>
+                <li>
+                  <p>
+                    Physics: group actions are used to study the symmetries of physical systems. For example, the group of rotations in three dimensions acts on the space of physical states of a rigid body. By studying this group action, we can understand the behavior of rigid bodies under rotations.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Chemistry: group actions are used to study the symmetries of molecules. The group of symmetries of a molecule acts on the set of its atoms, and this group action can be used to understand the molecular structure and properties, such as its optical activity and reactivity.           
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Computer Science: group actions are used in algorithms for encryption and data compression. For example, the group action of a permutation group on a set of data can be used to shuffle and encrypt the data. Similarly, the group action of a linear group on a vector space can be used to compress and store data.             
+                  </p>
+                </li>
+              </ol>
+            </p>
+            
+          </paragraphs>
+
+          <p>Group actions also have many practical applications, such as in physics, chemistry, computer science, and cryptography. For example, in physics, the symmetries of a physical system can be represented by a group, and the group action of this group on the system can be used to understand its behavior. In computer science and cryptography, group actions are used to design and analyze algorithms for encryption and data compression.</p>
+    
+          <exercises>
+    
+            <exercisegroup>
+              <title>Computations and Examples</title>
+              <introduction>
+                <p>
+                </p>
+              </introduction>
+          
+              <exercise>
+                <p>
+                  Coming soon to an OER near you!
+                </p>
+              </exercise>
+          
+            </exercisegroup>
+          
+            <exercisegroup>
+              <title>Formal Proofs</title>
+              <introduction>
+                <p>
+                </p>
+              </introduction>
+          
+              <exercise>
+                <p>
+                  Coming soon to an OER near you!
+                </p>
+              </exercise>
+          
+            </exercisegroup>
+          
+            <exercisegroup>
+              <title>Qualifying Exam Problems</title>
+              <introduction>
+                <p>
+                </p>
+              </introduction>
+          
+              <exercise>
+                <p>
+                  Coming soon to an OER near you!
+                </p>
+              </exercise>
+          
+            </exercisegroup>
+          </exercises>
+    
+        </section>
+    
+        <section xml:id="sec-left-mult-conjugation">
+          <title>Left Multiplication and Conjugation</title>
+    
+          <introduction>
+            <blockquote>
+              <p>
+                <q>You may never know what results come of your action, but if you do nothing there will be no results.</q>
+              </p>
+              <attribution>Ghandi</attribution>
+            </blockquote>
+          </introduction>
+    
+          <subsection xml:id="subsec-conjugation-action">
+            <title>Conjugation</title>
+    
+            <definition xml:id="def-conjugacy-class">
+              <title>Conjugacy Class</title>
+              <statement>
+                <p>
+                  The <em>conjugacy class</em> of an element <m>x \in G</m> is <m>C_G(x) = \{gxg^{-1} \mid g \in G\}</m>.
+                  <notation><usage><m>C_G(x)</m></usage><description>the conjugacy class of the element <m>x\in G=\{gxg^{-1} \mid g \in G\}</m></description></notation>          
+                </p>
+              </statement>
+            </definition>
+      
+            <definition xml:id="def-conjugate">
+              <title>Conjugate</title>
+              <statement>
+                <p>
+                  Let <m>G</m> be a group. Two elements <m>g,g' \in G</m> are <em>conjugate</em> if there is <m>h \in G</m> with <m>g' = hgh^{-1}</m> (equivalently <m>g</m> and <m>g'</m> are in the same orbit of the conjugation action).
+                </p>
+      
+                <p>
+                  Two subsets <m>S,S' \subseteq G</m> are conjugate if there is <m>h \in G</m> with <m>S' = hSh^{-1}</m>.
+                </p>
+              </statement>
+            </definition>
+            
+    
+            <example xml:id="ex-conjugation-action">
+              <title>Conjugation Action</title>
+              <p>
+                Let <m>G</m> be any group and fix an element <m>g \in G</m>. Define <em>the conjugation action</em> of <m>G</m> on itself by setting 
+                <me>
+                  g\cdot x=gxg^{-1} \;\text{for any}\; g,x\in G.
+                </me> 
+              </p>
+            </example>
+      
+            <theorem xml:id="thm-conjugation-action">
+              <title>Properties of the Conjugation Action</title>
+              <statement>
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        Show <m>G</m> acts on <m>H</m> via conjugation for any <m>H\leq G</m>.
+                      </p>
+                    </li>
+        
+                    <li>
+                      <p>
+                        The kernel of the permutation representation for the conjugation action is the center <m>Z(G)</m>. 
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        Coming soon!
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        If <m>\rho:G\to \operatorname{Perm}(G)</m> is the permutation representation for <m>G</m> acting on <m>G</m> by conjugation, then 
+                        <me>
+                          g\in \operatorname{Ker}\rho\iff g\cdot x=x, \forall x\in G \iff gxg^{-1}=x, \forall x\in G
+                        </me>
+                        <me>
+                          \iff gx=xg, \forall x\in G \iff g\in Z(G).
+                        </me>
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </proof>
+            </theorem>
+
+            <corollary xml:id="cor-normal-union-of-conjugacy-classes">
+              <title>Normal Subgroups are Unions of Conjugacy Classes</title>
+              <statement>
+                <p>
+                  Let <m>N\mathrel{\nsg}G</m>. Then <m>N</m> is the disjoint union of some of the conjugacy classes in <m>G</m>.
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  Define the conjugation action of <m>G</m> on <m>N</m> by <m>g\cdot n=gng^{-1}</m> for all <m>g\in G</m> and <m>n\in N</m>. Since <m>N\nsg G</m> this is well defined. The two properties in the definition of the action hold for the action of <m>G</m> by conjugation on <m>N</m> since they hold more generally for the action of <m>G</m> by conjugation on <m>G</m>. Therefore this is indeed an action. The orbits of elements <m>n\in N</m> under this action are <m>[n]_c</m>. Thus the conjugacy classes of the elements of <m>N</m> partition <m>N</m>.
+                </p>
+              </proof>
+            </corollary>
+      
+            <corollary xml:id="cor-faithful-conjugation">
+              <title>Faithful Conjugations</title>
+              <statement>
+                <p>
+                  The action of <m>G</m> on itself by conjugation is faithful if and only if <m>Z(G)=\{e\}</m>.
+                </p>
+              </statement>
+            </corollary>
+      
+          </subsection>
+    
+          <subsection xml:id="subsec-left-multiplication">
+            <title>Left Regular Action</title>
+    
+            <example xml:id="ex-leftreg">
+              <title>Left Regular Action</title>
+              
+              <p>
+                Let <m>G</m> be any group and define an action <m>\cdot</m> of <m>G</m> on <m>G</m> (regarded as just a set) by the rule 
+                <me>
+                  g \cdot x = g  x, \;\text{for}\; g \in G \;\text{and}\; x \in G.
+                </me>
+              </p>
+            </example>
+    
+            <remark>
+              <p>
+                This action is often referred to as left multiplcation.
+              </p>
+            </remark>
+    
+            <proposition xml:id="prop-left-mult-well-defined">
+              <title>Left Multiplication is Faithful</title>
+              <statement>
+                <p>
+                  The left regular action is faithful.  
+                </p>
+              </statement>
+            </proposition>
+    
+            <lemma xml:id="lem-largest-normal-subgroup">
+              <statement>
+                <p>
+                  Let <m>H</m> be a subgroup of a group <m>G</m>, and let <m>G</m> act on the set <m>G/H</m> of left cosets by left multiplication <m>g \cdot (g'H) = (gg')H</m>. Let <m>\rho: G\to \Perm(G/H)</m> denote the permutation representation associated to this action. Then
+                </p>
+    
+                <p>
+                  <ol>
+                  <li>
+                  the action described above is transitive
+                  </li>
+    
+                  <li>
+                  <m>\ker(\rho) = \bigcap_{g \in G} gHg^{-1}</m>
+                  </li>
+    
+                  <li>
+                  the subgroup described in (1) is the largest (with respect to containment) normal subgroup of <m>G</m> contained in <m>H</m>.
+                  </li>
+    
+                </ol>
+              </p>
+    
+              </statement>
+            </lemma>
+    
+            <proposition xml:id="prop-normal-subgroups-and-index">
+              <statement>
+                <p>
+                  Let <m>G</m> be a group, and let <m>H</m> be a subgroup of <m>G</m> of finite index <m>[G:H] = n</m>. Show that there exists a normal subgroup <m>N\nsg G</m> such that <m>N \leq H</m> and <m>[G:N] \leq n!</m>
+                </p>
+              </statement>
+            </proposition>
+          
+            <theorem xml:id="thm-smallest-prime-normal">
+              <title>Smallest Prime Index is Normal</title>
+              <statement>
+                <p>
+                  Let <m>G</m> be a finite group and let <m>H</m> be a subgroup of <m>G</m> of index <m>p</m>, where <m>p</m> is the smallest prime divisor of the order of <m>G</m>. Prove that <m>H</m> is normal in <m>G</m>.
+                </p>
+              </statement>
+        
+              <proof>
+                <p>
+                  Let <m>S=G/H</m> and note that <m>|S|=p</m>. Let <m>K</m> denote the kernel of the permutation representation generated by <m>G</m> acting on <m>S</m> by left multiplication.
+                </p>
+        
+                <p>
+                  The First Isomorphism Theorem tells us that <m>G/K\cong\im(\rho)\leq S_p</m>. Thus <m>|K|\big|p!</m> by Lagrange's Theorem. Let <m>k\in K</m>. Then <m>kgH=gH</m> for all <m>g\in G</m>, making <m>k\in gHg\inv</m> for all <m>g\in G,</m> including <m>e</m>. Thus <m>K\nsg H</m>.
+                </p>
+        
+                <p>
+                  This yields <m>[G:K]=[G:H][H:K]</m>. Let <m>h=[H:K]</m>, giving us <m>[G:K]=ph</m>. As <m>|K|\big|p!</m> we have <m>h|(p-1)!</m>, so <m>h&lt;p</m>. But <m>p</m> is the smallest prime dividing the order of <m>G</m>, and thus <m>h=1</m>, making <m>H=K</m> and <m>H\nsg G</m>.
+                </p>
+              </proof>
+            </theorem>
+    
+            <remark>
+              <p>
+                Proving this theorem was Problem () on the Qual and Problem () on the Qual
+              </p>
+            </remark>
+    
+    
+          </subsection>
+    
+          <exercises>
+    
+            <exercisegroup> <title>Computations and Examples</title>
+              
+              <introduction>
+                <p>
+                </p>
+              </introduction>
+
+              <exercise xml:id="exe-lagrange-converse-false">
+                <title>Converse to Lagrange's Theorem is False</title>
+
+                <statement>
+                  <p>
+                    Prove the converse to Lagrange's theorem is false: find a group <m>G</m> and an integer <m>d&gt;0</m> such that <m>d</m> divides the order of <m>G</m> but <m>G</m> does not have any subgroups of order <m>d</m>.
+                  </p>
+                </statement>
+      
+                <hint>
+                  <p>
+                    Take <m>G=A_5</m>.
+                  </p>
+                </hint>
+
+                <solution>
+                  <p>
+                    Consider <m>G=A_4</m>, and note that <m>|G|=12</m>. Suppose by way of contradiction that <m>H</m> is subgroup of <m>G</m> such that <m>|H|=6</m>. Notice that <m>[G:H]=2</m>, the smallest prime dividing the order of <m>G</m>, making <m>H</m> normal in <m>G</m>.
+                  </p>
+      
+                  <p>
+                    As there are eight <m>3</m>-cycles in <m>G</m>, there exists some <m>3</m>-cycle, <m>\sigma</m>, such that <m>\s\not\in H</m>. Consider then <m>H, \s H,</m> and <m>\s^2 H</m> in <m>G/H</m>. Since <m>|G/H|=\frac{|G|}{|H|}=2</m>, it must be the case that either <m>\s^2H=\s H</m> or <m>\s^2H=H</m>.
+                  </p>
+      
+                  <p>
+                    <ul>
+                      <li>
+                        If <m>\s^2 H=H</m> then <m>\s^2\in H</m>. As <m>|\s|=3</m> we have <m>\s^2=\s\inv</m>, but as <m>H</m> is a subgroup this would mean <m>(\s\inv)\inv=\s\in H</m>, which is not the case.
+                      </li>
+      
+                      <li>
+                        If <m>\s^2 H=\s H</m> then <m>\s\inv\s^2\in H</m>, but <m>\s\inv\s^2=\s</m>, and so we have a contradiction. Thus <m>H</m> cannot exist, and <m>G</m> has no subgroup of order <m>6</m>.
+                      </li>
+                    </ul>
+                  </p>
+                </solution>
+              </exercise>
+          
+              
+            </exercisegroup>
+          
+            <exercisegroup> <title>Formal Proofs</title>
+              
+              <introduction>
+                <p>
+                </p>
+              </introduction>
+
+              <exercise>
+                <p>
+                  Coming soon to an OER near you!
+                </p>
+              </exercise>
+          
+            </exercisegroup>
+          
+            <exercisegroup> <title>Qualifying Exam Problems</title>
+              
+              <introduction>
+                <p>
+                </p>
+              </introduction>
+    
+              <exercise> <title>June 2016 (1)</title>
+                <statement>
+                  <p>
+                    Let <m>G</m> be a (not necessarily finite) group and <m>K \leq G</m> a subgroup of index <m>n &lt; \infty</m>. Define <me>N=\bigcap_{g\in G}gKg\inv</me>(i.e., <m>N</m> is the intersection of all the conjugates of K<m>)</m>
+                  </p>
+          
+                  <p><ol>
+                    <li>
+                    Prove <m>N</m> is a the largest normal subgroup of <m>G</m> that is contained in <m>K</m>.
+                    </li>
+          
+                    <li>
+                    Prove <m>[G : N ]</m> divides <m>n!</m>.
+                    </li>
+          
+                  </ol></p>
+                </statement>
+    
+                <solution>
+                  <p>
+                    Let <m>G</m> act on the left cosets of <m>K</m> in <m>G</m> by left multiplication, yielding the permutation representation homomorphism <m>\rho:G\to S_n</m>. Let <m>N</m> conspicuously denote the kernel of this function.
+                  </p>
+        
+                  <p>
+                    Let <m>x\in N</m>. Then <m>\rho(n)</m>, the automorphism <m>\s:G/K\to G/K</m> defined by <m>\s(gK)=xgK</m> is precisely the identity permutation. Thus <m>xgK=gK</m> for all <m>g\in G</m> and <m>g\inv xgK=K</m> for all <m>g\in G</m>, so <m>x\in</m> This means the elements of <m>N</m> are precisely those that are in the conjugacy class of <m>gKg\inv</m> for all <m>g\in G</m>. There cannot exist a larger normal subgroup of <m>G</m> contained in <m>K</m>, as it would contain an element that was not in some conjugacy class for <m>G</m>, negating the definition of a normal subgroup.
+                  </p>
+          
+                  <p>
+                    Recall the permutation representation homomorphism <m>\rho:G\to S_n</m>. The First Isomorphism Theorem tells us <m>G/N\cong\im(\rho)\leq S_n</m>, which has order <m>n!</m>. Thus <m>[G:N]|n!</m>.
+                  </p>
+                </solution>
+    
+              </exercise>
+    
+              <exercise>
+                <statement>
+                  <p>
+                    Let <m>H</m> be a subgroup of a group <m>G</m>. Recall that the centralizer of <m>H</m> is the subgroup of <m>G</m> defined by <m>C_G(H) = \{g \in G | gh = hg ∀h \in H\}</m> and the normalizer of <m>H</m> is the subgroup of <m>G</m> defined by <m>N_G(H) = \{g \in G | gHg\inv = H\}</m>.
+                  </p>
+    
+                  <p>
+                    <ol>
+                      <li>
+                        Show that the centralizer <m>C_G(H)</m> of <m>H</m> in <m>G</m> is a normal subgroup of the normalizer <m>N_G(H)</m> of <m>H</m> in <m>G</m>.
+                      </li>
+          
+                      <li>
+                        Show that the quotient <m>N_G(H)/C_G(H)</m> is isomorphic to a subgroup of the automorphism group <m>\Aut(H)</m> of <m>H</m>.
+                      </li>
+                    </ol>
+                  </p>
+                </statement>
+    
+                <solution>
+                  <p>
+                    Let <m>H</m> be a subgroup of a group <m>G</m>.
+                  </p>
+                  
+                  <p>
+                    <ol>
+                      <li>
+                        <p>
+                          Let <m>G</m> act on <m>H</m> by conjugation. Thus the associated permutation homomorphism <m>\rho</m> is defined such that <m>\rho(g)=\phi_g</m>, where <m>\phi_g(h)=ghg\inv</m>. Notice that when <m>x\in C_G(H)</m> we have <m>\phi_x(h)=xhx\inv=h</m> for all <m>h\in H</m>, and thus <m>x\in\ker(\rho)</m>. If <m>x\in\ker(\rho)</m> then <m>xhx\inv=h</m> for all <m>h\in H</m>, and thus <m>x\in C_G(H)</m>. Thus <m>C_G(H)=\ker(\rho)</m> and <m>C_G(H)\nsg N_G(H)</m>.
+                        </p>
+                      </li>
+    
+                      <li>
+                        <p>
+                          From the above permutation representation we have a homomorphism <m>\rho: G\to S_{|H|}\cong\Aut(H)</m>. As <m>C_G(H)=\ker(\rho)</m>, by the First Isomorphism Theorem we have <m>G/C_G(H)\cong\im(\rho))</m>, a subgroup of <m>\Aut(H)</m>.
+                        </p>
+                      </li>
+                    </ol>
+                  </p>
+                
+                </solution>
+    
+                <solution>
+                  <p>
+                    Let <m>G</m> be a group and <m>H\nsg G</m>. Let <m>x\in C_H(G)</m>, and consider <m>gxg\inv</m>. Let <m>h\in H</m>. As <m>H\nsg G</m> we have <m>h=gh'g\inv</m> for some <m>h\in H</m>, and thus that 
+                    <ol>
+                      <li>
+                        <p>
+                          <m>g\inv h=h'g\inv</m> and 
+                        </p>
+                      </li>
+
+                      <li>
+                        <p>
+                          <m>hg=gh'</m>.
+                        </p>
+                      </li>
+                    </ol>
+                    Consider <m>gxg\inv h</m>. By (1), we see <m>gxg\inv h=gxh'g\inv</m>. As <m>x</m> commutes with everything in <m>H</m> we have <m>gh'xg\inv</m>, and by (2) we have <m>hgxg\inv</m>. Thus <m>C_H(G)\nsg G</m>.
+                  </p>
+        
+                  <p>
+                    Let <m>G</m> act on the left cosets of <m>C_G(H)</m> by left multiplication, giving rise to the permutation representation homomorphism <m>\rho:G/C_G(H)\to\Aut(H)</m>. By the First Isomorphism Theorem we see that <m>G/C_G(H)</m> is isomorphic to a subgroup of the automorphism group of <m>H</m>.
+                  </p>
+                </solution>
+              </exercise>
+              
+              <exercise>
+                <title>January 2014 (2)</title>
+                <statement>
+                  <p> 
+                    Let <m>G</m> be a finite group and let <m>H</m> be a proper subgroup of <m>G</m> with <m>[G:H]=h</m>.
+                  </p>
+          
+                  <p><ol>
+                    <li>
+                    Prove that <m>H</m> has at most <m>h</m> distinct conjugate sets <m>gHg^{-1}</m> for <m>g\in G</m>.
+                    </li>
+          
+                    <li>
+                    Prove that <m>G\neq \bigcup_{g\in G} gHg^{-1}</m>.
+                    </li>
+          
+                  </ol></p>
+                </statement>
+    
+                <solution>
+                  <p>
+                    Let <m>f:G/H\to gHg\inv</m> be defined by <m>f(gH)=gHg\inv</m>. Suppose <m>xH=yH</m>. Notice that <m>f(xH)=xHx\inv</m> and <m>f(H)=yHy\inv</m>, but as <m>x=y</m> we have equality, and thus <m>f</m> is well defined. Let <m>gHg\inv</m> be a conjugate set, and let <m>gH\in G/H</m>. Then <m>f(gH)=gHg\inv</m>, and so we have surjectivity. As <m>|G/H|=|[G:H]|=h</m>, there can be at most <m>h</m> distinct conjugate sets for <m>g\in G</m>.
+                  </p>
+        
+                  <p>
+                    Let <m>G</m> act on <m>H</m> by conjugation. We know that the orbits of this action partition <m>H</m>. However, under this action the orbits are exactly the conjugacy classes of <m>H</m>. There are at most <m>h</m> conjugacy classes. Each conjugacy class has at most <m>|H|</m> elements in it, and each one has the identity. As there are at most <m>h</m> of them then when we add all of their orders we get at most <m>h(|H|-1)</m>, which is less than the order of <m>G</m>.
+                  </p>
+                </solution>
+                
+                </exercise>
+
+                <exercise> <title>January 2015 (1)</title>
+                  <statement>
+                    <p>
+                      Prove <xref ref="thm-smallest-prime-normal"/>
+                    </p>
+                  </statement>
+    
+              </exercise>
+            </exercisegroup>
+          </exercises>
+    
+        </section>
+    
+        <section xml:id="sec-lois">
+          <title>LOIS and Orbit-Stabilizer</title>
+    
+          <blockquote>
+            <p>
+              <q>Once you are in the orbit of your destiny, weightlessness is the only result.</q>
+            </p>
+            <attribution>Baba Amte</attribution>
+          </blockquote>
+    
+          <blockquote>
+            <p>
+              <q>Being born in a stable does not make one a horse.</q>
+            </p>
+            <attribution>Arthur Wellesley</attribution>
+          </blockquote>
+    
+          <definition xml:id="def-orbit">
+            <title>Orbit</title>
+            <statement>
+              <p>
+                Let <m>G</m> be a group acting on a set <m>X</m>. For an element <m>s\in X</m> the orbit of <m>s</m> is 
+                <me>
+                  \operatorname{Orbit}_G(s)=\{g\cdot s \mid g\in G\}
+                </me>
+              </p>
+            </statement>
+          </definition>
+    
+          <proposition xml:id="prop-orbit-properties">
+            <title>Properties of Orbits</title>
             <statement>
               <p>
                 <ol>
                   <li>
                     <p>
-                      Prove that the conjugation action of of <m>G</m> on itself is a well-defined group action.
-                    </p>
-                  </li>
-      
-                  <li>
-                    <p>
-                      Show <m>G</m> acts on <m>H</m> via conjugation for any <m>H\leq G</m>.
+                      If <m>H</m> is a subgroup of <m>G</m>, then the left cosets of <m>H</m> in <m>G</m> correspond precisely to the orbits of <m>H</m> under the left regular action of <m>G</m> on itself.
                     </p>
                   </li>
     
                   <li>
                     <p>
-                      Let <m>N\mathrel{\unlhd}G</m>. The conjugation action of <m>G</m> on itself induces an action by conjugation of <m>G</m> on <m>N</m>. In particular, <m>N</m> is the disjoint union of some of the conjugacy classes in <m>G</m>.
+                      Two elements <m>g,g' \in G</m> are conjugate if and only if <m>g</m> and <m>g'</m> are in the same orbit of the conjugation action.          
+                    </p>
+                  </li>
+    
+                  <li>
+                    <p>
+                      <m>C_G(g)</m> is exactly the orbit of <m>g</m> under conjugation.                
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+          </proposition>
+    
+          <remark>
+            <p>
+              Its always been group actions, the whole time.
+            </p>
+          </remark>
+    
+          <lemma xml:id="lem-orbits-partition">
+            <title>Orbits Partition the Group</title>
+            <statement>
+              <p>
+                Let <m>G</m> be a group acting on a set <m>S</m>. Then
+              </p>
+    
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      <m>\sim_G</m> is an equivalence relation
+                    </p>
+                  </li>
+    
+                  <li>
+                    <p>
+                      for any <m>s,s'\in S</m> either <m>\operatorname{Orbit}_G(s)=\operatorname{Orbit}_G(s')</m> or <m>\operatorname{Orbit}_G(s)\cap \operatorname{Orbit}_G(s')=\emptyset</m>
+                    </p>
+                  </li>
+    
+                  <li>
+                    <p>
+                      <m>S=\bigcup_{\text{pairwise disjoint orbits}} \operatorname{Orbit}_G(s)</m>
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+          </lemma>
+    
+    
+          <definition xml:id="def-stab">
+            <title>Stabilizer</title>
+            <statement>
+              <p>
+                Let <m>G</m> be a group acting on a set <m>X</m>. For an element <m>s\in X</m> the stabilizer is 
+                <me>
+                  \operatorname{Stab}_G(s)=\{g\in G \mid g\cdot s=s\}.
+                </me>
+              </p>
+            </statement>
+          </definition>
+    
+          <proposition xml:id="prop-stabilizer-is-subgroup">
+            <title>Stabilizers are Subgroups</title>
+            <statement>
+              <p>
+                The stabilizer <m>\operatorname{Stab}_G(s)</m> is a subgroup of <m>G</m>.
+              </p>
+            </statement>
+          </proposition>
+
+          <p>One of the most important facts about the action of a group on a finite set is the following:</p>
+    
+          <theorem xml:id="thm-LOIS">
+            <title>The Length of the Orbit is the Index of the Stabilizer (LOIS)</title>
+            
+            <statement>
+              <p>
+                Let <m>G</m> be a group that acts on a finite set <m>S</m> via <m>\cdot</m>. For any <m>s \in S</m> we have <me>|\operatorname{Orbit}_G(s)| = [G: \operatorname{Stab}_G(s)]</me>
+              </p>
+            </statement>
+    
+            <proof>
+              <p>
+                Let <m>\mathcal L</m> be the collection of left cosets of <m>\operatorname{Stab}_G(s)</m> in <m>G</m>. Define a function 
+                <me>
+                  \alpha: \mathcal L\to \operatorname{Orbit}_G(s)
+                </me> 
+                by <m>\alpha(x \operatorname{Stab}_G(s)) = x \cdot s</m>. This function is well defined and one-to-one: 
+                <me>
+                  x \operatorname{Stab}_G(s) = y \operatorname{Stab}_G(s)\iff x^{-1}y \in \operatorname{Stab}_G(s) \iff x^{-1}y \cdot s = s \iff y \cdot s = x \cdot s.
+                </me> 
+                The function <m>\alpha</m> is onto by definition of <m>\operatorname{Orbit}_G(s)</m>. Thus <m>\alpha</m> is a bijection and it yields equalities 
+                <me>
+                  [G: \operatorname{Stab}_G(s)]=|\mathcal L|=|\operatorname{Orbit}_G(s)|.
+                </me>
+              </p>
+            </proof>
+          </theorem>
+    
+          <corollary xml:id="cor-orbit-stabilizer">
+            <title>Orbit-Stabilizer Theorem</title>
+            
+            <statement>
+              <p>
+                Let <m>G</m> be a finite group that acts on a finite set <m>S</m> via <m>\cdot</m>. For any <m>s \in S</m> we have 
+                <me>
+                  |G|=|\operatorname{Orbit}_G(s)|\cdot |\operatorname{Stab}_G(s)].
+                </me>
+              </p>
+            </statement>
+          </corollary>
+    
+          <warning>
+            <p>
+              Take note that <xref text="title" ref="cor-orbit-stabilizer"/> only apply when <m>G</m> is a <em>finite</em> group.
+            </p>
+          </warning>
+    
+          <theorem xml:id="thm-conjugation-and-lois">
+            <title>Conjugation Actions and LOIS</title>
+            <statement>
+              <p>
+                Let <m>G</m> be a group.
+              </p>
+    
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      Then <m>G</m> acts on <m>G</m> by conjugation (<m>g \cdot g' = gg'g^{-1}</m>). For all <m>g \in G</m>, the orbit of <m>g</m> is the conjugacy class of <m>g</m>, <m>\operatorname{Stab}_G(g)=C_G(G)</m> and <m>|[g]_c| = [G : C_G(g)]</m>.
+                    </p>
+                  </li>
+    
+                  <li>
+                    <p>
+                      Then <m>G</m> acts on the power set <m>P(G)=\{S\mid S\subseteq G\}</m> by conjugation (<m>g \cdot S = gSg^{-1}</m>). For all <m>S \in P(G)</m>, <m>\operatorname{Stab}_G(S)=N_G(S)</m> and <m>|\operatorname{Orbit}_G(S)| = [G : N_G(S)]</m>.
                     </p>
                   </li>
                 </ol>
@@ -5571,795 +6173,372 @@
             </statement>
           </theorem>
     
-          <proposition xml:id="prop-kernel-of-conjugation-action">
-            <title>Conjugation Kernel</title>
+          <corollary xml:id="cor-conjugacy-divides-order">
+            <title>Size of Conjugacy Class Divides <m>|G|</m></title>
             <statement>
               <p>
-                The kernel of the permutation representation for the conjugation action is the center <m>Z(G)</m>. 
-              </p>
-            </statement>
-    
-            <proof>
-              <p>
-                If <m>\rho:G\to \operatorname{Perm}(G)</m> is the permutation representation for <m>G</m> acting on <m>G</m> by conjugation, then 
-                <me>
-                  g\in \operatorname{Ker}\rho\iff g\cdot x=x, \forall x\in G \iff gxg^{-1}=x, \forall x\in G
-                </me>
-                <me>
-                  \iff gx=xg, \forall x\in G \iff g\in Z(G).
-                </me>
-              </p>
-            </proof>
-          </proposition>
-    
-          <corollary xml:id="cor-faithful-conjugation">
-            <title>Faithful Conjugations</title>
-            <statement>
-              <p>
-                The action of <m>G</m> on itself by conjugation is faithful if and only if <m>Z(G)=\{e\}</m>.
+                For a finite group <m>G</m>, the size of any conjugacy class divides <m>|G|</m>.
               </p>
             </statement>
           </corollary>
+        
     
-        </subsection>
-  
-        <subsection xml:id="subsec-left-multiplication">
-          <title>Left Regualr Action</title>
-  
-          <example xml:id="ex-leftreg">
-            <title>Left Regular Action</title>
-            
+          <exercises>
+    
+            <exercisegroup> <title>Computations and Examples</title>
+              
+              <introduction>
+                <p>
+                </p>
+              </introduction>
+          
+              <exercise>
+                <p>
+                  Coming soon to an OER near you!
+                </p>
+              </exercise>
+          
+            </exercisegroup>
+          
+            <exercisegroup> <title>Formal Proofs</title>
+              
+              <introduction>
+                <p>
+                </p>
+              </introduction>
+          
+              <exercise>
+                <title></title>
+
+                <statement>
+                  <p>
+                    Let <m>H</m> be a subgroup of a finite group <m>G</m> and consider the set <m>X=\{xHx^{-1} \mid x\in G\}</m>. Prove that <m>|X|=[G:N_G(H)]</m> where <m>N_G(H)=\{g\in G\mid gHg^{-1}=H\}</m>. <m>N_G(H)</m> is called the normalizer of <m>H</m> in <m>G</m>.              
+                  </p>
+                </statement>
+
+                <solution>
+                  <p>
+                    Note that <m>G</m> acts on <m>X</m> by conjugation and that <m>X = \Orb(H)</m>. Note also that the stabilizer of <m>H</m> under this action is precisely <m>N_G(H)</m>. The result now follows directly from the Orbit-Stabilizer theorem.
+                  </p>
+                </solution>
+              </exercise>
+
+              <exercise>
+                <title></title>
+
+                <statement>
+                  <p>
+                    Let <m>G</m> be a finite group and <m>H</m> a proper subgroup (i.e., <m>H\neq G</m>). Prove that 
+                    <me>
+                      \bigcup_{x\in G} xHx^{-1}\neq G.
+                    </me>                
+                  </p>
+                </statement>
+
+                <solution>
+                  <p>
+                    Note that <m>|xHx\inv| = |H|</m> for all <m>x \in  G</m>. Also, by the previous problem, the number of distinct subgroups <m>xHx\inv</m> is <m>[G : NG(H)]</m>. Let <m>n = [G : N_G(H)]</m> and <m>x_iHx\inv_i</m> for <m>i = 1,\dots,n</m> the distinct conjugates of <m>H</m>. Note first that if <m>n = 1</m> then <m>H \nsg G</m> and result holds since <m>H \neq G</m>. So assume <m>n\geq2</m>. Since each conjugate contains <m>|H|-1</m> non-identity elements, we have 
+                    <me>
+                      \bigcup_{x\in G} xHx\inv|= | \bigcup^n_{i=1}  x_iHx\inv_i |\geq1 +  \sum^n_{i=1}  (|H|\inv) = 1 + n|H|-n.
+                    </me> 
+                    As <m>n = [G : N_G(H)] \leq[G : H]</m> (as <m>H \sse N_G(H)</m>), we have <m>n|H|≤|[G : H]|H| = |G|</m>. Thus, as <m>n ≥2, 1 + n|H|-n ≤1 + |G|-n &lt; |G|.</m>                
+                  </p>
+                </solution>
+              </exercise>
+
+              <exercise>
+                <title></title>
+
+                <statement>
+                  <p>
+                    Suppose <m>G</m> acts on a set <m>X</m> and let <m>u,v\in X</m>. Suppose <m>u</m> and <m>v</m> lie in the same orbit. Prove that <m>G_u=gG_vg^{-1}</m> for some <m>g\in G</m>. Conclude that if the action is transitive (i.e., there is precisely one orbit) then for any <m>u\in X</m> the kernel of the action is 
+                    <me>
+                      \bigcap_{g\in G} gG_ug^{-1}.
+                    </me>              
+                  </p>
+                </statement>
+
+                <solution>
+                  <p>
+                  Suppose <m>u,v \in X</m> lie in the same orbit. Then <m>u = gv</m> for some <m>g \in G</m>. Then <m>a \in  G_u</m> if and only <m>au = u</m>, which is if and only if <m>agv = gv</m>, which is if and only if <m>(g\inv ag)v = v</m>, which is if and only <m>if g\inv ag \in Gv</m>, which is if and only if <m>a \in  gGvg\inv.</m>
+                  </p>
+
+                  <p>
+                    Thus, <m>G_u = gG_vg\inv</m>. Now, if <m>G</m> acts transitively on <m>X</m>, then <m>X = \{gv |g \in G\}</m> for any <m>v \in  X</m>. Hence, by the argument above, for any <m>u \in  X, G_u = gG_vg\inv</m> for some <m>g \in  G</m>.
+                  </p>
+      
+                  <p>
+                    Since the kernel of the action is the intersection of all the stabilizers, we obtain the desired conclusion.
+                  </p>
+                </solution>
+              </exercise>
+
+              <exercise>
+                <title></title>
+                <statement>
+                  <p>
+                    Suppose that <m>G</m> is an abelian group acting transitively and faithfully on a set <m>X</m>. Prove that <m>|G|=|X|</m>.
+                  </p>
+                </statement>
+
+                <solution>
+                  <p>
+                    Let <m>u \in X</m>. As the action is transitive, by the exercise above we have that the kernel of the action is the intersection of <m>gG_ug\inv</m> over all <m>g \in G</m>. However, as <m>G</m> is abelian, <m>gG_ug\inv = G_u</m> for all <m>g \in G</m>. Hence, the kernel of the action is <m>G_u</m> for any <m>u \in X</m>. On the other hand, the action is faithful, which means the kernel of the action is the identity. It follows that <m>G_u = \{e\}</m> for every <m>u \in X</m>. Finally, as the action is transitive, <m>X = \Orb(u)</m> for some (any) <m>u \in X</m>. By the Orbit-Stabilizer theorem, <m>|X|= |\Orb(u)|= [G : G_u] = |G|</m>.
+                  </p>
+                </solution>
+              </exercise>
+          
+            </exercisegroup>
+          
+            <exercisegroup> <title>Qualifying Exam Problems</title>
+              
+              <introduction>
+                <p>
+                </p>
+              </introduction>
+          
+              <exercise> <title>January 2021 (1)</title>
+              
+              
+                <statement>
+                  <p>
+                    Let <m>G = A_7</m> and <m>S</m> be the set of elements of <m>G</m> of order <m>7</m>. Prove that <m>S</m> is not a conjugacy class of <m>G</m>.
+                  </p>
+                </statement>
+    
+                <solution>
+                  <p>
+                    Elements of order <m>7</m> in <m>G</m> must permute all <m>7</m> elements, making them of the form <m>(abcdefg)</m>. There are <m>6!</m> such permutations, given that we can always reorder them so that <m>a</m> is first, leaving <m>6</m> remaining spots without replacement. Let <m>S</m> denote the set of these <m>6!</m> elements.
+                  </p>
+    
+                  <p>
+                    Suppose by way of contradiction there existed some <m>s\in G</m> such that <m>S=C_s(G)</m>. Let <m>G</m> act on itself through conjugation, making <m>S=C_s(G)=\Orb(s)</m> by the definition of conjugacy class. The <xref text="title" ref="cor-orbit-stabilizer"/> tells us that <m>|G|=|\Orb(s)|\cdot|\Stab(s)|</m>, meaning that the order of <m>S</m> must divide the order of <m>G</m>. However, <m>|G|=\frac{7!}{2}</m> and <m>|S|=6!</m>, so this is a contradiction. Thus <m>S</m> is not a conjugacy class of <m>G</m>.
+                  </p>
+                </solution>
+          
+              </exercise>
+    
+              <exercise> <title>June 2016 (2)</title>
+              
+              
+                <statement>
+                  <p>
+                    Prove that if <m>G</m> is a finite group of odd order, then for any non-identity element <m>x\in G</m>, <m>x</m> is not conjugate to <m>x\inv</m>.
+                  </p>
+                </statement>
+    
+                <solution>
+                  <p>
+                    Let <m>G</m> be a finite group of odd order, and let <m>G</m> act on itself via conjugation. Under this action, the orbit of an element is exactly its conjugacy class by <xref ref="prop-orbit-properties"/>. By the <xref text="title" ref="cor-orbit-stabilizer"/> we have <m>|G|=|\Orb(x)|\cdot|\Stab(x)|</m>. Thus the order of an element divides the order of the group, and so every orbit must have odd order.
+                  </p>
+        
+                  <p>
+                    Suppose there exists an element <m>x</m> such that <m>gxg\inv=x\inv</m> for some <m>g\in G</m>. Thus <m>x\inv\in\Orb(x)</m>. Let <m>y\in\Orb(x)</m>. Thus <m>y=hxh\inv</m> for some <m>h\in G</m>. Then <m>y\inv=h\inv x\inv h</m>. However, as <m>x\inv=gxg\inv</m>, we have <m>y\inv=h\inv gxg\inv h</m>. As <m>h\inv g</m> and <m>g\inv h</m> are both in <m>G</m>, we see that <m>y\inv\in\Orb(x)</m> as well. As <m>e\in\Stab(x)</m>, we see that this means that the orbit of <m>x</m> would have even order, which is not possible.
+                  </p>
+                </solution>
+    
+              </exercise>
+    
+              <exercise> <title>January 2021 (2)</title>
+              
+              
+                <statement>
+                  <p>
+                    Let <m>G</m> be a group acting transitively on a set <m>S</m>. For <m>a\in S</m>, let <m>G_a = \{g\in G | ga = a\}</m> be the stabilizer of <m>a</m> under the action from <m>G</m>.
+                  </p>
+          
+                  <p>
+                    <ol>
+                      <li>
+                        Let <m>a, b\in S</m>. Prove there exists <m>g\in G</m> such that <m>G_b = gG_ag\inv</m>.
+                      </li>
+          
+                      <li>
+                        Suppose <m>S</m> has more than one element and that <m>G</m> is finite. Prove that there exists <m>g\in G</m> which has no fixed point, that is, for all <m>a\in S, ga\neq a</m>
+                      </li>
+                    </ol>
+                  </p>
+                </statement>
+    
+                <solution>
+                  <p>
+                    Let <m>G</m> be a group acting transitively on a set <m>S</m>.
+                  </p>
+        
+                  <p>
+                    The action is transitive, so there exists some <m>g\in G</m> such that <m>ga=b</m>.
+                  </p>
+        
+                  <p>
+                    Let <m>x\in\Stab(a)</m>, consider <m>gxg\inv</m>b. Since <m>g\inv b=a</m>, we have <m>gxa</m>, <m>x</m> stabilizes <m>a</m> so now <m>ga</m>, but <m>ga=b</m>. So <m>g\Stab(a)g\inv\subseteq\Stab(b)</m>.
+                  </p>
+        
+                  <p>
+                    Let <m>x\in\Stab(b)</m>. We know <m>xb=b</m> and also <m>ga=b</m>, and so <m>xga=ga</m>. Applying <m>g\inv</m> to both to see <m>g\inv xga=a</m>. This puts <m>g\inv xg\in\Stab(a)</m>. Thus <m>x\in g\Stab(a)g\inv</m>, completing the proof.
+                  </p>
+        
+                  <p>
+                    The action is transitive, so there is only one orbit, and so <m>\Orb(a)=\Orb(b)=G</m>. Since <m>G</m> is finite, the <xref text="title" ref="cor-orbit-stabilizer"/> tells us <m>|\Orb(a)|=|G|/|\Stab(a)|</m>. Since every orbit has the same order as <m>G</m>, we see <m>\Stab(a)=\{e\}</m> for all <m>a\in S</m>. Thus there cannot exist any fixed points.
+                  </p>
+                </solution>
+              </exercise>
+          
+            </exercisegroup>
+          </exercises>
+          
+        </section>
+    
+        <section xml:id="sec-class-eq">
+          <title>The Class Equation</title>
+    
+          <blockquote>
             <p>
-              Let <m>G</m> be any group and define an action <m>\cdot</m> of <m>G</m> on <m>G</m> (regarded as just a set) by the rule 
-              <me>
-                g \cdot x = g  x, \;\text{for}\; g \in G \;\text{and}\; x \in G.
-              </me>
+              <q>Let the others have the charisma. I've got the class.</q>
             </p>
-          </example>
-  
-          <remark>
+            <attribution>George H. W. Bush</attribution>
+          </blockquote>
+    
+          <blockquote>
             <p>
-              This action is often referred to as left multiplcation.
+              <q>Class is the sure-footedness that comes with having proved you can meet life.</q>
             </p>
-          </remark>
-  
-          <proposition xml:id="prop-left-mult-well-defined">
-            <title>Left Multiplication is Faithful</title>
+            <attribution>Ann Landers</attribution>
+          </blockquote>
+          
+          <definition xml:id="def-centralizer">
+            <title>Centralizer</title>
             <statement>
               <p>
+                Let <m>G</m> be a group. For any <m>g \in G</m>, 
+                <me>
+                  Z_G(g):= \{g \in G \mid gx = xg\}
+                </me> 
+                is called the <em>centralizer</em> of <m>g</m> in <m>G</m> 
+              </p>
+            </statement>
+          </definition>
+    
+          <definition xml:id="def-normalizer">
+            <title>Normalizer</title>
+            <statement>
+              <p>
+                Let <m>G</m> be a group. For any <m>S \subseteq G</m>, 
+                <me>
+                  N_G(S):= \{g \in G \mid gSg^{-1}=S\}
+                </me> 
+                is called the <em>normalizer</em> of <m>S</m> in <m>G</m>.
+              </p>
+            </statement>
+          </definition>
+    
+          <theorem xml:id="thm-conjclass">
+            <statement>
+              <p> 
+                Let <m>G</m> be a group.
                 <ol>
                   <li>
                     <p>
-                      Prove that the left regular action is a well defined action.
+                      Then <m>G</m> acts on <m>G</m> by conjugation (<m>g \cdot g' = gg'g^{-1}</m>). For all <m>g \in G</m>, the orbit of <m>g</m> is the conjugacy class of <m>g</m>, <m>\operatorname{Stab}_G(g)=C_G(G)</m> and <m>|[g]_c| = [G : C_G(g)]</m>.
                     </p>
                   </li>
-  
+        
                   <li>
                     <p>
-                      Prove that the left regular action is faithful.
+                      Then <m>G</m> acts on the power set <m>P(G)=\{S\mid S\subseteq G\}</m> by conjugation (<m>g \cdot S = gSg^{-1}</m>). For all <m>S \in P(G)</m>, <m>\operatorname{Stab}_G(S)=N_G(S)</m> and <m>|\operatorname{Orbit}_G(S)| = [G : N_G(S)]</m>.
                     </p>
                   </li>
                 </ol>
               </p>
             </statement>
-          </proposition>
-  
-          <lemma xml:id="lem-largest-normal-subgroup">
+          </theorem>
+    
+          <corollary xml:id="cor-conjclass">
             <statement>
               <p>
-                Let <m>H</m> be a subgroup of a group <m>G</m>, and let <m>G</m> act on the set <m>G/H</m> of left cosets by left multiplication <m>g \cdot (g'H) = (gg')H</m>. Let <m>\rho: G\to \Perm(G/H)</m> denote the permutation representation associated to this action. Then
+                For a finite group <m>G</m>, the size of any conjugacy class divides <m>|G|</m>.
               </p>
-  
-              <p>
-                <ol>
-                <li>
-                the action described above is transitive
-                </li>
-  
-                <li>
-                <m>\ker(\rho) = \bigcap_{g \in G} gHg^{-1}</m>
-                </li>
-  
-                <li>
-                the subgroup described in (a) is the largest (with respect to containment) normal subgroup of <m>G</m> contained in <m>H</m>.
-                </li>
-  
-              </ol>
-            </p>
-  
             </statement>
-          </lemma>
-  
-          <proposition xml:id="prop-normal-subgroups-and-index">
+          </corollary>
+    
+          <theorem xml:id="thm-class-eq">
+            <title>The Class Equation</title>
+            
             <statement>
               <p>
-                Let <m>G</m> be a group, and let <m>H</m> be a subgroup of <m>G</m> of finite index <m>[G:H] = n</m>. Show that there exists a normal subgroup <m>N\norm G</m> such that <m>N \leq H</m> and <m>[G:N] \leq n!</m>
+                Let <m>G</m> be a finite group and let <m>g_1,\ldots g_r \in G</m> be a list of unique representatives of all of the conjugacy classes of <m>G</m> of size greater than <m>1</m>. Then 
+                <me>
+                  |G| = |Z(G)| + \sum_i^r [G : C_G(g_i)]
+                </me>.
               </p>
             </statement>
-          </proposition>
-         
-          <theorem xml:id="thm-smallest-prime-normal">
-            <title>Smallest Prime Index is Normal</title>
-            <statement>
-              <p>
-                Let <m>G</m> be a finite group and let <m>H</m> be a subgroup of <m>G</m> of index <m>p</m>, where <m>p</m> is the smallest prime divisor of the order of <m>G</m>. Prove that <m>H</m> is normal in <m>G</m>.
-              </p>
-            </statement>
-      
+    
             <proof>
               <p>
-                Let <m>S=G/H</m> and note that <m>|S|=p</m>. Let <m>K</m> denote the kernel of the permutation representation generated by <m>G</m> acting on <m>S</m> by left multiplication.
-              </p>
-      
-              <p>
-                The First Isomorphism Theorem tells us that <m>G/K\cong\im(\rho)\leq S_p</m>. Thus <m>|K|\big|p!</m> by Lagrange's Theorem. Let <m>k\in K</m>. Then <m>kgH=gH</m> for all <m>g\in G</m>, making <m>k\in gHg\inv</m> for all <m>g\in G,</m> including <m>e</m>. Thus <m>K\nsg H</m>.
-              </p>
-      
-              <p>
-                This yields <m>[G:K]=[G:H][H:K]</m>. Let <m>h=[H:K]</m>, giving us <m>[G:K]=ph</m>. As <m>|K|\big|p!</m> we have <m>h|(p-1)!</m>, so <m>h&lt;p</m>. But <m>p</m> is the smallest prime dividing the order of <m>G</m>, and thus <m>h=1</m>, making <m>H=K</m> and <m>H\nsg G</m>.
+                The elements of <m>Z(G)</m> are precisely the group elements that are conjugate to only themselves; that is, they are the one-element orbits for the conjugation action. Because the conjugacy classes (orbits of the conjugation action) partition <m>G</m> we have 
+                <me>
+                  |G| = |Z(G)| + \sum_i^r [g_i]_c.
+                </me> 
+                For each <m>g_i</m> as in the statement, by Theorem <xref ref="thm-conjclass" />, we have <m>[G: C_G(g_i)] =[g_i]_c</m>. The class equation follows from substituting this into the equation above.
               </p>
             </proof>
-           </theorem>
-  
-           <remark>
-            <p>
-              Proving this theorem was Problem () on the Qual and Problem () on the Qual
-            </p>
-           </remark>
-  
-  
-        </subsection>
-  
-        <exercises>
-  
-          <exercisegroup>
-            <title>Computations and Examples</title>
-            <introduction>
-              <p>
-              </p>
-            </introduction>
-        
-            <exercise>
-              <p>
-                Coming soon to an OER near you!
-              </p>
-            </exercise>
-        
-          </exercisegroup>
-        
-          <exercisegroup>
-            <title>Formal Proofs</title>
-            <introduction>
-              <p>
-              </p>
-            </introduction>
-        
-            <exercise>
-              <p>
-                Coming soon to an OER near you!
-              </p>
-            </exercise>
-        
-          </exercisegroup>
-        
-          <exercisegroup>
-            <title>Qualifying Exam Problems</title>
-            <introduction>
-              <p>
-              </p>
-            </introduction>
-  
-            <exercise>
-              <statement>
+          </theorem>
+    
+          <exercises>
+    
+            <exercisegroup>
+              <title>Computations and Examples</title>
+              <introduction>
                 <p>
-                  Let <m>G</m> be a (not necessarily finite) group and <m>K \leq G</m> a subgroup of index <m>n &lt; \infty</m>. Define <me>N=\bigcap_{g\in G}gKg\inv</me>(i.e., <m>N</m> is the intersection of all the conjugates of K<m>)</m>
                 </p>
-        
-                <p><ol>
-                  <li>
-                  Prove <m>N</m> is a the largest normal subgroup of <m>G</m> that is contained in <m>K</m>.
-                  </li>
-        
-                  <li>
-                  Prove <m>[G : N ]</m> divides <m>n!</m>.
-                  </li>
-        
-                </ol></p>
-              </statement>
-  
-              <solution>
-                <p>
-                  Let <m>G</m> act on the left cosets of <m>K</m> in <m>G</m> by left multiplication, yielding the permutation representation homomorphism <m>\rho:G\to S_n</m>. Let <m>N</m> conspicuously denote the kernel of this function.
-                </p>
-      
-                <p>
-                  Let <m>x\in N</m>. Then <m>\rho(n)</m>, the automorphism <m>\s:G/K\to G/K</m> defined by <m>\s(gK)=xgK</m> is precisely the identity permutation. Thus <m>xgK=gK</m> for all <m>g\in G</m> and <m>g\inv xgK=K</m> for all <m>g\in G</m>, so <m>x\in</m> This means the elements of <m>N</m> are precisely those that are in the conjugacy class of <m>gKg\inv</m> for all <m>g\in G</m>. There cannot exist a larger normal subgroup of <m>G</m> contained in <m>K</m>, as it would contain an element that was not in some conjugacy class for <m>G</m>, negating the definition of a normal subgroup.
-                </p>
-         
-                <p>
-                  Recall the permutation representation homomorphism <m>\rho:G\to S_n</m>. The First Isomorphism Theorem tells us <m>G/N\cong\im(\rho)\leq S_n</m>, which has order <m>n!</m>. Thus <m>[G:N]|n!</m>.
-                </p>
-              </solution>
-  
-            </exercise>
-  
-            <exercise>
-              <statement>
-                <p>
-                  Let <m>H</m> be a subgroup of a group <m>G</m>. Recall that the centralizer of <m>H</m> is the subgroup of <m>G</m> defined by <m>C_G(H) = \{g \in G | gh = hg ∀h \in H\}</m> and the normalizer of <m>H</m> is the subgroup of <m>G</m> defined by <m>N_G(H) = \{g \in G | gHg\inv = H\}</m>.
-                </p>
-  
-                <p>
-                  <ol>
-                    <li>
-                      Show that the centralizer <m>C_G(H)</m> of <m>H</m> in <m>G</m> is a normal subgroup of the normalizer <m>N_G(H)</m> of <m>H</m> in <m>G</m>.
-                    </li>
-        
-                    <li>
-                      Show that the quotient <m>N_G(H)/C_G(H)</m> is isomorphic to a subgroup of the automorphism group <m>\Aut(H)</m> of <m>H</m>.
-                    </li>
-                  </ol>
-                </p>
-              </statement>
-  
-              <solution>
-                <p>
-                  Let <m>H</m> be a subgroup of a group <m>G</m>.
-                </p>
-                
-                <p>
-                  <ol>
-                    <li>
-                      <p>
-                        Let <m>G</m> act on <m>H</m> by conjugation. Thus the associated permutation homomorphism <m>\rho</m> is defined such that <m>\rho(g)=\phi_g</m>, where <m>\phi_g(h)=ghg\inv</m>. Notice that when <m>x\in C_G(H)</m> we have <m>\phi_x(h)=xhx\inv=h</m> for all <m>h\in H</m>, and thus <m>x\in\ker(\rho)</m>. If <m>x\in\ker(\rho)</m> then <m>xhx\inv=h</m> for all <m>h\in H</m>, and thus <m>x\in C_G(H)</m>. Thus <m>C_G(H)=\ker(\rho)</m> and <m>C_G(H)\nsg N_G(H)</m>.
-                      </p>
-                    </li>
-  
-                    <li>
-                      <p>
-                        From the above permutation representation we have a homomorphism <m>\rho: G\to S_{|H|}\cong\Aut(H)</m>. As <m>C_G(H)=\ker(\rho)</m>, by the First Isomorphism Theorem we have <m>G/C_G(H)\cong\im(\rho))</m>, a subgroup of <m>\Aut(H)</m>.
-                      </p>
-                    </li>
-                  </ol>
-                </p>
-               
-              </solution>
-  
-              <solution>
-                <p>
-                  Let <m>G</m> be a group and <m>H\nsg G</m>. Let <m>x\in C_H(G)</m>, and consider <m>gxg\inv</m>. Let <m>h\in H</m>. As <m>H\nsg G</m> we have <m>h=gh'g\inv</m> for some <m>h\in H</m>, and thus that 
-                  <ol>
-                    <li>
-                      <p>
-                        <m>g\inv h=h'g\inv</m> and 
-                      </p>
-                    </li>
-
-                    <li>
-                      <p>
-                        <m>hg=gh'</m>.
-                      </p>
-                    </li>
-                  </ol>
-                  Consider <m>gxg\inv h</m>. By (1), we see <m>gxg\inv h=gxh'g\inv</m>. As <m>x</m> commutes with everything in <m>H</m> we have <m>gh'xg\inv</m>, and by (2) we have <m>hgxg\inv</m>. Thus <m>C_H(G)\nsg G</m>.
-                </p>
-      
-                <p>
-                  Let <m>G</m> act on the left cosets of <m>C_G(H)</m> by left multiplication, giving rise to the permutation representation homomorphism <m>\rho:G/C_G(H)\to\Aut(H)</m>. By the First Isomorphism Theorem we see that <m>G/C_G(H)</m> is isomorphic to a subgroup of the automorphism group of <m>H</m>.
-                </p>
-              </solution>
-            </exercise>
-            
-            <exercise>
-              <title>January 2014 (2)</title>
-              <statement>
-                <p> 
-                  Let <m>G</m> be a finite group and let <m>H</m> be a proper subgroup of <m>G</m> with <m>[G:H]=h</m>.
-                </p>
-        
-                <p><ol>
-                  <li>
-                  Prove that <m>H</m> has at most <m>h</m> distinct conjugate sets <m>gHg^{-1}</m> for <m>g\in G</m>.
-                  </li>
-        
-                  <li>
-                  Prove that <m>G\neq \bigcup_{g\in G} gHg^{-1}</m>.
-                  </li>
-        
-                </ol></p>
-              </statement>
-  
-              <solution>
-                <p>
-                  Let <m>f:G/H\to gHg\inv</m> be defined by <m>f(gH)=gHg\inv</m>. Suppose <m>xH=yH</m>. Notice that <m>f(xH)=xHx\inv</m> and <m>f(H)=yHy\inv</m>, but as <m>x=y</m> we have equality, and thus <m>f</m> is well defined. Let <m>gHg\inv</m> be a conjugate set, and let <m>gH\in G/H</m>. Then <m>f(gH)=gHg\inv</m>, and so we have surjectivity. As <m>|G/H|=|[G:H]|=h</m>, there can be at most <m>h</m> distinct conjugate sets for <m>g\in G</m>.
-                </p>
-      
-                <p>
-                  Let <m>G</m> act on <m>H</m> by conjugation. We know that the orbits of this action partition <m>H</m>. However, under this action the orbits are exactly the conjugacy classes of <m>H</m>. There are at most <m>h</m> conjugacy classes. Each conjugacy class has at most <m>|H|</m> elements in it, and each one has the identity. As there are at most <m>h</m> of them then when we add all of their orders we get at most <m>h(|H|-1)</m>, which is less than the order of <m>G</m>.
-                </p>
-              </solution>
-  
-            </exercise>
-          </exercisegroup>
-        </exercises>
-  
-  
-      </section>
-  
-      <section xml:id="sec-lois">
-        <title>LOIS and Orbit-Stabilizer</title>
-  
-        <blockquote>
-          <p>
-            <q>Once you are in the orbit of your destiny, weightlessness is the only result.</q>
-          </p>
-          <attribution>Baba Amte</attribution>
-        </blockquote>
-  
-        <blockquote>
-          <p>
-            <q>Being born in a stable does not make one a horse.</q>
-          </p>
-          <attribution>Arthur Wellesley</attribution>
-        </blockquote>
-  
-        <definition xml:id="def-orbit">
-          <title>Orbit</title>
-          <statement>
-            <p>
-              Let <m>G</m> be a group acting on a set <m>X</m>. For an element <m>s\in X</m> the orbit of <m>s</m> is 
-              <me>
-                \operatorname{Orbit}_G(s)=\{g\cdot s \mid g\in G\}
-              </me>
-            </p>
-          </statement>
-        </definition>
-  
-        <proposition xml:id="prop-orbit-properties">
-          <title>Properties of Orbits</title>
-          <statement>
-            <p>
-              <ol>
-                <li>
-                  <p>
-                    If <m>H</m> is a subgroup of <m>G</m>, then the left cosets of <m>H</m> in <m>G</m> correspond precisely to the orbits of <m>H</m> under the left regular action of <m>G</m> on itself.
-                  </p>
-                </li>
-  
-                <li>
-                  <p>
-                    Two elements <m>g,g' \in G</m> are conjugate if and only if <m>g</m> and <m>g'</m> are in the same orbit of the conjugation action.          
-                  </p>
-                </li>
-  
-                <li>
-                  <p>
-                    <m>C_G(g)</m> is exactly the orbit of <m>g</m> under conjugation.                
-                  </p>
-                </li>
-              </ol>
-            </p>
-          </statement>
-        </proposition>
-  
-        <remark>
-          <p>
-            Its always been group actions, the whole time.
-          </p>
-        </remark>
-  
-        <lemma xml:id="lem-orbits-partition">
-          <title>Orbits Partition the Group</title>
-          <statement>
-            <p>
-              Let <m>G</m> be a group acting on a set <m>S</m>. Then
-            </p>
-  
-            <p>
-              <ol>
-                <li>
-                  <p>
-                    <m>\sim_G</m> is an equivalence relation
-                  </p>
-                </li>
-  
-                <li>
-                  <p>
-                    for any <m>s,s'\in S</m> either <m>\operatorname{Orbit}_G(s)=\operatorname{Orbit}_G(s')</m> or <m>\operatorname{Orbit}_G(s)\cap \operatorname{Orbit}_G(s')=\emptyset</m>
-                  </p>
-                </li>
-  
-                <li>
-                  <p>
-                    <m>S=\bigcup_{\text{pairwise disjoint orbits}} \operatorname{Orbit}_G(s)</m>
-                  </p>
-                </li>
-              </ol>
-            </p>
-          </statement>
-        </lemma>
-  
-  
-        <definition xml:id="def-stab">
-          <title>Stabilizer</title>
-          <statement>
-            <p>
-              Let <m>G</m> be a group acting on a set <m>X</m>. For an element <m>s\in X</m> the stabilizer is 
-              <me>
-                \operatorname{Stab}_G(s)=\{g\in G \mid g\cdot s=s\}.
-              </me>
-            </p>
-          </statement>
-        </definition>
-  
-        <proposition xml:id="prop-stabilizer-is-subgroup">
-          <title>Stabilizers are Subgroups</title>
-          <statement>
-            <p>
-              The stabilizer <m>\operatorname{Stab}_G(s)</m> is a subgroup of <m>G</m>.
-            </p>
-          </statement>
-        </proposition>
-  
-        <theorem xml:id="thm-LOIS">
-          <title>The Length of the Orbit is the Index of the Stabilizer (LOIS)</title>
+              </introduction>
           
-          <statement>
-            <p>
-              Let <m>G</m> be a group that acts on a finite set <m>S</m> via <m>\cdot</m>. For any <m>s \in S</m> we have <me>|\operatorname{Orbit}_G(s)| = [G: \operatorname{Stab}_G(s)]</me>
-            </p>
-          </statement>
-  
-          <proof>
-            <p>
-              Let <m>\mathcal L</m> be the collection of left cosets of <m>\operatorname{Stab}_G(s)</m> in <m>G</m>. Define a function 
-              <me>
-                \alpha: \mathcal L\to \operatorname{Orbit}_G(s)
-              </me> 
-              by <m>\alpha(x \operatorname{Stab}_G(s)) = x \cdot s</m>. This function is well defined and one-to-one: 
-              <me>
-                x \operatorname{Stab}_G(s) = y \operatorname{Stab}_G(s)\iff x^{-1}y \in \operatorname{Stab}_G(s) \iff x^{-1}y \cdot s = s \iff y \cdot s = x \cdot s.
-              </me> 
-              The function <m>\alpha</m> is onto by definition of <m>\operatorname{Orbit}_G(s)</m>. Thus <m>\alpha</m> is a bijection and it yields equalities 
-              <me>
-                [G: \operatorname{Stab}_G(s)]=|\mathcal L|=|\operatorname{Orbit}_G(s)|.
-              </me>
-            </p>
-          </proof>
-        </theorem>
-  
-        <corollary xml:id="cor-orbit-stabilizer">
-          <title>Orbit-Stabilizer Theorem</title>
+              <exercise>
+                <p>
+                  Coming soon to an OER near you!
+                </p>
+              </exercise>
           
-          <statement>
-            <p>
-              Let <m>G</m> be a finite group that acts on a finite set <m>S</m> via <m>\cdot</m>. For any <m>s \in S</m> we have 
-              <me>
-                |G|=|\operatorname{Orbit}_G(s)|\cdot |\operatorname{Stab}_G(s)].
-              </me>
-            </p>
-          </statement>
-        </corollary>
-  
-        <warning>
-          <p>
-            Take note that LOIS and Orbit-Stabilizer only apply when <m>G</m> is a <em>finite</em> group.
-          </p>
-        </warning>
-  
-        <theorem xml:id="thm-conjugation-and-lois">
-          <title>Conjugation Actions and LOIS</title>
-          <statement>
-            <p>
-              Let <m>G</m> be a group.
-            </p>
-  
-            <p>
-              <ol>
-                <li>
-                  <p>
-                    Then <m>G</m> acts on <m>G</m> by conjugation (<m>g \cdot g' = gg'g^{-1}</m>). For all <m>g \in G</m>, the orbit of <m>g</m> is the conjugacy class of <m>g</m>, <m>\operatorname{Stab}_G(g)=C_G(G)</m> and <m>|[g]_c| = |G : C_G(g)|</m>.
-                  </p>
-                </li>
-  
-                <li>
-                  <p>
-                    Then <m>G</m> acts on the power set <m>P(G)=\{S\mid S\subseteq G\}</m> by conjugation (<m>g \cdot S = gSg^{-1}</m>). For all <m>S \in P(G)</m>, <m>\operatorname{Stab}_G(S)=N_G(S)</m> and <m>|\operatorname{Orbit}_G(S)| = |G : N_G(S)|</m>.
-                  </p>
-                </li>
-              </ol>
-            </p>
-          </statement>
-        </theorem>
-  
-        <corollary xml:id="cor-conjugacy-divides-order">
-          <title>Size of Conjugacy Class Divides <m>|G|</m></title>
-          <statement>
-            <p>
-              For a finite group <m>G</m>, the size of any conjugacy class divides <m>|G|</m>.
-            </p>
-          </statement>
-        </corollary>
-      
-  
-        <exercises>
-  
-          <exercisegroup>
-            <title>Computations and Examples</title>
-            <introduction>
-              <p>
-              </p>
-            </introduction>
-        
-            <exercise>
-              <p>
-                Coming soon to an OER near you!
-              </p>
-            </exercise>
-        
-          </exercisegroup>
-        
-          <exercisegroup>
-            <title>Formal Proofs</title>
-            <introduction>
-              <p>
-              </p>
-            </introduction>
-        
-            <exercise>
-              <p>
-                Coming soon to an OER near you!
-              </p>
-            </exercise>
-        
-          </exercisegroup>
-        
-          <exercisegroup>
-            <title>Qualifying Exam Problems</title>
-            <introduction>
-              <p>
-              </p>
-            </introduction>
-        
-            <exercise>
-              <statement>
-                <p>
-                  Let <m>G = A_7</m> and <m>S</m> be the set of elements of <m>G</m> of order <m>7</m>. Prove that <m>S</m> is not a conjugacy class of <m>G</m>.
-                </p>
-  
-              </statement>
-  
-              <solution>
-                <p>
-                  Elements of order <m>7</m> in <m>G</m> must permute all <m>7</m> elements, making them of the form <m>(abcdefg)</m>. There are <m>6!</m> such permutations, given that we can always reorder them so that <m>a</m> is first, leaving <m>6</m> remaining spots without replacement. Let <m>S</m> denote the set of these <m>6!</m> elements.
-                </p>
-  
-                <p>
-                  Suppose by way of contradiction there existed some <m>s\in G</m> such that <m>S=C_s(G)</m>. Let <m>G</m> act on itself through conjugation, making <m>S=C_s(G)=\Orb(s)</m> by the definition of conjugacy class. The Orbit-Stabilizer Theorem tells us that <m>|G|=|\Orb(s)|\cdot|\Stab(s)|</m>, meaning that the order of <m>S</m> must divide the order of <m>G</m>. However, <m>|G|=\frac{7!}{2}</m> and <m>|S|=6!</m>, so this is a contradiction. Thus <m>S</m> is not a conjugacy class of <m>G</m>.
-                </p>
-              </solution>
-         
-            </exercise>
-  
-            <exercise>
-              <statement>
-                <p>
-                  Prove that if <m>G</m> is a finite group of odd order, then for any non-identity element <m>x\in G</m>, <m>x</m> is not conjugate to <m>x\inv</m>.
-                </p>
-              </statement>
-  
-              <solution>
-                <p>
-                  Let <m>G</m> be a finite group of odd order, and let <m>G</m> act on itself via conjugation. Under this action, the orbit of an element is exactly its conjugacy class. By the Orbit-Stabilizer Theorem we have <m>|G|=|\Orb(x)|\cdot|\Stab(x)|</m>. Thus the order of an element divides the order of the group, and so every orbit must have odd order.
-                </p>
-      
-                <p>
-                  Suppose there exists an element <m>x</m> such that <m>gxg\inv=x\inv</m> for some <m>g\in G</m>. Thus <m>x\inv\in\Orb(x)</m>. Let <m>y\in\Orb(x)</m>. Thus <m>y=hxh\inv</m> for some <m>h\in G</m>. Then <m>y\inv=h\inv x\inv h</m>. However, as <m>x\inv=gxg\inv</m>, we have <m>y\inv=h\inv gxg\inv h</m>. As <m>h\inv g</m> and <m>g\inv h</m> are both in <m>G</m>, we see that <m>y\inv\in\Orb(x)</m> as well. As <m>e\in\Stab(x)</m>, we see that this means that the orbit of <m>x</m> would have even order, which is not possible.
-                </p>
-              </solution>
-  
-            </exercise>
-  
-            <exercise>
-              <statement>
-                <p>
-                  Let <m>G</m> be a group acting transitively on a set <m>S</m>. For <m>a\in S</m>, let <m>G_a = \{g\in G | ga = a\}</m> be the stabilizer of <m>a</m> under the action from <m>G</m>.
-                </p>
-        
-                <p>
-                  <ol>
-                    <li>
-                      Let <m>a, b\in S</m>. Prove there exists <m>g\in G</m> such that <m>G_b = gG_ag\inv</m>.
-                    </li>
-        
-                    <li>
-                      Suppose <m>S</m> has more than one element and that <m>G</m> is finite. Prove that there exists <m>g\in G</m> which has no fixed point, that is, for all <m>a\in S, ga\neq a</m>
-                    </li>
-                  </ol>
-                </p>
-              </statement>
-  
-              <solution>
-                <p>
-                  Let <m>G</m> be a group acting transitively on a set <m>S</m>.
-                </p>
-      
-                <p>
-                  The action is transitive, so there exists some <m>g\in G</m> such that <m>ga=b</m>.
-                </p>
-      
-                <p>
-                  Let <m>x\in\Stab(a)</m>, consider <m>gxg\inv</m>b. Since <m>g\inv b=a</m>, we have <m>gxa</m>, <m>x</m> stabilizes <m>a</m> so now <m>ga</m>, but <m>ga=b</m>. So <m>g\Stab(a)g\inv\subseteq\Stab(b)</m>.
-                </p>
-      
-                <p>
-                  Let <m>x\in\Stab(b)</m>. We know <m>xb=b</m> and also <m>ga=b</m>, and so <m>xga=ga</m>. Applying <m>g\inv</m> to both to see <m>g\inv xga=a</m>. This puts <m>g\inv xg\in\Stab(a)</m>. Thus <m>x\in g\Stab(a)g\inv</m>, completing the proof.
-                </p>
-      
-                <p>
-                  The action is transitive, so there is only one orbit, and so <m>\Orb(a)=\Orb(b)=G</m>. Since <m>G</m> is finite, the Orbit-Stabilizer Theorem tells us <m>|\Orb(a)|=|G|/|\Stab(a)|</m>. Since every orbit has the same order as <m>G</m>, we see <m>\Stab(a)=\{e\}</m> for all <m>a\in S</m>. Thus there cannot exist any fixed points.
-                </p>
-              </solution>
-            </exercise>
-        
-          </exercisegroup>
-        </exercises>
-        
-      </section>
-  
-      <section xml:id="sec-class-eq">
-        <title>The Class Equation</title>
-  
-        <blockquote>
-          <p>
-            <q>Let the others have the charisma. I've got the class.</q>
-          </p>
-          <attribution>George H. W. Bush</attribution>
-        </blockquote>
-  
-        <blockquote>
-          <p>
-            <q>Class is the sure-footedness that comes with having proved you can meet life.</q>
-          </p>
-          <attribution>Ann Landers</attribution>
-        </blockquote>
-        
-        <definition xml:id="def-centralizer">
-          <title>Centralizer</title>
-          <statement>
-            <p>
-              Let <m>G</m> be a group. For any <m>g \in G</m>, 
-              <me>
-                Z_G(g):= \{g \in G \mid gx = xg\}
-              </me> 
-              is called the <em>centralizer</em> of <m>g</m> in <m>G</m> 
-              
-              
-              and for any <m>S \subseteq G</m>, <me>N_G(S):= \{g \in G \mid gSg^{-1}=S\}</me> is called the <em>normalizer</em> of <m>S</m> in <m>G</m>.
-            </p>
-          </statement>
-        </definition>
-  
-        <definition xml:id="def-normalizer">
-          <title>Normalizer</title>
-          <statement>
-            <p>
-              Let <m>G</m> be a group. For any <m>S \subseteq G</m>, 
-              <me>
-                N_G(S):= \{g \in G \mid gSg^{-1}=S\}
-              </me> 
-              is called the <em>normalizer</em> of <m>S</m> in <m>G</m>.
-            </p>
-          </statement>
-        </definition>
-  
-        <theorem xml:id="thm-conjclass">
-          <statement>
-            <p>
-              <ol>
-                <li>
-                  <p>
-                    Then <m>G</m> acts on <m>G</m> by conjugation (<m>g \cdot g' = gg'g^{-1}</m>). For all <m>g \in G</m>, the orbit of <m>g</m> is the conjugacy class of <m>g</m>, <m>\operatorname{Stab}_G(g)=C_G(G)</m> and <m>|[g]_c| = [G : C_G(g)]</m>.
-                  </p>
-                </li>
-      
-                <li>
-                  <p>
-                    Then <m>G</m> acts on the power set <m>P(G)=\{S\mid S\subseteq G\}</m> by conjugation (<m>g \cdot S = gSg^{-1}</m>). For all <m>S \in P(G)</m>, <m>\operatorname{Stab}_G(S)=N_G(S)</m> and <m>|\operatorname{Orbit}_G(S)| = [G : N_G(S)]</m>.
-                  </p>
-                </li>
-              </ol>
-            </p>
-          </statement>
-        </theorem>
-  
-        <corollary xml:id="cor-conjclass">
-          <statement>
-            <p>
-              For a finite group <m>G</m>, the size of any conjugacy class divides <m>|G|</m>.
-            </p>
-          </statement>
-        </corollary>
-  
-        <theorem xml:id="thm-class-eq">
-          <title>The Class Equation</title>
+            </exercisegroup>
           
-          <statement>
-            <p>
-              Let <m>G</m> be a finite group and let <m>g_1,\ldots g_r \in G</m> be a list of unique representatives of all of the conjugacy classes of <m>G</m> of size greater than <m>1</m>. Then 
-              <me>
-                |G| = |Z(G)| + \sum_i^r |G : C_G(g_i)|
-              </me>.
-            </p>
-          </statement>
-  
-          <proof>
-            <p>
-              The elements of <m>Z(G)</m> are precisely the group elements that are conjugate to only themselves; that is, they are the one-element orbits for the conjugation action. Because the conjugacy classes (orbits of the conjugation action) partition <m>G</m> we have 
-              <me>
-                |G| = |Z(G)| + \sum_i^r [g_i]_c.
-              </me> 
-              For each <m>g_i</m> as in the statement, by Theorem <xref ref="thm-conjclass" />, we have <m>[G: C_G(g_i)] =[g_i]_c</m>. The class equation follows from substituting this into the equation above.
-            </p>
-          </proof>
-        </theorem>
-  
-        <exercises>
-  
-          <exercisegroup>
-            <title>Computations and Examples</title>
-            <introduction>
-              <p>
-              </p>
-            </introduction>
-        
-            <exercise>
-              <p>
-                Coming soon to an OER near you!
-              </p>
-            </exercise>
-        
-          </exercisegroup>
-        
-          <exercisegroup>
-            <title>Formal Proofs</title>
-            <introduction>
-              <p>
-              </p>
-            </introduction>
-        
-            <exercise>
-              <p>
-                Coming soon to an OER near you!
-              </p>
-            </exercise>
-        
-          </exercisegroup>
-        
-          <exercisegroup>
-            <title>Qualifying Exam Problems</title>
-            <introduction>
-              <p>
-              </p>
-            </introduction>
-        
-            <exercise>
-              <p>
-                Coming soon to an OER near you!
-              </p>
-            </exercise>
-        
-          </exercisegroup>
-        </exercises>
-  
-      </section>
+            <exercisegroup>
+              <title>Formal Proofs</title>
+              <introduction>
+                <p>
+                </p>
+              </introduction>
+          
+              <exercise>
+                <p>
+                  Coming soon to an OER near you!
+                </p>
+              </exercise>
+          
+            </exercisegroup>
+          
+            <exercisegroup>
+              <title>Qualifying Exam Problems</title>
+              <introduction>
+                <p>
+                </p>
+              </introduction>
+          
+              <exercise>
+                <p>
+                  Coming soon to an OER near you!
+                </p>
+              </exercise>
+          
+            </exercisegroup>
+          </exercises>
+    
+        </section>
   
       </chapter>
 
       <chapter xml:id="sylow">
         <title>Sylow Theory</title>       
     
-        <section xml:id="sec-pgroups">
+        <section xml:id="sec-p-groups">
           <title><m>p</m>-groups and Sylow Subgroups</title>
     
           <blockquote>
@@ -6369,7 +6548,7 @@
             <attribution>Optimus Prime</attribution>
           </blockquote>
           
-          <definition xml:id="def-pgroup">
+          <definition xml:id="def-p-group">
             <title><m>p</m>-group</title>
             <statement>
               <p>
@@ -6388,16 +6567,39 @@
     
             <proof>
               <p>
-                Let <m>g_1,\ldots g_r \in G</m> be a list of unique representatives of all of the conjugacy classes of <m>G</m> of size greater than 1 as in the class equation. Then for each <m>i</m>, <m>C_G(g_i)\neq G</m> so <m>[G:C_G(g_i)]\neq 1</m>. Since <m>1\neq [G:C_G(g_i)] \mid |G|=p^m</m>, it follows that <m>p\mid [G:C_G(g_i)]</m> for each <m>i</m>. From the Class equation we deduce that <m>p\mid |Z(G)|</m> so, <m>|Z(G)|\neq 1</m>.
+                Let <m>g_1,\ldots g_r \in G</m> be a list of unique representatives of all of the conjugacy classes of <m>G</m> of size greater than <m>1</m> as in <xref text="title" ref="thm-class-eq"/>. Then for each <m>i</m>, <m>C_G(g_i)\neq G</m> so <m>[G:C_G(g_i)]\neq 1</m>. Since <m>1\neq [G:C_G(g_i)] \mid |G|=p^m</m>, it follows that <m>p\mid [G:C_G(g_i)]</m> for each <m>i</m>. From <xref text="title" ref="thm-class-eq"/> we deduce that <m>p\mid |Z(G)|</m> so, <m>|Z(G)|\neq 1</m>.
               </p>
             </proof>
           </theorem>
     
           <remark>
             <p>
-              This theorem is important
+              This theorem is important.
             </p>
           </remark>
+
+          <theorem xml:id="thm-order-p-cyclic">
+            <statement>
+              <p>
+                Let <m>p</m> be prime. 
+                <ol>
+                  <li>
+                    <p>
+                      Any group of order <m>p</m> is cyclic.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Any group of order <m>p^2</m> is abelian.
+                    </p>
+                  </li>
+                </ol>
+                
+              </p>
+            </statement>
+          </theorem>
+          
     
           <definition xml:id="def-sylow-subgroup">
             <title>Sylow <m>p</m>-subgroup</title>
@@ -6441,7 +6643,7 @@
     
           <problem>
             <p>
-              In <m>S_5</m>, the Sylow <m>5</m>-subgroups are the cyclic groups <m>\langle \sigma \rangle</m> for any five cycle <m>\sigma</m>, so <m>n_5=6</m> because there are 24 five cycles, but there are four of these in every Sylow 5-subgroup. The Sylow <m>3</m>-subgroups are the cyclic groups <m>\langle \sigma \rangle</m> for any three cycle <m>\sigma</m>, so <m>n_3=10</m> because there are 20 three cycles, but there are two of these in every Sylow 3-subgroup.
+              In <m>S_5</m>, the Sylow <m>5</m>-subgroups are the cyclic groups <m>\langle \sigma \rangle</m> for any five cycle <m>\sigma</m>, so <m>n_5=6</m> because there are <m>24</m> five cycles, but there are four of these in every Sylow <m>5</m>-subgroup. The Sylow <m>3</m>-subgroups are the cyclic groups <m>\langle \sigma \rangle</m> for any three cycle <m>\sigma</m>, so <m>n_3=10</m> because there are <m>20</m> three cycles, but there are two of these in every Sylow <m>3</m>-subgroup.
             </p>
             <p>
               A Sylow <m>2</m>-subgroup of <m>S_5</m> is any subgroup of order <m>8</m>. For example <m>\langle (1 \, 4)(2 \, 3) , (1 \, 2 \, 3 \, 4) \rangle</m> is a Sylow <m>2</m>-subgroup. There are many others.
@@ -6515,7 +6717,9 @@
                 </p>
               </introduction>
           
-              <exercise>
+              <exercise> <title>January 2017 (2)</title>
+              
+              
     
                 <statement>
                 <p>
@@ -6548,7 +6752,7 @@
                   </p>
         
                   <p>
-                    The Class Equation tells us <me>|G|=|Z(G)|+\sum\limits_{g\in G}[G:C_G(g)],</me>where <m>C_G(g)</m> are the centralizers with more than one element. Notice that this means <m>|C_G(g)|\big||G|</m>, and thus each centralizer is a power of <m>p</m>. Thus we have <me>p^n=|Z(G)|+pk</me>for some <m>k\in\N</m>. Thus the center of <m>G</m> cannot be trivial, else we would not be able to sum to a power of <m>p</m>.
+                    <xref text="title" ref="thm-class-eq"/> tells us <me>|G|=|Z(G)|+\sum\limits_{g\in G}[G:C_G(g)],</me>where <m>C_G(g)</m> are the centralizers with more than one element. Notice that this means <m>|C_G(g)|\big||G|</m>, and thus each centralizer is a power of <m>p</m>. Thus we have <me>p^n=|Z(G)|+pk</me>for some <m>k\in\N</m>. Thus the center of <m>G</m> cannot be trivial, else we would not be able to sum to a power of <m>p</m>.
                   </p>
         
                   <p>
@@ -6561,7 +6765,9 @@
                 </solution>
               </exercise>
     
-              <exercise>
+              <exercise> <title>May 2022 (1)</title>
+              
+              
                 <statement>
                   <p>
                     Let <m>G</m> be a finite <m>p</m>-group and <m>Z</m> its center. If <m>N\neq \{e\}</m> is a normal subgroup of <m>G</m>, prove that <m>N\cap Z\neq\{e\}</m>.
@@ -6574,7 +6780,7 @@
                   </p>
         
                   <p>
-                    First, we show that the center of <m>G</m> is nontrivial. Suppose by way of contradiction that <m>Z(G)=\{e\}</m>. We examine the conjugacy classes of <m>G</m>. From the Class Equation, we know<me>|G| = |Z(G)| + \sum_i^r |G : C_G(g_i)|.</me>Note that <m>|G|=p^n</m> for some <m>n\in\N</m>, meaning that the only divisors of <m>|G|</m> are powers of <m>p</m>. In finite groups, each conjugacy class must divide the order of the group. By Lagrange's Theorem, <m>|G : C_G(g_i)|=\frac{|G|}{|C_G(g_i)|}=\frac{p^n}{p^m}=p^k</m>, where <m>m,k\in\N</m>. Since |Z(G)|=1, we see that <m>\sum_i^r |G : C_G(g_i)|\bigg|p^n-1</m>, which is impossible given that <m>p^n-1 \not|p^n</m>. Thus <m>Z(G)\neq\{e\}</m>.
+                    First, we show that the center of <m>G</m> is nontrivial. Suppose by way of contradiction that <m>Z(G)=\{e\}</m>. We examine the conjugacy classes of <m>G</m>. From <xref text="title" ref="thm-class-eq"/>, we know<me>|G| = |Z(G)| + \sum_i^r |G : C_G(g_i)|.</me>Note that <m>|G|=p^n</m> for some <m>n\in\N</m>, meaning that the only divisors of <m>|G|</m> are powers of <m>p</m>. In finite groups, each conjugacy class must divide the order of the group. By Lagrange's Theorem, <m>|G : C_G(g_i)|=\frac{|G|}{|C_G(g_i)|}=\frac{p^n}{p^m}=p^k</m>, where <m>m,k\in\N</m>. Since |Z(G)|=1, we see that <m>\sum_i^r |G : C_G(g_i)|\bigg|p^n-1</m>, which is impossible given that <m>p^n-1 \not|p^n</m>. Thus <m>Z(G)\neq\{e\}</m>.
                   </p>
         
                   <p>
@@ -6583,7 +6789,9 @@
                 </solution>
               </exercise>
     
-              <exercise>
+              <exercise> <title>January 2020 (2)</title>
+              
+              
                 <statement>
                   <p>
                     Let <m>G</m> be a group of order <m>p^n</m> for some prime <m>p</m> acting on a finite set <m>X</m>.
@@ -6619,7 +6827,7 @@
                         </p>
             
                         <p>
-                          By Orbit-Stabilizer we know that <m>|\Orb_G(x)|\big||G|</m> for all <m>x\in X</m>. Thus every orbit under this action has an order dividing <m>p^n</m>, so either <m>1</m> or some positive power of <m>p.</m> However, as no element of <m>X</m> is fixed by every element of <m>G</m>, there exists no stabilizer which is all of <m>G</m>, and thus there exist no orbits that have order <m>1</m>.
+                          By the <xref text="title" ref="cor-orbit-stabilizer"/> we know that <m>|\Orb_G(x)|\big||G|</m> for all <m>x\in X</m>. Thus every orbit under this action has an order dividing <m>p^n</m>, so either <m>1</m> or some positive power of <m>p.</m> However, as no element of <m>X</m> is fixed by every element of <m>G</m>, there exists no stabilizer which is all of <m>G</m>, and thus there exist no orbits that have order <m>1</m>.
                         </p>
             
                         <p>
@@ -6747,11 +6955,19 @@
           <p>
             Sylow's theorems provide a systematic way of analyzing the subgroups of a finite group. They allow us to determine the number of subgroups of a given order, which is useful in many applications, such as studying the structure of solvable and simple groups. The theorems also provide information about the normalizers of subgroups, which can be used to study normal subgroups and quotient groups.
           </p>
+
+          <corollary xml:id="cor-unique-sylow-normal">
+            <statement>
+              <p>
+                A Sylow <m>p</m>-subgroup of a finite group <m>G</m> is normal if and only if it is the only Sylow <m>p</m>-subgroup of <m>G</m>.
+              </p>
+            </statement>
+          </corollary>
     
           <exercises>
     
-            <exercisegroup>
-              <title>Computations and Examples</title>
+            <exercisegroup> <title>Computations and Examples</title>
+              
               <introduction>
                 <p>
                 </p>
@@ -6765,29 +6981,72 @@
           
             </exercisegroup>
           
-            <exercisegroup>
-              <title>Formal Proofs</title>
+            <exercisegroup> <title>Formal Proofs</title>
+              
               <introduction>
                 <p>
                 </p>
               </introduction>
           
               <exercise>
-                <p>
-                  Coming soon to an OER near you!
-                </p>
+                <statement>
+                  <p>
+                    Let <m>G</m> be a finite group and <m>K</m> a normal subgroup of <m>G</m>. Let <m>P</m> be a Sylow <m>p</m>-subgroup of <m>K</m> (for some prime <m>p</m> dividing the order of <m>K</m>). Prove that <m>G=KN_G(P)</m>.              
+                  </p>
+                </statement>
+
+                <hint>
+                  <p>
+                    Let <m>g\in G</m>. Then <m>gPg^{-1}</m> is a Sylow <m>p</m>-subgroup of <m>K</m> and hence conjugate in <m>K</m> to <m>P</m>.
+                  </p>
+                </hint>
+
+                <solution>
+                  <p>
+                    As in the hint, for <m>g \in G</m>, we have <m>gPg\inv = kPk\inv</m> for some <m>k \in K</m>. Thus, <m>(k\inv g)P(k\inv g)\inv = P</m>, which means <m>k\inv g \in N_G(P)</m>. Hence, <m>g \in KN_G(P)</m>.
+                  </p>
+                </solution>
+                
+              </exercise>
+
+              <exercise xml:id="exe-order-8-subgroups-of-s4">
+                <title>Order <m>8</m> of <m>S_4</m></title>
+                <statement>
+                  <p>
+                    Prove that <m>S_4</m> has precisely three distinct subgroups of order <m>8</m>, all of which are isomorphic to <m>D_8.</m>
+                  </p>
+                </statement>
+
+                <hint>
+                  <p>
+                    Coming soon!
+                  </p>
+                </hint>
+
+                <solution>
+                  <p>
+                    Any subgroup of <m>S_4</m> of order <m>8</m> is a Sylow <m>2</m>-subgroup. By Sylow’s theorems, the number of Sylow <m>2</m>-subgroups is either <m>1</m> or <m>3</m>. As any <m>2</m>-cycle or <m>4</m>-cycle must be contained in a Sylow <m>2</m>-subgroup (since such elements generate subgroups of order <m>2i</m>, for some i) and there are six <m>2</m>-cycles and six <m>4</m>-cycles, there has to be more than one Sylow <m>2</m>-subgroup. Hence, there are precisely <m>3</m> distinct subgroups of order <m>8</m>.                  
+                  </p>
+
+                  <p>
+                    As all of them are conjugate, and conjugation induces an isomorphism on the group, we see that all three subgroups are isomorphic. Hence, we just need to show that <m>S_4</m> contains a subgroup isomorphic to <m>D_8</m>. Let <m>X</m> be the set of left cosets of the subgroup <m>\{e,s\}</m> of <m>D_8</m>. Note that <m>|X| = 4</m>. Let <m>G</m> act on <m>X</m> by left multiplication. This action induces a homomorphism <m>\varphi : G \to P(X)</m> where <m>P(X)\cong S_4</m> is the permutation group on <m>X</m>. As shown in class, the kernel of this homomorphism is the largest normal subgroup contained in <m>\{e,s\}</m>, which is <m>\{e\}</m>. Thus, <m>\varphi</m> is injective and the image of <m>\varphi</m> is a subgroup of <m>S_4</m> isomorphic to <m>D_8</m>.
+                  </p>
+                </solution>
+                
               </exercise>
           
             </exercisegroup>
           
-            <exercisegroup>
-              <title>Qualifying Exam Problems</title>
+            <exercisegroup> <title>Qualifying Exam Problems</title>
+              
               <introduction>
                 <p>
                 </p>
               </introduction>
           
-              <exercise>
+              <exercise> <title>January 2015 (2)</title>
+              
+              
                 <statement>
                   <p>
                     Let <m>G</m> be a group of order <m>385 = 5 · 7 · 11</m>. Prove that <m>G</m> has a normal subgroup of order <m>11</m> and that the center of <m>G</m> contains a subgroup of order <m>7.</m>
@@ -6806,8 +7065,8 @@
                 
               </exercise>
     
-              <exercise>
-                <title>June 2012 (1)</title>
+              <exercise> <title>June 2012 (1)</title>
+
                 <statement>
                   <p>
                     Let <m>G</m> be a group of order <m>231(= 3 · 7 · 11)</m> 
@@ -6843,13 +7102,19 @@
                 
               </exercise>
     
-              <exercise>
-                <title>June 2011 (3)</title>
+              <exercise> <title>June 2011 (3)</title>
+                
                 <statement>
                   <p>
-                    Let <m>H</m> be a normal subgroup of a finite group <m>G</m>, <m>p</m> a prime dividing the order of <m>H</m>, and <m>P</m> a Sylow <m>p</m>-subgroup of <m>H</m>. Prove that <m>G = H N_G(P )</m> <em>Hint</em>: For <m>g \in G</m>, consider the subgroup <m>gPg\inv</m>.
+                    Let <m>H</m> be a normal subgroup of a finite group <m>G</m>, <m>p</m> a prime dividing the order of <m>H</m>, and <m>P</m> a Sylow <m>p</m>-subgroup of <m>H</m>. Prove that <m>G = H N_G(P )</m>
                   </p>
                 </statement>
+
+                <hint>
+                  <p>
+                    For <m>g \in G</m>, consider the subgroup <m>gPg\inv</m>.
+                  </p>
+                </hint>
     
                 <solution>
                   <p>
@@ -6867,7 +7132,7 @@
                 
               </exercise>
     
-              <exercise>
+              <exercise> <title>June 2014 (1)</title>
                 <statement>
                   <p>
                     Let <m>G</m> be a finite group, <m>p</m> a prime dividing the order of <m>G</m>, and <m>H</m> a normal subgroup of order <m>p^m</m> for some <m>m &gt; 0</m>. Prove the following statements.
@@ -6907,7 +7172,7 @@
                 
               </exercise>
     
-              <exercise>
+              <exercise> <title>January 2020 (1)</title>
                 <statement>
                   <p>
                     Let <m>G</m> be a finite group. 
@@ -6961,7 +7226,20 @@
               <exercise>
                 <statement>
                   <p>
-                    Let <m>G</m> be a finite group and <m>p</m> a prime dividing the order of <m>G</m>. Let P be a Sylow <m>p</m>-subgroup. (a) Suppose <m>Q</m> is a Sylow <m>p</m>-subgroup distinct from <m>P</m>. Prove that <m>PQ</m> is not a subgroup of <m>G</m>. (Recall that <m>PQ = {pq | p ∈ P, q ∈ Q}</m>.) (b) Prove that <m>N_G(P ) = N_G(N_G(P ))</m> where <m>N_G(H)</m> denotes the normalizer in <m>G</m> of a subgroup <m>H</m>.
+                    Let <m>G</m> be a finite group and <m>p</m> a prime dividing the order of <m>G</m>. Let <m>P</m> be a Sylow <m>p</m>-subgroup. 
+                    <ol>
+                      <li>
+                        <p>
+                          Suppose <m>Q</m> is a Sylow <m>p</m>-subgroup distinct from <m>P</m>. Prove that <m>PQ</m> is not a subgroup of <m>G</m>. (Recall that <m>PQ = {pq | p \in  P, q \in  Q}</m>.) 
+                        </p>
+                      </li>
+
+                      <li>
+                        <p>
+                          Prove that <m>N_G(P ) = N_G(N_G(P ))</m> where <m>N_G(H)</m> denotes the normalizer in <m>G</m> of a subgroup <m>H</m>.
+                        </p>
+                      </li>
+                    </ol>
                   </p>
                 </statement>
     
@@ -7008,331 +7286,375 @@
             </statement>
           </definition>
     
-          <problem>
-            <p>
-              Let us prove that no group or order <m>12</m> is simple. Let <m>G</m> be any group of order <m>12</m>. We will prove that <m>G</m> must have either a normal subgroup of order <m>3</m> or a normal subgroups of oder <m>4</m>.
-            </p>
-    
-            <p>
-              Sylow theory gives that <m>n_2=|\operatorname{Syl}_2(G)|</m> is either <m>1</m> or <m>3</m> and <m>n_3= |\operatorname{Syl}_3(G)|</m> is either <m>1</m> or <m>4</m>. If either of these numbers is <m>1</m>, we have a unique subgroup of order <m>4</m> or of order <m>3</m>, and such a subgroup must be normal. Suppose these numbers are <m>3</m> and <m>4</m>, respectively. We deduce a contradition by <q>counting elements</q>.
-            </p>
-    
-            <p>
-              In detail, say <m>P_1, \dots, P_4</m> are the <m>4</m> Sylow <m>3</m>-subgroups. By Lagrange <m>P_i \cap P_j = \{e\}</m> for all <m>i \ne j</m>. Thus the <em>set</em> <m>T := \bigcup_{i=1}^4 P_i</m> has <m>9</m> elements, one of which is <m>e</m> and the other <m>8</m> of which must have order <m>3</m>. That is, there are <m>8</m> elements of order <m>3</m> in <m>G</m>. But now consider the three Sylow <m>2</m>-subgroups <m>Q_1, Q_2, Q_3</m>. Each has order <m>4</m> and <m>Q_i \cap T = \{e\}</m> for all <m>i</m>. It follows that <m>Q_i = \{e\} \cup (G \setminus T)</m> for all <m>i</m>, and thus <m>Q_1 = Q_2 = Q_3</m>, a contradiction.
-            </p>
-          </problem>
-    
           <remark>
             <p>
               In the previous example, it would not be so easy to count elements of order <m>2</m> and <m>4</m>. We do know that every element in <m>S := \cup_i Q_i</m> has order <m>1</m>, <m>2</m> or <m>4</m> (any only one has order <m>1</m>), but the size of this set is harder to calculate. For notice that <m>Q_i \cap Q_j</m> might have order <m>2</m>. The most one can say for sure is that <m>S</m> has at least <m>4 + 4 - 2 = 6</m> elements.
             </p>
           </remark>
-    
-          <problem>
-            <p>
-              No group of order <m>80=5 \cdot 16</m> is simple.
-            </p>
-          </problem>
-    
-          <exercises xml:id="exercises-simplegps">
-    
-            <exercise>
-              <statement>
 
+          <theorem xml:id="thm-a5-simple">
+            <title><m>A_5</m> is Simple</title>
+            <statement>
+              <p>
+                <m>A_5</m> is simple.
+              </p>
+            </statement>
+          </theorem>
+          
+          <exercises>
+
+            <exercisegroup> <title>Formal Proofs</title>
+              
+              <introduction>
+                <p>
+                </p>
+              </introduction>
+          
+              <exercise xml:id="exe-no-order-12-simple">
+                <title>No Simple Groups of Order <m>12</m></title>
+                <statement>
+                   
+                    <p>
+                      Let us prove that no group or order <m>12</m> is simple. Let <m>G</m> be any group of order <m>12</m>. We will prove that <m>G</m> must have either a normal subgroup of order <m>3</m> or a normal subgroups of oder <m>4</m>.
+                    </p>
             
-              <p><ol>
-                <li>
-                Let <m>G</m> be a simple group of order <m>60</m>. Determine the number of elements of <m>G</m> of order <m>5</m>.
-                </li>
-      
-                <li>
-                Show that there is no simple group of order <m>30</m>.
-                </li>
-      
-              </ol></p>
-            </statement>
-    
-              <solution>
-                <p>
-                  Let <m>G</m> be a simple group of order <m>60=2^2\cdot3\cdot 5.</m> By Sylow's Theorem we know that <m>n_5|12</m> and that <m>n_5\equiv 1\mod{5}</m>. Thus the options for <m>n_5</m> are <m>1</m> and <m>6</m>. Since <m>G</m> is simple we see that <m>n_5=6</m>. As each Sylow <m>5</m>-subgroup of <m>G</m> has <m>4</m> unique elements of order <m>5</m> and the identity we see that the number of elements or order <m>5</m> in <m>G</m> is <m>(5-1)\cdot 6=24</m>.
-                </p>
-    
-                <p>
-                  Suppose by way of contradiction that <m>G</m> is a simple group of order <m>30</m>. Similarly to above, <m>n_5=6</m>, yielding <m>24</m> elements of order <m>5</m>. Now, <m>n_3|10</m> and <m>n_3\equiv 1\mod{3}</m>, so <m>n_3=10</m>, yielding far too many elements to fit in <m>G</m>.
-                </p>
-              </solution>
-            </exercise>
-    
-            <exercise>
-              <title>June 2010 (3)</title>
-            <statement>
-              <p>
-                Suppose <m>G</m> is a simple group of order <m>168 = 2^3 · 3 · 7.</m> (Yes, there is such a group.) 
-                <ol>
-                  <li>
                     <p>
-                      How many elements of order <m>7</m> does <m>G</m> have? 
+                      Sylow theory gives that <m>n_2=|\operatorname{Syl}_2(G)|</m> is either <m>1</m> or <m>3</m> and <m>n_3= |\operatorname{Syl}_3(G)|</m> is either <m>1</m> or <m>4</m>. If either of these numbers is <m>1</m>, we have a unique subgroup of order <m>4</m> or of order <m>3</m>, and such a subgroup must be normal. Suppose these numbers are <m>3</m> and <m>4</m>, respectively. We deduce a contradition by <q>counting elements</q>.
                     </p>
-                  </li>
-    
-                  <li>
+            
                     <p>
-                      Show that <m>G</m> has at least <m>14</m> elements of order <m>3</m>
+                      In detail, say <m>P_1, \dots, P_4</m> are the <m>4</m> Sylow <m>3</m>-subgroups. By Lagrange <m>P_i \cap P_j = \{e\}</m> for all <m>i \ne j</m>. Thus the <em>set</em> <m>T := \bigcup_{i=1}^4 P_i</m> has <m>9</m> elements, one of which is <m>e</m> and the other <m>8</m> of which must have order <m>3</m>. That is, there are <m>8</m> elements of order <m>3</m> in <m>G</m>. But now consider the three Sylow <m>2</m>-subgroups <m>Q_1, Q_2, Q_3</m>. Each has order <m>4</m> and <m>Q_i \cap T = \{e\}</m> for all <m>i</m>. It follows that <m>Q_i = \{e\} \cup (G \setminus T)</m> for all <m>i</m>, and thus <m>Q_1 = Q_2 = Q_3</m>, a contradiction.
                     </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-    
-              <solution>
-                <p>
-                  By Sylow's Theorem, <m>|\Syl_7(G)|\equiv 1\mod{7}</m> and divides <m>2^3\cdot 3=24</m>. Thus the only options are <m>1</m> and <m>8</m>. However, as <m>G</m> is simple there cannot be only one Sylow <m>7</m>-Subgroup, as it would be normal. Thus there are <m>8</m>, each having <m>7</m> unique elements and the identity. Thus there are <m>49</m> elements of order <m>7</m>.
-                </p>
-    
-                <p>
-                  By Sylow's Theorem, <m>|\Syl_3(G)|\equiv 1\mod{3}</m> and divides <m>2^3\cdot 7=56</m>. As <m>G</m> is simple there cannot be one, so there must be at least <m>7</m>, each with <m>2</m> non-identity elements. Thus there must be at least <m>14</m> elements of order <m>3</m>.
-                </p>
-              </solution>
-            </exercise>
-    
-            <exercise>
-              <title>January 2012 (3)</title>
-            <statement>
-              <p>
-                Let <m>G</m> be a group of order <m>90 = 2 · 3^2 · 5</m> and let <m>\Syl_3(G)</m> denote the set of Sylow <m>3</m>-subgroups of <m>G</m>. 
-                <ol>
-                  <li>
-                    <p>
-                      Suppose for any <m>Q, Q' \in \Syl_3(G)</m> either <m>Q = Q'</m> or <m>Q \cap Q' = {1}.</m> Prove that <m>G</m> is not simple. 
-                    </p>
-                  </li>
+                </statement>
 
+              </exercise>
+
+              <exercise>
+                <statement>
+                  <p>
+                    No group of order <m>80=5 \cdot 16</m> is simple.
+                  </p>
+                </statement>
+              </exercise>
+
+            </exercisegroup>
+
+            <exercisegroup> <title>Qualifying Exam Problems</title>
+              
+              <introduction>
+                <p>
+                </p>
+              </introduction>
+          
+              <exercise> <title>January 2019 (3)</title>
+                <statement>
+
+                <p><ol>
                   <li>
-                    <p>
-                      Suppose there exists <m>Q, Q' ∈ \Syl_3(G)</m> such that <m>|Q \cap Q'| = 3</m>. Prove that <m>G</m> is not simple. (Hint: Consider the normalizer of <m>Q \cap Q'</m>.)
-                    </p>
+                  Let <m>G</m> be a simple group of order <m>60</m>. Determine the number of elements of <m>G</m> of order <m>5</m>.
                   </li>
-                </ol>
-              </p>
-            </statement>
-    
-              <solution>
+        
+                  <li>
+                  Show that there is no simple group of order <m>30</m>.
+                  </li>
+        
+                </ol></p>
+              </statement>
+      
+                <solution>
+                  <p>
+                    Let <m>G</m> be a simple group of order <m>60=2^2\cdot3\cdot 5.</m> By Sylow's Theorem we know that <m>n_5|12</m> and that <m>n_5\equiv 1\mod{5}</m>. Thus the options for <m>n_5</m> are <m>1</m> and <m>6</m>. Since <m>G</m> is simple we see that <m>n_5=6</m>. As each Sylow <m>5</m>-subgroup of <m>G</m> has <m>4</m> unique elements of order <m>5</m> and the identity we see that the number of elements or order <m>5</m> in <m>G</m> is <m>(5-1)\cdot 6=24</m>.
+                  </p>
+      
+                  <p>
+                    Suppose by way of contradiction that <m>G</m> is a simple group of order <m>30</m>. Similarly to above, <m>n_5=6</m>, yielding <m>24</m> elements of order <m>5</m>. Now, <m>n_3|10</m> and <m>n_3\equiv 1\mod{3}</m>, so <m>n_3=10</m>, yielding far too many elements to fit in <m>G</m>.
+                  </p>
+                </solution>
+              </exercise>
+      
+              <exercise>
+                <title>June 2010 (3)</title>
+              <statement>
+                <p>
+                  Suppose <m>G</m> is a simple group of order <m>168 = 2^3 · 3 · 7.</m> (Yes, there is such a group.) 
+                  <ol>
+                    <li>
+                      <p>
+                        How many elements of order <m>7</m> does <m>G</m> have? 
+                      </p>
+                    </li>
+      
+                    <li>
+                      <p>
+                        Show that <m>G</m> has at least <m>14</m> elements of order <m>3</m>
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+      
+                <solution>
+                  <p>
+                    By Sylow's Theorem, <m>|\Syl_7(G)|\equiv 1\mod{7}</m> and divides <m>2^3\cdot 3=24</m>. Thus the only options are <m>1</m> and <m>8</m>. However, as <m>G</m> is simple there cannot be only one Sylow <m>7</m>-Subgroup, as it would be normal. Thus there are <m>8</m>, each having <m>7</m> unique elements and the identity. Thus there are <m>49</m> elements of order <m>7</m>.
+                  </p>
+      
+                  <p>
+                    By Sylow's Theorem, <m>|\Syl_3(G)|\equiv 1\mod{3}</m> and divides <m>2^3\cdot 7=56</m>. As <m>G</m> is simple there cannot be one, so there must be at least <m>7</m>, each with <m>2</m> non-identity elements. Thus there must be at least <m>14</m> elements of order <m>3</m>.
+                  </p>
+                </solution>
+              </exercise>
+      
+              <exercise>
+                <title>January 2012 (3)</title>
+              <statement>
                 <p>
                   Let <m>G</m> be a group of order <m>90 = 2 · 3^2 · 5</m> and let <m>\Syl_3(G)</m> denote the set of Sylow <m>3</m>-subgroups of <m>G</m>. 
-                    <ol>
-                      <li>
-                        <p>
-                          Suppose by way of contradiction that <m>G</m> is simple. By Sylow's Theorem we know the following: - <m>n_3|10</m> and is congruent to <m>1\mod{3}</m>. As <m>G</m> is simple there must be ten of the fuckers. - <m>n_5|18</m> and is congruent to <m>1\mod 5</m>. As <m>G</m> is simple there must be six of them. Since each Sylow <m>3</m>-subgroup will have <m>3^2-1=8</m> non-identity elements and they are all distinct that accounts for <m>80</m> elements of order <m>3</m>. However, there are also <m>24</m> elements or order <m>5</m> to account for, which is a problem. Thus <m>G</m> cannot be simple.
-                        </p>
-                      </li>
-
-                      <li>
-                        <p>
-                          Suppose now that there exists <m>Q, Q' ∈ \Syl_3(G)</m> such that <m>|Q \cap Q'| = 3</m>. . Given this intersection, we know that <m>|QQ'|=9\cdot 9/3=27</m>. Additionally, note that as <m>Q \cap Q'</m> is a subgroup of both <m>Q</m> and <m>Q'</m> with index 3 in both, the smallest prime dividing the order or both, that <m>Q \cap Q'</m> is normal in both.
-                        </p>
-            
-                        <p>
-                          We now consider the normalizer of <m>Q \cap Q'</m>, which we denote <m>N</m> for simplicity. As <m>N</m> is a subgroup of <m>G</m> its order must divide <m>90</m> by Lagrange's Theorem. However, <m>QQ'\leq N</m>, and so <m>N</m> must have at least <m>27</m> elements, leaving the options of <m>45</m> and <m>90</m>. If <m>|N|=90</m> then <m>N=G</m>, making <m>Q\cap Q'</m> normal in <m>G</m>, a problem.
-                        </p>
-            
-                        <p>
-                          If <m>|N|=45</m> then <m>[G:N]=2</m>, the smallest prime dividing <m>G</m>. Thus <m>N</m> is still normal, which is still a problem. Thus <m>G</m> cannot be simple.
-                        </p>
-                      </li>
-                    </ol>
+                  <ol>
+                    <li>
+                      <p>
+                        Suppose for any <m>Q, Q' \in \Syl_3(G)</m> either <m>Q = Q'</m> or <m>Q \cap Q' = {1}.</m> Prove that <m>G</m> is not simple. 
+                      </p>
+                    </li>
+  
+                    <li>
+                      <p>
+                        Suppose there exists <m>Q, Q' \in  \Syl_3(G)</m> such that <m>|Q \cap Q'| = 3</m>. Prove that <m>G</m> is not simple. (Hint: Consider the normalizer of <m>Q \cap Q'</m>.)
+                      </p>
+                    </li>
+                  </ol>
                 </p>
-              </solution>
-    
-            </exercise>
-    
-            <exercise>
-            <statement>
-              <p>
-                Let <m>G</m> be a group of order <m>2835 = 3^4\cdot 5\cdot 7</m>.
-              </p>
+              </statement>
       
-              <p><ol>
-                <li>
-                Show that there are at most two options for <m>n_3</m>, the number of Sylow <m>3</m>-subgroups of <m>G,</m> and list them.
-                </li>
-      
-                <li>
-                Prove that <m>G</m> is not simple.
-                </li>
-      
-              </ol></p>
-            </statement>
+                <solution>
+                  <p>
+                    Let <m>G</m> be a group of order <m>90 = 2 · 3^2 · 5</m> and let <m>\Syl_3(G)</m> denote the set of Sylow <m>3</m>-subgroups of <m>G</m>. 
+                      <ol>
+                        <li>
+                          <p>
+                            Suppose by way of contradiction that <m>G</m> is simple. By Sylow's Theorem we know the following: - <m>n_3|10</m> and is congruent to <m>1\mod{3}</m>. As <m>G</m> is simple there must be ten of the fuckers. - <m>n_5|18</m> and is congruent to <m>1\mod 5</m>. As <m>G</m> is simple there must be six of them. Since each Sylow <m>3</m>-subgroup will have <m>3^2-1=8</m> non-identity elements and they are all distinct that accounts for <m>80</m> elements of order <m>3</m>. However, there are also <m>24</m> elements or order <m>5</m> to account for, which is a problem. Thus <m>G</m> cannot be simple.
+                          </p>
+                        </li>
+  
+                        <li>
+                          <p>
+                            Suppose now that there exists <m>Q, Q' \in  \Syl_3(G)</m> such that <m>|Q \cap Q'| = 3</m>. . Given this intersection, we know that <m>|QQ'|=9\cdot 9/3=27</m>. Additionally, note that as <m>Q \cap Q'</m> is a subgroup of both <m>Q</m> and <m>Q'</m> with index 3 in both, the smallest prime dividing the order or both, that <m>Q \cap Q'</m> is normal in both.
+                          </p>
               
-              <solution>
-                <p>
-                  Let <m>G</m> be a group of order <m>2835</m>.
-                </p>
-    
-                <p>
-                  By Sylow's Theorem we know that <m>n_3=1\mod{3}</m> and <m>n_3|35</m>. The possible options are thus <m>1</m> and <m>7</m>.
-                </p>
-    
-                <p>
-                  Suppose by way of contradiction that <m>G</m> is simple. Thus <m>n_3\neq 1</m>, so <m>n_3=7</m>. Let <m>G</m> act on the <m>\Syl_3(G)</m> by conjugation, yielding the homomorphism <me>\rho: G\to S_7</me>granted via the permutation representation. By (2) in Sylow's Theorem we see that <m>\rho</m> is not trivial. As <m>|S_7|=7!</m> we see that <m>|G|\not\big||S_7|</m>, meaning that the <m>\ker(\rho)</m> is non-trivial, yielding a non-trivial normal subgroup of <m>G</m>, a contradiction.
-                </p>
-              </solution>
-            </exercise>
-    
-            <exercise>
-            <statement>
-              <p>
-                Let <m>G</m> be a finite group of order <m>p^2q</m> with <m>p &lt; q</m> prime numbers. Show that <m>G</m> is not a simple group.
-              </p>
-            </statement>
-    
-              <solution>
-                <p>
-                  Let <m>G</m> be a finite group of order <m>p^2q</m> with <m>p &lt; q</m> prime numbers, and suppose by way of contradiction that <m>G</m> is simple. By Sylow's Theorem we have the following: - <m>n_p|q</m> and <m>n_p\cong 1\mod{p}</m>, and thus <m>n_p=q</m>. - <m>n_q|p^2</m> and <m>n_q\cong 1\mod{q}</m>, and thus <m>n_q=p^2</m>. From this information we see that there are <m>p^2(q-1)</m> elements of order <m>q</m> and <m>(p^2-1)q</m> elements of order <m>p</m>, for a lovely total of <m>p^2q-p^2+p^2q-q</m> elements, which is too many.
-                </p>
-              </solution>
-            </exercise>
-    
-            <exercise>
-            <statement>
-              <p>
-                Let <m>G</m> be a group and let <m>n_p</m> be the number of Sylow <m>p</m>-subgroups of <m>G</m>, where <m>p</m> is a prime dividing the order of <m>G</m>. (a) Prove that if <m>G</m> is simple then <m>|G|\big|n_p!</m> (b) Deduce that there is no simple group of order <m>1,000,000</m>.
-              </p>
-            </statement>
-    
-              <solution>
-                <p>
-                  Let <m>G</m> be a group, <m>p</m> a prime dividing the order of <m>G</m>, and <m>n_p</m> the number of Sylow <m>p</m>-subgroups of <m>G</m>.
-                </p>
-    
-                <p>
-                  Let <m>G</m> act on <m>\Syl_p(G)</m> by conjugation, inducing the homomorphism <m>\rho: G\to S_{n_p}</m> via the permutation representation. Notice that the order of <m>S_{n_p}</m> is conspicuously <m>n_p!</m>. The kernel of this map is a normal subgroup of <m>G</m>. Note that since <m>G</m> is simple the only normal subgroups of <m>G</m> are the trivial subgroup and <m>G</m> itself. However, the kernel cannot be all of <m>G</m> as this would make <m>\rho</m> trivial, which cannot be the case given that our action is transitive by Part (2) of Sylow's Theorem. Thus <m>\ker(\rho)=\{e\}</m>, making <m>\rho</m> injective. Thus <m>|\im(\rho)|=|G|</m>. As the image is a subgroup of <m>S_{n_p}</m>, the result follows from Lagrange's Theorem.
-                </p>
-    
-                <p>
-                  Let <m>G</m> be a group of order <m>1,000,000</m>. Suppose by way of contradiction that <m>G</m> is simple. <m>1,000,000=10^6=2^6\cdot 5^6</m>. Thus the number of Sylow-<m>5</m> subgroups is congruent to <m>1\mod 5</m> and divides <m>2^6=64</m>, the options of which are 1 and 16 (See: Sylow's Theorem). As <m>|G|</m> does not divide <m>16!,</m> this contradicts part (a). Thus there are no simple groups of order <m>1,000,000</m>.
-                </p>
-              </solution>
-            </exercise>
-    
-            <exercise>
-              <title>January 2014 (1)</title>
-            <statement>
-              <p>
-                Prove that any group of order <m>36</m> has a normal subgroup of order <m>3</m> or <m>9</m>.
-              </p>
-            </statement>
-    
-              <solution>
-                <p>
-                  Let <m>G</m> be a group of order <m>36=2^2\cdot 3^2</m>. By Sylow's Theorem we have <m>n_3|4</m> and <m>n_3\equiv 1\mod{3}</m>, and thus <m>n_3=1,4</m>. If <m>n_3=1</m> then the unique Sylow <m>3</m>-subgroup is normal, giving us a normal subgroup of order <m>9</m>.
-                </p>
+                          <p>
+                            We now consider the normalizer of <m>Q \cap Q'</m>, which we denote <m>N</m> for simplicity. As <m>N</m> is a subgroup of <m>G</m> its order must divide <m>90</m> by Lagrange's Theorem. However, <m>QQ'\leq N</m>, and so <m>N</m> must have at least <m>27</m> elements, leaving the options of <m>45</m> and <m>90</m>. If <m>|N|=90</m> then <m>N=G</m>, making <m>Q\cap Q'</m> normal in <m>G</m>, a problem.
+                          </p>
+              
+                          <p>
+                            If <m>|N|=45</m> then <m>[G:N]=2</m>, the smallest prime dividing <m>G</m>. Thus <m>N</m> is still normal, which is still a problem. Thus <m>G</m> cannot be simple.
+                          </p>
+                        </li>
+                      </ol>
+                  </p>
+                </solution>
       
-                <p>
-                  Suppose then that <m>n_3=4</m>, let <m>P</m> be one of the subgroups of order <m>9</m>, and let <m>G</m> act on the cosets of <m>H</m> by left multiplication, inducing the homomorphism <m>\rho:G\to S_4</m>. This is because there are <m>9</m> elements in <m>P</m>, and thus there are <m>4</m> left cosets by Lagrange's Theorem.
-                </p>
+              </exercise>
       
+              <exercise> <title>January 2022 (2)</title>
+              
+              
+              <statement>
                 <p>
-                  As <m>|S_4|=24&lt;36=|G|</m>, we see that <m>\rho</m> cannot be injective and thus <m>N=\ker(\rho)</m> is a non-trivial normal subgroup of <m>G</m>.
+                  Let <m>G</m> be a group of order <m>2835 = 3^4\cdot 5\cdot 7</m>.
                 </p>
+        
+                <p><ol>
+                  <li>
+                  Show that there are at most two options for <m>n_3</m>, the number of Sylow <m>3</m>-subgroups of <m>G,</m> and list them.
+                  </li>
+        
+                  <li>
+                  Prove that <m>G</m> is not simple.
+                  </li>
+        
+                </ol></p>
+              </statement>
+                
+                <solution>
+                  <p>
+                    Let <m>G</m> be a group of order <m>2835</m>.
+                  </p>
       
-                <p>
-                  Recall that the action of <m>G</m> on its cosets by left multiplication is always a transitive action, meaning there is exactly one orbit, <m>\Orb(sP)</m> for some <m>sP\in G/P</m>, which must then have all <m>4</m> elements of <m>G/P</m> in it. By Orbit-Stabilizer, <m>|G|=|\Orb(sP)|\cdot|\Stab(sP)|</m>, and thus <m>|\Stab(s)|=9</m>. So there are <m>9</m> elements in <m>G</m> that fix <m>s</m> for any <m>sP\in G/P</m>.
-                </p>
+                  <p>
+                    By Sylow's Theorem we know that <m>n_3=1\mod{3}</m> and <m>n_3|35</m>. The possible options are thus <m>1</m> and <m>7</m>.
+                  </p>
       
-                <p>
-                  Let <m>xP \in G/P</m> and <m>g\in N</m>. Notice that <m>g\cdot xP=gxP</m>. As <m>g\in N</m>, We know that <m>\rho(g)</m> yields the identity permutation, and thus that <m>gxP=xP</m>.
-                </p>
+                  <p>
+                    Suppose by way of contradiction that <m>G</m> is simple. Thus <m>n_3\neq 1</m>, so <m>n_3=7</m>. Let <m>G</m> act on the <m>\Syl_3(G)</m> by conjugation, yielding the homomorphism <me>\rho: G\to S_7</me>granted via the permutation representation. By (2) in Sylow's Theorem we see that <m>\rho</m> is not trivial. As <m>|S_7|=7!</m> we see that <m>|G|\not\big||S_7|</m>, meaning that the <m>\ker(\rho)</m> is non-trivial, yielding a non-trivial normal subgroup of <m>G</m>, a contradiction.
+                  </p>
+                </solution>
+              </exercise>
       
+              <exercise> <title>May 2019 (3)</title>
+              
+              
+              <statement>
                 <p>
-                  Thus <m>N\subseteq\Stab(xP)</m>, which has order <m>9</m>
+                  Let <m>G</m> be a finite group of order <m>p^2q</m> with <m>p &lt; q</m> prime numbers. Show that <m>G</m> is not a simple group.
                 </p>
-              </solution>
-            </exercise>
-    
-            <exercise>
-              <title>June 2011 (1)</title>
-            <statement>
-              <p>
-                Prove that no group of order 150 is simple.
-              </p>
-            </statement>
-    
-              <solution>
-                <p>
-                  Let <m>G</m> be a group of order <m>150</m> and suppose by way of contradiction that <m>G</m> is simple. Notice that <m>150=2\cdot 3\cdot 5^2</m>. By Sylow's Theorem, we know <m>|\Syl_5(G)|\equiv 1\mod{5}</m> and divides <m>6</m>, the only options are thus <m>1</m> and <m>6</m>. Since <m>G</m> is simple, there must be exactly <m>n_5=6</m>, where <m>n_5=\Syl_5(G)</m>. Let <m>G</m> act on <m>\Syl_5(G)</m> by conjugation. Thus <m>\rho: G\to S_6</m> is a group homomorphism. Note that <m>|S_6|=720</m>, and that the order of <m>G</m> does not divide <m>720</m>. By Part (2) of Sylow's Theorem this action is transitive, meaning that the kernel of <m>\rho</m> cannot be trivial. Thus <m>\ker(\rho)</m> is a nontrivial normal subgroup of <m>G</m>, a contradiction. Thus no group of order <m>150</m> is simple.
-                </p>
-              </solution>
-            </exercise>
-    
-            <exercise>
-            <statement>
-              <p>
-                Let G be a group of order <m>2^5\cdot 7^3</m>. Prove that <m>G</m> is not simple.
-              </p>
-            </statement>
-    
-              <solution>
-                <p>
-                  By Sylow's Theorem we know that <m>\Syl_7(G)\equiv 1\mod{7}</m> and <m>\Syl_7(G)|2^5=32</m>. Thus our options are <m>1</m> and <m>8</m>. Suppose that <m>\Syl_7(G)=8</m>.
-                </p>
+              </statement>
       
-                <p>
-                  Let <m>G</m> act on <m>\Syl_7(G)</m> by conjugation, yielding the homomorphism <me>\rho: G \to S_8</me>via the permutation representation. This map is non-trivial from part (2) of Sylow's Theorem, but <m>2^5\cdot 7^3</m> does not divide <m>|S_8|=8!</m>, and thus <m>\rho</m> cannot be injective. Then the kernel of this homomorphism is non-trivial, normal subgroup of <m>G</m>. Thus <m>G</m> is not simple.
-                </p>
-              </solution>
-            </exercise>
-    
-            <exercise>
-            <statement>
-              <p>
-                Prove that no group of order <m>2^m \cdot 5</m> with <m>m\geq 1</m> is simple.
-              </p>
-            </statement>
-    
-              <solution>
-                <p>
-                  Let <m>G</m> be a group of order <m>2^m \cdot 5</m> with <m>m \leq 1</m>, and suppose by way of contradiction that <m>G</m> is simple. By Sylow's Theorem we know the following: - <m>n_{5}|2^m</m> and <m>n_5\equiv1\mod{5}</m>, and - <m>n_{2}|5</m> and <m>n_{2}\equiv1\mod{2}</m>, so our options are <m>3</m> and <m>5</m>. Suppose its <m>3</m>. Let <m>G</m> act on <m>\Syl_2(P)</m> by conjugation, yielding the permutation representation homomorphism <m>\rho:G\to S_{3}</m>. The kernel of this homomorphism cannot be trivial as the conjugation action on Sylow subgroups is transitive by Part (2) of Sylow's Theorem. Notice <m>|G|</m> does not divide the order of <m>S_{3}</m>, so our kernel cannot be all of <m>G</m>, making <m>\ker(\rho)</m> a nontrivial normal subgroup of <m>G</m>.
-                </p>
-    
-                <p>
-                  If <m>n_2=5</m>, then <m>G</m> must divide <m>5!</m>, meaning that <m>m=1</m>. However, by the cyclic subgroup generated by an element of order <m>5</m> has index <m>2</m> in <m>G</m>, making it normal.
-                </p>
-    
-                <p>
-                  Thus <m>G</m> cannot be simple.
-                </p>
-              </solution>
-            </exercise>
-    
-            <exercise>
-            <statement>
-              <p>
-                Prove that no group of order <m>2^m \cdot 7</m> with <m>m \geq 1</m> is simple.
-              </p>
-            </statement>
-    
-              <solution>
-                <p>
-                  Let <m>G</m> be a group of order <m>2m\cdot 7</m> with <m>m\geq1</m> and suppose by way of contradiction that <m>G</m> is simple.
-                </p>
+                <solution>
+                  <p>
+                    Let <m>G</m> be a finite group of order <m>p^2q</m> with <m>p &lt; q</m> prime numbers, and suppose by way of contradiction that <m>G</m> is simple. By Sylow's Theorem we have the following: - <m>n_p|q</m> and <m>n_p\cong 1\mod{p}</m>, and thus <m>n_p=q</m>. - <m>n_q|p^2</m> and <m>n_q\cong 1\mod{q}</m>, and thus <m>n_q=p^2</m>. From this information we see that there are <m>p^2(q-1)</m> elements of order <m>q</m> and <m>(p^2-1)q</m> elements of order <m>p</m>, for a lovely total of <m>p^2q-p^2+p^2q-q</m> elements, which is too many.
+                  </p>
+                </solution>
+              </exercise>
       
+              <exercise> <title>May 2021 (3)</title>
+              
+              
+              <statement>
                 <p>
-                  By Sylow's Theorem we know the following: - <m>n_{7}|2^m</m> and <m>n_7\equiv1\mod{7}</m>, and - <m>n_{2}|7</m> and <m>n_{2}\equiv1\mod{2}</m>, so our options are <m>3,5,7</m>.
+                  Let <m>G</m> be a group and let <m>n_p</m> be the number of Sylow <m>p</m>-subgroups of <m>G</m>, where <m>p</m> is a prime dividing the order of <m>G</m>. 
+                  (a) Prove that if <m>G</m> is simple then <m>|G|\big|n_p!</m> 
+                  (b) Deduce that there is no simple group of order <m>1,000,000</m>.
                 </p>
+              </statement>
       
-                <p>
-                  Let <m>G</m> act on <m>\Syl_2(P)</m> by conjugation, yielding the permutation representation homomorphism <m>\rho:G\to S_{n_2}</m>. The kernel of this homomorphism cannot be trivial as the conjugation action on Sylow subgroups is transitive by Part (2) of Sylow's Theorem. Notice that if <m>n_2</m> is <m>3</m> or <m>5</m> then <m>|G|</m> does not divide the order of <m>S_{n_2}</m>, so our kernel cannot be all of <m>G</m>, making <m>\ker(\rho)</m> a nontrivial normal subgroup of <m>G</m>.
-                </p>
+                <solution>
+                  <p>
+                    Let <m>G</m> be a group, <m>p</m> a prime dividing the order of <m>G</m>, and <m>n_p</m> the number of Sylow <m>p</m>-subgroups of <m>G</m>.
+                  </p>
       
-                <p>
-                  If <m>n_2=7</m>, then <m>G</m> must divide <m>7!</m>, meaning that <m>m=1</m>. However, by the cyclic subgroup generated by an element of order <m>7</m> has index <m>2</m> in <m>G</m>, making it normal.
-                </p>
+                  <p>
+                    Let <m>G</m> act on <m>\Syl_p(G)</m> by conjugation, inducing the homomorphism <m>\rho: G\to S_{n_p}</m> via the permutation representation. Notice that the order of <m>S_{n_p}</m> is conspicuously <m>n_p!</m>. The kernel of this map is a normal subgroup of <m>G</m>. Note that since <m>G</m> is simple the only normal subgroups of <m>G</m> are the trivial subgroup and <m>G</m> itself. However, the kernel cannot be all of <m>G</m> as this would make <m>\rho</m> trivial, which cannot be the case given that our action is transitive by Part (2) of Sylow's Theorem. Thus <m>\ker(\rho)=\{e\}</m>, making <m>\rho</m> injective. Thus <m>|\im(\rho)|=|G|</m>. As the image is a subgroup of <m>S_{n_p}</m>, the result follows from Lagrange's Theorem.
+                  </p>
       
+                  <p>
+                    Let <m>G</m> be a group of order <m>1,000,000</m>. Suppose by way of contradiction that <m>G</m> is simple. <m>1,000,000=10^6=2^6\cdot 5^6</m>. Thus the number of Sylow-<m>5</m> subgroups is congruent to <m>1\mod 5</m> and divides <m>2^6=64</m>, the options of which are 1 and 16 (See: Sylow's Theorem). As <m>|G|</m> does not divide <m>16!,</m> this contradicts part (a). Thus there are no simple groups of order <m>1,000,000</m>.
+                  </p>
+                </solution>
+              </exercise>
+      
+              <exercise>
+                <title>January 2014 (1)</title>
+              <statement>
                 <p>
-                  Thus <m>G</m> cannot be simple.
+                  Prove that any group of order <m>36</m> has a normal subgroup of order <m>3</m> or <m>9</m>.
                 </p>
-              </solution>
-            </exercise>
+              </statement>
+      
+                <solution>
+                  <p>
+                    Let <m>G</m> be a group of order <m>36=2^2\cdot 3^2</m>. By Sylow's Theorem we have <m>n_3|4</m> and <m>n_3\equiv 1\mod{3}</m>, and thus <m>n_3=1,4</m>. If <m>n_3=1</m> then the unique Sylow <m>3</m>-subgroup is normal, giving us a normal subgroup of order <m>9</m>.
+                  </p>
+        
+                  <p>
+                    Suppose then that <m>n_3=4</m>, let <m>P</m> be one of the subgroups of order <m>9</m>, and let <m>G</m> act on the cosets of <m>H</m> by left multiplication, inducing the homomorphism <m>\rho:G\to S_4</m>. This is because there are <m>9</m> elements in <m>P</m>, and thus there are <m>4</m> left cosets by Lagrange's Theorem.
+                  </p>
+        
+                  <p>
+                    As <m>|S_4|=24&lt;36=|G|</m>, we see that <m>\rho</m> cannot be injective and thus <m>N=\ker(\rho)</m> is a non-trivial normal subgroup of <m>G</m>.
+                  </p>
+        
+                  <p>
+                    Recall that the action of <m>G</m> on its cosets by left multiplication is always a transitive action, meaning there is exactly one orbit, <m>\Orb(sP)</m> for some <m>sP\in G/P</m>, which must then have all <m>4</m> elements of <m>G/P</m> in it. By the <xref text="title" ref="cor-orbit-stabilizer"/>, <m>|G|=|\Orb(sP)|\cdot|\Stab(sP)|</m>, and thus <m>|\Stab(s)|=9</m>. So there are <m>9</m> elements in <m>G</m> that fix <m>s</m> for any <m>sP\in G/P</m>.
+                  </p>
+        
+                  <p>
+                    Let <m>xP \in G/P</m> and <m>g\in N</m>. Notice that <m>g\cdot xP=gxP</m>. As <m>g\in N</m>, We know that <m>\rho(g)</m> yields the identity permutation, and thus that <m>gxP=xP</m>.
+                  </p>
+        
+                  <p>
+                    Thus <m>N\subseteq\Stab(xP)</m>, which has order <m>9</m>
+                  </p>
+                </solution>
+              </exercise>
+      
+              <exercise>
+                <title>June 2011 (1)</title>
+              <statement>
+                <p>
+                  Prove that no group of order 150 is simple.
+                </p>
+              </statement>
+      
+                <solution>
+                  <p>
+                    Let <m>G</m> be a group of order <m>150</m> and suppose by way of contradiction that <m>G</m> is simple. Notice that <m>150=2\cdot 3\cdot 5^2</m>. By Sylow's Theorem, we know <m>|\Syl_5(G)|\equiv 1\mod{5}</m> and divides <m>6</m>, the only options are thus <m>1</m> and <m>6</m>. Since <m>G</m> is simple, there must be exactly <m>n_5=6</m>, where <m>n_5=\Syl_5(G)</m>. Let <m>G</m> act on <m>\Syl_5(G)</m> by conjugation. Thus <m>\rho: G\to S_6</m> is a group homomorphism. Note that <m>|S_6|=720</m>, and that the order of <m>G</m> does not divide <m>720</m>. By Part (2) of Sylow's Theorem this action is transitive, meaning that the kernel of <m>\rho</m> cannot be trivial. Thus <m>\ker(\rho)</m> is a nontrivial normal subgroup of <m>G</m>, a contradiction. Thus no group of order <m>150</m> is simple.
+                  </p>
+                </solution>
+              </exercise>
+      
+              <exercise> <title>May 2022 (3)</title>
+              
+              
+              <statement>
+                <p>
+                  Let G be a group of order <m>2^5\cdot 7^3</m>. Prove that <m>G</m> is not simple.
+                </p>
+              </statement>
+      
+                <solution>
+                  <p>
+                    By Sylow's Theorem we know that <m>\Syl_7(G)\equiv 1\mod{7}</m> and <m>\Syl_7(G)|2^5=32</m>. Thus our options are <m>1</m> and <m>8</m>. Suppose that <m>\Syl_7(G)=8</m>.
+                  </p>
+        
+                  <p>
+                    Let <m>G</m> act on <m>\Syl_7(G)</m> by conjugation, yielding the homomorphism <me>\rho: G \to S_8</me>via the permutation representation. This map is non-trivial from part (2) of Sylow's Theorem, but <m>2^5\cdot 7^3</m> does not divide <m>|S_8|=8!</m>, and thus <m>\rho</m> cannot be injective. Then the kernel of this homomorphism is non-trivial, normal subgroup of <m>G</m>. Thus <m>G</m> is not simple.
+                  </p>
+                </solution>
+              </exercise>
+      
+              <exercise> <title>January 2017 (1)</title>
+              <statement>
+                <p>
+                  Prove that no group of order <m>2^m \cdot 5</m> with <m>m\geq 1</m> is simple.
+                </p>
+              </statement>
+      
+                <solution>
+                  <p>
+                    Let <m>G</m> be a group of order <m>2^m \cdot 5</m> with <m>m \leq 1</m>, and suppose by way of contradiction that <m>G</m> is simple. By Sylow's Theorem we know the following: - <m>n_{5}|2^m</m> and <m>n_5\equiv1\mod{5}</m>, and - <m>n_{2}|5</m> and <m>n_{2}\equiv1\mod{2}</m>, so our options are <m>3</m> and <m>5</m>. Suppose its <m>3</m>. Let <m>G</m> act on <m>\Syl_2(P)</m> by conjugation, yielding the permutation representation homomorphism <m>\rho:G\to S_{3}</m>. The kernel of this homomorphism cannot be trivial as the conjugation action on Sylow subgroups is transitive by Part (2) of Sylow's Theorem. Notice <m>|G|</m> does not divide the order of <m>S_{3}</m>, so our kernel cannot be all of <m>G</m>, making <m>\ker(\rho)</m> a nontrivial normal subgroup of <m>G</m>.
+                  </p>
+      
+                  <p>
+                    If <m>n_2=5</m>, then <m>G</m> must divide <m>5!</m>, meaning that <m>m=1</m>. However, by the cyclic subgroup generated by an element of order <m>5</m> has index <m>2</m> in <m>G</m>, making it normal.
+                  </p>
+      
+                  <p>
+                    Thus <m>G</m> cannot be simple.
+                  </p>
+                </solution>
+              </exercise>
+      
+              <exercise> <title>May 2017 (3)</title>
+              <statement>
+                <p>
+                  Prove that no group of order <m>2^m \cdot 7</m> with <m>m \geq 1</m> is simple.
+                </p>
+              </statement>
+      
+                <solution>
+                  <p>
+                    Let <m>G</m> be a group of order <m>2m\cdot 7</m> with <m>m\geq1</m> and suppose by way of contradiction that <m>G</m> is simple.
+                  </p>
+        
+                  <p>
+                    By Sylow's Theorem we know the following: - <m>n_{7}|2^m</m> and <m>n_7\equiv1\mod{7}</m>, and - <m>n_{2}|7</m> and <m>n_{2}\equiv1\mod{2}</m>, so our options are <m>3,5,7</m>.
+                  </p>
+        
+                  <p>
+                    Let <m>G</m> act on <m>\Syl_2(P)</m> by conjugation, yielding the permutation representation homomorphism <m>\rho:G\to S_{n_2}</m>. The kernel of this homomorphism cannot be trivial as the conjugation action on Sylow subgroups is transitive by Part (2) of Sylow's Theorem. Notice that if <m>n_2</m> is <m>3</m> or <m>5</m> then <m>|G|</m> does not divide the order of <m>S_{n_2}</m>, so our kernel cannot be all of <m>G</m>, making <m>\ker(\rho)</m> a nontrivial normal subgroup of <m>G</m>.
+                  </p>
+        
+                  <p>
+                    If <m>n_2=7</m>, then <m>G</m> must divide <m>7!</m>, meaning that <m>m=1</m>. However, by the cyclic subgroup generated by an element of order <m>7</m> has index <m>2</m> in <m>G</m>, making it normal.
+                  </p>
+        
+                  <p>
+                    Thus <m>G</m> cannot be simple.
+                  </p>
+                </solution>
+              </exercise>
+          
+            </exercisegroup>
+    
     
     
           </exercises>
@@ -7443,7 +7765,9 @@
               This means that we would need to have <m>(h_1, k_1)(h_2, k_2)=(h_1h_2',k_1k_2)</m> for <m>\theta</m> to be a homomorphism. This motivates the following definition.
             </p>
   
-            <problem>
+            <problem> <title>June 2014 (3)</title>
+            
+            
               <p>
                 Let <m>G</m> be a group that acts on a set <m>A</m>, and <m>H</m> a subgroup of <m>G</m> such that for any <m>a, b \in A</m> there exists a unique <m>h \in H</m> with <m>ha = b</m>. 
                 <ol>
@@ -7865,7 +8189,7 @@
 
             <proof>
               <p>
-                Let <m>G</m> be a group of order 6. Cayley's theorem gives that there exist elements <m>x,y\in G</m> with <m>|x|=2</m> and <m>|y|=3</m>. Let <m>K=\langle x \rangle</m> and <m>H=\langle y\rangle</m>. Since <m>[G:H]=2</m>, <m>H</m> is a normal subgroup of <m>G</m> and since <m>H\cap K</m> is a common subgroup of <m>H</m> and <m>K</m> Lagrange's theorem gives that <m>|H\cap K|\mid \operatorname{gcd}(|H|,|K|)=1</m>. Thus <m>H\cap K=\{e\}</m> and since <m>|HK|=\frac{|H||K|}{|H\cap K|}=6=|G|</m> we deduce that <m>HK=G</m>. Proposition <xref ref="prop:internaldirprod" /> now gives that <m>G</m> is the internal semidirect product of <m>H</m> and <m>K</m>. More to the point, <m>G\cong H\rtimes_\rho K</m>, where <m>\rho:K\to \operatorname{Aut}(H)</m> gives the action of <m>K</m> on <m>H</m> by conjugation.
+                Let <m>G</m> be a group of order <m>6</m>. Cayley's theorem gives that there exist elements <m>x,y\in G</m> with <m>|x|=2</m> and <m>|y|=3</m>. Let <m>K=\langle x \rangle</m> and <m>H=\langle y\rangle</m>. Since <m>[G:H]=2</m>, <m>H</m> is a normal subgroup of <m>G</m> and since <m>H\cap K</m> is a common subgroup of <m>H</m> and <m>K</m> Lagrange's theorem gives that <m>|H\cap K|\mid \operatorname{gcd}(|H|,|K|)=1</m>. Thus <m>H\cap K=\{e\}</m> and since <m>|HK|=\frac{|H||K|}{|H\cap K|}=6=|G|</m> we deduce that <m>HK=G</m>. Proposition <xref ref="prop:internaldirprod" /> now gives that <m>G</m> is the internal semidirect product of <m>H</m> and <m>K</m>. More to the point, <m>G\cong H\rtimes_\rho K</m>, where <m>\rho:K\to \operatorname{Aut}(H)</m> gives the action of <m>K</m> on <m>H</m> by conjugation.
 				</p>
 
 				<p>
@@ -8202,7 +8526,9 @@
           </example>
           <exercises xml:id="exercises-decomp">
             
-            <exercise>
+            <exercise> <title>January 2020(3)</title>
+            
+            
               
               <statement>
                 <p>
@@ -8225,7 +8551,7 @@
               </solution>
             </exercise>
 
-            <exercise>
+            <exercise> <title>January 2016 (3)</title>
 
               <statement>
               <p>
@@ -8244,12 +8570,25 @@
               </solution>
             </exercise>
 
-            <exercise>
+            <exercise> <title>June 2014 (2)</title>
+            
+            
               <statement>
               <p>
                 Let <m>G</m> be a group of order <m>p^2q</m> where <m>p</m> and <m>q</m> are distinct primes. 
-                (a) Prove that <m>G</m> contains a normal Sylow subgroup. 
-                (b) Suppose <m>p &lt; q</m> and the Sylow <m>p</m>-subgroup is cyclic and normal. Prove that <m>G</m> is abelian.
+                <ol>
+                  <li>
+                    <p>
+                      Prove that <m>G</m> contains a normal Sylow subgroup. 
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Suppose <m>p &lt; q</m> and the Sylow <m>p</m>-subgroup is cyclic and normal. Prove that <m>G</m> is abelian.
+                    </p>
+                  </li>
+                </ol>
               </p>
             </statement>
 
@@ -8306,7 +8645,7 @@
             <attribution>Boyd Rice</attribution>
           </blockquote>
 
-          <problem>
+          <problem> <title>May 2018 (3)</title>
             <statement>
             <p>
               Determine all of the groups of order <m>45</m>, up to isomorphism.
@@ -8320,7 +8659,7 @@
             </solution>
           </problem>
 
-          <problem>
+          <problem> <title>January 2017 (3)</title>
             <statement>
             <p>
               Let <m>p</m> be any positive prime integer. Prove that the number of groups of order <m>3\cdot p</m>, up to isomorphism, is exactly <me>\begin{cases} 2, \text{ when }p = 2, p = 3, \text{ or }p\equiv 1 \mod 3, \text{ and }\\ 1, \text{ otherwise }\end{cases}</me>
@@ -8342,7 +8681,7 @@
             </solution>
           </problem>
 
-          <problem>
+          <problem> <title>January 2021 (3)</title>
           <statement>
             <p>
               Let <m>G</m> be a group of order <m>175 = 3^2\cdot 5^2</m> and suppose <m>G</m> contains an element of order <m>25</m>. Prove that <m>G</m> is abelian.
@@ -8358,7 +8697,7 @@
 
 
 
-          <problem>
+          <problem> <title>May 2019 (1)</title>
           <statement>
             <p>
               Let <m>G</m> be a group. A subgroup <m>H</m> of <m>G</m> is called <em>maximal</em> if <m>H\neq G</m> (that is, <m>H</m> is a proper subgroup of <m>G</m>) and whenever <m>K</m> is another subgroup of <m>G</m> containing <m>H</m>, either <m>K = H</m> or <m>K = G</m>. Show that every nontrivial finitely generated group <m>G</m> possesses maximal subgroups.
@@ -10003,7 +10342,7 @@
     
                   <li>
                     <p>
-                      Let <m>R</m> be a commutative ring, and set <m>I = \{r ∈ R | rn = 0 \;\text{for some integer}\; n\}</m>. Then <m>I</m> is an ideal in <m>R</m>.
+                      Let <m>R</m> be a commutative ring, and set <m>I = \{r \in  R | rn = 0 \;\text{for some integer}\; n\}</m>. Then <m>I</m> is an ideal in <m>R</m>.
                     </p>
                   </li>
                 </ul>
@@ -10924,7 +11263,7 @@
             <proposition xml:id="prop-annihilator-ideal-and-quotient-field">
               <statement>
                 <p>
-                  Let <m>R</m> be a commutative ring, and set <m>I = \{r ∈ R | rn = 0 \;\text{for some integer}\; n\}</m>. Prove that following assertions.
+                  Let <m>R</m> be a commutative ring, and set <m>I = \{r \in  R | rn = 0 \;\text{for some integer}\; n\}</m>. Prove that following assertions.
                 </p>
         
                 <p>
@@ -11423,7 +11762,7 @@
           <problem xml:id="all-ideals-containing-6-x2-x-1">
           <statement>
             <p>
-              Find all the ideals of <m>\Z[x]</m> that contain <m>(6, x^2 + x + 1)</m>, the ideal of <m>\Z[x]</m> generated by <m>6</m> and <m>x^2 + x + 1</m>. For each such ideal, give an explicit list of generators, and determine whether<!-- linebreak -->the ideal is prime, maximal, or neither.
+              Find all the ideals of <m>\Z[x]</m> that contain <m>(6, x^2 + x + 1)</m>, the ideal of <m>\Z[x]</m> generated by <m>6</m> and <m>x^2 + x + 1</m>. For each such ideal, give an explicit list of generators, and determine whether the ideal is prime, maximal, or neither.
             </p>
           </statement>
     
@@ -15948,7 +16287,7 @@
               <exercise>
                 <statement>
                   <p>
-                    Let <m>R</m> be an integral domain and let <m>M</m> be an <m>R</m>-module. Recall that a subset <m>S</m> of <m>M</m> is <em>linearly independent</em> if whenever <m>∑_i r_is_i = 0</m> for ring elements <m>r_i</m> and elements <m>s_i ∈ S</m>, we must have <m>r_i = 0</m> for all <m>i</m>. We say <m>S</m> is <em>maximally linearly independent</em> if it is linearly independent and it is not properly contained in a linear independent subset of <m>M</m> . Finally, recall that we say an <m>R</m>-module <m>P</m> is torsion if for all <m>p ∈ P , rp = 0</m> for some non-zero <m>r\in R</m>.
+                    Let <m>R</m> be an integral domain and let <m>M</m> be an <m>R</m>-module. Recall that a subset <m>S</m> of <m>M</m> is <em>linearly independent</em> if whenever <m>∑_i r_is_i = 0</m> for ring elements <m>r_i</m> and elements <m>s_i \in  S</m>, we must have <m>r_i = 0</m> for all <m>i</m>. We say <m>S</m> is <em>maximally linearly independent</em> if it is linearly independent and it is not properly contained in a linear independent subset of <m>M</m> . Finally, recall that we say an <m>R</m>-module <m>P</m> is torsion if for all <m>p \in  P , rp = 0</m> for some non-zero <m>r\in R</m>.
                   </p>
         
                   <p><ol>
@@ -25001,12 +25340,12 @@
                 
                 <statement>
                   <p>
-                    Let F be a field, and let <m>f (x) ∈ F [x]</m>. Recall that <m>f (x)</m> is separable provided, for every extension field <m>K/F , f (x)</m> has no multiple roots in <m>K</m>. (A multiple root is an element <m>α ∈ K</m> such that <m>(x − α)^2 | f (x)</m> in <m>K[x].)</m>
+                    Let F be a field, and let <m>f (x) \in  F [x]</m>. Recall that <m>f (x)</m> is separable provided, for every extension field <m>K/F , f (x)</m> has no multiple roots in <m>K</m>. (A multiple root is an element <m>α \in  K</m> such that <m>(x − α)^2 | f (x)</m> in <m>K[x].)</m>
                   </p>
 
                   <p><ol>
                     <li>
-                    Prove that <m>f (x) ∈ F [x]</m> is separable if and only if <m>f (x)</m> and its derivative <m>f'(x)</m> are relatively prime in <m>F [x]</m>.
+                    Prove that <m>f (x) \in  F [x]</m> is separable if and only if <m>f (x)</m> and its derivative <m>f'(x)</m> are relatively prime in <m>F [x]</m>.
                     </li>
       
                     <li>

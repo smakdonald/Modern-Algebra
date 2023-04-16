@@ -12,7 +12,15 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">The Lemma tells us that the trace of a product of two matrices in either order is the same, but it does not follow that the trace is unchanged if you permute arbitrarily a product of three of more matrices. For instance, <span class="process-math">\(\trace(XYZ)\)</span> is usually not equal to <span class="process-math">\(\trace(XZY)\text{.}\)</span>
+<div class="para logical">
+<div class="para">If <span class="process-math">\(A\)</span> is not invertible, then the column space of <span class="process-math">\(A\)</span> is a proper subspace of <span class="process-math">\(F^n\)</span> and hence the columns of <span class="process-math">\(A\)</span> must be linearly dependent. Say the <span class="process-math">\(i\th\)</span> column is a linear combination of the rest: <span class="process-math">\(v_i = \sum_{j \ne i} c_j v_j\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\det(v_1, \dots, v_n) = \sum_{j \ne i} c_j \det(\text{a matrix with the $i$-th and $j$-th columns equal}) = 0.
+\end{equation*}
+</div>
+<div class="para">If <span class="process-math">\(A\)</span> is invertible, then by Corollary  <span class="process-math">\(A\)</span> can be obtained from <span class="process-math">\(I_n\)</span> via a sequence of elementary column operations. The result thus follows from Proposition  and the fact that <span class="process-math">\(\det(I_n) = 1\text{.}\)</span>
+</div>
 </div>
 <span class="incontext"><a href="sec-det.html#p-2813" class="internal">in-context</a></span>
 </body>

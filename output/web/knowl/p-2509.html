@@ -13,15 +13,24 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">The only possible invariant factors involving <span class="process-math">\(x^3\)</span> are</div>
-<ol class="lower-alpha">
-<li><div class="para"><span class="process-math">\(x,x,x\text{;}\)</span></div></li>
-<li><div class="para">
-<span class="process-math">\(x,x^2\text{;}\)</span> and</div></li>
-<li><div class="para">
-<span class="process-math">\(x^3\)</span> itself.</div></li>
-</ol>
-<div class="para">However, if <span class="process-math">\(x,x,x\)</span> are the invariant factors then the rank of <span class="process-math">\(A\)</span> would be 3, making it invertible, contradicting the fact that 0 is an eigenvalue of <span class="process-math">\(A\text{.}\)</span> Thus we need only consider the latter two cases.</div>
+<div class="para">Let us return to the example of <span class="process-math">\(A = \begin{bmatrix} 1 &amp; 1 \\ 0 &amp; 1 \end{bmatrix}\in \Mat_{2 \times 2}(\Q)\)</span> to illustrate the Theorem and its proof. By the previous example we have an isomorphism of <span class="process-math">\(\Q[x]\)</span>-module</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Q^2_A \cong \Q[x]/(x^2 - 2x + 1).
+\end{equation*}
+</div>
+<div class="para">Recall that <span class="process-math">\(\lx\)</span> (multiplication by <span class="process-math">\(x\)</span>) on <span class="process-math">\(\Q^2_A\)</span> is given by multiplication by the matrix <span class="process-math">\(A\text{.}\)</span> This is an isomorphism of <span class="process-math">\(\Q[x]\)</span>-modules, and so <span class="process-math">\(A\)</span> corresponds to the operator <span class="process-math">\(\lx\)</span> on <span class="process-math">\(\Q[x]/(x^2 - 2x + 1)\text{.}\)</span> As we have seen before, relative to the basis <span class="process-math">\(\{1, x\}\text{,}\)</span> the matrix for <span class="process-math">\(\lx\)</span> is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C(x^2 - 2x + 1) = 
+\begin{bmatrix} 
+0 &amp; -1 \\
+1 &amp; 2 \\
+\end{bmatrix}.
+\end{equation*}
+</div>
+<div class="para">This is the Rational Canonical Form of <span class="process-math">\(A\text{.}\)</span> <span class="process-math">\(A\)</span> has just one invariant factor, namely <span class="process-math">\(x^2 - 2x + 1\text{.}\)</span>
+</div>
 </div>
 <span class="incontext"><a href="sec-rcf.html#p-2509" class="internal">in-context</a></span>
 </body>
