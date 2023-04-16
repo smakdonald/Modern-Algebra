@@ -490,6 +490,7 @@ window.MathJax = {
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#subsec-gp-generators" class="internal"><span class="title">Generators</span></a></div></li>
 <li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#subsec-cyclic-gp" class="internal"><span class="title">Cyclic Groups</span></a></div></li>
+<li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#subsec-cyclic-properties" class="internal"><span class="title">Properties of Cyclic Groups</span></a></div></li>
 <li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#exercises-3" class="internal"><span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
@@ -498,10 +499,8 @@ window.MathJax = {
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-subgroups.html#subsec-subgrp-defn-ex" class="internal"><span class="title">Subgroup Basics</span></a></div></li>
 <li><div class="toc-item"><a href="sec-subgroups.html#subsec-center" class="internal"><span class="title">The Center of a Group</span></a></div></li>
-<li>
-<div class="toc-item"><a href="sec-subgroups.html#subsec-gensubgp" class="internal"><span class="title">Generated Subgroups</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-subgroups.html#exercises-4" class="internal"><span class="title">Exercises</span></a></div></li></ul>
-</li>
+<li><div class="toc-item"><a href="sec-subgroups.html#subsec-gensubgp" class="internal"><span class="title">Generated Subgroups</span></a></div></li>
+<li><div class="toc-item"><a href="sec-subgroups.html#exercises-4" class="internal"><span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -515,7 +514,11 @@ window.MathJax = {
 </li>
 <li>
 <div class="toc-item"><a href="sec-gpisos.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Group Isomorphisms</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-gpisos.html#exercises-6" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-gpisos.html#subsec-isomorphisms" class="internal"><span class="title">Isomorphisms</span></a></div></li>
+<li><div class="toc-item"><a href="sec-gpisos.html#subsec-automorphisms" class="internal"><span class="title">Automorphisms</span></a></div></li>
+<li><div class="toc-item"><a href="sec-gpisos.html#exercises-6" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
 </li>
 <li class="active">
 <div class="toc-item"><a href="sec-cylic-homoms.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Classifying Cyclic Groups</span></a></div>
@@ -899,7 +902,7 @@ window.MathJax = {
 <div class="toc-item"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
 <ul class="structural">
 <li>
-<div class="toc-item"><a href="appendix-1.html" class="internal"><span class="codenumber">A</span> <span class="title">Foundational Knowledge</span></a></div>
+<div class="toc-item"><a href="app-foundations.html" class="internal"><span class="codenumber">A</span> <span class="title">Foundational Knowledge</span></a></div>
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Sets, Functions, Constructions</span></a></div>
@@ -920,9 +923,10 @@ window.MathJax = {
 <li><div class="toc-item"><a href="sec-matrices.html" class="internal"><span class="codenumber">A.3</span> <span class="title">Matrices</span></a></div></li>
 </ul>
 </li>
-<li><div class="toc-item"><a href="appendix-2.html" class="internal"><span class="codenumber">B</span> <span class="title">Notation</span></a></div></li>
+<li><div class="toc-item"><a href="app-notation.html" class="internal"><span class="codenumber">B</span> <span class="title">Notation</span></a></div></li>
 <li><div class="toc-item"><a href="appendix-list-definitions.html" class="internal"><span class="codenumber">C</span> <span class="title">List of Definitions</span></a></div></li>
 <li><div class="toc-item"><a href="appendix-list-results.html" class="internal"><span class="codenumber">D</span> <span class="title">List of Results</span></a></div></li>
+<li><div class="toc-item"><a href="app-biograhy.html" class="internal"><span class="codenumber">E</span> <span class="title">Biographies</span></a></div></li>
 <li><div class="toc-item"><a href="colophon-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
 </li>
@@ -930,24 +934,24 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-cylic-homoms"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.3</span> <span class="title">Classifying Cyclic Groups</span>
 </h2>
-<blockquote class="blockquote" id="blockquote-10">
-<div class="para" id="p-343">“There is no way to be in cyclic existence without creating the causes of suffering.”</div> <cite class="attribution">―Jetsunma Ahkon Lhamo</cite>
+<blockquote class="blockquote" id="blockquote-7">
+<div class="para" id="p-372">“There is no way to be in cyclic existence without creating the causes of suffering.”</div> <cite class="attribution">―Jetsunma Ahkon Lhamo</cite>
 </blockquote>
-<blockquote class="blockquote" id="blockquote-11">
-<div class="para" id="p-344">“I used to wonder when my boomerang would come back to me. Then it hit me.”</div> <cite class="attribution">―Ancient Proverb</cite>
+<blockquote class="blockquote" id="blockquote-8">
+<div class="para" id="p-373">“I used to wonder when my boomerang would come back to me. Then it hit me.”</div> <cite class="attribution">―Ancient Proverb</cite>
 </blockquote>
 <article class="theorem theorem-like" id="thm-cyclic-relprime"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.25</span><span class="period">.</span><span class="space"> </span><span class="title">Cyclic Groups of Relatively Prime Order.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.30</span><span class="period">.</span><span class="space"> </span><span class="title">Cyclic Groups of Relatively Prime Order.</span>
 </h3>
-<div class="para" id="p-345">Prove that if <span class="process-math">\(m,n\)</span> are positive integers such that <span class="process-math">\(\gcd(m,n)=1\)</span> then there is a group isomorphism <span class="process-math">\(C_{mn}=C_m\times C_n\text{.}\)</span>
+<div class="para" id="p-374">Prove that if <span class="process-math">\(m,n\)</span> are positive integers such that <span class="process-math">\(\gcd(m,n)=1\)</span> then there is a group isomorphism <span class="process-math">\(C_{mn}=C_m\times C_n\text{.}\)</span>
 </div></article><article class="theorem theorem-like" id="thm-cyclic-divisors-and-subgroups"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.26</span><span class="period">.</span><span class="space"> </span><span class="title">Subgroups of Cyclic Groups.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.31</span><span class="period">.</span><span class="space"> </span><span class="title">Subgroups of Cyclic Groups.</span>
 </h3>
-<div class="para logical" id="p-346">
+<div class="para logical" id="p-375">
 <div class="para">Let <span class="process-math">\(G=\langle x\rangle\text{,}\)</span> where <span class="process-math">\(x\)</span> has finite order <span class="process-math">\(n\text{.}\)</span> Then</div>
 <ol class="decimal">
-<li id="li-134"><div class="para" id="p-347"><span class="process-math">\(G=\{e,x,\ldots,x^{n-1}\}\text{.}\)</span></div></li>
-<li id="li-135"><div class="para logical" id="p-348">
+<li id="li-153"><div class="para" id="p-376"><span class="process-math">\(G=\{e,x,\ldots,x^{n-1}\}\text{.}\)</span></div></li>
+<li id="li-154"><div class="para logical" id="p-377">
 <div class="para">There is a bijection</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -957,10 +961,42 @@ window.MathJax = {
 <div class="para">for each divisor <span class="process-math">\(d\)</span> of <span class="process-math">\(|G|\text{.}\)</span> Moreover, for each subgroup <span class="process-math">\(H\)</span> of <span class="process-math">\(G\text{,}\)</span> <span class="process-math">\(\Psi^{-1}(H) = |H|\text{.}\)</span> In particular, all subgroups of <span class="process-math">\(G\)</span> are cyclic and there is a unique subgroup of each order.</div>
 </div></li>
 </ol>
-</div></article><article class="proposition theorem-like" id="prop-ump-cyclic"><h3 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.27</span><span class="period">.</span><span class="space"> </span><span class="title">Universal Mapping Property (UMP) for Cyclic Groups.</span>
+</div></article><article class="hiddenproof" id="proof-7"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-7"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-7"><article class="hiddenproof"><div class="para logical" id="p-378"><ol class="decimal">
+<li id="li-155">
+<div class="para" id="p-379">1. By Lemma <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "lem:&lt;X&gt;" missing or not unique]</code>, the group <span class="process-math">\(G\)</span> has the following elements <span class="process-math">\(G=\{x^i \mid i\in \mathbb{Z}\}\text{.}\)</span> We show that</div>
+<div class="para logical" id="p-380"><ul class="disc">
+<li id="li-156"><div class="para" id="p-381">
+<span class="process-math">\(|G|\geq n\)</span> by showing the elements <span class="process-math">\(x^0, x^1, \dots, x^{n-1}\)</span> are distinct. Indeed, if <span class="process-math">\(0\leq i&lt;j&lt;n\)</span> and <span class="process-math">\(x^i=x^j\)</span> then <span class="process-math">\(x^{j-i}=e\)</span> and <span class="process-math">\(1\leq j-i&lt;n\text{,}\)</span> contradicting the minimality of the order of <span class="process-math">\(x\text{.}\)</span>
+</div></li>
+<li id="li-157"><div class="para" id="p-382">
+<span class="process-math">\(|G|\leq n\)</span> by showing <span class="process-math">\(G\subseteq\{x^0, x^1, \dots, x^{n-1}\}\)</span> (this implies <span class="process-math">\(G=\{e,x,\ldots,x^{n-1}\}\)</span>). Indeed, for any <span class="process-math">\(m\in \mathbb{Z}\)</span> division by <span class="process-math">\(n\)</span> yields integers <span class="process-math">\(q,r\)</span> with <span class="process-math">\(0\leq r\leq n-1\)</span> such that <span class="process-math">\(m=nq+r\text{.}\)</span> Then <span class="process-math">\(x^m=x^{nq+r}=(x^n)^qx^r=x^r\in\{x^0, x^1, \dots, x^{n-1}\}\text{.}\)</span>
+</div></li>
+</ul></div>
+</li>
+<li id="li-158">
+<div class="para" id="p-383">2. <em class="emphasis">Claim 1:</em> For any <span class="process-math">\(\{e\}\neq H\leq G\text{,}\)</span> setting <span class="process-math">\(k=\min\{i \mid i\in \mathbb{Z}, i&gt;0, g^i\in H\}\)</span> gives that <span class="process-math">\(H=\langle g^k \rangle\text{.}\)</span>
+</div>
+<div class="para" id="p-384">Since <span class="process-math">\(H\subseteq G=\langle g\rangle\)</span> any element of <span class="process-math">\(H\)</span> is of the form <span class="process-math">\(g^m\)</span> for some <span class="process-math">\(m\in \mathbb{Z}\text{.}\)</span> By the Division Theorem <span class="process-math">\(m=kq+r\)</span> for some <span class="process-math">\(r\in \mathbb{Z}\text{,}\)</span> <span class="process-math">\(0\leq r&lt;k\text{.}\)</span> Since <span class="process-math">\(g^m\)</span> and <span class="process-math">\(g^k\)</span> are elements of <span class="process-math">\(H\text{,}\)</span> <span class="process-math">\(g^r=g^m(g^{k})^{-q}\in H\text{.}\)</span> Since <span class="process-math">\(r&lt;k\)</span> and <span class="process-math">\(g^r\in H\text{,}\)</span> by the minimality of <span class="process-math">\(k\)</span> it follows that <span class="process-math">\(r\)</span> cannot be positive and thus <span class="process-math">\(r=0\text{.}\)</span> Therefore <span class="process-math">\(m=kq\)</span> and we have shown that <span class="process-math">\(H\subseteq \langle g^k \rangle\text{.}\)</span> The opposite containment follows because <span class="process-math">\(g^k\in H\)</span> and <span class="process-math">\(\langle g^k \rangle\)</span> is the smallest subgroup of <span class="process-math">\(G\)</span> containing <span class="process-math">\(g^k\text{.}\)</span> Thus <span class="process-math">\(H=\langle g^k \rangle\text{.}\)</span>
+</div>
+<div class="para" id="p-385">Let <span class="process-math">\(\Phi:\{\text{subgroups of } G\} \to  \{\text{divisors of } |G|\}\)</span> be given by <span class="process-math">\(\Phi(H)=|H|\text{.}\)</span>
+</div>
+<div class="para" id="p-386">
+<em class="emphasis">Claim 2:</em> For any divisor <span class="process-math">\(d\)</span> of <span class="process-math">\(|G|\text{,}\)</span> we have <span class="process-math">\((\Psi\circ\Phi)(d)=d\text{.}\)</span>
+</div>
+<div class="para" id="p-387">We have <span class="process-math">\((\Psi\circ\Phi)(d)=\left| \langle g^{\frac{|G|}{d}}\rangle\right|=\left| g^{\frac{|G|}{d}}\right|=\frac{|G|}{\operatorname{gcd}(|G|/d,|G|)}=\frac{|G|}{|G|/d}=d.\)</span>
+</div>
+<div class="para" id="p-388">
+<em class="emphasis">Claim 3:</em> For any subgroup <span class="process-math">\(H\)</span> of <span class="process-math">\(G\text{,}\)</span> we have <span class="process-math">\((\Phi\circ\Psi)(H)=H\text{.}\)</span>
+</div>
+<div class="para" id="p-389">By Claim 1, any <span class="process-math">\(H\leq G\)</span> is either <span class="process-math">\(H=\{e\}\text{,}\)</span> for which <span class="process-math">\((\Phi\circ\Psi)(\{e\})=\Phi(1)=\langle g^{|G|} \rangle=\{e\}\)</span> or is of the form <span class="process-math">\(H=\langle g^k \rangle\text{.}\)</span> In the latter case, setting <span class="process-math">\(|G|=n\)</span> we have <span class="process-math">\(|H|=|g^k|=\frac{n}{\operatorname{gcd}(n,k)}\)</span> and <span class="process-math">\((\Phi\circ\Psi)(H)=\langle g^{\frac{n}{n/\operatorname{gcd}(n,k)}} \rangle=\langle g^{\operatorname{gcd}(n,k)}\rangle.\)</span> It remains to show that <span class="process-math">\(\langle g^{\operatorname{gcd}(n,k)}\rangle=\langle g^k\rangle=H\text{.}\)</span> By Bézout’s Identity, <span class="process-math">\(\operatorname{gcd}(n,k)=an+bk\)</span> for some integers <span class="process-math">\(a,b\text{.}\)</span> Since <span class="process-math">\(g^{\operatorname{gcd}(n,k)}=(g^n)^a(g^k)^b=e^a(g^k)^b=(g^k)^b\in \langle g^k \rangle\)</span> if follows that <span class="process-math">\(\langle g^{\operatorname{gcd}(n,k)}\rangle \subseteq \langle g^k \rangle\text{.}\)</span> On the other hand <span class="process-math">\(k\)</span> is a multiple of <span class="process-math">\(\operatorname{gcd}(n,k)\)</span> so <span class="process-math">\(g^k\in \langle g^{\operatorname{gcd}(n,k)}\rangle\)</span> and thus <span class="process-math">\(\langle g^k \rangle \subseteq \langle g^{\operatorname{gcd}(n,k)}\rangle\text{.}\)</span> Finally, we conclude that <span class="process-math">\((\Phi\circ\Psi)(\langle g^k \rangle)=\langle g^{\operatorname{gcd}(n,k)}\rangle=\langle g^k \rangle\)</span> for any <span class="process-math">\(k\in \mathbb{Z},k&gt;0\text{.}\)</span>
+</div>
+<div class="para" id="p-390">Claims 2 and 3 establish that <span class="process-math">\(\Phi\)</span> is a two sided inverse to <span class="process-math">\(\Phi\text{,}\)</span> thus <span class="process-math">\(\Phi\)</span> is a bijection.</div>
+</li>
+</ol></div></article></div>
+<article class="proposition theorem-like" id="prop-ump-cyclic"><h3 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.32</span><span class="period">.</span><span class="space"> </span><span class="title">Universal Mapping Property (UMP) for Cyclic Groups.</span>
 </h3>
-<div class="para logical" id="p-349">
+<div class="para logical" id="p-391">
 <div class="para">Assume <span class="process-math">\(G = \langle x \rangle\)</span> and let <span class="process-math">\(H\)</span> be any group. If <span class="process-math">\(|x| = n &lt; \infty\text{,}\)</span> then for each <span class="process-math">\(y \in H\)</span> such that <span class="process-math">\(y^n = e\text{,}\)</span> there is a unique group homomorphism</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -975,34 +1011,70 @@ f: G \to H
 </div>
 <div class="para">such that <span class="process-math">\(f(x) = y\text{.}\)</span> In both cases this unique group homomorphism is given by <span class="process-math">\(f(x^i)=y^i\)</span> for any <span class="process-math">\(i\text{.}\)</span>
 </div>
-</div></article><article class="remark remark-like" id="remark-16"><h3 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.28</span><span class="period">.</span>
+</div></article><article class="hiddenproof" id="proof-8"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-8"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-8"><article class="hiddenproof"><div class="para" id="p-392">Recall that either <span class="process-math">\(G = \{e,x,x^2, \dots, x^{n-1}\}\)</span> (with no repetitions) if <span class="process-math">\(|x| = n\)</span> or <span class="process-math">\(G = \{ \cdots, x^{-2}, x^{-1}, e, x, x^e, \dots \}\)</span> (with no repetitions) if <span class="process-math">\(|x| = \infty\text{.}\)</span>
+</div> <div class="para" id="p-393">
+<em class="emphasis">Uniqueness:</em> We show that if <span class="process-math">\(f:G\to H\)</span> is a group homomorphism, then <span class="process-math">\(f(x^i)=y^i\)</span> for all <span class="process-math">\(i\in \mathbb{Z}\text{.}\)</span>
+</div> <div class="para logical" id="p-394"><ul class="disc">
+<li id="li-159"><div class="para" id="p-395">if <span class="process-math">\(i=0\)</span> then <span class="process-math">\(f(x^0)=f(e_G)=e_H=y^0\)</span>
+</div></li>
+<li id="li-160"><div class="para" id="p-396">if <span class="process-math">\(i&gt;0\)</span> then <span class="process-math">\(f(x^i)=f(\underbrace{x\cdots x}_{i \text{ times}})=\underbrace{f(x)\cdots f(x)}_{i \text{ times}})=y^i\)</span>
+</div></li>
+<li id="li-161"><div class="para" id="p-397">if <span class="process-math">\(i&lt;0\)</span> then <span class="process-math">\(f(x^i)=f\left((x^{-i})^{-1}\right)=f\left((x^{-i})\right)^{-1}=(y^{-i})^{-1}=y^i\text{,}\)</span> using the formula above for <span class="process-math">\(-i&gt;0\)</span>
+</div></li>
+</ul></div> <div class="para logical" id="p-398">
+<div class="para">
+<em class="emphasis">Existence:</em> In either case, define <span class="process-math">\(f(x^i) = y^i\)</span> for all relevant <span class="process-math">\(i\)</span> (i.e., in the first case, for <span class="process-math">\(0 \leq i \leq n-1\)</span> and in the second for all <span class="process-math">\(i \in\mathbb{Z}\)</span>). We need to show this function is a well-defined group homomorphism. To see that <span class="process-math">\(f\)</span> is well defined, suppose <span class="process-math">\(x^i=x^j\)</span> for some <span class="process-math">\(i,j\in \mathbb{Z}\text{.}\)</span> Then, since <span class="process-math">\(x^{i-j}=e_G\text{,}\)</span> suing Lemma <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "prop96" missing or not unique]</code> or the definition for order we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{cases}
+n\mid i-j &amp; \text{ if } |x|=n\\
+i-j=0 &amp; \text{ if } |x|=\infty\\
+\end{cases}
+\Rightarrow
+\begin{cases}
+y^ {i-j}=y^{nk} &amp; \text{ if } |x|=n\\
+y^{i-j}=y^0 &amp; \text{ if } |x|=\infty\\
+\end{cases}
+\Rightarrow y^ {i-j}=e_H
+\Rightarrow y^ i=y^j.
+\end{equation*}
+</div>
+<div class="para">Thus, if <span class="process-math">\(x^i=x^j\)</span> then <span class="process-math">\(f(x^i)=y^i=y^j=f(x^j)\text{.}\)</span>
+</div>
+</div> <div class="para" id="p-399">The homomorphism property is immediate: <span class="process-math">\(f^(x^ix^j)=f(x^{i+j})=y^{i+j}=y^iy^j=f(x^i)f(x^j)\text{.}\)</span> ◻</div></article></div>
+<article class="remark remark-like" id="remark-18"><h3 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.33</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-350">This is a particular case of the universal mapping property of a presentation (which we will covered later), since a cyclic group is either presented by <span class="process-math">\(\langle x | x^n = e \rangle\)</span> or <span class="process-math">\(\langle x \mid  -\rangle\text{.}\)</span>
+<div class="para" id="p-400">This is a particular case of the universal mapping property of a presentation (which we will covered later), since a cyclic group is either presented by <span class="process-math">\(\langle x | x^n = e \rangle\)</span> or <span class="process-math">\(\langle x \mid  -\rangle\text{.}\)</span>
 </div></article><article class="theorem theorem-like" id="thm-cyclic-classification"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.29</span><span class="period">.</span><span class="space"> </span><span class="title">Classification Theorem for Cyclic Groups.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.34</span><span class="period">.</span><span class="space"> </span><span class="title">Classification Theorem for Cyclic Groups.</span>
 </h3>
-<div class="para" id="p-351">Every infinite cyclic group is isomorphic to <span class="process-math">\(C_\infty\text{.}\)</span> Every cyclic group of order <span class="process-math">\(n\)</span> is isomorphic to <span class="process-math">\(C_n\text{.}\)</span>
-</div></article><section class="exercises" id="exercises-7"><h3 class="heading hide-type">
+<div class="para" id="p-401">Every infinite cyclic group is isomorphic to <span class="process-math">\(C_\infty\text{.}\)</span> Every cyclic group of order <span class="process-math">\(n\)</span> is isomorphic to <span class="process-math">\(C_n\text{.}\)</span>
+</div></article><article class="hiddenproof" id="proof-9"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-9"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-9"><article class="hiddenproof"><div class="para" id="p-402">Suppose <span class="process-math">\(G = \langle x \rangle\)</span> with <span class="process-math">\(|x| = n\)</span> or <span class="process-math">\(|x| = \infty\)</span> and set <span class="process-math">\(H=C_n\)</span> in the first case and <span class="process-math">\(H=C_\infty\)</span> in the second case. Then by <a href="" class="xref" data-knowl="./knowl/prop-ump-cyclic.html" title="Proposition 2.32: Universal Mapping Property (UMP) for Cyclic Groups">Proposition 2.32</a>, there are homomorphisms <span class="process-math">\(f: G \to H\)</span> and <span class="process-math">\(g: G \to H\)</span> such that <span class="process-math">\(f(x) = a\)</span> and <span class="process-math">\(g(a) =x\text{.}\)</span> So <span class="process-math">\(g \circ f\)</span> is an endomorphisms of <span class="process-math">\(G\)</span> mapping <span class="process-math">\(x\)</span> to <span class="process-math">\(x\text{.}\)</span> But the identity map also has this property, and so the uniqueness clause gives <span class="process-math">\(g \circ f = \text{id}_G\text{.}\)</span> Similarly, <span class="process-math">\(f \circ g = \text{id}_H\text{.}\)</span>
+</div></article></div>
+<section class="exercises" id="exercises-7"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
-<div class="exercisegroup" id="exercisegroup-18">
+<div class="exercisegroup" id="exercisegroup-17">
 <h4 class="heading"><span class="title">Computations and Examples.</span></h4>
-<div class="introduction" id="introduction-21"><div class="para" id="p-352"></div></div>
-<div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-46"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
-<div class="para" id="p-353">Coming soon to an OER near you!</div></article></div>
+<div class="introduction" id="introduction-21"><div class="para" id="p-403"></div></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-61"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-61"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-61"><article class="exercise exercise-like"><div class="para" id="p-404">Coming soon to an OER near you!</div></article></div>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-18">
+<h4 class="heading"><span class="title">Formal Proofs.</span></h4>
+<div class="introduction" id="introduction-22"><div class="para" id="p-405"></div></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-62"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-62"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-62"><article class="exercise exercise-like"><div class="para" id="p-406">Coming soon to an OER near you!</div></article></div>
+</div>
 </div>
 <div class="exercisegroup" id="exercisegroup-19">
-<h4 class="heading"><span class="title">Formal Proofs.</span></h4>
-<div class="introduction" id="introduction-22"><div class="para" id="p-354"></div></div>
-<div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-47"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
-<div class="para" id="p-355">Coming soon to an OER near you!</div></article></div>
-</div>
-<div class="exercisegroup" id="exercisegroup-20">
 <h4 class="heading"><span class="title">Qualifying Exam Problems.</span></h4>
-<div class="introduction" id="introduction-23"><div class="para" id="p-356"></div></div>
-<div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-48"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
-<div class="para" id="p-357">Coming soon to an OER near you!</div></article></div>
+<div class="introduction" id="introduction-23"><div class="para" id="p-407"></div></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-63"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-63"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-63"><article class="exercise exercise-like"><div class="para" id="p-408">Coming soon to an OER near you!</div></article></div>
+</div>
 </div></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-gpisos.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="normal-quotient-groups.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

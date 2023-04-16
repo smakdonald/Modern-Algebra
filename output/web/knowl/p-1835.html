@@ -12,7 +12,14 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Suppose <span class="process-math">\(I\)</span> is a maximal ideal of a commutative ring <span class="process-math">\(R\text{.}\)</span> Then <span class="process-math">\(R/I\)</span> is a field, and given an <span class="process-math">\(R\)</span>-module <span class="process-math">\(M\text{,}\)</span> <span class="process-math">\(M/IM\)</span> is a module over the field <span class="process-math">\(R/I\text{;}\)</span> i.e., it is a vector space over this field. Moreover, if <span class="process-math">\(f: M \to N\)</span> is an <span class="process-math">\(R\)</span>-map then <span class="process-math">\(\ov{f}: M/IM \to N/IN\)</span> is an <span class="process-math">\(R/I\)</span>-linear transformation.</div>
-<span class="incontext"><a href="sec-modgen.html#p-1835" class="internal">in-context</a></span>
+<div class="para logical">
+<div class="para">For the second isomorphism theorem, we need to first check that <span class="process-math">\(A+B\)</span> and <span class="process-math">\(A \cap B\)</span> are submodules. From 817 we already know they are subgroups under <span class="process-math">\(+\text{,}\)</span> and it is evident from the definitions that each is closed under scaling by elements of <span class="process-math">\(R\text{.}\)</span> Now, we know from 817 that there is an isomorphism of abelian groups <span class="process-math">\(h: A/(A \cap B) \xra{\cong} (A+B)/B\)</span> given by <span class="process-math">\(h(a + (A\cap B)) = a + B\text{.}\)</span> It remains only to show <span class="process-math">\(h\)</span> preserves scaling:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+h(r(a+(A \cap B))) = h(ra + A \cap B) = ra + B = r(a +B) = rh(a + (A \cap B)).
+\end{equation*}
+</div>
+</div>
+<span class="incontext"><a href="sec-quote.html#p-1835" class="internal">in-context</a></span>
 </body>
 </html>

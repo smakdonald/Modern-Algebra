@@ -12,8 +12,17 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>
-<div class="para">Let <span class="process-math">\(R\)</span> be a commutative ring in which every element <span class="process-math">\(x\)</span> satisfies <span class="process-math">\(x^n = x\)</span> for some <span class="process-math">\(n &gt; 1\text{.}\)</span> Let <span class="process-math">\(P\)</span> be a prime ideal in <span class="process-math">\(R\text{.}\)</span>
-</div> <div class="para">Let <span class="process-math">\(rP\in R/P\text{,}\)</span> meaning <span class="process-math">\(r\not\in P\text{.}\)</span> Then <span class="process-math">\((rP)^n=r^nP=rP\)</span> for some <span class="process-math">\(n&gt;1\text{.}\)</span> As <span class="process-math">\(R/P\)</span> is a domain <a href="" class="fn-knowl original" data-knowl="./knowl/fn-7-hidden.html" title="Footnote 3.1"><sup> 1 </sup></a> we can cancel an <span class="process-math">\(r\)</span> to see that <span class="process-math">\(r^{n-1}P=P\text{,}\)</span> and thus <span class="process-math">\(rP\cdot r^{n-2}P=P\text{,}\)</span> making <span class="process-math">\(rP\)</span> a unit in <span class="process-math">\(R/P\text{.}\)</span> Thus <span class="process-math">\(R/P\)</span> is a field, making <span class="process-math">\(P\)</span> maximal in <span class="process-math">\(R\text{.}\)</span>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(D\)</span> be a finite integral domain.</div>
+<ol class="decimal">
+<li><div class="para">Let <span class="process-math">\(x\in D\text{,}\)</span> and consider the set <span class="process-math">\(\{x^n|n\in\N\}\text{.}\)</span> As <span class="process-math">\(D\)</span> is finite there must exist <span class="process-math">\(n&lt;m\in\N\)</span> such that <span class="process-math">\(x^n=x^m\text{.}\)</span> In integral domains cancellation is allowed, and thus we can cancel an <span class="process-math">\(x^n\)</span> from both sides, yielding <span class="process-math">\(e=x^{m-n}\text{,}\)</span> and thus <span class="process-math">\(x\cdot x^{m-n-1}=e\text{,}\)</span> making <span class="process-math">\(x\)</span> a unit of <span class="process-math">\(D\text{.}\)</span> Thus <span class="process-math">\(D\)</span> is a field.</div></li>
+<li>
+<div class="para">Let <span class="process-math">\(R\)</span> be a commutative ring and <span class="process-math">\(P\subseteq R\)</span> a prime ideal such that <span class="process-math">\(P\)</span> has finite index as an additive subgroup of <span class="process-math">\(R\text{.}\)</span>
+</div>
+<div class="para">Consider <span class="process-math">\(R/P\text{,}\)</span> which is a domain since <span class="process-math">\(P\)</span> is a prime ideal. As <span class="process-math">\([R:P]=n\)</span> for some <span class="process-math">\(n\in\N\text{,}\)</span> we know that <span class="process-math">\(|R/P|=n\text{,}\)</span> making it a finite domain. Thus <span class="process-math">\(R/P\)</span> is a field by Part (a), making <span class="process-math">\(P\)</span> maximal by the same theorem as above.</div>
+<div class="para">Let <span class="process-math">\(R=\Z\)</span> and consider <span class="process-math">\(R[x]\text{,}\)</span> in which <span class="process-math">\((x)\)</span> is a prime ideal. However, <span class="process-math">\(R[x]/(x)=\Z\text{,}\)</span> which does not have finite order, nor is it a field.</div>
+</li>
+</ol>
 </div></article><span class="incontext"><a href="subsec-primemax-ideals.html#proof-45" class="internal">in-context</a></span>
 </body>
 </html>

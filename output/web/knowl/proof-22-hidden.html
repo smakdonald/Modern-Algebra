@@ -10,6 +10,24 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para">Let <span class="process-math">\(g_1,\ldots g_r \in G\)</span> be a list of unique representatives of all of the conjugacy classes of <span class="process-math">\(G\)</span> of size greater than 1 as in the class equation. Then for each <span class="process-math">\(i\text{,}\)</span> <span class="process-math">\(C_G(g_i)\neq G\)</span> so <span class="process-math">\([G:C_G(g_i)]\neq 1\text{.}\)</span> Since <span class="process-math">\(1\neq [G:C_G(g_i)] \mid |G|=p^m\text{,}\)</span> it follows that <span class="process-math">\(p\mid [G:C_G(g_i)]\)</span> for each <span class="process-math">\(i\text{.}\)</span> From the Class equation we deduce that <span class="process-math">\(p\mid |Z(G)|\)</span> so, <span class="process-math">\(|Z(G)|\neq 1\text{.}\)</span>
+<body class="ignore-math"><article class="hiddenproof"><div class="para logical">
+<div class="para">Let <span class="process-math">\(\mathcal L\)</span> be the collection of left cosets of <span class="process-math">\(\operatorname{Stab}_G(s)\)</span> in <span class="process-math">\(G\text{.}\)</span> Define a function</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\alpha: \mathcal L\to \operatorname{Orbit}_G(s)
+\end{equation*}
+</div>
+<div class="para">by <span class="process-math">\(\alpha(x \operatorname{Stab}_G(s)) = x \cdot s\text{.}\)</span> This function is well defined and one-to-one:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x \operatorname{Stab}_G(s) = y \operatorname{Stab}_G(s)\iff x^{-1}y \in \operatorname{Stab}_G(s) \iff x^{-1}y \cdot s = s \iff y \cdot s = x \cdot s.
+\end{equation*}
+</div>
+<div class="para">The function <span class="process-math">\(\alpha\)</span> is onto by definition of <span class="process-math">\(\operatorname{Orbit}_G(s)\text{.}\)</span> Thus <span class="process-math">\(\alpha\)</span> is a bijection and it yields equalities</div>
+<div class="displaymath process-math">
+\begin{equation*}
+[G: \operatorname{Stab}_G(s)]=|\mathcal L|=|\operatorname{Orbit}_G(s)|.
+\end{equation*}
+</div>
 </div></article></body>
 </html>

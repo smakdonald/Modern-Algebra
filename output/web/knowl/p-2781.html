@@ -12,7 +12,16 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Recall that if <span class="process-math">\(F\)</span> and <span class="process-math">\(E\)</span> are fields, then every ring homomorphism <span class="process-math">\(\phi: F \to E\)</span> necessarily injective. <code class="code-inline tex2jax_ignore">[provisional cross-reference: empty]</code>(Proof: since <span class="process-math">\(\phi(1) = 1\text{,}\)</span> <span class="process-math">\(\ker(\phi)\)</span> is a proper ideal of <span class="process-math">\(F\text{,}\)</span> and since <span class="process-math">\(F\)</span> is a field, the only proper ideal of it is <span class="process-math">\(0\text{.}\)</span>) Thus <span class="process-math">\(\phi\)</span> maps <span class="process-math">\(F\)</span> isomorphically onto its image <span class="process-math">\(\phi(F)\)</span> and <span class="process-math">\(\phi(F) \subseteq E\)</span> is a field extension. By abuse of notation we will typically think of <span class="process-math">\(\phi\)</span> as being a field extension, even though it is technically just an injective homomorphism of fields.</div>
-<span class="incontext"><a href="field-extension-basics.html#p-2781" class="internal">in-context</a></span>
+<div class="para logical">
+<div class="para">If <span class="process-math">\(A\)</span> is not invertible, then the column space of <span class="process-math">\(A\)</span> is a proper subspace of <span class="process-math">\(F^n\)</span> and hence the columns of <span class="process-math">\(A\)</span> must be linearly dependent. Say the <span class="process-math">\(i\th\)</span> column is a linear combination of the rest: <span class="process-math">\(v_i = \sum_{j \ne i} c_j v_j\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\det(v_1, \dots, v_n) = \sum_{j \ne i} c_j \det(\text{a matrix with the $i$-th and $j$-th columns equal}) = 0.
+\end{equation*}
+</div>
+<div class="para">If <span class="process-math">\(A\)</span> is invertible, then by Corollary  <span class="process-math">\(A\)</span> can be obtained from <span class="process-math">\(I_n\)</span> via a sequence of elementary column operations. The result thus follows from Proposition  and the fact that <span class="process-math">\(\det(I_n) = 1\text{.}\)</span>
+</div>
+</div>
+<span class="incontext"><a href="sec-det.html#p-2781" class="internal">in-context</a></span>
 </body>
 </html>

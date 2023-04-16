@@ -11,8 +11,27 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h6 class="heading"><span class="type">Paragraph</span></h6>
-<div class="para">Suppose <span class="process-math">\(f\)</span> has a root, <span class="process-math">\(\alpha\text{,}\)</span> in <span class="process-math">\(F\text{.}\)</span> Then <span class="process-math">\(\alpha^p-\alpha-a=0\text{.}\)</span> Consider <span class="process-math">\(\alpha+j\)</span> for some <span class="process-math">\(j\in\Z/p\text{,}\)</span> and observe <span class="process-math">\((\alpha+j)^p-(\alpha+j)-a\text{.}\)</span> By The Freshman's Dream, we have <span class="process-math">\(\alpha^p+j^p-\alpha-j-a\text{,}\)</span> but as <span class="process-math">\(\alpha^p-\alpha-a=0\text{,}\)</span> we really have <span class="process-math">\(j^p-j\text{.}\)</span> By Fermat's Little Theorem, <span class="process-math">\(p|j^p-j\text{,}\)</span> and thus <span class="process-math">\(f(\alpha+j)=0\text{.}\)</span> Thus we have found <span class="process-math">\(p\)</span> roots of <span class="process-math">\(f\text{,}\)</span> and thus <span class="process-math">\(f\)</span> splits into linear factors.</div>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">For a more complicated example, let <span class="process-math">\(K\)</span> be the splitting field of <span class="process-math">\(x^3 - 2\)</span> over <span class="process-math">\(\Q\text{.}\)</span> Recall</div>
+<div class="displaymath process-math">
+\begin{equation*}
+K= \Q(\a_1, \a_2, \a_3)
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\a_1 = \sqrt[3]{2}, \a_2 = e^{2 \pi i/3}\sqrt[3]{2}, \a_3 = e^{4 \pi i/3}\sqrt[3]{2}.
+\end{equation*}
+</div>
+<div class="para">Let us ponder how big <span class="process-math">\(\Aut(K/\Q)\)</span> could be. Pick any <span class="process-math">\(\s \in \Aut(K/\Q)\text{.}\)</span> Since <span class="process-math">\(\s\)</span> is a ring homomorphism, for any <span class="process-math">\(i\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\s(\a_i)^3 = \s(\a_i^3) = \s(2) = 2
+\end{equation*}
+</div>
+<div class="para">and thus <span class="process-math">\(\s(\a_i)\)</span> is also a root of <span class="process-math">\(x^2 - 2\text{.}\)</span> In other words, for each <span class="process-math">\(i\)</span> we have <span class="process-math">\(\s(\a_i) = \a_j\)</span> for some <span class="process-math">\(j\text{.}\)</span> Moreover, since <span class="process-math">\(K\)</span> is generated as a field extension of <span class="process-math">\(\Q\)</span> by <span class="process-math">\(\a_1, \a_2, \a_3\text{,}\)</span> the action of <span class="process-math">\(\s\)</span> on the three roots completely determines the action of <span class="process-math">\(\s\)</span> on all of <span class="process-math">\(K\text{.}\)</span> In more detail, every element of <span class="process-math">\(K\)</span> is given taking <span class="process-math">\(\Q\)</span>-linear combinations of sums and products and quotients of these roots, and any element of <span class="process-math">\(\Aut(K/\Q)\)</span> preserves sums, products and <span class="process-math">\(\Q\)</span>-linear combinations.</div>
+</div>
 <span class="incontext"><a href="sec-galext.html#p-3240" class="internal">in-context</a></span>
 </body>
 </html>

@@ -490,6 +490,7 @@ window.MathJax = {
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#subsec-gp-generators" class="internal"><span class="title">Generators</span></a></div></li>
 <li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#subsec-cyclic-gp" class="internal"><span class="title">Cyclic Groups</span></a></div></li>
+<li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#subsec-cyclic-properties" class="internal"><span class="title">Properties of Cyclic Groups</span></a></div></li>
 <li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#exercises-3" class="internal"><span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
@@ -498,10 +499,8 @@ window.MathJax = {
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-subgroups.html#subsec-subgrp-defn-ex" class="internal"><span class="title">Subgroup Basics</span></a></div></li>
 <li><div class="toc-item"><a href="sec-subgroups.html#subsec-center" class="internal"><span class="title">The Center of a Group</span></a></div></li>
-<li>
-<div class="toc-item"><a href="sec-subgroups.html#subsec-gensubgp" class="internal"><span class="title">Generated Subgroups</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-subgroups.html#exercises-4" class="internal"><span class="title">Exercises</span></a></div></li></ul>
-</li>
+<li><div class="toc-item"><a href="sec-subgroups.html#subsec-gensubgp" class="internal"><span class="title">Generated Subgroups</span></a></div></li>
+<li><div class="toc-item"><a href="sec-subgroups.html#exercises-4" class="internal"><span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -515,7 +514,11 @@ window.MathJax = {
 </li>
 <li>
 <div class="toc-item"><a href="sec-gpisos.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Group Isomorphisms</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-gpisos.html#exercises-6" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-gpisos.html#subsec-isomorphisms" class="internal"><span class="title">Isomorphisms</span></a></div></li>
+<li><div class="toc-item"><a href="sec-gpisos.html#subsec-automorphisms" class="internal"><span class="title">Automorphisms</span></a></div></li>
+<li><div class="toc-item"><a href="sec-gpisos.html#exercises-6" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-cylic-homoms.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Classifying Cyclic Groups</span></a></div>
@@ -899,7 +902,7 @@ window.MathJax = {
 <div class="toc-item"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
 <ul class="structural">
 <li>
-<div class="toc-item"><a href="appendix-1.html" class="internal"><span class="codenumber">A</span> <span class="title">Foundational Knowledge</span></a></div>
+<div class="toc-item"><a href="app-foundations.html" class="internal"><span class="codenumber">A</span> <span class="title">Foundational Knowledge</span></a></div>
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Sets, Functions, Constructions</span></a></div>
@@ -920,9 +923,10 @@ window.MathJax = {
 <li><div class="toc-item"><a href="sec-matrices.html" class="internal"><span class="codenumber">A.3</span> <span class="title">Matrices</span></a></div></li>
 </ul>
 </li>
-<li><div class="toc-item"><a href="appendix-2.html" class="internal"><span class="codenumber">B</span> <span class="title">Notation</span></a></div></li>
+<li><div class="toc-item"><a href="app-notation.html" class="internal"><span class="codenumber">B</span> <span class="title">Notation</span></a></div></li>
 <li><div class="toc-item"><a href="appendix-list-definitions.html" class="internal"><span class="codenumber">C</span> <span class="title">List of Definitions</span></a></div></li>
 <li><div class="toc-item"><a href="appendix-list-results.html" class="internal"><span class="codenumber">D</span> <span class="title">List of Results</span></a></div></li>
+<li><div class="toc-item"><a href="app-biograhy.html" class="internal"><span class="codenumber">E</span> <span class="title">Biographies</span></a></div></li>
 <li><div class="toc-item"><a href="colophon-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
 </li>
@@ -930,15 +934,15 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-class-eq"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">4.4</span> <span class="title">The Class Equation</span>
 </h2>
-<blockquote class="blockquote" id="blockquote-19">
-<div class="para" id="p-714">“Let the others have the charisma. I've got the class.”</div> <cite class="attribution">―George H. W. Bush</cite>
+<blockquote class="blockquote" id="blockquote-17">
+<div class="para" id="p-774">“Let the others have the charisma. I've got the class.”</div> <cite class="attribution">―George H. W. Bush</cite>
 </blockquote>
-<blockquote class="blockquote" id="blockquote-20">
-<div class="para" id="p-715">“Class is the sure-footedness that comes with having proved you can meet life.”</div> <cite class="attribution">―Ann Landers</cite>
+<blockquote class="blockquote" id="blockquote-18">
+<div class="para" id="p-775">“Class is the sure-footedness that comes with having proved you can meet life.”</div> <cite class="attribution">―Ann Landers</cite>
 </blockquote>
 <article class="definition definition-like" id="def-centralizer"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.33</span><span class="period">.</span><span class="space"> </span><span class="title">Centralizer.</span>
-</h3> <div class="para logical" id="p-716">
+</h3> <div class="para logical" id="p-776">
 <div class="para">Let <span class="process-math">\(G\)</span> be a group. For any <span class="process-math">\(g \in G\text{,}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -957,7 +961,7 @@ N_G(S):= \{g \in G \mid gSg^{-1}=S\}
 </div>
 </div></article><article class="definition definition-like" id="def-normalizer"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.34</span><span class="period">.</span><span class="space"> </span><span class="title">Normalizer.</span>
-</h3> <div class="para logical" id="p-717">
+</h3> <div class="para logical" id="p-777">
 <div class="para">Let <span class="process-math">\(G\)</span> be a group. For any <span class="process-math">\(S \subseteq G\text{,}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -970,26 +974,26 @@ N_G(S):= \{g \in G \mid gSg^{-1}=S\}
 </div></article><article class="theorem theorem-like" id="thm-conjclass"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.35</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-718"><ol class="decimal">
-<li id="li-244"><div class="para" id="p-719">Then <span class="process-math">\(G\)</span> acts on <span class="process-math">\(G\)</span> by conjugation (<span class="process-math">\(g \cdot g' = gg'g^{-1}\)</span>). For all <span class="process-math">\(g \in G\text{,}\)</span> the orbit of <span class="process-math">\(g\)</span> is the conjugacy class of <span class="process-math">\(g\text{,}\)</span> <span class="process-math">\(\operatorname{Stab}_G(g)=C_G(G)\)</span> and <span class="process-math">\(|[g]_c| = [G : C_G(g)]\text{.}\)</span>
+<div class="para logical" id="p-778"><ol class="decimal">
+<li id="li-275"><div class="para" id="p-779">Then <span class="process-math">\(G\)</span> acts on <span class="process-math">\(G\)</span> by conjugation (<span class="process-math">\(g \cdot g' = gg'g^{-1}\)</span>). For all <span class="process-math">\(g \in G\text{,}\)</span> the orbit of <span class="process-math">\(g\)</span> is the conjugacy class of <span class="process-math">\(g\text{,}\)</span> <span class="process-math">\(\operatorname{Stab}_G(g)=C_G(G)\)</span> and <span class="process-math">\(|[g]_c| = [G : C_G(g)]\text{.}\)</span>
 </div></li>
-<li id="li-245"><div class="para" id="p-720">Then <span class="process-math">\(G\)</span> acts on the power set <span class="process-math">\(P(G)=\{S\mid S\subseteq G\}\)</span> by conjugation (<span class="process-math">\(g \cdot S = gSg^{-1}\)</span>). For all <span class="process-math">\(S \in P(G)\text{,}\)</span> <span class="process-math">\(\operatorname{Stab}_G(S)=N_G(S)\)</span> and <span class="process-math">\(|\operatorname{Orbit}_G(S)| = [G : N_G(S)]\text{.}\)</span>
+<li id="li-276"><div class="para" id="p-780">Then <span class="process-math">\(G\)</span> acts on the power set <span class="process-math">\(P(G)=\{S\mid S\subseteq G\}\)</span> by conjugation (<span class="process-math">\(g \cdot S = gSg^{-1}\)</span>). For all <span class="process-math">\(S \in P(G)\text{,}\)</span> <span class="process-math">\(\operatorname{Stab}_G(S)=N_G(S)\)</span> and <span class="process-math">\(|\operatorname{Orbit}_G(S)| = [G : N_G(S)]\text{.}\)</span>
 </div></li>
 </ol></div></article><article class="corollary theorem-like" id="cor-conjclass"><h3 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">4.36</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-721">For a finite group <span class="process-math">\(G\text{,}\)</span> the size of any conjugacy class divides <span class="process-math">\(|G|\text{.}\)</span>
+<div class="para" id="p-781">For a finite group <span class="process-math">\(G\text{,}\)</span> the size of any conjugacy class divides <span class="process-math">\(|G|\text{.}\)</span>
 </div></article><article class="theorem theorem-like" id="thm-class-eq"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.37</span><span class="period">.</span><span class="space"> </span><span class="title">The Class Equation.</span>
 </h3>
-<div class="para logical" id="p-722">
+<div class="para logical" id="p-782">
 <div class="para">Let <span class="process-math">\(G\)</span> be a finite group and let <span class="process-math">\(g_1,\ldots g_r \in G\)</span> be a list of unique representatives of all of the conjugacy classes of <span class="process-math">\(G\)</span> of size greater than <span class="process-math">\(1\text{.}\)</span> Then</div>
 <div class="displaymath process-math">
 \begin{equation*}
 |G| = |Z(G)| + \sum_i^r |G : C_G(g_i)|\text{.}
 \end{equation*}
 </div>
-</div></article><article class="hiddenproof" id="proof-21"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-21"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-21"><article class="hiddenproof"><div class="para logical" id="p-723">
+</div></article><article class="hiddenproof" id="proof-23"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-23"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-23"><article class="hiddenproof"><div class="para logical" id="p-783">
 <div class="para">The elements of <span class="process-math">\(Z(G)\)</span> are precisely the group elements that are conjugate to only themselves; that is, they are the one-element orbits for the conjugation action. Because the conjugacy classes (orbits of the conjugation action) partition <span class="process-math">\(G\)</span> we have</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-conjclass.html">
 \begin{equation*}
@@ -1001,23 +1005,26 @@ N_G(S):= \{g \in G \mid gSg^{-1}=S\}
 <section class="exercises" id="exercises-15"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
-<div class="exercisegroup" id="exercisegroup-40">
+<div class="exercisegroup" id="exercisegroup-39">
 <h4 class="heading"><span class="title">Computations and Examples.</span></h4>
-<div class="introduction" id="introduction-44"><div class="para" id="p-724"></div></div>
-<div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-92"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
-<div class="para" id="p-725">Coming soon to an OER near you!</div></article></div>
+<div class="introduction" id="introduction-44"><div class="para" id="p-784"></div></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-112"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-112"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-112"><article class="exercise exercise-like"><div class="para" id="p-785">Coming soon to an OER near you!</div></article></div>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-40">
+<h4 class="heading"><span class="title">Formal Proofs.</span></h4>
+<div class="introduction" id="introduction-45"><div class="para" id="p-786"></div></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-113"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-113"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-113"><article class="exercise exercise-like"><div class="para" id="p-787">Coming soon to an OER near you!</div></article></div>
+</div>
 </div>
 <div class="exercisegroup" id="exercisegroup-41">
-<h4 class="heading"><span class="title">Formal Proofs.</span></h4>
-<div class="introduction" id="introduction-45"><div class="para" id="p-726"></div></div>
-<div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-93"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
-<div class="para" id="p-727">Coming soon to an OER near you!</div></article></div>
-</div>
-<div class="exercisegroup" id="exercisegroup-42">
 <h4 class="heading"><span class="title">Qualifying Exam Problems.</span></h4>
-<div class="introduction" id="introduction-46"><div class="para" id="p-728"></div></div>
-<div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-94"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
-<div class="para" id="p-729">Coming soon to an OER near you!</div></article></div>
+<div class="introduction" id="introduction-46"><div class="para" id="p-788"></div></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-114"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-114"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-114"><article class="exercise exercise-like"><div class="para" id="p-789">Coming soon to an OER near you!</div></article></div>
+</div>
 </div></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-lois.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sylow.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

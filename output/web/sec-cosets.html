@@ -490,6 +490,7 @@ window.MathJax = {
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#subsec-gp-generators" class="internal"><span class="title">Generators</span></a></div></li>
 <li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#subsec-cyclic-gp" class="internal"><span class="title">Cyclic Groups</span></a></div></li>
+<li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#subsec-cyclic-properties" class="internal"><span class="title">Properties of Cyclic Groups</span></a></div></li>
 <li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#exercises-3" class="internal"><span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
@@ -498,10 +499,8 @@ window.MathJax = {
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-subgroups.html#subsec-subgrp-defn-ex" class="internal"><span class="title">Subgroup Basics</span></a></div></li>
 <li><div class="toc-item"><a href="sec-subgroups.html#subsec-center" class="internal"><span class="title">The Center of a Group</span></a></div></li>
-<li>
-<div class="toc-item"><a href="sec-subgroups.html#subsec-gensubgp" class="internal"><span class="title">Generated Subgroups</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-subgroups.html#exercises-4" class="internal"><span class="title">Exercises</span></a></div></li></ul>
-</li>
+<li><div class="toc-item"><a href="sec-subgroups.html#subsec-gensubgp" class="internal"><span class="title">Generated Subgroups</span></a></div></li>
+<li><div class="toc-item"><a href="sec-subgroups.html#exercises-4" class="internal"><span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -515,7 +514,11 @@ window.MathJax = {
 </li>
 <li>
 <div class="toc-item"><a href="sec-gpisos.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Group Isomorphisms</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-gpisos.html#exercises-6" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-gpisos.html#subsec-isomorphisms" class="internal"><span class="title">Isomorphisms</span></a></div></li>
+<li><div class="toc-item"><a href="sec-gpisos.html#subsec-automorphisms" class="internal"><span class="title">Automorphisms</span></a></div></li>
+<li><div class="toc-item"><a href="sec-gpisos.html#exercises-6" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-cylic-homoms.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Classifying Cyclic Groups</span></a></div>
@@ -899,7 +902,7 @@ window.MathJax = {
 <div class="toc-item"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
 <ul class="structural">
 <li>
-<div class="toc-item"><a href="appendix-1.html" class="internal"><span class="codenumber">A</span> <span class="title">Foundational Knowledge</span></a></div>
+<div class="toc-item"><a href="app-foundations.html" class="internal"><span class="codenumber">A</span> <span class="title">Foundational Knowledge</span></a></div>
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Sets, Functions, Constructions</span></a></div>
@@ -920,25 +923,30 @@ window.MathJax = {
 <li><div class="toc-item"><a href="sec-matrices.html" class="internal"><span class="codenumber">A.3</span> <span class="title">Matrices</span></a></div></li>
 </ul>
 </li>
-<li><div class="toc-item"><a href="appendix-2.html" class="internal"><span class="codenumber">B</span> <span class="title">Notation</span></a></div></li>
+<li><div class="toc-item"><a href="app-notation.html" class="internal"><span class="codenumber">B</span> <span class="title">Notation</span></a></div></li>
 <li><div class="toc-item"><a href="appendix-list-definitions.html" class="internal"><span class="codenumber">C</span> <span class="title">List of Definitions</span></a></div></li>
 <li><div class="toc-item"><a href="appendix-list-results.html" class="internal"><span class="codenumber">D</span> <span class="title">List of Results</span></a></div></li>
+<li><div class="toc-item"><a href="app-biograhy.html" class="internal"><span class="codenumber">E</span> <span class="title">Biographies</span></a></div></li>
 <li><div class="toc-item"><a href="colophon-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-cosets"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="sec-cosets"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.1</span> <span class="title">Cosets and Lagrange's Theorem</span>
 </h2>
-<blockquote class="blockquote" id="blockquote-12">
-<div class="para" id="p-358">“Too much may be the equivalent of none at all.”</div> <cite class="attribution">―Lee Loevinger</cite>
+<blockquote class="blockquote" id="blockquote-9">
+<div class="para" id="p-409">“Too much may be the equivalent of none at all.”</div> <cite class="attribution">―Lee Loevinger</cite>
 </blockquote>
-<blockquote class="blockquote" id="blockquote-13">
-<div class="para" id="p-359">“If I had inherited a fortune I should probably not have cast my lot with mathematics.”</div> <cite class="attribution">―Joseph-Louis Lagrange</cite>
+<blockquote class="blockquote" id="blockquote-10">
+<div class="para" id="p-410">“If I had inherited a fortune I should probably not have cast my lot with mathematics.”</div> <cite class="attribution">―Joseph-Louis Lagrange</cite>
+</blockquote>
+<blockquote class="blockquote" id="blockquote-11">
+<div class="para" id="p-411">“Lagrange is the Lofty Pyramid of the Mathematical Sciences.”</div> <cite class="attribution">―Napoleon Bonaparte</cite>
 </blockquote>
 <article class="definition definition-like" id="def-coset"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1</span><span class="period">.</span><span class="space"> </span><span class="title">Coset.</span>
-</h3> <div class="para logical" id="p-360">
+</h3> <div class="para logical" id="p-412">
 <div class="para">For any <span class="process-math">\(N\leq G\)</span> and any <span class="process-math">\(g\in G\)</span> let</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -946,38 +954,51 @@ gN=\{gn|n\in N\}\;\text{and}\; Ng=\{ng|n\in N\}
 \end{equation*}
 </div>
 <div class="para">be defined as a <em class="emphasis">left coset</em> and <em class="emphasis">right coset</em> of <span class="process-math">\(N\)</span> in <span class="process-math">\(G\text{,}\)</span> respectfully.</div>
-</div></article><article class="remark remark-like" id="remark-17"><h3 class="heading">
+</div></article><article class="remark remark-like" id="remark-19"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">3.2</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-361">Though mostly a matter of preference as aesthetics, we will focus primarily on left cosets.</div></article><article class="lemma theorem-like" id="lem-cosetfacts"><h3 class="heading">
-<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">3.3</span><span class="period">.</span><span class="space"> </span><span class="title">Coset Equivalencies.</span>
+<div class="para" id="p-413">Though mostly a matter of preference as aesthetics, we will focus primarily on left cosets.</div></article><article class="proposition theorem-like" id="prop-coset-properties"><h3 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.3</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-362">
+<div class="para logical" id="p-414">
+<div class="para">Let <span class="process-math">\(H\leq G\)</span> and <span class="process-math">\(x,y\in G\)</span>
+</div>
+<ol class="decimal">
+<li id="li-162"><div class="para" id="p-415"><span class="process-math">\(\displaystyle x\in xH\)</span></div></li>
+<li id="li-163"><div class="para" id="p-416">
+<span class="process-math">\(xH=H\)</span> if and only if <span class="process-math">\(x\in H\)</span>
+</div></li>
+<li id="li-164"><div class="para" id="p-417"><span class="process-math">\(\displaystyle (xy)H=x(yH)\)</span></div></li>
+</ol>
+</div></article><article class="lemma theorem-like" id="lem-cosetfacts"><h3 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">3.4</span><span class="period">.</span><span class="space"> </span><span class="title">Coset Equivalencies.</span>
+</h3>
+<div class="para logical" id="p-418">
 <div class="para">Let <span class="process-math">\(H \leq G\text{.}\)</span> The following facts about left cosets are equivalent for <span class="process-math">\(x,y \in G\text{:}\)</span>
 </div>
 <ol class="decimal">
-<li id="li-136"><div class="para" id="p-363">
+<li id="li-165"><div class="para" id="p-419">
 <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> belong to the same left coset of <span class="process-math">\(H\)</span> in <span class="process-math">\(G\text{,}\)</span>
 </div></li>
-<li id="li-137"><div class="para" id="p-364">
+<li id="li-166"><div class="para" id="p-420">
 <span class="process-math">\(x = yh\)</span> for some <span class="process-math">\(h \in H\text{,}\)</span>
 </div></li>
-<li id="li-138"><div class="para" id="p-365">
+<li id="li-167"><div class="para" id="p-421">
 <span class="process-math">\(y = xh\)</span> for some <span class="process-math">\(h \in H\text{,}\)</span>
 </div></li>
-<li id="li-139"><div class="para" id="p-366"><span class="process-math">\(y^{-1}x \in H\text{,}\)</span></div></li>
-<li id="li-140"><div class="para" id="p-367"><span class="process-math">\(x^{-1}y \in H\text{,}\)</span></div></li>
-<li id="li-141"><div class="para" id="p-368"><span class="process-math">\(xH = yH\text{.}\)</span></div></li>
+<li id="li-168"><div class="para" id="p-422"><span class="process-math">\(y^{-1}x \in H\text{,}\)</span></div></li>
+<li id="li-169"><div class="para" id="p-423"><span class="process-math">\(x^{-1}y \in H\text{,}\)</span></div></li>
+<li id="li-170"><div class="para" id="p-424"><span class="process-math">\(xH = yH\text{.}\)</span></div></li>
 </ol>
-</div></article><article class="hiddenproof" id="proof-8"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-8"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-8"><article class="hiddenproof"><div class="para" id="p-369">
+</div></article><article class="hiddenproof" id="proof-10"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-10"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-10"><article class="hiddenproof"><div class="para" id="p-425">
 <span class="process-math">\((1) \Rightarrow (2):\)</span> if <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> belong to the same left coset <span class="process-math">\(gH\)</span> of <span class="process-math">\(H\)</span> in <span class="process-math">\(G\)</span> then <span class="process-math">\(x=gh'\)</span> and <span class="process-math">\(y=gh''\)</span> for some <span class="process-math">\(h',h''\in H\text{,}\)</span> so <span class="process-math">\(g=y(h'')^{-1}\)</span> and therefore <span class="process-math">\(x=y(h'')^{-1}h'=yh\)</span> where <span class="process-math">\(h=(h'')^{-1}h'\in H\text{.}\)</span>
-</div> <div class="para" id="p-370">
+</div> <div class="para" id="p-426">
 <span class="process-math">\((2) \iff (3):\)</span> <span class="process-math">\(x=yh\)</span> for some <span class="process-math">\(h \in H\)</span> <span class="process-math">\(\iff\)</span> <span class="process-math">\(y = xh^{-1}\)</span> and <span class="process-math">\(h^{-1} \in H\text{.}\)</span>
-</div> <div class="para" id="p-371">
+</div> <div class="para" id="p-427">
 <span class="process-math">\((2) \iff (4):\)</span> <span class="process-math">\(x=yh\)</span> for some <span class="process-math">\(h \in H\)</span> <span class="process-math">\(\iff\)</span> <span class="process-math">\(y^{-1} x=h\in H\text{.}\)</span>
-</div> <div class="para" id="p-372">
+</div> <div class="para" id="p-428">
 <span class="process-math">\((4) \iff (5):\)</span> <span class="process-math">\(y^{-1} x\in H \iff (y^{-1} x)^{-1}\in H \iff x^{-1}y\in H\text{.}\)</span>
-</div> <div class="para logical" id="p-373">
+</div> <div class="para logical" id="p-429">
 <div class="para">
 <span class="process-math">\((2) \Rightarrow (6):\)</span> Suppose <span class="process-math">\(x = yh\)</span> for some <span class="process-math">\(h \in H\text{,}\)</span> then by <span class="process-math">\(2. \Rightarrow 3.\)</span> we also have <span class="process-math">\(y = xh''\)</span> for some <span class="process-math">\(h'' \in H\text{.}\)</span> Then we have</div>
 <div class="displaymath process-math">
@@ -992,23 +1013,23 @@ yH=\{yh'\mid h'\in H\}=\{xh''h'\mid h'\in H\}\subset xH,
 </div>
 <div class="para">thus <span class="process-math">\(xH=yH\text{.}\)</span>
 </div>
-</div> <div class="para" id="p-374">
+</div> <div class="para" id="p-430">
 <span class="process-math">\((6) \Rightarrow (1):\)</span> Since <span class="process-math">\(e_G=e_H\in H\text{,}\)</span> we have <span class="process-math">\(x=xe_G\in xH\)</span> and <span class="process-math">\(y=ye_G\in yH\text{.}\)</span> If <span class="process-math">\(xH=yH\)</span> then, <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> belong to the same left coset.</div></article></div>
 <article class="lemma theorem-like" id="lem-cosetpartition"><h3 class="heading">
-<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">3.4</span><span class="period">.</span><span class="space"> </span><span class="title">Cosets Partition a Group.</span>
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">3.5</span><span class="period">.</span><span class="space"> </span><span class="title">Cosets Partition a Group.</span>
 </h3>
-<div class="para logical" id="p-375">
+<div class="para logical" id="p-431">
 <div class="para">For <span class="process-math">\(H \leq G\text{,}\)</span> the collection of left cosets of <span class="process-math">\(H\)</span> in <span class="process-math">\(G\)</span> form a partition of <span class="process-math">\(G\text{,}\)</span> and similarly for the collection of right cosets. That is,</div>
 <ul class="disc">
-<li id="li-142"><div class="para" id="p-376">for all <span class="process-math">\(x,y \in G\text{,}\)</span> either <span class="process-math">\(xH = yH\)</span> or <span class="process-math">\(xH \cap yH = \emptyset\)</span>
+<li id="li-171"><div class="para" id="p-432">for all <span class="process-math">\(x,y \in G\text{,}\)</span> either <span class="process-math">\(xH = yH\)</span> or <span class="process-math">\(xH \cap yH = \emptyset\)</span>
 </div></li>
-<li id="li-143"><div class="para" id="p-377"><span class="process-math">\(\bigcup_{x\in G} xH=G\text{,}\)</span></div></li>
-<li id="li-144"><div class="para" id="p-378"><span class="process-math">\(\bigcup_{x\in G} xH=G\text{,}\)</span></div></li>
+<li id="li-172"><div class="para" id="p-433"><span class="process-math">\(\bigcup_{x\in G} xH=G\text{,}\)</span></div></li>
+<li id="li-173"><div class="para" id="p-434"><span class="process-math">\(\bigcup_{x\in G} xH=G\text{,}\)</span></div></li>
 </ul>
 <div class="para">and similarly for right cosets. Moreover all left and right cosets have the same cardinality: <span class="process-math">\(|xH| = |Hx|=|H|\)</span> for any <span class="process-math">\(x\in G\text{.}\)</span>
 </div>
-</div></article><article class="hiddenproof" id="proof-9"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-9"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-9"><article class="hiddenproof"><div class="para logical" id="p-379">
-<div class="para">Let me prove the assertions for right cosets. Clearly every element <span class="process-math">\(g\)</span> of <span class="process-math">\(G\)</span> belongs to at least one right coset, since <span class="process-math">\(g \in Hg\)</span> (since <span class="process-math">\(e \in H\)</span>). We need to show any two cosets are either identical or disjoint: if <span class="process-math">\(Hx\)</span> and <span class="process-math">\(Hy\)</span> share an element, then it follows from <span class="process-math">\((1)\Rightarrow (6)\)</span> of Lemma <a href="" class="xref" data-knowl="./knowl/lem-cosetfacts.html" title="Lemma 3.3: Coset Equivalencies">Lemma 3.3</a> that <span class="process-math">\(Hx=Hy\text{.}\)</span> This proves that the right cosets partition <span class="process-math">\(G\text{.}\)</span> To see that all right cosets have the same cardinality as <span class="process-math">\(H\text{,}\)</span> define a function</div>
+</div></article><article class="hiddenproof" id="proof-11"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-11"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-11"><article class="hiddenproof"><div class="para logical" id="p-435">
+<div class="para">Let me prove the assertions for right cosets. Clearly every element <span class="process-math">\(g\)</span> of <span class="process-math">\(G\)</span> belongs to at least one right coset, since <span class="process-math">\(g \in Hg\)</span> (since <span class="process-math">\(e \in H\)</span>). We need to show any two cosets are either identical or disjoint: if <span class="process-math">\(Hx\)</span> and <span class="process-math">\(Hy\)</span> share an element, then it follows from <span class="process-math">\((1)\Rightarrow (6)\)</span> of Lemma <a href="" class="xref" data-knowl="./knowl/lem-cosetfacts.html" title="Lemma 3.4: Coset Equivalencies">Lemma 3.4</a> that <span class="process-math">\(Hx=Hy\text{.}\)</span> This proves that the right cosets partition <span class="process-math">\(G\text{.}\)</span> To see that all right cosets have the same cardinality as <span class="process-math">\(H\text{,}\)</span> define a function</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/lem-cosetfacts.html">
 \begin{equation*}
 \rho: H \to Hg
@@ -1017,9 +1038,9 @@ yH=\{yh'\mid h'\in H\}=\{xh''h'\mid h'\in H\}\subset xH,
 <div class="para">by <span class="process-math">\(\rho(h) = hg\text{.}\)</span> Clearly <span class="process-math">\(\rho\)</span> is onto and if <span class="process-math">\(\rho(h) = \rho(h')\)</span> then <span class="process-math">\(hg = h'g\)</span> and hence <span class="process-math">\(h = h'\text{,}\)</span> so that <span class="process-math">\(\rho\)</span> is also one-to-one.</div>
 </div></article></div>
 <article class="corollary theorem-like" id="cor-left-right-cosets"><h3 class="heading">
-<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">3.5</span><span class="period">.</span>
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">3.6</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-380">
+<div class="para logical" id="p-436">
 <div class="para">If <span class="process-math">\(G\)</span> is a finite group and <span class="process-math">\(H \leq G\text{,}\)</span> then</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1031,65 +1052,72 @@ yH=\{yh'\mid h'\in H\}=\{xh''h'\mid h'\in H\}\subset xH,
 </div>
 <div class="para">In particular the number of left cosets of <span class="process-math">\(H\)</span> in <span class="process-math">\(G\)</span> is equal to the number of right cosets of <span class="process-math">\(H\)</span> in <span class="process-math">\(G\text{.}\)</span>
 </div>
-</div> <div class="para" id="p-381">Furthermore, even if <span class="process-math">\(G\)</span> is not finite the number of left and right cosets of a subgroup <span class="process-math">\(H\leq G\)</span> is still the same. <em class="emphasis">(Hint</em>: consider the map <span class="process-math">\(gH\mapsto Hg^{-1}\)</span> and show it's a bijection. Why is the inverse needed?)</div></article><article class="definition definition-like" id="def-index"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.6</span><span class="period">.</span><span class="space"> </span><span class="title">Index.</span>
-</h3> <div class="para" id="p-382">In finite groups, the common number of left or right cosets of a subgroup <span class="process-math">\(H\)</span> in a group <span class="process-math">\(G\)</span> is denoted as <span class="process-math">\([G:H]\)</span> and is called the <em class="emphasis">index</em> of <span class="process-math">\(H\)</span> in <span class="process-math">\(G\text{.}\)</span> </div></article><article class="theorem theorem-like" id="thm-lagrange"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.7</span><span class="period">.</span><span class="space"> </span><span class="title">Lagrange's Theorem.</span>
+</div> <div class="para" id="p-437">Furthermore, even if <span class="process-math">\(G\)</span> is not finite the number of left and right cosets of a subgroup <span class="process-math">\(H\leq G\)</span> is still the same. <em class="emphasis">(Hint</em>: consider the map <span class="process-math">\(gH\mapsto Hg^{-1}\)</span> and show it's a bijection. Why is the inverse needed?)</div></article><article class="definition definition-like" id="def-index"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.7</span><span class="period">.</span><span class="space"> </span><span class="title">Index.</span>
+</h3> <div class="para" id="p-438">In finite groups, the common number of left or right cosets of a subgroup <span class="process-math">\(H\)</span> in a group <span class="process-math">\(G\)</span> is denoted as <span class="process-math">\([G:H]\)</span> and is called the <em class="emphasis">index</em> of <span class="process-math">\(H\)</span> in <span class="process-math">\(G\text{.}\)</span> </div></article><article class="theorem theorem-like" id="thm-lagrange"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.8</span><span class="space"> </span><span class="creator">(<span class="process-math">\(1770\)</span>)</span><span class="period">.</span><span class="space"> </span><span class="title">Lagrange's Theorem.</span>
 </h3>
-<div class="para" id="p-383">If <span class="process-math">\(H\)</span> is a subgroup of a finite group <span class="process-math">\(G\text{,}\)</span> then <span class="process-math">\(|H|\)</span> divides <span class="process-math">\(|G|\text{.}\)</span>
+<div class="para" id="p-439">If <span class="process-math">\(H\)</span> is a subgroup of a finite group <span class="process-math">\(G\text{,}\)</span> then <span class="process-math">\(|H|\)</span> divides <span class="process-math">\(|G|\text{.}\)</span> <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-8" id="fn-8"><sup> 1 </sup></a>
 </div></article><article class="corollary theorem-like" id="cor-lagrange"><h3 class="heading">
-<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">3.8</span><span class="period">.</span><span class="space"> </span><span class="title">Corollaries to Lagrange's Theorem.</span>
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">3.9</span><span class="period">.</span><span class="space"> </span><span class="title">Corollaries to Lagrange's Theorem.</span>
 </h3>
-<div class="para logical" id="p-384"><ol class="decimal">
-<li id="li-145"><div class="para" id="p-385">If <span class="process-math">\(x\in G\)</span> and <span class="process-math">\(G\)</span> is a finite group, then <span class="process-math">\(|x|\)</span> divides <span class="process-math">\(|G|\text{.}\)</span>
+<div class="para logical" id="p-440"><ol class="decimal">
+<li id="li-174"><div class="para" id="p-441">If <span class="process-math">\(x\in G\)</span> and <span class="process-math">\(G\)</span> is a finite group, then <span class="process-math">\(|x|\)</span> divides <span class="process-math">\(|G|\text{.}\)</span>
 </div></li>
-<li id="li-146"><div class="para" id="p-386">If <span class="process-math">\(G\)</span> is a finite group, then <span class="process-math">\([G:H]=\frac{|G|}{|H|}\)</span>
+<li id="li-175"><div class="para" id="p-442">If <span class="process-math">\(G\)</span> is a finite group, then <span class="process-math">\([G:H]=\frac{|G|}{|H|}\)</span>
 </div></li>
-<li id="li-147"><div class="para" id="p-387">If <span class="process-math">\(|G|=n\)</span> then <span class="process-math">\(g^n=e\)</span> for all <span class="process-math">\(g\in G\)</span>
+<li id="li-176"><div class="para" id="p-443">If <span class="process-math">\(|G|=n\)</span> then <span class="process-math">\(g^n=e\)</span> for all <span class="process-math">\(g\in G\)</span>
 </div></li>
-<li id="li-148"><div class="para" id="p-388">(Groups of prime order are cyclic) If <span class="process-math">\(|G|=p\)</span> for some prime <span class="process-math">\(p\text{,}\)</span> then <span class="process-math">\(G\)</span> is cyclic and any non-identity element of <span class="process-math">\(G\)</span> generates <span class="process-math">\(G\text{.}\)</span>
+<li id="li-177"><div class="para" id="p-444">(Groups of prime order are cyclic) If <span class="process-math">\(|G|=p\)</span> for some prime <span class="process-math">\(p\text{,}\)</span> then <span class="process-math">\(G\)</span> is cyclic and any non-identity element of <span class="process-math">\(G\)</span> generates <span class="process-math">\(G\text{.}\)</span>
 </div></li>
 </ol></div></article><article class="theorem theorem-like" id="thm-index-tower"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.9</span><span class="period">.</span><span class="space"> </span><span class="title">The Index Tower.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.10</span><span class="period">.</span><span class="space"> </span><span class="title">The Index Tower.</span>
 </h3>
-<div class="para" id="p-389">Let <span class="process-math">\(G\)</span> be a group (possibly infinite) and <span class="process-math">\(H \leq K\)</span> subgroups of <span class="process-math">\(G\text{.}\)</span> Suppose <span class="process-math">\([G : H]\)</span> is finite. Prove that <span class="process-math">\([G : H] = [G : K][K : H].\)</span> (Hint: First prove this in the case <span class="process-math">\(G\)</span> is a finite group. Then prove you can reduce to the finite case.)</div></article><section class="exercises" id="exercises-8"><h3 class="heading hide-type">
+<div class="para" id="p-445">Let <span class="process-math">\(G\)</span> be a group (possibly infinite) and <span class="process-math">\(H \leq K\)</span> subgroups of <span class="process-math">\(G\text{.}\)</span> Suppose <span class="process-math">\([G : H]\)</span> is finite. Prove that <span class="process-math">\([G : H] = [G : K][K : H].\)</span> (Hint: First prove this in the case <span class="process-math">\(G\)</span> is a finite group. Then prove you can reduce to the finite case.)</div></article><article class="theorem theorem-like" id="thm-hk-order"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.11</span><span class="period">.</span><span class="space"> </span><span class="title">Order of <span class="process-math">\(HK\)</span>.</span>
+</h3>
+<div class="para" id="p-446">For two finite subgroups <span class="process-math">\(H,K\leq G\text{,}\)</span> <span class="process-math">\(|HK|=\frac{|H|\cdot|K|}{|H\cap K|}\)</span>
+</div></article><section class="exercises" id="exercises-8"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
-<div class="exercisegroup" id="exercisegroup-21">
+<div class="exercisegroup" id="exercisegroup-20">
 <h4 class="heading"><span class="title">Section Results.</span></h4>
-<div class="introduction" id="introduction-24"><div class="para" id="p-390"></div></div>
+<div class="introduction" id="introduction-24"><div class="para" id="p-447"></div></div>
 <div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="exercise-49"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
-<div class="para" id="p-391">Prove <a href="" class="xref" data-knowl="./knowl/lem-cosetfacts.html" title="Lemma 3.3: Coset Equivalencies">Lemma 3.3</a>.</div>
+<article class="exercise exercise-like" id="exercise-64"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-64"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-64"><article class="exercise exercise-like"><div class="para" id="p-448">Prove <a href="" class="xref" data-knowl="./knowl/lem-cosetfacts.html" title="Lemma 3.4: Coset Equivalencies">Lemma 3.4</a>.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-13" id="hint-13"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-13"><div class="hint solution-like"><div class="para" id="p-392">Coming soon to an OER near you!</div></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-50"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
-<div class="para" id="p-393">Prove <a href="" class="xref" data-knowl="./knowl/lem-cosetpartition.html" title="Lemma 3.4: Cosets Partition a Group">Lemma 3.4</a>.</div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-13" id="hint-13"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-13"><div class="hint solution-like"><div class="para" id="p-449">Coming soon to an OER near you!</div></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-65"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-65"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-65"><article class="exercise exercise-like"><div class="para" id="p-450">Prove <a href="" class="xref" data-knowl="./knowl/lem-cosetpartition.html" title="Lemma 3.5: Cosets Partition a Group">Lemma 3.5</a>.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-14" id="hint-14"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-14"><div class="hint solution-like"><div class="para" id="p-394">Coming soon to an OER near you!</div></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-51"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
-<div class="para" id="p-395">Prove <a href="" class="xref" data-knowl="./knowl/cor-left-right-cosets.html" title="Corollary 3.5">Corollary 3.5</a>.</div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-14" id="hint-14"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-14"><div class="hint solution-like"><div class="para" id="p-451">Coming soon to an OER near you!</div></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-66"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-66"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-66"><article class="exercise exercise-like"><div class="para" id="p-452">Prove <a href="" class="xref" data-knowl="./knowl/cor-left-right-cosets.html" title="Corollary 3.6">Corollary 3.6</a>.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-15" id="hint-15"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-15"><div class="hint solution-like"><div class="para" id="p-396">Coming soon to an OER near you!</div></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-52"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
-<div class="para" id="p-397">Prove <a href="" class="xref" data-knowl="./knowl/thm-lagrange.html" title="Theorem 3.7: Lagrange's Theorem">Theorem 3.7</a>.</div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-15" id="hint-15"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-15"><div class="hint solution-like"><div class="para" id="p-453">Coming soon to an OER near you!</div></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-67"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-67"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-67"><article class="exercise exercise-like"><div class="para" id="p-454">Prove <a href="" class="xref" data-knowl="./knowl/thm-lagrange.html" title="Theorem 3.8: Lagrange's Theorem">Theorem 3.8</a>.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-16" id="hint-16"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-16"><div class="hint solution-like"><div class="para" id="p-398">Coming soon to an OER near you!</div></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-53"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
-<div class="para" id="p-399">Prove <a href="" class="xref" data-knowl="./knowl/cor-lagrange.html" title="Corollary 3.8: Corollaries to Lagrange's Theorem">Corollary 3.8</a>.</div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-16" id="hint-16"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-16"><div class="hint solution-like"><div class="para" id="p-455">Coming soon to an OER near you!</div></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-68"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-68"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-68"><article class="exercise exercise-like"><div class="para" id="p-456">Prove <a href="" class="xref" data-knowl="./knowl/cor-lagrange.html" title="Corollary 3.9: Corollaries to Lagrange's Theorem">Corollary 3.9</a>.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-17" id="hint-17"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-17"><div class="hint solution-like"><div class="para" id="p-400">Coming soon to an OER near you!</div></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-54"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
-<div class="para" id="p-401">Prove <a href="" class="xref" data-knowl="./knowl/thm-index-tower.html" title="Theorem 3.9: The Index Tower">Theorem 3.9</a>.</div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-17" id="hint-17"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-17"><div class="hint solution-like"><div class="para" id="p-457">Coming soon to an OER near you!</div></div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-69"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-69"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-69"><article class="exercise exercise-like"><div class="para" id="p-458">Prove <a href="" class="xref" data-knowl="./knowl/thm-index-tower.html" title="Theorem 3.10: The Index Tower">Theorem 3.10</a>.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-18" id="hint-18"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-18"><div class="hint solution-like"><div class="para" id="p-402">Coming soon to an OER near you!</div></div></div>
-</div></article>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-18" id="hint-18"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-18"><div class="hint solution-like"><div class="para" id="p-459">Coming soon to an OER near you!</div></div></div>
+</div></article></div>
 </div>
 </div>
-<article class="exercise exercise-like" id="exercise-55"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="para" id="p-403">Let <span class="process-math">\(G\)</span> be a group of composite order. Then <span class="process-math">\(G\)</span> contains a non-trivial proper subgroup.</div></article><article class="exercise exercise-like" id="exercise-56"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
-<div class="para" id="p-404">Prove the converse to Lagrange's theorem is false: find a group <span class="process-math">\(G\)</span> and an integer <span class="process-math">\(d&gt;0\)</span> such that <span class="process-math">\(d\)</span> divides the order of <span class="process-math">\(G\)</span> but <span class="process-math">\(G\)</span> does not have any subgroups of order <span class="process-math">\(d\text{.}\)</span> <em class="emphasis">Hint</em>: Take <span class="process-math">\(G=A_5\text{.}\)</span>
-</div></article></section></section></div>
+<article class="exercise exercise-like" id="exercise-70"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-70"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-70"><article class="exercise exercise-like"><div class="para" id="p-460">Let <span class="process-math">\(G\)</span> be a group of composite order. Then <span class="process-math">\(G\)</span> contains a non-trivial proper subgroup.</div></article></div>
+<article class="exercise exercise-like" id="exercise-71"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-71"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-71"><article class="exercise exercise-like"><div class="para" id="p-461">Prove the converse to Lagrange's theorem is false: find a group <span class="process-math">\(G\)</span> and an integer <span class="process-math">\(d&gt;0\)</span> such that <span class="process-math">\(d\)</span> divides the order of <span class="process-math">\(G\)</span> but <span class="process-math">\(G\)</span> does not have any subgroups of order <span class="process-math">\(d\text{.}\)</span> <em class="emphasis">Hint</em>: Take <span class="process-math">\(G=A_5\text{.}\)</span>
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-72"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-72"><h4 class="heading">
+<span class="codenumber">9<span class="period">.</span></span><span class="space"> </span><span class="title">Fermat's Little Theorem.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-72"><article class="exercise exercise-like"><div class="para" id="p-462">For every integer <span class="process-math">\(a\)</span> and every prime <span class="process-math">\(p\text{,}\)</span> <span class="process-math">\(a^p\mod p=a\mod p\text{.}\)</span>
+</div></article></div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-8"><div class="fn">Lagrange stated his version of this theorem in 1770, but the first complete proof was given by Pietro Abbati roughly 30 years later.</div></div>
+</div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="normal-quotient-groups.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-normal-subgroups.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

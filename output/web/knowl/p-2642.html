@@ -11,20 +11,26 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h6 class="heading"><span class="type">Paragraph</span></h6>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(T:V \to V\)</span> be the linear operator given by <span class="process-math">\(T(p) = xp'\)</span> (where <span class="process-math">\(p'\)</span> denotes the derivative of <span class="process-math">\(p\)</span>). Note that the change of basis matrix for this operator is given by</div>
+<div class="para">We found the Rational Canonical Form of this matrix before. In the process we showed that we have an isomorphism of <span class="process-math">\(\Q[x]\)</span>-module.</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\begin{bmatrix}
-0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
-0 &amp; 1 &amp; \cdots &amp; 0 &amp; 0 \\
-\vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\
-0 &amp; 0 &amp; \cdots &amp; 0 &amp; n-1 \\   
-\end{bmatrix},
+\Q^3_A \cong \Q[x]/(x-1) \oplus \Q[x]/(x^2-1).
 \end{equation*}
 </div>
-<div class="para">with the basis <span class="process-math">\(\{1,x,\dots,x^{n-1}\}\text{.}\)</span> Thus <span class="process-math">\(\cp_A(x)\)</span> will be given by the determinant of the matrix</div>
+<div class="para">By the Sunzi Remainder Theorem</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Q[x]/(x-1) \oplus \Q[x]/(x^2-1) \cong \Q[x]/(x-1) \oplus \Q[x]/(x-1) \oplus \Q[x]/(x+1)
+\end{equation*}
+</div>
+<div class="para">and thus the elementary divisors of <span class="process-math">\(\Q^3_A\)</span> are <span class="process-math">\(x-1, x-1, x+1\text{.}\)</span> By the Theorem this shows that the JCF of <span class="process-math">\(A\)</span> is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+J_1(1) \oplus J_1(1) \oplus J_1(-1) = \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; -1 \end{bmatrix}.
+\end{equation*}
+</div>
 </div>
 <span class="incontext"><a href="sec-jcf.html#p-2642" class="internal">in-context</a></span>
 </body>

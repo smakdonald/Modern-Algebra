@@ -390,7 +390,7 @@
       <title>Group Theory</title>
 
       <!--
-      ***********
+      ************
       Group Theory
       ************
       -->
@@ -513,6 +513,12 @@
                         For a given <m>x</m>, if <m>yx = xy = e</m> and <m>zx = xz = e</m> fo some <m>y</m> and <m>z</m>, then <m>z = ez = (yx)z = y(xz) = ye = y</m>.
                       </p>
                     </li>
+
+                    <li>
+                      <p>
+                        Coming soon!
+                      </p>
+                    </li>
                   </ol>
                 </p>
               </proof>
@@ -609,7 +615,7 @@
             
                     <li>
                       <p>
-                        <m>(a_1 \dots a_n)^{-1} = a_n^{-1} \dots a_1^{-1}</m>. Furthermore, if <m>G</m> is abelian then <m>(a_1 \dots a_n)^{-1} = a_1^{-1} \dots a_n^{-1}</m>.
+                        <m>(a_1 \dots a_n)^{-1} = a_n^{-1} \dots a_1^{-1}</m>. 
                       </p>
                     </li>
             
@@ -647,6 +653,12 @@
                         Coming soon to an OER near you!
                       </p>
                     </li>
+
+                    <li>
+                      <p>
+                        Coming soon to an OER near you!
+                      </p>
+                    </li>
                   </ol>
                 </p>
               </proof>
@@ -661,28 +673,27 @@
               </statement>
             </problem>
             -->
-      
-            <lemma xml:id="lem-direct-product-group">
-              <statement>
-                <p>
-                  Let <m>(G,+)</m> and <m>(H,\times)</m> be groups. Then <m>G\times H</m> is a group, where <m>(G\times H,*)</m> denotes the Cartesian Product of <m>G</m> and <m>H</m>, and the operation <m>*</m> is defined 
-                  <me>
-                    (g_1,h_1)*(g_2,h_2)=(g_1+g_2,h_1\times h_2).
-                  </me>
-                </p>
-              </statement>
-      
-              <proof>
-                <p>
-                  Coming soon to an OER near you!
-                </p>
-              </proof>
-            </lemma>
-      
+    
             <theorem xml:id="thm-dirprop-gp">
+              <title>Direct Products of Groups</title>
               <statement>
                 <p>
-                  Let <m>G_1,\dots,G_n</m> be groups. Then <m>G_1\times\cdots\times G_n</m> is a group, with its operation defined similary to that in <xref ref="lem-direct-product-group"/>
+                  <ol>
+                    <li>
+                      <p>
+                        Let <m>(G,+)</m> and <m>(H,\times)</m> be groups. Then <m>G\times H</m> is a group, where <m>(G\times H,*)</m> denotes the Cartesian Product of <m>G</m> and <m>H</m>, and the operation <m>*</m> is defined 
+                        <me>
+                          (g_1,h_1)*(g_2,h_2)=(g_1+g_2,h_1\times h_2).
+                        </me>
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Let <m>G_1,\dots,G_n</m> be groups. Then <m>G_1\times\cdots\times G_n</m> is a group, with its operation defined similary to that in part (1).
+                      </p>
+                    </li>
+                  </ol>
                 </p>
               </statement>
       
@@ -692,14 +703,6 @@
                 </p>
               </proof>
             </theorem>
-      
-            <proposition xml:id="prop-abelian-product-abelian">
-              <statement>
-                <p>
-                  The direct product of groups is abelian if and only if every factor of the product is abelian.
-                </p>
-              </statement>
-            </proposition>
       
             <definition xml:id="def-order">
               <title>Order</title>
@@ -735,7 +738,7 @@
       
                   <li>
                     <p>
-                      <m>|e|=1</m>
+                      <m>|1|=n</m> in <m>\Z/(n)</m>
                     </p>
                   </li>
       
@@ -753,8 +756,7 @@
             </example>
       
             <theorem xml:id="thm-order-properties">
-              <title>Properties of Order</title>
-              
+              <title>Properties of Order</title> 
               
               <statement>
                 <p>
@@ -773,14 +775,13 @@
       
                     <li>
                       <p>
-                        If <m>g^=p=e</m> for <m>g\neq e</m> and <m>p</m> prime, then <m>|g|=p</m>.
+                        If <m>g^p=e</m> for <m>g\neq e</m> and <m>p</m> prime, then <m>|g|=p</m>.
                       </p>
                     </li>
                   </ol>
                 </p>
               </statement>
             </theorem>
-          
       
             <proposition xml:id="prop-order-4-abelian">
               <title>Marley's Conjecture</title>
@@ -862,6 +863,14 @@
                 </p>
               </statement>
             </lemma>
+
+            <theorem xml:id="thm-dp-order">
+              <statement>
+                <p>
+                  Let <m>g_1\times\cdots\times g_n\in G_1\times\cdots\times G_n</m>. Then <m>|g_1\times\cdots\times g_n|=\lcm(|g_1|,\dots,|g_n|</m>.
+                </p>
+              </statement>
+            </theorem>      
       
             <exercises>
       
@@ -873,6 +882,7 @@
                 </introduction>
       
                 <exercise>
+                  <title>Inches From Greatness...</title>
                   <statement>
                     <p>
                       Explain why each of the following is <em>not</em> a group.
@@ -893,6 +903,8 @@
                         <li>
                           <p>
                             <m>(\O,+)</m>, where <m>\O</m> is the set of odd integers.
+                            <notation><usage><m>\O</m></usage><description>the set of odd integers</description></notation>          
+
                           </p>
                         </li>
       
@@ -907,6 +919,7 @@
                 </exercise>
       
                 <exercise>
+                  <title>Woulnd't it be Nice</title>
                   <p>
                     Find counterexamples to each of the following (false) statements.
       
@@ -928,11 +941,13 @@
                           For all <m>g\in G</m> there exists some <m>h\in G</m> such that <m>g=h^2</m>.
                         </p>
                       </li>
+                      
                     </ol>
                   </p>
                 </exercise>
       
                 <exercise>
+                  <title>Product Order</title>
                   <statement>
                     <p>
                       Prove or disprove: if <m>x,y</m> have finite order then <m>xy</m> has finite order. 
@@ -941,6 +956,7 @@
                 </exercise>
       
                 <exercise>
+                  <title>Left and Right Inverses</title>
                   <statement>
                     <p>
                       Give an example of a pair <m>(G,\cdot)</m> that satisfies axioms 1 and 2 of <xref ref="def-group" /> and an element of <m>G</m> that has a <em>left</em> inverse but not a <em>right</em> inverse.
@@ -962,7 +978,8 @@
                   </p>
                 </introduction>
               
-                <exercise>
+                <exercise xml:id="exe-first-group-verifications">
+                  <title>Group Verification</title>
                   <statement>
                     <p>
                       Prove that each of the groups given in <xref ref="ex-group-examples"/> are indeed groups.
@@ -1000,7 +1017,7 @@
                   </solution>
                 </exercise>
       
-                <exercise>
+                <exercise xml:id="exe-groups-of-units">
                   <title>Groups of Units</title>
                   
                   <statement>
@@ -1008,7 +1025,7 @@
                       <ol>
                         <li>
                           <p>
-                            The subset <m>Z^\times=\{-1,1\}\sse\Z</m> is an abelian group under multiplication.
+                            The subset <m>\Z^\times=\{-1,1\}\sse\Z</m> is an abelian group under multiplication.
                           </p>
                         </li>
                         
@@ -1024,23 +1041,29 @@
                           </p>
                         </li>
                       </ol>
-                      These are examples of <term>groups of units</term>, which will be defined explicitely and explored more generally later on See: <xref provisional="def-group-of-units"/>
+                      These are examples of <term>groups of units</term>, which will be defined explicitely and explored more generally later on See: <xref ref="def-group-of-units"/>
                     </p>
                   </statement>
                 </exercise>
       
-                <exercise>
+                <exercise xml:id="exe-more-group-properties">
+                  <title>Properties for a Rainy Day</title>
                   <statement>
                     <p>
+                      Let <m>G</m> be a group and <m>x,y\in G</m>.
                       <ol>
                         <li>
-                            Let <m>G</m> be a group and <m>g\in G</m>. If <m>g^2=g</m>, then <m>g=e</m>. 
+                             If <m>x^2=x</m>, then <m>g=e</m>. 
                         </li>
       
                         <li>
-      
-                            For each <m>x,y\in G</m>, there exists some <m>z\in G</m> such that <m>x=yz</m>
-      
+                            There exists some <m>z\in G</m> such that <m>x=yz</m>
+                        </li>
+
+                        <li>
+                          <p>
+                            If <m>G</m> is abelian then <m>(a_1 \dots a_n)^{-1} = a_1^{-1} \dots a_n^{-1}</m>.
+                          </p>
                         </li>
                       </ol>
                     </p>
@@ -1051,8 +1074,17 @@
                     </p>
                   </solution>
                 </exercise>
+
+                <exercise xml:id="exe-abelian-product-abelian">
+                  <statement>
+                    <p>
+                      The direct product of groups is abelian if and only if every factor of the product is abelian.
+                    </p>
+                  </statement>
+                </exercise>
       
-                <exercise>
+                <exercise xml:id="exe-every-element-order-2">
+                  <title><m>b</m> there or <m>b^2=e</m></title>
                   <statement>
                     <p>
                       If <m>G</m> is a group such every non-identity element has order <m>2</m>. Then <m>G</m> is abelian. 
@@ -1060,34 +1092,37 @@
                   </statement>
       
                 </exercise>
+
+                <exercise xml:id="exe-order-and-gcd">
+                  <title>Order Hors d'oeuvre</title>
+                  <statement>
+        
+                  <p>
+                    Let <m>G</m> be a group. 
+                    <ol>
+                      <li>
+                        <p>
+                          Let <m>g \in G</m> be an element of finite order. Show that <m>g^m</m> has finite order for any integer <m>m \geq 0</m>, and in fact 
+                          <me>
+                            |g^m| = \frac{\lcm(m,|g|)}{m} = \frac{|g|}{\gcd(m, |g|))}.
+                          </me> 
+                        </p>
+                      </li>
+                          
+                      <li>
+                        <p>
+                          Prove that for all <m>g, h</m> in <m>G</m>, <m>|gh| = |hg|</m> holds.
+                        </p>
+                      </li>
+                    </ol>
+                  </p>
+                </statement>
+                </exercise>
+
+                 </exercisegroup>
+
+              </exercises>
       
-              
-              </exercisegroup>
-      
-              <exercise>
-                <statement>
-      
-                <p>
-                  Let <m>G</m> be a group. 
-                  <ol>
-                    <li>
-                      <p>
-                        Let <m>g \in G</m> be an element of finite order. Show that <m>g^m</m> has finite order for any integer <m>m \geq 0</m>, and in fact <me> |g^m| = \frac{\lcm(m,|g|)}{m} = \frac{|g|}{\gcd(m, |g|))}.</me> 
-                      </p>
-                    </li>
-                        
-                    <li>
-                      <p>
-                        Prove that for all <m>g, h</m> in <m>G</m>, <m>|gh| = |hg|</m> holds.
-                      </p>
-                    </li>
-                  </ol>
-                </p>
-              </statement>
-              </exercise>
-              
-            </exercises>
-            
           </section>
       
         <section xml:id="sec-common-groups">
@@ -1105,12 +1140,7 @@
           <subsection xml:id="subsec-d2n">
             <title>Dihedral Groups</title>
       
-            <blockquote>
-              <p>
-                <q>Reality prefers symmetry.</q>
-              </p>
-              <attribution>Jorge Luis Borges</attribution>
-            </blockquote>
+            
             
             <p>
               We now discuss the important example of dihedral groups in detail.
@@ -1145,8 +1175,40 @@
                 </p>
               </statement>
             </definition>
+
+            <lemma xml:id="lem-d2n-elements">
+              <statement>
+              <p>
+                Assume that the regular <m>n</m>-gon <m>P_n</m> is drawn in the plane with its center at the origin and one vertex on the <m>x</m> axis. 
+              </p>
+
+              <p>
+                If <m>r</m> denotes rotation about the origin by <m>\frac{2\pi}{n}</m> radians counter-clockwise, then <m>r \in D_{2n}</m>. It's inverse is rotation by <m>2 \pi/n</m> clock-wise. 
+
+              </p>
+
+              <p>
+                For another example, for any line of symmetry of <m>P_n</m>, reflection about that line gives an element of <m>D_{2n}</m>. By our convention for how to draw <m>P_n</m>, the <m>x</m>-axis is a line of symmetry for <m>P_n</m>, and we let <m>s</m> denote reflection about the <m>x</m>-axis.
+              </p>
       
-            <proposition xml:id="prop-d2n-order">
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      <m>|r|=n</m> and <m>|s|=2</m>.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>sr</m> is a reflection and hence that <m>srsr=1_{{\mathbb{R}}^2}</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+            </lemma>
+      
+            <theorem xml:id="thm-d2n-order">
               <statement>
                 <p>
                   <ol>
@@ -1163,40 +1225,12 @@
                   </ol>
                 </p>
               </statement>
-            </proposition>
-      
-            <problem>
-              <p>
-                Assume that the regular <m>n</m>-gon <m>P_n</m> is drawn in the plane with its center at the origin and one vertex on the <m>x</m> axis. If <m>r</m> denotes rotation about the origin by <m>\frac{2\pi}{n}</m> radians counter-clockwise, then <m>r \in D_{2n}</m>. It's inverse is rotation by <m>2 \pi/n</m> clock-wise. For another example, for any line of symmetry of <m>P_n</m>, reflection about that line gives an element of <m>D_{2n}</m>. By our convention for how to draw <m>P_n</m>, the <m>x</m>-axis is a line of symmetry for <m>P_n</m>, and we let <m>s</m> denote reflection about the <m>x</m>-axis.
-              </p>
-      
-              <p>
-                <ol>
-                  <li>
-                    <p>
-                      Prove <m>|r|=n</m> and <m>|s|=2</m>.
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      Prove that <m>sr</m> is a reflection and hence that <m>srsr=1_{{\mathbb{R}}^2}</m>.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </problem>
+            </theorem>
       
           </subsection>
       
           <subsection xml:id="subsec-symmetric">
             <title>Symmetric Groups</title>
-      
-            <blockquote>
-              <p>
-                <q>Every possible permutation is still in play.</q>
-              </p>
-              <attribution>Michael Cullen</attribution>
-            </blockquote>
       
             <p>
               Let's introduce another very important example: symmetric groups.
@@ -1218,6 +1252,16 @@
                   For any <m>n\in\N</m>, the <em>symmetric group</em> is the set <m>S_n</m> of all permutations of the set <m>\{1,\dots,n\}</m> equipped with the composition of functions as its binary operation.
                   <notation><usage><m>S_n</m></usage><description>Symmetric group</description></notation> 
                 </p>
+
+                <p>
+                  We can write an element <m>\sigma</m> of <m>S_n</m> as a table of values: 
+                  <me>
+                    \begin{pmatrix} 
+                      1 &amp; 2 &amp; 3 &amp; \cdots &amp; n \\
+                      \sigma(1) &amp; \sigma(2) &amp; \sigma(3) &amp; \cdots &amp; \sigma(n)
+                    \end{pmatrix}
+                  </me>
+                </p>
               </statement>
             </definition>
       
@@ -1227,19 +1271,8 @@
               </p>
             </remark>
       
-            <p>
-              We can write an element <m>\sigma</m> of <m>S_n</m> as a table of values: 
-              <me>
-                \begin{pmatrix} 
-                  1 &amp; 2 &amp; 3 &amp; \cdots &amp; n \\
-                  \sigma(1) &amp; \sigma(2) &amp; \sigma(3) &amp; \cdots &amp; \sigma(n)
-                \end{pmatrix}
-              </me>
-            </p>
-      
-      
             <definition xml:id="def-cycle">
-              <title>Cycle and Transposition</title>
+              <title>Cycles and Transpositions</title>
               <statement>
                 <p>
                   If <m>i_1, \dots, i_m</m> are distinct integers between <m>1</m> and <m>n</m>, then <m>\sigma=(i_1 \, i_2 \, \dots i_m)</m> denotes the element of <m>S_n</m> that satisfies 
@@ -1250,12 +1283,6 @@
                 </p>
               </statement>
             </definition>
-            
-            <problem>
-              <p>
-                Determine the number of <m>1</m>-cycles in <m>S_n</m>. 
-              </p>
-            </problem>
       
             <remark>
               <p>
@@ -1291,7 +1318,7 @@
       
                     <li>
                       <p>
-                        Each <m>\sigma\in S_n</m> can be written a product of transpositions; i.e., <m>S_n</m> is generated by transpositions.                  
+                        Each <m>\sigma\in S_n</m> can be written a product of transpositions.                  
                       </p>
                     </li>
                   </ol>
@@ -1305,29 +1332,10 @@
               </p>
             </remark>
       
-            <problem>
-              <p>
-                Prove <m>|S_n|=n!</m>.
-              </p>
-            </problem>
-        
-            <problem>
-              <p>
-                Prove that the order of a permutation is the least common multiple of the lengths of the cycles it is a product of.
-              </p>
-            </problem>
-      
           </subsection>
       
           <subsection xml:id="subsec-quat">
             <title>The Quaternions</title>
-      
-            <blockquote>
-              <p>
-                <q>Quaternions...though beautifully ingenious, have been an unmixed evil to those who have touched them in any way.</q>
-              </p>
-              <attribution>William Thomson</attribution>
-            </blockquote>
       
             <p>
               For our last example we mention the group of <em>quaternions</em>, written <m>Q_8</m>.
@@ -1364,7 +1372,7 @@
       
           <exercises>
       
-            <exercisegroup>
+            <exercisegroup> <!--Examples-->
               <title>Computations and Examples</title>
               <introduction>
                 <p>
@@ -1372,6 +1380,7 @@
               </introduction>
       
               <exercise>
+                <title>Heinous Commutes</title>
                 <p>
                   Provide explicit examples to show <m>D_{2n}, S_n</m>, and <m>Q_8</m> are <em>not</em> abelian groups.
                 </p>
@@ -1384,10 +1393,17 @@
                 </p>
       
               </exercise>
+
+              <exercise>
+                <title><m>1</m>-Cycles in <m>S_n</m></title>
+                <p>
+                  Determine the number of <m>1</m>-cycles in <m>S_n</m>. 
+                </p>
+              </exercise>
       
             </exercisegroup>
       
-            <exercisegroup>
+            <exercisegroup> <!--Proofs-->
               <title>Formal Proofs</title>
               <introduction>
                 <p>
@@ -1396,6 +1412,7 @@
               </introduction>
       
               <exercise>
+                <title>Group Verifications</title>
                 <p>
                   Verify that the following are indeed groups:
                   <ol>
@@ -1439,27 +1456,22 @@
                   </ol>
                 </p>
               </exercise>
-      
-            </exercisegroup>
-      
-            <exercisegroup>
-              <title>Qualifying Exam Problems</title>
-              <introduction>
-                <p>
-      
-                </p>
-              </introduction>
-      
+
               <exercise>
                 <p>
-                  (coming soon)
+                  Prove that the order of a permutation is the least common multiple of the lengths of the cycles it is a product of.
+                </p>
+              </exercise>
+
+              <exercise>
+                <p>
+                  Prove <m>|S_n|=n!</m>.
                 </p>
               </exercise>
       
             </exercisegroup>
+
           </exercises>
-      
-          
           
         </section>
       
@@ -1486,6 +1498,12 @@
               </p>
             </statement>
           </definition>
+
+          <remark>
+            <p>
+              Note that in <xref ref="prop-cycledecomp"/> we showed <m>S_n</m> is generated by transpositions
+            </p>
+          </remark>
       
           <proposition xml:id="prop-d2n-generation">
             <statement>
@@ -1517,7 +1535,7 @@
       
           <remark>
             <p>
-              Funnily enough, this theorem will prove extremely useful all the way down in <xref provisional="ch-galois-theory"/>. 
+              Funnily enough, this theorem will prove extremely useful all the way down in <xref text="title" ref="ch-galois"/>. 
             </p>
           </remark>
           
@@ -1534,36 +1552,26 @@
                 </p>
               </statement>
             </definition>
-      
-            <proposition xml:id="prop-non-unique-cyclic-generators">
-              <title>Cyclic Generators Need not be Unique</title>
-              
-              <statement>
-                <p>
-                  Let <m>G=\langle x\rangle</m> be a cyclic group. Then <m>G=\langle x^{-1}\rangle</m>.
-                </p>
-              </statement>
-            </proposition>
-      
-            <proposition xml:id="prop-cyclic-groups-and-z">
-              <statement>
-                <p>
-                  <ol>
-                    <li>
-                      <p>
-                        Prove <m>(\mathbb{Z},+)</m> is generated by <m>1</m> or <m>-1</m>
-                      </p>
-                    </li>
-        
-                    <li>
-                      <p>
-                        Prove <m>(\mathbb{Z}/(n),+)</m> is generated by <m>[a]_n</m> for any integer <m>a</m> such that <m>\operatorname{gcd}(a,n)=1</m>.
-                      </p>
-                    </li>
-                  </ol>
-                </p>
-              </statement>
-            </proposition>
+
+            <example xml:id="ex-cyclic-examples">
+              <title>Examples of Cyclic Groups</title>
+
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      <m>(\Z,+)</m> is a cyclic group.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>(\Z/(n),+)</m> is a cyclic group.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </example>
       
             <theorem xml:id="thm-cyclic-abelian">
               <title>Cyclic Groups are Abelian</title>
@@ -1574,6 +1582,31 @@
               </statement>
             </theorem>
       
+          </subsection>
+
+          <subsection xml:id="subsec-cyclic-properties">
+            <title>Properties of Cyclic Groups</title>
+            
+            <p>Explanation that all of this is somewhat redundant, as it will be proved more generally later on. However, the practice can be useful, if time allows.</p>
+
+            <theorem xml:id="thm-criterion-for-gi-gj">
+              <title>Criterion for <m>g^i=g^j</m></title>
+              <statement>
+                <p>
+                  
+                </p>
+              </statement>
+            </theorem>
+
+            <exercise>
+              <statement>
+                <p>
+                  Let <m>G</m> be a group and <m>g\in G</m>. Then <m>|g|=|\igen g|</m>.
+                </p>
+              </statement>
+            </exercise>
+            
+
           </subsection>
       
           <exercises>
@@ -1598,6 +1631,14 @@
                 <p>
                 </p>
               </introduction>
+
+              <exercise>
+                <title>Self Sufficent</title>
+                <p>
+                  Show that <m>G</m> is a generating set for <m>G</m> for any group <m>G</m>.
+                </p>
+        
+              </exercise>
       
               <exercise>
                 <title>Not Quite Cyclic Groups</title>
@@ -1617,6 +1658,57 @@
                   </ol>
                 </p>
         
+              </exercise>
+
+              <exercise xml:id="exe-non-unique-cyclic-generators">
+                <title>Cyclic Generators Need not be Unique</title>
+                
+                <statement>
+                  <p>
+                    Let <m>G=\langle x\rangle</m> be a cyclic group. Then <m>G=\langle x^{-1}\rangle</m>.
+                  </p>
+                </statement>
+              </exercise>
+
+              <exercise xml:id="prop-cyclic-groups-and-z">
+                <statement>
+                  <p>
+                    <ol>
+                      <li>
+                        <p>
+                          Prove <m>(\mathbb{Z},+)</m> is generated by <m>1</m> or <m>-1</m>
+                        </p>
+                      </li>
+          
+                      <li>
+                        <p>
+                          Prove <m>(\mathbb{Z}/(n),+)</m> is generated by <m>[a]_n</m> for any integer <m>a</m> such that <m>\operatorname{gcd}(a,n)=1</m>.
+                        </p>
+                      </li>
+                    </ol>
+                  </p>
+                </statement>
+              </exercise>
+
+              <exercise>
+                <statement>
+                  <p>
+                    <ol>
+                      <li>
+                        <p>
+                          Every group of orders <m>1,2,3</m> are cyclic.
+                        </p>
+                      </li>
+
+                      <li>
+                        <p>
+                          Every abelian group of order <m>6</m> is cyclic.
+                        </p>
+                      </li>
+                    </ol>
+                   
+                  </p>
+                </statement>
               </exercise>
       
             </exercisegroup>
@@ -1712,7 +1804,7 @@
               </proof>
             </lemma>
       
-            <example>
+            <example xml:id="ex-common-subgroups">
               <title>Common Subgroups</title>
               <p>
                 <ol>
@@ -1737,6 +1829,7 @@
                   <li>
                     <p>
                       Let <m>n\in\N</m> and define <m>n\Z=\{x\in\Z|x=nk\;\text{for some}\;k\in\Z\}</m>. Then <m>n\Z\leq\Z</m> for all <m>n</m>.
+                      <notation><usage><m>n\Z</m></usage><description><m>n\Z=\{x\in\Z|x=nk\;\text{for some}\;k\in\Z\}</m></description></notation> 
                     </p>
                   </li>
                 </ol>
@@ -1775,7 +1868,7 @@
             </theorem>
       
             <definition xml:id="def-HK">
-              <title>HK</title>
+              <title><m>HK</m></title>
               <statement>
                 <p>
                   Let <m>H</m> and <m>K</m> be subgroups of a group and define the set 
@@ -1798,23 +1891,6 @@
                 </p>
               </statement>
             </proposition>
-      
-            <proposition xml:id="prop-abelian-and-cyclic-subgroups">
-              <title>Subgroups of Abelian and Cyclic Groups</title>
-              <statement>
-                <p>
-                  Let <m>H</m> be a subgroup of a group <m>G</m>. If <m>G</m> is abelian then so is <m>H</m>.
-                </p>
-              </statement>
-            </proposition>
-      
-            <lemma xml:id="lem-groups-contained-in-groups-are-subgroups">
-              <statement>
-                <p>
-                  Let <m>H</m> and <m>G</m> be groups. If <m>H\sse G</m>, then <m>H\leq G</m>
-                </p>
-              </statement>
-            </lemma>
       
             <definition xml:id="def-alternating-group">
               <title>Alternating Group</title>
@@ -1851,7 +1927,7 @@
             <proposition xml:id="prop-slg-subgroup">
               <statement>
                 <p>
-                  Prove that <m>SL_n(\C)</m> is a subgroup of <m>GL_n(\C)</m>.
+                  Prove that <m>\SL_n(\C)</m> is a subgroup of <m>\GL_n(\C)</m>.
                 </p>
               </statement>
             </proposition>
@@ -1862,7 +1938,7 @@
             <title>The Center of a Group</title>
       
             <definition xml:id="def-group-pcenter">
-              <title>Center</title>
+              <title><m>Z(G)</m></title>
               <statement>
                 <p>
                   The <em>center</em> of a group <m>G</m>, often written <m>Z(G)</m>, is the set of elements of <m>G</m> that commute with every element of <m>G</m>. That is, 
@@ -1879,14 +1955,6 @@
               <statement>
                 <p>
                   Prove that <m>Z(G)</m> is an abelian subgroup for any group <m>G</m>.
-                </p>
-              </statement>
-            </proposition>
-      
-            <proposition xml:id="prop-center-is-group-iff-abelian">
-              <statement>
-                <p>
-                  Let <m>G</m> be a group. Prove <m>G</m> is abelian if any only if <m>G=Z(G)</m>.
                 </p>
               </statement>
             </proposition>
@@ -1975,33 +2043,13 @@
               </proof>
             </lemma>
       
-            <corollary>
+            <corollary xml:id="cor-cyclic-subgroup">
               <statement>
               <p>
                  <m>\langle x\rangle=\{x^j \mid j\in \mathbb{Z}\}</m>.
               </p>
             </statement>
             </corollary>
-      
-            <proposition xml:id="prop-">
-              <statement>
-                <p>
-                  <ol>
-                    <li>
-                      <p>
-                        The set <m>n\Z</m> is a subgroup of <m>\Z</m> for all <m>n\in\Z</m>.
-                      </p>
-                    </li>
-      
-                    <li>
-                      <p>
-                        <m>n\Z=\igen n</m> 
-                      </p>
-                    </li>
-                  </ol>
-                </p>
-              </statement>
-            </proposition>
       
             <proposition xml:id="prop-generating-an">
               <title>Generating <m>A_n</m></title>
@@ -2015,252 +2063,293 @@
               </statement>
             </proposition>
       
-            <exercises>
-      
-              <exercisegroup>
-                <title>Computations and Examples</title>
-                <introduction>
-                  <p>
-                  </p>
-                </introduction>
-            
-                <exercise>
-                  <title>
-                    Future Subgroups
-                  </title>
-                  
-                  <p>
-                    Throughout this course we will encounter numerous important subgroups that will need to be verified as such. We do so here. While these subgroups may seem random now, they will prove to be exceedingly useful in the future.
-      
-                    <!-- Centralizer-->
-                    <ol>
-                      <li>
-                        <p>
-                          Let <m>H\leq G</m>. Prove that the set <m>Z_G(H)=\{g\in G|gh=xh\forall h\in H\}</m> is a subgroup of <m>G</m>.
-                          <fn>The set <m>Z_G(g)</m> is known as the <em>centralizer</em> of <m>g</m> in <m>G</m>, and is explored in greater depth later.</fn>
-                        </p>
-                      </li>
-      
-                      <!-- Normalizer-->
-                      <li>
-                        <p>
-                          Let <m>H\leq G</m>. Prove that the set <m>N_G(H)=\{g\in G|gHg\inv=H\}</m> is a subgroup of <m>G</m>.
-                          <fn>The set <m>N_G(H)</m> is known as the <em>centralizer</em> of <m>H</m> in <m>G</m>, and is explored in greater depth later.</fn>
-                        </p>
-                      </li>
-      
-      
-                      <li>
-                        <p>
-                          Let <m>H</m> be a subgroup of <m>G</m> and fix some element <m>g\in G</m>. Prove that <m>gHg^{-1}=\{ghg^{-1} \mid h\in H\}</m> is a subgroup of <m>G</m> of the same order as <m>H</m>.
-                        </p>
-                      </li>
-                    </ol>
-                  </p>
-                </exercise>
-            
-              </exercisegroup>
-            
-              <exercisegroup>
-                <title>Formal Proofs</title>
-                <introduction>
-                  <p>
-                  </p>
-                </introduction>
-            
-                <exercise>
-                  <title>Finding Centers</title>
-                  <p>
-                    Determine the following:
-                    <ol>
-                      <li>
-                        <p>
-                          <m>Z(D_{2n})</m> for <m>n \geq 3</m>. Your answer will depend on whether <m>n</m> is even or odd.
-                        </p>
-                      </li>
-        
-                      <li>
-                        <p>
-                          <m>Z(S_n)</m> for <m>n \geq 3</m>.
-                        </p>
-                      </li>
-        
-                      <li>
-                        <p>
-                          <m>Z(A_n)</m> for <m>n \geq 3</m>.
-                        </p>
-                      </li>
-        
-                      <li>
-                        <p>
-                          <m>Z(\GL_n(\C))</m>.
-                        </p>
-                      </li>
-                    </ol>
-                    
-                  </p>
-                </exercise>
-        
-                <exercise>
-                  <p>
-                    Verify <m>D_{2n}=\langle r,s \rangle</m>, meaning that <m>D_{2n}</m> is the subgroup of <m>D_{2n}</m> generated by <m>\{r,s\}</m>.
-                  </p>
-                </exercise>
-        
-                <exercise>
-                  <p>
-                    Consider the set <m>\mu=\{z\in \C^\times \mid z^n = 1 \;\text{for some integer}\;n \geq 1\}</m>.
-                    <ol>
-                      <li>
-                        <p>
-                          Prove that <m>\mu\leq\C^\times</m>.
-                        </p>
-                      </li>
-        
-                      <li>
-                        <p>
-                          Prove that for each integer <m>m \geq 1</m>, there is a unique subgroup <m>H_m\leq \mu</m> with <m>|H_m|=m</m> and that <m>H_m</m> is cyclic. 
-                        </p>
-                      </li>
-        
-                      <li>
-                        <p>
-                          Prove that every finitely generated subgroup of <m>\mu</m> has finitely many elements. 
-                        </p>
-                      </li>
-        
-                      <li>
-                        <p>
-                          Prove that <m>\mu</m> is not finitely generated.
-                        </p>
-                      </li>
-                    </ol>
-                  </p>
-                </exercise>
-      
-                <exercise>
-                  <statement>
-                    <p>
-                      Every finite group cannot be expressed as the union of two proper subgroups.
-                    </p>
-                  </statement>
-      
-                  <hint>
-                    <p>
-                      Part (3) of <xref ref="thm-subgroup-properties"/> may prove useful!
-                    </p>
-                  </hint>
-      
-                  <solution>
-                    <p>
-                      Coming soon to an OER near you!
-                    </p>
-                  </solution>
-                </exercise>
-      
-                <exercise>
-                  <statement>
-                    <p>
-                      The only subgroups of <m>\Z</m> are the sets <m>n\Z</m>.
-                    </p>
-                  </statement>
-      
-                  <solution>
-                    <p>
-                      Coming soon to an OER near you!
-                    </p>
-                  </solution>
-                </exercise>
-      
-                <exercise>
-                  <p>
-                   Every group of even order contains an element of order <m>2</m>.
-                  </p>
-                </exercise>
-            
-              </exercisegroup>
-            
-              <exercisegroup>
-                <title>Qualifying Exam Problems</title>
-                <introduction>
-                  <p>
-                  </p>
-                </introduction>
-            
-                <exercise number="1">
-                  <title>May 2021 Problem (1a)</title>
-      
-                  <statement>
-                    <p>
-                      Let <m>G</m> be a group (not necessarily finite) and <m>H</m> a nonempty subset of <m>G</m> that is closed under multiplication. Suppose that for all <m>g\in G</m> we have <m>g^2\in H</m>. Prove <m>H</m> is a subgroup of <m>G</m>. 
-                    </p>  
-                  </statement>
-      
-                  <hint>
-                    <p>
-                      Coming soon to an OER near you!
-                    </p>
-                  </hint>
-      
-                  <solution>
-                    <p>
-                      Coming soon to an OER near you!
-                    </p>
-                  </solution>
-                  
-                  
-                </exercise>
-      
-                <exercise number="2">
-                  <title>January 2022 Problem (1a)</title>
-      
-                  <statement>
-                    <p>
-                      Let <m>G</m> be a group, and <m>H, K \leq G</m> be subgroups of <m>G</m>. Give an example of <m>G, H,</m> and <m>K</m> such that <m>HK</m> is not a subgroup of <m>G</m>.
-                    </p>
-                  </statement>
-                  
-                  <hint>
-                    <p>
-                      Coming soon to an OER near you!
-                    </p>
-                  </hint>
-      
-                  <solution>
-                    <p>
-                      Coming soon to an OER near you!
-                    </p>
-                  </solution>
-      
-                </exercise>
-      
-                <exercise number="3">
-                  <title>January 2020 Problem (1b)</title>
-      
-                  <statement>
-                    <p>
-                      Let <m>G</m> be a group, and <m>H, K \leq G</m> be subgroups of <m>G</m>. Give an example of <m>G, H,</m> and <m>K</m> such that <m>HK</m> is not a subgroup of <m>G</m>.
-                    </p>
-                  </statement>
-                  
-                  <hint>
-                    <p>
-                      Coming soon to an OER near you!
-                    </p>
-                  </hint>
-      
-                  <solution>
-                    <p>
-                      Coming soon to an OER near you!
-                    </p>
-                  </solution>
-      
-                </exercise>
-            
-              </exercisegroup>
-            </exercises>
-      
           </subsection>
+
+          <exercises>
+      
+            <exercisegroup>
+              <title>Computations and Examples</title>
+              <introduction>
+                <p>
+                </p>
+              </introduction>
+          
+              <exercise>
+                <p>Come up with a good name for the set <m>HK</m>. </p>
+              </exercise>
+          
+            </exercisegroup>
+          
+            <exercisegroup>
+              <title>Formal Proofs</title>
+              <introduction>
+                <p>
+                </p>
+              </introduction>
+
+              <exercise xml:id="exe-subgroups-verifications">
+                <title>Subgroup Verification</title>
+
+                <p>Prove that each of the subgroup in <xref ref="ex-common-subgroups"/> are indeed subgroups </p>
+              </exercise>
+
+              <exercise xml:id="exe-future-subgroups">
+                <title>
+                  Future Subgroups
+                </title>
+                
+                <p>
+                  Throughout this course we will encounter numerous important subgroups that will need to be verified as such. We do so here. While these subgroups may seem random now, they will prove to be exceedingly useful in the future.
+                  
+                  <ol>
+                    <!-- Centralizer-->
+                    <li>
+                      <p>
+                        Let <m>H\leq G</m>. Prove that the set <m>Z_G(H)=\{g\in G|gh=xh\forall h\in H\}</m> is a subgroup of <m>G</m>.
+                        <fn>The set <m>Z_G(g)</m> is known as the <em>centralizer</em> of <m>g</m> in <m>G</m>, and is defined explicitely in <xref ref="def-centralizer"/>.</fn>
+                      </p>
+                    </li>
+    
+                    <!-- Normalizer-->
+                    <li>
+                      <p>
+                        Let <m>H\leq G</m>. Prove that the set <m>N_G(H)=\{g\in G|gHg\inv=H\}</m> is a subgroup of <m>G</m>.
+                        <fn>The set <m>N_G(H)</m> is known as the <em>centralizer</em> of <m>H</m> in <m>G</m>, and is and is defined explicitely in <xref ref="def-normalizer"/>.</fn>
+                      </p>
+                    </li>
+    
+                     <!-- Conjugate-->
+                    <li>
+                      <p>
+                        Let <m>H</m> be a subgroup of <m>G</m> and fix some element <m>g\in G</m>. Prove that <m>gHg^{-1}=\{ghg^{-1} \mid h\in H\}</m> is a subgroup of <m>G</m> of the same order as <m>H</m>.
+                        <fn>The set <m>gHg^{-1}</m> is known as the <em>conjugate</em> of <m>H</m> by <m>g</m>, and is defined explicitely in <xref provisional="def-something"/>.</fn>
+                      </p>
+                    </li>
+
+                    <!-- Stabilizer-->
+                    <li>
+                      <p>
+                        Let <m>S</m> be a containing <m>n</m> elements. For each <m>x\in S</m>, prove that the set  <m>\Stab_{\Perm(S)}(x)=\{\sigma\in \Perm(S)|\sigma(x)=x\}</m> is a subgroup of <m>\Perm(S)</m>.
+                        <fn>This a specific example of something known as the <xref text="title" ref="def-centralizer"/><em>centralizer</em> and in <xref ref="sec-lois"/> we will see how it can be applied to all groups, not just <m>\Perm(S)</m>.</fn>
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </exercise>
+          
+              <exercise xml:id="exe-finding-centers">
+                <title>Finding Centers</title>
+                <p>
+                  Determine the following:
+                  <ol>
+                    <li>
+                      <p>
+                        <m>Z(D_{2n})</m> for <m>n \geq 3</m>. Your answer will depend on whether <m>n</m> is even or odd.
+                      </p>
+                    </li>
+      
+                    <li>
+                      <p>
+                        <m>Z(S_n)</m> for <m>n \geq 3</m>.
+                      </p>
+                    </li>
+      
+                    <li>
+                      <p>
+                        <m>Z(A_n)</m> for <m>n \geq 3</m>.
+                      </p>
+                    </li>
+      
+                    <li>
+                      <p>
+                        <m>Z(\GL_n(\C))</m>.
+                      </p>
+                    </li>
+                  </ol>
+                  
+                </p>
+              </exercise>
+
+              <exercise xml:id="exe-center-is-group-iff-abelian">
+                <title>Abelian iff <m>Z(G)=G</m></title>
+                <statement>
+                  <p>
+                    Let <m>G</m> be a group. Prove <m>G</m> is abelian if any only if <m>G=Z(G)</m>.
+                  </p>
+                </statement>
+              </exercise>
+      
+              <exercise xml:id="exe-verify-d2n-generation">
+                <title><m>D_{2n}</m> as Generated Subgroup</title>
+                <p>
+                  Verify <m>D_{2n}=\langle r,s \rangle</m>, meaning that <m>D_{2n}</m> is the subgroup of <m>D_{2n}</m> generated by <m>\{r,s\}</m>.
+                </p>
+              </exercise> 
+    
+              <exercise xml:id="exe-no-proper-unions">
+                <title>No Proper Unions</title>
+                <statement>
+                  <p>
+                    Every finite group cannot be expressed as the union of two proper subgroups.
+                  </p>
+                </statement>
+    
+                <hint>
+                  <p>
+                    Part (3) of <xref ref="thm-subgroup-properties"/> may prove useful!
+                  </p>
+                </hint>
+    
+                <solution>
+                  <p>
+                    Coming soon to an OER near you!
+                  </p>
+                </solution>
+              </exercise>
+
+              <exercise xml:id="exe-subgroups-of-z">
+
+                <title>Subgroups of <m>\Z</m></title>
+                <statement>
+                  <p>
+                    <ol>
+                      <li>
+                        <p>
+                          The set <m>n\Z</m> is a subgroup of <m>\Z</m> for all <m>n\in\Z</m>.
+                        </p>
+                      </li>
+        
+                      <li>
+                        <p>
+                          <m>n\Z=\igen n</m> 
+                        </p>
+                      </li>
+
+                      <li>
+                        <p>
+                          The only subgroups of <m>\Z</m> are the sets <m>n\Z</m>.
+                        </p>
+                      </li>
+                    </ol>
+                  </p>
+                </statement>
+              </exercise>
+
+              <exercise xml:id="exe-even-groups-order-2">
+                <title>Even Order Groups</title>
+                <p>
+                 Every group of even order contains an element of order <m>2</m>.
+                 <fn>This is a direct Corollary of <xref ref="thm-cauchy"/>, but proving it is possible and thus beneficial to prove it without all of that machinery first.</fn>
+                </p>
+              </exercise>
+
+              <exercise xml:id="exe-abelian-subgroups">
+                <title>Subgroups of Abelian Groups</title>
+                <statement>
+                  <p>
+                    Let <m>H</m> be a subgroup of a group <m>G</m>. If <m>G</m> is abelian then so is <m>H</m>.
+                  </p>
+                </statement>
+              </exercise>
+        
+              <exercise xml:id="exe-groups-contained-in-groups-are-subgroups">
+                <title>Subsets and Subgroups</title>
+                <statement>
+                  <p>
+                    Let <m>H</m> and <m>G</m> be groups. If <m>H\sse G</m>, then <m>H\leq G</m>
+                  </p>
+                </statement>
+              </exercise>
+
+              <exercise>
+                <p>
+                  Consider the set <m>\mu=\{z\in \C^\times \mid z^n = 1 \;\text{for some integer}\;n \geq 1\}</m>.
+                  <ol>
+                    <li>
+                      <p>
+                        Prove that <m>\mu\leq\C^\times</m>.
+                      </p>
+                    </li>
+      
+                    <li>
+                      <p>
+                        Prove that for each integer <m>m \geq 1</m>, there is a unique subgroup <m>H_m\leq \mu</m> with <m>|H_m|=m</m> and that <m>H_m</m> is cyclic. 
+                      </p>
+                    </li>
+      
+                    <li>
+                      <p>
+                        Prove that every finitely generated subgroup of <m>\mu</m> has finitely many elements. 
+                      </p>
+                    </li>
+      
+                    <li>
+                      <p>
+                        Prove that <m>\mu</m> is not finitely generated.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </exercise>
+          
+            </exercisegroup>
+          
+            <exercisegroup>
+              <title>Qualifying Exam Problems</title>
+              <introduction>
+                <p>
+                </p>
+              </introduction>
+          
+              <exercise number="1">
+                <title>May 2021 Problem (1a)</title>
+    
+                <statement>
+                  <p>
+                    Let <m>G</m> be a group (not necessarily finite) and <m>H</m> a nonempty subset of <m>G</m> that is closed under multiplication. Suppose that for all <m>g\in G</m> we have <m>g^2\in H</m>. Prove <m>H</m> is a subgroup of <m>G</m>. 
+                  </p>  
+                </statement>
+    
+                <hint>
+                  <p>
+                    Coming soon to an OER near you!
+                  </p>
+                </hint>
+    
+                <solution>
+                  <p>
+                    Coming soon to an OER near you!
+                  </p>
+                </solution>
+                
+                
+              </exercise>
+    
+              <exercise number="2">
+                <title>January 2022 (1a), January 2020 (1b)</title>
+    
+                <statement>
+                  <p>
+                    Let <m>G</m> be a group, and <m>H, K \leq G</m> be subgroups of <m>G</m>. Give an example of <m>G, H,</m> and <m>K</m> such that <m>HK</m> is not a subgroup of <m>G</m>.
+                  </p>
+                </statement>
+                
+                <hint>
+                  <p>
+                    Coming soon to an OER near you!
+                  </p>
+                </hint>
+    
+                <solution>
+                  <p>
+                    Coming soon to an OER near you!
+                  </p>
+                </solution>
+    
+              </exercise>
+          
+            </exercisegroup>
+          </exercises>
       
         </section>
       </chapter> 
@@ -2298,19 +2387,31 @@
               <ol>
                 <li>
                   <p>
-                    The identity map is a group homomorphism for any group <m>G</m>.
+                    The identity map is a group homomorphism for any group <m>G</m>, this is known as the <em>trivial homomorphism</em>
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Let <m>H\leq G</m>. The inclusion map <m>i:H\to G</m> defined by <m>i(h)=h</m> is a homomorphism. 
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    The <em>sign </em> homomorphism <m>\sign: S_n\to \{-1,1\}</m> that sends even permuations to <m>1</m> and odd permutations to <m>-1</m> is a homomorphism.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    The exponential map <m>\exp: ({\mathbb{R}}, +) \to (\mathbb{R}^\times, \cdot)</m> is a homomorphism.
                   </p>
                 </li>
     
                 <li>
                   <p>
-                    The exponential map <m>\exp: ({\mathbb{R}}, +) \to ({\mathbb{R}}\setminus \{0\}, \cdot)</m> is a homomorphism.
-                  </p>
-                </li>
-    
-                <li>
-                  <p>
-                    The natural log map <m>\ln: ({\mathbb{R}}_{&gt;0}, \cdot) \to ({\mathbb{R}}, +)</m> is a homomorphism.
+                    The natural log map <m>\ln: (\mathbb{R}^\times, \cdot) \to ({\mathbb{R}}, +)</m> is a homomorphism.
                   </p>
                 </li>
     
@@ -2352,7 +2453,7 @@
           <corollary xml:id="cor-unique-Z-homom">
             <statement>
               <p>
-                Let <m>G</m> be a group. Prove there exists a unique group homomorphism <m>\varphi:G\to\Z</m>.
+                Let <m>G</m> be a group. There exists a unique group homomorphism <m>\varphi:G\to\Z</m> and a unique group homomorphism <m>\phi:\Z\to G</m>
               </p>
             </statement>
           </corollary>
@@ -2398,25 +2499,25 @@
                 <ol>
                   <li>
                     <p>
-                      If <m>\varphi: G \to H</m> is a homomorphism of groups, then the image of <m>\varphi</m> is a subgroup of <m>H</m>.
+                      (Images are subgroups) If <m>\varphi: G \to H</m> is a homomorphism of groups, then the image of <m>\varphi</m> is a subgroup of <m>H</m>.
                     </p>
                   </li>
     
                   <li>
                     <p>
-                      If <m>\varphi: G \to H</m> is a homomorphism of groups, then the kernel of <m>\varphi</m> is a subgroup of <m>G</m>.
+                      (Kernels are subgroups) If <m>\varphi: G \to H</m> is a homomorphism of groups, then the kernel of <m>\varphi</m> is a subgroup of <m>G</m>.
                     </p>
                   </li>
     
                   <li>
                     <p>
-                      Prove that if <m>\varphi:G\to H</m> is a group homomorphism and <m>K\leq H</m> then the preimage of <m>K</m>, defined as <m>\varphi^{-1}(K)=\{g\in G | \varphi(g)\in K\}</m>, is a subgroup of <m>G</m>.
+                      (Preimages are subgroups) Prove that if <m>\varphi:G\to H</m> is a group homomorphism and <m>K\leq H</m> then the preimage of <m>K</m>, defined as <m>\varphi^{-1}(K)=\{g\in G | \varphi(g)\in K\}</m>, is a subgroup of <m>G</m>.
                     </p>
                   </li>
     
                   <li>
                     <p>
-                        If <m>\varphi:G\to H</m> and <m>\phi:H\to K</m> are group homomorphisms, the composition <m>\phi\circ\varphi:G\to K</m> is a group homomorphism.
+                        (Compositions) If <m>\varphi:G\to H</m> and <m>\phi:H\to K</m> are group homomorphisms, the composition <m>\phi\circ\varphi:G\to K</m> is a group homomorphism.
                     </p>
                   </li>
     
@@ -2464,7 +2565,7 @@
                 <title>Group Homomorphisms</title>
                 
                 <p>
-                  Prove that each of the following are group homomorphisms
+                  Determine (with justification) which of the following functions are group homomorphisms
       
                   <ol>
                     <li>
@@ -2476,6 +2577,12 @@
                     <li>
                       <p>
                         The function <m>f: \R \to \R</m> defined by <m>f(x) = x^2</m>.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        The function <m>f: \R^\times \to \R^\times</m> defined by <m>f(x) = x^2</m>.
                       </p>
                     </li>
       
@@ -2504,6 +2611,47 @@
                   </ol>
                 </p>
               </exercise>
+
+              <exercise xml:id="exe-homoms-and-subgroups">
+                <statement>
+                  <p>
+                    Let <m>\varphi: G \to H</m> be a homomorphism of groups and <m>K\leq G</m>. Then
+                    <ol>
+                      <li>
+                        <p>
+                          <m>\varphi(K)\leq H</m>
+                        </p>
+                      </li>
+
+                      <li>
+                        <p>
+                          If <m>K</m> is cyclic, so is <m>\varphi(K)</m>
+                        </p>
+                      </li>
+
+                      <li>
+                        <p>
+                          If <m>K</m> is abelian, so is <m>\varphi(K)</m>
+                        </p>
+                      </li>
+
+                      <li>
+                        <p>
+                          <m>|\varphi(K)|\big||K|</m>
+                        </p>
+                      </li>
+                    </ol>
+                  </p>
+                </statement>  
+              </exercise>
+
+              <exercise xml:id="exe-order-preservation">
+                <statement>
+                  <p>
+                    If <m>\varphi: G \to H</m> is a homomorphism of groups and <m>|g|</m> is finte, then <m>|\varphi(g)|\big||g|</m>.
+                  </p>
+                </statement>  
+              </exercise>
           
             </exercisegroup>
           
@@ -2528,307 +2676,368 @@
         <section xml:id="sec-gpisos">
           <title>Group Isomorphisms</title>
     
-          <blockquote>
-            <p>
-              <q>Self preservation is the first law of nature.</q>
-            </p>
-            <attribution>Samuel Butler</attribution>
-          </blockquote>
-    
-          <definition xml:id="def-gpiso">
-            <title>Group Ismorphism</title>
-            <statement>
+          <introduction>
+            <blockquote>
               <p>
-                A homomorphism <m>f: G \to H</m> is called an <em>isomorphism</em> if there exists a homomorphism <m>g: H \to G</m> such that <m>f \circ g = \text{id}_H</m> and <m>g \circ f = \text{id}_G</m>.
+                <q>Self preservation is the first law of nature.</q>
               </p>
-    
-              <p>
-                If <m>f:G\to H</m> is an isomorphism, <m>G</m> and <m>H</m> are called <em>isomorphic</em>, written <m>G\cong H</m>.
-                <notation><usage><m>\cong</m></usage><description>Isomorphic</description></notation> 
-              </p>
-            </statement>
-          </definition>
-    
-          <remark>
-            <p>
-              I have defined the notion of isomorphism in <xref ref="def-gpiso" /> differently than given in the textbook. The reason is that the correct meaning of the word <q>isomorphism</q> in any context (sets, groups, rings, fields, topological spaces, whatever) is always <q>a morphism that has a two-sided inverse</q>. In many contexts, such as sets, groups, rings and fields this turns out to be equivalent to the notion of being <q>one-to-one and onto</q>. But there are contexts in which this is not the case. For example a one-to-one and onto continuous map of topological spaces need not be a homeomorphism. (A homeomorphism is a term one uses for isomorphism of topological spaces, for historical reasons.)
-            </p>
-          </remark>
-    
-          <p>
-            Intuitively, a group isomorphism establishes a one-to-one correspondence between the elements of two groups, such that they have exactly the same algebraic structure. This means that the groups are essentially the same, up to a relabeling of their elements.
-          </p>
-    
-          <p>
-            Group isomorphisms are important because they allow us to identify different groups that have the same algebraic structure. This can simplify the study of groups by reducing the number of cases that need to be considered, and it can also provide insight into the connections between seemingly unrelated groups.
-          </p>
-    
-          <theorem xml:id="thm-iso-def">
-            <statement>
-              <p>
-                Suppose <m>\varphi: G \to H</m> is a group homomorphism. Then <m>\varphi</m> an isomorphism if and only if <m>\varphi</m> is bijective (one-to-one and onto).
-              </p>
-            </statement>
-          </theorem>
-    
-          <remark>
-            <p>
-              Moving forward, we will essentially treat <xref ref="thm-iso-def"/> as the de-facto definition of a group isomorphism. Rather than end every proof with a reference to <xref ref="thm-iso-def"/>, we will instead enshrine its monumental achievements of <xref ref="thm-iso-def"/> within this remark. To alleviate some of the corresponding guilt asociated with this decision I have am referencing <xref ref="thm-iso-def"/> as many times as possible, as <xref ref="thm-iso-def"/> is important and <xref ref="thm-iso-def"/> should not be forgotten. 
-            </p>
-          </remark>
-    
-          <example xml:id="ex-group-iso-examples">
-            <title>Isomorphism Examples</title>
-            <p>
-              <ol>
-                <li>
-                  <p>
-                    The identity map is a group isomomorphism for any group <m>G</m>.
-                  </p>
-                </li>
-    
-                <li>
-                  <p>
-                    The exponential and natural logarithm maps from <xref ref="ex-group-homom-examples"/> are actually isomorphisms.
-                  </p>
-                </li>
-              </ol>
-            </p>
-          </example>
-    
-          <theorem xml:id="thm-iso-inv">
-            <title>Isomorphism Preservations</title>
-            <statement>
-              <p>
-                Let <m>G</m> and <m>H</m> be groups. If <m>\varphi:G\to H</m> is an isomorphism, then the following hold:
-              </p>
-    
-              <p>
-                <ol> 
-                  <li>
-                    <p>
-                      <m>|G|=|H|</m>
-                    </p>
-                  </li>
-    
-                  <li>
-                    <p>
-                      <m>|g|=|\varphi(g)|</m> for all <m>g\in G</m> and <m>|h|=|\varphi\inv(h)|</m> for all <m>h\in H</m>
-                    </p>
-                  </li>
-    
-                  <li>
-                    <p>
-                      <m>G</m> is abelian if and only if <m>H</m> is abelian
-                    </p>
-                  </li>
-    
-                  <li>
-                    <p>
-                      <m>|Z(G)|=|Z(H)|</m>
-                    </p>
-                  </li>
-    
-                  <li>
-                    <p>
-                      <m>G</m> is finitely generated if and only if <m>H</m> is finitely generated.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-          </theorem>
-    
-          <remark>
-            <p>
-              These properties sometimes referred to as <term>isomorphism invariants</term>, though not within this text.
-            </p>
-          </remark>
-    
-          <p>
-            Now seems like an exceptional time to recall Part (4) of <xref ref="thm-properties-of-group-homoms"/>.
-          </p>
-    
-          <corollary xml:id="cor-composition-of-isos">
-            <title>Composition of Isomorphisms</title>
-            <statement>
-              <p>
-                Prove that the composition of two isomorphisms is an isomorphism.
-              </p>
-            </statement>
-          </corollary>
-    
-          <definition xml:id="def-gp-automorphism">
-            <title>Group Automorphism</title>
-            <statement>
-              <p>
-                Let <m>G</m> be a group. An isomorphism <m>\varphi:G\to G</m> is called an <em>automorphism</em> of <m>G</m>.
-              </p>
-            </statement>
-          </definition>
-    
-          <example xml:id="ex-identity-automorphism">
-            <p>
-              In <xref ref="ex-group-iso-examples"/> we saw that the identity map is a group isomomorphism from a group to itself, making <m>\id</m> an automorphism. This may prove (pun intended) useful in the following proposition.
-            </p>
-          </example>
-            
-          <proposition xml:id="prop-aut-is-group">
-            <title>The Automorphism Group</title>
-            <statement>
-              <p>
-                Prove that the set of automorphisms of <m>G</m>, denoted <m>\operatorname{Aut}(G)</m>, is a group under composition.
-                <notation><usage><m>\Aut(G)</m></usage><description>the automorphism group of a group <m>G</m></description></notation> 
-              </p>
-            </statement>
-          </proposition>
-    
-          <remark>
-            <p>
-              Notice that we have actually shown that the composition of automorphisms is an automorphism, both through <xref ref="cor-composition-of-isos"/> (as automorphisms are isomorphisms) and <xref ref="prop-aut-is-group"/> (as groups are closed under their operation)
-            </p>
-          </remark>
-    
-          <p>
-            We have collected several new methods of determining when two groups are isomorphic. Let's express them explicitly.
-          </p>
-    
-          <proposition xml:id="prop-aut-properties">
-            <title>Isomorphism Consequences</title>
-            <statement>
-                <p>
-                  Suppose <m>G\cong H</m>. Then
-                  <ol>
-                    <li>
-                      <p>
-                        <m>Z(G)\cong Z(H)</m> and 
-                      </p>
-                    </li>
-        
-                    <li>
-                      <p>
-                        <m>\Aut(G)\cong \Aut(H)</m>.
-                      </p>
-                    </li>
-                  </ol>
-              </p>
-            </statement>
-          </proposition>
-    
-          <proposition xml:id="prop-inverse-map-and-abelian">
-            <statement>
-              <p>
-                Let <m>G</m> be a group.
-                <ol>
-                  <li>
-                    <p>
-                      The map <m>\varphi:G\to G</m> given by <m>\varphi(a)=a^{-1}</m> for all <m>a\in G</m> is an automorphism if and only if <m>G</m> is abelian.
-                    </p>
-                  </li>
-    
-                  <li>
-                    <p>
-                      If <m>\Aut(G)=\{e\}</m> then <m>G</m> is abelian and every non-identity element of <m>G</m> has order <m>2</m>.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-          </proposition>
+              <attribution>Samuel Butler</attribution>
+            </blockquote>
+           </introduction>
+
+          <subsection xml:id="subsec-isomorphisms">
+            <title>Isomorphisms</title>
           
-          <proposition xml:id="prop-conjugation-automorphism">
-            <title>The Conjugation Automorphism</title>
-            <statement>
+            <definition xml:id="def-gpiso">
+              <title>Group Ismorphism</title>
+              <statement>
+                <p>
+                  A homomorphism <m>f: G \to H</m> is called an <em>isomorphism</em> if there exists a homomorphism <m>g: H \to G</m> such that <m>f \circ g = \text{id}_H</m> and <m>g \circ f = \text{id}_G</m>.
+                </p>
+      
+                <p>
+                  If <m>f:G\to H</m> is an isomorphism, <m>G</m> and <m>H</m> are called <em>isomorphic</em>, written <m>G\cong H</m>.
+                  <notation><usage><m>\cong</m></usage><description>Isomorphic</description></notation> 
+                </p>
+              </statement>
+            </definition>
+      
+            <remark><p>I have defined the notion of isomorphism in <xref ref="def-gpiso" /> differently than given in the textbook. The reason is that the correct meaning of the word <q>isomorphism</q> in any context (sets, groups, rings, fields, topological spaces, whatever) is always <q>a morphism that has a two-sided inverse</q>. In many contexts, such as sets, groups, rings and fields this turns out to be equivalent to the notion of being <q>one-to-one and onto</q>. But there are contexts in which this is not the case. For example a one-to-one and onto continuous map of topological spaces need not be a homeomorphism. (A homeomorphism is a term one uses for isomorphism of topological spaces, for historical reasons.)</p></remark>
+      
+            <p>Intuitively, a group isomorphism establishes a one-to-one correspondence between the elements of two groups, such that they have exactly the same algebraic structure. This means that the groups are essentially the same, up to a relabeling of their elements.</p>
+      
+            <p>Group isomorphisms are important because they allow us to identify different groups that have the same algebraic structure. This can simplify the study of groups by reducing the number of cases that need to be considered, and it can also provide insight into the connections between seemingly unrelated groups.</p>
+      
+            <theorem xml:id="thm-iso-def">
+              <statement>
+                <p>
+                  Suppose <m>\varphi: G \to H</m> is a group homomorphism. Then <m>\varphi</m> an isomorphism if and only if <m>\varphi</m> is bijective (one-to-one and onto).
+                </p>
+              </statement>
+            </theorem>
+      
+            <remark><p>Moving forward, we will essentially treat <xref ref="thm-iso-def"/> as the de-facto definition of a group isomorphism. Rather than end every proof with a reference to <xref ref="thm-iso-def"/>, we will instead enshrine its monumental achievements of <xref ref="thm-iso-def"/> within this remark. To alleviate some of the corresponding guilt asociated with this decision I am referencing <xref ref="thm-iso-def"/> as many times as possible, as <xref ref="thm-iso-def"/> is important and <xref ref="thm-iso-def"/> should not be forgotten. </p></remark>
+      
+            <example xml:id="ex-group-iso-examples">
+              <title>Isomorphism Examples</title>
               <p>
-                Let <m>G</m> be a group and <m>x\in G</m>. Define a map <m>\psi_x:G\to G</m> by <m>\psi_x(a)=xax^{-1}</m> for all <m>a\in G</m>. 
                 <ol>
                   <li>
                     <p>
-                      Prove that <m>\psi_x\in \operatorname{Aut}(G)</m> for all <m>x\in G</m>. 
+                      The identity map is a group isomomorphism for any group <m>G</m>.
+                    </p>
+                  </li>
+                  
+                  <li>
+                    <p>
+                      <m>(\Z,+)\cong(\E,+)</m>, where <m>\E</m> denotes the set of even integers.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>(\R,+)\cong(\R^\times,\cdot)</m>                      
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Let <m>C_\infty</m> be a cyclic group with infinite elements. Then <m>C_\infty\cong\Z</m>.
                     </p>
                   </li>
       
                   <li>
                     <p>
-                      Prove that <m>\{\psi_x\mid x\in G\}</m> is a subgroup of <m>\operatorname{Aut}(G)</m>.
+                      The exponential and natural logarithm maps from <xref ref="ex-group-homom-examples"/> are actually isomorphisms.
                     </p>
                   </li>
                 </ol>
               </p>
-            </statement>
-          </proposition>
-    
-          <remark>
+            </example>
+      
+            <theorem xml:id="thm-iso-inv">
+              <title>Isomorphism Preservations</title>
+              <statement>
+                <p>
+                  Let <m>G</m> and <m>H</m> be groups. If <m>\varphi:G\to H</m> is an isomorphism, then the following hold:
+                </p>
+      
+                <p>
+                  <ol> 
+                    <li>
+                      <p>
+                        <m>|G|=|H|</m>
+                      </p>
+                    </li>
+      
+                    <li>
+                      <p>
+                        <m>|g|=|\varphi(g)|</m> for all <m>g\in G</m> and <m>|h|=|\varphi\inv(h)|</m> for all <m>h\in H</m>
+                      </p>
+                    </li>
+      
+                    <li>
+                      <p>
+                        <m>G</m> is abelian if and only if <m>H</m> is abelian
+                      </p>
+                    </li>
+      
+                    <li>
+                      <p>
+                        <m>|Z(G)|=|Z(H)|</m>
+                      </p>
+                    </li>
+      
+                    <li>
+                      <p>
+                        <m>G</m> is finitely generated if and only if <m>H</m> is finitely generated.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+            </theorem>
+      
+            <remark>
+              <p>
+                These properties sometimes referred to as <term>isomorphism invariants</term>, though not within this text.
+              </p>
+            </remark>
+      
             <p>
-              Note that as <m>\psi_x:G\to G</m> is bijective it is, by definition, a permutation of <m>G</m>. This might come up later...
+              Now seems like an exceptional time to recall Part (4) of <xref ref="thm-properties-of-group-homoms"/>.
             </p>
-          </remark>
-    
+      
+            <corollary xml:id="cor-composition-of-isos">
+              <title>Composition of Isomorphisms</title>
+              <statement>
+                <p>
+                  The composition of two isomorphisms is an isomorphism.
+                </p>
+              </statement>
+            </corollary>
+
+            <theorem xml:id="thm-cayley">
+              <title>Cayley's Theorem</title>
+              <creator><m>1854</m></creator>
+              
+              <statement>
+                <p>
+                  Every group is isomorphic to a subgroup of <m>S_n</m>.
+                </p>
+              </statement>
+            </theorem>
+
+            <historical>
+              <p>
+                Cayley's Theorem is named after the British mathematician Arthur Cayley. Cayley was a prolific mathematician who made significant contributions to a wide range of fields, including algebra, geometry, and graph theory. Cayley was also a strong advocate for women's education and played an important role in the movement to admit women to Cambridge University. In the 1860s, he was part of a group of academics who lobbied for women to be allowed to take the Cambridge Mathematical Tripos exam, which was the standard test for mathematics students at the time.
+              </p>
+            </historical>
+
+            <remark>
+              <p>
+                This is a nearly useless theorem.
+              </p>
+            </remark>
+
+          </subsection>
+
+          <subsection xml:id="subsec-automorphisms">
+            <title>Automorphisms</title>
+            
+            <definition xml:id="def-gp-automorphism">
+              <title>Group Automorphism</title>
+              <statement>
+                <p>
+                  Let <m>G</m> be a group. An isomorphism <m>\varphi:G\to G</m> is called an <em>automorphism</em> of <m>G</m>.
+                </p>
+              </statement>
+            </definition>
+      
+            <example xml:id="ex-identity-automorphism">
+              <p>
+                In <xref ref="ex-group-iso-examples"/> we saw that the identity map is a group isomomorphism from a group to itself, making <m>\id</m> an automorphism. This may prove (pun intended) useful in the following proposition.
+              </p>
+            </example>
+              
+            <proposition xml:id="prop-aut-is-group">
+              <title>The Automorphism Group</title>
+              <statement>
+                <p>
+                  Prove that the set of automorphisms of <m>G</m>, denoted <m>\operatorname{Aut}(G)</m>, is a group under composition.
+                  <notation><usage><m>\Aut(G)</m></usage><description>the automorphism group of a group <m>G</m></description></notation> 
+                </p>
+              </statement>
+            </proposition>
+      
+            <remark>
+              <p>
+                Notice that we have actually shown that the composition of automorphisms is an automorphism, both through <xref ref="cor-composition-of-isos"/> (as automorphisms are isomorphisms) and <xref ref="prop-aut-is-group"/> (as groups are closed under their operation)
+              </p>
+            </remark>
+      
+            <p>
+              We have collected several new methods of determining when two groups are isomorphic. Let's express them explicitly.
+            </p>
+      
+            <proposition xml:id="prop-aut-properties">
+              <title>Isomorphism Consequences</title>
+              <statement>
+                  <p>
+                    Suppose <m>G\cong H</m>. Then
+                    <ol>
+                      <li>
+                        <p>
+                          <m>Z(G)\cong Z(H)</m> and 
+                        </p>
+                      </li>
+          
+                      <li>
+                        <p>
+                          <m>\Aut(G)\cong \Aut(H)</m>.
+                        </p>
+                      </li>
+                    </ol>
+                </p>
+              </statement>
+            </proposition>
+      
+            <proposition xml:id="prop-inverse-map-and-abelian">
+              <statement>
+                <p>
+                  Let <m>G</m> be a group.
+                  <ol>
+                    <li>
+                      <p>
+                        The map <m>\varphi:G\to G</m> given by <m>\varphi(a)=a^{-1}</m> for all <m>a\in G</m> is an automorphism if and only if <m>G</m> is abelian.
+                      </p>
+                    </li>
+      
+                    <li>
+                      <p>
+                        If <m>\Aut(G)=\{e\}</m> then <m>G</m> is abelian and every non-identity element of <m>G</m> has order <m>2</m>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+            </proposition>
+
+            <definition xml:id="def-inner-automorphisms">
+              <statement>
+                <p>
+                  Let <m>G</m> be a group and <m>x\in G</m>. The function <m>\psi_x:G\to G</m> defined by <m>\psi_x(a)=xax^{-1}</m> is called the <em>inner automorphism</em> of <m>G</m> induced by <m>x</m>.
+                  The set of <em>inner automorphisms</em> of <m>G</m> is denoted <m>\Inn(G)=\{\psi_x\mid x\in G\}</m>.
+                </p>
+              </statement>
+            </definition>
+
+            <theorem xml:id="thm-conjugation-automorphism">
+              <title>The Conjugation Automorphism</title>
+              <statement>
+                <p>
+                  Let <m>G</m> be a group and <m>x\in G</m>.
+                  <ol>
+                    <li>
+                      <p>
+                        <m>\psi_x\in \operatorname{Aut}(G)</m> for all <m>x\in G</m>. 
+                      </p>
+                    </li>
+        
+                    <li>
+                      <p>
+                        <m>\Inn(G)\leq\operatorname{Aut}(G)</m>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+            </theorem>
+      
+            <remark>
+              <p>
+                Note that as <m>\psi_x:G\to G</m> is bijective it is, by definition, a permutation of <m>G</m>. This might come up later...
+              </p>
+            </remark>
+
+            <lemma xml:id="lem-aut-cn">
+              <statement>
+                <p>
+                  The automorphism group of <m>C_n</m> is isomorphic to the multiplicative group of units of <m>\mathbb{Z}/n</m> via the map 
+                  <me>
+                    f: (\mathbb{Z}/n^\times, \cdot) \to \operatorname{Aut}(C_n), \quad f([j]_n)=[ y\mapsto y^j].
+                  </me> 
+                  where <m>\mathbb{Z}/n^\times=\{[j]_n\mid \operatorname{gcd}(j,n)=1\}</m>.
+                </p>
+              </statement>
+            </lemma>
+  
+            <lemma xml:id="lem-aut-cp">
+              <statement>
+                <p>
+                  If <m>p</m> is prime the automorphism group of <m>C_p</m> is cyclic, namely <m>\operatorname{Aut}(C_p)\cong C_{p-1}</m>.
+                </p>
+              </statement>
+            </lemma>
+
+          </subsection>
+          
           <exercises>
     
-            <exercisegroup>
-              <title>Deepening Isomorphism Understanding</title>
+            <exercisegroup> <title>Examples and Specifics</title>
+              
     
               <introduction>
                 <p>
                   
                 </p>
               </introduction>
+  
     
-              <exercise>
+              <exercise xml:id="exe-not-isomorphic">
+                <title>Something's Missing</title>
                 <p>
-                  Prove the following:
+                  Justify why the following pairs of groups are <em>not</em> isomorphic.
                   <ol>
                     <li>
                       <p>
-                        The group of integers under addition is isomorphic to the group of even integers under addition 
+                        <m>Q_8</m> and <m>D_8</m>
                       </p>
                     </li>
-    
+
                     <li>
                       <p>
-                        The group of real numbers under addition is isomorphic to the group of non-zero real numbers under multiplication
+                        <m>\mathbb{Z}/(6)</m> and <m>S_3</m>
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        <m>D_{24}</m> and <m>S_4</m>
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        <m>\Q</m> and <m>\Q^\times</m>
                       </p>
                     </li>
                   </ol>
                 </p>
-    
               </exercise>
     
-              <exercise>
+              <exercise xml:id="exe-sn-iso-sm">
+                <title>Isomorphisms of Symmetric Groups</title>
+                
                 <p>
-                  Decide whether the groups <m>Q_8</m> and <m>D_8</m> are isomorphic or not, with justification.
+                  <m>S_n\cong S_m</m> if and only if <m>n=m</m>.
                 </p>
               </exercise>
-    
-              <exercise>
+
+              <exercise xml:id="exe-complex-conjugation-automorphism">
+                <title>Complex Conjugation Automorphism</title>
                 <p>
-                  Prove the following:
-                  <ol>
-                    <li>
-                      <p>
-                        <m>S_n\cong S_m</m> if and only if <m>n=m</m>.
-                      </p>
-                    </li>
-        
-                    <li>
-                      <p>
-                        <m>\mathbb{Z}/(6)\ncong S_3</m>
-                      </p>
-                    </li>
-        
-                    <li>
-                      <p>
-                        <m>D_{24}\ncong S_4</m>
-                      </p>
-                    </li>
-    
-                    <li>
-                      <p>
-                        <m>({\mathbb{R}}, +)\cong ({\mathbb{R}}_{&gt;0}, \cdot)</m>.
-                      </p>
-                    </li>
-                  </ol>
+                  Prove that the function <m>\phi:\C\to\C</m> given by <m>\phi(a+bi)=a-bi</m> is an automorphism.
                 </p>
               </exercise>
     
@@ -2854,16 +3063,24 @@
               </exercise>
               -->
     
-              <exercise>
+              <exercise xml:id="exe-no-group-cancellation-in-products">
                 <p>
                   Find an example of groups <m>G,H</m> such that there is an isomorphism <m>G\times H\cong G</m> but <m>H</m> is not trivial. Note: since <m>G\times H\cong G</m> can be rewritten as <m>G\times H\cong G\times \{e\}</m>, the above shows that in general one cannot cancel groups in isomorphisms between direct products.
                 </p>
               </exercise>
+
+              <exercise>
+                <title>Computing Automorphism Groups</title>
+                <statement>
+                  <p>
+                    Compute <m>\Z/(10)</m>
+                  </p>
+                </statement>
+              </exercise>
     
             </exercisegroup>
     
-            <exercisegroup>
-              <title>Section Results</title>
+            <exercisegroup> <title>Section Results</title>
               
               <introduction>
                 <p>
@@ -2872,6 +3089,7 @@
               </introduction>
     
               <exercise>
+                <title><xref ref="thm-iso-def"/></title>
                 <statement>
                 
                 <p>
@@ -2888,6 +3106,7 @@
               </exercise>
     
               <exercise>
+                <title><xref ref="thm-iso-inv"/></title>
               <statement>
                 <p>
                   Prove <xref ref="thm-iso-inv"/>.
@@ -2902,6 +3121,7 @@
               </exercise>
     
               <exercise>
+                <title><xref ref="cor-composition-of-isos"/></title>
               <statement>
                 <p>
                   Prove <xref ref="cor-composition-of-isos"/>.
@@ -2975,7 +3195,7 @@
               <statement>
                 <p>
                   
-                  Prove <xref ref="prop-conjugation-automorphism"/>.
+                  Prove <xref ref="thm-conjugation-automorphism"/>.
                 </p>
               </statement>
     
@@ -2989,19 +3209,19 @@
     
             </exercisegroup>
     
-            <exercisegroup>
-              <title>Qualifying Exam Problems</title>
-    
+            <exercisegroup> <title>Qualifying Exam Problems</title>
+              
               <introduction>
                 <p>
                   These problems are from old qualifying exams
                 </p>
               </introduction>
     
-              <exercise number="1">
-                <title>June 2020 Problem 2</title>
+              <exercise number="1"> <title>June 2020 (2)</title>
                 
-                
+
+                <statement>
+
                 <p>
                   Let <m>G</m> be a group of order <m>2m</m> for some odd integer <m>m &gt; 1</m>. Let <m>\Perm(G)</m> be the group of permutations on the elements of <m>G</m> (i.e., the group of bijective functions from G to G). You may use without proof that <m>\Perm(G)\cong S_{2m}</m>.
                 </p>
@@ -3016,17 +3236,26 @@
                   </li>
         
                   <li>
-                  Prove <m>G</m> contains a subgroup of index <m>2</m> and is consequently not simple. (Tip: Consider the inverse image under <m>f</m> of the subgroup of <m>\Perm(G)</m> consisting of the even permutations.)
+                  Prove <m>G</m> contains a subgroup of index <m>2</m> and is consequently not simple.
                   </li>
                 </ol></p>
+              </statement>
+
+              <hint>
+                <p>
+                  For part (3), consider the inverse image under <m>f</m> of the subgroup of <m>\Perm(G)</m> consisting of the even permutations.
+                </p>
+              </hint>
               </exercise>
     
-              <exercise>
-                <title>May 2018 Problem 1(b)</title>
+              <exercise> <title>May 2018 1(b)</title>
+                
     
+              <statement>
                 <p>
                   Give an example, with justification, of groups <m>H</m> and <m>K</m> for which <m>\Aut(H)\times\Aut(K)</m> is not isomorphic to <m>\Aut(H \times K)</m>.
                 </p>
+              </statement>
     
               </exercise>
               
@@ -3087,7 +3316,72 @@
                 </ol>
               </p>
             </statement>
+
+            <proof>
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      1. By Lemma <xref ref="lem:&lt;X&gt;" />, the group <m>G</m> has the following elements <m>G=\{x^i \mid i\in \mathbb{Z}\}</m>. We show that
+				            </p>
+
+				          <p>
+                    <ul>
+					            <li>
+									      <p>
+					                <m>|G|\geq n</m> by showing the elements <m>x^0, x^1, \dots, x^{n-1}</m> are distinct. Indeed, if <m>0\leq i&lt;j&lt;n</m> and <m>x^i=x^j</m> then <m>x^{j-i}=e</m> and <m>1\leq j-i&lt;n</m>, contradicting the minimality of the order of <m>x</m>.
+				                </p>
+					            </li>
+
+					            <li>
+                        <p>
+                          <m>|G|\leq n</m> by showing <m>G\subseteq\{x^0, x^1, \dots, x^{n-1}\}</m> (this implies <m>G=\{e,x,\ldots,x^{n-1}\}</m>). Indeed, for any <m>m\in \mathbb{Z}</m> division by <m>n</m> yields integers <m>q,r</m> with <m>0\leq r\leq n-1</m> such that <m>m=nq+r</m>. Then <m>x^m=x^{nq+r}=(x^n)^qx^r=x^r\in\{x^0, x^1, \dots, x^{n-1}\}</m>.
+                        </p>
+                      </li>
+				            </ul>
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    2. <em>Claim 1:</em> For any <m>\{e\}\neq H\leq G</m>, setting <m>k=\min\{i \mid i\in \mathbb{Z}, i&gt;0, g^i\in H\}</m> gives that <m>H=\langle g^k \rangle</m>.
+                  </p>
+          
+                  <p>
+                    Since <m>H\subseteq G=\langle g\rangle</m> any element of <m>H</m> is of the form <m>g^m</m> for some <m>m\in \mathbb{Z}</m>. By the Division Theorem <m>m=kq+r</m> for some <m>r\in \mathbb{Z}</m>, <m>0\leq r&lt;k</m>. Since <m>g^m</m> and <m>g^k</m> are elements of <m>H</m>, <m>g^r=g^m(g^{k})^{-q}\in H</m>. Since <m>r&lt;k</m> and <m>g^r\in H</m>, by the minimality of <m>k</m> it follows that <m>r</m> cannot be positive and thus <m>r=0</m>. Therefore <m>m=kq</m> and we have shown that <m>H\subseteq \langle g^k \rangle</m>. The opposite containment follows because <m>g^k\in H</m> and <m>\langle g^k \rangle</m> is the smallest subgroup of <m>G</m> containing <m>g^k</m>. Thus <m>H=\langle g^k \rangle</m>.
+                  </p>
+          
+                  <p>
+                    Let <m>\Phi:\{\text{subgroups of } G\} \to  \{\text{divisors of } |G|\}</m> be given by <m>\Phi(H)=|H|</m>.
+                  </p>
+          
+                  <p>
+                    <em>Claim 2:</em> For any divisor <m>d</m> of <m>|G|</m>, we have <m>(\Psi\circ\Phi)(d)=d</m>.
+                  </p>
+          
+                  <p>
+                    We have <m>(\Psi\circ\Phi)(d)=\left| \langle g^{\frac{|G|}{d}}\rangle\right|=\left| g^{\frac{|G|}{d}}\right|=\frac{|G|}{\operatorname{gcd}(|G|/d,|G|)}=\frac{|G|}{|G|/d}=d.</m>
+                  </p>
+          
+                  <p>
+                    <em>Claim 3:</em> For any subgroup <m>H</m> of <m>G</m>, we have <m>(\Phi\circ\Psi)(H)=H</m>.
+                  </p>
+          
+                  <p>
+                    By Claim 1, any <m>H\leq G</m> is either <m>H=\{e\}</m>, for which <m>(\Phi\circ\Psi)(\{e\})=\Phi(1)=\langle g^{|G|} \rangle=\{e\}</m> or is of the form <m>H=\langle g^k \rangle</m>. In the latter case, setting <m>|G|=n</m> we have <m>|H|=|g^k|=\frac{n}{\operatorname{gcd}(n,k)}</m> and <m>(\Phi\circ\Psi)(H)=\langle g^{\frac{n}{n/\operatorname{gcd}(n,k)}} \rangle=\langle g^{\operatorname{gcd}(n,k)}\rangle.</m> It remains to show that <m>\langle g^{\operatorname{gcd}(n,k)}\rangle=\langle g^k\rangle=H</m>. By Bézout’s Identity, <m>\operatorname{gcd}(n,k)=an+bk</m> for some integers <m>a,b</m>. Since <m>g^{\operatorname{gcd}(n,k)}=(g^n)^a(g^k)^b=e^a(g^k)^b=(g^k)^b\in \langle g^k \rangle</m> if follows that <m>\langle g^{\operatorname{gcd}(n,k)}\rangle \subseteq \langle g^k \rangle</m>. On the other hand <m>k</m> is a multiple of <m>\operatorname{gcd}(n,k)</m> so <m>g^k\in \langle g^{\operatorname{gcd}(n,k)}\rangle</m> and thus <m>\langle g^k \rangle \subseteq \langle g^{\operatorname{gcd}(n,k)}\rangle</m>. Finally, we conclude that <m>(\Phi\circ\Psi)(\langle g^k \rangle)=\langle g^{\operatorname{gcd}(n,k)}\rangle=\langle g^k \rangle</m> for any <m>k\in \mathbb{Z},k&gt;0</m>.
+                  </p>
+          
+                  <p>
+                    Claims 2 and 3 establish that <m>\Phi</m> is a two sided inverse to <m>\Phi</m>, thus <m>\Phi</m> is a bijection.
+                    
+                  </p>
+                </li>
+              
+                 </ol>
+              </p>
+            </proof>
           </theorem>
+
     
           <proposition xml:id="prop-ump-cyclic">
             <title>Universal Mapping Property (UMP) for Cyclic Groups</title>
@@ -3097,6 +3391,56 @@
                 Assume <m>G = \langle x \rangle</m> and let <m>H</m> be any group. If <m>|x| = n &lt; \infty</m>, then for each <m>y \in H</m> such that <m>y^n = e</m>, there is a unique group homomorphism <me>f: G \to H</me> such that <m>f(x) = y</m>. If <m>|x| = \infty</m>, then for each <m>y \in H</m>, there is a unique group homomorphism <me>f: G \to H</me> such that <m>f(x) = y</m>. In both cases this unique group homomorphism is given by <m>f(x^i)=y^i</m> for any <m>i</m>.
               </p>
             </statement>
+
+            <proof>
+              <p>
+                Recall that either <m>G = \{e,x,x^2, \dots, x^{n-1}\}</m> (with no repetitions) if <m>|x| = n</m> or <m>G = \{ \cdots, x^{-2}, x^{-1}, e, x, x^e, \dots \}</m> (with no repetitions) if <m>|x| = \infty</m>.
+              </p>
+
+              <p>
+                <em>Uniqueness:</em> We show that if <m>f:G\to H</m> is a group homomorphism, then <m>f(x^i)=y^i</m> for all <m>i\in \mathbb{Z}</m>.
+              </p>
+      
+              <p>
+                <ul>
+                  <li>
+                    <p>
+                      if <m>i=0</m> then <m>f(x^0)=f(e_G)=e_H=y^0</m>
+                    </p>
+                  </li>
+      
+                  <li>
+                    <p>
+                      if <m>i&gt;0</m> then <m>f(x^i)=f(\underbrace{x\cdots x}_{i \text{ times}})=\underbrace{f(x)\cdots f(x)}_{i \text{ times}})=y^i</m>
+                    </p>
+                  </li>
+      
+                  <li>
+                    <p>
+                      if <m>i&lt;0</m> then <m>f(x^i)=f\left((x^{-i})^{-1}\right)=f\left((x^{-i})\right)^{-1}=(y^{-i})^{-1}=y^i</m>, using the formula above for <m>-i&gt;0</m>
+                    </p>
+                  </li>
+                </ul>
+              </p>
+      
+              <p>
+                <em>Existence:</em> In either case, define <m>f(x^i) = y^i</m> for all relevant <m>i</m> (i.e., in the first case, for <m>0 \leq i \leq n-1</m> and in the second for all <m>i \in\mathbb{Z}</m>). We need to show this function is a well-defined group homomorphism. To see that <m>f</m> is well defined, suppose <m>x^i=x^j</m> for some <m>i,j\in \mathbb{Z}</m>. Then, since <m>x^{i-j}=e_G</m>, suing Lemma <xref ref="prop96" /> or the definition for order we have <me>\begin{cases}
+                n\mid i-j &amp; \text{ if } |x|=n\\
+                i-j=0 &amp; \text{ if } |x|=\infty\\
+                \end{cases}
+                \Rightarrow
+                \begin{cases}
+                y^ {i-j}=y^{nk} &amp; \text{ if } |x|=n\\
+                y^{i-j}=y^0 &amp; \text{ if } |x|=\infty\\
+                \end{cases}
+                \Rightarrow y^ {i-j}=e_H
+                \Rightarrow y^ i=y^j.</me> Thus, if <m>x^i=x^j</m> then <m>f(x^i)=y^i=y^j=f(x^j)</m>.
+              </p>
+      
+              <p>
+                The homomorphism property is immediate: <m>f^(x^ix^j)=f(x^{i+j})=y^{i+j}=y^iy^j=f(x^i)f(x^j)</m>. ◻
+              </p>
+            </proof>
           </proposition>
     
           <remark>
@@ -3113,6 +3457,12 @@
                 Every infinite cyclic group is isomorphic to <m>C_\infty</m>. Every cyclic group of order <m>n</m> is isomorphic to <m>C_n</m>.
               </p>
             </statement>
+
+            <proof>
+              <p>
+                Suppose <m>G = \langle x \rangle</m> with <m>|x| = n</m> or <m>|x| = \infty</m> and set <m>H=C_n</m> in the first case and <m>H=C_\infty</m> in the second case. Then by <xref ref="prop-ump-cyclic" />, there are homomorphisms <m>f: G \to H</m> and <m>g: G \to H</m> such that <m>f(x) = a</m> and <m>g(a) =x</m>. So <m>g \circ f</m> is an endomorphisms of <m>G</m> mapping <m>x</m> to <m>x</m>. But the identity map also has this property, and so the uniqueness clause gives <m>g \circ f = \text{id}_G</m>. Similarly, <m>f \circ g = \text{id}_H</m>.
+              </p>
+            </proof>
           </theorem>
     
           <exercises>
@@ -3186,6 +3536,13 @@
             </p>
             <attribution>Joseph-Louis Lagrange</attribution>
           </blockquote>
+
+          <blockquote>
+            <p>
+              <q>Lagrange is the Lofty Pyramid of the Mathematical Sciences.</q>
+            </p>
+            <attribution>Napoleon Bonaparte</attribution>
+          </blockquote>
           
           <definition xml:id="def-coset">
             <title>Coset</title>
@@ -3205,6 +3562,33 @@
               Though mostly a matter of preference as aesthetics, we will focus primarily on left cosets.
             </p>
           </remark>
+
+          <proposition xml:id="prop-coset-properties">
+            <statement>
+              <p>
+                Let <m>H\leq G</m> and <m>x,y\in G</m>
+                <ol>
+                  <li>
+                    <p>
+                      <m>x\in xH</m>
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>xH=H</m> if and only if <m>x\in H</m>
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>(xy)H=x(yH)</m>
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+          </proposition>
     
           <lemma xml:id="lem-cosetfacts">
             <title>Coset Equivalencies</title>
@@ -3347,10 +3731,12 @@
     
           <theorem xml:id="thm-lagrange">
             <title>Lagrange's Theorem</title>
+            <creator><m>1770</m></creator>
             
             <statement>
               <p>
                 If <m>H</m> is a subgroup of a finite group <m>G</m>, then <m>|H|</m> divides <m>|G|</m>.
+                <fn>Lagrange stated his version of this theorem in 1770, but the first complete proof was given by Pietro Abbati roughly 30 years later.</fn>
               </p>
             </statement>
           </theorem>
@@ -3394,6 +3780,15 @@
             <statement>
               <p>
                 Let <m>G</m> be a group (possibly infinite) and <m>H \leq K</m> subgroups of <m>G</m>. Suppose <m>[G : H]</m> is finite. Prove that <m>[G : H] = [G : K][K : H].</m> (Hint: First prove this in the case <m>G</m> is a finite group. Then prove you can reduce to the finite case.)
+              </p>
+            </statement>
+          </theorem>
+
+          <theorem xml:id="thm-hk-order">
+            <title>Order of <m>HK</m></title>
+            <statement>
+              <p>
+                For two finite subgroups <m>H,K\leq G</m>, <m>|HK|=\frac{|H|\cdot|K|}{|H\cap K|}</m>
               </p>
             </statement>
           </theorem>
@@ -3510,6 +3905,13 @@
               Prove the converse to Lagrange's theorem is false: find a group <m>G</m> and an integer <m>d&gt;0</m> such that <m>d</m> divides the order of <m>G</m> but <m>G</m> does not have any subgroups of order <m>d</m>. <em>Hint</em>: Take <m>G=A_5</m>.
             </p>
           </exercise>
+
+          <exercise>
+            <title>Fermat's Little Theorem</title>
+            <p>
+              For every integer <m>a</m> and every prime <m>p</m>, <m>a^p\mod p=a\mod p</m>.
+            </p>
+          </exercise>
     
         </exercises>
     
@@ -3526,7 +3928,6 @@
             <attribution>Maya Angelou</attribution>
           </blockquote>
     
-    
           <definition xml:id="def-normal-subgroup">
             <title>Normal Subgroup</title>
             <statement>
@@ -3536,12 +3937,9 @@
             </statement>
           </definition>
     
-          <p>
-            Intuitively, a normal subgroup of a group is a subgroup that is invariant under conjugation by any element of the larger group. That is, if <m>N</m> is a normal subgroup of <m>G</m>, then for any element <m>g</m> in <m>G</m>, the conjugate of <m>N</m> by <m>g</m>, denoted by <m>gNg\inv</m>, is also a subgroup of <m>G</m> that is equal to <m>N</m>.
-            Normal subgroups are important in group theory because they play a crucial role in the definition and study of quotient groups, which we will explore in <xref ref="sec-quotient-groups"/>
-          </p>
+          <p>Intuitively, a normal subgroup of a group is a subgroup that is invariant under conjugation by any element of the larger group. That is, if <m>N</m> is a normal subgroup of <m>G</m>, then for any element <m>g</m> in <m>G</m>, the conjugate of <m>N</m> by <m>g</m>, denoted by <m>gNg\inv</m>, is also a subgroup of <m>G</m> that is equal to <m>N</m>. Normal subgroups are important in group theory because they play a crucial role in the definition and study of quotient groups, which we will explore in <xref ref="sec-quotient-groups"/></p>
     
-          <proposition xml:id="prop-equivdef-normal">
+          <theorem xml:id="thm-equivdef-normal">
             <title>Equivalent Normal Definitions</title>
             
           
@@ -3569,9 +3967,9 @@
                 </ol>
               </p>
             </statement>
-          </proposition>
+          </theorem>
     
-          <example>
+          <example xml:id="ex-normal-examples">
             <title>Examples of Normal Subgroups</title>
             
             <p>
@@ -3591,6 +3989,40 @@
                 <li>
                   <p>
                     For any group <m>G</m>, <m>Z(G)\nsg G</m>. 
+                  </p>
+                </li>
+                
+                <li>
+                  <p>
+                    <m>\operatorname{Inn}(G)\nsg \operatorname{Aut}(G)</m>.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>A_n\nsg S_n</m>. 
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>\SL_2(\R)\nsg\GL_2(\R)</m>. 
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Recall the commutator subgroup <m>H</m> from <xref ref="ex-commutator-subgroup"/>. We see <m>H\nsg G</m>.                  
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    The set 
+                    <me>
+                      V=\{e, (1 2)(3 4), (1 3)(2 4), (1 4)(2 3)\}
+                    </me> 
+                    is normal in t <m>S_4</m>.
                   </p>
                 </li>
               </ol>
@@ -3618,193 +4050,115 @@
             </statement>
           </proposition>
     
+          <proposition xml:id="prop-unique-order-subgroup-normal">
+            <title>Unique Order Subgroup is Normal</title>
+              <statement>
+                <p>
+                  Let <m>H\leq G</m> be the only subgroup of order <m>n</m>. Prove that <m>H</m> is normal.
+                </p>
+            </statement>
+          </proposition>
     
-          <problem>
-            <p>
-              Let <m>H</m> be a subgroup and <m>x\in G</m>.
-              <ol>
-                <li>
-                  <p>
-                    Prove that <m>xHx^{-1}</m> is a subgroup of <m>G</m>. 
-                  </p>
-                </li>
-    
-                <li>
-                  <p>
-                    Prove that <m>H\cong xHx^{-1}</m> 
-                  </p>
-                </li>
-    
-                <li>
-                  <p>
-                    Suppose <m>|H|=n</m> and <m>H</m> is the only subgroup of <m>G</m> of order <m>n</m>. Prove that <m>H</m> is normal.
-                  </p>
-                </li>
-              </ol>
-            </p>
-          </problem>
-    
-          <problem>
-            <p>
-              Let <m>H</m> and <m>K</m> be normal subgroups of a group <m>G</m> such that <m>H\cap K=\{1\}</m>. Prove that <m>xy=yx</m> for all <m>x\in H, y\in K</m>.
-            </p>
-          </problem>
-    
-          <problem>
-            <p>
-              Let <m>G</m> be a group and <m>S</m> a subset of <m>G</m>. Let <m>H=\langle S \rangle</m>. Prove that <m>H\nsg G</m> if and only if <m>gsg^{-1}\in H</m> for every <m>s\in S</m> and <m>g\in G</m>.
-            </p>
-          </problem>
-    
-          <problem>
-            <p>
-              Let <m>G</m> be a group and let <m>A \subseteq G</m> be a set. The <em>normal subgroup generated by <m>A</m></em>, denoted <m>\langle A \rangle ^N</m>, is the intersection of all the normal subgroups of <m>G</m> that contain <m>A</m>. 
-              <ol>
-                <li>
-                  <p>
-                    Show that <m>\langle A \rangle ^N</m> is a normal subgroup of <m>G</m>. 
-                  </p>
-                </li>
-    
-                <li>
-                  <p>
-                    Show that the elements of <m>\langle A \rangle ^N</m> can be described as 
-                    <me>
-                      \langle A \rangle ^N= \{ g_1a_1^{i_1}g_1^{-1} \dots g_ma_m^{i_m}g_m^{-1} \mid m \geq 0, a_j \in A, g_j \in G, i_j \in \{1,-1\}, \forall 1\leq j\leq m\}.
-                    </me> 
-                  </p>
-                </li>
-              </ol>
-            </p>
-          </problem>
-          
-          <problem>
-            <p>
-              Let <m>G</m> be a group, <m>S=\{aba^{-1}b^{-1}\mid a,b\in G\}</m>, and <m>H=\langle S \rangle</m>. Prove that <m>H\nsg G</m>.
-            </p>
-          </problem>
-    
-          <problem>
-            <p>
-              Let <m>G</m> be a group with subgroups <m>H, K</m>. Recall the notation <me>HK=\{hk \mid h\in H, k\in K\}.</me> 
-              <ol>
-                <li>
-                  <p>
-                    Prove that <m>HK\leq G</m> if and only if <m>HK=KH</m>. 
-                  </p>
-                </li>
-    
-                <li>
-                  <p>
-                    Prove that if either one of <m>H</m> or <m>K</m> is a normal subgroup of <m>G</m>, then <m>HK\leq G</m> and <m>HK=KH=\langle H\cup K\rangle</m>.
-                  </p>
-                </li>
-              </ol>
-            </p>
-          </problem>
-    
-          <problem>
-            <p>
-              In <m>D_{2n}</m>, let <m>H=\langle s\rangle</m> and <m>K=\langle r\rangle</m>. Then <m>HK=KH=D_{2n}</m> but of course <m>r</m> and <m>s</m> do not commute. The fact that <m>HK=KH</m> can also be justified by observing that <m>K\nsg D_{2n}</m>.
-            </p>
-          </problem>
-    
-          <problem>
-            <p>
-              Let <m>G</m> be a group and <m>\operatorname{Aut}(G)</m> be its automorphism group. In Problem 7 on HW # 2, you proved that for each <m>g\in G</m>, the function <m>\psi_g:G\to G</m> defined by <m>\psi_g(x)=gxg^{-1}</m> for all <m>x\in G</m> is an automorphism of <m>G</m>. Further, you proved the set <m>\operatorname{Inn}(G):=\{\psi_g \mid g\in G\}</m>, called the set of <em>inner automorphisms</em> of <m>G</m>, is a subgroup of <m>\operatorname{Aut}(G)</m>. Prove that <m>\operatorname{Inn}(G)\triangleleft \operatorname{Aut}(G)</m>.
-            </p>
-          </problem>
-    
-          <problem>
-            <p>
-              Let <m>G</m> be a finite group. Prove that the number of elements in the set <m>S=\{g\in G\mid g\neq g^{-1}\}</m> is even. Conclude that a group of even order must have an element of order <m>2</m>.
-            </p>
-          </problem>
-    
-          <problem>
-            <p>
-              Let <m>G</m> be a finite group, <m>H</m> and <m>N</m> subgroups such that <m>|H|</m> and <m>[G : N]</m> = are relatively prime and <m>N\nsg G</m> . Prove that <m>H \subseteq N</m>.
-            </p>
-          </problem>
-    
-        
-          <exercise>
+          <theorem xml:id="hk-normal">
             <statement>
               <p>
-                Let <m>G</m> be a group, and <m>H, K \leq G</m> be subgroups of <m>G</m>. 
-              <ol>
-                <li>
-                  <p>
-                    Give an example of <m>G, H,</m> and <m>K</m> such that <m>HK</m> is not a subgroup of <m>G</m>. 
-                  </p>
-                </li>
-    
-                <li>
-                  <p>
-                    Suppose now that <m>H\nsg G</m> and <m>[G : H] = p</m>, where <m>p</m> is prime. Prove that either <m>K \leq H</m> or <m>G = KH</m>.
-                  </p>
-                </li>
-              </ol>
-              </p>
-            </statement>
-    
-            <solution>
-              <p>
+                Let <m>G</m> be a group with subgroups <m>H, K</m>. Recall the notation <me>HK=\{hk \mid h\in H, k\in K\}.</me> 
                 <ol>
-                <li>
-                  <p>
-                    Let <m>G=S_3</m>, <m>H=\langle(12)\rangle</m>, and <m>K=\langle(13)\rangle</m>. Notice that <m>H\cap K=\{e\}</m>, and thus <m>|HK|=4</m>, (<xref provisional="empty"/>) which does not divide <m>6</m>. Thus <m>HK</m> is not a subgroup of <m>G</m>, as this would contradict <xref text="title" ref="thm-lagrange" />.
-                  </p>
-                </li>
-    
-                <li>
-                  <p>
-                    Suppose there exists some <m>k\in K</m> such that <m>k\not\in H</m>. We examine <m>kH\in G/H</m>. Notice that since <m>G/H</m> has prime order it is cyclic, and thus generated by any non-identity element, such as <m>kH</m>. Thus any element in <m>G/H</m> can be written in the form <m>k^iH</m>, and any element in <m>G</m> can subsequently be written as <m>k^ih</m> for some <m>h\in H</m>. Thus <m>G=KH</m>.
-                  </p>
-                </li>
-              </ol>
-            </p>
-          </solution>
-    
-        </exercise>
-    
-          <exercise>
-            <statement>
-              <p>
-                Let <m>G</m> be a finite group and <m>K</m> a subgroup of <m>G</m> such that: <m>[G : K] = 2</m>, <m>K</m> is simple, and <m>Z(G) = \{e\}</m>. Prove that the only normal subgroups of <m>G</m> are <m>\{e\}, K</m>, and <m>G</m>.
+                  <li>
+                    <p>
+                      Prove that <m>HK\leq G</m> if and only if <m>HK=KH</m>. 
+                    </p>
+                  </li>
+      
+                  <li>
+                    <p>
+                      Prove that if either one of <m>H</m> or <m>K</m> is a normal subgroup of <m>G</m>, then <m>HK\leq G</m> and <m>HK=KH=\langle H\cup K\rangle</m>.
+                    </p>
+                  </li>
+                </ol>
               </p>
             </statement>
-            
-            <hint>
+          </theorem>
+    
+          <example>
+            <statement>
               <p>
-                Let <m>H</m> be a normal subgroup of <m>G</m>. Then <m>H\cap K</m> is a normal subgroup of <m>K</m>.
+                In <m>D_{2n}</m>, let <m>H=\langle s\rangle</m> and <m>K=\langle r\rangle</m>. Then <m>HK=KH=D_{2n}</m> but <m>r</m> and <m>s</m> do not commute. The fact that <m>HK=KH</m> can also be justified by observing that <m>K\nsg D_{2n}</m>.
               </p>
-            </hint>
-          </exercise>
+            </statement>
+          </example>
     
           <exercises>
     
-            <exercisegroup>
-              <title>Computations and Examples</title>
+            <exercisegroup>  <title>Computations and Examples</title>
+             
               <introduction>
                 <p>
                 </p>
               </introduction>
           
-              <exercise>
+              <exercise xml:id="exe-normal-verification">
+                <title>Normal Subgroup Verification</title>
                 <p>
-                  Coming soon to an OER near you!
+                 Prove that each of the groups given in <xref ref="ex-normal-examples"/> are indeed normal subgroups.
                 </p>
+              </exercise>
+
+              <exercise xml:id="exe-normality-not-transitive">
+                <title>Normality is not Transitive</title>
+                <statement>
+                  <p>
+                    Show that being a normal subgroup is not a transitive relation. In other words, find groups <m>K\leq H\leq G</m> such that <m>K\nsg H</m> and <m>H\nsg G</m>, but <m>K\not\nsg G</m>.
+                  </p>
+                </statement>
+        
+                <hint>
+                  <p>
+                    <m>S_4</m> is a good place to start routing around in.
+                  </p>
+                </hint>
+        
+                <solution>
+                  <p>
+                    Consider 
+                    <me>
+                      V=\{e, (1 2)(3 4), (1 3)(2 4), (1 4)(2 3)\}.
+                    </me> 
+                    From <xref ref="exe-normal-verification"/> we have <m>V \nsg S_4</m>. The group <m>V</m> has order <m>4</m>, making it ableian from <xref ref="prop-order-4-abelian"/>. Thus every subgroup of <m>V</m> is normal in <m>V</m> by <xref ref="exe-normal-verification"/>.
+                  </p>
+                    
+                  <p>
+                    Now consider the subgroup <m>H = \{e,(12)(34)\}</m>. But <m>H</m> is not normal in <m>S_4</m>, since for example
+                  <me>
+                    (1 3) [(1 2)(3 4)] (1 3)^{-1} = (3 2)(1 4) \not\in H.
+                  </me> 
+                  </p>
+                </solution>
+                
               </exercise>
           
             </exercisegroup>
           
-            <exercisegroup>
-              <title>Formal Proofs</title>
+            <exercisegroup> <title>Formal Proofs</title>
+              
               <introduction>
                 <p>
                 </p>
               </introduction>
+
+              <exercise>
+                <statement>
+                <p>
+                  Let <m>H</m> and <m>K</m> be normal subgroups of a group <m>G</m> such that <m>H\cap K=\{1\}</m>. Prove that <m>xy=yx</m> for all <m>x\in H, y\in K</m>.
+                </p>
+              </statement>
+              </exercise>
+
+              <exercise>
+                <p>
+                  Let <m>G</m> be a group and <m>S</m> a subset of <m>G</m>. Let <m>H=\langle S \rangle</m>. Prove that <m>H\nsg G</m> if and only if <m>gsg^{-1}\in H</m> for every <m>s\in S</m> and <m>g\in G</m>.
+                </p>
+              </exercise>
           
               <exercise>
                 <statement>
@@ -3825,9 +4179,101 @@
                   </p>
                 </solution>
               </exercise>
-    
+
               <exercise>
-                <title>June 2012 (2)</title>
+                <statement>
+                  <p>
+                    Let <m>G</m> be a finite group, <m>H</m> and <m>N</m> subgroups such that <m>|H|</m> and <m>[G : N]</m> = are relatively prime and <m>N\nsg G</m>. Prove that <m>H \subseteq N</m>.
+                  </p>
+                </statement>
+              </exercise>
+          
+              <exercise>
+                <statement>
+                  <p>
+                    Let <m>G</m> be a group, and <m>H, K \leq G</m> be subgroups of <m>G</m>. 
+                  <ol>
+                    <li>
+                      <p>
+                        Give an example of <m>G, H,</m> and <m>K</m> such that <m>HK</m> is not a subgroup of <m>G</m>. 
+                      </p>
+                    </li>
+        
+                    <li>
+                      <p>
+                        Suppose now that <m>H\nsg G</m> and <m>[G : H] = p</m>, where <m>p</m> is prime. Prove that either <m>K \leq H</m> or <m>G = KH</m>.
+                      </p>
+                    </li>
+                  </ol>
+                  </p>
+                </statement>
+        
+                <solution>
+                  <p>
+                    <ol>
+                    <li>
+                      <p>
+                        Let <m>G=S_3</m>, <m>H=\langle(12)\rangle</m>, and <m>K=\langle(13)\rangle</m>. Notice that <m>H\cap K=\{e\}</m>, and thus <m>|HK|=4</m>, (<xref provisional="empty"/>) which does not divide <m>6</m>. Thus <m>HK</m> is not a subgroup of <m>G</m>, as this would contradict <xref text="title" ref="thm-lagrange" />.
+                      </p>
+                    </li>
+        
+                    <li>
+                      <p>
+                        Suppose there exists some <m>k\in K</m> such that <m>k\not\in H</m>. We examine <m>kH\in G/H</m>. Notice that since <m>G/H</m> has prime order it is cyclic, and thus generated by any non-identity element, such as <m>kH</m>. Thus any element in <m>G/H</m> can be written in the form <m>k^iH</m>, and any element in <m>G</m> can subsequently be written as <m>k^ih</m> for some <m>h\in H</m>. Thus <m>G=KH</m>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </solution>
+        
+              </exercise>
+        
+              <exercise>
+                <statement>
+                  <p>
+                    Let <m>G</m> be a finite group and <m>K</m> a subgroup of <m>G</m> such that: <m>[G : K] = 2</m>, <m>K</m> is simple, and <m>Z(G) = \{e\}</m>. Prove that the only normal subgroups of <m>G</m> are <m>\{e\}, K</m>, and <m>G</m>.
+                  </p>
+                </statement>
+                
+                <hint>
+                  <p>
+                    Let <m>H</m> be a normal subgroup of <m>G</m>. Then <m>H\cap K</m> is a normal subgroup of <m>K</m>.
+                  </p>
+                </hint>
+              </exercise>
+
+              <exercise>
+                <p>
+                  Let <m>G</m> be a group and let <m>A \subseteq G</m> be a set. The <em>normal subgroup generated by <m>A</m></em>, denoted <m>\langle A \rangle ^N</m>, is the intersection of all the normal subgroups of <m>G</m> that contain <m>A</m>. 
+                  <ol>
+                    <li>
+                      <p>
+                        Show that <m>\langle A \rangle ^N</m> is a normal subgroup of <m>G</m>. 
+                      </p>
+                    </li>
+        
+                    <li>
+                      <p>
+                        Show that the elements of <m>\langle A \rangle ^N</m> can be described as 
+                        <me>
+                          \langle A \rangle ^N= \{ g_1a_1^{i_1}g_1^{-1} \dots g_ma_m^{i_m}g_m^{-1} \mid m \geq 0, a_j \in A, g_j \in G, i_j \in \{1,-1\}, \forall 1\leq j\leq m\}.
+                        </me> 
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </exercise>
+              
+            </exercisegroup>
+          
+            <exercisegroup>  <title>Qualifying Exam Problems</title>
+             
+              <introduction>
+                <p>
+                </p>
+              </introduction>
+
+              <exercise> <title>June 2012 (2)</title>
                 <statement>
                   <p>
                     Let <m>G</m> be a group with a subgroup <m>H</m> so that <m>[G : H] = n &lt; \infty</m>. 
@@ -3859,45 +4305,8 @@
                   </p>
                 </solution>
               </exercise>
-    
-              <exercise>
-                <statement>
-                  <p>
-                    Show that being a normal subgroup is not a transitive relation. In other words, find groups <m>K\leq H\leq G</m> such that <m>K\nsg H</m> and <m>H\nsg G</m>, but <m>K\not\nsg G</m>.
-                  </p>
-                </statement>
-        
-                <hint>
-                  <p>
-                    <m>S_4</m> is a good place to start routing around in.
-                  </p>
-                </hint>
-        
-                <solution>
-                  <p>
-                    Consider <me>V=\{e, (1 2)(3 4), (1 3)(2 4), (1 4)(2 3)\}</me> one can show that <m>V \nsg S_4</m> and, since <m>V</m> is abelian (<xref ref="prop-order-4-abelian"/>), the subgroup <m>H = \{e,(12)(34)\}</m> is normal in <m>V</m>. But <m>H</m> is not normal in <m>S_4</m>, since for example
-                  <me>
-                    (1 3) [(1 2)(3 4)] (1 3)^{-1} = (3 2)(1 4) \not\in H.
-                  </me> 
-                  </p>
-                </solution>
-                
-              </exercise>
-              
-    
           
-            </exercisegroup>
-          
-            <exercisegroup>
-              <title>Qualifying Exam Problems</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title>January 2019 Problem (1)</title>
-                
+              <exercise> <title>January 2019 (1)</title>
                 
               <statement>
                 <p>
@@ -3921,10 +4330,7 @@
     
               </exercise>
     
-              <exercise>
-                <title>May 2019 Problem (2a)</title>
-                
-                
+              <exercise> <title>May 2019 (2a)</title>
                 <statement>
     
                   <p>
@@ -3935,9 +4341,8 @@
                 </statement>
               </exercise>
     
-              <exercise>
-                <title>May 2021 Problem (1ab)</title>
-        
+              <exercise> <title>May 2021 (1ab)</title>
+                
                 <statement>
                   <p>
                     Let <m>G</m> be a group (not necessarily finite) and <m>H</m> a nonempty subset of <m>G</m> that is closed under multiplication. Suppose that for all <m>g\in G</m> we have <m>g^2\in H</m>. Prove the following:
@@ -3978,9 +4383,8 @@
                 
               </exercise>
     
-              <exercise>
-                <title>Jan 2022 Problem (1)</title>
-        
+              <exercise> <title>Jan 2022 (1)</title>
+
                 <statement>
                   <p>
                     Let <m>G</m> be a group, and <m>H, K \leq G</m> be subgroups of <m>G</m>.                
@@ -4021,8 +4425,8 @@
                 
               </exercise>
     
-              <exercise>
-                <title>Jan 2022 Problem (3b)</title>
+              <exercise> <title>Jan 2022 (3b)</title>
+                
         
                 <statement>
                   <p>
@@ -4051,36 +4455,28 @@
                 
               </exercise>
     
-              
-    
             </exercisegroup>
           </exercises>
     
-          
-    
-          
-    
-          
         </section>
     
         <section xml:id="sec-quotient-groups">
           <title>Quotient Groups</title>
     
-          <p>
-            Recall from your undergraduate algebra course the construction for the integers modulo <m>n</m>: one starts with an equivalence relation <m>\sim</m> on <m>\mathbb{Z}</m>, considers the set <m>\mathbb{Z}/n</m> of all equivalence classes with respect to this equivalence relation, and verifies that the operations on <m>\mathbb{Z}</m> give rise to well defined binary operations on the set of equivalence classes.
-          </p>
+          <p>Recall from your undergraduate algebra course the construction for the integers modulo <m>n</m>: one starts with an equivalence relation <m>\sim</m> on <m>\mathbb{Z}</m>, considers the set <m>\mathbb{Z}/n</m> of all equivalence classes with respect to this equivalence relation, and verifies that the operations on <m>\mathbb{Z}</m> give rise to well defined binary operations on the set of equivalence classes.</p>
     
           <definition xml:id="def-quotient-group">
             <title>Quotient Group</title>
             <statement>
               <p>
-                For any normal subgroup <m>N</m> of a group <m>G</m>, the <em>quotient group</em> <m>G/N</m> is <m>G/\sim_N</m>, where <m>\sim_N</m> is the equivalence relation induced by the left action of <m>N</m> on <m>G</m>. In other words, <m>G/N</m> is the set of right cosets of <m>N</m> in <m>G</m> with multiplication given by <m>Nx\cdot Ny=N(xy)</m>. By part 4. of Proposition <xref ref="prop-equivdef-normal" />, <m>G/N</m> is also the set of left cosets of <m>N</m> in <m>G</m> with multiplication given by <m>xN\cdot yN=(xy)N</m>.
+                For any normal subgroup <m>N</m> of a group <m>G</m>, the <em>quotient group</em> <m>G/N</m> is <m>G/\sim_N</m>, where <m>\sim_N</m> is the equivalence relation induced by the left action of <m>N</m> on <m>G</m>. In other words, <m>G/N</m> is the set of right cosets of <m>N</m> in <m>G</m> with multiplication given by <m>Nx\cdot Ny=N(xy)</m>. By part 4. of Proposition <xref ref="thm-equivdef-normal" />, <m>G/N</m> is also the set of left cosets of <m>N</m> in <m>G</m> with multiplication given by <m>xN\cdot yN=(xy)N</m>.
               </p>
             </statement>
           </definition>
     
           <theorem xml:id="thm-quotient-iff-normal">
             <title>Quotients and Normal Subgroups</title>
+            <creator>1889</creator>
             <statement>
               <p>
                 Let <m>N\leq G</m>. Then <m>G/N</m> is a group if and only if <m>N\nsg G</m>.
@@ -4107,7 +4503,7 @@
             </statement>
           </corollary>
     
-          <example>
+          <example xml:id="ex-infinite-dihedral-group">
             <title>The Infinite Dihedral Group</title>
             <p>
               The <em>infinite dihedral group</em> <m>D_\infty</m> is the set <m>D_\infty = \{r^i,r^is \mid i \in \mathbb{Z}\}</m> with multiplication defined by <m>(r^i)(r^j) = r^{i+j}, (r^i)(r^js) = r^{i+j}s, (r^is)(r^j) = r^{i-j}s</m>, and <m>(r^is)(r^js) = r^{i-j}</m>. In other words, <m>D_\infty</m> is the group having presentation <me>D_\infty=\langle r,s \mid s^2=e, srs=r^{-1}\rangle.</me> Then <m>\langle r^n \rangle \mathrel{\unlhd}D_\infty</m> and <m>D_\infty/ \langle r^n \rangle \cong D_{2n}</m> via <m>r\langle r^n \rangle\mapsto r</m> and <m>s\langle r^n \rangle\mapsto s</m>.
@@ -4158,18 +4554,25 @@
               </p>
             </proof>
           </theorem>
-    
+
+          <theorem xml:id="thm-gz-cyclic">
+            <statement>
+              <p>
+                Let <m>G</m> be a group with center <m>Z(G)</m>. If <m>G/Z(G)</m> is cyclic, then <m>G</m> is abelian.
+              </p>
+            </statement>
+          </theorem>
+          
           <remark>
             <p>
               Remark on how important this theorem is.
             </p>
           </remark>
     
-    
           <exercises>
     
-            <exercisegroup>
-              <title>Computations and Examples</title>
+            <exercisegroup> <title>Computations and Examples</title>
+              
               <introduction>
                 <p>
                 </p>
@@ -4183,8 +4586,8 @@
           
             </exercisegroup>
           
-            <exercisegroup>
-              <title>Formal Proofs</title>
+            <exercisegroup>  <title>Formal Proofs</title>
+             
               <introduction>
                 <p>
                 </p>
@@ -4192,22 +4595,20 @@
           
               <exercise>
                 <p>
-                  Coming soon to an OER near you!
+                  For any group <m>G</m> we have <m>G/Z(G)\cong\Inn(G)</m>.
                 </p>
               </exercise>
           
             </exercisegroup>
           
-            <exercisegroup>
-              <title>Qualifying Exam Problems</title>
+            <exercisegroup> <title>Qualifying Exam Problems</title>
+              
               <introduction>
                 <p>
                 </p>
               </introduction>
           
-              <exercise>
-                <title>May 2021 Problem (1)</title>
-                
+              <exercise> <title>May 2021 (1)</title>
                 
                 <statement>
                   <p>
@@ -4253,9 +4654,8 @@
                 </solution>
               </exercise>
     
-              <exercise>
-                <title>May 2019 Problem 2</title>
-    
+              <exercise> <title>May 2019 (2)</title>
+                   
                 <statement>
                   <p>
                     Let <m>H</m> be a subgroup of a group <m>G</m>. Recall that the centralizer of <m>H</m> is the subgroup of <m>G</m> defined by <m>Z_G(H) = \{g \in G | gh = hg ∀h \in H\}</m>
@@ -4288,9 +4688,8 @@
     
               </exercise>
     
-              <exercise>
-                <title>May 2018 Problem 1</title>
-    
+              <exercise> <title>May 2018 (1)</title>
+                
                 <statement>
                   <p>
                     Let <m>H</m> and <m>K</m> be groups. Recall that for any group <m>G</m>, an automorphism of <m>G</m> is an isomorphism from <m>G</m> to <m>G</m>, and <m>\Aut(G)</m> denotes the group of automorphisms of <m>G</m>.
@@ -4333,8 +4732,8 @@
             We come to the so-called Isomorphism Theorems.
           </p>
     
-          <theorem xml:id="thm-UMPquot">
-            <title>(Universal Mapping Property (UMP) of a Quotient Group)</title>
+          <theorem xml:id="thm-ump-quotient">
+            <title>Universal Mapping Property (UMP) of a Quotient Group</title>
             
             
             <statement>
@@ -4404,6 +4803,7 @@
           </example>
     
           <theorem xml:id="thm-fit-group">
+            <creator>Jordan, 1870</creator>
             <statement>
               <p>
                 If <m>f: G \to H</m> is a homomorphism of groups, then <m>\operatorname{Ker}(g)\mathrel{\unlhd}G</m> and the map <m>\overline{f}</m> defined by the UMP induces an isomorphism <me>\overline{f}: G/\operatorname{Ker}(f) \xrightarrow{\cong} \operatorname{Im}(f).</me>
@@ -4420,6 +4820,14 @@
           <p>
             The first isomorphism theorem, also known as the homomorphism theorem, is named as such because it was the first major result in the theory of group homomorphisms and was discovered before the second and third isomorphism theorems. 
           </p>
+
+          <corollary xml:id="cor-homom-finite-groups">
+            <statement>
+              <p>
+                If <m>\varphi</m> is a homomorphism from a finite group <m>G</m> to a group <m>H</m>, then <m>|\varphi(G)|</m> divides <m>|G|</m> and <m>|H|</m>.
+              </p>
+            </statement>
+          </corollary>
     
           <proposition xml:id="prop-normal-hk">
             <statement>
@@ -4459,7 +4867,6 @@
     
           <theorem xml:id="thm-sit-group">
             <title>Second Isomorphism Theorem</title>
-            
             
             <statement>
               <p>
@@ -6692,25 +7099,47 @@
               <title>January 2012 (3)</title>
             <statement>
               <p>
-                Let <m>G</m> be a group of order <m>90 = 2 · 3^2 · 5</m> and let <m>\Syl_3(G)</m> denote the set of Sylow <m>3</m>-subgroups of <m>G</m>. (a) Suppose for any <m>Q, Q' \in \Syl_3(G)</m> either <m>Q = Q'</m> or <m>Q \cap Q' = {1}.</m> Prove that <m>G</m> is not simple. (b) Suppose there exists <m>Q, Q' ∈ \Syl_3(G)</m> such that <m>|Q \cap Q'| = 3</m>. Prove that <m>G</m> is not simple. (Hint: Consider the normalizer of <m>Q \cap Q'</m>.)
+                Let <m>G</m> be a group of order <m>90 = 2 · 3^2 · 5</m> and let <m>\Syl_3(G)</m> denote the set of Sylow <m>3</m>-subgroups of <m>G</m>. 
+                <ol>
+                  <li>
+                    <p>
+                      Suppose for any <m>Q, Q' \in \Syl_3(G)</m> either <m>Q = Q'</m> or <m>Q \cap Q' = {1}.</m> Prove that <m>G</m> is not simple. 
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Suppose there exists <m>Q, Q' ∈ \Syl_3(G)</m> such that <m>|Q \cap Q'| = 3</m>. Prove that <m>G</m> is not simple. (Hint: Consider the normalizer of <m>Q \cap Q'</m>.)
+                    </p>
+                  </li>
+                </ol>
               </p>
             </statement>
     
               <solution>
                 <p>
-                  Let <m>G</m> be a group of order <m>90 = 2 · 3^2 · 5</m> and let <m>\Syl_3(G)</m> denote the set of Sylow <m>3</m>-subgroups of <m>G</m>. ###### Part (a) Suppose by way of contradiction that <m>G</m> is simple. By Sylow's Theorem we know the following: - <m>n_3|10</m> and is congruent to <m>1\mod{3}</m>. As <m>G</m> is simple there must be ten of the fuckers. - <m>n_5|18</m> and is congruent to <m>1\mod 5</m>. As <m>G</m> is simple there must be six of them. Since each Sylow <m>3</m>-subgroup will have <m>3^2-1=8</m> non-identity elements and they are all distinct that accounts for <m>80</m> elements of order <m>3</m>. However, there are also <m>24</m> elements or order <m>5</m> to account for, which is a problem. Thus <m>G</m> cannot be simple.
-                </p>
-    
-                <p>
-                  Suppose now that there exists <m>Q, Q' ∈ \Syl_3(G)</m> such that <m>|Q \cap Q'| = 3</m>. . Given this intersection, we know that <m>|QQ'|=9\cdot 9/3=27</m>. Additionally, note that as <m>Q \cap Q'</m> is a subgroup of both <m>Q</m> and <m>Q'</m> with index 3 in both, the smallest prime dividing the order or both, that <m>Q \cap Q'</m> is normal in both.
-                </p>
-    
-                <p>
-                  We now consider the normalizer of <m>Q \cap Q'</m>, which we denote <m>N</m> for simplicity. As <m>N</m> is a subgroup of <m>G</m> its order must divide <m>90</m> by Lagrange's Theorem. However, <m>QQ'\leq N</m>, and so <m>N</m> must have at least <m>27</m> elements, leaving the options of <m>45</m> and <m>90</m>. If <m>|N|=90</m> then <m>N=G</m>, making <m>Q\cap Q'</m> normal in <m>G</m>, a problem.
-                </p>
-    
-                <p>
-                  If <m>|N|=45</m> then <m>[G:N]=2</m>, the smallest prime dividing <m>G</m>. Thus <m>N</m> is still normal, which is still a problem. Thus <m>G</m> cannot be simple.
+                  Let <m>G</m> be a group of order <m>90 = 2 · 3^2 · 5</m> and let <m>\Syl_3(G)</m> denote the set of Sylow <m>3</m>-subgroups of <m>G</m>. 
+                    <ol>
+                      <li>
+                        <p>
+                          Suppose by way of contradiction that <m>G</m> is simple. By Sylow's Theorem we know the following: - <m>n_3|10</m> and is congruent to <m>1\mod{3}</m>. As <m>G</m> is simple there must be ten of the fuckers. - <m>n_5|18</m> and is congruent to <m>1\mod 5</m>. As <m>G</m> is simple there must be six of them. Since each Sylow <m>3</m>-subgroup will have <m>3^2-1=8</m> non-identity elements and they are all distinct that accounts for <m>80</m> elements of order <m>3</m>. However, there are also <m>24</m> elements or order <m>5</m> to account for, which is a problem. Thus <m>G</m> cannot be simple.
+                        </p>
+                      </li>
+
+                      <li>
+                        <p>
+                          Suppose now that there exists <m>Q, Q' ∈ \Syl_3(G)</m> such that <m>|Q \cap Q'| = 3</m>. . Given this intersection, we know that <m>|QQ'|=9\cdot 9/3=27</m>. Additionally, note that as <m>Q \cap Q'</m> is a subgroup of both <m>Q</m> and <m>Q'</m> with index 3 in both, the smallest prime dividing the order or both, that <m>Q \cap Q'</m> is normal in both.
+                        </p>
+            
+                        <p>
+                          We now consider the normalizer of <m>Q \cap Q'</m>, which we denote <m>N</m> for simplicity. As <m>N</m> is a subgroup of <m>G</m> its order must divide <m>90</m> by Lagrange's Theorem. However, <m>QQ'\leq N</m>, and so <m>N</m> must have at least <m>27</m> elements, leaving the options of <m>45</m> and <m>90</m>. If <m>|N|=90</m> then <m>N=G</m>, making <m>Q\cap Q'</m> normal in <m>G</m>, a problem.
+                        </p>
+            
+                        <p>
+                          If <m>|N|=45</m> then <m>[G:N]=2</m>, the smallest prime dividing <m>G</m>. Thus <m>N</m> is still normal, which is still a problem. Thus <m>G</m> cannot be simple.
+                        </p>
+                      </li>
+                    </ol>
                 </p>
               </solution>
     
@@ -7426,26 +7855,6 @@
             </p>
             <attribution>Mason Cooley</attribution>
           </blockquote>
-
-          <lemma xml:id="lem-aut-cn">
-            <statement>
-              <p>
-                The automorphism group of <m>C_n</m> is isomorphic to the multiplicative group of units of <m>\mathbb{Z}/n</m> via the map 
-                <me>
-                  f: (\mathbb{Z}/n^\times, \cdot) \to \operatorname{Aut}(C_n), \quad f([j]_n)=[ y\mapsto y^j].
-                </me> 
-                where <m>\mathbb{Z}/n^\times=\{[j]_n\mid \operatorname{gcd}(j,n)=1\}</m>.
-              </p>
-            </statement>
-          </lemma>
-
-          <lemma xml:id="lem-aut-cp">
-            <statement>
-              <p>
-                If <m>p</m> is prime the automorphism group of <m>C_p</m> is cyclic, namely <m>\operatorname{Aut}(C_p)\cong C_{p-1}</m>.
-              </p>
-            </statement>
-          </lemma>
 
           <theorem xml:id="thm-groups-of-order-6">
             <statement>
@@ -15654,6 +16063,12 @@
             </proof>
           </corollary>
 
+          <remark>
+            <p>
+              <m>\R</m> has a basis as a <m>\Q</m>-Vector Space <m>\R</m> has a basis as a <m>\Q</m>-vector space. Just don't ask me what it looks like.
+            </p>
+          </remark>
+
           <corollary xml:id="cor-basis-of-subspaces-extent">
             <title>Basis of Subspaces Extent</title>
             <statement>
@@ -15832,7 +16247,7 @@
                   </p>
       
                   <p>
-                    Thus <m>I</m> is contained in the basis <m>B</m>. #### <m>\R</m> has a basis as a <m>\Q</m>-Vector Space <m>\R</m> has a basis as a <m>\Q</m>-vector space. Just don't ask me what it looks like.
+                    Thus <m>I</m> is contained in the basis <m>B</m>. 
                   </p>
                 </solution>
               </exercise>
@@ -17585,8 +18000,12 @@
                 <p>
                   Determine, with justification, if the following two matrices with complex entries are similar.
                 </p>
+
+                <p>
+
+                
       
-                          <m>A = \begin{bmatrix}
+                    <m>A = \begin{bmatrix}
                     0 &amp; -4 &amp; 0 &amp; 0 \\
                     1 &amp; 4 &amp; 0 &amp; 0 \\
                     0 &amp; 0 &amp; 0 &amp; -4 \\
@@ -17594,6 +18013,7 @@
                 \end{bmatrix} \textrm{ and } B = \begin{bmatrix}
                     2 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 2 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 2 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 2
                 \end{bmatrix}.</m>
+              </p>
       
               </paragraphs>
  
@@ -18881,7 +19301,7 @@
         <section xml:id="sec-rcf">
           <title>Rational Canonical Form</title>
 
-          # Canonical Forms for Linear Operators ## Modules over Polynomial Rings 
+         
               
 
           <remark>
@@ -19613,11 +20033,18 @@
     
               <p>
                 In particular, <m>\mp_A(x)</m> is the unique monic generator of the annihilator ideal <me>
-    \ann_{F[x]}(F^n_A) := \{ g(x) \in F[x] \mid g(x) \cdot v = 0 \text{ for all $v \in F^n_A$}\}.</me> ###### <em>Proof.</em> If <m>g(A) = 0</m>, then for each <m>v \in F^n</m>, by definition of the action of <m>F[x]</m> on <m>F^n_A</m> we have <me>
-    g(x) \cdot v = g(A) v = 0
-    </me> and so <m>g(x)</m> annihilates <m>F^n_A</m>. Conversely, if <m>g(x)</m> annihilates <m>F^n_A</m>, then <m>g(A) \cdot v = 0</m> for all <m>v \in F^n</m>. Taking <m>v = e_i</m> for each <m>i</m>, this says that each column of <m>g(A)</m> is <m>0</m> and hence <m>g(A)</m> is the zero matrix.
-              </p>
+    \ann_{F[x]}(F^n_A) := \{ g(x) \in F[x] \mid g(x) \cdot v = 0 \text{ for all $v \in F^n_A$}\}.</me> 
+     </p>
             </statement>
+
+            <proof>
+              <p>
+                If <m>g(A) = 0</m>, then for each <m>v \in F^n</m>, by definition of the action of <m>F[x]</m> on <m>F^n_A</m> we have <me>
+                  g(x) \cdot v = g(A) v = 0
+                  </me> and so <m>g(x)</m> annihilates <m>F^n_A</m>. Conversely, if <m>g(x)</m> annihilates <m>F^n_A</m>, then <m>g(A) \cdot v = 0</m> for all <m>v \in F^n</m>. Taking <m>v = e_i</m> for each <m>i</m>, this says that each column of <m>g(A)</m> is <m>0</m> and hence <m>g(A)</m> is the zero matrix.
+                           
+              </p>
+            </proof>
           </proposition>
 
           <definition xml:id="def-minimum-polynomial-linear-transformation">
@@ -22117,42 +22544,7 @@
               </p>
             </example>
     
-            <proposition xml:id="prop-qual1">
-              <title>June 2011 (7)</title>
-              <statement>
-                <p>
-                  Let p be a prime number, let <m>\F_p</m> be the field with <m>p</m> elements, and let <m>n</m> be a positive integer. Prove that <m>x^{p^n}- x =\prod_{d|n} g_d(x)</m>, where, for a positive divisor <m>d</m> of <m>n</m>, <m>g_d(x)</m> denotes the product of all monic irreducible polynomials of degree <m>d</m> in <m>\F_p[x]</m>. (You may assume basic results on the structure of finite fields and their subfields.)
-                </p>
-              </statement>
-            </proposition>
-    
-            <proposition xml:id="prop-qual2">
-              <title>June 2012 (9)</title>
-              <statement>
-                <p>
-                  Suppose <m>A</m> and <m>B</m> are subfields of a field extension <m>K/F</m> with <m>[A : F ]</m> and <m>[B : F ]</m> both finite. Let <m>E</m> be the subfield of K generated by <m>A</m> and <m>B</m>. 
-                  <ol>
-                    <li>
-                      <p>
-                        Show that <m>[E : F ] \leq [A : F ][B : F ]</m> 
-                      </p>
-                    </li>
-    
-                    <li>
-                      <p>
-                        Prove that equality holds when <m>[A : F ]</m> and <m>[B : F ]</m> are relatively prime. 
-                      </p>
-                    </li>
-    
-                    <li>
-                      <p>
-                        Prove there are two subfields of <m>\R/\Q</m>, <m>A</m> and <m>B</m>, neither contained in the other, so that the inequality in part (a) is strict.                
-                      </p>
-                    </li>
-                  </ol>
-                </p>
-              </statement>
-            </proposition>
+           
     
     
             <exercises>
@@ -22228,27 +22620,45 @@
                   </p>
                 </introduction>
             
-                <exercise>
-                  <title></title>
-                  
-                  
+                <exercise xml:id="prop-qual1">
+                  <title>June 2011 (7)</title>
                   <statement>
                     <p>
-                      Coming soon to an OER near you!
+                      Let p be a prime number, let <m>\F_p</m> be the field with <m>p</m> elements, and let <m>n</m> be a positive integer. Prove that 
+                      <me>
+                        x^{p^n}- x =\prod_{d|n} g_d(x),
+                      </me>
+                      where, for a positive divisor <m>d</m> of <m>n</m>, <m>g_d(x)</m> denotes the product of all monic irreducible polynomials of degree <m>d</m> in <m>\F_p[x]</m>. (You may assume basic results on the structure of finite fields and their subfields.)
                     </p>
                   </statement>
-    
-                  <hint>
+                </exercise>
+        
+                <exercise xml:id="prop-qual2">
+                  <title>June 2012 (9)</title>
+                  <statement>
                     <p>
-                      Coming soon to an OER near you!
+                      Suppose <m>A</m> and <m>B</m> are subfields of a field extension <m>K/F</m> with <m>[A : F ]</m> and <m>[B : F ]</m> both finite. Let <m>E</m> be the subfield of K generated by <m>A</m> and <m>B</m>. 
+                      <ol>
+                        <li>
+                          <p>
+                            Show that <m>[E : F ] \leq [A : F ][B : F ]</m> 
+                          </p>
+                        </li>
+        
+                        <li>
+                          <p>
+                            Prove that equality holds when <m>[A : F ]</m> and <m>[B : F ]</m> are relatively prime. 
+                          </p>
+                        </li>
+        
+                        <li>
+                          <p>
+                            Prove there are two subfields of <m>\R/\Q</m>, <m>A</m> and <m>B</m>, neither contained in the other, so that the inequality in part (1) is strict.                
+                          </p>
+                        </li>
+                      </ol>
                     </p>
-                  </hint>
-    
-                  <solution>
-                    <p>
-                      Coming soon to an OER near you!
-                    </p>
-                  </solution>
+                  </statement>
                 </exercise>
             
               </exercisegroup>
@@ -22567,10 +22977,18 @@
     
               <proof>
                 <p>
-                  Let <m>F\subseteq L</m> be fields and let <m>x, y \in L</m> be algebraic elements over <m>F</m> First, notice that <m>xy</m> and <m>x+y</m> are contained in <m>F(x,y)</m>. As <m>y</m> is algebraic over <m>F</m>, it is the root of some polynomial <m>f</m> with coefficients in <m>f</m>. But <m>f</m> is also contained in <m>F(x)</m>, and thus the extension <m>[F(x,y):F(x)]</m> is algebraic. As <m>[F(x):F]</m> is algebraic as well, we see that <m>[F(x,y):F]</m> is an algebraic extension of fields. Thus <m>xy</m> and <m>x+y</m> are algebraic over <m>F</m>. #### <m>\rem</m> The converse of this proposition is also true: Given field extensions <m>F \subseteq L \subseteq E</m>, if <m>F \subseteq E</m> is algebraic then so are <m>L \subseteq E</m> and <m>F \subseteq L</m>. This is more or less obvious from the definition.
+                  Let <m>F\subseteq L</m> be fields and let <m>x, y \in L</m> be algebraic elements over <m>F</m> First, notice that <m>xy</m> and <m>x+y</m> are contained in <m>F(x,y)</m>. As <m>y</m> is algebraic over <m>F</m>, it is the root of some polynomial <m>f</m> with coefficients in <m>f</m>. But <m>f</m> is also contained in <m>F(x)</m>, and thus the extension <m>[F(x,y):F(x)]</m> is algebraic. As <m>[F(x):F]</m> is algebraic as well, we see that <m>[F(x,y):F]</m> is an algebraic extension of fields. Thus <m>xy</m> and <m>x+y</m> are algebraic over <m>F</m>. 
+                  
+                  
                 </p>
               </proof>
             </proposition>
+
+            <remark>
+              <p>
+                The converse of this proposition is also true: Given field extensions <m>F \subseteq L \subseteq E</m>, if <m>F \subseteq E</m> is algebraic then so are <m>L \subseteq E</m> and <m>F \subseteq L</m>. This is more or less obvious from the definition.
+              </p>
+            </remark>
     
             <proposition xml:id="prop-algebraic-but-not-finite-extension">
               <statement>
@@ -22588,7 +23006,20 @@
     
               <proof>
                 <p>
-                  Let <m>K/F</m> be a finite extension of fields. Let <m>\a\in L</m>. By the [[Proposition – The Degree Formula|Degree Formula]] we have <m>[K:F(a)]=[K:F(\a)][F(\a):F]</m>. Thus <m>[F(\a):F]</m> is finite, making <m>\a</m> algebraic over <m>F</m>.. ###### Part (b) Notice that <m>\a_n\sqrt[n]2\in\overline{\Q}</m> for all <m>n\in\N</m> and that <m>\a_n</m> is a root of the polynomial <m>x^n-2</m>, which is irreducible in <m>\Q[x]</m> by Eisenstein's Criterion]] (<m>p=2</m>). Thus <m>[\Q(\a_n):\Q]=n</m>. As <m>\a_n</m> must be added to <m>\Q</m> for all <m>n</m>, we see that this extension is not finite.
+                  <ol>
+                    <li>
+                      <p>
+                        Let <m>K/F</m> be a finite extension of fields. Let <m>\a\in L</m>. By the [[Proposition – The Degree Formula|Degree Formula]] we have <m>[K:F(a)]=[K:F(\a)][F(\a):F]</m>. Thus <m>[F(\a):F]</m> is finite, making <m>\a</m> algebraic over <m>F</m>. 
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Notice that <m>\a_n\sqrt[n]2\in\overline{\Q}</m> for all <m>n\in\N</m> and that <m>\a_n</m> is a root of the polynomial <m>x^n-2</m>, which is irreducible in <m>\Q[x]</m> by Eisenstein's Criterion]] (<m>p=2</m>). Thus <m>[\Q(\a_n):\Q]=n</m>. As <m>\a_n</m> must be added to <m>\Q</m> for all <m>n</m>, we see that this extension is not finite.
+                      </p>
+                    </li>
+                  </ol>
+                  
                 </p>
               </proof>
             </proposition>
@@ -23296,7 +23727,7 @@
     
               <proof>
                 <p>
-                  Let <m>a,b\in K</m>. Notice that <m>a\inv, ab,</m> and <m>a+b</m> are contained in <m>F(a,b)</m>. As <m>b\in K</m>, there exists some polynomial with coefficients in <m>F</m> such that <m>b</m> is a root. However, this polynomial also lives in <m>F(a)</m>, so we have <m>[F(a,b):F(a)]</m> [[Mathematics/Definitions/Algebraic#$ defn$ – Algebraic (Extension)|algebraic]]. As <m>[F(a):F]</m> is also algebraic, we have <m>F[a,b]</m> algebraic as well, as it is a finite extension by the [[Proposition – The Degree Formula|Degree Formula]]. Thus <m>a+b, a\inv,</m> and <m>ab</m> are algebraic over <m>F</m> as well, making <m>K</m> a field.
+                  Let <m>a,b\in K</m>. Notice that <m>a\inv, ab,</m> and <m>a+b</m> are contained in <m>F(a,b)</m>. As <m>b\in K</m>, there exists some polynomial with coefficients in <m>F</m> such that <m>b</m> is a root. However, this polynomial also lives in <m>F(a)</m>, so we have <m>[F(a,b):F(a)]</m> algebraic. As <m>[F(a):F]</m> is also algebraic, we have <m>F[a,b]</m> algebraic as well, as it is a finite extension by the [[Proposition – The Degree Formula|Degree Formula]]. Thus <m>a+b, a\inv,</m> and <m>ab</m> are algebraic over <m>F</m> as well, making <m>K</m> a field.
                 </p>
     
                 <p>
@@ -24688,7 +25119,7 @@
             <p>
               To summarize, we have proven that there are {} <m>3! = 6</m> possibilities for <m>\s</m>. In fact, more is true: The function <me>
   \phi: \Aut(K/\Q) \to \Perm(\{\a_1, \a_2, \a_3\})
-  </me> given by sending <m>\s \in \Aut(K/\Q)</m> to its restriction to the subset <m>\{\a_1, \a_2, \a_3\}</m> is an injective group homomorphism. Thus <m>\Aut(K/\Q)</m> is isomorphic to a subgroup of <m>S_3</m>. I claim that <m>\# \Aut(K/\Q) = 6</m> and hence <m>\Aut(K/\Q) \cong S_3</m>. I will prove this directly - we will learn of fancier methods to do so later.
+  </me> given by sending <m>\s \in \Aut(K/\Q)</m> to its restriction to the subset <m>\{\a_1, \a_2, \a_3\}</m> is an injective group homomorphism. Thus <m>\Aut(K/\Q)</m> is isomorphic to a subgroup of <m>S_3</m>. I claim that <m>|\Aut(K/\Q)| = 6</m> and hence <m>\Aut(K/\Q) \cong S_3</m>. I will prove this directly - we will learn of fancier methods to do so later.
             </p>
   
             <p>
@@ -24858,17 +25289,17 @@
             </p>
   
             <p>
-              Note that this map cannot possibly be onto: there is no <m>\s \in \Aut(L/\Q)</m> such that <m>\s(z_1) = z_2</m>, <m>\s(z_2) = z_1</m>, <m>\s(z_3) = z_3</m>, and <m>\s(z_4) =z_4</m>; i.e., the permutation <m>(1 \, 2)</m> of these roots is not realizable by a field automorphism. To see this note that if <m>\s(z_1) = z_2</m> then <m>\s(z_3) = \s(-z_1) = - \s(z_1) = - z_2 = z_4</m>. So, any field automorphism that interchanges <m>z_1</m> and <m>z_2</m> would have to also interchange <m>z_3</m> and <m>z_4</m>. In fact, as we shall see, <m>\# \Aut(L/\Q) = 8</m>, considerably smaller than <m>4!</m>.
+              Note that this map cannot possibly be onto: there is no <m>\s \in \Aut(L/\Q)</m> such that <m>\s(z_1) = z_2</m>, <m>\s(z_2) = z_1</m>, <m>\s(z_3) = z_3</m>, and <m>\s(z_4) =z_4</m>; i.e., the permutation <m>(1 \, 2)</m> of these roots is not realizable by a field automorphism. To see this note that if <m>\s(z_1) = z_2</m> then <m>\s(z_3) = \s(-z_1) = - \s(z_1) = - z_2 = z_4</m>. So, any field automorphism that interchanges <m>z_1</m> and <m>z_2</m> would have to also interchange <m>z_3</m> and <m>z_4</m>. In fact, as we shall see, <m>|\Aut(L/\Q)| = 8</m>, considerably smaller than <m>4!</m>.
             </p>
   
             <p>
               Let us compute <m>[L:\Q]</m>. Note that <m>i \in L</m> since <m>i = z_2/z_1</m> and in fact <m>L = \Q(z_1, i)</m>. In the chain of extensions <me>
   \Q \subset \Q(z_1) \subset L = \Q(z_1)(i)
-  </me> the first one has degree <m>4</m>, since <m>x^4 - 2</m> is irreducible by Eisenstein, and the second has degree at most <m>2</m> since <m>i</m> is a root of <m>x^2 + 1</m>. It would be less than two if <m>x^2+1</m> factors in <m>\Q(z_2)[x]</m>. But since <m>\Q(z_1) \subset \R</m> and <m>L</m> is not contained in <m>\R</m>, the second extension cannot be trivial and so must have degree exactly <m>2</m>. We conclude <m>[L:\Q] = 8</m>. It follows from Proposition  that <m>\# \Aut(L/\Q) \leq 8</m>. (In fact, since <m>L</m> is the splitting field of a separable polynomial, the Theorem below will tell us that <m>\# \Aut(L/\Q) = 8</m>. But we won't appeal to this fact here.)
+  </me> the first one has degree <m>4</m>, since <m>x^4 - 2</m> is irreducible by Eisenstein, and the second has degree at most <m>2</m> since <m>i</m> is a root of <m>x^2 + 1</m>. It would be less than two if <m>x^2+1</m> factors in <m>\Q(z_2)[x]</m>. But since <m>\Q(z_1) \subset \R</m> and <m>L</m> is not contained in <m>\R</m>, the second extension cannot be trivial and so must have degree exactly <m>2</m>. We conclude <m>[L:\Q] = 8</m>. It follows from Proposition  that <m>|\Aut(L/\Q)| \leq 8</m>. (In fact, since <m>L</m> is the splitting field of a separable polynomial, the Theorem below will tell us that <m>|\Aut(L/\Q)| = 8</m>. But we won't appeal to this fact here.)
             </p>
   
             <p>
-              We claim <m>\# \Aut(L/\Q) = 8</m> and <m>\Aut(L/\Q)</m> is isomorphic to the subgroup <m>H</m> of <m>S_4</m> generated by <m>(2 \, 4)</m> and <m>(1 \,2 \, 3 \,4)</m>. (This is isomorphic to <m>D_8</m>.)
+              We claim <m>|\Aut(L/\Q)| = 8</m> and <m>\Aut(L/\Q)</m> is isomorphic to the subgroup <m>H</m> of <m>S_4</m> generated by <m>(2 \, 4)</m> and <m>(1 \,2 \, 3 \,4)</m>. (This is isomorphic to <m>D_8</m>.)
             </p>
   
             <p>
@@ -24982,7 +25413,7 @@
 
           <remark>
             <p>
-              Recall from the Proposition above that <m>\# \Aut(L/F) \leq [L:F]</m> holds for any finite field extension. So, such an extension is Galois if and only if its automorphism group is as large as is allowed by the Proposition.
+              Recall from the Proposition above that <m>|\Aut(L/F)| \leq [L:F]</m> holds for any finite field extension. So, such an extension is Galois if and only if its automorphism group is as large as is allowed by the Proposition.
             </p>
           </remark>
 
@@ -24998,7 +25429,7 @@
             <title><m>\Q(\sqrt[3]2)</m> not Galois</title>
 
             <p>
-              I claim <m>L = \Q(\sqrt[3]{2})</m> is not a Galois extension of <m>\Q</m>. Let <m>R</m> be the set of all roots of <m>x^3-2</m> in <m>L</m>. Since <m>L \subseteq \R</m>, <m>R</m> has just one element: <m>R = \{\sqrt[3]{2}\}</m>. Since <m>L = \Q(R)</m>, the function <m>\phi: \Aut(L/\Q) \to \Perm(R)</m> is injective by Proposition  and so since <m>\# R = 1</m>, we have <m>\# \Aut(L/\Q) = 1</m>. Thus it isn't Galois. Since it is separable, <m>L</m> must not be a normal extension of <m>\Q</m>.
+              I claim <m>L = \Q(\sqrt[3]{2})</m> is not a Galois extension of <m>\Q</m>. Let <m>R</m> be the set of all roots of <m>x^3-2</m> in <m>L</m>. Since <m>L \subseteq \R</m>, <m>R</m> has just one element: <m>R = \{\sqrt[3]{2}\}</m>. Since <m>L = \Q(R)</m>, the function <m>\phi: \Aut(L/\Q) \to \Perm(R)</m> is injective by Proposition  and so since <m>\# R = 1</m>, we have <m>|\Aut(L/\Q)| = 1</m>. Thus it isn't Galois. Since it is separable, <m>L</m> must not be a normal extension of <m>\Q</m>.
             </p>
             
           </example>
@@ -25027,7 +25458,7 @@
             <title>Galois and Characteristic <m>p</m></title>
 
             <p>
-              Let <m>F</m> be a field of characteristic <m>p</m>, for a prime integer <m>p</m>, and assume <m>L</m> is a finite field extension of <m>F</m> such that there exists an element <m>a</m> of <m>L</m> with <m>a \notin F</m> but <m>a^p \in F</m>. Then <m>F \subseteq L</m> is not Galois since <m>\# \Aut(L/K) &lt; [L:K]</m> in this case. You will prove this in the Homework.
+              Let <m>F</m> be a field of characteristic <m>p</m>, for a prime integer <m>p</m>, and assume <m>L</m> is a finite field extension of <m>F</m> such that there exists an element <m>a</m> of <m>L</m> with <m>a \notin F</m> but <m>a^p \in F</m>. Then <m>F \subseteq L</m> is not Galois since <m>|\Aut(L/K)| &lt; [L:K]</m> in this case. You will prove this in the Homework.
             </p>
 
           </example>
@@ -25270,7 +25701,7 @@
                       </li>
     
                       <li>
-                          Prove <me>\prod_{\s\in G} (x-\s(\alpha))=m(x)^{n/d}</me> ##### <em>Proof</em>. Let <m>K/F</m> be a finite Galois field extension, <m>G = Gal(K/F)</m>, and <m>n = |G|</m>. Let <m>\alpha</m> be an element of <m>K</m> and <m>m(x)</m> its minimal polynomial over <m>F</m> ; set <m>d = \deg m(x)</m>. 
+                          Prove <me>\prod_{\s\in G} (x-\s(\alpha))=m(x)^{n/d}</me> 
                       </li>
                     </ol>
                   </p>
@@ -25284,7 +25715,7 @@
   
                 <solution>
                   <p>
-                    Coming soon to an OER near you!
+                    Let <m>K/F</m> be a finite Galois field extension, <m>G = Gal(K/F)</m>, and <m>n = |G|</m>. Let <m>\alpha</m> be an element of <m>K</m> and <m>m(x)</m> its minimal polynomial over <m>F</m> ; set <m>d = \deg m(x)</m>. 
                   </p>
                 </solution>
               </exercise>
@@ -25627,7 +26058,7 @@
               </p>
     
               <p>
-                To see this, set <m>G= \Gal(L/F)</m>. Then <m>\#G = 21 = 3 \cdot 7</m> and by the Sylow theorems, there is a unique Sylow <m>7</m>-subgroup, call it <m>H</m>, and hence <m>H</m> is normal in <m>G</m>. It follows from the Fundamental Theorem that <m>E := L^H</m> is an intermediate field that (a) is Galois over <m>F</m> and (b) satisfies <m>[E: F] = [G :H] = 3</m>. Moreover, it is unique since <m>G</m> has just one subgroup of index <m>3</m>.
+                To see this, set <m>G= \Gal(L/F)</m>. Then <m>|G| = 21 = 3 \cdot 7</m> and by the Sylow theorems, there is a unique Sylow <m>7</m>-subgroup, call it <m>H</m>, and hence <m>H</m> is normal in <m>G</m>. It follows from the Fundamental Theorem that <m>E := L^H</m> is an intermediate field that (a) is Galois over <m>F</m> and (b) satisfies <m>[E: F] = [G :H] = 3</m>. Moreover, it is unique since <m>G</m> has just one subgroup of index <m>3</m>.
               </p>
     
               <p>
@@ -28016,7 +28447,7 @@
     <backmatter xml:id="backmatter">
       <title>Backmatter</title>
 
-      <appendix>
+      <appendix xml:id="app-foundations">
         <title>Foundational Knowledge</title>
 
         <section xml:id="sec-">
@@ -28025,7 +28456,39 @@
           <subsection xml:id="subsec-sets">
             <title>Sets</title>
             
-            <p>hi</p>
+            <theorem xml:id="thm-distributive-laws">
+              <title>Distributive Laws</title>
+              <statement>
+                <p>
+                  A \cap  (\cup \alpha  B\alpha ) = \cup \alpha (A \cap  B\alpha ) and A \cup  (\cap \alpha  B\alpha ) = \cap \alpha (A \cup  B\alpha )
+                </p>
+              </statement>
+            </theorem>
+
+            <theorem xml:id="thm-de-morgans-laws">
+              <title>De Morgan's Laws</title>
+              <statement>
+                <p>
+                  A - (\cup \alpha  B\alpha ) = \cap \alpha (A - B\alpha ) and A - (\cap \alpha  B\alpha ) = \cup \alpha (A - B\alpha )
+                </p>
+              </statement>
+            </theorem>
+            
+            <remark>
+              <p>
+                Notation for indices: i,j,k,m,n for finite or countably many indices, \alpha ,\beta ,... for arbitrarily many indices.
+              </p>
+            </remark>
+
+            <remark>
+              <p>
+                Notation for sets, elements of sets, and sets of sets: Small letters a,b,c,p,q,x,y,z for elements of sets, capital letters A,B,C,X,Y,Z for sets, calligraphic capital letters ℬ,𝒞,𝒯,𝒰 for collections of sets.
+              </p>
+            </remark>
+
+            <p>
+              Template to prove two sets are equal
+            </p>
           </subsection>
 
           <subsection xml:id="subsec-functions">
@@ -28075,7 +28538,7 @@
 
       </appendix>
 
-      <appendix>
+      <appendix xml:id="app-notation">
         <title>Notation</title>
 
         <notation-list/>
@@ -28091,6 +28554,132 @@
         <title>List of Results</title>
       
         <list-of elements="theorem lemma proposition corollary" divisions="chapter" empty="yes"/>
+      </appendix>
+
+      <appendix xml:id="app-biograhy">
+        <title>Biographies</title>
+
+        <paragraphs xml:id="bio-abel">
+          <title>Niels Henrik Abel</title>
+
+          <p>
+            Niels Henrik Abel (1802-1829) was a Norwegian mathematician who made groundbreaking contributions to several areas of mathematics, including number theory, algebra, and analysis. Despite dying at the young age of 26, Abel's work had a profound impact on the development of mathematics in the 19th century and beyond. He is perhaps best known for his proof of the impossibility of solving the general quintic equation by radicals, which is considered one of the major achievements of 19th-century mathematics.
+          </p>
+
+          <p>
+            Abel was born in Norway and showed an early talent for mathematics. He began studying at the University of Oslo at the age of 17, but financial difficulties and political unrest in Norway at the time made it difficult for him to pursue his studies. In 1823, Abel traveled to Paris, where he was able to work with some of the leading mathematicians of the day, including Adrien-Marie Legendre and Joseph Fourier.
+          </p>
+
+          <p>
+            Abel's life was marked by tragedy and struggle. He suffered from poor health throughout his short life, and financial difficulties made it difficult for him to support himself and his family. Despite these challenges, he continued to work tirelessly on his mathematical research, producing a body of work that continues to be studied and admired today. Abel died of tuberculosis in 1829, just months after being awarded a prestigious prize for his work on elliptic integrals.
+          </p>
+          
+        </paragraphs>
+
+        <paragraphs xml:id="bio-cayley">
+          <title>Arthur Cayley</title>
+
+          <p>
+            Arthur Cayley (1821-1895) was a British mathematician who made important contributions to a wide range of fields, including group theory, algebra, geometry, and matrix theory. He is often regarded as one of the founders of modern algebra, and his work played a key role in the development of abstract algebra in the late 19th century.
+          </p>
+
+          <p>
+            Cayley was born in London and studied mathematics and law at the University of Cambridge. He went on to become a fellow of Trinity College, Cambridge, and later served as the university's professor of pure mathematics. During his career, he published over 300 papers on a variety of topics in mathematics, and he made important contributions to the study of group theory, including the development of Cayley's theorem and the theory of permutation groups.
+          </p>
+
+          <p>
+            Cayley was also an advocate for women's education and played a key role in the movement to allow women to study mathematics at Cambridge University. He argued that women had the same intellectual abilities as men and should be given the same opportunities to pursue advanced studies in mathematics. Today, Arthur Cayley is remembered not only for his contributions to mathematics but also for his advocacy for women's education and his support for social progress and equality.
+          </p>
+          
+        </paragraphs>
+
+        <paragraphs xml:id="bio-cauchy">
+          <title>Augustin-Louis Cauchy</title>
+
+          <p>
+            Augustin-Louis Cauchy (1789-1857) was a French mathematician who made significant contributions to several areas of mathematics, including analysis, number theory, and group theory. Cauchy was a prodigious mathematician who published over 800 papers during his lifetime, and his work laid the foundation for much of modern analysis. He is perhaps best known for his contributions to the theory of functions of a complex variable, which he developed in the early 19th century.
+          </p>
+
+          <p>
+            Cauchy was born in Paris, France, and showed an early aptitude for mathematics. He was a brilliant student who excelled in both mathematics and physics, and he received his doctorate in mathematics from the École Polytechnique in Paris at the age of 21. He went on to become a professor of mathematics at several prestigious institutions, including the École Polytechnique and the Collège de France.
+          </p>
+
+          <p>
+            Cauchy's work in group theory was influential in the development of the subject, and he is credited with formulating the first rigorous definition of a group. He also made significant contributions to the theory of permutation groups, which are central to the study of group theory. Despite his many achievements, Cauchy's life was not without controversy. He was known for his irascible temperament and his conflicts with other mathematicians, including his bitter rival, Niels Henrik Abel. Nonetheless, his contributions to mathematics continue to be studied and applied by mathematicians today.
+          </p>
+          
+        </paragraphs>
+
+        <paragraphs xml:id="bio-galois">
+          <title>Évariste Galois</title>
+
+          <p>
+            Évariste Galois (1811-1832) was a French mathematician who made groundbreaking contributions to the field of algebra, particularly in the study of group theory. Despite his short life, Galois laid the foundation for the modern theory of algebraic equations and abstract algebra. His work on the theory of equations, which he developed at a young age, revealed the limitations of algebraic methods and led to the development of a new field of mathematics.
+          </p>
+
+          <p>
+            Galois was born in Bourg-la-Reine, France, and was recognized for his mathematical talent at a young age. He was an excellent student, but his studies were often interrupted by political upheaval in France, including the July Revolution of 1830. Galois was an active participant in revolutionary movements and was imprisoned for his involvement in a failed uprising against the government. While in prison, he continued to work on mathematical problems and developed his theory of groups and fields, which would later become the foundation for modern algebra.
+          </p>
+
+          <p>
+            Galois died at the age of 20 in a duel, which has been attributed to his political and personal conflicts. Although he died young, his work on algebra and group theory had a profound impact on the development of modern mathematics. Today, Galois is regarded as one of the most important mathematicians in history, and his contributions to algebra are still studied and applied by mathematicians around the world.
+          </p>
+          
+        </paragraphs>
+
+        <paragraphs xml:id="bio-lagrange">
+          <title>Joseph-Louis Lagrange</title>
+
+          <p>
+            Joseph-Louis Lagrange (1736-1813) was an Italian-French mathematician who made significant contributions to many areas of mathematics, including algebra, calculus, and number theory. Born in Turin, Italy, Lagrange showed early promise in mathematics and was admitted to the Royal Academy of Sciences at the age of 19. He later moved to Paris, where he became a prominent member of the scientific community and a professor at the École Polytechnique.       
+          </p>
+
+          <p>
+            Lagrange's contributions to mathematics were wide-ranging and profound. He is perhaps best known for his work on the calculus of variations, which helped to lay the foundation for modern optimization theory. He also made important contributions to number theory, including the study of Diophantine equations and the development of the theory of binary quadratic forms. In addition, Lagrange made important contributions to classical mechanics, including the development of the principle of least action and the formulation of Lagrangian mechanics.      
+          </p>
+
+          <p>
+            Lagrange's life was marked by political upheaval and personal tragedy. He lived through the French Revolution and was forced to flee Paris at one point due to his association with the royal court. He also suffered the loss of his wife and several children, which he wrote about in a series of poignant letters. Despite these challenges, Lagrange continued to work tirelessly on his mathematical research, producing a body of work that continues to be studied and admired today. He died in Paris in 1813, having left an indelible mark on the history of mathematics.   
+          </p>
+          
+        </paragraphs>
+
+        <paragraphs xml:id="bio-jordan">
+          <title>Camille Jordan</title>
+
+          <p>
+            Camille Jordan (1838-1922) was a French mathematician who made significant contributions to the development of group theory, number theory, and algebraic geometry. Jordan's most important work was his theory of finite groups, which provided a rigorous framework for the study of symmetry and structure. He was also known for his work on the theory of equations, and he developed important results on modular forms, hyperelliptic functions, and algebraic curves.
+          </p>
+
+          <p>
+            Jordan was born in Lyons, France, and he received his education at the École Polytechnique in Paris. After completing his studies, he worked as a professor of mathematics at several universities, including the University of Lille and the Collège de France. In addition to his research, Jordan was an influential teacher and mentor, and he played a key role in the development of mathematical education in France.          
+          </p>
+
+          <p>
+            Jordan was widely recognized for his contributions to mathematics, and he received numerous awards and honors during his lifetime. He was a member of the French Academy of Sciences, and he was awarded the Grand Prix des Sciences Mathématiques in 1892. Jordan's work has had a lasting impact on the development of group theory and algebraic geometry, and his insights continue to be studied and applied in modern mathematics.
+          </p>
+          
+        </paragraphs>
+
+        <paragraphs xml:id="bio-noether">
+          <title>Emmy Noether</title>
+
+          <p>
+            Emmy Noether (1882-1935) was a German mathematician who made groundbreaking contributions to the fields of algebra and theoretical physics. Born in Erlangen, Germany, Noether was the daughter of a mathematics professor and grew up with a strong interest in the subject. Despite facing discrimination as a woman in a male-dominated field, Noether pursued her passion for mathematics and eventually became a professor at the University of Göttingen.          
+          </p>
+
+          <p>
+            Noether's work in algebra revolutionized the field and laid the foundation for modern abstract algebra. She developed the concept of "Noetherian rings" and proved several theorems that are now known as "Noether's theorems," including a fundamental theorem linking symmetries and conservation laws in physics. Her work also had a significant impact on the development of group theory and the study of algebraic geometry.          
+          </p>
+
+          <p>
+            In addition to her contributions to mathematics, Noether played an important role in the scientific community as a mentor and advocate for women in science. She taught and mentored several notable mathematicians, including Hermann Weyl and Richard Courant, and was a founding member of the Mathematical Association of America. Despite facing discrimination and persecution as a Jew in Nazi Germany, Noether continued to work and inspire others until her untimely death at the age of 53. She is remembered today as one of the most influential mathematicians of the 20th century.          
+          </p>
+          
+        </paragraphs>
+
+        
+
       </appendix>
 
       <colophon>
