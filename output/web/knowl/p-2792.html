@@ -12,8 +12,16 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">
-<span class="process-math">\(\phi\)</span> is <span class="process-math">\(R\)</span>-multilinear,</div>
+<div class="para logical">
+<div class="para">For the alternating property, for notational simplicity, let us assume that <span class="process-math">\(v_1 = v_2\)</span> (i.e., the first two columns of the matrix are equal). (The proof of the general case is essentially the same.) Note that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\det(A) = \sum_{(i,j, g)} \sign(i,j,g) a_{i,1} a_{j,2} a_{g(3), 3} a_{g(4), 4} \cdots a_{g(n), n}
+\end{equation*}
+</div>
+<div class="para">where the sum ranges over triples <span class="process-math">\((i,j,g)\)</span> where <span class="process-math">\(i \ne j\)</span> and <span class="process-math">\(g\)</span> is an injective function from <span class="process-math">\(\{3, \dots, n\}\)</span> to <span class="process-math">\(\{1, \dots, n\} \setminus \{i,j\}\)</span> and by <span class="process-math">\(\sign(i,j,g)\)</span> we mean the sign of the permutation sending <span class="process-math">\(1\)</span> to <span class="process-math">\(i\text{,}\)</span> <span class="process-math">\(2\)</span> to <span class="process-math">\(j\)</span> and <span class="process-math">\(s\)</span> to <span class="process-math">\(g(s)\)</span> for all other <span class="process-math">\(s\text{.}\)</span> For each <span class="process-math">\((i,j,g)\text{,}\)</span> we have <span class="process-math">\(\sign(i,j,g) = -\sign(j,i,g)\text{,}\)</span> since the corresponding permutations differ by a transposition. Since <span class="process-math">\(a_{i,1} = a_{i,2}\)</span> and <span class="process-math">\(a_{j,1} = a_{j,2}\text{,}\)</span> it follows that the terms in the formula for <span class="process-math">\(\det(A)\)</span> cancel in pairs to give <span class="process-math">\(0\text{.}\)</span>
+</div>
+</div>
 <span class="incontext"><a href="sec-det.html#p-2792" class="internal">in-context</a></span>
 </body>
 </html>

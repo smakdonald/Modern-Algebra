@@ -13,13 +13,19 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">It is true that trace is invariant under all “cyclic permutations'' of products of matrices. For instance, <span class="process-math">\(\trace(XYZ) = \trace(ZXY) = \trace(YZX)\)</span> and more generally we have</div>
+<div class="para">Let <span class="process-math">\(A \in \Mat_{n \times n}(F)\)</span> where <span class="process-math">\(F\)</span> is a field. The <em class="emphasis">characteristic polynomial</em> of <span class="process-math">\(A\)</span> is</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\trace(X_1 \cdots X_n) = \trace(X_i X_{i+1} \cdots X_n X_1 X_2 \cdots X_{i-1})
+\cp_A(x) := \det(x I_n - A) \in F[x].
 \end{equation*}
 </div>
-<div class="para">for all <span class="process-math">\(i\text{.}\)</span>
+<div class="para">Note that <span class="process-math">\(\cp_A(x)\)</span> is a monic polynomial of degree <span class="process-math">\(n\)</span> with coefficients in <span class="process-math">\(F\text{.}\)</span> More generally, if <span class="process-math">\(V\)</span> is a finite dimensional <span class="process-math">\(F\)</span>-vector space and <span class="process-math">\(g: V \to V\)</span> is an <span class="process-math">\(F\)</span>-linear operator on <span class="process-math">\(V\text{,}\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\cp_g(x) := \cp_A(x)
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(A\)</span> is the matrix representing <span class="process-math">\(g\)</span> with respect to a choice of basis of <span class="process-math">\(V\text{.}\)</span>
 </div>
 </div>
 <span class="incontext"><a href="sec-det.html#p-2846" class="internal">in-context</a></span>
