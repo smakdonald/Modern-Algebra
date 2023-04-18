@@ -12,7 +12,53 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Let <span class="process-math">\(F\)</span> be a finite field with <span class="process-math">\(q\)</span> elements. Find, with justification, the number of similarity classes of <span class="process-math">\(2 \times 2\)</span> matrices with entries in <span class="process-math">\(F\text{.}\)</span>
+<div class="para logical">
+<div class="para">Recall that the invariant factors must divide all preceding invariant factors in RCF, and observe that <span class="process-math">\((x^4-1)\)</span> factors as <span class="process-math">\((x^2-1)(x^2+1)\)</span> and <span class="process-math">\((x^2-1)\)</span> factors as <span class="process-math">\((x-1)(x+1)\text{.}\)</span> Given this information, after some fiddling with the factors, we find four possible options for invariant factors of <span class="process-math">\(A\text{:}\)</span>
+</div>
+<ol class="decimal">
+<li><div class="para"><span class="process-math">\(x^6-x^4-x^2+1=(x^2 -1)(x^4- 1)\text{,}\)</span></div></li>
+<li><div class="para"><span class="process-math">\((x^2-1),(x^4-1)\text{,}\)</span></div></li>
+<li><div class="para">
+<span class="process-math">\((x+1), (x-1)(x^4-1)\text{,}\)</span> and</div></li>
+<li><div class="para"><span class="process-math">\((x-1),(x+1)(x^4-1)\text{.}\)</span></div></li>
+</ol>
+<div class="para">Let <span class="process-math">\(f(x)=x^6-x^4-x^2+1, g(x)=(x^4-1),\)</span> <span class="process-math">\(h(x)=x^2-1\text{,}\)</span> <span class="process-math">\(j(x)=(x-1),\)</span> and <span class="process-math">\(k(x)=(x+1)\text{.}\)</span> Observe the companion matrices of each of these polynomials:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C(f)=\begin{bmatrix}
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; -1\\
+1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 1\\
+0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 1\\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0\\
+\end{bmatrix},
+C(g)=\begin{bmatrix}
+0 &amp; 0 &amp; 0 &amp; 1\\
+1 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 1 &amp; 0\\
+\end{bmatrix},
+C(h)=\begin{bmatrix}
+0 &amp; 1\\
+1 &amp; 0\\
+\end{bmatrix},
+C(j)=\begin{bmatrix}
+1\\ 
+\end{bmatrix}\textrm{ and } 
+C(k)=\begin{bmatrix}
+-1\\ 
+\end{bmatrix}
+\end{equation*}
+</div>
+<div class="para">Behold: explicit representatives of each similarity class:</div>
+<ol class="decimal">
+<li><div class="para"><span class="process-math">\(C(f)\text{,}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(C(g)\oplus C(h)\text{,}\)</span></div></li>
+<li><div class="para">
+<span class="process-math">\(C(k)\oplus C(gj)\text{,}\)</span> and</div></li>
+<li><div class="para"><span class="process-math">\(C(j)\oplus C(gk)\text{.}\)</span></div></li>
+</ol>
 </div>
 <span class="incontext"><a href="sec-cayley-hamilton.html#p-2619" class="internal">in-context</a></span>
 </body>

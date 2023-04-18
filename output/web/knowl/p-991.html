@@ -13,18 +13,29 @@
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
 <div class="para logical">
-<div class="para">We have</div>
+<div class="para">Define a funtion</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\begin{aligned}
-\theta((y_1, x_1) (y_2, x_2))  &amp; = 
-\theta(y_1 c_{x_1}(y_2), x_1 x_2) \\
-&amp; = y_1x_1y_2x_1^{-1} x_1 x_2 \\
-&amp; = y_1x_1y_2x_2 = \theta(y_1, x_1) \theta(y_2, x_2)
-\end{aligned}
+i: H \to H \rtimes_\rho K
 \end{equation*}
 </div>
-<div class="para">and thus <span class="process-math">\(\theta\)</span> is a homomorphism. It's kernel is <span class="process-math">\(\{(y,x) \mid y = x^{-1}, y\in H, x\in K \}\text{,}\)</span> which is just <span class="process-math">\(\{e\}\)</span> since <span class="process-math">\(H \cap K = \{e\}\text{.}\)</span> The image of <span class="process-math">\(\theta\)</span> is clearly <span class="process-math">\(KH = G\text{.}\)</span> This proves <span class="process-math">\(\theta\)</span> is an isomorphism. It is obvious that <span class="process-math">\(\theta(K') = K\)</span> and <span class="process-math">\(\theta(H')= H\text{.}\)</span>
+<div class="para">as <span class="process-math">\(i(y) = (y, e)\text{.}\)</span> Then <span class="process-math">\(i\)</span> is a homomorphism, since</div>
+<div class="displaymath process-math">
+\begin{equation*}
+i(y_1) i(y_2) = (y_1,e)(y_2,e) = (y_1\rho(e)(y_2) , ee) = (y_1 y_2, e) = i(y_1y_2).
+\end{equation*}
+</div>
+<div class="para">The map is clearly injective and hence its image is isomorphic to <span class="process-math">\(H\text{.}\)</span> In fact, the image is normal since the second component of</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(y,x) (y_2, e) (\rho(x^{-1})(y^{-1}), x^{-1})
+\end{equation*}
+</div>
+<div class="para">is clearly <span class="process-math">\(e\text{.}\)</span> Let us write this image as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+H' := \{(y,e) \mid y \in H\} \unlhd H \rtimes_\rho K.
+\end{equation*}
 </div>
 </div>
 <span class="incontext"><a href="sec-grp-spds.html#p-991" class="internal">in-context</a></span>

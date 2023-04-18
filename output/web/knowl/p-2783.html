@@ -11,35 +11,31 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para logical">
-<div class="para">Let <span class="process-math">\(\phi\)</span> be any function with the three properties stated in the Theorem. Let <span class="process-math">\(A = (a_{i,j})\)</span> be any square matrix with columns <span class="process-math">\(v_1, \dots, v_n\text{.}\)</span> Note that <span class="process-math">\(v_j = \sum_i a_{i,j} e_i\)</span> where <span class="process-math">\(e_i\)</span> is the <span class="process-math">\(i\)</span>-th standard basis (column) vector. Using the <span class="process-math">\(R\)</span>-multi-linearity property repeatedly we have</div>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<div class="para logical"><ol class="lower-alpha">
+<li><div class="para logical">
+<div class="para">Notice <span class="process-math">\(\cp_A(x)=\det(A-xI)\text{.}\)</span> So we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\begin{aligned}
-\phi(A) &amp; = \phi(\sum_{i_1} a_{i_1,1} e_{i_1},  \sum_{i_2} a_{i_2,2} e_{i_2}, \cdots, \sum_{i_n} a_{i_n,n} e_{i_n}) \\
-&amp; = \sum_{i_1} a_{i_1,1} \phi(e_{i_1},  \sum_{i_2} a_{i_2,2} e_{i_2}, \cdots, \sum_{i_n} a_{i_n,n} e_{i_n}) \\
-&amp; = \sum_{i_1}a_{i_1,1} \sum_{i_2} a_{i_2,2} \phi(e_{i_1},   e_{i_2}, \cdots, \sum_{i_n} a_{i_n,n} e_{i_n}) \\
-&amp; = \vdots \\
-&amp; = \sum_{ i_1, \dots, i_n } a_{i_1, 1} \cdots a_{i_n,n} \phi(e_{i_1}, \dots, e_{i_n}) \\
-\end{aligned}
+\begin{align}\cp_A(x)&amp;=-x\det\begin{bmatrix} -x &amp; 0 \\ 1 &amp; -2-x\end{bmatrix}-(-1)\det\begin{bmatrix} 1 &amp; 0 \\ 0 &amp; -2-x\end{bmatrix}+2\det\begin{bmatrix} 1 &amp; -x \\ 0 &amp; 1\end{bmatrix}\\&amp;=-x(-x(-2-x))+(-2-x)+2(1)\\&amp;=-x^3-2x^2-x\\&amp;-x(x^2+2x+1)\\&amp;=-x(x+1)^2.\end{align}
 \end{equation*}
 </div>
-<div class="para">where each of <span class="process-math">\(i_1, \dots, i_n\)</span> ranges from <span class="process-math">\(1\)</span> to <span class="process-math">\(n\text{.}\)</span> By the alternating property <span class="process-math">\(\phi(e_{i_1}, \dots, e_{i_n}) = 0\)</span> unless all the <span class="process-math">\(i_1, \dots, i_n\)</span> are distinct. If they are distinct, then by Lemma  we have</div>
+<div class="para">Not so bad! Now, the invariant factors all divide the characteristic polynomial and must divide the following factor, so our options for sets of invariant factors are the following: - <span class="process-math">\(\{-x(x+1)^2\}\)</span> - <span class="process-math">\(\{(x+1),-x(x+1)\}\)</span> However, the largest invariant factor is also the minimal polynomial. So we check to see if <span class="process-math">\(-A(A+I)=0\text{.}\)</span> Luckily, the very first calculation shows that this is not the case. Thus the minimum polynomial is the characteristic polynomial is the only invariant factor of <span class="process-math">\(A\text{.}\)</span> Thus the RCF of <span class="process-math">\(A\)</span> is</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\phi(e_{i_1}, \dots, e_{i_n}) = \sign(\s) \phi(e_1, \dots, e_n)
+C(-x^3-2x^2-x)=\begin{bmatrix} 0 &amp; 0 &amp; 0 \\ 1 &amp; 0 &amp; 1 \\0 &amp; 1 &amp; 2\end{bmatrix}.
 \end{equation*}
 </div>
-<div class="para">where <span class="process-math">\(\s\)</span> is the permutation defined as <span class="process-math">\(\s(t) = i_t\text{.}\)</span> Finally, recall <span class="process-math">\(\phi(e_1, \dots, e_n) = 1\)</span> by assumption. Putting all of this together gives</div>
+</div></li>
+<li><div class="para logical">
+<div class="para">Luckily for us, <span class="process-math">\(\cp_A(x)\)</span> factors completely into linear terms! So our elementary divisors are <span class="process-math">\(-x\)</span> and <span class="process-math">\((x+1)^2\text{.}\)</span> We see <span class="process-math">\(J_1(0)=\begin{bmatrix} 0 \end{bmatrix}\)</span> and <span class="process-math">\(J_2(-1)=\begin{bmatrix} -1 &amp; 0 \\ 1 &amp; -1\end{bmatrix}\text{,}\)</span> so the Jordan Canonical form of <span class="process-math">\(A\)</span> is</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\phi(A) = \sum_{\text{ distinct  $i_1, \dots, i_n$}} \sign(\text{the permutation $t \mapsto i_t$}) a_{i_1, 1} \cdots a_{i_n,n}.
+J=\begin{bmatrix} 0 &amp; 0 &amp; 0 \\ 0 &amp; -1 &amp; 0 \\0 &amp; 1 &amp; -1\end{bmatrix}.
 \end{equation*}
 </div>
-<div class="para">This is just a re-writing of the formula for <span class="process-math">\(\det\text{;}\)</span> so <span class="process-math">\(\phi = \det\text{.}\)</span>
-</div>
-</div>
-<span class="incontext"><a href="sec-det.html#p-2783" class="internal">in-context</a></span>
+</div></li>
+</ol></div>
+<span class="incontext"><a href="sec-jcf.html#p-2783" class="internal">in-context</a></span>
 </body>
 </html>

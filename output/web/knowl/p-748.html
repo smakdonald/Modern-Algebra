@@ -12,8 +12,16 @@
 </head>
 <body class="ignore-math">
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<div class="para">Prove that if <span class="process-math">\(G\)</span> is a finite group of odd order, then for any non-identity element <span class="process-math">\(x\in G\text{,}\)</span> <span class="process-math">\(x\)</span> is not conjugate to <span class="process-math">\(x\inv\text{.}\)</span>
+<div class="para logical">
+<div class="para">Note that <span class="process-math">\(|xHx\inv| = |H|\)</span> for all <span class="process-math">\(x \in  G\text{.}\)</span> Also, by the previous problem, the number of distinct subgroups <span class="process-math">\(xHx\inv\)</span> is <span class="process-math">\([G : NG(H)]\text{.}\)</span> Let <span class="process-math">\(n = [G : N_G(H)]\)</span> and <span class="process-math">\(x_iHx\inv_i\)</span> for <span class="process-math">\(i = 1,\dots,n\)</span> the distinct conjugates of <span class="process-math">\(H\text{.}\)</span> Note first that if <span class="process-math">\(n = 1\)</span> then <span class="process-math">\(H \nsg G\)</span> and result holds since <span class="process-math">\(H \neq G\text{.}\)</span> So assume <span class="process-math">\(n\geq2\text{.}\)</span> Since each conjugate contains <span class="process-math">\(|H|-1\)</span> non-identity elements, we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\bigcup_{x\in G} xHx\inv|= | \bigcup^n_{i=1}  x_iHx\inv_i |\geq1 +  \sum^n_{i=1}  (|H|\inv) = 1 + n|H|-n.
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec-lois.html#p-748" class="internal">in-context</a></span>
+<div class="para">As <span class="process-math">\(n = [G : N_G(H)] \leq[G : H]\)</span> (as <span class="process-math">\(H \sse N_G(H)\)</span>), we have <span class="process-math">\(n|H|≤|[G : H]|H| = |G|\text{.}\)</span> Thus, as <span class="process-math">\(n ≥2, 1 + n|H|-n ≤1 + |G|-n &lt; |G|.\)</span>
+</div>
+</div>
+<span class="incontext"><a href="sec-orbit-stab-class-eq.html#p-748" class="internal">in-context</a></span>
 </body>
 </html>
