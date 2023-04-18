@@ -12,30 +12,16 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<div class="para">
-<span class="process-math">\((1) \Rightarrow (2):\)</span> if <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> belong to the same left coset <span class="process-math">\(gH\)</span> of <span class="process-math">\(H\)</span> in <span class="process-math">\(G\)</span> then <span class="process-math">\(x=gh'\)</span> and <span class="process-math">\(y=gh''\)</span> for some <span class="process-math">\(h',h''\in H\text{,}\)</span> so <span class="process-math">\(g=y(h'')^{-1}\)</span> and therefore <span class="process-math">\(x=y(h'')^{-1}h'=yh\)</span> where <span class="process-math">\(h=(h'')^{-1}h'\in H\text{.}\)</span>
-</div> <div class="para">
-<span class="process-math">\((2) \iff (3):\)</span> <span class="process-math">\(x=yh\)</span> for some <span class="process-math">\(h \in H\)</span> <span class="process-math">\(\iff\)</span> <span class="process-math">\(y = xh^{-1}\)</span> and <span class="process-math">\(h^{-1} \in H\text{.}\)</span>
-</div> <div class="para">
-<span class="process-math">\((2) \iff (4):\)</span> <span class="process-math">\(x=yh\)</span> for some <span class="process-math">\(h \in H\)</span> <span class="process-math">\(\iff\)</span> <span class="process-math">\(y^{-1} x=h\in H\text{.}\)</span>
-</div> <div class="para">
-<span class="process-math">\((4) \iff (5):\)</span> <span class="process-math">\(y^{-1} x\in H \iff (y^{-1} x)^{-1}\in H \iff x^{-1}y\in H\text{.}\)</span>
-</div> <div class="para logical">
-<div class="para">
-<span class="process-math">\((2) \Rightarrow (6):\)</span> Suppose <span class="process-math">\(x = yh\)</span> for some <span class="process-math">\(h \in H\text{,}\)</span> then by <span class="process-math">\(2. \Rightarrow 3.\)</span> we also have <span class="process-math">\(y = xh''\)</span> for some <span class="process-math">\(h'' \in H\text{.}\)</span> Then we have</div>
-<div class="displaymath process-math">
+<div class="para logical">
+<div class="para">Surjectivity is immediate from the definition. The group homomorphism property follows from the computation below which uses the definition of <span class="process-math">\(\pi\)</span> and the rule for multiplying cosets in <span class="process-math">\(G/N\text{:}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/lem-cosetfacts.html">
 \begin{equation*}
-xH=\{xh'\mid h'\in H\}=\{yhh'\mid h'\in H\}\subset yH \text{ and}
+\pi(gg')=(gg')N=gN\cdot g'N=\pi(g)\pi(g').
 \end{equation*}
 </div>
-<div class="displaymath process-math">
-\begin{equation*}
-yH=\{yh'\mid h'\in H\}=\{xh''h'\mid h'\in H\}\subset xH,
-\end{equation*}
+<div class="para">Finally, using <a href="" class="xref" data-knowl="./knowl/lem-cosetfacts.html" title="Lemma 3.4: Coset Equivalencies">Lemma 3.4</a>, we have <span class="process-math">\(\operatorname{Ker}(\pi)=\{g\in G\mid gN=e_GN\}=N\text{.}\)</span>
 </div>
-<div class="para">thus <span class="process-math">\(xH=yH\text{.}\)</span>
-</div>
-</div> <div class="para">
-<span class="process-math">\((6) \Rightarrow (1):\)</span> Since <span class="process-math">\(e_G=e_H\in H\text{,}\)</span> we have <span class="process-math">\(x=xe_G\in xH\)</span> and <span class="process-math">\(y=ye_G\in yH\text{.}\)</span> If <span class="process-math">\(xH=yH\)</span> then, <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> belong to the same left coset.</div></article><span class="incontext"><a href="sec-cosets.html#proof-10" class="internal">in-context</a></span>
+</div></article><span class="incontext"><a href="sec-quotient-groups.html#proof-10" class="internal">in-context</a></span>
 </body>
 </html>

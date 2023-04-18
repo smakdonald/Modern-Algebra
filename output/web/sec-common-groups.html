@@ -177,7 +177,7 @@ window.MathJax = {
 <span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
 </ol>
 </li>
-</ol></div></button><span class="treebuttons"><a class="previous-button button" href="group-basics.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="intro-groups.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="sec-gen-cyclic-gp.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="group-basics.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="intro-groups.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="sec-subgroups.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
 <input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
 </div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\def\ann{\operatorname{ann}}
 \newcommand{\Ass}{\operatorname{Ass}}
@@ -474,7 +474,11 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="group-basics.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Group Basics</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="group-basics.html#exercises-1" class="internal"><span class="codenumber">1.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural">
+<li><div class="toc-item"><a href="group-basics.html#subsec-beginnings" class="internal"><span class="title">Binary Operations and Groups</span></a></div></li>
+<li><div class="toc-item"><a href="group-basics.html#subsec-order" class="internal"><span class="title">Order</span></a></div></li>
+<li><div class="toc-item"><a href="group-basics.html#exercises-1" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
 </li>
 <li class="active">
 <div class="toc-item"><a href="sec-common-groups.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Common Groups</span></a></div>
@@ -486,21 +490,20 @@ window.MathJax = {
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="sec-gen-cyclic-gp.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Generators and Cyclic Groups</span></a></div>
+<div class="toc-item"><a href="sec-subgroups.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Subgroups</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#subsec-gp-generators" class="internal"><span class="title">Generators</span></a></div></li>
-<li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#subsec-cyclic-gp" class="internal"><span class="title">Cyclic Groups</span></a></div></li>
-<li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#subsec-cyclic-properties" class="internal"><span class="title">Properties of Cyclic Groups</span></a></div></li>
-<li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#exercises-3" class="internal"><span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="sec-subgroups.html#subsec-subgroup-basics" class="internal"><span class="title">Subgroup Basics</span></a></div></li>
+<li><div class="toc-item"><a href="sec-subgroups.html#subsec-center" class="internal"><span class="title">The Center of a Group</span></a></div></li>
+<li><div class="toc-item"><a href="sec-subgroups.html#exercises-3" class="internal"><span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="sec-subgroups.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Subgroups</span></a></div>
+<div class="toc-item"><a href="sec-gen-cyclic-gp.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Generators and Cyclic Groups</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-subgroups.html#subsec-subgrp-defn-ex" class="internal"><span class="title">Subgroup Basics</span></a></div></li>
-<li><div class="toc-item"><a href="sec-subgroups.html#subsec-center" class="internal"><span class="title">The Center of a Group</span></a></div></li>
-<li><div class="toc-item"><a href="sec-subgroups.html#subsec-gensubgp" class="internal"><span class="title">Generated Subgroups</span></a></div></li>
-<li><div class="toc-item"><a href="sec-subgroups.html#exercises-4" class="internal"><span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#subsec-gp-generators" class="internal"><span class="title">Generators</span></a></div></li>
+<li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#subsec-gensubgp" class="internal"><span class="title">Generated Subgroups</span></a></div></li>
+<li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#subsec-cyclic-gp" class="internal"><span class="title">Cyclic Groups</span></a></div></li>
+<li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#exercises-4" class="internal"><span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -520,10 +523,6 @@ window.MathJax = {
 <li><div class="toc-item"><a href="sec-gpisos.html#exercises-6" class="internal"><span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="sec-cylic-homoms.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Classifying Cyclic Groups</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-cylic-homoms.html#exercises-7" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li></ul>
-</li>
 </ul>
 </li>
 <li>
@@ -531,15 +530,15 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-cosets.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Cosets and Lagrange's Theorem</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-cosets.html#exercises-8" class="internal"><span class="codenumber">3.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-cosets.html#exercises-7" class="internal"><span class="codenumber">3.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-normal-subgroups.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Normal Subgroups</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-normal-subgroups.html#exercises-9" class="internal"><span class="codenumber">3.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-normal-subgroups.html#exercises-8" class="internal"><span class="codenumber">3.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-quotient-groups.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Quotient Groups</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-quotient-groups.html#exercises-10" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-quotient-groups.html#exercises-9" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-isomorphism-thms.html" class="internal"><span class="codenumber">3.4</span> <span class="title">The Isomorphism Theorems</span></a></div>
@@ -552,23 +551,23 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="graction.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Group Actions</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="graction.html#exercises-12" class="internal"><span class="codenumber">4.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="graction.html#exercises-11" class="internal"><span class="codenumber">4.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-left-mult-conjugation.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Left Multiplication and Conjugation</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-left-mult-conjugation.html#subsec-conjugation-action" class="internal"><span class="title">Conjugation</span></a></div></li>
 <li><div class="toc-item"><a href="sec-left-mult-conjugation.html#subsec-left-multiplication" class="internal"><span class="title">Left Regular Action</span></a></div></li>
-<li><div class="toc-item"><a href="sec-left-mult-conjugation.html#exercises-13" class="internal"><span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="sec-left-mult-conjugation.html#exercises-12" class="internal"><span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-lois.html" class="internal"><span class="codenumber">4.3</span> <span class="title">LOIS and Orbit-Stabilizer</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-lois.html#exercises-14" class="internal"><span class="codenumber">4.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-lois.html#exercises-13" class="internal"><span class="codenumber">4.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-class-eq.html" class="internal"><span class="codenumber">4.4</span> <span class="title">The Class Equation</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-class-eq.html#exercises-15" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-class-eq.html#exercises-14" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -577,49 +576,64 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-p-groups.html" class="internal"><span class="codenumber">5.1</span> <span class="title"><span class="process-math">\(p\)</span>-groups and Sylow Subgroups</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-p-groups.html#exercises-16" class="internal"><span class="codenumber">5.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-p-groups.html#exercises-15" class="internal"><span class="codenumber">5.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-sylowthm.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Sylow's Theorem</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-sylowthm.html#exercises-17" class="internal"><span class="codenumber">5.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-sylowthm.html#exercises-16" class="internal"><span class="codenumber">5.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-simple-groups.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Simple Groups</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-simple-groups.html#exercises-18" class="internal"><span class="codenumber">5.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-simple-groups.html#exercises-17" class="internal"><span class="codenumber">5.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="group-products.html" class="internal"><span class="codenumber">6</span> <span class="title">Group Classifications</span></a></div>
+<div class="toc-item"><a href="group-products.html" class="internal"><span class="codenumber">6</span> <span class="title">Group Products</span></a></div>
 <ul class="structural">
 <li>
-<div class="toc-item"><a href="sec-grp-spds.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Semidirect Products</span></a></div>
+<div class="toc-item"><a href="subsec-group-direct-prods.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Direct Products</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-grp-spds.html#subsec-group-direct-prods" class="internal"><span class="title">Internal Direct Products</span></a></div></li>
+<li><div class="toc-item"><a href="subsec-group-direct-prods.html#subsec-external-dps-revisited" class="internal"><span class="title">External Direct Products: Revisited</span></a></div></li>
+<li><div class="toc-item"><a href="subsec-group-direct-prods.html#subsec-HK" class="internal"><span class="title">HK</span></a></div></li>
+<li><div class="toc-item"><a href="subsec-group-direct-prods.html#subsec-internal-recognition" class="internal"><span class="title">Recognition Theorem</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-grp-spds.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Semidirect Products</span></a></div>
+<ul class="structural">
 <li><div class="toc-item"><a href="sec-grp-spds.html#subsec-external-sdps" class="internal"><span class="title">External Semi Direct Products</span></a></div></li>
 <li><div class="toc-item"><a href="sec-grp-spds.html#subsec-internal-sdps" class="internal"><span class="title">Internal Semi Direct Products</span></a></div></li>
-<li><div class="toc-item"><a href="sec-grp-spds.html#exercises-19" class="internal"><span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="sec-grp-spds.html#exercises-18" class="internal"><span class="title">Exercises</span></a></div></li>
 </ul>
-</li>
-<li>
-<div class="toc-item"><a href="sec-order-pq.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Groups of Order <span class="process-math">\(pq\)</span></span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-order-pq.html#exercises-20" class="internal"><span class="codenumber">6.2</span> <span class="title">Exercises</span></a></div></li></ul>
-</li>
-<li>
-<div class="toc-item"><a href="sec-ftfgag.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Abelian Classification</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-ftfgag.html#exercises-decomp" class="internal"><span class="codenumber">6.3</span> <span class="title">Exercises</span></a></div></li></ul>
-</li>
-<li>
-<div class="toc-item"><a href="sec-classifications.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Groups Up to Isomorphism</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-classifications.html#exercises-22" class="internal"><span class="codenumber">6.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="ch-gp-extras.html" class="internal"><span class="codenumber">7</span> <span class="title">Extras</span></a></div>
+<div class="toc-item"><a href="ch-group-classifications.html" class="internal"><span class="codenumber">7</span> <span class="title">Classifications</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-solve.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Solvable Groups</span></a></div></li>
-<li><div class="toc-item"><a href="sec-smallorder.html" class="internal"><span class="codenumber">7.2</span> <span class="title">All Groups Up to Order 60</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-classifying-cyclic-groups.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Cyclic Groups</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-classifying-cyclic-groups.html#exercises-19" class="internal"><span class="codenumber">7.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-ftfgag.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Finitely Generated Abelian Groups</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-ftfgag.html#exercises-decomp" class="internal"><span class="codenumber">7.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-classifications.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Groups of Specific Order</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-classifications.html#sec-order-pq" class="internal"><span class="title">Groups of Order <span class="process-math">\(pq\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec-classifications.html#exercises-21" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch-gp-extras.html" class="internal"><span class="codenumber">8</span> <span class="title">Extras</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-solve.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Solvable Groups</span></a></div></li>
+<li><div class="toc-item"><a href="sec-smallorder.html" class="internal"><span class="codenumber">8.2</span> <span class="title">All Groups Up to Order 60</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -635,16 +649,16 @@ window.MathJax = {
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-defn-ex.html#subsec-first-ex" class="internal"><span class="title">Definition and First Properties</span></a></div></li>
 <li><div class="toc-item"><a href="sec-defn-ex.html#subsec-units" class="internal"><span class="title">Units, Zero Divisors, Integral Domains</span></a></div></li>
-<li><div class="toc-item"><a href="sec-defn-ex.html#exercises-23" class="internal"><span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="sec-defn-ex.html#exercises-22" class="internal"><span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-subrings.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Subrings</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-subrings.html#exercises-24" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-subrings.html#exercises-23" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-ring-hom.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Homomorphisms</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-ring-hom.html#exercises-25" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-ring-hom.html#exercises-24" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -656,7 +670,7 @@ window.MathJax = {
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-ideals.html#subsec-ideal-def" class="internal"><span class="title">Definition and First Properties</span></a></div></li>
 <li><div class="toc-item"><a href="sec-ideals.html#subsec-generated-ideals" class="internal"><span class="title">Generated Ideals</span></a></div></li>
-<li><div class="toc-item"><a href="sec-ideals.html#exercises-26" class="internal"><span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="sec-ideals.html#exercises-25" class="internal"><span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -664,7 +678,7 @@ window.MathJax = {
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-ring-quotients.html#subsec-quotient-rings" class="internal"><span class="title">Quotient Rings</span></a></div></li>
 <li><div class="toc-item"><a href="sec-ring-quotients.html#subsec-ring-iso-thms" class="internal"><span class="title">The Ring Isomorphism Theorems</span></a></div></li>
-<li><div class="toc-item"><a href="sec-ring-quotients.html#exercises-27" class="internal"><span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="sec-ring-quotients.html#exercises-26" class="internal"><span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -677,16 +691,16 @@ window.MathJax = {
 <ul class="structural">
 <li><div class="toc-item"><a href="subsec-primemax-ideals.html#subsec-prime-ideals" class="internal"><span class="title">Prime Ideals</span></a></div></li>
 <li><div class="toc-item"><a href="subsec-primemax-ideals.html#subsec-maximal-ideals" class="internal"><span class="title">Maximal Ideals</span></a></div></li>
-<li><div class="toc-item"><a href="subsec-primemax-ideals.html#exercises-28" class="internal"><span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="subsec-primemax-ideals.html#exercises-27" class="internal"><span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="subsec-polyrings.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Polynomial Rings</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="subsec-polyrings.html#exercises-29" class="internal"><span class="codenumber">3.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="subsec-polyrings.html#exercises-28" class="internal"><span class="codenumber">3.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-field-of-fractions.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Fields of Fractions</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-field-of-fractions.html#exercises-30" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-field-of-fractions.html#exercises-29" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -695,19 +709,19 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-eds.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Euclidian Domains</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-eds.html#exercises-31" class="internal"><span class="codenumber">4.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-eds.html#exercises-30" class="internal"><span class="codenumber">4.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-pids.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Principal Ideal Domains</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-pids.html#exercises-32" class="internal"><span class="codenumber">4.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-pids.html#exercises-31" class="internal"><span class="codenumber">4.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="subsec-ufds.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Unique Factorization Domains</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="subsec-ufds.html#exercises-33" class="internal"><span class="codenumber">4.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="subsec-ufds.html#exercises-32" class="internal"><span class="codenumber">4.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="subsec-noeth.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Noetherian Domains</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="subsec-noeth.html#exercises-34" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="subsec-noeth.html#exercises-33" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -716,11 +730,11 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-roots.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Roots of Unity</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-roots.html#exercises-35" class="internal"><span class="codenumber">5.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-roots.html#exercises-34" class="internal"><span class="codenumber">5.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-irrpoly.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Irredicuble Polynomials</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-irrpoly.html#exercises-36" class="internal"><span class="codenumber">5.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-irrpoly.html#exercises-35" class="internal"><span class="codenumber">5.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -738,15 +752,15 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-defmod.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Module Basics</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-defmod.html#exercises-37" class="internal"><span class="codenumber">1.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-defmod.html#exercises-36" class="internal"><span class="codenumber">1.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-modhom.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Module Homomorphisms</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-modhom.html#exercises-38" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-modhom.html#exercises-37" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-quote.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Quotient Modules</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-quote.html#exercises-39" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-quote.html#exercises-38" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -755,15 +769,15 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-linear.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Linear Independence</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-linear.html#exercises-40" class="internal"><span class="codenumber">2.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-linear.html#exercises-39" class="internal"><span class="codenumber">2.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-modgen.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Generated Modules</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-modgen.html#exercises-41" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-modgen.html#exercises-40" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-bases.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Bases</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-bases.html#exercises-42" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-bases.html#exercises-41" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -772,11 +786,11 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-vecbasis.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Existence of Bases</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-vecbasis.html#exercises-43" class="internal"><span class="codenumber">3.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-vecbasis.html#exercises-42" class="internal"><span class="codenumber">3.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-ranknul.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Dimension and Rank-Nullity</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-ranknul.html#exercises-44" class="internal"><span class="codenumber">3.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-ranknul.html#exercises-43" class="internal"><span class="codenumber">3.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -785,20 +799,20 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-basics.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Basics</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-basics.html#exercises-45" class="internal"><span class="codenumber">4.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-basics.html#exercises-44" class="internal"><span class="codenumber">4.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li><div class="toc-item"><a href="subsec-free-modules-and-matrices.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Free Modules and Matrices</span></a></div></li>
 <li>
 <div class="toc-item"><a href="sec-cob.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Change of Basis</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-cob.html#exercises-46" class="internal"><span class="codenumber">4.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-cob.html#exercises-45" class="internal"><span class="codenumber">4.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-elematix.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Elementary Matrices</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-elematix.html#exercises-47" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-elematix.html#exercises-46" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-operator.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Linear Operators on Free Modules</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-operator.html#exercises-48" class="internal"><span class="codenumber">4.5</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-operator.html#exercises-47" class="internal"><span class="codenumber">4.5</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -807,16 +821,16 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-modpres.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Finitely Presented Modules</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-modpres.html#exercises-49" class="internal"><span class="codenumber">5.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-modpres.html#exercises-48" class="internal"><span class="codenumber">5.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-snf.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Smith Normal Form</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-snf.html#exercises-50" class="internal"><span class="codenumber">5.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-snf.html#exercises-49" class="internal"><span class="codenumber">5.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li><div class="toc-item"><a href="sec-noeth.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Noetherian Rings</span></a></div></li>
 <li>
 <div class="toc-item"><a href="sec-modclass.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Classifications</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-modclass.html#exercises-51" class="internal"><span class="codenumber">5.4</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-modclass.html#exercises-50" class="internal"><span class="codenumber">5.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -825,15 +839,15 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-rcf.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Rational Canonical Form</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-rcf.html#exercises-52" class="internal"><span class="codenumber">6.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-rcf.html#exercises-51" class="internal"><span class="codenumber">6.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-cayley-hamilton.html" class="internal"><span class="codenumber">6.2</span> <span class="title">The Cayley-Hamilton Theorem</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-cayley-hamilton.html#exercises-53" class="internal"><span class="codenumber">6.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-cayley-hamilton.html#exercises-52" class="internal"><span class="codenumber">6.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-jcf.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Jordan Canonical Form</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-jcf.html#exercises-54" class="internal"><span class="codenumber">6.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-jcf.html#exercises-53" class="internal"><span class="codenumber">6.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -841,7 +855,7 @@ window.MathJax = {
 <div class="toc-item"><a href="ch-mod-extras.html" class="internal"><span class="codenumber">7</span> <span class="title">Extras</span></a></div>
 <ul class="structural"><li>
 <div class="toc-item"><a href="sec-det.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Determinants</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-det.html#exercises-55" class="internal"><span class="codenumber">7.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-det.html#exercises-54" class="internal"><span class="codenumber">7.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li></ul>
 </li>
 </ul>
@@ -854,19 +868,19 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="field-extension-basics.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Field Extension Basics</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="field-extension-basics.html#exercises-56" class="internal"><span class="codenumber">1.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="field-extension-basics.html#exercises-55" class="internal"><span class="codenumber">1.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-algebraic.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Algebraic Extensions</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-algebraic.html#exercises-57" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-algebraic.html#exercises-56" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-closure.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Algebraic Closures</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-closure.html#exercises-58" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-closure.html#exercises-57" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-splitting.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Splitting Fields</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-splitting.html#exercises-59" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-splitting.html#exercises-58" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -875,15 +889,15 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-separable.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Separability</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-separable.html#exercises-60" class="internal"><span class="codenumber">2.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-separable.html#exercises-59" class="internal"><span class="codenumber">2.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-galext.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Galois Extensions</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-galext.html#exercises-61" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-galext.html#exercises-60" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-ftgt.html" class="internal"><span class="codenumber">2.3</span> <span class="title">The Fundamental Theorem of Galois Theory</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-ftgt.html#exercises-62" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-ftgt.html#exercises-61" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -905,16 +919,16 @@ window.MathJax = {
 <div class="toc-item"><a href="app-foundations.html" class="internal"><span class="codenumber">A</span> <span class="title">Foundational Knowledge</span></a></div>
 <ul class="structural">
 <li>
-<div class="toc-item"><a href="sec-.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Sets, Functions, Constructions</span></a></div>
+<div class="toc-item"><a href="sec-sets-functions.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Sets, Functions, Constructions</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-.html#subsec-sets" class="internal"><span class="title">Sets</span></a></div></li>
-<li><div class="toc-item"><a href="sec-.html#subsec-functions" class="internal"><span class="title">Functions</span></a></div></li>
+<li><div class="toc-item"><a href="sec-sets-functions.html#subsec-sets" class="internal"><span class="title">Sets</span></a></div></li>
+<li><div class="toc-item"><a href="sec-sets-functions.html#subsec-functions" class="internal"><span class="title">Functions</span></a></div></li>
 <li>
-<div class="toc-item"><a href="sec-.html#subsec-set-constructions" class="internal"><span class="title">Set Constructions</span></a></div>
+<div class="toc-item"><a href="sec-sets-functions.html#subsec-set-constructions" class="internal"><span class="title">Set Constructions</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-.html#subsubsec-subsets" class="internal"><span class="title">Subsets</span></a></div></li>
-<li><div class="toc-item"><a href="sec-.html#subsubsec-product-sets" class="internal"><span class="title">Product Sets</span></a></div></li>
-<li><div class="toc-item"><a href="sec-.html#subsubsec-quotient-sets" class="internal"><span class="title">Quotient Sets</span></a></div></li>
+<li><div class="toc-item"><a href="sec-sets-functions.html#subsubsec-subsets" class="internal"><span class="title">Subsets</span></a></div></li>
+<li><div class="toc-item"><a href="sec-sets-functions.html#subsubsec-product-sets" class="internal"><span class="title">Product Sets</span></a></div></li>
+<li><div class="toc-item"><a href="sec-sets-functions.html#subsubsec-quotient-sets" class="internal"><span class="title">Quotient Sets</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -926,7 +940,7 @@ window.MathJax = {
 <li><div class="toc-item"><a href="app-notation.html" class="internal"><span class="codenumber">B</span> <span class="title">Notation</span></a></div></li>
 <li><div class="toc-item"><a href="appendix-list-definitions.html" class="internal"><span class="codenumber">C</span> <span class="title">List of Definitions</span></a></div></li>
 <li><div class="toc-item"><a href="appendix-list-results.html" class="internal"><span class="codenumber">D</span> <span class="title">List of Results</span></a></div></li>
-<li><div class="toc-item"><a href="app-biograhy.html" class="internal"><span class="codenumber">E</span> <span class="title">Biographies</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-biograhy.html" class="internal"><span class="codenumber">E</span> <span class="title">Biographies</span></a></div></li>
 <li><div class="toc-item"><a href="colophon-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
 </li>
@@ -934,47 +948,47 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-common-groups"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.2</span> <span class="title">Common Groups</span>
 </h2>
-<section class="introduction" id="introduction-3"><blockquote class="blockquote" id="blockquote-2">
-<div class="para" id="p-99">“Madness is the exception in individuals and the rule in groups.”</div> <cite class="attribution">―Friedrich Nietzsche</cite>
+<section class="introduction" id="introduction-4"><blockquote class="blockquote" id="blockquote-2">
+<div class="para" id="p-100">“Madness is the exception in individuals and the rule in groups.”</div> <cite class="attribution">―Friedrich Nietzsche</cite>
 </blockquote></section><section class="subsection" id="subsec-d2n"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Dihedral Groups</span>
 </h3>
-<div class="para" id="p-100">We now discuss the important example of dihedral groups in detail.</div>
+<div class="para" id="p-101">We now discuss the important example of dihedral groups in detail.</div>
 <article class="definition definition-like" id="def-iso-and-sym"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.19</span><span class="period">.</span><span class="space"> </span><span class="title">Isometry and Symmetry.</span>
-</h4> <div class="para" id="p-101">For any integer <span class="process-math">\(n \geq 3\text{,}\)</span> let <span class="process-math">\(P_n\)</span> denote a regular <span class="process-math">\(n\)</span>-gon. An <em class="emphasis">isometry</em> of the plane is a function <span class="process-math">\(f: {\mathbb{R}}^2 \to {\mathbb{R}}^2\)</span> that is a bijection and preserves the Euclideal distance <span class="process-math">\((d(f(A),f(B))=d(A,B)\)</span> for any <span class="process-math">\(A,B\in {\mathbb{R}}^2\)</span>). A <em class="emphasis">symmetry</em> of <span class="process-math">\(P_n\)</span> is an isometry that maps <span class="process-math">\(P_n\)</span> to itself.</div></article><article class="remark remark-like" id="remark-4"><h4 class="heading">
+</h4> <div class="para" id="p-102">For any integer <span class="process-math">\(n \geq 3\text{,}\)</span> let <span class="process-math">\(P_n\)</span> denote a regular <span class="process-math">\(n\)</span>-gon. An <em class="emphasis">isometry</em> of the plane is a function <span class="process-math">\(f: {\mathbb{R}}^2 \to {\mathbb{R}}^2\)</span> that is a bijection and preserves the Euclideal distance <span class="process-math">\((d(f(A),f(B))=d(A,B)\)</span> for any <span class="process-math">\(A,B\in {\mathbb{R}}^2\)</span>). A <em class="emphasis">symmetry</em> of <span class="process-math">\(P_n\)</span> is an isometry that maps <span class="process-math">\(P_n\)</span> to itself.</div></article><article class="remark remark-like" id="remark-4"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.20</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-102">By the latter I don't mean that <span class="process-math">\(f\)</span> fixes each of the points of <span class="process-math">\(P_n\text{,}\)</span> but rather that <span class="process-math">\(f(P_n) = P_n\text{,}\)</span> that is every point of <span class="process-math">\(P_n\)</span> is mapped to a (possibly different) point of <span class="process-math">\(P_n\)</span> and every point of <span class="process-math">\(P_n\)</span> is the image of some point in <span class="process-math">\(P_n\)</span> via <span class="process-math">\(f\text{.}\)</span> It is clear that the composition of two symmetries of <span class="process-math">\(P_n\)</span> is again a symmetry of <span class="process-math">\(P_n\text{,}\)</span> so that composition is a binary operation on <span class="process-math">\(D_n\text{.}\)</span>
+<div class="para" id="p-103">By the latter I don't mean that <span class="process-math">\(f\)</span> fixes each of the points of <span class="process-math">\(P_n\text{,}\)</span> but rather that <span class="process-math">\(f(P_n) = P_n\text{,}\)</span> that is every point of <span class="process-math">\(P_n\)</span> is mapped to a (possibly different) point of <span class="process-math">\(P_n\)</span> and every point of <span class="process-math">\(P_n\)</span> is the image of some point in <span class="process-math">\(P_n\)</span> via <span class="process-math">\(f\text{.}\)</span> It is clear that the composition of two symmetries of <span class="process-math">\(P_n\)</span> is again a symmetry of <span class="process-math">\(P_n\text{,}\)</span> so that composition is a binary operation on <span class="process-math">\(D_n\text{.}\)</span>
 </div></article><article class="definition definition-like" id="def-d2n"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.21</span><span class="period">.</span><span class="space"> </span><span class="title">Dihedral Group.</span>
-</h4> <div class="para" id="p-103">The <em class="emphasis">dihedral group</em> <span class="process-math">\(D_{2n}\)</span> is the set of symmetries of the regular <span class="process-math">\(n\)</span>-gon <span class="process-math">\(P_n\)</span> equipped with the binary operation given by composition. </div></article><article class="lemma theorem-like" id="lem-d2n-elements"><h4 class="heading">
+</h4> <div class="para" id="p-104">The <em class="emphasis">dihedral group</em> <span class="process-math">\(D_{2n}\)</span> is the set of symmetries of the regular <span class="process-math">\(n\)</span>-gon <span class="process-math">\(P_n\)</span> equipped with the binary operation given by composition. </div></article><article class="lemma theorem-like" id="lem-d2n-elements"><h4 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">1.22</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-104">Assume that the regular <span class="process-math">\(n\)</span>-gon <span class="process-math">\(P_n\)</span> is drawn in the plane with its center at the origin and one vertex on the <span class="process-math">\(x\)</span> axis.</div> <div class="para" id="p-105">If <span class="process-math">\(r\)</span> denotes rotation about the origin by <span class="process-math">\(\frac{2\pi}{n}\)</span> radians counter-clockwise, then <span class="process-math">\(r \in D_{2n}\text{.}\)</span> It's inverse is rotation by <span class="process-math">\(2 \pi/n\)</span> clock-wise.</div> <div class="para" id="p-106">For another example, for any line of symmetry of <span class="process-math">\(P_n\text{,}\)</span> reflection about that line gives an element of <span class="process-math">\(D_{2n}\text{.}\)</span> By our convention for how to draw <span class="process-math">\(P_n\text{,}\)</span> the <span class="process-math">\(x\)</span>-axis is a line of symmetry for <span class="process-math">\(P_n\text{,}\)</span> and we let <span class="process-math">\(s\)</span> denote reflection about the <span class="process-math">\(x\)</span>-axis.</div> <div class="para logical" id="p-107"><ol class="decimal">
-<li id="li-59"><div class="para" id="p-108">
+<div class="para" id="p-105">Assume that the regular <span class="process-math">\(n\)</span>-gon <span class="process-math">\(P_n\)</span> is drawn in the plane with its center at the origin and one vertex on the <span class="process-math">\(x\)</span> axis.</div> <div class="para" id="p-106">If <span class="process-math">\(r\)</span> denotes rotation about the origin by <span class="process-math">\(\frac{2\pi}{n}\)</span> radians counter-clockwise, then <span class="process-math">\(r \in D_{2n}\text{.}\)</span> It's inverse is rotation by <span class="process-math">\(2 \pi/n\)</span> clock-wise.</div> <div class="para" id="p-107">For another example, for any line of symmetry of <span class="process-math">\(P_n\text{,}\)</span> reflection about that line gives an element of <span class="process-math">\(D_{2n}\text{.}\)</span> By our convention for how to draw <span class="process-math">\(P_n\text{,}\)</span> the <span class="process-math">\(x\)</span>-axis is a line of symmetry for <span class="process-math">\(P_n\text{,}\)</span> and we let <span class="process-math">\(s\)</span> denote reflection about the <span class="process-math">\(x\)</span>-axis.</div> <div class="para logical" id="p-108"><ol class="decimal">
+<li id="li-59"><div class="para" id="p-109">
 <span class="process-math">\(|r|=n\)</span> and <span class="process-math">\(|s|=2\text{.}\)</span>
 </div></li>
-<li id="li-60"><div class="para" id="p-109">
+<li id="li-60"><div class="para" id="p-110">
 <span class="process-math">\(sr\)</span> is a reflection and hence that <span class="process-math">\(srsr=1_{{\mathbb{R}}^2}\text{.}\)</span>
 </div></li>
 </ol></div></article><article class="theorem theorem-like" id="thm-d2n-order"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.23</span><span class="period">.</span>
 </h4>
-<div class="para logical" id="p-110"><ol class="decimal">
-<li id="li-61"><div class="para" id="p-111">Every element in <span class="process-math">\(D_{2n}\)</span> can be written as <span class="process-math">\(r^j\)</span> or <span class="process-math">\(r^js\)</span> for <span class="process-math">\(0 \leq j \leq n-1\text{.}\)</span>
+<div class="para logical" id="p-111"><ol class="decimal">
+<li id="li-61"><div class="para" id="p-112">Every element in <span class="process-math">\(D_{2n}\)</span> can be written as <span class="process-math">\(r^j\)</span> or <span class="process-math">\(r^js\)</span> for <span class="process-math">\(0 \leq j \leq n-1\text{.}\)</span>
 </div></li>
-<li id="li-62"><div class="para" id="p-112"><span class="process-math">\(\displaystyle |D_{2n}|=2n\)</span></div></li>
+<li id="li-62"><div class="para" id="p-113"><span class="process-math">\(\displaystyle |D_{2n}|=2n\)</span></div></li>
 </ol></div></article></section><section class="subsection" id="subsec-symmetric"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Symmetric Groups</span>
 </h3>
-<div class="para" id="p-113">Let's introduce another very important example: symmetric groups.</div>
+<div class="para" id="p-114">Let's introduce another very important example: symmetric groups.</div>
 <article class="definition definition-like" id="def-permutation"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.24</span><span class="period">.</span><span class="space"> </span><span class="title">Permutation.</span>
-</h4> <div class="para" id="p-114">A <em class="emphasis">permutation</em> of a set <span class="process-math">\(X\)</span> is a bijective function <span class="process-math">\(\sigma:X\to X\text{.}\)</span>
+</h4> <div class="para" id="p-115">A <em class="emphasis">permutation</em> of a set <span class="process-math">\(X\)</span> is a bijective function <span class="process-math">\(\sigma:X\to X\text{.}\)</span>
 </div></article><article class="definition definition-like" id="def-perm-group"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.25</span><span class="period">.</span><span class="space"> </span><span class="title">Symmetric Group.</span>
-</h4> <div class="para" id="p-115">For any <span class="process-math">\(n\in\N\text{,}\)</span> the <em class="emphasis">symmetric group</em> is the set <span class="process-math">\(S_n\)</span> of all permutations of the set <span class="process-math">\(\{1,\dots,n\}\)</span> equipped with the composition of functions as its binary operation. </div> <div class="para logical" id="p-116">
+</h4> <div class="para" id="p-116">For any <span class="process-math">\(n\in\N\text{,}\)</span> the <em class="emphasis">symmetric group</em> is the set <span class="process-math">\(S_n\)</span> of all permutations of the set <span class="process-math">\(\{1,\dots,n\}\)</span> equipped with the composition of functions as its binary operation. </div> <div class="para logical" id="p-117">
 <div class="para">We can write an element <span class="process-math">\(\sigma\)</span> of <span class="process-math">\(S_n\)</span> as a table of values:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -987,10 +1001,10 @@ window.MathJax = {
 </div></article><article class="remark remark-like" id="remark-5"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.26</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-117">For any finite set <span class="process-math">\(|X|=n\text{,}\)</span> we may think of <span class="process-math">\(S_n\)</span> as the <em class="emphasis">permutation group</em> of <span class="process-math">\(X\text{,}\)</span> which is sometimes written <span class="process-math">\(\operatorname{Perm}(X)\text{.}\)</span>
+<div class="para" id="p-118">For any finite set <span class="process-math">\(|X|=n\text{,}\)</span> we may think of <span class="process-math">\(S_n\)</span> as the <em class="emphasis">permutation group</em> of <span class="process-math">\(X\text{,}\)</span> which is sometimes written <span class="process-math">\(\operatorname{Perm}(X)\text{.}\)</span>
 </div></article><article class="definition definition-like" id="def-cycle"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.27</span><span class="period">.</span><span class="space"> </span><span class="title">Cycles and Transpositions.</span>
-</h4> <div class="para logical" id="p-118">
+</h4> <div class="para logical" id="p-119">
 <div class="para">If <span class="process-math">\(i_1, \dots, i_m\)</span> are distinct integers between <span class="process-math">\(1\)</span> and <span class="process-math">\(n\text{,}\)</span> then <span class="process-math">\(\sigma=(i_1 \, i_2 \, \dots i_m)\)</span> denotes the element of <span class="process-math">\(S_n\)</span> that satisfies</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1001,11 +1015,11 @@ window.MathJax = {
 </div></article><article class="remark remark-like" id="remark-6"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.28</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-119">Note that distinct lists of integers represent the same cycle if they are cyclical rearrangements of each other, e.g., <span class="process-math">\((1 \, 2 \, 3) = (2 \, 3 \, 1)\text{.}\)</span> However, <span class="process-math">\((1 \, 2 \, 3) \neq (2 \, 1 \, 3)\text{.}\)</span>
+<div class="para" id="p-120">Note that distinct lists of integers represent the same cycle if they are cyclical rearrangements of each other, e.g., <span class="process-math">\((1 \, 2 \, 3) = (2 \, 3 \, 1)\text{.}\)</span> However, <span class="process-math">\((1 \, 2 \, 3) \neq (2 \, 1 \, 3)\text{.}\)</span>
 </div></article><article class="proposition theorem-like" id="prop-disjoint-cycles-commute"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.29</span><span class="period">.</span>
 </h4>
-<div class="para logical" id="p-120">
+<div class="para logical" id="p-121">
 <div class="para">Disjoint cycles commute, that is, if <span class="process-math">\(i_1 , i_2 \, \dots i_m, j_1 , j_2 \, \dots j_k\in [n]\text{,}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -1024,20 +1038,20 @@ window.MathJax = {
 </div></article><article class="proposition theorem-like" id="prop-cycledecomp"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.30</span><span class="period">.</span>
 </h4>
-<div class="para logical" id="p-121"><ol class="decimal">
-<li id="li-63"><div class="para" id="p-122">Each <span class="process-math">\(\sigma\in S_n\)</span> can be written as a product (composition) of disjoint cycles, and such a factorization is unique up to the ordering of the factors.</div></li>
-<li id="li-64"><div class="para" id="p-123">Each <span class="process-math">\(\sigma\in S_n\)</span> can be written a product of transpositions.</div></li>
+<div class="para logical" id="p-122"><ol class="decimal">
+<li id="li-63"><div class="para" id="p-123">Each <span class="process-math">\(\sigma\in S_n\)</span> can be written as a product (composition) of disjoint cycles, and such a factorization is unique up to the ordering of the factors.</div></li>
+<li id="li-64"><div class="para" id="p-124">Each <span class="process-math">\(\sigma\in S_n\)</span> can be written a product of transpositions.</div></li>
 </ol></div></article><article class="remark remark-like" id="remark-7"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.31</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-124">For the uniqueness part of statement (1) in the above proposition one needs to establish a convention regarding 1-cycles, that is one needs to stipulate either that the 1-cycles will not be recorded (which gives the shortest such factorization) or that all the 1-cycles will be recorded (which gives the longest such factorization, but also the only one that makes it clear what the number <span class="process-math">\(n\)</span> is).</div></article></section><section class="subsection" id="subsec-quat"><h3 class="heading hide-type">
+<div class="para" id="p-125">For the uniqueness part of statement (1) in the above proposition one needs to establish a convention regarding 1-cycles, that is one needs to stipulate either that the 1-cycles will not be recorded (which gives the shortest such factorization) or that all the 1-cycles will be recorded (which gives the longest such factorization, but also the only one that makes it clear what the number <span class="process-math">\(n\)</span> is).</div></article></section><section class="subsection" id="subsec-quat"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">The Quaternions</span>
 </h3>
-<div class="para" id="p-125">For our last example we mention the group of <em class="emphasis">quaternions</em>, written <span class="process-math">\(Q_8\text{.}\)</span>
+<div class="para" id="p-126">For our last example we mention the group of <em class="emphasis">quaternions</em>, written <span class="process-math">\(Q_8\text{.}\)</span>
 </div>
 <article class="definition definition-like" id="def-quaternions"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.32</span><span class="period">.</span><span class="space"> </span><span class="title">Quaternions.</span>
-</h4> <div class="para logical" id="p-126">
+</h4> <div class="para logical" id="p-127">
 <div class="para">The <em class="emphasis">quaternion group</em> <span class="process-math">\(Q_8\)</span> is a set with <span class="process-math">\(8\)</span> elements</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1055,60 +1069,60 @@ i^2 = -1, j^2 = -1, k^2 =-1, ij = k, jk = i, ki = j,
 (-1)i = -i, (-1)j = -j, (-1)k = -k, (-1)(-1) = 1.
 \end{equation*}
 </div>
-</div></article><div class="para" id="p-127">The quaternion group arises in the study of rotations in three dimensions. It has important applications in computer graphics and computer vision, as well as in physics and algebra.</div>
-<div class="para" id="p-128">There isn't much for us to do with <span class="process-math">\(Q_8\)</span> right now, but you'd be surprised by the unusual places this group manages to crop up...</div></section><section class="exercises" id="exercises-2"><h3 class="heading hide-type">
+</div></article><div class="para" id="p-128">The quaternion group arises in the study of rotations in three dimensions. It has important applications in computer graphics and computer vision, as well as in physics and algebra.</div>
+<div class="para" id="p-129">There isn't much for us to do with <span class="process-math">\(Q_8\)</span> right now, but you'd be surprised by the unusual places this group manages to crop up...</div></section><section class="exercises" id="exercises-2"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
 <div class="exercisegroup" id="exercisegroup-3">
 <h4 class="heading"><span class="title">Computations and Examples.</span></h4>
-<div class="introduction" id="introduction-4"><div class="para" id="p-129"></div></div>
+<div class="introduction" id="introduction-5"><div class="para" id="p-130"></div></div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-11"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-11"><h5 class="heading">
 <span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">Heinous Commutes.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-11"><article class="exercise exercise-like"><div class="para" id="p-130">Provide explicit examples to show <span class="process-math">\(D_{2n}, S_n\text{,}\)</span> and <span class="process-math">\(Q_8\)</span> are <em class="emphasis">not</em> abelian groups.</div></article></div>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-11"><article class="exercise exercise-like"><div class="para" id="p-131">Provide explicit examples to show <span class="process-math">\(D_{2n}, S_n\text{,}\)</span> and <span class="process-math">\(Q_8\)</span> are <em class="emphasis">not</em> abelian groups.</div></article></div>
 <article class="exercise exercise-like" id="exercise-12"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-12"><h5 class="heading">
 <span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">Element Orders.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-12"><article class="exercise exercise-like"><div class="para" id="p-131">Find the order</div></article></div>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-12"><article class="exercise exercise-like"><div class="para" id="p-132">Find the order</div></article></div>
 <article class="exercise exercise-like" id="exercise-13"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-13"><h5 class="heading">
 <span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title"><span class="process-math">\(1\)</span>-Cycles in <span class="process-math">\(S_n\)</span>.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-13"><article class="exercise exercise-like"><div class="para" id="p-132">Determine the number of <span class="process-math">\(1\)</span>-cycles in <span class="process-math">\(S_n\text{.}\)</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-13"><article class="exercise exercise-like"><div class="para" id="p-133">Determine the number of <span class="process-math">\(1\)</span>-cycles in <span class="process-math">\(S_n\text{.}\)</span>
 </div></article></div>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-4">
 <h4 class="heading"><span class="title">Formal Proofs.</span></h4>
-<div class="introduction" id="introduction-5"><div class="para" id="p-133"></div></div>
+<div class="introduction" id="introduction-6"><div class="para" id="p-134"></div></div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-14"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-14"><h5 class="heading">
 <span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">Group Verifications.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-14"><article class="exercise exercise-like"><div class="para logical" id="p-134">
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-14"><article class="exercise exercise-like"><div class="para logical" id="p-135">
 <div class="para">Verify that the following are indeed groups:</div>
 <ol class="lower-alpha">
-<li id="li-65"><div class="para" id="p-135">The dihedral group <span class="process-math">\(D_{2n}\)</span>
+<li id="li-65"><div class="para" id="p-136">The dihedral group <span class="process-math">\(D_{2n}\)</span>
 </div></li>
-<li id="li-66"><div class="para" id="p-136">The symmetric group <span class="process-math">\(S_n\)</span>
+<li id="li-66"><div class="para" id="p-137">The symmetric group <span class="process-math">\(S_n\)</span>
 </div></li>
-<li id="li-67"><div class="para" id="p-137">The quaternion group <span class="process-math">\(Q_8\)</span>
+<li id="li-67"><div class="para" id="p-138">The quaternion group <span class="process-math">\(Q_8\)</span>
 </div></li>
 </ol>
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-15"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-15"><h5 class="heading">
 <span class="codenumber">5<span class="period">.</span></span><span class="space"> </span><span class="title">Uncommon Groups.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-15"><article class="exercise exercise-like"><div class="para logical" id="p-138"><ol class="lower-alpha">
-<li id="li-68"><div class="para" id="p-139">The Rubik's Cube Group (coming soon)</div></li>
-<li id="li-69"><div class="para" id="p-140">Juggling Groups (coming soon)</div></li>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-15"><article class="exercise exercise-like"><div class="para logical" id="p-139"><ol class="lower-alpha">
+<li id="li-68"><div class="para" id="p-140">The Rubik's Cube Group (coming soon)</div></li>
+<li id="li-69"><div class="para" id="p-141">Juggling Groups (coming soon)</div></li>
 </ol></div></article></div>
 <article class="exercise exercise-like" id="exercise-16"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-16"><h5 class="heading">
 <span class="codenumber">6<span class="period">.</span></span><span class="space"> </span><span class="title">Permutation Order.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-16"><article class="exercise exercise-like"><div class="para" id="p-141">Prove that the order of a permutation is the least common multiple of the lengths of the cycles it is a product of.</div></article></div>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-16"><article class="exercise exercise-like"><div class="para" id="p-142">Prove that the order of a permutation is the least common multiple of the lengths of the cycles it is a product of.</div></article></div>
 <article class="exercise exercise-like" id="exercise-17"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-17"><h5 class="heading">
 <span class="codenumber">7<span class="period">.</span></span><span class="space"> </span><span class="title">Order of <span class="process-math">\(S_n\)</span>.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-17"><article class="exercise exercise-like"><div class="para" id="p-142">Prove <span class="process-math">\(|S_n|=n!\text{.}\)</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-17"><article class="exercise exercise-like"><div class="para" id="p-143">Prove <span class="process-math">\(|S_n|=n!\text{.}\)</span>
 </div></article></div>
 </div>
 </div></section></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="group-basics.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-gen-cyclic-gp.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+<a class="previous-button button" href="group-basics.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-subgroups.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer">

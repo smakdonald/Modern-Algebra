@@ -12,8 +12,20 @@
 </head>
 <body class="ignore-math">
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<div class="para">
-<span class="process-math">\((\Rightarrow)\)</span> Suppose that <span class="process-math">\(g\)</span> is diagonalizable. Thus there exists a change of basis matrix <span class="process-math">\(A\)</span> such that <span class="process-math">\(A\)</span> is diagonal. As it is diagonal, its diagonal entries are the eigenvalues of <span class="process-math">\(g\text{,}\)</span> and thus the roots of the minimal polynomial of <span class="process-math">\(g\text{.}\)</span> Using row and column operations we can rearrange <span class="process-math">\(A\)</span> so that all repeated linear factors are next to each other in the diagonal, for convenience.</div>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(T:V \to V\)</span> be the linear operator given by <span class="process-math">\(T(p) = xp'\)</span> (where <span class="process-math">\(p'\)</span> denotes the derivative of <span class="process-math">\(p\)</span>). Note that the change of basis matrix for this operator is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{bmatrix}
+0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; \cdots &amp; 0 &amp; 0 \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\
+0 &amp; 0 &amp; \cdots &amp; 0 &amp; n-1 \\   
+\end{bmatrix},
+\end{equation*}
+</div>
+<div class="para">with the basis <span class="process-math">\(\{1,x,\dots,x^{n-1}\}\text{.}\)</span> Thus <span class="process-math">\(\cp_A(x)\)</span> will be given by the determinant of the matrix</div>
+</div>
 <span class="incontext"><a href="sec-jcf.html#p-2721" class="internal">in-context</a></span>
 </body>
 </html>

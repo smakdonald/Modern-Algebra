@@ -13,21 +13,27 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Given a field <span class="process-math">\(F\text{,}\)</span> and integer <span class="process-math">\(n \geq 1\text{,}\)</span> and an element <span class="process-math">\(r\in F\text{,}\)</span> the <em class="emphasis">Jordan block</em> <span class="process-math">\(J_n(r)\)</span> is the <span class="process-math">\(n \times n\)</span> with entries in <span class="process-math">\(F\)</span> such that its diagonal entries are all <span class="process-math">\(r\text{,}\)</span> each entry just below the diagonal is a <span class="process-math">\(1\text{,}\)</span> and all other entries are <span class="process-math">\(0\text{:}\)</span>
-</div>
+<div class="para">Let <span class="process-math">\(V = \R^3\)</span> with the standard basis <span class="process-math">\(B=\{e_1,e_2,e_3\}\)</span> and let <span class="process-math">\(t: V \to V\)</span> be the linear transformation represented by the matrix</div>
 <div class="displaymath process-math">
 \begin{equation*}
-J_n(r) = 
+[t]_B^B =
 \begin{bmatrix}
-r &amp; 0 &amp; 0 &amp; \cdots &amp; 0 \\
-1 &amp; r &amp; 0 &amp; \cdots &amp; 0 \\
-0 &amp; \ddots &amp; \ddots &amp;&amp; \vdots \\
-\vdots &amp;&amp; \ddots &amp; \ddots &amp; 0\\
-0 &amp; \cdots &amp; 0 &amp; 1 &amp; r \\
+0   &amp;   -1  &amp;   0\\
+-1  &amp;   0   &amp;   3\\ 
+0   &amp;   0   &amp;   1   
 \end{bmatrix}.
 \end{equation*}
 </div>
-<div class="para">(More precisely, <span class="process-math">\(a_{i,i} = r\)</span> for all <span class="process-math">\(1 \leq i \leq n\text{,}\)</span> <span class="process-math">\(a_{i,i-1} = 1\)</span> for all <span class="process-math">\(2 \leq i \leq n\text{,}\)</span> and <span class="process-math">\(a_{i,j} = 0\)</span> for all other <span class="process-math">\(i,j\text{.}\)</span>)</div>
+<ol class="decimal">
+<li><div class="para">Find the invariant factor decomposition of the <span class="process-math">\(\R[x]\)</span>-module <span class="process-math">\(V_t\text{.}\)</span>
+</div></li>
+<li><div class="para">Find the characteristic and minimal polynomials of <span class="process-math">\(t\text{.}\)</span>
+</div></li>
+<li><div class="para">Find the rational canonical form of <span class="process-math">\(t\text{.}\)</span>
+</div></li>
+<li><div class="para">Find the Jordan canonical form of <span class="process-math">\(t\text{.}\)</span>
+</div></li>
+</ol>
 </div>
 <span class="incontext"><a href="sec-jcf.html#p-2657" class="internal">in-context</a></span>
 </body>

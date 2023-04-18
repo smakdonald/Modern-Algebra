@@ -13,19 +13,13 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(S\)</span> be the Smith Normal Form of <span class="process-math">\(xI_n - A\)</span> and let <span class="process-math">\(d_1, \dots, d_n\)</span> be its diagonal entries. As proven before, the matrix <span class="process-math">\(xI_n - A\)</span> and <span class="process-math">\(S\)</span> present isomorphic <span class="process-math">\(F[x]\)</span>-modules, and thus the Theorem gives an isomorphism</div>
+<div class="para">Let <span class="process-math">\(A\)</span> be an <span class="process-math">\(n \times n\)</span> nilpotent matrix. Let <span class="process-math">\(\lambda\)</span> be some eigenvalue of <span class="process-math">\(A\text{.}\)</span> Thus there exists some vector <span class="process-math">\(v\)</span> such that <span class="process-math">\(A\lambda=\lambda v\text{.}\)</span> Let's consider this the base-case of some rather banal induction. Now assume that for <span class="process-math">\(n\)</span> we have <span class="process-math">\(A^nv=\lambda^nv\text{.}\)</span> Consider</div>
 <div class="displaymath process-math">
 \begin{equation*}
-F^n_A \cong F[x]/(d_1) \oplus \cdots \oplus F[x]/(d_n).
+A^{n+1}v=A(A^nv)=A(\lambda^n v)=\lambda^n(Av)=\lambda^{n+1}v.
 \end{equation*}
 </div>
-<div class="para">Since <span class="process-math">\(\dim_F F^n_A &lt; \infty\text{,}\)</span> none of the <span class="process-math">\(d_i\)</span>'s can be zero. So, each <span class="process-math">\(d_i\)</span> is monic and <span class="process-math">\(d_1 \mid \cdots \mid d_n\text{.}\)</span> Now some of the <span class="process-math">\(d_i\)</span> might be non-zero constants, in which case <span class="process-math">\(d_i\)</span> is a unit and <span class="process-math">\(F[x]/(d_i) = 0\text{.}\)</span> Upon tossing those out, we are left with</div>
-<div class="displaymath process-math">
-\begin{equation*}
-F^n_A \cong F[x]/(f_1) \oplus \cdots \oplus F[x]/(f_k)
-\end{equation*}
-</div>
-<div class="para">with each <span class="process-math">\(f_i\)</span> monic of positive degree and <span class="process-math">\(f_1 \mid \cdots \mid f_k\text{.}\)</span> These are, by definition, the invariant factors of <span class="process-math">\(A\text{.}\)</span>
+<div class="para">Recall that as <span class="process-math">\(A\)</span> is nilpotent, there exists some <span class="process-math">\(m\in\N\)</span> such that <span class="process-math">\(A^m=0\text{.}\)</span> As <span class="process-math">\(\lambda\)</span> is an eigenvalue of <span class="process-math">\(A\text{,}\)</span> by the above induction we see that <span class="process-math">\(\lambda^m\)</span> is an eigenvalue for <span class="process-math">\(A^m=0\text{.}\)</span> As <span class="process-math">\(F\)</span> is a field and thus an integral domain, we see that <span class="process-math">\(\lambda^n=0\)</span> implies that <span class="process-math">\(\lambda=0\)</span> is as well. As this holds in the algebraic closure of <span class="process-math">\(F\)</span> as well, we see that when factored into linear terms all the <span class="process-math">\(\lambda=0\text{.}\)</span> Thus <span class="process-math">\(\cp_A(x)=x^n\text{.}\)</span>
 </div>
 </div>
 <span class="incontext"><a href="sec-rcf.html#p-2515" class="internal">in-context</a></span>

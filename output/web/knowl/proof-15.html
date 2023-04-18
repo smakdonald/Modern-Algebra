@@ -12,7 +12,21 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<div class="para">By <a href="" class="xref" data-knowl="./knowl/thm-ump-quotient.html" title="Theorem 3.28: Universal Mapping Property (UMP) of a Quotient Group">Theorem 3.28</a>, there exists a homomorphism <span class="process-math">\(\overline{f}\)</span> such that <span class="process-math">\(\overline{f} \circ {\pi}= f\text{,}\)</span> and its kernel consists of just the one element <span class="process-math">\(\operatorname{Ker}(f)/\operatorname{Ker}(f)\)</span> of <span class="process-math">\(G/\operatorname{Ker}(f)\text{.}\)</span> So <span class="process-math">\(\overline{f}\)</span> is one-to-one, and the image of <span class="process-math">\(\overline{f}\)</span> is the same as the image of <span class="process-math">\(f\text{.}\)</span>
+<div class="para">The first two assertions are immediate from the definitions.</div> <div class="para logical">
+<div class="para">The kernel of the canonical map <span class="process-math">\({\pi}: G \twoheadrightarrow G/N\)</span> contains <span class="process-math">\(M\)</span> and so by <a href="" class="xref" data-knowl="./knowl/thm-ump-quotient.html" title="Theorem 3.28: Universal Mapping Property (UMP) of a Quotient Group">Theorem 3.28</a> we get an induced homomorhism</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-ump-quotient.html ./knowl/thm-fit-group.html">
+\begin{equation*}
+\phi: G/M \to G/N
+\end{equation*}
+</div>
+<div class="para">with <span class="process-math">\(\phi(gM) = {\pi}(g) = gN\text{.}\)</span> Moreover, we know</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-ump-quotient.html ./knowl/thm-fit-group.html">
+\begin{equation*}
+\operatorname{Ker}(\phi) = \operatorname{Ker}({\pi})/M = N/M.
+\end{equation*}
+</div>
+<div class="para">Finally apply the <a href="" class="xref" data-knowl="./knowl/thm-fit-group.html" title="Theorem 3.30: First Isomorphism Theorem">First Isomorphism Theorem</a> to <span class="process-math">\(\phi\text{.}\)</span>
+</div>
 </div></article><span class="incontext"><a href="sec-isomorphism-thms.html#proof-15" class="internal">in-context</a></span>
 </body>
 </html>

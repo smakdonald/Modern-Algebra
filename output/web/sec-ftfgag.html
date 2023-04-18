@@ -8,7 +8,7 @@
 <html lang="en-US">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Abelian Classification</title>
+<title>Finitely Generated Abelian Groups</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -177,7 +177,7 @@ window.MathJax = {
 <span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
 </ol>
 </li>
-</ol></div></button><span class="treebuttons"><a class="previous-button button" href="sec-order-pq.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="group-products.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="sec-classifications.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="sec-classifying-cyclic-groups.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-group-classifications.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="sec-classifications.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
 <input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
 </div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\def\ann{\operatorname{ann}}
 \newcommand{\Ass}{\operatorname{Ass}}
@@ -474,7 +474,11 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="group-basics.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Group Basics</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="group-basics.html#exercises-1" class="internal"><span class="codenumber">1.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural">
+<li><div class="toc-item"><a href="group-basics.html#subsec-beginnings" class="internal"><span class="title">Binary Operations and Groups</span></a></div></li>
+<li><div class="toc-item"><a href="group-basics.html#subsec-order" class="internal"><span class="title">Order</span></a></div></li>
+<li><div class="toc-item"><a href="group-basics.html#exercises-1" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-common-groups.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Common Groups</span></a></div>
@@ -486,21 +490,20 @@ window.MathJax = {
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="sec-gen-cyclic-gp.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Generators and Cyclic Groups</span></a></div>
+<div class="toc-item"><a href="sec-subgroups.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Subgroups</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#subsec-gp-generators" class="internal"><span class="title">Generators</span></a></div></li>
-<li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#subsec-cyclic-gp" class="internal"><span class="title">Cyclic Groups</span></a></div></li>
-<li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#subsec-cyclic-properties" class="internal"><span class="title">Properties of Cyclic Groups</span></a></div></li>
-<li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#exercises-3" class="internal"><span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="sec-subgroups.html#subsec-subgroup-basics" class="internal"><span class="title">Subgroup Basics</span></a></div></li>
+<li><div class="toc-item"><a href="sec-subgroups.html#subsec-center" class="internal"><span class="title">The Center of a Group</span></a></div></li>
+<li><div class="toc-item"><a href="sec-subgroups.html#exercises-3" class="internal"><span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="sec-subgroups.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Subgroups</span></a></div>
+<div class="toc-item"><a href="sec-gen-cyclic-gp.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Generators and Cyclic Groups</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-subgroups.html#subsec-subgrp-defn-ex" class="internal"><span class="title">Subgroup Basics</span></a></div></li>
-<li><div class="toc-item"><a href="sec-subgroups.html#subsec-center" class="internal"><span class="title">The Center of a Group</span></a></div></li>
-<li><div class="toc-item"><a href="sec-subgroups.html#subsec-gensubgp" class="internal"><span class="title">Generated Subgroups</span></a></div></li>
-<li><div class="toc-item"><a href="sec-subgroups.html#exercises-4" class="internal"><span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#subsec-gp-generators" class="internal"><span class="title">Generators</span></a></div></li>
+<li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#subsec-gensubgp" class="internal"><span class="title">Generated Subgroups</span></a></div></li>
+<li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#subsec-cyclic-gp" class="internal"><span class="title">Cyclic Groups</span></a></div></li>
+<li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#exercises-4" class="internal"><span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -520,10 +523,6 @@ window.MathJax = {
 <li><div class="toc-item"><a href="sec-gpisos.html#exercises-6" class="internal"><span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="sec-cylic-homoms.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Classifying Cyclic Groups</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-cylic-homoms.html#exercises-7" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li></ul>
-</li>
 </ul>
 </li>
 <li>
@@ -531,15 +530,15 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-cosets.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Cosets and Lagrange's Theorem</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-cosets.html#exercises-8" class="internal"><span class="codenumber">3.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-cosets.html#exercises-7" class="internal"><span class="codenumber">3.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-normal-subgroups.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Normal Subgroups</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-normal-subgroups.html#exercises-9" class="internal"><span class="codenumber">3.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-normal-subgroups.html#exercises-8" class="internal"><span class="codenumber">3.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-quotient-groups.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Quotient Groups</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-quotient-groups.html#exercises-10" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-quotient-groups.html#exercises-9" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-isomorphism-thms.html" class="internal"><span class="codenumber">3.4</span> <span class="title">The Isomorphism Theorems</span></a></div>
@@ -552,23 +551,23 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="graction.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Group Actions</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="graction.html#exercises-12" class="internal"><span class="codenumber">4.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="graction.html#exercises-11" class="internal"><span class="codenumber">4.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-left-mult-conjugation.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Left Multiplication and Conjugation</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-left-mult-conjugation.html#subsec-conjugation-action" class="internal"><span class="title">Conjugation</span></a></div></li>
 <li><div class="toc-item"><a href="sec-left-mult-conjugation.html#subsec-left-multiplication" class="internal"><span class="title">Left Regular Action</span></a></div></li>
-<li><div class="toc-item"><a href="sec-left-mult-conjugation.html#exercises-13" class="internal"><span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="sec-left-mult-conjugation.html#exercises-12" class="internal"><span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-lois.html" class="internal"><span class="codenumber">4.3</span> <span class="title">LOIS and Orbit-Stabilizer</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-lois.html#exercises-14" class="internal"><span class="codenumber">4.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-lois.html#exercises-13" class="internal"><span class="codenumber">4.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-class-eq.html" class="internal"><span class="codenumber">4.4</span> <span class="title">The Class Equation</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-class-eq.html#exercises-15" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-class-eq.html#exercises-14" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -577,49 +576,64 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-p-groups.html" class="internal"><span class="codenumber">5.1</span> <span class="title"><span class="process-math">\(p\)</span>-groups and Sylow Subgroups</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-p-groups.html#exercises-16" class="internal"><span class="codenumber">5.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-p-groups.html#exercises-15" class="internal"><span class="codenumber">5.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-sylowthm.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Sylow's Theorem</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-sylowthm.html#exercises-17" class="internal"><span class="codenumber">5.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-sylowthm.html#exercises-16" class="internal"><span class="codenumber">5.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-simple-groups.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Simple Groups</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-simple-groups.html#exercises-18" class="internal"><span class="codenumber">5.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-simple-groups.html#exercises-17" class="internal"><span class="codenumber">5.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="group-products.html" class="internal"><span class="codenumber">6</span> <span class="title">Group Classifications</span></a></div>
+<div class="toc-item"><a href="group-products.html" class="internal"><span class="codenumber">6</span> <span class="title">Group Products</span></a></div>
 <ul class="structural">
 <li>
-<div class="toc-item"><a href="sec-grp-spds.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Semidirect Products</span></a></div>
+<div class="toc-item"><a href="subsec-group-direct-prods.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Direct Products</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-grp-spds.html#subsec-group-direct-prods" class="internal"><span class="title">Internal Direct Products</span></a></div></li>
+<li><div class="toc-item"><a href="subsec-group-direct-prods.html#subsec-external-dps-revisited" class="internal"><span class="title">External Direct Products: Revisited</span></a></div></li>
+<li><div class="toc-item"><a href="subsec-group-direct-prods.html#subsec-HK" class="internal"><span class="title">HK</span></a></div></li>
+<li><div class="toc-item"><a href="subsec-group-direct-prods.html#subsec-internal-recognition" class="internal"><span class="title">Recognition Theorem</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-grp-spds.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Semidirect Products</span></a></div>
+<ul class="structural">
 <li><div class="toc-item"><a href="sec-grp-spds.html#subsec-external-sdps" class="internal"><span class="title">External Semi Direct Products</span></a></div></li>
 <li><div class="toc-item"><a href="sec-grp-spds.html#subsec-internal-sdps" class="internal"><span class="title">Internal Semi Direct Products</span></a></div></li>
-<li><div class="toc-item"><a href="sec-grp-spds.html#exercises-19" class="internal"><span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="sec-grp-spds.html#exercises-18" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="sec-order-pq.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Groups of Order <span class="process-math">\(pq\)</span></span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-order-pq.html#exercises-20" class="internal"><span class="codenumber">6.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-item"><a href="ch-group-classifications.html" class="internal"><span class="codenumber">7</span> <span class="title">Classifications</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec-classifying-cyclic-groups.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Cyclic Groups</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-classifying-cyclic-groups.html#exercises-19" class="internal"><span class="codenumber">7.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li class="active">
-<div class="toc-item"><a href="sec-ftfgag.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Abelian Classification</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-ftfgag.html#exercises-decomp" class="internal"><span class="codenumber">6.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-item"><a href="sec-ftfgag.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Finitely Generated Abelian Groups</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-ftfgag.html#exercises-decomp" class="internal"><span class="codenumber">7.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
-<div class="toc-item"><a href="sec-classifications.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Groups Up to Isomorphism</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-classifications.html#exercises-22" class="internal"><span class="codenumber">6.4</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-item"><a href="sec-classifications.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Groups of Specific Order</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-classifications.html#sec-order-pq" class="internal"><span class="title">Groups of Order <span class="process-math">\(pq\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec-classifications.html#exercises-21" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
 </li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="ch-gp-extras.html" class="internal"><span class="codenumber">7</span> <span class="title">Extras</span></a></div>
+<div class="toc-item"><a href="ch-gp-extras.html" class="internal"><span class="codenumber">8</span> <span class="title">Extras</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-solve.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Solvable Groups</span></a></div></li>
-<li><div class="toc-item"><a href="sec-smallorder.html" class="internal"><span class="codenumber">7.2</span> <span class="title">All Groups Up to Order 60</span></a></div></li>
+<li><div class="toc-item"><a href="sec-solve.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Solvable Groups</span></a></div></li>
+<li><div class="toc-item"><a href="sec-smallorder.html" class="internal"><span class="codenumber">8.2</span> <span class="title">All Groups Up to Order 60</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -635,16 +649,16 @@ window.MathJax = {
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-defn-ex.html#subsec-first-ex" class="internal"><span class="title">Definition and First Properties</span></a></div></li>
 <li><div class="toc-item"><a href="sec-defn-ex.html#subsec-units" class="internal"><span class="title">Units, Zero Divisors, Integral Domains</span></a></div></li>
-<li><div class="toc-item"><a href="sec-defn-ex.html#exercises-23" class="internal"><span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="sec-defn-ex.html#exercises-22" class="internal"><span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-subrings.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Subrings</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-subrings.html#exercises-24" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-subrings.html#exercises-23" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-ring-hom.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Homomorphisms</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-ring-hom.html#exercises-25" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-ring-hom.html#exercises-24" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -656,7 +670,7 @@ window.MathJax = {
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-ideals.html#subsec-ideal-def" class="internal"><span class="title">Definition and First Properties</span></a></div></li>
 <li><div class="toc-item"><a href="sec-ideals.html#subsec-generated-ideals" class="internal"><span class="title">Generated Ideals</span></a></div></li>
-<li><div class="toc-item"><a href="sec-ideals.html#exercises-26" class="internal"><span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="sec-ideals.html#exercises-25" class="internal"><span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -664,7 +678,7 @@ window.MathJax = {
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-ring-quotients.html#subsec-quotient-rings" class="internal"><span class="title">Quotient Rings</span></a></div></li>
 <li><div class="toc-item"><a href="sec-ring-quotients.html#subsec-ring-iso-thms" class="internal"><span class="title">The Ring Isomorphism Theorems</span></a></div></li>
-<li><div class="toc-item"><a href="sec-ring-quotients.html#exercises-27" class="internal"><span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="sec-ring-quotients.html#exercises-26" class="internal"><span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -677,16 +691,16 @@ window.MathJax = {
 <ul class="structural">
 <li><div class="toc-item"><a href="subsec-primemax-ideals.html#subsec-prime-ideals" class="internal"><span class="title">Prime Ideals</span></a></div></li>
 <li><div class="toc-item"><a href="subsec-primemax-ideals.html#subsec-maximal-ideals" class="internal"><span class="title">Maximal Ideals</span></a></div></li>
-<li><div class="toc-item"><a href="subsec-primemax-ideals.html#exercises-28" class="internal"><span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="subsec-primemax-ideals.html#exercises-27" class="internal"><span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="subsec-polyrings.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Polynomial Rings</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="subsec-polyrings.html#exercises-29" class="internal"><span class="codenumber">3.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="subsec-polyrings.html#exercises-28" class="internal"><span class="codenumber">3.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-field-of-fractions.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Fields of Fractions</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-field-of-fractions.html#exercises-30" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-field-of-fractions.html#exercises-29" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -695,19 +709,19 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-eds.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Euclidian Domains</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-eds.html#exercises-31" class="internal"><span class="codenumber">4.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-eds.html#exercises-30" class="internal"><span class="codenumber">4.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-pids.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Principal Ideal Domains</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-pids.html#exercises-32" class="internal"><span class="codenumber">4.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-pids.html#exercises-31" class="internal"><span class="codenumber">4.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="subsec-ufds.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Unique Factorization Domains</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="subsec-ufds.html#exercises-33" class="internal"><span class="codenumber">4.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="subsec-ufds.html#exercises-32" class="internal"><span class="codenumber">4.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="subsec-noeth.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Noetherian Domains</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="subsec-noeth.html#exercises-34" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="subsec-noeth.html#exercises-33" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -716,11 +730,11 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-roots.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Roots of Unity</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-roots.html#exercises-35" class="internal"><span class="codenumber">5.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-roots.html#exercises-34" class="internal"><span class="codenumber">5.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-irrpoly.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Irredicuble Polynomials</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-irrpoly.html#exercises-36" class="internal"><span class="codenumber">5.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-irrpoly.html#exercises-35" class="internal"><span class="codenumber">5.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -738,15 +752,15 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-defmod.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Module Basics</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-defmod.html#exercises-37" class="internal"><span class="codenumber">1.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-defmod.html#exercises-36" class="internal"><span class="codenumber">1.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-modhom.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Module Homomorphisms</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-modhom.html#exercises-38" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-modhom.html#exercises-37" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-quote.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Quotient Modules</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-quote.html#exercises-39" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-quote.html#exercises-38" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -755,15 +769,15 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-linear.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Linear Independence</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-linear.html#exercises-40" class="internal"><span class="codenumber">2.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-linear.html#exercises-39" class="internal"><span class="codenumber">2.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-modgen.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Generated Modules</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-modgen.html#exercises-41" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-modgen.html#exercises-40" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-bases.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Bases</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-bases.html#exercises-42" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-bases.html#exercises-41" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -772,11 +786,11 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-vecbasis.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Existence of Bases</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-vecbasis.html#exercises-43" class="internal"><span class="codenumber">3.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-vecbasis.html#exercises-42" class="internal"><span class="codenumber">3.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-ranknul.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Dimension and Rank-Nullity</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-ranknul.html#exercises-44" class="internal"><span class="codenumber">3.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-ranknul.html#exercises-43" class="internal"><span class="codenumber">3.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -785,20 +799,20 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-basics.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Basics</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-basics.html#exercises-45" class="internal"><span class="codenumber">4.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-basics.html#exercises-44" class="internal"><span class="codenumber">4.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li><div class="toc-item"><a href="subsec-free-modules-and-matrices.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Free Modules and Matrices</span></a></div></li>
 <li>
 <div class="toc-item"><a href="sec-cob.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Change of Basis</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-cob.html#exercises-46" class="internal"><span class="codenumber">4.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-cob.html#exercises-45" class="internal"><span class="codenumber">4.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-elematix.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Elementary Matrices</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-elematix.html#exercises-47" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-elematix.html#exercises-46" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-operator.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Linear Operators on Free Modules</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-operator.html#exercises-48" class="internal"><span class="codenumber">4.5</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-operator.html#exercises-47" class="internal"><span class="codenumber">4.5</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -807,16 +821,16 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-modpres.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Finitely Presented Modules</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-modpres.html#exercises-49" class="internal"><span class="codenumber">5.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-modpres.html#exercises-48" class="internal"><span class="codenumber">5.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-snf.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Smith Normal Form</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-snf.html#exercises-50" class="internal"><span class="codenumber">5.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-snf.html#exercises-49" class="internal"><span class="codenumber">5.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li><div class="toc-item"><a href="sec-noeth.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Noetherian Rings</span></a></div></li>
 <li>
 <div class="toc-item"><a href="sec-modclass.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Classifications</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-modclass.html#exercises-51" class="internal"><span class="codenumber">5.4</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-modclass.html#exercises-50" class="internal"><span class="codenumber">5.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -825,15 +839,15 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-rcf.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Rational Canonical Form</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-rcf.html#exercises-52" class="internal"><span class="codenumber">6.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-rcf.html#exercises-51" class="internal"><span class="codenumber">6.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-cayley-hamilton.html" class="internal"><span class="codenumber">6.2</span> <span class="title">The Cayley-Hamilton Theorem</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-cayley-hamilton.html#exercises-53" class="internal"><span class="codenumber">6.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-cayley-hamilton.html#exercises-52" class="internal"><span class="codenumber">6.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-jcf.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Jordan Canonical Form</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-jcf.html#exercises-54" class="internal"><span class="codenumber">6.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-jcf.html#exercises-53" class="internal"><span class="codenumber">6.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -841,7 +855,7 @@ window.MathJax = {
 <div class="toc-item"><a href="ch-mod-extras.html" class="internal"><span class="codenumber">7</span> <span class="title">Extras</span></a></div>
 <ul class="structural"><li>
 <div class="toc-item"><a href="sec-det.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Determinants</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-det.html#exercises-55" class="internal"><span class="codenumber">7.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-det.html#exercises-54" class="internal"><span class="codenumber">7.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li></ul>
 </li>
 </ul>
@@ -854,19 +868,19 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="field-extension-basics.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Field Extension Basics</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="field-extension-basics.html#exercises-56" class="internal"><span class="codenumber">1.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="field-extension-basics.html#exercises-55" class="internal"><span class="codenumber">1.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-algebraic.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Algebraic Extensions</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-algebraic.html#exercises-57" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-algebraic.html#exercises-56" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-closure.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Algebraic Closures</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-closure.html#exercises-58" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-closure.html#exercises-57" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-splitting.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Splitting Fields</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-splitting.html#exercises-59" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-splitting.html#exercises-58" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -875,15 +889,15 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-separable.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Separability</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-separable.html#exercises-60" class="internal"><span class="codenumber">2.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-separable.html#exercises-59" class="internal"><span class="codenumber">2.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-galext.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Galois Extensions</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-galext.html#exercises-61" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-galext.html#exercises-60" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-ftgt.html" class="internal"><span class="codenumber">2.3</span> <span class="title">The Fundamental Theorem of Galois Theory</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-ftgt.html#exercises-62" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-ftgt.html#exercises-61" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -905,16 +919,16 @@ window.MathJax = {
 <div class="toc-item"><a href="app-foundations.html" class="internal"><span class="codenumber">A</span> <span class="title">Foundational Knowledge</span></a></div>
 <ul class="structural">
 <li>
-<div class="toc-item"><a href="sec-.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Sets, Functions, Constructions</span></a></div>
+<div class="toc-item"><a href="sec-sets-functions.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Sets, Functions, Constructions</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-.html#subsec-sets" class="internal"><span class="title">Sets</span></a></div></li>
-<li><div class="toc-item"><a href="sec-.html#subsec-functions" class="internal"><span class="title">Functions</span></a></div></li>
+<li><div class="toc-item"><a href="sec-sets-functions.html#subsec-sets" class="internal"><span class="title">Sets</span></a></div></li>
+<li><div class="toc-item"><a href="sec-sets-functions.html#subsec-functions" class="internal"><span class="title">Functions</span></a></div></li>
 <li>
-<div class="toc-item"><a href="sec-.html#subsec-set-constructions" class="internal"><span class="title">Set Constructions</span></a></div>
+<div class="toc-item"><a href="sec-sets-functions.html#subsec-set-constructions" class="internal"><span class="title">Set Constructions</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-.html#subsubsec-subsets" class="internal"><span class="title">Subsets</span></a></div></li>
-<li><div class="toc-item"><a href="sec-.html#subsubsec-product-sets" class="internal"><span class="title">Product Sets</span></a></div></li>
-<li><div class="toc-item"><a href="sec-.html#subsubsec-quotient-sets" class="internal"><span class="title">Quotient Sets</span></a></div></li>
+<li><div class="toc-item"><a href="sec-sets-functions.html#subsubsec-subsets" class="internal"><span class="title">Subsets</span></a></div></li>
+<li><div class="toc-item"><a href="sec-sets-functions.html#subsubsec-product-sets" class="internal"><span class="title">Product Sets</span></a></div></li>
+<li><div class="toc-item"><a href="sec-sets-functions.html#subsubsec-quotient-sets" class="internal"><span class="title">Quotient Sets</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -926,32 +940,32 @@ window.MathJax = {
 <li><div class="toc-item"><a href="app-notation.html" class="internal"><span class="codenumber">B</span> <span class="title">Notation</span></a></div></li>
 <li><div class="toc-item"><a href="appendix-list-definitions.html" class="internal"><span class="codenumber">C</span> <span class="title">List of Definitions</span></a></div></li>
 <li><div class="toc-item"><a href="appendix-list-results.html" class="internal"><span class="codenumber">D</span> <span class="title">List of Results</span></a></div></li>
-<li><div class="toc-item"><a href="app-biograhy.html" class="internal"><span class="codenumber">E</span> <span class="title">Biographies</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-biograhy.html" class="internal"><span class="codenumber">E</span> <span class="title">Biographies</span></a></div></li>
 <li><div class="toc-item"><a href="colophon-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-ftfgag"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">6.3</span> <span class="title">Abelian Classification</span>
+<span class="type">Section</span> <span class="codenumber">7.2</span> <span class="title">Finitely Generated Abelian Groups</span>
 </h2>
-<blockquote class="blockquote" id="blockquote-24">
-<div class="para" id="p-1061">“The classification of the constituents of a chaos, nothing less is here essayed.”</div> <cite class="attribution">―Herman Melville</cite>
+<blockquote class="blockquote" id="blockquote-23">
+<div class="para" id="p-1035">“The classification of the constituents of a chaos, nothing less is here essayed.”</div> <cite class="attribution">―Herman Melville</cite>
 </blockquote>
-<div class="para" id="p-1062">In this section we see that we can classify finitely generated abelian groups into isomorphism classes.</div>
+<div class="para" id="p-1036">In this section we see that we can classify finitely generated abelian groups into isomorphism classes.</div>
 <article class="definition definition-like" id="def-f.g.-group"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.21</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.6</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1063">A group <span class="process-math">\(G\)</span> is finitely generated provided that <span class="process-math">\(G=\langle A \rangle\text{,}\)</span> where <span class="process-math">\(A\)</span> is a finite set.</div></article><article class="remark remark-like" id="remark-30"><h3 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">6.22</span><span class="period">.</span>
+<div class="para" id="p-1037">A group <span class="process-math">\(G\)</span> is finitely generated provided that <span class="process-math">\(G=\langle A \rangle\text{,}\)</span> where <span class="process-math">\(A\)</span> is a finite set.</div></article><article class="remark remark-like" id="remark-31"><h3 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">7.7</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1064">Any finite group is finitely generated (take <span class="process-math">\(A=G\)</span>), but a finitely generated group need not be finite.</div></article><div class="para" id="p-1065">The following is the classification theorem for finitely generated abelian groups. We present it without proving it for now. The full proof will be given in the spring semester.</div>
+<div class="para" id="p-1038">Any finite group is finitely generated (take <span class="process-math">\(A=G\)</span>), but a finitely generated group need not be finite.</div></article><div class="para" id="p-1039">The following is the classification theorem for finitely generated abelian groups. We present it without proving it for now. The full proof will be given in the spring semester.</div>
 <article class="theorem theorem-like" id="thm-ftfgag"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.23</span><span class="period">.</span><span class="space"> </span><span class="title">Fundamental Theorem of Finitely Generated Abelian Groups (FTFGAG).</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.8</span><span class="period">.</span><span class="space"> </span><span class="title">Fundamental Theorem of Finitely Generated Abelian Groups (FTFGAG).</span>
 </h3>
-<div class="para" id="p-1066">Let <span class="process-math">\(G\)</span> be a finitely generated abelian group. Then <span class="process-math">\(G\)</span> is a direct product of cyclic groups. More precisely</div> <div class="para logical" id="p-1067"><ol class="decimal">
-<li id="li-328"><div class="para" id="p-1068">There exist <span class="process-math">\(r,s \geq 0\text{,}\)</span> prime integers <span class="process-math">\(p_1&lt;\ldots&lt; p_s\)</span> and positive integers <span class="process-math">\(a_i \geq 1\)</span> such that: <span class="process-math">\(G \cong \mathbb{Z}^r\times Q_1 \times \dots \times Q_s\)</span> where <span class="process-math">\(|Q_i| = p_i^{a_i}\)</span> for all <span class="process-math">\(i\text{.}\)</span>
+<div class="para" id="p-1040">Let <span class="process-math">\(G\)</span> be a finitely generated abelian group. Then <span class="process-math">\(G\)</span> is a direct product of cyclic groups. More precisely</div> <div class="para logical" id="p-1041"><ol class="decimal">
+<li id="li-326"><div class="para" id="p-1042">There exist <span class="process-math">\(r,s \geq 0\text{,}\)</span> prime integers <span class="process-math">\(p_1&lt;\ldots&lt; p_s\)</span> and positive integers <span class="process-math">\(a_i \geq 1\)</span> such that: <span class="process-math">\(G \cong \mathbb{Z}^r\times Q_1 \times \dots \times Q_s\)</span> where <span class="process-math">\(|Q_i| = p_i^{a_i}\)</span> for all <span class="process-math">\(i\text{.}\)</span>
 </div></li>
-<li id="li-329"><div class="para logical" id="p-1069">
+<li id="li-327"><div class="para logical" id="p-1043">
 <div class="para">For each index <span class="process-math">\(1\leq i\leq s\text{,}\)</span> there is a partition <span class="process-math">\(a_i = a_{i,1} + \dots + a_{i,j_i}\)</span> with each <span class="process-math">\(a_{i,j} \geq 1\text{,}\)</span> such that <span class="process-math">\(Q_i \cong (\mathbb{Z}/p_i^{a_{i1}}) \times \dots \times (\mathbb{Z}/p_i^{a_{i,j_i}})\text{,}\)</span> thus overall we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -959,13 +973,13 @@ G \cong (\mathbb{Z}/p_1^{a_{11}}) \times \dots \times (\mathbb{Z}/p_i^{a_{1,j_1}
 \end{equation*}
 </div>
 </div></li>
-<li id="li-330"><div class="para" id="p-1070">The <span class="process-math">\(r,p_i\)</span>'s, <span class="process-math">\(j_i\)</span>'s and <span class="process-math">\(a_{i,j}\)</span>'s are uniquely determined by <span class="process-math">\(G\text{.}\)</span>
+<li id="li-328"><div class="para" id="p-1044">The <span class="process-math">\(r,p_i\)</span>'s, <span class="process-math">\(j_i\)</span>'s and <span class="process-math">\(a_{i,j}\)</span>'s are uniquely determined by <span class="process-math">\(G\text{.}\)</span>
 </div></li>
-<li id="li-331"><div class="para" id="p-1071">equivalently, there exist <span class="process-math">\(r \geq 0, t \geq 0\text{,}\)</span> and <span class="process-math">\(n_i \geq 2\)</span> for all <span class="process-math">\(1\leq i\leq t\text{,}\)</span> satisfying <span class="process-math">\(n_{i+1} \mid n_i\)</span> for all <span class="process-math">\(i\)</span> so that <span class="process-math">\(G \cong \mathbb{Z}^r \times (\mathbb{Z}/n_1) \times \dots \times (\mathbb{Z}/n_t)\text{.}\)</span>
+<li id="li-329"><div class="para" id="p-1045">equivalently, there exist <span class="process-math">\(r \geq 0, t \geq 0\text{,}\)</span> and <span class="process-math">\(n_i \geq 2\)</span> for all <span class="process-math">\(1\leq i\leq t\text{,}\)</span> satisfying <span class="process-math">\(n_{i+1} \mid n_i\)</span> for all <span class="process-math">\(i\)</span> so that <span class="process-math">\(G \cong \mathbb{Z}^r \times (\mathbb{Z}/n_1) \times \dots \times (\mathbb{Z}/n_t)\text{.}\)</span>
 </div></li>
-<li id="li-332"><div class="para" id="p-1072">The integers <span class="process-math">\(r,s,n_1,\ldots ,n_t\)</span> are uniquely determined by <span class="process-math">\(G\text{.}\)</span>
+<li id="li-330"><div class="para" id="p-1046">The integers <span class="process-math">\(r,s,n_1,\ldots ,n_t\)</span> are uniquely determined by <span class="process-math">\(G\text{.}\)</span>
 </div></li>
-</ol></div></article><article class="hiddenproof" id="proof-32"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-32"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-32"><article class="hiddenproof"><div class="para logical" id="p-1073">
+</ol></div></article><article class="hiddenproof" id="proof-30"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-30"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-30"><article class="hiddenproof"><div class="para logical" id="p-1047">
 <div class="para">It suffices prove that for a given group <span class="process-math">\(G\text{,}\)</span> we can recover its invariant factor form from its elementary divisor form, and vice versa. We will be a bit hand-wavey for this following the ideas from the above examples.</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -980,7 +994,7 @@ G \cong \mathbb{Z}^r \times \mathbb{Z}/d_1 \times \cdots \times \mathbb{Z}/d_n
 </div>
 <div class="para">where <span class="process-math">\(d_1\)</span> is the product of the elementary divisors of highest power for each <em class="emphasis">distinct</em> prime in the list <span class="process-math">\(p_1, \dots, p_l\text{,}\)</span> <span class="process-math">\(d_2\)</span> is the product of the next highest possible prime powers, and so on. We will have that <span class="process-math">\(d_2\mid d_1\)</span> and in general that <span class="process-math">\(d_{i+1}\mid d_i\)</span> since by definition the exponent of <span class="process-math">\(p_j\in d_i\)</span> is greater or equal to the exponent of <span class="process-math">\(p_j\in d_{i+1}\text{.}\)</span>
 </div>
-</div> <div class="para logical" id="p-1074">
+</div> <div class="para logical" id="p-1048">
 <div class="para">Conversely, given</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -990,24 +1004,24 @@ G \cong \mathbb{Z}^r \times \mathbb{Z}/d_1 \times \cdots \times \mathbb{Z}/d_n
 <div class="para">with <span class="process-math">\(d_1 \mid d_2 \mid \cdots \mid d_n\text{,}\)</span> we may apply the CRT to each <span class="process-math">\(\mathbb{Z}/d_i\)</span> to find its elementary divisor form. ◻</div>
 </div></article></div>
 <article class="example example-like" id="example-21"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.24</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.9</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1075">For <span class="process-math">\(G\cong\mathbb{Z}/3\times Z/5\times Z/5\)</span> we have <span class="process-math">\(Q_1=\mathbb{Z}/3\text{,}\)</span> <span class="process-math">\(Q_2=\mathbb{Z}/5\times Z/5\text{.}\)</span>
+<div class="para" id="p-1049">For <span class="process-math">\(G\cong\mathbb{Z}/3\times Z/5\times Z/5\)</span> we have <span class="process-math">\(Q_1=\mathbb{Z}/3\text{,}\)</span> <span class="process-math">\(Q_2=\mathbb{Z}/5\times Z/5\text{.}\)</span>
 </div></article><article class="definition definition-like" id="def-eds-and-ifs"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.25</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.10</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1076">In Theorem <a href="" class="xref" data-knowl="./knowl/thm-ftfgag.html" title="Theorem 6.23: Fundamental Theorem of Finitely Generated Abelian Groups (FTFGAG)">Theorem 6.23</a>, the number <span class="process-math">\(r\)</span> is the <em class="emphasis">rank</em> of <span class="process-math">\(G\text{,}\)</span> the <span class="process-math">\(p_i^{a_{i,k}}\)</span> are the <em class="emphasis">elementary divisors</em> of <span class="process-math">\(G\text{,}\)</span> and the decomposition of <span class="process-math">\(G\)</span> in parts (1-2) is called the <em class="emphasis">elementary divisor decomposition</em> of <span class="process-math">\(G\text{.}\)</span> The decomposition in part (1) is also called a <em class="emphasis">primary decomposition</em>.</div> <div class="para" id="p-1077">In Theorem <a href="" class="xref" data-knowl="./knowl/thm-ftfgag.html" title="Theorem 6.23: Fundamental Theorem of Finitely Generated Abelian Groups (FTFGAG)">Theorem 6.23</a>, the number <span class="process-math">\(r\)</span> is the <em class="emphasis">rank</em> of <span class="process-math">\(G\text{,}\)</span> the numbers <span class="process-math">\(n_1,\ldots,n_t\)</span> are the <em class="emphasis">invariant factors</em> of <span class="process-math">\(G\text{,}\)</span> and the decomposition of <span class="process-math">\(G\)</span> in part (1) is the <em class="emphasis">invariant factor decomposition</em> of <span class="process-math">\(G\text{.}\)</span>
+<div class="para" id="p-1050">In Theorem <a href="" class="xref" data-knowl="./knowl/thm-ftfgag.html" title="Theorem 7.8: Fundamental Theorem of Finitely Generated Abelian Groups (FTFGAG)">Theorem 7.8</a>, the number <span class="process-math">\(r\)</span> is the <em class="emphasis">rank</em> of <span class="process-math">\(G\text{,}\)</span> the <span class="process-math">\(p_i^{a_{i,k}}\)</span> are the <em class="emphasis">elementary divisors</em> of <span class="process-math">\(G\text{,}\)</span> and the decomposition of <span class="process-math">\(G\)</span> in parts (1-2) is called the <em class="emphasis">elementary divisor decomposition</em> of <span class="process-math">\(G\text{.}\)</span> The decomposition in part (1) is also called a <em class="emphasis">primary decomposition</em>.</div> <div class="para" id="p-1051">In Theorem <a href="" class="xref" data-knowl="./knowl/thm-ftfgag.html" title="Theorem 7.8: Fundamental Theorem of Finitely Generated Abelian Groups (FTFGAG)">Theorem 7.8</a>, the number <span class="process-math">\(r\)</span> is the <em class="emphasis">rank</em> of <span class="process-math">\(G\text{,}\)</span> the numbers <span class="process-math">\(n_1,\ldots,n_t\)</span> are the <em class="emphasis">invariant factors</em> of <span class="process-math">\(G\text{,}\)</span> and the decomposition of <span class="process-math">\(G\)</span> in part (1) is the <em class="emphasis">invariant factor decomposition</em> of <span class="process-math">\(G\text{.}\)</span>
 </div></article><article class="example example-like" id="example-22"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.26</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.11</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-1078">
+<div class="para logical" id="p-1052">
 <div class="para">Say I tell you</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-sunzi.html">
 \begin{equation*}
 G \cong \mathbb{Z}^{3} \times \mathbb{Z}/4 \times \mathbb{Z}/8 \times \mathbb{Z}/9 \times \mathbb{Z}/27 \times \mathbb{Z}/25
 \end{equation*}
 </div>
-<div class="para">The Chinese Remainder Theorem <a href="" class="xref" data-knowl="./knowl/thm-sunzi.html" title="Theorem 6.28: Sunzi's Remainder Theorem">Theorem 6.28</a> gives</div>
+<div class="para">The Chinese Remainder Theorem <a href="" class="xref" data-knowl="./knowl/thm-sunzi.html" title="Theorem 7.13: Sunzi's Remainder Theorem">Theorem 7.13</a> gives</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-sunzi.html">
 \begin{equation*}
 \mathbb{Z}/8 \times \mathbb{Z}/27 \times \mathbb{Z}/25 \cong \mathbb{Z}/(8 \cdot 27 \cdot 25)
@@ -1028,16 +1042,16 @@ G \cong \mathbb{Z}^{3} \times \mathbb{Z}/(4 \cdot 9) \times \mathbb{Z}/(8 \cdot 
 <div class="para">Since <span class="process-math">\(n_2:=(4 \cdot 9) \mid n_1:=(8 \cdot 27 \cdot 25)\text{,}\)</span> this is in invariant factor form, and hence the rank of <span class="process-math">\(A\)</span> is <span class="process-math">\(3\)</span> and the invariant factors of <span class="process-math">\(A\)</span> are <span class="process-math">\(4 \cdot 9\)</span> and <span class="process-math">\(8 \cdot 27 \cdot 25\text{.}\)</span>
 </div>
 </div></article><article class="example example-like" id="example-23"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.27</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.12</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-1079">
+<div class="para logical" id="p-1053">
 <div class="para">Suppose now I tell you</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-sunzi.html">
 \begin{equation*}
 G \cong \mathbb{Z}^{4} \times \mathbb{Z}/6 \times \mathbb{Z}/36 \times \mathbb{Z}/180.
 \end{equation*}
 </div>
-<div class="para">Then by the Chinese Remainder Theorem <a href="" class="xref" data-knowl="./knowl/thm-sunzi.html" title="Theorem 6.28: Sunzi's Remainder Theorem">Theorem 6.28</a>
+<div class="para">Then by the Chinese Remainder Theorem <a href="" class="xref" data-knowl="./knowl/thm-sunzi.html" title="Theorem 7.13: Sunzi's Remainder Theorem">Theorem 7.13</a>
 </div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-sunzi.html">
 \begin{equation*}
@@ -1046,9 +1060,9 @@ G \cong \mathbb{Z}^{4} \times \mathbb{Z}/2 \times \mathbb{Z}/3 \times \mathbb{Z}
 </div>
 <div class="para">given the elementary divisor form.</div>
 </div></article><article class="theorem theorem-like" id="thm-sunzi"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.28</span><span class="period">.</span><span class="space"> </span><span class="title">Sunzi's Remainder Theorem.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.13</span><span class="period">.</span><span class="space"> </span><span class="title">Sunzi's Remainder Theorem.</span>
 </h3>
-<div class="para logical" id="p-1080">
+<div class="para logical" id="p-1054">
 <div class="para">Suppose <span class="process-math">\(m = p_1^{e_1} \cdots p_l^{e_l}\)</span> for distinct primes <span class="process-math">\(p_1, \dots, p_l\text{.}\)</span> Then there is an isomorphism</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1063,7 +1077,7 @@ G \cong \mathbb{Z}^{4} \times \mathbb{Z}/2 \times \mathbb{Z}/3 \times \mathbb{Z}
 </div>
 <div class="para">where <span class="process-math">\([j]_b\)</span> denote the class of an integer <span class="process-math">\(j\)</span> in <span class="process-math">\(\mathbb{Z}/b\text{.}\)</span>
 </div>
-</div></article><article class="hiddenproof" id="proof-33"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-33"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-33"><article class="hiddenproof"><div class="para logical" id="p-1081">
+</div></article><article class="hiddenproof" id="proof-31"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-31"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-31"><article class="hiddenproof"><div class="para logical" id="p-1055">
 <div class="para">Using the UMP for infinite cyclic groups, we let <span class="process-math">\(\psi: \mathbb{Z}\to \mathbb{Z}/(p_1^{e_1}) \times \cdots \times \mathbb{Z}/(p_l^{e_l})\)</span> be the unique homomorhism that sends <span class="process-math">\(1\)</span> to <span class="process-math">\(([1]_{{p_1}^{e_1}}, \cdots, [1]_{{p_l}^{e_l}})\text{.}\)</span> Then</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-fit-group.html">
 \begin{equation*}
@@ -1072,11 +1086,11 @@ G \cong \mathbb{Z}^{4} \times \mathbb{Z}/2 \times \mathbb{Z}/3 \times \mathbb{Z}
 </div>
 <div class="para">Clearly <span class="process-math">\(m \in \operatorname{Ker}(\psi)\)</span> and so <span class="process-math">\(\langle m \rangle \subseteq \operatorname{Ker}(\psi)\text{.}\)</span> Conversely, if <span class="process-math">\(\psi(n) = 0\text{,}\)</span> then <span class="process-math">\(p_i^{e_i} \mid n\)</span> for all <span class="process-math">\(i\)</span> and since <span class="process-math">\(p_1^{e_1}, \dots, p_l^{e_l}\)</span> are pairwise relatively prime, it follows that <span class="process-math">\(m \mid n\text{.}\)</span> This proves <span class="process-math">\(\operatorname{Ker}(\psi) = \langle m \rangle\text{.}\)</span> The claim follows by the <a href="" class="xref" data-knowl="./knowl/thm-fit-group.html" title="Theorem 3.30: First Isomorphism Theorem">First Isomorphism Theorem</a>.</div>
 </div></article></div>
-<div class="para" id="p-1082">The FTFGAG makes classification of finite abelian groups a very quick matter.</div>
+<div class="para" id="p-1056">The FTFGAG makes classification of finite abelian groups a very quick matter.</div>
 <article class="example example-like" id="example-24"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.29</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.14</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1083">Classify the abelian groups of order 75 up to isomorphism.</div> <div class="para logical" id="p-1084">
+<div class="para" id="p-1057">Classify the abelian groups of order 75 up to isomorphism.</div> <div class="para logical" id="p-1058">
 <div class="para">Let <span class="process-math">\(G\)</span> be an abelian group of order 75. Since <span class="process-math">\(G\)</span> is finite the rank of <span class="process-math">\(G\)</span> is <span class="process-math">\(r=0\text{.}\)</span> Let's determine the possible elementary divisors <span class="process-math">\(p_i^{a_{i,j}}\)</span> so that</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1089,7 +1103,7 @@ G\cong \prod_{k=1}^s   \prod_{j=1}^{i_k} \mathbb{Z}/p_i^{a_{k,j}}.
 G\cong \mathbb{Z}/25 \times \mathbb{Z}/3 \text{ or } G\cong \mathbb{Z}/5 \times \mathbb{Z}/5 \times \mathbb{Z}/3.
 \end{equation*}
 </div>
-</div> <div class="para logical" id="p-1085">
+</div> <div class="para logical" id="p-1059">
 <div class="para">Note that the two groups above are not isomorphic. To see this, note that there is an element of order 25 in <span class="process-math">\(\mathbb{Z}/25 \times \mathbb{Z}/3\text{,}\)</span> namely <span class="process-math">\(([1]_{25},[0]_3)\)</span> whereas every element <span class="process-math">\((a,b,c)\in \mathbb{Z}/5 \times \mathbb{Z}/5 \times \mathbb{Z}/3\)</span> has order</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1098,52 +1112,52 @@ G\cong \mathbb{Z}/25 \times \mathbb{Z}/3 \text{ or } G\cong \mathbb{Z}/5 \times 
 </div>
 <div class="para">since <span class="process-math">\(|a|, |b|\in\{1,5\}\)</span> and <span class="process-math">\(|c|\in\{1,3\}\text{.}\)</span>
 </div>
-</div> <div class="para" id="p-1086">Alternatively we could argue that the uniqueness of the FTFGAG tells us that <span class="process-math">\(G\)</span> uniquely determines the elementary divisors, so two groups with distinct elementary divisors cannot be isomorphic.</div></article><section class="exercises" id="exercises-decomp"><h3 class="heading hide-type">
+</div> <div class="para" id="p-1060">Alternatively we could argue that the uniqueness of the FTFGAG tells us that <span class="process-math">\(G\)</span> uniquely determines the elementary divisors, so two groups with distinct elementary divisors cannot be isomorphic.</div></article><section class="exercises" id="exercises-decomp"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
-<article class="exercise exercise-like" id="exercise-152"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-152"><h4 class="heading">
+<article class="exercise exercise-like" id="exercise-147"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-147"><h4 class="heading">
 <span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">January 2020(3).</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-152"><article class="exercise exercise-like"><div class="para" id="p-1087">Prove that any group of order <span class="process-math">\(3^2\cdot 11\cdot 17\)</span> is abelian.</div>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-147"><article class="exercise exercise-like"><div class="para" id="p-1061">Prove that any group of order <span class="process-math">\(3^2\cdot 11\cdot 17\)</span> is abelian.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-62" id="solution-62"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-62"><div class="solution solution-like">
-<div class="para" id="p-1088">Let <span class="process-math">\(G\)</span> be a group of order <span class="process-math">\(3^2\cdot 11\cdot 17\text{.}\)</span> By Sylow's Theorem we see the following: - <span class="process-math">\(n_{11}|153\)</span> and <span class="process-math">\(n_{11}\equiv 1\mod{11}\text{,}\)</span> and so <span class="process-math">\(n_{11}=1\text{.}\)</span> - <span class="process-math">\(n_{17}|99\)</span> and <span class="process-math">\(n_{17}\equiv 1\mod{17}\text{,}\)</span> and so <span class="process-math">\(n_{17}=1\)</span> as well. - <span class="process-math">\(n_3|187\)</span> and <span class="process-math">\(n_3\cong 1\mod{3}\text{,}\)</span> so actually <span class="process-math">\(n_3=1\)</span> too. Thus the unique Sylow <span class="process-math">\(11\)</span>-subgroup and Sylow <span class="process-math">\(17\)</span>-subgroup, denoted <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\text{,}\)</span> respectively, are normal in <span class="process-math">\(G\text{.}\)</span>
-</div> <div class="para" id="p-1089">As <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\)</span> are normal in <span class="process-math">\(G\)</span> and intersect trivially, we see that <span class="process-math">\(PQ\leq G\text{.}\)</span> Let <span class="process-math">\(g\in G\)</span> and consider <span class="process-math">\(gPQg\inv\text{.}\)</span> Let <span class="process-math">\(pq\in PQ\)</span> and notice <span class="process-math">\(g(pq)g\inv=gpg\inv gqg\inv\text{.}\)</span> As <span class="process-math">\(p\in P\nsg G\)</span> and <span class="process-math">\(q\in Q\nsg G\)</span> we see <span class="process-math">\(gpg\inv\in P\)</span> and <span class="process-math">\(gqg\inv\in Q\text{,}\)</span> thus <span class="process-math">\(gpqg\inv\in PQ\text{,}\)</span> making <span class="process-math">\(PQ\nsg G\text{.}\)</span>
-</div> <div class="para" id="p-1090">Let <span class="process-math">\(R\)</span> be the unique Sylow <span class="process-math">\(3\)</span>-subgroup, which has order <span class="process-math">\(9\text{.}\)</span> As <span class="process-math">\(R\nsg G\)</span> and intersects with <span class="process-math">\(PQ\)</span> trivially, we see <span class="process-math">\(G=PQ\times R\text{,}\)</span> a direct product of cyclic groups of relatively prime order, making <span class="process-math">\(G\)</span> abelian.</div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-59" id="solution-59"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-59"><div class="solution solution-like">
+<div class="para" id="p-1062">Let <span class="process-math">\(G\)</span> be a group of order <span class="process-math">\(3^2\cdot 11\cdot 17\text{.}\)</span> By Sylow's Theorem we see the following: - <span class="process-math">\(n_{11}|153\)</span> and <span class="process-math">\(n_{11}\equiv 1\mod{11}\text{,}\)</span> and so <span class="process-math">\(n_{11}=1\text{.}\)</span> - <span class="process-math">\(n_{17}|99\)</span> and <span class="process-math">\(n_{17}\equiv 1\mod{17}\text{,}\)</span> and so <span class="process-math">\(n_{17}=1\)</span> as well. - <span class="process-math">\(n_3|187\)</span> and <span class="process-math">\(n_3\cong 1\mod{3}\text{,}\)</span> so actually <span class="process-math">\(n_3=1\)</span> too. Thus the unique Sylow <span class="process-math">\(11\)</span>-subgroup and Sylow <span class="process-math">\(17\)</span>-subgroup, denoted <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\text{,}\)</span> respectively, are normal in <span class="process-math">\(G\text{.}\)</span>
+</div> <div class="para" id="p-1063">As <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\)</span> are normal in <span class="process-math">\(G\)</span> and intersect trivially, we see that <span class="process-math">\(PQ\leq G\text{.}\)</span> Let <span class="process-math">\(g\in G\)</span> and consider <span class="process-math">\(gPQg\inv\text{.}\)</span> Let <span class="process-math">\(pq\in PQ\)</span> and notice <span class="process-math">\(g(pq)g\inv=gpg\inv gqg\inv\text{.}\)</span> As <span class="process-math">\(p\in P\nsg G\)</span> and <span class="process-math">\(q\in Q\nsg G\)</span> we see <span class="process-math">\(gpg\inv\in P\)</span> and <span class="process-math">\(gqg\inv\in Q\text{,}\)</span> thus <span class="process-math">\(gpqg\inv\in PQ\text{,}\)</span> making <span class="process-math">\(PQ\nsg G\text{.}\)</span>
+</div> <div class="para" id="p-1064">Let <span class="process-math">\(R\)</span> be the unique Sylow <span class="process-math">\(3\)</span>-subgroup, which has order <span class="process-math">\(9\text{.}\)</span> As <span class="process-math">\(R\nsg G\)</span> and intersects with <span class="process-math">\(PQ\)</span> trivially, we see <span class="process-math">\(G=PQ\times R\text{,}\)</span> a direct product of cyclic groups of relatively prime order, making <span class="process-math">\(G\)</span> abelian.</div>
 </div></div>
 </div></article></div>
-<article class="exercise exercise-like" id="exercise-153"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-153"><h4 class="heading">
+<article class="exercise exercise-like" id="exercise-148"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-148"><h4 class="heading">
 <span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">January 2016 (3).</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-153"><article class="exercise exercise-like"><div class="para" id="p-1091">Suppose <span class="process-math">\(G\)</span> is a group of order <span class="process-math">\(5 \cdot 7 \cdot 23^2\)</span> and that <span class="process-math">\(G\)</span> contains an element of order <span class="process-math">\(35\text{.}\)</span> Prove <span class="process-math">\(G\)</span> is abelian.</div>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-148"><article class="exercise exercise-like"><div class="para" id="p-1065">Suppose <span class="process-math">\(G\)</span> is a group of order <span class="process-math">\(5 \cdot 7 \cdot 23^2\)</span> and that <span class="process-math">\(G\)</span> contains an element of order <span class="process-math">\(35\text{.}\)</span> Prove <span class="process-math">\(G\)</span> is abelian.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-63" id="solution-63"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-63"><div class="solution solution-like">
-<div class="para" id="p-1092">By Sylow's Theorem we know the number of Sylow <span class="process-math">\(23\)</span>-subgroups of <span class="process-math">\(G\)</span> must divide <span class="process-math">\(35\)</span> and be congruent to <span class="process-math">\(1\mod{23}\text{,}\)</span> the only option of which is <span class="process-math">\(1\text{.}\)</span> Let <span class="process-math">\(H\)</span> denote the unique Sylow <span class="process-math">\(23\)</span>-subgroup and let <span class="process-math">\(K\)</span> be the cyclic subgroup generated by the element of order <span class="process-math">\(35\text{.}\)</span>
-</div> <div class="para" id="p-1093">As <span class="process-math">\(H\)</span> is unique it is normal in <span class="process-math">\(G\text{,}\)</span> and it also means we have <span class="process-math">\(HK\leq G\text{.}\)</span> Notice that as <span class="process-math">\(H\)</span> and <span class="process-math">\(K\)</span> are groups of relatively prime order we have <span class="process-math">\(H\cap K=\{e\}\text{.}\)</span> Thus <span class="process-math">\(|HK|=|G|\text{,}\)</span> and so <span class="process-math">\(G=HK\text{,}\)</span> making <span class="process-math">\(G\cong H\times K\text{,}\)</span> a direct product of abelian groups. Thus <span class="process-math">\(G\)</span> is abelian.</div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-60" id="solution-60"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-60"><div class="solution solution-like">
+<div class="para" id="p-1066">By Sylow's Theorem we know the number of Sylow <span class="process-math">\(23\)</span>-subgroups of <span class="process-math">\(G\)</span> must divide <span class="process-math">\(35\)</span> and be congruent to <span class="process-math">\(1\mod{23}\text{,}\)</span> the only option of which is <span class="process-math">\(1\text{.}\)</span> Let <span class="process-math">\(H\)</span> denote the unique Sylow <span class="process-math">\(23\)</span>-subgroup and let <span class="process-math">\(K\)</span> be the cyclic subgroup generated by the element of order <span class="process-math">\(35\text{.}\)</span>
+</div> <div class="para" id="p-1067">As <span class="process-math">\(H\)</span> is unique it is normal in <span class="process-math">\(G\text{,}\)</span> and it also means we have <span class="process-math">\(HK\leq G\text{.}\)</span> Notice that as <span class="process-math">\(H\)</span> and <span class="process-math">\(K\)</span> are groups of relatively prime order we have <span class="process-math">\(H\cap K=\{e\}\text{.}\)</span> Thus <span class="process-math">\(|HK|=|G|\text{,}\)</span> and so <span class="process-math">\(G=HK\text{,}\)</span> making <span class="process-math">\(G\cong H\times K\text{,}\)</span> a direct product of abelian groups. Thus <span class="process-math">\(G\)</span> is abelian.</div>
 </div></div>
 </div></article></div>
-<article class="exercise exercise-like" id="exercise-154"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-154"><h4 class="heading">
+<article class="exercise exercise-like" id="exercise-149"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-149"><h4 class="heading">
 <span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">June 2014 (2).</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-154"><article class="exercise exercise-like"><div class="para logical" id="p-1094">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-149"><article class="exercise exercise-like"><div class="para logical" id="p-1068">
 <div class="para">Let <span class="process-math">\(G\)</span> be a group of order <span class="process-math">\(p^2q\)</span> where <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> are distinct primes.</div>
 <ol class="lower-alpha">
-<li id="li-333"><div class="para" id="p-1095">Prove that <span class="process-math">\(G\)</span> contains a normal Sylow subgroup.</div></li>
-<li id="li-334"><div class="para" id="p-1096">Suppose <span class="process-math">\(p &lt; q\)</span> and the Sylow <span class="process-math">\(p\)</span>-subgroup is cyclic and normal. Prove that <span class="process-math">\(G\)</span> is abelian.</div></li>
+<li id="li-331"><div class="para" id="p-1069">Prove that <span class="process-math">\(G\)</span> contains a normal Sylow subgroup.</div></li>
+<li id="li-332"><div class="para" id="p-1070">Suppose <span class="process-math">\(p &lt; q\)</span> and the Sylow <span class="process-math">\(p\)</span>-subgroup is cyclic and normal. Prove that <span class="process-math">\(G\)</span> is abelian.</div></li>
 </ol>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-64" id="solution-64"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-64"><div class="solution solution-like">
-<div class="para" id="p-1097">Let <span class="process-math">\(G\)</span> be a group of order <span class="process-math">\(p^2q\)</span> where <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> are distinct primes. Suppose by way of contradiction that <span class="process-math">\(G\)</span> has no normal Sylow <span class="process-math">\(p\)</span>-subgroup.</div> <div class="para" id="p-1098">First, suppose <span class="process-math">\(p&lt;q\text{.}\)</span> By Sylow's Theorem we know the following: - <span class="process-math">\(n_p|q\)</span> and <span class="process-math">\(n_p\equiv 1\mod{p}\text{,}\)</span> so <span class="process-math">\(n_p=1\)</span> or <span class="process-math">\(q\text{,}\)</span> so <span class="process-math">\(q\)</span> - <span class="process-math">\(n_q|p^2\)</span> and <span class="process-math">\(n_q\equiv 1\mod{q}\text{,}\)</span> so <span class="process-math">\(n_q=1\)</span> or <span class="process-math">\(p^2\text{,}\)</span> so <span class="process-math">\(p^2\text{.}\)</span> We know there must be <span class="process-math">\((q-1)\cdot p^2=p^2q-p^2\)</span> elements of order <span class="process-math">\(p\text{.}\)</span> Luckily, there is more than one Sylow <span class="process-math">\(p\)</span>-subgroup with <span class="process-math">\(p^2\)</span> elements, so there isn't room for all of them.</div> <div class="para" id="p-1099">Suppose then that <span class="process-math">\(q&gt;p\text{.}\)</span> By Sylow's Theorem we know the following: - <span class="process-math">\(n_p|q\)</span> and <span class="process-math">\(n_p\equiv 1\mod{p}\text{,}\)</span> so <span class="process-math">\(n_p=1\text{,}\)</span> so we're definitely good there.</div> <div class="para" id="p-1100">Suppose <span class="process-math">\(p &lt; q\)</span> and the Sylow <span class="process-math">\(p\)</span>-subgroup, <span class="process-math">\(P\text{,}\)</span> is cyclic and normal. We know from Part (a) that there are either <span class="process-math">\(1\)</span> or <span class="process-math">\(p^2\)</span> Sylow <span class="process-math">\(q\)</span>-subgroups, but since there are already <span class="process-math">\(p^2\)</span> elements of order <span class="process-math">\(p\)</span> there is only room for one, <span class="process-math">\(Q\text{,}\)</span> which is also cyclic, given its prime power. As <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\)</span> are thus normal in <span class="process-math">\(G\)</span> and only intersect trivially, we see that <span class="process-math">\(PQ=G\text{,}\)</span> meaning that <span class="process-math">\(G=P\times Q\text{.}\)</span> Thus <span class="process-math">\(G\)</span> is the product of two cyclic groups of relatively prime order, making <span class="process-math">\(G\)</span> cyclic as well. Cyclic groups are abelian, so we are done.</div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-61" id="solution-61"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-61"><div class="solution solution-like">
+<div class="para" id="p-1071">Let <span class="process-math">\(G\)</span> be a group of order <span class="process-math">\(p^2q\)</span> where <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> are distinct primes. Suppose by way of contradiction that <span class="process-math">\(G\)</span> has no normal Sylow <span class="process-math">\(p\)</span>-subgroup.</div> <div class="para" id="p-1072">First, suppose <span class="process-math">\(p&lt;q\text{.}\)</span> By Sylow's Theorem we know the following: - <span class="process-math">\(n_p|q\)</span> and <span class="process-math">\(n_p\equiv 1\mod{p}\text{,}\)</span> so <span class="process-math">\(n_p=1\)</span> or <span class="process-math">\(q\text{,}\)</span> so <span class="process-math">\(q\)</span> - <span class="process-math">\(n_q|p^2\)</span> and <span class="process-math">\(n_q\equiv 1\mod{q}\text{,}\)</span> so <span class="process-math">\(n_q=1\)</span> or <span class="process-math">\(p^2\text{,}\)</span> so <span class="process-math">\(p^2\text{.}\)</span> We know there must be <span class="process-math">\((q-1)\cdot p^2=p^2q-p^2\)</span> elements of order <span class="process-math">\(p\text{.}\)</span> Luckily, there is more than one Sylow <span class="process-math">\(p\)</span>-subgroup with <span class="process-math">\(p^2\)</span> elements, so there isn't room for all of them.</div> <div class="para" id="p-1073">Suppose then that <span class="process-math">\(q&gt;p\text{.}\)</span> By Sylow's Theorem we know the following: - <span class="process-math">\(n_p|q\)</span> and <span class="process-math">\(n_p\equiv 1\mod{p}\text{,}\)</span> so <span class="process-math">\(n_p=1\text{,}\)</span> so we're definitely good there.</div> <div class="para" id="p-1074">Suppose <span class="process-math">\(p &lt; q\)</span> and the Sylow <span class="process-math">\(p\)</span>-subgroup, <span class="process-math">\(P\text{,}\)</span> is cyclic and normal. We know from Part (a) that there are either <span class="process-math">\(1\)</span> or <span class="process-math">\(p^2\)</span> Sylow <span class="process-math">\(q\)</span>-subgroups, but since there are already <span class="process-math">\(p^2\)</span> elements of order <span class="process-math">\(p\)</span> there is only room for one, <span class="process-math">\(Q\text{,}\)</span> which is also cyclic, given its prime power. As <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\)</span> are thus normal in <span class="process-math">\(G\)</span> and only intersect trivially, we see that <span class="process-math">\(PQ=G\text{,}\)</span> meaning that <span class="process-math">\(G=P\times Q\text{.}\)</span> Thus <span class="process-math">\(G\)</span> is the product of two cyclic groups of relatively prime order, making <span class="process-math">\(G\)</span> cyclic as well. Cyclic groups are abelian, so we are done.</div>
 </div></div>
 </div></article></div>
-<article class="exercise exercise-like" id="exercise-155"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-155"><h4 class="heading">
+<article class="exercise exercise-like" id="exercise-150"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-150"><h4 class="heading">
 <span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">January 2012 (2).</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-155"><article class="exercise exercise-like"><div class="para" id="p-1101">Suppose <span class="process-math">\(G\)</span> is a finite group which has precisely one subgroup of order <span class="process-math">\(d\)</span> for each divisor <span class="process-math">\(d\)</span> of <span class="process-math">\(|G|\text{.}\)</span> Prove that <span class="process-math">\(G\)</span> is cyclic.</div>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-150"><article class="exercise exercise-like"><div class="para" id="p-1075">Suppose <span class="process-math">\(G\)</span> is a finite group which has precisely one subgroup of order <span class="process-math">\(d\)</span> for each divisor <span class="process-math">\(d\)</span> of <span class="process-math">\(|G|\text{.}\)</span> Prove that <span class="process-math">\(G\)</span> is cyclic.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-65" id="solution-65"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-65"><div class="solution solution-like">
-<div class="para" id="p-1102">First, suppose that <span class="process-math">\(G\)</span> is a <span class="process-math">\(p\)</span>-group. Let <span class="process-math">\(g\in G\)</span> have biggest order. Let <span class="process-math">\(h\in G\text{.}\)</span> So <span class="process-math">\(|h|\bigg||g|\text{.}\)</span> Since <span class="process-math">\((g)\leq G\text{,}\)</span> it also has exactly one subgroup for each divisor. But (h) has the same order as one of those subgroups, so they must be the same group. So <span class="process-math">\(h\in(g)\text{.}\)</span> Since <span class="process-math">\(h\)</span> was arbitrary, then <span class="process-math">\(G\leq (g)\text{.}\)</span> So when <span class="process-math">\(G\)</span> is a <span class="process-math">\(p\)</span>-group then it is cyclic.</div> <div class="para" id="p-1103">If its not a <span class="process-math">\(p\)</span>-group then we can decompose <span class="process-math">\(|G|\)</span> into relatively prime powers of primes, all of which are <span class="process-math">\(p\)</span>-groups and maintain this property. Thus <span class="process-math">\(G\)</span> is the product of relatively prime cyclic groups, making it cyclic itself.</div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-62" id="solution-62"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-62"><div class="solution solution-like">
+<div class="para" id="p-1076">First, suppose that <span class="process-math">\(G\)</span> is a <span class="process-math">\(p\)</span>-group. Let <span class="process-math">\(g\in G\)</span> have biggest order. Let <span class="process-math">\(h\in G\text{.}\)</span> So <span class="process-math">\(|h|\bigg||g|\text{.}\)</span> Since <span class="process-math">\((g)\leq G\text{,}\)</span> it also has exactly one subgroup for each divisor. But (h) has the same order as one of those subgroups, so they must be the same group. So <span class="process-math">\(h\in(g)\text{.}\)</span> Since <span class="process-math">\(h\)</span> was arbitrary, then <span class="process-math">\(G\leq (g)\text{.}\)</span> So when <span class="process-math">\(G\)</span> is a <span class="process-math">\(p\)</span>-group then it is cyclic.</div> <div class="para" id="p-1077">If its not a <span class="process-math">\(p\)</span>-group then we can decompose <span class="process-math">\(|G|\)</span> into relatively prime powers of primes, all of which are <span class="process-math">\(p\)</span>-groups and maintain this property. Thus <span class="process-math">\(G\)</span> is the product of relatively prime cyclic groups, making it cyclic itself.</div>
 </div></div>
 </div></article></div></section></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="sec-order-pq.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-classifications.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+<a class="previous-button button" href="sec-classifying-cyclic-groups.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-classifications.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer">
