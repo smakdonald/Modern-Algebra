@@ -11,9 +11,22 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Prove that if <span class="process-math">\(m,n\)</span> are positive integers such that <span class="process-math">\(\gcd(m,n)=1\)</span> then there is a group isomorphism <span class="process-math">\(C_{mn}=C_m\times C_n\text{.}\)</span>
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<div class="para logical">
+<div class="para">We have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\theta((y_1, x_1) (y_2, x_2))  &amp; = 
+\theta(y_1 c_{x_1}(y_2), x_1 x_2) \\
+&amp; = y_1x_1y_2x_1^{-1} x_1 x_2 \\
+&amp; = y_1x_1y_2x_2 = \theta(y_1, x_1) \theta(y_2, x_2)
+\end{aligned}
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec-classifying-cyclic-groups.html#p-1053" class="internal">in-context</a></span>
+<div class="para">and thus <span class="process-math">\(\theta\)</span> is a homomorphism. It's kernel is <span class="process-math">\(\{(y,x) \mid y = x^{-1}, y\in H, x\in K \}\text{,}\)</span> which is just <span class="process-math">\(\{e\}\)</span> since <span class="process-math">\(H \cap K = \{e\}\text{.}\)</span> The image of <span class="process-math">\(\theta\)</span> is clearly <span class="process-math">\(KH = G\text{.}\)</span> This proves <span class="process-math">\(\theta\)</span> is an isomorphism. It is obvious that <span class="process-math">\(\theta(K') = K\)</span> and <span class="process-math">\(\theta(H')= H\text{.}\)</span>
+</div>
+</div>
+<span class="incontext"><a href="sec-spds.html#p-1053" class="internal">in-context</a></span>
 </body>
 </html>

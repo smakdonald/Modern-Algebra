@@ -13,33 +13,26 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Say I tell you</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-sunzi.html">
+<div class="para">
+<em class="emphasis">Existence:</em> In either case, define <span class="process-math">\(f(x^i) = y^i\)</span> for all relevant <span class="process-math">\(i\)</span> (i.e., in the first case, for <span class="process-math">\(0 \leq i \leq n-1\)</span> and in the second for all <span class="process-math">\(i \in\mathbb{Z}\)</span>). We need to show this function is a well-defined group homomorphism. To see that <span class="process-math">\(f\)</span> is well defined, suppose <span class="process-math">\(x^i=x^j\)</span> for some <span class="process-math">\(i,j\in \mathbb{Z}\text{.}\)</span> Then, since <span class="process-math">\(x^{i-j}=e_G\text{,}\)</span> suing Lemma <code class="code-inline tex2jax_ignore">[provisional cross-reference: prop96]</code> or the definition for order we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-G \cong \mathbb{Z}^{3} \times \mathbb{Z}/4 \times \mathbb{Z}/8 \times \mathbb{Z}/9 \times \mathbb{Z}/27 \times \mathbb{Z}/25
+\begin{cases}
+n\mid i-j &amp; \text{ if } |x|=n\\
+i-j=0 &amp; \text{ if } |x|=\infty\\
+\end{cases}
+\Rightarrow
+\begin{cases}
+y^ {i-j}=y^{nk} &amp; \text{ if } |x|=n\\
+y^{i-j}=y^0 &amp; \text{ if } |x|=\infty\\
+\end{cases}
+\Rightarrow y^ {i-j}=e_H
+\Rightarrow y^ i=y^j.
 \end{equation*}
 </div>
-<div class="para">The Chinese Remainder Theorem <a href="" class="xref" data-knowl="./knowl/thm-sunzi.html" title="Theorem 7.5: Sunzi's Remainder Theorem">Theorem 7.5</a> gives</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-sunzi.html">
-\begin{equation*}
-\mathbb{Z}/8 \times \mathbb{Z}/27 \times \mathbb{Z}/25 \cong \mathbb{Z}/(8 \cdot 27 \cdot 25)
-\end{equation*}
-</div>
-<div class="para">and</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-sunzi.html">
-\begin{equation*}
-\mathbb{Z}/4\times \mathbb{Z}/9  \cong \mathbb{Z}/(4 \cdot 9)
-\end{equation*}
-</div>
-<div class="para">so that</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-sunzi.html">
-\begin{equation*}
-G \cong \mathbb{Z}^{3} \times \mathbb{Z}/(4 \cdot 9) \times \mathbb{Z}/(8 \cdot 27 \cdot 25).
-\end{equation*}
-</div>
-<div class="para">Since <span class="process-math">\(n_2:=(4 \cdot 9) \mid n_1:=(8 \cdot 27 \cdot 25)\text{,}\)</span> this is in invariant factor form, and hence the rank of <span class="process-math">\(A\)</span> is <span class="process-math">\(3\)</span> and the invariant factors of <span class="process-math">\(A\)</span> are <span class="process-math">\(4 \cdot 9\)</span> and <span class="process-math">\(8 \cdot 27 \cdot 25\text{.}\)</span>
+<div class="para">Thus, if <span class="process-math">\(x^i=x^j\)</span> then <span class="process-math">\(f(x^i)=y^i=y^j=f(x^j)\text{.}\)</span>
 </div>
 </div>
-<span class="incontext"><a href="sec-ftfgag.html#p-1080" class="internal">in-context</a></span>
+<span class="incontext"><a href="sec-classifying-cyclic-groups.html#p-1080" class="internal">in-context</a></span>
 </body>
 </html>

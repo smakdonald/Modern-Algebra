@@ -12,13 +12,21 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para logical"><ol class="decimal">
-<li><div class="para"><span class="process-math">\(1 \in S\text{,}\)</span></div></li>
-<li><div class="para">
-<span class="process-math">\(S\)</span> is closed under multiplication (i.e., if <span class="process-math">\(x,y \in S\text{,}\)</span> then <span class="process-math">\(xy \in S\)</span>), and</div></li>
-<li><div class="para">
-<span class="process-math">\(S\)</span> does not contain <span class="process-math">\(0\)</span> nor any zero divisors.</div></li>
-</ol></div>
-<span class="incontext"><a href="sec-field-of-fractions.html#p-1512" class="internal">in-context</a></span>
+<div class="para logical">
+<div class="para">Let’s observe first that if such a map exists it is unique. For if <span class="process-math">\(\tilde\phi: R[x_1, \dots, x_n] \to S\)</span> is a ring map extending <span class="process-math">\(\phi\)</span> and sending <span class="process-math">\(x_i\)</span> to <span class="process-math">\(s_i\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{align*}
+\tilde\phi(\sum_{e_1, \dots, e_n \geq 0} r_{e_1, \dots, e_n} x_1^{e_1} \cdots x_n^{e_n}) &amp;=
+\sum_{e_1, \dots, e_n \geq 0} \phi(r_{e_1, \dots, e_n}) \phi(x_1)^{e_1} \cdots \phi(x_n)^{e_n}) \\
+&amp;=
+\sum_{e_1, \dots, e_n \geq 0} \phi(r_{e_1, \dots, e_n}) s_1^{e_1} \cdots s_n^{e_n},
+\end{align*}
+\end{equation*}
+</div>
+<div class="para">using that <span class="process-math">\(\tilde\phi\)</span> preserves <span class="process-math">\(+\)</span> and <span class="process-math">\(\cdot\text{.}\)</span>
+</div>
+</div>
+<span class="incontext"><a href="subsec-polyrings.html#p-1512" class="internal">in-context</a></span>
 </body>
 </html>

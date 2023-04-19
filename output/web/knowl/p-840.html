@@ -12,8 +12,16 @@
 </head>
 <body class="ignore-math">
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<div class="para">Any subgroup of <span class="process-math">\(S_4\)</span> of order <span class="process-math">\(8\)</span> is a Sylow <span class="process-math">\(2\)</span>-subgroup. By Sylow’s theorems, the number of Sylow <span class="process-math">\(2\)</span>-subgroups is either <span class="process-math">\(1\)</span> or <span class="process-math">\(3\text{.}\)</span> As any <span class="process-math">\(2\)</span>-cycle or <span class="process-math">\(4\)</span>-cycle must be contained in a Sylow <span class="process-math">\(2\)</span>-subgroup (since such elements generate subgroups of order <span class="process-math">\(2i\text{,}\)</span> for some i) and there are six <span class="process-math">\(2\)</span>-cycles and six <span class="process-math">\(4\)</span>-cycles, there has to be more than one Sylow <span class="process-math">\(2\)</span>-subgroup. Hence, there are precisely <span class="process-math">\(3\)</span> distinct subgroups of order <span class="process-math">\(8\text{.}\)</span>
+<div class="para logical">
+<div class="para">As <span class="process-math">\(N\nsg G\)</span> it is a union of conjugacy classes of the elements it contains, one of which is <span class="process-math">\(e\text{.}\)</span> Assume by way of contradiction that <span class="process-math">\(N\cap Z(G)={e}\text{,}\)</span> meaning that <span class="process-math">\(e\)</span> is the only element in <span class="process-math">\(N\)</span> whose conjugacy class is a singleton. This yields</div>
+<div class="displaymath process-math">
+\begin{equation*}
+|N| = 1+ \sum_i^r |G : C_G(n_i)|.
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec-sylowthm.html#p-840" class="internal">in-context</a></span>
+<div class="para">However, by Lagrange's Theorem <span class="process-math">\(N\)</span> must also be a <span class="process-math">\(p-\)</span>group, and thus by an analogous element counting argument as above we see that there exists some <span class="process-math">\(x\in N\)</span> such that <span class="process-math">\(C_G(x)=\{x\}\text{,}\)</span> or that <span class="process-math">\(gxg\inv=x\)</span> for all <span class="process-math">\(g\in G\text{.}\)</span> Thankfully, this means that <span class="process-math">\(x\in Z(G)\text{,}\)</span> and thus we have <span class="process-math">\(Z(G)\cap N\neq 1\text{.}\)</span>
+</div>
+</div>
+<span class="incontext"><a href="sec-p-groups.html#p-840" class="internal">in-context</a></span>
 </body>
 </html>

@@ -1043,6 +1043,13 @@
                   </p>
                 </solution>
               </exercise>
+
+              <exercise xml:id="exe-opposite-group">
+                <title>Opposite Day</title>
+                <p>
+                  Let <m>G</m> be a multiplicative group, and define <m>G^{op}</m> be the set <m>G</m> equipped with the operation <m>*</m>, where <m>a*b=ba</m>. Then <m>G^{op}</m> is a group.
+                </p>
+              </exercise>
     
             </exercisegroup>
     
@@ -1380,47 +1387,15 @@
           </subsection>
       
           <exercises>
-      
+
             <exercisegroup> <title>Computations and Examples</title>
               
               <introduction>
                 <p>
                 </p>
               </introduction>
-      
-              <exercise>
-                <title>Heinous Commutes</title>
-                <p>
-                  Provide explicit examples to show <m>D_{2n}, S_n</m>, and <m>Q_8</m> are <em>not</em> abelian groups.
-                </p>
-              </exercise>
-      
-              <exercise>
-                <title>Element Orders</title>
-                <p>
-                  Find the order 
-                </p>
-      
-              </exercise>
 
-              <exercise>
-                <title><m>1</m>-Cycles in <m>S_n</m></title>
-                <p>
-                  Determine the number of <m>1</m>-cycles in <m>S_n</m>. 
-                </p>
-              </exercise>
-      
-            </exercisegroup>
-      
-            <exercisegroup> <title>Formal Proofs</title>
-              
-              <introduction>
-                <p>
-                  
-                </p>
-              </introduction>
-      
-              <exercise>
+              <exercise xml:id="exe-common-group-verifications">
                 <title>Group Verifications</title>
                 <p>
                   Verify that the following are indeed groups:
@@ -1446,37 +1421,91 @@
                 </p>
               </exercise>
       
-              <exercise>
-                <title>Uncommon Groups</title>
-              
+              <exercise xml:id="exe-heinous-commutes">
+                <title>Heinous Commutes</title>
+                <p>
+                  Provide explicit examples to show <m>D_{2n}, S_n</m>, and <m>Q_8</m> are <em>not</em> abelian groups.
+                </p>
+              </exercise>
+      
+              <exercise xml:id="exe-1-cycles">
+                <title><m>1</m>-Cycles in <m>S_n</m></title>
+                <p>
+                  Determine the number of <m>1</m>-cycles in <m>S_n</m>. 
+                </p>
+              </exercise>
+
+              <exercise xml:id="exe-k-cycle-order">
+                <title>Order of a <m>k</m>-cycle</title>
+                <p>
+                  The order of a <m>k</m>-cycle in <m>S_n</m> is <m>n</m>.
+                </p>
+              </exercise>
+
+              <exercise xml:id="exe-inverting-transpositions">
+                <title>Inverting Transpositions</title>
                 <p>
                   <ol>
                     <li>
                       <p>
-                        The Rubik's Cube Group (coming soon)
+                        Every transposition is its own inverse.
                       </p>
                     </li>
-      
+
                     <li>
                       <p>
-                        Juggling Groups (coming soon)
+                        If <m>\s_1,\dots,\s_{n-1}</m> and <m>\s_n</m> are transpositions, then 
+                        <me>
+                          (\s_1\dots\s_{n})\inv=\s_n\dots\s_1
+                        </me>
                       </p>
                     </li>
                   </ol>
                 </p>
               </exercise>
+      
+            </exercisegroup>
 
-              <exercise>
+            <exercisegroup> <title>Formal Proofs</title>
+              
+              <introduction>
+                <p>
+                  
+                </p>
+              </introduction>
+      
+              <exercise xml:id="exe-permutation-order">
                 <title>Permutation Order</title>
                 <p>
                   Prove that the order of a permutation is the least common multiple of the lengths of the cycles it is a product of.
                 </p>
               </exercise>
 
-              <exercise>
+              <exercise xml:id="exe-sn-order">
                 <title>Order of <m>S_n</m></title>
                 <p>
                   Prove <m>|S_n|=n!</m>.
+                </p>
+              </exercise>
+
+              <exercise xml:id="exe-an-order">
+                <title>Order of <m>S_n</m></title>
+                <p>
+                  Prove <m>|A_n|=\frac{n!}{2}</m>.
+                </p>
+              </exercise>
+
+              <exercise xml:id="exe-identity-even">
+                <title>Identity Permutation</title>
+                <p>
+                  The identity permutation in <m>S_n</m> is even, but not odd.
+                </p>
+              </exercise>
+
+              <exercise xml:id="exe-permutation-even-odd">
+                <title>No Evodds Allowed</title>
+                <p>
+                  The no permutation in <m>S_n</m> is both even and odd.
                 </p>
               </exercise>
       
@@ -1515,7 +1544,7 @@
               </statement>
             </definition>
       
-            <lemma xml:id="lem-subgrouptest">
+            <theorem xml:id="thm-subgroup-test">
               <title>Subgroup Tests</title>
               
               <statement>
@@ -1553,7 +1582,15 @@
                 Assume <m>H</m> is non-empty and closed under multiplication and inversion. Then, for <m>x,y\in H</m> we have <m>y^{-1}\in H</m> and <m>xy^{-1}\in H</m>. Since the hypothesis of the one-step test is satisfied, <m>H</m> is a subgroup of <m>G</m>.
               </p>
               </proof>
-            </lemma>
+            </theorem>
+
+            <corollary xml:id="cor-finite-subgroup-test">
+              <statement>
+                <p>
+                  If a finite subset <m>H</m> of a group <m>G</m> is nonempty and closed under multiplication, then <m>H</m> is a subgroup.
+                </p>
+              </statement>
+            </corollary>
       
             <example xml:id="ex-common-subgroups">
               <title>Common Subgroups</title>
@@ -1588,6 +1625,38 @@
             </example>
 
             <remark><p>In fact, in the case of <xref ref="ex-nz"/>, these turn out to be the <em>only</em> subgroups of <m>\Z</m>, a fact which you may prove in <xref ref="exe-subgroups-of-z"/> </p></remark>
+
+            <example xml:id="ex-uncommon-subgroups">
+              <title>Less Common Subgroups</title>
+
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      <m>R^+\leq R^\times</m>
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      The group <m>L=\{1,-1,i,-i\}</m> (verified as such in <xref ref="ex-group-examples"/>) is a subgroup of <m>\C^\times</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>\{1,3\}\leq \Z/(8)^\times</m>
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      The set of all reflections is a subgroup of <m>D_{2n}</m>. Similarly, the set of relections is also a subgroup.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </example>
       
             <theorem xml:id="thm-subgroup-properties">
               <title>Properties of Subgroups</title>
@@ -1684,6 +1753,28 @@
                 </p>
               </statement>
             </definition>
+
+            <example xml:id="ex-group-centers">
+              <title>Centers of Common Groups</title>
+              
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      The center of any abelian group <m>G</m> is <m>G</m> itself. (In fact, this statement is an if and only if)
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>Z(S_n)=\{e\}</m> for <m>n&gt;2</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+              
+
+            </example>
       
             <proposition xml:id="prop-center-is-subgroup">
               <title>Center is a Subgroup</title>
@@ -1705,7 +1796,7 @@
 
           <exercises>
       
-            <exercisegroup> <title>Computations and Examples</title>
+            <exercisegroup> <title>Examples and Specifics</title>
               
               <introduction>
                 <p>
@@ -1717,46 +1808,6 @@
 
                 <p>Prove that each of the subgroup in <xref ref="ex-common-subgroups"/> are indeed subgroups </p>
               </exercise>
-          
-              <exercise xml:id="exe-finding-centers">
-                <title>Finding Centers</title>
-                <p>
-                  Determine the following:
-                  <ol>
-                    <li>
-                      <p>
-                        <m>Z(D_{2n})</m> for <m>n \geq 3</m>. Your answer will depend on whether <m>n</m> is even or odd.
-                      </p>
-                    </li>
-      
-                    <li>
-                      <p>
-                        <m>Z(S_n)</m> for <m>n \geq 3</m>.
-                      </p>
-                    </li>
-      
-                    <li>
-                      <p>
-                        <m>Z(A_n)</m> for <m>n \geq 3</m>.
-                      </p>
-                    </li>
-      
-                    <li>
-                      <p>
-                        <m>Z(\GL_n(\C))</m>.
-                      </p>
-                    </li>
-                  </ol>
-                  
-                </p>
-              </exercise>
-
-              <exercise xml:id="exe-verify-d2n-generation">
-                <title><m>D_{2n}</m> as Generated Subgroup</title>
-                <p>
-                  Verify <m>D_{2n}=\langle r,s \rangle</m>, meaning that <m>D_{2n}</m> is the subgroup of <m>D_{2n}</m> generated by <m>\{r,s\}</m>.
-                </p>
-              </exercise> 
 
               <exercise xml:id="exe-future-subgroups">
                 <title>
@@ -1802,6 +1853,76 @@
                 </p>
               </exercise>
 
+              <exercise xml:id="exe-torsion-subgroup">
+                <title>Torision Subgroup</title>
+                
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        Let <m>G</m> be an abelian group. Then the set of elements of finite order, which we denote <m>T</m>, is a subgroup of <m>G</m>, called the <term>torsion subgroup</term>.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Show that the torision subgroup may not in fact be a subgroup if <m>G</m> is not assumed to be abelian.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </exercise>
+
+              <exercise xml:id="exe-finding-centers">
+                <title>Finding Centers</title>
+                <p>
+                  Determine the following:
+                  <ol>
+                    <li>
+                      <p>
+                        <m>Z(D_{2n})</m> for <m>n \geq 3</m>. Your answer will depend on whether <m>n</m> is even or odd.
+                      </p>
+                    </li>
+      
+                    <li>
+                      <p>
+                        <m>Z(S_n)</m> for <m>n \geq 3</m>.
+                      </p>
+                    </li>
+      
+                    <li>
+                      <p>
+                        <m>Z(A_n)</m> for <m>n \geq 3</m>.
+                      </p>
+                    </li>
+      
+                    <li>
+                      <p>
+                        <m>Z(\GL_n(\C))</m>.
+                      </p>
+                    </li>
+                  </ol>
+                  
+                </p>
+              </exercise>
+
+              <exercise xml:id="exe-subgroup-not-symmetric">
+                <title>Subgroups not Symmetric</title>
+                
+                <statement>
+                <p>
+                  In <xref ref="thm-subgroup-properties"/> we showed that subgroups form a transitve relation. Prove that the relation is reflexive (it can be one sentence), <em>not</em> symmetric, and thus not an equivalence relation.
+                </p>
+              </statement>
+              </exercise>
+          
+              <exercise xml:id="exe-verify-d2n-generation">
+                <title><m>D_{2n}</m> as Generated Subgroup</title>
+                <p>
+                  Verify <m>D_{2n}=\langle r,s \rangle</m>, meaning that <m>D_{2n}</m> is the subgroup of <m>D_{2n}</m> generated by <m>\{r,s\}</m>.
+                </p>
+              </exercise> 
+
               <exercise xml:id="exe-subgroups-of-z">
 
                 <title>Subgroups of <m>\Z</m></title>
@@ -1816,12 +1937,6 @@
         
                       <li>
                         <p>
-                          <m>n\Z=\igen n</m> 
-                        </p>
-                      </li>
-
-                      <li>
-                        <p>
                           The only subgroups of <m>\Z</m> are the sets <m>n\Z</m>.
                         </p>
                       </li>
@@ -1829,21 +1944,45 @@
                   </p>
                 </statement>
               </exercise>
+
+              <exercise xml:id="exe-only-element-of-order-2">
+                <p>
+                  Let <m>G</m> be a group and <m>g\in G</m>. If <m>g</m> is the only element of order <m>2</m> in <m>G</m>, then <m>g\in Z(G)</m>.
+                </p>
+              </exercise>
           
             </exercisegroup>
           
-            <exercisegroup> <title>Formal Proofs</title>
+            <exercisegroup> <title>Properties and Future Lemmas</title>
               
               <introduction>
                 <p>
                 </p>
               </introduction>
 
+              <exercise xml:id="exe-subgroup-preserves-identity">
+                <title>Subgroups Preserve Identities</title>
+                <statement>
+                  <p>
+                    Let <m>H</m> be a subgroup of <m>G</m>. Then <m>e_G=e_H</m>.
+                  </p>
+                </statement>
+              </exercise>
+
               <exercise xml:id="exe-center-is-group-iff-abelian">
                 <title>Abelian iff <m>Z(G)=G</m></title>
                 <statement>
                   <p>
                     Let <m>G</m> be a group. Prove <m>G</m> is abelian if any only if <m>G=Z(G)</m>.
+                  </p>
+                </statement>
+              </exercise>
+
+              <exercise xml:id="exe-subgroups-closed-under-intersections">
+                <title>Abelian iff <m>Z(G)=G</m></title>
+                <statement>
+                  <p>
+                    Subgroups are closed under intersections.
                   </p>
                 </statement>
               </exercise>
@@ -1904,7 +2043,7 @@
                 </p>
               </introduction>
           
-              <exercise number="1">
+              <exercise>
                 <title>May 2021 (1a)</title>
     
                 <statement>
@@ -1985,15 +2124,8 @@
               </statement>
             </theorem>
         
-            <remark>
-              <p>
-                Funnily enough, this theorem will prove surprisingly useful all the way down in <xref text="title" ref="ch-galois"/>. 
-              </p>
-            </remark>
+            <remark><p>Funnily enough, this theorem will prove surprisingly useful all the way down in <xref text="title" ref="ch-galois"/>. </p></remark>
           
-          
-
-      
             <definition xml:id="def-gensubgp">
               <title>Generated Subgroup</title>
               <statement>
@@ -2007,6 +2139,17 @@
                 </p>
               </statement>
             </definition>
+
+            <p>A nice property of generated subgroups is that once you've located the generators, you've found the whole group:</p>
+
+            <proposition xml:id="prop-generators-of-subgroup">
+              <title>Generators of Subgroups</title>
+              <statement>
+                <p>
+                  If <m>H</m> is a subgroup of <m>G</m> that contains <m>S</m>, then <m>\igen S\leq H</m>.
+                </p>
+              </statement>
+            </proposition>
       
             <example xml:id="ex-commutator-subgroup">
               <title>Commutator Subgroup</title>
@@ -2075,6 +2218,14 @@
               </p>
             </statement>
             </corollary>
+
+            <example>
+              <statement>
+                <p>
+                  <m>n\Z=\igen n</m> for every <m>n\in\Z</m>.
+                </p>
+              </statement>
+            </example>
       
             <proposition xml:id="prop-generating-an">
               <title>Generating <m>A_n</m></title>
@@ -2123,6 +2274,12 @@
                   <li>
                     <p>
                       <m>(\Z/(n),+)</m> is a cyclic group.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      The group <m>L=\{1,-1,i,-i\}</m> is cyclic.
                     </p>
                   </li>
                 </ol>
@@ -2263,38 +2420,14 @@
                 <p>
                 </p>
               </introduction>
-      
-              <exercise>
-                <p>
-                  Coming Soon!
-                </p>
-              </exercise>
-      
-            </exercisegroup>
-      
-            <exercisegroup> <title>Formal Proofs</title>
-              
-              <introduction>
-                <p>
-                </p>
-              </introduction>
 
               <exercise>
                 <title>Cyclic Group Verifications</title>
                 <p>
                   Verify that each of the groups from <xref ref="ex-cyclic-examples"/> are indeed cyclic groups.
                 </p>
-        
               </exercise>
 
-              <exercise>
-                <title>Self Sufficent</title>
-                <p>
-                  Show that <m>G</m> is a generating set for <m>G</m> for any group <m>G</m>.
-                </p>
-        
-              </exercise>
-      
               <exercise>
                 <title>Not Quite Cyclic Groups</title>
                 <p>
@@ -2313,16 +2446,6 @@
                   </ol>
                 </p>
         
-              </exercise>
-
-              <exercise xml:id="exe-non-unique-cyclic-generators">
-                <title>Cyclic Generators Need not be Unique</title>
-                
-                <statement>
-                  <p>
-                    Let <m>G=\langle x\rangle</m> be a cyclic group. Then <m>G=\langle x^{-1}\rangle</m>.
-                  </p>
-                </statement>
               </exercise>
 
               <exercise>
@@ -2345,6 +2468,39 @@
                    
                   </p>
                 </statement>
+              </exercise>
+      
+            </exercisegroup>
+      
+            <exercisegroup> <title>Properties and Future Lemmas</title>
+              
+              <introduction>
+                <p>
+                </p>
+              </introduction>
+
+              <exercise>
+                <title>Self Sufficent</title>
+                <p>
+                  Show that <m>G</m> is a generating set for <m>G</m> for any group <m>G</m>.
+                </p>
+        
+              </exercise>
+
+              <exercise xml:id="exe-non-unique-cyclic-generators">
+                <title>Cyclic Generators Need not be Unique</title>
+                
+                <statement>
+                  <p>
+                    Let <m>G=\langle x\rangle</m> be a cyclic group. Then <m>G=\langle x^{-1}\rangle</m>.
+                  </p>
+                </statement>
+              </exercise>
+
+              <exercise>
+                <p>
+                  Let <m>G=\igen x</m> be a cyclic group of order <m>n</m>, and let <m>y=x^m\in G</m>. Then <m>y</m> generates <m>G</m> if and only if <m>\gcd(n,m)=1</m>.
+                </p>
               </exercise>
       
             </exercisegroup>
@@ -2429,6 +2585,12 @@
                   <li>
                     <p>
                       The identity map is a group homomorphism for any group <m>G</m>, this is known as the <em>trivial homomorphism</em>
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      The function <m>\varphi:\Z\to\Z/(5)</m> given by <m>\varphi(a)=[a]</m> is a homomorphism.
                     </p>
                   </li>
 
@@ -2586,7 +2748,7 @@
           <exercises>
     
             <exercisegroup>
-              <title>Computations and Examples</title>
+              <title>Examples and Specifics</title>
               <introduction>
                 <p>
                 </p>
@@ -2646,13 +2808,12 @@
             </exercisegroup>
           
             <exercisegroup>
-              <title>Formal Proofs</title>
+              <title>Properties and Future Lemmas</title>
               <introduction>
                 <p>
                 </p>
               </introduction>
           
-             
               <exercise xml:id="exe-homoms-and-subgroups">
                 <statement>
                   <p>
@@ -2692,6 +2853,12 @@
                     If <m>\varphi: G \to H</m> is a homomorphism of groups and <m>|g|</m> is finte, then <m>|\varphi(g)|\big||g|</m>.
                   </p>
                 </statement>  
+              </exercise>
+
+              <exercise xml:id="exe-abelian-codomain">
+                <p>
+                  If <m>\varphi: G\to H</m> is a surjective homomorphism and <m>G</m> is abelian, then so is <m>H</m>.
+                </p>
               </exercise>
           
             </exercisegroup>
@@ -2905,6 +3072,13 @@
                 In <xref ref="ex-group-iso-examples"/> we saw that the identity map is a group isomomorphism from a group to itself, making <m>\id</m> an automorphism. This may prove (pun intended) useful in the following proposition.
               </p>
             </example>
+
+            <example xml:id="ex-z-aut">
+              <title><m>\Aut(\Z)</m></title>
+              <p>
+                <m>\Aut(\Z)\cong\Z/(2)</m>
+              </p>
+            </example>
               
             <proposition xml:id="prop-aut-is-group">
               <title>The Automorphism Group</title>
@@ -3057,6 +3231,12 @@
                 <title>Complex Conjugation Automorphism</title>
                 <p>
                   Prove that the function <m>\phi:\C\to\C</m> given by <m>\phi(a+bi)=a-bi</m> is an automorphism.
+                </p>
+              </exercise>
+
+              <exercise xml:id="exe-isomorphic-to-opposite">
+                <p>
+                  Let <m>G</m> be a group and <m>G^{op}</m> as defined in <xref ref="exe-opposite-group"/> Then <m>G\cong G^{op}</m>.
                 </p>
               </exercise>
     
@@ -3327,11 +3507,7 @@
               </statement>
             </definition>
       
-            <remark>
-              <p>
-                Though mostly a matter of preference, we will focus primarily on left cosets.
-              </p>
-            </remark>
+            <remark><p>Though mostly a matter of preference, we will focus primarily on left cosets.</p></remark>
 
             <proposition xml:id="prop-coset-properties">
               <statement>
@@ -3580,9 +3756,8 @@
     
           <exercises>
     
-            <exercisegroup>
-              <title>Section Results</title>
-              
+            <exercisegroup> <title>Section Results</title>
+
               <introduction>
                 <p>
                   
@@ -7458,26 +7633,62 @@
               </statement>
             </theorem>
 
-            <exercise xml:id="exe-abelian-product-abelian">
-              <title>Abelian Direct Prodcuts</title>
-              <statement>
-                <p>
-                  The direct product of groups is abelian if and only if every factor of the product is abelian.
-                </p>
-              </statement>
-            </exercise>
-
             <remark>
               <p>The direct sum notation will not be seen or heard from again in group theory.</p>
             </remark>
 
-            <theorem xml:id="thm-dp-order">
+            <theorem xml:id="thm-dp-properties">
               <statement>
                 <p>
-                  Let <m>g_1\times\cdots\times g_n\in G_1\times\cdots\times G_n</m>. Then <m>|g_1\times\cdots\times g_n|=\lcm(|g_1|,\dots,|g_n|)</m>.
+                  <ol>
+                    <li>
+                      <p>
+                        The direct product of groups is abelian if and only if every factor of the product is abelian.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Let <m>G</m> be a direct product of groups. If <m>H</m> is a direct product of subgroups of <m>G</m>, then <m>H\leq G</m>.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        If <m>G_1\cong G_2</m> and <m>H_1\cong H_2</m>, then <m>G_1\times H_1\cong G_2\times H_2</m>.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Let <m>g_1\times\cdots\times g_n\in G_1\times\cdots\times G_n</m>. Then <m>|g_1\times\cdots\times g_n|=\lcm(|g_1|,\dots,|g_n|)</m>.
+                      </p>
+                    </li>
+                  </ol>
                 </p>
               </statement>
             </theorem>
+
+            <theorem xml:id="thm-dps-and-homs">
+              <statement>
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        Let <m>G</m> and <m>H</m> be groups. Then the projection map <m>\pi_G:G\times H\to G</m> is a surjective homomorphism of groups.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Let <m>G</m> and <m>H</m> be groups. Then the inclusion map <m>i_G:G\to G\times H</m> is an injective homomorphism of groups.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+            </theorem>
+            
 
             <example>
               <p>
@@ -7768,7 +7979,7 @@
 
         </section>
         
-        <section xml:id="sec-grp-spds">
+        <section xml:id="sec-spds">
           <title>Semidirect Products</title>
 
           <subsection xml:id="subsec-external-sdps">

@@ -25,7 +25,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.1",
   "title": "Group Basics",
-  "body": " Group Basics   Binary Operations and Groups    Most great learning happens in groups.   Ken Robinson    Binary Operation  binary-operation   A binary operation on a set is a function     We often write instead of for simplicity.   Group   A group is a pair where is a set and is a on , called group multiplication , satisfying the following properties:   (Associativity) for all we have     (Identity Element) there exists such that for all  the identity element of a group     (Inverses) for each , there is an element such that .    a group and its binary operation     Although a group is a pair, we will usually refer to the group by only naming the underlying set, .  We say that is closed under the operation , when we want to emphasize that for any the result of the operation, , is an element of . However note that closure is really part of the definition of a binary operation on a set, and it is implicitly assumed whenever we consider such an operation.   Properties of Groups      (Unique Identity) In a group , the element satisfying the second axiom of is unique, and we thus refer to it as the identity element of .    (Unique Inverses) In a group , for each , the element satisfying the last axiom of is unique, and we thus refer to it as the the inverse of and we will henceforth denote it by .    (Cancellation) if , then . Similarly, if , then .          Suppose there exist two elements and such that and for all . Then Thus only one element can satisfy this property, making the identity element unique.    For a given , if and fo some and , then .    Coming soon!        Abelian Group   A group is an abelian group if is commutative; i.e., for all . Often, but not always, the group operation for an abelian group is written as instead of . In this case the inverse of an element is written .     Abelian groups are named after the Norwegian mathematician Niels Henrik Abel, who made significant contributions to the study of algebra and number theory in the early 19th century.  Abel's work on abelian groups helped to establish the importance of commutativity in algebraic structures, and his ideas laid the foundation for the development of the theory of commutative rings and fields, which will be studied in much greater depth later.    Group Examples     Trivial Subgroup  The trivial subgroup is the group with a single element  the trivial group: e.g. the group containing only an identity element      and each form an abelian group, where denotes traditional addition.     and form groups under traditional multiplication.    General Linear Group  For any positive integer , let By invertible I mean those matrices that have two-sided inverses, but in turns out that if an matrix has a left inverse then it it is automatically a right inverse too, and vice versa. Then is a non-abelian group under matrix multiplication. General linear group      For any , let denote the integers modulo . Then forms an abelian group where denotes addition modulo .    The subset of the complex numbers forms an abelian group under multiplication.      The following example illustrates a few important examples of something called a , which is defined explicitely in terms of rings, which are explored more generally in   Groups of Units   Each of the following subsets form an abelian group under multiplication.   The subset of .     , , and .    For each , the subset of .        Group Exponents   If is a group and , then:    .     .     .     .     .          Coming soon to an OER near you!    Coming soon to an OER near you!    Coming soon to an OER near you!    Coming soon to an OER near you!    Coming soon to an OER near you!        Additive Exponents  When we refer to exponents in groups, we are talking about repeated applications of the given operation, which in many cases is denoted multiplicatively, hence the exponent notation. However, for additive groups, such as , we find ourselves in the uncomfortable situation where statements such as are technically true. Thus, in additive groups it is more customary to denote expressions such as the one above in more traditional notation: namely, .    Direct Products of Groups      Let and be groups. Then is a group, where denotes the Cartesian Product of and , and the operation is defined     Let be groups. Then is a group, with its operation defined similary to that in part (1).       Coming soon to an OER near you!    This is known as an external direct product , which we will explore and define explicitely in .    Order    Good order is the foundation of all things.   Edmund Burke    Order      In a group , the order of an element  is the least positive integer such that . If no such exists, we say has infinite order. We write for the order of . Order of an element     The order of a group  is the cardinality of the set , denoted . Order of a group                  in     In the additive groups , , , and every nonzero (i.e., nonidentity) element has infinite order.    In the additve group , the element has order because and .       Properties of Order      An element of a group has order if and only if .         If for and prime, then .         Let be a group. Suppose and .   then     then           Let be a group and let be elements of . Then and in particular .      If then .    Alas, here we must commit a heinous sin in the world of mathematics: ending a section on a lemma. It goes against everything a lemma stands for, yet we currently lack the tools necessary to take the consequences of order to their logical conclusion. Eventually the long and winding road of group theory will lead us to and the stronghold of , one of the quintessential results of the field. However, will be back long before then in a delightfully cyclic fashion...     Examples and Specifics      Group Verification  Prove that each of the groups given in are indeed groups.      Coming soon to an OER near you!    Coming soon to an OER near you!    Coming soon to an OER near you!    Coming soon to an OER near you!      Inches From Greatness...  Explain why each of the following is not a group.              , where is the set of odd integers. the set of odd integers      for all        Prove that   Woulnd't it be Nice Find counterexamples to each of the following (false) statements.   If then     If then     For all there exists some such that .    A group of order contains an element of order .     Product Order  Prove or disprove: if have finite order then has finite order.   Left and Right Inverses  Give an example of a pair that satisfies axioms 1 and 2 of and an element of that has a left inverse but not a right inverse.   Coming soon to an OER near you!     Properties and Future Lemmas      Marley's Conjecture  Every group of order is abelian.   Let be a group with elements, and suppose there are elements such that for some elements . Since , we must have , , and . Since has only elements and , either or . Without loss, say the former occurs. But implies and we know commutes with , and hence this is not possible. If , then and if then , both of which are impossible. Since were arbitrary, must be abelian.   Properties for a Rainy Day  Let be a group and .  If , then .  There exists some such that   Let . Then    If is abelian then .      Coming soon to an OER near you!   there or  If is a group such every non-identity element has order . Then is abelian.   Order Hors d'oeuvre  Let be a group.   Let be an element of finite order. Show that has finite order for any integer , and in fact     Prove that for all in , holds.        "
+  "body": " Group Basics   Binary Operations and Groups    Most great learning happens in groups.   Ken Robinson    Binary Operation  binary-operation   A binary operation on a set is a function     We often write instead of for simplicity.   Group   A group is a pair where is a set and is a on , called group multiplication , satisfying the following properties:   (Associativity) for all we have     (Identity Element) there exists such that for all  the identity element of a group     (Inverses) for each , there is an element such that .    a group and its binary operation     Although a group is a pair, we will usually refer to the group by only naming the underlying set, .  We say that is closed under the operation , when we want to emphasize that for any the result of the operation, , is an element of . However note that closure is really part of the definition of a binary operation on a set, and it is implicitly assumed whenever we consider such an operation.   Properties of Groups      (Unique Identity) In a group , the element satisfying the second axiom of is unique, and we thus refer to it as the identity element of .    (Unique Inverses) In a group , for each , the element satisfying the last axiom of is unique, and we thus refer to it as the the inverse of and we will henceforth denote it by .    (Cancellation) if , then . Similarly, if , then .          Suppose there exist two elements and such that and for all . Then Thus only one element can satisfy this property, making the identity element unique.    For a given , if and fo some and , then .    Coming soon!        Abelian Group   A group is an abelian group if is commutative; i.e., for all . Often, but not always, the group operation for an abelian group is written as instead of . In this case the inverse of an element is written .     Abelian groups are named after the Norwegian mathematician Niels Henrik Abel, who made significant contributions to the study of algebra and number theory in the early 19th century.  Abel's work on abelian groups helped to establish the importance of commutativity in algebraic structures, and his ideas laid the foundation for the development of the theory of commutative rings and fields, which will be studied in much greater depth later.    Group Examples     Trivial Subgroup  The trivial subgroup is the group with a single element  the trivial group: e.g. the group containing only an identity element      and each form an abelian group, where denotes traditional addition.     and form groups under traditional multiplication.    General Linear Group  For any positive integer , let By invertible I mean those matrices that have two-sided inverses, but in turns out that if an matrix has a left inverse then it it is automatically a right inverse too, and vice versa. Then is a non-abelian group under matrix multiplication. General linear group      For any , let denote the integers modulo . Then forms an abelian group where denotes addition modulo .    The subset of the complex numbers forms an abelian group under multiplication.      The following example illustrates a few important examples of something called a , which is defined explicitely in terms of rings, which are explored more generally in   Groups of Units   Each of the following subsets form an abelian group under multiplication.   The subset of .     , , and .    For each , the subset of .        Group Exponents   If is a group and , then:    .     .     .     .     .          Coming soon to an OER near you!    Coming soon to an OER near you!    Coming soon to an OER near you!    Coming soon to an OER near you!    Coming soon to an OER near you!        Additive Exponents  When we refer to exponents in groups, we are talking about repeated applications of the given operation, which in many cases is denoted multiplicatively, hence the exponent notation. However, for additive groups, such as , we find ourselves in the uncomfortable situation where statements such as are technically true. Thus, in additive groups it is more customary to denote expressions such as the one above in more traditional notation: namely, .    Direct Products of Groups      Let and be groups. Then is a group, where denotes the Cartesian Product of and , and the operation is defined     Let be groups. Then is a group, with its operation defined similary to that in part (1).       Coming soon to an OER near you!    This is known as an external direct product , which we will explore and define explicitely in .    Order    Good order is the foundation of all things.   Edmund Burke    Order      In a group , the order of an element  is the least positive integer such that . If no such exists, we say has infinite order. We write for the order of . Order of an element     The order of a group  is the cardinality of the set , denoted . Order of a group                  in     In the additive groups , , , and every nonzero (i.e., nonidentity) element has infinite order.    In the additve group , the element has order because and .       Properties of Order      An element of a group has order if and only if .         If for and prime, then .         Let be a group. Suppose and .   then     then           Let be a group and let be elements of . Then and in particular .      If then .    Alas, here we must commit a heinous sin in the world of mathematics: ending a section on a lemma. It goes against everything a lemma stands for, yet we currently lack the tools necessary to take the consequences of order to their logical conclusion. Eventually the long and winding road of group theory will lead us to and the stronghold of , one of the quintessential results of the field. However, will be back long before then in a delightfully cyclic fashion...     Examples and Specifics      Group Verification  Prove that each of the groups given in are indeed groups.      Coming soon to an OER near you!    Coming soon to an OER near you!    Coming soon to an OER near you!    Coming soon to an OER near you!      Inches From Greatness...  Explain why each of the following is not a group.              , where is the set of odd integers. the set of odd integers      for all        Prove that   Woulnd't it be Nice Find counterexamples to each of the following (false) statements.   If then     If then     For all there exists some such that .    A group of order contains an element of order .     Product Order  Prove or disprove: if have finite order then has finite order.   Left and Right Inverses  Give an example of a pair that satisfies axioms 1 and 2 of and an element of that has a left inverse but not a right inverse.   Coming soon to an OER near you!   Opposite Day Let be a multiplicative group, and define be the set equipped with the operation , where . Then is a group.    Properties and Future Lemmas      Marley's Conjecture  Every group of order is abelian.   Let be a group with elements, and suppose there are elements such that for some elements . Since , we must have , , and . Since has only elements and , either or . Without loss, say the former occurs. But implies and we know commutes with , and hence this is not possible. If , then and if then , both of which are impossible. Since were arbitrary, must be abelian.   Properties for a Rainy Day  Let be a group and .  If , then .  There exists some such that   Let . Then    If is abelian then .      Coming soon to an OER near you!   there or  If is a group such every non-identity element has order . Then is abelian.   Order Hors d'oeuvre  Let be a group.   Let be an element of finite order. Show that has finite order for any integer , and in fact     Prove that for all in , holds.        "
 },
 {
   "id": "def-binop",
@@ -253,11 +253,20 @@ var ptx_lunr_docs = [
   "body": "Left and Right Inverses  Give an example of a pair that satisfies axioms 1 and 2 of and an element of that has a left inverse but not a right inverse.   Coming soon to an OER near you!  "
 },
 {
+  "id": "exe-opposite-group",
+  "level": "2",
+  "url": "group-basics.html#exe-opposite-group",
+  "type": "Exercise",
+  "number": "7",
+  "title": "Opposite Day.",
+  "body": "Opposite Day Let be a multiplicative group, and define be the set equipped with the operation , where . Then is a group. "
+},
+{
   "id": "prop-order-4-abelian",
   "level": "2",
   "url": "group-basics.html#prop-order-4-abelian",
   "type": "Exercise",
-  "number": "7",
+  "number": "8",
   "title": "Marley's Conjecture.",
   "body": "Marley's Conjecture  Every group of order is abelian.   Let be a group with elements, and suppose there are elements such that for some elements . Since , we must have , , and . Since has only elements and , either or . Without loss, say the former occurs. But implies and we know commutes with , and hence this is not possible. If , then and if then , both of which are impossible. Since were arbitrary, must be abelian.  "
 },
@@ -266,7 +275,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "group-basics.html#exe-more-group-properties",
   "type": "Exercise",
-  "number": "8",
+  "number": "9",
   "title": "Properties for a Rainy Day.",
   "body": "Properties for a Rainy Day  Let be a group and .  If , then .  There exists some such that   Let . Then    If is abelian then .      Coming soon to an OER near you!  "
 },
@@ -275,7 +284,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "group-basics.html#exe-every-element-order-2",
   "type": "Exercise",
-  "number": "9",
+  "number": "10",
   "title": "<span class=\"process-math\">\\(b\\)<\/span> there or <span class=\"process-math\">\\(b^2=e\\)<\/span>.",
   "body": "there or  If is a group such every non-identity element has order . Then is abelian.  "
 },
@@ -284,7 +293,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "group-basics.html#exe-order-and-gcd",
   "type": "Exercise",
-  "number": "10",
+  "number": "11",
   "title": "Order Hors d'oeuvre.",
   "body": "Order Hors d'oeuvre  Let be a group.   Let be an element of finite order. Show that has finite order for any integer , and in fact     Prove that for all in , holds.     "
 },
@@ -295,7 +304,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.2",
   "title": "Common Groups",
-  "body": " Common Groups   Dihedral Groups  Reality prefers symmetry. Jorge Luis Borges   We now discuss the important example of dihedral groups in detail.   Isometry and Symmetry   For any integer , let denote a regular -gon. An isometry of the plane is a function that is a bijection and preserves the Euclideal distance for any ). A symmetry of is an isometry that maps to itself.     By the latter I don't mean that fixes each of the points of , but rather that , that is every point of is mapped to a (possibly different) point of and every point of is the image of some point in via . It is clear that the composition of two symmetries of is again a symmetry of , so that composition is a binary operation on .    Dihedral Group   The dihedral group  is the set of symmetries of the regular -gon equipped with the binary operation given by composition. Dihedral Group       Assume that the regular -gon is drawn in the plane with its center at the origin and one vertex on the axis.  If denotes rotation about the origin by radians counter-clockwise, then . It's inverse is rotation by clock-wise.  For another example, for any line of symmetry of , reflection about that line gives an element of . By our convention for how to draw , the -axis is a line of symmetry for , and we let denote reflection about the -axis.      and .     is a reflection and hence that .            Every element in can be written as or for .              Symmetric Groups  Every possible permutation is still in play. Michael Cullen  Let's introduce another very important example: symmetric groups.   Permutation   A permutation of a set is a bijective function .     Symmetric Group   For any , the symmetric group is the set of all permutations of the set equipped with the composition of functions as its binary operation. Symmetric group   We can write an element of as a table of values:      For any finite set , we may think of as the permutation group of , which is sometimes written .    Cycles and Transpositions   If are distinct integers between and , then denotes the element of that satisfies Such a permutation is called a cycle or an -cycle if we want to emphasize its length. A -cycle is often called a transposition .     Note that distinct lists of integers represent the same cycle if they are cyclical rearrangements of each other, e.g., . However, .     Disjoint cycles commute, that is, if , and then .         Each can be written as a product (composition) of disjoint cycles, and such a factorization is unique up to the ordering of the factors.    Each can be written a product of transpositions.        For the uniqueness part of statement (1) in the above proposition one needs to establish a convention regarding 1-cycles, that is one needs to stipulate either that the 1-cycles will not be recorded (which gives the shortest such factorization) or that all the 1-cycles will be recorded (which gives the longest such factorization, but also the only one that makes it clear what the number is).     The Quaternions  Quaternions...though beautifully ingenious, have been an unmixed evil to those who have touched them in any way. William Thomson  For our last example we mention the group of quaternions , written .   Quaternions   The quaternion group  is a set with elements satisfying the following relations: is the identity element and      The quaternion group arises in the study of rotations in three dimensions. It has important applications in computer graphics and computer vision, as well as in physics and algebra.  There isn't much for us to do with right now, but you'd be surprised by the unusual places this group manages to crop up...     Computations and Examples      Heinous Commutes Provide explicit examples to show , and are not abelian groups.  Element Orders Find the order  -Cycles in Determine the number of -cycles in .    Formal Proofs      Group Verifications Verify that the following are indeed groups:   The dihedral group     The symmetric group     The quaternion group      Uncommon Groups    The Rubik's Cube Group (coming soon)    Juggling Groups (coming soon)     Permutation Order Prove that the order of a permutation is the least common multiple of the lengths of the cycles it is a product of.  Order of Prove .    "
+  "body": " Common Groups   Dihedral Groups  Reality prefers symmetry. Jorge Luis Borges   We now discuss the important example of dihedral groups in detail.   Isometry and Symmetry   For any integer , let denote a regular -gon. An isometry of the plane is a function that is a bijection and preserves the Euclideal distance for any ). A symmetry of is an isometry that maps to itself.     By the latter I don't mean that fixes each of the points of , but rather that , that is every point of is mapped to a (possibly different) point of and every point of is the image of some point in via . It is clear that the composition of two symmetries of is again a symmetry of , so that composition is a binary operation on .    Dihedral Group   The dihedral group  is the set of symmetries of the regular -gon equipped with the binary operation given by composition. Dihedral Group       Assume that the regular -gon is drawn in the plane with its center at the origin and one vertex on the axis.  If denotes rotation about the origin by radians counter-clockwise, then . It's inverse is rotation by clock-wise.  For another example, for any line of symmetry of , reflection about that line gives an element of . By our convention for how to draw , the -axis is a line of symmetry for , and we let denote reflection about the -axis.      and .     is a reflection and hence that .            Every element in can be written as or for .              Symmetric Groups  Every possible permutation is still in play. Michael Cullen  Let's introduce another very important example: symmetric groups.   Permutation   A permutation of a set is a bijective function .     Symmetric Group   For any , the symmetric group is the set of all permutations of the set equipped with the composition of functions as its binary operation. Symmetric group   We can write an element of as a table of values:      For any finite set , we may think of as the permutation group of , which is sometimes written .    Cycles and Transpositions   If are distinct integers between and , then denotes the element of that satisfies Such a permutation is called a cycle or an -cycle if we want to emphasize its length. A -cycle is often called a transposition .     Note that distinct lists of integers represent the same cycle if they are cyclical rearrangements of each other, e.g., . However, .     Disjoint cycles commute, that is, if , and then .         Each can be written as a product (composition) of disjoint cycles, and such a factorization is unique up to the ordering of the factors.    Each can be written a product of transpositions.        For the uniqueness part of statement (1) in the above proposition one needs to establish a convention regarding 1-cycles, that is one needs to stipulate either that the 1-cycles will not be recorded (which gives the shortest such factorization) or that all the 1-cycles will be recorded (which gives the longest such factorization, but also the only one that makes it clear what the number is).     The Quaternions  Quaternions...though beautifully ingenious, have been an unmixed evil to those who have touched them in any way. William Thomson  For our last example we mention the group of quaternions , written .   Quaternions   The quaternion group  is a set with elements satisfying the following relations: is the identity element and      The quaternion group arises in the study of rotations in three dimensions. It has important applications in computer graphics and computer vision, as well as in physics and algebra.  There isn't much for us to do with right now, but you'd be surprised by the unusual places this group manages to crop up...     Computations and Examples      Group Verifications Verify that the following are indeed groups:   The dihedral group     The symmetric group     The quaternion group      Heinous Commutes Provide explicit examples to show , and are not abelian groups.  -Cycles in Determine the number of -cycles in .  Order of a -cycle The order of a -cycle in is .  Inverting Transpositions    Every transposition is its own inverse.    If and are transpositions, then        Formal Proofs      Permutation Order Prove that the order of a permutation is the least common multiple of the lengths of the cycles it is a product of.  Order of Prove .  Order of Prove .  Identity Permutation The identity permutation in is even, but not odd.  No Evodds Allowed The no permutation in is both even and odd.    "
 },
 {
   "id": "def-iso-and-sym",
@@ -424,67 +433,94 @@ var ptx_lunr_docs = [
   "body": " Quaternions   The quaternion group  is a set with elements satisfying the following relations: is the identity element and     "
 },
 {
-  "id": "exercise-11",
+  "id": "exe-common-group-verifications",
   "level": "2",
-  "url": "sec-common-groups.html#exercise-11",
+  "url": "sec-common-groups.html#exe-common-group-verifications",
   "type": "Exercise",
   "number": "1",
+  "title": "Group Verifications.",
+  "body": "Group Verifications Verify that the following are indeed groups:   The dihedral group     The symmetric group     The quaternion group     "
+},
+{
+  "id": "exe-heinous-commutes",
+  "level": "2",
+  "url": "sec-common-groups.html#exe-heinous-commutes",
+  "type": "Exercise",
+  "number": "2",
   "title": "Heinous Commutes.",
   "body": "Heinous Commutes Provide explicit examples to show , and are not abelian groups. "
 },
 {
-  "id": "exercise-12",
+  "id": "exe-1-cycles",
   "level": "2",
-  "url": "sec-common-groups.html#exercise-12",
-  "type": "Exercise",
-  "number": "2",
-  "title": "Element Orders.",
-  "body": "Element Orders Find the order "
-},
-{
-  "id": "exercise-13",
-  "level": "2",
-  "url": "sec-common-groups.html#exercise-13",
+  "url": "sec-common-groups.html#exe-1-cycles",
   "type": "Exercise",
   "number": "3",
   "title": "<span class=\"process-math\">\\(1\\)<\/span>-Cycles in <span class=\"process-math\">\\(S_n\\)<\/span>.",
   "body": "-Cycles in Determine the number of -cycles in . "
 },
 {
-  "id": "exercise-14",
+  "id": "exe-k-cycle-order",
   "level": "2",
-  "url": "sec-common-groups.html#exercise-14",
+  "url": "sec-common-groups.html#exe-k-cycle-order",
   "type": "Exercise",
   "number": "4",
-  "title": "Group Verifications.",
-  "body": "Group Verifications Verify that the following are indeed groups:   The dihedral group     The symmetric group     The quaternion group     "
+  "title": "Order of a <span class=\"process-math\">\\(k\\)<\/span>-cycle.",
+  "body": "Order of a -cycle The order of a -cycle in is . "
 },
 {
-  "id": "exercise-15",
+  "id": "exe-inverting-transpositions",
   "level": "2",
-  "url": "sec-common-groups.html#exercise-15",
+  "url": "sec-common-groups.html#exe-inverting-transpositions",
   "type": "Exercise",
   "number": "5",
-  "title": "Uncommon Groups.",
-  "body": "Uncommon Groups    The Rubik's Cube Group (coming soon)    Juggling Groups (coming soon)    "
+  "title": "Inverting Transpositions.",
+  "body": "Inverting Transpositions    Every transposition is its own inverse.    If and are transpositions, then     "
 },
 {
-  "id": "exercise-16",
+  "id": "exe-permutation-order",
   "level": "2",
-  "url": "sec-common-groups.html#exercise-16",
+  "url": "sec-common-groups.html#exe-permutation-order",
   "type": "Exercise",
   "number": "6",
   "title": "Permutation Order.",
   "body": "Permutation Order Prove that the order of a permutation is the least common multiple of the lengths of the cycles it is a product of. "
 },
 {
-  "id": "exercise-17",
+  "id": "exe-sn-order",
   "level": "2",
-  "url": "sec-common-groups.html#exercise-17",
+  "url": "sec-common-groups.html#exe-sn-order",
   "type": "Exercise",
   "number": "7",
   "title": "Order of <span class=\"process-math\">\\(S_n\\)<\/span>.",
   "body": "Order of Prove . "
+},
+{
+  "id": "exe-an-order",
+  "level": "2",
+  "url": "sec-common-groups.html#exe-an-order",
+  "type": "Exercise",
+  "number": "8",
+  "title": "Order of <span class=\"process-math\">\\(S_n\\)<\/span>.",
+  "body": "Order of Prove . "
+},
+{
+  "id": "exe-identity-even",
+  "level": "2",
+  "url": "sec-common-groups.html#exe-identity-even",
+  "type": "Exercise",
+  "number": "9",
+  "title": "Identity Permutation.",
+  "body": "Identity Permutation The identity permutation in is even, but not odd. "
+},
+{
+  "id": "exe-permutation-even-odd",
+  "level": "2",
+  "url": "sec-common-groups.html#exe-permutation-even-odd",
+  "type": "Exercise",
+  "number": "10",
+  "title": "No Evodds Allowed.",
+  "body": "No Evodds Allowed The no permutation in is both even and odd. "
 },
 {
   "id": "sec-subgroups",
@@ -493,7 +529,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.3",
   "title": "Subgroups",
-  "body": " Subgroups   Subgroup Basics    I have this fear of falling in front of large groups...that's why I tend not to wear heels.   Taylor Swift    Subgroup   A nonempty subset of a group is called a subgroup , denoted , Subgroup  in group theory, and usually denote subgroups. provided is a group under the multiplication law of .  A subgroup of a group is a proper subgroup, denoted if .     Subgroup Tests      If a subset of a group is nonempty and closed under multiplication and inversion, then is a subgroup.    If a subset of a group is nonempty and satisfies for all , , then is a subgroup.       We prove the one-step test first.  Assume is non-empty and for all , . Since is non-empty, there is an and hence . Since for any , is an identity element for . For any , , and so every element of has an inverse inside . For we have and thus and hence is closed under . This means that the restriction of the group operation of to is a well-defined group operation. This operation is associative by the axioms for the group . The axioms of a group have now been established for .  Now we prove the two step test.  Assume is non-empty and closed under multiplication and inversion. Then, for we have and . Since the hypothesis of the one-step test is satisfied, is a subgroup of .     Common Subgroups      and are the trivial subgroups of .              Let and define . Then for all .       In fact, in the case of , these turn out to be the only subgroups of , a fact which you may prove in    Properties of Subgroups      Transitivity of Subgroups  If is a subgroup of and is a subgroup of , then is a subgroup of .    Intersections of Subgroups  If is a subgroup of for all in an index set , then is a subgroup of .    Unions of Subgroups  Let be a group and , subgroups. Prove that is a subgroup if and only if or .        Alternating Group   The alternating group  is the subset of all even cycles of . the alternating group on elements        Prove that is a subgroup of .     Special Linear Group   The special linear group with complex entries is defined  the special linear group       Prove that is a subgroup of .      The Center of a Group    Stay in the center, and you will be ready to move in any direction.   Alan Watts      The center of a group , often written , is the set of elements of that commute with every element of . That is,  the center of a group      Center is a Subgroup   Prove that is an abelian subgroup for any group .      Let be a subgroup. Prove .       Computations and Examples      Subgroup Verification Prove that each of the subgroup in are indeed subgroups  Finding Centers Determine the following:    for . Your answer will depend on whether is even or odd.     for .     for .     .     as Generated Subgroup Verify , meaning that is the subgroup of generated by .  Future Subgroups Throughout this course we will encounter numerous important subgroups that will need to be verified as such. We do so here. While these subgroups may seem random now, they will prove to be exceedingly useful in the future.    Let . Prove that the set is a subgroup of . The set is known as the centralizer of in , and is defined explicitely in .      Let . Prove that the set is a subgroup of . The set is known as the centralizer of in , and is and is defined explicitely in .      Let be a subgroup of and fix some element . Prove that is a subgroup of of the same order as . The set is known as the conjugate of by , and is defined explicitely in .      Let be a containing elements. For each , prove that the set is a subgroup of . This a specific example of something known as the and in we will see how it can be applied to all groups, not just .      Subgroups of     The set is a subgroup of for all .         The only subgroups of are the sets .        Formal Proofs      Abelian iff  Let be a group. Prove is abelian if any only if .   No Proper Unions  Every finite group cannot be expressed as the union of two proper subgroups.   Part (3) of may prove useful!   Coming soon to an OER near you!   Even Order Groups Every group of even order contains an element of order . This is a direct corollary of , but proving it is possible and thus beneficial to prove it without all of that machinery first, and we will use this partial result in   Subgroups of Abelian Groups  Let be a subgroup of a group . If is abelian then so is .   Subsets and Subgroups  Let and be groups. If , then      Qualifying Exam Problems      May 2021 (1a)  Let be a group (not necessarily finite) and a nonempty subset of that is closed under multiplication. Suppose that for all we have . Prove is a subgroup of .   Coming soon to an OER near you!   Coming soon to an OER near you!     "
+  "body": " Subgroups   Subgroup Basics    I have this fear of falling in front of large groups...that's why I tend not to wear heels.   Taylor Swift    Subgroup   A nonempty subset of a group is called a subgroup , denoted , Subgroup  in group theory, and usually denote subgroups. provided is a group under the multiplication law of .  A subgroup of a group is a proper subgroup, denoted if .     Subgroup Tests      If a subset of a group is nonempty and closed under multiplication and inversion, then is a subgroup.    If a subset of a group is nonempty and satisfies for all , , then is a subgroup.       We prove the one-step test first.  Assume is non-empty and for all , . Since is non-empty, there is an and hence . Since for any , is an identity element for . For any , , and so every element of has an inverse inside . For we have and thus and hence is closed under . This means that the restriction of the group operation of to is a well-defined group operation. This operation is associative by the axioms for the group . The axioms of a group have now been established for .  Now we prove the two step test.  Assume is non-empty and closed under multiplication and inversion. Then, for we have and . Since the hypothesis of the one-step test is satisfied, is a subgroup of .      If a finite subset of a group is nonempty and closed under multiplication, then is a subgroup.     Common Subgroups      and are the trivial subgroups of .              Let and define . Then for all .       In fact, in the case of , these turn out to be the only subgroups of , a fact which you may prove in    Less Common Subgroups          The group (verified as such in ) is a subgroup of .         The set of all reflections is a subgroup of . Similarly, the set of relections is also a subgroup.       Properties of Subgroups      Transitivity of Subgroups  If is a subgroup of and is a subgroup of , then is a subgroup of .    Intersections of Subgroups  If is a subgroup of for all in an index set , then is a subgroup of .    Unions of Subgroups  Let be a group and , subgroups. Prove that is a subgroup if and only if or .        Alternating Group   The alternating group  is the subset of all even cycles of . the alternating group on elements        Prove that is a subgroup of .     Special Linear Group   The special linear group with complex entries is defined  the special linear group       Prove that is a subgroup of .      The Center of a Group    Stay in the center, and you will be ready to move in any direction.   Alan Watts      The center of a group , often written , is the set of elements of that commute with every element of . That is,  the center of a group      Centers of Common Groups     The center of any abelian group is itself. (In fact, this statement is an if and only if)     for .       Center is a Subgroup   Prove that is an abelian subgroup for any group .      Let be a subgroup. Prove .       Examples and Specifics      Subgroup Verification Prove that each of the subgroup in are indeed subgroups  Future Subgroups Throughout this course we will encounter numerous important subgroups that will need to be verified as such. We do so here. While these subgroups may seem random now, they will prove to be exceedingly useful in the future.    Let . Prove that the set is a subgroup of . The set is known as the centralizer of in , and is defined explicitely in .      Let . Prove that the set is a subgroup of . The set is known as the centralizer of in , and is and is defined explicitely in .      Let be a subgroup of and fix some element . Prove that is a subgroup of of the same order as . The set is known as the conjugate of by , and is defined explicitely in .      Let be a containing elements. For each , prove that the set is a subgroup of . This a specific example of something known as the and in we will see how it can be applied to all groups, not just .      Torision Subgroup    Let be an abelian group. Then the set of elements of finite order, which we denote , is a subgroup of , called the torsion subgroup .    Show that the torision subgroup may not in fact be a subgroup if is not assumed to be abelian.     Finding Centers Determine the following:    for . Your answer will depend on whether is even or odd.     for .     for .     .     Subgroups not Symmetric  In we showed that subgroups form a transitve relation. Prove that the relation is reflexive (it can be one sentence), not symmetric, and thus not an equivalence relation.   as Generated Subgroup Verify , meaning that is the subgroup of generated by .  Subgroups of     The set is a subgroup of for all .    The only subgroups of are the sets .      Let be a group and . If is the only element of order in , then .    Properties and Future Lemmas      Subgroups Preserve Identities  Let be a subgroup of . Then .   Abelian iff  Let be a group. Prove is abelian if any only if .   Abelian iff  Subgroups are closed under intersections.   No Proper Unions  Every finite group cannot be expressed as the union of two proper subgroups.   Part (3) of may prove useful!   Coming soon to an OER near you!   Even Order Groups Every group of even order contains an element of order . This is a direct corollary of , but proving it is possible and thus beneficial to prove it without all of that machinery first, and we will use this partial result in   Subgroups of Abelian Groups  Let be a subgroup of a group . If is abelian then so is .   Subsets and Subgroups  Let and be groups. If , then      Qualifying Exam Problems      May 2021 (1a)  Let be a group (not necessarily finite) and a nonempty subset of that is closed under multiplication. Suppose that for all we have . Prove is a subgroup of .   Coming soon to an OER near you!   Coming soon to an OER near you!     "
 },
 {
   "id": "def-subgroup",
@@ -505,20 +541,29 @@ var ptx_lunr_docs = [
   "body": " Subgroup   A nonempty subset of a group is called a subgroup , denoted , Subgroup  in group theory, and usually denote subgroups. provided is a group under the multiplication law of .  A subgroup of a group is a proper subgroup, denoted if .   "
 },
 {
-  "id": "lem-subgrouptest",
+  "id": "thm-subgroup-test",
   "level": "2",
-  "url": "sec-subgroups.html#lem-subgrouptest",
-  "type": "Lemma",
+  "url": "sec-subgroups.html#thm-subgroup-test",
+  "type": "Theorem",
   "number": "1.35",
   "title": "Subgroup Tests.",
   "body": " Subgroup Tests      If a subset of a group is nonempty and closed under multiplication and inversion, then is a subgroup.    If a subset of a group is nonempty and satisfies for all , , then is a subgroup.       We prove the one-step test first.  Assume is non-empty and for all , . Since is non-empty, there is an and hence . Since for any , is an identity element for . For any , , and so every element of has an inverse inside . For we have and thus and hence is closed under . This means that the restriction of the group operation of to is a well-defined group operation. This operation is associative by the axioms for the group . The axioms of a group have now been established for .  Now we prove the two step test.  Assume is non-empty and closed under multiplication and inversion. Then, for we have and . Since the hypothesis of the one-step test is satisfied, is a subgroup of .   "
+},
+{
+  "id": "cor-finite-subgroup-test",
+  "level": "2",
+  "url": "sec-subgroups.html#cor-finite-subgroup-test",
+  "type": "Corollary",
+  "number": "1.36",
+  "title": "",
+  "body": "  If a finite subset of a group is nonempty and closed under multiplication, then is a subgroup.   "
 },
 {
   "id": "ex-common-subgroups",
   "level": "2",
   "url": "sec-subgroups.html#ex-common-subgroups",
   "type": "Example",
-  "number": "1.36",
+  "number": "1.37",
   "title": "Common Subgroups.",
   "body": " Common Subgroups      and are the trivial subgroups of .              Let and define . Then for all .      "
 },
@@ -527,16 +572,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#remark-9",
   "type": "Remark",
-  "number": "1.37",
+  "number": "1.38",
   "title": "",
   "body": "In fact, in the case of , these turn out to be the only subgroups of , a fact which you may prove in  "
+},
+{
+  "id": "ex-uncommon-subgroups",
+  "level": "2",
+  "url": "sec-subgroups.html#ex-uncommon-subgroups",
+  "type": "Example",
+  "number": "1.39",
+  "title": "Less Common Subgroups.",
+  "body": " Less Common Subgroups          The group (verified as such in ) is a subgroup of .         The set of all reflections is a subgroup of . Similarly, the set of relections is also a subgroup.     "
 },
 {
   "id": "thm-subgroup-properties",
   "level": "2",
   "url": "sec-subgroups.html#thm-subgroup-properties",
   "type": "Theorem",
-  "number": "1.38",
+  "number": "1.40",
   "title": "Properties of Subgroups.",
   "body": " Properties of Subgroups      Transitivity of Subgroups  If is a subgroup of and is a subgroup of , then is a subgroup of .    Intersections of Subgroups  If is a subgroup of for all in an index set , then is a subgroup of .    Unions of Subgroups  Let be a group and , subgroups. Prove that is a subgroup if and only if or .      "
 },
@@ -545,7 +599,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#def-alternating-group",
   "type": "Definition",
-  "number": "1.39",
+  "number": "1.41",
   "title": "Alternating Group.",
   "body": " Alternating Group   The alternating group  is the subset of all even cycles of . the alternating group on elements    "
 },
@@ -554,7 +608,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#prop-alternating-group-is-subgroup",
   "type": "Proposition",
-  "number": "1.40",
+  "number": "1.42",
   "title": "<span class=\"process-math\">\\(A_n\\leq S_n\\)<\/span>.",
   "body": "   Prove that is a subgroup of .   "
 },
@@ -563,7 +617,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#def-special-linear-group",
   "type": "Definition",
-  "number": "1.41",
+  "number": "1.43",
   "title": "Special Linear Group.",
   "body": " Special Linear Group   The special linear group with complex entries is defined  the special linear group    "
 },
@@ -572,7 +626,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#prop-slg-subgroup",
   "type": "Proposition",
-  "number": "1.42",
+  "number": "1.44",
   "title": "",
   "body": "  Prove that is a subgroup of .   "
 },
@@ -581,16 +635,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#def-group-center",
   "type": "Definition",
-  "number": "1.43",
+  "number": "1.45",
   "title": "<span class=\"process-math\">\\(Z(G)\\)<\/span>.",
   "body": "   The center of a group , often written , is the set of elements of that commute with every element of . That is,  the center of a group    "
+},
+{
+  "id": "ex-group-centers",
+  "level": "2",
+  "url": "sec-subgroups.html#ex-group-centers",
+  "type": "Example",
+  "number": "1.46",
+  "title": "Centers of Common Groups.",
+  "body": " Centers of Common Groups     The center of any abelian group is itself. (In fact, this statement is an if and only if)     for .     "
 },
 {
   "id": "prop-center-is-subgroup",
   "level": "2",
   "url": "sec-subgroups.html#prop-center-is-subgroup",
   "type": "Proposition",
-  "number": "1.44",
+  "number": "1.47",
   "title": "Center is a Subgroup.",
   "body": " Center is a Subgroup   Prove that is an abelian subgroup for any group .   "
 },
@@ -599,7 +662,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#prop-centers-and-subgroups",
   "type": "Proposition",
-  "number": "1.45",
+  "number": "1.48",
   "title": "",
   "body": "  Let be a subgroup. Prove .   "
 },
@@ -613,56 +676,101 @@ var ptx_lunr_docs = [
   "body": "Subgroup Verification Prove that each of the subgroup in are indeed subgroups "
 },
 {
+  "id": "exe-future-subgroups",
+  "level": "2",
+  "url": "sec-subgroups.html#exe-future-subgroups",
+  "type": "Exercise",
+  "number": "2",
+  "title": "Future Subgroups.",
+  "body": "Future Subgroups Throughout this course we will encounter numerous important subgroups that will need to be verified as such. We do so here. While these subgroups may seem random now, they will prove to be exceedingly useful in the future.    Let . Prove that the set is a subgroup of . The set is known as the centralizer of in , and is defined explicitely in .      Let . Prove that the set is a subgroup of . The set is known as the centralizer of in , and is and is defined explicitely in .      Let be a subgroup of and fix some element . Prove that is a subgroup of of the same order as . The set is known as the conjugate of by , and is defined explicitely in .      Let be a containing elements. For each , prove that the set is a subgroup of . This a specific example of something known as the and in we will see how it can be applied to all groups, not just .     "
+},
+{
+  "id": "exe-torsion-subgroup",
+  "level": "2",
+  "url": "sec-subgroups.html#exe-torsion-subgroup",
+  "type": "Exercise",
+  "number": "3",
+  "title": "Torision Subgroup.",
+  "body": "Torision Subgroup    Let be an abelian group. Then the set of elements of finite order, which we denote , is a subgroup of , called the torsion subgroup .    Show that the torision subgroup may not in fact be a subgroup if is not assumed to be abelian.    "
+},
+{
   "id": "exe-finding-centers",
   "level": "2",
   "url": "sec-subgroups.html#exe-finding-centers",
   "type": "Exercise",
-  "number": "2",
+  "number": "4",
   "title": "Finding Centers.",
   "body": "Finding Centers Determine the following:    for . Your answer will depend on whether is even or odd.     for .     for .     .    "
+},
+{
+  "id": "exe-subgroup-not-symmetric",
+  "level": "2",
+  "url": "sec-subgroups.html#exe-subgroup-not-symmetric",
+  "type": "Exercise",
+  "number": "5",
+  "title": "Subgroups not Symmetric.",
+  "body": "Subgroups not Symmetric  In we showed that subgroups form a transitve relation. Prove that the relation is reflexive (it can be one sentence), not symmetric, and thus not an equivalence relation.  "
 },
 {
   "id": "exe-verify-d2n-generation",
   "level": "2",
   "url": "sec-subgroups.html#exe-verify-d2n-generation",
   "type": "Exercise",
-  "number": "3",
+  "number": "6",
   "title": "<span class=\"process-math\">\\(D_{2n}\\)<\/span> as Generated Subgroup.",
   "body": "as Generated Subgroup Verify , meaning that is the subgroup of generated by . "
-},
-{
-  "id": "exe-future-subgroups",
-  "level": "2",
-  "url": "sec-subgroups.html#exe-future-subgroups",
-  "type": "Exercise",
-  "number": "4",
-  "title": "Future Subgroups.",
-  "body": "Future Subgroups Throughout this course we will encounter numerous important subgroups that will need to be verified as such. We do so here. While these subgroups may seem random now, they will prove to be exceedingly useful in the future.    Let . Prove that the set is a subgroup of . The set is known as the centralizer of in , and is defined explicitely in .      Let . Prove that the set is a subgroup of . The set is known as the centralizer of in , and is and is defined explicitely in .      Let be a subgroup of and fix some element . Prove that is a subgroup of of the same order as . The set is known as the conjugate of by , and is defined explicitely in .      Let be a containing elements. For each , prove that the set is a subgroup of . This a specific example of something known as the and in we will see how it can be applied to all groups, not just .     "
 },
 {
   "id": "exe-subgroups-of-z",
   "level": "2",
   "url": "sec-subgroups.html#exe-subgroups-of-z",
   "type": "Exercise",
-  "number": "5",
+  "number": "7",
   "title": "Subgroups of <span class=\"process-math\">\\(\\Z\\)<\/span>.",
-  "body": "Subgroups of     The set is a subgroup of for all .         The only subgroups of are the sets .     "
+  "body": "Subgroups of     The set is a subgroup of for all .    The only subgroups of are the sets .     "
+},
+{
+  "id": "exe-only-element-of-order-2",
+  "level": "2",
+  "url": "sec-subgroups.html#exe-only-element-of-order-2",
+  "type": "Exercise",
+  "number": "8",
+  "title": "",
+  "body": "Let be a group and . If is the only element of order in , then . "
+},
+{
+  "id": "exe-subgroup-preserves-identity",
+  "level": "2",
+  "url": "sec-subgroups.html#exe-subgroup-preserves-identity",
+  "type": "Exercise",
+  "number": "9",
+  "title": "Subgroups Preserve Identities.",
+  "body": "Subgroups Preserve Identities  Let be a subgroup of . Then .  "
 },
 {
   "id": "exe-center-is-group-iff-abelian",
   "level": "2",
   "url": "sec-subgroups.html#exe-center-is-group-iff-abelian",
   "type": "Exercise",
-  "number": "6",
+  "number": "10",
   "title": "Abelian iff <span class=\"process-math\">\\(Z(G)=G\\)<\/span>.",
   "body": "Abelian iff  Let be a group. Prove is abelian if any only if .  "
+},
+{
+  "id": "exe-subgroups-closed-under-intersections",
+  "level": "2",
+  "url": "sec-subgroups.html#exe-subgroups-closed-under-intersections",
+  "type": "Exercise",
+  "number": "11",
+  "title": "Abelian iff <span class=\"process-math\">\\(Z(G)=G\\)<\/span>.",
+  "body": "Abelian iff  Subgroups are closed under intersections.  "
 },
 {
   "id": "exe-no-proper-unions",
   "level": "2",
   "url": "sec-subgroups.html#exe-no-proper-unions",
   "type": "Exercise",
-  "number": "7",
+  "number": "12",
   "title": "No Proper Unions.",
   "body": "No Proper Unions  Every finite group cannot be expressed as the union of two proper subgroups.   Part (3) of may prove useful!   Coming soon to an OER near you!  "
 },
@@ -671,7 +779,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#exe-even-groups-order-2",
   "type": "Exercise",
-  "number": "8",
+  "number": "13",
   "title": "Even Order Groups.",
   "body": "Even Order Groups Every group of even order contains an element of order . This is a direct corollary of , but proving it is possible and thus beneficial to prove it without all of that machinery first, and we will use this partial result in  "
 },
@@ -680,7 +788,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#exe-abelian-subgroups",
   "type": "Exercise",
-  "number": "9",
+  "number": "14",
   "title": "Subgroups of Abelian Groups.",
   "body": "Subgroups of Abelian Groups  Let be a subgroup of a group . If is abelian then so is .  "
 },
@@ -689,16 +797,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#exe-groups-contained-in-groups-are-subgroups",
   "type": "Exercise",
-  "number": "10",
+  "number": "15",
   "title": "Subsets and Subgroups.",
   "body": "Subsets and Subgroups  Let and be groups. If , then   "
 },
 {
-  "id": "exercise-28",
+  "id": "exercise-37",
   "level": "2",
-  "url": "sec-subgroups.html#exercise-28",
+  "url": "sec-subgroups.html#exercise-37",
   "type": "Exercise",
-  "number": "1",
+  "number": "16",
   "title": "May 2021 (1a).",
   "body": "May 2021 (1a)  Let be a group (not necessarily finite) and a nonempty subset of that is closed under multiplication. Suppose that for all we have . Prove is a subgroup of .   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
@@ -709,14 +817,14 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.4",
   "title": "Generators and Cyclic Groups",
-  "body": " Generators and Cyclic Groups   Generators    How often misused words generate misleading thoughts.   Herbert Spencer    Generating Set   A subset of a group is said to generate  if every element of is equal to a product of elements of and their inverses (with repetitions allowed).    Note that in we showed is generated by transpositions.        is generated by and any reflection.    If is prime then is generated by any two distinct reflections.         For prove that is generated by and the -cycle .     Funnily enough, this theorem will prove surprisingly useful all the way down in .    Generated Subgroup   Given a group and a subset of , the subgroup of generated by is If is a set with one element then we write and we refer to this as the cyclic subgroup generated by  . the subgroup generated by      Commutator Subgroup  Let be a group, , and . This is known as the commutator subgroup of . the commutator subgroup     Commutator subgroups prove invaluable when it comes to something called abelianization , which is, loosely speaking, a way of \"modding out\" the non-commutative part of to obtain a new group that is abelian. This is seen rigorously in     Elements of   For a subset of , the elements of can be described as:     Let . Since is a subgroup that contains , it is closed under products and inverses, and thus must contain all elements of .  For the opposite containment, we just need to show the set really is a subgroup. We use the one step test:      since we allow and declare the empty product to be .    If and are in then is also in .     Therefore and (by taking and ) and by the minimality of we obtain .     Elements of    .     Generating    is the subgroup of generated by all produts of -cyclies (disjoint or not). In symbols,       Cyclic Groups    Madness is the exception in individuals and the rule in groups.   Friedrich Nietzsche    Cylic Group   If is a generated by a single element, i.e. for some , then is called a cyclic group .     Examples of Cyclic Groups      is a cyclic group.     is a cyclic group.       Additive vs. Multiplicative Cyclic Groups      Let be a finite group. Then is cyclic if and only if there exists an such that     Conveniently enough, cyclic groups are always abelian.   Cyclic Groups are Abelian   Every cyclic group is abelian.    One of the first things one does when encountering a new group is to examine its subgroups. As it turns out, cyclic groups have some very special properties when it comes to subgroups, though proving them will be more technical than anything we have encountered thus far.   Subgroups of Cyclic Groups   Let , where has finite order . Then    .    There is a bijection for each divisor of . Moreover, for each subgroup of , . In particular, all subgroups of are cyclic and there is a unique subgroup of each order.          1. By Lemma , the group has the following elements . We show that      by showing the elements are distinct. Indeed, if and then and , contradicting the minimality of the order of .     by showing (this implies ). Indeed, for any division by yields integers with such that . Then .       2. Claim 1: For any , setting gives that .  Since any element of is of the form for some . By the Division Theorem for some , . Since and are elements of , . Since and , by the minimality of it follows that cannot be positive and thus . Therefore and we have shown that . The opposite containment follows because and is the smallest subgroup of containing . Thus .  Let be given by .   Claim 2: For any divisor of , we have .  We have    Claim 3: For any subgroup of , we have .  By Claim 1, any is either , for which or is of the form . In the latter case, setting we have and It remains to show that . By Bézout’s Identity, for some integers . Since if follows that . On the other hand is a multiple of so and thus . Finally, we conclude that for any .  Claims 2 and 3 establish that is a two sided inverse to , thus is a bijection.        The structure of this proof highlights a moderate schism in the world of mathematical writings.      Computations and Examples      Coming Soon!    Formal Proofs      Cyclic Group Verifications Verify that each of the groups from are indeed cyclic groups.  Self Sufficent Show that is a generating set for for any group .  Not Quite Cyclic Groups    Prove that is not a cyclic group.    Prove that is not cyclic.     Cyclic Generators Need not be Unique  Let be a cyclic group. Then .   Cyclic Groups of Small Order     Every group of orders are cyclic.    Every abelian group of order is cyclic.        Qualifying Exam Problems      Consider the set .   Prove that .    Prove that for each integer , there is a unique subgroup with and that is cyclic.    Prove that every finitely generated subgroup of has finitely many elements.    Prove that is not finitely generated.       "
+  "body": " Generators and Cyclic Groups   Generators    How often misused words generate misleading thoughts.   Herbert Spencer    Generating Set   A subset of a group is said to generate  if every element of is equal to a product of elements of and their inverses (with repetitions allowed).    Note that in we showed is generated by transpositions.        is generated by and any reflection.    If is prime then is generated by any two distinct reflections.         For prove that is generated by and the -cycle .    Funnily enough, this theorem will prove surprisingly useful all the way down in .   Generated Subgroup   Given a group and a subset of , the subgroup of generated by is If is a set with one element then we write and we refer to this as the cyclic subgroup generated by  . the subgroup generated by     A nice property of generated subgroups is that once you've located the generators, you've found the whole group:   Generators of Subgroups   If is a subgroup of that contains , then .     Commutator Subgroup  Let be a group, , and . This is known as the commutator subgroup of . the commutator subgroup     Commutator subgroups prove invaluable when it comes to something called abelianization , which is, loosely speaking, a way of \"modding out\" the non-commutative part of to obtain a new group that is abelian. This is seen rigorously in     Elements of   For a subset of , the elements of can be described as:     Let . Since is a subgroup that contains , it is closed under products and inverses, and thus must contain all elements of .  For the opposite containment, we just need to show the set really is a subgroup. We use the one step test:      since we allow and declare the empty product to be .    If and are in then is also in .     Therefore and (by taking and ) and by the minimality of we obtain .     Elements of    .       for every .     Generating    is the subgroup of generated by all produts of -cyclies (disjoint or not). In symbols,       Cyclic Groups    Madness is the exception in individuals and the rule in groups.   Friedrich Nietzsche    Cylic Group   If is a generated by a single element, i.e. for some , then is called a cyclic group .     Examples of Cyclic Groups      is a cyclic group.     is a cyclic group.    The group is cyclic.       Additive vs. Multiplicative Cyclic Groups      Let be a finite group. Then is cyclic if and only if there exists an such that     Conveniently enough, cyclic groups are always abelian.   Cyclic Groups are Abelian   Every cyclic group is abelian.    One of the first things one does when encountering a new group is to examine its subgroups. As it turns out, cyclic groups have some very special properties when it comes to subgroups, though proving them will be more technical than anything we have encountered thus far.   Subgroups of Cyclic Groups   Let , where has finite order . Then    .    There is a bijection for each divisor of . Moreover, for each subgroup of , . In particular, all subgroups of are cyclic and there is a unique subgroup of each order.          1. By Lemma , the group has the following elements . We show that      by showing the elements are distinct. Indeed, if and then and , contradicting the minimality of the order of .     by showing (this implies ). Indeed, for any division by yields integers with such that . Then .       2. Claim 1: For any , setting gives that .  Since any element of is of the form for some . By the Division Theorem for some , . Since and are elements of , . Since and , by the minimality of it follows that cannot be positive and thus . Therefore and we have shown that . The opposite containment follows because and is the smallest subgroup of containing . Thus .  Let be given by .   Claim 2: For any divisor of , we have .  We have    Claim 3: For any subgroup of , we have .  By Claim 1, any is either , for which or is of the form . In the latter case, setting we have and It remains to show that . By Bézout’s Identity, for some integers . Since if follows that . On the other hand is a multiple of so and thus . Finally, we conclude that for any .  Claims 2 and 3 establish that is a two sided inverse to , thus is a bijection.        The structure of this proof highlights a moderate schism in the world of mathematical writings.      Computations and Examples      Cyclic Group Verifications Verify that each of the groups from are indeed cyclic groups.  Not Quite Cyclic Groups    Prove that is not a cyclic group.    Prove that is not cyclic.     Cyclic Groups of Small Order     Every group of orders are cyclic.    Every abelian group of order is cyclic.        Properties and Future Lemmas      Self Sufficent Show that is a generating set for for any group .  Cyclic Generators Need not be Unique  Let be a cyclic group. Then .   Let be a cyclic group of order , and let . Then generates if and only if .    Qualifying Exam Problems      Consider the set .   Prove that .    Prove that for each integer , there is a unique subgroup with and that is cyclic.    Prove that every finitely generated subgroup of has finitely many elements.    Prove that is not finitely generated.       "
 },
 {
   "id": "def-groupgenerate",
   "level": "2",
   "url": "sec-gen-cyclic-gp.html#def-groupgenerate",
   "type": "Definition",
-  "number": "1.46",
+  "number": "1.49",
   "title": "Generating Set.",
   "body": " Generating Set   A subset of a group is said to generate  if every element of is equal to a product of elements of and their inverses (with repetitions allowed).   "
 },
@@ -725,7 +833,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gen-cyclic-gp.html#remark-10",
   "type": "Remark",
-  "number": "1.47",
+  "number": "1.50",
   "title": "",
   "body": "Note that in we showed is generated by transpositions. "
 },
@@ -734,7 +842,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gen-cyclic-gp.html#prop-d2n-generation",
   "type": "Proposition",
-  "number": "1.48",
+  "number": "1.51",
   "title": "",
   "body": "      is generated by and any reflection.    If is prime then is generated by any two distinct reflections.      "
 },
@@ -743,7 +851,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gen-cyclic-gp.html#thm-generating-sn",
   "type": "Theorem",
-  "number": "1.49",
+  "number": "1.52",
   "title": "",
   "body": "  For prove that is generated by and the -cycle .   "
 },
@@ -752,25 +860,34 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gen-cyclic-gp.html#remark-11",
   "type": "Remark",
-  "number": "1.50",
+  "number": "1.53",
   "title": "",
-  "body": " Funnily enough, this theorem will prove surprisingly useful all the way down in .  "
+  "body": "Funnily enough, this theorem will prove surprisingly useful all the way down in . "
 },
 {
   "id": "def-gensubgp",
   "level": "2",
   "url": "sec-gen-cyclic-gp.html#def-gensubgp",
   "type": "Definition",
-  "number": "1.51",
+  "number": "1.54",
   "title": "Generated Subgroup.",
   "body": " Generated Subgroup   Given a group and a subset of , the subgroup of generated by is If is a set with one element then we write and we refer to this as the cyclic subgroup generated by  . the subgroup generated by    "
+},
+{
+  "id": "prop-generators-of-subgroup",
+  "level": "2",
+  "url": "sec-gen-cyclic-gp.html#prop-generators-of-subgroup",
+  "type": "Proposition",
+  "number": "1.55",
+  "title": "Generators of Subgroups.",
+  "body": " Generators of Subgroups   If is a subgroup of that contains , then .   "
 },
 {
   "id": "ex-commutator-subgroup",
   "level": "2",
   "url": "sec-gen-cyclic-gp.html#ex-commutator-subgroup",
   "type": "Example",
-  "number": "1.52",
+  "number": "1.56",
   "title": "Commutator Subgroup.",
   "body": " Commutator Subgroup  Let be a group, , and . This is known as the commutator subgroup of . the commutator subgroup   "
 },
@@ -779,7 +896,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gen-cyclic-gp.html#remark-12",
   "type": "Remark",
-  "number": "1.53",
+  "number": "1.57",
   "title": "",
   "body": " Commutator subgroups prove invaluable when it comes to something called abelianization , which is, loosely speaking, a way of \"modding out\" the non-commutative part of to obtain a new group that is abelian. This is seen rigorously in   "
 },
@@ -788,7 +905,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gen-cyclic-gp.html#lem-gensubgp",
   "type": "Lemma",
-  "number": "1.54",
+  "number": "1.58",
   "title": "Elements of <span class=\"process-math\">\\(\\igen X\\)<\/span>.",
   "body": " Elements of   For a subset of , the elements of can be described as:     Let . Since is a subgroup that contains , it is closed under products and inverses, and thus must contain all elements of .  For the opposite containment, we just need to show the set really is a subgroup. We use the one step test:      since we allow and declare the empty product to be .    If and are in then is also in .     Therefore and (by taking and ) and by the minimality of we obtain .   "
 },
@@ -797,16 +914,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gen-cyclic-gp.html#cor-cyclic-subgroup",
   "type": "Corollary",
-  "number": "1.55",
+  "number": "1.59",
   "title": "Elements of <span class=\"process-math\">\\(\\igen x\\)<\/span>.",
   "body": " Elements of    .   "
+},
+{
+  "id": "example-8",
+  "level": "2",
+  "url": "sec-gen-cyclic-gp.html#example-8",
+  "type": "Example",
+  "number": "1.60",
+  "title": "",
+  "body": "   for every .   "
 },
 {
   "id": "prop-generating-an",
   "level": "2",
   "url": "sec-gen-cyclic-gp.html#prop-generating-an",
   "type": "Proposition",
-  "number": "1.56",
+  "number": "1.61",
   "title": "Generating <span class=\"process-math\">\\(A_n\\)<\/span>.",
   "body": " Generating    is the subgroup of generated by all produts of -cyclies (disjoint or not). In symbols,    "
 },
@@ -815,7 +941,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gen-cyclic-gp.html#def-cyclic-group",
   "type": "Definition",
-  "number": "1.57",
+  "number": "1.62",
   "title": "Cylic Group.",
   "body": " Cylic Group   If is a generated by a single element, i.e. for some , then is called a cyclic group .   "
 },
@@ -824,16 +950,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gen-cyclic-gp.html#ex-cyclic-examples",
   "type": "Example",
-  "number": "1.58",
+  "number": "1.63",
   "title": "Examples of Cyclic Groups.",
-  "body": " Examples of Cyclic Groups      is a cyclic group.     is a cyclic group.     "
+  "body": " Examples of Cyclic Groups      is a cyclic group.     is a cyclic group.    The group is cyclic.     "
 },
 {
   "id": "prop-cyclic-equivalencies",
   "level": "2",
   "url": "sec-gen-cyclic-gp.html#prop-cyclic-equivalencies",
   "type": "Proposition",
-  "number": "1.59",
+  "number": "1.64",
   "title": "",
   "body": "  Let be a finite group. Then is cyclic if and only if there exists an such that    "
 },
@@ -842,7 +968,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gen-cyclic-gp.html#thm-cyclic-abelian",
   "type": "Theorem",
-  "number": "1.60",
+  "number": "1.65",
   "title": "Cyclic Groups are Abelian.",
   "body": " Cyclic Groups are Abelian   Every cyclic group is abelian.   "
 },
@@ -851,7 +977,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gen-cyclic-gp.html#thm-cyclic-divisors-and-subgroups",
   "type": "Theorem",
-  "number": "1.61",
+  "number": "1.66",
   "title": "Subgroups of Cyclic Groups.",
   "body": " Subgroups of Cyclic Groups   Let , where has finite order . Then    .    There is a bijection for each divisor of . Moreover, for each subgroup of , . In particular, all subgroups of are cyclic and there is a unique subgroup of each order.          1. By Lemma , the group has the following elements . We show that      by showing the elements are distinct. Indeed, if and then and , contradicting the minimality of the order of .     by showing (this implies ). Indeed, for any division by yields integers with such that . Then .       2. Claim 1: For any , setting gives that .  Since any element of is of the form for some . By the Division Theorem for some , . Since and are elements of , . Since and , by the minimality of it follows that cannot be positive and thus . Therefore and we have shown that . The opposite containment follows because and is the smallest subgroup of containing . Thus .  Let be given by .   Claim 2: For any divisor of , we have .  We have    Claim 3: For any subgroup of , we have .  By Claim 1, any is either , for which or is of the form . In the latter case, setting we have and It remains to show that . By Bézout’s Identity, for some integers . Since if follows that . On the other hand is a multiple of so and thus . Finally, we conclude that for any .  Claims 2 and 3 establish that is a two sided inverse to , thus is a bijection.      "
 },
@@ -860,45 +986,45 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gen-cyclic-gp.html#remark-13",
   "type": "Remark",
-  "number": "1.62",
+  "number": "1.67",
   "title": "",
   "body": " The structure of this proof highlights a moderate schism in the world of mathematical writings.  "
 },
 {
-  "id": "exercise-29",
+  "id": "exercise-38",
   "level": "2",
-  "url": "sec-gen-cyclic-gp.html#exercise-29",
+  "url": "sec-gen-cyclic-gp.html#exercise-38",
   "type": "Exercise",
   "number": "1",
-  "title": "",
-  "body": "Coming Soon! "
-},
-{
-  "id": "exercise-30",
-  "level": "2",
-  "url": "sec-gen-cyclic-gp.html#exercise-30",
-  "type": "Exercise",
-  "number": "2",
   "title": "Cyclic Group Verifications.",
   "body": "Cyclic Group Verifications Verify that each of the groups from are indeed cyclic groups. "
 },
 {
-  "id": "exercise-31",
+  "id": "exercise-39",
   "level": "2",
-  "url": "sec-gen-cyclic-gp.html#exercise-31",
+  "url": "sec-gen-cyclic-gp.html#exercise-39",
   "type": "Exercise",
-  "number": "3",
-  "title": "Self Sufficent.",
-  "body": "Self Sufficent Show that is a generating set for for any group . "
-},
-{
-  "id": "exercise-32",
-  "level": "2",
-  "url": "sec-gen-cyclic-gp.html#exercise-32",
-  "type": "Exercise",
-  "number": "4",
+  "number": "2",
   "title": "Not Quite Cyclic Groups.",
   "body": "Not Quite Cyclic Groups    Prove that is not a cyclic group.    Prove that is not cyclic.    "
+},
+{
+  "id": "exercise-40",
+  "level": "2",
+  "url": "sec-gen-cyclic-gp.html#exercise-40",
+  "type": "Exercise",
+  "number": "3",
+  "title": "Cyclic Groups of Small Order.",
+  "body": "Cyclic Groups of Small Order     Every group of orders are cyclic.    Every abelian group of order is cyclic.     "
+},
+{
+  "id": "exercise-41",
+  "level": "2",
+  "url": "sec-gen-cyclic-gp.html#exercise-41",
+  "type": "Exercise",
+  "number": "4",
+  "title": "Self Sufficent.",
+  "body": "Self Sufficent Show that is a generating set for for any group . "
 },
 {
   "id": "exe-non-unique-cyclic-generators",
@@ -910,18 +1036,18 @@ var ptx_lunr_docs = [
   "body": "Cyclic Generators Need not be Unique  Let be a cyclic group. Then .  "
 },
 {
-  "id": "exercise-34",
+  "id": "exercise-43",
   "level": "2",
-  "url": "sec-gen-cyclic-gp.html#exercise-34",
+  "url": "sec-gen-cyclic-gp.html#exercise-43",
   "type": "Exercise",
   "number": "6",
-  "title": "Cyclic Groups of Small Order.",
-  "body": "Cyclic Groups of Small Order     Every group of orders are cyclic.    Every abelian group of order is cyclic.     "
+  "title": "",
+  "body": "Let be a cyclic group of order , and let . Then generates if and only if . "
 },
 {
-  "id": "exercise-35",
+  "id": "exercise-44",
   "level": "2",
-  "url": "sec-gen-cyclic-gp.html#exercise-35",
+  "url": "sec-gen-cyclic-gp.html#exercise-44",
   "type": "Exercise",
   "number": "7",
   "title": "",
@@ -934,7 +1060,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.1",
   "title": "Group Homomorphisms",
-  "body": " Group Homomorphisms   Homomorphism? I Barely Know 'em!    In the end, the character of a civilization is encased in its structures.   Frank Gehry    Group Homomorphism   If and are groups, a homomorphism from is is a function such that , where and denote the multiplication rules for and , respectively. the common symbols we use to denote homomorphisms     Intuitively, a group homomorphism preserves the algebraic structure of the group, while allowing us to compare and relate different groups. In this way, group homomorphisms allow us to study the properties of groups by comparing them to other groups that we already understand well.   Homormophism Examples     The identity map is a group homomorphism for any group , this is known as the trivial homomorphism     Let . The inclusion map defined by is a homomorphism.    The sign homomorphism  that sends even permuations to and odd permutations to is a homomorphism.    The exponential map is a homomorphism.    The natural log map is a homomorphism.    For any positive integer the map determinant map is a group homomorphism.      Specifically, the homomorphism will preserve the additive structure, such as the identity element and inverse elements.   Homomorphism Preservations   If is a homomorphism of groups, then    and     .         Kernels and Images    May your passion be the kernel of corn stuck between your molars, always reminding you there's something to tend to.   Jeb Dickerson     The image is one thing and the human being is another. It's very hard to live up to an image, put it that way.   Elvis Presley    Kernel   Let is a homomorphism of groups. The kernel of is the set  the kernel of a homomorphism       Image   Let is a homomorphism of groups. The image of is the set  the image of a homomorphism      This is identical to the set-theoretic image.   Properties of Group Homomorphisms      (Images are subgroups) If is a homomorphism of groups, then the image of is a subgroup of .    (Kernels are subgroups) If is a homomorphism of groups, then the kernel of is a subgroup of .    (Preimages are subgroups) Prove that if is a group homomorphism and then the preimage of , defined as , is a subgroup of .    (Compositions) If and are group homomorphisms, the composition is a group homomorphism.    A group homomorphism is injective if and only if .    A group homomorphism is surjective if and only if .          Computations and Examples      Group Homomorphisms Determine (with justification) which of the following functions are group homomorphisms   The function defined by .    The function defined by .    The function defined by .    The function defined by      Finding Injective Homomorphisms   Find, with justification, an injective group homomorphism .  Find, with justification, an injective group homomorphism .      Formal Proofs       Let be a homomorphism of groups and . Then        If is cyclic, so is     If is abelian, so is             If is a homomorphism of groups and is finte, then .     Qualifying Exam Problems      Coming soon to an OER near you!    "
+  "body": " Group Homomorphisms   Homomorphism? I Barely Know 'em!    In the end, the character of a civilization is encased in its structures.   Frank Gehry    Group Homomorphism   If and are groups, a homomorphism from is is a function such that , where and denote the multiplication rules for and , respectively. the common symbols we use to denote homomorphisms     Intuitively, a group homomorphism preserves the algebraic structure of the group, while allowing us to compare and relate different groups. In this way, group homomorphisms allow us to study the properties of groups by comparing them to other groups that we already understand well.   Homormophism Examples     The identity map is a group homomorphism for any group , this is known as the trivial homomorphism     The function given by is a homomorphism.    Let . The inclusion map defined by is a homomorphism.    The sign homomorphism  that sends even permuations to and odd permutations to is a homomorphism.    The exponential map is a homomorphism.    The natural log map is a homomorphism.    For any positive integer the map determinant map is a group homomorphism.      Specifically, the homomorphism will preserve the additive structure, such as the identity element and inverse elements.   Homomorphism Preservations   If is a homomorphism of groups, then    and     .         Kernels and Images    May your passion be the kernel of corn stuck between your molars, always reminding you there's something to tend to.   Jeb Dickerson     The image is one thing and the human being is another. It's very hard to live up to an image, put it that way.   Elvis Presley    Kernel   Let is a homomorphism of groups. The kernel of is the set  the kernel of a homomorphism       Image   Let is a homomorphism of groups. The image of is the set  the image of a homomorphism      This is identical to the set-theoretic image.   Properties of Group Homomorphisms      (Images are subgroups) If is a homomorphism of groups, then the image of is a subgroup of .    (Kernels are subgroups) If is a homomorphism of groups, then the kernel of is a subgroup of .    (Preimages are subgroups) Prove that if is a group homomorphism and then the preimage of , defined as , is a subgroup of .    (Compositions) If and are group homomorphisms, the composition is a group homomorphism.    A group homomorphism is injective if and only if .    A group homomorphism is surjective if and only if .          Examples and Specifics      Group Homomorphisms Determine (with justification) which of the following functions are group homomorphisms   The function defined by .    The function defined by .    The function defined by .    The function defined by      Finding Injective Homomorphisms   Find, with justification, an injective group homomorphism .  Find, with justification, an injective group homomorphism .      Properties and Future Lemmas       Let be a homomorphism of groups and . Then        If is cyclic, so is     If is abelian, so is             If is a homomorphism of groups and is finte, then .   If is a surjective homomorphism and is abelian, then so is .    Qualifying Exam Problems      Coming soon to an OER near you!    "
 },
 {
   "id": "def-gphom",
@@ -952,7 +1078,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "2.2",
   "title": "Homormophism Examples.",
-  "body": " Homormophism Examples     The identity map is a group homomorphism for any group , this is known as the trivial homomorphism     Let . The inclusion map defined by is a homomorphism.    The sign homomorphism  that sends even permuations to and odd permutations to is a homomorphism.    The exponential map is a homomorphism.    The natural log map is a homomorphism.    For any positive integer the map determinant map is a group homomorphism.     "
+  "body": " Homormophism Examples     The identity map is a group homomorphism for any group , this is known as the trivial homomorphism     The function given by is a homomorphism.    Let . The inclusion map defined by is a homomorphism.    The sign homomorphism  that sends even permuations to and odd permutations to is a homomorphism.    The exponential map is a homomorphism.    The natural log map is a homomorphism.    For any positive integer the map determinant map is a group homomorphism.     "
 },
 {
   "id": "thm-grphomom-prop",
@@ -1000,18 +1126,18 @@ var ptx_lunr_docs = [
   "body": " Properties of Group Homomorphisms      (Images are subgroups) If is a homomorphism of groups, then the image of is a subgroup of .    (Kernels are subgroups) If is a homomorphism of groups, then the kernel of is a subgroup of .    (Preimages are subgroups) Prove that if is a group homomorphism and then the preimage of , defined as , is a subgroup of .    (Compositions) If and are group homomorphisms, the composition is a group homomorphism.    A group homomorphism is injective if and only if .    A group homomorphism is surjective if and only if .      "
 },
 {
-  "id": "exercise-36",
+  "id": "exercise-45",
   "level": "2",
-  "url": "sec-gphoms.html#exercise-36",
+  "url": "sec-gphoms.html#exercise-45",
   "type": "Exercise",
   "number": "1",
   "title": "Group Homomorphisms.",
   "body": "Group Homomorphisms Determine (with justification) which of the following functions are group homomorphisms   The function defined by .    The function defined by .    The function defined by .    The function defined by     "
 },
 {
-  "id": "exercise-37",
+  "id": "exercise-46",
   "level": "2",
-  "url": "sec-gphoms.html#exercise-37",
+  "url": "sec-gphoms.html#exercise-46",
   "type": "Exercise",
   "number": "2",
   "title": "Finding Injective Homomorphisms.",
@@ -1036,11 +1162,20 @@ var ptx_lunr_docs = [
   "body": " If is a homomorphism of groups and is finte, then .  "
 },
 {
-  "id": "exercise-40",
+  "id": "exe-abelian-codomain",
   "level": "2",
-  "url": "sec-gphoms.html#exercise-40",
+  "url": "sec-gphoms.html#exe-abelian-codomain",
   "type": "Exercise",
   "number": "5",
+  "title": "",
+  "body": "If is a surjective homomorphism and is abelian, then so is . "
+},
+{
+  "id": "exercise-50",
+  "level": "2",
+  "url": "sec-gphoms.html#exercise-50",
+  "type": "Exercise",
+  "number": "6",
   "title": "",
   "body": "Coming soon to an OER near you! "
 },
@@ -1051,7 +1186,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.2",
   "title": "Group Isomorphisms",
-  "body": " Group Isomorphisms   Isomorphisms    The test of a first-rate intelligence is the ability to hold two opposed ideas in mind at the same time and still retain the ability to function.   F. Scott Fitzgerald    Group Ismorphism   A homomorphism is called an isomorphism if there exists a homomorphism such that and .  If is an isomorphism, and are called isomorphic , written . Isomorphic     I have defined the notion of isomorphism in differently than given in the textbook. The reason is that the correct meaning of the word isomorphism in any context (sets, groups, rings, fields, topological spaces, whatever) is always a morphism that has a two-sided inverse . In many contexts, such as sets, groups, rings and fields this turns out to be equivalent to the notion of being one-to-one and onto . But there are contexts in which this is not the case. For example a one-to-one and onto continuous map of topological spaces need not be a homeomorphism. (A homeomorphism is a term one uses for isomorphism of topological spaces, for historical reasons.)  Intuitively, a group isomorphism establishes a one-to-one correspondence between the elements of two groups, such that they have exactly the same algebraic structure. This means that the groups are essentially the same, up to a relabeling of their elements.  Group isomorphisms are important because they allow us to identify different groups that have the same algebraic structure. This can simplify the study of groups by reducing the number of cases that need to be considered, and it can also provide insight into the connections between seemingly unrelated groups.    Suppose is a group homomorphism. Then an isomorphism if and only if is bijective (one-to-one and onto).    Moving forward, we will essentially treat as the de-facto definition of a group isomorphism. Rather than end every proof with a reference to , we will instead enshrine its monumental achievements of within this remark. To alleviate some of the corresponding guilt asociated with this decision I am referencing as many times as possible, as is important and should not be forgotten.   Isomorphism Examples     The identity map is a group isomomorphism for any group .     , where denotes the set of even integers.         Let be a cyclic group with infinite elements. Then .    The exponential and natural logarithm maps from are actually isomorphisms.       Isomorphism Preservations   Let and be groups. If is an isomorphism, then the following hold:           for all and for all      is abelian if and only if is abelian          is finitely generated if and only if is finitely generated.        These properties sometimes referred to as isomorphism invariants , though not within this text.   Now seems like an exceptional time to recall Part (4) of .   Composition of Isomorphisms   The composition of two isomorphisms is an isomorphism.     Cayley's Theorem    Every group is isomorphic to a subgroup of .     Cayley's Theorem is named after the British mathematician Arthur Cayley. Cayley was a prolific mathematician who made significant contributions to a wide range of fields, including algebra, geometry, and graph theory. Cayley was also a strong advocate for women's education and played an important role in the movement to admit women to Cambridge University. In the 1860s, he was part of a group of academics who lobbied for women to be allowed to take the Cambridge Mathematical Tripos exam, which was the standard test for mathematics students at the time.    This is a nearly useless theorem.     Automorphisms    Self preservation is the first law of nature.   Samuel Butler    Group Automorphism   Let be a group. An isomorphism is called an automorphism of .     In we saw that the identity map is a group isomomorphism from a group to itself, making an automorphism. This may prove (pun intended) useful in the following proposition.    The Automorphism Group   Prove that the set of automorphisms of , denoted , is a group under composition. the automorphism group of a group     Notice that we have actually shown that the composition of automorphisms is an automorphism, both through (as automorphisms are isomorphisms) and (as groups are closed under their operation)  We have collected several new methods of determining when two groups are isomorphic. Let's express them explicitly.   Isomorphism Consequences   Suppose . Then    and     .         Let be a group and . The function defined by is called the inner automorphism of induced by . The set of inner automorphisms of is denoted .     The Conjugation Automorphism   Let be a group and .    for all .     .        Note that as is bijective it is, by definition, a permutation of . This might come up later...     The automorphism group of is isomorphic to the multiplicative group of units of via the map where .      If is prime the automorphism group of is cyclic, namely .       Examples and Specifics      Something's Missing Justify why the following pairs of groups are not isomorphic.    and      and      and      and      Isomorphisms of Symmetric Groups  if and only if .  Complex Conjugation Automorphism Prove that the function given by is an automorphism.   Find an example of groups such that there is an isomorphism but is not trivial. Note: since can be rewritten as , the above shows that in general one cannot cancel groups in isomorphisms between direct products.    Section Results       Prove .   Coming soon to an OER near you!    Prove .   Coming soon to an OER near you!    Prove .   Coming soon to an OER near you!    Prove .   Coming soon to an OER near you!    Prove .   Coming soon to an OER near you!    Prove .   Coming soon to an OER near you!    Prove .   Coming soon to an OER near you!    Prove .   Coming soon to an OER near you!    Let be a group.   The map given by for all is an automorphism if and only if is abelian.    If then is abelian and every non-identity element of has order .        Qualifying Exam Problems   These problems are from old qualifying exams   June 2020 (2)  Let be a group of order for some odd integer . Let be the group of permutations on the elements of (i.e., the group of bijective functions from G to G). You may use without proof that .   Let be given by for all , where is defined by for all . Prove that is an injective group homomorphism.  Prove that if is an element of order then is a product of transpositions.  Prove contains a subgroup of index and is consequently not simple.    For part (3), consider the inverse image under of the subgroup of consisting of the even permutations.   May 2018 1(b)  Give an example, with justification, of groups and for which is not isomorphic to .     "
+  "body": " Group Isomorphisms   Isomorphisms    The test of a first-rate intelligence is the ability to hold two opposed ideas in mind at the same time and still retain the ability to function.   F. Scott Fitzgerald    Group Ismorphism   A homomorphism is called an isomorphism if there exists a homomorphism such that and .  If is an isomorphism, and are called isomorphic , written . Isomorphic     I have defined the notion of isomorphism in differently than given in the textbook. The reason is that the correct meaning of the word isomorphism in any context (sets, groups, rings, fields, topological spaces, whatever) is always a morphism that has a two-sided inverse . In many contexts, such as sets, groups, rings and fields this turns out to be equivalent to the notion of being one-to-one and onto . But there are contexts in which this is not the case. For example a one-to-one and onto continuous map of topological spaces need not be a homeomorphism. (A homeomorphism is a term one uses for isomorphism of topological spaces, for historical reasons.)  Intuitively, a group isomorphism establishes a one-to-one correspondence between the elements of two groups, such that they have exactly the same algebraic structure. This means that the groups are essentially the same, up to a relabeling of their elements.  Group isomorphisms are important because they allow us to identify different groups that have the same algebraic structure. This can simplify the study of groups by reducing the number of cases that need to be considered, and it can also provide insight into the connections between seemingly unrelated groups.    Suppose is a group homomorphism. Then an isomorphism if and only if is bijective (one-to-one and onto).    Moving forward, we will essentially treat as the de-facto definition of a group isomorphism. Rather than end every proof with a reference to , we will instead enshrine its monumental achievements of within this remark. To alleviate some of the corresponding guilt asociated with this decision I am referencing as many times as possible, as is important and should not be forgotten.   Isomorphism Examples     The identity map is a group isomomorphism for any group .     , where denotes the set of even integers.         Let be a cyclic group with infinite elements. Then .    The exponential and natural logarithm maps from are actually isomorphisms.       Isomorphism Preservations   Let and be groups. If is an isomorphism, then the following hold:           for all and for all      is abelian if and only if is abelian          is finitely generated if and only if is finitely generated.        These properties sometimes referred to as isomorphism invariants , though not within this text.   Now seems like an exceptional time to recall Part (4) of .   Composition of Isomorphisms   The composition of two isomorphisms is an isomorphism.     Cayley's Theorem    Every group is isomorphic to a subgroup of .     Cayley's Theorem is named after the British mathematician Arthur Cayley. Cayley was a prolific mathematician who made significant contributions to a wide range of fields, including algebra, geometry, and graph theory. Cayley was also a strong advocate for women's education and played an important role in the movement to admit women to Cambridge University. In the 1860s, he was part of a group of academics who lobbied for women to be allowed to take the Cambridge Mathematical Tripos exam, which was the standard test for mathematics students at the time.    This is a nearly useless theorem.     Automorphisms    Self preservation is the first law of nature.   Samuel Butler    Group Automorphism   Let be a group. An isomorphism is called an automorphism of .     In we saw that the identity map is a group isomomorphism from a group to itself, making an automorphism. This may prove (pun intended) useful in the following proposition.          The Automorphism Group   Prove that the set of automorphisms of , denoted , is a group under composition. the automorphism group of a group     Notice that we have actually shown that the composition of automorphisms is an automorphism, both through (as automorphisms are isomorphisms) and (as groups are closed under their operation)  We have collected several new methods of determining when two groups are isomorphic. Let's express them explicitly.   Isomorphism Consequences   Suppose . Then    and     .         Let be a group and . The function defined by is called the inner automorphism of induced by . The set of inner automorphisms of is denoted .     The Conjugation Automorphism   Let be a group and .    for all .     .        Note that as is bijective it is, by definition, a permutation of . This might come up later...     The automorphism group of is isomorphic to the multiplicative group of units of via the map where .      If is prime the automorphism group of is cyclic, namely .       Examples and Specifics      Something's Missing Justify why the following pairs of groups are not isomorphic.    and      and      and      and      Isomorphisms of Symmetric Groups  if and only if .  Complex Conjugation Automorphism Prove that the function given by is an automorphism.  Let be a group and as defined in Then .   Find an example of groups such that there is an isomorphism but is not trivial. Note: since can be rewritten as , the above shows that in general one cannot cancel groups in isomorphisms between direct products.    Section Results       Prove .   Coming soon to an OER near you!    Prove .   Coming soon to an OER near you!    Prove .   Coming soon to an OER near you!    Prove .   Coming soon to an OER near you!    Prove .   Coming soon to an OER near you!    Prove .   Coming soon to an OER near you!    Prove .   Coming soon to an OER near you!    Prove .   Coming soon to an OER near you!    Let be a group.   The map given by for all is an automorphism if and only if is abelian.    If then is abelian and every non-identity element of has order .        Qualifying Exam Problems   These problems are from old qualifying exams   June 2020 (2)  Let be a group of order for some odd integer . Let be the group of permutations on the elements of (i.e., the group of bijective functions from G to G). You may use without proof that .   Let be given by for all , where is defined by for all . Prove that is an injective group homomorphism.  Prove that if is an element of order then is a product of transpositions.  Prove contains a subgroup of index and is consequently not simple.    For part (3), consider the inverse image under of the subgroup of consisting of the even permutations.   May 2018 1(b)  Give an example, with justification, of groups and for which is not isomorphic to .     "
 },
 {
   "id": "def-gpiso",
@@ -1162,11 +1297,20 @@ var ptx_lunr_docs = [
   "body": " In we saw that the identity map is a group isomomorphism from a group to itself, making an automorphism. This may prove (pun intended) useful in the following proposition.  "
 },
 {
+  "id": "ex-z-aut",
+  "level": "2",
+  "url": "sec-gpisos.html#ex-z-aut",
+  "type": "Example",
+  "number": "2.20",
+  "title": "<span class=\"process-math\">\\(\\Aut(\\Z)\\)<\/span>.",
+  "body": "     "
+},
+{
   "id": "prop-aut-is-group",
   "level": "2",
   "url": "sec-gpisos.html#prop-aut-is-group",
   "type": "Proposition",
-  "number": "2.20",
+  "number": "2.21",
   "title": "The Automorphism Group.",
   "body": " The Automorphism Group   Prove that the set of automorphisms of , denoted , is a group under composition. the automorphism group of a group    "
 },
@@ -1175,7 +1319,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gpisos.html#remark-19",
   "type": "Remark",
-  "number": "2.21",
+  "number": "2.22",
   "title": "",
   "body": "Notice that we have actually shown that the composition of automorphisms is an automorphism, both through (as automorphisms are isomorphisms) and (as groups are closed under their operation) "
 },
@@ -1184,7 +1328,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gpisos.html#prop-aut-properties",
   "type": "Proposition",
-  "number": "2.22",
+  "number": "2.23",
   "title": "Isomorphism Consequences.",
   "body": " Isomorphism Consequences   Suppose . Then    and     .      "
 },
@@ -1193,7 +1337,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gpisos.html#def-inner-automorphisms",
   "type": "Definition",
-  "number": "2.23",
+  "number": "2.24",
   "title": "",
   "body": "  Let be a group and . The function defined by is called the inner automorphism of induced by . The set of inner automorphisms of is denoted .   "
 },
@@ -1202,7 +1346,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gpisos.html#thm-conjugation-automorphism",
   "type": "Theorem",
-  "number": "2.24",
+  "number": "2.25",
   "title": "The Conjugation Automorphism.",
   "body": " The Conjugation Automorphism   Let be a group and .    for all .     .      "
 },
@@ -1211,7 +1355,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gpisos.html#remark-20",
   "type": "Remark",
-  "number": "2.25",
+  "number": "2.26",
   "title": "",
   "body": " Note that as is bijective it is, by definition, a permutation of . This might come up later...  "
 },
@@ -1220,7 +1364,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gpisos.html#lem-aut-cn",
   "type": "Lemma",
-  "number": "2.26",
+  "number": "2.27",
   "title": "",
   "body": "  The automorphism group of is isomorphic to the multiplicative group of units of via the map where .   "
 },
@@ -1229,7 +1373,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gpisos.html#lem-aut-cp",
   "type": "Lemma",
-  "number": "2.27",
+  "number": "2.28",
   "title": "",
   "body": "  If is prime the automorphism group of is cyclic, namely .   "
 },
@@ -1261,83 +1405,92 @@ var ptx_lunr_docs = [
   "body": "Complex Conjugation Automorphism Prove that the function given by is an automorphism. "
 },
 {
+  "id": "exe-isomorphic-to-opposite",
+  "level": "2",
+  "url": "sec-gpisos.html#exe-isomorphic-to-opposite",
+  "type": "Exercise",
+  "number": "4",
+  "title": "",
+  "body": "Let be a group and as defined in Then . "
+},
+{
   "id": "exe-no-group-cancellation-in-products",
   "level": "2",
   "url": "sec-gpisos.html#exe-no-group-cancellation-in-products",
   "type": "Exercise",
-  "number": "4",
+  "number": "5",
   "title": "",
   "body": "Find an example of groups such that there is an isomorphism but is not trivial. Note: since can be rewritten as , the above shows that in general one cannot cancel groups in isomorphisms between direct products. "
 },
 {
-  "id": "exercise-45",
+  "id": "exercise-56",
   "level": "2",
-  "url": "sec-gpisos.html#exercise-45",
+  "url": "sec-gpisos.html#exercise-56",
   "type": "Exercise",
-  "number": "5",
+  "number": "6",
   "title": "Theorem 2.10.",
   "body": " Prove .   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-46",
+  "id": "exercise-57",
   "level": "2",
-  "url": "sec-gpisos.html#exercise-46",
+  "url": "sec-gpisos.html#exercise-57",
   "type": "Exercise",
-  "number": "6",
+  "number": "7",
   "title": "Theorem 2.13.",
   "body": " Prove .   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-47",
+  "id": "exercise-58",
   "level": "2",
-  "url": "sec-gpisos.html#exercise-47",
+  "url": "sec-gpisos.html#exercise-58",
   "type": "Exercise",
-  "number": "7",
+  "number": "8",
   "title": "Corollary 2.15.",
   "body": " Prove .   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-48",
+  "id": "exercise-59",
   "level": "2",
-  "url": "sec-gpisos.html#exercise-48",
-  "type": "Exercise",
-  "number": "8",
-  "title": "",
-  "body": " Prove .   Coming soon to an OER near you!  "
-},
-{
-  "id": "exercise-49",
-  "level": "2",
-  "url": "sec-gpisos.html#exercise-49",
+  "url": "sec-gpisos.html#exercise-59",
   "type": "Exercise",
   "number": "9",
   "title": "",
   "body": " Prove .   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-50",
+  "id": "exercise-60",
   "level": "2",
-  "url": "sec-gpisos.html#exercise-50",
+  "url": "sec-gpisos.html#exercise-60",
   "type": "Exercise",
   "number": "10",
   "title": "",
   "body": " Prove .   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-51",
+  "id": "exercise-61",
   "level": "2",
-  "url": "sec-gpisos.html#exercise-51",
+  "url": "sec-gpisos.html#exercise-61",
   "type": "Exercise",
   "number": "11",
   "title": "",
   "body": " Prove .   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-52",
+  "id": "exercise-62",
   "level": "2",
-  "url": "sec-gpisos.html#exercise-52",
+  "url": "sec-gpisos.html#exercise-62",
   "type": "Exercise",
   "number": "12",
+  "title": "",
+  "body": " Prove .   Coming soon to an OER near you!  "
+},
+{
+  "id": "exercise-63",
+  "level": "2",
+  "url": "sec-gpisos.html#exercise-63",
+  "type": "Exercise",
+  "number": "13",
   "title": "",
   "body": " Prove .   Coming soon to an OER near you!  "
 },
@@ -1346,25 +1499,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gpisos.html#prop-inverse-map-and-abelian",
   "type": "Exercise",
-  "number": "13",
+  "number": "14",
   "title": "",
   "body": " Let be a group.   The map given by for all is an automorphism if and only if is abelian.    If then is abelian and every non-identity element of has order .     "
 },
 {
-  "id": "exercise-54",
+  "id": "exercise-65",
   "level": "2",
-  "url": "sec-gpisos.html#exercise-54",
+  "url": "sec-gpisos.html#exercise-65",
   "type": "Exercise",
   "number": "1",
   "title": "June 2020 (2).",
   "body": "June 2020 (2)  Let be a group of order for some odd integer . Let be the group of permutations on the elements of (i.e., the group of bijective functions from G to G). You may use without proof that .   Let be given by for all , where is defined by for all . Prove that is an injective group homomorphism.  Prove that if is an element of order then is a product of transpositions.  Prove contains a subgroup of index and is consequently not simple.    For part (3), consider the inverse image under of the subgroup of consisting of the even permutations.  "
 },
 {
-  "id": "exercise-55",
+  "id": "exercise-66",
   "level": "2",
-  "url": "sec-gpisos.html#exercise-55",
+  "url": "sec-gpisos.html#exercise-66",
   "type": "Exercise",
-  "number": "15",
+  "number": "16",
   "title": "May 2018 1(b).",
   "body": "May 2018 1(b)  Give an example, with justification, of groups and for which is not isomorphic to .  "
 },
@@ -1375,7 +1528,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.1",
   "title": "Cosets and Lagrange's Theorem",
-  "body": " Cosets and Lagrange's Theorem   Cosets    If I had inherited a fortune I should probably not have cast my lot with mathematics.   Joseph-Louis Lagrange    Coset   For any and any let be defined as a left coset and right coset of in , respectfully.     Though mostly a matter of preference, we will focus primarily on left cosets.     Let and          if and only if              Coset Equivalencies   Let . The following facts about left cosets are equivalent for :    and belong to the same left coset of in ,     for some ,     for some ,     ,     ,     .        if and belong to the same left coset of in then and for some , so and therefore where .    for some   and .    for some   .    .   Suppose for some , then by we also have for some . Then we have  thus .   Since , we have and . If then, and belong to the same left coset.     Cosets Partition a Group   For , the collection of left cosets of in form a partition of , and similarly for the collection of right cosets. That is,   for all , either or      ,     ,   and similarly for right cosets. Moreover all left and right cosets have the same cardinality: for any .    Let me prove the assertions for right cosets. Clearly every element of belongs to at least one right coset, since (since ). We need to show any two cosets are either identical or disjoint: if and share an element, then it follows from of Lemma that . This proves that the right cosets partition . To see that all right cosets have the same cardinality as , define a function by . Clearly is onto and if then and hence , so that is also one-to-one.      If is a finite group and , then In particular the number of left cosets of in is equal to the number of right cosets of in .  Furthermore, even if is not finite the number of left and right cosets of a subgroup is still the same. (Hint : consider the map and show it's a bijection. Why is the inverse needed?)     Index   In finite groups, the common number of left or right cosets of a subgroup in a group is denoted as and is called the index of in . Index of in       Lagrange's Theorem and Corollaries    Lagrange is the Lofty Pyramid of the Mathematical Sciences.   Napoleon Bonaparte    Lagrange's Theorem    If is a subgroup of a finite group , then divides . Lagrange stated his version of this theorem in 1770, but the first complete proof was given by Pietro Abbati roughly 30 years later.      Corollaries to Lagrange's Theorem      If and is a finite group, then divides .    If is a finite group, then     If then for all     (Groups of prime order are cyclic) If for some prime , then is cyclic and any non-identity element of generates .        The Index Tower   Let be a group (possibly infinite) and subgroups of . Suppose is finite. Prove that (Hint: First prove this in the case is a finite group. Then prove you can reduce to the finite case.)       Section Results       Prove .   Coming soon to an OER near you!    Prove .   Coming soon to an OER near you!    Prove .   Coming soon to an OER near you!    Prove .   Coming soon to an OER near you!    Prove .   Coming soon to an OER near you!    Prove .   Coming soon to an OER near you!     Let be a group of composite order. Then contains a non-trivial proper subgroup.   Fermat's Little Theorem For every integer and every prime , .   "
+  "body": " Cosets and Lagrange's Theorem   Cosets    If I had inherited a fortune I should probably not have cast my lot with mathematics.   Joseph-Louis Lagrange    Coset   For any and any let be defined as a left coset and right coset of in , respectfully.    Though mostly a matter of preference, we will focus primarily on left cosets.    Let and          if and only if              Coset Equivalencies   Let . The following facts about left cosets are equivalent for :    and belong to the same left coset of in ,     for some ,     for some ,     ,     ,     .        if and belong to the same left coset of in then and for some , so and therefore where .    for some   and .    for some   .    .   Suppose for some , then by we also have for some . Then we have  thus .   Since , we have and . If then, and belong to the same left coset.     Cosets Partition a Group   For , the collection of left cosets of in form a partition of , and similarly for the collection of right cosets. That is,   for all , either or      ,     ,   and similarly for right cosets. Moreover all left and right cosets have the same cardinality: for any .    Let me prove the assertions for right cosets. Clearly every element of belongs to at least one right coset, since (since ). We need to show any two cosets are either identical or disjoint: if and share an element, then it follows from of Lemma that . This proves that the right cosets partition . To see that all right cosets have the same cardinality as , define a function by . Clearly is onto and if then and hence , so that is also one-to-one.      If is a finite group and , then In particular the number of left cosets of in is equal to the number of right cosets of in .  Furthermore, even if is not finite the number of left and right cosets of a subgroup is still the same. (Hint : consider the map and show it's a bijection. Why is the inverse needed?)     Index   In finite groups, the common number of left or right cosets of a subgroup in a group is denoted as and is called the index of in . Index of in       Lagrange's Theorem and Corollaries    Lagrange is the Lofty Pyramid of the Mathematical Sciences.   Napoleon Bonaparte    Lagrange's Theorem    If is a subgroup of a finite group , then divides . Lagrange stated his version of this theorem in 1770, but the first complete proof was given by Pietro Abbati roughly 30 years later.      Corollaries to Lagrange's Theorem      If and is a finite group, then divides .    If is a finite group, then     If then for all     (Groups of prime order are cyclic) If for some prime , then is cyclic and any non-identity element of generates .        The Index Tower   Let be a group (possibly infinite) and subgroups of . Suppose is finite. Prove that (Hint: First prove this in the case is a finite group. Then prove you can reduce to the finite case.)       Section Results       Prove .   Coming soon to an OER near you!    Prove .   Coming soon to an OER near you!    Prove .   Coming soon to an OER near you!    Prove .   Coming soon to an OER near you!    Prove .   Coming soon to an OER near you!    Prove .   Coming soon to an OER near you!     Let be a group of composite order. Then contains a non-trivial proper subgroup.   Fermat's Little Theorem For every integer and every prime , .   "
 },
 {
   "id": "def-coset",
@@ -1393,7 +1546,7 @@ var ptx_lunr_docs = [
   "type": "Remark",
   "number": "3.2",
   "title": "",
-  "body": " Though mostly a matter of preference, we will focus primarily on left cosets.  "
+  "body": "Though mostly a matter of preference, we will focus primarily on left cosets. "
 },
 {
   "id": "prop-coset-properties",
@@ -1468,72 +1621,72 @@ var ptx_lunr_docs = [
   "body": " The Index Tower   Let be a group (possibly infinite) and subgroups of . Suppose is finite. Prove that (Hint: First prove this in the case is a finite group. Then prove you can reduce to the finite case.)   "
 },
 {
-  "id": "exercise-56",
+  "id": "exercise-67",
   "level": "2",
-  "url": "sec-cosets.html#exercise-56",
+  "url": "sec-cosets.html#exercise-67",
   "type": "Exercise",
   "number": "1",
   "title": "",
   "body": " Prove .   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-57",
+  "id": "exercise-68",
   "level": "2",
-  "url": "sec-cosets.html#exercise-57",
+  "url": "sec-cosets.html#exercise-68",
   "type": "Exercise",
   "number": "2",
   "title": "",
   "body": " Prove .   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-58",
+  "id": "exercise-69",
   "level": "2",
-  "url": "sec-cosets.html#exercise-58",
+  "url": "sec-cosets.html#exercise-69",
   "type": "Exercise",
   "number": "3",
   "title": "",
   "body": " Prove .   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-59",
+  "id": "exercise-70",
   "level": "2",
-  "url": "sec-cosets.html#exercise-59",
+  "url": "sec-cosets.html#exercise-70",
   "type": "Exercise",
   "number": "4",
   "title": "",
   "body": " Prove .   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-60",
+  "id": "exercise-71",
   "level": "2",
-  "url": "sec-cosets.html#exercise-60",
+  "url": "sec-cosets.html#exercise-71",
   "type": "Exercise",
   "number": "5",
   "title": "",
   "body": " Prove .   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-61",
+  "id": "exercise-72",
   "level": "2",
-  "url": "sec-cosets.html#exercise-61",
+  "url": "sec-cosets.html#exercise-72",
   "type": "Exercise",
   "number": "6",
   "title": "",
   "body": " Prove .   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-62",
+  "id": "exercise-73",
   "level": "2",
-  "url": "sec-cosets.html#exercise-62",
+  "url": "sec-cosets.html#exercise-73",
   "type": "Exercise",
   "number": "7",
   "title": "",
   "body": " Let be a group of composite order. Then contains a non-trivial proper subgroup.  "
 },
 {
-  "id": "exercise-63",
+  "id": "exercise-74",
   "level": "2",
-  "url": "sec-cosets.html#exercise-63",
+  "url": "sec-cosets.html#exercise-74",
   "type": "Exercise",
   "number": "8",
   "title": "Fermat's Little Theorem.",
@@ -1630,108 +1783,108 @@ var ptx_lunr_docs = [
   "body": "but not Abelian  In , let and . Then but and do not commute. The fact that can also be justified by observing that .  "
 },
 {
-  "id": "exercise-68",
+  "id": "exercise-79",
   "level": "2",
-  "url": "sec-normal-subgroups.html#exercise-68",
+  "url": "sec-normal-subgroups.html#exercise-79",
   "type": "Exercise",
   "number": "3.2.5",
   "title": "",
   "body": " Let and be normal subgroups of a group such that . Prove that for all .  "
 },
 {
-  "id": "exercise-69",
+  "id": "exercise-80",
   "level": "2",
-  "url": "sec-normal-subgroups.html#exercise-69",
+  "url": "sec-normal-subgroups.html#exercise-80",
   "type": "Exercise",
   "number": "3.2.6",
   "title": "",
   "body": "Let be a group and a subset of . Let . Prove that if and only if for every and . "
 },
 {
-  "id": "exercise-70",
+  "id": "exercise-81",
   "level": "2",
-  "url": "sec-normal-subgroups.html#exercise-70",
+  "url": "sec-normal-subgroups.html#exercise-81",
   "type": "Exercise",
   "number": "3.2.7",
   "title": "",
   "body": " Show that any subgroup of index two is normal. This means: show that if is a group, is a subgroup and , i.e the number of left (or right) cosets of in is two, then is normal.   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-71",
+  "id": "exercise-82",
   "level": "2",
-  "url": "sec-normal-subgroups.html#exercise-71",
+  "url": "sec-normal-subgroups.html#exercise-82",
   "type": "Exercise",
   "number": "3.2.8",
   "title": "",
   "body": " Let be a finite group, and subgroups such that and = are relatively prime and . Prove that .  "
 },
 {
-  "id": "exercise-72",
+  "id": "exercise-83",
   "level": "2",
-  "url": "sec-normal-subgroups.html#exercise-72",
+  "url": "sec-normal-subgroups.html#exercise-83",
   "type": "Exercise",
   "number": "3.2.9",
   "title": "",
   "body": " Let be a finite group and a subgroup of such that: , is simple, and . Prove that the only normal subgroups of are , and .   Let be a normal subgroup of . Then is a normal subgroup of .  "
 },
 {
-  "id": "exercise-73",
+  "id": "exercise-84",
   "level": "2",
-  "url": "sec-normal-subgroups.html#exercise-73",
+  "url": "sec-normal-subgroups.html#exercise-84",
   "type": "Exercise",
   "number": "3.2.10",
   "title": "",
   "body": "Let be a group and let be a set. The normal subgroup generated by , denoted , is the intersection of all the normal subgroups of that contain .   Show that is a normal subgroup of .    Show that the elements of can be described as     "
 },
 {
-  "id": "exercise-74",
+  "id": "exercise-85",
   "level": "2",
-  "url": "sec-normal-subgroups.html#exercise-74",
+  "url": "sec-normal-subgroups.html#exercise-85",
   "type": "Exercise",
   "number": "3.2.11",
   "title": "June 2012 (2).",
   "body": "June 2012 (2)  Let be a group with a subgroup so that .   Prove that there is a normal subgroup of , so that and     Prove that if is finitely generated, there are most finitely many subgroups with index .      You might want to consider maps .   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-75",
+  "id": "exercise-86",
   "level": "2",
-  "url": "sec-normal-subgroups.html#exercise-75",
+  "url": "sec-normal-subgroups.html#exercise-86",
   "type": "Exercise",
   "number": "3.2.12",
   "title": "January 2019 (1).",
   "body": "January 2019 (1)  Let be a group. A subgroup of is called a characteristic subgroup of if for every automorphism of . Show that if is a characteristic subgroup of and is a normal subgroup of , then is a normal subgroup of .   Let be a group, is a normal subgroup of , and a characteristic subgroup of . Let and consider the automorphism given by .  Let and notice , as . Thus is well defined. Let . As , we can write for some . Then , making surjective. As we see that is a bijection. The homomorphism piece we get for free from , making .  Let . As is a characteristic subgroup of , we see that for all and for all . Thus is normal in .  "
 },
 {
-  "id": "exercise-76",
+  "id": "exercise-87",
   "level": "2",
-  "url": "sec-normal-subgroups.html#exercise-76",
+  "url": "sec-normal-subgroups.html#exercise-87",
   "type": "Exercise",
   "number": "3.2.13",
   "title": "May 2019 (2a).",
   "body": "May 2019 (2a)  Let be a subgroup of a group . Recall that the centralizer of is the subgroup of defined by  In the original qualifying exam, the centralizer was denoted and the normalizer of is the subgroup of defined by . Show that the centralizer of in is a normal subgroup of the normalizer of in .   Let act on by conjugation. Thus the associated permutation homomorphism is defined such that , where . Notice that when we have for all , and thus . If then for all , and thus . Thus and .  "
 },
 {
-  "id": "exercise-77",
+  "id": "exercise-88",
   "level": "2",
-  "url": "sec-normal-subgroups.html#exercise-77",
+  "url": "sec-normal-subgroups.html#exercise-88",
   "type": "Exercise",
   "number": "3.2.14",
   "title": "May 2021 (1ab).",
   "body": "May 2021 (1ab)  Let be a group (not necessarily finite) and a nonempty subset of that is closed under multiplication. Suppose that for all we have . Prove the following:    is a subgroup of .     is normal.      Coming soon to an OER near you!      First, notice that . Let , and consider . Notice that . As is multiplicatively closed, we see that . Thus is a subgroup of by the subgroup test.    Let , , and consider . Notice that . Multiplying by on the right we see , as it is multiplicatively closed and . We rewrite , given that elements always commute with their inverses. As , we see that as well. Thus is normal in .     "
 },
 {
-  "id": "exercise-78",
+  "id": "exercise-89",
   "level": "2",
-  "url": "sec-normal-subgroups.html#exercise-78",
+  "url": "sec-normal-subgroups.html#exercise-89",
   "type": "Exercise",
   "number": "3.2.15",
   "title": "Jan 2022 (1).",
   "body": "Jan 2022 (1)  Let be a group, and be subgroups of .   Give an example of and such that is not a subgroup of .    Suppose now that and , where is prime. Prove that either or .         Let , , and . Notice that , and thus , ( ) which does not divide . Thus is not a subgroup of , as this would contradict .    Suppose there exists some such that . We examine . Notice that since has prime order it is cyclic, and thus generated by any non-identity element, such as . Thus any element in can be written in the form , and any element in can subsequently be written as for some . Thus .     "
 },
 {
-  "id": "exercise-79",
+  "id": "exercise-90",
   "level": "2",
-  "url": "sec-normal-subgroups.html#exercise-79",
+  "url": "sec-normal-subgroups.html#exercise-90",
   "type": "Exercise",
   "number": "3.2.16",
   "title": "Jan 2022 (3b).",
@@ -1819,54 +1972,54 @@ var ptx_lunr_docs = [
   "body": "  Let be a group with center . If is cyclic, then is abelian.   "
 },
 {
-  "id": "exercise-80",
+  "id": "exercise-91",
   "level": "2",
-  "url": "sec-quotient-groups.html#exercise-80",
+  "url": "sec-quotient-groups.html#exercise-91",
   "type": "Exercise",
   "number": "3.3.1",
   "title": "",
   "body": " for all . "
 },
 {
-  "id": "exercise-81",
+  "id": "exercise-92",
   "level": "2",
-  "url": "sec-quotient-groups.html#exercise-81",
+  "url": "sec-quotient-groups.html#exercise-92",
   "type": "Exercise",
   "number": "3.3.2",
   "title": "<span class=\"process-math\">\\(G\/Z(G)\\cong\\Inn(G)\\)<\/span>.",
   "body": " For any group we have .  "
 },
 {
-  "id": "exercise-82",
+  "id": "exercise-93",
   "level": "2",
-  "url": "sec-quotient-groups.html#exercise-82",
+  "url": "sec-quotient-groups.html#exercise-93",
   "type": "Exercise",
   "number": "3.3.3",
   "title": "Quotient of Commutator Subgroup.",
   "body": "Quotient of Commutator Subgroup  Let be a group with commutator subgroup . Prove is abelian.  "
 },
 {
-  "id": "exercise-83",
+  "id": "exercise-94",
   "level": "2",
-  "url": "sec-quotient-groups.html#exercise-83",
+  "url": "sec-quotient-groups.html#exercise-94",
   "type": "Exercise",
   "number": "3.3.4",
   "title": "May 2021 (1).",
   "body": "May 2021 (1)  Let be a group (not necessarily finite) and a nonempty subset of that is closed under multiplication. Suppose that for all we have . Prove the following:    is a subgroup of      is normal     is abelian.      Let be a group, a multiplicatively closed subset of , and suppose that for all .  First, notice that . Let , and consider . Notice that . As is multiplicatively closed, we see that . Thus is a subgroup of by the subgroup test.  Let , , and consider . Notice that . Multiplying by on the right we see , as it is multiplicatively closed and . We rewrite , given that elements always commute with their inverses. As , we see that as well. Thus is normal in .  Let . As for every , every element has order . Thus and so , making the group abelian.  "
 },
 {
-  "id": "exercise-84",
+  "id": "exercise-95",
   "level": "2",
-  "url": "sec-quotient-groups.html#exercise-84",
+  "url": "sec-quotient-groups.html#exercise-95",
   "type": "Exercise",
   "number": "3.3.5",
   "title": "May 2019 (2).",
   "body": "May 2019 (2)  Let be a subgroup of a group . Recall that the centralizer of is the subgroup of defined by  In the original qualifying exam, the centralizer was denoted and the normalizer of is the subgroup of defined by .   Show that the centralizer of in is a normal subgroup of the normalizer of in .    Show that the quotient is isomorphic to a subgroup of the automorphism group of .      Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-85",
+  "id": "exercise-96",
   "level": "2",
-  "url": "sec-quotient-groups.html#exercise-85",
+  "url": "sec-quotient-groups.html#exercise-96",
   "type": "Exercise",
   "number": "3.3.6",
   "title": "May 2018 (1).",
@@ -1945,54 +2098,54 @@ var ptx_lunr_docs = [
   "body": " The Lattice Isomorphism Theorem   Let be a group and a normal subgroup with canonical homomorphism . There is an containment-preserving bijection given by for . The inverse is defined for by where is the quotient map. We denote .  Then this bijection enjoys the following properties:    (normal) subgroups correspond to normal subgroups i.e.,     iff and iff      iff and iff       indices are preserved; i.e., and .    the supremums and infimums are preserved (this makes and lattice isomorphisms)     and      and         We have previously shown that the quotient map is a surjective group homomorphism. We show:     is well defined (correct codomain) since for we have (since images of subgroups through group homomorphisms are subgroups).      is well defined (correct codomain) since for we have (since preimages of subgroups through group homomorphisms are subgroups) and for any we have , hence      and are mutual inverses: since is surjective and , with the last equality justified by     Thus, the two functions defined in the statement are well-defined and are mutually inverse.  Since and preserve containments, each of , preserves the order relation of containment.  I will only prove some parts of statements (1), (2), (3) in the theorem.  (1) If and , then holds by part of the 3rd Isomorphism Theorem or by the exercise below, since is surjective. The fact that the inverse function also sends normal subgroups to normal subgroups is a consequence of the statement that inverse images of normal subgroups are normal subgroups (see HW 4).   (2) In the interest of time, I'll only prove the assertion about indices in the special case when is normal. In that case this fact is also an immediate consequence of the Third Isomorhism Theorem since for with we have The general case is a consequence of an exercise from HW 5.   (3) The proof of (3) is omitted.   "
 },
 {
-  "id": "exercise-86",
+  "id": "exercise-97",
   "level": "2",
-  "url": "sec-isomorphism-thms.html#exercise-86",
+  "url": "sec-isomorphism-thms.html#exercise-97",
   "type": "Exercise",
   "number": "3.4.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-87",
+  "id": "exercise-98",
   "level": "2",
-  "url": "sec-isomorphism-thms.html#exercise-87",
+  "url": "sec-isomorphism-thms.html#exercise-98",
   "type": "Exercise",
   "number": "3.4.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-88",
+  "id": "exercise-99",
   "level": "2",
-  "url": "sec-isomorphism-thms.html#exercise-88",
+  "url": "sec-isomorphism-thms.html#exercise-99",
   "type": "Exercise",
   "number": "3.4.3",
   "title": "",
   "body": "   If is a group homomorphism and then .    In particular, if is surjective then     Show the statement in part (b) need not be true in the absence of surjectivity.    "
 },
 {
-  "id": "exercise-89",
+  "id": "exercise-100",
   "level": "2",
-  "url": "sec-isomorphism-thms.html#exercise-89",
+  "url": "sec-isomorphism-thms.html#exercise-100",
   "type": "Exercise",
   "number": "3.4.4",
   "title": "January 2012 (1).",
   "body": "January 2012 (1)  Let be a (not necessarily finite) group and and normal subgroups such that . Prove that    Let defined such that . Let . Then showing is a homomorphism.  Let . As , we have and with and . As and we see .  Consider and making surjective as well.  Let . Then , and so . Let . Then , so and , placing . Thus, by the , we have   "
 },
 {
-  "id": "exercise-90",
+  "id": "exercise-101",
   "level": "2",
-  "url": "sec-isomorphism-thms.html#exercise-90",
+  "url": "sec-isomorphism-thms.html#exercise-101",
   "type": "Exercise",
   "number": "3.4.5",
   "title": "June 2011 (2).",
   "body": "June 2011 (2)  Let be a finite group.   If is a normal subgroup of and , prove that is contained in the center of .    Suppose that is odd and that contains a non-trivial simple subgroup with . Prove that is the only non-trivial proper normal subgroup of .      Let and let . As is normal, we see , and thus one of the following must be true: - , where is the identity element of , or - , the only other element of . However, in the first case we would have by multiplying and over, and thus it must be the case that , or . Thus .  From Lagrange's Theorem we know that , meaning that has an even number of elements. Thus is the smallest prime dividing the order of , making normal in (See: ).  Suppose by way of contradiction there exists some non-trivial proper normal subgroup of that is not . As is normal, by the Second Isomorphism Theorem we have . However, as is simple, this means that . SIT also tells us that . As , this makes and . From part (a), . However, this contradicts Lagrange's Theorem, as does not divide any odd numbers.  "
 },
 {
-  "id": "exercise-91",
+  "id": "exercise-102",
   "level": "2",
-  "url": "sec-isomorphism-thms.html#exercise-91",
+  "url": "sec-isomorphism-thms.html#exercise-102",
   "type": "Exercise",
   "number": "3.4.6",
   "title": "June 2010 (1), January 2015 (3).",
@@ -2080,27 +2233,27 @@ var ptx_lunr_docs = [
   "body": "In many cases, transitivity and faithfulness are related concepts. As we will see later, if a group action is transitive on a set , then the action is faithful if and only if the stabilizer of any element of is trivial. In these situations we can identify the group with a subgroup of the symmetric group on , and use this identification to study the group. "
 },
 {
-  "id": "exercise-92",
+  "id": "exercise-103",
   "level": "2",
-  "url": "graction.html#exercise-92",
+  "url": "graction.html#exercise-103",
   "type": "Exercise",
   "number": "4.1.1",
   "title": "",
   "body": "Coming soon to an OER near you! "
 },
 {
-  "id": "exercise-93",
+  "id": "exercise-104",
   "level": "2",
-  "url": "graction.html#exercise-93",
+  "url": "graction.html#exercise-104",
   "type": "Exercise",
   "number": "4.1.2",
   "title": "",
   "body": "Coming soon to an OER near you! "
 },
 {
-  "id": "exercise-94",
+  "id": "exercise-105",
   "level": "2",
-  "url": "graction.html#exercise-94",
+  "url": "graction.html#exercise-105",
   "type": "Exercise",
   "number": "4.1.3",
   "title": "",
@@ -2242,45 +2395,45 @@ var ptx_lunr_docs = [
   "body": "Converse to Lagrange's Theorem is False  Prove the converse to is false: find a group and an integer such that divides the order of but does not have any subgroups of order .   Take .   Consider , and note that . Suppose by way of contradiction that is subgroup of such that . Notice that , the smallest prime dividing the order of , making normal in .  As there are eight -cycles in , there exists some -cycle, , such that . Consider then and in . Since , it must be the case that either or .    If then . As we have , but as is a subgroup this would mean , which is not the case.  If then , but , and so we have a contradiction. Thus cannot exist, and has no subgroup of order .    "
 },
 {
-  "id": "exercise-96",
+  "id": "exercise-107",
   "level": "2",
-  "url": "sec-left-mult-conjugation.html#exercise-96",
+  "url": "sec-left-mult-conjugation.html#exercise-107",
   "type": "Exercise",
   "number": "2",
   "title": "",
   "body": "Coming soon to an OER near you! "
 },
 {
-  "id": "exercise-97",
+  "id": "exercise-108",
   "level": "2",
-  "url": "sec-left-mult-conjugation.html#exercise-97",
+  "url": "sec-left-mult-conjugation.html#exercise-108",
   "type": "Exercise",
   "number": "3",
   "title": "June 2016 (1).",
   "body": "June 2016 (1)  Let be a (not necessarily finite) group and a subgroup of index . Define (i.e., is the intersection of all the conjugates of K    Prove is a the largest normal subgroup of that is contained in .  Prove divides .    Let act on the left cosets of in by left multiplication, yielding the permutation representation homomorphism . Let conspicuously denote the kernel of this function.  Let . Then , the automorphism defined by is precisely the identity permutation. Thus for all and for all , so This means the elements of are precisely those that are in the conjugacy class of for all . There cannot exist a larger normal subgroup of contained in , as it would contain an element that was not in some conjugacy class for , negating the definition of a normal subgroup.  Recall the permutation representation homomorphism . The tells us , which has order . Thus .  "
 },
 {
-  "id": "exercise-98",
+  "id": "exercise-109",
   "level": "2",
-  "url": "sec-left-mult-conjugation.html#exercise-98",
+  "url": "sec-left-mult-conjugation.html#exercise-109",
   "type": "Exercise",
   "number": "4",
   "title": "",
   "body": " Let be a subgroup of a group . Recall that the centralizer of is the subgroup of defined by and the normalizer of is the subgroup of defined by .    Show that the centralizer of in is a normal subgroup of the normalizer of in .  Show that the quotient is isomorphic to a subgroup of the automorphism group of .     Let be a subgroup of a group .     Let act on by conjugation. Thus the associated permutation homomorphism is defined such that , where . Notice that when we have for all , and thus . If then for all , and thus . Thus and .    From the above permutation representation we have a homomorphism . As , by the we have , a subgroup of .      Let be a group and . Let , and consider . Let . As we have for some , and thus that    and     .   Consider . By (1), we see . As commutes with everything in we have , and by (2) we have . Thus .  Let act on the left cosets of by left multiplication, giving rise to the permutation representation homomorphism . By the we see that is isomorphic to a subgroup of the automorphism group of .  "
 },
 {
-  "id": "exercise-99",
+  "id": "exercise-110",
   "level": "2",
-  "url": "sec-left-mult-conjugation.html#exercise-99",
+  "url": "sec-left-mult-conjugation.html#exercise-110",
   "type": "Exercise",
   "number": "5",
   "title": "January 2014 (2).",
   "body": "January 2014 (2)  Let be a finite group and let be a proper subgroup of with .   Prove that has at most distinct conjugate sets for .  Prove that .    Let be defined by . Suppose . Notice that and , but as we have equality, and thus is well defined. Let be a conjugate set, and let . Then , and so we have surjectivity. As , there can be at most distinct conjugate sets for .  Let act on by conjugation. We know that the orbits of this action partition . However, under this action the orbits are exactly the conjugacy classes of . There are at most conjugacy classes. Each conjugacy class has at most elements in it, and each one has the identity. As there are at most of them then when we add all of their orders we get at most , which is less than the order of .  "
 },
 {
-  "id": "exercise-100",
+  "id": "exercise-111",
   "level": "2",
-  "url": "sec-left-mult-conjugation.html#exercise-100",
+  "url": "sec-left-mult-conjugation.html#exercise-111",
   "type": "Exercise",
   "number": "6",
   "title": "January 2015 (1).",
@@ -2440,72 +2593,72 @@ var ptx_lunr_docs = [
   "body": " The Class Equation   Let be a finite group and let be a list of unique representatives of all of the conjugacy classes of of size greater than . Then .    The elements of are precisely the group elements that are conjugate to only themselves; that is, they are the one-element orbits for the conjugation action. Because the conjugacy classes (orbits of the conjugation action) partition we have For each as in the statement, by , we have . The class equation follows from substituting this into the equation above.   "
 },
 {
-  "id": "exercise-101",
+  "id": "exercise-112",
   "level": "2",
-  "url": "sec-orbit-stab-class-eq.html#exercise-101",
+  "url": "sec-orbit-stab-class-eq.html#exercise-112",
   "type": "Exercise",
   "number": "1",
   "title": "",
   "body": "Coming soon to an OER near you! "
 },
 {
-  "id": "exercise-102",
+  "id": "exercise-113",
   "level": "2",
-  "url": "sec-orbit-stab-class-eq.html#exercise-102",
+  "url": "sec-orbit-stab-class-eq.html#exercise-113",
   "type": "Exercise",
   "number": "2",
   "title": ".",
   "body": " Let be a subgroup of a finite group and consider the set . Prove that where . is called the normalizer of in .   Note that acts on by conjugation and that . Note also that the stabilizer of under this action is precisely . The result now follows directly from the Orbit-Stabilizer theorem.  "
 },
 {
-  "id": "exercise-103",
+  "id": "exercise-114",
   "level": "2",
-  "url": "sec-orbit-stab-class-eq.html#exercise-103",
+  "url": "sec-orbit-stab-class-eq.html#exercise-114",
   "type": "Exercise",
   "number": "3",
   "title": ".",
   "body": " Let be a finite group and a proper subgroup (i.e., ). Prove that    Note that for all . Also, by the previous problem, the number of distinct subgroups is . Let and for the distinct conjugates of . Note first that if then and result holds since . So assume . Since each conjugate contains non-identity elements, we have As (as ), we have . Thus, as   "
 },
 {
-  "id": "exercise-104",
+  "id": "exercise-115",
   "level": "2",
-  "url": "sec-orbit-stab-class-eq.html#exercise-104",
+  "url": "sec-orbit-stab-class-eq.html#exercise-115",
   "type": "Exercise",
   "number": "4",
   "title": ".",
   "body": " Suppose acts on a set and let . Suppose and lie in the same orbit. Prove that for some . Conclude that if the action is transitive (i.e., there is precisely one orbit) then for any the kernel of the action is    Suppose lie in the same orbit. Then for some . Then if and only , which is if and only if , which is if and only if , which is if and only , which is if and only if   Thus, . Now, if acts transitively on , then for any . Hence, by the argument above, for any for some .  Since the kernel of the action is the intersection of all the stabilizers, we obtain the desired conclusion.  "
 },
 {
-  "id": "exercise-105",
+  "id": "exercise-116",
   "level": "2",
-  "url": "sec-orbit-stab-class-eq.html#exercise-105",
+  "url": "sec-orbit-stab-class-eq.html#exercise-116",
   "type": "Exercise",
   "number": "5",
   "title": ".",
   "body": " Suppose that is an abelian group acting transitively and faithfully on a set . Prove that .   Let . As the action is transitive, by the exercise above we have that the kernel of the action is the intersection of over all . However, as is abelian, for all . Hence, the kernel of the action is for any . On the other hand, the action is faithful, which means the kernel of the action is the identity. It follows that for every . Finally, as the action is transitive, for some (any) . By the Orbit-Stabilizer theorem, .  "
 },
 {
-  "id": "exercise-106",
+  "id": "exercise-117",
   "level": "2",
-  "url": "sec-orbit-stab-class-eq.html#exercise-106",
+  "url": "sec-orbit-stab-class-eq.html#exercise-117",
   "type": "Exercise",
   "number": "6",
   "title": "January 2021 (1).",
   "body": "January 2021 (1)  Let and be the set of elements of of order . Prove that is not a conjugacy class of .   Elements of order in must permute all elements, making them of the form . There are such permutations, given that we can always reorder them so that is first, leaving remaining spots without replacement. Let denote the set of these elements.  Suppose by way of contradiction there existed some such that . Let act on itself through conjugation, making by the definition of conjugacy class. The tells us that , meaning that the order of must divide the order of . However, and , so this is a contradiction. Thus is not a conjugacy class of .  "
 },
 {
-  "id": "exercise-107",
+  "id": "exercise-118",
   "level": "2",
-  "url": "sec-orbit-stab-class-eq.html#exercise-107",
+  "url": "sec-orbit-stab-class-eq.html#exercise-118",
   "type": "Exercise",
   "number": "7",
   "title": "June 2016 (2).",
   "body": "June 2016 (2)  Prove that if is a finite group of odd order, then for any non-identity element , is not conjugate to .   Let be a finite group of odd order, and let act on itself via conjugation. Under this action, the orbit of an element is exactly its conjugacy class by . By the we have . Thus the order of an element divides the order of the group, and so every orbit must have odd order.  Suppose there exists an element such that for some . Thus . Let . Thus for some . Then . However, as , we have . As and are both in , we see that as well. As , we see that this means that the orbit of would have even order, which is not possible.  "
 },
 {
-  "id": "exercise-108",
+  "id": "exercise-119",
   "level": "2",
-  "url": "sec-orbit-stab-class-eq.html#exercise-108",
+  "url": "sec-orbit-stab-class-eq.html#exercise-119",
   "type": "Exercise",
   "number": "8",
   "title": "January 2021 (2).",
@@ -2602,45 +2755,45 @@ var ptx_lunr_docs = [
   "body": " Cauchy's Theorem   If is a finite group and is a prime number dividing , then has an element of order . (In fact, at least elements of order .)   "
 },
 {
-  "id": "exercise-109",
+  "id": "exercise-120",
   "level": "2",
-  "url": "sec-p-groups.html#exercise-109",
+  "url": "sec-p-groups.html#exercise-120",
   "type": "Exercise",
   "number": "5.1.1",
   "title": "",
   "body": "Coming soon to an OER near you! "
 },
 {
-  "id": "exercise-110",
+  "id": "exercise-121",
   "level": "2",
-  "url": "sec-p-groups.html#exercise-110",
+  "url": "sec-p-groups.html#exercise-121",
   "type": "Exercise",
   "number": "5.1.2",
   "title": "",
   "body": "Coming soon to an OER near you! "
 },
 {
-  "id": "exercise-111",
+  "id": "exercise-122",
   "level": "2",
-  "url": "sec-p-groups.html#exercise-111",
+  "url": "sec-p-groups.html#exercise-122",
   "type": "Exercise",
   "number": "5.1.3",
   "title": "January 2017 (2).",
   "body": "January 2017 (2)  Let be a group of order where is a prime and .   Prove the center of is not trivial.    Prove there exists a subgroup of order for each satisfying       For part (b), induction will be key.   Let be a group of order where is a prime and .   tells us where are the centralizers with more than one element. Notice that this means , and thus each centralizer is a power of . Thus we have for some . Thus the center of cannot be trivial, else we would not be able to sum to a power of .  The trivial subgroup has order . Suppose inductively that there exists a subgroup of order that has a subgroup for every power of in between.  Consider, if you will, a group of order , . As this is a -group, by Part (a) the center is nontrivial, making it a group as well, and thus it has a subgroup of order , , which is normal in as it lies within the center, so we mod out by to see that has a subgroup of order , which has subgroups of all the other powers by the induction hypothesis.  "
 },
 {
-  "id": "exercise-112",
+  "id": "exercise-123",
   "level": "2",
-  "url": "sec-p-groups.html#exercise-112",
+  "url": "sec-p-groups.html#exercise-123",
   "type": "Exercise",
   "number": "5.1.4",
   "title": "May 2022 (1).",
   "body": "May 2022 (1)  Let be a finite -group and its center. If is a normal subgroup of , prove that .   Let be a finite -group for some prime and a normal subgroup of .  First, we show that the center of is nontrivial. Suppose by way of contradiction that . We examine the conjugacy classes of . From , we know Note that for some , meaning that the only divisors of are powers of . In finite groups, each conjugacy class must divide the order of the group. By Lagrange's Theorem, , where . Since |Z(G)|=1, we see that , which is impossible given that . Thus .  As it is a union of conjugacy classes of the elements it contains, one of which is . Assume by way of contradiction that , meaning that is the only element in whose conjugacy class is a singleton. This yields However, by Lagrange's Theorem must also be a group, and thus by an analogous element counting argument as above we see that there exists some such that , or that for all . Thankfully, this means that , and thus we have .  "
 },
 {
-  "id": "exercise-113",
+  "id": "exercise-124",
   "level": "2",
-  "url": "sec-p-groups.html#exercise-113",
+  "url": "sec-p-groups.html#exercise-124",
   "type": "Exercise",
   "number": "5.1.5",
   "title": "January 2020 (2).",
@@ -2683,18 +2836,18 @@ var ptx_lunr_docs = [
   "body": "  A Sylow -subgroup of a finite group is normal if and only if it is the only Sylow -subgroup of .   "
 },
 {
-  "id": "exercise-114",
+  "id": "exercise-125",
   "level": "2",
-  "url": "sec-sylowthm.html#exercise-114",
+  "url": "sec-sylowthm.html#exercise-125",
   "type": "Exercise",
   "number": "5.2.1",
   "title": "",
   "body": "Coming soon to an OER near you! "
 },
 {
-  "id": "exercise-115",
+  "id": "exercise-126",
   "level": "2",
-  "url": "sec-sylowthm.html#exercise-115",
+  "url": "sec-sylowthm.html#exercise-126",
   "type": "Exercise",
   "number": "5.2.2",
   "title": "",
@@ -2710,54 +2863,54 @@ var ptx_lunr_docs = [
   "body": "Order of  Prove that has precisely three distinct subgroups of order , all of which are isomorphic to    Coming soon!   Any subgroup of of order is a Sylow -subgroup. By Sylow’s theorems, the number of Sylow -subgroups is either or . As any -cycle or -cycle must be contained in a Sylow -subgroup (since such elements generate subgroups of order , for some i) and there are six -cycles and six -cycles, there has to be more than one Sylow -subgroup. Hence, there are precisely distinct subgroups of order .  As all of them are conjugate, and conjugation induces an isomorphism on the group, we see that all three subgroups are isomorphic. Hence, we just need to show that contains a subgroup isomorphic to . Let be the set of left cosets of the subgroup of . Note that . Let act on by left multiplication. This action induces a homomorphism where is the permutation group on . As shown in class, the kernel of this homomorphism is the largest normal subgroup contained in , which is . Thus, is injective and the image of is a subgroup of isomorphic to .  "
 },
 {
-  "id": "exercise-117",
+  "id": "exercise-128",
   "level": "2",
-  "url": "sec-sylowthm.html#exercise-117",
+  "url": "sec-sylowthm.html#exercise-128",
   "type": "Exercise",
   "number": "5.2.4",
   "title": "January 2015 (2).",
   "body": "January 2015 (2)  Let be a group of order . Prove that has a normal subgroup of order and that the center of contains a subgroup of order    Let be a group of order . By Sylow's Theorem we know the and , and so , making , the unique Sylow -subgroup of , normal in . Things are looking good thus far. We also know the following: - and , so as well. Yeehaw.  Let denote the unique Sylow -subgroup, and let act on by conjugation. Thus . The tells us that , where is the kernel of . However, , meaning that the order of must divide both and , which cannot happen. Thus must be trivial, meaning that for every and , making a subgroup of of order .  "
 },
 {
-  "id": "exercise-118",
+  "id": "exercise-129",
   "level": "2",
-  "url": "sec-sylowthm.html#exercise-118",
+  "url": "sec-sylowthm.html#exercise-129",
   "type": "Exercise",
   "number": "5.2.5",
   "title": "June 2012 (1).",
   "body": "June 2012 (1)  Let be a group of order    Prove that has a unique -Sylow subgroup    Prove that the -Sylow subgroup is contained in the center of .      Let be a group of order   By Sylow's Theorem we know and is congruent to . The only possibility for such is , meaning that has exactly Sylow -subgroup.  By the we know that . However, , which has order . As this is a homomorphism, we see the order of must divide both and , two numbers that are relatively prime. Thus , meaning that conjugation is equivalent to the identity map, or that for all . Thus .  "
 },
 {
-  "id": "exercise-119",
+  "id": "exercise-130",
   "level": "2",
-  "url": "sec-sylowthm.html#exercise-119",
+  "url": "sec-sylowthm.html#exercise-130",
   "type": "Exercise",
   "number": "5.2.6",
   "title": "June 2011 (3).",
   "body": "June 2011 (3)  Let be a normal subgroup of a finite group , a prime dividing the order of , and a Sylow -subgroup of . Prove that    For , consider the subgroup .   First, note that .  Let act on by conjugation, which is a transitive action by part (2) of Sylow's Theorem. Therefore acts transitively on this set as well. Under this action, .  Let , and let . Consider . As the action by is transitive there exists some such that . This means that stabilizes . Then stabilizes as well, so . But notice that , where and . Thus .  "
 },
 {
-  "id": "exercise-120",
+  "id": "exercise-131",
   "level": "2",
-  "url": "sec-sylowthm.html#exercise-120",
+  "url": "sec-sylowthm.html#exercise-131",
   "type": "Exercise",
   "number": "5.2.7",
   "title": "June 2014 (1).",
   "body": "June 2014 (1)  Let be a finite group, a prime dividing the order of , and a normal subgroup of order for some . Prove the following statements.    is contained in every Sylow -subgroup of .     contains a nontrivial abelian subgroup that is normal in .      Let be a finite group, a prime dividing the order of , and a normal subgroup of order for some .  As is normal we have for all . As it is a group it is contained in some Sylow -subgroup. All Sylow -subgroups are conjugate to each other, but is fixed by conjugation so its actually in all of them.  Consider , which is abelian in . The center of -groups are nontrivial so that's good. Let , , and consider . As we know . Let . We see , since is still normal. so we have .  Notice that , and thus . Thus , and so we can substitute the last line in the previous paragraph to see . Thus we have normality!  "
 },
 {
-  "id": "exercise-121",
+  "id": "exercise-132",
   "level": "2",
-  "url": "sec-sylowthm.html#exercise-121",
+  "url": "sec-sylowthm.html#exercise-132",
   "type": "Exercise",
   "number": "5.2.8",
   "title": "January 2020 (1).",
   "body": "January 2020 (1)  Let be a finite group.   Suppose every subgroup of is normal. Prove that given any positive divisor of there exists a subgroup of of order .    Give an example, with justification, of a finite group and a positive divisor of such that has no subgroup of order .      Let be a finite group.  Suppose every subgroup of is normal. Let be a positive divisor of . For every prime dividing the order of there is exactly one Sylow -subgroup of , given that Sylow -subgroups are normal if and only if they are unique. Thus can be written as a direct product of its Sylow -subgroups. Given the prime factorization of , the direct product of the Sylow -subgroups such that is . A subgroup of as each Sylow -subgroup is normal, and 2. A direct product of cyclic groups of relatively prime order, yielding an element of order . The subgroup generated by this element is a subgroup of of order .  We take a peak at with . Suppose had a subgroup of order , . First, note that , the smallest prime dividing the order of , making normal in .  As there are eight -cycles in , there exists some -cycle, , such that . Consider then and in . Since , it must be the case that either or .    If then . As we have , but as is a subgroup this would mean , which is not the case.  If then , but , and so we have a contradiction. Thus cannot exist, and has no subgroup of order .    "
 },
 {
-  "id": "exercise-122",
+  "id": "exercise-133",
   "level": "2",
-  "url": "sec-sylowthm.html#exercise-122",
+  "url": "sec-sylowthm.html#exercise-133",
   "type": "Exercise",
   "number": "5.2.9",
   "title": "",
@@ -2809,108 +2962,108 @@ var ptx_lunr_docs = [
   "body": "No Simple Groups of Order  Let us prove that no group or order is simple. Let be any group of order . We will prove that must have either a normal subgroup of order or a normal subgroups of oder .  Sylow theory gives that is either or and is either or . If either of these numbers is , we have a unique subgroup of order or of order , and such a subgroup must be normal. Suppose these numbers are and , respectively. We deduce a contradition by counting elements .  In detail, say are the Sylow -subgroups. By Lagrange for all . Thus the set  has elements, one of which is and the other of which must have order . That is, there are elements of order in . But now consider the three Sylow -subgroups . Each has order and for all . It follows that for all , and thus , a contradiction.  "
 },
 {
-  "id": "exercise-124",
+  "id": "exercise-135",
   "level": "2",
-  "url": "sec-simple-groups.html#exercise-124",
+  "url": "sec-simple-groups.html#exercise-135",
   "type": "Exercise",
   "number": "5.3.2",
   "title": "",
   "body": " No group of order is simple.  "
 },
 {
-  "id": "exercise-125",
+  "id": "exercise-136",
   "level": "2",
-  "url": "sec-simple-groups.html#exercise-125",
+  "url": "sec-simple-groups.html#exercise-136",
   "type": "Exercise",
   "number": "5.3.3",
   "title": "January 2019 (3).",
   "body": "January 2019 (3)   Let be a simple group of order . Determine the number of elements of of order .  Show that there is no simple group of order .    Let be a simple group of order By Sylow's Theorem we know that and that . Thus the options for are and . Since is simple we see that . As each Sylow -subgroup of has unique elements of order and the identity we see that the number of elements or order in is .  Suppose by way of contradiction that is a simple group of order . Similarly to above, , yielding elements of order . Now, and , so , yielding far too many elements to fit in .  "
 },
 {
-  "id": "exercise-126",
+  "id": "exercise-137",
   "level": "2",
-  "url": "sec-simple-groups.html#exercise-126",
+  "url": "sec-simple-groups.html#exercise-137",
   "type": "Exercise",
   "number": "5.3.4",
   "title": "June 2010 (3).",
   "body": "June 2010 (3)  Suppose is a simple group of order (Yes, there is such a group.)   How many elements of order does have?    Show that has at least elements of order       By Sylow's Theorem, and divides . Thus the only options are and . However, as is simple there cannot be only one Sylow -Subgroup, as it would be normal. Thus there are , each having unique elements and the identity. Thus there are elements of order .  By Sylow's Theorem, and divides . As is simple there cannot be one, so there must be at least , each with non-identity elements. Thus there must be at least elements of order .  "
 },
 {
-  "id": "exercise-127",
+  "id": "exercise-138",
   "level": "2",
-  "url": "sec-simple-groups.html#exercise-127",
+  "url": "sec-simple-groups.html#exercise-138",
   "type": "Exercise",
   "number": "5.3.5",
   "title": "January 2012 (3).",
   "body": "January 2012 (3)  Let be a group of order and let denote the set of Sylow -subgroups of .   Suppose for any either or Prove that is not simple.    Suppose there exists such that . Prove that is not simple. (Hint: Consider the normalizer of .)      Let be a group of order and let denote the set of Sylow -subgroups of .   Suppose by way of contradiction that is simple. By Sylow's Theorem we know the following: - and is congruent to . As is simple there must be ten of the fuckers. - and is congruent to . As is simple there must be six of them. Since each Sylow -subgroup will have non-identity elements and they are all distinct that accounts for elements of order . However, there are also elements or order to account for, which is a problem. Thus cannot be simple.    Suppose now that there exists such that . . Given this intersection, we know that . Additionally, note that as is a subgroup of both and with index 3 in both, the smallest prime dividing the order or both, that is normal in both.  We now consider the normalizer of , which we denote for simplicity. As is a subgroup of its order must divide by Lagrange's Theorem. However, , and so must have at least elements, leaving the options of and . If then , making normal in , a problem.  If then , the smallest prime dividing . Thus is still normal, which is still a problem. Thus cannot be simple.     "
 },
 {
-  "id": "exercise-128",
+  "id": "exercise-139",
   "level": "2",
-  "url": "sec-simple-groups.html#exercise-128",
+  "url": "sec-simple-groups.html#exercise-139",
   "type": "Exercise",
   "number": "5.3.6",
   "title": "January 2022 (2).",
   "body": "January 2022 (2)  Let be a group of order .   Show that there are at most two options for , the number of Sylow -subgroups of and list them.  Prove that is not simple.    Let be a group of order .  By Sylow's Theorem we know that and . The possible options are thus and .  Suppose by way of contradiction that is simple. Thus , so . Let act on the by conjugation, yielding the homomorphism granted via the permutation representation. By (2) in Sylow's Theorem we see that is not trivial. As we see that , meaning that the is non-trivial, yielding a non-trivial normal subgroup of , a contradiction.  "
 },
 {
-  "id": "exercise-129",
+  "id": "exercise-140",
   "level": "2",
-  "url": "sec-simple-groups.html#exercise-129",
+  "url": "sec-simple-groups.html#exercise-140",
   "type": "Exercise",
   "number": "5.3.7",
   "title": "May 2019 (3).",
   "body": "May 2019 (3)  Let be a finite group of order with prime numbers. Show that is not a simple group.   Let be a finite group of order with prime numbers, and suppose by way of contradiction that is simple. By Sylow's Theorem we have the following: - and , and thus . - and , and thus . From this information we see that there are elements of order and elements of order , for a lovely total of elements, which is too many.  "
 },
 {
-  "id": "exercise-130",
+  "id": "exercise-141",
   "level": "2",
-  "url": "sec-simple-groups.html#exercise-130",
+  "url": "sec-simple-groups.html#exercise-141",
   "type": "Exercise",
   "number": "5.3.8",
   "title": "May 2021 (3).",
   "body": "May 2021 (3)  Let be a group and let be the number of Sylow -subgroups of , where is a prime dividing the order of .   Prove that if is simple then     Deduce that there is no simple group of order .      Let be a group, a prime dividing the order of , and the number of Sylow -subgroups of .  Let act on by conjugation, inducing the homomorphism via the permutation representation. Notice that the order of is conspicuously . The kernel of this map is a normal subgroup of . Note that since is simple the only normal subgroups of are the trivial subgroup and itself. However, the kernel cannot be all of as this would make trivial, which cannot be the case given that our action is transitive by Part (2) of Sylow's Theorem. Thus , making injective. Thus . As the image is a subgroup of , the result follows from Lagrange's Theorem.  Let be a group of order . Suppose by way of contradiction that is simple. . Thus the number of Sylow- subgroups is congruent to and divides , the options of which are 1 and 16 (See: Sylow's Theorem). As does not divide this contradicts part (a). Thus there are no simple groups of order .  "
 },
 {
-  "id": "exercise-131",
+  "id": "exercise-142",
   "level": "2",
-  "url": "sec-simple-groups.html#exercise-131",
+  "url": "sec-simple-groups.html#exercise-142",
   "type": "Exercise",
   "number": "5.3.9",
   "title": "January 2014 (1).",
   "body": "January 2014 (1)  Prove that any group of order has a normal subgroup of order or .   Let be a group of order . By Sylow's Theorem we have and , and thus . If then the unique Sylow -subgroup is normal, giving us a normal subgroup of order .  Suppose then that , let be one of the subgroups of order , and let act on the cosets of by left multiplication, inducing the homomorphism . This is because there are elements in , and thus there are left cosets by Lagrange's Theorem.  As , we see that cannot be injective and thus is a non-trivial normal subgroup of .  Recall that the action of on its cosets by left multiplication is always a transitive action, meaning there is exactly one orbit, for some , which must then have all elements of in it. By the , , and thus . So there are elements in that fix for any .  Let and . Notice that . As , We know that yields the identity permutation, and thus that .  Thus , which has order   "
 },
 {
-  "id": "exercise-132",
+  "id": "exercise-143",
   "level": "2",
-  "url": "sec-simple-groups.html#exercise-132",
+  "url": "sec-simple-groups.html#exercise-143",
   "type": "Exercise",
   "number": "5.3.10",
   "title": "June 2011 (1).",
   "body": "June 2011 (1)  Prove that no group of order 150 is simple.   Let be a group of order and suppose by way of contradiction that is simple. Notice that . By Sylow's Theorem, we know and divides , the only options are thus and . Since is simple, there must be exactly , where . Let act on by conjugation. Thus is a group homomorphism. Note that , and that the order of does not divide . By Part (2) of Sylow's Theorem this action is transitive, meaning that the kernel of cannot be trivial. Thus is a nontrivial normal subgroup of , a contradiction. Thus no group of order is simple.  "
 },
 {
-  "id": "exercise-133",
+  "id": "exercise-144",
   "level": "2",
-  "url": "sec-simple-groups.html#exercise-133",
+  "url": "sec-simple-groups.html#exercise-144",
   "type": "Exercise",
   "number": "5.3.11",
   "title": "May 2022 (3).",
   "body": "May 2022 (3)  Let G be a group of order . Prove that is not simple.   By Sylow's Theorem we know that and . Thus our options are and . Suppose that .  Let act on by conjugation, yielding the homomorphism via the permutation representation. This map is non-trivial from part (2) of Sylow's Theorem, but does not divide , and thus cannot be injective. Then the kernel of this homomorphism is non-trivial, normal subgroup of . Thus is not simple.  "
 },
 {
-  "id": "exercise-134",
+  "id": "exercise-145",
   "level": "2",
-  "url": "sec-simple-groups.html#exercise-134",
+  "url": "sec-simple-groups.html#exercise-145",
   "type": "Exercise",
   "number": "5.3.12",
   "title": "January 2017 (1).",
   "body": "January 2017 (1)  Prove that no group of order with is simple.   Let be a group of order with , and suppose by way of contradiction that is simple. By Sylow's Theorem we know the following: - and , and - and , so our options are and . Suppose its . Let act on by conjugation, yielding the permutation representation homomorphism . The kernel of this homomorphism cannot be trivial as the conjugation action on Sylow subgroups is transitive by Part (2) of Sylow's Theorem. Notice does not divide the order of , so our kernel cannot be all of , making a nontrivial normal subgroup of .  If , then must divide , meaning that . However, by the cyclic subgroup generated by an element of order has index in , making it normal.  Thus cannot be simple.  "
 },
 {
-  "id": "exercise-135",
+  "id": "exercise-146",
   "level": "2",
-  "url": "sec-simple-groups.html#exercise-135",
+  "url": "sec-simple-groups.html#exercise-146",
   "type": "Exercise",
   "number": "5.3.13",
   "title": "May 2017 (3).",
@@ -2923,7 +3076,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "6.1",
   "title": "Direct Products",
-  "body": " Direct Products   We now discuss how to build new groups from old ones.    Direct Products: Revisited    Evil is the product of the ability of humans to make abstract that which is concrete.   John-Paul Sartre     Let be a group for all in an index set . The direct product of the groups is the Cartesian product with multiplication defined by The direct sum of the groups is the subset of the direct product given by with the same multiplication as the direct product.     So a direct sum are the same thing as a finite direct product.     The direct product of a collection of groups is a group, and the direct sum of the collection is a subgroup of the direct product.    Abelian Direct Prodcuts  The direct product of groups is abelian if and only if every factor of the product is abelian.    The direct sum notation will not be seen or heard from again in group theory.     Let . Then .     If then . Indeed consider the elements and in . Then and . Therefore . Since and both of these sets have cardinality it must be the case that . Since and are both cyclic groups of order they are isomorphic. Thus         Outside of a dog, a book is a man's best friend. Inside of a dog it's too dark to read.   Groucho Marx      Let and be subgroups of a group and define the set  I wish this had a name other than \"HK\"       Let be a group with subgroups . Then the set is a subgroup of if and only if .     Order of   For two finite subgroups ,       Let be a group with subgroups . Recall the notation    Prove that if and only if .    Prove that if either one of or is a normal subgroup of , then and .         Let be a group, and . Then    ,     , and     .        The identity does not mean that every pair of elements from and must commute. You will find such an example in      Recognition Theorem    Don't worry when you are not recognized, but strive to be worthy of recognition.   Abraham Lincoln    Recognition Theorem for Direct Products   Suppose is a group with normal subgroups and such that Then the following hold:    via the isomorphism of groups defined by .          .       Notice that the hypothesis implies . Furthermore and imply that the elements of commute with the elements of . Indeed, consider . Then since , , so also . Similarly it follows that , but since it follows that , i.e. for any .  Using the above we have and thus is a homomorphism. It's kernel is , which is just since . The image of is clearly . This proves is an isomorphism.      If and are such that then we call is called the internal direct product of and and the external direct product of and .       Computations and Examples      Coming soon to an OER near you!    Formal Proofs      Coming soon to an OER near you!    Qualifying Exam Problems      January 2022 (1a), January 2020 (1b)  Let be a group, and be subgroups of . Give an example of and such that is not a subgroup of .   Coming soon to an OER near you!   Coming soon to an OER near you!   June 2014 (3)  Let be a group that acts on a set , and a subgroup of such that for any there exists a unique with .   Prove that for every and , where     Prove that if then for every , is the internal direct product of and       Let be a group that acts on a set , and a subgroup of such that for any there exists a unique with .  Suppose there exists some such that . Then . But by the definition of group action. As the is unique, we see . Thus .  Let and . If then we can write , as . Suppose and for some . There exists an such that . Then , so , so . Thankfully, we can know write ), and so .  If then we have , which means . From Part (a) we have a trivial intersection, making the internal direct product of and .     "
+  "body": " Direct Products   We now discuss how to build new groups from old ones.    Direct Products: Revisited    Evil is the product of the ability of humans to make abstract that which is concrete.   John-Paul Sartre     Let be a group for all in an index set . The direct product of the groups is the Cartesian product with multiplication defined by The direct sum of the groups is the subset of the direct product given by with the same multiplication as the direct product.     So a direct sum are the same thing as a finite direct product.     The direct product of a collection of groups is a group, and the direct sum of the collection is a subgroup of the direct product.     The direct sum notation will not be seen or heard from again in group theory.        The direct product of groups is abelian if and only if every factor of the product is abelian.    Let be a direct product of groups. If is a direct product of subgroups of , then .    If and , then .    Let . Then .            Let and be groups. Then the projection map is a surjective homomorphism of groups.    Let and be groups. Then the inclusion map is an injective homomorphism of groups.        If then . Indeed consider the elements and in . Then and . Therefore . Since and both of these sets have cardinality it must be the case that . Since and are both cyclic groups of order they are isomorphic. Thus         Outside of a dog, a book is a man's best friend. Inside of a dog it's too dark to read.   Groucho Marx      Let and be subgroups of a group and define the set  I wish this had a name other than \"HK\"       Let be a group with subgroups . Then the set is a subgroup of if and only if .     Order of   For two finite subgroups ,       Let be a group with subgroups . Recall the notation    Prove that if and only if .    Prove that if either one of or is a normal subgroup of , then and .         Let be a group, and . Then    ,     , and     .        The identity does not mean that every pair of elements from and must commute. You will find such an example in      Recognition Theorem    Don't worry when you are not recognized, but strive to be worthy of recognition.   Abraham Lincoln    Recognition Theorem for Direct Products   Suppose is a group with normal subgroups and such that Then the following hold:    via the isomorphism of groups defined by .          .       Notice that the hypothesis implies . Furthermore and imply that the elements of commute with the elements of . Indeed, consider . Then since , , so also . Similarly it follows that , but since it follows that , i.e. for any .  Using the above we have and thus is a homomorphism. It's kernel is , which is just since . The image of is clearly . This proves is an isomorphism.      If and are such that then we call is called the internal direct product of and and the external direct product of and .       Computations and Examples      Coming soon to an OER near you!    Formal Proofs      Coming soon to an OER near you!    Qualifying Exam Problems      January 2022 (1a), January 2020 (1b)  Let be a group, and be subgroups of . Give an example of and such that is not a subgroup of .   Coming soon to an OER near you!   Coming soon to an OER near you!   June 2014 (3)  Let be a group that acts on a set , and a subgroup of such that for any there exists a unique with .   Prove that for every and , where     Prove that if then for every , is the internal direct product of and       Let be a group that acts on a set , and a subgroup of such that for any there exists a unique with .  Suppose there exists some such that . Then . But by the definition of group action. As the is unique, we see . Thus .  Let and . If then we can write , as . Suppose and for some . There exists an such that . Then , so , so . Thankfully, we can know write ), and so .  If then we have , which means . From Part (a) we have a trivial intersection, making the internal direct product of and .     "
 },
 {
   "id": "def-dp-external",
@@ -2944,45 +3097,45 @@ var ptx_lunr_docs = [
   "body": " So a direct sum are the same thing as a finite direct product.  "
 },
 {
-  "id": "theorem-39",
+  "id": "theorem-40",
   "level": "2",
-  "url": "sec-dps.html#theorem-39",
+  "url": "sec-dps.html#theorem-40",
   "type": "Theorem",
   "number": "6.3",
   "title": "",
   "body": "  The direct product of a collection of groups is a group, and the direct sum of the collection is a subgroup of the direct product.   "
 },
 {
-  "id": "exe-abelian-product-abelian",
-  "level": "2",
-  "url": "sec-dps.html#exe-abelian-product-abelian",
-  "type": "Checkpoint",
-  "number": "6.4",
-  "title": "Abelian Direct Prodcuts.",
-  "body": "Abelian Direct Prodcuts  The direct product of groups is abelian if and only if every factor of the product is abelian.  "
-},
-{
   "id": "remark-32",
   "level": "2",
   "url": "sec-dps.html#remark-32",
   "type": "Remark",
-  "number": "6.5",
+  "number": "6.4",
   "title": "",
   "body": " The direct sum notation will not be seen or heard from again in group theory.  "
 },
 {
-  "id": "thm-dp-order",
+  "id": "thm-dp-properties",
   "level": "2",
-  "url": "sec-dps.html#thm-dp-order",
+  "url": "sec-dps.html#thm-dp-properties",
+  "type": "Theorem",
+  "number": "6.5",
+  "title": "",
+  "body": "     The direct product of groups is abelian if and only if every factor of the product is abelian.    Let be a direct product of groups. If is a direct product of subgroups of , then .    If and , then .    Let . Then .      "
+},
+{
+  "id": "thm-dps-and-homs",
+  "level": "2",
+  "url": "sec-dps.html#thm-dps-and-homs",
   "type": "Theorem",
   "number": "6.6",
   "title": "",
-  "body": "  Let . Then .   "
+  "body": "     Let and be groups. Then the projection map is a surjective homomorphism of groups.    Let and be groups. Then the inclusion map is an injective homomorphism of groups.      "
 },
 {
-  "id": "example-16",
+  "id": "example-20",
   "level": "2",
-  "url": "sec-dps.html#example-16",
+  "url": "sec-dps.html#example-20",
   "type": "Example",
   "number": "6.7",
   "title": "",
@@ -3061,45 +3214,45 @@ var ptx_lunr_docs = [
   "body": "  If and are such that then we call is called the internal direct product of and and the external direct product of and .   "
 },
 {
-  "id": "exercise-137",
+  "id": "exercise-147",
   "level": "2",
-  "url": "sec-dps.html#exercise-137",
+  "url": "sec-dps.html#exercise-147",
   "type": "Exercise",
   "number": "1",
   "title": "",
   "body": "Coming soon to an OER near you! "
 },
 {
-  "id": "exercise-138",
+  "id": "exercise-148",
   "level": "2",
-  "url": "sec-dps.html#exercise-138",
+  "url": "sec-dps.html#exercise-148",
   "type": "Exercise",
   "number": "2",
   "title": "",
   "body": "Coming soon to an OER near you! "
 },
 {
-  "id": "exercise-139",
+  "id": "exercise-149",
   "level": "2",
-  "url": "sec-dps.html#exercise-139",
+  "url": "sec-dps.html#exercise-149",
   "type": "Exercise",
   "number": "3",
   "title": "January 2022 (1a), January 2020 (1b).",
   "body": "January 2022 (1a), January 2020 (1b)  Let be a group, and be subgroups of . Give an example of and such that is not a subgroup of .   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-140",
+  "id": "exercise-150",
   "level": "2",
-  "url": "sec-dps.html#exercise-140",
+  "url": "sec-dps.html#exercise-150",
   "type": "Exercise",
   "number": "4",
   "title": "June 2014 (3).",
   "body": "June 2014 (3)  Let be a group that acts on a set , and a subgroup of such that for any there exists a unique with .   Prove that for every and , where     Prove that if then for every , is the internal direct product of and       Let be a group that acts on a set , and a subgroup of such that for any there exists a unique with .  Suppose there exists some such that . Then . But by the definition of group action. As the is unique, we see . Thus .  Let and . If then we can write , as . Suppose and for some . There exists an such that . Then , so , so . Thankfully, we can know write ), and so .  If then we have , which means . From Part (a) we have a trivial intersection, making the internal direct product of and .  "
 },
 {
-  "id": "sec-grp-spds",
+  "id": "sec-spds",
   "level": "1",
-  "url": "sec-grp-spds.html",
+  "url": "sec-spds.html",
   "type": "Section",
   "number": "6.2",
   "title": "Semidirect Products",
@@ -3108,34 +3261,34 @@ var ptx_lunr_docs = [
 {
   "id": "def-sdp-external",
   "level": "2",
-  "url": "sec-grp-spds.html#def-sdp-external",
+  "url": "sec-spds.html#def-sdp-external",
   "type": "Definition",
   "number": "6.16",
   "title": "",
   "body": "  Let and be groups and let be a homomorphism. The (external) semidirect product induced by is the set with the binary operation defined by This group is denoted by .   "
 },
 {
-  "id": "example-17",
+  "id": "example-21",
   "level": "2",
-  "url": "sec-grp-spds.html#example-17",
+  "url": "sec-spds.html#example-21",
   "type": "Example",
   "number": "6.17",
   "title": "",
   "body": " Given and we could always take to be the trivial homomorphism, so that for all and . Then is just the usual direct product:   "
 },
 {
-  "id": "example-18",
+  "id": "example-22",
   "level": "2",
-  "url": "sec-grp-spds.html#example-18",
+  "url": "sec-spds.html#example-22",
   "type": "Example",
   "number": "6.18",
   "title": "",
   "body": " Fix a group , a normal subgroup and a subgroup . Then the function given by for is a homomorphism. Thus acts on via automorphisms.  "
 },
 {
-  "id": "example-19",
+  "id": "example-23",
   "level": "2",
-  "url": "sec-grp-spds.html#example-19",
+  "url": "sec-spds.html#example-23",
   "type": "Example",
   "number": "6.19",
   "title": "",
@@ -3144,7 +3297,7 @@ var ptx_lunr_docs = [
 {
   "id": "thm-sdp",
   "level": "2",
-  "url": "sec-grp-spds.html#thm-sdp",
+  "url": "sec-spds.html#thm-sdp",
   "type": "Theorem",
   "number": "6.20",
   "title": "",
@@ -3153,7 +3306,7 @@ var ptx_lunr_docs = [
 {
   "id": "thm-sdp-internal",
   "level": "2",
-  "url": "sec-grp-spds.html#thm-sdp-internal",
+  "url": "sec-spds.html#thm-sdp-internal",
   "type": "Theorem",
   "number": "6.21",
   "title": "Recognition Theorem for Internal Semidirect Products.",
@@ -3162,34 +3315,34 @@ var ptx_lunr_docs = [
 {
   "id": "def-spd-internal",
   "level": "2",
-  "url": "sec-grp-spds.html#def-spd-internal",
+  "url": "sec-spds.html#def-spd-internal",
   "type": "Definition",
   "number": "6.22",
   "title": "",
   "body": "  In this situation of the Proposition , we will say that is the internal semi-direct product of and .   "
 },
 {
-  "id": "example-20",
+  "id": "example-24",
   "level": "2",
-  "url": "sec-grp-spds.html#example-20",
+  "url": "sec-spds.html#example-24",
   "type": "Example",
   "number": "6.23",
   "title": "",
   "body": " Returning to , let and . Then , , and . So, is isomorphic to a semi-direct product, as we already showed.  "
 },
 {
-  "id": "example-21",
+  "id": "example-25",
   "level": "2",
-  "url": "sec-grp-spds.html#example-21",
+  "url": "sec-spds.html#example-25",
   "type": "Example",
   "number": "6.24",
   "title": "",
   "body": " Let , and . Then , , and . It follows that where is cyclic of order and the action sends to conjugation by .  "
 },
 {
-  "id": "example-22",
+  "id": "example-26",
   "level": "2",
-  "url": "sec-grp-spds.html#example-22",
+  "url": "sec-spds.html#example-26",
   "type": "Example",
   "number": "6.25",
   "title": "",
@@ -3198,34 +3351,34 @@ var ptx_lunr_docs = [
 {
   "id": "thm-conjugate-aut",
   "level": "2",
-  "url": "sec-grp-spds.html#thm-conjugate-aut",
+  "url": "sec-spds.html#thm-conjugate-aut",
   "type": "Theorem",
   "number": "6.26",
   "title": "",
   "body": "  Let be a finite cyclic group and let be an arbitrary group. Suppose that the images of and are conjugate subgroups of . Then .   "
 },
 {
-  "id": "exercise-141",
+  "id": "exercise-151",
   "level": "2",
-  "url": "sec-grp-spds.html#exercise-141",
+  "url": "sec-spds.html#exercise-151",
   "type": "Exercise",
   "number": "1",
   "title": "Discussion.",
   "body": "Discussion  Decide amongst yourselves whether it should be spelled \"semidirect\", \"semi-direct\", \"semi direct\".   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-142",
+  "id": "exercise-152",
   "level": "2",
-  "url": "sec-grp-spds.html#exercise-142",
+  "url": "sec-spds.html#exercise-152",
   "type": "Exercise",
   "number": "2",
   "title": "",
   "body": "If we idenify with and with via the isomorphisms and , prove the action of on via conjugation in coincides with the original action . "
 },
 {
-  "id": "exercise-143",
+  "id": "exercise-153",
   "level": "2",
-  "url": "sec-grp-spds.html#exercise-143",
+  "url": "sec-spds.html#exercise-153",
   "type": "Exercise",
   "number": "3",
   "title": ".",
@@ -3295,27 +3448,27 @@ var ptx_lunr_docs = [
   "body": "This theorem frequently goes by the name of The Chinese Remainder Theorem, but it has been remarked that this is somewhat like referencing the Pythagorean Theorem as The Greek Triangle Theorem or Fermat's Little Theorem as The French Power Postulate. In the interest of giving credit where credit is due, we include it here with the name of the 3rd-century Chinese mathematician, Sunzi, to whom the result is often attributed. "
 },
 {
-  "id": "exercise-144",
+  "id": "exercise-154",
   "level": "2",
-  "url": "sec-classifying-cyclic-groups.html#exercise-144",
+  "url": "sec-classifying-cyclic-groups.html#exercise-154",
   "type": "Exercise",
   "number": "7.1.1",
   "title": "",
   "body": "Coming soon to an OER near you! "
 },
 {
-  "id": "exercise-145",
+  "id": "exercise-155",
   "level": "2",
-  "url": "sec-classifying-cyclic-groups.html#exercise-145",
+  "url": "sec-classifying-cyclic-groups.html#exercise-155",
   "type": "Exercise",
   "number": "7.1.2",
   "title": "",
   "body": "Coming soon to an OER near you! "
 },
 {
-  "id": "exercise-146",
+  "id": "exercise-156",
   "level": "2",
-  "url": "sec-classifying-cyclic-groups.html#exercise-146",
+  "url": "sec-classifying-cyclic-groups.html#exercise-156",
   "type": "Exercise",
   "number": "7.1.3",
   "title": "",
@@ -3358,9 +3511,9 @@ var ptx_lunr_docs = [
   "body": " Fundamental Theorem of Finitely Generated Abelian Groups (FTFGAG)   Let be a finitely generated abelian group. Then is a direct product of cyclic groups. More precisely     There exist , prime integers and positive integers such that: where for all .    For each index , there is a partition with each , such that , thus overall we have     The 's, 's and 's are uniquely determined by .    equivalently, there exist , and for all , satisfying for all so that .    The integers are uniquely determined by .       It suffices prove that for a given group , we can recover its invariant factor form from its elementary divisor form, and vice versa. We will be a bit hand-wavey for this following the ideas from the above examples. by applying the Chinese Remainder Theorem we have where is the product of the elementary divisors of highest power for each distinct prime in the list , is the product of the next highest possible prime powers, and so on. We will have that and in general that since by definition the exponent of is greater or equal to the exponent of .  Conversely, given with , we may apply the CRT to each to find its elementary divisor form.   "
 },
 {
-  "id": "example-23",
+  "id": "example-27",
   "level": "2",
-  "url": "sec-ftfgag.html#example-23",
+  "url": "sec-ftfgag.html#example-27",
   "type": "Example",
   "number": "7.10",
   "title": "",
@@ -3376,63 +3529,63 @@ var ptx_lunr_docs = [
   "body": "  In Theorem , the number is the rank of , the are the elementary divisors of , and the decomposition of in parts (1-2) is called the elementary divisor decomposition of . The decomposition in part (1) is also called a primary decomposition .  In Theorem , the number is the rank of , the numbers are the invariant factors of , and the decomposition of in part (1) is the invariant factor decomposition of .   "
 },
 {
-  "id": "example-24",
+  "id": "example-28",
   "level": "2",
-  "url": "sec-ftfgag.html#example-24",
+  "url": "sec-ftfgag.html#example-28",
   "type": "Example",
   "number": "7.12",
   "title": "",
   "body": " Say I tell you The Chinese Remainder Theorem gives and so that Since , this is in invariant factor form, and hence the rank of is and the invariant factors of are and .  "
 },
 {
-  "id": "example-25",
+  "id": "example-29",
   "level": "2",
-  "url": "sec-ftfgag.html#example-25",
+  "url": "sec-ftfgag.html#example-29",
   "type": "Example",
   "number": "7.13",
   "title": "",
   "body": " Suppose now I tell you Then by the Chinese Remainder Theorem  given the elementary divisor form.  "
 },
 {
-  "id": "example-26",
+  "id": "example-30",
   "level": "2",
-  "url": "sec-ftfgag.html#example-26",
+  "url": "sec-ftfgag.html#example-30",
   "type": "Example",
   "number": "7.14",
   "title": "",
   "body": " Classify the abelian groups of order 75 up to isomorphism.  Let be an abelian group of order 75. Since is finite the rank of is . Let's determine the possible elementary divisors so that The above equation gives and the possibilities for factoring as a product of prime powers are or which gives   Note that the two groups above are not isomorphic. To see this, note that there is an element of order 25 in , namely whereas every element has order since and .  Alternatively we could argue that the uniqueness of the FTFGAG tells us that uniquely determines the elementary divisors, so two groups with distinct elementary divisors cannot be isomorphic.  "
 },
 {
-  "id": "exercise-147",
+  "id": "exercise-157",
   "level": "2",
-  "url": "sec-ftfgag.html#exercise-147",
+  "url": "sec-ftfgag.html#exercise-157",
   "type": "Exercise",
   "number": "7.2.1",
   "title": "January 2020(3).",
   "body": "January 2020(3)  Prove that any group of order is abelian.   Let be a group of order . By Sylow's Theorem we see the following: - and , and so . - and , and so as well. - and , so actually too. Thus the unique Sylow -subgroup and Sylow -subgroup, denoted and , respectively, are normal in .  As and are normal in and intersect trivially, we see that . Let and consider . Let and notice . As and we see and , thus , making .  Let be the unique Sylow -subgroup, which has order . As and intersects with trivially, we see , a direct product of cyclic groups of relatively prime order, making abelian.  "
 },
 {
-  "id": "exercise-148",
+  "id": "exercise-158",
   "level": "2",
-  "url": "sec-ftfgag.html#exercise-148",
+  "url": "sec-ftfgag.html#exercise-158",
   "type": "Exercise",
   "number": "7.2.2",
   "title": "January 2016 (3).",
   "body": "January 2016 (3)  Suppose is a group of order and that contains an element of order . Prove is abelian.   By Sylow's Theorem we know the number of Sylow -subgroups of must divide and be congruent to , the only option of which is . Let denote the unique Sylow -subgroup and let be the cyclic subgroup generated by the element of order .  As is unique it is normal in , and it also means we have . Notice that as and are groups of relatively prime order we have . Thus , and so , making , a direct product of abelian groups. Thus is abelian.  "
 },
 {
-  "id": "exercise-149",
+  "id": "exercise-159",
   "level": "2",
-  "url": "sec-ftfgag.html#exercise-149",
+  "url": "sec-ftfgag.html#exercise-159",
   "type": "Exercise",
   "number": "7.2.3",
   "title": "June 2014 (2).",
   "body": "June 2014 (2)  Let be a group of order where and are distinct primes.   Prove that contains a normal Sylow subgroup.    Suppose and the Sylow -subgroup is cyclic and normal. Prove that is abelian.      Let be a group of order where and are distinct primes. Suppose by way of contradiction that has no normal Sylow -subgroup.  First, suppose . By Sylow's Theorem we know the following: - and , so or , so - and , so or , so . We know there must be elements of order . Luckily, there is more than one Sylow -subgroup with elements, so there isn't room for all of them.  Suppose then that . By Sylow's Theorem we know the following: - and , so , so we're definitely good there.  Suppose and the Sylow -subgroup, , is cyclic and normal. We know from Part (a) that there are either or Sylow -subgroups, but since there are already elements of order there is only room for one, , which is also cyclic, given its prime power. As and are thus normal in and only intersect trivially, we see that , meaning that . Thus is the product of two cyclic groups of relatively prime order, making cyclic as well. Cyclic groups are abelian, so we are done.  "
 },
 {
-  "id": "exercise-150",
+  "id": "exercise-160",
   "level": "2",
-  "url": "sec-ftfgag.html#exercise-150",
+  "url": "sec-ftfgag.html#exercise-160",
   "type": "Exercise",
   "number": "7.2.4",
   "title": "January 2012 (2).",
@@ -3466,54 +3619,54 @@ var ptx_lunr_docs = [
   "body": "  Let be primes.    If there is a unique group of order up to isomorphism, namely .    If there are exactly two groups of order up to isomorphism, namely and a non-abelian group.      Let be a group of order and let be Sylow subgroups of order and respectively. We see that is a normal subgroup using a HW problem, since is the smallest prime that divides .  Furthermore, since is a subgroup of both and we have by Lagrange's theorem that , so that . From here it follows that and so . The recognition theorem now yields that for some homomorphism , equivalently . By the UNM of cyclic groups to give such a homomorphism is equivalent to giving an element so that , which will give for . Thus yielding that either or .   Case 1: if then is the trivial homomorphism and thus .   Case 2: if then it must be the case by Lagrange that . By Lemma we know that is a cyclic group. Therefore we have that if and only if there exists an element of order by (2) . Moreover any such element generates a subgroup of of order . Since there is a unique subgroup of a cyclic group of a given order by Theorem (2) we see that the image of is independent of the choice of . Thus by Proposition we conclude that all subgroups resulting from any choice of of order are isomorphic.  Moreover, from the explicit presentation of semidirect products of cyclic groups given in a homework problem we see that the resulting group is non-abelian; in particular it is not isomorphic to .   "
 },
 {
-  "id": "exercise-151",
+  "id": "exercise-161",
   "level": "2",
-  "url": "sec-classifications.html#exercise-151",
+  "url": "sec-classifications.html#exercise-161",
   "type": "Exercise",
   "number": "1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-152",
+  "id": "exercise-162",
   "level": "2",
-  "url": "sec-classifications.html#exercise-152",
+  "url": "sec-classifications.html#exercise-162",
   "type": "Exercise",
   "number": "2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-153",
+  "id": "exercise-163",
   "level": "2",
-  "url": "sec-classifications.html#exercise-153",
+  "url": "sec-classifications.html#exercise-163",
   "type": "Exercise",
   "number": "3",
   "title": "May 2018 (3).",
   "body": "May 2018 (3)  Determine all of the groups of order , up to isomorphism.   By Sylow's Theorem we know the following: - and , so . - and , so as well. Thus there is exactly one Sylow -subgroup, , and exactly one Sylow -subgroup, . Both are normal in . Notice that has order , a prime squared. Thus is abelian. By the FTFGAG, is either isomorphic to or . Thus or .  "
 },
 {
-  "id": "exercise-154",
+  "id": "exercise-164",
   "level": "2",
-  "url": "sec-classifications.html#exercise-154",
+  "url": "sec-classifications.html#exercise-164",
   "type": "Exercise",
   "number": "4",
   "title": "January 2017 (3).",
   "body": "January 2017 (3)  Let be any positive prime integer. Prove that the number of groups of order , up to isomorphism, is exactly    Let be any positive prime integer.  First, suppose . Thus is a group of order , making it abelian. So the only groups of order are and . The same applies when , where the groups are and .  Let be a Sylow -subgroup of , and note that , the smallest prime dividing the order of , making . Let denote a Sylow -subgroup of . As and are groups of relatively prime order we have and thus , where . Notice that since , we have . Thus, by the  As has three elements, the kernel of must be either all of or trivial. However, the order of the image must divide , which is only possible when . Thus when this is the case there are two groups of order , otherwise the kernel is always trivial and we have as the only group.  "
 },
 {
-  "id": "exercise-155",
+  "id": "exercise-165",
   "level": "2",
-  "url": "sec-classifications.html#exercise-155",
+  "url": "sec-classifications.html#exercise-165",
   "type": "Exercise",
   "number": "5",
   "title": "January 2021 (3).",
   "body": "January 2021 (3)  Let be a group of order and suppose contains an element of order . Prove that is abelian.   First, note that , not . You hate to see it. Anyway, let be an element of order and consider , a cyclic subgroup of order . The possible number of Sylow -subgroups of is exactly , making this subgroup and thus normal in . Let be a Sylow subgroup, it intersects trivially and thus , where . The order of is , which is relatively prime to , making trivial and and thus abelian.  "
 },
 {
-  "id": "exercise-156",
+  "id": "exercise-166",
   "level": "2",
-  "url": "sec-classifications.html#exercise-156",
+  "url": "sec-classifications.html#exercise-166",
   "type": "Exercise",
   "number": "6",
   "title": "May 2019 (1).",
@@ -3745,27 +3898,27 @@ var ptx_lunr_docs = [
   "body": " Let be the ring of integral Hamiltonian quaternions, where multiplication is defined using the same rules as in . Define a function    For any , denote . Show that for all .    Prove that and for any .    Prove that if and only if .    Show that there is a group isomorphism .     "
 },
 {
-  "id": "exercise-157",
+  "id": "exercise-167",
   "level": "2",
-  "url": "sec-defn-ex.html#exercise-157",
+  "url": "sec-defn-ex.html#exercise-167",
   "type": "Exercise",
   "number": "1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-158",
+  "id": "exercise-168",
   "level": "2",
-  "url": "sec-defn-ex.html#exercise-158",
+  "url": "sec-defn-ex.html#exercise-168",
   "type": "Exercise",
   "number": "2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-159",
+  "id": "exercise-169",
   "level": "2",
-  "url": "sec-defn-ex.html#exercise-159",
+  "url": "sec-defn-ex.html#exercise-169",
   "type": "Exercise",
   "number": "3",
   "title": ".",
@@ -3862,27 +4015,27 @@ var ptx_lunr_docs = [
   "body": " Any subring of a commutative ring is a commutative ring. Any unital subring of an integral domain is an integral domain.  "
 },
 {
-  "id": "exercise-160",
+  "id": "exercise-170",
   "level": "2",
-  "url": "sec-subrings.html#exercise-160",
+  "url": "sec-subrings.html#exercise-170",
   "type": "Exercise",
   "number": "1.2.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-161",
+  "id": "exercise-171",
   "level": "2",
-  "url": "sec-subrings.html#exercise-161",
+  "url": "sec-subrings.html#exercise-171",
   "type": "Exercise",
   "number": "1.2.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-162",
+  "id": "exercise-172",
   "level": "2",
-  "url": "sec-subrings.html#exercise-162",
+  "url": "sec-subrings.html#exercise-172",
   "type": "Exercise",
   "number": "1.2.3",
   "title": ".",
@@ -3970,27 +4123,27 @@ var ptx_lunr_docs = [
   "body": " Let be squarefree integers and set and .   There is a group isomorphism .    There is a ring isomorphism if and only if .     "
 },
 {
-  "id": "exercise-163",
+  "id": "exercise-173",
   "level": "2",
-  "url": "sec-ring-hom.html#exercise-163",
+  "url": "sec-ring-hom.html#exercise-173",
   "type": "Exercise",
   "number": "1.3.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-164",
+  "id": "exercise-174",
   "level": "2",
-  "url": "sec-ring-hom.html#exercise-164",
+  "url": "sec-ring-hom.html#exercise-174",
   "type": "Exercise",
   "number": "1.3.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-165",
+  "id": "exercise-175",
   "level": "2",
-  "url": "sec-ring-hom.html#exercise-165",
+  "url": "sec-ring-hom.html#exercise-175",
   "type": "Exercise",
   "number": "1.3.3",
   "title": ".",
@@ -4195,27 +4348,27 @@ var ptx_lunr_docs = [
   "body": " Let be ideals in . Then         Conclude that if and only if and are relatively prime.    "
 },
 {
-  "id": "exercise-166",
+  "id": "exercise-176",
   "level": "2",
-  "url": "sec-ideals.html#exercise-166",
+  "url": "sec-ideals.html#exercise-176",
   "type": "Exercise",
   "number": "1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-167",
+  "id": "exercise-177",
   "level": "2",
-  "url": "sec-ideals.html#exercise-167",
+  "url": "sec-ideals.html#exercise-177",
   "type": "Exercise",
   "number": "2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-168",
+  "id": "exercise-178",
   "level": "2",
-  "url": "sec-ideals.html#exercise-168",
+  "url": "sec-ideals.html#exercise-178",
   "type": "Exercise",
   "number": "3",
   "title": ".",
@@ -4339,27 +4492,27 @@ var ptx_lunr_docs = [
   "body": " Let be a square-free integer. The ring is the subring of defined by Show that there is a ring isomorphism .  "
 },
 {
-  "id": "exercise-169",
+  "id": "exercise-179",
   "level": "2",
-  "url": "sec-ring-quotients.html#exercise-169",
+  "url": "sec-ring-quotients.html#exercise-179",
   "type": "Exercise",
   "number": "1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-170",
+  "id": "exercise-180",
   "level": "2",
-  "url": "sec-ring-quotients.html#exercise-170",
+  "url": "sec-ring-quotients.html#exercise-180",
   "type": "Exercise",
   "number": "2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-171",
+  "id": "exercise-181",
   "level": "2",
-  "url": "sec-ring-quotients.html#exercise-171",
+  "url": "sec-ring-quotients.html#exercise-181",
   "type": "Exercise",
   "number": "3",
   "title": ".",
@@ -4537,27 +4690,27 @@ var ptx_lunr_docs = [
   "body": "  Let be a commutative ring with identity (with ) and a proper ideal. Prove there exists a prime ideal containing such that whenever where is also a prime ideal, then . (Hint: use Zorn's lemma.)   "
 },
 {
-  "id": "exercise-172",
+  "id": "exercise-182",
   "level": "2",
-  "url": "subsec-primemax-ideals.html#exercise-172",
+  "url": "subsec-primemax-ideals.html#exercise-182",
   "type": "Exercise",
   "number": "1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-173",
+  "id": "exercise-183",
   "level": "2",
-  "url": "subsec-primemax-ideals.html#exercise-173",
+  "url": "subsec-primemax-ideals.html#exercise-183",
   "type": "Exercise",
   "number": "2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-174",
+  "id": "exercise-184",
   "level": "2",
-  "url": "subsec-primemax-ideals.html#exercise-174",
+  "url": "subsec-primemax-ideals.html#exercise-184",
   "type": "Exercise",
   "number": "3",
   "title": ".",
@@ -4744,27 +4897,27 @@ var ptx_lunr_docs = [
   "body": "  Prove the ideal of the commutative ring is not a principal ideal.    Let be a commutative ring with unity and an irreducible polynomial. We want to show that is a prime ideal in .  First, note that is an ideal of , since it is generated by a single polynomial.  Suppose that with . Then for some . Since is irreducible, it cannot be written as a product of two non-constant polynomials, so either divides or divides . Without loss of generality, assume that divides . Then for some . Substituting into yields , and cancelling the factor of gives . Thus, , and so is a prime ideal of .   "
 },
 {
-  "id": "exercise-175",
+  "id": "exercise-185",
   "level": "2",
-  "url": "subsec-polyrings.html#exercise-175",
+  "url": "subsec-polyrings.html#exercise-185",
   "type": "Exercise",
   "number": "3.2.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-176",
+  "id": "exercise-186",
   "level": "2",
-  "url": "subsec-polyrings.html#exercise-176",
+  "url": "subsec-polyrings.html#exercise-186",
   "type": "Exercise",
   "number": "3.2.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-177",
+  "id": "exercise-187",
   "level": "2",
-  "url": "subsec-polyrings.html#exercise-177",
+  "url": "subsec-polyrings.html#exercise-187",
   "type": "Exercise",
   "number": "3.2.3",
   "title": ".",
@@ -4789,9 +4942,9 @@ var ptx_lunr_docs = [
   "body": "  Suppose is a commutative ring and is a subset such that      ,     is closed under multiplication (i.e., if , then ), and     does not contain nor any zero divisors.     Such a subset is called a multiplicatively closed subset of non zero divisors of .   "
 },
 {
-  "id": "example-36",
+  "id": "example-40",
   "level": "2",
-  "url": "sec-field-of-fractions.html#example-36",
+  "url": "sec-field-of-fractions.html#example-40",
   "type": "Example",
   "number": "3.39",
   "title": "",
@@ -4816,9 +4969,9 @@ var ptx_lunr_docs = [
   "body": "  If is an integral domain and is a multiplicatively closed subset of nonzerodivisors, the rules given in the above definition for and make into a field. Moreover, the function sending to is an injective ring homomorphism.    There is a lot of small things to check and we'll just do a few. Right off the bat we need to be sure the given equivalence relation really is one. The reflexive and symmetric properties are clear. But the proof of transitivity illustrates a key point: Say . Then and . We need to deduce that . The given equations imply and since is a nonzerodivisor we conclude . This is in fact the only time that the fact that consists of nonzerodivisors is used.  We also need to be sure our rules for and make sense and are independent of representation. They make sense since we assume is closed under . To show is independent of representations, say , so that . Then and and so we need to show . This is clear upon expaning out both sides and using . In a similar way one shows is well-defined.  From now on we just write instead of when dealing with fractions.  The associative and distributive axioms involve a straightfoward but tedious check, and we skip them entirely. The fact that and are commutative is clear from their definitions. is a group under addition since it has a element, namely , and , with the last equality holding since . The element is . (Note that we have used that a couple times here — indeed, without this assumption could be empty and then would be the empty set.)   being a domain means implies ( or ). The contrapositive to this statement is: if and then , which shows is a multiplicatively closed set of nonzerodivisors.  It remains only to show every non-zero element of is a unit. Given , note that and hence . So is also an element of . We have , where the last equation holds by the definition of .  The fact that is a ring homomorphism is straightforward to check. Its injective since implies .   "
 },
 {
-  "id": "example-37",
+  "id": "example-41",
   "level": "2",
-  "url": "sec-field-of-fractions.html#example-37",
+  "url": "sec-field-of-fractions.html#example-41",
   "type": "Example",
   "number": "3.42",
   "title": "",
@@ -4852,27 +5005,27 @@ var ptx_lunr_docs = [
   "body": " June 2012 (7)   Let be a commutative integral domain and its field of fractions. Let and be nonzero elements of , such that . Let be the unique ring homomorphism with for and . Prove that a polynomial satisfies if and only if for some polynomial . (Hint: one way is to use induction on deg(p(x)).)   "
 },
 {
-  "id": "exercise-178",
+  "id": "exercise-188",
   "level": "2",
-  "url": "sec-field-of-fractions.html#exercise-178",
+  "url": "sec-field-of-fractions.html#exercise-188",
   "type": "Exercise",
   "number": "3.3.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-179",
+  "id": "exercise-189",
   "level": "2",
-  "url": "sec-field-of-fractions.html#exercise-179",
+  "url": "sec-field-of-fractions.html#exercise-189",
   "type": "Exercise",
   "number": "3.3.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-180",
+  "id": "exercise-190",
   "level": "2",
-  "url": "sec-field-of-fractions.html#exercise-180",
+  "url": "sec-field-of-fractions.html#exercise-190",
   "type": "Exercise",
   "number": "3.3.3",
   "title": ".",
@@ -4942,27 +5095,27 @@ var ptx_lunr_docs = [
   "body": " Note that is equivalent to .  "
 },
 {
-  "id": "exercise-181",
+  "id": "exercise-191",
   "level": "2",
-  "url": "sec-eds.html#exercise-181",
+  "url": "sec-eds.html#exercise-191",
   "type": "Exercise",
   "number": "4.1.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-182",
+  "id": "exercise-192",
   "level": "2",
-  "url": "sec-eds.html#exercise-182",
+  "url": "sec-eds.html#exercise-192",
   "type": "Exercise",
   "number": "4.1.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-183",
+  "id": "exercise-193",
   "level": "2",
-  "url": "sec-eds.html#exercise-183",
+  "url": "sec-eds.html#exercise-193",
   "type": "Exercise",
   "number": "4.1.3",
   "title": ".",
@@ -5176,27 +5329,27 @@ var ptx_lunr_docs = [
   "body": " Let be an integral domain with field of fractions . Let be a prime ideal of and let    Show that is a subring of .    Show that is a prime ideal of .     "
 },
 {
-  "id": "exercise-184",
+  "id": "exercise-194",
   "level": "2",
-  "url": "sec-pids.html#exercise-184",
+  "url": "sec-pids.html#exercise-194",
   "type": "Exercise",
   "number": "4.2.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-185",
+  "id": "exercise-195",
   "level": "2",
-  "url": "sec-pids.html#exercise-185",
+  "url": "sec-pids.html#exercise-195",
   "type": "Exercise",
   "number": "4.2.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-186",
+  "id": "exercise-196",
   "level": "2",
-  "url": "sec-pids.html#exercise-186",
+  "url": "sec-pids.html#exercise-196",
   "type": "Exercise",
   "number": "4.2.3",
   "title": ".",
@@ -5275,27 +5428,27 @@ var ptx_lunr_docs = [
   "body": "   Prove that in a UFD an element is irreducible if and only if the ideal [^1] is prime.  Prove that is not a UFD.        Let be a UFD.  First, suppose is irreducible, and consider the ideal . Let such that . Thus , so there exists some such that . As we are in a UFD the elements and all have unique (up to associates) factorizations of irreducible elements. Thus must be an associate of one of the irreducible elements in the factorization of or , and so or , making prime.  Now suppose that is prime and that for some . Thus and , so either or , as is a prime ideal. Assume without loss of generality that . Thus for some . Thus and As UFDs are integral domains we see , making a unit. Thus is irreducible.    First, notice that . Define a function Let and behold  Suppose by way of contradiction there exist such that . Then and , and Thus or , as these are the only integer divisors of . However, there do not exist integers such that this is true. Thus is irreducible in .  Suppose by way of contradiction that is prime in . Note that . Thus divides one of these factors.  First, suppose there exists some such that . Thus , and so . However, is not an integer, and thus cannot divide either of these factors. Thus is not prime in . By Part (a), this is not a UFD.      "
 },
 {
-  "id": "exercise-187",
+  "id": "exercise-197",
   "level": "2",
-  "url": "subsec-ufds.html#exercise-187",
+  "url": "subsec-ufds.html#exercise-197",
   "type": "Exercise",
   "number": "4.3.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-188",
+  "id": "exercise-198",
   "level": "2",
-  "url": "subsec-ufds.html#exercise-188",
+  "url": "subsec-ufds.html#exercise-198",
   "type": "Exercise",
   "number": "4.3.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-189",
+  "id": "exercise-199",
   "level": "2",
-  "url": "subsec-ufds.html#exercise-189",
+  "url": "subsec-ufds.html#exercise-199",
   "type": "Exercise",
   "number": "4.3.3",
   "title": ".",
@@ -5347,27 +5500,27 @@ var ptx_lunr_docs = [
   "body": "  If is a noetherian integral domain, then every non-zero, not-unit element factors into a finite product of irreducible elements.    Pick with and . If is irreducible, there is nothing to prove. Otherwise, we have for non-units . If both are irreducible, the proof is complete. Otherwise, one or both of them factors non-trivially. We may express this conveniently by saying that and such that either and are both non-units or and are both non-units. (E.g., if is irreducible, we could set .) Continuing in the this manner, we form a binary tree with at the top, one level down, one level below that, etc.  We halt the process of building the tree if at some stage all the leaves of the tree are irreducible elements, at which point we will have proven that factors in to a product of the irreducible elements given by these leaves.  We need to rule out the possibility that the process never terminates. If it never terminates, we will have built an infinite binary tree with the property that some route downward through the tree consists of an infinite list of irreducible elements such that for a non-unit and, for each , for a non-unit . Since is an integral domain, we have and for all . (E.g., if then and hence , so that , contrary to being a non-unit.)  But then we have arrived at an infinite ascending chain of ideals in , which is not possible in a Noetherian ring.   "
 },
 {
-  "id": "exercise-190",
+  "id": "exercise-200",
   "level": "2",
-  "url": "subsec-noeth.html#exercise-190",
+  "url": "subsec-noeth.html#exercise-200",
   "type": "Exercise",
   "number": "4.4.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-191",
+  "id": "exercise-201",
   "level": "2",
-  "url": "subsec-noeth.html#exercise-191",
+  "url": "subsec-noeth.html#exercise-201",
   "type": "Exercise",
   "number": "4.4.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-192",
+  "id": "exercise-202",
   "level": "2",
-  "url": "subsec-noeth.html#exercise-192",
+  "url": "subsec-noeth.html#exercise-202",
   "type": "Exercise",
   "number": "4.4.3",
   "title": ".",
@@ -5383,36 +5536,36 @@ var ptx_lunr_docs = [
   "body": " Roots of Unity         June 2011 (4)   Fix a prime number , and let denote the abelian group of all complex roots of unity whose orders are powers of ; that is Prove the following statements.   Every non-trivial subgroup of contains the group of roots of unity.    Every proper subgroup of is cyclic.    If and are subgroups of , then either or .    For each there exists a unique subgroup of with elements.       Let be a non-trivial subgroup of . Then there exists some such that . Then yields a primitive root of unity, which can be used to generate the other roots as well. Thus contains the roots of unity.  Suppose is a proper subgroup of , meaning it is missing some root of unity. But the subgroup of those roots of unity is cyclic and is generated by every element, so that entire subgroup must be missing. But that subgroup can be generated with any primitive root of a higher power of , so must be finite and there must be some element of maximum order, which can be used to generate the whole group. Thus is cyclic.  Suppose and are subgroups of such that . Then is a proper subgroup of , making it finite as seen above. If there exists a higher power of in then it generates .  Let . Then the subgroup generated by the roots of unity have elements, and it is unique since it is generated by every such root.      Computations and Examples       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Formal Proofs       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Qualifying Exam Problems       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     "
 },
 {
-  "id": "proposition-44",
+  "id": "proposition-45",
   "level": "2",
-  "url": "sec-roots.html#proposition-44",
+  "url": "sec-roots.html#proposition-45",
   "type": "Proposition",
   "number": "5.1",
   "title": "June 2011 (4).",
   "body": " June 2011 (4)   Fix a prime number , and let denote the abelian group of all complex roots of unity whose orders are powers of ; that is Prove the following statements.   Every non-trivial subgroup of contains the group of roots of unity.    Every proper subgroup of is cyclic.    If and are subgroups of , then either or .    For each there exists a unique subgroup of with elements.       Let be a non-trivial subgroup of . Then there exists some such that . Then yields a primitive root of unity, which can be used to generate the other roots as well. Thus contains the roots of unity.  Suppose is a proper subgroup of , meaning it is missing some root of unity. But the subgroup of those roots of unity is cyclic and is generated by every element, so that entire subgroup must be missing. But that subgroup can be generated with any primitive root of a higher power of , so must be finite and there must be some element of maximum order, which can be used to generate the whole group. Thus is cyclic.  Suppose and are subgroups of such that . Then is a proper subgroup of , making it finite as seen above. If there exists a higher power of in then it generates .  Let . Then the subgroup generated by the roots of unity have elements, and it is unique since it is generated by every such root.   "
 },
 {
-  "id": "exercise-193",
+  "id": "exercise-203",
   "level": "2",
-  "url": "sec-roots.html#exercise-193",
+  "url": "sec-roots.html#exercise-203",
   "type": "Exercise",
   "number": "5.1.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-194",
+  "id": "exercise-204",
   "level": "2",
-  "url": "sec-roots.html#exercise-194",
+  "url": "sec-roots.html#exercise-204",
   "type": "Exercise",
   "number": "5.1.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-195",
+  "id": "exercise-205",
   "level": "2",
-  "url": "sec-roots.html#exercise-195",
+  "url": "sec-roots.html#exercise-205",
   "type": "Exercise",
   "number": "5.1.3",
   "title": ".",
@@ -5599,27 +5752,27 @@ var ptx_lunr_docs = [
   "body": " January 2014 (4)   Let be a field and its group of units.   Prove that any finite subgroup of is cyclic.  Suppose that is algebraically closed that has characteristic . For any positive integer , prove that has a subgroup of order if and only if does not divide .     Let be a field and its group of units.  Let be a finite subgroup of . Let .  Let be the LCM of all orders of elements in . Then and thus is a root of the polynomial for all . By Lagrange's Theorem every element divides , and so we have . However, by the Factor Theorem the polynomial can have at most roots, and we have distinct elements, and thus we have . Thus there must exist an element of order in , making cyclic, as desired.  Let and suppose that has characteristic and is algebraically closed.  First, suppose by way of contradiction that has a subgroup of order , , and . From Part (a) is cyclic and generated by some such that . However, as we see that , given that we are in an additive group. This contradicts the fact that is the smallest number such that .  Now we proceed via the contrapositive. Suppose does not have a subgroup of order . Then there cannot exist a unit such that . Consider the polynomial . As is algebraically closed there exists some root . (how do we know this isn't 1???) Notice that this means and so is a unit in . As cannot have order , it must have an order that divides . We also know that as we are in a field of characteristic . Thus either divides or is . Either there is a non-identity root of . Note that in this case as we are...   "
 },
 {
-  "id": "exercise-196",
+  "id": "exercise-206",
   "level": "2",
-  "url": "sec-irrpoly.html#exercise-196",
+  "url": "sec-irrpoly.html#exercise-206",
   "type": "Exercise",
   "number": "5.2.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-197",
+  "id": "exercise-207",
   "level": "2",
-  "url": "sec-irrpoly.html#exercise-197",
+  "url": "sec-irrpoly.html#exercise-207",
   "type": "Exercise",
   "number": "5.2.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-198",
+  "id": "exercise-208",
   "level": "2",
-  "url": "sec-irrpoly.html#exercise-198",
+  "url": "sec-irrpoly.html#exercise-208",
   "type": "Exercise",
   "number": "5.2.3",
   "title": ".",
@@ -5761,45 +5914,45 @@ var ptx_lunr_docs = [
   "body": "  Let be a ring and let be a left -module. An -submodule of is a subset such that    is a subgroup of under (so, we have , if then , and if then ), and     for all and .      "
 },
 {
-  "id": "example-49",
+  "id": "example-53",
   "level": "2",
-  "url": "sec-defmod.html#example-49",
+  "url": "sec-defmod.html#example-53",
   "type": "Example",
   "number": "1.15",
   "title": "",
   "body": " Let be an -module and be an ideal in . Show that the set is an -submodule of .  "
 },
 {
-  "id": "proposition-57",
+  "id": "proposition-58",
   "level": "2",
-  "url": "sec-defmod.html#proposition-57",
+  "url": "sec-defmod.html#proposition-58",
   "type": "Proposition",
   "number": "1.16",
   "title": "",
   "body": "  Let be a commutative ring with . An -module is simple if it has no nontrivial submodules. Show that is simple if and only if there exists a maximal ideal of such that .   "
 },
 {
-  "id": "exercise-199",
+  "id": "exercise-209",
   "level": "2",
-  "url": "sec-defmod.html#exercise-199",
+  "url": "sec-defmod.html#exercise-209",
   "type": "Exercise",
   "number": "1.1.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-200",
+  "id": "exercise-210",
   "level": "2",
-  "url": "sec-defmod.html#exercise-200",
+  "url": "sec-defmod.html#exercise-210",
   "type": "Exercise",
   "number": "1.1.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-201",
+  "id": "exercise-211",
   "level": "2",
-  "url": "sec-defmod.html#exercise-201",
+  "url": "sec-defmod.html#exercise-211",
   "type": "Exercise",
   "number": "1.1.3",
   "title": "January 2012 Problem (8).",
@@ -5905,54 +6058,54 @@ var ptx_lunr_docs = [
   "body": "  Let be a ring and let be an -module homomorphism. Then    is an -submodule of and     is an -submodule of .      "
 },
 {
-  "id": "proposition-58",
+  "id": "proposition-59",
   "level": "2",
-  "url": "sec-modhom.html#proposition-58",
+  "url": "sec-modhom.html#proposition-59",
   "type": "Proposition",
   "number": "1.27",
   "title": "",
   "body": "  Let be any field and the set of infinte-by-infinite, column-finite matrices. That is, consists of arrays , where and for all , such that for each , there exists an (depending on ) such that for all . That is, consists of elements of the form such that each column has only a finite number of non-zero entries (but, importantly, there is no uniform bound on the number of non-zero entries a column may have). It is not difficult to see that is a ring under the usual rules for adding and multiplying matrices: Given as above and we define and Note that the latter is a finite sum since, given , there is an such that for all . Moreover, is column-finite since, for each such , each of the columns of has only a finite number of non-zero elements. The multiplicative identity is the infinite identity matrix. You need not prove any of this.  Do prove that as left -modules. {} Think about splitting up an element of into its even and odd columns.   "
 },
 {
-  "id": "proposition-59",
+  "id": "proposition-60",
   "level": "2",
-  "url": "sec-modhom.html#proposition-59",
+  "url": "sec-modhom.html#proposition-60",
   "type": "Proposition",
   "number": "1.28",
   "title": "",
   "body": "  Show that for every nonzero integers and there is a -module isomorphism .   "
 },
 {
-  "id": "proposition-60",
+  "id": "proposition-61",
   "level": "2",
-  "url": "sec-modhom.html#proposition-60",
+  "url": "sec-modhom.html#proposition-61",
   "type": "Proposition",
   "number": "1.29",
   "title": "",
   "body": "  Let be a commutative ring. Given an -module , its annihilator is the ideal Show that if there is an isomorphism of -modules , then .   "
 },
 {
-  "id": "exercise-202",
+  "id": "exercise-212",
   "level": "2",
-  "url": "sec-modhom.html#exercise-202",
+  "url": "sec-modhom.html#exercise-212",
   "type": "Exercise",
   "number": "1.2.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-203",
+  "id": "exercise-213",
   "level": "2",
-  "url": "sec-modhom.html#exercise-203",
+  "url": "sec-modhom.html#exercise-213",
   "type": "Exercise",
   "number": "1.2.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-204",
+  "id": "exercise-214",
   "level": "2",
-  "url": "sec-modhom.html#exercise-204",
+  "url": "sec-modhom.html#exercise-214",
   "type": "Exercise",
   "number": "1.2.3",
   "title": "Problem ().",
@@ -6022,27 +6175,27 @@ var ptx_lunr_docs = [
   "body": "  Let be a ring, and let be a -module. - (UMP for Quotient Modules) Let be a submodule of , let be an -module, and let be an -module homomorphism. If (i.e., if ) then the function given by is a well-defined, -module homomorphism. In fact, is the unique -module homomorphism such that where denotes the canonical surjection . - (First Isomorphism Theorem) Let be an -module and let be an -module homomorphism. Then is a submodule of and there is an -module isomorphism given by . - (Second Isomorphism Theorem) Let and be submodules of , and define . Then is a submodule of , is a submodule of , and there is an -module isomorphism . - (Third Isomorphism Theorem) Let and be submodules of with . Then is a submodule of and there is an -module isomorphism given by sending to . - (Lattice Isomorphism Theorem) Let be a ring, let be a R-submodule of , and let be the canonical quotient map. Then the function defined by is a bijection, with inverse given by for each submodule of . Moreover, and preserve sums and intersections.    Ignoring the rules for scaling by , we know each of the frist four results holds for abelian groups (and the maps are the same). So, we merely need to prove that the rules for scaling are respected in each case. In more detail:  For the UMP, we already know that is a well-defined homomorphism of groups under and that it is the unique one such that . It remains only to show preserves scaling: This follows quickly from the definitions: where the third equation uses that preserves scaling.  For the First Isomorphism Theorem, we already know that there is an isomorphism of abelian groups under , given by , and it remains only to show this map preserves scaling. This is a special case of what we proved in part (0).  For the second isomorphism theorem, we need to first check that and are submodules. From 817 we already know they are subgroups under , and it is evident from the definitions that each is closed under scaling by elements of . Now, we know from 817 that there is an isomorphism of abelian groups given by . It remains only to show preserves scaling:   For the third, we already know (from 817) that is a subgroup of under . Given and we have which belongs to since . This proves is a submodule of . Also from 817 we know there is an isomorphism of abelian groups given by and it remains only to show it is -linear: .  The Lattice Theorem is the most complicaed to gerenlize. From 817 we know thre is a bijection between the set of sub groups of and that contain and subgroups of the quotient group , and the maps are the same as given in the statment. We just need to prove that these maps send submodules to submodules. If is a submodule of containing , then by part (3) we know is a submodule of .  If is a submodule of , then is an abelian group. For adn we have and hence too, since is a submodule. This proves is a submodule.   "
 },
 {
-  "id": "exercise-205",
+  "id": "exercise-215",
   "level": "2",
-  "url": "sec-quote.html#exercise-205",
+  "url": "sec-quote.html#exercise-215",
   "type": "Exercise",
   "number": "1.3.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-206",
+  "id": "exercise-216",
   "level": "2",
-  "url": "sec-quote.html#exercise-206",
+  "url": "sec-quote.html#exercise-216",
   "type": "Exercise",
   "number": "1.3.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-207",
+  "id": "exercise-217",
   "level": "2",
-  "url": "sec-quote.html#exercise-207",
+  "url": "sec-quote.html#exercise-217",
   "type": "Exercise",
   "number": "1.3.3",
   "title": ".",
@@ -6121,18 +6274,18 @@ var ptx_lunr_docs = [
   "body": " Cyclic -module  If , then (recalling that a -module is the same thing as an abelian group) we see that is a cyclic -module if and only if is a cyclic group.  "
 },
 {
-  "id": "proposition-62",
+  "id": "proposition-63",
   "level": "2",
-  "url": "sec-linear.html#proposition-62",
+  "url": "sec-linear.html#proposition-63",
   "type": "Proposition",
   "number": "2.8",
   "title": "",
   "body": "  Show that the left -module is cyclic if and only if there exists a left ideal of such that .   "
 },
 {
-  "id": "proposition-63",
+  "id": "proposition-64",
   "level": "2",
-  "url": "sec-linear.html#proposition-63",
+  "url": "sec-linear.html#proposition-64",
   "type": "Proposition",
   "number": "2.9",
   "title": "",
@@ -6193,27 +6346,27 @@ var ptx_lunr_docs = [
   "body": " Linearly Independent in  The singleton is a linearly independent subset of the -module . But it does not generate all of . The subset does generate all of , but it is not linearly independent, since . More on this later.  "
 },
 {
-  "id": "exercise-208",
+  "id": "exercise-218",
   "level": "2",
-  "url": "sec-linear.html#exercise-208",
+  "url": "sec-linear.html#exercise-218",
   "type": "Exercise",
   "number": "2.1.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-209",
+  "id": "exercise-219",
   "level": "2",
-  "url": "sec-linear.html#exercise-209",
+  "url": "sec-linear.html#exercise-219",
   "type": "Exercise",
   "number": "2.1.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-210",
+  "id": "exercise-220",
   "level": "2",
-  "url": "sec-linear.html#exercise-210",
+  "url": "sec-linear.html#exercise-220",
   "type": "Exercise",
   "number": "2.1.3",
   "title": ".",
@@ -6229,9 +6382,9 @@ var ptx_lunr_docs = [
   "body": " Generated Modules    Let be a ring with . Prove that if is an -module and is a submodule of such that and are finitely generated, then is finitely generated.     Every Cyclic -module to for some   Every cyclic -module is isomorphic to for some left ideal .    Say is cyclic and is a generator of , so that . Define to be the unique -map with . Here I am applying the UMP for bases, using that is a basis of as a left -modules. More explicitly, for all . Then is onto, since generates . Its kernel is a left ideal of , since submodules of are the same thing as left ideals. By the FIT, there is an isomorphism sending to .      Let be a ring. Recall that we proved in class that every cyclic -module is isomorphic to for some left ideal . Prove the left ideal occurring this statement is unique; that is, if a cyclic -module is isomorphic to and for left ideals and , then .     More generally, the same argument shows that if is a finitely generated module, say generated by elements, then for some submodule of .    is an -module   For a commutative ring , module and ideal , the rules for addition in and scaling by on introduced above make into an -module.  Moreover, given another -module and an -map , the function given by is a well-defined -module homomorphism.  Finally, if is yet another -module homomorphism, then , and we also have for any -module .    I leave some of the details as an exercise, but I will check a few of the necessary things:  We already showed that the rule for scaling is well defined, and we know from 817 that the rule for addition is well-defined and that is an abelian group. To show is an -module, there remain four axioms to verify. For instance, which verifies one of them; the other proofs are similar.  Next, let me verify that the function is a well-defined -map: Let be the composition of -maps (the second one being the canonical one), so that . Since for any 's belonging to and 's belonging to , we have . By the UMP for quotient modules, there is an induced -map given by . The map is so far only known to be an -map, but it is in fact an -map since The final assertions are clear from the formula for for an -map .      Let be a non-zero commutative ring and suppose is a surjective homomorphism of -modules for some non-negative integers and .   Prove that if is a field, then .    Prove that if is any non-zero commutative ring, then .        The Lemma shows that the rules and determine what is known as a functor from the category of -modules to the category of -modules.    Maximal Ideals and Vector Spaces  Suppose is a maximal ideal of a commutative ring . Then is a field, and given an -module , is a module over the field ; i.e., it is a vector space over this field. Moreover, if is an -map then is an -linear transformation.     Let be a non-zero commutative ring and suppose is a surjective homomorphism of -modules for some non-negative integers and .   Prove that if is a field, then .    Prove that if is any non-zero commutative ring, then .         Let be a ring, let be a left -module and let be a left -submodule.   Prove that if is finitely generated (as an -module), then so is .    Prove that if and are both finitely generated, then so is .    Prove the converse to the previous part is false, as follows: Let be a field and , the ring of polynomials in the infinite list of variables . (So, an element of is a {} -linear combination of monomials of the form for and . Note that each element of involves only a finite number of variables, but there is no uniform bound on how many such variables can be involved in the elements of .) You may assume without proof that is a ring with the usual rules for adding and multiplying polynomials, which make sense since each element of involves only a finite number of variables. Finally let be the ideal of generated by the variables . Prove is finitely generated as an -module but the submodule is not.         Let be a ring, and left -modules, and an -module homomorphism. Assume that is surjective. We say is a {} if there exists an -module homomorphism such that (i.e., for all ).   Prove that if is free, then every surjective -module homomorphism of the form is a split surjection.    2. By giving an explicit example with justification, show the statement in part (1) would become false if were not assumed to be free.         Assume is a ring, an -module, and an injective -module homomorphism. We say is a {} if there exists an -module homomorphism such that (i.e., for all ).       Prove that if is a field, is a subspace (i.e., submodule) of , and is the inclusion map, then is a split injection. Note that since is the inclusion map, what you need to prove is that there exists an -module homomorphism such that . {}: Start by picking a basis of and use a theorem proven in class to show that can be extended to a basis of . Use to construct . (I am assuming that is a subspace of and that is the inclusion map just for simplicity — more generally, it is true that every injective -module homomorphism is a split injection whenever is a field.)    Assume is a non-zero integral domain, but that it is not a field. Prove there exists an -module homomorphism that is an injection but {} a split injection. {}: Pick such that and is not a unit, let be the proper ideal generated by and show the inclusion map is not a split injection.         Prove that if is a commutative ring with then as -modules if and only if . In order to do that, you will complete the following steps:   Show that if is any ideal of and is any -module, then is an -module via     Show that if is any ideal of , then as -modules.    Apply the previous part when is a maximal ideal of . You will need to use the following fact, which we shall prove in class very soon: if is a field, then as -vector spaces if and only if .        Properties of Torsion Submodules   Let be a domain and let be an -module. The torsion submodule of is Elements of are called the torsion elements of , and the module is called torsion if . You may take for granted that this is actually a submodule of without proof.   Show that if and are -modules, then .    Show that if , then .    Show that if is a free -module then .    Show that if is an ideal of that is not principal, then is a torsion-free -module that is not a free -module.    Show that if is an ideal of then .    Suppose that R is a PID, and that is a finitely generated -module. Show that is a torsion-free -module if and only if is a free -module.         Let be a commutative ring with . Show that       Computations and Examples       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Formal Proofs       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Qualifying Exam Problems      June 2010 Problem (5)  Let be a (not-necessarily commutative) ring let be a left -module. The annihilator of in is defined to be    Prove that is a -sided ideal of .    Suppose is an abelian group (i.e., a -module) such that and is the ideal generated by . How many possibilities, up to isomorphism, are there for ?         Let . Consider . Thus . Let and consider . Let and suppose for some . Add to both sides to see that . Thus and for all . So .  Note that as for all , we know that . As for all , we see that is a left sided ideal.  Suppose for some . This time we add to both sides, but as , we once again find that . Notice that this means for all and , and thus that elements of commute with elements of .  Let . Consider . Luckily, we know and thus that . Hence , making is a two sided ideal.    By the FTFGAG and Sunzi's Remainder Theorem, there are only so many options we have for :    ,     ,     ,     ,     ,     ,     ,          , and     .   However, as ideals are additive subgroups, we know that needs to contain a cyclic subgroup of order . Thus we need only consider decompositions with a in them, of which there are exactly two:                  June 2011 Problem (11)  Let be a commutative ring with , and let be a surjective homomorphism of free -modules. Prove that .   Coming soon to an OER near you!   Let and .  Let be a maximal ideal in . Thus is a field. Lemma 1.58 tells us that and are -vector spaces. Additionally, this gives rise to , which is a surjective -module linear transformation.  Note that is generated by for . Let and consider . For this to be we need it to be in , and thus all . So the set of is a basis for with elements. Likewise has a basis with elements. As we are surjective, Rank , . So by Rank-Nullity which is only positive with .    Recall that a -module is called torsion-free if its torsion submodule is where Consider the -module Show that is torsion free.   Let . Thus for some nonzero . Then , and so and . Then there exists such that and or and and . Notice that in we have , and thus neither nor can divide . Suppose and . As cannot divide we see that divides both and , placing them both . Thus . The same holds true if we use . Thus and .   June 2012 (5)  Let be a commutative integral domain and an -module. A subset of is called a maximal linearly independent subset of if is linearly independent and any subset of properly containing is linearly dependent.   Let be a linearly independent subset of . Prove that is contained in some maximal linearly independent subset of .    Let be a linearly independent subset of and let be the -submodule of generated by . Prove that is a maximal linearly independent subset if and only if is torsion. (Recall that an -module is called “torsion'' if for each , there is a such that and .)      Coming soon to an OER near you!    Let be an ideal in a commutative ring , let and be -modules and let be an -module homomorphism.   Prove there is a unique -module homomorphism such that , where and are the canonical quotient maps  Prove that if and is surjective, then so is . (Recall that is the ideal generated by all elements of the form , where .)         "
 },
 {
-  "id": "proposition-64",
+  "id": "proposition-65",
   "level": "2",
-  "url": "sec-modgen.html#proposition-64",
+  "url": "sec-modgen.html#proposition-65",
   "type": "Proposition",
   "number": "2.16",
   "title": "",
@@ -6247,9 +6400,9 @@ var ptx_lunr_docs = [
   "body": " Every Cyclic -module to for some   Every cyclic -module is isomorphic to for some left ideal .    Say is cyclic and is a generator of , so that . Define to be the unique -map with . Here I am applying the UMP for bases, using that is a basis of as a left -modules. More explicitly, for all . Then is onto, since generates . Its kernel is a left ideal of , since submodules of are the same thing as left ideals. By the FIT, there is an isomorphism sending to .   "
 },
 {
-  "id": "proposition-66",
+  "id": "proposition-67",
   "level": "2",
-  "url": "sec-modgen.html#proposition-66",
+  "url": "sec-modgen.html#proposition-67",
   "type": "Proposition",
   "number": "2.18",
   "title": "",
@@ -6274,9 +6427,9 @@ var ptx_lunr_docs = [
   "body": " is an -module   For a commutative ring , module and ideal , the rules for addition in and scaling by on introduced above make into an -module.  Moreover, given another -module and an -map , the function given by is a well-defined -module homomorphism.  Finally, if is yet another -module homomorphism, then , and we also have for any -module .    I leave some of the details as an exercise, but I will check a few of the necessary things:  We already showed that the rule for scaling is well defined, and we know from 817 that the rule for addition is well-defined and that is an abelian group. To show is an -module, there remain four axioms to verify. For instance, which verifies one of them; the other proofs are similar.  Next, let me verify that the function is a well-defined -map: Let be the composition of -maps (the second one being the canonical one), so that . Since for any 's belonging to and 's belonging to , we have . By the UMP for quotient modules, there is an induced -map given by . The map is so far only known to be an -map, but it is in fact an -map since The final assertions are clear from the formula for for an -map .   "
 },
 {
-  "id": "proposition-67",
+  "id": "proposition-68",
   "level": "2",
-  "url": "sec-modgen.html#proposition-67",
+  "url": "sec-modgen.html#proposition-68",
   "type": "Proposition",
   "number": "2.21",
   "title": "",
@@ -6301,45 +6454,45 @@ var ptx_lunr_docs = [
   "body": " Maximal Ideals and Vector Spaces  Suppose is a maximal ideal of a commutative ring . Then is a field, and given an -module , is a module over the field ; i.e., it is a vector space over this field. Moreover, if is an -map then is an -linear transformation.  "
 },
 {
-  "id": "proposition-68",
+  "id": "proposition-69",
   "level": "2",
-  "url": "sec-modgen.html#proposition-68",
+  "url": "sec-modgen.html#proposition-69",
   "type": "Proposition",
   "number": "2.24",
   "title": "",
   "body": "  Let be a non-zero commutative ring and suppose is a surjective homomorphism of -modules for some non-negative integers and .   Prove that if is a field, then .    Prove that if is any non-zero commutative ring, then .      "
 },
 {
-  "id": "proposition-69",
+  "id": "proposition-70",
   "level": "2",
-  "url": "sec-modgen.html#proposition-69",
+  "url": "sec-modgen.html#proposition-70",
   "type": "Proposition",
   "number": "2.25",
   "title": "",
   "body": "  Let be a ring, let be a left -module and let be a left -submodule.   Prove that if is finitely generated (as an -module), then so is .    Prove that if and are both finitely generated, then so is .    Prove the converse to the previous part is false, as follows: Let be a field and , the ring of polynomials in the infinite list of variables . (So, an element of is a {} -linear combination of monomials of the form for and . Note that each element of involves only a finite number of variables, but there is no uniform bound on how many such variables can be involved in the elements of .) You may assume without proof that is a ring with the usual rules for adding and multiplying polynomials, which make sense since each element of involves only a finite number of variables. Finally let be the ideal of generated by the variables . Prove is finitely generated as an -module but the submodule is not.      "
 },
 {
-  "id": "proposition-70",
+  "id": "proposition-71",
   "level": "2",
-  "url": "sec-modgen.html#proposition-70",
+  "url": "sec-modgen.html#proposition-71",
   "type": "Proposition",
   "number": "2.26",
   "title": "",
   "body": "  Let be a ring, and left -modules, and an -module homomorphism. Assume that is surjective. We say is a {} if there exists an -module homomorphism such that (i.e., for all ).   Prove that if is free, then every surjective -module homomorphism of the form is a split surjection.    2. By giving an explicit example with justification, show the statement in part (1) would become false if were not assumed to be free.      "
 },
 {
-  "id": "proposition-71",
+  "id": "proposition-72",
   "level": "2",
-  "url": "sec-modgen.html#proposition-71",
+  "url": "sec-modgen.html#proposition-72",
   "type": "Proposition",
   "number": "2.27",
   "title": "",
   "body": "  Assume is a ring, an -module, and an injective -module homomorphism. We say is a {} if there exists an -module homomorphism such that (i.e., for all ).       Prove that if is a field, is a subspace (i.e., submodule) of , and is the inclusion map, then is a split injection. Note that since is the inclusion map, what you need to prove is that there exists an -module homomorphism such that . {}: Start by picking a basis of and use a theorem proven in class to show that can be extended to a basis of . Use to construct . (I am assuming that is a subspace of and that is the inclusion map just for simplicity — more generally, it is true that every injective -module homomorphism is a split injection whenever is a field.)    Assume is a non-zero integral domain, but that it is not a field. Prove there exists an -module homomorphism that is an injection but {} a split injection. {}: Pick such that and is not a unit, let be the proper ideal generated by and show the inclusion map is not a split injection.      "
 },
 {
-  "id": "proposition-72",
+  "id": "proposition-73",
   "level": "2",
-  "url": "sec-modgen.html#proposition-72",
+  "url": "sec-modgen.html#proposition-73",
   "type": "Proposition",
   "number": "2.28",
   "title": "",
@@ -6355,72 +6508,72 @@ var ptx_lunr_docs = [
   "body": " Properties of Torsion Submodules   Let be a domain and let be an -module. The torsion submodule of is Elements of are called the torsion elements of , and the module is called torsion if . You may take for granted that this is actually a submodule of without proof.   Show that if and are -modules, then .    Show that if , then .    Show that if is a free -module then .    Show that if is an ideal of that is not principal, then is a torsion-free -module that is not a free -module.    Show that if is an ideal of then .    Suppose that R is a PID, and that is a finitely generated -module. Show that is a torsion-free -module if and only if is a free -module.      "
 },
 {
-  "id": "proposition-73",
+  "id": "proposition-74",
   "level": "2",
-  "url": "sec-modgen.html#proposition-73",
+  "url": "sec-modgen.html#proposition-74",
   "type": "Proposition",
   "number": "2.30",
   "title": "",
   "body": "  Let be a commutative ring with . Show that    "
 },
 {
-  "id": "exercise-211",
+  "id": "exercise-221",
   "level": "2",
-  "url": "sec-modgen.html#exercise-211",
+  "url": "sec-modgen.html#exercise-221",
   "type": "Exercise",
   "number": "2.2.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-212",
+  "id": "exercise-222",
   "level": "2",
-  "url": "sec-modgen.html#exercise-212",
+  "url": "sec-modgen.html#exercise-222",
   "type": "Exercise",
   "number": "2.2.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-213",
+  "id": "exercise-223",
   "level": "2",
-  "url": "sec-modgen.html#exercise-213",
+  "url": "sec-modgen.html#exercise-223",
   "type": "Exercise",
   "number": "2.2.3",
   "title": "June 2010 Problem (5).",
   "body": "June 2010 Problem (5)  Let be a (not-necessarily commutative) ring let be a left -module. The annihilator of in is defined to be    Prove that is a -sided ideal of .    Suppose is an abelian group (i.e., a -module) such that and is the ideal generated by . How many possibilities, up to isomorphism, are there for ?         Let . Consider . Thus . Let and consider . Let and suppose for some . Add to both sides to see that . Thus and for all . So .  Note that as for all , we know that . As for all , we see that is a left sided ideal.  Suppose for some . This time we add to both sides, but as , we once again find that . Notice that this means for all and , and thus that elements of commute with elements of .  Let . Consider . Luckily, we know and thus that . Hence , making is a two sided ideal.    By the FTFGAG and Sunzi's Remainder Theorem, there are only so many options we have for :    ,     ,     ,     ,     ,     ,     ,          , and     .   However, as ideals are additive subgroups, we know that needs to contain a cyclic subgroup of order . Thus we need only consider decompositions with a in them, of which there are exactly two:                 "
 },
 {
-  "id": "exercise-214",
+  "id": "exercise-224",
   "level": "2",
-  "url": "sec-modgen.html#exercise-214",
+  "url": "sec-modgen.html#exercise-224",
   "type": "Exercise",
   "number": "2.2.4",
   "title": "June 2011 Problem (11).",
   "body": "June 2011 Problem (11)  Let be a commutative ring with , and let be a surjective homomorphism of free -modules. Prove that .   Coming soon to an OER near you!   Let and .  Let be a maximal ideal in . Thus is a field. Lemma 1.58 tells us that and are -vector spaces. Additionally, this gives rise to , which is a surjective -module linear transformation.  Note that is generated by for . Let and consider . For this to be we need it to be in , and thus all . So the set of is a basis for with elements. Likewise has a basis with elements. As we are surjective, Rank , . So by Rank-Nullity which is only positive with .  "
 },
 {
-  "id": "exercise-215",
+  "id": "exercise-225",
   "level": "2",
-  "url": "sec-modgen.html#exercise-215",
+  "url": "sec-modgen.html#exercise-225",
   "type": "Exercise",
   "number": "2.2.5",
   "title": "",
   "body": " Recall that a -module is called torsion-free if its torsion submodule is where Consider the -module Show that is torsion free.   Let . Thus for some nonzero . Then , and so and . Then there exists such that and or and and . Notice that in we have , and thus neither nor can divide . Suppose and . As cannot divide we see that divides both and , placing them both . Thus . The same holds true if we use . Thus and .  "
 },
 {
-  "id": "exercise-216",
+  "id": "exercise-226",
   "level": "2",
-  "url": "sec-modgen.html#exercise-216",
+  "url": "sec-modgen.html#exercise-226",
   "type": "Exercise",
   "number": "2.2.6",
   "title": "June 2012 (5).",
   "body": "June 2012 (5)  Let be a commutative integral domain and an -module. A subset of is called a maximal linearly independent subset of if is linearly independent and any subset of properly containing is linearly dependent.   Let be a linearly independent subset of . Prove that is contained in some maximal linearly independent subset of .    Let be a linearly independent subset of and let be the -submodule of generated by . Prove that is a maximal linearly independent subset if and only if is torsion. (Recall that an -module is called “torsion'' if for each , there is a such that and .)      Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-217",
+  "id": "exercise-227",
   "level": "2",
-  "url": "sec-modgen.html#exercise-217",
+  "url": "sec-modgen.html#exercise-227",
   "type": "Exercise",
   "number": "2.2.7",
   "title": "",
@@ -6508,27 +6661,27 @@ var ptx_lunr_docs = [
   "body": " Bases are not Unique  As you likely know from a class in linear algebra, bases of free modules are rarely unique. Indeed, if is any ring, then any single unit forms a basis for as a module over itself. For another example, for any ring and any fixed element , the set forms a basis for the free -module .  "
 },
 {
-  "id": "proposition-74",
+  "id": "proposition-75",
   "level": "2",
-  "url": "sec-bases.html#proposition-74",
+  "url": "sec-bases.html#proposition-75",
   "type": "Proposition",
   "number": "2.39",
   "title": "",
   "body": "  Let be a commutative ring with . Show that if every -module is free then is a field.   "
 },
 {
-  "id": "proposition-75",
+  "id": "proposition-76",
   "level": "2",
-  "url": "sec-bases.html#proposition-75",
+  "url": "sec-bases.html#proposition-76",
   "type": "Proposition",
   "number": "2.40",
   "title": "",
   "body": "  An abelian group is called divisible if for each and , there exists such that . Prove that if is a divisible abelian group then is not a free -module. Deduce that is not a free -module.   "
 },
 {
-  "id": "proposition-76",
+  "id": "proposition-77",
   "level": "2",
-  "url": "sec-bases.html#proposition-76",
+  "url": "sec-bases.html#proposition-77",
   "type": "Proposition",
   "number": "2.41",
   "title": "",
@@ -6643,45 +6796,45 @@ var ptx_lunr_docs = [
   "body": " Bases of ideals in commutative rings      Assume is a non-zero, commutative ring and is a non-zero ideal. Prove is free as an -module if and only if for a non-zero-divisor . (Recall that an element is a non-zero-divisor in provided and implies for all . )    Let be a field and . Let , the ideal consisting of all polynomials with constant term. Prove is not free as an -module.      "
 },
 {
-  "id": "exercise-218",
+  "id": "exercise-228",
   "level": "2",
-  "url": "sec-bases.html#exercise-218",
+  "url": "sec-bases.html#exercise-228",
   "type": "Exercise",
   "number": "2.3.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-219",
+  "id": "exercise-229",
   "level": "2",
-  "url": "sec-bases.html#exercise-219",
+  "url": "sec-bases.html#exercise-229",
   "type": "Exercise",
   "number": "2.3.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-220",
+  "id": "exercise-230",
   "level": "2",
-  "url": "sec-bases.html#exercise-220",
+  "url": "sec-bases.html#exercise-230",
   "type": "Exercise",
   "number": "2.3.3",
   "title": ".",
   "body": " Let be a non-zero, unital ring, and let and be the standard free left -modules of finite rank and . Assume there is an isomorphism of -modules    Prove that if is commutative then . You may assume without justification that this holds in the special case when is a field.  Show, by example, than need not equal if is not assumed to be commutative.    Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-221",
+  "id": "exercise-231",
   "level": "2",
-  "url": "sec-bases.html#exercise-221",
+  "url": "sec-bases.html#exercise-231",
   "type": "Exercise",
   "number": "2.3.4",
   "title": "June 2012 (5) DUPLICATE.",
   "body": "June 2012 (5) DUPLICATE  Let be a commutative integral domain and an -module. Recall that a subset of is called a maximal linearly independent set of if is linearly independent and any subset of properly containing is linearly dependent.   Let be a linearly independent subset of . Prove that is contained in some maximal linearly independent subset of .  Let be a linearly independent subset of and the -submodule of generated by . Prove that is a maximal linearly independent subset if and only if is torsion. (Recall that an -module is called “torsion'' if for each , there is a such that and .)       Let be the set of all linearly independent subsets of that contain . We can order with respect to inclusion. Let be a totally ordered subset of , and let be the union of all elements in . Let be a set of elements in such that for some , where for some . As is the union of all elements in , there exists some such that . However, as is totally ordered, there exists some such that contains and . Continuing in this way, we see that there exists some such that . As is linearly independent, we know that means that for all . Thus is indeed linearly independent, making it an upper bound for . Thus by Zorn's Lemma there exists a maximal element of , which we denote . Thus is linearly independent, contains , and is maximal.     Suppose is maximal linearly independent, and suppose by way of contradiction that is not torsion. Thus there exists some such that for all , we see that . However, as and , this means that . Consider . This set is linearly independent, contradicting the assumption that was maximal.   Suppose is torsion. Let and consider . Consider . As is torsion, there exists an such that . Thus . (Note, if , then ). As and is generated by ( ), . Subtracting over we see that . But as , we see that each and are in , but the sum is 0. Thus is linearly dependent.     "
 },
 {
-  "id": "exercise-222",
+  "id": "exercise-232",
   "level": "2",
-  "url": "sec-bases.html#exercise-222",
+  "url": "sec-bases.html#exercise-232",
   "type": "Exercise",
   "number": "2.3.5",
   "title": "",
@@ -6778,27 +6931,27 @@ var ptx_lunr_docs = [
   "body": "  Let be a field, let be a basis of an -vector space , and let be any finite set of linearly independent vectors in . Then there are distinct vectors in , such that is also a basis .    Let . As noted, the sublemma establishes the case of the Exchange Lemma. The general case proceeds recursively:  Suppose that for some , we have found such that is a basis for some . We need to show we can “swap out one more''; that is, we need to prove there is a such that is also a basis.  Since is a basis, there is a (unique) equation of the form with and . Now, there must be at least one that is not in , for otherwise we would have , contrary to being linearly independent. Let for such an . Then by the sublemma is a basis of .   "
 },
 {
-  "id": "exercise-223",
+  "id": "exercise-233",
   "level": "2",
-  "url": "sec-vecbasis.html#exercise-223",
+  "url": "sec-vecbasis.html#exercise-233",
   "type": "Exercise",
   "number": "3.1.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-224",
+  "id": "exercise-234",
   "level": "2",
-  "url": "sec-vecbasis.html#exercise-224",
+  "url": "sec-vecbasis.html#exercise-234",
   "type": "Exercise",
   "number": "3.1.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-225",
+  "id": "exercise-235",
   "level": "2",
-  "url": "sec-vecbasis.html#exercise-225",
+  "url": "sec-vecbasis.html#exercise-235",
   "type": "Exercise",
   "number": "3.1.3",
   "title": "June 2010 Problem (6).",
@@ -6931,117 +7084,117 @@ var ptx_lunr_docs = [
   "body": " Suitably interpreted, this is valid even if is infinite dimensional.  "
 },
 {
-  "id": "proposition-79",
+  "id": "proposition-80",
   "level": "2",
-  "url": "sec-ranknul.html#proposition-79",
+  "url": "sec-ranknul.html#proposition-80",
   "type": "Proposition",
   "number": "3.23",
   "title": "",
   "body": "  Let be a field and let and be finite dimensional -vector spaces.   Let be an -linear transformation. Prove , where by definition .    Let be an -linear transformation from to itself. Prove that if , then . (Note: Recall that, by definition, .)    For extra credit: Let be an -linear transformation from to itself. Prove that if for some then .      "
 },
 {
-  "id": "proposition-80",
+  "id": "proposition-81",
   "level": "2",
-  "url": "sec-ranknul.html#proposition-80",
+  "url": "sec-ranknul.html#proposition-81",
   "type": "Proposition",
   "number": "3.24",
   "title": "",
   "body": "  Suppose where is a field and for some integer . Prove . {}: Note that for any , . Show that if equality holds then .   "
 },
 {
-  "id": "proposition-81",
+  "id": "proposition-82",
   "level": "2",
-  "url": "sec-ranknul.html#proposition-81",
+  "url": "sec-ranknul.html#proposition-82",
   "type": "Proposition",
   "number": "3.25",
   "title": "",
   "body": "  Recall that a -module is called torsion-free if the only element such that for some non-zero integer is the element . Let where is the homomorphism for the matrix . Prove is torsion-free.   "
 },
 {
-  "id": "proposition-82",
+  "id": "proposition-83",
   "level": "2",
-  "url": "sec-ranknul.html#proposition-82",
+  "url": "sec-ranknul.html#proposition-83",
   "type": "Proposition",
   "number": "3.26",
   "title": "",
   "body": "  Let be a finite dimensional vector space over a field and an -linear transformation. Prove the following assertions.   There exists an integer such that for there are equalities and . (Here denotes composed with itself times.)     for any as above.     for any s as above. (Recall for subspaces and if and . )      "
 },
 {
-  "id": "proposition-83",
+  "id": "proposition-84",
   "level": "2",
-  "url": "sec-ranknul.html#proposition-83",
+  "url": "sec-ranknul.html#proposition-84",
   "type": "Proposition",
   "number": "3.27",
   "title": "",
   "body": "  Let be a field, an -vector space, and a subspace of . A subspace of is called a {} of in if and .   Prove that for every and as above, has at least one complement in .    Prove that if is a complement of in and is finite dimensional, then .    Prove that if is a subspace of with finite dimensional and , then is non-zero.          "
 },
 {
-  "id": "proposition-84",
+  "id": "proposition-85",
   "level": "2",
-  "url": "sec-ranknul.html#proposition-84",
+  "url": "sec-ranknul.html#proposition-85",
   "type": "Proposition",
   "number": "3.28",
   "title": "June 2012 (6).",
   "body": " June 2012 (6)   Let be the set of all matrices over a field , let denote the group (where, recall, is the group of invertible matrices with entries in ) and set for all and .   Prove that the formula above defines a group action.    Prove that each orbit contains a matrix such that for all and for all     How many orbits are there?      "
 },
 {
-  "id": "proposition-85",
+  "id": "proposition-86",
   "level": "2",
-  "url": "sec-ranknul.html#proposition-85",
+  "url": "sec-ranknul.html#proposition-86",
   "type": "Proposition",
   "number": "3.29",
   "title": "",
   "body": "  Let be a field, be an -linear transformation, and . Prove that    "
 },
 {
-  "id": "proposition-86",
+  "id": "proposition-87",
   "level": "2",
-  "url": "sec-ranknul.html#proposition-86",
+  "url": "sec-ranknul.html#proposition-87",
   "type": "Proposition",
   "number": "3.30",
   "title": "",
   "body": "  Let be an -linear transformation. Prove that if , then    "
 },
 {
-  "id": "proposition-87",
+  "id": "proposition-88",
   "level": "2",
-  "url": "sec-ranknul.html#proposition-87",
+  "url": "sec-ranknul.html#proposition-88",
   "type": "Proposition",
   "number": "3.31",
   "title": "June 2012 Problem (4).",
   "body": " June 2012 Problem (4)   Let be a subspace of a finite-dimensional vector space, . Recall that a subspace of is called a complement of if . Prove the following statements.   Every complement of has dimension .    If is not or , then has more than one complement.    If is a subspace of with , then is non-zero.      "
 },
 {
-  "id": "exercise-226",
+  "id": "exercise-236",
   "level": "2",
-  "url": "sec-ranknul.html#exercise-226",
+  "url": "sec-ranknul.html#exercise-236",
   "type": "Exercise",
   "number": "3.2.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-227",
+  "id": "exercise-237",
   "level": "2",
-  "url": "sec-ranknul.html#exercise-227",
+  "url": "sec-ranknul.html#exercise-237",
   "type": "Exercise",
   "number": "3.2.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-228",
+  "id": "exercise-238",
   "level": "2",
-  "url": "sec-ranknul.html#exercise-228",
+  "url": "sec-ranknul.html#exercise-238",
   "type": "Exercise",
   "number": "3.2.3",
   "title": ".",
   "body": " Let be a field, an -vector space, and a subspace of . A subspace of is called a complement of in if is the internal direct sum of and ; that is, .   Prove that for every and as above, has at least one complement in .  Prove that if is a complement of in and is finite dimensional, then (where denotes the dimension of an -vector space).    Coming soon to an OER near you!   Let be a field, an -vector space, and a subspace of .   Let denote the set of all subspaces of such that . We can order with respect to inclusion. Let be a totally ordered subset of , and let be the union of all the elements in . Unions of subspaces are subspaces, and by DeMorgan's Laws we see that . Thus by Zorn's Lemma there exists a maximal element of which we denote . So by definition.  Suppose by way of contradiction there exists some such that .  Consider . As , for all , as we could just multiply by . Thus and , a contradiction, as was maximal. Thus is a complement of .    The Second Isomorphism Theorem tells us that . We also know that Put succinctly, and thus As , we see that .     "
 },
 {
-  "id": "exercise-229",
+  "id": "exercise-239",
   "level": "2",
-  "url": "sec-ranknul.html#exercise-229",
+  "url": "sec-ranknul.html#exercise-239",
   "type": "Exercise",
   "number": "3.2.4",
   "title": "",
@@ -7102,27 +7255,27 @@ var ptx_lunr_docs = [
   "body": " When FMH Matrix is Invertible   If is an isomorphism of free modules of finite rank, is an ordered basis of and is an ordered basis of , then is an invertible matrix and    "
 },
 {
-  "id": "exercise-230",
+  "id": "exercise-240",
   "level": "2",
-  "url": "sec-basics.html#exercise-230",
+  "url": "sec-basics.html#exercise-240",
   "type": "Exercise",
   "number": "4.1.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-231",
+  "id": "exercise-241",
   "level": "2",
-  "url": "sec-basics.html#exercise-231",
+  "url": "sec-basics.html#exercise-241",
   "type": "Exercise",
   "number": "4.1.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-232",
+  "id": "exercise-242",
   "level": "2",
-  "url": "sec-basics.html#exercise-232",
+  "url": "sec-basics.html#exercise-242",
   "type": "Exercise",
   "number": "4.1.3",
   "title": ".",
@@ -7291,27 +7444,27 @@ var ptx_lunr_docs = [
   "body": " Finding Unique Equivalent Matrix   Let be a non-zero commutative ring, let be a free -module of dimension , and let be any ordered basis of . If is any matrix with entries in that is invertible (i.e., there is another matrix such that ), then for a unique basis of .    Each of the maps is an isomorphism. (The one on the far right is the inverse of the one on the far left. The middle one is since is a two-sided inverse.) So the composition of all three of these maps, let us call it , is also an isomorphism. It follows that is a basis of . I leave it as an exercise for you to check that .  To show the uniqueness, say , say are ordered bases such that . Then For each we have and so that which gives .   "
 },
 {
-  "id": "exercise-233",
+  "id": "exercise-243",
   "level": "2",
-  "url": "sec-cob.html#exercise-233",
+  "url": "sec-cob.html#exercise-243",
   "type": "Exercise",
   "number": "4.3.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-234",
+  "id": "exercise-244",
   "level": "2",
-  "url": "sec-cob.html#exercise-234",
+  "url": "sec-cob.html#exercise-244",
   "type": "Exercise",
   "number": "4.3.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-235",
+  "id": "exercise-245",
   "level": "2",
-  "url": "sec-cob.html#exercise-235",
+  "url": "sec-cob.html#exercise-245",
   "type": "Exercise",
   "number": "4.3.3",
   "title": ".",
@@ -7444,27 +7597,27 @@ var ptx_lunr_docs = [
   "body": " For a ring , recall that is the group of invertible matrices with entries in . Let be the subset of consisting of all products of elementary matrices of type I. Since the inverse of an elementary matrix of type I is again an elementary matrix of type I, is a subgroup of . In fact it is a normal subgroup, at least when , and hence the quotient group is defined in this case.  As a consequence of the Theorem above, if is a field then there is an isomorphism of groups where is the group of units in .  For a general ring, the extent to which is “larger'' than measure the extent to which Theorem fails.  The algebraic -group is defined to be (and it is usually isomorphic to for ). Moreover, is the derived subgroup of , and hence is the abelianization of .  "
 },
 {
-  "id": "exercise-236",
+  "id": "exercise-246",
   "level": "2",
-  "url": "sec-elematix.html#exercise-236",
+  "url": "sec-elematix.html#exercise-246",
   "type": "Exercise",
   "number": "4.4.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-237",
+  "id": "exercise-247",
   "level": "2",
-  "url": "sec-elematix.html#exercise-237",
+  "url": "sec-elematix.html#exercise-247",
   "type": "Exercise",
   "number": "4.4.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-238",
+  "id": "exercise-248",
   "level": "2",
-  "url": "sec-elematix.html#exercise-238",
+  "url": "sec-elematix.html#exercise-248",
   "type": "Exercise",
   "number": "4.4.3",
   "title": "January 2012 (9).",
@@ -7543,27 +7696,27 @@ var ptx_lunr_docs = [
   "body": " Linear Operators and Bases   Let be a non-zero commutative ring. Given a linear operator on a free -module of finite rank , we have:   The matrices representing with respect to any two choices of bases of are similar    If represents with respect to a basis of and if is similar to , then there is a basis of such that the matrix representing with respect to is .       We proved the first assertion above.  Say and for some invertible matrix . By Proposition above, for a (unique) new basis . So .   "
 },
 {
-  "id": "exercise-239",
+  "id": "exercise-249",
   "level": "2",
-  "url": "sec-operator.html#exercise-239",
+  "url": "sec-operator.html#exercise-249",
   "type": "Exercise",
   "number": "4.5.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-240",
+  "id": "exercise-250",
   "level": "2",
-  "url": "sec-operator.html#exercise-240",
+  "url": "sec-operator.html#exercise-250",
   "type": "Exercise",
   "number": "4.5.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-241",
+  "id": "exercise-251",
   "level": "2",
-  "url": "sec-operator.html#exercise-241",
+  "url": "sec-operator.html#exercise-251",
   "type": "Exercise",
   "number": "4.5.3",
   "title": ".",
@@ -7642,27 +7795,27 @@ var ptx_lunr_docs = [
   "body": "  Suppose is a commutative ring and is a matrix such that for all and set for all . If then and if then     Assume and define to be the map sending to where for . (I.e., is the unique -map sending the -th standard basis vector to with in the -th position, for , and to itself for .) Then is clearly onto and the kernel of is the set of those tuples such that for some for all and for . Given such a tuple, This proves is contained Arguing backwards we see that the opposite containment also holds, so that in fact .  By the First Isomorphism Theorem, If then, by deleting columns of all 's, we may reduce to the case when , which is included in the first case.   "
 },
 {
-  "id": "exercise-242",
+  "id": "exercise-252",
   "level": "2",
-  "url": "sec-modpres.html#exercise-242",
+  "url": "sec-modpres.html#exercise-252",
   "type": "Exercise",
   "number": "5.1.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-243",
+  "id": "exercise-253",
   "level": "2",
-  "url": "sec-modpres.html#exercise-243",
+  "url": "sec-modpres.html#exercise-253",
   "type": "Exercise",
   "number": "5.1.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-244",
+  "id": "exercise-254",
   "level": "2",
-  "url": "sec-modpres.html#exercise-244",
+  "url": "sec-modpres.html#exercise-254",
   "type": "Exercise",
   "number": "5.1.3",
   "title": ".",
@@ -7777,54 +7930,54 @@ var ptx_lunr_docs = [
   "body": " So, another way of finding the SNF of a matrix with entries in a Euclidean domain is to calculate for all . This is not practical except in very special cases.  "
 },
 {
-  "id": "exercise-245",
+  "id": "exercise-255",
   "level": "2",
-  "url": "sec-snf.html#exercise-245",
+  "url": "sec-snf.html#exercise-255",
   "type": "Exercise",
   "number": "5.2.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-246",
+  "id": "exercise-256",
   "level": "2",
-  "url": "sec-snf.html#exercise-246",
+  "url": "sec-snf.html#exercise-256",
   "type": "Exercise",
   "number": "5.2.2",
   "title": "",
   "body": " Let . Express the -module presented by as the direct sum of cyclic groups. Justify your answer.  "
 },
 {
-  "id": "exercise-247",
+  "id": "exercise-257",
   "level": "2",
-  "url": "sec-snf.html#exercise-247",
+  "url": "sec-snf.html#exercise-257",
   "type": "Exercise",
   "number": "5.2.3",
   "title": "",
   "body": " Let and , regarded as matrices with entries in .   Express the cokernel of (i.e., ) in elementary divisor form (that is, as a direct sum of cyclic groups each of which is either infinite or of prime power order).    Express the cokernel of in elementary divisor form.     "
 },
 {
-  "id": "exercise-248",
+  "id": "exercise-258",
   "level": "2",
-  "url": "sec-snf.html#exercise-248",
+  "url": "sec-snf.html#exercise-258",
   "type": "Exercise",
   "number": "5.2.4",
   "title": "",
   "body": " Consider the matrix Determine the simplest representative in the isomorphism class of the -module presented by .  "
 },
 {
-  "id": "exercise-249",
+  "id": "exercise-259",
   "level": "2",
-  "url": "sec-snf.html#exercise-249",
+  "url": "sec-snf.html#exercise-259",
   "type": "Exercise",
   "number": "5.2.5",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-250",
+  "id": "exercise-260",
   "level": "2",
-  "url": "sec-snf.html#exercise-250",
+  "url": "sec-snf.html#exercise-260",
   "type": "Exercise",
   "number": "5.2.6",
   "title": ".",
@@ -7903,9 +8056,9 @@ var ptx_lunr_docs = [
   "body": "  Any finitely generated module over a noetherian ring has a finite presentation; that is, given such a module over such a ring, there exists an matrix in and an isomorphism     We basically already proved this, but let me recap it:  If is finitely generated, then for some we can find a surjective -module homomorphism Since we assume is Noetherian, the kernel of is also finitely generated by the Proposition, and so we may find a surjection of -modules for some . The composition is equal to for some matrix . Since , the first isomorphism theorem gives an isomorphism    "
 },
 {
-  "id": "exercise-251",
+  "id": "exercise-261",
   "level": "2",
-  "url": "sec-noeth.html#exercise-251",
+  "url": "sec-noeth.html#exercise-261",
   "type": "Checkpoint",
   "number": "5.26",
   "title": "",
@@ -7993,9 +8146,9 @@ var ptx_lunr_docs = [
   "body": "  Since , so the elementary divisors of are , and . The only invariant factor of is .  "
 },
 {
-  "id": "example-76",
+  "id": "example-80",
   "level": "2",
-  "url": "sec-modclass.html#example-76",
+  "url": "sec-modclass.html#example-80",
   "type": "Example",
   "number": "5.35",
   "title": "Direct Sums and <span class=\"process-math\">\\(\\Z\\)<\/span>.",
@@ -8029,54 +8182,54 @@ var ptx_lunr_docs = [
   "body": " Finding IFs and EDs  Find the invariant factor form and the elementary divisor form of the -module first when    ,     and     .     "
 },
 {
-  "id": "exercise-252",
+  "id": "exercise-262",
   "level": "2",
-  "url": "sec-modclass.html#exercise-252",
+  "url": "sec-modclass.html#exercise-262",
   "type": "Checkpoint",
   "number": "5.39",
   "title": "",
   "body": " Let be a Euclidean domain, an matrix with elements from , and the transpose matrix of . Let denote the quotient of by the submodule generated by the columns of . The {} submodule of an -module is the submodule (It is indeed a submodule and you need not prove this.)   Prove that the torsion submodules of and are isomorphic.    Prove that the modules and are isomorphic if and only if .     "
 },
 {
-  "id": "exercise-253",
+  "id": "exercise-263",
   "level": "2",
-  "url": "sec-modclass.html#exercise-253",
+  "url": "sec-modclass.html#exercise-263",
   "type": "Checkpoint",
   "number": "5.40",
   "title": "",
   "body": " Let be a PID and let be a finitely generated -module.   Determine a generator for the principal ideal in terms of the invariant factors and the free rank of .    Determine a generator for the principal ideal in terms of the elementary divisors and the free rank of .     "
 },
 {
-  "id": "exercise-254",
+  "id": "exercise-264",
   "level": "2",
-  "url": "sec-modclass.html#exercise-254",
+  "url": "sec-modclass.html#exercise-264",
   "type": "Checkpoint",
   "number": "5.41",
   "title": "",
   "body": " Consider the matrix where .   Determine the Smith normal form for .    Determine the representative in the isomorphism class of the module presented by which is written in invariant factor form and in elementary divisor form.     "
 },
 {
-  "id": "exercise-255",
+  "id": "exercise-265",
   "level": "2",
-  "url": "sec-modclass.html#exercise-255",
+  "url": "sec-modclass.html#exercise-265",
   "type": "Exercise",
   "number": "5.4.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-256",
+  "id": "exercise-266",
   "level": "2",
-  "url": "sec-modclass.html#exercise-256",
+  "url": "sec-modclass.html#exercise-266",
   "type": "Exercise",
   "number": "5.4.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-257",
+  "id": "exercise-267",
   "level": "2",
-  "url": "sec-modclass.html#exercise-257",
+  "url": "sec-modclass.html#exercise-267",
   "type": "Exercise",
   "number": "5.4.3",
   "title": ".",
@@ -8263,54 +8416,54 @@ var ptx_lunr_docs = [
   "body": " Finding IFs and RCF  Let Let us find the invariant factors and Rational Canonical Form of by finding the Smith Normal Form of .  We have A sequence of messy row and column operations yields Note that this is indeed in Smith Normal Form. It follows that the invariant factors of are and the RCF of is   For an alternative approach, we could use that the diagonal entries of the Smith Normal Form of satisfy , is the gcd of the minors of , and . It's clear that and an easy calculation gives that . There are nine minors of , and a tedious check reveals that each of them is one of , , or (up to signs). So . We get that as before.  "
 },
 {
-  "id": "exercise-258",
+  "id": "exercise-268",
   "level": "2",
-  "url": "sec-rcf.html#exercise-258",
+  "url": "sec-rcf.html#exercise-268",
   "type": "Checkpoint",
   "number": "6.20",
   "title": "Problem 7 - Nilpotent Matrices and Similarity.",
   "body": "Problem 7 - Nilpotent Matrices and Similarity  Let be a field and recall that a square matrix with entries in is called nilpotent if for some positive integer .   Prove that if is an nilpotent matrix, then .  Assume and prove that two nilpotent matrices are similar if and only if they have the same rank. (Recall the rank of a matrix is the dimension of the vector space spanned by its columns.)  Give an example, with justification, of two nilpotent matrices that have the same rank but are not similar.    Let be a field.     Let be an nilpotent matrix. Let be some eigenvalue of . Thus there exists some vector such that . Let's consider this the base-case of some rather banal induction. Now assume that for we have . Consider Recall that as is nilpotent, there exists some such that . As is an eigenvalue of , by the above induction we see that is an eigenvalue for . As is a field and thus an integral domain, we see that implies that is as well. As this holds in the algebraic closure of as well, we see that when factored into linear terms all the . Thus .  By the Cayley Hamilton Theorem we know , and thus .    Assume and let be nilpotent matrices with entries in .   Suppose . Thus there exists some invertible matrix such that by the definition of similar matrices. Let . Thus and . We multiply both sides by to see that . Therefore the , and hence the ranks of and are equal by Rank Nullity.  Next, observe as is an invertible matrix. Thus .   Suppose that . From Part (a) we know .  We consider the case where .  The only possible invariant factors involving are    ;     ; and     itself.   However, if are the invariant factors then the rank of would be 3, making it invertible, contradicting the fact that 0 is an eigenvalue of . Thus we need only consider the latter two cases.  Note that As has rank 1 and has rank 2, since we see that they must have the same invariant factors, making them similar.  If then the only possible invariant factor is , as having two 's would make and invertible again. If then and we're done.    Consider and .  Thus   both of which have rank and are in RCF. Thus they are not similar.     "
 },
 {
-  "id": "exercise-259",
+  "id": "exercise-269",
   "level": "2",
-  "url": "sec-rcf.html#exercise-259",
+  "url": "sec-rcf.html#exercise-269",
   "type": "Checkpoint",
   "number": "6.21",
   "title": "",
   "body": " Find the Rational Canonical Form of where is any field.  "
 },
 {
-  "id": "exercise-260",
+  "id": "exercise-270",
   "level": "2",
-  "url": "sec-rcf.html#exercise-260",
+  "url": "sec-rcf.html#exercise-270",
   "type": "Checkpoint",
   "number": "6.22",
   "title": "",
   "body": " Find, with justification, a complete and non-redundant list of conjugacy class representatives for the group , where is the field with two elements.   Let denote the field with two elements, and consider the group .  Recall that matrices are in the same conjugacy class if and only if they are similar, and that two matrices are similar if and only if they share the same invariant factors.  Let . All characteristic polynomials are monic, and as is invertible we see the term in the , and thus , the only other element in . There are only so many monic polynomials with coefficients in ; hence there are only four possible characteristic polynomials of :    ,     ,     and     .   Note that since , 0 cannot be a root of any of these polynomials. Thus all that remains is to check . Luckily, is not a root of or , so the only invariant factor of each is themselves. While 1 is a root of , we see that . As , neither of these polynomials can be invariant factors by the RCF theorem; thus the only invariant factor of is itself. However , and so its possible invariant factors are    ;     and     .   Let and . Thus the conjugacy class representatives for are    ,     ,     ,     ,     , and     .     "
 },
 {
-  "id": "exercise-261",
+  "id": "exercise-271",
   "level": "2",
-  "url": "sec-rcf.html#exercise-261",
+  "url": "sec-rcf.html#exercise-271",
   "type": "Exercise",
   "number": "6.1.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-262",
+  "id": "exercise-272",
   "level": "2",
-  "url": "sec-rcf.html#exercise-262",
+  "url": "sec-rcf.html#exercise-272",
   "type": "Exercise",
   "number": "6.1.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-263",
+  "id": "exercise-273",
   "level": "2",
-  "url": "sec-rcf.html#exercise-263",
+  "url": "sec-rcf.html#exercise-273",
   "type": "Exercise",
   "number": "6.1.3",
   "title": ".",
@@ -8398,108 +8551,108 @@ var ptx_lunr_docs = [
   "body": " Finding Minimum Polynomial (2)  Let's find the minimum polynomial of As in the previous example, and so by the Cayley-Hamilton Theorem for some . This time we notice that and so, since , .  "
 },
 {
-  "id": "exercise-264",
+  "id": "exercise-274",
   "level": "2",
-  "url": "sec-cayley-hamilton.html#exercise-264",
+  "url": "sec-cayley-hamilton.html#exercise-274",
   "type": "Checkpoint",
   "number": "6.31",
   "title": "Problem 6 - Similarity Classes and CharPoly.",
   "body": "Problem 6 - Similarity Classes and CharPoly  Determine all similarity classes of matrices with entries in with characteristic polynomial . Provide an explicit representative for each of these similarity classes.   Let be a matrix with entries in with characteristic polynomial .  By this Corollary we know that every matrix is similar to a unique matrix in RCF. Note that RCF is based on the invariant factors if a matrix, and thus if two matrices have the same invariant factors they will have the same RCF, making them both similar to the same (unique) matrix, making them similar to each other. By part (1) of this Theorem, the characteristic polynomial of a matrix is equal to the product of the invariant factors of that same matrix.  Recall that the invariant factors must divide all preceding invariant factors in RCF, and observe that factors as and factors as . Given this information, after some fiddling with the factors, we find four possible options for invariant factors of :    ,     ,     , and     .   Let  , and . Observe the companion matrices of each of these polynomials: Behold: explicit representatives of each similarity class:    ,     ,     , and     .     "
 },
 {
-  "id": "exercise-265",
+  "id": "exercise-275",
   "level": "2",
-  "url": "sec-cayley-hamilton.html#exercise-265",
+  "url": "sec-cayley-hamilton.html#exercise-275",
   "type": "Checkpoint",
   "number": "6.32",
   "title": "",
   "body": " Let be any field.   Let and be two matrices with entries in . Prove and are similar if and only if they have the same characteristic polynomial and the same minimum polynomial.  Show, by way of an example with justification, that the previous part would become false if were replaced by .  Give an example of a field and two matrices with entries in having the same minimum polynomial that are not similar.    Let be any field.     Let and be two matrices with entries in . First, suppose that . Matrices are similar if and only if they share the same invariant factors. As minimum polynomial is an invariant factor and the characteristic polynomial is a product of the invariant factors, we see that and must share the same invariant factors.  Next suppose that and share the same characteristic polynomial and the same minimal polynomial. As and are matrices, the characteristic polynomial of both and must be a degree polynomial. We proceed via cases based on the degree of . - First, suppose . Then , making the only invariant factor of both and . Thus and have the same invariant factors and are therefore similar. - Next, suppose . As and the degrees of all invariant factors must sum to the , we know that , where is a degree polynomial, which we denote for and for .. Since and share the same minimum and characteristic polynomials, we see and , and thus that . Hence and share the same invariant factors, making . - Finally, suppose . The minimum polynomial is the largest invariant factor, and thus the invariant factors of and must be , making them similar.    If we replaced with then this would allow for and , allowing two sets of invariant factors:  , Notice that and . Set and , so These matrices have the same and but are not similar.    Let . We define and . Notice that these matrices are in RCF. However, the invariant factors of are and the invariant factors of are . Thus is not similar to , but the minimal polynomial of both is .     "
 },
 {
-  "id": "exercise-266",
+  "id": "exercise-276",
   "level": "2",
-  "url": "sec-cayley-hamilton.html#exercise-266",
+  "url": "sec-cayley-hamilton.html#exercise-276",
   "type": "Checkpoint",
   "number": "6.33",
   "title": "Problem 6 - Unipotent 4 x 4 Matrices.",
   "body": "Problem 6 - Unipotent 4 x 4 Matrices  We say an matrix with entries in is unipotent if is nilpotent (i.e., for some ). For the field , find (with complete justification) the number of similarity classes of unipotent matrices and give an explicit representative for each class.   Let , a positive integer, and a unipotent matrix with entries in . Thus is nilpotent. Let be an eigenvalue of . Then , so and . As , we have and .  Notice that as is an eigenvalue of , we have as an eigenvalue of .  Assume inductively that is an eigenvalue of . Notice making an eigenvalue of . Thus if is an eigenvalue of , it is an eigenvalue of as well. As is nilpotent, there exists some such that . This means that . As and is a scalar in a field (and hence integral domain) we have . Thus the only eigenvalue of is , meaning that the only eigenvalue of is .  Eigenvalues of correspond to the roots of , which is a monic quartic polynomial, as is a matrix. Thus , as all roots must be .  Two matrices are similar if and only if they share the same invariant factors. Given that invariant factors divide and each invariant factor must divide the following one, the possible sets of invariant factors for are the following:    ,     ,     ,     , and     .   We identify the companion matrices for each possible invariant factor:  and We define the following:    ,     ,     ,     , and     .   As each of these matrices is in RCF, they are explicit representatives for each similarity class.  "
 },
 {
-  "id": "exercise-267",
+  "id": "exercise-277",
   "level": "2",
-  "url": "sec-cayley-hamilton.html#exercise-267",
+  "url": "sec-cayley-hamilton.html#exercise-277",
   "type": "Checkpoint",
   "number": "6.34",
   "title": "",
   "body": " Let and be matrices with entries in . Prove and are similar in if and only if and are similar in . (That is, show there is a such that if and only if there is a such that .) {}: Use the Theorem on Rational Canonical Forms.  "
 },
 {
-  "id": "exercise-268",
+  "id": "exercise-278",
   "level": "2",
-  "url": "sec-cayley-hamilton.html#exercise-268",
+  "url": "sec-cayley-hamilton.html#exercise-278",
   "type": "Checkpoint",
   "number": "6.35",
   "title": "",
   "body": " Similarity of two-by-two matrices:   Let be any field and , and assume that neither nor is a scalar matrix. (Recall that a scalar matrix is one of the form for some .) Prove and are similar if and only if they have the same determinant and the same trace.    Let be a finite field with elements. Find, with justification, the number of similarity classes of matrices with entries in .    Let be a finite field with elements. Find, with justification, the number of conjugacy classes of the group .         Coming soon to an OER near you!     "
 },
 {
-  "id": "exercise-269",
+  "id": "exercise-279",
   "level": "2",
-  "url": "sec-cayley-hamilton.html#exercise-269",
+  "url": "sec-cayley-hamilton.html#exercise-279",
   "type": "Checkpoint",
   "number": "6.36",
   "title": "",
   "body": " Let be any field. Up to similarity, how many matrices in of the form are there? Justify.  "
 },
 {
-  "id": "exercise-270",
+  "id": "exercise-280",
   "level": "2",
-  "url": "sec-cayley-hamilton.html#exercise-270",
+  "url": "sec-cayley-hamilton.html#exercise-280",
   "type": "Checkpoint",
   "number": "6.37",
   "title": "",
   "body": " Let be a field, a finite dimensional -vector space, and an -linear operator. Prove that the following are equivalent for an element :    is an eigenvalue of .     is a root of the minimum polynomial of .     is a root of the characteristic polynomial of . (Recall that is a {} of provided for some non-zero vector .)     "
 },
 {
-  "id": "exercise-271",
+  "id": "exercise-281",
   "level": "2",
-  "url": "sec-cayley-hamilton.html#exercise-271",
+  "url": "sec-cayley-hamilton.html#exercise-281",
   "type": "Checkpoint",
   "number": "6.38",
   "title": "",
   "body": " Suppose is any field. Recall that a square matrix with entries in is nilpotent if for some positive integer j.   Prove that if and is nilpotent, then .  Find, with justification, the number of similarity classes of nilpotent matrices with entries in .    "
 },
 {
-  "id": "exercise-272",
+  "id": "exercise-282",
   "level": "2",
-  "url": "sec-cayley-hamilton.html#exercise-272",
+  "url": "sec-cayley-hamilton.html#exercise-282",
   "type": "Checkpoint",
   "number": "6.39",
   "title": "",
   "body": " Find, with justification, a complete and non-redundant list of conjugacy class representatives for the group , where is the field with three elements.  "
 },
 {
-  "id": "exercise-273",
+  "id": "exercise-283",
   "level": "2",
-  "url": "sec-cayley-hamilton.html#exercise-273",
+  "url": "sec-cayley-hamilton.html#exercise-283",
   "type": "Exercise",
   "number": "6.2.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-274",
+  "id": "exercise-284",
   "level": "2",
-  "url": "sec-cayley-hamilton.html#exercise-274",
+  "url": "sec-cayley-hamilton.html#exercise-284",
   "type": "Exercise",
   "number": "6.2.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-275",
+  "id": "exercise-285",
   "level": "2",
-  "url": "sec-cayley-hamilton.html#exercise-275",
+  "url": "sec-cayley-hamilton.html#exercise-285",
   "type": "Exercise",
   "number": "6.2.3",
   "title": ".",
@@ -8605,135 +8758,135 @@ var ptx_lunr_docs = [
   "body": "  Let be a finite dimensional vector space over a field and let be an -linear operator. We say is diagonalizable if there is a basis for such that the matrix is a diagonal matrix.   "
 },
 {
-  "id": "exercise-276",
+  "id": "exercise-286",
   "level": "2",
-  "url": "sec-jcf.html#exercise-276",
+  "url": "sec-jcf.html#exercise-286",
   "type": "Checkpoint",
   "number": "6.50",
   "title": "",
   "body": " Let with the standard basis and let be the linear transformation represented by the matrix    Find the invariant factor decomposition of the -module .    Find the characteristic and minimal polynomials of .    Find the rational canonical form of .    Find the Jordan canonical form of .     "
 },
 {
-  "id": "exercise-277",
+  "id": "exercise-287",
   "level": "2",
-  "url": "sec-jcf.html#exercise-277",
+  "url": "sec-jcf.html#exercise-287",
   "type": "Exercise",
   "number": "6.3.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-278",
+  "id": "exercise-288",
   "level": "2",
-  "url": "sec-jcf.html#exercise-278",
+  "url": "sec-jcf.html#exercise-288",
   "type": "Exercise",
   "number": "6.3.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-279",
+  "id": "exercise-289",
   "level": "2",
-  "url": "sec-jcf.html#exercise-279",
+  "url": "sec-jcf.html#exercise-289",
   "type": "Exercise",
   "number": "6.3.3",
   "title": ".",
   "body": " Consider the following matrix:    Find the rational canonical form of .    Find the Jordan canonical form of .      Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-280",
+  "id": "exercise-290",
   "level": "2",
-  "url": "sec-jcf.html#exercise-280",
+  "url": "sec-jcf.html#exercise-290",
   "type": "Exercise",
   "number": "6.3.4",
   "title": ".",
   "body": " Let be a positive integer and let be the Jordan block matrix of size with eigenvalue 0 in .   Find the minimal polynomials for and for , with justification.  Find the Jordan canonical form of , with justification. Hint : consider the kernel of .    Coming soon to an OER near you!   Let be a positive integer and let be the Jordan block matrix of size with eigenvalue 0 in .   Notice that is a triangular matrix with 's along the diagonal. Thus , the product of the diagonal entries of the matrix .  Squaring a triangular matrix moves everything one down (Proof?), and so should do it. Squaring just moves us one closer, so     As , the only roots of it are , and thus these are the only elementary divisors of .     "
 },
 {
-  "id": "exercise-281",
+  "id": "exercise-291",
   "level": "2",
-  "url": "sec-jcf.html#exercise-281",
+  "url": "sec-jcf.html#exercise-291",
   "type": "Exercise",
   "number": "6.3.5",
   "title": ".",
   "body": " On canonical forms   Consider the -module and let the -vector space obtained from by restriction of scalars along the evident inclusion and let be the -linear transformation given as multiplication by . Find, with justification, the rational canonical form of .    Consider the -module and let the -vector space obtained from by restriction of scalars along and let be the -linear transformation given as multiplication by . Find, with justification, the Jordan canonical form of .      Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-282",
+  "id": "exercise-292",
   "level": "2",
-  "url": "sec-jcf.html#exercise-282",
+  "url": "sec-jcf.html#exercise-292",
   "type": "Exercise",
   "number": "6.3.6",
   "title": "June 2011 (9).",
   "body": "June 2011 (9)  Consider the following matrix over :    Show that the characteristic and minimal polynomials of are, respectively, and .    Find the rational canonical form of and the Jordan canonical form of .    Find an invertible matrix such that .      Coming soon to an OER near you!   Let denote the above matrix.     As and , we know that our characteristic polynomial factors into linear factors, so does indeed have a JCF. This also means that only has one elementary divisor, , which corresponds to the Jordan Block , a matrix with s along the diagonal, s along the subdiagonal, and everywhere else. This is the JCF of .     "
 },
 {
-  "id": "exercise-283",
+  "id": "exercise-293",
   "level": "2",
-  "url": "sec-jcf.html#exercise-283",
+  "url": "sec-jcf.html#exercise-293",
   "type": "Exercise",
   "number": "6.3.7",
   "title": "January 2012 (7).",
   "body": "January 2012 (7)  Consider the following matrix over :    Show that the characteristic of is .    Find the rational canonical form of and the Jordan canonical form of .    Find an invertible matrix such that .      Coming soon to an OER near you!   Let denote the above matrix.     As and , we know that our characteristic polynomial factors into linear factors, so does indeed have a JCF. This also means that only has one elementary divisor, , which corresponds to the Jordan Block , a matrix with s along the diagonal, s along the subdiagonal, and everywhere else. This is the JCF of .     "
 },
 {
-  "id": "exercise-284",
+  "id": "exercise-294",
   "level": "2",
-  "url": "sec-jcf.html#exercise-284",
+  "url": "sec-jcf.html#exercise-294",
   "type": "Exercise",
   "number": "6.3.8",
   "title": ".",
   "body": " Let be a field and a monic polynomial of degree . Prove: all matrices in having characteristic polynomial are similar if and only if the irreducible factorization of has no repeated factors.   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-285",
+  "id": "exercise-295",
   "level": "2",
-  "url": "sec-jcf.html#exercise-285",
+  "url": "sec-jcf.html#exercise-295",
   "type": "Exercise",
   "number": "6.3.9",
   "title": ".",
   "body": " Let be a finite dimensional vector space over a field and let be an -linear operator on . Prove is diagonalizable over if and only if its minimum polynomial factors into distinct linear terms in .   Coming soon to an OER near you!    Suppose that is diagonalizable. Thus there exists a change of basis matrix such that is diagonal. As it is diagonal, its diagonal entries are the eigenvalues of , and thus the roots of the minimal polynomial of . Using row and column operations we can rearrange so that all repeated linear factors are next to each other in the diagonal, for convenience.  We know that is the smallest monic polynomial that sends to 0. Take all the distinct eigenvalues and consider .  We examine . It will be a product of matrices, one for each . First, take the first matrix in this product, , and note that it sends all in to 0. Thus all of the rows and columns that contained a are now 0, and thus all these rows and columns will be 0 in the final product . As this is we set for all , we see that for each row and column in there will exist a matrix in the product such that the row and column will be 0. Thus the entire matrix will be 0, and .  Note that if any were excluded from there would exist a non-zero row and column for every matrix in the product, and thus would not send to 0. Thus is indeed the minimal polynomial of . As , we see it does indeed factor into distinct linear terms.   Suppose the minimum polynomial of factors completely into distinct linear factors, each of which has the form for some . As each is distinct, each elementary divisor is of the form .  We construct the Jordan Canonical Form of . As the elementary divisors are linear the Jordan blocks are matrices, making the a diagonal matrix. As the JCF is itself a change of basis matrix, we see that is diagonalizable.  "
 },
 {
-  "id": "exercise-286",
+  "id": "exercise-296",
   "level": "2",
-  "url": "sec-jcf.html#exercise-286",
+  "url": "sec-jcf.html#exercise-296",
   "type": "Exercise",
   "number": "6.3.10",
   "title": ".",
   "body": " Consider the -vector space . (You may assume without proof that is n-dimensional.) Consider the following linear maps :  (where p' denotes the derivative of p). Determine the JCF of               Coming soon to an OER near you!      For any integer , consider the -vector space .  Let be the linear operator given by (where denotes the derivative of ). Note that the change of basis matrix for this operator is given by with the basis . Thus will be given by the determinant of the matrix     which is diagonal. Hence Thus factors into distinct linear polynomials, each of which is in the form for . Thus each linear term is an elementary divisor, making each Jordan Block a matrix with as the only entry. Thus the Jordan Canonical form is     This time around the change of basis matrix (denoted and using the same basis as above) for this matrix has 0s along the diagonal, and increasing natural numbers (starting at 0, sorry) along the upper diagonal. Thus .  Recall that the minimum polynomial corresponding to will be the the smallest monic polynomial such that is sent to 0. Note that as is the operator sending to its derivative, and that . Thus can be viewed as a change of basis matrix for taking the second derivative of the basis, and so on.  As the basis extends to , it requires derivatives to make this polynomial become 0. Thus the minimal polynomial of must be , as it it monic and . As the degree of the invariant factors must sum to and , which is itself an invariant factor, we see that it must in fact be the only one.  As is already a power of a prime, it is the only elementary divisor as well. Thus the Jordan Canonical Form for is an Jordan Block with 0s along the diagonal and 1s along the sub-diagonal.     "
 },
 {
-  "id": "exercise-287",
+  "id": "exercise-297",
   "level": "2",
-  "url": "sec-jcf.html#exercise-287",
+  "url": "sec-jcf.html#exercise-297",
   "type": "Exercise",
   "number": "6.3.11",
   "title": ".",
   "body": " Let be a positive integer. Consider the real vector space and the linear transformation , where is the derivative of p(x).   Find the characteristic polynomial and the minimum polynomial for .  Find the invariant factors and the elementary divisors for .  Find the RCF and the Jordan Canonical Form for .    Coming soon to an OER near you!   Let be the linear operator given by (where denotes the derivative of    Note that the change of basis matrix for this operator is given by with the basis . Thus will be given by the determinant of the matrix which is diagonal. Hence .    Our factors into distinct linear polynomials, each of which is in the form for . Thus each linear term is an elementary divisor. However, as none of these elementary divisors divide any of the others, we see that the only invariant factor is itself.    As each linear term is an elementary divisor, each Jordan block a matrix with as the only entry. Thus the Jordan Canonical form is As the only invariant factor is , we see that the Rational Canonical Form of is .     "
 },
 {
-  "id": "exercise-288",
+  "id": "exercise-298",
   "level": "2",
-  "url": "sec-jcf.html#exercise-288",
+  "url": "sec-jcf.html#exercise-298",
   "type": "Exercise",
   "number": "6.3.12",
   "title": "June 2010 (4).",
   "body": "June 2010 (4)  Let be the matrix with entries in     Find the Jordan Canonical Form of A.    Is similar to       Coming soon to an OER near you!      First, notice that is upwards triangular, and thus . By the Cayley Hamilton Theorem the minimum polynomial divides the characteristic polynomial, and from the definition of minimum polynomial we know is the smallest polynomial such that . Since must be a power of with , we plug in values of until we get . Shucks. Moving on, which is also not . However, multiplying one more time we see . By part (2) of this theorem is an invariant factor. By part (1) of that same theorem, invariant factors must multiply to , and so the invariant factors are and . These are also the elementary divisors. So       Let And notice that . Thus cannot be the minimal polynomial of . Two matrices are only similar if they share the same invariant factors (and thus the same minimum polynomial), so and are not similar.     "
 },
 {
-  "id": "exercise-289",
+  "id": "exercise-299",
   "level": "2",
-  "url": "sec-jcf.html#exercise-289",
+  "url": "sec-jcf.html#exercise-299",
   "type": "Exercise",
   "number": "6.3.13",
   "title": ".",
   "body": " For the matrix in :   Find the RCF of .    Determine whether or not has a Jordan Canonical Form, and if so, find this form.      Coming soon to an OER near you!      Notice . So we have Not so bad! Now, the invariant factors all divide the characteristic polynomial and must divide the following factor, so our options for sets of invariant factors are the following: - - However, the largest invariant factor is also the minimal polynomial. So we check to see if . Luckily, the very first calculation shows that this is not the case. Thus the minimum polynomial is the characteristic polynomial is the only invariant factor of . Thus the RCF of is     Luckily for us, factors completely into linear terms! So our elementary divisors are and . We see and , so the Jordan Canonical form of is      "
 },
 {
-  "id": "exercise-290",
+  "id": "exercise-300",
   "level": "2",
-  "url": "sec-jcf.html#exercise-290",
+  "url": "sec-jcf.html#exercise-300",
   "type": "Exercise",
   "number": "6.3.14",
   "title": "January 2014 (9).",
@@ -9100,45 +9253,45 @@ var ptx_lunr_docs = [
   "body": " Triangular Matrix and CharPoly  If is upper or lower triangular, then . As you may recall from an undergraduate class, in this case are the eigenvalues of . More on this later.  "
 },
 {
-  "id": "example-101",
+  "id": "example-105",
   "level": "2",
-  "url": "sec-det.html#example-101",
+  "url": "sec-det.html#example-105",
   "type": "Example",
   "number": "7.40",
   "title": "Problem.",
   "body": " Problem  Let be the -vector space consisting of polynomials in the variable of degree at most and let be the -linear operator given by where and denote the first and second derivatives of . (You may take it on faith that is -linear.) Find the determinant, the trace, and the characteristic polynomial of .  "
 },
 {
-  "id": "example-102",
+  "id": "example-106",
   "level": "2",
-  "url": "sec-det.html#example-102",
+  "url": "sec-det.html#example-106",
   "type": "Example",
   "number": "7.41",
   "title": "Problem.",
   "body": " Problem  Let be a field and with for some monic polynomial . Regard as an -vector space (via restriction of scalars along ), and recall that the function given by is an -linear operator on .  Prove that the characteristic polynomial of is .  "
 },
 {
-  "id": "exercise-291",
+  "id": "exercise-301",
   "level": "2",
-  "url": "sec-det.html#exercise-291",
+  "url": "sec-det.html#exercise-301",
   "type": "Exercise",
   "number": "7.1.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-292",
+  "id": "exercise-302",
   "level": "2",
-  "url": "sec-det.html#exercise-292",
+  "url": "sec-det.html#exercise-302",
   "type": "Exercise",
   "number": "7.1.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-293",
+  "id": "exercise-303",
   "level": "2",
-  "url": "sec-det.html#exercise-293",
+  "url": "sec-det.html#exercise-303",
   "type": "Exercise",
   "number": "7.1.3",
   "title": ".",
@@ -9334,18 +9487,18 @@ var ptx_lunr_docs = [
   "body": " Regard as a subfield of and let . We may also describe as where we set .  I claim that is in fact a simple extension of . For example, say . I claim that . Note that and So , and hence . Likewise, So . This example is an illustration of the Primitive Element Theorem (which we might or might not have time to prove this semester): Every finite extension of is generated by a single element (or, in other words, is simple). This example shows is simple and is a primitive element of this field extension.  "
 },
 {
-  "id": "exercise-294",
+  "id": "exercise-304",
   "level": "2",
-  "url": "field-extension-basics.html#exercise-294",
+  "url": "field-extension-basics.html#exercise-304",
   "type": "Exercise",
   "number": "1.1.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-295",
+  "id": "exercise-305",
   "level": "2",
-  "url": "field-extension-basics.html#exercise-295",
+  "url": "field-extension-basics.html#exercise-305",
   "type": "Exercise",
   "number": "1.1.2",
   "title": ".",
@@ -9577,108 +9730,108 @@ var ptx_lunr_docs = [
   "body": "  Assume that is a finite extension of fields of degree .   Prove that if is irreducible of degree and then remains irreducible when regarded as an element of the ring .  Show, by means of an explicit example with justification, that the statement in part (a) would become false if the assumption that were omitted.      Let be a finite extension of fields of degree .  Suppose that is irreducible of degree and .  First, note that if then will remain irreducible in  . Suppose then that . There exists an algebraically closed extension such that has a root  . Consider . As is algebraic in we know there exists some unique irreducible minimum polynomial of degree , and thus that  . Using the Degree Formula we see that However, and so for some , so . As we must have . But was defined to be the degree of , which divides . As and , we see that , so so for some . As irreducible polynomials multiplied by a constant are still irreducible, we see that is indeed irreducible in .  Let be a non-constant irreducible polynomial of degree in . Let . Because is irreducible and is a PID, is a maximal ideal. Thus is a field , , and is a root of in  . Hence is no longer irreducible by Theorem 2.2   "
 },
 {
-  "id": "proposition-108",
+  "id": "proposition-109",
   "level": "2",
-  "url": "sec-algebraic.html#proposition-108",
+  "url": "sec-algebraic.html#proposition-109",
   "type": "Proposition",
   "number": "1.43",
   "title": "",
   "body": "  Consider the two field extensions and .   Prove they have degrees and , respectively. {}: For the second one, show is irreducible in .    Find a primitive element for the extension and find .    Find a primitive element for the extension and find .       Consider the polynomial . This has a root , which is not in . Thus, as has degree 2, it is irreducible by Theorem 2.2 , making it the minimal polynomial of . Thus by Theorem 2.31 we see that .  Next, consider the polynomial . This has a root , which is not in as and . Let for convenience. As , has degree 2, it is irreducible by Theorem 2.2 , making it the minimal polynomial of . Thus by Theorem 2.31 we see that . Thus by the degree formula we have .  By Example 2.22 we see that . However, as is the root of it is algebraic over we see that and thus that .  Next, consider the polynomial . This has a root , which is not in as and . Let for convenience. As , has degree 2, it is irreducible by Theorem 2.2 , making it the minimal polynomial of . Thus by Theorem 2.31 we see that . Thus by the degree formula we have .  Consider , and note that and . Thus and . Thus is a primitive element of this extension field.  Next, consider the monic polynomial , and observe However, as , we see that is the root of this polynomial. Since this is a monic polynomial of degree , it must be the minimal polynomial as well. Thus the minimal polynomial of .  Consider , and note that , and .  Consider , and note that , and thus . Thus , so is a root of this polynomial. Since this is a monic polynomial of degree , it must be the minimal polynomial as well. Thus the minimal polynomial of .   "
 },
 {
-  "id": "proposition-109",
+  "id": "proposition-110",
   "level": "2",
-  "url": "sec-algebraic.html#proposition-109",
+  "url": "sec-algebraic.html#proposition-110",
   "type": "Proposition",
   "number": "1.44",
   "title": "",
   "body": "  Let be the field extension of obtained by adjoining to all four complex roots of the polynomial . ( is what's known as the “splitting field\" of over .) That is, where , , , and .   Prove that there exist a field extension such that , and . Tip : Note that is real number; find it explicitly.    Determine, with justification, .       Let be the field extension of obtained by adjoining to all four complex roots of the polynomial .  Let . Note that by Eisenstein's Criterion using we see that is the root of an irreducible polynomial in . Thus by Theorem 2.31 we see that is the degree of the minimum polynomial of this extension. However, as is monic and of degree 4, we see that it is the minimal polynomial and thus that . As , this extension will be contained in the real numbers, and thus that .  Next, observe and thus that .  Note that is the root of , and since and , we see that is irreducible in due to it having degree 2. As is monic and degree 2 we see its the minimal polynomial of . By the Degree Formula, we see that .  Note that   ,   ,   , and   , all of which can be written with and . Thus .  We already know that , and thus all that remains is to show that can be expressed in terms of the . Observe and thus that . Thus , and . Hence .   "
 },
 {
-  "id": "proposition-110",
+  "id": "proposition-111",
   "level": "2",
-  "url": "sec-algebraic.html#proposition-110",
+  "url": "sec-algebraic.html#proposition-111",
   "type": "Proposition",
   "number": "1.45",
   "title": "",
   "body": "  Let be the splitting field of over where is an odd prime integer. Find . Tip : Consider both chains and .    As seen in Example 2.60, is a root of the th cyclotomic polynomial, which is monic and irreducible in . Hence is the minimal polynomial of the th cyclotomic polynomial in , and thus the field extension has degree over by Theorem 2.31. It follows that .  Next, note that is a root of the polynomial , making it algebraic over . Using Eisenstein's Criterion in conjunction with the prime we see that is irreducible in . As , by Problem 5 on the previous homework we see that is irreducible in as well. As is irreducible and monic, we see that it is the minimal polynomial of in , and thus Using the degree formula, we see that Notice that , where , which are all roots of . By the Factor Theorem, there can be no other roots of this polynomial. Thus .  Additionally, notice that and are both roots of . Thus they are both contained in . Observe . Hence , and thus we see that . Therefore, .   "
 },
 {
-  "id": "proposition-111",
+  "id": "proposition-112",
   "level": "2",
-  "url": "sec-algebraic.html#proposition-111",
+  "url": "sec-algebraic.html#proposition-112",
   "type": "Proposition",
   "number": "1.46",
   "title": "",
   "body": "  Consider the two field extensions and .   Show that has degree .    Show that has degree .    Find a primitive element for the extension .    Find .      "
 },
 {
-  "id": "proposition-112",
+  "id": "proposition-113",
   "level": "2",
-  "url": "sec-algebraic.html#proposition-112",
+  "url": "sec-algebraic.html#proposition-113",
   "type": "Proposition",
   "number": "1.47",
   "title": "January 2014 (5).",
   "body": " January 2014 (5)   Let be a subfield of and suppose every element of is a root of a polynomial of degree in . Prove that . (Note: is not assumed to be a finite extension of .)   "
 },
 {
-  "id": "proposition-113",
+  "id": "proposition-114",
   "level": "2",
-  "url": "sec-algebraic.html#proposition-113",
+  "url": "sec-algebraic.html#proposition-114",
   "type": "Proposition",
   "number": "1.48",
   "title": "",
   "body": "  Let be a prime integer and let be a root of the polynomial .   Find, with justification, the degree of the field extension over .  Deduce that the polynomial is irreducible in .     "
 },
 {
-  "id": "proposition-114",
+  "id": "proposition-115",
   "level": "2",
-  "url": "sec-algebraic.html#proposition-114",
+  "url": "sec-algebraic.html#proposition-115",
   "type": "Proposition",
   "number": "1.49",
   "title": "",
   "body": "  Let be the splitting field over of the polynomial   Find, with justification, .  Note that (where is the unique positive, real fifth root of ) is one of the roots of . Prove is the trivial group.      Let be the splitting field over of the polynomial   Note that is irreducible in by Eisenstein's Criterion ( ). The roots of are                   5.      As is monic and irreducible it is the minimum polynomial of . Let , and notice . Note that   Let be a primitive root of unity. This is the root a cyclotomic polynomial of degree which is irreducible in . As this has relatively prime order to it is irreducible there as well. Let , and notice . Notice that , and so , completing the proof.   "
 },
 {
-  "id": "proposition-115",
+  "id": "proposition-116",
   "level": "2",
-  "url": "sec-algebraic.html#proposition-115",
+  "url": "sec-algebraic.html#proposition-116",
   "type": "Proposition",
   "number": "1.50",
   "title": "",
   "body": "  Let and be subfields of a field with and . Let and . Recall that denotes the smallest (with respect to containment) subfield of which satisfies and .   Show that .  Show that if then   Give an example satisfying       Let and be subfields of a field with and . Let and .  We're going to go slightly out of order. By Part (b), we see when . This is the largest possible size of , as everything is irreducible where it can be. Thus   Suppose . As and are finite extensions of they are also algebraic. Thus there exists and such that has degree and has degree .  Thus , making irreducible in . Thus . Notice that , as it is the smallest (with respect to containment) subfield of which satisfies and . Thus we have , as desired.  Let , , and Notice that , and thus .   "
 },
 {
-  "id": "exercise-298",
+  "id": "exercise-308",
   "level": "2",
-  "url": "sec-algebraic.html#exercise-298",
+  "url": "sec-algebraic.html#exercise-308",
   "type": "Exercise",
   "number": "1.2.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-299",
+  "id": "exercise-309",
   "level": "2",
-  "url": "sec-algebraic.html#exercise-299",
+  "url": "sec-algebraic.html#exercise-309",
   "type": "Exercise",
   "number": "1.2.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-300",
+  "id": "exercise-310",
   "level": "2",
-  "url": "sec-algebraic.html#exercise-300",
+  "url": "sec-algebraic.html#exercise-310",
   "type": "Exercise",
   "number": "1.2.3",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-301",
+  "id": "exercise-311",
   "level": "2",
-  "url": "sec-algebraic.html#exercise-301",
+  "url": "sec-algebraic.html#exercise-311",
   "type": "Exercise",
   "number": "1.2.4",
   "title": "Qual.",
@@ -9793,36 +9946,36 @@ var ptx_lunr_docs = [
   "body": " June 2011 (10)   Let and be matrices with entries in . Recall that and are said to be similar over if there exists an invertible matrix, with entries in , such that . Prove the following statements about matrices and with entries in :   If is a field extension, and and are similar over , then they are similar over .   is similar over to its transpose .     Suppose and are similar in . As and have entries in , then they are both in . Thus there exist matrices in RCF such that is similar to and that is similar to . However, is similar to and that is similar to in as well. Notice and are still in RCF. However, as the RCF is unique, this means that in , making them equal in as well. Thus is similar to , as similarity is transitive.  Let be the algebraic closure of . Thus has a Jordan Canonical Form in . For each Jordan Block in the JCF of , let denote the transpose of the identity matrix, and notice that . As this is the case for every Jordan block, we see that the JCF of , , is similar to its transpose. As the is similar to , is similar to , and is similar to , we see that in by transitivity. From Part (1), this yields in .   "
 },
 {
-  "id": "exercise-302",
+  "id": "exercise-312",
   "level": "2",
-  "url": "sec-closure.html#exercise-302",
+  "url": "sec-closure.html#exercise-312",
   "type": "Checkpoint",
   "number": "1.62",
   "title": "",
   "body": " In each part, determine, with justification, the degree of the given field extension.   1. .     .     "
 },
 {
-  "id": "exercise-303",
+  "id": "exercise-313",
   "level": "2",
-  "url": "sec-closure.html#exercise-303",
+  "url": "sec-closure.html#exercise-313",
   "type": "Exercise",
   "number": "1.3.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-304",
+  "id": "exercise-314",
   "level": "2",
-  "url": "sec-closure.html#exercise-304",
+  "url": "sec-closure.html#exercise-314",
   "type": "Exercise",
   "number": "1.3.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-305",
+  "id": "exercise-315",
   "level": "2",
-  "url": "sec-closure.html#exercise-305",
+  "url": "sec-closure.html#exercise-315",
   "type": "Exercise",
   "number": "1.3.3",
   "title": ".",
@@ -9955,18 +10108,18 @@ var ptx_lunr_docs = [
   "body": "  Assume is an algebraic field extension such that every non-constant polynomial in splits completely into linear factors in . Prove is an algebraic closure of .    Let be an algebraic field extension such that every non-constant polynomial in splits completely into linear factors in .  Let be a polynomial in , so , with , and let be a root of . There [[Theorem – Existence and Uniqueness of Algebraic Closures|exists]] some field extension such that is algebraically closed, meaning . Notice that is [[Mathematics\/Definitions\/Algebraic|algebraic]] over .  Consider the chain of field extensions making algebraic over as well. As every non-constant polynomial in splits completely into linear factors in , this yields .   "
 },
 {
-  "id": "proposition-125",
+  "id": "proposition-126",
   "level": "2",
-  "url": "sec-splitting.html#proposition-125",
+  "url": "sec-splitting.html#proposition-126",
   "type": "Proposition",
   "number": "1.76",
   "title": "",
   "body": "  Let be the splitting field of over . (Recall that this extension occurred on the last problem set, and that where - , - , - , and - .) Prove .    Note that from the previous homework, we know that , and that . Additionally, we know the following: - , - , - , and - . Note that by Eisenstein's Criterion using we see that is irreducible in . As has characteristic 0, we see that is separable as well.  As is the splitting field of an irreducible polynomial in , by Theorem 2.90 we see that . In the Gaussian integers, it is known that if both and are nonzero then, is a Gaussian prime if and only if is an ordinary prime. Note that , and that , which is prime. Thus is prime in . Thus we may invoke Eisenstein's Criterion using to see that is irreducible in , as does not divide 5, but we'll prove it just to be sure.  Suppose . Then , so , and thus . As 5 has no imaginary component, it must be the case that , and thus that . Substituting in, we see that , and thus that , which has historically not been an integer.  Anyway, we may thus apply Porism 2.61 to see that there exists some such that . We may regard as an element of since, by definition, is a subgroup of .  As , observe the following glory: With that in mind, we examine and and don't forget So corresponds to the permutation (1 2 3 4). We have proven that is isomorphic to a subgroup of having order at most 8 and that it contains an element or order 2 and (1 2 3 4), an element of order 4. Since the subgroup generated by these two elements has order 8, we see that . (Also by Sylow's Theorem, only has one subgroup of order 8, and it is ).   "
 },
 {
-  "id": "proposition-126",
+  "id": "proposition-127",
   "level": "2",
-  "url": "sec-splitting.html#proposition-126",
+  "url": "sec-splitting.html#proposition-127",
   "type": "Proposition",
   "number": "1.77",
   "title": "",
@@ -10000,27 +10153,27 @@ var ptx_lunr_docs = [
   "body": "  Let where is an odd prime, and let be the splitting field of over . Find, with justification, .    Let where is an odd prime, and let be the splitting field of over . Using Eisenstein's Criterion with we see that is irreducible in . Notice that is a root of this polynomial. As is monic and irreducible it is the minimum polynomial of , and thus . Let be a primitive root of unity. Notice that is a root of the cyclotomic polynomial, , which is irreducible in by the Gospel of Mark.  As is the splitting field of , there exists a root of . Consider . As is algebraic in we know there exists some unique irreducible minimal polynomial of degree , and thus that . By the Degree Formula we see However, and so for some , so . As we must have . But was defined to be the degree of , which divides . As and , we see that , so for some . As irreducible polynomials multiplied by a constant are still irreducible, we see that is indeed irreducible in .  As is monic and irreducible in we see that it is the minimum polynomial of , and thus . As , we have .   "
 },
 {
-  "id": "exercise-306",
+  "id": "exercise-316",
   "level": "2",
-  "url": "sec-splitting.html#exercise-306",
+  "url": "sec-splitting.html#exercise-316",
   "type": "Exercise",
   "number": "1.4.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-307",
+  "id": "exercise-317",
   "level": "2",
-  "url": "sec-splitting.html#exercise-307",
+  "url": "sec-splitting.html#exercise-317",
   "type": "Exercise",
   "number": "1.4.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-308",
+  "id": "exercise-318",
   "level": "2",
-  "url": "sec-splitting.html#exercise-308",
+  "url": "sec-splitting.html#exercise-318",
   "type": "Exercise",
   "number": "1.4.3",
   "title": ".",
@@ -10198,45 +10351,45 @@ var ptx_lunr_docs = [
   "body": "  Let and be indeterminants. The extension of fields given by identifying with is not separable. Somewhat more precisely, is isomorphism to the subfield of consisting of elements of the form , with the isomorphism given by sending to .  Then is a root of the polynomial . Moreover since is the field of fractions of the PID and is a prime element of , we may apply Eisenstein (and Gauss) to conclude that is irreducible in . This proves that . This polynomial is not separable since in it is equal to and hence has a repeated root. (Or, you may use that its derivative is .)  "
 },
 {
-  "id": "exercise-309",
+  "id": "exercise-319",
   "level": "2",
-  "url": "sec-separable.html#exercise-309",
+  "url": "sec-separable.html#exercise-319",
   "type": "Exercise",
   "number": "2.1.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-310",
+  "id": "exercise-320",
   "level": "2",
-  "url": "sec-separable.html#exercise-310",
+  "url": "sec-separable.html#exercise-320",
   "type": "Exercise",
   "number": "2.1.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-311",
+  "id": "exercise-321",
   "level": "2",
-  "url": "sec-separable.html#exercise-311",
+  "url": "sec-separable.html#exercise-321",
   "type": "Exercise",
   "number": "2.1.3",
   "title": ".",
   "body": " Assume is field and let . Recall that is separable if has no repeated roots in an [[Mathematics\/Definitions\/Algebraic Closure|algebraic closure]] of .   Assume . Prove that is separable if and only if the irreducible factorization of in has no repeated factors.  Fix a prime integer , let be the field with elements, and let be the [[Mathematics\/Definitions\/Field of Fractions|field of fractions]] of the polynomial ring . Prove is irreducible in but not separable.    Coming soon to an OER near you!       Suppose that is not separable, so has a repeated root in , which we denote . So is a factor of . By Corollary 2.96, is separable, so the minimal polynomial of in has no repeated root in . As does have a repeated root (by supposition) it cannot be the minimum polynomial of . Thus for some such that has as a root, otherwise would not obtain its repeated root. However, this means that , meaning that has as a factor as well. Thus we see that is a repeated factor of , one from the minimum polynomial, one from .   Suppose that the prime factorization of in admits a repeated factor. Thus there exists some prime (and thus irreducible) such that . However, has a root in , so in we see that has as a root as well, as . But since has factor , it shows up twice in the factorization of because . So has multiplicity at least 2, so is not separable.    Let be indeterminants, , and such that (as seen in Example 2.78). Note then that is a root of the polynomial .  Moreover, since is the field of fractions of the PID and is a prime element of , we may apply Eisenstein's Criterion (using ) to conclude that is irreducible in . Thus is the minimum polynomial of in .  However, as the derivative of this polynomial is , we see that the is not separable by Proposition 2.72. However, by the Freshman's Dream, we see that . But as , we see that the prime factorization of admits no repeated factor.     "
 },
 {
-  "id": "exercise-312",
+  "id": "exercise-322",
   "level": "2",
-  "url": "sec-separable.html#exercise-312",
+  "url": "sec-separable.html#exercise-322",
   "type": "Exercise",
   "number": "2.1.4",
   "title": "June 2011 (5).",
   "body": "June 2011 (5)  Let F be a field, and let . Recall that is separable provided, for every extension field has no multiple roots in . (A multiple root is an element such that in    Prove that is separable if and only if and its derivative are relatively prime in .  Suppose that is irreducible and that the degree of is not a multiple of the characteristic of . Prove that is separable.     Coming soon to an OER near you!   Let is a finite extension of fields and that the characteristic of is , where is a prime, and suppose there exists an element such that .  Consider the polynomial , and notice that , as we are in a field of characteristic . However, this characteristic also yields . As is a field we have as a UFD, and thus as is irreducible in it is also prime. Therefore this is the unique factorization of up to associates. If was reducible it would thus have to be divisible into power os , which will never be reducible as . Thus is irreducible in , making it the minimal polynomial of . However, if this would make the splitting field of over , which it is not, given . Thus .  "
 },
 {
-  "id": "exercise-313",
+  "id": "exercise-323",
   "level": "2",
-  "url": "sec-separable.html#exercise-313",
+  "url": "sec-separable.html#exercise-323",
   "type": "Exercise",
   "number": "2.1.5",
   "title": ".",
@@ -10423,90 +10576,90 @@ var ptx_lunr_docs = [
   "body": " Galois and Characteristic  Let be a field of characteristic , for a prime integer , and assume is a finite field extension of such that there exists an element of with but . Then is not Galois since in this case. You will prove this in the Homework.  "
 },
 {
-  "id": "exercise-314",
+  "id": "exercise-324",
   "level": "2",
-  "url": "sec-galext.html#exercise-314",
+  "url": "sec-galext.html#exercise-324",
   "type": "Exercise",
   "number": "2.2.1",
   "title": ".",
   "body": " Let be a finite Galois extension and let be the Galois group of . Suppose that and let be the minimum polynomial of over . Prove that    Coming soon to an OER near you!   Let be a finite Galois extension and let be the Galois group of . Suppose that and let be the minimal polynomial of over . Thus acts on the roots of faithfully. Additionally, as is the minimal polynomial of it is irreducible, making the action transitive as well.  As is Galois over we know that splits into linear factors, each of the form , where is a root of . As our action is transitive, for every root there exists a such that , or .  "
 },
 {
-  "id": "exercise-315",
+  "id": "exercise-325",
   "level": "2",
-  "url": "sec-galext.html#exercise-315",
+  "url": "sec-galext.html#exercise-325",
   "type": "Exercise",
   "number": "2.2.2",
   "title": ".",
   "body": " Let be a field of characteristic , , and consider the polynomial .   Prove that is either irreducible over or it splits into distinct linear factors over . ( Hint : If is a root of , consider for .)  Suppose is irreducible over and let be a splitting field of over . Prove that the Galois group of over is cyclic.    Coming soon to an OER near you!   Let be a field of characteristic , , and consider the polynomial .   Suppose has a root, , in . Then . Consider for some , and observe . By The Freshman's Dream, we have , but as , we really have . By Fermat's Little Theorem, , and thus . Thus we have found roots of , and thus splits into linear factors.  Suppose then that no root of exists in . Let be a splitting field of over , and note that from the above paragraph we have . As , we see , and thus is separable. Hence is a Galois extension. Thus there exists a such that . So for some . Notice . As is prime, we see that , and thus we need to apply to  times in order to get back to . Thus , so . Thus . Thus the minimum polynomial of must have degree . As is a root of and is monic, it must be the minimal polynomial and is thus irreducible.    Suppose is irreducible over and let be a splitting field of over . Let be a root of Consider . By part (a), contains all the roots of , hence . As is monic and irreducible, it is the minimum polynomial of , and thus . Hence . All groups of prime order are cyclic, completing the proof.     "
 },
 {
-  "id": "exercise-316",
+  "id": "exercise-326",
   "level": "2",
-  "url": "sec-galext.html#exercise-316",
+  "url": "sec-galext.html#exercise-326",
   "type": "Exercise",
   "number": "2.2.3",
   "title": "June 2010 Problem (9).",
   "body": "June 2010 Problem (9)  Consider .   Let be a root of and prove is a Galois field extension of . (Hint: First show is primitive -th root of unity.)    Find the Galois group .      Consider .   Let be a root of . Note that , and so so yay! It's primitive. Using one th primitive root we can obtain all the others, specifically . So we multiply each root by this to get all the others. So we have our splitting field.    Since is Galois, we see that . So is either or The roots of are for .  By the Porism there exists a such that . Let , and note that . Additionally, note that when and when .  Observe then that Similarly, we see that and . Thus corresponds to the permutation .  Using the Porism again we see there exists a such that . Using a similar process as above we see that corresponds to . However, observe that , while . Thus these elements do not commute, so we cannot be in . Thus .     "
 },
 {
-  "id": "exercise-317",
+  "id": "exercise-327",
   "level": "2",
-  "url": "sec-galext.html#exercise-317",
+  "url": "sec-galext.html#exercise-327",
   "type": "Exercise",
   "number": "2.2.4",
   "title": "January 2014 (6).",
   "body": "January 2014 (6)  Let be a primitive th root of unity.   Find and generator(s) for .    Draw the subfield lattice for and indicate the degrees of each extension. (You do not have to find generators for each of the subfields)      Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-318",
+  "id": "exercise-328",
   "level": "2",
-  "url": "sec-galext.html#exercise-318",
+  "url": "sec-galext.html#exercise-328",
   "type": "Exercise",
   "number": "2.2.5",
   "title": ".",
   "body": " Let be a finite Galois field extension of . Let and be subfields of such that is normal, and . Prove that    Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-319",
+  "id": "exercise-329",
   "level": "2",
-  "url": "sec-galext.html#exercise-319",
+  "url": "sec-galext.html#exercise-329",
   "type": "Exercise",
   "number": "2.2.6",
   "title": "June 2011 (6).",
   "body": "June 2011 (6)  Let be the splitting field of the polynomial over . Find , and describe the elements of explicitly.   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-320",
+  "id": "exercise-330",
   "level": "2",
-  "url": "sec-galext.html#exercise-320",
+  "url": "sec-galext.html#exercise-330",
   "type": "Exercise",
   "number": "2.2.7",
   "title": ".",
   "body": " Let be a finite Galois field extension, , and . Let be an element of and its minimal polynomial over ; set .    Prove there are distinct elements in the set .  Prove      Coming soon to an OER near you!   Let be a finite Galois field extension, , and . Let be an element of and its minimal polynomial over ; set .  "
 },
 {
-  "id": "exercise-321",
+  "id": "exercise-331",
   "level": "2",
-  "url": "sec-galext.html#exercise-321",
+  "url": "sec-galext.html#exercise-331",
   "type": "Exercise",
   "number": "2.2.8",
   "title": ".",
   "body": " Let be an extension of fields and let . Show that    Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-322",
+  "id": "exercise-332",
   "level": "2",
-  "url": "sec-galext.html#exercise-322",
+  "url": "sec-galext.html#exercise-332",
   "type": "Exercise",
   "number": "2.2.9",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-323",
+  "id": "exercise-333",
   "level": "2",
-  "url": "sec-galext.html#exercise-323",
+  "url": "sec-galext.html#exercise-333",
   "type": "Exercise",
   "number": "2.2.10",
   "title": ".",
@@ -10621,135 +10774,135 @@ var ptx_lunr_docs = [
   "body": " Finding Unique Intermediate Field   If is a finite Galois extension of degree , then I claim there is a unique intermediate field with and that must be a Galois extension over .  To see this, set . Then and by the Sylow theorems, there is a unique Sylow -subgroup, call it , and hence is normal in . It follows from the Fundamental Theorem that is an intermediate field that   is Galois over and    satisfies . Moreover, it is unique since has just one subgroup of index .     In fact, there are exactly two groups of order up to isomorphism, the cyclic one and one that is a (non-trivial) semi-direct product of by . So, there are just two possible lattices of intermediate fields for such a field extension.   "
 },
 {
-  "id": "exercise-324",
+  "id": "exercise-334",
   "level": "2",
-  "url": "sec-ftgt.html#exercise-324",
+  "url": "sec-ftgt.html#exercise-334",
   "type": "Exercise",
   "number": "2.3.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-325",
+  "id": "exercise-335",
   "level": "2",
-  "url": "sec-ftgt.html#exercise-325",
+  "url": "sec-ftgt.html#exercise-335",
   "type": "Exercise",
   "number": "2.3.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-326",
+  "id": "exercise-336",
   "level": "2",
-  "url": "sec-ftgt.html#exercise-326",
+  "url": "sec-ftgt.html#exercise-336",
   "type": "Exercise",
   "number": "2.3.3",
   "title": "",
   "body": " Let be the splitting field over of the polynomial .   Find all intermediate fields with (including possibly and ) such that is Galois over .    For each field you found in (a), find with justification a primitive generator (i.e., find so that .      Let be the splitting field over of the polynomial    First, notice that is irreducible in by Eisenstein's Criterion . Let denote a primitive third root of unity. The roots of are the following:    ,     , and     .   As is irreducible and monic we see that it is the minimum polynomial of over . Let and notice .  Recall that is isomorphic to a subgroup of . As and , we see another extension is needed, and that extension will have at least degree . Thus, due to size constraints, we see .  By the FTGT each Galois intermediate extension between and corresponds to a normal subgroup of , which are the normal subgroups of .  The elements of are the following: The subgroup has index in and is thus normal. None of the order subgroups are normal in , so is the only strictly intermediate extension.  Recall , meaning , so corresponds to a subgroup of order in , so its not Galois unfortunately. However, is a degree extension that is an intermediate field, as is a root of the irreducible polynomial .  With all this in mind, notice: - is a splitting field of , and has the primitive generator by . - is our only strictly intermediate field, and has the primitive generator - Finally, is Galois over , and has the primitive generator .       "
 },
 {
-  "id": "exercise-327",
+  "id": "exercise-337",
   "level": "2",
-  "url": "sec-ftgt.html#exercise-327",
+  "url": "sec-ftgt.html#exercise-337",
   "type": "Exercise",
   "number": "2.3.4",
   "title": ".",
   "body": " Let be the splitting field over of the polynomial . Prove that the Galois group is isomorphic to .   Coming soon to an OER near you!   Let be the splitting field over of the polynomial , the roots of which are:         , and     . Using Eisenstein's Criterion]] with we see that is irreducible in . As is monic and irreducible it is the minimum polynomial of and . Thus, by the FTGT we know there exists an element of order in .     Notice now that has exactly two complex roots, making complex conjugation correspond to a transposition in . Thus we have an element of order and an element of order , so the order of must be at least by Lagrange's Theorem.  As we know is isomorphic to a subgroup of , which has order . Thus is isomorphic to .  "
 },
 {
-  "id": "exercise-328",
+  "id": "exercise-338",
   "level": "2",
-  "url": "sec-ftgt.html#exercise-328",
+  "url": "sec-ftgt.html#exercise-338",
   "type": "Exercise",
   "number": "2.3.5",
   "title": ".",
   "body": " Let be an irreducible cubic (degree ) polynomial having exactly one real root. Let be the splitting field of over . Show that .   Coming soon to an OER near you!   Let be an irreducible cubic (degree ) polynomial having exactly one real root, and let be the splitting field of over .  As is the splitting field of , it is a normal extension]. As has characteristic 0, is separable (because is algebraic extension, as its the extension caused by adjoining each root of , and algebraic extensions of algebraic extensions are algebraic). Thus by we see .  By Proposition 2.83 we see that is isomorphic to some subgroup of , where is the number of distinct roots of . As cubic and irreducible we know that the real root must be irrational, which we will denote . Consider the extension . As , we see that . However, neither of our complex roots are in this extension, and so another extension is needed to reach . But this extension would also have a degree larger than , so . As , there exists no subgroup of it that can be isomorphic to, given that . Thus we see that , meaning that our complex roots are distinct.  Then or , the only possible sizes of subgroups of . However, by the previous argument we see that as , the only viable subgroup of is itself. Thus .  "
 },
 {
-  "id": "exercise-329",
+  "id": "exercise-339",
   "level": "2",
-  "url": "sec-ftgt.html#exercise-329",
+  "url": "sec-ftgt.html#exercise-339",
   "type": "Exercise",
   "number": "2.3.6",
   "title": ".",
   "body": " Let be a Galois extension of with .   Prove that there exists a subfield of containing F with .    Determine whether there must also exist a subfield of containing with .      Coming soon to an OER near you!   Let be a Galois extension of with .   Let be a Sylow -subgroup of . Notice that . By the FTGT there exists an intermediate field extension such that . By the Degree Formula, we have , with and . Thus .    Notice that as is a prime dividing the order of there must exist an element of order by Cauchy's Theorem. The cyclic subgroup, , generated by this element has order . By the FTGT there exists an intermediate field extension such that . By the Degree Formula, we have , with and . Thus .     "
 },
 {
-  "id": "exercise-330",
+  "id": "exercise-340",
   "level": "2",
-  "url": "sec-ftgt.html#exercise-330",
+  "url": "sec-ftgt.html#exercise-340",
   "type": "Exercise",
   "number": "2.3.7",
   "title": ".",
   "body": " Suppose that is a finite Galois extension with Galois group , and that . Prove that if and only if the images of under elements of are distinct.   Coming soon to an OER near you!   First, suppose that . As is a Galois extension the minimum polynomial of in splits completely into linear factors. Thus acts faithfully on the roots of , which includes . Thus the images of under elements of are distinct.  Now suppose that the images of under elements of are distinct, and suppose by way of contradiction that there exists some that is not in . Consider the intermediate field . By the FTGT there exists a nontrivial subgroup of whose elements fix elements of , including , a contradiction.  "
 },
 {
-  "id": "exercise-331",
+  "id": "exercise-341",
   "level": "2",
-  "url": "sec-ftgt.html#exercise-331",
+  "url": "sec-ftgt.html#exercise-341",
   "type": "Exercise",
   "number": "2.3.8",
   "title": "January 2012 (5).",
   "body": "January 2012 (5)  Let .   Find the minimum polynomial of over .    Let be the splitting field of over . Find the Galois group of .    Find all subgroups of and generators for the corresponding intermediate fields of .      Coming soon to an OER near you!   Let .   Let which factors as two irreducible polynomials and has no roots in , making it irreducible. Thus is the minimal polynomial of .    Notice that which also has degree . Let denote the Galois group of . Thus is a group of order , making it isomorphic to or . Notice that the elements of are the following: - and , - and , - and , and - and . All of these automorphisms have degree , making .    Thus are only two subgroups of , and . The first, , corresponds to and is generated by , where corresponds to and is generated by .     "
 },
 {
-  "id": "exercise-332",
+  "id": "exercise-342",
   "level": "2",
-  "url": "sec-ftgt.html#exercise-332",
+  "url": "sec-ftgt.html#exercise-342",
   "type": "Exercise",
   "number": "2.3.9",
   "title": ".",
   "body": " Let be the splitting field of over . Prove there exists a unique intermediate field such that and is a Galois extension.   Coming soon to an OER near you!   Let be the splitting field of over . Let be a primitive fourth root of unity. Thus .  Notice that the roots of are the following: - , - , - , and - . Thus .  Using Eisenstein's Criterion]] with we see that is irreducible in . Let , and notice that is the minimum polynomial of . Let and observe .  As is the root of the monic irreducible polynomial we have and . Thus is isomorphic to a subgroup of of order , making it .  Notice that is an extension of degree , and thus by the FTGT we have a subgroup such that . As we have , and thus . This makes the cyclic subgroup of generated by a reflection, the only element of order in , making it unique. This is also a normal subgroup of , making Galois over .  "
 },
 {
-  "id": "exercise-333",
+  "id": "exercise-343",
   "level": "2",
-  "url": "sec-ftgt.html#exercise-333",
+  "url": "sec-ftgt.html#exercise-343",
   "type": "Exercise",
   "number": "2.3.10",
   "title": ".",
   "body": " Consider This polynomial has exactly three real roots, a fact that you may use without proof.   Show that is irreducible in .  Let be a splitting field of $over . Show that is a Galois extension and find the isomorphism class of the Galois group .    Coming soon to an OER near you!      Notice that is prime in , and thus is irreducible in by Eisenstein's Criterion.    Let be a real root of . As is irreducible this root is not in . As is the root of a monic irreducible polynomial of degree , we see that . By the FTGT there exists a subgroup of with order , making it a cyclic subgroup generated by some element of order .  However, as only has complex roots we see that complex conjugation corresponds to an element of order in . Thus we have a transposition and a -cycle, meaning we can generate all of . .     "
 },
 {
-  "id": "exercise-334",
+  "id": "exercise-344",
   "level": "2",
-  "url": "sec-ftgt.html#exercise-334",
+  "url": "sec-ftgt.html#exercise-344",
   "type": "Exercise",
   "number": "2.3.11",
   "title": ".",
   "body": " Consider . This polynomial has exactly three real roots, a fact that you may use without proof.   Show that is irreducible in .  Let be a splitting field of over . Show that is a Galois extension with Galois group isomorphic to the symmetric group .    Coming soon to an OER near you!   Consider .   Using Eisenstein's Criterion with we see that is indeed irreducible in .    Let be a splitting field of over . As is monic and irreducible, it is the minimum polynomial for some such that . As has complex roots, we know that , and is thus an intermediate field. By the FTGT there exists a subgroup of such that . As we know , making for some . Thus is an element of order in . As is a degree polynomial, we know is isomorphic to a subgroup of . Thus must be a -cycle.  Recall that has exactly two complex roots. Thus , the complex conjugation automorphism, has order , making it a transposition. From the Gospel of Mark we were told that we did not need to prove that a transposition and an -cycle generate all of , and thus      "
 },
 {
-  "id": "exercise-335",
+  "id": "exercise-345",
   "level": "2",
-  "url": "sec-ftgt.html#exercise-335",
+  "url": "sec-ftgt.html#exercise-345",
   "type": "Exercise",
   "number": "2.3.12",
   "title": ".",
   "body": " Let be a finite Galois field extension of degree . Prove there exists a unique intermediate field (i.e., such that .   Coming soon to an OER near you!   Let be a finite Galois field extension of degree .  Note that as , we see that the number of Sylow- subgroups of divides and is congruent to . Thus there is exactly one Sylow- subgroup of , which we denote . By the Fundamental Theorem of Galois Theory, corresponds to an intermediate field extension . Note that as has order 5, we see that , and thus as well. By the Degree Formula we see that . As and , we see that , as desired. As corresponds to the unique subgroup of or order 5, we see that this extension must be unique as well.  "
 },
 {
-  "id": "exercise-336",
+  "id": "exercise-346",
   "level": "2",
-  "url": "sec-ftgt.html#exercise-336",
+  "url": "sec-ftgt.html#exercise-346",
   "type": "Exercise",
   "number": "2.3.13",
   "title": ".",
   "body": " Let be the splitting field over of the polynomial .   Find all intermediate fields with (including possibly and ) such that is Galois over .    For each field you found in (a), find with justification a primitive generator (i.e., find so that ).      Coming soon to an OER near you!      Invoking Eisenstein's Criterion and setting we see that is an irreducible cubic with exactly one real root. Thus . Thus the subgroups of are as follows: and By the Fundamental Theorem of Galois Theory there exist four intermediate field extensions: , and . Note that as and are all Sylow-2 subgroups of , by Sylow's Theorem none are normal in . However, as , the smallest prime dividing 6, we see that is the only strictly intermediate field that is Galois over .    As the identity map is the only automorphism from that fixes and , we see that is Galois over itself. As all finite extensions of fields with characteristic are separable, we see that is also Galois over . Thus and are the only intermediate fields that are Galois over .     "
 },
 {
-  "id": "exercise-337",
+  "id": "exercise-347",
   "level": "2",
-  "url": "sec-ftgt.html#exercise-337",
+  "url": "sec-ftgt.html#exercise-347",
   "type": "Exercise",
   "number": "2.3.14",
   "title": ".",
   "body": " Let be the splitting field of the polynomial over . Give, with full justification, a presentation for the Galois group that has two generators.   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-338",
+  "id": "exercise-348",
   "level": "2",
-  "url": "sec-ftgt.html#exercise-338",
+  "url": "sec-ftgt.html#exercise-348",
   "type": "Exercise",
   "number": "2.3.15",
   "title": ".",
@@ -10837,18 +10990,18 @@ var ptx_lunr_docs = [
   "body": "  Let be a function.   The function is one-to-one (also called an injection and denoted ) if whenever and then .    The function is onto (also called a surjection and denoted ) if for every in , there is an in with .    The function is a bijection if is both one-to-one and onto.    The function is invertible if there is a function such that and .      "
 },
 {
-  "id": "theorem-113",
+  "id": "theorem-115",
   "level": "2",
-  "url": "sec-sets-functions.html#theorem-113",
+  "url": "sec-sets-functions.html#theorem-115",
   "type": "Theorem",
   "number": "A.9",
   "title": "",
   "body": "  Let , , and be functions. Then:   If and are one-to-one then is one-to-one.    If is one-to-one then is one-to-one.    If and are onto then is onto.    If is onto then is onto.     is a bijection if and only if is invertible.      "
 },
 {
-  "id": "example-143",
+  "id": "example-147",
   "level": "2",
-  "url": "sec-sets-functions.html#example-143",
+  "url": "sec-sets-functions.html#example-147",
   "type": "Example",
   "number": "A.10",
   "title": "",
@@ -10864,9 +11017,9 @@ var ptx_lunr_docs = [
   "body": "  Let be a function.   The image of a subset A of is .    The preimage of a subset of is .    The image  is .      "
 },
 {
-  "id": "example-144",
+  "id": "example-148",
   "level": "2",
-  "url": "sec-sets-functions.html#example-144",
+  "url": "sec-sets-functions.html#example-148",
   "type": "Example",
   "number": "A.12",
   "title": "",
@@ -10882,9 +11035,9 @@ var ptx_lunr_docs = [
   "body": " Preimages are Nice   If , and for all , then    .     .     .     .      "
 },
 {
-  "id": "example-145",
+  "id": "example-149",
   "level": "2",
-  "url": "sec-sets-functions.html#example-145",
+  "url": "sec-sets-functions.html#example-149",
   "type": "Example",
   "number": "A.14",
   "title": "",
@@ -10900,18 +11053,18 @@ var ptx_lunr_docs = [
   "body": " Images are Sometimes Nice   If , and for all , then    .     .     . If moreover is injective, then .     . If moreover is injective, then .      "
 },
 {
-  "id": "example-146",
+  "id": "example-150",
   "level": "2",
-  "url": "sec-sets-functions.html#example-146",
+  "url": "sec-sets-functions.html#example-150",
   "type": "Example",
   "number": "A.16",
   "title": "",
   "body": "  "
 },
 {
-  "id": "theorem-116",
+  "id": "theorem-118",
   "level": "2",
-  "url": "sec-sets-functions.html#theorem-116",
+  "url": "sec-sets-functions.html#theorem-118",
   "type": "Theorem",
   "number": "A.17",
   "title": "",
@@ -10936,9 +11089,9 @@ var ptx_lunr_docs = [
   "body": "  Let B \\subseteq A. The inclusion map is the function i:B \\to A defined by i(b) = b for all b \\in B.   "
 },
 {
-  "id": "proposition-137",
+  "id": "proposition-138",
   "level": "2",
-  "url": "sec-sets-functions.html#proposition-137",
+  "url": "sec-sets-functions.html#proposition-138",
   "type": "Proposition",
   "number": "A.20",
   "title": "",
@@ -10981,9 +11134,9 @@ var ptx_lunr_docs = [
   "body": "     Projection maps are surjections.    Product inclusion maps are injections.      "
 },
 {
-  "id": "lemma-43",
+  "id": "lemma-42",
   "level": "2",
-  "url": "sec-sets-functions.html#lemma-43",
+  "url": "sec-sets-functions.html#lemma-42",
   "type": "Lemma",
   "number": "A.25",
   "title": "",
@@ -11026,18 +11179,18 @@ var ptx_lunr_docs = [
   "body": "  Let X be a set.   If \\sim is an equivalence relation on G, then X\/\\sim is a partition of X.    If 𝒞 is a partition of X, and T = \\{(x,y) \\in X \\times X | x,y are in the same element of 𝒞\\}, then T is an equivalence relation on X.      "
 },
 {
-  "id": "example-147",
+  "id": "example-151",
   "level": "2",
-  "url": "sec-sets-functions.html#example-147",
+  "url": "sec-sets-functions.html#example-151",
   "type": "Example",
   "number": "A.30",
   "title": "",
   "body": "  "
 },
 {
-  "id": "theorem-118",
+  "id": "theorem-120",
   "level": "2",
-  "url": "sec-sets-functions.html#theorem-118",
+  "url": "sec-sets-functions.html#theorem-120",
   "type": "Theorem",
   "number": "A.31",
   "title": "",
@@ -11053,9 +11206,9 @@ var ptx_lunr_docs = [
   "body": " FBT = Function Building Theorem for Quotient Sets   Let \\sim be an equivalence relation on a set X, and let f: X \\to Y be a function satisfying the property that whenever x,x' \\in X and x \\sim x' then f(x) = f(x'). Then:   There is a well-defined function g:X\/\\sim \\to Y defined by g([x]) = f(x) for all [x] in X\/\\sim ; that is, g \\circ q = f, where q is the equivalence map.    If f is onto, then g is onto.    If f also satisfies the property that whenever x,x' \\in X and f(x) = f(x') then x \\sim x', then g is one-to-one.      "
 },
 {
-  "id": "example-148",
+  "id": "example-152",
   "level": "2",
-  "url": "sec-sets-functions.html#example-148",
+  "url": "sec-sets-functions.html#example-152",
   "type": "Example",
   "number": "A.33",
   "title": "",
@@ -11107,9 +11260,9 @@ var ptx_lunr_docs = [
   "body": "     The class of finite sets is closed under: subsets, intersections, finite unions, and finite products.    The class of countable sets is closed under: subsets, intersections, countable unions, and finite products.      "
 },
 {
-  "id": "example-149",
+  "id": "example-153",
   "level": "2",
-  "url": "sec-numbers-and-cardinality.html#example-149",
+  "url": "sec-numbers-and-cardinality.html#example-153",
   "type": "Example",
   "number": "A.38",
   "title": "",

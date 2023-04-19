@@ -608,11 +608,11 @@ window.MathJax = {
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="sec-grp-spds.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Semidirect Products</span></a></div>
+<div class="toc-item"><a href="sec-spds.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Semidirect Products</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-grp-spds.html#subsec-external-sdps" class="internal"><span class="title">External Semidirect Products</span></a></div></li>
-<li><div class="toc-item"><a href="sec-grp-spds.html#subsec-internal-sdps" class="internal"><span class="title">Internal Semidirect Products</span></a></div></li>
-<li><div class="toc-item"><a href="sec-grp-spds.html#exercises-18" class="internal"><span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="sec-spds.html#subsec-external-sdps" class="internal"><span class="title">External Semidirect Products</span></a></div></li>
+<li><div class="toc-item"><a href="sec-spds.html#subsec-internal-sdps" class="internal"><span class="title">Internal Semidirect Products</span></a></div></li>
+<li><div class="toc-item"><a href="sec-spds.html#exercises-18" class="internal"><span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -941,59 +941,70 @@ window.MathJax = {
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Subgroup Basics</span>
 </h3>
 <blockquote class="blockquote" id="blockquote-6">
-<div class="para" id="p-152">“I have this fear of falling in front of large groups...that's why I tend not to wear heels.”</div> <cite class="attribution">―Taylor Swift</cite>
+<div class="para" id="p-156">“I have this fear of falling in front of large groups...that's why I tend not to wear heels.”</div> <cite class="attribution">―Taylor Swift</cite>
 </blockquote>
 <article class="definition definition-like" id="def-subgroup"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.34</span><span class="period">.</span><span class="space"> </span><span class="title">Subgroup.</span>
-</h4> <div class="para" id="p-153">A nonempty subset <span class="process-math">\(H\)</span> of a group <span class="process-math">\(G\)</span> is called a <em class="emphasis">subgroup</em>, denoted <span class="process-math">\(H\leq G\text{,}\)</span>  provided <span class="process-math">\(H\)</span> is a group under the multiplication law of <span class="process-math">\(G\text{.}\)</span>
-</div> <div class="para" id="p-154">A subgroup <span class="process-math">\(H\)</span> of a group <span class="process-math">\(G\)</span> is a <em class="emphasis">proper</em> subgroup, denoted <span class="process-math">\(H&lt;G\)</span> if <span class="process-math">\(H\neq G\text{.}\)</span>
-</div></article><article class="lemma theorem-like" id="lem-subgrouptest"><h4 class="heading">
-<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">1.35</span><span class="period">.</span><span class="space"> </span><span class="title">Subgroup Tests.</span>
+</h4> <div class="para" id="p-157">A nonempty subset <span class="process-math">\(H\)</span> of a group <span class="process-math">\(G\)</span> is called a <em class="emphasis">subgroup</em>, denoted <span class="process-math">\(H\leq G\text{,}\)</span>  provided <span class="process-math">\(H\)</span> is a group under the multiplication law of <span class="process-math">\(G\text{.}\)</span>
+</div> <div class="para" id="p-158">A subgroup <span class="process-math">\(H\)</span> of a group <span class="process-math">\(G\)</span> is a <em class="emphasis">proper</em> subgroup, denoted <span class="process-math">\(H&lt;G\)</span> if <span class="process-math">\(H\neq G\text{.}\)</span>
+</div></article><article class="theorem theorem-like" id="thm-subgroup-test"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.35</span><span class="period">.</span><span class="space"> </span><span class="title">Subgroup Tests.</span>
 </h4>
-<div class="para logical" id="p-155"><ol class="decimal">
-<li id="li-74"><div class="para" id="p-156">If a subset <span class="process-math">\(H\)</span> of a group <span class="process-math">\(G\)</span> is nonempty and closed under multiplication and inversion, then <span class="process-math">\(H\)</span> is a subgroup.</div></li>
-<li id="li-75"><div class="para" id="p-157">If a subset <span class="process-math">\(H\)</span> of a group <span class="process-math">\(G\)</span> is nonempty and satisfies for all <span class="process-math">\(x,y \in H\text{,}\)</span> <span class="process-math">\(xy^{-1} \in H\text{,}\)</span> then <span class="process-math">\(H\)</span> is a subgroup.</div></li>
-</ol></div></article><article class="hiddenproof" id="proof-4"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-4"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-4"><article class="hiddenproof"><div class="para" id="p-158">We prove the one-step test first.</div> <div class="para" id="p-159">Assume <span class="process-math">\(H\)</span> is non-empty and for all <span class="process-math">\(x,y \in H\text{,}\)</span> <span class="process-math">\(xy^{-1} \in H\text{.}\)</span> Since <span class="process-math">\(H\)</span> is non-empty, there is an <span class="process-math">\(h \in H\)</span> and hence <span class="process-math">\(e_G = hh^{-1} \in H\text{.}\)</span> Since <span class="process-math">\(e_Gx=x=xe_G\)</span> for any <span class="process-math">\(x\in H\text{,}\)</span> <span class="process-math">\(e_G\)</span> is an identity element for <span class="process-math">\(H\text{.}\)</span> For any <span class="process-math">\(h \in H\text{,}\)</span> <span class="process-math">\(h^{-1} = eh^{-1}  \in H\text{,}\)</span> and so every element of <span class="process-math">\(H\)</span> has an inverse inside <span class="process-math">\(H\text{.}\)</span> For <span class="process-math">\(x,y  \in H\)</span> we have <span class="process-math">\(y^{-1} \in H\)</span> and thus <span class="process-math">\(xy = x(y^{-1})^{-1} \in H\)</span> and hence <span class="process-math">\(H\)</span> is closed under <span class="process-math">\(\cdot\text{.}\)</span> This means that the restriction of the group operation of <span class="process-math">\(G\)</span> to <span class="process-math">\(H\)</span> is a well-defined group operation. This operation is associative by the axioms for the group <span class="process-math">\(G\text{.}\)</span> The axioms of a group have now been established for <span class="process-math">\((H, \cdot)\text{.}\)</span>
-</div> <div class="para" id="p-160">Now we prove the two step test.</div> <div class="para" id="p-161">Assume <span class="process-math">\(H\)</span> is non-empty and closed under multiplication and inversion. Then, for <span class="process-math">\(x,y\in H\)</span> we have <span class="process-math">\(y^{-1}\in H\)</span> and <span class="process-math">\(xy^{-1}\in H\text{.}\)</span> Since the hypothesis of the one-step test is satisfied, <span class="process-math">\(H\)</span> is a subgroup of <span class="process-math">\(G\text{.}\)</span>
+<div class="para logical" id="p-159"><ol class="decimal">
+<li id="li-74"><div class="para" id="p-160">If a subset <span class="process-math">\(H\)</span> of a group <span class="process-math">\(G\)</span> is nonempty and closed under multiplication and inversion, then <span class="process-math">\(H\)</span> is a subgroup.</div></li>
+<li id="li-75"><div class="para" id="p-161">If a subset <span class="process-math">\(H\)</span> of a group <span class="process-math">\(G\)</span> is nonempty and satisfies for all <span class="process-math">\(x,y \in H\text{,}\)</span> <span class="process-math">\(xy^{-1} \in H\text{,}\)</span> then <span class="process-math">\(H\)</span> is a subgroup.</div></li>
+</ol></div></article><article class="hiddenproof" id="proof-4"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-4"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-4"><article class="hiddenproof"><div class="para" id="p-162">We prove the one-step test first.</div> <div class="para" id="p-163">Assume <span class="process-math">\(H\)</span> is non-empty and for all <span class="process-math">\(x,y \in H\text{,}\)</span> <span class="process-math">\(xy^{-1} \in H\text{.}\)</span> Since <span class="process-math">\(H\)</span> is non-empty, there is an <span class="process-math">\(h \in H\)</span> and hence <span class="process-math">\(e_G = hh^{-1} \in H\text{.}\)</span> Since <span class="process-math">\(e_Gx=x=xe_G\)</span> for any <span class="process-math">\(x\in H\text{,}\)</span> <span class="process-math">\(e_G\)</span> is an identity element for <span class="process-math">\(H\text{.}\)</span> For any <span class="process-math">\(h \in H\text{,}\)</span> <span class="process-math">\(h^{-1} = eh^{-1}  \in H\text{,}\)</span> and so every element of <span class="process-math">\(H\)</span> has an inverse inside <span class="process-math">\(H\text{.}\)</span> For <span class="process-math">\(x,y  \in H\)</span> we have <span class="process-math">\(y^{-1} \in H\)</span> and thus <span class="process-math">\(xy = x(y^{-1})^{-1} \in H\)</span> and hence <span class="process-math">\(H\)</span> is closed under <span class="process-math">\(\cdot\text{.}\)</span> This means that the restriction of the group operation of <span class="process-math">\(G\)</span> to <span class="process-math">\(H\)</span> is a well-defined group operation. This operation is associative by the axioms for the group <span class="process-math">\(G\text{.}\)</span> The axioms of a group have now been established for <span class="process-math">\((H, \cdot)\text{.}\)</span>
+</div> <div class="para" id="p-164">Now we prove the two step test.</div> <div class="para" id="p-165">Assume <span class="process-math">\(H\)</span> is non-empty and closed under multiplication and inversion. Then, for <span class="process-math">\(x,y\in H\)</span> we have <span class="process-math">\(y^{-1}\in H\)</span> and <span class="process-math">\(xy^{-1}\in H\text{.}\)</span> Since the hypothesis of the one-step test is satisfied, <span class="process-math">\(H\)</span> is a subgroup of <span class="process-math">\(G\text{.}\)</span>
 </div></article></div>
-<article class="example example-like" id="ex-common-subgroups"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.36</span><span class="period">.</span><span class="space"> </span><span class="title">Common Subgroups.</span>
-</h4> <div class="para logical" id="p-162"><ol class="decimal">
-<li id="li-76"><div class="para" id="p-163">
+<article class="corollary theorem-like" id="cor-finite-subgroup-test"><h4 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">1.36</span><span class="period">.</span>
+</h4>
+<div class="para" id="p-166">If a finite subset <span class="process-math">\(H\)</span> of a group <span class="process-math">\(G\)</span> is nonempty and closed under multiplication, then <span class="process-math">\(H\)</span> is a subgroup.</div></article><article class="example example-like" id="ex-common-subgroups"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.37</span><span class="period">.</span><span class="space"> </span><span class="title">Common Subgroups.</span>
+</h4> <div class="para logical" id="p-167"><ol class="decimal">
+<li id="li-76"><div class="para" id="p-168">
 <span class="process-math">\(\{e_G\}\)</span> and <span class="process-math">\(G\)</span> are the <dfn class="terminology">trivial subgroups</dfn> of <span class="process-math">\(G\text{.}\)</span>
 </div></li>
-<li id="li-77"><div class="para" id="p-164"><span class="process-math">\(\displaystyle \Z\leq\Q\leq\R\leq\C\)</span></div></li>
-<li id="li-78"><div class="para" id="p-165"><span class="process-math">\(\displaystyle \Z^\times\leq\Q^\times\leq\R^\times\leq\C^\times\)</span></div></li>
-<li id="ex-nz"><div class="para" id="p-166">Let <span class="process-math">\(n\in\N\)</span> and define <span class="process-math">\(n\Z=\{x\in\Z|x=nk\;\text{for some}\;k\in\Z\}\text{.}\)</span> Then <span class="process-math">\(n\Z\leq\Z\)</span> for all <span class="process-math">\(n\text{.}\)</span> </div></li>
+<li id="li-77"><div class="para" id="p-169"><span class="process-math">\(\displaystyle \Z\leq\Q\leq\R\leq\C\)</span></div></li>
+<li id="li-78"><div class="para" id="p-170"><span class="process-math">\(\displaystyle \Z^\times\leq\Q^\times\leq\R^\times\leq\C^\times\)</span></div></li>
+<li id="ex-nz"><div class="para" id="p-171">Let <span class="process-math">\(n\in\N\)</span> and define <span class="process-math">\(n\Z=\{x\in\Z|x=nk\;\text{for some}\;k\in\Z\}\text{.}\)</span> Then <span class="process-math">\(n\Z\leq\Z\)</span> for all <span class="process-math">\(n\text{.}\)</span> </div></li>
 </ol></div></article><article class="remark remark-like" id="remark-9"><h4 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.37</span><span class="period">.</span>
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.38</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-167">In fact, in the case of <a href="" class="xref" data-knowl="./knowl/ex-nz.html" title="Item 4">Item 4</a>, these turn out to be the <em class="emphasis">only</em> subgroups of <span class="process-math">\(\Z\text{,}\)</span> a fact which you may prove in <a href="" class="xref" data-knowl="./knowl/exe-subgroups-of-z.html" title="Exercise 5: Subgroups of \Z">Exercise 5</a>
-</div></article><article class="theorem theorem-like" id="thm-subgroup-properties"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.38</span><span class="period">.</span><span class="space"> </span><span class="title">Properties of Subgroups.</span>
+<div class="para" id="p-172">In fact, in the case of <a href="" class="xref" data-knowl="./knowl/ex-nz.html" title="Item 4">Item 4</a>, these turn out to be the <em class="emphasis">only</em> subgroups of <span class="process-math">\(\Z\text{,}\)</span> a fact which you may prove in <a href="" class="xref" data-knowl="./knowl/exe-subgroups-of-z.html" title="Exercise 7: Subgroups of \Z">Exercise 7</a>
+</div></article><article class="example example-like" id="ex-uncommon-subgroups"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.39</span><span class="period">.</span><span class="space"> </span><span class="title">Less Common Subgroups.</span>
+</h4> <div class="para logical" id="p-173"><ol class="decimal">
+<li id="li-80"><div class="para" id="p-174"><span class="process-math">\(\displaystyle R^+\leq R^\times\)</span></div></li>
+<li id="li-81"><div class="para" id="p-175">The group <span class="process-math">\(L=\{1,-1,i,-i\}\)</span> (verified as such in <a href="" class="xref" data-knowl="./knowl/ex-group-examples.html" title="Example 1.8: Group Examples">Example 1.8</a>) is a subgroup of <span class="process-math">\(\C^\times\text{.}\)</span>
+</div></li>
+<li id="li-82"><div class="para" id="p-176"><span class="process-math">\(\displaystyle \{1,3\}\leq \Z/(8)^\times\)</span></div></li>
+<li id="li-83"><div class="para" id="p-177">The set of all reflections is a subgroup of <span class="process-math">\(D_{2n}\text{.}\)</span> Similarly, the set of relections is also a subgroup.</div></li>
+</ol></div></article><article class="theorem theorem-like" id="thm-subgroup-properties"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.40</span><span class="period">.</span><span class="space"> </span><span class="title">Properties of Subgroups.</span>
 </h4>
-<div class="para logical" id="p-168"><ol class="decimal">
-<li id="li-80">
-<span class="heading"><span class="title">Transitivity of Subgroups.</span></span><div class="para" id="p-169">If <span class="process-math">\(H\)</span> is a subgroup of <span class="process-math">\(G\)</span> and <span class="process-math">\(K\)</span> is a subgroup of <span class="process-math">\(H\text{,}\)</span> then <span class="process-math">\(K\)</span> is a subgroup of <span class="process-math">\(G\text{.}\)</span>
+<div class="para logical" id="p-178"><ol class="decimal">
+<li id="li-84">
+<span class="heading"><span class="title">Transitivity of Subgroups.</span></span><div class="para" id="p-179">If <span class="process-math">\(H\)</span> is a subgroup of <span class="process-math">\(G\)</span> and <span class="process-math">\(K\)</span> is a subgroup of <span class="process-math">\(H\text{,}\)</span> then <span class="process-math">\(K\)</span> is a subgroup of <span class="process-math">\(G\text{.}\)</span>
 </div>
 </li>
-<li id="li-81">
-<span class="heading"><span class="title">Intersections of Subgroups.</span></span><div class="para" id="p-170">If <span class="process-math">\(H_\alpha\)</span> is a subgroup of <span class="process-math">\(G\)</span> for all <span class="process-math">\(\alpha\)</span> in an index set <span class="process-math">\(J\text{,}\)</span> then <span class="process-math">\(H=\bigcap_{\alpha\in J} H_\alpha\)</span> is a subgroup of <span class="process-math">\(G\text{.}\)</span>
+<li id="li-85">
+<span class="heading"><span class="title">Intersections of Subgroups.</span></span><div class="para" id="p-180">If <span class="process-math">\(H_\alpha\)</span> is a subgroup of <span class="process-math">\(G\)</span> for all <span class="process-math">\(\alpha\)</span> in an index set <span class="process-math">\(J\text{,}\)</span> then <span class="process-math">\(H=\bigcap_{\alpha\in J} H_\alpha\)</span> is a subgroup of <span class="process-math">\(G\text{.}\)</span>
 </div>
 </li>
-<li id="li-82">
-<span class="heading"><span class="title">Unions of Subgroups.</span></span><div class="para" id="p-171">Let <span class="process-math">\(G\)</span> be a group and <span class="process-math">\(H\text{,}\)</span> <span class="process-math">\(H'\)</span> subgroups. Prove that <span class="process-math">\(H\cup H'\)</span> is a subgroup if and only if <span class="process-math">\(H\subseteq H'\)</span> or <span class="process-math">\(H'\subseteq H\text{.}\)</span>
+<li id="li-86">
+<span class="heading"><span class="title">Unions of Subgroups.</span></span><div class="para" id="p-181">Let <span class="process-math">\(G\)</span> be a group and <span class="process-math">\(H\text{,}\)</span> <span class="process-math">\(H'\)</span> subgroups. Prove that <span class="process-math">\(H\cup H'\)</span> is a subgroup if and only if <span class="process-math">\(H\subseteq H'\)</span> or <span class="process-math">\(H'\subseteq H\text{.}\)</span>
 </div>
 </li>
 </ol></div></article><article class="definition definition-like" id="def-alternating-group"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.39</span><span class="period">.</span><span class="space"> </span><span class="title">Alternating Group.</span>
-</h4> <div class="para" id="p-172">The <em class="emphasis">alternating group</em> <span class="process-math">\(A_n\)</span> is the subset of all even cycles of <span class="process-math">\(S_n\text{.}\)</span> </div></article><article class="proposition theorem-like" id="prop-alternating-group-is-subgroup"><h4 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.40</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(A_n\leq S_n\)</span>.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.41</span><span class="period">.</span><span class="space"> </span><span class="title">Alternating Group.</span>
+</h4> <div class="para" id="p-182">The <em class="emphasis">alternating group</em> <span class="process-math">\(A_n\)</span> is the subset of all even cycles of <span class="process-math">\(S_n\text{.}\)</span> </div></article><article class="proposition theorem-like" id="prop-alternating-group-is-subgroup"><h4 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.42</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(A_n\leq S_n\)</span>.</span>
 </h4>
-<div class="para" id="p-173">Prove that <span class="process-math">\(A_n\)</span> is a subgroup of <span class="process-math">\(S_n\text{.}\)</span>
+<div class="para" id="p-183">Prove that <span class="process-math">\(A_n\)</span> is a subgroup of <span class="process-math">\(S_n\text{.}\)</span>
 </div></article><article class="definition definition-like" id="def-special-linear-group"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.41</span><span class="period">.</span><span class="space"> </span><span class="title">Special Linear Group.</span>
-</h4> <div class="para logical" id="p-174">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.43</span><span class="period">.</span><span class="space"> </span><span class="title">Special Linear Group.</span>
+</h4> <div class="para logical" id="p-184">
 <div class="para">The <em class="emphasis">special linear group</em> with complex entries is defined</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1001,128 +1012,152 @@ window.MathJax = {
 \end{equation*}
 </div>
 </div></article><article class="proposition theorem-like" id="prop-slg-subgroup"><h4 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.42</span><span class="period">.</span>
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.44</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-175">Prove that <span class="process-math">\(\SL_n(\C)\)</span> is a subgroup of <span class="process-math">\(\GL_n(\C)\text{.}\)</span>
+<div class="para" id="p-185">Prove that <span class="process-math">\(\SL_n(\C)\)</span> is a subgroup of <span class="process-math">\(\GL_n(\C)\text{.}\)</span>
 </div></article></section><section class="subsection" id="subsec-center"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">The Center of a Group</span>
 </h3>
 <blockquote class="blockquote" id="blockquote-7">
-<div class="para" id="p-176">“Stay in the center, and you will be ready to move in any direction.”</div> <cite class="attribution">―Alan Watts</cite>
+<div class="para" id="p-186">“Stay in the center, and you will be ready to move in any direction.”</div> <cite class="attribution">―Alan Watts</cite>
 </blockquote>
 <article class="definition definition-like" id="def-group-center"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.43</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(Z(G)\)</span>.</span>
-</h4> <div class="para logical" id="p-177">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.45</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(Z(G)\)</span>.</span>
+</h4> <div class="para logical" id="p-187">
 <div class="para">The <em class="emphasis">center</em> of a group <span class="process-math">\(G\text{,}\)</span> often written <span class="process-math">\(Z(G)\text{,}\)</span> is the set of elements of <span class="process-math">\(G\)</span> that commute with every element of <span class="process-math">\(G\text{.}\)</span> That is,</div>
 <div class="displaymath process-math">
 \begin{equation*}
 Z(G)=\{x \in G \, | \, xy = yx\,\text{ for all $y \in G$}\}.
 \end{equation*}
 </div>
-</div></article><article class="proposition theorem-like" id="prop-center-is-subgroup"><h4 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.44</span><span class="period">.</span><span class="space"> </span><span class="title">Center is a Subgroup.</span>
+</div></article><article class="example example-like" id="ex-group-centers"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.46</span><span class="period">.</span><span class="space"> </span><span class="title">Centers of Common Groups.</span>
+</h4> <div class="para logical" id="p-188"><ol class="decimal">
+<li id="li-87"><div class="para" id="p-189">The center of any abelian group <span class="process-math">\(G\)</span> is <span class="process-math">\(G\)</span> itself. (In fact, this statement is an if and only if)</div></li>
+<li id="li-88"><div class="para" id="p-190">
+<span class="process-math">\(Z(S_n)=\{e\}\)</span> for <span class="process-math">\(n&gt;2\text{.}\)</span>
+</div></li>
+</ol></div></article><article class="proposition theorem-like" id="prop-center-is-subgroup"><h4 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.47</span><span class="period">.</span><span class="space"> </span><span class="title">Center is a Subgroup.</span>
 </h4>
-<div class="para" id="p-178">Prove that <span class="process-math">\(Z(G)\)</span> is an abelian subgroup for any group <span class="process-math">\(G\text{.}\)</span>
+<div class="para" id="p-191">Prove that <span class="process-math">\(Z(G)\)</span> is an abelian subgroup for any group <span class="process-math">\(G\text{.}\)</span>
 </div></article><article class="proposition theorem-like" id="prop-centers-and-subgroups"><h4 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.45</span><span class="period">.</span>
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.48</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-179">Let <span class="process-math">\(H\leq G\)</span> be a subgroup. Prove <span class="process-math">\(Z(H)\leq Z(G)\text{.}\)</span>
+<div class="para" id="p-192">Let <span class="process-math">\(H\leq G\)</span> be a subgroup. Prove <span class="process-math">\(Z(H)\leq Z(G)\text{.}\)</span>
 </div></article></section><section class="exercises" id="exercises-3"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
 <div class="exercisegroup" id="exercisegroup-5">
-<h4 class="heading"><span class="title">Computations and Examples.</span></h4>
-<div class="introduction" id="introduction-5"><div class="para" id="p-180"></div></div>
+<h4 class="heading"><span class="title">Examples and Specifics.</span></h4>
+<div class="introduction" id="introduction-5"><div class="para" id="p-193"></div></div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exe-subgroups-verifications"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-subgroups-verifications"><h5 class="heading">
 <span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">Subgroup Verification.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-subgroups-verifications"><article class="exercise exercise-like"><div class="para" id="p-181">Prove that each of the subgroup in <a href="" class="xref" data-knowl="./knowl/ex-common-subgroups.html" title="Example 1.36: Common Subgroups">Example 1.36</a> are indeed subgroups</div></article></div>
-<article class="exercise exercise-like" id="exe-finding-centers"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-finding-centers"><h5 class="heading">
-<span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">Finding Centers.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-finding-centers"><article class="exercise exercise-like"><div class="para logical" id="p-182">
-<div class="para">Determine the following:</div>
-<ol class="lower-alpha">
-<li id="li-83"><div class="para" id="p-183">
-<span class="process-math">\(Z(D_{2n})\)</span> for <span class="process-math">\(n \geq 3\text{.}\)</span> Your answer will depend on whether <span class="process-math">\(n\)</span> is even or odd.</div></li>
-<li id="li-84"><div class="para" id="p-184">
-<span class="process-math">\(Z(S_n)\)</span> for <span class="process-math">\(n \geq 3\text{.}\)</span>
-</div></li>
-<li id="li-85"><div class="para" id="p-185">
-<span class="process-math">\(Z(A_n)\)</span> for <span class="process-math">\(n \geq 3\text{.}\)</span>
-</div></li>
-<li id="li-86"><div class="para" id="p-186"><span class="process-math">\(Z(\GL_n(\C))\text{.}\)</span></div></li>
-</ol>
-</div></article></div>
-<article class="exercise exercise-like" id="exe-verify-d2n-generation"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-verify-d2n-generation"><h5 class="heading">
-<span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title"><span class="process-math">\(D_{2n}\)</span> as Generated Subgroup.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-verify-d2n-generation"><article class="exercise exercise-like"><div class="para" id="p-187">Verify <span class="process-math">\(D_{2n}=\langle r,s \rangle\text{,}\)</span> meaning that <span class="process-math">\(D_{2n}\)</span> is the subgroup of <span class="process-math">\(D_{2n}\)</span> generated by <span class="process-math">\(\{r,s\}\text{.}\)</span>
-</div></article></div>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-subgroups-verifications"><article class="exercise exercise-like"><div class="para" id="p-194">Prove that each of the subgroup in <a href="" class="xref" data-knowl="./knowl/ex-common-subgroups.html" title="Example 1.37: Common Subgroups">Example 1.37</a> are indeed subgroups</div></article></div>
 <article class="exercise exercise-like" id="exe-future-subgroups"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-future-subgroups"><h5 class="heading">
-<span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">Future Subgroups.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-future-subgroups"><article class="exercise exercise-like"><div class="para logical" id="p-188">
+<span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">Future Subgroups.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-future-subgroups"><article class="exercise exercise-like"><div class="para logical" id="p-195">
 <div class="para">Throughout this course we will encounter numerous important subgroups that will need to be verified as such. We do so here. While these subgroups may seem random now, they will prove to be exceedingly useful in the future.</div>
 <ol class="lower-alpha">
-<li id="li-87"><div class="para" id="p-189">Let <span class="process-math">\(H\leq G\text{.}\)</span> Prove that the set <span class="process-math">\(Z_G(H)=\{g\in G|gh=xh\forall h\in H\}\)</span> is a subgroup of <span class="process-math">\(G\text{.}\)</span> <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-3" id="fn-3"><sup> 1 </sup></a>
+<li id="li-89"><div class="para" id="p-196">Let <span class="process-math">\(H\leq G\text{.}\)</span> Prove that the set <span class="process-math">\(Z_G(H)=\{g\in G|gh=xh\forall h\in H\}\)</span> is a subgroup of <span class="process-math">\(G\text{.}\)</span> <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-3" id="fn-3"><sup> 1 </sup></a>
 </div></li>
-<li id="li-88"><div class="para" id="p-190">Let <span class="process-math">\(H\leq G\text{.}\)</span> Prove that the set <span class="process-math">\(N_G(H)=\{g\in G|gHg\inv=H\}\)</span> is a subgroup of <span class="process-math">\(G\text{.}\)</span> <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-4" id="fn-4"><sup> 2 </sup></a>
+<li id="li-90"><div class="para" id="p-197">Let <span class="process-math">\(H\leq G\text{.}\)</span> Prove that the set <span class="process-math">\(N_G(H)=\{g\in G|gHg\inv=H\}\)</span> is a subgroup of <span class="process-math">\(G\text{.}\)</span> <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-4" id="fn-4"><sup> 2 </sup></a>
 </div></li>
-<li id="li-89"><div class="para" id="p-191">Let <span class="process-math">\(H\)</span> be a subgroup of <span class="process-math">\(G\)</span> and fix some element <span class="process-math">\(g\in G\text{.}\)</span> Prove that <span class="process-math">\(gHg^{-1}=\{ghg^{-1} \mid h\in H\}\)</span> is a subgroup of <span class="process-math">\(G\)</span> of the same order as <span class="process-math">\(H\text{.}\)</span> <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-5" id="fn-5"><sup> 3 </sup></a>
+<li id="li-91"><div class="para" id="p-198">Let <span class="process-math">\(H\)</span> be a subgroup of <span class="process-math">\(G\)</span> and fix some element <span class="process-math">\(g\in G\text{.}\)</span> Prove that <span class="process-math">\(gHg^{-1}=\{ghg^{-1} \mid h\in H\}\)</span> is a subgroup of <span class="process-math">\(G\)</span> of the same order as <span class="process-math">\(H\text{.}\)</span> <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-5" id="fn-5"><sup> 3 </sup></a>
 </div></li>
-<li id="li-90"><div class="para" id="p-192">Let <span class="process-math">\(S\)</span> be a containing <span class="process-math">\(n\)</span> elements. For each <span class="process-math">\(x\in S\text{,}\)</span> prove that the set  <span class="process-math">\(\Stab_{\Perm(S)}(x)=\{\sigma\in \Perm(S)|\sigma(x)=x\}\)</span> is a subgroup of <span class="process-math">\(\Perm(S)\text{.}\)</span> <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-6" id="fn-6"><sup> 4 </sup></a>
+<li id="li-92"><div class="para" id="p-199">Let <span class="process-math">\(S\)</span> be a containing <span class="process-math">\(n\)</span> elements. For each <span class="process-math">\(x\in S\text{,}\)</span> prove that the set  <span class="process-math">\(\Stab_{\Perm(S)}(x)=\{\sigma\in \Perm(S)|\sigma(x)=x\}\)</span> is a subgroup of <span class="process-math">\(\Perm(S)\text{.}\)</span> <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-6" id="fn-6"><sup> 4 </sup></a>
 </div></li>
 </ol>
 </div></article></div>
-<article class="exercise exercise-like" id="exe-subgroups-of-z"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-subgroups-of-z"><h5 class="heading">
-<span class="codenumber">5<span class="period">.</span></span><span class="space"> </span><span class="title">Subgroups of <span class="process-math">\(\Z\)</span>.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-subgroups-of-z"><article class="exercise exercise-like"><div class="para logical" id="p-193"><ol class="lower-alpha">
-<li id="li-91"><div class="para" id="p-194">The set <span class="process-math">\(n\Z\)</span> is a subgroup of <span class="process-math">\(\Z\)</span> for all <span class="process-math">\(n\in\Z\text{.}\)</span>
+<article class="exercise exercise-like" id="exe-torsion-subgroup"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-torsion-subgroup"><h5 class="heading">
+<span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">Torision Subgroup.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-torsion-subgroup"><article class="exercise exercise-like"><div class="para logical" id="p-200"><ol class="lower-alpha">
+<li id="li-93"><div class="para" id="p-201">Let <span class="process-math">\(G\)</span> be an abelian group. Then the set of elements of finite order, which we denote <span class="process-math">\(T\text{,}\)</span> is a subgroup of <span class="process-math">\(G\text{,}\)</span> called the <dfn class="terminology">torsion subgroup</dfn>.</div></li>
+<li id="li-94"><div class="para" id="p-202">Show that the torision subgroup may not in fact be a subgroup if <span class="process-math">\(G\)</span> is not assumed to be abelian.</div></li>
+</ol></div></article></div>
+<article class="exercise exercise-like" id="exe-finding-centers"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-finding-centers"><h5 class="heading">
+<span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">Finding Centers.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-finding-centers"><article class="exercise exercise-like"><div class="para logical" id="p-203">
+<div class="para">Determine the following:</div>
+<ol class="lower-alpha">
+<li id="li-95"><div class="para" id="p-204">
+<span class="process-math">\(Z(D_{2n})\)</span> for <span class="process-math">\(n \geq 3\text{.}\)</span> Your answer will depend on whether <span class="process-math">\(n\)</span> is even or odd.</div></li>
+<li id="li-96"><div class="para" id="p-205">
+<span class="process-math">\(Z(S_n)\)</span> for <span class="process-math">\(n \geq 3\text{.}\)</span>
 </div></li>
-<li id="li-92"><div class="para" id="p-195"><span class="process-math">\(\displaystyle n\Z=\igen n\)</span></div></li>
-<li id="li-93"><div class="para" id="p-196">The only subgroups of <span class="process-math">\(\Z\)</span> are the sets <span class="process-math">\(n\Z\text{.}\)</span>
+<li id="li-97"><div class="para" id="p-206">
+<span class="process-math">\(Z(A_n)\)</span> for <span class="process-math">\(n \geq 3\text{.}\)</span>
+</div></li>
+<li id="li-98"><div class="para" id="p-207"><span class="process-math">\(Z(\GL_n(\C))\text{.}\)</span></div></li>
+</ol>
+</div></article></div>
+<article class="exercise exercise-like" id="exe-subgroup-not-symmetric"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-subgroup-not-symmetric"><h5 class="heading">
+<span class="codenumber">5<span class="period">.</span></span><span class="space"> </span><span class="title">Subgroups not Symmetric.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-subgroup-not-symmetric"><article class="exercise exercise-like"><div class="para" id="p-208">In <a href="" class="xref" data-knowl="./knowl/thm-subgroup-properties.html" title="Theorem 1.40: Properties of Subgroups">Theorem 1.40</a> we showed that subgroups form a transitve relation. Prove that the relation is reflexive (it can be one sentence), <em class="emphasis">not</em> symmetric, and thus not an equivalence relation.</div></article></div>
+<article class="exercise exercise-like" id="exe-verify-d2n-generation"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-verify-d2n-generation"><h5 class="heading">
+<span class="codenumber">6<span class="period">.</span></span><span class="space"> </span><span class="title"><span class="process-math">\(D_{2n}\)</span> as Generated Subgroup.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-verify-d2n-generation"><article class="exercise exercise-like"><div class="para" id="p-209">Verify <span class="process-math">\(D_{2n}=\langle r,s \rangle\text{,}\)</span> meaning that <span class="process-math">\(D_{2n}\)</span> is the subgroup of <span class="process-math">\(D_{2n}\)</span> generated by <span class="process-math">\(\{r,s\}\text{.}\)</span>
+</div></article></div>
+<article class="exercise exercise-like" id="exe-subgroups-of-z"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-subgroups-of-z"><h5 class="heading">
+<span class="codenumber">7<span class="period">.</span></span><span class="space"> </span><span class="title">Subgroups of <span class="process-math">\(\Z\)</span>.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-subgroups-of-z"><article class="exercise exercise-like"><div class="para logical" id="p-210"><ol class="lower-alpha">
+<li id="li-99"><div class="para" id="p-211">The set <span class="process-math">\(n\Z\)</span> is a subgroup of <span class="process-math">\(\Z\)</span> for all <span class="process-math">\(n\in\Z\text{.}\)</span>
+</div></li>
+<li id="li-100"><div class="para" id="p-212">The only subgroups of <span class="process-math">\(\Z\)</span> are the sets <span class="process-math">\(n\Z\text{.}\)</span>
 </div></li>
 </ol></div></article></div>
+<article class="exercise exercise-like" id="exe-only-element-of-order-2"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-only-element-of-order-2"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-only-element-of-order-2"><article class="exercise exercise-like"><div class="para" id="p-213">Let <span class="process-math">\(G\)</span> be a group and <span class="process-math">\(g\in G\text{.}\)</span> If <span class="process-math">\(g\)</span> is the only element of order <span class="process-math">\(2\)</span> in <span class="process-math">\(G\text{,}\)</span> then <span class="process-math">\(g\in Z(G)\text{.}\)</span>
+</div></article></div>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-6">
-<h4 class="heading"><span class="title">Formal Proofs.</span></h4>
-<div class="introduction" id="introduction-6"><div class="para" id="p-197"></div></div>
+<h4 class="heading"><span class="title">Properties and Future Lemmas.</span></h4>
+<div class="introduction" id="introduction-6"><div class="para" id="p-214"></div></div>
 <div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="exe-center-is-group-iff-abelian"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-center-is-group-iff-abelian"><h5 class="heading">
-<span class="codenumber">6<span class="period">.</span></span><span class="space"> </span><span class="title">Abelian iff <span class="process-math">\(Z(G)=G\)</span>.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-center-is-group-iff-abelian"><article class="exercise exercise-like"><div class="para" id="p-198">Let <span class="process-math">\(G\)</span> be a group. Prove <span class="process-math">\(G\)</span> is abelian if any only if <span class="process-math">\(G=Z(G)\text{.}\)</span>
+<article class="exercise exercise-like" id="exe-subgroup-preserves-identity"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-subgroup-preserves-identity"><h5 class="heading">
+<span class="codenumber">9<span class="period">.</span></span><span class="space"> </span><span class="title">Subgroups Preserve Identities.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-subgroup-preserves-identity"><article class="exercise exercise-like"><div class="para" id="p-215">Let <span class="process-math">\(H\)</span> be a subgroup of <span class="process-math">\(G\text{.}\)</span> Then <span class="process-math">\(e_G=e_H\text{.}\)</span>
 </div></article></div>
+<article class="exercise exercise-like" id="exe-center-is-group-iff-abelian"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-center-is-group-iff-abelian"><h5 class="heading">
+<span class="codenumber">10<span class="period">.</span></span><span class="space"> </span><span class="title">Abelian iff <span class="process-math">\(Z(G)=G\)</span>.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-center-is-group-iff-abelian"><article class="exercise exercise-like"><div class="para" id="p-216">Let <span class="process-math">\(G\)</span> be a group. Prove <span class="process-math">\(G\)</span> is abelian if any only if <span class="process-math">\(G=Z(G)\text{.}\)</span>
+</div></article></div>
+<article class="exercise exercise-like" id="exe-subgroups-closed-under-intersections"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-subgroups-closed-under-intersections"><h5 class="heading">
+<span class="codenumber">11<span class="period">.</span></span><span class="space"> </span><span class="title">Abelian iff <span class="process-math">\(Z(G)=G\)</span>.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-subgroups-closed-under-intersections"><article class="exercise exercise-like"><div class="para" id="p-217">Subgroups are closed under intersections.</div></article></div>
 <article class="exercise exercise-like" id="exe-no-proper-unions"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-no-proper-unions"><h5 class="heading">
-<span class="codenumber">7<span class="period">.</span></span><span class="space"> </span><span class="title">No Proper Unions.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-no-proper-unions"><article class="exercise exercise-like"><div class="para" id="p-199">Every finite group cannot be expressed as the union of two proper subgroups.</div>
+<span class="codenumber">12<span class="period">.</span></span><span class="space"> </span><span class="title">No Proper Unions.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-no-proper-unions"><article class="exercise exercise-like"><div class="para" id="p-218">Every finite group cannot be expressed as the union of two proper subgroups.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like"><div class="para" id="p-200">Part (3) of <a href="" class="xref" data-knowl="./knowl/thm-subgroup-properties.html" title="Theorem 1.38: Properties of Subgroups">Theorem 1.38</a> may prove useful!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like"><div class="para" id="p-201">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like"><div class="para" id="p-219">Part (3) of <a href="" class="xref" data-knowl="./knowl/thm-subgroup-properties.html" title="Theorem 1.40: Properties of Subgroups">Theorem 1.40</a> may prove useful!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like"><div class="para" id="p-220">Coming soon to an OER near you!</div></div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="exe-even-groups-order-2"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-even-groups-order-2"><h5 class="heading">
-<span class="codenumber">8<span class="period">.</span></span><span class="space"> </span><span class="title">Even Order Groups.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-even-groups-order-2"><article class="exercise exercise-like"><div class="para" id="p-202">Every group of even order contains an element of order <span class="process-math">\(2\text{.}\)</span> <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-7" id="fn-7"><sup> 5 </sup></a>
+<span class="codenumber">13<span class="period">.</span></span><span class="space"> </span><span class="title">Even Order Groups.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-even-groups-order-2"><article class="exercise exercise-like"><div class="para" id="p-221">Every group of even order contains an element of order <span class="process-math">\(2\text{.}\)</span> <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-7" id="fn-7"><sup> 5 </sup></a>
 </div></article></div>
 <article class="exercise exercise-like" id="exe-abelian-subgroups"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-abelian-subgroups"><h5 class="heading">
-<span class="codenumber">9<span class="period">.</span></span><span class="space"> </span><span class="title">Subgroups of Abelian Groups.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-abelian-subgroups"><article class="exercise exercise-like"><div class="para" id="p-203">Let <span class="process-math">\(H\)</span> be a subgroup of a group <span class="process-math">\(G\text{.}\)</span> If <span class="process-math">\(G\)</span> is abelian then so is <span class="process-math">\(H\text{.}\)</span>
+<span class="codenumber">14<span class="period">.</span></span><span class="space"> </span><span class="title">Subgroups of Abelian Groups.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-abelian-subgroups"><article class="exercise exercise-like"><div class="para" id="p-222">Let <span class="process-math">\(H\)</span> be a subgroup of a group <span class="process-math">\(G\text{.}\)</span> If <span class="process-math">\(G\)</span> is abelian then so is <span class="process-math">\(H\text{.}\)</span>
 </div></article></div>
 <article class="exercise exercise-like" id="exe-groups-contained-in-groups-are-subgroups"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-groups-contained-in-groups-are-subgroups"><h5 class="heading">
-<span class="codenumber">10<span class="period">.</span></span><span class="space"> </span><span class="title">Subsets and Subgroups.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-groups-contained-in-groups-are-subgroups"><article class="exercise exercise-like"><div class="para" id="p-204">Let <span class="process-math">\(H\)</span> and <span class="process-math">\(G\)</span> be groups. If <span class="process-math">\(H\sse G\text{,}\)</span> then <span class="process-math">\(H\leq G\)</span>
+<span class="codenumber">15<span class="period">.</span></span><span class="space"> </span><span class="title">Subsets and Subgroups.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-groups-contained-in-groups-are-subgroups"><article class="exercise exercise-like"><div class="para" id="p-223">Let <span class="process-math">\(H\)</span> and <span class="process-math">\(G\)</span> be groups. If <span class="process-math">\(H\sse G\text{,}\)</span> then <span class="process-math">\(H\leq G\)</span>
 </div></article></div>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-7">
 <h4 class="heading"><span class="title">Qualifying Exam Problems.</span></h4>
-<div class="introduction" id="introduction-7"><div class="para" id="p-205"></div></div>
+<div class="introduction" id="introduction-7"><div class="para" id="p-224"></div></div>
 <div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="exercise-28"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-28"><h5 class="heading">
-<span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">May 2021 (1a).</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-28"><article class="exercise exercise-like"><div class="para" id="p-206">Let <span class="process-math">\(G\)</span> be a group (not necessarily finite) and <span class="process-math">\(H\)</span> a nonempty subset of <span class="process-math">\(G\)</span> that is closed under multiplication. Suppose that for all <span class="process-math">\(g\in G\)</span> we have <span class="process-math">\(g^2\in H\text{.}\)</span> Prove <span class="process-math">\(H\)</span> is a subgroup of <span class="process-math">\(G\text{.}\)</span>
+<article class="exercise exercise-like" id="exercise-37"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-37"><h5 class="heading">
+<span class="codenumber">16<span class="period">.</span></span><span class="space"> </span><span class="title">May 2021 (1a).</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-37"><article class="exercise exercise-like"><div class="para" id="p-225">Let <span class="process-math">\(G\)</span> be a group (not necessarily finite) and <span class="process-math">\(H\)</span> a nonempty subset of <span class="process-math">\(G\)</span> that is closed under multiplication. Suppose that for all <span class="process-math">\(g\in G\)</span> we have <span class="process-math">\(g^2\in H\text{.}\)</span> Prove <span class="process-math">\(H\)</span> is a subgroup of <span class="process-math">\(G\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like"><div class="para" id="p-207">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like"><div class="para" id="p-208">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like"><div class="para" id="p-226">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like"><div class="para" id="p-227">Coming soon to an OER near you!</div></div></div>
 </div></article></div>
 </div>
 </div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-3"><div class="fn">The set <span class="process-math">\(Z_G(g)\)</span> is known as the <em class="emphasis">centralizer</em> of <span class="process-math">\(g\)</span> in <span class="process-math">\(G\text{,}\)</span> and is defined explicitely in <a href="" class="xref" data-knowl="./knowl/def-centralizer.html" title="Definition 4.33: Centralizer">Definition 4.33</a>.</div></div>
