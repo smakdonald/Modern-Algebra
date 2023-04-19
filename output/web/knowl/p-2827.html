@@ -11,8 +11,34 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h6 class="heading"><span class="type">Paragraph</span></h6>
-<div class="para">Suppose <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are similar in <span class="process-math">\(\Mat_{n \times n}(L)\text{.}\)</span> As <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> have entries in <span class="process-math">\(F\text{,}\)</span> then they are both in <span class="process-math">\(\Mat_{n \times n}(F)\text{.}\)</span> Thus there exist matrices <span class="process-math">\(C,D\in\Mat_{n \times n}(F)\)</span> in RCF such that <span class="process-math">\(A\)</span> is similar to <span class="process-math">\(C\)</span> and that <span class="process-math">\(B\)</span> is similar to <span class="process-math">\(D\text{.}\)</span> However, <span class="process-math">\(A\)</span> is similar to <span class="process-math">\(C\)</span> and that <span class="process-math">\(B\)</span> is similar to <span class="process-math">\(D\)</span> in <span class="process-math">\(\Mat_{n \times n}(L)\)</span> as well. Notice <span class="process-math">\(C\)</span> and <span class="process-math">\(D\)</span> are still in RCF. However, as the RCF is unique, this means that <span class="process-math">\(C=D\)</span> in <span class="process-math">\(\Mat_{n \times n}(L)\text{,}\)</span> making them equal in <span class="process-math">\(\Mat_{n \times n}(F)\)</span> as well. Thus <span class="process-math">\(A\)</span> is similar to <span class="process-math">\(B\text{,}\)</span> as similarity is transitive.</div>
-<span class="incontext"><a href="sec-jcf.html#p-2827" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">Now let <span class="process-math">\(n\)</span> be arbitrary and <span class="process-math">\(\tau = (i \, j)\)</span> for some <span class="process-math">\(1 \leq i &lt; j \leq n\text{.}\)</span> In this case we need to show</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi(v_1, \dots, v_n) = - \phi(v_1, \dots, v_{i-1}, v_{j}, v_{i+1}, v_{i+2}, \dots, v_{j-1}, v_i, v_{j+1}, \dots, v_n)
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(v_1, \dots, v_n \in V\text{.}\)</span> Fix <span class="process-math">\(n-2\)</span> elements <span class="process-math">\(v_1, \dots, v_{i-1}, v_{i+1}, \dots, v_{j-1}, v_{j+1}, \dots, v_n\)</span> and define</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\psi: V^{\times 2} \to R
+\end{equation*}
+</div>
+<div class="para">by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\psi(v,w) = \phi(v_1, \dots, v_{i-1}, v, v_{i+1}, \dots, v_{j-1}, w,  v_{j+1}, \dots, v_n)
+\end{equation*}
+</div>
+<div class="para">for any <span class="process-math">\(v,w \in V\text{.}\)</span> With this notation the goal is to show</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\psi(v,w) = -\psi(w,v)
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(\phi\)</span> is <span class="process-math">\(R\)</span>-multi-linear and alternating, <span class="process-math">\(\psi: V \times V\to R\)</span> is <span class="process-math">\(R\)</span>-bilinear and alternating, and so the case already proven gives the result.</div>
+</div>
+<span class="incontext"><a href="sec-det.html#p-2827" class="internal">in-context</a></span>
 </body>
 </html>

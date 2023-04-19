@@ -11,17 +11,39 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h6 class="heading"><span class="type">Paragraph</span></h6>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">First, we show that the center of <span class="process-math">\(G\)</span> is nontrivial. Suppose by way of contradiction that <span class="process-math">\(Z(G)=\{e\}\text{.}\)</span> We examine the conjugacy classes of <span class="process-math">\(G\text{.}\)</span> From <a href="" class="xref" data-knowl="./knowl/thm-class-eq.html" title="Theorem 4.37: The Class Equation">The Class Equation</a>, we know</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-class-eq.html">
+<div class="para">Assume <span class="process-math">\(G\)</span> is a group of order <span class="process-math">\(p^e m\)</span> where <span class="process-math">\(p\)</span> is prime, <span class="process-math">\(e \geq 0\text{,}\)</span> and <span class="process-math">\(\operatorname{gcd}(p,m) = 1\text{.}\)</span>
+</div>
+<ol class="decimal">
+<li><div class="para">
+<span class="process-math">\(\operatorname{Syl}_p(G) \ne \emptyset\)</span> (there exists at least one Sylow <span class="process-math">\(p\)</span>-subgroup of <span class="process-math">\(G\)</span>).</div></li>
+<li><div class="para">If <span class="process-math">\(P\)</span> is a Sylow <span class="process-math">\(p\)</span>-subgroup of <span class="process-math">\(G\)</span> and <span class="process-math">\(Q \leq G\)</span> is any <span class="process-math">\(p\)</span>-subgroup of <span class="process-math">\(G\)</span> (i.e., a subgroup whose order is some power of <span class="process-math">\(p\)</span>), then there is a <span class="process-math">\(g\)</span> such that <span class="process-math">\(Q \leq gPg^{-1}\text{.}\)</span> In particular, the action of <span class="process-math">\(G\)</span> on <span class="process-math">\(\operatorname{Syl}_p(G)\)</span> by conjugation is transitive — i.e., any two Sylow <span class="process-math">\(p\)</span>-subgroups are conjugate.</div></li>
+<li><div class="para logical">
+<div class="para">We have</div>
+<div class="displaymath process-math">
 \begin{equation*}
-|G| = |Z(G)| + \sum_i^r |G : C_G(g_i)|.
+| \operatorname{Syl}_p(G)| \equiv 1 \mod{p}.
 \end{equation*}
 </div>
-<div class="para">Note that <span class="process-math">\(|G|=p^n\)</span> for some <span class="process-math">\(n\in\N\text{,}\)</span> meaning that the only divisors of <span class="process-math">\(|G|\)</span> are powers of <span class="process-math">\(p\text{.}\)</span> In finite groups, each conjugacy class must divide the order of the group. By Lagrange's Theorem, <span class="process-math">\(|G : C_G(g_i)|=\frac{|G|}{|C_G(g_i)|}=\frac{p^n}{p^m}=p^k\text{,}\)</span> where <span class="process-math">\(m,k\in\N\text{.}\)</span> Since |Z(G)|=1, we see that <span class="process-math">\(\sum_i^r |G : C_G(g_i)|\bigg|p^n-1\text{,}\)</span> which is impossible given that <span class="process-math">\(p^n-1 \not|p^n\text{.}\)</span> Thus <span class="process-math">\(Z(G)\neq\{e\}\text{.}\)</span>
+</div></li>
+<li><div class="para logical">
+<div class="para">For any <span class="process-math">\(P \in \operatorname{Syl}_p(G)\text{,}\)</span>
 </div>
+<div class="displaymath process-math">
+\begin{equation*}
+|\operatorname{Syl}_p(G)| = [G: N_G(P)],
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec-p-groups.html#p-839" class="internal">in-context</a></span>
+<div class="para">and hence</div>
+<div class="displaymath process-math">
+\begin{equation*}
+| \operatorname{Syl}_p(G)| \mid m.
+\end{equation*}
+</div>
+</div></li>
+</ol>
+</div>
+<span class="incontext"><a href="sec-sylowthm.html#p-839" class="internal">in-context</a></span>
 </body>
 </html>

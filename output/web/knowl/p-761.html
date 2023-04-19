@@ -12,12 +12,15 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para logical"><ol class="decimal">
-<li><div class="para">Then <span class="process-math">\(G\)</span> acts on <span class="process-math">\(G\)</span> by conjugation (<span class="process-math">\(g \cdot g' = gg'g^{-1}\)</span>). For all <span class="process-math">\(g \in G\text{,}\)</span> the orbit of <span class="process-math">\(g\)</span> is the conjugacy class of <span class="process-math">\(g\text{,}\)</span> <span class="process-math">\(\operatorname{Stab}_G(g)=C_G(G)\)</span> and <span class="process-math">\(|[g]_c| = [G : C_G(g)]\text{.}\)</span>
-</div></li>
-<li><div class="para">Then <span class="process-math">\(G\)</span> acts on the power set <span class="process-math">\(P(G)=\{S\mid S\subseteq G\}\)</span> by conjugation (<span class="process-math">\(g \cdot S = gSg^{-1}\)</span>). For all <span class="process-math">\(S \in P(G)\text{,}\)</span> <span class="process-math">\(\operatorname{Stab}_G(S)=N_G(S)\)</span> and <span class="process-math">\(|\operatorname{Orbit}_G(S)| = [G : N_G(S)]\text{.}\)</span>
-</div></li>
-</ol></div>
+<div class="para logical">
+<div class="para">The elements of <span class="process-math">\(Z(G)\)</span> are precisely the group elements that are conjugate to only themselves; that is, they are the one-element orbits for the conjugation action. Because the conjugacy classes (orbits of the conjugation action) partition <span class="process-math">\(G\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-conjclass.html">
+\begin{equation*}
+|G| = |Z(G)| + \sum_i^r [g_i]_c.
+\end{equation*}
+</div>
+<div class="para">For each <span class="process-math">\(g_i\)</span> as in the statement, by <a href="" class="xref" data-knowl="./knowl/thm-conjclass.html" title="Theorem 4.35">Theorem 4.35</a>, we have <span class="process-math">\([G: C_G(g_i)] =[g_i]_c\text{.}\)</span> The class equation follows from substituting this into the equation above.</div>
+</div>
 <span class="incontext"><a href="sec-orbit-stab-class-eq.html#p-761" class="internal">in-context</a></span>
 </body>
 </html>
