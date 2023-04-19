@@ -12,32 +12,23 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<div class="para">Ignoring the rules for scaling by <span class="process-math">\(R\text{,}\)</span> we know each of the frist four results holds for abelian groups (and the maps are the same). So, we merely need to prove that the rules for scaling are respected in each case. In more detail:</div> <div class="para logical">
-<div class="para">For the UMP, we already know that <span class="process-math">\(\ov{f}\)</span> is a well-defined homomorphism of groups under <span class="process-math">\(+\)</span> and that it is the unique one such that <span class="process-math">\(\ov{f} \circ \can = f\text{.}\)</span> It remains only to show <span class="process-math">\(\ov{f}\)</span> preserves scaling: This follows quickly from the definitions:</div>
+<div class="para">I leave some of the details as an exercise, but I will check a few of the necessary things:</div> <div class="para logical">
+<div class="para">We already showed that the rule for scaling is well defined, and we know from 817 that the rule for addition is well-defined and that <span class="process-math">\((M/IM, +)\)</span> is an abelian group. To show <span class="process-math">\(M/IM\)</span> is an <span class="process-math">\(R/I\)</span>-module, there remain four axioms to verify. For instance,</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\ov{f}(r (m +N)) = \ov{f} (rm + N) = f(rm) = r f(m) = r \ov{f}(m + N).
+((r+I)(s+I))(m +IM) = (rs + I)(m + IM) = (rsm + IM) = (r+I)(sm +IM) = (r+I)((s+I)(m+IM)),
 \end{equation*}
 </div>
-<div class="para">where the third equation uses that <span class="process-math">\(f\)</span> preserves scaling.</div>
+<div class="para">which verifies one of them; the other proofs are similar.</div>
 </div> <div class="para logical">
-<div class="para">For the First Isomorphism Theorem, we already know that there is an isomorphism of abelian groups under <span class="process-math">\(+\text{,}\)</span>
-</div>
+<div class="para">Next, let me verify that the function <span class="process-math">\(\ov{f}\)</span> is a well-defined <span class="process-math">\(R/I\)</span>-map: Let <span class="process-math">\(g: M \to N/IN\)</span> be the composition of <span class="process-math">\(R\)</span>-maps <span class="process-math">\(M \xra{f} N \to N/IN\)</span> (the second one being the canonical one), so that <span class="process-math">\(g(m) = f(m) + IN\text{.}\)</span> Since <span class="process-math">\(f(\sum_i a_i m_i) = \sum a_i f(m_i) \in IN\)</span> for any <span class="process-math">\(a_i\)</span>'s belonging to <span class="process-math">\(I\)</span> and <span class="process-math">\(m_i\)</span>'s belonging to <span class="process-math">\(M\text{,}\)</span> we have <span class="process-math">\(IM \subseteq \ker(g)\text{.}\)</span> By the UMP for quotient modules, there is an induced <span class="process-math">\(R\)</span>-map <span class="process-math">\(\ov{f}: M/IM \to N/IN\)</span> given by <span class="process-math">\(\ov{f}(m + IM) = f(m) + IN\text{.}\)</span> The map <span class="process-math">\(\ov{f}\)</span> is so far only known to be an <span class="process-math">\(R\)</span>-map, but it is in fact an <span class="process-math">\(R/I\)</span>-map since</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\ov{h}: M/\ker(h) \xra{\cong} \im(h),
+\ov{f}((r + I)(m +IM)) =   \ov{f}(rm +IM) = f(rm) + IN = rf(m) + IN = (r+I)(f(m) + IN).
 \end{equation*}
 </div>
-<div class="para">given by <span class="process-math">\(\ov{h}(m + \ker(h)) = h(m)\text{,}\)</span> and it remains only to show this map preserves scaling. This is a special case of what we proved in part (0).</div>
-</div> <div class="para logical">
-<div class="para">For the second isomorphism theorem, we need to first check that <span class="process-math">\(A+B\)</span> and <span class="process-math">\(A \cap B\)</span> are submodules. From 817 we already know they are subgroups under <span class="process-math">\(+\text{,}\)</span> and it is evident from the definitions that each is closed under scaling by elements of <span class="process-math">\(R\text{.}\)</span> Now, we know from 817 that there is an isomorphism of abelian groups <span class="process-math">\(h: A/(A \cap B) \xra{\cong} (A+B)/B\)</span> given by <span class="process-math">\(h(a + (A\cap B)) = a + B\text{.}\)</span> It remains only to show <span class="process-math">\(h\)</span> preserves scaling:</div>
-<div class="displaymath process-math">
-\begin{equation*}
-h(r(a+(A \cap B))) = h(ra + A \cap B) = ra + B = r(a +B) = rh(a + (A \cap B)).
-\end{equation*}
+<div class="para">The final assertions are clear from the formula for <span class="process-math">\(\ov{f}\)</span> for an <span class="process-math">\(R\)</span>-map <span class="process-math">\(f\text{.}\)</span>
 </div>
-</div> <div class="para">For the third, we already know (from 817) that <span class="process-math">\(B/A\)</span> is a subgroup of <span class="process-math">\(M/A\)</span> under <span class="process-math">\(+\text{.}\)</span> Given <span class="process-math">\(r \in R\)</span> and <span class="process-math">\(b +A \in B/A\)</span> we have <span class="process-math">\(r(b+A) = rb + A\)</span> which belongs to <span class="process-math">\(B/A\)</span> since <span class="process-math">\(rb \in B\text{.}\)</span> This proves <span class="process-math">\(B/A\)</span> is a submodule of <span class="process-math">\(M/A\text{.}\)</span> Also from 817 we know there is an isomorphism of abelian groups <span class="process-math">\(h: (M/A)/(B/A) \to M/B\)</span> given by <span class="process-math">\(h((m+A) + B/A) = m + B\)</span> and it remains only to show it is <span class="process-math">\(R\)</span>-linear: <span class="process-math">\(h(r((m+A) + B/A)) =h(r(m+A) + B/A) = h((rm + A) + B/A) = rm + B = r(m +B) = r h((m+A) + B/A)\text{.}\)</span>
-</div> <div class="para">The Lattice Theorem is the most complicaed to gerenlize. From 817 we know thre is a bijection between the set of sub groups of <span class="process-math">\(M\)</span> and that contain <span class="process-math">\(N\)</span> and subgroups of the quotient group <span class="process-math">\(M/N\text{,}\)</span> and the maps are the same as given in the statment. We just need to prove that these maps send submodules to submodules. If <span class="process-math">\(K\)</span> is a submodule of <span class="process-math">\(M\)</span> containing <span class="process-math">\(N\text{,}\)</span> then by part (3) we know <span class="process-math">\(K/N\)</span> is a submodule of <span class="process-math">\(M/N\text{.}\)</span>
-</div> <div class="para">If <span class="process-math">\(T\)</span> is a submodule of <span class="process-math">\(M/N\text{,}\)</span> then <span class="process-math">\(\pi^{-1}(T)\)</span> is an abelian group. For <span class="process-math">\(r \in R\)</span> adn <span class="process-math">\(m \in \pi^{-1}(T)\)</span> we have <span class="process-math">\(\pi(m) \in T\)</span> and hence <span class="process-math">\(\pi(rm) = r\pi(m) \in T\)</span> too, since <span class="process-math">\(T\)</span> is a submodule. This proves <span class="process-math">\(\pi^{-1}(T)\)</span> is a submodule.</div></article><span class="incontext"><a href="sec-quote.html#proof-72" class="internal">in-context</a></span>
+</div></article><span class="incontext"><a href="sec-modgen.html#proof-72" class="internal">in-context</a></span>
 </body>
 </html>

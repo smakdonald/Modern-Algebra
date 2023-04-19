@@ -12,13 +12,21 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para logical"><ol class="decimal">
-<li><div class="para">For a specific example, the field of fractions of <span class="process-math">\(\mathbb{Z}\)</span> is <span class="process-math">\(\mathbb{Q}\text{.}\)</span>
-</div></li>
-<li><div class="para">or another, if <span class="process-math">\(d\)</span> is a squarefree integer and <span class="process-math">\(R = \mathbb{Z}[\sqrt{d}]\)</span> is an integral domain and we will show soon that its field of fractions is (isomorphic to) the field <span class="process-math">\(\mathbb{Q}(\sqrt{d})\text{.}\)</span>
-</div></li>
-<li><div class="para">For yet another, <span class="process-math">\({\mathbb{R}}[x]\)</span> is an integral domain. Its field of fractions, usually denoted <span class="process-math">\({\mathbb{R}}(x)\)</span> constists of all <em class="emphasis">rational functions</em>. This last example could be generalized by replacing <span class="process-math">\({\mathbb{R}}\)</span> with any field and also by using any number of variables.</div></li>
-</ol></div>
+<div class="para logical">
+<div class="para">We also need to be sure our rules for <span class="process-math">\(+\)</span> and <span class="process-math">\(\cdot\)</span> make sense and are independent of representation. They “make sense” since we assume <span class="process-math">\(S\)</span> is closed under <span class="process-math">\(\cdot\text{.}\)</span> To show <span class="process-math">\(+\)</span> is independent of representations, say <span class="process-math">\(\frac{r}{s} \sim \frac{r''}{s''}\text{,}\)</span> so that <span class="process-math">\(rs'' = r''s\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{r}{s} + \frac{r'}{s'} := \frac{rs' + r's}{ss'}
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{r''}{s''} + \frac{r'}{s'} := \frac{r''s' + r's''}{s''s'}
+\end{equation*}
+</div>
+<div class="para">and so we need to show <span class="process-math">\((rs' + r's)(s''s') \sim (r''s' + r's'')(ss')\text{.}\)</span> This is clear upon expaning out both sides and using <span class="process-math">\(rs'' = r''s\text{.}\)</span> In a similar way one shows <span class="process-math">\(\cdot\)</span> is well-defined.</div>
+</div>
 <span class="incontext"><a href="sec-field-of-fractions.html#p-1525" class="internal">in-context</a></span>
 </body>
 </html>

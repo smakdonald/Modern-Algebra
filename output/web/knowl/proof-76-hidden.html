@@ -11,31 +11,26 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><article class="hiddenproof"><div class="para logical">
-<div class="para">{} Given a function <span class="process-math">\(j: B \to N\text{,}\)</span> define <span class="process-math">\(f: M\to N\)</span> as follows: Given <span class="process-math">\(m \in M\text{,}\)</span> by Lemma  <span class="process-math">\(m\)</span> can be written uniquely as a finite sum <span class="process-math">\(m = \sum_{b \in B} r_b b\text{.}\)</span> We set</div>
+<div class="para">Let <span class="process-math">\(R\)</span> be a non-zero commutative ring and let <span class="process-math">\(M\)</span> be a free <span class="process-math">\(R\)</span>-module with two {} bases, <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{.}\)</span> We need to show <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> have the same cardinality. Since <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are finite, by Example  the assertion is equivalent to the following statement:</div>
+<pre class="code-display tex2jax_ignore">
+                \begin{quote} For a non-zero commutative ring $R$,
+                if there is an isomorphism $R^n \cong R^m$ of $R$-modules for some integers $n$ and $m$, then $n = m$.
+                \end{quote}
+                </pre>
+</div> <div class="para">I will prove this statement by taking it as already known that it holds in the special case when <span class="process-math">\(R\)</span> is a field. (We will prove it for fields later.)</div> <div class="para">Since <span class="process-math">\(R\)</span> is not the zero ring, it contains at least one maximal ideal <span class="process-math">\(I\text{.}\)</span> (This is proven using Zorn's Lemma.) Recall that <span class="process-math">\(R/I\)</span> is a field.</div> <div class="para">Given an isomorphism <span class="process-math">\(f: R^n \xra{\cong} R^m\)</span> of <span class="process-math">\(R\)</span>-modules, by Lemma  we have an induced homomorphism of <span class="process-math">\(R/I\)</span>-module <span class="process-math">\(\ov{f}: R^n/IR^n \to R^m /IR^m\text{.}\)</span> Likewise, the inverse map <span class="process-math">\(f^{-1}: R^m \xra{\cong} R^n\)</span> induces a map <span class="process-math">\(\ov{f^{-1}}: R^m/IR^m \to R^n /IR^n\text{.}\)</span> Also by that Lemma we have <span class="process-math">\(\ov{f} \circ \ov{f^{-1}} = \ov{f \circ f^{-1}} = \ov{\id} = \id\)</span> and similarly <span class="process-math">\(\ov{f^{-1}} \circ \ov{f}\)</span> is the identity. That is, we have an isomorphism <span class="process-math">\(R^n/IR^n \cong R^m /IR^m\)</span> of <span class="process-math">\(R/I\)</span>-modules.</div> <div class="para logical">
+<div class="para">Next, I claim that there is an isomorphism</div>
 <div class="displaymath process-math">
 \begin{equation*}
-f(m) = \sum_{b \in B} r_b j(b).
+R^n/IR^n \cong (R/I)^n
 \end{equation*}
 </div>
-<div class="para">Note that <span class="process-math">\(f\)</span> is a well-defined function by the uniqueness of the equation <span class="process-math">\(m = \sum_{b \in B} r_b b\text{.}\)</span>
-</div>
-</div> <div class="para logical">
-<div class="para">We need to prove <span class="process-math">\(f\)</span> is an <span class="process-math">\(R\)</span>-module homomorphism. I'll just show it preserves scaling — the proof for addition is similar. Given <span class="process-math">\(x \in R\)</span> and <span class="process-math">\(m \in M\text{,}\)</span> we have <span class="process-math">\(m = \sum_{b \in B} r_b b\)</span> for some <span class="process-math">\(r_b \in R\text{,}\)</span> and hence <span class="process-math">\(xm = \sum_b (xr_b) b\text{.}\)</span> By definition of <span class="process-math">\(f\text{,}\)</span>
-</div>
+<div class="para">of <span class="process-math">\(R/I\)</span>-modules. Define <span class="process-math">\(R^n \to (R/I)^n\)</span> in the evident way (modding out by <span class="process-math">\(I\)</span> entry-wise). It is a surjective map of <span class="process-math">\(R\)</span>-modules with kernel <span class="process-math">\(I R^n\)</span> and thus, by the First Isomorphism Theorem, it induces an isomorphism</div>
 <div class="displaymath process-math">
 \begin{equation*}
-f(xm) = \sum_b (xr_b) j(b) = x \sum_b r_b j(b) = x f(m).
+g: R^n/I R^n \xra{\cong} (R/I)^n
 \end{equation*}
 </div>
-</div> <div class="para">Finally, for any <span class="process-math">\(y \in B\)</span> we have <span class="process-math">\(y = \sum_{b \in B} r_b b\)</span> where <span class="process-math">\(r_b = 1\)</span> if <span class="process-math">\(b = y\)</span> and <span class="process-math">\(r_b = 0\)</span> if <span class="process-math">\(b \ne y\text{.}\)</span> So <span class="process-math">\(f(y) = j(y)\)</span> by construction. This proves existence.</div> <div class="para logical">
-<div class="para">{} Let <span class="process-math">\(g:M\to N\)</span> be another <span class="process-math">\(R\)</span>-module homomorphism such that <span class="process-math">\(g(b)=g(b)\)</span> for each <span class="process-math">\(b \in B\text{.}\)</span> Given <span class="process-math">\(m \in M\)</span> we have <span class="process-math">\(m = \sum_{b \in B} r_b b\)</span> and hence</div>
-<div class="displaymath process-math">
-\begin{equation*}
-g(m) = \sum_b g(r_b (b)  = \sum_b r_b g(b)  = 
-\sum_b r_b j(b) = f(m).
-\end{equation*}
-</div>
-<div class="para">and hence <span class="process-math">\(g = f\text{.}\)</span>
-</div>
+<div class="para">given by <span class="process-math">\(g((r_1, \dots, r_n)^\tau + IR^n) = (r_1 + I, \dots, r_n + I)^\tau\)</span> (where <span class="process-math">\(\tau\)</span> denotes taking the transpose). Now, what we have said so far only shows that <span class="process-math">\(g\)</span> is isomorphism of <span class="process-math">\(R\)</span>-modules, but it is easy to see that <span class="process-math">\(g\)</span> is in fact <span class="process-math">\(R/I\)</span>-linear (I'll leave that to you) and thus it is an isomorphism of <span class="process-math">\(R/I\)</span>-modules.</div>
+</div> <div class="para">Putting the results proven so far together, we conclude that <span class="process-math">\((R/I)^n\)</span> and <span class="process-math">\((R/I)^m\)</span> are isomorphic as <span class="process-math">\(R/I\)</span>-modules. Since <span class="process-math">\(R/I\)</span> is a field and since we are assuming the result holds for fields, we deduce that <span class="process-math">\(n = m\text{.}\)</span>
 </div></article></body>
 </html>

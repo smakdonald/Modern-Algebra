@@ -395,7 +395,7 @@
      *************
       -->
       
-      <chapter xml:id="intro-groups">
+      <chapter xml:id="ch-intro-groups">
         <title>Intro to Groups</title>
       
         <section xml:id="group-basics">
@@ -538,7 +538,7 @@
             
                 <p>
                   <ol>
-                    <li xml:id="trivial-group"> 
+                    <li xml:id="trivial-group"> <title>Trivial Subgroup</title>
                       <p>
                         The <term>trivial subgroup</term> is the group with a single element <m>\{e\}</m>
                         <notation><usage><m>\{e\}</m></usage><description>the trivial group: e.g. the group containing only an identity element</description></notation>          
@@ -547,17 +547,17 @@
       
                     <li>
                       <p>
-                        <m>(\Z,+), (\Q,+), (\R,+),</m> and <m>(\C,+)</m> are all abelian groups, where <m>+</m> denotes traditional addition.
+                        <m>(\Z,+), (\Q,+), (\R,+),</m> and <m>(\C,+)</m> each form an abelian group, where <m>+</m> denotes traditional addition.
                       </p>
                     </li>
       
                     <li>
                       <p>
-                        <m>\Q^+</m> and <m>\R^+</m> are groups under traditional multiplication.
+                        <m>\Q^+</m> and <m>\R^+</m> form groups under traditional multiplication.
                       </p>
                     </li>
       
-                    <li>
+                    <li> <title>General Linear Group</title>
                       <p>
                         For any positive integer <m>n</m>, let 
                         <me>
@@ -568,14 +568,50 @@
                       </p>
                     </li>
       
+                    <li> <title><m>\Z/(n)</m></title>
+                      <p>
+                        For any <m>n</m>, let <m>\mathbb{Z}/(n)</m> denote the integers modulo <m>n</m>. Then <m>(\mathbb{Z}/(n), +)</m> forms an abelian group where <m>+</m> denotes addition modulo <m>n</m>.
+                      </p>
+                    </li>
+
                     <li>
                       <p>
-                        For any <m>n</m>, let <m>\mathbb{Z}/(n)</m> denote the integers modulo <m>n</m>. Then <m>(\mathbb{Z}/(n), +)</m> is an abelian group where <m>+</m> denotes addition modulo <m>n</m>.
+                        The subset <m>L=\{1,-1,i,-i\}</m> of the complex numbers forms an abelian group under multiplication.
                       </p>
                     </li>
                   </ol>
                 </p>
             </example>
+
+            <p>The following example illustrates a few important examples of something called a <xref text="title" ref="def-group-of-units"/>, which is defined explicitely in terms of rings, which are explored more generally in <xref ref="part-rings"/></p>
+
+            <example xml:id="ex-group-of-units">
+              <title>Groups of Units</title>
+                
+                <statement>
+                  <p> Each of the following subsets form an abelian group under multiplication.
+                    <ol>
+                      <li>
+                        <p>
+                          The subset <m>\Z^\times=\{-1,1\}</m> of <m>\Z</m>.
+                        </p>
+                      </li>
+                      
+                      <li>
+                        <p>
+                          <m>\Q^\times=\Q\setminus\{0\}</m>, <m>\R^\times=\R\setminus\{0\}</m>, and <m>\C^\times=\C\setminus\{0\}</m>.
+                        </p>
+                      </li>
+
+                      <li>
+                        <p>
+                          For each <m>n\in\N</m>, the subset <m>\Z/(n)^\times=\{k\in\Z/(n)|\gcd(k,n)=1\}</m> of <m>\Z/(n)</m>.
+                        </p>
+                      </li>
+                    </ol>
+                  </p>
+                </statement>
+              </example>
             
             <lemma xml:id="lem-group-exponents">
               <title>Group Exponents</title>
@@ -652,7 +688,13 @@
                   </ol>
                 </p>
               </proof>
-            </lemma>          
+            </lemma>     
+            
+            <warning> <title>Additive Exponents</title>
+              <p>
+                When we refer to exponents in groups, we are talking about repeated applications of the given operation, which in many cases is denoted multiplicatively, hence the exponent notation. However, for additive groups, such as <m>(\Z,+)</m>, we find ourselves in the uncomfortable situation where statements such as <m>2^3=2+2+2=6</m> are technically true. Thus, in additive groups it is more customary to denote expressions such as the one above in more traditional notation: namely, <m>3\cdot (2)=2+2+2=6</m>.
+              </p>
+            </warning>
     
             <theorem xml:id="thm-dirprop-gp">
               <title>Direct Products of Groups</title>
@@ -741,8 +783,12 @@
                       In the additive groups <m>\Z</m>, <m>\Q</m>, <m>\R</m>, and <m>\C</m> every nonzero (i.e., nonidentity) element has infinite order.
                     </p>
                   </li>
-      
-                  
+
+                  <li>
+                    <p>
+                      In the additve group <m>\Z/(6)</m>, the element <m>2</m> has order <m>3</m> because <m>2+2=4</m> and <m>2+2+2=0</m>.
+                    </p>
+                  </li>
                 </ol>
       
               </p>
@@ -776,21 +822,6 @@
                 </p>
               </statement>
             </theorem>
-      
-            <proposition xml:id="prop-order-4-abelian">
-              <title>Marley's Conjecture</title>
-              <statement>
-                <p>
-                  Every group of order <m>4</m> is abelian.
-                </p>
-              </statement>
-        
-              <proof>
-                <p>
-                  Let <m>G</m> be a group with <m>4</m> elements, and suppose there are elements <m>a,b\in G</m> such that <m>ab\neq ba</m> for some elements <m>a, b\in G</m>. Since <m>ab \neq ba</m>, we must have <m>a \neq b</m>, <m>a \neq e</m>, and <m>b\neq e</m>. Since <m>G</m> has only <m>4</m> elements and <m>ab \neq ba</m>, either <m>ab \in \{e, a, b\}</m> or <m>ba \in\{e, a, b\}</m>. Without loss, say the former occurs. But <m>ab = e</m> implies <m>b=a\inv</m> and we know <m>a\inv</m> commutes with <m>a</m>, and hence this is not possible. If <m>ab = a</m>, then <m>b = e</m> and if <m>ab = b</m> then <m>a = 1</m>, both of which are impossible. Since <m>a, b</m> were arbitrary, <m>G</m> must be abelian.
-                </p>
-              </proof>
-            </proposition>
       
             <lemma xml:id="lem-order-lemma">
               <statement>
@@ -845,7 +876,7 @@
             <theorem xml:id="prop-group-element-order">
               <statement>
                 <p>
-                  Let <m>G, H</m> be groups and let <m>x, y</m> be elements of <m>G</m>. Then <m>|x|=\left|\{x^n \ | n\in \Z \}\right|</m> and in particular <m>|x| \leq |G|</m>.
+                  Let <m>G</m> be a group and let <m>x, y</m> be elements of <m>G</m>. Then <m>|x|=\left|\{x^n \ | n\in \Z \}\right|</m> and in particular <m>|x| \leq |G|</m>.
                 </p>
               </statement>
             </theorem>
@@ -858,124 +889,19 @@
               </statement>
             </lemma>
 
-            <theorem xml:id="thm-dp-order">
-              <statement>
-                <p>
-                  Let <m>g_1\times\cdots\times g_n\in G_1\times\cdots\times G_n</m>. Then <m>|g_1\times\cdots\times g_n|=\lcm(|g_1|,\dots,|g_n|</m>.
-                </p>
-              </statement>
-            </theorem>
-
             <p>Alas, here we must commit a heinous sin in the world of mathematics: ending a section on a lemma. It goes against everything a lemma stands for, yet we currently lack the tools necessary to take the consequences of order to their logical conclusion. Eventually the long and winding road of group theory will lead us to <xref ref="sec-cosets"/> and the stronghold of <xref text="title" ref="thm-lagrange"/>, one of the quintessential results of the field. However, <xref provisional="lemma"/> will be back long before then in a delightfully cyclic fashion...</p>
 
           </subsection>
     
           <exercises>
     
-            <exercisegroup> <title>Computations and Counterexamples</title>
+            <exercisegroup> <title>Examples and Specifics</title>
               
               <introduction>
                 <p>
                 </p>
               </introduction>
-    
-              <exercise xml:id="exe-not-groups">
-                <title>Inches From Greatness...</title>
-                <statement>
-                  <p>
-                    Explain why each of the following is <em>not</em> a group.
-    
-                    <ol>
-                      <li>
-                        <p>
-                          <m>(\N,+)</m>
-                        </p>
-                      </li>
-    
-                      <li>
-                        <p>
-                          <m>(\Z,\times)</m>
-                        </p>
-                      </li>
-    
-                      <li>
-                        <p>
-                          <m>(\O,+)</m>, where <m>\O</m> is the set of odd integers.
-                          <notation><usage><m>\O</m></usage><description>the set of odd integers</description></notation>          
 
-                        </p>
-                      </li>
-    
-                      <li>
-                        <p>
-                          <m>(\Z/(n),\times)</m> for all <m>n&lt;1</m>
-                        </p>
-                      </li>
-                    </ol>
-                  </p>
-                </statement>
-              </exercise>
-    
-              <exercise xml:id="exe-groups-but-false">
-                <title>Woulnd't it be Nice</title>
-                <p>
-                  Find counterexamples to each of the following (false) statements.
-    
-                  <ol>
-                    <li>
-                      <p>
-                        If <m>g^2=e</m> then <m>g=e</m>
-                      </p>
-                    </li>
-    
-                    <li>
-                      <p>
-                        If <m>g^2=h^2</m> then <m>g=h</m>
-                      </p>
-                    </li>
-    
-                    <li>
-                      <p>
-                        For all <m>g\in G</m> there exists some <m>h\in G</m> such that <m>g=h^2</m>.
-                      </p>
-                    </li>
-                    
-                  </ol>
-                </p>
-              </exercise>
-    
-              <exercise xml:id="exe-finite-order">
-                <title>Product Order</title>
-                <statement>
-                  <p>
-                    Prove or disprove: if <m>x,y</m> have finite order then <m>xy</m> has finite order. 
-                  </p>
-                </statement>
-              </exercise>
-    
-              <exercise xml:id="exe-lr-inverses">
-                <title>Left and Right Inverses</title>
-                <statement>
-                  <p>
-                    Give an example of a pair <m>(G,\cdot)</m> that satisfies axioms 1 and 2 of <xref ref="def-group" /> and an element of <m>G</m> that has a <em>left</em> inverse but not a <em>right</em> inverse.
-                  </p>
-                </statement>
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-    
-            </exercisegroup>
-    
-            <exercisegroup> <title>Formal Proofs</title>
-              
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-            
               <exercise xml:id="exe-first-group-verifications">
                 <title>Group Verification</title>
                 <statement>
@@ -1015,33 +941,131 @@
                 </solution>
               </exercise>
     
-              <exercise xml:id="exe-groups-of-units">
-                <title>Groups of Units</title>
-                
+              <exercise xml:id="exe-not-groups">
+                <title>Inches From Greatness...</title>
                 <statement>
                   <p>
+                    Explain why each of the following is <em>not</em> a group.
+    
                     <ol>
                       <li>
                         <p>
-                          The subset <m>\Z^\times=\{-1,1\}\sse\Z</m> is an abelian group under multiplication.
-                        </p>
-                      </li>
-                      
-                      <li>
-                        <p>
-                          <m>\Q^\times=\Q\setminus\{0\}</m>, <m>\R^\times=\R\setminus\{0\}</m>, and <m>\C^\times=\C\setminus\{0\}</m> are each abelian groups under multiplicaton.
+                          <m>(\N,+)</m>
                         </p>
                       </li>
     
                       <li>
                         <p>
-                          Let <m>p</m> be a prime integer. Then <m>\mathbb{Z}/(p)^\times=\mathbb{Z}/(p)\setminus\{0\}</m> is an abelian group under multiplicaton.
+                          <m>(\Z,\times)</m>
+                        </p>
+                      </li>
+    
+                      <li>
+                        <p>
+                          <m>(\O,+)</m>, where <m>\O</m> is the set of odd integers.
+                          <notation><usage><m>\O</m></usage><description>the set of odd integers</description></notation>          
+
+                        </p>
+                      </li>
+    
+                      <li>
+                        <p>
+                          <m>(\Z/(n),\times)</m> for all <m>n&lt;1</m>
                         </p>
                       </li>
                     </ol>
-                    These are examples of <term>groups of units</term>, which will be defined explicitely and explored more generally later on See: <xref ref="def-group-of-units"/>
                   </p>
                 </statement>
+              </exercise>
+
+              <exercise xml:id="exe-group-of-units-in-zp">
+                <title><m>\Z/(p)^\times</m></title>
+
+                <statement>
+                  <p>Prove that <m>\Z/(p)^\times=\mathbb{Z}/(p)\setminus\{0\}</m></p>
+                </statement>
+                
+              </exercise>
+    
+              <exercise xml:id="exe-groups-but-false">
+                <title>Woulnd't it be Nice</title>
+                <p>
+                  Find counterexamples to each of the following (false) statements.
+    
+                  <ol>
+                    <li>
+                      <p>
+                        If <m>g^2=e</m> then <m>g=e</m>
+                      </p>
+                    </li>
+    
+                    <li>
+                      <p>
+                        If <m>g^2=h^2</m> then <m>g=h</m>
+                      </p>
+                    </li>
+    
+                    <li>
+                      <p>
+                        For all <m>g\in G</m> there exists some <m>h\in G</m> such that <m>g=h^2</m>.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        A group of order <m>n</m> contains an element of order <m>n</m>.
+                      </p>
+                    </li>
+                    
+                  </ol>
+                </p>
+              </exercise>
+              
+              <exercise xml:id="exe-finite-order">
+                <title>Product Order</title>
+                <statement>
+                  <p>
+                    Prove or disprove: if <m>x,y</m> have finite order then <m>xy</m> has finite order. 
+                  </p>
+                </statement>
+              </exercise>
+    
+              <exercise xml:id="exe-lr-inverses">
+                <title>Left and Right Inverses</title>
+                <statement>
+                  <p>
+                    Give an example of a pair <m>(G,\cdot)</m> that satisfies axioms 1 and 2 of <xref ref="def-group" /> and an element of <m>G</m> that has a <em>left</em> inverse but not a <em>right</em> inverse.
+                  </p>
+                </statement>
+                <solution>
+                  <p>
+                    Coming soon to an OER near you!
+                  </p>
+                </solution>
+              </exercise>
+    
+            </exercisegroup>
+    
+            <exercisegroup> <title>Properties and Future Lemmas</title>
+              
+              <introduction>
+                <p>
+                </p>
+              </introduction>
+
+              <exercise xml:id="prop-order-4-abelian">
+                <title>Marley's Conjecture</title>
+                <statement>
+                  <p>
+                    Every group of order <m>4</m> is abelian.
+                  </p>
+                </statement>
+          
+                <solution>
+                  <p>
+                    Let <m>G</m> be a group with <m>4</m> elements, and suppose there are elements <m>a,b\in G</m> such that <m>ab\neq ba</m> for some elements <m>a, b\in G</m>. Since <m>ab \neq ba</m>, we must have <m>a \neq b</m>, <m>a \neq e</m>, and <m>b\neq e</m>. Since <m>G</m> has only <m>4</m> elements and <m>ab \neq ba</m>, either <m>ab \in \{e, a, b\}</m> or <m>ba \in\{e, a, b\}</m>. Without loss, say the former occurs. But <m>ab = e</m> implies <m>b=a\inv</m> and we know <m>a\inv</m> commutes with <m>a</m>, and hence this is not possible. If <m>ab = a</m>, then <m>b = e</m> and if <m>ab = b</m> then <m>a = 1</m>, both of which are impossible. Since <m>a, b</m> were arbitrary, <m>G</m> must be abelian.
+                  </p>
+                </solution>
               </exercise>
     
               <exercise xml:id="exe-more-group-properties">
@@ -1059,6 +1083,10 @@
                       </li>
 
                       <li>
+                        Let <m>n\in\Z</m>. Then <m>(xyx\inv)^n=xy^nx\inv.</m>
+                    </li>
+
+                      <li>
                         <p>
                           If <m>G</m> is abelian then <m>(a_1 \dots a_n)^{-1} = a_1^{-1} \dots a_n^{-1}</m>.
                         </p>
@@ -1071,15 +1099,6 @@
                     Coming soon to an OER near you!
                   </p>
                 </solution>
-              </exercise>
-
-              <exercise xml:id="exe-abelian-product-abelian">
-                <title>Abelian Direct Prodcuts</title>
-                <statement>
-                  <p>
-                    The direct product of groups is abelian if and only if every factor of the product is abelian.
-                  </p>
-                </statement>
               </exercise>
     
               <exercise xml:id="exe-every-element-order-2">
@@ -1554,11 +1573,11 @@
       
                   <li>
                     <p>
-                      <m>\Q^\times\leq\R^\times\leq\C^\times</m>
+                      <m>\Z^\times\leq\Q^\times\leq\R^\times\leq\C^\times</m>
                     </p>
                   </li>
       
-                  <li>
+                  <li xml:id="ex-nz">
                     <p>
                       Let <m>n\in\N</m> and define <m>n\Z=\{x\in\Z|x=nk\;\text{for some}\;k\in\Z\}</m>. Then <m>n\Z\leq\Z</m> for all <m>n</m>.
                       <notation><usage><m>n\Z</m></usage><description><m>n\Z=\{x\in\Z|x=nk\;\text{for some}\;k\in\Z\}</m></description></notation> 
@@ -1567,6 +1586,8 @@
                 </ol>
               </p>
             </example>
+
+            <remark><p>In fact, in the case of <xref ref="ex-nz"/>, these turn out to be the <em>only</em> subgroups of <m>\Z</m>, a fact which you may prove in <xref ref="exe-subgroups-of-z"/> </p></remark>
       
             <theorem xml:id="thm-subgroup-properties">
               <title>Properties of Subgroups</title>
@@ -2108,6 +2129,13 @@
               </p>
             </example>
 
+            <paragraphs>
+              <title>Additive vs. Multiplicative Cyclic Groups</title>
+              <p></p>
+
+            </paragraphs>
+
+
             <proposition xml:id="prop-cyclic-equivalencies">
               <statement>
                 <p>
@@ -2366,7 +2394,7 @@
         </section>
       </chapter> 
 
-      <chapter xml:id="gp-homs">
+      <chapter xml:id="ch-gp-homs">
         <title>Homomorphisms and Isomorphisms</title>
     
         <section xml:id="sec-gphoms">
@@ -3270,7 +3298,7 @@
     
       </chapter>
 
-      <chapter xml:id="normal-quotient-groups">
+      <chapter xml:id="ch-normal-quotient">
         <title>Normal and Quotient Groups</title>
     
         <section xml:id="sec-cosets">
@@ -4513,7 +4541,7 @@
 
                   <li>
                     <p>
-                      We have <m>\overline{f}(xN) = e_H</m> iff <m>f(x) = e_H</m> iff <m>x \in \operatorname{Ker}(f)</m> iff <m>xN \in  \operatorname{Ker}(f)/N</m>. If <m>xN \in \operatorname{Ker}(f)/N</m> for some <m>x \in G</m>, then <m>xN = yN</m> for some <m>y \in \operatorname{Ker}(f)</m> and hence <m>x = yz</m> for some <m>z \in N</m>. Since <m>N \subseteq \operatorname{Ker}(f)</m>, we have <m>x \in \operatorname{Ker}(f)</m>. ◻
+                      We have <m>\overline{f}(xN) = e_H</m> iff <m>f(x) = e_H</m> iff <m>x \in \operatorname{Ker}(f)</m> iff <m>xN \in  \operatorname{Ker}(f)/N</m>. If <m>xN \in \operatorname{Ker}(f)/N</m> for some <m>x \in G</m>, then <m>xN = yN</m> for some <m>y \in \operatorname{Ker}(f)</m> and hence <m>x = yz</m> for some <m>z \in N</m>. Since <m>N \subseteq \operatorname{Ker}(f)</m>, we have <m>x \in \operatorname{Ker}(f)</m>.
                     </p>
                   </li>
                 </ol>
@@ -4971,7 +4999,7 @@
     
       </chapter>
 
-      <chapter xml:id="group-actions">
+      <chapter xml:id="ch-group-actions">
         <title>Group Actions</title>
   
         <section xml:id="graction">
@@ -5013,11 +5041,11 @@
             </statement>
           </definition>
     
-          <remark>
+          <paragraphs> <title>Notation</title>
             <p>
               To make the first axiom clearer, throughout this section we will write <m>\cdot</m> for the action of <m>G</m> on <m>S</m> and no symbol (concatenation) for the multiplication of two elements in the group <m>G</m>.
             </p>
-          </remark>
+          </paragraphs>
     
           <example xml:id="ex-group-actions">
             <title>Common Group Actions</title>
@@ -5119,6 +5147,9 @@
             </proof>
     
           </theorem>
+    
+          <p>Permutation representations are one the most essential functions (no pun intended) of group actions. This homomorphism allows us to study the structure of a group <m>G</m> by looking at the permutation group of <m>X</m>, which may be a more manageable group to work with. </p>
+          <p>An immediate perk of this result is that we already know a lot of things about homomorphisms, and we can thus extend that knowledge into the realm of group actions at our leisure. Let's see some examples.</p>
 
           <example xml:id="ex-permrep-examples">
             <title>Common Permutation Representations</title>
@@ -5132,7 +5163,7 @@
 
                 <li>
                   <p>
-                    For left multiplication, the associated group homomorphism is <m>G \to \operatorname{Perm}(S)</m> by <m>g\mapsto \phi_g</m>, where <m>\phi_g(s)=g\dot s</m>
+                    For left multiplication, the associated group homomorphism is <m>G \to \operatorname{Perm}(S)</m> by <m>g\mapsto \phi_g</m>, where <m>\phi_g(s)=g\cdot s</m>
                   </p>
                 </li>
 
@@ -5144,9 +5175,6 @@
               </ol>
             </p>
           </example>
-    
-          <p>Permutation representations are one the most essential functions (no pun intended) of group actions. This homomorphism allows us to study the structure of a group <m>G</m> by looking at the permutation group of <m>X</m>, which may be a more manageable group to work with. </p>
-          <p>An immediate perk of this result is that we already know a lot of things about homomorphisms, and we can thus extend that knowledge into the realm of group actions at our leisure. Let's see some examples.</p>
 
           <definition xml:id="def-faithful-action">
             <title>Faithful Action</title>
@@ -6232,7 +6260,7 @@
     
       </chapter>
 
-      <chapter xml:id="sylow">
+      <chapter xml:id="ch-sylow">
         <title>Sylow Theory</title>       
     
         <section xml:id="sec-p-groups">
@@ -7380,7 +7408,7 @@
     
       </chapter>
 
-      <chapter xml:id="group-products">
+      <chapter xml:id="ch-group-products">
         <title>Group Products</title>
 
         <section xml:id="sec-dps">
@@ -7393,7 +7421,7 @@
           </introduction> 
 
           <subsection xml:id="subsec-external-dps-revisited">
-            <title>External Direct Products: Revisited</title>
+            <title>Direct Products: Revisited</title>
 
             <blockquote>
               <p>
@@ -7417,11 +7445,36 @@
                 </p>
               </statement>
             </definition>
+
+            <remark>
+              <p>So a direct sum are the same thing as a finite direct product.</p>
+            </remark>
   
             <theorem>
               <statement>
                 <p>
                   The direct product of a collection of groups is a group, and the direct sum of the collection is a subgroup of the direct product.
+                </p>
+              </statement>
+            </theorem>
+
+            <exercise xml:id="exe-abelian-product-abelian">
+              <title>Abelian Direct Prodcuts</title>
+              <statement>
+                <p>
+                  The direct product of groups is abelian if and only if every factor of the product is abelian.
+                </p>
+              </statement>
+            </exercise>
+
+            <remark>
+              <p>The direct sum notation will not be seen or heard from again in group theory.</p>
+            </remark>
+
+            <theorem xml:id="thm-dp-order">
+              <statement>
+                <p>
+                  Let <m>g_1\times\cdots\times g_n\in G_1\times\cdots\times G_n</m>. Then <m>|g_1\times\cdots\times g_n|=\lcm(|g_1|,\dots,|g_n|)</m>.
                 </p>
               </statement>
             </theorem>
@@ -7438,7 +7491,7 @@
           </subsection>
 
           <subsection xml:id="subsec-HK">
-            <title>HK</title>
+            <title><m>HK</m></title>
 
             <blockquote>
               <p>
@@ -7480,14 +7533,6 @@
                 </p>
               </statement>
             </theorem>
-
-            <corollary xml:id="cor-order-of-hn">
-              <statement>
-                <p>
-                  If <m>H</m>and <m>N</m> are finite subgrups of <m>G</m> and <m>N\mathrel{\nsg}G</m>, then <m>|HN |= \frac{|H|\cdot |N| }{\left|H \cap N\right|}</m>. (In fact this is also true without the requirement that <m>N</m> be normal.)
-                </p>
-              </statement>
-            </corollary>
             
             <theorem xml:id="hk-normal">
               <statement>
@@ -7516,7 +7561,7 @@
             <theorem xml:id="thm-hn-normal">
               <statement>
                 <p>
-                  Let <m>G</m> be a group, <m>H \leq G</m> and <m>N \unlhd G</m>. Then 
+                  Let <m>G</m> be a group, <m>H \leq G</m> and <m>N \nsg G</m>. Then 
                   <ol>
                     <li>
                       <p>
@@ -7526,7 +7571,7 @@
   
                     <li>
                       <p>
-                        <m>N \cap H \sng H</m>, and
+                        <m>N \cap H \nsg H</m>, and
                       </p>
                     </li>
   
@@ -7563,7 +7608,26 @@
               
               <statement>
                 <p>
-                  Suppose <m>G</m> is a group with normal subgroups <m>H\mathrel{\unlhd}G</m> and <m>K\mathrel{\unlhd}G</m> such that <m>H\cap K=\{e\}</m> Then <m>HK\cong H\times K</m> via the isomorphism of groups <m>\theta: H \times K \to HK</m> defined by <m>\theta(h,k) = hk</m>. Moreover <m>H\cong \theta^{-1}(H)=\{(h,e)\mid h\in H\}\leq H\times K</m> and <m>K\cong \theta^{-1}(K)=\{(e,k)\mid k\in K\}\leq H\times K</m>.
+                  Suppose <m>G</m> is a group with normal subgroups <m>H\mathrel{\unlhd}G</m> and <m>K\mathrel{\unlhd}G</m> such that <m>H\cap K=\{e\}</m> Then the following hold:
+                  <ol>
+                    <li>
+                      <p>
+                        <m>HK\cong H\times K</m> via the isomorphism of groups <m>\theta: H \times K \to HK</m> defined by <m>\theta(h,k) = hk</m>.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        <m>H\cong \theta^{-1}(H)=\{(h,e)\mid h\in H\}\leq H\times K</m>                      
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        <m>K\cong \theta^{-1}(K)=\{(e,k)\mid k\in K\}\leq H\times K</m>.                      
+                      </p>
+                    </li>
+                  </ol> 
                 </p>
               </statement>
   
@@ -7573,12 +7637,16 @@
                 </p>
   
                 <p>
-                  Using the above we have <me>\begin{aligned}
-        \theta((h_1, k_1) (h_2, k_2))  &amp; = 
-        \theta(h_1h_2, k_1k_2) \\
-        &amp; = h_1h_2k_1k_2\\
-        &amp; = h_1k_1h_2k_2 = \theta(h_1, k_1) \theta(h_2, k_2)
-        \end{aligned}</me> and thus <m>\theta</m> is a homomorphism. It's kernel is <m>\{(k,h) \mid k = h^{-1} \}</m>, which is just <m>\{e\}</m> since <m>H \cap K = \{e\}</m>. The image of <m>\theta</m> is clearly <m>HK</m>. This proves <m>\theta</m> is an isomorphism. ◻
+                  Using the above we have 
+                  <me>
+                    \begin{aligned}
+                      \theta((h_1, k_1) (h_2, k_2))  
+                      &amp; = \theta(h_1h_2, k_1k_2) \\
+                      &amp; = h_1h_2k_1k_2 \\
+                      &amp; = h_1k_1h_2k_2 = \theta(h_1, k_1) \theta(h_2, k_2)
+                    \end{aligned}
+                  </me> 
+                  and thus <m>\theta</m> is a homomorphism. It's kernel is <m>\{(k,h) \mid k = h^{-1} \}</m>, which is just <m>\{e\}</m> since <m>H \cap K = \{e\}</m>. The image of <m>\theta</m> is clearly <m>HK</m>. This proves <m>\theta</m> is an isomorphism.
                 </p>
               </proof>
             </theorem>
@@ -7591,63 +7659,6 @@
               </statement>
             </definition>
   
-            <p>
-              We now discuss an important generalization for the direct product and a new method of constructing a new groups from the action of one group on another.
-            </p>
-            
-  
-            <p>
-              Suppose <m>G</m> is a group with subgroups <m>H\mathrel{\unlhd}G</m> and <m>K\leq G</m> such that <m>H\cap K=\{e\}</m>. Then we still have <m>HK\leq G</m>; let's see what we would need the multiplication on the cartesian product <m>H\times K</m> to be in order for <m>\theta: H \times K \to HK</m> defined by <m>\theta(h,k) = hk</m> to still be a group homomorphism: 
-              <me>
-                \theta(h_1, k_1) \theta(h_2, k_2) = h_1k_1h_2k_2 = h_1h'_2k_1k_2=\theta(h_1h_2',k_1k_2),
-              </me>
-               where <m>h'_2\in H</m> is such that <m>k_1h_2k_1^{-1}=h'_2</m>.
-            </p>
-    
-            <p>
-              This means that we would need to have <m>(h_1, k_1)(h_2, k_2)=(h_1h_2',k_1k_2)</m> for <m>\theta</m> to be a homomorphism. This motivates the following definition.
-            </p>
-  
-            <problem> <title>June 2014 (3)</title>
-            
-            
-              <p>
-                Let <m>G</m> be a group that acts on a set <m>A</m>, and <m>H</m> a subgroup of <m>G</m> such that for any <m>a, b \in A</m> there exists a unique <m>h \in H</m> with <m>ha = b</m>. 
-                <ol>
-                  <li>
-                    <p>
-                      Prove that for every <m>a \in A, G = HG_a</m> and <m>H \cap Ga = \{1\}</m>, where <m>G_a = \{g \in G | ga = a\}.</m> 
-                    </p>
-                  </li>
-  
-                  <li>
-                    <p>
-                      Prove that if <m>H \subseteq Z(G)</m> then for every <m>a \in A</m>, <m>G</m> is the internal direct product of <m>H</m> and <m>G_a.</m>
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </problem>
-  
-            <proof>
-              <p>
-                Let <m>G</m> be a group that acts on a set <m>A</m>, and <m>H</m> a subgroup of <m>G</m> such that for any <m>a, b \in A</m> there exists a unique <m>h \in H</m> with <m>ha = b</m>.
-              </p>
-  
-              <p>
-                Suppose there exists some <m>h\in H</m> such that <m>h\in G_a</m>. Then <m>ha=a</m>. But <m>ea=a</m> by the definition of group action. As the <m>h\in G_a</m> is unique, we see <m>h=e</m>. Thus <m>H\cap G_a=\{e\}</m>.
-              </p>
-  
-              <p>
-                Let <m>g\in G</m> and <m>a\in A</m>. If <m>g\in H</m> then we can write <m>g=ge</m>, as <m>e\in G_a</m>. Suppose <m>g\not\in H</m> and <m>ga=b</m> for some <m>b\in A</m>. There exists an <m>h\in H</m> such that <m>ha=b</m>. Then <m>ha=ga</m>, so <m>h\inv g a=a</m>, so <m>h\inv g\in G_a</m>. Thankfully, we can know write <m>g=h(h\inv g</m>), and so <m>G=HG_a</m>.
-              </p>
-  
-  
-                <p>
-                  If <m>H\subseteq Z(G)</m> then we have <m>HG_a=G_aH</m>, which means <m>HG_a\leq G</m>. From Part (a) we have a trivial intersection, making <m>G</m> the internal direct product of <m>H</m> and <m>G_a</m>.
-                </p>
-            </proof>
-            
           </subsection>
 
           <exercises>
@@ -7689,9 +7700,8 @@
                 </p>
               </introduction>
           
-              <exercise number="2">
-                <title>January 2022 (1a), January 2020 (1b)</title>
-    
+              <exercise> <title>January 2022 (1a), January 2020 (1b)</title>
+                
                 <statement>
                   <p>
                     Let <m>G</m> be a group, and <m>H, K \leq G</m> be subgroups of <m>G</m>. Give an example of <m>G, H,</m> and <m>K</m> such that <m>HK</m> is not a subgroup of <m>G</m>.
@@ -7711,6 +7721,47 @@
                 </solution>
     
               </exercise>
+
+              <exercise> <title>June 2014 (3)</title>
+            
+              <statement>
+                <p>
+                  Let <m>G</m> be a group that acts on a set <m>A</m>, and <m>H</m> a subgroup of <m>G</m> such that for any <m>a, b \in A</m> there exists a unique <m>h \in H</m> with <m>ha = b</m>. 
+                  <ol>
+                    <li>
+                      <p>
+                        Prove that for every <m>a \in A, G = HG_a</m> and <m>H \cap Ga = \{1\}</m>, where <m>G_a = \{g \in G | ga = a\}.</m> 
+                      </p>
+                    </li>
+    
+                    <li>
+                      <p>
+                        Prove that if <m>H \subseteq Z(G)</m> then for every <m>a \in A</m>, <m>G</m> is the internal direct product of <m>H</m> and <m>G_a.</m>
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+    
+              <solution>
+                <p>
+                  Let <m>G</m> be a group that acts on a set <m>A</m>, and <m>H</m> a subgroup of <m>G</m> such that for any <m>a, b \in A</m> there exists a unique <m>h \in H</m> with <m>ha = b</m>.
+                </p>
+    
+                <p>
+                  Suppose there exists some <m>h\in H</m> such that <m>h\in G_a</m>. Then <m>ha=a</m>. But <m>ea=a</m> by the definition of group action. As the <m>h\in G_a</m> is unique, we see <m>h=e</m>. Thus <m>H\cap G_a=\{e\}</m>.
+                </p>
+    
+                <p>
+                  Let <m>g\in G</m> and <m>a\in A</m>. If <m>g\in H</m> then we can write <m>g=ge</m>, as <m>e\in G_a</m>. Suppose <m>g\not\in H</m> and <m>ga=b</m> for some <m>b\in A</m>. There exists an <m>h\in H</m> such that <m>ha=b</m>. Then <m>ha=ga</m>, so <m>h\inv g a=a</m>, so <m>h\inv g\in G_a</m>. Thankfully, we can know write <m>g=h(h\inv g</m>), and so <m>G=HG_a</m>.
+                </p>
+    
+    
+                  <p>
+                    If <m>H\subseteq Z(G)</m> then we have <m>HG_a=G_aH</m>, which means <m>HG_a\leq G</m>. From Part (a) we have a trivial intersection, making <m>G</m> the internal direct product of <m>H</m> and <m>G_a</m>.
+                  </p>
+              </solution>
+              </exercise>
           
             </exercisegroup>
           </exercises>
@@ -7721,7 +7772,7 @@
           <title>Semidirect Products</title>
 
           <subsection xml:id="subsec-external-sdps">
-            <title>External Semi Direct Products</title>
+            <title>External Semidirect Products</title>
 
             <blockquote>
               <p>
@@ -7729,6 +7780,23 @@
               </p>
               <attribution>Niels van Deuren</attribution>
             </blockquote>
+
+            <p>
+              We now discuss an important generalization for the direct product and a new method of constructing a new groups from the action of one group on another.
+            </p>
+            
+  
+            <p>
+              Suppose <m>G</m> is a group with subgroups <m>H\mathrel{\unlhd}G</m> and <m>K\leq G</m> such that <m>H\cap K=\{e\}</m>. Then we still have <m>HK\leq G</m>; let's see what we would need the multiplication on the cartesian product <m>H\times K</m> to be in order for <m>\theta: H \times K \to HK</m> defined by <m>\theta(h,k) = hk</m> to still be a group homomorphism: 
+              <me>
+                \theta(h_1, k_1) \theta(h_2, k_2) = h_1k_1h_2k_2 = h_1h'_2k_1k_2=\theta(h_1h_2',k_1k_2),
+              </me>
+               where <m>h'_2\in H</m> is such that <m>k_1h_2k_1^{-1}=h'_2</m>.
+            </p>
+    
+            <p>
+              This means that we would need to have <m>(h_1, k_1)(h_2, k_2)=(h_1h_2',k_1k_2)</m> for <m>\theta</m> to be a homomorphism. This motivates the following definition.
+            </p>
             
             <definition xml:id="def-sdp-external">
               <statement>
@@ -7815,26 +7883,27 @@
                   If <m>H</m> and <m>K</m> are groups and <m>\rho:K\to \operatorname{Aut}(H)</m> is a homomorphism, then setting :
                 </p>
   
-                <p><ol>
-                  <li>
-                          <p>
-                  <em><m>H \rtimes_\rho K</m> is a group</em>
-                </p>
-                  </li>
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        <m>H \rtimes_\rho K</m> is a group
+                      </p>
+                    </li>
+  
+                    <li>
+                      <p>
+                        <m>H\cong H':=\{(h,e)\mid h\in H\}\mathrel{\unlhd}H \rtimes_\rho K</m> and <m>K\cong K':=\{(e,k)\mid k\in K\}\leq H \rtimes_\rho K</m>
+                      </p>
+                    </li>
   
                   <li>
-                          <p>
-                  <em><m>H\cong H':=\{(h,e)\mid h\in H\}\mathrel{\unlhd}H \rtimes_\rho K</m> and <m>K\cong K':=\{(e,k)\mid k\in K\}\leq H \rtimes_\rho K</m></em>
-                </p>
+                    <p>
+                      <m>(H \rtimes_\rho K )/ H' \cong K</m>.
+                    </p>
                   </li>
-  
-                  <li>
-                          <p>
-                  <em><m>(H \rtimes_\rho K )/ H' \cong K</m>.</em>
-                </p>
-                  </li>
-  
-                </ol></p>
+                </ol>
+              </p>
               </statement>
   
               <proof>
@@ -7845,39 +7914,33 @@
                         The proof is straightforward but a bit messy. For associativity, note that 
                         <me>
                           \begin{aligned}
-                          (y_1,x_1) \left( (y_2, x_2) (y_3, x_3) \right)
-                          &amp;=
-                          (y_1,x_1) (y_2\rho(x_2)(y_3), x_2x_3)
-                          =
-                          (y_1\rho(x_1)\left(y_2\rho(x_2)(y_3)\right), x_1x_2x_3)\\
-                          &amp;=
-                          (y_1\rho(x_1)(y_2)(\rho(x_1)\circ \rho(x_2))(y_3), x_1x_2x_3)\\
-                          &amp;=
-                          (y_1\rho(x_1)(y_2)\rho(x_1x_2)(y_3), x_1x_2x_3)\\
+                          (y_1,x_1) \left( (y_2, x_2) (y_3, x_3) \right) &amp;=(y_1,x_1) (y_2\rho(x_2)(y_3), x_2x_3)\\
+                          &amp;=(y_1\rho(x_1)\left(y_2\rho(x_2)(y_3)\right), x_1x_2x_3)\\
+                          &amp;=(y_1\rho(x_1)(y_2)(\rho(x_1)\circ \rho(x_2))(y_3), x_1x_2x_3)\\
+                          &amp;=(y_1\rho(x_1)(y_2)\rho(x_1x_2)(y_3), x_1x_2x_3)\\
                           \end{aligned}
                         </me> 
                         On the other hand 
                         <me>
                           \begin{aligned}
-                          \left( (y_1,x_1) (y_2, x_2) \right) (y_3, x_3) 
-                          &amp; = (y_1 \rho(x_1)(y_2), x_1 x_2)  (y_3, x_3) 
-                          = (y_1 \rho(x_1)(y_2)\rho(x_1x_2)(y_3), x_1 x_2 x_3).
+                          \left( (y_1,x_1) (y_2, x_2) \right) (y_3, x_3) &amp; = (y_1 \rho(x_1)(y_2), x_1 x_2)  (y_3, x_3) \\
+                          &amp; = (y_1 \rho(x_1)(y_2)\rho(x_1x_2)(y_3), x_1 x_2 x_3).
                           \end{aligned}
                         </me> 
                         This gives associativity.
-                                  </p>
+                      </p>
                           
-                                  <p>
-                                    The fact that <m>(e,e)</m> is a two-sided identity follows from the fact that <m>\rho(e)(y) = \text{id}_H(y)=y</m>.
-                                  </p>
-                          
-                                  <p>
-                                    Finally 
-                                    <me>
-                                      \begin{aligned}
-                          (y,x) (\rho(x^{-1})(y^{-1}) ,x^{-1}) &amp;= (y \rho(x)\left(\rho(x^{-1})(y^{-1}) \right), e)
-                          = (y (\rho(x)\circ\rho(x^{-1}))(y^{-1}), e) 
-                          \\ &amp;= (y \rho(e)(y^{-1}), e) = (yy^{-1},e)=(e,e),
+                      <p>
+                          The fact that <m>(e,e)</m> is a two-sided identity follows from the fact that <m>\rho(e)(y) = \text{id}_H(y)=y</m>.
+                      </p>
+              
+                      <p>
+                        Finally 
+                        <me>
+                          \begin{aligned}
+                            (y,x) (\rho(x^{-1})(y^{-1}) ,x^{-1}) &amp;= (y \rho(x)\left(\rho(x^{-1})(y^{-1}) \right), e)
+                            = (y (\rho(x)\circ\rho(x^{-1}))(y^{-1}), e) 
+                            \\ &amp;= (y \rho(e)(y^{-1}), e) = (yy^{-1},e)=(e,e),
                           \end{aligned}
                         </me> 
                         and similarly 
@@ -7919,32 +7982,33 @@
                         is isomorphic to <m>K</m>. <m>K'</m> is typically <em>not</em> normal, however. Finally, it is easy to see that <m>H'K'= H \rtimes_\rho K</m> and <m>H' \cap K' = \{e\}</m>. Putting this all together we have
                       </p>
               
-                      <p><ul>
-                        <li>
-                                <p>
-                        <m>H' \unlhd H \rtimes_\rho K</m>,
-                      </p>
-                        </li>
+                      <p>
+                        <ul>
+                          <li>
+                            <p>
+                              <m>H' \unlhd H \rtimes_\rho K</m>,
+                            </p>
+                          </li>
               
-                        <li>
-                                <p>
-                        <m>K' \leq H \rtimes_\rho K</m>,
-                      </p>
-                        </li>
+                          <li>
+                            <p>
+                              <m>K' \leq H \rtimes_\rho K</m>,
+                            </p>
+                          </li>
               
-                        <li>
-                                <p>
-                        <m>H' K' = H \rtimes_\rho K</m>, and
-                      </p>
-                        </li>
+                          <li>
+                            <p>
+                              <m>H' K' = H \rtimes_\rho K</m>, and
+                            </p>
+                          </li>
               
-                        <li>
-                                <p>
-                        <m>H'\cap K' = \{e\}</m>.
+                          <li>
+                            <p>
+                              <m>H'\cap K' = \{e\}</m>.
+                            </p>
+                          </li>
+                        </ul>
                       </p>
-                        </li>
-              
-                      </ul></p>
                     </li>
 
                     <li>
@@ -7961,15 +8025,10 @@
               </proof>
             </theorem>
   
-            <exercise>
-              <p>
-                If we idenify <m>K</m> with <m>K'</m> and <m>H</m> with <m>H'</m> via the isomorphisms <m>i</m> and <m>j</m>, prove the action of <m>H'</m> on <m>K'</m> via conjugation in <m>K \rtimes_\rho H</m> coincides with the original action <m>\rho</m>.
-              </p>
-            </exercise>
           </subsection>
 
           <subsection xml:id="subsec-internal-sdps">
-            <title>Internal Semi Direct Products</title>
+            <title>Internal Semidirect Products</title>
 
             <blockquote>
               <p>
@@ -7978,9 +8037,7 @@
               <attribution>Ronald Reagan</attribution>
             </blockquote>
             
-            <p>
-              We can turn this around.
-            </p>
+            <p>We can turn this around.<fn>the semidirect product, not the Reagan quote. </fn></p>
   
             <theorem xml:id="thm-sdp-internal">
               <title>Recognition Theorem for Internal Semidirect Products</title>
@@ -8117,20 +8174,13 @@
               </introduction>
           
               <exercise>
-                <title></title>
-                
+                <title>Discussion</title>
                 
                 <statement>
                   <p>
-                    Coming soon to an OER near you!
+                    Decide amongst yourselves whether it should be spelled "semidirect", "semi-direct", "semi direct". 
                   </p>
                 </statement>
-  
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
   
                 <solution>
                   <p>
@@ -8149,26 +8199,9 @@
               </introduction>
           
               <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-  
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-  
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
+                <p>
+                  If we idenify <m>K</m> with <m>K'</m> and <m>H</m> with <m>H'</m> via the isomorphisms <m>i</m> and <m>j</m>, prove the action of <m>H'</m> on <m>K'</m> via conjugation in <m>K \rtimes_\rho H</m> coincides with the original action <m>\rho</m>.
+                </p>
               </exercise>
           
             </exercisegroup>
@@ -8216,12 +8249,7 @@
         <section xml:id="sec-classifying-cyclic-groups">
           <title>Cyclic Groups</title>
 
-          <blockquote>
-            <p>
-              <q>There is no way to be in cyclic existence without creating the causes of suffering.</q>
-            </p>
-            <attribution>Jetsunma Ahkon Lhamo</attribution>
-          </blockquote>
+          <blockquote><p><q>There is no way to be in cyclic existence without creating the causes of suffering.</q></p><attribution>Jetsunma Ahkon Lhamo</attribution></blockquote>
     
           <blockquote>
             <p>
@@ -8337,7 +8365,6 @@
           <theorem xml:id="thm-sunzi">
             <title>Sunzi's Remainder Theorem</title>
             
-
             <statement>
               <p>
                 Suppose <m>m = p_1^{e_1} \cdots p_l^{e_l}</m> for distinct primes <m>p_1, \dots, p_l</m>. Then there is an isomorphism 
@@ -8418,16 +8445,9 @@
         <section xml:id="sec-ftfgag">
           <title>Finitely Generated Abelian Groups</title>
 
-          <blockquote>
-            <p>
-              <q>The classification of the constituents of a chaos, nothing less is here essayed.</q>
-            </p>
-            <attribution>Herman Melville</attribution>
-          </blockquote>
+          <blockquote><p><q>The classification of the constituents of a chaos, nothing less is here essayed.</q></p><attribution>Herman Melville</attribution></blockquote>
 
-          <p>
-            In this section we see that we can classify finitely generated abelian groups into isomorphism classes.
-          </p>
+          <p>In this section we see that we can classify finitely generated abelian groups into isomorphism classes.</p>
 
           <definition xml:id="def-f.g.-group">
             <statement>
@@ -8437,15 +8457,9 @@
             </statement>
           </definition>
 
-          <remark>
-            <p>
-              Any finite group is finitely generated (take <m>A=G</m>), but a finitely generated group need not be finite.
-            </p>
-          </remark>
+          <remark><p>Any finite group is finitely generated (take <m>A=G</m>), but a finitely generated group need not be finite.</p></remark>
 
-          <p>
-            The following is the classification theorem for finitely generated abelian groups. We present it without proving it for now. The full proof will be given in the spring semester.
-          </p>
+          <p>The following is the classification theorem for finitely generated abelian groups. We present it without proving it for now. The full proof will be given in the spring semester.</p>
 
           <theorem xml:id="thm-ftfgag">
             <title>Fundamental Theorem of Finitely Generated Abelian Groups (FTFGAG)</title>
@@ -8512,7 +8526,7 @@
                 <me>
                   G \cong \mathbb{Z}^r \times \mathbb{Z}/d_1 \times \cdots \times \mathbb{Z}/d_n
                 </me> 
-                with <m>d_1 \mid d_2 \mid \cdots \mid d_n</m>, we may apply the CRT to each <m>\mathbb{Z}/d_i</m> to find its elementary divisor form. ◻
+                with <m>d_1 \mid d_2 \mid \cdots \mid d_n</m>, we may apply the CRT to each <m>\mathbb{Z}/d_i</m> to find its elementary divisor form.
               </p>
             </proof>
           </theorem>
@@ -8571,9 +8585,7 @@
             </p>
           </example>
 
-          <p>
-            The FTFGAG makes classification of finite abelian groups a very quick matter.
-          </p>
+          <p>The FTFGAG makes classification of finite abelian groups a very quick matter.</p>
 
           <example>
             <p>
@@ -8818,7 +8830,7 @@
                 </p>
         
                 <p>
-                  Moreover, from the explicit presentation of semidirect products of cyclic groups given in a homework problem we see that the resulting group is non-abelian; in particular it is not isomorphic to <m>C_{pq}</m>. ◻
+                  Moreover, from the explicit presentation of semidirect products of cyclic groups given in a homework problem we see that the resulting group is non-abelian; in particular it is not isomorphic to <m>C_{pq}</m>.
                 </p>
               </proof>
             </theorem>
@@ -8981,336 +8993,6 @@
         
       </chapter>
 
-      <chapter xml:id="ch-gp-extras">
-        <title>Extras</title>
-
-        <!--
-        <section xml:id="sec-quals">
-          <title>Qualifying Exams</title>
-
-          <subsection>
-            <title>Winter 2023</title>
-
-            <subsubsection>
-              <title>Group Theory</title>
-              
-              <problem>
-                <title>Problem 1</title>
-                
-                
-              </problem>
-
-              <problem>
-                <title>Problem 2</title>
-                
-                
-              </problem>
-
-              <problem>
-                <title>Problem 3</title>
-                
-                
-              </problem>
-              
-            </subsubsection>
-
-            <subsubsection>
-              <title>Rings, Modules, Linear Algebra</title>
-
-              <problem>
-                <title>Problem 4</title>
-                
-                
-              </problem>
-
-              <problem>
-                <title>Problem 5</title>
-                
-                
-              </problem>
-
-              <problem>
-                <title>Problem 6</title>
-                
-                
-              </problem>
-              
-            </subsubsection>
-
-            <subsubsection>
-              <title>Fields and Galois Theory</title>
-
-              <problem>
-                <title>Problem 7</title>
-                
-                
-              </problem>
-
-              <problem>
-                <title>Problem 8</title>
-                
-                
-              </problem>
-
-              <problem>
-                <title>Problem 9</title>
-                
-                
-              </problem>
-              
-            </subsubsection>
-            
-          </subsection>
-
-          <subsection>
-            <title>Summer 2023</title>
-
-            <subsubsection>
-              <title>Group Theory</title>
-              
-              <problem>
-                <title>Problem 1</title>
-                
-                
-              </problem>
-
-              <problem>
-                <title>Problem 2</title>
-                
-                
-              </problem>
-
-              <problem>
-                <title>Problem 3</title>
-                
-                
-              </problem>
-              
-            </subsubsection>
-
-            <subsubsection>
-              <title>Rings, Modules, Linear Algebra</title>
-
-              <problem>
-                <title>Problem 4</title>
-                
-                
-              </problem>
-
-              <problem>
-                <title>Problem 5</title>
-                
-                
-              </problem>
-
-              <problem>
-                <title>Problem 6</title>
-                
-                
-              </problem>
-              
-            </subsubsection>
-
-            <subsubsection>
-              <title>Fields and Galois Theory</title>
-
-              <problem>
-                <title>Problem 7</title>
-                
-                
-              </problem>
-
-              <problem>
-                <title>Problem 8</title>
-                
-                
-              </problem>
-
-              <problem>
-                <title>Problem 9</title>
-                
-                
-              </problem>
-              
-            </subsubsection>
-            
-          </subsection>
-
-          <subsection>
-            <title>Winter 2022</title>
-
-            <subsubsection>
-              <title>Group Theory</title>
-              
-              <problem>
-                <title>Problem 1</title>
-                
-                
-              </problem>
-
-              <problem>
-                <title>Problem 2</title>
-                
-                
-              </problem>
-
-              <problem>
-                <title>Problem 3</title>
-                
-                
-              </problem>
-              
-            </subsubsection>
-
-            <subsubsection>
-              <title>Rings, Modules, Linear Algebra</title>
-
-              <problem>
-                <title>Problem 4</title>
-                
-                
-              </problem>
-
-              <problem>
-                <title>Problem 5</title>
-                
-                
-              </problem>
-
-              <problem>
-                <title>Problem 6</title>
-                
-                
-              </problem>
-              
-            </subsubsection>
-
-            <subsubsection>
-              <title>Fields and Galois Theory</title>
-
-              <problem>
-                <title>Problem 7</title>
-                
-                
-              </problem>
-
-              <problem>
-                <title>Problem 8</title>
-                
-                
-              </problem>
-
-              <problem>
-                <title>Problem 9</title>
-                
-                
-              </problem>
-              
-            </subsubsection>
-            
-          </subsection>
-
-          <subsection>
-            <title>Summer 2022</title>
-
-            <subsubsection>
-              <title>Group Theory</title>
-              
-              <problem>
-                <title>Problem 1</title>
-                
-                
-              </problem>
-
-              <problem>
-                <title>Problem 2</title>
-                
-                
-              </problem>
-
-              <problem>
-                <title>Problem 3</title>
-                
-                
-              </problem>
-              
-            </subsubsection>
-
-            <subsubsection>
-              <title>Rings, Modules, Linear Algebra</title>
-
-              <problem>
-                <title>Problem 4</title>
-                
-                
-              </problem>
-
-              <problem>
-                <title>Problem 5</title>
-                
-                
-              </problem>
-
-              <problem>
-                <title>Problem 6</title>
-                
-                
-              </problem>
-              
-            </subsubsection>
-
-            <subsubsection>
-              <title>Fields and Galois Theory</title>
-
-              <problem>
-                <title>Problem 7</title>
-                
-                
-              </problem>
-
-              <problem>
-                <title>Problem 8</title>
-                
-                
-              </problem>
-
-              <problem>
-                <title>Problem 9</title>
-                
-                
-              </problem>
-              
-            </subsubsection>
-            
-          </subsection>
-          
-        </section>
-        -->
-
-        <section xml:id="sec-solve">
-          <title>Solvable Groups</title>
-
-          <blockquote>
-            <p>
-              <q>Science is the art of the solvable.</q>
-            </p>
-            <attribution>Peter Medawar</attribution>
-          </blockquote>
-        </section>
-
-        <section xml:id="sec-smallorder">
-          <title>All Groups Up to Order 60</title>
-          
-            <blockquote>
-              <p>
-                <q>Transformation happens in small groups.</q>
-              </p>
-              <attribution>Gloria Steinem</attribution>
-            </blockquote>
-
-        </section>
-        
-      </chapter>
     </part>
 
     <part xml:id="part-rings">
@@ -9341,90 +9023,88 @@
                 </blockquote>
     
                 <definition xml:id="def-ring">
-                <statement>
-                    <p>
-                        A <em>ring</em> is a set <m>R</m> equipped with two binary operations, <m>+</m> and <m>\cdot</m>, satisfying:
-                    </p>
-    
-                    <p>
-                        <ol>
-                            <li>
-                                <p>
-                                    <m>(R,+)</m> is an <em>abelian</em> group with identity element denoted <m>0</m>,
-                                </p>
-                            </li>
-    
-                            <li>
-                                <p>
-                                    <m>\cdot</m> is associative (making <m>(R,\cdot)</m> a semigroup)
-                                </p>
-                            </li>
-    
-                            <li>
-                                <p>
-                                    <m>a \cdot (b + c) = a \cdot b + a \cdot c</m> and <m>(a + b) \cdot c = a \cdot c + b \cdot c</m> hold for all <m>a,b,c \in R</m>.
-                                </p>
-                            </li>
-                        </ol>
-                    </p>
-    
-                    <p>
-                        <m>R</m> is a <em>unital ring</em> (or a <em>ring with identity</em>) if, in addition to (1), (2), (3)
-                    </p>
-    
-                    <p>
-                        <ol>
-                            <li>
-                                <p>
-                                    there is a multiplicative identity element written as <m>1</m> such that <m>1 \cdot a = a = a \cdot 1</m> for all <m>a \in R</m>.
-                                </p>
-                            </li>
-                        </ol>
-                    </p>
-    
-                    <p>
-                        <m>R</m> is <em>commutative</em> if in addition to (1)-(3)
-                    </p>
-    
-                    <p>
-                        <ol>
-                            <li>
-                                <p>
-                                    <m>a \cdot b = b \cdot a</m> holds for all <m>a,b \in R</m>.
-                                </p>
-                            </li>
-                        </ol>
-                </p>
-    
-                    <p>
-                        <m>R</m> is a <em>division ring</em> if <m>1\neq 0</m>, (1)–(4) and (6) hold
-                    </p>
-    
-                    <p>
-                        <ol>
-                            <li>
-                                <p>
-                                    <m>(R - \{0\})</m> is a group under <m>\cdot</m> (i.e. every <m>r\in (R - \{0\})</m> has a multiplicative inverse)
-                                </p>
-                            </li>
-                        </ol>
-                    </p>
-    
-                    <p>
-                        <m>R</m> is a <em>field</em> if <m>1\neq 0</m> and (1)–(6) hold (i.e. a field is a commutative division ring).
-                    </p>
-                </statement>
+                  <statement>
+                      <p>
+                          A <em>ring</em> is a set <m>R</m> equipped with two binary operations, <m>+</m> and <m>\cdot</m>, satisfying:
+                      </p>
+      
+                      <p>
+                          <ol>
+                              <li>
+                                  <p>
+                                      <m>(R,+)</m> is an <em>abelian</em> group with identity element denoted <m>0</m>,
+                                  </p>
+                              </li>
+      
+                              <li>
+                                  <p>
+                                      <m>\cdot</m> is associative (making <m>(R,\cdot)</m> a semigroup)
+                                  </p>
+                              </li>
+      
+                              <li>
+                                  <p>
+                                      <m>a \cdot (b + c) = a \cdot b + a \cdot c</m> and <m>(a + b) \cdot c = a \cdot c + b \cdot c</m> hold for all <m>a,b,c \in R</m>.
+                                  </p>
+                              </li>
+                          </ol>
+                      </p>
+      
+                      <p>
+                          <m>R</m> is a <em>unital ring</em> (or a <em>ring with identity</em>) if, in addition to (1), (2), (3)
+                      </p>
+      
+                      <p>
+                          <ol>
+                              <li>
+                                  <p>
+                                      there is a multiplicative identity element written as <m>1</m> such that <m>1 \cdot a = a = a \cdot 1</m> for all <m>a \in R</m>.
+                                  </p>
+                              </li>
+                          </ol>
+                      </p>
+      
+                      <p>
+                          <m>R</m> is <em>commutative</em> if in addition to (1)-(3)
+                      </p>
+      
+                      <p>
+                          <ol>
+                              <li>
+                                  <p>
+                                      <m>a \cdot b = b \cdot a</m> holds for all <m>a,b \in R</m>.
+                                  </p>
+                              </li>
+                          </ol>
+                  </p>
+      
+                      <p>
+                          <m>R</m> is a <em>division ring</em> if <m>1\neq 0</m>, (1)–(4) and (6) hold
+                      </p>
+      
+                      <p>
+                          <ol>
+                              <li>
+                                  <p>
+                                      <m>(R - \{0\})</m> is a group under <m>\cdot</m> (i.e. every <m>r\in (R - \{0\})</m> has a multiplicative inverse)
+                                  </p>
+                              </li>
+                          </ol>
+                      </p>
+      
+                      <p>
+                          <m>R</m> is a <em>field</em> if <m>1\neq 0</m> and (1)–(6) hold (i.e. a field is a commutative division ring).
+                      </p>
+                  </statement>
                 </definition>
     
                 <problem xml:id="exe-commutativity-of-addition">
-                <p>
-                Commutativity of addition is a consequence of the other ring axioms in rings with <m>1</m>.
-                </p>
+                  <p>
+                  Commutativity of addition is a consequence of the other ring axioms in rings with <m>1</m>.
+                  </p>
                 </problem>
     
-                <p>
-                    Here are some basic consequences of the axioms.
-                </p>
+                <p>Here are some basic consequences of the axioms.</p>
     
                 <proposition xml:id="prop-ring-arithmetic">
                     <title>Ring Arithmetic</title>
@@ -14278,22 +13958,6 @@
           
         </section>
   
-      </chapter>
-
-      <chapter xml:id="ch-ring-extras">
-        <title>Extras</title>
-
-        <!--
-       <em>*********
-        Chapter: Ring Extras
-       <em>**********
-        -->
-
-        <section xml:id="sec-gpring">
-          <title>Group Rings</title>
-          <p>Coming soon to an OER near you!</p>
-        </section>
-        
       </chapter>
 
     </part>   
@@ -27454,39 +27118,6 @@
         
       </chapter>
 
-      <chapter xml:id="ch-field-extras">
-        <title>Extras</title>
-
-        <section xml:id="sec-solvable-by-radicals">
-          <title>Solvability by Radicals</title>
-
-          <p></p>
-          
-        </section>
-
-        <section xml:id="sec-transcendental-elements">
-          <title>Transcendental Elements</title>
-
-          <p></p>
-          
-        </section>
-
-        <section xml:id="sec-advanced-galois">
-          <title>Advanced Galois Theory</title>
-
-          <p></p>
-          
-        </section>
-
-        <section xml:id="sec-inverse-galois">
-          <title>The Inverse Galois Problem</title>
-
-          <p></p>
-          
-        </section>
-        
-      </chapter>
-
     </part>
 
 <!--
@@ -29169,7 +28800,7 @@
               <title>Distributive Laws</title>
               <statement>
                 <p>
-                  <m>A \cap  (\bigcup_\alpha  B_\alpha ) = \bigcup\alpha (A \cap  B_\alpha )</m> and <m>A \cup  (\cap \alpha  B\alpha ) = \cap \alpha (A \cup  B\alpha )</m>
+                  <m>A \cap  (\bigcup_\alpha  B_\alpha ) = \bigcup_\alpha (A \cap  B_\alpha )</m> and <m>A \cup  (\bigcap_\alpha  B_\alpha ) = \bigcap_\alpha (A \cup  B_\alpha )</m>
                 </p>
               </statement>
             </theorem>
@@ -29178,7 +28809,7 @@
               <title>De Morgan's Laws</title>
               <statement>
                 <p>
-                  <m>A - (\cup \alpha  B\alpha ) = \cap \alpha (A - B\alpha )</m> and <m>A - (\cap \alpha  B\alpha ) = \cup \alpha (A - B\alpha )</m>
+                  <m>A \sm (\bigcup_\alpha  B_\alpha ) = \bigcap_\alpha (A \sm B_\alpha )</m> and <m>A \sm (\bigcap_\alpha  B_\alpha ) = \bigcup_\alpha (A \sm B_\alpha )</m>
                 </p>
               </statement>
             </theorem>
@@ -29191,7 +28822,7 @@
 
             <remark>
               <p>
-                Notation for sets, elements of sets, and sets of sets: Small letters <m>a,b,c,p,q,x,y,z</m> for elements of sets, capital letters <m>A,B,C,X,Y,Z</m> for sets, calligraphic capital letters ℬ,𝒞,𝒯,𝒰 for collections of sets.
+                Notation for sets, elements of sets, and sets of sets: Small letters <m>a,b,c,x,y,z</m> for elements of sets, capital letters <m>A,B,C,X,Y,Z</m> for sets, calligraphic capital letters ℬ,𝒞,𝒯,𝒰 for collections of sets.
               </p>
             </remark>
 
@@ -29274,31 +28905,31 @@
                   <ol>
                     <li>
                       <p>
-                        If a and b are one-to-one then ba is one-to-one.  
+                        If <m>a</m> and <m>b</m> are one-to-one then <m>b\circ a</m> is one-to-one.  
                       </p>
                     </li>
 
                     <li>
                       <p>
-                        If ba is one-to-one then a is one-to-one.  
+                        If <m>ba</m> is one-to-one then <m>a</m> is one-to-one.  
                       </p>
                     </li>
 
                     <li>
                       <p>
-                        If a and b are onto then ba is onto.  
+                        If <m>a</m> and <m>b</m> are onto then <m>ba</m> is onto.  
                       </p>
                     </li>
 
                     <li>
                       <p>
-                        If ba is onto then b is onto.  
+                        If <m>ba</m> is onto then <m>b</m> is onto.  
                       </p>
                     </li>
 
                     <li>
                       <p>
-                        A is a bijection if and only if a is invertible.
+                        <m>a</m> is a bijection if and only if <m>a</m> is invertible.
                       </p>
                     </li>
                   </ol>
@@ -29313,23 +28944,23 @@
             <definition xml:id="def-image-preimage">
               <statement>
                 <p>
-                  Let f: X \to  Y be a function.  
+                  Let <m>f: X \to  Y</m> be a function.  
                   <ol>
                     <li>
                       <p>
-                        The<em>image of a subset A</em>of X is f(A) := \{f(a) | a \in  A\}.  
+                        The<em>image of a subset A</em>of <m>X</m> is <m>f(A) := \{f(a) | a \in  A\}</m>.  
                       </p>
                     </li>
 
                     <li>
                       <p>
-                        The<em>preimage</em>of a subset B of Y is f -1(B) := \{g | g \in  X and f(g) \in  B\}.  
+                        The<em>preimage</em>of a subset <m>B</m> of <m>Y</m> is <m>f\inv(B) := \{g | g \in  X and f(g) \in  B\}</m>.  
                       </p>
                     </li>
 
                     <li>
                       <p>
-                        The<em>image of f</em>is f(X).
+                        The<em>image</em> <m>f</m> is <m>f(X)</m>.
                       </p>
                     </li>
                   </ol>
@@ -29347,29 +28978,29 @@
               
               <statement>
                 <p>
-                  If f: X \to  Y, E \subseteq  E' \subseteq  Y, and E\alpha  \subseteq  Y for all \alpha , then 
+                  If <m>f: X \to  Y, E \subseteq  E' \subseteq  Y</m>, and <m>E\alpha  \subseteq  Y</m> for all <m>\alpha</m>, then 
                   <ol>
                     <li>
                       <p>
-                        f -1(E) \subseteq  f -1(E'). 
+                        <m>f\inv(E) \subseteq f\inv(E')</m>. 
                       </p>
                     </li>
 
                     <li>
                       <p>
-                        f -1(\cup \alpha  E\alpha ) = \cup \alpha f -1(E\alpha ). 
+                        <m>f\inv(\cup \alpha  E\alpha ) = \cup \alpha f\inv(E\alpha )</m>. 
                       </p>
                     </li>
 
                     <li>
                       <p>
-                        f -1(\cap \alpha  E\alpha ) = \cap \alpha f -1(E\alpha ). 
+                        <m>f\inv(\cap \alpha  E\alpha ) = \cap \alpha f\inv(E\alpha )</m>. 
                       </p>
                     </li>
 
                     <li>
                       <p>
-                        f -1(E' - E) = f -1(E') - f -1(E).
+                        <m>f\inv(E' \sm E) = f\inv(E') \sm f\inv(E)</m>.
                       </p>
                     </li>
                   </ol>
@@ -29385,29 +29016,29 @@
               <title>Images are Sometimes Nice</title>
               <statement>
                 <p>
-                  If f: X \to  Y, C \subseteq  C' \subseteq  X, and C\alpha  \subseteq  X for all \alpha , then 
+                  If <m>f: X \to  Y, C \subseteq  C' \subseteq  X</m>, and <m>C\alpha  \subseteq  X</m> for all <m>\alpha</m>, then 
                   <ol>
                     <li>
                       <p>
-                        f(C) \subseteq  f(C'). 
+                        <m>f(C) \subseteq  f(C')</m>. 
                       </p>
                     </li>
 
                     <li>
                       <p>
-                        f(\cup \alpha  C\alpha ) = \cup \alpha  f(C\alpha ). 
+                        <m>f(\cup \alpha  C\alpha ) = \cup \alpha  f(C\alpha )</m>. 
                       </p>
                     </li>
 
                     <li>
                       <p>
-                        f(\cap \alpha  C\alpha ) \subseteq  \cap \alpha  f(C\alpha ). If moreover f is injective, then f(\cap \alpha  C\alpha ) = \cap \alpha  f(C\alpha ). 
+                        <m>f(\cap \alpha  C\alpha ) \subseteq  \cap \alpha  f(C\alpha )</m>. If moreover <m>f</m> is injective, then <m>f(\cap \alpha  C\alpha ) = \cap \alpha  f(C\alpha )</m>. 
                       </p>
                     </li>
 
                     <li>
                       <p>
-                        f(C' - C) \supseteq  f(C') - f(C). If moreover f is injective, then f(C' - C) = f(C') - f(C).
+                        <m>f(C' \sm C) \supseteq  f(C') \sm f(C)</m>. If moreover <m>f</m> is injective, then <m>f(C' \sm C) = f(C') \sm f(C)</m>.
                       </p>
                     </li>
                   </ol>

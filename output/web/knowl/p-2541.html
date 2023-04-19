@@ -16,10 +16,16 @@
 <div class="para">We have</div>
 <div class="displaymath process-math">
 \begin{equation*}
-xI_2-A= \begin{bmatrix} x-1 &amp; -1 \\ 0 &amp; x-1  \end{bmatrix}.
+\phi((xI_n - A) \cdot \sum_i v_i x^i) = \phi(\sum_i v_i x^{i+1} - \sum_i (Av_i) x^i) = \sum_i A^{i+1}(v_i) - \sum_i A^i(Av_i) = 0
 \end{equation*}
 </div>
-<div class="para">To find the invariant factors of <span class="process-math">\(A\)</span> we just need to find the Smith Normal Form of <span class="process-math">\(xI_2-A\text{.}\)</span> I'll do this two ways:</div>
+<div class="para">and hence <span class="process-math">\(\ker(\phi) \supseteq \im(xI_n - A)\text{.}\)</span> By the <span class="process-math">\(0\)</span>-th isomorphism theorem, there is an induced <span class="process-math">\(F[x]\)</span>-module homomorphism</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\ov{\phi}: \frac{F^n[x]}{\im(xI_n - A)}  \onto F^n_A
+\end{equation*}
+</div>
+<div class="para">induced by <span class="process-math">\(\phi\text{,}\)</span> and it is onto since <span class="process-math">\(\phi\)</span> is onto. It remains to show this map is one-to-one.</div>
 </div>
 <span class="incontext"><a href="sec-rcf.html#p-2541" class="internal">in-context</a></span>
 </body>

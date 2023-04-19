@@ -10,12 +10,47 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para logical"><ol class="decimal">
-<li>
-<div class="para">Let <span class="process-math">\(M\)</span> be a maximal ideal of <span class="process-math">\(R\text{.}\)</span> We show that <span class="process-math">\(R/M\)</span> is a field By the Lattice Isomorphism Theorem we know there is a one-to-one correspondence between the ideals of <span class="process-math">\(R/M\)</span> and the ideals of <span class="process-math">\(R\)</span> containing <span class="process-math">\(M\text{.}\)</span> However, as <span class="process-math">\(M\)</span> is maximal, the only ideals of <span class="process-math">\(R\)</span> containing <span class="process-math">\(M\)</span> are <span class="process-math">\(R\)</span> and <span class="process-math">\(M\)</span> itself, meaning that <span class="process-math">\(R/M\)</span> has exactly two ideals, making <span class="process-math">\(R/M\)</span> a field.</div>
-<div class="para">We show that since <span class="process-math">\(R/M\)</span> is a domain, <span class="process-math">\(M\)</span> must be prime. Suppose by way of contradiction that <span class="process-math">\(M\)</span> is not prime, so exist elements <span class="process-math">\(x,y\in R\)</span> such that <span class="process-math">\(xy\in M\)</span> but neither <span class="process-math">\(x\)</span> nor <span class="process-math">\(y\)</span> are in <span class="process-math">\(M\text{.}\)</span> Thus <span class="process-math">\(xM\cdot yM=xyM=M\text{,}\)</span> making <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> zero-divisors in <span class="process-math">\(R/M\text{,}\)</span> contradicting the fact that <span class="process-math">\(R/M\)</span> is a field. Thus <span class="process-math">\(M\)</span> is prime.</div>
-</li>
-<li><div class="para">Let <span class="process-math">\(R\)</span> be a finite ring, and let <span class="process-math">\(P\)</span> be a prime ideal in <span class="process-math">\(R\text{,}\)</span> making <span class="process-math">\(R/P\)</span> an integral domain by <a href="" class="xref" data-knowl="./knowl/thm-prime-iff-domain.html" title="Theorem 3.4">Theorem 3.4</a>. We show <span class="process-math">\(R/P\)</span> is a field. Let <span class="process-math">\(a\not\in P\text{,}\)</span> and consider <span class="process-math">\(a^n\)</span> for all <span class="process-math">\(n\in\N\text{.}\)</span> As <span class="process-math">\(R/P\)</span> is finite, there exists some <span class="process-math">\(k&lt;m\in N\)</span> such that <span class="process-math">\(a^k=a^m\text{.}\)</span> Then <span class="process-math">\(a^{m-k}\cdot a^k=a^m=a^k\text{,}\)</span> meaning that <span class="process-math">\(a^{m-k}=e\text{.}\)</span> Thus <span class="process-math">\(a\)</span> has inverse <span class="process-math">\(a^{m-k-1}\text{,}\)</span> making <span class="process-math">\(a\)</span> a unit. Thus <span class="process-math">\(R/P\)</span> is a field, making <span class="process-math">\(P\)</span> a maximal ideal by <a href="" class="xref" data-knowl="./knowl/thm-maximal-iff-field.html" title="Theorem 3.10">Theorem 3.10</a>
-</div></li>
-</ol></div></article></body>
+<body class="ignore-math"><article class="hiddenproof"><div class="para logical">
+<div class="para">Let’s observe first that if such a map exists it is unique. For if <span class="process-math">\(\tilde\phi: R[x_1, \dots, x_n] \to S\)</span> is a ring map extending <span class="process-math">\(\phi\)</span> and sending <span class="process-math">\(x_i\)</span> to <span class="process-math">\(s_i\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{align*}
+\tilde\phi(\sum_{e_1, \dots, e_n \geq 0} r_{e_1, \dots, e_n} x_1^{e_1} \cdots x_n^{e_n}) &amp;=
+\sum_{e_1, \dots, e_n \geq 0} \phi(r_{e_1, \dots, e_n}) \phi(x_1)^{e_1} \cdots \phi(x_n)^{e_n}) \\
+&amp;=
+\sum_{e_1, \dots, e_n \geq 0} \phi(r_{e_1, \dots, e_n}) s_1^{e_1} \cdots s_n^{e_n},
+\end{align*}
+\end{equation*}
+</div>
+<div class="para">using that <span class="process-math">\(\tilde\phi\)</span> preserves <span class="process-math">\(+\)</span> and <span class="process-math">\(\cdot\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">For existence, let's assume <span class="process-math">\(n = 1\)</span> at first. Given <span class="process-math">\(\phi: R \to S\)</span> and <span class="process-math">\(s \in S\text{,}\)</span> define</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\tilde{\phi}: R[x] \to S
+\end{equation*}
+</div>
+<div class="para">by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\tilde{\phi}(\sum_i r_i x^i) = \sum_i \phi(r_i) s^i.
+\end{equation*}
+</div>
+<div class="para">It is elementary (but tedious) to check <span class="process-math">\(\tilde{\phi}\)</span> really is a ring homomorphism. The fact that it restricts to <span class="process-math">\(\phi\)</span> is clear, however.</div>
+</div> <div class="para logical">
+<div class="para">For the general case, we proceed by induction on the number of variables <span class="process-math">\(n\text{.}\)</span> The induction hypothesis shows that there is a ring homomorphism</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\psi: R[x_1, \dots, x_{n-1}] \to S
+\end{equation*}
+</div>
+<div class="para">such that <span class="process-math">\(\psi|_R = \phi\)</span> and <span class="process-math">\(\psi(x_i) = s_i\text{,}\)</span> <span class="process-math">\(i = 1, \dots, n-1\text{.}\)</span> Applying the <span class="process-math">\(n=1\)</span> case to <span class="process-math">\(\psi\)</span> gives</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\tilde{\psi}: (R[x_1, \dots, x_{n-1}])[x_n] \to S
+\end{equation*}
+</div>
+<div class="para">with <span class="process-math">\(\tilde\psi|_{R[x_1, \dots, x_{n-1}]} = \psi\)</span> and <span class="process-math">\(\tilde{\psi}(x_n) = s_n\text{.}\)</span> Setting <span class="process-math">\(\tilde\phi=\tilde\psi\)</span> gives a map <span class="process-math">\(\tilde{\phi}\)</span> with the needed properties.</div>
+</div></article></body>
 </html>

@@ -10,6 +10,28 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para">Suppose <span class="process-math">\(G = \langle x \rangle\)</span> with <span class="process-math">\(|x| = n\)</span> or <span class="process-math">\(|x| = \infty\)</span> and set <span class="process-math">\(H=C_n\)</span> in the first case and <span class="process-math">\(H=C_\infty\)</span> in the second case. Then by <a href="" class="xref" data-knowl="./knowl/prop-ump-cyclic.html" title="Proposition 7.1: Universal Mapping Property (UMP) for Cyclic Groups">Proposition 7.1</a>, there are homomorphisms <span class="process-math">\(f: G \to H\)</span> and <span class="process-math">\(g: G \to H\)</span> such that <span class="process-math">\(f(x) = a\)</span> and <span class="process-math">\(g(a) =x\text{.}\)</span> So <span class="process-math">\(g \circ f\)</span> is an endomorphisms of <span class="process-math">\(G\)</span> mapping <span class="process-math">\(x\)</span> to <span class="process-math">\(x\text{.}\)</span> But the identity map also has this property, and so the uniqueness clause gives <span class="process-math">\(g \circ f = \text{id}_G\text{.}\)</span> Similarly, <span class="process-math">\(f \circ g = \text{id}_H\text{.}\)</span>
+<body class="ignore-math"><article class="hiddenproof"><div class="para logical">
+<div class="para">It suffices prove that for a given group <span class="process-math">\(G\text{,}\)</span> we can recover its invariant factor form from its elementary divisor form, and vice versa. We will be a bit hand-wavey for this following the ideas from the above examples.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+G \cong  \mathbb{Z}^r \times \mathbb{Z}/p_1^{e_1} \times \cdots \times \mathbb{Z}/p_l^{e_l}.
+\end{equation*}
+</div>
+<div class="para">by applying the Chinese Remainder Theorem we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+G \cong \mathbb{Z}^r \times \mathbb{Z}/d_1 \times \cdots \times \mathbb{Z}/d_n
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(d_1\)</span> is the product of the elementary divisors of highest power for each <em class="emphasis">distinct</em> prime in the list <span class="process-math">\(p_1, \dots, p_l\text{,}\)</span> <span class="process-math">\(d_2\)</span> is the product of the next highest possible prime powers, and so on. We will have that <span class="process-math">\(d_2\mid d_1\)</span> and in general that <span class="process-math">\(d_{i+1}\mid d_i\)</span> since by definition the exponent of <span class="process-math">\(p_j\in d_i\)</span> is greater or equal to the exponent of <span class="process-math">\(p_j\in d_{i+1}\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">Conversely, given</div>
+<div class="displaymath process-math">
+\begin{equation*}
+G \cong \mathbb{Z}^r \times \mathbb{Z}/d_1 \times \cdots \times \mathbb{Z}/d_n
+\end{equation*}
+</div>
+<div class="para">with <span class="process-math">\(d_1 \mid d_2 \mid \cdots \mid d_n\text{,}\)</span> we may apply the CRT to each <span class="process-math">\(\mathbb{Z}/d_i\)</span> to find its elementary divisor form.</div>
 </div></article></body>
 </html>
