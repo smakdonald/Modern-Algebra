@@ -12,45 +12,6 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<div class="para">The main point of the proof is to establish:</div> <div class="para logical">
-<div class="para">{}: There is a sequence of row and column operations that transforms <span class="process-math">\(A\)</span> to</div>
-<div class="displaymath process-math">
-\begin{equation*}
-A' = \begin{bmatrix}
-g &amp; 0 \\
-0 &amp; B \\
-\end{bmatrix}
-\end{equation*}
-</div>
-<div class="para">for some <span class="process-math">\((n-1) \times (m-1)\)</span> matrix <span class="process-math">\(B\)</span> and where <span class="process-math">\(g = \gcd(A)\text{.}\)</span> (We adopt the convention that if <span class="process-math">\(A\)</span> is the matrix of all <span class="process-math">\(0\)</span>'s, then <span class="process-math">\(g = 0\text{.}\)</span>) Note that, by Lemma , we have <span class="process-math">\(\gcd(A) = \gcd(A')\)</span> and thus <span class="process-math">\(g \mid \gcd(B)\text{.}\)</span>
-</div>
-</div> <div class="para logical">
-<div class="para">Granting this claim, by applying it again to <span class="process-math">\(B\)</span> we arrive at a matrix of the form</div>
-<div class="displaymath process-math">
-\begin{equation*}
-A'' = \begin{bmatrix}
-g &amp; 0 &amp; 0\\
-0 &amp; g' &amp; 0 \\
-0 &amp; 0 &amp; C
-\end{bmatrix}
-\end{equation*}
-</div>
-<div class="para">where <span class="process-math">\(g' = \gcd(B)\)</span> and <span class="process-math">\(g \mid g'\)</span> and <span class="process-math">\(g' \mid \gcd(C)\text{.}\)</span> (Observe that the row and column operations on <span class="process-math">\(B\)</span> will not affect the first row and column of <span class="process-math">\(A'\text{.}\)</span>) Continuing in this fashion, we arrive at the matrix <span class="process-math">\(S\)</span> in the statement.</div>
-</div> <div class="para">To prove the claim, let <span class="process-math">\(a\)</span> be the upper-left entry of <span class="process-math">\(A\text{.}\)</span>
-</div> <div class="para">Suppose <span class="process-math">\(a\)</span> happens to be <span class="process-math">\(g = \gcd(A)\text{.}\)</span> Then, in particular, it divides every entry of the first row and column of <span class="process-math">\(A\text{,}\)</span> and so by doing row and column operations of type I, we may <span class="process-math">\(0\)</span> out these entries to arrive at a matrix of the desired form directly.</div> <div class="para">In general, let <span class="process-math">\(l\)</span> to be the number of prime factors in a prime factorization of of <span class="process-math">\(a/\gcd(A)\text{,}\)</span> and proceed by induction on <span class="process-math">\(l\text{.}\)</span>
-</div> <div class="para">If <span class="process-math">\(l = 0\text{,}\)</span> then <span class="process-math">\(a = \gcd(A)\)</span> (up to associates), and we already did this case.</div> <div class="para">Assume <span class="process-math">\(l &gt; 0\text{.}\)</span> Then there is at least one entry <span class="process-math">\(b = a_{i,j}\)</span> such that <span class="process-math">\(a \nmid b\text{.}\)</span>
-</div> <div class="para">Case I: There is such a <span class="process-math">\(b\)</span> belonging to the first row of <span class="process-math">\(A\text{.}\)</span> In this case we we may implement the Euclidean algorithm in the form of suitable column operations to replace <span class="process-math">\(a\)</span> by <span class="process-math">\(\gcd(a,b)\)</span> and <span class="process-math">\(b\)</span> by <span class="process-math">\(0\text{,}\)</span> as in the example above. Since <span class="process-math">\(a \nmid b\text{,}\)</span> <span class="process-math">\(\gcd(a,b)\)</span> is a proper divisor of <span class="process-math">\(a\text{,}\)</span> and it follows that the number of factors in a prime factorization of <span class="process-math">\(\gcd(a,b)/g\)</span> is smaller than <span class="process-math">\(l\text{,}\)</span> and we are done by induction.</div> <div class="para">Case II: There is such a <span class="process-math">\(b\)</span> in the first column. Just as in the previous case, we are done by induction upon implementing the Euclidean algorithm using suitable row operations.</div> <div class="para logical">
-<div class="para">Case III: <span class="process-math">\(a\)</span> divides every entry of the first row and first column. In this case, suitable row and column operations transform <span class="process-math">\(A\)</span> to</div>
-<div class="displaymath process-math">
-\begin{equation*}
-D = 
-\begin{bmatrix}
-a &amp; 0 \\
-0 &amp; E \\
-\end{bmatrix}.
-\end{equation*}
-</div>
-<div class="para">By Lemma  we have <span class="process-math">\(\gcd(D) = \gcd(A)\text{,}\)</span> and thus there is some element <span class="process-math">\(e\)</span> of <span class="process-math">\(E\)</span> such that <span class="process-math">\(a \nmid e\)</span> (since we are assuming <span class="process-math">\(a\)</span> is not the gcd of <span class="process-math">\(A\)</span>). A suitable row operation puts <span class="process-math">\(e\)</span> into row one without affecting <span class="process-math">\(a\text{,}\)</span> and we are back to the previously solved Case I.</div>
-</div></article><span class="incontext"><a href="sec-snf.html#proof-98" class="internal">in-context</a></span>
+<div class="para">This is an immediate consequence of the SNF Theorem, Theorem  parts (1) and (2), and Lemma .</div></article><span class="incontext"><a href="sec-snf.html#proof-98" class="internal">in-context</a></span>
 </body>
 </html>

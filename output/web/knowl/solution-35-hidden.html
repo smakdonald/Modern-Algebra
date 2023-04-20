@@ -11,25 +11,9 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<div class="para">Let <span class="process-math">\(G\)</span> be a finite <span class="process-math">\(p\)</span>-group for some prime <span class="process-math">\(p\)</span> and <span class="process-math">\(N\neq {1}\)</span> a normal subgroup of <span class="process-math">\(G\text{.}\)</span>
-</div> <div class="para logical">
-<div class="para">First, we show that the center of <span class="process-math">\(G\)</span> is nontrivial. Suppose by way of contradiction that <span class="process-math">\(Z(G)=\{e\}\text{.}\)</span> We examine the conjugacy classes of <span class="process-math">\(G\text{.}\)</span> From <a href="" class="xref" data-knowl="./knowl/thm-class-eq.html" title="Theorem 4.37: The Class Equation">The Class Equation</a>, we know</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-class-eq.html">
-\begin{equation*}
-|G| = |Z(G)| + \sum_i^r |G : C_G(g_i)|.
-\end{equation*}
-</div>
-<div class="para">Note that <span class="process-math">\(|G|=p^n\)</span> for some <span class="process-math">\(n\in\N\text{,}\)</span> meaning that the only divisors of <span class="process-math">\(|G|\)</span> are powers of <span class="process-math">\(p\text{.}\)</span> In finite groups, each conjugacy class must divide the order of the group. By Lagrange's Theorem, <span class="process-math">\(|G : C_G(g_i)|=\frac{|G|}{|C_G(g_i)|}=\frac{p^n}{p^m}=p^k\text{,}\)</span> where <span class="process-math">\(m,k\in\N\text{.}\)</span> Since |Z(G)|=1, we see that <span class="process-math">\(\sum_i^r |G : C_G(g_i)|\bigg|p^n-1\text{,}\)</span> which is impossible given that <span class="process-math">\(p^n-1 \not|p^n\text{.}\)</span> Thus <span class="process-math">\(Z(G)\neq\{e\}\text{.}\)</span>
-</div>
-</div> <div class="para logical">
-<div class="para">As <span class="process-math">\(N\nsg G\)</span> it is a union of conjugacy classes of the elements it contains, one of which is <span class="process-math">\(e\text{.}\)</span> Assume by way of contradiction that <span class="process-math">\(N\cap Z(G)={e}\text{,}\)</span> meaning that <span class="process-math">\(e\)</span> is the only element in <span class="process-math">\(N\)</span> whose conjugacy class is a singleton. This yields</div>
-<div class="displaymath process-math">
-\begin{equation*}
-|N| = 1+ \sum_i^r |G : C_G(n_i)|.
-\end{equation*}
-</div>
-<div class="para">However, by Lagrange's Theorem <span class="process-math">\(N\)</span> must also be a <span class="process-math">\(p-\)</span>group, and thus by an analogous element counting argument as above we see that there exists some <span class="process-math">\(x\in N\)</span> such that <span class="process-math">\(C_G(x)=\{x\}\text{,}\)</span> or that <span class="process-math">\(gxg\inv=x\)</span> for all <span class="process-math">\(g\in G\text{.}\)</span> Thankfully, this means that <span class="process-math">\(x\in Z(G)\text{,}\)</span> and thus we have <span class="process-math">\(Z(G)\cap N\neq 1\text{.}\)</span>
-</div>
+<div class="para">First, note that <span class="process-math">\(N_G(P)=\{g\in G|gPg\inv=P\}\text{.}\)</span>
+</div> <div class="para">Let <span class="process-math">\(G\)</span> act on <span class="process-math">\(\Syl_p(G)\)</span> by <a href="" class="xref" data-knowl="./knowl/ex-conj.html" title="Item 3: Conjugation">Conjugation</a>, which is a transitive action by part (2) of <a href="" class="xref" data-knowl="./knowl/thm-sylow.html" title="Theorem 5.11: Sylow's Theorem">Sylow's Theorem</a>. Therefore <span class="process-math">\(H\)</span> acts transitively on this set as well. Under this action, <span class="process-math">\(N_G(P)=\Stab_G(P)\text{.}\)</span>
+</div> <div class="para">Let <span class="process-math">\(g\in G\text{,}\)</span> and let <span class="process-math">\(x\in N_G(P)\text{.}\)</span> Consider <span class="process-math">\(g\inv x\text{.}\)</span> As the action by <span class="process-math">\(H\)</span> is transitive there exists some <span class="process-math">\(h\in H\)</span> such that <span class="process-math">\(hg\inv\cdot x=x\text{.}\)</span> This means that <span class="process-math">\(hg\inv\)</span> stabilizes <span class="process-math">\(x\text{.}\)</span> Then <span class="process-math">\((hg\inv)\inv=gh\inv\)</span> stabilizes <span class="process-math">\(x\)</span> as well, so <span class="process-math">\(gh\inv\cdot x=x\text{.}\)</span> But notice that <span class="process-math">\(gh\inv h=g\text{,}\)</span> where <span class="process-math">\(gh\inv\in N_G(P)\)</span> and <span class="process-math">\(h\in H\text{.}\)</span> Thus <span class="process-math">\(G = H N_G(P )\text{.}\)</span>
 </div>
 </div></body>
 </html>

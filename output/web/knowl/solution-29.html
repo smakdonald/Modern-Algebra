@@ -13,12 +13,29 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h5 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">5.1.4.1</span><span class="period">.</span>
 </h5>
-<div class="para">Suppose <span class="process-math">\(u,v \in X\)</span> lie in the same orbit. Then <span class="process-math">\(u = gv\)</span> for some <span class="process-math">\(g \in G\text{.}\)</span> Then <span class="process-math">\(a \in  G_u\)</span> if and only <span class="process-math">\(au = u\text{,}\)</span> which is if and only if <span class="process-math">\(agv = gv\text{,}\)</span> which is if and only if <span class="process-math">\((g\inv ag)v = v\text{,}\)</span> which is if and only <span class="process-math">\(if g\inv ag \in Gv\text{,}\)</span> which is if and only if <span class="process-math">\(a \in  gGvg\inv.\)</span>
-</div> <div class="para">Thus, <span class="process-math">\(G_u = gG_vg\inv\text{.}\)</span> Now, if <span class="process-math">\(G\)</span> acts transitively on <span class="process-math">\(X\text{,}\)</span> then <span class="process-math">\(X = \{gv |g \in G\}\)</span> for any <span class="process-math">\(v \in  X\text{.}\)</span> Hence, by the argument above, for any <span class="process-math">\(u \in  X, G_u = gG_vg\inv\)</span> for some <span class="process-math">\(g \in  G\text{.}\)</span>
-</div> <div class="para">Since the kernel of the action is the intersection of all the stabilizers, we obtain the desired conclusion.</div>
+<div class="para">Let <span class="process-math">\(G\)</span> be a finite <span class="process-math">\(p\)</span>-group for some prime <span class="process-math">\(p\)</span> and <span class="process-math">\(N\neq {1}\)</span> a normal subgroup of <span class="process-math">\(G\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">First, we show that the center of <span class="process-math">\(G\)</span> is nontrivial. Suppose by way of contradiction that <span class="process-math">\(Z(G)=\{e\}\text{.}\)</span> We examine the conjugacy classes of <span class="process-math">\(G\text{.}\)</span> From <a href="" class="xref" data-knowl="./knowl/thm-class-eq.html" title="Theorem 4.38: The Class Equation">The Class Equation</a>, we know</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-class-eq.html">
+\begin{equation*}
+|G| = |Z(G)| + \sum_i^r |G : C_G(g_i)|.
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec-orbit-stab-class-eq.html#solution-29" class="internal">in-context</a></span>
+<div class="para">Note that <span class="process-math">\(|G|=p^n\)</span> for some <span class="process-math">\(n\in\N\text{,}\)</span> meaning that the only divisors of <span class="process-math">\(|G|\)</span> are powers of <span class="process-math">\(p\text{.}\)</span> In finite groups, each conjugacy class must divide the order of the group. By Lagrange's Theorem, <span class="process-math">\(|G : C_G(g_i)|=\frac{|G|}{|C_G(g_i)|}=\frac{p^n}{p^m}=p^k\text{,}\)</span> where <span class="process-math">\(m,k\in\N\text{.}\)</span> Since |Z(G)|=1, we see that <span class="process-math">\(\sum_i^r |G : C_G(g_i)|\bigg|p^n-1\text{,}\)</span> which is impossible given that <span class="process-math">\(p^n-1 \not|p^n\text{.}\)</span> Thus <span class="process-math">\(Z(G)\neq\{e\}\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">As <span class="process-math">\(N\nsg G\)</span> it is a union of conjugacy classes of the elements it contains, one of which is <span class="process-math">\(e\text{.}\)</span> Assume by way of contradiction that <span class="process-math">\(N\cap Z(G)={e}\text{,}\)</span> meaning that <span class="process-math">\(e\)</span> is the only element in <span class="process-math">\(N\)</span> whose conjugacy class is a singleton. This yields</div>
+<div class="displaymath process-math">
+\begin{equation*}
+|N| = 1+ \sum_i^r |G : C_G(n_i)|.
+\end{equation*}
+</div>
+<div class="para">However, by Lagrange's Theorem <span class="process-math">\(N\)</span> must also be a <span class="process-math">\(p-\)</span>group, and thus by an analogous element counting argument as above we see that there exists some <span class="process-math">\(x\in N\)</span> such that <span class="process-math">\(C_G(x)=\{x\}\text{,}\)</span> or that <span class="process-math">\(gxg\inv=x\)</span> for all <span class="process-math">\(g\in G\text{.}\)</span> Thankfully, this means that <span class="process-math">\(x\in Z(G)\text{,}\)</span> and thus we have <span class="process-math">\(Z(G)\cap N\neq 1\text{.}\)</span>
+</div>
+</div>
+</div>
+<span class="incontext"><a href="sec-p-groups.html#solution-29" class="internal">in-context</a></span>
 </body>
 </html>

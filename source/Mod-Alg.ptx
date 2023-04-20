@@ -449,6 +449,7 @@
                         (Inverses) for each <m>x\in G</m>, there is an element <m>y\in G</m> such that <m>xy=e=yx</m>.
                       </p>
                     </li>
+                    
                   </ol>
                   <notation><usage><m>(G,\cdot)</m></usage><description>a group <m>G</m> and its binary operation <m>\cdot</m></description></notation>          
                 </p>
@@ -522,6 +523,8 @@
                 </p>
               </statement>
             </definition>
+
+            <p>As we progress through the text, one might start to recognize that groups are much more agreeable when they are abelian. They behave in ways we expect and are often times much more likely to do what we want. If all groups were abelain group theory would not be anywhere near as widespread (or interesting, though that is more a matter of opinion). Because of this, a common motif in this course is finding, constructing, and fiddling with groups that are 'almost' abelian, whatever that means.</p>
       
             <historical>
               <p>
@@ -689,39 +692,9 @@
                 When we refer to exponents in groups, we are talking about repeated applications of the given operation, which in many cases is denoted multiplicatively, hence the exponent notation. However, for additive groups, such as <m>(\Z,+)</m>, we find ourselves in the uncomfortable situation where statements such as <m>2^3=2+2+2=6</m> are technically true. Thus, in additive groups it is more customary to denote expressions such as the one above in more traditional notation: namely, <m>3\cdot (2)=2+2+2=6</m>.
               </p>
             </warning>
+
+            <p>But thats enough confusion for now. I know just the thing to get us back in order.</p>
     
-            <theorem xml:id="thm-dirprop-gp">
-              <title>Direct Products of Groups</title>
-              <statement>
-                <p>
-                  <ol>
-                    <li>
-                      <p>
-                        Let <m>(G,+)</m> and <m>(H,\times)</m> be groups. Then <m>G\times H</m> is a group, where <m>(G\times H,*)</m> denotes the Cartesian Product of <m>G</m> and <m>H</m>, and the operation <m>*</m> is defined 
-                        <me>
-                          (g_1,h_1)*(g_2,h_2)=(g_1+g_2,h_1\times h_2).
-                        </me>
-                      </p>
-                    </li>
-
-                    <li>
-                      <p>
-                        Let <m>G_1,\dots,G_n</m> be groups. Then <m>G_1\times\cdots\times G_n</m> is a group, with its operation defined similary to that in part (1).
-                      </p>
-                    </li>
-                  </ol>
-                </p>
-              </statement>
-      
-              <proof>
-                <p>
-                  Coming soon to an OER near you!
-                </p>
-              </proof>
-            </theorem>
-
-            <remark><p>This is known as an <em>external direct product</em>, which we will explore and define explicitely in <xref ref="sec-dps"/>.</p></remark>
-            
           </subsection>
 
           <subsection xml:id="subsec-order">
@@ -982,7 +955,7 @@
               </exercise>
     
               <exercise xml:id="exe-groups-but-false">
-                <title>Woulnd't it be Nice</title>
+                <title>Wouldn't it be Nice</title>
                 <p>
                   Find counterexamples to each of the following (false) statements.
     
@@ -3838,6 +3811,12 @@
                     For any group <m>G</m>, <m>Z(G)\nsg G</m>. 
                   </p>
                 </li>
+
+                <li>
+                  <p>
+                    <m>n\Z\nsg \Z</m> for all <m>n\in\Z</m>.
+                  </p>
+                </li>
                 
                 <li>
                   <p>
@@ -3893,12 +3872,18 @@
           
           <exercises>
     
-            <exercisegroup>  <title>Computations and Examples</title>
+            <exercisegroup> <title>Examples and Specifics</title>
              
               <introduction>
                 <p>
                 </p>
               </introduction>
+
+              <exercise xml:id="exe-anything-but-normal">
+                <title>Anything but Normal</title>
+
+                <p>Come up with a better name for normal subgroups than 'normal subgroup'. Give it some oomph. Make it mean something.<fn>This author has recently become personally partial to the term <em>semiabelian </em>. Yes, its more letters, but so are semisimple, semidirect, and semicircle. Imagine if we called all those things normal too! It would be a normal nightmare. </fn></p>
+              </exercise>
           
               <exercise xml:id="exe-normal-verification">
                 <title>Normal Subgroup Verification</title>
@@ -3948,26 +3933,18 @@
                   </p>
                 </statement>
               </exercise>
-
-              <exercise xml:id="exe-hk-non-commuting-elements">
-                <title><m>HK=KH</m> but not Abelian</title>
-                <statement>
-                  <p>
-                    In <m>D_{2n}</m>, let <m>H=\langle s\rangle</m> and <m>K=\langle r\rangle</m>. Then <m>HK=KH=D_{2n}</m> but <m>r</m> and <m>s</m> do not commute. The fact that <m>HK=KH</m> can also be justified by observing that <m>K\nsg D_{2n}</m>.
-                  </p>
-                </statement>
-              </exercise>
           
             </exercisegroup>
           
-            <exercisegroup> <title>Formal Proofs</title>
+            <exercisegroup> <title>Properties and Future Lemmas</title>
               
               <introduction>
                 <p>
                 </p>
               </introduction>
 
-              <exercise>
+              <exercise xml:id="exe-trivially-intersecting-normal-subgroups">
+                <title>Trivially Intersecting Normal Subgroups</title>
                 <statement>
                 <p>
                   Let <m>H</m> and <m>K</m> be normal subgroups of a group <m>G</m> such that <m>H\cap K=\{1\}</m>. Prove that <m>xy=yx</m> for all <m>x\in H, y\in K</m>.
@@ -3975,13 +3952,17 @@
               </statement>
               </exercise>
 
-              <exercise>
+              <exercise xml:id="exe-normality-and-generated-subgroups">
+                <title>Normality and Generated Subgroups</title>
+              <statement>
                 <p>
                   Let <m>G</m> be a group and <m>S</m> a subset of <m>G</m>. Let <m>H=\langle S \rangle</m>. Prove that <m>H\nsg G</m> if and only if <m>gsg^{-1}\in H</m> for every <m>s\in S</m> and <m>g\in G</m>.
                 </p>
+              </statement>
               </exercise>
           
-              <exercise>
+              <exercise xml:id="exe-subgroup-index-2-normal">
+                <title>Subgroup of Index <m>2</m> is Normal</title>
                 <statement>
                 <p>
                   Show that any subgroup of index two is normal. This means: show that if <m>G</m> is a group, <m>H</m> is a subgroup and <m>[G:H]=2</m>, i.e the number of left (or right) cosets of <m>H</m> in <m>G</m> is two, then <m>H</m> is normal. 
@@ -4001,29 +3982,17 @@
                 </solution>
               </exercise>
 
-              <exercise>
+              <exercise xml:id="exe-rel-prime-index-and-order">
+                <title>Relatively Prime Index and Order</title>
                 <statement>
                   <p>
-                    Let <m>G</m> be a finite group, <m>H</m> and <m>N</m> subgroups such that <m>|H|</m> and <m>[G : N]</m> = are relatively prime and <m>N\nsg G</m>. Prove that <m>H \subseteq N</m>.
+                    Let <m>G</m> be a finite group, <m>H</m> and <m>N</m> subgroups such that <m>|H|</m> and <m>[G : N]</m> are relatively prime and <m>N\nsg G</m>. Prove that <m>H \subseteq N</m>.
                   </p>
                 </statement>
-              </exercise>
-        
-              <exercise>
-                <statement>
-                  <p>
-                    Let <m>G</m> be a finite group and <m>K</m> a subgroup of <m>G</m> such that: <m>[G : K] = 2</m>, <m>K</m> is simple, and <m>Z(G) = \{e\}</m>. Prove that the only normal subgroups of <m>G</m> are <m>\{e\}, K</m>, and <m>G</m>.
-                  </p>
-                </statement>
-                
-                <hint>
-                  <p>
-                    Let <m>H</m> be a normal subgroup of <m>G</m>. Then <m>H\cap K</m> is a normal subgroup of <m>K</m>.
-                  </p>
-                </hint>
               </exercise>
 
-              <exercise>
+              <exercise xml:id="exe-generated-normal-subgroup">
+                <title>Generated Normal Subgroup</title>
                 <p>
                   Let <m>G</m> be a group and let <m>A \subseteq G</m> be a set. The <em>normal subgroup generated by <m>A</m></em>, denoted <m>\langle A \rangle ^N</m>, is the intersection of all the normal subgroups of <m>G</m> that contain <m>A</m>. 
                   <ol>
@@ -4047,7 +4016,7 @@
               
             </exercisegroup>
           
-            <exercisegroup>  <title>Qualifying Exam Problems</title>
+            <exercisegroup> <title>Qualifying Exam Problems</title>
              
               <introduction>
                 <p>
@@ -4111,23 +4080,6 @@
     
               </exercise>
     
-              <exercise> <title>May 2019 (2a)</title>
-                <statement>
-    
-                  <p>
-                    Let <m>H</m> be a subgroup of a group <m>G</m>. Recall that the centralizer of <m>H</m> is the subgroup of <m>G</m> defined by <m>Z_G(H) = \{g \in G | gh = hg ∀h \in H\}</m>
-                    <fn>In the original qualifying exam, the centralizer was denoted <m>C_G(H).</m></fn>
-                    and the normalizer of <m>H</m> is the subgroup of <m>G</m> defined by <m>N_G(H) = \{g \in G | gHg\inv = H\}</m>. Show that the centralizer <m>C_G(H)</m> of <m>H</m> in <m>G</m> is a normal subgroup of the normalizer <m>N_G(H)</m> of <m>H</m> in <m>G</m>.
-                  </p>
-                </statement>
-
-                <solution>
-                  <p>
-                    Let <m>G</m> act on <m>H</m> by conjugation. Thus the associated permutation homomorphism <m>\rho</m> is defined such that <m>\rho(g)=\phi_g</m>, where <m>\phi_g(h)=ghg\inv</m>. Notice that when <m>x\in C_G(H)</m> we have <m>\phi_x(h)=xhx\inv=h</m> for all <m>h\in H</m>, and thus <m>x\in\ker(\rho)</m>. If <m>x\in\ker(\rho)</m> then <m>xhx\inv=h</m> for all <m>h\in H</m>, and thus <m>x\in C_G(H)</m>. Thus <m>C_G(H)=\ker(\rho)</m> and <m>C_G(H)\nsg N_G(H)</m>.
-                  </p>
-                </solution>
-              </exercise>
-    
               <exercise> <title>May 2021 (1ab)</title>
                 
                 <statement>
@@ -4176,48 +4128,6 @@
                 
               </exercise>
     
-              <exercise> <title>Jan 2022 (1)</title>
-
-                <statement>
-                  <p>
-                    Let <m>G</m> be a group, and <m>H, K \leq G</m> be subgroups of <m>G</m>. 
-                  <ol>
-                    <li>
-                      <p>
-                        Give an example of <m>G, H,</m> and <m>K</m> such that <m>HK</m> is not a subgroup of <m>G</m>. 
-                      </p>
-                    </li>
-        
-                    <li>
-                      <p>
-                        Suppose now that <m>H\nsg G</m> and <m>[G : H] = p</m>, where <m>p</m> is prime. Prove that either <m>K \leq H</m> or <m>G = KH</m>.
-                      </p>
-                    </li>
-                  </ol>
-                  </p>
-                </statement>
-        
-                <solution>
-                  <p>
-                    <ol>
-                    <li>
-                      <p>
-                        Let <m>G=S_3</m>, <m>H=\langle(12)\rangle</m>, and <m>K=\langle(13)\rangle</m>. Notice that <m>H\cap K=\{e\}</m>, and thus <m>|HK|=4</m>, (<xref provisional="empty"/>) which does not divide <m>6</m>. Thus <m>HK</m> is not a subgroup of <m>G</m>, as this would contradict <xref text="title" ref="thm-lagrange" />.
-                      </p>
-                    </li>
-        
-                    <li>
-                      <p>
-                        Suppose there exists some <m>k\in K</m> such that <m>k\not\in H</m>. We examine <m>kH\in G/H</m>. Notice that since <m>G/H</m> has prime order it is cyclic, and thus generated by any non-identity element, such as <m>kH</m>. Thus any element in <m>G/H</m> can be written in the form <m>k^iH</m>, and any element in <m>G</m> can subsequently be written as <m>k^ih</m> for some <m>h\in H</m>. Thus <m>G=KH</m>.
-                      </p>
-                    </li>
-                  </ol>
-                </p>
-              </solution>
-                
-                
-              </exercise>
-    
               <exercise> <title>Jan 2022 (3b)</title>
                 
         
@@ -4256,131 +4166,473 @@
         <section xml:id="sec-quotient-groups">
           <title>Quotient Groups</title>
 
-          <blockquote>
-            <p>
-              <q>Great things are done by a series of small things brought together.</q>
-            </p>
-            <attribution>Vincent Van Gogh</attribution>
-          </blockquote>
-    
-          <p>Recall from your undergraduate algebra course the construction for the integers modulo <m>n</m>: one starts with an equivalence relation <m>\sim</m> on <m>\mathbb{Z}</m>, considers the set <m>\mathbb{Z}/n</m> of all equivalence classes with respect to this equivalence relation, and verifies that the operations on <m>\mathbb{Z}</m> give rise to well defined binary operations on the set of equivalence classes.</p>
-    
-          <definition xml:id="def-quotient-group">
-            <title>Quotient Group</title>
-            <statement>
+          <subsection xml:id="subsec-quotients">
+            <title>Quotient Groups</title>
+  
+            <blockquote>
               <p>
-                For any normal subgroup <m>N</m> of a group <m>G</m>, the <em>quotient group</em> <m>G/N</m> is the set of left cosets of <m>N</m> in <m>G</m> with multiplication given by <m>xN\cdot yN=(xy)N</m>.
+                <q>Great things are done by a series of small things brought together.</q>
               </p>
-            </statement>
-          </definition>
+              <attribution>Vincent Van Gogh</attribution>
+            </blockquote>
+      
+            <p>Recall from your undergraduate algebra course the construction for the integers modulo <m>n</m>: one starts with an equivalence relation <m>\sim</m> on <m>\mathbb{Z}</m>, considers the set <m>\mathbb{Z}/n</m> of all equivalence classes with respect to this equivalence relation, and verifies that the operations on <m>\mathbb{Z}</m> give rise to well defined binary operations on the set of equivalence classes.</p>
+      
+            <definition xml:id="def-quotient-group">
+              <title>Quotient Group</title>
+              <statement>
+                <p>
+                  For any normal subgroup <m>N</m> of a group <m>G</m>, the <em>quotient group</em> <m>G/N</m> is the set of left cosets of <m>N</m> in <m>G</m> with multiplication given by <m>xN\cdot yN=(xy)N</m>.
+                </p>
+              </statement>
+            </definition>
 
-          <p>Before we get too ahead of ourselves, we should probably make sure that this thing is actually a well-defined bona-fide group.</p>
-    
-          <theorem xml:id="thm-quotient-iff-normal">
-            <title>Quotients and Normal Subgroups</title>
-            <creator>1889</creator>
-            <statement>
+            <p>Before we get too ahead of ourselves, we should probably make sure that this thing is actually a well-defined bona-fide group.</p>
+      
+            <theorem xml:id="thm-quotient-iff-normal">
+              <title>Quotients and Normal Subgroups</title>
+              <creator>1889</creator>
+              <statement>
+                <p>
+                  Let <m>N\leq G</m>. Then <m>G/N</m> is a group if and only if <m>N\nsg G</m>.
+                </p>
+              </statement>
+            </theorem>
+      
+            <remark><p>Note that the set <m>G/H</m> exists for any subgroup <m>H\leq G</m>. However, this set only satisfies the axioms of a group when the subgroup is normal.</p></remark>
+
+            <example xml:id="ex-mod-quotient">
               <p>
-                Let <m>N\leq G</m>. Then <m>G/N</m> is a group if and only if <m>N\nsg G</m>.
+                In <xref ref="ex-normal-examples"/> we saw <m>n\Z\nsg\Z</m>, and thus the quotient <m>\Z/n\Z</m> is indeed a group. For those accustomed to this as the notation for <m>\Z/(n)</m>, it may not surprise you that <m>\Z/(n)\cong\Z/n\Z</m>. You may prove this explicitely in <xref ref="exe-mod-n-iso"/>
               </p>
-            </statement>
-          </theorem>
-    
-          <remark><p>Note that the set <m>G/H</m> exists for any subgroup <m>H\leq G</m>. However, this set only satisfies the axioms of a group when the subgroup is normal.</p></remark>
-    
-          <p>Recalling <xref text="title" ref="thm-lagrange"/>, we have the following corollary:</p>
-    
-          <corollary xml:id="cor-order-of-quotient">
-            <title>Order of Quotient Groups</title>
-            <statement>
+            </example>
+      
+            <p>Recalling <xref text="title" ref="thm-lagrange"/>, we have the following corollary:</p>
+      
+            <corollary xml:id="cor-order-of-quotient">
+              <title>Order of Quotient Groups</title>
+              <statement>
+                <p>
+                  If <m>G</m> is finite we have <m>\left | G/N\right |=\frac{|G|}{|N|}</m>.
+                </p>
+              </statement>
+            </corollary>
+      
+            <definition xml:id="def-quotient-map">
+              <title>Quotient Map</title>
+              <statement>
+                <p>
+                  For any group <m>G</m> and normal subgroup <m>N</m> of <m>G</m> the <em>quotient map</em> <m>\pi:G \to G/N</m> is defined by <m>\pi(g)=gN</m>.
+                </p>
+              </statement>
+            </definition>
+      
+            <lemma xml:id="lem-quotient-surj-hom">
+              <title>Quotient Map is Surjective Homomorphism</title>
+              <statement>
+                <p>
+                  For any group <m>G</m> and normal subgroup <m>N</m> of <m>G</m>, the map <m>\pi:G \to G/N</m> defined by <m>\pi(g)=gN</m> is a surjective group homomorphism with kernel <m>\operatorname{Ker}(\pi)=N</m>.
+                </p>
+              </statement>
+      
+              <proof>
+                <p>
+                  Surjectivity is immediate from the definition. The group homomorphism property follows from the computation below which uses the definition of <m>\pi</m> and the rule for multiplying cosets in <m>G/N</m>: 
+                  <me>
+                    \pi(gg')=(gg')N=gN\cdot g'N=\pi(g)\pi(g').
+                  </me> 
+                  Finally, using <xref ref="lem-cosetfacts" />, we have <m>\operatorname{Ker}(\pi)=\{g\in G\mid gN=e_GN\}=N</m>.
+                </p>
+              </proof>
+            </lemma>
+      
+            <theorem xml:id="thm-norm-iff-ker">
+              <title>Normal Subgroup iff Kernel</title>
+              <statement>
+                <p>
+                  A subgroup <m>N</m> of a group <m>G</m> is normal in <m>G</m> if and only if <m>N</m> is the kernel of a homomorphism with domain <m>G</m>.
+                </p>
+              </statement>
+      
+              <proof>
+                <p>
+                  Coming soon to an OER near you!
+                </p>
+              </proof>
+            </theorem>
+
+            <theorem xml:id="thm-gz-cyclic">
+              <statement>
+                <p>
+                  Let <m>G</m> be a group with center <m>Z(G)</m>. If <m>G/Z(G)</m> is cyclic, then <m>G</m> is abelian.
+                </p>
+              </statement>
+            </theorem>
+
+          </subsection>
+
+          <subsection xml:id="subsec-isomorphism-thms">
+            <title>The Isomorphism Theorems</title>
+
+            <blockquote>
               <p>
-                If <m>G</m> is finite we have <m>\left | G/N\right |=\frac{|G|}{|N|}</m>.
+                <q>If it's your job to eat a frog, it's best to do it first thing in the morning. And If it's your job to eat two frogs, it's best to eat the biggest one first.</q>
               </p>
-            </statement>
-          </corollary>
-    
-          <!--
-          <example xml:id="ex-infinite-dihedral-group">
-            <title>The Infinite Dihedral Group</title>
+              <attribution>Mark Twain</attribution>
+            </blockquote>
+      
             <p>
-              The <em>infinite dihedral group</em> <m>D_\infty</m> is the set <m>D_\infty = \{r^i,r^is \mid i \in \mathbb{Z}\}</m> with multiplication defined by <m>(r^i)(r^j) = r^{i+j}, (r^i)(r^js) = r^{i+j}s, (r^is)(r^j) = r^{i-j}s</m>, and <m>(r^is)(r^js) = r^{i-j}</m>. In other words, <m>D_\infty</m> is the group having presentation <me>D_\infty=\langle r,s \mid s^2=e, srs=r^{-1}\rangle.</me> Then <m>\langle r^n \rangle \mathrel{\unlhd}D_\infty</m> and <m>D_\infty/ \langle r^n \rangle \cong D_{2n}</m> via <m>r\langle r^n \rangle\mapsto r</m> and <m>s\langle r^n \rangle\mapsto s</m>.
+              We come to the so-called Isomorphism Theorems.
             </p>
-          </example>
-          
+      
+            <theorem xml:id="thm-ump-quotient">
+              <title>Universal Mapping Property (UMP) of a Quotient Group</title>
+              
+              
+              <statement>
+                <p>
+                  Let <m>G</m> be a group and <m>N</m> a normal subgroup. If <m>f: G \to H</m> is a homomorphism of groups such that <m>N \subseteq \operatorname{Ker}(f)</m>, then
+                </p>
+      
+                <p><ol>
+                  <li>
+                    <p>
+                  there exists a unique group homomorphism <m>\overline{f}: G/N \to H</m> such that the composition of <m>\overline{f}</m> and the quotient map <m>{\pi}: G  \twoheadrightarrow G/N</m> is <m>f</m>.
+                </p>
+                  </li>
+      
+                  <li>
+                          <p>
+                  If <m>f</m> is onto, then <m>\overline{f}</m> is onto.
+                </p>
+                  </li>
+      
+                  <li>
+                          <p>
+                  Moreover, <m>\operatorname{Ker}(\overline{f}) = \operatorname{Ker}(f)/N = \{ g N \mid f(g) = e_H\}.</m>
+                </p>
+                  </li>
+      
+                </ol></p>
+      
+              </statement>
+      
+              <proof>
+                
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        If such a <m>\overline{f}</m> exists, it is necessarily unique since <m>G \twoheadrightarrow G/N</m> is onto. In fact, if <m>f=\pi\circ \overline{f}</m> then <m>\overline{f}</m> has to be given by the formula 
+                        <me>
+                          \overline{f}(gN) = f(g).
+                        </me> 
+                        We now need to show that this formula determines a well-defined homomorphism: If <m>xN = yN</m>, then <m>y^{-1}x \in N \subseteq \operatorname{Ker}(f)</m> and so <m>f(y)^{-1} f(x) = e</m>, whence <m>f(y) = f(x)</m>. For any <m>x,y</m> we have 
+                        <me>
+                          \overline{f}(xNyN) = \overline{f}(xyN) = f(xy) = f(x)f(y) =\overline{f}(xN) \overline{f}(yN).
+                        </me>
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        The formula for <m>\overline{f}</m> given above ensures that <m>\operatorname{Im}f=\operatorname{Im}\overline{f}</m> hence <m>f</m> is surjective if and only if <m>\overline{f}</m> is surjective.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        We have <m>\overline{f}(xN) = e_H</m> iff <m>f(x) = e_H</m> iff <m>x \in \operatorname{Ker}(f)</m> iff <m>xN \in  \operatorname{Ker}(f)/N</m>. If <m>xN \in \operatorname{Ker}(f)/N</m> for some <m>x \in G</m>, then <m>xN = yN</m> for some <m>y \in \operatorname{Ker}(f)</m> and hence <m>x = yz</m> for some <m>z \in N</m>. Since <m>N \subseteq \operatorname{Ker}(f)</m>, we have <m>x \in \operatorname{Ker}(f)</m>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
     
-          <remark>
-            <p>
-              In the example above both <m>D_\infty</m> and <m>\langle r^n \rangle</m> are infinite but <m>[D_\infty:\langle r^n \rangle]=\left|D_\infty/\langle r^n \rangle\right|=|D_{2n}|=2n</m>.
-            </p>
-          </remark>
-          -->
-    
-          <definition xml:id="def-quotient-map">
-            <title>Quotient Map</title>
-            <statement>
+              </proof>
+            </theorem>
+      
+            <example xml:id="ex-abelianization">
+              <title>Abelianization</title>
               <p>
-                For any group <m>G</m> and normal subgroup <m>N</m> of <m>G</m> the <em>quotient map</em> <m>\pi:G \to G/N</m> is defined by <m>\pi(g)=gN</m>.
-              </p>
-            </statement>
-          </definition>
-    
-          <lemma xml:id="lem-quotient-surj-hom">
-            <title>Quotient Map is Surjective Homomorphism</title>
-            <statement>
-              <p>
-                For any group <m>G</m> and normal subgroup <m>N</m> of <m>G</m>, the map <m>\pi:G \to G/N</m> defined by <m>\pi(g)=gN</m> is a surjective group homomorphism with kernel <m>\operatorname{Ker}(\pi)=N</m>.
-              </p>
-            </statement>
-    
-            <proof>
-              <p>
-                Surjectivity is immediate from the definition. The group homomorphism property follows from the computation below which uses the definition of <m>\pi</m> and the rule for multiplying cosets in <m>G/N</m>: 
+                Let <m>G</m> be any group. For <m>x,y \in G</m>, set <m>[x,y] = xyx^{-1}y^{-1}</m>. Let <m>G'</m> denote the <em>commutator subgroup</em> of <m>G</m> generated by all elements of the form <m>[x,y]</m> for <m>x,y \in G</m>. (Some people write <m>G'</m> as <m>[G,G]</m>.) Then <m>G'</m> is in fact normal: <m>G' \unlhd G</m>. Now let <m>f: G \to A</m> be any group homomorphism from <m>G</m> to an abelian group <m>A</m>. Since <m>f([x,y]) = [f(x),f(y)] = e</m> for all <m>x, y \in G</m> (since <m>A</m> is abelian), we have that <m>\operatorname{Ker}(f)</m> must contain <m>G'</m>. By the UMP for quotients, we get that <m>f</m> factors as 
                 <me>
-                  \pi(gg')=(gg')N=gN\cdot g'N=\pi(g)\pi(g').
+                  f:G \xrightarrow{{\pi}} G/G' \xrightarrow{\overline{f}} A
                 </me> 
-                Finally, using <xref ref="lem-cosetfacts" />, we have <m>\operatorname{Ker}(\pi)=\{g\in G\mid gN=e_GN\}=N</m>.
+                for a unique group homomorphism <m>\overline{f}</m>.
               </p>
-            </proof>
-          </lemma>
-    
-          <theorem xml:id="thm-norm-iff-ker">
-            <title>Normal Subgroups and Homomorphism Kernels</title>
-            <statement>
+      
               <p>
-                A subgroup <m>N</m> of a group <m>G</m> is normal in <m>G</m> if and only if <m>N</m> is the kernel of a homomorphism with domain <m>G</m>.
+                The group <m>G/G'</m> is called the <em>abelianization of <m>G</m></em> and the motto is: A homomorphism from a group to an abelian group factors uniquely through the abelianization.
               </p>
-            </statement>
-    
-            <proof>
-              <p>
-                Coming soon to an OER near you!
-              </p>
-            </proof>
-          </theorem>
+      
+            </example>
+      
+            <theorem xml:id="thm-fit-group">
+              <title>First Isomorphism Theorem</title>
+              <creator>Jordan, 1870</creator>
+              <statement>
+                <p>
+                  If <m>f: G \to H</m> is a homomorphism of groups, then <m>\operatorname{Ker}(g)\mathrel{\unlhd}G</m> and the map <m>\overline{f}</m> defined by the UMP induces an isomorphism 
+                  <me>
+                    \overline{f}: G/\operatorname{Ker}(f) \xrightarrow{\cong} \operatorname{Im}(f).
+                  </me>
+                </p>
+              </statement>
+      
+              <proof>
+                <p>
+                  By <xref ref="thm-ump-quotient"/>, there exists a homomorphism <m>\overline{f}</m> such that <m>\overline{f} \circ {\pi}= f</m>, and its kernel consists of just the one element <m>\operatorname{Ker}(f)/\operatorname{Ker}(f)</m> of <m>G/\operatorname{Ker}(f)</m>. So <m>\overline{f}</m> is one-to-one, and the image of <m>\overline{f}</m> is the same as the image of <m>f</m>.
+                </p>
+              </proof>
+            </theorem>
 
-          <theorem xml:id="thm-gz-cyclic">
-            <statement>
-              <p>
-                Let <m>G</m> be a group with center <m>Z(G)</m>. If <m>G/Z(G)</m> is cyclic, then <m>G</m> is abelian.
+            <corollary xml:id="cor-homom-finite-groups">
+              <statement>
+                <p>
+                  If <m>\varphi</m> is a homomorphism from a finite group <m>G</m> to a group <m>H</m>, then <m>|\varphi(G)|</m> divides <m>|G|</m> and <m>|H|</m>.
+                </p>
+              </statement>
+            </corollary>
+      
+            <p>The second isomorphism theorem, also known as the diamond isomorphism theorem or the modular law, provides information about the structure of subgroups and their intersections.</p>
+      
+            <theorem xml:id="thm-sit-group">
+              <title>Second Isomorphism Theorem</title>
+              
+              <statement>
+                <p>
+                  Let <m>G</m> be a group, <m>H \leq G</m> and <m>N \unlhd G</m>. Then there is an isomorphism
+                  <me>
+                    \frac{H}{N \cap H} \xrightarrow{\cong} \frac{HN}{N}
+                  </me> 
+                  given by 
+                  <me>
+                    h \cdot (N \cap H) \mapsto hN.
+                  </me>
+                </p>
+              </statement>
+      
+              <proof>
+                <p>
+                The first two assertions are left as exercises and since <m>N \unlhd G</m> we have <m>N \unlhd HN</m>. Define a homomorphism <m>f: H \to \frac{HN}{N}</m> by <m>f(h) = hN</m>. This is a homomorphism since it is the composition <xref provisional="cite"/> 
+                <me>
+                  f:H \hookrightarrow HN \xrightarrow{{\pi}} \frac{HN}{N}
+                </me> 
+                of homomorphisms. <m>f</m> is onto since for all <m>h,n</m> we have <m>hnN = hN = f(h)</m>. The kernel of <m>f</m> is <m>\operatorname{Ker}(f)=\{h \mid hN = N\} = H \cap N</m>. The result thus follows from the <xref text="title" ref="thm-fit-group"/>.
               </p>
-            </statement>
-          </theorem>
+              </proof>
+            </theorem>
+      
+            <p>The third isomorphism theorem, also known as the factor or quotient theorem, gives a relationship between normal subgroups of a group and their quotient groups.</p>
+            
+            <theorem xml:id="thm-tit-group">
+              <title>Third Isomorphism Theorem</title>
+              
+              <statement>
+                <p>
+                  Suppose <m>G</m> is a group, <m>M \leq N \leq G</m>, <m>M \unlhd G</m> and <m>N \unlhd G</m>. Then <m>M \unlhd N</m>, <m>N/M \unlhd G/M</m> and there is an isomorphism 
+                  <me>
+                    (G/M)/(N/M) \xrightarrow{\cong} G/N
+                  </me>
+                  given by sending the coset of <m>(G/M)/(N/M)</m> represented by <m>gM</m> to <m>gN</m>.
+                </p>
+              </statement>
+      
+              <proof>
+                <p>
+                  The first two assertions are immediate from the definitions.
+                </p>
+      
+                <p>
+                  The kernel of the canonical map <m>{\pi}: G \twoheadrightarrow G/N</m> contains <m>M</m> and so by <xref ref="thm-ump-quotient"/> we get an induced homomorhism 
+                  <me>
+                    \phi: G/M \to G/N
+                  </me>
+                  with <m>\phi(gM) = {\pi}(g) = gN</m>. Moreover, we know 
+                  <me>
+                    \operatorname{Ker}(\phi) = \operatorname{Ker}({\pi})/M = N/M.
+                  </me> 
+                  Finally apply the <xref text="title" ref="thm-fit-group"/> to <m>\phi</m>.
+                </p>
+              </proof>
+            </theorem>
+      
+            <theorem xml:id="thm-lattice-iso-group">
+              <title>The Lattice Isomorphism Theorem</title>
+              
+              <statement>
+                <p>
+                  Let <m>G</m> be a group and <m>N</m> a normal subgroup with canonical homomorphism <m>\pi:G\to G/N</m>. There is an containment-preserving bijection 
+                  <me>
+                    \Psi:\{\text{subgroups of}\; G \;\text{that contain}\; N\} \xrightarrow{\text{bijective}}\{\text{subgroups of}\; G/N\}
+                  </me> 
+                  given by <m>\Psi(H)= H/N</m> for <m>N \leq H \leq G</m>. The inverse is defined for <m>\mathcal{H}\leq G/N</m> by 
+                  <me>
+                    \Phi(\mathcal{H})=\pi^{-1}(\mathcal{H}) = \{x \in G \mid \pi(x) \in \mathcal{H}\}
+                  </me> 
+                  where <m>\pi: G \twoheadrightarrow G/N</m> is the quotient map. We denote <m>\Psi(H)=H/N=\overline{H}</m>.
+                </p>
+      
+                <p>
+                  Then this bijection enjoys the following properties:
+                </p>
+          
+                <p><ol>
+                  <li>
+                          <p>
+                  (normal) subgroups correspond to normal subgroups i.e.,
+                </p>
+          
+                <p><ul>
+                  <li>
+                          <p>
+                  <m>H\leq G</m> iff <m>\overline{H}\leq \overline{G}</m> and <m>\mathcal{H}\leq \overline{G}</m> iff <m>\Phi(\mathcal{H})\leq G</m>
+                </p>
+                  </li>
+          
+                  <li>
+                          <p>
+                  <m>H\mathrel{\unlhd}G</m> iff <m>\overline{H}\mathrel{\unlhd}\overline{G}</m> and <m>\mathcal{H}\mathrel{\unlhd}\overline{G}</m> iff <m>\Phi(\mathcal{H})\mathrel{\unlhd}G</m>
+                </p>
+                  </li>
+          
+                </ul></p>
+                  </li>
+          
+                  <li>
+                          <p>
+                  indices are preserved; i.e., <m>[G:H] = [\overline{G} : \overline{H}]</m> and <m>[G: \Phi(\mathcal{H})] = [\overline{G} : \mathcal{H}]</m>.
+                </p>
+                  </li>
+          
+                  <li>
+                          <p>
+                  the supremums and infimums are preserved (this makes <m>\Phi</m> and <m>\Psi</m> lattice isomorphisms)
+                </p>
+          
+                <p><ul>
+                  <li>
+                          <p>
+                  <m>\overline{H} \cap \overline{K} = \overline{H \cap H}</m> and <m>\langle \overline{H}\cup \overline{K} \rangle = \overline{\langle H\cup K \rangle}</m>
+                </p>
+                  </li>
+          
+                  <li>
+                          <p>
+                  <m>\Phi(\mathcal{H}) \cap \Phi(\mathcal K) = \Phi(\mathcal{H}\cap \mathcal K)</m> and <m>\langle \Phi(\mathcal{H})\cup\Phi(\mathcal K) \rangle = \Phi\left(\langle \mathcal{H}\cup\mathcal K\rangle\right)</m>
+                </p>
+                  </li>
+          
+                </ul></p>
+                  </li>
+          
+                </ol></p>
+              </statement>
+      
+              <proof>
+                <p>
+                  We have previously shown <xref provisional="cite"/> that the quotient map <m>\pi:G\to G/N</m> is a surjective group homomorphism. We show:
+                </p>
+          
+                <p><ul>
+                  <li>
+                  <p>
+                  <m>\Psi</m> is well defined (correct codomain) since for <m>H\leq G</m> we have <m>\pi(H)\leq G/N</m> (since images of subgroups through group homomorphisms are subgroups). <xref provisional="cite"/>
+                </p>
+                  </li>
+          
+                  <li>
+                          <p>
+                  <m>\Phi</m> is well defined (correct codomain) since for <m>\mathcal{H}\leq G</m> we have <m>\pi^{-1}(\mathcal{H})\leq G</m> (since preimages of subgroups through group homomorphisms are subgroups) <xref provisional="cite"/> and for any <m>\mathcal{H}\leq G</m> we have <m>\{e_GN\}\subseteq \mathcal{H}</m>, hence 
+                  <me>
+                    N=\operatorname{Ker}(\pi)=\pi^{-1}(\{e_GN\})\subseteq \pi^{-1}(\mathcal{H})=\Phi(\mathcal{H}).
+                  </me>
+                </p>
+                  </li>
+          
+                  <li>
+                    <p>
+                      <m>\Phi</m> and <m>\Psi</m> are mutual inverses: <m>(\Psi\circ\Phi)(\mathcal{H})=\pi(\pi^{-1}(\mathcal{H}))=\mathcal{H}</m> since <m>\pi</m> is surjective and <m>(\Phi\circ\Psi)(H)=\pi^{-1}(\pi(H))=\pi^{-1}(H/N)=H</m>, with the last equality justified by 
+                      <me>
+                        \begin{aligned}
+                        x\in \pi^{-1}(H/N) &amp;\iff \pi(x)\in H/N \iff xN=hN \text{ for some } h\in H \\
+                        &amp; \iff x\in hN \text{ for some } h\in H \iff x\in H \text{ (using that } N\subseteq H).\\
+                        \end{aligned}
+                      </me>
+                </p>
+                  </li>
+          
+                </ul></p>
+          
+                <p>
+                  Thus, the two functions defined in the statement are well-defined and are mutually inverse.
+                </p>
+      
+                <p>
+                  Since <m>\pi</m> and <m>\pi^{-1}</m> preserve containments, each of <m>\Psi</m>, <m>\Psi^{-1}</m> preserves the order relation of containment.
+                </p>
+          
+                <p>
+                  I will only prove some parts of statements (1), (2), (3) in the theorem.
+                </p>
+          
+                <p>
+                  (1) If <m>N \leq H \leq G</m> and <m>H \unlhd G</m>, then <m>H/N \unlhd G/N</m> holds by part of the 3rd Isomorphism Theorem <xref provisional="cite"/> or by the exercise below, since <m>\pi</m> is surjective. The fact that the inverse function also sends normal subgroups to normal subgroups is a consequence of the statement that inverse images of normal subgroups are normal subgroups (see HW 4). <xref provisional="cite"/>
+                </p>
+          
+                <p>
+                  (2) In the interest of time, I'll only prove the assertion about indices in the special case when <m>H</m> is normal. In that case this fact is also an immediate consequence of the Third Isomorhism Theorem <xref provisional="cite"/> since for <m>N \leq H \leq G</m> with <m>H \unlhd G</m> we have 
+                  <me>
+                    [G:H] = |G/H| = \left|(G/N)/(H/N)\right| = [G/N: H/N]=[\overline{G}:\overline{H}].
+                  </me> 
+                  The general case is a consequence of an exercise from HW 5. <xref provisional="cite"/>
+                </p>
+          
+                <p>
+                  (3) The proof of (3) is omitted.
+                </p>
+              </proof>
+            </theorem>
+            
+          </subsection>
           
           <exercises>
     
-            <exercisegroup> <title>Computations and Examples</title>
+            <exercisegroup> <title>Examples and Specifics</title>
               
               <introduction>
                 <p>
                 </p>
               </introduction>
           
-              <exercise>
+              <exercise xml:id="exe-mod-n-iso">
                 <p>
-                  <m>\Z/n\Z\cong\Z/(n)</m> for all <m>n\in\N</m>.
+                  <ol>
+                    <li>
+                      <p>
+                        <m>\Z/n\Z\cong\Z/(n)</m> for all <m>n\in\N</m>.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Argue amongst yourselves what the 'best' notation for the integers <m>\mod n</m> Should be: <m>\Z/(n),</m> <m>\Z/n\Z,</m>, <m>\Z/n,</m>, <m>\Z_n,</m>, or whatever else you're most accustomed to.
+                      </p>
+                    </li>
+                  </ol>
                 </p>
               </exercise>
-              
+
+              <exercise>
+                <title>Quotient of Commutator Subgroup</title>
+                
+                  <statement>
+                    <p>
+                      Let <m>G</m> be a group with commutator subgroup <m>G'</m>. Prove <m>G/G'</m> is abelian.
+                    </p>
+                  </statement>
+
+              </exercise>
           
             </exercisegroup>
           
@@ -4401,15 +4653,35 @@
               </exercise>
 
               <exercise>
-                <title>Quotient of Commutator Subgroup</title>
-                
-                
-                  <statement>
-                    <p>
-                      Let <m>G</m> be a group with commutator subgroup <m>H</m>. Prove <m>G/H</m> is abelian.
-                    </p>
-                  </statement>
+                <statement>
+                  <p>
+                    Let <m>H\nsg G</m> such that <m>[G:H]=2</m>. Then <m>G/H\cong\Z/(2)</m>.
+                  </p>
+                </statement>
+              </exercise>
 
+              <exercise>
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        If <m>f:G\to H</m> is a group homomorphism and <m>K\mathrel{\unlhd}G</m> then <m>f(K)\mathrel{\unlhd}f(G)</m>.
+                      </p>
+                    </li>
+    
+                    <li>
+                      <p>
+                        In particular, if <m>f</m> is surjective then <m>f(K)\mathrel{\unlhd}H</m>
+                      </p>
+                    </li>
+    
+                    <li>
+                      <p>
+                        Show the statement in part (b) need not be true in the absence of surjectivity.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
               </exercise>
           
             </exercisegroup>
@@ -4466,548 +4738,9 @@
                   </p>
                 </solution>
               </exercise>
-    
-              <exercise> <title>May 2019 (2)</title>
-                   
-                <statement>
-                  <p>
-                    Let <m>H</m> be a subgroup of a group <m>G</m>. Recall that the centralizer of <m>H</m> is the subgroup of <m>G</m> defined by <m>Z_G(H) = \{g \in G | gh = hg ∀h \in H\}</m>
-                    <fn>In the original qualifying exam, the centralizer was denoted <m>C_G(H).</m></fn>
-                    and the normalizer of <m>H</m> is the subgroup of <m>G</m> defined by <m>N_G(H) = \{g \in G | gHg\inv = H\}</m>. 
-                    <ol>
-                      <li>
-                        <p>
-                          Show that the centralizer <m>C_G(H)</m> of <m>H</m> in <m>G</m> is a normal subgroup of the normalizer <m>N_G(H)</m> of <m>H</m> in <m>G</m>.
-                        </p>
-                      </li>
-    
-                      <li>
-                        <p>
-                          Show that the quotient <m>N_G(H)/C_G(H)</m> is isomorphic to a subgroup of the automorphism group <m>\Aut(H)</m> of <m>H</m>.
-                        </p>
-                      </li>
-                    </ol>
-                    
-                  </p>
-    
-                </statement>
-    
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-               
-    
-              </exercise>
-    
-              <exercise> <title>May 2018 (1)</title>
-                
-                <statement>
-                  <p>
-                    Let <m>H</m> and <m>K</m> be groups. Recall that for any group <m>G</m>, an automorphism of <m>G</m> is an isomorphism from <m>G</m> to <m>G</m>, and <m>\Aut(G)</m> denotes the group of automorphisms of <m>G</m>.
-                    <ol>
-                      <li>
-                        <p>
-                          Show that the direct product group <m>\Aut(H)\times\Aut(K)</m> is isomorphic to a subgroup of <m>\Aut(H\times K)</m>.
-                        </p>
-                      </li>
-    
-                      <li>
-                        <p>
-                         Give an example, with justification, of groups <m>H</m> and <m>K</m> for which <m>\Aut(H)\times\Aut(K)</m> is not isomorphic to <m>\Aut(H\times K)</m>.
-                        </p>
-                      </li>
-                    </ol>
-                    
-                  </p>
-    
-                </statement>
-    
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-               
-    
-              </exercise>
-          
-            </exercisegroup>
-          </exercises>
-          
-        </section>
-    
-        <section xml:id="sec-isomorphism-thms">
-          <title>The Isomorphism Theorems</title>
 
-          <blockquote>
-            <p>
-              <q>If it's your job to eat a frog, it's best to do it first thing in the morning. And If it's your job to eat two frogs, it's best to eat the biggest one first.</q>
-            </p>
-            <attribution>Mark Twain</attribution>
-          </blockquote>
-    
-          <p>
-            We come to the so-called Isomorphism Theorems.
-          </p>
-    
-          <theorem xml:id="thm-ump-quotient">
-            <title>Universal Mapping Property (UMP) of a Quotient Group</title>
-            
-            
-            <statement>
-              <p>
-                Let <m>G</m> be a group and <m>N</m> a normal subgroup. If <m>f: G \to H</m> is a homomorphism of groups such that <m>N \subseteq \operatorname{Ker}(f)</m>, then
-              </p>
-    
-              <p><ol>
-                <li>
-                  <p>
-                there exists a unique group homomorphism <m>\overline{f}: G/N \to H</m> such that the composition of <m>\overline{f}</m> and the quotient map <m>{\pi}: G  \twoheadrightarrow G/N</m> is <m>f</m>.
-              </p>
-                </li>
-    
-                <li>
-                        <p>
-                If <m>f</m> is onto, then <m>\overline{f}</m> is onto.
-              </p>
-                </li>
-    
-                <li>
-                        <p>
-                Moreover, <m>\operatorname{Ker}(\overline{f}) = \operatorname{Ker}(f)/N = \{ g N \mid f(g) = e_H\}.</m>
-              </p>
-                </li>
-    
-              </ol></p>
-    
-            </statement>
-    
-            <proof>
-              
-              <p>
-                <ol>
-                  <li>
-                    <p>
-                      If such a <m>\overline{f}</m> exists, it is necessarily unique since <m>G \twoheadrightarrow G/N</m> is onto. In fact, if <m>f=\pi\circ \overline{f}</m> then <m>\overline{f}</m> has to be given by the formula 
-                      <me>
-                        \overline{f}(gN) = f(g).
-                      </me> 
-                      We now need to show that this formula determines a well-defined homomorphism: If <m>xN = yN</m>, then <m>y^{-1}x \in N \subseteq \operatorname{Ker}(f)</m> and so <m>f(y)^{-1} f(x) = e</m>, whence <m>f(y) = f(x)</m>. For any <m>x,y</m> we have 
-                      <me>
-                        \overline{f}(xNyN) = \overline{f}(xyN) = f(xy) = f(x)f(y) =\overline{f}(xN) \overline{f}(yN).
-                      </me>
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      The formula for <m>\overline{f}</m> given above ensures that <m>\operatorname{Im}f=\operatorname{Im}\overline{f}</m> hence <m>f</m> is surjective if and only if <m>\overline{f}</m> is surjective.
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      We have <m>\overline{f}(xN) = e_H</m> iff <m>f(x) = e_H</m> iff <m>x \in \operatorname{Ker}(f)</m> iff <m>xN \in  \operatorname{Ker}(f)/N</m>. If <m>xN \in \operatorname{Ker}(f)/N</m> for some <m>x \in G</m>, then <m>xN = yN</m> for some <m>y \in \operatorname{Ker}(f)</m> and hence <m>x = yz</m> for some <m>z \in N</m>. Since <m>N \subseteq \operatorname{Ker}(f)</m>, we have <m>x \in \operatorname{Ker}(f)</m>.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-  
-            </proof>
-          </theorem>
-    
-          <example xml:id="ex-abelianization">
-            <title>Abelianization</title>
-            <p>
-              Let <m>G</m> be any group. For <m>x,y \in G</m>, set <m>[x,y] = xyx^{-1}y^{-1}</m>. Let <m>G'</m> denote the <em>commutator subgroup</em> of <m>G</m> generated by all elements of the form <m>[x,y]</m> for <m>x,y \in G</m>. (Some people write <m>G'</m> as <m>[G,G]</m>.) Then <m>G'</m> is in fact normal: <m>G' \unlhd G</m>. Now let <m>f: G \to A</m> be any group homomorphism from <m>G</m> to an abelian group <m>A</m>. Since <m>f([x,y]) = [f(x),f(y)] = e</m> for all <m>x, y \in G</m> (since <m>A</m> is abelian), we have that <m>\operatorname{Ker}(f)</m> must contain <m>G'</m>. By the UMP for quotients, we get that <m>f</m> factors as 
-              <me>
-                f:G \xrightarrow{{\pi}} G/G' \xrightarrow{\overline{f}} A
-              </me> 
-              for a unique group homomorphism <m>\overline{f}</m>.
-            </p>
-    
-            <p>
-              The group <m>G/G'</m> is called the <em>abelianization of <m>G</m></em> and the motto is: A homomorphism from a group to an abelian group factors uniquely through the abelianization.
-            </p>
-    
-          </example>
-    
-          <theorem xml:id="thm-fit-group">
-            <title>First Isomorphism Theorem</title>
-            <creator>Jordan, 1870</creator>
-            <statement>
-              <p>
-                If <m>f: G \to H</m> is a homomorphism of groups, then <m>\operatorname{Ker}(g)\mathrel{\unlhd}G</m> and the map <m>\overline{f}</m> defined by the UMP induces an isomorphism 
-                <me>
-                  \overline{f}: G/\operatorname{Ker}(f) \xrightarrow{\cong} \operatorname{Im}(f).
-                </me>
-              </p>
-            </statement>
-    
-            <proof>
-              <p>
-                By <xref ref="thm-ump-quotient"/>, there exists a homomorphism <m>\overline{f}</m> such that <m>\overline{f} \circ {\pi}= f</m>, and its kernel consists of just the one element <m>\operatorname{Ker}(f)/\operatorname{Ker}(f)</m> of <m>G/\operatorname{Ker}(f)</m>. So <m>\overline{f}</m> is one-to-one, and the image of <m>\overline{f}</m> is the same as the image of <m>f</m>.
-              </p>
-            </proof>
-          </theorem>
-
-          <corollary xml:id="cor-homom-finite-groups">
-            <statement>
-              <p>
-                If <m>\varphi</m> is a homomorphism from a finite group <m>G</m> to a group <m>H</m>, then <m>|\varphi(G)|</m> divides <m>|G|</m> and <m>|H|</m>.
-              </p>
-            </statement>
-          </corollary>
-    
-          <p>The second isomorphism theorem, also known as the diamond isomorphism theorem or the modular law, provides information about the structure of subgroups and their intersections.</p>
-    
-          <theorem xml:id="thm-sit-group">
-            <title>Second Isomorphism Theorem</title>
-            
-            <statement>
-              <p>
-                Let <m>G</m> be a group, <m>H \leq G</m> and <m>N \unlhd G</m>. Then there is an isomorphism
-                <me>
-                  \frac{H}{N \cap H} \xrightarrow{\cong} \frac{HN}{N}
-                </me> 
-                given by 
-                <me>
-                  h \cdot (N \cap H) \mapsto hN.
-                </me>
-              </p>
-            </statement>
-    
-            <proof>
-              <p>
-              The first two assertions are left as exercises and since <m>N \unlhd G</m> we have <m>N \unlhd HN</m>. Define a homomorphism <m>f: H \to \frac{HN}{N}</m> by <m>f(h) = hN</m>. This is a homomorphism since it is the composition <xref provisional="cite"/> 
-              <me>
-                f:H \hookrightarrow HN \xrightarrow{{\pi}} \frac{HN}{N}
-              </me> 
-              of homomorphisms. <m>f</m> is onto since for all <m>h,n</m> we have <m>hnN = hN = f(h)</m>. The kernel of <m>f</m> is <m>\operatorname{Ker}(f)=\{h \mid hN = N\} = H \cap N</m>. The result thus follows from the <xref text="title" ref="thm-fit-group"/>.
-            </p>
-            </proof>
-          </theorem>
-    
-          <p>The third isomorphism theorem, also known as the factor or quotient theorem, gives a relationship between normal subgroups of a group and their quotient groups.</p>
-          
-          <theorem xml:id="thm-tit-group">
-            <title>Third Isomorphism Theorem</title>
-            
-            <statement>
-              <p>
-                Suppose <m>G</m> is a group, <m>M \leq N \leq G</m>, <m>M \unlhd G</m> and <m>N \unlhd G</m>. Then <m>M \unlhd N</m>, <m>N/M \unlhd G/M</m> and there is an isomorphism 
-                <me>
-                  (G/M)/(N/M) \xrightarrow{\cong} G/N
-                </me>
-                given by sending the coset of <m>(G/M)/(N/M)</m> represented by <m>gM</m> to <m>gN</m>.
-              </p>
-            </statement>
-    
-            <proof>
-              <p>
-                The first two assertions are immediate from the definitions.
-              </p>
-    
-              <p>
-                The kernel of the canonical map <m>{\pi}: G \twoheadrightarrow G/N</m> contains <m>M</m> and so by <xref ref="thm-ump-quotient"/> we get an induced homomorhism 
-                <me>
-                  \phi: G/M \to G/N
-                </me>
-                with <m>\phi(gM) = {\pi}(g) = gN</m>. Moreover, we know 
-                <me>
-                  \operatorname{Ker}(\phi) = \operatorname{Ker}({\pi})/M = N/M.
-                </me> 
-                Finally apply the <xref text="title" ref="thm-fit-group"/> to <m>\phi</m>.
-              </p>
-            </proof>
-          </theorem>
-    
-          <theorem xml:id="thm-lattice-iso-group">
-            <title>The Lattice Isomorphism Theorem</title>
-            
-            <statement>
-              <p>
-                Let <m>G</m> be a group and <m>N</m> a normal subgroup with canonical homomorphism <m>\pi:G\to G/N</m>. There is an containment-preserving bijection 
-                <me>
-                  \Psi:\{\text{subgroups of}\; G \;\text{that contain}\; N\} \xrightarrow{\text{bijective}}\{\text{subgroups of}\; G/N\}
-                </me> 
-                given by <m>\Psi(H)= H/N</m> for <m>N \leq H \leq G</m>. The inverse is defined for <m>\mathcal{H}\leq G/N</m> by 
-                <me>
-                  \Phi(\mathcal{H})=\pi^{-1}(\mathcal{H}) = \{x \in G \mid \pi(x) \in \mathcal{H}\}
-                </me> 
-                where <m>\pi: G \twoheadrightarrow G/N</m> is the quotient map. We denote <m>\Psi(H)=H/N=\overline{H}</m>.
-              </p>
-    
-              <p>
-                Then this bijection enjoys the following properties:
-              </p>
-        
-              <p><ol>
-                <li>
-                        <p>
-                (normal) subgroups correspond to normal subgroups i.e.,
-              </p>
-        
-              <p><ul>
-                <li>
-                        <p>
-                <m>H\leq G</m> iff <m>\overline{H}\leq \overline{G}</m> and <m>\mathcal{H}\leq \overline{G}</m> iff <m>\Phi(\mathcal{H})\leq G</m>
-              </p>
-                </li>
-        
-                <li>
-                        <p>
-                <m>H\mathrel{\unlhd}G</m> iff <m>\overline{H}\mathrel{\unlhd}\overline{G}</m> and <m>\mathcal{H}\mathrel{\unlhd}\overline{G}</m> iff <m>\Phi(\mathcal{H})\mathrel{\unlhd}G</m>
-              </p>
-                </li>
-        
-              </ul></p>
-                </li>
-        
-                <li>
-                        <p>
-                indices are preserved; i.e., <m>[G:H] = [\overline{G} : \overline{H}]</m> and <m>[G: \Phi(\mathcal{H})] = [\overline{G} : \mathcal{H}]</m>.
-              </p>
-                </li>
-        
-                <li>
-                        <p>
-                the supremums and infimums are preserved (this makes <m>\Phi</m> and <m>\Psi</m> lattice isomorphisms)
-              </p>
-        
-              <p><ul>
-                <li>
-                        <p>
-                <m>\overline{H} \cap \overline{K} = \overline{H \cap H}</m> and <m>\langle \overline{H}\cup \overline{K} \rangle = \overline{\langle H\cup K \rangle}</m>
-              </p>
-                </li>
-        
-                <li>
-                        <p>
-                <m>\Phi(\mathcal{H}) \cap \Phi(\mathcal K) = \Phi(\mathcal{H}\cap \mathcal K)</m> and <m>\langle \Phi(\mathcal{H})\cup\Phi(\mathcal K) \rangle = \Phi\left(\langle \mathcal{H}\cup\mathcal K\rangle\right)</m>
-              </p>
-                </li>
-        
-              </ul></p>
-                </li>
-        
-              </ol></p>
-            </statement>
-    
-            <proof>
-              <p>
-                We have previously shown <xref provisional="cite"/> that the quotient map <m>\pi:G\to G/N</m> is a surjective group homomorphism. We show:
-              </p>
-        
-              <p><ul>
-                <li>
-                <p>
-                <m>\Psi</m> is well defined (correct codomain) since for <m>H\leq G</m> we have <m>\pi(H)\leq G/N</m> (since images of subgroups through group homomorphisms are subgroups). <xref provisional="cite"/>
-              </p>
-                </li>
-        
-                <li>
-                        <p>
-                <m>\Phi</m> is well defined (correct codomain) since for <m>\mathcal{H}\leq G</m> we have <m>\pi^{-1}(\mathcal{H})\leq G</m> (since preimages of subgroups through group homomorphisms are subgroups) <xref provisional="cite"/> and for any <m>\mathcal{H}\leq G</m> we have <m>\{e_GN\}\subseteq \mathcal{H}</m>, hence 
-                <me>
-                  N=\operatorname{Ker}(\pi)=\pi^{-1}(\{e_GN\})\subseteq \pi^{-1}(\mathcal{H})=\Phi(\mathcal{H}).
-                </me>
-              </p>
-                </li>
-        
-                <li>
-                  <p>
-                    <m>\Phi</m> and <m>\Psi</m> are mutual inverses: <m>(\Psi\circ\Phi)(\mathcal{H})=\pi(\pi^{-1}(\mathcal{H}))=\mathcal{H}</m> since <m>\pi</m> is surjective and <m>(\Phi\circ\Psi)(H)=\pi^{-1}(\pi(H))=\pi^{-1}(H/N)=H</m>, with the last equality justified by 
-                    <me>
-                      \begin{aligned}
-                      x\in \pi^{-1}(H/N) &amp;\iff \pi(x)\in H/N \iff xN=hN \text{ for some } h\in H \\
-                      &amp; \iff x\in hN \text{ for some } h\in H \iff x\in H \text{ (using that } N\subseteq H).\\
-                      \end{aligned}
-                    </me>
-              </p>
-                </li>
-        
-              </ul></p>
-        
-              <p>
-                Thus, the two functions defined in the statement are well-defined and are mutually inverse.
-              </p>
-    
-              <p>
-                Since <m>\pi</m> and <m>\pi^{-1}</m> preserve containments, each of <m>\Psi</m>, <m>\Psi^{-1}</m> preserves the order relation of containment.
-              </p>
-        
-              <p>
-                I will only prove some parts of statements (1), (2), (3) in the theorem.
-              </p>
-        
-              <p>
-                (1) If <m>N \leq H \leq G</m> and <m>H \unlhd G</m>, then <m>H/N \unlhd G/N</m> holds by part of the 3rd Isomorphism Theorem <xref provisional="cite"/> or by the exercise below, since <m>\pi</m> is surjective. The fact that the inverse function also sends normal subgroups to normal subgroups is a consequence of the statement that inverse images of normal subgroups are normal subgroups (see HW 4). <xref provisional="cite"/>
-              </p>
-        
-              <p>
-                (2) In the interest of time, I'll only prove the assertion about indices in the special case when <m>H</m> is normal. In that case this fact is also an immediate consequence of the Third Isomorhism Theorem <xref provisional="cite"/> since for <m>N \leq H \leq G</m> with <m>H \unlhd G</m> we have 
-                <me>
-                  [G:H] = |G/H| = \left|(G/N)/(H/N)\right| = [G/N: H/N]=[\overline{G}:\overline{H}].
-                </me> 
-                The general case is a consequence of an exercise from HW 5. <xref provisional="cite"/>
-              </p>
-        
-              <p>
-                (3) The proof of (3) is omitted.
-              </p>
-            </proof>
-          </theorem>
-    
-    <!-- div attr= class="ex"
-          <p>
-            <term>Example 1.33</term>.  The picture on the left below shows the lattice of subgroups of <m>C_{12}\cong \mathbb{Z}/12</m> and that on the right the lattice of subgroups of its quotient <m>C_{12}/C_2\cong \mathbb{Z}/12/\langle[6]\rangle</m>
-          </p>
-    
-     div attr= class="center"
-          <figure>
-    <image source="lattice"/>
-            <caption>image</caption>
-    </figure></div attr= class="center">-->
-    
-    
-          <exercises xml:id="exercises-gp-isos">
-    
-            <exercisegroup>
-              <title>Computations and Examples</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
+              <exercise> <title>June 2011 (2)</title>
                 
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-    
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-    
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          
-            <exercisegroup>
-              <title>Formal Proofs</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-    
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-    
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-    
-              <exercise>
-                <p>
-                  <ol>
-                    <li>
-                      <p>
-                        If <m>f:G\to H</m> is a group homomorphism and <m>K\mathrel{\unlhd}G</m> then <m>f(K)\mathrel{\unlhd}f(G)</m>.
-                      </p>
-                    </li>
-    
-                    <li>
-                      <p>
-                        In particular, if <m>f</m> is surjective then <m>f(K)\mathrel{\unlhd}H</m>
-                      </p>
-                    </li>
-    
-                    <li>
-                      <p>
-                        Show the statement in part (b) need not be true in the absence of surjectivity.
-                      </p>
-                    </li>
-                  </ol>
-                </p>
-              </exercise>
-          
-            </exercisegroup>
-          
-            <exercisegroup>
-              <title>Qualifying Exam Problems</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title>January 2012 (1)</title>
-    
-                <statement>
-                  <p>
-                    Let <m>G</m> be a (not necessarily finite) group and <m>H</m> and <m>K</m> normal subgroups such that <m>G = HK</m>. Prove that <m>G/(H\cap K)\cong G/H \times G/K.</m>
-                  </p>
-                </statement>
-      
-                <solution>
-                  <p>
-                    Let <m>f:G\to G/H\times G/K</m> defined such that <m>f(g)=(gH, gK)</m>. Let <m>x,y\in G</m>. Then 
-                    <me>
-                      f(xy)=(xyH,xyK)=(xHyH,xKyK)=(xH,yH)\cdot(xKyK)=f(x)f(y),
-                    </me> 
-                    showing <m>f</m> is a homomorphism.
-                  </p>
-        
-                  <p>
-                    Let <m>(xH,yK)\in G/H\times G/K</m>. As <m>x,y\in G=HK</m>, we have <m>x=hk</m> and <m>y=h'k'</m> with <m>h,h'\in H</m> and <m>k,k'\in K</m>. As <m>k'\in K</m> and <m>h\in H</m> we see <m>(xH,yK)=(kH,h'K)</m>.
-                  </p>
-        
-                  <p>
-                    Consider <m>g=kh'\in G</m> and 
-                    <me>
-                      f(g)=f(kh')=(kh'H,kh'K)=(kH,h'K)=(xH,yK),
-                    </me>
-                    making <m>f</m> surjective as well.
-                  </p>
-        
-                  <p>
-                    Let <m>g\in H\cap K</m>. Then <m>f(g)=(gH,gK)=(H,K)</m>, and so <m>g\in\ker(f)</m>. Let <m>g\in\ker(f)</m>. Then <m>f(g)=(H,K)</m>, so <m>gH=H</m> and <m>gK=K</m>, placing <m>g\in H\cap K</m>. Thus, by the <xref text="title" ref="thm-fit-group"/>, we have <m>G/(H\cap K)\cong G/H \times G/K.</m>
-                  </p>
-                </solution>
-              </exercise>
-    
-              <exercise>
-                <title>June 2011 (2)</title>
                 <statement>
                 <p>
                   Let <m>G</m> be a finite group. 
@@ -5015,7 +4748,7 @@
                   <ol>
                     <li>
                       <p>
-                        If <m>N</m> is a normal subgroup of <m>G</m> and <m>|N | = 2</m>, prove that <m>N</m> is contained in the center <m>Z(G)</m> of <m>G</m>. 
+                        If <m>N</m> is a normal subgroup of <m>G</m> and <m>|N| = 2</m>, prove that <m>N</m> is contained in the center <m>Z(G)</m> of <m>G</m>. 
                       </p>
                     </li>
       
@@ -5042,29 +4775,12 @@
                   </p>
                 </solution>
               </exercise>
-      
-              <exercise>
-                <title>June 2010 (1), January 2015 (3)</title>
-                <statement>
-                  <p>
-                    Let <m>G</m> be a group and <m>H</m> a subgroup of <m>G</m>. Recall that the centralizer of <m>H</m> in <m>G</m> is 
-                    <me>
-                      C_H(G)=\{g\in G|gh=h\;\text{for all}\;h\in H\}
-                    </me>
-                    Prove that if <m>H</m> is normal in <m>G</m>, then so is <m>C_G(H)</m> and that <m>G/C_G(H)</m> is isomorphic to a subgroup of the automorphism group of <m>H</m>.
-                  </p>
-                  
-                </statement>
-      
-              </exercise>
           
             </exercisegroup>
-    
-    
           </exercises>
           
         </section>
-    
+        
       </chapter>
 
       <chapter xml:id="ch-group-actions">
@@ -5079,6 +4795,8 @@
             </p>
             <attribution>Anthony of Padua</attribution>
           </blockquote>
+
+          <p>We come to one of the central concepts in group theory, that of an action of a group on a set.</p>
     
           <definition xml:id="def-graction">
             <title>Group Action</title>
@@ -5119,27 +4837,27 @@
             <title>Common Group Actions</title>
             <p>
               <ol>
-                <li>
+                <li> <title>Trivial Action</title>
                   <p>
                     For any group <m>G</m> and any set <m>S</m>, <m>g \cdot s := s</m> defines an action, the <em>trivial action</em>.
+                  </p>
+                </li>
+
+                <li xml:id="ex-left-mult"> <title>Left Multiplication</title>
+                  <p>
+                    For any group <m>G</m> and any set <m>S</m>, <m>g \cdot s := gs</m> defines an action, the <em>left multiplication action</em><fn>And similarly for right multiplication, yet we do not speak of that here.</fn>.
+                  </p>
+                </li>
+
+                <li xml:id="ex-conj"> <title>Conjugation</title>
+                  <p>
+                    For any group <m>G</m> and any set <m>S</m>, <m>g \cdot s := gxg\inv</m> defines an action, the <em>conjugation action</em>.
                   </p>
                 </li>
 
                 <li>
                   <p>
                     The group <m>S_n</m> acts on the set <m>X=\{1,2,\dots,n\}</m> such that <m>\sigma\cdot i=\sigma(i)</m>.
-                  </p>
-                </li>
-
-                <li>
-                  <p>
-                    For any group <m>G</m> and any set <m>S</m>, <m>g \cdot s := gs</m> defines an action, the <em>left multiplication action</em>.
-                  </p>
-                </li>
-
-                <li>
-                  <p>
-                    For any group <m>G</m> and any set <m>S</m>, <m>g \cdot s := gxg\inv</m> defines an action, the <em>conjugation action</em>..
                   </p>
                 </li>
 
@@ -5252,6 +4970,10 @@
               </p>
             </statement>
           </definition>
+
+          <example xml:id="def-trivial-action-not-faithful">
+            <p>The trivial action is not faithful.<fn>This has probably been said by a divorce lawyer at some point.</fn></p>
+          </example>
     
           <definition xml:id="def-transitive-action">
             <title>Transitive Action</title>
@@ -5332,7 +5054,7 @@
           <exercises>
     
             <exercisegroup>
-              <title>Computations and Examples</title>
+              <title>Examples and Specifis</title>
               <introduction>
                 <p>
                 </p>
@@ -5340,7 +5062,7 @@
           
               <exercise>
                 <p>
-                  Coming soon to an OER near you!
+                  Should an action which is not faithful be called <em>unfaithful</em>? Discuss. 
                 </p>
               </exercise>
           
@@ -5407,7 +5129,7 @@
               <title>Conjugate</title>
               <statement>
                 <p>
-                  Let <m>G</m> be a group. Two elements <m>g,g' \in G</m> are <em>conjugate</em> if there is <m>h \in G</m> with <m>g' = hgh^{-1}</m> (equivalently <m>g</m> and <m>g'</m> are in the same orbit of the conjugation action).
+                  Let <m>G</m> be a group. Two elements <m>g,g' \in G</m> are <em>conjugate</em> if there is <m>h \in G</m> with <m>g' = hgh^{-1}</m>.
                 </p>
       
                 <p>
@@ -5458,7 +5180,7 @@
 
                     <li>
                       <p>
-                        If <m>\rho:G\to \operatorname{Perm}(G)</m> is the permutation representation for <m>G</m> acting on <m>G</m> by conjugation, then 
+                        If <m>\rho:G\to \operatorname{Perm}(G)</m> is the permutation representation for <m>G</m> acting on <m>G</m> by <xref text="title" ref="ex-conj"/>, then 
                         <me>
                           g\in \operatorname{Ker}\rho\iff g\cdot x=x, \forall x\in G \iff gxg^{-1}=x, \forall x\in G
                         </me>
@@ -5482,7 +5204,7 @@
 
               <proof>
                 <p>
-                  Define the conjugation action of <m>G</m> on <m>N</m> by <m>g\cdot n=gng^{-1}</m> for all <m>g\in G</m> and <m>n\in N</m>. Since <m>N\nsg G</m> this is well defined. The two properties in the definition of the action hold for the action of <m>G</m> by conjugation on <m>N</m> since they hold more generally for the action of <m>G</m> by conjugation on <m>G</m>. Therefore this is indeed an action. The orbits of elements <m>n\in N</m> under this action are <m>[n]_c</m>. Thus the conjugacy classes of the elements of <m>N</m> partition <m>N</m>.
+                  Define the conjugation action of <m>G</m> on <m>N</m> by <m>g\cdot n=gng^{-1}</m> for all <m>g\in G</m> and <m>n\in N</m>. Since <m>N\nsg G</m> this is well defined. The two properties in the definition of the action hold for the action of <m>G</m> by <xref text="title" ref="ex-conj"/> on <m>N</m> since they hold more generally for the action of <m>G</m> by conjugation on <m>G</m>. Therefore this is indeed an action. The orbits of elements <m>n\in N</m> under this action are <m>[n]_c</m>. Thus the conjugacy classes of the elements of <m>N</m> partition <m>N</m>.
                 </p>
               </proof>
             </corollary>
@@ -5491,7 +5213,7 @@
               <title>Faithful Conjugations</title>
               <statement>
                 <p>
-                  The action of <m>G</m> on itself by conjugation is faithful if and only if <m>Z(G)=\{e\}</m>.
+                  The action of <m>G</m> on itself by <xref text="title" ref="ex-conj"/> is faithful if and only if <m>Z(G)=\{e\}</m>.
                 </p>
               </statement>
             </corollary>
@@ -5738,7 +5460,7 @@
                     <ol>
                       <li>
                         <p>
-                          Let <m>G</m> act on <m>H</m> by conjugation. Thus the associated permutation homomorphism <m>\rho</m> is defined such that <m>\rho(g)=\phi_g</m>, where <m>\phi_g(h)=ghg\inv</m>. Notice that when <m>x\in C_G(H)</m> we have <m>\phi_x(h)=xhx\inv=h</m> for all <m>h\in H</m>, and thus <m>x\in\ker(\rho)</m>. If <m>x\in\ker(\rho)</m> then <m>xhx\inv=h</m> for all <m>h\in H</m>, and thus <m>x\in C_G(H)</m>. Thus <m>C_G(H)=\ker(\rho)</m> and <m>C_G(H)\nsg N_G(H)</m>.
+                          Let <m>G</m> act on <m>H</m> by <xref text="title" ref="ex-conj"/>. Thus the associated permutation homomorphism <m>\rho</m> is defined such that <m>\rho(g)=\phi_g</m>, where <m>\phi_g(h)=ghg\inv</m>. Notice that when <m>x\in C_G(H)</m> we have <m>\phi_x(h)=xhx\inv=h</m> for all <m>h\in H</m>, and thus <m>x\in\ker(\rho)</m>. If <m>x\in\ker(\rho)</m> then <m>xhx\inv=h</m> for all <m>h\in H</m>, and thus <m>x\in C_G(H)</m>. Thus <m>C_G(H)=\ker(\rho)</m> and <m>C_G(H)\nsg N_G(H)</m>.
                         </p>
                       </li>
     
@@ -5802,7 +5524,7 @@
                   </p>
         
                   <p>
-                    Let <m>G</m> act on <m>H</m> by conjugation. We know that the orbits of this action partition <m>H</m>. However, under this action the orbits are exactly the conjugacy classes of <m>H</m>. There are at most <m>h</m> conjugacy classes. Each conjugacy class has at most <m>|H|</m> elements in it, and each one has the identity. As there are at most <m>h</m> of them then when we add all of their orders we get at most <m>h(|H|-1)</m>, which is less than the order of <m>G</m>.
+                    Let <m>G</m> act on <m>H</m> by <xref text="title" ref="ex-conj"/>. We know that the orbits of this action partition <m>H</m>. However, under this action the orbits are exactly the conjugacy classes of <m>H</m>. There are at most <m>h</m> conjugacy classes. Each conjugacy class has at most <m>|H|</m> elements in it, and each one has the identity. As there are at most <m>h</m> of them then when we add all of their orders we get at most <m>h(|H|-1)</m>, which is less than the order of <m>G</m>.
                   </p>
                 </solution>
                 
@@ -5996,13 +5718,13 @@
                   <ol>
                     <li>
                       <p>
-                        Then <m>G</m> acts on <m>G</m> by conjugation (<m>g \cdot g' = gg'g^{-1}</m>). For all <m>g \in G</m>, the orbit of <m>g</m> is the conjugacy class of <m>g</m>, <m>\operatorname{Stab}_G(g)=C_G(G)</m> and <m>|[g]_c| = [G : C_G(g)]</m>.
+                        Then <m>G</m> acts on <m>G</m> by <xref text="title" ref="ex-conj"/> (<m>g \cdot g' = gg'g^{-1}</m>). For all <m>g \in G</m>, the orbit of <m>g</m> is the conjugacy class of <m>g</m>, <m>\operatorname{Stab}_G(g)=C_G(G)</m> and <m>|[g]_c| = [G : C_G(g)]</m>.
                       </p>
                     </li>
       
                     <li>
                       <p>
-                        Then <m>G</m> acts on the power set <m>P(G)=\{S\mid S\subseteq G\}</m> by conjugation (<m>g \cdot S = gSg^{-1}</m>). For all <m>S \in P(G)</m>, <m>\operatorname{Stab}_G(S)=N_G(S)</m> and <m>|\operatorname{Orbit}_G(S)| = [G : N_G(S)]</m>.
+                        Then <m>G</m> acts on the power set <m>P(G)=\{S\mid S\subseteq G\}</m> by <xref text="title" ref="ex-conj"/> (<m>g \cdot S = gSg^{-1}</m>). For all <m>S \in P(G)</m>, <m>\operatorname{Stab}_G(S)=N_G(S)</m> and <m>|\operatorname{Orbit}_G(S)| = [G : N_G(S)]</m>.
                       </p>
                     </li>
                   </ol>
@@ -6074,13 +5796,13 @@
                   <ol>
                     <li>
                       <p>
-                        Then <m>G</m> acts on <m>G</m> by conjugation (<m>g \cdot g' = gg'g^{-1}</m>). For all <m>g \in G</m>, the orbit of <m>g</m> is the conjugacy class of <m>g</m>, <m>\operatorname{Stab}_G(g)=C_G(G)</m> and <m>|[g]_c| = [G : C_G(g)]</m>.
+                        Then <m>G</m> acts on <m>G</m> by <xref text="title" ref="ex-conj"/> (<m>g \cdot g' = gg'g^{-1}</m>). For all <m>g \in G</m>, the orbit of <m>g</m> is the conjugacy class of <m>g</m>, <m>\operatorname{Stab}_G(g)=C_G(G)</m> and <m>|[g]_c| = [G : C_G(g)]</m>.
                       </p>
                     </li>
           
                     <li>
                       <p>
-                        Then <m>G</m> acts on the power set <m>P(G)=\{S\mid S\subseteq G\}</m> by conjugation (<m>g \cdot S = gSg^{-1}</m>). For all <m>S \in P(G)</m>, <m>\operatorname{Stab}_G(S)=N_G(S)</m> and <m>|\operatorname{Orbit}_G(S)| = [G : N_G(S)]</m>.
+                        Then <m>G</m> acts on the power set <m>P(G)=\{S\mid S\subseteq G\}</m> by <xref text="title" ref="ex-conj"/> (<m>g \cdot S = gSg^{-1}</m>). For all <m>S \in P(G)</m>, <m>\operatorname{Stab}_G(S)=N_G(S)</m> and <m>|\operatorname{Orbit}_G(S)| = [G : N_G(S)]</m>.
                       </p>
                     </li>
                   </ol>
@@ -6156,7 +5878,7 @@
 
                 <solution>
                   <p>
-                    Note that <m>G</m> acts on <m>X</m> by conjugation and that <m>X = \Orb(H)</m>. Note also that the stabilizer of <m>H</m> under this action is precisely <m>N_G(H)</m>. The result now follows directly from the Orbit-Stabilizer theorem.
+                    Note that <m>G</m> acts on <m>X</m> by <xref text="title" ref="ex-conj"/> and that <m>X = \Orb(H)</m>. Note also that the stabilizer of <m>H</m> under this action is precisely <m>N_G(H)</m>. The result now follows directly from the Orbit-Stabilizer theorem.
                   </p>
                 </solution>
               </exercise>
@@ -6237,7 +5959,6 @@
           
               <exercise> <title>January 2021 (1)</title>
               
-              
                 <statement>
                   <p>
                     Let <m>G = A_7</m> and <m>S</m> be the set of elements of <m>G</m> of order <m>7</m>. Prove that <m>S</m> is not a conjugacy class of <m>G</m>.
@@ -6257,7 +5978,6 @@
               </exercise>
     
               <exercise> <title>June 2016 (2)</title>
-              
               
                 <statement>
                   <p>
@@ -6319,6 +6039,55 @@
                     The action is transitive, so there is only one orbit, and so <m>\Orb(a)=\Orb(b)=G</m>. Since <m>G</m> is finite, the <xref text="title" ref="cor-orbit-stabilizer"/> tells us <m>|\Orb(a)|=|G|/|\Stab(a)|</m>. Since every orbit has the same order as <m>G</m>, we see <m>\Stab(a)=\{e\}</m> for all <m>a\in S</m>. Thus there cannot exist any fixed points.
                   </p>
                 </solution>
+              </exercise>
+
+              <exercise> <title>May 2019 (2)</title>
+                   
+                <statement>
+                  <p>
+                    Let <m>H</m> be a subgroup of a group <m>G</m>. Recall that the centralizer of <m>H</m> is the subgroup of <m>G</m> defined by <m>Z_G(H) = \{g \in G | gh = hg ∀h \in H\}</m>
+                    <fn>In the original qualifying exam, the centralizer was denoted <m>C_G(H).</m></fn>
+                    and the normalizer of <m>H</m> is the subgroup of <m>G</m> defined by <m>N_G(H) = \{g \in G | gHg\inv = H\}</m>. 
+                    <ol>
+                      <li>
+                        <p>
+                          Show that the centralizer <m>C_G(H)</m> of <m>H</m> in <m>G</m> is a normal subgroup of the normalizer <m>N_G(H)</m> of <m>H</m> in <m>G</m>.
+                        </p>
+                      </li>
+    
+                      <li>
+                        <p>
+                          Show that the quotient <m>N_G(H)/C_G(H)</m> is isomorphic to a subgroup of the automorphism group <m>\Aut(H)</m> of <m>H</m>.
+                        </p>
+                      </li>
+                    </ol>
+                    
+                  </p>
+    
+                </statement>
+    
+                <solution>
+                  <p>
+                    Let <m>G</m> act on <m>H</m> by <xref text="title" ref="ex-conj"/>. Thus the associated permutation homomorphism <m>\rho</m> is defined such that <m>\rho(g)=\phi_g</m>, where <m>\phi_g(h)=ghg\inv</m>. Notice that when <m>x\in C_G(H)</m> we have <m>\phi_x(h)=xhx\inv=h</m> for all <m>h\in H</m>, and thus <m>x\in\ker(\rho)</m>. If <m>x\in\ker(\rho)</m> then <m>xhx\inv=h</m> for all <m>h\in H</m>, and thus <m>x\in C_G(H)</m>. Thus <m>C_G(H)=\ker(\rho)</m> and <m>C_G(H)\nsg N_G(H)</m>.
+                  </p>
+                </solution>
+               
+    
+              </exercise>
+
+              <exercise> <title>June 2010 (1), January 2015 (3)</title>
+                
+                <statement>
+                  <p>
+                    Let <m>G</m> be a group and <m>H</m> a subgroup of <m>G</m>. Recall that the centralizer of <m>H</m> in <m>G</m> is 
+                    <me>
+                      C_H(G)=\{g\in G|gh=h\;\text{for all}\;h\in H\}
+                    </me>
+                    Prove that if <m>H</m> is normal in <m>G</m>, then so is <m>C_G(H)</m> and that <m>G/C_G(H)</m> is isomorphic to a subgroup of the automorphism group of <m>H</m>.
+                  </p>
+                  
+                </statement>
+      
               </exercise>
           
             </exercisegroup>
@@ -6468,7 +6237,7 @@
           </p>
     
           <p>
-            For example, it can be used to prove the existence of subgroups of a given order in a group, and it is a key ingredient in the proof of Sylow's theorems, which provide information about the structure of finite groups. 
+            For example, it can be used to prove the existence of subgroups of a given order in a group, and it is a key ingredient in the proof of <xref text="title" ref="thm-sylow"/>, which provide information about the structure of finite groups. 
           </p>
     
           <p>
@@ -6477,8 +6246,8 @@
     
           <exercises>
     
-            <exercisegroup>
-              <title>Computations and Examples</title>
+            <exercisegroup> <title>Computations and Examples</title>
+              
               <introduction>
                 <p>
                 </p>
@@ -6492,8 +6261,8 @@
           
             </exercisegroup>
           
-            <exercisegroup>
-              <title>Formal Proofs</title>
+            <exercisegroup>  <title>Formal Proofs</title>
+             
               <introduction>
                 <p>
                 </p>
@@ -6507,8 +6276,8 @@
           
             </exercisegroup>
           
-            <exercisegroup>
-              <title>Qualifying Exam Problems</title>
+            <exercisegroup> <title>Qualifying Exam Problems</title>
+              
               <introduction>
                 <p>
                 </p>
@@ -6516,8 +6285,6 @@
           
               <exercise> <title>January 2017 (2)</title>
               
-              
-    
                 <statement>
                 <p>
                   Let <m>G</m> be a group of order <m>p^n</m> where <m>p</m> is a prime and <m>n \geq 1</m>. 
@@ -6716,7 +6483,7 @@
     
                   <li>
                     <p>
-                      If <m>P</m> is a Sylow <m>p</m>-subgroup of <m>G</m> and <m>Q \leq G</m> is any <m>p</m>-subgroup of <m>G</m> (i.e., a subgroup whose order is some power of <m>p</m>), then there is a <m>g</m> such that <m>Q \leq gPg^{-1}</m>. In particular, the action of <m>G</m> on <m>\operatorname{Syl}_p(G)</m> by conjugation is transitive — i.e., any two Sylow <m>p</m>-subgroups are conjugate.
+                      If <m>P</m> is a Sylow <m>p</m>-subgroup of <m>G</m> and <m>Q \leq G</m> is any <m>p</m>-subgroup of <m>G</m> (i.e., a subgroup whose order is some power of <m>p</m>), then there is a <m>g</m> such that <m>Q \leq gPg^{-1}</m>. In particular, the action of <m>G</m> on <m>\operatorname{Syl}_p(G)</m> by <xref text="title" ref="ex-conj"/> is transitive — i.e., any two Sylow <m>p</m>-subgroups are conjugate.
                     </p>
                   </li>
     
@@ -6849,11 +6616,11 @@
     
                 <solution>
                   <p>
-                    Let <m>G</m> be a group of order <m>385 = 5 · 7 · 11</m>. By Sylow's Theorem we know the <m>n_{11}|35</m> and <m>n_11\equiv 1\mod{11}</m>, and so <m>n_{11}=1</m>, making <m>P</m>, the unique Sylow <m>11</m>-subgroup of <m>G</m>, normal in <m>G</m>. Things are looking good thus far. We also know the following: - <m>n_7|55</m> and <m>n_7\equiv 1\mod{7}</m>, so <m>n_7=1</m> as well. Yeehaw.
+                    Let <m>G</m> be a group of order <m>385 = 5 · 7 · 11</m>. By <xref text="title" ref="thm-sylow"/> we know the <m>n_{11}|35</m> and <m>n_11\equiv 1\mod{11}</m>, and so <m>n_{11}=1</m>, making <m>P</m>, the unique Sylow <m>11</m>-subgroup of <m>G</m>, normal in <m>G</m>. Things are looking good thus far. We also know the following: - <m>n_7|55</m> and <m>n_7\equiv 1\mod{7}</m>, so <m>n_7=1</m> as well. Yeehaw.
                   </p>
         
                   <p>
-                    Let <m>P</m> denote the unique Sylow <m>7</m>-subgroup, and let <m>G</m> act on <m>P</m> by conjugation. Thus <m>\rho:G\to S_7</m>. The <xref text="title" ref="thm-fit-group"/> tells us that <m>G/K\cong\im(\rho)\leq\Aut(P)</m>, where <m>K</m> is the kernel of <m>\rho</m>. However, <m>\Aut(P)=\Z_{7}^\times=\Z_6</m>, meaning that the order of <m>K</m> must divide both <m>385</m> and <m>6</m>, which cannot happen. Thus <m>K</m> must be trivial, meaning that <m>gxg\inv=x</m> for every <m>g\in G</m> and <m>x\in P</m>, making <m>P</m> a subgroup of <m>Z(G)</m> of order <m>7</m>.
+                    Let <m>P</m> denote the unique Sylow <m>7</m>-subgroup, and let <m>G</m> act on <m>P</m> by <xref text="title" ref="ex-conj"/>. Thus <m>\rho:G\to S_7</m>. The <xref text="title" ref="thm-fit-group"/> tells us that <m>G/K\cong\im(\rho)\leq\Aut(P)</m>, where <m>K</m> is the kernel of <m>\rho</m>. However, <m>\Aut(P)=\Z_{7}^\times=\Z_6</m>, meaning that the order of <m>K</m> must divide both <m>385</m> and <m>6</m>, which cannot happen. Thus <m>K</m> must be trivial, meaning that <m>gxg\inv=x</m> for every <m>g\in G</m> and <m>x\in P</m>, making <m>P</m> a subgroup of <m>Z(G)</m> of order <m>7</m>.
                   </p>
                 </solution>
                 
@@ -6886,7 +6653,7 @@
                   </p>
         
                   <p>
-                    By Sylow's Theorem we know <m>n_{11}|21</m> and is congruent to <m>1\mod{11}</m>. The only possibility for such is <m>1</m>, meaning that <m>G</m> has exactly <m>1</m> Sylow <m>11</m>-subgroup.
+                    By <xref text="title" ref="thm-sylow"/> we know <m>n_{11}|21</m> and is congruent to <m>1\mod{11}</m>. The only possibility for such is <m>1</m>, meaning that <m>G</m> has exactly <m>1</m> Sylow <m>11</m>-subgroup.
                   </p>
         
                   <p>
@@ -6916,7 +6683,7 @@
                   </p>
         
                   <p>
-                    Let <m>G</m> act on <m>\Syl_p(G)</m> by conjugation, which is a transitive action by part (2) of Sylow's Theorem. Therefore <m>H</m> acts transitively on this set as well. Under this action, <m>N_G(P)=\Stab_G(P)</m>.
+                    Let <m>G</m> act on <m>\Syl_p(G)</m> by <xref text="title" ref="ex-conj"/>, which is a transitive action by part (2) of <xref text="title" ref="thm-sylow"/>. Therefore <m>H</m> acts transitively on this set as well. Under this action, <m>N_G(P)=\Stab_G(P)</m>.
                   </p>
         
                   <p>
@@ -7103,6 +6870,20 @@
                 <p>
                 </p>
               </introduction>
+
+              <exercise>
+                <statement>
+                  <p>
+                    Let <m>G</m> be a finite group and <m>K</m> a subgroup of <m>G</m> such that: <m>[G : K] = 2</m>, <m>K</m> is simple, and <m>Z(G) = \{e\}</m>. Prove that the only normal subgroups of <m>G</m> are <m>\{e\}, K</m>, and <m>G</m>.
+                  </p>
+                </statement>
+                
+                <hint>
+                  <p>
+                    Let <m>H</m> be a normal subgroup of <m>G</m>. Then <m>H\cap K</m> is a normal subgroup of <m>K</m>.
+                  </p>
+                </hint>
+              </exercise>
           
               <exercise xml:id="exe-no-order-12-simple">
                 <title>No Simple Groups of Order <m>12</m></title>
@@ -7157,7 +6938,7 @@
       
                 <solution>
                   <p>
-                    Let <m>G</m> be a simple group of order <m>60=2^2\cdot3\cdot 5.</m> By Sylow's Theorem we know that <m>n_5|12</m> and that <m>n_5\equiv 1\mod{5}</m>. Thus the options for <m>n_5</m> are <m>1</m> and <m>6</m>. Since <m>G</m> is simple we see that <m>n_5=6</m>. As each Sylow <m>5</m>-subgroup of <m>G</m> has <m>4</m> unique elements of order <m>5</m> and the identity we see that the number of elements or order <m>5</m> in <m>G</m> is <m>(5-1)\cdot 6=24</m>.
+                    Let <m>G</m> be a simple group of order <m>60=2^2\cdot3\cdot 5.</m> By <xref text="title" ref="thm-sylow"/> we know that <m>n_5|12</m> and that <m>n_5\equiv 1\mod{5}</m>. Thus the options for <m>n_5</m> are <m>1</m> and <m>6</m>. Since <m>G</m> is simple we see that <m>n_5=6</m>. As each Sylow <m>5</m>-subgroup of <m>G</m> has <m>4</m> unique elements of order <m>5</m> and the identity we see that the number of elements or order <m>5</m> in <m>G</m> is <m>(5-1)\cdot 6=24</m>.
                   </p>
       
                   <p>
@@ -7189,11 +6970,11 @@
       
                 <solution>
                   <p>
-                    By Sylow's Theorem, <m>|\Syl_7(G)|\equiv 1\mod{7}</m> and divides <m>2^3\cdot 3=24</m>. Thus the only options are <m>1</m> and <m>8</m>. However, as <m>G</m> is simple there cannot be only one Sylow <m>7</m>-Subgroup, as it would be normal. Thus there are <m>8</m>, each having <m>7</m> unique elements and the identity. Thus there are <m>49</m> elements of order <m>7</m>.
+                    By <xref text="title" ref="thm-sylow"/>, <m>|\Syl_7(G)|\equiv 1\mod{7}</m> and divides <m>2^3\cdot 3=24</m>. Thus the only options are <m>1</m> and <m>8</m>. However, as <m>G</m> is simple there cannot be only one Sylow <m>7</m>-Subgroup, as it would be normal. Thus there are <m>8</m>, each having <m>7</m> unique elements and the identity. Thus there are <m>49</m> elements of order <m>7</m>.
                   </p>
       
                   <p>
-                    By Sylow's Theorem, <m>|\Syl_3(G)|\equiv 1\mod{3}</m> and divides <m>2^3\cdot 7=56</m>. As <m>G</m> is simple there cannot be one, so there must be at least <m>7</m>, each with <m>2</m> non-identity elements. Thus there must be at least <m>14</m> elements of order <m>3</m>.
+                    By <xref text="title" ref="thm-sylow"/>, <m>|\Syl_3(G)|\equiv 1\mod{3}</m> and divides <m>2^3\cdot 7=56</m>. As <m>G</m> is simple there cannot be one, so there must be at least <m>7</m>, each with <m>2</m> non-identity elements. Thus there must be at least <m>14</m> elements of order <m>3</m>.
                   </p>
                 </solution>
               </exercise>
@@ -7225,7 +7006,7 @@
                       <ol>
                         <li>
                           <p>
-                            Suppose by way of contradiction that <m>G</m> is simple. By Sylow's Theorem we know the following: - <m>n_3|10</m> and is congruent to <m>1\mod{3}</m>. As <m>G</m> is simple there must be ten of the fuckers. - <m>n_5|18</m> and is congruent to <m>1\mod 5</m>. As <m>G</m> is simple there must be six of them. Since each Sylow <m>3</m>-subgroup will have <m>3^2-1=8</m> non-identity elements and they are all distinct that accounts for <m>80</m> elements of order <m>3</m>. However, there are also <m>24</m> elements or order <m>5</m> to account for, which is a problem. Thus <m>G</m> cannot be simple.
+                            Suppose by way of contradiction that <m>G</m> is simple. By <xref text="title" ref="thm-sylow"/> we know the following: - <m>n_3|10</m> and is congruent to <m>1\mod{3}</m>. As <m>G</m> is simple there must be ten of the fuckers. - <m>n_5|18</m> and is congruent to <m>1\mod 5</m>. As <m>G</m> is simple there must be six of them. Since each Sylow <m>3</m>-subgroup will have <m>3^2-1=8</m> non-identity elements and they are all distinct that accounts for <m>80</m> elements of order <m>3</m>. However, there are also <m>24</m> elements or order <m>5</m> to account for, which is a problem. Thus <m>G</m> cannot be simple.
                           </p>
                         </li>
   
@@ -7274,15 +7055,15 @@
                   </p>
       
                   <p>
-                    By Sylow's Theorem we know that <m>n_3=1\mod{3}</m> and <m>n_3|35</m>. The possible options are thus <m>1</m> and <m>7</m>.
+                    By <xref text="title" ref="thm-sylow"/> we know that <m>n_3=1\mod{3}</m> and <m>n_3|35</m>. The possible options are thus <m>1</m> and <m>7</m>.
                   </p>
       
                   <p>
-                    Suppose by way of contradiction that <m>G</m> is simple. Thus <m>n_3\neq 1</m>, so <m>n_3=7</m>. Let <m>G</m> act on the <m>\Syl_3(G)</m> by conjugation, yielding the homomorphism 
+                    Suppose by way of contradiction that <m>G</m> is simple. Thus <m>n_3\neq 1</m>, so <m>n_3=7</m>. Let <m>G</m> act on the <m>\Syl_3(G)</m> by <xref text="title" ref="ex-conj"/>, yielding the homomorphism 
                     <me>
                       \rho: G\to S_7
                     </me>
-                    granted via the permutation representation. By (2) in Sylow's Theorem we see that <m>\rho</m> is not trivial. As <m>|S_7|=7!</m> we see that <m>|G|\not\big||S_7|</m>, meaning that the <m>\ker(\rho)</m> is non-trivial, yielding a non-trivial normal subgroup of <m>G</m>, a contradiction.
+                    granted via the permutation representation. By (2) in <xref text="title" ref="thm-sylow"/> we see that <m>\rho</m> is not trivial. As <m>|S_7|=7!</m> we see that <m>|G|\not\big||S_7|</m>, meaning that the <m>\ker(\rho)</m> is non-trivial, yielding a non-trivial normal subgroup of <m>G</m>, a contradiction.
                   </p>
                 </solution>
               </exercise>
@@ -7298,7 +7079,7 @@
       
                 <solution>
                   <p>
-                    Let <m>G</m> be a finite group of order <m>p^2q</m> with <m>p &lt; q</m> prime numbers, and suppose by way of contradiction that <m>G</m> is simple. By Sylow's Theorem we have the following: - <m>n_p|q</m> and <m>n_p\cong 1\mod{p}</m>, and thus <m>n_p=q</m>. - <m>n_q|p^2</m> and <m>n_q\cong 1\mod{q}</m>, and thus <m>n_q=p^2</m>. From this information we see that there are <m>p^2(q-1)</m> elements of order <m>q</m> and <m>(p^2-1)q</m> elements of order <m>p</m>, for a lovely total of <m>p^2q-p^2+p^2q-q</m> elements, which is too many.
+                    Let <m>G</m> be a finite group of order <m>p^2q</m> with <m>p &lt; q</m> prime numbers, and suppose by way of contradiction that <m>G</m> is simple. By <xref text="title" ref="thm-sylow"/> we have the following: - <m>n_p|q</m> and <m>n_p\cong 1\mod{p}</m>, and thus <m>n_p=q</m>. - <m>n_q|p^2</m> and <m>n_q\cong 1\mod{q}</m>, and thus <m>n_q=p^2</m>. From this information we see that there are <m>p^2(q-1)</m> elements of order <m>q</m> and <m>(p^2-1)q</m> elements of order <m>p</m>, for a lovely total of <m>p^2q-p^2+p^2q-q</m> elements, which is too many.
                   </p>
                 </solution>
               </exercise>
@@ -7331,11 +7112,11 @@
                   </p>
       
                   <p>
-                    Let <m>G</m> act on <m>\Syl_p(G)</m> by conjugation, inducing the homomorphism <m>\rho: G\to S_{n_p}</m> via the permutation representation. Notice that the order of <m>S_{n_p}</m> is conspicuously <m>n_p!</m>. The kernel of this map is a normal subgroup of <m>G</m>. Note that since <m>G</m> is simple the only normal subgroups of <m>G</m> are the trivial subgroup and <m>G</m> itself. However, the kernel cannot be all of <m>G</m> as this would make <m>\rho</m> trivial, which cannot be the case given that our action is transitive by Part (2) of Sylow's Theorem. Thus <m>\ker(\rho)=\{e\}</m>, making <m>\rho</m> injective. Thus <m>|\im(\rho)|=|G|</m>. As the image is a subgroup of <m>S_{n_p}</m>, the result follows from Lagrange's Theorem.
+                    Let <m>G</m> act on <m>\Syl_p(G)</m> by <xref text="title" ref="ex-conj"/>, inducing the homomorphism <m>\rho: G\to S_{n_p}</m> via the permutation representation. Notice that the order of <m>S_{n_p}</m> is conspicuously <m>n_p!</m>. The kernel of this map is a normal subgroup of <m>G</m>. Note that since <m>G</m> is simple the only normal subgroups of <m>G</m> are the trivial subgroup and <m>G</m> itself. However, the kernel cannot be all of <m>G</m> as this would make <m>\rho</m> trivial, which cannot be the case given that our action is transitive by Part (2) of <xref text="title" ref="thm-sylow"/>. Thus <m>\ker(\rho)=\{e\}</m>, making <m>\rho</m> injective. Thus <m>|\im(\rho)|=|G|</m>. As the image is a subgroup of <m>S_{n_p}</m>, the result follows from Lagrange's Theorem.
                   </p>
       
                   <p>
-                    Let <m>G</m> be a group of order <m>1,000,000</m>. Suppose by way of contradiction that <m>G</m> is simple. <m>1,000,000=10^6=2^6\cdot 5^6</m>. Thus the number of Sylow-<m>5</m> subgroups is congruent to <m>1\mod 5</m> and divides <m>2^6=64</m>, the options of which are 1 and 16 (See: Sylow's Theorem). As <m>|G|</m> does not divide <m>16!,</m> this contradicts part (a). Thus there are no simple groups of order <m>1,000,000</m>.
+                    Let <m>G</m> be a group of order <m>1,000,000</m>. Suppose by way of contradiction that <m>G</m> is simple. <m>1,000,000=10^6=2^6\cdot 5^6</m>. Thus the number of Sylow-<m>5</m> subgroups is congruent to <m>1\mod 5</m> and divides <m>2^6=64</m>, the options of which are 1 and 16 (See: <xref text="title" ref="thm-sylow"/>). As <m>|G|</m> does not divide <m>16!,</m> this contradicts part (a). Thus there are no simple groups of order <m>1,000,000</m>.
                   </p>
                 </solution>
               </exercise>
@@ -7350,7 +7131,7 @@
       
                 <solution>
                   <p>
-                    Let <m>G</m> be a group of order <m>36=2^2\cdot 3^2</m>. By Sylow's Theorem we have <m>n_3|4</m> and <m>n_3\equiv 1\mod{3}</m>, and thus <m>n_3=1,4</m>. If <m>n_3=1</m> then the unique Sylow <m>3</m>-subgroup is normal, giving us a normal subgroup of order <m>9</m>.
+                    Let <m>G</m> be a group of order <m>36=2^2\cdot 3^2</m>. By <xref text="title" ref="thm-sylow"/> we have <m>n_3|4</m> and <m>n_3\equiv 1\mod{3}</m>, and thus <m>n_3=1,4</m>. If <m>n_3=1</m> then the unique Sylow <m>3</m>-subgroup is normal, giving us a normal subgroup of order <m>9</m>.
                   </p>
         
                   <p>
@@ -7385,7 +7166,7 @@
       
                 <solution>
                   <p>
-                    Let <m>G</m> be a group of order <m>150</m> and suppose by way of contradiction that <m>G</m> is simple. Notice that <m>150=2\cdot 3\cdot 5^2</m>. By Sylow's Theorem, we know <m>|\Syl_5(G)|\equiv 1\mod{5}</m> and divides <m>6</m>, the only options are thus <m>1</m> and <m>6</m>. Since <m>G</m> is simple, there must be exactly <m>n_5=6</m>, where <m>n_5=\Syl_5(G)</m>. Let <m>G</m> act on <m>\Syl_5(G)</m> by conjugation. Thus <m>\rho: G\to S_6</m> is a group homomorphism. Note that <m>|S_6|=720</m>, and that the order of <m>G</m> does not divide <m>720</m>. By Part (2) of Sylow's Theorem this action is transitive, meaning that the kernel of <m>\rho</m> cannot be trivial. Thus <m>\ker(\rho)</m> is a nontrivial normal subgroup of <m>G</m>, a contradiction. Thus no group of order <m>150</m> is simple.
+                    Let <m>G</m> be a group of order <m>150</m> and suppose by way of contradiction that <m>G</m> is simple. Notice that <m>150=2\cdot 3\cdot 5^2</m>. By <xref text="title" ref="thm-sylow"/>, we know <m>|\Syl_5(G)|\equiv 1\mod{5}</m> and divides <m>6</m>, the only options are thus <m>1</m> and <m>6</m>. Since <m>G</m> is simple, there must be exactly <m>n_5=6</m>, where <m>n_5=\Syl_5(G)</m>. Let <m>G</m> act on <m>\Syl_5(G)</m> by <xref text="title" ref="ex-conj"/>. Thus <m>\rho: G\to S_6</m> is a group homomorphism. Note that <m>|S_6|=720</m>, and that the order of <m>G</m> does not divide <m>720</m>. By Part (2) of <xref text="title" ref="thm-sylow"/> this action is transitive, meaning that the kernel of <m>\rho</m> cannot be trivial. Thus <m>\ker(\rho)</m> is a nontrivial normal subgroup of <m>G</m>, a contradiction. Thus no group of order <m>150</m> is simple.
                   </p>
                 </solution>
               </exercise>
@@ -7401,15 +7182,15 @@
       
                 <solution>
                   <p>
-                    By Sylow's Theorem we know that <m>\Syl_7(G)\equiv 1\mod{7}</m> and <m>\Syl_7(G)|2^5=32</m>. Thus our options are <m>1</m> and <m>8</m>. Suppose that <m>\Syl_7(G)=8</m>.
+                    By <xref text="title" ref="thm-sylow"/> we know that <m>\Syl_7(G)\equiv 1\mod{7}</m> and <m>\Syl_7(G)|2^5=32</m>. Thus our options are <m>1</m> and <m>8</m>. Suppose that <m>\Syl_7(G)=8</m>.
                   </p>
         
                   <p>
-                    Let <m>G</m> act on <m>\Syl_7(G)</m> by conjugation, yielding the homomorphism 
+                    Let <m>G</m> act on <m>\Syl_7(G)</m> by <xref text="title" ref="ex-conj"/>, yielding the homomorphism 
                     <me>
                       \rho: G \to S_8
                     </me>
-                    via the permutation representation. This map is non-trivial from part (2) of Sylow's Theorem, but <m>2^5\cdot 7^3</m> does not divide <m>|S_8|=8!</m>, and thus <m>\rho</m> cannot be injective. Then the kernel of this homomorphism is non-trivial, normal subgroup of <m>G</m>. Thus <m>G</m> is not simple.
+                    via the permutation representation. This map is non-trivial from part (2) of <xref text="title" ref="thm-sylow"/>, but <m>2^5\cdot 7^3</m> does not divide <m>|S_8|=8!</m>, and thus <m>\rho</m> cannot be injective. Then the kernel of this homomorphism is non-trivial, normal subgroup of <m>G</m>. Thus <m>G</m> is not simple.
                   </p>
                 </solution>
               </exercise>
@@ -7423,7 +7204,10 @@
       
                 <solution>
                   <p>
-                    Let <m>G</m> be a group of order <m>2^m \cdot 5</m> with <m>m \leq 1</m>, and suppose by way of contradiction that <m>G</m> is simple. By Sylow's Theorem we know the following: - <m>n_{5}|2^m</m> and <m>n_5\equiv1\mod{5}</m>, and - <m>n_{2}|5</m> and <m>n_{2}\equiv1\mod{2}</m>, so our options are <m>3</m> and <m>5</m>. Suppose its <m>3</m>. Let <m>G</m> act on <m>\Syl_2(P)</m> by conjugation, yielding the permutation representation homomorphism <m>\rho:G\to S_{3}</m>. The kernel of this homomorphism cannot be trivial as the conjugation action on Sylow subgroups is transitive by Part (2) of Sylow's Theorem. Notice <m>|G|</m> does not divide the order of <m>S_{3}</m>, so our kernel cannot be all of <m>G</m>, making <m>\ker(\rho)</m> a nontrivial normal subgroup of <m>G</m>.
+                    Let <m>G</m> be a group of order <m>2^m \cdot 5</m> with <m>m \leq 1</m>, and suppose by way of contradiction that <m>G</m> is simple. By <xref text="title" ref="thm-sylow"/> we know the following: 
+                    - <m>n_{5}|2^m</m> and <m>n_5\equiv1\mod{5}</m>, and 
+                    - <m>n_{2}|5</m> and <m>n_{2}\equiv1\mod{2}</m>, 
+                    so our options are <m>3</m> and <m>5</m>. Suppose its <m>3</m>. Let <m>G</m> act on <m>\Syl_2(P)</m> by <xref text="title" ref="ex-conj"/>, yielding the permutation representation homomorphism <m>\rho:G\to S_{3}</m>. The kernel of this homomorphism cannot be trivial as the conjugation action on Sylow subgroups is transitive by Part (2) of <xref text="title" ref="thm-sylow"/>. Notice <m>|G|</m> does not divide the order of <m>S_{3}</m>, so our kernel cannot be all of <m>G</m>, making <m>\ker(\rho)</m> a nontrivial normal subgroup of <m>G</m>.
                   </p>
       
                   <p>
@@ -7449,11 +7233,14 @@
                   </p>
         
                   <p>
-                    By Sylow's Theorem we know the following: - <m>n_{7}|2^m</m> and <m>n_7\equiv1\mod{7}</m>, and - <m>n_{2}|7</m> and <m>n_{2}\equiv1\mod{2}</m>, so our options are <m>3,5,7</m>.
+                    By <xref text="title" ref="thm-sylow"/> we know the following: 
+                    - <m>n_{7}|2^m</m> and <m>n_7\equiv1\mod{7}</m>, and 
+                    - <m>n_{2}|7</m> and <m>n_{2}\equiv1\mod{2}</m>, 
+                    so our options are <m>3,5,7</m>.
                   </p>
         
                   <p>
-                    Let <m>G</m> act on <m>\Syl_2(P)</m> by conjugation, yielding the permutation representation homomorphism <m>\rho:G\to S_{n_2}</m>. The kernel of this homomorphism cannot be trivial as the conjugation action on Sylow subgroups is transitive by Part (2) of Sylow's Theorem. Notice that if <m>n_2</m> is <m>3</m> or <m>5</m> then <m>|G|</m> does not divide the order of <m>S_{n_2}</m>, so our kernel cannot be all of <m>G</m>, making <m>\ker(\rho)</m> a nontrivial normal subgroup of <m>G</m>.
+                    Let <m>G</m> act on <m>\Syl_2(P)</m> by <xref text="title" ref="ex-conj"/>, yielding the permutation representation homomorphism <m>\rho:G\to S_{n_2}</m>. The kernel of this homomorphism cannot be trivial as the conjugation action on Sylow subgroups is transitive by Part (2) of <xref text="title" ref="thm-sylow"/>. Notice that if <m>n_2</m> is <m>3</m> or <m>5</m> then <m>|G|</m> does not divide the order of <m>S_{n_2}</m>, so our kernel cannot be all of <m>G</m>, making <m>\ker(\rho)</m> a nontrivial normal subgroup of <m>G</m>.
                   </p>
         
                   <p>
@@ -7773,10 +7560,13 @@
                 </p>
               </introduction>
           
-              <exercise>
-                <p>
-                  Coming soon to an OER near you!
-                </p>
+              <exercise xml:id="exe-hk-non-commuting-elements">
+                <title><m>HK=KH</m> but not Abelian</title>
+                <statement>
+                  <p>
+                    In <m>D_{2n}</m>, let <m>H=\langle s\rangle</m> and <m>K=\langle r\rangle</m>. Then <m>HK=KH=D_{2n}</m> but <m>r</m> and <m>s</m> do not commute. The fact that <m>HK=KH</m> can also be justified by observing that <m>K\nsg D_{2n}</m>.
+                  </p>
+                </statement>
               </exercise>
           
             </exercisegroup>
@@ -7802,16 +7592,6 @@
                 <p>
                 </p>
               </introduction>
-
-              <exercise> <title>May 2018 1(b)</title>
-                
-                <statement>
-                  <p>
-                    Give an example, with justification, of groups <m>H</m> and <m>K</m> for which <m>\Aut(H)\times\Aut(K)</m> is not isomorphic to <m>\Aut(H \times K)</m>.
-                  </p>
-                </statement>
-      
-              </exercise>
           
               <exercise> <title>January 2022 (1a), January 2020 (1b)</title>
                 
@@ -7874,6 +7654,115 @@
                     If <m>H\subseteq Z(G)</m> then we have <m>HG_a=G_aH</m>, which means <m>HG_a\leq G</m>. From Part (a) we have a trivial intersection, making <m>G</m> the internal direct product of <m>H</m> and <m>G_a</m>.
                   </p>
               </solution>
+              </exercise>
+
+              <exercise> <title>Jan 2022 (1)</title>
+
+                <statement>
+                  <p>
+                    Let <m>G</m> be a group, and <m>H, K \leq G</m> be subgroups of <m>G</m>. 
+                  <ol>
+                    <li>
+                      <p>
+                        Give an example of <m>G, H,</m> and <m>K</m> such that <m>HK</m> is not a subgroup of <m>G</m>. 
+                      </p>
+                    </li>
+        
+                    <li>
+                      <p>
+                        Suppose now that <m>H\nsg G</m> and <m>[G : H] = p</m>, where <m>p</m> is prime. Prove that either <m>K \leq H</m> or <m>G = KH</m>.
+                      </p>
+                    </li>
+                  </ol>
+                  </p>
+                </statement>
+        
+                <solution>
+                  <p>
+                    <ol>
+                    <li>
+                      <p>
+                        Let <m>G=S_3</m>, <m>H=\langle(12)\rangle</m>, and <m>K=\langle(13)\rangle</m>. Notice that <m>H\cap K=\{e\}</m>, and thus <m>|HK|=4</m>, (<xref provisional="empty"/>) which does not divide <m>6</m>. Thus <m>HK</m> is not a subgroup of <m>G</m>, as this would contradict <xref text="title" ref="thm-lagrange" />.
+                      </p>
+                    </li>
+        
+                    <li>
+                      <p>
+                        Suppose there exists some <m>k\in K</m> such that <m>k\not\in H</m>. We examine <m>kH\in G/H</m>. Notice that since <m>G/H</m> has prime order it is cyclic, and thus generated by any non-identity element, such as <m>kH</m>. Thus any element in <m>G/H</m> can be written in the form <m>k^iH</m>, and any element in <m>G</m> can subsequently be written as <m>k^ih</m> for some <m>h\in H</m>. Thus <m>G=KH</m>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </solution>
+                
+                
+              </exercise>
+
+              <exercise> <title>May 2018 (1)</title>
+                
+                <statement>
+                  <p>
+                    Let <m>H</m> and <m>K</m> be groups. Recall that for any group <m>G</m>, an automorphism of <m>G</m> is an isomorphism from <m>G</m> to <m>G</m>, and <m>\Aut(G)</m> denotes the group of automorphisms of <m>G</m>.
+                    <ol>
+                      <li>
+                        <p>
+                          Show that the direct product group <m>\Aut(H)\times\Aut(K)</m> is isomorphic to a subgroup of <m>\Aut(H\times K)</m>.
+                        </p>
+                      </li>
+    
+                      <li>
+                        <p>
+                         Give an example, with justification, of groups <m>H</m> and <m>K</m> for which <m>\Aut(H)\times\Aut(K)</m> is not isomorphic to <m>\Aut(H\times K)</m>.
+                        </p>
+                      </li>
+                    </ol>
+                    
+                  </p>
+    
+                </statement>
+    
+                <solution>
+                  <p>
+                    Coming soon to an OER near you!
+                  </p>
+                </solution>
+               
+    
+              </exercise>
+
+              <exercise>  <title>January 2012 (1)</title>
+               
+                <statement>
+                  <p>
+                    Let <m>G</m> be a (not necessarily finite) group and <m>H</m> and <m>K</m> normal subgroups such that <m>G = HK</m>. Prove that <m>G/(H\cap K)\cong G/H \times G/K.</m>
+                  </p>
+                </statement>
+      
+                <solution>
+                  <p>
+                    Let <m>f:G\to G/H\times G/K</m> defined such that <m>f(g)=(gH, gK)</m>. Let <m>x,y\in G</m>. Then 
+                    <me>
+                      f(xy)=(xyH,xyK)=(xHyH,xKyK)=(xH,yH)\cdot(xKyK)=f(x)f(y),
+                    </me> 
+                    showing <m>f</m> is a homomorphism.
+                  </p>
+        
+                  <p>
+                    Let <m>(xH,yK)\in G/H\times G/K</m>. As <m>x,y\in G=HK</m>, we have <m>x=hk</m> and <m>y=h'k'</m> with <m>h,h'\in H</m> and <m>k,k'\in K</m>. As <m>k'\in K</m> and <m>h\in H</m> we see <m>(xH,yK)=(kH,h'K)</m>.
+                  </p>
+        
+                  <p>
+                    Consider <m>g=kh'\in G</m> and 
+                    <me>
+                      f(g)=f(kh')=(kh'H,kh'K)=(kH,h'K)=(xH,yK),
+                    </me>
+                    making <m>f</m> surjective as well.
+                  </p>
+        
+                  <p>
+                    Let <m>g\in H\cap K</m>. Then <m>f(g)=(gH,gK)=(H,K)</m>, and so <m>g\in\ker(f)</m>. Let <m>g\in\ker(f)</m>. Then <m>f(g)=(H,K)</m>, so <m>gH=H</m> and <m>gK=K</m>, placing <m>g\in H\cap K</m>. Thus, by the <xref text="title" ref="thm-fit-group"/>, we have <m>G/(H\cap K)\cong G/H \times G/K.</m>
+                  </p>
+                </solution>
               </exercise>
           
             </exercisegroup>
@@ -8189,7 +8078,7 @@
           </ul></p>
   
           <p>
-            Let <m>\rho: K \to \operatorname{Aut}(H)</m> be the permutation representation of the action of <m>K</m> on <m>H</m> via automorphisms given by conjugation in <m>G</m>. (This means that for any <m>k\in K</m> <m>\rho(k)=c_k</m>, where <m>c_k\in \operatorname{Aut}(H)</m> is the function <m>c_k(h)=khk^{-1}</m> for all <m>h\in H</m>.) Then the function 
+            Let <m>\rho: K \to \operatorname{Aut}(H)</m> be the permutation representation of the action of <m>K</m> on <m>H</m> via automorphisms given by <xref text="title" ref="ex-conj"/> in <m>G</m>. (This means that for any <m>k\in K</m> <m>\rho(k)=c_k</m>, where <m>c_k\in \operatorname{Aut}(H)</m> is the function <m>c_k(h)=khk^{-1}</m> for all <m>h\in H</m>.) Then the function 
             <me>
               \theta: H \rtimes_\rho K \to G
             </me> 
@@ -8742,7 +8631,11 @@
 
               <solution>
                 <p>
-                  Let <m>G</m> be a group of order <m>3^2\cdot 11\cdot 17</m>. By Sylow's Theorem we see the following: - <m>n_{11}|153</m> and <m>n_{11}\equiv 1\mod{11}</m>, and so <m>n_{11}=1</m>. - <m>n_{17}|99</m> and <m>n_{17}\equiv 1\mod{17}</m>, and so <m>n_{17}=1</m> as well. - <m>n_3|187</m> and <m>n_3\cong 1\mod{3}</m>, so actually <m>n_3=1</m> too. Thus the unique Sylow <m>11</m>-subgroup and Sylow <m>17</m>-subgroup, denoted <m>P</m> and <m>Q</m>, respectively, are normal in <m>G</m>.
+                  Let <m>G</m> be a group of order <m>3^2\cdot 11\cdot 17</m>. By <xref text="title" ref="thm-sylow"/> we see the following: 
+                  - <m>n_{11}|153</m> and <m>n_{11}\equiv 1\mod{11}</m>, and so <m>n_{11}=1</m>. 
+                  - <m>n_{17}|99</m> and <m>n_{17}\equiv 1\mod{17}</m>, and so <m>n_{17}=1</m> as well. 
+                  - <m>n_3|187</m> and <m>n_3\cong 1\mod{3}</m>, so actually <m>n_3=1</m> too. 
+                  Thus the unique Sylow <m>11</m>-subgroup and Sylow <m>17</m>-subgroup, denoted <m>P</m> and <m>Q</m>, respectively, are normal in <m>G</m>.
                 </p>
       
                 <p>
@@ -8765,7 +8658,7 @@
 
               <solution>
                 <p>
-                  By Sylow's Theorem we know the number of Sylow <m>23</m>-subgroups of <m>G</m> must divide <m>35</m> and be congruent to <m>1\mod{23}</m>, the only option of which is <m>1</m>. Let <m>H</m> denote the unique Sylow <m>23</m>-subgroup and let <m>K</m> be the cyclic subgroup generated by the element of order <m>35</m>.
+                  By <xref text="title" ref="thm-sylow"/> we know the number of Sylow <m>23</m>-subgroups of <m>G</m> must divide <m>35</m> and be congruent to <m>1\mod{23}</m>, the only option of which is <m>1</m>. Let <m>H</m> denote the unique Sylow <m>23</m>-subgroup and let <m>K</m> be the cyclic subgroup generated by the element of order <m>35</m>.
                 </p>
       
                 <p>
@@ -8802,11 +8695,15 @@
                 </p>
     
                 <p>
-                  First, suppose <m>p&lt;q</m>. By Sylow's Theorem we know the following: - <m>n_p|q</m> and <m>n_p\equiv 1\mod{p}</m>, so <m>n_p=1</m> or <m>q</m>, so <m>q</m> - <m>n_q|p^2</m> and <m>n_q\equiv 1\mod{q}</m>, so <m>n_q=1</m> or <m>p^2</m>, so <m>p^2</m>. We know there must be <m>(q-1)\cdot p^2=p^2q-p^2</m> elements of order <m>p</m>. Luckily, there is more than one Sylow <m>p</m>-subgroup with <m>p^2</m> elements, so there isn't room for all of them.
+                  First, suppose <m>p&lt;q</m>. By <xref text="title" ref="thm-sylow"/> we know the following: 
+                  - <m>n_p|q</m> and <m>n_p\equiv 1\mod{p}</m>, so <m>n_p=1</m> or <m>q</m>, so <m>q</m> 
+                  - <m>n_q|p^2</m> and <m>n_q\equiv 1\mod{q}</m>, so <m>n_q=1</m> or <m>p^2</m>, so <m>p^2</m>. 
+                  We know there must be <m>(q-1)\cdot p^2=p^2q-p^2</m> elements of order <m>p</m>. Luckily, there is more than one Sylow <m>p</m>-subgroup with <m>p^2</m> elements, so there isn't room for all of them.
                 </p>
     
                 <p>
-                  Suppose then that <m>q&gt;p</m>. By Sylow's Theorem we know the following: - <m>n_p|q</m> and <m>n_p\equiv 1\mod{p}</m>, so <m>n_p=1</m>, so we're definitely good there.
+                  Suppose then that <m>q&gt;p</m>. By <xref text="title" ref="thm-sylow"/> we know the following: 
+                  - <m>n_p|q</m> and <m>n_p\equiv 1\mod{p}</m>, so <m>n_p=1</m>, so we're definitely good there.
                 </p>
 
                 <p>
@@ -8870,7 +8767,7 @@
   
               <proof>
                 <p>
-                  Let <m>G</m> be a group of order <m>6</m>. Cayley's theorem gives that there exist elements <m>x,y\in G</m> with <m>|x|=2</m> and <m>|y|=3</m>. Let <m>K=\langle x \rangle</m> and <m>H=\langle y\rangle</m>. Since <m>[G:H]=2</m>, <m>H</m> is a normal subgroup of <m>G</m> and since <m>H\cap K</m> is a common subgroup of <m>H</m> and <m>K</m> Lagrange's theorem gives that <m>|H\cap K|\mid \operatorname{gcd}(|H|,|K|)=1</m>. Thus <m>H\cap K=\{e\}</m> and since <m>|HK|=\frac{|H||K|}{|H\cap K|}=6=|G|</m> we deduce that <m>HK=G</m>. Proposition <xref provisional="prop:internaldirprod" /> now gives that <m>G</m> is the internal semidirect product of <m>H</m> and <m>K</m>. More to the point, <m>G\cong H\rtimes_\rho K</m>, where <m>\rho:K\to \operatorname{Aut}(H)</m> gives the action of <m>K</m> on <m>H</m> by conjugation.
+                  Let <m>G</m> be a group of order <m>6</m>. Cayley's theorem gives that there exist elements <m>x,y\in G</m> with <m>|x|=2</m> and <m>|y|=3</m>. Let <m>K=\langle x \rangle</m> and <m>H=\langle y\rangle</m>. Since <m>[G:H]=2</m>, <m>H</m> is a normal subgroup of <m>G</m> and since <m>H\cap K</m> is a common subgroup of <m>H</m> and <m>K</m> Lagrange's theorem gives that <m>|H\cap K|\mid \operatorname{gcd}(|H|,|K|)=1</m>. Thus <m>H\cap K=\{e\}</m> and since <m>|HK|=\frac{|H||K|}{|H\cap K|}=6=|G|</m> we deduce that <m>HK=G</m>. Proposition <xref provisional="prop:internaldirprod" /> now gives that <m>G</m> is the internal semidirect product of <m>H</m> and <m>K</m>. More to the point, <m>G\cong H\rtimes_\rho K</m>, where <m>\rho:K\to \operatorname{Aut}(H)</m> gives the action of <m>K</m> on <m>H</m> by <xref text="title" ref="ex-conj"/>.
           </p>
   
           <p>
@@ -9034,7 +8931,10 @@
     
                 <solution>
                   <p>
-                    By Sylow's Theorem we know the following: - <m>n_3|5</m> and <m>n_3\equiv 1\mod{3}</m>, so <m>n_3=1</m>. - <m>n_5|</m> and <m>n_5\equiv1\mod{5}</m>, so <m>n_5=1</m> as well. Thus there is exactly one Sylow <m>5</m>-subgroup, <m>P</m>, and exactly one Sylow <m>3</m>-subgroup, <m>Q</m>. Both are normal in <m>G</m>. Notice that <m>Q</m> has order <m>9</m>, a prime squared. Thus <m>Q</m> is abelian. By the FTFGAG, <m>Q</m> is either isomorphic to <m>\Z_3\times\Z_3</m> or <m>\Z_9</m>. Thus <m>G\cong\Z_5\times\Z_9</m> or <m>G\cong\Z_5\times\Z_3\times\Z_3</m>.
+                    By <xref text="title" ref="thm-sylow"/> we know the following: 
+                    - <m>n_3|5</m> and <m>n_3\equiv 1\mod{3}</m>, so <m>n_3=1</m>. 
+                    - <m>n_5|</m> and <m>n_5\equiv1\mod{5}</m>, so <m>n_5=1</m> as well. 
+                    Thus there is exactly one Sylow <m>5</m>-subgroup, <m>P</m>, and exactly one Sylow <m>3</m>-subgroup, <m>Q</m>. Both are normal in <m>G</m>. Notice that <m>Q</m> has order <m>9</m>, a prime squared. Thus <m>Q</m> is abelian. By the FTFGAG, <m>Q</m> is either isomorphic to <m>\Z_3\times\Z_3</m> or <m>\Z_9</m>. Thus <m>G\cong\Z_5\times\Z_9</m> or <m>G\cong\Z_5\times\Z_3\times\Z_3</m>.
                   </p>
                 </solution>
               </exercise>
@@ -24671,7 +24571,7 @@
                 </p>
     
                 <p>
-                  Any subgroup of <m>S_4</m> of order <m>8</m> is a Sylow <m>2</m>-subgroup. By Sylow's theorems, the number of Sylow <m>2</m>-subgroups is either <m>1</m> or <m>3</m>.
+                  Any subgroup of <m>S_4</m> of order <m>8</m> is a Sylow <m>2</m>-subgroup. By <xref text="title" ref="thm-sylow"/>, the number of Sylow <m>2</m>-subgroups is either <m>1</m> or <m>3</m>.
                 </p>
     
                 <p>
@@ -24761,7 +24661,7 @@
         &amp;=\sqrt[4]{5/4}i(1-i)\\
         &amp;=\sqrt[4]{5/4}(1+i)\\
         &amp;=\alpha_1,
-    \end{align}</me> So <m>\tau</m> corresponds to the permutation (1 2 3 4). We have proven that <m>\Aut(E/\Q(i))</m> is isomorphic to a subgroup of <m>S_4</m> having order at most 8 and that it contains an element or order 2 and (1 2 3 4), an element of order 4. Since the subgroup generated by these two elements has order 8, we see that <m>\Aut(E/\Q) \cong D_8</m>. (Also by Sylow's Theorem, <m>S_4</m> only has one subgroup of order 8, and it is <m>D_8</m>).
+    \end{align}</me> So <m>\tau</m> corresponds to the permutation (1 2 3 4). We have proven that <m>\Aut(E/\Q(i))</m> is isomorphic to a subgroup of <m>S_4</m> having order at most 8 and that it contains an element or order 2 and (1 2 3 4), an element of order 4. Since the subgroup generated by these two elements has order 8, we see that <m>\Aut(E/\Q) \cong D_8</m>. (Also by <xref text="title" ref="thm-sylow"/>, <m>S_4</m> only has one subgroup of order 8, and it is <m>D_8</m>).
     </p>
               </proof>
             </proposition>
@@ -27140,7 +27040,7 @@
                     <ol>
                       <li>
                         <p>
-                          Invoking Eisenstein's Criterion and setting <m>p=7</m> we see that <m>x^3 - 7</m> is an irreducible cubic with exactly one real root. Thus <m>\Gal(L/\Q)\cong S_3</m>. Thus the subgroups of <m>\Gal(L/\Q)</m> are as follows: <m>H_1\cong\langle(12)\rangle, H_2\cong\langle(13)\rangle, H_3\cong\langle(23)\rangle,</m> and <m>H_4\cong\langle(123)\rangle.</m> By the Fundamental Theorem of Galois Theory there exist four intermediate field extensions: <m>E_1=L^{H_1}, E_2=L^{H_2}, E_3=L^{H_3}</m>, and <m>E_4=L^{H_4}</m>. Note that as <m>H_1,H_2,</m> and <m>H_3</m> are all Sylow-2 subgroups of <m>S_3</m>, by Sylow's Theorem none are normal in <m>S_3</m>. However, as <m>[G:H_4]=2</m>, the smallest prime dividing 6, we see that <m>E_4</m> is the only strictly intermediate field that is Galois over <m>\Q</m>.
+                          Invoking Eisenstein's Criterion and setting <m>p=7</m> we see that <m>x^3 - 7</m> is an irreducible cubic with exactly one real root. Thus <m>\Gal(L/\Q)\cong S_3</m>. Thus the subgroups of <m>\Gal(L/\Q)</m> are as follows: <m>H_1\cong\langle(12)\rangle, H_2\cong\langle(13)\rangle, H_3\cong\langle(23)\rangle,</m> and <m>H_4\cong\langle(123)\rangle.</m> By the Fundamental Theorem of Galois Theory there exist four intermediate field extensions: <m>E_1=L^{H_1}, E_2=L^{H_2}, E_3=L^{H_3}</m>, and <m>E_4=L^{H_4}</m>. Note that as <m>H_1,H_2,</m> and <m>H_3</m> are all Sylow-2 subgroups of <m>S_3</m>, by <xref text="title" ref="thm-sylow"/> none are normal in <m>S_3</m>. However, as <m>[G:H_4]=2</m>, the smallest prime dividing 6, we see that <m>E_4</m> is the only strictly intermediate field that is Galois over <m>\Q</m>.
                         </p>
                       </li>
     

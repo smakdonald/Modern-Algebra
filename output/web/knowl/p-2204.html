@@ -11,8 +11,42 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para"></div>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(F\)</span> be a field, <span class="process-math">\(V\)</span> an <span class="process-math">\(F\)</span>-vector space, and <span class="process-math">\(W\)</span> a subspace of <span class="process-math">\(V\text{.}\)</span>
+</div>
+<ol class="lower-alpha">
+<li>
+<div class="para">Let <span class="process-math">\(A\)</span> denote the set of all subspaces of <span class="process-math">\(V\)</span> such that <span class="process-math">\(A\cap W=\{0\}\text{.}\)</span> We can order <span class="process-math">\(A\)</span> with respect to inclusion. Let <span class="process-math">\(X\)</span> be a totally ordered subset of <span class="process-math">\(A\text{,}\)</span> and let <span class="process-math">\(B\)</span> be the union of all the elements in <span class="process-math">\(X\text{.}\)</span> Unions of subspaces are subspaces, and by DeMorgan's Laws we see that <span class="process-math">\(B\cap W=\{0\}\text{.}\)</span> Thus by Zorn's Lemma there exists a maximal element of <span class="process-math">\(A,\)</span> which we denote <span class="process-math">\(U\text{.}\)</span> So <span class="process-math">\(U\cap W=\{0\}\)</span> by definition.</div>
+<div class="para">Suppose by way of contradiction there exists some <span class="process-math">\(x\in V\)</span> such that <span class="process-math">\(x\not\in U+W\text{.}\)</span>
+</div>
+<div class="para">Consider <span class="process-math">\(U+Vx\text{.}\)</span> As <span class="process-math">\(x\not\in W\text{,}\)</span> <span class="process-math">\(vx\not\in W\)</span> for all <span class="process-math">\(v\in V\text{,}\)</span> as we could just multiply by <span class="process-math">\(v\inv\text{.}\)</span> Thus <span class="process-math">\(W\cap U+Vx=\{0\}\)</span> and <span class="process-math">\(U\subsetneq U+Vx\text{,}\)</span> a contradiction, as <span class="process-math">\(U\)</span> was maximal. Thus <span class="process-math">\(U\)</span> is a complement of <span class="process-math">\(W\text{.}\)</span>
+</div>
+</li>
+<li><div class="para logical">
+<div class="para">The Second Isomorphism Theorem tells us that <span class="process-math">\(U+W/W\cong U/(U\cap W)\text{.}\)</span> We also know that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dim(U)-\dim(U\cap W)=\dim(U/U\cap W)=\dim(U+W/W)=\dim(U+W)-\dim(W).
+\end{equation*}
+</div>
+<div class="para">Put succinctly,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dim(U)-\dim(U\cap W)=\dim(U+W)-\dim(W),
+\end{equation*}
+</div>
+<div class="para">and thus</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dim(U)+\dim(W)=\dim(U+W)+\dim(U\cap W).
+\end{equation*}
+</div>
+<div class="para">As <span class="process-math">\(U\cap W=\{0\}\text{,}\)</span> we see that <span class="process-math">\(\dim_F(V)=\dim_F(W)+\dim_F(U)\text{.}\)</span>
+</div>
+</div></li>
+</ol>
+</div>
 <span class="incontext"><a href="sec-ranknul.html#p-2204" class="internal">in-context</a></span>
 </body>
 </html>

@@ -11,25 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<div class="para logical"><ol class="decimal">
-<li><div class="para logical">
-<div class="para">If such a <span class="process-math">\(\overline{f}\)</span> exists, it is necessarily unique since <span class="process-math">\(G \twoheadrightarrow G/N\)</span> is onto. In fact, if <span class="process-math">\(f=\pi\circ \overline{f}\)</span> then <span class="process-math">\(\overline{f}\)</span> has to be given by the formula</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\overline{f}(gN) = f(g).
-\end{equation*}
-</div>
-<div class="para">We now need to show that this formula determines a well-defined homomorphism: If <span class="process-math">\(xN = yN\text{,}\)</span> then <span class="process-math">\(y^{-1}x \in N \subseteq \operatorname{Ker}(f)\)</span> and so <span class="process-math">\(f(y)^{-1} f(x) = e\text{,}\)</span> whence <span class="process-math">\(f(y) = f(x)\text{.}\)</span> For any <span class="process-math">\(x,y\)</span> we have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\overline{f}(xNyN) = \overline{f}(xyN) = f(xy) = f(x)f(y) =\overline{f}(xN) \overline{f}(yN).
-\end{equation*}
-</div>
-</div></li>
-<li><div class="para">The formula for <span class="process-math">\(\overline{f}\)</span> given above ensures that <span class="process-math">\(\operatorname{Im}f=\operatorname{Im}\overline{f}\)</span> hence <span class="process-math">\(f\)</span> is surjective if and only if <span class="process-math">\(\overline{f}\)</span> is surjective.</div></li>
-<li><div class="para">We have <span class="process-math">\(\overline{f}(xN) = e_H\)</span> iff <span class="process-math">\(f(x) = e_H\)</span> iff <span class="process-math">\(x \in \operatorname{Ker}(f)\)</span> iff <span class="process-math">\(xN \in  \operatorname{Ker}(f)/N\text{.}\)</span> If <span class="process-math">\(xN \in \operatorname{Ker}(f)/N\)</span> for some <span class="process-math">\(x \in G\text{,}\)</span> then <span class="process-math">\(xN = yN\)</span> for some <span class="process-math">\(y \in \operatorname{Ker}(f)\)</span> and hence <span class="process-math">\(x = yz\)</span> for some <span class="process-math">\(z \in N\text{.}\)</span> Since <span class="process-math">\(N \subseteq \operatorname{Ker}(f)\text{,}\)</span> we have <span class="process-math">\(x \in \operatorname{Ker}(f)\text{.}\)</span>
-</div></li>
-</ol></div></article><span class="incontext"><a href="sec-isomorphism-thms.html#proof-11" class="internal">in-context</a></span>
+<article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>
+<div class="para">By <a href="" class="xref" data-knowl="./knowl/thm-ump-quotient.html" title="Theorem 3.25: Universal Mapping Property (UMP) of a Quotient Group">Theorem 3.25</a>, there exists a homomorphism <span class="process-math">\(\overline{f}\)</span> such that <span class="process-math">\(\overline{f} \circ {\pi}= f\text{,}\)</span> and its kernel consists of just the one element <span class="process-math">\(\operatorname{Ker}(f)/\operatorname{Ker}(f)\)</span> of <span class="process-math">\(G/\operatorname{Ker}(f)\text{.}\)</span> So <span class="process-math">\(\overline{f}\)</span> is one-to-one, and the image of <span class="process-math">\(\overline{f}\)</span> is the same as the image of <span class="process-math">\(f\text{.}\)</span>
+</div></article><span class="incontext"><a href="sec-quotient-groups.html#proof-11" class="internal">in-context</a></span>
 </body>
 </html>

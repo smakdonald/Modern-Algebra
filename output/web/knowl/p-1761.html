@@ -12,7 +12,20 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">If <span class="process-math">\(f\)</span> did factor in <span class="process-math">\(\Z[x]\)</span> as a product of monic polynomials, then <span class="process-math">\(\ov{f} \in \Z/2[x]\)</span> would also factor in this way. Now <span class="process-math">\(\ov{f} = x^4 + x^3 + 1 \in \Z/2[x]\text{.}\)</span> This has no roots (the only possibilities are <span class="process-math">\(0\)</span> or <span class="process-math">\(1\)</span>) and so if it did factor it would have to factor as a product of two quadratic, irreducible polynomials. The only such polynomial in <span class="process-math">\(\Z/2[x]\)</span> is <span class="process-math">\(q = x^2+ x + 1\)</span> (the others all have roots). But <span class="process-math">\(q^2 \ne \ov{f}\text{.}\)</span> This proves <span class="process-math">\(\ov{f}\)</span> is irreducible in <span class="process-math">\((\Z/2)[x]\)</span> and hence <span class="process-math">\(f\)</span> must be irreducible in <span class="process-math">\(\Z[x]\text{.}\)</span>
+<div class="para logical">
+<div class="para">Consider the ring isomorphism <span class="process-math">\(\phi: \Q[x] \xra{\cong} \Q[y]\)</span> given by <span class="process-math">\(\phi(h(x)) = h(y+1)\text{.}\)</span> I claim that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi(f(x)) = y^{p-1} + p y^{p-2} + {p \choose 2} y^{p-3} +{p \choose 3} y^{p-4} +\cdots + {p \choose p-1} y + p.
+\end{equation*}
+</div>
+<div class="para">To see this, we note that <span class="process-math">\(f(x) (x-1) = x^p - 1\)</span> and by the binomial theorem we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi(x^p-1) = (y+1)^p - 1 = y^p + p y^{p-1} + {p \choose 2} y^{p-2} + \cdots + py.
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(\phi(x^p-1) = \phi(f(x)) \phi(x-1) = \phi(f(x)) y\text{,}\)</span> the claim follows.</div>
 </div>
 <span class="incontext"><a href="sec-irrpoly.html#p-1761" class="internal">in-context</a></span>
 </body>
