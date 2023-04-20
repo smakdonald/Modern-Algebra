@@ -5576,33 +5576,39 @@
                 </p>
               </statement>
             </definition>
-      
-            <proposition xml:id="prop-orbit-properties">
-              <title>Properties of Orbits</title>
+
+            <p>A fun fact about orbits is that they've secretly been at the heart of everything we've been doing so far.</p>
+
+            <theorem xml:id="thm-orbit-equiv-relation">
               <statement>
                 <p>
+                  Let <m>G</m> be a group acting on a set <m>S</m>. Then this action induces orbits an equivalence relation on <m>G</m>, where two elements are related if and only if they are contained within the same orbit. Thus the orbits of an action partition the set they are acting upon.
+                </p>
+              </statement>
+            </theorem>
+
+            <p>Lets take a look at some familiar equivalence relations and how they relate to orbits.</p>
+
+            <corollary xml:id="cor-familiar-orbits">
+              <statement>
+                <p>
+                  Let <m>G</m> be a group.
                   <ol>
                     <li>
                       <p>
-                        If <m>H</m> is a subgroup of <m>G</m>, then the left cosets of <m>H</m> in <m>G</m> correspond precisely to the orbits of <m>H</m> under the left regular action of <m>G</m> on itself.
+                        Recall from <xref provisional="cite"/> that the set of left cosets of a subgroup <m>H</m> induce an equivalence relation on <m>G</m>. This is the same equivalence relation induced by <m>G</m> acting upon itself by <xref text="title" ref="ex-left-mult"/>. Thus, under this action, <m>\Orb_G(g)=gH</m>.
                       </p>
                     </li>
-      
+
                     <li>
                       <p>
-                        Two elements <m>g,g' \in G</m> are conjugate if and only if <m>g</m> and <m>g'</m> are in the same orbit of the conjugation action.          
-                      </p>
-                    </li>
-      
-                    <li>
-                      <p>
-                        <m>C_G(g)</m> is exactly the orbit of <m>g</m> under conjugation.                
+                        Recall from <xref provisional="cite"/> that the set of conjugacy classes of a group induce an equivalence relation on <m>G</m>. This is the same equivalence relation induced by <m>G</m> acting upon itself by <xref text="title" ref="ex-conj"/>. Thus, under this action, <m>\Orb_G(g)=C_G(g)</m>. 
                       </p>
                     </li>
                   </ol>
                 </p>
               </statement>
-            </proposition>
+            </corollary>
       
             <remark><p>Its always been group actions, the whole time.</p></remark>
       
@@ -5646,10 +5652,13 @@
                     \operatorname{Stab}_G(s)=\{g\in G \mid g\cdot s=s\}.
                   </me>
                   <notation><usage><m>\Stab_G(s)</m></usage><description>the stabilizer of <m>s</m>.</description></notation>          
-  
                 </p>
               </statement>
             </definition>
+
+            <remark>
+              <p>Sometimes (included on old qualifying exams) the notation <m>G_s</m> is used to denote the stabilzer. Given that this notation gives absolutely no context as to what the set <m>G_s</m> is or what it does, we will stick to <m>\Stab_G(s)</m>.</p>
+            </remark>
       
             <proposition xml:id="prop-stabilizer-is-subgroup">
               <title>Stabilizers are Subgroups</title>
@@ -5691,6 +5700,8 @@
                 </p>
               </proof>
             </theorem>
+
+            <p>Length isn't a word we have used to describe size or cardinality before, but I suppose that SOIS and COIS just didn't have the same ring to them.</p>
       
             <corollary xml:id="cor-orbit-stabilizer">
               <title>Orbit-Stabilizer Theorem</title>
@@ -5699,47 +5710,13 @@
                 <p>
                   Let <m>G</m> be a finite group that acts on a finite set <m>S</m> via <m>\cdot</m>. For any <m>s \in S</m> we have 
                   <me>
-                    |G|=|\operatorname{Orbit}_G(s)|\cdot |\operatorname{Stab}_G(s)].
+                    |G|=|\operatorname{Orbit}_G(s)|\cdot |\operatorname{Stab}_G(s)|.
                   </me>
                 </p>
               </statement>
             </corollary>
       
-            <warning><p>Take note that <xref text="title" ref="cor-orbit-stabilizer"/> only apply when <m>G</m> is a <em>finite</em> group.</p></warning>
-      
-            <theorem xml:id="thm-conjugation-and-lois">
-              <title>Conjugation Actions and LOIS</title>
-              <statement>
-                <p>
-                  Let <m>G</m> be a group.
-                </p>
-      
-                <p>
-                  <ol>
-                    <li>
-                      <p>
-                        Then <m>G</m> acts on <m>G</m> by <xref text="title" ref="ex-conj"/> (<m>g \cdot g' = gg'g^{-1}</m>). For all <m>g \in G</m>, the orbit of <m>g</m> is the conjugacy class of <m>g</m>, <m>\operatorname{Stab}_G(g)=C_G(G)</m> and <m>|[g]_c| = [G : C_G(g)]</m>.
-                      </p>
-                    </li>
-      
-                    <li>
-                      <p>
-                        Then <m>G</m> acts on the power set <m>P(G)=\{S\mid S\subseteq G\}</m> by <xref text="title" ref="ex-conj"/> (<m>g \cdot S = gSg^{-1}</m>). For all <m>S \in P(G)</m>, <m>\operatorname{Stab}_G(S)=N_G(S)</m> and <m>|\operatorname{Orbit}_G(S)| = [G : N_G(S)]</m>.
-                      </p>
-                    </li>
-                  </ol>
-                </p>
-              </statement>
-            </theorem>
-      
-            <corollary xml:id="cor-conjugacy-divides-order">
-              <title>Size of Conjugacy Class Divides <m>|G|</m></title>
-              <statement>
-                <p>
-                  For a finite group <m>G</m>, the size of any conjugacy class divides <m>|G|</m>.
-                </p>
-              </statement>
-            </corollary>
+            <warning><p>Take note that <xref text="title" ref="cor-orbit-stabilizer"/> only applies when <m>G</m> is a <em>finite</em> group.</p></warning>
             
           </subsection>
     
@@ -5770,10 +5747,11 @@
                   </me> 
                   is called the <em>centralizer</em> of <m>g</m> in <m>G</m> 
                   <notation><usage><m>Z_G(g)</m></usage><description>the centralizer of an element <m>g\in G</m></description></notation>          
-  
                 </p>
               </statement>
             </definition>
+
+            <remark><p>Many texts use the notation <m>C_G(g)</m> for the centralzier and <m>[g]_c</m> or <m>G_u(g)</m>for conjugacy classes. However, given that the center of a group is denoted with <m>Z(G)</m>, we argue that <m>Z_G(g)</m> makes more intuitive sense for the centralizer, freeing up <m>C_G(g)</m> for conjugacy classes.</p></remark>
       
             <definition xml:id="def-normalizer">
               <title>Normalizer</title>
@@ -5788,27 +5766,84 @@
                 </p>
               </statement>
             </definition>
+
+            <paragraphs>
+              <title>Notation Check</title>
+
+              <p>
+                There have been a lot of new sets introduced recently, all of whom seem to be flying around with reckless abandon. Here's a quick refresher:
+              </p>
+
+              <p>
+                Let <m>G</m> be a group acting on a set <m>S</m>, and let <m>g\in G, s\in S</m>.
+                <ul>
+                  <li>
+                    <p>
+                      <m>C_G(g)</m>: The <xref text="title" ref="def-conjugacy-class"/> of <m>g</m> in <m>G</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>\Orb_G(g)</m> The <xref text="title" ref="def-orbit"/> of <m>g</m> in <m>G</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>\Stab_G(g)</m> The <xref text="title" ref="def-stab"/> of <m>g</m> in <m>G</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>\Z_G(g)</m> The <xref text="title" ref="def-centralizer"/> of <m>g</m> in <m>G</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>\N_G(g)</m> The <xref text="title" ref="def-normalizer"/> of <m>g</m> in <m>G</m>.
+                    </p>
+                  </li>
+                </ul>
+              </p>
+              
+            </paragraphs>
       
-            <theorem xml:id="thm-conjclass">
+            <theorem xml:id="thm-conjugation-and-lois">
+              <title>Conjugation Actions and LOIS</title>
               <statement>
-                <p> 
+                <p>
                   Let <m>G</m> be a group.
+                </p>
+      
+                <p>
                   <ol>
                     <li>
                       <p>
-                        Then <m>G</m> acts on <m>G</m> by <xref text="title" ref="ex-conj"/> (<m>g \cdot g' = gg'g^{-1}</m>). For all <m>g \in G</m>, the orbit of <m>g</m> is the conjugacy class of <m>g</m>, <m>\operatorname{Stab}_G(g)=C_G(G)</m> and <m>|[g]_c| = [G : C_G(g)]</m>.
+                        Then <m>G</m> acts on <m>G</m> by <xref text="title" ref="ex-conj"/>. For all <m>g \in G</m>, the orbit of <m>g</m> is the conjugacy class of <m>g</m>, <m>\operatorname{Stab}_G(g)=Z_G(G)</m> and <m>|C_G(g)| = [G : Z_G(g)]</m>.
                       </p>
                     </li>
-          
+      
                     <li>
                       <p>
-                        Then <m>G</m> acts on the power set <m>P(G)=\{S\mid S\subseteq G\}</m> by <xref text="title" ref="ex-conj"/> (<m>g \cdot S = gSg^{-1}</m>). For all <m>S \in P(G)</m>, <m>\operatorname{Stab}_G(S)=N_G(S)</m> and <m>|\operatorname{Orbit}_G(S)| = [G : N_G(S)]</m>.
+                        Then <m>G</m> acts on the power set <m>P(G)=\{S\mid S\subseteq G\}</m> by <xref text="title" ref="ex-conj"/>. For all <m>S \in P(G)</m>, <m>\operatorname{Stab}_G(S)=N_G(S)</m> and <m>|\operatorname{Orbit}_G(S)| = [G : N_G(S)]</m>.
                       </p>
                     </li>
                   </ol>
                 </p>
               </statement>
             </theorem>
+      
+            <corollary xml:id="cor-conjugacy-divides-order">
+              <title>Size of Conjugacy Class Divides <m>|G|</m></title>
+              <statement>
+                <p>
+                  For a finite group <m>G</m>, the size of any conjugacy class divides <m>|G|</m>.
+                </p>
+              </statement>
+            </corollary>
       
             <corollary xml:id="cor-conjclass">
               <statement>
@@ -5819,13 +5854,13 @@
             </corollary>
       
             <theorem xml:id="thm-class-eq">
-              <title>The Class Equation</title>
+              <title>Class Equation</title>
               
               <statement>
                 <p>
                   Let <m>G</m> be a finite group and let <m>g_1,\ldots g_r \in G</m> be a list of unique representatives of all of the conjugacy classes of <m>G</m> of size greater than <m>1</m>. Then 
                   <me>
-                    |G| = |Z(G)| + \sum_i^r [G : C_G(g_i)]
+                    |G| = |Z(G)| + \sum_i^r [G : Z_G(g_i)]
                   </me>.
                 </p>
               </statement>
@@ -5834,12 +5869,14 @@
                 <p>
                   The elements of <m>Z(G)</m> are precisely the group elements that are conjugate to only themselves; that is, they are the one-element orbits for the conjugation action. Because the conjugacy classes (orbits of the conjugation action) partition <m>G</m> we have 
                   <me>
-                    |G| = |Z(G)| + \sum_i^r [g_i]_c.
+                    |G| = |Z(G)| + \sum_i^r C_G(g_i).
                   </me> 
-                  For each <m>g_i</m> as in the statement, by <xref ref="thm-conjclass" />, we have <m>[G: C_G(g_i)] =[g_i]_c</m>. The class equation follows from substituting this into the equation above.
+                  For each <m>g_i</m> as in the statement, by <xref ref="thm-conjugation-and-lois" />, we have <m>[G: Z_G(g_i)] =C_G(g_i)</m>. The class equation follows from substituting this into the equation above.
                 </p>
               </proof>
             </theorem>
+
+            <p>The class equation provides a way of decomposing a group into its conjugacy classes, which are fundamental building blocks of the group and are essential in more advanced topics, such as representation and character theory. It also gives us information about the size and structure of the center of a group. (Read: when a proof involves the center of a group from here on out, the Class Equation is probably a good place to start)</p>
       
           </subsection>
 
@@ -5987,7 +6024,7 @@
     
                 <solution>
                   <p>
-                    Let <m>G</m> be a finite group of odd order, and let <m>G</m> act on itself via conjugation. Under this action, the orbit of an element is exactly its conjugacy class by <xref ref="prop-orbit-properties"/>. By the <xref text="title" ref="cor-orbit-stabilizer"/> we have <m>|G|=|\Orb(x)|\cdot|\Stab(x)|</m>. Thus the order of an element divides the order of the group, and so every orbit must have odd order.
+                    Let <m>G</m> be a finite group of odd order, and let <m>G</m> act on itself via conjugation. Under this action, the orbit of an element is exactly its conjugacy class by <xref ref="cor-familiar-orbits"/>. By the <xref text="title" ref="cor-orbit-stabilizer"/> we have <m>|G|=|\Orb(x)|\cdot|\Stab(x)|</m>. Thus the order of an element divides the order of the group, and so every orbit must have odd order.
                   </p>
         
                   <p>
@@ -6051,13 +6088,13 @@
                     <ol>
                       <li>
                         <p>
-                          Show that the centralizer <m>C_G(H)</m> of <m>H</m> in <m>G</m> is a normal subgroup of the normalizer <m>N_G(H)</m> of <m>H</m> in <m>G</m>.
+                          Show that the centralizer <m>Z_G(H)</m> of <m>H</m> in <m>G</m> is a normal subgroup of the normalizer <m>N_G(H)</m> of <m>H</m> in <m>G</m>.
                         </p>
                       </li>
     
                       <li>
                         <p>
-                          Show that the quotient <m>N_G(H)/C_G(H)</m> is isomorphic to a subgroup of the automorphism group <m>\Aut(H)</m> of <m>H</m>.
+                          Show that the quotient <m>N_G(H)/Z_G(H)</m> is isomorphic to a subgroup of the automorphism group <m>\Aut(H)</m> of <m>H</m>.
                         </p>
                       </li>
                     </ol>
@@ -6068,7 +6105,7 @@
     
                 <solution>
                   <p>
-                    Let <m>G</m> act on <m>H</m> by <xref text="title" ref="ex-conj"/>. Thus the associated permutation homomorphism <m>\rho</m> is defined such that <m>\rho(g)=\phi_g</m>, where <m>\phi_g(h)=ghg\inv</m>. Notice that when <m>x\in C_G(H)</m> we have <m>\phi_x(h)=xhx\inv=h</m> for all <m>h\in H</m>, and thus <m>x\in\ker(\rho)</m>. If <m>x\in\ker(\rho)</m> then <m>xhx\inv=h</m> for all <m>h\in H</m>, and thus <m>x\in C_G(H)</m>. Thus <m>C_G(H)=\ker(\rho)</m> and <m>C_G(H)\nsg N_G(H)</m>.
+                    Let <m>G</m> act on <m>H</m> by <xref text="title" ref="ex-conj"/>. Thus the associated permutation homomorphism <m>\rho</m> is defined such that <m>\rho(g)=\phi_g</m>, where <m>\phi_g(h)=ghg\inv</m>. Notice that when <m>x\in Z_G(H)</m> we have <m>\phi_x(h)=xhx\inv=h</m> for all <m>h\in H</m>, and thus <m>x\in\ker(\rho)</m>. If <m>x\in\ker(\rho)</m> then <m>xhx\inv=h</m> for all <m>h\in H</m>, and thus <m>x\in Z_G(H)</m>. Thus <m>Z_G(H)=\ker(\rho)</m> and <m>Z_G(H)\nsg N_G(H)</m>.
                   </p>
                 </solution>
                
@@ -6081,9 +6118,9 @@
                   <p>
                     Let <m>G</m> be a group and <m>H</m> a subgroup of <m>G</m>. Recall that the centralizer of <m>H</m> in <m>G</m> is 
                     <me>
-                      C_H(G)=\{g\in G|gh=h\;\text{for all}\;h\in H\}
+                      Z_H(G)=\{g\in G|gh=h\;\text{for all}\;h\in H\}
                     </me>
-                    Prove that if <m>H</m> is normal in <m>G</m>, then so is <m>C_G(H)</m> and that <m>G/C_G(H)</m> is isomorphic to a subgroup of the automorphism group of <m>H</m>.
+                    Prove that if <m>H</m> is normal in <m>G</m>, then so is <m>Z_G(H)</m> and that <m>G/Z_G(H)</m> is isomorphic to a subgroup of the automorphism group of <m>H</m>.
                   </p>
                   
                 </statement>
@@ -6658,36 +6695,6 @@
         
                   <p>
                     By the <xref text="title" ref="thm-fit-group"/> we know that <m>G/\ker(\rho)\cong\im(\rho)=\Aut(P)</m>. However, <m>\Aut(P)\cong\Aut(\Z_{11})\cong \Z^x</m>, which has order <m>10</m>. As this is a homomorphism, we see the order of <m>G/\ker(\rho)</m> must divide both <m>10</m> and <m>231</m>, two numbers that are relatively prime. Thus <m>\ker(\rho)=1</m>, meaning that conjugation is equivalent to the identity map, or that <m>gxg\inv=x</m> for all <m>g\in G</m>. Thus <m>P\in Z(G)</m>.
-                  </p>
-                </solution>
-                
-              </exercise>
-    
-              <exercise> <title>June 2011 (3)</title>
-                
-                <statement>
-                  <p>
-                    Let <m>H</m> be a normal subgroup of a finite group <m>G</m>, <m>p</m> a prime dividing the order of <m>H</m>, and <m>P</m> a Sylow <m>p</m>-subgroup of <m>H</m>. Prove that <m>G = H N_G(P )</m>
-                  </p>
-                </statement>
-
-                <hint>
-                  <p>
-                    For <m>g \in G</m>, consider the subgroup <m>gPg\inv</m>.
-                  </p>
-                </hint>
-    
-                <solution>
-                  <p>
-                    First, note that <m>N_G(P)=\{g\in G|gPg\inv=P\}</m>.
-                  </p>
-        
-                  <p>
-                    Let <m>G</m> act on <m>\Syl_p(G)</m> by <xref text="title" ref="ex-conj"/>, which is a transitive action by part (2) of <xref text="title" ref="thm-sylow"/>. Therefore <m>H</m> acts transitively on this set as well. Under this action, <m>N_G(P)=\Stab_G(P)</m>.
-                  </p>
-        
-                  <p>
-                    Let <m>g\in G</m>, and let <m>x\in N_G(P)</m>. Consider <m>g\inv x</m>. As the action by <m>H</m> is transitive there exists some <m>h\in H</m> such that <m>hg\inv\cdot x=x</m>. This means that <m>hg\inv</m> stabilizes <m>x</m>. Then <m>(hg\inv)\inv=gh\inv</m> stabilizes <m>x</m> as well, so <m>gh\inv\cdot x=x</m>. But notice that <m>gh\inv h=g</m>, where <m>gh\inv\in N_G(P)</m> and <m>h\in H</m>. Thus <m>G = H N_G(P )</m>.
                   </p>
                 </solution>
                 
@@ -7592,6 +7599,36 @@
                 <p>
                 </p>
               </introduction>
+
+              <exercise> <title>June 2011 (3)</title>
+                
+                <statement>
+                  <p>
+                    Let <m>H</m> be a normal subgroup of a finite group <m>G</m>, <m>p</m> a prime dividing the order of <m>H</m>, and <m>P</m> a Sylow <m>p</m>-subgroup of <m>H</m>. Prove that <m>G = H N_G(P )</m>
+                  </p>
+                </statement>
+
+                <hint>
+                  <p>
+                    For <m>g \in G</m>, consider the subgroup <m>gPg\inv</m>.
+                  </p>
+                </hint>
+    
+                <solution>
+                  <p>
+                    First, note that <m>N_G(P)=\{g\in G|gPg\inv=P\}</m>.
+                  </p>
+        
+                  <p>
+                    Let <m>G</m> act on <m>\Syl_p(G)</m> by <xref text="title" ref="ex-conj"/>, which is a transitive action by part (2) of <xref text="title" ref="thm-sylow"/>. Therefore <m>H</m> acts transitively on this set as well. Under this action, <m>N_G(P)=\Stab_G(P)</m>.
+                  </p>
+        
+                  <p>
+                    Let <m>g\in G</m>, and let <m>x\in N_G(P)</m>. Consider <m>g\inv x</m>. As the action by <m>H</m> is transitive there exists some <m>h\in H</m> such that <m>hg\inv\cdot x=x</m>. This means that <m>hg\inv</m> stabilizes <m>x</m>. Then <m>(hg\inv)\inv=gh\inv</m> stabilizes <m>x</m> as well, so <m>gh\inv\cdot x=x</m>. But notice that <m>gh\inv h=g</m>, where <m>gh\inv\in N_G(P)</m> and <m>h\in H</m>. Thus <m>G = H N_G(P )</m>.
+                  </p>
+                </solution>
+                
+              </exercise>
           
               <exercise> <title>January 2022 (1a), January 2020 (1b)</title>
                 
@@ -29589,4 +29626,3 @@
   </book>
 
 </pretext>
-

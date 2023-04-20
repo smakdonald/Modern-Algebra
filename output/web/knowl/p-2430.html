@@ -12,8 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Suppose <span class="process-math">\(R\)</span> is a Euclidean domain and <span class="process-math">\(A = (x_1, \dots, x_n)\)</span> is a <span class="process-math">\(1 \times n\)</span> matrix. Column operations of type I in this case amount to adding a multiple of one element in this list to another one. The SNF Theorem in this case amounts to the Euclidean algorithm: By adding a suitable multiple of the one entry in the first two positions to the other, in the usual back-and-forth way, we arrive at <span class="process-math">\((g_1, 0, x_3, \dots, x_n)\)</span> where <span class="process-math">\(g_1 = \gcd(x_1, x_2)\text{.}\)</span> Repeat this for columns <span class="process-math">\(1\)</span> and <span class="process-math">\(3\)</span> to arrive at <span class="process-math">\((g_2, 0, 0, x_4, \dots, x_n)\)</span> where <span class="process-math">\(g_2 = \gcd(g_1, x_3) = \gcd(x_1, x_2, x_3)\text{.}\)</span> Continuing in this fashion we arrive at <span class="process-math">\((g, 0, \dots, 0)\)</span> where <span class="process-math">\(g = \gcd(x_1, \dots, x_n)\text{.}\)</span>
-</div>
+<div class="para">Suppose <span class="process-math">\(a\)</span> happens to be <span class="process-math">\(g = \gcd(A)\text{.}\)</span> Then, in particular, it divides every entry of the first row and column of <span class="process-math">\(A\text{,}\)</span> and so by doing row and column operations of type I, we may <span class="process-math">\(0\)</span> out these entries to arrive at a matrix of the desired form directly.</div>
 <span class="incontext"><a href="sec-snf.html#p-2430" class="internal">in-context</a></span>
 </body>
 </html>

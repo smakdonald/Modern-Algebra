@@ -13,14 +13,13 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">To show (3) we need to first prove that for all <span class="process-math">\(\s \in \Aut(K/F)\text{,}\)</span> the function <span class="process-math">\(\phi(\s): R \to R\)</span> is a bijection. (The target of this function is indeed <span class="process-math">\(R\)</span> by (2).) Since <span class="process-math">\(R\)</span> is finite, we just need to show its one-to-one. This holds since <span class="process-math">\(\s\)</span> itself is one-to-one. (If <span class="process-math">\(\phi(\s)(\a) = \phi(\s)(\a')\)</span> for <span class="process-math">\(\a, \a' \in R\)</span> then <span class="process-math">\(\s(\a) = \s(\a')\)</span> and, since <span class="process-math">\(\s\)</span> is one-to-one, we have <span class="process-math">\(\a = \a'\text{.}\)</span>) Since the group laws of <span class="process-math">\(\Aut(K/F)\)</span> and <span class="process-math">\(\Perm(R)\)</span> are both given as function composition, it is clear that <span class="process-math">\(\phi\)</span> is a group homomorphism. In detail,</div>
+<div class="para">To summarize, we have proven that there are {} <span class="process-math">\(3! = 6\)</span> possibilities for <span class="process-math">\(\s\text{.}\)</span> In fact, more is true: The function</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\phi(\s \circ \tau)(\a) = \s(\tau(\a)) = (\phi(\s)\circ \phi(\tau))(\a)
+\phi: \Aut(K/\Q) \to \Perm(\{\a_1, \a_2, \a_3\})
 \end{equation*}
 </div>
-<div class="para">for all <span class="process-math">\(\a\)</span> and so <span class="process-math">\(\phi(\s \circ \tau) = \phi(\s) \circ \phi(\tau)\text{.}\)</span>
-</div>
+<div class="para">given by sending <span class="process-math">\(\s \in \Aut(K/\Q)\)</span> to its restriction to the subset <span class="process-math">\(\{\a_1, \a_2, \a_3\}\)</span> is an injective group homomorphism. Thus <span class="process-math">\(\Aut(K/\Q)\)</span> is isomorphic to a subgroup of <span class="process-math">\(S_3\text{.}\)</span> I claim that <span class="process-math">\(|\Aut(K/\Q)| = 6\)</span> and hence <span class="process-math">\(\Aut(K/\Q) \cong S_3\text{.}\)</span> I will prove this directly - we will learn of fancier methods to do so later.</div>
 </div>
 <span class="incontext"><a href="sec-galext.html#p-3326" class="internal">in-context</a></span>
 </body>
