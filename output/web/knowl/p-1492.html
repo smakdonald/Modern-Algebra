@@ -11,11 +11,22 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para logical"><ol class="decimal">
-<li><div class="para">Prove that a finite integral domain <span class="process-math">\(D\)</span> must be a field.</div></li>
-<li><div class="para">Prove that if <span class="process-math">\(R\)</span> is a commutative ring and <span class="process-math">\(P\subseteq R\)</span> is a prime ideal such that <span class="process-math">\(P\)</span> has finite index as an additive subgroup of <span class="process-math">\(R\text{,}\)</span> then <span class="process-math">\(P\)</span> is a maximal ideal. Give an example to show that this implication may fail if the finite index assumption is dropped.</div></li>
-</ol></div>
-<span class="incontext"><a href="subsec-primemax-ideals.html#p-1492" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">We also need to be sure our rules for <span class="process-math">\(+\)</span> and <span class="process-math">\(\cdot\)</span> make sense and are independent of representation. They “make sense” since we assume <span class="process-math">\(S\)</span> is closed under <span class="process-math">\(\cdot\text{.}\)</span> To show <span class="process-math">\(+\)</span> is independent of representations, say <span class="process-math">\(\frac{r}{s} \sim \frac{r''}{s''}\text{,}\)</span> so that <span class="process-math">\(rs'' = r''s\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{r}{s} + \frac{r'}{s'} := \frac{rs' + r's}{ss'}
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{r''}{s''} + \frac{r'}{s'} := \frac{r''s' + r's''}{s''s'}
+\end{equation*}
+</div>
+<div class="para">and so we need to show <span class="process-math">\((rs' + r's)(s''s') \sim (r''s' + r's'')(ss')\text{.}\)</span> This is clear upon expaning out both sides and using <span class="process-math">\(rs'' = r''s\text{.}\)</span> In a similar way one shows <span class="process-math">\(\cdot\)</span> is well-defined.</div>
+</div>
+<span class="incontext"><a href="sec-field-of-fractions.html#p-1492" class="internal">in-context</a></span>
 </body>
 </html>

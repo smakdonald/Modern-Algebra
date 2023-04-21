@@ -11,45 +11,35 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(K = \langle x \rangle\)</span> be cyclic of order <span class="process-math">\(2\)</span> and <span class="process-math">\(H = \langle y \rangle\)</span> be cyclic of order <span class="process-math">\(n\)</span> for any <span class="process-math">\(n \geq 1\text{.}\)</span> There is an automorphism of <span class="process-math">\(K\)</span> that sends <span class="process-math">\(y\)</span> to <span class="process-math">\(y^{-1}\text{.}\)</span> This automorphism is clearly its own inverse; i.e., it has order <span class="process-math">\(2\text{.}\)</span> Therefore, by the UMP for cyclic groups, there is a group homomorphism</div>
-<div class="displaymath process-math">
+<div class="para">Say I tell you</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-sunzi.html">
 \begin{equation*}
-\rho: K \to \operatorname{Aut}(H)
+G \cong \mathbb{Z}^{3} \times \mathbb{Z}/4 \times \mathbb{Z}/8 \times \mathbb{Z}/9 \times \mathbb{Z}/27 \times \mathbb{Z}/25
 \end{equation*}
 </div>
-<div class="para">with <span class="process-math">\(\rho(x)(y) = y^{-1}\text{.}\)</span> We may thus form the group</div>
-<div class="displaymath process-math">
+<div class="para">The Chinese Remainder Theorem <a href="" class="xref" data-knowl="./knowl/thm-sunzi.html" title="Theorem 7.5: Sunzi's Remainder Theorem">Theorem 7.5</a> gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-sunzi.html">
 \begin{equation*}
-G := H \rtimes_\rho K.
-\end{equation*}
-</div>
-<div class="para">The elements of <span class="process-math">\(G\)</span> are <span class="process-math">\((y^i, x^j)\)</span> for <span class="process-math">\(0 \leq i \leq n-1\)</span> and <span class="process-math">\(0 \leq j \leq 1\text{,}\)</span> in particular <span class="process-math">\(|G|=2n\text{.}\)</span> Set</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\tilde y = (y,e) \in G \text{ and } \tilde x = (e,x) \in G
-\end{equation*}
-</div>
-<div class="para">Then</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\tilde y^n = (y,e_K)^n = (y^n,e_K) = (e_H, e_K)= e_G
-\end{equation*}
-</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\tilde x^2 = (e_H,x)^2 = (e_H, x^2) = (e_H, e_K)= e_G
+\mathbb{Z}/8 \times \mathbb{Z}/27 \times \mathbb{Z}/25 \cong \mathbb{Z}/(8 \cdot 27 \cdot 25)
 \end{equation*}
 </div>
 <div class="para">and</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-sunzi.html">
 \begin{equation*}
-\tilde x \tilde y \tilde x \tilde y = (e_H,x)(y,e_K)(e_H, x)(y,e_K) = (\rho(x)(y),x)(\rho(x)(y),x) = (y^{-1},x)(y^{-1},x) = (y^{-1}y, e) = e_G.
+\mathbb{Z}/4\times \mathbb{Z}/9  \cong \mathbb{Z}/(4 \cdot 9)
 \end{equation*}
 </div>
-<div class="para">Looks familar!</div>
+<div class="para">so that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-sunzi.html">
+\begin{equation*}
+G \cong \mathbb{Z}^{3} \times \mathbb{Z}/(4 \cdot 9) \times \mathbb{Z}/(8 \cdot 27 \cdot 25).
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec-spds.html#p-1055" class="internal">in-context</a></span>
+<div class="para">Since <span class="process-math">\(n_2:=(4 \cdot 9) \mid n_1:=(8 \cdot 27 \cdot 25)\text{,}\)</span> this is in invariant factor form, and hence the rank of <span class="process-math">\(A\)</span> is <span class="process-math">\(3\)</span> and the invariant factors of <span class="process-math">\(A\)</span> are <span class="process-math">\(4 \cdot 9\)</span> and <span class="process-math">\(8 \cdot 27 \cdot 25\text{.}\)</span>
+</div>
+</div>
+<span class="incontext"><a href="sec-ftfgag.html#p-1055" class="internal">in-context</a></span>
 </body>
 </html>

@@ -13,14 +13,16 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Say <span class="process-math">\(f = \sum_i c_i x^i\)</span> with <span class="process-math">\(c_i \in F\text{.}\)</span> Then</div>
+<div class="para">For a field <span class="process-math">\(L\)</span> and a subgroup <span class="process-math">\(G\)</span> of <span class="process-math">\(\Aut(L)\text{,}\)</span> the subfield of <span class="process-math">\(L\)</span> fixed by <span class="process-math">\(G\text{,}\)</span> denoted <span class="process-math">\(L^G\text{,}\)</span> is by definition</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\s(f(\a)) = \s \left(\sum_i c_i \a^i\right) = \sum_i \s(c_i) \s(\a)^i = \sum_i c_i \s(\a)^i = f(\s(\a)).
+L^G := \{ \a \in L \mid \s(\a) = \a, \text{ for all }\s \in G\}.
 \end{equation*}
 </div>
-<div class="para">This proves (1) and (2) is an immediate consequence.</div>
+<div class="para">
+<span class="process-math">\(L^G\)</span> really is a subfield of <span class="process-math">\(L\)</span> since <span class="process-math">\(L^G = \bigcap_{\s \in G} L^\s\)</span> where <span class="process-math">\(L^\s = \{\a \in L \mid \s(\a) = \a\}\text{,}\)</span> and we proved before that <span class="process-math">\(L^\s\)</span> is a subfield of <span class="process-math">\(L\text{.}\)</span>
 </div>
-<span class="incontext"><a href="sec-galext.html#p-3375" class="internal">in-context</a></span>
+</div>
+<span class="incontext"><a href="sec-ftgt.html#p-3375" class="internal">in-context</a></span>
 </body>
 </html>
