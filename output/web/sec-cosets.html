@@ -946,10 +946,10 @@ window.MathJax = {
 <article class="definition definition-like" id="def-coset"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1</span><span class="period">.</span><span class="space"> </span><span class="title">Coset.</span>
 </h4> <div class="para logical" id="p-426">
-<div class="para">For any <span class="process-math">\(N\leq G\)</span> and any <span class="process-math">\(g\in G\)</span> let</div>
+<div class="para">For any <span class="process-math">\(H\leq G\)</span> and any <span class="process-math">\(g\in G\)</span> let</div>
 <div class="displaymath process-math">
 \begin{equation*}
-gN=\{gn|n\in N\}\;\text{and}\; Ng=\{ng|n\in N\}
+gH=\{gh|h\in H\}\;\text{and}\; Hg=\{hg|h\in N\}
 \end{equation*}
 </div>
 <div class="para">be defined as a <em class="emphasis">left coset</em> and <em class="emphasis">right coset</em> of <span class="process-math">\(N\)</span> in <span class="process-math">\(G\text{,}\)</span> respectfully.</div>
@@ -963,11 +963,11 @@ gN=\{gn|n\in N\}\;\text{and}\; Ng=\{ng|n\in N\}
 <div class="para">Let <span class="process-math">\(H\leq G\)</span> and <span class="process-math">\(x,y\in G\)</span>
 </div>
 <ol class="decimal">
-<li id="li-169"><div class="para" id="p-429"><span class="process-math">\(\displaystyle x\in xH\)</span></div></li>
-<li id="li-170"><div class="para" id="p-430">
+<li id="li-168"><div class="para" id="p-429"><span class="process-math">\(\displaystyle x\in xH\)</span></div></li>
+<li id="li-169"><div class="para" id="p-430">
 <span class="process-math">\(xH=H\)</span> if and only if <span class="process-math">\(x\in H\)</span>
 </div></li>
-<li id="li-171"><div class="para" id="p-431"><span class="process-math">\(\displaystyle (xy)H=x(yH)\)</span></div></li>
+<li id="li-170"><div class="para" id="p-431"><span class="process-math">\(\displaystyle (xy)H=x(yH)\)</span></div></li>
 </ol>
 </div></article><article class="lemma theorem-like" id="lem-cosetfacts"><h4 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">3.4</span><span class="period">.</span><span class="space"> </span><span class="title">Coset Equivalencies.</span>
@@ -976,18 +976,18 @@ gN=\{gn|n\in N\}\;\text{and}\; Ng=\{ng|n\in N\}
 <div class="para">Let <span class="process-math">\(H \leq G\text{.}\)</span> The following facts about left cosets are equivalent for <span class="process-math">\(x,y \in G\text{:}\)</span>
 </div>
 <ol class="decimal">
-<li id="li-172"><div class="para" id="p-433">
+<li id="li-171"><div class="para" id="p-433">
 <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> belong to the same left coset of <span class="process-math">\(H\)</span> in <span class="process-math">\(G\text{,}\)</span>
 </div></li>
-<li id="li-173"><div class="para" id="p-434">
+<li id="li-172"><div class="para" id="p-434">
 <span class="process-math">\(x = yh\)</span> for some <span class="process-math">\(h \in H\text{,}\)</span>
 </div></li>
-<li id="li-174"><div class="para" id="p-435">
+<li id="li-173"><div class="para" id="p-435">
 <span class="process-math">\(y = xh\)</span> for some <span class="process-math">\(h \in H\text{,}\)</span>
 </div></li>
-<li id="li-175"><div class="para" id="p-436"><span class="process-math">\(y^{-1}x \in H\text{,}\)</span></div></li>
-<li id="li-176"><div class="para" id="p-437"><span class="process-math">\(x^{-1}y \in H\text{,}\)</span></div></li>
-<li id="li-177"><div class="para" id="p-438"><span class="process-math">\(xH = yH\text{.}\)</span></div></li>
+<li id="li-174"><div class="para" id="p-436"><span class="process-math">\(y^{-1}x \in H\text{,}\)</span></div></li>
+<li id="li-175"><div class="para" id="p-437"><span class="process-math">\(x^{-1}y \in H\text{,}\)</span></div></li>
+<li id="li-176"><div class="para" id="p-438"><span class="process-math">\(xH = yH\text{.}\)</span></div></li>
 </ol>
 </div></article><article class="hiddenproof" id="proof-8"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-8"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-8"><article class="hiddenproof"><div class="para" id="p-439">
 <span class="process-math">\((1) \Rightarrow (2):\)</span> if <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> belong to the same left coset <span class="process-math">\(gH\)</span> of <span class="process-math">\(H\)</span> in <span class="process-math">\(G\)</span> then <span class="process-math">\(x=gh'\)</span> and <span class="process-math">\(y=gh''\)</span> for some <span class="process-math">\(h',h''\in H\text{,}\)</span> so <span class="process-math">\(g=y(h'')^{-1}\)</span> and therefore <span class="process-math">\(x=y(h'')^{-1}h'=yh\)</span> where <span class="process-math">\(h=(h'')^{-1}h'\in H\text{.}\)</span>
@@ -1020,9 +1020,9 @@ yH=\{yh'\mid h'\in H\}=\{xh''h'\mid h'\in H\}\subset xH,
 <div class="para logical" id="p-445">
 <div class="para">For <span class="process-math">\(H \leq G\text{,}\)</span> the collection of left cosets of <span class="process-math">\(H\)</span> in <span class="process-math">\(G\)</span> form a partition of <span class="process-math">\(G\text{,}\)</span> and similarly for the collection of right cosets. That is,</div>
 <ul class="disc">
-<li id="li-178"><div class="para" id="p-446">for all <span class="process-math">\(x,y \in G\text{,}\)</span> either <span class="process-math">\(xH = yH\)</span> or <span class="process-math">\(xH \cap yH = \emptyset\)</span>
+<li id="li-177"><div class="para" id="p-446">for all <span class="process-math">\(x,y \in G\text{,}\)</span> either <span class="process-math">\(xH = yH\)</span> or <span class="process-math">\(xH \cap yH = \emptyset\)</span>
 </div></li>
-<li id="li-179"><div class="para" id="p-447"><span class="process-math">\(\bigcup_{x\in G} xH=G\text{,}\)</span></div></li>
+<li id="li-178"><div class="para" id="p-447"><span class="process-math">\(\bigcup_{x\in G} xH=G\text{,}\)</span></div></li>
 </ul>
 <div class="para">and similarly for right cosets. Moreover all left and right cosets have the same cardinality: <span class="process-math">\(|xH| = |Hx|=|H|\)</span> for any <span class="process-math">\(x\in G\text{.}\)</span>
 </div>
@@ -1075,7 +1075,7 @@ yH=\{yh'\mid h'\in H\}=\{xh''h'\mid h'\in H\}\subset xH,
 <article class="example example-like" id="example-20"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.9</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-454">Let <span class="process-math">\(G = \mathbb{Z}\)</span> and <span class="process-math">\(H = 7 \cdot \mathbb{Z}\text{.}\)</span> Then <span class="process-math">\([G:H] = 7\)</span> since the cosets are <span class="process-math">\(H, 1 + H, 2 + H, \dots, 6 + H\text{.}\)</span> (Since <span class="process-math">\(G\)</span> is abelian, left and right cosets are automatically the same.)</div></article></section><section class="subsection" id="subsec-lagrange"><h3 class="heading hide-type">
+<div class="para" id="p-454">Let <span class="process-math">\(G = \mathbb{Z}\)</span> and <span class="process-math">\(H = 7\mathbb{Z}\text{.}\)</span> Then <span class="process-math">\([G:H] = 7\)</span> since the cosets are <span class="process-math">\(H, 1 + H, 2 + H, \dots, 6 + H\text{.}\)</span> (Since <span class="process-math">\(G\)</span> is abelian, left and right cosets are automatically the same.)</div></article></section><section class="subsection" id="subsec-lagrange"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Lagrange's Theorem and Corollaries</span>
 </h3>
 <blockquote class="blockquote" id="blockquote-16">
@@ -1089,13 +1089,13 @@ yH=\{yh'\mid h'\in H\}=\{xh''h'\mid h'\in H\}\subset xH,
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">3.11</span><span class="period">.</span><span class="space"> </span><span class="title">Corollaries to Lagrange's Theorem.</span>
 </h4>
 <div class="para logical" id="p-457"><ol class="decimal">
-<li id="li-180"><div class="para" id="p-458">If <span class="process-math">\(x\in G\)</span> and <span class="process-math">\(G\)</span> is a finite group, then <span class="process-math">\(|x|\)</span> divides <span class="process-math">\(|G|\text{.}\)</span>
+<li id="li-179"><div class="para" id="p-458">If <span class="process-math">\(x\in G\)</span> and <span class="process-math">\(G\)</span> is a finite group, then <span class="process-math">\(|x|\)</span> divides <span class="process-math">\(|G|\text{.}\)</span>
 </div></li>
-<li id="li-181"><div class="para" id="p-459">If <span class="process-math">\(G\)</span> is a finite group, then <span class="process-math">\([G:H]=\frac{|G|}{|H|}\)</span>
+<li id="li-180"><div class="para" id="p-459">If <span class="process-math">\(G\)</span> is a finite group, then <span class="process-math">\([G:H]=\frac{|G|}{|H|}\)</span>
 </div></li>
-<li id="li-182"><div class="para" id="p-460">If <span class="process-math">\(|G|=n\)</span> then <span class="process-math">\(g^n=e\)</span> for all <span class="process-math">\(g\in G\)</span>
+<li id="li-181"><div class="para" id="p-460">If <span class="process-math">\(|G|=n\)</span> then <span class="process-math">\(g^n=e\)</span> for all <span class="process-math">\(g\in G\)</span>
 </div></li>
-<li id="li-183"><div class="para" id="p-461">(Groups of prime order are cyclic) If <span class="process-math">\(|G|=p\)</span> for some prime <span class="process-math">\(p\text{,}\)</span> then <span class="process-math">\(G\)</span> is cyclic and any non-identity element of <span class="process-math">\(G\)</span> generates <span class="process-math">\(G\text{.}\)</span>
+<li id="li-182"><div class="para" id="p-461">(Groups of prime order are cyclic) If <span class="process-math">\(|G|=p\)</span> for some prime <span class="process-math">\(p\text{,}\)</span> then <span class="process-math">\(G\)</span> is cyclic and any non-identity element of <span class="process-math">\(G\)</span> generates <span class="process-math">\(G\text{.}\)</span>
 </div></li>
 </ol></div></article><article class="theorem theorem-like" id="thm-index-tower"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.12</span><span class="period">.</span><span class="space"> </span><span class="title">The Index Tower.</span>

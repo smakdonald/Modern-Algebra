@@ -13,25 +13,57 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h3 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">6.32.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">6.31.1</span><span class="period">.</span>
 </h3>
-<div class="para">Let <span class="process-math">\(F\)</span> be any field.</div> <div class="para logical"><ol class="decimal">
-<li>
-<div class="para">Let <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> be two <span class="process-math">\(3\times 3\)</span> matrices with entries in <span class="process-math">\(F\text{.}\)</span> First, suppose that <span class="process-math">\(A\sim B\)</span> . Matrices are similar if and only if they share the same invariant factors. As minimum polynomial is an invariant factor and the characteristic polynomial is a product of the invariant factors, we see that <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> must share the same invariant factors.</div>
-<div class="para">Next suppose that <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> share the same characteristic polynomial and the same minimal polynomial. As <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are <span class="process-math">\(3\times 3\)</span> matrices, the characteristic polynomial of both <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> must be a degree <span class="process-math">\(3\)</span> polynomial. We proceed via cases based on the degree of <span class="process-math">\(\mp_{A,B}(x)\text{.}\)</span> - First, suppose <span class="process-math">\(\deg\mp_{A,B}(x)=3\text{.}\)</span> Then <span class="process-math">\(\mp_{A,B}(x)=\cp_{A,B}(x)\text{,}\)</span> making <span class="process-math">\(\cp_{A,B}(x)\)</span> the only invariant factor of both <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{.}\)</span> Thus <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> have the same invariant factors and are therefore similar. - Next, suppose <span class="process-math">\(\deg\mp_{A,B}(x)=2\text{.}\)</span> As <span class="process-math">\(\mp|\cp\)</span> and the degrees of all invariant factors must sum to the <span class="process-math">\(\deg\cp\text{,}\)</span> we know that <span class="process-math">\(\cp=\mp\cdot k(x)\text{,}\)</span> where <span class="process-math">\(k(x)\)</span> is a degree <span class="process-math">\(1\)</span> polynomial, which we denote <span class="process-math">\(f(x)\)</span> for <span class="process-math">\(A\)</span> and <span class="process-math">\(g(x)\)</span> for <span class="process-math">\(B\text{..}\)</span> Since <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> share the same minimum and characteristic polynomials, we see <span class="process-math">\(\mp\cdot f=\cp\)</span> and <span class="process-math">\(\mp\cdot g=\cp\text{,}\)</span> and thus that <span class="process-math">\(f=g\text{.}\)</span> Hence <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> share the same invariant factors, making <span class="process-math">\(A\sim B\text{.}\)</span> - Finally, suppose <span class="process-math">\(\deg\mp=1\text{.}\)</span> The minimum polynomial is the largest invariant factor, and thus the invariant factors of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> must be <span class="process-math">\(\{\mp,\mp\mp\}\text{,}\)</span> making them similar.</div>
-</li>
-<li><div class="para logical">
-<div class="para">If we replaced <span class="process-math">\(3\times 3\)</span> with <span class="process-math">\(4\times 4\)</span> then this would allow for <span class="process-math">\(\cp_{A,B}(x)=x^4\)</span> and <span class="process-math">\(\mp_{A,B}(x)=x^2\text{,}\)</span> allowing two sets of invariant factors: <span class="process-math">\(\{x^2,x^2\}\)</span> <span class="process-math">\(\{x,x,x^2\}\text{,}\)</span> Notice that <span class="process-math">\(C(x)=\begin{bmatrix}0\end{bmatrix}\)</span> and <span class="process-math">\(C(x^2)=\begin{bmatrix}0&amp;0\\1&amp;0\end{bmatrix}\text{.}\)</span> Set <span class="process-math">\(A=C(x^2)\oplus C(x^2)\)</span> and <span class="process-math">\(B=C(x)\oplus C(x)\oplus C(x^2)\text{,}\)</span> so</div>
+<div class="para">Let <span class="process-math">\(A\)</span> be a matrix with entries in <span class="process-math">\(\Q\)</span> with characteristic polynomial <span class="process-math">\((x^4- 1)(x^2 -1)\text{.}\)</span>
+</div> <div class="para">By this Corollary we know that every matrix is similar to a unique matrix in RCF. Note that RCF is based on the invariant factors if a matrix, and thus if two matrices have the same invariant factors they will have the same RCF, making them both similar to the same (unique) matrix, making them similar to each other. By part (1) of this Theorem, the characteristic polynomial of a matrix is equal to the product of the invariant factors of that same matrix.</div> <div class="para logical">
+<div class="para">Recall that the invariant factors must divide all preceding invariant factors in RCF, and observe that <span class="process-math">\((x^4-1)\)</span> factors as <span class="process-math">\((x^2-1)(x^2+1)\)</span> and <span class="process-math">\((x^2-1)\)</span> factors as <span class="process-math">\((x-1)(x+1)\text{.}\)</span> Given this information, after some fiddling with the factors, we find four possible options for invariant factors of <span class="process-math">\(A\text{:}\)</span>
+</div>
+<ol class="decimal">
+<li><div class="para"><span class="process-math">\(x^6-x^4-x^2+1=(x^2 -1)(x^4- 1)\text{,}\)</span></div></li>
+<li><div class="para"><span class="process-math">\((x^2-1),(x^4-1)\text{,}\)</span></div></li>
+<li><div class="para">
+<span class="process-math">\((x+1), (x-1)(x^4-1)\text{,}\)</span> and</div></li>
+<li><div class="para"><span class="process-math">\((x-1),(x+1)(x^4-1)\text{.}\)</span></div></li>
+</ol>
+<div class="para">Let <span class="process-math">\(f(x)=x^6-x^4-x^2+1, g(x)=(x^4-1),\)</span> <span class="process-math">\(h(x)=x^2-1\text{,}\)</span> <span class="process-math">\(j(x)=(x-1),\)</span> and <span class="process-math">\(k(x)=(x+1)\text{.}\)</span> Observe the companion matrices of each of these polynomials:</div>
 <div class="displaymath process-math">
 \begin{equation*}
-A=\begin{bmatrix}0 &amp; 0 &amp; 0 &amp; 0 \\1 &amp; 0 &amp; 0 &amp; 0 \\0 &amp; 0 &amp; 0 &amp; 0\\ 0 &amp; 0 &amp; 1 &amp; 0\end{bmatrix} \text{ and } B=\begin{bmatrix}0 &amp; 0 &amp; 0 &amp; 0 \\0 &amp; 0 &amp; 0 &amp; 0 \\0 &amp; 0 &amp; 0 &amp; 0\\ 0 &amp; 0 &amp; 1 &amp; 0\end{bmatrix}.
+C(f)=\begin{bmatrix}
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; -1\\
+1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 1\\
+0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 1\\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0\\
+\end{bmatrix},
+C(g)=\begin{bmatrix}
+0 &amp; 0 &amp; 0 &amp; 1\\
+1 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 1 &amp; 0\\
+\end{bmatrix},
+C(h)=\begin{bmatrix}
+0 &amp; 1\\
+1 &amp; 0\\
+\end{bmatrix},
+C(j)=\begin{bmatrix}
+1\\ 
+\end{bmatrix}\textrm{ and } 
+C(k)=\begin{bmatrix}
+-1\\ 
+\end{bmatrix}
 \end{equation*}
 </div>
-<div class="para">These matrices have the same <span class="process-math">\(\cp\)</span> and <span class="process-math">\(\mp\)</span> but are not similar.</div>
-</div></li>
-<li><div class="para">Let <span class="process-math">\(F=\Q\text{.}\)</span> We define <span class="process-math">\(A=C(x-1)\oplus C(x^2-1)\)</span> and <span class="process-math">\(B=C(x+1)\oplus C(x^2-1)\text{.}\)</span> Notice that these matrices are in RCF. However, the invariant factors of <span class="process-math">\(A\)</span> are <span class="process-math">\(\{(x+1), (x^2-1)\}\)</span> and the invariant factors of <span class="process-math">\(B\)</span> are <span class="process-math">\(\{(x-1)(x^2-1)\}\text{.}\)</span> Thus <span class="process-math">\(A\)</span> is not similar to <span class="process-math">\(B\text{,}\)</span> but the minimal polynomial of both is <span class="process-math">\(x^2-1\text{.}\)</span>
-</div></li>
-</ol></div>
+<div class="para">Behold: explicit representatives of each similarity class:</div>
+<ol class="decimal">
+<li><div class="para"><span class="process-math">\(C(f)\text{,}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(C(g)\oplus C(h)\text{,}\)</span></div></li>
+<li><div class="para">
+<span class="process-math">\(C(k)\oplus C(gj)\text{,}\)</span> and</div></li>
+<li><div class="para"><span class="process-math">\(C(j)\oplus C(gk)\text{.}\)</span></div></li>
+</ol>
+</div>
 </div>
 <span class="incontext"><a href="sec-cayley-hamilton.html#solution-185" class="internal">in-context</a></span>
 </body>

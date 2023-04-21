@@ -13,16 +13,26 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Every <span class="process-math">\(m \times n\)</span> matrix <span class="process-math">\(A\)</span> with entries in a field is equivalent to a unique matrix of the form</div>
+<div class="para">By our construction, for any <span class="process-math">\(v_i \in B\)</span> we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
+g(v_i) = \begin{cases}
+w_i &amp; \text{for $1 \leq i \leq r$ and} \\
+0 &amp; \text{for $r+1 \leq i \leq n$} \\
+\end{cases}
+\end{equation*}
+</div>
+<div class="para">and hence</div>
+<div class="displaymath process-math">
+\begin{equation*}
+[g]_B^C = 
 \begin{bmatrix}
 I_r &amp; 0 \\
 0 &amp; 0 \\
-\end{bmatrix}
+\end{bmatrix}.
 \end{equation*}
 </div>
-<div class="para">where <span class="process-math">\(r\)</span> is the rank of <span class="process-math">\(A\text{.}\)</span>
+<div class="para">Note that, in our construction, <span class="process-math">\(r = \dim_F(\im(g)) = \rank(g)\text{.}\)</span>
 </div>
 </div>
 <span class="incontext"><a href="sec-cob.html#p-2312" class="internal">in-context</a></span>

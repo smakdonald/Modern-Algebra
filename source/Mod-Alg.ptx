@@ -423,7 +423,7 @@
               </statement>
             </definition>
 
-            <p>Binary operations are especially useful when the posess some special properties, such as the following.</p>
+            <p>Binary operations are especially useful when they posess some special properties, such as the following:</p>
 
             <definition xml:id="def-semigroup">
               <statement>
@@ -451,9 +451,9 @@
               </statement>
             </definition>
 
-            <insight> <p>We often write <m>xy</m> instead of <m>x\cdot y</m> for simplicity.<fn>This is the one and only "Mark". All following "Marks" will be "Remarks".</fn></p></insight>
+            <insight xml:id="mark"> <p>We often write <m>xy</m> instead of <m>x\cdot y</m> for simplicity.<fn>This is the one and only "Mark". All following "Marks" will be "Remarks".</fn></p></insight>
 
-            <remark><p>The third axiom in <xref ref="def-semigroup"/> is technically redundant. Closure is really part of the definition of a <xref ref="def-binop"/> on a set, and it is implicitly assumed whenever we consider such an operation. Howewever, redundancy is not a bad thing, and it never hurts to state it explicitely.</p></remark>
+            <remark><p>The third axiom in <xref ref="def-semigroup"/> is technically redundant. Closure is really part of the definition of a <xref text="title" ref="def-binop"/> on a set, and it is implicitly assumed whenever we consider such an operation. Howewever, redundancy is not a bad thing, and it never hurts to state it explicitely.</p></remark>
       
             <definition xml:id="def-group">
               <title>Group</title>
@@ -467,7 +467,9 @@
                       </p>
                     </li>
                   </ul>
-                  <notation><usage><m>(G,\cdot)</m></usage><description>a group or semigroup <m>G</m> and its binary operation <m>\cdot</m></description></notation>          
+                  <notation><usage><m>(G,\cdot)</m></usage><description>a group (or semigroup) <m>G</m> and its binary operation <m>\cdot</m></description></notation>    
+                  <notation><usage><m>a,b,c,g,h,k,x,y,z</m></usage><description>lowercase letters reserved for elements of a group <m>\cdot</m></description></notation>          
+      
                 </p>
               </statement>
             </definition>
@@ -521,7 +523,16 @@
 
                     <li>
                       <p>
-                        Coming soon!
+                        Suppose <m>xy = xz</m> for some <m>x,y,z\in G</m>. By multiplying on both sides by <m>x\inv</m>, we see 
+                        <me>
+                          \begin{align}
+                            xy &amp;= xz \\
+                            x\inv(xy) &amp;= x\inv(xz) \\
+                            (x\inv x)y &amp;= (x\inv x)z \\
+                            (e)y &amp;= (e)z \\
+                            y &amp;= z.
+                          \end{align}
+                        </me>
                       </p>
                     </li>
                   </ol>
@@ -533,12 +544,12 @@
               <title>Abelian Group </title>
               <statement>
                 <p>
-                  A group <m>G</m> is an <em>abelian group</em> if <m>\cdot</m> is commutative; i.e., <m>x \cdot y = y \cdot x</m> for all <m>x,y \in G</m>. Often, but not always, the group operation for an abelian group is written as <m>+</m> instead of <m>\cdot</m>. In this case the inverse of an element <m>x</m> is written <m>-x</m>.
+                  A group <m>G</m> is an <em>abelian group</em> if <m>\cdot</m> is commutative; i.e., <m>x \cdot y = y \cdot x</m> for all <m>x,y \in G</m>. 
                 </p>
               </statement>
             </definition>
 
-            <p>As we progress through the text, one might start to recognize that groups are much more agreeable when they are abelian. They behave in ways we expect and are often times much more likely to do what we want. If all groups were abelain group theory would not be anywhere near as widespread (or interesting, though that is more a matter of opinion). Because of this, a common motif in this course is finding, constructing, and fiddling with groups that are 'almost' abelian, whatever that means.</p>
+            <p>As we progress through the text, one might start to recognize that groups are much more agreeable when they are abelian. They behave in ways we expect and are often times much more likely to do what we want. If all groups were abelain, group theory would not be anywhere near as widespread (or interesting, though that is more a matter of opinion). Because of this, a common motif in this course is finding, constructing, and fiddling with groups that are 'almost' abelian, whatever that means.</p>
       
             <historical>
               <p>
@@ -580,14 +591,14 @@
                         <me>
                           \operatorname{GL}_n(\C)=\{ \text{invertible } n \times n \;\text{matrices with entries in}\; \C\}.
                         </me> 
-                        By invertible I mean those matrices that have two-sided inverses, but in turns out that if an <m>n \times n</m> matrix has a left inverse then it it is automatically a right inverse too, and vice versa. Then <m>\operatorname{GL}_n(\C)</m> is a non-abelian group under matrix multiplication.<fn>In general this is true for any field <m>F</m>, whatever those are.</fn>
+                        By invertible I mean those matrices that have two-sided inverses, but it turns out that if an <m>n \times n</m> matrix has a left inverse then it it is automatically a right inverse too, and vice versa. Then <m>\operatorname{GL}_n(\C)</m> is a non-abelian group under matrix multiplication.<fn>In general this is true for any field <m>F</m>, whatever those are.</fn>
                         <notation><usage><m>\GL</m></usage><description>General linear group</description></notation> 
                       </p>
                     </li>
       
                     <li> <title><m>\Z/n</m></title>
                       <p>
-                        For any <m>n</m>, let <m>\mathbb{Z}/(n)</m> denote the integers modulo <m>n</m>. Then <m>(\mathbb{Z}/(n), +)</m> forms an abelian group where <m>+</m> denotes addition modulo <m>n</m>.
+                        For any <m>n</m>, let <m>\Z/n</m> denote the integers modulo <m>n</m>. Then <m>(\Z/n, +)</m> forms an abelian group where <m>+</m> denotes addition modulo <m>n</m>.
                       </p>
                     </li>
 
@@ -600,7 +611,7 @@
                 </p>
             </example>
 
-            <p>The following example illustrates a few important examples of something called a <xref text="title" ref="def-group-of-units"/>, which is defined explicitely in terms of rings (whatever those are) in <xref ref="part-rings"/></p>
+            <p>The following example illustrates a few important examples of something called a <xref text="title" ref="def-group-of-units"/>, which is defined explicitely in terms of rings (whatever those are) in <xref ref="part-rings"/>.</p>
 
             <example xml:id="ex-group-of-units">
               <title>Groups of Units</title>
@@ -630,32 +641,19 @@
                 </statement>
               </example>
             
-            <lemma xml:id="lem-group-exponents">
-              <title>Group Exponents</title>
+            <lemma xml:id="lem-group-inverses">
+              <title>Properties of Inverses</title>
               
               <statement>
                 <p>
-                  If <m>G</m> is a group and <m>x,y,z, a_1,\ldots,a_n \in G</m>, then:
+                  If <m>G</m> is a group and <m>x, a_1,\ldots,a_n \in G</m>, then:
                   <ol>
-            
                     <li>
                       <p>
                         <m>(x^{-1})^{-1} = x</m>.
                       </p>
                     </li>
-      
-                    <li>
-                      <p>
-                        <m>x^m\cdot x^n = x^{n+m}</m>.
-                      </p>
-                    </li>
-      
-                    <li>
-                      <p>
-                        <m>(x^{m})^{n} = x^{mn}</m>.
-                      </p>
-                    </li>
-            
+
                     <li>
                       <p>
                         <m>(a_1 \dots a_n)^{-1} = a_n^{-1} \dots a_1^{-1}</m>. 
@@ -664,33 +662,16 @@
                   </ol>
                 </p>
               </statement>
+
               <proof>
                 <p>
                   <ol>
                     <li>
                       <p>
-                        Coming soon to an OER near you!
+                        First, recall from <xref ref="def-group"/> that <m>x\cdot x\inv=e</m>. However, it is also the case that <m>(x^\inv)^\inv\cdot x\inv=e</m>. By part (2) of <xref ref="thm-properties-of-groups"/> we know that inverses are unique, and thus it must be the case that <m>(x^{-1})^{-1} = x</m>.
                       </p>
                     </li>
       
-                    <li>
-                      <p>
-                        Coming soon to an OER near you!
-                      </p>
-                    </li>
-      
-                    <li>
-                      <p>
-                        Coming soon to an OER near you!
-                      </p>
-                    </li>
-      
-                    <li>
-                      <p>
-                        Coming soon to an OER near you!
-                      </p>
-                    </li>
-
                     <li>
                       <p>
                         Coming soon to an OER near you!
@@ -707,7 +688,7 @@
               </p>
             </warning>
 
-            <p>But thats enough confusion for now. I know just the thing to get us back in order.</p>
+            <p>But thats enough confusion for now. I know just the thing to get us back on track.</p>
     
           </subsection>
 
@@ -744,7 +725,7 @@
               </statement>
             </definition>
 
-            <remark><p>Some authors use the notaion <m>\#G</m> or <m>o(G)</m> to refer to the order of a group. We won't name names, but they know who they are.</p></remark>
+            <remark><p>Some authors use the notation <m>\#G</m> or <m>o(G)</m> to refer to the order of a group. We won't name names, but they know who they are. (See: <xref ref="mark"/>)</p></remark>
       
             <example xml:id="ex-order">
               <p>
@@ -804,9 +785,7 @@
                   </ol>
                 </p>
               </statement>
-            </theorem>
-      
-            
+            </theorem>  
         
             <!--
             <proposition xml:id="prop-orderelgp">
@@ -860,10 +839,7 @@
     
             <exercisegroup> <title>Examples and Specifics</title>
               
-              <introduction>
-                <p>
-                </p>
-              </introduction>
+              <introduction><p></p></introduction>
 
               <exercise xml:id="exe-first-group-verifications">
                 <title>Group Verification</title>
@@ -919,7 +895,7 @@
     
                       <li>
                         <p>
-                          <m>(\Z,\times)</m>
+                          <m>(\Z,\cdot)</m>
                         </p>
                       </li>
     
@@ -933,7 +909,7 @@
     
                       <li>
                         <p>
-                          <m>(\Z/n,\times)</m> for all <m>n&lt;1</m>
+                          <m>(\Z/n,\cdot)</m> for all <m>n&lt;1</m>
                         </p>
                       </li>
                     </ol>
@@ -945,7 +921,7 @@
                 <title><m>\Z/p^\times</m></title>
 
                 <statement>
-                  <p>Prove that <m>\Z/p^\times=\mathbb{Z}/(p)\setminus\{0\}</m></p>
+                  <p>Prove that <m>\Z/p^\times=\mathbb{Z}/p\setminus\{0\}</m></p>
                 </statement>
                 
               </exercise>
@@ -1018,12 +994,9 @@
     
             <exercisegroup> <title>Properties and Future Lemmas</title>
               
-              <introduction>
-                <p>
-                </p>
-              </introduction>
+              <introduction><p></p></introduction>
 
-              <exercise xml:id="prop-order-4-abelian">
+              <exercise xml:id="exe-order-4-abelian">
                 <title>Marley's Conjecture</title>
                 <statement>
                   <p>
@@ -1034,6 +1007,53 @@
                 <solution>
                   <p>
                     Let <m>G</m> be a group with <m>4</m> elements, and suppose there are elements <m>a,b\in G</m> such that <m>ab\neq ba</m> for some elements <m>a, b\in G</m>. Since <m>ab \neq ba</m>, we must have <m>a \neq b</m>, <m>a \neq e</m>, and <m>b\neq e</m>. Since <m>G</m> has only <m>4</m> elements and <m>ab \neq ba</m>, either <m>ab \in \{e, a, b\}</m> or <m>ba \in\{e, a, b\}</m>. Without loss, say the former occurs. But <m>ab = e</m> implies <m>b=a\inv</m> and we know <m>a\inv</m> commutes with <m>a</m>, and hence this is not possible. If <m>ab = a</m>, then <m>b = e</m> and if <m>ab = b</m> then <m>a = 1</m>, both of which are impossible. Since <m>a, b</m> were arbitrary, <m>G</m> must be abelian.
+                  </p>
+                </solution>
+              </exercise>
+
+              <exercise xml:id="exe-group-exponents">
+                <title>Group Exponents</title>
+                <statement>
+                  <p>
+                    Verify that exponents behave how we would expect (hope) them to in groups. That is, 
+                    <ol>
+                      <li>
+                        <p>
+                          <m>x^m\cdot x^n = x^{n+m}</m>.
+                        </p>
+                      </li>
+  
+                      <li>
+                        <p>
+                          <m>(x^{m})^{n} = x^{mn}</m>.
+                        </p>
+                      </li>
+                    </ol>
+                  </p>
+                </statement>
+          
+                <solution>
+                  <p>
+                    <ol>
+                      <li>
+                        <p>
+                          We expand <m>x^m</m> and <m>x^n</m> to see
+                          <me>
+                            \begin{align}
+                              x^m\cdot\x^n &amp;=\underbrace{x\cdot\dots\cdot x} \cdot \underbrace{x\cdot\dots\cdot x}\\ 
+                              &amp;= \underbrace{x\cdot\dots\cdot x}\\ 
+                              &amp;= x^{m+n}.
+                            \end{align}
+                          </me>
+                        </p>
+                      </li>
+
+                      <li>
+                        <p>
+                          Coming soon!
+                        </p>
+                      </li>
+                    </ol>
                   </p>
                 </solution>
               </exercise>
@@ -1081,8 +1101,8 @@
     
               </exercise>
 
-              <exercise xml:id="lem-order-lemma">
-                <title>The Fires of M-ordor</title>
+              <exercise xml:id="exe-order-lemma">
+                <title>More Order</title>
                 <statement>
                   <p>
                     Let <m>G</m> be a group. Suppose <m>g^k=g^m</m> and <m>k&lt;m</m>.
@@ -1864,7 +1884,7 @@
                     <li>
                       <p>
                         Let <m>S</m> be a containing <m>n</m> elements. For each <m>x\in S</m>, prove that the set  <m>\Stab_{\Perm(S)}(x)=\{\sigma\in \Perm(S)|\sigma(x)=x\}</m> is a subgroup of <m>\Perm(S)</m>.
-                        <fn>This a specific example of something known as the <xref text="title" ref="def-centralizer"/> and in <xref ref="sec-orbit-stab-class-eq"/> we will see how it can be applied to all groups, not just <m>\Perm(S)</m>.</fn>
+                        <fn>This a specific example of something known as the <xref text="title" ref="def-stab"/> and in <xref ref="sec-orbit-stab-class-eq"/> we will see how it can be applied to all groups, not just <m>\Perm(S)</m>.</fn>
                       </p>
                     </li>
                   </ol>
@@ -2694,7 +2714,7 @@
                   \begin{bmatrix}
                   -1 &amp; 0 \\
                   0 &amp; 1 
-                  \end{bmatrix}.</me> Then one may check that <m>x^n = I_2</m>, <m>y^2 = I_2</m> and <m>yxyx = I_2</m>. <xref ref="prop-d2n-mapping"/> gives that there is a group homomorphism <m>f: D_{2n} \to 
+                  \end{bmatrix}.</me> Then one may check that <m>x^n = e</m>, <m>y^2 = e</m> and <m>yxyx = e</m>. <xref ref="prop-d2n-mapping"/> gives that there is a group homomorphism <m>f: D_{2n} \to 
                   \operatorname{GL}_2({\mathbb{R}})</m> such that <m>f(r) = x</m> and <m>f(s) = y</m>. This is not at all surprising, since the matrix <m>x</m> represents rotation by <m>2 \pi/n</m> radians counter-clockwise and <m>y</m> represents reflection about the <m>y</m>-axis. Indeed, one could define <m>D_{2n}</m> as the subgroup of <m>\operatorname{GL}_2({\mathbb{R}})</m> consisting of elements <m>1, x, \dots, x^{n-1}, y, xy \cdots, x^{n-1}y</m>.
               </p>
             </example>
@@ -3201,7 +3221,7 @@
             <theorem xml:id="thm-aut-cn">
               <statement>
                 <p>
-                  The automorphism group of <m>C_n</m> is isomorphic to the multiplicative group of units of <m>\mathbb{Z}/(n)</m> via the map 
+                  The automorphism group of <m>C_n</m> is isomorphic to the multiplicative group of units of <m>\Z/n</m> via the map 
                   <me>
                     \varphi: (\mathbb{Z}/n^\times, \cdot) \to \operatorname{Aut}(C_n), \quad \varphi([j]_n)=[ y\mapsto y^j].
                   </me> 
@@ -3247,7 +3267,7 @@
 
                     <li>
                       <p>
-                        <m>\mathbb{Z}/(6)</m> and <m>S_3</m>
+                        <m>\Z/6</m> and <m>S_3</m>
                       </p>
                     </li>
 
@@ -3331,12 +3351,6 @@
               </exercise>
               -->
     
-              <exercise xml:id="exe-no-group-cancellation-in-products">
-                <p>
-                  Find an example of groups <m>G,H</m> such that there is an isomorphism <m>G\times H\cong G</m> but <m>H</m> is not trivial. Note: since <m>G\times H\cong G</m> can be rewritten as <m>G\times H\cong G\times \{e\}</m>, the above shows that in general one cannot cancel groups in isomorphisms between direct products.
-                </p>
-              </exercise>
-    
             </exercisegroup>
     
             <exercisegroup> <title>Properties and Future Lemmas</title>
@@ -3417,11 +3431,11 @@
         
                 <p><ol>
                   <li>
-                  Let <m>f : G → \Perm(G)</m> be given by <m>f (g) = \l g</m> for all <m>g \in  G</m>, where <m>\l g : G → G</m> is defined by <m>λg(a) = ga</m> for all <m>a \in  G</m>. Prove that <m>f</m> is an injective group homomorphism.
+                  Let <m>f : G \to \Perm(G)</m> be given by <m>f (g) = \l_g</m> for all <m>g \in  G</m>, where <m>\l_g : G \to G</m> is defined by <m>\l_g(a) = ga</m> for all <m>a \in  G</m>. Prove that <m>f</m> is an injective group homomorphism.
                   </li>
         
                   <li>
-                  Prove that if <m>g \in  G</m> is an element of order <m>2</m> then <m>λg</m> is a product of <m>m</m> transpositions.
+                  Prove that if <m>g \in  G</m> is an element of order <m>2</m> then <m>\l_g</m> is a product of <m>m</m> transpositions.
                   </li>
         
                   <li>
@@ -3465,9 +3479,9 @@
               <title>Coset</title>
               <statement>
                 <p>
-                  For any <m>N\leq G</m> and any <m>g\in G</m> let 
+                  For any <m>H\leq G</m> and any <m>g\in G</m> let 
                   <me>
-                    gN=\{gn|n\in N\}\;\text{and}\; Ng=\{ng|n\in N\}
+                    gH=\{gh|h\in H\}\;\text{and}\; Hg=\{hg|h\in N\}
                   </me>
                   be defined as a <em>left coset</em> and <em>right coset</em> of <m>N</m> in <m>G</m>, respectfully.
                 </p>
@@ -3667,7 +3681,7 @@
 
             <example>
               <p>
-                Let <m>G = \mathbb{Z}</m> and <m>H = 7 \cdot \mathbb{Z}</m>. Then <m>[G:H] = 7</m> since the cosets are <m>H, 1 + H, 2 + H, \dots, 6 + H</m>. (Since <m>G</m> is abelian, left and right cosets are automatically the same.)
+                Let <m>G = \mathbb{Z}</m> and <m>H = 7\mathbb{Z}</m>. Then <m>[G:H] = 7</m> since the cosets are <m>H, 1 + H, 2 + H, \dots, 6 + H</m>. (Since <m>G</m> is abelian, left and right cosets are automatically the same.)
               </p>
             </example>
           </subsection>
@@ -4070,7 +4084,7 @@
                     <me>
                       V=\{e, (1 2)(3 4), (1 3)(2 4), (1 4)(2 3)\}.
                     </me> 
-                    From <xref ref="exe-normal-verification"/> we have <m>V \nsg S_4</m>. The group <m>V</m> has order <m>4</m>, making it ableian from <xref ref="prop-order-4-abelian"/>. Thus every subgroup of <m>V</m> is normal in <m>V</m> by <xref ref="exe-normal-verification"/>.
+                    From <xref ref="exe-normal-verification"/> we have <m>V \nsg S_4</m>. The group <m>V</m> has order <m>4</m>, making it ableian from <xref ref="exe-order-4-abelian"/>. Thus every subgroup of <m>V</m> is normal in <m>V</m> by <xref ref="exe-normal-verification"/>.
                   </p>
                     
                   <p>
@@ -4408,7 +4422,7 @@
               <title>Quotient Map</title>
               <statement>
                 <p>
-                  For any group <m>G</m> and normal subgroup <m>N</m> of <m>G</m> the <em>quotient map</em> <m>\pi:G \to G/N</m> is defined by <m>\pi(g)=gN</m>.
+                  For any group <m>G</m> and normal subgroup <m>N</m> of <m>G</m> the <em>quotient map</em> <m>q:G \to G/N</m> is defined by <m>q(g)=gN</m>.
                 </p>
               </statement>
             </definition>
@@ -4417,7 +4431,7 @@
               <title>Quotient Map is Surjective Homomorphism</title>
               <statement>
                 <p>
-                  For any group <m>G</m> and normal subgroup <m>N</m> of <m>G</m>, the map <m>\pi:G \to G/N</m> defined by <m>\pi(g)=gN</m> is a surjective group homomorphism with kernel <m>\operatorname{Ker}(\pi)=N</m>.
+                  For any group <m>G</m> and normal subgroup <m>N</m> of <m>G</m>, the map <m>q:G \to G/N</m> defined by <m>q(g)=gN</m> is a surjective group homomorphism with kernel <m>\operatorname{ker}(q)=N</m>.
                 </p>
               </statement>
       
@@ -4540,11 +4554,11 @@
             <example xml:id="ex-abelianization">
               <title>Abelianization</title>
               <p>
-                Let <m>G</m> be any group. For <m>x,y \in G</m>, set <m>[x,y] = xyx^{-1}y^{-1}</m>. Let <m>G'</m> denote the <em>commutator subgroup</em> of <m>G</m> generated by all elements of the form <m>[x,y]</m> for <m>x,y \in G</m>. (Some people write <m>G'</m> as <m>[G,G]</m>.) Then <m>G'</m> is in fact normal: <m>G' \unlhd G</m>. Now let <m>f: G \to A</m> be any group homomorphism from <m>G</m> to an abelian group <m>A</m>. Since <m>f([x,y]) = [f(x),f(y)] = e</m> for all <m>x, y \in G</m> (since <m>A</m> is abelian), we have that <m>\operatorname{Ker}(f)</m> must contain <m>G'</m>. By the UMP for quotients, we get that <m>f</m> factors as 
+                Let <m>G</m> be any group, and recall the <xref text="title" ref="ex-commutator-subgroup"/>. In <xref provisional="G' normal"/> we saw <m>G'\nsg G</m>. Now let <m>\varphi: G \to A</m> be any group homomorphism from <m>G</m> to an abelian group <m>A</m>. Since <m>\varphi([x,y]) = [\varphi(x),\varphi(y)] = e</m> for all <m>x, y \in G</m> (since <m>A</m> is abelian), we have that <m>\operatorname{ker}(\varphi)</m> must contain <m>G'</m>. By <xref ref="thm-ump-quotient"/>, we get that <m>\varphi</m> factors as 
                 <me>
-                  f:G \xrightarrow{{\pi}} G/G' \xrightarrow{\overline{f}} A
+                  \varphi:G \xrightarrow{{\pi}} G/G' \xrightarrow{\overline{\varphi}} A
                 </me> 
-                for a unique group homomorphism <m>\overline{f}</m>.
+                for a unique group homomorphism <m>\overline{\varphi}</m>.
               </p>
       
               <p>
@@ -4558,9 +4572,9 @@
               <creator>Jordan, 1870</creator>
               <statement>
                 <p>
-                  If <m>f: G \to H</m> is a homomorphism of groups, then <m>\operatorname{Ker}(g)\mathrel{\unlhd}G</m> and the map <m>\overline{f}</m> defined by the UMP induces an isomorphism 
+                  If <m>f: G \to H</m> is a homomorphism of groups, then <m>\operatorname{ker}(g)\mathrel{\unlhd}G</m> and the map <m>\overline{f}</m> defined by <xref ref="thm-ump-quotient"/> induces an isomorphism 
                   <me>
-                    \overline{f}: G/\operatorname{Ker}(f) \xrightarrow{\cong} \operatorname{Im}(f).
+                    \overline{f}: G/\operatorname{ker}(f) \xrightarrow{\cong} \operatorname{Im}(f).
                   </me>
                 </p>
               </statement>
@@ -4802,14 +4816,14 @@
 
                     <li>
                       <p>
-                        Argue amongst yourselves what the 'best' notation for the integers <m>\mod n</m> Should be: <m>\Z/n,</m> <m>\Z/n\Z,</m>, <m>\Z/n,</m>, <m>\Z_n,</m>, <m>\Z/\igen n,</m>, <m>\frac{\Z}{n},</m> or whatever other horrors you can conjure.
+                        Argue amongst yourselves what the 'best' notation for the integers <m>\mod n</m> Should be: <m>\Z/n,</m> <m>\Z/n\Z,</m>, <m>\Z/n,</m>, <m>\Z_n,</m>, <m>\Z/\igen n</m>, <m>\frac{\Z}{n},</m> or whatever other horrors you can conjure.
                       </p>
                     </li>
                   </ol>
                 </p>
               </exercise>
 
-              <exercise>
+              <exercise xml:id="exe-commutator-quotient-abelian">
                 <title>Quotient of Commutator Subgroup</title>
                 
                   <statement>
@@ -4823,7 +4837,7 @@
               <exercise xml:id="exe-gl-sl-iso">
                 <statement>
                   <p>
-                    <m>\GL_n(R)/\SL_n(\R)\cong\R^\times</m>
+                    <m>\GL_n(\R)/\SL_n(\R)\cong\R^\times</m>
                   </p>
                 </statement>
 
@@ -5149,7 +5163,7 @@
 
                 <li>
                   <p>
-                    For left multiplication, the associated group homomorphism is <m>G \to \operatorname{Perm}(S)</m> by <m>g\mapsto \phi_g</m>, where <m>\phi_g(s)=g\cdot s</m>
+                    For left multiplication, the associated group homomorphism is <m>G \to \operatorname{Perm}(S)</m> by <m>g\mapsto \phi_g</m>, where <m>\phi_g(s)=gs</m>
                   </p>
                 </li>
 
@@ -5179,7 +5193,7 @@
             <title>Transitive Action</title>
             <statement>
               <p>
-                An action is <em>transitive</em> if for all <m>p,q \in S</m> there is a <m>g \in G</m> such that <m>q=g\cdot p</m>.
+                An action is <em>transitive</em> if for all <m>x,y \in S</m> there is a <m>g \in G</m> such that <m>x=g\cdot y</m>.
               </p>
             </statement>
           </definition>
@@ -7790,6 +7804,12 @@
                     In <m>D_{2n}</m>, let <m>H=\langle s\rangle</m> and <m>K=\langle r\rangle</m>. Then <m>HK=KH=D_{2n}</m> but <m>r</m> and <m>s</m> do not commute. The fact that <m>HK=KH</m> can also be justified by observing that <m>K\nsg D_{2n}</m>.
                   </p>
                 </statement>
+              </exercise>
+
+              <exercise xml:id="exe-no-group-cancellation-in-products">
+                <p>
+                  Find an example of groups <m>G,H</m> such that there is an isomorphism <m>G\times H\cong G</m> but <m>H</m> is not trivial. Note: since <m>G\times H\cong G</m> can be rewritten as <m>G\times H\cong G\times \{e\}</m>, the above shows that in general one cannot cancel groups in isomorphisms between direct products.
+                </p>
               </exercise>
           
             </exercisegroup>

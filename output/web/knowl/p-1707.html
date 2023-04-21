@@ -12,13 +12,21 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para logical"><ol class="decimal">
-<li><div class="para">
-<span class="process-math">\(\Z\)</span> is a UFD by the Fundamental Theorem of Arithmetic.</div></li>
-<li><div class="para">
-<span class="process-math">\(F[x]\)</span> where <span class="process-math">\(F\)</span> is a field is a UFD. This is the case because <span class="process-math">\(F[x]\)</span> is a Euclidean domain and Euclidean domains are UFD’s (we’ll prove this shortly).</div></li>
-<li><div class="para">We will eventually prove that if <span class="process-math">\(R\)</span> is a UFD then so is <span class="process-math">\(R[x]\text{.}\)</span> It follows that <span class="process-math">\(F[x_1, \dots, x_n]\)</span> is a UFD for all <span class="process-math">\(n\text{.}\)</span> Note that if <span class="process-math">\(n &gt; 1\text{,}\)</span> this ring is not a PID and hence not a Euclidean domain.</div></li>
-</ol></div>
+<div class="para logical">
+<div class="para">A ring <span class="process-math">\(R\)</span> is called a <em class="emphasis">unique factorization domain</em>, or UFD for short, if <span class="process-math">\(R\)</span> is an integral domain and every element <span class="process-math">\(r \in R\)</span> that is non-zero and not a unit can be written as a finite product</div>
+<div class="displaymath process-math">
+\begin{equation*}
+r = p_1 \cdots p_n
+\end{equation*}
+</div>
+<div class="para">of (not necessarily distinct) irreducible elements <span class="process-math">\(p_1, \dots, p_n\)</span> of <span class="process-math">\(R\)</span> in a way that is unique up to ordering and associates. That is, if</div>
+<div class="displaymath process-math">
+\begin{equation*}
+r = q_1 \cdots q_m
+\end{equation*}
+</div>
+<div class="para">also holds with each <span class="process-math">\(q_i\)</span> irreducible, then <span class="process-math">\(m = n\)</span> and there is a permutation <span class="process-math">\(\sigma\)</span> such that, for all <span class="process-math">\(i\text{,}\)</span> we have <span class="process-math">\(p_i\)</span> and <span class="process-math">\(q_{\sigma(i)}\)</span> are associates.</div>
+</div>
 <span class="incontext"><a href="subsec-ufds.html#p-1707" class="internal">in-context</a></span>
 </body>
 </html>

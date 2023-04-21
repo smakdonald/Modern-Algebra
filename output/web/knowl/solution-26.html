@@ -13,10 +13,11 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h5 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">5.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.1</span><span class="period">.</span>
 </h5>
-<div class="para">Let <span class="process-math">\(u \in X\text{.}\)</span> As the action is transitive, by the exercise above we have that the kernel of the action is the intersection of <span class="process-math">\(gG_ug\inv\)</span> over all <span class="process-math">\(g \in G\text{.}\)</span> However, as <span class="process-math">\(G\)</span> is abelian, <span class="process-math">\(gG_ug\inv = G_u\)</span> for all <span class="process-math">\(g \in G\text{.}\)</span> Hence, the kernel of the action is <span class="process-math">\(G_u\)</span> for any <span class="process-math">\(u \in X\text{.}\)</span> On the other hand, the action is faithful, which means the kernel of the action is the identity. It follows that <span class="process-math">\(G_u = \{e\}\)</span> for every <span class="process-math">\(u \in X\text{.}\)</span> Finally, as the action is transitive, <span class="process-math">\(X = \Orb(u)\)</span> for some (any) <span class="process-math">\(u \in X\text{.}\)</span> By the Orbit-Stabilizer theorem, <span class="process-math">\(|X|= |\Orb(u)|= [G : G_u] = |G|\text{.}\)</span>
-</div>
+<div class="para">Suppose <span class="process-math">\(u,v \in X\)</span> lie in the same orbit. Then <span class="process-math">\(u = gv\)</span> for some <span class="process-math">\(g \in G\text{.}\)</span> Then <span class="process-math">\(a \in  G_u\)</span> if and only <span class="process-math">\(au = u\text{,}\)</span> which is if and only if <span class="process-math">\(agv = gv\text{,}\)</span> which is if and only if <span class="process-math">\((g\inv ag)v = v\text{,}\)</span> which is if and only <span class="process-math">\(if g\inv ag \in Gv\text{,}\)</span> which is if and only if <span class="process-math">\(a \in  gGvg\inv.\)</span>
+</div> <div class="para">Thus, <span class="process-math">\(G_u = gG_vg\inv\text{.}\)</span> Now, if <span class="process-math">\(G\)</span> acts transitively on <span class="process-math">\(X\text{,}\)</span> then <span class="process-math">\(X = \{gv |g \in G\}\)</span> for any <span class="process-math">\(v \in  X\text{.}\)</span> Hence, by the argument above, for any <span class="process-math">\(u \in  X, G_u = gG_vg\inv\)</span> for some <span class="process-math">\(g \in  G\text{.}\)</span>
+</div> <div class="para">Since the kernel of the action is the intersection of all the stabilizers, we obtain the desired conclusion.</div>
 </div>
 <span class="incontext"><a href="sec-orbit-stab-class-eq.html#solution-26" class="internal">in-context</a></span>
 </body>

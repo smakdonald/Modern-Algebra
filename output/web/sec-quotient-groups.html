@@ -982,11 +982,11 @@ window.MathJax = {
 <div class="para" id="p-555">Let <span class="process-math">\(H = \langle n \rangle\)</span> in <span class="process-math">\(G = (\mathbb{Z}, +)\text{.}\)</span> It is automatic that <span class="process-math">\(H\)</span> is normal since <span class="process-math">\(G\)</span> is abelian. The quotient group <span class="process-math">\(G/H\)</span> is our old friend <span class="process-math">\((\mathbb{Z}/n, +)\text{.}\)</span>
 </div></article><article class="definition definition-like" id="def-quotient-map"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.27</span><span class="period">.</span><span class="space"> </span><span class="title">Quotient Map.</span>
-</h4> <div class="para" id="p-556">For any group <span class="process-math">\(G\)</span> and normal subgroup <span class="process-math">\(N\)</span> of <span class="process-math">\(G\)</span> the <em class="emphasis">quotient map</em> <span class="process-math">\(\pi:G \to G/N\)</span> is defined by <span class="process-math">\(\pi(g)=gN\text{.}\)</span>
+</h4> <div class="para" id="p-556">For any group <span class="process-math">\(G\)</span> and normal subgroup <span class="process-math">\(N\)</span> of <span class="process-math">\(G\)</span> the <em class="emphasis">quotient map</em> <span class="process-math">\(q:G \to G/N\)</span> is defined by <span class="process-math">\(q(g)=gN\text{.}\)</span>
 </div></article><article class="lemma theorem-like" id="lem-quotient-surj-hom"><h4 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">3.28</span><span class="period">.</span><span class="space"> </span><span class="title">Quotient Map is Surjective Homomorphism.</span>
 </h4>
-<div class="para" id="p-557">For any group <span class="process-math">\(G\)</span> and normal subgroup <span class="process-math">\(N\)</span> of <span class="process-math">\(G\text{,}\)</span> the map <span class="process-math">\(\pi:G \to G/N\)</span> defined by <span class="process-math">\(\pi(g)=gN\)</span> is a surjective group homomorphism with kernel <span class="process-math">\(\operatorname{Ker}(\pi)=N\text{.}\)</span>
+<div class="para" id="p-557">For any group <span class="process-math">\(G\)</span> and normal subgroup <span class="process-math">\(N\)</span> of <span class="process-math">\(G\text{,}\)</span> the map <span class="process-math">\(q:G \to G/N\)</span> defined by <span class="process-math">\(q(g)=gN\)</span> is a surjective group homomorphism with kernel <span class="process-math">\(\operatorname{ker}(q)=N\text{.}\)</span>
 </div></article><article class="hiddenproof" id="proof-10"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-10"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-10"><article class="hiddenproof"><div class="para logical" id="p-558">
 <div class="para">Surjectivity is immediate from the definition. The group homomorphism property follows from the computation below which uses the definition of <span class="process-math">\(\pi\)</span> and the rule for multiplying cosets in <span class="process-math">\(G/N\text{:}\)</span>
 </div>
@@ -1017,13 +1017,13 @@ window.MathJax = {
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.31</span><span class="period">.</span><span class="space"> </span><span class="title">Universal Mapping Property (UMP) of a Quotient Group.</span>
 </h4>
 <div class="para" id="p-564">Let <span class="process-math">\(G\)</span> be a group and <span class="process-math">\(N\)</span> a normal subgroup. If <span class="process-math">\(f: G \to H\)</span> is a homomorphism of groups such that <span class="process-math">\(N \subseteq \operatorname{Ker}(f)\text{,}\)</span> then</div> <div class="para logical" id="p-565"><ol class="decimal">
-<li id="li-205"><div class="para" id="p-566">there exists a unique group homomorphism <span class="process-math">\(\overline{f}: G/N \to H\)</span> such that the composition of <span class="process-math">\(\overline{f}\)</span> and the quotient map <span class="process-math">\({\pi}: G  \twoheadrightarrow G/N\)</span> is <span class="process-math">\(f\text{.}\)</span>
+<li id="li-204"><div class="para" id="p-566">there exists a unique group homomorphism <span class="process-math">\(\overline{f}: G/N \to H\)</span> such that the composition of <span class="process-math">\(\overline{f}\)</span> and the quotient map <span class="process-math">\({\pi}: G  \twoheadrightarrow G/N\)</span> is <span class="process-math">\(f\text{.}\)</span>
 </div></li>
-<li id="li-206"><div class="para" id="p-567">If <span class="process-math">\(f\)</span> is onto, then <span class="process-math">\(\overline{f}\)</span> is onto.</div></li>
-<li id="li-207"><div class="para" id="p-568">Moreover, <span class="process-math">\(\operatorname{Ker}(\overline{f}) = \operatorname{Ker}(f)/N = \{ g N \mid f(g) = e_H\}.\)</span>
+<li id="li-205"><div class="para" id="p-567">If <span class="process-math">\(f\)</span> is onto, then <span class="process-math">\(\overline{f}\)</span> is onto.</div></li>
+<li id="li-206"><div class="para" id="p-568">Moreover, <span class="process-math">\(\operatorname{Ker}(\overline{f}) = \operatorname{Ker}(f)/N = \{ g N \mid f(g) = e_H\}.\)</span>
 </div></li>
 </ol></div></article><article class="hiddenproof" id="proof-12"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-12"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-12"><article class="hiddenproof"><div class="para logical" id="p-569"><ol class="decimal">
-<li id="li-208"><div class="para logical" id="p-570">
+<li id="li-207"><div class="para logical" id="p-570">
 <div class="para">If such a <span class="process-math">\(\overline{f}\)</span> exists, it is necessarily unique since <span class="process-math">\(G \twoheadrightarrow G/N\)</span> is onto. In fact, if <span class="process-math">\(f=\pi\circ \overline{f}\)</span> then <span class="process-math">\(\overline{f}\)</span> has to be given by the formula</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1037,29 +1037,29 @@ window.MathJax = {
 \end{equation*}
 </div>
 </div></li>
-<li id="li-209"><div class="para" id="p-571">The formula for <span class="process-math">\(\overline{f}\)</span> given above ensures that <span class="process-math">\(\operatorname{Im}f=\operatorname{Im}\overline{f}\)</span> hence <span class="process-math">\(f\)</span> is surjective if and only if <span class="process-math">\(\overline{f}\)</span> is surjective.</div></li>
-<li id="li-210"><div class="para" id="p-572">We have <span class="process-math">\(\overline{f}(xN) = e_H\)</span> iff <span class="process-math">\(f(x) = e_H\)</span> iff <span class="process-math">\(x \in \operatorname{Ker}(f)\)</span> iff <span class="process-math">\(xN \in  \operatorname{Ker}(f)/N\text{.}\)</span> If <span class="process-math">\(xN \in \operatorname{Ker}(f)/N\)</span> for some <span class="process-math">\(x \in G\text{,}\)</span> then <span class="process-math">\(xN = yN\)</span> for some <span class="process-math">\(y \in \operatorname{Ker}(f)\)</span> and hence <span class="process-math">\(x = yz\)</span> for some <span class="process-math">\(z \in N\text{.}\)</span> Since <span class="process-math">\(N \subseteq \operatorname{Ker}(f)\text{,}\)</span> we have <span class="process-math">\(x \in \operatorname{Ker}(f)\text{.}\)</span>
+<li id="li-208"><div class="para" id="p-571">The formula for <span class="process-math">\(\overline{f}\)</span> given above ensures that <span class="process-math">\(\operatorname{Im}f=\operatorname{Im}\overline{f}\)</span> hence <span class="process-math">\(f\)</span> is surjective if and only if <span class="process-math">\(\overline{f}\)</span> is surjective.</div></li>
+<li id="li-209"><div class="para" id="p-572">We have <span class="process-math">\(\overline{f}(xN) = e_H\)</span> iff <span class="process-math">\(f(x) = e_H\)</span> iff <span class="process-math">\(x \in \operatorname{Ker}(f)\)</span> iff <span class="process-math">\(xN \in  \operatorname{Ker}(f)/N\text{.}\)</span> If <span class="process-math">\(xN \in \operatorname{Ker}(f)/N\)</span> for some <span class="process-math">\(x \in G\text{,}\)</span> then <span class="process-math">\(xN = yN\)</span> for some <span class="process-math">\(y \in \operatorname{Ker}(f)\)</span> and hence <span class="process-math">\(x = yz\)</span> for some <span class="process-math">\(z \in N\text{.}\)</span> Since <span class="process-math">\(N \subseteq \operatorname{Ker}(f)\text{,}\)</span> we have <span class="process-math">\(x \in \operatorname{Ker}(f)\text{.}\)</span>
 </div></li>
 </ol></div></article></div>
 <article class="example example-like" id="ex-abelianization"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.32</span><span class="period">.</span><span class="space"> </span><span class="title">Abelianization.</span>
 </h4> <div class="para logical" id="p-573">
-<div class="para">Let <span class="process-math">\(G\)</span> be any group. For <span class="process-math">\(x,y \in G\text{,}\)</span> set <span class="process-math">\([x,y] = xyx^{-1}y^{-1}\text{.}\)</span> Let <span class="process-math">\(G'\)</span> denote the <em class="emphasis">commutator subgroup</em> of <span class="process-math">\(G\)</span> generated by all elements of the form <span class="process-math">\([x,y]\)</span> for <span class="process-math">\(x,y \in G\text{.}\)</span> (Some people write <span class="process-math">\(G'\)</span> as <span class="process-math">\([G,G]\text{.}\)</span>) Then <span class="process-math">\(G'\)</span> is in fact normal: <span class="process-math">\(G' \unlhd G\text{.}\)</span> Now let <span class="process-math">\(f: G \to A\)</span> be any group homomorphism from <span class="process-math">\(G\)</span> to an abelian group <span class="process-math">\(A\text{.}\)</span> Since <span class="process-math">\(f([x,y]) = [f(x),f(y)] = e\)</span> for all <span class="process-math">\(x, y \in G\)</span> (since <span class="process-math">\(A\)</span> is abelian), we have that <span class="process-math">\(\operatorname{Ker}(f)\)</span> must contain <span class="process-math">\(G'\text{.}\)</span> By the UMP for quotients, we get that <span class="process-math">\(f\)</span> factors as</div>
-<div class="displaymath process-math">
+<div class="para">Let <span class="process-math">\(G\)</span> be any group, and recall the <a href="" class="xref" data-knowl="./knowl/ex-commutator-subgroup.html" title="Example 1.61: Commutator Subgroup">Commutator Subgroup</a>. In <code class="code-inline tex2jax_ignore">[provisional cross-reference: G' normal]</code> we saw <span class="process-math">\(G'\nsg G\text{.}\)</span> Now let <span class="process-math">\(\varphi: G \to A\)</span> be any group homomorphism from <span class="process-math">\(G\)</span> to an abelian group <span class="process-math">\(A\text{.}\)</span> Since <span class="process-math">\(\varphi([x,y]) = [\varphi(x),\varphi(y)] = e\)</span> for all <span class="process-math">\(x, y \in G\)</span> (since <span class="process-math">\(A\)</span> is abelian), we have that <span class="process-math">\(\operatorname{ker}(\varphi)\)</span> must contain <span class="process-math">\(G'\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/thm-ump-quotient.html" title="Theorem 3.31: Universal Mapping Property (UMP) of a Quotient Group">Theorem 3.31</a>, we get that <span class="process-math">\(\varphi\)</span> factors as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/ex-commutator-subgroup.html  ./knowl/thm-ump-quotient.html">
 \begin{equation*}
-f:G \xrightarrow{{\pi}} G/G' \xrightarrow{\overline{f}} A
+\varphi:G \xrightarrow{{\pi}} G/G' \xrightarrow{\overline{\varphi}} A
 \end{equation*}
 </div>
-<div class="para">for a unique group homomorphism <span class="process-math">\(\overline{f}\text{.}\)</span>
+<div class="para">for a unique group homomorphism <span class="process-math">\(\overline{\varphi}\text{.}\)</span>
 </div>
 </div> <div class="para" id="p-574">The group <span class="process-math">\(G/G'\)</span> is called the <em class="emphasis">abelianization of <span class="process-math">\(G\)</span></em> and the motto is: A homomorphism from a group to an abelian group factors uniquely through the abelianization.</div></article><article class="theorem theorem-like" id="thm-fit-group"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.33</span><span class="space"> </span><span class="creator">(Jordan, 1870)</span><span class="period">.</span><span class="space"> </span><span class="title">First Isomorphism Theorem.</span>
 </h4>
 <div class="para logical" id="p-575">
-<div class="para">If <span class="process-math">\(f: G \to H\)</span> is a homomorphism of groups, then <span class="process-math">\(\operatorname{Ker}(g)\mathrel{\unlhd}G\)</span> and the map <span class="process-math">\(\overline{f}\)</span> defined by the UMP induces an isomorphism</div>
-<div class="displaymath process-math">
+<div class="para">If <span class="process-math">\(f: G \to H\)</span> is a homomorphism of groups, then <span class="process-math">\(\operatorname{ker}(g)\mathrel{\unlhd}G\)</span> and the map <span class="process-math">\(\overline{f}\)</span> defined by <a href="" class="xref" data-knowl="./knowl/thm-ump-quotient.html" title="Theorem 3.31: Universal Mapping Property (UMP) of a Quotient Group">Theorem 3.31</a> induces an isomorphism</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-ump-quotient.html">
 \begin{equation*}
-\overline{f}: G/\operatorname{Ker}(f) \xrightarrow{\cong} \operatorname{Im}(f).
+\overline{f}: G/\operatorname{ker}(f) \xrightarrow{\cong} \operatorname{Im}(f).
 \end{equation*}
 </div>
 </div></article><article class="hiddenproof" id="proof-13"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-13"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-13"><article class="hiddenproof"><div class="para" id="p-576">By <a href="" class="xref" data-knowl="./knowl/thm-ump-quotient.html" title="Theorem 3.31: Universal Mapping Property (UMP) of a Quotient Group">Theorem 3.31</a>, there exists a homomorphism <span class="process-math">\(\overline{f}\)</span> such that <span class="process-math">\(\overline{f} \circ {\pi}= f\text{,}\)</span> and its kernel consists of just the one element <span class="process-math">\(\operatorname{Ker}(f)/\operatorname{Ker}(f)\)</span> of <span class="process-math">\(G/\operatorname{Ker}(f)\text{.}\)</span> So <span class="process-math">\(\overline{f}\)</span> is one-to-one, and the image of <span class="process-math">\(\overline{f}\)</span> is the same as the image of <span class="process-math">\(f\text{.}\)</span>
@@ -1143,35 +1143,35 @@ f:H \hookrightarrow HN \xrightarrow{{\pi}} \frac{HN}{N}
 <div class="para">where <span class="process-math">\(\pi: G \twoheadrightarrow G/N\)</span> is the quotient map. We denote <span class="process-math">\(\Psi(H)=H/N=\overline{H}\text{.}\)</span>
 </div>
 </div> <div class="para" id="p-586">Then this bijection enjoys the following properties:</div> <div class="para logical" id="p-587"><ol class="decimal">
-<li id="li-211">
+<li id="li-210">
 <div class="para" id="p-588">(normal) subgroups correspond to normal subgroups i.e.,</div>
 <div class="para logical" id="p-589"><ul class="disc">
-<li id="li-212"><div class="para" id="p-590">
+<li id="li-211"><div class="para" id="p-590">
 <span class="process-math">\(H\leq G\)</span> iff <span class="process-math">\(\overline{H}\leq \overline{G}\)</span> and <span class="process-math">\(\mathcal{H}\leq \overline{G}\)</span> iff <span class="process-math">\(\Phi(\mathcal{H})\leq G\)</span>
 </div></li>
-<li id="li-213"><div class="para" id="p-591">
+<li id="li-212"><div class="para" id="p-591">
 <span class="process-math">\(H\mathrel{\unlhd}G\)</span> iff <span class="process-math">\(\overline{H}\mathrel{\unlhd}\overline{G}\)</span> and <span class="process-math">\(\mathcal{H}\mathrel{\unlhd}\overline{G}\)</span> iff <span class="process-math">\(\Phi(\mathcal{H})\mathrel{\unlhd}G\)</span>
 </div></li>
 </ul></div>
 </li>
-<li id="li-214"><div class="para" id="p-592">indices are preserved; i.e., <span class="process-math">\([G:H] = [\overline{G} : \overline{H}]\)</span> and <span class="process-math">\([G: \Phi(\mathcal{H})] = [\overline{G} : \mathcal{H}]\text{.}\)</span>
+<li id="li-213"><div class="para" id="p-592">indices are preserved; i.e., <span class="process-math">\([G:H] = [\overline{G} : \overline{H}]\)</span> and <span class="process-math">\([G: \Phi(\mathcal{H})] = [\overline{G} : \mathcal{H}]\text{.}\)</span>
 </div></li>
-<li id="li-215">
+<li id="li-214">
 <div class="para" id="p-593">the supremums and infimums are preserved (this makes <span class="process-math">\(\Phi\)</span> and <span class="process-math">\(\Psi\)</span> lattice isomorphisms)</div>
 <div class="para logical" id="p-594"><ul class="disc">
-<li id="li-216"><div class="para" id="p-595">
+<li id="li-215"><div class="para" id="p-595">
 <span class="process-math">\(\overline{H} \cap \overline{K} = \overline{H \cap H}\)</span> and <span class="process-math">\(\langle \overline{H}\cup \overline{K} \rangle = \overline{\langle H\cup K \rangle}\)</span>
 </div></li>
-<li id="li-217"><div class="para" id="p-596">
+<li id="li-216"><div class="para" id="p-596">
 <span class="process-math">\(\Phi(\mathcal{H}) \cap \Phi(\mathcal K) = \Phi(\mathcal{H}\cap \mathcal K)\)</span> and <span class="process-math">\(\langle \Phi(\mathcal{H})\cup\Phi(\mathcal K) \rangle = \Phi\left(\langle \mathcal{H}\cup\mathcal K\rangle\right)\)</span>
 </div></li>
 </ul></div>
 </li>
 </ol></div></article><article class="hiddenproof" id="proof-16"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-16"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-16"><article class="hiddenproof"><div class="para" id="p-597">We have previously shown <code class="code-inline tex2jax_ignore">[provisional cross-reference: cite]</code> that the quotient map <span class="process-math">\(\pi:G\to G/N\)</span> is a surjective group homomorphism. We show:</div> <div class="para logical" id="p-598"><ul class="disc">
-<li id="li-218"><div class="para" id="p-599">
+<li id="li-217"><div class="para" id="p-599">
 <span class="process-math">\(\Psi\)</span> is well defined (correct codomain) since for <span class="process-math">\(H\leq G\)</span> we have <span class="process-math">\(\pi(H)\leq G/N\)</span> (since images of subgroups through group homomorphisms are subgroups). <code class="code-inline tex2jax_ignore">[provisional cross-reference: cite]</code>
 </div></li>
-<li id="li-219"><div class="para logical" id="p-600">
+<li id="li-218"><div class="para logical" id="p-600">
 <div class="para">
 <span class="process-math">\(\Phi\)</span> is well defined (correct codomain) since for <span class="process-math">\(\mathcal{H}\leq G\)</span> we have <span class="process-math">\(\pi^{-1}(\mathcal{H})\leq G\)</span> (since preimages of subgroups through group homomorphisms are subgroups) <code class="code-inline tex2jax_ignore">[provisional cross-reference: cite]</code> and for any <span class="process-math">\(\mathcal{H}\leq G\)</span> we have <span class="process-math">\(\{e_GN\}\subseteq \mathcal{H}\text{,}\)</span> hence</div>
 <div class="displaymath process-math" data-contains-math-knowls="">
@@ -1180,7 +1180,7 @@ N=\operatorname{Ker}(\pi)=\pi^{-1}(\{e_GN\})\subseteq \pi^{-1}(\mathcal{H})=\Phi
 \end{equation*}
 </div>
 </div></li>
-<li id="li-220"><div class="para logical" id="p-601">
+<li id="li-219"><div class="para logical" id="p-601">
 <div class="para">
 <span class="process-math">\(\Phi\)</span> and <span class="process-math">\(\Psi\)</span> are mutual inverses: <span class="process-math">\((\Psi\circ\Phi)(\mathcal{H})=\pi(\pi^{-1}(\mathcal{H}))=\mathcal{H}\)</span> since <span class="process-math">\(\pi\)</span> is surjective and <span class="process-math">\((\Phi\circ\Psi)(H)=\pi^{-1}(\pi(H))=\pi^{-1}(H/N)=H\text{,}\)</span> with the last equality justified by</div>
 <div class="displaymath process-math">
@@ -1210,17 +1210,17 @@ x\in \pi^{-1}(H/N) &amp;\iff \pi(x)\in H/N \iff xN=hN \text{ for some } h\in H \
 <div class="introduction" id="introduction-22"><div class="para" id="p-608"></div></div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exe-mod-n-iso"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-mod-n-iso"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-mod-n-iso"><article class="exercise exercise-like"><div class="para logical" id="p-609"><ol class="lower-alpha">
-<li id="li-221"><div class="para" id="p-610">
+<li id="li-220"><div class="para" id="p-610">
 <span class="process-math">\(\Z/n\Z\cong\Z/n\)</span> for all <span class="process-math">\(n\in\N\text{.}\)</span>
 </div></li>
-<li id="li-222"><div class="para" id="p-611">Argue amongst yourselves what the 'best' notation for the integers <span class="process-math">\(\mod n\)</span> Should be: <span class="process-math">\(\Z/n,\)</span> <span class="process-math">\(\Z/n\Z,\text{,}\)</span> <span class="process-math">\(\Z/n,\text{,}\)</span> <span class="process-math">\(\Z_n,\text{,}\)</span> <span class="process-math">\(\Z/\igen n,\text{,}\)</span> <span class="process-math">\(\frac{\Z}{n},\)</span> or whatever other horrors you can conjure.</div></li>
+<li id="li-221"><div class="para" id="p-611">Argue amongst yourselves what the 'best' notation for the integers <span class="process-math">\(\mod n\)</span> Should be: <span class="process-math">\(\Z/n,\)</span> <span class="process-math">\(\Z/n\Z,\text{,}\)</span> <span class="process-math">\(\Z/n,\text{,}\)</span> <span class="process-math">\(\Z_n,\text{,}\)</span> <span class="process-math">\(\Z/\igen n\text{,}\)</span> <span class="process-math">\(\frac{\Z}{n},\)</span> or whatever other horrors you can conjure.</div></li>
 </ol></div></article></div>
-<article class="exercise exercise-like" id="exercise-91"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-91"><h5 class="heading">
+<article class="exercise exercise-like" id="exe-commutator-quotient-abelian"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-commutator-quotient-abelian"><h5 class="heading">
 <span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">Quotient of Commutator Subgroup.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-91"><article class="exercise exercise-like"><div class="para" id="p-612">Let <span class="process-math">\(G\)</span> be a group with commutator subgroup <span class="process-math">\(G'\text{.}\)</span> Prove <span class="process-math">\(G/G'\)</span> is abelian.</div></article></div>
-<article class="exercise exercise-like" id="exe-gl-sl-iso"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-gl-sl-iso"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-gl-sl-iso"><article class="exercise exercise-like"><div class="para" id="p-613"><span class="process-math">\(\GL_n(R)/\SL_n(\R)\cong\R^\times\)</span></div>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-commutator-quotient-abelian"><article class="exercise exercise-like"><div class="para" id="p-612">Let <span class="process-math">\(G\)</span> be a group with commutator subgroup <span class="process-math">\(G'\text{.}\)</span> Prove <span class="process-math">\(G/G'\)</span> is abelian.</div></article></div>
+<article class="exercise exercise-like" id="exe-gl-sl-iso"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-gl-sl-iso"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-gl-sl-iso"><article class="exercise exercise-like"><div class="para" id="p-613"><span class="process-math">\(\GL_n(\R)/\SL_n(\R)\cong\R^\times\)</span></div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-15" id="solution-15"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-15"><div class="solution solution-like"><div class="para logical" id="p-614">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-16" id="solution-16"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-16"><div class="solution solution-like"><div class="para logical" id="p-614">
 <div class="para">Define a map <span class="process-math">\(f: F \setminus \{0\}\to G/H\)</span> as the composition of</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1244,11 +1244,11 @@ F \setminus \{0\} \xrightarrow{g} \operatorname{GL}_n(F) \twoheadrightarrow\oper
 <article class="exercise exercise-like" id="exercise-94"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-94"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-94"><article class="exercise exercise-like"><div class="para" id="p-617">Let <span class="process-math">\(H\nsg G\)</span> such that <span class="process-math">\([G:H]=2\text{.}\)</span> Then <span class="process-math">\(G/H\cong\Z/2\text{.}\)</span>
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-95"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-95"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-95"><article class="exercise exercise-like"><div class="para logical" id="p-618"><ol class="lower-alpha">
-<li id="li-223"><div class="para" id="p-619">If <span class="process-math">\(f:G\to H\)</span> is a group homomorphism and <span class="process-math">\(K\mathrel{\unlhd}G\)</span> then <span class="process-math">\(f(K)\mathrel{\unlhd}f(G)\text{.}\)</span>
+<li id="li-222"><div class="para" id="p-619">If <span class="process-math">\(f:G\to H\)</span> is a group homomorphism and <span class="process-math">\(K\mathrel{\unlhd}G\)</span> then <span class="process-math">\(f(K)\mathrel{\unlhd}f(G)\text{.}\)</span>
 </div></li>
-<li id="li-224"><div class="para" id="p-620">In particular, if <span class="process-math">\(f\)</span> is surjective then <span class="process-math">\(f(K)\mathrel{\unlhd}H\)</span>
+<li id="li-223"><div class="para" id="p-620">In particular, if <span class="process-math">\(f\)</span> is surjective then <span class="process-math">\(f(K)\mathrel{\unlhd}H\)</span>
 </div></li>
-<li id="li-225"><div class="para" id="p-621">Show the statement in part (b) need not be true in the absence of surjectivity.</div></li>
+<li id="li-224"><div class="para" id="p-621">Show the statement in part (b) need not be true in the absence of surjectivity.</div></li>
 </ol></div></article></div>
 </div>
 </div>
@@ -1261,17 +1261,17 @@ F \setminus \{0\} \xrightarrow{g} \operatorname{GL}_n(F) \twoheadrightarrow\oper
 </h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-96"><article class="exercise exercise-like"><div class="para logical" id="p-623">
 <div class="para">Let <span class="process-math">\(G\)</span> be a group (not necessarily finite) and <span class="process-math">\(H\)</span> a nonempty subset of <span class="process-math">\(G\)</span> that is closed under multiplication. Suppose that for all <span class="process-math">\(g\in G\)</span> we have <span class="process-math">\(g^2\in H\text{.}\)</span> Prove the following:</div>
 <ol class="lower-alpha">
-<li id="li-226"><div class="para" id="p-624">
+<li id="li-225"><div class="para" id="p-624">
 <span class="process-math">\(H\)</span> is a subgroup of <span class="process-math">\(G\)</span>
 </div></li>
-<li id="li-227"><div class="para" id="p-625">
+<li id="li-226"><div class="para" id="p-625">
 <span class="process-math">\(H\)</span> is normal</div></li>
-<li id="li-228"><div class="para" id="p-626">
+<li id="li-227"><div class="para" id="p-626">
 <span class="process-math">\(G/H\)</span> is abelian.</div></li>
 </ol>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-16" id="solution-16"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-16"><div class="solution solution-like">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-17" id="solution-17"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-17"><div class="solution solution-like">
 <div class="para" id="p-627">Let <span class="process-math">\(G\)</span> be a group, <span class="process-math">\(H\)</span> a multiplicatively closed subset of <span class="process-math">\(G\text{,}\)</span> and suppose that <span class="process-math">\(g^2\in H\)</span> for all <span class="process-math">\(g\in G\text{.}\)</span>
 </div> <div class="para" id="p-628">First, notice that <span class="process-math">\(e^2=e\in H\text{.}\)</span> Let <span class="process-math">\(x\in H\text{,}\)</span> and consider <span class="process-math">\(x\inv\text{.}\)</span> Notice that <span class="process-math">\((x{\inv})^2=x^{-2}\in H\text{.}\)</span> As <span class="process-math">\(H\)</span> is multiplicatively closed, we see that <span class="process-math">\(xx^{-2}=x\inv\in H\text{.}\)</span> Thus <span class="process-math">\(H\)</span> is a subgroup of <span class="process-math">\(G\)</span> by the subgroup test.</div> <div class="para" id="p-629">Let <span class="process-math">\(g\in G\text{,}\)</span> <span class="process-math">\(h\in H\text{,}\)</span> and consider <span class="process-math">\(gh\text{.}\)</span> Notice that <span class="process-math">\((gh)^2=ghgh\in H\text{.}\)</span> Multiplying by <span class="process-math">\(h\inv\)</span> on the right we see <span class="process-math">\(ghg\in H\text{,}\)</span> as it is multiplicatively closed and <span class="process-math">\(h\inv\in H\text{.}\)</span> We rewrite <span class="process-math">\(ghg=ghggg\inv=ghg\inv g^2\text{,}\)</span> given that elements always commute with their inverses. As <span class="process-math">\(g^2\in H\text{,}\)</span> we see that <span class="process-math">\(ghg\inv\in H\)</span> as well. Thus <span class="process-math">\(H\)</span> is normal in <span class="process-math">\(G\text{.}\)</span>
 </div> <div class="para" id="p-630">Let <span class="process-math">\(x,y\in G/H\text{.}\)</span> As <span class="process-math">\(g^2\in H\)</span> for every <span class="process-math">\(g\in G\text{,}\)</span> every element <span class="process-math">\(G/H\)</span> has order <span class="process-math">\(2\text{.}\)</span> Thus <span class="process-math">\(xyxy=e\)</span> and so <span class="process-math">\(xy=(xy)\inv=yx\text{,}\)</span> making the group abelian.</div>
@@ -1282,14 +1282,14 @@ F \setminus \{0\} \xrightarrow{g} \operatorname{GL}_n(F) \twoheadrightarrow\oper
 </h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-97"><article class="exercise exercise-like"><div class="para logical" id="p-631">
 <div class="para">Let <span class="process-math">\(G\)</span> be a finite group.</div>
 <ol class="lower-alpha">
-<li id="li-229"><div class="para" id="p-632">If <span class="process-math">\(N\)</span> is a normal subgroup of <span class="process-math">\(G\)</span> and <span class="process-math">\(|N| = 2\text{,}\)</span> prove that <span class="process-math">\(N\)</span> is contained in the center <span class="process-math">\(Z(G)\)</span> of <span class="process-math">\(G\text{.}\)</span>
+<li id="li-228"><div class="para" id="p-632">If <span class="process-math">\(N\)</span> is a normal subgroup of <span class="process-math">\(G\)</span> and <span class="process-math">\(|N| = 2\text{,}\)</span> prove that <span class="process-math">\(N\)</span> is contained in the center <span class="process-math">\(Z(G)\)</span> of <span class="process-math">\(G\text{.}\)</span>
 </div></li>
-<li id="li-230"><div class="para" id="p-633">Suppose that <span class="process-math">\(| Z(G)|\)</span> is odd and that <span class="process-math">\(G\)</span> contains a non-trivial simple subgroup <span class="process-math">\(H\)</span> with <span class="process-math">\([G : H] = 2\text{.}\)</span> Prove that <span class="process-math">\(H\)</span> is the only non-trivial proper normal subgroup of <span class="process-math">\(G\text{.}\)</span>
+<li id="li-229"><div class="para" id="p-633">Suppose that <span class="process-math">\(| Z(G)|\)</span> is odd and that <span class="process-math">\(G\)</span> contains a non-trivial simple subgroup <span class="process-math">\(H\)</span> with <span class="process-math">\([G : H] = 2\text{.}\)</span> Prove that <span class="process-math">\(H\)</span> is the only non-trivial proper normal subgroup of <span class="process-math">\(G\text{.}\)</span>
 </div></li>
 </ol>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-17" id="solution-17"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-17"><div class="solution solution-like">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-18" id="solution-18"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-18"><div class="solution solution-like">
 <div class="para" id="p-634">Let <span class="process-math">\(x\in N\)</span> and let <span class="process-math">\(g\in G\text{.}\)</span> As <span class="process-math">\(N\)</span> is normal, we see <span class="process-math">\(gxg\inv\in N\text{,}\)</span> and thus one of the following must be true: - <span class="process-math">\(gxg\inv=e\text{,}\)</span> where <span class="process-math">\(e\)</span> is the identity element of <span class="process-math">\(G\text{,}\)</span> or - <span class="process-math">\(gxg\inv=x\text{,}\)</span> the only other element of <span class="process-math">\(N\text{.}\)</span> However, in the first case we would have <span class="process-math">\(x=e\)</span> by multiplying <span class="process-math">\(g\)</span> and <span class="process-math">\(g\inv\)</span> over, and thus it must be the case that <span class="process-math">\(gxg\inv=x\text{,}\)</span> or <span class="process-math">\(gx=xg\text{.}\)</span> Thus <span class="process-math">\(x\in Z(G)\text{.}\)</span>
 </div> <div class="para" id="p-635">From Lagrange's Theorem we know that <span class="process-math">\(|G|/|H|=2\text{,}\)</span> meaning that <span class="process-math">\(G\)</span> has an even number of elements. Thus <span class="process-math">\(2\)</span> is the smallest prime dividing the order of <span class="process-math">\(G\text{,}\)</span> making <span class="process-math">\(H\)</span> normal in <span class="process-math">\(G\)</span> (See: ).</div> <div class="para" id="p-636">Suppose by way of contradiction there exists some non-trivial proper normal subgroup <span class="process-math">\(N\)</span> of <span class="process-math">\(G\)</span> that is not <span class="process-math">\(H\text{.}\)</span> As <span class="process-math">\(H\)</span> is normal, by the Second Isomorphism Theorem we have <span class="process-math">\(H\cap N\nsg H\text{.}\)</span> However, as <span class="process-math">\(H\)</span> is simple, this means that <span class="process-math">\(H\cap N=\{e\}\text{.}\)</span> SIT also tells us that <span class="process-math">\(HN\leq G\text{.}\)</span> As <span class="process-math">\(|H|=|G|/2\text{,}\)</span> this makes <span class="process-math">\(|N|=2\)</span> and <span class="process-math">\(G=HN\text{.}\)</span> From part (a), <span class="process-math">\(N\leq Z(G)\text{.}\)</span> However, this contradicts Lagrange's Theorem, as <span class="process-math">\(2\)</span> does not divide any odd numbers.</div>
 </div></div>
