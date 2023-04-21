@@ -11,15 +11,11 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>
-<div class="para logical">
-<div class="para">Ignoring <span class="process-math">\(\cdot\)</span> for a minute, we know that there is a unique homomorphism <span class="process-math">\(\overline{f}\)</span> of abelian groups from <span class="process-math">\((R/I, +)\)</span> to <span class="process-math">\((S, +)\)</span> such that <span class="process-math">\(\overline{f} (r+I) = f(r)\text{.}\)</span> It remains only to check that <span class="process-math">\(\overline{f}\)</span> preserves multiplication: Given elements <span class="process-math">\(r + I, s + I \in R/I\text{,}\)</span> their product is <span class="process-math">\(rs + I\text{,}\)</span> and we have</div>
-<div class="displaymath process-math">
+<article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
+<div class="para logical"><ol class="decimal"><li><div class="para">Since <span class="process-math">\(1_R1_R=1_R\)</span> we have <span class="process-math">\(f(1_R)f(1_R)=f(1_R)\text{,}\)</span> thus<div class="displaymath process-math">
 \begin{equation*}
-\overline{f}(rs + I) = f(rs) = f(r)f(s) = f(r + I) f(s +I),
+f(1_R)(f(1_R)-1_S)=0_S.
 \end{equation*}
-</div>
-<div class="para">since <span class="process-math">\(f\)</span> preserves multiplication.</div>
-</div></article><span class="incontext"><a href="sec-ring-quotients.html#proof-36" class="internal">in-context</a></span>
+</div>Now either <span class="process-math">\(f(1_R)=0_S\)</span> or <span class="process-math">\(f(1_R)-1_S=0_S\)</span> (which yields <span class="process-math">\(f(1_R)=1_S\)</span>) or both of these are nonzero and then they are complementary zero divisors (in particular, <span class="process-math">\(f(1_R)\)</span> is a zero divisor).</div></li></ol></div></article><span class="incontext"><a href="sec-ring-hom.html#proof-36" class="internal">in-context</a></span>
 </body>
 </html>

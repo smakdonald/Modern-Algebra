@@ -10,41 +10,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para">Let <span class="process-math">\(E\)</span> be the field extension of <span class="process-math">\(\Q\)</span> obtained by adjoining to <span class="process-math">\(\Q\)</span> all four complex roots of the polynomial <span class="process-math">\(x^4 + 5\text{.}\)</span>
-</div> <div class="para">Let <span class="process-math">\(F=\Q(\sqrt[4]{20})\text{.}\)</span> Note that by Eisenstein's Criterion using <span class="process-math">\(p=5\)</span> we see that <span class="process-math">\(\sqrt[4]{20}\)</span> is the root of an irreducible polynomial <span class="process-math">\(x^4-20\)</span> in <span class="process-math">\(\Q\text{.}\)</span> Thus by Theorem 2.31 we see that <span class="process-math">\([F:\Q]\)</span> is the degree of the minimum polynomial of this extension. However, as <span class="process-math">\(x^4-20\)</span> is monic and of degree 4, we see that it is the minimal polynomial and thus that <span class="process-math">\([F:\Q]=4\text{.}\)</span> As <span class="process-math">\(\sqrt[4]{20}\in\R-\Q\text{,}\)</span> this extension will be contained in the real numbers, and thus that <span class="process-math">\(F\subseteq\R\text{.}\)</span>
+<body class="ignore-math"><article class="hiddenproof"><div class="para">Let <span class="process-math">\(F \subseteq K\)</span> be a finite extension of fields of degree <span class="process-math">\(n = [K : F ]\text{.}\)</span>
+</div> <div class="para">Suppose that <span class="process-math">\(f \in F[x]\)</span> is irreducible of degree <span class="process-math">\(d\)</span> and <span class="process-math">\(\gcd(d, n) = 1\text{.}\)</span>
 </div> <div class="para logical">
-<div class="para">Next, observe</div>
-<div class="displaymath process-math">
+<div class="para">First, note that if <span class="process-math">\(d=1\)</span> then <span class="process-math">\(f(x)\)</span> will remain irreducible in <span class="process-math">\(K[x]\)</span> <code class="code-inline tex2jax_ignore">[provisional cross-reference: empty]</code>. Suppose then that <span class="process-math">\(d&gt;1\text{.}\)</span> There exists an algebraically closed extension <span class="process-math">\(\widetilde F\)</span> such that <span class="process-math">\(f\)</span> has a root <span class="process-math">\(r\)</span> <code class="code-inline tex2jax_ignore">[provisional cross-reference: empty]</code>. Consider <span class="process-math">\(K(r)\text{.}\)</span> As <span class="process-math">\(r\)</span> is algebraic in <span class="process-math">\(K(r)\)</span> we know there exists some unique irreducible minimum polynomial <span class="process-math">\(g\)</span> of degree <span class="process-math">\(q\text{,}\)</span> and thus that <span class="process-math">\([K(r):K]=q\)</span> <code class="code-inline tex2jax_ignore">[provisional cross-reference: empty]</code>. Using the Degree Formula <code class="code-inline tex2jax_ignore">[provisional cross-reference: empty]</code> we see that</div>
+<div class="displaymath process-math" data-contains-math-knowls="   ">
 \begin{equation*}
-\begin{align}
-\alpha_1+\alpha_4&amp;=e^{\pi i/4}\sqrt[4]{5}+e^{7\pi i/4}\sqrt[4]{5}\\
-&amp;=(\cos(\frac{\pi}{4})+i\sin(\frac{\pi}{4}))\sqrt[4]{5}+(\cos(\frac{7\pi}{4})+i\sin(\frac{7\pi}{4}))\sqrt[4]{5}\\
-&amp;=(\frac{\sqrt{2}}{2}+i\frac{\sqrt{2}}{2})\sqrt[4]{5}+(\frac{\sqrt{2}}{2}-i\frac{\sqrt{2}}{2})\sqrt[4]{5}\\
-&amp;=\sqrt{2}\sqrt[4]{5}\\
-&amp;=\sqrt[4]{20},
-\end{align}
+[K(r):F]=[K(r):K][K:F]=qn.
 \end{equation*}
 </div>
-<div class="para">and thus that <span class="process-math">\(F\subseteq E\text{.}\)</span>
+<div class="para">However, <span class="process-math">\([K(r):F]=[K(r):F(r)][F(r):F]\)</span> and so <span class="process-math">\(qn=md\)</span> for some <span class="process-math">\(m\in\Z\text{,}\)</span> so <span class="process-math">\(d|qn\text{.}\)</span> As <span class="process-math">\(\gcd(n,d)=1\)</span> we must have <span class="process-math">\(d|q\text{.}\)</span> But <span class="process-math">\(q\)</span> was defined to be the degree of <span class="process-math">\(g\text{,}\)</span> which divides <span class="process-math">\(f\text{.}\)</span> As <span class="process-math">\(d|q\)</span> and <span class="process-math">\(q\leq d\text{,}\)</span> we see that <span class="process-math">\(d=q\text{,}\)</span> so so <span class="process-math">\(f=kg\)</span> for some <span class="process-math">\(k\in F\text{.}\)</span> As irreducible polynomials multiplied by a constant are still irreducible, we see that <span class="process-math">\(f\)</span> is indeed irreducible in <span class="process-math">\(K[x]\text{.}\)</span>
 </div>
-</div> <div class="para">Note that <span class="process-math">\(i\)</span> is the root of <span class="process-math">\(x^2+1\text{,}\)</span> and since <span class="process-math">\(F\subseteq\R\)</span> and <span class="process-math">\(i\not\in\R\text{,}\)</span> we see that <span class="process-math">\(x^2+1\)</span> is irreducible in <span class="process-math">\(F\)</span> due to it having degree 2. As <span class="process-math">\(x^2+1\)</span> is monic and degree 2 we see its the minimal polynomial of <span class="process-math">\([F(i):F]=2\text{.}\)</span> By the Degree Formula, we see that <span class="process-math">\([F(i):\Q]=[F(i):F][F:\Q]=(2)(4)=8\text{.}\)</span>
-</div> <div class="para">Note that</div> <div class="para"><span class="process-math">\(\a_1 = e^{\pi i/4}\sqrt[4]{5} = \cos(\frac{\pi}{4})+i\sin(\frac{\pi}{4})\sqrt[4]{5} = \frac{\sqrt{2}}{2}\sqrt[4]{5}+i\frac{\sqrt{2}}{2}\sqrt[4]{5}=\sqrt[4]{20}(1+i)\text{,}\)</span></div> <div class="para"><span class="process-math">\(\a_2 = e^{3\pi i/4}\sqrt[4]{5} = \cos(\frac{3\pi}{4})+i\sin(\frac{3\pi}{4})\sqrt[4]{5} = \frac{-\sqrt{2}}{2}\sqrt[4]{5}-i\frac{\sqrt{2}}{2}\sqrt[4]{5}=\sqrt[4]{20}(-1+i)\text{,}\)</span></div> <div class="para">
-<span class="process-math">\(\a_3 = e^{5\pi i/4}\sqrt[4]{5} = \cos(\frac{5\pi}{4})+i\sin(\frac{5\pi}{4})\sqrt[4]{5} = \frac{\sqrt{2}}{2}\sqrt[4]{5}+i\frac{\sqrt{2}}{2}\sqrt[4]{5}=\sqrt[4]{20}(-1-i)\text{,}\)</span> and</div> <div class="para">
-<span class="process-math">\(\a_4 = e^{7\pi i/4}\sqrt[4]{5} = \cos(\frac{7\pi}{4})+i\sin(\frac{7\pi}{4})\sqrt[4]{5} = \frac{\sqrt{2}}{2}\sqrt[4]{5}-i\frac{\sqrt{2}}{2}\sqrt[4]{5}=\sqrt[4]{20}(1-i)\text{,}\)</span> all of which can be written with <span class="process-math">\(i\)</span> and <span class="process-math">\(\sqrt[4]{20}\text{.}\)</span> Thus <span class="process-math">\(E\subseteq F(i)\text{.}\)</span>
-</div> <div class="para logical">
-<div class="para">We already know that <span class="process-math">\(\alpha_1+\alpha_4=\sqrt[4]{20}\text{,}\)</span> and thus all that remains is to show that <span class="process-math">\(i\)</span> can be expressed in terms of the <span class="process-math">\(\alpha\text{.}\)</span> Observe</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{align}
-\alpha_1+\alpha_2&amp;=e^{\pi i/4}\sqrt[4]{5}+e^{3\pi i/4}\sqrt[4]{5}\\
-&amp;=(\cos(\frac{\pi}{4})+i\sin(\frac{\pi}{4}))\sqrt[4]{5}+(\cos(\frac{3\pi}{4})+i\sin(\frac{3\pi}{4}))\sqrt[4]{5}\\
-&amp;=(\frac{\sqrt{2}}{2}+i\frac{\sqrt{2}}{2})\sqrt[4]{5}+(\frac{\sqrt{2}}{2}+i\frac{\sqrt{2}}{2})\sqrt[4]{5}\\
-&amp;=\sqrt{2}\sqrt[4]{5}\\
-&amp;=\sqrt[4]{20}i,
-\end{align}
-\end{equation*}
-</div>
-<div class="para">and thus that <span class="process-math">\((\alpha_1+\alpha_2)(\alpha_1+\alpha_4)\inv=i\text{.}\)</span> Thus <span class="process-math">\(F(i)\subseteq E\text{,}\)</span> and <span class="process-math">\(F(i)=E\text{.}\)</span> Hence <span class="process-math">\([E:\Q]=8\text{.}\)</span>
-</div>
-</div></article></body>
+</div> <div class="para">Let <span class="process-math">\(p(x)\)</span> be a non-constant irreducible polynomial of degree <span class="process-math">\(d\)</span> in <span class="process-math">\(F[x]\text{.}\)</span> Let <span class="process-math">\(K=F[x]/p(x)\text{.}\)</span> Because <span class="process-math">\(p(x)\)</span> is irreducible and <span class="process-math">\(F[x]\)</span> is a PID, <span class="process-math">\((p(x))\)</span> is a maximal ideal. Thus <span class="process-math">\(K = F[x]/(p(x))\)</span> is a field <code class="code-inline tex2jax_ignore">[provisional cross-reference: empty]</code>, <span class="process-math">\([K:F]=d\text{,}\)</span> and <span class="process-math">\(x+p(x)\)</span> is a root of <span class="process-math">\(p(x)\)</span> in <span class="process-math">\(K\)</span> <code class="code-inline tex2jax_ignore">[provisional cross-reference: empty]</code>. Hence <span class="process-math">\(p(x)\)</span> is no longer irreducible by Theorem 2.2</div></article></body>
 </html>

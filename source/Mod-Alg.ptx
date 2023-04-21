@@ -315,9 +315,7 @@
     \usetikzlibrary{snakes}
     </latex-image-preamble>
 
-    <!--
-    <rename @element="identity" xml:lang="fr-FR">Exercise</rename>
-    -->
+    <rename element="insight">Mark</rename>  
 
   </docinfo>
   
@@ -377,7 +375,7 @@
               </p>
             </li>
           </ul>
-          I am very thankful to Eloísa, Alexandra, and Mark for sharing their .tex files with me, despite the fact that they had no idea what I would be doing with them. Fittingly, I would also like to acknowledge Eloísa for having an acknowledgement section in her lecture notes, yielding me a template for my own.
+          I am very thankful to Eloísa, Alexandra, and Mark for sharing their <em>.tex</em> files with me, despite the fact that they had no idea what I would be doing with them. Fittingly, I would also like to acknowledge Eloísa for having an acknowledgement section in her lecture notes, yielding a template for my own.
         </p>
 
         <p>And, as always, I reserve a speical thank you for <url href="https://sites.google.com/willamette.edu/emcnicholas/home" visual="">Erin McNicholas</url> and <url href="https://willamette.edu/undergraduate/math/faculty/johnson/index.html" visual="">Inga Johnson</url> for forever tinting the world of mathematics purple.</p>
@@ -424,14 +422,13 @@
                 </p>
               </statement>
             </definition>
-      
-            <remark><p>We often write <m>xy</m> instead of <m>x\cdot y</m> for simplicity.</p></remark>
-      
-            <definition xml:id="def-group">
-              <title>Group</title>
+
+            <p>Binary operations are especially useful when the posess some special properties, such as the following.</p>
+
+            <definition xml:id="def-semigroup">
               <statement>
                 <p>
-                  A <em>group</em> is a pair <m>(G, \cdot)</m> where <m>G</m> is a set and <m>\cdot</m> is a <xref text="title" ref="def-binop"/> on <m>G</m>, called <em>group multiplication</em>, satisfying the following properties:
+                  A <em>semigroup</em> is a pair <m>(G, \cdot)</m> where <m>G</m> is a set and <m>\cdot</m> is a <xref text="title" ref="def-binop"/> on <m>G</m> satisfying the following properties:
                   <ol>
                     <li>
                       <p>
@@ -446,40 +443,57 @@
                     </li>
                     <li>
                       <p>
+                        (Closure) for each <m>x,y\in G</m>, <m>xy\in G</m>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+            </definition>
+
+            <insight> <p>We often write <m>xy</m> instead of <m>x\cdot y</m> for simplicity.<fn>This is the one and only "Mark". All following "Marks" will be "Remarks".</fn></p></insight>
+
+            <remark><p>The third axiom in <xref ref="def-semigroup"/> is technically redundant. Closure is really part of the definition of a <xref ref="def-binop"/> on a set, and it is implicitly assumed whenever we consider such an operation. Howewever, redundancy is not a bad thing, and it never hurts to state it explicitely.</p></remark>
+      
+            <definition xml:id="def-group">
+              <title>Group</title>
+              <statement>
+                <p>
+                  A <em>group</em> is a semigroup <m>(G,\cdot)</m> with the following additional property:
+                  <ul>
+                    <li>
+                      <p>
                         (Inverses) for each <m>x\in G</m>, there is an element <m>y\in G</m> such that <m>xy=e=yx</m>.
                       </p>
                     </li>
-                    
-                  </ol>
-                  <notation><usage><m>(G,\cdot)</m></usage><description>a group <m>G</m> and its binary operation <m>\cdot</m></description></notation>          
+                  </ul>
+                  <notation><usage><m>(G,\cdot)</m></usage><description>a group or semigroup <m>G</m> and its binary operation <m>\cdot</m></description></notation>          
                 </p>
               </statement>
             </definition>
       
             <remark><p>Although a group is a pair, we will usually refer to the group by only naming the underlying set, <m>G</m>.</p></remark>
-      
-            <remark><p>We say that <q><m>S</m> is closed under the operation <m>\cdot</m></q>, when we want to emphasize that for any <m>x,y\in S</m> the result of the operation, <m>xy</m>, is an element of <m>S</m>. However note that closure is really part of the definition of a binary operation on a set, and it is implicitly assumed whenever we consider such an operation.</p></remark>
-      
+            
             <theorem xml:id="thm-properties-of-groups">
-              <title>Properties of Groups</title>
+              <title>Properties of (Semi)Groups</title>
               <statement>
                 <p>
                   <ol>
                     <li>
                       <p xml:id="part-unique-group-identity">
-                        (Unique Identity) In a group <m>G</m>, the element <m>e</m> satisfying the second axiom of <xref ref="def-group" /> is unique, and we thus refer to it as the <em>identity element</em> of <m>G</m>.
+                        (Unique Identity) In a semigroup <m>G</m>, the element <m>e</m> satisfying the second axiom of <xref ref="def-semigroup" /> is unique, and we thus refer to it as the <em>identity element</em> of <m>G</m>.
                       </p>
                     </li>
       
                     <li>
                       <p xml:id="part-unique-group-inverse">
-                        (Unique Inverses) In a group <m>G</m>, for each <m>x</m>, the element <m>y</m> satisfying the last axiom of <xref ref="def-group" /> is unique, and we thus refer to it as the <em>the inverse</em> of <m>x</m> and we will henceforth denote it by <m>x^{-1}</m>.
+                        (Unique Inverses) In a group <m>G</m>, for each <m>x</m>, the element <m>y</m> satisfying the additional axiom of <xref ref="def-group" /> is unique, and we thus refer to it as the <em>the inverse</em> of <m>x</m> and we will henceforth denote it by <m>x^{-1}</m>.
                       </p>
                     </li>
       
                     <li>
                       <p xml:id="part-cancellation">
-                        (Cancellation) if <m>xy = xz</m>, then <m>y=z</m>. Similarly, if <m>yx = zx</m>, then <m>y = z</m>.
+                        (Cancellation) In a group <m>G</m>, if <m>xy = xz</m> then <m>y=z</m>. Similarly, if <m>yx = zx</m> we have <m>y = z</m>.
                       </p>
                     </li>
                   </ol>
@@ -566,12 +580,12 @@
                         <me>
                           \operatorname{GL}_n(\C)=\{ \text{invertible } n \times n \;\text{matrices with entries in}\; \C\}.
                         </me> 
-                        By invertible I mean those matrices that have two-sided inverses, but in turns out that if an <m>n \times n</m> matrix has a left inverse then it it is automatically a right inverse too, and vice versa. Then <m>\operatorname{GL}_n(\C)</m> is a non-abelian group under matrix multiplication.
+                        By invertible I mean those matrices that have two-sided inverses, but in turns out that if an <m>n \times n</m> matrix has a left inverse then it it is automatically a right inverse too, and vice versa. Then <m>\operatorname{GL}_n(\C)</m> is a non-abelian group under matrix multiplication.<fn>In general this is true for any field <m>F</m>, whatever those are.</fn>
                         <notation><usage><m>\GL</m></usage><description>General linear group</description></notation> 
                       </p>
                     </li>
       
-                    <li> <title><m>\Z/(n)</m></title>
+                    <li> <title><m>\Z/n</m></title>
                       <p>
                         For any <m>n</m>, let <m>\mathbb{Z}/(n)</m> denote the integers modulo <m>n</m>. Then <m>(\mathbb{Z}/(n), +)</m> forms an abelian group where <m>+</m> denotes addition modulo <m>n</m>.
                       </p>
@@ -586,7 +600,7 @@
                 </p>
             </example>
 
-            <p>The following example illustrates a few important examples of something called a <xref text="title" ref="def-group-of-units"/>, which is defined explicitely in terms of rings, which are explored more generally in <xref ref="part-rings"/></p>
+            <p>The following example illustrates a few important examples of something called a <xref text="title" ref="def-group-of-units"/>, which is defined explicitely in terms of rings (whatever those are) in <xref ref="part-rings"/></p>
 
             <example xml:id="ex-group-of-units">
               <title>Groups of Units</title>
@@ -608,7 +622,7 @@
 
                       <li>
                         <p>
-                          For each <m>n\in\N</m>, the subset <m>\Z/(n)^\times=\{k\in\Z/(n)|\gcd(k,n)=1\}</m> of <m>\Z/(n)</m>.
+                          For each <m>n\in\N</m>, the subset <m>\Z/n^\times=\{k\in\Z/n|\gcd(k,n)=1\}</m> of <m>\Z/n</m>.
                         </p>
                       </li>
                     </ol>
@@ -729,6 +743,8 @@
                 </p>
               </statement>
             </definition>
+
+            <remark><p>Some authors use the notaion <m>\#G</m> or <m>o(G)</m> to refer to the order of a group. We won't name names, but they know who they are.</p></remark>
       
             <example xml:id="ex-order">
               <p>
@@ -741,7 +757,7 @@
       
                   <li>
                     <p>
-                      <m>|1|=n</m> in <m>\Z/(n)</m>
+                      <m>|1|=n</m> in <m>\Z/n</m>
                     </p>
                   </li>
       
@@ -753,7 +769,7 @@
 
                   <li>
                     <p>
-                      In the additve group <m>\Z/(6)</m>, the element <m>2</m> has order <m>3</m>, as <m>2+2=4</m> and <m>2+2+2=0</m>.
+                      In the additve group <m>\Z/6</m>, the element <m>2</m> has order <m>3</m>, as <m>2+2=4</m> and <m>2+2+2=0</m>.
                     </p>
                   </li>
                 </ol>
@@ -790,26 +806,7 @@
               </statement>
             </theorem>
       
-            <lemma xml:id="lem-order-lemma">
-              <statement>
-                <p>
-                  Let <m>G</m> be a group. Suppose <m>g^k=g^m</m> and <m>k&lt;m</m>.
-                  <ol>
-                    <li>
-                      <p>
-                        then <m>g^{m-k}=e</m>
-                      </p>
-                    </li>
-      
-                    <li>
-                      <p>
-                        then <m>|g|\leq m-k</m>
-                      </p>
-                    </li>
-                  </ol>
-                </p>
-              </statement>
-            </lemma>
+            
         
             <!--
             <proposition xml:id="prop-orderelgp">
@@ -848,7 +845,7 @@
               </statement>
             </theorem>
       
-            <lemma xml:id="lem-group-element-order">
+            <lemma xml:id="lem-order-divisor">
               <statement>
                 <p>
                   If <m>x^m = e</m> then <m>|x| \mid m</m>.
@@ -856,8 +853,7 @@
               </statement>
             </lemma>
 
-            <p>Alas, here we must commit a heinous sin in the world of mathematics: ending a section on a lemma. It goes against everything a lemma stands for, yet we currently lack the tools necessary to take the consequences of order to their logical conclusion. Eventually the long and winding road of group theory will lead us to <xref ref="sec-cosets"/> and the stronghold of <xref text="title" ref="thm-lagrange"/>, one of the quintessential results of the field. However, <xref provisional="lemma"/> will be back long before then in a delightfully cyclic fashion...</p>
-
+            <remark><p>A brief note on notation before we progress to the exercises and beyond. At various points throughout this text, the author may use "mathcal" notation for definitions that do not normally require it (such as <m>\G</m> for a group, <m>\R</m> for a ring, etc.) In the realm of higher mathematics, this is what is known as a <em>typo</em>, and should be reported to the proper authorities as soon as possible.</p></remark>
           </subsection>
     
           <exercises>
@@ -937,7 +933,7 @@
     
                       <li>
                         <p>
-                          <m>(\Z/(n),\times)</m> for all <m>n&lt;1</m>
+                          <m>(\Z/n,\times)</m> for all <m>n&lt;1</m>
                         </p>
                       </li>
                     </ol>
@@ -946,10 +942,10 @@
               </exercise>
 
               <exercise xml:id="exe-group-of-units-in-zp">
-                <title><m>\Z/(p)^\times</m></title>
+                <title><m>\Z/p^\times</m></title>
 
                 <statement>
-                  <p>Prove that <m>\Z/(p)^\times=\mathbb{Z}/(p)\setminus\{0\}</m></p>
+                  <p>Prove that <m>\Z/p^\times=\mathbb{Z}/(p)\setminus\{0\}</m></p>
                 </statement>
                 
               </exercise>
@@ -1001,7 +997,7 @@
                 <title>Left and Right Inverses</title>
                 <statement>
                   <p>
-                    Give an example of a pair <m>(G,\cdot)</m> that satisfies axioms 1 and 2 of <xref ref="def-group" /> and an element of <m>G</m> that has a <em>left</em> inverse but not a <em>right</em> inverse.
+                    Give an example of a semigroup <m>(G,\cdot)</m> and an element of <m>G</m> that has a <em>left</em> inverse but not a <em>right</em> inverse.
                   </p>
                 </statement>
                 <solution>
@@ -1085,6 +1081,42 @@
     
               </exercise>
 
+              <exercise xml:id="lem-order-lemma">
+                <title>The Fires of M-ordor</title>
+                <statement>
+                  <p>
+                    Let <m>G</m> be a group. Suppose <m>g^k=g^m</m> and <m>k&lt;m</m>.
+                    <ol>
+                      <li>
+                        <p>
+                          then <m>g^{m-k}=e</m>
+                        </p>
+                      </li>
+        
+                      <li>
+                        <p>
+                          then <m>|g|\leq m-k</m>
+                        </p>
+                      </li>
+                    </ol>
+                  </p>
+                </statement>
+  
+                <solution>
+                  <p>
+                    Let <m>n = |x|</m>. We have <m>m = nq + r</m> for some <m>0 \leq r &lt; n</m> by the <xref text="title" provisional="division algorithm"/>. We have <m>x^r = (x^n)^qx^r = x^m = e</m> and so, by the definition of <xref text="title" ref="def-order"/>, it must be that <m>r = 0</m>
+                  </p>
+                </solution>
+              </exercise>
+
+              <exercise xml:id="exe-prime-order">
+                <statement>
+                  <p>
+                    If <m>g^p=e</m> for <m>g\neq e</m> and <m>p</m> prime, then <m>|g|=p</m>.
+                  </p>
+                </statement>
+              </exercise>
+
               <exercise xml:id="exe-order-and-gcd">
                 <title>Order Hors d'oeuvre</title>
                 <statement>
@@ -1134,64 +1166,46 @@
               <title>Isometry and Symmetry</title>
               <statement>
                 <p>
-                  For any integer <m>n \geq 3</m>, let <m>P_n</m> denote a regular <m>n</m>-gon.
-      
-                  An <em>isometry</em> of the plane is a function <m>f: {\mathbb{R}}^2 \to {\mathbb{R}}^2</m> that is a bijection and preserves the Euclideal distance <m>(d(f(A),f(B))=d(A,B)</m> for any <m>A,B\in {\mathbb{R}}^2</m>).
-      
-                  A <em>symmetry</em> of <m>P_n</m> is an isometry that maps <m>P_n</m> to itself.
+                  For any integer <m>n \geq 3</m>, let <m>P_n</m> denote a regular <m>n</m>-gon. An <em>isometry</em> of the plane is a function <m>f: {\mathbb{R}}^2 \to {\mathbb{R}}^2</m> that is a bijection and preserves the Euclideal distance <m>(d(f(A),f(B))=d(A,B)</m> for any <m>A,B\in {\mathbb{R}}^2</m>). A <em>symmetry</em> of <m>P_n</m> is an isometry that maps <m>P_n</m> to itself.
                 </p>
               </statement>
             </definition>
       
-            <remark>
-              <p>
-                By the latter I don't mean that <m>f</m> fixes each of the points of <m>P_n</m>, but rather that <m>f(P_n) = P_n</m>, that is every point of <m>P_n</m> is mapped to a (possibly different) point of <m>P_n</m> and every point of <m>P_n</m> is the image of some point in <m>P_n</m> via <m>f</m>. It is clear that the composition of two symmetries of <m>P_n</m> is again a symmetry of <m>P_n</m>, so that composition is a binary operation on <m>D_n</m>.
-              </p>
-            </remark>
+            <remark><p>By the latter I don't mean that <m>f</m> fixes each of the points of <m>P_n</m>, but rather that <m>f(P_n) = P_n</m>, that is every point of <m>P_n</m> is mapped to a (possibly different) point of <m>P_n</m> and every point of <m>P_n</m> is the image of some point in <m>P_n</m> via <m>f</m>. The composition of two symmetries of <m>P_n</m> is again a symmetry of <m>P_n</m>, (a fact you may verify in <xref ref="exe-common-group-verifications"/> if you're feeling unconvinced).</p></remark>
       
             <definition xml:id="def-d2n">
               <title>Dihedral Group</title>
               <statement>
                 <p>
-                  The <em>dihedral group</em> <m>D_{2n}</m> is the set of symmetries of the regular <m>n</m>-gon <m>P_n</m> equipped with the binary operation given by composition. 
+                  The <em>dihedral group</em> <m>D_{2n}</m> is the set of symmetries of the regular <m>n</m>-gon <m>P_n</m> equipped with the binary operation given by composition.
                   <notation><usage><m>D_{2n}</m></usage><description>Dihedral Group</description></notation> 
                 </p>
               </statement>
             </definition>
 
-            <lemma xml:id="lem-d2n-elements">
-              <statement>
+            <example xml:id="ex-d2n-elements">
               <p>
                 Assume that the regular <m>n</m>-gon <m>P_n</m> is drawn in the plane with its center at the origin and one vertex on the <m>x</m> axis. 
-              </p>
+              
+              <ol>
+                <li>
+                  <p>
+                    If <m>r</m> denotes rotation about the origin by <m>\frac{2\pi}{n}</m> radians counter-clockwise, then <m>r \in D_{2n}</m>. It's inverse is rotation by <m>\frac{2\pi}{n}</m> clock-wise. 
+                  </p>
+                </li>
 
-              <p>
-                If <m>r</m> denotes rotation about the origin by <m>\frac{2\pi}{n}</m> radians counter-clockwise, then <m>r \in D_{2n}</m>. It's inverse is rotation by <m>2 \pi/n</m> clock-wise. 
+                <li>
+                  <p>
+                    For another example, for any line of symmetry of <m>P_n</m>, reflection about that line gives an element of <m>D_{2n}</m>. By our convention for how to draw <m>P_n</m>, the <m>x</m>-axis is a line of symmetry for <m>P_n</m>, and we let <m>s</m> denote reflection about the <m>x</m>-axis.
+                  </p>
+                </li>
+              </ol>
+            </p>
+            </example>
 
-              </p>
-
-              <p>
-                For another example, for any line of symmetry of <m>P_n</m>, reflection about that line gives an element of <m>D_{2n}</m>. By our convention for how to draw <m>P_n</m>, the <m>x</m>-axis is a line of symmetry for <m>P_n</m>, and we let <m>s</m> denote reflection about the <m>x</m>-axis.
-              </p>
+            <remark><p>We see<m>|r|=n</m> and <m>|s|=2</m>, which may make some intuitive sense. The fact that <m>sr</m> is a reflection and hence that <m>srsr=1_{{\mathbb{R}}^2}</m> may be slightly less aparent, </p></remark>
       
-              <p>
-                <ol>
-                  <li>
-                    <p>
-                      <m>|r|=n</m> and <m>|s|=2</m>.
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      <m>sr</m> is a reflection and hence that <m>srsr=1_{{\mathbb{R}}^2}</m>.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-            </lemma>
-      
-            <theorem xml:id="thm-d2n-order">
+            <proposition xml:id="thm-d2n-order">
               <statement>
                 <p>
                   <ol>
@@ -1208,7 +1222,25 @@
                   </ol>
                 </p>
               </statement>
-            </theorem>
+
+              <proof>
+                <p>
+                  We will use some geometric notions freely without complete justification. For example, we use that if an isometry of <m>{\mathbb{R}}^2</m> fixes two points <m>A</m> and <m>B</m>, then it is either the identity element or it is reflection about the line <m>AB</m>. We also use that every element of <m>D_{2n}</m> maps the origin to itself (since the origin is the center of mass of <m>P_n</m>). Finally, we use that every isometry of <m>{\mathbb{R}}^2</m> is either <em>orientation preserving</em> or <em>orientation reversing</em>.
+                </p>
+
+                <p>
+                  Label the vertices of <m>P_n</m> as <m>V_0, \dots, V_{n-1}</m>, with <m>V_0</m> being the vertex located on the positive <m>s</m>-axis, <m>V_1</m> being the vertex adjacent to <m>V_0</m> in the counter-clockwise direction, etc. We have <m>r(V_0) = V_1</m>, <m>r(V_1) = V_2</m>, etc., and so <m>r^j(V_0) = V_{j \pmod{n}}</m>. Moreover any isometry must send a vertex to a vertex because the vertices are the points on <m>P_n</m> at largest distance from the origin.
+                </p>
+        
+                <p>
+                  Let <m>\alpha</m> be an arbitrary symmetry of <m>P_n</m>. Then <m>\alpha(V_0) =V_ j</m> for some <m>0 \leq j \leq n-1</m>. Then the element <m>r^{-j}\alpha</m> fixes <m>V_0</m> and the origin, and hence either <m>r^{-j}\alpha= e</m> or <m>r^{-j}\alpha= s</m> from the discussion above. We get that <m>\alpha= r^j</m> or <m>\alpha= r^js</m>, proving the first assertion.
+                </p>
+        
+                <p>
+                  Since <m>r^j(V_0) = V_{j \pmod{n}}</m>, we see that if <m>r^j = r^i</m> for <m>0 \leq i,j \leq n-1</m>, then <m>i=j</m>. We have <m>r^js \ne r^i</m> for any <m>i,j</m> since the former is orientation reversing and the latter is orientation preserving. If <m>r^is = r^js</m> for <m>0 \leq i,j \leq n-1</m>, then upon multiplying on the left of <m>s^{-1}</m> we get <m>i=j</m>.
+                </p>
+              </proof>
+            </proposition>
       
           </subsection>
       
@@ -1223,7 +1255,7 @@
               <title>Permutation</title>
               <statement>
                 <p>
-                  A <em>permutation</em> of a set <m>X</m> is a bijective function <m>\sigma:X\to X</m>.
+                  A <em>permutation</em> of a set <m>X</m> is a bijective function <m>\sigma:X\to X</m>. The set of all permutations of a set <m>X</m> is denoted <m>\Perm(X)</m>.
                 </p>
               </statement>
             </definition>
@@ -1232,26 +1264,45 @@
               <title>Symmetric Group</title>
               <statement>
                 <p>
-                  For any <m>n\in\N</m>, the <em>symmetric group</em> is the set <m>S_n</m> of all permutations of the set <m>\{1,\dots,n\}</m> equipped with the composition of functions as its binary operation.
+                  For any <m>n\in\N</m>, the <em>symmetric group</em> is the set <m>S_n=\Perm(\{1,\dots,n\})</m> equipped with the composition of functions as its binary operation.
                   <notation><usage><m>S_n</m></usage><description>Symmetric group</description></notation> 
-                </p>
-
-                <p>
-                  We can write an element <m>\sigma</m> of <m>S_n</m> as a table of values: 
-                  <me>
-                    \begin{pmatrix} 
-                      1 &amp; 2 &amp; 3 &amp; \cdots &amp; n \\
-                      \sigma(1) &amp; \sigma(2) &amp; \sigma(3) &amp; \cdots &amp; \sigma(n)
-                    \end{pmatrix}
-                  </me>
                 </p>
               </statement>
             </definition>
-      
-            <remark>
+
+            <paragraphs>
+              <title>Notation: Cycle Notation</title>
+
               <p>
-                For any finite set <m>|X|=n</m>, we may think of <m>S_n</m> as the <em>permutation group</em> of <m>X</m>, which is sometimes written <m>\operatorname{Perm}(X)</m>.
+                We can write an element <m>\sigma</m> of <m>S_n</m> as a table of values: 
+                <me>
+                  \begin{pmatrix} 
+                    1 &amp; 2 &amp; 3 &amp; \cdots &amp; n \\
+                    \sigma(1) &amp; \sigma(2) &amp; \sigma(3) &amp; \cdots &amp; \sigma(n)
+                  \end{pmatrix}
+                </me>
               </p>
+
+              <p>
+                It is customary to use <em>cycle notation</em> for permutations. If <m>i_1, \dots, i_m</m> are distinct integers between <m>1</m> and <m>n</m>, then <m>(i_1 \, i_2 \, \dots, i_m)</m> denote the element of <m>S_n</m> that send <m>i_1</m> to <m>i_2</m>, <m>i_2</m> to <m>i_3, \dots</m>, <m>i_{m-1}</m> to <m>i_m</m> and <m>i_m</m> to <m>i_1</m>, and which fixes all elements of <m>\{1, \dots, n\} \setminus \{i_1, \dots, i_m\}</m>.
+              </p>
+              
+            </paragraphs>
+
+            <example>
+              <p>
+                For eample <m>(1 \, 3 \, 7)</m>, regarded as an element of <m>S_{13}</m> sends <m>1</m> to <m>3</m>, <m>3</m> to <m>7</m> and <m>7</m> to <m>1</m>, and it fixes <m>2,4,5,7,8,9,10,11,12,13</m>. (Note that the value of <m>n</m> in cycle notation is sometime ambiguous.)
+              </p>
+            </example>
+
+            <example>
+              <p>
+                We compose cycles the same way we compose functions. So, for example <me>(1 \, 3 \, 7) (2 \, 3 \, 5) = (1 \, 3 \, 5 \, 2 \, \,7).</me> This equation might lead you to the false belief that every element of <m>S_n</m> is a cycle. This is not true — for example, the product <m>(1 \, 2) (3 \, 4)</m> cannot be written as a single cycle. What is true is that every element of <m>S_n</m> is uniquely (up to ordering) the product of disjoint cycles. We'll prove that soon.
+              </p>
+            </example>
+
+            <remark>
+              <p> <m>|S_n|=n!</m>, which you may verify in <xref ref="exe-sn-order"/> </p>
             </remark>
       
             <definition xml:id="def-cycle">
@@ -1369,7 +1420,7 @@
                   <ol>
                     <li>
                       <p>
-                        The dihedral group <m>D_{2n}</m>
+                        The dihedral group <m>D_{2n}</m> (you may assume without proof that isometries are bijective and that their inverses are isometries themselves, unless you're feeling brave.)
                       </p>
                     </li>
         
@@ -1612,7 +1663,7 @@
 
                   <li>
                     <p>
-                      <m>\{1,3\}\leq \Z/(8)^\times</m>
+                      <m>\{1,3\}\leq \Z/8^\times</m>
                     </p>
                   </li>
 
@@ -2052,47 +2103,6 @@
               </p>
               <attribution>Herbert Spencer</attribution>
             </blockquote>
-            
-            <definition xml:id="def-groupgenerate">
-              <title>Generating Set</title>
-              <statement>
-                <p>
-                  A subset <m>S</m> of a group <m>G</m> is said to <em>generate</em> <m>G</m> if every element of <m>G</m> is equal to a product of elements of <m>S</m> and their inverses (with repetitions allowed). 
-                </p>
-              </statement>
-            </definition>
-        
-            <proposition xml:id="prop-d2n-generation">
-              <statement>
-                <p>
-                  <ol>
-                    <li>
-                      <p>
-                        <m>D_{2n}</m> is generated by <m>r</m> and any reflection. 
-                      </p>
-                    </li>
-          
-                    <li>
-                      <p>
-                        If <m>p\ge 3</m> is prime then <m>D_{2p}</m> is generated by any two distinct reflections.               
-                      </p>
-                    </li>
-                  </ol>
-                </p>
-              </statement>
-            </proposition>
-
-            <remark><p>Note that in <xref ref="prop-cycledecomp"/> we showed <m>S_n</m> is generated by transpositions. However, generators need not be unique.</p></remark>
-          
-            <theorem xml:id="thm-generating-sn">
-              <statement>
-                <p>
-                  For <m>n\ge 2</m> prove that <m>S_n</m> is generated by <m>(12)</m> and the <m>n</m>-cycle <m>(12\cdots n)</m>.
-                </p>
-              </statement>
-            </theorem>
-        
-            <remark><p>Funnily enough, this theorem will prove surprisingly useful all the way down in <xref text="title" ref="ch-galois"/>. </p></remark>
           
             <definition xml:id="def-gensubgp">
               <title>Generated Subgroup</title>
@@ -2108,31 +2118,6 @@
               </statement>
             </definition>
 
-            <p>A nice property of generated subgroups is that once you've located the generators, you've found the whole group:</p>
-
-            <proposition xml:id="prop-generators-of-subgroup">
-              <title>Generators of Subgroups</title>
-              <statement>
-                <p>
-                  If <m>H</m> is a subgroup of <m>G</m> that contains <m>S</m>, then <m>\igen S\leq H</m>.
-                </p>
-              </statement>
-            </proposition>
-      
-            <example xml:id="ex-commutator-subgroup">
-              <title>Commutator Subgroup</title>
-              <p>
-                Let <m>G</m> be a group, <m>S=\{aba\inv b\inv|a,b\in G\}</m>, and <m>G'=\igen S</m>. This is known as the <term>commutator subgroup</term> of <m>G</m>.
-              <notation><usage><m>G'</m></usage><description> the commutator subgroup <m>\cdot</m></description></notation>          
-              </p>
-            </example>
-      
-            <remark>
-              <p>
-                Commutator subgroups prove invaluable when it comes to something called <em>abelianization</em>, which is, loosely speaking, a way of "modding out" the non-commutative part of <m>G</m> to obtain a new group that is abelian. This is seen rigorously in <xref ref="ex-abelianization"/>
-              </p>
-            </remark>
-      
             <lemma xml:id="lem-gensubgp">
               <title>Elements of <m>\igen X</m></title>
               <statement>
@@ -2187,6 +2172,8 @@
             </statement>
             </corollary>
 
+            <p>Lets look at some examples for context.</p>
+
             <example>
               <statement>
                 <p>
@@ -2194,7 +2181,25 @@
                 </p>
               </statement>
             </example>
-      
+
+            <example>
+              <p>
+                <m>\igen{r,s}=D_{2n}</m>
+              </p>
+            </example>
+
+            <remark><p>Note that in <xref ref="prop-cycledecomp"/> we showed <m>S_n</m> is generated by transpositions. However, generators need not be unique.</p></remark>
+
+            <theorem xml:id="thm-generating-sn">
+              <statement>
+                <p>
+                  For <m>n\ge 2</m> prove that <m>S_n</m> is generated by <m>(12)</m> and the <m>n</m>-cycle <m>(12\cdots n)</m>.
+                </p>
+              </statement>
+            </theorem>
+        
+            <remark><p>Funnily enough, this theorem will prove surprisingly useful all the way down in <xref text="title" ref="ch-galois"/>. </p></remark>
+
             <proposition xml:id="prop-generating-an">
               <title>Generating <m>A_n</m></title>
               <statement>
@@ -2207,6 +2212,31 @@
               </statement>
             </proposition>
       
+            <example xml:id="ex-commutator-subgroup">
+              <title>Commutator Subgroup</title>
+              <p>
+                Let <m>G</m> be a group, <m>S=\{aba\inv b\inv|a,b\in G\}</m>, and <m>G'=\igen S</m>. This is known as the <term>commutator subgroup</term> of <m>G</m>.
+              <notation><usage><m>G'</m></usage><description> the commutator subgroup <m>\cdot</m></description></notation>          
+              </p>
+            </example>
+      
+            <remark>
+              <p>
+                Commutator subgroups prove invaluable when it comes to something called <em>abelianization</em>, which is, loosely speaking, a way of "modding out" the non-commutative part of <m>G</m> to obtain a new group that is abelian. This is seen rigorously in <xref ref="ex-abelianization"/>
+              </p>
+            </remark>
+
+            <p>A nice property of generated subgroups is that once you've located the generators, you've found the whole group:</p>
+
+            <proposition xml:id="prop-generators-of-subgroup">
+              <title>Generators of Subgroups</title>
+              <statement>
+                <p>
+                  If <m>H</m> is a subgroup of <m>G</m> that contains <m>S</m>, then <m>\igen S\leq H</m>.
+                </p>
+              </statement>
+            </proposition>
+
           </subsection>
       
           <subsection xml:id="subsec-cyclic-gp">
@@ -2245,7 +2275,7 @@
 
                   <li>
                     <p>
-                      <m>(\Z/(n),+)</m> is a cyclic group.
+                      <m>(\Z/n,+)</m> is a cyclic group.
                     </p>
                   </li>
 
@@ -2379,21 +2409,18 @@
           </subsection>
       
           <exercises>
-            <exercisegroup> <title>Computations and Examples</title>
+            <exercisegroup> <title>Examples and Specifics</title>
               
-              <introduction>
-                <p>
-                </p>
-              </introduction>
+              <introduction><p></p></introduction>
 
-              <exercise>
+              <exercise xml:id="exe-cyclic-verifications">
                 <title>Cyclic Group Verifications</title>
                 <p>
                   Verify that each of the groups from <xref ref="ex-cyclic-examples"/> are indeed cyclic groups.
                 </p>
               </exercise>
 
-              <exercise>
+              <exercise xml:id="exe-not-cyclic">
                 <title>Not Quite Cyclic Groups</title>
                 <p>
                   <ol>
@@ -2405,7 +2432,7 @@
         
                     <li>
                       <p>
-                        Prove that <m>\operatorname{GL}_2(\mathbb Z/(2))</m> is not cyclic.
+                        Prove that <m>\operatorname{GL}_2(\mathbb Z/2)</m> is not cyclic.
                       </p>
                     </li>
                   </ol>
@@ -2413,7 +2440,56 @@
         
               </exercise>
 
-              <exercise>
+              <exercise xml:id="exe-d2p">
+                <title>Generating <m>D_{2p}</m></title>
+                <statement>
+                <p>
+                  Let <m>p\ge 3</m> be prime and <m>r,r'</m> be any two distinct reflections in <m>D_{2p}</m>. Then <m>\igen{r,r'}=D_{2p}</m>.
+                </p>
+              </statement>
+              </exercise>
+
+              <exercise xml:id="generating-gl">
+                <title>Generating <m>\GL_n(\R)</m></title>
+                <statement>
+                <p>
+                  For any integer <m>n \geq 1</m>, the set of column vectors <m>e_i</m> consisting of <m>1</m> in the <m>i\th</m> row and <m>0</m> elsewhere generate <m>\GL_n(\R)</m>. As you may recall from a linear algebra course, these are called the <em>elementary matrices</em>. (Bonus: what subgroup do the <q>type I</q> elementary matrices generate?)
+                </p>
+              </statement>
+              </exercise>
+      
+            </exercisegroup>
+      
+            <exercisegroup> <title>Properties and Future Lemmas</title>
+              
+              <introduction><p></p></introduction>
+
+              <exercise xml:id="exe-self-sufficient">
+                <title>Self Sufficent</title>
+                <p>
+                  Show that <m>\igen G=G</m> for any group <m>G</m>.
+                </p>
+        
+              </exercise>
+
+              <exercise xml:id="exe-non-unique-cyclic-generators">
+                <title>Cyclic Generators Need not be Unique</title>
+                
+                <statement>
+                  <p>
+                    Let <m>G=\langle x\rangle</m> be a cyclic group. Then <m>G=\langle x^{-1}\rangle</m>.
+                  </p>
+                </statement>
+              </exercise>
+
+              <exercise xml:id="exe-cyclic-criteria">
+                <title>Criteria for Cyclic Generators</title>
+                <p>
+                  Let <m>G=\igen x</m> be a cyclic group of order <m>n</m>, and let <m>y=x^m\in G</m>. Then <m>y</m> generates <m>G</m> if and only if <m>\gcd(n,m)=1</m>.
+                </p>
+              </exercise>
+
+              <exercise xml:id="exe-small-cyclic">
                 <title>Cyclic Groups of Small Order</title>
                 <statement>
                   <p>
@@ -2437,46 +2513,9 @@
       
             </exercisegroup>
       
-            <exercisegroup> <title>Properties and Future Lemmas</title>
-              
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-
-              <exercise>
-                <title>Self Sufficent</title>
-                <p>
-                  Show that <m>G</m> is a generating set for <m>G</m> for any group <m>G</m>.
-                </p>
-        
-              </exercise>
-
-              <exercise xml:id="exe-non-unique-cyclic-generators">
-                <title>Cyclic Generators Need not be Unique</title>
-                
-                <statement>
-                  <p>
-                    Let <m>G=\langle x\rangle</m> be a cyclic group. Then <m>G=\langle x^{-1}\rangle</m>.
-                  </p>
-                </statement>
-              </exercise>
-
-              <exercise>
-                <title>Criteria for Cyclic Generators</title>
-                <p>
-                  Let <m>G=\igen x</m> be a cyclic group of order <m>n</m>, and let <m>y=x^m\in G</m>. Then <m>y</m> generates <m>G</m> if and only if <m>\gcd(n,m)=1</m>.
-                </p>
-              </exercise>
-      
-            </exercisegroup>
-      
             <exercisegroup>  <title>Qualifying Exam Problems</title>
              
-              <introduction>
-                <p>
-                </p>
-              </introduction>
+              <introduction><p></p></introduction>
       
               <exercise>
                 <p>
@@ -2556,7 +2595,7 @@
 
                   <li>
                     <p>
-                      The function <m>\varphi:\Z\to\Z/(5)</m> given by <m>\varphi(a)=[a]</m> is a homomorphism.
+                      The function <m>\varphi:\Z\to\Z/5</m> given by <m>\varphi(a)=[a]</m> is a homomorphism.
                     </p>
                   </li>
 
@@ -2616,6 +2655,49 @@
                 </p>
               </statement>
             </theorem>
+
+            <p>Here is a proposition that might appear to come out of the blue.</p>
+
+            <proposition xml:id="prop-d2n-mapping">
+              <statement>
+                <p>
+                  If <m>G</m> is a group and <m>x,y \in G</m> are elements such that <m>x^n = e</m>, <m>y^2 = e</m>, and <m>yxy = x^{-1}</m> for some integer <m>n \geq 3</m>, then there exists a unique group homomorphism <m>f: D_{2n} \to G</m> such that <m>f(r) = x</m> and <m>f(s) = y</m>.
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  Recall that the elements of <m>D_{2n}</m> are <m>e, r, \dots, r^{n-1}, s, rs, \dots, r^{n-1}s</m> and that this list has no repetitions. Given <m>G</m>, <m>x</m>, and <m>y</m>, if <m>f</m> exists it is clearly unique, since we have <m>f(r^i) = f(r)^i = x^i</m> and <m>f(r^is) = f(r)^if(s) = x^iy</m>, so that the value of <m>f</m> on every element of <m>G</m> is determined by its values on just <m>x</m> and <m>y</m>.
+                </p>
+
+                <p>
+                  To prove existence, define a function <m>f: D_{2n} \to G</m> by <m>f(r^i) = x^i</m> for <m>0 \leq i \leq n-1</m> and <m>f(r^is) = x^is</m> for <m>0 \leq i \leq n-1</m>. Then one may painstakenly checks that <m>f(ab) = f(a)f(b)</m> in each of the cases <m>a = r^j, b= r^i</m> or <m>a = r^j, b = r^is</m> or <m>a = r^js, b = r^i</m> or <m>a = r^js, b = r^is</m>. For example, using that <m>sr^i = r^{-i}s</m>, we have <me>f((r^js)(r^i)) = f(r^j(sr^i) = f(r^{j-i}s) = x^{j-i}y</me> and <me>f(r^js)f(r^i)) = x^jy x^i =x^j x^{-i} y = x^{j-i} y.</me> For the last string of equalities, we have used that, since <m>yxy = x^{-1}</m>, we have <m>yx^i = x^{-i} y</m> in <m>G</m> too. Note also that <m>j-i</m> might be negative, in which case <m>r^{j-i}</m> is really <m>r^{n+j-i}</m> and so really we would have <m>f(r^{j-i}s) = x^{n+j-i}y</m>. But this is OK since <m>x^{j-i} = x^{n+j-i}</m> too, since <m>x^n = e</m>.
+                </p>
+
+                <p>
+                  I'll skip the verifications of the other three cases.
+                </p>
+              </proof>
+            </proposition>
+
+            <p>Let's take a peak at what this might look like in practice.</p>
+
+            <example>
+              <p>
+                Consider the group <m>\operatorname{GL}_2({\mathbb{R}})</m> and elements <me>x = 
+                  \begin{bmatrix}
+                  \cos(2 \pi/n)  &amp; - \sin(2 \pi/n) \\ 
+                  \sin(2 \pi/n)  &amp; \cos(2 \pi/n) \\
+                  \end{bmatrix}
+                  { \text{ and } }
+                  y = 
+                  \begin{bmatrix}
+                  -1 &amp; 0 \\
+                  0 &amp; 1 
+                  \end{bmatrix}.</me> Then one may check that <m>x^n = I_2</m>, <m>y^2 = I_2</m> and <m>yxyx = I_2</m>. <xref ref="prop-d2n-mapping"/> gives that there is a group homomorphism <m>f: D_{2n} \to 
+                  \operatorname{GL}_2({\mathbb{R}})</m> such that <m>f(r) = x</m> and <m>f(s) = y</m>. This is not at all surprising, since the matrix <m>x</m> represents rotation by <m>2 \pi/n</m> radians counter-clockwise and <m>y</m> represents reflection about the <m>y</m>-axis. Indeed, one could define <m>D_{2n}</m> as the subgroup of <m>\operatorname{GL}_2({\mathbb{R}})</m> consisting of elements <m>1, x, \dots, x^{n-1}, y, xy \cdots, x^{n-1}y</m>.
+              </p>
+            </example>
 
           </subsection>
 
@@ -2747,7 +2829,7 @@
       
                     <li>
                       <p>
-                        The function <m>f: \Z/(6)\to\Z/(3)</m> defined by <m>f([n]_6) = [n]_3</m>
+                        The function <m>f: \Z/6\to\Z/3</m> defined by <m>f([n]_6) = [n]_3</m>
                       </p>
                     </li>
                   </ol>
@@ -2769,6 +2851,20 @@
                     </li>
                   </ol>
                 </p>
+              </exercise>
+
+              <exercise xml:id="exe-d12-d6">
+                <statement>
+                  <p>
+                    Let <m>r,s \in D_{12}</m> and <m>r',s' \in D_6</m>, in order to distinguish them. Find a homomorphism from <m>D_{12}</m> to <m>D_6</m> with <m>f(r) = r', f(s) = s'</m> and prove that it is unique.
+                  </p>
+                </statement>
+
+                <solution>
+                  <p>
+                    <xref ref="prop-d2n-mapping"/> gives a group homomorhism <m>f: D_{12} \to D_6</m>. Let <m>r,s \in D_{12}</m> and <m>r',s' \in D_6</m>, in order to distinguish them. Then since <m>(r')^6 = ((r')^3)^2 = e^2= e</m>, there is a unique homomorphism <m>f</m> from <m>D_{12}</m> to <m>D_6</m> with <m>f(r) = r', f(s) = s'</m>. For example, <m>f(r^3s) = e</m>.
+                  </p>
+                </solution>
               </exercise>
           
             </exercisegroup>
@@ -3055,7 +3151,7 @@
             <example xml:id="ex-z-aut">
               <title><m>\Aut(\Z)</m></title>
               <p>
-                <m>\Aut(\Z)\cong\Z/(2)</m>
+                <m>\Aut(\Z)\cong\Z/2</m>
               </p>
             </example>
       
@@ -3521,6 +3617,10 @@
                 </p>
               </proof>
             </lemma>
+
+            <p>
+              As with any partition of a set, the collection of left cosets of <m>H</m> in <m>G</m> determine an equivalence relation on <m>G</m>, and similarly for the collection of right cosets.
+            </p>
       
             <corollary xml:id="cor-left-right-cosets">
               <statement>
@@ -3534,11 +3634,6 @@
                   </me> 
                   In particular the number of left cosets of <m>H</m> in <m>G</m> is equal to the number of right cosets of <m>H</m> in <m>G</m>.
                 </p>
-      
-                <p>
-                  Furthermore, even if <m>G</m> is not finite the number of left and right cosets of a subgroup <m>H\leq G</m> is still the same. <em>(Hint</em>: consider the map <m>gH\mapsto Hg^{-1}</m> and show it's a bijection. Why is the inverse needed?)
-      
-                </p>
               </statement>
             </corollary>
       
@@ -3551,6 +3646,30 @@
                 </p>
               </statement>
             </definition>
+
+            <example>
+              <p>
+                For <m>G =D_{2n}</m> and <m>H = \langle s \rangle = \{e,s\}</m>, the left cosets of <m>H</m> in <m>G</m> are 
+                <me>
+                  \{e, s\}, \{r, rs\}, \{r^2, r^2s\}, \cdots , \{r^{n-1}, r^{n-1}s\}
+                </me> 
+                and the right cosets are 
+                <me>
+                  \{e, s\}, \{r, r^{-1}s\}, \{r^2, r^{-2}s\}, \cdots , \{r^{n-1}, r^{-n+1}s\}.
+                </me>
+                Note that these lists are <em>not</em> the same, but they do have the same length. We have <m>|G| = 2n</m>, <m>|H| = 2</m> and <m>[G:H] = n</m>.
+              </p>
+            </example>
+
+            <p>
+              The notion of index is most useful when it is finite, but note that this does not require that <m>G</m> to be finite. 
+            </p>
+
+            <example>
+              <p>
+                Let <m>G = \mathbb{Z}</m> and <m>H = 7 \cdot \mathbb{Z}</m>. Then <m>[G:H] = 7</m> since the cosets are <m>H, 1 + H, 2 + H, \dots, 6 + H</m>. (Since <m>G</m> is abelian, left and right cosets are automatically the same.)
+              </p>
+            </example>
           </subsection>
 
           <subsection xml:id="subsec-lagrange">
@@ -3621,6 +3740,36 @@
           </subsection>
     
           <exercises>
+
+            <exercisegroup> <title>Examples and Specifics</title>
+
+              <introduction>
+                <p>
+                  
+                </p>
+              </introduction>
+    
+              <exercise>
+                <statement>
+                <p>
+                  In <xref ref="cor-left-right-cosets"/> we showed the number of left cosets of <m>H</m> in <m>G</m> is equal to the number of right cosets of <m>H</m> in <m>G</m> when <m>G</m> is a finite group.
+                </p>
+
+                <p>
+                  Show that even if <m>G</m> is not finite the number of left and right cosets of a subgroup <m>H\leq G</m> is still the same.
+                </p>
+              </statement>
+
+              <hint>
+                <p>
+                  Consider the map <m>gH\mapsto Hg^{-1}</m> and show it's a bijection. Why is the inverse needed?
+                </p>
+              </hint>
+    
+              </exercise>
+            
+    
+            </exercisegroup>
     
             <exercisegroup> <title>Section Results</title>
 
@@ -3717,6 +3866,16 @@
               </exercise>
     
             </exercisegroup>
+
+          <exercise>
+            <title></title>
+            <statement>
+              <p>
+                If <m>G</m> is an abelian then <m>gH=Hg</m> for all <m>g\in G</m>.
+              </p>
+            </statement>
+
+          </exercise>
     
           <exercise>
             <statement>
@@ -3725,7 +3884,6 @@
               </p>
             </statement>
           </exercise>
-
 
           <exercise>
             <title>Fermat's Little Theorem</title>
@@ -3756,9 +3914,9 @@
               </p>
             </statement>
           </definition>
-    
-          <p>Intuitively, a normal subgroup of a group is a subgroup that is invariant under conjugation by any element of the larger group. That is, if <m>N</m> is a normal subgroup of <m>G</m>, then for any element <m>g</m> in <m>G</m>, the conjugate of <m>N</m> by <m>g</m>, denoted by <m>gNg\inv</m>, is also a subgroup of <m>G</m> that is equal to <m>N</m>. Normal subgroups are important in group theory because they play a crucial role in the definition and study of quotient groups, which we will explore in <xref ref="sec-quotient-groups"/>.</p>
-    
+
+          <p>Normal subgroups are our next example of something that is <q>almost</q> abelian.</p>
+        
           <theorem xml:id="thm-equivdef-normal">
             <title>Equivalent Normal Definitions</title>
             
@@ -4176,8 +4334,24 @@
               <attribution>Vincent Van Gogh</attribution>
             </blockquote>
       
-            <p>Recall from your undergraduate algebra course the construction for the integers modulo <m>n</m>: one starts with an equivalence relation <m>\sim</m> on <m>\mathbb{Z}</m>, considers the set <m>\mathbb{Z}/n</m> of all equivalence classes with respect to this equivalence relation, and verifies that the operations on <m>\mathbb{Z}</m> give rise to well defined binary operations on the set of equivalence classes.</p>
-      
+            <p>In previous sections we have spent time discussing the existence and properties of cosets, but we have yet to lump them all together into one set. If one were to do so, a natural question to ask would be when such a set defines a group in its own right. Is it always? It sure would be nice if it was always.</p>
+
+            <exercise>
+              <p>
+                Prove that it is not always.
+              </p>
+            </exercise>
+
+            <p>Darn. Is it ever? It sure would be nice if it was at least sometimes. </p>
+
+            <exercise>
+              <p>
+                Find an example of when it is.
+              </p>
+            </exercise>
+
+            <p>Woohoo! So the set of cosets forms a group sometimes. But when? As it turns out (serendipidous, I know) we discovered the exact property a subgroup needs to ensure its cosets form a well-defined group. At least, normally they do...</p>
+            
             <definition xml:id="def-quotient-group">
               <title>Quotient Group</title>
               <statement>
@@ -4187,7 +4361,7 @@
               </statement>
             </definition>
 
-            <p>Before we get too ahead of ourselves, we should probably make sure that this thing is actually a well-defined bona-fide group.</p>
+            <p>Before we get too ahead of ourselves, we should probably make sure that this thing is actually a well-defined bona-fide group. Don't take my word for it, I made this for fun, I could always be lying.</p>
       
             <theorem xml:id="thm-quotient-iff-normal">
               <title>Quotients and Normal Subgroups</title>
@@ -4199,11 +4373,11 @@
               </statement>
             </theorem>
       
-            <remark><p>Note that the set <m>G/H</m> exists for any subgroup <m>H\leq G</m>. However, this set only satisfies the axioms of a group when the subgroup is normal.</p></remark>
+            <remark><p>Don't that the set <m>G/H</m> exists for any subgroup <m>H\leq G</m>. However, this set only satisfies the axioms of a group when the subgroup is normal.</p></remark>
 
             <example xml:id="ex-mod-quotient">
               <p>
-                In <xref ref="ex-normal-examples"/> we saw <m>n\Z\nsg\Z</m>, and thus the quotient <m>\Z/n\Z</m> is indeed a group. For those accustomed to this as the notation for <m>\Z/(n)</m>, it may not surprise you that <m>\Z/(n)\cong\Z/n\Z</m>. You may prove this explicitely in <xref ref="exe-mod-n-iso"/>
+                In <xref ref="ex-normal-examples"/> we saw <m>n\Z\nsg\Z</m>, and thus the quotient <m>\Z/n\Z</m> is indeed a group. For those accustomed to this as the notation for <m>\Z/n</m>, it may not surprise you that <m>\Z/n\cong\Z/n\Z</m>. You may prove this explicitely in <xref ref="exe-mod-n-iso"/>
               </p>
             </example>
       
@@ -4217,6 +4391,18 @@
                 </p>
               </statement>
             </corollary>
+
+            <example>
+              <p>
+                <m>H = \langle r \rangle</m> is a normal subgroup of <m>D_{2n}</m>. The quotient <m>D_{2n}/H</m> has just two elements, <m>H</m> and <m>sH</m>.
+              </p>
+            </example>
+
+            <example>
+              <p>
+                Let <m>H = \langle n \rangle</m> in <m>G = (\mathbb{Z}, +)</m>. It is automatic that <m>H</m> is normal since <m>G</m> is abelian. The quotient group <m>G/H</m> is our old friend <m>(\mathbb{Z}/n, +)</m>.
+              </p>
+            </example>
       
             <definition xml:id="def-quotient-map">
               <title>Quotient Map</title>
@@ -4610,13 +4796,13 @@
                   <ol>
                     <li>
                       <p>
-                        <m>\Z/n\Z\cong\Z/(n)</m> for all <m>n\in\N</m>.
+                        <m>\Z/n\Z\cong\Z/n</m> for all <m>n\in\N</m>.
                       </p>
                     </li>
 
                     <li>
                       <p>
-                        Argue amongst yourselves what the 'best' notation for the integers <m>\mod n</m> Should be: <m>\Z/(n),</m> <m>\Z/n\Z,</m>, <m>\Z/n,</m>, <m>\Z_n,</m>, or whatever else you're most accustomed to.
+                        Argue amongst yourselves what the 'best' notation for the integers <m>\mod n</m> Should be: <m>\Z/n,</m> <m>\Z/n\Z,</m>, <m>\Z/n,</m>, <m>\Z_n,</m>, <m>\Z/\igen n,</m>, <m>\frac{\Z}{n},</m> or whatever other horrors you can conjure.
                       </p>
                     </li>
                   </ol>
@@ -4632,6 +4818,20 @@
                     </p>
                   </statement>
 
+              </exercise>
+
+              <exercise xml:id="exe-gl-sl-iso">
+                <statement>
+                  <p>
+                    <m>\GL_n(R)/\SL_n(\R)\cong\R^\times</m>
+                  </p>
+                </statement>
+
+                <solution>
+                  <p>
+                    Define a map <m>f: F \setminus \{0\}\to G/H</m> as the composition of <me>F \setminus \{0\} \xrightarrow{g} \operatorname{GL}_n(F) \twoheadrightarrow\operatorname{GL}_n(F)/\operatorname{SL}_n(F)</me> where <m>g(x)</m> is the <m>n \times n</m> matrix with <m>x</m> in the upper-left corner, <m>1</m>'s along the rest of the diaganal, and <m>0</m>’s everywhere else, and the second map is the canonical surjection. Then <m>g</m> is easily seen to be a homomorphism and hence so is <m>f</m> (since the composition of homomorhisms is a homomorphism). I claim <m>f</m> is one-to-one and onto. For any <m>A \in \operatorname{GL}_n(F)</m>, let <m>x = \det(A)</m> and note that <m>g(x)^{-1} \cdot A</m> has determinant <m>1</m> and thus belongs to <m>\operatorname{SL}_n(F)</m>. So <m>f(x) = g(x)\operatorname{SL}_n(F) = A \operatorname{SL}_n(F)</m>. This proves <m>f</m> is onto. If <m>f(x) = e</m>, then <m>g(x) \operatorname{SL}_n(F) = \operatorname{SL}_n(F)</m> and so <m>g(x) \in \operatorname{SL}_n(F)</m>. Clearly this means <m>x = 1</m>.
+                  </p>
+                </solution>
               </exercise>
           
             </exercisegroup>
@@ -4655,7 +4855,7 @@
               <exercise>
                 <statement>
                   <p>
-                    Let <m>H\nsg G</m> such that <m>[G:H]=2</m>. Then <m>G/H\cong\Z/(2)</m>.
+                    Let <m>H\nsg G</m> such that <m>[G:H]=2</m>. Then <m>G/H\cong\Z/2</m>.
                   </p>
                 </statement>
               </exercise>
@@ -4983,7 +5183,7 @@
               </p>
             </statement>
           </definition>
-    
+
           <remark><p>In many cases, transitivity and faithfulness are related concepts. As we will see later, if a group action is transitive on a set <m>X</m>, then the action is faithful if and only if the stabilizer of any element of <m>X</m> is trivial. In these situations we can identify the group with a subgroup of the symmetric group on <m>X</m>, and use this identification to study the group.</p></remark>
     
           <!--
@@ -5054,7 +5254,7 @@
           <exercises>
     
             <exercisegroup>
-              <title>Examples and Specifis</title>
+              <title>Examples and Specifics</title>
               <introduction>
                 <p>
                 </p>
@@ -5062,7 +5262,7 @@
           
               <exercise>
                 <p>
-                  Should an action which is not faithful be called <em>unfaithful</em>? Discuss. 
+                  Should an action which is not faithful be called <em>unfaithful</em>? <em>Adulterous?</em>? Discuss. 
                 </p>
               </exercise>
           
@@ -5717,6 +5917,22 @@
             </corollary>
       
             <warning><p>Take note that <xref text="title" ref="cor-orbit-stabilizer"/> only applies when <m>G</m> is a <em>finite</em> group.</p></warning>
+
+            <p xml:id="p-flavor">
+              Lets look at some group actions of a more geometric flavor
+            </p>
+  
+            <example>
+              <p>
+                Let <m>G</m> be the group of rotational symmetries of the cube and let <m>G</m> act on the collection of <m>6</m> faces of the cube in the evident way. This action is transitive and so the one and only orbit has length <m>6</m>. It follows that for any face <m>f</m> of the cube, <m>G_f</m> has index <m>6</m> and, since we already know that <m>\# G= 24</m>, it follows from LOIS that <m>\#G_f = 4</m>. That is, there are four symmetries that map <m>f</m> to itself. Indeed, they are the <m>4</m> rotations by <m>0</m>, <m>90</m>, <m>180</m> or <m>270</m> degrees about the line of symmetry passing through the mid-point of <m>f</m> and the mid-point of the opposite face.
+              </p>
+            </example>
+  
+            <example>
+              <p>
+                Let <m>G</m> be the group of rotatoinal symmetries of the dodecahedron (<m>12</m> pentagonal faces). The evident action of <m>G</m> on the twleve faces is transitive. For each face <m>f</m>, <m>G_f</m> clearly has <m>5</m> elements: the five rotations about the line joining the midpoint of <m>f</m> to the midpoint of the face on the opposite side. Since <m>12 = [G: G_f]</m> and <m>\# G_f = 5</m>, we conclude <m>\# G = 60</m>.
+              </p>
+            </example>  
             
           </subsection>
     
@@ -5797,13 +6013,13 @@
 
                   <li>
                     <p>
-                      <m>\Z_G(g)</m> The <xref text="title" ref="def-centralizer"/> of <m>g</m> in <m>G</m>.
+                      <m>Z_G(g)</m> The <xref text="title" ref="def-centralizer"/> of <m>g</m> in <m>G</m>.
                     </p>
                   </li>
 
                   <li>
                     <p>
-                      <m>\N_G(g)</m> The <xref text="title" ref="def-normalizer"/> of <m>g</m> in <m>G</m>.
+                      <m>N_G(g)</m> The <xref text="title" ref="def-normalizer"/> of <m>g</m> in <m>G</m>.
                     </p>
                   </li>
                 </ul>
@@ -5882,7 +6098,7 @@
 
           <exercises>
     
-            <exercisegroup> <title>Computations and Examples</title>
+            <exercisegroup> <title>Examples and Specifics</title>
               
               <introduction>
                 <p>
@@ -5891,7 +6107,7 @@
           
               <exercise>
                 <p>
-                  Coming soon to an OER near you!
+                  Recall <xref ref="p-flavor"/>. What do you think geometry tastes like? Which field of mathematics would taste the best?
                 </p>
               </exercise>
           
@@ -8376,7 +8592,7 @@
             
             <statement>
               <p>
-                Every infinite cyclic group is isomorphic to <m>\Z</m>. Every cyclic group of order <m>n</m> is isomorphic to <m>Z/(n)</m>.
+                Every infinite cyclic group is isomorphic to <m>\Z</m>. Every cyclic group of order <m>n</m> is isomorphic to <m>Z/n</m>.
               </p>
             </statement>
 
@@ -9053,12 +9269,12 @@
       <chapter xml:id="ch-rings">
         <title>Rings</title>
 
-        <!--
-       <em>*********
+       <!--
+       ***************
         Chapter: Rings
-       <em>**********
-        -->
-    
+       ***************
+       -->
+
         <section xml:id="sec-defn-ex">
             <title>Intro to Rings</title>
     
@@ -10209,9 +10425,9 @@
         <title>Ideals and Quotient Rings</title>
 
         <!--
-       <em>*********
+       ***************
         Chapter: Ideals and Quotients
-       <em>**********
+       ****************
         -->
         
         <section xml:id="sec-ideals">
@@ -10738,7 +10954,7 @@
     
             <example xml:id="ex-quotient-of-z">
               <p>
-                If <m>I=(n)</m> is an ideal in the ring <m>\Z</m>, then the quotient ring <m>\Z/(n)</m> is the familiar ring <m>\Z/n</m>.
+                If <m>I=(n)</m> is an ideal in the ring <m>\Z</m>, then the quotient ring <m>\Z/n</m> is the familiar ring <m>\Z/n</m>.
               </p>
             </example>
     
@@ -11033,9 +11249,9 @@
         <title>Commutative Rings</title>
 
         <!--
-       <em>*********
+       ***************
         Chapter: Commutative Rings
-       <em>**********
+       ****************
         -->
     
         <section xml:id="subsec-primemax-ideals">
@@ -12220,9 +12436,9 @@
         <title>Domains</title>
 
         <!--
-       <em>*********
+       ***************
         Chapter: Domains
-       <em>**********
+       ****************
         -->
     
         <section xml:id="sec-eds">
@@ -13334,9 +13550,9 @@
         <title>Irreducibility</title>
 
         <!--
-       <em>*********
+       ***************
         Chapter: Irreduibility
-       <em>**********
+       ****************
         -->
 
         <section xml:id="sec-roots">
@@ -14017,18 +14233,18 @@
       <title>Module Theory</title>
 
       <!--
-     <em>***********
+     *****************
       Module Theory
-     <em>***********
+     *****************
       -->
 
       <chapter xml:id="ch-mod">
         <title>Modules</title>
 
         <!--
-       <em>*********
+       ***************
         Chapter: Modules
-       <em>**********
+       ****************
         -->
 
         <section xml:id="sec-defmod">
@@ -14587,7 +14803,7 @@
           <proposition>
             <statement>
               <p>
-                Show that for every nonzero integers <m>m</m> and <m>n</m> there is a <m>\Z</m>-module isomorphism <m>\Hom_\Z(\Z/(n),\Z/(m)) \cong \Z / (\gcd(m,n))</m>.
+                Show that for every nonzero integers <m>m</m> and <m>n</m> there is a <m>\Z</m>-module isomorphism <m>\Hom_\Z(\Z/n,\Z/m) \cong \Z / (\gcd(m,n))</m>.
               </p>
             </statement>
           </proposition>
@@ -14682,7 +14898,7 @@
                   <p>
                     Let <m>A</m> be a <m>\Z</m>-module and let <m>n</m> be any integer. Show that there is a <m>\Z</m>-module isomorphism 
                     <me>
-                      \Hom_\Z(\Z/(n), A)\cong A_n, \text{ where }A_n = \{a \in A | na = 0\}
+                      \Hom_\Z(\Z/n, A)\cong A_n, \text{ where }A_n = \{a \in A | na = 0\}
                     </me> 
                     is a submodule of <m>A</m>. (Note: You may use the fact that <m>A_n</m> is a <m>\Z</m>-module without proof.)
                   </p>
@@ -14948,9 +15164,9 @@
         <title>Free Modules</title>
 
         <!--
-       <em>*********
+       ***************
         Chapter: Free Modules
-       <em>**********
+       ****************
         -->
         
 
@@ -16318,9 +16534,9 @@
         <title>Vector Spaces</title>
 
         <!--
-       <em>*********
+       ***************
         Chapter: Vector Spaces
-       <em>**********
+       ****************
         -->
 
         <section xml:id="sec-vecbasis">
@@ -17150,9 +17366,9 @@
         <title>Linear Transformations</title>
 
         <!--
-       <em>*****************************
+       ***********************************
         Chapter: Linear Transformations
-       <em>*****************************
+       ***********************************
         -->
 
         <section xml:id="sec-basics">
@@ -18492,9 +18708,9 @@
         <title>Finitely Generated Modules over PIDs</title>
 
         <!--
-       <em>*********
+       ***************
         Chapter: Finitely Generated Modules over PIDs
-       <em>**********
+       ****************
         -->
 
         <section xml:id="sec-modpres">
@@ -19655,9 +19871,9 @@
         <title>Canonical Forms</title>
 
         <!--
-       <em>**********************
+       ****************************
         Chapter: Canonical Forms
-       <em>**********************
+       ****************************
         -->
 
         <section xml:id="sec-rcf">
@@ -21882,9 +22098,9 @@
         <title>Extras</title>
 
         <!--
-       <em>********************
+       **************************
         Chapter: Module Extras
-       <em>********************
+       **************************
         -->
 
         <section xml:id="sec-det">
@@ -22707,9 +22923,9 @@
       <title>Field Theory</title>
 
       <!--
-     <em>**********
+     ****************
       Field Theory
-     <em>**********
+     ****************
       -->
 
       <chapter xml:id="ch-extensions">

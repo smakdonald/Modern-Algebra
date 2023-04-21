@@ -13,9 +13,17 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h5 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">6.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.1</span><span class="period">.</span>
 </h5>
-<div class="para">Elements of order <span class="process-math">\(7\)</span> in <span class="process-math">\(G\)</span> must permute all <span class="process-math">\(7\)</span> elements, making them of the form <span class="process-math">\((abcdefg)\text{.}\)</span> There are <span class="process-math">\(6!\)</span> such permutations, given that we can always reorder them so that <span class="process-math">\(a\)</span> is first, leaving <span class="process-math">\(6\)</span> remaining spots without replacement. Let <span class="process-math">\(S\)</span> denote the set of these <span class="process-math">\(6!\)</span> elements.</div> <div class="para">Suppose by way of contradiction there existed some <span class="process-math">\(s\in G\)</span> such that <span class="process-math">\(S=C_s(G)\text{.}\)</span> Let <span class="process-math">\(G\)</span> act on itself through conjugation, making <span class="process-math">\(S=C_s(G)=\Orb(s)\)</span> by the definition of conjugacy class. The <a href="" class="xref" data-knowl="./knowl/cor-orbit-stabilizer.html" title="Corollary 4.32: Orbit-Stabilizer Theorem">Orbit-Stabilizer Theorem</a> tells us that <span class="process-math">\(|G|=|\Orb(s)|\cdot|\Stab(s)|\text{,}\)</span> meaning that the order of <span class="process-math">\(S\)</span> must divide the order of <span class="process-math">\(G\text{.}\)</span> However, <span class="process-math">\(|G|=\frac{7!}{2}\)</span> and <span class="process-math">\(|S|=6!\text{,}\)</span> so this is a contradiction. Thus <span class="process-math">\(S\)</span> is not a conjugacy class of <span class="process-math">\(G\text{.}\)</span>
+<div class="para logical">
+<div class="para">Note that <span class="process-math">\(|xHx\inv| = |H|\)</span> for all <span class="process-math">\(x \in  G\text{.}\)</span> Also, by the previous problem, the number of distinct subgroups <span class="process-math">\(xHx\inv\)</span> is <span class="process-math">\([G : NG(H)]\text{.}\)</span> Let <span class="process-math">\(n = [G : N_G(H)]\)</span> and <span class="process-math">\(x_iHx\inv_i\)</span> for <span class="process-math">\(i = 1,\dots,n\)</span> the distinct conjugates of <span class="process-math">\(H\text{.}\)</span> Note first that if <span class="process-math">\(n = 1\)</span> then <span class="process-math">\(H \nsg G\)</span> and result holds since <span class="process-math">\(H \neq G\text{.}\)</span> So assume <span class="process-math">\(n\geq2\text{.}\)</span> Since each conjugate contains <span class="process-math">\(|H|-1\)</span> non-identity elements, we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\bigcup_{x\in G} xHx\inv|= | \bigcup^n_{i=1}  x_iHx\inv_i |\geq1 +  \sum^n_{i=1}  (|H|\inv) = 1 + n|H|-n.
+\end{equation*}
+</div>
+<div class="para">As <span class="process-math">\(n = [G : N_G(H)] \leq[G : H]\)</span> (as <span class="process-math">\(H \sse N_G(H)\)</span>), we have <span class="process-math">\(n|H|≤|[G : H]|H| = |G|\text{.}\)</span> Thus, as <span class="process-math">\(n ≥2, 1 + n|H|-n ≤1 + |G|-n &lt; |G|.\)</span>
+</div>
 </div>
 </div>
 <span class="incontext"><a href="sec-orbit-stab-class-eq.html#solution-24" class="internal">in-context</a></span>

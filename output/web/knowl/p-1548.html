@@ -13,20 +13,16 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">We also need to be sure our rules for <span class="process-math">\(+\)</span> and <span class="process-math">\(\cdot\)</span> make sense and are independent of representation. They “make sense” since we assume <span class="process-math">\(S\)</span> is closed under <span class="process-math">\(\cdot\text{.}\)</span> To show <span class="process-math">\(+\)</span> is independent of representations, say <span class="process-math">\(\frac{r}{s} \sim \frac{r''}{s''}\text{,}\)</span> so that <span class="process-math">\(rs'' = r''s\text{.}\)</span> Then</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\frac{r}{s} + \frac{r'}{s'} := \frac{rs' + r's}{ss'}
-\end{equation*}
+<div class="para">First, notice that <span class="process-math">\(x^2+x+1\)</span> is irreducible in <span class="process-math">\(\Z[x]\)</span> as it is a cyclotomic polynomial. Thus the possibilities are the following:</div>
+<ol class="decimal">
+<li><div class="para"><span class="process-math">\(I=(3,x^2+x+1)\text{,}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(J=(2,x^2+x+1)\text{,}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(L=(6,x^2+x+1)\text{,}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\Z[x]\text{.}\)</span></div></li>
+</ol>
+<div class="para">Notice that <span class="process-math">\(\Z[x]=(1)\text{,}\)</span> which is neither prime nor maximal, as those ideals must be proper. The ideal <span class="process-math">\(L\)</span> is not maximal as it is contained in both <span class="process-math">\(I\)</span> and <span class="process-math">\(J\text{,}\)</span> nor is it prime, given that <span class="process-math">\(3\cdot2\in L\)</span> but neither <span class="process-math">\(3\)</span> nor <span class="process-math">\(2\)</span> are in <span class="process-math">\(L\text{.}\)</span>
 </div>
-<div class="para">and</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\frac{r''}{s''} + \frac{r'}{s'} := \frac{r''s' + r's''}{s''s'}
-\end{equation*}
 </div>
-<div class="para">and so we need to show <span class="process-math">\((rs' + r's)(s''s') \sim (r''s' + r's'')(ss')\text{.}\)</span> This is clear upon expaning out both sides and using <span class="process-math">\(rs'' = r''s\text{.}\)</span> In a similar way one shows <span class="process-math">\(\cdot\)</span> is well-defined.</div>
-</div>
-<span class="incontext"><a href="sec-field-of-fractions.html#p-1548" class="internal">in-context</a></span>
+<span class="incontext"><a href="subsec-polyrings.html#p-1548" class="internal">in-context</a></span>
 </body>
 </html>

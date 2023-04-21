@@ -10,14 +10,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like"><div class="para logical">
-<div class="para">Note that <span class="process-math">\(|xHx\inv| = |H|\)</span> for all <span class="process-math">\(x \in  G\text{.}\)</span> Also, by the previous problem, the number of distinct subgroups <span class="process-math">\(xHx\inv\)</span> is <span class="process-math">\([G : NG(H)]\text{.}\)</span> Let <span class="process-math">\(n = [G : N_G(H)]\)</span> and <span class="process-math">\(x_iHx\inv_i\)</span> for <span class="process-math">\(i = 1,\dots,n\)</span> the distinct conjugates of <span class="process-math">\(H\text{.}\)</span> Note first that if <span class="process-math">\(n = 1\)</span> then <span class="process-math">\(H \nsg G\)</span> and result holds since <span class="process-math">\(H \neq G\text{.}\)</span> So assume <span class="process-math">\(n\geq2\text{.}\)</span> Since each conjugate contains <span class="process-math">\(|H|-1\)</span> non-identity elements, we have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\bigcup_{x\in G} xHx\inv|= | \bigcup^n_{i=1}  x_iHx\inv_i |\geq1 +  \sum^n_{i=1}  (|H|\inv) = 1 + n|H|-n.
-\end{equation*}
+<body class="ignore-math"><div class="solution solution-like">
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(G\)</span> be a group and <span class="process-math">\(H\nsg G\text{.}\)</span> Let <span class="process-math">\(x\in C_H(G)\text{,}\)</span> and consider <span class="process-math">\(gxg\inv\text{.}\)</span> Let <span class="process-math">\(h\in H\text{.}\)</span> As <span class="process-math">\(H\nsg G\)</span> we have <span class="process-math">\(h=gh'g\inv\)</span> for some <span class="process-math">\(h\in H\text{,}\)</span> and thus that</div>
+<ol class="lower-alpha">
+<li><div class="para">
+<span class="process-math">\(g\inv h=h'g\inv\)</span> and</div></li>
+<li><div class="para"><span class="process-math">\(hg=gh'\text{.}\)</span></div></li>
+</ol>
+<div class="para">Consider <span class="process-math">\(gxg\inv h\text{.}\)</span> By (1), we see <span class="process-math">\(gxg\inv h=gxh'g\inv\text{.}\)</span> As <span class="process-math">\(x\)</span> commutes with everything in <span class="process-math">\(H\)</span> we have <span class="process-math">\(gh'xg\inv\text{,}\)</span> and by (2) we have <span class="process-math">\(hgxg\inv\text{.}\)</span> Thus <span class="process-math">\(C_H(G)\nsg G\text{.}\)</span>
 </div>
-<div class="para">As <span class="process-math">\(n = [G : N_G(H)] \leq[G : H]\)</span> (as <span class="process-math">\(H \sse N_G(H)\)</span>), we have <span class="process-math">\(n|H|≤|[G : H]|H| = |G|\text{.}\)</span> Thus, as <span class="process-math">\(n ≥2, 1 + n|H|-n ≤1 + |G|-n &lt; |G|.\)</span>
+</div> <div class="para">Let <span class="process-math">\(G\)</span> act on the left cosets of <span class="process-math">\(C_G(H)\)</span> by left multiplication, giving rise to the permutation representation homomorphism <span class="process-math">\(\rho:G/C_G(H)\to\Aut(H)\text{.}\)</span> By the <a href="" class="xref" data-knowl="./knowl/thm-fit-group.html" title="Theorem 3.33: First Isomorphism Theorem">First Isomorphism Theorem</a> we see that <span class="process-math">\(G/C_G(H)\)</span> is isomorphic to a subgroup of the automorphism group of <span class="process-math">\(H\text{.}\)</span>
 </div>
-</div></div></body>
+</div></body>
 </html>

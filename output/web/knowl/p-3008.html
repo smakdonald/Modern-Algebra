@@ -12,22 +12,39 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para logical">
-<div class="para">Suppose that <span class="process-math">\(K/F\)</span> and <span class="process-math">\(L/K\)</span> are algebraic extensions. Let <span class="process-math">\(\a\in L\text{.}\)</span> Then <span class="process-math">\(\a\)</span> is the root of the polynomial</div>
-<div class="displaymath process-math">
+<div class="para logical"><ol class="decimal">
+<li><div class="para">The subset <span class="process-math">\(I\)</span> is an ideal of <span class="process-math">\(F[x]\text{.}\)</span>
+</div></li>
+<li><div class="para">
+<span class="process-math">\(I = 0\)</span> if and only if <span class="process-math">\(\a\)</span> is transcendental over <span class="process-math">\(F\text{;}\)</span> so <span class="process-math">\(I\neq 0\)</span> if and only if <span class="process-math">\(\a\)</span> is algebraic over <span class="process-math">\(F\text{.}\)</span>
+</div></li>
+<li><div class="para">
+<span class="process-math">\(\a\)</span><span class="process-math">\(F\text{.}\)</span><ul class="disc">
+<li><div class="para">The unique monic generator of <span class="process-math">\(I\text{,}\)</span> which we will write as <span class="process-math">\(m_{\a, F}(x)\text{,}\)</span> is irreducible (and hence <span class="process-math">\(I\)</span> is a prime ideal).</div></li>
+<li><div class="para">There is a unique isomorphism of fields<div class="displaymath process-math">
 \begin{equation*}
-f(x)=a_nx^n+\dots+a_0,
+F[x]/(m_{\a, F}(x)) \cong F(\a)
+\end{equation*}
+</div>sending <span class="process-math">\(F\)</span> identically to <span class="process-math">\(F\)</span> and sending <span class="process-math">\(x\)</span> to <span class="process-math">\(\a\text{.}\)</span>
+</div></li>
+<li><div class="para">
+<span class="process-math">\(F[\a] = F(\a)\)</span> and in particular <span class="process-math">\(F[\a]\)</span> is a field.</div></li>
+</ul>
+</div></li>
+<li><div class="para">
+<span class="process-math">\(\a\)</span> is algebraic over <span class="process-math">\(F\)</span> if and only if <span class="process-math">\([F(\a): F] &lt; \infty\text{.}\)</span> In this case,[^5]<div class="displaymath process-math">
+\begin{equation*}
+[F(\a): F] = \deg(m_{\a, F}(x)).
 \end{equation*}
 </div>
-<div class="para">with <span class="process-math">\(a_{i}\in K\text{.}\)</span> Notice that <span class="process-math">\(f\)</span> is a polynomial in <span class="process-math">\(F(a_n,\dots,a_0)[x]\text{,}\)</span> making <span class="process-math">\(\a\)</span> is algebraic over this as well. Consider the chain of field extensions</div>
-<div class="displaymath process-math">
+</div></li>
+<li><div class="para">
+<span class="process-math">\(\a\)</span> is transcendental over <span class="process-math">\(F\)</span> if and only if <span class="process-math">\([F(\a): F] = \infty\text{.}\)</span> In this case, there is a unique isomorphism of fields<div class="displaymath process-math">
 \begin{equation*}
-F \subseteq F(a_0) \subseteq F(a_0,a_1) \subseteq \cdots \subseteq F(a_0, a_1, \dots, a_{n-1} )\subseteq F(a_0, \dots, a_{n}, \a)
+F(x) \cong F(\a)
 \end{equation*}
-</div>
-<div class="para">Since <span class="process-math">\(a_i\)</span> is algebraic over <span class="process-math">\(F\)</span> for all <span class="process-math">\(i\)</span> and <span class="process-math">\(\a\)</span> is algebraic over <span class="process-math">\(F(a_0, a_1, \dots, a_{n})\text{,}\)</span> by Theorem each step in this chain has finite degree. By the Degree Formula, <span class="process-math">\([F(a_0, \dots, a_{n}, \a): F]\)</span> is finite and thus so is <span class="process-math">\([F(\a):F]\text{.}\)</span> By the Theorem again, <span class="process-math">\(\a\)</span> is algebraic over <span class="process-math">\(F\text{.}\)</span>
-</div>
-</div>
+</div>sending <span class="process-math">\(F\)</span> identically to <span class="process-math">\(F\)</span> and sending <span class="process-math">\(x\)</span> to <span class="process-math">\(\a\text{.}\)</span> (Here, <span class="process-math">\(F(x)=\left\{\frac{g(x)}{f(x)}\mid g\neq 0\right\}\)</span> is the field of fractions of <span class="process-math">\(F[x]\text{.}\)</span>)</div></li>
+</ol></div>
 <span class="incontext"><a href="sec-algebraic.html#p-3008" class="internal">in-context</a></span>
 </body>
 </html>
