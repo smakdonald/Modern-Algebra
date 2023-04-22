@@ -12,21 +12,9 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<div class="para logical">
-<div class="para">Consider the ring isomorphism <span class="process-math">\(\phi: \Q[x] \xra{\cong} \Q[y]\)</span> given by <span class="process-math">\(\phi(h(x)) = h(y+1)\text{.}\)</span> I claim that</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\phi(f(x)) = y^{p-1} + p y^{p-2} + {p \choose 2} y^{p-3} +{p \choose 3} y^{p-4} +\cdots + {p \choose p-1} y + p.
-\end{equation*}
-</div>
-<div class="para">To see this, we note that <span class="process-math">\(f(x) (x-1) = x^p - 1\)</span> and by the binomial theorem we have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\phi(x^p-1) = (y+1)^p - 1 = y^p + p y^{p-1} + {p \choose 2} y^{p-2} + \cdots + py.
-\end{equation*}
-</div>
-<div class="para">Since <span class="process-math">\(\phi(x^p-1) = \phi(f(x)) \phi(x-1) = \phi(f(x)) y\text{,}\)</span> the claim follows.</div>
-</div> <div class="para">By Eisenstein, <span class="process-math">\(\phi(f(x))\)</span> is irreducible in <span class="process-math">\(\Q[y]\)</span> and, since <span class="process-math">\(\phi\)</span> is an isomorphism, it follows that <span class="process-math">\(f(x)\)</span> is irreducible in <span class="process-math">\(\Q[x]\text{.}\)</span>
+<div class="para">We first show the following special case: If <span class="process-math">\(\cont(f) = 1\)</span> and <span class="process-math">\(\cont(g) = 1\text{,}\)</span> then <span class="process-math">\(\cont(fg) =1\text{.}\)</span>
+</div> <div class="para">To see this, pick a prime <span class="process-math">\(p \in R\)</span> and write <span class="process-math">\(\overline{f} \in (R/p)[x]\)</span> for the result of modding out the coefficients of <span class="process-math">\(f\)</span> by <span class="process-math">\(p\text{.}\)</span> Then <span class="process-math">\(\ov{fg} = \ov{f}\ov{g}\)</span> (since the map <span class="process-math">\(R[x] \to (R/p)[x]\)</span> sending <span class="process-math">\(f\)</span> to <span class="process-math">\(\ov{f}\)</span> is a ring map). Since <span class="process-math">\(\cont(f) =1 = \cont(g)\text{,}\)</span> we have that <span class="process-math">\(\ov{f} \ne 0\)</span> and <span class="process-math">\(\ov{g} \ne 0\text{.}\)</span> Since <span class="process-math">\((R/p)[x]\)</span> is a domain, it follows that <span class="process-math">\(\ov{fg} \ne 0\text{.}\)</span> This proves <span class="process-math">\(p\)</span> does not divide all of the coefficients of <span class="process-math">\(fg\text{.}\)</span> Since <span class="process-math">\(p\)</span> was arbitrary, <span class="process-math">\(\cont(fg) = 1\text{.}\)</span>
+</div> <div class="para">For the general case, let <span class="process-math">\(f = a h(x)\)</span> and <span class="process-math">\(g = b l(x)\)</span> where <span class="process-math">\(a =\cont(f)\)</span> and <span class="process-math">\(b = \cont(g)\text{.}\)</span> Note that <span class="process-math">\(\cont(h) = 1 = \cont(l)\)</span> and <span class="process-math">\(fg = (ab) hl\text{.}\)</span> By the case already proven, <span class="process-math">\(\cont(lh) =1\text{.}\)</span> It follows <span class="process-math">\(\cont (abhl) =ab \cont(hl) = ab = \cont(f) \cont(g)\text{.}\)</span>
 </div></article><span class="incontext"><a href="sec-irrpoly.html#proof-62" class="internal">in-context</a></span>
 </body>
 </html>

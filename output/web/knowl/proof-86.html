@@ -12,16 +12,21 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<div class="para">Pick a basis <span class="process-math">\(X\)</span> of <span class="process-math">\(W\text{.}\)</span> Regarded as a subset of <span class="process-math">\(V\text{,}\)</span> <span class="process-math">\(X\)</span> remains linearly independent and thus it may be extended to a basis of <span class="process-math">\(V\)</span> by Corollary . Let us write this basis of <span class="process-math">\(V\)</span> as <span class="process-math">\(X \cup Y\)</span> with <span class="process-math">\(X \cap Y = \emptyset\text{.}\)</span>
-</div> <div class="para">Let <span class="process-math">\(Z := \{y + W \mid y \in Y\} \subseteq V/W\text{.}\)</span> I claim that <span class="process-math">\(Z\)</span> is a basis of <span class="process-math">\(V/W\text{.}\)</span>
-</div> <div class="para">Given <span class="process-math">\(v + W\)</span> we have <span class="process-math">\(v = \sum_i a_i x_i + \sum_j b_j y_j\)</span> for some <span class="process-math">\(x_i \in X, y_j \in Y\)</span> and scalars <span class="process-math">\(a_i, b_j\text{.}\)</span> Since <span class="process-math">\(x + V = 0\)</span> for all <span class="process-math">\(x \in X\text{,}\)</span> we have <span class="process-math">\(v + W = \sum_j b_j z_j\text{.}\)</span> This proves <span class="process-math">\(Z\)</span> spans. Say <span class="process-math">\(\sum_j c_j y_j + W = 0\)</span> for some <span class="process-math">\(y_1, \dots, y_m \in Y\text{.}\)</span> Then <span class="process-math">\(\sum_j c_j y_j \in W\)</span> and hence <span class="process-math">\(\sum_j c_j y_j = \sum_i a_i x_i\text{,}\)</span> whence <span class="process-math">\(\sum_j c_j y_j + \sum_i - a_i x_i = 0\text{.}\)</span> Since <span class="process-math">\(X \cup Y\)</span> is linearly independent, <span class="process-math">\(c_j = 0\)</span> and <span class="process-math">\(a_i = 0\)</span> for all <span class="process-math">\(j, i\text{.}\)</span> This proves <span class="process-math">\(Z\)</span> is linearly independent.</div> <div class="para logical">
-<div class="para">We have</div>
+<div class="para">Let <span class="process-math">\(C = \{w_1, \dots, w_m\}\text{.}\)</span> As noted, the sublemma establishes the case <span class="process-math">\(w = 1\)</span> of the Exchange Lemma. The general case proceeds recursively:</div> <div class="para">Suppose that for some <span class="process-math">\(0 \leq k &lt; m\text{,}\)</span> we have found <span class="process-math">\(v_1, \dots, v_k \in B\)</span> such that <span class="process-math">\(B'' := (B \setminus \{v_1, \dots, v_k\}) \cup \{w_1, \dots, w_k\}\)</span> is a basis for some <span class="process-math">\(k &lt; m\text{.}\)</span> We need to show we can “swap out one more''; that is, we need to prove there is a <span class="process-math">\(v_{k+1} \in(B \setminus \{v_1, \dots, v_k\})\)</span> such that <span class="process-math">\((B'' \setminus \{v_{k+1}\}) \cup \{w_{k+1}\}\)</span> is also a basis.</div> <div class="para logical">
+<div class="para">Since <span class="process-math">\(B''\)</span> is a basis, there is a (unique) equation of the form</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\dim(V) = |X \cup Y| = |X| + |Y| = |X|+ |Z| = \dim(W) + \dim(V/W).
+w_{k+1} = \sum_{i=1}^n a_i u_i
 \end{equation*}
 </div>
-<div class="para">with the second equality holding since <span class="process-math">\(X\)</span> and <span class="process-math">\(Y\)</span> are disjoint.</div>
-</div></article><span class="incontext"><a href="sec-ranknul.html#proof-86" class="internal">in-context</a></span>
+<div class="para">with <span class="process-math">\(u_i \in B''\)</span> and <span class="process-math">\(a_i \ne 0\text{.}\)</span> Now, there must be at least one <span class="process-math">\(u_i\)</span> that is not in <span class="process-math">\(\{w_1, \dots, w_k\}\text{,}\)</span> for otherwise we would have <span class="process-math">\(w_{k+1} \in \Span( w_1, \dots, w_k)\text{,}\)</span> contrary to <span class="process-math">\(C\)</span> being linearly independent. Let <span class="process-math">\(v_{k+1} = u_i\)</span> for such an <span class="process-math">\(i\text{.}\)</span> Then by the sublemma</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(B'' \setminus \{v_{k+1}\}) \cup \{w_{k+1}\}
+\end{equation*}
+</div>
+<div class="para">is a basis of <span class="process-math">\(V\text{.}\)</span>
+</div>
+</div></article><span class="incontext"><a href="sec-vecbasis.html#proof-86" class="internal">in-context</a></span>
 </body>
 </html>

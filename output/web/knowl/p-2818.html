@@ -12,7 +12,15 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Let <span class="process-math">\(R\)</span> be a non-zero commutative ring and <span class="process-math">\(A \in \Mat_{n \times n}(R)\text{.}\)</span> Let <span class="process-math">\(A^{adj}\)</span> denote the classical adjugate of <span class="process-math">\(A\)</span> — the <span class="process-math">\((i,j)\)</span> entry of <span class="process-math">\(A^{adj}\)</span> is defined to be <span class="process-math">\((-1)^{i+j} \det(A_{j,i})\)</span> where <span class="process-math">\(A_{j,i}\)</span> is <span class="process-math">\((n-1) \times (n-1)\)</span> matrix obtained by deleting the <span class="process-math">\(j\)</span>-th row and <span class="process-math">\(i\)</span>-th column of <span class="process-math">\(A\text{.}\)</span> You may assume without proof that when <span class="process-math">\(R\)</span> is a field, we have <span class="process-math">\(A A^{adj} = \det(A) I_n = A^{adj} A\text{.}\)</span> Prove <span class="process-math">\(A A^{adj} = \det(A) I_n = A^{adj} A\)</span> holds for any non-zero commutative ring <span class="process-math">\(R\text{.}\)</span>
+<div class="para logical">
+<div class="para">It is true that trace is invariant under all “cyclic permutations'' of products of matrices. For instance, <span class="process-math">\(\trace(XYZ) = \trace(ZXY) = \trace(YZX)\)</span> and more generally we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\trace(X_1 \cdots X_n) = \trace(X_i X_{i+1} \cdots X_n X_1 X_2 \cdots X_{i-1})
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(i\text{.}\)</span>
+</div>
 </div>
 <span class="incontext"><a href="sec-det.html#p-2818" class="internal">in-context</a></span>
 </body>

@@ -10,16 +10,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like"><div class="para logical">
-<div class="para">Let <span class="process-math">\(G\)</span> be a group of order <span class="process-math">\(90 = 2 · 3^2 · 5\)</span> and let <span class="process-math">\(\Syl_3(G)\)</span> denote the set of Sylow <span class="process-math">\(3\)</span>-subgroups of <span class="process-math">\(G\text{.}\)</span>
+<body class="ignore-math"><div class="solution solution-like">
+<div class="para">Let <span class="process-math">\(G\)</span> be a group of order <span class="process-math">\(2835\text{.}\)</span>
+</div> <div class="para">By <a href="" class="xref" data-knowl="./knowl/thm-sylow.html" title="Theorem 5.11: Sylow's Theorem">Sylow's Theorem</a> we know that <span class="process-math">\(n_3=1\mod{3}\)</span> and <span class="process-math">\(n_3|35\text{.}\)</span> The possible options are thus <span class="process-math">\(1\)</span> and <span class="process-math">\(7\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Suppose by way of contradiction that <span class="process-math">\(G\)</span> is simple. Thus <span class="process-math">\(n_3\neq 1\text{,}\)</span> so <span class="process-math">\(n_3=7\text{.}\)</span> Let <span class="process-math">\(G\)</span> act on the <span class="process-math">\(\Syl_3(G)\)</span> by <a href="" class="xref" data-knowl="./knowl/ex-conj.html" title="Item 3: Conjugation">Conjugation</a>, yielding the homomorphism</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/ex-conj.html ./knowl/thm-sylow.html">
+\begin{equation*}
+\rho: G\to S_7
+\end{equation*}
 </div>
-<ol class="lower-alpha">
-<li><div class="para">Suppose by way of contradiction that <span class="process-math">\(G\)</span> is simple. By <a href="" class="xref" data-knowl="./knowl/thm-sylow.html" title="Theorem 5.11: Sylow's Theorem">Sylow's Theorem</a> we know the following: - <span class="process-math">\(n_3|10\)</span> and is congruent to <span class="process-math">\(1\mod{3}\text{.}\)</span> As <span class="process-math">\(G\)</span> is simple there must be ten of the fuckers. - <span class="process-math">\(n_5|18\)</span> and is congruent to <span class="process-math">\(1\mod 5\text{.}\)</span> As <span class="process-math">\(G\)</span> is simple there must be six of them. Since each Sylow <span class="process-math">\(3\)</span>-subgroup will have <span class="process-math">\(3^2-1=8\)</span> non-identity elements and they are all distinct that accounts for <span class="process-math">\(80\)</span> elements of order <span class="process-math">\(3\text{.}\)</span> However, there are also <span class="process-math">\(24\)</span> elements or order <span class="process-math">\(5\)</span> to account for, which is a problem. Thus <span class="process-math">\(G\)</span> cannot be simple.</div></li>
-<li>
-<div class="para">Suppose now that there exists <span class="process-math">\(Q, Q' \in  \Syl_3(G)\)</span> such that <span class="process-math">\(|Q \cap Q'| = 3\text{.}\)</span> . Given this intersection, we know that <span class="process-math">\(|QQ'|=9\cdot 9/3=27\text{.}\)</span> Additionally, note that as <span class="process-math">\(Q \cap Q'\)</span> is a subgroup of both <span class="process-math">\(Q\)</span> and <span class="process-math">\(Q'\)</span> with index 3 in both, the smallest prime dividing the order or both, that <span class="process-math">\(Q \cap Q'\)</span> is normal in both.</div>
-<div class="para">We now consider the normalizer of <span class="process-math">\(Q \cap Q'\text{,}\)</span> which we denote <span class="process-math">\(N\)</span> for simplicity. As <span class="process-math">\(N\)</span> is a subgroup of <span class="process-math">\(G\)</span> its order must divide <span class="process-math">\(90\)</span> by Lagrange's Theorem. However, <span class="process-math">\(QQ'\leq N\text{,}\)</span> and so <span class="process-math">\(N\)</span> must have at least <span class="process-math">\(27\)</span> elements, leaving the options of <span class="process-math">\(45\)</span> and <span class="process-math">\(90\text{.}\)</span> If <span class="process-math">\(|N|=90\)</span> then <span class="process-math">\(N=G\text{,}\)</span> making <span class="process-math">\(Q\cap Q'\)</span> normal in <span class="process-math">\(G\text{,}\)</span> a problem.</div>
-<div class="para">If <span class="process-math">\(|N|=45\)</span> then <span class="process-math">\([G:N]=2\text{,}\)</span> the smallest prime dividing <span class="process-math">\(G\text{.}\)</span> Thus <span class="process-math">\(N\)</span> is still normal, which is still a problem. Thus <span class="process-math">\(G\)</span> cannot be simple.</div>
-</li>
-</ol>
-</div></div></body>
+<div class="para">granted via the permutation representation. By (2) in <a href="" class="xref" data-knowl="./knowl/thm-sylow.html" title="Theorem 5.11: Sylow's Theorem">Sylow's Theorem</a> we see that <span class="process-math">\(\rho\)</span> is not trivial. As <span class="process-math">\(|S_7|=7!\)</span> we see that <span class="process-math">\(|G|\not\big||S_7|\text{,}\)</span> meaning that the <span class="process-math">\(\ker(\rho)\)</span> is non-trivial, yielding a non-trivial normal subgroup of <span class="process-math">\(G\text{,}\)</span> a contradiction.</div>
+</div>
+</div></body>
 </html>

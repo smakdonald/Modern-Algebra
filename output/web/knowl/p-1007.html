@@ -11,17 +11,28 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(G = S_n\text{,}\)</span> <span class="process-math">\(K = A_n\)</span> and <span class="process-math">\(H = \langle (1 \, 2) \rangle\text{.}\)</span> Then <span class="process-math">\(K \unlhd G\text{,}\)</span> <span class="process-math">\(H \leq G\text{,}\)</span> <span class="process-math">\(KH = G\)</span> and <span class="process-math">\(K \cap H  = \{e\}\text{.}\)</span> It follows that</div>
-<div class="displaymath process-math">
+<div class="para">
+<em class="emphasis">Existence:</em> In either case, define <span class="process-math">\(f(x^i) = y^i\)</span> for all relevant <span class="process-math">\(i\)</span> (i.e., in the first case, for <span class="process-math">\(0 \leq i \leq n-1\)</span> and in the second for all <span class="process-math">\(i \in\mathbb{Z}\)</span>). We need to show this function is a well-defined group homomorphism. To see that <span class="process-math">\(f\)</span> is well defined, suppose <span class="process-math">\(x^i=x^j\)</span> for some <span class="process-math">\(i,j\in \mathbb{Z}\text{.}\)</span> Then, since <span class="process-math">\(x^{i-j}=e_G\text{,}\)</span> suing Lemma <code class="code-inline tex2jax_ignore">[provisional cross-reference: prop96]</code> or the definition for order we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-S_n \cong A_n \rtimes_\rho C_2
+\begin{cases}
+n\mid i-j &amp; \text{ if } |x|=n\\
+i-j=0 &amp; \text{ if } |x|=\infty\\
+\end{cases}
+\Rightarrow
+\begin{cases}
+y^ {i-j}=y^{nk} &amp; \text{ if } |x|=n\\
+y^{i-j}=y^0 &amp; \text{ if } |x|=\infty\\
+\end{cases}
+\Rightarrow y^ {i-j}=e_H
+\Rightarrow y^ i=y^j.
 \end{equation*}
 </div>
-<div class="para">where <span class="process-math">\(C_2 = \langle x \rangle\)</span> is cyclic of order <span class="process-math">\(2\)</span> and the action <span class="process-math">\(\rho: C_2 \to \operatorname{Aut}(A_n)\)</span> sends <span class="process-math">\(x\)</span> to conjugation by <span class="process-math">\((1 \, 2)\text{.}\)</span>
+<div class="para">Thus, if <span class="process-math">\(x^i=x^j\)</span> then <span class="process-math">\(f(x^i)=y^i=y^j=f(x^j)\text{.}\)</span>
 </div>
 </div>
-<span class="incontext"><a href="sec-spds.html#p-1007" class="internal">in-context</a></span>
+<span class="incontext"><a href="sec-classifying-cyclic-groups.html#p-1007" class="internal">in-context</a></span>
 </body>
 </html>

@@ -10,8 +10,44 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para">Assume every ideal is finitely generated and that such a chain is given. Let <span class="process-math">\(J = \cup_n I_n\text{.}\)</span> Then it is easy to see that <span class="process-math">\(J\)</span> is an ideal. (In detail, for <span class="process-math">\(a \in J, r \in R\)</span> we have <span class="process-math">\(a \in I_n\)</span> for some <span class="process-math">\(n\)</span> and hence <span class="process-math">\(ra \in I_n \subseteq J\text{.}\)</span>
-</div> <div class="para">If <span class="process-math">\(a,b \in J\text{,}\)</span> then <span class="process-math">\(a \in I_n\)</span> and <span class="process-math">\(b \in I_m\)</span> for some <span class="process-math">\(n,m\)</span> and hence there is a <span class="process-math">\(N\)</span> such that <span class="process-math">\(a,b \in I_N\text{.}\)</span> It follows that <span class="process-math">\(a \pm b \in I_N \subseteq J\text{.}\)</span> Finally <span class="process-math">\(0 \in J\text{.}\)</span>) Thus by assumption <span class="process-math">\(J\)</span> is finitely generated, say <span class="process-math">\(J = Rx_1 + \cdots + Rx_m\)</span> for some <span class="process-math">\(x_1, \dots, x_m \in J\text{.}\)</span>
-</div> <div class="para">Each <span class="process-math">\(x_i\)</span> belongs to one of the <span class="process-math">\(I_n\)</span>'s and hence, since there are only a finite number of such elements and ideas are nested, there is an <span class="process-math">\(N\)</span> such that <span class="process-math">\(x_1, \dots, x_m \in I_N\text{.}\)</span> It follows that <span class="process-math">\(I_N = J\)</span> and hence <span class="process-math">\(I_N = I_{N+1} = I_{N+2} = \cdots\text{.}\)</span>
-</div> <div class="para">Assume <span class="process-math">\(R\)</span> has the acc for ideals and let <span class="process-math">\(J\)</span> be any ideal. Pick any element <span class="process-math">\(a_1\in I\)</span> and set <span class="process-math">\(I_1 = Ra_1\text{.}\)</span> If <span class="process-math">\(J = I_1\)</span> we are done. If not, pick <span class="process-math">\(a_2 \in I \setminus I_1\)</span> and set <span class="process-math">\(I_2 = Ra_1 + Ra_2\text{.}\)</span> If <span class="process-math">\(J = I_2\)</span> we are done and if not pick <span class="process-math">\(a_3 \in I\setminus I_2\)</span> and let <span class="process-math">\(I_3 = Ra_1 + Ra_2 + Ra_3\text{.}\)</span> In this way we form a strictly ascending chain <span class="process-math">\(I_1 \subset I_2 \subset I_3 \subset\text{,}\)</span> and this process cannot be continued forever since <span class="process-math">\(R\)</span> has the acc. When it terminates, we have <span class="process-math">\(J = Ra_1 + Ra_2 + \cdots + Ra_N\)</span> for some <span class="process-math">\(a_1, \dots, a_N\)</span> and thus <span class="process-math">\(J\)</span> is finitely generated.</div></article></body>
+<body class="ignore-math"><article class="hiddenproof"><div class="para">The main point of the proof is to establish:</div> <div class="para logical">
+<div class="para">{}: There is a sequence of row and column operations that transforms <span class="process-math">\(A\)</span> to</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A' = \begin{bmatrix}
+g &amp; 0 \\
+0 &amp; B \\
+\end{bmatrix}
+\end{equation*}
+</div>
+<div class="para">for some <span class="process-math">\((n-1) \times (m-1)\)</span> matrix <span class="process-math">\(B\)</span> and where <span class="process-math">\(g = \gcd(A)\text{.}\)</span> (We adopt the convention that if <span class="process-math">\(A\)</span> is the matrix of all <span class="process-math">\(0\)</span>'s, then <span class="process-math">\(g = 0\text{.}\)</span>) Note that, by Lemma , we have <span class="process-math">\(\gcd(A) = \gcd(A')\)</span> and thus <span class="process-math">\(g \mid \gcd(B)\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">Granting this claim, by applying it again to <span class="process-math">\(B\)</span> we arrive at a matrix of the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A'' = \begin{bmatrix}
+g &amp; 0 &amp; 0\\
+0 &amp; g' &amp; 0 \\
+0 &amp; 0 &amp; C
+\end{bmatrix}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(g' = \gcd(B)\)</span> and <span class="process-math">\(g \mid g'\)</span> and <span class="process-math">\(g' \mid \gcd(C)\text{.}\)</span> (Observe that the row and column operations on <span class="process-math">\(B\)</span> will not affect the first row and column of <span class="process-math">\(A'\text{.}\)</span>) Continuing in this fashion, we arrive at the matrix <span class="process-math">\(S\)</span> in the statement.</div>
+</div> <div class="para">To prove the claim, let <span class="process-math">\(a\)</span> be the upper-left entry of <span class="process-math">\(A\text{.}\)</span>
+</div> <div class="para">Suppose <span class="process-math">\(a\)</span> happens to be <span class="process-math">\(g = \gcd(A)\text{.}\)</span> Then, in particular, it divides every entry of the first row and column of <span class="process-math">\(A\text{,}\)</span> and so by doing row and column operations of type I, we may <span class="process-math">\(0\)</span> out these entries to arrive at a matrix of the desired form directly.</div> <div class="para">In general, let <span class="process-math">\(l\)</span> to be the number of prime factors in a prime factorization of of <span class="process-math">\(a/\gcd(A)\text{,}\)</span> and proceed by induction on <span class="process-math">\(l\text{.}\)</span>
+</div> <div class="para">If <span class="process-math">\(l = 0\text{,}\)</span> then <span class="process-math">\(a = \gcd(A)\)</span> (up to associates), and we already did this case.</div> <div class="para">Assume <span class="process-math">\(l &gt; 0\text{.}\)</span> Then there is at least one entry <span class="process-math">\(b = a_{i,j}\)</span> such that <span class="process-math">\(a \nmid b\text{.}\)</span>
+</div> <div class="para">Case I: There is such a <span class="process-math">\(b\)</span> belonging to the first row of <span class="process-math">\(A\text{.}\)</span> In this case we we may implement the Euclidean algorithm in the form of suitable column operations to replace <span class="process-math">\(a\)</span> by <span class="process-math">\(\gcd(a,b)\)</span> and <span class="process-math">\(b\)</span> by <span class="process-math">\(0\text{,}\)</span> as in the example above. Since <span class="process-math">\(a \nmid b\text{,}\)</span> <span class="process-math">\(\gcd(a,b)\)</span> is a proper divisor of <span class="process-math">\(a\text{,}\)</span> and it follows that the number of factors in a prime factorization of <span class="process-math">\(\gcd(a,b)/g\)</span> is smaller than <span class="process-math">\(l\text{,}\)</span> and we are done by induction.</div> <div class="para">Case II: There is such a <span class="process-math">\(b\)</span> in the first column. Just as in the previous case, we are done by induction upon implementing the Euclidean algorithm using suitable row operations.</div> <div class="para logical">
+<div class="para">Case III: <span class="process-math">\(a\)</span> divides every entry of the first row and first column. In this case, suitable row and column operations transform <span class="process-math">\(A\)</span> to</div>
+<div class="displaymath process-math">
+\begin{equation*}
+D = 
+\begin{bmatrix}
+a &amp; 0 \\
+0 &amp; E \\
+\end{bmatrix}.
+\end{equation*}
+</div>
+<div class="para">By Lemma  we have <span class="process-math">\(\gcd(D) = \gcd(A)\text{,}\)</span> and thus there is some element <span class="process-math">\(e\)</span> of <span class="process-math">\(E\)</span> such that <span class="process-math">\(a \nmid e\)</span> (since we are assuming <span class="process-math">\(a\)</span> is not the gcd of <span class="process-math">\(A\)</span>). A suitable row operation puts <span class="process-math">\(e\)</span> into row one without affecting <span class="process-math">\(a\text{,}\)</span> and we are back to the previously solved Case I.</div>
+</div></article></body>
 </html>

@@ -12,15 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para logical">
-<div class="para">The first claim follows from multi-linearity and alternating properties: For notational simplicity say <span class="process-math">\(A = (v_1, v_2, \dots)\)</span> and <span class="process-math">\(B = (v_1 + rv_2, v_2, \dots)\text{.}\)</span> Then</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\det(B) = \det(v_1, v_2, \dots) + r \det(v_2, v_2, \dots) = \det(A) + r \cdot 0 = \det(A)
-\end{equation*}
-</div>
-<div class="para">The second is immediate from (the second part of) <span class="process-math">\(R\)</span>-multi-linearity. The last is a special case of Lemma .</div>
-</div>
+<div class="para">Another way to deduce the Theorem for arbitrary commutative rings from the case of a domain is to use the following fact: If <span class="process-math">\(R\)</span> is a non-zero commutative ring, there there exists a surjective ring homomorphism of the form <span class="process-math">\(g: S \onto R\)</span> where <span class="process-math">\(S\)</span> is a domain. So see this, let <span class="process-math">\(X\)</span> be a (possibly very large) set of indeterminants such that there is a bijection of sets <span class="process-math">\(\rho: X \to R\text{.}\)</span> Let <span class="process-math">\(S = \Z[X]\text{,}\)</span> the polynomial ring with integer coefficients in the variables <span class="process-math">\(X\text{.}\)</span> So, a typical element of <span class="process-math">\(S\)</span> is a polynomial the form <span class="process-math">\(f(x_1, \dots,x_n)\)</span> for some finite subset <span class="process-math">\(\{x_1, \dots, x_n\}\)</span> of <span class="process-math">\(X\text{.}\)</span> By the UMP for polynomial rings, there is a unique ring map <span class="process-math">\(g: S \to R\)</span> such that <span class="process-math">\(g(x) = \rho(x)\)</span> for all <span class="process-math">\(x \in X\text{.}\)</span> That is, <span class="process-math">\(g\)</span> sends <span class="process-math">\(f(x_1, \dots, x_n)\)</span> as above to <span class="process-math">\(f(\rho(x_1), \dots, \rho(x_n))\text{.}\)</span> The ring map <span class="process-math">\(g\)</span> is clearly onto since for each <span class="process-math">\(r \in R\text{,}\)</span> there is an <span class="process-math">\(x \in X\)</span> with <span class="process-math">\(\rho(x) = r\)</span> and hence <span class="process-math">\(g(x) = r\text{.}\)</span> Finally, <span class="process-math">\(S\)</span> is an integral domain.</div>
 <span class="incontext"><a href="sec-det.html#p-2796" class="internal">in-context</a></span>
 </body>
 </html>

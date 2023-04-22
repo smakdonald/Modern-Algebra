@@ -10,28 +10,35 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para logical">
-<div class="para">It suffices prove that for a given group <span class="process-math">\(G\text{,}\)</span> we can recover its invariant factor form from its elementary divisor form, and vice versa. We will be a bit hand-wavey for this following the ideas from the above examples.</div>
-<div class="displaymath process-math">
+<body class="ignore-math"><article class="hiddenproof"><div class="para">Recall that either <span class="process-math">\(G = \{e,x,x^2, \dots, x^{n-1}\}\)</span> (with no repetitions) if <span class="process-math">\(|x| = n\)</span> or <span class="process-math">\(G = \{ \cdots, x^{-2}, x^{-1}, e, x, x^e, \dots \}\)</span> (with no repetitions) if <span class="process-math">\(|x| = \infty\text{.}\)</span>
+</div> <div class="para">
+<em class="emphasis">Uniqueness:</em> We show that if <span class="process-math">\(f:G\to H\)</span> is a group homomorphism, then <span class="process-math">\(f(x^i)=y^i\)</span> for all <span class="process-math">\(i\in \mathbb{Z}\text{.}\)</span>
+</div> <div class="para logical"><ul class="disc">
+<li><div class="para">if <span class="process-math">\(i=0\)</span> then <span class="process-math">\(f(x^0)=f(e_G)=e_H=y^0\)</span>
+</div></li>
+<li><div class="para">if <span class="process-math">\(i&gt;0\)</span> then <span class="process-math">\(f(x^i)=f(\underbrace{x\cdots x}_{i \text{ times}})=\underbrace{f(x)\cdots f(x)}_{i \text{ times}})=y^i\)</span>
+</div></li>
+<li><div class="para">if <span class="process-math">\(i&lt;0\)</span> then <span class="process-math">\(f(x^i)=f\left((x^{-i})^{-1}\right)=f\left((x^{-i})\right)^{-1}=(y^{-i})^{-1}=y^i\text{,}\)</span> using the formula above for <span class="process-math">\(-i&gt;0\)</span>
+</div></li>
+</ul></div> <div class="para logical">
+<div class="para">
+<em class="emphasis">Existence:</em> In either case, define <span class="process-math">\(f(x^i) = y^i\)</span> for all relevant <span class="process-math">\(i\)</span> (i.e., in the first case, for <span class="process-math">\(0 \leq i \leq n-1\)</span> and in the second for all <span class="process-math">\(i \in\mathbb{Z}\)</span>). We need to show this function is a well-defined group homomorphism. To see that <span class="process-math">\(f\)</span> is well defined, suppose <span class="process-math">\(x^i=x^j\)</span> for some <span class="process-math">\(i,j\in \mathbb{Z}\text{.}\)</span> Then, since <span class="process-math">\(x^{i-j}=e_G\text{,}\)</span> suing Lemma <code class="code-inline tex2jax_ignore">[provisional cross-reference: prop96]</code> or the definition for order we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-G \cong  \mathbb{Z}^r \times \mathbb{Z}/p_1^{e_1} \times \cdots \times \mathbb{Z}/p_l^{e_l}.
+\begin{cases}
+n\mid i-j &amp; \text{ if } |x|=n\\
+i-j=0 &amp; \text{ if } |x|=\infty\\
+\end{cases}
+\Rightarrow
+\begin{cases}
+y^ {i-j}=y^{nk} &amp; \text{ if } |x|=n\\
+y^{i-j}=y^0 &amp; \text{ if } |x|=\infty\\
+\end{cases}
+\Rightarrow y^ {i-j}=e_H
+\Rightarrow y^ i=y^j.
 \end{equation*}
 </div>
-<div class="para">by applying the Chinese Remainder Theorem we have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-G \cong \mathbb{Z}^r \times \mathbb{Z}/d_1 \times \cdots \times \mathbb{Z}/d_n
-\end{equation*}
+<div class="para">Thus, if <span class="process-math">\(x^i=x^j\)</span> then <span class="process-math">\(f(x^i)=y^i=y^j=f(x^j)\text{.}\)</span>
 </div>
-<div class="para">where <span class="process-math">\(d_1\)</span> is the product of the elementary divisors of highest power for each <em class="emphasis">distinct</em> prime in the list <span class="process-math">\(p_1, \dots, p_l\text{,}\)</span> <span class="process-math">\(d_2\)</span> is the product of the next highest possible prime powers, and so on. We will have that <span class="process-math">\(d_2\mid d_1\)</span> and in general that <span class="process-math">\(d_{i+1}\mid d_i\)</span> since by definition the exponent of <span class="process-math">\(p_j\in d_i\)</span> is greater or equal to the exponent of <span class="process-math">\(p_j\in d_{i+1}\text{.}\)</span>
-</div>
-</div> <div class="para logical">
-<div class="para">Conversely, given</div>
-<div class="displaymath process-math">
-\begin{equation*}
-G \cong \mathbb{Z}^r \times \mathbb{Z}/d_1 \times \cdots \times \mathbb{Z}/d_n
-\end{equation*}
-</div>
-<div class="para">with <span class="process-math">\(d_1 \mid d_2 \mid \cdots \mid d_n\text{,}\)</span> we may apply the CRT to each <span class="process-math">\(\mathbb{Z}/d_i\)</span> to find its elementary divisor form.</div>
-</div></article></body>
+</div> <div class="para">The homomorphism property is immediate: <span class="process-math">\(f^(x^ix^j)=f(x^{i+j})=y^{i+j}=y^iy^j=f(x^i)f(x^j)\text{.}\)</span> ◻</div></article></body>
 </html>

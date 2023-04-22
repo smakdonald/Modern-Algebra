@@ -707,6 +707,77 @@
               </statement>
               
             </exercise>
+
+            <exercise xml:id="exe-group-exponents">
+              <title>Group Exponents</title>
+              <statement>
+                <p>
+                  Verify that exponents behave how we would expect (hope) them to in groups. That is, 
+                  <ol>
+                    <li>
+                      <p>
+                        <m>x^m\cdot x^n = x^{n+m}</m>.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        <m>(x^{m})^{n} = x^{mn}</m>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+        
+              <solution>
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        We expand <m>x^m</m> and <m>x^n</m> to see
+                        <me>
+                          \begin{align}
+                            x^m\cdot\x^n &amp;=\underbrace{x\cdot\dots\cdot x} \cdot \underbrace{x\cdot\dots\cdot x}\\ 
+                            &amp;= \underbrace{x\cdot\dots\cdot x}\\ 
+                            &amp;= x^{m+n}.
+                          \end{align}
+                        </me>
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Coming soon!
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </solution>
+            </exercise>
+
+            <exercise xml:id="exe-more-group-properties">
+              <title>Properties for a Rainy Day</title>
+              <statement>
+                <p>
+                  Let <m>G</m> be a group and <m>x,y\in G</m>.
+                  <ol>
+                    <li>
+                      If <m>x^2=x</m>, then <m>g=e</m>. 
+                    </li>
+  
+                    <li>
+                      There exists some <m>z\in G</m> such that <m>x=yz</m>
+                    </li>
+
+                  </ol>
+                </p>
+              </statement>
+              <solution>
+                <p>
+                  Coming soon to an OER near you!
+                </p>
+              </solution>
+            </exercise>
             
             <lemma xml:id="lem-group-inverses">
               <title>Properties of Inverses</title>
@@ -735,7 +806,7 @@
                   <ol>
                     <li>
                       <p>
-                        First, recall from <xref ref="def-group"/> that <m>x\cdot x\inv=e</m>. However, it is also the case that <m>(x^\inv)^\inv\cdot x\inv=e</m>. By part (2) of <xref ref="thm-properties-of-groups"/> we know that inverses are unique, and thus it must be the case that <m>(x^{-1})^{-1} = x</m>.
+                        First, recall from <xref ref="def-group"/> that <m>x\cdot x\inv=e</m>. However, it is also the case that <m>(x\inv)\inv\cdot x\inv=e</m>. By part (2) of <xref ref="thm-properties-of-groups"/> we know that inverses are unique, and thus it must be the case that <m>(x^{-1})^{-1} = x</m>.
                       </p>
                     </li>
       
@@ -747,7 +818,7 @@
                   </ol>
                 </p>
               </proof>
-            </lemma>
+            </lemma>  
             
             <warning> <title>Additive Exponents</title>
               <p>
@@ -858,7 +929,22 @@
       
               </p>
       
-            </example>
+            </example>           
+
+            <exercise xml:id="exe-order-4-abelian">
+              <title>Marley's Conjecture</title>
+              <statement>
+                <p>
+                  Every group of order <m>4</m> is abelian.
+                </p>
+              </statement>
+        
+              <solution>
+                <p>
+                  Let <m>G</m> be a group with <m>4</m> elements, and suppose there are elements <m>a,b\in G</m> such that <m>ab\neq ba</m> for some elements <m>a, b\in G</m>. Since <m>ab \neq ba</m>, we must have <m>a \neq b</m>, <m>a \neq e</m>, and <m>b\neq e</m>. Since <m>G</m> has only <m>4</m> elements and <m>ab \neq ba</m>, either <m>ab \in \{e, a, b\}</m> or <m>ba \in\{e, a, b\}</m>. Without loss, say the former occurs. But <m>ab = e</m> implies <m>b=a\inv</m> and we know <m>a\inv</m> commutes with <m>a</m>, and hence this is not possible. If <m>ab = a</m>, then <m>b = e</m> and if <m>ab = b</m> then <m>a = 1</m>, both of which are impossible. Since <m>a, b</m> were arbitrary, <m>G</m> must be abelian.
+                </p>
+              </solution>
+            </exercise>
       
             <theorem xml:id="thm-order-properties">
               <title>Properties of Order</title> 
@@ -886,7 +972,17 @@
                   </ol>
                 </p>
               </statement>
-            </theorem>  
+            </theorem>
+
+            <exercise xml:id="exe-every-element-order-2">
+              <title><m>b</m> there or <m>b^2=e</m></title>
+              <statement>
+                <p>
+                  If <m>G</m> is a group such every non-identity element has order <m>2</m>, then <m>G</m> is abelian. 
+                </p>
+              </statement>
+  
+            </exercise>
 
             <exercise xml:id="exe-finite-order">
               <title>Product Order</title>
@@ -926,7 +1022,7 @@
             </proposition>
             -->
       
-            <theorem xml:id="prop-group-element-order">
+            <theorem xml:id="thm-group-element-order">
               <statement>
                 <p>
                   Let <m>G</m> be a group and let <m>x\in G</m>. Then <m>|x|=\left|\{x^n \ | n\in \Z \}\right|</m> and in particular <m>|x| \leq |G|</m>.
@@ -942,186 +1038,35 @@
               </statement>
             </lemma>
 
+            <exercise xml:id="exe-order-and-gcd">
+              <title>Order Hors d'oeuvre</title>
+              <statement>
+    
+              <p>
+                Let <m>G</m> be a group. 
+                <ol>
+                  <li>
+                    <p>
+                      Let <m>g \in G</m> be an element of finite order. Show that <m>g^m</m> has finite order for any integer <m>m \geq 0</m>, and in fact 
+                      <me>
+                        |g^m| = \frac{\lcm(m,|g|)}{m} = \frac{|g|}{\gcd(m, |g|)}.
+                      </me> 
+                    </p>
+                  </li>
+                      
+                  <li>
+                    <p>
+                      Prove that for all <m>g, h</m> in <m>G</m>, <m>|gh| = |hg|</m> holds.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+            </exercise>
+
             <remark><p>A brief note on notation before we progress to the exercises and beyond. At various points throughout this text, the author may use "mathcal" notation for definitions that do not normally require it (such as <m>\G</m> for a group, <m>\R</m> for a ring, etc.) In the realm of higher mathematics, this is what is known as a <em>typo</em>, and should be reported to the proper authorities as soon as possible.</p></remark>
           </subsection>
     
-          <exercises>
-    
-            <exercisegroup> <title>Properties and Future Lemmas</title>
-              
-              <introduction><p></p></introduction>
-
-              <exercise xml:id="exe-order-4-abelian">
-                <title>Marley's Conjecture</title>
-                <statement>
-                  <p>
-                    Every group of order <m>4</m> is abelian.
-                  </p>
-                </statement>
-          
-                <solution>
-                  <p>
-                    Let <m>G</m> be a group with <m>4</m> elements, and suppose there are elements <m>a,b\in G</m> such that <m>ab\neq ba</m> for some elements <m>a, b\in G</m>. Since <m>ab \neq ba</m>, we must have <m>a \neq b</m>, <m>a \neq e</m>, and <m>b\neq e</m>. Since <m>G</m> has only <m>4</m> elements and <m>ab \neq ba</m>, either <m>ab \in \{e, a, b\}</m> or <m>ba \in\{e, a, b\}</m>. Without loss, say the former occurs. But <m>ab = e</m> implies <m>b=a\inv</m> and we know <m>a\inv</m> commutes with <m>a</m>, and hence this is not possible. If <m>ab = a</m>, then <m>b = e</m> and if <m>ab = b</m> then <m>a = 1</m>, both of which are impossible. Since <m>a, b</m> were arbitrary, <m>G</m> must be abelian.
-                  </p>
-                </solution>
-              </exercise>
-
-              <exercise xml:id="exe-group-exponents">
-                <title>Group Exponents</title>
-                <statement>
-                  <p>
-                    Verify that exponents behave how we would expect (hope) them to in groups. That is, 
-                    <ol>
-                      <li>
-                        <p>
-                          <m>x^m\cdot x^n = x^{n+m}</m>.
-                        </p>
-                      </li>
-  
-                      <li>
-                        <p>
-                          <m>(x^{m})^{n} = x^{mn}</m>.
-                        </p>
-                      </li>
-                    </ol>
-                  </p>
-                </statement>
-          
-                <solution>
-                  <p>
-                    <ol>
-                      <li>
-                        <p>
-                          We expand <m>x^m</m> and <m>x^n</m> to see
-                          <me>
-                            \begin{align}
-                              x^m\cdot\x^n &amp;=\underbrace{x\cdot\dots\cdot x} \cdot \underbrace{x\cdot\dots\cdot x}\\ 
-                              &amp;= \underbrace{x\cdot\dots\cdot x}\\ 
-                              &amp;= x^{m+n}.
-                            \end{align}
-                          </me>
-                        </p>
-                      </li>
-
-                      <li>
-                        <p>
-                          Coming soon!
-                        </p>
-                      </li>
-                    </ol>
-                  </p>
-                </solution>
-              </exercise>
-    
-              <exercise xml:id="exe-more-group-properties">
-                <title>Properties for a Rainy Day</title>
-                <statement>
-                  <p>
-                    Let <m>G</m> be a group and <m>x,y\in G</m>.
-                    <ol>
-                      <li>
-                            If <m>x^2=x</m>, then <m>g=e</m>. 
-                      </li>
-    
-                      <li>
-                          There exists some <m>z\in G</m> such that <m>x=yz</m>
-                      </li>
-
-                      <li>
-                        Let <m>n\in\Z</m>. Then <m>(xyx\inv)^n=xy^nx\inv.</m>
-                    </li>
-
-                      <li>
-                        <p>
-                          If <m>G</m> is abelian then <m>(a_1 \dots a_n)^{-1} = a_1^{-1} \dots a_n^{-1}</m>.
-                        </p>
-                      </li>
-                    </ol>
-                  </p>
-                </statement>
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-    
-              <exercise xml:id="exe-every-element-order-2">
-                <title><m>b</m> there or <m>b^2=e</m></title>
-                <statement>
-                  <p>
-                    If <m>G</m> is a group such every non-identity element has order <m>2</m>. Then <m>G</m> is abelian. 
-                  </p>
-                </statement>
-    
-              </exercise>
-
-              <exercise xml:id="exe-order-lemma">
-                <title>More Order</title>
-                <statement>
-                  <p>
-                    Let <m>G</m> be a group. Suppose <m>g^k=g^m</m> and <m>k&lt;m</m>.
-                    <ol>
-                      <li>
-                        <p>
-                          then <m>g^{m-k}=e</m>
-                        </p>
-                      </li>
-        
-                      <li>
-                        <p>
-                          then <m>|g|\leq m-k</m>
-                        </p>
-                      </li>
-                    </ol>
-                  </p>
-                </statement>
-  
-                <solution>
-                  <p>
-                    Let <m>n = |x|</m>. We have <m>m = nq + r</m> for some <m>0 \leq r &lt; n</m> by the <xref text="title" provisional="division algorithm"/>. We have <m>x^r = (x^n)^qx^r = x^m = e</m> and so, by the definition of <xref text="title" ref="def-order"/>, it must be that <m>r = 0</m>
-                  </p>
-                </solution>
-              </exercise>
-
-              <exercise xml:id="exe-prime-order">
-                <statement>
-                  <p>
-                    If <m>g^p=e</m> for <m>g\neq e</m> and <m>p</m> prime, then <m>|g|=p</m>.
-                  </p>
-                </statement>
-              </exercise>
-
-              <exercise xml:id="exe-order-and-gcd">
-                <title>Order Hors d'oeuvre</title>
-                <statement>
-      
-                <p>
-                  Let <m>G</m> be a group. 
-                  <ol>
-                    <li>
-                      <p>
-                        Let <m>g \in G</m> be an element of finite order. Show that <m>g^m</m> has finite order for any integer <m>m \geq 0</m>, and in fact 
-                        <me>
-                          |g^m| = \frac{\lcm(m,|g|)}{m} = \frac{|g|}{\gcd(m, |g|)}.
-                        </me> 
-                      </p>
-                    </li>
-                        
-                    <li>
-                      <p>
-                        Prove that for all <m>g, h</m> in <m>G</m>, <m>|gh| = |hg|</m> holds.
-                      </p>
-                    </li>
-                  </ol>
-                </p>
-              </statement>
-              </exercise>
-
-            </exercisegroup>
-
-          </exercises>
-      
         </section>
       
         <section xml:id="sec-common-groups">
@@ -1132,10 +1077,7 @@
 
             <blockquote><p><q>Reality prefers symmetry.</q></p><attribution>Jorge Luis Borges</attribution> </blockquote>
             
-            <p>
-              We now discuss the important example of dihedral groups in detail.
-            </p>
-      
+            <p>We now discuss the important example of dihedral groups in detail.</p>
       
             <definition xml:id="def-iso-and-sym">
               <title>Isometry and Symmetry</title>
@@ -1184,7 +1126,7 @@
             </p>
             </example>
 
-            <remark><p>We see<m>|r|=n</m> and <m>|s|=2</m>, which may make some intuitive sense. The fact that <m>sr</m> is a reflection and hence that <m>srsr=1_{{\mathbb{R}}^2}</m> may be slightly less aparent, </p></remark>
+            <remark><p>We see <m>|r|=n</m> and <m>|s|=2</m>, which may make some intuitive sense. The fact that <m>sr</m> is a reflection and hence that <m>srsr=e_{{\mathbb{R}}^2}</m> may be slightly less aparent.</p></remark>
       
             <proposition xml:id="thm-d2n-order">
               <statement>
@@ -1251,37 +1193,13 @@
               </statement>
             </definition>
 
-            <paragraphs><title>Notation: Cycle Notation</title>
-
-              <p>
-                We can write an element <m>\sigma</m> of <m>S_n</m> as a table of values: 
-                <me>
-                  \begin{pmatrix} 
-                    1 &amp; 2 &amp; 3 &amp; \cdots &amp; n \\
-                    \sigma(1) &amp; \sigma(2) &amp; \sigma(3) &amp; \cdots &amp; \sigma(n)
-                  \end{pmatrix}
-                </me>
-              </p>
-
-              <p>
-                It is customary to use <em>cycle notation</em> for permutations. If <m>i_1, \dots, i_m</m> are distinct integers between <m>1</m> and <m>n</m>, then <m>(i_1 \, i_2 \, \dots, i_m)</m> denote the element of <m>S_n</m> that send <m>i_1</m> to <m>i_2</m>, <m>i_2</m> to <m>i_3, \dots</m>, <m>i_{m-1}</m> to <m>i_m</m> and <m>i_m</m> to <m>i_1</m>, and which fixes all elements of <m>\{1, \dots, n\} \setminus \{i_1, \dots, i_m\}</m>.
-              </p>
-              
-            </paragraphs>
-
-            <example>
-              <p>
-                For eample <m>(1 \, 3 \, 7)</m>, regarded as an element of <m>S_{13}</m> sends <m>1</m> to <m>3</m>, <m>3</m> to <m>7</m> and <m>7</m> to <m>1</m>, and it fixes <m>2,4,5,7,8,9,10,11,12,13</m>. (Note that the value of <m>n</m> in cycle notation is sometime ambiguous.)
-              </p>
-            </example>
-
             <exercise xml:id="exe-sn-order">
               <title>Order of <m>S_n</m></title>
               <p>
                 Prove <m>|S_n|=n!</m>.
               </p>
             </exercise>
-      
+     
             <definition xml:id="def-cycle">
               <title>Cycles and Transpositions</title>
               <statement>
@@ -1295,6 +1213,12 @@
               </statement>
             </definition>
 
+            <example xml:id="ex-cycle">
+              <p>
+                For eample <m>(1 \, 3 \, 7)</m>, regarded as an element of <m>S_{13}</m> sends <m>1</m> to <m>3</m>, <m>3</m> to <m>7</m> and <m>7</m> to <m>1</m>, and it fixes <m>2,4,5,7,8,9,10,11,12,13</m>. (Note that the value of <m>n</m> in cycle notation is sometime ambiguous.)
+              </p>
+            </example>
+
             <exercise xml:id="exe-1-cycles">
               <title><m>1</m>-Cycles in <m>S_n</m></title>
               <p>
@@ -1302,39 +1226,34 @@
               </p>
             </exercise>
 
-            <exercise xml:id="exe-inverting-transpositions">
-              <title>Inverting Transpositions</title>
-              <p>
-                <ol>
-                  <li>
-                    <p>
-                      Every transposition is its own inverse.
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      If <m>\s_1,\dots,\s_{n-1}</m> and <m>\s_n</m> are transpositions, then 
-                      <me>
-                        (\s_1\dots\s_{n})\inv=\s_n\dots\s_1
-                      </me>
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </exercise>
-      
-            <remark>
-              <p>
-                Note that distinct lists of integers represent the same cycle if they are cyclical rearrangements of each other, e.g., <m>(1 \, 2 \, 3) = (2 \, 3 \, 1)</m>. However, <m>(1 \, 2 \, 3) \neq (2 \, 1 \, 3)</m>.
-              </p>
-            </remark>
+            <remark><p>Note that distinct lists of integers represent the same cycle if they are cyclical rearrangements of each other, e.g., <m>(1 \, 2 \, 3) = (2 \, 3 \, 1)</m>. However, <m>(1 \, 2 \, 3) \neq (2 \, 1 \, 3)</m>.</p></remark>
 
              <example>
               <p>
                 We compose cycles the same way we compose functions. So, for example <me>(1 \, 3 \, 7) (2 \, 3 \, 5) = (1 \, 3 \, 5 \, 2 \, \,7).</me> This equation might lead you to the false belief that every element of <m>S_n</m> is a cycle. This is not true — for example, the product <m>(1 \, 2) (3 \, 4)</m> cannot be written as a single cycle. What is true is that every element of <m>S_n</m> is uniquely (up to ordering) the product of disjoint cycles. We'll prove that soon.
               </p>
             </example>
+
+            <p>How can we determine the order of elements of <m>S_n?</m> Like this.</p>
+
+            <proposition xml:id="exe-permutation-order">
+              <title>Permutation Order</title>
+              <statement>
+              <p>
+                Prove that the order of a permutation is the least common multiple of the lengths of the cycles it is a product of.
+              </p>
+
+              <p>
+                In particular, every transposition is its own inverse and the order of a <m>k</m>-cycle in <m>S_n</m> is <m>n</m>.
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                Coming soon!
+              </p>
+            </proof>
+            </proposition>
 
             <proposition xml:id="prop-disjoint-cycles-commute">
               <statement>
@@ -1372,27 +1291,7 @@
               </statement>
             </theorem>
       
-            <remark>
-              <p>
-                For the uniqueness part of statement (1) in the above proposition one needs to establish a convention regarding 1-cycles, that is one needs to stipulate either that the 1-cycles will not be recorded (which gives the shortest such factorization) or that all the 1-cycles will be recorded (which gives the longest such factorization, but also the only one that makes it clear what the number <m>n</m> is).
-              </p>
-            </remark>
-
-            <exercise xml:id="exe-k-cycle-order">
-              <title>Order of a <m>k</m>-cycle</title>
-              <p>
-                The order of a <m>k</m>-cycle in <m>S_n</m> is <m>n</m>.
-              </p>
-            </exercise>
-
-            <p>We can generalize the previous exercise.</p>
-
-            <exercise xml:id="exe-permutation-order">
-              <title>Permutation Order</title>
-              <p>
-                Prove that the order of a permutation is the least common multiple of the lengths of the cycles it is a product of.
-              </p>
-            </exercise>
+            <remark><p>For the uniqueness part of statement (1) in the above proposition one needs to establish a convention regarding <m>1</m>-cycles, that is one needs to stipulate either that the <m>1</m>-cycles will not be recorded (which gives the shortest such factorization) or that all the <m>1</m>-cycles will be recorded (which gives the longest such factorization, but also the only one that makes it clear what the number <m>n</m> is).</p></remark>
 
             <exercise xml:id="exe-identity-even">
               <title>Identity Permutation</title>
@@ -1484,6 +1383,24 @@
                 </p>
               </statement>
             </definition>
+
+            <exercise xml:id="exe-subgroup-preserves-identity">
+              <title>Subgroups Preserve Identities</title>
+              <statement>
+                <p>
+                  Let <m>H</m> be a subgroup of <m>G</m>. Then <m>e_G=e_H</m>.
+                </p>
+              </statement>
+            </exercise>
+
+            <exercise xml:id="exe-abelian-subgroups">
+              <title>Subgroups of Abelian Groups</title>
+              <statement>
+                <p>
+                  Let <m>H</m> be a subgroup of a group <m>G</m>. If <m>G</m> is abelian then so is <m>H</m>.
+                </p>
+              </statement>
+            </exercise>
       
             <theorem xml:id="thm-subgroup-test">
               <title>Subgroup Tests</title>
@@ -1580,7 +1497,7 @@
 
                   <li>
                     <p>
-                      The group <m>L=\{1,-1,i,-i\}</m> (verified as such in <xref ref="ex-group-examples"/>) is a subgroup of <m>\C^\times</m>.
+                      The group <m>L=\{1,-1,i,-i\}</m> is a subgroup of <m>\C^\times</m>.
                     </p>
                   </li>
 
@@ -1592,7 +1509,7 @@
 
                   <li>
                     <p>
-                      The set of all reflections is a subgroup of <m>D_{2n}</m>. Similarly, the set of relections is also a subgroup.
+                      The set of all rotations is a subgroup of <m>D_{2n}</m>. Similarly, the set of reflections is also a subgroup.
                     </p>
                   </li>
                 </ol>
@@ -1859,72 +1776,17 @@
                 Let <m>G</m> be a group and <m>g\in G</m>. If <m>g</m> is the only element of order <m>2</m> in <m>G</m>, then <m>g\in Z(G)</m>.
               </p>
             </exercise>
+
+            <exercise xml:id="exe-even-groups-order-2">
+              <title>Even Order Groups</title>
+              <p>
+               Every group of even order contains an element of order <m>2</m>.
+               <fn>This is a direct result of <xref ref="thm-cauchy"/>, but proving it is possible with the tools we have</fn>
+              </p>
+            </exercise>
           </subsection>
 
           <exercises>
-
-          
-            <exercisegroup> <title>Properties and Future Lemmas</title>
-              
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-
-              <exercise xml:id="exe-subgroup-preserves-identity">
-                <title>Subgroups Preserve Identities</title>
-                <statement>
-                  <p>
-                    Let <m>H</m> be a subgroup of <m>G</m>. Then <m>e_G=e_H</m>.
-                  </p>
-                </statement>
-              </exercise>
-
-              <exercise xml:id="exe-center-is-group-iff-abelian">
-                <title>Abelian iff <m>Z(G)=G</m></title>
-                <statement>
-                  <p>
-                    Let <m>G</m> be a group. Prove <m>G</m> is abelian if any only if <m>G=Z(G)</m>.
-                  </p>
-                </statement>
-              </exercise>
-
-              <exercise xml:id="exe-subgroups-closed-under-intersections">
-                <title>Subgroups Closed Under Intersections</title>
-                <statement>
-                  <p>
-                    Subgroups are closed under intersections.
-                  </p>
-                </statement>
-              </exercise>
-
-              <exercise xml:id="exe-even-groups-order-2">
-                <title>Even Order Groups</title>
-                <p>
-                 Every group of even order contains an element of order <m>2</m>.
-                 <fn>This is a direct corollary of <xref ref="thm-cauchy"/>, but proving it is possible and thus beneficial to prove it without all of that machinery first, and we will use this partial result in <xref provisional="cite"/></fn>
-                </p>
-              </exercise>
-
-              <exercise xml:id="exe-abelian-subgroups">
-                <title>Subgroups of Abelian Groups</title>
-                <statement>
-                  <p>
-                    Let <m>H</m> be a subgroup of a group <m>G</m>. If <m>G</m> is abelian then so is <m>H</m>.
-                  </p>
-                </statement>
-              </exercise>
-        
-              <exercise xml:id="exe-groups-contained-in-groups-are-subgroups">
-                <title>Subsets and Subgroups</title>
-                <statement>
-                  <p>
-                    Let <m>H</m> and <m>G</m> be groups. If <m>H\sse G</m>, then <m>H\leq G</m>
-                  </p>
-                </statement>
-              </exercise>
-          
-            </exercisegroup>
           
             <exercisegroup> <title>Qualifying Exam Problems</title>
               
@@ -1989,14 +1851,6 @@
               </statement>
             </definition>
 
-            <exercise xml:id="exe-self-sufficient">
-              <title>Self Sufficent</title>
-              <p>
-                Show that <m>\igen G=G</m> for any group <m>G</m>.
-              </p>
-      
-            </exercise>
-
             <lemma xml:id="lem-gensubgp">
               <title>Elements of <m>\igen X</m></title>
               <statement>
@@ -2041,15 +1895,6 @@
                 </p>
               </proof>
             </lemma>
-      
-            <corollary xml:id="cor-cyclic-subgroup">
-              <title>Elements of <m>\igen x</m></title>
-              <statement>
-              <p>
-                For an element <m>x</m> of <m>G</m>, the elements of <m>\langle x \rangle</m> can be described as: <m>\langle x\rangle=\{x^j \mid j\in \mathbb{Z}\}</m>.
-              </p>
-            </statement>
-            </corollary>
 
             <p>Lets look at some examples for context.</p>
 
@@ -2067,26 +1912,7 @@
               </p>
             </example>
 
-            <remark><p>Note that in <xref ref="thm-cycledecomp"/> we showed <m>S_n</m> is generated by transpositions. However, generators need not be unique.</p></remark>
-
-            <exercise xml:id="exe-non-unique-cyclic-generators">
-              <title>Cyclic Generators Need not be Unique</title>
-              
-              <statement>
-                <p>
-                  Let <m>G=\langle x\rangle</m> be a cyclic group. Then <m>G=\langle x^{-1}\rangle</m>.
-                </p>
-              </statement>
-            </exercise>
-
-            <p>Here is a more general criteria for determining when an element of a cyclic group is a generator.</p>
-
-            <proposition xml:id="prop-cyclic-criteria">
-              <title>Criteria for Cyclic Generators</title>
-              <p>
-                Let <m>G=\igen x</m> be a cyclic group of order <m>n</m>, and let <m>y=x^m\in G</m>. Then <m>y</m> generates <m>G</m> if and only if <m>\gcd(n,m)=1</m>.
-              </p>
-            </proposition>
+            <remark><p>Note that in <xref ref="thm-cycledecomp"/> we showed <m>S_n</m> is generated by transpositions.</p></remark>
 
             <exercise xml:id="exe-d2p">
               <title>Generating <m>D_{2p}</m></title>
@@ -2223,6 +2049,62 @@
               </p>
             </exercise>
 
+            <p>Recalling <xref ref="lem-gensubgp"/>, we can describe the elements of a cylic group explicitely.</p>
+
+            <corollary xml:id="cor-cyclic-subgroup">
+              <title>Elements of <m>\igen x</m></title>
+              <statement>
+              <p>
+                For an element <m>x</m> of <m>G</m>, the elements of <m>\langle x \rangle</m> can be described as: <m>\langle x\rangle=\{x^j \mid j\in \mathbb{Z}\}</m>.
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                By Lemma <xref ref="lem-gensubgp" />, the group <m>G</m> has the following elements <m>G=\{x^i \mid i\in \mathbb{Z}\}</m>. We show that
+              </p>
+
+              <p>
+                <ul>
+                  <li>
+                    <p>
+                      <m>|G|\geq n</m> by showing the elements <m>x^0, x^1, \dots, x^{n-1}</m> are distinct. Indeed, if <m>0\leq i&lt;j&lt;n</m> and <m>x^i=x^j</m> then <m>x^{j-i}=e</m> and <m>1\leq j-i&lt;n</m>, contradicting the minimality of the order of <m>x</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>|G|\leq n</m> by showing <m>G\subseteq\{x^0, x^1, \dots, x^{n-1}\}</m> (this implies <m>G=\{e,x,\ldots,x^{n-1}\}</m>). Indeed, for any <m>m\in \mathbb{Z}</m> division by <m>n</m> yields integers <m>q,r</m> with <m>0\leq r\leq n-1</m> such that <m>m=nq+r</m>. Then <m>x^m=x^{nq+r}=(x^n)^qx^r=x^r\in\{x^0, x^1, \dots, x^{n-1}\}</m>.
+                    </p>
+                  </li>
+                </ul>
+              </p>
+            </proof>
+            </corollary>
+
+            <p>Generators need not be unique.</p>
+
+            <exercise xml:id="exe-non-unique-cyclic-generators">
+              <title>Cyclic Generators Need not be Unique</title>
+              
+              <statement>
+                <p>
+                  Let <m>G=\langle x\rangle</m> be a cyclic group. Then <m>G=\langle x^{-1}\rangle</m>.
+                </p>
+              </statement>
+            </exercise>
+
+            <p>Here is a more general criteria for determining when an element of a cyclic group is a generator.</p>
+
+            <proposition xml:id="prop-cyclic-criteria">
+              <title>Criteria for Cyclic Generators</title>
+              <p>
+                Let <m>G=\igen x</m> be a cyclic group of order <m>n</m>, and let <m>y=x^m\in G</m>. Then <m>y</m> generates <m>G</m> if and only if <m>\gcd(n,m)=1</m>.
+              </p>
+            </proposition>
+
+            <p>One quick way of seeing if a group is cyclic is to find an element with the same order as the group.</p>
+
             <proposition xml:id="prop-cyclic-equivalencies">
               <statement>
                 <p>
@@ -2249,55 +2131,21 @@
               
               <statement>
                 <p>
-                  Let <m>G=\langle x\rangle</m>, where <m>x</m> has finite order <m>n</m>. Then
-                  <ol>
-                    <li>
-                      <p>
-                        <m>G=\{e,x,\ldots,x^{n-1}\}</m>.
-                      </p>
-                    </li>
-          
-                    <li>
-                      <p>
-                        There is a bijection 
-                          <me>
-                            \Psi : \{\text{divisors of } |G|\} \to \{\text{subgroups of } G\} \text{ given by } \Psi(d) = \langle x^{\frac{|G|}{d}}  \rangle
-                          </me> 
-                          for each divisor <m>d</m> of <m>|G|</m>. Moreover, for each subgroup <m>H</m> of <m>G</m>, <m>\Psi^{-1}(H) = |H|</m>. In particular, all subgroups of <m>G</m> are cyclic and there is a unique subgroup of each order.
-                      </p>
-                    </li>
-                  </ol>
+                  Let <m>G=\langle x\rangle</m>, where <m>x</m> has finite order <m>n</m>. Then there is a bijection 
+                  <me>
+                    \Psi : \{\text{divisors of } |G|\} \to \{\text{subgroups of } G\} \text{ given by } \Psi(d) = \langle x^{\frac{|G|}{d}}  \rangle
+                  </me> 
+                  for each divisor <m>d</m> of <m>|G|</m>. Moreover, for each subgroup <m>H</m> of <m>G</m>, <m>\Psi^{-1}(H) = |H|</m>. In particular, all subgroups of <m>G</m> are cyclic and there is a unique subgroup of each order.  
                 </p>
               </statement>
   
               <proof>
                 <p>
                   <ol>
-                    <li>
-                      <p>
-                        1. By Lemma <xref provisional="lem:&lt;X&gt;" />, the group <m>G</m> has the following elements <m>G=\{x^i \mid i\in \mathbb{Z}\}</m>. We show that
-                      </p>
-  
-                      <p>
-                        <ul>
-                          <li>
-                            <p>
-                              <m>|G|\geq n</m> by showing the elements <m>x^0, x^1, \dots, x^{n-1}</m> are distinct. Indeed, if <m>0\leq i&lt;j&lt;n</m> and <m>x^i=x^j</m> then <m>x^{j-i}=e</m> and <m>1\leq j-i&lt;n</m>, contradicting the minimality of the order of <m>x</m>.
-                            </p>
-                          </li>
-    
-                          <li>
-                            <p>
-                              <m>|G|\leq n</m> by showing <m>G\subseteq\{x^0, x^1, \dots, x^{n-1}\}</m> (this implies <m>G=\{e,x,\ldots,x^{n-1}\}</m>). Indeed, for any <m>m\in \mathbb{Z}</m> division by <m>n</m> yields integers <m>q,r</m> with <m>0\leq r\leq n-1</m> such that <m>m=nq+r</m>. Then <m>x^m=x^{nq+r}=(x^n)^qx^r=x^r\in\{x^0, x^1, \dots, x^{n-1}\}</m>.
-                            </p>
-                          </li>
-                        </ul>
-                      </p>
-                    </li>
   
                     <li>
                       <p>
-                        2. <em>Claim 1:</em> For any <m>\{e\}\neq H\leq G</m>, setting <m>k=\min\{i \mid i\in \mathbb{Z}, i&gt;0, g^i\in H\}</m> gives that <m>H=\langle g^k \rangle</m>.
+                        <em>Claim 1:</em> For any <m>\{e\}\neq H\leq G</m>, setting <m>k=\min\{i \mid i\in \mathbb{Z}, i&gt;0, g^i\in H\}</m> gives that <m>H=\langle g^k \rangle</m>.
                       </p>
               
                       <p>
@@ -2531,7 +2379,7 @@
               </p>
             </exercise>
       
-            <p>Specifically, the homomorphism will preserve the additive structure, such as the identity element and inverse elements.</p>
+            <p>Specifically, homomorphisms will preserve the additive structure, such as the identity element and inverse elements.</p>
       
             <theorem xml:id="thm-grphomom-prop">
               <title>Homomorphism Preservations</title>
@@ -2578,6 +2426,8 @@
                 </p>
               </proof>
             </proposition>
+
+            <p>This is techincally an specific instance of the UMP for a Presentation, which is not covered here.</p>
 
             <p>Let's take a peak at what this might look like in practice.</p>
 
@@ -2766,11 +2616,11 @@
               </statement>
             </definition>
       
-            <remark><p>I have defined the notion of isomorphism in <xref ref="def-gpiso" /> differently than given in the textbook. The reason is that the correct meaning of the word <q>isomorphism</q> in any context (sets, groups, rings, fields, topological spaces, whatever) is always <q>a morphism that has a two-sided inverse</q>. In many contexts, such as sets, groups, rings and fields this turns out to be equivalent to the notion of being <q>one-to-one and onto</q>. But there are contexts in which this is not the case. For example a one-to-one and onto continuous map of topological spaces need not be a homeomorphism. (A homeomorphism is a term one uses for isomorphism of topological spaces, for historical reasons.)</p></remark>
+            <remark><p>The meaning of the word <q>isomorphism</q> in any context (sets, groups, rings, fields, topological spaces, whatever) is always <q>a morphism that has a two-sided inverse</q>. In many contexts this turns out to be equivalent to the notion of being <q>one-to-one and onto</q>. But there are contexts in which this is not the case. For example a one-to-one and onto continuous map of topological spaces need not be a homeomorphism. (A homeomorphism is a term one uses for isomorphism of topological spaces, for historical reasons.)</p></remark>
       
             <p>Intuitively, a group isomorphism establishes a one-to-one correspondence between the elements of two groups, such that they have exactly the same algebraic structure. This means that the groups are essentially the same, up to a relabeling of their elements.</p>
       
-            <p>Group isomorphisms are important because they allow us to identify different groups that have the same algebraic structure. This can simplify the study of groups by reducing the number of cases that need to be considered, and it can also provide insight into the connections between seemingly unrelated groups.</p>
+            <p>Group isomorphisms allow us to identify different groups that have the same algebraic structure. This can simplify the study of groups by reducing the number of cases that need to be considered, and it can also provide insight into the connections between seemingly unrelated groups.</p>
       
             <theorem xml:id="thm-iso-def">
               <statement>
@@ -3018,6 +2868,12 @@
               </statement>
             </definition>
 
+            <example xml:id="ex-identity-automorphism">
+              <p>
+                In <xref ref="ex-group-iso-examples"/> we saw that the identity map is a group isomomorphism from a group to itself, making <m>\id</m> an automorphism. This may prove (pun intended) useful in the following proposition.
+              </p>
+            </example>
+
             <proposition xml:id="prop-aut-is-group">
               <title>The Automorphism Group</title>
               <statement>
@@ -3027,12 +2883,6 @@
                 </p>
               </statement>
             </proposition>
-      
-            <example xml:id="ex-identity-automorphism">
-              <p>
-                In <xref ref="ex-group-iso-examples"/> we saw that the identity map is a group isomomorphism from a group to itself, making <m>\id</m> an automorphism. This may prove (pun intended) useful in the following proposition.
-              </p>
-            </example>
 
             <example xml:id="ex-z-aut">
               <title><m>\Aut(\Z)</m></title>
@@ -3074,8 +2924,6 @@
                 </p>
               </statement>
             </definition>
-
-            
 
             <theorem xml:id="thm-conjugation-automorphism">
               <title>The Conjugation Automorphism</title>
@@ -3363,9 +3211,7 @@
               </proof>
             </lemma>
 
-            <p>
-              As with any partition of a set, the collection of left cosets of <m>H</m> in <m>G</m> determine an equivalence relation on <m>G</m>, and similarly for the collection of right cosets.
-            </p>
+            <p>As with any partition of a set, the collection of left cosets of <m>H</m> in <m>G</m> determine an equivalence relation on <m>G</m>, and similarly for the collection of right cosets.</p>
       
             <corollary xml:id="cor-left-right-cosets">
               <statement>
@@ -3428,6 +3274,17 @@
                 Let <m>G = \mathbb{Z}</m> and <m>H = 7\mathbb{Z}</m>. Then <m>[G:H] = 7</m> since the cosets are <m>H, 1 + H, 2 + H, \dots, 6 + H</m>. (Since <m>G</m> is abelian, left and right cosets are automatically the same.)
               </p>
             </example>
+
+            <p>This seems like it might be important.</p>
+
+            <theorem xml:id="thm-index-tower">
+              <title>The Index Tower</title>
+              <statement>
+                <p>
+                  Let <m>G</m> be a group (possibly infinite) and <m>H \leq K</m> subgroups of <m>G</m>. Suppose <m>[G : H]</m> is finite. Prove that <m>[G : H] = [G : K][K : H]</m>.
+                </p>
+              </statement>
+            </theorem>
           </subsection>
 
           <subsection xml:id="subsec-lagrange">
@@ -3476,11 +3333,6 @@
                       </p>
                     </li>
       
-                    <li>
-                      <p>
-                        (Groups of prime order are cyclic) If <m>|G|=p</m> for some prime <m>p</m>, then <m>G</m> is cyclic and any non-identity element of <m>G</m> generates <m>G</m>.
-                      </p>
-                    </li>
                   </ol>
                 </p>
               </statement>
@@ -3502,15 +3354,8 @@
                 For every integer <m>a</m> and every prime <m>p</m>, <m>a^p\mod p=a\mod p</m>.
               </p>
             </exercise>
-      
-            <theorem xml:id="thm-index-tower">
-              <title>The Index Tower</title>
-              <statement>
-                <p>
-                  Let <m>G</m> be a group (possibly infinite) and <m>H \leq K</m> subgroups of <m>G</m>. Suppose <m>[G : H]</m> is finite. Prove that <m>[G : H] = [G : K][K : H].</m> (Hint: First prove this in the case <m>G</m> is a finite group. Then prove you can reduce to the finite case.)
-                </p>
-              </statement>
-            </theorem>
+
+            <p>If you can believe it, there's actually another important corollary to <xref text="title" ref="thm-lagrange"/>, but we'll cover it when its more relevant. Wouldn't want to spoil all the fun at once, right?<fn>To spoil all the fun at once, See: <xref ref="thm-order-p-cyclic"/></fn></p>
 
           </subsection> 
     
@@ -3963,6 +3808,7 @@
             <p>In previous sections we have spent time discussing the existence and properties of cosets, but we have yet to lump them all together into one set. If one were to do so, a natural question to ask would be when such a set defines a group in its own right. Is it always? It sure would be nice if it was always.</p>
 
             <exercise>
+              <title>It is Not Always</title>
               <p>
                 Prove that it is not always.
               </p>
@@ -3971,6 +3817,7 @@
             <p>Darn. Is it ever? It sure would be nice if it was at least sometimes. </p>
 
             <exercise>
+              <title>It is Sometimes</title>
               <p>
                 Find an example of when it is.
               </p>
@@ -3999,13 +3846,7 @@
               </statement>
             </theorem>
       
-            <remark><p>Don't that the set <m>G/H</m> exists for any subgroup <m>H\leq G</m>. However, this set only satisfies the axioms of a group when the subgroup is normal.</p></remark>
-
-            <example xml:id="ex-mod-quotient">
-              <p>
-                In <xref ref="ex-normal-examples"/> we saw <m>n\Z\nsg\Z</m>, and thus the quotient <m>\Z/n\Z</m> is indeed a group. For those accustomed to this as the notation for <m>\Z/n</m>, it may not surprise you that <m>\Z/n\cong\Z/n\Z</m>. You may prove this explicitely in <xref ref="exe-mod-n-iso"/>
-              </p>
-            </example>
+            <remark><p>Don't forget that the set <m>G/H</m> exists for <em>any</em> subgroup <m>H\leq G</m>. However, this set only satisfies the axioms of a group when the subgroup is normal.</p></remark>
 
             <example>
               <p>
@@ -4015,19 +3856,7 @@
             
              <exercise xml:id="exe-mod-n-iso">
               <p>
-                <ol>
-                  <li>
-                    <p>
-                      <m>\Z/n\Z\cong\Z/n</m> for all <m>n\in\N</m>.
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      Argue amongst yourselves what the 'best' notation for the integers <m>\mod n</m> Should be: <m>\Z/n,</m> <m>\Z/n\Z,</m>, <m>\Z/n,</m>, <m>\Z_n,</m>, <m>\Z/\igen n</m>, <m>\frac{\Z}{n},</m> or whatever other horrors you can conjure.
-                    </p>
-                  </li>
-                </ol>
+                Argue amongst yourselves what the 'best' notation for the integers <m>\mod n</m> Should be: <m>\Z/n,</m> <m>\Z/n\Z,</m>, <m>\Z/n,</m>, <m>\Z_n,</m>, <m>\Z/\igen n</m>, <m>\frac{\Z}{n},</m> or whatever other horrors you can conjure.
               </p>
             </exercise>
 
@@ -4706,8 +4535,6 @@
     
           </theorem>
     
-          <p>Permutation representations are one the most essential functions (no pun intended) of group actions. This homomorphism allows us to study the structure of a group <m>G</m> by looking at the permutation group of <m>X</m>, which may be a more manageable group to work with. </p>
-
           <p>An immediate perk of this result is that we already know a lot of things about homomorphisms, and we can thus extend that knowledge into the realm of group actions at our leisure. Let's see some examples.</p>
 
           <example xml:id="ex-permrep-examples">
@@ -4749,8 +4576,9 @@
           </example>
 
           <exercise>
+            <title>Discussion</title>
             <p>
-              Should an action which is not faithful be called <em>unfaithful</em>? <em>Adulterous?</em>? Discuss. 
+              Should an action which is not faithful be called <em>unfaithful</em>? <em>Adulterous</em>? Discuss. 
             </p>
           </exercise>
     
@@ -4896,6 +4724,8 @@
                 </me> 
               </p>
             </example>
+
+            <p>We saw the conjugation action in <xref ref="ex-group-actions"/>, but in this specific case the group <m>G</m> is acting on itself.</p>
       
             <theorem xml:id="thm-conjugation-action">
               <title>Properties of the Conjugation Action</title>
@@ -4910,7 +4740,7 @@
         
                     <li>
                       <p>
-                        The kernel of the permutation representation for the conjugation action is the center <m>Z(G)</m>. 
+                        The kernel of the permutation representation for the conjugation action is the center <m>Z(G)</m>. Moreover, the action is faithful if and only if <m>Z(G)=\{e\}</m>.
                       </p>
                     </li>
                   </ol>
@@ -4955,15 +4785,6 @@
                   Define the conjugation action of <m>G</m> on <m>N</m> by <m>g\cdot n=gng^{-1}</m> for all <m>g\in G</m> and <m>n\in N</m>. Since <m>N\nsg G</m> this is well defined. The two properties in the definition of the action hold for the action of <m>G</m> by <xref text="title" ref="ex-conj"/> on <m>N</m> since they hold more generally for the action of <m>G</m> by conjugation on <m>G</m>. Therefore this is indeed an action. The orbits of elements <m>n\in N</m> under this action are <m>[n]_c</m>. Thus the conjugacy classes of the elements of <m>N</m> partition <m>N</m>.
                 </p>
               </proof>
-            </corollary>
-      
-            <corollary xml:id="cor-faithful-conjugation">
-              <title>Faithful Conjugations</title>
-              <statement>
-                <p>
-                  The action of <m>G</m> on itself by <xref text="title" ref="ex-conj"/> is faithful if and only if <m>Z(G)=\{e\}</m>.
-                </p>
-              </statement>
             </corollary>
       
           </subsection>
@@ -5264,16 +5085,6 @@
 
             <p>A fun fact about orbits is that they've secretly been at the heart of everything we've been doing so far.</p>
 
-            <theorem xml:id="thm-orbit-equiv-relation">
-              <statement>
-                <p>
-                  Let <m>G</m> be a group acting on a set <m>S</m>. Then this action induces orbits an equivalence relation on <m>G</m>, where two elements are related if and only if they are contained within the same orbit. Thus the orbits of an action partition the set they are acting upon.
-                </p>
-              </statement>
-            </theorem>
-
-            <p>Lets take a look at some familiar equivalence relations and how they relate to orbits.</p>
-
             <corollary xml:id="cor-familiar-orbits">
               <statement>
                 <p>
@@ -5281,13 +5092,13 @@
                   <ol>
                     <li>
                       <p>
-                        Recall from <xref provisional="cite"/> that the set of left cosets of a subgroup <m>H</m> induce an equivalence relation on <m>G</m>. This is the same equivalence relation induced by <m>G</m> acting upon itself by <xref text="title" ref="ex-left-mult"/>. Thus, under this action, <m>\Orb_G(g)=gH</m>.
+                        Let <m>G</m> act upon itself by <xref text="title" ref="ex-left-mult"/>. Under this action, <m>\Orb_G(g)=gH</m>.
                       </p>
                     </li>
 
                     <li>
                       <p>
-                        Recall from <xref provisional="cite"/> that the set of conjugacy classes of a group induce an equivalence relation on <m>G</m>. This is the same equivalence relation induced by <m>G</m> acting upon itself by <xref text="title" ref="ex-conj"/>. Thus, under this action, <m>\Orb_G(g)=C_G(g)</m>. 
+                        Let <m>G</m> act upon itself by <xref text="title" ref="ex-conj"/>. Under this action, <m>\Orb_G(g)=C_G(g)</m>. 
                       </p>
                     </li>
                   </ol>
@@ -5345,14 +5156,14 @@
               <p>Sometimes (included on old qualifying exams) the notation <m>G_s</m> is used to denote the stabilizer. Given that this notation gives absolutely no context as to what the set <m>G_s</m> is or what it does, we will stick to <m>\Stab_G(s)</m>.</p>
             </remark>
       
-            <proposition xml:id="prop-stabilizer-is-subgroup">
+            <exercise xml:id="exe-stabilizer-is-subgroup">
               <title>Stabilizers are Subgroups</title>
               <statement>
                 <p>
                   The stabilizer <m>\operatorname{Stab}_G(s)</m> is a subgroup of <m>G</m>.
                 </p>
               </statement>
-            </proposition>
+            </exercise>
   
             <p>One of the most important facts about the action of a group on a finite set is the following:</p>
       
@@ -5404,7 +5215,7 @@
             <warning><p>Take note that <xref text="title" ref="cor-orbit-stabilizer"/> only applies when <m>G</m> is a <em>finite</em> group.</p></warning>
 
             <p>
-              Lets look at some group actions of a more geometric flavor.
+              Lets look at some group actions of a more geometric flavor. <fn>What do you think geometry tastes like? Which field of mathematics would taste the best?</fn>
             </p>
   
             <example>
@@ -5419,13 +5230,9 @@
               </p>
             </example>  
 
-            <exercise>
-              <p>
-                What do you think geometry tastes like? Which field of mathematics would taste the best?
-              </p>
-            </exercise>
+            <p>As a final note, we are now able to connect the concepts of transitive and faithful actions in a more meaningful way.</p>
 
-            <exercise>
+            <theorem>
               <title></title>
               <statement>
                 <p>
@@ -5433,12 +5240,12 @@
                 </p>
               </statement>
 
-              <solution>
+              <proof>
                 <p>
                   Let <m>u \in X</m>. As the action is transitive, by the exercise above we have that the kernel of the action is the intersection of <m>gG_ug\inv</m> over all <m>g \in G</m>. However, as <m>G</m> is abelian, <m>gG_ug\inv = G_u</m> for all <m>g \in G</m>. Hence, the kernel of the action is <m>G_u</m> for any <m>u \in X</m>. On the other hand, the action is faithful, which means the kernel of the action is the identity. It follows that <m>G_u = \{e\}</m> for every <m>u \in X</m>. Finally, as the action is transitive, <m>X = \Orb(u)</m> for some (any) <m>u \in X</m>. By the Orbit-Stabilizer theorem, <m>|X|= |\Orb(u)|= [G : G_u] = |G|</m>.
                 </p>
-              </solution>
-            </exercise>
+              </proof>
+            </theorem>
             
           </subsection>
     
@@ -5473,7 +5280,7 @@
               </statement>
             </definition>
 
-            <remark><p>Many texts use the notation <m>C_G(g)</m> for the centralzier and <m>[g]_c</m> or <m>G_u(g)</m>for conjugacy classes. However, given that the center of a group is denoted with <m>Z(G)</m>, we argue that <m>Z_G(g)</m> makes more intuitive sense for the centralizer, freeing up <m>C_G(g)</m> for conjugacy classes.</p></remark>
+            <remark><p>Many texts use the notation <m>C_G(g)</m> for the centralzier and <m>[g]_c</m> for conjugacy classes. However, given that the center of a group is denoted with <m>Z(G)</m>, we argue that <m>Z_G(g)</m> makes more intuitive sense for the centralizer, freeing up <m>C_G(g)</m> for conjugacy classes.</p></remark>
       
             <definition xml:id="def-normalizer">
               <title>Normalizer</title>
@@ -5590,14 +5397,13 @@
               </proof>
             </theorem>
 
-            <p>The class equation provides a way of decomposing a group into its conjugacy classes, which are fundamental building blocks of the group and are essential in more advanced topics, such as representation and character theory. It also gives us information about the size and structure of the center of a group. (Read: when a proof involves the center of a group from here on out, the Class Equation is probably a good place to start)</p>
+            <p>The class equation provides a way of decomposing a group into its conjugacy classes, which are fundamental building blocks of the group and are essential in more advanced topics, such as representation and character theory. </p>
+              
+            <p>It also gives us information about the size and structure of the center of a group. (Read: when a proof involves the center of a group from here on out, the Class Equation is probably a good place to start) </p>
       
           </subsection>
 
           <exercises>
-
-          
-
           
             <exercisegroup> <title>Qualifying Exam Problems</title>
               
@@ -6147,7 +5953,7 @@
             </statement>
           </theorem>
     
-          <p>Sylow's theorems provide a systematic way of analyzing the subgroups of a finite group. They allow us to determine the number of subgroups of a given order, which is useful in many applications, such as studying the structure of solvable and simple groups. The theorems also provide information about the normalizers of subgroups, which can be used to study normal subgroups and quotient groups.</p>
+          <p><xref text="title" ref="thm-sylow"/> provide a systematic way of analyzing the subgroups of a finite group. They allow us to determine the number of subgroups of a given order, which is useful in many applications, such as studying the structure of solvable and simple groups. The theorems also provide information about the normalizers of subgroups, which can be used to study normal subgroups and quotient groups.</p>
 
           <corollary xml:id="cor-unique-sylow-normal">
             <statement>
@@ -6173,7 +5979,7 @@
 
             <solution>
               <p>
-                Any subgroup of <m>S_4</m> of order <m>8</m> is a Sylow <m>2</m>-subgroup. By Sylow’s theorems, the number of Sylow <m>2</m>-subgroups is either <m>1</m> or <m>3</m>. As any <m>2</m>-cycle or <m>4</m>-cycle must be contained in a Sylow <m>2</m>-subgroup (since such elements generate subgroups of order <m>2i</m>, for some i) and there are six <m>2</m>-cycles and six <m>4</m>-cycles, there has to be more than one Sylow <m>2</m>-subgroup. Hence, there are precisely <m>3</m> distinct subgroups of order <m>8</m>.                  
+                Any subgroup of <m>S_4</m> of order <m>8</m> is a Sylow <m>2</m>-subgroup. By <xref text="title" ref="thm-sylow"/>, the number of Sylow <m>2</m>-subgroups is either <m>1</m> or <m>3</m>. As any <m>2</m>-cycle or <m>4</m>-cycle must be contained in a Sylow <m>2</m>-subgroup (since such elements generate subgroups of order <m>2i</m>, for some <m>i</m>) and there are six <m>2</m>-cycles and six <m>4</m>-cycles, there has to be more than one Sylow <m>2</m>-subgroup. Hence, there are precisely <m>3</m> distinct subgroups of order <m>8</m>.                  
               </p>
 
               <p>
@@ -6191,6 +5997,41 @@
                 <p>
                 </p>
               </introduction>
+
+              <exercise> <title>January 2014 (1)</title>
+                
+                <statement>
+                  <p>
+                    Prove that any group of order <m>36</m> has a normal subgroup of order <m>3</m> or <m>9</m>.
+                  </p>
+                </statement>
+        
+                  <solution>
+                    <p>
+                      Let <m>G</m> be a group of order <m>36=2^2\cdot 3^2</m>. By <xref text="title" ref="thm-sylow"/> we have <m>n_3|4</m> and <m>n_3\equiv 1\mod{3}</m>, and thus <m>n_3=1,4</m>. If <m>n_3=1</m> then the unique Sylow <m>3</m>-subgroup is normal, giving us a normal subgroup of order <m>9</m>.
+                    </p>
+          
+                    <p>
+                      Suppose then that <m>n_3=4</m>, let <m>P</m> be one of the subgroups of order <m>9</m>, and let <m>G</m> act on the cosets of <m>H</m> by left multiplication, inducing the homomorphism <m>\rho:G\to S_4</m>. This is because there are <m>9</m> elements in <m>P</m>, and thus there are <m>4</m> left cosets by Lagrange's Theorem.
+                    </p>
+          
+                    <p>
+                      As <m>|S_4|=24&lt;36=|G|</m>, we see that <m>\rho</m> cannot be injective and thus <m>N=\ker(\rho)</m> is a non-trivial normal subgroup of <m>G</m>.
+                    </p>
+          
+                    <p>
+                      Recall that the action of <m>G</m> on its cosets by left multiplication is always a transitive action, meaning there is exactly one orbit, <m>\Orb(sP)</m> for some <m>sP\in G/P</m>, which must then have all <m>4</m> elements of <m>G/P</m> in it. By the <xref text="title" ref="cor-orbit-stabilizer"/>, <m>|G|=|\Orb(sP)|\cdot|\Stab(sP)|</m>, and thus <m>|\Stab(s)|=9</m>. So there are <m>9</m> elements in <m>G</m> that fix <m>s</m> for any <m>sP\in G/P</m>.
+                    </p>
+          
+                    <p>
+                      Let <m>xP \in G/P</m> and <m>g\in N</m>. Notice that <m>g\cdot xP=gxP</m>. As <m>g\in N</m>, We know that <m>\rho(g)</m> yields the identity permutation, and thus that <m>gxP=xP</m>.
+                    </p>
+          
+                    <p>
+                      Thus <m>N\subseteq\Stab(xP)</m>, which has order <m>9</m>
+                    </p>
+                  </solution>
+                </exercise>
           
               <exercise> <title>January 2015 (2)</title>
               
@@ -6495,8 +6336,8 @@
                 </solution>
               </exercise>
       
-              <exercise>
-                <title>June 2010 (3)</title>
+              <exercise> <title>June 2010 (3)</title>
+                
               <statement>
                 <p>
                   Suppose <m>G</m> is a simple group of order <m>168 = 2^3 · 3 · 7.</m> (Yes, there is such a group.) 
@@ -6527,8 +6368,8 @@
                 </solution>
               </exercise>
       
-              <exercise>
-                <title>January 2012 (3)</title>
+              <exercise> <title>January 2012 (3)</title>
+                
               <statement>
                 <p>
                   Let <m>G</m> be a group of order <m>90 = 2 · 3^2 · 5</m> and let <m>\Syl_3(G)</m> denote the set of Sylow <m>3</m>-subgroups of <m>G</m>. 
@@ -6669,43 +6510,8 @@
                 </solution>
               </exercise>
       
-              <exercise>
-                <title>January 2014 (1)</title>
-              <statement>
-                <p>
-                  Prove that any group of order <m>36</m> has a normal subgroup of order <m>3</m> or <m>9</m>.
-                </p>
-              </statement>
-      
-                <solution>
-                  <p>
-                    Let <m>G</m> be a group of order <m>36=2^2\cdot 3^2</m>. By <xref text="title" ref="thm-sylow"/> we have <m>n_3|4</m> and <m>n_3\equiv 1\mod{3}</m>, and thus <m>n_3=1,4</m>. If <m>n_3=1</m> then the unique Sylow <m>3</m>-subgroup is normal, giving us a normal subgroup of order <m>9</m>.
-                  </p>
-        
-                  <p>
-                    Suppose then that <m>n_3=4</m>, let <m>P</m> be one of the subgroups of order <m>9</m>, and let <m>G</m> act on the cosets of <m>H</m> by left multiplication, inducing the homomorphism <m>\rho:G\to S_4</m>. This is because there are <m>9</m> elements in <m>P</m>, and thus there are <m>4</m> left cosets by Lagrange's Theorem.
-                  </p>
-        
-                  <p>
-                    As <m>|S_4|=24&lt;36=|G|</m>, we see that <m>\rho</m> cannot be injective and thus <m>N=\ker(\rho)</m> is a non-trivial normal subgroup of <m>G</m>.
-                  </p>
-        
-                  <p>
-                    Recall that the action of <m>G</m> on its cosets by left multiplication is always a transitive action, meaning there is exactly one orbit, <m>\Orb(sP)</m> for some <m>sP\in G/P</m>, which must then have all <m>4</m> elements of <m>G/P</m> in it. By the <xref text="title" ref="cor-orbit-stabilizer"/>, <m>|G|=|\Orb(sP)|\cdot|\Stab(sP)|</m>, and thus <m>|\Stab(s)|=9</m>. So there are <m>9</m> elements in <m>G</m> that fix <m>s</m> for any <m>sP\in G/P</m>.
-                  </p>
-        
-                  <p>
-                    Let <m>xP \in G/P</m> and <m>g\in N</m>. Notice that <m>g\cdot xP=gxP</m>. As <m>g\in N</m>, We know that <m>\rho(g)</m> yields the identity permutation, and thus that <m>gxP=xP</m>.
-                  </p>
-        
-                  <p>
-                    Thus <m>N\subseteq\Stab(xP)</m>, which has order <m>9</m>
-                  </p>
-                </solution>
-              </exercise>
-      
-              <exercise>
-                <title>June 2011 (1)</title>
+              <exercise> <title>June 2011 (1)</title>
+                
               <statement>
                 <p>
                   Prove that no group of order 150 is simple.
@@ -6721,7 +6527,6 @@
       
               <exercise> <title>May 2022 (3)</title>
               
-              
               <statement>
                 <p>
                   Let G be a group of order <m>2^5\cdot 7^3</m>. Prove that <m>G</m> is not simple.
@@ -6730,7 +6535,7 @@
       
                 <solution>
                   <p>
-                    By <xref text="title" ref="thm-sylow"/> we know that <m>\Syl_7(G)\equiv 1\mod{7}</m> and <m>\Syl_7(G)|2^5=32</m>. Thus our options are <m>1</m> and <m>8</m>. Suppose that <m>\Syl_7(G)=8</m>.
+                    By <xref text="title" ref="thm-sylow"/> we know that <m>\Syl_7(G)\equiv 1\mod 7</m> and <m>\Syl_7(G)|2^5=32</m>. Thus our options are <m>1</m> and <m>8</m>. Suppose that <m>\Syl_7(G)=8</m>.
                   </p>
         
                   <p>
@@ -6850,7 +6655,7 @@
             </definition>
 
             <remark>
-              <p>So a direct sum are the same thing as a finite direct product.</p>
+              <p>A direct sum is the same thing as a finite direct product.</p>
             </remark>
   
             <theorem>
@@ -6862,7 +6667,7 @@
             </theorem>
 
             <remark>
-              <p>The direct sum notation will not be seen or heard from again in group theory.</p>
+              <p>The direct sum notation will not be seen or heard from again in group theory. It was fun while it lasted.</p>
             </remark>
 
             <theorem xml:id="thm-dp-properties">
@@ -6889,7 +6694,7 @@
 
                     <li>
                       <p>
-                        Let <m>g_1\times\cdots\times g_n\in G_1\times\cdots\times G_n</m>. Then <m>|g_1\times\cdots\times g_n|=\lcm(|g_1|,\dots,|g_n|)</m>.
+                        Let <m>(g_1,\cdots,g_n)\in G_1\times\cdots\times G_n</m>. Then <m>|(g_1,\cdots,g_n)|=\lcm(|g_1|,\dots,|g_n|)</m>.
                       </p>
                     </li>
                   </ol>
@@ -6909,7 +6714,7 @@
 
                     <li>
                       <p>
-                        Let <m>G</m> and <m>H</m> be groups. Then the inclusion map <m>i_G:G\to G\times H</m> is an injective homomorphism of groups.
+                        Let <m>G</m> and <m>H</m> be groups. Then the inclusion map <m>\iota_G:G\to G\times H</m> is an injective homomorphism of groups.
                       </p>
                     </li>
                   </ol>
@@ -6966,27 +6771,6 @@
               </statement>
             </definition>
       
-            <proposition xml:id="prop-hk-subgroup">
-              <statement>
-                <p>
-                  Let <m>G</m> be a group with subgroups <m>H, K</m>. Then the set 
-                  <me>
-                    HK=\{hk|h\in H,k\in K\}
-                  </me>
-                  is a subgroup of <m>G</m> if and only if <m>HK=KH</m>.
-                </p>
-              </statement>
-            </proposition>
-
-            <theorem xml:id="thm-hk-order">
-              <title>Order of <m>HK</m></title>
-              <statement>
-                <p>
-                  For two finite subgroups <m>H,K\leq G</m>, <m>|HK|=\frac{|H|\cdot|K|}{|H\cap K|}</m>
-                </p>
-              </statement>
-            </theorem>
-            
             <theorem xml:id="hk-normal">
               <statement>
                 <p>
@@ -7007,6 +6791,15 @@
                       </p>
                     </li>
                   </ol>
+                </p>
+              </statement>
+            </theorem>
+
+            <theorem xml:id="thm-hk-order">
+              <title>Order of <m>HK</m></title>
+              <statement>
+                <p>
+                  For two finite subgroups <m>H,K\leq G</m>, <m>|HK|=\frac{|H|\cdot|K|}{|H\cap K|}</m>
                 </p>
               </statement>
             </theorem>
@@ -7374,11 +7167,8 @@
               <attribution>Niels van Deuren</attribution>
             </blockquote>
 
-            <p>
-              We now discuss an important generalization for the direct product and a new method of constructing a new groups from the action of one group on another.
-            </p>
+            <p> We now discuss an important generalization for the direct product and a new method of constructing a new groups from the action of one group on another.</p>
             
-  
             <p>
               Suppose <m>G</m> is a group with subgroups <m>H\mathrel{\unlhd}G</m> and <m>K\leq G</m> such that <m>H\cap K=\{e\}</m>. Then we still have <m>HK\leq G</m>; let's see what we would need the multiplication on the cartesian product <m>H\times K</m> to be in order for <m>\theta: H \times K \to HK</m> defined by <m>\theta(h,k) = hk</m> to still be a group homomorphism: 
               <me>
@@ -7681,7 +7471,7 @@
             <me>
               \theta: H \rtimes_\rho K \to G
             </me> 
-            defined by <m>\theta(y,x) = yx</m> is an isomorphism of groups. Moreover, under this isomorphism, <m>K</m> corresponds to <m>K'</m> and <m>H</m> corresponds to <m>H'</m> (referring to the notation in Theorem <xref ref="thm-sdp" /> above).
+            defined by <m>\theta(y,x) = yx</m> is an isomorphism of groups. Moreover, under this isomorphism, <m>K</m> corresponds to <m>K'</m> and <m>H</m> corresponds to <m>H'</m> (referring to the notation in <xref ref="thm-sdp" /> above).
                 </p>
               </statement>
   
@@ -7700,7 +7490,7 @@
             <definition xml:id="def-spd-internal">
               <statement>
                 <p>
-                  In this situation of the Proposition <xref ref="thm-sdp-internal" />, we will say that <m>G</m> is the <em>internal semi-direct product</em> of <m>H</m> and <m>K</m>.
+                  In this situation of the <xref ref="thm-sdp-internal" />, we will say that <m>G</m> is the <em>internal semi-direct product</em> of <m>H</m> and <m>K</m>.
                 </p>
               </statement>
             </definition>

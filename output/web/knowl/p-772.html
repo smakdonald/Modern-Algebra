@@ -11,24 +11,39 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h6 class="heading"><span class="type">Paragraph</span></h6>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">
-<a href="" class="xref" data-knowl="./knowl/thm-class-eq.html" title="Theorem 4.44: Class Equation">Class Equation</a> tells us</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-class-eq.html">
+<div class="para">Assume <span class="process-math">\(G\)</span> is a group of order <span class="process-math">\(p^e m\)</span> where <span class="process-math">\(p\)</span> is prime, <span class="process-math">\(e \geq 0\text{,}\)</span> and <span class="process-math">\(\operatorname{gcd}(p,m) = 1\text{.}\)</span>
+</div>
+<ol class="decimal">
+<li><div class="para">
+<span class="process-math">\(\operatorname{Syl}_p(G) \ne \emptyset\)</span> (there exists at least one Sylow <span class="process-math">\(p\)</span>-subgroup of <span class="process-math">\(G\)</span>).</div></li>
+<li><div class="para">If <span class="process-math">\(P\)</span> is a Sylow <span class="process-math">\(p\)</span>-subgroup of <span class="process-math">\(G\)</span> and <span class="process-math">\(Q \leq G\)</span> is any <span class="process-math">\(p\)</span>-subgroup of <span class="process-math">\(G\)</span> (i.e., a subgroup whose order is some power of <span class="process-math">\(p\)</span>), then there is a <span class="process-math">\(g\)</span> such that <span class="process-math">\(Q \leq gPg^{-1}\text{.}\)</span> In particular, the action of <span class="process-math">\(G\)</span> on <span class="process-math">\(\operatorname{Syl}_p(G)\)</span> by <a href="" class="xref" data-knowl="./knowl/ex-conj.html" title="Item 3: Conjugation">Conjugation</a> is transitive — i.e., any two Sylow <span class="process-math">\(p\)</span>-subgroups are conjugate.</div></li>
+<li><div class="para logical">
+<div class="para">We have</div>
+<div class="displaymath process-math">
 \begin{equation*}
-|G|=|Z(G)|+\sum\limits_{g\in G}[G:C_G(g)],
+| \operatorname{Syl}_p(G)| \equiv 1 \mod{p}.
 \end{equation*}
 </div>
-<div class="para">where <span class="process-math">\(C_G(g)\)</span> are the centralizers with more than one element. Notice that this means <span class="process-math">\(|C_G(g)|\big||G|\text{,}\)</span> and thus each centralizer is a power of <span class="process-math">\(p\text{.}\)</span> Thus we have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-class-eq.html">
+</div></li>
+<li><div class="para logical">
+<div class="para">For any <span class="process-math">\(P \in \operatorname{Syl}_p(G)\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
 \begin{equation*}
-p^n=|Z(G)|+pk
+|\operatorname{Syl}_p(G)| = [G: N_G(P)],
 \end{equation*}
 </div>
-<div class="para">for some <span class="process-math">\(k\in\N\text{.}\)</span> Thus the center of <span class="process-math">\(G\)</span> cannot be trivial, else we would not be able to sum to a power of <span class="process-math">\(p\text{.}\)</span>
+<div class="para">and hence</div>
+<div class="displaymath process-math">
+\begin{equation*}
+| \operatorname{Syl}_p(G)| \mid m.
+\end{equation*}
 </div>
+</div></li>
+</ol>
 </div>
-<span class="incontext"><a href="sec-p-groups.html#p-772" class="internal">in-context</a></span>
+<span class="incontext"><a href="sec-sylowthm.html#p-772" class="internal">in-context</a></span>
 </body>
 </html>

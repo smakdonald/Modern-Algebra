@@ -13,14 +13,13 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">To show (3) we need to first prove that for all <span class="process-math">\(\s \in \Aut(K/F)\text{,}\)</span> the function <span class="process-math">\(\phi(\s): R \to R\)</span> is a bijection. (The target of this function is indeed <span class="process-math">\(R\)</span> by (2).) Since <span class="process-math">\(R\)</span> is finite, we just need to show its one-to-one. This holds since <span class="process-math">\(\s\)</span> itself is one-to-one. (If <span class="process-math">\(\phi(\s)(\a) = \phi(\s)(\a')\)</span> for <span class="process-math">\(\a, \a' \in R\)</span> then <span class="process-math">\(\s(\a) = \s(\a')\)</span> and, since <span class="process-math">\(\s\)</span> is one-to-one, we have <span class="process-math">\(\a = \a'\text{.}\)</span>) Since the group laws of <span class="process-math">\(\Aut(K/F)\)</span> and <span class="process-math">\(\Perm(R)\)</span> are both given as function composition, it is clear that <span class="process-math">\(\phi\)</span> is a group homomorphism. In detail,</div>
+<div class="para">Let us compute <span class="process-math">\([L:\Q]\text{.}\)</span> Note that <span class="process-math">\(i \in L\)</span> since <span class="process-math">\(i = z_2/z_1\)</span> and in fact <span class="process-math">\(L = \Q(z_1, i)\text{.}\)</span> In the chain of extensions</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\phi(\s \circ \tau)(\a) = \s(\tau(\a)) = (\phi(\s)\circ \phi(\tau))(\a)
+\Q \subset \Q(z_1) \subset L = \Q(z_1)(i)
 \end{equation*}
 </div>
-<div class="para">for all <span class="process-math">\(\a\)</span> and so <span class="process-math">\(\phi(\s \circ \tau) = \phi(\s) \circ \phi(\tau)\text{.}\)</span>
-</div>
+<div class="para">the first one has degree <span class="process-math">\(4\text{,}\)</span> since <span class="process-math">\(x^4 - 2\)</span> is irreducible by Eisenstein, and the second has degree at most <span class="process-math">\(2\)</span> since <span class="process-math">\(i\)</span> is a root of <span class="process-math">\(x^2 + 1\text{.}\)</span> It would be less than two if <span class="process-math">\(x^2+1\)</span> factors in <span class="process-math">\(\Q(z_2)[x]\text{.}\)</span> But since <span class="process-math">\(\Q(z_1) \subset \R\)</span> and <span class="process-math">\(L\)</span> is not contained in <span class="process-math">\(\R\text{,}\)</span> the second extension cannot be trivial and so must have degree exactly <span class="process-math">\(2\text{.}\)</span> We conclude <span class="process-math">\([L:\Q] = 8\text{.}\)</span> It follows from Proposition  that <span class="process-math">\(|\Aut(L/\Q)| \leq 8\text{.}\)</span> (In fact, since <span class="process-math">\(L\)</span> is the splitting field of a separable polynomial, the Theorem below will tell us that <span class="process-math">\(|\Aut(L/\Q)| = 8\text{.}\)</span> But we won't appeal to this fact here.)</div>
 </div>
 <span class="incontext"><a href="sec-galext.html#p-3280" class="internal">in-context</a></span>
 </body>
