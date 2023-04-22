@@ -11,22 +11,21 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
 <div class="para logical">
-<div class="para">Define the function</div>
+<div class="para">Let <span class="process-math">\(T:V \to V\)</span> be the linear operator given by <span class="process-math">\(T(p) = xp'\)</span> (where <span class="process-math">\(p'\)</span> denotes the derivative of <span class="process-math">\(p\)</span>). Note that the change of basis matrix for this operator is given by</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\det: \Mat_{n \times n} (R) \to R
+\begin{bmatrix}
+0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; \cdots &amp; 0 &amp; 0 \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\
+0 &amp; 0 &amp; \cdots &amp; 0 &amp; n-1 \\   
+\end{bmatrix},
 \end{equation*}
 </div>
-<div class="para">by</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\det(A) = \sum_{\s \in S_n} \sign(\s) \prod_{i=1}^n a_{\s(i), i}
-\end{equation*}
+<div class="para">with the basis <span class="process-math">\(\{1,x,\dots,x^{n-1}\}\text{.}\)</span> Thus <span class="process-math">\(\cp_A(x)\)</span> will be given by the determinant of the matrix</div>
 </div>
-<div class="para">where <span class="process-math">\(S_n\)</span> is the group of all permutations of <span class="process-math">\(\{1, \dots, n\}\)</span> and <span class="process-math">\(\sign(\s)\)</span> refers to the sign of a permutation.</div>
-</div>
-<span class="incontext"><a href="sec-det.html#p-2756" class="internal">in-context</a></span>
+<span class="incontext"><a href="sec-jcf.html#p-2756" class="internal">in-context</a></span>
 </body>
 </html>

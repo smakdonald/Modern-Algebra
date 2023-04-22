@@ -629,6 +629,7 @@ window.MathJax = {
 <div class="toc-item"><a href="sec-classifications.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Groups of Specific Order</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-classifications.html#sec-order-pq" class="internal"><span class="title">Groups of Order <span class="process-math">\(pq\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec-classifications.html#subsec-small-order" class="internal"><span class="title">Groups of Small Order</span></a></div></li>
 <li><div class="toc-item"><a href="sec-classifications.html#exercises-17" class="internal"><span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
@@ -933,13 +934,13 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-roots"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">5.1</span> <span class="title">Roots of Unity</span>
 </h2>
-<blockquote class="blockquote" id="blockquote-56">
-<div class="para" id="p-1647">“”</div> <cite class="attribution">―</cite>
+<blockquote class="blockquote" id="blockquote-57">
+<div class="para" id="p-1693">“”</div> <cite class="attribution">―</cite>
 </blockquote>
 <article class="proposition theorem-like" id="proposition-44"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">5.1</span><span class="period">.</span><span class="space"> </span><span class="title">June 2011 (4).</span>
 </h3>
-<div class="para logical" id="p-1648">
+<div class="para logical" id="p-1694">
 <div class="para">Fix a prime number <span class="process-math">\(p\text{,}\)</span> and let <span class="process-math">\(A\)</span> denote the abelian group of all complex roots of unity whose orders are powers of <span class="process-math">\(p\text{;}\)</span> that is</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -948,53 +949,53 @@ A = \{z \in \C | z^{p^n} = 1 \text{ for some integer } n \leq 1\} .
 </div>
 <div class="para">Prove the following statements.</div>
 <ol class="decimal">
-<li id="li-492"><div class="para" id="p-1649">Every non-trivial subgroup of <span class="process-math">\(A\)</span> contains the group of <span class="process-math">\(p^{\text{th}}\)</span> roots of unity.</div></li>
-<li id="li-493"><div class="para" id="p-1650">Every proper subgroup of <span class="process-math">\(A\)</span> is cyclic.</div></li>
-<li id="li-494"><div class="para" id="p-1651">If <span class="process-math">\(B\)</span> and <span class="process-math">\(C\)</span> are subgroups of <span class="process-math">\(A\text{,}\)</span> then either <span class="process-math">\(B \subseteq C\)</span> or <span class="process-math">\(C \subseteq B\text{.}\)</span>
+<li id="li-501"><div class="para" id="p-1695">Every non-trivial subgroup of <span class="process-math">\(A\)</span> contains the group of <span class="process-math">\(p^{\text{th}}\)</span> roots of unity.</div></li>
+<li id="li-502"><div class="para" id="p-1696">Every proper subgroup of <span class="process-math">\(A\)</span> is cyclic.</div></li>
+<li id="li-503"><div class="para" id="p-1697">If <span class="process-math">\(B\)</span> and <span class="process-math">\(C\)</span> are subgroups of <span class="process-math">\(A\text{,}\)</span> then either <span class="process-math">\(B \subseteq C\)</span> or <span class="process-math">\(C \subseteq B\text{.}\)</span>
 </div></li>
-<li id="li-495"><div class="para" id="p-1652">For each <span class="process-math">\(n \geq 0\)</span> there exists a unique subgroup of <span class="process-math">\(A\)</span> with <span class="process-math">\(p^n\)</span> elements.</div></li>
+<li id="li-504"><div class="para" id="p-1698">For each <span class="process-math">\(n \geq 0\)</span> there exists a unique subgroup of <span class="process-math">\(A\)</span> with <span class="process-math">\(p^n\)</span> elements.</div></li>
 </ol>
-</div></article><article class="hiddenproof" id="proof-61"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-61"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-61"><article class="hiddenproof"><div class="para" id="p-1653">Let <span class="process-math">\(H\)</span> be a non-trivial subgroup of <span class="process-math">\(A\text{.}\)</span> Then there exists some <span class="process-math">\(z\)</span> such that <span class="process-math">\(z^{p^n}=1\text{.}\)</span> Then <span class="process-math">\(z^{p^{n-1}}\)</span> yields a primitive <span class="process-math">\(p\th\)</span> root of unity, which can be used to generate the other roots as well. Thus <span class="process-math">\(H\)</span> contains the <span class="process-math">\(p\th\)</span> roots of unity.</div> <div class="para" id="p-1654">Suppose <span class="process-math">\(H\)</span> is a proper subgroup of <span class="process-math">\(A\text{,}\)</span> meaning it is missing some <span class="process-math">\(p^{n{\th}}\)</span> root of unity. But the subgroup of those roots of unity is cyclic and is generated by every element, so that entire subgroup must be missing. But that subgroup can be generated with any primitive root of a higher power of <span class="process-math">\(p\text{,}\)</span> so <span class="process-math">\(H\)</span> must be finite and there must be some element of maximum order, which can be used to generate the whole group. Thus <span class="process-math">\(H\)</span> is cyclic.</div> <div class="para" id="p-1655">Suppose <span class="process-math">\(B\)</span> and <span class="process-math">\(C\)</span> are subgroups of <span class="process-math">\(A\)</span> such that <span class="process-math">\(B\not\subseteq C\text{.}\)</span> Then <span class="process-math">\(C\)</span> is a proper subgroup of <span class="process-math">\(A\text{,}\)</span> making it finite as seen above. If there exists a higher power of <span class="process-math">\(p\)</span> in <span class="process-math">\(B\)</span> then it generates <span class="process-math">\(C\text{.}\)</span>
-</div> <div class="para" id="p-1656">Let <span class="process-math">\(n\geq 0\text{.}\)</span> Then the subgroup generated by the <span class="process-math">\(p^{n^{\th}}\)</span> roots of unity have <span class="process-math">\(p^n\)</span> elements, and it is unique since it is generated by every such root.</div></article></div>
+</div></article><article class="hiddenproof" id="proof-63"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-63"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-63"><article class="hiddenproof"><div class="para" id="p-1699">Let <span class="process-math">\(H\)</span> be a non-trivial subgroup of <span class="process-math">\(A\text{.}\)</span> Then there exists some <span class="process-math">\(z\)</span> such that <span class="process-math">\(z^{p^n}=1\text{.}\)</span> Then <span class="process-math">\(z^{p^{n-1}}\)</span> yields a primitive <span class="process-math">\(p\th\)</span> root of unity, which can be used to generate the other roots as well. Thus <span class="process-math">\(H\)</span> contains the <span class="process-math">\(p\th\)</span> roots of unity.</div> <div class="para" id="p-1700">Suppose <span class="process-math">\(H\)</span> is a proper subgroup of <span class="process-math">\(A\text{,}\)</span> meaning it is missing some <span class="process-math">\(p^{n{\th}}\)</span> root of unity. But the subgroup of those roots of unity is cyclic and is generated by every element, so that entire subgroup must be missing. But that subgroup can be generated with any primitive root of a higher power of <span class="process-math">\(p\text{,}\)</span> so <span class="process-math">\(H\)</span> must be finite and there must be some element of maximum order, which can be used to generate the whole group. Thus <span class="process-math">\(H\)</span> is cyclic.</div> <div class="para" id="p-1701">Suppose <span class="process-math">\(B\)</span> and <span class="process-math">\(C\)</span> are subgroups of <span class="process-math">\(A\)</span> such that <span class="process-math">\(B\not\subseteq C\text{.}\)</span> Then <span class="process-math">\(C\)</span> is a proper subgroup of <span class="process-math">\(A\text{,}\)</span> making it finite as seen above. If there exists a higher power of <span class="process-math">\(p\)</span> in <span class="process-math">\(B\)</span> then it generates <span class="process-math">\(C\text{.}\)</span>
+</div> <div class="para" id="p-1702">Let <span class="process-math">\(n\geq 0\text{.}\)</span> Then the subgroup generated by the <span class="process-math">\(p^{n^{\th}}\)</span> roots of unity have <span class="process-math">\(p^n\)</span> elements, and it is unique since it is generated by every such root.</div></article></div>
 <section class="exercises" id="exercises-30"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
 <div class="exercisegroup" id="exercisegroup-55">
 <h4 class="heading"><span class="title">Computations and Examples.</span></h4>
-<div class="introduction" id="introduction-57"><div class="para" id="p-1657"></div></div>
+<div class="introduction" id="introduction-57"><div class="para" id="p-1703"></div></div>
 <div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="exercise-161"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-161"><h5 class="heading">
+<article class="exercise exercise-like" id="exercise-160"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-160"><h5 class="heading">
 <span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-161"><article class="exercise exercise-like"><div class="para" id="p-1658">Coming soon to an OER near you!</div>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-160"><article class="exercise exercise-like"><div class="para" id="p-1704">Coming soon to an OER near you!</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-54" id="hint-54"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-54"><div class="hint solution-like"><div class="para" id="p-1659">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-113" id="solution-113"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-113"><div class="solution solution-like"><div class="para" id="p-1660">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-54" id="hint-54"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-54"><div class="hint solution-like"><div class="para" id="p-1705">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-117" id="solution-117"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-117"><div class="solution solution-like"><div class="para" id="p-1706">Coming soon to an OER near you!</div></div></div>
 </div></article></div>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-56">
 <h4 class="heading"><span class="title">Formal Proofs.</span></h4>
-<div class="introduction" id="introduction-58"><div class="para" id="p-1661"></div></div>
+<div class="introduction" id="introduction-58"><div class="para" id="p-1707"></div></div>
 <div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="exercise-162"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-162"><h5 class="heading">
+<article class="exercise exercise-like" id="exercise-161"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-161"><h5 class="heading">
 <span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-162"><article class="exercise exercise-like"><div class="para" id="p-1662">Coming soon to an OER near you!</div>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-161"><article class="exercise exercise-like"><div class="para" id="p-1708">Coming soon to an OER near you!</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-55" id="hint-55"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-55"><div class="hint solution-like"><div class="para" id="p-1663">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-114" id="solution-114"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-114"><div class="solution solution-like"><div class="para" id="p-1664">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-55" id="hint-55"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-55"><div class="hint solution-like"><div class="para" id="p-1709">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-118" id="solution-118"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-118"><div class="solution solution-like"><div class="para" id="p-1710">Coming soon to an OER near you!</div></div></div>
 </div></article></div>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-57">
 <h4 class="heading"><span class="title">Qualifying Exam Problems.</span></h4>
-<div class="introduction" id="introduction-59"><div class="para" id="p-1665"></div></div>
+<div class="introduction" id="introduction-59"><div class="para" id="p-1711"></div></div>
 <div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="exercise-163"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-163"><h5 class="heading">
+<article class="exercise exercise-like" id="exercise-162"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-162"><h5 class="heading">
 <span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-163"><article class="exercise exercise-like"><div class="para" id="p-1666">Coming soon to an OER near you!</div>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-162"><article class="exercise exercise-like"><div class="para" id="p-1712">Coming soon to an OER near you!</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-56" id="hint-56"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-56"><div class="hint solution-like"><div class="para" id="p-1667">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-115" id="solution-115"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-115"><div class="solution solution-like"><div class="para" id="p-1668">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-56" id="hint-56"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-56"><div class="hint solution-like"><div class="para" id="p-1713">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-119" id="solution-119"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-119"><div class="solution solution-like"><div class="para" id="p-1714">Coming soon to an OER near you!</div></div></div>
 </div></article></div>
 </div>
 </div></section></section></div>

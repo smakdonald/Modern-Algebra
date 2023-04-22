@@ -12,21 +12,17 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<div class="para">Let <span class="process-math">\(L\)</span> be the splitting field of <span class="process-math">\(f(x)=x^5 - 11\)</span> over <span class="process-math">\(\Q\)</span>
-</div> <div class="para">First, notice that by Eisenstein's Criterion]] (<span class="process-math">\(p=11\)</span>) we have <span class="process-math">\(f\)</span> irreducible in <span class="process-math">\(\Q\text{.}\)</span>
+<div class="para">Let <span class="process-math">\(F\subseteq L\)</span> be an algebraic field extension such that every non-constant polynomial in <span class="process-math">\(F[x]\)</span> splits completely into linear factors in <span class="process-math">\(L[x]\text{.}\)</span>
+</div> <div class="para">Let <span class="process-math">\(f\)</span> be a polynomial in <span class="process-math">\(L[x]\text{,}\)</span> so <span class="process-math">\(f=a_nx^n+\dots+a_1x+a_0\text{,}\)</span> with <span class="process-math">\(a_i\in L\text{,}\)</span> and let <span class="process-math">\(\a\)</span> be a root of <span class="process-math">\(f\text{.}\)</span> There [[Theorem – Existence and Uniqueness of Algebraic Closures|exists]] some field extension <span class="process-math">\(L\subseteq K\)</span> such that <span class="process-math">\(K\)</span> is algebraically closed, meaning <span class="process-math">\(\a\in K\text{.}\)</span> Notice that <span class="process-math">\(\a\)</span> is [[Mathematics/Definitions/Algebraic|algebraic]] over <span class="process-math">\(L(\a)\text{.}\)</span>
 </div> <div class="para logical">
-<div class="para">The roots of <span class="process-math">\(f\)</span> are the following:</div>
-<ol class="decimal">
-<li><div class="para"><span class="process-math">\(\displaystyle \a_1=\sqrt[5]{11}\z\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\displaystyle \a_2=\sqrt[5]{11}\z^2\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\displaystyle \a_3=\sqrt[5]{11}\z^3\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\displaystyle \a_4=\sqrt[5]{11}\z^4\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\displaystyle \a_5=\sqrt[5]{11}\z^5=\sqrt[5]{11}\)</span></div></li>
-</ol>
-</div> <div class="para">As <span class="process-math">\(f\)</span> is monic and irreducible, it is the minimum polynomial of <span class="process-math">\(\a_5\text{.}\)</span> Let <span class="process-math">\(E=\Q(\a_5)\)</span> and notice <span class="process-math">\([E:\Q]=5\text{.}\)</span>
-</div> <div class="para">Notice that <span class="process-math">\(\z\text{,}\)</span> a primitive <span class="process-math">\(5\)</span>-th root of unity, is the root of <span class="process-math">\(g(x)=x^4+x^3+x^2+x+1\text{,}\)</span> the fourth cyclotomic polynomial, which is monic and irreducible in <span class="process-math">\(\Q[x]\)</span> (See: [[Proposition – Cyclotomic Polynomial Irreducible|Result]]). Thus <span class="process-math">\(g\)</span> is the minimum polynomial of <span class="process-math">\(\z\)</span> and <span class="process-math">\([F:\Q]=4\text{.}\)</span>
-</div> <div class="para">We know that <span class="process-math">\(L=\Q(\sqrt[5]{11},\z)\text{,}\)</span> as every generator of <span class="process-math">\(L\)</span> can be written using <span class="process-math">\(\z\)</span> and <span class="process-math">\(\sqrt[5]{11}.\)</span> Let <span class="process-math">\([L:\Q]=n\text{,}\)</span> <span class="process-math">\([L:F]=p\text{,}\)</span> and <span class="process-math">\([L:E]=q\text{.}\)</span> By the [[Proposition – The Degree Formula|Degree Formula]], we have - <span class="process-math">\([L:\Q]=[L:F][F:\Q]\text{,}\)</span> and thus <span class="process-math">\(n=4p\)</span> - <span class="process-math">\([L:\Q]=[L:E][E:\Q]\text{,}\)</span> and thus <span class="process-math">\(n=5q\)</span> As <span class="process-math">\(E\neq L\)</span> and <span class="process-math">\(F\neq L\)</span> we know that <span class="process-math">\(p,q&gt;1\text{.}\)</span>
-</div> <div class="para">Thus we have <span class="process-math">\(n=20\text{.}\)</span>
-</div> <div class="para">Let <span class="process-math">\(F = \Q(\zeta)\)</span> where <span class="process-math">\(\zeta = e^{2\pi i/5}\text{.}\)</span> From Part (a) we know <span class="process-math">\([L:F]=5\text{.}\)</span> As <span class="process-math">\(L=F(\a)\text{,}\)</span> we know that <span class="process-math">\(\mp_\a(x)\)</span> has degree <span class="process-math">\(5\text{.}\)</span> As <span class="process-math">\(f\)</span> is a monic polynomial of degree <span class="process-math">\(5\text{,}\)</span> we see that it is the minimum polynomial and thus irreducible.</div></article><span class="incontext"><a href="sec-splitting.html#proof-159" class="internal">in-context</a></span>
+<div class="para">Consider the chain of field extensions</div>
+<div class="displaymath process-math">
+\begin{equation*}
+F\subseteq L\subseteq L(\a),
+\end{equation*}
+</div>
+<div class="para">making <span class="process-math">\(\a\)</span> algebraic over <span class="process-math">\(F\)</span> as well. As every non-constant polynomial in <span class="process-math">\(F[x]\)</span> splits completely into linear factors in <span class="process-math">\(L[x]\text{,}\)</span> this yields <span class="process-math">\(\a\in L\text{.}\)</span>
+</div>
+</div></article><span class="incontext"><a href="sec-splitting.html#proof-159" class="internal">in-context</a></span>
 </body>
 </html>

@@ -12,17 +12,16 @@
 </head>
 <body class="ignore-math">
 <article class="remark remark-like"><h3 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">7.36</span><span class="period">.</span>
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">7.22</span><span class="period">.</span>
 </h3>
 <div class="para logical">
-<div class="para">We should pause to check that <span class="process-math">\(\cp_g(x)\)</span> is well-defined: Say <span class="process-math">\(B\)</span> and <span class="process-math">\(C\)</span> are two ordered bases of <span class="process-math">\(V\text{,}\)</span> so that <span class="process-math">\([g]_B^B\)</span> and <span class="process-math">\([g]_C^C\)</span> both represent <span class="process-math">\(g\text{.}\)</span> Then <span class="process-math">\([g]_C^C = P [g]_B^B P^{-1}\)</span> for some invertible matrix <span class="process-math">\(P\)</span> and hence</div>
+<div class="para">The key idea in the proof of the Theorem can be used to deduce many other identities over commutative rings from known identities over fields. E.g., it can be used to show that</div>
 <div class="displaymath process-math">
 \begin{equation*}
-P(xI_n - [g]_B^B)P^{-1} = PxI_nP^{-1} - P [g]_B^B P^{-1} = xI_n - [g]_C^C,
+A A^{adj} = \det(A) I_n = A^{adj} A
 \end{equation*}
 </div>
-<div class="para">since the scalar matrix <span class="process-math">\(xI_n\)</span> commutes with all matrices. That is, <span class="process-math">\(xI_n - [g]_B^B\)</span> and <span class="process-math">\(xI_n - [g]_C^C\)</span> are similar matrices (with entries in <span class="process-math">\(F[x]\)</span>), and it follows that <span class="process-math">\(\det(xI_n - [g]_B^B) = \det(xI_n - [g]_C^C)\text{.}\)</span>
-</div>
-</div> <div class="para">The following two exercises show that the characteristic polynomial captures both the determinant and the trace of an operator:</div></article><span class="incontext"><a href="sec-det.html#remark-100" class="internal">in-context</a></span>
+<div class="para">holds for any commutative ring <span class="process-math">\(R\)</span> and for any <span class="process-math">\(A \in \Mat_{n \times n}(R)\text{,}\)</span> where <span class="process-math">\(A^{adj}\)</span> is the “adjugate'' of <span class="process-math">\(A\text{,}\)</span> granting that this equation holds when <span class="process-math">\(R\)</span> is a field. Recall <span class="process-math">\(A^{adj}\)</span> is the <span class="process-math">\(n \times n\)</span> matrix whose <span class="process-math">\((i,j)\)</span> entry is <span class="process-math">\((-1)^{i+j} \det(A_{i,j})\)</span> where <span class="process-math">\(A_{i,j}\)</span> is the <span class="process-math">\((n-1) \times (n-1)\)</span> matrix obtained by deleting the <span class="process-math">\(i\)</span>-th column and <span class="process-math">\(j\)</span>-th row of <span class="process-math">\(A\text{.}\)</span> I will likely have you do this as an exercise.</div>
+</div> <div class="para">Granting <span class="process-math">\(A A^{adj} = \det(A) I_n = A^{adj} A\)</span> holds for any non-zero commutative ring <span class="process-math">\(R,\)</span> we can prove the following:</div></article><span class="incontext"><a href="sec-det.html#remark-100" class="internal">in-context</a></span>
 </body>
 </html>
