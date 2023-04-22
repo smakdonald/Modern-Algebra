@@ -4083,69 +4083,6 @@
               </statement>
             </corollary>
       
-            <p>The second isomorphism theorem, also known as the diamond isomorphism theorem or the modular law, provides information about the structure of subgroups and their intersections.</p>
-      
-            <theorem xml:id="thm-sit-group">
-              <title>Second Isomorphism Theorem</title>
-              
-              <statement>
-                <p>
-                  Let <m>G</m> be a group, <m>H \leq G</m> and <m>N \unlhd G</m>. Then there is an isomorphism
-                  <me>
-                    \frac{H}{N \cap H} \xrightarrow{\cong} \frac{HN}{N}
-                  </me> 
-                  given by 
-                  <me>
-                    h \cdot (N \cap H) \mapsto hN.
-                  </me>
-                </p>
-              </statement>
-      
-              <proof>
-                <p>
-                The first two assertions are left as exercises and since <m>N \unlhd G</m> we have <m>N \unlhd HN</m>. Define a homomorphism <m>f: H \to \frac{HN}{N}</m> by <m>f(h) = hN</m>. This is a homomorphism since it is the composition <xref provisional="cite"/> 
-                <me>
-                  f:H \hookrightarrow HN \xrightarrow{{\pi}} \frac{HN}{N}
-                </me> 
-                of homomorphisms. <m>f</m> is onto since for all <m>h,n</m> we have <m>hnN = hN = f(h)</m>. The kernel of <m>f</m> is <m>\operatorname{Ker}(f)=\{h \mid hN = N\} = H \cap N</m>. The result thus follows from the <xref text="title" ref="thm-fit-group"/>.
-              </p>
-              </proof>
-            </theorem>
-      
-            <p>The third isomorphism theorem, also known as the factor or quotient theorem, gives a relationship between normal subgroups of a group and their quotient groups.</p>
-            
-            <theorem xml:id="thm-tit-group">
-              <title>Third Isomorphism Theorem</title>
-              
-              <statement>
-                <p>
-                  Suppose <m>G</m> is a group, <m>M \leq N \leq G</m>, <m>M \unlhd G</m> and <m>N \unlhd G</m>. Then <m>M \unlhd N</m>, <m>N/M \unlhd G/M</m> and there is an isomorphism 
-                  <me>
-                    (G/M)/(N/M) \xrightarrow{\cong} G/N
-                  </me>
-                  given by sending the coset of <m>(G/M)/(N/M)</m> represented by <m>gM</m> to <m>gN</m>.
-                </p>
-              </statement>
-      
-              <proof>
-                <p>
-                  The first two assertions are immediate from the definitions.
-                </p>
-      
-                <p>
-                  The kernel of the canonical map <m>{\pi}: G \twoheadrightarrow G/N</m> contains <m>M</m> and so by <xref ref="thm-ump-quotient"/> we get an induced homomorhism 
-                  <me>
-                    \phi: G/M \to G/N
-                  </me>
-                  with <m>\phi(gM) = {\pi}(g) = gN</m>. Moreover, we know 
-                  <me>
-                    \operatorname{Ker}(\phi) = \operatorname{Ker}({\pi})/M = N/M.
-                  </me> 
-                  Finally apply the <xref text="title" ref="thm-fit-group"/> to <m>\phi</m>.
-                </p>
-              </proof>
-            </theorem>
-      
             <theorem xml:id="thm-lattice-iso-group">
               <title>The Lattice Isomorphism Theorem</title>
               
@@ -6948,6 +6885,69 @@
                 </p>
               </statement>
             </exercise>
+
+            <p>The second isomorphism theorem, also known as the diamond isomorphism theorem or the modular law, provides information about the structure of subgroups and their intersections.</p>
+      
+            <theorem xml:id="thm-sit-group">
+              <title>Second Isomorphism Theorem</title>
+              
+              <statement>
+                <p>
+                  Let <m>G</m> be a group, <m>H \leq G</m> and <m>N \unlhd G</m>. Then there is an isomorphism
+                  <me>
+                    \frac{H}{N \cap H} \xrightarrow{\cong} \frac{HN}{N}
+                  </me> 
+                  given by 
+                  <me>
+                    h \cdot (N \cap H) \mapsto hN.
+                  </me>
+                </p>
+              </statement>
+      
+              <proof>
+                <p>
+                The first two assertions are left as exercises and since <m>N \unlhd G</m> we have <m>N \unlhd HN</m>. Define a homomorphism <m>f: H \to \frac{HN}{N}</m> by <m>f(h) = hN</m>. This is a homomorphism since it is the composition <xref provisional="cite"/> 
+                <me>
+                  f:H \hookrightarrow HN \xrightarrow{{\pi}} \frac{HN}{N}
+                </me> 
+                of homomorphisms. <m>f</m> is onto since for all <m>h,n</m> we have <m>hnN = hN = f(h)</m>. The kernel of <m>f</m> is <m>\operatorname{Ker}(f)=\{h \mid hN = N\} = H \cap N</m>. The result thus follows from the <xref text="title" ref="thm-fit-group"/>.
+              </p>
+              </proof>
+            </theorem>
+      
+            <p>The third isomorphism theorem, also known as the factor or quotient theorem, gives a relationship between normal subgroups of a group and their quotient groups.</p>
+            
+            <theorem xml:id="thm-tit-group">
+              <title>Third Isomorphism Theorem</title>
+              
+              <statement>
+                <p>
+                  Suppose <m>G</m> is a group, <m>M \leq N \leq G</m>, <m>M \unlhd G</m> and <m>N \unlhd G</m>. Then <m>M \unlhd N</m>, <m>N/M \unlhd G/M</m> and there is an isomorphism 
+                  <me>
+                    (G/M)/(N/M) \xrightarrow{\cong} G/N
+                  </me>
+                  given by sending the coset of <m>(G/M)/(N/M)</m> represented by <m>gM</m> to <m>gN</m>.
+                </p>
+              </statement>
+      
+              <proof>
+                <p>
+                  The first two assertions are immediate from the definitions.
+                </p>
+      
+                <p>
+                  The kernel of the canonical map <m>{\pi}: G \twoheadrightarrow G/N</m> contains <m>M</m> and so by <xref ref="thm-ump-quotient"/> we get an induced homomorhism 
+                  <me>
+                    \phi: G/M \to G/N
+                  </me>
+                  with <m>\phi(gM) = {\pi}(g) = gN</m>. Moreover, we know 
+                  <me>
+                    \operatorname{Ker}(\phi) = \operatorname{Ker}({\pi})/M = N/M.
+                  </me> 
+                  Finally apply the <xref text="title" ref="thm-fit-group"/> to <m>\phi</m>.
+                </p>
+              </proof>
+            </theorem>
 
             <exercise>
               <statement>

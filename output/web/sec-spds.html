@@ -954,7 +954,7 @@ window.MathJax = {
 </div>
 <div class="para" id="p-971">This means that we would need to have <span class="process-math">\((h_1, k_1)(h_2, k_2)=(h_1h_2',k_1k_2)\)</span> for <span class="process-math">\(\theta\)</span> to be a homomorphism. This motivates the following definition.</div>
 <article class="definition definition-like" id="def-sdp-external"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.19</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.21</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="p-972">
 <div class="para">Let <span class="process-math">\(H\)</span> and <span class="process-math">\(K\)</span> be groups and let <span class="process-math">\(\rho:K\to \operatorname{Aut}(H)\)</span> be a homomorphism. The (external) <em class="emphasis">semidirect product</em> induced by <span class="process-math">\(\rho\)</span> is the set <span class="process-math">\(H \times K\)</span> with the binary operation defined by</div>
@@ -966,11 +966,11 @@ window.MathJax = {
 <div class="para">This group is denoted by <span class="process-math">\(H \rtimes_\rho K\text{.}\)</span>
 </div>
 </div></article><article class="exercise exercise-like" id="exercise-113"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-113"><h4 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.20</span><span class="period">.</span><span class="space"> </span><span class="title">Discussion.</span>
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.22</span><span class="period">.</span><span class="space"> </span><span class="title">Discussion.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-113"><article class="exercise exercise-like"><div class="para" id="p-973">Decide amongst yourselves whether it should be spelled "semidirect", "semi-direct", "semi direct".</div></article></div>
 <div class="para" id="p-974">Before we prove that the construction above actually gives a group, let's compute a few examples.</div>
 <article class="example example-like" id="example-38"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.21</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.23</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="p-975">
 <div class="para">Given <span class="process-math">\(H\)</span> and <span class="process-math">\(K\)</span> we could always take <span class="process-math">\(\rho\)</span> to be the trivial homomorphism, so that <span class="process-math">\(\rho(y)(x) = x\)</span> for all <span class="process-math">\(y \in K\)</span> and <span class="process-math">\(x \in H\text{.}\)</span> Then <span class="process-math">\(K \rtimes_\rho H\)</span> is just the usual direct product:</div>
@@ -980,7 +980,7 @@ window.MathJax = {
 \end{equation*}
 </div>
 </div></article><article class="example example-like" id="example-39"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.22</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.24</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="p-976">
 <div class="para">Fix a group <span class="process-math">\(G\text{,}\)</span> a normal subgroup <span class="process-math">\(H \unlhd G\)</span> and a subgroup <span class="process-math">\(K \leq G\text{.}\)</span> Then the function</div>
@@ -991,7 +991,7 @@ window.MathJax = {
 </div>
 <div class="para">given by <span class="process-math">\(\rho(x)(y) = xyx^{-1}\)</span> for <span class="process-math">\(x \in K, y \in H\)</span> is a homomorphism. Thus <span class="process-math">\(K\)</span> acts on <span class="process-math">\(H\)</span> via automorphisms.</div>
 </div></article><article class="example example-like" id="example-40"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.23</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.25</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="p-977">
 <div class="para">Let <span class="process-math">\(K = \langle x \rangle\)</span> be cyclic of order <span class="process-math">\(2\)</span> and <span class="process-math">\(H = \langle y \rangle\)</span> be cyclic of order <span class="process-math">\(n\)</span> for any <span class="process-math">\(n \geq 1\text{.}\)</span> There is an automorphism of <span class="process-math">\(K\)</span> that sends <span class="process-math">\(y\)</span> to <span class="process-math">\(y^{-1}\text{.}\)</span> This automorphism is clearly its own inverse; i.e., it has order <span class="process-math">\(2\text{.}\)</span> Therefore, by the UMP for cyclic groups, there is a group homomorphism</div>
@@ -1051,7 +1051,7 @@ D_{2n} \cong \langle y \rangle \rtimes_\rho \langle x \rangle
 </div>
 <div class="para">and <span class="process-math">\(\rho\)</span> is the inversion homomorphism as described above.</div>
 </div></article><article class="theorem theorem-like" id="thm-sdp"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.24</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.26</span><span class="period">.</span>
 </h4>
 <div class="para" id="p-979">If <span class="process-math">\(H\)</span> and <span class="process-math">\(K\)</span> are groups and <span class="process-math">\(\rho:K\to \operatorname{Aut}(H)\)</span> is a homomorphism, then setting :</div> <div class="para logical" id="p-980"><ol class="decimal">
 <li id="li-307"><div class="para" id="p-981">
@@ -1175,7 +1175,7 @@ K' := \{(e,x) \mid x \in H \} \leq H \rtimes_\rho K
 <div class="para" id="p-997">We can turn this around.<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-13" id="fn-13"><sup> 1 </sup></a>
 </div>
 <article class="theorem theorem-like" id="thm-sdp-internal"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.25</span><span class="period">.</span><span class="space"> </span><span class="title">Recognition Theorem for Internal Semidirect Products.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.27</span><span class="period">.</span><span class="space"> </span><span class="title">Recognition Theorem for Internal Semidirect Products.</span>
 </h4>
 <div class="para" id="p-998">For a group <span class="process-math">\(G\text{,}\)</span> suppose we are given <span class="process-math">\(H\)</span> and <span class="process-math">\(K\)</span> so that</div> <div class="para logical" id="p-999"><ul class="disc">
 <li id="li-317"><div class="para" id="p-1000"><span class="process-math">\(H \unlhd G\text{,}\)</span></div></li>
@@ -1190,7 +1190,7 @@ K' := \{(e,x) \mid x \in H \} \leq H \rtimes_\rho K
 \theta: H \rtimes_\rho K \to G
 \end{equation*}
 </div>
-<div class="para">defined by <span class="process-math">\(\theta(y,x) = yx\)</span> is an isomorphism of groups. Moreover, under this isomorphism, <span class="process-math">\(K\)</span> corresponds to <span class="process-math">\(K'\)</span> and <span class="process-math">\(H\)</span> corresponds to <span class="process-math">\(H'\)</span> (referring to the notation in <a href="" class="xref" data-knowl="./knowl/thm-sdp.html" title="Theorem 6.24">Theorem 6.24</a> above).</div>
+<div class="para">defined by <span class="process-math">\(\theta(y,x) = yx\)</span> is an isomorphism of groups. Moreover, under this isomorphism, <span class="process-math">\(K\)</span> corresponds to <span class="process-math">\(K'\)</span> and <span class="process-math">\(H\)</span> corresponds to <span class="process-math">\(H'\)</span> (referring to the notation in <a href="" class="xref" data-knowl="./knowl/thm-sdp.html" title="Theorem 6.26">Theorem 6.26</a> above).</div>
 </div></article><article class="hiddenproof" id="proof-32"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-32"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-32"><article class="hiddenproof"><div class="para logical" id="p-1005">
 <div class="para">We have</div>
 <div class="displaymath process-math">
@@ -1207,15 +1207,15 @@ K' := \{(e,x) \mid x \in H \} \leq H \rtimes_\rho K
 </div>
 </div></article></div>
 <article class="definition definition-like" id="def-spd-internal"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.26</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.28</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-1006">In this situation of the <a href="" class="xref" data-knowl="./knowl/thm-sdp-internal.html" title="Theorem 6.25: Recognition Theorem for Internal Semidirect Products">Theorem 6.25</a>, we will say that <span class="process-math">\(G\)</span> is the <em class="emphasis">internal semi-direct product</em> of <span class="process-math">\(H\)</span> and <span class="process-math">\(K\text{.}\)</span>
+<div class="para" id="p-1006">In this situation of the <a href="" class="xref" data-knowl="./knowl/thm-sdp-internal.html" title="Theorem 6.27: Recognition Theorem for Internal Semidirect Products">Theorem 6.27</a>, we will say that <span class="process-math">\(G\)</span> is the <em class="emphasis">internal semi-direct product</em> of <span class="process-math">\(H\)</span> and <span class="process-math">\(K\text{.}\)</span>
 </div></article><article class="example example-like" id="example-41"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.27</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.29</span><span class="period">.</span>
 </h4>
 <div class="para" id="p-1007">Returning to <span class="process-math">\(D_{2n}\text{,}\)</span> let <span class="process-math">\(H = \langle s \rangle\)</span> and <span class="process-math">\(K = \langle r \rangle\text{.}\)</span> Then <span class="process-math">\(H \leq G\text{,}\)</span> <span class="process-math">\(K \unlhd G\text{,}\)</span> <span class="process-math">\(HK = G\)</span> and <span class="process-math">\(H \cap K =
 \{e\}\text{.}\)</span> So, <span class="process-math">\(G\)</span> is isomorphic to a semi-direct product, as we already showed.</div></article><article class="example example-like" id="example-42"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.28</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.30</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="p-1008">
 <div class="para">Let <span class="process-math">\(G = S_n\text{,}\)</span> <span class="process-math">\(K = A_n\)</span> and <span class="process-math">\(H = \langle (1 \, 2) \rangle\text{.}\)</span> Then <span class="process-math">\(K \unlhd G\text{,}\)</span> <span class="process-math">\(H \leq G\text{,}\)</span> <span class="process-math">\(KH = G\)</span> and <span class="process-math">\(K \cap H  = \{e\}\text{.}\)</span> It follows that</div>
@@ -1228,7 +1228,7 @@ S_n \cong A_n \rtimes_\rho C_2
 </div>
 </div></article><div class="para" id="p-1009">It is important to be aware that for a fixed pair of groups <span class="process-math">\(H\)</span> and <span class="process-math">\(K\text{,}\)</span> different actions of <span class="process-math">\(H\)</span> on <span class="process-math">\(K\)</span> via automorphisms can result in isomorphic semi-direct products. Indeed, determining when <span class="process-math">\(K \rtimes_{\rho} H \cong K \rtimes_{\rho'} H\)</span> is in general a tricky business. The previous example shows this:</div>
 <article class="example example-like" id="example-43"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.29</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.31</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="p-1010">
 <div class="para">Let <span class="process-math">\(G = S_n\)</span> and <span class="process-math">\(K = A_n\)</span> again, but this time take <span class="process-math">\(H' = \langle (1 \, 3) \rangle = (1 \,2 \, 3) \langle (1 \, 2) \rangle (1 \,2 \, 3)^{-1}\)</span> (assuming <span class="process-math">\(n \geq 3\)</span>). Then we get</div>
@@ -1261,7 +1261,7 @@ A_n \rtimes_{\rho} H \cong A_n \rtimes_{\rho'} H'
 <div class="para">since each is isomorphic to <span class="process-math">\(S_n\text{.}\)</span>
 </div>
 </div> <div class="para" id="p-1012">On HW 8 you will give a more conceptual reason for why these two semidirect products turned out to be isomorphic: it is because <span class="process-math">\(H\)</span> and <span class="process-math">\(H'\)</span> are conjugate in <span class="process-math">\(S_n\text{.}\)</span> More generally, below is a criterion for a two semidirect products to be isomorphic.</div></article><article class="theorem theorem-like" id="thm-conjugate-aut"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.30</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.32</span><span class="period">.</span>
 </h4>
 <div class="para" id="p-1013">Let <span class="process-math">\(K\)</span> be a finite cyclic group and let <span class="process-math">\(H\)</span> be an arbitrary group. Suppose that the images of <span class="process-math">\(\phi: K \to \operatorname{Aut}(H)\)</span> and <span class="process-math">\(\theta: K \to \operatorname{Aut}(H)\)</span> are conjugate subgroups of <span class="process-math">\(\operatorname{Aut}(H)\text{.}\)</span> Then <span class="process-math">\(H \rtimes_\phi K \cong H \rtimes_\theta K\text{.}\)</span>
 </div></article></section><section class="exercises" id="exercises-14"><h3 class="heading hide-type">

@@ -1681,7 +1681,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.3",
   "title": "Quotient Groups",
-  "body": " Quotient Groups   Quotient Groups    Great things are done by a series of small things brought together.   Vincent Van Gogh   In previous sections we have spent time discussing the existence and properties of cosets, but we have yet to lump them all together into one set. If one were to do so, a natural question to ask would be when such a set defines a group in its own right. Is it always? It sure would be nice if it was always.  It is Not Always Prove that it is not always.  Darn. Is it ever? It sure would be nice if it was at least sometimes.  It is Sometimes Find an example of when it is.  Woohoo! So the set of cosets forms a group sometimes. But when? As it turns out (serendipidous, I know) we discovered the exact property a subgroup needs to ensure its cosets form a well-defined group. At least, normally they do...   Quotient Group   For any normal subgroup of a group , the quotient group  is the set of left cosets of in with multiplication given by .    Before we get too ahead of ourselves, we should probably make sure that this thing is actually a well-defined bona-fide group. Don't take my word for it, I made this for fun, I could always be lying.   Quotients and Normal Subgroups  1889   Let . Then is a group if and only if .    Don't forget that the set exists for any subgroup . However, this set only satisfies the axioms of a group when the subgroup is normal.   Let in . It is automatic that is normal since is abelian. The quotient group is our old friend .   Argue amongst yourselves what the 'best' notation for the integers Should be:  , , , , or whatever other horrors you can conjure.    is a normal subgroup of . The quotient has just two elements, and .   Quotient of Commutator Subgroup  Let be a group with commutator subgroup . Prove is abelian.        Define a map as the composition of where is the matrix with in the upper-left corner, 's along the rest of the diaganal, and 's everywhere else, and the second map is the canonical surjection. Then is easily seen to be a homomorphism and hence so is (since the composition of homomorhisms is a homomorphism). I claim is one-to-one and onto. For any , let and note that has determinant and thus belongs to . So . This proves is onto. If , then and so . Clearly this means .   Recalling , we have the following corollary:   Order of Quotient Groups   If is finite we have .     Quotient Map   For any group and normal subgroup of the quotient map  is defined by .     Quotient Map is Surjective Homomorphism   For any group and normal subgroup of , the map defined by is a surjective group homomorphism with kernel .    Surjectivity is immediate from the definition. The group homomorphism property follows from the computation below which uses the definition of and the rule for multiplying cosets in : Finally, using , we have .     Normal Subgroup iff Kernel   A subgroup of a group is normal in if and only if is the kernel of a homomorphism with domain .    Coming soon to an OER near you!      Let be a group with center . If is cyclic, then is abelian.     For any group we have .     The Isomorphism Theorems    If it's your job to eat a frog, it's best to do it first thing in the morning. And If it's your job to eat two frogs, it's best to eat the biggest one first.   Mark Twain   We come to the so-called Isomorphism Theorems.   Universal Mapping Property (UMP) of a Quotient Group   Let be a group and a normal subgroup. If is a homomorphism of groups such that , then    there exists a unique group homomorphism such that the composition of and the quotient map is .    If is onto, then is onto.    Moreover,          If such a exists, it is necessarily unique since is onto. In fact, if then has to be given by the formula We now need to show that this formula determines a well-defined homomorphism: If , then and so , whence . For any we have     The formula for given above ensures that hence is surjective if and only if is surjective.    We have iff iff iff . If for some , then for some and hence for some . Since , we have .        Abelianization  Let be any group, and recall the . In we saw . Now let be any group homomorphism from to an abelian group . Since for all (since is abelian), we have that must contain . By , we get that factors as for a unique group homomorphism .  The group is called the abelianization of and the motto is: A homomorphism from a group to an abelian group factors uniquely through the abelianization.    First Isomorphism Theorem  Jordan, 1870   If is a homomorphism of groups, then and the map defined by induces an isomorphism     By , there exists a homomorphism such that , and its kernel consists of just the one element of . So is one-to-one, and the image of is the same as the image of .      If is a homomorphism from a finite group to a group , then divides and .    The second isomorphism theorem, also known as the diamond isomorphism theorem or the modular law, provides information about the structure of subgroups and their intersections.   Second Isomorphism Theorem   Let be a group, and . Then there is an isomorphism given by     The first two assertions are left as exercises and since we have . Define a homomorphism by . This is a homomorphism since it is the composition  of homomorphisms. is onto since for all we have . The kernel of is . The result thus follows from the .    The third isomorphism theorem, also known as the factor or quotient theorem, gives a relationship between normal subgroups of a group and their quotient groups.   Third Isomorphism Theorem   Suppose is a group, , and . Then , and there is an isomorphism given by sending the coset of represented by to .    The first two assertions are immediate from the definitions.  The kernel of the canonical map contains and so by we get an induced homomorhism with . Moreover, we know Finally apply the to .     The Lattice Isomorphism Theorem   Let be a group and a normal subgroup with canonical homomorphism . There is an containment-preserving bijection given by for . The inverse is defined for by where is the quotient map. We denote .  Then this bijection enjoys the following properties:    (normal) subgroups correspond to normal subgroups i.e.,     iff and iff      iff and iff       indices are preserved; i.e., and .    the supremums and infimums are preserved (this makes and lattice isomorphisms)     and      and         We have previously shown that the quotient map is a surjective group homomorphism. We show:     is well defined (correct codomain) since for we have (since images of subgroups through group homomorphisms are subgroups).      is well defined (correct codomain) since for we have (since preimages of subgroups through group homomorphisms are subgroups) and for any we have , hence      and are mutual inverses: since is surjective and , with the last equality justified by     Thus, the two functions defined in the statement are well-defined and are mutually inverse.  Since and preserve containments, each of , preserves the order relation of containment.  I will only prove some parts of statements (1), (2), (3) in the theorem.  (1) If and , then holds by part of the 3rd Isomorphism Theorem or by the exercise below, since is surjective. The fact that the inverse function also sends normal subgroups to normal subgroups is a consequence of the statement that inverse images of normal subgroups are normal subgroups (see HW 4).   (2) In the interest of time, I'll only prove the assertion about indices in the special case when is normal. In that case this fact is also an immediate consequence of the Third Isomorhism Theorem since for with we have The general case is a consequence of an exercise from HW 5.   (3) The proof of (3) is omitted.       Qualifying Exam Problems      May 2021 (1)  Let be a group (not necessarily finite) and a nonempty subset of that is closed under multiplication. Suppose that for all we have . Prove the following:    is a subgroup of      is normal     is abelian.      Let be a group, a multiplicatively closed subset of , and suppose that for all .  First, notice that . Let , and consider . Notice that . As is multiplicatively closed, we see that . Thus is a subgroup of by the subgroup test.  Let , , and consider . Notice that . Multiplying by on the right we see , as it is multiplicatively closed and . We rewrite , given that elements always commute with their inverses. As , we see that as well. Thus is normal in .  Let . As for every , every element has order . Thus and so , making the group abelian.   June 2011 (2)  Let be a finite group.   If is a normal subgroup of and , prove that is contained in the center of .    Suppose that is odd and that contains a non-trivial simple subgroup with . Prove that is the only non-trivial proper normal subgroup of .      Let and let . As is normal, we see , and thus one of the following must be true: - , where is the identity element of , or - , the only other element of . However, in the first case we would have by multiplying and over, and thus it must be the case that , or . Thus .  From Lagrange's Theorem we know that , meaning that has an even number of elements. Thus is the smallest prime dividing the order of , making normal in (See: ).  Suppose by way of contradiction there exists some non-trivial proper normal subgroup of that is not . As is normal, by the Second Isomorphism Theorem we have . However, as is simple, this means that . SIT also tells us that . As , this makes and . From part (a), . However, this contradicts Lagrange's Theorem, as does not divide any odd numbers.     "
+  "body": " Quotient Groups   Quotient Groups    Great things are done by a series of small things brought together.   Vincent Van Gogh   In previous sections we have spent time discussing the existence and properties of cosets, but we have yet to lump them all together into one set. If one were to do so, a natural question to ask would be when such a set defines a group in its own right. Is it always? It sure would be nice if it was always.  It is Not Always Prove that it is not always.  Darn. Is it ever? It sure would be nice if it was at least sometimes.  It is Sometimes Find an example of when it is.  Woohoo! So the set of cosets forms a group sometimes. But when? As it turns out (serendipidous, I know) we discovered the exact property a subgroup needs to ensure its cosets form a well-defined group. At least, normally they do...   Quotient Group   For any normal subgroup of a group , the quotient group  is the set of left cosets of in with multiplication given by .    Before we get too ahead of ourselves, we should probably make sure that this thing is actually a well-defined bona-fide group. Don't take my word for it, I made this for fun, I could always be lying.   Quotients and Normal Subgroups  1889   Let . Then is a group if and only if .    Don't forget that the set exists for any subgroup . However, this set only satisfies the axioms of a group when the subgroup is normal.   Let in . It is automatic that is normal since is abelian. The quotient group is our old friend .   Argue amongst yourselves what the 'best' notation for the integers Should be:  , , , , or whatever other horrors you can conjure.    is a normal subgroup of . The quotient has just two elements, and .   Quotient of Commutator Subgroup  Let be a group with commutator subgroup . Prove is abelian.        Define a map as the composition of where is the matrix with in the upper-left corner, 's along the rest of the diaganal, and 's everywhere else, and the second map is the canonical surjection. Then is easily seen to be a homomorphism and hence so is (since the composition of homomorhisms is a homomorphism). I claim is one-to-one and onto. For any , let and note that has determinant and thus belongs to . So . This proves is onto. If , then and so . Clearly this means .   Recalling , we have the following corollary:   Order of Quotient Groups   If is finite we have .     Quotient Map   For any group and normal subgroup of the quotient map  is defined by .     Quotient Map is Surjective Homomorphism   For any group and normal subgroup of , the map defined by is a surjective group homomorphism with kernel .    Surjectivity is immediate from the definition. The group homomorphism property follows from the computation below which uses the definition of and the rule for multiplying cosets in : Finally, using , we have .     Normal Subgroup iff Kernel   A subgroup of a group is normal in if and only if is the kernel of a homomorphism with domain .    Coming soon to an OER near you!      Let be a group with center . If is cyclic, then is abelian.     For any group we have .     The Isomorphism Theorems    If it's your job to eat a frog, it's best to do it first thing in the morning. And If it's your job to eat two frogs, it's best to eat the biggest one first.   Mark Twain   We come to the so-called Isomorphism Theorems.   Universal Mapping Property (UMP) of a Quotient Group   Let be a group and a normal subgroup. If is a homomorphism of groups such that , then    there exists a unique group homomorphism such that the composition of and the quotient map is .    If is onto, then is onto.    Moreover,          If such a exists, it is necessarily unique since is onto. In fact, if then has to be given by the formula We now need to show that this formula determines a well-defined homomorphism: If , then and so , whence . For any we have     The formula for given above ensures that hence is surjective if and only if is surjective.    We have iff iff iff . If for some , then for some and hence for some . Since , we have .        Abelianization  Let be any group, and recall the . In we saw . Now let be any group homomorphism from to an abelian group . Since for all (since is abelian), we have that must contain . By , we get that factors as for a unique group homomorphism .  The group is called the abelianization of and the motto is: A homomorphism from a group to an abelian group factors uniquely through the abelianization.    First Isomorphism Theorem  Jordan, 1870   If is a homomorphism of groups, then and the map defined by induces an isomorphism     By , there exists a homomorphism such that , and its kernel consists of just the one element of . So is one-to-one, and the image of is the same as the image of .      If is a homomorphism from a finite group to a group , then divides and .     The Lattice Isomorphism Theorem   Let be a group and a normal subgroup with canonical homomorphism . There is an containment-preserving bijection given by for . The inverse is defined for by where is the quotient map. We denote .  Then this bijection enjoys the following properties:    (normal) subgroups correspond to normal subgroups i.e.,     iff and iff      iff and iff       indices are preserved; i.e., and .    the supremums and infimums are preserved (this makes and lattice isomorphisms)     and      and         We have previously shown that the quotient map is a surjective group homomorphism. We show:     is well defined (correct codomain) since for we have (since images of subgroups through group homomorphisms are subgroups).      is well defined (correct codomain) since for we have (since preimages of subgroups through group homomorphisms are subgroups) and for any we have , hence      and are mutual inverses: since is surjective and , with the last equality justified by     Thus, the two functions defined in the statement are well-defined and are mutually inverse.  Since and preserve containments, each of , preserves the order relation of containment.  I will only prove some parts of statements (1), (2), (3) in the theorem.  (1) If and , then holds by part of the 3rd Isomorphism Theorem or by the exercise below, since is surjective. The fact that the inverse function also sends normal subgroups to normal subgroups is a consequence of the statement that inverse images of normal subgroups are normal subgroups (see HW 4).   (2) In the interest of time, I'll only prove the assertion about indices in the special case when is normal. In that case this fact is also an immediate consequence of the Third Isomorhism Theorem since for with we have The general case is a consequence of an exercise from HW 5.   (3) The proof of (3) is omitted.       Qualifying Exam Problems      May 2021 (1)  Let be a group (not necessarily finite) and a nonempty subset of that is closed under multiplication. Suppose that for all we have . Prove the following:    is a subgroup of      is normal     is abelian.      Let be a group, a multiplicatively closed subset of , and suppose that for all .  First, notice that . Let , and consider . Notice that . As is multiplicatively closed, we see that . Thus is a subgroup of by the subgroup test.  Let , , and consider . Notice that . Multiplying by on the right we see , as it is multiplicatively closed and . We rewrite , given that elements always commute with their inverses. As , we see that as well. Thus is normal in .  Let . As for every , every element has order . Thus and so , making the group abelian.   June 2011 (2)  Let be a finite group.   If is a normal subgroup of and , prove that is contained in the center of .    Suppose that is odd and that contains a non-trivial simple subgroup with . Prove that is the only non-trivial proper normal subgroup of .      Let and let . As is normal, we see , and thus one of the following must be true: - , where is the identity element of , or - , the only other element of . However, in the first case we would have by multiplying and over, and thus it must be the case that , or . Thus .  From Lagrange's Theorem we know that , meaning that has an even number of elements. Thus is the smallest prime dividing the order of , making normal in (See: ).  Suppose by way of contradiction there exists some non-trivial proper normal subgroup of that is not . As is normal, by the Second Isomorphism Theorem we have . However, as is simple, this means that . SIT also tells us that . As , this makes and . From part (a), . However, this contradicts Lagrange's Theorem, as does not divide any odd numbers.     "
 },
 {
   "id": "exercise-60",
@@ -1864,29 +1864,11 @@ var ptx_lunr_docs = [
   "body": "  If is a homomorphism from a finite group to a group , then divides and .   "
 },
 {
-  "id": "thm-sit-group",
-  "level": "2",
-  "url": "sec-quotient-groups.html#thm-sit-group",
-  "type": "Theorem",
-  "number": "3.51",
-  "title": "Second Isomorphism Theorem.",
-  "body": " Second Isomorphism Theorem   Let be a group, and . Then there is an isomorphism given by     The first two assertions are left as exercises and since we have . Define a homomorphism by . This is a homomorphism since it is the composition  of homomorphisms. is onto since for all we have . The kernel of is . The result thus follows from the .   "
-},
-{
-  "id": "thm-tit-group",
-  "level": "2",
-  "url": "sec-quotient-groups.html#thm-tit-group",
-  "type": "Theorem",
-  "number": "3.52",
-  "title": "Third Isomorphism Theorem.",
-  "body": " Third Isomorphism Theorem   Suppose is a group, , and . Then , and there is an isomorphism given by sending the coset of represented by to .    The first two assertions are immediate from the definitions.  The kernel of the canonical map contains and so by we get an induced homomorhism with . Moreover, we know Finally apply the to .   "
-},
-{
   "id": "thm-lattice-iso-group",
   "level": "2",
   "url": "sec-quotient-groups.html#thm-lattice-iso-group",
   "type": "Theorem",
-  "number": "3.53",
+  "number": "3.51",
   "title": "The Lattice Isomorphism Theorem.",
   "body": " The Lattice Isomorphism Theorem   Let be a group and a normal subgroup with canonical homomorphism . There is an containment-preserving bijection given by for . The inverse is defined for by where is the quotient map. We denote .  Then this bijection enjoys the following properties:    (normal) subgroups correspond to normal subgroups i.e.,     iff and iff      iff and iff       indices are preserved; i.e., and .    the supremums and infimums are preserved (this makes and lattice isomorphisms)     and      and         We have previously shown that the quotient map is a surjective group homomorphism. We show:     is well defined (correct codomain) since for we have (since images of subgroups through group homomorphisms are subgroups).      is well defined (correct codomain) since for we have (since preimages of subgroups through group homomorphisms are subgroups) and for any we have , hence      and are mutual inverses: since is surjective and , with the last equality justified by     Thus, the two functions defined in the statement are well-defined and are mutually inverse.  Since and preserve containments, each of , preserves the order relation of containment.  I will only prove some parts of statements (1), (2), (3) in the theorem.  (1) If and , then holds by part of the 3rd Isomorphism Theorem or by the exercise below, since is surjective. The fact that the inverse function also sends normal subgroups to normal subgroups is a consequence of the statement that inverse images of normal subgroups are normal subgroups (see HW 4).   (2) In the interest of time, I'll only prove the assertion about indices in the special case when is normal. In that case this fact is also an immediate consequence of the Third Isomorhism Theorem since for with we have The general case is a consequence of an exercise from HW 5.   (3) The proof of (3) is omitted.   "
 },
@@ -2287,9 +2269,9 @@ var ptx_lunr_docs = [
   "body": " Let be the group of rotatoinal symmetries of the dodecahedron ( pentagonal faces). The evident action of on the twleve faces is transitive. For each face , clearly has elements: the five rotations about the line joining the midpoint of to the midpoint of the face on the opposite side. Since and , we conclude .  "
 },
 {
-  "id": "theorem-32",
+  "id": "theorem-30",
   "level": "2",
-  "url": "sec-orbit-stab-class-eq.html#theorem-32",
+  "url": "sec-orbit-stab-class-eq.html#theorem-30",
   "type": "Theorem",
   "number": "4.35",
   "title": ".",
@@ -2321,15 +2303,6 @@ var ptx_lunr_docs = [
   "number": "4.38",
   "title": "Normalizer.",
   "body": " Normalizer   Let be a group. For any , is called the normalizer of in . the normalizer of a set    "
-},
-{
-  "id": "investigation-1",
-  "level": "2",
-  "url": "sec-orbit-stab-class-eq.html#investigation-1",
-  "type": "Investigation",
-  "number": "4.1",
-  "title": "Notation Check.",
-  "body": " Notation Check  There have been a lot of new sets introduced recently, all of whom seem to be flying around with reckless abandon. Here's a quick refresher:  Let be a group acting on a set , and let .    : The of in .     The of in .     The of in .     The of in .     The of in .     "
 },
 {
   "id": "lem-conjugation-and-lois",
@@ -2719,9 +2692,9 @@ var ptx_lunr_docs = [
   "body": " is Simple    is simple.   "
 },
 {
-  "id": "theorem-40",
+  "id": "theorem-38",
   "level": "2",
-  "url": "sec-simple-groups.html#theorem-40",
+  "url": "sec-simple-groups.html#theorem-38",
   "type": "Theorem",
   "number": "5.22",
   "title": "",
@@ -2833,7 +2806,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "6.1",
   "title": "Direct Products",
-  "body": " Direct Products   We now discuss how to build new groups from old ones.    Direct Products: Revisited    Evil is the product of the ability of humans to make abstract that which is concrete.   John-Paul Sartre     Let be a group for all in an index set . The direct product of the groups is the Cartesian product with multiplication defined by The direct sum of the groups is the subset of the direct product given by with the same multiplication as the direct product.     A direct sum is the same thing as a finite direct product.     The direct product of a collection of groups is a group, and the direct sum of the collection is a subgroup of the direct product.     The direct sum notation will not be seen or heard from again in group theory. It was fun while it lasted.        The direct product of groups is abelian if and only if every factor of the product is abelian.    Let be a direct product of groups. If is a direct product of subgroups of , then .    If and , then .    Let . Then .            Let and be groups. Then the projection map is a surjective homomorphism of groups.    Let and be groups. Then the inclusion map is an injective homomorphism of groups.        If then . Indeed consider the elements and in . Then and . Therefore . Since and both of these sets have cardinality it must be the case that . Since and are both cyclic groups of order they are isomorphic. Thus    Find an example of groups such that there is an isomorphism but is not trivial. Note: since can be rewritten as , the above shows that in general one cannot cancel groups in isomorphisms between direct products.       Outside of a dog, a book is a man's best friend. Inside of a dog it's too dark to read.   Groucho Marx   Trivially Intersecting Normal Subgroups  Let and be normal subgroups of a group such that . Prove that for all .      Let and be subgroups of a group and define the set  I wish this had a name other than \"HK\"       Let be a group with subgroups . Recall the notation    Prove that if and only if .    Prove that if either one of or is a normal subgroup of , then and .        Order of   For two finite subgroups ,       Let be a group, and . Then    ,     , and     .        The identity does not mean that every pair of elements from and must commute.   but not Abelian  In , let and . Then but and do not commute. The fact that can also be justified by observing that .    Let be a finite group and a normal subgroup of . Let be a Sylow -subgroup of (for some prime dividing the order of ). Prove that .   Let . Then is a Sylow -subgroup of and hence conjugate in to .   As in the hint, for , we have for some . Thus, , which means . Hence, .     Recognition Theorem    Don't worry when you are not recognized, but strive to be worthy of recognition.   Abraham Lincoln    Recognition Theorem for Direct Products   Suppose is a group with normal subgroups and such that Then the following hold:    via the isomorphism of groups defined by .          .       Notice that the hypothesis implies . Furthermore and imply that the elements of commute with the elements of . Indeed, consider . Then since , , so also . Similarly it follows that , but since it follows that , i.e. for any .  Using the above we have and thus is a homomorphism. It's kernel is , which is just since . The image of is clearly . This proves is an isomorphism.      If and are such that then we call is called the internal direct product of and and the external direct product of and .       Qualifying Exam Problems      June 2011 (3)  Let be a normal subgroup of a finite group , a prime dividing the order of , and a Sylow -subgroup of . Prove that    For , consider the subgroup .   First, note that .  Let act on by , which is a transitive action by part (2) of . Therefore acts transitively on this set as well. Under this action, .  Let , and let . Consider . As the action by is transitive there exists some such that . This means that stabilizes . Then stabilizes as well, so . But notice that , where and . Thus .   January 2022 (1a), January 2020 (1b)  Let be a group, and be subgroups of . Give an example of and such that is not a subgroup of .   Coming soon to an OER near you!   Coming soon to an OER near you!   June 2014 (3)  Let be a group that acts on a set , and a subgroup of such that for any there exists a unique with .   Prove that for every and , where     Prove that if then for every , is the internal direct product of and       Let be a group that acts on a set , and a subgroup of such that for any there exists a unique with .  Suppose there exists some such that . Then . But by the definition of group action. As the is unique, we see . Thus .  Let and . If then we can write , as . Suppose and for some . There exists an such that . Then , so , so . Thankfully, we can know write ), and so .  If then we have , which means . From Part (a) we have a trivial intersection, making the internal direct product of and .   Jan 2022 (1)  Let be a group, and be subgroups of .   Give an example of and such that is not a subgroup of .    Suppose now that and , where is prime. Prove that either or .         Let , , and . Notice that , and thus , ( ) which does not divide . Thus is not a subgroup of , as this would contradict .    Suppose there exists some such that . We examine . Notice that since has prime order it is cyclic, and thus generated by any non-identity element, such as . Thus any element in can be written in the form , and any element in can subsequently be written as for some . Thus .      May 2018 (1)  Let and be groups. Recall that for any group , an automorphism of is an isomorphism from to , and denotes the group of automorphisms of .   Show that the direct product group is isomorphic to a subgroup of .    Give an example, with justification, of groups and for which is not isomorphic to .      Coming soon to an OER near you!   January 2012 (1)  Let be a (not necessarily finite) group and and normal subgroups such that . Prove that    Let defined such that . Let . Then showing is a homomorphism.  Let . As , we have and with and . As and we see .  Consider and making surjective as well.  Let . Then , and so . Let . Then , so and , placing . Thus, by the , we have      "
+  "body": " Direct Products   We now discuss how to build new groups from old ones.    Direct Products: Revisited    Evil is the product of the ability of humans to make abstract that which is concrete.   John-Paul Sartre     Let be a group for all in an index set . The direct product of the groups is the Cartesian product with multiplication defined by The direct sum of the groups is the subset of the direct product given by with the same multiplication as the direct product.     A direct sum is the same thing as a finite direct product.     The direct product of a collection of groups is a group, and the direct sum of the collection is a subgroup of the direct product.     The direct sum notation will not be seen or heard from again in group theory. It was fun while it lasted.        The direct product of groups is abelian if and only if every factor of the product is abelian.    Let be a direct product of groups. If is a direct product of subgroups of , then .    If and , then .    Let . Then .            Let and be groups. Then the projection map is a surjective homomorphism of groups.    Let and be groups. Then the inclusion map is an injective homomorphism of groups.        If then . Indeed consider the elements and in . Then and . Therefore . Since and both of these sets have cardinality it must be the case that . Since and are both cyclic groups of order they are isomorphic. Thus    Find an example of groups such that there is an isomorphism but is not trivial. Note: since can be rewritten as , the above shows that in general one cannot cancel groups in isomorphisms between direct products.       Outside of a dog, a book is a man's best friend. Inside of a dog it's too dark to read.   Groucho Marx   Trivially Intersecting Normal Subgroups  Let and be normal subgroups of a group such that . Prove that for all .      Let and be subgroups of a group and define the set  I wish this had a name other than \"HK\"       Let be a group with subgroups . Recall the notation    Prove that if and only if .    Prove that if either one of or is a normal subgroup of , then and .        Order of   For two finite subgroups ,       Let be a group, and . Then    ,     , and     .        The identity does not mean that every pair of elements from and must commute.   but not Abelian  In , let and . Then but and do not commute. The fact that can also be justified by observing that .   The second isomorphism theorem, also known as the diamond isomorphism theorem or the modular law, provides information about the structure of subgroups and their intersections.   Second Isomorphism Theorem   Let be a group, and . Then there is an isomorphism given by     The first two assertions are left as exercises and since we have . Define a homomorphism by . This is a homomorphism since it is the composition  of homomorphisms. is onto since for all we have . The kernel of is . The result thus follows from the .    The third isomorphism theorem, also known as the factor or quotient theorem, gives a relationship between normal subgroups of a group and their quotient groups.   Third Isomorphism Theorem   Suppose is a group, , and . Then , and there is an isomorphism given by sending the coset of represented by to .    The first two assertions are immediate from the definitions.  The kernel of the canonical map contains and so by we get an induced homomorhism with . Moreover, we know Finally apply the to .     Let be a finite group and a normal subgroup of . Let be a Sylow -subgroup of (for some prime dividing the order of ). Prove that .   Let . Then is a Sylow -subgroup of and hence conjugate in to .   As in the hint, for , we have for some . Thus, , which means . Hence, .     Recognition Theorem    Don't worry when you are not recognized, but strive to be worthy of recognition.   Abraham Lincoln    Recognition Theorem for Direct Products   Suppose is a group with normal subgroups and such that Then the following hold:    via the isomorphism of groups defined by .          .       Notice that the hypothesis implies . Furthermore and imply that the elements of commute with the elements of . Indeed, consider . Then since , , so also . Similarly it follows that , but since it follows that , i.e. for any .  Using the above we have and thus is a homomorphism. It's kernel is , which is just since . The image of is clearly . This proves is an isomorphism.      If and are such that then we call is called the internal direct product of and and the external direct product of and .       Qualifying Exam Problems      June 2011 (3)  Let be a normal subgroup of a finite group , a prime dividing the order of , and a Sylow -subgroup of . Prove that    For , consider the subgroup .   First, note that .  Let act on by , which is a transitive action by part (2) of . Therefore acts transitively on this set as well. Under this action, .  Let , and let . Consider . As the action by is transitive there exists some such that . This means that stabilizes . Then stabilizes as well, so . But notice that , where and . Thus .   January 2022 (1a), January 2020 (1b)  Let be a group, and be subgroups of . Give an example of and such that is not a subgroup of .   Coming soon to an OER near you!   Coming soon to an OER near you!   June 2014 (3)  Let be a group that acts on a set , and a subgroup of such that for any there exists a unique with .   Prove that for every and , where     Prove that if then for every , is the internal direct product of and       Let be a group that acts on a set , and a subgroup of such that for any there exists a unique with .  Suppose there exists some such that . Then . But by the definition of group action. As the is unique, we see . Thus .  Let and . If then we can write , as . Suppose and for some . There exists an such that . Then , so , so . Thankfully, we can know write ), and so .  If then we have , which means . From Part (a) we have a trivial intersection, making the internal direct product of and .   Jan 2022 (1)  Let be a group, and be subgroups of .   Give an example of and such that is not a subgroup of .    Suppose now that and , where is prime. Prove that either or .         Let , , and . Notice that , and thus , ( ) which does not divide . Thus is not a subgroup of , as this would contradict .    Suppose there exists some such that . We examine . Notice that since has prime order it is cyclic, and thus generated by any non-identity element, such as . Thus any element in can be written in the form , and any element in can subsequently be written as for some . Thus .      May 2018 (1)  Let and be groups. Recall that for any group , an automorphism of is an isomorphism from to , and denotes the group of automorphisms of .   Show that the direct product group is isomorphic to a subgroup of .    Give an example, with justification, of groups and for which is not isomorphic to .      Coming soon to an OER near you!   January 2012 (1)  Let be a (not necessarily finite) group and and normal subgroups such that . Prove that    Let defined such that . Let . Then showing is a homomorphism.  Let . As , we have and with and . As and we see .  Consider and making surjective as well.  Let . Then , and so . Let . Then , so and , placing . Thus, by the , we have      "
 },
 {
   "id": "def-dp-external",
@@ -2854,9 +2827,9 @@ var ptx_lunr_docs = [
   "body": " A direct sum is the same thing as a finite direct product.  "
 },
 {
-  "id": "theorem-41",
+  "id": "theorem-39",
   "level": "2",
-  "url": "sec-dps.html#theorem-41",
+  "url": "sec-dps.html#theorem-39",
   "type": "Theorem",
   "number": "6.3",
   "title": "",
@@ -2971,11 +2944,29 @@ var ptx_lunr_docs = [
   "body": "but not Abelian  In , let and . Then but and do not commute. The fact that can also be justified by observing that .  "
 },
 {
+  "id": "thm-sit-group",
+  "level": "2",
+  "url": "sec-dps.html#thm-sit-group",
+  "type": "Theorem",
+  "number": "6.16",
+  "title": "Second Isomorphism Theorem.",
+  "body": " Second Isomorphism Theorem   Let be a group, and . Then there is an isomorphism given by     The first two assertions are left as exercises and since we have . Define a homomorphism by . This is a homomorphism since it is the composition  of homomorphisms. is onto since for all we have . The kernel of is . The result thus follows from the .   "
+},
+{
+  "id": "thm-tit-group",
+  "level": "2",
+  "url": "sec-dps.html#thm-tit-group",
+  "type": "Theorem",
+  "number": "6.17",
+  "title": "Third Isomorphism Theorem.",
+  "body": " Third Isomorphism Theorem   Suppose is a group, , and . Then , and there is an isomorphism given by sending the coset of represented by to .    The first two assertions are immediate from the definitions.  The kernel of the canonical map contains and so by we get an induced homomorhism with . Moreover, we know Finally apply the to .   "
+},
+{
   "id": "exercise-106",
   "level": "2",
   "url": "sec-dps.html#exercise-106",
   "type": "Checkpoint",
-  "number": "6.16",
+  "number": "6.18",
   "title": "",
   "body": " Let be a finite group and a normal subgroup of . Let be a Sylow -subgroup of (for some prime dividing the order of ). Prove that .   Let . Then is a Sylow -subgroup of and hence conjugate in to .   As in the hint, for , we have for some . Thus, , which means . Hence, .  "
 },
@@ -2984,7 +2975,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-dps.html#thm-dp-recognition",
   "type": "Theorem",
-  "number": "6.17",
+  "number": "6.19",
   "title": "Recognition Theorem for Direct Products.",
   "body": " Recognition Theorem for Direct Products   Suppose is a group with normal subgroups and such that Then the following hold:    via the isomorphism of groups defined by .          .       Notice that the hypothesis implies . Furthermore and imply that the elements of commute with the elements of . Indeed, consider . Then since , , so also . Similarly it follows that , but since it follows that , i.e. for any .  Using the above we have and thus is a homomorphism. It's kernel is , which is just since . The image of is clearly . This proves is an isomorphism.   "
 },
@@ -2993,7 +2984,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-dps.html#def-int-ext-dp",
   "type": "Definition",
-  "number": "6.18",
+  "number": "6.20",
   "title": "",
   "body": "  If and are such that then we call is called the internal direct product of and and the external direct product of and .   "
 },
@@ -3065,7 +3056,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-spds.html#def-sdp-external",
   "type": "Definition",
-  "number": "6.19",
+  "number": "6.21",
   "title": "",
   "body": "  Let and be groups and let be a homomorphism. The (external) semidirect product induced by is the set with the binary operation defined by This group is denoted by .   "
 },
@@ -3074,7 +3065,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-spds.html#exercise-113",
   "type": "Checkpoint",
-  "number": "6.20",
+  "number": "6.22",
   "title": "Discussion.",
   "body": "Discussion  Decide amongst yourselves whether it should be spelled \"semidirect\", \"semi-direct\", \"semi direct\".  "
 },
@@ -3083,7 +3074,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-spds.html#example-38",
   "type": "Example",
-  "number": "6.21",
+  "number": "6.23",
   "title": "",
   "body": " Given and we could always take to be the trivial homomorphism, so that for all and . Then is just the usual direct product:   "
 },
@@ -3092,7 +3083,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-spds.html#example-39",
   "type": "Example",
-  "number": "6.22",
+  "number": "6.24",
   "title": "",
   "body": " Fix a group , a normal subgroup and a subgroup . Then the function given by for is a homomorphism. Thus acts on via automorphisms.  "
 },
@@ -3101,7 +3092,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-spds.html#example-40",
   "type": "Example",
-  "number": "6.23",
+  "number": "6.25",
   "title": "",
   "body": " Let be cyclic of order and be cyclic of order for any . There is an automorphism of that sends to . This automorphism is clearly its own inverse; i.e., it has order . Therefore, by the UMP for cyclic groups, there is a group homomorphism with . We may thus form the group The elements of are for and , in particular . Set Then  and Looks familar!  Indeed, by the universal mapping property for we have a homomorphism such that and . Moreover, is onto since and since it follows that is a bijection. So the dihedral group is a semidirect product, in which the two component groups are cyclic of orders and respectively: and is the inversion homomorphism as described above.  "
 },
@@ -3110,7 +3101,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-spds.html#thm-sdp",
   "type": "Theorem",
-  "number": "6.24",
+  "number": "6.26",
   "title": "",
   "body": "  If and are groups and is a homomorphism, then setting :      is a group     and      .          The proof is straightforward but a bit messy. For associativity, note that On the other hand This gives associativity.  The fact that is a two-sided identity follows from the fact that .  Finally and similarly     Define a funtion as . Then is a homomorphism, since The map is clearly injective and hence its image is isomorphic to . In fact, the image is normal since the second component of is clearly . Let us write this image as   The function defined by is also an injective homomorphism and thus its image is isomorphic to . is typically not normal, however. Finally, it is easy to see that and . Putting this all together we have      ,     ,     , and     .       Consider the projection onto the second factor given by . This is a goup homomorphism since the second component of is and is surjective by definition. Now By the we conclude that .      "
 },
@@ -3119,7 +3110,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-spds.html#thm-sdp-internal",
   "type": "Theorem",
-  "number": "6.25",
+  "number": "6.27",
   "title": "Recognition Theorem for Internal Semidirect Products.",
   "body": " Recognition Theorem for Internal Semidirect Products   For a group , suppose we are given and so that     ,     ,     , and     .    Let be the permutation representation of the action of on via automorphisms given by in . (This means that for any  , where is the function for all .) Then the function defined by is an isomorphism of groups. Moreover, under this isomorphism, corresponds to and corresponds to (referring to the notation in above).    We have and thus is a homomorphism. It's kernel is , which is just since . The image of is clearly . This proves is an isomorphism. It is obvious that and .   "
 },
@@ -3128,7 +3119,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-spds.html#def-spd-internal",
   "type": "Definition",
-  "number": "6.26",
+  "number": "6.28",
   "title": "",
   "body": "  In this situation of the , we will say that is the internal semi-direct product of and .   "
 },
@@ -3137,7 +3128,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-spds.html#example-41",
   "type": "Example",
-  "number": "6.27",
+  "number": "6.29",
   "title": "",
   "body": " Returning to , let and . Then , , and . So, is isomorphic to a semi-direct product, as we already showed.  "
 },
@@ -3146,7 +3137,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-spds.html#example-42",
   "type": "Example",
-  "number": "6.28",
+  "number": "6.30",
   "title": "",
   "body": " Let , and . Then , , and . It follows that where is cyclic of order and the action sends to conjugation by .  "
 },
@@ -3155,7 +3146,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-spds.html#example-43",
   "type": "Example",
-  "number": "6.29",
+  "number": "6.31",
   "title": "",
   "body": " Let and again, but this time take (assuming ). Then we get where is cyclic of order and the action sends to conjugation by .  The actions and are not identical. For example, assuming we have and Yet since each is isomorphic to .  On HW 8 you will give a more conceptual reason for why these two semidirect products turned out to be isomorphic: it is because and are conjugate in . More generally, below is a criterion for a two semidirect products to be isomorphic.  "
 },
@@ -3164,7 +3155,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-spds.html#thm-conjugate-aut",
   "type": "Theorem",
-  "number": "6.30",
+  "number": "6.32",
   "title": "",
   "body": "  Let be a finite cyclic group and let be an arbitrary group. Suppose that the images of and are conjugate subgroups of . Then .   "
 },
