@@ -400,18 +400,11 @@
         <section xml:id="group-basics">
           <title>Group Basics </title>
 
-          <subsection xml:id="subsec-beginnings">
-            <title>Binary Operations and Groups</title>
+          <subsection xml:id="subsec-beginnings"><title>Binary Operations and Groups</title>
 
-            <blockquote>
-              <p>
-                <q>Most great learning happens in groups.</q>
-              </p>
-              <attribution>Ken Robinson</attribution>
-            </blockquote>
+            <blockquote><p><q>Most great learning happens in groups.</q></p><attribution>Ken Robinson</attribution></blockquote>
 
-            <definition xml:id="def-binop">
-              <title>Binary Operation</title> 
+            <definition xml:id="def-binop"><title>Binary Operation</title> 
               <idx><h>binary-operation</h></idx>
       
               <statement>
@@ -426,8 +419,7 @@
 
             <p>Binary operations are especially useful when they posess some special properties, such as the following:</p>
 
-            <definition xml:id="def-monoid">
-            <title>Monoid</title>
+            <definition xml:id="def-monoid"><title>Monoid</title>
               <statement>
                 <p>
                   A <em>monoid</em> is a pair <m>(G, \cdot)</m> where <m>G</m> is a set and <m>\cdot</m> is a <xref text="title" ref="def-binop"/> on <m>G</m> satisfying the following properties:
@@ -458,9 +450,10 @@
             <insight xml:id="mark"> <p>We often write <m>xy</m> instead of <m>x\cdot y</m> for simplicity.<fn>This is the one and only "Mark". All following "Marks" will be "Remarks".</fn></p></insight>
 
             <remark><p>The first axiom in <xref ref="def-monoid"/> is technically redundant. Closure is really part of the definition of a <xref text="title" ref="def-binop"/> on a set, and it is implicitly assumed whenever we consider such an operation. Howewever, redundancy is not a bad thing, and it never hurts to state it explicitely.</p></remark>
-      
-            <definition xml:id="def-group">
-              <title>Group</title>
+
+            <remark><p>For those interested, a pairing <m>(G,\cdot)</m> that only satisfies the first two properties of <xref ref="def-monoid"/> is called a <em>semigroup</em>. If <m>(G,\cdot)</m> only satisfies the first property, it is known as a <em>magma</em>.</p></remark>
+
+            <definition xml:id="def-group"><title>Group</title>
               <statement>
                 <p>
                   A <em>group</em> is a monoid <m>(G,\cdot)</m> with the following additional property:
@@ -480,12 +473,7 @@
       
             <remark><p>Although a group is a pair, we will usually refer to the group by only naming the underlying set, <m>G</m>.</p></remark>
 
-            <remark>
-              <p>For those interested, a <m>(G,\cdot)</m> that only satisfies the first two properties of <xref ref="def-monoid"/> is called a <em>semigroup</em>. If <m>(G,\cdot)</m> only satisfies the first property, it is known as a <em>magma</em>.</p>
-            </remark>
-
-            <exercise xml:id="exe-lr-inverses">
-              <title>Left and Right Inverses</title>
+            <exercise xml:id="exe-lr-inverses"><title>Left and Right Inverses</title>
               <statement>
                 <p>
                   Give an example of a monoid <m>(G,\cdot)</m> and an element of <m>G</m> that has a <em>left</em> inverse but not a <em>right</em> inverse.
@@ -498,12 +486,13 @@
               </solution>
             </exercise>
 
-            <example>
-              <p>The natural numbers <m>\N</m> form a monoid under addition. However, <m>(\N,+)</m> does <em>not</em> form a group.</p>
+            <example xml:id="ex-n-monoid"><title>Au Naturale</title>
+              <statement>
+                <p>The natural numbers <m>\N</m> form a monoid under addition. However, <m>(\N,+)</m> does <em>not</em> form a group.</p>
+              </statement>
             </example>
             
-            <theorem xml:id="thm-properties-of-groups">
-              <title>Properties of (Semi)Groups</title>
+            <theorem xml:id="thm-properties-of-groups"><title>Properties of (Semi)Groups</title>
               <statement>
                 <p>
                   <ol>
@@ -566,8 +555,7 @@
               </proof>
             </theorem>
       
-            <definition xml:id="def-abelian"> 
-              <title>Abelian Group </title>
+            <definition xml:id="def-abelian"> <title>Abelian Group </title>
               <statement>
                 <p>
                   A group <m>G</m> is an <em>abelian group</em> if <m>\cdot</m> is commutative; i.e., <m>x \cdot y = y \cdot x</m> for all <m>x,y \in G</m>. 
@@ -587,9 +575,7 @@
               </p>
             </historical>
 
-            <example xml:id="ex-group-examples">
-              <title>Group Examples</title>
-            
+            <example xml:id="ex-group-examples"><title>Group Examples</title>
                 <p>
                   <ol>
                     <li xml:id="trivial-group"> <title>Trivial Subgroup</title>
@@ -622,7 +608,7 @@
                       </p>
                     </li>
       
-                    <li> <title><m>\Z/n</m></title>
+                    <li>
                       <p>
                         For any <m>n</m>, let <m>\Z/n</m> denote the integers modulo <m>n</m>. Then <m>(\Z/n, +)</m> forms an abelian group where <m>+</m> denotes addition modulo <m>n</m>.
                       </p>
@@ -644,8 +630,7 @@
               </p>
             </exercise>
 
-            <exercise xml:id="exe-not-groups">
-              <title>Inches From Greatness...</title>
+            <exercise xml:id="exe-not-groups"><title>Inches From Greatness...</title>
               <statement>
                 <p>
                   Explain why each of the following is <em>not</em> a group.
@@ -683,9 +668,7 @@
 
             <p>The following example illustrates a few important examples of something called a <xref text="title" ref="def-group-of-units"/>, which is defined explicitely in terms of rings (whatever those are) in <xref ref="part-rings"/>.</p>
 
-            <example xml:id="ex-group-of-units">
-              <title>Groups of Units</title>
-                
+            <example xml:id="ex-group-of-units"><title>Groups of Units</title>
                 <statement>
                   <p> Each of the following subsets form an abelian group under multiplication.
                     <ol>
@@ -709,19 +692,15 @@
                     </ol>
                   </p>
                 </statement>
-              </example>
+            </example>
 
-            <exercise xml:id="exe-group-of-units-in-zp">
-              <title><m>\Z/p^\times</m></title>
-
+            <exercise xml:id="exe-group-of-units-in-zp"><title><m>\Z/p^\times</m></title>
               <statement>
                 <p>Prove that <m>\Z/p^\times=\mathbb{Z}/p\setminus\{0\}</m></p>
               </statement>
-              
             </exercise>
 
-            <exercise xml:id="exe-group-exponents">
-              <title>Group Exponents</title>
+            <exercise xml:id="exe-group-exponents"><title>Group Exponents</title>
               <statement>
                 <p>
                   Verify that exponents behave how we would expect (hope) them to in groups. That is, 
@@ -767,8 +746,7 @@
               </solution>
             </exercise>
 
-            <exercise xml:id="exe-more-group-properties">
-              <title>Properties for a Rainy Day</title>
+            <exercise xml:id="exe-more-group-properties"><title>Properties for a Rainy Day</title>
               <statement>
                 <p>
                   Let <m>G</m> be a group and <m>x,y\in G</m>.
@@ -791,8 +769,7 @@
               </solution>
             </exercise>
             
-            <lemma xml:id="lem-group-inverses">
-              <title>Properties of Inverses</title>
+            <lemma xml:id="lem-group-inverses"><title>Properties of Inverses</title>
               
               <statement>
                 <p>
@@ -834,12 +811,11 @@
             
             <warning> <title>Additive Exponents</title>
               <p>
-                When we refer to exponents in groups, we are talking about repeated applications of the given operation, which in many cases is denoted multiplicatively, hence the exponent notation. However, for additive groups, such as <m>(\Z,+)</m>, we find ourselves in the uncomfortable situation where statements such as <m>2^3=2+2+2=6</m> are technically true. Thus, in additive groups it is more customary to denote expressions such as the one above in more traditional notation: namely, <m>3\cdot (2)=2+2+2=6</m>.
+                When we refer to exponents in groups, we are talking about repeated applications of the given operation, which in many cases is denoted multiplicatively, hence the exponent notation. However, for additive groups such as <m>(\Z,+)</m>, we find ourselves in the uncomfortable situation where statements such as <m>2^3=2+2+2=6</m> are technically true. Thus, in additive groups it is more customary to denote expressions such as the one above in more traditional notation: namely, <m>3\cdot (2)=2+2+2=6</m>.
               </p>
             </warning>
 
-            <exercise xml:id="exe-groups-but-false">
-              <title>Wouldn't it be Nice</title>
+            <exercise xml:id="exe-groups-but-false"><title>Wouldn't it be Nice</title>
               <p>
                 Find counterexamples to each of the following (false) statements.
   
@@ -879,15 +855,9 @@
           <subsection xml:id="subsec-order">
             <title>Order</title>
 
-            <blockquote>
-              <p>
-                <q>Good order is the foundation of all things.</q>
-              </p>
-              <attribution>Edmund Burke</attribution>
-            </blockquote>
+            <blockquote><p><q>Good order is the foundation of all things.</q></p><attribution>Edmund Burke</attribution></blockquote>
     
-            <definition xml:id="def-order">
-              <title>Order</title>
+            <definition xml:id="def-order"><title>Order</title>
               <statement>
                 <p>
                   <ol>
@@ -911,7 +881,7 @@
 
             <remark><p>Some authors use the notation <m>\#G</m> or <m>o(G)</m> to refer to the order of a group. We won't name names, but they know who they are. (See: <xref ref="mark"/>)</p></remark>
       
-            <example xml:id="ex-order">
+            <example xml:id="ex-order"><title>Order Examples</title>
               <p>
                 <ol>
                   <li>
@@ -941,10 +911,11 @@
       
               </p>
       
-            </example>           
+            </example>   
 
-            <exercise xml:id="exe-order-4-abelian">
-              <title>Marley's Conjecture</title>
+            <p>We arrive at one of the central conjectures of group theory, posed by none other tha UNL's Tom "Destroyer of Worlds" Marley. Best of luck. <fn>For the more astute reader, you may observe that this is more of the more solvable conjectures in mathematics. This is the first problem Tom assigns every time he teaches 817 and it's become a bit of a running joke.</fn></p>        
+
+            <exercise xml:id="exe-order-4-abelian"><title>Marley's Conjecture</title>
               <statement>
                 <p>
                   Every group of order <m>4</m> is abelian.
@@ -953,13 +924,12 @@
         
               <solution>
                 <p>
-                  Let <m>G</m> be a group with <m>4</m> elements, and suppose there are elements <m>a,b\in G</m> such that <m>ab\neq ba</m> for some elements <m>a, b\in G</m>. Since <m>ab \neq ba</m>, we must have <m>a \neq b</m>, <m>a \neq e</m>, and <m>b\neq e</m>. Since <m>G</m> has only <m>4</m> elements and <m>ab \neq ba</m>, either <m>ab \in \{e, a, b\}</m> or <m>ba \in\{e, a, b\}</m>. Without loss, say the former occurs. But <m>ab = e</m> implies <m>b=a\inv</m> and we know <m>a\inv</m> commutes with <m>a</m>, and hence this is not possible. If <m>ab = a</m>, then <m>b = e</m> and if <m>ab = b</m> then <m>a = 1</m>, both of which are impossible. Since <m>a, b</m> were arbitrary, <m>G</m> must be abelian.
+                  Let <m>G</m> be a group` with <m>4</m> elements, and suppose there are elements <m>a,b\in G</m> such that <m>ab\neq ba</m> for some elements <m>a, b\in G</m>. Since <m>ab \neq ba</m>, we must have <m>a \neq b</m>, <m>a \neq e</m>, and <m>b\neq e</m>. Since <m>G</m> has only <m>4</m> elements and <m>ab \neq ba</m>, either <m>ab \in \{e, a, b\}</m> or <m>ba \in\{e, a, b\}</m>. Without loss, say the former occurs. But <m>ab = e</m> implies <m>b=a\inv</m> and we know <m>a\inv</m> commutes with <m>a</m>, and hence this is not possible. If <m>ab = a</m>, then <m>b = e</m> and if <m>ab = b</m> then <m>a = 1</m>, both of which are impossible. Since <m>a, b</m> were arbitrary, <m>G</m> must be abelian.
                 </p>
               </solution>
             </exercise>
       
-            <theorem xml:id="thm-order-properties">
-              <title>Properties of Order</title> 
+            <theorem xml:id="thm-order-properties"><title>Properties of Order</title> 
               
               <statement>
                 <p>
@@ -1034,24 +1004,28 @@
             </proposition>
             -->
       
-            <theorem xml:id="thm-group-element-order">
+            <theorem xml:id="thm-element-order"><title>Element Order</title>
               <statement>
                 <p>
-                  Let <m>G</m> be a group and let <m>x\in G</m>. Then <m>|x|=\left|\{x^n \ | n\in \Z \}\right|</m> and in particular <m>|x| \leq |G|</m>.
+                  Let <m>G</m> be a group and let <m>x\in G</m>. Then 
+                  <ol>
+                    <li>
+                      <p>
+                        If <m>x^m = e</m> then <m>|x| \mid m</m>.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        <m>|x|=\left|\{x^n \ | n\in \Z \}\right|</m> and in particular <m>|x| \leq |G|</m>.
+                      </p>
+                    </li>
+                  </ol>
                 </p>
               </statement>
             </theorem>
-      
-            <lemma xml:id="lem-order-divisor">
-              <statement>
-                <p>
-                  If <m>x^m = e</m> then <m>|x| \mid m</m>.
-                </p>
-              </statement>
-            </lemma>
 
-            <exercise xml:id="exe-order-and-gcd">
-              <title>Order Hors d'oeuvre</title>
+            <exercise xml:id="exe-order-and-gcd"><title>Order Hors d'oeuvre</title>
               <statement>
     
               <p>
@@ -1240,9 +1214,13 @@
 
             <remark><p>Note that distinct lists of integers represent the same cycle if they are cyclical rearrangements of each other, e.g., <m>(1 \, 2 \, 3) = (2 \, 3 \, 1)</m>. However, <m>(1 \, 2 \, 3) \neq (2 \, 1 \, 3)</m>.</p></remark>
 
-             <example>
+             <example xml:id="exe-composing-cycles">
               <p>
-                We compose cycles the same way we compose functions. So, for example <me>(1 \, 3 \, 7) (2 \, 3 \, 5) = (1 \, 3 \, 5 \, 2 \, \,7).</me> This equation might lead you to the false belief that every element of <m>S_n</m> is a cycle. This is not true — for example, the product <m>(1 \, 2) (3 \, 4)</m> cannot be written as a single cycle. What is true is that every element of <m>S_n</m> is uniquely (up to ordering) the product of disjoint cycles. We'll prove that soon.
+                We compose cycles the same way we compose functions. So, for example 
+                <me>
+                  (1 \, 3 \, 7) (2 \, 3 \, 5) = (1 \, 3 \, 5 \, 2 \, \,7).
+                </me> 
+                This equation might lead you to the false belief that every element of <m>S_n</m> is a cycle. This is not true — for example, the product <m>(1 \, 2) (3 \, 4)</m> cannot be written as a single cycle. What is true is that every element of <m>S_n</m> is uniquely (up to ordering) the product of disjoint cycles. We'll prove that soon.
               </p>
             </example>
 
@@ -8516,6 +8494,7 @@
         </section>
         
       </chapter>
+
 
     </part>
 
@@ -29002,8 +28981,7 @@
       <appendix xml:id="appendix-biograhy">
         <title>Biographies</title>
 
-        <paragraphs xml:id="bio-abel">
-          <title>Niels Henrik Abel</title>
+        <paragraphs xml:id="bio-abel"><title>Niels Henrik Abel</title>
 
           <p>
             Niels Henrik Abel (1802-1829) was a Norwegian mathematician who made groundbreaking contributions to several areas of mathematics, including number theory, algebra, and analysis. Despite dying at the young age of 26, Abel's work had a profound impact on the development of mathematics in the 19th century and beyond. He is perhaps best known for his proof of the impossibility of solving the general quintic equation by radicals, which is considered one of the major achievements of 19th-century mathematics.
@@ -29019,8 +28997,7 @@
           
         </paragraphs>
 
-        <paragraphs xml:id="bio-cayley">
-          <title>Arthur Cayley</title>
+        <paragraphs xml:id="bio-cayley"><title>Arthur Cayley</title>
 
           <p>
             Arthur Cayley (1821-1895) was a British mathematician who made important contributions to a wide range of fields, including group theory, algebra, geometry, and matrix theory. He is often regarded as one of the founders of modern algebra, and his work played a key role in the development of abstract algebra in the late 19th century.
@@ -29036,8 +29013,7 @@
           
         </paragraphs>
 
-        <paragraphs xml:id="bio-cauchy">
-          <title>Augustin-Louis Cauchy</title>
+        <paragraphs xml:id="bio-cauchy"><title>Augustin-Louis Cauchy</title>
 
           <p>
             Augustin-Louis Cauchy (1789-1857) was a French mathematician who made significant contributions to several areas of mathematics, including analysis, number theory, and group theory. Cauchy was a prodigious mathematician who published over 800 papers during his lifetime, and his work laid the foundation for much of modern analysis. He is perhaps best known for his contributions to the theory of functions of a complex variable, which he developed in the early 19th century.
@@ -29053,8 +29029,7 @@
           
         </paragraphs>
 
-        <paragraphs xml:id="bio-galois">
-          <title>Évariste Galois</title>
+        <paragraphs xml:id="bio-galois"><title>Évariste Galois</title>
 
           <p>
             Évariste Galois (1811-1832) was a French mathematician who made groundbreaking contributions to the field of algebra, particularly in the study of group theory. Despite his short life, Galois laid the foundation for the modern theory of algebraic equations and abstract algebra. His work on the theory of equations, which he developed at a young age, revealed the limitations of algebraic methods and led to the development of a new field of mathematics.
@@ -29070,8 +29045,7 @@
           
         </paragraphs>
 
-        <paragraphs xml:id="bio-lagrange">
-          <title>Joseph-Louis Lagrange</title>
+        <paragraphs xml:id="bio-lagrange"><title>Joseph-Louis Lagrange</title>
 
           <p>
             Joseph-Louis Lagrange (1736-1813) was an Italian-French mathematician who made significant contributions to many areas of mathematics, including algebra, calculus, and number theory. Born in Turin, Italy, Lagrange showed early promise in mathematics and was admitted to the Royal Academy of Sciences at the age of 19. He later moved to Paris, where he became a prominent member of the scientific community and a professor at the École Polytechnique.       
@@ -29087,8 +29061,7 @@
           
         </paragraphs>
 
-        <paragraphs xml:id="bio-jordan">
-          <title>Camille Jordan</title>
+        <paragraphs xml:id="bio-jordan"><title>Camille Jordan</title>
 
           <p>
             Camille Jordan (1838-1922) was a French mathematician who made significant contributions to the development of group theory, number theory, and algebraic geometry. Jordan's most important work was his theory of finite groups, which provided a rigorous framework for the study of symmetry and structure. He was also known for his work on the theory of equations, and he developed important results on modular forms, hyperelliptic functions, and algebraic curves.
@@ -29104,8 +29077,7 @@
           
         </paragraphs>
 
-        <paragraphs xml:id="bio-noether">
-          <title>Emmy Noether</title>
+        <paragraphs xml:id="bio-noether"><title>Emmy Noether</title>
 
           <p>
             Emmy Noether (1882-1935) was a German mathematician who made groundbreaking contributions to the fields of algebra and theoretical physics. Born in Erlangen, Germany, Noether was the daughter of a mathematics professor and grew up with a strong interest in the subject. Despite facing discrimination as a woman in a male-dominated field, Noether pursued her passion for mathematics and eventually became a professor at the University of Göttingen.          
@@ -29119,6 +29091,69 @@
             In addition to her contributions to mathematics, Noether played an important role in the scientific community as a mentor and advocate for women in science. She taught and mentored several notable mathematicians, including Hermann Weyl and Richard Courant, and was a founding member of the Mathematical Association of America. Despite facing discrimination and persecution as a Jew in Nazi Germany, Noether continued to work and inspire others until her untimely death at the age of 53. She is remembered today as one of the most influential mathematicians of the 20th century.          
           </p>
           
+        </paragraphs>
+
+        <paragraphs xml:id="bio-hilbert"><title>David Hilbert</title>
+          <p>
+            David Hilbert (1862-1943) was a German mathematician who made significant contributions to a wide range of fields, including algebra, number theory, geometry, mathematical physics, and the foundations of mathematics. Hilbert is perhaps best known for his work on the foundations of mathematics, where he sought to develop a formal, axiomatic approach to mathematics that would provide a solid, logical foundation for the discipline. His work on the foundations of mathematics led to the development of important concepts such as Hilbert space, Hilbert's program, and the theory of integral equations.
+          </p>
+
+          <p>
+            Hilbert was born in Königsberg, Germany (now Kaliningrad, Russia), and he studied mathematics at the University of Königsberg. After completing his studies, he worked as a professor of mathematics at several universities in Germany, including the University of Göttingen, where he spent most of his career. In addition to his research, Hilbert was an influential teacher and mentor, and he played a key role in the development of mathematical education in Germany.
+          </p>
+
+          <p>
+            Hilbert was widely recognized for his contributions to mathematics, and he received numerous awards and honors during his lifetime. He was a member of the Prussian Academy of Sciences and the German Academy of Sciences, and he was awarded the Royal Society's Copley Medal in 1930. Hilbert's work has had a lasting impact on the development of mathematics, and his insights continue to be studied and applied in modern mathematics.
+          </p>
+          
+        </paragraphs>
+
+        <paragraphs xml:id="bio-smith"><title>Henry John Stephen Smith</title>
+
+          <p>
+            Henry John Stephen Smith was a British mathematician born in Dublin, Ireland in 1826. He was the second son of a barrister and was educated at Trinity College Dublin, where he studied mathematics and classics. He received his BA in 1847 and his MA in 1852. He began teaching at Trinity College in 1850 and was appointed professor of geometry there in 1856. Smith made significant contributions to the theory of elliptic functions and their applications to mechanics, and to the theory of algebraic invariants. He is also known for his work on the arithmetic of algebraic curves and for his contributions to the study of the zeta function.        
+          </p>
+
+          <p>
+            In addition to his work in mathematics, Smith was involved in the administration of Trinity College Dublin. He served as Registrar of the University from 1867 to 1884, and in 1874 he was appointed the first dean of the newly formed Faculty of Science. He was also involved in the foundation of the Royal Irish Academy, and served as its president from 1886 to 1890. Smith was widely respected for his administrative abilities as well as his mathematical accomplishments.
+          </p>
+
+          <p>
+            Smith died in 1883 at the age of 56. He is remembered as one of the most important mathematicians of his time, and his contributions to the theory of algebraic invariants and the theory of elliptic functions continue to be studied today. The Smith normal form, a method for finding the elementary divisors of a matrix, is named after him.
+          </p>
+          
+        </paragraphs>
+
+        <paragraphs xml:id="bio-hamilton"><title>William Rowan Hamilton</title>
+
+          <p>
+            William Rowan Hamilton was an Irish mathematician and physicist who lived from 1805 to 1865. He is known for his contributions to a wide range of fields, including complex analysis, number theory, optics, and dynamics. Hamilton was a child prodigy and entered Trinity College Dublin at the age of 16, where he later became a professor of astronomy.     
+          </p>
+
+          <p>
+            One of Hamilton's most important contributions to mathematics was the invention of quaternions, a non-commutative extension of complex numbers. Quaternions have played an important role in the development of 3D computer graphics and robotics. Hamilton also made important contributions to the theory of optics, including the discovery of conical refraction.
+          </p>
+
+          <p>
+            Hamilton was highly respected in the scientific community and was elected president of the Royal Irish Academy in 1837. He was also a fellow of the Royal Society in London and received numerous awards and honors throughout his lifetime. Hamilton died in 1865, and his legacy continues to inspire mathematicians and scientists to this day.
+          </p>
+              
+        </paragraphs>
+
+        <paragraphs xml:id="bio-klein"><title>Felix Klein</title>
+
+            <p>
+              Felix Klein was a German mathematician who made significant contributions to many areas of mathematics, including group theory, geometry, and topology. He was born in 1849 in Düsseldorf, Germany, and showed a strong aptitude for mathematics from a young age. He went on to study at the University of Bonn and later the University of Berlin, where he earned his doctorate in 1868 under the supervision of Ernst Eduard Kummer. After completing his education, Klein held various academic positions in Germany and Switzerland before being appointed as a professor of mathematics at the University of Erlangen in 1875. In 1880, he moved to the University of Göttingen, where he remained until his retirement in 1913.
+            </p>
+
+            <p>
+              Klein is perhaps best known for his work on the theory of groups and their applications to geometry. He was instrumental in developing the idea of the group as an abstract mathematical structure, rather than simply a collection of symmetries of a particular object. He also introduced the concept of the Kleinian group, a discrete group of isometries of the hyperbolic plane. In addition to his work in group theory, Klein made significant contributions to other areas of mathematics, including geometry, topology, and the theory of functions. He also played a prominent role in the development of mathematical education, advocating for the use of concrete examples and applications in teaching.
+            </p>
+
+            <p>
+              Klein's work had a profound impact on the development of mathematics in the late 19th and early 20th centuries, and he was widely regarded as one of the leading mathematicians of his time. He was awarded numerous honors for his contributions, including the Royal Society's Copley Medal and the French Legion of Honor. After his retirement from academia, Klein continued to work on mathematical problems and served as the editor of the influential mathematical journal Mathematische Annalen. He died in 1925 at the age of 76, leaving behind a legacy of important mathematical discoveries and a lasting impact on the field of mathematics as a whole.
+            </p>
+                
         </paragraphs>
 
         

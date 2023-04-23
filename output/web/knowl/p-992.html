@@ -12,13 +12,32 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para logical"><ul class="disc">
-<li><div class="para"><span class="process-math">\(H' \unlhd H \rtimes_\rho K\text{,}\)</span></div></li>
-<li><div class="para"><span class="process-math">\(K' \leq H \rtimes_\rho K\text{,}\)</span></div></li>
-<li><div class="para">
-<span class="process-math">\(H' K' = H \rtimes_\rho K\text{,}\)</span> and</div></li>
-<li><div class="para"><span class="process-math">\(H'\cap K' = \{e\}\text{.}\)</span></div></li>
-</ul></div>
+<div class="para logical">
+<div class="para">Define a funtion</div>
+<div class="displaymath process-math">
+\begin{equation*}
+i: H \to H \rtimes_\rho K
+\end{equation*}
+</div>
+<div class="para">as <span class="process-math">\(i(y) = (y, e)\text{.}\)</span> Then <span class="process-math">\(i\)</span> is a homomorphism, since</div>
+<div class="displaymath process-math">
+\begin{equation*}
+i(y_1) i(y_2) = (y_1,e)(y_2,e) = (y_1\rho(e)(y_2) , ee) = (y_1 y_2, e) = i(y_1y_2).
+\end{equation*}
+</div>
+<div class="para">The map is clearly injective and hence its image is isomorphic to <span class="process-math">\(H\text{.}\)</span> In fact, the image is normal since the second component of</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(y,x) (y_2, e) (\rho(x^{-1})(y^{-1}), x^{-1})
+\end{equation*}
+</div>
+<div class="para">is clearly <span class="process-math">\(e\text{.}\)</span> Let us write this image as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+H' := \{(y,e) \mid y \in H\} \unlhd H \rtimes_\rho K.
+\end{equation*}
+</div>
+</div>
 <span class="incontext"><a href="sec-spds.html#p-992" class="internal">in-context</a></span>
 </body>
 </html>

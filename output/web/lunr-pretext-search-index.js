@@ -25,7 +25,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.1",
   "title": "Group Basics",
-  "body": " Group Basics   Binary Operations and Groups    Most great learning happens in groups.   Ken Robinson    Binary Operation  binary-operation   A binary operation on a set is a function     Binary operations are especially useful when they posess some special properties, such as the following:   Monoid   A monoid is a pair where is a set and is a on satisfying the following properties:   (Closure) for each , .    (Associativity) for all we have     (Identity Element) there exists such that for all  the identity element of a group         We often write instead of for simplicity. This is the one and only \"Mark\". All following \"Marks\" will be \"Remarks\".  The first axiom in is technically redundant. Closure is really part of the definition of a on a set, and it is implicitly assumed whenever we consider such an operation. Howewever, redundancy is not a bad thing, and it never hurts to state it explicitely.   Group   A group is a monoid with the following additional property:   (Inverses) for each , there is an element such that .    a group (or monoid) and its binary operation  lowercase letters reserved for elements of a group     Although a group is a pair, we will usually refer to the group by only naming the underlying set, .   For those interested, a that only satisfies the first two properties of is called a semigroup . If only satisfies the first property, it is known as a magma .   Left and Right Inverses  Give an example of a monoid and an element of that has a left inverse but not a right inverse.   Coming soon to an OER near you!    The natural numbers form a monoid under addition. However, does not form a group.    Properties of (Semi)Groups      (Unique Identity) In a monoid , the element satisfying the second axiom of is unique, and we thus refer to it as the identity element of .    (Unique Inverses) In a group , for each , the element satisfying the additional axiom of is unique, and we thus refer to it as the the inverse of and we will henceforth denote it by .    (Cancellation) In a group , if then . Similarly, if we have .          Suppose there exist two elements and such that and for all . Then Thus only one element can satisfy this property, making the identity element unique.    For a given , if and fo some and , then .    Suppose for some . By multiplying on both sides by , we see         Abelian Group   A group is an abelian group if is commutative; i.e., for all .    As we progress through the text, one might start to recognize that groups are much more agreeable when they are abelian. They behave in ways we expect and are often times much more likely to do what we want. If all groups were abelain, group theory would not be anywhere near as widespread (or interesting, though that is more a matter of opinion). Because of this, a common motif in this course is finding, constructing, and fiddling with groups that are 'almost' abelian, whatever that means.   Abelian groups are named after the Norwegian mathematician Niels Henrik Abel, who made significant contributions to the study of algebra and number theory in the early 19th century.  Abel's work on abelian groups helped to establish the importance of commutativity in algebraic structures, and his ideas laid the foundation for the development of the theory of commutative rings and fields, which will be studied in much greater depth later.    Group Examples     Trivial Subgroup  The trivial subgroup is the group with a single element  the trivial group: e.g. the group containing only an identity element      and each form an abelian group, where denotes traditional addition.     and form groups under traditional multiplication.    General Linear Group  For any positive integer , let By invertible I mean those matrices that have two-sided inverses, but it turns out that if an matrix has a left inverse then it it is automatically a right inverse too, and vice versa. Then is a non-abelian group under matrix multiplication. In general this is true for any field , whatever those are.  General linear group      For any , let denote the integers modulo . Then forms an abelian group where denotes addition modulo .    The subset of the complex numbers forms an abelian group under multiplication.      Opposite Day Let be a multiplicative group, and define be the set equipped with the operation , where . Then is a group.  Inches From Greatness...  Explain why each of the following is not a group.              , where is the set of odd integers. the set of odd integers      for all       The following example illustrates a few important examples of something called a , which is defined explicitely in terms of rings (whatever those are) in .   Groups of Units   Each of the following subsets form an abelian group under multiplication.   The subset of .     , , and .    For each , the subset of .        Prove that   Group Exponents  Verify that exponents behave how we would expect (hope) them to in groups. That is,    .     .         We expand and to see     Coming soon!      Properties for a Rainy Day  Let be a group and .  If , then .  There exists some such that      Coming soon to an OER near you!    Properties of Inverses   If is a group and , then:    .     .          First, recall from that . However, it is also the case that . By part (2) of we know that inverses are unique, and thus it must be the case that .    Coming soon to an OER near you!        Additive Exponents  When we refer to exponents in groups, we are talking about repeated applications of the given operation, which in many cases is denoted multiplicatively, hence the exponent notation. However, for additive groups, such as , we find ourselves in the uncomfortable situation where statements such as are technically true. Thus, in additive groups it is more customary to denote expressions such as the one above in more traditional notation: namely, .   Wouldn't it be Nice Find counterexamples to each of the following (false) statements.   If then     If then     For all there exists some such that .    A group of order contains an element of order .     But thats enough confusion for now. I know just the thing to get us back on track.    Order    Good order is the foundation of all things.   Edmund Burke    Order      In a group , the order of an element  is the least positive integer such that . If no such exists, we say has infinite order. We write for the order of . Order of an element     The order of a group  is the cardinality of the set , denoted . Order of a group        Some authors use the notation or to refer to the order of a group. We won't name names, but they know who they are. (See: )            in     In the additive groups , , , and every nonzero (i.e., nonidentity) element has infinite order.    In the additve group , the element has order , as and .      Marley's Conjecture  Every group of order is abelian.   Let be a group with elements, and suppose there are elements such that for some elements . Since , we must have , , and . Since has only elements and , either or . Without loss, say the former occurs. But implies and we know commutes with , and hence this is not possible. If , then and if then , both of which are impossible. Since were arbitrary, must be abelian.    Properties of Order      An element of a group has order if and only if .         If for and prime, then .       there or  If is a group such every non-identity element has order , then is abelian.   Product Order  Prove or disprove: if have finite order then has finite order.      Let be a group and let . Then and in particular .      If then .    Order Hors d'oeuvre  Let be a group.   Let be an element of finite order. Show that has finite order for any integer , and in fact     Prove that for all in , holds.      A brief note on notation before we progress to the exercises and beyond. At various points throughout this text, the author may use \"mathcal\" notation for definitions that do not normally require it (such as for a group, for a ring, etc.) In the realm of higher mathematics, this is what is known as a typo , and should be reported to the proper authorities as soon as possible.   "
+  "body": " Group Basics  Binary Operations and Groups  Most great learning happens in groups. Ken Robinson  Binary Operation  binary-operation   A binary operation on a set is a function     Binary operations are especially useful when they posess some special properties, such as the following:  Monoid   A monoid is a pair where is a set and is a on satisfying the following properties:   (Closure) for each , .    (Associativity) for all we have     (Identity Element) there exists such that for all  the identity element of a group         We often write instead of for simplicity. This is the one and only \"Mark\". All following \"Marks\" will be \"Remarks\".  The first axiom in is technically redundant. Closure is really part of the definition of a on a set, and it is implicitly assumed whenever we consider such an operation. Howewever, redundancy is not a bad thing, and it never hurts to state it explicitely.  For those interested, a pairing that only satisfies the first two properties of is called a semigroup . If only satisfies the first property, it is known as a magma .  Group   A group is a monoid with the following additional property:   (Inverses) for each , there is an element such that .    a group (or monoid) and its binary operation  lowercase letters reserved for elements of a group     Although a group is a pair, we will usually refer to the group by only naming the underlying set, .  Left and Right Inverses  Give an example of a monoid and an element of that has a left inverse but not a right inverse.   Coming soon to an OER near you!   Au Naturale   The natural numbers form a monoid under addition. However, does not form a group.    Properties of (Semi)Groups      (Unique Identity) In a monoid , the element satisfying the second axiom of is unique, and we thus refer to it as the identity element of .    (Unique Inverses) In a group , for each , the element satisfying the additional axiom of is unique, and we thus refer to it as the the inverse of and we will henceforth denote it by .    (Cancellation) In a group , if then . Similarly, if we have .          Suppose there exist two elements and such that and for all . Then Thus only one element can satisfy this property, making the identity element unique.    For a given , if and fo some and , then .    Suppose for some . By multiplying on both sides by , we see         Abelian Group   A group is an abelian group if is commutative; i.e., for all .    As we progress through the text, one might start to recognize that groups are much more agreeable when they are abelian. They behave in ways we expect and are often times much more likely to do what we want. If all groups were abelain, group theory would not be anywhere near as widespread (or interesting, though that is more a matter of opinion). Because of this, a common motif in this course is finding, constructing, and fiddling with groups that are 'almost' abelian, whatever that means.   Abelian groups are named after the Norwegian mathematician Niels Henrik Abel, who made significant contributions to the study of algebra and number theory in the early 19th century.  Abel's work on abelian groups helped to establish the importance of commutativity in algebraic structures, and his ideas laid the foundation for the development of the theory of commutative rings and fields, which will be studied in much greater depth later.   Group Examples     Trivial Subgroup  The trivial subgroup is the group with a single element  the trivial group: e.g. the group containing only an identity element      and each form an abelian group, where denotes traditional addition.     and form groups under traditional multiplication.    General Linear Group  For any positive integer , let By invertible I mean those matrices that have two-sided inverses, but it turns out that if an matrix has a left inverse then it it is automatically a right inverse too, and vice versa. Then is a non-abelian group under matrix multiplication. In general this is true for any field , whatever those are.  General linear group     For any , let denote the integers modulo . Then forms an abelian group where denotes addition modulo .    The subset of the complex numbers forms an abelian group under multiplication.      Opposite Day Let be a multiplicative group, and define be the set equipped with the operation , where . Then is a group.  Inches From Greatness...  Explain why each of the following is not a group.              , where is the set of odd integers. the set of odd integers      for all       The following example illustrates a few important examples of something called a , which is defined explicitely in terms of rings (whatever those are) in .  Groups of Units   Each of the following subsets form an abelian group under multiplication.   The subset of .     , , and .    For each , the subset of .        Prove that   Group Exponents  Verify that exponents behave how we would expect (hope) them to in groups. That is,    .     .         We expand and to see     Coming soon!      Properties for a Rainy Day  Let be a group and .  If , then .  There exists some such that      Coming soon to an OER near you!   Properties of Inverses   If is a group and , then:    .     .          First, recall from that . However, it is also the case that . By part (2) of we know that inverses are unique, and thus it must be the case that .    Coming soon to an OER near you!        Additive Exponents  When we refer to exponents in groups, we are talking about repeated applications of the given operation, which in many cases is denoted multiplicatively, hence the exponent notation. However, for additive groups such as , we find ourselves in the uncomfortable situation where statements such as are technically true. Thus, in additive groups it is more customary to denote expressions such as the one above in more traditional notation: namely, .   Wouldn't it be Nice Find counterexamples to each of the following (false) statements.   If then     If then     For all there exists some such that .    A group of order contains an element of order .     But thats enough confusion for now. I know just the thing to get us back on track.    Order  Good order is the foundation of all things. Edmund Burke  Order      In a group , the order of an element  is the least positive integer such that . If no such exists, we say has infinite order. We write for the order of . Order of an element     The order of a group  is the cardinality of the set , denoted . Order of a group        Some authors use the notation or to refer to the order of a group. We won't name names, but they know who they are. (See: )  Order Examples           in     In the additive groups , , , and every nonzero (i.e., nonidentity) element has infinite order.    In the additve group , the element has order , as and .      We arrive at one of the central conjectures of group theory, posed by none other tha UNL's Tom \"Destroyer of Worlds\" Marley. Best of luck. For the more astute reader, you may observe that this is more of the more solvable conjectures in mathematics. This is the first problem Tom assigns every time he teaches 817 and it's become a bit of a running joke.  Marley's Conjecture  Every group of order is abelian.   Let be a group` with elements, and suppose there are elements such that for some elements . Since , we must have , , and . Since has only elements and , either or . Without loss, say the former occurs. But implies and we know commutes with , and hence this is not possible. If , then and if then , both of which are impossible. Since were arbitrary, must be abelian.   Properties of Order      An element of a group has order if and only if .         If for and prime, then .       there or  If is a group such every non-identity element has order , then is abelian.   Product Order  Prove or disprove: if have finite order then has finite order.    Element Order   Let be a group and let . Then   If then .     and in particular .       Order Hors d'oeuvre  Let be a group.   Let be an element of finite order. Show that has finite order for any integer , and in fact     Prove that for all in , holds.      A brief note on notation before we progress to the exercises and beyond. At various points throughout this text, the author may use \"mathcal\" notation for definitions that do not normally require it (such as for a group, for a ring, etc.) In the realm of higher mathematics, this is what is known as a typo , and should be reported to the proper authorities as soon as possible.   "
 },
 {
   "id": "def-binop",
@@ -34,7 +34,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "1.1",
   "title": "Binary Operation.",
-  "body": " Binary Operation  binary-operation   A binary operation on a set is a function    "
+  "body": "Binary Operation  binary-operation   A binary operation on a set is a function    "
 },
 {
   "id": "def-monoid",
@@ -43,7 +43,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "1.2",
   "title": "Monoid.",
-  "body": " Monoid   A monoid is a pair where is a set and is a on satisfying the following properties:   (Closure) for each , .    (Associativity) for all we have     (Identity Element) there exists such that for all  the identity element of a group       "
+  "body": "Monoid   A monoid is a pair where is a set and is a on satisfying the following properties:   (Closure) for each , .    (Associativity) for all we have     (Identity Element) there exists such that for all  the identity element of a group       "
 },
 {
   "id": "mark",
@@ -64,22 +64,22 @@ var ptx_lunr_docs = [
   "body": "The first axiom in is technically redundant. Closure is really part of the definition of a on a set, and it is implicitly assumed whenever we consider such an operation. Howewever, redundancy is not a bad thing, and it never hurts to state it explicitely. "
 },
 {
-  "id": "def-group",
-  "level": "2",
-  "url": "group-basics.html#def-group",
-  "type": "Definition",
-  "number": "1.5",
-  "title": "Group.",
-  "body": " Group   A group is a monoid with the following additional property:   (Inverses) for each , there is an element such that .    a group (or monoid) and its binary operation  lowercase letters reserved for elements of a group    "
-},
-{
   "id": "remark-2",
   "level": "2",
   "url": "group-basics.html#remark-2",
   "type": "Remark",
-  "number": "1.6",
+  "number": "1.5",
   "title": "",
-  "body": "Although a group is a pair, we will usually refer to the group by only naming the underlying set, . "
+  "body": "For those interested, a pairing that only satisfies the first two properties of is called a semigroup . If only satisfies the first property, it is known as a magma . "
+},
+{
+  "id": "def-group",
+  "level": "2",
+  "url": "group-basics.html#def-group",
+  "type": "Definition",
+  "number": "1.6",
+  "title": "Group.",
+  "body": "Group   A group is a monoid with the following additional property:   (Inverses) for each , there is an element such that .    a group (or monoid) and its binary operation  lowercase letters reserved for elements of a group    "
 },
 {
   "id": "remark-3",
@@ -88,7 +88,7 @@ var ptx_lunr_docs = [
   "type": "Remark",
   "number": "1.7",
   "title": "",
-  "body": " For those interested, a that only satisfies the first two properties of is called a semigroup . If only satisfies the first property, it is known as a magma .  "
+  "body": "Although a group is a pair, we will usually refer to the group by only naming the underlying set, . "
 },
 {
   "id": "exe-lr-inverses",
@@ -100,13 +100,13 @@ var ptx_lunr_docs = [
   "body": "Left and Right Inverses  Give an example of a monoid and an element of that has a left inverse but not a right inverse.   Coming soon to an OER near you!  "
 },
 {
-  "id": "example-1",
+  "id": "ex-n-monoid",
   "level": "2",
-  "url": "group-basics.html#example-1",
+  "url": "group-basics.html#ex-n-monoid",
   "type": "Example",
   "number": "1.9",
-  "title": "",
-  "body": " The natural numbers form a monoid under addition. However, does not form a group.  "
+  "title": "Au Naturale.",
+  "body": "Au Naturale   The natural numbers form a monoid under addition. However, does not form a group.   "
 },
 {
   "id": "thm-properties-of-groups",
@@ -115,7 +115,7 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "1.10",
   "title": "Properties of (Semi)Groups.",
-  "body": " Properties of (Semi)Groups      (Unique Identity) In a monoid , the element satisfying the second axiom of is unique, and we thus refer to it as the identity element of .    (Unique Inverses) In a group , for each , the element satisfying the additional axiom of is unique, and we thus refer to it as the the inverse of and we will henceforth denote it by .    (Cancellation) In a group , if then . Similarly, if we have .          Suppose there exist two elements and such that and for all . Then Thus only one element can satisfy this property, making the identity element unique.    For a given , if and fo some and , then .    Suppose for some . By multiplying on both sides by , we see       "
+  "body": "Properties of (Semi)Groups      (Unique Identity) In a monoid , the element satisfying the second axiom of is unique, and we thus refer to it as the identity element of .    (Unique Inverses) In a group , for each , the element satisfying the additional axiom of is unique, and we thus refer to it as the the inverse of and we will henceforth denote it by .    (Cancellation) In a group , if then . Similarly, if we have .          Suppose there exist two elements and such that and for all . Then Thus only one element can satisfy this property, making the identity element unique.    For a given , if and fo some and , then .    Suppose for some . By multiplying on both sides by , we see       "
 },
 {
   "id": "def-abelian",
@@ -133,7 +133,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.12",
   "title": "Group Examples.",
-  "body": " Group Examples     Trivial Subgroup  The trivial subgroup is the group with a single element  the trivial group: e.g. the group containing only an identity element      and each form an abelian group, where denotes traditional addition.     and form groups under traditional multiplication.    General Linear Group  For any positive integer , let By invertible I mean those matrices that have two-sided inverses, but it turns out that if an matrix has a left inverse then it it is automatically a right inverse too, and vice versa. Then is a non-abelian group under matrix multiplication. In general this is true for any field , whatever those are.  General linear group      For any , let denote the integers modulo . Then forms an abelian group where denotes addition modulo .    The subset of the complex numbers forms an abelian group under multiplication.     "
+  "body": "Group Examples     Trivial Subgroup  The trivial subgroup is the group with a single element  the trivial group: e.g. the group containing only an identity element      and each form an abelian group, where denotes traditional addition.     and form groups under traditional multiplication.    General Linear Group  For any positive integer , let By invertible I mean those matrices that have two-sided inverses, but it turns out that if an matrix has a left inverse then it it is automatically a right inverse too, and vice versa. Then is a non-abelian group under matrix multiplication. In general this is true for any field , whatever those are.  General linear group     For any , let denote the integers modulo . Then forms an abelian group where denotes addition modulo .    The subset of the complex numbers forms an abelian group under multiplication.     "
 },
 {
   "id": "exe-opposite-group",
@@ -160,7 +160,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.15",
   "title": "Groups of Units.",
-  "body": " Groups of Units   Each of the following subsets form an abelian group under multiplication.   The subset of .     , , and .    For each , the subset of .      "
+  "body": "Groups of Units   Each of the following subsets form an abelian group under multiplication.   The subset of .     , , and .    For each , the subset of .      "
 },
 {
   "id": "exe-group-of-units-in-zp",
@@ -196,7 +196,7 @@ var ptx_lunr_docs = [
   "type": "Lemma",
   "number": "1.19",
   "title": "Properties of Inverses.",
-  "body": " Properties of Inverses   If is a group and , then:    .     .          First, recall from that . However, it is also the case that . By part (2) of we know that inverses are unique, and thus it must be the case that .    Coming soon to an OER near you!      "
+  "body": "Properties of Inverses   If is a group and , then:    .     .          First, recall from that . However, it is also the case that . By part (2) of we know that inverses are unique, and thus it must be the case that .    Coming soon to an OER near you!      "
 },
 {
   "id": "warning-1",
@@ -205,7 +205,7 @@ var ptx_lunr_docs = [
   "type": "Warning",
   "number": "1.20",
   "title": "Additive Exponents.",
-  "body": " Additive Exponents  When we refer to exponents in groups, we are talking about repeated applications of the given operation, which in many cases is denoted multiplicatively, hence the exponent notation. However, for additive groups, such as , we find ourselves in the uncomfortable situation where statements such as are technically true. Thus, in additive groups it is more customary to denote expressions such as the one above in more traditional notation: namely, .  "
+  "body": " Additive Exponents  When we refer to exponents in groups, we are talking about repeated applications of the given operation, which in many cases is denoted multiplicatively, hence the exponent notation. However, for additive groups such as , we find ourselves in the uncomfortable situation where statements such as are technically true. Thus, in additive groups it is more customary to denote expressions such as the one above in more traditional notation: namely, .  "
 },
 {
   "id": "exe-groups-but-false",
@@ -223,7 +223,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "1.22",
   "title": "Order.",
-  "body": " Order      In a group , the order of an element  is the least positive integer such that . If no such exists, we say has infinite order. We write for the order of . Order of an element     The order of a group  is the cardinality of the set , denoted . Order of a group       "
+  "body": "Order      In a group , the order of an element  is the least positive integer such that . If no such exists, we say has infinite order. We write for the order of . Order of an element     The order of a group  is the cardinality of the set , denoted . Order of a group       "
 },
 {
   "id": "remark-4",
@@ -240,8 +240,8 @@ var ptx_lunr_docs = [
   "url": "group-basics.html#ex-order",
   "type": "Example",
   "number": "1.24",
-  "title": "",
-  "body": "          in     In the additive groups , , , and every nonzero (i.e., nonidentity) element has infinite order.    In the additve group , the element has order , as and .     "
+  "title": "Order Examples.",
+  "body": "Order Examples           in     In the additive groups , , , and every nonzero (i.e., nonidentity) element has infinite order.    In the additve group , the element has order , as and .     "
 },
 {
   "id": "exe-order-4-abelian",
@@ -250,7 +250,7 @@ var ptx_lunr_docs = [
   "type": "Checkpoint",
   "number": "1.25",
   "title": "Marley's Conjecture.",
-  "body": "Marley's Conjecture  Every group of order is abelian.   Let be a group with elements, and suppose there are elements such that for some elements . Since , we must have , , and . Since has only elements and , either or . Without loss, say the former occurs. But implies and we know commutes with , and hence this is not possible. If , then and if then , both of which are impossible. Since were arbitrary, must be abelian.  "
+  "body": "Marley's Conjecture  Every group of order is abelian.   Let be a group` with elements, and suppose there are elements such that for some elements . Since , we must have , , and . Since has only elements and , either or . Without loss, say the former occurs. But implies and we know commutes with , and hence this is not possible. If , then and if then , both of which are impossible. Since were arbitrary, must be abelian.  "
 },
 {
   "id": "thm-order-properties",
@@ -259,7 +259,7 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "1.26",
   "title": "Properties of Order.",
-  "body": " Properties of Order      An element of a group has order if and only if .         If for and prime, then .      "
+  "body": "Properties of Order      An element of a group has order if and only if .         If for and prime, then .      "
 },
 {
   "id": "exe-every-element-order-2",
@@ -280,29 +280,20 @@ var ptx_lunr_docs = [
   "body": "Product Order  Prove or disprove: if have finite order then has finite order.  "
 },
 {
-  "id": "thm-group-element-order",
+  "id": "thm-element-order",
   "level": "2",
-  "url": "group-basics.html#thm-group-element-order",
+  "url": "group-basics.html#thm-element-order",
   "type": "Theorem",
   "number": "1.29",
-  "title": "",
-  "body": "  Let be a group and let . Then and in particular .   "
-},
-{
-  "id": "lem-order-divisor",
-  "level": "2",
-  "url": "group-basics.html#lem-order-divisor",
-  "type": "Lemma",
-  "number": "1.30",
-  "title": "",
-  "body": "  If then .   "
+  "title": "Element Order.",
+  "body": "Element Order   Let be a group and let . Then   If then .     and in particular .      "
 },
 {
   "id": "exe-order-and-gcd",
   "level": "2",
   "url": "group-basics.html#exe-order-and-gcd",
   "type": "Checkpoint",
-  "number": "1.31",
+  "number": "1.30",
   "title": "Order Hors d'oeuvre.",
   "body": "Order Hors d'oeuvre  Let be a group.   Let be an element of finite order. Show that has finite order for any integer , and in fact     Prove that for all in , holds.     "
 },
@@ -311,7 +302,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "group-basics.html#remark-5",
   "type": "Remark",
-  "number": "1.32",
+  "number": "1.31",
   "title": "",
   "body": "A brief note on notation before we progress to the exercises and beyond. At various points throughout this text, the author may use \"mathcal\" notation for definitions that do not normally require it (such as for a group, for a ring, etc.) In the realm of higher mathematics, this is what is known as a typo , and should be reported to the proper authorities as soon as possible. "
 },
@@ -329,7 +320,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-common-groups.html#def-iso-and-sym",
   "type": "Definition",
-  "number": "1.33",
+  "number": "1.32",
   "title": "Isometry and Symmetry.",
   "body": " Isometry and Symmetry   For any integer , let denote a regular -gon. An isometry of the plane is a function that is a bijection and preserves the Euclideal distance for any ). A symmetry of is an isometry that maps to itself.   "
 },
@@ -338,7 +329,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-common-groups.html#remark-6",
   "type": "Remark",
-  "number": "1.34",
+  "number": "1.33",
   "title": "",
   "body": "By the latter I don't mean that fixes each of the points of , but rather that , that is every point of is mapped to a (possibly different) point of and every point of is the image of some point in via . "
 },
@@ -347,7 +338,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-common-groups.html#exercise-12",
   "type": "Checkpoint",
-  "number": "1.35",
+  "number": "1.34",
   "title": "",
   "body": "The composition of two symmetries of is again a symmetry of . "
 },
@@ -356,7 +347,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-common-groups.html#def-d2n",
   "type": "Definition",
-  "number": "1.36",
+  "number": "1.35",
   "title": "Dihedral Group.",
   "body": " Dihedral Group   The dihedral group  is the set of symmetries of the regular -gon equipped with the binary operation given by composition. Dihedral Group    "
 },
@@ -365,7 +356,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-common-groups.html#ex-d2n-elements",
   "type": "Example",
-  "number": "1.37",
+  "number": "1.36",
   "title": "",
   "body": " Assume that the regular -gon is drawn in the plane with its center at the origin and one vertex on the axis.   If denotes rotation about the origin by radians counter-clockwise, then . It's inverse is rotation by clock-wise.    For another example, for any line of symmetry of , reflection about that line gives an element of . By our convention for how to draw , the -axis is a line of symmetry for , and we let denote reflection about the -axis.     "
 },
@@ -374,7 +365,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-common-groups.html#remark-7",
   "type": "Remark",
-  "number": "1.38",
+  "number": "1.37",
   "title": "",
   "body": "We see and , which may make some intuitive sense. The fact that is a reflection and hence that may be slightly less aparent. "
 },
@@ -383,7 +374,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-common-groups.html#thm-d2n-order",
   "type": "Proposition",
-  "number": "1.39",
+  "number": "1.38",
   "title": "",
   "body": "     Every element in can be written as or for .            We will use some geometric notions freely without complete justification. For example, we use that if an isometry of fixes two points and , then it is either the identity element or it is reflection about the line . We also use that every element of maps the origin to itself (since the origin is the center of mass of ). Finally, we use that every isometry of is either orientation preserving or orientation reversing .  Label the vertices of as , with being the vertex located on the positive -axis, being the vertex adjacent to in the counter-clockwise direction, etc. We have , , etc., and so . Moreover any isometry must send a vertex to a vertex because the vertices are the points on at largest distance from the origin.  Let be an arbitrary symmetry of . Then for some . Then the element fixes and the origin, and hence either or from the discussion above. We get that or , proving the first assertion.  Since , we see that if for , then . We have for any since the former is orientation reversing and the latter is orientation preserving. If for , then upon multiplying on the left of we get .   "
 },
@@ -392,7 +383,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-common-groups.html#def-permutation",
   "type": "Definition",
-  "number": "1.40",
+  "number": "1.39",
   "title": "Permutation.",
   "body": " Permutation   A permutation of a set is a bijective function . The set of all permutations of a set is denoted .   "
 },
@@ -401,7 +392,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-common-groups.html#def-perm-group",
   "type": "Definition",
-  "number": "1.41",
+  "number": "1.40",
   "title": "Symmetric Group.",
   "body": " Symmetric Group   For any , the symmetric group is the set equipped with the composition of functions as its binary operation. Symmetric group    "
 },
@@ -410,7 +401,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-common-groups.html#exe-sn-order",
   "type": "Checkpoint",
-  "number": "1.42",
+  "number": "1.41",
   "title": "Order of <span class=\"process-math\">\\(S_n\\)<\/span>.",
   "body": "Order of Prove . "
 },
@@ -419,7 +410,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-common-groups.html#def-cycle",
   "type": "Definition",
-  "number": "1.43",
+  "number": "1.42",
   "title": "Cycles and Transpositions.",
   "body": " Cycles and Transpositions   If are distinct integers between and , then denotes the element of that satisfies Such a permutation is called a cycle or an -cycle if we want to emphasize its length. A -cycle is often called a transposition .   "
 },
@@ -428,7 +419,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-common-groups.html#ex-cycle",
   "type": "Example",
-  "number": "1.44",
+  "number": "1.43",
   "title": "",
   "body": " For eample , regarded as an element of sends to , to and to , and it fixes . (Note that the value of in cycle notation is sometime ambiguous.)  "
 },
@@ -437,7 +428,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-common-groups.html#exe-1-cycles",
   "type": "Checkpoint",
-  "number": "1.45",
+  "number": "1.44",
   "title": "<span class=\"process-math\">\\(1\\)<\/span>-Cycles in <span class=\"process-math\">\\(S_n\\)<\/span>.",
   "body": "-Cycles in Determine the number of -cycles in . "
 },
@@ -446,16 +437,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-common-groups.html#remark-8",
   "type": "Remark",
-  "number": "1.46",
+  "number": "1.45",
   "title": "",
   "body": "Note that distinct lists of integers represent the same cycle if they are cyclical rearrangements of each other, e.g., . However, . "
 },
 {
-  "id": "example-7",
+  "id": "exe-composing-cycles",
   "level": "2",
-  "url": "sec-common-groups.html#example-7",
+  "url": "sec-common-groups.html#exe-composing-cycles",
   "type": "Example",
-  "number": "1.47",
+  "number": "1.46",
   "title": "",
   "body": " We compose cycles the same way we compose functions. So, for example This equation might lead you to the false belief that every element of is a cycle. This is not true — for example, the product cannot be written as a single cycle. What is true is that every element of is uniquely (up to ordering) the product of disjoint cycles. We'll prove that soon.  "
 },
@@ -464,7 +455,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-common-groups.html#exe-permutation-order",
   "type": "Proposition",
-  "number": "1.48",
+  "number": "1.47",
   "title": "Permutation Order.",
   "body": " Permutation Order   Prove that the order of a permutation is the least common multiple of the lengths of the cycles it is a product of.  In particular, every transposition is its own inverse and the order of a -cycle in is .    Coming soon!   "
 },
@@ -473,7 +464,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-common-groups.html#prop-disjoint-cycles-commute",
   "type": "Proposition",
-  "number": "1.49",
+  "number": "1.48",
   "title": "",
   "body": "  Disjoint cycles commute, that is, if , and then .   "
 },
@@ -482,7 +473,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-common-groups.html#thm-cycledecomp",
   "type": "Theorem",
-  "number": "1.50",
+  "number": "1.49",
   "title": "",
   "body": "     Each can be written as a product (composition) of disjoint cycles, and such a factorization is unique up to the ordering of the factors.    Each can be written a product of transpositions.      "
 },
@@ -491,7 +482,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-common-groups.html#remark-9",
   "type": "Remark",
-  "number": "1.51",
+  "number": "1.50",
   "title": "",
   "body": "For the uniqueness part of statement (1) in the above proposition one needs to establish a convention regarding -cycles, that is one needs to stipulate either that the -cycles will not be recorded (which gives the shortest such factorization) or that all the -cycles will be recorded (which gives the longest such factorization, but also the only one that makes it clear what the number is). "
 },
@@ -500,7 +491,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-common-groups.html#exe-identity-even",
   "type": "Checkpoint",
-  "number": "1.52",
+  "number": "1.51",
   "title": "Identity Permutation.",
   "body": "Identity Permutation The identity permutation in is even, but not odd. "
 },
@@ -509,7 +500,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-common-groups.html#exe-permutation-even-odd",
   "type": "Checkpoint",
-  "number": "1.53",
+  "number": "1.52",
   "title": "No Evodds Allowed.",
   "body": "No Evodds Allowed The no permutation in is both even and odd. "
 },
@@ -518,7 +509,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-common-groups.html#def-quaternions",
   "type": "Definition",
-  "number": "1.54",
+  "number": "1.53",
   "title": "Quaternions.",
   "body": " Quaternions   The quaternion group  is a set with elements satisfying the following relations: is the identity element and     "
 },
@@ -527,7 +518,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-common-groups.html#exe-heinous-commutes",
   "type": "Checkpoint",
-  "number": "1.55",
+  "number": "1.54",
   "title": "Heinous Commutes.",
   "body": "Heinous Commutes Provide explicit examples to show , and are not abelian groups. "
 },
@@ -545,7 +536,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#def-subgroup",
   "type": "Definition",
-  "number": "1.56",
+  "number": "1.55",
   "title": "Subgroup.",
   "body": " Subgroup   A nonempty subset of a group is called a subgroup , denoted , Subgroup  in group theory, and usually denote subgroups. provided is a group under the multiplication law of .  A subgroup of a group is a proper subgroup, denoted if .   "
 },
@@ -554,7 +545,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#exe-subgroup-preserves-identity",
   "type": "Checkpoint",
-  "number": "1.57",
+  "number": "1.56",
   "title": "Subgroups Preserve Identities.",
   "body": "Subgroups Preserve Identities  Let be a subgroup of . Then .  "
 },
@@ -563,7 +554,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#exe-abelian-subgroups",
   "type": "Checkpoint",
-  "number": "1.58",
+  "number": "1.57",
   "title": "Subgroups of Abelian Groups.",
   "body": "Subgroups of Abelian Groups  Let be a subgroup of a group . If is abelian then so is .  "
 },
@@ -572,7 +563,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#thm-subgroup-test",
   "type": "Theorem",
-  "number": "1.59",
+  "number": "1.58",
   "title": "Subgroup Tests.",
   "body": " Subgroup Tests      If a subset of a group is nonempty and closed under multiplication and inversion, then is a subgroup.    If a subset of a group is nonempty and satisfies for all , , then is a subgroup.       We prove the one-step test first.  Assume is non-empty and for all , . Since is non-empty, there is an and hence . Since for any , is an identity element for . For any , , and so every element of has an inverse inside . For we have and thus and hence is closed under . This means that the restriction of the group operation of to is a well-defined group operation. This operation is associative by the axioms for the group . The axioms of a group have now been established for .  Now we prove the two step test.  Assume is non-empty and closed under multiplication and inversion. Then, for we have and . Since the hypothesis of the one-step test is satisfied, is a subgroup of .   "
 },
@@ -581,7 +572,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#cor-finite-subgroup-test",
   "type": "Corollary",
-  "number": "1.60",
+  "number": "1.59",
   "title": "",
   "body": "  If a finite subset of a group is nonempty and closed under multiplication, then is a subgroup.   "
 },
@@ -590,7 +581,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#ex-common-subgroups",
   "type": "Example",
-  "number": "1.61",
+  "number": "1.60",
   "title": "Common Subgroups.",
   "body": " Common Subgroups      and are the trivial subgroups of .              Let and define . Then for all .      "
 },
@@ -599,7 +590,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#remark-10",
   "type": "Remark",
-  "number": "1.62",
+  "number": "1.61",
   "title": "",
   "body": "In fact, in the case of , these turn out to be the only subgroups of , a fact which you may prove in  "
 },
@@ -608,7 +599,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#ex-uncommon-subgroups",
   "type": "Example",
-  "number": "1.63",
+  "number": "1.62",
   "title": "Less Common Subgroups.",
   "body": " Less Common Subgroups          The group is a subgroup of .         The set of all rotations is a subgroup of . Similarly, the set of reflections is also a subgroup.     "
 },
@@ -617,7 +608,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#exe-torsion-subgroup",
   "type": "Checkpoint",
-  "number": "1.64",
+  "number": "1.63",
   "title": "Torision Subgroup.",
   "body": "Torision Subgroup    Let be an abelian group. Then the set of elements of finite order, which we denote , is a subgroup of , called the torsion subgroup .    Show that the torision subgroup may not in fact be a subgroup if is not assumed to be abelian.    "
 },
@@ -626,7 +617,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#thm-subgroup-properties",
   "type": "Theorem",
-  "number": "1.65",
+  "number": "1.64",
   "title": "Properties of Subgroups.",
   "body": " Properties of Subgroups      Transitivity of Subgroups  If is a subgroup of and is a subgroup of , then is a subgroup of .    Intersections of Subgroups  If is a subgroup of for all in an index set , then is a subgroup of .    Unions of Subgroups  Let be a group and , subgroups. Prove that is a subgroup if and only if or .      "
 },
@@ -635,7 +626,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#exe-no-proper-unions",
   "type": "Checkpoint",
-  "number": "1.66",
+  "number": "1.65",
   "title": "No Proper Unions.",
   "body": "No Proper Unions  Every finite group cannot be expressed as the union of two proper subgroups.   Part (3) of may prove useful!   Coming soon to an OER near you!  "
 },
@@ -644,7 +635,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#exe-subgroup-not-symmetric",
   "type": "Checkpoint",
-  "number": "1.67",
+  "number": "1.66",
   "title": "Subgroups not Symmetric.",
   "body": "Subgroups not Symmetric  In we showed that subgroups form a transitve relation. Prove that the relation is reflexive (it can be one sentence), not symmetric, and thus not an equivalence relation.  "
 },
@@ -653,7 +644,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#exe-subgroups-of-z",
   "type": "Checkpoint",
-  "number": "1.68",
+  "number": "1.67",
   "title": "Subgroups of <span class=\"process-math\">\\(\\Z\\)<\/span>.",
   "body": "Subgroups of     The set is a subgroup of for all .    The only subgroups of are the sets .     "
 },
@@ -662,7 +653,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#def-alternating-group",
   "type": "Definition",
-  "number": "1.69",
+  "number": "1.68",
   "title": "Alternating Group.",
   "body": " Alternating Group   The alternating group  is the subset of all even cycles of . the alternating group on elements    "
 },
@@ -671,7 +662,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#prop-alternating-group-is-subgroup",
   "type": "Proposition",
-  "number": "1.70",
+  "number": "1.69",
   "title": "<span class=\"process-math\">\\(A_n\\leq S_n\\)<\/span>.",
   "body": "   Prove that is a subgroup of .   "
 },
@@ -680,7 +671,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#exe-an-order",
   "type": "Checkpoint",
-  "number": "1.71",
+  "number": "1.70",
   "title": "Order of <span class=\"process-math\">\\(A_n\\)<\/span>.",
   "body": "Order of Prove . "
 },
@@ -689,7 +680,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#def-special-linear-group",
   "type": "Definition",
-  "number": "1.72",
+  "number": "1.71",
   "title": "Special Linear Group.",
   "body": " Special Linear Group   The special linear group with complex entries is defined  the special linear group    "
 },
@@ -698,7 +689,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#prop-slg-subgroup",
   "type": "Proposition",
-  "number": "1.73",
+  "number": "1.72",
   "title": "",
   "body": "  Prove that is a subgroup of .   "
 },
@@ -707,7 +698,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#def-group-center",
   "type": "Definition",
-  "number": "1.74",
+  "number": "1.73",
   "title": "<span class=\"process-math\">\\(Z(G)\\)<\/span>.",
   "body": "   The center of a group , often written , is the set of elements of that commute with every element of . That is,  the center of a group    "
 },
@@ -716,7 +707,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#ex-group-centers",
   "type": "Example",
-  "number": "1.75",
+  "number": "1.74",
   "title": "Centers of Common Groups.",
   "body": " Centers of Common Groups     The center of any abelian group is itself. (In fact, this statement is an if and only if)     for .     "
 },
@@ -725,7 +716,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#exe-finding-centers",
   "type": "Checkpoint",
-  "number": "1.76",
+  "number": "1.75",
   "title": "Finding Centers.",
   "body": "Finding Centers Determine the following:    for . Your answer will depend on whether is even or odd.     for .     for .     .    "
 },
@@ -734,7 +725,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#prop-center-is-subgroup",
   "type": "Proposition",
-  "number": "1.77",
+  "number": "1.76",
   "title": "Center is a Subgroup.",
   "body": " Center is a Subgroup            is abelian    If , then       "
 },
@@ -743,7 +734,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#exe-only-element-of-order-2",
   "type": "Checkpoint",
-  "number": "1.78",
+  "number": "1.77",
   "title": "Only Element of Order <span class=\"process-math\">\\(2\\)<\/span>.",
   "body": "Only Element of Order Let be a group and . If is the only element of order in , then . "
 },
@@ -752,7 +743,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subgroups.html#exe-even-groups-order-2",
   "type": "Checkpoint",
-  "number": "1.79",
+  "number": "1.78",
   "title": "Even Order Groups.",
   "body": "Even Order Groups Every group of even order contains an element of order . This is a direct result of , but proving it is possible with the tools we have  "
 },
@@ -779,7 +770,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gen-cyclic-gp.html#def-gensubgp",
   "type": "Definition",
-  "number": "1.80",
+  "number": "1.79",
   "title": "Generated Subgroup.",
   "body": " Generated Subgroup   Given a group and a subset of , the subgroup of generated by is If is a set with one element then we write and we refer to this as the cyclic subgroup generated by  . the subgroup generated by    "
 },
@@ -788,7 +779,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gen-cyclic-gp.html#lem-gensubgp",
   "type": "Lemma",
-  "number": "1.81",
+  "number": "1.80",
   "title": "Elements of <span class=\"process-math\">\\(\\igen X\\)<\/span>.",
   "body": " Elements of   For a subset of , the elements of can be described as:     Let . Since is a subgroup that contains , it is closed under products and inverses, and thus must contain all elements of .  For the opposite containment, we just need to show the set really is a subgroup. We use the one step test:      since we allow and declare the empty product to be .    If and are in then is also in .     Therefore and (by taking and ) and by the minimality of we obtain .   "
 },
@@ -797,7 +788,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gen-cyclic-gp.html#example-11",
   "type": "Example",
-  "number": "1.82",
+  "number": "1.81",
   "title": "",
   "body": "   for every .   "
 },
@@ -806,7 +797,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gen-cyclic-gp.html#example-12",
   "type": "Example",
-  "number": "1.83",
+  "number": "1.82",
   "title": "",
   "body": "    "
 },
@@ -815,7 +806,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gen-cyclic-gp.html#remark-11",
   "type": "Remark",
-  "number": "1.84",
+  "number": "1.83",
   "title": "",
   "body": "Note that in we showed is generated by transpositions. "
 },
@@ -824,7 +815,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gen-cyclic-gp.html#exe-d2p",
   "type": "Checkpoint",
-  "number": "1.85",
+  "number": "1.84",
   "title": "Generating <span class=\"process-math\">\\(D_{2p}\\)<\/span>.",
   "body": "Generating  Let be prime and be any two distinct reflections in . Then .  "
 },
@@ -833,7 +824,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gen-cyclic-gp.html#generating-gl",
   "type": "Checkpoint",
-  "number": "1.86",
+  "number": "1.85",
   "title": "Generating <span class=\"process-math\">\\(\\GL_n(\\R)\\)<\/span>.",
   "body": "Generating  For any integer , the set of column vectors consisting of in the row and elsewhere generate . As you may recall from a linear algebra course, these are called the elementary matrices . (Bonus: what subgroup do the type I elementary matrices generate?)  "
 },
@@ -842,7 +833,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gen-cyclic-gp.html#thm-generating-sn",
   "type": "Theorem",
-  "number": "1.87",
+  "number": "1.86",
   "title": "",
   "body": "  For prove that is generated by and the -cycle .   "
 },
@@ -851,7 +842,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gen-cyclic-gp.html#remark-12",
   "type": "Remark",
-  "number": "1.88",
+  "number": "1.87",
   "title": "",
   "body": "Funnily enough, this theorem will prove surprisingly useful all the way down in . "
 },
@@ -860,7 +851,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gen-cyclic-gp.html#prop-generating-an",
   "type": "Proposition",
-  "number": "1.89",
+  "number": "1.88",
   "title": "Generating <span class=\"process-math\">\\(A_n\\)<\/span>.",
   "body": " Generating    is the subgroup of generated by all produts of -cyclies (disjoint or not). In symbols,    "
 },
@@ -869,7 +860,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gen-cyclic-gp.html#ex-commutator-subgroup",
   "type": "Example",
-  "number": "1.90",
+  "number": "1.89",
   "title": "Commutator Subgroup.",
   "body": " Commutator Subgroup  Let be a group, , and . This is known as the commutator subgroup of . the commutator subgroup   "
 },
@@ -878,7 +869,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gen-cyclic-gp.html#remark-13",
   "type": "Remark",
-  "number": "1.91",
+  "number": "1.90",
   "title": "",
   "body": " Commutator subgroups prove invaluable when it comes to something called abelianization , which is, loosely speaking, a way of \"modding out\" the non-commutative part of to obtain a new group that is abelian. This is seen rigorously in   "
 },
@@ -887,7 +878,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gen-cyclic-gp.html#prop-generators-of-subgroup",
   "type": "Proposition",
-  "number": "1.92",
+  "number": "1.91",
   "title": "Generators of Subgroups.",
   "body": " Generators of Subgroups   If is a subgroup of that contains , then .   "
 },
@@ -896,7 +887,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gen-cyclic-gp.html#def-cyclic-group",
   "type": "Definition",
-  "number": "1.93",
+  "number": "1.92",
   "title": "Cylic Group.",
   "body": " Cylic Group   If is a generated by a single element, i.e. for some , then is called a cyclic group .  We use the notation to denote an arbitrary cyclic group of order and to denote a cyclic group of infinite order.   "
 },
@@ -905,7 +896,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gen-cyclic-gp.html#ex-cyclic-examples",
   "type": "Example",
-  "number": "1.94",
+  "number": "1.93",
   "title": "Examples of Cyclic Groups.",
   "body": " Examples of Cyclic Groups      is a cyclic group.     is a cyclic group.    The group is cyclic.     "
 },
@@ -914,7 +905,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gen-cyclic-gp.html#exe-not-cyclic",
   "type": "Checkpoint",
-  "number": "1.95",
+  "number": "1.94",
   "title": "Not Quite Cyclic Groups.",
   "body": "Not Quite Cyclic Groups    Prove that is not a cyclic group.    Prove that is not cyclic.    "
 },
@@ -923,7 +914,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gen-cyclic-gp.html#cor-cyclic-subgroup",
   "type": "Corollary",
-  "number": "1.96",
+  "number": "1.95",
   "title": "Elements of <span class=\"process-math\">\\(\\igen x\\)<\/span>.",
   "body": " Elements of   For an element of , the elements of can be described as: .    By Lemma , the group has the following elements . We show that      by showing the elements are distinct. Indeed, if and then and , contradicting the minimality of the order of .     by showing (this implies ). Indeed, for any division by yields integers with such that . Then .      "
 },
@@ -932,7 +923,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gen-cyclic-gp.html#exe-non-unique-cyclic-generators",
   "type": "Checkpoint",
-  "number": "1.97",
+  "number": "1.96",
   "title": "Cyclic Generators Need not be Unique.",
   "body": "Cyclic Generators Need not be Unique  Let be a cyclic group. Then .  "
 },
@@ -941,7 +932,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gen-cyclic-gp.html#prop-cyclic-criteria",
   "type": "Proposition",
-  "number": "1.98",
+  "number": "1.97",
   "title": "Criteria for Cyclic Generators.",
   "body": " Criteria for Cyclic Generators  Let be a cyclic group of order , and let . Then generates if and only if .  "
 },
@@ -950,7 +941,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gen-cyclic-gp.html#prop-cyclic-equivalencies",
   "type": "Proposition",
-  "number": "1.99",
+  "number": "1.98",
   "title": "",
   "body": "  Let be a finite group. Then is cyclic if and only if there exists an such that    "
 },
@@ -959,7 +950,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gen-cyclic-gp.html#thm-cyclic-abelian",
   "type": "Theorem",
-  "number": "1.100",
+  "number": "1.99",
   "title": "Cyclic Groups are Abelian.",
   "body": " Cyclic Groups are Abelian   Every cyclic group is abelian.   "
 },
@@ -968,7 +959,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gen-cyclic-gp.html#thm-cyclic-divisors-and-subgroups",
   "type": "Theorem",
-  "number": "1.101",
+  "number": "1.100",
   "title": "Subgroups of Cyclic Groups.",
   "body": " Subgroups of Cyclic Groups   Let , where has finite order . Then there is a bijection for each divisor of . Moreover, for each subgroup of , . In particular, all subgroups of are cyclic and there is a unique subgroup of each order.        Claim 1: For any , setting gives that .  Since any element of is of the form for some . By the Division Theorem for some , . Since and are elements of , . Since and , by the minimality of it follows that cannot be positive and thus . Therefore and we have shown that . The opposite containment follows because and is the smallest subgroup of containing . Thus .  Let be given by .   Claim 2: For any divisor of , we have .  We have    Claim 3: For any subgroup of , we have .  By Claim 1, any is either , for which or is of the form . In the latter case, setting we have and It remains to show that . By Bézout's Identity, for some integers . Since if follows that . On the other hand is a multiple of so and thus . Finally, we conclude that for any .  Claims 2 and 3 establish that is a two sided inverse to , thus is a bijection.      "
 },
@@ -977,7 +968,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gen-cyclic-gp.html#exe-small-cyclic",
   "type": "Checkpoint",
-  "number": "1.102",
+  "number": "1.101",
   "title": "Cyclic Groups of Small Order.",
   "body": "Cyclic Groups of Small Order     Every group of orders are cyclic.    Every abelian group of order is cyclic.     "
 },
@@ -10972,9 +10963,9 @@ var ptx_lunr_docs = [
   "body": "     Projection maps are surjections.    Product inclusion maps are injections.      "
 },
 {
-  "id": "lemma-39",
+  "id": "lemma-38",
   "level": "2",
-  "url": "sec-sets-functions.html#lemma-39",
+  "url": "sec-sets-functions.html#lemma-38",
   "type": "Lemma",
   "number": "A.25",
   "title": "",
@@ -11149,7 +11140,7 @@ var ptx_lunr_docs = [
   "type": "Appendix",
   "number": "E",
   "title": "Biographies",
-  "body": " Biographies   Niels Henrik Abel  Niels Henrik Abel (1802-1829) was a Norwegian mathematician who made groundbreaking contributions to several areas of mathematics, including number theory, algebra, and analysis. Despite dying at the young age of 26, Abel's work had a profound impact on the development of mathematics in the 19th century and beyond. He is perhaps best known for his proof of the impossibility of solving the general quintic equation by radicals, which is considered one of the major achievements of 19th-century mathematics.  Abel was born in Norway and showed an early talent for mathematics. He began studying at the University of Oslo at the age of 17, but financial difficulties and political unrest in Norway at the time made it difficult for him to pursue his studies. In 1823, Abel traveled to Paris, where he was able to work with some of the leading mathematicians of the day, including Adrien-Marie Legendre and Joseph Fourier.  Abel's life was marked by tragedy and struggle. He suffered from poor health throughout his short life, and financial difficulties made it difficult for him to support himself and his family. Despite these challenges, he continued to work tirelessly on his mathematical research, producing a body of work that continues to be studied and admired today. Abel died of tuberculosis in 1829, just months after being awarded a prestigious prize for his work on elliptic integrals.    Arthur Cayley  Arthur Cayley (1821-1895) was a British mathematician who made important contributions to a wide range of fields, including group theory, algebra, geometry, and matrix theory. He is often regarded as one of the founders of modern algebra, and his work played a key role in the development of abstract algebra in the late 19th century.  Cayley was born in London and studied mathematics and law at the University of Cambridge. He went on to become a fellow of Trinity College, Cambridge, and later served as the university's professor of pure mathematics. During his career, he published over 300 papers on a variety of topics in mathematics, and he made important contributions to the study of group theory, including the development of Cayley's theorem and the theory of permutation groups.  Cayley was also an advocate for women's education and played a key role in the movement to allow women to study mathematics at Cambridge University. He argued that women had the same intellectual abilities as men and should be given the same opportunities to pursue advanced studies in mathematics. Today, Arthur Cayley is remembered not only for his contributions to mathematics but also for his advocacy for women's education and his support for social progress and equality.    Augustin-Louis Cauchy  Augustin-Louis Cauchy (1789-1857) was a French mathematician who made significant contributions to several areas of mathematics, including analysis, number theory, and group theory. Cauchy was a prodigious mathematician who published over 800 papers during his lifetime, and his work laid the foundation for much of modern analysis. He is perhaps best known for his contributions to the theory of functions of a complex variable, which he developed in the early 19th century.  Cauchy was born in Paris, France, and showed an early aptitude for mathematics. He was a brilliant student who excelled in both mathematics and physics, and he received his doctorate in mathematics from the École Polytechnique in Paris at the age of 21. He went on to become a professor of mathematics at several prestigious institutions, including the École Polytechnique and the Collège de France.  Cauchy's work in group theory was influential in the development of the subject, and he is credited with formulating the first rigorous definition of a group. He also made significant contributions to the theory of permutation groups, which are central to the study of group theory. Despite his many achievements, Cauchy's life was not without controversy. He was known for his irascible temperament and his conflicts with other mathematicians, including his bitter rival, Niels Henrik Abel. Nonetheless, his contributions to mathematics continue to be studied and applied by mathematicians today.    Évariste Galois  Évariste Galois (1811-1832) was a French mathematician who made groundbreaking contributions to the field of algebra, particularly in the study of group theory. Despite his short life, Galois laid the foundation for the modern theory of algebraic equations and abstract algebra. His work on the theory of equations, which he developed at a young age, revealed the limitations of algebraic methods and led to the development of a new field of mathematics.  Galois was born in Bourg-la-Reine, France, and was recognized for his mathematical talent at a young age. He was an excellent student, but his studies were often interrupted by political upheaval in France, including the July Revolution of 1830. Galois was an active participant in revolutionary movements and was imprisoned for his involvement in a failed uprising against the government. While in prison, he continued to work on mathematical problems and developed his theory of groups and fields, which would later become the foundation for modern algebra.  Galois died at the age of 20 in a duel, which has been attributed to his political and personal conflicts. Although he died young, his work on algebra and group theory had a profound impact on the development of modern mathematics. Today, Galois is regarded as one of the most important mathematicians in history, and his contributions to algebra are still studied and applied by mathematicians around the world.    Joseph-Louis Lagrange  Joseph-Louis Lagrange (1736-1813) was an Italian-French mathematician who made significant contributions to many areas of mathematics, including algebra, calculus, and number theory. Born in Turin, Italy, Lagrange showed early promise in mathematics and was admitted to the Royal Academy of Sciences at the age of 19. He later moved to Paris, where he became a prominent member of the scientific community and a professor at the École Polytechnique.  Lagrange's contributions to mathematics were wide-ranging and profound. He is perhaps best known for his work on the calculus of variations, which helped to lay the foundation for modern optimization theory. He also made important contributions to number theory, including the study of Diophantine equations and the development of the theory of binary quadratic forms. In addition, Lagrange made important contributions to classical mechanics, including the development of the principle of least action and the formulation of Lagrangian mechanics.  Lagrange's life was marked by political upheaval and personal tragedy. He lived through the French Revolution and was forced to flee Paris at one point due to his association with the royal court. He also suffered the loss of his wife and several children, which he wrote about in a series of poignant letters. Despite these challenges, Lagrange continued to work tirelessly on his mathematical research, producing a body of work that continues to be studied and admired today. He died in Paris in 1813, having left an indelible mark on the history of mathematics.    Camille Jordan  Camille Jordan (1838-1922) was a French mathematician who made significant contributions to the development of group theory, number theory, and algebraic geometry. Jordan's most important work was his theory of finite groups, which provided a rigorous framework for the study of symmetry and structure. He was also known for his work on the theory of equations, and he developed important results on modular forms, hyperelliptic functions, and algebraic curves.  Jordan was born in Lyons, France, and he received his education at the École Polytechnique in Paris. After completing his studies, he worked as a professor of mathematics at several universities, including the University of Lille and the Collège de France. In addition to his research, Jordan was an influential teacher and mentor, and he played a key role in the development of mathematical education in France.  Jordan was widely recognized for his contributions to mathematics, and he received numerous awards and honors during his lifetime. He was a member of the French Academy of Sciences, and he was awarded the Grand Prix des Sciences Mathématiques in 1892. Jordan's work has had a lasting impact on the development of group theory and algebraic geometry, and his insights continue to be studied and applied in modern mathematics.    Emmy Noether  Emmy Noether (1882-1935) was a German mathematician who made groundbreaking contributions to the fields of algebra and theoretical physics. Born in Erlangen, Germany, Noether was the daughter of a mathematics professor and grew up with a strong interest in the subject. Despite facing discrimination as a woman in a male-dominated field, Noether pursued her passion for mathematics and eventually became a professor at the University of Göttingen.  Noether's work in algebra revolutionized the field and laid the foundation for modern abstract algebra. She developed the concept of \"Noetherian rings\" and proved several theorems that are now known as \"Noether's theorems,\" including a fundamental theorem linking symmetries and conservation laws in physics. Her work also had a significant impact on the development of group theory and the study of algebraic geometry.  In addition to her contributions to mathematics, Noether played an important role in the scientific community as a mentor and advocate for women in science. She taught and mentored several notable mathematicians, including Hermann Weyl and Richard Courant, and was a founding member of the Mathematical Association of America. Despite facing discrimination and persecution as a Jew in Nazi Germany, Noether continued to work and inspire others until her untimely death at the age of 53. She is remembered today as one of the most influential mathematicians of the 20th century.   "
+  "body": " Biographies  Niels Henrik Abel  Niels Henrik Abel (1802-1829) was a Norwegian mathematician who made groundbreaking contributions to several areas of mathematics, including number theory, algebra, and analysis. Despite dying at the young age of 26, Abel's work had a profound impact on the development of mathematics in the 19th century and beyond. He is perhaps best known for his proof of the impossibility of solving the general quintic equation by radicals, which is considered one of the major achievements of 19th-century mathematics.  Abel was born in Norway and showed an early talent for mathematics. He began studying at the University of Oslo at the age of 17, but financial difficulties and political unrest in Norway at the time made it difficult for him to pursue his studies. In 1823, Abel traveled to Paris, where he was able to work with some of the leading mathematicians of the day, including Adrien-Marie Legendre and Joseph Fourier.  Abel's life was marked by tragedy and struggle. He suffered from poor health throughout his short life, and financial difficulties made it difficult for him to support himself and his family. Despite these challenges, he continued to work tirelessly on his mathematical research, producing a body of work that continues to be studied and admired today. Abel died of tuberculosis in 1829, just months after being awarded a prestigious prize for his work on elliptic integrals.   Arthur Cayley  Arthur Cayley (1821-1895) was a British mathematician who made important contributions to a wide range of fields, including group theory, algebra, geometry, and matrix theory. He is often regarded as one of the founders of modern algebra, and his work played a key role in the development of abstract algebra in the late 19th century.  Cayley was born in London and studied mathematics and law at the University of Cambridge. He went on to become a fellow of Trinity College, Cambridge, and later served as the university's professor of pure mathematics. During his career, he published over 300 papers on a variety of topics in mathematics, and he made important contributions to the study of group theory, including the development of Cayley's theorem and the theory of permutation groups.  Cayley was also an advocate for women's education and played a key role in the movement to allow women to study mathematics at Cambridge University. He argued that women had the same intellectual abilities as men and should be given the same opportunities to pursue advanced studies in mathematics. Today, Arthur Cayley is remembered not only for his contributions to mathematics but also for his advocacy for women's education and his support for social progress and equality.   Augustin-Louis Cauchy  Augustin-Louis Cauchy (1789-1857) was a French mathematician who made significant contributions to several areas of mathematics, including analysis, number theory, and group theory. Cauchy was a prodigious mathematician who published over 800 papers during his lifetime, and his work laid the foundation for much of modern analysis. He is perhaps best known for his contributions to the theory of functions of a complex variable, which he developed in the early 19th century.  Cauchy was born in Paris, France, and showed an early aptitude for mathematics. He was a brilliant student who excelled in both mathematics and physics, and he received his doctorate in mathematics from the École Polytechnique in Paris at the age of 21. He went on to become a professor of mathematics at several prestigious institutions, including the École Polytechnique and the Collège de France.  Cauchy's work in group theory was influential in the development of the subject, and he is credited with formulating the first rigorous definition of a group. He also made significant contributions to the theory of permutation groups, which are central to the study of group theory. Despite his many achievements, Cauchy's life was not without controversy. He was known for his irascible temperament and his conflicts with other mathematicians, including his bitter rival, Niels Henrik Abel. Nonetheless, his contributions to mathematics continue to be studied and applied by mathematicians today.   Évariste Galois  Évariste Galois (1811-1832) was a French mathematician who made groundbreaking contributions to the field of algebra, particularly in the study of group theory. Despite his short life, Galois laid the foundation for the modern theory of algebraic equations and abstract algebra. His work on the theory of equations, which he developed at a young age, revealed the limitations of algebraic methods and led to the development of a new field of mathematics.  Galois was born in Bourg-la-Reine, France, and was recognized for his mathematical talent at a young age. He was an excellent student, but his studies were often interrupted by political upheaval in France, including the July Revolution of 1830. Galois was an active participant in revolutionary movements and was imprisoned for his involvement in a failed uprising against the government. While in prison, he continued to work on mathematical problems and developed his theory of groups and fields, which would later become the foundation for modern algebra.  Galois died at the age of 20 in a duel, which has been attributed to his political and personal conflicts. Although he died young, his work on algebra and group theory had a profound impact on the development of modern mathematics. Today, Galois is regarded as one of the most important mathematicians in history, and his contributions to algebra are still studied and applied by mathematicians around the world.   Joseph-Louis Lagrange  Joseph-Louis Lagrange (1736-1813) was an Italian-French mathematician who made significant contributions to many areas of mathematics, including algebra, calculus, and number theory. Born in Turin, Italy, Lagrange showed early promise in mathematics and was admitted to the Royal Academy of Sciences at the age of 19. He later moved to Paris, where he became a prominent member of the scientific community and a professor at the École Polytechnique.  Lagrange's contributions to mathematics were wide-ranging and profound. He is perhaps best known for his work on the calculus of variations, which helped to lay the foundation for modern optimization theory. He also made important contributions to number theory, including the study of Diophantine equations and the development of the theory of binary quadratic forms. In addition, Lagrange made important contributions to classical mechanics, including the development of the principle of least action and the formulation of Lagrangian mechanics.  Lagrange's life was marked by political upheaval and personal tragedy. He lived through the French Revolution and was forced to flee Paris at one point due to his association with the royal court. He also suffered the loss of his wife and several children, which he wrote about in a series of poignant letters. Despite these challenges, Lagrange continued to work tirelessly on his mathematical research, producing a body of work that continues to be studied and admired today. He died in Paris in 1813, having left an indelible mark on the history of mathematics.   Camille Jordan  Camille Jordan (1838-1922) was a French mathematician who made significant contributions to the development of group theory, number theory, and algebraic geometry. Jordan's most important work was his theory of finite groups, which provided a rigorous framework for the study of symmetry and structure. He was also known for his work on the theory of equations, and he developed important results on modular forms, hyperelliptic functions, and algebraic curves.  Jordan was born in Lyons, France, and he received his education at the École Polytechnique in Paris. After completing his studies, he worked as a professor of mathematics at several universities, including the University of Lille and the Collège de France. In addition to his research, Jordan was an influential teacher and mentor, and he played a key role in the development of mathematical education in France.  Jordan was widely recognized for his contributions to mathematics, and he received numerous awards and honors during his lifetime. He was a member of the French Academy of Sciences, and he was awarded the Grand Prix des Sciences Mathématiques in 1892. Jordan's work has had a lasting impact on the development of group theory and algebraic geometry, and his insights continue to be studied and applied in modern mathematics.   Emmy Noether  Emmy Noether (1882-1935) was a German mathematician who made groundbreaking contributions to the fields of algebra and theoretical physics. Born in Erlangen, Germany, Noether was the daughter of a mathematics professor and grew up with a strong interest in the subject. Despite facing discrimination as a woman in a male-dominated field, Noether pursued her passion for mathematics and eventually became a professor at the University of Göttingen.  Noether's work in algebra revolutionized the field and laid the foundation for modern abstract algebra. She developed the concept of \"Noetherian rings\" and proved several theorems that are now known as \"Noether's theorems,\" including a fundamental theorem linking symmetries and conservation laws in physics. Her work also had a significant impact on the development of group theory and the study of algebraic geometry.  In addition to her contributions to mathematics, Noether played an important role in the scientific community as a mentor and advocate for women in science. She taught and mentored several notable mathematicians, including Hermann Weyl and Richard Courant, and was a founding member of the Mathematical Association of America. Despite facing discrimination and persecution as a Jew in Nazi Germany, Noether continued to work and inspire others until her untimely death at the age of 53. She is remembered today as one of the most influential mathematicians of the 20th century.   David Hilbert  David Hilbert (1862-1943) was a German mathematician who made significant contributions to a wide range of fields, including algebra, number theory, geometry, mathematical physics, and the foundations of mathematics. Hilbert is perhaps best known for his work on the foundations of mathematics, where he sought to develop a formal, axiomatic approach to mathematics that would provide a solid, logical foundation for the discipline. His work on the foundations of mathematics led to the development of important concepts such as Hilbert space, Hilbert's program, and the theory of integral equations.  Hilbert was born in Königsberg, Germany (now Kaliningrad, Russia), and he studied mathematics at the University of Königsberg. After completing his studies, he worked as a professor of mathematics at several universities in Germany, including the University of Göttingen, where he spent most of his career. In addition to his research, Hilbert was an influential teacher and mentor, and he played a key role in the development of mathematical education in Germany.  Hilbert was widely recognized for his contributions to mathematics, and he received numerous awards and honors during his lifetime. He was a member of the Prussian Academy of Sciences and the German Academy of Sciences, and he was awarded the Royal Society's Copley Medal in 1930. Hilbert's work has had a lasting impact on the development of mathematics, and his insights continue to be studied and applied in modern mathematics.   Henry John Stephen Smith  Henry John Stephen Smith was a British mathematician born in Dublin, Ireland in 1826. He was the second son of a barrister and was educated at Trinity College Dublin, where he studied mathematics and classics. He received his BA in 1847 and his MA in 1852. He began teaching at Trinity College in 1850 and was appointed professor of geometry there in 1856. Smith made significant contributions to the theory of elliptic functions and their applications to mechanics, and to the theory of algebraic invariants. He is also known for his work on the arithmetic of algebraic curves and for his contributions to the study of the zeta function.  In addition to his work in mathematics, Smith was involved in the administration of Trinity College Dublin. He served as Registrar of the University from 1867 to 1884, and in 1874 he was appointed the first dean of the newly formed Faculty of Science. He was also involved in the foundation of the Royal Irish Academy, and served as its president from 1886 to 1890. Smith was widely respected for his administrative abilities as well as his mathematical accomplishments.  Smith died in 1883 at the age of 56. He is remembered as one of the most important mathematicians of his time, and his contributions to the theory of algebraic invariants and the theory of elliptic functions continue to be studied today. The Smith normal form, a method for finding the elementary divisors of a matrix, is named after him.   William Rowan Hamilton  William Rowan Hamilton was an Irish mathematician and physicist who lived from 1805 to 1865. He is known for his contributions to a wide range of fields, including complex analysis, number theory, optics, and dynamics. Hamilton was a child prodigy and entered Trinity College Dublin at the age of 16, where he later became a professor of astronomy.  One of Hamilton's most important contributions to mathematics was the invention of quaternions, a non-commutative extension of complex numbers. Quaternions have played an important role in the development of 3D computer graphics and robotics. Hamilton also made important contributions to the theory of optics, including the discovery of conical refraction.  Hamilton was highly respected in the scientific community and was elected president of the Royal Irish Academy in 1837. He was also a fellow of the Royal Society in London and received numerous awards and honors throughout his lifetime. Hamilton died in 1865, and his legacy continues to inspire mathematicians and scientists to this day.   Felix Klein  Felix Klein was a German mathematician who made significant contributions to many areas of mathematics, including group theory, geometry, and topology. He was born in 1849 in Düsseldorf, Germany, and showed a strong aptitude for mathematics from a young age. He went on to study at the University of Bonn and later the University of Berlin, where he earned his doctorate in 1868 under the supervision of Ernst Eduard Kummer. After completing his education, Klein held various academic positions in Germany and Switzerland before being appointed as a professor of mathematics at the University of Erlangen in 1875. In 1880, he moved to the University of Göttingen, where he remained until his retirement in 1913.  Klein is perhaps best known for his work on the theory of groups and their applications to geometry. He was instrumental in developing the idea of the group as an abstract mathematical structure, rather than simply a collection of symmetries of a particular object. He also introduced the concept of the Kleinian group, a discrete group of isometries of the hyperbolic plane. In addition to his work in group theory, Klein made significant contributions to other areas of mathematics, including geometry, topology, and the theory of functions. He also played a prominent role in the development of mathematical education, advocating for the use of concrete examples and applications in teaching.  Klein's work had a profound impact on the development of mathematics in the late 19th and early 20th centuries, and he was widely regarded as one of the leading mathematicians of his time. He was awarded numerous honors for his contributions, including the Royal Society's Copley Medal and the French Legion of Honor. After his retirement from academia, Klein continued to work on mathematical problems and served as the editor of the influential mathematical journal Mathematische Annalen. He died in 1925 at the age of 76, leaving behind a legacy of important mathematical discoveries and a lasting impact on the field of mathematics as a whole.   "
 },
 {
   "id": "colophon-2",
