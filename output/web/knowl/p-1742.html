@@ -13,19 +13,20 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Consider the ring isomorphism <span class="process-math">\(\phi: \Q[x] \xra{\cong} \Q[y]\)</span> given by <span class="process-math">\(\phi(h(x)) = h(y+1)\text{.}\)</span> I claim that</div>
+<div class="para">By Gauss's Lemma we just need to prove it is irreducible in <span class="process-math">\(R[x]\text{.}\)</span> Suppose <span class="process-math">\(f(x) = g(x)h(x)\)</span> with <span class="process-math">\(g(x), h(x) \in R[x]\text{,}\)</span> where</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\phi(f(x)) = y^{p-1} + p y^{p-2} + {p \choose 2} y^{p-3} +{p \choose 3} y^{p-4} +\cdots + {p \choose p-1} y + p.
+g(x) = b_m x^m + b_{m-1} x^{m-1} + \cdots + b_0
 \end{equation*}
 </div>
-<div class="para">To see this, we note that <span class="process-math">\(f(x) (x-1) = x^p - 1\)</span> and by the binomial theorem we have</div>
+<div class="para">and</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\phi(x^p-1) = (y+1)^p - 1 = y^p + p y^{p-1} + {p \choose 2} y^{p-2} + \cdots + py.
+h(x) = c_l x^l + c_{l-1} x^{l-1} + \cdots + c_0
 \end{equation*}
 </div>
-<div class="para">Since <span class="process-math">\(\phi(x^p-1) = \phi(f(x)) \phi(x-1) = \phi(f(x)) y\text{,}\)</span> the claim follows.</div>
+<div class="para">where <span class="process-math">\(m+l = n\)</span> and <span class="process-math">\(b_m c_l = a_n\text{.}\)</span>
+</div>
 </div>
 <span class="incontext"><a href="sec-irrpoly.html#p-1742" class="internal">in-context</a></span>
 </body>

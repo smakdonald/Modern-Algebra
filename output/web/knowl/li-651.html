@@ -13,6 +13,21 @@
 <body class="ignore-math">
 <article class="li"><h6 class="heading">
 <span class="type">Item</span><span class="space"> </span><span class="codenumber">4.5.3.b</span><span class="period">.</span>
-</h6>Prove conversely that if <span class="process-math">\(\mu\)</span> is an eigenvalue of <span class="process-math">\(p(T)\)</span> then there exists an eigenvalue <span class="process-math">\(\l\)</span> of <span class="process-math">\(T\)</span> such that <span class="process-math">\(\mu = p(\l)\text{.}\)</span></article><span class="incontext"><a href="sec-operator.html#li-651" class="internal">in-context</a></span>
+</h6>
+<div class="para logical">
+<div class="para">First note that if <span class="process-math">\(T\)</span> is a scalar of the identity matrix then its only eigenvalue is <span class="process-math">\(0\text{.}\)</span> Let <span class="process-math">\(\mu\)</span> be an eigenvalue of <span class="process-math">\(p(T)\text{.}\)</span> Thus <span class="process-math">\((p(T)-\mu I)v=0\)</span> for some <span class="process-math">\(v\text{.}\)</span> As <span class="process-math">\(\C\)</span> is algebraically closed we can factor the polynomial <span class="process-math">\(p(x)-\mu\)</span> into linear terms:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+p(x)-\mu=c(x-r_1)\dots(x-r_n)
+\end{equation*}
+</div>
+<div class="para">for roots <span class="process-math">\(r_i\text{.}\)</span> Note that <span class="process-math">\(p(r_i)-\mu=0\)</span> for all <span class="process-math">\(r_i\text{.}\)</span> Observe</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{align}(p(T)-\mu I)v&amp;=p(T)v-(\mu I)v\\&amp;=c(T-r_nI)\dots(T-r_1I)v\\&amp;=0.\end{align}
+\end{equation*}
+</div>
+<div class="para">Thus one of these terms must be sent to zero. Note that if <span class="process-math">\(T-r_iI=0\)</span> for any <span class="process-math">\(I\)</span> this would make <span class="process-math">\(T\)</span> a scaler of the identity matrix. Thus there exists some <span class="process-math">\(i\)</span> such that <span class="process-math">\((T-r_iI)v=0\text{,}\)</span> making <span class="process-math">\(r_i\)</span> an eigenvalue of <span class="process-math">\(T\text{.}\)</span> Notice that as <span class="process-math">\(p(r_i)-\mu=0\)</span> we have <span class="process-math">\(p(r_i)=\mu\text{,}\)</span> completing the proof.</div>
+</div></article><span class="incontext"><a href="sec-operator.html#li-651" class="internal">in-context</a></span>
 </body>
 </html>

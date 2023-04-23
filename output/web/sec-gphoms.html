@@ -647,7 +647,7 @@ window.MathJax = {
 <div class="toc-item"><a href="sec-defn-ex.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Intro to Rings</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-defn-ex.html#subsec-first-ex" class="internal"><span class="title">Definition and First Properties</span></a></div></li>
-<li><div class="toc-item"><a href="sec-defn-ex.html#subsec-units" class="internal"><span class="title">Units, Zero Divisors, Integral Domains</span></a></div></li>
+<li><div class="toc-item"><a href="sec-defn-ex.html#subsec-units" class="internal"><span class="title">Units, Zerodivisors, Integral Domains</span></a></div></li>
 <li><div class="toc-item"><a href="sec-defn-ex.html#exercises-18" class="internal"><span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
@@ -938,62 +938,62 @@ window.MathJax = {
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Homomorphism? I Barely Know 'em!</span>
 </h3>
 <blockquote class="blockquote" id="blockquote-10">
-<div class="para" id="p-269">“In the end, the character of a civilization is encased in its structures.”</div> <cite class="attribution">―Frank Gehry</cite>
+<div class="para" id="p-271">“In the end, the character of a civilization is encased in its structures.”</div> <cite class="attribution">―Frank Gehry</cite>
 </blockquote>
 <article class="definition definition-like" id="def-gphom"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Group Homomorphism.</span>
-</h4> <div class="para" id="p-270">If <span class="process-math">\(G\)</span> and <span class="process-math">\(H\)</span> are groups, a <em class="emphasis">homomorphism</em> from <span class="process-math">\(G\)</span> is <span class="process-math">\(H\)</span> is a function <span class="process-math">\(f: G \to H\)</span> such that <span class="process-math">\(f(x \cdot_G y) = f(x) \cdot_H f(y)\text{,}\)</span> where <span class="process-math">\(\cdot_G\)</span> and <span class="process-math">\(\cdot_H\)</span> denote the multiplication rules for <span class="process-math">\(G\)</span> and <span class="process-math">\(H\text{,}\)</span> respectively. </div></article><div class="para" id="p-271">Intuitively, a group homomorphism preserves the algebraic structure of the group, while allowing us to compare and relate different groups. In this way, group homomorphisms allow us to study the properties of groups by comparing them to other groups that we already understand well.</div>
+</h4> <div class="para" id="p-272">If <span class="process-math">\(G\)</span> and <span class="process-math">\(H\)</span> are groups, a <em class="emphasis">homomorphism</em> from <span class="process-math">\(G\)</span> is <span class="process-math">\(H\)</span> is a function <span class="process-math">\(f: G \to H\)</span> such that <span class="process-math">\(f(x \cdot_G y) = f(x) \cdot_H f(y)\text{,}\)</span> where <span class="process-math">\(\cdot_G\)</span> and <span class="process-math">\(\cdot_H\)</span> denote the multiplication rules for <span class="process-math">\(G\)</span> and <span class="process-math">\(H\text{,}\)</span> respectively. </div></article><div class="para" id="p-273">Intuitively, a group homomorphism preserves the algebraic structure of the group, while allowing us to compare and relate different groups. In this way, group homomorphisms allow us to study the properties of groups by comparing them to other groups that we already understand well.</div>
 <article class="example example-like" id="ex-group-homom-examples"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Homormophism Examples.</span>
-</h4> <div class="para logical" id="p-272"><ol class="decimal">
-<li id="li-100"><div class="para" id="p-273">The identity map is a group homomorphism for any group <span class="process-math">\(G\text{,}\)</span> this is known as the <em class="emphasis">trivial homomorphism</em>.</div></li>
-<li id="li-101"><div class="para" id="p-274">The function <span class="process-math">\(\varphi:\Z\to\Z/5\)</span> given by <span class="process-math">\(\varphi(a)=[a]\)</span> is a homomorphism.</div></li>
-<li id="li-102"><div class="para" id="p-275">Let <span class="process-math">\(H\leq G\text{.}\)</span> The inclusion map <span class="process-math">\(i:H\to G\)</span> defined by <span class="process-math">\(i(h)=h\)</span> is a homomorphism.</div></li>
-<li id="li-103"><div class="para" id="p-276">The <em class="emphasis">sign homomorphism</em> <span class="process-math">\(\sign: S_n\to \{-1,1\}\)</span> that sends even permuations to <span class="process-math">\(1\)</span> and odd permutations to <span class="process-math">\(-1\)</span> is a homomorphism.</div></li>
-<li id="li-104"><div class="para" id="p-277">The exponential map <span class="process-math">\(\exp: ({\mathbb{R}}, +) \to (\mathbb{R}^\times, \cdot)\)</span> is a homomorphism.</div></li>
-<li id="li-105"><div class="para" id="p-278">The natural log map <span class="process-math">\(\ln: (\mathbb{R}^\times, \cdot) \to ({\mathbb{R}}, +)\)</span> is a homomorphism.</div></li>
-<li id="li-106"><div class="para" id="p-279">For any positive integer <span class="process-math">\(n\)</span> the map determinant map <span class="process-math">\(\det: \operatorname{GL}_n(\C) \to (\C^\times, \cdot)\)</span> is a group homomorphism.</div></li>
+</h4> <div class="para logical" id="p-274"><ol class="decimal">
+<li id="li-100"><div class="para" id="p-275">The identity map is a group homomorphism for any group <span class="process-math">\(G\text{,}\)</span> this is known as the <em class="emphasis">trivial homomorphism</em>.</div></li>
+<li id="li-101"><div class="para" id="p-276">The function <span class="process-math">\(\varphi:\Z\to\Z/5\)</span> given by <span class="process-math">\(\varphi(a)=[a]\)</span> is a homomorphism.</div></li>
+<li id="li-102"><div class="para" id="p-277">Let <span class="process-math">\(H\leq G\text{.}\)</span> The inclusion map <span class="process-math">\(i:H\to G\)</span> defined by <span class="process-math">\(i(h)=h\)</span> is a homomorphism.</div></li>
+<li id="li-103"><div class="para" id="p-278">The <em class="emphasis">sign homomorphism</em> <span class="process-math">\(\sign: S_n\to \{-1,1\}\)</span> that sends even permuations to <span class="process-math">\(1\)</span> and odd permutations to <span class="process-math">\(-1\)</span> is a homomorphism.</div></li>
+<li id="li-104"><div class="para" id="p-279">The exponential map <span class="process-math">\(\exp: ({\mathbb{R}}, +) \to (\mathbb{R}^\times, \cdot)\)</span> is a homomorphism.</div></li>
+<li id="li-105"><div class="para" id="p-280">The natural log map <span class="process-math">\(\ln: (\mathbb{R}^\times, \cdot) \to ({\mathbb{R}}, +)\)</span> is a homomorphism.</div></li>
+<li id="li-106"><div class="para" id="p-281">For any positive integer <span class="process-math">\(n\)</span> the map determinant map <span class="process-math">\(\det: \operatorname{GL}_n(\C) \to (\C^\times, \cdot)\)</span> is a group homomorphism.</div></li>
 </ol></div></article><article class="exercise exercise-like" id="exe-homom-determinations"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-homom-determinations"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Determining Group Homomorphisms.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-homom-determinations"><article class="exercise exercise-like"><div class="para logical" id="p-280">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-homom-determinations"><article class="exercise exercise-like"><div class="para logical" id="p-282">
 <div class="para">Determine (with justification) which of the following functions are group homomorphisms</div>
 <ol class="decimal">
-<li id="li-107"><div class="para" id="p-281">The function <span class="process-math">\(f: \Z\to \Z\)</span> defined by <span class="process-math">\(f(n) = 2n\text{.}\)</span>
+<li id="li-107"><div class="para" id="p-283">The function <span class="process-math">\(f: \Z\to \Z\)</span> defined by <span class="process-math">\(f(n) = 2n\text{.}\)</span>
 </div></li>
-<li id="li-108"><div class="para" id="p-282">The function <span class="process-math">\(f: \R \to \R\)</span> defined by <span class="process-math">\(f(x) = x^2\text{.}\)</span>
+<li id="li-108"><div class="para" id="p-284">The function <span class="process-math">\(f: \R \to \R\)</span> defined by <span class="process-math">\(f(x) = x^2\text{.}\)</span>
 </div></li>
-<li id="li-109"><div class="para" id="p-283">The function <span class="process-math">\(f: \R^\times \to \R^\times\)</span> defined by <span class="process-math">\(f(x) = x^2\text{.}\)</span>
+<li id="li-109"><div class="para" id="p-285">The function <span class="process-math">\(f: \R^\times \to \R^\times\)</span> defined by <span class="process-math">\(f(x) = x^2\text{.}\)</span>
 </div></li>
-<li id="li-110"><div class="para" id="p-284">The function <span class="process-math">\(f: \Z/6\to\Z/3\)</span> defined by <span class="process-math">\(f([n]_6) = [n]_3\)</span>
+<li id="li-110"><div class="para" id="p-286">The function <span class="process-math">\(f: \Z/6\to\Z/3\)</span> defined by <span class="process-math">\(f([n]_6) = [n]_3\)</span>
 </div></li>
 </ol>
 </div></article></div>
 <article class="exercise exercise-like" id="exe-injective-homoms"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-injective-homoms"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Finding Injective Homomorphisms.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-injective-homoms"><article class="exercise exercise-like"><div class="para logical" id="p-285"><ol class="decimal">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-injective-homoms"><article class="exercise exercise-like"><div class="para logical" id="p-287"><ol class="decimal">
 <li id="li-111"><div class="para" id="p-derived-li-111">Find, with justification, an injective group homomorphism <span class="process-math">\(f:S_n \to \GL_n(\R)\text{.}\)</span>
 </div></li>
 <li id="li-112"><div class="para" id="p-derived-li-112">Find, with justification, an injective group homomorphism <span class="process-math">\(g:D_{2n}\to S_n\text{.}\)</span>
 </div></li>
 </ol></div></article></div>
-<div class="para" id="p-286">Specifically, homomorphisms will preserve the additive structure, such as the identity element and inverse elements.</div>
+<div class="para" id="p-288">Specifically, homomorphisms will preserve the additive structure, such as the identity element and inverse elements.</div>
 <article class="theorem theorem-like" id="thm-grphomom-prop"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.5</span><span class="period">.</span><span class="space"> </span><span class="title">Homomorphism Preservations.</span>
 </h4>
-<div class="para logical" id="p-287">
+<div class="para logical" id="p-289">
 <div class="para">If <span class="process-math">\(\varphi: G \to H\)</span> is a homomorphism of groups, then</div>
 <ol class="decimal">
-<li id="li-113"><div class="para" id="p-288">
+<li id="li-113"><div class="para" id="p-290">
 <span class="process-math">\(\varphi(e_G) = e_H\)</span> and</div></li>
-<li id="li-114"><div class="para" id="p-289"><span class="process-math">\(\varphi(x^{-1}) = \varphi(x)^{-1}\text{.}\)</span></div></li>
+<li id="li-114"><div class="para" id="p-291"><span class="process-math">\(\varphi(x^{-1}) = \varphi(x)^{-1}\text{.}\)</span></div></li>
 </ol>
-</div></article><div class="para" id="p-290">Here is a proposition that might appear to come out of the blue.</div>
+</div></article><div class="para" id="p-292">Here is a proposition that might appear to come out of the blue.</div>
 <article class="proposition theorem-like" id="prop-d2n-mapping"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.6</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-291">If <span class="process-math">\(G\)</span> is a group and <span class="process-math">\(x,y \in G\)</span> are elements such that <span class="process-math">\(x^n = e\text{,}\)</span> <span class="process-math">\(y^2 = e\text{,}\)</span> and <span class="process-math">\(yxy = x^{-1}\)</span> for some integer <span class="process-math">\(n \geq 3\text{,}\)</span> then there exists a unique group homomorphism <span class="process-math">\(f: D_{2n} \to G\)</span> such that <span class="process-math">\(f(r) = x\)</span> and <span class="process-math">\(f(s) = y\text{.}\)</span>
-</div></article><article class="hiddenproof" id="proof-9"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-9"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-9"><article class="hiddenproof"><div class="para" id="p-292">Recall that the elements of <span class="process-math">\(D_{2n}\)</span> are <span class="process-math">\(e, r, \dots, r^{n-1}, s, rs, \dots, r^{n-1}s\)</span> and that this list has no repetitions. Given <span class="process-math">\(G\text{,}\)</span> <span class="process-math">\(x\text{,}\)</span> and <span class="process-math">\(y\text{,}\)</span> if <span class="process-math">\(f\)</span> exists it is clearly unique, since we have <span class="process-math">\(f(r^i) = f(r)^i = x^i\)</span> and <span class="process-math">\(f(r^is) = f(r)^if(s) = x^iy\text{,}\)</span> so that the value of <span class="process-math">\(f\)</span> on every element of <span class="process-math">\(G\)</span> is determined by its values on just <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{.}\)</span>
-</div> <div class="para logical" id="p-293">
+<div class="para" id="p-293">If <span class="process-math">\(G\)</span> is a group and <span class="process-math">\(x,y \in G\)</span> are elements such that <span class="process-math">\(x^n = e\text{,}\)</span> <span class="process-math">\(y^2 = e\text{,}\)</span> and <span class="process-math">\(yxy = x^{-1}\)</span> for some integer <span class="process-math">\(n \geq 3\text{,}\)</span> then there exists a unique group homomorphism <span class="process-math">\(f: D_{2n} \to G\)</span> such that <span class="process-math">\(f(r) = x\)</span> and <span class="process-math">\(f(s) = y\text{.}\)</span>
+</div></article><article class="hiddenproof" id="proof-9"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-9"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-9"><article class="hiddenproof"><div class="para" id="p-294">Recall that the elements of <span class="process-math">\(D_{2n}\)</span> are <span class="process-math">\(e, r, \dots, r^{n-1}, s, rs, \dots, r^{n-1}s\)</span> and that this list has no repetitions. Given <span class="process-math">\(G\text{,}\)</span> <span class="process-math">\(x\text{,}\)</span> and <span class="process-math">\(y\text{,}\)</span> if <span class="process-math">\(f\)</span> exists it is clearly unique, since we have <span class="process-math">\(f(r^i) = f(r)^i = x^i\)</span> and <span class="process-math">\(f(r^is) = f(r)^if(s) = x^iy\text{,}\)</span> so that the value of <span class="process-math">\(f\)</span> on every element of <span class="process-math">\(G\)</span> is determined by its values on just <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{.}\)</span>
+</div> <div class="para logical" id="p-295">
 <div class="para">To prove existence, define a function <span class="process-math">\(f: D_{2n} \to G\)</span> by <span class="process-math">\(f(r^i) = x^i\)</span> for <span class="process-math">\(0 \leq i \leq n-1\)</span> and <span class="process-math">\(f(r^is) = x^is\)</span> for <span class="process-math">\(0 \leq i \leq n-1\text{.}\)</span> Then one may painstakenly checks that <span class="process-math">\(f(ab) = f(a)f(b)\)</span> in each of the cases <span class="process-math">\(a = r^j, b= r^i\)</span> or <span class="process-math">\(a = r^j, b = r^is\)</span> or <span class="process-math">\(a = r^js, b = r^i\)</span> or <span class="process-math">\(a = r^js, b = r^is\text{.}\)</span> For example, using that <span class="process-math">\(sr^i = r^{-i}s\text{,}\)</span> we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1008,13 +1008,13 @@ f(r^js)f(r^i)) = x^jy x^i =x^j x^{-i} y = x^{j-i} y.
 </div>
 <div class="para">For the last string of equalities, we have used that, since <span class="process-math">\(yxy = x^{-1}\text{,}\)</span> we have <span class="process-math">\(yx^i = x^{-i} y\)</span> in <span class="process-math">\(G\)</span> too. Note also that <span class="process-math">\(j-i\)</span> might be negative, in which case <span class="process-math">\(r^{j-i}\)</span> is really <span class="process-math">\(r^{n+j-i}\)</span> and so really we would have <span class="process-math">\(f(r^{j-i}s) = x^{n+j-i}y\text{.}\)</span> But this is OK since <span class="process-math">\(x^{j-i} = x^{n+j-i}\)</span> too, since <span class="process-math">\(x^n = e\text{.}\)</span>
 </div>
-</div> <div class="para" id="p-294">I'll skip the verifications of the other three cases.</div></article></div>
-<div class="para" id="p-295">This is techincally an specific instance of the UMP for a Presentation, which is not covered here.</div>
-<div class="para" id="p-296">Let's take a peak at what this might look like in practice.</div>
+</div> <div class="para" id="p-296">I'll skip the verifications of the other three cases.</div></article></div>
+<div class="para" id="p-297">This is techincally an specific instance of the UMP for a Presentation, which is not covered here.</div>
+<div class="para" id="p-298">Let's take a peak at what this might look like in practice.</div>
 <article class="example example-like" id="ex-d2n-cos-sin"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.7</span><span class="period">.</span>
 </h4>
-<div class="para logical" id="p-297">
+<div class="para logical" id="p-299">
 <div class="para">Consider the group <span class="process-math">\(\operatorname{GL}_2({\mathbb{R}})\)</span> and elements</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-d2n-mapping.html">
 \begin{equation*}
@@ -1035,18 +1035,18 @@ y =
 </div>
 </div></article><article class="exercise exercise-like" id="exe-d12-d6"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-d12-d6"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.8</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-d12-d6"><article class="exercise exercise-like"><div class="para" id="p-298">Let <span class="process-math">\(r,s \in D_{12}\)</span> and <span class="process-math">\(r',s' \in D_6\text{,}\)</span> in order to distinguish them. Find a homomorphism from <span class="process-math">\(D_{12}\)</span> to <span class="process-math">\(D_6\)</span> with <span class="process-math">\(f(r) = r', f(s) = s'\)</span> and prove that it is unique.</div></article></div></section><section class="subsection" id="subsec-kernel-image"><h3 class="heading hide-type">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-d12-d6"><article class="exercise exercise-like"><div class="para" id="p-300">Let <span class="process-math">\(r,s \in D_{12}\)</span> and <span class="process-math">\(r',s' \in D_6\text{,}\)</span> in order to distinguish them. Find a homomorphism from <span class="process-math">\(D_{12}\)</span> to <span class="process-math">\(D_6\)</span> with <span class="process-math">\(f(r) = r', f(s) = s'\)</span> and prove that it is unique.</div></article></div></section><section class="subsection" id="subsec-kernel-image"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Kernels and Images</span>
 </h3>
 <blockquote class="blockquote" id="blockquote-11">
-<div class="para" id="p-300">“May your passion be the kernel of corn stuck between your molars, always reminding you there's something to tend to.”</div> <cite class="attribution">―Jeb Dickerson</cite>
+<div class="para" id="p-302">“May your passion be the kernel of corn stuck between your molars, always reminding you there's something to tend to.”</div> <cite class="attribution">―Jeb Dickerson</cite>
 </blockquote>
 <blockquote class="blockquote" id="blockquote-12">
-<div class="para" id="p-301">“The image is one thing and the human being is another. It's very hard to live up to an image, put it that way.”</div> <cite class="attribution">―Elvis Presley</cite>
+<div class="para" id="p-303">“The image is one thing and the human being is another. It's very hard to live up to an image, put it that way.”</div> <cite class="attribution">―Elvis Presley</cite>
 </blockquote>
 <article class="definition definition-like" id="def-group-kernel"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.9</span><span class="period">.</span><span class="space"> </span><span class="title">Kernel.</span>
-</h4> <div class="para logical" id="p-302">
+</h4> <div class="para logical" id="p-304">
 <div class="para">Let <span class="process-math">\(\varphi: G \to H\)</span> is a homomorphism of groups. The <em class="emphasis">kernel</em> of <span class="process-math">\(\varphi\)</span> is the set</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1055,42 +1055,42 @@ y =
 </div>
 </div></article><article class="definition definition-like" id="def-group-image"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.10</span><span class="period">.</span><span class="space"> </span><span class="title">Image.</span>
-</h4> <div class="para logical" id="p-303">
+</h4> <div class="para logical" id="p-305">
 <div class="para">Let <span class="process-math">\(\varphi: G \to H\)</span> is a homomorphism of groups. The <em class="emphasis">image</em> of <span class="process-math">\(\varphi\)</span> is the set</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \im(\varphi) := \{\varphi(g) \mid g \in G\}.
 \end{equation*}
 </div>
-</div></article><article class="remark remark-like" id="remark-13"><h4 class="heading">
+</div></article><article class="remark remark-like" id="remark-14"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.11</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-304">This is identical to the set-theoretic image.</div></article><article class="theorem theorem-like" id="thm-properties-of-group-homoms"><h4 class="heading">
+<div class="para" id="p-306">This is identical to the set-theoretic image.</div></article><article class="theorem theorem-like" id="thm-properties-of-group-homoms"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.12</span><span class="period">.</span><span class="space"> </span><span class="title">Properties of Group Homomorphisms.</span>
 </h4>
-<div class="para logical" id="p-305"><ol class="decimal">
-<li id="li-115"><div class="para" id="p-306">(Images are subgroups) If <span class="process-math">\(\varphi: G \to H\)</span> is a homomorphism of groups, then the image of <span class="process-math">\(\varphi\)</span> is a subgroup of <span class="process-math">\(H\text{.}\)</span>
+<div class="para logical" id="p-307"><ol class="decimal">
+<li id="li-115"><div class="para" id="p-308">(Images are subgroups) If <span class="process-math">\(\varphi: G \to H\)</span> is a homomorphism of groups, then the image of <span class="process-math">\(\varphi\)</span> is a subgroup of <span class="process-math">\(H\text{.}\)</span>
 </div></li>
-<li id="li-116"><div class="para" id="p-307">(Kernels are subgroups) If <span class="process-math">\(\varphi: G \to H\)</span> is a homomorphism of groups, then the kernel of <span class="process-math">\(\varphi\)</span> is a subgroup of <span class="process-math">\(G\text{.}\)</span>
+<li id="li-116"><div class="para" id="p-309">(Kernels are subgroups) If <span class="process-math">\(\varphi: G \to H\)</span> is a homomorphism of groups, then the kernel of <span class="process-math">\(\varphi\)</span> is a subgroup of <span class="process-math">\(G\text{.}\)</span>
 </div></li>
-<li id="li-117"><div class="para" id="p-308">(Preimages are subgroups) Prove that if <span class="process-math">\(\varphi:G\to H\)</span> is a group homomorphism and <span class="process-math">\(K\leq H\)</span> then the preimage of <span class="process-math">\(K\text{,}\)</span> defined as <span class="process-math">\(\varphi^{-1}(K)=\{g\in G | \varphi(g)\in K\}\text{,}\)</span> is a subgroup of <span class="process-math">\(G\text{.}\)</span>
+<li id="li-117"><div class="para" id="p-310">(Preimages are subgroups) Prove that if <span class="process-math">\(\varphi:G\to H\)</span> is a group homomorphism and <span class="process-math">\(K\leq H\)</span> then the preimage of <span class="process-math">\(K\text{,}\)</span> defined as <span class="process-math">\(\varphi^{-1}(K)=\{g\in G | \varphi(g)\in K\}\text{,}\)</span> is a subgroup of <span class="process-math">\(G\text{.}\)</span>
 </div></li>
-<li id="li-118"><div class="para" id="p-309">(Compositions) If <span class="process-math">\(\varphi:G\to H\)</span> and <span class="process-math">\(\phi:H\to K\)</span> are group homomorphisms, the composition <span class="process-math">\(\phi\circ\varphi:G\to K\)</span> is a group homomorphism.</div></li>
-<li id="li-119"><div class="para" id="p-310">A group homomorphism <span class="process-math">\(\varphi: G \to H\)</span> is injective if and only if <span class="process-math">\(\operatorname{ker}(\varphi) = \{e_G\}\text{.}\)</span>
+<li id="li-118"><div class="para" id="p-311">(Compositions) If <span class="process-math">\(\varphi:G\to H\)</span> and <span class="process-math">\(\phi:H\to K\)</span> are group homomorphisms, the composition <span class="process-math">\(\phi\circ\varphi:G\to K\)</span> is a group homomorphism.</div></li>
+<li id="li-119"><div class="para" id="p-312">A group homomorphism <span class="process-math">\(\varphi: G \to H\)</span> is injective if and only if <span class="process-math">\(\operatorname{ker}(\varphi) = \{e_G\}\text{.}\)</span>
 </div></li>
-<li id="li-120"><div class="para" id="p-311">A group homomorphism <span class="process-math">\(\varphi: G \to H\)</span> is surjective if and only if <span class="process-math">\(\operatorname{im}(\varphi) = H\text{.}\)</span>
+<li id="li-120"><div class="para" id="p-313">A group homomorphism <span class="process-math">\(\varphi: G \to H\)</span> is surjective if and only if <span class="process-math">\(\operatorname{im}(\varphi) = H\text{.}\)</span>
 </div></li>
 </ol></div></article><article class="exercise exercise-like" id="exe-order-preservation"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-order-preservation"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.13</span><span class="period">.</span><span class="space"> </span><span class="title">Homomorphisms and Order.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-order-preservation"><article class="exercise exercise-like"><div class="para" id="p-312">If <span class="process-math">\(\varphi: G \to H\)</span> is a homomorphism of groups and <span class="process-math">\(|g|\)</span> is finte, then <span class="process-math">\(|\varphi(g)|\big||g|\text{.}\)</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-order-preservation"><article class="exercise exercise-like"><div class="para" id="p-314">If <span class="process-math">\(\varphi: G \to H\)</span> is a homomorphism of groups and <span class="process-math">\(|g|\)</span> is finte, then <span class="process-math">\(|\varphi(g)|\big||g|\text{.}\)</span>
 </div></article></div></section><section class="exercises" id="exercises-3"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
 <div class="exercisegroup" id="exercisegroup-3">
 <h4 class="heading"><span class="title">Qualifying Exam Problems.</span></h4>
-<div class="introduction" id="introduction-3"><div class="para" id="p-313"></div></div>
+<div class="introduction" id="introduction-3"><div class="para" id="p-315"></div></div>
 <div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="exercise-39"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-39"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-39"><article class="exercise exercise-like"><div class="para" id="p-314">Coming soon to an OER near you!</div></article></div>
+<article class="exercise exercise-like" id="exercise-39"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-39"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-39"><article class="exercise exercise-like"><div class="para" id="p-316">Coming soon to an OER near you!</div></article></div>
 </div>
 </div></section></section></div>
 <div class="ptx-content-footer">

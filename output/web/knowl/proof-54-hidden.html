@@ -10,47 +10,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para logical">
-<div class="para">Let's observe first that if such a map exists it is unique. For if <span class="process-math">\(\tilde\phi: R[x_1, \dots, x_n] \to S\)</span> is a ring map extending <span class="process-math">\(\phi\)</span> and sending <span class="process-math">\(x_i\)</span> to <span class="process-math">\(s_i\text{.}\)</span> Then</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{align*}
-\tilde\phi(\sum_{e_1, \dots, e_n \geq 0} r_{e_1, \dots, e_n} x_1^{e_1} \cdots x_n^{e_n}) &amp;=
-\sum_{e_1, \dots, e_n \geq 0} \phi(r_{e_1, \dots, e_n}) \phi(x_1)^{e_1} \cdots \phi(x_n)^{e_n}) \\
-&amp;=
-\sum_{e_1, \dots, e_n \geq 0} \phi(r_{e_1, \dots, e_n}) s_1^{e_1} \cdots s_n^{e_n},
-\end{align*}
-\end{equation*}
-</div>
-<div class="para">using that <span class="process-math">\(\tilde\phi\)</span> preserves <span class="process-math">\(+\)</span> and <span class="process-math">\(\cdot\text{.}\)</span>
-</div>
-</div> <div class="para logical">
-<div class="para">For existence, let's assume <span class="process-math">\(n = 1\)</span> at first. Given <span class="process-math">\(\phi: R \to S\)</span> and <span class="process-math">\(s \in S\text{,}\)</span> define</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\tilde{\phi}: R[x] \to S
-\end{equation*}
-</div>
-<div class="para">by</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\tilde{\phi}(\sum_i r_i x^i) = \sum_i \phi(r_i) s^i.
-\end{equation*}
-</div>
-<div class="para">It is elementary (but tedious) to check <span class="process-math">\(\tilde{\phi}\)</span> really is a ring homomorphism. The fact that it restricts to <span class="process-math">\(\phi\)</span> is clear, however.</div>
-</div> <div class="para logical">
-<div class="para">For the general case, we proceed by induction on the number of variables <span class="process-math">\(n\text{.}\)</span> The induction hypothesis shows that there is a ring homomorphism</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\psi: R[x_1, \dots, x_{n-1}] \to S
-\end{equation*}
-</div>
-<div class="para">such that <span class="process-math">\(\psi|_R = \phi\)</span> and <span class="process-math">\(\psi(x_i) = s_i\text{,}\)</span> <span class="process-math">\(i = 1, \dots, n-1\text{.}\)</span> Applying the <span class="process-math">\(n=1\)</span> case to <span class="process-math">\(\psi\)</span> gives</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\tilde{\psi}: (R[x_1, \dots, x_{n-1}])[x_n] \to S
-\end{equation*}
-</div>
-<div class="para">with <span class="process-math">\(\tilde\psi|_{R[x_1, \dots, x_{n-1}]} = \psi\)</span> and <span class="process-math">\(\tilde{\psi}(x_n) = s_n\text{.}\)</span> Setting <span class="process-math">\(\tilde\phi=\tilde\psi\)</span> gives a map <span class="process-math">\(\tilde{\phi}\)</span> with the needed properties.</div>
+<body class="ignore-math"><article class="hiddenproof"><div class="para">Let <span class="process-math">\(R\)</span> be a commutative ring in which every element <span class="process-math">\(x\)</span> satisfies <span class="process-math">\(x^n = x\)</span> for some <span class="process-math">\(n &gt; 1\text{.}\)</span> Let <span class="process-math">\(P\)</span> be a prime ideal in <span class="process-math">\(R\text{.}\)</span>
+</div> <div class="para">Let <span class="process-math">\(rP\in R/P\text{,}\)</span> meaning <span class="process-math">\(r\not\in P\text{.}\)</span> Then <span class="process-math">\((rP)^n=r^nP=rP\)</span> for some <span class="process-math">\(n&gt;1\text{.}\)</span> As <span class="process-math">\(R/P\)</span> is a domain <a href="" class="fn-knowl original" data-knowl="./knowl/fn-16-hidden.html" title="Footnote 3.1"><sup> 1 </sup></a> we can cancel an <span class="process-math">\(r\)</span> to see that <span class="process-math">\(r^{n-1}P=P\text{,}\)</span> and thus <span class="process-math">\(rP\cdot r^{n-2}P=P\text{,}\)</span> making <span class="process-math">\(rP\)</span> a unit in <span class="process-math">\(R/P\text{.}\)</span> Thus <span class="process-math">\(R/P\)</span> is a field, making <span class="process-math">\(P\)</span> maximal in <span class="process-math">\(R\text{.}\)</span>
 </div></article></body>
 </html>

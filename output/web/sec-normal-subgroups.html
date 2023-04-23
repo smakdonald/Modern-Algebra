@@ -647,7 +647,7 @@ window.MathJax = {
 <div class="toc-item"><a href="sec-defn-ex.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Intro to Rings</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-defn-ex.html#subsec-first-ex" class="internal"><span class="title">Definition and First Properties</span></a></div></li>
-<li><div class="toc-item"><a href="sec-defn-ex.html#subsec-units" class="internal"><span class="title">Units, Zero Divisors, Integral Domains</span></a></div></li>
+<li><div class="toc-item"><a href="sec-defn-ex.html#subsec-units" class="internal"><span class="title">Units, Zerodivisors, Integral Domains</span></a></div></li>
 <li><div class="toc-item"><a href="sec-defn-ex.html#exercises-18" class="internal"><span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
@@ -936,82 +936,82 @@ window.MathJax = {
 <span class="type">Section</span> <span class="codenumber">3.2</span> <span class="title">Normal Subgroups</span>
 </h2>
 <blockquote class="blockquote" id="blockquote-17">
-<div class="para" id="p-421">“If you are always trying to be normal, you will never know how amazing you can be.”</div> <cite class="attribution">―Maya Angelou</cite>
+<div class="para" id="p-423">“If you are always trying to be normal, you will never know how amazing you can be.”</div> <cite class="attribution">―Maya Angelou</cite>
 </blockquote>
 <article class="definition definition-like" id="def-normal-subgroup"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.17</span><span class="period">.</span><span class="space"> </span><span class="title">Normal Subgroup.</span>
-</h3> <div class="para" id="p-422">A subgroup <span class="process-math">\(N\)</span> of a group <span class="process-math">\(G\)</span> is <em class="emphasis">normal</em> in <span class="process-math">\(G\text{,}\)</span> written <span class="process-math">\(N\nsg G\text{,}\)</span> if <span class="process-math">\(gNg^{-1} = N\)</span> for all <span class="process-math">\(g \in G\text{.}\)</span>
-</div></article><div class="para" id="p-423">Normal subgroups are our next example of something that is “almost” abelian.</div>
+</h3> <div class="para" id="p-424">A subgroup <span class="process-math">\(N\)</span> of a group <span class="process-math">\(G\)</span> is <em class="emphasis">normal</em> in <span class="process-math">\(G\text{,}\)</span> written <span class="process-math">\(N\nsg G\text{,}\)</span> if <span class="process-math">\(gNg^{-1} = N\)</span> for all <span class="process-math">\(g \in G\text{.}\)</span>
+</div></article><div class="para" id="p-425">Normal subgroups are our next example of something that is “almost” abelian.</div>
 <article class="exercise exercise-like" id="exe-anything-but-normal"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-anything-but-normal"><h3 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.18</span><span class="period">.</span><span class="space"> </span><span class="title">Anything but Normal.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-anything-but-normal"><article class="exercise exercise-like"><div class="para" id="p-424">Come up with a better name for normal subgroups than 'normal subgroup'. Give it some oomph. Make it mean something.<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-8" id="fn-8"><sup> 3 </sup></a>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-anything-but-normal"><article class="exercise exercise-like"><div class="para" id="p-426">Come up with a better name for normal subgroups than 'normal subgroup'. Give it some oomph. Make it mean something.<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-8" id="fn-8"><sup> 3 </sup></a>
 </div></article></div>
 <article class="theorem theorem-like" id="thm-equivdef-normal"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.19</span><span class="period">.</span><span class="space"> </span><span class="title">Equivalent Normal Definitions.</span>
 </h3>
-<div class="para logical" id="p-425">
+<div class="para logical" id="p-427">
 <div class="para">Let <span class="process-math">\(N\)</span> be a subgroup of a group <span class="process-math">\(G\text{.}\)</span> The following are equivalent:</div>
 <ol class="decimal">
-<li id="li-159"><div class="para" id="p-426"><span class="process-math">\(\displaystyle N \nsg G\)</span></div></li>
-<li id="li-160"><div class="para" id="p-427">
+<li id="li-159"><div class="para" id="p-428"><span class="process-math">\(\displaystyle N \nsg G\)</span></div></li>
+<li id="li-160"><div class="para" id="p-429">
 <span class="process-math">\(gNg^{-1}\subseteq N\)</span> for all <span class="process-math">\(g \in G\text{.}\)</span>
 </div></li>
-<li id="li-161"><div class="para" id="p-428">
+<li id="li-161"><div class="para" id="p-430">
 <span class="process-math">\(gN = Ng\)</span> for all <span class="process-math">\(g \in G\text{.}\)</span>
 </div></li>
 </ol>
 </div></article><article class="example example-like" id="ex-normal-examples"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.20</span><span class="period">.</span><span class="space"> </span><span class="title">Examples of Normal Subgroups.</span>
-</h3> <div class="para logical" id="p-429"><ol class="decimal">
-<li id="li-162"><div class="para" id="p-430">The trivial subgroups <span class="process-math">\(\{e\}\text{,}\)</span> <span class="process-math">\(G\)</span> of a group <span class="process-math">\(G\)</span> are normal subgroups of <span class="process-math">\(G\text{.}\)</span>
+</h3> <div class="para logical" id="p-431"><ol class="decimal">
+<li id="li-162"><div class="para" id="p-432">The trivial subgroups <span class="process-math">\(\{e\}\text{,}\)</span> <span class="process-math">\(G\)</span> of a group <span class="process-math">\(G\)</span> are normal subgroups of <span class="process-math">\(G\text{.}\)</span>
 </div></li>
-<li id="li-163"><div class="para" id="p-431">Any subgroup of an abelian group is a normal subgroup.</div></li>
-<li id="li-164"><div class="para" id="p-432">For any group <span class="process-math">\(G\text{,}\)</span> <span class="process-math">\(Z(G)\nsg G\text{.}\)</span>
+<li id="li-163"><div class="para" id="p-433">Any subgroup of an abelian group is a normal subgroup.</div></li>
+<li id="li-164"><div class="para" id="p-434">For any group <span class="process-math">\(G\text{,}\)</span> <span class="process-math">\(Z(G)\nsg G\text{.}\)</span>
 </div></li>
-<li id="li-165"><div class="para" id="p-433">
+<li id="li-165"><div class="para" id="p-435">
 <span class="process-math">\(n\Z\nsg \Z\)</span> for all <span class="process-math">\(n\in\Z\text{.}\)</span>
 </div></li>
-<li id="li-166"><div class="para" id="p-434"><span class="process-math">\(\operatorname{Inn}(G)\nsg \operatorname{Aut}(G)\text{.}\)</span></div></li>
-<li id="li-167"><div class="para" id="p-435"><span class="process-math">\(A_n\nsg S_n\text{.}\)</span></div></li>
-<li id="li-168"><div class="para" id="p-436"><span class="process-math">\(\SL_2(\R)\nsg\GL_2(\R)\text{.}\)</span></div></li>
-<li id="li-169"><div class="para" id="p-437">The commutator subgroup <span class="process-math">\(G'\)</span> from <a href="" class="xref" data-knowl="./knowl/ex-commutator-subgroup.html" title="Example 1.88: Commutator Subgroup">Example 1.88</a> is normal in <span class="process-math">\(G\text{.}\)</span>
+<li id="li-166"><div class="para" id="p-436"><span class="process-math">\(\operatorname{Inn}(G)\nsg \operatorname{Aut}(G)\text{.}\)</span></div></li>
+<li id="li-167"><div class="para" id="p-437"><span class="process-math">\(A_n\nsg S_n\text{.}\)</span></div></li>
+<li id="li-168"><div class="para" id="p-438"><span class="process-math">\(\SL_2(\R)\nsg\GL_2(\R)\text{.}\)</span></div></li>
+<li id="li-169"><div class="para" id="p-439">The commutator subgroup <span class="process-math">\(G'\)</span> from <a href="" class="xref" data-knowl="./knowl/ex-commutator-subgroup.html" title="Example 1.90: Commutator Subgroup">Example 1.90</a> is normal in <span class="process-math">\(G\text{.}\)</span>
 </div></li>
-<li id="li-170"><div class="para" id="p-438">The set <span class="process-math">\(V=\{e, (1 2)(3 4), (1 3)(2 4), (1 4)(2 3)\}\)</span> is normal in <span class="process-math">\(S_4\text{.}\)</span>
+<li id="li-170"><div class="para" id="p-440">The set <span class="process-math">\(V=\{e, (1 2)(3 4), (1 3)(2 4), (1 4)(2 3)\}\)</span> is normal in <span class="process-math">\(S_4\text{.}\)</span>
 </div></li>
 </ol></div></article><article class="exercise exercise-like" id="exe-normality-not-transitive"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-normality-not-transitive"><h3 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.21</span><span class="period">.</span><span class="space"> </span><span class="title">Normality is not Transitive.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-normality-not-transitive"><article class="exercise exercise-like"><div class="para" id="p-439">Show that being a normal subgroup is not a transitive relation. In other words, find groups <span class="process-math">\(K\leq H\leq G\)</span> such that <span class="process-math">\(K\nsg H\)</span> and <span class="process-math">\(H\nsg G\text{,}\)</span> but <span class="process-math">\(K\not\nsg G\text{.}\)</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-normality-not-transitive"><article class="exercise exercise-like"><div class="para" id="p-441">Show that being a normal subgroup is not a transitive relation. In other words, find groups <span class="process-math">\(K\leq H\leq G\)</span> such that <span class="process-math">\(K\nsg H\)</span> and <span class="process-math">\(H\nsg G\text{,}\)</span> but <span class="process-math">\(K\not\nsg G\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-5" id="hint-5"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-5"><div class="hint solution-like"><div class="para" id="p-440">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-5" id="hint-5"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-5"><div class="hint solution-like"><div class="para" id="p-442">
 <span class="process-math">\(S_4\)</span> is a good place to start routing around in.</div></div></div>
 </div></article></div>
 <article class="proposition theorem-like" id="prop-normal-subgroups-and-homomorphisms"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.22</span><span class="period">.</span><span class="space"> </span><span class="title">Normal Subgroups and Homomorphisms.</span>
 </h3>
-<div class="para" id="p-443">If <span class="process-math">\(\varphi:G\to H\)</span> is a group homomorphism and <span class="process-math">\(K\nsg H\)</span> then the preimage of <span class="process-math">\(K\text{,}\)</span> <span class="process-math">\(\varphi^{-1}(K)=\{g\in G | \varphi(g)\in K\}\text{,}\)</span> is a normal subgroup of <span class="process-math">\(G\text{.}\)</span>
+<div class="para" id="p-445">If <span class="process-math">\(\varphi:G\to H\)</span> is a group homomorphism and <span class="process-math">\(K\nsg H\)</span> then the preimage of <span class="process-math">\(K\text{,}\)</span> <span class="process-math">\(\varphi^{-1}(K)=\{g\in G | \varphi(g)\in K\}\text{,}\)</span> is a normal subgroup of <span class="process-math">\(G\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="exe-images-need-not-be-normal"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-images-need-not-be-normal"><h3 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.23</span><span class="period">.</span><span class="space"> </span><span class="title">Images not Normal in General.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-images-need-not-be-normal"><article class="exercise exercise-like"><div class="para" id="p-444">Show that if <span class="process-math">\(\varphi:G\to H\)</span> is a group homomorphism and <span class="process-math">\(L \nsg G\)</span> then <span class="process-math">\(\varphi(L)\)</span> need not be a normal subgroup of <span class="process-math">\(H\text{.}\)</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-images-need-not-be-normal"><article class="exercise exercise-like"><div class="para" id="p-446">Show that if <span class="process-math">\(\varphi:G\to H\)</span> is a group homomorphism and <span class="process-math">\(L \nsg G\)</span> then <span class="process-math">\(\varphi(L)\)</span> need not be a normal subgroup of <span class="process-math">\(H\text{.}\)</span>
 </div></article></div>
 <article class="proposition theorem-like" id="prop-unique-order-subgroup-normal"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.24</span><span class="period">.</span><span class="space"> </span><span class="title">Unique Order Subgroup is Normal.</span>
 </h3>
-<div class="para" id="p-445">Let <span class="process-math">\(H\leq G\)</span> be the only subgroup of order <span class="process-math">\(n\text{.}\)</span> Then <span class="process-math">\(H\)</span> is normal.</div></article><div class="para" id="p-446">We also have some criteria for when a generated subgroup is normal.</div>
+<div class="para" id="p-447">Let <span class="process-math">\(H\leq G\)</span> be the only subgroup of order <span class="process-math">\(n\text{.}\)</span> Then <span class="process-math">\(H\)</span> is normal.</div></article><div class="para" id="p-448">We also have some criteria for when a generated subgroup is normal.</div>
 <article class="exercise exercise-like" id="exe-normality-and-generated-subgroups"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-normality-and-generated-subgroups"><h3 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.25</span><span class="period">.</span><span class="space"> </span><span class="title">Normality and Generated Subgroups.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-normality-and-generated-subgroups"><article class="exercise exercise-like"><div class="para" id="p-447">Let <span class="process-math">\(G\)</span> be a group and <span class="process-math">\(S\)</span> a subset of <span class="process-math">\(G\text{.}\)</span> Let <span class="process-math">\(H=\langle S \rangle\text{.}\)</span> Prove that <span class="process-math">\(H\nsg G\)</span> if and only if <span class="process-math">\(gsg^{-1}\in H\)</span> for every <span class="process-math">\(s\in S\)</span> and <span class="process-math">\(g\in G\text{.}\)</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-normality-and-generated-subgroups"><article class="exercise exercise-like"><div class="para" id="p-449">Let <span class="process-math">\(G\)</span> be a group and <span class="process-math">\(S\)</span> a subset of <span class="process-math">\(G\text{.}\)</span> Let <span class="process-math">\(H=\langle S \rangle\text{.}\)</span> Prove that <span class="process-math">\(H\nsg G\)</span> if and only if <span class="process-math">\(gsg^{-1}\in H\)</span> for every <span class="process-math">\(s\in S\)</span> and <span class="process-math">\(g\in G\text{.}\)</span>
 </div></article></div>
-<div class="para" id="p-448">Or, if we're tired of generating subgroups that aren't as normal as we'd like them to be, we can just generate a normal subgroup explicitely.</div>
+<div class="para" id="p-450">Or, if we're tired of generating subgroups that aren't as normal as we'd like them to be, we can just generate a normal subgroup explicitely.</div>
 <article class="exercise exercise-like" id="exe-generated-normal-subgroup"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-generated-normal-subgroup"><h3 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.26</span><span class="period">.</span><span class="space"> </span><span class="title">Generated Normal Subgroup.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-generated-normal-subgroup"><article class="exercise exercise-like"><div class="para logical" id="p-449">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-generated-normal-subgroup"><article class="exercise exercise-like"><div class="para logical" id="p-451">
 <div class="para">Let <span class="process-math">\(G\)</span> be a group and let <span class="process-math">\(A \subseteq G\)</span> be a set. The <em class="emphasis">normal subgroup generated by <span class="process-math">\(A\)</span></em>, denoted <span class="process-math">\(\langle A \rangle ^N\text{,}\)</span> is the intersection of all the normal subgroups of <span class="process-math">\(G\)</span> that contain <span class="process-math">\(A\text{.}\)</span>
 </div>
 <ol class="decimal">
-<li id="li-171"><div class="para" id="p-450">Show that <span class="process-math">\(\langle A \rangle ^N\)</span> is a normal subgroup of <span class="process-math">\(G\text{.}\)</span>
+<li id="li-171"><div class="para" id="p-452">Show that <span class="process-math">\(\langle A \rangle ^N\)</span> is a normal subgroup of <span class="process-math">\(G\text{.}\)</span>
 </div></li>
-<li id="li-172"><div class="para logical" id="p-451">
+<li id="li-172"><div class="para logical" id="p-453">
 <div class="para">Show that the elements of <span class="process-math">\(\langle A \rangle ^N\)</span> can be described as</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1021,89 +1021,89 @@ window.MathJax = {
 </div></li>
 </ol>
 </div></article></div>
-<div class="para" id="p-452">We conclude this section by taking a sneak peak at the interactions between the index of a subgroup and its normality.</div>
+<div class="para" id="p-454">We conclude this section by taking a sneak peak at the interactions between the index of a subgroup and its normality.</div>
 <article class="proposition theorem-like" id="exe-subgroup-index-2-normal"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.27</span><span class="period">.</span><span class="space"> </span><span class="title">Subgroup of Index <span class="process-math">\(2\)</span> is Normal.</span>
 </h3>
-<div class="para" id="p-453">Show that any subgroup of index two is normal. This means: show that if <span class="process-math">\(G\)</span> is a group, <span class="process-math">\(H\)</span> is a subgroup and <span class="process-math">\([G:H]=2\text{,}\)</span> i.e the number of left (or right) cosets of <span class="process-math">\(H\)</span> in <span class="process-math">\(G\)</span> is two, then <span class="process-math">\(H\)</span> is normal.</div></article><article class="hiddenproof" id="proof-12"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-12"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-12"><article class="hiddenproof"><div class="para" id="p-454">Coming soon to an OER near you!</div></article></div>
-<article class="remark remark-like" id="remark-21"><h3 class="heading">
+<div class="para" id="p-455">Show that any subgroup of index two is normal. This means: show that if <span class="process-math">\(G\)</span> is a group, <span class="process-math">\(H\)</span> is a subgroup and <span class="process-math">\([G:H]=2\text{,}\)</span> i.e the number of left (or right) cosets of <span class="process-math">\(H\)</span> in <span class="process-math">\(G\)</span> is two, then <span class="process-math">\(H\)</span> is normal.</div></article><article class="hiddenproof" id="proof-12"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-12"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-12"><article class="hiddenproof"><div class="para" id="p-456">Coming soon to an OER near you!</div></article></div>
+<article class="remark remark-like" id="remark-22"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">3.28</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-455">This is a specific case of a much more powerful theorem that we will prove later on, we can tackle this smaller piece with the tools we have now.</div></article><article class="exercise exercise-like" id="exe-lagrange-converse-false"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-lagrange-converse-false"><h3 class="heading">
+<div class="para" id="p-457">This is a specific case of a much more powerful theorem that we will prove later on, we can tackle this smaller piece with the tools we have now.</div></article><article class="exercise exercise-like" id="exe-lagrange-converse-false"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-lagrange-converse-false"><h3 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.29</span><span class="period">.</span><span class="space"> </span><span class="title">Converse to Lagrange's Theorem is False.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-lagrange-converse-false"><article class="exercise exercise-like"><div class="para" id="p-456">Prove the converse to <a href="" class="xref" data-knowl="./knowl/thm-lagrange.html" title="Theorem 3.13: Lagrange's Theorem">Lagrange's Theorem</a> is false: find a group <span class="process-math">\(G\)</span> and an integer <span class="process-math">\(d&gt;0\)</span> such that <span class="process-math">\(d\)</span> divides the order of <span class="process-math">\(G\)</span> but <span class="process-math">\(G\)</span> does not have any subgroups of order <span class="process-math">\(d\text{.}\)</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-lagrange-converse-false"><article class="exercise exercise-like"><div class="para" id="p-458">Prove the converse to <a href="" class="xref" data-knowl="./knowl/thm-lagrange.html" title="Theorem 3.13: Lagrange's Theorem">Lagrange's Theorem</a> is false: find a group <span class="process-math">\(G\)</span> and an integer <span class="process-math">\(d&gt;0\)</span> such that <span class="process-math">\(d\)</span> divides the order of <span class="process-math">\(G\)</span> but <span class="process-math">\(G\)</span> does not have any subgroups of order <span class="process-math">\(d\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-6" id="hint-6"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-6"><div class="hint solution-like"><div class="para" id="p-457">Take <span class="process-math">\(G=A_5\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-6" id="hint-6"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-6"><div class="hint solution-like"><div class="para" id="p-459">Take <span class="process-math">\(G=A_5\text{.}\)</span>
 </div></div></div>
 </div></article></div>
 <article class="proposition theorem-like" id="exe-rel-prime-index-and-order"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.30</span><span class="period">.</span><span class="space"> </span><span class="title">Relatively Prime Index and Order.</span>
 </h3>
-<div class="para" id="p-461">Let <span class="process-math">\(G\)</span> be a finite group, <span class="process-math">\(H\)</span> and <span class="process-math">\(N\)</span> subgroups such that <span class="process-math">\(|H|\)</span> and <span class="process-math">\([G : N]\)</span> are relatively prime and <span class="process-math">\(N\nsg G\text{.}\)</span> Prove that <span class="process-math">\(H \subseteq N\text{.}\)</span>
+<div class="para" id="p-463">Let <span class="process-math">\(G\)</span> be a finite group, <span class="process-math">\(H\)</span> and <span class="process-math">\(N\)</span> subgroups such that <span class="process-math">\(|H|\)</span> and <span class="process-math">\([G : N]\)</span> are relatively prime and <span class="process-math">\(N\nsg G\text{.}\)</span> Prove that <span class="process-math">\(H \subseteq N\text{.}\)</span>
 </div></article><section class="exercises" id="exercises-5"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
 <div class="exercisegroup" id="exercisegroup-5">
 <h4 class="heading"><span class="title">Qualifying Exam Problems.</span></h4>
-<div class="introduction" id="introduction-5"><div class="para" id="p-462"></div></div>
+<div class="introduction" id="introduction-5"><div class="para" id="p-464"></div></div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-56"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-56"><h5 class="heading">
 <span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">June 2012 (2).</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-56"><article class="exercise exercise-like"><div class="para logical" id="p-463">
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-56"><article class="exercise exercise-like"><div class="para logical" id="p-465">
 <div class="para">Let <span class="process-math">\(G\)</span> be a group with a subgroup <span class="process-math">\(H\)</span> so that <span class="process-math">\([G : H] = n &lt; \infty\text{.}\)</span>
 </div>
 <ol class="lower-alpha">
-<li id="li-175"><div class="para" id="p-464">Prove that there is a normal subgroup of <span class="process-math">\(G, N\text{,}\)</span> so that <span class="process-math">\(N\subseteq H\)</span> and <span class="process-math">\([G : N ] \leq n!.\)</span>
+<li id="li-175"><div class="para" id="p-466">Prove that there is a normal subgroup of <span class="process-math">\(G, N\text{,}\)</span> so that <span class="process-math">\(N\subseteq H\)</span> and <span class="process-math">\([G : N ] \leq n!.\)</span>
 </div></li>
-<li id="li-176"><div class="para" id="p-465">Prove that if <span class="process-math">\(G\)</span> is finitely generated, there are most finitely many subgroups with index <span class="process-math">\(n\text{.}\)</span>
+<li id="li-176"><div class="para" id="p-467">Prove that if <span class="process-math">\(G\)</span> is finitely generated, there are most finitely many subgroups with index <span class="process-math">\(n\text{.}\)</span>
 </div></li>
 </ol>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-7" id="hint-7"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-7"><div class="hint solution-like"><div class="para" id="p-466">You might want to consider maps <span class="process-math">\(G\to S_n\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-7" id="hint-7"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-7"><div class="hint solution-like"><div class="para" id="p-468">You might want to consider maps <span class="process-math">\(G\to S_n\text{.}\)</span>
 </div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-10" id="solution-10"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-10"><div class="solution solution-like"><div class="para" id="p-467">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-10" id="solution-10"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-10"><div class="solution solution-like"><div class="para" id="p-469">Coming soon to an OER near you!</div></div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-57"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-57"><h5 class="heading">
 <span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">January 2019 (1).</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-57"><article class="exercise exercise-like"><div class="para" id="p-468">Let <span class="process-math">\(G\)</span> be a group. A subgroup <span class="process-math">\(H\)</span> of <span class="process-math">\(G\)</span> is called a <em class="emphasis">characteristic subgroup</em> of <span class="process-math">\(G\)</span> if <span class="process-math">\(\a(H)=H\)</span> for every automorphism <span class="process-math">\(\a\)</span> of <span class="process-math">\(G\text{.}\)</span> Show that if <span class="process-math">\(H\)</span> is a characteristic subgroup of <span class="process-math">\(N\)</span> and <span class="process-math">\(N\)</span> is a normal subgroup of <span class="process-math">\(G\text{,}\)</span> then <span class="process-math">\(H\)</span> is a normal subgroup of <span class="process-math">\(G\text{.}\)</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-57"><article class="exercise exercise-like"><div class="para" id="p-470">Let <span class="process-math">\(G\)</span> be a group. A subgroup <span class="process-math">\(H\)</span> of <span class="process-math">\(G\)</span> is called a <em class="emphasis">characteristic subgroup</em> of <span class="process-math">\(G\)</span> if <span class="process-math">\(\a(H)=H\)</span> for every automorphism <span class="process-math">\(\a\)</span> of <span class="process-math">\(G\text{.}\)</span> Show that if <span class="process-math">\(H\)</span> is a characteristic subgroup of <span class="process-math">\(N\)</span> and <span class="process-math">\(N\)</span> is a normal subgroup of <span class="process-math">\(G\text{,}\)</span> then <span class="process-math">\(H\)</span> is a normal subgroup of <span class="process-math">\(G\text{.}\)</span>
 </div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-11" id="solution-11"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-11"><div class="solution solution-like">
-<div class="para" id="p-469">Let <span class="process-math">\(G\)</span> be a group, <span class="process-math">\(N\)</span> is a normal subgroup of <span class="process-math">\(G\text{,}\)</span> and <span class="process-math">\(H\)</span> a characteristic subgroup of <span class="process-math">\(N\text{.}\)</span> Let <span class="process-math">\(g\in G\)</span> and consider the automorphism <span class="process-math">\(a_g:G\to G\)</span> given by <span class="process-math">\(a_g(g')=gg'g^{-1}\text{.}\)</span>
-</div> <div class="para" id="p-470">Let <span class="process-math">\(n\in N\)</span> and notice <span class="process-math">\(a_g(n)=gng\inv\in N\text{,}\)</span> as <span class="process-math">\(N\nsg G\text{.}\)</span> Thus <span class="process-math">\(a_g:N\to N\)</span> is well defined. Let <span class="process-math">\(n\in N\text{.}\)</span> As <span class="process-math">\(gNg\inv=N\text{,}\)</span> we can write <span class="process-math">\(n=gn'g\inv\)</span> for some <span class="process-math">\(n'\in N\text{.}\)</span> Then <span class="process-math">\(a_g(n')=gn'g\inv=n\text{,}\)</span> making <span class="process-math">\(a_g\)</span> surjective. As <span class="process-math">\(|N|=|N|\)</span> we see that <span class="process-math">\(a_g\)</span> is a bijection. The homomorphism piece we get for free from <span class="process-math">\(G\text{,}\)</span> making <span class="process-math">\(a_g\in\Aut(N)\text{.}\)</span>
-</div> <div class="para" id="p-471">Let <span class="process-math">\(h\in H\text{.}\)</span> As <span class="process-math">\(H\)</span> is a characteristic subgroup of <span class="process-math">\(N\text{,}\)</span> we see that <span class="process-math">\(a_g(h)=ghg\inv=h\)</span> for all <span class="process-math">\(h\in H\)</span> and for all <span class="process-math">\(g\in G\text{.}\)</span> Thus <span class="process-math">\(H\)</span> is normal in <span class="process-math">\(G\text{.}\)</span>
+<div class="para" id="p-471">Let <span class="process-math">\(G\)</span> be a group, <span class="process-math">\(N\)</span> is a normal subgroup of <span class="process-math">\(G\text{,}\)</span> and <span class="process-math">\(H\)</span> a characteristic subgroup of <span class="process-math">\(N\text{.}\)</span> Let <span class="process-math">\(g\in G\)</span> and consider the automorphism <span class="process-math">\(a_g:G\to G\)</span> given by <span class="process-math">\(a_g(g')=gg'g^{-1}\text{.}\)</span>
+</div> <div class="para" id="p-472">Let <span class="process-math">\(n\in N\)</span> and notice <span class="process-math">\(a_g(n)=gng\inv\in N\text{,}\)</span> as <span class="process-math">\(N\nsg G\text{.}\)</span> Thus <span class="process-math">\(a_g:N\to N\)</span> is well defined. Let <span class="process-math">\(n\in N\text{.}\)</span> As <span class="process-math">\(gNg\inv=N\text{,}\)</span> we can write <span class="process-math">\(n=gn'g\inv\)</span> for some <span class="process-math">\(n'\in N\text{.}\)</span> Then <span class="process-math">\(a_g(n')=gn'g\inv=n\text{,}\)</span> making <span class="process-math">\(a_g\)</span> surjective. As <span class="process-math">\(|N|=|N|\)</span> we see that <span class="process-math">\(a_g\)</span> is a bijection. The homomorphism piece we get for free from <span class="process-math">\(G\text{,}\)</span> making <span class="process-math">\(a_g\in\Aut(N)\text{.}\)</span>
+</div> <div class="para" id="p-473">Let <span class="process-math">\(h\in H\text{.}\)</span> As <span class="process-math">\(H\)</span> is a characteristic subgroup of <span class="process-math">\(N\text{,}\)</span> we see that <span class="process-math">\(a_g(h)=ghg\inv=h\)</span> for all <span class="process-math">\(h\in H\)</span> and for all <span class="process-math">\(g\in G\text{.}\)</span> Thus <span class="process-math">\(H\)</span> is normal in <span class="process-math">\(G\text{.}\)</span>
 </div>
 </div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-58"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-58"><h5 class="heading">
 <span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">May 2021 (1ab).</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-58"><article class="exercise exercise-like"><div class="para logical" id="p-472">
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-58"><article class="exercise exercise-like"><div class="para logical" id="p-474">
 <div class="para">Let <span class="process-math">\(G\)</span> be a group (not necessarily finite) and <span class="process-math">\(H\)</span> a nonempty subset of <span class="process-math">\(G\)</span> that is closed under multiplication. Suppose that for all <span class="process-math">\(g\in G\)</span> we have <span class="process-math">\(g^2\in H\text{.}\)</span> Prove the following:</div>
 <ol class="lower-alpha">
-<li id="li-177"><div class="para" id="p-473">
+<li id="li-177"><div class="para" id="p-475">
 <span class="process-math">\(H\)</span> is a subgroup of <span class="process-math">\(G\text{.}\)</span>
 </div></li>
-<li id="li-178"><div class="para" id="p-474">
+<li id="li-178"><div class="para" id="p-476">
 <span class="process-math">\(H\)</span> is normal.</div></li>
 </ol>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-8" id="hint-8"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-8"><div class="hint solution-like"><div class="para" id="p-475">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-12" id="solution-12"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-12"><div class="solution solution-like"><div class="para logical" id="p-476"><ol class="lower-alpha">
-<li id="li-179"><div class="para" id="p-477">First, notice that <span class="process-math">\(e^2=e\in H\text{.}\)</span> Let <span class="process-math">\(x\in H\text{,}\)</span> and consider <span class="process-math">\(x\inv\text{.}\)</span> Notice that <span class="process-math">\((x{\inv})^2=x^{-2}\in H\text{.}\)</span> As <span class="process-math">\(H\)</span> is multiplicatively closed, we see that <span class="process-math">\(xx^{-2}=x\inv\in H\text{.}\)</span> Thus <span class="process-math">\(H\)</span> is a subgroup of <span class="process-math">\(G\)</span> by the subgroup test.</div></li>
-<li id="li-180"><div class="para" id="p-478">Let <span class="process-math">\(g\in G\text{,}\)</span> <span class="process-math">\(h\in H\text{,}\)</span> and consider <span class="process-math">\(gh\text{.}\)</span> Notice that <span class="process-math">\((gh)^2=ghgh\in H\text{.}\)</span> Multiplying by <span class="process-math">\(h\inv\)</span> on the right we see <span class="process-math">\(ghg\in H\text{,}\)</span> as it is multiplicatively closed and <span class="process-math">\(h\inv\in H\text{.}\)</span> We rewrite <span class="process-math">\(ghg=ghggg\inv=ghg\inv g^2\text{,}\)</span> given that elements always commute with their inverses. As <span class="process-math">\(g^2\in H\text{,}\)</span> we see that <span class="process-math">\(ghg\inv\in H\)</span> as well. Thus <span class="process-math">\(H\)</span> is normal in <span class="process-math">\(G\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-8" id="hint-8"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-8"><div class="hint solution-like"><div class="para" id="p-477">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-12" id="solution-12"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-12"><div class="solution solution-like"><div class="para logical" id="p-478"><ol class="lower-alpha">
+<li id="li-179"><div class="para" id="p-479">First, notice that <span class="process-math">\(e^2=e\in H\text{.}\)</span> Let <span class="process-math">\(x\in H\text{,}\)</span> and consider <span class="process-math">\(x\inv\text{.}\)</span> Notice that <span class="process-math">\((x{\inv})^2=x^{-2}\in H\text{.}\)</span> As <span class="process-math">\(H\)</span> is multiplicatively closed, we see that <span class="process-math">\(xx^{-2}=x\inv\in H\text{.}\)</span> Thus <span class="process-math">\(H\)</span> is a subgroup of <span class="process-math">\(G\)</span> by the subgroup test.</div></li>
+<li id="li-180"><div class="para" id="p-480">Let <span class="process-math">\(g\in G\text{,}\)</span> <span class="process-math">\(h\in H\text{,}\)</span> and consider <span class="process-math">\(gh\text{.}\)</span> Notice that <span class="process-math">\((gh)^2=ghgh\in H\text{.}\)</span> Multiplying by <span class="process-math">\(h\inv\)</span> on the right we see <span class="process-math">\(ghg\in H\text{,}\)</span> as it is multiplicatively closed and <span class="process-math">\(h\inv\in H\text{.}\)</span> We rewrite <span class="process-math">\(ghg=ghggg\inv=ghg\inv g^2\text{,}\)</span> given that elements always commute with their inverses. As <span class="process-math">\(g^2\in H\text{,}\)</span> we see that <span class="process-math">\(ghg\inv\in H\)</span> as well. Thus <span class="process-math">\(H\)</span> is normal in <span class="process-math">\(G\text{.}\)</span>
 </div></li>
 </ol></div></div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-59"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-59"><h5 class="heading">
 <span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">Jan 2022 (3b).</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-59"><article class="exercise exercise-like"><div class="para" id="p-479">Let <span class="process-math">\(G\)</span> be the group of all <span class="process-math">\(2\times2\)</span> matrices with entres from <span class="process-math">\(\Z\)</span> having determinant <span class="process-math">\(1\text{.}\)</span> Let <span class="process-math">\(p\)</span> be a prime number, and take <span class="process-math">\(K\)</span> to be the subset of <span class="process-math">\(G\)</span> consisting of all <span class="process-math">\(\begin{bmatrix} \end{bmatrix}\)</span> with <span class="process-math">\(a\equiv d\equiv 1\mod p\)</span> and <span class="process-math">\(b\equiv c\equiv 0\mod p\text{.}\)</span> Prove that <span class="process-math">\(K\)</span> is a normal subgroup of <span class="process-math">\(G\text{.}\)</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-59"><article class="exercise exercise-like"><div class="para" id="p-481">Let <span class="process-math">\(G\)</span> be the group of all <span class="process-math">\(2\times2\)</span> matrices with entres from <span class="process-math">\(\Z\)</span> having determinant <span class="process-math">\(1\text{.}\)</span> Let <span class="process-math">\(p\)</span> be a prime number, and take <span class="process-math">\(K\)</span> to be the subset of <span class="process-math">\(G\)</span> consisting of all <span class="process-math">\(\begin{bmatrix} \end{bmatrix}\)</span> with <span class="process-math">\(a\equiv d\equiv 1\mod p\)</span> and <span class="process-math">\(b\equiv c\equiv 0\mod p\text{.}\)</span> Prove that <span class="process-math">\(K\)</span> is a normal subgroup of <span class="process-math">\(G\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-9" id="hint-9"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-9"><div class="hint solution-like"><div class="para" id="p-480">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-13" id="solution-13"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-13"><div class="solution solution-like"><div class="para logical" id="p-481"><ol class="lower-alpha"><li id="li-181"><div class="para" id="p-482">See: <code class="code-inline tex2jax_ignore">[provisional cross-reference: old qual]</code>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-9" id="hint-9"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-9"><div class="hint solution-like"><div class="para" id="p-482">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-13" id="solution-13"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-13"><div class="solution solution-like"><div class="para logical" id="p-483"><ol class="lower-alpha"><li id="li-181"><div class="para" id="p-484">See: <code class="code-inline tex2jax_ignore">[provisional cross-reference: old qual]</code>
 </div></li></ol></div></div></div>
 </div></article></div>
 </div>

@@ -13,16 +13,15 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Relative to the basis <span class="process-math">\(1, i\)</span> of <span class="process-math">\(\C\)</span> as a real vector space, multiplication by <span class="process-math">\(z = a = ib\)</span> is represented by the matrix</div>
+<div class="para">Say <span class="process-math">\(B\)</span> and <span class="process-math">\(C\)</span> are two bases of <span class="process-math">\(V\text{.}\)</span> Then <span class="process-math">\([g]_B^B = P [g]_{C}^{C} P^{-1}\)</span> for some invertible matrix <span class="process-math">\(P\)</span> (namely, <span class="process-math">\(P = [\id_V]_C^B\)</span>). Using the first part of the Lemma we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\begin{bmatrix}
-a &amp; -b \\ 
-b &amp; a   \\
-\end{bmatrix}
+\trace([g]_B^B) = \trace(P [g]_{C}^{C} P^{-1}) = \trace((P [g]_{C}^{C}) P^{-1}) = 
+\trace(P^{-1} (P [g]_{C}^{C})) =
+\trace((P^{-1} P) [g]_{C}^{C})) =
+\trace([g]_{C}^{C}).
 \end{equation*}
 </div>
-<div class="para">and hence the determinant of this operator is <span class="process-math">\(a^2 + b^2\text{,}\)</span> the square of the norm of <span class="process-math">\(z\text{.}\)</span> The trace is <span class="process-math">\(2a\text{.}\)</span> Note that the determinant of this operator is <span class="process-math">\(\|z\|^2\)</span> the square of the usual complex norm.</div>
 </div>
 <span class="incontext"><a href="sec-det.html#p-2867" class="internal">in-context</a></span>
 </body>

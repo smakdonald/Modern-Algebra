@@ -12,32 +12,22 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para logical"><ol class="decimal">
-<li>
-<div class="para">(normal) subgroups correspond to normal subgroups i.e.,</div>
-<div class="para logical"><ul class="disc">
-<li><div class="para">
-<span class="process-math">\(H\leq G\)</span> iff <span class="process-math">\(\overline{H}\leq \overline{G}\)</span> and <span class="process-math">\(\mathcal{H}\leq \overline{G}\)</span> iff <span class="process-math">\(\Phi(\mathcal{H})\leq G\)</span>
-</div></li>
-<li><div class="para">
-<span class="process-math">\(H\mathrel{\unlhd}G\)</span> iff <span class="process-math">\(\overline{H}\mathrel{\unlhd}\overline{G}\)</span> and <span class="process-math">\(\mathcal{H}\mathrel{\unlhd}\overline{G}\)</span> iff <span class="process-math">\(\Phi(\mathcal{H})\mathrel{\unlhd}G\)</span>
-</div></li>
-</ul></div>
-</li>
-<li><div class="para">indices are preserved; i.e., <span class="process-math">\([G:H] = [\overline{G} : \overline{H}]\)</span> and <span class="process-math">\([G: \Phi(\mathcal{H})] = [\overline{G} : \mathcal{H}]\text{.}\)</span>
-</div></li>
-<li>
-<div class="para">the supremums and infimums are preserved (this makes <span class="process-math">\(\Phi\)</span> and <span class="process-math">\(\Psi\)</span> lattice isomorphisms)</div>
-<div class="para logical"><ul class="disc">
-<li><div class="para">
-<span class="process-math">\(\overline{H} \cap \overline{K} = \overline{H \cap H}\)</span> and <span class="process-math">\(\langle \overline{H}\cup \overline{K} \rangle = \overline{\langle H\cup K \rangle}\)</span>
-</div></li>
-<li><div class="para">
-<span class="process-math">\(\Phi(\mathcal{H}) \cap \Phi(\mathcal K) = \Phi(\mathcal{H}\cap \mathcal K)\)</span> and <span class="process-math">\(\langle \Phi(\mathcal{H})\cup\Phi(\mathcal K) \rangle = \Phi\left(\langle \mathcal{H}\cup\mathcal K\rangle\right)\)</span>
-</div></li>
-</ul></div>
-</li>
-</ol></div>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(G\)</span> be a group and <span class="process-math">\(N\)</span> a normal subgroup with canonical homomorphism <span class="process-math">\(\pi:G\to G/N\text{.}\)</span> There is an containment-preserving bijection</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Psi:\{\text{subgroups of}\; G \;\text{that contain}\; N\} \xrightarrow{\text{bijective}}\{\text{subgroups of}\; G/N\}
+\end{equation*}
+</div>
+<div class="para">given by <span class="process-math">\(\Psi(H)= H/N\)</span> for <span class="process-math">\(N \leq H \leq G\text{.}\)</span> The inverse is defined for <span class="process-math">\(\mathcal{H}\leq G/N\)</span> by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Phi(\mathcal{H})=\pi^{-1}(\mathcal{H}) = \{x \in G \mid \pi(x) \in \mathcal{H}\}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(\pi: G \twoheadrightarrow G/N\)</span> is the quotient map. We denote <span class="process-math">\(\Psi(H)=H/N=\overline{H}\text{.}\)</span>
+</div>
+</div>
 <span class="incontext"><a href="sec-quotient-groups.html#p-526" class="internal">in-context</a></span>
 </body>
 </html>
