@@ -920,7 +920,7 @@ window.MathJax = {
 </ul>
 </li>
 <li><div class="toc-item"><a href="sec-numbers-and-cardinality.html" class="internal"><span class="codenumber">A.2</span> <span class="title">Number Systems and Cardinality</span></a></div></li>
-<li><div class="toc-item"><a href="sec-matrices.html" class="internal"><span class="codenumber">A.3</span> <span class="title">Matrices</span></a></div></li>
+<li><div class="toc-item"><a href="sec-matrices.html" class="internal"><span class="codenumber">A.3</span> <span class="title">Matrices and Vector Spaces</span></a></div></li>
 </ul>
 </li>
 <li><div class="toc-item"><a href="app-notation.html" class="internal"><span class="codenumber">B</span> <span class="title">Notation</span></a></div></li>
@@ -1004,7 +1004,7 @@ window.MathJax = {
 <div class="para logical" id="p-3565">
 <div class="para">Let <span class="process-math">\(f: X \to  Y\)</span> be a function.</div>
 <ol class="decimal">
-<li id="li-977"><div class="para" id="p-3566">The<em class="emphasis">image of a subset A</em>of <span class="process-math">\(X\)</span> is <span class="process-math">\(f(A) := \{f(a) | a \in  A\}\text{.}\)</span>
+<li id="li-977"><div class="para" id="p-3566">The<em class="emphasis">image</em> of a subset <span class="process-math">\(A\)</span> of <span class="process-math">\(X\)</span> is <span class="process-math">\(f(A) := \{f(a) | a \in  A\}\text{.}\)</span>
 </div></li>
 <li id="li-978"><div class="para" id="p-3567">The<em class="emphasis">preimage</em>of a subset <span class="process-math">\(B\)</span> of <span class="process-math">\(Y\)</span> is <span class="process-math">\(f\inv(B) := \{g | g \in  X and f(g) \in  B\}\text{.}\)</span>
 </div></li>
@@ -1050,10 +1050,13 @@ window.MathJax = {
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">A.17</span><span class="period">.</span>
 </h3>
 <div class="para logical" id="p-3582">
-<div class="para">Let f: X \to  Y.</div>
+<div class="para">Let <span class="process-math">\(f: X \to  Y\text{.}\)</span>
+</div>
 <ol class="decimal">
-<li id="li-988"><div class="para" id="p-3583">If A \subseteq  X, then A \subseteq  f -1(f(A)); if moreover f is injective then A = f -1(f(A)).</div></li>
-<li id="li-989"><div class="para" id="p-3584">If B \subseteq  Y then f(f -1(B)) \subseteq  B; if moreover f is surjective then f(f -1(B)) = B.</div></li>
+<li id="li-988"><div class="para" id="p-3583">If <span class="process-math">\(A \subseteq  X\text{,}\)</span> then <span class="process-math">\(A \subseteq  f\inv(f(A))\text{;}\)</span> if moreover <span class="process-math">\(f\)</span> is injective then <span class="process-math">\(A = f\inv(f(A))\text{.}\)</span>
+</div></li>
+<li id="li-989"><div class="para" id="p-3584">If <span class="process-math">\(B \subseteq  Y\)</span> then <span class="process-math">\(f(f\inv (B))\)</span> \subseteq  <span class="process-math">\(B\text{;}\)</span> if moreover <span class="process-math">\(f\)</span> is surjective then <span class="process-math">\(f(f\inv(B)) = B\text{.}\)</span>
+</div></li>
 </ol>
 </div></article></section><section class="subsection" id="subsec-set-constructions"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Set Constructions</span>
@@ -1064,25 +1067,29 @@ window.MathJax = {
 <article class="definition definition-like" id="def-subset"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">A.18</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-3585">Let A be a set. A<em class="emphasis">subset</em>of A is a set of some (possibly none, possibly all, possibly neither) of the elements of A.</div></article><article class="definition definition-like" id="def-inclusion-map"><h4 class="heading">
+<div class="para" id="p-3585">Let <span class="process-math">\(A\)</span> be a set. A <em class="emphasis">subset</em> of <span class="process-math">\(A\)</span> is a set of some (possibly none, possibly all, possibly neither) of the elements of <span class="process-math">\(A\text{.}\)</span>
+</div></article><article class="definition definition-like" id="def-inclusion-map"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">A.19</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-3586">Let B \subseteq  A. The<em class="emphasis">inclusion</em>map is the function i:B \to  A defined by i(b) = b for all b \in  B.</div></article><article class="proposition theorem-like" id="proposition-138"><h4 class="heading">
+<div class="para" id="p-3586">Let <span class="process-math">\(B \subseteq  A\text{.}\)</span> The<em class="emphasis">inclusion</em>map is the function <span class="process-math">\(\iota :B \to  A\)</span> defined by <span class="process-math">\(\iota(b) = b\)</span> for all <span class="process-math">\(b \in  B\text{.}\)</span>
+</div></article><article class="proposition theorem-like" id="proposition-138"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">A.20</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-3587">If B \subseteq  A and i:B \to  A is the inclusion, then i is an injection.</div></article></section><section class="subsubsection" id="subsubsec-product-sets"><h4 class="heading hide-type">
+<div class="para" id="p-3587">If <span class="process-math">\(B \subseteq  A\)</span> and <span class="process-math">\(\iota:B \to  A\)</span> is the inclusion, then <span class="process-math">\(\iota\)</span> is an injection.</div></article></section><section class="subsubsection" id="subsubsec-product-sets"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span> <span class="codenumber"></span> <span class="title">Product Sets</span>
 </h4>
 <article class="definition definition-like" id="def-cartesian-product"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">A.21</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-3588">Let A, B, and A\alpha  for all \alpha  \in  J be sets. The<em class="emphasis">Cartesian product</em>A \times  B := \{(a,b) | a \in  A, b \in  B\} and \prod \alpha  \in  J A\alpha  := \{(a\alpha )\alpha  \in  J | a\alpha  \in  A\alpha \}.</div></article><article class="definition definition-like" id="def-projection-map"><h4 class="heading">
+<div class="para" id="p-3588">Let <span class="process-math">\(A, B,\)</span> and <span class="process-math">\(A_\alpha\)</span>  for <span class="process-math">\(all \alpha  \in  J\)</span> be sets. The<em class="emphasis">Cartesian product</em> <span class="process-math">\(A \times  B := \{(a,b) | a \in  A, b \in  B\}\)</span> and <span class="process-math">\(\prod_{\alpha\in J} A_\alpha  := \{(a_\alpha )\alpha  \in  J | a\alpha  \in  A_\alpha\}\)</span>
+</div></article><article class="definition definition-like" id="def-projection-map"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">A.22</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-3589">Let A\alpha  for all \alpha  \in  J be sets and let \beta  in J. The<em class="emphasis">projection</em>map p\beta : \prod \alpha  \in  J A\alpha  \to  A\beta  is defined by p\beta ((a\alpha )\alpha  \in  J) = a\beta  for all (a\alpha )\alpha  \in  J \in  \prod \alpha  \in  J A\alpha .</div></article><article class="definition definition-like" id="def-product-inclusion"><h4 class="heading">
+<div class="para" id="p-3589">Let <span class="process-math">\(A_\alpha\)</span> for all <span class="process-math">\(\alpha  \in  J\)</span> be sets and let <span class="process-math">\(\beta  in J\text{.}\)</span> The<em class="emphasis">projection</em> map <span class="process-math">\(p\beta : \prod_{ \alpha  \in  J} A_\alpha  \to  A_\beta\)</span> is defined by <span class="process-math">\(p\beta ((a\alpha )\alpha  \in  J) = a\beta  for all (a\alpha )\alpha  \in  J \in  \prod \alpha  \in  J A\alpha\)</span> .</div></article><article class="definition definition-like" id="def-product-inclusion"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">A.23</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-3590">Let A\alpha  for all \alpha  \in  J be sets, let \beta  \in  J, and for each \alpha  \in  J - \{\beta \}, let b\alpha  \in  A\alpha . The associated<em class="emphasis">product inclusion</em>map i\beta : A\beta  \to  \prod \alpha  \in  J A\alpha  is defined for each a \in  A\beta  by i\beta (a) := (a\alpha )\alpha  \in  J, where a\beta  := a and a\alpha  := b\alpha  for all \alpha  \in  J - \{\beta \}.</div></article><article class="theorem theorem-like" id="thm-proj-sur-incl-inj"><h4 class="heading">
+<div class="para" id="p-3590">Let <span class="process-math">\(A\alpha\)</span> for all <span class="process-math">\(\alpha  \in  J\)</span> be sets, let <span class="process-math">\(\beta  \in  J\text{,}\)</span> and for each <span class="process-math">\(\alpha  \in  J - \{\beta \}\text{,}\)</span> let <span class="process-math">\(b\alpha  \in  A\alpha\text{.}\)</span> The associated <em class="emphasis">product inclusion</em>map <span class="process-math">\(i\beta : A\beta  \to  \prod \alpha  \in  J A\alpha\)</span>  is defined for each <span class="process-math">\(a \in  A\beta\)</span>  by <span class="process-math">\(i\beta (a) := (a\alpha )\alpha  \in  J\text{,}\)</span> where <span class="process-math">\(a\beta  := a and a\alpha  := b\alpha  for all \alpha  \in  J - \{\beta \}\text{.}\)</span>
+</div></article><article class="theorem theorem-like" id="thm-proj-sur-incl-inj"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">A.24</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="p-3591"><ol class="decimal">
@@ -1091,16 +1098,17 @@ window.MathJax = {
 </ol></div></article><article class="lemma theorem-like" id="lemma-38"><h4 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">A.25</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-3594">If A \subseteq  G and B \subseteq  H, then A \times  B \subseteq  G \times  H.</div></article><article class="axiom theorem-like" id="axiom-choice"><h4 class="heading">
+<div class="para" id="p-3594">If <span class="process-math">\(A \subseteq  G\)</span> and <span class="process-math">\(B \subseteq  H\text{,}\)</span> then <span class="process-math">\(A \times  B \subseteq  G \times  H\text{.}\)</span>
+</div></article><article class="axiom theorem-like" id="axiom-choice"><h4 class="heading">
 <span class="type">Axiom</span><span class="space"> </span><span class="codenumber">A.26</span><span class="period">.</span><span class="space"> </span><span class="title">Axiom of Choice.</span>
 </h4>
-<div class="para" id="p-3595">If A\alpha  \neq  \emptyset  for all \alpha  \in  J, then \prod \alpha  \in  J A\alpha  \neq  \emptyset .</div></article></section><section class="subsubsection" id="subsubsec-quotient-sets"><h4 class="heading hide-type">
+<div class="para" id="p-3595">If <span class="process-math">\(A\alpha  \neq  \emptyset\)</span>  for all <span class="process-math">\(\alpha  \in  J\text{,}\)</span> then <span class="process-math">\(\prod \alpha  \in  J A\alpha  \neq  \emptyset\)</span> .</div></article></section><section class="subsubsection" id="subsubsec-quotient-sets"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span> <span class="codenumber"></span> <span class="title">Quotient Sets</span>
 </h4>
 <article class="definition definition-like" id="def-equivalence-relation"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">A.27</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-3596">An<em class="emphasis">equivalence relation</em>\sim  on a set X is a subset S of X \times  X (where (a,b) \in  S is written a \sim  b) that satisfies the following for all a,b,c in X: (1) a \sim  a (<em class="emphasis">reflexive</em>), (2) a \sim  b implies b \sim  a (<em class="emphasis">symmetric</em>), and (3) a \sim  b and b \sim  c implies a \sim  c (<em class="emphasis">transitive</em>).</div> <div class="para" id="p-3597">The<em class="emphasis">equivalence class</em>of an element a of X is<em class="emphasis">[a]</em>:= \{b | b \sim  a\}.</div> <div class="para" id="p-3598">The notation<em class="emphasis">X/\sim</em>denotes the<em class="emphasis">set of equivalence classes</em>, also called the<em class="emphasis">quotient</em>of X with respect to \sim .</div> <div class="para" id="p-3599">The function q:X \to  X/\sim  defined by q(p) := [p] for all p \in  X is called the<em class="emphasis">equivalence map</em>
+<div class="para" id="p-3596">An<em class="emphasis">equivalence relation</em>\sim  on a set <span class="process-math">\(X\)</span> is a subset <span class="process-math">\(S of X \times  X\)</span> (where <span class="process-math">\((a,b) \in  S\)</span> is written <span class="process-math">\(a \sim  b\)</span>) that satisfies the following for all <span class="process-math">\(a,b,c\)</span> in <span class="process-math">\(X\text{:}\)</span> (1) a \sim  a (<em class="emphasis">reflexive</em>), (2) a \sim  b implies b \sim  a (<em class="emphasis">symmetric</em>), and (3) a \sim  b and b \sim  c implies a \sim  c (<em class="emphasis">transitive</em>).</div> <div class="para" id="p-3597">The<em class="emphasis">equivalence class</em>of an element a of X is<em class="emphasis">[a]</em>:= \{b | b \sim  a\}.</div> <div class="para" id="p-3598">The notation<em class="emphasis">X/\sim</em>denotes the<em class="emphasis">set of equivalence classes</em>, also called the<em class="emphasis">quotient</em>of X with respect to \sim .</div> <div class="para" id="p-3599">The function q:X \to  X/\sim  defined by q(p) := [p] for all p \in  X is called the<em class="emphasis">equivalence map</em>
 </div></article><article class="definition definition-like" id="def-partition"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">A.28</span><span class="period">.</span>
 </h4>

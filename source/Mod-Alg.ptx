@@ -453,6 +453,11 @@
 
             <remark><p>For those interested, a pairing <m>(G,\cdot)</m> that only satisfies the first two properties of <xref ref="def-monoid"/> is called a <em>semigroup</em>. If <m>(G,\cdot)</m> only satisfies the first property, it is known as a <em>magma</em>.</p></remark>
 
+            <figure xml:id="figure-magma">
+              <caption>Reltions between algebraic structures.</caption>
+              <image width="30%" source="Images/Magma.pdf" />
+            </figure>
+
             <definition xml:id="def-group"><title>Group</title>
               <statement>
                 <p>
@@ -8534,19 +8539,19 @@
       
                       <p>
                           <ol>
-                              <li>
+                              <li> 
                                   <p>
                                       <m>(R,+)</m> is an <xref text="title" ref="def-abelian"/> with identity element denoted <m>0</m>,
                                   </p>
                               </li>
       
-                              <li>
+                              <li> <title>Associative Multiplication</title>
                                   <p>
                                       <m>\cdot</m> is associative (making <m>(R,\cdot)</m> a <xref text="title" ref="def-monoid"/>)
                                   </p>
                               </li>
       
-                              <li>
+                              <li> <title>Distributive Law</title>
                                   <p>
                                       <m>a \cdot (b + c) = a \cdot b + a \cdot c</m> and <m>(a + b) \cdot c = a \cdot c + b \cdot c</m> hold for all <m>a,b,c \in R</m>.
                                   </p>
@@ -8563,7 +8568,7 @@
                 <proposition xml:id="prop-ring-arithmetic">
                   <title>Ring Arithmetic</title>
                   
-                  
+    
                   <statement>
                   <p>
                       For any ring <m>R</m> and all <m>a,b \in R</m> we have:
@@ -28488,7 +28493,7 @@
                   <ol>
                     <li>
                       <p>
-                        The<em>image of a subset A</em>of <m>X</m> is <m>f(A) := \{f(a) | a \in  A\}</m>.  
+                        The<em>image </em> of a subset <m>A</m> of <m>X</m> is <m>f(A) := \{f(a) | a \in  A\}</m>.  
                       </p>
                     </li>
 
@@ -28594,17 +28599,17 @@
             <theorem>
               <statement>
                 <p>
-                  Let f: X \to  Y. 
+                  Let <m>f: X \to  Y</m>. 
                   <ol>
                     <li>
                       <p>
-                        If A \subseteq  X, then A \subseteq  f -1(f(A)); if moreover f is injective then A = f -1(f(A)). 
+                        If <m>A \subseteq  X</m>, then <m>A \subseteq  f\inv(f(A))</m>; if moreover <m>f</m> is injective then <m>A = f\inv(f(A))</m>. 
                       </p>
                     </li>
 
                     <li>
                       <p>
-                        If B \subseteq  Y then f(f -1(B)) \subseteq  B; if moreover f is surjective then f(f -1(B)) = B.
+                        If <m>B \subseteq  Y</m> then <m>f(f\inv (B))</m> \subseteq  <m>B</m>; if moreover <m>f</m> is surjective then <m>f(f\inv(B)) = B</m>.
                       </p>
                     </li>
                   </ol>
@@ -28623,7 +28628,7 @@
               <definition xml:id="def-subset">
                 <statement>
                   <p>
-                    Let A be a set. A<em>subset</em>of A is a set of some (possibly none, possibly all, possibly neither) of the elements of A.
+                    Let <m>A</m> be a set. A <em>subset</em> of <m>A</m> is a set of some (possibly none, possibly all, possibly neither) of the elements of <m>A</m>.
                   </p>
                 </statement>
               </definition>
@@ -28631,7 +28636,7 @@
               <definition xml:id="def-inclusion-map">
                 <statement>
                   <p>
-                    Let B \subseteq  A. The<em>inclusion</em>map is the function i:B \to  A defined by i(b) = b for all b \in  B.
+                    Let <m>B \subseteq  A</m>. The<em>inclusion</em>map is the function <m>\iota :B \to  A</m> defined by <m>\iota(b) = b</m> for all <m>b \in  B</m>.
                   </p>
                 </statement>
               </definition>
@@ -28639,7 +28644,7 @@
               <proposition>
                 <statement>
                   <p>
-                    If B \subseteq  A and i:B \to  A is the inclusion, then i is an injection.            
+                    If <m>B \subseteq  A</m> and <m>\iota:B \to  A</m> is the inclusion, then <m>\iota</m> is an injection.            
                   </p>
                 </statement>
               </proposition>
@@ -28651,7 +28656,7 @@
               <definition xml:id="def-cartesian-product">
                 <statement>
                   <p>
-                    Let A, B, and A\alpha  for all \alpha  \in  J be sets. The<em>Cartesian product</em>A \times  B := \{(a,b) | a \in  A, b \in  B\} and \prod \alpha  \in  J A\alpha  := \{(a\alpha )\alpha  \in  J | a\alpha  \in  A\alpha \}.
+                    Let <m>A, B,</m> and <m>A_\alpha</m>  for <m>all \alpha  \in  J</m> be sets. The<em>Cartesian product</em> <m>A \times  B := \{(a,b) | a \in  A, b \in  B\}</m> and <m>\prod_{\alpha\in J} A_\alpha  := \{(a_\alpha )\alpha  \in  J | a\alpha  \in  A_\alpha\}</m>
                   </p>
                 </statement>
               </definition>
@@ -28659,7 +28664,7 @@
               <definition xml:id="def-projection-map">
                 <statement>
                   <p>
-                    Let A\alpha  for all \alpha  \in  J be sets and let \beta  in J. The<em>projection</em>map p\beta : \prod \alpha  \in  J A\alpha  \to  A\beta  is defined by p\beta ((a\alpha )\alpha  \in  J) = a\beta  for all (a\alpha )\alpha  \in  J \in  \prod \alpha  \in  J A\alpha .
+                    Let <m>A_\alpha</m> for all <m>\alpha  \in  J</m> be sets and let <m>\beta  in J</m>. The<em>projection</em> map <m>p\beta : \prod_{ \alpha  \in  J} A_\alpha  \to  A_\beta</m> is defined by <m>p\beta ((a\alpha )\alpha  \in  J) = a\beta  for all (a\alpha )\alpha  \in  J \in  \prod \alpha  \in  J A\alpha</m> .
                   </p>
                 </statement>
               </definition>
@@ -28667,7 +28672,7 @@
               <definition xml:id="def-product-inclusion">
                 <statement>
                   <p>
-                    Let A\alpha  for all \alpha  \in  J be sets, let \beta  \in  J, and for each \alpha  \in  J - \{\beta \}, let b\alpha  \in  A\alpha . The associated<em>product inclusion</em>map i\beta : A\beta  \to  \prod \alpha  \in  J A\alpha  is defined for each a \in  A\beta  by i\beta (a) := (a\alpha )\alpha  \in  J, where a\beta  := a and a\alpha  := b\alpha  for all \alpha  \in  J - \{\beta \}.
+                    Let <m>A\alpha</m> for all <m>\alpha  \in  J</m> be sets, let <m>\beta  \in  J</m>, and for each <m>\alpha  \in  J - \{\beta \}</m>, let <m>b\alpha  \in  A\alpha</m>. The associated <em>product inclusion</em>map <m>i\beta : A\beta  \to  \prod \alpha  \in  J A\alpha</m>  is defined for each <m>a \in  A\beta</m>  by <m>i\beta (a) := (a\alpha )\alpha  \in  J</m>, where <m>a\beta  := a and a\alpha  := b\alpha  for all \alpha  \in  J - \{\beta \}</m>.
                   </p>
                 </statement>
               </definition>
@@ -28695,7 +28700,7 @@
               <lemma>
                 <statement>
                   <p>
-                    If A \subseteq  G and B \subseteq  H, then A \times  B \subseteq  G \times  H.
+                    If <m>A \subseteq  G</m> and <m>B \subseteq  H</m>, then <m>A \times  B \subseteq  G \times  H</m>.
                   </p>
                 </statement>
               </lemma>
@@ -28704,7 +28709,7 @@
                 <title>Axiom of Choice</title>
                 <statement>
                   <p>
-                    If A\alpha  \neq  \emptyset  for all \alpha  \in  J, then \prod \alpha  \in  J A\alpha  \neq  \emptyset .            
+                    If <m>A\alpha  \neq  \emptyset</m>  for all <m>\alpha  \in  J</m>, then <m>\prod \alpha  \in  J A\alpha  \neq  \emptyset</m> .            
                   </p>
                 </statement>
               </axiom>
@@ -28716,7 +28721,10 @@
               <definition xml:id="def-equivalence-relation">
                 <statement>
                   <p>
-                    An<em>equivalence relation</em>\sim  on a set X is a subset S of X \times  X (where (a,b) \in  S is written a \sim  b) that satisfies the following for all a,b,c in X: (1) a \sim  a (<em>reflexive</em>), (2) a \sim  b implies b \sim  a (<em>symmetric</em>), and (3) a \sim  b and b \sim  c implies a \sim  c (<em>transitive</em>).  
+                    An<em>equivalence relation</em>\sim  on a set <m>X</m> is a subset <m>S of X \times  X</m> (where <m>(a,b) \in  S</m> is written <m>a \sim  b</m>) that satisfies the following for all <m>a,b,c</m> in <m>X</m>: 
+                    (1) a \sim  a (<em>reflexive</em>), 
+                    (2) a \sim  b implies b \sim  a (<em>symmetric</em>), and 
+                    (3) a \sim  b and b \sim  c implies a \sim  c (<em>transitive</em>).  
                   </p>
 
                   <p>
@@ -28952,7 +28960,7 @@
         </section>
 
         <section xml:id="sec-matrices">
-          <title>Matrices</title>
+          <title>Matrices and Vector Spaces</title>
 
           <p>hi</p>
           
