@@ -473,10 +473,10 @@ window.MathJax = {
 <div class="toc-item"><a href="ch-intro-groups.html" class="internal"><span class="codenumber">1</span> <span class="title">Intro to Groups</span></a></div>
 <ul class="structural">
 <li>
-<div class="toc-item"><a href="group-basics.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Group Basics</span></a></div>
+<div class="toc-item"><a href="sec-group-basics.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Group Basics</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="group-basics.html#subsec-beginnings" class="internal"><span class="title">Binary Operations and Groups</span></a></div></li>
-<li><div class="toc-item"><a href="group-basics.html#subsec-order" class="internal"><span class="title">Order</span></a></div></li>
+<li><div class="toc-item"><a href="sec-group-basics.html#subsec-beginnings" class="internal"><span class="title">Binary Operations and Groups</span></a></div></li>
+<li><div class="toc-item"><a href="sec-group-basics.html#subsec-order" class="internal"><span class="title">Order</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -492,7 +492,8 @@ window.MathJax = {
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-subgroups.html#subsec-subgroup-basics" class="internal"><span class="title">Subgroup Basics</span></a></div></li>
 <li><div class="toc-item"><a href="sec-subgroups.html#subsec-center" class="internal"><span class="title">The Center of a Group</span></a></div></li>
-<li><div class="toc-item"><a href="sec-subgroups.html#exercises-1" class="internal"><span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="sec-subgroups.html#subsec-ghom-subgroups" class="internal"><span class="title">Homormophisms and Subgroups</span></a></div></li>
+<li><div class="toc-item"><a href="sec-subgroups.html#exercises-1" class="internal"><span class="title">Qualifying Exam Problems</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -500,7 +501,7 @@ window.MathJax = {
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#subsec-gp-generators" class="internal"><span class="title">Generators</span></a></div></li>
 <li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#subsec-cyclic-gp" class="internal"><span class="title">Cyclic Groups</span></a></div></li>
-<li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#exercises-2" class="internal"><span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#exercises-2" class="internal"><span class="title">Qualifying Exam Problems</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -934,13 +935,13 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-modpres"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">5.1</span> <span class="title">Finitely Presented Modules</span>
 </h2>
-<article class="remark remark-like" id="remark-79"><h3 class="heading">
+<article class="remark remark-like" id="remark-77"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">5.1</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-2368">You have seen presentations for groups in the past; these consisted of a set of generators and a set of relations among these generators. Presentations are important for modules as well. In the case of modules, the relations may be encoded by a matrix.</div></article><article class="definition definition-like" id="def-module-presentation"><h3 class="heading">
+<div class="para" id="p-2376">You have seen presentations for groups in the past; these consisted of a set of generators and a set of relations among these generators. Presentations are important for modules as well. In the case of modules, the relations may be encoded by a matrix.</div></article><article class="definition definition-like" id="def-module-presentation"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.2</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(R\)</span>-Module Presentation.</span>
-</h3> <div class="para" id="p-2369">Let <span class="process-math">\(R\)</span> be a non-zero commutative ring, let <span class="process-math">\(A \in \Mat_{m,n}(R)\text{,}\)</span> and let <span class="process-math">\(T_A: R^n \to R^m\)</span> be the <span class="process-math">\(R\)</span>-module homomorphism represented by <span class="process-math">\(A\)</span> with respect to the standard bases; that is, define <span class="process-math">\(T_A(v)=A \cdot v\text{.}\)</span> The <span class="process-math">\(R\)</span>-<em class="emphasis">module presented by</em> <span class="process-math">\(A\)</span> is the <span class="process-math">\(R\)</span>-module <span class="process-math">\(\coker(T_A) = R^m/\im(T_A)\text{.}\)</span>
-</div> <div class="para logical" id="p-2370">
+</h3> <div class="para" id="p-2377">Let <span class="process-math">\(R\)</span> be a non-zero commutative ring, let <span class="process-math">\(A \in \Mat_{m,n}(R)\text{,}\)</span> and let <span class="process-math">\(T_A: R^n \to R^m\)</span> be the <span class="process-math">\(R\)</span>-module homomorphism represented by <span class="process-math">\(A\)</span> with respect to the standard bases; that is, define <span class="process-math">\(T_A(v)=A \cdot v\text{.}\)</span> The <span class="process-math">\(R\)</span>-<em class="emphasis">module presented by</em> <span class="process-math">\(A\)</span> is the <span class="process-math">\(R\)</span>-module <span class="process-math">\(\coker(T_A) = R^m/\im(T_A)\text{.}\)</span>
+</div> <div class="para logical" id="p-2378">
 <div class="para">Equivalently, the module presented by <span class="process-math">\(A\)</span> is</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -951,7 +952,7 @@ window.MathJax = {
 </div>
 </div></article><article class="example example-like" id="exe-z-module-presentation"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\Z\)</span>-Module Presentation.</span>
-</h3> <div class="para logical" id="p-2371">
+</h3> <div class="para logical" id="p-2379">
 <div class="para">What <span class="process-math">\(\Z\)</span>-module <span class="process-math">\(M\)</span> is presented by</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -966,7 +967,7 @@ A =
 </div>
 <div class="para">Formally, <span class="process-math">\(M\)</span> is the quotient module <span class="process-math">\(M=\Z^4/\im(T_A)\text{,}\)</span> where <span class="process-math">\(T_A:\Z^3\to \Z^4\)</span> is defined by <span class="process-math">\(T_A(v)=Av\text{.}\)</span> Since <span class="process-math">\(\Z^4\)</span> is generated by its standard basis elements <span class="process-math">\(\{e_1,e_2,e_3,e_4\}\text{,}\)</span> it follows that <span class="process-math">\(M=\Z^4/\im(T_A)\)</span> is generated by the cosets of the <span class="process-math">\(e_i\text{.}\)</span> To keep the notation short, we set <span class="process-math">\(m_i=e_i+\im(T_A)\text{.}\)</span>
 </div>
-</div> <div class="para logical" id="p-2372">
+</div> <div class="para logical" id="p-2380">
 <div class="para">Let <span class="process-math">\(N=\im(T_A)\)</span> and note that <span class="process-math">\(N\)</span> is the submodule of <span class="process-math">\(\Z^4\)</span> generated by the columns of <span class="process-math">\(A\text{,}\)</span> i.e.</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1070,21 +1071,21 @@ D = E_{1,2}(12)C=
 </div></article><article class="theorem theorem-like" id="thm-matrices-modules-and-isomorphisms"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.4</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-2373">
+<div class="para logical" id="p-2381">
 <div class="para">Let <span class="process-math">\(R\)</span> be a non-zero commutative ring and let <span class="process-math">\(A \in \Mat_{m \times n}(R)\)</span> and <span class="process-math">\(B \in Mat_{m' \times n'}(R)\)</span> for some <span class="process-math">\(m,n,m',n' \geq 1\text{.}\)</span> Then <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> present isomorphic <span class="process-math">\(R\)</span>-modules if <span class="process-math">\(B\)</span> can be obtained from <span class="process-math">\(A\)</span> by any finite sequence of operations of the following form:</div>
 <ol class="decimal">
-<li id="li-654"><div class="para" id="p-2374">an elementary row operation,</div></li>
-<li id="li-655"><div class="para" id="p-2375">an elementary column operation,</div></li>
-<li id="li-656"><div class="para" id="p-2376">deletion of the <span class="process-math">\(j\)</span>-th column and <span class="process-math">\(i\)</span>-th row of a matrix whose <span class="process-math">\(j\)</span>-th column is the vector <span class="process-math">\(e_i\text{,}\)</span>
+<li id="li-659"><div class="para" id="p-2382">an elementary row operation,</div></li>
+<li id="li-660"><div class="para" id="p-2383">an elementary column operation,</div></li>
+<li id="li-661"><div class="para" id="p-2384">deletion of the <span class="process-math">\(j\)</span>-th column and <span class="process-math">\(i\)</span>-th row of a matrix whose <span class="process-math">\(j\)</span>-th column is the vector <span class="process-math">\(e_i\text{,}\)</span>
 </div></li>
-<li id="li-657"><div class="para" id="p-2377">the reverse of (3),</div></li>
-<li id="li-658"><div class="para" id="p-2378">deletion of a column of all <span class="process-math">\(0\)</span>'s,</div></li>
-<li id="li-659"><div class="para" id="p-2379">the reverse of (5).</div></li>
+<li id="li-662"><div class="para" id="p-2385">the reverse of (3),</div></li>
+<li id="li-663"><div class="para" id="p-2386">deletion of a column of all <span class="process-math">\(0\)</span>'s,</div></li>
+<li id="li-664"><div class="para" id="p-2387">the reverse of (5).</div></li>
 </ol>
-</div></article><article class="hiddenproof" id="proof-104"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-104"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-104"><article class="hiddenproof"><div class="para logical" id="p-2380">
+</div></article><article class="hiddenproof" id="proof-104"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-104"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-104"><article class="hiddenproof"><div class="para logical" id="p-2388">
 <div class="para">Note: This proof was not covered in class. Assume <span class="process-math">\(B\)</span> is obtained from <span class="process-math">\(A\)</span> by a single one of the steps listed above. We need to prove that there is an isomorphism <span class="process-math">\(R^m/\im(T_A) \cong R^{m'}/\im(T_B)\)</span> of <span class="process-math">\(R\)</span>-modules.</div>
 <ol class="decimal">
-<li id="li-660"><div class="para logical" id="p-2381">
+<li id="li-665"><div class="para logical" id="p-2389">
 <div class="para">In this case, <span class="process-math">\(B = E A\)</span> for some elementary matrix <span class="process-math">\(E\text{.}\)</span> More generally, let <span class="process-math">\(E\)</span> be any invertible matrix such that <span class="process-math">\(B = EA\text{.}\)</span> Then <span class="process-math">\(T_E: R^m \to R^m\)</span> is an isomorphism and it maps <span class="process-math">\(\im(T_A)\)</span> bijectively onto <span class="process-math">\(\im(T_B)\text{.}\)</span> It follows that the kernel of the composition <span class="process-math">\(R^m \xra{T_E} R^m \onto R^m/\im(T_B)\)</span> is <span class="process-math">\(\im(T_A)\)</span> and hence by the first isomorphism theorem it induces an isomorphism</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1092,7 +1093,7 @@ R^m/\im(T_A) \xra{\cong} R^m/\im(T_B).
 \end{equation*}
 </div>
 </div></li>
-<li id="li-661"><div class="para logical" id="p-2382">
+<li id="li-666"><div class="para logical" id="p-2390">
 <div class="para">In this case, <span class="process-math">\(B=AE\)</span> for some elementary matrix <span class="process-math">\(E\text{.}\)</span> More generally, assume <span class="process-math">\(E\)</span> is any invertible matrix such that <span class="process-math">\(B = AE\text{.}\)</span> Since <span class="process-math">\(T_E\)</span> is an isomorphism, we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1101,7 +1102,7 @@ R^m/\im(T_A) \xra{\cong} R^m/\im(T_B).
 </div>
 <div class="para">and so <span class="process-math">\(R^m/\im(T_A) = R^{m}/\im(T_B)\text{.}\)</span> (For this one we get equality, not merely an isomorphism.)</div>
 </div></li>
-<li id="li-662"><div class="para logical" id="p-2383">
+<li id="li-667"><div class="para logical" id="p-2391">
 <div class="para">For notational simplicity, let us assume <span class="process-math">\(i = j =1\text{;}\)</span> that is, the first column of <span class="process-math">\(A\)</span> is <span class="process-math">\(e_1\)</span> and <span class="process-math">\(B\)</span> is obtained by deleting the first row and column of <span class="process-math">\(A\text{,}\)</span> giving a <span class="process-math">\((m-1) \times (n-1)\)</span> matrix. So</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1128,21 +1129,21 @@ v - Au = Ay
 </div>
 <div class="para">for some vector <span class="process-math">\(y\text{.}\)</span> This proves <span class="process-math">\(v = A(u+y) \in \im(T_A)\)</span> and hence that <span class="process-math">\(v +\im(T_A) = 0\)</span> in <span class="process-math">\(R^m/\im(T_A)\text{.}\)</span> This proves <span class="process-math">\(\ov{p}\)</span> is one-to-one.</div>
 </div></li>
-<li id="li-663"><div class="para" id="p-2384">It is clear that the columns of <span class="process-math">\(B\)</span> generate the same submodule of <span class="process-math">\(R^m\)</span> as do the columns of <span class="process-math">\(A\text{,}\)</span> and thus <span class="process-math">\(\im(T_A) = \im(T_B)\)</span> and <span class="process-math">\(R^m/\im(T_A) =R^m/\im(T_B)\text{.}\)</span>
+<li id="li-668"><div class="para" id="p-2392">It is clear that the columns of <span class="process-math">\(B\)</span> generate the same submodule of <span class="process-math">\(R^m\)</span> as do the columns of <span class="process-math">\(A\text{,}\)</span> and thus <span class="process-math">\(\im(T_A) = \im(T_B)\)</span> and <span class="process-math">\(R^m/\im(T_A) =R^m/\im(T_B)\text{.}\)</span>
 </div></li>
-<li id="li-664"><div class="para" id="p-2385">Since the isomorphism relation is reflexive, the statements of parts 3. &amp; 5. show that parts 4.&amp; 6. are true as well.</div></li>
+<li id="li-669"><div class="para" id="p-2393">Since the isomorphism relation is reflexive, the statements of parts 3. &amp; 5. show that parts 4.&amp; 6. are true as well.</div></li>
 </ol>
 </div></article></div>
-<article class="remark remark-like" id="remark-80"><h3 class="heading">
+<article class="remark remark-like" id="remark-78"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">5.5</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-2386">The converse is true for some rings <span class="process-math">\(R\text{,}\)</span> including Euclidean domains.</div></article><article class="remark remark-like" id="remark-81"><h3 class="heading">
+<div class="para" id="p-2394">The converse is true for some rings <span class="process-math">\(R\text{,}\)</span> including Euclidean domains.</div></article><article class="remark remark-like" id="remark-79"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">5.6</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-2387">In fact, if <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are equivalent matrices, then <span class="process-math">\(\coker(T_A) \cong \coker(T_B)\text{,}\)</span> as I shall prove below. This implies both (1) and (2) from the Theorem.</div></article><article class="lemma theorem-like" id="lem-diagonal-presentation"><h3 class="heading">
+<div class="para" id="p-2395">In fact, if <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are equivalent matrices, then <span class="process-math">\(\coker(T_A) \cong \coker(T_B)\text{,}\)</span> as I shall prove below. This implies both (1) and (2) from the Theorem.</div></article><article class="lemma theorem-like" id="lem-diagonal-presentation"><h3 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">5.7</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-2388">
+<div class="para logical" id="p-2396">
 <div class="para">Suppose <span class="process-math">\(R\)</span> is a commutative ring and <span class="process-math">\(A = (a_{i,j})\)</span> is a <span class="process-math">\(m \times n\)</span> matrix such that <span class="process-math">\(a_{i,j} = 0\)</span> for all <span class="process-math">\(i \ne j\)</span> and set <span class="process-math">\(d_i = a_{i,i}\)</span> for all <span class="process-math">\(1 \leq i \leq \min\{m,n\}\text{.}\)</span> If <span class="process-math">\(n \geq m\)</span> then</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1155,7 +1156,7 @@ v - Au = Ay
 \coker(T_A) \cong R/R \cdot d_1 \oplus R/R\cdot d_2 \oplus \cdots \oplus R/R \cdot d_n \oplus R^{m-n}.
 \end{equation*}
 </div>
-</div></article><article class="hiddenproof" id="proof-105"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-105"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-105"><article class="hiddenproof"><div class="para logical" id="p-2389">
+</div></article><article class="hiddenproof" id="proof-105"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-105"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-105"><article class="hiddenproof"><div class="para logical" id="p-2397">
 <div class="para">Assume <span class="process-math">\(n \leq m\)</span> and define <span class="process-math">\(g: R^m \to R/R \cdot d_1 \oplus R/R \cdot d_2 \oplus \cdots \oplus R/ R \cdot d_n \oplus R^{m-n}\)</span> to be the map sending <span class="process-math">\((r_1, \dots, r_m)^\tau\)</span> to <span class="process-math">\((\ov{r}_1, \dots, \ov{r}_n, r_{n+1}, \dots, r_m)\)</span> where <span class="process-math">\(\ov{r}_i = r_i + R \cdot d_i\)</span> for <span class="process-math">\(1 \leq i \leq n\text{.}\)</span> (I.e., <span class="process-math">\(g\)</span> is the unique <span class="process-math">\(R\)</span>-map sending the <span class="process-math">\(i\)</span>-th standard basis vector <span class="process-math">\(e_i\)</span> to <span class="process-math">\((0, \dots, 0, \ov{1}, 0, \dots, 0)\)</span> with <span class="process-math">\(\ov{1}\)</span> in the <span class="process-math">\(i\)</span>-th position, for <span class="process-math">\(1 \leq i \leq n\text{,}\)</span> and to <span class="process-math">\(e_i\)</span> itself for <span class="process-math">\(i &gt; n\text{.}\)</span>) Then <span class="process-math">\(g\)</span> is clearly onto and the kernel <span class="process-math">\(\ker(g)\)</span> of <span class="process-math">\(g\)</span> is the set of those tuples <span class="process-math">\((r_1, \dots, r_m)^\tau\)</span> such that <span class="process-math">\(r_i = x_i d_i\)</span> for some <span class="process-math">\(x_i\)</span> for all <span class="process-math">\(1 \leq i \leq n\)</span> and <span class="process-math">\(r_j = 0\)</span> for <span class="process-math">\(j &gt; n\text{.}\)</span> Given such a tuple,</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1171,7 +1172,7 @@ R \cdots (d_1, 0, \dots, 0)^\tau + R \cdot (0,d_2, 0, \dots, 0)^\tau
 </div>
 <div class="para">Arguing backwards we see that the opposite containment also holds, so that in fact <span class="process-math">\(\ker(g) = \im(T_A)\text{.}\)</span>
 </div>
-</div> <div class="para logical" id="p-2390">
+</div> <div class="para logical" id="p-2398">
 <div class="para">By the First Isomorphism Theorem,</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1183,42 +1184,42 @@ R \cdots (d_1, 0, \dots, 0)^\tau + R \cdot (0,d_2, 0, \dots, 0)^\tau
 <section class="exercises" id="exercises-44"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
-<div class="exercisegroup" id="exercisegroup-97">
+<div class="exercisegroup" id="exercisegroup-95">
 <h4 class="heading"><span class="title">Computations and Examples.</span></h4>
-<div class="introduction" id="introduction-99"><div class="para" id="p-2391"></div></div>
+<div class="introduction" id="introduction-97"><div class="para" id="p-2399"></div></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-213"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-213"><h5 class="heading">
+<span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-213"><article class="exercise exercise-like"><div class="para" id="p-2400">Coming soon to an OER near you!</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-96" id="hint-96"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-96"><div class="hint solution-like"><div class="para" id="p-2401">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-164" id="solution-164"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-164"><div class="solution solution-like"><div class="para" id="p-2402">Coming soon to an OER near you!</div></div></div>
+</div></article></div>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-96">
+<h4 class="heading"><span class="title">Formal Proofs.</span></h4>
+<div class="introduction" id="introduction-98"><div class="para" id="p-2403"></div></div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-214"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-214"><h5 class="heading">
-<span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-214"><article class="exercise exercise-like"><div class="para" id="p-2392">Coming soon to an OER near you!</div>
+<span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-214"><article class="exercise exercise-like"><div class="para" id="p-2404">Coming soon to an OER near you!</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-96" id="hint-96"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-96"><div class="hint solution-like"><div class="para" id="p-2393">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-164" id="solution-164"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-164"><div class="solution solution-like"><div class="para" id="p-2394">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-97" id="hint-97"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-97"><div class="hint solution-like"><div class="para" id="p-2405">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-165" id="solution-165"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-165"><div class="solution solution-like"><div class="para" id="p-2406">Coming soon to an OER near you!</div></div></div>
 </div></article></div>
 </div>
 </div>
-<div class="exercisegroup" id="exercisegroup-98">
-<h4 class="heading"><span class="title">Formal Proofs.</span></h4>
-<div class="introduction" id="introduction-100"><div class="para" id="p-2395"></div></div>
+<div class="exercisegroup" id="exercisegroup-97">
+<h4 class="heading"><span class="title">Qualifying Exam Problems.</span></h4>
+<div class="introduction" id="introduction-99"><div class="para" id="p-2407"></div></div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-215"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-215"><h5 class="heading">
-<span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-215"><article class="exercise exercise-like"><div class="para" id="p-2396">Coming soon to an OER near you!</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-97" id="hint-97"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-97"><div class="hint solution-like"><div class="para" id="p-2397">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-165" id="solution-165"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-165"><div class="solution solution-like"><div class="para" id="p-2398">Coming soon to an OER near you!</div></div></div>
-</div></article></div>
-</div>
-</div>
-<div class="exercisegroup" id="exercisegroup-99">
-<h4 class="heading"><span class="title">Qualifying Exam Problems.</span></h4>
-<div class="introduction" id="introduction-101"><div class="para" id="p-2399"></div></div>
-<div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="exercise-216"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-216"><h5 class="heading">
 <span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-216"><article class="exercise exercise-like"><div class="para" id="p-2400">Coming soon to an OER near you!</div>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-215"><article class="exercise exercise-like"><div class="para" id="p-2408">Coming soon to an OER near you!</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-98" id="hint-98"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-98"><div class="hint solution-like"><div class="para" id="p-2401">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-166" id="solution-166"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-166"><div class="solution solution-like"><div class="para" id="p-2402">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-98" id="hint-98"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-98"><div class="hint solution-like"><div class="para" id="p-2409">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-166" id="solution-166"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-166"><div class="solution solution-like"><div class="para" id="p-2410">Coming soon to an OER near you!</div></div></div>
 </div></article></div>
 </div>
 </div></section></section></div>

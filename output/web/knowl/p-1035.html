@@ -12,8 +12,14 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Suppose <span class="process-math">\(G = \langle x \rangle\)</span> with <span class="process-math">\(|x| = n\)</span> or <span class="process-math">\(|x| = \infty\)</span> and set <span class="process-math">\(H=C_n\)</span> in the first case and <span class="process-math">\(H=C_\infty\)</span> in the second case. Then by <a href="" class="xref" data-knowl="./knowl/prop-ump-cyclic.html" title="Proposition 7.1: Universal Mapping Property (UMP) for Cyclic Groups">Proposition 7.1</a>, there are homomorphisms <span class="process-math">\(f: G \to H\)</span> and <span class="process-math">\(g: G \to H\)</span> such that <span class="process-math">\(f(x) = a\)</span> and <span class="process-math">\(g(a) =x\text{.}\)</span> So <span class="process-math">\(g \circ f\)</span> is an endomorphisms of <span class="process-math">\(G\)</span> mapping <span class="process-math">\(x\)</span> to <span class="process-math">\(x\text{.}\)</span> But the identity map also has this property, and so the uniqueness clause gives <span class="process-math">\(g \circ f = \text{id}_G\text{.}\)</span> Similarly, <span class="process-math">\(f \circ g = \text{id}_H\text{.}\)</span>
-</div>
+<div class="para logical"><ul class="disc">
+<li><div class="para">if <span class="process-math">\(i=0\)</span> then <span class="process-math">\(f(x^0)=f(e_G)=e_H=y^0\)</span>
+</div></li>
+<li><div class="para">if <span class="process-math">\(i&gt;0\)</span> then <span class="process-math">\(f(x^i)=f(\underbrace{x\cdots x}_{i \text{ times}})=\underbrace{f(x)\cdots f(x)}_{i \text{ times}})=y^i\)</span>
+</div></li>
+<li><div class="para">if <span class="process-math">\(i&lt;0\)</span> then <span class="process-math">\(f(x^i)=f\left((x^{-i})^{-1}\right)=f\left((x^{-i})\right)^{-1}=(y^{-i})^{-1}=y^i\text{,}\)</span> using the formula above for <span class="process-math">\(-i&gt;0\)</span>
+</div></li>
+</ul></div>
 <span class="incontext"><a href="sec-classifying-cyclic-groups.html#p-1035" class="internal">in-context</a></span>
 </body>
 </html>

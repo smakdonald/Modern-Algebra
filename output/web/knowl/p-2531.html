@@ -12,7 +12,26 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">In Theorem , the number <span class="process-math">\(r\)</span> is the <em class="emphasis">rank</em> of <span class="process-math">\(G\text{,}\)</span> the numbers <span class="process-math">\(n_1,\ldots,n_t\)</span> are the <em class="emphasis">invariant factors</em> of <span class="process-math">\(G\text{,}\)</span> and the decomposition of <span class="process-math">\(G\)</span> in part (1) is the <em class="emphasis">invariant factor decomposition</em> of <span class="process-math">\(G\text{.}\)</span>
+<div class="para logical">
+<div class="para">Define a <span class="process-math">\(\Q[x]\)</span>-module homomorphism</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\pi: \Q[x] \onto M
+\end{equation*}
+</div>
+<div class="para">by sending <span class="process-math">\(1\)</span> to <span class="process-math">\(v \in M\)</span> and hence <span class="process-math">\(p(x)\)</span> to <span class="process-math">\(p(x) \cdot v\text{.}\)</span> It is onto since <span class="process-math">\(v\)</span> generates <span class="process-math">\(M\)</span> as a <span class="process-math">\(\Q[x]\)</span>-module. The kernel will be a (necessarily principle) ideal of <span class="process-math">\(\Q[x]\text{;}\)</span> we just need to find it. Note that <span class="process-math">\(x^2 v = \vectwo21\text{,}\)</span> <span class="process-math">\(xv\)</span> and <span class="process-math">\(v\)</span> are linearly dependent and in fact we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x^2 v = 2x v- v
+\end{equation*}
+</div>
+<div class="para">and hence <span class="process-math">\((x^2 -2x + 1)v =0\text{.}\)</span> This gives that <span class="process-math">\(x^2 -2x + 1\)</span> is in the kernel of <span class="process-math">\(\pi\)</span> and hence, by the <span class="process-math">\(0\)</span>-th Isomorphism Theorem we have an induced homomorphism of <span class="process-math">\(\Q[x]\)</span>-modules</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\ov{\pi}: \Q[x]/(x^2 - 2x + 1) \onto M
+\end{equation*}
+</div>
+<div class="para">induced by <span class="process-math">\(\pi\text{.}\)</span> The map <span class="process-math">\(\ov{\pi}\)</span> is onto since <span class="process-math">\(\pi\)</span> is onto. Since the source and target both have dimension two as <span class="process-math">\(\Q\)</span>-vector spaces, <span class="process-math">\(\ov{\pi}\)</span> is <span class="process-math">\(\Q\)</span>-linear, and <span class="process-math">\(\ov{\pi}\)</span> is onto, it must in fact be an isomorphism of <span class="process-math">\(\Q[x]\)</span>-modules (by the Rank-Nullity Theorem).</div>
 </div>
 <span class="incontext"><a href="sec-rcf.html#p-2531" class="internal">in-context</a></span>
 </body>

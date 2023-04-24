@@ -473,10 +473,10 @@ window.MathJax = {
 <div class="toc-item"><a href="ch-intro-groups.html" class="internal"><span class="codenumber">1</span> <span class="title">Intro to Groups</span></a></div>
 <ul class="structural">
 <li>
-<div class="toc-item"><a href="group-basics.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Group Basics</span></a></div>
+<div class="toc-item"><a href="sec-group-basics.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Group Basics</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="group-basics.html#subsec-beginnings" class="internal"><span class="title">Binary Operations and Groups</span></a></div></li>
-<li><div class="toc-item"><a href="group-basics.html#subsec-order" class="internal"><span class="title">Order</span></a></div></li>
+<li><div class="toc-item"><a href="sec-group-basics.html#subsec-beginnings" class="internal"><span class="title">Binary Operations and Groups</span></a></div></li>
+<li><div class="toc-item"><a href="sec-group-basics.html#subsec-order" class="internal"><span class="title">Order</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -492,7 +492,8 @@ window.MathJax = {
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-subgroups.html#subsec-subgroup-basics" class="internal"><span class="title">Subgroup Basics</span></a></div></li>
 <li><div class="toc-item"><a href="sec-subgroups.html#subsec-center" class="internal"><span class="title">The Center of a Group</span></a></div></li>
-<li><div class="toc-item"><a href="sec-subgroups.html#exercises-1" class="internal"><span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="sec-subgroups.html#subsec-ghom-subgroups" class="internal"><span class="title">Homormophisms and Subgroups</span></a></div></li>
+<li><div class="toc-item"><a href="sec-subgroups.html#exercises-1" class="internal"><span class="title">Qualifying Exam Problems</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -500,7 +501,7 @@ window.MathJax = {
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#subsec-gp-generators" class="internal"><span class="title">Generators</span></a></div></li>
 <li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#subsec-cyclic-gp" class="internal"><span class="title">Cyclic Groups</span></a></div></li>
-<li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#exercises-2" class="internal"><span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="sec-gen-cyclic-gp.html#exercises-2" class="internal"><span class="title">Qualifying Exam Problems</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -935,40 +936,40 @@ window.MathJax = {
 <span class="type">Section</span> <span class="codenumber">1.2</span> <span class="title">Subrings</span>
 </h2>
 <blockquote class="blockquote" id="blockquote-43">
-<div class="para" id="p-1237">“We all live in a yellow submaring”</div> <cite class="attribution">―Ringo Starr</cite>
+<div class="para" id="p-1245">“We all live in a yellow submaring”</div> <cite class="attribution">―Ringo Starr</cite>
 </blockquote>
 <article class="definition definition-like" id="def-subring"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.31</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1238">A <em class="emphasis">subring</em> of a ring <span class="process-math">\(R\)</span> is a subset <span class="process-math">\(S \subseteq R\)</span> such that <span class="process-math">\(S\)</span> is a ring under the operations of <span class="process-math">\(R\text{.}\)</span> When <span class="process-math">\(R\)</span> is a field we call <span class="process-math">\(S\)</span> a <em class="emphasis">subfield</em> of <span class="process-math">\(R\text{.}\)</span>
+<div class="para" id="p-1246">A <em class="emphasis">subring</em> of a ring <span class="process-math">\(R\)</span> is a subset <span class="process-math">\(S \subseteq R\)</span> such that <span class="process-math">\(S\)</span> is a ring under the operations of <span class="process-math">\(R\text{.}\)</span> When <span class="process-math">\(R\)</span> is a field we call <span class="process-math">\(S\)</span> a <em class="emphasis">subfield</em> of <span class="process-math">\(R\text{.}\)</span>
 </div></article><article class="lemma theorem-like" id="lem-subring-test"><h3 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">1.32</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-1239">
+<div class="para logical" id="p-1247">
 <div class="para">A nonempty subset <span class="process-math">\(S\)</span> of a ring <span class="process-math">\(R\)</span> is a subring iff either one of the following hold:</div>
 <ol class="decimal">
-<li id="li-378"><div class="para" id="p-1240">
+<li id="li-383"><div class="para" id="p-1248">
 <span class="process-math">\(S\)</span> is a subgroup of <span class="process-math">\(R\)</span> closed under multiplication.</div></li>
-<li id="li-379"><div class="para" id="p-1241">
+<li id="li-384"><div class="para" id="p-1249">
 <span class="process-math">\(S\)</span> is closed under subtraction and multiplication.</div></li>
 </ol>
 </div></article><article class="example example-like" id="ex-subring-examples"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.33</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-1242"><ul class="disc">
-<li id="li-380"><div class="para" id="p-derived-li-380">
+<div class="para logical" id="p-1250"><ul class="disc">
+<li id="li-385"><div class="para" id="p-derived-li-385">
 <span class="process-math">\(\Z\)</span> is a subring of <span class="process-math">\(\Q\text{,}\)</span> which is a subring of <span class="process-math">\(\R\text{,}\)</span> which is a subring of <span class="process-math">\(\C\text{.}\)</span>
 </div></li>
-<li id="li-381"><div class="para" id="p-derived-li-381">
+<li id="li-386"><div class="para" id="p-derived-li-386">
 <span class="process-math">\(2\Z\)</span> is a subring without <span class="process-math">\(1\)</span> of the ring <span class="process-math">\(Z\)</span> with <span class="process-math">\(1\text{.}\)</span>
 </div></li>
-<li id="li-382"><div class="para" id="p-derived-li-382">The set of continuous functions mapping <span class="process-math">\([0,1]\to \R\)</span> is a subring of <span class="process-math">\(\Fun([0,1],\R)\text{,}\)</span> denoted <span class="process-math">\(\cC([0,1])\text{.}\)</span>
+<li id="li-387"><div class="para" id="p-derived-li-387">The set of continuous functions mapping <span class="process-math">\([0,1]\to \R\)</span> is a subring of <span class="process-math">\(\Fun([0,1],\R)\text{,}\)</span> denoted <span class="process-math">\(\cC([0,1])\text{.}\)</span>
 </div></li>
-<li id="li-383"><div class="para" id="p-derived-li-383">The set <span class="process-math">\(\Z[i]=\left\{a+bi\mid a,b \in \Z\right\}\)</span> is a subring of <span class="process-math">\(\C\)</span> called the ring of Gaussian integers.</div></li>
+<li id="li-388"><div class="para" id="p-derived-li-388">The set <span class="process-math">\(\Z[i]=\left\{a+bi\mid a,b \in \Z\right\}\)</span> is a subring of <span class="process-math">\(\C\)</span> called the ring of Gaussian integers.</div></li>
 </ul></div></article><article class="definition definition-like" id="def-center-ring"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.34</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-1243">
+<div class="para logical" id="p-1251">
 <div class="para">The <em class="emphasis">center</em> of a ring <span class="process-math">\(R\)</span> is the set</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -978,15 +979,15 @@ Z(R)=\{z \in R \mid zr = rz \text{ for all }r \in R\}.
 </div></article><article class="lemma theorem-like" id="lem-center-is-subring"><h3 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">1.35</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1244">The center <span class="process-math">\(Z(R)\)</span> is a subring of <span class="process-math">\(R\text{.}\)</span> If <span class="process-math">\(R\)</span> is a ring with identity <span class="process-math">\(1\)</span> then <span class="process-math">\(Z(R)\)</span> is a subring that contains the same <span class="process-math">\(1\text{.}\)</span>
+<div class="para" id="p-1252">The center <span class="process-math">\(Z(R)\)</span> is a subring of <span class="process-math">\(R\text{.}\)</span> If <span class="process-math">\(R\)</span> is a ring with identity <span class="process-math">\(1\)</span> then <span class="process-math">\(Z(R)\)</span> is a subring that contains the same <span class="process-math">\(1\text{.}\)</span>
 </div></article><article class="problem example-like" id="exe-center-of-quaternion-ring"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">1.36</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1245">Determine the center of the real quaternion ring <span class="process-math">\(\mathbb{H}\text{.}\)</span>
+<div class="para" id="p-1253">Determine the center of the real quaternion ring <span class="process-math">\(\mathbb{H}\text{.}\)</span>
 </div></article><article class="lemma theorem-like" id="lem-quadratic-field"><h3 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">1.37</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-1246">
+<div class="para logical" id="p-1254">
 <div class="para">Let <span class="process-math">\(d\)</span> be a squarefree integer (that is, the prime factorization of <span class="process-math">\(d\)</span> has no repeated primes). Then the subset</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -995,8 +996,8 @@ Z(R)=\{z \in R \mid zr = rz \text{ for all }r \in R\}.
 </div>
 <div class="para">of <span class="process-math">\(\C\)</span> is a subring that is a field (called a <em class="emphasis">quadratic field</em>), and <span class="process-math">\(\Z[\sqrt{d}] = \{a + b\sqrt{d} | a,b \in \Z\}\)</span> is a subring of <span class="process-math">\(\Q(\sqrt{d})\text{.}\)</span>
 </div>
-</div></article><article class="hiddenproof" id="proof-42"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-42"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-42"><article class="hiddenproof"><div class="para" id="p-1247">Both <span class="process-math">\(\Q(\sqrt {d})\)</span> and <span class="process-math">\(\Z[\sqrt{d}]\)</span> are closed under subtraction and multiplication, so they are subrings of <span class="process-math">\(\C\text{.}\)</span>
-</div> <div class="para logical" id="p-1248">
+</div></article><article class="hiddenproof" id="proof-42"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-42"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-42"><article class="hiddenproof"><div class="para" id="p-1255">Both <span class="process-math">\(\Q(\sqrt {d})\)</span> and <span class="process-math">\(\Z[\sqrt{d}]\)</span> are closed under subtraction and multiplication, so they are subrings of <span class="process-math">\(\C\text{.}\)</span>
+</div> <div class="para logical" id="p-1256">
 <div class="para">The fact that <span class="process-math">\(\Q(\sqrt {d})\)</span> is a {} follows since <span class="process-math">\(\Q(\sqrt {d})\)</span> is also closed under taking inverses. Indeed the inverse of <span class="process-math">\(r + q \sqrt{d}\)</span> (from <span class="process-math">\(\C\)</span>) turns out to be</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1009,59 +1010,59 @@ Z(R)=\{z \in R \mid zr = rz \text{ for all }r \in R\}.
 <article class="problem example-like" id="exe-finding-subring-counterexamples"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">1.38</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-1249">
+<div class="para logical" id="p-1257">
 <div class="para">If <span class="process-math">\(R\)</span> is a ring and <span class="process-math">\(S\)</span> is a subring of <span class="process-math">\(R\text{,}\)</span> it can happen that</div>
 <ol class="decimal">
-<li id="li-384"><div class="para" id="p-1250">
+<li id="li-389"><div class="para" id="p-1258">
 <span class="process-math">\(R\)</span> is unital but <span class="process-math">\(S\)</span> is not (e.g. <span class="process-math">\(S=2\Z\subset R= \Z\)</span>)</div></li>
-<li id="li-385"><div class="para" id="p-1251">
+<li id="li-390"><div class="para" id="p-1259">
 <span class="process-math">\(S\)</span> is unital but <span class="process-math">\(R\)</span> is not</div></li>
-<li id="li-386"><div class="para" id="p-1252">both <span class="process-math">\(R\)</span> and <span class="process-math">\(S\)</span> are unital but <span class="process-math">\(1_R\neq 1_S\)</span>
+<li id="li-391"><div class="para" id="p-1260">both <span class="process-math">\(R\)</span> and <span class="process-math">\(S\)</span> are unital but <span class="process-math">\(1_R\neq 1_S\)</span>
 </div></li>
 </ol>
 <div class="para">Find examples for each of these situations!</div>
 </div></article><article class="problem example-like" id="exe-subring-preservations"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">1.39</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1253">Any subring of a commutative ring is a commutative ring. Any unital subring of an integral domain is an integral domain.</div></article><section class="exercises" id="exercises-19"><h3 class="heading hide-type">
+<div class="para" id="p-1261">Any subring of a commutative ring is a commutative ring. Any unital subring of an integral domain is an integral domain.</div></article><section class="exercises" id="exercises-19"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
-<div class="exercisegroup" id="exercisegroup-22">
+<div class="exercisegroup" id="exercisegroup-20">
 <h4 class="heading"><span class="title">Computations and Examples.</span></h4>
-<div class="introduction" id="introduction-24"><div class="para" id="p-1254"></div></div>
+<div class="introduction" id="introduction-22"><div class="para" id="p-1262"></div></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-131"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-131"><h5 class="heading">
+<span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-131"><article class="exercise exercise-like"><div class="para" id="p-1263">Coming soon to an OER near you!</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-21" id="hint-21"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-21"><div class="hint solution-like"><div class="para" id="p-1264">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-69" id="solution-69"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-69"><div class="solution solution-like"><div class="para" id="p-1265">Coming soon to an OER near you!</div></div></div>
+</div></article></div>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-21">
+<h4 class="heading"><span class="title">Formal Proofs.</span></h4>
+<div class="introduction" id="introduction-23"><div class="para" id="p-1266"></div></div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-132"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-132"><h5 class="heading">
-<span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-132"><article class="exercise exercise-like"><div class="para" id="p-1255">Coming soon to an OER near you!</div>
+<span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-132"><article class="exercise exercise-like"><div class="para" id="p-1267">Coming soon to an OER near you!</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-21" id="hint-21"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-21"><div class="hint solution-like"><div class="para" id="p-1256">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-69" id="solution-69"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-69"><div class="solution solution-like"><div class="para" id="p-1257">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-22" id="hint-22"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-22"><div class="hint solution-like"><div class="para" id="p-1268">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-70" id="solution-70"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-70"><div class="solution solution-like"><div class="para" id="p-1269">Coming soon to an OER near you!</div></div></div>
 </div></article></div>
 </div>
 </div>
-<div class="exercisegroup" id="exercisegroup-23">
-<h4 class="heading"><span class="title">Formal Proofs.</span></h4>
-<div class="introduction" id="introduction-25"><div class="para" id="p-1258"></div></div>
+<div class="exercisegroup" id="exercisegroup-22">
+<h4 class="heading"><span class="title">Qualifying Exam Problems.</span></h4>
+<div class="introduction" id="introduction-24"><div class="para" id="p-1270"></div></div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-133"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-133"><h5 class="heading">
-<span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-133"><article class="exercise exercise-like"><div class="para" id="p-1259">Coming soon to an OER near you!</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-22" id="hint-22"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-22"><div class="hint solution-like"><div class="para" id="p-1260">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-70" id="solution-70"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-70"><div class="solution solution-like"><div class="para" id="p-1261">Coming soon to an OER near you!</div></div></div>
-</div></article></div>
-</div>
-</div>
-<div class="exercisegroup" id="exercisegroup-24">
-<h4 class="heading"><span class="title">Qualifying Exam Problems.</span></h4>
-<div class="introduction" id="introduction-26"><div class="para" id="p-1262"></div></div>
-<div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="exercise-134"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-134"><h5 class="heading">
 <span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-134"><article class="exercise exercise-like"><div class="para" id="p-1263">Coming soon to an OER near you!</div>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-133"><article class="exercise exercise-like"><div class="para" id="p-1271">Coming soon to an OER near you!</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-23" id="hint-23"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-23"><div class="hint solution-like"><div class="para" id="p-1264">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-71" id="solution-71"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-71"><div class="solution solution-like"><div class="para" id="p-1265">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-23" id="hint-23"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-23"><div class="hint solution-like"><div class="para" id="p-1272">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-71" id="solution-71"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-71"><div class="solution solution-like"><div class="para" id="p-1273">Coming soon to an OER near you!</div></div></div>
 </div></article></div>
 </div>
 </div></section></section></div>

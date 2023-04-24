@@ -13,14 +13,30 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(R\)</span> be a ring and let <span class="process-math">\(M\)</span> be a left <span class="process-math">\(R\)</span>-module. An <em class="emphasis"><span class="process-math">\(R\)</span>-submodule</em> of <span class="process-math">\(M\)</span> is a subset <span class="process-math">\(N \subseteq M\)</span> such that</div>
-<ol class="decimal">
-<li><div class="para">
-<span class="process-math">\(N\)</span> is a subgroup of <span class="process-math">\(M\)</span> under <span class="process-math">\(+\)</span> (so, we have <span class="process-math">\(0 \in N\text{,}\)</span> if <span class="process-math">\(n \in N\)</span> then <span class="process-math">\(-n \in N\text{,}\)</span> and if <span class="process-math">\(n_1, n_2 \in N\)</span> then <span class="process-math">\(n_1 + n_2 \in N\)</span>), and</div></li>
-<li><div class="para">
-<span class="process-math">\(rn \in N\)</span> for all <span class="process-math">\(r \in R\)</span> and <span class="process-math">\(n \in N\text{.}\)</span>
-</div></li>
-</ol>
+<div class="para">Let <span class="process-math">\(x,y \in R\)</span> and <span class="process-math">\(m,n \in M\text{.}\)</span> One checks that the properties in the definition of module hold for the given action using properties of ring homomorphisms. In detail,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(x+y)m =\phi(x + y)m= (\phi(x)+\phi(y))m=\phi(x)m + \phi(y)m=xm+ym,
+\end{equation*}
+</div>
+<div class="para">since <span class="process-math">\(\phi\)</span> preserves addition,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x(ym)=\phi(x) (\phi(y)m) = (\phi(x) \phi(y)) m = \phi(xy) m = (xy) m,
+\end{equation*}
+</div>
+<div class="para">since <span class="process-math">\(\phi\)</span> preserves multiplication, and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+1 \cdot m = \phi(1) m = 1_S m = m
+\end{equation*}
+</div>
+<div class="para">since <span class="process-math">\(\phi\)</span> preserves multiplicative identities. This gives three of the axioms. The final also holds:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x(m + n) = \phi(x) (m+n) = \phi(x)m + \phi(x)n = xm + xn.
+\end{equation*}
+</div>
 </div>
 <span class="incontext"><a href="sec-defmod.html#p-1823" class="internal">in-context</a></span>
 </body>

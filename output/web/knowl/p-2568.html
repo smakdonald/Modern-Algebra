@@ -12,29 +12,8 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para logical">
-<div class="para">Note that</div>
-<div class="displaymath process-math">
-\begin{equation*}
-C(x)=[0], C(x^2)=
-\begin{bmatrix}
-0 &amp; 0\\
-1 &amp; 0\\
-\end{bmatrix}, 
-C(x)\oplus C(x^2)\begin{bmatrix}
-0 &amp; 0 &amp; 0\\
-0 &amp; 0 &amp; 0\\
-0 &amp; 1 &amp; 0\\
-\end{bmatrix}, \textrm{ and } C(x^3)=
-\begin{bmatrix}
-0 &amp; 0 &amp; 0\\
-1 &amp; 0 &amp; 0\\
-0 &amp; 1 &amp; 0\\
-\end{bmatrix}.
-\end{equation*}
-</div>
-<div class="para">As <span class="process-math">\(C(x)\oplus C(x^2)\)</span> has rank 1 and <span class="process-math">\(C(x^3)\)</span> has rank 2, since <span class="process-math">\(\rank(A)=\rank(B)\)</span> we see that they must have the same invariant factors, making them similar.</div>
-</div>
+<div class="para">
+<span class="process-math">\((\Rightarrow)\)</span> Suppose <span class="process-math">\(A\sim B\text{.}\)</span> Thus there exists some invertible matrix <span class="process-math">\(P\)</span> such that <span class="process-math">\(PAP\inv=B\)</span> by the definition of similar matrices. Let <span class="process-math">\(U\in\ker(PA)\text{.}\)</span> Thus <span class="process-math">\(PA(U)=0\)</span> and <span class="process-math">\(P(AU)=0\text{.}\)</span> We multiply both sides by <span class="process-math">\(P\inv\)</span> to see that <span class="process-math">\(AU=0\text{.}\)</span> Therefore the <span class="process-math">\(\ker(PA)=\ker(A)\text{,}\)</span> and hence the ranks of <span class="process-math">\(PA\)</span> and <span class="process-math">\(A\)</span> are equal by Rank Nullity.</div>
 <span class="incontext"><a href="sec-rcf.html#p-2568" class="internal">in-context</a></span>
 </body>
 </html>

@@ -397,8 +397,7 @@
       <chapter xml:id="ch-intro-groups">
         <title>Intro to Groups</title>
       
-        <section xml:id="group-basics">
-          <title>Group Basics </title>
+        <section xml:id="sec-group-basics"><title>Group Basics </title>
 
           <subsection xml:id="subsec-beginnings"><title>Binary Operations and Groups</title>
 
@@ -1060,8 +1059,7 @@
     
         </section>
       
-        <section xml:id="sec-common-groups">
-          <title>Common Groups</title>
+        <section xml:id="sec-common-groups"><title>Common Groups</title>
       
           <subsection xml:id="subsec-d2n">
             <title>Dihedral Groups</title> 
@@ -1165,8 +1163,7 @@
       
             <p>Let's introduce another very important example: symmetric groups.</p>
       
-            <definition xml:id="def-permutation">
-              <title>Permutation</title>
+            <definition xml:id="def-permutation"><title>Permutation</title>
               <statement>
                 <p>
                   A <em>permutation</em> of a set <m>X</m> is a bijective function <m>\sigma:X\to X</m>. The set of all permutations of a set <m>X</m> is denoted <m>\Perm(X)</m>.
@@ -1174,8 +1171,7 @@
               </statement>
             </definition>
       
-            <definition xml:id="def-perm-group">
-              <title>Symmetric Group</title>
+            <definition xml:id="def-symmetric-group"><title>Symmetric Group <m>S_n</m></title>
               <statement>
                 <p>
                   For any <m>n\in\N</m>, the <em>symmetric group</em> is the set <m>S_n=\Perm(\{1,\dots,n\})</m> equipped with the composition of functions as its binary operation.
@@ -1184,15 +1180,13 @@
               </statement>
             </definition>
 
-            <exercise xml:id="exe-sn-order">
-              <title>Order of <m>S_n</m></title>
+            <exercise xml:id="exe-sn-order"><title>Order of <m>S_n</m></title>
               <p>
                 Prove <m>|S_n|=n!</m>.
               </p>
             </exercise>
      
-            <definition xml:id="def-cycle">
-              <title>Cycles and Transpositions</title>
+            <definition xml:id="def-cycle"><title>Cycles and Transpositions</title>
               <statement>
                 <p>
                   If <m>i_1, \dots, i_m</m> are distinct integers between <m>1</m> and <m>n</m>, then <m>\sigma=(i_1 \, i_2 \, \dots i_m)</m> denotes the element of <m>S_n</m> that satisfies 
@@ -1206,12 +1200,11 @@
 
             <example xml:id="ex-cycle">
               <p>
-                For eample <m>(1 \, 3 \, 7)</m>, regarded as an element of <m>S_{13}</m> sends <m>1</m> to <m>3</m>, <m>3</m> to <m>7</m> and <m>7</m> to <m>1</m>, and it fixes <m>2,4,5,7,8,9,10,11,12,13</m>. (Note that the value of <m>n</m> in cycle notation is sometime ambiguous.)
+                For example, <m>(1 \, 3 \, 7)</m>, regarded as an element of <m>S_{13}</m> sends <m>1</m> to <m>3</m>, <m>3</m> to <m>7</m> and <m>7</m> to <m>1</m>, and it fixes <m>2,4,5,7,8,9,10,11,12,13</m>. (Note that the value of <m>n</m> in cycle notation is sometime ambiguous.)
               </p>
             </example>
 
-            <exercise xml:id="exe-1-cycles">
-              <title><m>1</m>-Cycles in <m>S_n</m></title>
+            <exercise xml:id="exe-1-cycles"><title><m>1</m>-Cycles in <m>S_n</m></title>
               <p>
                 Determine the number of <m>1</m>-cycles in <m>S_n</m>. 
               </p>
@@ -1219,7 +1212,7 @@
 
             <remark><p>Note that distinct lists of integers represent the same cycle if they are cyclical rearrangements of each other, e.g., <m>(1 \, 2 \, 3) = (2 \, 3 \, 1)</m>. However, <m>(1 \, 2 \, 3) \neq (2 \, 1 \, 3)</m>.</p></remark>
 
-             <example xml:id="exe-composing-cycles">
+             <example xml:id="exe-composing-cycles"><title>Composing Cycle</title>
               <p>
                 We compose cycles the same way we compose functions. So, for example 
                 <me>
@@ -1231,8 +1224,7 @@
 
             <p>How can we determine the order of elements of <m>S_n?</m> Like this.</p>
 
-            <proposition xml:id="exe-permutation-order">
-              <title>Permutation Order</title>
+            <proposition xml:id="exe-permutation-order"><title>Permutation Order</title>
               <statement>
               <p>
                 Prove that the order of a permutation is the least common multiple of the lengths of the cycles it is a product of.
@@ -1250,7 +1242,7 @@
             </proof>
             </proposition>
 
-            <proposition xml:id="prop-disjoint-cycles-commute">
+            <proposition xml:id="prop-disjoint-cycles-commute"><title>Disjoint Commutes</title>
               <statement>
                 <p>
                   Disjoint cycles commute, that is, if <m>i_1 , i_2 \, \dots i_m, j_1 , j_2 \, \dots j_k\in [n]</m>, 
@@ -1266,7 +1258,7 @@
               </statement>
             </proposition>
       
-            <theorem xml:id="thm-cycledecomp">
+            <theorem xml:id="thm-cycledecomp"><title>Cycle Decompostion</title>
               <statement>
                 <p>
                   <ol>
@@ -1288,18 +1280,61 @@
       
             <remark><p>For the uniqueness part of statement (1) in the above proposition one needs to establish a convention regarding <m>1</m>-cycles, that is one needs to stipulate either that the <m>1</m>-cycles will not be recorded (which gives the shortest such factorization) or that all the <m>1</m>-cycles will be recorded (which gives the longest such factorization, but also the only one that makes it clear what the number <m>n</m> is).</p></remark>
 
-            <exercise xml:id="exe-identity-even">
-              <title>Identity Permutation</title>
-              <p>
-                The identity permutation in <m>S_n</m> is even, but not odd.
-              </p>
+            <p>Now that we know that every permutation can be written as a product of transpositions, we can categotize them based on that product.</p>
+
+            <definition xml:id="def-even-odd-permutation"><title>Even and Odd Permutaitons</title>
+              <statement>
+                <p>A permutation <m>\s</m> is <em>even</em> is if is the product of an even number of transpositions, otherwise it is <em>odd</em>.</p>
+              </statement>
+            </definition>
+
+            <proposition xml:id="prop-even-odd-properties"><title>Even and Odd Properties</title>
+              <statement>
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        A <m>k</m>-cycle is even if and only if <m>k</m> is odd.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Products of even permutations are even, products of odd permutations are even, products of even and odd permutations are odd. 
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        The identity permutation in <m>S_n</m> is even, but not odd.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        No permutation in <m>S_n</m> is both even and odd.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+            </proposition>
+
+            <definition xml:id="def-alternating-group"><title>Alternating Group</title>
+                <statement>
+                  <p>
+                    The <em>alternating group</em> <m>A_n</m> is the subset of all even cycles of <m>S_n</m>.
+                    <notation><usage><m>A_n</m></usage><description>the alternating group on <m>n</m> elements </description></notation>          
+                  </p>
+                </statement>
+            </definition>
+
+            <exercise xml:id="exe-alternating-group"><title>Left at the Alter(nating Group)</title>
+              <p>Verify that <m>A_n</m> is indeed a group.</p>
             </exercise>
 
-            <exercise xml:id="exe-permutation-even-odd">
-              <title>No Evodds Allowed</title>
-              <p>
-                The no permutation in <m>S_n</m> is both even and odd.
-              </p>
+            <exercise xml:id="exe-an-order"><title>Order of <m>A_n</m></title>
+              <p>Prove <m>|A_n|=\frac{n!}{2}</m>.</p>
             </exercise>
       
           </subsection>
@@ -1311,8 +1346,7 @@
       
             <p>For our last example we mention the group of <em>quaternions</em>, written <m>Q_8</m>.</p>
             
-            <definition xml:id="def-quaternions">
-              <title>Quaternions</title>
+            <definition xml:id="def-quaternions"><title>Quaternions</title>
               <statement>
                 <p>
                   The <em>quaternion group</em> <m>Q_8</m> is a set with <m>8</m> elements 
@@ -1330,9 +1364,7 @@
               </statement>
             </definition>
       
-            <p>
-              The quaternion group arises in the study of rotations in three dimensions. It has important applications in computer graphics and computer vision, as well as in physics and algebra.
-            </p>
+            <p>The quaternion group arises in the study of rotations in three dimensions. It has important applications in computer graphics and computer vision, as well as in physics and algebra.</p>
 
             <exercise xml:id="exe-heinous-commutes">
               <title>Heinous Commutes</title>
@@ -1341,20 +1373,15 @@
               </p>
             </exercise>
       
-            <p>
-              There isn't much for us to do with <m>Q_8</m> right now, but you'd be surprised by the unusual places this group manages to crop up...
-            </p>
+            <p>There isn't much for us to do with <m>Q_8</m> right now, but you'd be surprised by the unusual places this group manages to crop up...<fn>For example, (Coming Soon) </fn></p>
       
           </subsection>
-      
           
         </section>
       
-        <section xml:id="sec-subgroups">
-          <title>Subgroups</title>
+        <section xml:id="sec-subgroups"><title>Subgroups</title>
       
-          <subsection xml:id="subsec-subgroup-basics">
-            <title>Subgroup Basics</title>
+          <subsection xml:id="subsec-subgroup-basics"><title>Subgroup Basics</title>
 
             <blockquote>
               <p>
@@ -1464,6 +1491,18 @@
                   <li>
                     <p>
                       <m>\Z^\times\leq\Q^\times\leq\R^\times\leq\C^\times</m>
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>A_n\leq S_n</m> for all <m>n\in\N</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>\Inn(G)\leq\operatorname{Aut}(G)</m>.
                     </p>
                   </li>
       
@@ -1615,32 +1654,6 @@
               </statement>
             </exercise>
       
-            <definition xml:id="def-alternating-group">
-              <title>Alternating Group</title>
-              <statement>
-                <p>
-                  The <em>alternating group</em> <m>A_n</m> is the subset of all even cycles of <m>S_n</m>.
-                  <notation><usage><m>A_n</m></usage><description>the alternating group on <m>n</m> elements </description></notation>          
-                </p>
-              </statement>
-            </definition>
-      
-            <proposition xml:id="prop-alternating-group-is-subgroup">
-              <title><m>A_n\leq S_n</m></title>
-              <statement>
-                <p>
-                  Prove that <m>A_n</m> is a subgroup of <m>S_n</m>.
-                </p>
-              </statement>
-            </proposition>
-
-            <exercise xml:id="exe-an-order">
-              <title>Order of <m>A_n</m></title>
-              <p>
-                Prove <m>|A_n|=\frac{n!}{2}</m>.
-              </p>
-            </exercise>
-      
             <definition xml:id="def-special-linear-group">
               <title>Special Linear Group</title>
               <statement>
@@ -1664,8 +1677,7 @@
             
           </subsection>
       
-          <subsection xml:id="subsec-center">
-            <title>The Center of a Group</title>
+          <subsection xml:id="subsec-center"><title>The Center of a Group</title>
 
             <blockquote><p><q>Stay in the center, and you will be ready to move in any direction.</q></p><attribution>Alan Watts</attribution></blockquote>
       
@@ -1781,40 +1793,77 @@
             </exercise>
           </subsection>
 
-          <exercises>
-          
-            <exercisegroup> <title>Qualifying Exam Problems</title>
-              
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title>May 2021 (1a)</title>
-    
+          <subsection xml:id="subsec-ghom-subgroups"><title>Homormophisms and Subgroups</title>
+
+            <theorem xml:id="thm-properties-of-group-homoms"><title>Group Homomorphism Subgroups</title>    
                 <statement>
                   <p>
-                    Let <m>G</m> be a group (not necessarily finite) and <m>H</m> a nonempty subset of <m>G</m> that is closed under multiplication. Suppose that for all <m>g\in G</m> we have <m>g^2\in H</m>. Prove <m>H</m> is a subgroup of <m>G</m>. 
-                  </p>  
+                    <ol>
+                      <li>
+                        <p>
+                          (Images are subgroups) If <m>\varphi: G \to H</m> is a homomorphism of groups, then the image of <m>\varphi</m> is a subgroup of <m>H</m>.
+                        </p>
+                      </li>
+        
+                      <li>
+                        <p>
+                          (Kernels are subgroups) If <m>\varphi: G \to H</m> is a homomorphism of groups, then the kernel of <m>\varphi</m> is a subgroup of <m>G</m>.
+                        </p>
+                      </li>
+        
+                      <li>
+                        <p>
+                          (Preimages are subgroups) Prove that if <m>\varphi:G\to H</m> is a group homomorphism and <m>K\leq H</m> then the preimage of <m>K</m>, defined as <m>\varphi^{-1}(K)=\{g\in G | \varphi(g)\in K\}</m>, is a subgroup of <m>G</m>.
+                        </p>
+                      </li>
+                    </ol>
+                  </p>
                 </statement>
-    
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-    
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-                
-                
-              </exercise>
+              </theorem>
+
+            <theorem xml:id="thm-cayley"><title>Cayley's Theorem</title><creator><m>1854</m></creator>
+              <statement>
+                <p>
+                  Every group is isomorphic to a subgroup of <m>S_n</m>.
+                </p>
+              </statement>
+            </theorem>
+
+            <historical>
+              <p>
+                Cayley's Theorem is named after the British mathematician Arthur Cayley. Cayley was a prolific mathematician who made significant contributions to a wide range of fields, including algebra, geometry, and graph theory. Cayley was also a strong advocate for women's education and played an important role in the movement to admit women to Cambridge University. In the 1860s, he was part of a group of academics who lobbied for women to be allowed to take the Cambridge Mathematical Tripos exam, which was the standard test for mathematics students at the time.
+              </p>
+            </historical>
+
+            <remark><p>This is a nearly useless theorem.</p></remark>
+            
+          </subsection>
+
+          <exercises><title>Qualifying Exam Problems</title>
           
-            </exercisegroup>
+            <exercise><title>May 2021 (1a)</title>
+  
+              <statement>
+                <p>
+                  Let <m>G</m> be a group (not necessarily finite) and <m>H</m> a nonempty subset of <m>G</m> that is closed under multiplication. Suppose that for all <m>g\in G</m> we have <m>g^2\in H</m>. Prove <m>H</m> is a subgroup of <m>G</m>. 
+                </p>  
+              </statement>
+  
+              <hint>
+                <p>
+                  Coming soon to an OER near you!
+                </p>
+              </hint>
+  
+              <solution>
+                <p>
+                  Coming soon to an OER near you!
+                </p>
+              </solution>
+              
+              
+            </exercise>
+          
           </exercises>
       
         </section>
@@ -1825,15 +1874,9 @@
           <subsection xml:id="subsec-gp-generators">
             <title>Generators</title>
 
-            <blockquote>
-              <p>
-                <q>How often misused words generate misleading thoughts.</q>
-              </p>
-              <attribution>Herbert Spencer</attribution>
-            </blockquote>
+            <blockquote><p><q>How often misused words generate misleading thoughts.</q></p><attribution>Herbert Spencer</attribution></blockquote>
           
-            <definition xml:id="def-gensubgp">
-              <title>Generated Subgroup</title>
+            <definition xml:id="def-gensubgroup"><title>Generated Subgroup</title>
               <statement>
                 <p>
                   Given a group <m>G</m> and a subset <m>X</m> of <m>G</m>, the <em>subgroup of <m>G</m> generated by <m>X</m></em> is 
@@ -1846,8 +1889,7 @@
               </statement>
             </definition>
 
-            <lemma xml:id="lem-gensubgp">
-              <title>Elements of <m>\igen X</m></title>
+            <lemma xml:id="lem-gensubgp"><title>Elements of <m>\igen X</m></title>
               <statement>
                 <p>
                   For a subset <m>X</m> of <m>G</m>, the elements of <m>\langle X \rangle</m> can be described as: 
@@ -1907,10 +1949,7 @@
               </p>
             </example>
 
-            <remark><p>Note that in <xref ref="thm-cycledecomp"/> we showed <m>S_n</m> is generated by transpositions.</p></remark>
-
-            <exercise xml:id="exe-d2p">
-              <title>Generating <m>D_{2p}</m></title>
+            <exercise xml:id="exe-d2p"><title>Generating <m>D_{2p}</m></title>
               <statement>
               <p>
                 Let <m>p\ge 3</m> be prime and <m>r,r'</m> be any two distinct reflections in <m>D_{2p}</m>. Then <m>\igen{r,r'}=D_{2p}</m>.
@@ -1918,8 +1957,7 @@
             </statement>
             </exercise>
 
-            <exercise xml:id="generating-gl">
-              <title>Generating <m>\GL_n(\R)</m></title>
+            <exercise xml:id="generating-gl"><title>Generating <m>\GL_n(\R)</m></title>
               <statement>
               <p>
                 For any integer <m>n \geq 1</m>, the set of column vectors <m>e_i</m> consisting of <m>1</m> in the <m>i\th</m> row and <m>0</m> elsewhere generate <m>\GL_n(\R)</m>. As you may recall from a linear algebra course, these are called the <em>elementary matrices</em>. (Bonus: what subgroup do the <q>type I</q> elementary matrices generate?)
@@ -1927,18 +1965,7 @@
             </statement>
             </exercise>
 
-            <theorem xml:id="thm-generating-sn">
-              <statement>
-                <p>
-                  For <m>n\ge 2</m> prove that <m>S_n</m> is generated by <m>(12)</m> and the <m>n</m>-cycle <m>(12\cdots n)</m>.
-                </p>
-              </statement>
-            </theorem>
-        
-            <remark><p>Funnily enough, this theorem will prove surprisingly useful all the way down in <xref text="title" ref="ch-galois"/>. </p></remark>
-
-            <proposition xml:id="prop-generating-an">
-              <title>Generating <m>A_n</m></title>
+            <proposition xml:id="prop-generating-an"><title>Generating <m>A_n</m></title>
               <statement>
                 <p>
                   <m>A_n</m> is the subgroup of <m>S_n</m> generated by all produts of <m>2</m>-cyclies (disjoint or not). In symbols, 
@@ -1948,25 +1975,35 @@
                 </p>
               </statement>
             </proposition>
-      
-            <example xml:id="ex-commutator-subgroup">
-              <title>Commutator Subgroup</title>
+
+            <remark><p>Note that in <xref ref="thm-cycledecomp"/> we showed <m>S_n</m> is generated by transpositions. However, there's more than one way to fry an egg (or in this case generate one) </p></remark>
+
+            <theorem xml:id="thm-generating-sn"><title>Generating <m>S_n</m></title>
+              <statement>
+                <p>
+                  For <m>n\ge 2</m> prove that <m>S_n</m> is generated by <m>(12)</m> and the <m>n</m>-cycle <m>(12\cdots n)</m>.
+                </p>
+              </statement>
+            </theorem>
+
+            <aside><title>Foreshadowing</title>
+              <p>This theorem will prove surprisingly useful all the way down in <xref text="title" ref="ch-galois"/>, saving us a lot of time with our proof of unsolvable quintic polyomials. </p>
+            </aside>
+
+            <p>Lets look at another example.</p>
+        
+            <example xml:id="ex-commutator-subgroup"><title>Commutator Subgroup</title>
               <p>
                 Let <m>G</m> be a group, <m>S=\{aba\inv b\inv|a,b\in G\}</m>, and <m>G'=\igen S</m>. This is known as the <term>commutator subgroup</term> of <m>G</m>.
               <notation><usage><m>G'</m></usage><description> the commutator subgroup <m>\cdot</m></description></notation>          
               </p>
             </example>
       
-            <remark>
-              <p>
-                Commutator subgroups prove invaluable when it comes to something called <em>abelianization</em>, which is, loosely speaking, a way of "modding out" the non-commutative part of <m>G</m> to obtain a new group that is abelian. This is seen rigorously in <xref ref="ex-abelianization"/>
-              </p>
-            </remark>
+            <remark><p>Commutator subgroups prove invaluable when it comes to something called <em>abelianization</em>, which is, loosely speaking, a way of "modding out" the non-commutative part of <m>G</m> to obtain a new group that is abelian. This is seen rigorously in <xref ref="ex-abelianization"/></p></remark>
 
-            <p>A nice property of generated subgroups is that once you've located the generators, you've found the whole group:</p>
+            <p>A nice property of a <xref text="title" ref="def-gensubgroup"/> is that once you've located the generators, you've found the whole group:</p>
 
-            <proposition xml:id="prop-generators-of-subgroup">
-              <title>Generators of Subgroups</title>
+            <proposition xml:id="prop-generators-of-subgroup"><title>Generators of Subgroups</title>
               <statement>
                 <p>
                   If <m>H</m> is a subgroup of <m>G</m> that contains <m>S</m>, then <m>\igen S\leq H</m>.
@@ -1974,20 +2011,17 @@
               </statement>
             </proposition>
 
+            <p>In this way, if we can understand something about the generators of a group, we can (for the most part) extend that knowledge to the group as a whole. This is something you may have seen in the form of a basis, either for a vector space or a topological space. </p>
+
           </subsection>
       
-          <subsection xml:id="subsec-cyclic-gp">
-            <title>Cyclic Groups</title>
+          <subsection xml:id="subsec-cyclic-gp"><title>Cyclic Groups</title>
 
-            <blockquote>
-              <p>
-                <q>Madness is the exception in individuals and the rule in groups.</q>
-              </p>
-              <attribution>Friedrich Nietzsche</attribution>
-            </blockquote>
+            <blockquote><p><q>Madness is the exception in individuals and the rule in groups.</q></p><attribution>Friedrich Nietzsche</attribution></blockquote>
             
-            <definition xml:id="def-cyclic-group">
-              <title>Cylic Group</title>
+            <p>We zoom in now on the wondrous case in which a group can be generated by a single element.</p>
+
+            <definition xml:id="def-cyclic-group"><title>Cylic Group</title>
               <statement>
                 <p>
                   If <m>G</m> is a generated by a single element, i.e. <m>G= \langle x \rangle</m> for some <m>x \in G</m>, then <m>G</m> is called a <em>cyclic group</em>. 
@@ -1999,9 +2033,8 @@
               </statement>
             </definition>
 
-            <example xml:id="ex-cyclic-examples">
-              <title>Examples of Cyclic Groups</title>
-
+            <example xml:id="ex-cyclic-examples"><title>Examples of Cyclic Groups</title>
+              <statement>
               <p>
                 <ol>
                   <li>
@@ -2023,10 +2056,34 @@
                   </li>
                 </ol>
               </p>
+              </statement>
+
+              <answer>
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        <m>(\Z,+)=\igen 1</m>, for example.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                       <m>(\Z/n,+)\igen{1}</m>, for example.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        <m>L=\{1,-1,i,-i\}=\igen i</m>, for example. 
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </answer>
             </example>
 
-            <exercise xml:id="exe-not-cyclic">
-              <title>Not Quite Cyclic Groups</title>
+            <exercise xml:id="exe-not-cyclic"><title>Not Quite Cyclic Groups</title>
               <p>
                 <ol>
                   <li>
@@ -2046,72 +2103,63 @@
 
             <p>Recalling <xref ref="lem-gensubgp"/>, we can describe the elements of a cylic group explicitely.</p>
 
-            <corollary xml:id="cor-cyclic-subgroup">
-              <title>Elements of <m>\igen x</m></title>
+            <corollary xml:id="cor-cyclic-subgroup"><title>Elements of <m>\igen x</m></title>
               <statement>
-              <p>
-                For an element <m>x</m> of <m>G</m>, the elements of <m>\langle x \rangle</m> can be described as: <m>\langle x\rangle=\{x^j \mid j\in \mathbb{Z}\}</m>.
-              </p>
-            </statement>
+              <p>For an element <m>x</m> of <m>G</m>, the elements of <m>\langle x \rangle</m> can be described as: <m>\langle x\rangle=\{x^j \mid j\in \mathbb{Z}\}</m>.</p>
+              </statement>
 
-            <proof>
-              <p>
-                By Lemma <xref ref="lem-gensubgp" />, the group <m>G</m> has the following elements <m>G=\{x^i \mid i\in \mathbb{Z}\}</m>. We show that
-              </p>
+              <proof>
+                <p>
+                  By Lemma <xref ref="lem-gensubgp" />, the group <m>G</m> has the following elements <m>G=\{x^i \mid i\in \mathbb{Z}\}</m>. We show that
+                </p>
 
-              <p>
-                <ul>
-                  <li>
-                    <p>
-                      <m>|G|\geq n</m> by showing the elements <m>x^0, x^1, \dots, x^{n-1}</m> are distinct. Indeed, if <m>0\leq i&lt;j&lt;n</m> and <m>x^i=x^j</m> then <m>x^{j-i}=e</m> and <m>1\leq j-i&lt;n</m>, contradicting the minimality of the order of <m>x</m>.
-                    </p>
-                  </li>
+                <p>
+                  <ul>
+                    <li>
+                      <p>
+                        <m>|G|\geq n</m> by showing the elements <m>x^0, x^1, \dots, x^{n-1}</m> are distinct. Indeed, if <m>0\leq i&lt;j&lt;n</m> and <m>x^i=x^j</m> then <m>x^{j-i}=e</m> and <m>1\leq j-i&lt;n</m>, contradicting the minimality of the order of <m>x</m>.
+                      </p>
+                    </li>
 
-                  <li>
-                    <p>
-                      <m>|G|\leq n</m> by showing <m>G\subseteq\{x^0, x^1, \dots, x^{n-1}\}</m> (this implies <m>G=\{e,x,\ldots,x^{n-1}\}</m>). Indeed, for any <m>m\in \mathbb{Z}</m> division by <m>n</m> yields integers <m>q,r</m> with <m>0\leq r\leq n-1</m> such that <m>m=nq+r</m>. Then <m>x^m=x^{nq+r}=(x^n)^qx^r=x^r\in\{x^0, x^1, \dots, x^{n-1}\}</m>.
-                    </p>
-                  </li>
-                </ul>
-              </p>
-            </proof>
+                    <li>
+                      <p>
+                        <m>|G|\leq n</m> by showing <m>G\subseteq\{x^0, x^1, \dots, x^{n-1}\}</m> (this implies <m>G=\{e,x,\ldots,x^{n-1}\}</m>). Indeed, for any <m>m\in \mathbb{Z}</m> division by <m>n</m> yields integers <m>q,r</m> with <m>0\leq r\leq n-1</m> such that <m>m=nq+r</m>. Then <m>x^m=x^{nq+r}=(x^n)^qx^r=x^r\in\{x^0, x^1, \dots, x^{n-1}\}</m>.
+                      </p>
+                    </li>
+                  </ul>
+                </p>
+              </proof>
             </corollary>
 
-            <p>Generators need not be unique.</p>
+            <p>Generators are not unique.</p>
 
-            <exercise xml:id="exe-non-unique-cyclic-generators">
-              <title>Cyclic Generators Need not be Unique</title>
-              
+            <exercise xml:id="exe-non-unique-cyclic-generators"><title>Cyclic Generators Need not be Unique</title> 
               <statement>
-                <p>
-                  Let <m>G=\langle x\rangle</m> be a cyclic group. Then <m>G=\langle x^{-1}\rangle</m>.
-                </p>
+                <p>Let <m>G=\langle x\rangle</m> be a cyclic group. Then <m>G=\langle x^{-1}\rangle</m>.</p>
               </statement>
             </exercise>
 
             <p>Here is a more general criteria for determining when an element of a cyclic group is a generator.</p>
 
-            <proposition xml:id="prop-cyclic-criteria">
-              <title>Criteria for Cyclic Generators</title>
-              <p>
-                Let <m>G=\igen x</m> be a cyclic group of order <m>n</m>, and let <m>y=x^m\in G</m>. Then <m>y</m> generates <m>G</m> if and only if <m>\gcd(n,m)=1</m>.
-              </p>
+            <proposition xml:id="prop-cyclic-criteria"><title>Criteria for Cyclic Generators</title>
+              <statement>
+                <p>
+                  Let <m>G=\igen x</m> be a cyclic group of order <m>n</m>, and let <m>y=x^m\in G</m>. Then <m>y</m> generates <m>G</m> if and only if <m>\gcd(n,m)=1</m>.
+                </p>
+              </statement>
             </proposition>
 
             <p>One quick way of seeing if a group is cyclic is to find an element with the same order as the group.</p>
 
-            <proposition xml:id="prop-cyclic-equivalencies">
+            <proposition xml:id="prop-cyclic-equivalencies"><title>Cyclci iff Element of Order <m>|G|</m></title>
               <statement>
-                <p>
-                  Let <m>G</m> be a finite group. Then <m>G</m> is cyclic if and only if there exists an <m>x\in G</m> such that <m>|x|=|G|</m>
-                </p>
+                <p>Let <m>G</m> be a finite group. Then <m>G</m> is cyclic if and only if there exists an <m>x\in G</m> such that <m>|x|=|G|</m></p>
               </statement>
             </proposition>
 
             <p>Conveniently enough, cyclic groups are always abelian.</p>
       
-            <theorem xml:id="thm-cyclic-abelian">
-              <title>Cyclic Groups are Abelian</title>
+            <theorem xml:id="thm-cyclic-abelian"><title>Cyclic Groups are Abelian</title>
               <statement>
                 <p>
                   Every cyclic group is abelian.
@@ -2121,9 +2169,7 @@
 
             <p>One of the first things one does when encountering a new group is to examine its subgroups. As it turns out, cyclic groups have some very special properties when it comes to subgroups, though proving them will be more technical than anything we have encountered thus far.</p>
 
-            <theorem xml:id="thm-cyclic-divisors-and-subgroups">
-              <title>Subgroups of Cyclic Groups</title>
-              
+            <theorem xml:id="thm-cyclic-divisors-and-subgroups"><title>Subgroups of Cyclic Groups</title>
               <statement>
                 <p>
                   Let <m>G=\langle x\rangle</m>, where <m>x</m> has finite order <m>n</m>. Then there is a bijection 
@@ -2178,8 +2224,7 @@
               </proof>
             </theorem>
 
-            <exercise xml:id="exe-small-cyclic">
-              <title>Cyclic Groups of Small Order</title>
+            <exercise xml:id="exe-small-cyclic"><title>Cyclic Groups of Small Order</title>
               <statement>
                 <p>
                   <ol>
@@ -2202,52 +2247,45 @@
              
           </subsection>
       
-          <exercises>
+          <exercises><title>Qualifying Exam Problems</title>
+    
+            <exercise>
+              <p>
+                Consider the set <m>\mu=\{z\in \C^\times \mid z^n = 1 \;\text{for some integer}\;n \geq 1\}</m>.
+                <ol>
+                  <li>
+                    <p>
+                      Prove that <m>\mu\leq\C^\times</m>.
+                    </p>
+                  </li>
+    
+                  <li>
+                    <p>
+                      Prove that for each integer <m>m \geq 1</m>, there is a unique subgroup <m>H_m\leq \mu</m> with <m>|H_m|=m</m> and that <m>H_m</m> is cyclic. 
+                    </p>
+                  </li>
+    
+                  <li>
+                    <p>
+                      Prove that every finitely generated subgroup of <m>\mu</m> has finitely many elements. 
+                    </p>
+                  </li>
+    
+                  <li>
+                    <p>
+                      Prove that <m>\mu</m> is not finitely generated.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </exercise>
       
-            <exercisegroup> <title>Qualifying Exam Problems</title>
-             
-              <introduction><p></p></introduction>
-      
-              <exercise>
-                <p>
-                  Consider the set <m>\mu=\{z\in \C^\times \mid z^n = 1 \;\text{for some integer}\;n \geq 1\}</m>.
-                  <ol>
-                    <li>
-                      <p>
-                        Prove that <m>\mu\leq\C^\times</m>.
-                      </p>
-                    </li>
-      
-                    <li>
-                      <p>
-                        Prove that for each integer <m>m \geq 1</m>, there is a unique subgroup <m>H_m\leq \mu</m> with <m>|H_m|=m</m> and that <m>H_m</m> is cyclic. 
-                      </p>
-                    </li>
-      
-                    <li>
-                      <p>
-                        Prove that every finitely generated subgroup of <m>\mu</m> has finitely many elements. 
-                      </p>
-                    </li>
-      
-                    <li>
-                      <p>
-                        Prove that <m>\mu</m> is not finitely generated.
-                      </p>
-                    </li>
-                  </ol>
-                </p>
-              </exercise>
-      
-            </exercisegroup>
-
           </exercises>
       
         </section>
       </chapter> 
 
-      <chapter xml:id="ch-gp-homs">
-        <title>Homomorphisms and Isomorphisms</title>
+      <chapter xml:id="ch-gp-homs"><title>Homomorphisms and Isomorphisms</title>
     
         <section xml:id="sec-gphoms">
           <title>Group Homomorphisms</title>
@@ -2255,15 +2293,9 @@
           <subsection xml:id="subsec-homom-def-ex">
             <title>Homomorphism? I Barely Know 'em!</title>
 
-            <blockquote>
-              <p>
-                <q>In the end, the character of a civilization is encased in its structures.</q>
-              </p>
-              <attribution>Frank Gehry</attribution>
-            </blockquote>
+            <blockquote><p><q>In the end, the character of a civilization is encased in its structures.</q></p><attribution>Frank Gehry</attribution></blockquote>
             
-            <definition xml:id="def-gphom">
-              <title>Group Homomorphism</title>
+            <definition xml:id="def-ghom"><title>Group Homomorphism</title>
               <statement>
                 <p>
                   If <m>G</m> and <m>H</m> are groups, a <em>homomorphism</em> from <m>G</m> is <m>H</m> is a function <m>f: G \to H</m> such that <m>f(x \cdot_G y) = f(x) \cdot_H f(y)</m>, where <m>\cdot_G</m> and <m>\cdot_H</m> denote the multiplication rules for <m>G</m> and <m>H</m>, respectively.
@@ -2274,8 +2306,7 @@
       
             <p>Intuitively, a group homomorphism preserves the algebraic structure of the group, while allowing us to compare and relate different groups. In this way, group homomorphisms allow us to study the properties of groups by comparing them to other groups that we already understand well.</p>
       
-            <example xml:id="ex-group-homom-examples">
-              <title>Homormophism Examples</title>
+            <example xml:id="ex-group-homom-examples"><title>Homormophism Examples</title>
               <p>
                 <ol>
                   <li>
@@ -2287,12 +2318,6 @@
                   <li>
                     <p>
                       The function <m>\varphi:\Z\to\Z/5</m> given by <m>\varphi(a)=[a]</m> is a homomorphism.
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      Let <m>H\leq G</m>. The inclusion map <m>i:H\to G</m> defined by <m>i(h)=h</m> is a homomorphism. 
                     </p>
                   </li>
 
@@ -2323,8 +2348,7 @@
               </p>
             </example>
 
-            <exercise xml:id="exe-homom-determinations">
-              <title>Determining Group Homomorphisms</title>
+            <exercise xml:id="exe-homom-determinations"><title>Determining Group Homomorphisms</title>
               
               <p>
                 Determine (with justification) which of the following functions are group homomorphisms
@@ -2358,8 +2382,7 @@
     
             </exercise>
 
-            <exercise xml:id="exe-injective-homoms">
-              <title>Finding Injective Homomorphisms</title>
+            <exercise xml:id="exe-injective-homoms"><title>Finding Injective Homomorphisms</title>
               
               <p>
                 <ol>
@@ -2376,8 +2399,7 @@
       
             <p>Specifically, homomorphisms will preserve the additive structure, such as the identity element and inverse elements.</p>
       
-            <theorem xml:id="thm-grphomom-prop">
-              <title>Homomorphism Preservations</title>
+            <theorem xml:id="thm-grphomom-prop"><title>Homomorphism Preservations</title>
               <statement>
                 <p>
                   If <m>\varphi: G \to H</m> is a homomorphism of groups, then
@@ -2398,13 +2420,18 @@
               </statement>
             </theorem>
 
+            <theorem xml:id="thm-ghom-composition"><title>Compositions of Homomorphisms</title>
+              <statement>
+                <p>If <m>\varphi:G\to H</m> and <m>\phi:H\to K</m> are group homomorphisms, the composition <m>\phi\circ\varphi:G\to K</m> is a group homomorphism.</p>
+              </statement>
+            </theorem>
+
             <p>Here is a proposition that might appear to come out of the blue.</p>
 
             <proposition xml:id="prop-d2n-mapping">
+
               <statement>
-                <p>
-                  If <m>G</m> is a group and <m>x,y \in G</m> are elements such that <m>x^n = e</m>, <m>y^2 = e</m>, and <m>yxy = x^{-1}</m> for some integer <m>n \geq 3</m>, then there exists a unique group homomorphism <m>f: D_{2n} \to G</m> such that <m>f(r) = x</m> and <m>f(s) = y</m>.
-                </p>
+                <p>If <m>G</m> is a group and <m>x,y \in G</m> are elements such that <m>x^n = e</m>, <m>y^2 = e</m>, and <m>yxy = x^{-1}</m> for some integer <m>n \geq 3</m>, then there exists a unique group homomorphism <m>f: D_{2n} \to G</m> such that <m>f(r) = x</m> and <m>f(s) = y</m>.</p>
               </statement>
 
               <proof>
@@ -2426,7 +2453,7 @@
 
             <p>Let's take a peak at what this might look like in practice.</p>
 
-            <example xml:id="ex-d2n-cos-sin">
+            <example xml:id="ex-d2n-cos-sin"><title><m>D_{2n}</m> Mapping Example</title>
               <p>
                 Consider the group <m>\operatorname{GL}_2({\mathbb{R}})</m> and elements 
                 <me>
@@ -2446,7 +2473,7 @@
               </p>
             </example>
 
-            <exercise xml:id="exe-d12-d6">
+            <exercise xml:id="exe-d12-d6"><title>Another <m>D_{2n}</m> Mapping</title>
               <statement>
                 <p>
                   Let <m>r,s \in D_{12}</m> and <m>r',s' \in D_6</m>, in order to distinguish them. Find a homomorphism from <m>D_{12}</m> to <m>D_6</m> with <m>f(r) = r', f(s) = s'</m> and prove that it is unique.
@@ -2465,22 +2492,11 @@
           <subsection xml:id="subsec-kernel-image">
             <title>Kernels and Images</title>
 
-            <blockquote>
-              <p>
-                <q>May your passion be the kernel of corn stuck between your molars, always reminding you there's something to tend to.</q>
-              </p>
-              <attribution>Jeb Dickerson</attribution>
-            </blockquote>
+            <blockquote><p><q>May your passion be the kernel of corn stuck between your molars, always reminding you there's something to tend to.</q></p><attribution>Jeb Dickerson</attribution></blockquote>
 
-            <blockquote>
-              <p>
-                <q>The image is one thing and the human being is another. It's very hard to live up to an image, put it that way.</q>
-              </p>
-              <attribution>Elvis Presley</attribution>
-            </blockquote>
+            <blockquote><p><q>The image is one thing and the human being is another. It's very hard to live up to an image, put it that way.</q></p><attribution>Elvis Presley</attribution></blockquote>
             
-            <definition xml:id="def-group-kernel">
-              <title>Kernel</title>
+            <definition xml:id="def-group-kernel"><title>Kernel</title>
               <statement>
                 <p>
                   Let <m>\varphi: G \to H</m> is a homomorphism of groups. The <em>kernel</em> of <m>\varphi</m> is the set 
@@ -2491,52 +2507,11 @@
                 </p>
               </statement>
             </definition>
-      
-            <definition xml:id="def-group-image">
-              <title>Image</title>
-              <statement>
-                <p>
-                  Let <m>\varphi: G \to H</m> is a homomorphism of groups. The <em>image</em> of <m>\varphi</m> is the set 
-                  <me>
-                    \im(\varphi) := \{\varphi(g) \mid g \in G\}.
-                  </me>
-                  <notation><usage><m>\im(\varphi)</m></usage><description>the image of a homomorphism <m>\varphi</m> <m>\cdot</m></description></notation> 
-                </p>
-              </statement>
-            </definition>
-      
-            <remark><p>This is identical to the set-theoretic image.</p></remark>
-      
-            <theorem xml:id="thm-properties-of-group-homoms">
-              <title>Properties of Group Homomorphisms</title>
-              
+
+            <theorem xml:id="thm-inj-surj-ghom">
               <statement>
                 <p>
                   <ol>
-                    <li>
-                      <p>
-                        (Images are subgroups) If <m>\varphi: G \to H</m> is a homomorphism of groups, then the image of <m>\varphi</m> is a subgroup of <m>H</m>.
-                      </p>
-                    </li>
-      
-                    <li>
-                      <p>
-                        (Kernels are subgroups) If <m>\varphi: G \to H</m> is a homomorphism of groups, then the kernel of <m>\varphi</m> is a subgroup of <m>G</m>.
-                      </p>
-                    </li>
-      
-                    <li>
-                      <p>
-                        (Preimages are subgroups) Prove that if <m>\varphi:G\to H</m> is a group homomorphism and <m>K\leq H</m> then the preimage of <m>K</m>, defined as <m>\varphi^{-1}(K)=\{g\in G | \varphi(g)\in K\}</m>, is a subgroup of <m>G</m>.
-                      </p>
-                    </li>
-      
-                    <li>
-                      <p>
-                          (Compositions) If <m>\varphi:G\to H</m> and <m>\phi:H\to K</m> are group homomorphisms, the composition <m>\phi\circ\varphi:G\to K</m> is a group homomorphism.
-                      </p>
-                    </li>
-      
                     <li>
                       <p>
                         A group homomorphism <m>\varphi: G \to H</m> is injective if and only if <m>\operatorname{ker}(\varphi) = \{e_G\}</m>.
@@ -2552,6 +2527,7 @@
                 </p>
               </statement>
             </theorem>
+            
 
             <exercise xml:id="exe-order-preservation">
               <title>Homomorphisms and Order</title>
@@ -2584,18 +2560,11 @@
     
         </section>
     
-        <section xml:id="sec-gpisos">
-          <title>Group Isomorphisms</title>
+        <section xml:id="sec-gpisos"><title>Group Isomorphisms</title>
 
-          <subsection xml:id="subsec-isomorphisms">
-            <title>Isomorphisms</title>
+          <subsection xml:id="subsec-isomorphisms"><title>Isomorphisms</title>
 
-            <blockquote>
-              <p>
-                <q>The test of a first-rate intelligence is the ability to hold two opposed ideas in mind at the same time and still retain the ability to function.</q>
-              </p>
-              <attribution>F. Scott Fitzgerald</attribution>
-            </blockquote>
+            <blockquote><p><q>The test of a first-rate intelligence is the ability to hold two opposed ideas in mind at the same time and still retain the ability to function.</q></p><attribution>F. Scott Fitzgerald</attribution></blockquote>
           
             <definition xml:id="def-gpiso">
               <title>Group Ismorphism</title>
@@ -2617,64 +2586,45 @@
       
             <p>Group isomorphisms allow us to identify different groups that have the same algebraic structure. This can simplify the study of groups by reducing the number of cases that need to be considered, and it can also provide insight into the connections between seemingly unrelated groups.</p>
       
-            <theorem xml:id="thm-iso-def">
+            <theorem xml:id="thm-iso-def"><title>Equivalent Isomorphism Characterization</title>
               <statement>
-                <p>
-                  Suppose <m>\varphi: G \to H</m> is a group homomorphism. Then <m>\varphi</m> an isomorphism if and only if <m>\varphi</m> is bijective (one-to-one and onto).
-                </p>
+                <p>Suppose <m>\varphi: G \to H</m> is a group homomorphism. Then <m>\varphi</m> an isomorphism if and only if <m>\varphi</m> is bijective (one-to-one and onto).</p>
               </statement>
             </theorem>
       
             <remark><p>Moving forward, we will essentially treat <xref ref="thm-iso-def"/> as the de-facto definition of a group isomorphism. Rather than end every proof with a reference to <xref ref="thm-iso-def"/>, we will instead enshrine its monumental achievements of <xref ref="thm-iso-def"/> within this remark. To alleviate some of the corresponding guilt asociated with this decision I am referencing <xref ref="thm-iso-def"/> as many times as possible, as <xref ref="thm-iso-def"/> is important and <xref ref="thm-iso-def"/> should not be forgotten. </p></remark>
       
-            <example xml:id="ex-group-iso-examples">
-              <title>Isomorphism Examples</title>
-              <p>
-                <ol>
+            <example xml:id="ex-group-iso-examples"><title>Isomorphism Examples</title>
+              <p><ol>
                   <li>
-                    <p>
-                      The identity map is a group isomomorphism for any group <m>G</m>.
-                    </p>
+                    <p>The identity map is a group isomomorphism for any group <m>G</m>.</p>
                   </li>
                   
                   <li>
-                    <p>
-                      <m>(\Z,+)\cong(\E,+)</m>, where <m>\E</m> denotes the set of even integers.
-                    </p>
+                    <p><m>(\Z,+)\cong(\E,+)</m>, where <m>\E</m> denotes the set of even integers.</p>
                   </li>
 
                   <li>
-                    <p>
-                      <m>(\R,+)\cong(\R^\times,\cdot)</m>                      
-                    </p>
+                    <p><m>(\R,+)\cong(\R^\times,\cdot)</m></p>
                   </li>
 
                   <li>
-                    <p>
-                      Let <m>C_\infty</m> be a cyclic group with infinite elements. Then <m>C_\infty\cong\Z</m>.
-                    </p>
+                    <p>Let <m>C_\infty</m> be a cyclic group with infinite elements. Then <m>C_\infty\cong\Z</m>.</p>
                   </li>
       
                   <li>
-                    <p>
-                      The exponential and natural logarithm maps from <xref ref="ex-group-homom-examples"/> are actually isomorphisms.
-                    </p>
+                    <p>The exponential and natural logarithm maps from <xref ref="ex-group-homom-examples"/> are inverses, making them isomorphisms as well.</p>
                   </li>
                 </ol>
               </p>
             </example>
 
-            <exercise xml:id="exe-complex-conjugation-automorphism">
-              <title>Complex Conjugation Automorphism</title>
-              <p>
-                Prove that the function <m>\phi:\C\to\C</m> given by <m>\phi(a+bi)=a-bi</m> is an automorphism.
-              </p>
+            <exercise xml:id="exe-complex-conjugation-automorphism"><title>Complex Conjugation Automorphism</title>
+              <p>Prove that the function <m>\phi:\C\to\C</m> given by <m>\phi(a+bi)=a-bi</m> is an automorphism.</p>
             </exercise>
 
             <exercise xml:id="exe-isomorphic-to-opposite">
-              <p>
-                Let <m>G</m> be a group and <m>G^{op}</m> as defined in <xref ref="exe-opposite-group"/> Then <m>G\cong G^{op}</m>.
-              </p>
+              <p>Let <m>G</m> be a group and <m>G^{op}</m> as defined in <xref ref="exe-opposite-group"/> Then <m>G\cong G^{op}</m>.</p>
             </exercise>
 
             <!--
@@ -2699,8 +2649,7 @@
             </exercise>
             -->
       
-            <theorem xml:id="thm-iso-inv">
-              <title>Isomorphism Preservations</title>
+            <theorem xml:id="thm-iso-inv"><title>Isomorphism Preservations</title>
               <statement>
                 <p>
                   Let <m>G</m> and <m>H</m> be groups. If <m>\varphi:G\to H</m> is an isomorphism, then the following hold:
@@ -2742,57 +2691,39 @@
               </statement>
             </theorem>
       
-            <remark>
-              <p>
-                These properties sometimes referred to as <term>isomorphism invariants</term>, though not within this text.
-              </p>
-            </remark>
+            <remark><p>These properties sometimes referred to as <term>isomorphism invariants</term>, though not within this text.</p></remark>
 
-            <exercise xml:id="exe-not-isomorphic">
-              <title>Something's Missing</title>
-              <p>
-                Justify why the following pairs of groups are <em>not</em> isomorphic.
+            <exercise xml:id="exe-not-isomorphic"><title>Something's Missing</title>
+              <p>Justify why the following pairs of groups are <em>not</em> isomorphic.
                 <ol>
                   <li>
-                    <p>
-                      <m>Q_8</m> and <m>D_8</m>
-                    </p>
+                    <p><m>Q_8</m> and <m>D_8</m></p>
                   </li>
 
                   <li>
-                    <p>
-                      <m>\Z/6</m> and <m>S_3</m>
-                    </p>
+                    <p><m>\Z/6</m> and <m>S_3</m></p>
                   </li>
 
                   <li>
-                    <p>
-                      <m>D_{24}</m> and <m>S_4</m>
-                    </p>
+                    <p><m>D_{24}</m> and <m>S_4</m></p>
                   </li>
 
                   <li>
-                    <p>
-                      <m>\Q</m> and <m>\Q^\times</m>
-                    </p>
+                    <p><m>\Q</m> and <m>\Q^\times</m></p>
                   </li>
                 </ol>
               </p>
             </exercise>
       
-            <p>Now seems like an exceptional time to recall Part (4) of <xref ref="thm-properties-of-group-homoms"/>.</p>
+            <p>Now seems like an exceptional time to recall <xref ref="thm-ghom-composition"/>.</p>
       
-            <corollary xml:id="cor-composition-of-isos">
-              <title>Composition of Isomorphisms</title>
+            <corollary xml:id="cor-composition-of-isos"><title>Composition of Isomorphisms</title>
               <statement>
-                <p>
-                  The composition of two isomorphisms is an isomorphism.
-                </p>
+                <p>The composition of two isomorphisms is an isomorphism.</p>
               </statement>
             </corollary>
 
-            <exercise xml:id="exe-iso-equivalence-relation">
-              <title>Isomorphisms form Equivalence Relation</title>
+            <exercise xml:id="exe-iso-equivalence-relation"><title>Isomorphisms form Equivalence Relation</title>
                 <statement>
                   <p>
                     <ol>
@@ -2818,29 +2749,6 @@
                 </statement>
               
             </exercise>
-
-            <theorem xml:id="thm-cayley">
-              <title>Cayley's Theorem</title>
-              <creator><m>1854</m></creator>
-              
-              <statement>
-                <p>
-                  Every group is isomorphic to a subgroup of <m>S_n</m>.
-                </p>
-              </statement>
-            </theorem>
-
-            <historical>
-              <p>
-                Cayley's Theorem is named after the British mathematician Arthur Cayley. Cayley was a prolific mathematician who made significant contributions to a wide range of fields, including algebra, geometry, and graph theory. Cayley was also a strong advocate for women's education and played an important role in the movement to admit women to Cambridge University. In the 1860s, he was part of a group of academics who lobbied for women to be allowed to take the Cambridge Mathematical Tripos exam, which was the standard test for mathematics students at the time.
-              </p>
-            </historical>
-
-            <remark>
-              <p>
-                This is a nearly useless theorem.
-              </p>
-            </remark>
 
           </subsection>
 
@@ -2924,20 +2832,7 @@
               <title>The Conjugation Automorphism</title>
               <statement>
                 <p>
-                  Let <m>G</m> be a group and <m>x\in G</m>.
-                  <ol>
-                    <li>
-                      <p>
-                        <m>\psi_x\in \operatorname{Aut}(G)</m> for all <m>x\in G</m>. 
-                      </p>
-                    </li>
-        
-                    <li>
-                      <p>
-                        <m>\Inn(G)\leq\operatorname{Aut}(G)</m>.
-                      </p>
-                    </li>
-                  </ol>
+                  Let <m>G</m> be a group and <m>x\in G</m>. Then <m>\psi_x\in \operatorname{Aut}(G)</m> for all <m>x\in G</m>. 
                 </p>
               </statement>
             </theorem>
