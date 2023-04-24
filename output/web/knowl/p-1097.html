@@ -12,7 +12,22 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">If <span class="process-math">\(\operatorname{Im}(\rho)=\{\text{id}_H\}\text{,}\)</span> then <span class="process-math">\(\rho(x)=c_x=\text{id}_H\)</span> (which implies <span class="process-math">\(xy=yx\)</span>) and <span class="process-math">\(H\rtimes_\rho K=H\times K\text{.}\)</span> Therefore, in this case <span class="process-math">\(G\cong H\times K\cong C_3\times C_2\cong C_6\text{,}\)</span> where the last isomorphism uses the Chinese Remainder Theorem <code class="code-inline tex2jax_ignore">[provisional cross-reference: thm-sunzi-remainder-thm]</code>.</div>
+<div class="para logical">
+<div class="para">Furthermore, since <span class="process-math">\(H\cap K\)</span> is a subgroup of both <span class="process-math">\(H\)</span> and <span class="process-math">\(K\)</span> we have by Lagrange's theorem that <span class="process-math">\(|H\cap K|\mid \operatorname{gcd}(q,p)=1\text{,}\)</span> so that <span class="process-math">\(H\cap K=\{e_G\}\text{.}\)</span> From here it follows that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+|HK|=\frac{|H||K|}{|H\cap K|}=\frac{q\cdot p}{1}=pq=|G|
+\end{equation*}
+</div>
+<div class="para">and so <span class="process-math">\(HK=G\text{.}\)</span> The recognition theorem now yields that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+G \cong H \rtimes_\rho K \cong C_q\rtimes_\rho C_p.
+\end{equation*}
+</div>
+<div class="para">for some homomorphism <span class="process-math">\(\rho: K \to \operatorname{Aut}(H)\text{,}\)</span> equivalently <span class="process-math">\(\rho: C_p \to \operatorname{Aut}(C_q)\text{.}\)</span> By the UNM of cyclic groups to give such a homomorphism <span class="process-math">\(\rho\)</span> is equivalent to giving an element <span class="process-math">\(z\in \operatorname{Aut}(C_q)\)</span> so that <span class="process-math">\(z^p=\text{id}\text{,}\)</span> which will give <span class="process-math">\(\rho(y^j)=z^j\)</span> for <span class="process-math">\(C_p=\langle y\rangle\text{.}\)</span> Thus <span class="process-math">\(|z|\mid p\)</span> yielding that either <span class="process-math">\(|z|=1\)</span> or <span class="process-math">\(|z|=p\text{.}\)</span>
+</div>
+</div>
 <span class="incontext"><a href="sec-classifications.html#p-1097" class="internal">in-context</a></span>
 </body>
 </html>

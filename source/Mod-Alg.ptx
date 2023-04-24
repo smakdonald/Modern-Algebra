@@ -2623,7 +2623,7 @@
               <p>Prove that the function <m>\phi:\C\to\C</m> given by <m>\phi(a+bi)=a-bi</m> is an automorphism.</p>
             </exercise>
 
-            <exercise xml:id="exe-isomorphic-to-opposite">
+            <exercise xml:id="exe-isomorphic-to-opposite"><title>Opposite Opposite Day</title>
               <p>Let <m>G</m> be a group and <m>G^{op}</m> as defined in <xref ref="exe-opposite-group"/> Then <m>G\cong G^{op}</m>.</p>
             </exercise>
 
@@ -2649,6 +2649,7 @@
             </exercise>
             -->
       
+            <!--
             <theorem xml:id="thm-iso-inv"><title>Isomorphism Preservations</title>
               <statement>
                 <p>
@@ -2690,8 +2691,9 @@
                 </p>
               </statement>
             </theorem>
-      
+           
             <remark><p>These properties sometimes referred to as <term>isomorphism invariants</term>, though not within this text.</p></remark>
+             -->
 
             <exercise xml:id="exe-not-isomorphic"><title>Something's Missing</title>
               <p>Justify why the following pairs of groups are <em>not</em> isomorphic.
@@ -2724,46 +2726,38 @@
             </corollary>
 
             <exercise xml:id="exe-iso-equivalence-relation"><title>Isomorphisms form Equivalence Relation</title>
-                <statement>
-                  <p>
-                    <ol>
-                      <li>
-                        <p>
-                          <m>G\cong G</m>
-                        </p>
-                      </li>
+              <statement>
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        <m>G\cong G</m>
+                      </p>
+                    </li>
 
-                      <li>
-                        <p>
-                          If <m>G\cong H</m>, then <m>H\cong G</m>
-                        </p>
-                      </li>
+                    <li>
+                      <p>
+                        If <m>G\cong H</m>, then <m>H\cong G</m>
+                      </p>
+                    </li>
 
-                      <li>
-                        <p>
-                          If <m>G\cong H</m> and <m>H\cong K</m>, then <m>G\cong K</m>
-                        </p>
-                      </li>
-                    </ol>
-                  </p>
-                </statement>
-              
+                    <li>
+                      <p>
+                        If <m>G\cong H</m> and <m>H\cong K</m>, then <m>G\cong K</m>
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
             </exercise>
 
           </subsection>
 
-          <subsection xml:id="subsec-automorphisms">
-            <title>Automorphisms</title>
+          <subsection xml:id="subsec-automorphisms"><title>Automorphisms</title>
 
-            <blockquote>
-              <p>
-                <q>Self preservation is the first law of nature.</q>
-              </p>
-              <attribution>Samuel Butler</attribution>
-            </blockquote>
+            <blockquote><p><q>Self preservation is the first law of nature.</q></p><attribution>Samuel Butler</attribution></blockquote>
             
-            <definition xml:id="def-gp-automorphism">
-              <title>Group Automorphism</title>
+            <definition xml:id="def-gp-automorphism"><title>Group Automorphism</title>
               <statement>
                 <p>
                   Let <m>G</m> be a group. An isomorphism <m>\varphi:G\to G</m> is called an <em>automorphism</em> of <m>G</m>. The set of automorphisms of a group <m>G</m> is called the <term>automorphism group</term> of <m>G</m> and denoted <m>\Aut(G)</m>.
@@ -2787,18 +2781,15 @@
               </statement>
             </proposition>
 
-            <example xml:id="ex-z-aut">
-              <title><m>\Aut(\Z)</m></title>
-              <p>
-                <m>\Aut(\Z)\cong\Z/2</m>
-              </p>
-            </example>
+            <exercise xml:id="ex-z-aut"><title><m>\Aut(\Z)</m></title>
+              <p><m>\Aut(\Z)\cong\Z/2</m></p>
+            </exercise>
       
             <remark><p> Notice that we have actually shown that the composition of automorphisms is an automorphism, both through <xref ref="cor-composition-of-isos"/> (as automorphisms are isomorphisms) and <xref ref="prop-aut-is-group"/> (as groups are closed under their operation)</p></remark>
       
             <p>Automorphism groups may also give us information about whether or not our group is abelian.</p>
 
-            <exercise xml:id="exe-inverse-map-and-abelian">
+            <exercise xml:id="exe-inverse-map-and-abelian"><title>Abelian Groups and Automorphisms</title>
               <statement>
                 <p>
                   Let <m>G</m> be a group.
@@ -2819,7 +2810,7 @@
               </statement>
             </exercise>
 
-            <definition xml:id="def-inner-automorphisms">
+            <definition xml:id="def-inner-automorphisms"><title>Inner Automorphism</title>
               <statement>
                 <p>
                   Let <m>G</m> be a group and <m>x\in G</m>. The function <m>\psi_x:G\to G</m> defined by <m>\psi_x(a)=xax^{-1}</m> is called the <em>inner automorphism</em> of <m>G</m> induced by <m>x</m>.
@@ -2828,8 +2819,7 @@
               </statement>
             </definition>
 
-            <theorem xml:id="thm-conjugation-automorphism">
-              <title>The Conjugation Automorphism</title>
+            <theorem xml:id="thm-conjugation-automorphism"><title>The Conjugation Automorphism</title>
               <statement>
                 <p>
                   Let <m>G</m> be a group and <m>x\in G</m>. Then <m>\psi_x\in \operatorname{Aut}(G)</m> for all <m>x\in G</m>. 
@@ -2837,15 +2827,11 @@
               </statement>
             </theorem>
       
-            <remark>
-              <p>
-                Note that as <m>\psi_x:G\to G</m> is bijective it is, by definition, a permutation of <m>G</m>. This might come up later...
-              </p>
-            </remark>
+            <remark><p>Note that as <m>\psi_x:G\to G</m> is bijective it is, by definition, a permutation of <m>G</m>. This might come up later...</p></remark>
 
             <p>Finally, we end with two results that will prove invaluable later in the course. Though we won't see them for some time, proving them now will be good practice and save us time later on.</p>
 
-            <theorem xml:id="thm-aut-cn">
+            <theorem xml:id="thm-aut-cn"><title><m>\Aut(C_n)</m></title>
               <statement>
                 <p>
                   The automorphism group of <m>C_n</m> is isomorphic to the multiplicative group of units of <m>\Z/n</m> via the map 
@@ -2859,7 +2845,7 @@
 
             <p>In particular:</p>
   
-            <corollary xml:id="cor-aut-cp">
+            <corollary xml:id="cor-aut-cp"><title><m>\Aut(C_p)</m></title>
               <statement>
                 <p>
                   If <m>p</m> is prime the automorphism group of <m>C_p</m> is cyclic, namely <m>\operatorname{Aut}(C_p)\cong C_{p-1}</m>.
@@ -2870,54 +2856,44 @@
           </subsection>
           
           <exercises>
-    
-            <exercisegroup> <title>Qualifying Exam Problems</title>
+
+            <exercise> <title>June 2020 (2)</title>
               
-              <introduction>
-                <p>
-                  These problems are from old qualifying exams
-                </p>
-              </introduction>
-    
-              <exercise> <title>June 2020 (2)</title>
-                
 
-                <statement>
+              <statement>
 
-                <p>
-                  Let <m>G</m> be a group of order <m>2m</m> for some odd integer <m>m &gt; 1</m>. Let <m>\Perm(G)</m> be the group of permutations on the elements of <m>G</m> (i.e., the group of bijective functions from G to G). You may use without proof that <m>\Perm(G)\cong S_{2m}</m>.
-                </p>
-        
-                <p><ol>
-                  <li>
-                  Let <m>f : G \to \Perm(G)</m> be given by <m>f (g) = \l_g</m> for all <m>g \in  G</m>, where <m>\l_g : G \to G</m> is defined by <m>\l_g(a) = ga</m> for all <m>a \in  G</m>. Prove that <m>f</m> is an injective group homomorphism.
-                  </li>
-        
-                  <li>
-                  Prove that if <m>g \in  G</m> is an element of order <m>2</m> then <m>\l_g</m> is a product of <m>m</m> transpositions.
-                  </li>
-        
-                  <li>
-                  Prove <m>G</m> contains a subgroup of index <m>2</m> and is consequently not simple.
-                  </li>
-                </ol></p>
-              </statement>
+              <p>
+                Let <m>G</m> be a group of order <m>2m</m> for some odd integer <m>m &gt; 1</m>. Let <m>\Perm(G)</m> be the group of permutations on the elements of <m>G</m> (i.e., the group of bijective functions from G to G). You may use without proof that <m>\Perm(G)\cong S_{2m}</m>.
+              </p>
+      
+              <p><ol>
+                <li>
+                Let <m>f : G \to \Perm(G)</m> be given by <m>f (g) = \l_g</m> for all <m>g \in  G</m>, where <m>\l_g : G \to G</m> is defined by <m>\l_g(a) = ga</m> for all <m>a \in  G</m>. Prove that <m>f</m> is an injective group homomorphism.
+                </li>
+      
+                <li>
+                Prove that if <m>g \in  G</m> is an element of order <m>2</m> then <m>\l_g</m> is a product of <m>m</m> transpositions.
+                </li>
+      
+                <li>
+                Prove <m>G</m> contains a subgroup of index <m>2</m> and is consequently not simple.
+                </li>
+              </ol></p>
+            </statement>
 
-              <hint>
-                <p>
-                  For part (3), consider the inverse image under <m>f</m> of the subgroup of <m>\Perm(G)</m> consisting of the even permutations.
-                </p>
-              </hint>
-              </exercise>
-              
-            </exercisegroup>
-            
+            <hint>
+              <p>
+                For part (3), consider the inverse image under <m>f</m> of the subgroup of <m>\Perm(G)</m> consisting of the even permutations.
+              </p>
+            </hint>
+            </exercise>
+                          
           </exercises>
     
         </section>
     
       </chapter>
-
+                                                                              
       <chapter xml:id="ch-normal-quotient">
         <title>Normal and Quotient Groups</title>
     

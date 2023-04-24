@@ -12,15 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para logical">
-<div class="para">If <span class="process-math">\(A\)</span> is not invertible, then the column space of <span class="process-math">\(A\)</span> is a proper subspace of <span class="process-math">\(F^n\)</span> and hence the columns of <span class="process-math">\(A\)</span> must be linearly dependent. Say the <span class="process-math">\(i\th\)</span> column is a linear combination of the rest: <span class="process-math">\(v_i = \sum_{j \ne i} c_j v_j\text{.}\)</span> Then</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\det(v_1, \dots, v_n) = \sum_{j \ne i} c_j \det(\text{a matrix with the $i$-th and $j$-th columns equal}) = 0.
-\end{equation*}
-</div>
-<div class="para">If <span class="process-math">\(A\)</span> is invertible, then by Corollary  <span class="process-math">\(A\)</span> can be obtained from <span class="process-math">\(I_n\)</span> via a sequence of elementary column operations. The result thus follows from Proposition  and the fact that <span class="process-math">\(\det(I_n) = 1\text{.}\)</span>
-</div>
+<div class="para">We next show that it holds whenever <span class="process-math">\(R\)</span> is an integral domain. In this case, <span class="process-math">\(R\)</span> is a subring of a field <span class="process-math">\(F\)</span> (namely, the field of fractions of <span class="process-math">\(R\)</span>). So, we know that the equation <span class="process-math">\(\det(AB) = \det(A) \det(B)\)</span> holds in <span class="process-math">\(F\)</span> if we interpret <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> as belonging to <span class="process-math">\(\Mat_{n \times n}(F)\text{.}\)</span> But the value of <span class="process-math">\(\det\)</span> is the same if we interpret these matrices as having entries in <span class="process-math">\(R\)</span> or in <span class="process-math">\(F\text{.}\)</span> So <span class="process-math">\(\det(AB) = \det(A) \det(B)\)</span> holds in <span class="process-math">\(R\text{.}\)</span>
 </div>
 <span class="incontext"><a href="sec-det.html#p-2846" class="internal">in-context</a></span>
 </body>

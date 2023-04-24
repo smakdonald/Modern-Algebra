@@ -13,25 +13,22 @@
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
 <div class="para logical">
-<div class="para">Indeed, by the universal mapping property for <span class="process-math">\(D_{2n}\)</span> we have a homomorphism</div>
+<div class="para">Finally</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\theta: D_{2n} \to G
+\begin{aligned}
+(y,x) (\rho(x^{-1})(y^{-1}) ,x^{-1}) &amp;= (y \rho(x)\left(\rho(x^{-1})(y^{-1}) \right), e)
+= (y (\rho(x)\circ\rho(x^{-1}))(y^{-1}), e) 
+\\ &amp;= (y \rho(e)(y^{-1}), e) = (yy^{-1},e)=(e,e),
+\end{aligned}
 \end{equation*}
 </div>
-<div class="para">such that <span class="process-math">\(\theta(r) = (y,e_K)\)</span> and <span class="process-math">\(\theta(s) = (x,e_H)\text{.}\)</span> Moreover, <span class="process-math">\(\theta\)</span> is onto since</div>
+<div class="para">and similarly</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\theta(r^is^j)=(y^i, x^j) \text{ for all } 0 \leq i \leq n-1, 0 \leq j \leq 1
+(\rho(x^{-1})(y^{-1}) ,x^{-1})  (y,x) = (e,e).
 \end{equation*}
 </div>
-<div class="para">and since <span class="process-math">\(|D_{2n}|=|G|=2n\)</span> it follows that <span class="process-math">\(\theta\)</span> is a bijection. So the dihedral group is a semidirect product, in which the two component groups are cyclic of orders <span class="process-math">\(n\)</span> and <span class="process-math">\(2\)</span> respectively:</div>
-<div class="displaymath process-math">
-\begin{equation*}
-D_{2n} \cong \langle y \rangle \rtimes_\rho \langle x \rangle
-\end{equation*}
-</div>
-<div class="para">and <span class="process-math">\(\rho\)</span> is the inversion homomorphism as described above.</div>
 </div>
 <span class="incontext"><a href="sec-spds.html#p-990" class="internal">in-context</a></span>
 </body>

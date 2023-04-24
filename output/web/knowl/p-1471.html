@@ -12,7 +12,27 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">One often views <span class="process-math">\(R\)</span> as the subring of <span class="process-math">\(R[x_1, \dots, x_n]\)</span> consisting of the constant polynomials.</div>
+<div class="para logical">
+<div class="para">Consider the ideal <span class="process-math">\(J = (2, x^2 + x + 1)\)</span> of <span class="process-math">\(\Z[x]\text{.}\)</span> Explicitly, by Lemma  we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+J =\{ p(x)\cdot 2 + q(x)(x^2 + x+ 1) \mid p(x),q(x)\in\Z[x]\}.
+\end{equation*}
+</div>
+<div class="para">Suppose we want to understand <span class="process-math">\(\Z[x]/J\text{.}\)</span> Then the Third Isomorphism Theorem is our friend. Set <span class="process-math">\(I=(2)\)</span> and note that <span class="process-math">\(I \subseteq J\text{,}\)</span> and so by the Third Isomorphism Theorem</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Z[x]/J \cong \frac{\Z[x]/I}{J/I}.
+\end{equation*}
+</div>
+<div class="para">Next we express both the numerator and the denominator in better terms. I claim</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Z[x]/I =\Z[x]/(2) \cong (\Z/2)[x].
+\end{equation*}
+</div>
+<div class="para">To see this consider the reduction homomorphism <span class="process-math">\(\rho: \Z[x] \to (\Z/2)[x]\)</span> sending a polynomial <span class="process-math">\(p(x)\)</span> to its reduction modulo <span class="process-math">\(2\text{.}\)</span> The kernel of this surjective ring map is <span class="process-math">\(I\text{,}\)</span> establishing our claim by the First Isomorphism Theorem.</div>
+</div>
 <span class="incontext"><a href="subsec-polyrings.html#p-1471" class="internal">in-context</a></span>
 </body>
 </html>
