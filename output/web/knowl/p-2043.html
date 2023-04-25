@@ -13,13 +13,19 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">We need to prove <span class="process-math">\(f\)</span> is an <span class="process-math">\(R\)</span>-module homomorphism. I'll just show it preserves scaling — the proof for addition is similar. Given <span class="process-math">\(x \in R\)</span> and <span class="process-math">\(m \in M\text{,}\)</span> we have <span class="process-math">\(m = \sum_{b \in B} r_b b\)</span> for some <span class="process-math">\(r_b \in R\text{,}\)</span> and hence <span class="process-math">\(xm = \sum_b (xr_b) b\text{.}\)</span> By definition of <span class="process-math">\(f\text{,}\)</span>
-</div>
+<div class="para">Next, I claim that there is an isomorphism</div>
 <div class="displaymath process-math">
 \begin{equation*}
-f(xm) = \sum_b (xr_b) j(b) = x \sum_b r_b j(b) = x f(m).
+R^n/IR^n \cong (R/I)^n
 \end{equation*}
 </div>
+<div class="para">of <span class="process-math">\(R/I\)</span>-modules. Define <span class="process-math">\(R^n \to (R/I)^n\)</span> in the evident way (modding out by <span class="process-math">\(I\)</span> entry-wise). It is a surjective map of <span class="process-math">\(R\)</span>-modules with kernel <span class="process-math">\(I R^n\)</span> and thus, by the First Isomorphism Theorem, it induces an isomorphism</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g: R^n/I R^n \xra{\cong} (R/I)^n
+\end{equation*}
+</div>
+<div class="para">given by <span class="process-math">\(g((r_1, \dots, r_n)^\tau + IR^n) = (r_1 + I, \dots, r_n + I)^\tau\)</span> (where <span class="process-math">\(\tau\)</span> denotes taking the transpose). Now, what we have said so far only shows that <span class="process-math">\(g\)</span> is isomorphism of <span class="process-math">\(R\)</span>-modules, but it is easy to see that <span class="process-math">\(g\)</span> is in fact <span class="process-math">\(R/I\)</span>-linear (I'll leave that to you) and thus it is an isomorphism of <span class="process-math">\(R/I\)</span>-modules.</div>
 </div>
 <span class="incontext"><a href="sec-bases.html#p-2043" class="internal">in-context</a></span>
 </body>

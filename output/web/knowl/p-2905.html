@@ -12,7 +12,14 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">The previous example was a quadratic extension, which is misleadingly simple.</div>
+<div class="para logical">
+<div class="para">The last assertion is tricky only because the notation is confusing. Say <span class="process-math">\(p(x) = a_n x^n + \cdots + a_1 x + a_0\)</span> and just to keep things straight let's set <span class="process-math">\(q(y) = \ov{a_n} y^n + \cdots + \ov{a_0} \in L[y]\text{.}\)</span> We need to show <span class="process-math">\(q(\ov{x}) = 0\text{:}\)</span> We have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+q(\ov{x}) = \sum_i \ov{a_i} (\ov{x})^i =\sum_i \ov{a_i} (\ov{x^i}) = \ov{\sum_i a_i x_i}= \ov{p(x)}= 0.
+\end{equation*}
+</div>
+</div>
 <span class="incontext"><a href="field-extension-basics.html#p-2905" class="internal">in-context</a></span>
 </body>
 </html>
