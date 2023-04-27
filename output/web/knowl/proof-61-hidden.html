@@ -10,20 +10,47 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para">Without loss of generality, assume <span class="process-math">\(n \leq m\text{.}\)</span> We induct on <span class="process-math">\(m\text{.}\)</span>
-</div> <div class="para">If <span class="process-math">\(m =1\)</span> then <span class="process-math">\(n=1\)</span> as well since <span class="process-math">\(n\leq m\)</span> and <span class="process-math">\(n=0\)</span> would yield <span class="process-math">\(r = p_1 \cdots p_n =1\text{,}\)</span> a contradiction. If <span class="process-math">\(n=m=1\)</span> we have <span class="process-math">\(p_1=q_1\)</span> and there is nothing more to prove.</div> <div class="para">Assume <span class="process-math">\(m &gt; 1\)</span> and that irreducible factorizations with <span class="process-math">\(\leq m\)</span> factors are unique up to reordering factors and taking associates.</div> <div class="para logical">
-<div class="para">Since <span class="process-math">\(R\)</span> is a PID, irreducible elements are prime by Theorem . Since <span class="process-math">\(p_1 \cdots p_n\in (p_n)\)</span> we have that <span class="process-math">\(q_1 \cdots q_m\in (p_n)\)</span> and since <span class="process-math">\((p_n)\)</span> is a prime ideal it follows that <span class="process-math">\(q_i \in (p_n)\)</span> for some <span class="process-math">\(i\text{.}\)</span> Upon reordering, we may as well assume <span class="process-math">\(q_m\in (p_n)\text{.}\)</span> Thus <span class="process-math">\(q_m = p_n u\)</span> for some <span class="process-math">\(u \in R\text{.}\)</span> Since <span class="process-math">\(q_m\)</span> is irreducible and <span class="process-math">\(p_n\)</span> is not a unit, <span class="process-math">\(u\)</span> must be a unit. We get</div>
+<body class="ignore-math"><article class="hiddenproof"><div class="para logical">
+<div class="para">Let's observe first that if such a map exists it is unique. For if <span class="process-math">\(\tilde\phi: R[x_1, \dots, x_n] \to S\)</span> is a ring map extending <span class="process-math">\(\phi\)</span> and sending <span class="process-math">\(x_i\)</span> to <span class="process-math">\(s_i\text{.}\)</span> Then</div>
 <div class="displaymath process-math">
 \begin{equation*}
-p_1 \cdots p_n = q_1 \cdots q_{m-1} up_n
+\begin{align*}
+\tilde\phi(\sum_{e_1, \dots, e_n \geq 0} r_{e_1, \dots, e_n} x_1^{e_1} \cdots x_n^{e_n}) &amp;=
+\sum_{e_1, \dots, e_n \geq 0} \phi(r_{e_1, \dots, e_n}) \phi(x_1)^{e_1} \cdots \phi(x_n)^{e_n}) \\
+&amp;=
+\sum_{e_1, \dots, e_n \geq 0} \phi(r_{e_1, \dots, e_n}) s_1^{e_1} \cdots s_n^{e_n},
+\end{align*}
 \end{equation*}
 </div>
-<div class="para">and hence, since <span class="process-math">\(R\)</span> is an integral domain, we may divide by <span class="process-math">\(p_n\)</span> to obtain</div>
+<div class="para">using that <span class="process-math">\(\tilde\phi\)</span> preserves <span class="process-math">\(+\)</span> and <span class="process-math">\(\cdot\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">For existence, let's assume <span class="process-math">\(n = 1\)</span> at first. Given <span class="process-math">\(\phi: R \to S\)</span> and <span class="process-math">\(s \in S\text{,}\)</span> define</div>
 <div class="displaymath process-math">
 \begin{equation*}
-p_1 \cdots p_{n-1}   = q_1 \cdots q_{m-2} (q_{m-1}u).
+\tilde{\phi}: R[x] \to S
 \end{equation*}
 </div>
-<div class="para">Notice that <span class="process-math">\((q_{m-1}u)=(q_{m-1})\)</span> is a prime ideal so <span class="process-math">\(q_{m-1}u\)</span> is irreducible by Theorem .</div>
-</div> <div class="para">By the inductive hypothesis we deduce that <span class="process-math">\(n-1=m-1\)</span> hence <span class="process-math">\(n=m\)</span> and also that <span class="process-math">\(p_1, \ldots, p_{n-1}\)</span> are associates to <span class="process-math">\(q_1, \ldots, q_{m-2}, q_{m-1}u\)</span> in some order. This together with <span class="process-math">\(p_n\)</span> associate to <span class="process-math">\(q_m\)</span> establishes the claim.</div></article></body>
+<div class="para">by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\tilde{\phi}(\sum_i r_i x^i) = \sum_i \phi(r_i) s^i.
+\end{equation*}
+</div>
+<div class="para">It is elementary (but tedious) to check <span class="process-math">\(\tilde{\phi}\)</span> really is a ring homomorphism. The fact that it restricts to <span class="process-math">\(\phi\)</span> is clear, however.</div>
+</div> <div class="para logical">
+<div class="para">For the general case, we proceed by induction on the number of variables <span class="process-math">\(n\text{.}\)</span> The induction hypothesis shows that there is a ring homomorphism</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\psi: R[x_1, \dots, x_{n-1}] \to S
+\end{equation*}
+</div>
+<div class="para">such that <span class="process-math">\(\psi|_R = \phi\)</span> and <span class="process-math">\(\psi(x_i) = s_i\text{,}\)</span> <span class="process-math">\(i = 1, \dots, n-1\text{.}\)</span> Applying the <span class="process-math">\(n=1\)</span> case to <span class="process-math">\(\psi\)</span> gives</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\tilde{\psi}: (R[x_1, \dots, x_{n-1}])[x_n] \to S
+\end{equation*}
+</div>
+<div class="para">with <span class="process-math">\(\tilde\psi|_{R[x_1, \dots, x_{n-1}]} = \psi\)</span> and <span class="process-math">\(\tilde{\psi}(x_n) = s_n\text{.}\)</span> Setting <span class="process-math">\(\tilde\phi=\tilde\psi\)</span> gives a map <span class="process-math">\(\tilde{\phi}\)</span> with the needed properties.</div>
+</div></article></body>
 </html>

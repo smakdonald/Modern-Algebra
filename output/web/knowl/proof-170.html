@@ -12,50 +12,16 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<div class="para logical">
-<div class="para">Say <span class="process-math">\(f = \sum_i c_i x^i\)</span> with <span class="process-math">\(c_i \in F\text{.}\)</span> Then</div>
+<div class="para">Let <span class="process-math">\(f (x) = x^p-5 \in \Q[x]\)</span> where <span class="process-math">\(p\)</span> is an odd prime, and let <span class="process-math">\(L\)</span> be the splitting field of <span class="process-math">\(f (x)\)</span> over <span class="process-math">\(\Q\text{.}\)</span> Using Eisenstein's Criterion with <span class="process-math">\(p=5\)</span> we see that <span class="process-math">\(f\)</span> is irreducible in <span class="process-math">\(\Q[x]\text{.}\)</span> Notice that <span class="process-math">\(\sqrt[p]5\)</span> is a root of this polynomial. As <span class="process-math">\(f\)</span> is monic and irreducible it is the minimum polynomial of <span class="process-math">\(\sqrt[p]5\text{,}\)</span> and thus <span class="process-math">\([\Q(\sqrt[p]5):\Q]=p\text{.}\)</span> Let <span class="process-math">\(\z\)</span> be a primitive <span class="process-math">\(p\th\)</span> root of unity. Notice that <span class="process-math">\(\z\)</span> is a root of the <span class="process-math">\((p-1)\th\)</span> cyclotomic polynomial, <span class="process-math">\(g(x)\text{,}\)</span> which is irreducible in <span class="process-math">\(\Q[x]\)</span> by the Gospel of Mark.</div> <div class="para logical">
+<div class="para">As <span class="process-math">\(L\)</span> is the splitting field of <span class="process-math">\(g\text{,}\)</span> there exists a root <span class="process-math">\(\a\)</span> of <span class="process-math">\(g\in L\text{.}\)</span> Consider <span class="process-math">\(\Q(\sqrt[p]5,\a)\text{.}\)</span> As <span class="process-math">\(\a\)</span> is algebraic in <span class="process-math">\(\Q(\sqrt[p]5,\a)\)</span> we know there exists some unique irreducible minimal polynomial <span class="process-math">\(h\)</span> of degree <span class="process-math">\(q\text{,}\)</span> and thus that <span class="process-math">\([\Q(\sqrt[p]5,\a):\Q(\sqrt[p]5)]=q\text{.}\)</span> By the Degree Formula we see</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\s(f(\a)) = \s \left(\sum_i c_i \a^i\right) = \sum_i \s(c_i) \s(\a)^i = \sum_i c_i \s(\a)^i = f(\s(\a)).
+[\Q(\sqrt[p]5,\a):\Q]=[\Q(\sqrt[p]5,\a):\Q(\sqrt[p]5][\Q(\sqrt[p]5:\Q]=pq.
 \end{equation*}
 </div>
-<div class="para">This proves (1) and (2) is an immediate consequence.</div>
-</div> <div class="para logical">
-<div class="para">To show (3) we need to first prove that for all <span class="process-math">\(\s \in \Aut(K/F)\text{,}\)</span> the function <span class="process-math">\(\phi(\s): R \to R\)</span> is a bijection. (The target of this function is indeed <span class="process-math">\(R\)</span> by (2).) Since <span class="process-math">\(R\)</span> is finite, we just need to show its one-to-one. This holds since <span class="process-math">\(\s\)</span> itself is one-to-one. (If <span class="process-math">\(\phi(\s)(\a) = \phi(\s)(\a')\)</span> for <span class="process-math">\(\a, \a' \in R\)</span> then <span class="process-math">\(\s(\a) = \s(\a')\)</span> and, since <span class="process-math">\(\s\)</span> is one-to-one, we have <span class="process-math">\(\a = \a'\text{.}\)</span>) Since the group laws of <span class="process-math">\(\Aut(K/F)\)</span> and <span class="process-math">\(\Perm(R)\)</span> are both given as function composition, it is clear that <span class="process-math">\(\phi\)</span> is a group homomorphism. In detail,</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\phi(\s \circ \tau)(\a) = \s(\tau(\a)) = (\phi(\s)\circ \phi(\tau))(\a)
-\end{equation*}
+<div class="para">However, <span class="process-math">\([\Q(\sqrt[p]5,\a):\Q]=[\Q(\sqrt[p]5,\a):\Q(\a)][\Q(\a):\Q]\)</span> and so <span class="process-math">\(pq=(p-1)m\)</span> for some <span class="process-math">\(m\in\Z\text{,}\)</span> so <span class="process-math">\((p-1)|pq\text{.}\)</span> As <span class="process-math">\(\gcd((p-1),p)=1\)</span> we must have <span class="process-math">\((p-1)|q\text{.}\)</span> But <span class="process-math">\(q\)</span> was defined to be the degree of <span class="process-math">\(h\text{,}\)</span> which divides <span class="process-math">\(g\text{.}\)</span> As <span class="process-math">\((p-1)|q\)</span> and <span class="process-math">\(q\leq (p-1)\text{,}\)</span> we see that <span class="process-math">\((p-1)=q\text{,}\)</span> so <span class="process-math">\(g=kh\)</span> for some <span class="process-math">\(k\in \Q\text{.}\)</span> As irreducible polynomials multiplied by a constant are still irreducible, we see that <span class="process-math">\(g\)</span> is indeed irreducible in <span class="process-math">\(\Q(\sqrt[p]5)\text{.}\)</span>
 </div>
-<div class="para">for all <span class="process-math">\(\a\)</span> and so <span class="process-math">\(\phi(\s \circ \tau) = \phi(\s) \circ \phi(\tau)\text{.}\)</span>
-</div>
-</div> <div class="para logical">
-<div class="para">Now asssume <span class="process-math">\(K = F(R)\text{.}\)</span> We show <span class="process-math">\(\phi\)</span> is one-to-one by showing its kernel is trivial. Suppose <span class="process-math">\(\phi(\s) = \id_{\Perm(R)}\text{;}\)</span> that is, suppose <span class="process-math">\(\s(\a) = \a\)</span> for all <span class="process-math">\(\a \in R\text{.}\)</span> We show <span class="process-math">\(\s = \id_K\text{.}\)</span> Define</div>
-<div class="displaymath process-math">
-\begin{equation*}
-K^\sigma := \{\beta \in K \mid \s(\beta) = \beta\},
-\end{equation*}
-</div>
-<div class="para">the so-called {} of <span class="process-math">\(\s\text{.}\)</span> Note that <span class="process-math">\(F \subseteq K^\s\)</span> since <span class="process-math">\(\s \in \Aut(K/F)\)</span> and we also have <span class="process-math">\(R \subseteq K^\s\)</span> by assumption. It is easy to see that <span class="process-math">\(K^\s\)</span> is a subfield of <span class="process-math">\(K\text{.}\)</span> (Here are the details: Clearly <span class="process-math">\(1 \in K^\s\text{.}\)</span> For <span class="process-math">\(\beta_1, \beta_2 \in K^\s\text{,}\)</span> we have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\s(\beta_1 \pm \beta_2) = \s(\beta_1) \pm \s(\beta_2)  = \beta_1 \pm \beta_2,
-\end{equation*}
-</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\s(\beta_1 \cdot\beta_2) = \s(\beta_1) \cdot \s(\beta_2)  = \beta_1 \cdot \beta_2,
-\end{equation*}
-</div>
-<div class="para">and, if <span class="process-math">\(\beta_2 \ne 0\text{,}\)</span>
-</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\s(1/\beta_2) =1 /\s(\beta_2)  =1/ \beta_2,
-\end{equation*}
-</div>
-<div class="para">and thus <span class="process-math">\(\beta_1 \pm \beta_2, \beta_1 \cdot \beta_2, 1/\beta_2 \in K^\s\text{.}\)</span>) So, <span class="process-math">\(K^\s\)</span> is a subfield of <span class="process-math">\(K\)</span> that contains <span class="process-math">\(F\)</span> and <span class="process-math">\(R\text{,}\)</span> but recall that <span class="process-math">\(F(R)\)</span> is the {} subfield of <span class="process-math">\(K\)</span> that contains <span class="process-math">\(F\)</span> and <span class="process-math">\(R\text{,}\)</span> and so we must have <span class="process-math">\(K^\s = K\text{.}\)</span> But then <span class="process-math">\(\s(\a) = \a\)</span> for all <span class="process-math">\(\a \in K\)</span> and hence <span class="process-math">\(\s = \id_K\text{.}\)</span>
-</div>
-</div></article><span class="incontext"><a href="sec-galext.html#proof-170" class="internal">in-context</a></span>
+</div> <div class="para">As <span class="process-math">\(g\)</span> is monic and irreducible in <span class="process-math">\(\Q(\sqrt[p]5)\)</span> we see that it is the minimum polynomial of <span class="process-math">\(\z\text{,}\)</span> and thus <span class="process-math">\([\Q(\sqrt[p]5,\a):\Q(\sqrt[p]5)]=(p-1)\text{.}\)</span> As <span class="process-math">\(\Q(\sqrt[p]5,\a)=L\text{,}\)</span> we have <span class="process-math">\([L:\Q]=p(p-1)\text{.}\)</span>
+</div></article><span class="incontext"><a href="sec-splitting.html#proof-170" class="internal">in-context</a></span>
 </body>
 </html>

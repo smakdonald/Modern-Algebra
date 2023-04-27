@@ -13,17 +13,13 @@
 <body class="ignore-math">
 <article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
 <div class="para logical">
-<div class="para">This follows from the Proposition and the fact that <span class="process-math">\(AE\)</span> is the result of doing the corresponding column operation on <span class="process-math">\(A\)</span> (see Lemma ), since</div>
+<div class="para">If <span class="process-math">\(g(A) = 0\text{,}\)</span> then for each <span class="process-math">\(v \in F^n\text{,}\)</span> by definition of the action of <span class="process-math">\(F[x]\)</span> on <span class="process-math">\(F^n_A\)</span> we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\det(E)  = \begin{cases}
-1 &amp; \text{if $E$ is elementary of type I} \\
-u &amp; \text{if $E$ is elementary of type II with a unit $u$ on the diagonal} \\
--1 &amp; \text{if $E$ is elementary of type III.} \\
-\end{cases}
+g(x) \cdot v = g(A) v = 0
 \end{equation*}
 </div>
-<div class="para">These formulas follow from the formula for the determinant of an upper or lower triangular matrix — see Example .</div>
-</div></article><span class="incontext"><a href="sec-det.html#proof-125" class="internal">in-context</a></span>
+<div class="para">and so <span class="process-math">\(g(x)\)</span> annihilates <span class="process-math">\(F^n_A\text{.}\)</span> Conversely, if <span class="process-math">\(g(x)\)</span> annihilates <span class="process-math">\(F^n_A\text{,}\)</span> then <span class="process-math">\(g(A) \cdot v = 0\)</span> for all <span class="process-math">\(v \in F^n\text{.}\)</span> Taking <span class="process-math">\(v = e_i\)</span> for each <span class="process-math">\(i\text{,}\)</span> this says that each column of <span class="process-math">\(g(A)\)</span> is <span class="process-math">\(0\)</span> and hence <span class="process-math">\(g(A)\)</span> is the zero matrix.</div>
+</div></article><span class="incontext"><a href="sec-cayley-hamilton.html#proof-125" class="internal">in-context</a></span>
 </body>
 </html>

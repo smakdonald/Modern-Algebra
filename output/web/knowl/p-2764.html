@@ -12,7 +12,20 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">If the operation is of type I, <span class="process-math">\(\det(B) = \det(A)\text{.}\)</span>
+<div class="para logical">
+<div class="para">Define the function</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\det: \Mat_{n \times n} (R) \to R
+\end{equation*}
+</div>
+<div class="para">by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\det(A) = \sum_{\s \in S_n} \sign(\s) \prod_{i=1}^n a_{\s(i), i}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(S_n\)</span> is the group of all permutations of <span class="process-math">\(\{1, \dots, n\}\)</span> and <span class="process-math">\(\sign(\s)\)</span> refers to the sign of a permutation.</div>
 </div>
 <span class="incontext"><a href="sec-det.html#p-2764" class="internal">in-context</a></span>
 </body>

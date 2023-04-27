@@ -10,6 +10,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para">Let <span class="process-math">\(h:M\to N\)</span> and <span class="process-math">\(h':N\to M\)</span> be the <span class="process-math">\(R\)</span>-module homomorphisms induced by the bijection <span class="process-math">\(j:A\to B\)</span> and its inverse <span class="process-math">\(j^{-1}:B\to A\text{,}\)</span> respectively, using the UMP for free modules. We'll show that <span class="process-math">\(h\)</span> and <span class="process-math">\(h'\)</span> are mutual inverses. For this note that <span class="process-math">\(h'\circ h:N\to N\)</span> is an <span class="process-math">\(R\)</span>-module homomorphism and <span class="process-math">\((h'\circ h)(b)=h'(j(b))=j^{-1}(j(b))=b\)</span> for every <span class="process-math">\(b\in B\text{.}\)</span> Since the identity map <span class="process-math">\(\id_N\)</span> is also an <span class="process-math">\(R\)</span>-module homomorphism such that <span class="process-math">\(id_N(b)=b\)</span> for every <span class="process-math">\(b\in B\text{,}\)</span> by the uniqueness clause in the UMP, we have <span class="process-math">\(h'\circ h=\id_n\text{.}\)</span> Similarly <span class="process-math">\(h\circ h'=\id_M\text{.}\)</span>
+<body class="ignore-math"><article class="hiddenproof"><div class="para">Among the many things to check here, we will only check a couple.</div> <div class="para">We need to prove the rule for scaling by <span class="process-math">\(R\)</span> on <span class="process-math">\(M/N\)</span> is well-defined: If <span class="process-math">\(m+N=m'+N\)</span> then <span class="process-math">\(m-m'\in N\)</span> so <span class="process-math">\(r(m-m')\in N\)</span> by the definition of submodule. This gives that <span class="process-math">\(rm-rm'\in N\text{,}\)</span> hence <span class="process-math">\(rm+N=rm'+N\text{.}\)</span> The module axioms are then pretty straightforward. We already know from 817 that <span class="process-math">\(M/N\)</span> is an abelian group under <span class="process-math">\(+\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Let us check one of the four axioms involving scaling. We have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+r( (m_1 +N) + (m_2 +N)) = r((m_1 + m_2) + N) = (r(m_1+m_2)) + N = (rm_1 + rm_2) + N = (rm_1 + N) + (rm_2 + N),
+\end{equation*}
+</div>
+<div class="para">which gives the third such axiom. The other three are also straightforward.</div>
+</div> <div class="para">The fact that <span class="process-math">\(\pi\)</span> is an <span class="process-math">\(R\)</span>-module homomorphism is also straightforward. Its kernel is <span class="process-math">\(\{m \in M \mid m + N = N\}\text{,}\)</span> which is equal to <span class="process-math">\(N\text{.}\)</span>
 </div></article></body>
 </html>

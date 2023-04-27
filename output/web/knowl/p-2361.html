@@ -12,7 +12,18 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">A <span class="process-math">\(k \times k\)</span> <em class="emphasis">minor</em> of <span class="process-math">\(A\)</span> is the determinant of a <span class="process-math">\(k \times k\)</span> submatrix of <span class="process-math">\(A\text{;}\)</span> more formally, if <span class="process-math">\(A\)</span> is an <span class="process-math">\(m \times n\)</span> matrix, a <span class="process-math">\(k\times k\)</span> minor of <span class="process-math">\(A\)</span> is any element of <span class="process-math">\(R\)</span> given as follows: Choose <span class="process-math">\(1 \leq i_1 &lt; i_2 &lt; \cdots &lt; i_k \leq m\)</span> and <span class="process-math">\(1 \leq j_1 &lt; \cdots &lt; j_k \leq n\text{,}\)</span> let <span class="process-math">\(B = (b_{p,q})\)</span> be the <span class="process-math">\(k \times k\)</span> matrix with <span class="process-math">\(b_{p,q} = a_{i_p, j_q}\text{.}\)</span> Then <span class="process-math">\(\det(B)\)</span> is a minor of <span class="process-math">\(A\text{.}\)</span>
+<div class="para logical">
+<div class="para">Granting this claim, by applying it again to <span class="process-math">\(B\)</span> we arrive at a matrix of the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A'' = \begin{bmatrix}
+g &amp; 0 &amp; 0\\
+0 &amp; g' &amp; 0 \\
+0 &amp; 0 &amp; C
+\end{bmatrix}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(g' = \gcd(B)\)</span> and <span class="process-math">\(g \mid g'\)</span> and <span class="process-math">\(g' \mid \gcd(C)\text{.}\)</span> (Observe that the row and column operations on <span class="process-math">\(B\)</span> will not affect the first row and column of <span class="process-math">\(A'\text{.}\)</span>) Continuing in this fashion, we arrive at the matrix <span class="process-math">\(S\)</span> in the statement.</div>
 </div>
 <span class="incontext"><a href="sec-snf.html#p-2361" class="internal">in-context</a></span>
 </body>

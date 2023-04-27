@@ -12,26 +12,21 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>
-<div class="para">Let <span class="process-math">\(G\)</span> be a group of order <span class="process-math">\(pq\)</span> and let <span class="process-math">\(H, K\)</span> be Sylow subgroups of order <span class="process-math">\(q\)</span> and <span class="process-math">\(p\)</span> respectively. We see that <span class="process-math">\(H\)</span> is a normal subgroup using a HW problem, since <span class="process-math">\([G:H]=p\)</span> is the smallest prime that divides <span class="process-math">\(|G|\text{.}\)</span>
-</div> <div class="para logical">
-<div class="para">Furthermore, since <span class="process-math">\(H\cap K\)</span> is a subgroup of both <span class="process-math">\(H\)</span> and <span class="process-math">\(K\)</span> we have by Lagrange's theorem that <span class="process-math">\(|H\cap K|\mid \operatorname{gcd}(q,p)=1\text{,}\)</span> so that <span class="process-math">\(H\cap K=\{e_G\}\text{.}\)</span> From here it follows that</div>
-<div class="displaymath process-math">
+<div class="para">The first two assertions are immediate from the definitions.</div> <div class="para logical">
+<div class="para">The kernel of the canonical map <span class="process-math">\({\pi}: G \twoheadrightarrow G/N\)</span> contains <span class="process-math">\(M\)</span> and so by <a href="" class="xref" data-knowl="./knowl/thm-ump-quotient.html" title="Theorem 4.47: UMP for Quotients">Theorem 4.47</a> we get an induced homomorhism</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-ump-quotient.html ./knowl/thm-fit-group.html">
 \begin{equation*}
-|HK|=\frac{|H||K|}{|H\cap K|}=\frac{q\cdot p}{1}=pq=|G|
+\phi: G/M \to G/N
 \end{equation*}
 </div>
-<div class="para">and so <span class="process-math">\(HK=G\text{.}\)</span> The recognition theorem now yields that</div>
-<div class="displaymath process-math">
+<div class="para">with <span class="process-math">\(\phi(gM) = {\pi}(g) = gN\text{.}\)</span> Moreover, we know</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-ump-quotient.html ./knowl/thm-fit-group.html">
 \begin{equation*}
-G \cong H \rtimes_\rho K \cong C_q\rtimes_\rho C_p.
+\operatorname{Ker}(\phi) = \operatorname{Ker}({\pi})/M = N/M.
 \end{equation*}
 </div>
-<div class="para">for some homomorphism <span class="process-math">\(\rho: K \to \operatorname{Aut}(H)\text{,}\)</span> equivalently <span class="process-math">\(\rho: C_p \to \operatorname{Aut}(C_q)\text{.}\)</span> By the UNM of cyclic groups to give such a homomorphism <span class="process-math">\(\rho\)</span> is equivalent to giving an element <span class="process-math">\(z\in \operatorname{Aut}(C_q)\)</span> so that <span class="process-math">\(z^p=\text{id}\text{,}\)</span> which will give <span class="process-math">\(\rho(y^j)=z^j\)</span> for <span class="process-math">\(C_p=\langle y\rangle\text{.}\)</span> Thus <span class="process-math">\(|z|\mid p\)</span> yielding that either <span class="process-math">\(|z|=1\)</span> or <span class="process-math">\(|z|=p\text{.}\)</span>
+<div class="para">Finally apply the <a href="" class="xref" data-knowl="./knowl/thm-fit-group.html" title="Theorem 4.49: First Isomorphism Theorem">First Isomorphism Theorem</a> to <span class="process-math">\(\phi\text{.}\)</span>
 </div>
-</div> <div class="para">
-<em class="emphasis">Case 1:</em> if <span class="process-math">\(|z|=1\)</span> then <span class="process-math">\(\rho\)</span> is the trivial homomorphism and thus <span class="process-math">\(G\cong C_q\times C_p\cong C_{pq}\text{.}\)</span>
-</div> <div class="para">
-<em class="emphasis">Case 2:</em> if <span class="process-math">\(|z|=p\)</span> then it must be the case by Lagrange that <span class="process-math">\(p\mid |\operatorname{Aut}(C_q)\text{.}\)</span> By Lemma <a href="" class="xref" data-knowl="./knowl/cor-aut-cp.html" title="Corollary 2.33: \Aut(C_p)">Corollary 2.33</a> we know that <span class="process-math">\(\operatorname{Aut}(C_q)\cong C_{p-1}\)</span> is a cyclic group. Therefore we have that <span class="process-math">\(p\mid (q-1)\)</span> if and only if there exists an element <span class="process-math">\(z\in \operatorname{Aut}(C_q)\)</span> of order <span class="process-math">\(p\)</span> by <code class="code-inline tex2jax_ignore">[provisional cross-reference: thm:cyclic]</code> (2) . Moreover any such element <span class="process-math">\(z\)</span> generates a subgroup of <span class="process-math">\(\operatorname{Aut}(C_q)\)</span> of order <span class="process-math">\(p\text{.}\)</span> Since there is a unique subgroup of a cyclic group of a given order by Theorem <code class="code-inline tex2jax_ignore">[provisional cross-reference: thm:cyclic]</code> (2) we see that the image of <span class="process-math">\(\rho\)</span> is independent of the choice of <span class="process-math">\(z\text{.}\)</span> Thus by Proposition <code class="code-inline tex2jax_ignore">[provisional cross-reference: prop:conjugateAut]</code> we conclude that all subgroups resulting from any choice of <span class="process-math">\(z\)</span> of order <span class="process-math">\(p\)</span> are isomorphic.</div> <div class="para">Moreover, from the explicit presentation of semidirect products of cyclic groups given in a homework problem we see that the resulting group is non-abelian; in particular it is not isomorphic to <span class="process-math">\(C_{pq}\text{.}\)</span>
-</div></article><span class="incontext"><a href="sec-classifications.html#proof-38" class="internal">in-context</a></span>
+</div></article><span class="incontext"><a href="sec-dps.html#proof-38" class="internal">in-context</a></span>
 </body>
 </html>

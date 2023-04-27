@@ -10,20 +10,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para">Let <span class="process-math">\(C = \{w_1, \dots, w_m\}\text{.}\)</span> As noted, the sublemma establishes the case <span class="process-math">\(w = 1\)</span> of the Exchange Lemma. The general case proceeds recursively:</div> <div class="para">Suppose that for some <span class="process-math">\(0 \leq k &lt; m\text{,}\)</span> we have found <span class="process-math">\(v_1, \dots, v_k \in B\)</span> such that <span class="process-math">\(B'' := (B \setminus \{v_1, \dots, v_k\}) \cup \{w_1, \dots, w_k\}\)</span> is a basis for some <span class="process-math">\(k &lt; m\text{.}\)</span> We need to show we can “swap out one more''; that is, we need to prove there is a <span class="process-math">\(v_{k+1} \in(B \setminus \{v_1, \dots, v_k\})\)</span> such that <span class="process-math">\((B'' \setminus \{v_{k+1}\}) \cup \{w_{k+1}\}\)</span> is also a basis.</div> <div class="para logical">
-<div class="para">Since <span class="process-math">\(B''\)</span> is a basis, there is a (unique) equation of the form</div>
-<div class="displaymath process-math">
-\begin{equation*}
-w_{k+1} = \sum_{i=1}^n a_i u_i
-\end{equation*}
-</div>
-<div class="para">with <span class="process-math">\(u_i \in B''\)</span> and <span class="process-math">\(a_i \ne 0\text{.}\)</span> Now, there must be at least one <span class="process-math">\(u_i\)</span> that is not in <span class="process-math">\(\{w_1, \dots, w_k\}\text{,}\)</span> for otherwise we would have <span class="process-math">\(w_{k+1} \in \Span( w_1, \dots, w_k)\text{,}\)</span> contrary to <span class="process-math">\(C\)</span> being linearly independent. Let <span class="process-math">\(v_{k+1} = u_i\)</span> for such an <span class="process-math">\(i\text{.}\)</span> Then by the sublemma</div>
-<div class="displaymath process-math">
-\begin{equation*}
-(B'' \setminus \{v_{k+1}\}) \cup \{w_{k+1}\}
-\end{equation*}
-</div>
-<div class="para">is a basis of <span class="process-math">\(V\text{.}\)</span>
-</div>
+<body class="ignore-math"><article class="hiddenproof"><div class="para">Let <span class="process-math">\(h:M\to N\)</span> and <span class="process-math">\(h':N\to M\)</span> be the <span class="process-math">\(R\)</span>-module homomorphisms induced by the bijection <span class="process-math">\(j:A\to B\)</span> and its inverse <span class="process-math">\(j^{-1}:B\to A\text{,}\)</span> respectively, using the UMP for free modules. We'll show that <span class="process-math">\(h\)</span> and <span class="process-math">\(h'\)</span> are mutual inverses. For this note that <span class="process-math">\(h'\circ h:N\to N\)</span> is an <span class="process-math">\(R\)</span>-module homomorphism and <span class="process-math">\((h'\circ h)(b)=h'(j(b))=j^{-1}(j(b))=b\)</span> for every <span class="process-math">\(b\in B\text{.}\)</span> Since the identity map <span class="process-math">\(\id_N\)</span> is also an <span class="process-math">\(R\)</span>-module homomorphism such that <span class="process-math">\(id_N(b)=b\)</span> for every <span class="process-math">\(b\in B\text{,}\)</span> by the uniqueness clause in the UMP, we have <span class="process-math">\(h'\circ h=\id_n\text{.}\)</span> Similarly <span class="process-math">\(h\circ h'=\id_M\text{.}\)</span>
 </div></article></body>
 </html>

@@ -10,27 +10,31 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para logical">
-<div class="para">Let <span class="process-math">\(R\)</span> be a non-zero commutative ring and let <span class="process-math">\(M\)</span> be a free <span class="process-math">\(R\)</span>-module with two {} bases, <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{.}\)</span> We need to show <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> have the same cardinality. Since <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are finite, by Example  the assertion is equivalent to the following statement:</div>
-<pre class="code-display tex2jax_ignore">
-                \begin{quote} For a non-zero commutative ring $R$,
-                if there is an isomorphism $R^n \cong R^m$ of $R$-modules for some integers $n$ and $m$, then $n = m$.
-                \end{quote}
-                </pre>
-</div> <div class="para">I will prove this statement by taking it as already known that it holds in the special case when <span class="process-math">\(R\)</span> is a field. (We will prove it for fields later.)</div> <div class="para">Since <span class="process-math">\(R\)</span> is not the zero ring, it contains at least one maximal ideal <span class="process-math">\(I\text{.}\)</span> (This is proven using Zorn's Lemma.) Recall that <span class="process-math">\(R/I\)</span> is a field.</div> <div class="para">Given an isomorphism <span class="process-math">\(f: R^n \xra{\cong} R^m\)</span> of <span class="process-math">\(R\)</span>-modules, by Lemma  we have an induced homomorphism of <span class="process-math">\(R/I\)</span>-module <span class="process-math">\(\ov{f}: R^n/IR^n \to R^m /IR^m\text{.}\)</span> Likewise, the inverse map <span class="process-math">\(f^{-1}: R^m \xra{\cong} R^n\)</span> induces a map <span class="process-math">\(\ov{f^{-1}}: R^m/IR^m \to R^n /IR^n\text{.}\)</span> Also by that Lemma we have <span class="process-math">\(\ov{f} \circ \ov{f^{-1}} = \ov{f \circ f^{-1}} = \ov{\id} = \id\)</span> and similarly <span class="process-math">\(\ov{f^{-1}} \circ \ov{f}\)</span> is the identity. That is, we have an isomorphism <span class="process-math">\(R^n/IR^n \cong R^m /IR^m\)</span> of <span class="process-math">\(R/I\)</span>-modules.</div> <div class="para logical">
-<div class="para">Next, I claim that there is an isomorphism</div>
+<body class="ignore-math"><article class="hiddenproof"><div class="para">Ignoring the rules for scaling by <span class="process-math">\(R\text{,}\)</span> we know each of the frist four results holds for abelian groups (and the maps are the same). So, we merely need to prove that the rules for scaling are respected in each case. In more detail:</div> <div class="para logical">
+<div class="para">For the UMP, we already know that <span class="process-math">\(\ov{f}\)</span> is a well-defined homomorphism of groups under <span class="process-math">\(+\)</span> and that it is the unique one such that <span class="process-math">\(\ov{f} \circ \can = f\text{.}\)</span> It remains only to show <span class="process-math">\(\ov{f}\)</span> preserves scaling: This follows quickly from the definitions:</div>
 <div class="displaymath process-math">
 \begin{equation*}
-R^n/IR^n \cong (R/I)^n
+\ov{f}(r (m +N)) = \ov{f} (rm + N) = f(rm) = r f(m) = r \ov{f}(m + N).
 \end{equation*}
 </div>
-<div class="para">of <span class="process-math">\(R/I\)</span>-modules. Define <span class="process-math">\(R^n \to (R/I)^n\)</span> in the evident way (modding out by <span class="process-math">\(I\)</span> entry-wise). It is a surjective map of <span class="process-math">\(R\)</span>-modules with kernel <span class="process-math">\(I R^n\)</span> and thus, by the First Isomorphism Theorem, it induces an isomorphism</div>
+<div class="para">where the third equation uses that <span class="process-math">\(f\)</span> preserves scaling.</div>
+</div> <div class="para logical">
+<div class="para">For the First Isomorphism Theorem, we already know that there is an isomorphism of abelian groups under <span class="process-math">\(+\text{,}\)</span>
+</div>
 <div class="displaymath process-math">
 \begin{equation*}
-g: R^n/I R^n \xra{\cong} (R/I)^n
+\ov{h}: M/\ker(h) \xra{\cong} \im(h),
 \end{equation*}
 </div>
-<div class="para">given by <span class="process-math">\(g((r_1, \dots, r_n)^\tau + IR^n) = (r_1 + I, \dots, r_n + I)^\tau\)</span> (where <span class="process-math">\(\tau\)</span> denotes taking the transpose). Now, what we have said so far only shows that <span class="process-math">\(g\)</span> is isomorphism of <span class="process-math">\(R\)</span>-modules, but it is easy to see that <span class="process-math">\(g\)</span> is in fact <span class="process-math">\(R/I\)</span>-linear (I'll leave that to you) and thus it is an isomorphism of <span class="process-math">\(R/I\)</span>-modules.</div>
-</div> <div class="para">Putting the results proven so far together, we conclude that <span class="process-math">\((R/I)^n\)</span> and <span class="process-math">\((R/I)^m\)</span> are isomorphic as <span class="process-math">\(R/I\)</span>-modules. Since <span class="process-math">\(R/I\)</span> is a field and since we are assuming the result holds for fields, we deduce that <span class="process-math">\(n = m\text{.}\)</span>
-</div></article></body>
+<div class="para">given by <span class="process-math">\(\ov{h}(m + \ker(h)) = h(m)\text{,}\)</span> and it remains only to show this map preserves scaling. This is a special case of what we proved in part (0).</div>
+</div> <div class="para logical">
+<div class="para">For the second isomorphism theorem, we need to first check that <span class="process-math">\(A+B\)</span> and <span class="process-math">\(A \cap B\)</span> are submodules. From 817 we already know they are subgroups under <span class="process-math">\(+\text{,}\)</span> and it is evident from the definitions that each is closed under scaling by elements of <span class="process-math">\(R\text{.}\)</span> Now, we know from 817 that there is an isomorphism of abelian groups <span class="process-math">\(h: A/(A \cap B) \xra{\cong} (A+B)/B\)</span> given by <span class="process-math">\(h(a + (A\cap B)) = a + B\text{.}\)</span> It remains only to show <span class="process-math">\(h\)</span> preserves scaling:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+h(r(a+(A \cap B))) = h(ra + A \cap B) = ra + B = r(a +B) = rh(a + (A \cap B)).
+\end{equation*}
+</div>
+</div> <div class="para">For the third, we already know (from 817) that <span class="process-math">\(B/A\)</span> is a subgroup of <span class="process-math">\(M/A\)</span> under <span class="process-math">\(+\text{.}\)</span> Given <span class="process-math">\(r \in R\)</span> and <span class="process-math">\(b +A \in B/A\)</span> we have <span class="process-math">\(r(b+A) = rb + A\)</span> which belongs to <span class="process-math">\(B/A\)</span> since <span class="process-math">\(rb \in B\text{.}\)</span> This proves <span class="process-math">\(B/A\)</span> is a submodule of <span class="process-math">\(M/A\text{.}\)</span> Also from 817 we know there is an isomorphism of abelian groups <span class="process-math">\(h: (M/A)/(B/A) \to M/B\)</span> given by <span class="process-math">\(h((m+A) + B/A) = m + B\)</span> and it remains only to show it is <span class="process-math">\(R\)</span>-linear: <span class="process-math">\(h(r((m+A) + B/A)) =h(r(m+A) + B/A) = h((rm + A) + B/A) = rm + B = r(m +B) = r h((m+A) + B/A)\text{.}\)</span>
+</div> <div class="para">The Lattice Theorem is the most complicaed to gerenlize. From 817 we know thre is a bijection between the set of sub groups of <span class="process-math">\(M\)</span> and that contain <span class="process-math">\(N\)</span> and subgroups of the quotient group <span class="process-math">\(M/N\text{,}\)</span> and the maps are the same as given in the statment. We just need to prove that these maps send submodules to submodules. If <span class="process-math">\(K\)</span> is a submodule of <span class="process-math">\(M\)</span> containing <span class="process-math">\(N\text{,}\)</span> then by part (3) we know <span class="process-math">\(K/N\)</span> is a submodule of <span class="process-math">\(M/N\text{.}\)</span>
+</div> <div class="para">If <span class="process-math">\(T\)</span> is a submodule of <span class="process-math">\(M/N\text{,}\)</span> then <span class="process-math">\(\pi^{-1}(T)\)</span> is an abelian group. For <span class="process-math">\(r \in R\)</span> adn <span class="process-math">\(m \in \pi^{-1}(T)\)</span> we have <span class="process-math">\(\pi(m) \in T\)</span> and hence <span class="process-math">\(\pi(rm) = r\pi(m) \in T\)</span> too, since <span class="process-math">\(T\)</span> is a submodule. This proves <span class="process-math">\(\pi^{-1}(T)\)</span> is a submodule.</div></article></body>
 </html>

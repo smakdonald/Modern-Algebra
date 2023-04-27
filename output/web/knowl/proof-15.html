@@ -12,24 +12,25 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>
-<div class="para logical"><ol class="decimal">
-<li><div class="para logical">
-<div class="para">If such a <span class="process-math">\(\overline{f}\)</span> exists, it is necessarily unique since <span class="process-math">\(G \twoheadrightarrow G/N\)</span> is onto. In fact, if <span class="process-math">\(f=\pi\circ \overline{f}\)</span> then <span class="process-math">\(\overline{f}\)</span> has to be given by the formula</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\overline{f}(gN) = f(g).
-\end{equation*}
+<div class="para logical"><ol class="decimal"><li>
+<div class="para">
+<em class="emphasis">Claim 1:</em> For any <span class="process-math">\(\{e\}\neq H\leq G\text{,}\)</span> setting <span class="process-math">\(k=\min\{i \mid i\in \mathbb{Z}, i&gt;0, g^i\in H\}\)</span> gives that <span class="process-math">\(H=\langle g^k \rangle\text{.}\)</span>
 </div>
-<div class="para">We now need to show that this formula determines a well-defined homomorphism: If <span class="process-math">\(xN = yN\text{,}\)</span> then <span class="process-math">\(y^{-1}x \in N \subseteq \operatorname{Ker}(f)\)</span> and so <span class="process-math">\(f(y)^{-1} f(x) = e\text{,}\)</span> whence <span class="process-math">\(f(y) = f(x)\text{.}\)</span> For any <span class="process-math">\(x,y\)</span> we have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\overline{f}(xNyN) = \overline{f}(xyN) = f(xy) = f(x)f(y) =\overline{f}(xN) \overline{f}(yN).
-\end{equation*}
+<div class="para">Since <span class="process-math">\(H\subseteq G=\langle g\rangle\)</span> any element of <span class="process-math">\(H\)</span> is of the form <span class="process-math">\(g^m\)</span> for some <span class="process-math">\(m\in \mathbb{Z}\text{.}\)</span> By the Division Theorem <span class="process-math">\(m=kq+r\)</span> for some <span class="process-math">\(r\in \mathbb{Z}\text{,}\)</span> <span class="process-math">\(0\leq r&lt;k\text{.}\)</span> Since <span class="process-math">\(g^m\)</span> and <span class="process-math">\(g^k\)</span> are elements of <span class="process-math">\(H\text{,}\)</span> <span class="process-math">\(g^r=g^m(g^{k})^{-q}\in H\text{.}\)</span> Since <span class="process-math">\(r&lt;k\)</span> and <span class="process-math">\(g^r\in H\text{,}\)</span> by the minimality of <span class="process-math">\(k\)</span> it follows that <span class="process-math">\(r\)</span> cannot be positive and thus <span class="process-math">\(r=0\text{.}\)</span> Therefore <span class="process-math">\(m=kq\)</span> and we have shown that <span class="process-math">\(H\subseteq \langle g^k \rangle\text{.}\)</span> The opposite containment follows because <span class="process-math">\(g^k\in H\)</span> and <span class="process-math">\(\langle g^k \rangle\)</span> is the smallest subgroup of <span class="process-math">\(G\)</span> containing <span class="process-math">\(g^k\text{.}\)</span> Thus <span class="process-math">\(H=\langle g^k \rangle\text{.}\)</span>
 </div>
-</div></li>
-<li><div class="para">The formula for <span class="process-math">\(\overline{f}\)</span> given above ensures that <span class="process-math">\(\operatorname{Im}f=\operatorname{Im}\overline{f}\)</span> hence <span class="process-math">\(f\)</span> is surjective if and only if <span class="process-math">\(\overline{f}\)</span> is surjective.</div></li>
-<li><div class="para">We have <span class="process-math">\(\overline{f}(xN) = e_H\)</span> iff <span class="process-math">\(f(x) = e_H\)</span> iff <span class="process-math">\(x \in \operatorname{Ker}(f)\)</span> iff <span class="process-math">\(xN \in  \operatorname{Ker}(f)/N\text{.}\)</span> If <span class="process-math">\(xN \in \operatorname{Ker}(f)/N\)</span> for some <span class="process-math">\(x \in G\text{,}\)</span> then <span class="process-math">\(xN = yN\)</span> for some <span class="process-math">\(y \in \operatorname{Ker}(f)\)</span> and hence <span class="process-math">\(x = yz\)</span> for some <span class="process-math">\(z \in N\text{.}\)</span> Since <span class="process-math">\(N \subseteq \operatorname{Ker}(f)\text{,}\)</span> we have <span class="process-math">\(x \in \operatorname{Ker}(f)\text{.}\)</span>
-</div></li>
-</ol></div></article><span class="incontext"><a href="sec-quotient-groups.html#proof-15" class="internal">in-context</a></span>
+<div class="para">Let <span class="process-math">\(\Phi:\{\text{subgroups of } G\} \to  \{\text{divisors of } |G|\}\)</span> be given by <span class="process-math">\(\Phi(H)=|H|\text{.}\)</span>
+</div>
+<div class="para">
+<em class="emphasis">Claim 2:</em> For any divisor <span class="process-math">\(d\)</span> of <span class="process-math">\(|G|\text{,}\)</span> we have <span class="process-math">\((\Psi\circ\Phi)(d)=d\text{.}\)</span>
+</div>
+<div class="para">We have <span class="process-math">\((\Psi\circ\Phi)(d)=\left| \langle g^{\frac{|G|}{d}}\rangle\right|=\left| g^{\frac{|G|}{d}}\right|=\frac{|G|}{\operatorname{gcd}(|G|/d,|G|)}=\frac{|G|}{|G|/d}=d.\)</span>
+</div>
+<div class="para">
+<em class="emphasis">Claim 3:</em> For any subgroup <span class="process-math">\(H\)</span> of <span class="process-math">\(G\text{,}\)</span> we have <span class="process-math">\((\Phi\circ\Psi)(H)=H\text{.}\)</span>
+</div>
+<div class="para">By Claim 1, any <span class="process-math">\(H\leq G\)</span> is either <span class="process-math">\(H=\{e\}\text{,}\)</span> for which <span class="process-math">\((\Phi\circ\Psi)(\{e\})=\Phi(1)=\langle g^{|G|} \rangle=\{e\}\)</span> or is of the form <span class="process-math">\(H=\langle g^k \rangle\text{.}\)</span> In the latter case, setting <span class="process-math">\(|G|=n\)</span> we have <span class="process-math">\(|H|=|g^k|=\frac{n}{\operatorname{gcd}(n,k)}\)</span> and <span class="process-math">\((\Phi\circ\Psi)(H)=\langle g^{\frac{n}{n/\operatorname{gcd}(n,k)}} \rangle=\langle g^{\operatorname{gcd}(n,k)}\rangle.\)</span> It remains to show that <span class="process-math">\(\langle g^{\operatorname{gcd}(n,k)}\rangle=\langle g^k\rangle=H\text{.}\)</span> By Bézout's Identity, <span class="process-math">\(\operatorname{gcd}(n,k)=an+bk\)</span> for some integers <span class="process-math">\(a,b\text{.}\)</span> Since <span class="process-math">\(g^{\operatorname{gcd}(n,k)}=(g^n)^a(g^k)^b=e^a(g^k)^b=(g^k)^b\in \langle g^k \rangle\)</span> if follows that <span class="process-math">\(\langle g^{\operatorname{gcd}(n,k)}\rangle \subseteq \langle g^k \rangle\text{.}\)</span> On the other hand <span class="process-math">\(k\)</span> is a multiple of <span class="process-math">\(\operatorname{gcd}(n,k)\)</span> so <span class="process-math">\(g^k\in \langle g^{\operatorname{gcd}(n,k)}\rangle\)</span> and thus <span class="process-math">\(\langle g^k \rangle \subseteq \langle g^{\operatorname{gcd}(n,k)}\rangle\text{.}\)</span> Finally, we conclude that <span class="process-math">\((\Phi\circ\Psi)(\langle g^k \rangle)=\langle g^{\operatorname{gcd}(n,k)}\rangle=\langle g^k \rangle\)</span> for any <span class="process-math">\(k\in \mathbb{Z},k&gt;0\text{.}\)</span>
+</div>
+<div class="para">Claims 2 and 3 establish that <span class="process-math">\(\Phi\)</span> is a two sided inverse to <span class="process-math">\(\Phi\text{,}\)</span> thus <span class="process-math">\(\Phi\)</span> is a bijection.</div>
+</li></ol></div></article><span class="incontext"><a href="sec-cyclic.html#proof-15" class="internal">in-context</a></span>
 </body>
 </html>

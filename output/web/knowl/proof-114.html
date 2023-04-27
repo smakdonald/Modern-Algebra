@@ -12,15 +12,6 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<div class="para logical">
-<div class="para">First write <span class="process-math">\(M\)</span> in invariant factor form <span class="process-math">\(M \cong R^r \oplus R/(d_1) \oplus \dots \oplus R/(d_k)\text{.}\)</span> For any non-zero, non-unit element <span class="process-math">\(d\)</span> of <span class="process-math">\(R\text{,}\)</span> we have <span class="process-math">\(d = p_1^{e_1} \cdots p_m^{e_m}\)</span> for some distinct (non-associate) prime elements <span class="process-math">\(p_j\)</span> and integers <span class="process-math">\(e_j \geq 1\text{.}\)</span> By the Chinese remainder theorem (applied over and over again) we have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-R/(d)\cong R/(p_1^{e_1})  \oplus \cdots \oplus R/(p_m^{e_m})
-\end{equation*}
-</div>
-<div class="para">Doing this for each fact <span class="process-math">\(R/(d_i)\)</span> in the invariant factor form of <span class="process-math">\(M\)</span> we obtain the existence of an elementary divisor form of <span class="process-math">\(M\text{.}\)</span>
-</div>
-</div> <div class="para">Uniqueness follows from the uniqueness of the invariant factor form and of the prime factorizations of the <span class="process-math">\(d_i\)</span>'s.</div></article><span class="incontext"><a href="sec-modclass.html#proof-114" class="internal">in-context</a></span>
+<div class="para">Recall that for a PID <span class="process-math">\(R\text{,}\)</span> the gcd of any set of elements is defined to be a generatpr of the ideal they generate. So, Lemma  implies that <span class="process-math">\(\gcd_k(A) = \gcd_k(S)\)</span> for all <span class="process-math">\(k\text{.}\)</span> Since <span class="process-math">\(S\)</span> is diagonal, the only non-zero minors of <span class="process-math">\(S\)</span> are those given by indices <span class="process-math">\(1 \leq i_1 &lt; \cdots &lt; i_k \leq m\)</span> and<span class="process-math">\(1 \leq j_1 &lt; \cdots &lt; j_k \leq m\)</span> for which <span class="process-math">\(i_t = j_t\)</span> for all <span class="process-math">\(1 \leq t \leq k\text{,}\)</span> and moreover such a minor is equal to <span class="process-math">\(d_{i_1} \cdots d_{i_k}\text{.}\)</span> Since <span class="process-math">\(d_l \mid d_{l+1}\)</span> for all <span class="process-math">\(l\text{,}\)</span> it follows that <span class="process-math">\(d_{1} \cdots d_k\)</span> divides <span class="process-math">\(d_{i_1} \cdots d_{i_k}\)</span> for all <span class="process-math">\(1 \leq i_1 &lt; \cdots &lt; i_k \leq n\text{.}\)</span> Thus <span class="process-math">\(\gcd_k(S) = d_1 \cdots d_k\text{,}\)</span> for each <span class="process-math">\(k\text{,}\)</span> and hence <span class="process-math">\(d_k = \gcd_k(S)/\gcd_{k-1}(S)\)</span> as claimed.</div></article><span class="incontext"><a href="sec-snf.html#proof-114" class="internal">in-context</a></span>
 </body>
 </html>
