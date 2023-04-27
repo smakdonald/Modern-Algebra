@@ -13,19 +13,22 @@
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
 <div class="para logical">
-<div class="para">The function</div>
+<div class="para">Finally</div>
 <div class="displaymath process-math">
 \begin{equation*}
-j: K \to H \rtimes_\rho K
+\begin{aligned}
+(y,x) (\rho(x^{-1})(y^{-1}) ,x^{-1}) &amp;= (y \rho(x)\left(\rho(x^{-1})(y^{-1}) \right), e)
+= (y (\rho(x)\circ\rho(x^{-1}))(y^{-1}), e) 
+\\ &amp;= (y \rho(e)(y^{-1}), e) = (yy^{-1},e)=(e,e),
+\end{aligned}
 \end{equation*}
 </div>
-<div class="para">defined by <span class="process-math">\(j(x) = (e,x)\)</span> is also an injective homomorphism and thus its image</div>
+<div class="para">and similarly</div>
 <div class="displaymath process-math">
 \begin{equation*}
-K' := \{(e,x) \mid x \in H \} \leq H \rtimes_\rho K
+(\rho(x^{-1})(y^{-1}) ,x^{-1})  (y,x) = (e,e).
 \end{equation*}
 </div>
-<div class="para">is isomorphic to <span class="process-math">\(K\text{.}\)</span> <span class="process-math">\(K'\)</span> is typically <em class="emphasis">not</em> normal, however. Finally, it is easy to see that <span class="process-math">\(H'K'= H \rtimes_\rho K\)</span> and <span class="process-math">\(H' \cap K' = \{e\}\text{.}\)</span> Putting this all together we have</div>
 </div>
 <span class="incontext"><a href="sec-spds.html#p-984" class="internal">in-context</a></span>
 </body>

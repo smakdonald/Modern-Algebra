@@ -3,15 +3,10 @@
 !.gitignore
 
 # don't track extra pages
-Introgroups.ptx
-GroupHomoms.ptx
-NormQuotient.ptx
-GroupActions.ptx
-Sylow.ptx
+
 # don't track unpublished builds
 
 # don't track assets generated from source
-generated-assets
 
 # don't track node packages
 node_modules

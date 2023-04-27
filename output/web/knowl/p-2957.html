@@ -12,7 +12,21 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">So instead let's try a different approach. Let <span class="process-math">\(L = \Q(\sqrt[4]{5})\text{.}\)</span> Then since <span class="process-math">\(x^4 - 5\)</span> is irreducible in <span class="process-math">\(\Q[x]\)</span> by Eisenstein, we have <span class="process-math">\([L: \Q] = 4\text{.}\)</span> Since <span class="process-math">\(F = L(i)\)</span> and <span class="process-math">\(i\)</span> is a root of <span class="process-math">\(x^2 +1\text{,}\)</span> we have <span class="process-math">\([F:L] \leq 2\text{.}\)</span> But <span class="process-math">\(F \ne L\)</span> since <span class="process-math">\(F \subseteq \R\text{.}\)</span> Note that <span class="process-math">\([F:L] = 1\)</span> if and only if <span class="process-math">\(F = L\text{.}\)</span> Thus <span class="process-math">\([F:L] = 2\text{.}\)</span>
+<div class="para logical">
+<div class="para">Next, consider the monic polynomial <span class="process-math">\(x^4+2x^2+49\text{,}\)</span> and observe</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{align}
+0&amp;=x^4+2x^2+49\\
+-48&amp;=x^4+2x^2+1\\
+(16)(3)(-1)&amp;=(x^2+1)^2\\
+4\sqrt{3}i&amp;=(x^2+1)\\
+-1+4\sqrt{3}i&amp;=x^2.
+\end{align}
+\end{equation*}
+</div>
+<div class="para">However, as <span class="process-math">\(\gamma^2=-1+4\sqrt{3}i\text{,}\)</span> we see that <span class="process-math">\(\gamma\)</span> is the root of this polynomial. Since this is a monic polynomial of degree <span class="process-math">\(4=[K(i):\Q]\text{,}\)</span> it must be the minimal polynomial as well. Thus the minimal polynomial of <span class="process-math">\([K(i):\Q]=x^4+2x^2+49\text{.}\)</span>
+</div>
 </div>
 <span class="incontext"><a href="sec-algebraic.html#p-2957" class="internal">in-context</a></span>
 </body>

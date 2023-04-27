@@ -320,8 +320,7 @@
 
   </docinfo>
   
-  <book xml:id="modern-algebra">
-    <title>Modern Algebra</title>
+  <book xml:id="modern-algebra"><title>Modern Algebra</title>
     <subtitle>Groups, Rings, Modules, Fields</subtitle>
 
     <frontmatter xml:id="frontmatter">
@@ -385,14 +384,13 @@
 
     </frontmatter>
 
-    <part xml:id="part-group">
-      <title>Group Theory</title>
+    <part xml:id="part-group"><title>Group Theory</title>
 
-      <!--
-     *************
-      Group Theory
-     *************
-      -->
+    <!--
+    ************
+    Group Theory
+    ************
+    -->
       
       <chapter xml:id="ch-intro-groups"><title>Intro to Groups</title>
       
@@ -407,7 +405,7 @@
       
               <statement>
                 <p>
-                  A <em>binary operation</em> on a set <m>S</m> is a function
+                  A <em>binary operation</em><idx><h>binary operation</h></idx><idx><h>operation</h></idx> on a set <m>S</m> is a <xref text="title" ref="def-function"/>
                   <me>
                     -\cdot-:S\times S\to S,\text{given by } (x,y)\to x\cdot y.
                   </me>
@@ -420,50 +418,50 @@
             <definition xml:id="def-monoid"><title>Monoid</title>
               <statement>
                 <p>
-                  A <em>monoid</em> is a pair <m>(G, \cdot)</m> where <m>G</m> is a set and <m>\cdot</m> is a <xref text="title" ref="def-binop"/> on <m>G</m> satisfying the following properties:
-                  <ol>
-                    <li>
+                  A <em>monoid</em><idx><h>monoid</h></idx> is a pair <m>(G, \cdot)</m> where <m>G</m> is a set and <m>\cdot</m> is a <xref text="title" ref="def-binop"/> on <m>G</m> satisfying the following properties:
+                  <ul>
+                    <li><title>Closure</title><idx><h>closure</h></idx>
                       <p>
-                        (Closure) for each <m>x,y\in G</m>, <m>xy\in G</m>.
+                        for each <m>x,y\in G</m>, <m>xy\in G</m>.
                       </p>
                     </li>
 
-                    <li>
+                    <li><title>Associativity</title><idx><h>associativity</h></idx>
                       <p>
-                        (Associativity) for all <m>x,y,z\in G</m> we have <m>(x\cdot y)\cdot z=x\cdot (y\cdot z)</m> 
+                        for all <m>x,y,z\in G</m> we have <m>(x\cdot y)\cdot z=x\cdot (y\cdot z)</m> 
                       </p>
                     </li>
 
-                    <li>
+                    <li><title>Identity Element</title><idx><h>identity</h></idx>
                       <p>
-                        (Identity Element) there exists <m>e\in G</m> such that <m>e·x=x·e=x</m> for all <m>x\in G</m>
+                        there exists <m>e\in G</m> such that <m>e·x=x·e=x</m> for all <m>x\in G</m>
                         <notation><usage><m>e</m></usage><description>the identity element of a group</description></notation>          
                       </p>
                     </li>
-                  </ol>
+                  </ul>
                 </p>
               </statement>
             </definition>
 
             <insight xml:id="mark"> <p>We often write <m>xy</m> instead of <m>x\cdot y</m> for simplicity.<fn>This is the one and only "Mark". All following "Marks" will be "Remarks".</fn></p></insight>
 
-            <remark><p>The first axiom in <xref ref="def-monoid"/> is technically redundant. Closure is really part of the definition of a <xref text="title" ref="def-binop"/> on a set, and it is implicitly assumed whenever we consider such an operation. Howewever, redundancy is not a bad thing, and it never hurts to state it explicitely.</p></remark>
+            <remark><p>The Closure axiom in <xref ref="def-monoid"/> is technically redundant. Closure is really part of the definition of a <xref text="title" ref="def-binop"/> on a set, and it is implicitly assumed whenever we consider such an operation. Howewever, redundancy is not a bad thing, and it never hurts to state it explicitely.</p></remark>
 
-            <remark><p>For those interested, a pairing <m>(G,\cdot)</m> that only satisfies the first two properties of <xref ref="def-monoid"/> is called a <em>semigroup</em>. If <m>(G,\cdot)</m> only satisfies the first property, it is known as a <em>magma</em>.</p></remark>
+            <remark><p>For those interested, a pairing <m>(G,\cdot)</m> that only satisfies the first two properties of <xref ref="def-monoid"/> is called a <em>semigroup</em><idx><h>semigroup</h></idx>. If <m>(G,\cdot)</m> only satisfies the first property, it is known as a <em>magma</em><idx><h>magma</h></idx>.</p></remark>
 
             <figure xml:id="figure-magma">
               <caption>Reltions between algebraic structures.</caption>
-              <image width="30%" source="Images/Magma.pdf" />
+              <image width="30%" source="images/magma.pdf" />
             </figure>
 
             <definition xml:id="def-group"><title>Group</title>
               <statement>
                 <p>
-                  A <em>group</em> is a monoid <m>(G,\cdot)</m> with the following additional property:
+                  A <em>group</em><idx><h>group</h></idx> is a monoid <m>(G,\cdot)</m><idx><h><m>(G,\cdot)</m></h></idx> with the following additional property:
                   <ul>
-                    <li>
+                    <li><title>Inverses</title><idx><h>inverse</h></idx>
                       <p>
-                        (Inverses) for each <m>x\in G</m>, there is an element <m>y\in G</m> such that <m>xy=e=yx</m>.
+                        for each <m>x\in G</m>, there is an element <m>y\in G</m> such that <m>xy=e=yx</m>.
                       </p>
                     </li>
                   </ul>
@@ -473,8 +471,14 @@
                 </p>
               </statement>
             </definition>
-      
-            <remark><p>Although a group is a pair, we will usually refer to the group by only naming the underlying set, <m>G</m>.</p></remark>
+
+            <remark><p> a group is a pair, we will usually refer to the group by only naming the underlying set, <m>G</m><idx><h><m>G</m></h></idx>.</p></remark>
+
+            <warning> <title>Additive and Multiplicative Notation</title>
+              <p>When the operation of a group is <m>\cdot</m>, we refer to <m>G</m>as a <em>multiplicative group</em><idx><h>multiplicative group</h></idx>. If the operation <m>+</m> is used, then <m>G</m> is referred to as an <em>additive group</em><idx><h>additive group</h></idx></p>
+
+              <p>When we refer to exponents in groups, we are talking about repeated applications of the given operation, which in many cases is denoted multiplicatively, hence the exponent notation. However, for additive groups such as <m>(\Z,+)</m>, we find ourselves in the uncomfortable situation where statements such as <m>2^3=2+2+2=6</m> are technically true. Thus, in additive groups it is more customary to denote expressions such as the one above in more traditional notation: namely, <m>3\cdot (2)=2+2+2=6</m>.</p>
+            </warning>
 
             <exercise xml:id="exe-lr-inverses"><title>Left and Right Inverses</title>
               <statement>
@@ -491,7 +495,7 @@
 
             <example xml:id="ex-n-monoid"><title>Au Naturale</title>
               <statement>
-                <p>The natural numbers <m>\N</m> form a monoid under addition. However, <m>(\N,+)</m> does <em>not</em> form a group.</p>
+                <p>The <xref text="title" ref="def-natural-numbers"/> <m>\N</m> form a monoid under addition. However, <m>(\N,+)</m> does <em>not</em> form a group.</p>
               </statement>
             </example>
             
@@ -499,21 +503,21 @@
               <statement>
                 <p>
                   <ol>
-                    <li>
+                    <li><title>Unique Identity</title>
                       <p xml:id="part-unique-group-identity">
-                        (Unique Identity) In a monoid <m>G</m>, the element <m>e</m> satisfying the second axiom of <xref ref="def-monoid" /> is unique, and we thus refer to it as the <em>identity element</em> of <m>G</m>.
+                        In a monoid <m>G</m>, the element <m>e</m><idx><h><m>e</m></h></idx> satisfying the Idenity axiom of <xref ref="def-monoid" /> is unique, and we thus refer to it as the <em>identity element</em><idx><h>identity element</h></idx> of <m>G</m>.
                       </p>
                     </li>
       
-                    <li>
+                    <li><title>Unique Inverses</title>
                       <p xml:id="part-unique-group-inverse">
-                        (Unique Inverses) In a group <m>G</m>, for each <m>x</m>, the element <m>y</m> satisfying the additional axiom of <xref ref="def-group" /> is unique, and we thus refer to it as the <em>the inverse</em> of <m>x</m> and we will henceforth denote it by <m>x^{-1}</m>.
+                        In a group <m>G</m>, for each <m>x</m>, the element <m>y</m> satisfying the Inverses axiom of <xref ref="def-group" /> is unique, and we thus refer to it as the <em>the inverse</em> of <m>x</m> and we will henceforth denote it by <m>x^{-1}</m><idx><h><m>x\inv</m></h></idx>.
                       </p>
                     </li>
       
-                    <li>
+                    <li><title>Cancellation</title><idx><h>cancellation</h></idx>
                       <p xml:id="part-cancellation">
-                        (Cancellation) In a group <m>G</m>, if <m>xy = xz</m> then <m>y=z</m>. Similarly, if <m>yx = zx</m> we have <m>y = z</m>.
+                        In a group <m>G</m>, if <m>xy = xz</m> then <m>y=z</m>. Similarly, if <m>yx = zx</m> we have <m>y = z</m>.
                       </p>
                     </li>
                   </ol>
@@ -558,13 +562,15 @@
               </proof>
             </theorem>
       
-            <definition xml:id="def-abelian"> <title>Abelian Group </title>
+            <definition xml:id="def-abelian"> <title>Abelian Group</title>
               <statement>
                 <p>
-                  A group <m>G</m> is an <em>abelian group</em> if <m>\cdot</m> is commutative; i.e., <m>x \cdot y = y \cdot x</m> for all <m>x,y \in G</m>. 
+                  A group <m>G</m> is an <em>abelian group</em><idx><h>abelian group</h></idx> if <m>\cdot</m> is commutative; i.e., <m>x \cdot y = y \cdot x</m> for all <m>x,y \in G</m>. 
                 </p>
               </statement>
             </definition>
+
+            <remark><p>Two elements <m>x,y</m> of a group are said to <em>commute</em><idx><h>commute</h></idx> if <m>xy=yx</m>.</p></remark>
 
             <p>As we progress through the text, one might start to recognize that groups are much more agreeable when they are abelian. They behave in ways we expect and are often times much more likely to do what we want. If all groups were abelain, group theory would not be anywhere near as widespread (or interesting, though that is more a matter of opinion). Because of this, a common motif in this course is finding, constructing, and fiddling with groups that are 'almost' abelian, whatever that means.</p>
       
@@ -583,14 +589,14 @@
                   <ol>
                     <li xml:id="trivial-group"> <title>Trivial Subgroup</title>
                       <p>
-                        The <term>trivial subgroup</term> is the group with a single element <m>\{e\}</m>
+                        The <term>trivial subgroup</term><idx><h>trivial group</h></idx> is the group with a single element <m>\{e\}</m><idx><h><m>\{e\}</m></h></idx>
                         <notation><usage><m>\{e\}</m></usage><description>the trivial group: e.g. the group containing only an identity element</description></notation>          
                       </p>
                     </li>
       
                     <li>
                       <p>
-                        <m>(\Z,+), (\Q,+), (\R,+),</m> and <m>(\C,+)</m> each form an abelian group, where <m>+</m> denotes traditional addition.
+                        <m>(\Z,+), (\Q,+), (\R,+),</m> and <m>(\C,+)</m><idx><h><m>\(\Z,+)</m></h></idx><idx><h><m>(\Q,+)</m></h></idx><idx><h><m>(\R,+)</m></h></idx><idx><h><m>(\C,+)</m></h></idx> each form an abelian group, where <m>+</m> denotes traditional addition.
                       </p>
                     </li>
       
@@ -600,43 +606,42 @@
                       </p>
                     </li>
       
-                    <li> <title>General Linear Group</title>
+                    <li><title>General Linear Group</title>
                       <p>
                         For any positive integer <m>n</m>, let 
                         <me>
                           \operatorname{GL}_n(\C)=\{ \text{invertible } n \times n \;\text{matrices with entries in}\; \C\}.
                         </me> 
-                        By invertible I mean those matrices that have two-sided inverses, but it turns out that if an <m>n \times n</m> matrix has a left inverse then it it is automatically a right inverse too, and vice versa. Then <m>\operatorname{GL}_n(\C)</m> is a non-abelian group under matrix multiplication.<fn>In general this is true for any field <m>F</m>, whatever those are.</fn>
+                        By invertible I mean those matrices that have two-sided inverses, but it turns out that if an <m>n \times n</m> matrix has a left inverse then it it is automatically a right inverse too, and vice versa. Then <m>\operatorname{GL}_n(\C)</m><idx><h><m>\GL_n(\C)</m></h></idx> is a non-abelian group under matrix multiplication, known as the <em>general linear group</em><idx><h>general linear group</h></idx>.<fn>In general this is true for any field <m>F</m>, whatever those are.</fn>
                         <notation><usage><m>\GL</m></usage><description>General linear group</description></notation> 
                       </p>
                     </li>
       
                     <li>
                       <p>
-                        For any <m>n</m>, let <m>\Z/n</m> denote the integers modulo <m>n</m>. Then <m>(\Z/n, +)</m> forms an abelian group where <m>+</m> denotes addition modulo <m>n</m>.
+                        For any <m>n</m>, let <m>\Z/n</m> denote the <xref text="title" ref="def-integers-modulo"/>. Then <m>(\Z/n,+)</m><idx><h><m>\(\Z/n,+)</m></h></idx> forms an abelian group where <m>+</m> denotes addition modulo <m>n</m>.
                       </p>
                     </li>
 
                     <li>
                       <p>
-                        The subset <m>L=\{1,-1,i,-i\}</m> of the complex numbers forms an abelian group under multiplication.
+                        The subset <m>L=\{1,-1,i,-i\}</m><idx><h><m>L</m></h></idx> of the complex numbers forms an abelian group under multiplication.
                       </p>
                     </li>
                   </ol>
                 </p>
             </example>
 
-            <exercise xml:id="exe-opposite-group">
-              <title>Opposite Day</title>
+            <exercise xml:id="exe-opposite-group"><title>Opposite Day</title>
               <p>
-                Let <m>G</m> be a multiplicative group, and define <m>G^{op}</m> be the set <m>G</m> equipped with the operation <m>*</m>, where <m>a*b=ba</m>. Then <m>G^{op}</m> is a group.
+                Let <m>G</m> be a multiplicative group, and define <m>G^{op}</m><idx><h><m>G^{op}</m></h></idx><idx><h>opposite group</h></idx> be the set <m>G</m> equipped with the operation <m>*</m>, where <m>a*b=ba</m>. Then <m>G^{op}</m> is a group.
               </p>
             </exercise>
 
             <exercise xml:id="exe-not-groups"><title>Inches From Greatness...</title>
               <statement>
                 <p>
-                  Explain why each of the following is <em>not</em> a group.
+                  Explain why each of the following is <em>not</em> a group. If you're feeling fancy, determine which are monoids as well.
   
                   <ol>
                     <li>
@@ -677,19 +682,19 @@
                     <ol>
                       <li>
                         <p>
-                          The subset <m>\Z^\times=\{-1,1\}</m> of <m>\Z</m>.
+                          The subset <m>\Z^\times=\{-1,1\}</m> of <m>\Z</m>.<idx><h><m>\Z^\times</m></h></idx>
                         </p>
                       </li>
                       
                       <li>
                         <p>
-                          <m>\Q^\times=\Q\setminus\{0\}</m>, <m>\R^\times=\R\setminus\{0\}</m>, and <m>\C^\times=\C\setminus\{0\}</m>.
+                          <m>\Q^\times=\Q\setminus\{0\}</m><idx><h><m>\Q^\times</m></h></idx>, <m>\R^\times=\R\setminus\{0\}</m><idx><h><m>\R^\times</m></h></idx>, and <m>\C^\times=\C\setminus\{0\}</m><idx><h><m>\C^\times</m></h></idx>.
                         </p>
                       </li>
 
                       <li>
                         <p>
-                          For each <m>n\in\N</m>, the subset <m>\Z/n^\times=\{k\in\Z/n|\gcd(k,n)=1\}</m> of <m>\Z/n</m>.
+                          For each <m>n\in\N</m>, the subset <m>\Z/n^\times=\{k\in\Z/n|\gcd(k,n)=1\}</m><idx><h><m>\Z/n^\times</m></h></idx> of <m>\Z/n</m>.
                         </p>
                       </li>
                     </ol>
@@ -810,11 +815,7 @@
                   </ol>
                 </p>
               </proof>
-            </lemma>  
-            
-            <warning> <title>Additive Exponents</title>
-              <p>When we refer to exponents in groups, we are talking about repeated applications of the given operation, which in many cases is denoted multiplicatively, hence the exponent notation. However, for additive groups such as <m>(\Z,+)</m>, we find ourselves in the uncomfortable situation where statements such as <m>2^3=2+2+2=6</m> are technically true. Thus, in additive groups it is more customary to denote expressions such as the one above in more traditional notation: namely, <m>3\cdot (2)=2+2+2=6</m>.</p>
-            </warning>
+            </lemma>          
 
             <exercise xml:id="exe-groups-but-false"><title>Wouldn't it be Nice</title>
               <p>
@@ -849,12 +850,11 @@
               </p>
             </exercise>
 
-            <p>But thats enough confusion for now. I know just the thing to get us back on track.</p>
+            <p>But that's enough confusion for now. I know just the thing to get us back on track.</p>
     
           </subsection>
 
-          <subsection xml:id="subsec-order">
-            <title>Order</title>
+          <subsection xml:id="subsec-order"><title>Order</title>
 
             <blockquote><p><q>Good order is the foundation of all things.</q></p><attribution>Edmund Burke</attribution></blockquote>
     
@@ -871,7 +871,7 @@
       
                     <li>
                       <p>
-                        The <em>order of a group</em> <m>G</m> is the cardinality of the set <m>G</m>, denoted <m>|G|</m>.
+                        The <em>order of a group</em> <m>G</m> is the <xref text="title" ref="def-cardinality"/> of the set <m>G</m>, denoted <m>|G|</m>.
                         <notation><usage><m>|G|</m></usage><description>Order of a group <m>G</m></description></notation> 
                       </p>
                     </li>
@@ -880,7 +880,7 @@
               </statement>
             </definition>
 
-            <remark><p>Some authors use the notation <m>\#G</m> or <m>o(G)</m> to refer to the order of a group. We won't name names, but they know who they are. (See: <xref ref="mark"/>)</p></remark>
+            <remark><p>Some authors use the notation <m>|G|</m> or <m>o(G)</m> to refer to the order of a group. We won't name names, but they know who they are. (See: <xref ref="mark"/>)</p></remark>
       
             <example xml:id="ex-order"><title>Order Examples</title>
               <p>
@@ -944,7 +944,7 @@
       
                     <li>
                       <p>
-                        If <m>g^p=e</m> for <m>g\neq e</m> and <m>p</m> prime, then <m>|g|=p</m>.
+                        If <m>g^p=e</m> for <m>g\neq e</m> and <m>p</m> <xref text="title" ref="def-prime-number"/>, then <m>|g|=p</m>.
                       </p>
                     </li>
                   </ol>
@@ -1051,34 +1051,31 @@
       
         <section xml:id="sec-common-groups"><title>Common Groups</title>
 
-          <introduction><p>We examine two of the most commonly encountered groups in all of algebra: the dihedral group and the symmetric group. Also the quaternions are here.</p></introduction>
+          <introduction><p>We examine two of the most commonly encountered groups in all of algebra: the dihedral group and the symmetric group ... the quaternions are also here.</p></introduction>
       
-          <subsection xml:id="subsec-d2n">
-            <title>Dihedral Groups</title> 
+          <subsection xml:id="subsec-d2n"><title>Dihedral Groups</title> 
 
             <blockquote><p><q>Reality prefers symmetry.</q></p><attribution>Jorge Luis Borges</attribution> </blockquote>
             
             <p>We now discuss the important example of dihedral groups in detail.</p>
       
-            <definition xml:id="def-iso-and-sym">
-              <title>Isometry and Symmetry</title>
+            <definition xml:id="def-iso-and-sym"><title>Isometry and Symmetry</title>
               <statement>
                 <p>
-                  For any integer <m>n \geq 3</m>, let <m>P_n</m> denote a regular <m>n</m>-gon. An <em>isometry</em> of the plane is a function <m>f: {\mathbb{R}}^2 \to {\mathbb{R}}^2</m> that is a bijection and preserves the Euclideal distance <m>(d(f(A),f(B))=d(A,B)</m> for any <m>A,B\in {\mathbb{R}}^2</m>). A <em>symmetry</em> of <m>P_n</m> is an isometry that maps <m>P_n</m> to itself.
+                  For any integer <m>n \geq 3</m>, let <m>P_n</m> denote a regular <m>n</m>-gon. An <em>isometry</em> of the plane is a function <m>f: {\mathbb{R}}^2 \to {\mathbb{R}}^2</m> that is a bijection and preserves the Euclidean distance <m>(d(f(A),f(B))=d(A,B)</m> for any <m>A,B\in {\mathbb{R}}^2</m>). A <em>symmetry</em> of <m>P_n</m> is an isometry that maps <m>P_n</m> to itself.
                 </p>
               </statement>
             </definition>
       
             <remark><p>By the latter I don't mean that <m>f</m> fixes each of the points of <m>P_n</m>, but rather that <m>f(P_n) = P_n</m>, that is every point of <m>P_n</m> is mapped to a (possibly different) point of <m>P_n</m> and every point of <m>P_n</m> is the image of some point in <m>P_n</m> via <m>f</m>.</p></remark>
 
-            <exercise>
+            <exercise><title>Composition of Symmetries</title>
               <p>
-                The composition of two symmetries of <m>P_n</m> is again a symmetry of <m>P_n</m>.
+                The <xref text="title" ref="def-composition"/> of two symmetries of <m>P_n</m> is again a symmetry of <m>P_n</m>.
               </p>
             </exercise>
       
-            <definition xml:id="def-d2n">
-              <title>Dihedral Group</title>
+            <definition xml:id="def-d2n"><title>Dihedral Group</title>
               <statement>
                 <p>
                   The <em>dihedral group</em> <m>D_{2n}</m> is the set of symmetries of the regular <m>n</m>-gon <m>P_n</m> equipped with the binary operation given by composition.
@@ -1089,8 +1086,7 @@
 
             <example xml:id="ex-d2n-elements">
               <p>
-                Assume that the regular <m>n</m>-gon <m>P_n</m> is drawn in the plane with its center at the origin and one vertex on the <m>x</m> axis. 
-              
+                Assume that the regular <m>n</m>-gon <m>P_n</m> is drawn in the plane with its center at the origin and one vertex on the <m>x</m> axis.        
               <ol>
                 <li>
                   <p>
@@ -1109,7 +1105,7 @@
 
             <remark><p>We see <m>|r|=n</m> and <m>|s|=2</m>, which may make some intuitive sense. The fact that <m>sr</m> is a reflection and hence that <m>srsr=e_{{\mathbb{R}}^2}</m> may be slightly less aparent.</p></remark>
       
-            <proposition xml:id="thm-d2n-order">
+            <proposition xml:id="thm-d2n-order"><title>Order of <m>D_{2n}</m></title>
               <statement>
                 <p>
                   <ol>
@@ -1148,8 +1144,7 @@
       
           </subsection>
       
-          <subsection xml:id="subsec-symmetric">
-            <title>Symmetric Groups</title>
+          <subsection xml:id="subsec-symmetric"><title>Symmetric Groups</title>
 
             <blockquote><p><q>Every possible permutation is still in play.</q></p><attribution>Michael Cullen</attribution></blockquote>
       
@@ -4739,7 +4734,7 @@
             <p>Lets look at some group actions of a more geometric flavor. <fn>What do you think geometry tastes like? Which field of mathematics would taste the best?</fn></p>
   
             <example xml:id="ex-cube"><title>Symmetries of the Cube</title>
-              <p>Let <m>G</m> be the group of rotational symmetries of the cube and let <m>G</m> act on the collection of <m>6</m> faces of the cube in the evident way. This action is transitive and so the one and only orbit has length <m>6</m>. It follows that for any face <m>f</m> of the cube, <m>G_f</m> has index <m>6</m> and, since we already know that <m>\# G= 24</m>, it follows from LOIS that <m>\#G_f = 4</m>. That is, there are four symmetries that map <m>f</m> to itself. Indeed, they are the <m>4</m> rotations by <m>0</m>, <m>90</m>, <m>180</m> or <m>270</m> degrees about the line of symmetry passing through the mid-point of <m>f</m> and the mid-point of the opposite face.</p>
+              <p>Let <m>G</m> be the group of rotational symmetries of the cube and let <m>G</m> act on the collection of <m>6</m> faces of the cube in the evident way. This action is transitive and so the one and only orbit has length <m>6</m>. It follows that for any face <m>f</m> of the cube, <m>G_f</m> has index <m>6</m> and, since we already know that <m>\# G= 24</m>, it follows from LOIS that <m>|G|_f = 4</m>. That is, there are four symmetries that map <m>f</m> to itself. Indeed, they are the <m>4</m> rotations by <m>0</m>, <m>90</m>, <m>180</m> or <m>270</m> degrees about the line of symmetry passing through the mid-point of <m>f</m> and the mid-point of the opposite face.</p>
             </example>
 
             <p>That was fun and all, but I just feel like there weren't enough faces...</p>
@@ -5307,9 +5302,7 @@
           <blockquote><p><q>What makes me unique is that I'm normal.</q></p><attribution>Scotty McCreery</attribution></blockquote>
     
           <lemma xml:id="lem-Syl-lem"><title>Sylow's Lemma</title>
-            <statement>
-              <p>Let <m>G</m> be a finite group, <m>p</m> a prime, <m>P</m> a Sylow <m>p</m>-subgroup of <m>G</m>, and <m>Q</m> any <m>p</m>-subgroup of <m>G</m>. Then <m>Q \cap N_G(P) = Q \cap P</m>.</p>
-            </statement>
+            <statement><p>Let <m>G</m> be a finite group, <m>p</m> a prime, <m>P</m> a Sylow <m>p</m>-subgroup of <m>G</m>, and <m>Q</m> any <m>p</m>-subgroup of <m>G</m>. Then <m>Q \cap N_G(P) = Q \cap P</m>.</p></statement>
 
             <proof>
               <p>
@@ -7721,13 +7714,11 @@
 
     </part>
 
-    <part xml:id="part-rings">
-      <title>Ring Theory</title>
+    <part xml:id="part-rings"><title>Ring Theory</title>
 
       <!-- Ring Theory -->
     
-      <chapter xml:id="ch-rings">
-        <title>Rings</title>
+      <chapter xml:id="ch-rings"><title>Rings</title>
 
        <!--
        ***************
@@ -7735,21 +7726,13 @@
        ***************
        -->
 
-        <section xml:id="sec-defn-ex">
-            <title>Intro to Rings</title>
+        <section xml:id="sec-defn-ex"><title>Intro to Rings</title>
     
-            <subsection xml:id="subsec-first-ex">
-                <title>Definition and First Properties</title>
+            <subsection xml:id="subsec-first-ex"><title>Definition and First Properties</title>
                 
-                <blockquote>
-                  <p>
-                    <q>I made a lot of mistakes out of the ring, but I never made any in it.</q>
-                  </p>
-                  <attribution>Jack Johnson</attribution>
-                </blockquote>
+                <blockquote><p><q>I made a lot of mistakes out of the ring, but I never made any in it.</q></p><attribution>Jack Johnson</attribution></blockquote>
     
-                <definition xml:id="def-ring">
-                <title>Ring</title>
+                <definition xml:id="def-ring"><title>Ring</title>
                   <statement>
                       <p>
                           A <em>ring</em> is a set <m>R</m> equipped with two binary operations, <m>+</m> and <m>\cdot</m>, satisfying:
@@ -7783,9 +7766,7 @@
 
                 <p>Here are some basic consequences of the axioms.</p>
     
-                <proposition xml:id="prop-ring-arithmetic">
-                  <title>Ring Arithmetic</title>
-                  
+                <proposition xml:id="prop-ring-arithmetic"><title>Ring Arithmetic</title>     
     
                   <statement>
                   <p>
@@ -7837,8 +7818,7 @@
                   </proof>
                 </proposition>
 
-                <definition xml:id="def-unital-ring">
-                <title>Unital Ring</title>
+                <definition xml:id="def-unital-ring"><title>Unital Ring</title>
                   <statement>
                     <p>
                       A ring <m>R</m> is a <em>unital ring</em> (or a <em>ring with identity</em>) if there is a multiplicative identity element, written as <m>1</m>, such that <m>1 \cdot a = a = a \cdot 1</m> for all <m>a \in R</m>.
@@ -7848,7 +7828,7 @@
 
                 <p>Some additional consequences.</p>
 
-                <proposition xml:id="prop-unital-ring-arithmetic">
+                <proposition xml:id="prop-unital-ring-arithmetic"><title>Unital Ring Arithmetic</title>
                   <statement>
                     <p>
                       For a unital ring <m>R</m> and all <m>a\in R</m> we have:
@@ -7874,8 +7854,7 @@
 
                 <p>We can go deeper.</p>
 
-                <definition xml:id="def-division-ring">
-                <title>Division Ring</title>
+                <definition xml:id="def-division-ring"><title>Division Ring</title>
                   <statement>
                     <p>
                       A unital ring <m>R</m> is a <em>division ring</em> if <m>1\neq 0</m> and <m>(R - \{0\})</m> is a group under <m>\cdot</m> (i.e. every <m>r\in (R - \{0\})</m> has a multiplicative inverse)
@@ -7885,19 +7864,17 @@
 
                 <p>We can go <em>deeper</em>.</p>
 
-                  <definition xml:id="def-commutative-ring">
-                  <title>Commutative Ring</title>
-                    <statement>
-                      <p>
-                        A ring <m>R</m> is <em>commutative</em> if <m>a \cdot b = b \cdot a</m> holds for all <m>a,b \in R</m>.
-                        </p>
-                    </statement>
-                  </definition>
+                <definition xml:id="def-commutative-ring"><title>Commutative Ring</title>
+                  <statement>
+                    <p>
+                      A ring <m>R</m> is <em>commutative</em> if <m>a \cdot b = b \cdot a</m> holds for all <m>a,b \in R</m>.
+                      </p>
+                  </statement>
+                </definition>
 
                 <p>We can go <alert>deeper</alert>.</p>
 
-                <definition xml:id="def-field">
-                <title>Field</title>
+                <definition xml:id="def-field"><title>Field</title>
                   <statement>
                     <p>
                         A ring <m>R</m> is a <em>field</em> if it is a commutative division ring.
@@ -7907,8 +7884,7 @@
 
                 <p>Phew. Lets see some examples.</p>
     
-                <example xml:id="ex-ring-examples">
-                  <title>Relevant Rings</title>
+                <example xml:id="ex-ring-examples"><title>Relevant Rings</title>
                   <p>
                     <ol>
                       <li> <title>Trivial Ring</title>
@@ -7950,8 +7926,7 @@
                   </p>
                 </example>
 
-                <example>
-                  <title>Less Relevant Rings</title>
+                <example><title>Less Relevant Rings</title>
                   <p>
                     <ol>
                       <li> <title>The Real Hamiltonian Quaternion Ring</title>
@@ -8001,66 +7976,55 @@
     
             </subsection>  
     
-            <subsection xml:id="subsec-units">
-                <title>Units, Zerodivisors, Integral Domains</title>
+            <subsection xml:id="subsec-units"><title>Units, Zerodivisors, Integral Domains</title>
 
-                <blockquote>
-                  <p>
-                    <q>There is more power in unity than division.</q>
-                  </p>
-                  <attribution>Emmanuel Cleaver</attribution>
-                </blockquote>
+                <blockquote><p><q>There is more power in unity than division.</q></p><attribution>Emmanuel Cleaver</attribution></blockquote>
     
-                <definition xml:id="def-unit">
-                  <title>Unit</title>
+                <definition xml:id="def-unit"><title>Unit</title>
                   <statement>
-                      <p>
-                      An element <m>u</m> of a unital ring <m>R</m> with <m>1\neq 0</m> is called a <em>unit</em> there exists <m>v\in R</m> such that<m>uv=1</m> and <m>vu=1</m>. In case such <m>v</m> exists, it is unique, it is called the inverse of <m>u</m> and denoted by <m>u^{-1}</m>.
-                      </p>
+                    <p>
+                        An element <m>u</m> of a unital ring <m>R</m> with <m>1\neq 0</m> is called a <em>unit</em> there exists <m>v\in R</m> such that<m>uv=1</m> and <m>vu=1</m>. In case such <m>v</m> exists, it is unique, it is called the inverse of <m>u</m> and denoted by <m>u^{-1}</m>.
+                    </p>
                   </statement>
                 </definition>
     
-                <definition xml:id="def-group-of-units">
-                  <title>Group of Units</title>
+                <definition xml:id="def-group-of-units"><title>Group of Units</title>
                   <statement>
                     <p>
-                    The set of units of a non-trivial unital ring <m>R</m> is denoted <m>R^\times</m>. This forms a group <m>(R^\times,\cdot)</m> with respect to multiplication.
+                      The set of units of a non-trivial unital ring <m>R</m> is denoted <m>R^\times</m>. This forms a group <m>(R^\times,\cdot)</m> with respect to multiplication.
                     </p>
                   </statement>
                 </definition>
 
-                <exercise xml:id="exe-group-of-units-is-a-group">
-                 <title>Sweet, Sweet Rigor</title>
+                <exercise xml:id="exe-group-of-units-is-a-group"><title>Sweet, Sweet Rigor</title>
                   <p>
-                      The group of units is indeed a group <m>(R^\times,\cdot)</m> with respect to multiplication.
+                    The group of units is indeed a group <m>(R^\times,\cdot)</m> with respect to multiplication.
                   </p>
                 </exercise>
 
                 <p>Finally, we have a formal definition for groups of units. We can now make a few general observations of things used implicitely before.</p>
 
-                <example>
-                 <title>Still a Group. Still Units</title>
+                <example><title>Still a Group. Still Units</title>
                   <p>
                     All of our favorite groups of units from <xref ref="part-group"/> are indeed groups of units. Who knew?
                   </p>
                 </example>
 
-                <exercise xml:id="exe-units-in-fields">
+                <exercise xml:id="exe-units-in-fields"><title>Units in Fields</title>
                   <p>
                     Let <m>F</m> be a field. Prove that every non-zero element of <m>F</m> is a unit. In symbols, show <m>F^\times=F\setminus\{0\}</m>.
                   </p>
                 </exercise>  
 
-                <example xml:id="ex-matrices-and-units">
-                <p>
+                <example xml:id="ex-matrices-and-units"><title>Matrices and Units</title>
+                  <p>
                     <m>\operatorname{M}_{n}(F)^\times = \operatorname{GL}_n(F)</m>.
-                </p>
+                  </p>
                 </example>
 
                 <p>Well, that was validating. Months in the making. But enough vindication: we move forward. It's all we've ever known.</p>
     
-                <definition xml:id="def-zerodivisor">
-                <title>Zerodivisor</title>
+                <definition xml:id="def-zerodivisor"><title>Zerodivisor</title>
                   <statement>
                       <p>
                       A <em>zerodivisor</em> in a ring <m>R</m> is an element <m>x\ne 0</m> such that <m>xy = 0</m> or <m>yx=0</m> for some <m>y \ne 0</m>.<fn>We once again jump the gun on the lack-of-hyphenation situation. Langauge evolves at its own rate, but who has time for that?</fn>
@@ -8068,8 +8032,7 @@
                   </statement>
                 </definition>
     
-                <definition xml:id="def-integral-domain">
-                  <title>Integral Domain</title>
+                <definition xml:id="def-integral-domain"><title>Integral Domain</title>
                   <statement>
                       <p>
                         A unital ring <m>R</m> is an <em>integral domain</em> (often shortened to <em>domain</em>) if <m>1 \ne 0</m>, <m>R</m> is commutative, and <m>R</m> has no zerodivisors.
@@ -8077,14 +8040,13 @@
                   </statement>
                 </definition>
 
-                <example>
+                <example><title>Modular Domains</title>
                   <p>
                     <m>\Z/n</m> is an integral domain if and only if <m>n</m> is prime (in which case it happens to be a field too) or <m>n = 0</m> (in which case <m>\Z/0\cong \Z</m>).
                   </p>
                 </example>
     
-                <lemma xml:id="lem-cancellation-in-integral-domains">
-                  <title>Cancellation in Domains</title>
+                <lemma xml:id="lem-cancellation-in-integral-domains"><title>Cancellation in Domains</title>
                   <statement>
                       <p>
                         Let <m>R</m> be a commutative ring with identity. Then <m>R</m> is an integral domain if and only if for all <m>x,y,z\in R</m> such that <m>xy=xz</m>, we have <m>y=z</m>. This property is called <alert>cancellation</alert>.
@@ -8092,8 +8054,7 @@
                   </statement>
                 </lemma>
     
-                <theorem xml:id="integral-domains-and-fields">
-                  <title>Some Classic Integral Domains</title>
+                <theorem xml:id="integral-domains-and-fields"><title>Some Classic Integral Domains</title>
                   <statement>
                     <p>
                       <ol>
@@ -8131,8 +8092,7 @@
                   </proof>
                 </theorem>
     
-                <lemma xml:id="lem-zerodivisor-not-unit">
-                  <title>Zerodivisors and Units</title>
+                <lemma xml:id="lem-zerodivisor-not-unit"><title>Zerodivisors and Units</title>
                   <statement>
                       <p>
                       If <m>a</m> is a zerodivisor in a ring <m>R</m>, then <m>a</m> is not a unit.
@@ -8146,34 +8106,35 @@
                   </proof>
                 </lemma>
     
-                <exercise xml:id="exe-neither-zerodivisor-nor-unit">
+                <exercise xml:id="exe-neither-zerodivisor-nor-unit"><title>Finite Zerdivisors and Units</title>
+                  
                   <p>
-                    Give an example of a ring <m>R</m> and an element <m>a\in R</m> which is neither a unit nor a zerodivisor.
+                    <ol>
+                      <li>
+                        <p>
+                          Prove that if <m>R</m> is finite then every element is either a unit of a zerodivisor.
+                        </p>
+                      </li>
+
+                      <li>
+                        <p>
+                          Give an example of a ring <m>R</m> and an element <m>a\in R</m> which is neither a unit nor a zerodivisor.
+                        </p>
+                      </li>
+                    </ol>
                   </p>
                 </exercise>
-    
-                <exercise xml:id="exe-zerodivisor-or-unit-if-finite">
-                  <p>
-                    Prove that if <m>R</m> is finite then every element is either a unit of a zerodivisor.
-                  </p>
-                </exercise>
-    
-                <definition xml:id="def-nilpotent">
-                  <title>Nilpotent</title>
-                  <statement>
-                    <p>
+                          
+                <definition xml:id="def-nilpotent"><title>Nilpotent</title>
+                  <statement><p>
                       An element <m>a</m> of a ring <m>R</m> is called <em>nilpotent</em> if <m>a^n = 0</m> for some integer <m>n \geq 1</m>.
-                    </p>
-                  </statement>
+                  </p></statement>
                 </definition>
     
-                <lemma xml:id="lem-nilpotents-and-units">
-                  <title>Nilpotents and Units</title>
-                  <statement>
-                    <p>
+                <lemma xml:id="lem-nilpotents-and-units"><title>Nilpotents and Units</title>
+                  <statement><p>
                       If <m>a</m> is a nilpotent element in a unital ring <m>R</m>, then <m>1-a</m> is a unit.
-                    </p>
-                  </statement>
+                  </p></statement>
                 </lemma>
     
                 <exercise xml:id="exe-one-plus-nilpotent-is-unit">
@@ -8183,14 +8144,12 @@
                 </exercise>
     
                 <definition xml:id="def-idempotent">
-                  <statement>
-                    <p>
+                  <statement><p>
                       Let <m>R</m> be a ring with identity. An element <m>e\in R</m> is called <em>idempotent</em> if <m>e^2=e</m>.
-                    </p>
-                  </statement>
+                  </p></statement>
                 </definition>
     
-                <problem>
+                <exercise><title>Potent Idempotents</title>
                   <p>
                     Let <m>R</m> be a ring with identity.
                     <ol>
@@ -8213,9 +8172,9 @@
                       </li>
                     </ol>
                   </p>
-                </problem>
+                </exercise>
     
-                <problem xml:id="exe-gaussian-units">
+                <exercise xml:id="exe-gaussian-units">
                 <statement>
                   <p>
                     Let <m>\Z[i] = \{a + bi \mid a,b \in \Z\}</m> be the ring of Gaussian integers. Define a function 
@@ -8263,9 +8222,9 @@
                   </p>
                 </solution>
     
-                </problem>
+                </exercise>
     
-                <problem xml:id="exe-integral-hamiltonian-quaternions">
+                <exercise xml:id="exe-integral-hamiltonian-quaternions">
                   <p>
                     Let <m>S=\{a+bi+cj+dk \mid a,b,c,d \in \Z\}</m> be the ring of integral Hamiltonian quaternions, where multiplication is defined using the same rules as in <m>\mathbb{H}</m>. Define a function 
                     <me>
@@ -8298,123 +8257,17 @@
                       </li>
                     </ol>
                   </p>
-                </problem>
+                </exercise>
     
-    
-            
             </subsection>
     
-            <exercises>
-    
-              <exercisegroup>
-                <title>Computations and Examples</title>
-                <introduction>
-                  <p>
-                  </p>
-                </introduction>
-            
-                <exercise>
-                  <title></title>
-                  
-                  
-                  <statement>
-                    <p>
-                      Coming soon to an OER near you!
-                    </p>
-                  </statement>
-    
-                  <hint>
-                    <p>
-                      Coming soon to an OER near you!
-                    </p>
-                  </hint>
-    
-                  <solution>
-                    <p>
-                      Coming soon to an OER near you!
-                    </p>
-                  </solution>
-                </exercise>
-            
-              </exercisegroup>
-            
-              <exercisegroup>
-                <title>Formal Proofs</title>
-                <introduction>
-                  <p>
-                  </p>
-                </introduction>
-            
-                <exercise>
-                  <title></title>
-                  
-                  
-                  <statement>
-                    <p>
-                      Coming soon to an OER near you!
-                    </p>
-                  </statement>
-    
-                  <hint>
-                    <p>
-                      Coming soon to an OER near you!
-                    </p>
-                  </hint>
-    
-                  <solution>
-                    <p>
-                      Coming soon to an OER near you!
-                    </p>
-                  </solution>
-                </exercise>
-            
-              </exercisegroup>
-            
-              <exercisegroup>
-                <title>Qualifying Exam Problems</title>
-                <introduction>
-                  <p>
-                  </p>
-                </introduction>
-            
-                <exercise>
-                  <title></title>
-                  
-                  
-                  <statement>
-                    <p>
-                      Coming soon to an OER near you!
-                    </p>
-                  </statement>
-    
-                  <hint>
-                    <p>
-                      Coming soon to an OER near you!
-                    </p>
-                  </hint>
-    
-                  <solution>
-                    <p>
-                      Coming soon to an OER near you!
-                    </p>
-                  </solution>
-                </exercise>
-            
-              </exercisegroup>
-            </exercises>
         </section>
     
-        <section xml:id="sec-subrings">
-          <title>Subrings</title>
+        <section xml:id="sec-subrings"><title>Subrings</title>
 
-          <blockquote>
-            <p>
-              <q>We all live in a yellow submaring</q>
-            </p>
-            <attribution>Ringo Starr</attribution>
-          </blockquote>
+          <blockquote><p><q>We all live in a yellow submaring</q></p><attribution>(Ring)o Starr</attribution></blockquote>
     
-          <definition xml:id="def-subring">
+          <definition xml:id="def-subring"><title>Subring</title>
             <statement>
               <p>
                 A <em>subring</em> of a ring <m>R</m> is a subset <m>S \subseteq R</m> such that <m>S</m> is a ring under the operations of <m>R</m>. When <m>R</m> is a field we call <m>S</m> a <em>subfield</em> of <m>R</m>.
@@ -8422,7 +8275,7 @@
             </statement>
           </definition>
     
-          <lemma xml:id="lem-subring-test">
+          <lemma xml:id="lem-subring-test"><title>Subring Test</title>
             <statement>
               <p>
                 A nonempty subset <m>S</m> of a ring <m>R</m> is a subring iff either one of the following hold:
@@ -8443,7 +8296,7 @@
             </statement>
           </lemma>
     
-          <example xml:id="ex-subring-examples">
+          <example xml:id="ex-subring-examples"><title>Examples of Subrings</title>
             <p><ul>
               <li>
               <m>\Z</m> is a subring of <m>\Q</m>, which is a subring of <m>\R</m>, which is a subring of <m>\C</m>.
@@ -8464,7 +8317,7 @@
             </ul></p>
           </example>
     
-          <definition xml:id="def-center-ring">
+          <definition xml:id="def-center-ring"><title>Center of a Ring</title>
             <statement>
               <p>
                 The <em>center</em> of a ring <m>R</m> is the set 
@@ -8475,7 +8328,7 @@
             </statement>
           </definition>
     
-          <lemma xml:id="lem-center-is-subring">
+          <lemma xml:id="lem-center-is-subring"><title>Center is a Subring</title>
             <statement>
               <p>
                 The center <m>Z(R)</m> is a subring of <m>R</m>. If <m>R</m> is a ring with identity <m>1</m> then <m>Z(R)</m> is a subring that contains the same <m>1</m>.
@@ -8483,13 +8336,13 @@
             </statement>
           </lemma>
     
-          <problem xml:id="exe-center-of-quaternion-ring">
+          <exercise xml:id="exe-center-of-quaternion-ring"><title><m>Z(\H)</m></title>
             <p>
               Determine the center of the real quaternion ring <m>\mathbb{H}</m>.
             </p>
-          </problem>
+          </exercise>
     
-          <lemma xml:id="lem-quadratic-field">
+          <lemma xml:id="lem-quadratic-field"><title><m>\Q(\sqrt {d})</m></title>
             <statement>
               <p>
                 Let <m>d</m> be a squarefree integer (that is, the prime factorization of <m>d</m> has no repeated primes). Then the subset <me>\Q(\sqrt {d}) = \{a + b\sqrt{d} \mid a,b \in \Q\}</me> of <m>\C</m> is a subring that is a field (called a <em>quadratic field</em>), and <m>\Z[\sqrt{d}] = \{a + b\sqrt{d} | a,b \in \Z\}</m> is a subring of <m>\Q(\sqrt{d})</m>.
@@ -8511,7 +8364,7 @@
             </proof>
           </lemma>
     
-          <problem xml:id="exe-finding-subring-counterexamples">
+          <exercise xml:id="exe-finding-subring-counterexamples"><title>Fancy Subrings</title>
             <p>
               If <m>R</m> is a ring and <m>S</m> is a subring of <m>R</m>, it can happen that 
               <ol>
@@ -8535,126 +8388,22 @@
               </ol>
               Find examples for each of these situations!
             </p>
-          </problem>
+          </exercise>
     
-          <problem xml:id="exe-subring-preservations">
+          <exercise xml:id="exe-subring-preservations"><title>Subring Preservations</title>
             <p>
               Any subring of a commutative ring is a commutative ring. Any unital subring of an integral domain is an integral domain.
             </p>
-          </problem>
+          </exercise>
     
-          <exercises>
-    
-            <exercisegroup>
-              <title>Computations and Examples</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-    
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-    
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          
-            <exercisegroup>
-              <title>Formal Proofs</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-    
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-    
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          
-            <exercisegroup>
-              <title>Qualifying Exam Problems</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-    
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-    
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          </exercises>
           
         </section>
     
-        <section xml:id="sec-ring-hom">
-          <title>Homomorphisms</title>
+        <section xml:id="sec-ring-hom"><title>Homomorphisms</title>
 
-          <blockquote>
-            <p>
-              <q>When you have a map, you know where to go.</q>
-            </p>
-            <attribution>Shakira</attribution>
-          </blockquote>
+          <blockquote><p><q>When you have a map, you know where to go.</q></p><attribution>Shakira</attribution></blockquote>
     
-          <definition xml:id="def-ring-homomorphism">
+          <definition xml:id="def-ring-homomorphism"><title>Ring Homomorphism</title>
             <statement>
               <p>
                 If <m>R</m> and <m>S</m> are rings, a <em>ring homomorphism</em> from <m>R</m> to <m>S</m> is a function <m>f: R \to S</m> that satisfies: 
@@ -8675,7 +8424,7 @@
             </statement>
           </definition>
     
-          <definition xml:id="def-ring-isomorphism">
+          <definition xml:id="def-ring-isomorphism"><title>Ring Isomorphism</title>
             <statement>
               <p>
                 A ring homomorphism <m>f: R \to S</m> that is bijective is called a <em>ring isomorphism</em>. Two rings <m>R</m> and <m>S</m> are <em>isomorphic</em>, written <m>R \cong S</m>, if there is an isomorphism from <m>R</m> to <m>S</m>.
@@ -8683,7 +8432,7 @@
             </statement>
           </definition>
     
-          <proposition xml:id="prop-ring-isomorphism-invariants">
+          <proposition xml:id="prop-ring-isomorphism-invariants"><title>Isomorphism Invariants</title>
             <statement>
               <p>
                 The following are ring isomorphism invariants: 
@@ -8722,7 +8471,7 @@
             </statement>
           </proposition>
     
-          <example xml:id="exe-ring-homomorphisms-examples">
+          <example xml:id="exe-ring-homomorphisms-examples"><title>Examples of Ring Maps</title>
             <p>
               <ol>
                 <li>
@@ -8740,7 +8489,7 @@
           </p>
           </example>
     
-          <lemma xml:id="lem-ring-homomorphism-properties">
+          <lemma xml:id="lem-ring-homomorphism-properties"><title>Properties of Ring Maps</title>
             <statement>
               <p>
                 If <m>f: R \to S</m> is a ring homomorphism, then
@@ -8783,19 +8532,19 @@
             </proof>
           </lemma>
     
-          <problem xml:id="exe-equivalent-field-definitions">
+          <exercise xml:id="exe-equivalent-field-definitions"><title>Equivalent Field Characterizations</title>
             <p>
               Let <m>R</m> be a nontrivial ring. Then <m>R</m> is a field if and only if every homomorphism of <m>R</m> into a nonzero ring <m>S</m> is injective.
             </p>
-          </problem>
+          </exercise>
     
-          <problem>
+          <exercise><title>Isomorphisms and Idempotents</title>
             <p>
               Suppose <m>R</m> is commutative and <m>e</m> an idempotent. Let <m>Re:=\{re\mid r\in R\}</m>. Prove that the map <m>\phi:R\to Re \times R(1-e)</m> given by <m>\phi(r)=(re, r(1-e))</m> is a ring isomorphism.
             </p>
-          </problem>
+          </exercise>
     
-          <problem>
+          <exercise><title>More Isomorphisms</title>
             <p>
               Let <m>a, b</m> be squarefree integers and set <m>R=\Z[\sqrt{a}]</m> and <m>S=\Z[\sqrt{b}]</m>.
     
@@ -8813,112 +8562,13 @@
                 </li>
               </ol>
             </p>
-          </problem>
-    
-          <exercises>
-    
-            <exercisegroup>
-              <title>Computations and Examples</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-    
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-    
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          
-            <exercisegroup>
-              <title>Formal Proofs</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-    
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-    
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          
-            <exercisegroup>
-              <title>Qualifying Exam Problems</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-    
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-    
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          </exercises>
+          </exercise>
+  
           
         </section>
       </chapter>
 
-      <chapter xml:id="ch-idealquot">
-        <title>Ideals and Quotient Rings</title>
+      <chapter xml:id="ch-idealquot"><title>Ideals and Quotient Rings</title>
 
         <!--
        ***************
@@ -8926,20 +8576,13 @@
        ****************
         -->
         
-        <section xml:id="sec-ideals">
-          <title>Ideals</title>
+        <section xml:id="sec-ideals"><title>Ideals</title>
     
-          <subsection xml:id="subsec-ideal-def">
-            <title>Definition and First Properties</title>
+          <subsection xml:id="subsec-ideal-def"><title>Definition and First Properties</title>
 
-            <blockquote>
-              <p>
-                <q>It is a useless life that is not consecrated to a great ideal. It is like a stone wasted on the field without becoming a part of any edifice.</q>
-              </p>
-              <attribution>Jose Rizal</attribution>
-            </blockquote>
+            <blockquote><p><q>It is a useless life that is not consecrated to a great ideal. It is like a stone wasted on the field without becoming a part of any edifice.</q></p><attribution>Jose Rizal</attribution></blockquote>
             
-            <definition xml:id="def-ideal">
+            <definition xml:id="def-ideal"><title>Ideal</title>
               <statement>
                 <p>
                   For a ring <m>R</m>, an <em>ideal</em> (or a <em>two sided ideal</em>) of <m>R</m> is a non empty subset <m>I</m> such that 
@@ -8962,7 +8605,7 @@
               </statement>
             </definition>
     
-            <example xml:id="ex-ideal-examples">
+            <example xml:id="ex-ideal-examples"><title>Examples of Ideals</title>
               <p>
                 <ul>
                   <li>
@@ -8990,7 +8633,7 @@
               </p>
             </example>
     
-            <proposition xml:id="prop-proper-ideals">
+            <proposition xml:id="prop-proper-ideals"><title>Proper Ideals, Fields, and Units</title>
               <statement>
                 <p>
                   An ideal <m>I</m> of a unital ring <m>R</m> is proper if and only if <m>I</m> contains no units. Moreover, if <m>F</m> is a field it has only two ideals <m>\{0\}</m> and <m>F</m>.
@@ -8998,7 +8641,7 @@
               </statement>
             </proposition>
     
-            <proposition xml:id="prop-ideals-are-subrings">
+            <proposition xml:id="prop-ideals-are-subrings"><title>Ideals are Subrings</title>
               <statement>
                 <p>
                   Any ideal <m>I</m> of a ring <m>R</m> is a subring of <m>R</m>
@@ -9006,7 +8649,7 @@
               </statement>
             </proposition>
     
-            <problem>
+            <exercise><title>Subrings Need not be Ideals</title>
             <statement>
               <p>
                 Any ideal <m>I</m> of a ring <m>R</m> is a subring of <m>R</m>, but not any subring is an ideal.
@@ -9018,9 +8661,9 @@
                   For example, in <m>\R[x]</m>, the set <m>S</m> of polynomials for which every term has even degree is a subring (it's closed under subtraction and multiplication), but it is not an ideal because it is not closed under multiplication by arbitrary polynomials. Indeed, <m>p(x)=x^2\in S</m>, but <m>xp(x)=x^3\not\in S</m>.
                 </p>
               </solution>
-            </problem>
+            </exercise>
     
-            <proposition xml:id="prop-properties-of-ideals">
+            <proposition xml:id="prop-properties-of-ideals"><title>Combinations of Ideals</title>
               <statement>
                 <p>
                   Let <m>R</m> be a ring and let <m>I,J</m> be ideals of <m>R</m>. Then 
@@ -9055,7 +8698,7 @@
               </statement>
             </proposition>
     
-            <problem xml:id="exe-ideals-are-commutative-and-associative">
+            <exercise xml:id="exe-ideals-are-commutative-and-associative"><title>Ideals Commute and Associate</title>
               <p>
                 Let <m>I,J,K</m> be ideals in <m>R</m>. Then 
                 <ul>
@@ -9096,9 +8739,9 @@
                   </li>
                 </ul>
               </p>
-            </problem>
+            </exercise>
     
-            <proposition xml:id="prop-homomorphisms-and-ideals">
+            <proposition xml:id="prop-homomorphisms-and-ideals"><title>Homomorphisms and Ideals</title>
               <statement>
                 <p>
                   If <m>f: R \to S</m> is a ring homomorphism, then 
@@ -9147,40 +8790,39 @@
               </proof>
             </proposition>
     
-            <problem xml:id="exe-the-union-of-ideals-need-not-be-an-ideal">
+            <exercise xml:id="exe-the-union-of-ideals-need-not-be-an-ideal"><title>Union of Ideals Need not be an Ideal</title>
               <p>
               Give an example
               </p>
-            </problem>
+            </exercise>
     
-            <problem xml:id="exe-ideals-distribute-in-z">
+            <exercise xml:id="exe-ideals-distribute-in-z"><title>Ideals Distribute in <m>\Z</m></title>
               <p>
                 Let <m>I,J,K</m> be ideals in <m>\Z</m>. Then 
                 <me>
                   I(J+K)=IJ+IK
                 </me>
               </p>
-            </problem>
+            </exercise>
     
-            <problem xml:id="exe-ideals-do-not-distribute-in-general">
+            <exercise xml:id="exe-ideals-do-not-distribute-in-general"><title>Ideals Don't Distribute in General</title>
               <p>
                 Give an example of a ring where ideals do not distribute.
               </p>
-            </problem>
+            </exercise>
     
-            <problem xml:id="exe-modular-law">
+            <exercise xml:id="exe-modular-law"><title>Modular Law</title>
               <p>
                 Let <m>I,J,K</m> be ideals in <m>R</m> such that <m>J\sse I</m> or <m>K\sse I</m>. Then 
                 <me>
                   I\cap(J+K)=I\cap J+I\cap K
                 </me>
               </p>
-            </problem>
+            </exercise>
     
           </subsection>
     
-          <subsection xml:id="subsec-generated-ideals">
-            <title>Generated Ideals</title>
+          <subsection xml:id="subsec-generated-ideals"><title>Generated Ideals</title>
 
             <blockquote>
               <p>
@@ -9189,7 +8831,7 @@
               <attribution>Liam Neeson, <em>Batman Begins</em></attribution>
             </blockquote>
     
-            <definition xml:id="def-generated-ideal">
+            <definition xml:id="def-generated-ideal"><title>Generated Ideals</title>
               <statement>
                 <p>
                   If <m>A</m> is any subset of a ring <m>R</m>, the <em>ideal generated by</em> <m>A</m>, denoted <m>(A)</m>, is the intersection of all ideals of <m>R</m> that contain <m>A</m>: 
@@ -9207,7 +8849,7 @@
               </p>
             </remark>
     
-            <lemma xml:id="lem-formula-for-generated-ideal">
+            <lemma xml:id="lem-formula-for-generated-ideal"><title>Elements in Generated Ideals</title>
               <statement>
                 <p>
                   For a subset <m>A</m> of a ring <m>R</m> with <m>1</m>, the ideal generated by <m>A</m> is given by 
@@ -9222,7 +8864,7 @@
               </statement>
             </lemma>
     
-            <problem xml:id="exe-generated-ideals-and-z">
+            <exercise xml:id="exe-generated-ideals-and-z"><title>Generated Ideals and <m>\Z</m></title>
               <p>
                 <ul>
                   <li>
@@ -9244,15 +8886,15 @@
                   </li>
                 </ul>
               </p>
-            </problem>
+            </exercise>
     
-            <problem xml:id="exe-finite-generated-ideal-and-nilpotent">
+            <exercise xml:id="exe-finite-generated-ideal-and-nilpotent"><title>Finitely Generated Ideals and Nilpotent Elements </title>
               <p>
                 Let <m>I</m> be a finitely generated ideal of <m>R</m>. Suppose every element of <m>I</m> is nilpotent. Prove that there exists an integer <m>n\geq 1</m> such that <m>b^n=0</m> for all <m>b\in I</m>.
               </p>
-            </problem>
+            </exercise>
     
-            <problem>
+            <exercise><title>Infinitely Generated Ideal</title>
               <p>
                 Let <m>I=\{f\in C[0,1]|f(x)=0\text{ on } [0,b]\;\text{for some}\; b&gt;0\}</m>
     
@@ -9270,9 +8912,9 @@
                   </li>
                 </ol>
               </p>
-            </problem>
+            </exercise>
     
-            <definition xml:id="def-principal-ideal">
+            <definition xml:id="def-principal-ideal"><title>Principal Ideal</title>
               <statement>
                 <p>
                   Let <m>I</m> be an ideal of a ring <m>R</m>. The ideal <m>I</m> is <em>principal</em> if <m>I = (a)</m> for some <m>a \in R</m>, that is, <m>I</m> is generated by a set with a single element.
@@ -9280,7 +8922,7 @@
               </statement>
             </definition>
     
-            <example xml:id="ex-principal-ideals">
+            <example xml:id="ex-principal-ideals"><title>Examples of Principal Ideals</title>
               <p>
                 <ul>
                   <li>
@@ -9298,7 +8940,7 @@
               </p>
             </example>
     
-            <problem xml:id="exe-properties-of-principal-ideals-in-z">
+            <exercise xml:id="exe-properties-of-principal-ideals-in-z"><title>Principal Ideals in <m>\Z</m></title>
               
               <p>
                 Let <m>(x),(y)</m> be ideals in <m>\Z</m>. Then
@@ -9316,116 +8958,15 @@
                   </li>
                 </ul>
               </p>
-            </problem>
+            </exercise>
             
           </subsection>
-    
-          <exercises>
-    
-            <exercisegroup>
-              <title>Computations and Examples</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-    
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-    
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          
-            <exercisegroup>
-              <title>Formal Proofs</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-    
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-    
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          
-            <exercisegroup>
-              <title>Qualifying Exam Problems</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-    
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-    
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          </exercises>
           
         </section>
     
-        <section xml:id="sec-ring-quotients">
-          <title>Quotient Rings</title>
+        <section xml:id="sec-ring-quotients"><title>Quotient Rings</title>
           
-          <subsection xml:id="subsec-quotient-rings">
-            <title>Quotient Rings</title>
+          <subsection xml:id="subsec-quotient-rings"><title>Quotient Rings</title>
 
             <blockquote>
               <p>
@@ -9434,7 +8975,7 @@
               <attribution>Alan Perlis</attribution>
             </blockquote>
     
-            <definition xml:id="def-quotient-ring">
+            <definition xml:id="def-quotient-ring"><title>Quotient Ring</title>
               <statement>
                 <p>
                   For a two-sided ideal <m>I</m> of <m>R</m>, the set of additive cosets modulo <m>I</m> is <m>R/I=\{r+I : r\in R\}.</m> This is an abelian group with respect to addition given by <m>(r + I) + (s + I) = (r +s ) + I</m>. The <em>quotient ring</em> of <m>R</m> modulo <m>I</m> is the set <m>R/I</m> with addition defined as above and multiplication given by <m>(r + I) \cdot (s + I) = (rs) + I.</m>
@@ -9442,25 +8983,25 @@
               </statement>
             </definition>
     
-            <problem xml:id="exe-quotient-ring-is-ring">
+            <problem xml:id="exe-quotient-ring-is-ring"><title>Quotient Rings are Rings</title>
               <p>
                 Given a two-sided ideal <m>I</m> of <m>R</m>, prove that the quotient ring <m>R/I</m> is indeed a ring.
               </p>
             </problem>
     
-            <example xml:id="ex-quotient-of-z">
+            <example xml:id="ex-quotient-of-z"><title>Quotients of <m>\Z</m></title>
               <p>
                 If <m>I=(n)</m> is an ideal in the ring <m>\Z</m>, then the quotient ring <m>\Z/n</m> is the familiar ring <m>\Z/n</m>.
               </p>
             </example>
     
-            <problem xml:id="quotient-map-is-surjective-homomorphism">
+            <problem xml:id="quotient-map-is-surjective-homomorphism"><title>Quotient Map is Surjective Ring Map</title>
               <p>
                 Prove that the canonical quotient map <m>q:R\to R/I</m> is a surjective ring homomorphism.
               </p>
             </problem>
     
-            <proposition xml:id="prop-ideal-iff-kernel-of-ring-map">
+            <proposition xml:id="prop-ideal-iff-kernel-of-ring-map"><title>Ideal iff Kernel of Ring Map</title>
               <statement>
                 <p>
                   Let <m>R</m> be a ring. A subset <m>I</m> of <m>R</m> is an ideal of <m>R</m> if and only if there exists a ring homomorphism <m>\varphi</m> such that <m>\ker(\varphi)=I</m>
@@ -9468,8 +9009,7 @@
               </statement>
             </proposition>
     
-            <theorem xml:id="thm-ump-for-quotient-rings">
-              <title>Universal Mapping Property for Quotient Rings</title>
+            <theorem xml:id="thm-ump-for-quotient-rings"><title>UMP for Quotient Rings</title>
               
               <statement>
                 <p>
@@ -9490,8 +9030,7 @@
             
           </subsection>
     
-          <subsection xml:id="subsec-ring-iso-thms">
-            <title>The Ring Isomorphism Theorems</title>
+          <subsection xml:id="subsec-ring-iso-thms"><title>The Ring Isomorphism Theorems</title>
 
             <blockquote>
               <p>
@@ -9502,8 +9041,7 @@
               <attribution>J. Cole</attribution>
             </blockquote>
     
-            <theorem xml:id="thm-ring-fit">
-              <title>First Isomorphism Theorem for Rings</title>
+            <theorem xml:id="thm-ring-fit"><title>First Isomorphism Theorem for Rings</title>
               
               
               <statement>
@@ -9519,10 +9057,9 @@
               </proof>
             </theorem>
     
-            <theorem xml:id="thm-ring-sit">
-              <title>Second Isomorphism Theorem for Rings</title>
+            <theorem xml:id="thm-ring-sit"><title>Second Isomorphism Theorem for Rings</title>
     
-              
+ 
               <statement>
                 <p>
                   Let <m>S</m> be a subring and let <m>I</m> be an ideal of <m>R</m>. Then <m>S + I = \{s + i \mid s \in S, i \in I\}</m> is a subring of <m>R</m>, <m>S \cap I</m> is an ideal of <m>S</m>, and 
@@ -9533,8 +9070,7 @@
               </statement>
             </theorem>
     
-            <theorem xml:id="thm-ring-tit">
-              <title>Third Isomorphism Theorem for Rings</title>
+            <theorem xml:id="thm-ring-tit"><title>Third Isomorphism Theorem for Rings</title>
     
               
               <statement>
@@ -9547,8 +9083,7 @@
               </statement>
             </theorem>
     
-            <theorem xml:id="thm-ring-lit">
-              <title>Lattive Isomorphism Theorem for Quotient Rings</title>
+            <theorem xml:id="thm-ring-lit"><title>Lattice Isomorphism Theorem for Quotient Rings</title>
     
               
               <statement>
@@ -9570,7 +9105,7 @@
               </statement>
             </theorem>
     
-            <problem xml:id="special-case-of-sun-tzus-theorem">
+            <exercise xml:id="special-case-of-sun-tzus-theorem"><title>Qual</title>
             <statement>
               <p>
                 Let <m>R</m> be a commutative ring with identity, and assume <m>1\neq0</m>. Let <m>I</m> and <m>J</m> be ideals such that <m>I + J = R</m>.
@@ -9628,13 +9163,13 @@
                   Consider the element <m>x=(a_j+b_i)\in R</m>, and observe <me>f(x)=f(a_j+b_i)=(a_j+b_i+I, b_i+a_j+J).</me>However, as <m>b_i\in I</m> and <m>a_j\in J</m>, we see <me>(a_j+b_i+I, b_i+a_j+J)=(a_j+I,b_i+J)=(a+I,b+J).</me> Thus <m>f</m> is a surjective homomorphism. Hence, by the First Isomorphism Theorem, we see <m>R/(I \cap J)\cong R/I \times R/J</m>.
                 </p>
               </solution>
-            </problem>
+            </exercise>
     
-            <problem>
+            <exercise><title>Qual</title>
               <p>
                 Let <m>d</m> be a square-free integer. The ring <m>\Q(\sqrt d)</m> is the subring of <m>\C</m> defined by <me>\Q(\sqrt d) = \{a + b\sqrt d | a, b \in \Q\}.</me> Show that there is a ring isomorphism <m>\Q[x]/(x^2-d)\cong\Q(\sqrt d)</m>.
               </p>
-            </problem>
+            </exercise>
             
           </subsection>
     
@@ -9741,8 +9276,7 @@
     
       </chapter>
 
-      <chapter xml:id="sec-commrings">
-        <title>Commutative Rings</title>
+      <chapter xml:id="sec-commrings"><title>Commutative Rings</title>
 
         <!--
        ***************
@@ -9750,11 +9284,9 @@
        ****************
         -->
     
-        <section xml:id="subsec-primemax-ideals">
-          <title>Prime and Maximal Ideals</title>
+        <section xml:id="subsec-primemax-ideals"><title>Prime and Maximal Ideals</title>
     
-          <subsection xml:id="subsec-prime-ideals">
-            <title>Prime Ideals</title>
+          <subsection xml:id="subsec-prime-ideals"><title>Prime Ideals</title>
 
             <blockquote>
               <p>
@@ -9763,7 +9295,7 @@
               <attribution>Boris Johnson</attribution>
             </blockquote>
 
-            <definition xml:id="def-prime-ideal">
+            <definition xml:id="def-prime-ideal"><title>Prime Ideal</title>
               <statement>
                 <p>
                   A <em>prime ideal</em> of a commutative ring <m>R</m> is a proper ideal <m>P</m> such that whenever <m>xy \in P</m> for <m>x, y \in R</m>, we have <m>x \in P</m> or <m>y \in P</m>.
@@ -9771,7 +9303,7 @@
               </statement>
             </definition>
     
-            <example xml:id="ex-prime-ideals">
+            <example xml:id="ex-prime-ideals"><title>Examples of Prime Ideals</title>
               <p>
                 <ul>
                   <li>
@@ -9789,7 +9321,7 @@
               </p>
             </example>
     
-            <proposition xml:id="prop-prime-iff-complement-closed">
+            <proposition xml:id="prop-prime-iff-complement-closed"><title>Prime iff Complement is Closed</title>
               <statement>
                 <p>
                   An ideal <m>P</m> is prime if and only if <m>R \setminus P</m> is closed under multiplication.
@@ -9797,7 +9329,7 @@
               </statement>
             </proposition>
     
-            <theorem xml:id="thm-prime-iff-domain">
+            <theorem xml:id="thm-prime-iff-domain"><title>Prime iff Quotient is Domain</title>
               <statement>
                 <p>
                   Let <m>R</m> be a commutative ring with <m>1\neq 0</m>, and let <m>I</m> be an ideal of <m>R</m>. The ideal <m>I</m> is prime if and only if <m>R/I</m> is an integral domain.
@@ -9811,7 +9343,7 @@
               </proof>
             </theorem>
     
-            <proposition xml:id="prop-equivalent-integral-domain-definition">
+            <proposition xml:id="prop-equivalent-integral-domain-definition"><title>Equivalent Domain Characterization</title>
               <statement>
                 <p>
                   Let <m>A</m> be a nontrivial ring. Then <m>A</m> is an integral domain if and only if the ideal <m>(0)</m> is prime.
@@ -9820,7 +9352,7 @@
               </statement>
             </proposition>
     
-            <proposition xml:id="prop-in-domain-kernel-of-homomorphism-prime">
+            <proposition xml:id="prop-in-domain-kernel-of-homomorphism-prime"><title>Kernels are Prime in Domains</title>
               <statement>
                 <p>
                   If <m>R</m> is a domain, <m>S</m> is a ring and <m>f:R\to S</m> is a ring homomorphism, then <m>\ker(f)</m> is a prime ideal.
@@ -9828,7 +9360,7 @@
               </statement>
             </proposition>
     
-            <proposition xml:id="prop-preimage-of-prime-ideal-is-prime">
+            <proposition xml:id="prop-preimage-of-prime-ideal-is-prime"><title>Preimages of Prime Ideals are Prime</title>
               <statement>
                 <p>
                   If <m>f:A\to B</m> is a ring homomorphism and <m>P</m> is a prime ideal in <m>B</m>, then <m>f\inv(P)</m> is prime in <m>A</m>.
@@ -9838,8 +9370,7 @@
     
           </subsection>
     
-          <subsection xml:id="subsec-maximal-ideals">
-                <title>Maximal Ideals</title>
+          <subsection xml:id="subsec-maximal-ideals"><title>Maximal Ideals</title>
 
                 <blockquote>
                   <p>
@@ -9848,7 +9379,7 @@
                   <attribution>Young Dolph</attribution>
                 </blockquote>
     
-            <definition xml:id="def-maximal-ideal">
+            <definition xml:id="def-maximal-ideal"><title>Maximal Ideal</title>
               <statement>
                 <p>
                   A <em>maximal ideal</em> of an arbitrary ring <m>R</m> is a proper ideal <m>M</m> such that the only ideals of <m>R</m> containing <m>M</m> are <m>M</m> and <m>R</m>.
@@ -9856,7 +9387,7 @@
               </statement>
             </definition>
     
-            <proposition xml:id="prop-preimage-of-maximal-ideal-possibly-not-maximal">
+            <proposition xml:id="prop-preimage-of-maximal-ideal-possibly-not-maximal"><title>Preimage of Maximal Ideal not Necessarily Maximal</title>
               <statement>
                 <p>
                   Give an explicit example of a ring homomorphism <m>f:A\to B</m> and maximal ideal <m>\fm</m> of <m>A</m> such that <m>f(\fm)</m> is not maximal in <m>B</m>.
@@ -9865,7 +9396,7 @@
             </proposition>
             
     
-            <theorem xml:id="thm-maximal-iff-field">
+            <theorem xml:id="thm-maximal-iff-field"><title>Maximal Ideal iff Quotient is a Field</title>
               <statement>
                 <p>
                   Let <m>R</m> be a commutative ring with <m>1\neq 0</m>, and let <m>I</m> be an ideal of <m>R</m>. The ideal <m>I</m> is maximal if and only if <m>R/I</m> is a field.
@@ -9879,7 +9410,7 @@
               </proof>
             </theorem>
             
-            <corollary xml:id="cor-maximal-prime">
+            <corollary xml:id="cor-maximal-prime"><title>Maximal Ideals are Prime</title>
               <statement>
                 <p>
                   Every maximal ideal is prime.
@@ -9893,9 +9424,7 @@
               </proof>
             </corollary>
     
-            <theorem xml:id="thm-zorn">
-              <title>Zorn's Lemma</title>
-              
+            <theorem xml:id="thm-zorn"><title>Zorn's Lemma</title>          
               
               <statement>
                 <p>
@@ -9904,7 +9433,7 @@
               </statement>
             </theorem>
     
-            <theorem xml:id="thm-all-ideals-contained-in-maximal-ideal">
+            <theorem xml:id="thm-all-ideals-contained-in-maximal-ideal"><title>All Ideals Contained in Maximal Ideal</title>
               <statement>
                 <p>
                   If <m>R</m> is a ring with <m>1\neq 0</m> and <m>I</m> is a proper ideal of <m>R</m>, then there is a maximal ideal of <m>R</m> containing <m>I</m>. In particular every ring <m>R</m> contains a maximal ideal.
@@ -9938,7 +9467,7 @@
               </proof>
             </theorem>
     
-            <proposition xml:id="prop-annihilator-ideal-and-quotient-field">
+            <proposition xml:id="prop-annihilator-ideal-and-quotient-field"><title>Qual</title>
               <statement>
                 <p>
                   Let <m>R</m> be a commutative ring, and set <m>I = \{r \in  R | rn = 0 \;\text{for some integer}\; n\}</m>. Prove that following assertions.
@@ -9986,7 +9515,7 @@
               </proof>
             </proposition>
     
-            <proposition xml:id="prop-prime-ideal-with-finite-index">
+            <proposition xml:id="prop-prime-ideal-with-finite-index"><title>Qual</title>
               <statement>
                 <p>
                   <ol>
@@ -10038,7 +9567,7 @@
               </proof>
             </proposition>
     
-            <proposition xml:id="prop-prime-ideals-maximal-in-finite-rings">
+            <proposition xml:id="prop-prime-ideals-maximal-in-finite-rings"><title>Qual</title>
               <statement>
                 <p>
                   Let <m>R</m> be a commutative ring with identity, and assume <m>1\neq0</m>.
@@ -10082,7 +9611,7 @@
           </proof>
             </proposition>
     
-            <proposition xml:id="prop-when-xnx-all-prime-ideals-are-maximal">
+            <proposition xml:id="prop-when-xnx-all-prime-ideals-are-maximal"><title>Qual</title>
               <statement>
                 <p>
                   Let <m>R</m> be a commutative ring in which every element <m>x</m> satisfies <m>x^n = x</m> for some <m>n &gt; 1</m>. Show that every prime ideal in R is maximal.
@@ -10100,7 +9629,7 @@
               </proof>
             </proposition>
     
-            <proposition xml:id="prop-minimal-prime">
+            <proposition xml:id="prop-minimal-prime"><title>Qual</title>
               <statement>
                 <p>
                   Let <m>R</m> be a commutative ring with identity (with <m>1\neq0</m>) and <m>I</m> a proper ideal. Prove there exists a prime ideal <m>p</m> containing <m>I</m> such that whenever <m>p ⊇ q ⊇ I</m> where <m>q</m> is also a prime ideal, then <m>p = q</m>. (Hint: use Zorn's lemma.)
@@ -10212,8 +9741,7 @@
           
         </section>
     
-        <section xml:id="subsec-polyrings">
-          <title>Polynomial Rings</title>
+        <section xml:id="subsec-polyrings"><title>Polynomial Rings</title>
 
           <blockquote>
             <p>
@@ -10222,7 +9750,7 @@
             <attribution>Michael Grant, <em>Gone</em></attribution>
           </blockquote>
 
-          <definition xml:id="def-polynomial-ring">
+          <definition xml:id="def-polynomial-ring"><title>Polynomial Ring</title>
             <statement>
               <p>
                 For any commutative ring <m>R</m>, the <em>polynomial ring in the variable</em> <m>x</m>, written <m>R[x]</m>, is the set 
@@ -10257,7 +9785,7 @@
             </p>
           </remark>
     
-          <problem xml:id="exe-units-and-nilpotents-in-polynomial-rings">
+          <problem xml:id="exe-units-and-nilpotents-in-polynomial-rings"><title>Units, Nilpotents in Polynomial Rings</title>
             <p>
               Let <m>A</m> be a ring and let <m>A[x]</m> be the ring of polynomials in an indeterminate <m>x</m>, with coefficients in <m>A</m>. Let <me>f=a_{0}+a_{1}x+\dots+a_{n}x^{n}\in A[x].</me>Prove that
             </p>
@@ -10282,46 +9810,23 @@
             </ol></p>
           </problem>
     
-          <problem xml:id="exe-units-and-nilpotents-in-polynomial-rings-general">
-            <p>
-              Generalize the results of the previous exercise to a polynomial ring <m>A[\xdots]</m> in several indeterminates.
-            </p>
-          </problem>
-    
-          <problem xml:id="ex-zx-and-2x">
-          <statement>
-            <p>
-              In <m>\Z[x]</m> the ideal <m>(2,x)</m> is maximal. 
-            </p>
-          </statement>
-    
-            <solution>
-              <p>
-                Consider the quotient ring <m>\Z[x]/(2,x)</m>. By the Third Isomorphism Theorem, and because <m>\Z[x]/(x)\cong\Z</m> and under this isomorphism <m>(2,x)/(x)</m> is mapped to <m>(2)</m>, we have (omitting some details) <me>\frac{\Z[x]}{(2,x)}\cong\frac{\Z[x]/(x)}{(2,x)/(x)}\cong\Z/2, \text{ a field}.</me> Since the quotient ring is field, we conclude that <m>(2,x)</m> is maximal.
-              </p>
-            </solution>
-    
-          </problem>
-    
-          <problem xml:id="exe-2x-prime-and-maximal-in-zx">
+          <problem xml:id="exe-2x-prime-and-maximal-in-zx"><title><m>(2,x)</m> in <m>\Z[x]</m></title>
             <p>
               In <m>\Z[x]</m> the ideal <m>(2,x)</m> is maximal and prime, the ideals <m>(2)</m> and <m>(x)</m> are prime but not maximal.
             </p>
           </problem>
     
-          <p>
-            Here is a nice application of the First Isomorphism Theorem.
-          </p>
+          <p>Here is a nice application of the First Isomorphism Theorem.</p>
     
-          <problem xml:id="ex-rxx21">
+          <problem xml:id="ex-rxx21"><title><m>R/(x^2+1_\cong\C</m></title>
             <p>
               Consider the ring <m>\R[x]</m> and let <m>I = (x^2 + 1)</m> be the principal ideals generated by <m>x^2+1</m>. Since <m>\R[x]</m> is commutative, we have <me>(x^2 + 1) = \{ g(x)(x^2 + 1) \mid g(x)\in \R[x] \},</me> so <m>(x^2 + 1)</m> is simply the collection of polynomials having <m>x^2 + 1</m> as a factor. I claim that <m>\R[x]/(x^2 + 1)</m> is isomorphic as a ring to <m>\C</m>. To prove this we define a map <me>\phi: \R[x] \to \C</me> sending <m>f(x)</m> to <m>f(i)</m>, the evaluation of <m>f</m> at <m>i</m>. It is easy to check <m>\phi</m> is a ring homomorphism and it is onto since elements of the form <m>a + bx</m> in the source map to all possible complex numbers under <m>\phi</m>. We claim the kernel of <m>\phi</m> is <m>(x^2 +1)</m>. It is clear that <m>x^2 + 1 \in \ker(\phi)</m> and it follows that <m>(x^2 + 1) \subseteq \ker(\phi),</m> since <m>\ker(\phi)</m> is a two-sided ideal. Suppose <m>\phi(f(x)) = 0</m> and write <m>f(x) = (x^2 + 1)q(x) + r(x)</m> with degree of <m>r(x)</m> at most one, using the division algorithm in the polynomial ring <m>\R[x]</m>. So <m>r(x) = a + bx</m> for real numbers <m>a,b</m>. If <m>r(x) \ne 0</m>, then <m>r(i) \ne 0</m>, which would contradict <m>f(i) = 0</m>. So we must have <m>r(x) = 0</m> and hence <m>f(x) \in (x^2 +1)</m>. Applying the First Isomorphism Theorem for Rings, we get <me>\R[x]/(x^2+1) \cong \C</me>via the map sending <m>f(x) + (x^2 + 1)</m> to <m>f(i)</m>. Intuitively, we have adjoined a formal symbol <m>x</m> to the real numbers, and by modding out <m>x^2 + 1</m> we have forced <m>x</m> to be a square root of <m>-1</m>. That is, we have adjoined <m>i</m> to the real numbers, obtaining <m>\C</m>.
             </p>
           </problem>
     
-          <problem xml:id="ex-ideal-of-zx-and-isomorphism">
+          <problem xml:id="ex-ideal-of-zx-and-isomorphism"><title>\Z[x]/(2) =\Z[x]/(2) \cong (\Z/2)[x]</title>
             <p>
-              Consider the ideal <m>J = (2, x^2 + x + 1)</m> of <m>\Z[x]</m>. Explicitly, by Lemma  we have <me>J =\{ p(x)\cdot 2 + q(x)(x^2 + x+ 1) \mid p(x),q(x)\in\Z[x]\}.</me> Suppose we want to understand <m>\Z[x]/J</m>. Then the Third Isomorphism Theorem is our friend. Set <m>I=(2)</m> and note that <m>I \subseteq J</m>, and so by the Third Isomorphism Theorem <me>\Z[x]/J \cong \frac{\Z[x]/I}{J/I}.</me> Next we express both the numerator and the denominator in better terms. I claim <me>\Z[x]/I =\Z[x]/(2) \cong (\Z/2)[x].</me> To see this consider the reduction homomorphism <m>\rho: \Z[x] \to (\Z/2)[x]</m> sending a polynomial <m>p(x)</m> to its reduction modulo <m>2</m>. The kernel of this surjective ring map is <m>I</m>, establishing our claim by the First Isomorphism Theorem.
+              Consider the ideal <m>J = (2, x^2 + x + 1)</m> of <m>\Z[x]</m>. Explicitly, by Lemma <xref provisional="cite"/> we have <me>J =\{ p(x)\cdot 2 + q(x)(x^2 + x+ 1) \mid p(x),q(x)\in\Z[x]\}.</me> Suppose we want to understand <m>\Z[x]/J</m>. Then the Third Isomorphism Theorem is our friend. Set <m>I=(2)</m> and note that <m>I \subseteq J</m>, and so by the Third Isomorphism Theorem <me>\Z[x]/J \cong \frac{\Z[x]/I}{J/I}.</me> Next we express both the numerator and the denominator in better terms. I claim <me>\Z[x]/I =\Z[x]/(2) \cong (\Z/2)[x].</me> To see this consider the reduction homomorphism <m>\rho: \Z[x] \to (\Z/2)[x]</m> sending a polynomial <m>p(x)</m> to its reduction modulo <m>2</m>. The kernel of this surjective ring map is <m>I</m>, establishing our claim by the First Isomorphism Theorem.
             </p>
     
             <p>
@@ -10358,7 +9863,7 @@
             </p>
           </problem>
     
-          <proposition xml:id="prop-polynomials-domains-degrees-units">
+          <proposition xml:id="prop-polynomials-domains-degrees-units"><title>Polynomials, Domains, Degrees, Units</title>
             <statement>
               <p>
                 If <m>R</m> is a domain, then 
@@ -10385,7 +9890,7 @@
             </statement>
           </proposition>
     
-          <proposition xml:id="prop-ump-for-polynomial-rings">
+          <proposition xml:id="prop-ump-for-polynomial-rings"><title>UMP for Polynomial Rings</title>
             <statement>
               <p>
                 Let <m>R</m> and <m>S</m> be commutative rings, <m>\phi: R \to S</m> is a ring homomorphism and <m>s_1, \dots, s_n</m> arbitrary elements of <m>S</m>. Then there exists a unique ring homomorphism 
@@ -10426,25 +9931,25 @@
             </proof>
           </proposition>
     
-          <problem xml:id="exe-evaluation-homomorphism">
+          <problem xml:id="exe-evaluation-homomorphism"><title>Evalutation Homomorphism</title>
             <p>
               If <m>R\subseteq S</m> are commutative rings with <m>1\neq 0</m> and <m>a\in S</m>, then the evaluation at <m>a</m> function <m>\phi:R[x]\to S</m> given by <m>\phi(f(x))=f(a)</m> is a ring homomorphism.
             </p>
           </problem>
     
-          <problem xml:id="exe-applying-ring-homomorphism-to-coefficients">
+          <problem xml:id="exe-applying-ring-homomorphism-to-coefficients"><title>Ring Maps and Coefficients</title>
             <p>
               Given a ring map <m>\phi: R \to S</m> between commutative rings, we may apply the Proposition to the composition <m>R \xra{\phi} S \hookrightarrow S[x]</m> using the element <m>s = x</m> of <m>S[x]</m> to get an induced ring map <me>\tilde{\phi}: R[x] \to S[x]</me> that sends <m>\sum_i r_i x^i</m> to <m>\sum_i \phi(r_i) x^i</m>. That is, the map <m>\tilde{\phi}</m> applies <m>\phi</m> to the coefficients of a polynomial. This can be generalized to more than one variable in the obvious way.       
             </p>
           </problem>
     
-          <problem xml:id="exe-the-reduction-homomorphism">
+          <problem xml:id="exe-the-reduction-homomorphism"><title>Reduction Homomorphism</title>
             <p>
               Continuing with the previous example, we could have <m>S = R/I</m> for an ideal <m>I</m> of <m>R</m> and <m>\phi</m> could be the quotient map. Then <me>\tilde{\phi}: R[x_1, \dots, x_n] \to (R/I)[x_1, \dots, x_n]</me> takes a polynomial and “reduces'' its coefficients modulo <m>I</m>. We will usually denote the image of <m>f(x)</m> through the reduction homomorphism by <m>\ov{f}(x)</m>.
             </p>
           </problem>
     
-          <problem xml:id="all-ideals-containing-6-x2-x-1">
+          <problem xml:id="all-ideals-containing-6-x2-x-1"><title>Qual</title>
           <statement>
             <p>
               Find all the ideals of <m>\Z[x]</m> that contain <m>(6, x^2 + x + 1)</m>, the ideal of <m>\Z[x]</m> generated by <m>6</m> and <m>x^2 + x + 1</m>. For each such ideal, give an explicit list of generators, and determine whether the ideal is prime, maximal, or neither.
@@ -10488,20 +9993,19 @@
             </solution>
           </problem>
     
-          <problem>
+          <problem><title>Qual</title>
             <p>
               Find, with justification, all the ideals of the ring <m>\Z[x]</m> that contain the ideal <m>I = (3, x^3 + x + 1)</m>.
             </p>
           </problem>
     
-          <problem>
-            <title>January 2012 (6)</title>
+          <problem><title>January 2012 (6)</title>
             <p>
               Let <m>F</m> be any field, and let <m>x, y</m>, and <m>t</m> be indeterminates. Prove in detail that <m>F[x,y]/(y^2-x^3)</m> and <m>F[t^2,t^3]</m> are isomorphic rings.
             </p>
           </problem>
     
-          <problem xml:id="exe-ideal-generated-by-irreducible-polynomial-prime">
+          <problem xml:id="exe-ideal-generated-by-irreducible-polynomial-prime"><title>Qual</title>
           <statement>
             <p>
                         Prove the ideal <m>I = (2, 1 + \sqrt{-13})</m> of the commutative ring <m>R = \Z[\sqrt{-13}]</m> is not a principal ideal.
@@ -10624,8 +10128,7 @@
           
         </section>
     
-        <section xml:id="sec-field-of-fractions">
-          <title>Fields of Fractions</title>
+        <section xml:id="sec-field-of-fractions"><title>Fields of Fractions</title>
 
           <blockquote>
             <p>
@@ -10634,7 +10137,7 @@
             <attribution>Guy Fieri</attribution>
           </blockquote>
           
-          <definition xml:id="def-multiplicatively-closed">
+          <definition xml:id="def-multiplicatively-closed"><title>Multiplicately Closed Set</title>
             <statement>
               <p>
                 Suppose <m>R</m> is a commutative ring and <m>S \subseteq R</m> is a subset such that
@@ -10668,7 +10171,7 @@
             </statement>
           </definition>
     
-          <example>
+          <example><title>Examples of Multaplicatively Closed Sets</title>
             <p>
               Two types of multiplicatively closed sets are most commonly used in practice:
               <ul>
@@ -10687,7 +10190,7 @@
             </p>
           </example>
     
-          <definition xml:id="def-field-of-fractions">
+          <definition xml:id="def-field-of-fractions"><title>Field of Fractions</title>
             <statement>
               <p>
                 If <m>R</m> is an integral domain and <m>S</m> is a multiplicatively closed subset of nonzerodivisors, the <em>field of fractions</em> <m>S^{-1}R</m> is the set of equivalence classes 
@@ -10713,7 +10216,7 @@
             </statement>
           </definition>
     
-          <theorem xml:id="thm-field-of-fractions-is-field">
+          <theorem xml:id="thm-field-of-fractions-is-field"><title>Field of Fractions is a Field</title>
             <statement>
               <p>
                 If <m>R</m> is an integral domain and <m>S</m> is a multiplicatively closed subset of nonzerodivisors, the rules given in the above definition for <m>+</m> and <m>\cdot</m> make <m>S^{-1} R</m> into a field. Moreover, the function <m>R\to S^{-1}R</m> sending <m>r</m> to <m>\frac{r}{1}</m> is an injective ring homomorphism.
@@ -10752,7 +10255,7 @@
             </proof>
           </theorem>
     
-          <example>
+          <example><title>Examples of Fields of Fractions</title>
             <p>
               <ol>
                 <li>
@@ -10776,7 +10279,7 @@
             </p>
           </example>
     
-          <proposition xml:id="prop-fof-1">
+          <proposition xml:id="prop-fof-1"><title>Qual</title>
             <statement>
               <p>
                 Let <m>R</m> be a domain and let <m>F</m> be its fraction field. Show that <m>F</m> has the following universal property: if <m>K</m> is any field and <m>f\!: R \to K</m> is any injective ring homomorphism, then <m>f</m> extends to an injective ring homomorphism <m>\overline{f}\!: F \to K</m>, so that <m>\overline{f}|_R=f</m>.
@@ -10784,8 +10287,7 @@
             </statement>
           </proposition>
     
-          <proposition xml:id="prop-fof-2">
-            <title>June 2010 Problem (7)</title>
+          <proposition xml:id="prop-fof-2"><title>June 2010 Problem <m>7</m></title>
             
             
             <statement>
@@ -10815,8 +10317,7 @@
             </statement>
           </proposition>
     
-          <proposition xml:id="prop-fof-3">
-            <title>June 2012 (7)</title>
+          <proposition xml:id="prop-fof-3"><title>June 2012 (7)</title>
             <statement>
               <p>
                 Let <m>R</m> be a commutative integral domain and <m>K</m> its field of fractions. Let <m>a</m> and <m>b</m> be nonzero elements of <m>R</m>, such that <m>(a) \cap(b) = (ab)</m>. Let <m>f : R[x] \to K</m> be the unique ring homomorphism with <m>f (r) = \frac{r}{1}</m> for <m>r \in R</m> and <m>f (x) = \frac{b}{a}</m>. Prove that a polynomial <m>p(x) \in R[x]</m> satisfies <m>f(p(x))=0</m> if and only if <m>p(x) = (ax - b)q(x)</m> for some polynomial <m>q(x) \in R[x]</m>. (Hint: one way is to use induction on deg(p(x)).)
@@ -10928,8 +10429,7 @@
         
       </chapter>
 
-      <chapter xml:id="domains">
-        <title>Domains</title>
+      <chapter xml:id="domains"><title>Domains</title>
 
         <!--
        ***************
@@ -10937,8 +10437,7 @@
        ****************
         -->
     
-        <section xml:id="sec-eds">
-          <title>Euclidian Domains</title>
+        <section xml:id="sec-eds"><title>Euclidian Domains</title>
 
           <blockquote>
             <p>
@@ -10947,7 +10446,7 @@
             <attribution></attribution>
           </blockquote>
     
-          <definition xml:id="def-ed">
+          <definition xml:id="def-ed"><title>Euclidean Domain</title>
             <statement>
               <p>
                 A <em>Euclidean domain (ED)</em> is a domain <m>R</m> together with a function <m>N: R \to \Z_{\geq 0}</m> such that <m>N(0) = 0</m> and the following property holds: for any two elements <m>a, b \in R</m> with <m>b \ne 0</m>, there are elements <m>q</m> and <m>r</m> of <m>R</m> such that 
@@ -10957,26 +10456,27 @@
               </p>
             </statement>
           </definition>
-            <example xml:id="ex-trivial-norm">
-              <p>
-                A "degenerate example" is a field <m>F</m> equipped with the trivial norm <m>N(r) = 0</m> for all <m>r</m>. Given <m>a,b \in F</m> with <m>b \ne 0</m>, we have <m>a =(ab^{-1})b + 0</m>. Note that in this example there is no need to include <m>r=0</m> in the description of the division algorithm, since <m>b \ne 0</m> implies <m>|0| &lt; |b|</m>. This is not the case in other examples. Also observe that as we've defined remainders they are {} unique. For example, in dividing <m>13</m> by <m>5</m>, both <me>13 = 2 \cdot 5 + 3 \text{ and } 13 = 3 \cdot 5 + (- 2)</me> are considered valid. This calculation shows, more generally, that if <m>b</m> is a unit, then for all <m>a</m> there exists an equation <m>a = bq + r</m> with <m>r = 0</m>, not matter what norm <m>N</m> is used. One could make remainders (and hence quotients) unique for <m>\Z</m> by insisting that remainders always be non-negative, but this is not part of the abstract theory since it doesn't generalize to all cases well.
-              </p>
-            </example>
+
+          <example xml:id="ex-trivial-norm"><title>Trivial Norm</title>
+            <p>
+              A "degenerate example" is a field <m>F</m> equipped with the trivial norm <m>N(r) = 0</m> for all <m>r</m>. Given <m>a,b \in F</m> with <m>b \ne 0</m>, we have <m>a =(ab^{-1})b + 0</m>. Note that in this example there is no need to include <m>r=0</m> in the description of the division algorithm, since <m>b \ne 0</m> implies <m>|0| &lt; |b|</m>. This is not the case in other examples. Also observe that as we've defined remainders they are {} unique. For example, in dividing <m>13</m> by <m>5</m>, both <me>13 = 2 \cdot 5 + 3 \text{ and } 13 = 3 \cdot 5 + (- 2)</me> are considered valid. This calculation shows, more generally, that if <m>b</m> is a unit, then for all <m>a</m> there exists an equation <m>a = bq + r</m> with <m>r = 0</m>, not matter what norm <m>N</m> is used. One could make remainders (and hence quotients) unique for <m>\Z</m> by insisting that remainders always be non-negative, but this is not part of the abstract theory since it doesn't generalize to all cases well.
+            </p>
+          </example>
           
     
-          <problem xml:id="ex-gaussian-integers-are-an-ed"> 
+          <problem xml:id="ex-gaussian-integers-are-an-ed"> <title>Guassian Integers are a Euclidian Domain</title>
             <p>
               The ring <m>R = \Z[i]</m> of Gaussian integers is a Euclidean domain with <m>N</m> being the usual complex (Euclidean) square norm <m>N(a+bi)=a^2+b^2</m>. Let <m>\alpha</m>, <m>\beta</m> <m>\in \Z[i]</m> and let <m>\frac{\alpha}{\beta}=p+qi \in \Q(i)</m> (here we use that the fraction field of <m>\Z[i]</m> is <m>\Q(i)</m>). Now pick <m>s,t\in\Z</m> so that <m>|p-s|\leq 1/2</m> and <m>|q-t|\leq 1/2</m>. We have <me>\a=\beta(s+ti)+\beta(p+qi)-\beta(s+ti).</me> Set <m>q=s+ti</m> and set <m>r=\beta(p+qi)-\beta(s+ti)=\beta(s+ti-(p+qi))</m> and notice that <m>q\in \Z[i]</m> because <m>s,t\in\Z</m> and <m>r\in \Z[i]</m> by closure. If <m>r=0</m> we're good, and if <m>r\neq 0</m> then, using that the complex squared norm is multiplicative as well as the Pythagorean Theorem and the choice for <m>s,t</m>, we have <me>N(r)=N(\beta(s+ti-(p+qi)))=N(\beta)N(s+ti-(p+qi))\leq N(\beta)\cdot(1/4+1/4)&lt;N(\beta).</me> Thus the norm function <m>N</m> makes <m>\Z[i]</m> into a Euclidean domain.
             </p>
           </problem>
     
-          <problem xml:id="ex-degree-and-norm">
+          <problem xml:id="ex-degree-and-norm"><title>Degree and Norm</title>
             <p>
               The next classical example is <m>R = F[x]</m> with <m>F</m> a field and where we define the norm to be degree: <m>N(f(x)) = \deg(f(x))</m> if <m>f\neq 0</m> and <m>N(0)=0</m>. This ring is a ED because of the familiar long division for polynomials.
             </p>
           </problem>
     
-          <definition xml:id="def-ed-gcd">
+          <definition xml:id="def-ed-gcd"><title>GCD</title>
             <statement>
               <p>
                 Given elements <m>a, b</m>, not both <m>0</m>, of a Euclidean domain <m>R</m> with Euclidean norm <m>N</m>, a <m>\gcd</m> of <m>a</m> and <m>b</m> is an element <m>g \in\R</m> such that: 
@@ -11104,8 +10604,7 @@
           
         </section>
     
-        <section xml:id="sec-pids">
-          <title>Principal Ideal Domains</title>
+        <section xml:id="sec-pids"><title>Principal Ideal Domains</title>
 
           <blockquote>
             <p>
@@ -11114,7 +10613,7 @@
             <attribution></attribution>
           </blockquote>
     
-          <definition xml:id="def-pid">
+          <definition xml:id="def-pid"><title>PID</title>
             <statement>
               <p>
                 A ring <m>R</m> is called a <em>principal ideal domain (PID)</em> if it is a domain with the property that every ideal is principal, i.e., for each ideal <m>I</m>, we have <m>I = (a)</m> for some <m>a \in R.</m>
@@ -11122,13 +10621,13 @@
             </statement>
           </definition>
     
-          <problem xml:id="exe-fx-is-a-pid">
+          <problem xml:id="exe-fx-is-a-pid"><title>Polynomial Rings over Fields are PIDs</title>
             <p>
               For any field <m>F</m>, every ideal of <m>F[x]</m> is principal (<m>F[x]</m> is a PID)
             </p>
           </problem>
     
-          <theorem xml:id="thm-ed-is-a-pid">
+          <theorem xml:id="thm-ed-is-a-pid"><title>Euclidean Domains are PIDs</title>
             <statement>
               <p>
                 If <m>R</m> is a Euclidean domain, then <m>R</m> is a PID.
@@ -11146,19 +10645,19 @@
             </proof>
           </theorem>
     
-          <problem xml:id="ex-pid-not-ed">
+          <problem xml:id="ex-pid-not-ed"><title>PIDs Need not be Euclidean Domains</title>
             <p>
               The ring <m>\Z\left[ \frac{1 + \sqrt{-19}}{2}\right]=\left\{a+ b\frac{1 + \sqrt{-19}}{2} \mid a,b\in \Z\right\}</m> is a PID, but not a Euclidean domain. It is the simplest example of such a ring, but the proofs of these claims are not easy. I will not cover a proof of this fact.
             </p>
           </problem>
     
-          <problem xml:id="exe-nonzero-primes-maximal-in-pid">
+          <problem xml:id="exe-nonzero-primes-maximal-in-pid"><title>Nonzero Primes are Maximal in PIDs</title>
             <p>
-              If <m>R</m> is a PID, then every non-zero prime ideal is maximal.
+              If <m>R</m> is a PID, then every nonzero prime ideal is maximal.
             </p>
           </problem>
     
-          <definition xml:id="def-associate">
+          <definition xml:id="def-associate"><title>Associate</title>
             <statement>
               <p>
                 Let <m>R</m> be a domain. Two elements <m>r,s \in R</m> are <em>associates</em> if there is a unit <m>u</m> of R such that <m>s = ur</m>.
@@ -11166,7 +10665,7 @@
             </statement>
           </definition>
     
-          <lemma xml:id="lem-associates-and-principal-ideals">
+          <lemma xml:id="lem-associates-and-principal-ideals"><title>Associates and Principal Ideals</title>
             <statement>
               <p>
                 Two elements <m>x,y</m> of a domain <m>R</m> are associates if and only if <m>(x) = (y)</m>.
@@ -11184,10 +10683,10 @@
             </proof>
           </lemma>
     
-          <proposition xml:id="prop-gcds-and-units-in-pids">
+          <proposition xml:id="prop-gcds-and-units-in-pids"><title>GCDs and Units in PIDs</title>
             <statement>
               <p>
-                            If <m>R</m> is a PID and <m>a,b\in R</m>, then 
+                If <m>R</m> is a PID and <m>a,b\in R</m>, then 
                 <ol>
                   <li>
                     <p>
@@ -11217,7 +10716,7 @@
             </p>  
           </remark>
     
-          <definition xml:id="def-prime-element">
+          <definition xml:id="def-prime-element"><title>Prime</title>
             <statement>
               <p>
                 Suppose <m>R</m> is a domain. An element <m>p \in R</m> is a <em>prime</em> element if <m>p \neq 0</m> and the ideal <m>(p)</m> is a prime ideal.
@@ -11225,7 +10724,7 @@
             </statement>
           </definition>
     
-          <definition xml:id="def-irreducible">
+          <definition xml:id="def-irreducible"><title>Irreducible</title>
             <statement>
               <p>
                 Suppose <m>R</m> is a domain. An element <m>r \in R</m> is <em>irreducible</em> if <m>r\neq 0</m>, <m>r</m> is not a unit, and whenever <m>r = xy</m> with <m>x,y \in R</m> then either <m>x</m> or <m>y</m> is a unit.
@@ -11233,7 +10732,7 @@
             </statement>
           </definition>
     
-          <example xml:id="ex-prime-and-irreducible-elements">
+          <example xml:id="ex-prime-and-irreducible-elements"><title>Examples of Primes and Irreducibles</title>
             <p>
               <ol>
                 <li>
@@ -11255,12 +10754,12 @@
             </p>
           </example>
     
-          <problem xml:id="ex-in-zsqrt-5-2-irreducible-but-not-prime">
-          <statement>
-            <p>
-              In the domain <m>\Z[\sqrt{-5}]</m> the element <m>2</m> is irreducible but not prime.
-            </p>
-          </statement>
+          <problem xml:id="ex-in-zsqrt-5-2-irreducible-but-not-prime"><title>In <m>\Z[\sqrt{-5}]</m>, <m>2</m> Prime but not Irreducible</title>
+            <statement>
+              <p>
+                In the domain <m>\Z[\sqrt{-5}]</m> the element <m>2</m> is irreducible but not prime.
+              </p>
+            </statement>
     
             <solution>
               <p>
@@ -11283,7 +10782,7 @@
             </solution>
           </problem>
     
-          <theorem xml:id="thm-irreducible-is-prime-in-pid">
+          <theorem xml:id="thm-irreducible-is-prime-in-pid"><title>Irreducible is Prime in PID</title>
             <statement>
               <p>
                 Let <m>R</m> be a domain and let <m>r\in R</m>. 
@@ -11314,7 +10813,7 @@
             </proof>
           </theorem>
     
-          <problem xml:id="rx-a-pid-iff-r-a-field">
+          <problem xml:id="rx-a-pid-iff-r-a-field"><title>Duplicate?</title>
           <statement>
             <p>
               Let <m>R</m> be a commutative ring and <m>x</m> an indeterminant. Prove that <m>R[x]</m> is a PID if and only if <m>R</m> is a field.
@@ -11332,7 +10831,7 @@
             </solution>
           </problem>
     
-          <problem xml:id="irreducible-not-prime-inz-sqrt-ten">
+          <problem xml:id="irreducible-not-prime-inz-sqrt-ten"><title>Qual</title>
           <statement>
             <p>
               Consider the subring <m>\Z[\sqrt{10}] = \{a + b\sqrt{10} | a, b \in \Z\}</m> of <m>\R</m>. Show that <m>2</m> is irreducible but not prime in <m>\Z[\sqrt{10}].</m> Hint: Consider the function <m>N : \Z[\sqrt{10}]\to \Z, N (a + b\sqrt{10}) = a^2-10b^2</m>.
@@ -11358,7 +10857,7 @@
             </solution>
           </problem>
     
-          <problem xml:id="problem-4-zsqrt-3">
+          <problem xml:id="problem-4-zsqrt-3"><title>Qual</title>
           <statement>
             <p>
               In the commutative ring <m>R = \Z[\sqrt{-3}]</m>, show that the element <m>2</m> is irreducible but not prime.
@@ -11366,21 +10865,31 @@
           </statement>
     
             <solution>
-              <!--
+              
               <p>
                 
-                First, notice that <m>2\cdot 2=6=(1+\sqrt{-3})(1-\sqrt{-3})</m>. Define a function <me>N:\Z[\sqrt{-3}]\to\Z, N(a+b \sqrt{-3})=a^2+3b^2.</me> Let <m>\alpha,\beta\in\Z[i]</m> and behold <me>\begin{align}
-    N(\alpha\beta)
-    &amp;=N((a+b \sqrt{-3})(c+d \sqrt{-3}))\\
-    &amp;=N(ac-3bd+ad \sqrt{-3}+bc \sqrt{-3})\\
-    &amp;=(ac-3bd)^2+3(ad+bc)^2\\
-    &amp;=((ac)^2-6acbd+9(bd)^2)+3((ad)^2+2abcd+(bc^2))\\
-    &amp;=a^2c^2+9b^2d^2+3a^2d^2+3b^2c^2\\
-    &amp;=(a^2c^2+3a^2d^2)+(3b^2c^2+9b^2d^2)\\
-    &amp;=a^2(c^2+3d^2)+3b^2(c^2+3d^2)\\
-    N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done.
+                First, notice that <m>2\cdot 2=6=(1+\sqrt{-3})(1-\sqrt{-3})</m>. Define a function 
+                <me>
+                  N:\Z[\sqrt{-3}]\to\Z, N(a+b \sqrt{-3})=a^2+3b^2.
+                </me> Let <m>\alpha,\beta\in\Z[i]</m> 
+                and behold 
+                <me>
+                \begin{align}
+                  N(\alpha\beta)
+                  &amp;=N((a+b \sqrt{-3})(c+d \sqrt{-3}))\\
+                  &amp;=N(ac-3bd+ad \sqrt{-3}+bc \sqrt{-3})\\
+                  &amp;=(ac-3bd)^2+3(ad+bc)^2\\
+                  &amp;=((ac)^2-6acbd+9(bd)^2)+3((ad)^2+2abcd+(bc^2))\\
+                  &amp;=a^2c^2+9b^2d^2+3a^2d^2+3b^2c^2\\
+                  &amp;=(a^2c^2+3a^2d^2)+(3b^2c^2+9b^2d^2)\\
+                  &amp;=a^2(c^2+3d^2)+3b^2(c^2+3d^2)\\
+                  &amp;N(\alpha)N(\beta)\\
+                  &amp;=(a^2+3b^2)(c^2+3d^2).
+                \end{align}
+                </me>
+                So there's that done.
               </p>
-              -->
+              
     
               <p>
                 Suppose by way of contradiction there exist <m>\a,\b</m> such that <m>2=\a\b</m>. Then <m>\a=a+b\sqrt{-3}</m> and <m>\b=c+d\sqrt{-3}</m>, and <me>N(2)=4=N(\a\b)=N(\a)N(\b)=(a^2+3b^2)(c^2+3d^2).</me> Thus <m>(a^2+3b^2)=\pm1,\pm2,</m> or <m>\pm4</m>, as these are the only integer divisors of <m>4</m>. However, there do not exist integers <m>a,b</m> such that this is true. Thus <m>2</m> is irreducible in <m>\Z[\sqrt{-3}]</m>.
@@ -11396,17 +10905,14 @@
             </solution>
           </problem>
     
-          <problem>
-            <title>June 2010 Problem (8)</title>
-            
+          <problem><title>June 2010 Problem (8)</title>
             
             <p>
               Prove <m>\Z[2i] = \{a + 2bi | a \;\text{and}\; b \;\text{are integers}\}</m> is not a PID. <em>Hint:</em> One method is to use (with proof) the fact that <m>2 + 2i</m> is irreducible in this ring.
             </p>
           </problem>
     
-          <problem>
-            <title>June 2011 (8)</title>
+          <problem><title>June 2011 (8)</title>
           <statement>
             <p>
               Let <m>R</m> be a commutative ring with <m>1</m>. Recall that <m>r \in R</m> is called nilpotent if <m>r^n = 0</m> for some integer <m>n &gt; 0.</m> Let <m>N</m> be the set of nilpotent elements of <m>R</m>. 
@@ -11473,7 +10979,7 @@
             </solution>
           </problem>
     
-          <problem>
+          <problem><title>Qual</title>
           <statement>
             <p>
               Let <m>R</m> be a PID and <m>S</m> a multiplicatively closed subset of <m>R</m> such that <m>0 \not\in S</m>. Prove that <m>S\inv R</m> is also a PID. Tip: Given an ideal <m>I</m> of <m>S\inv R</m>, consider <m>I \cap R</m>.
@@ -11487,7 +10993,7 @@
             </solution>
           </problem>
     
-          <problem>
+          <problem><title>Qual</title>
             <p>
               Let <m>R</m> be an integral domain with field of fractions <m>Q</m>. Let <m>P</m> be a prime ideal of <m>R</m> and let 
               <me>
@@ -11508,6 +11014,7 @@
               </ol>
             </p>
           </problem>
+
           <exercises>
     
             <exercisegroup>
@@ -11611,8 +11118,7 @@
           
         </section>
     
-        <section xml:id="subsec-ufds">
-          <title>Unique Factorization Domains</title>
+        <section xml:id="subsec-ufds"><title>Unique Factorization Domains</title>
 
           <blockquote>
             <p>
@@ -11621,15 +11127,15 @@
             <attribution></attribution>
           </blockquote>
     
-          <definition xml:id="def-ufd">
+          <definition xml:id="def-ufd"><title>UFD</title>
             <statement>
               <p>
-                            A ring <m>R</m> is called a <em>unique factorization domain</em>, or UFD for short, if <m>R</m> is an integral domain and every element <m>r \in R</m> that is non-zero and not a unit can be written as a finite product <me>r = p_1 \cdots p_n</me> of (not necessarily distinct) irreducible elements <m>p_1, \dots, p_n</m> of <m>R</m> in a way that is unique up to ordering and associates. That is, if <me>r = q_1 \cdots q_m</me> also holds with each <m>q_i</m> irreducible, then <m>m = n</m> and there is a permutation <m>\sigma</m> such that, for all <m>i</m>, we have <m>p_i</m> and <m>q_{\sigma(i)}</m> are associates.
+                A ring <m>R</m> is called a <em>unique factorization domain</em>, or UFD for short, if <m>R</m> is an integral domain and every element <m>r \in R</m> that is non-zero and not a unit can be written as a finite product <me>r = p_1 \cdots p_n</me> of (not necessarily distinct) irreducible elements <m>p_1, \dots, p_n</m> of <m>R</m> in a way that is unique up to ordering and associates. That is, if <me>r = q_1 \cdots q_m</me> also holds with each <m>q_i</m> irreducible, then <m>m = n</m> and there is a permutation <m>\sigma</m> such that, for all <m>i</m>, we have <m>p_i</m> and <m>q_{\sigma(i)}</m> are associates.
               </p>
             </statement>
           </definition>
     
-          <example xml:id="ex-ufd-exs">
+          <example xml:id="ex-ufd-exs"><title>Examples of UFDs</title>
             <p><ol>
               <li>
               <m>\Z</m> is a UFD by the Fundamental Theorem of Arithmetic.
@@ -11646,14 +11152,13 @@
             </ol></p>
           </example>
     
-          <problem xml:id="ex-zx-not-a-pid">
+          <problem xml:id="ex-zx-not-a-pid"><title><m>\Z[x]</m> is a UFD</title>
             <p>
               <m>\Z[x]</m> is not a PID hence also not a Euclidean domain. For <m>\ex</m>, this can be seen because the ideal <m>(2,x)</m> is not a principal ideal. It is a UFD because <m>\Z</m> is a UFD (based on the result that if <m>R</m> is a UFD then so is <m>R[x]</m> which we will prove shortly).
             </p>
           </problem>
     
-          <problem xml:id="ex-zsqrt-5-not-a-ufd">
-            <title>January 2014 (7)</title>
+          <problem xml:id="ex-zsqrt-5-not-a-ufd"><title>January 2014 (7)</title>
           <statement>
             <p>
               <m>\Z[\sqrt{-5}]</m> is a domain that is not a UFD.
@@ -11667,7 +11172,7 @@
             </solution>
           </problem>
     
-          <theorem xml:id="thm-pid-implies-ufd">
+          <theorem xml:id="thm-pid-implies-ufd"><title>PIDs are UFDs</title>
             <statement>
               <p>
                 If <m>R</m> is a PID then <m>R</m> is a UFD.
@@ -11675,7 +11180,7 @@
             </statement>
           </theorem>
     
-          <theorem xml:id="thm-factorizations-permutations-and-associates">
+          <theorem xml:id="thm-factorizations-permutations-and-associates"><title>Factorizations and Permutations</title>
             <statement>
               <p>
                 Assume <m>R</m> is a PID <m>r\in R</m> is non zero and not a unit and <m>r = p_1 \cdots p_n = q_1 \cdots q_m</m> are two different irreducible factorization of <m>r</m>. Then <m>n=m</m> and there is a permutation <m>\sigma</m> such that, for all <m>i</m>, we have <m>p_i</m> and <m>q_{\sigma(i)}</m> are associates.
@@ -11713,7 +11218,7 @@
             </proof>
           </theorem>
     
-          <problem xml:id="prime-in-ufd-zsqrt-5-not-ufd">
+          <problem xml:id="prime-in-ufd-zsqrt-5-not-ufd"><title>Qual</title>
           <statement>
             <p><ol>
               <li>
@@ -11867,8 +11372,7 @@
                    
         </section>
     
-        <section xml:id="subsec-noeth">
-          <title>Noetherian Domains</title>
+        <section xml:id="subsec-noeth"><title>Noetherian Domains</title>
 
           <blockquote>
             <p>
@@ -11877,7 +11381,7 @@
             <attribution></attribution>
           </blockquote>
           
-          <definition xml:id="def-noetherian-ring">
+          <definition xml:id="def-noetherian-ring"><title>Noetherian Ring</title>
             <statement>
               <p>
                 Suppose <m>R</m> is a commutative ring. Then <m>R</m> is called a <em>noetherian ring</em> if <m>R</m> satisfies the ascending chain condition on ideals - i.e., for every chain of ideals of <m>R</m> 
@@ -11889,7 +11393,7 @@
             </statement>
           </definition>
     
-          <lemma xml:id="lem-pids-are-noetherian">
+          <lemma xml:id="lem-pids-are-noetherian"><title>PIDs are Noetherian</title>
             <statement>
               <p>
                 If <m>R</m> is a PID then <m>R</m> is noetherian.
@@ -11903,13 +11407,13 @@
             </proof>
           </lemma>
     
-          <problem xml:id="exe-fields-are-noetherian">
+          <problem xml:id="exe-fields-are-noetherian"><title>Fields are Noetherian</title>
             <p>
               Every field is noetherian.
             </p>
           </problem>
     
-          <lemma xml:id="lem-factorization-in-noetherian-domains">
+          <lemma xml:id="lem-factorization-in-noetherian-domains"><title>Factorization in Noetherian Domains</title>
             <statement>
               <p>
                 If <m>R</m> is a noetherian integral domain, then every non-zero, not-unit element factors into a finite product of irreducible elements.
@@ -12725,8 +12229,7 @@
 
     </part>   
 
-    <part xml:id="part-modules">
-      <title>Module Theory</title>
+    <part xml:id="part-modules"><title>Module Theory</title>
 
       <!--
      *****************
@@ -27547,20 +27050,15 @@
     </part>
 -->
 
-    <backmatter xml:id="backmatter">
-      <title>Backmatter</title>
+    <backmatter xml:id="backmatter"><title>Backmatter</title>
 
-      <appendix xml:id="app-foundations">
-        <title>Foundational Knowledge</title>
+      <appendix xml:id="app-foundations"><title>Foundational Knowledge</title>
 
-        <section xml:id="sec-sets-functions">
-          <title>Sets, Functions, Constructions</title>
+        <section xml:id="sec-sets-functions"><title>Sets, Functions, Constructions</title>
 
-          <subsection xml:id="subsec-sets">
-            <title>Sets</title>
+          <subsection xml:id="subsec-sets"><title>Sets</title>
             
-            <theorem xml:id="thm-distributive-laws">
-              <title>Distributive Laws</title>
+            <theorem xml:id="thm-distributive-laws"><title>Distributive Laws</title>
               <statement>
                 <p>
                   <m>A \cap  (\bigcup_\alpha  B_\alpha ) = \bigcup_\alpha (A \cap  B_\alpha )</m> and <m>A \cup  (\bigcap_\alpha  B_\alpha ) = \bigcap_\alpha (A \cup  B_\alpha )</m>
@@ -27568,8 +27066,7 @@
               </statement>
             </theorem>
 
-            <theorem xml:id="thm-de-morgans-laws">
-              <title>De Morgan's Laws</title>
+            <theorem xml:id="thm-de-morgans-laws"><title>De Morgan's Laws</title>
               <statement>
                 <p>
                   <m>A \sm (\bigcup_\alpha  B_\alpha ) = \bigcap_\alpha (A \sm B_\alpha )</m> and <m>A \sm (\bigcap_\alpha  B_\alpha ) = \bigcup_\alpha (A \sm B_\alpha )</m>
@@ -27577,27 +27074,16 @@
               </statement>
             </theorem>
             
-            <remark>
-              <p>
-                Notation for indices: <m>i,j,k,m,n</m> for finite or countably many indices, <m>\alpha ,\beta ,\dots</m> for arbitrarily many indices.
-              </p>
-            </remark>
+            <remark><p>Notation for indices: <m>i,j,k,m,n</m> for finite or countably many indices, <m>\alpha ,\beta ,\dots</m> for arbitrarily many indices.</p></remark>
 
-            <remark>
-              <p>
-                Notation for sets, elements of sets, and sets of sets: Small letters <m>a,b,c,x,y,z</m> for elements of sets, capital letters <m>A,B,C,X,Y,Z</m> for sets, calligraphic capital letters ℬ,𝒞,𝒯,𝒰 for collections of sets.
-              </p>
-            </remark>
+            <remark><p>Notation for sets, elements of sets, and sets of sets: Small letters <m>a,b,c,x,y,z</m> for elements of sets, capital letters <m>A,B,C,X,Y,Z</m> for sets, calligraphic capital letters ℬ,𝒞,𝒯,𝒰 for collections of sets.</p></remark>
 
-            <p>
-              Template to prove two sets are equal
-            </p>
+            <p>Template to prove two sets are equal</p>
           </subsection>
 
-          <subsection xml:id="subsec-functions">
-            <title>Functions</title>
+          <subsection xml:id="subsec-functions"><title>Functions</title>
 
-            <definition xml:id="def-domain-codomain">
+            <definition xml:id="def-domain-codomain"><title>Domain and Codomain</title>
               <statement>
                 <p>
                   For a function <m>f: G \to  H</m>, the set <m>G</m> is the <em>domain</em>, the set <m>H</m> is the <em>codomain</em>.
@@ -27605,15 +27091,17 @@
               </statement>
             </definition>
 
-              <p>
-                Template to define a function
-              </p>
+            <definition xml:id="def-function"><title>Function</title>
+              <statement>
+                <p>
+                  Let <m>A</m> and <m>B</m> be sets. A <em>function</em> (also called a <em>map</em>) <m>f</m> from <m>A</m> to <m>B</m>, denoted <m>f : A\to B</m>, is a subset <m>F \sse A \times B</m> such that for each <m>a \in A</m>, there is one and only one pair in <m>F</m> of the form <m>(a, b)</m>.
+                </p>
+              </statement>
+            </definition>
 
-              <p>
-                Template to prove two functions are equal
-              </p>
+            <p>Template to prove two functions are equal</p>
 
-            <definition xml:id="def-well-defined">
+            <definition xml:id="def-well-defined"><title>Welldefined Function</title>
               <statement>
                 <p>
                   A function <m>f: G \to H</m> is <em>well-defined</em> if whenever <m>g,g' \in  G</m> and <m>g = g'</m>, then <m>f(g) = f(g')</m>.
@@ -27621,13 +27109,9 @@
               </statement>
             </definition>
 
-            <remark>
-              <p>
-                All functions are well-defined.
-              </p>
-            </remark>
+            <remark><p>All functions are well-defined.</p></remark>
 
-            <definition xml:id="def-jectivity">
+            <definition xml:id="def-jectivity"><title>Injective, Surjective, Bijective</title>
               <statement>
                 <p>
                   Let <m>f: X \to  Y</m> be a function.  
@@ -27660,7 +27144,15 @@
               </statement>
             </definition>
 
-            <theorem>
+            <definition xml:id="def-composition"><title>Composition</title>
+              <statement>
+                <p>
+                  
+                </p>
+              </statement>
+            </definition>
+
+            <theorem xml:id="thm-compositions-and-jectivity"><title>Compositions and 'Jectivity</title>
               <statement>
                 <p>
                   Let <m>a: G \to  H</m>, <m>b: H \to  K</m>, and <m>c: K \to L</m> be functions. Then:
@@ -27674,19 +27166,19 @@
 
                     <li>
                       <p>
-                        If <m>ba</m> is one-to-one then <m>a</m> is one-to-one.  
+                        If <m>b\circ a</m> is one-to-one then <m>a</m> is one-to-one.  
                       </p>
                     </li>
 
                     <li>
                       <p>
-                        If <m>a</m> and <m>b</m> are onto then <m>ba</m> is onto.  
+                        If <m>a</m> and <m>b</m> are onto then <m>b\circ a</m> is onto.  
                       </p>
                     </li>
 
                     <li>
                       <p>
-                        If <m>ba</m> is onto then <m>b</m> is onto.  
+                        If <m>b\circ a</m> is onto then <m>b</m> is onto.  
                       </p>
                     </li>
 
@@ -27700,11 +27192,7 @@
               </statement>
             </theorem>
 
-            <example>
-              <p></p>
-            </example>
-
-            <definition xml:id="def-image-preimage">
+            <definition xml:id="def-image-preimage"><title>Image and Preimage</title>
               <statement>
                 <p>
                   Let <m>f: X \to  Y</m> be a function.  
@@ -27731,13 +27219,7 @@
               </statement>
             </definition>
 
-            <example>
-              <p></p>
-            </example>
-
-            <theorem xml:id="thm-pan">
-              <title>Preimages are Nice</title>
-              
+            <theorem xml:id="thm-pan"><title>PAN</title>
               
               <statement>
                 <p>
@@ -27771,12 +27253,7 @@
               </statement>
             </theorem>
 
-            <example>
-              <p></p>
-            </example>
-
-            <theorem xml:id="thm-iasn">
-              <title>Images are Sometimes Nice</title>
+            <theorem xml:id="thm-iasn"><title>IASN</title>
               <statement>
                 <p>
                   If <m>f: X \to  Y, C \subseteq  C' \subseteq  X</m>, and <m>C\alpha  \subseteq  X</m> for all <m>\alpha</m>, then 
@@ -27810,11 +27287,7 @@
               </statement>
             </theorem>
 
-            <example>
-              <p></p>
-            </example>
-
-            <theorem>
+            <theorem><title>Containments of Images, Preimages</title>
               <statement>
                 <p>
                   Let <m>f: X \to  Y</m>. 
@@ -27837,13 +27310,11 @@
           
           </subsection>
 
-          <subsection xml:id="subsec-set-constructions">
-            <title>Set Constructions</title>
+          <subsection xml:id="subsec-set-constructions"><title>Set Constructions</title>
 
-            <subsubsection xml:id="subsubsec-subsets">
-              <title>Subsets</title>
+            <subsubsection xml:id="subsubsec-subsets"><title>Subsets</title>
 
-              <definition xml:id="def-subset">
+              <definition xml:id="def-subset"><title>Subset</title>
                 <statement>
                   <p>
                     Let <m>A</m> be a set. A <em>subset</em> of <m>A</m> is a set of some (possibly none, possibly all, possibly neither) of the elements of <m>A</m>.
@@ -27851,7 +27322,7 @@
                 </statement>
               </definition>
 
-              <definition xml:id="def-inclusion-map">
+              <definition xml:id="def-inclusion-map"><title>Inclusion Map</title>
                 <statement>
                   <p>
                     Let <m>B \subseteq  A</m>. The<em>inclusion</em>map is the function <m>\iota :B \to  A</m> defined by <m>\iota(b) = b</m> for all <m>b \in  B</m>.
@@ -27859,7 +27330,7 @@
                 </statement>
               </definition>
 
-              <proposition>
+              <proposition xml:id="prop-inclusions-injective"><title>Inclusions are Injective</title>
                 <statement>
                   <p>
                     If <m>B \subseteq  A</m> and <m>\iota:B \to  A</m> is the inclusion, then <m>\iota</m> is an injection.            
@@ -27868,34 +27339,33 @@
               </proposition>
             </subsubsection>
 
-            <subsubsection xml:id="subsubsec-product-sets">
-              <title>Product Sets</title>
+            <subsubsection xml:id="subsubsec-product-sets"><title>Product Sets</title>
 
-              <definition xml:id="def-cartesian-product">
+              <definition xml:id="def-cartesian-product"><title>Cartesian Product</title>
                 <statement>
                   <p>
-                    Let <m>A, B,</m> and <m>A_\alpha</m>  for <m>all \alpha  \in  J</m> be sets. The<em>Cartesian product</em> <m>A \times  B := \{(a,b) | a \in  A, b \in  B\}</m> and <m>\prod_{\alpha\in J} A_\alpha  := \{(a_\alpha )\alpha  \in  J | a\alpha  \in  A_\alpha\}</m>
+                    Let <m>A, B,</m> and <m>A_\alpha</m>  for <m>all \alpha  \in  J</m> be sets. The<em>Cartesian product</em> <m>A \times  B := \{(a,b) | a \in  A, b \in  B\}</m> and <m>\prod_{\alpha\in J} A_\alpha  := \{(a_\alpha )_{\alpha  \in  J} | a_\alpha  \in  A_\alpha\}</m>
                   </p>
                 </statement>
               </definition>
 
-              <definition xml:id="def-projection-map">
+              <definition xml:id="def-projection-map"><title>Projection Map</title>
                 <statement>
                   <p>
-                    Let <m>A_\alpha</m> for all <m>\alpha  \in  J</m> be sets and let <m>\beta  in J</m>. The<em>projection</em> map <m>p\beta : \prod_{ \alpha  \in  J} A_\alpha  \to  A_\beta</m> is defined by <m>p\beta ((a\alpha )\alpha  \in  J) = a\beta  for all (a\alpha )\alpha  \in  J \in  \prod \alpha  \in  J A\alpha</m> .
+                    Let <m>A_\alpha</m> for all <m>\alpha  \in  J</m> be sets and let <m>\beta  in J</m>. The<em>projection</em> map <m>\pi_\beta : \prod_{ \alpha  \in  J} A_\alpha  \to  A_\beta</m> is defined by <m>\pi_\beta ((a_\alpha )_{\alpha  \in  J}) = a_\beta  \text{ for all }(a_\alpha )_{\alpha  \in  J} \in  \prod_{\alpha  \in  J} A_\alpha</m> .
                   </p>
                 </statement>
               </definition>
 
-              <definition xml:id="def-product-inclusion">
+              <definition xml:id="def-product-inclusion"><title>Product Inclusion Map</title>
                 <statement>
                   <p>
-                    Let <m>A\alpha</m> for all <m>\alpha  \in  J</m> be sets, let <m>\beta  \in  J</m>, and for each <m>\alpha  \in  J - \{\beta \}</m>, let <m>b\alpha  \in  A\alpha</m>. The associated <em>product inclusion</em>map <m>i\beta : A\beta  \to  \prod \alpha  \in  J A\alpha</m>  is defined for each <m>a \in  A\beta</m>  by <m>i\beta (a) := (a\alpha )\alpha  \in  J</m>, where <m>a\beta  := a and a\alpha  := b\alpha  for all \alpha  \in  J - \{\beta \}</m>.
+                    Let <m>A_\alpha</m> for all <m>\alpha  \in  J</m> be sets, let <m>\beta  \in  J</m>, and for each <m>\alpha  \in  J \sm \{\beta \}</m>, let <m>b_\alpha  \in  A_\alpha</m>. The associated <em>product inclusion</em>map <m>\iota_\beta : A_\beta  \to  \prod_{\alpha  \in  J} A_\alpha</m>  is defined for each <m>a \in  A_\beta</m>  by <m>\iota_\beta (a) := (a_\alpha )_{\alpha  \in  J}</m>, where <m>a_\beta  := a \text{ and } a_\alpha  := b_\alpha  \text{ for all } \alpha  \in  J \sm \{\beta \}</m>.
                   </p>
                 </statement>
               </definition>
 
-              <theorem xml:id="thm-proj-sur-incl-inj">
+              <theorem xml:id="thm-proj-sur-incl-inj"><title>Properties of Projections and Product Inclusions</title>
                 <statement>
                   <p>
                     <ol>
@@ -27915,113 +27385,79 @@
                 </statement>
               </theorem>
 
-              <lemma>
+              <lemma><title>Subsets of Cartesian Products</title>
                 <statement>
                   <p>
                     If <m>A \subseteq  G</m> and <m>B \subseteq  H</m>, then <m>A \times  B \subseteq  G \times  H</m>.
                   </p>
                 </statement>
               </lemma>
-
-              <axiom xml:id="axiom-choice">
-                <title>Axiom of Choice</title>
-                <statement>
-                  <p>
-                    If <m>A\alpha  \neq  \emptyset</m>  for all <m>\alpha  \in  J</m>, then <m>\prod \alpha  \in  J A\alpha  \neq  \emptyset</m> .            
-                  </p>
-                </statement>
-              </axiom>
             </subsubsection>
               
-            <subsubsection xml:id="subsubsec-quotient-sets">
-              <title>Quotient Sets</title>
+            <subsubsection xml:id="subsubsec-quotient-sets"><title>Quotient Sets</title>
 
               <definition xml:id="def-equivalence-relation">
                 <statement>
                   <p>
                     An<em>equivalence relation</em>\sim  on a set <m>X</m> is a subset <m>S of X \times  X</m> (where <m>(a,b) \in  S</m> is written <m>a \sim  b</m>) that satisfies the following for all <m>a,b,c</m> in <m>X</m>: 
-                    (1) a \sim  a (<em>reflexive</em>), 
-                    (2) a \sim  b implies b \sim  a (<em>symmetric</em>), and 
-                    (3) a \sim  b and b \sim  c implies a \sim  c (<em>transitive</em>).  
+                    <ol>
+                      <li><title>Reflexivity</title>
+                        <p>
+                          <m>a \sim  a</m>, 
+                        </p>
+                      </li>
+
+                      <li><title>Symmetry</title>
+                        <p>
+                          <m>a \sim  b</m> implies <m>b \sim  a</m>, and 
+                        </p>
+                      </li>
+
+                      <li><title>Transitivity</title>
+                        <p>
+                          <m>a \sim  b</m> and <m>b \sim  c</m> implies <m>a \sim  c</m>.  
+                        </p>
+                      </li>
+                    </ol>
                   </p>
 
                   <p>
-                    The<em>equivalence class</em>of an element a of X is<em>[a]</em>:= \{b | b \sim  a\}.  
+                    The<em>equivalence class</em>of an element a of <m>X</m> is <m>[a]:= \{b | b \sim  a\}</m>.  
                   </p>
 
                   <p>
-                    The notation<em>X/\sim </em>denotes the<em>set of equivalence classes</em>, also called the<em>quotient</em>of X with respect to \sim .  
+                    The notation <m>X/\sim</m> denotes the<em>set of equivalence classes</em>, also called the<em>quotient</em>of <m>X</m> with respect to <m>\sim</m>.  
                   </p>
 
                   <p>
-                    The function q:X \to  X/\sim  defined by q(p) := [p] for all p \in  X is called the<em>equivalence map</em>
+                    The function <m>q:X \to  X/\sim</m>  defined by <m>q(p) := [p]</m> for all <m>p \in  X</m> is called the<em>quotient map</em>
                   </p>
                   
                 </statement>
               </definition>
 
-              <definition xml:id="def-partition">
+              <definition xml:id="def-partition"><title>Partition</title>
                 <statement>
                   <p>
-                    Def 1.28: A<em>partition</em>of a set X is a collection of nonempty disjoint subsets of X whose union is X.
+                    A<em>partition</em>of a set <m>X</m> is a collection of nonempty disjoint subsets of <m>X</m> whose union is <m>X</m>.
                   </p>
                 </statement>
               </definition>
 
-              <proposition xml:id="prop-equiv-partition">
+              <theorem xml:id="prop-equiv-partition"><title>EPT</title>
                 <statement>
                   <p>
-                    Let X be a set. 
+                    Let <m>X</m> be a set. 
                     <ol>
                       <li>
                         <p>
-                          If \sim  is an equivalence relation on G, then X/\sim  is a partition of X. 
+                          If <m>\sim</m> is an equivalence relation on <m>G</m>, then <m>X/\sim</m> is a partition of <m>X</m>. 
                         </p>
                       </li>
 
                       <li>
                         <p>
-                          If 𝒞 is a partition of X, and T = \{(x,y) \in  X \times  X | x,y are in the same element of 𝒞\}, then T is an equivalence relation on X.
-                        </p>
-                      </li>
-                    </ol>
-                  </p>
-                </statement>
-              </proposition>
-
-              <example>
-                <p></p>
-              </example>
-
-              <theorem>
-                <statement>
-                  <p>
-                    Let f: X \to  Y be a function, and let \sim  = \{(p,p') \in  X \times  X | f(p) = f(p')\}. Then \sim  is an equivalence relation on X.
-                  </p>
-                </statement>
-              </theorem>
-
-              <theorem xml:id="thm-fbt-quotients">
-                <title>FBT = Function Building Theorem for Quotient Sets</title>
-                <statement>
-                  <p>
-                    Let \sim  be an equivalence relation on a set X, and let f: X \to  Y be a function satisfying the property that whenever x,x' \in  X and x \sim  x' then f(x) = f(x'). Then:  
-                    <ol>
-                      <li>
-                        <p>
-                          There is a well-defined function g:X/\sim  \to  Y defined by g([x]) = f(x) for all [x] in X/\sim ; that is, g \circ  q = f, where q is the equivalence map.  
-                        </p>
-                      </li>
-
-                      <li>
-                        <p>
-                          If f is onto, then g is onto.  
-                        </p>
-                      </li>
-
-                      <li>
-                        <p>
-                          If f also satisfies the property that whenever x,x' \in  X and f(x) = f(x') then x \sim  x', then g is one-to-one.
+                          If <m>\cC</m> is a partition of <m>X</m>, and <m>T = \{(x,y) \in  X \times  X | x,y \text{ are in the same element of } \cC\}</m>, then <m>T</m> is an equivalence relation on <m>X</m>.
                         </p>
                       </li>
                     </ol>
@@ -28029,173 +27465,257 @@
                 </statement>
               </theorem>
 
-              <p>
-                -   Template for proving a well-defined function with domain X/\sim .
-              </p>
-
-              <example>
-                <p></p>
-              </example>
-
-              <definition xml:id="def-generated-equivalence">
+              <definition xml:id="def-integers-modulo"><title>The Integers Modulo <m>n</m></title>
                 <statement>
                   <p>
-                    Let X be a set and let S be a subset of X \times  X. The<em>equivalence relation on X generated by S</em>is the intersection of all of the equivalence relations on X that contain S.
+                    
                   </p>
                 </statement>
               </definition>
-              
-            </subsubsection>
-            
+
+            </subsubsection>  
 
           </subsection>          
         </section>
 
-        <section xml:id="sec-numbers-and-cardinality">
-          <title>Number Systems and Cardinality</title>
+        <section xml:id="sec-numbers-and-cardinality"><title>Number Systems, Counting, and Cardinality</title>
 
-          <definition xml:id="def-set-sizes">
-            <statement>
-              <p>
-                A set X is<em>finite</em>if there is a bijection X \to  \{1,...,n\} for some natural number n, or X is empty. In this case the number n is called the<em>cardinality</em>of X.  
-              </p>
+          <subsection xml:id="subsec-number-systems"><title>Number Systems</title>
 
-              <p>
-                A set X is<em>infinite</em>if X is not finite. A set X is<em>countable</em>if there is an injection X \hookrightarrow  \N .
-              </p>
-            </statement>
-          </definition>
+            <definition xml:id="def-natural-numbers"><title>Natural Numbers</title>
+              <statement>
+                <p>
+                  <m>\N</m>
+                </p>
+              </statement>
+            </definition>
 
-          <theorem xml:id="thm-cardinality-equivalencies">
-            <statement>
-              <p>
-                Let X be a set.  
-                <ol>
-                  <li>
-                    <p>
-                      The following are equivalent: 
-                      <ol>
-                        <li>
-                          <p>
-                            X is finite. 
-                          </p>
-                        </li>
+             <definition xml:id="def-integers"><title>Integers</title>
+              <statement>
+                <p>
+                  <m>\Z</m>
+                </p>
+              </statement>
+            </definition>
 
-                        <li>
-                          <p>
-                            There is an onto function \{1,...,n\} ↠ X for some n \in  \N. 
-                          </p>
-                        </li>
+            <definition xml:id="def-divides"><title>Divide</title>
+              <statement>
+                <p>
+                  
+                </p>
+              </statement>
+            </definition>
 
-                        <li>
-                          <p>
-                            There is a one-to-one function X \hookrightarrow  \{1,...,n\} for some n \in \N.  
-                          </p>
-                        </li>
-                      </ol>
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      The following are equivalent: 
-                      <ol>
-                        <li>
-                          <p>
-                            X is infinite. 
-                          </p>
-                        </li>
-
-                        <li>
-                          <p>
-                            There is an onto function X ↠ \N . 
-                          </p>
-                        </li>
-
-                        <li>
-                          <p>
-                            There is a one-to-one function \N  \hookrightarrow  X.  
-                          </p>
-                        </li>
-                      </ol>
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      The following are equivalent: 
-                      <ol>
-                        <li>
-                          <p>
-                            X is countable. 
-                          </p>
-                        </li>
-
-                        <li>
-                          <p>
-                            There is an onto function \N  \to  X. 
-                          </p>
-                        </li>
-
-                        <li>
-                          <p>
-                            There is an injection X \hookrightarrow  \N .
-                          </p>
-                        </li>
-                      </ol>
-                    </p>
-                  </li>
-                </ol>
+            <definition xml:id="def-prime-number"><title>Prime</title>
+              <statement>
+                <p>
+                  
+                </p>
+              </statement>
+            </definition>
             
-              </p>
-            </statement>
-          </theorem>
+            <definition xml:id="def-gcd-lcm"><title>GCD, LCM</title>
+              <statement>
+                <p>
+                  
+                </p>
+              </statement>
+            </definition>
+
+            <definition xml:id="def-rational-numbers"><title>Rational Numbers</title>
+              <statement>
+                <p>
+                  <m>\Q</m>
+                </p>
+              </statement>
+            </definition>
+
+            <definition xml:id="def-real-numbers"><title>Real Numbers</title>
+              <statement>
+                <p>
+                  <m>\R</m>
+                </p>
+              </statement>
+            </definition>
+
+            <definition xml:id="def-complex-numbers"><title>Complex Numbers</title>
+              <statement>
+                <p>
+                  <m>\C</m>
+                </p>
+              </statement>
+            </definition>
+
+            <definition xml:id="def-positive-sets">
+              <statement>
+                <p>
+                  
+                </p>
+              </statement>
+            </definition>
+            
+          </subsection>
           
-          <theorem xml:id="thm-cardinality-closures">
-            <statement>
-              <p>
-                <ol>
-                  <li>
-                    <p>
-                      The class of finite sets is closed under: subsets, intersections, finite unions, and finite products.  
-                    </p>
-                  </li>
+          <subsection xml:id="subsec-counting"><title>Counting</title>
 
-                  <li>
-                    <p>
-                      The class of countable sets is closed under: subsets, intersections, countable unions, and finite products.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-          </theorem>
+            <definition xml:id="def-binomial-coefficient"><title>Binomial Coefficient</title>
+              <statement>
+                <p>
+                  
+                </p>
+              </statement>
+            </definition>
 
-          <example>
-            <p></p>
-          </example>
+            <theorem xml:id="thm-binomial-theorem"><title>Binomial Theorem</title>
+            
+            
+              <statement>
+                <p>
+                  EMPTY
+                </p>
+              </statement>
+            </theorem>
+            
+          </subsection>
+
+          <subsection xml:id="subsec-cardinality"><title>Cardinality</title>
+          
+            <definition xml:id="def-cardinality">
+              <statement>
+                <p>
+                  A set <m>X</m> is<em>finite</em>if there is a bijection <m>X \to  \{1,...,n\}</m> for some natural number <m>n</m>, or <m>X</m> is empty. In this case the number <m>n</m> is called the<em>cardinality</em>of <m>X</m>.  
+                </p>
+
+                <p>
+                  A set <m>X</m> is<em>infinite</em>if <m>X</m> is not finite. A set <m>X</m> is<em>countable</em>if there is an injection <m>X \hookrightarrow  \N</m>.
+                </p>
+              </statement>
+            </definition>
+
+            <theorem xml:id="thm-cardinality-equivalencies">
+              <statement>
+                <p>
+                  Let <m>X</m> be a set.  
+                  <ol>
+                    <li>
+                      <p>
+                        The following are equivalent: 
+                        <ol>
+                          <li>
+                            <p>
+                              <m>X</m> is finite. 
+                            </p>
+                          </li>
+
+                          <li>
+                            <p>
+                              There is an onto function <m>\{1,...,n\} \onto X</m> for some <m>n \in  \N.</m> 
+                            </p>
+                          </li>
+
+                          <li>
+                            <p>
+                              There is a one-to-one function <m>X \hookrightarrow  \{1,...,n\}</m> for some <m>n \in \N</m>.  
+                            </p>
+                          </li>
+                        </ol>
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        The following are equivalent: 
+                        <ol>
+                          <li>
+                            <p>
+                              <m>X</m> is infinite. 
+                            </p>
+                          </li>
+
+                          <li>
+                            <p>
+                              There is an onto function <m>X \onto \N</m> . 
+                            </p>
+                          </li>
+
+                          <li>
+                            <p>
+                              There is a one-to-one function <m>\N  \hookrightarrow  X</m>.  
+                            </p>
+                          </li>
+                        </ol>
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        The following are equivalent: 
+                        <ol>
+                          <li>
+                            <p>
+                              <m>X</m> is countable. 
+                            </p>
+                          </li>
+
+                          <li>
+                            <p>
+                              There is an onto function <m>\N  \to  X</m>. 
+                            </p>
+                          </li>
+
+                          <li>
+                            <p>
+                              There is an injection <m>X \hookrightarrow  \N</m> .
+                            </p>
+                          </li>
+                        </ol>
+                      </p>
+                    </li>
+                  </ol>
+              
+                </p>
+              </statement>
+            </theorem>
+            
+            <theorem xml:id="thm-cardinality-closures">
+              <statement>
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        The class of finite sets is closed under: subsets, intersections, finite unions, and finite products.  
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        The class of countable sets is closed under: subsets, intersections, countable unions, and finite products.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+            </theorem>
+
+          </subsection>
                         
         </section>
 
-        <section xml:id="sec-matrices">
-          <title>Matrices and Vector Spaces</title>
+        <section xml:id="sec-matrices"><title>Matrices and Vector Spaces</title>
 
-          <p>hi</p>
+          <p>Coming soon!</p>
           
         </section>
 
       </appendix>
 
-      <appendix xml:id="app-notation">
-        <title>Notation</title>
+      <appendix xml:id="app-notation"><title>Notation</title>
 
         <notation-list/>
       </appendix>
 
-      <appendix xml:id="appendix-list-definitions">
-        <title>List of Definitions</title>
-      
-        <list-of elements="definition" divisions="chapter" empty="yes"/>
+      <appendix xml:id="appendix-list-definitions"><title>List of Definitions</title>
+        <list-of elements="definition" divisions="chapter appendix" empty="no"/>
       </appendix>
 
       <appendix xml:id="appendix-list-results">
@@ -28204,8 +27724,7 @@
         <list-of elements="theorem lemma proposition corollary" divisions="chapter" empty="yes"/>
       </appendix>
 
-      <appendix xml:id="appendix-biograhy">
-        <title>Biographies</title>
+      <appendix xml:id="appendix-biograhy"><title>Biographies</title>
 
         <paragraphs xml:id="bio-abel"><title>Niels Henrik Abel</title>
 

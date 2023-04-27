@@ -13,17 +13,26 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(R\)</span> be a non-zero commutative ring and let <span class="process-math">\(A \in \Mat_{m \times n}(R)\)</span> and <span class="process-math">\(B \in Mat_{m' \times n'}(R)\)</span> for some <span class="process-math">\(m,n,m',n' \geq 1\text{.}\)</span> Then <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> present isomorphic <span class="process-math">\(R\)</span>-modules if <span class="process-math">\(B\)</span> can be obtained from <span class="process-math">\(A\)</span> by any finite sequence of operations of the following form:</div>
-<ol class="decimal">
-<li><div class="para">an elementary row operation,</div></li>
-<li><div class="para">an elementary column operation,</div></li>
-<li><div class="para">deletion of the <span class="process-math">\(j\)</span>-th column and <span class="process-math">\(i\)</span>-th row of a matrix whose <span class="process-math">\(j\)</span>-th column is the vector <span class="process-math">\(e_i\text{,}\)</span>
-</div></li>
-<li><div class="para">the reverse of (3),</div></li>
-<li><div class="para">deletion of a column of all <span class="process-math">\(0\)</span>'s,</div></li>
-<li><div class="para">the reverse of (5).</div></li>
-</ol>
+<div class="para">Consider the matrix with entries in <span class="process-math">\(\Z\)</span>
 </div>
-<span class="incontext"><a href="sec-modpres.html#p-2357" class="internal">in-context</a></span>
+<div class="displaymath process-math">
+\begin{equation*}
+A=\begin{bmatrix}
+1 &amp; 6 &amp; 5 &amp; 2 \\
+2 &amp; 1 &amp; -1 &amp; 0 \\
+3 &amp; 0 &amp; 3 &amp; 0
+\end{bmatrix}.
+\end{equation*}
+</div>
+<div class="para">Do row and column operations to put <span class="process-math">\(A\)</span> into its Smith Normal Form:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+S=\begin{bmatrix}1 &amp; 0 &amp; 0 &amp; 0 \\0 &amp; 1 &amp; 0 &amp; 0 \\0 &amp; 0 &amp; 6 &amp; 0 \\\end{bmatrix}.
+\end{equation*}
+</div>
+<div class="para">Conclude that the module presented by <span class="process-math">\(A\)</span> is isomorphic to <span class="process-math">\(\Z/6\text{.}\)</span>
+</div>
+</div>
+<span class="incontext"><a href="sec-snf.html#p-2357" class="internal">in-context</a></span>
 </body>
 </html>
