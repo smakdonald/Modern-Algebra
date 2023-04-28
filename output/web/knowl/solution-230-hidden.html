@@ -10,41 +10,25 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like"><div class="para logical">
-<div class="para">Let <span class="process-math">\(L\)</span> be the splitting field over <span class="process-math">\(\Q\)</span> of the polynomial <span class="process-math">\(f(x)=x^3-7\)</span>
-</div>
-<ol class="lower-alpha">
-<li>
+<body class="ignore-math"><div class="solution solution-like">
 <div class="para logical">
-<div class="para">First, notice that <span class="process-math">\(f\)</span> is irreducible in <span class="process-math">\(\Q[x]\)</span> by Eisenstein's Criterion <span class="process-math">\((p=7)\text{.}\)</span> Let <span class="process-math">\(\z\)</span> denote a primitive third root of unity. The roots of <span class="process-math">\(f\)</span> are the following:</div>
-<ol class="lower-roman">
-<li><div class="para"><span class="process-math">\(\a_1=\sqrt[3]{7}\z\text{,}\)</span></div></li>
-<li><div class="para">
-<span class="process-math">\(\a_2=\sqrt[3]{7}\z^2\text{,}\)</span> and</div></li>
-<li><div class="para"><span class="process-math">\(\a_3=\sqrt[3]{7}\z^3=\sqrt[3]{7}\text{.}\)</span></div></li>
-</ol>
-<div class="para">As <span class="process-math">\(f\)</span> is irreducible and monic we see that it is the minimum polynomial of <span class="process-math">\(\a_3\)</span> over <span class="process-math">\(\Q\text{.}\)</span> Let <span class="process-math">\(E_1=\Q(\a_3)\)</span> and notice <span class="process-math">\([E_1:\Q]=3\text{.}\)</span>
-</div>
-</div>
-<div class="para">Recall that <span class="process-math">\(G=\Gal(L/\Q)\)</span> is isomorphic to a subgroup of <span class="process-math">\(S_3\text{.}\)</span> As <span class="process-math">\(E_1\sse \R\)</span> and <span class="process-math">\(\a_1\not\in\R\text{,}\)</span> we see another extension is needed, and that extension will have at least degree <span class="process-math">\(2\text{.}\)</span> Thus, due to size constraints, we see <span class="process-math">\(G\cong S_3\text{.}\)</span>
-</div>
-<div class="para">By the FTGT each Galois intermediate extension between <span class="process-math">\(\Q\)</span> and <span class="process-math">\(L\)</span> corresponds to a normal subgroup of <span class="process-math">\(G\text{,}\)</span> which are the normal subgroups of <span class="process-math">\(S_3\text{.}\)</span>
-</div>
-<div class="para logical">
-<div class="para">The elements of <span class="process-math">\(S_3\)</span> are the following:</div>
+<div class="para">Let <span class="process-math">\(f:G\to G/H\times G/K\)</span> defined such that <span class="process-math">\(f(g)=(gH, gK)\text{.}\)</span> Let <span class="process-math">\(x,y\in G\text{.}\)</span> Then</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\{(1), (12), (13), (23), (123), (132)\}
+f(xy)=(xyH,xyK)=(xHyH,xKyK)=(xH,yH)\cdot(xKyK)=f(x)f(y),
 \end{equation*}
 </div>
-<div class="para">The subgroup <span class="process-math">\(F=\langle(123)\rangle=\{(123),(132)\}\)</span> has index <span class="process-math">\(2\)</span> in <span class="process-math">\(G\)</span> and is thus normal. None of the order <span class="process-math">\(2\)</span> subgroups are normal in <span class="process-math">\(S_3\text{,}\)</span> so <span class="process-math">\(F\)</span> is the only strictly intermediate extension.</div>
+<div class="para">showing <span class="process-math">\(f\)</span> is a homomorphism.</div>
+</div> <div class="para">Let <span class="process-math">\((xH,yK)\in G/H\times G/K\text{.}\)</span> As <span class="process-math">\(x,y\in G=HK\text{,}\)</span> we have <span class="process-math">\(x=hk\)</span> and <span class="process-math">\(y=h'k'\)</span> with <span class="process-math">\(h,h'\in H\)</span> and <span class="process-math">\(k,k'\in K\text{.}\)</span> As <span class="process-math">\(k'\in K\)</span> and <span class="process-math">\(h\in H\)</span> we see <span class="process-math">\((xH,yK)=(kH,h'K)\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Consider <span class="process-math">\(g=kh'\in G\)</span> and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(g)=f(kh')=(kh'H,kh'K)=(kH,h'K)=(xH,yK),
+\end{equation*}
 </div>
-<div class="para">Recall <span class="process-math">\([E_1:\Q]=3\text{,}\)</span> meaning <span class="process-math">\(|\Gal(L/E_1)|=3\text{,}\)</span> so <span class="process-math">\(E\)</span> corresponds to a subgroup of order <span class="process-math">\(2\)</span> in <span class="process-math">\(G\text{,}\)</span> so its not Galois unfortunately. However, <span class="process-math">\(E_2=\Q(\z)\)</span> is a degree <span class="process-math">\(2\)</span> extension that is an intermediate field, as <span class="process-math">\(\z\)</span> is a root of the irreducible polynomial <span class="process-math">\(x^2+x+1\text{.}\)</span>
+<div class="para">making <span class="process-math">\(f\)</span> surjective as well.</div>
+</div> <div class="para">Let <span class="process-math">\(g\in H\cap K\text{.}\)</span> Then <span class="process-math">\(f(g)=(gH,gK)=(H,K)\text{,}\)</span> and so <span class="process-math">\(g\in\ker(f)\text{.}\)</span> Let <span class="process-math">\(g\in\ker(f)\text{.}\)</span> Then <span class="process-math">\(f(g)=(H,K)\text{,}\)</span> so <span class="process-math">\(gH=H\)</span> and <span class="process-math">\(gK=K\text{,}\)</span> placing <span class="process-math">\(g\in H\cap K\text{.}\)</span> Thus, by the First Isomorphism Theorem, we have <span class="process-math">\(G/(H\cap K)\cong G/H \times G/K.\)</span>
 </div>
-<div class="para">With all this in mind, notice: - <span class="process-math">\(\Q\)</span> is a splitting field of <span class="process-math">\(\Q\text{,}\)</span> and has the primitive generator by <span class="process-math">\(1\text{.}\)</span> - <span class="process-math">\(E_2\)</span> is our only strictly intermediate field, and has the primitive generator <span class="process-math">\(\z\)</span> - Finally, <span class="process-math">\(L\)</span> is Galois over <span class="process-math">\(\Q\text{,}\)</span> and has the primitive generator <span class="process-math">\(\z+\sqrt[3]{7}\text{.}\)</span>
-</div>
-</li>
-<li><div class="para"></div></li>
-</ol>
-</div></div></body>
+</div></body>
 </html>
