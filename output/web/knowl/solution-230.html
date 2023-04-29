@@ -12,29 +12,30 @@
 </head>
 <body class="ignore-math">
 <div class="solution solution-like">
-<h2 class="heading">
+<h3 class="heading">
 <span class="type">Solution</span><span class="space"> </span><span class="codenumber">F.1.1</span><span class="period">.</span>
-</h2>
-<div class="para logical">
-<div class="para">Let <span class="process-math">\(f:G\to G/H\times G/K\)</span> defined such that <span class="process-math">\(f(g)=(gH, gK)\text{.}\)</span> Let <span class="process-math">\(x,y\in G\text{.}\)</span> Then</div>
-<div class="displaymath process-math">
-\begin{equation*}
-f(xy)=(xyH,xyK)=(xHyH,xKyK)=(xH,yH)\cdot(xKyK)=f(x)f(y),
-\end{equation*}
-</div>
-<div class="para">showing <span class="process-math">\(f\)</span> is a homomorphism.</div>
-</div> <div class="para">Let <span class="process-math">\((xH,yK)\in G/H\times G/K\text{.}\)</span> As <span class="process-math">\(x,y\in G=HK\text{,}\)</span> we have <span class="process-math">\(x=hk\)</span> and <span class="process-math">\(y=h'k'\)</span> with <span class="process-math">\(h,h'\in H\)</span> and <span class="process-math">\(k,k'\in K\text{.}\)</span> As <span class="process-math">\(k'\in K\)</span> and <span class="process-math">\(h\in H\)</span> we see <span class="process-math">\((xH,yK)=(kH,h'K)\text{.}\)</span>
+</h3>
+<div class="para">Let <span class="process-math">\(G\)</span> be a finite <span class="process-math">\(p\)</span>-group for some prime <span class="process-math">\(p\)</span> and <span class="process-math">\(N\neq {1}\)</span> a normal subgroup of <span class="process-math">\(G\text{.}\)</span>
 </div> <div class="para logical">
-<div class="para">Consider <span class="process-math">\(g=kh'\in G\)</span> and</div>
-<div class="displaymath process-math">
+<div class="para">First, we show that the center of <span class="process-math">\(G\)</span> is nontrivial. Suppose by way of contradiction that <span class="process-math">\(Z(G)=\{e\}\text{.}\)</span> We examine the conjugacy classes of <span class="process-math">\(G\text{.}\)</span> From the <a href="" class="xref" data-knowl="./knowl/thm-class-eq.html" title="Theorem 5.41: Class Equation">Class Equation</a>, we know</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-class-eq.html ./knowl/thm-lagrange.html">
 \begin{equation*}
-f(g)=f(kh')=(kh'H,kh'K)=(kH,h'K)=(xH,yK),
+|G| = |Z(G)| + \sum_i^r |G : C_G(g_i)|.
 \end{equation*}
 </div>
-<div class="para">making <span class="process-math">\(f\)</span> surjective as well.</div>
-</div> <div class="para">Let <span class="process-math">\(g\in H\cap K\text{.}\)</span> Then <span class="process-math">\(f(g)=(gH,gK)=(H,K)\text{,}\)</span> and so <span class="process-math">\(g\in\ker(f)\text{.}\)</span> Let <span class="process-math">\(g\in\ker(f)\text{.}\)</span> Then <span class="process-math">\(f(g)=(H,K)\text{,}\)</span> so <span class="process-math">\(gH=H\)</span> and <span class="process-math">\(gK=K\text{,}\)</span> placing <span class="process-math">\(g\in H\cap K\text{.}\)</span> Thus, by the First Isomorphism Theorem, we have <span class="process-math">\(G/(H\cap K)\cong G/H \times G/K.\)</span>
+<div class="para">Note that <span class="process-math">\(|G|=p^n\)</span> for some <span class="process-math">\(n\in\N\text{,}\)</span> meaning that the only divisors of <span class="process-math">\(|G|\)</span> are powers of <span class="process-math">\(p\text{.}\)</span> In finite groups, each conjugacy class must [[Corollary – <span class="process-math">\(C_G(g_i) big G\)</span> for Finite Groups|divide]] the order of the group. By <a href="" class="xref" data-knowl="./knowl/thm-lagrange.html" title="Theorem 4.13: Lagrange's Theorem">Lagrange's Theorem</a>, <span class="process-math">\(|G : C_G(g_i)|=\frac{|G|}{|C_G(g_i)|}=\frac{p^n}{p^m}=p^k\text{,}\)</span> where <span class="process-math">\(m,k\in\N\text{.}\)</span> Since |Z(G)|=1, we see that <span class="process-math">\(\sum_i^r |G : C_G(g_i)|\bigg|p^n-1\text{,}\)</span> which is impossible given that <span class="process-math">\(p^{n-1} \not\mid p^n\text{.}\)</span> Thus <span class="process-math">\(Z(G)\neq\{e\}\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">As <span class="process-math">\(N\nsg G\)</span> it is a [[Mathematics/Modern Algebra/Results/Corollary – Disjoint Union of Conjugacy Classes|union]] of conjugacy classes of the elements it contains, one of which is <span class="process-math">\(e\text{.}\)</span> Assume by way of contradiction that <span class="process-math">\(N\cap Z(G)={e}\text{,}\)</span> meaning that <span class="process-math">\(e\)</span> is the only element in <span class="process-math">\(N\)</span> whose conjugacy class is a singleton. This yields</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-lagrange.html">
+\begin{equation*}
+|N| = 1+ \sum_i^r |G : C_G(g_i)|.
+\end{equation*}
+</div>
+<div class="para">However, by <a href="" class="xref" data-knowl="./knowl/thm-lagrange.html" title="Theorem 4.13: Lagrange's Theorem">Lagrange's Theorem</a> <span class="process-math">\(N\)</span> must also be a <span class="process-math">\(p-\)</span>group, and thus by an analogous element counting argument as above we see that there exists some <span class="process-math">\(x\in N\)</span> such that <span class="process-math">\(C_G(x)=\{x\}\text{,}\)</span> or that <span class="process-math">\(gxg\inv=x\)</span> for all <span class="process-math">\(g\in G\text{.}\)</span> Thankfully, this means that <span class="process-math">\(x\in Z(G)\text{,}\)</span> and thus we have <span class="process-math">\(Z(G)\cap N\neq 1\text{.}\)</span>
 </div>
 </div>
-<span class="incontext"><a href="appendix-quals.html#solution-230" class="internal">in-context</a></span>
+</div>
+<span class="incontext"><a href="section-65.html#solution-230" class="internal">in-context</a></span>
 </body>
 </html>

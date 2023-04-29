@@ -13,10 +13,17 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(\phi: R \to S\)</span> be a ring homomorphism. Any left <span class="process-math">\(S\)</span>-module <span class="process-math">\(M\)</span> may be regarded via <em class="emphasis">restriction of scalars</em> as a left <span class="process-math">\(R\)</span>-module with the following structure: - the rule for addition <span class="process-math">\(+\)</span> on <span class="process-math">\(M\)</span> is the same as in the original structure and - the rule for scaling by elements of <span class="process-math">\(R\)</span> is</div>
+<div class="para">For a non-negative integer <span class="process-math">\(n\text{,}\)</span> the “standard" free (left) <span class="process-math">\(R\)</span>-module of rank <span class="process-math">\(n\)</span> is the set</div>
 <div class="displaymath process-math">
 \begin{equation*}
-r \cdot m := \phi(r)m \text{ for any }r \in R \text{ and }m\in M.
+R^n=\left\{\begin{bmatrix} r_1\\ \vdots \\r_n \end{bmatrix} \mid r_i\in R, 1\leq i\leq n\right\}
+\end{equation*}
+</div>
+<div class="para">equipped with the operations</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{bmatrix} r_1\\ \vdots\\r_n \end{bmatrix} +\begin{bmatrix} r'_1\\ \vdots\\r'_n \end{bmatrix} =\begin{bmatrix} r_1+r'_1\\ \vdots\\r_n +r'_n\end{bmatrix} \text{ and }
+r\begin{bmatrix} r_1\\ \vdots\\r_n \end{bmatrix}=\begin{bmatrix} rr_1\\ \vdots\\ rr_n \end{bmatrix}. 
 \end{equation*}
 </div>
 </div>

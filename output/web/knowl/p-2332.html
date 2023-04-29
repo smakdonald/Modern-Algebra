@@ -11,19 +11,22 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(R\)</span> be a non-zero commutative ring and let <span class="process-math">\(A \in \Mat_{m \times n}(R)\)</span> and <span class="process-math">\(B \in Mat_{m' \times n'}(R)\)</span> for some <span class="process-math">\(m,n,m',n' \geq 1\text{.}\)</span> Then <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> present isomorphic <span class="process-math">\(R\)</span>-modules if <span class="process-math">\(B\)</span> can be obtained from <span class="process-math">\(A\)</span> by any finite sequence of operations of the following form:</div>
-<ol class="decimal">
-<li><div class="para">an elementary row operation,</div></li>
-<li><div class="para">an elementary column operation,</div></li>
-<li><div class="para">deletion of the <span class="process-math">\(j\)</span>-th column and <span class="process-math">\(i\)</span>-th row of a matrix whose <span class="process-math">\(j\)</span>-th column is the vector <span class="process-math">\(e_i\text{,}\)</span>
-</div></li>
-<li><div class="para">the reverse of (3),</div></li>
-<li><div class="para">deletion of a column of all <span class="process-math">\(0\)</span>'s,</div></li>
-<li><div class="para">the reverse of (5).</div></li>
-</ol>
+<div class="para">First note that if <span class="process-math">\(T\)</span> is a scalar of the identity matrix then its only eigenvalue is <span class="process-math">\(0\text{.}\)</span> Let <span class="process-math">\(\mu\)</span> be an eigenvalue of <span class="process-math">\(p(T)\text{.}\)</span> Thus <span class="process-math">\((p(T)-\mu I)v=0\)</span> for some <span class="process-math">\(v\text{.}\)</span> As <span class="process-math">\(\C\)</span> is algebraically closed we can factor the polynomial <span class="process-math">\(p(x)-\mu\)</span> into linear terms:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+p(x)-\mu=c(x-r_1)\dots(x-r_n)
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec-modpres.html#p-2332" class="internal">in-context</a></span>
+<div class="para">for roots <span class="process-math">\(r_i\text{.}\)</span> Note that <span class="process-math">\(p(r_i)-\mu=0\)</span> for all <span class="process-math">\(r_i\text{.}\)</span> Observe</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{align}(p(T)-\mu I)v&amp;=p(T)v-(\mu I)v\\&amp;=c(T-r_nI)\dots(T-r_1I)v\\&amp;=0.\end{align}
+\end{equation*}
+</div>
+<div class="para">Thus one of these terms must be sent to zero. Note that if <span class="process-math">\(T-r_iI=0\)</span> for any <span class="process-math">\(I\)</span> this would make <span class="process-math">\(T\)</span> a scaler of the identity matrix. Thus there exists some <span class="process-math">\(i\)</span> such that <span class="process-math">\((T-r_iI)v=0\text{,}\)</span> making <span class="process-math">\(r_i\)</span> an eigenvalue of <span class="process-math">\(T\text{.}\)</span> Notice that as <span class="process-math">\(p(r_i)-\mu=0\)</span> we have <span class="process-math">\(p(r_i)=\mu\text{,}\)</span> completing the proof.</div>
+</div>
+<span class="incontext"><a href="sec-operator.html#p-2332" class="internal">in-context</a></span>
 </body>
 </html>

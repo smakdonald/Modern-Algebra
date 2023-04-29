@@ -13,14 +13,16 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">To show (3) we need to first prove that for all <span class="process-math">\(\s \in \Aut(K/F)\text{,}\)</span> the function <span class="process-math">\(\phi(\s): R \to R\)</span> is a bijection. (The target of this function is indeed <span class="process-math">\(R\)</span> by (2).) Since <span class="process-math">\(R\)</span> is finite, we just need to show its one-to-one. This holds since <span class="process-math">\(\s\)</span> itself is one-to-one. (If <span class="process-math">\(\phi(\s)(\a) = \phi(\s)(\a')\)</span> for <span class="process-math">\(\a, \a' \in R\)</span> then <span class="process-math">\(\s(\a) = \s(\a')\)</span> and, since <span class="process-math">\(\s\)</span> is one-to-one, we have <span class="process-math">\(\a = \a'\text{.}\)</span>) Since the group laws of <span class="process-math">\(\Aut(K/F)\)</span> and <span class="process-math">\(\Perm(R)\)</span> are both given as function composition, it is clear that <span class="process-math">\(\phi\)</span> is a group homomorphism. In detail,</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\phi(\s \circ \tau)(\a) = \s(\tau(\a)) = (\phi(\s)\circ \phi(\tau))(\a)
-\end{equation*}
+<div class="para">Suppose <span class="process-math">\(F \subseteq K\)</span> is a field extension and <span class="process-math">\(f(x) = F[x]\text{.}\)</span> Let <span class="process-math">\(R = \{\a \in K \mid f(\a) = 0\}\text{,}\)</span> the set of roots of <span class="process-math">\(f\)</span> in <span class="process-math">\(K\text{.}\)</span>
 </div>
-<div class="para">for all <span class="process-math">\(\a\)</span> and so <span class="process-math">\(\phi(\s \circ \tau) = \phi(\s) \circ \phi(\tau)\text{.}\)</span>
-</div>
+<ol class="decimal">
+<li><div class="para">For any <span class="process-math">\(\a \in K\)</span> and <span class="process-math">\(\s \in \Aut(K/F)\text{,}\)</span> we have <span class="process-math">\(\s(f(\a)) = f(\s(\a))\text{.}\)</span>
+</div></li>
+<li><div class="para">If <span class="process-math">\(\a \in R\)</span> then <span class="process-math">\(\s(\a) \in R\)</span> for all <span class="process-math">\(\s \in \Aut(K/F)\text{.}\)</span>
+</div></li>
+<li><div class="para">The function <span class="process-math">\(\phi: \Aut(K/F) \to \Perm(R)\)</span> given by <span class="process-math">\(\phi(\s)(\a) = \s(\a)\)</span> for <span class="process-math">\(\a \in R\)</span> is a homomorphism of groups.</div></li>
+<li><div class="para">If <span class="process-math">\(K= F(R)\)</span> then <span class="process-math">\(\phi\)</span> is one-to-one. In particular, if <span class="process-math">\(K\)</span> is the splitting field over <span class="process-math">\(F\)</span> of <span class="process-math">\(f(x)\text{,}\)</span> then <span class="process-math">\(\Aut(L/K)\)</span> is isomorphic to a subgroup of <span class="process-math">\(S_n\)</span> where <span class="process-math">\(n\)</span> is the number of roots of <span class="process-math">\(f\)</span> in <span class="process-math">\(L\text{.}\)</span> (Note that <span class="process-math">\(n \leq \deg(f)\text{.}\)</span>)</div></li>
+</ol>
 </div>
 <span class="incontext"><a href="sec-galext.html#p-3273" class="internal">in-context</a></span>
 </body>
