@@ -12,7 +12,15 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Pick <span class="process-math">\(x \in R\)</span> with <span class="process-math">\(x \ne 0\)</span> and <span class="process-math">\(x \notin R^\times\text{.}\)</span> If <span class="process-math">\(x\)</span> is irreducible, there is nothing to prove. Otherwise, we have <span class="process-math">\(x = x_1 x_2\)</span> for non-units <span class="process-math">\(x_1, x_2\text{.}\)</span> If both <span class="process-math">\(x_1, x_2\)</span> are irreducible, the proof is complete. Otherwise, one or both of them factors non-trivially. We may express this conveniently by saying that <span class="process-math">\(x_1 = x_3x_4\)</span> and <span class="process-math">\(x_2 = x_5x_6\)</span> such that either <span class="process-math">\(x_3\)</span> and <span class="process-math">\(x_4\)</span> are both non-units or <span class="process-math">\(x_5\)</span> and <span class="process-math">\(x_6\)</span> are both non-units. (E.g., if <span class="process-math">\(x_2\)</span> is irreducible, we could set <span class="process-math">\(x_5 = x_2, x_6 = 1\text{.}\)</span>) Continuing in the this manner, we form a binary tree with <span class="process-math">\(x\)</span> at the top, <span class="process-math">\(x_1, x_2\)</span> one level down, <span class="process-math">\(x_3,x_4,x_5,x_6\)</span> one level below that, etc.</div>
+<div class="para logical">
+<div class="para">Consider and ascending chain of ideals of <span class="process-math">\(R\text{;}\)</span> it must have the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(a_1)\subseteq (a_2) \subseteq (a_3) \subseteq \cdots \subseteq (a_i)\subseteq (a_{i+1})\subseteq \cdots.
+\end{equation*}
+</div>
+<div class="para">Consider <span class="process-math">\(I=\bigcup_{i\geq 1} (a_i)\)</span> which is an ideal of <span class="process-math">\(R\)</span> by the argument given in Theorem . Since <span class="process-math">\(R\)</span> is a PID, <span class="process-math">\(I=(b)\)</span> for some <span class="process-math">\(b\in R\text{.}\)</span> Since <span class="process-math">\(b\in I=\bigcup_{i\geq 1} (a_i)\text{,}\)</span> we must have <span class="process-math">\(b\in (a_n)\)</span> for some <span class="process-math">\(n\text{.}\)</span> Then we see that <span class="process-math">\(I=(b)\subseteq (a_n)\subseteq (a_{n+1})\subseteq \cdots (a_j) \subseteq \cdots \subseteq I\)</span> for all <span class="process-math">\(j\geq n\text{,}\)</span> thus <span class="process-math">\(I=(a_j)\)</span> for <span class="process-math">\(j\geq n\)</span> and the chain stabilizes as desired.</div>
+</div>
 <span class="incontext"><a href="subsec-noeth.html#p-1639" class="internal">in-context</a></span>
 </body>
 </html>

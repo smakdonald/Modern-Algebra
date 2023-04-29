@@ -12,7 +12,16 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Let <span class="process-math">\(h:M\to N\)</span> and <span class="process-math">\(h':N\to M\)</span> be the <span class="process-math">\(R\)</span>-module homomorphisms induced by the bijection <span class="process-math">\(j:A\to B\)</span> and its inverse <span class="process-math">\(j^{-1}:B\to A\text{,}\)</span> respectively, using the UMP for free modules. We'll show that <span class="process-math">\(h\)</span> and <span class="process-math">\(h'\)</span> are mutual inverses. For this note that <span class="process-math">\(h'\circ h:N\to N\)</span> is an <span class="process-math">\(R\)</span>-module homomorphism and <span class="process-math">\((h'\circ h)(b)=h'(j(b))=j^{-1}(j(b))=b\)</span> for every <span class="process-math">\(b\in B\text{.}\)</span> Since the identity map <span class="process-math">\(\id_N\)</span> is also an <span class="process-math">\(R\)</span>-module homomorphism such that <span class="process-math">\(id_N(b)=b\)</span> for every <span class="process-math">\(b\in B\text{,}\)</span> by the uniqueness clause in the UMP, we have <span class="process-math">\(h'\circ h=\id_n\text{.}\)</span> Similarly <span class="process-math">\(h\circ h'=\id_M\text{.}\)</span>
+<div class="para logical">
+<div class="para">{} Let <span class="process-math">\(g:M\to N\)</span> be another <span class="process-math">\(R\)</span>-module homomorphism such that <span class="process-math">\(g(b)=g(b)\)</span> for each <span class="process-math">\(b \in B\text{.}\)</span> Given <span class="process-math">\(m \in M\)</span> we have <span class="process-math">\(m = \sum_{b \in B} r_b b\)</span> and hence</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g(m) = \sum_b g(r_b (b)  = \sum_b r_b g(b)  = 
+\sum_b r_b j(b) = f(m).
+\end{equation*}
+</div>
+<div class="para">and hence <span class="process-math">\(g = f\text{.}\)</span>
+</div>
 </div>
 <span class="incontext"><a href="sec-bases.html#p-2005" class="internal">in-context</a></span>
 </body>

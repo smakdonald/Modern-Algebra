@@ -460,7 +460,7 @@
             <definition xml:id="def-group"><title>Group</title>
               <statement>
                 <p>
-                  A <em>group</em><idx><h>group</h></idx> is a monoid <m>(G,\cdot)</m><idx><h><m>(G,\cdot)</m></h></idx> with the following additional property:
+                  A <em>group</em><idx><h>group</h></idx> is a monoid <m>(G,\cdot)</m> with the following additional property:
                   <ul>
                     <li><title>Inverses</title><idx><h>inverse</h></idx>
                       <p>
@@ -475,7 +475,7 @@
               </statement>
             </definition>
 
-            <remark><p> a group is a pair, we will usually refer to the group by only naming the underlying set, <m>G</m><idx><h><m>G</m></h></idx>.</p></remark>
+            <remark><p> a group is a pair, we will usually refer to the group by only naming the underlying set, <m>G</m>.</p></remark>
 
             <warning> <title>Additive and Multiplicative Notation</title>
               <p>When the operation of a group is <m>\cdot</m>, we refer to <m>G</m>as a <em>multiplicative group</em><idx><h>multiplicative group</h></idx>. If the operation <m>+</m> is used, then <m>G</m> is referred to as an <em>additive group</em><idx><h>additive group</h></idx></p>
@@ -508,13 +508,13 @@
                   <ol>
                     <li><title>Unique Identity</title>
                       <p xml:id="part-unique-group-identity">
-                        In a monoid <m>G</m>, the element <m>e</m><idx><h><m>e</m></h></idx> satisfying the Idenity axiom of <xref ref="def-monoid" /> is unique, and we thus refer to it as the <em>identity element</em><idx><h>identity element</h></idx> of <m>G</m>.
+                        In a monoid <m>G</m>, the element <m>e</m> satisfying the Idenity axiom of <xref ref="def-monoid" /> is unique, and we thus refer to it as the <em>identity element</em><idx><h>identity element</h></idx> of <m>G</m>.
                       </p>
                     </li>
       
                     <li><title>Unique Inverses</title>
                       <p xml:id="part-unique-group-inverse">
-                        In a group <m>G</m>, for each <m>x</m>, the element <m>y</m> satisfying the Inverses axiom of <xref ref="def-group" /> is unique, and we thus refer to it as the <em>the inverse</em> of <m>x</m> and we will henceforth denote it by <m>x^{-1}</m><idx><h><m>x\inv</m></h></idx>.
+                        In a group <m>G</m>, for each <m>x</m>, the element <m>y</m> satisfying the Inverses axiom of <xref ref="def-group" /> is unique, and we thus refer to it as the <em>the inverse</em> of <m>x</m> and we will henceforth denote it by <m>x^{-1}</m>.
                       </p>
                     </li>
       
@@ -588,14 +588,14 @@
                   <ol>
                     <li xml:id="trivial-group"> <title>Trivial Subgroup</title>
                       <p>
-                        The <term>trivial subgroup</term><idx><h>trivial group</h></idx> is the group with a single element <m>\{e\}</m><idx><h><m>\{e\}</m></h></idx>
+                        The <term>trivial subgroup</term><idx><h>trivial group</h></idx> is the group with a single element <m>\{e\}</m>.
                         <notation><usage><m>\{e\}</m></usage><description>the trivial group: e.g. the group containing only an identity element</description></notation>          
                       </p>
                     </li>
       
                     <li>
                       <p>
-                        <m>(\Z,+), (\Q,+), (\R,+),</m> and <m>(\C,+)</m><idx><h><m>\(\Z,+)</m></h></idx><idx><h><m>(\Q,+)</m></h></idx><idx><h><m>(\R,+)</m></h></idx><idx><h><m>(\C,+)</m></h></idx> each form an abelian group, where <m>+</m> denotes traditional addition.
+                        <m>(\Z,+), (\Q,+), (\R,+),</m> and <m>(\C,+)</m> each form an abelian group, where <m>+</m> denotes traditional addition.
                       </p>
                     </li>
       
@@ -611,20 +611,20 @@
                         <me>
                           \operatorname{GL}_n(\C)=\{ \text{invertible } n \times n \;\text{matrices with entries in}\; \C\}.
                         </me> 
-                        By invertible I mean those matrices that have two-sided inverses, but it turns out that if an <m>n \times n</m> matrix has a left inverse then it it is automatically a right inverse too, and vice versa. Then <m>\operatorname{GL}_n(\C)</m><idx><h><m>\GL_n(\C)</m></h></idx> is a non-abelian group under matrix multiplication, known as the <em>general linear group</em><idx><h>general linear group</h></idx>.<fn>In general this is true for any field <m>F</m>, whatever those are.</fn>
+                        By invertible I mean those matrices that have two-sided inverses, but it turns out that if an <m>n \times n</m> matrix has a left inverse then it it is automatically a right inverse too, and vice versa. Then <m>\operatorname{GL}_n(\C)</m> is a non-abelian group under matrix multiplication, known as the <em>general linear group</em><idx><h>general linear group</h></idx>.<fn>In general this is true for any field <m>F</m>, whatever those are.</fn>
                         <notation><usage><m>\GL</m></usage><description>General linear group</description></notation> 
                       </p>
                     </li>
       
                     <li>
                       <p>
-                        For any <m>n</m>, let <m>\Z/n</m> denote the <xref text="title" ref="def-integers-modulo"/>. Then <m>(\Z/n,+)</m><idx><h><m>\(\Z/n,+)</m></h></idx> forms an abelian group where <m>+</m> denotes addition modulo <m>n</m>.
+                        For any <m>n</m>, let <m>\Z/n</m> denote the <xref text="title" ref="def-integers-modulo"/>. Then <m>(\Z/n,+)</m><idx><h><m>(\Z/n,+)</m></h></idx> forms an abelian group where <m>+</m> denotes addition modulo <m>n</m>.
                       </p>
                     </li>
 
                     <li>
                       <p>
-                        The subset <m>L=\{1,-1,i,-i\}</m><idx><h><m>L</m></h></idx> of the complex numbers forms an abelian group under multiplication.
+                        The subset <m>L=\{1,-1,i,-i\}</m> of the complex numbers forms an abelian group under multiplication.
                       </p>
                     </li>
                   </ol>
@@ -633,7 +633,7 @@
 
             <exercise xml:id="exe-opposite-group"><title>Opposite Day</title>
               <p>
-                Let <m>G</m> be a multiplicative group, and define <m>G^{op}</m><idx><h><m>G^{op}</m></h></idx><idx><h>opposite group</h></idx> be the set <m>G</m> equipped with the operation <m>*</m>, where <m>a*b=ba</m>. Then <m>G^{op}</m> is a group.
+                Let <m>G</m> be a multiplicative group, and define <m>G^{op}</m><idx><h>opposite group</h></idx> be the set <m>G</m> equipped with the operation <m>*</m>, where <m>a*b=ba</m>. Then <m>G^{op}</m> is a group.
               </p>
             </exercise>
 
@@ -681,19 +681,19 @@
                     <ol>
                       <li>
                         <p>
-                          The subset <m>\Z^\times=\{-1,1\}</m> of <m>\Z</m>.<idx><h><m>\Z^\times</m></h></idx>
+                          The subset <m>\Z^\times=\{-1,1\}</m> of <m>\Z</m>.
                         </p>
                       </li>
                       
                       <li>
                         <p>
-                          <m>\Q^\times=\Q\setminus\{0\}</m><idx><h><m>\Q^\times</m></h></idx>, <m>\R^\times=\R\setminus\{0\}</m><idx><h><m>\R^\times</m></h></idx>, and <m>\C^\times=\C\setminus\{0\}</m><idx><h><m>\C^\times</m></h></idx>.
+                          <m>\Q^\times=\Q\setminus\{0\}</m>, <m>\R^\times=\R\setminus\{0\}</m>, and <m>\C^\times=\C\setminus\{0\}</m>.
                         </p>
                       </li>
 
                       <li>
                         <p>
-                          For each <m>n\in\N</m>, the subset <m>\Z/n^\times=\{k\in\Z/n|\gcd(k,n)=1\}</m><idx><h><m>\Z/n^\times</m></h></idx> of <m>\Z/n</m>.
+                          For each <m>n\in\N</m>, the subset <m>\Z/n^\times=\{k\in\Z/n|\gcd(k,n)=1\}</m> of <m>\Z/n</m>.
                         </p>
                       </li>
                     </ol>
@@ -863,14 +863,14 @@
                   <ol>
                     <li>
                       <p>
-                        In a group <m>G</m>, the <em>order of an element</em> <m>x</m> is the least positive integer <m>n</m> such that <m>x^n = e</m>. If no such <m>n</m> exists, we say <m>x</m> has infinite order. We write <m>|x|</m> for the order of <m>x</m>.
+                        In a group <m>G</m>, the <em>order of an element</em><idx><h>order of a group element</h></idx> <m>x</m> is the least positive integer <m>n</m> such that <m>x^n = e</m>. If no such <m>n</m> exists, we say <m>x</m> has infinite order. We write <m>|x|</m> for the order of <m>x</m>.
                         <notation><usage><m>|x|</m></usage><description>Order of an element <m>x</m></description></notation> 
                       </p>
                     </li>
       
                     <li>
                       <p>
-                        The <em>order of a group</em> <m>G</m> is the <xref text="title" ref="def-cardinality"/> of the set <m>G</m>, denoted <m>|G|</m>.
+                        The <em>order of a group</em><idx><h>order of a group</h></idx> <m>G</m> is the <xref text="title" ref="def-cardinality"/> of the set <m>G</m>, denoted <m>|G|</m>.
                         <notation><usage><m>|G|</m></usage><description>Order of a group <m>G</m></description></notation> 
                       </p>
                     </li>
@@ -879,7 +879,7 @@
               </statement>
             </definition>
 
-            <remark><p>Some authors use the notation <m>|G|</m> or <m>o(G)</m> to refer to the order of a group. We won't name names, but they know who they are. (See: <xref ref="mark"/>)</p></remark>
+            <remark><p>Some authors use the notation <m>\#G</m> or <m>o(G)</m> to refer to the order of a group. We won't name names, but they know who they are. (See: <xref ref="mark"/>)</p></remark>
       
             <example xml:id="ex-order"><title>Order Examples</title>
               <p>
@@ -921,7 +921,7 @@
               </statement>
         
               <solution>
-                <p>Let <m>G</m> be a group` with <m>4</m> elements, and suppose there are elements <m>a,b\in G</m> such that <m>ab\neq ba</m> for some elements <m>a, b\in G</m>. Since <m>ab \neq ba</m>, we must have <m>a \neq b</m>, <m>a \neq e</m>, and <m>b\neq e</m>. Since <m>G</m> has only <m>4</m> elements and <m>ab \neq ba</m>, either <m>ab \in \{e, a, b\}</m> or <m>ba \in\{e, a, b\}</m>. Without loss, say the former occurs. But <m>ab = e</m> implies <m>b=a\inv</m> and we know <m>a\inv</m> commutes with <m>a</m>, and hence this is not possible. If <m>ab = a</m>, then <m>b = e</m> and if <m>ab = b</m> then <m>a = 1</m>, both of which are impossible. Since <m>a, b</m> were arbitrary, <m>G</m> must be abelian.</p>
+                <p>Let <m>G</m> be a group with <m>4</m> elements, and suppose there are elements <m>a,b\in G</m> such that <m>ab\neq ba</m> for some elements <m>a, b\in G</m>. Since <m>ab \neq ba</m>, we must have <m>a \neq b</m>, <m>a \neq e</m>, and <m>b\neq e</m>. Since <m>G</m> has only <m>4</m> elements and <m>ab \neq ba</m>, either <m>ab \in \{e, a, b\}</m> or <m>ba \in\{e, a, b\}</m>. Without loss, say the former occurs. But <m>ab = e</m> implies <m>b=a\inv</m> and we know <m>a\inv</m> commutes with <m>a</m>, and hence this is not possible. If <m>ab = a</m>, then <m>b = e</m> and if <m>ab = b</m> then <m>a = 1</m>, both of which are impossible. Since <m>a, b</m> were arbitrary, <m>G</m> must be abelian.</p>
               </solution>
             </exercise>
       
@@ -1068,7 +1068,7 @@
       
         <section xml:id="sec-common-groups"><title>Common Groups</title>
 
-          <introduction><p>We examine two of the most commonly encountered groups in all of algebra: the dihedral group and the symmetric group ... the quaternions are also here.</p></introduction>
+          <introduction><p>We examine two of the most commonly encountered groups in all of algebra: the dihedral group and the symmetric group...the quaternions are also here.</p></introduction>
       
           <subsection xml:id="subsec-d2n"><title>Dihedral Groups</title> 
 
@@ -1079,7 +1079,7 @@
             <definition xml:id="def-iso-and-sym"><title>Isometry and Symmetry</title>
               <statement>
                 <p>
-                  For any integer <m>n \geq 3</m>, let <m>P_n</m> denote a regular <m>n</m>-gon. An <em>isometry</em> of the plane is a function <m>f: {\mathbb{R}}^2 \to {\mathbb{R}}^2</m> that is a bijection and preserves the Euclidean distance <m>(d(f(A),f(B))=d(A,B)</m> for any <m>A,B\in {\mathbb{R}}^2</m>). A <em>symmetry</em> of <m>P_n</m> is an isometry that maps <m>P_n</m> to itself.
+                  For any integer <m>n \geq 3</m>, let <m>P_n</m><idx><h><m>P_n</m></h></idx> denote a regular <m>n</m>-gon<idx><h>regular <m>n</m>-gon</h></idx>. An <em>isometry</em><idx><h>isometry</h></idx> of the plane is a function <m>f: {\mathbb{R}}^2 \to {\mathbb{R}}^2</m> that is a bijection and preserves the Euclidean distance <m>(d(f(A),f(B))=d(A,B)</m> for any <m>A,B\in {\mathbb{R}}^2</m>). A <em>symmetry</em><idx><h>symmetry</h></idx> of <m>P_n</m> is an isometry that maps <m>P_n</m> to itself.
                 </p>
               </statement>
             </definition>
@@ -1095,25 +1095,25 @@
             <definition xml:id="def-d2n"><title>Dihedral Group</title>
               <statement>
                 <p>
-                  The <em>dihedral group</em> <m>D_{2n}</m> is the set of symmetries of the regular <m>n</m>-gon <m>P_n</m> equipped with the binary operation given by composition.
+                  The <em>dihedral group</em> <m>D_{2n}</m><idx><h>dihedral group</h></idx><idx><h><m>D_{2n}</m></h></idx> is the set of symmetries of the regular <m>n</m>-gon <m>P_n</m> equipped with the binary operation given by composition.
                   <notation><usage><m>D_{2n}</m></usage><description>Dihedral Group</description></notation> 
                 </p>
               </statement>
             </definition>
 
-            <example xml:id="ex-d2n-elements">
+            <example xml:id="ex-d2n-elements"><title>Rotations and Reflections</title>
               <p>
                 Assume that the regular <m>n</m>-gon <m>P_n</m> is drawn in the plane with its center at the origin and one vertex on the <m>x</m> axis.        
               <ol>
                 <li>
                   <p>
-                    If <m>r</m> denotes rotation about the origin by <m>\frac{2\pi}{n}</m> radians counter-clockwise, then <m>r \in D_{2n}</m>. It's inverse is rotation by <m>\frac{2\pi}{n}</m> clock-wise. 
+                    If <m>r</m><idx><h>rotation</h></idx> denotes rotation about the origin by <m>\frac{2\pi}{n}</m> radians counter-clockwise, then <m>r \in D_{2n}</m>. It's inverse is rotation by <m>\frac{2\pi}{n}</m> clock-wise. 
                   </p>
                 </li>
 
                 <li>
                   <p>
-                    For another example, for any line of symmetry of <m>P_n</m>, reflection about that line gives an element of <m>D_{2n}</m>. By our convention for how to draw <m>P_n</m>, the <m>x</m>-axis is a line of symmetry for <m>P_n</m>, and we let <m>s</m> denote reflection about the <m>x</m>-axis.
+                    For another example, for any line of symmetry of <m>P_n</m>, reflection about that line gives an element of <m>D_{2n}</m>. By our convention for how to draw <m>P_n</m>, the <m>x</m>-axis is a line of symmetry for <m>P_n</m>, and we let <m>s</m><idx><h>reflection</h></idx> denote reflection about the <m>x</m>-axis.
                   </p>
                 </li>
               </ol>
@@ -1170,7 +1170,7 @@
             <definition xml:id="def-permutation"><title>Permutation</title>
               <statement>
                 <p>
-                  A <em>permutation</em> of a set <m>X</m> is a bijective function <m>\sigma:X\to X</m>. The set of all permutations of a set <m>X</m> is denoted <m>\Perm(X)</m>.
+                  A <em>permutation</em><idx><h>permutation</h></idx> of a set <m>X</m> is a bijective function <m>\sigma:X\to X</m>. The set of all permutations of a set <m>X</m> is denoted <m>\Perm(X)</m><idx><h>permutation group</h></idx>.
                 </p>
               </statement>
             </definition>
@@ -1178,7 +1178,7 @@
             <definition xml:id="def-symmetric-group"><title>Symmetric Group <m>S_n</m></title>
               <statement>
                 <p>
-                  For any <m>n\in\N</m>, the <em>symmetric group</em> is the set <m>S_n=\Perm(\{1,\dots,n\})</m> equipped with the composition of functions as its binary operation.
+                  For any <m>n\in\N</m>, the <em>symmetric group</em><idx><h>symmetric group</h></idx> is the set <m>S_n=\Perm(\{1,\dots,n\})</m> equipped with the composition of functions as its binary operation.
                   <notation><usage><m>S_n</m></usage><description>Symmetric group</description></notation> 
                 </p>
               </statement>
@@ -1197,12 +1197,12 @@
                   <me>
                     \sigma(i_1)=i_2, \sigma(i_2)=i_3, \dots, \sigma(i_{m-1})=i_m, \sigma(i_m)=i_1 \text{ and } \sigma(k)=k \text{ for } k\in[n] \setminus \{i_1, \dots, i_m\}.
                   </me> 
-                  Such a permutation is called a <em>cycle</em> or an <m>m</m><em>-cycle</em> if we want to emphasize its length. A <m>2</m>-cycle is often called a <em>transposition</em>.
+                  Such a permutation is called a <em>cycle</em><idx><h>cycle</h></idx> or an <m>m</m><em>-cycle</em><idx><h><m>m</m>-cycle</h></idx> if we want to emphasize its length. A <m>2</m>-cycle is often called a <em>transposition</em><idx><h>transposition</h></idx>.
                 </p>
               </statement>
             </definition>
 
-            <example xml:id="ex-cycle">
+            <example xml:id="ex-cycle"><title>Cycle Example</title>
               <p>
                 For example, <m>(1 \, 3 \, 7)</m>, regarded as an element of <m>S_{13}</m> sends <m>1</m> to <m>3</m>, <m>3</m> to <m>7</m> and <m>7</m> to <m>1</m>, and it fixes <m>2,4,5,7,8,9,10,11,12,13</m>. (Note that the value of <m>n</m> in cycle notation is sometime ambiguous.)
               </p>
@@ -1216,7 +1216,7 @@
 
             <remark><p>Note that distinct lists of integers represent the same cycle if they are cyclical rearrangements of each other, e.g., <m>(1 \, 2 \, 3) = (2 \, 3 \, 1)</m>. However, <m>(1 \, 2 \, 3) \neq (2 \, 1 \, 3)</m>.</p></remark>
 
-             <example xml:id="exe-composing-cycles"><title>Composing Cycle</title>
+            <example xml:id="exe-composing-cycles"><title>Composing Cycle</title>
               <p>
                 We compose cycles the same way we compose functions. So, for example 
                 <me>
@@ -1249,7 +1249,7 @@
             <proposition xml:id="prop-disjoint-cycles-commute"><title>Disjoint Commutes</title>
               <statement>
                 <p>
-                  Disjoint cycles commute, that is, if <m>i_1 , i_2 \, \dots i_m, j_1 , j_2 \, \dots j_k\in [n]</m>, 
+                  Disjoint cycles commute,<idx><h>disjoint cycles</h></idx> that is, if <m>i_1 , i_2 \, \dots i_m, j_1 , j_2 \, \dots j_k\in [n]</m>, 
                 <me>
                   \sigma_1=(i_1 \, i_2 \, \dots i_m), \quad \sigma_2=(j_1 \, j_2 \, \dots j_k)
                 </me> 
@@ -1268,7 +1268,7 @@
                   <ol>
                     <li>
                       <p>
-                        Each <m>\sigma\in S_n</m> can be written as a product (composition) of disjoint cycles, and such a factorization is unique up to the ordering of the factors.
+                        Each <m>\sigma\in S_n</m> can be written as a product (composition) of disjoint cycles<idx><h>cycle decompostion</h></idx>, and such a factorization is unique up to the ordering of the factors.
                       </p>
                     </li>
       
@@ -1288,7 +1288,7 @@
 
             <definition xml:id="def-even-odd-permutation"><title>Even and Odd Permutaitons</title>
               <statement>
-                <p>A permutation <m>\s</m> is <em>even</em> is if is the product of an even number of transpositions, otherwise it is <em>odd</em>.</p>
+                <p>A permutation <m>\s</m> is <em>even</em><idx><h>even permutation</h></idx> is if is the product of an even number of transpositions, otherwise it is <em>odd</em><idx><h>odd permutation</h></idx>.</p>
               </statement>
             </definition>
 
@@ -1327,7 +1327,7 @@
             <definition xml:id="def-alternating-group"><title>Alternating Group</title>
                 <statement>
                   <p>
-                    The <em>alternating group</em> <m>A_n</m> is the subset of all even cycles of <m>S_n</m>.
+                    The <em>alternating group</em><idx><h>alternating group</h></idx> <m>A_n</m> is the subset of all even cycles of <m>S_n</m>.
                     <notation><usage><m>A_n</m></usage><description>the alternating group on <m>n</m> elements </description></notation>          
                   </p>
                 </statement>
@@ -1343,8 +1343,7 @@
       
           </subsection>
       
-          <subsection xml:id="subsec-quat">
-            <title>The Quaternions</title>
+          <subsection xml:id="subsec-quat"><title>The Quaternions</title>
 
             <blockquote><p><q>Quaternions...though beautifully ingenious, have been an unmixed evil to those who have touched them in any way.</q></p><attribution>William Thomson</attribution></blockquote>
       
@@ -1353,7 +1352,7 @@
             <definition xml:id="def-quaternions"><title>Quaternions</title>
               <statement>
                 <p>
-                  The <em>quaternion group</em> <m>Q_8</m> is a set with <m>8</m> elements 
+                  The <em>quaternion group</em><idx><h>quaternion group</h></idx> <m>Q_8</m> is a set with <m>8</m> elements 
                   <me>
                     Q_8=\{ 1, -1, i, -i, j, -j, k, -k \}
                   </me> 
@@ -1370,8 +1369,7 @@
       
             <p>The quaternion group arises in the study of rotations in three dimensions. It has important applications in computer graphics and computer vision, as well as in physics and algebra.</p>
 
-            <exercise xml:id="exe-heinous-commutes">
-              <title>Heinous Commutes</title>
+            <exercise xml:id="exe-heinous-commutes"><title>Heinous Commutes</title>
               <p>
                 Provide explicit examples to show <m>D_{2n}, S_n</m>, and <m>Q_8</m> are <em>not</em> abelian groups.
               </p>
@@ -1396,7 +1394,7 @@
             <definition xml:id="def-ghom"><title>Group Homomorphism</title>
               <statement>
                 <p>
-                  If <m>G</m> and <m>H</m> are groups, a <em>homomorphism</em> from <m>G</m> is <m>H</m> is a function <m>f: G \to H</m> such that <m>f(x \cdot_G y) = f(x) \cdot_H f(y)</m>, where <m>\cdot_G</m> and <m>\cdot_H</m> denote the multiplication rules for <m>G</m> and <m>H</m>, respectively.
+                  If <m>G</m> and <m>H</m> are groups, a <em>homomorphism</em><idx><h>group homomorphism</h></idx> from <m>G</m> is <m>H</m> is a function <m>\varphi: G \to H</m> such that <m>\varphi(x \cdot_G y) = f(x) \cdot_H f(y)</m>, where <m>\cdot_G</m> and <m>\cdot_H</m> denote the multiplication rules for <m>G</m> and <m>H</m>, respectively.
                   <notation><usage><m>\varphi,\phi</m></usage><description>the common symbols we use to denote homomorphisms <m>\cdot</m></description></notation>          
                 </p>
               </statement>
@@ -1409,7 +1407,7 @@
                 <ol>
                   <li>
                     <p>
-                      The identity map is a group homomorphism for any group <m>G</m>, this is known as the <em>trivial homomorphism</em>.
+                      The identity map is a group homomorphism for any group <m>G</m>, this is known as the <em>trivial homomorphism</em><idx><h>trivial homomorphism</h></idx>.
                     </p>
                   </li>
 
@@ -1421,25 +1419,25 @@
 
                   <li>
                     <p>
-                      The <em>sign homomorphism</em> <m>\sign: S_n\to \{-1,1\}</m> that sends even permuations to <m>1</m> and odd permutations to <m>-1</m> is a homomorphism.
+                      The <em>sign homomorphism</em><idx><h>sign homomorphism</h></idx> <m>\sign: S_n\to \{-1,1\}</m> that sends even permuations to <m>1</m> and odd permutations to <m>-1</m> is a homomorphism.
                     </p>
                   </li>
 
                   <li>
                     <p>
-                      The exponential map <m>\exp: ({\mathbb{R}}, +) \to (\mathbb{R}^\times, \cdot)</m> is a homomorphism.
+                      The exponential map<idx><h>exponential map</h></idx> <m>\exp: ({\mathbb{R}}, +) \to (\mathbb{R}^\times, \cdot)</m> is a homomorphism.
                     </p>
                   </li>
       
                   <li>
                     <p>
-                      The natural log map <m>\ln: (\mathbb{R}^\times, \cdot) \to ({\mathbb{R}}, +)</m> is a homomorphism.
+                      The natural log map <idx><h>natural log math</h></idx> <m>\ln: (\mathbb{R}^\times, \cdot) \to ({\mathbb{R}}, +)</m> is a homomorphism.
                     </p>
                   </li>
       
                   <li>
                     <p>
-                      For any positive integer <m>n</m> the map determinant map <m>\det: \operatorname{GL}_n(\C) \to (\C^\times, \cdot)</m> is a group homomorphism.
+                      For any positive integer <m>n</m> the map determinant map <idx><h>determinant map</h></idx> <m>\det: \operatorname{GL}_n(\C) \to (\C^\times, \cdot)</m> is a group homomorphism.
                     </p>
                   </li>
                 </ol>
@@ -1602,7 +1600,7 @@
             <definition xml:id="def-group-kernel"><title>Kernel</title>
               <statement>
                 <p>
-                  Let <m>\varphi: G \to H</m> is a homomorphism of groups. The <em>kernel</em> of <m>\varphi</m> is the set 
+                  Let <m>\varphi: G \to H</m> is a homomorphism of groups. The <em>kernel</em><idx><h>kernel of a group homomorphism</h></idx> of <m>\varphi</m> is the set 
                   <me>
                     \ker(\varphi) := \{g\in G \mid \varphi(g)=e_H\}.
                   </me>
@@ -3362,7 +3360,31 @@
           <p>Normal subgroups are our next example of something that is <q>almost</q> abelian.</p>
 
           <exercise xml:id="exe-anything-but-normal"><title>Anything but Normal</title>
-            <p>Come up with a better name for normal subgroups than 'normal subgroup'. Give it some oomph. Make it <em>mean</em> something.<fn>This author has recently become personally partial to the term <em>semiabelian </em>. Yes, its more letters, but so are semisimple, semidirect, and semicircle. Imagine if we called all those things normal too! It would be a nightmare. And we would deserve it for our hubris. </fn></p>
+            <statement>
+              <p>Come up with a better name for normal subgroups than 'normal subgroup'. Give it some oomph. Make it <em>mean</em> something.</p>
+            </statement>
+
+            <hint>
+              <p>
+                Here are some options the author has recently become partial to:
+                <ol>
+                  <li>
+                    <p>
+                      <em>Semiabelian </em>: Yes, its more letters, but so are semigroup, semisimple, semidirect, and semicircle. Imagine if we called all those things normal too! It would be a nightmare. And we would deserve it for our hubris.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <em>Ideal subgroup</em>: Look, its shorter! Normal subgroups and ideals parallel ideas in group and ring theory, and relabeling normal groups in this way would cement these similarities.
+                    </p>
+                  </li>
+                </ol>
+                This author has recently become personally partial to the term 
+
+              </p>
+            </hint>
+            
           </exercise>
         
           <theorem xml:id="thm-equivdef-normal"><title>Equivalent Normal Definitions</title>
@@ -8241,7 +8263,7 @@
                   </p>
                 </exercise>
     
-                <definition xml:id="def-idempotent">
+                <definition xml:id="def-idempotent"><title>Idempotent</title>
                   <statement><p>
                       Let <m>R</m> be a ring with identity. An element <m>e\in R</m> is called <em>idempotent</em> if <m>e^2=e</m>.
                   </p></statement>
@@ -12335,8 +12357,7 @@
      *****************
       -->
 
-      <chapter xml:id="ch-mod">
-        <title>Modules</title>
+      <chapter xml:id="ch-mod"><title>Modules</title>
 
         <!--
        ***************
@@ -12344,10 +12365,9 @@
        ****************
         -->
 
-        <section xml:id="sec-defmod">
-          <title>Module Basics</title>
+        <section xml:id="sec-defmod"><title>Module Basics</title>
 
-            <definition xml:id="def-module">
+            <definition xml:id="def-module"><title>Module</title>
               <statement>
                 <p>
                   Let <m>R</m> be a ring (with <m>1</m>). A left <m>R</m>-module is an abelian group <m>(M,+)</m> together with a pairing <m>R \times M \to M</m>, written <m>(r,m) \mapsto rm</m>, such that for all <m>r,s \in R</m> and <m>m,n \in M</m> 
@@ -12386,7 +12406,7 @@
               </p>
             </remark>
 
-            <proposition xml:id="prop-opposite-ring-module">
+            <proposition xml:id="prop-opposite-ring-module"><title>Module and Opposite Ring</title>
               <statement>
                 <p>
                   Given a ring <m>R</m>, let <m>R^{op}</m> denote the “opposite ring''. This is the same underlying set as <m>R</m> equipped with the same rule for <m>+</m> as <m>R</m>, but with multiplication rule (which I will write here as <m>\cdot_{op}</m>) redefined to be <m>a \cdot_{op} b := b a</m> (where <m>ba</m> refers to the original multiplication rule for <m>R</m>). Then <m>R^{op}</m> is also a ring — you don't need to prove that.
@@ -12398,8 +12418,7 @@
               </statement>
             </proposition>
 
-            <lemma xml:id="lem-module-arithmetic">
-              <title>Arithmetic in Modules</title>
+            <lemma xml:id="lem-module-arithmetic"><title>Arithmetic in Modules</title>
               <statement>
                 <p>
                   Let <m>R</m> be a ring and let <m>M</m> be a (left) <m>R</m>-module. Then for all <m>r \in R</m> and <m>m \in M</m> we have 
@@ -12453,7 +12472,7 @@
               </proof>
             </lemma>
       
-            <example xml:id="ex-modules">
+            <example xml:id="ex-modules"><title>Examples of Modules</title>
                 <p><ol>
                   <li>
                   For any ring <m>R</m>, the trivial module is <m>0=\{0\}</m> with <m>r0=0</m> for any <m>r\in R</m>.
@@ -12474,7 +12493,7 @@
       
             </example>
       
-            <example xml:id="ex-standard-free-module">
+            <example xml:id="ex-standard-free-module"><title>Standard Free Module</title>
           
               <p>
                 For a non-negative integer <m>n</m>, the “standard" free (left) <m>R</m>-module of rank <m>n</m> is the set 
@@ -12490,7 +12509,7 @@
     
             </example>
 
-            <definition xml:id="def-vector-space">
+            <definition xml:id="def-vector-space"><title>Vector Space</title>
               <statement>
                 <p>
                   Let <m>F</m> be a field. An <m>F</m>-vector space is a (left) <m>F</m>-module.
@@ -12498,8 +12517,7 @@
               </statement>
             </definition>
 
-            <proposition xml:id="prop-abelian-groups-are-z-modules">
-              <title>Abelian Groups are <m>\Z</m>-modules</title>
+            <proposition xml:id="prop-abelian-groups-are-z-modules"><title>Abelian Groups are <m>\Z</m>-modules</title>
               <statement>
                 <p>
                   Let <m>M</m> be an abelian group under <m>+</m>. Then <m>M</m> becomes a <m>\Z</m>-module upon defining the rule for scaling to be <m>nm :=</m> 
@@ -12515,7 +12533,7 @@
 
             </proposition>
 
-            <proposition xml:id="prop-zn-modules">
+            <proposition xml:id="prop-zn-modules"><title><m>\Z/n</m> Modules</title>
               <statement>
                 <p>
                   Let <m>n</m> be a positive integer and recall that <m>\Z/n</m> denotes the ring of integers modulo <m>n</m> (whose elements I will write as <m>\ov{0}, \ov1, \cdots, \ov{n-1}</m>). 
@@ -12536,8 +12554,7 @@
               </statement>
             </proposition>
 
-            <theorem xml:id="thm-restriction-of-scalars">
-              <title>Restriction of Scalars</title>
+            <theorem xml:id="thm-restriction-of-scalars"><title>Restriction of Scalars</title>
               <statement>
                 <p>
                   Let <m>\phi: R \to S</m> be a ring homomorphism. Any left <m>S</m>-module <m>M</m> may be regarded via <em>restriction of scalars</em> as a left <m>R</m>-module with the following structure: - the rule for addition <m>+</m> on <m>M</m> is the same as in the original structure and - the rule for scaling by elements of <m>R</m> is 
@@ -12569,7 +12586,7 @@
                 </proof>
             </theorem>
 
-            <example xml:id="ex-complex-vector-spaces-are-real-vector-spaces">
+            <example xml:id="ex-complex-vector-spaces-are-real-vector-spaces"><title>Complex Vector Spaces are Real</title>
               <statement>
                 <p>
                   For example, since <m>\R</m> is a subring of <m>\C</m>, every complex vector space may be regarded as a real vector space, by restriction of scalars from <m>\C</m> to <m>\R</m>. Likewise, any real vector space may be regarded as a rational vector space. Etc.
@@ -12577,7 +12594,7 @@
               </statement>
             </example>
 
-            <proposition xml:id="prop-homomorphisms-and-restriction-of-scalars">
+            <proposition xml:id="prop-homomorphisms-and-restriction-of-scalars"><title>Ring Maps and Restriction of Scalars</title>
               <statement>
                 <p>
                   If <m>S</m> and <m>R</m> are rings and <m>\phi: S \to R</m> is a ring homomorphism, then since <m>S</m> is a left <m>S</m>-module, it is also a left <m>R</m>-module via restriction of scalars. Note that the rule for scaling given by <m>r s := \phi(r) s</m>.
@@ -12598,7 +12615,7 @@
               </statement>
             </proposition>
 
-            <example xml:id="exe-ri-module-is-an-r-module">
+            <example xml:id="exe-ri-module-is-an-r-module"><title><m>R/I</m> is an <m>R</m>-module</title>
               <p>
                 If <m>I</m> is a (two-sided) ideal of a ring <m>R</m> then applying restriction of scalars along the quotient homomorphism <m>q:R\to R/I</m> gives that any left <m>R/I</m>-module is also a left <m>R</m>-module.
               </p>
@@ -12608,7 +12625,7 @@
               </p>
             </example>
 
-            <definition xml:id="def-submodule">
+            <definition xml:id="def-submodule"><title>Submodule</title>
               <statement>
                 <p>
                   Let <m>R</m> be a ring and let <m>M</m> be a left <m>R</m>-module. An <em><m>R</m>-submodule</em> of <m>M</m> is a subset <m>N \subseteq M</m> such that 
@@ -12717,8 +12734,7 @@
                 </p>
               </introduction>
           
-              <exercise>
-                <title>January 2012 Problem (8)</title>
+              <exercise><title>January 2012 Problem (8)</title>
                 
                 
                 <statement>
@@ -12758,10 +12774,9 @@
           
         </section>
 
-        <section xml:id="sec-modhom">
-          <title>Module Homomorphisms</title>
+        <section xml:id="sec-modhom"><title>Module Homomorphisms</title>
 
-          <definition xml:id="def-module-homomorphism">
+          <definition xml:id="def-module-homomorphism"><title>Module Homomorphism</title>
             <statement>
               <p>
                 Let <m>R</m> be a ring and let <m>M</m> and <m>N</m> be <m>R</m>-modules. An <m>R</m>-module <em>homomorphism</em> from <m>M</m> to <m>N,</m> sometimes called an <m>R</m>-<em>map</em>, is a function <m>h: M \to N</m> such that for all <m>r \in R</m> and <m>m,n \in M</m> we have 
@@ -12788,7 +12803,7 @@
             </p>
           </remark>
           
-          <definition xml:id="def-linear-transformation">
+          <definition xml:id="def-linear-transformation"><title>Linear Transformation</title>
             <statement>
               <p>
                 Let <m>F</m> be a field and let <m>M</m> and <m>N</m> be vector spaces over <m>F</m>. A <em>linear transformation</em> from <m>M</m> to <m>N</m> is an <m>F</m>-module homomorphism <m>h:M \to N</m>.
@@ -12796,7 +12811,7 @@
             </statement>
           </definition>
 
-          <definition xml:id="def-module-isomorphism">
+          <definition xml:id="def-module-isomorphism"><title>Module Isomorphism</title>
             <statement>
               <p>
                 An <m>R</m>-module homomorphism <m>h: M \to N</m> is an <m>R</m>-module <em>isomorphism</em> if there is another <m>R</m>-module homomorphism <m>g: N \to M</m> such that <m>h \circ g = \id_M</m> and <m>g \circ h = \id_N</m>.
@@ -12804,7 +12819,7 @@
             </statement>
           </definition>
 
-          <theorem xml:id="thm-module-isomorphisms-and-bijections">
+          <theorem xml:id="thm-module-isomorphisms-and-bijections"><title>Module Isomorphisms and Bijections</title>
             <statement>
               <p>
                 Given a ring <m>R</m>, <m>R</m>-modules <m>M</m> and <m>N</m>, and a <m>R</m>-module homomorphism <m>f: M \to N</m>, <m>f</m> is an <m>R</m>-module isomorphism if and only if <m>f</m> is a bijection.
@@ -12812,8 +12827,7 @@
             </statement>
           </theorem>
 
-          <theorem xml:id="thm-submodules-are-ideals">
-            <title>Submodules are Ideals</title>
+          <theorem xml:id="thm-submodules-are-ideals"><title>Submodules are Ideals</title>
             <statement>
               <p>
                 A subset <m>I</m> of a ring <m>R</m> is a (left) submodule of <m>R</m> if and only if it is a (left) ideal.
@@ -12821,8 +12835,7 @@
             </statement>
           </theorem>
 
-          <definition xml:id="def-r-map-ker">
-            <title>Kernel</title>
+          <definition xml:id="def-r-map-ker"><title>Kernel</title>
             <statement>
               <p>
                 The <term>kernel</term> of an <m>R</m>-module homomorphism is the set <m>\ker(h) := \{m \in M \mid h(m) = 0_N\}</m>
@@ -12830,17 +12843,7 @@
             </statement>
           </definition>
 
-          <definition xml:id="def-r-map-image">
-            <title>Image</title>
-            <statement>
-              <p>
-                The <term>image</term> of an <m>R</m>-module homomorphism is the set
-              </p>
-            </statement>
-          </definition>
-
-          <definition xml:id="def-cokernel">
-            <title>Cokernel</title>
+          <definition xml:id="def-cokernel"><title>Cokernel</title>
             <statement>
               <p>
                 The <term>cokernel</term> of an <m>R</m>-module homomorphism is the set 
@@ -12848,7 +12851,7 @@
             </statement>
           </definition>
 
-          <theorem xml:id="thm-kernels-and-images-of-homomorphisms-are-submodule">
+          <theorem xml:id="thm-kernels-and-images-of-homomorphisms-are-submodule"><title>Kernels and Images are Submodules</title>
             <statement>
               <p>
                 Let <m>R</m> be a ring and let <m>h: M \to M'</m> be an <m>R</m>-module homomorphism. Then 
@@ -13019,11 +13022,9 @@
           
         </section>
 
-        <section xml:id="sec-quote">
-          <title>Quotient Modules</title>
+        <section xml:id="sec-quote"><title>Quotient Modules</title>
 
-          <definition xml:id="def-quotient-module">
-            <title>Quotient Module</title>
+          <definition xml:id="def-quotient-module"><title>Quotient Module</title>
             <statement>
               <p>
                 Let <m>R</m> be a ring, let <m>M</m> be an R-module, and let <m>N</m> be a submodule of <m>M</m>. The <em>quotient module</em> <m>M/N</m> is the quotient group <m>M/N</m> under <m>+</m> (so elements of <m>M/N</m> are additive cosets of the form <m>m + N</m> with <m>m \in M</m> and addition is defined by <m>(m_1 + N) + (m_2 + N) = (m_1+m_2) + N</m>) and with the rule for scaling by <m>R</m> defined to be <me>r \cdot (m + N) = rm + N</me> for all <m>r \in R</m> and <m>m + N \in M/N</m>.
@@ -13031,7 +13032,7 @@
             </statement>
           </definition>
 
-          <theorem xml:id="thm-quotient-module-well-defined">
+          <theorem xml:id="thm-quotient-module-well-defined"><title>Quotient Modules are Well Defined</title>
             <statement>
               <p>
                 Let <m>R</m> be a ring, let <m>M</m> be an <m>R</m>-module, and let <m>N</m> be a submodule of <m>M</m>. The rule for scaling introduced above is well-defined and it, along with the rule for <m>+</m>, makes <m>M/N</m> into an <m>R</m>-module.
@@ -13039,7 +13040,7 @@
             </statement>
           </theorem>
 
-          <definition xml:id="def-module-quotient-map">
+          <definition xml:id="def-module-quotient-map"><title>Module Quotient Map</title>
             <statement>
               <p>
                 Let <m>R</m> be a ring, let <m>M</m> be an <m>R</m>-module, and let <m>N</m> be a submodule of <m>M</m>. Define the canonical <em>quotient map</em> <m>\pi: M \to M/N</m> by <m>\pi(m) = m + N</m>.
@@ -13047,7 +13048,7 @@
             </statement>
           </definition>
 
-          <proposition xml:id="prop-quotient-map-is-r-module-homomorphism">
+          <proposition xml:id="prop-quotient-map-is-r-module-homomorphism"><title>Quotient Map is an <m>R</m>-map</title>
             <statement>
               <p>
                 Let <m>R</m> be a ring, let <m>M</m> be an <m>R</m>-module, and let <m>N</m> be a submodule of <m>M</m>.
@@ -13087,23 +13088,48 @@
             </proof>
           </proposition>
 
-          <example xml:id="exe-z-modules-and-quotients">
-            <title><m>\Z</m>-modules and Quotients</title>
+          <example xml:id="exe-z-modules-and-quotients"><title><m>\Z</m>-modules and Quotients</title>
             <p>
               Recall that <m>\Z</m>-module are the same as abelian groups. submodules and quotient <m>\Z</m>-modules are the same things as subgroups and quotients of abelian groups.
             </p>
 
           </example>
 
-          <theorem xml:id="thm-module-isomorphism-thms">
+          <theorem xml:id="thm-module-isomorphism-thms"><title>Module Isomorphism Theorems</title>
             <statement>
               <p>
                 Let <m>R</m> be a ring, and let <m>M</m> be a <m>R</m>-module. 
-                - (UMP for Quotient Modules) Let <m>N</m> be a submodule of <m>M</m>, let <m>T</m> be an <m>R</m>-module, and let <m>f: M \to T</m> be an <m>R</m>-module homomorphism. If <m>f(M) = 0</m> (i.e., if <m>N \subseteq \ker(f)</m>) then the function <m>\ov{f}: M/N \to T</m> given by <m>\ov{f}(m + N) = f(m)</m> is a well-defined, <m>R</m>-module homomorphism. In fact, <m>\ov{f}: M/N \to T</m> is the unique <m>R</m>-module homomorphism such that <m>\ov{f}\circ \can = f</m> where <m>\can</m> denotes the canonical surjection <m>M \onto M/N</m>. 
-                - (First Isomorphism Theorem) Let <m>T</m> be an <m>R</m>-module and let <m>h: M \to T</m> be an <m>R</m>-module homomorphism. Then <m>\ker(h)</m> is a submodule of <m>M</m> and there is an <m>R</m>-module isomorphism <m>M/\ker(h) \cong \im(h)</m> given by <m>m + \ker(h) \mapsto h(m)</m>. 
-                - (Second Isomorphism Theorem) Let <m>A</m> and <m>B</m> be submodules of <m>M</m>, and define <m>A + B = \{a+b \mid a \in A, b \in B\}</m>. Then <m>A + B</m> is a submodule of <m>M</m>, <m>A \cap B</m> is a submodule of <m>A</m>, and there is an <m>R</m>-module isomorphism <m>(A + B)/B \cong A/(A \cap B)</m>. 
-                - (Third Isomorphism Theorem) Let <m>A</m> and <m>B</m> be submodules of <m>M</m> with <m>A \subseteq B</m>. Then <m>B/A</m> is a submodule of <m>M/A</m> and there is an <m>R</m>-module isomorphism <m>(M/A)/(B/A) \cong M/B</m> given by sending <m>(m + A) + B/A</m> to <m>m + B</m>. 
-                - (Lattice Isomorphism Theorem) Let <m>R</m> be a ring, let <m>N</m> be a R-submodule of <m>M</m>, and let <m>\pi: M \to M/N</m> be the canonical quotient map. Then the function <me>\Psi : \{R-\text{submodules of } M \text{ containing }N\} \to \{R-\text{submodules of }M/N\}</me>defined by <m>\Psi(K) = K/N</m> is a bijection, with inverse given by <m>\Psi^{-1}(T) = \pi^{-1}(T)</m> for each <m>R</m> submodule <m>T</m> of <m>M/N</m>. Moreover, <m>\Psi</m> and <m>\Psi^{-1}</m> preserve sums and intersections.
+                <ol>
+                  <li>
+                    <p>
+                                      - (UMP for Quotient Modules) Let <m>N</m> be a submodule of <m>M</m>, let <m>T</m> be an <m>R</m>-module, and let <m>f: M \to T</m> be an <m>R</m>-module homomorphism. If <m>f(M) = 0</m> (i.e., if <m>N \subseteq \ker(f)</m>) then the function <m>\ov{f}: M/N \to T</m> given by <m>\ov{f}(m + N) = f(m)</m> is a well-defined, <m>R</m>-module homomorphism. In fact, <m>\ov{f}: M/N \to T</m> is the unique <m>R</m>-module homomorphism such that <m>\ov{f}\circ \can = f</m> where <m>\can</m> denotes the canonical surjection <m>M \onto M/N</m>. 
+
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                                      - (First Isomorphism Theorem) Let <m>T</m> be an <m>R</m>-module and let <m>h: M \to T</m> be an <m>R</m>-module homomorphism. Then <m>\ker(h)</m> is a submodule of <m>M</m> and there is an <m>R</m>-module isomorphism <m>M/\ker(h) \cong \im(h)</m> given by <m>m + \ker(h) \mapsto h(m)</m>. 
+
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                                      - (Second Isomorphism Theorem) Let <m>A</m> and <m>B</m> be submodules of <m>M</m>, and define <m>A + B = \{a+b \mid a \in A, b \in B\}</m>. Then <m>A + B</m> is a submodule of <m>M</m>, <m>A \cap B</m> is a submodule of <m>A</m>, and there is an <m>R</m>-module isomorphism <m>(A + B)/B \cong A/(A \cap B)</m>. 
+
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                                      - (Third Isomorphism Theorem) Let <m>A</m> and <m>B</m> be submodules of <m>M</m> with <m>A \subseteq B</m>. Then <m>B/A</m> is a submodule of <m>M/A</m> and there is an <m>R</m>-module isomorphism <m>(M/A)/(B/A) \cong M/B</m> given by sending <m>(m + A) + B/A</m> to <m>m + B</m>. 
+
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                                      - (Lattice Isomorphism Theorem) Let <m>R</m> be a ring, let <m>N</m> be a R-submodule of <m>M</m>, and let <m>\pi: M \to M/N</m> be the canonical quotient map. Then the function <me>\Psi : \{R-\text{submodules of } M \text{ containing }N\} \to \{R-\text{submodules of }M/N\}</me>defined by <m>\Psi(K) = K/N</m> is a bijection, with inverse given by <m>\Psi^{-1}(T) = \pi^{-1}(T)</m> for each <m>R</m> submodule <m>T</m> of <m>M/N</m>. Moreover, <m>\Psi</m> and <m>\Psi^{-1}</m> preserve sums and intersections.
+                    </p>
+                  </li>
+                </ol>
               </p>
             </statement>
 
@@ -13257,8 +13283,7 @@
 
       </chapter>
 
-      <chapter xml:id="ch-freemod">
-        <title>Free Modules</title>
+      <chapter xml:id="ch-freemod"><title>Free Modules</title>
 
         <!--
        ***************
@@ -13267,11 +13292,9 @@
         -->
         
 
-        <section xml:id="sec-linear">
-          <title>Linear Independence</title>
+        <section xml:id="sec-linear"><title>Linear Independence</title>
 
-          <definition xml:id="def-linear-combination">
-            <title>Linear Combination</title>
+          <definition xml:id="def-linear-combination"><title>Linear Combination</title>
             <statement>
               <p>
                 Let <m>M</m> be an <m>R</m>-module and <m>m_1, \dots, m_n \in M</m>. An <m>R</m>-<em>linear combination</em> of <m>m_1, \dots, m_n</m> is an element of <m>M</m> of the form <m>r_1m_1 + \cdots + r_nm_n</m> for some <m>n \geq 0</m> and <m>r_1,\dots,r_n \in R</m>. (If <m>n = 0</m>, this gives the empty sum which is interpreted to give <m>0_M</m>.)
@@ -13285,8 +13308,7 @@
             </p>
           </remark>
 
-          <lemma xml:id="lem-rcdot-a-smallest-submodule-of-m-containing-a">
-            <title><m>R\cdot A</m> Smallest Submodule of <m>M</m> Containing <m>A</m></title>
+          <lemma xml:id="lem-rcdot-a-smallest-submodule-of-m-containing-a"><title><m>R\cdot A</m> Smallest Submodule of <m>M</m> Containing <m>A</m></title>
             <statement>
               <p>
                 For any subset <m>A</m> of a <m>R</m>-module <m>M</m>, the subset <m>R \cdot A</m> is indeed a submodule of <m>M</m>, and it is the smallest submodule of <m>M</m> that contains <m>A</m> as a subset. In fact, we have 
@@ -13297,8 +13319,7 @@
             </statement>
           </lemma>
 
-          <definition xml:id="def-finitely-generated-module">
-            <title>Finitely Generated Module</title>
+          <definition xml:id="def-finitely-generated-module"><title>Finitely Generated Module</title>
             <statement>
               <p>
                 A module <m>M</m> is <em>finitely generated</em> if there exists some finite subset <m>A</m> of <m>M</m> such that <m>M = R \cdot A</m>.
@@ -13312,8 +13333,7 @@
             </p>
           </remark>
 
-          <definition xml:id="def-cyclic-module">
-            <title>Cyclic Module</title>
+          <definition xml:id="def-cyclic-module"><title>Cyclic Module</title>
 
             <statement>
               <p>
@@ -13322,15 +13342,14 @@
             </statement>
           </definition>
 
-          <example xml:id="exe-cyclic-z-module">
-            <title>Cyclic <m>\Z</m>-module</title>
+          <example xml:id="exe-cyclic-z-module"><title>Cyclic <m>\Z</m>-module</title>
 
             <p>
               If <m>R = \Z</m>, then (recalling that a <m>\Z</m>-module is the same thing as an abelian group) we see that <m>M</m> is a cyclic <m>\Z</m>-module if and only if <m>M</m> is a cyclic group.
             </p>
           </example>
 
-          <proposition>
+          <proposition><title>Cyclic Modules and Ideals</title>
             <statement>
               <p>
                 Show that the left <m>R</m>-module <m>M</m> is cyclic if and only if there exists a left ideal <m>I</m> of <m>R</m> such that <m>M \cong R/I</m>.
@@ -13346,8 +13365,7 @@
             </statement>
           </proposition>
 
-          <example xml:id="ex-standard-free-module-finitely-generated">
-            <title>Standard Free Module Finitely Generated</title>
+          <example xml:id="ex-standard-free-module-finitely-generated"><title>Standard Free Module Finitely Generated</title>
             <p>
               Let <m>R</m> be a ring. The standard free <m>R</m>-module of rank <m>n</m>, <m>R^n</m>, is finitely generated, since it is generated by <m>e_1, \dots, e_n</m> where <m>e_i := \begin{bmatrix} 0 \\ \vdots \\ 0 \\ 1 \\ 0 \\ \vdots \\ 0 \end{bmatrix}</m>, with a <m>1</m> in the <m>i</m>-th position. This holds since given any element <m>v = \begin{bmatrix} r_1 \\ \vdots \\ r_n\end{bmatrix}</m> of <m>R^n</m> we have <m>v = \sum_i r_i e_i</m>.
             </p>
@@ -13358,8 +13376,7 @@
 
           </example>
 
-          <definition xml:id="def-linearly-independent">
-            <title>Linearly Independent</title>
+          <definition xml:id="def-linearly-independent"><title>Linearly Independent</title>
 
             <statement>
               <p>
@@ -13368,8 +13385,7 @@
             </statement>
           </definition>
 
-          <definition xml:id="def-linearly-dependent">
-            <title>Linearly Dependent</title>
+          <definition xml:id="def-linearly-dependent"><title>Linearly Dependent</title>
 
             <statement>
               <p>
@@ -13384,8 +13400,7 @@
             </p>
           </remark>
 
-          <example xml:id="ex-one-element-subsets-of-r-mods">
-            <title>One Element Subsets of <m>R</m>-Modules</title>
+          <example xml:id="ex-one-element-subsets-of-r-mods"><title>One Element Subsets of <m>R</m>-Modules</title>
 
             <p>
               A one element subset <m>\{m\}</m> of an <m>R</m>-module <m>M</m> is linearly independent if and only if whenever <m>rm =0</m>, we have <m>r = 0</m>.
@@ -13396,8 +13411,7 @@
             </p>
           </example>
 
-          <example xml:id="exe-3-linearly-independent-in-z">
-            <title><m>\{3\}</m> Linearly Independent in <m>\Z</m></title>
+          <example xml:id="exe-3-linearly-independent-in-z"><title><m>\{3\}</m> Linearly Independent in <m>\Z</m></title>
 
             <p>
               The singleton <m>\{3\}</m> is a linearly independent subset of the <m>\Z</m>-module <m>M = \Z</m>. But it does not generate all of <m>M</m>. The subset <m>\{3, 5\}</m> does generate all of <m>M</m>, but it is not linearly independent, since <m>5 \cdot 3 + (-3) \cdot 5 = 0</m>. More on this later.
@@ -13507,8 +13521,7 @@
           
         </section>
         
-        <section xml:id="sec-modgen">
-          <title>Generated Modules</title>
+        <section xml:id="sec-modgen"><title>Generated Modules</title>
 
           <proposition>
             <statement>
@@ -13518,8 +13531,7 @@
             </statement>
           </proposition>
 
-          <proposition xml:id="prop-every-cyclic-r-module-cong-to-ri-for-some-i">
-            <title>Every Cyclic <m>R</m>-module <m>\cong</m> to <m>R/I</m> for some <m>I</m></title>
+          <proposition xml:id="prop-every-cyclic-r-module-cong-to-ri-for-some-i"><title>Every Cyclic <m>R</m>-module <m>\cong</m> to <m>R/I</m> for some <m>I</m></title>
 
             <statement>
               <p>
@@ -13548,8 +13560,7 @@
             </p>
           </remark>
 
-          <lemma xml:id="lem-mim-is-an-ri-module">
-            <title><m>M/IM</m> is an <m>R/I</m>-module</title>
+          <lemma xml:id="lem-mim-is-an-ri-module"><title><m>M/IM</m> is an <m>R/I</m>-module</title>
       
             <statement>
               <p>
@@ -13580,36 +13591,13 @@
             </proof>
           </lemma>
 
-          <proposition>
-            <statement>
-              <p>
-                Let <m>R</m> be a non-zero commutative ring and suppose <m>p: R^m \to R^n</m> is a surjective homomorphism of <m>R</m>-modules for some non-negative integers <m>m</m> and <m>n</m>. 
-                <ol>
-                  <li>
-                    <p>
-                      Prove that if <m>R</m> is a field, then <m>m \geq n</m>. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      Prove that if <m>R</m> is any non-zero commutative ring, then <m>m \geq n</m>.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-          </proposition>
-
           <remark>
             <p>
               The Lemma shows that the rules <m>M \mapsto M/IM</m> and <m>f \mapsto \ov{f}</m> determine what is known as a functor from the category of <m>R</m>-modules to the category of <m>R/I</m>-modules.
             </p>
           </remark>
 
-          <example xml:id="ex-maximal-ideals-and-vector-spaces">
-            <title>Maximal Ideals and Vector Spaces</title>
-
+          <example xml:id="ex-maximal-ideals-and-vector-spaces"><title>Maximal Ideals and Vector Spaces</title>
             <p>
               Suppose <m>I</m> is a maximal ideal of a commutative ring <m>R</m>. Then <m>R/I</m> is a field, and given an <m>R</m>-module <m>M</m>, <m>M/IM</m> is a module over the field <m>R/I</m>; i.e., it is a vector space over this field. Moreover, if <m>f: M \to N</m> is an <m>R</m>-map then <m>\ov{f}: M/IM \to N/IN</m> is an <m>R/I</m>-linear transformation.
             </p>
@@ -13636,7 +13624,7 @@
             </statement>
           </proposition>
 
-          <proposition>
+          <proposition><title>Finitely Generated Modules and Submodules</title>
             <statement>
               <p>
                 Let <m>R</m> be a ring, let <m>M</m> be a left <m>R</m>-module and let <m>N \subseteq M</m> be a left <m>R</m>-submodule. 
@@ -13663,10 +13651,10 @@
             </statement>
           </proposition>
 
-          <proposition>
+          <proposition><title>Split Surjection</title>
             <statement>
               <p>
-                Let <m>R</m> be a ring, <m>M</m> and <m>N</m> left <m>R</m>-modules, and <m>p: M \to N</m> an <m>R</m>-module homomorphism. Assume that <m>p</m> is surjective. We say <m>p</m> is a {} if there exists an <m>R</m>-module homomorphism <m>j: N \to M</m> such that <m>p \circ j = id_N</m> (i.e., <m>p(j(n)) = n</m> for all <m>n \in N</m>). 
+                Let <m>R</m> be a ring, <m>M</m> and <m>N</m> left <m>R</m>-modules, and <m>p: M \to N</m> an <m>R</m>-module homomorphism. Assume that <m>p</m> is surjective. We say <m>p</m> is a <em>split surjection</em> if there exists an <m>R</m>-module homomorphism <m>j: N \to M</m> such that <m>p \circ j = id_N</m> (i.e., <m>p(j(n)) = n</m> for all <m>n \in N</m>). 
                 <ol>
                   <li>
                     <p>
@@ -13676,7 +13664,7 @@
 
                   <li>
                     <p>
-                      2. By giving an explicit example with justification, show the statement in part (1) would become false if <m>N</m> were not assumed to be free.
+                      By giving an explicit example with justification, show the statement in part (1) would become false if <m>N</m> were not assumed to be free.
                     </p>
                   </li>
                 </ol>
@@ -13684,10 +13672,10 @@
             </statement>
           </proposition>
 
-          <proposition>
+          <proposition><title>Split Injection</title>
             <statement>
               <p>
-                Assume <m>R</m> is a ring, <m>W</m> an <m>R</m>-module, and <m>i: V \to W</m> an injective <m>R</m>-module homomorphism. We say <m>i</m> is a {} if there exists an <m>R</m>-module homomorphism <m>q: W \to V</m> such that <m>q \circ i = id_V</m> (i.e., <m>q(i(v)) = v</m> for all <m>v \in V</m>).
+                Assume <m>R</m> is a ring, <m>W</m> an <m>R</m>-module, and <m>i: V \to W</m> an injective <m>R</m>-module homomorphism. We say <m>i</m> is a <em>split injection</em> if there exists an <m>R</m>-module homomorphism <m>q: W \to V</m> such that <m>q \circ i = id_V</m> (i.e., <m>q(i(v)) = v</m> for all <m>v \in V</m>).
                 <ol>
                   <li>
                     <p>
@@ -13737,8 +13725,7 @@
             </statement>
           </proposition>
 
-          <theorem xml:id="thm-torsion-properties">
-            <title>Properties of Torsion Submodules</title>
+          <theorem xml:id="thm-torsion-properties"><title>Properties of Torsion Submodules</title>
             <statement>
               <p>
                 Let <m>R</m> be a domain and let <m>M</m> be an <m>R</m>-module. The torsion submodule of <m>M</m> is <me>\Tor(M) = \{m \in M \mid rm = 0 \text{ for some } r \in R \textrm{ with } r \neq 0 \}.</me> Elements of <m>\Tor(M)</m> are called the torsion elements of <m>M</m>, and the module <m>M</m> is called <em>torsion</em> if <m>\Tor(M) = 0</m>. You may take for granted that this is actually a submodule of <m>M</m> without proof. 
@@ -13783,7 +13770,7 @@
             </statement>
           </theorem>
 
-          <proposition>
+          <proposition><title>Annihilators and Direct Sums</title>
             <statement>
               <p>
                 Let <m>R</m> be a commutative ring with <m>1 \neq 0</m>. Show that 
@@ -13794,11 +13781,6 @@
             </statement>
           </proposition>
           
-
-      
-           
-
-
           <exercises>
 
             <exercisegroup>
@@ -13872,8 +13854,7 @@
                 </p>
               </introduction>
 
-              <exercise>
-                <title>June 2010 Problem (5)</title>
+              <exercise><title>June 2010 Problem (5)</title>
                 <statement>
                   <p>
                   Let <m>R</m> be a (not-necessarily commutative) ring let <m>M</m> be a left <m>R</m>-module. The annihilator of <m>M</m> in <m>R</m> is defined to be 
@@ -14003,8 +13984,7 @@
                 </solution>
               </exercise>
           
-              <exercise>
-                <title>June 2011 Problem (11)</title>
+              <exercise><title>June 2011 Problem (11)</title>
                 
                 
                 <statement>
@@ -14048,8 +14028,7 @@
                 </solution>
               </exercise>
 
-              <exercise>
-                <title>June 2012 (5)</title>
+              <exercise><title>June 2012 (5)</title>
                 <statement>
                     <p>
                       Let <m>R</m> be a commutative integral domain and <m>M</m> an <m>R</m>-module. A subset <m>S</m> of <m>M</m> is called a <em>maximal linearly independent</em> subset of <m>M</m> if <m>S</m> is linearly independent and any subset of <m>M</m> properly containing <m>S</m> is linearly dependent. 
@@ -14106,12 +14085,9 @@
 
         </section>
 
-        <section xml:id="sec-bases">
-          <title>Bases</title>
+        <section xml:id="sec-bases"><title>Bases</title>
 
-          <definition xml:id="def-basis">
-            <title>Basis</title>
-
+          <definition xml:id="def-basis"><title>Basis</title>
             <statement>
               <p>
                 A subset <m>A</m> of an <m>R</m>-module <m>M</m> is a <em>basis</em> of <m>M</m>, if the set <m>A</m> generates <m>M</m> and is linearly independent.
@@ -14119,9 +14095,7 @@
             </statement>
           </definition>
 
-          <definition xml:id="def-free-module">
-            <title>Free Module</title>
-
+          <definition xml:id="def-free-module"><title>Free Module</title>
             <statement>
               <p>
                 An <m>R</m>-module M is a <em>free</em> <m>R</m>-module if <m>M</m> admits at least one a basis.
@@ -14129,9 +14103,7 @@
             </statement>
           </definition>
 
-          <definition xml:id="def-rank-module">
-            <title>Module Rank</title>
-
+          <definition xml:id="def-rank-module"><title>Module Rank</title>
             <statement>
               <p>
                 Let <m>R</m> be a non-zero commutative ring and let <m>M</m> be a free <m>R</m>-module. The cardinality of any basis of <m>M</m> is called the <em>rank</em> of <m>M</m>.
@@ -14139,47 +14111,39 @@
             </statement>
           </definition>
 
-          <example xml:id="ex-zero-module-is-free">
-            <title>Zero Module is Free</title>
+          <example xml:id="ex-zero-module-is-free"><title>Zero Module is Free</title>
             <p>
               The zero module is free with <m>\emptyset</m> as (its only) basis. This holds since the empty set is vacuously linearly independent and it generates <m>\{0\}</m>.
             </p>
-  
-
           </example>
 
-          <example xml:id="ex-ring-is-free-module-over-itself">
-            <title>Ring is Free Module over Itself</title>
+          <example xml:id="ex-ring-is-free-module-over-itself"><title>Ring is Free Module over Itself</title>
 
             <p>
               <m>R</m> is free since <m>\{1\}</m> is a basis for <m>R</m>. It clearly generates and if <m>r \cdot 1 = 0</m> then <m>r = 0</m>, so it is linearly independent.
             </p>
           </example>
 
-          <example xml:id="ex-rn-is-free">
-            <title><m>R^n</m> is Free</title>
+          <example xml:id="ex-rn-is-free"><title><m>R^n</m> is Free</title>
             <p>
               More generally, <m>R^n</m> is free since <m>e_1, \dots, e_n</m> is a basis. This is called the <term>standard basis</term> of <m>R^n</m>. We've already seen that <m>e_1, \dots, e_n</m> generates <m>R^n</m> as an <m>R</m>-module. Suppose <m>\sum r_i e_i = 0</m>. Then <m>\begin{bmatrix} r_1 \\ \vdots \\ r_n \end{bmatrix} = \begin{bmatrix} 0 \\ \vdots \\ 0 \end{bmatrix}</m> and hence <m>r_i = 0</m> for all <m>i</m>.
             </p>
           </example>
 
-          <example xml:id="ex-quotient-of-proper-nonzero-ideals-not-free">
-            <title>Quotient of Proper Nonzero Ideals Not Free</title>
+          <example xml:id="ex-quotient-of-proper-nonzero-ideals-not-free"><title>Quotient of Proper Nonzero Ideals Not Free</title>
 
             <p>
               For any ring <m>R</m>, if <m>I</m> is a (two-sided) ideal such that <m>I \ne 0</m> and <m>I \ne R</m>, then <m>M = R/I</m> is not free. Since <m>I \ne R</m>, <m>R/I</m> is not the zero module and hence the empty set isn't a basis. Let <m>A</m> be any non-empty subset. Then since <m>I \ne 0</m>, as shown above <m>A</m> is linearly dependent. We conclude that no subset of <m>M</m> is a basis.
             </p>
           </example>
 
-          <example xml:id="ex-bases-are-not-unique">
-            <title>Bases are not Unique</title>
-
+          <example xml:id="ex-bases-are-not-unique"><title>Bases are not Unique</title>
             <p>
               As you likely know from a class in linear algebra, bases of free modules are rarely unique. Indeed, if <m>R</m> is any ring, then any single unit forms a basis for <m>R</m> as a module over itself. For another example, for any ring <m>R</m> and any fixed element <m>r \in R</m>, the set <me>\left\{ \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \begin{bmatrix} r \\ 1 \end{bmatrix} \right \}</me> forms a basis for the free <m>R</m>-module <m>R^2</m>.
             </p>
           </example>
 
-          <proposition>
+          <proposition><title>Every Module over a Field is Free</title>
             <statement>
               <p>
                 Let <m>R</m> be a commutative ring with <m>1 \neq 0</m>. Show that if every <m>R</m>-module is free then <m>R</m> is a field.
@@ -14187,7 +14151,7 @@
             </statement>
           </proposition>
 
-          <proposition>
+          <proposition><title><m>\Q</m> is not a Free <m>\Z</m>-module</title>
             <statement>
               <p>
                 An abelian group <m>A</m> is called <em>divisible</em> if for each <m>a \in A</m> and <m>n \in \N</m>, there exists <m>b \in A</m> such that <m>a = nb</m>. Prove that if <m>A \neq\{0_A\}</m> is a divisible abelian group then <m>A</m> is not a free <m>\Z</m>-module. Deduce that <m>\Q</m> is not a free <m>\Z</m>-module.
@@ -14195,7 +14159,7 @@
             </statement>
           </proposition>
 
-          <proposition>
+          <proposition><title>Free Modules have Trivial Annihilators</title>
             <statement>
               <p>
                 Let <m>R</m> be a commutative ring with <m>1 \neq 0</m>. 
@@ -14237,8 +14201,7 @@
             </p>
           </remark>
   
-          <lemma xml:id="lem-elements-uniquely-expressible-in-free-modules">
-            <title>Elements Uniquely Expressible in Free Modules</title>
+          <lemma xml:id="lem-elements-uniquely-expressible-in-free-modules"><title>Elements Uniquely Expressible in Free Modules</title>
 
             <statement>
               <p>
@@ -14261,16 +14224,14 @@
             </proof>
           </lemma>
 
-          <example xml:id="exe-module-with-infinite-basis">
-            <title>Module with Infinite Basis</title>
+          <example xml:id="exe-module-with-infinite-basis"><title>Module with Infinite Basis</title>
 
             <p>
               I have not yet given an example of a module with an infinite basis; here is one. Let <m>R</m> be any ring and <m>M = R[x]</m> (which, recall, is an <m>R</m>-module due to the evident ring map <m>R \to R[x]</m>). Then the countably infinite set <m>\{1,x,x^2,\dots, x^n,\dots\}</m> is a basis. The fact that this set is a basis is essentially part of the definition of <m>R[x]</m>. The Lemma says that every polynomial is uniquely expressible as an <m>R</m>-linear combination of (a finite subset of) <m>1,x,x^2,\dots</m>.
             </p>
           </example>
 
-          <theorem xml:id="thm-ump-for-free-modules">
-            <title>UMP for Free <m>R</m>-Modules</title>
+          <theorem xml:id="thm-ump-for-free-modules"><title>UMP for Free <m>R</m>-Modules</title>
             <statement>
               <p>
                 Let <m>R</m> be a ring, let <m>M</m> be a free <m>R</m>-module with basis <m>B</m>, let <m>N</m> be an <m>R</m>-module, and let <m>j: B \to N</m> be any function. Then there is a unique <m>R</m>-module homomorphism <m>h: M \to N</m> such that <m>h(b) = j(b)</m> for all <m>b \in B</m>.
@@ -14313,8 +14274,7 @@
             </p>
           </remark>
           
-          <corollary xml:id="cor-free-modules-with-equal-basis-elements-isomorphic">
-            <title>Free Modules with Equal Basis Elements Isomorphic</title>
+          <corollary xml:id="cor-free-modules-with-equal-basis-elements-isomorphic"><title>Free Modules with Equal Basis Elements Isomorphic</title>
 
             <statement>
               <p>
@@ -14333,8 +14293,7 @@
             </proof>
           </corollary>
 
-          <example xml:id="exe-mcong-rn-as-r-modules">
-            <title><m>M\cong R^n</m> as <m>R</m>-modules</title>
+          <example xml:id="exe-mcong-rn-as-r-modules"><title><m>M\cong R^n</m> as <m>R</m>-modules</title>
 
             <p>
               If <m>M</m> is a free <m>R</m>-module that has a basis of cardinality <m>n</m>, then <m>M \cong R^n</m> as <m>R</m>-modules. This holds since, as seen above, <m>R^n</m> has a basis of cardinality <m>n</m>, namely the standard basis <m>e_1, \dots, e_n</m>.
@@ -14352,8 +14311,7 @@
             </p>
           </remark>
 
-          <theorem xml:id="thm-uniqueness-of-rank-over-commutative-rings">
-            <title>Uniqueness of Rank over Commutative Rings</title>
+          <theorem xml:id="thm-uniqueness-of-rank-over-commutative-rings"><title>Uniqueness of Rank over Commutative Rings</title>
 
             <statement>
               <p>
@@ -14402,12 +14360,7 @@
             </proof>
           </theorem>
 
-          
-
-          <proposition xml:id="prop-r-bases">
-            <title>Bases of <m>R</m></title>
-            
-            
+          <proposition xml:id="prop-r-bases"><title>Bases of <m>R</m></title>          
             <statement>
               <p>
                 <ol>
@@ -14427,8 +14380,7 @@
             </statement>
           </proposition>
 
-          <proposition xml:id="prop-bases-of-ideals-in-commutative-rings">
-            <title>Bases of ideals in commutative rings</title>
+          <proposition xml:id="prop-bases-of-ideals-in-commutative-rings"><title>Bases of ideals in commutative rings</title>
             <statement>
               <p>
                 <ol>
@@ -14447,9 +14399,7 @@
               </p>
             </statement>
           </proposition>
-          
-          
-
+        
           <exercises>
 
             <exercisegroup>
@@ -14557,8 +14507,7 @@
                 </solution>
               </exercise>
 
-              <exercise>
-                <title>June 2012 (5) DUPLICATE</title>
+              <exercise><title>June 2012 (5) DUPLICATE</title>
                 <statement>
                   <p>
                     Let <m>R</m> be a commutative integral domain and <m>M</m> an <m>R</m>-module. Recall that a subset <m>S</m> of <m>M</m> is called a <em>maximal linearly independent</em> set of <m>M</m> if <m>S</m> is linearly independent and any subset of <m>M</m> properly containing <m>S</m> is linearly dependent.
@@ -14627,8 +14576,7 @@
 
       </chapter>
 
-      <chapter xml:id="ch-vectors">
-        <title>Vector Spaces</title>
+      <chapter xml:id="ch-vectors"><title>Vector Spaces</title>
 
         <!--
        ***************
@@ -14636,10 +14584,9 @@
        ****************
         -->
 
-        <section xml:id="sec-vecbasis">
-          <title>Existence of Bases</title>
+        <section xml:id="sec-vecbasis"><title>Existence of Bases</title>
 
-          <definition xml:id="def-span">
+          <definition xml:id="def-span"><title>Span</title>
             <statement>
               <p>
                 In keeping with standard convention, we use the term <q>span</q> instead of <q>submodule generated by</q>, but they mean exactly the same thing: for a subset <m>A</m> of an <m>F</m>-vector space <m>V</m>, the <em>span</em> of <m>A</m> is 
@@ -14651,7 +14598,7 @@
             </statement>
           </definition>
 
-          <lemma xml:id="lem-linear-independence-and-span">
+          <lemma xml:id="lem-linear-independence-and-span"><title>Linear Independence and Span</title>
             <statement>
               <p>
                 Suppose <m>I</m> is a linearly independent subset of an <m>F</m>-vector space <m>V</m> and <m>v \in V \setminus \Span(I)</m>, then <m>I \cup \{v\}</m> is also linearly independent.
@@ -14671,8 +14618,7 @@
             </p>
           </remark>
 
-          <theorem xml:id="thm-finding-intermediate-bases">
-            <title>Finding Intermediate Bases</title>
+          <theorem xml:id="thm-finding-intermediate-bases"><title>Finding Intermediate Bases</title>
             <statement>
               <p>
                 Let <m>V</m> be an <m>F</m>-vector space and assume <m>I \subseteq S \subseteq V</m> are subsets such that <m>I</m> is linearly independent and <m>S</m> spans <m>V</m>. Then there is a subset <m>B</m> such that <m>I \subseteq B \subseteq S</m> and <m>B</m> is a basis of <m>V.</m>
@@ -14702,8 +14648,7 @@
             </proof>
           </theorem>
 
-          <corollary xml:id="cor-every-vector-space-has-a-basis">
-            <title>Every Vector Space has a Basis</title>
+          <corollary xml:id="cor-every-vector-space-has-a-basis"><title>Every Vector Space has a Basis</title>
 
             <statement>
               <p>
@@ -14724,8 +14669,7 @@
             </p>
           </remark>
 
-          <corollary xml:id="cor-basis-of-subspaces-extent">
-            <title>Basis of Subspaces Extent</title>
+          <corollary xml:id="cor-basis-of-subspaces-extent"><title>Basis of Subspaces Extent</title>
             <statement>
               <p>
                 Suppose <m>F</m> is a field an <m>W</m> is a subspace (i.e., submodule) of the <m>F</m>-vector space (i.e., <m>F</m>-module) <m>V</m>. Then every basis of <m>W</m> extends to a basis of <m>V</m> - that is, if <m>B</m> is a basis of <m>W</m> then there exists a basis <m>\tilde{B}</m> of <m>V</m> such that <m>B</m> is a subset of <m>\tilde{B}</m>.
@@ -14746,7 +14690,7 @@
           </remark>
 
 
-          <lemma xml:id="lem-exchange-lemma">
+          <lemma xml:id="lem-exchange-lemma"><title>Exchange Lemma</title>
             <statement>
               <p>
                 Let <m>F</m> be a field, let <m>B</m> be a basis of an <m>F</m>-vector space <m>V</m>, and let <m>C</m> be any finite set of <m>m</m> linearly independent vectors in <m>V</m>. Then there are distinct vectors <m>v_1, \dots, v_m</m> in <m>B</m>, such that <m>(B \setminus \{v_1, \dots, v_m\}) \cup C</m> is also a basis <m>V</m>.
@@ -14912,10 +14856,9 @@
           
         </section>
 
-        <section xml:id="sec-ranknul">
-          <title>Dimension and Rank-Nullity</title>
+        <section xml:id="sec-ranknul"><title>Dimension and Rank-Nullity</title>
 
-          <definition xml:id="def-dimension-vector-space">
+          <definition xml:id="def-dimension-vector-space"><title>Dimension</title>
             <statement>
               <p>
                 The <em>dimension</em> of a vector space <m>V</m>, denoted <m>\dim_F(V)</m> or <m>\dim(V)</m>, is the cardinality of any of its bases. This is the same as the rank of <m>V</m> as an <m>F</m>-module.
@@ -14923,8 +14866,7 @@
             </statement>
           </definition>
 
-          <theorem xml:id="thm-dimension-theorem">
-            <title>Dimension Theorem</title>
+          <theorem xml:id="thm-dimension-theorem"><title>Dimension Theorem</title>
 
             <statement>
               <p>
@@ -14943,8 +14885,7 @@
             </proof>
           </theorem>
 
-          <example xml:id="ex-dimension-of-fn-in-f">
-            <title>Dimension of <m>F^n</m> in <m>F</m></title>
+          <example xml:id="ex-dimension-of-fn-in-f"><title>Dimension of <m>F^n</m> in <m>F</m></title>
 
             <p>
               <m>\dim_F(F^n)=|\{e_1,e_2,\dots,e_n\}|=n.</m>
@@ -14952,8 +14893,7 @@
 
           </example>
 
-          <lemma xml:id="lem-sublemma">
-            <title>SubLemma</title>
+          <lemma xml:id="lem-sublemma"><title>SubLemma</title>
 
             <statement>
               <p>
@@ -14988,8 +14928,7 @@
             </proof>
           </lemma>
 
-          <example xml:id="exe-sublemma-and-r3">
-            <title>SubLemma and <m>\R^3</m></title>
+          <example xml:id="exe-sublemma-and-r3"><title>SubLemma and <m>\R^3</m></title>
 
             <p>
               For a visual interpretation of the sublemma, suppose <m>V = \R^3</m> and <m>B =\{i,j,k\}</m> is its standard basis. Given <m>w \in\R^3</m>, if <m>w</m> is a non-zero multiple of one of the members of <m>B</m>, say <m>w = r i</m> for <m>r \ne 0</m>, then <m>\{w, j , k\}</m> is also basis of <m>\R^3</m>. If <m>w</m> lies one of the coordinate planes but is not on a axis, say <m>w = ri + s j</m> for <m>r, s \ne 0</m>, then both <m>\{w,j,k\}</m> and <m>\{i,w,k\}</m> are bases. If <m>w</m> lies on none of the coordinate planes, then <m>w = ri + s j + tk</m> for <m>r, s, t \ne 0</m> and each of <m>\{w,j,k\}</m>, <m>\{i,w,k\}</m> and <m>\{i,j,w\}</m> is a basis. So, the sublemma is saying that we can swap in <m>w</m> for any of the basis elements that occur with a non-zero coefficient in the unique expression of <m>w</m> as a linear combination of the basis. (This includes the case when <m>w = 0</m>, since no such basis vectors occur.)
@@ -15009,8 +14948,7 @@
             </p>
           </remark>
 
-          <example xml:id="exe-rn">
-            <title><m>\R^\N</m></title>
+          <example xml:id="exe-rn"><title><m>\R^\N</m></title>
             
             <p>
               Consider <m>V = \R^\N=\R\times \R\times \R \times \dots</m>, and define rules for addition and scaling degree-wise in the evident way.
@@ -15030,8 +14968,7 @@
 
           </example>
 
-          <theorem xml:id="thm-dimension-and-subspaces">
-            <title>Dimension and Subspaces</title>
+          <theorem xml:id="thm-dimension-and-subspaces"><title>Dimension and Subspaces</title>
 
             <statement>
               <p>
@@ -15064,8 +15001,7 @@
             </p>
           </remark>
 
-          <definition xml:id="def-nullspace">
-            <title>Nullspace</title>
+          <definition xml:id="def-nullspace"><title>Nullspace</title>
 
             <statement>
               <p>
@@ -15078,8 +15014,7 @@
             </statement>
           </definition>
 
-          <theorem xml:id="thm-rank-nullity">
-            <title>Rank Nullity Theorem</title>
+          <theorem xml:id="thm-rank-nullity"><title>Rank Nullity Theorem</title>
 
             <statement>
               <p>
@@ -15207,8 +15142,7 @@
             </statement>
           </proposition>
 
-          <proposition>
-            <title>June 2012 (6)</title>
+          <proposition><title>June 2012 (6)</title>
             <statement>
               <p>
                 Let <m>V</m> be the set of all <m>r \times s</m> matrices over a field <m>F</m>, let <m>G</m> denote the group <m>GL_r(F) \times GL_s(F)</m> (where, recall, <m>GL_m(F)</m> is the group of <m>m \times m</m> invertible matrices with entries in <m>F</m>) and set <m>(A,B)\cdot M=AMB^{-1}</m> for all <m>M \in V</m> and <m>(A,B) \in G</m>. 
@@ -15254,8 +15188,7 @@
             </statement>
           </proposition>
 
-          <proposition>
-            <title>June 2012 Problem (4)</title>
+          <proposition><title>June 2012 Problem (4)</title>
             <statement>
               <p>
                 Let <m>V</m> be a subspace of a finite-dimensional vector space, <m>W</m>. Recall that a subspace <m>U</m> of <m>W</m> is called a <em>complement</em> of <m>V</m> if <m>U\oplus V = W</m>. Prove the following statements.
@@ -15459,8 +15392,7 @@
 
       </chapter>
 
-      <chapter xml:id="sec-transforms">
-        <title>Linear Transformations</title>
+      <chapter xml:id="sec-transforms"><title>Linear Transformations</title>
 
         <!--
        ***********************************
@@ -15468,17 +15400,11 @@
        ***********************************
         -->
 
-        <section xml:id="sec-basics">
-          <title>Basics</title>
+        <section xml:id="sec-basics"><title>Basics</title>
 
-          <remark>
-            <p>
-              Recall that when <m>F</m> is a field an <m>F</m>-module homomorphism is called a <m>F</m>-linear transformation. Since every <m>F</m>-vector space has a basis, every linear transformation between finite dimensional vector spaces may be represented by a matrix, as we noted before.
-            </p>
-          </remark>
+          <remark><p>Recall that when <m>F</m> is a field an <m>F</m>-module homomorphism is called a <m>F</m>-linear transformation. Since every <m>F</m>-vector space has a basis, every linear transformation between finite dimensional vector spaces may be represented by a matrix, as we noted before.</p></remark>
 
-          <definition xml:id="def-matrix-of-free-module-homomorphism">
-            <title>Matrix of Free Module Homomorphism</title>
+          <definition xml:id="def-matrix-of-free-module-homomorphism"><title>Matrix of Free Module Homomorphism</title>
             <statement>
               <p>
                 Let <m>R</m> be a non-zero commutative ring and let <m>V,W</m>, be <m>R</m>-modules of finite rank <m>n</m> and <m>m</m>, respectively. (For instance, <m>R</m> could be a field and <m>V</m> and <m>W</m> could be arbitrary finite dimensional vector spaces.) Let <m>B=\{b_1, \dots, b_n\}</m> and <m>C=\{c_1, \dots, c_m\}</m> be <em>ordered</em> bases of <m>V</m> and <m>W</m>. 
@@ -15500,8 +15426,7 @@
             </statement>
           </definition>
 
-          <example xml:id="exe-r-vector-space-of-polynomials-p_n">
-            <title><m>\R</m>-Vector Space of Polynomials (<m>P_n</m>)</title>
+          <example xml:id="exe-r-vector-space-of-polynomials-p_n"><title><m>\R</m>-Vector Space of Polynomials (<m>P_n</m>)</title>
 
             <p>
               Let <m>P_n</m> denote the the <m>\R</m>-vector space of polynomials of degree at most <m>n</m> (including the zero polynomial) and consider the linear transformation <m>\phi :P_3\to P_2</m> given by <m>\phi(f)=f'</m>, i.e. taking the derivative. Take <m>B=\{1,x,x^2,x^3\}</m> for an ordered basis of <m>P_3</m> and <m>C = \{1,x,x^2\}</m> for an ordered basis of <m>P_2</m>. Then for <m>p(x) = 5 + 3x + 2x^2 - 7x^3</m> we have <me>
@@ -15542,11 +15467,9 @@
             </p>
   
 
-          </example>
-         
+          </example>   
 
-          <example xml:id="exe-identity-automorphism-of-free-r-module">
-            <title>Identity Automorphism of Free <m>R</m>-Module</title>
+          <example xml:id="exe-identity-automorphism-of-free-r-module"><title>Identity Automorphism of Free <m>R</m>-Module</title>
             <p>
               If <m>\id_V: V \to V</m> is the identity automorphism of an <m>n</m>-dimensional free <m>R</m>-module <m>V</m>, then for any basis <m>B</m> of <m>V</m> we have <m>\id_V(b_i) = b_i</m> for all <m>i</m> and hence <me>
               [\id_V]^B_B = I_n.
@@ -15554,8 +15477,7 @@
             </p>
           </example>
 
-          <proposition xml:id="prop-when-fmh-matrix-is-invertible">
-            <title>When FMH Matrix is Invertible</title>
+          <proposition xml:id="prop-when-fmh-matrix-is-invertible"><title>When FMH Matrix is Invertible</title>
 
             <statement>
               <p>
@@ -15666,13 +15588,9 @@
           
         </section>
 
-        <section xml:id="subsec-free-modules-and-matrices">
-          <title>Free Modules and Matrices</title>
+        <section xml:id="subsec-free-modules-and-matrices"><title>Free Modules and Matrices</title>
           
-
-          <proposition xml:id="prop-bijection-of-matrices-and-hom-functor">
-            <title>Bijection of Matrices and Hom Functor</title>
-
+          <proposition xml:id="prop-bijection-of-matrices-and-hom-functor"><title>Bijection of Matrices and Hom Functor</title>
             <statement>
               <p>
                 Suppose <m>R</m> is a ring and <m>F</m> and <m>E</m> are free <m>R</m>-modules with ordered bases <m>X = \{x_1, \dots, x_m\}</m> and <m>Y = \{y_1, \dots, y_n\}</m>, respectively. There is a bijective correspondence 
@@ -15685,42 +15603,24 @@
           </proposition>
 
           <remark>
-            <p>
-              It is of paramount importance to realize that the bijection between maps and matrices {}.
-            </p>
+            <p>It is of paramount importance to realize that the bijection between maps and matrices {}.</p>
 
-            <p>
-              In particular, the <m>R</m>-map written as <m>T_A</m> that we associate to the matrix <m>S</m> in this proposition depends on the basis <m>X</m> and <m>Y</m>, and so it should really be written as something like <m>T_A^{X,Y}</m>. I will occasionally do so.
-            </p>
+            <p>In particular, the <m>R</m>-map written as <m>T_A</m> that we associate to the matrix <m>S</m> in this proposition depends on the basis <m>X</m> and <m>Y</m>, and so it should really be written as something like <m>T_A^{X,Y}</m>. I will occasionally do so.</p>
           </remark>
 
           <remark>
-            <p>
-              Let us rephrase the Proposition in terms of usual matrix multiplication in the case when <m>R</m> is {}.
-            </p>
+            <p>Let us rephrase the Proposition in terms of usual matrix multiplication in the case when <m>R</m> is {}.</p>
 
-            <p>
-              Given an <m>R</m>-module homomorphism <m>f: F \to E</m> with <m>F</m> and <m>E</m> as in the proposition, let <m>A</m> be the matrix attached to it using the bases <m>X</m> and <m>Y</m> as described above. Then the diagram #empty
-            </p>
+            <p>Given an <m>R</m>-module homomorphism <m>f: F \to E</m> with <m>F</m> and <m>E</m> as in the proposition, let <m>A</m> be the matrix attached to it using the bases <m>X</m> and <m>Y</m> as described above. Then the diagram #empty</p>
 
-            <p>
-              commutes, where <m>\phi^F_X</m> and <m>\phi^E_Y</m> are defined in  and  and by <m>A: R^m \to R^n</m> we mean the map <m>v \mapsto Av</m> where <m>Av</m> denotes the usual rule for matrix multiplication. (Recall elements of <m>R^m</m> are represented as column vectors.)
-            </p>
+            <p>commutes, where <m>\phi^F_X</m> and <m>\phi^E_Y</m> are defined in  and  and by <m>A: R^m \to R^n</m> we mean the map <m>v \mapsto Av</m> where <m>Av</m> denotes the usual rule for matrix multiplication. (Recall elements of <m>R^m</m> are represented as column vectors.)</p>
 
-            <p>
-              Conversely, given a matrix <m>A</m>, the corresponding map <m>T_A^{X,Y}: F \to E</m> is the unique one causing this square to commute; i.e. <m>T_A^{X,Y} = \phi_Y^E \circ A \circ (\phi^F_X)^{-1}</m>.
-            </p>
+            <p>Conversely, given a matrix <m>A</m>, the corresponding map <m>T_A^{X,Y}: F \to E</m> is the unique one causing this square to commute; i.e. <m>T_A^{X,Y} = \phi_Y^E \circ A \circ (\phi^F_X)^{-1}</m>.</p>
           </remark>
 
-          <remark>
-            <p>
-              For non-commutative rings, there is a version of the previous remark that remains true: Replace the vertical map on the left in diagram with the map given by <m>v \mapsto (v^\tau A^\tau)^\tau</m> where the exponent <m>\tau</m> denotes taking the transpose of a matrix. (If <m>R</m> is commutative, we have <m>(AB)^\tau = (BA)^\tau</m> for all matrices <m>A</m> and <m>B</m> of an appropriate size, and thus <m>(v^\tau A^\tau)^\tau = (A^\tau)^\tau (v^\tau)^\tau = Av</m>. When <m>R</m> is not commutative, it is {} true in general that <m>(AB)^\tau = (BA)^\tau</m>.)
-            </p>
-          </remark>
+          <remark><p>For non-commutative rings, there is a version of the previous remark that remains true: Replace the vertical map on the left in diagram with the map given by <m>v \mapsto (v^\tau A^\tau)^\tau</m> where the exponent <m>\tau</m> denotes taking the transpose of a matrix. (If <m>R</m> is commutative, we have <m>(AB)^\tau = (BA)^\tau</m> for all matrices <m>A</m> and <m>B</m> of an appropriate size, and thus <m>(v^\tau A^\tau)^\tau = (A^\tau)^\tau (v^\tau)^\tau = Av</m>. When <m>R</m> is not commutative, it is {} true in general that <m>(AB)^\tau = (BA)^\tau</m>.)</p></remark>
 
-          <theorem xml:id="thm-matrix-multiplication-is-associative">
-            <title>Matrix Multiplication is Associative</title>
-
+          <theorem xml:id="thm-matrix-multiplication-is-associative"><title>Matrix Multiplication is Associative</title>
             <statement>
               <p>
                 Let <m>R</m> be a commutative ring, let <m>F, E, G</m> be free <m>R</m>-modules having finite bases <m>X = \{x_1, \dots, x_m\}, Y = \{y_1, \dots, y_n\}, Z = \{z_1, \dots, z_p\}</m> of size <m>m,n,p</m>, respectively. Given a <m>n \times m</m> matrix <m>A</m> and a <m>p \times n</m> matrix <m>B</m>, let <m>AB</m> denote the <m>p \times m</m> matrix obtained by the usual formula for matrix multiplication, and let <m>T_A^{X,Y}: F \to E</m>, <m>T_B^{Y,Z}: E \to G</m> and <m>T_{BA}^{X,Z}: F \to G</m> be the maps associated to these matrices relative to the specified bases, as given in Proposition. Then 
@@ -15749,18 +15649,13 @@
             </proof>
           </theorem>
 
-          <remark>
-            <p>
-              The correct version of this for <m>R</m>-non commutative is that <m>T_B \circ T_A = T_{(A^\tau B^\tau)^\tau}</m> (again, with superscripts omitted).
-            </p>
-          </remark>
+          <remark><p>The correct version of this for <m>R</m>-non commutative is that <m>T_B \circ T_A = T_{(A^\tau B^\tau)^\tau}</m> (again, with superscripts omitted).</p></remark>
 
         </section>
 
-        <section xml:id="sec-cob">
-          <title>Change of Basis</title>
+        <section xml:id="sec-cob"><title>Change of Basis</title>
 
-          <definition xml:id="def-change-of-basis-matrix">
+          <definition xml:id="def-change-of-basis-matrix"><title>Change of Basis Matrix (CoB)</title>
             <statement>
               <p>
                 Let <m>V</m> be a finite rank free module over a commutative ring <m>R</m>, and let <m>B</m> and <m>B'</m> be bases of <m>V</m>. Let <m>\id_V</m> be the identity map on <m>V</m>. Then <m>[\id_V]_B^{B'}</m> is called the <em>change of basis matrix</em> from <m>B</m> to <m>B'.</m>
@@ -15776,8 +15671,7 @@
             </p>
           </remark>
 
-          <example xml:id="exe-cob-matrix-and-standard-free-module">
-            <title>CoB Matrix and Standard Free Module</title>
+          <example xml:id="exe-cob-matrix-and-standard-free-module"><title>CoB Matrix and Standard Free Module</title>
 
             <p>
               Say <m>V = R^n</m>, <m>B</m> is the standard basis (so <m>b_i</m> is a column vector with a <m>1</m> in the <m>i</m>-th position and <m>0</m>'s elsewhere). Note that <m>[v]^B = v</m> for all <m>v</m>.
@@ -15788,8 +15682,7 @@
             </p>
           </example>
 
-          <example xml:id="exe-cob-and-p_n">
-            <title>CoB and <m>P_n</m></title>
+          <example xml:id="exe-cob-and-p_n"><title>CoB and <m>P_n</m></title>
 
             <p>
               Consider <m>V = P_2</m>, let <m>B = \{1, x, x^2\}</m> and <m>B' = \{1,x-2,(x-2)^2\}</m> be bases of <m>V</m>. We calculate the change of basis matrix. We have <me>\begin{aligned}\id_V(1) &amp;=1 ,\\
@@ -15807,8 +15700,7 @@
             
           </example>
 
-          <proposition xml:id="prop-cob-and-identity">
-            <title>CoB and Identity</title>
+          <proposition xml:id="prop-cob-and-identity"><title>CoB and Identity</title>
 
             <statement>
               <p>
@@ -15823,8 +15715,7 @@
             </proof>
           </proposition>
 
-          <definition xml:id="def-equivalent-matrices">
-            <title>Equivalent Matrices</title>
+          <definition xml:id="def-equivalent-matrices"><title>Equivalent Matrices</title>
 
             <statement>
               <p>
@@ -15833,14 +15724,9 @@
             </statement>
           </definition>
 
-          <remark>
-            <p>
-              With this bit of terminology, we can say that two matrices representing the same linear transformation with respect to a different pair of bases are equivalent. The converse is also true: If two matrices are equivalent, then they represent the same linear transformation with respect to different bases.
-            </p>
-          </remark>
+          <remark><p>With this bit of terminology, we can say that two matrices representing the same linear transformation with respect to a different pair of bases are equivalent. The converse is also true: If two matrices are equivalent, then they represent the same linear transformation with respect to different bases.</p></remark>
 
-          <theorem xml:id="thm-finding-equivalent-matrices">
-            <title>Finding Equivalent Matrices</title>
+          <theorem xml:id="thm-finding-equivalent-matrices"><title>Finding Equivalent Matrices</title>
 
             <statement>
               <p>
@@ -15894,8 +15780,7 @@
             </proof>
           </theorem>
 
-          <corollary xml:id="cor-every-mtimes-n-matrix-equivalent-to-unique-matrix">
-            <title>Every <m>m\times n</m> Matrix Equivalent to Unique Matrix</title>
+          <corollary xml:id="cor-every-mtimes-n-matrix-equivalent-to-unique-matrix"><title>Every <m>m\times n</m> Matrix Equivalent to Unique Matrix</title>
 
             <statement>
               <p>
@@ -15926,8 +15811,7 @@
             </proof>
           </corollary>
 
-          <proposition xml:id="prop-finding-unique-equivalent-matrix">
-            <title>Finding Unique Equivalent Matrix</title>
+          <proposition xml:id="prop-finding-unique-equivalent-matrix"><title>Finding Unique Equivalent Matrix</title>
 
             <statement>
               <p>
@@ -15956,8 +15840,6 @@
             </proof>
           </proposition>
       
-
-
           <exercises>
 
             <exercisegroup>
@@ -16113,11 +15995,9 @@
           
         </section>
 
-        <section xml:id="sec-elematix">
-          <title>Elementary Matrices</title>
+        <section xml:id="sec-elematix"><title>Elementary Matrices</title>
 
-            <definition xml:id="def-elementary-basis-change-operations">
-              <title>Elementary Basis Change Operations</title>
+            <definition xml:id="def-elementary-basis-change-operations"><title>Elementary Basis Change Operations</title>
               <statement>
                 <p>
                   Let <m>R</m> be a commutative ring with <m>1 \neq 0</m>, let <m>M</m> be a free <m>R</m>-module of finite rank <m>n</m>, and let <m>B = \{b_1,\dots ,b_n\}</m> be an ordered basis for <m>M</m>. An <em>elementary basis change operation</em> on the basis <m>B</m> is one of the following three types of operations: 
@@ -16144,8 +16024,7 @@
               </statement>
             </definition>
 
-            <definition xml:id="def-elementary-row-operations">
-              <title>Elementary Row Operations</title>
+            <definition xml:id="def-elementary-row-operations"><title>Elementary Row Operations</title>
               <statement>
                 <p>
                   Let <m>R</m> be a commutative ring with <m>1 \neq 0</m>. An <em>elementary row (column) operation</em> on a matrix <m>A \in \Mat_{m,n}(R)</m> is one of the following three types of operations: 
@@ -16172,8 +16051,7 @@
               </statement>
             </definition>
 
-            <definition xml:id="def-elementary-matrix">
-              <title>Elementary Matrix</title>
+            <definition xml:id="def-elementary-matrix"><title>Elementary Matrix</title>
 
               <statement>
                 <p>
@@ -16202,14 +16080,9 @@
               </statement>
             </definition>
 
-            <remark>
-              <p>
-                In particular, the Lemma and the fact that elementary matrices are invertible shows that if <m>A</m> is an <m>n \times n</m> invertible matrix, then the result of performing elementary row or column operations on <m>A</m> results in another invertible matrix.
-              </p>
-            </remark>
+            <remark><p>In particular, the Lemma and the fact that elementary matrices are invertible shows that if <m>A</m> is an <m>n \times n</m> invertible matrix, then the result of performing elementary row or column operations on <m>A</m> results in another invertible matrix.</p></remark>
 
-            <theorem xml:id="thm-properties-of-elementary-matrices">
-              <title>Properties of Elementary Matrices</title>
+            <theorem xml:id="thm-properties-of-elementary-matrices"><title>Properties of Elementary Matrices</title>
               <statement>
                 <p>
                   Let <m>E</m> be an <m>n \times n</m> elementary matrix. 
@@ -16236,15 +16109,9 @@
               </statement>
             </theorem>
 
-            <remark>
-              <p>
-                This is true for commutative rings in general, but the proof is much harder.
-              </p>
-            </remark>
+            <remark><p>This is true for commutative rings in general, but the proof is much harder.</p></remark>
 
-            <lemma xml:id="lem-matrix-invertible-iff-columns-span-fn">
-              <title>Matrix Invertible iff Columns Span <m>F^n</m></title>
-
+            <lemma xml:id="lem-matrix-invertible-iff-columns-span-fn"><title>Matrix Invertible iff Columns Span <m>F^n</m></title>
               <statement>
                 <p>
                   Let <m>F</m> be a field and let <m>A</m> be an <m>n \times n</m> matrix for <m>n \geq 1</m>. <m>A</m> is invertible if and only if its columns span <m>F^n</m>.
@@ -16278,8 +16145,7 @@
               </p>
             </remark>
 
-            <theorem xml:id="thm-gauss">
-              <title>Gauss</title>
+            <theorem xml:id="thm-gauss"><title>Gauss</title>
 
               <statement>
                 <p>
@@ -16304,7 +16170,7 @@
               </proof>
             </theorem>
 
-            <corollary xml:id="cor-invertible-matrices-and-identity-matrix">
+            <corollary xml:id="cor-invertible-matrices-and-identity-matrix"><title>Invertible Matrices and the Identity Matrix</title>
               <statement>
                 <p>
                   If <m>A</m> is invertible then it can be transformed into <m>I_n</m> via elementary column and column operations of type I and II.
@@ -16318,7 +16184,7 @@
               </proof>
             </corollary>
 
-            <corollary xml:id="cor-square-matrix-invertible-iff-pi-of-elementary-matrices">
+            <corollary xml:id="cor-square-matrix-invertible-iff-pi-of-elementary-matrices"><title>Square Matrix Invertibility</title>
               <statement>
                 <p>
                   If <m>F</m> is a field, then a square matrix is invertible if and only if it is a product of elementary matrices.
@@ -16336,7 +16202,7 @@
               </proof>
             </corollary>
 
-            <corollary xml:id="cor-matrices-equivalent-iff-path-with-operations">
+            <corollary xml:id="cor-matrices-equivalent-iff-path-with-operations"><title>Equivalent Matrices Characterization</title>
               <statement>
                 <p>
                   Given two <m>m \times n</m> matrices <m>A</m> and <m>B</m> with entries in a field, <m>A</m> and <m>B</m> are equivalent if and only if each can be transformed to the other via elementary column and column operations.
@@ -16474,10 +16340,9 @@
           
         </section>
 
-        <section xml:id="sec-operator">
-          <title>Linear Operators on Free Modules</title>
+        <section xml:id="sec-operator"><title>Linear Operators on Free Modules</title>
 
-          <definition xml:id="def-linear-operator">
+          <definition xml:id="def-linear-operator"><title>Linear Operator</title>
             <statement>
               <p>
                 By a <em>linear operator</em> (or <m>R</m>-linear operator) on <m>V</m> we mean an <m>R</m>-module endomorphism <m>g: V \to V</m> of <m>V</m>.
@@ -16485,14 +16350,9 @@
             </statement>
           </definition>
 
-          <remark>
-            <p>
-              Let <m>R</m> be a commutative ring (with <m>1 \ne 0</m>) and assume <m>V</m> is a free <m>R</m>-module of finite rank <m>n</m>. Upon choosing an ordered basis <m>B = \{b_1, \dots, b_n\}</m> of <m>V</m>, we may represent <m>g</m> as a <m>n \times n</m> matrix <m>X = [g]_B^B</m> — a key point here is that for operators we usually use the same basis for both the source and target of the map.
-            </p>
-          </remark>
+          <remark><p>Let <m>R</m> be a commutative ring (with <m>1 \ne 0</m>) and assume <m>V</m> is a free <m>R</m>-module of finite rank <m>n</m>. Upon choosing an ordered basis <m>B = \{b_1, \dots, b_n\}</m> of <m>V</m>, we may represent <m>g</m> as a <m>n \times n</m> matrix <m>X = [g]_B^B</m> — a key point here is that for operators we usually use the same basis for both the source and target of the map.</p></remark>
 
-          <example xml:id="ex-representing-bases">
-            <title>Representing Bases</title>
+          <example xml:id="ex-representing-bases"><title>Representing Bases</title>
             
             <p>
               Here is a concrete example. Let <m>R = \R</m>, <m>V</m> the collection of polynomials in <m>x</m> with coefficients in <m>\R</m> of degree at most <m>m</m>. Let <m>D: V \to V</m> be the map sending a polynomial to its derivative. The most obvious choice for a bases of <m>V</m> is <m>1, x, \dots, x^m</m>. With respect to this basis, the map <m>D</m> is represented by the <m>n \times n</m> matrix <me>
@@ -16523,8 +16383,7 @@
             </p>
           </remark>
 
-          <definition xml:id="def-similar-matrices">
-            <title>Similar Matrices</title>
+          <definition xml:id="def-similar-matrices"><title>Similar Matrices</title>
 
             <statement>
               <p>
@@ -16547,8 +16406,7 @@
             </p>
           </remark>
 
-          <proposition xml:id="prop-linear-operators-and-bases">
-            <title>Linear Operators and Bases</title>
+          <proposition xml:id="prop-linear-operators-and-bases"><title>Linear Operators and Bases</title>
 
             <statement>
               <p>
@@ -16580,98 +16438,91 @@
             </proof>
           </proposition>
 
+          <paragraphs xml:id="problem-31">
+            <title>Problem</title>
+  
+            <p>
+              Let <m>F</m> be a field and consider a monic polynomial <m>f(x)=x^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0</m> in <m>F[x]</m> with <m>n \geqslant 1</m>. 
+              <ol>
+                <li>
+                  <p>
+                    Show that the principal ideal <m>(f(x))</m> is a subspace of the <m>F</m>-vector space <m>F[x]</m>. 
+                  </p>
+                </li>
 
-     
-      
-      
-      
-    
-      
-              <paragraphs xml:id="problem-31">
-                <title>Problem</title>
-      
-                <p>
-                  Let <m>F</m> be a field and consider a monic polynomial <m>f(x)=x^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0</m> in <m>F[x]</m> with <m>n \geqslant 1</m>. 
-                  <ol>
-                    <li>
-                      <p>
-                        Show that the principal ideal <m>(f(x))</m> is a subspace of the <m>F</m>-vector space <m>F[x]</m>. 
-                      </p>
-                    </li>
+                <li>
+                  <p>
+                    Show that the set <m>B=\{\ov{1},\ov{x},\ldots,\ov{x^{n-1}}\}</m>, where <m>\ov{x^i}=x^i+(f(x))</m>, is a basis for the quotient <m>F</m>-vector space <m>F[x]/(f(x))</m>. 
+                  </p>
+                </li>
 
-                    <li>
-                      <p>
-                        Show that the set <m>B=\{\ov{1},\ov{x},\ldots,\ov{x^{n-1}}\}</m>, where <m>\ov{x^i}=x^i+(f(x))</m>, is a basis for the quotient <m>F</m>-vector space <m>F[x]/(f(x))</m>. 
-                      </p>
-                    </li>
+                <li>
+                  <p>
+                    Consider the linear transformation <m>\l_x : F [x]/(f (x)) \to F[x]/(f(x))</m> defined by <m>\l_x(v)=\ov{x}v</m> for any <m>v\in F [x]/(f (x))</m>. Find the matrix representing <m>\l_x</m> in the basis <m>B</m> from part (b).                     
+                  </p>
+                </li>
+              </ol>
+            </p>
+  
+          </paragraphs>
+      
+          <paragraphs xml:id="problem-32">
+            <title>Problem</title>
+  
+            <p>
+              Let <m>F</m> be a field, let <m>V</m> and <m>W</m> be vector spaces over <m>F</m>, let <m>a\!: V \to V</m> and <m>b\!:W \to W</m> be linear transformations and let <m>V_a</m> and <m>W_b</m> be the <m>F[x]</m>-modules they determine. 
+              <ol>
+                <li>
+                  <p>
+                    Show that a function <m>g: V_a \to W_b</m> is an <m>F[x]</m>-module homomorphism if and only if 
+                    <ul>
+                      <li>
+                        <p>
+                          <m>g: V \to W</m> is a linear transformation and 
+                        </p>
+                      </li>
 
-                    <li>
-                      <p>
-                        Consider the linear transformation <m>\l_x : F [x]/(f (x)) \to F[x]/(f(x))</m> defined by <m>\l_x(v)=\ov{x}v</m> for any <m>v\in F [x]/(f (x))</m>. Find the matrix representing <m>\l_x</m> in the basis <m>B</m> from part (b).                     
-                      </p>
-                    </li>
-                  </ol>
-                </p>
-      
-              </paragraphs>
-      
-              <paragraphs xml:id="problem-32">
-                <title>Problem</title>
-      
-                <p>
-                  Let <m>F</m> be a field, let <m>V</m> and <m>W</m> be vector spaces over <m>F</m>, let <m>a\!: V \to V</m> and <m>b\!:W \to W</m> be linear transformations and let <m>V_a</m> and <m>W_b</m> be the <m>F[x]</m>-modules they determine. 
-                  <ol>
-                    <li>
-                      <p>
-                        Show that a function <m>g: V_a \to W_b</m> is an <m>F[x]</m>-module homomorphism if and only if 
-                        <ul>
-                          <li>
-                            <p>
-                              <m>g: V \to W</m> is a linear transformation and 
-                            </p>
-                          </li>
+                      <li>
+                        <p>
+                          <m>g \circ a = b \circ g</m>. 
+                        </p>
+                      </li>
+                    </ul>
+                  </p>
+                </li>
 
-                          <li>
-                            <p>
-                              <m>g \circ a = b \circ g</m>. 
-                            </p>
-                          </li>
-                        </ul>
-                      </p>
-                    </li>
+                <li>
+                  <p>
+                    Suppose that <m>V = F^m = W</m>, and let <m>A, B \in \M_m(F)</m> be the matrices representing the linear transformations <m>a</m> and <m>b</m>, respectively, in the standard basis of <m>F^m</m>. Show that there is an <m>F[x]</m>-module isomorphism <m>V_a \cong W_b</m> if and only if the matrices <m>A</m> and <m>B</m> are similar.
+                  </p>
+                </li>
+              </ol>
+            </p>
+  
+          </paragraphs>
+      
+          <paragraphs xml:id="problem-33">
+            <title>Problem</title>
+  
+            <p>
+              Determine, with justification, if the following two matrices with complex entries are similar.
+            </p>
 
-                    <li>
-                      <p>
-                        Suppose that <m>V = F^m = W</m>, and let <m>A, B \in \M_m(F)</m> be the matrices representing the linear transformations <m>a</m> and <m>b</m>, respectively, in the standard basis of <m>F^m</m>. Show that there is an <m>F[x]</m>-module isomorphism <m>V_a \cong W_b</m> if and only if the matrices <m>A</m> and <m>B</m> are similar.
-                      </p>
-                    </li>
-                  </ol>
-                </p>
-      
-              </paragraphs>
-      
-              <paragraphs xml:id="problem-33">
-                <title>Problem</title>
-      
-                <p>
-                  Determine, with justification, if the following two matrices with complex entries are similar.
-                </p>
+            <p>
 
-                <p>
-
-                
-      
-                    <m>A = \begin{bmatrix}
-                    0 &amp; -4 &amp; 0 &amp; 0 \\
-                    1 &amp; 4 &amp; 0 &amp; 0 \\
-                    0 &amp; 0 &amp; 0 &amp; -4 \\
-                    0 &amp; 0 &amp; 1 &amp; 4
-                \end{bmatrix} \textrm{ and } B = \begin{bmatrix}
-                    2 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 2 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 2 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 2
-                \end{bmatrix}.</m>
-              </p>
-      
-              </paragraphs>
+            
+  
+                <m>A = \begin{bmatrix}
+                0 &amp; -4 &amp; 0 &amp; 0 \\
+                1 &amp; 4 &amp; 0 &amp; 0 \\
+                0 &amp; 0 &amp; 0 &amp; -4 \\
+                0 &amp; 0 &amp; 1 &amp; 4
+            \end{bmatrix} \textrm{ and } B = \begin{bmatrix}
+                2 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 2 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 2 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 2
+            \end{bmatrix}.</m>
+          </p>
+  
+          </paragraphs>
  
 
 
@@ -16801,8 +16652,7 @@
 
       </chapter>
 
-      <chapter xml:id="ch-modgen">
-        <title>Finitely Generated Modules over PIDs</title>
+      <chapter xml:id="ch-modgen"><title>Finitely Generated Modules over PIDs</title>
 
         <!--
        ***************
@@ -16810,8 +16660,7 @@
        ****************
         -->
 
-        <section xml:id="sec-modpres">
-          <title>Finitely Presented Modules</title>
+        <section xml:id="sec-modpres"><title>Finitely Presented Modules</title>
 
           <remark>
             <p>
@@ -16819,8 +16668,7 @@
             </p>
           </remark>
 
-          <definition xml:id="def-module-presentation">
-            <title><m>R</m>-Module Presentation</title>
+          <definition xml:id="def-module-presentation"><title><m>R</m>-Module Presentation</title>
             <statement>
               <p>
                 Let <m>R</m> be a non-zero commutative ring, let <m>A \in \Mat_{m,n}(R)</m>, and let <m>T_A: R^n \to R^m</m> be the <m>R</m>-module homomorphism represented by <m>A</m> with respect to the standard bases; that is, define <m>T_A(v)=A \cdot v</m>. The <m>R</m>-<em>module presented by</em> <m>A</m> is the <m>R</m>-module <m>\coker(T_A) = R^m/\im(T_A)</m>.
@@ -16832,8 +16680,7 @@
             </statement>
           </definition>
 
-          <example xml:id="exe-z-module-presentation">
-            <title><m>\Z</m>-Module Presentation</title>
+          <example xml:id="exe-z-module-presentation"><title><m>\Z</m>-Module Presentation</title>
 
             <p>
               What <m>\Z</m>-module <m>M</m> is presented by <me>
@@ -16908,7 +16755,7 @@
             </p>
           </example>
 
-          <theorem xml:id="thm-matrices-modules-and-isomorphisms">
+          <theorem xml:id="thm-matrices-modules-and-isomorphisms"><title>Matrices, Modules, and Isomorphisms</title>
             <statement>
               <p>
                 Let <m>R</m> be a non-zero commutative ring and let <m>A \in \Mat_{m \times n}(R)</m> and <m>B \in Mat_{m' \times n'}(R)</m> for some <m>m,n,m',n' \geq 1</m>. Then <m>A</m> and <m>B</m> present isomorphic <m>R</m>-modules if <m>B</m> can be obtained from <m>A</m> by any finite sequence of operations of the following form: 
@@ -17003,7 +16850,7 @@
             </p>
           </remark>
 
-          <lemma xml:id="lem-diagonal-presentation">
+          <lemma xml:id="lem-diagonal-presentation"><title>Diagonal Presentation</title>
             <statement>
               <p>
                 Suppose <m>R</m> is a commutative ring and <m>A = (a_{i,j})</m> is a <m>m \times n</m> matrix such that <m>a_{i,j} = 0</m> for all <m>i \ne j</m> and set <m>d_i = a_{i,i}</m> for all <m>1 \leq i \leq \min\{m,n\}</m>. If <m>n \geq m</m> then <me>\coker(T_A) \cong R/R \cdot d_1 \oplus R/R\cdot d_2 \oplus \cdots \oplus R/R \cdot d_m </me> and if <m>n \leq m</m> then<me>\coker(T_A) \cong R/R \cdot d_1 \oplus R/R\cdot d_2 \oplus \cdots \oplus R/R \cdot d_n \oplus R^{m-n}.</me>
@@ -17125,11 +16972,9 @@
           
         </section>
 
-        <section xml:id="sec-snf">
-          <title>Smith Normal Form</title>
+        <section xml:id="sec-snf"><title>Smith Normal Form</title>
 
-          <theorem xml:id="thm-snf">
-            <title>Smith Normal Form</title>
+          <theorem xml:id="thm-snf"><title>Smith Normal Form</title>
 
             <statement>
               <p>
@@ -17208,8 +17053,7 @@
             </p>
           </remark>
 
-          <corollary xml:id="cor-ftfpmed-first-version">
-            <title>FTFPMED: First Version</title>
+          <corollary xml:id="cor-ftfpmed-first-version"><title>FTFPMED: First Version</title>
             <statement>
               <p>
                 If <m>R</m> is a Euclidean domain and <m>M</m> is a finitely presented <m>R</m>-module, then <m>M</m> is isomorphic to a direct sum of cyclic modules: <me>M \cong R/d_1 \oplus \cdots \oplus R/d_l \oplus R^a</me>for some <m>a \geq 0</m> and some non-zero, non-invertible elements <m>d_1, \dots, d_l \in R</m> such that <m>d_1 \mid d_2 \mid \cdots \mid d_l</m>.
@@ -17223,7 +17067,7 @@
             </proof>
           </corollary>
 
-          <example xml:id="exe-special-case-of-snf">
+          <example xml:id="exe-special-case-of-snf"><title>Special Case of SNF</title>
             <p>
               Suppose <m>R</m> is a Euclidean domain and <m>A = (x_1, \dots, x_n)</m> is a <m>1 \times n</m> matrix. Column operations of type I in this case amount to adding a multiple of one element in this list to another one. The SNF Theorem in this case amounts to the Euclidean algorithm: By adding a suitable multiple of the one entry in the first two positions to the other, in the usual back-and-forth way, we arrive at <m>(g_1, 0, x_3, \dots, x_n)</m> where <m>g_1 = \gcd(x_1, x_2)</m>. Repeat this for columns <m>1</m> and <m>3</m> to arrive at <m>(g_2, 0, 0, x_4, \dots, x_n)</m> where <m>g_2 = \gcd(g_1, x_3) = \gcd(x_1, x_2, x_3)</m>. Continuing in this fashion we arrive at <m>(g, 0, \dots, 0)</m> where <m>g = \gcd(x_1, \dots, x_n)</m>.
             </p>
@@ -17233,8 +17077,7 @@
             </p>
           </example>
 
-          <example xml:id="exe-finding-snf">
-            <title>Finding SNF</title>
+          <example xml:id="exe-finding-snf"><title>Finding SNF</title>
     
             <p>
               Consider the matrix with entries in <m>\Z</m> <me>
@@ -17258,7 +17101,7 @@
             </p>
           </remark>
 
-          <lemma xml:id="lem-gcd-of-a-matrix-in-pid">
+          <lemma xml:id="lem-gcd-of-a-matrix-in-pid"><title>Matrix GCDs in PIDs</title>
             <statement>
               <p>
                 Suppose <m>R</m> is a PID and <m>A</m> is a matrix with entries in <m>R</m> and <m>B</m> is a matrix obtained from <m>A</m> via elementary column and column operations. Then <m>\gcd(A) = \gcd(B)</m> where the gcd of a matrix is defined to be the gcd of all of its entries.
@@ -17266,8 +17109,7 @@
             </statement>
           </lemma>
 
-          <definition xml:id="def-minor">
-            <title>Minor</title>
+          <definition xml:id="def-minor"><title>Minor</title>
 
             <statement>
               <p>
@@ -17276,7 +17118,7 @@
             </statement>
           </definition>
 
-          <lemma xml:id="lem-ideals-generated-by-minors">
+          <lemma xml:id="lem-ideals-generated-by-minors"><title>Ideals Generated by Minors</title>
             <statement>
               <p>
                 For any commutative ring <m>R</m> and matrix <m>A \in \Mat_{m \times n}(R)</m>, if <m>B</m> is obtained from <m>A</m> via an elementary column or column operation, then the ideal of <m>R</m> generated by all the <m>k \times k</m> minors of <m>B</m> equals the ideal of <m>R</m> generated by all the <m>k \times k</m> minors of <m>A</m>.
@@ -17284,8 +17126,7 @@
             </statement>
           </lemma>
 
-          <theorem xml:id="thm-smith-normal-form-is-unique">
-            <title>Smith Normal Form is Unique</title>
+          <theorem xml:id="thm-smith-normal-form-is-unique"><title>Smith Normal Form is Unique</title>
             <statement>
               <p>
                 Assume <m>R</m> is a PID and <m>A \in \Mat_{m \times n}(R)</m>. Suppose <m>S \in \Mat_{m \times n}(R)</m> can be obtained from <m>A</m> via a sequence of elementary column and column operations and that <m>S</m> is diagonal with diagonal entries <m>d_1, d_2, \dots</m> such that <m>d_1 \mid d_2 \mid \cdots</m>. Then <me>d_1 = \gcd_1(A), d_2 = \frac{\gcd_2(A)}{\gcd_1(A)}, d_3 = \frac{\gcd_3(A)}{\gcd_2(A)}, \cdots.</me>In particular, the SNF of a matrix is unique up to associates.
@@ -17303,9 +17144,7 @@
             <p>
               So, another way of finding the SNF of a matrix <m>A</m> with entries in a Euclidean domain is to calculate <m>\gcd_k(A)</m> for all <m>k</m>. This is not practical except in very special cases.
             </p>
-          </remark>
-
-        
+          </remark>    
 
           <exercises>
 
@@ -17450,8 +17289,7 @@
           
         </section>
 
-        <section xml:id="sec-noeth">
-          <title>Noetherian Rings</title>
+        <section xml:id="sec-noeth"><title>Noetherian Rings</title>
 
           <remark>
             <p>
@@ -17469,8 +17307,7 @@
             </p>
           </remark>
 
-          <definition xml:id="def-ascending-chain-condition">
-            <title>Ascending Chain Condition</title>
+          <definition xml:id="def-ascending-chain-condition"><title>Ascending Chain Condition</title>
             <statement>
               <p>
                 A commutative ring <m>R</m> has the <em>ascending chain condition</em> (on ideals) if given any chain of ideals in <m>R</m> of the form <me>I_1 \subseteq I_2 \subseteq \cdots</me>there is an <m>N</m> such that <me>I_N = I_{N+1} = \cdots.</me>
@@ -17478,8 +17315,7 @@
             </statement>
           </definition>
 
-          <lemma xml:id="lem-noetherian-rings">
-            <title>Noetherian Rings</title>
+          <lemma xml:id="lem-noetherian-rings"><title>Noetherian Rings</title>
             <statement>
               <p>
                 Suppose <m>R</m> is a commutative ring. The following conditions are equivalent: 
@@ -17518,7 +17354,7 @@
             </proof>
           </lemma>
 
-          <theorem xml:id="thm-hilberts-basis-theorem">
+          <theorem xml:id="thm-hilberts-basis-theorem"><title>Hilbert's Basis Theorem</title>
             <statement>
               <p>
                 If <m>R</m> is a noetherian ring, then the polynomial rings <m>R[x_1,\dots,x_d]</m> and <m>R[[ x_1,\dots,x_d]]</m> are noetherian for any <m>d \geqslant 1</m>.
@@ -17526,7 +17362,7 @@
             </statement>
           </theorem>
 
-          <proposition xml:id="prop-submodules-of-fg-modules-are-fg-when-noetherian">
+          <proposition xml:id="prop-submodules-of-fg-modules-are-fg-when-noetherian"><title>Finitely Generated Modules in Noetherian Rings</title>
             <statement>
               <p>
                 If <m>R</m> is a noetherian commutative ring, then every submodule of a finitely generated module is again finitely generated.
@@ -17560,7 +17396,7 @@
             </p>
           </remark>
 
-          <corollary xml:id="cor-fg-modules-finitely-presented-when-noetherian">
+          <corollary xml:id="cor-fg-modules-finitely-presented-when-noetherian"><title>Finite Presentations in Noetherian Rings</title>
             <statement>
               <p>
                 Any finitely generated module <m>M</m> over a noetherian ring <m>R</m> has a finite presentation; that is, given such a module over such a ring, there exists an <m>m \times n</m> matrix <m>A</m> in <m>R</m> and an isomorphism <me>M\cong R^m/\im(T_A).</me>
@@ -17584,7 +17420,7 @@
             </proof>
           </corollary>
 
-          <exercise>
+          <exercise><title>Quotient Rings Noetherian in Noetherian Rings</title>
             <statement>
               <p>
                 Let <m>R</m> be a commutative ring and <m>I</m> an ideal of <m>R</m>. Show that if <m>R</m> is noetherian then <m>R/I</m> is also noetherian.
@@ -17594,11 +17430,9 @@
 
         </section>
 
-        <section xml:id="sec-modclass">
-          <title>Classifications</title>
+        <section xml:id="sec-modclass"><title>Classifications</title>
 
-          <theorem xml:id="thm-ftfgmopidiff">
-            <title>Fundamental Theorem of Finitely Generated Modules over a PID, Invariant Factors Form</title>
+          <theorem xml:id="thm-ftfgmopidiff"><title>Fundamental Theorem of Finitely Generated Modules over a PID, Invariant Factors Form</title>
             <statement>
               <p>
                  Let <m>R</m> be a PID and let <m>M</m> be a finitely generated module. Then there exist integers <m>r \geq 0, k \geq 0</m>, and non-zero, non-unit elements <m>d_1,\ldots, d_k</m> of <m>R</m> satisfying <m>d_1 \mid d_2 \mid \dots \mid d_k</m> such that <me>M \cong R^r \oplus R/(d_1) \oplus \dots \oplus R/(d_k).</me> Moreover <m>r</m> and <m>k</m> are uniquely determined by <m>M</m>, and the <m>d_i</m>'s are unique up to associates.
@@ -17606,16 +17440,15 @@
             </statement>
           </theorem>
 
-          <definition xml:id="def-invariant-factors">
+          <definition xml:id="def-invariant-factors"><title>Invariant Factors</title>
             <statement>
               <p>
-                The polynomials <m>f_1, \dots, f_s</m> occurring in the Theorem are called the {} of the operator <m>g</m>.
+                The polynomials <m>f_1, \dots, f_s</m> occurring in the Theorem are called the <em>invariant factors</em> of the operator <m>g</m>.
               </p>
             </statement>
           </definition>
 
-          <corollary xml:id="cor-ftfgmopriff">
-            <title>FTFGMOPRIFF</title>
+          <corollary xml:id="cor-ftfgmopriff"><title>FTFGMOPRIFF</title>
             <statement>
               <p>
                 Let <m>k</m> be a field and <m>k[x]</m> be the ring of polynomials with coefficients in <m>k</m> in one variable <m>x</m>. If <m>M</m> a finitely generated <m>k[x]</m>-module then <me>M \cong k[x]^r \oplus k[x]/(f_1(x)) \oplus \cdots \oplus k[x]/(f_s(x))</me>for some <m>r \geq 0</m>, <m>s \geq 0</m> and non-constant monic polynomials <m>f_1, \dots, f_s</m> such that <m>f_1 \mid f_2 \mid \cdots \mid f_s.</m> Moreover, <m>r</m>, <m>s</m> and <m>f_1, \dots, f_s</m> are unique.
@@ -17629,8 +17462,7 @@
             </proof>
           </corollary>
 
-          <example xml:id="exe-kx-modules-of-dimension-4">
-            <title><m>k[x]</m>-Modules of Dimension <m>4</m></title>
+          <example xml:id="exe-kx-modules-of-dimension-4"><title><m>k[x]</m>-Modules of Dimension <m>4</m></title>
 
             <p>
               Let <m>k</m> be a field and <m>M</m> a <m>k[x]</m>-module such that the dimension of <m>M</m> as a <m>k</m>-vector space is <m>4.</m> What are the possibilities for <m>M</m> up to isomorphism?
@@ -17673,8 +17505,7 @@
             </p>
           </example>
 
-          <theorem xml:id="thm-sunzis-remainder-theorem-rings">
-            <title>Sunzi's Remainder Theorem (Rings)</title>
+          <theorem xml:id="thm-sunzis-remainder-theorem-rings"><title>Sunzi's Remainder Theorem (Rings)</title>
             <statement>
               <p>
                 Suppose <m>I</m> and <m>J</m> are ideals in a commutative ring <m>R</m> such that <m>I + J = R</m>. Then <m>I \cap J = I \cdot J</m> (where <m>I \cdot J</m> is defined as the set of all sums of products of the form <m>ab</m> with <m>a \in I</m> and <m>b \in J</m>) and there is an isomorphism of <m>R</m>-modules <me>R/(I J) \cong R/I \oplus R/J.</me> In particular, if <m>R</m> is a UFD and <m>x</m> and <m>y</m> are relatively prime elements of <m>R</m>, then <me>R/(xy) \cong R/x \oplus R/y</me>
@@ -17696,8 +17527,7 @@
             </proof>
           </theorem>
 
-          <theorem xml:id="thm-ftfgmopidedf">
-            <title>FTFGMOPIDEDF</title>
+          <theorem xml:id="thm-ftfgmopidedf"><title>FTFGMOPIDEDF</title>
             <statement>
               <p>
                 Let <m>R</m> be a PID and let <m>M</m> be a finitely generated <m>R</m>-module. Then there exist integers <m>r \geq 0, k \geq 0</m>, prime elements <m>p_1,\ldots,p_s</m> of <m>R</m> (not necessarily distinct), and integers <m>e_1,\ldots ,e_s \geq 1</m>, such that <me>M \cong R^r \oplus R/(p_1^{e_1}) \oplus \cdots \oplus R/(p_s^{e_s}).</me>Moreover <m>r</m> and <m>k</m> are uniquely determined by <m>M</m>, and the list <m>p_1^{e_1},\ldots, p_s^{e_s}</m> is unique up to associates and reordering.
@@ -17715,8 +17545,7 @@
             </proof>
           </theorem>
 
-          <definition xml:id="def-elementary-divisor-module">
-            <title>Elementary Divisor (Module)</title>
+          <definition xml:id="def-elementary-divisor-module"><title>Elementary Divisor (Module)</title>
             <statement>
               <p>
                 With the notation in the Theorem above, the elements <m>p_1^{e_1},\ldots, p_s^{e_s}</m> of <m>R</m> are the elementary divisors of <m>M</m>.
@@ -17724,16 +17553,14 @@
             </statement>
           </definition>
 
-          <example xml:id="exe-z90">
-            <title><m>\Z/90</m></title>
+          <example xml:id="exe-z90"><title><m>\Z/90</m></title>
             
             <p>
               Since <m>\Z/90 \cong \Z/9 \oplus \Z/2 \oplus \Z/5</m>, so the elementary divisors of <m>\Z/90</m> are <m>9</m>, <m>2</m> and <m>3</m>. The only invariant factor of <m>\Z/90</m> is <m>90</m>.
             </p>
           </example>
 
-          <example>
-            <title>Direct Sums and <m>\Z</m></title>
+          <example><title>Direct Sums and <m>\Z</m></title>
 
             <p>
               Consider the group <m>G = \Z/90 \oplus \Z/9 \oplus \Z/6 \oplus \Z/3 \oplus \Z/4</m>. This is neither in IFF nor in EDF. Applying the Sunzi Remainder Theorem, we have <me>G \cong \Z/9 \oplus \Z/2 \oplus \Z/5 \oplus \Z/9 \oplus \Z/2 \oplus \Z/3 \oplus \Z/3 \oplus \Z/4,</me> and this gives the EDF. The elementary divisors of <m>G</m> are <m>9,2,5,9,2,3,3,4</m> (ordering does not matter).
@@ -17745,8 +17572,7 @@
             
           </example>
 
-          <corollary xml:id="cor-ftfgagedf">
-            <title>FTFGAGEDF</title>
+          <corollary xml:id="cor-ftfgagedf"><title>FTFGAGEDF</title>
 
             <statement>
               <p>
@@ -17755,8 +17581,7 @@
             </statement>
           </corollary>
 
-          <corollary xml:id="cor-ftfgmopredf">
-            <title>FTFGMOPREDF</title>
+          <corollary xml:id="cor-ftfgmopredf"><title>FTFGMOPREDF</title>
 
             <statement>
               <p>
@@ -17766,8 +17591,7 @@
             </statement>
           </corollary>
 
-          <example xml:id="exe-finding-ifs-and-eds">
-            <title>Finding IFs and EDs</title>
+          <example xml:id="exe-finding-ifs-and-eds"><title>Finding IFs and EDs</title>
             
             <p>
               Find the invariant factor form and the elementary divisor form of the <m>k[x]</m>-module <me>M = k[x]/(x^2-1) \oplus k[x]/(x-1) \oplus k[x]/(x^2 + 1) \oplus k[x]/(x^2 + 2x + 1)</me> first when 
@@ -17972,23 +17796,11 @@
        ****************************
         -->
 
-        <section xml:id="sec-rcf">
-          <title>Rational Canonical Form</title>
+        <section xml:id="sec-rcf"><title>Rational Canonical Form</title>
 
-         
-              
+          <remark><p>Suppose <m>F</m> is a field and <m>M</m> is a <m>F[x]</m>-module. By restriction of scalars along the canonical ring map <m>F \into F[x]</m> we may regard <m>M</m> as a <m>F</m>-vector space — let us write this vector space as <m>M|_F</m> to be precise. Let <m>\lx: M|_F \to M|_F</m> be the map given by <m>\lx(m) = xm</m>. Then <m>\lx</m> is an <m>F</m>-linear operator on <m>M|_F</m>. So, to a <m>F[x]</m>-module <m>M</m> we may associate the pair <m>(M|_F, \lx)</m> where <m>M|_F</m> is an <m>F</m>-vector space and <m>\lx</m> is an <m>F</m>-linear operator on <m>M|_F</m>. This process is reversible:</p></remark>
 
-          <remark>
-            <p>
-            Suppose <m>F</m> is a field and <m>M</m> is a <m>F[x]</m>-module. By restriction of scalars along the canonical ring map <m>F \into F[x]</m> we may regard <m>M</m> as a <m>F</m>-vector space — let us write this vector space as <m>M|_F</m> to be precise. Let <m>\lx: M|_F \to M|_F</m> be the map given by <m>\lx(m) = xm</m>. Then <m>\lx</m> is an <m>F</m>-linear operator on <m>M|_F</m>. So, to a <m>F[x]</m>-module <m>M</m> we may associate the pair <m>(M|_F, \lx)</m> where <m>M|_F</m> is an <m>F</m>-vector space and <m>\lx</m> is an <m>F</m>-linear operator on <m>M|_F</m>. This process is reversible:
-          </p>
-          </remark>
-
-          
-
-          <definition xml:id="def-fx-module-vg">
-            <title><m>F[x]</m>-Module <m>V_g</m></title>
-
+          <definition xml:id="def-fx-module-vg"><title><m>F[x]</m>-Module <m>V_g</m></title>
             <statement>
               <p>
                 Let <m>F</m> be a field, let <m>V</m> be a finite dimensional vector space over <m>F</m>, and let <m>g: V \to V</m> be an <m>F</m>-linear operator. The <m>F[x]</m>-module <m>V_g</m> is defined to be the abelian group <m>(V, +)</m> equipped with the rule for <m>F[x]</m> scaling given by <me>(c_nx^n + \dots+ c_0)v = c_ng^{\circ n}(v) + \dots + c_1 g(v) + c_0v</me>for any polynomial <m>c_nx^n + \dots + c_0 \in F[x]</m> and vector <m>v \in V</m>.
@@ -17996,9 +17808,7 @@
             </statement>
           </definition>
 
-          <proposition xml:id="prop-vg-is-actually-a-fx-module">
-            <title><m>V_g</m> is Actually a <m>F[x]</m>-Module</title>
-
+          <proposition xml:id="prop-vg-is-actually-a-fx-module"><title><m>V_g</m> is Actually a <m>F[x]</m>-Module</title>
             <statement>
               <p>
                 Given a pair <m>(V, g)</m> as in the definition, <m>V_g</m> really is a <m>F[x]</m>-module.
@@ -18006,8 +17816,7 @@
             </statement>
           </proposition>
 
-          <example xml:id="exe-special-case-of-v_g">
-            <title>Special Case of <m>V_g</m></title>
+          <example xml:id="exe-special-case-of-v_g"><title>Special Case of <m>V_g</m></title>
 
             <p>
               We have the following special case (it isn't really special — the general case reduces to this one upon choosing a basis):
@@ -18023,8 +17832,7 @@
             
           </example>
 
-          <example xml:id="exe-mat_2times-2q">
-            <title><m>\Mat_{2\times 2}(\Q)</m></title>
+          <example xml:id="exe-mat_2times-2q"><title><m>\Mat_{2\times 2}(\Q)</m></title>
 
             <p>
               Let <m>A=\begin{bmatrix} 1 &amp; 1 \\ 0 &amp; 1 \end{bmatrix}\in \Mat_{2 \times 2}(\Q)</m> and let <m>M</m> be the <m>\Q[x]</m>-module <m>\Q^2_A</m>. So <m>M = \Q^2</m> as a <m>\Q</m>-vector space, and <m>x</m> acts on <m>M</m> by sending <m>\vectwo{a}{b} \in M</m> to <m>\vectwo{a+b}{b} \in M</m>. I claim there is an isomorphism <me>
@@ -18041,8 +17849,7 @@
             </p>
           </example>
 
-          <proposition xml:id="prop-equality-of-fx-modules">
-            <title>Equality of <m>F[x]</m>-Modules</title>
+          <proposition xml:id="prop-equality-of-fx-modules"><title>Equality of <m>F[x]</m>-Modules</title>
 
             <statement>
               <p>
@@ -18051,30 +17858,24 @@
             </statement>
           </proposition>
 
-          <remark>
-            <p>
-              In fact, these rules determine an “isomorphism of categories''.
-            </p>
-          </remark>
+          <remark><p>In fact, these rules determine an “isomorphism of categories''.</p></remark>
 
-          <definition xml:id="def-block-diagonal-matrix">
-            <title>Block Diagonal Matrix</title>
+          <definition xml:id="def-block-diagonal-matrix"><title>Block Diagonal Matrix</title>
             <statement>
               <p>
                 Given square matrices <m>A_1 \in \Mat_{n_1 \times n_1}(F), \dots, A_m \in \Mat_{n_m \times n_m}(F)</m>, we define <m>A_1 \oplus \cdots \oplus A_m</m> to be the <em>block diagonal</em> matrix <me>
-      \begin{bmatrix} 
-      A_1 &amp; 0 &amp; \cdots &amp; 0 \\
-      0 &amp; A_2 &amp;  \cdots &amp; 0 \\
-      \vdots &amp; &amp; \ddots &amp; \vdots \\
-      0 &amp; \cdots &amp; 0 &amp; A_m \\
-      \end{bmatrix}
-      </me> which belongs to <m>\Mat_{n \times n}(F)</m> for <m>n = \sum_i n_i</m>.
+                \begin{bmatrix} 
+                A_1 &amp; 0 &amp; \cdots &amp; 0 \\
+                0 &amp; A_2 &amp;  \cdots &amp; 0 \\
+                \vdots &amp; &amp; \ddots &amp; \vdots \\
+                0 &amp; \cdots &amp; 0 &amp; A_m \\
+                \end{bmatrix}
+                </me> which belongs to <m>\Mat_{n \times n}(F)</m> for <m>n = \sum_i n_i</m>.
               </p>
             </statement>
           </definition>
 
-          <theorem xml:id="thm-rcf">
-            <title>Rational Canonical Form</title>
+          <theorem xml:id="thm-rcf"><title>Rational Canonical Form</title>
 
             <statement>
               <p>
@@ -18085,8 +17886,8 @@
             <proof>
               <p>
                 We know by the Fundamental Theorem of modules over <m>F[x]</m> (i.e., Corollary ) that there is a <m>F[x]</m>-module isomorphism <me>
-  V_{g} \cong F[x]/(f_1)\oplus \cdots \oplus F[x]/(f_s)
-  </me> for some unique list of monic, non-constant polynomials <m>f_1, \cdots, f_s</m> with <m>f_i \mid f_{i+1}</m> for all <m>i</m>. Recall that the operator <m>g</m> on <m>V</m> is given as <m>\lx</m> (multiplication by <m>x</m>) on <m>V_g</m>. Since this is a <m>F[x]</m>-module isomorphism, <m>g</m> corresponds to multiplication by <m>x</m> on each summand <m>F[x]/(f_i)</m>. As we have seen before, for each <m>i</m>, the matrix representing <m>\lx</m> on <m>F[x]/f_i</m> relative to the basis <m>B_i := \{1, x, x^2, \dots, x^{\deg(f_i)-1}\}</m> of <m>F[x]/f_i</m> is the companion matrix <m>C(f_i)</m> of <m>f_i</m>. Let <m>B</m> be the <m>F</m>-basis of <m>F[x]/(f_1)\oplus \cdots \oplus F[x]/(f_s)</m> given by tuples <me>B = \{(b_1, 0, \dots, 0) \mid b_1 \in B_1\} \cup \{(0, b_2, 0, \dots, 0) \mid b_2 \in B_{2\} \cup}\cdots \cup \{(0, 0, \dots, 0, b_s) \mid b_s \in B_s\}</me>(in that order). Then the matrix of <m>\lx</m> on <m>F[x]/(f_1)\oplus \cdots \oplus F[x]/(f_k)</m> for <m>B</m> is <m>C(f_1) \oplus \cdots \oplus C(f_s)</m>.
+                V_{g} \cong F[x]/(f_1)\oplus \cdots \oplus F[x]/(f_s)
+                </me> for some unique list of monic, non-constant polynomials <m>f_1, \cdots, f_s</m> with <m>f_i \mid f_{i+1}</m> for all <m>i</m>. Recall that the operator <m>g</m> on <m>V</m> is given as <m>\lx</m> (multiplication by <m>x</m>) on <m>V_g</m>. Since this is a <m>F[x]</m>-module isomorphism, <m>g</m> corresponds to multiplication by <m>x</m> on each summand <m>F[x]/(f_i)</m>. As we have seen before, for each <m>i</m>, the matrix representing <m>\lx</m> on <m>F[x]/f_i</m> relative to the basis <m>B_i := \{1, x, x^2, \dots, x^{\deg(f_i)-1}\}</m> of <m>F[x]/f_i</m> is the companion matrix <m>C(f_i)</m> of <m>f_i</m>. Let <m>B</m> be the <m>F</m>-basis of <m>F[x]/(f_1)\oplus \cdots \oplus F[x]/(f_s)</m> given by tuples <me>B = \{(b_1, 0, \dots, 0) \mid b_1 \in B_1\} \cup \{(0, b_2, 0, \dots, 0) \mid b_2 \in B_{2\} \cup}\cdots \cup \{(0, 0, \dots, 0, b_s) \mid b_s \in B_s\}</me>(in that order). Then the matrix of <m>\lx</m> on <m>F[x]/(f_1)\oplus \cdots \oplus F[x]/(f_k)</m> for <m>B</m> is <m>C(f_1) \oplus \cdots \oplus C(f_s)</m>.
               </p>
   
               <p>
@@ -18095,35 +17896,27 @@
             </proof>
           </theorem>
 
-          <remark>
-            <p>
-              The matrix is unique, but the basis <m>B</m> that realizes it is, in general, not unique. As an extreme example illustrating this: Take <m>g</m> to be the identity operator on a finite dimensional vector space <m>V</m>. Then <m>[g]_B^B = I_n</m> holds for any basis <m>B</m>. (Note that <m>I_n</m> is indeed in rational canonical form: it is equal to <m>C(x-1) \oplus \cdots \oplus C(x-1)</m>.)
-            </p>
-          </remark>
+          <remark><p>The matrix is unique, but the basis <m>B</m> that realizes it is, in general, not unique. As an extreme example illustrating this: Take <m>g</m> to be the identity operator on a finite dimensional vector space <m>V</m>. Then <m>[g]_B^B = I_n</m> holds for any basis <m>B</m>. (Note that <m>I_n</m> is indeed in rational canonical form: it is equal to <m>C(x-1) \oplus \cdots \oplus C(x-1)</m>.)</p></remark>
 
-          <definition xml:id="def-invariant-factor-2">
-            <title>Invariant Factor</title>
-
+          <definition xml:id="def-invariant-factor-2"><title>Invariant Factor</title>
             <statement>
               <p>
-                In Theorem , the number <m>r</m> is the <em>rank</em> of <m>G</m>, the numbers <m>n_1,\ldots,n_t</m> are the <em>invariant factors</em> of <m>G</m>, and the decomposition of <m>G</m> in part (1) is the <em>invariant factor decomposition</em> of <m>G</m>.
+                In Theorem <xref provisional="cite"/>, the number <m>r</m> is the <em>rank</em> of <m>G</m>, the numbers <m>n_1,\ldots,n_t</m> are the <em>invariant factors</em> of <m>G</m>, and the decomposition of <m>G</m> in part (1) is the <em>invariant factor decomposition</em> of <m>G</m>.
               </p>
             </statement>
           </definition>
 
-          <example xml:id="exe-back-to-mat_2times-2q">
-            <title>Back to <m>\Mat_{2\times 2}(\Q)</m></title>
-
+          <example xml:id="exe-back-to-mat_2times-2q"><title>Back to <m>\Mat_{2\times 2}(\Q)</m></title>
             <p>
               Let us return to the example of <m>A = \begin{bmatrix} 1 &amp; 1 \\ 0 &amp; 1 \end{bmatrix}\in \Mat_{2 \times 2}(\Q)</m> to illustrate the Theorem and its proof. By the previous example we have an isomorphism of <m>\Q[x]</m>-module <me>
-  \Q^2_A \cong \Q[x]/(x^2 - 2x + 1).
-  </me> Recall that <m>\lx</m> (multiplication by <m>x</m>) on <m>\Q^2_A</m> is given by multiplication by the matrix <m>A</m>. This is an isomorphism of <m>\Q[x]</m>-modules, and so <m>A</m> corresponds to the operator <m>\lx</m> on <m>\Q[x]/(x^2 - 2x + 1)</m>. As we have seen before, relative to the basis <m>\{1, x\}</m>, the matrix for <m>\lx</m> is <me>
-  C(x^2 - 2x + 1) = 
-  \begin{bmatrix} 
-  0 &amp; -1 \\
-  1 &amp; 2 \\
-  \end{bmatrix}.
-  </me> This is the Rational Canonical Form of <m>A</m>. <m>A</m> has just one invariant factor, namely <m>x^2 - 2x + 1</m>.
+              \Q^2_A \cong \Q[x]/(x^2 - 2x + 1).
+              </me> Recall that <m>\lx</m> (multiplication by <m>x</m>) on <m>\Q^2_A</m> is given by multiplication by the matrix <m>A</m>. This is an isomorphism of <m>\Q[x]</m>-modules, and so <m>A</m> corresponds to the operator <m>\lx</m> on <m>\Q[x]/(x^2 - 2x + 1)</m>. As we have seen before, relative to the basis <m>\{1, x\}</m>, the matrix for <m>\lx</m> is <me>
+              C(x^2 - 2x + 1) = 
+              \begin{bmatrix} 
+              0 &amp; -1 \\
+              1 &amp; 2 \\
+              \end{bmatrix}.
+              </me> This is the Rational Canonical Form of <m>A</m>. <m>A</m> has just one invariant factor, namely <m>x^2 - 2x + 1</m>.
             </p>
   
             <p>
@@ -18132,9 +17925,7 @@
             
           </example>
 
-          <corollary xml:id="cor-every-matrix-similar-to-unique-rcf-matrix">
-            <title>Every Matrix Similar to Unique RCF Matrix</title>
-
+          <corollary xml:id="cor-every-matrix-similar-to-unique-rcf-matrix"><title>Every Matrix Similar to Unique RCF Matrix</title>
             <statement>
               <p>
                 Every matrix <m>A</m> is similar to a unique matrix in RCF.
@@ -18142,8 +17933,7 @@
             </statement>
           </corollary>
 
-          <example xml:id="exe-similarity-classes-of-4times-4-matrices">
-            <title>Similarity Classes of <m>4\times 4</m> Matrices</title>
+          <example xml:id="exe-similarity-classes-of-4times-4-matrices"><title>Similarity Classes of <m>4\times 4</m> Matrices</title>
 
             <p>
               Let <m>F = \Z/p</m> be the field with <m>p</m> elements for some prime <m>p</m>. Up to similarity, how many <m>4 \times 4</m> matrices are there with entries in <m>F</m>?
@@ -18158,11 +17948,11 @@
 
           <remark>
             <p>
-              The proof of Theorem  makes clear the following fact:
+              The proof of Theorem <xref provisional="cite"/> makes clear the following fact:
             </p>
   
             <blockquote>
-                        <p>
+              <p>
               For a field <m>F</m>, finite dimensional vector space <m>V</m>, and <m>F</m>-linear operator <m>g: V \to V</m>,the invariant factors of the operator <m>g</m> are identical to the invariant factors of the <m>F[x]</m>-module <m>V_g</m>.
             </p>
             </blockquote>
@@ -18172,12 +17962,12 @@
             </p>
           </remark>
 
-          <theorem xml:id="thm-rcf-and-cokernels">
+          <theorem xml:id="thm-rcf-and-cokernels"><title>RCF and Cokernels</title>
             <statement>
               <p>
                 Let <m>F</m> be a field and let <m>A \in \Mat_{n \times n}(F)</m>. The matrix <m>xI_n - A \in \Mat_{n \times n}(F[x])</m> presents the <m>F[x]</m>-module <m>F^n_A</m>; that is, there is an isomorphism of <m>F[x]</m>-modules <me>
-    F^n_A \cong \coker(xI_n -A) = F[x]^n/\im(xI_n - A).
-    </me>
+                F^n_A \cong \coker(xI_n -A) = F[x]^n/\im(xI_n - A).
+                </me>
               </p>
             </statement>
 
@@ -18196,9 +17986,7 @@
             </proof>
           </theorem>
 
-          <corollary xml:id="cor-invariant-factors-are-diagonal-snf-entries">
-            <title>Invariant Factors are Diagonal SNF Entries</title>
-
+          <corollary xml:id="cor-invariant-factors-are-diagonal-snf-entries"><title>Invariant Factors are Diagonal SNF Entries</title>
             <statement>
               <p>
                 The invariant factors of a matrix <m>A</m> are the non-zero, non-unit diagonal entries of the SNF of <m>xI_n - A</m>.
@@ -18208,14 +17996,13 @@
             <proof>
               <p>
                 Let <m>S</m> be the Smith Normal Form of <m>xI_n - A</m> and let <m>d_1, \dots, d_n</m> be its diagonal entries. As proven before, the matrix <m>xI_n - A</m> and <m>S</m> present isomorphic <m>F[x]</m>-modules, and thus the Theorem gives an isomorphism <me>
-  F^n_A \cong F[x]/(d_1) \oplus \cdots \oplus F[x]/(d_n).
-  </me> Since <m>\dim_F F^n_A &lt; \infty</m>, none of the <m>d_i</m>'s can be zero. So, each <m>d_i</m> is monic and <m>d_1 \mid \cdots \mid d_n</m>. Now some of the <m>d_i</m> might be non-zero constants, in which case <m>d_i</m> is a unit and <m>F[x]/(d_i) = 0</m>. Upon tossing those out, we are left with <me>F^n_A \cong F[x]/(f_1) \oplus \cdots \oplus F[x]/(f_k)</me>with each <m>f_i</m> monic of positive degree and <m>f_1 \mid \cdots \mid f_k</m>. These are, by definition, the invariant factors of <m>A</m>.
+                F^n_A \cong F[x]/(d_1) \oplus \cdots \oplus F[x]/(d_n).
+                </me> Since <m>\dim_F F^n_A &lt; \infty</m>, none of the <m>d_i</m>'s can be zero. So, each <m>d_i</m> is monic and <m>d_1 \mid \cdots \mid d_n</m>. Now some of the <m>d_i</m> might be non-zero constants, in which case <m>d_i</m> is a unit and <m>F[x]/(d_i) = 0</m>. Upon tossing those out, we are left with <me>F^n_A \cong F[x]/(f_1) \oplus \cdots \oplus F[x]/(f_k)</me>with each <m>f_i</m> monic of positive degree and <m>f_1 \mid \cdots \mid f_k</m>. These are, by definition, the invariant factors of <m>A</m>.
               </p>
             </proof>
           </corollary>
 
-          <example xml:id="exe-once-more-to-back-to-mat_2times-2q">
-            <title>Once More to Back to <m>\Mat_{2\times 2}(\Q)</m></title>
+          <example xml:id="exe-once-more-to-back-to-mat_2times-2q"><title>Once More to Back to <m>\Mat_{2\times 2}(\Q)</m></title>
 
             <p>
               Let's find the invariant factors of the matrix <m>A= \begin{bmatrix} 1 &amp; 1 \\ 0 &amp; 1 \end{bmatrix}\in \M_{2 \times 2}(\Q)</m> we looked at before, but this time using the Theorem and its Corollary.
@@ -18223,17 +18010,17 @@
   
             <p>
               We have <me>
-  xI_2-A= \begin{bmatrix} x-1 &amp; -1 \\ 0 &amp; x-1  \end{bmatrix}.
-  </me> To find the invariant factors of <m>A</m> we just need to find the Smith Normal Form of <m>xI_2-A</m>. I'll do this two ways:
+              xI_2-A= \begin{bmatrix} x-1 &amp; -1 \\ 0 &amp; x-1  \end{bmatrix}.
+              </me> To find the invariant factors of <m>A</m> we just need to find the Smith Normal Form of <m>xI_2-A</m>. I'll do this two ways:
             </p>
   
             <p>
               Method I: Do row and column operations using the generalized Euclidean algorithm: <me>
-  \begin{bmatrix} x-1 &amp; -1 \\ 0 &amp; x-1  \end{bmatrix} \mapsto
-  \begin{bmatrix} x-1 &amp; -1 \\ (x-1)^2 &amp; 0   \end{bmatrix} \mapsto
-  \begin{bmatrix} 0 &amp; -1 \\ (x-1)^2 &amp; 0   \end{bmatrix} \mapsto
-  \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; (x-1)^2  \end{bmatrix}.
-  </me> Tossing out the unit, we see that the only invariant factor is <m>(x-1)^2</m>, as before.
+              \begin{bmatrix} x-1 &amp; -1 \\ 0 &amp; x-1  \end{bmatrix} \mapsto
+              \begin{bmatrix} x-1 &amp; -1 \\ (x-1)^2 &amp; 0   \end{bmatrix} \mapsto
+              \begin{bmatrix} 0 &amp; -1 \\ (x-1)^2 &amp; 0   \end{bmatrix} \mapsto
+              \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; (x-1)^2  \end{bmatrix}.
+              </me> Tossing out the unit, we see that the only invariant factor is <m>(x-1)^2</m>, as before.
             </p>
   
             <p>
@@ -18241,53 +18028,51 @@
             </p>
           </example>
 
-          <example xml:id="exe-finding-ifs-and-rcf">
-            <title>Finding IFs and RCF</title>
+          <example xml:id="exe-finding-ifs-and-rcf"><title>Finding IFs and RCF</title>
 
             <p>
               Let <me>
-  A = 
-  \begin{bmatrix} 
-  1 &amp; -1 &amp; 1 \\
-  0 &amp; 0 &amp; 1 \\
-  0 &amp; 1 &amp; 0 \\
-  \end{bmatrix}.
-  </me> Let us find the invariant factors and Rational Canonical Form of <m>A</m> by finding the Smith Normal Form of <m>xI_3 - A</m>.
+              A = 
+              \begin{bmatrix} 
+              1 &amp; -1 &amp; 1 \\
+              0 &amp; 0 &amp; 1 \\
+              0 &amp; 1 &amp; 0 \\
+              \end{bmatrix}.
+              </me> Let us find the invariant factors and Rational Canonical Form of <m>A</m> by finding the Smith Normal Form of <m>xI_3 - A</m>.
             </p>
   
             <p>
               We have <me>
-  xI_3 - A =
-  \begin{bmatrix} 
-  x-1 &amp; 1 &amp; -1 \\
-  0 &amp; x &amp; -1 \\
-  0 &amp; -1 &amp; x \\
-  \end{bmatrix}.
-  </me> A sequence of messy row and column operations yields <me>
-  \begin{bmatrix} 
-  1 &amp; 0 &amp; 0 \\
-  0 &amp; x-1 &amp; 0 \\
-  0 &amp; 0 &amp; x^2-1 \\
-  \end{bmatrix}.
-  </me> Note that this is indeed in Smith Normal Form. It follows that the invariant factors of <m>A</m> are <m>x-1, x^2-1</m> and the RCF of <m>A</m> is <me>
-  C(x-1) \oplus C(x^2-1) = 
-  \begin{bmatrix} 
-  1 &amp; 0 &amp; 0 \\
-  0 &amp; 0 &amp; 1 \\
-  0 &amp; 1 &amp; 0 \\
-  \end{bmatrix}.
-  </me>
+              xI_3 - A =
+              \begin{bmatrix} 
+              x-1 &amp; 1 &amp; -1 \\
+              0 &amp; x &amp; -1 \\
+              0 &amp; -1 &amp; x \\
+              \end{bmatrix}.
+              </me> A sequence of messy row and column operations yields <me>
+              \begin{bmatrix} 
+              1 &amp; 0 &amp; 0 \\
+              0 &amp; x-1 &amp; 0 \\
+              0 &amp; 0 &amp; x^2-1 \\
+              \end{bmatrix}.
+              </me> Note that this is indeed in Smith Normal Form. It follows that the invariant factors of <m>A</m> are <m>x-1, x^2-1</m> and the RCF of <m>A</m> is <me>
+              C(x-1) \oplus C(x^2-1) = 
+              \begin{bmatrix} 
+              1 &amp; 0 &amp; 0 \\
+              0 &amp; 0 &amp; 1 \\
+              0 &amp; 1 &amp; 0 \\
+              \end{bmatrix}.
+              </me>
             </p>
   
             <p>
               For an alternative approach, we could use that the diagonal entries <m>d_1, d_2, d_3</m> of the Smith Normal Form of <m>xI_3 - A</m> satisfy <m>d_1 = \gcd(xI_3 - A)</m>, <m>d_1d_2</m> is the gcd of the <m>2 \times 2</m> minors of <m>xI_3 - A</m>, and <m>d_1d_2d_3 = \det(xI_3 - A)</m>. It's clear that <m>d_1 = 1</m> and an easy calculation gives that <m>\det(xI_3 - A) = (x-1)(x^2 -1)</m>. There are nine <m>2 \times 2</m> minors of <m>xI_3 - A</m>, and a tedious check reveals that each of them is one of <m>x^2 -1</m>, <m>x(x-1)</m>, <m>x-1</m> or <m>0</m> (up to signs). So <m>d_1d_2 = x-1</m>. We get that <me>
-  d_1 = 1, d_2 = x-1, d_3 = x^2 -1
-  </me> as before.
+              d_1 = 1, d_2 = x-1, d_3 = x^2 -1
+              </me> as before.
             </p>
           </example>
 
-          <exercise>
-            <title>Problem 7 - Nilpotent Matrices and Similarity</title>
+          <exercise><title>Problem 7 - Nilpotent Matrices and Similarity</title>
 
             <statement>
               <p>
@@ -18435,12 +18220,12 @@
             <statement>
               <p>
                 Find the Rational Canonical Form of <me>
-    A = \begin{bmatrix}
-    0 &amp; -1 &amp; - 1\\
-    0 &amp; 0 &amp; 0 \\
-    -1 &amp; 0 &amp; 0 \\
-    \end{bmatrix} \in \Mat_{3 \times 3}(F),
-    </me> where <m>F</m> is any field.
+                A = \begin{bmatrix}
+                0 &amp; -1 &amp; - 1\\
+                0 &amp; 0 &amp; 0 \\
+                -1 &amp; 0 &amp; 0 \\
+                \end{bmatrix} \in \Mat_{3 \times 3}(F),
+                </me> where <m>F</m> is any field.
               </p>
             </statement>
 
@@ -18658,21 +18443,14 @@
           
         </section>
 
-        <section xml:id="sec-cayley-hamilton">
-          <title>The Cayley-Hamilton Theorem</title>
+        <section xml:id="sec-cayley-hamilton"><title>The Cayley-Hamilton Theorem</title>
 
-          <remark>
-            <p>
-              Given a square matrix <m>A</m> and polynomial <m>g(x) = \sum_i a_i x^i</m>, recall that <m>g(A)</m> refers to the square matrix <m>\sum_i a_i A^i</m>.
-            </p>
-          </remark>
+          <remark><p>Given a square matrix <m>A</m> and polynomial <m>g(x) = \sum_i a_i x^i</m>, recall that <m>g(A)</m> refers to the square matrix <m>\sum_i a_i A^i</m>.</p></remark>
     
-          <proposition xml:id="prop-ideals-and-gx">
-            <title>Ideals and <m>g(x)</m></title>
+          <proposition xml:id="prop-ideals-and-gx"><title>Ideals and <m>g(x)</m></title>
             <statement>
               <p>
                 Given a <m>n \times n</m> matrix <m>A</m> with entries in a field <m>F</m>, the set <m>I := \{g(x) \mid g(A) = 0 \}</m> forms a non-zero ideal of <m>F[x]</m>.
-
               </p>
             </statement>
 
@@ -18687,9 +18465,7 @@
             </proof>
           </proposition>
 
-          <definition xml:id="def-min-poly-matrix">
-            <title>Minimum Polynomial of a Matrix</title>
-
+          <definition xml:id="def-min-poly-matrix"><title>Minimum Polynomial of a Matrix</title>
             <statement>
               <p>
                 Let <m>F</m> be a field and let <m>A \in \Mat_{n \times n}(F)</m>. The <em>minimum polynomial</em> of <m>A</m>, denoted <m>\mp_A(x)</m>, is the unique monic generator of the ideal <m>\{g(x) \in F[x] \, \mid \, g(A) = 0\}</m>. Equivalently, <m>\mp_A(x)</m> is the monic polynomial of least degree such that <m>\mp_A(A) = 0</m>.
@@ -18697,9 +18473,7 @@
             </statement>
           </definition>
 
-          <proposition xml:id="prop-ga0-iff-gx-annihilates-fn_a">
-            <title><m>g(A)=0</m> iff <m>g(x)</m> Annihilates <m>F^n_A</m></title>
-
+          <proposition xml:id="prop-ga0-iff-gx-annihilates-fn_a"><title><m>g(A)=0</m> iff <m>g(x)</m> Annihilates <m>F^n_A</m></title>
             <statement>
               <p>
                 Given an <m>n \times n</m> matrix <m>A</m> and polynomial <m>g(x)\in F[x]</m>, we have <m>g(A) = 0</m> if and only if <m>g(x)</m> annihilates the <m>F[x]</m>-module <m>F^n_A</m>.
@@ -18707,8 +18481,8 @@
     
               <p>
                 In particular, <m>\mp_A(x)</m> is the unique monic generator of the annihilator ideal <me>
-    \ann_{F[x]}(F^n_A) := \{ g(x) \in F[x] \mid g(x) \cdot v = 0 \text{ for all $v \in F^n_A$}\}.</me> 
-     </p>
+                n_{F[x]}(F^n_A) := \{ g(x) \in F[x] \mid g(x) \cdot v = 0 \text{ for all $v \in F^n_A$}\}.</me> 
+              </p>
             </statement>
 
             <proof>
@@ -18721,7 +18495,7 @@
             </proof>
           </proposition>
 
-          <definition xml:id="def-minimum-polynomial-linear-transformation">
+          <definition xml:id="def-minimum-polynomial-linear-transformation"><title>Minimum Polynomial</title>
             <statement>
               <p>
                 More generally, let <m>V</m> be an <m>F</m>-vector space of dimension <m>n</m>, and let <m>g: V \to V</m> be a linear transformation. The <em>minimum polynomial</em> of <m>g</m>, denoted <m>\mp_g(x)</m>, is the unique monic polynomial generating the ideal <m>\{f(x) \in F[x] \mid f(g) = 0\}</m> or, equivalently, the annihilator ideal <m>{\ann}_{F[x]}(V_g)</m>.
@@ -18729,8 +18503,7 @@
             </statement>
           </definition>
 
-          <theorem xml:id="thm-cayley-hamilton-thm">
-            <title>Theorem - Cayley-Hamilton <m>\thm</m></title>
+          <theorem xml:id="thm-cayley-hamilton-thm"><title>Theorem - Cayley-Hamilton <m>\thm</m></title>
 
             <statement>
               <p>
@@ -18774,18 +18547,17 @@
             </proof>
           </theorem>
 
-          <example xml:id="exe-finding-minimum-polynomial">
-            <title>Finding Minimum Polynomial</title>
+          <example xml:id="exe-finding-minimum-polynomial"><title>Finding Minimum Polynomial</title>
             
             <p>
               Let's find the minimum polynomial of <me>
-  \begin{bmatrix}
-  1 &amp; 1 &amp; 0 &amp; 0 \\
-  0 &amp; 1 &amp; 1 &amp; 0 \\
-  0 &amp;  0 &amp; 1 &amp; 1 \\
-  0 &amp;  0 &amp; 0 &amp; 1 \\
-  \end{bmatrix}
-  </me>
+              \begin{bmatrix}
+              1 &amp; 1 &amp; 0 &amp; 0 \\
+              0 &amp; 1 &amp; 1 &amp; 0 \\
+              0 &amp;  0 &amp; 1 &amp; 1 \\
+              0 &amp;  0 &amp; 0 &amp; 1 \\
+              \end{bmatrix}
+              </me>
             </p>
   
             <p>
@@ -18794,23 +18566,21 @@
   
           </example>
   
-          <example xml:id="exe-finding-minimum-polynomial-2">
-            <title>Finding Minimum Polynomial (2)</title>
+          <example xml:id="exe-finding-minimum-polynomial-2"><title>Finding Minimum Polynomial (2)</title>
   
             <p>
               Let's find the minimum polynomial of <me>
-  \begin{bmatrix}
-  1 &amp; 1 &amp; 0 &amp; 0 \\
-  0 &amp; 1 &amp; 0 &amp; 0 \\
-  0 &amp;  0 &amp; 1 &amp; 1 \\
-  0 &amp;  0 &amp; 0 &amp; 1 \\
-  \end{bmatrix}
-  </me> As in the previous example, <m>\cp_A(x) = (x-1)^4</m> and so by the Cayley-Hamilton Theorem <m>\mp_A(x) = (x-1)^j</m> for some <m>j \leq 4</m>. This time we notice that <m>(A-I_4)^2 = 0</m> and so, since <m>(A-I_4) \ne 0</m>, <m>\mp_A(x) = \cp_A(x) = (x-1)^2</m>.
+              \begin{bmatrix}
+              1 &amp; 1 &amp; 0 &amp; 0 \\
+              0 &amp; 1 &amp; 0 &amp; 0 \\
+              0 &amp;  0 &amp; 1 &amp; 1 \\
+              0 &amp;  0 &amp; 0 &amp; 1 \\
+              \end{bmatrix}
+              </me> As in the previous example, <m>\cp_A(x) = (x-1)^4</m> and so by the Cayley-Hamilton Theorem <m>\mp_A(x) = (x-1)^j</m> for some <m>j \leq 4</m>. This time we notice that <m>(A-I_4)^2 = 0</m> and so, since <m>(A-I_4) \ne 0</m>, <m>\mp_A(x) = \cp_A(x) = (x-1)^2</m>.
             </p>
           </example>
 
-          <exercise>
-            <title>Problem 6 - Similarity Classes and CharPoly</title>
+          <exercise><title>Problem 6 - Similarity Classes and CharPoly</title>
             
             <statement>
               <p>
@@ -18964,8 +18734,7 @@
             </solution>
           </exercise>
 
-          <exercise>
-            <title>Problem 6 - Unipotent 4 x 4 Matrices</title>
+          <exercise><title>Problem 6 - Unipotent 4 x 4 Matrices</title>
             <statement>
               <p>
                 We say an <m>n\times n</m> matrix <m>A</m> with entries in <m>F</m> is <em>unipotent</em> if <m>A-In</m> is nilpotent (i.e., <m>(A-In)^k = 0</m> for some <m>k \geq 1</m>). For the field <m>F = \Q</m>, find (with complete justification) the number of similarity classes of <m>4\times 4</m> unipotent matrices and give an explicit representative for each class.
@@ -19113,13 +18882,13 @@
             <statement>
               <p>
                 Let <m>F</m> be any field. Up to similarity, how many matrices in <m>\Mat_{5 \times 5}(F)</m> of the form <me>A = \begin{bmatrix}
-    1 &amp; * &amp; * &amp; * &amp; * \\
-    0 &amp; 1 &amp; * &amp; * &amp; * \\
-    0 &amp; 0 &amp; 1 &amp; * &amp; * \\
-    0 &amp; 0 &amp; 0 &amp; 1 &amp; * \\
-    0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 \\
-    \end{bmatrix}
-    </me> are there? Justify.
+                1 &amp; * &amp; * &amp; * &amp; * \\
+                0 &amp; 1 &amp; * &amp; * &amp; * \\
+                0 &amp; 0 &amp; 1 &amp; * &amp; * \\
+                0 &amp; 0 &amp; 0 &amp; 1 &amp; * \\
+                0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 \\
+                \end{bmatrix}
+                </me> are there? Justify.
               </p>
             </statement>
           </exercise>
@@ -19280,11 +19049,9 @@
           
         </section>
 
-        <section xml:id="sec-jcf">
-          <title>Jordan Canonical Form</title>
+        <section xml:id="sec-jcf"><title>Jordan Canonical Form</title>
 
-          <example xml:id="compantion-matrix-and-jordan-blocks">
-            <title>Companion Matrix and Jordan Blocks</title>
+          <example xml:id="compantion-matrix-and-jordan-blocks"><title>Companion Matrix and Jordan Blocks</title>
 
             <p>
               Let us consider the companion matrix of <m>(x-2)^3 = x^3 -6x^2 + 12x -8</m>: <me>
@@ -19318,37 +19085,28 @@
             </p>
           </example>
 
-          <remark>
-            <p>
-              In this example, if we used the basis <m>\{ \ov{(x-2)^2}, \ov{x-2}, \ov{1}\}</m> instead we would have gotten the transpose of <m>J_3(2)</m>.
-            </p>
-          </remark>
+          <remark><p>In this example, if we used the basis <m>\{ \ov{(x-2)^2}, \ov{x-2}, \ov{1}\}</m> instead we would have gotten the transpose of <m>J_3(2)</m>.</p></remark>
 
-          <definition xml:id="def-jordan-block">
+          <definition xml:id="def-jordan-block"><title>Jordan Block</title>
             <statement>
               <p>
                 Given a field <m>F</m>, and integer <m>n \geq 1</m>, and an element <m>r\in F</m>, the <em>Jordan block</em> <m>J_n(r)</m> is the <m>n \times n</m> with entries in <m>F</m> such that its diagonal entries are all <m>r</m>, each entry just below the diagonal is a <m>1</m>, and all other entries are <m>0</m>: <me>
-      J_n(r) = 
-      \begin{bmatrix}
-      r &amp; 0 &amp; 0 &amp; \cdots &amp; 0 \\
-      1 &amp; r &amp; 0 &amp; \cdots &amp; 0 \\
-      0 &amp; \ddots &amp; \ddots &amp;&amp; \vdots \\
-      \vdots &amp;&amp; \ddots &amp; \ddots &amp; 0\\
-      0 &amp; \cdots &amp; 0 &amp; 1 &amp; r \\
-      \end{bmatrix}.
-      </me> (More precisely, <m>a_{i,i} = r</m> for all <m>1 \leq i \leq n</m>, <m>a_{i,i-1} = 1</m> for all <m>2 \leq i \leq n</m>, and <m>a_{i,j} = 0</m> for all other <m>i,j</m>.)
+                J_n(r) = 
+                \begin{bmatrix}
+                r &amp; 0 &amp; 0 &amp; \cdots &amp; 0 \\
+                1 &amp; r &amp; 0 &amp; \cdots &amp; 0 \\
+                0 &amp; \ddots &amp; \ddots &amp;&amp; \vdots \\
+                \vdots &amp;&amp; \ddots &amp; \ddots &amp; 0\\
+                0 &amp; \cdots &amp; 0 &amp; 1 &amp; r \\
+                \end{bmatrix}.
+                </me> (More precisely, <m>a_{i,i} = r</m> for all <m>1 \leq i \leq n</m>, <m>a_{i,i-1} = 1</m> for all <m>2 \leq i \leq n</m>, and <m>a_{i,j} = 0</m> for all other <m>i,j</m>.)
               </p>
             </statement>
           </definition>
 
-          <remark>
-            <p>
-              Some people (including I think the authors or our text) defined a Jordan block to be the transpose of what I have defined it to be.
-            </p>
-          </remark>
+          <remark><p>Some people (including I think the authors or our text) defined a Jordan block to be the transpose of what I have defined it to be.</p></remark>
 
-          <theorem xml:id="thm-jcf">
-            <title>Jordan Canonical Form</title>
+          <theorem xml:id="thm-jcf"><title>Jordan Canonical Form</title>
 
             <statement>
               <p>
@@ -19378,20 +19136,11 @@
             </proof>
           </theorem>
 
-          <remark>
-            <p>
-              Not every operator has a Jordan Canonical Form: The Theorem only applies if <m>\cp_g(x)</m> factors completely, and, conversely, if an operator <m>g</m> is represented by any lower-triangular matrix, then its characteristic polynomial must be a product of linear polynomials. For algebraically closed fields, such as <m>\C</m>, every linear operator does indeed have a JCF.
-            </p>
-          </remark>
+          <remark><p>Not every operator has a Jordan Canonical Form: The Theorem only applies if <m>\cp_g(x)</m> factors completely, and, conversely, if an operator <m>g</m> is represented by any lower-triangular matrix, then its characteristic polynomial must be a product of linear polynomials. For algebraically closed fields, such as <m>\C</m>, every linear operator does indeed have a JCF.</p></remark>
 
-          <remark>
-            <p>
-              If we flip the order of each <m>B_i</m> in the proof, we would end up with the transpose of what I have defined the JCF to be. This is what our text does, and it defines the JCF as the transpose of what I have defined it to be.
-            </p>
-          </remark>
+          <remark><p>If we flip the order of each <m>B_i</m> in the proof, we would end up with the transpose of what I have defined the JCF to be. This is what our text does, and it defines the JCF as the transpose of what I have defined it to be.</p></remark>
 
-          <corollary xml:id="cor-jcf-exists-if-charpoly-factors-linearly">
-            <title>JCF Exists if CharPoly Factors Linearly</title>
+          <corollary xml:id="cor-jcf-exists-if-charpoly-factors-linearly"><title>JCF Exists if CharPoly Factors Linearly</title>
             <statement>
               <p>
                 If <m>A</m> is an <m>n \times n</m> matrix with entries in a field <m>F</m> and <m>\cp_A(x)</m> factors completely into linear factors, then <m>A</m> is similar to a matrix in Jordan Canonical Form, and this matrix is unique up to the ordering of the Jordan Blocks.
@@ -19399,19 +19148,18 @@
             </statement>
           </corollary>
 
-          <example xml:id="exe-finding-jcf">
-            <title>Finding JCF</title>
+          <example xml:id="exe-finding-jcf"><title>Finding JCF</title>
             
             <p>
               Let us find the Jordan Canonical Form of <me>
-    A = 
-    \begin{bmatrix} 
-    1 &amp; -1 &amp; 1 \\
-    0 &amp; 0 &amp; 1 \\
-    0 &amp; 1 &amp; 0 \\
-    \end{bmatrix}
-    \in \Mat_{3 \times 3}(\Q).
-    </me>
+              A = 
+              \begin{bmatrix} 
+              1 &amp; -1 &amp; 1 \\
+              0 &amp; 0 &amp; 1 \\
+              0 &amp; 1 &amp; 0 \\
+              \end{bmatrix}
+              \in \Mat_{3 \times 3}(\Q).
+              </me>
             </p>
     
             <p>
@@ -19424,11 +19172,10 @@
             </p>
           </example>
 
-          <definition xml:id="def-diagonalizable">
+          <definition xml:id="def-diagonalizable"><title>Diagonalizable</title>
             <statement>
               <p>
                 Let <m>V</m> be a finite dimensional vector space over a field <m>F</m> and let <m>g: V \to V</m> be an <m>F</m>-linear operator. We say <m>g</m> is <em>diagonalizable</em> if there is a basis <m>B</m> for <m>V</m> such that the matrix <m>[g]_B^B</m> is a diagonal matrix.
-
               </p>
             </statement>
           </definition>
@@ -19437,37 +19184,37 @@
             <statement>
               <p>
                 Let <m>V = \R^3</m> with the standard basis <m>B=\{e_1,e_2,e_3\}</m> and let <m>t: V \to V</m> be the linear transformation represented by the matrix <me>[t]_B^B =
-      \begin{bmatrix}
-      0   &amp;   -1  &amp;   0\\
-      -1  &amp;   0   &amp;   3\\ 
-      0   &amp;   0   &amp;   1   
-      \end{bmatrix}.</me> 
+                \begin{bmatrix}
+                0   &amp;   -1  &amp;   0\\
+                -1  &amp;   0   &amp;   3\\ 
+                0   &amp;   0   &amp;   1   
+                \end{bmatrix}.</me> 
 
-      <ol>
-        <li>
-          <p>
-            Find the invariant factor decomposition of the <m>\R[x]</m>-module <m>V_t</m>. 
-          </p>
-        </li>
+                <ol>
+                  <li>
+                    <p>
+                      Find the invariant factor decomposition of the <m>\R[x]</m>-module <m>V_t</m>. 
+                    </p>
+                  </li>
 
-        <li>
-          <p>
-            Find the characteristic and minimal polynomials of <m>t</m>. 
-          </p>
-        </li>
+                  <li>
+                    <p>
+                      Find the characteristic and minimal polynomials of <m>t</m>. 
+                    </p>
+                  </li>
 
-        <li>
-          <p>
-            Find the rational canonical form of <m>t</m>. 
-          </p>
-        </li>
+                  <li>
+                    <p>
+                      Find the rational canonical form of <m>t</m>. 
+                    </p>
+                  </li>
 
-        <li>
-          <p>
-            Find the Jordan canonical form of <m>t</m>.
-          </p>
-        </li>
-      </ol>
+                  <li>
+                    <p>
+                      Find the Jordan canonical form of <m>t</m>.
+                    </p>
+                  </li>
+                </ol>
               </p>
             </statement>
           </exercise>
@@ -26639,14 +26386,25 @@
             <statement>
               <p>
             Let <m>p</m> be an odd prime, <m>G</m> a group of order <m>p(p+1)</m>, and <m>P</m> a Sylow <m>p</m>-subgroup of <m>G</m>. Assume that <m>P</m> is not normal in <m>G</m>. 
-            (a) Prove that the normalizer of <m>P</m> in <m>G</m> is exactly <m>P</m> 
-            (b) Let <m>P=\langle t\rangle</m> and <m>a</m> an element of order <m>2</m> in <m>G</m> (such an element exists because <m>p+1</m> is even). Prove that the elements <me>a, tat\inv,t^2at^{-2}, \dots, t^{p-1}at^{-(p-1)}</me> are all distinct.
+            <ol>
+              <li>
+                <p>
+                  Prove that the normalizer of <m>P</m> in <m>G</m> is exactly <m>P</m> 
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Let <m>P=\langle t\rangle</m> and <m>a</m> an element of order <m>2</m> in <m>G</m> (such an element exists because <m>p+1</m> is even). Prove that the elements <me>a, tat\inv,t^2at^{-2}, \dots, t^{p-1}at^{-(p-1)}</me> are all distinct.
+                </p>
+              </li>
+            </ol>
           </p>
             </statement>
 
             <solution>
               <p>
-            Proof. Let <m>p</m> be an odd prime, <m>G</m> a group of order <m>p(p+1)</m>, and <m>P</m> a Sylow <m>p</m>-subgroup of <m>G</m> that is not normal in <m>P</m>.
+            Let <m>p</m> be an odd prime, <m>G</m> a group of order <m>p(p+1)</m>, and <m>P</m> a Sylow <m>p</m>-subgroup of <m>G</m> that is not normal in <m>P</m>.
           </p>
 
           <p>
@@ -26882,11 +26640,14 @@
 
             <solution>
               <p>
-            Let <m>G</m> be a group and <m>H\nsg G</m>. Let <m>x\in C_H(G)</m>, and consider <m>gxg\inv</m>. Let <m>h\in H</m>. As <m>H\nsg G</m> we have <m>h=gh'g\inv</m> for some <m>h\in H</m>, and thus that 1. <m>g\inv h=h'g\inv</m> and 2. <m>hg=gh'</m>. Consider <m>gxg\inv h</m>. By (1), we see <m>gxg\inv h=gxh'g\inv</m>. As <m>x</m> commutes with everything in <m>H</m> we have <m>gh'xg\inv</m>, and by (2) we have <m>hgxg\inv</m>. Thus <m>C_H(G)\nsg G</m>.
+            Let <m>G</m> be a group and <m>H\nsg G</m>. Let <m>x\in C_H(G)</m>, and consider <m>gxg\inv</m>. Let <m>h\in H</m>. As <m>H\nsg G</m> we have <m>h=gh'g\inv</m> for some <m>h\in H</m>, and thus that 
+            1. <m>g\inv h=h'g\inv</m> and 
+            2. <m>hg=gh'</m>. 
+            Consider <m>gxg\inv h</m>. By (1), we see <m>gxg\inv h=gxh'g\inv</m>. As <m>x</m> commutes with everything in <m>H</m> we have <m>gh'xg\inv</m>, and by (2) we have <m>hgxg\inv</m>. Thus <m>C_H(G)\nsg G</m>.
           </p>
 
           <p>
-            Let <m>G</m> act on the left cosets of <m>C_G(H)</m> by left multiplication, giving rise to the permutation representation homomorphism <m>\rho:G/C_G(H)\to\Aut(H)</m>. By the [[Mathematics/Modern Algebra/Results/Theorem – First Isomorphism Theorem|First Isomorphism Theorem]] we see that <m>G/C_G(H)</m> is isomorphic to a subgroup of the automorphism group of <m>H</m>.
+            Let <m>G</m> act on the left cosets of <m>C_G(H)</m> by left multiplication, giving rise to the permutation representation homomorphism <m>\rho:G/C_G(H)\to\Aut(H)</m>. By the <xref text="title" ref="thm-fit-group"/> we see that <m>G/C_G(H)</m> is isomorphic to a subgroup of the automorphism group of <m>H</m>.
           </p>
 
             </solution>
@@ -28728,7 +28489,7 @@
         </p>
 
         <p>
-          Let <m>G</m> act on the left cosets of <m>C_G(H)</m> by left multiplication, giving rise to the permutation representation homomorphism <m>\rho:G/C_G(H)\to\Aut(H)</m>. By the [[Mathematics/Modern Algebra/Results/Theorem – First Isomorphism Theorem|First Isomorphism Theorem]] we see that <m>G/C_G(H)</m> is isomorphic to a subgroup of the automorphism group of <m>H</m>.
+          Let <m>G</m> act on the left cosets of <m>C_G(H)</m> by left multiplication, giving rise to the permutation representation homomorphism <m>\rho:G/C_G(H)\to\Aut(H)</m>. By the <xref text="title" ref="thm-fit-group"/> we see that <m>G/C_G(H)</m> is isomorphic to a subgroup of the automorphism group of <m>H</m>.
         </p>
             </solution>
           
@@ -30851,7 +30612,7 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
 				</p>
 
 				<p>
-					Let <m>G</m> act on the left cosets of <m>C_G(H)</m> by left multiplication, giving rise to the permutation representation homomorphism <m>\rho:G/C_G(H)\to\Aut(H)</m>. By the [[Mathematics/Modern Algebra/Results/Theorem – First Isomorphism Theorem|First Isomorphism Theorem]] we see that <m>G/C_G(H)</m> is isomorphic to a subgroup of the automorphism group of <m>H</m>.
+					Let <m>G</m> act on the left cosets of <m>C_G(H)</m> by left multiplication, giving rise to the permutation representation homomorphism <m>\rho:G/C_G(H)\to\Aut(H)</m>. By the <xref text="title" ref="thm-fit-group"/> we see that <m>G/C_G(H)</m> is isomorphic to a subgroup of the automorphism group of <m>H</m>.
 				</p>
             </solution>
           

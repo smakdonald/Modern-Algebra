@@ -12,16 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para logical">
-<div class="para">We apply the Cayley-Hamilton Theorem: <span class="process-math">\(\mp_A(x) \mid \cp_A(x)\text{.}\)</span> The polynomial <span class="process-math">\(\cp_A(x)\)</span> is easy to compute since this matrix is upper-triangular:</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\cp_A(x) =\det(xI_4 - A) = (x-1)^4.
-\end{equation*}
-</div>
-<div class="para">So <span class="process-math">\(\mp_A(x) = (x-1)^j\)</span> for some <span class="process-math">\(j \leq 4\text{.}\)</span> By brute-force, we verify that <span class="process-math">\((A-I_4)^3 \ne 0\)</span> and thus it must be the case that <span class="process-math">\(\mp_A(x) = \cp_A(x) = (x-1)^4\text{.}\)</span>
-</div>
-</div>
+<div class="para">The first assertion is a consequence of Corollary , since the product of the diagonal elements of the Smith Normal Form of <span class="process-math">\(xI_n - A\)</span> is equal to the determinant of <span class="process-math">\(xI_n - A\text{.}\)</span> (Technically, we can only conclude at first that they are only associates, but since each is monic, they must be equal.)</div>
 <span class="incontext"><a href="sec-cayley-hamilton.html#p-2575" class="internal">in-context</a></span>
 </body>
 </html>
