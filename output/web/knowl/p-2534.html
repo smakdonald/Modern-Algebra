@@ -12,7 +12,21 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">If <span class="process-math">\(n=2\)</span> then the only possible invariant factor is <span class="process-math">\(x^2\text{,}\)</span> as having two <span class="process-math">\(x\)</span>'s would make <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> invertible again. If <span class="process-math">\(n=1\)</span> then <span class="process-math">\(A=B=0\)</span> and we're done.</div>
+<div class="para logical">
+<div class="para">Next, observe</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{align}
+\rank(AP\inv)&amp;=\rank((AP\inv)^T)\\
+&amp;=\rank(P^{-1^T}A^T)\\
+&amp;=\rank(A^T)\\
+&amp;=\rank(A),
+\end{align}
+\end{equation*}
+</div>
+<div class="para">as <span class="process-math">\((P^{-1})^T\)</span> is an invertible matrix. Thus <span class="process-math">\(\rank(B)=\rank(PAP\inv)=\rank(A)\text{.}\)</span>
+</div>
+</div>
 <span class="incontext"><a href="sec-rcf.html#p-2534" class="internal">in-context</a></span>
 </body>
 </html>

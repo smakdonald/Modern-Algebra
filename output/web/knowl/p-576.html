@@ -12,32 +12,16 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para logical"><ol class="decimal">
-<li>
-<div class="para">(normal) subgroups correspond to normal subgroups i.e.,</div>
-<div class="para logical"><ul class="disc">
-<li><div class="para">
-<span class="process-math">\(H\leq G\)</span> iff <span class="process-math">\(\overline{H}\leq \overline{G}\)</span> and <span class="process-math">\(\mathcal{H}\leq \overline{G}\)</span> iff <span class="process-math">\(\Phi(\mathcal{H})\leq G\)</span>
-</div></li>
-<li><div class="para">
-<span class="process-math">\(H\mathrel{\unlhd}G\)</span> iff <span class="process-math">\(\overline{H}\mathrel{\unlhd}\overline{G}\)</span> and <span class="process-math">\(\mathcal{H}\mathrel{\unlhd}\overline{G}\)</span> iff <span class="process-math">\(\Phi(\mathcal{H})\mathrel{\unlhd}G\)</span>
-</div></li>
-</ul></div>
-</li>
-<li><div class="para">indices are preserved; i.e., <span class="process-math">\([G:H] = [\overline{G} : \overline{H}]\)</span> and <span class="process-math">\([G: \Phi(\mathcal{H})] = [\overline{G} : \mathcal{H}]\text{.}\)</span>
-</div></li>
-<li>
-<div class="para">the supremums and infimums are preserved (this makes <span class="process-math">\(\Phi\)</span> and <span class="process-math">\(\Psi\)</span> lattice isomorphisms)</div>
-<div class="para logical"><ul class="disc">
-<li><div class="para">
-<span class="process-math">\(\overline{H} \cap \overline{K} = \overline{H \cap H}\)</span> and <span class="process-math">\(\langle \overline{H}\cup \overline{K} \rangle = \overline{\langle H\cup K \rangle}\)</span>
-</div></li>
-<li><div class="para">
-<span class="process-math">\(\Phi(\mathcal{H}) \cap \Phi(\mathcal K) = \Phi(\mathcal{H}\cap \mathcal K)\)</span> and <span class="process-math">\(\langle \Phi(\mathcal{H})\cup\Phi(\mathcal K) \rangle = \Phi\left(\langle \mathcal{H}\cup\mathcal K\rangle\right)\)</span>
-</div></li>
-</ul></div>
-</li>
-</ol></div>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(G\)</span> be any group, and recall the <a href="" class="xref" data-knowl="./knowl/ex-commutator-subgroup.html" title="Example 3.34: Commutator Subgroup">Commutator Subgroup</a>. In <code class="code-inline tex2jax_ignore">[provisional cross-reference: G' normal]</code> we saw <span class="process-math">\(G'\nsg G\text{.}\)</span> Now let <span class="process-math">\(\varphi: G \to A\)</span> be any group homomorphism from <span class="process-math">\(G\)</span> to an abelian group <span class="process-math">\(A\text{.}\)</span> Since <span class="process-math">\(\varphi([x,y]) = [\varphi(x),\varphi(y)] = e\)</span> for all <span class="process-math">\(x, y \in G\)</span> (since <span class="process-math">\(A\)</span> is abelian), we have that <span class="process-math">\(\operatorname{ker}(\varphi)\)</span> must contain <span class="process-math">\(G'\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/thm-ump-quotient.html" title="Theorem 4.47: UMP for Quotients">Theorem 4.47</a>, we get that <span class="process-math">\(\varphi\)</span> factors as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/ex-commutator-subgroup.html  ./knowl/thm-ump-quotient.html">
+\begin{equation*}
+\varphi:G \xrightarrow{{\pi}} G/G' \xrightarrow{\overline{\varphi}} A
+\end{equation*}
+</div>
+<div class="para">for a unique group homomorphism <span class="process-math">\(\overline{\varphi}\text{.}\)</span>
+</div>
+</div>
 <span class="incontext"><a href="sec-quotient-groups.html#p-576" class="internal">in-context</a></span>
 </body>
 </html>

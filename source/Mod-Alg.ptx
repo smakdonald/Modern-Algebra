@@ -434,7 +434,7 @@
 
                     <li><title>Identity Element</title><idx><h>identity</h></idx>
                       <p>
-                        there exists <m>e\in G</m> such that <m>e·x=x·e=x</m> for all <m>x\in G</m>
+                        there exists <m>e\in G</m> such that <m>e·g=x·g=x</m> for all <m>g\in G</m>
                         <notation><usage><m>e</m></usage><description>the identity element of a group</description></notation>          
                       </p>
                     </li>
@@ -443,7 +443,11 @@
               </statement>
             </definition>
 
-            <historical><p>The word "monoid" was first used by the mathematician Garrett Birkhoff in his 1935 paper "On the Structure of Abstract Algebras".</p></historical>
+            <historical><title>Monoid</title>
+              <p>
+              The word "monoid" was first used by the mathematician Garrett Birkhoff in his 1935 paper "On the Structure of Abstract Algebras".
+              </p>
+            </historical>
 
             <insight xml:id="mark"> <p>We often write <m>xy</m> instead of <m>x\cdot y</m> for simplicity.<fn>This is the one and only "Mark". All following "Marks" will be "Remarks".</fn></p></insight>
 
@@ -451,10 +455,14 @@
 
             <remark><p>For those interested, a pairing <m>(G,\cdot)</m> that only satisfies the first two properties of <xref ref="def-monoid"/> is called a <em>semigroup</em><idx><h>semigroup</h></idx>. If <m>(G,\cdot)</m> only satisfies the first property, it is known as a <em>magma</em><idx><h>magma</h></idx>.</p></remark>
 
-            <historical><p>The term "magma" was coined by the mathematician Benjamin Peirce in the 1870s to describe a set with a binary operation. The word "magma" is derived from the Latin word "magmus," meaning "mass" or "heap," which suggests a collection of objects with no particular order or structure.</p></historical>
+            <historical><title>Magma</title>
+              <p>
+                The term "magma" was coined by the mathematician Benjamin Peirce in the 1870s to describe a set with a binary operation. The word "magma" is derived from the Latin word "magmus," meaning "mass" or "heap," which suggests a collection of objects with no particular order or structure.
+              </p>
+            </historical>
 
             <figure xml:id="figure-magma">
-              <caption>Reltions between algebraic structures.</caption>
+              <caption>Reltions between algebraic structures. One day I will get this to work.</caption>
               <image width="30%" source="images/magma.pdf" />
             </figure>
 
@@ -470,7 +478,7 @@
                     </li>
                   </ul>
                   <notation><usage><m>(G,\cdot)</m></usage><description>a group (or monoid) <m>G</m> and its binary operation <m>\cdot</m></description></notation>    
-                  <notation><usage><m>a,b,c,g,h,k,x,y,z</m></usage><description>lowercase letters reserved for elements of a group <m>\cdot</m></description></notation>          
+                  <notation><usage><m>g,h,k,x,y,z</m></usage><description>lowercase letters reserved for elements of a group <m>\cdot</m></description></notation>          
       
                 </p>
               </statement>
@@ -489,9 +497,9 @@
             <remark><p> a group is a pair, we will usually refer to the group by only naming the underlying set, <m>G</m>.</p></remark>
 
             <warning> <title>Additive and Multiplicative Notation</title>
-              <p>When the operation of a group is <m>\cdot</m>, we refer to <m>G</m>as a <em>multiplicative group</em><idx><h>multiplicative group</h></idx>. If the operation <m>+</m> is used, then <m>G</m> is referred to as an <em>additive group</em><idx><h>additive group</h></idx></p>
+              <p>When the operation of a group is <m>\cdot</m>, we refer to <m>G</m> as a <em>multiplicative group</em><idx><h>multiplicative group</h></idx>. If the operation <m>+</m> is used, then <m>G</m> is referred to as an <em>additive group</em><idx><h>additive group</h></idx>.</p>
 
-              <p>When we refer to exponents in groups, we are talking about repeated applications of the given operation, which in many cases is denoted multiplicatively, hence the exponent notation. However, for additive groups such as <m>(\Z,+)</m>, we find ourselves in the uncomfortable situation where statements such as <m>2^3=2+2+2=6</m> are technically true. Thus, in additive groups it is more customary to denote expressions such as the one above in more traditional notation: namely, <m>3\cdot (2)=2+2+2=6</m>.</p>
+              <p>When we refer to exponents in groups, we are talking about repeated applications of the given operation, which in many cases is denoted multiplicatively, hence the exponent notation. However, for additive groups such as <m>(\Z,+)</m>, we find ourselves in the uncomfortable situation where statements such as <m>2^3=2+2+2=6</m> are technically true. Thus, in additive groups it is more customary to denote expressions such as the one above in more traditional notation: namely, <m>3\cdot 2=2+2+2=6</m>.</p>
             </warning>
 
             <exercise xml:id="exe-lr-inverses"><title>Left and Right Inverses</title>
@@ -629,7 +637,7 @@
       
                     <li>
                       <p>
-                        For any <m>n</m>, let <m>\Z/n</m> denote the <xref text="title" ref="def-integers-modulo"/>. Then <m>(\Z/n,+)</m> forms an abelian group where <m>+</m> denotes addition modulo <m>n</m>.
+                        For any <m>n\in\N</m>, let <m>\Z/n</m> denote the <xref text="title" ref="def-integers-modulo"/>. Then <m>(\Z/n,+)</m> forms an abelian group where <m>+</m> denotes addition modulo <m>n</m>.
                       </p>
                     </li>
 
@@ -644,7 +652,7 @@
 
             <exercise xml:id="exe-opposite-group"><title>Opposite Day</title>
               <p>
-                Let <m>G</m> be a multiplicative group, and define <m>G^{op}</m><idx><h>opposite group</h></idx> be the set <m>G</m> equipped with the operation <m>*</m>, where <m>a*b=ba</m>. Then <m>G^{op}</m> is a group.
+                Let <m>G</m> be a multiplicative group, and define <m>G^{op}</m><idx><h>opposite group</h></idx> be the set <m>G</m> equipped with the operation <m>*</m>, where <m>x*y=yx</m>.<fn>Opposite groups are used in category theory to describe duality between algebraic structures.</fn> Then <m>G^{op}</m> is a group.
               </p>
             </exercise>
 
@@ -766,16 +774,15 @@
             <exercise xml:id="exe-more-group-properties"><title>Properties for a Rainy Day</title>
               <statement>
                 <p>
-                  Let <m>G</m> be a group and <m>x,y\in G</m>.
+                  Let <m>G</m> be a group and <m>g,h\in G</m>.
                   <ol>
                     <li>
-                      If <m>x^2=x</m>, then <m>g=e</m>. 
+                      If <m>g^2=g</m>, then <m>g=e</m>. 
                     </li>
   
                     <li>
-                      There exists some <m>z\in G</m> such that <m>x=yz</m>
+                      There exists some <m>k\in G</m> such that <m>g=kh</m>.
                     </li>
-
                   </ol>
                 </p>
               </statement>
@@ -1186,7 +1193,7 @@
             <definition xml:id="def-permutation"><title>Permutation</title>
               <statement>
                 <p>
-                  A <em>permutation</em><idx><h>permutation</h></idx> of a set <m>X</m> is a bijective function <m>\sigma:X\to X</m>. The set of all permutations of a set <m>X</m> is denoted <m>\Perm(X)</m><idx><h>permutation group</h></idx>.
+                  A <em>permutation</em><idx><h>permutation</h></idx> of a set <m>S</m> is a bijective function <m>\sigma:S\to S</m>. The set of all permutations of a set <m>S</m> is denoted <m>\Perm(S)</m><idx><h>permutation group</h></idx>.
                 </p>
               </statement>
             </definition>
@@ -1238,46 +1245,34 @@
                 <me>
                   (1 \, 3 \, 7) (2 \, 3 \, 5) = (1 \, 3 \, 5 \, 2 \, \,7).
                 </me> 
-                This equation might lead you to the false belief that every element of <m>S_n</m> is a cycle. This is not true — for example, the product <m>(1 \, 2) (3 \, 4)</m> cannot be written as a single cycle. What is true is that every element of <m>S_n</m> is uniquely (up to ordering) the product of disjoint cycles. We'll prove that soon.
+                This equation might lead you to the false belief that every element of <m>S_n</m> is a cycle. This is not true — for example, the product <m>(1 \, 2) (3 \, 4)</m> cannot be written as a single cycle. What is true is that every element of <m>S_n</m> is uniquely (up to ordering) the product of disjoint cycles. We'll prove that soon in <xref ref="thm-cycledecomp"/>.
               </p>
             </example>
-
-            <p>How can we determine the order of elements of <m>S_n?</m> Like this.</p>
-
-            <proposition xml:id="exe-permutation-order"><title>Permutation Order</title>
-              <statement>
-              <p>
-                Prove that the order of a permutation is the least common multiple of the lengths of the cycles it is a product of.
-              </p>
-
-              <p>
-                In particular, every transposition is its own inverse and the order of a <m>k</m>-cycle in <m>S_n</m> is <m>n</m>.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                Coming soon!
-              </p>
-            </proof>
-            </proposition>
-
+           
             <proposition xml:id="prop-disjoint-cycles-commute"><title>Disjoint Commutes</title>
-              <statement>
-                <p>
-                  Disjoint cycles commute,<idx><h>disjoint cycles</h></idx> that is, if <m>i_1 , i_2 \, \dots i_m, j_1 , j_2 \, \dots j_k\in [n]</m>, 
-                <me>
-                  \sigma_1=(i_1 \, i_2 \, \dots i_m), \quad \sigma_2=(j_1 \, j_2 \, \dots j_k)
-                </me> 
-                and 
-                <me>
-                  \{i_1 , i_2 , \dots i_m\}\cap \{j_1 , j_2 , \dots j_k\}=\emptyset
-                </me> 
-                then <m>\sigma_1 \circ \sigma_2=\sigma_2\circ \sigma_1</m>.
-                </p>
-              </statement>
+                  <statement>
+                    <p>
+                      Disjoint cycles commute,<idx><h>disjoint cycles</h></idx> that is, if <m>i_1 , i_2 \, \dots i_m, j_1 , j_2 \, \dots j_k\in [n]</m>, 
+                    <me>
+                      \sigma_1=(i_1 \, i_2 \, \dots i_m), \quad \sigma_2=(j_1 \, j_2 \, \dots j_k)
+                    </me> 
+                    and 
+                    <me>
+                      \{i_1 , i_2 , \dots i_m\}\cap \{j_1 , j_2 , \dots j_k\}=\emptyset
+                    </me> 
+                    then <m>\sigma_1 \circ \sigma_2=\sigma_2\circ \sigma_1</m>.
+                    </p>
+                  </statement>
             </proposition>
-      
+
+            <p>While sufficent, this is not a necessary condition.</p>
+
+            <exercise><title>Non-Disjoint Commutes</title>
+              <statement>
+                <p>Find elements <m>\s,\t\in S_n</m> that commute but are not disjoint.</p>
+              </statement>
+            </exercise>
+
             <theorem xml:id="thm-cycledecomp"><title>Cycle Decompostion</title>
               <statement>
                 <p>
@@ -1296,11 +1291,73 @@
                   </ol>
                 </p>
               </statement>
+
+              <proof>
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        First, note that the identity element of <m>S_n</m> is the empty product of cycles.
+                      </p>
+
+                      <p>
+                        Fix <m>\sigma\in S_n</m> and let <m>G = \langle \sigma\rangle</m>. 
+                        The homomorphism given as the inclusion of <m>G</m> into <m>S_n</m> determines an action of <m>G</m> on the set <m>X := \{1, \dots, n\}</m>. 
+                        This action decomposes <m>X</m> into disjoint orbits. 
+                        Since <m>\sigma</m> generates <m>G</m>, <m>i, j</m> belong to the same orbit iff <m>\sigma^k(i) = j</m> for some <m>k \geq 0</m>. 
+                        Let <m>O</m> be any one of these orbits with size at least <m>2</m>. 
+                        Now pick any element <m>i \in O</m>. 
+                        Consider the sequence <me>i, \sigma(i), \sigma^2(i), \dots</me> of element of <m>O</m>. 
+                        The axioms of a group action gives us that the first time this sequence has a repitition occurs when <m>\sigma^p(i_1) = i_1</m>, where <m>p = \#O</m>. 
+                        Let <m>j_t =\sigma^{t+1}(i)</m> for <m>t = 1, \dots, p</m> and let <m>\tau_O</m> be the <m>p</m>-cycle <m>(j_1 \, \dots \, j_p)</m>. 
+                        Then <m>\sigma</m> and <m>\tau_O</m> <q>act the same</q> on <m>O</m>. 
+                        More formally, <me>\sigma\circ \tau_O^{-1}</me> fixes all elements of <m>O</m>. 
+                        Also, <m>\tau_O</m> fixes <m>\{1, \dots, n\} \setminus O</m>. 
+                        It follows that <me>\sigma= \prod_{O} \tau_O</me> where the product is taken over all orbits of size at least <m>2</m>. 
+                        This proves existense.
+                      </p>
+
+                      <p>
+                        For uniqueness, if <m>\sigma= \prod_i \gamma_i</m> is a product of disjoint cycles, then the orbits <m>X</m> under the action of <m>G</m> are the one-element orbits along with the orbits of each <m>\gamma_i</m>. 
+                        Moreover, if the orbit of <m>\gamma_i</m> is <m>O</m>, then <m>\gamma_i</m> and <m>\sigma</m> act the same on <m>O</m> and <m>\gamma_i</m> fixes <m>\{1, \dots, n\} \setminus O</m>. 
+                        It follows that <m>\gamma_i = \tau_O</m>.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        It suffices to prove this for a single cycle and, by symmetry, for the cycle <m>(1 \, 2 \, \cdots \, p)</m>. 
+                        The equation <me>(1 \, 2 \, \cdots \, p) =  (1 \, 2) (2 \, 3) \cdots   ((p-2) \, (p-1)) ((p-1) \, p)</me> is seen to hold by direct calculation.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </proof>
             </theorem>
       
             <remark><p>For the uniqueness part of statement (1) in the above proposition one needs to establish a convention regarding <m>1</m>-cycles, that is one needs to stipulate either that the <m>1</m>-cycles will not be recorded (which gives the shortest such factorization) or that all the <m>1</m>-cycles will be recorded (which gives the longest such factorization, but also the only one that makes it clear what the number <m>n</m> is).</p></remark>
 
-            <p>Now that we know that every permutation can be written as a product of transpositions, we can categotize them based on that product.</p>
+            <p>Now that we know that every permutation can be written as a product of transpositions, we can utilize this to gain insight into many aspects of the group structure, such as the order of elements.</p>
+           
+            <proposition xml:id="exe-permutation-order"><title>Permutation Order</title>
+              <statement>
+              <p>
+                The order of a permutation is the least common multiple of the lengths of the cycles it is a product of.
+              </p>
+
+              <p>
+                In particular, every transposition is its own inverse and the order of a <m>k</m>-cycle in <m>S_n</m> is <m>n</m>.
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                Coming soon!
+              </p>
+            </proof>
+            </proposition>
+
+            <p>We can also categorize elements of permutation groups by the number of transpositions it is a product of.</p>
 
             <definition xml:id="def-even-odd-permutation"><title>Even and Odd Permutaitons</title>
               <statement>
@@ -5912,6 +5969,12 @@
               <p>A group is called <em>simple</em> if it has only two normal subgroups: itself and the trivial subgroup.</p>
             </statement>
           </definition>
+
+          <example><title><m>\mathbb{Z}/p</m> Simple</title>
+            <p>
+              <m>\mathbb{Z}/p</m> for a prime <m>p</m> is simple since any non-trivial element generates the whole group.
+            </p>
+          </example>
 
           <exercise xml:id="exe-index-2-and-simple-groups"><title>Simple Groups and Index <m>2</m></title>
             <statement>
@@ -25198,6 +25261,30 @@
         <section xml:id="sec-sets-functions"><title>Sets, Functions, Constructions</title>
 
           <subsection xml:id="subsec-sets"><title>Sets</title>
+
+            <definition xml:id="def-subset"><title>Subset</title>
+                <statement>
+                  <p>
+                    Let <m>A</m> be a set. A <em>subset</em> of <m>A</m> is a set of some (possibly none, possibly all, possibly neither) of the elements of <m>A</m>.
+                  </p>
+                </statement>
+            </definition>
+
+            <definition xml:id="def-inclusion-map"><title>Inclusion Map</title>
+              <statement>
+                <p>
+                  Let <m>B \subseteq  A</m>. The<em>inclusion</em>map is the function <m>\iota :B \to  A</m> defined by <m>\iota(b) = b</m> for all <m>b \in  B</m>.
+                </p>
+              </statement>
+            </definition>
+
+            <proposition xml:id="prop-inclusions-injective"><title>Inclusions are Injective</title>
+              <statement>
+                <p>
+                  If <m>B \subseteq  A</m> and <m>\iota:B \to  A</m> is the inclusion, then <m>\iota</m> is an injection.            
+                </p>
+              </statement>
+            </proposition>
             
             <theorem xml:id="thm-distributive-laws"><title>Distributive Laws</title>
               <statement>
@@ -25458,33 +25545,6 @@
 
           <subsection xml:id="subsec-set-constructions"><title>Set Constructions</title>
 
-            <subsubsection xml:id="subsubsec-subsets"><title>Subsets</title>
-
-              <definition xml:id="def-subset"><title>Subset</title>
-                <statement>
-                  <p>
-                    Let <m>A</m> be a set. A <em>subset</em> of <m>A</m> is a set of some (possibly none, possibly all, possibly neither) of the elements of <m>A</m>.
-                  </p>
-                </statement>
-              </definition>
-
-              <definition xml:id="def-inclusion-map"><title>Inclusion Map</title>
-                <statement>
-                  <p>
-                    Let <m>B \subseteq  A</m>. The<em>inclusion</em>map is the function <m>\iota :B \to  A</m> defined by <m>\iota(b) = b</m> for all <m>b \in  B</m>.
-                  </p>
-                </statement>
-              </definition>
-
-              <proposition xml:id="prop-inclusions-injective"><title>Inclusions are Injective</title>
-                <statement>
-                  <p>
-                    If <m>B \subseteq  A</m> and <m>\iota:B \to  A</m> is the inclusion, then <m>\iota</m> is an injection.            
-                  </p>
-                </statement>
-              </proposition>
-            </subsubsection>
-
             <subsubsection xml:id="subsubsec-product-sets"><title>Product Sets</title>
 
               <definition xml:id="def-cartesian-product"><title>Cartesian Product</title>
@@ -25540,7 +25600,7 @@
               </lemma>
             </subsubsection>
               
-            <subsubsection xml:id="subsubsec-quotient-sets"><title>Quotient Sets</title>
+            <subsubsection xml:id="subsubsec-quotient-sets"><title>Equivalence Relations and Modular Arithmetic</title>
 
               <definition xml:id="def-equivalence-relation">
                 <statement>
@@ -25626,20 +25686,12 @@
 
         <section xml:id="sec-numbers-and-cardinality"><title>Number Systems, Counting, and Cardinality</title>
 
-          <subsection xml:id="subsec-number-systems"><title>Number Systems</title>
+          <subsection xml:id="subsec-number-systems"><title>Number Systems (*)</title>
 
             <definition xml:id="def-natural-numbers"><title>Natural Numbers</title>
               <statement>
                 <p>
                   <m>\N</m>
-                </p>
-              </statement>
-            </definition>
-
-             <definition xml:id="def-integers"><title>Integers</title>
-              <statement>
-                <p>
-                  <m>\Z</m>
                 </p>
               </statement>
             </definition>
@@ -25668,41 +25720,19 @@
               </statement>
             </definition>
 
-            <definition xml:id="def-rational-numbers"><title>Rational Numbers</title>
-              <statement>
-                <p>
-                  <m>\Q</m>
-                </p>
-              </statement>
-            </definition>
-
-            <definition xml:id="def-real-numbers"><title>Real Numbers</title>
-              <statement>
-                <p>
-                  <m>\R</m>
-                </p>
-              </statement>
-            </definition>
-
-            <definition xml:id="def-complex-numbers"><title>Complex Numbers</title>
-              <statement>
-                <p>
-                  <m>\C</m>
-                </p>
-              </statement>
-            </definition>
-
-            <definition xml:id="def-positive-sets">
+            <theorem xml:id="thm-division-algorithm"><title>Division Algorithm</title>
               <statement>
                 <p>
                   
                 </p>
               </statement>
-            </definition>
+            </theorem>
+            
+
             
           </subsection>
           
-          <subsection xml:id="subsec-counting"><title>Counting</title>
+          <subsection xml:id="subsec-counting"><title>Counting (*)</title>
 
             <definition xml:id="def-binomial-coefficient"><title>Binomial Coefficient</title>
               <statement>
@@ -25847,10 +25877,443 @@
                         
         </section>
 
-        <section xml:id="sec-matrices"><title>Matrices and Vector Spaces</title>
+        <section xml:id="sec-matrices"><title>Matrices and Vector Spaces (*)</title>
 
           <p>Coming soon!</p>
           
+        </section>
+
+      </appendix>
+
+      <appendix><title>Extras</title>
+
+        <section><title>Group Theory</title>
+          <subsection xml:id="subsec-divisible-groups"><title>Divisible Groups (*)</title>
+
+            <definition xml:id="def-divisible-group"><title>Divisible Group</title>
+              <statement>
+                <p>
+                  An additive group <m>G</m> is <em>divisible</em> if for every <m>g \in G</m> and every nonzero integer <m>n</m>, there exists an element <m>h \in G</m> such that <m>nh = g</m>.
+                </p>
+              </statement>
+            </definition>
+
+            <example><title>Examples of Divisble Groups</title>
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      <m>(\Q,+)</m> is a divisible group.
+                    </p>
+                  </li>
+
+                  <li><title>Circle Group</title>
+                    <p>
+                      <m>\Q/\Z</m> is a divisible group known as the <em>circle group</em>
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </example>
+
+            <proposition xml:id="prop-divisible-group-properties"><title>Properties of Divisible Groups</title>
+              <statement>
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        Any subgroup or quotient a divisible group is also divisible.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        The direct product of divisible groups is divisible. 
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+            </proposition>
+            
+          </subsection>
+
+          <subsection xml:id="subsec-torsion-subgroups"><title>Torsion Subgroups (*)</title>
+
+            <definition xml:id="def-torsion-subgroup"><title>Torsion Subgroup </title>
+              <statement>
+                <p>
+
+                </p>
+              </statement>
+            </definition>
+            
+          </subsection>
+
+          <subsection xml:id="subsec-composition-series"><title>Composition Series</title>
+            
+            <definition xml:id="def-normal-series"><title>Normal Series</title>
+              <statement>
+                <p>
+                  For a group <m>G</m>, a <em>normal series</em> for <m>G</m> is a chain of subgroups 
+                  <me>\{e\} = N_0 \leq N_1 \leq N_2 \leq \cdots \leq N_k = G</me> 
+                  for some <m>k \geq 0</m> such that for all <m>i = 0, \cdots, k-1</m> we have <m>N_i \unlhd N_{i+1}</m>. 
+                  We write such a thing as 
+                  <me>\{e\} = N_0 \unlhd N_1 \unlhd N_2 \unlhd\cdots \unlhd N_k = G.</me> 
+                  We call <m>k</m> the <em>length</em> of the normal series and the groups <m>N_i/N_{i-1}</m> for <m>i = 1, \dots, k</m> are called the <em>factors</em> of the normal series.
+                </p>
+              </statement>
+            </definition>
+
+            <warning>
+              <p>
+                Beware! The order relation <m>\unlhd</m> is <em>not</em> transitive. 
+                For example, you showed that <m>V \unlhd S_4</m> and, since <m>V</m> is abelian, the subgroup <m>M = \{e,(12)(34)\}</m> is normal in <m>V</m>. 
+                But <m>M</m> is <em>not</em> normal in <m>S_4</m>, since for example 
+                <me>(1 3) [(1 2)(3 4)] (1 3)^{-1} = (3 2)(1 4) \notin M.</me> 
+                So in the above definition it is not necessarily true that each <m>N_i</m> is normal in <m>G</m>.
+              </p>
+            </warning>
+
+            <p>
+				      Here is some more terminology.
+			      </p>
+
+            <definition xml:id="def-refinement"><title>Refinement</title>
+              <statement>
+                <p>
+                  A <em>simple refinement</em> of a normal series 
+                  <me>\{e\} = N_0 \unlhd N_1 \unlhd\cdots \unlhd N_k = G</me> 
+                  of a group <m>G</m> is a normal series of the form 
+                  <me>\{e\} = N_0 \unlhd N_1 \unlhd\cdots \unlhd N_i \unlhd M \unlhd N_{i+1} \unlhd\cdots \unlhd N_k = G</me> 
+                  for some <m>i</m> and some normal subgroup <m>M</m> of <m>N_{i+1}</m> that contains <m>N_i</m>.
+                </p>
+
+                <p>
+                  A <em>refinement</em> of a normal is a normal series obtained by an iteration of simple refinements.
+                </p>
+              </statement>
+            </definition>
+
+            <definition xml:id="def-equivalent-series"><title>Equivalent Normal Series</title>
+              <statement>
+                <p>
+                  Two normal series 
+                  <me>\{e\} = M_0 \unlhd M_1 \unlhd M_2 \unlhd\cdots \unlhd M_j = G</me> 
+                  and 
+                  <me>\{e\} = N_0 \unlhd N_1 \unlhd N_2 \unlhd\cdots \unlhd N_k = G</me> 
+                  of the same group <m>G</m> are called <em>equivalent</em> if <m>j = k</m> and the factors are isomorphic up to order — i.e., if for some <m>\sigma\in S_j</m> there exists an isomorphism 
+                  <me>M_i/M_{i-1} \cong N_{\sigma(i)}/N_{\sigma(i) - 1}</me> 
+                  for all <m>i = 1, \dots , j</m>.
+                </p>
+              </statement>
+            </definition>
+
+            <definition xml:id="def-composition-series">
+              <statement>
+                <p>
+                  A normal series is called a <em>composition series</em> if each subquotient <m>N_i/N_{i-1}</m> is a simple group.
+                </p>
+              </statement>
+            </definition>
+
+            <theorem xml:id="thm-fta-analogue"><title>Analogue of the FTA for Group Theory</title>
+              <statement>
+                <p>
+                  Every finite group has a composition series. Moreover, any two composition series for the same (not necessairly finite group) are equivalent.
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  <ul>
+                    <li><title>Existence of Composition Series for Finite Groups</title>
+                      <p>
+                        Assume <m>G</m> is a finite group. 
+                        If <m>G = \{e\}</m> then taking <m>k = 0</m> in the definition gives a composition series of <m>G</m>. 
+                        If <m>G</m> is simple, then taking <m>k=1</m> does.
+                      </p>
+
+                      <p>
+                        Otherwise, thre is a non-trivial and proper normal subgroup <m>N</m> of <m>G</m>: 
+                        <me>e \lhd N \lhd G.</me> 
+                        By induction on <m>\# G</m>, both <m>N</m> and <m>G/N</m> have composition series, and so by the Proposition, so does <m>G</m>.
+                      </p>
+                    </li>
+
+                    <li><title>Uniquesness of Composition Series up to Equivalence</title>
+                      <p>
+                        Suppose we are given two composition series 
+                        <me>\{e\} = N_0 \unlhd N_1 \unlhd N_2 \unlhd\cdots \unlhd N_k = G</me> 
+                        and 
+                        <me>\{e\} = M_0 \unlhd N_1 \unlhd N_2 \unlhd\cdots \unlhd M_j = G</me> 
+                        for the same group <m>G</m>. 
+                        By the previous Theorem, they admit equivalent refinements. 
+                        But, by the 4-th Isomorphism Theorem, since <m>N_i/N_{i-1}</m> is simple, there are no normal subgroups of <m>N_i</m> that contain <m>N_{i-1}</m> besides <m>N_i</m> and <m>N_{i-1}</m>. 
+                        So, the only refinements of a composition series are those obtained by including repetitions of the subgroups. 
+                        This shows that the list of factors in these refinements are the original factors along with copies of the trivial group. 
+                        Since the refinements are equivalent, the number of non-trivial factors in each is the same, and these non-trivial factors are precisely the factors occuring in the two original normal series.
+                      </p>
+                    </li>
+                  </ul>
+                </p>
+              </proof>
+            </theorem>
+
+            <definition xml:id="def-composition-factors"><title>Composition Factors</title>
+              <statement>
+                <p>
+                  If a group <m>G</m> has a composition series (for example, if <m>G</m> is finite), then the factors of such a composition series are called the <em>composition factors</em> of <m>G</m>. 
+                  They are well-defined up to ordering and isomorphism, thanks to <xref ref="thm-fta-analogue"/>.
+                </p>
+              </statement>
+            </definition>
+
+            <example>
+              <statement>
+                <p>
+                  Suppose <m>G = \langle x \rangle</m> is cyclic of order <m>n &gt; 1</m> and say <m>n = p_1 \cdots p_k</m> is a prime factorization of <m>n</m>. 
+                  Then the factors of 
+                  <me>\{e\} = \langle x^0 \rangle \unlhd\langle x^{n/p_1} \rangle \unlhd\langle x^{n/p_1p_2} \rangle \unlhd\cdots\unlhd\langle x^{n/p_1p_2 \cdots p_k}\rangle = G</me> 
+                  are of order <m>p_1, p_2, \dots, p_k</m>, respectively, and hence are all simple group. 
+                  Thus the composition factors of <m>G</m> are 
+                  <me>\mathbb{Z}/p_1, \mathbb{Z}/p_2, \cdots, \mathbb{Z}/p_k.</me>
+                </p>
+              </statement>
+            </example>
+
+            <example>
+              <statement>
+                <p>
+                  <m>\{e\} \unlhd\langle r \rangle\unlhd D_{2n}</m> is a normal series. 
+                  Since <m>\langle r \rangle</m> is cyclic of order <m>n</m>, it has a composition series as in the previous example. 
+                  By inserting this into the length two normal series given here, we obtain a composition series of <m>D_{2n}</m> with composition factors 
+                  <me>\mathbb{Z}/2, \mathbb{Z}/p_1, \mathbb{Z}/p_2, \cdots, \mathbb{Z}/p_k.</me>
+                </p>
+              </statement>
+            </example>
+
+            <proposition>
+              <statement>
+                <p>
+                  ssume <m>G</m> is a group and <m>N \unlhd G</m>. 
+                  If <m>N</m> and <m>G/N</m> both have composition series, then so does <m>G</m>. 
+                  Moreover, in this case, the list of composition factors of <m>G</m> is the concatenation of the lists of composition factors of <m>N</m> and <m>G/N</m>.
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  This is a consequence of the Isomorphism Theorems. 
+                  In detail, a composition series for <m>G/N</m> has the form 
+                  <me>e \unlhd M_1/N \unlhd M_2/N \unlhd\cdots \unlhd M_k/N = G/N</me>
+                  where <m>N \unlhd M_1 \unlhd\cdots \unlhd M_k = G</m>. 
+                  If <m>e \unlhd N_1 \unlhd\cdots \unlhd N_j = N</m> is a composition seires for <m>N</m>, then 
+                  <me>e \unlhd N_1 \unlhd\cdots \unlhd N_j \unlhd M_1 \unlhd\cdots \unlhd M_k = G</me> 
+                  is a composition series for <m>G</m> since <m>M_i/M_{i-1} \cong (M_i/N)/(M_{i-1}/N)</m> for all <m>i = 1, \dots, k</m>. 
+                  (For the case <m>i = 1</m>, interpret <m>M_0</m> as <m>N</m>.)
+                </p>
+              </proof>
+            </proposition>
+            
+
+            <example>
+              <statement>
+                <p>
+                  As you showed in the homework, <m>S_4</m> has a normal subgroup <m>V</m> of order <m>4</m>. 
+                  <m>V</m> has a composition series of the form 
+                  <me>\{e\} \unlhd\langle (1 2)(3 4) \rangle \unlhd V,</me> 
+                  and so the composition factors of <m>V</m> are <m>\mathbb{Z}/2, \mathbb{Z}/2</m>.
+                </p>
+
+                <p>
+                  The group <m>S_4/V</m> has order <m>6</m> and it has an element of order <m>3</m>, namely <m>(1 2 3)</m>. 
+                  If <m>G</m> is any group of oder <m>6</m> with an element <m>x</m> or order <m>3</m>, then the composition factors of <m>G</m> are <m>\mathbb{Z}/2, \mathbb{Z}/3</m>. 
+                  (In fact, every group of order <m>6</m> has an element of order <m>3</m>.) 
+                  To see this, note that <m>\langle x \rangle</m> is normal in <m>G</m> since it has index two.
+                </p>
+
+                <p>
+                  Using the Proposition, the compition factors of <m>S_4</m> are 
+                  <me>\mathbb{Z}/2, \mathbb{Z}/2, \mathbb{Z}/2, \mathbb{Z}/3.</me>
+                </p>
+
+                <p>
+                  We can make this more explicit too. 
+                  The subgroup of <m>G/N</m> generated by <m>(1 \, 2 \, 3) N</m> corresponds to the subgroup <m>M</m> of <m>G</m> that is generated by the elements of <m>V</m> along with <m>(1 \, 2 \, 3)</m>. 
+                  We have 
+                  <me>\{e\} \unlhd\langle (1 2)(3 4) \rangle \unlhd V \unlhd M \unlhd G</me> 
+                  with factors <m>\mathbb{Z}/2, \mathbb{Z}/2, \mathbb{Z}/3, \mathbb{Z}/2</m>.
+                </p>
+              </statement>
+            </example>
+
+            <example>
+              <statement>
+                <p>
+                  The composition factors of <m>S_5</m> are <m>\mathbb{Z}/2</m> and <m>A_5</m>. This holds since <m>A_5 \unlhd S_5</m>, <m>[S_5:A_5] = 2</m>, and <m>A_5</m> is simple, facts that we will prove later.
+                </p>
+              </statement>
+            </example>
+
+            <p>
+              The uniqueness claim is harder and uses the Zassenhaus Butterfly Lemma, which I will state without proof:
+            </p>
+
+            <lemma xml:id="lem-butterfly-lemma"><title>Butterly Lemma of Zassenhaus</title>
+              <statement>
+                <p>
+                  If <m>G</m> is a group, <m>A \leq G</m>, <m>C \leq G</m>, <m>B \unlhd A</m>, and <m>D \unlhd C</m>, then <m>(A \cap C)B \leq G</m>, <m>(A \cap C)D \leq G</m>, <m>(A \cap D)B \unlhd(A \cap C)B</m>, <m>(B \cap C)D  \unlhd(A \cap C)D</m> and there is an isomorphism 
+                  <me>(A \cap C)B /(A \cap D)B \cong (A \cap C)D/(B \cap C)D.</me>
+                </p>
+              </statement>
+            </lemma>
+
+            <theorem>
+              <statement>
+                <p>
+                  Any two normal series of a group admit equivalent refinements.
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  Given two normal series
+                  <me>\{e\} = M_0 \unlhd M_1 \unlhd M_2 \unlhd\cdots \unlhd M_j = G</me> 
+                  and 
+                  <me>\{e\} = N_0 \unlhd N_1 \unlhd N_2 \unlhd\cdots \unlhd N_k = G</me> 
+                  of a group <m>G</m>, the idea is to insert a copy of each into the other. 
+                  In more detail, we form a refinement of the first normal series by replacing the single step <m>M_i \unlhd M_{i+1}</m> with 
+                  <me>M_i(N_0 \cap M_{i+1}) \unlhd M_i(N_1 \cap M_{i+1}) \unlhd\cdots \unlhd M_i(N_k \cap M_{i+1})</me> 
+                  for each <m>i</m>, noting that <m>M_i(N_0 \cap M_{i+1})  = M_i</m> and <m>M_i(N_k \cap M_{i+1}) = M_{i+1}</m>. 
+                  Create a refinement of the second normal series in an analogous way. 
+                  The Butterfly Lemma implies that these two refinements are equivalent to each other.
+                </p>
+              </proof>
+            </theorem>
+
+            <exercise>
+              <p>
+                Recall <m>G'</m> is the subgroup of <m>G</m> generated by all commutators <m>[x,y]</m> for <m>x,y \in G</m>, and that <m>G' \unlhd G</m> and that <m>G/G'</m> is an abelian group. 
+                Define, recurseivly, <m>G^{(0)} = G</m> and <m>G^{(n)} = (G^{(n-1)})'</m> for <m>n \geq 1</m>.
+              </p>
+
+              <p>
+                Assume <m>G</m> is finite. 
+                Prove that if <m>G^{(n)} = \{e\}</m> for some <m>n</m>, then all the composition factors of <m>G</m> are cyclic of prime order.
+              </p>
+
+              <p>
+                For a challenge, prove the converse: For a finite group <m>G</m>, if all the composition factors are cyclic of prime order, then <m>G^{(n)} = \{e\}</m> for some <m>n</m>.
+              </p>
+
+              <p>
+                Finite groups with this property are called <em>solvable</em>.
+              </p>
+            </exercise>
+
+            <p>
+              We close this subsection with some big-picture type comments. 
+              A normal subgroup of a group is analogous to a factor of an integer, and a composition series of a finite group is analogous to a prime factorizations of integers. 
+              In this analogy, the role of a prime number is played by a simple group. 
+              One major difference is that, unlike for prime factorizations, the list of composition factors of a group do <em>not</em> uniquely determine the group since, for example, <m>D_{2n}</m> and <m>\mathbb{Z}/(2n)</m> (and, for that matter, any solvable group of order <m>2n</m>) have the same composition factors but are certainly not isomorphic.
+            </p>
+
+            <p>
+              Nonetheless, a major motivating idea in finite group theory is the following: In order to know everything about finite group theory, one merely needs to know:
+            </p>
+
+            <p><ul>
+              <li>
+                    <p>
+              a complete list of all simple groups and
+            </p>
+              </li>
+
+              <li>
+                    <p>
+              a method of reconstructing all possible finite groups having a given list of composition factors.
+            </p>
+              </li>
+
+            </ul></p>
+
+            <p>
+              The former task was essentially accomplished by the 1980's, when all finite simple groups were classified into a handful of families along with <m>26</m> <q>sporadic</q> simple groups. The latter task is probably not really possible as stated here. But, there is a large collection of properties <m>\mathcal P</m> of finite groups such that if <m>\mathcal P</m> holds for all members of a compostion series of a given group then <m>\mathcal P</m> also holds for the group itself. For such a property <m>\mathcal P</m>, it suffices to check that <m>\mathcal P</m> holds true for every finite simple group. This technique has been used with success.
+			      </p>
+            
+
+          </subsection>
+
+          <subsection xml:id="subsec-solvability"><title>Solvable Groups</title>
+
+            <definition xml:id="def-characteristic-subgroup">
+              <statement>
+                <p>
+                  Let <m>G</m> be a group and <m>H\sse G</m>. Then <m>H</m> is a <em>characteristic subgroup</em> of <m>G</m> if <m>\varphi(H)=H</m> for all <m>\varphi\in\Aut(G)</m>, which we denote <m>H\char G</m>.
+                </p>
+              </statement>
+            </definition>
+
+            <proposition xml:id="prop-char-subgroup-properties">
+              <statement>
+                <p>
+                  <ul>
+                    <li>
+                      <p>
+                        If <m>H</m> is a characteristic subgroup of <m>G</m> then <m>H\nsg G</m>.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        If <m>H</m> is the unique subgroup of its order it is a characteristic subgroup.
+                      </p>
+                    </li>
+                  </ul>
+                </p>
+              </statement>
+            </proposition>
+
+            <theorem xml:id="thm-char-and-normality"><title>Characteristic Subgroups and Normaility</title>
+              <statement>
+                <p>
+                  <ul>
+                    <li>
+                      <p>
+                        If <m>K\char H</m> and <m>H\char G</m>, then <m>K\char G</m>.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        If <m>K\char H</m> and <m>H\nsg G</m>, then <m>K\nsg G</m>.
+                      </p>
+                    </li>
+                  </ul>
+                </p>
+              </statement>
+            </theorem>
+
+            <theorem xml:id="thm-subgroup-containing-commutator">
+              <statement>
+                <p>
+                  Let <m>H\leq G</m>. Then <m>G'\leq H</m> if and only if <m>H\nsg G</m> and <m>G/H</m> is abelian.
+                </p>
+              </statement>
+            </theorem>
+
+            <definition xml:id="def-gn"><title><m>G^{(n)}</m></title>
+              <statement>
+                <p>
+                  Let <m>n\geq1</m> and <m>G</m> be a group. Then <m>G^{(n)}</m> is defined as <m>G^0=G, G^1=G',</m> etc.
+                </p>
+              </statement>
+            </definition>
+            
+            
+            
+          </subsection>
         </section>
 
       </appendix>
@@ -31787,22 +32250,6 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
         </subsection>
         </section>
 
-        
-
-        
-
-        
-
-        
-        
-
-        
-
-        
-
-        
-
-        
 
         <!--
         <section><title></title>
