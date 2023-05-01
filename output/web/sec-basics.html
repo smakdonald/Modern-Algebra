@@ -641,9 +641,9 @@ window.MathJax = {
 <div class="toc-item"><a href="ch-rings.html" class="internal"><span class="codenumber">1</span> <span class="title">Rings</span></a></div>
 <ul class="structural">
 <li>
-<div class="toc-item"><a href="sec-defn-ex.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Intro to Rings</span></a></div>
+<div class="toc-item"><a href="sec-defn-ex.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Ring Basics</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-defn-ex.html#subsec-first-ex" class="internal"><span class="title">Definition and First Properties</span></a></div></li>
+<li><div class="toc-item"><a href="sec-defn-ex.html#subsec-rings" class="internal"><span class="title">From Rings to Fields</span></a></div></li>
 <li><div class="toc-item"><a href="sec-defn-ex.html#subsec-units" class="internal"><span class="title">Units, Zerodivisors, Integral Domains</span></a></div></li>
 </ul>
 </li>
@@ -1107,23 +1107,23 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-basics"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">4.1</span> <span class="title">Basics</span>
 </h2>
-<article class="remark remark-like" id="remark-62"><h3 class="heading">
+<article class="remark remark-like" id="remark-69"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">4.1</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-2175">Recall that when <span class="process-math">\(F\)</span> is a field an <span class="process-math">\(F\)</span>-module homomorphism is called a <span class="process-math">\(F\)</span>-linear transformation. Since every <span class="process-math">\(F\)</span>-vector space has a basis, every linear transformation between finite dimensional vector spaces may be represented by a matrix, as we noted before.</div></article><article class="definition definition-like" id="def-matrix-of-free-module-homomorphism"><h3 class="heading">
+<div class="para" id="p-2193">Recall that when <span class="process-math">\(F\)</span> is a field an <span class="process-math">\(F\)</span>-module homomorphism is called a <span class="process-math">\(F\)</span>-linear transformation. Since every <span class="process-math">\(F\)</span>-vector space has a basis, every linear transformation between finite dimensional vector spaces may be represented by a matrix, as we noted before.</div></article><article class="definition definition-like" id="def-matrix-of-free-module-homomorphism"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.2</span><span class="period">.</span><span class="space"> </span><span class="title">Matrix of Free Module Homomorphism.</span>
-</h3> <div class="para logical" id="p-2176">
+</h3> <div class="para logical" id="p-2194">
 <div class="para">Let <span class="process-math">\(R\)</span> be a non-zero commutative ring and let <span class="process-math">\(V,W\text{,}\)</span> be <span class="process-math">\(R\)</span>-modules of finite rank <span class="process-math">\(n\)</span> and <span class="process-math">\(m\text{,}\)</span> respectively. (For instance, <span class="process-math">\(R\)</span> could be a field and <span class="process-math">\(V\)</span> and <span class="process-math">\(W\)</span> could be arbitrary finite dimensional vector spaces.) Let <span class="process-math">\(B=\{b_1, \dots, b_n\}\)</span> and <span class="process-math">\(C=\{c_1, \dots, c_m\}\)</span> be <em class="emphasis">ordered</em> bases of <span class="process-math">\(V\)</span> and <span class="process-math">\(W\text{.}\)</span>
 </div>
 <ol class="decimal">
-<li id="li-638"><div class="para" id="p-2177">For each <span class="process-math">\(v \in V\text{,}\)</span> let <span class="process-math">\([v]^B\)</span> denote the unique column vector <span class="process-math">\(\begin{bmatrix} r_1 \\ \vdots \\ r_n \end{bmatrix}\)</span> such that <span class="process-math">\(v = \sum_i r_i b_i\text{.}\)</span> Define <span class="process-math">\([w]^C\)</span> for <span class="process-math">\(w \in W\)</span> similarly.</div></li>
-<li id="li-639"><div class="para" id="p-2178">If <span class="process-math">\(f: V \to W\)</span> is an <span class="process-math">\(R\)</span>-module homomorphism then we define elements <span class="process-math">\(a_{ij}\in R\)</span> for <span class="process-math">\(1\leq i\leq m\)</span> and <span class="process-math">\(1\leq j\leq n\)</span> by the formulas <span class="process-math">\(\begin{equation} f(b_i) = \sum_{j=1}^m a_{j,i} c_j. \end{equation}\)</span>
+<li id="li-635"><div class="para" id="p-2195">For each <span class="process-math">\(v \in V\text{,}\)</span> let <span class="process-math">\([v]^B\)</span> denote the unique column vector <span class="process-math">\(\begin{bmatrix} r_1 \\ \vdots \\ r_n \end{bmatrix}\)</span> such that <span class="process-math">\(v = \sum_i r_i b_i\text{.}\)</span> Define <span class="process-math">\([w]^C\)</span> for <span class="process-math">\(w \in W\)</span> similarly.</div></li>
+<li id="li-636"><div class="para" id="p-2196">If <span class="process-math">\(f: V \to W\)</span> is an <span class="process-math">\(R\)</span>-module homomorphism then we define elements <span class="process-math">\(a_{ij}\in R\)</span> for <span class="process-math">\(1\leq i\leq m\)</span> and <span class="process-math">\(1\leq j\leq n\)</span> by the formulas <span class="process-math">\(\begin{equation} f(b_i) = \sum_{j=1}^m a_{j,i} c_j. \end{equation}\)</span>
 </div></li>
 </ol>
 <div class="para">Define <span class="process-math">\([f]_B^C\)</span> to be the matrix EMPTY</div>
 </div></article><article class="example example-like" id="exe-r-vector-space-of-polynomials-p_n"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.3</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\R\)</span>-Vector Space of Polynomials (<span class="process-math">\(P_n\)</span>).</span>
-</h3> <div class="para logical" id="p-2179">
+</h3> <div class="para logical" id="p-2197">
 <div class="para">Let <span class="process-math">\(P_n\)</span> denote the the <span class="process-math">\(\R\)</span>-vector space of polynomials of degree at most <span class="process-math">\(n\)</span> (including the zero polynomial) and consider the linear transformation <span class="process-math">\(\phi :P_3\to P_2\)</span> given by <span class="process-math">\(\phi(f)=f'\text{,}\)</span> i.e. taking the derivative. Take <span class="process-math">\(B=\{1,x,x^2,x^3\}\)</span> for an ordered basis of <span class="process-math">\(P_3\)</span> and <span class="process-math">\(C = \{1,x,x^2\}\)</span> for an ordered basis of <span class="process-math">\(P_2\text{.}\)</span> Then for <span class="process-math">\(p(x) = 5 + 3x + 2x^2 - 7x^3\)</span> we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1149,7 +1149,7 @@ window.MathJax = {
 \end{equation*}
 </div>
 <div class="para">confirming in this example one of the assertions of the Lemma.</div>
-</div> <div class="para logical" id="p-2180">
+</div> <div class="para logical" id="p-2198">
 <div class="para">Let <span class="process-math">\(\psi: P_2 \to P_3\)</span> be the linear map <span class="process-math">\(\psi(q(x)) = \int_0^x q(t) \, dt\text{.}\)</span> Then</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1183,7 +1183,7 @@ window.MathJax = {
 <div class="para">as predicted by .</div>
 </div></article><article class="example example-like" id="exe-identity-automorphism-of-free-r-module"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4</span><span class="period">.</span><span class="space"> </span><span class="title">Identity Automorphism of Free <span class="process-math">\(R\)</span>-Module.</span>
-</h3> <div class="para logical" id="p-2181">
+</h3> <div class="para logical" id="p-2199">
 <div class="para">If <span class="process-math">\(\id_V: V \to V\)</span> is the identity automorphism of an <span class="process-math">\(n\)</span>-dimensional free <span class="process-math">\(R\)</span>-module <span class="process-math">\(V\text{,}\)</span> then for any basis <span class="process-math">\(B\)</span> of <span class="process-math">\(V\)</span> we have <span class="process-math">\(\id_V(b_i) = b_i\)</span> for all <span class="process-math">\(i\)</span> and hence</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1193,7 +1193,7 @@ window.MathJax = {
 </div></article><article class="proposition theorem-like" id="prop-when-fmh-matrix-is-invertible"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">4.5</span><span class="period">.</span><span class="space"> </span><span class="title">When FMH Matrix is Invertible.</span>
 </h3>
-<div class="para logical" id="p-2182">
+<div class="para logical" id="p-2200">
 <div class="para">If <span class="process-math">\(f: V \to W\)</span> is an isomorphism of free modules of finite rank, <span class="process-math">\(B\)</span> is an ordered basis of <span class="process-math">\(V\)</span> and <span class="process-math">\(C\)</span> is an ordered basis of <span class="process-math">\(W\text{,}\)</span> then <span class="process-math">\([f]_B^C\)</span> is an invertible matrix and</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1205,40 +1205,40 @@ window.MathJax = {
 </h3>
 <div class="exercisegroup" id="exercisegroup-56">
 <h4 class="heading"><span class="title">Computations and Examples.</span></h4>
-<div class="introduction" id="introduction-59"><div class="para" id="p-2183"></div></div>
+<div class="introduction" id="introduction-59"><div class="para" id="p-2201"></div></div>
 <div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="exercise-208"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-208"><h5 class="heading">
+<article class="exercise exercise-like" id="exercise-209"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-209"><h5 class="heading">
 <span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-208"><article class="exercise exercise-like"><div class="para" id="p-2184">Coming soon to an OER near you!</div>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-209"><article class="exercise exercise-like"><div class="para" id="p-2202">Coming soon to an OER near you!</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-72" id="hint-72"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-72"><div class="hint solution-like"><div class="para" id="p-2185">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-138" id="solution-138"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-138"><div class="solution solution-like"><div class="para" id="p-2186">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-72" id="hint-72"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-72"><div class="hint solution-like"><div class="para" id="p-2203">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-139" id="solution-139"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-139"><div class="solution solution-like"><div class="para" id="p-2204">Coming soon to an OER near you!</div></div></div>
 </div></article></div>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-57">
 <h4 class="heading"><span class="title">Formal Proofs.</span></h4>
-<div class="introduction" id="introduction-60"><div class="para" id="p-2187"></div></div>
+<div class="introduction" id="introduction-60"><div class="para" id="p-2205"></div></div>
 <div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="exercise-209"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-209"><h5 class="heading">
+<article class="exercise exercise-like" id="exercise-210"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-210"><h5 class="heading">
 <span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-209"><article class="exercise exercise-like"><div class="para" id="p-2188">Coming soon to an OER near you!</div>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-210"><article class="exercise exercise-like"><div class="para" id="p-2206">Coming soon to an OER near you!</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-73" id="hint-73"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-73"><div class="hint solution-like"><div class="para" id="p-2189">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-139" id="solution-139"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-139"><div class="solution solution-like"><div class="para" id="p-2190">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-73" id="hint-73"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-73"><div class="hint solution-like"><div class="para" id="p-2207">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-140" id="solution-140"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-140"><div class="solution solution-like"><div class="para" id="p-2208">Coming soon to an OER near you!</div></div></div>
 </div></article></div>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-58">
 <h4 class="heading"><span class="title">Qualifying Exam Problems.</span></h4>
-<div class="introduction" id="introduction-61"><div class="para" id="p-2191"></div></div>
+<div class="introduction" id="introduction-61"><div class="para" id="p-2209"></div></div>
 <div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="exercise-210"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-210"><h5 class="heading">
+<article class="exercise exercise-like" id="exercise-211"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-211"><h5 class="heading">
 <span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-210"><article class="exercise exercise-like"><div class="para" id="p-2192">Coming soon to an OER near you!</div>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-211"><article class="exercise exercise-like"><div class="para" id="p-2210">Coming soon to an OER near you!</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-74" id="hint-74"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-74"><div class="hint solution-like"><div class="para" id="p-2193">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-140" id="solution-140"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-140"><div class="solution solution-like"><div class="para" id="p-2194">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-74" id="hint-74"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-74"><div class="hint solution-like"><div class="para" id="p-2211">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-141" id="solution-141"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-141"><div class="solution solution-like"><div class="para" id="p-2212">Coming soon to an OER near you!</div></div></div>
 </div></article></div>
 </div>
 </div></section></section></div>

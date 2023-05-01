@@ -420,19 +420,19 @@
                 <p>
                   A <em>monoid</em><idx><h>monoid</h></idx> is a pair <m>(G, \cdot)</m> where <m>G</m> is a set and <m>\cdot</m> is a <xref text="title" ref="def-binop"/> on <m>G</m> satisfying the following properties:
                   <ul>
-                    <li><title>Closure</title><idx><h>closure</h></idx>
+                    <li xml:id="closure-axiom"><title>Closure Axiom</title><idx><h>closure</h></idx>
                       <p>
                         for each <m>x,y\in G</m>, <m>xy\in G</m>.
                       </p>
                     </li>
 
-                    <li><title>Associativity</title><idx><h>associativity</h></idx>
+                    <li xml:id="associativity-axiom"><title>Associativity Axiom</title><idx><h>associativity</h></idx>
                       <p>
                         for all <m>x,y,z\in G</m> we have <m>(x\cdot y)\cdot z=x\cdot (y\cdot z)</m> 
                       </p>
                     </li>
 
-                    <li><title>Identity Element</title><idx><h>identity</h></idx>
+                    <li xml:id="identity-axiom"><title>Identity Axiom</title><idx><h>identity</h></idx>
                       <p>
                         there exists <m>e\in G</m> such that <m>e·g=x·g=x</m> for all <m>g\in G</m>
                         <notation><usage><m>e</m></usage><description>the identity element of a group</description></notation>          
@@ -463,7 +463,7 @@
 
             <figure xml:id="figure-magma">
               <caption>Reltions between algebraic structures. One day I will get this to work.</caption>
-              <image width="30%" source="images/magma.pdf" />
+              <image source="images/magma.pdf" width="30%"/>
             </figure>
 
             <definition xml:id="def-group"><title>Group</title>
@@ -471,7 +471,7 @@
                 <p>
                   A <em>group</em><idx><h>group</h></idx> is a monoid <m>(G,\cdot)</m> with the following additional property:
                   <ul>
-                    <li><title>Inverses</title><idx><h>inverse</h></idx>
+                    <li xml:id="inverse-axiom"><title>Inverse Axiom</title><idx><h>inverse</h></idx>
                       <p>
                         for each <m>x\in G</m>, there is an element <m>y\in G</m> such that <m>xy=e=yx</m>.
                       </p>
@@ -752,11 +752,11 @@
                       <p>
                         We expand <m>x^m</m> and <m>x^n</m> to see
                         <me>
-                          \begin{align}
+                          \begin{aligned}
                             x^m\cdot\x^n &amp;=\underbrace{x\cdot\dots\cdot x} \cdot \underbrace{x\cdot\dots\cdot x}\\ 
                             &amp;= \underbrace{x\cdot\dots\cdot x}\\ 
                             &amp;= x^{m+n}.
-                          \end{align}
+                          \end{aligned}
                         </me>
                       </p>
                     </li>
@@ -7937,455 +7937,339 @@
        ***************
        -->
 
-        <section xml:id="sec-defn-ex"><title>Intro to Rings</title>
+        <section xml:id="sec-defn-ex"><title>Ring Basics</title>
     
-            <subsection xml:id="subsec-first-ex"><title>Definition and First Properties</title>
-                
-                <blockquote><p><q>I made a lot of mistakes out of the ring, but I never made any in it.</q></p><attribution>Jack Johnson</attribution></blockquote>
-    
-                <definition xml:id="def-ring"><title>Ring</title>
-                  <statement>
-                      <p>
-                          A <em>ring</em> is a set <m>R</m> equipped with two binary operations, <m>+</m> and <m>\cdot</m>, satisfying:
-                      </p>
-      
-                      <p>
-                          <ol>
-                              <li> 
-                                  <p>
-                                      <m>(R,+)</m> is an <xref text="title" ref="def-abelian"/> with identity element denoted <m>0</m>,
-                                  </p>
-                              </li>
-      
-                              <li> <title>Associative Multiplication</title>
-                                  <p>
-                                      <m>\cdot</m> is associative (making <m>(R,\cdot)</m> a <xref text="title" ref="def-monoid"/>)
-                                  </p>
-                              </li>
-      
-                              <li> <title>Distributive Law</title>
-                                  <p>
-                                      <m>a \cdot (b + c) = a \cdot b + a \cdot c</m> and <m>(a + b) \cdot c = a \cdot c + b \cdot c</m> hold for all <m>a,b,c \in R</m>.
-                                  </p>
-                              </li>
-
-                          </ol>
-                      </p>
-      
-                  </statement>
-                </definition>
-
-                <p>Here are some basic consequences of the axioms.</p>
-    
-                <proposition xml:id="prop-ring-arithmetic"><title>Ring Arithmetic</title>     
-    
-                  <statement>
+          <subsection xml:id="subsec-rings"><title>From Rings to Fields</title>
+              
+              <blockquote><p><q>I made a lot of mistakes out of the ring, but I never made any in it.</q></p><attribution>Jack Johnson</attribution></blockquote>
+  
+              <definition xml:id="def-ring"><title>Ring</title>
+                <statement>
                   <p>
-                      For any ring <m>R</m> and all <m>a,b \in R</m> we have:
+                    A <em>ring</em> is a set <m>R</m> equipped with two binary operations, <m>+</m> and <m>\cdot</m>, satisfying:
                   </p>
   
                   <p>
-                    <ol>
-                      <li>
-                        <p>
-                          <m>a \cdot 0 = 0 = 0 \cdot a</m>,
-                        </p>
-                      </li>
-          
-                      <li>
-                        <p>
-                          <m>(-a)b = -(ab) = a(-b)</m>,
-                        </p>
-                      </li>
-          
-                      <li>
-                        <p>
-                          <m>(-a)(-b) = ab</m>.
-                        </p>
-                      </li>
-                    </ol>
-                  </p>
-                            
-                  </statement>
-  
-                  <proof>
-                    <p>
-                      Let <m>R</m> be a ring with identity.
-  
-                      <ol>
-                        <li>
-                          <p>
-                            Let <m>a\in R</m>. Observe that <m>0a=(0+0)a=0a+0a</m> by the distributive law. Subtracting <m>0a</m> from both sides we have <m>0=0a</m>. A similar argument shows that <m>0=a0</m>.
-                          </p>
-                        </li>
-  
-                        <li>
-                          <p>
-                            Let <m>a\in R</m>. Note that <m>-a+a=0</m>. Consider <m>(-1)a+a</m>. Using the distributive law we see that <m>(-1)a+a=a(-1+1)=a(0)=0</m>. Thus <m>-a</m> and <m>(-1)a</m> are both additive inverses of <m>a,</m> making them unique.
-                          </p>
-                        </li>
-                      </ol>
-                    </p>
-                  </proof>
-                </proposition>
-
-                <definition xml:id="def-unital-ring"><title>Unital Ring</title>
-                  <statement>
-                    <p>
-                      A ring <m>R</m> is a <em>unital ring</em> (or a <em>ring with identity</em>) if there is a multiplicative identity element, written as <m>1</m>, such that <m>1 \cdot a = a = a \cdot 1</m> for all <m>a \in R</m>.
-                    </p>
-                  </statement>
-                </definition>
-
-                <p>Some additional consequences.</p>
-
-                <proposition xml:id="prop-unital-ring-arithmetic"><title>Unital Ring Arithmetic</title>
-                  <statement>
-                    <p>
-                      For a unital ring <m>R</m> and all <m>a\in R</m> we have:
-                    </p>
-
-                    <p>
-                      <ol>
-                        <li>
-                          <p>
-                            <m>1</m> is unique, and
-                          </p>
-                        </li>
-            
-                        <li>
-                          <p>
-                            <m>(-1)a = -a</m>.
-                          </p>
-                        </li>
-                      </ol>
-                    </p>
-                  </statement>
-                </proposition>
-
-                <p>We can go deeper.</p>
-
-                <definition xml:id="def-division-ring"><title>Division Ring</title>
-                  <statement>
-                    <p>
-                      A unital ring <m>R</m> is a <em>division ring</em> if <m>1\neq 0</m> and <m>(R - \{0\})</m> is a group under <m>\cdot</m> (i.e. every <m>r\in (R - \{0\})</m> has a multiplicative inverse)
-                    </p>
-                  </statement>
-                </definition>
-
-                <p>We can go <em>deeper</em>.</p>
-
-                <definition xml:id="def-commutative-ring"><title>Commutative Ring</title>
-                  <statement>
-                    <p>
-                      A ring <m>R</m> is <em>commutative</em> if <m>a \cdot b = b \cdot a</m> holds for all <m>a,b \in R</m>.
-                      </p>
-                  </statement>
-                </definition>
-
-                <p>We can go <alert>deeper</alert>.</p>
-
-                <definition xml:id="def-field"><title>Field</title>
-                  <statement>
-                    <p>
-                        A ring <m>R</m> is a <em>field</em> if it is a commutative division ring.
-                    </p>
-                  </statement>
-                </definition>
-
-                <p>Phew. Lets see some examples.</p>
-    
-                <example xml:id="ex-ring-examples"><title>Relevant Rings</title>
-                  <p>
-                    <ol>
-                      <li> <title>Trivial Ring</title>
-                        <p>
-                          <m>R=\{0\}</m> is called the <em>trivial ring</em>. Notice that in the trivial ring <m>0=1</m>. Conversely, if <m>1 = 0</m> in a ring, then <m>R = \{0\}</m>, since in this case for all <m>a</m>, we have <m>a \cdot 0 = 0</m> and hence <m>a = a \cdot 1 = a \cdot 0 = 0</m>.<fn>Personally, I am in favor of calling this the bor-ring.</fn>
-                        </p>
-                      </li>
-  
+                    <ul>
                       <li> 
-                        <p>
-                          <m>\mathbb{Z}</m> is a commutative ring.
-                        </p>
-                      </li>
-  
-                      <li>
-                        <p>
-                          <m>\mathbb{Z}/n</m> is a commutative ring under addition and multiplication modulo <m>n</m>. Note that <m>\mathbb{Z}/n</m> is a field if any only if <m>n</m> is prime.
-                        </p>
-                      </li>
-  
-                      <li>
-                        <p>
-                          The familiar sets of “numbers" <m>\mathbb{Q}, {\mathbb{R}}, \mathbb{C}</m> are fields.
-                        </p>
-                      </li>
-  
-                      <li> <title>Matrix Ring</title>
-                        <p>
-                          If <m>R</m> is any ring (not necessarily commutative), so is <m>\operatorname{M}_{n}(R)</m> for any natural number <m>n</m>, using the usual rules for addition and multiplication of square matrices.
-                        </p>
-                      </li>
-  
-                      <li> <title>Direct Product of Rings</title>
-                        <p>
-                          The cartesian product <m>R\times R'</m> of two rings <m>R</m> and <m>R'</m> has a natural ring structure with addition and multiplication defined componentwise: <me>(a,b)+(c,d)=(a+c,b+d)</me> <me>(a,b)\cdot(c,d)=(a\cdot c,b\cdot d)</me>
-                        </p>
-                      </li>
-                    </ol>
-                  </p>
-                </example>
-
-                <example><title>Less Relevant Rings</title>
-                  <p>
-                    <ol>
-                      <li> <title>The Real Hamiltonian Quaternion Ring</title>
-                        <p>
-                          Let <m>i,j,k</m> be formal symbols and set <m>{\mathbb{H}}</m> to be the four dimensional <m>{\mathbb{R}}</m>-vector space consisting of all expressions of the form <m>a + bi + cj + dk</m> with <m>a,b,c,d \in {\mathbb{R}}</m>. Addition is vector space addition: 
-                          <me>
-                            (a + bi + cj + dk) +(a' + b'i + c'j + d'k) =(a') + (b + b') i + (c + c')j + (d + d')k.
-                          </me> 
-                          Multiplication is uniquely determined by the axioms of a ring together with the rules 
-                          <me>
-                            i^2 = j^2 = k^2 = -1, -ji = ij = k, -kj = jk = i, -ik = ki = j.
-                          </me> 
-                          and the fact that the real coefficients commute with each other and <m>i,j,k</m>.
-                        </p>
-          
-                        <p>
-                          It's not obvious that the multiplication defined in this way satisfies associativity, but in fact it does (this amounts conditions very similar to the associativity of the group <m>Q_8</m>).
-                        </p>
-          
-                        <p>
-                          <m>{\mathbb{H}}</m> is a division ring, since one can check that <me>(a + bi + cj + dk)^{-1} = \frac{a -  bi -  cj - dk}{\|a + bi + cj + dk\|}</me> where <me>\|a + bi + cj + dk \| := a^2 + b^2 + c^2 + d^2.</me>
-                        </p>
-          
-                        <p>
-                          In the equation above <m>\|a + bi + cj + dk \|</m> is non-zero real number if <m>a + bi + cj + dk</m> is not the zero element. The quantity <m>\|a + bi + cj + dk \|</m> is called the <em>norm</em> of the quaternion <m>a + bi + cj + dk</m>.
-                        </p>
-                      </li>
-
-                      <li> <title>Function Ring</title>
-                        <p>
-                          If <m>X</m> is a set and <m>R</m> is a ring, let <m>\operatorname{Fun}(X, R)</m> be the collection of set theoretic functions from <m>X</m> to <m>R</m>, and define <m>(f + g)(x) = f(x) + g(x)</m> and <m>(f \cdot g)(x) := f(x) \cdot g(x)</m>. Then <m>\operatorname{Fun}(X,R)</m> is a ring. If <m>X</m> is a finite set and <m>|X|=n</m>, then <m>\operatorname{Fun}(X,R)</m> may be identified with <m>R^n=\underbrace{R \times \cdots \times R}_n</m>, the direct product of <m>n</m> copies of <m>R</m>.
-                        </p>
-                      </li>
-                      
-                      <li> <title>Endomorphism Ring</title>
-                        <p>
-                          If <m>A = (A, +)</m> is any abelian group, set <m>\operatorname{End}_{Ab}(A)</m> to be the collection of endomorphisms of <m>A</m> — that is, the set of group homomorphisms <m>f: A \to A</m> from <m>A</m> to itself.
-                        </p>
-  
-                        <p>
-                          Then <m>\operatorname{End}_{Ab}(A)</m> is a ring with addition <m>(f + g)(a) := f(a) + g(a)</m> and multiplication <m>f \cdot g := f \circ g</m>. This is almost always a non-commutative ring.
-                        </p>
-                      </li>
-                    </ol>
-                  </p>
-                </example>
-    
-            </subsection>  
-    
-            <subsection xml:id="subsec-units"><title>Units, Zerodivisors, Integral Domains</title>
-
-                <blockquote><p><q>There is more power in unity than division.</q></p><attribution>Emmanuel Cleaver</attribution></blockquote>
-    
-                <definition xml:id="def-unit"><title>Unit</title>
-                  <statement>
-                    <p>
-                        An element <m>u</m> of a unital ring <m>R</m> with <m>1\neq 0</m> is called a <em>unit</em> there exists <m>v\in R</m> such that<m>uv=1</m> and <m>vu=1</m>. In case such <m>v</m> exists, it is unique, it is called the inverse of <m>u</m> and denoted by <m>u^{-1}</m>.
-                    </p>
-                  </statement>
-                </definition>
-    
-                <definition xml:id="def-group-of-units"><title>Group of Units</title>
-                  <statement>
-                    <p>
-                      The set of units of a non-trivial unital ring <m>R</m> is denoted <m>R^\times</m>. This forms a group <m>(R^\times,\cdot)</m> with respect to multiplication.
-                    </p>
-                  </statement>
-                </definition>
-
-                <exercise xml:id="exe-group-of-units-is-a-group"><title>Sweet, Sweet Rigor</title>
-                  <p>
-                    The group of units is indeed a group <m>(R^\times,\cdot)</m> with respect to multiplication.
-                  </p>
-                </exercise>
-
-                <p>Finally, we have a formal definition for groups of units. We can now make a few general observations of things used implicitely before.</p>
-
-                <example><title>Still a Group. Still Units</title>
-                  <p>
-                    All of our favorite groups of units from <xref ref="part-group"/> are indeed groups of units. Who knew?
-                  </p>
-                </example>
-
-                <exercise xml:id="exe-units-in-fields"><title>Units in Fields</title>
-                  <p>
-                    Let <m>F</m> be a field. Prove that every non-zero element of <m>F</m> is a unit. In symbols, show <m>F^\times=F\setminus\{0\}</m>.
-                  </p>
-                </exercise>  
-
-                <example xml:id="ex-matrices-and-units"><title>Matrices and Units</title>
-                  <p>
-                    <m>\operatorname{M}_{n}(F)^\times = \operatorname{GL}_n(F)</m>.
-                  </p>
-                </example>
-
-                <p>Well, that was validating. Months in the making. But enough vindication: we move forward. It's all we've ever known.</p>
-    
-                <definition xml:id="def-zerodivisor"><title>Zerodivisor</title>
-                  <statement>
-                      <p>
-                      A <em>zerodivisor</em> in a ring <m>R</m> is an element <m>x\ne 0</m> such that <m>xy = 0</m> or <m>yx=0</m> for some <m>y \ne 0</m>.<fn>We once again jump the gun on the lack-of-hyphenation situation. Langauge evolves at its own rate, but who has time for that?</fn>
-                      </p>
-                  </statement>
-                </definition>
-    
-                <definition xml:id="def-integral-domain"><title>Integral Domain</title>
-                  <statement>
-                      <p>
-                        A unital ring <m>R</m> is an <em>integral domain</em> (often shortened to <em>domain</em>) if <m>1 \ne 0</m>, <m>R</m> is commutative, and <m>R</m> has no zerodivisors.
-                      </p>
-                  </statement>
-                </definition>
-
-                <example><title>Modular Domains</title>
-                  <p>
-                    <m>\Z/n</m> is an integral domain if and only if <m>n</m> is prime (in which case it happens to be a field too) or <m>n = 0</m> (in which case <m>\Z/0\cong \Z</m>).
-                  </p>
-                </example>
-    
-                <lemma xml:id="lem-cancellation-in-integral-domains"><title>Cancellation in Domains</title>
-                  <statement>
-                      <p>
-                        Let <m>R</m> be a commutative ring with identity. Then <m>R</m> is an integral domain if and only if for all <m>x,y,z\in R</m> such that <m>xy=xz</m>, we have <m>y=z</m>. This property is called <alert>cancellation</alert>.
-                      </p>
-                  </statement>
-                </lemma>
-    
-                <theorem xml:id="integral-domains-and-fields"><title>Some Classic Integral Domains</title>
-                  <statement>
-                    <p>
-                      <ol>
-                        <li>
                           <p>
-                            Every field is an integral domain.
+                              <m>(R,+)</m> is an <xref text="title" ref="def-abelian"/> with identity element denoted <m>0</m>,
                           </p>
-                        </li>
-
-                        <li>
-                          <p>
-                            A finite integral domain <m>R</m> must be a field.
-                          </p>
-                        </li>
-                      </ol>
-                    </p>
-                  </statement>
-
-                  <proof>
-                    <p>
-                      <ol>
-                        <li>
-                          <p>
-                            Coming Soon!
-                          </p>
-                        </li>
-
-                        <li>
-                          <p>
-                            Let <m>x\in D</m>, and consider the set <m>\{x^n|n\in\N\}</m>. As <m>R</m> is finite there must exist <m>n&lt;m\in\N</m> such that <m>x^n=x^m</m>. In integral domains cancellation is allowed, and thus we can cancel an <m>x^n</m> from both sides, yielding <m>e=x^{m-n}</m>, and thus <m>x\cdot x^{m-n-1}=e</m>, making <m>x</m> a unit of <m>R</m>. Thus <m>R</m> is a field.
-                          </p>
-                        </li>
-                      </ol>
-                    </p>
-                  </proof>
-                </theorem>
-    
-                <lemma xml:id="lem-zerodivisor-not-unit"><title>Zerodivisors and Units</title>
-                  <statement>
-                      <p>
-                      If <m>a</m> is a zerodivisor in a ring <m>R</m>, then <m>a</m> is not a unit.
-                      </p>
-                  </statement>
-      
-                  <proof>
-                    <p>
-                      Suppose that <m>a</m> is both a zerodivisor and a unit. Then there exists <m>b\neq 0</m> such that <m>ab=0</m> or <m>ba=0</m>. Multiplying either of these equations by <m>a^{-1}</m> gives <m>b=0</m>, a contradiction.
-                    </p>
-                  </proof>
-                </lemma>
-    
-                <exercise xml:id="exe-neither-zerodivisor-nor-unit"><title>Finite Zerdivisors and Units</title>
-                  
-                  <p>
-                    <ol>
-                      <li>
-                        <p>
-                          Prove that if <m>R</m> is finite then every element is either a unit of a zerodivisor.
-                        </p>
                       </li>
 
-                      <li>
-                        <p>
-                          Give an example of a ring <m>R</m> and an element <m>a\in R</m> which is neither a unit nor a zerodivisor.
-                        </p>
+                      <li> <title>Associative Multiplication</title>
+                          <p>
+                              <m>\cdot</m> is associative (making <m>(R,\cdot)</m> a <xref text="title" ref="def-monoid"/>)
+                          </p>
                       </li>
-                    </ol>
+
+                      <li> <title>Distributive Law</title>
+                          <p>
+                              <m>a \cdot (b + c) = a \cdot b + a \cdot c</m> and <m>(a + b) \cdot c = a \cdot c + b \cdot c</m> hold for all <m>a,b,c \in R</m>.
+                          </p>
+                      </li>
+                    </ul>
                   </p>
-                </exercise>
+    
+                </statement>
+              </definition>
+
+              <historical>
+                <p>
+                  Rings were first discovered (or created) by the German mathematician David Hilbert in the early 20th century, who used the term "Ring" because of the circular nature of the structure. The operations interact with each other in a circular way, such that multiplication distributes over addition, and addition and multiplication satisfy certain other algebraic properties.
+                </p>
+              </historical>
+
+              <p>Here are some basic consequences of the axioms.</p>
+  
+              <proposition xml:id="prop-ring-arithmetic"><title>Ring Arithmetic</title>     
+  
+                <statement>
+                <p>
+                    For any ring <m>R</m> and all <m>a,b \in R</m> we have:
+                </p>
+
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        <m>a \cdot 0 = 0 = 0 \cdot a</m>,
+                      </p>
+                    </li>
+        
+                    <li>
+                      <p>
+                        <m>(-a)b = -(ab) = a(-b)</m>,
+                      </p>
+                    </li>
+        
+                    <li>
+                      <p>
+                        <m>(-a)(-b) = ab</m>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
                           
-                <definition xml:id="def-nilpotent"><title>Nilpotent</title>
-                  <statement><p>
-                      An element <m>a</m> of a ring <m>R</m> is called <em>nilpotent</em> if <m>a^n = 0</m> for some integer <m>n \geq 1</m>.
-                  </p></statement>
-                </definition>
-    
-                <lemma xml:id="lem-nilpotents-and-units"><title>Nilpotents and Units</title>
-                  <statement><p>
-                      If <m>a</m> is a nilpotent element in a unital ring <m>R</m>, then <m>1-a</m> is a unit.
-                  </p></statement>
-                </lemma>
-    
-                <exercise xml:id="exe-one-plus-nilpotent-is-unit">
-                  <p>
-                    Let <m>x</m> be a nilpotent element of a ring. Show that <m>1 + x</m> is a unit of <m>A.</m> Deduce that the sum of a nilpotent element and a unit is a unit.
-                  </p>
-                </exercise>
-    
-                <definition xml:id="def-idempotent"><title>Idempotent</title>
-                  <statement><p>
-                      Let <m>R</m> be a ring with identity. An element <m>e\in R</m> is called <em>idempotent</em> if <m>e^2=e</m>.
-                  </p></statement>
-                </definition>
-    
-                <exercise><title>Potent Idempotents</title>
+                </statement>
+
+                <proof>
                   <p>
                     Let <m>R</m> be a ring with identity.
+
                     <ol>
                       <li>
                         <p>
-                          Give an example of a ring which has an idempotent other than <m>0</m> or <m>1</m>.
+                          Let <m>a\in R</m>. Observe that <m>0a=(0+0)a=0a+0a</m> by the distributive law. Subtracting <m>0a</m> from both sides we have <m>0=0a</m>. A similar argument shows that <m>0=a0</m>.
                         </p>
                       </li>
-    
+
                       <li>
                         <p>
-                          Prove that if <m>e</m> is idempotent, so is <m>1-e</m>.
-                        </p>
-                      </li>
-    
-                      <li>
-                        <p>
-                          Suppose <m>R</m> is commutative and <m>e</m> an idempotent. Let <m>Re:=\{re\mid r\in R\}</m>. Prove that <m>Re</m> is a commutative ring (with identity <m>e</m>).
+                          Let <m>a\in R</m>. Note that <m>-a+a=0</m>. Consider <m>(-1)a+a</m>. Using the distributive law we see that <m>(-1)a+a=a(-1+1)=a(0)=0</m>. Thus <m>-a</m> and <m>(-1)a</m> are both additive inverses of <m>a,</m> making them unique.
                         </p>
                       </li>
                     </ol>
                   </p>
-                </exercise>
-    
-                <exercise xml:id="exe-gaussian-units">
+                </proof>
+              </proposition>
+
+              <definition xml:id="def-unital-ring"><title>Unital Ring</title>
+                <statement>
+                  <p>
+                    A ring <m>R</m> is a <em>unital ring</em> (or a <em>ring with identity</em>) if there is a multiplicative identity element, written as <m>1</m>, such that <m>1 \cdot a = a = a \cdot 1</m> for all <m>a \in R</m>.
+                  </p>
+                </statement>
+              </definition>
+
+              <remark><p>Around these parts most of us generally include <m>1</m> in our definition of a ring, referring to a ring without an identity as a <em>rng</em><fn>Get it?</fn>. However, we'll stick with the more classical definition for now.</p></remark>
+
+              <p>Some additional consequences.</p>
+
+              <proposition xml:id="prop-unital-ring-arithmetic"><title>Unital Ring Arithmetic</title>
+                <statement>
+                  <p>
+                    For a unital ring <m>R</m> and all <m>a\in R</m> we have:
+                  </p>
+
+                  <p>
+                    <ol>
+                      <li>
+                        <p>
+                          <m>1</m> is unique, and
+                        </p>
+                      </li>
+          
+                      <li>
+                        <p>
+                          <m>(-1)a = -a</m>.
+                        </p>
+                      </li>
+                    </ol>
+                  </p>
+                </statement>
+              </proposition>
+
+              <p>We can go deeper.</p>
+
+              <definition xml:id="def-division-ring"><title>Division Ring</title>
+                <statement>
+                  <p>
+                    A unital ring <m>R</m> is a <em>division ring</em> if <m>1\neq 0</m> and <m>(R \sm \{0\})</m> is a group under <m>\cdot</m> (i.e. every <m>r\in (R \sm \{0\})</m> has a multiplicative inverse)
+                  </p>
+                </statement>
+              </definition>
+
+              <p>We can go <em>deeper</em>.</p>
+
+              <definition xml:id="def-commutative-ring"><title>Commutative Ring</title>
+                <statement>
+                  <p>
+                    A ring <m>R</m> is <em>commutative</em> if <m>a \cdot b = b \cdot a</m> holds for all <m>a,b \in R</m>.
+                    </p>
+                </statement>
+              </definition>
+
+              <p>We can go <alert>deeper</alert>.</p>
+
+              <definition xml:id="def-field"><title>Field</title>
+                <statement>
+                  <p>
+                      A ring <m>R</m> is a <em>field</em> if it is a commutative division ring.
+                  </p>
+                </statement>
+              </definition>
+
+              <historical>
+                <p>
+                  The term "Field" was first introduced by the German mathematician Ernst Steinitz in the early 20th century. It was chosen because of the analogy with the physical concept of a field, such as an electric field or a gravitational field, which also has a notion of addition and multiplication, and satisfies certain algebraic properties.
+                </p>
+              </historical>
+
+              <p>Phew. That was pretty deep. Let's take a breather and see some examples.</p>
+  
+              <example xml:id="ex-ring-examples"><title>Relevant Rings</title>
+                <p>
+                  <ol>
+                    <li> <title>Trivial Ring</title>
+                      <p>
+                        <m>R=\{0\}</m> is called the <em>trivial ring</em>.<fn>Personally, I am in favor of calling this the <em>bor-ring</em>.</fn>
+                      </p>
+                    </li>
+
+                    <li> 
+                      <p>
+                        <m>\mathbb{Z}</m> is a commutative ring.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        <m>\mathbb{Z}/n</m> is a commutative ring under addition and multiplication modulo <m>n</m>.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        The familiar sets of “numbers" <m>\mathbb{Q}, {\mathbb{R}}, \mathbb{C}</m> are fields.
+                      </p>
+                    </li>
+
+                    <li xml:id="def-gaussian-integers"><title>Gaussian Integers</title>
+                      <p>
+                        The set <m>\Z[i] = \{a + bi \mid a,b \in \Z\}</m> is a commutative ring known as the <term>Gaussian integers</term>.
+                      </p>
+                    </li>
+
+                    <li> <title>Matrix Ring</title>
+                      <p>
+                        If <m>R</m> is any ring (not necessarily commutative), so is <m>\operatorname{M}_{n}(R)</m> for any natural number <m>n</m>, using the usual rules for addition and multiplication of square matrices.
+                      </p>
+                    </li>
+
+                    <li> <title>Direct Product of Rings</title>
+                      <p>
+                        The cartesian product <m>R\times R'</m> of two rings <m>R</m> and <m>R'</m> has a natural ring structure with addition and multiplication defined componentwise: <me>(a,b)+(c,d)=(a+c,b+d)</me> <me>(a,b)\cdot(c,d)=(a\cdot c,b\cdot d)</me>
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </example>
+
+              <exercise xml:id="exe-1-is-0"><title><m>1=0</m></title>
+                <statement>
+                  <p>
+                    Let <m>R</m> be a ring. Prove that <m>R=\{0\}</m> if and only if <m>1=0</m>.
+                  </p>
+                </statement>
+                <solution>
+                  <p>
+                     Notice that in the trivial ring <m>0=1</m>. Conversely, if <m>1 = 0</m> in a ring, then <m>R = \{0\}</m>, since in this case for all <m>a</m>, we have <m>a \cdot 0 = 0</m> and hence <m>a = a \cdot 1 = a \cdot 0 = 0</m>.
+                  </p>
+                </solution>
+              </exercise>
+
+              <example><title>Less Relevant Rings</title>
+                <p>
+                  <ol>
+                    <li> <title>The Real Hamiltonian Quaternion Ring</title>
+                      <p>
+                        Let <m>i,j,k</m> be formal symbols and set <m>{\mathbb{H}}</m> to be the four dimensional <m>{\mathbb{R}}</m>-vector space consisting of all expressions of the form <m>a + bi + cj + dk</m> with <m>a,b,c,d \in {\mathbb{R}}</m>. Addition is vector space addition: 
+                        <me>
+                          (a + bi + cj + dk) +(a' + b'i + c'j + d'k) =(a') + (b + b') i + (c + c')j + (d + d')k.
+                        </me> 
+                        Multiplication is uniquely determined by the axioms of a ring together with the rules 
+                        <me>
+                          i^2 = j^2 = k^2 = -1, -ji = ij = k, -kj = jk = i, -ik = ki = j.
+                        </me> 
+                        and the fact that the real coefficients commute with each other and <m>i,j,k</m>.
+                      </p>
+        
+                      <p>
+                        It's not obvious that the multiplication defined in this way satisfies associativity, but in fact it does (this amounts conditions very similar to the associativity of the group <m>Q_8</m>).
+                      </p>
+        
+                      <p>
+                        <m>{\mathbb{H}}</m> is a division ring, since one can check that <me>(a + bi + cj + dk)^{-1} = \frac{a -  bi -  cj - dk}{\|a + bi + cj + dk\|}</me> where <me>\|a + bi + cj + dk \| := a^2 + b^2 + c^2 + d^2.</me>
+                      </p>
+        
+                      <p>
+                        In the equation above <m>\|a + bi + cj + dk \|</m> is non-zero real number if <m>a + bi + cj + dk</m> is not the zero element. The quantity <m>\|a + bi + cj + dk \|</m> is called the <em>norm</em> of the quaternion <m>a + bi + cj + dk</m>.
+                      </p>
+                    </li>
+
+                    <li> <title>Function Ring</title>
+                      <p>
+                        If <m>X</m> is a set and <m>R</m> is a ring, let <m>\operatorname{Fun}(X, R)</m> be the collection of set theoretic functions from <m>X</m> to <m>R</m>, and define <m>(f + g)(x) = f(x) + g(x)</m> and <m>(f \cdot g)(x) := f(x) \cdot g(x)</m>. Then <m>\operatorname{Fun}(X,R)</m> is a ring. If <m>X</m> is a finite set and <m>|X|=n</m>, then <m>\operatorname{Fun}(X,R)</m> may be identified with <m>R^n=\underbrace{R \times \cdots \times R}_n</m>, the direct product of <m>n</m> copies of <m>R</m>.
+                      </p>
+                    </li>
+                    
+                    <li> <title>Endomorphism Ring</title>
+                      <p>
+                        If <m>A = (A, +)</m> is any abelian group, set <m>\operatorname{End}_{Ab}(A)</m> to be the collection of endomorphisms of <m>A</m> — that is, the set of group homomorphisms <m>f: A \to A</m> from <m>A</m> to itself.
+                      </p>
+
+                      <p>
+                        Then <m>\operatorname{End}_{Ab}(A)</m> is a ring with addition <m>(f + g)(a) := f(a) + g(a)</m> and multiplication <m>f \cdot g := f \circ g</m>. This is almost always a non-commutative ring.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </example>
+  
+          </subsection>  
+  
+          <subsection xml:id="subsec-units"><title>Units, Zerodivisors, Integral Domains</title>
+
+              <blockquote><p><q>There is more power in unity than division.</q></p><attribution>Emmanuel Cleaver</attribution></blockquote>
+  
+              <definition xml:id="def-unit"><title>Unit</title>
+                <statement>
+                  <p>
+                    An element <m>u</m> of a unital ring <m>R</m> with <m>1\neq 0</m> is called a <em>unit</em> there exists <m>v\in R</m> such that <m>uv=1</m> and <m>vu=1</m>. In case such <m>v</m> exists, it is unique, it is called the inverse of <m>u</m> and denoted by <m>u^{-1}</m>.
+                  </p>
+                </statement>
+              </definition>
+  
+              <definition xml:id="def-group-of-units"><title>Group of Units</title>
+                <statement>
+                  <p>
+                    The set of units of a non-trivial unital ring <m>R</m> is denoted <m>R^\times</m>. This forms a group <m>(R^\times,\cdot)</m> with respect to multiplication.
+                  </p>
+                </statement>
+              </definition>
+
+              <p>Finally, we have a formal definition for groups of units.</p>
+
+              <exercise xml:id="exe-group-of-units-is-a-group"><title>Sweet, Sweet Rigor</title>
+                <p>
+                  The group of units is indeed a group <m>(R^\times,\cdot)</m> with respect to multiplication.
+                </p>
+              </exercise>
+
+              <p>Well, that was validating.<fn>Not as validating as it will be when we prove that matrix multiplication is associative, finally allowing us to complete the proof that <m>\GL_n(F)</m> is indeed a group. Soon...</fn> Months in the making. But enough vindication: we move forward. It's all we've ever known.</p>
+
+              <theorem xml:id="thm-units-in-fields"><title>Units in Fields</title>
+                <p>
+                  Let <m>F</m> be a field. Prove that every non-zero element of <m>F</m> is a unit. In symbols, show <m>F^\times=F\setminus\{0\}</m>.
+                </p>
+              </theorem>
+
+              <remark><p><xref ref="thm-units-in-fields"/> is usually the standard way of proving that something is a field.</p></remark>
+
+              <p>If you'll remember all the way back to <xref ref="ex-group-of-units"/>, you'll see that we verified <xref ref="thm-units-in-fields"/> for <m>\Q,\R,</m> and <m>\C</m>. This also explains why <m>\Z^times</m> and <m>\Z/n^times</m> had a different structure: they weren't fields.</p>
+
+              <example xml:id="zp-field"><title><m>\Z/p</m> is a Field!</title>
+                <p>In <xref ref="exe-group-of-units-in-zp"/> we showed that <m>\Z/p^\times=\Z/p\sm\{0\}</m>. Thus <m>\Z/p</m> is a field for all primes <m>p</m>.</p>
+              </example>
+
+              <exercise xml:id="exe-matrices-and-units"><title>Matrices and Units</title>
+                <p>
+                  For any field <m>F</m> we have <m>\operatorname{M}_{n}(F)^\times = \operatorname{GL}_n(F)</m>.
+                </p>
+              </exercise>
+
+               <exercise xml:id="exe-gaussian-units"><title>Gaussian Units</title>
                 <statement>
                   <p>
                     Let <m>\Z[i] = \{a + bi \mid a,b \in \Z\}</m> be the ring of Gaussian integers. Define a function 
@@ -8410,86 +8294,272 @@
     
                 </p>
               </statement>
+  
+              <solution>
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        Let <m>\alpha,\beta\in\Z[i]</m> and behold 
+                        <me>\begin{aligned}N(\alpha\beta)&amp;=N((a+bi)(c+di))\\&amp;=N(ac-bd+adi+bci)\\&amp;=(ac-bd)^2+(ad+bc)^2\\&amp;=((ac)^2-2acbd+(bd)^2)+((ad)^2+2abcd+(bc^2))\\&amp;=a^2c^2+b^2d^2+a^2d^2+b^2c^2\\&amp;=(a^2c^2+a^2d^2)+(b^2c^2+b^2d^2)\\&amp;=a^2(c^2+d^2)+b^2(c^2+d^2)\\N(\alpha)N(\beta)&amp;=(a^2+b^2)(c^2+d^2).\end{aligned}</me> 
+                        So there's that done.
+                      </p>
+                    </li>
+  
+                    <li>
+                      <p>
+                        Suppose <m>\alpha\beta=1</m>. Then by Part (1) we know 
+                        <me>
+                          N(\alpha)N(\beta)=N(\alpha\beta)=N(1)=1,
+                        </me> 
+                        so <m>(a^2+b^2)(c^2+d^2)=1</m>, with <m>a,b,c,d\in\Z</m>. Thus we have <m>a^2+b^2=1=c^2+d^2</m>. So the units of <m>\Z[i]</m> are <m>\{\pm 1,\pm i\}</m>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </solution>
+  
+              </exercise>
+
+              <remark><p>The function <m>N</m> in <xref ref="exe-gaussian-units"/> is some incredibly spicy foreshadowing of something called a <em>norm</em> function, which we'll see more of in <xref ref="sec-eds"/></p></remark>
+
+              <p>We might not be able to divide by zero, but sometimes we can get the next best thing.</p>
+  
+              <definition xml:id="def-zerodivisor"><title>Zerodivisor</title>
+                <statement>
+                    <p>
+                    A <em>zerodivisor</em> in a ring <m>R</m> is an element <m>x\ne 0</m> such that <m>xy = 0</m> or <m>yx=0</m> for some <m>y \ne 0</m>.<fn>We once again jump the gun on the lack-of-hyphenation situation. Language evolves at its own rate, but who has time for that?</fn>
+                    </p>
+                </statement>
+              </definition>
+
+              <p>However, as it turns out, most of the time we are trying to avoid the next best thing.</p>
+  
+              <definition xml:id="def-integral-domain"><title>Integral Domain</title>
+                <statement>
+                    <p>
+                      A unital ring <m>R</m> is an <em>integral domain</em> (often shortened to <em>domain</em>) if <m>1 \ne 0</m>, <m>R</m> is commutative, and <m>R</m> has no zerodivisors.
+                    </p>
+                </statement>
+              </definition>
+
+              <historical>
+                <p>
+                  The term "integral domain" was coined by Richard Dedekind, a German mathematician who lived in the 19th century.
+                </p>
+
+                <p>
+                  The word "integral" comes from the Latin "integer," meaning "whole" or "untouched," which is fitting because in an integral domain, the product of two nonzero elements is never "broken apart" into smaller pieces by a zerodivisor.
+                </p>
+              </historical>
+
+              <remark><p>Note that by <xref ref="exe-1-is-0"/> saying that <m>1\neq0</m> is equivalent to saying that <m>R</m> is nontrivial.</p></remark>
+
+              <p>Unlike in groups, which have a notion of <em>cancellation</em>, rings do not necessarily come equipped with this property. One of the main niceties of integral domains is that cancellation is indeed possible (and in many cases encouraged).</p>
+
+              <lemma xml:id="lem-cancellation-in-integral-domains"><title>Cancellation in Domains</title>
+              <statement>
+                  <p>
+                    Let <m>R</m> be a commutative ring with identity. Then <m>R</m> is an integral domain if and only if for all <m>x,y,z\in R</m> such that <m>xy=xz</m>, we have <m>y=z</m>. This property is called <alert>cancellation</alert>.
+                  </p>
+              </statement>
+              </lemma>
+
+              <p>Rather than jumping in and proving a few examples directly, let's be a little more efficient and discover a whole class of examples in one fell swoop. Well, actually two fell swoops, since we'll need a quick lemma first.</p>   
+
+              <lemma xml:id="lem-zerodivisor-not-unit"><title>Zerodivisors and Units</title>
+                <statement>
+                    <p>
+                    If <m>a</m> is a zerodivisor in a ring <m>R</m>, then <m>a</m> is not a unit.
+                    </p>
+                </statement>
     
-                <solution>
+                <proof>
+                  <p>
+                    Suppose that <m>a</m> is both a zerodivisor and a unit. Then there exists <m>b\neq 0</m> such that <m>ab=0</m> or <m>ba=0</m>. Multiplying either of these equations by <m>a^{-1}</m> gives <m>b=0</m>, a contradiction.
+                  </p>
+                </proof>
+              </lemma>
+
+              <p>All right. <em>Now</em> it's one fell swoop.</p>
+  
+              <theorem xml:id="integral-domains-and-fields"><title>Domains and Fields</title>
+                <statement>
                   <p>
                     <ol>
                       <li>
                         <p>
-                          Let <m>\alpha,\beta\in\Z[i]</m> and behold <m>\begin{align}N(\alpha\beta)&amp;=N((a+bi)(c+di))\\&amp;=N(ac-bd+adi+bci)\\&amp;=(ac-bd)^2+(ad+bc)^2\\&amp;=((ac)^2-2acbd+(bd)^2)+((ad)^2+2abcd+(bc^2))\\&amp;=a^2c^2+b^2d^2+a^2d^2+b^2c^2\\&amp;=(a^2c^2+a^2d^2)+(b^2c^2+b^2d^2)\\&amp;=a^2(c^2+d^2)+b^2(c^2+d^2)\\N(\alpha)N(\beta)&amp;=(a^2+b^2)(c^2+d^2).\end{align}</m> So there's that done.
+                          Every field is an integral domain.
                         </p>
                       </li>
-    
+
                       <li>
                         <p>
-                          Suppose <m>\alpha\beta=1</m>. Then by Part (a) we know 
-                          <me>
-                            N(\alpha)N(\beta)=N(\alpha\beta)=N(1)=1,
-                          </me> 
-                          so <m>(a^2+b^2)(c^2+d^2)=1</m>, with <m>a,b,c,d\in\Z</m>. Thus we have <m>a^2+b^2=1=c^2+d^2</m>. So the units of <m>\Z[i]</m> are <m>\{\pm 1,\pm i\}</m>.
+                          A finite integral domain <m>R</m> must be a field.
                         </p>
                       </li>
                     </ol>
                   </p>
-                </solution>
-    
-                </exercise>
-    
-                <exercise xml:id="exe-integral-hamiltonian-quaternions">
+                </statement>
+
+                <proof>
                   <p>
-                    Let <m>S=\{a+bi+cj+dk \mid a,b,c,d \in \Z\}</m> be the ring of integral Hamiltonian quaternions, where multiplication is defined using the same rules as in <m>\mathbb{H}</m>. Define a function 
-                    <me>
-                      N:S\to\Z, N(a+bi+cj+dk)=a^2+b^2+c^2+d^2.
-                    </me>
-      
                     <ol>
                       <li>
                         <p>
-                          For any <m>\a=a+bi+cj+dk\in S</m>, denote <m>\bar\a=a-bi-cj-dk</m>. Show that <m>\overline{\a\b}=\bar \b \bar\a</m> for all <m>\a,\b\in \mathbb{H}</m>.
+                          Let <m>F</m> be a field. By <xref ref="thm-units-in-fields"/> we know that every nonzero element of <m>F</m> is a unit. Thus <m>F</m> has no zerodivisors by <xref ref="lem-zerodivisor-not-unit"/>.
                         </p>
                       </li>
-      
+
                       <li>
                         <p>
-                          Prove that <m>N(\a)=\a\bar\a</m> and <m>N(\a\b)=N(\a)N(\b)</m> for any <m>\a,\b\in S</m>.
-                        </p>
-                      </li>
-      
-                      <li>
-                        <p>
-                          Prove that <m>\a\in S^\times</m> if and only if <m>N(\a)=1</m>.
-                        </p>
-                      </li>
-      
-                      <li>
-                        <p>
-                          Show that there is a group isomorphism <m>(S^\times,\cdot)\cong Q_8</m>.
+                          Let <m>x\in R</m>, and consider the set <m>\{x^n|n\in\N\}</m>. As <m>R</m> is finite there must exist <m>n&lt;m\in\N</m> such that <m>x^n=x^m</m>. Since <m>R</m> is an integral domain <xref ref="lem-cancellation-in-integral-domains"/> allows us to cancel an <m>x^n</m> from both sides, yielding <m>e=x^{m-n}</m>, and thus <m>x\cdot x^{m-n-1}=e</m>, making <m>x</m> a unit of <m>R</m>. Thus <m>R</m> is a field by <xref ref="thm-units-in-fields"/>.
                         </p>
                       </li>
                     </ol>
                   </p>
-                </exercise>
+                </proof>
+              </theorem>
+
+              <remark><p>In an introductory high school or college algebra course, this notion is known as the <term>zero factor principle</term> for the real numbers, which is what allowes us to solve for the <m>x</m>-intercepts (or zeros) of a polynomial equation after factoring it.</p></remark>
+  
+              <exercise xml:id="exe-neither-zerodivisor-nor-unit"><title>Finite Zerdivisors and Units</title>
+                
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        Prove that if <m>R</m> is finite then every element is either a unit of a zerodivisor.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Give an example of a ring <m>R</m> and an element <m>a\in R</m> which is neither a unit nor a zerodivisor.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </exercise>
+                        
+              <definition xml:id="def-nilpotent"><title>Nilpotent</title>
+                <statement><p>
+                    An element <m>a</m> of a ring <m>R</m> is called <em>nilpotent</em> if <m>a^n = 0</m> for some integer <m>n \geq 1</m>.
+                </p></statement>
+              </definition>
+  
+              <lemma xml:id="lem-nilpotents-and-units"><title>Nilpotents and Units</title>
+                <statement><p>
+                    If <m>a</m> is a nilpotent element in a unital ring <m>R</m>, then <m>1-a</m> is a unit.
+                </p></statement>
+              </lemma>
+  
+              <exercise xml:id="exe-one-plus-nilpotent-is-unit">
+                <p>
+                  Let <m>x</m> be a nilpotent element of a ring. Show that <m>1 + x</m> is a unit of <m>A.</m> Deduce that the sum of a nilpotent element and a unit is a unit.
+                </p>
+              </exercise>
+  
+              <definition xml:id="def-idempotent"><title>Idempotent</title>
+                <statement><p>
+                    Let <m>R</m> be a ring with identity. An element <m>e\in R</m> is called <em>idempotent</em> if <m>e^2=e</m>.
+                </p></statement>
+              </definition>
+  
+              <exercise><title>Potent Idempotents</title>
+                <p>
+                  Let <m>R</m> be a ring with identity.
+                  <ol>
+                    <li>
+                      <p>
+                        Give an example of a ring which has an idempotent other than <m>0</m> or <m>1</m>.
+                      </p>
+                    </li>
+  
+                    <li>
+                      <p>
+                        Prove that if <m>e</m> is idempotent, so is <m>1-e</m>.
+                      </p>
+                    </li>
+  
+                    <li>
+                      <p>
+                        Suppose <m>R</m> is commutative and <m>e</m> an idempotent. Let <m>Re:=\{re\mid r\in R\}</m>. Prove that <m>Re</m> is a commutative ring (with identity <m>e</m>).
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </exercise>
+  
+              <!--
+              <exercise xml:id="exe-integral-hamiltonian-quaternions"><title>Integral Hamiltonian Quaternions</title>
+                <p>
+                  Let <m>S=\{a+bi+cj+dk \mid a,b,c,d \in \Z\}</m> be the ring of integral Hamiltonian quaternions, where multiplication is defined using the same rules as in <m>\mathbb{H}</m>. Define a function 
+                  <me>
+                    N:S\to\Z, N(a+bi+cj+dk)=a^2+b^2+c^2+d^2.
+                  </me>
     
-            </subsection>
+                  <ol>
+                    <li>
+                      <p>
+                        For any <m>\a=a+bi+cj+dk\in S</m>, denote <m>\bar\a=a-bi-cj-dk</m>. Show that <m>\overline{\a\b}=\bar \b \bar\a</m> for all <m>\a,\b\in \mathbb{H}</m>.
+                      </p>
+                    </li>
+    
+                    <li>
+                      <p>
+                        Prove that <m>N(\a)=\a\bar\a</m> and <m>N(\a\b)=N(\a)N(\b)</m> for any <m>\a,\b\in S</m>.
+                      </p>
+                    </li>
+    
+                    <li>
+                      <p>
+                        Prove that <m>\a\in S^\times</m> if and only if <m>N(\a)=1</m>.
+                      </p>
+                    </li>
+    
+                    <li>
+                      <p>
+                        Show that there is a group isomorphism <m>(S^\times,\cdot)\cong Q_8</m>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </exercise>
+              -->
+  
+          </subsection>
     
         </section>
     
         <section xml:id="sec-subrings"><title>Subrings</title>
 
-          <blockquote><p><q>We all live in a yellow submaring</q></p><attribution>(Ring)o Starr</attribution></blockquote>
+          <blockquote><p><q>We all live in a yellow subma-ring</q></p><attribution>(Ring)o Starr</attribution></blockquote>
+
+          <p>We will spend the first half of our exploration of rings following the same general structure as we did in <xref text="title" ref="part-group"/>. First, we looked at rings in general, and now we will examine subrings, just as we did with subgroups. Then it's off to homomorphisms, isomorphisms, and quotients. It'll be just like old times.</p>
     
           <definition xml:id="def-subring"><title>Subring</title>
             <statement>
               <p>
-                A <em>subring</em> of a ring <m>R</m> is a subset <m>S \subseteq R</m> such that <m>S</m> is a ring under the operations of <m>R</m>. When <m>R</m> is a field we call <m>S</m> a <em>subfield</em> of <m>R</m>.
+                A <em>subring</em> of a ring <m>R</m> is a subset <m>S \subseteq R</m> such that <m>S</m> is a ring under the operations of <m>R</m>.
+              </p>
+
+              <p>
+                When <m>R</m> is a field we call <m>S</m> a <em>subfield</em> of <m>R</m><fn>We generally do not define subdomains, subcommutativerings, or subdivisionringswithidentity, but if you're feeling inspired I say go for it.</fn>.
               </p>
             </statement>
           </definition>
+
+          <remark><p>Unlike with groups, we generally do not use the notation <q><m>\leq</m></q> to denote a subring. In fact, I'm not sure if we have any notation for it at all. You know what that means!</p></remark>
+
+          <exercise><title>Discussion</title>
+            <p>Come up with some spiffy new notation for a subring. I have absolutely no ideas, so good luck.</p>
+          </exercise>
     
           <lemma xml:id="lem-subring-test"><title>Subring Test</title>
             <statement>
               <p>
-                A nonempty subset <m>S</m> of a ring <m>R</m> is a subring iff either one of the following hold:
+                A nonempty subset <m>S</m> of a ring <m>R</m> is a subring if and only if either one of the following hold:
                 <ol>
                   <li>
                     <p>
@@ -8506,27 +8576,59 @@
               </p>
             </statement>
           </lemma>
+
+          <exercise xml:id="exe-subring-preservations"><title>Subring Preservations</title>
+            <p>
+              Any subring of a commutative ring is a commutative ring. Any unital subring of an integral domain is an integral domain.
+            </p>
+          </exercise>
     
           <example xml:id="ex-subring-examples"><title>Examples of Subrings</title>
             <p><ul>
               <li>
-              <m>\Z</m> is a subring of <m>\Q</m>, which is a subring of <m>\R</m>, which is a subring of <m>\C</m>.
+                <m>\Z</m> is a subring of <m>\Q</m>, which is a subring of <m>\R</m>, which is a subring of <m>\C</m>.
               </li>
     
               <li>
-              <m>2\Z</m> is a subring without <m>1</m> of the ring <m>Z</m> with <m>1</m>.
+                <m>2\Z</m> is a subring without <m>1</m> of the ring <m>Z</m> with <m>1</m>.
               </li>
     
               <li>
-              The set of continuous functions mapping <m>[0,1]\to \R</m> is a subring of <m>\Fun([0,1],\R)</m>, denoted <m>\cC([0,1])</m>.
+                The set of continuous functions mapping <m>[0,1]\to \R</m> is a subring of <m>\Fun([0,1],\R)</m>, denoted <m>\cC([0,1])</m>.
               </li>
     
               <li>
-              The set <m>\Z[i]=\left\{a+bi\mid a,b \in \Z\right\}</m> is a subring of <m>\C</m> called the ring of Gaussian integers.
+                <m>\Z[i]</m>, the ring of Gaussian Integers, is a subring of <m>\C</m>.
               </li>
     
             </ul></p>
           </example>
+
+          <exercise xml:id="exe-finding-subring-counterexamples"><title>Fancy Subrings</title>
+            <p>
+              If <m>R</m> is a ring and <m>S</m> is a subring of <m>R</m>, it can happen that 
+              <ol>
+                <li>
+                  <p>
+                    <m>R</m> is unital but <m>S</m> is not (e.g. <m>S=2\Z\subset R= \Z</m>) 
+                  </p>
+                </li>
+                
+                <li>
+                  <p>
+                    <m>S</m> is unital but <m>R</m> is not 
+                  </p>
+                </li>
+    
+                <li>
+                  <p>
+                    both <m>R</m> and <m>S</m> are unital but <m>1_R\neq 1_S</m> 
+                  </p>
+                </li>
+              </ol>
+              Find examples for each of these situations!
+            </p>
+          </exercise>
     
           <definition xml:id="def-center-ring"><title>Center of a Ring</title>
             <statement>
@@ -8546,6 +8648,8 @@
               </p>
             </statement>
           </lemma>
+
+          <p>Centers of rings don't show up as much in ring theory as they did with groups, but that might also be because there hasn't been a non-commutative ring spotted within twenty miles of UNL since 1977.</p>
     
           <exercise xml:id="exe-center-of-quaternion-ring"><title><m>Z(\H)</m></title>
             <p>
@@ -8574,40 +8678,9 @@
               </p>
             </proof>
           </lemma>
+  
+          <remark><p>Note the difference in notation between <m>\Q(\sqrt d)</m> and <m>\Z[\sqrt d]</m>: one uses parenthesis and the other brackets. This is to denote that one (the one with parentheses) is a field, whereas the other [the one with brackets] is not. This is also some spicy foreshadowing that won't pay off until all the way down in <xref ref="part-fields"/>. Stay tuned.</p></remark>
     
-          <exercise xml:id="exe-finding-subring-counterexamples"><title>Fancy Subrings</title>
-            <p>
-              If <m>R</m> is a ring and <m>S</m> is a subring of <m>R</m>, it can happen that 
-              <ol>
-                <li>
-                  <p>
-                    <m>R</m> is unital but <m>S</m> is not (e.g. <m>S=2\Z\subset R= \Z</m>) 
-                  </p>
-                </li>
-                
-                <li>
-                  <p>
-                    <m>S</m> is unital but <m>R</m> is not 
-                  </p>
-                </li>
-    
-                <li>
-                  <p>
-                    both <m>R</m> and <m>S</m> are unital but <m>1_R\neq 1_S</m> 
-                  </p>
-                </li>
-              </ol>
-              Find examples for each of these situations!
-            </p>
-          </exercise>
-    
-          <exercise xml:id="exe-subring-preservations"><title>Subring Preservations</title>
-            <p>
-              Any subring of a commutative ring is a commutative ring. Any unital subring of an integral domain is an integral domain.
-            </p>
-          </exercise>
-    
-          
         </section>
     
         <section xml:id="sec-ring-hom"><title>Homomorphisms</title>
@@ -11085,7 +11158,7 @@
                 </me> Let <m>\alpha,\beta\in\Z[i]</m> 
                 and behold 
                 <me>
-                \begin{align}
+                \begin{aligned}
                   N(\alpha\beta)
                   &amp;=N((a+b \sqrt{-3})(c+d \sqrt{-3}))\\
                   &amp;=N(ac-3bd+ad \sqrt{-3}+bc \sqrt{-3})\\
@@ -11096,7 +11169,7 @@
                   &amp;=a^2(c^2+3d^2)+3b^2(c^2+3d^2)\\
                   &amp;N(\alpha)N(\beta)\\
                   &amp;=(a^2+3b^2)(c^2+3d^2).
-                \end{align}
+                \end{aligned}
                 </me>
                 So there's that done.
               </p>
@@ -16722,7 +16795,7 @@
                   <ol>
                     <li>
                       <p>
-                        Let <m>\l</m> be an eigenvalue of <m>T</m>. Thus there exists some <m>v</m> such that <m>Tv=\l v</m>. Notice that <m>p(T)v=a_nT^nv+\dots+a_0Iv=0</m> and <m>p(\l)=a_n\l^n+\dots+a_0</m>. Then <me>\begin{align}(p(T)-p(\l I))v&amp;=p(T)v-p(\l I)v\\&amp;=(a_nT^nv+\dots+a_0Iv)-(a_n\l^nv+\dots+a_0v)\\&amp;=a_n(T^n-\l^n)v+\dots a_0(I-I)v\\&amp;=0,\end{align}</me>making <m>p(\l)</m> an eigenvalue of <m>p(T)</m>.
+                        Let <m>\l</m> be an eigenvalue of <m>T</m>. Thus there exists some <m>v</m> such that <m>Tv=\l v</m>. Notice that <m>p(T)v=a_nT^nv+\dots+a_0Iv=0</m> and <m>p(\l)=a_n\l^n+\dots+a_0</m>. Then <me>\begin{aligned}(p(T)-p(\l I))v&amp;=p(T)v-p(\l I)v\\&amp;=(a_nT^nv+\dots+a_0Iv)-(a_n\l^nv+\dots+a_0v)\\&amp;=a_n(T^n-\l^n)v+\dots a_0(I-I)v\\&amp;=0,\end{aligned}</me>making <m>p(\l)</m> an eigenvalue of <m>p(T)</m>.
                       </p>
                     </li>
 

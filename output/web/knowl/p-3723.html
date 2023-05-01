@@ -13,14 +13,13 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Assume inductively that <span class="process-math">\(\l^{n-1}\)</span> is an eigenvalue of <span class="process-math">\((A-I)^{n-1}\text{.}\)</span> Notice</div>
-<div class="displaymath process-math">
+<div class="para">Let <span class="process-math">\(G\)</span> act on <span class="process-math">\(\Syl_7(G)\)</span> by conjugation, yielding the homomorphism</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-permrep.html ./knowl/thm-sylow.html ">
 \begin{equation*}
-(A+I)^nv=(A+I)(A+I)^{n-1}v=(A+I)\l^{n-1}v=\l^{n-1}(A+I)v=\l^{n-1}\l=\l^n,
+\rho: G \to S_8
 \end{equation*}
 </div>
-<div class="para">making <span class="process-math">\(\l\)</span> an eigenvalue of <span class="process-math">\((A+I)^n\text{.}\)</span> Thus if <span class="process-math">\(\l\)</span> is an eigenvalue of <span class="process-math">\(A-I\text{,}\)</span> it is an eigenvalue of <span class="process-math">\((A-I)^n\)</span> as well. As <span class="process-math">\((A-I)\)</span> is nilpotent, there exists some <span class="process-math">\(k\)</span> such that <span class="process-math">\((A-I)^k=0\text{.}\)</span> This means that <span class="process-math">\(\l^kv=0\text{.}\)</span> As <span class="process-math">\(v\neq 0\)</span> and <span class="process-math">\(\l^k\)</span> is a scalar in a field (and hence integral domain) we have <span class="process-math">\(\l=0\text{.}\)</span> Thus the only eigenvalue of <span class="process-math">\((A-I)\)</span> is <span class="process-math">\(0\text{,}\)</span> meaning that the only eigenvalue of <span class="process-math">\(A\)</span> is <span class="process-math">\(1\text{.}\)</span>
-</div>
+<div class="para">via the <a href="" class="xref" data-knowl="./knowl/thm-permrep.html" title="Theorem 5.4: The Permutation Representation">The Permutation Representation</a>. This map is non-trivial from part (2) of <a href="" class="xref" data-knowl="./knowl/thm-sylow.html" title="Theorem 6.11: Sylow's Theorem">Sylow's Theorem</a>, but <span class="process-math">\(2^5\cdot 7^3\)</span> does not divide <span class="process-math">\(|S_8|=8!\text{,}\)</span> and thus <span class="process-math">\(\rho\)</span> cannot be injective. Then the kernel of this homomorphism is non-trivial, normal subgroup of <span class="process-math">\(G\)</span> by <code class="code-inline tex2jax_ignore">[provisional cross-reference: thm-kernel-iff-normal]</code>. Thus <span class="process-math">\(G\)</span> is not simple.</div>
 </div>
 <span class="incontext"><a href="section-66.html#p-3723" class="internal">in-context</a></span>
 </body>

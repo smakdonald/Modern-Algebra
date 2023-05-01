@@ -13,11 +13,65 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h3 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">G.179.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">G.178.1</span><span class="period">.</span>
 </h3>
-<div class="para">Part (a) Let <span class="process-math">\(a,b\in \ann_R(M)\text{.}\)</span> Consider <span class="process-math">\((a+b)m=am+bm=0\text{.}\)</span> Thus <span class="process-math">\(a+b\in \ann_R(M)\text{.}\)</span> Let <span class="process-math">\(r\in\ann_R(M)\)</span> and consider <span class="process-math">\(-r\text{.}\)</span> Let <span class="process-math">\(m\in M\)</span> and suppose <span class="process-math">\(-rm=n\)</span> for some <span class="process-math">\(n\in R\text{.}\)</span> Add <span class="process-math">\(rm\)</span> to both sides to see that <span class="process-math">\(0=n+rm=n\text{.}\)</span> Thus <span class="process-math">\(n=0\)</span> and <span class="process-math">\(-rm=0\)</span> for all <span class="process-math">\(m\in M\text{.}\)</span> So <span class="process-math">\(-r\in\ann_R(M)\text{.}\)</span>
-</div> <div class="para">Note that as <span class="process-math">\(0m=0=m0\)</span> for all <span class="process-math">\(m\in M\text{,}\)</span> we know that <span class="process-math">\(0\in\ann_R(M)\text{.}\)</span> As <span class="process-math">\(rm=0\)</span> for all <span class="process-math">\(m\in M\text{,}\)</span> we see that <span class="process-math">\(\ann_R(M)\)</span> is a left sided ideal.</div> <div class="para">Suppose <span class="process-math">\(mr=n\)</span> for some <span class="process-math">\(m\in R\text{.}\)</span> This time we add <span class="process-math">\(-rm\)</span> to both sides, but as <span class="process-math">\(-r\in\ann_R(M)\text{,}\)</span> we once again find that <span class="process-math">\(mr=0\text{.}\)</span> Notice that this means <span class="process-math">\(rm=mr\)</span> for all <span class="process-math">\(r\in \ann_R(M)\)</span> and <span class="process-math">\(m\in M\text{,}\)</span> and thus that elements of <span class="process-math">\(\ann_R(M)\)</span> commute with elements of <span class="process-math">\(M\text{.}\)</span>
-</div> <div class="para">Let <span class="process-math">\(a,b\in \ann_R(M)\text{.}\)</span> Consider <span class="process-math">\(m(a+b)=ma+mb\text{.}\)</span> Luckily, we know <span class="process-math">\(ma=am=0=bm=mb,\)</span> and thus that <span class="process-math">\(ma+mb=0+0=0\text{.}\)</span> Hence <span class="process-math">\(a+b\in \ann_R(M)\text{,}\)</span> making <span class="process-math">\(\ann_R(M)\)</span> is a two sided ideal.</div> <div class="para">Part (b) By the [[Mathematics/Modern Algebra/Results/Theorem – FTFGAG Elementary Divisor form|Fundamental Theorem of Finitely Generated Abelian Groups (Elementary Divisor Form)]] and [[Mathematics/Number Theory/Results/Theorem – Sunzi's Remainder Theorem|Sunzi's Remainder Theorem]], there are only so many options we have for <span class="process-math">\(M\text{:}\)</span> - <span class="process-math">\(\Z_{16}\times \Z_{25}\text{,}\)</span> - <span class="process-math">\(\Z_{8}\times \Z_{2}\times \Z_{25}\text{,}\)</span> - <span class="process-math">\(\Z_{4}\times \Z_{4}\times \Z_{25}\text{,}\)</span> - <span class="process-math">\(\Z_{4}\times \Z_{2}\times \Z_{2}\times \Z_{25}\text{,}\)</span> - <span class="process-math">\(\Z_{2}\times\Z_{2}\times \Z_{2}\times \Z_{2}\times \Z_{25}\text{,}\)</span> - <span class="process-math">\(\Z_{16}\times \Z_{5}\times \Z_{5}\text{,}\)</span> - <span class="process-math">\(\Z_{8}\times \Z_{2}\times \Z_{5}\times \Z_{5}\text{,}\)</span> - <span class="process-math">\(\Z_{4}\times \Z_{5}\times \Z_{20}\)</span> - <span class="process-math">\(\Z_{4}\times \Z_{2}\times \Z_{2}\times \Z_{5}\times \Z_{5}\text{,}\)</span> and - <span class="process-math">\(\Z_{2}\times\Z_{2}\times \Z_{5}\times \Z_{20}\text{.}\)</span> However, as ideals are additive subgroups, we know that <span class="process-math">\(M\)</span> needs to contain a cyclic subgroup of order <span class="process-math">\(20\text{.}\)</span> Thus we need only consider decompositions with a <span class="process-math">\(\Z_{20}\)</span> in them, of which there are exactly two: 1. <span class="process-math">\(\Z_{4}\times \Z_{5}\times \Z_{20}\)</span> 2. <span class="process-math">\(\Z_{2}\times\Z_{2}\times \Z_{5}\times \Z_{20}\)</span>
+<div class="para logical">
+<div class="para">Part (a) First, notice that <span class="process-math">\(A\)</span> is upwards triangular, and thus <span class="process-math">\(\cp_A(x)=(x-3)^4\text{.}\)</span> By the [[Mathematics/Modern Algebra/Results#Theorem – Cayley-Hamilton Theorem|Cayley-Hamilton Theorem]] the minimum polynomial divides the characteristic polynomial, and from the definition of minimum polynomial we know <span class="process-math">\(\mp_A(x)\)</span> is the smallest polynomial such that <span class="process-math">\(\mp_A(A) = 0\text{.}\)</span> Since <span class="process-math">\(\mp_A(x)\)</span> must be a power of <span class="process-math">\((x-3)^n\)</span> with <span class="process-math">\(n\leq 4\text{,}\)</span> we plug in values of <span class="process-math">\(n\)</span> until we get <span class="process-math">\(0\text{.}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(A-3I)^1=\begin{bmatrix}
+0 &amp; 0 &amp; 0 &amp; 0\\
+1 &amp; 0 &amp; 0 &amp; 0\\
+1 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 2 &amp; 1 &amp; 0\\
+\end{bmatrix}
+\end{equation*}
+</div>
+<div class="para">Shucks. Moving on,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(A-3I)^2=\begin{bmatrix}
+0 &amp; 0 &amp; 0 &amp; 0\\
+1 &amp; 0 &amp; 0 &amp; 0\\
+1 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 2 &amp; 1 &amp; 0\\
+\end{bmatrix}\cdot\begin{bmatrix}
+0 &amp; 0 &amp; 0 &amp; 0\\
+1 &amp; 0 &amp; 0 &amp; 0\\
+1 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 2 &amp; 1 &amp; 0\\
+\end{bmatrix}=\begin{bmatrix}
+0 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 0\\
+3 &amp; 0 &amp; 0 &amp; 0\\
+\end{bmatrix},
+\end{equation*}
+</div>
+<div class="para">which is also not <span class="process-math">\(0\text{.}\)</span> However, multiplying one more time we see <span class="process-math">\(\mp_A(x)=(x-3)^3\text{.}\)</span> By part (2) of this [[Results#Theorem – Cayley-Hamilton Theorem|theorem]] <span class="process-math">\((x-3)^3\)</span> is an invariant factor. By part (1) of that same theorem, invariant factors must multiply to <span class="process-math">\(\cp_A(x)\text{,}\)</span> and so the invariant factors are <span class="process-math">\(x-3\)</span> and <span class="process-math">\((x-3)^3\text{.}\)</span> These are also the elementary divisors. So</div>
+</div> <div class="para logical"><div class="displaymath process-math">
+\begin{equation*}
+J_1(3)\oplus J_3(3)=\begin{bmatrix}
+3 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 3 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 3 &amp; 0\\
+0 &amp; 0 &amp; 1 &amp; 3\\
+\end{bmatrix}.
+\end{equation*}
+</div></div> <div class="para logical">
+<div class="para">Part (b) Let</div>
+<div class="displaymath process-math">
+\begin{equation*}
+B=\begin{bmatrix}
+0 &amp; -9 &amp; 0 &amp; 0\\
+1 &amp; 6 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; -9\\
+0 &amp; 0 &amp; 1&amp; 6\\
+\end{bmatrix}
+\end{equation*}
+</div>
+<div class="para">And notice that <span class="process-math">\((B-3I)^2=0\text{.}\)</span> Thus <span class="process-math">\((x-3)^3\)</span> cannot be the minimal polynomial of <span class="process-math">\(B\text{.}\)</span> Two matrices are only similar if they share the same invariant factors (and thus the same minimum polynomial), so <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are not similar.</div>
 </div>
 </div>
 <span class="incontext"><a href="section-85.html#solution-408" class="internal">in-context</a></span>

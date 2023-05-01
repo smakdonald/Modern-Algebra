@@ -13,65 +13,10 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h3 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">G.178.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">G.177.1</span><span class="period">.</span>
 </h3>
-<div class="para logical">
-<div class="para">Part (a) First, notice that <span class="process-math">\(A\)</span> is upwards triangular, and thus <span class="process-math">\(\cp_A(x)=(x-3)^4\text{.}\)</span> By the [[Mathematics/Modern Algebra/Results#Theorem – Cayley-Hamilton Theorem|Cayley-Hamilton Theorem]] the minimum polynomial divides the characteristic polynomial, and from the definition of minimum polynomial we know <span class="process-math">\(\mp_A(x)\)</span> is the smallest polynomial such that <span class="process-math">\(\mp_A(A) = 0\text{.}\)</span> Since <span class="process-math">\(\mp_A(x)\)</span> must be a power of <span class="process-math">\((x-3)^n\)</span> with <span class="process-math">\(n\leq 4\text{,}\)</span> we plug in values of <span class="process-math">\(n\)</span> until we get <span class="process-math">\(0\text{.}\)</span>
-</div>
-<div class="displaymath process-math">
-\begin{equation*}
-(A-3I)^1=\begin{bmatrix}
-0 &amp; 0 &amp; 0 &amp; 0\\
-1 &amp; 0 &amp; 0 &amp; 0\\
-1 &amp; 0 &amp; 0 &amp; 0\\
-0 &amp; 2 &amp; 1 &amp; 0\\
-\end{bmatrix}
-\end{equation*}
-</div>
-<div class="para">Shucks. Moving on,</div>
-<div class="displaymath process-math">
-\begin{equation*}
-(A-3I)^2=\begin{bmatrix}
-0 &amp; 0 &amp; 0 &amp; 0\\
-1 &amp; 0 &amp; 0 &amp; 0\\
-1 &amp; 0 &amp; 0 &amp; 0\\
-0 &amp; 2 &amp; 1 &amp; 0\\
-\end{bmatrix}\cdot\begin{bmatrix}
-0 &amp; 0 &amp; 0 &amp; 0\\
-1 &amp; 0 &amp; 0 &amp; 0\\
-1 &amp; 0 &amp; 0 &amp; 0\\
-0 &amp; 2 &amp; 1 &amp; 0\\
-\end{bmatrix}=\begin{bmatrix}
-0 &amp; 0 &amp; 0 &amp; 0\\
-0 &amp; 0 &amp; 0 &amp; 0\\
-0 &amp; 0 &amp; 0 &amp; 0\\
-3 &amp; 0 &amp; 0 &amp; 0\\
-\end{bmatrix},
-\end{equation*}
-</div>
-<div class="para">which is also not <span class="process-math">\(0\text{.}\)</span> However, multiplying one more time we see <span class="process-math">\(\mp_A(x)=(x-3)^3\text{.}\)</span> By part (2) of this [[Results#Theorem – Cayley-Hamilton Theorem|theorem]] <span class="process-math">\((x-3)^3\)</span> is an invariant factor. By part (1) of that same theorem, invariant factors must multiply to <span class="process-math">\(\cp_A(x)\text{,}\)</span> and so the invariant factors are <span class="process-math">\(x-3\)</span> and <span class="process-math">\((x-3)^3\text{.}\)</span> These are also the elementary divisors. So</div>
-</div> <div class="para logical"><div class="displaymath process-math">
-\begin{equation*}
-J_1(3)\oplus J_3(3)=\begin{bmatrix}
-3 &amp; 0 &amp; 0 &amp; 0\\
-0 &amp; 3 &amp; 0 &amp; 0\\
-0 &amp; 1 &amp; 3 &amp; 0\\
-0 &amp; 0 &amp; 1 &amp; 3\\
-\end{bmatrix}.
-\end{equation*}
-</div></div> <div class="para logical">
-<div class="para">Part (b) Let</div>
-<div class="displaymath process-math">
-\begin{equation*}
-B=\begin{bmatrix}
-0 &amp; -9 &amp; 0 &amp; 0\\
-1 &amp; 6 &amp; 0 &amp; 0\\
-0 &amp; 0 &amp; 0 &amp; -9\\
-0 &amp; 0 &amp; 1&amp; 6\\
-\end{bmatrix}
-\end{equation*}
-</div>
-<div class="para">And notice that <span class="process-math">\((B-3I)^2=0\text{.}\)</span> Thus <span class="process-math">\((x-3)^3\)</span> cannot be the minimal polynomial of <span class="process-math">\(B\text{.}\)</span> Two matrices are only similar if they share the same invariant factors (and thus the same minimum polynomial), so <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are not similar.</div>
+<div class="para">Part (a) By <a href="" class="xref" data-knowl="./knowl/thm-sylow.html" title="Theorem 6.11: Sylow's Theorem">Sylow's Theorem</a>, <span class="process-math">\(|\Syl_7(G)|\equiv 1\mod{7}\)</span> and divides <span class="process-math">\(2^3\cdot 3=24\text{.}\)</span> Thus the only options are <span class="process-math">\(1\)</span> and <span class="process-math">\(8\text{.}\)</span> However, as <span class="process-math">\(G\)</span> is simple there cannot be only one Sylow <span class="process-math">\(7\)</span>-Subgroup, as it would be normal. Thus there are <span class="process-math">\(8\text{,}\)</span> each having <span class="process-math">\(7\)</span> unique elements and the identity. Thus there are <span class="process-math">\(49\)</span> elements of order <span class="process-math">\(7\text{.}\)</span>
+</div> <div class="para">Part (b) By <a href="" class="xref" data-knowl="./knowl/thm-sylow.html" title="Theorem 6.11: Sylow's Theorem">Sylow's Theorem</a>, <span class="process-math">\(|\Syl_3(G)|\equiv 1\mod{3}\)</span> and divides <span class="process-math">\(2^3\cdot 7=56\text{.}\)</span> As <span class="process-math">\(G\)</span> is simple there cannot be one, so there must be at least <span class="process-math">\(7\text{,}\)</span> each with <span class="process-math">\(2\)</span> non-identity elements. Thus there must be at least <span class="process-math">\(14\)</span> elements of order <span class="process-math">\(3\text{.}\)</span>
 </div>
 </div>
 <span class="incontext"><a href="section-85.html#solution-407" class="internal">in-context</a></span>

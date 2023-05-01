@@ -11,13 +11,51 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<div class="para">Let <span class="process-math">\(L\)</span> be the splitting field of <span class="process-math">\(f(x)=x^5 - 11\)</span> over <span class="process-math">\(\Q\)</span>
-</div> <div class="para">Part (a) First, notice that by <a href="" class="xref" data-knowl="./knowl/thm-eisensteins-criterion.html" title="Theorem 5.10: Eisenstein's Criterion">Eisenstein's Criterion</a> (<span class="process-math">\(p=11\)</span>) we have <span class="process-math">\(f\)</span> irreducible in <span class="process-math">\(\Q\text{.}\)</span>
-</div> <div class="para">The roots of <span class="process-math">\(f\)</span> are the following: 1. <span class="process-math">\(\a_1=\sqrt[5]{11}\z\)</span> 2. <span class="process-math">\(\a_2=\sqrt[5]{11}\z^2\)</span> 3. <span class="process-math">\(\a_3=\sqrt[5]{11}\z^3\)</span> 4. <span class="process-math">\(\a_4=\sqrt[5]{11}\z^4\)</span> 5. <span class="process-math">\(\a_5=\sqrt[5]{11}\z^5=\sqrt[5]{11}\)</span>
-</div> <div class="para">As <span class="process-math">\(f\)</span> is monic and irreducible, it is the minimum polynomial of <span class="process-math">\(\a_5\text{.}\)</span> Let <span class="process-math">\(E=\Q(\a_5)\)</span> and notice <span class="process-math">\([E:\Q]=5\text{.}\)</span>
-</div> <div class="para">Notice that <span class="process-math">\(\z\text{,}\)</span> a primitive <span class="process-math">\(5\)</span>-th root of unity, is the root of <span class="process-math">\(g(x)=x^4+x^3+x^2+x+1\text{,}\)</span> the fourth cyclotomic polynomial, which is monic and irreducible in <span class="process-math">\(\Q[x]\)</span> (See: [[Proposition – Cyclotomic Polynomial Irreducible|Result]]). Thus <span class="process-math">\(g\)</span> is the minimum polynomial of <span class="process-math">\(\z\)</span> and <span class="process-math">\([F:\Q]=4\text{.}\)</span>
-</div> <div class="para">We know that <span class="process-math">\(L=\Q(\sqrt[5]{11},\z)\text{,}\)</span> as every generator of <span class="process-math">\(L\)</span> can be written using <span class="process-math">\(\z\)</span> and <span class="process-math">\(\sqrt[5]{11}.\)</span> Let <span class="process-math">\([L:\Q]=n\text{,}\)</span> <span class="process-math">\([L:F]=p\text{,}\)</span> and <span class="process-math">\([L:E]=q\text{.}\)</span> By the <a href="" class="xref" data-knowl="./knowl/thm-degree-formula.html" title="Theorem 1.30: The Degree Formula">The Degree Formula</a>, we have - <span class="process-math">\([L:\Q]=[L:F][F:\Q]\text{,}\)</span> and thus <span class="process-math">\(n=4p\)</span> - <span class="process-math">\([L:\Q]=[L:E][E:\Q]\text{,}\)</span> and thus <span class="process-math">\(n=5q\)</span> As <span class="process-math">\(E\neq L\)</span> and <span class="process-math">\(F\neq L\)</span> we know that <span class="process-math">\(p,q&gt;1\text{.}\)</span>
-</div> <div class="para">Thus we have <span class="process-math">\(n=20\text{.}\)</span>
-</div> <div class="para">Part (b) Let <span class="process-math">\(F = \Q(\zeta)\)</span> where <span class="process-math">\(\zeta = e^{2\pi i/5}\text{.}\)</span> From Part (a) we know <span class="process-math">\([L:F]=5\text{.}\)</span> As <span class="process-math">\(L=F(\a)\text{,}\)</span> we know that <span class="process-math">\(\mp_\a(x)\)</span> has degree <span class="process-math">\(5\text{.}\)</span> As <span class="process-math">\(f\)</span> is a monic polynomial of degree <span class="process-math">\(5\text{,}\)</span> we see that it is the minimum polynomial and thus irreducible.</div>
+<div class="para">Let <span class="process-math">\(F=\Q\text{,}\)</span> <span class="process-math">\(n\)</span> a positive integer, and <span class="process-math">\(A\)</span> a unipotent <span class="process-math">\(4\times 4\)</span> matrix with entries in <span class="process-math">\(F\text{.}\)</span> Thus <span class="process-math">\(A-I\)</span> is nilpotent. Let <span class="process-math">\(\l\)</span> be an eigenvalue of <span class="process-math">\(A-I\text{.}\)</span> Then <span class="process-math">\((A-I)v=\l v\text{,}\)</span> so <span class="process-math">\(Av-Iv=\l v\)</span> and <span class="process-math">\(Av=\l v+Iv\text{.}\)</span> As <span class="process-math">\(Iv=v\text{,}\)</span> we have <span class="process-math">\(Av=\l v+v\)</span> and <span class="process-math">\(Av=(\l+1)v\text{.}\)</span>
+</div> <div class="para">Notice that as <span class="process-math">\(\l\)</span> is an eigenvalue of <span class="process-math">\(I\text{,}\)</span> we have <span class="process-math">\(\l +1\)</span> as an eigenvalue of <span class="process-math">\(A\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Assume inductively that <span class="process-math">\(\l^{n-1}\)</span> is an eigenvalue of <span class="process-math">\((A-I)^{n-1}\text{.}\)</span> Notice</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(A+I)^nv=(A+I)(A+I)^{n-1}v=(A+I)\l^{n-1}v=\l^{n-1}(A+I)v=\l^{n-1}\l=\l^n,
+\end{equation*}
+</div>
+<div class="para">making <span class="process-math">\(\l\)</span> an eigenvalue of <span class="process-math">\((A+I)^n\text{.}\)</span> Thus if <span class="process-math">\(\l\)</span> is an eigenvalue of <span class="process-math">\(A-I\text{,}\)</span> it is an eigenvalue of <span class="process-math">\((A-I)^n\)</span> as well. As <span class="process-math">\((A-I)\)</span> is nilpotent, there exists some <span class="process-math">\(k\)</span> such that <span class="process-math">\((A-I)^k=0\text{.}\)</span> This means that <span class="process-math">\(\l^kv=0\text{.}\)</span> As <span class="process-math">\(v\neq 0\)</span> and <span class="process-math">\(\l^k\)</span> is a scalar in a field (and hence integral domain) we have <span class="process-math">\(\l=0\text{.}\)</span> Thus the only eigenvalue of <span class="process-math">\((A-I)\)</span> is <span class="process-math">\(0\text{,}\)</span> meaning that the only eigenvalue of <span class="process-math">\(A\)</span> is <span class="process-math">\(1\text{.}\)</span>
+</div>
+</div> <div class="para">Eigenvalues of <span class="process-math">\(A\)</span> correspond to the roots of <span class="process-math">\(\cp_A(x)\text{,}\)</span> which is a monic quartic polynomial, as <span class="process-math">\(A\)</span> is a <span class="process-math">\(4\times 4\)</span> matrix. Thus <span class="process-math">\(\cp_A(x)=(x-1)^4\text{,}\)</span> as all roots must be <span class="process-math">\(1\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Two matrices are similar if and only if they share the same invariant factors. Given that invariant factors divide <span class="process-math">\(\cp_A(x)\)</span> and each invariant factor must divide the following one, the possible sets of invariant factors for <span class="process-math">\(A\)</span> are the following:</div>
+<ul class="disc">
+<li><div class="para"><span class="process-math">\(\{(x-1)^4\}\text{,}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\{(x-1),(x-1)^3\}\text{,}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\{(x-1), (x-1), (x-1)^2\}\text{,}\)</span></div></li>
+<li><div class="para">
+<span class="process-math">\(\{(x-1)^2, (x-1)^2\}\text{,}\)</span> and</div></li>
+<li><div class="para"><span class="process-math">\(\{(x-1), (x-1), (x-1), (x-1)\}\text{.}\)</span></div></li>
+</ul>
+<div class="para">We identify the companion matrices for each possible invariant factor:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-rcf.html">
+\begin{equation*}
+C(x-1)=\begin{bmatrix} 1 \end{bmatrix},
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-rcf.html">
+\begin{equation*}
+C((x-1)^2)=C(x^2-2x+1)=\begin{bmatrix} 0 &amp; -1 \\ 1 &amp; 2\end{bmatrix},
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-rcf.html">
+\begin{equation*}
+C((x-1)^3)=C(x^3+3x^2+3x-1)=\begin{bmatrix} 0 &amp; 0 &amp; 1 \\ 1 &amp; 0 &amp; -3 \\ 0 &amp; 1 &amp; -3\end{bmatrix},
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-rcf.html">
+\begin{equation*}
+C((x-1)^4)=C(x^4-4x^3+6x^2-4x+1)=\begin{bmatrix} 0 &amp; 0 &amp; 0 &amp; -1 \\ 1 &amp; 0 &amp; 0 &amp; 4 \\ 0 &amp; 1 &amp; 0 &amp; -6 \\ 0 &amp; 0 &amp; 1 &amp; 4\end{bmatrix}.
+\end{equation*}
+</div>
+<div class="para">We define the following: 1. <span class="process-math">\(B=C((x-1)^4)\text{,}\)</span> 2. <span class="process-math">\(C=C(x-1)\oplus C((x-1)^3)\text{,}\)</span> 3. <span class="process-math">\(D=C(x-1)\oplus C(x-1)\oplus C((x-1)^2)\text{,}\)</span> 4. <span class="process-math">\(E=C((x-1)^2)\oplus C((x-1)^2)\text{,}\)</span> and 5. <span class="process-math">\(F=C(x-1)\oplus C(x-1)\oplus C(x-1)\oplus C(x-1)\text{.}\)</span> As each of these matrices is in <a href="" class="xref" data-knowl="./knowl/thm-rcf.html" title="Theorem 6.9: Rational Canonical Form">Rational Canonical Form</a>, they are explicit representatives for each similarity class.</div>
+</div>
 </div></body>
 </html>

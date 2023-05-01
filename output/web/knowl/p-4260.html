@@ -12,7 +12,16 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Let <span class="process-math">\(k\)</span> be the LCM of all orders of elements in <span class="process-math">\(G\text{.}\)</span> Then <span class="process-math">\(g^k=1\)</span> and thus <span class="process-math">\(g\)</span> is a root of the polynomial <span class="process-math">\(x^k-1\)</span> for all <span class="process-math">\(g\in G\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/thm-lagrange.html" title="Theorem 4.13: Lagrange's Theorem">Lagrange's Theorem</a> every element divides <span class="process-math">\(n\text{,}\)</span> and so we have <span class="process-math">\(k\leq n\text{.}\)</span> However, by the Factor Theorem the polynomial <span class="process-math">\(x^k-1\)</span> can have at most <span class="process-math">\(k\)</span> roots, and we have <span class="process-math">\(n\)</span> distinct elements, and thus we have <span class="process-math">\(k=n\text{.}\)</span> Thus there must exist an element of order <span class="process-math">\(n\)</span> in <span class="process-math">\(G\text{,}\)</span> making <span class="process-math">\(G\)</span> cyclic, as desired.</div>
+<div class="para logical">
+<div class="para">Part (a) Let <span class="process-math">\(L\)</span> be a group, <span class="process-math">\(H\)</span> be a direct factor of <span class="process-math">\(G\text{,}\)</span> and <span class="process-math">\(\phi : H \to L\)</span> a group homomorphism. As <span class="process-math">\(H\)</span> is a direct factor of <span class="process-math">\(G\text{,}\)</span> there exists some <span class="process-math">\(K\nsg G\)</span> such that <span class="process-math">\(G=H\times K\text{.}\)</span> Thus there exists some isomorphism <span class="process-math">\(\psi:G\to H\times K\text{.}\)</span> Define <span class="process-math">\(\widetilde{\phi} : G \to L\)</span> such that <span class="process-math">\(\widetilde{\phi}(g)=h\text{,}\)</span> where <span class="process-math">\(\psi(g)=(h,k)\text{.}\)</span> Let <span class="process-math">\(x,y\in G\text{,}\)</span> and notice</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\psi(x)=(h,k)\psi(y)=(h',k')=(hh',kk')=\psi(xy),
+\end{equation*}
+</div>
+<div class="para">as <span class="process-math">\(\psi\)</span> is an isomorphism. Observe <span class="process-math">\(\widetilde{\phi}(xy)=hh'=\widetilde{\phi}(x)\widetilde{\phi}(y)\text{.}\)</span> Thus <span class="process-math">\(\widetilde{\phi}\)</span> is a homomorphism, and for any <span class="process-math">\(h\in H\)</span> we have <span class="process-math">\(\widetilde{\phi}(h)=h\text{.}\)</span>
+</div>
+</div>
 <span class="incontext"><a href="section-78.html#p-4260" class="internal">in-context</a></span>
 </body>
 </html>

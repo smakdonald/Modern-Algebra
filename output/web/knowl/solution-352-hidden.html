@@ -11,7 +11,22 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<div class="para">Let <span class="process-math">\(E/F\)</span> be a finite Galois extension and let <span class="process-math">\(G\)</span> be the Galois group of <span class="process-math">\(E/F\text{.}\)</span> Suppose that <span class="process-math">\(E = F (\a)\)</span> and let <span class="process-math">\(f(x)\)</span> be the minimal polynomial of <span class="process-math">\(\a\)</span> over <span class="process-math">\(F\text{.}\)</span> Thus <span class="process-math">\(G\)</span> [[Mathematics/Definitions/Group Action|acts]] on the roots of <span class="process-math">\(f\)</span> faithfully. Additionally, as <span class="process-math">\(f\)</span> is the minimal polynomial of <span class="process-math">\(\a\)</span> it is irreducible, making the action transitive as well.</div> <div class="para">As <span class="process-math">\(E\)</span> is Galois over <span class="process-math">\(F\)</span> we know that <span class="process-math">\(f\)</span> splits into linear factors, each of the form <span class="process-math">\(x-\b\text{,}\)</span> where <span class="process-math">\(\b\)</span> is a root of <span class="process-math">\(f\text{.}\)</span> As our action is transitive, for every root <span class="process-math">\(\b\)</span> there exists a <span class="process-math">\(\s\in G\)</span> such that <span class="process-math">\(\s\cdot\a=b\text{,}\)</span> or <span class="process-math">\(\s(\a)=\b\text{.}\)</span>
+<div class="para">Let <span class="process-math">\(F \subseteq K \subseteq L\)</span> be extensions of fields, not necessarily finite.</div> <div class="para logical">
+<div class="para">Part (a) Suppose that <span class="process-math">\(K/F\)</span> and <span class="process-math">\(L/K\)</span> are algebraic extensions. Let <span class="process-math">\(\a\in L\text{.}\)</span> Then <span class="process-math">\(\a\)</span> is the root of the polynomial</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x)=a_nx^n+\dots+a_0,
+\end{equation*}
+</div>
+<div class="para">with <span class="process-math">\(a_{i}\in K\text{.}\)</span> Notice that <span class="process-math">\(f\)</span> is a polynomial in <span class="process-math">\(F(a_n,\dots,a_0)[x]\text{,}\)</span> making <span class="process-math">\(\a\)</span> is algebraic over this as well. Consider the chain of field extensions</div>
+<div class="displaymath process-math">
+\begin{equation*}
+F \subseteq F(a_0) \subseteq F(a_0,a_1) \subseteq \cdots \subseteq F(a_0, a_1, \dots, a_{n-1} )\subseteq F(a_0, \dots, a_{n}, \a)
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(a_i\)</span> is algebraic over <span class="process-math">\(F\)</span> for all <span class="process-math">\(i\)</span> and <span class="process-math">\(\a\)</span> is algebraic over <span class="process-math">\(F(a_0, a_1, \dots, a_{n})\text{,}\)</span> by [[Theorem – Properties of Algebraic Elements|Theorem]] each step in this chain has finite degree. By the Degree Formula, <span class="process-math">\([F(a_0, \dots, a_{n}, \a): F]\)</span> is finite and thus so is <span class="process-math">\([F(\a):F]\text{.}\)</span> By the Theorem again, <span class="process-math">\(\a\)</span> is algebraic over <span class="process-math">\(F\text{.}\)</span>
+</div>
+</div> <div class="para">Next suppose that <span class="process-math">\(L/F\)</span> is algebraic. Let <span class="process-math">\(\a\in K\text{.}\)</span> Then <span class="process-math">\(\a\in L\text{,}\)</span> and so it is algebraic over <span class="process-math">\(F\text{.}\)</span> Now let <span class="process-math">\(\b\in L\text{.}\)</span> Then <span class="process-math">\(\b\)</span> is the root of a polynomial in <span class="process-math">\(F\text{,}\)</span> which is also in <span class="process-math">\(K\text{,}\)</span> so <span class="process-math">\(L/K\)</span> is algebraic as well.</div> <div class="para">Part (b) <span class="process-math">\(K=\Q(\sqrt{2})\)</span> is Galois over <span class="process-math">\(F=\Q\text{,}\)</span> and <span class="process-math">\(L=\Q(\sqrt{2},\sqrt[4]{2})\)</span> is Galois over <span class="process-math">\(K\text{,}\)</span> but <span class="process-math">\(L\)</span> is not Galois over <span class="process-math">\(F\text{,}\)</span> as the splitting field of <span class="process-math">\(x^4-2\)</span> has degree <span class="process-math">\(8\text{.}\)</span>
 </div>
 </div></body>
 </html>
