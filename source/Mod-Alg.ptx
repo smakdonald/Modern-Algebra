@@ -445,7 +445,7 @@
 
             <historical><title>Monoid</title>
               <p>
-              The word "monoid" was first used by the mathematician Garrett Birkhoff in his 1935 paper "On the Structure of Abstract Algebras".
+                The word "monoid" was first used by the mathematician Garrett Birkhoff in his 1935 paper "On the Structure of Abstract Algebras".
               </p>
             </historical>
 
@@ -486,11 +486,11 @@
 
             <historical><title>Groups</title>
               <p>
-                The term "group" was introduced in the early 20th century by the French mathematician Évariste Galois to describe a set of mathematical objects that exhibit certain symmetry properties.
+                The term "group" was introduced in the early 20th century by the French mathematician <xref text="title" ref="bio-galois"/> to describe a set of mathematical objects that exhibit certain symmetry properties.
               </p>
 
               <p>
-                It was later adopted and popularized by other mathematicians such as Arthur Cayley and Augustin-Louis Cauchy.
+                It was later adopted and popularized by other mathematicians such as <xref text="title" ref="bio-cayley"/> and <xref text="title" ref="bio-cauchy"/>.
               </p>
             </historical>
 
@@ -596,9 +596,9 @@
 
             <p>As we progress through the text, one might start to recognize that groups are much more agreeable when they are abelian. They behave in ways we expect and are often times much more likely to do what we want. If all groups were abelain, group theory would not be anywhere near as widespread (or interesting, though that is more a matter of opinion). Because of this, a common motif in this course is finding, constructing, and fiddling with groups that are 'almost' abelian, whatever that means.</p>
       
-            <historical>
+            <historical><title>Abelian Groups</title>
               <p>
-                The term "Abelian groups" was introduced by the mathematician and physicist James Clerk Maxwell in the 1870s. Maxwell named these groups after the Norwegian mathematician Niels Henrik Abel, who made important contributions to the theory of equations, including the study of what we now call Abelian groups. The name "Abelian" honors Abel's work on these groups, and it has become the standard terminology used in modern mathematics.              
+                The term "Abelian groups" was introduced by the mathematician and physicist James Clerk Maxwell in the 1870s. Maxwell named these groups after the Norwegian mathematician <xref text="title" ref="bio-abel"/>, who made important contributions to the theory of equations, including the study of what we now call abelian groups.
               </p>
             </historical>
 
@@ -1440,9 +1440,9 @@
               </statement>
             </definition>
 
-            <historical>
+            <historical><title>Quaternions</title>
               <p>
-                Quaternions were invented by the Irish mathematician William Rowan Hamilton in 1843. Hamilton named them "quaternions" because they are a generalization of complex numbers, which he called "duads". Since quaternions involve four components instead of two, Hamilton chose the name "quaternions" to reflect this. The word "quaternion" itself means a group of four things or a fourfold entity, which is a fitting name for a mathematical object with four components.
+                Quaternions were invented by the Irish mathematician <xref text="title" ref="bio-hamilton"/> in 1843. Hamilton named them "quaternions" because they are a generalization of complex numbers, which he called "duads". Since quaternions involve four components instead of two, Hamilton chose the name "quaternions" to reflect this. The word "quaternion" itself means a group of four things or a fourfold entity, which is a fitting name for a mathematical object with four components.
               </p>
             </historical>
       
@@ -1479,9 +1479,13 @@
               </statement>
             </definition>
 
-            <historical>
+            <historical><title>Homomorphism</title>
               <p>
                 The word "homomorphism" comes from the Greek words "homo" meaning "same" and "morphe" meaning "form" or "shape".
+              </p>
+
+              <p>
+                Several mathematicians have been creditied with inventing / discovering homomorphisms, such as Frobenius, Galois, Klein, and Jordan.
               </p>
             </historical>
       
@@ -1613,9 +1617,17 @@
               </statement>
             </theorem>
 
-            <p>Here is a proposition that might appear to come out of the blue.</p>
+            <exercise xml:id="exe-group-hom"><title><m>\Hom</m> Sweet <m>\Hom</m></title>
+              <statement>
+                <p>
+                  Let <m>G</m> and <m>H</m> be abelian groups. Then the set <m>\Hom(G, H)</m> of all group homomorphisms from <m>G</m> to <m>H</m> is itself an abelian group.
+                </p>
+              </statement>
+            </exercise>
 
-            <proposition xml:id="prop-d2n-mapping">
+            <p>Here is a proposition that might appear to come out of the blue.<fn>#1c1cf0, to be precise.</fn></p>
+
+            <proposition xml:id="prop-d2n-mapping"><title><m>D_{2n}</m> Generators and Unique Homomorphism</title>
 
               <statement>
                 <p>If <m>G</m> is a group and <m>x,y \in G</m> are elements such that <m>x^n = e</m>, <m>y^2 = e</m>, and <m>yxy = x^{-1}</m> for some integer <m>n \geq 3</m>, then there exists a unique group homomorphism <m>f: D_{2n} \to G</m> such that <m>f(r) = x</m> and <m>f(s) = y</m>.</p>
@@ -1636,7 +1648,7 @@
               </proof>
             </proposition>
 
-            <p>This is techincally an specific instance of the UMP for a Presentation, which is not covered here.</p>
+            <remark><p>This is techincally an specific instance of the UMP for a Presentation, which is not covered here.</p></remark>
 
             <p>Let's take a peak at what this might look like in practice.</p>
 
@@ -1693,6 +1705,16 @@
                 </p>
               </statement>
             </definition>
+
+            <historical><title>Kernel</title>
+              <p>
+                The term "kernel" was first used in mathematics by the German mathematician Ferdinand Georg Frobenius in the late 19th century.
+              </p>
+
+              <p>
+                The term "kernel" comes from the German word "Kern", which means "core" or "nucleus". In the context of a homomorphism, the kernel is the subgroup of the domain group that is "killed" by the homomorphism.
+              </p>
+            </historical>
 
             <theorem xml:id="thm-inj-surj-ghom"><title>Injective and Surjective Homomorphisms</title>
               <statement>
@@ -8704,14 +8726,17 @@
                     </p>
                   </li>
                 </ol>
+                Ring homomorphisms are often referred to as <em>ring maps</em>.
               </p>
             </statement>
           </definition>
+
+          <p>So basically the same as a group homomorphism, we just have an extra operation that we need to preserve.</p>
     
           <definition xml:id="def-ring-isomorphism"><title>Ring Isomorphism</title>
             <statement>
               <p>
-                A ring homomorphism <m>f: R \to S</m> that is bijective is called a <em>ring isomorphism</em>. Two rings <m>R</m> and <m>S</m> are <em>isomorphic</em>, written <m>R \cong S</m>, if there is an isomorphism from <m>R</m> to <m>S</m>.
+                A ring homomorphism <m>f: R \to S</m> that is bijective is called a <em>ring isomorphism</em>. Two rings <m>R</m> and <m>S</m> are <em>isomorphic</em>, written <m>R \cong S</m>, if there is an isomorphism from <m>R</m> to <m>S</m>.<fn>Ring isomorphisms are not usually referred to as <em>super ring maps</em>, but it would be cool if they were.</fn>
               </p>
             </statement>
           </definition>
@@ -8760,6 +8785,10 @@
               <ol>
                 <li>
                     The identity map is a ring isomorphism.
+                </li>
+
+                <li>
+                    The zero map is a ring map.
                 </li>
         
                 <li>
@@ -8817,9 +8846,12 @@
           </lemma>
     
           <exercise xml:id="exe-equivalent-field-definitions"><title>Equivalent Field Characterizations</title>
+            <statement>
             <p>
               Let <m>R</m> be a nontrivial ring. Then <m>R</m> is a field if and only if every homomorphism of <m>R</m> into a nonzero ring <m>S</m> is injective.
             </p>
+            </statement>
+
           </exercise>
     
           <exercise><title>Isomorphisms and Idempotents</title>
@@ -8847,7 +8879,6 @@
               </ol>
             </p>
           </exercise>
-  
           
         </section>
       </chapter>
@@ -8888,6 +8919,12 @@
                 </p>
               </statement>
             </definition>
+
+            <historical><title>Ideal</title>
+              <p>Ideals were first introduced by Richard Dedekind in the 1870s in his work on algebraic number theory. The term "ideal" was chosen by Dedekind to suggest the notion of an "ideal" number, which he saw as a kind of idealization of a real number. Similarly, Dedekind saw an ideal in a ring as an idealization of an element in the ring.</p>
+            </historical>
+
+            <p>To simplify to an excessive degree, ideals are the normal subgroups of rings. This is not <q>accurate</q> in the techincal sense, but it does communicate the vibe of what ideals are and how we will be using them in this text.</p>
     
             <example xml:id="ex-ideal-examples"><title>Examples of Ideals</title>
               <p>
@@ -8916,15 +8953,9 @@
                 </ul>
               </p>
             </example>
-    
-            <proposition xml:id="prop-proper-ideals"><title>Proper Ideals, Fields, and Units</title>
-              <statement>
-                <p>
-                  An ideal <m>I</m> of a unital ring <m>R</m> is proper if and only if <m>I</m> contains no units. Moreover, if <m>F</m> is a field it has only two ideals <m>\{0\}</m> and <m>F</m>.
-                </p>
-              </statement>
-            </proposition>
-    
+
+            <p>A fun fact about ideals is that they are subrings.</p>
+
             <proposition xml:id="prop-ideals-are-subrings"><title>Ideals are Subrings</title>
               <statement>
                 <p>
@@ -8932,7 +8963,9 @@
                 </p>
               </statement>
             </proposition>
-    
+
+            <p>The converse need not be true, however.</p>
+
             <exercise><title>Subrings Need not be Ideals</title>
             <statement>
               <p>
@@ -8946,42 +8979,52 @@
                 </p>
               </solution>
             </exercise>
-    
+
+            <p>Another fun fact is that we can combine ideals in all sorts of ways to get new ones!</p>
+
             <proposition xml:id="prop-properties-of-ideals"><title>Combinations of Ideals</title>
-              <statement>
-                <p>
-                  Let <m>R</m> be a ring and let <m>I,J</m> be ideals of <m>R</m>. Then 
-                  <ol>
-                    <li>
-                      <p>
-                        <m>I + J := \{a + b \mid a \in I, b \in J\}</m> is an ideal 
-                      </p>
-                    </li>
-    
-                    <li>
-                      <p>
-                        <m>I\cap J</m> is an ideal 
-                      </p>
-                    </li>
-    
-                    <li>
-                      <p>
-                        <m>IJ=\{\sum_{i=1}^n a_ib_j \mid n\geq 0, a_i\in I, b_j\in J\}</m> is an ideal and <m>IJ\subseteq I\cap J</m>. 
-                      </p>
-                    </li>
-    
-                    <li>
-                      <p>
-                        The intersection <m>\bigcap_{\a\in J} I_\a</m> of any collection of ideals <m>I_\a</m> of <m>R</m> is an ideal. 
-                      </p>
-                    </li>
-                  </ol>
-                  
-                  The set of all ideals of a ring <m>R</m> is a lattice with respect to the partial order given by containment. In this lattice, the supremum of a pair of ideals <m>I,J</m> is <m>I+J</m> and the infimum is <m>I\cap J</m>.
-                </p>
-              </statement>
+            <statement>
+              <p>
+                Let <m>R</m> be a ring and let <m>I,J</m> be ideals of <m>R</m>. Then 
+                <ol>
+                  <li>
+                    <p>
+                      <m>I + J := \{a + b \mid a \in I, b \in J\}</m> is an ideal 
+                    </p>
+                  </li>
+  
+                  <li>
+                    <p>
+                      <m>I\cap J</m> is an ideal 
+                    </p>
+                  </li>
+  
+                  <li>
+                    <p>
+                      <m>IJ=\{\sum_{i=1}^n a_ib_j \mid n\geq 0, a_i\in I, b_j\in J\}</m> is an ideal and <m>IJ\subseteq I\cap J</m>. 
+                    </p>
+                  </li>
+  
+                  <li>
+                    <p>
+                      The intersection <m>\bigcap_{\a\in J} I_\a</m> of any collection of ideals <m>I_\a</m> of <m>R</m> is an ideal. 
+                    </p>
+                  </li>
+                </ol>
+                
+                The set of all ideals of a ring <m>R</m> is a lattice with respect to the partial order given by containment. In this lattice, the supremum of a pair of ideals <m>I,J</m> is <m>I+J</m> and the infimum is <m>I\cap J</m>.
+              </p>
+            </statement>
             </proposition>
+
+            <exercise xml:id="exe-the-union-of-ideals-need-not-be-an-ideal"><title>Union of Ideals Need not be an Ideal</title>
+              <p>
+              Give an example
+              </p>
+            </exercise>
     
+            <p>Ideals are also commutative and associative. This is taken for granted or stated as tedious in most cases, but we include it here to be thorough.</p>
+  
             <exercise xml:id="exe-ideals-are-commutative-and-associative"><title>Ideals Commute and Associate</title>
               <p>
                 Let <m>I,J,K</m> be ideals in <m>R</m>. Then 
@@ -9024,6 +9067,42 @@
                 </ul>
               </p>
             </exercise>
+
+            <p>For those interested in digging a little deeper into ideal arithmetic, here are some more properties to investigate.</p>
+
+            <exercise xml:id="exe-ideals-distribute-in-z"><title>Ideals Distribute in <m>\Z</m></title>
+              <p>
+                Let <m>I,J,K</m> be ideals in <m>\Z</m>. Then 
+                <me>
+                  I(J+K)=IJ+IK
+                </me>
+              </p>
+            </exercise>
+    
+            <exercise xml:id="exe-ideals-do-not-distribute-in-general"><title>Ideals Don't Distribute in General</title>
+              <p>
+                Give an example of a ring where ideals do not distribute.
+              </p>
+            </exercise>
+    
+            <exercise xml:id="exe-modular-law"><title>Modular Law</title>
+              <p>
+                Let <m>I,J,K</m> be ideals in <m>R</m> such that <m>J\sse I</m> or <m>K\sse I</m>. Then 
+                <me>
+                  I\cap(J+K)=I\cap J+I\cap K
+                </me>
+              </p>
+            </exercise>
+
+            <p>And here are some important properties to wrap up on.</p>
+
+            <proposition xml:id="prop-proper-ideals"><title>Proper Ideals, Fields, and Units</title>
+              <statement>
+                <p>
+                  An ideal <m>I</m> of a unital ring <m>R</m> is proper if and only if <m>I</m> contains no units. Moreover, if <m>F</m> is a field it has only two ideals <m>\{0\}</m> and <m>F</m>.
+                </p>
+              </statement>
+            </proposition>
     
             <proposition xml:id="prop-homomorphisms-and-ideals"><title>Homomorphisms and Ideals</title>
               <statement>
@@ -9074,36 +9153,6 @@
               </proof>
             </proposition>
     
-            <exercise xml:id="exe-the-union-of-ideals-need-not-be-an-ideal"><title>Union of Ideals Need not be an Ideal</title>
-              <p>
-              Give an example
-              </p>
-            </exercise>
-    
-            <exercise xml:id="exe-ideals-distribute-in-z"><title>Ideals Distribute in <m>\Z</m></title>
-              <p>
-                Let <m>I,J,K</m> be ideals in <m>\Z</m>. Then 
-                <me>
-                  I(J+K)=IJ+IK
-                </me>
-              </p>
-            </exercise>
-    
-            <exercise xml:id="exe-ideals-do-not-distribute-in-general"><title>Ideals Don't Distribute in General</title>
-              <p>
-                Give an example of a ring where ideals do not distribute.
-              </p>
-            </exercise>
-    
-            <exercise xml:id="exe-modular-law"><title>Modular Law</title>
-              <p>
-                Let <m>I,J,K</m> be ideals in <m>R</m> such that <m>J\sse I</m> or <m>K\sse I</m>. Then 
-                <me>
-                  I\cap(J+K)=I\cap J+I\cap K
-                </me>
-              </p>
-            </exercise>
-    
           </subsection>
     
           <subsection xml:id="subsec-generated-ideals"><title>Generated Ideals</title>
@@ -9118,18 +9167,20 @@
             <definition xml:id="def-generated-ideal"><title>Generated Ideals</title>
               <statement>
                 <p>
-                  If <m>A</m> is any subset of a ring <m>R</m>, the <em>ideal generated by</em> <m>A</m>, denoted <m>(A)</m>, is the intersection of all ideals of <m>R</m> that contain <m>A</m>: 
+                  If <m>A</m> is any subset of a ring <m>R</m>, the <em>ideal generated by</em> <m>A</m>, denoted <m>\igen A</m>, is the intersection of all ideals of <m>R</m> that contain <m>A</m>: 
                   <me>
-                    (A)=\bigcap_{I\;\text{ideal of}\;R, A\subseteq I} I.
+                    \igen A=\bigcap_{I\;\text{ideal of}\;R, A\subseteq I} I.
                   </me>
-                    An ideal <m>I</m> is <em>finitely generated</em> if <m>I = (A)</m> for some finite subset <m>A</m> of <m>R</m>.
+                    An ideal <m>I</m> is <em>finitely generated</em> if <m>I = \igen A</m> for some finite subset <m>A</m> of <m>R</m>.
                 </p>
               </statement>
             </definition>
+
+            <remark><p>It is common for <m>\igen A</m> to be written as <m>(A)</m>; this is often taken as the standard notation. We will not do so here to maintain notational consistency and to avoid confusion.</p></remark>
     
             <remark>
               <p>
-                By Proposition, <m>(A)</m> is an ideal and it is the smallest ideal of <m>R</m> that contains <m>A</m>.
+                By Proposition, <m>\igen A</m> is an ideal and it is the smallest ideal of <m>R</m> that contains <m>A</m>.
               </p>
             </remark>
     
@@ -9138,11 +9189,11 @@
                 <p>
                   For a subset <m>A</m> of a ring <m>R</m> with <m>1</m>, the ideal generated by <m>A</m> is given by 
                   <me>
-                    (A)=\left\{\sum_{i=1}^n x_i a_i y_i \mid a_i \in A, x_i, y_i \in R\right\}.
+                    \igen A=\left\{\sum_{i=1}^n x_i a_i y_i \mid a_i \in A, x_i, y_i \in R\right\}.
                   </me> 
                   If <m>R</m> is commutative and <m>A</m> is any subset, then there is a simpler formula 
                   <me>
-                    (A)=\left\{\sum_{i=1}^n r_i a_i \mid n \geq 0, r_i \in R, a_i \in A\right\}.
+                    \igen A=\left\{\sum_{i=1}^n r_i a_i \mid n \geq 0, r_i \in R, a_i \in A\right\}.
                   </me>
                 </p>
               </statement>
@@ -9153,19 +9204,13 @@
                 <ul>
                   <li>
                     <p>
-                      In the commutative ring <m>\Z</m>, we have <m>(2,3)=(1)=\Z</m>. Indeed any element <m>n\in \Z</m> can be written as <m>n=(-n)\cdot 2+n\cdot 3=n\cdot 1</m>. Note that <m>1=\gcd(2,3)</m>.
+                      In the commutative ring <m>\Z</m>, we have <m>\igen{2,3}=\igen 1=\Z</m>. Indeed any element <m>n\in \Z</m> can be written as <m>n=(-n)\cdot 2+n\cdot 3=n\cdot 1</m>. Note that <m>1=\gcd(2,3)</m>.
                     </p>
                   </li>
     
                   <li>
                     <p>
-                      In the commutative ring <m>\Z</m>, we have <m>(2,4)=(2)=2\Z</m>, the set of all even integers. Notice this shows that different sets can generate the same ideal. Also note that <m>2=\gcd(2,4)</m>.
-                    </p>
-                  </li>
-    
-                  <li>
-                    <p>
-                      In <m>\Z[x]</m>, we have <m>(2,x)=\{a+xp(x) \mid a \;\text{is even}, p(x)\in\Z[x]\}</m> and this ideal cannot be generated by a single element.
+                      In the commutative ring <m>\Z</m>, we have <m>\igen{2,4}=\igen 2=2\Z</m>, the set of all even integers. Notice this shows that different sets can generate the same ideal. Also note that <m>2=\gcd(2,4)</m>.
                     </p>
                   </li>
                 </ul>
@@ -9201,29 +9246,11 @@
             <definition xml:id="def-principal-ideal"><title>Principal Ideal</title>
               <statement>
                 <p>
-                  Let <m>I</m> be an ideal of a ring <m>R</m>. The ideal <m>I</m> is <em>principal</em> if <m>I = (a)</m> for some <m>a \in R</m>, that is, <m>I</m> is generated by a set with a single element.
+                  Let <m>I</m> be an ideal of a ring <m>R</m>. The ideal <m>I</m> is <em>principal</em> if <m>I = \igen a</m> for some <m>a \in R</m>, that is, <m>I</m> is generated by a set with a single element.
                 </p>
               </statement>
             </definition>
-    
-            <example xml:id="ex-principal-ideals"><title>Examples of Principal Ideals</title>
-              <p>
-                <ul>
-                  <li>
-                    every ideal of <m>\Z</m> is principal with <m>I=(n)</m> for some <m>n\in \Z</m> (<m>\Z</m> is a PID)
-                  </li>
-    
-                  <li>
-                    for any field <m>F</m>, every ideal of <m>F[x]</m> is principal (<m>F[x]</m> is a PID)
-                  </li>
-    
-                  <li>
-                    for any field <m>F</m>, every ideal in <m>F[x_1,\ldots,x_n]</m> is finitely generated, but not necessarily principal. This is a consequence of a deep theorem called the Hilbert Basis Theorem, which you will see in Math 905.
-                  </li>
-                </ul>
-              </p>
-            </example>
-    
+
             <exercise xml:id="exe-properties-of-principal-ideals-in-z"><title>Principal Ideals in <m>\Z</m></title>
               
               <p>
@@ -9243,6 +9270,28 @@
                 </ul>
               </p>
             </exercise>
+    
+          <!--
+
+            <example xml:id="ex-principal-ideals"><title>Examples of Principal Ideals</title>
+              <p>
+                <ul>
+                  <li>
+                    every ideal of <m>\Z</m> is principal with <m>I=\igen n</m> for some <m>n\in \Z</m><fn>This means <m>\Z</m> is a PID, something that will be defined in <xref ref="sec-pids"/></fn> 
+                  </li>
+    
+                  <li>
+                    for any field <m>F</m>, every ideal of <m>F[x]</m> is principal.
+                  </li>
+    
+                  <li>
+                    for any field <m>F</m>, every ideal in <m>F[x_1,\ldots,x_n]</m> is finitely generated, but not necessarily principal. This is a consequence of a deep theorem called the Hilbert Basis Theorem, which you will see in Math 905.
+                  </li>
+                </ul>
+              </p>
+            </example>
+
+          -->
             
           </subsection>
           
@@ -9258,41 +9307,74 @@
               </p>
               <attribution>Alan Perlis</attribution>
             </blockquote>
+
+            <lemma xml:id="lem-cosets-abelian">
+              <statement>
+                <p>
+                  For a two-sided ideal <m>I</m> of <m>R</m>, the set of additive cosets modulo <m>I</m> is <m>R/I=\{r+I : r\in R\}.</m> This is an abelian group with respect to addition given by <m>(r + I) + (s + I) = (r +s ) + I</m>.
+                </p>
+              </statement>
+            </lemma>
     
             <definition xml:id="def-quotient-ring"><title>Quotient Ring</title>
               <statement>
                 <p>
-                  For a two-sided ideal <m>I</m> of <m>R</m>, the set of additive cosets modulo <m>I</m> is <m>R/I=\{r+I : r\in R\}.</m> This is an abelian group with respect to addition given by <m>(r + I) + (s + I) = (r +s ) + I</m>. The <em>quotient ring</em> of <m>R</m> modulo <m>I</m> is the set <m>R/I</m> with addition defined as above and multiplication given by <m>(r + I) \cdot (s + I) = (rs) + I.</m>
+                  For a two-sided ideal <m>I</m> of <m>R</m> The <em>quotient ring</em> of <m>R</m> modulo <m>I</m> is the set <m>R/I</m> with addition defined as above and multiplication given by <m>(r + I) \cdot (s + I) = (rs) + I.</m>
                 </p>
               </statement>
             </definition>
     
-            <problem xml:id="exe-quotient-ring-is-ring"><title>Quotient Rings are Rings</title>
+            <exercise xml:id="exe-quotient-ring-is-ring"><title>Quotient Rings are Rings</title>
               <p>
                 Given a two-sided ideal <m>I</m> of <m>R</m>, prove that the quotient ring <m>R/I</m> is indeed a ring.
               </p>
-            </problem>
+            </exercise>
+
+            <p>Just like we had with groups, it turns out our dear friend <m>\Z/n</m> has been a quotient all along</p>
     
             <example xml:id="ex-quotient-of-z"><title>Quotients of <m>\Z</m></title>
               <p>
-                If <m>I=(n)</m> is an ideal in the ring <m>\Z</m>, then the quotient ring <m>\Z/n</m> is the familiar ring <m>\Z/n</m>.
+                If <m>I=\igen n</m> is an ideal in the ring <m>\Z</m>, then the quotient ring <m>\Z/n</m> is the familiar ring <m>\Z/n</m>.
               </p>
             </example>
+
+            <remark><p>This is where the common notation <m>\Z/(n)</m> comes from.</p></remark>
+
+            <p>And, once again, we have a quotient map that turns out to be a homomorphism.</p>
     
-            <problem xml:id="quotient-map-is-surjective-homomorphism"><title>Quotient Map is Surjective Ring Map</title>
+            <exercise xml:id="quotient-map-is-surjective-homomorphism"><title>Quotient Map is Surjective Ring Map</title>
               <p>
                 Prove that the canonical quotient map <m>q:R\to R/I</m> is a surjective ring homomorphism.
               </p>
-            </problem>
+            </exercise>
+
+            <p>Last but certainly not least, we have an analogue of <xref ref="thm-norm-iff-ker"/> for ideals.</p>
     
-            <proposition xml:id="prop-ideal-iff-kernel-of-ring-map"><title>Ideal iff Kernel of Ring Map</title>
+            <theorem xml:id="thm-ideal-iff-kernel-of-ring-map"><title>Ideal iff Kernel of Ring Map</title>
               <statement>
                 <p>
                   Let <m>R</m> be a ring. A subset <m>I</m> of <m>R</m> is an ideal of <m>R</m> if and only if there exists a ring homomorphism <m>\varphi</m> such that <m>\ker(\varphi)=I</m>
                 </p>
               </statement>
-            </proposition>
+            </theorem>
     
+            
+            
+          </subsection>
+    
+          <subsection xml:id="subsec-ring-iso-thms"><title>The Ring Isomorphism Theorems</title>
+
+            <blockquote>
+              <p>
+                <q>
+                  I'm not a very structured person, so when I get some structure, it's cool; it's good for me.
+                </q>
+              </p>
+              <attribution>J. Cole</attribution>
+            </blockquote>
+
+            <p>We arrive at the isomorphism theorems for rings. We've seen most of this stuff before in different packaging, so lets jump right in.</p>
+
             <theorem xml:id="thm-ump-for-quotient-rings"><title>UMP for Quotient Rings</title>
               
               <statement>
@@ -9311,23 +9393,9 @@
                 </p>
               </proof>
             </theorem>
-            
-          </subsection>
-    
-          <subsection xml:id="subsec-ring-iso-thms"><title>The Ring Isomorphism Theorems</title>
-
-            <blockquote>
-              <p>
-                <q>
-                  I'm not a very structured person, so when I get some structure, it's cool; it's good for me.
-                </q>
-              </p>
-              <attribution>J. Cole</attribution>
-            </blockquote>
     
             <theorem xml:id="thm-ring-fit"><title>First Isomorphism Theorem for Rings</title>
-              
-              
+               
               <statement>
                 <p>
                   If <m>f: R \to S</m> is a ring homomorphism, then <m>R/\ker(f)\cong \im(f)</m> via the map <m>\overline{f}</m> given by <m>\ov{f}(r + \ker(f)) = f(r)</m>.
@@ -9336,13 +9404,12 @@
     
               <proof>
                 <p>
-                  The map <m>\overline{f}</m> is a well-defined ring homomorphism by the UMP for quotient rings. By the <xref text="title" ref="thm-fit-group"/> for groups, the map <m>\ov{f}</m> is bijective, finishing the proof.
+                  The map <m>\overline{f}</m> is a well-defined ring homomorphism by <xref ref="thm-ump-for-quotient-rings"/>. By the <xref text="title" ref="thm-fit-group"/> for groups, the map <m>\ov{f}</m> is bijective, finishing the proof.
                 </p>
               </proof>
             </theorem>
     
             <theorem xml:id="thm-ring-sit"><title>Second Isomorphism Theorem for Rings</title>
-    
  
               <statement>
                 <p>
@@ -9355,11 +9422,10 @@
             </theorem>
     
             <theorem xml:id="thm-ring-tit"><title>Third Isomorphism Theorem for Rings</title>
-    
               
               <statement>
                 <p>
-                  If <m>R</m> is a ring and <m>I \subseteq J</m> are two ideals of <m>R</m>, then <m>J/I</m>[^4] is an ideal of <m>R/I</m> and 
+                  If <m>R</m> is a ring and <m>I \subseteq J</m> are two ideals of <m>R</m>, then <m>J/I</m> is an ideal of <m>R/I</m> and 
                   <me>
                     \frac{R/I}{J/I} \cong R/J \text{ via } (r + I) + J/I \mapsto r + J.
                   </me>          
@@ -9368,8 +9434,7 @@
             </theorem>
     
             <theorem xml:id="thm-ring-lit"><title>Lattice Isomorphism Theorem for Quotient Rings</title>
-    
-              
+         
               <statement>
                 <p>
                   Suppose <m>R</m> is a ring and <m>I</m> is a two-sided ideal of <m>R,</m> and write <m>\pi: R \to R/I</m> for the quotient ring homomorphism. There is a bijection 
@@ -9389,72 +9454,6 @@
               </statement>
             </theorem>
     
-            <exercise xml:id="special-case-of-sun-tzus-theorem"><title>Qual</title>
-            <statement>
-              <p>
-                Let <m>R</m> be a commutative ring with identity, and assume <m>1\neq0</m>. Let <m>I</m> and <m>J</m> be ideals such that <m>I + J = R</m>.
-              </p>
-
-              <p>
-                <ol>
-                  <li>
-                    Prove <m>IJ = I\cap J</m>.
-                  </li>
-      
-                  <li>
-                    Prove the following special case of the Sun Tzu's Theorem: There is an isomorphism of rings of the form <m>R/(I \cap J)\cong R/I \times R/J</m>.
-                  </li>
-                </ol>
-              </p>
-            </statement>
-      
-              
-              
-              <solution>
-                <p>
-                  Let <m>R</m> be a commutative ring with identity, and assume <m>1\neq0</m>. Let <m>I</m> and <m>J</m> be ideals such that <m>I + J = R</m>.
-                </p>
-    
-                <p>
-                  First, note that both <m>IJ</m> and <m>I\cap J</m> are ideals by <xref provisional="combinations of ideals"/>
-                </p>
-      
-                <p>
-                  Let <m>x\in IJ</m>. Thus <m>x=\sum a_ib_j</m>, where each <m>a_i\in I</m> and <m>b_j\in J</m>. As <m>I</m> and <m>J</m> are both ideals, each term in this sum is contained both in <m>I</m> and <m>J</m>. Thus, by absorption, <m>x\in I\cap J</m>. Hence <m>IJ\subseteq I\cap J</m>.
-                </p>
-      
-                <p>
-                  Let <m>x\in I\cap J</m>. Thus <m>x\in I</m> and <m>x\in J</m>. Note that as <m>I+J=R</m>, there exists some <m>a\in I</m> and <m>b\in J</m> such that <m>a+b=1</m>. So <m>x=x1=xa+xb</m>. As <m>x\in I\cap J</m> we see that <m>x=ax+xb</m>, with <m>a,x\in I</m> and <m>b,x\in J</m>. Thus <m>x\in IJ</m>, yielding <m>IJ=I\cap J</m>.
-                </p>
-      
-                <p>
-                  Let <m>f:R\to R/I\times R/J</m> be defined by <m>f(x)=(x+I,x+J)</m>.
-                </p>
-      
-                <p>
-                  Notice that if <m>x\in I\cap J</m>, we have <m>f(x)=(I,J)</m>, and so <m>x\in\ker(f)</m>. (See: [[Mathematics/Definitions/Kernel]]) Let <m>x\in\ker(f)</m>. Thus <m>x+I=I</m> and <m>x+J=J</m>, and so <m>x\in I</m> and <m>x\in J</m>. Hence <m>x\in I\cap J</m>, and so <m>\ker(f)=I\cap J</m>.
-                </p>
-      
-                <p>
-                  Observe <me>f(x+y)=((x+y)+I,(x+y)+J)=((x+I)+(y+I),(x+J)+(y+J))=((x+I),(x+J))+(y+I),(y+J))=f(x)+f(y),</me> making <m>f</m> a homomorphism of rings.
-                </p>
-      
-                <p>
-                  Let <m>(a+I,b+J)\in R/I\times R/J</m>. As <m>R=I+J</m>, we can write <m>a</m> and <m>b</m> as <m>a_i+a_j</m> and <m>b_i+b_j</m>. However, as <m>a_i\in I</m> and <m>b_j\in J</m>, we have <m>(a+I,b+J)=(a_j+I, b_i+J)</m>.
-                </p>
-      
-                <p>
-                  Consider the element <m>x=(a_j+b_i)\in R</m>, and observe <me>f(x)=f(a_j+b_i)=(a_j+b_i+I, b_i+a_j+J).</me>However, as <m>b_i\in I</m> and <m>a_j\in J</m>, we see <me>(a_j+b_i+I, b_i+a_j+J)=(a_j+I,b_i+J)=(a+I,b+J).</me> Thus <m>f</m> is a surjective homomorphism. Hence, by the First Isomorphism Theorem, we see <m>R/(I \cap J)\cong R/I \times R/J</m>.
-                </p>
-              </solution>
-            </exercise>
-    
-            <exercise><title>Qual</title>
-              <p>
-                Let <m>d</m> be a square-free integer. The ring <m>\Q(\sqrt d)</m> is the subring of <m>\C</m> defined by <me>\Q(\sqrt d) = \{a + b\sqrt d | a, b \in \Q\}.</me> Show that there is a ring isomorphism <m>\Q[x]/(x^2-d)\cong\Q(\sqrt d)</m>.
-              </p>
-            </exercise>
-            
           </subsection>
     
           <exercises>
@@ -9560,7 +9559,7 @@
     
       </chapter>
 
-      <chapter xml:id="sec-commrings"><title>Commutative Rings</title>
+      <chapter xml:id="ch-commrings"><title>Commutative Rings</title>
 
         <!--
        ***************
@@ -9568,7 +9567,7 @@
        ****************
         -->
     
-        <section xml:id="subsec-primemax-ideals"><title>Prime and Maximal Ideals</title>
+        <section xml:id="sec-primemax-ideals"><title>Prime and Maximal Ideals</title>
     
           <subsection xml:id="subsec-prime-ideals"><title>Prime Ideals</title>
 
@@ -9576,7 +9575,7 @@
               <p>
                 <q>I have as much chance of becoming Prime Minister as of being decapitated by a frisbee or of finding Elvis.</q>
               </p>
-              <attribution>Boris Johnson</attribution>
+              <attribution>Boris Johnson, former Prime Minister</attribution>
             </blockquote>
 
             <definition xml:id="def-prime-ideal"><title>Prime Ideal</title>
@@ -9586,6 +9585,8 @@
                 </p>
               </statement>
             </definition>
+
+            <remark><p>We often refer to prime ideals as just <q>primes</q>, this will become gently confusing later and we will avoid doing so when possible.</p></remark>
     
             <example xml:id="ex-prime-ideals"><title>Examples of Prime Ideals</title>
               <p>
@@ -9597,13 +9598,11 @@
                   <li>
                   In <m>\Z[i]</m> the ideal <m>(13)</m> is not prime, because <m>13=(3+2i)(3-2i)\in(13)</m>, but <m>3+2i\not \in (13)</m> and <m>3-2i\not \in (13)</m> (because if <m>3\pm2i=13\a</m> then <m>N(3\pm2i)=N(13)N(\a)</m> so <m>13=13^2N(\a)</m>, a contradiction).
                   </li>
-      
-                  <li>
-                  In <m>\Z[x]</m> the ideal <m>(2,x)</m> is maximal and prime (proof in the <m>\ex</m> given later), the ideals <m>(2)</m> and <m>(x)</m> are prime but not maximal.
-                  </li>
                 </ul>
               </p>
             </example>
+
+            <p>Here is an equivalent characterization of prime ideals that will become very useful in a later course on commutative algebra.</p>
     
             <proposition xml:id="prop-prime-iff-complement-closed"><title>Prime iff Complement is Closed</title>
               <statement>
@@ -9612,6 +9611,8 @@
                 </p>
               </statement>
             </proposition>
+
+            <p>And here is another equivalent characterization<fn>One might say it is an equivalent equivalent characterization... but we shant.</fn> that will become very useful instantly and will never really stop.</p>
     
             <theorem xml:id="thm-prime-iff-domain"><title>Prime iff Quotient is Domain</title>
               <statement>
@@ -9626,59 +9627,61 @@
                 </p>
               </proof>
             </theorem>
+
+            <p>Since we're on such a roll of equivalent characterizations, let's through in one more for good measure.</p>
     
             <proposition xml:id="prop-equivalent-integral-domain-definition"><title>Equivalent Domain Characterization</title>
               <statement>
                 <p>
                   Let <m>A</m> be a nontrivial ring. Then <m>A</m> is an integral domain if and only if the ideal <m>(0)</m> is prime.
-    
                 </p>
               </statement>
             </proposition>
-    
-            <proposition xml:id="prop-in-domain-kernel-of-homomorphism-prime"><title>Kernels are Prime in Domains</title>
+
+            <p>Prime ideals and homomorphisms? I thought you'd never ask.</p>
+
+            <theorem xml:id="thm-primes-and-maps"><title>Prime Ideals and Ring Maps</title>
               <statement>
                 <p>
-                  If <m>R</m> is a domain, <m>S</m> is a ring and <m>f:R\to S</m> is a ring homomorphism, then <m>\ker(f)</m> is a prime ideal.
+                  <ol>
+                    <li>
+                      <p>
+                        If <m>R</m> is a domain, <m>S</m> is a ring and <m>\varphi:R\to S</m> is a ring homomorphism, then <m>\ker(\varphi)</m> is a prime ideal.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        If <m>\varphi:A\to B</m> is a ring homomorphism and <m>P</m> is a prime ideal in <m>B</m>, then <m>\varphi\inv(P)</m> is prime in <m>A</m>.
+                      </p>
+                    </li>
+                  </ol>
                 </p>
               </statement>
-            </proposition>
-    
-            <proposition xml:id="prop-preimage-of-prime-ideal-is-prime"><title>Preimages of Prime Ideals are Prime</title>
-              <statement>
-                <p>
-                  If <m>f:A\to B</m> is a ring homomorphism and <m>P</m> is a prime ideal in <m>B</m>, then <m>f\inv(P)</m> is prime in <m>A</m>.
-                </p>
-              </statement>
-            </proposition>
+            </theorem>
     
           </subsection>
     
           <subsection xml:id="subsec-maximal-ideals"><title>Maximal Ideals</title>
 
-                <blockquote>
-                  <p>
-                    <q>It's just like, we know how to push ourselves to the max.</q>
-                  </p>
-                  <attribution>Young Dolph</attribution>
-                </blockquote>
+            <blockquote>
+              <p>
+                <q>It's just like, we know how to push ourselves to the max.</q>
+              </p>
+              <attribution>Young Dolph</attribution>
+            </blockquote>
     
             <definition xml:id="def-maximal-ideal"><title>Maximal Ideal</title>
               <statement>
                 <p>
-                  A <em>maximal ideal</em> of an arbitrary ring <m>R</m> is a proper ideal <m>M</m> such that the only ideals of <m>R</m> containing <m>M</m> are <m>M</m> and <m>R</m>.
+                  A <em>maximal ideal</em> of an arbitrary ring <m>R</m> is a proper ideal <m>\fm</m> such that the only ideals of <m>R</m> containing <m>\fm</m> are <m>\fm</m> and <m>R</m>.
                 </p>
               </statement>
             </definition>
+
+            <remark><p>It is not uncommon to denote maximal ideals with <m>M</m>. We reserve this notation for <xref ref="part-modules"/> when we dive into modules.</p></remark>
     
-            <proposition xml:id="prop-preimage-of-maximal-ideal-possibly-not-maximal"><title>Preimage of Maximal Ideal not Necessarily Maximal</title>
-              <statement>
-                <p>
-                  Give an explicit example of a ring homomorphism <m>f:A\to B</m> and maximal ideal <m>\fm</m> of <m>A</m> such that <m>f(\fm)</m> is not maximal in <m>B</m>.
-                </p>
-              </statement>
-            </proposition>
-            
+            <p>And, matching up quite nicely with <xref ref="thm-prime-iff-domain"/>, we have one of the spicier meatballs of the chapter.</p>
     
             <theorem xml:id="thm-maximal-iff-field"><title>Maximal Ideal iff Quotient is a Field</title>
               <statement>
@@ -9707,6 +9710,16 @@
                 </p>
               </proof>
             </corollary>
+
+            <p>Unlike their prime counterparts, maximal ideals are not preserved by preimages in general.</p>
+
+            <exercise xml:id="exe-preimage-of-maximal-ideal-possibly-not-maximal"><title>Preimage of Maximal Ideal not Necessarily Maximal</title>
+              <statement>
+                <p>
+                  Give an explicit example of a ring homomorphism <m>f:A\to B</m> and maximal ideal <m>\fm</m> of <m>A</m> such that <m>f(\fm)</m> is not maximal in <m>B</m>.
+                </p>
+              </statement>
+            </exercise>
     
             <theorem xml:id="thm-zorn"><title>Zorn's Lemma</title>          
               
@@ -10025,7 +10038,7 @@
           
         </section>
     
-        <section xml:id="subsec-polyrings"><title>Polynomial Rings</title>
+        <section xml:id="sec-polyrings"><title>Polynomial Rings</title>
 
           <blockquote>
             <p>
@@ -10713,7 +10726,7 @@
         
       </chapter>
 
-      <chapter xml:id="domains"><title>Domains</title>
+      <chapter xml:id="ch-domains"><title>Domains</title>
 
         <!--
        ***************
@@ -11830,7 +11843,7 @@
         
       </chapter>
 
-      <chapter xml:id="sec-irreducible">
+      <chapter xml:id="ch-irreducible">
         <title>Irreducibility</title>
 
         <!--
@@ -20100,828 +20113,6 @@
         </section>
         
       </chapter>
-
-      <chapter xml:id="ch-mod-extras"><title>Extras</title>
-
-        <!--
-       **************************
-        Chapter: Module Extras
-       **************************
-        -->
-
-        <section xml:id="sec-det">
-          <title>Determinants</title>
-
-          <definition xml:id="def-multilinear-and-alternating">
-            <statement>
-              <p>
-                For any commutative ring <m>R</m> and <m>R</m>-module <m>V</m>, given a function of the form <me>\phi: \overbrace{V \times \cdots \times V}^n \to R</me> we say: 
-                <ol>
-                  <li>
-                    <p>
-                      <m>\phi</m> is <m>R</m>-<em>mutli-linear</em> if, for each <m>i</m>, we have <me>\phi(v_1, \dots, v_{i-1}, v_i + v'_i, v_{i+1}, \dots, v_n) = \phi(v_1, \dots, v_{i-1}, v_i , v_{i+1}, \dots, v_n) +\phi(v_1, \dots, v_{i-1},  v_i', v_{i+1}, \dots, v_n)</me> and <me>\phi(v_1, \dots, v_{i-1}, r v_i, v_{i+1}, \dots, v_n) = r \phi(v_1, \dots, v_{i-1},  v_i, v_{i+1}, \dots, v_n) </me>for all elements <m>v_1, \dots, v_n, v_i'</m> in <m>V</m> and all <m>r \in R</m>. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      <m>\phi</m> is <em>alternating</em> if <m>\phi(v_1, \dots, v_n) = 0</m> if <m>v_i = v_j</m> for some <m>i \ne j</m>.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-          </definition>
-
-          <example xml:id="exe-multilinear-maps-when-n1">
-            <title>Multilinear Maps when <m>n=1</m></title>
-
-            <p>
-              When <m>n=1</m>, a multi-linear map is the same thing as an <m>R</m>-module homomorphism.(The alternating condition is vacuous in this case.)
-            </p>
-
-          </example>
-
-          <example xml:id="exe-r-bilinear-maps-n2">
-            <title><m>R</m>-Bilinear Maps (<m>n=2</m>)</title>
-
-            <p>
-              When <m>n= 2</m>, instead of <q><m>R</m>-multilinear</q> we say<q><m>R</m>-bilinear'</q>. If <m>\phi: V \times V \to R</m> is <m>R</m>-bilinear then 
-                <me>
-                  \phi(v+w, u+m) = \phi(v,u) + \phi(v,m) + \phi(w,u)+\phi(w,m).
-                </me> 
-                Also <m>\phi(rv,w) = r\phi(v,w) = \phi(v, rw)</m>. For any example of this, take <m>V = R^m</m>. Then the <q>dot product</q> <m>\phi:V \times V \to R</m> defined by <m>\phi((a_1, \dots, a_m)^\tau, (b_1, \dots, b_m)^\tau) = \sum_i a_i b_i</m> is <m>R</m>-bilinear. But the dot product isn't alternating.
-            </p>
-            
-          </example>
-
-          <example xml:id="exe-determinant-formula-using-bilinear-map">
-            <title>Determinant Formula Using Bilinear Map</title>
-
-
-            <p>
-              For <m>n =2</m> and <m>V = R^2</m>, <m>\phi: V \times V \to R</m> defined by <me>\phi(\begin{bmatrix} x \\ y \end{bmatrix}, \begin{bmatrix} z \\ w \end{bmatrix}) = xw - yz</me>is both <m>R</m>-bilinear and alternating. This is of course the familiar determinant formula.
-            </p>
-          </example>
-
-          <remark>
-            <p>
-              The multi-linearity property of a function <m>\phi: V^{\times n} \to R</m> can equivalently be stated as follows: If we fixed <m>n-1</m> of the <m>n</m> inputs and let the remaining input vary, then the resulting function is an <m>R</m>-module homomorphism. More precisely: <m>\phi</m> is <m>R</m>-multi-linear if and only if for each <m>i</m> and for each choice of elements <m>v_1, \dots, v_{i-1}, v_{i+1}, \dots, v_n</m> in <m>V</m>, the function <me>
-              g: V \to R
-              </me> defined by <m>g(w) = \phi(v_1, \dots, v_{i-1}, w, v_{i+1}, \dots, v_n)</m> is a <m>R</m>-module homomorphism.
-            </p>
-          </remark>
-
-          <lemma xml:id="lem-multilinear-maps-and-permutations">
-            <title>Multilinear Maps and Permutations</title>
-
-            <statement>
-              <p>
-                Assume <m>\phi: V^{\times n} \to R</m> is <m>R</m>-multilinear and alternating. Then for any permutation <m>\tau \in S_n</m> and <m>v_1, \dots, v_n \in V</m>, we have <me>\phi(v_1, \dots, v_n) = \sign(\tau) \phi(v_{\tau(1)}, \dots, v_{\tau(n)})</me>where <m>\sign(\tau)</m> is the sign of the permutation <m>\tau</m>.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                Let us first prove this in the case when <m>n = 2</m> and <m>\tau</m> is the only non-trivial element of <m>S_2</m>. Say<me>
-                  \psi: V^{\times 2} \to R
-                </me>is <m>R</m>-multi-linear (<m>R</m>-bilinear) and alternating. The goal is to prove<me>
-                \psi(v,w) = -\psi(w,v)</me>for any <m>v,w</m>.
-              </p>
-  
-              <p>
-                            We have <me>\psi(v+w, v+w) = 0</me>on the one hand and <me>\psi(v+w, v+w) = \psi(v, v+w) + \psi(w, v+w) = \psi(v,v) + \psi(v, w) + \psi(w,v) + \psi(w,w) = \psi(v, w) + \psi(w,v)  </me>on the other hand. It follows that <me>
-                \psi(v, w) + \psi(w,v)  = 0
-                </me>which proves the Lemma in this case.
-              </p>
-  
-              <p>
-                Now let <m>n</m> be arbitrary and <m>\tau = (i \, j)</m> for some <m>1 \leq i &lt; j \leq n</m>. In this case we need to show<me>
-                \phi(v_1, \dots, v_n) = - \phi(v_1, \dots, v_{i-1}, v_{j}, v_{i+1}, v_{i+2}, \dots, v_{j-1}, v_i, v_{j+1}, \dots, v_n)
-                </me>for all <m>v_1, \dots, v_n \in V</m>. Fix <m>n-2</m> elements <m>v_1, \dots, v_{i-1}, v_{i+1}, \dots, v_{j-1}, v_{j+1}, \dots, v_n</m> and define <me>
-                \psi: V^{\times 2} \to R
-                </me>by<me>
-              \psi(v,w) = \phi(v_1, \dots, v_{i-1}, v, v_{i+1}, \dots, v_{j-1}, w,  v_{j+1}, \dots, v_n)
-                </me>for any <m>v,w \in V</m>. With this notation the goal is to show <me>\psi(v,w) = -\psi(w,v)</me>Since <m>\phi</m> is <m>R</m>-multi-linear and alternating, <m>\psi: V \times V\to R</m> is <m>R</m>-bilinear and alternating, and so the case already proven gives the result.
-              </p>
-  
-              <p>
-                Finally let <m>n</m> and <m>\tau</m> be arbitrary. Then <m>\tau</m> is a product of transpositions — say <m>\tau = \tau_r \cdots \tau_1</m> with each <m>\tau_i</m> a transposition. Proceed by induction on <m>r</m>. The previous case establishes the result when <m>r = 1</m>. If <m>r \geq 2</m>, then using the previous case gives <me>
-                \psi(v_\tau(1), \dots, v_\tau(n)) = -\psi(v_\tau'(1), \dots, v_\tau'(n))
-                </me> where <m>\tau' = \tau_{r-1} \cdots \tau_1</m> and by induction <m>\psi(v_\tau'(1), \dots, v_\tau'(n)) = (-1)^{r-1}\psi(v_1, \dots, v_n)</m>. Hence <me>
-                \psi(v_\tau(1), \dots, v_\tau(n)) = (-1)^{r}\psi(v_1, \dots, v_n)
-                </me> which proves the result.
-              </p>
-            </proof>
-          </lemma>
-
-          <definition xml:id="def-determinant-function">
-            <statement>
-              <p>
-                Define the function <me>\det: \Mat_{n \times n} (R) \to R</me> by <me>\det(A) = \sum_{\s \in S_n} \sign(\s) \prod_{i=1}^n a_{\s(i), i}</me>where <m>S_n</m> is the group of all permutations of <m>\{1, \dots, n\}</m> and <m>\sign(\s)</m> refers to the sign of a permutation.
-              </p>
-            </statement>
-          </definition>
-      
-          <example xml:id="exe-determinant-when-n2">
-            <title>Determinant when <m>n=2</m></title>
-
-            <p>
-              For <m>n = 2</m> we have <me>\det(\begin{bmatrix} a_{1,1} &amp; a_{1,2} \\ a_{2,1} &amp; a_{2,2} \end{bmatrix}) = a_{1,1} a_{2,2} - a_{2,1} a_{1,2}.</me>
-            </p>
-          </example>
-
-          <example xml:id="exe-determinant-of-upper-triangular-matrix">
-            <title>Determinant of Upper Triangular Matrix</title>
-
-            <p>
-              If <m>A</m> is upper triangular, then <m>\det(A) = \prod_i a_{i,i}</m>. For note that for such a matrix the only non-zero terms in the formula for <m>\det(A)</m> occur when <m>\s(i) \leq i</m> for all <m>i</m>, and this can only happen when <m>\s = \id</m>. Similarly, if <m>A</m> is lower triangular, then <m>\det(A) = \prod_i a_{i,i}</m>.
-            </p>
-  
-            <p>
-              In particular, if <m>E</m> is a Type I elementary matrix, then <m>\det(E) = 1</m> and if <m>E</m> is a type II elementary matrix with scalar <m>u \ne 0</m>, then <m>\det(E) = u</m>. We'll look at the determinants of Type III elementary matrices later.
-            </p>
-  
-            <p>
-              An even more special case is <m>\det(I_n) = 1</m>.
-            </p>
-          </example>
-
-          <example xml:id="exe-transpose-preserves-det">
-            <title>Transpose Preserves Det</title>
-
-            <p>
-              Prove <m>\det(A) = \det(A^\tau)</m> where <m>\tau</m> denotes transpose.
-            </p>
-          </example>
-          
-          <remark>
-            <p>
-              Let us write elements of <m>\Mat_{n \times n}(R)</m> as <m>n</m>-tuples of columns vectors; that is, we identify <m>\Mat_{n \times n}(R)</m> with <m>\overbrace{R^n \times \cdots \times R^n}^n</m> by identifying a matrix with the <m>n</m>-tuple of its columns. Then <m>\det</m> is a function of the form <me>
-              \det: \overbrace{R^n \times \cdots \times R^n}^n \to R
-              </me> where for <m>v_1, \dots, v_n \in R^n</m>, we let <m>\det(v_1, \dots, v_n)</m> be the determinant of the <m>n \times n</m> matrix whose columns are <m>v_1, \dots, v_n</m>.
-            </p>
-          </remark>
-
-          <theorem xml:id="thm-uniqueness-of-determinant">
-            <title>Uniqueness of Determinant</title>
-
-            <statement>
-              <p>
-                For each fix positive integer <m>n</m> and non-zero commutative ring <m>R</m>, the determinant function is the unique function of the form <me>\phi: \overbrace{R^n \times \cdots \times R^n}^n \to R</me>such that 
-                <ol>
-                  <li>
-                    <p>
-                      <m>\phi</m> is <m>R</m>-multilinear, 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      <m>\phi</m> is alternating, and 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      <m>\phi(I_n) =1</m> (i.e., <m>\phi(e_1, \dots, e_n) = 1</m> where <m>e_i</m> is the <m>i</m>-th standard column vector).
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                We start by proving that <m>\det</m> has these properties.
-              </p>
-  
-              <p>
-                Let <m>v_1, \dots, v_n</m> form the columns of a matrix <m>A</m>. (I.e, the <m>s</m>-th entry of <m>v_t</m> is <m>a_{s,t}</m>.) We have <me>
-                \begin{aligned}
-                \det(v_1, \dots, v_{i-1}, r v_i + v'_i, v_{i+1}, \dots, v_n) 
-                &amp; =  \sum_{\s} \sign(\s) \prod_{j\ne i} a_{\s(j), j} \cdot (r a_{\s(i), i} + a'_{\s(i), i})\\
-                &amp; =  r \sum_{\s} \sign(\s) \prod_{j\ne i} a_{\s(j), j} \cdot (a_{\s(i), i})  \\
-                &amp; + \sum_{\s} \sign(\s) \prod_{j\ne i} a_{\s(j), j} \cdot (a'_{\s(i), i})  \\
-                &amp; = r \det(v_1, \dots, v_{i-1}, v_i , v_{i+1}, \dots, v_n) +
-                \det(v_1, \dots, v_{i-1},  v_i', v_{i+1}, \dots, v_n) \\
-                \end{aligned}
-                </me> and this proves <m>R</m>-multi-linearity.
-              </p>
-  
-              <p>
-                For the alternating property, for notational simplicity, let us assume that <m>v_1 = v_2</m> (i.e., the first two columns of the matrix are equal). (The proof of the general case is essentially the same.) Note that<me>
-                \det(A) = \sum_{(i,j, g)} \sign(i,j,g) a_{i,1} a_{j,2} a_{g(3), 3} a_{g(4), 4} \cdots a_{g(n), n}
-                </me>where the sum ranges over triples <m>(i,j,g)</m> where <m>i \ne j</m> and <m>g</m> is an injective function from <m>\{3, \dots, n\}</m> to <m>\{1, \dots, n\} \setminus \{i,j\}</m> and by <m>\sign(i,j,g)</m> we mean the sign of the permutation sending <m>1</m> to <m>i</m>, <m>2</m> to <m>j</m> and <m>s</m> to <m>g(s)</m> for all other <m>s</m>. For each <m>(i,j,g)</m>, we have <m>\sign(i,j,g) = -\sign(j,i,g)</m>, since the corresponding permutations differ by a transposition. Since <m>a_{i,1} = a_{i,2}</m> and <m>a_{j,1} = a_{j,2}</m>, it follows that the terms in the formula for <m>\det(A)</m> cancel in pairs to give <m>0</m>.
-              </p>
-  
-              <p>
-                The property <m>\det(I_n) = 1</m> follows from the formula. (See Example .)
-              </p>
-  
-              <p>
-                Let us now prove the uniqueness part of the Theorem:
-              </p>
-  
-              <p>
-                Let <m>\phi</m> be any function with the three properties stated in the Theorem. Let <m>A = (a_{i,j})</m> be any square matrix with columns <m>v_1, \dots, v_n</m>. Note that <m>v_j = \sum_i a_{i,j} e_i</m> where <m>e_i</m> is the <m>i</m>-th standard basis (column) vector. Using the <m>R</m>-multi-linearity property repeatedly we have <me>
-                \begin{aligned}
-                \phi(A) &amp; = \phi(\sum_{i_1} a_{i_1,1} e_{i_1},  \sum_{i_2} a_{i_2,2} e_{i_2}, \cdots, \sum_{i_n} a_{i_n,n} e_{i_n}) \\
-                &amp; = \sum_{i_1} a_{i_1,1} \phi(e_{i_1},  \sum_{i_2} a_{i_2,2} e_{i_2}, \cdots, \sum_{i_n} a_{i_n,n} e_{i_n}) \\
-                &amp; = \sum_{i_1}a_{i_1,1} \sum_{i_2} a_{i_2,2} \phi(e_{i_1},   e_{i_2}, \cdots, \sum_{i_n} a_{i_n,n} e_{i_n}) \\
-                &amp; = \vdots \\
-                &amp; = \sum_{ i_1, \dots, i_n } a_{i_1, 1} \cdots a_{i_n,n} \phi(e_{i_1}, \dots, e_{i_n}) \\
-                \end{aligned}
-                </me> where each of <m>i_1, \dots, i_n</m> ranges from <m>1</m> to <m>n</m>. By the alternating property <m>\phi(e_{i_1}, \dots, e_{i_n}) = 0</m> unless all the <m>i_1, \dots, i_n</m> are distinct. If they are distinct, then by Lemma  we have <me>
-                \phi(e_{i_1}, \dots, e_{i_n}) = \sign(\s) \phi(e_1, \dots, e_n)
-                </me> where <m>\s</m> is the permutation defined as <m>\s(t) = i_t</m>. Finally, recall <m>\phi(e_1, \dots, e_n) = 1</m> by assumption. Putting all of this together gives<me>
-                \phi(A) = \sum_{\text{ distinct  $i_1, \dots, i_n$}} \sign(\text{the permutation $t \mapsto i_t$}) a_{i_1, 1} \cdots a_{i_n,n}.
-                </me>This is just a re-writing of the formula for <m>\det</m>; so <m>\phi = \det</m>.
-              </p>
-            </proof>
-          </theorem>
-
-          <proposition xml:id="prop-computing-determinant-of-square-matrix">
-            <statement>
-              <p>
-                Let <m>R</m> be any non-zero commutative ring. Let <m>A</m> be a square matrix and let <m>B</m> be a matrix obtained form <m>A</m> by a single elementary column operation:
-                <ol>
-                  <li>
-                    <p>
-                      If the operation is of type I, <m>\det(B) = \det(A)</m>. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      If the operation is of type II, given by multiplying a column of <m>A</m> by a unit <m>u</m>, then <m>\det(B)=u\det(A)</m>. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      If the operation is of type III, <m>\det(B)=-\det(A)</m>.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-            
-            <proof>
-              <p>
-                The first claim follows from multi-linearity and alternating properties: For notational simplicity say <m>A = (v_1, v_2, \dots)</m> and <m>B = (v_1 + rv_2, v_2, \dots)</m>. Then<me>
-                \det(B) = \det(v_1, v_2, \dots) + r \det(v_2, v_2, \dots) = \det(A) + r \cdot 0 = \det(A)
-                </me>The second is immediate from (the second part of) <m>R</m>-multi-linearity. The last is a special case of Lemma .
-              </p>
-            </proof>
-          </proposition>
-
-          <remark>
-            <p>
-              The previous Lemma gives an efficient method of computing the determinant of a square matrix: Apply Gaussian reduction to transform such a matrix <m>A</m> to <m>I_n</m>, keeping track of the operations used. Since <m>\det(I_n) = 1</m>, we can deduce what the <m>\det(A)</m> is in this way, using the Lemma.
-            </p>
-  
-            <p>
-              The number of type I (and type II) operations needed to transform <m>A</m> to <m>I_n</m> is at most about <me>2(n-1) + 2(n-2) + \cdots \approx n^2</me>Each operation involves at most at most <m>n-1</m> multiplications and additions. All total, the number of operations needed to compute the determinant of an <m>n \times n</m> matrix is a polynomial function of <m>n</m> (I think it is cubic, in fact). Observe that the determinant formula involves <m>n!</m> terms each with <m>n</m> products, which is certainly exponential in <m>n</m>.
-            </p>
-  
-            <p>
-              Thus, Gaussian elimination, among other things, gives a polynomial time solution to a computation that at first blush involves an exponential number of calculations.
-            </p>
-  
-            <p>
-              The “permanant'' of a square matrix is given by the same formula but without the signs. It too involves an exponential (in <m>n</m>) number of calculations. Unlike the determinant, there is no known polynomial time algorithm to compute it. Indeed, if one exists then <m>P = NP</m>! This is a Theorem of Leslie Valiant.
-            </p>
-          </remark>
-
-          <corollary xml:id="cor-det-splits-across-elementary-multiplication">
-            <statement>
-              <p>
-                For any commutative ring <m>R</m>, if <m>A</m> is an <m>n \times n</m> matrix and <m>E</m> is an <m>n \times n</m> elementary matrix, then <me>\det(AE) = \det(A) \det(E)</me>
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                This follows from the Proposition and the fact that <m>AE</m> is the result of doing the corresponding column operation on <m>A</m> (see Lemma ), since <me>
-                \det(E)  = \begin{cases}
-                  1 &amp; \text{if $E$ is elementary of type I} \\
-                  u &amp; \text{if $E$ is elementary of type II with a unit $u$ on the diagonal} \\
-                  -1 &amp; \text{if $E$ is elementary of type III.} \\
-                \end{cases}</me>These formulas follow from the formula for the determinant of an upper or lower triangular matrix — see Example .
-              </p>
-            </proof>
-          </corollary>
-
-          <corollary xml:id="cor-det-not-0-iff-matrix-invertible">
-            <statement>
-              <p>
-                For <m>R = F</m> a field, we have <m>\det(A) \ne 0</m> if and only if <m>A</m> is invertible.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                If <m>A</m> is not invertible, then the column space of <m>A</m> is a proper subspace of <m>F^n</m> and hence the columns of <m>A</m> must be linearly dependent. Say the <m>i\th</m> column is a linear combination of the rest: <m>v_i = \sum_{j \ne i} c_j v_j</m>. Then <me>
-                \det(v_1, \dots, v_n) = \sum_{j \ne i} c_j \det(\text{a matrix with the $i$-th and $j$-th columns equal}) = 0.
-                </me>If <m>A</m> is invertible, then by Corollary  <m>A</m> can be obtained from <m>I_n</m> via a sequence of elementary column operations. The result thus follows from Proposition  and the fact that <m>\det(I_n) = 1</m>.
-              </p>
-            </proof>
-          </corollary>
-
-          <remark>
-            <p>
-              For an arbitrary commutative ring <m>R</m>, the rule is: a square matrix <m>A</m> is invertible if and only if <m>\det(A)</m> is a unit of <m>R</m>. We'll give a proof later.
-            </p>
-          </remark>
-
-          <theorem xml:id="thm-det-splits-across-multiplication-fields">
-            <title>Det Splits Across Multiplication: Fields</title>
-
-            <statement>
-              <p>
-                For a field <m>F</m> and matrices <m>A, B \in \Mat_{n \times n}(F)</m> we have <me>\det(AB) = \det(A)\det(B).</me> 
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                If <m>A</m> is not invertible, neither is <m>AB</m>, since <m>\im(AB) \subseteq \im(A)</m>, and if <m>B</m> is not invertible, neither is is <m>AB</m>, since <m>\ker(AB) \supseteq \ker(A)</m>. So, by Corollary , if either <m>A</m> or <m>B</m> is not invertible, both sides of the equation are <m>0</m>.
-              </p>
-    
-              <p>
-                Assume now that <m>A</m> and <m>B</m> are both invertible. Then by Corollary  we have <me>
-                A = E_1 \cdots E_n</me>and<me>
-                B = F_1 \cdots F_m
-                </me>and hence <me>
-                AB = E_1 \cdots E_n F_1 \cdots F_m
-                </me>where the <m>E_i</m>'s and <m>F_j</m>'s are elementary matrices. Applying Corollary  repeatedly gives <me>\det(AB) = \det(E_1 \cdots E_n F_1 \cdots F_{m-1}) \det(F_m) = \cdots= \det(E_1) \cdots \det(E_n) \det(F_1) \cdots \det(F_m)</me> and similarly <me>
-                \det(A) \det(B) = \left(\det(E_1) \cdots \det(E_n)\right) \left( \det(F_1) \cdots \det(F_m)\right).
-                </me>
-              </p>
-            </proof>
-          </theorem>
-
-          <lemma xml:id="lem-det-function-is-natural">
-            <title>Det Function is Natural</title>
-
-            <statement>
-              <p>
-                The determinant function <m>\det</m> is “natural": If <m>g: R \to S</m> is a homomorphism of non-zero commutative rings and <m>A \in \Mat_{n \times n}(R)</m>, then <me>g \det(A) = \det(g(A))</me> where <m>g(A)</m> denotes the matrix obtained by applying <m>g</m> to the entries of <m>A</m>.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                This follows from the formula for <m>\det</m>, since <m>g</m> commutes with sums and products.
-              </p>
-            </proof>
-          </lemma>
-
-          <theorem xml:id="thm-det-splits-across-multiplication-commutative-ring">
-            <title>Det Splits Across Multiplication: Commutative Ring</title>
-
-            <statement>
-              <p>
-                For any non-zero commutative ring <m>R</m> and matrices <m>A, B \in \Mat_{n \times n}(R)</m>, we have <me>\det(AB) = \det(A) \det(B) \in R. </me>
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                We have already proven that this holds when <m>R</m> is a field.
-              </p>
-  
-              <p>
-                We next show that it holds whenever <m>R</m> is an integral domain. In this case, <m>R</m> is a subring of a field <m>F</m> (namely, the field of fractions of <m>R</m>). So, we know that the equation <m>\det(AB) = \det(A) \det(B)</m> holds in <m>F</m> if we interpret <m>A</m> and <m>B</m> as belonging to <m>\Mat_{n \times n}(F)</m>. But the value of <m>\det</m> is the same if we interpret these matrices as having entries in <m>R</m> or in <m>F</m>. So <m>\det(AB) = \det(A) \det(B)</m> holds in <m>R</m>.
-              </p>
-  
-              <p>
-                We finally prove that the Theorem for any non-zero commutative ring <m>R</m> by building on the fact that it holds for domains. We do so by contructing a ring homomorphism <m>g: S \to R</m> and matrices <m>X</m> and <m>Y</m> in <m>\Mat_{n \times n}(S)</m> such that <m>S</m> is an integral domain, <m>g(X) = A</m> and <m>g(Y) = B</m>. Granting such a <m>S, g, X</m> and <m>Y</m> exist, the result follows from the naturality of <m>\det</m> (Lemma ). In detail, we know <m>\det(XY) = \det(X) \det(Y)</m>, since <m>S</m> is a domain. Since the rule for multiplying matrices involves only sums and products of ring elements, we have <m>g(XY) = g(X)g(Y)</m>. So<me>
-              \begin{aligned}
-                \det(AB) &amp; = \det(g(X) g(Y)) 
-                = \det(g(XY))  = g \det(XY) \\ 
-                &amp; = g(\det(X) \det(Y)) = g(\det(X)) g(\det(Y)) = \det(g(X)) \det(g(Y)) = \det(A) \det(B).
-              \end{aligned}</me>It remains to prove such a <m>S</m>, <m>g</m>, <m>X</m> and <m>Y</m> exists. Suppose <m>A = (a_{i,j})</m> and <m>B = (b_{i,j})</m>. Form the polynomial ring<me>
-                S := \Z[\{x_{i,j} \mid 1 \leq i \leq n, 1 \leq j \leq n\} \cup \{y_{i,j}\mid 1 \leq i \leq n, 1 \leq j \leq n\}]
-                </me>of <m>2 n^2</m> variables with <m>\Z</m>-coefficients. By the UMP for polynomial rings with integer coefficients, since <m>R</m> is commutative, there is a (unique) ring map <m>g: S \to R</m> such that <m>g(x_{i,j}) = a_{i,j}</m> and <m>g(y_{i,j}) = b_{i,j}</m> for all <m>i,j</m>. That is, <m>g</m> is the evaluation map given by setting <m>x_{i,j} = a_{i,j}</m> and <m>y_{i,j} = b_{i,j}</m> for all <m>i,j</m>, and interpreting integers as elements of <m>R</m>. Let <me>X = (x_{i,j}), Y = (y_{i,j})  \in \Mat_{n \times n}(S)</me> be the evident matrices of indeterminants.Then <m>S</m> is a domain, <m>g: S \to R</m> is a ring homomorphism, <m>g(X) = A</m> and <m>g(Y) = B</m>, as desired.
-              </p>
-            </proof>
-          </theorem>
-
-          <remark>
-            <p>
-              Another way to deduce the Theorem for arbitrary commutative rings from the case of a domain is to use the following fact: If <m>R</m> is a non-zero commutative ring, there there exists a surjective ring homomorphism of the form <m>g: S \onto R</m> where <m>S</m> is a domain. So see this, let <m>X</m> be a (possibly very large) set of indeterminants such that there is a bijection of sets <m>\rho: X \to R</m>. Let <m>S = \Z[X]</m>, the polynomial ring with integer coefficients in the variables <m>X</m>. So, a typical element of <m>S</m> is a polynomial the form <m>f(x_1, \dots,x_n)</m> for some finite subset <m>\{x_1, \dots, x_n\}</m> of <m>X</m>. By the UMP for polynomial rings, there is a unique ring map <m>g: S \to R</m> such that <m>g(x) = \rho(x)</m> for all <m>x \in X</m>. That is, <m>g</m> sends <m>f(x_1, \dots, x_n)</m> as above to <m>f(\rho(x_1), \dots, \rho(x_n))</m>. The ring map <m>g</m> is clearly onto since for each <m>r \in R</m>, there is an <m>x \in X</m> with <m>\rho(x) = r</m> and hence <m>g(x) = r</m>. Finally, <m>S</m> is an integral domain.
-            </p>
-          </remark>
-
-          <remark>
-            <p>
-              The key idea in the proof of the Theorem can be used to deduce many other identities over commutative rings from known identities over fields. E.g., it can be used to show that <me>
-              A A^{adj} = \det(A) I_n = A^{adj} A
-              </me> holds for any commutative ring <m>R</m> and for any <m>A \in \Mat_{n \times n}(R)</m>, where <m>A^{adj}</m> is the “adjugate'' of <m>A</m>, granting that this equation holds when <m>R</m> is a field. Recall <m>A^{adj}</m> is the <m>n \times n</m> matrix whose <m>(i,j)</m> entry is <m>(-1)^{i+j} \det(A_{i,j})</m> where <m>A_{i,j}</m> is the <m>(n-1) \times (n-1)</m> matrix obtained by deleting the <m>i</m>-th column and <m>j</m>-th row of <m>A</m>. I will likely have you do this as an exercise.
-            </p>
-
-            <p>
-              Granting <m>A A^{adj} = \det(A) I_n = A^{adj} A</m> holds for any non-zero commutative ring <m>R,</m> we can prove the following:
-            </p>
-          </remark>
-
-          <proposition xml:id="prop-determinantal-technique">
-            <statement>
-              <p>
-                Let <m>R</m> be a non-zero commutative ring and <m>A \in \Mat_{n \times n}(R)</m>. Let <m>A^{adj}</m> denote the classical adjugate of <m>A</m> — the <m>(i,j)</m> entry of <m>A^{adj}</m> is defined to be <m>(-1)^{i+j} \det(A_{j,i})</m> where <m>A_{j,i}</m> is <m>(n-1) \times (n-1)</m> matrix obtained by deleting the <m>j</m>-th row and <m>i</m>-th column of <m>A</m>. You may assume without proof that when <m>R</m> is a field, we have <m>A A^{adj} = \det(A) I_n = A^{adj} A</m>. Prove <m>A A^{adj} = \det(A) I_n = A^{adj} A</m> holds for any non-zero commutative ring <m>R</m>.
-              </p>
-            </statement>
-          </proposition>
-
-          <proposition xml:id="prop-matrix-invertible-iff-det-is-a-unit">
-            <title>Matrix Invertible iff Det is a Unit</title>
-
-            <statement>
-              <p>
-                For any non-zero commutative ring <m>R</m> and any <m>A \in \Mat_{n \times n}(R)</m>, <m>A</m> is invertible if and only if <m>\det(A)</m> is a unit of <m>R</m>.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                If <m>A</m> is invertible then <m>1 = \det(I_n) = \det(AA^{-1}) = \det(A) \det(A^{-1})</m> by the Theorem, and hence <m>\det(A)</m> is a unit.
-              </p>
-  
-              <p>
-                If <m>\det(A)</m> is a unit, then, using the equation above, we have <me>
-                A (A^{adj} \cdot \frac{1}{\det(A)}) =I_n = (A^{adj} \cdot \frac{1}{\det(A)}) A
-                </me> which proves <m>A</m> has a two-sided inverse (namely, <m>A^{adj} \frac{1}{\det(A)}</m>).
-              </p>
-    
-            </proof>
-          </proposition>
-
-          <definition xml:id="def-determinant">
-            <title>Determinant</title>
-            <statement>
-              <p>
-                Let <m>R</m> be a commutative ring and <m>V</m> a free <m>R</m>-module of finite rank. Given an endomorphism <m>\a: V \to V</m>, we define its <em>determinant</em> to be <me>
-                  \det(\a) = \det([\a]_B^B)
-                  </me> where <m>B</m> is any basis of <m>V</m>.
-              </p>
-            </statement>
-          </definition>
-
-          <lemma xml:id="lem-det-independent-of-basis-choice">
-            <statement>
-              <p>
-                The definition of <m>\det(\a)</m> is independent of choice of <m>B</m>.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                If <m>C</m> is another basis, then <me>
-                [\a]_C^C = P [\a]_B^B P^{-1}
-                </me> for an invertible matrix <m>P</m> (specifically, <m>P = [\id]_B^C</m>). Then <me>
-                \det([\a]_C^C)  = \det(P [\a]_B^B P^{-1}) = \det(P) \det([\a]_B^B) \det(P^{-1}) =\det(P) \det(P^{-1}) \det([\a]_B^B) 
-                </me> using the Theorem. Also by the Theorem <m>\det(P) \det(P^{-1}) = \det(PP^{-1}) = \det(I_n) = 1</m>.
-              </p>
-            </proof>
-          </lemma>
-
-          <example xml:id="exe-companion-matrix">
-            <title>Companion Matrix</title>
-
-            <p>
-              Let <m>V = F[x]/I</m> where <m>F</m> is a field, <m>I = F[x] \cdot f(x)</m> with <m>f</m> a monic polynomial. Say <m>f(x) = x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0</m>. Recall that every element of <m>V</m> is uniquely represented by a coset of the form <me>
-              \ov{p(x)} := p(x) + I
-              </me> where <m>p(x)</m> is a polynomial of degree at most <m>n-1</m>.
-            </p>
-  
-            <p>
-              We will regard <m>V</m> as an <m>F</m>-vector space (via restriction of scalars along <m>F \into F[x]</m>). Then <m>V</m> is finite dimensional — for instance, a basis of <m>V</m> is given by <m>\ov{1}, \ov{x}, \dots, \ov{x^{n-1}}</m>.
-            </p>
-  
-            <p>
-              Let <m>g: V \to V</m> be the function given as multiplication by <m>x</m>. Then <m>g</m> is an <m>F</m>-linear operator, since <m>g(v+v') = x(v+v') = xv + xv' = g(v) + g(v')</m> and <m>g(cv) = x(cv) = c (xv) = c g(v)</m>. (In fact, <m>g</m> is <m>F[x]</m>-linear, but we won't use that fact.) Relative to the ordered basis <m>\ov{1}, \ov{x}, \dots, \ov{x^{n-1}}</m>, the matrix of <m>g</m> is <me>
-              C(f) :=
-              \begin{bmatrix}
-                0 &amp; 0 &amp; \cdots &amp; 0 &amp; -a_0 \\
-                1 &amp; 0 &amp; \cdots &amp; 0 &amp; -a_1 \\
-                0 &amp; 1 &amp; \cdots &amp; 0 &amp; -a_2 \\
-                \vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\
-                0 &amp; 0 &amp; \cdots &amp; 1 &amp; -a_{n-1} \\   
-              \end{bmatrix}
-              </me> The right-most column is due to the fact that, since <m>\overline{f(x)} = 0</m> in <m>V</m>, we have <me>
-              x \cdot \overline{x^{n-1}} =
-              \overline{x^n} = -a_{n-1} \overline{x^{n-1}} -a_{n-2} \overline{x^{n-2}} - \cdots - a_1 \overline{x} - a_0 \overline{1}.
-              </me> The matrix <m>C(f)</m> is known as the <term>companion matrix</term> of <m>f(x)</m> - it is defined for any monic polynomials with entries in a field.
-            </p>
-  
-            <p>
-              We have <m>\det(C(f)) = (-1)^n a_0</m>, since the only permutation that gives a non-zero term in the formula for <m>\det</m> is the <m>n</m>-cycle <m>\s = (2 \, 3 \, \dots \, n \, 1)</m>, and its has sign is <m>(-1)^{n-1}</m>. So <m>\det(g) = (-1)^n a_0</m>.
-            </p>
-            
-          </example>
-
-          <remark>
-            <p>
-              As we showed above, the determinant of linear operator on a free module of finite rank is an “invariant'' of the operator, in the sense that it is independent of how we represent the operator as a matrix. Here is another such invariant:
-            </p>
-          </remark>
-
-          <definition xml:id="def-trace">
-            <title>Trace</title>
-            <statement>
-              <p>
-                For a commutative ring <m>R</m> and a square matrix <m>A \in \Mat_{n \times n}(R)</m>, the <em>trace</em> of <m>A</m>, written <m>\trace(A)</m>, is the sum of its diagonal entries: <m>\trace(A) = \sum_i a_{i,i}</m>.
-              </p>
-    
-              <p>
-                If <m>V</m> is a free <m>R</m>-module of finite rank and <m>g: V \to V</m> is an <m>R</m>-module homomorphism, we define <m>\trace(g)</m> to be <m>\trace([g]^B_B)</m> for any basis <m>B</m>.
-              </p>
-            </statement>
-          </definition>
-
-          <theorem xml:id="thm-trace-is-commutative-with-two-matrices">
-            <title>Trace is Commutative with Two Matrices</title>
-
-            <statement>
-              <p>
-                If <m>R</m> is a commutative ring and <m>X \in \Mat_{m \times n}(R)</m> and <m>Y \in \Mat_{n \times m}(R)</m>, then <m>\trace(XY) = \trace(YX)</m>.
-              </p>
-    
-              <p>
-                In particular, with the notation of the previous definition, <m>\trace(g)</m> is well-defined.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                The <m>(i,i)</m> entry of <m>XY</m> is <m>\sum_l x_{i,l} y_{l, i}</m> and so <m>\trace(XY) = \sum_i \sum_l x_{i,l} y_{l,i}</m>. The <m>(j,j)</m> entry of <m>YX</m> is <m>\sum_t y_{j,t} x_{t,j}</m> and so <m>\trace(YX) = \sum_j \sum_t y_{j,t} x_{t,j}</m>. Since <m>R</m> is commutative, these are equal.
-              </p>
-  
-              <p>
-                Say <m>B</m> and <m>C</m> are two bases of <m>V</m>. Then <m>[g]_B^B = P [g]_{C}^{C} P^{-1}</m> for some invertible matrix <m>P</m> (namely, <m>P = [\id_V]_C^B</m>). Using the first part of the Lemma we have <me>\trace([g]_B^B) = \trace(P [g]_{C}^{C} P^{-1}) = \trace((P [g]_{C}^{C}) P^{-1}) = 
-                \trace(P^{-1} (P [g]_{C}^{C})) =
-                \trace((P^{-1} P) [g]_{C}^{C})) =
-                \trace([g]_{C}^{C}).</me>
-              </p>
-            </proof>
-          </theorem>
-
-          <warning>
-            <p>
-              The Lemma tells us that the trace of a product of two matrices in either order is the same, but it does not follow that the trace is unchanged if you permute arbitrarily a product of three of more matrices. For instance, <m>\trace(XYZ)</m> is usually not equal to <m>\trace(XZY)</m>.
-            </p>
-  
-            <p>
-              It is true that trace is invariant under all “cyclic permutations'' of products of matrices. For instance, <m>\trace(XYZ) = \trace(ZXY) = \trace(YZX)</m> and more generally we have <me>
-  \trace(X_1 \cdots X_n) = \trace(X_i X_{i+1} \cdots X_n X_1 X_2 \cdots X_{i-1})
-  </me> for all <m>i</m>.
-            </p>
-          </warning>
-
-          <example xml:id="exe-trace-and-multiplication-by-x">
-            <title>Trace and Multiplication by <m>x</m></title>
-
-            <p>
-              With the notation of Example , <m>\trace(g) = -a_{n-1}</m>.
-            </p>
-            
-          </example>
-
-          <example xml:id="exe-det-and-trace-of-c-and-linear-operator">
-            <title>Det and Trace of <m>\C</m> and Linear Operator</title>
-
-            <p>
-              Let <m>\C</m> denote the complex numbers. We may regard <m>\C</m> as an <m>\R</m>-vector space. Given <m>z = a + bi \in \C</m>, multiplication by <m>z</m> on <m>\C</m> is an <m>\R</m>-linear operator. What are the determinant and trace of this operator?
-            </p>
-  
-            <p>
-              Relative to the basis <m>1, i</m> of <m>\C</m> as a real vector space, multiplication by <m>z = a = ib</m> is represented by the matrix <me>\begin{bmatrix}
-      a &amp; -b \\ 
-      b &amp; a   \\
-    \end{bmatrix}</me> and hence the determinant of this operator is <m>a^2 + b^2</m>, the square of the norm of <m>z</m>. The trace is <m>2a</m>. Note that the determinant of this operator is <m>\|z\|^2</m> the square of the usual complex norm.
-            </p>
-          </example>
-
-          <example xml:id="exe-matrix-of-field-extension">
-            <title>Matrix of Field Extension</title>
-
-            <p>
-              Similarly, we may consider the field extension <m>\Q \subseteq \Q(\sqrt{-2})</m>. For any <m>a + b \sqrt{-2}</m> in the larger field, define <m>g: \Q(\sqrt{-2}) \to \Q(\sqrt{-2})</m> to be multiplication by <m>a + b \sqrt{-2}</m>. Then <m>\Q(\sqrt{-2})</m> is a <m>\Q</m>-vector space and <m>g</m> is a <m>\Q</m>-linear operator. A <m>\Q</m>-basis of <m>\Q(\sqrt{-2}</m> is given by <m>B = \{1, \sqrt{-2}\}</m> and relative to this basis the matrix representing <m>g</m> is <me>[g]_B^B = 
-    \begin{bmatrix}
-      a &amp; -2b \\ 
-      b &amp; a   \\
-    \end{bmatrix}</me> and hence <m>\det(g) = a^2 + 2b^2</m>, once again the square of the of usual complex norm of the element <m>a + b \sqrt{-2}</m>.
-            </p>
-
-          </example>
-
-          <definition xml:id="def-charpoly">
-            <title>Characteristic Polynomial</title>
-
-            <statement>
-              <p>
-                Let <m>A \in \Mat_{n \times n}(F)</m> where <m>F</m> is a field. The <em>characteristic polynomial</em> of <m>A</m> is <me>\cp_A(x) := \det(x I_n - A) \in F[x].</me> Note that <m>\cp_A(x)</m> is a monic polynomial of degree <m>n</m> with coefficients in <m>F</m>. More generally, if <m>V</m> is a finite dimensional <m>F</m>-vector space and <m>g: V \to V</m> is an <m>F</m>-linear operator on <m>V</m>, then <me>\cp_g(x) := \cp_A(x)</me> where <m>A</m> is the matrix representing <m>g</m> with respect to a choice of basis of <m>V</m>.
-              </p>
-            </statement>
-          </definition>
-
-          <remark>
-            <p>
-              We should pause to check that <m>\cp_g(x)</m> is well-defined: Say <m>B</m> and <m>C</m> are two ordered bases of <m>V</m>, so that <m>[g]_B^B</m> and <m>[g]_C^C</m> both represent <m>g</m>. Then <m>[g]_C^C = P [g]_B^B P^{-1}</m> for some invertible matrix <m>P</m> and hence <me>
-  P(xI_n - [g]_B^B)P^{-1} = PxI_nP^{-1} - P [g]_B^B P^{-1} = xI_n - [g]_C^C,
-  </me> since the scalar matrix <m>xI_n</m> commutes with all matrices. That is, <m>xI_n - [g]_B^B</m> and <m>xI_n - [g]_C^C</m> are similar matrices (with entries in <m>F[x]</m>), and it follows that <m>\det(xI_n - [g]_B^B) = \det(xI_n - [g]_C^C)</m>.
-            </p>
-  
-            <p>
-              The following two exercises show that the characteristic polynomial captures both the determinant and the trace of an operator:
-            </p>
-          </remark>
-
-          <example xml:id="exe-cp0">
-            <title><m>\cp(0)</m></title>
-
-            <p>
-              Show <m>\cp_g(0) = (-1)^n \det(g)</m>.
-            </p>
-
-          </example>
-
-          
-          
-
-      
-              <example xml:id="exe-charpoly-and-trace">
-                <title>CharPoly and Trace</title>
-      
-                <p>
-                  Show that if <m>\dim_F(V) = n</m>, then the coefficient of <m>x^{n-1}</m> in <m>\cp_g(x)</m> is <m>-\trace(g)</m>.
-                </p>
-      
-              </example>
-      
-              <example xml:id="exe-triangular-matrix-and-charpoly">
-                <title>Triangular Matrix and CharPoly</title>
-      
-                <p>
-                  If <m>A</m> is upper or lower triangular, then <m>\cp_A(x) = \prod_i (x - a_{i,i})</m>. As you may recall from an undergraduate class, in this case <m>a_{1,1}, \dots, a_{n,n}</m> are the eigenvalues of <m>A</m>. More on this later.
-                </p>
-      
-              </example>
-      
-              <example>
-                <title>Problem</title>
-      
-                <p>
-                  Let <m>V</m> be the <m>\R</m>-vector space consisting of polynomials in the variable <m>x</m> of degree at most <m>3</m> and let <m>g: V \to V</m> be the <m>\R</m>-linear operator given by <me>g(p(x)) = p''(x) + (x+1) p'(x) + 7 p(x),</me>where <m>p''(x)</m> and <m>p'(x)</m> denote the first and second derivatives of <m>p(x)</m>. (You may take it on faith that <m>g</m> is <m>\R</m>-linear.) Find the determinant, the trace, and the characteristic polynomial of <m>g</m>.
-                </p>
-      
-              </example>
-      
-              <example>
-                <title>Problem</title>
-      
-                <p>
-                  Let <m>F</m> be a field and <m>V = F[x]/I</m> with <m>I = F[x] \cdot f(x)</m> for some monic polynomial <m>f(x) = x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0</m>. Regard <m>V</m> as an <m>F</m>-vector space (via restriction of scalars along <m>F \into F[x]</m>), and recall that the function <m>g: V \to V</m> given by <m>g(v) = x \cdot v</m> is an <m>F</m>-linear operator on <m>V</m>.
-                </p>
-      
-                <p>
-                  Prove that the characteristic polynomial of <m>g</m> is <m>f(x)</m>.
-                </p>
-      
-              </example>
-
-
-      
-              
-
-          <exercises>
-
-            <exercisegroup>
-              <title>Computations and Examples</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-  
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-  
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          
-            <exercisegroup>
-              <title>Formal Proofs</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-  
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-  
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          
-            <exercisegroup>
-              <title>Qualifying Exam Problems</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    The trace of a square matrix <m>A</m>, denoted <m>Tr(A)</m>, is the sum of its diagonal entries. Prove the following assertions.
-                  </p>
-        
-                  <p><ol>
-                    <li>
-                    <m>Tr(AB) = Tr(BA)</m> for any <m>n \times n</m> matrices <m>A, B</m>.
-                    </li>
-        
-                    <li>
-                    Use (a) to prove that the trace of a matrix <m>A</m> over <m>\C</m> is the sum of its eigenvalues (with multiplicities).
-                    </li>
-        
-                  </ol></p>
-                </statement>
-  
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-  
-                <solution>
-                  <p>
-                    <ol>
-                      <li>
-                        <p>
-                          Let <m>A,B</m> be <m>n\times n</m> matrices.
-                        </p>
-                      </li>
-
-                      <li>
-                        <p>
-                          Let <m>A</m> be a matrix in <m>\C</m>. Eigenvalues are the roots of <m>\cp_A(x)</m>, which is the determinant of the matrix <m>A-xI</m>. Every matrix <m>A</m> is similar to a matrix in Rational Canonical Form, and similar matrices share invariant factors and thus characteristic polynomials, the roots of which are the eigenvalues of the matrix.
-                        </p>
-                      </li>
-                    </ol>
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          </exercises>
-          
-        </section>
-      
-        
-      </chapter>
     
     </part>
 
@@ -26048,9 +25239,7 @@
               </p>
             </warning>
 
-            <p>
-				      Here is some more terminology.
-			      </p>
+            <p>Here is some more terminology.</p>
 
             <definition xml:id="def-refinement"><title>Refinement</title>
               <statement>
@@ -26187,8 +25376,7 @@
                   (For the case <m>i = 1</m>, interpret <m>M_0</m> as <m>N</m>.)
                 </p>
               </proof>
-            </proposition>
-            
+            </proposition>         
 
             <example>
               <statement>
@@ -26229,9 +25417,7 @@
               </statement>
             </example>
 
-            <p>
-              The uniqueness claim is harder and uses the Zassenhaus Butterfly Lemma, which I will state without proof:
-            </p>
+            <p>The uniqueness claim is harder and uses the Zassenhaus Butterfly Lemma, which I will state without proof:</p>
 
             <lemma xml:id="lem-butterfly-lemma"><title>Butterly Lemma of Zassenhaus</title>
               <statement>
@@ -26315,7 +25501,6 @@
               The former task was essentially accomplished by the 1980's, when all finite simple groups were classified into a handful of families along with <m>26</m> <q>sporadic</q> simple groups. The latter task is probably not really possible as stated here. But, there is a large collection of properties <m>\mathcal P</m> of finite groups such that if <m>\mathcal P</m> holds for all members of a compostion series of a given group then <m>\mathcal P</m> also holds for the group itself. For such a property <m>\mathcal P</m>, it suffices to check that <m>\mathcal P</m> holds true for every finite simple group. This technique has been used with success.
 			      </p>
             
-
           </subsection>
 
           <subsection xml:id="subsec-solvability"><title>Solvable Groups</title>
@@ -26383,9 +25568,763 @@
                 </p>
               </statement>
             </definition>
+
+            <theorem xml:id="thm-properties-of-gn"><title>Properties of <m>G^{(n)}</m></title>
+              <statement>
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        <m>G^{(n)}\char G^{(n-1)}</m>
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        If <m>G^{(n)}\char G</m>, then <m>G^{(n)}\nsg G</m>
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        <m>G^{(n-1)}/G^{(n)}</m> is abelian.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+            </theorem>
+
+            <proposition xml:id="prop-commutator-of-simple-nonabelian"><title>Commutator of Simple Nonabelian Group</title>
+              <statement>
+                <p>
+                  If <m>G</m> is a simple, nonabelian group, then <m>G'=G</m>.
+                </p>
+              </statement>
+            </proposition>
+
+            <p>Recall <xref ref="def-normal-series"/>.</p>
+
+            <definition xml:id="def-solvable"><title>Solvable Group</title>
+              <statement>
+                <p>
+                  A <em>solvable series</em> is a series in which all of the factor groups are abelian. Group <m>G</m> is <em>solvable</em> if it has a solvable series.
+                </p>
+              </statement>
+            </definition>
+
+            <lemma xml:id="lem-solvable-and-homomorphisms"><title>Commutators and Homomorphisms </title>
+              <statement>
+                <p>
+                  Let <m>\varphi:G_1\to G_2</m> be a group homomorphism and <m>G\leq G_1</m>. Then <m>\varphi(H^\ell)=\varphi(H)^\ell</m> for all <m>\ell\leq0</m>.
+                </p>
+              </statement>
+            </lemma>
+
+            <theorem xml:id="thm-solvable-iff-gn-e"><title>Equivalent Solvability Characterization</title>
+              <statement>
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        A group <m>G</m> is solvable if and only if <m>G^{(n)}=\{e\}</m> for some <m>n</m>.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Let <m>G</m> be a group and <m>H\leq G</m>. Then <m>G</m> is solvable if and only if <m>H</m> is normal in <m>G</m> and both <m>H</m> and <m>G/H</m> are solvable. 
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+            </theorem>
+
+            <theorem xml:id="thm-p-groups-solvable"><title><m>p</m>-groups are Solvable</title>
+              <statement>
+                <p>
+                  Any <m>p</m>-group is solvable.
+                </p>
+              </statement>
+            </theorem>    
             
+          </subsection>
+
+          <subsection xml:id="subsec-presentations"><title>Presentations (*)</title>
+            <p>Coming soon!</p>
+          </subsection>
+        </section>
+
+        <section><title>Ring Theory</title>
+
+          <subsection xml:id="subsec-nilradical"><title>Nilpotents and the Nilradical (*)</title>
+            <p>Coming soon!</p>
+          </subsection>
+
+        </section>
+
+        <section><title>Module Theory</title>
+
+          <subsection xml:id="subsec-determinants"><title>Determinants</title>
+
+          <definition xml:id="def-multilinear-and-alternating">
+            <statement>
+              <p>
+                For any commutative ring <m>R</m> and <m>R</m>-module <m>V</m>, given a function of the form <me>\phi: \overbrace{V \times \cdots \times V}^n \to R</me> we say: 
+                <ol>
+                  <li>
+                    <p>
+                      <m>\phi</m> is <m>R</m>-<em>mutli-linear</em> if, for each <m>i</m>, we have <me>\phi(v_1, \dots, v_{i-1}, v_i + v'_i, v_{i+1}, \dots, v_n) = \phi(v_1, \dots, v_{i-1}, v_i , v_{i+1}, \dots, v_n) +\phi(v_1, \dots, v_{i-1},  v_i', v_{i+1}, \dots, v_n)</me> and <me>\phi(v_1, \dots, v_{i-1}, r v_i, v_{i+1}, \dots, v_n) = r \phi(v_1, \dots, v_{i-1},  v_i, v_{i+1}, \dots, v_n) </me>for all elements <m>v_1, \dots, v_n, v_i'</m> in <m>V</m> and all <m>r \in R</m>. 
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>\phi</m> is <em>alternating</em> if <m>\phi(v_1, \dots, v_n) = 0</m> if <m>v_i = v_j</m> for some <m>i \ne j</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+          </definition>
+
+          <example xml:id="exe-multilinear-maps-when-n1"><title>Multilinear Maps when <m>n=1</m></title>
+
+            <p>
+              When <m>n=1</m>, a multi-linear map is the same thing as an <m>R</m>-module homomorphism.(The alternating condition is vacuous in this case.)
+            </p>
+
+          </example>
+
+          <example xml:id="exe-r-bilinear-maps-n2"><title><m>R</m>-Bilinear Maps (<m>n=2</m>)</title>
+
+            <p>
+              When <m>n= 2</m>, instead of <q><m>R</m>-multilinear</q> we say<q><m>R</m>-bilinear'</q>. If <m>\phi: V \times V \to R</m> is <m>R</m>-bilinear then 
+                <me>
+                  \phi(v+w, u+m) = \phi(v,u) + \phi(v,m) + \phi(w,u)+\phi(w,m).
+                </me> 
+                Also <m>\phi(rv,w) = r\phi(v,w) = \phi(v, rw)</m>. For any example of this, take <m>V = R^m</m>. Then the <q>dot product</q> <m>\phi:V \times V \to R</m> defined by <m>\phi((a_1, \dots, a_m)^\tau, (b_1, \dots, b_m)^\tau) = \sum_i a_i b_i</m> is <m>R</m>-bilinear. But the dot product isn't alternating.
+            </p>
             
+          </example>
+
+          <example xml:id="exe-determinant-formula-using-bilinear-map"><title>Determinant Formula Using Bilinear Map</title>
+
+            <p>
+              For <m>n =2</m> and <m>V = R^2</m>, <m>\phi: V \times V \to R</m> defined by <me>\phi(\begin{bmatrix} x \\ y \end{bmatrix}, \begin{bmatrix} z \\ w \end{bmatrix}) = xw - yz</me>is both <m>R</m>-bilinear and alternating. This is of course the familiar determinant formula.
+            </p>
+          </example>
+
+          <remark>
+            <p>
+              The multi-linearity property of a function <m>\phi: V^{\times n} \to R</m> can equivalently be stated as follows: If we fixed <m>n-1</m> of the <m>n</m> inputs and let the remaining input vary, then the resulting function is an <m>R</m>-module homomorphism. More precisely: <m>\phi</m> is <m>R</m>-multi-linear if and only if for each <m>i</m> and for each choice of elements <m>v_1, \dots, v_{i-1}, v_{i+1}, \dots, v_n</m> in <m>V</m>, the function <me>
+              g: V \to R
+              </me> defined by <m>g(w) = \phi(v_1, \dots, v_{i-1}, w, v_{i+1}, \dots, v_n)</m> is a <m>R</m>-module homomorphism.
+            </p>
+          </remark>
+
+          <lemma xml:id="lem-multilinear-maps-and-permutations"><title>Multilinear Maps and Permutations</title>
+
+            <statement>
+              <p>
+                Assume <m>\phi: V^{\times n} \to R</m> is <m>R</m>-multilinear and alternating. Then for any permutation <m>\tau \in S_n</m> and <m>v_1, \dots, v_n \in V</m>, we have <me>\phi(v_1, \dots, v_n) = \sign(\tau) \phi(v_{\tau(1)}, \dots, v_{\tau(n)})</me>where <m>\sign(\tau)</m> is the sign of the permutation <m>\tau</m>.
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                Let us first prove this in the case when <m>n = 2</m> and <m>\tau</m> is the only non-trivial element of <m>S_2</m>. Say<me>
+                  \psi: V^{\times 2} \to R
+                </me>is <m>R</m>-multi-linear (<m>R</m>-bilinear) and alternating. The goal is to prove<me>
+                \psi(v,w) = -\psi(w,v)</me>for any <m>v,w</m>.
+              </p>
+  
+              <p>
+                            We have <me>\psi(v+w, v+w) = 0</me>on the one hand and <me>\psi(v+w, v+w) = \psi(v, v+w) + \psi(w, v+w) = \psi(v,v) + \psi(v, w) + \psi(w,v) + \psi(w,w) = \psi(v, w) + \psi(w,v)  </me>on the other hand. It follows that <me>
+                \psi(v, w) + \psi(w,v)  = 0
+                </me>which proves the Lemma in this case.
+              </p>
+  
+              <p>
+                Now let <m>n</m> be arbitrary and <m>\tau = (i \, j)</m> for some <m>1 \leq i &lt; j \leq n</m>. In this case we need to show<me>
+                \phi(v_1, \dots, v_n) = - \phi(v_1, \dots, v_{i-1}, v_{j}, v_{i+1}, v_{i+2}, \dots, v_{j-1}, v_i, v_{j+1}, \dots, v_n)
+                </me>for all <m>v_1, \dots, v_n \in V</m>. Fix <m>n-2</m> elements <m>v_1, \dots, v_{i-1}, v_{i+1}, \dots, v_{j-1}, v_{j+1}, \dots, v_n</m> and define <me>
+                \psi: V^{\times 2} \to R
+                </me>by<me>
+              \psi(v,w) = \phi(v_1, \dots, v_{i-1}, v, v_{i+1}, \dots, v_{j-1}, w,  v_{j+1}, \dots, v_n)
+                </me>for any <m>v,w \in V</m>. With this notation the goal is to show <me>\psi(v,w) = -\psi(w,v)</me>Since <m>\phi</m> is <m>R</m>-multi-linear and alternating, <m>\psi: V \times V\to R</m> is <m>R</m>-bilinear and alternating, and so the case already proven gives the result.
+              </p>
+  
+              <p>
+                Finally let <m>n</m> and <m>\tau</m> be arbitrary. Then <m>\tau</m> is a product of transpositions — say <m>\tau = \tau_r \cdots \tau_1</m> with each <m>\tau_i</m> a transposition. Proceed by induction on <m>r</m>. The previous case establishes the result when <m>r = 1</m>. If <m>r \geq 2</m>, then using the previous case gives <me>
+                \psi(v_\tau(1), \dots, v_\tau(n)) = -\psi(v_\tau'(1), \dots, v_\tau'(n))
+                </me> where <m>\tau' = \tau_{r-1} \cdots \tau_1</m> and by induction <m>\psi(v_\tau'(1), \dots, v_\tau'(n)) = (-1)^{r-1}\psi(v_1, \dots, v_n)</m>. Hence <me>
+                \psi(v_\tau(1), \dots, v_\tau(n)) = (-1)^{r}\psi(v_1, \dots, v_n)
+                </me> which proves the result.
+              </p>
+            </proof>
+          </lemma>
+
+          <definition xml:id="def-determinant-function"><title>Determinant Function</title>
+            <statement>
+              <p>
+                Define the function <me>\det: \Mat_{n \times n} (R) \to R</me> by <me>\det(A) = \sum_{\s \in S_n} \sign(\s) \prod_{i=1}^n a_{\s(i), i}</me>where <m>S_n</m> is the group of all permutations of <m>\{1, \dots, n\}</m> and <m>\sign(\s)</m> refers to the sign of a permutation.
+              </p>
+            </statement>
+          </definition>
+      
+          <example xml:id="exe-determinant-when-n2"><title>Determinant When <m>n=2</m></title>
+
+            <p>
+              For <m>n = 2</m> we have <me>\det(\begin{bmatrix} a_{1,1} &amp; a_{1,2} \\ a_{2,1} &amp; a_{2,2} \end{bmatrix}) = a_{1,1} a_{2,2} - a_{2,1} a_{1,2}.</me>
+            </p>
+          </example>
+
+          <example xml:id="exe-determinant-of-upper-triangular-matrix"><title>Determinant of Upper Triangular Matrix</title>
+
+            <p>
+              If <m>A</m> is upper triangular, then <m>\det(A) = \prod_i a_{i,i}</m>. For note that for such a matrix the only non-zero terms in the formula for <m>\det(A)</m> occur when <m>\s(i) \leq i</m> for all <m>i</m>, and this can only happen when <m>\s = \id</m>. Similarly, if <m>A</m> is lower triangular, then <m>\det(A) = \prod_i a_{i,i}</m>.
+            </p>
+  
+            <p>
+              In particular, if <m>E</m> is a Type I elementary matrix, then <m>\det(E) = 1</m> and if <m>E</m> is a type II elementary matrix with scalar <m>u \ne 0</m>, then <m>\det(E) = u</m>. We'll look at the determinants of Type III elementary matrices later.
+            </p>
+  
+            <p>
+              An even more special case is <m>\det(I_n) = 1</m>.
+            </p>
+          </example>
+
+          <example xml:id="exe-transpose-preserves-det"><title>Transpose Preserves Det</title>
+
+            <p>
+              Prove <m>\det(A) = \det(A^\tau)</m> where <m>\tau</m> denotes transpose.
+            </p>
+          </example>
+          
+          <remark>
+            <p>
+              Let us write elements of <m>\Mat_{n \times n}(R)</m> as <m>n</m>-tuples of columns vectors; that is, we identify <m>\Mat_{n \times n}(R)</m> with <m>\overbrace{R^n \times \cdots \times R^n}^n</m> by identifying a matrix with the <m>n</m>-tuple of its columns. Then <m>\det</m> is a function of the form <me>
+              \det: \overbrace{R^n \times \cdots \times R^n}^n \to R
+              </me> where for <m>v_1, \dots, v_n \in R^n</m>, we let <m>\det(v_1, \dots, v_n)</m> be the determinant of the <m>n \times n</m> matrix whose columns are <m>v_1, \dots, v_n</m>.
+            </p>
+          </remark>
+
+          <theorem xml:id="thm-uniqueness-of-determinant"><title>Uniqueness of Determinant</title>
+
+            <statement>
+              <p>
+                For each fix positive integer <m>n</m> and non-zero commutative ring <m>R</m>, the determinant function is the unique function of the form <me>\phi: \overbrace{R^n \times \cdots \times R^n}^n \to R</me>such that 
+                <ol>
+                  <li>
+                    <p>
+                      <m>\phi</m> is <m>R</m>-multilinear, 
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>\phi</m> is alternating, and 
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>\phi(I_n) =1</m> (i.e., <m>\phi(e_1, \dots, e_n) = 1</m> where <m>e_i</m> is the <m>i</m>-th standard column vector).
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                We start by proving that <m>\det</m> has these properties.
+              </p>
+  
+              <p>
+                Let <m>v_1, \dots, v_n</m> form the columns of a matrix <m>A</m>. (I.e, the <m>s</m>-th entry of <m>v_t</m> is <m>a_{s,t}</m>.) We have <me>
+                \begin{aligned}
+                \det(v_1, \dots, v_{i-1}, r v_i + v'_i, v_{i+1}, \dots, v_n) 
+                &amp; =  \sum_{\s} \sign(\s) \prod_{j\ne i} a_{\s(j), j} \cdot (r a_{\s(i), i} + a'_{\s(i), i})\\
+                &amp; =  r \sum_{\s} \sign(\s) \prod_{j\ne i} a_{\s(j), j} \cdot (a_{\s(i), i})  \\
+                &amp; + \sum_{\s} \sign(\s) \prod_{j\ne i} a_{\s(j), j} \cdot (a'_{\s(i), i})  \\
+                &amp; = r \det(v_1, \dots, v_{i-1}, v_i , v_{i+1}, \dots, v_n) +
+                \det(v_1, \dots, v_{i-1},  v_i', v_{i+1}, \dots, v_n) \\
+                \end{aligned}
+                </me> and this proves <m>R</m>-multi-linearity.
+              </p>
+  
+              <p>
+                For the alternating property, for notational simplicity, let us assume that <m>v_1 = v_2</m> (i.e., the first two columns of the matrix are equal). (The proof of the general case is essentially the same.) Note that<me>
+                \det(A) = \sum_{(i,j, g)} \sign(i,j,g) a_{i,1} a_{j,2} a_{g(3), 3} a_{g(4), 4} \cdots a_{g(n), n}
+                </me>where the sum ranges over triples <m>(i,j,g)</m> where <m>i \ne j</m> and <m>g</m> is an injective function from <m>\{3, \dots, n\}</m> to <m>\{1, \dots, n\} \setminus \{i,j\}</m> and by <m>\sign(i,j,g)</m> we mean the sign of the permutation sending <m>1</m> to <m>i</m>, <m>2</m> to <m>j</m> and <m>s</m> to <m>g(s)</m> for all other <m>s</m>. For each <m>(i,j,g)</m>, we have <m>\sign(i,j,g) = -\sign(j,i,g)</m>, since the corresponding permutations differ by a transposition. Since <m>a_{i,1} = a_{i,2}</m> and <m>a_{j,1} = a_{j,2}</m>, it follows that the terms in the formula for <m>\det(A)</m> cancel in pairs to give <m>0</m>.
+              </p>
+  
+              <p>
+                The property <m>\det(I_n) = 1</m> follows from the formula. (See Example .)
+              </p>
+  
+              <p>
+                Let us now prove the uniqueness part of the Theorem:
+              </p>
+  
+              <p>
+                Let <m>\phi</m> be any function with the three properties stated in the Theorem. Let <m>A = (a_{i,j})</m> be any square matrix with columns <m>v_1, \dots, v_n</m>. Note that <m>v_j = \sum_i a_{i,j} e_i</m> where <m>e_i</m> is the <m>i</m>-th standard basis (column) vector. Using the <m>R</m>-multi-linearity property repeatedly we have <me>
+                \begin{aligned}
+                \phi(A) &amp; = \phi(\sum_{i_1} a_{i_1,1} e_{i_1},  \sum_{i_2} a_{i_2,2} e_{i_2}, \cdots, \sum_{i_n} a_{i_n,n} e_{i_n}) \\
+                &amp; = \sum_{i_1} a_{i_1,1} \phi(e_{i_1},  \sum_{i_2} a_{i_2,2} e_{i_2}, \cdots, \sum_{i_n} a_{i_n,n} e_{i_n}) \\
+                &amp; = \sum_{i_1}a_{i_1,1} \sum_{i_2} a_{i_2,2} \phi(e_{i_1},   e_{i_2}, \cdots, \sum_{i_n} a_{i_n,n} e_{i_n}) \\
+                &amp; = \vdots \\
+                &amp; = \sum_{ i_1, \dots, i_n } a_{i_1, 1} \cdots a_{i_n,n} \phi(e_{i_1}, \dots, e_{i_n}) \\
+                \end{aligned}
+                </me> where each of <m>i_1, \dots, i_n</m> ranges from <m>1</m> to <m>n</m>. By the alternating property <m>\phi(e_{i_1}, \dots, e_{i_n}) = 0</m> unless all the <m>i_1, \dots, i_n</m> are distinct. If they are distinct, then by Lemma  we have <me>
+                \phi(e_{i_1}, \dots, e_{i_n}) = \sign(\s) \phi(e_1, \dots, e_n)
+                </me> where <m>\s</m> is the permutation defined as <m>\s(t) = i_t</m>. Finally, recall <m>\phi(e_1, \dots, e_n) = 1</m> by assumption. Putting all of this together gives<me>
+                \phi(A) = \sum_{\text{ distinct  $i_1, \dots, i_n$}} \sign(\text{the permutation $t \mapsto i_t$}) a_{i_1, 1} \cdots a_{i_n,n}.
+                </me>This is just a re-writing of the formula for <m>\det</m>; so <m>\phi = \det</m>.
+              </p>
+            </proof>
+          </theorem>
+
+          <proposition xml:id="prop-computing-determinant-of-square-matrix">
+            <statement>
+              <p>
+                Let <m>R</m> be any non-zero commutative ring. Let <m>A</m> be a square matrix and let <m>B</m> be a matrix obtained form <m>A</m> by a single elementary column operation:
+                <ol>
+                  <li>
+                    <p>
+                      If the operation is of type I, <m>\det(B) = \det(A)</m>. 
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      If the operation is of type II, given by multiplying a column of <m>A</m> by a unit <m>u</m>, then <m>\det(B)=u\det(A)</m>. 
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      If the operation is of type III, <m>\det(B)=-\det(A)</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
             
+            <proof>
+              <p>
+                The first claim follows from multi-linearity and alternating properties: For notational simplicity say <m>A = (v_1, v_2, \dots)</m> and <m>B = (v_1 + rv_2, v_2, \dots)</m>. Then<me>
+                \det(B) = \det(v_1, v_2, \dots) + r \det(v_2, v_2, \dots) = \det(A) + r \cdot 0 = \det(A)
+                </me>The second is immediate from (the second part of) <m>R</m>-multi-linearity. The last is a special case of Lemma .
+              </p>
+            </proof>
+          </proposition>
+
+          <remark>
+            <p>
+              The previous Lemma gives an efficient method of computing the determinant of a square matrix: Apply Gaussian reduction to transform such a matrix <m>A</m> to <m>I_n</m>, keeping track of the operations used. Since <m>\det(I_n) = 1</m>, we can deduce what the <m>\det(A)</m> is in this way, using the Lemma.
+            </p>
+  
+            <p>
+              The number of type I (and type II) operations needed to transform <m>A</m> to <m>I_n</m> is at most about <me>2(n-1) + 2(n-2) + \cdots \approx n^2</me>Each operation involves at most at most <m>n-1</m> multiplications and additions. All total, the number of operations needed to compute the determinant of an <m>n \times n</m> matrix is a polynomial function of <m>n</m> (I think it is cubic, in fact). Observe that the determinant formula involves <m>n!</m> terms each with <m>n</m> products, which is certainly exponential in <m>n</m>.
+            </p>
+  
+            <p>
+              Thus, Gaussian elimination, among other things, gives a polynomial time solution to a computation that at first blush involves an exponential number of calculations.
+            </p>
+  
+            <p>
+              The “permanant'' of a square matrix is given by the same formula but without the signs. It too involves an exponential (in <m>n</m>) number of calculations. Unlike the determinant, there is no known polynomial time algorithm to compute it. Indeed, if one exists then <m>P = NP</m>! This is a Theorem of Leslie Valiant.
+            </p>
+          </remark>
+
+          <corollary xml:id="cor-det-splits-across-elementary-multiplication">
+            <statement>
+              <p>
+                For any commutative ring <m>R</m>, if <m>A</m> is an <m>n \times n</m> matrix and <m>E</m> is an <m>n \times n</m> elementary matrix, then <me>\det(AE) = \det(A) \det(E)</me>
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                This follows from the Proposition and the fact that <m>AE</m> is the result of doing the corresponding column operation on <m>A</m> (see Lemma ), since <me>
+                \det(E)  = \begin{cases}
+                  1 &amp; \text{if $E$ is elementary of type I} \\
+                  u &amp; \text{if $E$ is elementary of type II with a unit $u$ on the diagonal} \\
+                  -1 &amp; \text{if $E$ is elementary of type III.} \\
+                \end{cases}</me>These formulas follow from the formula for the determinant of an upper or lower triangular matrix — see Example .
+              </p>
+            </proof>
+          </corollary>
+
+          <corollary xml:id="cor-det-not-0-iff-matrix-invertible"><title></title>
+            <statement>
+              <p>
+                For <m>R = F</m> a field, we have <m>\det(A) \ne 0</m> if and only if <m>A</m> is invertible.
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                If <m>A</m> is not invertible, then the column space of <m>A</m> is a proper subspace of <m>F^n</m> and hence the columns of <m>A</m> must be linearly dependent. Say the <m>i\th</m> column is a linear combination of the rest: <m>v_i = \sum_{j \ne i} c_j v_j</m>. Then <me>
+                \det(v_1, \dots, v_n) = \sum_{j \ne i} c_j \det(\text{a matrix with the $i$-th and $j$-th columns equal}) = 0.
+                </me>If <m>A</m> is invertible, then by Corollary  <m>A</m> can be obtained from <m>I_n</m> via a sequence of elementary column operations. The result thus follows from Proposition  and the fact that <m>\det(I_n) = 1</m>.
+              </p>
+            </proof>
+          </corollary>
+
+          <remark>
+            <p>
+              For an arbitrary commutative ring <m>R</m>, the rule is: a square matrix <m>A</m> is invertible if and only if <m>\det(A)</m> is a unit of <m>R</m>. We'll give a proof later.
+            </p>
+          </remark>
+
+          <theorem xml:id="thm-det-splits-across-multiplication-fields"><title>Det Splits Across Multiplication: Fields</title>
+
+            <statement>
+              <p>
+                For a field <m>F</m> and matrices <m>A, B \in \Mat_{n \times n}(F)</m> we have <me>\det(AB) = \det(A)\det(B).</me> 
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                If <m>A</m> is not invertible, neither is <m>AB</m>, since <m>\im(AB) \subseteq \im(A)</m>, and if <m>B</m> is not invertible, neither is is <m>AB</m>, since <m>\ker(AB) \supseteq \ker(A)</m>. So, by Corollary , if either <m>A</m> or <m>B</m> is not invertible, both sides of the equation are <m>0</m>.
+              </p>
+    
+              <p>
+                Assume now that <m>A</m> and <m>B</m> are both invertible. Then by Corollary  we have <me>
+                A = E_1 \cdots E_n</me>and<me>
+                B = F_1 \cdots F_m
+                </me>and hence <me>
+                AB = E_1 \cdots E_n F_1 \cdots F_m
+                </me>where the <m>E_i</m>'s and <m>F_j</m>'s are elementary matrices. Applying Corollary  repeatedly gives <me>\det(AB) = \det(E_1 \cdots E_n F_1 \cdots F_{m-1}) \det(F_m) = \cdots= \det(E_1) \cdots \det(E_n) \det(F_1) \cdots \det(F_m)</me> and similarly <me>
+                \det(A) \det(B) = \left(\det(E_1) \cdots \det(E_n)\right) \left( \det(F_1) \cdots \det(F_m)\right).
+                </me>
+              </p>
+            </proof>
+          </theorem>
+
+          <lemma xml:id="lem-det-function-is-natural"><title>Det Function is Natural</title>
+
+            <statement>
+              <p>
+                The determinant function <m>\det</m> is “natural": If <m>g: R \to S</m> is a homomorphism of non-zero commutative rings and <m>A \in \Mat_{n \times n}(R)</m>, then <me>g \det(A) = \det(g(A))</me> where <m>g(A)</m> denotes the matrix obtained by applying <m>g</m> to the entries of <m>A</m>.
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                This follows from the formula for <m>\det</m>, since <m>g</m> commutes with sums and products.
+              </p>
+            </proof>
+          </lemma>
+
+          <theorem xml:id="thm-det-splits-across-multiplication-commutative-ring"><title>Det Splits Across Multiplication: Commutative Ring</title>
+            <statement>
+              <p>
+                For any non-zero commutative ring <m>R</m> and matrices <m>A, B \in \Mat_{n \times n}(R)</m>, we have <me>\det(AB) = \det(A) \det(B) \in R. </me>
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                We have already proven that this holds when <m>R</m> is a field.
+              </p>
+  
+              <p>
+                We next show that it holds whenever <m>R</m> is an integral domain. In this case, <m>R</m> is a subring of a field <m>F</m> (namely, the field of fractions of <m>R</m>). So, we know that the equation <m>\det(AB) = \det(A) \det(B)</m> holds in <m>F</m> if we interpret <m>A</m> and <m>B</m> as belonging to <m>\Mat_{n \times n}(F)</m>. But the value of <m>\det</m> is the same if we interpret these matrices as having entries in <m>R</m> or in <m>F</m>. So <m>\det(AB) = \det(A) \det(B)</m> holds in <m>R</m>.
+              </p>
+  
+              <p>
+                We finally prove that the Theorem for any non-zero commutative ring <m>R</m> by building on the fact that it holds for domains. We do so by contructing a ring homomorphism <m>g: S \to R</m> and matrices <m>X</m> and <m>Y</m> in <m>\Mat_{n \times n}(S)</m> such that <m>S</m> is an integral domain, <m>g(X) = A</m> and <m>g(Y) = B</m>. Granting such a <m>S, g, X</m> and <m>Y</m> exist, the result follows from the naturality of <m>\det</m> (Lemma ). In detail, we know <m>\det(XY) = \det(X) \det(Y)</m>, since <m>S</m> is a domain. Since the rule for multiplying matrices involves only sums and products of ring elements, we have <m>g(XY) = g(X)g(Y)</m>. So<me>
+              \begin{aligned}
+                \det(AB) &amp; = \det(g(X) g(Y)) 
+                = \det(g(XY))  = g \det(XY) \\ 
+                &amp; = g(\det(X) \det(Y)) = g(\det(X)) g(\det(Y)) = \det(g(X)) \det(g(Y)) = \det(A) \det(B).
+              \end{aligned}</me>It remains to prove such a <m>S</m>, <m>g</m>, <m>X</m> and <m>Y</m> exists. Suppose <m>A = (a_{i,j})</m> and <m>B = (b_{i,j})</m>. Form the polynomial ring<me>
+                S := \Z[\{x_{i,j} \mid 1 \leq i \leq n, 1 \leq j \leq n\} \cup \{y_{i,j}\mid 1 \leq i \leq n, 1 \leq j \leq n\}]
+                </me>of <m>2 n^2</m> variables with <m>\Z</m>-coefficients. By the UMP for polynomial rings with integer coefficients, since <m>R</m> is commutative, there is a (unique) ring map <m>g: S \to R</m> such that <m>g(x_{i,j}) = a_{i,j}</m> and <m>g(y_{i,j}) = b_{i,j}</m> for all <m>i,j</m>. That is, <m>g</m> is the evaluation map given by setting <m>x_{i,j} = a_{i,j}</m> and <m>y_{i,j} = b_{i,j}</m> for all <m>i,j</m>, and interpreting integers as elements of <m>R</m>. Let <me>X = (x_{i,j}), Y = (y_{i,j})  \in \Mat_{n \times n}(S)</me> be the evident matrices of indeterminants.Then <m>S</m> is a domain, <m>g: S \to R</m> is a ring homomorphism, <m>g(X) = A</m> and <m>g(Y) = B</m>, as desired.
+              </p>
+            </proof>
+          </theorem>
+
+          <remark>
+            <p>
+              Another way to deduce the Theorem for arbitrary commutative rings from the case of a domain is to use the following fact: If <m>R</m> is a non-zero commutative ring, there there exists a surjective ring homomorphism of the form <m>g: S \onto R</m> where <m>S</m> is a domain. So see this, let <m>X</m> be a (possibly very large) set of indeterminants such that there is a bijection of sets <m>\rho: X \to R</m>. Let <m>S = \Z[X]</m>, the polynomial ring with integer coefficients in the variables <m>X</m>. So, a typical element of <m>S</m> is a polynomial the form <m>f(x_1, \dots,x_n)</m> for some finite subset <m>\{x_1, \dots, x_n\}</m> of <m>X</m>. By the UMP for polynomial rings, there is a unique ring map <m>g: S \to R</m> such that <m>g(x) = \rho(x)</m> for all <m>x \in X</m>. That is, <m>g</m> sends <m>f(x_1, \dots, x_n)</m> as above to <m>f(\rho(x_1), \dots, \rho(x_n))</m>. The ring map <m>g</m> is clearly onto since for each <m>r \in R</m>, there is an <m>x \in X</m> with <m>\rho(x) = r</m> and hence <m>g(x) = r</m>. Finally, <m>S</m> is an integral domain.
+            </p>
+          </remark>
+
+          <remark>
+            <p>
+              The key idea in the proof of the Theorem can be used to deduce many other identities over commutative rings from known identities over fields. E.g., it can be used to show that <me>
+              A A^{adj} = \det(A) I_n = A^{adj} A
+              </me> holds for any commutative ring <m>R</m> and for any <m>A \in \Mat_{n \times n}(R)</m>, where <m>A^{adj}</m> is the “adjugate'' of <m>A</m>, granting that this equation holds when <m>R</m> is a field. Recall <m>A^{adj}</m> is the <m>n \times n</m> matrix whose <m>(i,j)</m> entry is <m>(-1)^{i+j} \det(A_{i,j})</m> where <m>A_{i,j}</m> is the <m>(n-1) \times (n-1)</m> matrix obtained by deleting the <m>i</m>-th column and <m>j</m>-th row of <m>A</m>. I will likely have you do this as an exercise.
+            </p>
+
+            <p>
+              Granting <m>A A^{adj} = \det(A) I_n = A^{adj} A</m> holds for any non-zero commutative ring <m>R,</m> we can prove the following:
+            </p>
+          </remark>
+
+          <proposition xml:id="prop-determinantal-technique"><title>Determinantal Technique</title>
+            <statement>
+              <p>
+                Let <m>R</m> be a non-zero commutative ring and <m>A \in \Mat_{n \times n}(R)</m>. Let <m>A^{adj}</m> denote the classical adjugate of <m>A</m> — the <m>(i,j)</m> entry of <m>A^{adj}</m> is defined to be <m>(-1)^{i+j} \det(A_{j,i})</m> where <m>A_{j,i}</m> is <m>(n-1) \times (n-1)</m> matrix obtained by deleting the <m>j</m>-th row and <m>i</m>-th column of <m>A</m>. You may assume without proof that when <m>R</m> is a field, we have <m>A A^{adj} = \det(A) I_n = A^{adj} A</m>. Prove <m>A A^{adj} = \det(A) I_n = A^{adj} A</m> holds for any non-zero commutative ring <m>R</m>.
+              </p>
+            </statement>
+          </proposition>
+
+          <proposition xml:id="prop-matrix-invertible-iff-det-is-a-unit"><title>Matrix Invertible iff Det is a Unit</title>
+
+            <statement>
+              <p>
+                For any non-zero commutative ring <m>R</m> and any <m>A \in \Mat_{n \times n}(R)</m>, <m>A</m> is invertible if and only if <m>\det(A)</m> is a unit of <m>R</m>.
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                If <m>A</m> is invertible then <m>1 = \det(I_n) = \det(AA^{-1}) = \det(A) \det(A^{-1})</m> by the Theorem, and hence <m>\det(A)</m> is a unit.
+              </p>
+  
+              <p>
+                If <m>\det(A)</m> is a unit, then, using the equation above, we have <me>
+                A (A^{adj} \cdot \frac{1}{\det(A)}) =I_n = (A^{adj} \cdot \frac{1}{\det(A)}) A
+                </me> which proves <m>A</m> has a two-sided inverse (namely, <m>A^{adj} \frac{1}{\det(A)}</m>).
+              </p>
+    
+            </proof>
+          </proposition>
+
+          <definition xml:id="def-determinant"><title>Determinant</title>
+            <statement>
+              <p>
+                Let <m>R</m> be a commutative ring and <m>V</m> a free <m>R</m>-module of finite rank. Given an endomorphism <m>\a: V \to V</m>, we define its <em>determinant</em> to be <me>
+                  \det(\a) = \det([\a]_B^B)
+                  </me> where <m>B</m> is any basis of <m>V</m>.
+              </p>
+            </statement>
+          </definition>
+
+          <lemma xml:id="lem-det-independent-of-basis-choice"><title></title>
+            <statement>
+              <p>
+                The definition of <m>\det(\a)</m> is independent of choice of <m>B</m>.
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                If <m>C</m> is another basis, then <me>
+                [\a]_C^C = P [\a]_B^B P^{-1}
+                </me> for an invertible matrix <m>P</m> (specifically, <m>P = [\id]_B^C</m>). Then <me>
+                \det([\a]_C^C)  = \det(P [\a]_B^B P^{-1}) = \det(P) \det([\a]_B^B) \det(P^{-1}) =\det(P) \det(P^{-1}) \det([\a]_B^B) 
+                </me> using the Theorem. Also by the Theorem <m>\det(P) \det(P^{-1}) = \det(PP^{-1}) = \det(I_n) = 1</m>.
+              </p>
+            </proof>
+          </lemma>
+
+          <example xml:id="exe-companion-matrix"><title>Companion Matrix</title>
+
+            <p>
+              Let <m>V = F[x]/I</m> where <m>F</m> is a field, <m>I = F[x] \cdot f(x)</m> with <m>f</m> a monic polynomial. Say <m>f(x) = x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0</m>. Recall that every element of <m>V</m> is uniquely represented by a coset of the form <me>
+              \ov{p(x)} := p(x) + I
+              </me> where <m>p(x)</m> is a polynomial of degree at most <m>n-1</m>.
+            </p>
+  
+            <p>
+              We will regard <m>V</m> as an <m>F</m>-vector space (via restriction of scalars along <m>F \into F[x]</m>). Then <m>V</m> is finite dimensional — for instance, a basis of <m>V</m> is given by <m>\ov{1}, \ov{x}, \dots, \ov{x^{n-1}}</m>.
+            </p>
+  
+            <p>
+              Let <m>g: V \to V</m> be the function given as multiplication by <m>x</m>. Then <m>g</m> is an <m>F</m>-linear operator, since <m>g(v+v') = x(v+v') = xv + xv' = g(v) + g(v')</m> and <m>g(cv) = x(cv) = c (xv) = c g(v)</m>. (In fact, <m>g</m> is <m>F[x]</m>-linear, but we won't use that fact.) Relative to the ordered basis <m>\ov{1}, \ov{x}, \dots, \ov{x^{n-1}}</m>, the matrix of <m>g</m> is <me>
+              C(f) :=
+              \begin{bmatrix}
+                0 &amp; 0 &amp; \cdots &amp; 0 &amp; -a_0 \\
+                1 &amp; 0 &amp; \cdots &amp; 0 &amp; -a_1 \\
+                0 &amp; 1 &amp; \cdots &amp; 0 &amp; -a_2 \\
+                \vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\
+                0 &amp; 0 &amp; \cdots &amp; 1 &amp; -a_{n-1} \\   
+              \end{bmatrix}
+              </me> The right-most column is due to the fact that, since <m>\overline{f(x)} = 0</m> in <m>V</m>, we have <me>
+              x \cdot \overline{x^{n-1}} =
+              \overline{x^n} = -a_{n-1} \overline{x^{n-1}} -a_{n-2} \overline{x^{n-2}} - \cdots - a_1 \overline{x} - a_0 \overline{1}.
+              </me> The matrix <m>C(f)</m> is known as the <term>companion matrix</term> of <m>f(x)</m> - it is defined for any monic polynomials with entries in a field.
+            </p>
+  
+            <p>
+              We have <m>\det(C(f)) = (-1)^n a_0</m>, since the only permutation that gives a non-zero term in the formula for <m>\det</m> is the <m>n</m>-cycle <m>\s = (2 \, 3 \, \dots \, n \, 1)</m>, and its has sign is <m>(-1)^{n-1}</m>. So <m>\det(g) = (-1)^n a_0</m>.
+            </p>
+            
+          </example>
+
+          <remark>
+            <p>
+              As we showed above, the determinant of linear operator on a free module of finite rank is an “invariant'' of the operator, in the sense that it is independent of how we represent the operator as a matrix. Here is another such invariant:
+            </p>
+          </remark>
+
+          <definition xml:id="def-trace"><title>Trace</title>
+            <statement>
+              <p>
+                For a commutative ring <m>R</m> and a square matrix <m>A \in \Mat_{n \times n}(R)</m>, the <em>trace</em> of <m>A</m>, written <m>\trace(A)</m>, is the sum of its diagonal entries: <m>\trace(A) = \sum_i a_{i,i}</m>.
+              </p>
+    
+              <p>
+                If <m>V</m> is a free <m>R</m>-module of finite rank and <m>g: V \to V</m> is an <m>R</m>-module homomorphism, we define <m>\trace(g)</m> to be <m>\trace([g]^B_B)</m> for any basis <m>B</m>.
+              </p>
+            </statement>
+          </definition>
+
+          <theorem xml:id="thm-trace-is-commutative-with-two-matrices"><title>Trace is Commutative with Two Matrices</title>
+
+            <statement>
+              <p>
+                If <m>R</m> is a commutative ring and <m>X \in \Mat_{m \times n}(R)</m> and <m>Y \in \Mat_{n \times m}(R)</m>, then <m>\trace(XY) = \trace(YX)</m>.
+              </p>
+    
+              <p>
+                In particular, with the notation of the previous definition, <m>\trace(g)</m> is well-defined.
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                The <m>(i,i)</m> entry of <m>XY</m> is <m>\sum_l x_{i,l} y_{l, i}</m> and so <m>\trace(XY) = \sum_i \sum_l x_{i,l} y_{l,i}</m>. The <m>(j,j)</m> entry of <m>YX</m> is <m>\sum_t y_{j,t} x_{t,j}</m> and so <m>\trace(YX) = \sum_j \sum_t y_{j,t} x_{t,j}</m>. Since <m>R</m> is commutative, these are equal.
+              </p>
+  
+              <p>
+                Say <m>B</m> and <m>C</m> are two bases of <m>V</m>. Then <m>[g]_B^B = P [g]_{C}^{C} P^{-1}</m> for some invertible matrix <m>P</m> (namely, <m>P = [\id_V]_C^B</m>). Using the first part of the Lemma we have <me>\trace([g]_B^B) = \trace(P [g]_{C}^{C} P^{-1}) = \trace((P [g]_{C}^{C}) P^{-1}) = 
+                \trace(P^{-1} (P [g]_{C}^{C})) =
+                \trace((P^{-1} P) [g]_{C}^{C}) =
+                \trace([g]_{C}^{C}).</me>
+              </p>
+            </proof>
+          </theorem>
+
+          <warning>
+            <p>
+              The Lemma tells us that the trace of a product of two matrices in either order is the same, but it does not follow that the trace is unchanged if you permute arbitrarily a product of three of more matrices. For instance, <m>\trace(XYZ)</m> is usually not equal to <m>\trace(XZY)</m>.
+            </p>
+  
+            <p>
+              It is true that trace is invariant under all “cyclic permutations'' of products of matrices. For instance, <m>\trace(XYZ) = \trace(ZXY) = \trace(YZX)</m> and more generally we have <me>
+              \trace(X_1 \cdots X_n) = \trace(X_i X_{i+1} \cdots X_n X_1 X_2 \cdots X_{i-1})
+              </me> for all <m>i</m>.
+            </p>
+          </warning>
+
+          <example xml:id="exe-trace-and-multiplication-by-x"><title>Trace and Multiplication by <m>x</m></title>
+
+            <p>
+              With the notation of Example , <m>\trace(g) = -a_{n-1}</m>.
+            </p>
+            
+          </example>
+
+          <example xml:id="exe-det-and-trace-of-c-and-linear-operator"><title>Det and Trace of <m>\C</m> and Linear Operator</title>
+
+            <p>
+              Let <m>\C</m> denote the complex numbers. We may regard <m>\C</m> as an <m>\R</m>-vector space. Given <m>z = a + bi \in \C</m>, multiplication by <m>z</m> on <m>\C</m> is an <m>\R</m>-linear operator. What are the determinant and trace of this operator?
+            </p>
+  
+            <p>
+              Relative to the basis <m>1, i</m> of <m>\C</m> as a real vector space, multiplication by <m>z = a = ib</m> is represented by the matrix <me>\begin{bmatrix}
+      a &amp; -b \\ 
+      b &amp; a   \\
+    \end{bmatrix}</me> and hence the determinant of this operator is <m>a^2 + b^2</m>, the square of the norm of <m>z</m>. The trace is <m>2a</m>. Note that the determinant of this operator is <m>\|z\|^2</m> the square of the usual complex norm.
+            </p>
+          </example>
+
+          <example xml:id="exe-matrix-of-field-extension"><title>Matrix of Field Extension</title>
+
+            <p>
+              Similarly, we may consider the field extension <m>\Q \subseteq \Q(\sqrt{-2})</m>. For any <m>a + b \sqrt{-2}</m> in the larger field, define <m>g: \Q(\sqrt{-2}) \to \Q(\sqrt{-2})</m> to be multiplication by <m>a + b \sqrt{-2}</m>. Then <m>\Q(\sqrt{-2})</m> is a <m>\Q</m>-vector space and <m>g</m> is a <m>\Q</m>-linear operator. A <m>\Q</m>-basis of <m>\Q(\sqrt{-2}</m> is given by <m>B = \{1, \sqrt{-2}\}</m> and relative to this basis the matrix representing <m>g</m> is <me>[g]_B^B = 
+              \begin{bmatrix}
+                a &amp; -2b \\ 
+                b &amp; a   \\
+              \end{bmatrix}</me> and hence <m>\det(g) = a^2 + 2b^2</m>, once again the square of the of usual complex norm of the element <m>a + b \sqrt{-2}</m>.
+            </p>
+
+          </example>
+
+          <definition xml:id="def-charpoly"><title>Characteristic Polynomial</title>
+            <statement>
+              <p>
+                Let <m>A \in \Mat_{n \times n}(F)</m> where <m>F</m> is a field. The <em>characteristic polynomial</em> of <m>A</m> is <me>\cp_A(x) := \det(x I_n - A) \in F[x].</me> Note that <m>\cp_A(x)</m> is a monic polynomial of degree <m>n</m> with coefficients in <m>F</m>. More generally, if <m>V</m> is a finite dimensional <m>F</m>-vector space and <m>g: V \to V</m> is an <m>F</m>-linear operator on <m>V</m>, then <me>\cp_g(x) := \cp_A(x)</me> where <m>A</m> is the matrix representing <m>g</m> with respect to a choice of basis of <m>V</m>.
+              </p>
+            </statement>
+          </definition>
+
+          <remark>
+            <p>
+              We should pause to check that <m>\cp_g(x)</m> is well-defined: Say <m>B</m> and <m>C</m> are two ordered bases of <m>V</m>, so that <m>[g]_B^B</m> and <m>[g]_C^C</m> both represent <m>g</m>. Then <m>[g]_C^C = P [g]_B^B P^{-1}</m> for some invertible matrix <m>P</m> and hence <me>
+              P(xI_n - [g]_B^B)P^{-1} = PxI_nP^{-1} - P [g]_B^B P^{-1} = xI_n - [g]_C^C,
+              </me> since the scalar matrix <m>xI_n</m> commutes with all matrices. That is, <m>xI_n - [g]_B^B</m> and <m>xI_n - [g]_C^C</m> are similar matrices (with entries in <m>F[x]</m>), and it follows that <m>\det(xI_n - [g]_B^B) = \det(xI_n - [g]_C^C)</m>.
+            </p>
+  
+            <p>
+              The following two exercises show that the characteristic polynomial captures both the determinant and the trace of an operator:
+            </p>
+          </remark>
+
+          <example xml:id="exe-cp0"><title><m>\cp(0)</m></title>
+
+            <p>
+              Show <m>\cp_g(0) = (-1)^n \det(g)</m>.
+            </p>
+
+          </example>
+
+          <example xml:id="exe-charpoly-and-trace"><title>CharPoly and Trace</title>
+  
+            <p>
+              Show that if <m>\dim_F(V) = n</m>, then the coefficient of <m>x^{n-1}</m> in <m>\cp_g(x)</m> is <m>-\trace(g)</m>.
+            </p>
+  
+          </example>
+  
+          <example xml:id="exe-triangular-matrix-and-charpoly"><title>Triangular Matrix and CharPoly</title>
+  
+            <p>
+              If <m>A</m> is upper or lower triangular, then <m>\cp_A(x) = \prod_i (x - a_{i,i})</m>. As you may recall from an undergraduate class, in this case <m>a_{1,1}, \dots, a_{n,n}</m> are the eigenvalues of <m>A</m>. More on this later.
+            </p>
+  
+          </example>
+  
+          <example><title>Problem</title>
+  
+            <p>
+              Let <m>V</m> be the <m>\R</m>-vector space consisting of polynomials in the variable <m>x</m> of degree at most <m>3</m> and let <m>g: V \to V</m> be the <m>\R</m>-linear operator given by <me>g(p(x)) = p''(x) + (x+1) p'(x) + 7 p(x),</me>where <m>p''(x)</m> and <m>p'(x)</m> denote the first and second derivatives of <m>p(x)</m>. (You may take it on faith that <m>g</m> is <m>\R</m>-linear.) Find the determinant, the trace, and the characteristic polynomial of <m>g</m>.
+            </p>
+  
+          </example>
+  
+          <example><title>Problem</title>
+  
+            <p>
+              Let <m>F</m> be a field and <m>V = F[x]/I</m> with <m>I = F[x] \cdot f(x)</m> for some monic polynomial <m>f(x) = x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0</m>. Regard <m>V</m> as an <m>F</m>-vector space (via restriction of scalars along <m>F \into F[x]</m>), and recall that the function <m>g: V \to V</m> given by <m>g(v) = x \cdot v</m> is an <m>F</m>-linear operator on <m>V</m>.
+            </p>
+  
+            <p>
+              Prove that the characteristic polynomial of <m>g</m> is <m>f(x)</m>.
+            </p>
+  
+          </example>
+
+          </subsection>
+        </section>
+
+        <section><title>Field Theory</title>
+
+          <subsection xml:id="subsec-solvability-by-radicals"><title>Solvability by Radicals (*)</title>
+            
+            <p>Coming soon!</p>
+
           </subsection>
         </section>
 
@@ -26423,6 +26362,22 @@
           
         </paragraphs>
 
+        <paragraphs xml:id="bio-cauchy"><title>Augustin-Louis Cauchy</title>
+
+          <p>
+            Augustin-Louis Cauchy (1789-1857) was a French mathematician who made significant contributions to several areas of mathematics, including analysis, number theory, and group theory. Cauchy was a prodigious mathematician who published over 800 papers during his lifetime, and his work laid the foundation for much of modern analysis. He is perhaps best known for his contributions to the theory of functions of a complex variable, which he developed in the early 19th century.
+          </p>
+
+          <p>
+            Cauchy was born in Paris, France, and showed an early aptitude for mathematics. He was a brilliant student who excelled in both mathematics and physics, and he received his doctorate in mathematics from the École Polytechnique in Paris at the age of 21. He went on to become a professor of mathematics at several prestigious institutions, including the École Polytechnique and the Collège de France.
+          </p>
+
+          <p>
+            Cauchy's work in group theory was influential in the development of the subject, and he is credited with formulating the first rigorous definition of a group. He also made significant contributions to the theory of permutation groups, which are central to the study of group theory. Despite his many achievements, Cauchy's life was not without controversy. He was known for his irascible temperament and his conflicts with other mathematicians, including his bitter rival, Niels Henrik Abel. Nonetheless, his contributions to mathematics continue to be studied and applied by mathematicians today.
+          </p>
+          
+        </paragraphs>
+
         <paragraphs xml:id="bio-cayley"><title>Arthur Cayley</title>
 
           <p>
@@ -26439,20 +26394,50 @@
           
         </paragraphs>
 
-        <paragraphs xml:id="bio-cauchy"><title>Augustin-Louis Cauchy</title>
+        <paragraphs xml:id="bio-dedekind"><title>Richard Dedekind</title>
 
           <p>
-            Augustin-Louis Cauchy (1789-1857) was a French mathematician who made significant contributions to several areas of mathematics, including analysis, number theory, and group theory. Cauchy was a prodigious mathematician who published over 800 papers during his lifetime, and his work laid the foundation for much of modern analysis. He is perhaps best known for his contributions to the theory of functions of a complex variable, which he developed in the early 19th century.
+            Richard Dedekind (1831-1916) was a German mathematician who made important contributions to several areas of mathematics, including number theory, algebra, and analysis. He is best known for his work on the foundations of mathematics and his development of the theory of ideals in algebra.
           </p>
 
           <p>
-            Cauchy was born in Paris, France, and showed an early aptitude for mathematics. He was a brilliant student who excelled in both mathematics and physics, and he received his doctorate in mathematics from the École Polytechnique in Paris at the age of 21. He went on to become a professor of mathematics at several prestigious institutions, including the École Polytechnique and the Collège de France.
+            Dedekind was born in Brunswick, Germany, in 1831, and he studied at the University of Göttingen under some of the most renowned mathematicians of his time, including Carl Friedrich Gauss and Ernst Dirichlet. He received his doctorate in 1852 and then spent several years teaching at various universities in Germany.
           </p>
 
           <p>
-            Cauchy's work in group theory was influential in the development of the subject, and he is credited with formulating the first rigorous definition of a group. He also made significant contributions to the theory of permutation groups, which are central to the study of group theory. Despite his many achievements, Cauchy's life was not without controversy. He was known for his irascible temperament and his conflicts with other mathematicians, including his bitter rival, Niels Henrik Abel. Nonetheless, his contributions to mathematics continue to be studied and applied by mathematicians today.
+            In the 1870s, Dedekind turned his attention to algebraic number theory, which was then a relatively new field. He developed the theory of ideals as a way of understanding the structure of rings of algebraic integers. Dedekind's work on ideals was an important step in the development of modern abstract algebra and has had a profound impact on many areas of mathematics, including algebraic geometry, algebraic topology, and commutative algebra.
           </p>
           
+        </paragraphs>
+
+        <paragraphs xml:id="bio-eisenstein"><title>Gotthold Eisenstein</title>
+
+          <p>
+            Gotthold Eisenstein (1823-1852) was a German mathematician who made important contributions to several areas of mathematics, including number theory, group theory, and algebra. He is best known for his work on the theory of quadratic forms and his development of Eisenstein series.
+          </p>
+
+          <p>
+            Eisenstein was born in Berlin, Germany in 1823, and he showed a talent for mathematics at an early age. He studied at the University of Berlin and received his doctorate in 1844. After completing his studies, Eisenstein spent several years working as a private tutor and publishing papers on various topics in mathematics.
+          </p>
+
+          <p>
+            In the 1840s, Eisenstein began to develop his theory of quadratic forms, which would become one of his most important contributions to mathematics. He also worked on the theory of elliptic functions and discovered what are now known as Eisenstein series, which are a type of modular form. Eisenstein's work on quadratic forms and Eisenstein series has had a profound impact on many areas of mathematics, including algebraic number theory, algebraic geometry, and the theory of automorphic forms.
+          </p>
+          
+        </paragraphs>
+
+        <paragraphs xml:id="bio-frobenius"><title>Ferdinand Georg Frobenius</title>
+          <p>
+            Ferdinand Georg Frobenius was a German mathematician who made significant contributions to various areas of mathematics, including group theory, number theory, and differential equations. He was born on October 26, 1849, in Charlottenburg, Germany, and died on August 3, 1917, in Berlin.
+          </p>
+
+          <p>
+            Frobenius studied at the University of Berlin, where he received his doctorate in 1870. He then spent several years teaching at various universities in Germany before eventually settling at the University of Berlin, where he spent the rest of his career.
+          </p>
+
+          <p>
+            One of Frobenius's most significant contributions to mathematics was his work on group theory. He introduced the concept of a group homomorphism and used it to study the structure of groups. He also introduced the idea of a group character, which is a function that associates a complex number with each element of a group and provides information about the group's representation theory. Frobenius's work on group theory was foundational for the development of modern algebra. In addition to his work on group theory, Frobenius also made contributions to number theory, particularly in the area of diophantine equations, and to the theory of differential equations, where he introduced the concept of a linear differential equation with singularities.
+          </p>
         </paragraphs>
 
         <paragraphs xml:id="bio-galois"><title>Évariste Galois</title>
@@ -26471,81 +26456,18 @@
           
         </paragraphs>
 
-        <paragraphs xml:id="bio-lagrange"><title>Joseph-Louis Lagrange</title>
+        <paragraphs xml:id="bio-gauss"><title>Johann Carl Friedrich Gauss</title>
 
           <p>
-            Joseph-Louis Lagrange (1736-1813) was an Italian-French mathematician who made significant contributions to many areas of mathematics, including algebra, calculus, and number theory. Born in Turin, Italy, Lagrange showed early promise in mathematics and was admitted to the Royal Academy of Sciences at the age of 19. He later moved to Paris, where he became a prominent member of the scientific community and a professor at the École Polytechnique.       
+            Johann Carl Friedrich Gauss (1777-1855) was a German mathematician, physicist, and astronomer who made significant contributions to many areas of mathematics. He is often referred to as the "Prince of Mathematicians" and is considered to be one of the most influential mathematicians in history.
           </p>
 
           <p>
-            Lagrange's contributions to mathematics were wide-ranging and profound. He is perhaps best known for his work on the calculus of variations, which helped to lay the foundation for modern optimization theory. He also made important contributions to number theory, including the study of Diophantine equations and the development of the theory of binary quadratic forms. In addition, Lagrange made important contributions to classical mechanics, including the development of the principle of least action and the formulation of Lagrangian mechanics.      
+            Gauss was born in Brunswick, Germany in 1777 and showed a remarkable talent for mathematics at an early age. He made many important contributions to the field of mathematics throughout his life, including the development of non-Euclidean geometry, the discovery of the fundamental theorem of algebra, and the invention of the method of least squares.
           </p>
 
           <p>
-            Lagrange's life was marked by political upheaval and personal tragedy. He lived through the French Revolution and was forced to flee Paris at one point due to his association with the royal court. He also suffered the loss of his wife and several children, which he wrote about in a series of poignant letters. Despite these challenges, Lagrange continued to work tirelessly on his mathematical research, producing a body of work that continues to be studied and admired today. He died in Paris in 1813, having left an indelible mark on the history of mathematics.   
-          </p>
-          
-        </paragraphs>
-
-        <paragraphs xml:id="bio-jordan"><title>Camille Jordan</title>
-
-          <p>
-            Camille Jordan (1838-1922) was a French mathematician who made significant contributions to the development of group theory, number theory, and algebraic geometry. Jordan's most important work was his theory of finite groups, which provided a rigorous framework for the study of symmetry and structure. He was also known for his work on the theory of equations, and he developed important results on modular forms, hyperelliptic functions, and algebraic curves.
-          </p>
-
-          <p>
-            Jordan was born in Lyons, France, and he received his education at the École Polytechnique in Paris. After completing his studies, he worked as a professor of mathematics at several universities, including the University of Lille and the Collège de France. In addition to his research, Jordan was an influential teacher and mentor, and he played a key role in the development of mathematical education in France.          
-          </p>
-
-          <p>
-            Jordan was widely recognized for his contributions to mathematics, and he received numerous awards and honors during his lifetime. He was a member of the French Academy of Sciences, and he was awarded the Grand Prix des Sciences Mathématiques in 1892. Jordan's work has had a lasting impact on the development of group theory and algebraic geometry, and his insights continue to be studied and applied in modern mathematics.
-          </p>
-          
-        </paragraphs>
-
-        <paragraphs xml:id="bio-noether"><title>Emmy Noether</title>
-
-          <p>
-            Emmy Noether (1882-1935) was a German mathematician who made groundbreaking contributions to the fields of algebra and theoretical physics. Born in Erlangen, Germany, Noether was the daughter of a mathematics professor and grew up with a strong interest in the subject. Despite facing discrimination as a woman in a male-dominated field, Noether pursued her passion for mathematics and eventually became a professor at the University of Göttingen.          
-          </p>
-
-          <p>
-            Noether's work in algebra revolutionized the field and laid the foundation for modern abstract algebra. She developed the concept of "Noetherian rings" and proved several theorems that are now known as "Noether's theorems," including a fundamental theorem linking symmetries and conservation laws in physics. Her work also had a significant impact on the development of group theory and the study of algebraic geometry.          
-          </p>
-
-          <p>
-            In addition to her contributions to mathematics, Noether played an important role in the scientific community as a mentor and advocate for women in science. She taught and mentored several notable mathematicians, including Hermann Weyl and Richard Courant, and was a founding member of the Mathematical Association of America. Despite facing discrimination and persecution as a Jew in Nazi Germany, Noether continued to work and inspire others until her untimely death at the age of 53. She is remembered today as one of the most influential mathematicians of the 20th century.          
-          </p>
-          
-        </paragraphs>
-
-        <paragraphs xml:id="bio-hilbert"><title>David Hilbert</title>
-          <p>
-            David Hilbert (1862-1943) was a German mathematician who made significant contributions to a wide range of fields, including algebra, number theory, geometry, mathematical physics, and the foundations of mathematics. Hilbert is perhaps best known for his work on the foundations of mathematics, where he sought to develop a formal, axiomatic approach to mathematics that would provide a solid, logical foundation for the discipline. His work on the foundations of mathematics led to the development of important concepts such as Hilbert space, Hilbert's program, and the theory of integral equations.
-          </p>
-
-          <p>
-            Hilbert was born in Königsberg, Germany (now Kaliningrad, Russia), and he studied mathematics at the University of Königsberg. After completing his studies, he worked as a professor of mathematics at several universities in Germany, including the University of Göttingen, where he spent most of his career. In addition to his research, Hilbert was an influential teacher and mentor, and he played a key role in the development of mathematical education in Germany.
-          </p>
-
-          <p>
-            Hilbert was widely recognized for his contributions to mathematics, and he received numerous awards and honors during his lifetime. He was a member of the Prussian Academy of Sciences and the German Academy of Sciences, and he was awarded the Royal Society's Copley Medal in 1930. Hilbert's work has had a lasting impact on the development of mathematics, and his insights continue to be studied and applied in modern mathematics.
-          </p>
-          
-        </paragraphs>
-
-        <paragraphs xml:id="bio-smith"><title>Henry John Stephen Smith</title>
-
-          <p>
-            Henry John Stephen Smith was a British mathematician born in Dublin, Ireland in 1826. He was the second son of a barrister and was educated at Trinity College Dublin, where he studied mathematics and classics. He received his BA in 1847 and his MA in 1852. He began teaching at Trinity College in 1850 and was appointed professor of geometry there in 1856. Smith made significant contributions to the theory of elliptic functions and their applications to mechanics, and to the theory of algebraic invariants. He is also known for his work on the arithmetic of algebraic curves and for his contributions to the study of the zeta function.        
-          </p>
-
-          <p>
-            In addition to his work in mathematics, Smith was involved in the administration of Trinity College Dublin. He served as Registrar of the University from 1867 to 1884, and in 1874 he was appointed the first dean of the newly formed Faculty of Science. He was also involved in the foundation of the Royal Irish Academy, and served as its president from 1886 to 1890. Smith was widely respected for his administrative abilities as well as his mathematical accomplishments.
-          </p>
-
-          <p>
-            Smith died in 1883 at the age of 56. He is remembered as one of the most important mathematicians of his time, and his contributions to the theory of algebraic invariants and the theory of elliptic functions continue to be studied today. The Smith normal form, a method for finding the elementary divisors of a matrix, is named after him.
+            In addition to his work in mathematics, Gauss also made significant contributions to the fields of physics and astronomy. He was one of the first scientists to discover the planet Ceres and made important contributions to the study of electromagnetism and the theory of celestial mechanics. Gauss was widely recognized as one of the greatest minds of his time, and his work continues to influence and inspire mathematicians and scientists to this day.
           </p>
           
         </paragraphs>
@@ -26566,6 +26488,37 @@
               
         </paragraphs>
 
+        <paragraphs xml:id="bio-hilbert"><title>David Hilbert</title>
+          <p>
+            David Hilbert (1862-1943) was a German mathematician who made significant contributions to a wide range of fields, including algebra, number theory, geometry, mathematical physics, and the foundations of mathematics. Hilbert is perhaps best known for his work on the foundations of mathematics, where he sought to develop a formal, axiomatic approach to mathematics that would provide a solid, logical foundation for the discipline. His work on the foundations of mathematics led to the development of important concepts such as Hilbert space, Hilbert's program, and the theory of integral equations.
+          </p>
+
+          <p>
+            Hilbert was born in Königsberg, Germany (now Kaliningrad, Russia), and he studied mathematics at the University of Königsberg. After completing his studies, he worked as a professor of mathematics at several universities in Germany, including the University of Göttingen, where he spent most of his career. In addition to his research, Hilbert was an influential teacher and mentor, and he played a key role in the development of mathematical education in Germany.
+          </p>
+
+          <p>
+            Hilbert was widely recognized for his contributions to mathematics, and he received numerous awards and honors during his lifetime. He was a member of the Prussian Academy of Sciences and the German Academy of Sciences, and he was awarded the Royal Society's Copley Medal in 1930. Hilbert's work has had a lasting impact on the development of mathematics, and his insights continue to be studied and applied in modern mathematics.
+          </p>
+          
+        </paragraphs>
+
+        <paragraphs xml:id="bio-jordan"><title>Camille Jordan</title>
+
+          <p>
+            Camille Jordan (1838-1922) was a French mathematician who made significant contributions to the development of group theory, number theory, and algebraic geometry. Jordan's most important work was his theory of finite groups, which provided a rigorous framework for the study of symmetry and structure. He was also known for his work on the theory of equations, and he developed important results on modular forms, hyperelliptic functions, and algebraic curves.
+          </p>
+
+          <p>
+            Jordan was born in Lyons, France, and he received his education at the École Polytechnique in Paris. After completing his studies, he worked as a professor of mathematics at several universities, including the University of Lille and the Collège de France. In addition to his research, Jordan was an influential teacher and mentor, and he played a key role in the development of mathematical education in France.          
+          </p>
+
+          <p>
+            Jordan was widely recognized for his contributions to mathematics, and he received numerous awards and honors during his lifetime. He was a member of the French Academy of Sciences, and he was awarded the Grand Prix des Sciences Mathématiques in 1892. Jordan's work has had a lasting impact on the development of group theory and algebraic geometry, and his insights continue to be studied and applied in modern mathematics.
+          </p>
+          
+        </paragraphs>
+
         <paragraphs xml:id="bio-klein"><title>Felix Klein</title>
 
             <p>
@@ -26582,7 +26535,53 @@
                 
         </paragraphs>
 
-        
+        <paragraphs xml:id="bio-lagrange"><title>Joseph-Louis Lagrange</title>
+
+          <p>
+            Joseph-Louis Lagrange (1736-1813) was an Italian-French mathematician who made significant contributions to many areas of mathematics, including algebra, calculus, and number theory. Born in Turin, Italy, Lagrange showed early promise in mathematics and was admitted to the Royal Academy of Sciences at the age of 19. He later moved to Paris, where he became a prominent member of the scientific community and a professor at the École Polytechnique.       
+          </p>
+
+          <p>
+            Lagrange's contributions to mathematics were wide-ranging and profound. He is perhaps best known for his work on the calculus of variations, which helped to lay the foundation for modern optimization theory. He also made important contributions to number theory, including the study of Diophantine equations and the development of the theory of binary quadratic forms. In addition, Lagrange made important contributions to classical mechanics, including the development of the principle of least action and the formulation of Lagrangian mechanics.      
+          </p>
+
+          <p>
+            Lagrange's life was marked by political upheaval and personal tragedy. He lived through the French Revolution and was forced to flee Paris at one point due to his association with the royal court. He also suffered the loss of his wife and several children, which he wrote about in a series of poignant letters. Despite these challenges, Lagrange continued to work tirelessly on his mathematical research, producing a body of work that continues to be studied and admired today. He died in Paris in 1813, having left an indelible mark on the history of mathematics.   
+          </p>
+          
+        </paragraphs>
+
+        <paragraphs xml:id="bio-noether"><title>Emmy Noether</title>
+
+          <p>
+            Emmy Noether (1882-1935) was a German mathematician who made groundbreaking contributions to the fields of algebra and theoretical physics. Born in Erlangen, Germany, Noether was the daughter of a mathematics professor and grew up with a strong interest in the subject. Despite facing discrimination as a woman in a male-dominated field, Noether pursued her passion for mathematics and eventually became a professor at the University of Göttingen.          
+          </p>
+
+          <p>
+            Noether's work in algebra revolutionized the field and laid the foundation for modern abstract algebra. She developed the concept of "Noetherian rings" and proved several theorems that are now known as "Noether's theorems," including a fundamental theorem linking symmetries and conservation laws in physics. Her work also had a significant impact on the development of group theory and the study of algebraic geometry.          
+          </p>
+
+          <p>
+            In addition to her contributions to mathematics, Noether played an important role in the scientific community as a mentor and advocate for women in science. She taught and mentored several notable mathematicians, including Hermann Weyl and Richard Courant, and was a founding member of the Mathematical Association of America. Despite facing discrimination and persecution as a Jew in Nazi Germany, Noether continued to work and inspire others until her untimely death at the age of 53. She is remembered today as one of the most influential mathematicians of the 20th century.          
+          </p>
+          
+        </paragraphs>
+
+        <paragraphs xml:id="bio-smith"><title>Henry John Stephen Smith</title>
+
+          <p>
+            Henry John Stephen Smith was a British mathematician born in Dublin, Ireland in 1826. He was the second son of a barrister and was educated at Trinity College Dublin, where he studied mathematics and classics. He received his BA in 1847 and his MA in 1852. He began teaching at Trinity College in 1850 and was appointed professor of geometry there in 1856. Smith made significant contributions to the theory of elliptic functions and their applications to mechanics, and to the theory of algebraic invariants. He is also known for his work on the arithmetic of algebraic curves and for his contributions to the study of the zeta function.        
+          </p>
+
+          <p>
+            In addition to his work in mathematics, Smith was involved in the administration of Trinity College Dublin. He served as Registrar of the University from 1867 to 1884, and in 1874 he was appointed the first dean of the newly formed Faculty of Science. He was also involved in the foundation of the Royal Irish Academy, and served as its president from 1886 to 1890. Smith was widely respected for his administrative abilities as well as his mathematical accomplishments.
+          </p>
+
+          <p>
+            Smith died in 1883 at the age of 56. He is remembered as one of the most important mathematicians of his time, and his contributions to the theory of algebraic invariants and the theory of elliptic functions continue to be studied today. The Smith normal form, a method for finding the elementary divisors of a matrix, is named after him.
+          </p>
+          
+        </paragraphs>
 
       </appendix>
 

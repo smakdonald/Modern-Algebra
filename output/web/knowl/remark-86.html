@@ -12,9 +12,21 @@
 </head>
 <body class="ignore-math">
 <article class="remark remark-like"><h3 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">5.9</span><span class="period">.</span>
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">4.38</span><span class="period">.</span>
 </h3>
-<div class="para">Note that some of the diagonal entries could be <span class="process-math">\(0\text{.}\)</span> Recall <span class="process-math">\(s \mid 0\)</span> for all <span class="process-math">\(s \in R\)</span> (including <span class="process-math">\(s = 0\)</span>), and <span class="process-math">\(0\)</span> is the only element that divides <span class="process-math">\(0\text{.}\)</span> So, the “tail'' end of the sequence could be all <span class="process-math">\(0\)</span>'s, and indeed if <span class="process-math">\(s_{i,i} = 0\)</span> for some <span class="process-math">\(i\)</span> then all subsequent diagonal entries must be <span class="process-math">\(0\text{.}\)</span>
-</div></article><span class="incontext"><a href="sec-snf.html#remark-86" class="internal">in-context</a></span>
+<div class="para logical">
+<div class="para">Say <span class="process-math">\(X = [g]_B^B\)</span> is the square matrix representing <span class="process-math">\(g\)</span> with respect to <span class="process-math">\(B\text{.}\)</span> If <span class="process-math">\(B'\)</span> is another basis of <span class="process-math">\(V\)</span> and <span class="process-math">\(Y = [g]_{B'}^{B'}\)</span> is the matrix representing <span class="process-math">\(g\)</span> with respect to <span class="process-math">\(B'\)</span> (used for both the source and target of the map), then we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+Y = P X P^{-1}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(P = [\id_V]_{B'}^{B}\)</span> is the change of basis matrix. This holds since</div>
+<div class="displaymath process-math">
+\begin{equation*}
+PXP^{-1} = [\id_V]_{B'}^{B} [g]_B^B [\id_V]_{B}^{B'} = [g]_{B'}^{B'} = Y.
+\end{equation*}
+</div>
+</div></article><span class="incontext"><a href="sec-operator.html#remark-86" class="internal">in-context</a></span>
 </body>
 </html>

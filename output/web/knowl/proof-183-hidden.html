@@ -11,18 +11,19 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><article class="hiddenproof"><div class="para logical">
-<div class="para">This is a consequence of the Isomorphism Theorems. In detail, a composition series for <span class="process-math">\(G/N\)</span> has the form</div>
+<div class="para">If <span class="process-math">\(C\)</span> is another basis, then</div>
 <div class="displaymath process-math">
 \begin{equation*}
-e \unlhd M_1/N \unlhd M_2/N \unlhd\cdots \unlhd M_k/N = G/N
+[\a]_C^C = P [\a]_B^B P^{-1}
 \end{equation*}
 </div>
-<div class="para">where <span class="process-math">\(N \unlhd M_1 \unlhd\cdots \unlhd M_k = G\text{.}\)</span> If <span class="process-math">\(e \unlhd N_1 \unlhd\cdots \unlhd N_j = N\)</span> is a composition seires for <span class="process-math">\(N\text{,}\)</span> then</div>
+<div class="para">for an invertible matrix <span class="process-math">\(P\)</span> (specifically, <span class="process-math">\(P = [\id]_B^C\)</span>). Then</div>
 <div class="displaymath process-math">
 \begin{equation*}
-e \unlhd N_1 \unlhd\cdots \unlhd N_j \unlhd M_1 \unlhd\cdots \unlhd M_k = G
+\det([\a]_C^C)  = \det(P [\a]_B^B P^{-1}) = \det(P) \det([\a]_B^B) \det(P^{-1}) =\det(P) \det(P^{-1}) \det([\a]_B^B) 
 \end{equation*}
 </div>
-<div class="para">is a composition series for <span class="process-math">\(G\)</span> since <span class="process-math">\(M_i/M_{i-1} \cong (M_i/N)/(M_{i-1}/N)\)</span> for all <span class="process-math">\(i = 1, \dots, k\text{.}\)</span> (For the case <span class="process-math">\(i = 1\text{,}\)</span> interpret <span class="process-math">\(M_0\)</span> as <span class="process-math">\(N\text{.}\)</span>)</div>
+<div class="para">using the Theorem. Also by the Theorem <span class="process-math">\(\det(P) \det(P^{-1}) = \det(PP^{-1}) = \det(I_n) = 1\text{.}\)</span>
+</div>
 </div></article></body>
 </html>

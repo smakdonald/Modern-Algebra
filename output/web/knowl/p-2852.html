@@ -13,28 +13,15 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(g: V \to V\)</span> be the function given as multiplication by <span class="process-math">\(x\text{.}\)</span> Then <span class="process-math">\(g\)</span> is an <span class="process-math">\(F\)</span>-linear operator, since <span class="process-math">\(g(v+v') = x(v+v') = xv + xv' = g(v) + g(v')\)</span> and <span class="process-math">\(g(cv) = x(cv) = c (xv) = c g(v)\text{.}\)</span> (In fact, <span class="process-math">\(g\)</span> is <span class="process-math">\(F[x]\)</span>-linear, but we won't use that fact.) Relative to the ordered basis <span class="process-math">\(\ov{1}, \ov{x}, \dots, \ov{x^{n-1}}\text{,}\)</span> the matrix of <span class="process-math">\(g\)</span> is</div>
-<div class="displaymath process-math">
+<div class="para">Let <span class="process-math">\(\phi: F[x] \to L\)</span> be the evaluation homomorphism, given by sending <span class="process-math">\(f(x)\)</span> to <span class="process-math">\(f(\a)\)</span> <code class="code-inline tex2jax_ignore">[provisional cross-reference: empty]</code>. Note that <span class="process-math">\(\phi\)</span> satisfies <span class="process-math">\(\phi|_F = \id_F\)</span> and <span class="process-math">\(\phi(x) = \alpha\text{.}\)</span> We have <span class="process-math">\(\im(\phi) = F[\a]\)</span> by definition of the latter. The First Isomorphism Theorem for rings <code class="code-inline tex2jax_ignore">[provisional cross-reference: empty]</code> thus gives that <span class="process-math">\(\phi\)</span> induces a ring isomorphism</div>
+<div class="displaymath process-math" data-contains-math-knowls="   ">
 \begin{equation*}
-C(f) :=
-\begin{bmatrix}
-0 &amp; 0 &amp; \cdots &amp; 0 &amp; -a_0 \\
-1 &amp; 0 &amp; \cdots &amp; 0 &amp; -a_1 \\
-0 &amp; 1 &amp; \cdots &amp; 0 &amp; -a_2 \\
-\vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\
-0 &amp; 0 &amp; \cdots &amp; 1 &amp; -a_{n-1} \\   
-\end{bmatrix}
+\ov{\phi}: \frac{F[x]}{I}  \xra{\cong} F[\a]
 \end{equation*}
 </div>
-<div class="para">The right-most column is due to the fact that, since <span class="process-math">\(\overline{f(x)} = 0\)</span> in <span class="process-math">\(V\text{,}\)</span> we have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-x \cdot \overline{x^{n-1}} =
-\overline{x^n} = -a_{n-1} \overline{x^{n-1}} -a_{n-2} \overline{x^{n-2}} - \cdots - a_1 \overline{x} - a_0 \overline{1}.
-\end{equation*}
+<div class="para">given by <span class="process-math">\(\ov{\phi}(f(x)+(p(x)))={\phi}(f(x))=f(\a)\text{.}\)</span> In particular, since <span class="process-math">\(F[\a]\)</span> is a subring of <span class="process-math">\(L\text{,}\)</span> it is an integral domain, <code class="code-inline tex2jax_ignore">[provisional cross-reference: empty]</code> and hence <span class="process-math">\(I\)</span> must be a prime ideal (possibly the <span class="process-math">\(0\)</span> ideal). <code class="code-inline tex2jax_ignore">[provisional cross-reference: empty]</code>
 </div>
-<div class="para">The matrix <span class="process-math">\(C(f)\)</span> is known as the <dfn class="terminology">companion matrix</dfn> of <span class="process-math">\(f(x)\)</span> - it is defined for any monic polynomials with entries in a field.</div>
 </div>
-<span class="incontext"><a href="sec-det.html#p-2852" class="internal">in-context</a></span>
+<span class="incontext"><a href="sec-algebraic.html#p-2852" class="internal">in-context</a></span>
 </body>
 </html>

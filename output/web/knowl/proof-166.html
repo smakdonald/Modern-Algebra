@@ -12,17 +12,50 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<div class="para">Let <span class="process-math">\(K\)</span> be the splitting field of <span class="process-math">\(f(x)=x^4-3\)</span> over <span class="process-math">\(\Q\)</span>
-</div> <div class="para logical">
-<div class="para">First, note that <span class="process-math">\(f\)</span> is irreducible in <span class="process-math">\(\Q[x]\)</span> by Eisenstein's Criterion (<span class="process-math">\(p=3\)</span>) The roots of <span class="process-math">\(f\)</span> are - <span class="process-math">\(\sqrt[4]3\text{,}\)</span> - <span class="process-math">\(\sqrt[4]3i\text{,}\)</span> - <span class="process-math">\(-\sqrt[4]3\text{,}\)</span> and - <span class="process-math">\(-\sqrt[4]3i\text{.}\)</span> Let <span class="process-math">\(F=\Q(\sqrt[4]3)\)</span> and notice <span class="process-math">\([F:\Q]=4\text{.}\)</span> As <span class="process-math">\(F\subseteq\R\)</span> we see that <span class="process-math">\([F(i):F]=2\text{,}\)</span> and thus <span class="process-math">\([K:\Q]=8\text{,}\)</span> meaning our basis will have eight elements:</div>
+<div class="para logical">
+<div class="para">Say <span class="process-math">\(f = \sum_i c_i x^i\)</span> with <span class="process-math">\(c_i \in F\text{.}\)</span> Then</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\{1, \sqrt[4]3, (\sqrt[4]3)^2, (\sqrt[4]3)^3,\sqrt[4]3i,(\sqrt[4]3)^2i, (\sqrt[4]3)^3i \}
+\s(f(\a)) = \s \left(\sum_i c_i \a^i\right) = \sum_i \s(c_i) \s(\a)^i = \sum_i c_i \s(\a)^i = f(\s(\a)).
 \end{equation*}
 </div>
-</div> <div class="para">Now that <span class="process-math">\(K\)</span> has been verified to be a splitting field, we see that <span class="process-math">\(\Aut(K/Q)\)</span> is isomorphic to a subgroup of <span class="process-math">\(S_4\)</span> of degree <span class="process-math">\(8\text{.}\)</span>
-</div> <div class="para">Any subgroup of <span class="process-math">\(S_4\)</span> of order <span class="process-math">\(8\)</span> is a Sylow <span class="process-math">\(2\)</span>-subgroup. By <a href="" class="xref" data-knowl="./knowl/thm-sylow.html" title="Theorem 6.11: Sylow's Theorem">Sylow's Theorem</a>, the number of Sylow <span class="process-math">\(2\)</span>-subgroups is either <span class="process-math">\(1\)</span> or <span class="process-math">\(3\text{.}\)</span>
-</div> <div class="para">If there are three they are all conjugate, and conjugation induces an isomorphism on the group, we see that all three subgroups are isomorphic.</div> <div class="para">Let <span class="process-math">\(X\)</span> be the set of left cosets of the subgroup <span class="process-math">\(\{e,s\}\)</span> of <span class="process-math">\(D_8\text{.}\)</span> Note that <span class="process-math">\(|X| = 4\text{.}\)</span> Let <span class="process-math">\(G\)</span> act on <span class="process-math">\(X\)</span> by left multiplication. This action induces a homomorphism <span class="process-math">\(\varphi : G \to P(X)\)</span> where <span class="process-math">\(P(X)\cong S_4\)</span> is the permutation group on <span class="process-math">\(X\text{.}\)</span> As shown in class, the kernel of this homomorphism is the largest normal subgroup contained in <span class="process-math">\(\{e,s\}\text{,}\)</span> which is <span class="process-math">\(\{e\}\text{.}\)</span> Thus, <span class="process-math">\(\varphi\)</span> is injective and the image of <span class="process-math">\(\varphi\)</span> is a subgroup of <span class="process-math">\(S_4\)</span> isomorphic to <span class="process-math">\(D_8\text{.}\)</span>
-</div></article><span class="incontext"><a href="sec-splitting.html#proof-166" class="internal">in-context</a></span>
+<div class="para">This proves (1) and (2) is an immediate consequence.</div>
+</div> <div class="para logical">
+<div class="para">To show (3) we need to first prove that for all <span class="process-math">\(\s \in \Aut(K/F)\text{,}\)</span> the function <span class="process-math">\(\phi(\s): R \to R\)</span> is a bijection. (The target of this function is indeed <span class="process-math">\(R\)</span> by (2).) Since <span class="process-math">\(R\)</span> is finite, we just need to show its one-to-one. This holds since <span class="process-math">\(\s\)</span> itself is one-to-one. (If <span class="process-math">\(\phi(\s)(\a) = \phi(\s)(\a')\)</span> for <span class="process-math">\(\a, \a' \in R\)</span> then <span class="process-math">\(\s(\a) = \s(\a')\)</span> and, since <span class="process-math">\(\s\)</span> is one-to-one, we have <span class="process-math">\(\a = \a'\text{.}\)</span>) Since the group laws of <span class="process-math">\(\Aut(K/F)\)</span> and <span class="process-math">\(\Perm(R)\)</span> are both given as function composition, it is clear that <span class="process-math">\(\phi\)</span> is a group homomorphism. In detail,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi(\s \circ \tau)(\a) = \s(\tau(\a)) = (\phi(\s)\circ \phi(\tau))(\a)
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(\a\)</span> and so <span class="process-math">\(\phi(\s \circ \tau) = \phi(\s) \circ \phi(\tau)\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">Now asssume <span class="process-math">\(K = F(R)\text{.}\)</span> We show <span class="process-math">\(\phi\)</span> is one-to-one by showing its kernel is trivial. Suppose <span class="process-math">\(\phi(\s) = \id_{\Perm(R)}\text{;}\)</span> that is, suppose <span class="process-math">\(\s(\a) = \a\)</span> for all <span class="process-math">\(\a \in R\text{.}\)</span> We show <span class="process-math">\(\s = \id_K\text{.}\)</span> Define</div>
+<div class="displaymath process-math">
+\begin{equation*}
+K^\sigma := \{\beta \in K \mid \s(\beta) = \beta\},
+\end{equation*}
+</div>
+<div class="para">the so-called {} of <span class="process-math">\(\s\text{.}\)</span> Note that <span class="process-math">\(F \subseteq K^\s\)</span> since <span class="process-math">\(\s \in \Aut(K/F)\)</span> and we also have <span class="process-math">\(R \subseteq K^\s\)</span> by assumption. It is easy to see that <span class="process-math">\(K^\s\)</span> is a subfield of <span class="process-math">\(K\text{.}\)</span> (Here are the details: Clearly <span class="process-math">\(1 \in K^\s\text{.}\)</span> For <span class="process-math">\(\beta_1, \beta_2 \in K^\s\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\s(\beta_1 \pm \beta_2) = \s(\beta_1) \pm \s(\beta_2)  = \beta_1 \pm \beta_2,
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\s(\beta_1 \cdot\beta_2) = \s(\beta_1) \cdot \s(\beta_2)  = \beta_1 \cdot \beta_2,
+\end{equation*}
+</div>
+<div class="para">and, if <span class="process-math">\(\beta_2 \ne 0\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\s(1/\beta_2) =1 /\s(\beta_2)  =1/ \beta_2,
+\end{equation*}
+</div>
+<div class="para">and thus <span class="process-math">\(\beta_1 \pm \beta_2, \beta_1 \cdot \beta_2, 1/\beta_2 \in K^\s\text{.}\)</span>) So, <span class="process-math">\(K^\s\)</span> is a subfield of <span class="process-math">\(K\)</span> that contains <span class="process-math">\(F\)</span> and <span class="process-math">\(R\text{,}\)</span> but recall that <span class="process-math">\(F(R)\)</span> is the {} subfield of <span class="process-math">\(K\)</span> that contains <span class="process-math">\(F\)</span> and <span class="process-math">\(R\text{,}\)</span> and so we must have <span class="process-math">\(K^\s = K\text{.}\)</span> But then <span class="process-math">\(\s(\a) = \a\)</span> for all <span class="process-math">\(\a \in K\)</span> and hence <span class="process-math">\(\s = \id_K\text{.}\)</span>
+</div>
+</div></article><span class="incontext"><a href="sec-galext.html#proof-166" class="internal">in-context</a></span>
 </body>
 </html>

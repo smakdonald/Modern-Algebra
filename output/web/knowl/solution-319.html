@@ -13,13 +13,26 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h3 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">G.89.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">G.93.1</span><span class="period">.</span>
 </h3>
-<div class="para">Let <span class="process-math">\(F \sse L\)</span> be a finite extension of fields and let <span class="process-math">\(f(x) \in F[x]\)</span> be an irreducible polynomial of degree <span class="process-math">\(d\)</span> such that <span class="process-math">\(\gcd(d,[L : F ]) = 1\text{.}\)</span> Let <span class="process-math">\([L:F]=n\)</span>
-</div> <div class="para">First, note that if <span class="process-math">\(d=1\)</span> then <span class="process-math">\(f\)</span> is always irreducible, so we may reduce to the case where <span class="process-math">\(d&gt;1\text{.}\)</span>
-</div> <div class="para">Let <span class="process-math">\(K\)</span> denote the algebraic closure of <span class="process-math">\(F\text{,}\)</span> let <span class="process-math">\(\a\)</span> be a root of <span class="process-math">\(f\in K\text{,}\)</span> and consider <span class="process-math">\(F(\a)\)</span> and <span class="process-math">\(L(\a)\text{.}\)</span> Let <span class="process-math">\(g(x)\)</span> denote the minimal polynomial of <span class="process-math">\(\a\in L(\a)\text{,}\)</span> and let <span class="process-math">\(\deg(g)=q\text{.}\)</span> Thus <span class="process-math">\([L(\a):L]=q\text{.}\)</span> By the Degree Formula we have - <span class="process-math">\([L(\a):F]=[L(\a):L][L:F]=qn\)</span> - <span class="process-math">\([L(\a):F]=[L(\a):F(a)][F(a):F]=md\)</span> for some <span class="process-math">\(m\in \N\text{.}\)</span> Thus <span class="process-math">\(qn=md\)</span> and <span class="process-math">\(md|qn\)</span> As <span class="process-math">\(n\)</span> and <span class="process-math">\(d\)</span> are relatively prime we have <span class="process-math">\(d|q\text{.}\)</span> However, <span class="process-math">\(q\)</span> is the minimal polynomial of <span class="process-math">\(\a\text{,}\)</span> and thus <span class="process-math">\(q\leq d\text{,}\)</span> yielding <span class="process-math">\(q=d\text{.}\)</span> Thus <span class="process-math">\(f=kg\)</span> for some <span class="process-math">\(k\in F\text{.}\)</span> As irreducible polynomials multiplied by a constant are still irreducible, we see that <span class="process-math">\(f\)</span> is indeed irreducible in <span class="process-math">\(K[x]\text{.}\)</span>
+<div class="para">Let <span class="process-math">\(G\)</span> be a group of order <span class="process-math">\(p^n\)</span> where <span class="process-math">\(p\)</span> is a prime and <span class="process-math">\(n \geq 1\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">The <a href="" class="xref" data-knowl="./knowl/thm-class-eq.html" title="Theorem 5.41: Class Equation">Class Equation</a> tells us</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-class-eq.html">
+\begin{equation*}
+|G|=|Z(G)|+\sum\limits_{g\in G}[G:C_G(g)],
+\end{equation*}
 </div>
+<div class="para">where <span class="process-math">\(C_G(g)\)</span> are the centralizers with more than one element. Notice that this means <span class="process-math">\(|C_G(g)|\big||G|\text{,}\)</span> and thus each centralizer is a power of <span class="process-math">\(p\text{.}\)</span> Thus we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-class-eq.html">
+\begin{equation*}
+p^n=|Z(G)|+pk
+\end{equation*}
 </div>
-<span class="incontext"><a href="section-75.html#solution-319" class="internal">in-context</a></span>
+<div class="para">for some <span class="process-math">\(k\in\N\text{.}\)</span> Thus the center of <span class="process-math">\(G\)</span> cannot be trivial, else we would not be able to sum to a power of <span class="process-math">\(p\text{.}\)</span>
+</div>
+</div> <div class="para">Part (b) The trivial subgroup has order <span class="process-math">\(1=p^0\text{.}\)</span> Suppose inductively that there exists a subgroup of order <span class="process-math">\(p^{j}\)</span> that has a subgroup for every power of <span class="process-math">\(p\)</span> in between.</div> <div class="para">Consider, if you will, a group of order <span class="process-math">\(p^{j+1}\text{,}\)</span> <span class="process-math">\(H\text{.}\)</span> As this is a <span class="process-math">\(p\)</span>-group, by Part (a) the center is nontrivial, making it a <span class="process-math">\(p\)</span> group as well, and thus it has a subgroup of order <span class="process-math">\(p\text{,}\)</span> <span class="process-math">\(K\text{,}\)</span> which is normal in <span class="process-math">\(H\)</span> as it lies within the center, so we mod out by <span class="process-math">\(K\)</span> to see that <span class="process-math">\(H\)</span> has a subgroup of order <span class="process-math">\(p^j\text{,}\)</span> which has subgroups of all the other powers by the induction hypothesis.</div>
+</div>
+<span class="incontext"><a href="section-78.html#solution-319" class="internal">in-context</a></span>
 </body>
 </html>

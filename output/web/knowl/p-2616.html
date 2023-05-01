@@ -13,52 +13,13 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Recall that the invariant factors must divide all preceding invariant factors in RCF, and observe that <span class="process-math">\((x^4-1)\)</span> factors as <span class="process-math">\((x^2-1)(x^2+1)\)</span> and <span class="process-math">\((x^2-1)\)</span> factors as <span class="process-math">\((x-1)(x+1)\text{.}\)</span> Given this information, after some fiddling with the factors, we find four possible options for invariant factors of <span class="process-math">\(A\text{:}\)</span>
-</div>
-<ol class="decimal">
-<li><div class="para"><span class="process-math">\(x^6-x^4-x^2+1=(x^2 -1)(x^4- 1)\text{,}\)</span></div></li>
-<li><div class="para"><span class="process-math">\((x^2-1),(x^4-1)\text{,}\)</span></div></li>
-<li><div class="para">
-<span class="process-math">\((x+1), (x-1)(x^4-1)\text{,}\)</span> and</div></li>
-<li><div class="para"><span class="process-math">\((x-1),(x+1)(x^4-1)\text{.}\)</span></div></li>
-</ol>
-<div class="para">Let <span class="process-math">\(f(x)=x^6-x^4-x^2+1, g(x)=(x^4-1),\)</span> <span class="process-math">\(h(x)=x^2-1\text{,}\)</span> <span class="process-math">\(j(x)=(x-1),\)</span> and <span class="process-math">\(k(x)=(x+1)\text{.}\)</span> Observe the companion matrices of each of these polynomials:</div>
+<div class="para">If <span class="process-math">\(g(A) = 0\text{,}\)</span> then for each <span class="process-math">\(v \in F^n\text{,}\)</span> by definition of the action of <span class="process-math">\(F[x]\)</span> on <span class="process-math">\(F^n_A\)</span> we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
-C(f)=\begin{bmatrix}
-0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; -1\\
-1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
-0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 1\\
-0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0\\
-0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 1\\
-0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0\\
-\end{bmatrix},
-C(g)=\begin{bmatrix}
-0 &amp; 0 &amp; 0 &amp; 1\\
-1 &amp; 0 &amp; 0 &amp; 0\\
-0 &amp; 1 &amp; 0 &amp; 0\\
-0 &amp; 0 &amp; 1 &amp; 0\\
-\end{bmatrix},
-C(h)=\begin{bmatrix}
-0 &amp; 1\\
-1 &amp; 0\\
-\end{bmatrix},
-C(j)=\begin{bmatrix}
-1\\ 
-\end{bmatrix}\textrm{ and } 
-C(k)=\begin{bmatrix}
--1\\ 
-\end{bmatrix}
+g(x) \cdot v = g(A) v = 0
 \end{equation*}
 </div>
-<div class="para">Behold: explicit representatives of each similarity class:</div>
-<ol class="decimal">
-<li><div class="para"><span class="process-math">\(C(f)\text{,}\)</span></div></li>
-<li><div class="para"><span class="process-math">\(C(g)\oplus C(h)\text{,}\)</span></div></li>
-<li><div class="para">
-<span class="process-math">\(C(k)\oplus C(gj)\text{,}\)</span> and</div></li>
-<li><div class="para"><span class="process-math">\(C(j)\oplus C(gk)\text{.}\)</span></div></li>
-</ol>
+<div class="para">and so <span class="process-math">\(g(x)\)</span> annihilates <span class="process-math">\(F^n_A\text{.}\)</span> Conversely, if <span class="process-math">\(g(x)\)</span> annihilates <span class="process-math">\(F^n_A\text{,}\)</span> then <span class="process-math">\(g(A) \cdot v = 0\)</span> for all <span class="process-math">\(v \in F^n\text{.}\)</span> Taking <span class="process-math">\(v = e_i\)</span> for each <span class="process-math">\(i\text{,}\)</span> this says that each column of <span class="process-math">\(g(A)\)</span> is <span class="process-math">\(0\)</span> and hence <span class="process-math">\(g(A)\)</span> is the zero matrix.</div>
 </div>
 <span class="incontext"><a href="sec-cayley-hamilton.html#p-2616" class="internal">in-context</a></span>
 </body>

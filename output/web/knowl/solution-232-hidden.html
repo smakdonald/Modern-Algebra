@@ -11,10 +11,51 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<div class="para logical"><ol class="decimal"><li><div class="para">Let <span class="process-math">\(C_3 = \langle a \rangle\)</span> be the cyclic group of order <span class="process-math">\(3\text{,}\)</span> and let <span class="process-math">\(C_9 = \langle b \rangle\)</span> be the cyclic group of order <span class="process-math">\(9\text{.}\)</span> Let <span class="process-math">\(\phi \colon C_9 \to \operatorname{Aut}(C_3)\)</span> be the homomorphism defined by <span class="process-math">\(\phi(b^i)(a) = a^i\)</span> for <span class="process-math">\(0 \le i \le 8\text{,}\)</span> where we identify <span class="process-math">\(\operatorname{Aut}(C_3)\)</span> with <span class="process-math">\(C_2\)</span> via the isomorphism <span class="process-math">\(\operatorname{Aut}(C_3) \cong C_2\)</span> given by sending the non-identity automorphism to the generator of <span class="process-math">\(C_2\text{.}\)</span>
-</div></li></ol></div> <div class="para">Then the semi-direct product <span class="process-math">\(G = C_3 \rtimes_{\phi} C_9\)</span> has order <span class="process-math">\(27\)</span> and is non-abelian. To see that <span class="process-math">\(G\)</span> is non-abelian, note that <span class="process-math">\(bab^{-1} \neq a\)</span> for any <span class="process-math">\(b \in C_9 \setminus {1}\text{,}\)</span> since <span class="process-math">\(a\)</span> has no non-trivial automorphisms.</div> <div class="para logical"><ol class="decimal"><li><div class="para">To find a presentation of <span class="process-math">\(G\text{,}\)</span> we need to identify the generators and relations. Since <span class="process-math">\(C_3\)</span> and <span class="process-math">\(C_9\)</span> are both cyclic, we can take the generators to be <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> respectively. Moreover, since <span class="process-math">\(C_3\)</span> is normal in <span class="process-math">\(G\text{,}\)</span> we have <span class="process-math">\(bab^{-1} = a^i\)</span> for some <span class="process-math">\(i \in {1, 2}\text{.}\)</span>
-</div></li></ol></div> <div class="para">To determine the value of <span class="process-math">\(i\text{,}\)</span> note that <span class="process-math">\(C_9\)</span> acts on <span class="process-math">\(C_3\)</span> by automorphisms, and the non-identity automorphism of <span class="process-math">\(C_3\)</span> is inversion <span class="process-math">\(a \mapsto a^{-1}\text{.}\)</span> Since <span class="process-math">\(bab^{-1} \neq a^{-1}\text{,}\)</span> we must have <span class="process-math">\(i = 2\text{.}\)</span>
-</div> <div class="para">Therefore, a presentation of <span class="process-math">\(G\)</span> is given by <span class="process-math">\(\langle a, b \mid a^3 = b^9 = 1, bab^{-1} = a^2\rangle\text{.}\)</span>
+<div class="para">Let <span class="process-math">\(F=\Q\text{,}\)</span> <span class="process-math">\(n\)</span> a positive integer, and <span class="process-math">\(A\)</span> a unipotent <span class="process-math">\(4\times 4\)</span> matrix with entries in <span class="process-math">\(F\text{.}\)</span> Thus <span class="process-math">\(A-I\)</span> is nilpotent. Let <span class="process-math">\(\l\)</span> be an eigenvalue of <span class="process-math">\(A-I\text{.}\)</span> Then <span class="process-math">\((A-I)v=\l v\text{,}\)</span> so <span class="process-math">\(Av-Iv=\l v\)</span> and <span class="process-math">\(Av=\l v+Iv\text{.}\)</span> As <span class="process-math">\(Iv=v\text{,}\)</span> we have <span class="process-math">\(Av=\l v+v\)</span> and <span class="process-math">\(Av=(\l+1)v\text{.}\)</span>
+</div> <div class="para">Notice that as <span class="process-math">\(\l\)</span> is an eigenvalue of <span class="process-math">\(I\text{,}\)</span> we have <span class="process-math">\(\l +1\)</span> as an eigenvalue of <span class="process-math">\(A\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Assume inductively that <span class="process-math">\(\l^{n-1}\)</span> is an eigenvalue of <span class="process-math">\((A-I)^{n-1}\text{.}\)</span> Notice</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(A+I)^nv=(A+I)(A+I)^{n-1}v=(A+I)\l^{n-1}v=\l^{n-1}(A+I)v=\l^{n-1}\l=\l^n,
+\end{equation*}
+</div>
+<div class="para">making <span class="process-math">\(\l\)</span> an eigenvalue of <span class="process-math">\((A+I)^n\text{.}\)</span> Thus if <span class="process-math">\(\l\)</span> is an eigenvalue of <span class="process-math">\(A-I\text{,}\)</span> it is an eigenvalue of <span class="process-math">\((A-I)^n\)</span> as well. As <span class="process-math">\((A-I)\)</span> is nilpotent, there exists some <span class="process-math">\(k\)</span> such that <span class="process-math">\((A-I)^k=0\text{.}\)</span> This means that <span class="process-math">\(\l^kv=0\text{.}\)</span> As <span class="process-math">\(v\neq 0\)</span> and <span class="process-math">\(\l^k\)</span> is a scalar in a field (and hence integral domain) we have <span class="process-math">\(\l=0\text{.}\)</span> Thus the only eigenvalue of <span class="process-math">\((A-I)\)</span> is <span class="process-math">\(0\text{,}\)</span> meaning that the only eigenvalue of <span class="process-math">\(A\)</span> is <span class="process-math">\(1\text{.}\)</span>
+</div>
+</div> <div class="para">Eigenvalues of <span class="process-math">\(A\)</span> correspond to the roots of <span class="process-math">\(\cp_A(x)\text{,}\)</span> which is a monic quartic polynomial, as <span class="process-math">\(A\)</span> is a <span class="process-math">\(4\times 4\)</span> matrix. Thus <span class="process-math">\(\cp_A(x)=(x-1)^4\text{,}\)</span> as all roots must be <span class="process-math">\(1\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Two matrices are similar if and only if they share the same invariant factors. Given that invariant factors divide <span class="process-math">\(\cp_A(x)\)</span> and each invariant factor must divide the following one, the possible sets of invariant factors for <span class="process-math">\(A\)</span> are the following:</div>
+<ul class="disc">
+<li><div class="para"><span class="process-math">\(\{(x-1)^4\}\text{,}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\{(x-1),(x-1)^3\}\text{,}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\{(x-1), (x-1), (x-1)^2\}\text{,}\)</span></div></li>
+<li><div class="para">
+<span class="process-math">\(\{(x-1)^2, (x-1)^2\}\text{,}\)</span> and</div></li>
+<li><div class="para"><span class="process-math">\(\{(x-1), (x-1), (x-1), (x-1)\}\text{.}\)</span></div></li>
+</ul>
+<div class="para">We identify the companion matrices for each possible invariant factor:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-rcf.html">
+\begin{equation*}
+C(x-1)=\begin{bmatrix} 1 \end{bmatrix},
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-rcf.html">
+\begin{equation*}
+C((x-1)^2)=C(x^2-2x+1)=\begin{bmatrix} 0 &amp; -1 \\ 1 &amp; 2\end{bmatrix},
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-rcf.html">
+\begin{equation*}
+C((x-1)^3)=C(x^3+3x^2+3x-1)=\begin{bmatrix} 0 &amp; 0 &amp; 1 \\ 1 &amp; 0 &amp; -3 \\ 0 &amp; 1 &amp; -3\end{bmatrix},
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-rcf.html">
+\begin{equation*}
+C((x-1)^4)=C(x^4-4x^3+6x^2-4x+1)=\begin{bmatrix} 0 &amp; 0 &amp; 0 &amp; -1 \\ 1 &amp; 0 &amp; 0 &amp; 4 \\ 0 &amp; 1 &amp; 0 &amp; -6 \\ 0 &amp; 0 &amp; 1 &amp; 4\end{bmatrix}.
+\end{equation*}
+</div>
+<div class="para">We define the following: 1. <span class="process-math">\(B=C((x-1)^4)\text{,}\)</span> 2. <span class="process-math">\(C=C(x-1)\oplus C((x-1)^3)\text{,}\)</span> 3. <span class="process-math">\(D=C(x-1)\oplus C(x-1)\oplus C((x-1)^2)\text{,}\)</span> 4. <span class="process-math">\(E=C((x-1)^2)\oplus C((x-1)^2)\text{,}\)</span> and 5. <span class="process-math">\(F=C(x-1)\oplus C(x-1)\oplus C(x-1)\oplus C(x-1)\text{.}\)</span> As each of these matrices is in <a href="" class="xref" data-knowl="./knowl/thm-rcf.html" title="Theorem 6.9: Rational Canonical Form">Rational Canonical Form</a>, they are explicit representatives for each similarity class.</div>
 </div>
 </div></body>
 </html>

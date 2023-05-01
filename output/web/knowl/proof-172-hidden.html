@@ -10,6 +10,19 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para">For the first assertion, consider the unique ring homomorphism <span class="process-math">\(\varphi:\Z \to F\text{.}\)</span> Since <span class="process-math">\(F\)</span> is a domain, the kernel of <span class="process-math">\(\varphi\)</span> is a prime ideal (since <span class="process-math">\(\Z/\ker(\varphi) \cong \im(\varphi)\)</span> and <span class="process-math">\(\im(\varphi)\)</span> is a subring of <span class="process-math">\(F\)</span>). The result holds since the only prime ideals of <span class="process-math">\(\Z\)</span> are <span class="process-math">\((0)\)</span> and <span class="process-math">\((p)\)</span> for a prime integer <span class="process-math">\(p\text{.}\)</span> (Note that this proof shows that, more generally, the characteristic of an integral domain must be either <span class="process-math">\(0\)</span> or a prime.)</div> <div class="para">For the second assertion, observe that the smallest {} of <span class="process-math">\(F\)</span> is the image of the ring map <span class="process-math">\(\varphi: \Z \to F\text{,}\)</span> and by the first assertion, this image is isomorphic to either <span class="process-math">\(\Z\)</span> or <span class="process-math">\(\Z/p\text{.}\)</span> The latter is already a field and hence it is the prime field of <span class="process-math">\(F\text{.}\)</span> In the former case, the prime subfield is isomorphic to the field of fractions of <span class="process-math">\(\Z\text{,}\)</span> which is <span class="process-math">\(\Q\text{.}\)</span>
+<body class="ignore-math"><article class="hiddenproof"><div class="para logical">
+<div class="para">This is a consequence of the Isomorphism Theorems. In detail, a composition series for <span class="process-math">\(G/N\)</span> has the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+e \unlhd M_1/N \unlhd M_2/N \unlhd\cdots \unlhd M_k/N = G/N
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(N \unlhd M_1 \unlhd\cdots \unlhd M_k = G\text{.}\)</span> If <span class="process-math">\(e \unlhd N_1 \unlhd\cdots \unlhd N_j = N\)</span> is a composition seires for <span class="process-math">\(N\text{,}\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+e \unlhd N_1 \unlhd\cdots \unlhd N_j \unlhd M_1 \unlhd\cdots \unlhd M_k = G
+\end{equation*}
+</div>
+<div class="para">is a composition series for <span class="process-math">\(G\)</span> since <span class="process-math">\(M_i/M_{i-1} \cong (M_i/N)/(M_{i-1}/N)\)</span> for all <span class="process-math">\(i = 1, \dots, k\text{.}\)</span> (For the case <span class="process-math">\(i = 1\text{,}\)</span> interpret <span class="process-math">\(M_0\)</span> as <span class="process-math">\(N\text{.}\)</span>)</div>
 </div></article></body>
 </html>

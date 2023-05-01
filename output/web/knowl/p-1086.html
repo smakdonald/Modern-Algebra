@@ -13,17 +13,32 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(G\)</span> be an abelian group of order 75. Since <span class="process-math">\(G\)</span> is finite the rank of <span class="process-math">\(G\)</span> is <span class="process-math">\(r=0\text{.}\)</span> Let's determine the possible elementary divisors <span class="process-math">\(p_i^{a_{i,j}}\)</span> so that</div>
-<div class="displaymath process-math">
+<div class="para">Say I tell you</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-sunzi.html">
 \begin{equation*}
-G\cong \prod_{k=1}^s   \prod_{j=1}^{i_k} \mathbb{Z}/p_i^{a_{k,j}}.
+G \cong \mathbb{Z}^{3} \times \mathbb{Z}/4 \times \mathbb{Z}/8 \times \mathbb{Z}/9 \times \mathbb{Z}/27 \times \mathbb{Z}/25
 \end{equation*}
 </div>
-<div class="para">The above equation gives <span class="process-math">\(75=|G|= \prod_{k=1}^s\prod_{j=1}^{i_k}p_i^{a_{k,j}}\)</span> and the possibilities for factoring <span class="process-math">\(75\)</span> as a product of prime powers are <span class="process-math">\(75=3\cdot 5 \cdot 5\)</span> or <span class="process-math">\(75=3\cdot 25\)</span> which gives</div>
-<div class="displaymath process-math">
+<div class="para">
+<a href="" class="xref" data-knowl="./knowl/thm-sunzi.html" title="Theorem 3.52: Sunzi's Remainder Theorem">Sunzi's Remainder Theorem</a> gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-sunzi.html">
 \begin{equation*}
-G\cong \mathbb{Z}/25 \times \mathbb{Z}/3 \text{ or } G\cong \mathbb{Z}/5 \times \mathbb{Z}/5 \times \mathbb{Z}/3.
+\mathbb{Z}/8 \times \mathbb{Z}/27 \times \mathbb{Z}/25 \cong \mathbb{Z}/(8 \cdot 27 \cdot 25)
 \end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-sunzi.html">
+\begin{equation*}
+\mathbb{Z}/4\times \mathbb{Z}/9  \cong \mathbb{Z}/(4 \cdot 9)
+\end{equation*}
+</div>
+<div class="para">so that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-sunzi.html">
+\begin{equation*}
+G \cong \mathbb{Z}^{3} \times \mathbb{Z}/(4 \cdot 9) \times \mathbb{Z}/(8 \cdot 27 \cdot 25).
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(n_2:=(4 \cdot 9) \mid n_1:=(8 \cdot 27 \cdot 25)\text{,}\)</span> this is in invariant factor form, and hence the rank of <span class="process-math">\(A\)</span> is <span class="process-math">\(3\)</span> and the invariant factors of <span class="process-math">\(A\)</span> are <span class="process-math">\(4 \cdot 9\)</span> and <span class="process-math">\(8 \cdot 27 \cdot 25\text{.}\)</span>
 </div>
 </div>
 <span class="incontext"><a href="sec-ftfgag.html#p-1086" class="internal">in-context</a></span>

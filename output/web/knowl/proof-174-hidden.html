@@ -10,6 +10,80 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para">Let <span class="process-math">\(h = \gcd_{F[x]}(f, g)\text{.}\)</span> To prove (1), we note that <span class="process-math">\(h\)</span> is the unique monic polynomial such that - <span class="process-math">\(h = f \cdot p + g \cdot q\)</span> for some <span class="process-math">\(p,q \in F[x]\text{,}\)</span> - <span class="process-math">\(f = h \cdot \a\)</span> for soem <span class="process-math">\(\a \in F[x]\text{,}\)</span> and - <span class="process-math">\(g = h \cdot \beta\)</span> for soem <span class="process-math">\(\beta \in F[x]\text{.}\)</span> Since <span class="process-math">\(F[x]\)</span> is a subring of <span class="process-math">\(L[x]\text{,}\)</span> these three properties also hold when we regard <span class="process-math">\(h,f,g\)</span> as belonging to <span class="process-math">\(L[x]\)</span> and thus by the uniqueness property, we have <span class="process-math">\(h = \gcd_{L[x]}(f,g)\text{.}\)</span>
-</div> <div class="para logical"><ol class="decimal"><li><div class="para">is a consequence of (1), since if two polynomials factor completely into linear factors, then they are relatively prime if and only if they have no linear factors in common, which is equivalent to their having no roots in common.</div></li></ol></div></article></body>
+<body class="ignore-math"><article class="hiddenproof"><div class="para logical">
+<div class="para">Let us first prove this in the case when <span class="process-math">\(n = 2\)</span> and <span class="process-math">\(\tau\)</span> is the only non-trivial element of <span class="process-math">\(S_2\text{.}\)</span> Say</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\psi: V^{\times 2} \to R
+\end{equation*}
+</div>
+<div class="para">is <span class="process-math">\(R\)</span>-multi-linear (<span class="process-math">\(R\)</span>-bilinear) and alternating. The goal is to prove</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\psi(v,w) = -\psi(w,v)
+\end{equation*}
+</div>
+<div class="para">for any <span class="process-math">\(v,w\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">We have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\psi(v+w, v+w) = 0
+\end{equation*}
+</div>
+<div class="para">on the one hand and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\psi(v+w, v+w) = \psi(v, v+w) + \psi(w, v+w) = \psi(v,v) + \psi(v, w) + \psi(w,v) + \psi(w,w) = \psi(v, w) + \psi(w,v)  
+\end{equation*}
+</div>
+<div class="para">on the other hand. It follows that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\psi(v, w) + \psi(w,v)  = 0
+\end{equation*}
+</div>
+<div class="para">which proves the Lemma in this case.</div>
+</div> <div class="para logical">
+<div class="para">Now let <span class="process-math">\(n\)</span> be arbitrary and <span class="process-math">\(\tau = (i \, j)\)</span> for some <span class="process-math">\(1 \leq i &lt; j \leq n\text{.}\)</span> In this case we need to show</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi(v_1, \dots, v_n) = - \phi(v_1, \dots, v_{i-1}, v_{j}, v_{i+1}, v_{i+2}, \dots, v_{j-1}, v_i, v_{j+1}, \dots, v_n)
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(v_1, \dots, v_n \in V\text{.}\)</span> Fix <span class="process-math">\(n-2\)</span> elements <span class="process-math">\(v_1, \dots, v_{i-1}, v_{i+1}, \dots, v_{j-1}, v_{j+1}, \dots, v_n\)</span> and define</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\psi: V^{\times 2} \to R
+\end{equation*}
+</div>
+<div class="para">by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\psi(v,w) = \phi(v_1, \dots, v_{i-1}, v, v_{i+1}, \dots, v_{j-1}, w,  v_{j+1}, \dots, v_n)
+\end{equation*}
+</div>
+<div class="para">for any <span class="process-math">\(v,w \in V\text{.}\)</span> With this notation the goal is to show</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\psi(v,w) = -\psi(w,v)
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(\phi\)</span> is <span class="process-math">\(R\)</span>-multi-linear and alternating, <span class="process-math">\(\psi: V \times V\to R\)</span> is <span class="process-math">\(R\)</span>-bilinear and alternating, and so the case already proven gives the result.</div>
+</div> <div class="para logical">
+<div class="para">Finally let <span class="process-math">\(n\)</span> and <span class="process-math">\(\tau\)</span> be arbitrary. Then <span class="process-math">\(\tau\)</span> is a product of transpositions — say <span class="process-math">\(\tau = \tau_r \cdots \tau_1\)</span> with each <span class="process-math">\(\tau_i\)</span> a transposition. Proceed by induction on <span class="process-math">\(r\text{.}\)</span> The previous case establishes the result when <span class="process-math">\(r = 1\text{.}\)</span> If <span class="process-math">\(r \geq 2\text{,}\)</span> then using the previous case gives</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\psi(v_\tau(1), \dots, v_\tau(n)) = -\psi(v_\tau'(1), \dots, v_\tau'(n))
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(\tau' = \tau_{r-1} \cdots \tau_1\)</span> and by induction <span class="process-math">\(\psi(v_\tau'(1), \dots, v_\tau'(n)) = (-1)^{r-1}\psi(v_1, \dots, v_n)\text{.}\)</span> Hence</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\psi(v_\tau(1), \dots, v_\tau(n)) = (-1)^{r}\psi(v_1, \dots, v_n)
+\end{equation*}
+</div>
+<div class="para">which proves the result.</div>
+</div></article></body>
 </html>
