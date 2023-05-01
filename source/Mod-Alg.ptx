@@ -8002,7 +8002,7 @@
                 </statement>
               </definition>
 
-              <historical>
+              <historical><title>Rings</title>
                 <p>
                   Rings were first discovered (or created) by the German mathematician David Hilbert in the early 20th century, who used the term "Ring" because of the circular nature of the structure. The operations interact with each other in a circular way, such that multiplication distributes over addition, and addition and multiplication satisfy certain other algebraic properties.
                 </p>
@@ -8128,7 +8128,7 @@
                 </statement>
               </definition>
 
-              <historical>
+              <historical><title>Fields</title>
                 <p>
                   The term "Field" was first introduced by the German mathematician Ernst Steinitz in the early 20th century. It was chosen because of the analogy with the physical concept of a field, such as an electric field or a gravitational field, which also has a notion of addition and multiplication, and satisfies certain algebraic properties.
                 </p>
@@ -8244,6 +8244,18 @@
                   </ol>
                 </p>
               </example>
+
+              <p>Here is a nice generalization.</p>
+
+              <theorem xml:id="thm-binomial-thm-rings"><title>Binomial Theorem for Commutative Rings</title>
+                <statement>
+                  <p>
+                    For any commutative ring <m>R</m> and any elements <m>a</m> and <m>b</m> in <m>R</m>, we have:
+                    <me>(a+b)^n = \sum_{i=0}^n {n\choose i} a^{n-i}b^i</me>
+                    where <m>{n\choose i}</m> is the binomial coefficient, defined as: <m>{n\choose i} = \frac{n!}{i!(n-i)!}</m> with integers <m>n</m> and <m>i</m> such that <m>0\le i\le n</m>.
+                  </p>
+                </statement>
+              </theorem>         
   
           </subsection>  
   
@@ -8890,12 +8902,7 @@
 
         <section xml:id="sec-polyrings"><title>Polynomial Rings</title>
 
-          <blockquote>
-            <p>
-              <q>I had a polynomial once. My doctor removed it.</q>
-            </p>
-            <attribution>Michael Grant, <em>Gone</em></attribution>
-          </blockquote>
+          <blockquote><p><q>I had a polynomial once. My doctor removed it.</q></p><attribution>Michael Grant, <em>Gone</em></attribution></blockquote>
 
           <definition xml:id="def-polynomial-ring"><title>Polynomial Ring</title>
             <statement>
@@ -8920,96 +8927,10 @@
             </statement>
           </definition>
     
-          <remark>
-            <p>
-              If <m>n = 1</m>, letting <m>x = x_1</m>, then <m>R[x]</m> consists of all expressions of the form <m>\sum_{i=0}^\infty r_i x^i</m> with <m>r_i = 0</m> for all but a finite number of <m>i</m>.
-            </p>
-          </remark>
+          <remark><p>If <m>n = 1</m>, letting <m>x = x_1</m>, then <m>R[x]</m> consists of all expressions of the form <m>\sum_{i=0}^\infty r_i x^i</m> with <m>r_i = 0</m> for all but a finite number of <m>i</m>.</p></remark>
     
-          <remark>
-            <p>
-              One often views <m>R</m> as the subring of <m>R[x_1, \dots, x_n]</m> consisting of the constant polynomials.
-            </p>
-          </remark>
-    
-          <problem xml:id="exe-units-and-nilpotents-in-polynomial-rings"><title>Units, Nilpotents in Polynomial Rings</title>
-            <p>
-              Let <m>A</m> be a ring and let <m>A[x]</m> be the ring of polynomials in an indeterminate <m>x</m>, with coefficients in <m>A</m>. Let <me>f=a_{0}+a_{1}x+\dots+a_{n}x^{n}\in A[x].</me>Prove that
-            </p>
-    
-            <p><ol>
-              <li>
-              <m>f</m> is a unit in <m>A[x]</m> if and only if <m>a_{0}</m> is a unit in <m>A</m> and <m>\adots</m> are nilpotent.
-              </li>
-    
-              <li>
-              <m>f</m> is nilpotent if and only if <m>a_{i}</m> nilpotent for all <m>i</m>.
-              </li>
-    
-              <li>
-              <m>f</m> is a zerodivisor if and only if there exists <m>a\neq0</m> in <m>A</m> such that <m>af=0</m>.
-              </li>
-    
-              <li>
-              <m>f</m> is said to be primitive if <m>(a_{0},\adots)=(1)</m>. Prove that if <m>f,g\in A[x]</m>, then <m>fg</m> is primitive if and only if both <m>f</m> and <m>g</m> are primitive.
-              </li>
-    
-            </ol></p>
-          </problem>
-    
-          <problem xml:id="exe-2x-prime-and-maximal-in-zx"><title><m>(2,x)</m> in <m>\Z[x]</m></title>
-            <p>
-              In <m>\Z[x]</m> the ideal <m>(2,x)</m> is maximal and prime, the ideals <m>(2)</m> and <m>(x)</m> are prime but not maximal.
-            </p>
-          </problem>
-    
-          <p>Here is a nice application of the First Isomorphism Theorem.</p>
-    
-          <problem xml:id="ex-rxx21"><title><m>R/(x^2+1_\cong\C</m></title>
-            <p>
-              Consider the ring <m>\R[x]</m> and let <m>I = (x^2 + 1)</m> be the principal ideals generated by <m>x^2+1</m>. Since <m>\R[x]</m> is commutative, we have <me>(x^2 + 1) = \{ g(x)(x^2 + 1) \mid g(x)\in \R[x] \},</me> so <m>(x^2 + 1)</m> is simply the collection of polynomials having <m>x^2 + 1</m> as a factor. I claim that <m>\R[x]/(x^2 + 1)</m> is isomorphic as a ring to <m>\C</m>. To prove this we define a map <me>\phi: \R[x] \to \C</me> sending <m>f(x)</m> to <m>f(i)</m>, the evaluation of <m>f</m> at <m>i</m>. It is easy to check <m>\phi</m> is a ring homomorphism and it is onto since elements of the form <m>a + bx</m> in the source map to all possible complex numbers under <m>\phi</m>. We claim the kernel of <m>\phi</m> is <m>(x^2 +1)</m>. It is clear that <m>x^2 + 1 \in \ker(\phi)</m> and it follows that <m>(x^2 + 1) \subseteq \ker(\phi),</m> since <m>\ker(\phi)</m> is a two-sided ideal. Suppose <m>\phi(f(x)) = 0</m> and write <m>f(x) = (x^2 + 1)q(x) + r(x)</m> with degree of <m>r(x)</m> at most one, using the division algorithm in the polynomial ring <m>\R[x]</m>. So <m>r(x) = a + bx</m> for real numbers <m>a,b</m>. If <m>r(x) \ne 0</m>, then <m>r(i) \ne 0</m>, which would contradict <m>f(i) = 0</m>. So we must have <m>r(x) = 0</m> and hence <m>f(x) \in (x^2 +1)</m>. Applying the First Isomorphism Theorem for Rings, we get <me>\R[x]/(x^2+1) \cong \C</me>via the map sending <m>f(x) + (x^2 + 1)</m> to <m>f(i)</m>. Intuitively, we have adjoined a formal symbol <m>x</m> to the real numbers, and by modding out <m>x^2 + 1</m> we have forced <m>x</m> to be a square root of <m>-1</m>. That is, we have adjoined <m>i</m> to the real numbers, obtaining <m>\C</m>.
-            </p>
-          </problem>
-    
-          <problem xml:id="ex-ideal-of-zx-and-isomorphism"><title>\Z[x]/(2) =\Z[x]/(2) \cong (\Z/2)[x]</title>
-            <p>
-              Consider the ideal <m>J = (2, x^2 + x + 1)</m> of <m>\Z[x]</m>. Explicitly, by Lemma <xref provisional="cite"/> we have <me>J =\{ p(x)\cdot 2 + q(x)(x^2 + x+ 1) \mid p(x),q(x)\in\Z[x]\}.</me> Suppose we want to understand <m>\Z[x]/J</m>. Then the Third Isomorphism Theorem is our friend. Set <m>I=(2)</m> and note that <m>I \subseteq J</m>, and so by the Third Isomorphism Theorem <me>\Z[x]/J \cong \frac{\Z[x]/I}{J/I}.</me> Next we express both the numerator and the denominator in better terms. I claim <me>\Z[x]/I =\Z[x]/(2) \cong (\Z/2)[x].</me> To see this consider the reduction homomorphism <m>\rho: \Z[x] \to (\Z/2)[x]</m> sending a polynomial <m>p(x)</m> to its reduction modulo <m>2</m>. The kernel of this surjective ring map is <m>I</m>, establishing our claim by the First Isomorphism Theorem.
-            </p>
-    
-            <p>
-                Recall that <m>J/I</m> denotes the image of <m>J</m> under the quotient map <m>\pi:\Z[x]\to \Z[x]/I</m>. Therefore we have 
-                <md>
-                    <mrow> J/I =\pi(J)=\{\pi( p(x) \cdot 2 + q(x)(x^2 + x+ 1)) \mid p(x),q(x)\in\Z[x]\} </mrow>
-                    <mrow> =\{\pi( p(x)) \cdot \pi(2) + \pi(q(x))\pi(x^2 + x+ 1)) \mid p(x),q(x)\in\Z[x]\} </mrow>
-                    <mrow> =\{\pi( p(x)) \cdot 0 + \pi(q(x))\pi(x^2 + x+ 1)) \mid p(x),q(x)\in\Z[x]\} </mrow>
-                    <mrow> =\{ f(x)\pi(x^2 + x+ 1)) \mid f(x)\in\Z[x]/I\}=\left((x^2+x+1)+I\right). </mrow>
-                </md> 
-                In other words, J/I is the ideal generated by the coset of <m>x^2+x+1</m> in <m>\Z[x]/(2)</m>. Moreover, under the isomorphism <m>\bar\rho:\Z[x]/I \to (\Z/2)[x]</m> discussed above, we have that <m>f(x)+I\mapsto \ov{f}(x)</m>, where <m>\ov{f}(x)</m> denotes the reduction of the coefficients of <m>f</m> modulo 2. Therefore <m>\bar \rho(J/I)=([1]x^2+[1]x+[1]),</m> where <m>[1]</m> denotes the congruence class of <m>1</m> modulo 2. Now we put everything together: consider the ring homomorphism <m>\varphi=\pi'\circ \bar \rho</m> where 
-                <me>
-                    \Z[x]/I\stackrel{\bar \rho}{\rightarrow}(\Z/2)[x] \stackrel{\pi'}\rightarrow \frac{(\Z/2)[x]}{([1]x^2+[1]x+[1])}.
-                </me> 
-                Notice that since <m>\bar\rho</m> and <m>\pi'</m> are surjective, so is <m>\varphi</m>, thus <m>\im(\varphi)=\frac{(\Z/2)[x]}{([1]x^2+[1]x+[1])}</m> and 
-                <me>
-                    \ker(\varphi)=\ker(\pi'\circ \bar \rho)=\ker(\pi')=([1]x^2+[1]x+[1])
-                </me> 
-                since <m>\bar\rho</m> is an isomorphism and <m>\pi'</m> is a quotient map. Applying the First Isomorphism Theorem to <m>\varphi</m> gives 
-                <me>
-                    \frac{\Z[x]/I}{J/I}\cong \frac{(\Z/2)[x]}{([1]x^2+[1]x+[1])}
-                </me> 
-                and combining this with the Third Isomorphism Theorem further yields 
-                <me>
-                    \Z[x]/J \cong \frac{(\Z/2)[x]}{([1]x^2+[1]x+[1])}.
-                </me>
-            </p>
-            
-          </problem>
-    
-          <problem xml:id="ex-ideal-and-lit">
-            <p>
-              It turns out that the ring <m>F=\frac{(\Z/2)[x]}{([1]x^2+[1]x+[1])}</m> we discussed in the previous <m>\ex</m> is a field and by a problem from HW 11, any field <m>F</m> has only two ideals <m>(0)</m> and <m>F</m> itself. This implies via the Lattice Isomorphism Theorem that there are only two ideals in <m>(\Z/2)[x]</m> which contain <m>([1]x^2+[1]x+[1])</m>, namely <m>([1]x^2+[1]x+[1])=\pi^{-1}(0)</m> and <m>(\Z/2)[x]=\pi^{-1}(F)</m>.
-            </p>
-          </problem>
-    
+          <remark><p>One often views <m>R</m> as the subring of <m>R[x_1, \dots, x_n]</m> consisting of the constant polynomials.</p></remark>
+          
           <proposition xml:id="prop-polynomials-domains-degrees-units"><title>Polynomials, Domains, Degrees, Units</title>
             <statement>
               <p>
@@ -9036,6 +8957,79 @@
               </p>
             </statement>
           </proposition>
+
+          <!--
+          <exercise xml:id="exe-units-and-nilpotents-in-polynomial-rings"><title>Units, Nilpotents in Polynomial Rings</title>
+            <p>
+              Let <m>R</m> be a ring and 
+              <me>f=a_{0}+a_{1}x+\dots+a_{n}x^{n}\in R[x].</me>
+            </p>
+    
+            <p><ol>
+              <li>
+              <m>f</m> is a unit in <m>R[x]</m> if and only if <m>a_{0}</m> is a unit in <m>R</m> and <m>\adots</m> are nilpotent.
+              </li>
+    
+              <li>
+              <m>f</m> is nilpotent if and only if <m>a_{i}</m> nilpotent for all <m>i</m>.
+              </li>
+    
+              <li>
+              <m>f</m> is a zerodivisor if and only if there exists <m>a\neq0</m> in <m>A</m> such that <m>af=0</m>.
+              </li>
+    
+            </ol></p>
+          </exercise>
+
+          <p>Here is a nice application of the First Isomorphism Theorem.</p>
+    
+          <example xml:id="ex-rxx21"><title><m>R/\igen{x^2+1}\cong\C</m></title>
+            <p>
+              Consider the ring <m>\R[x]</m> and let <m>I = \igen{x^2 + 1}</m> be the principal ideals generated by <m>x^2+1</m>. Since <m>\R[x]</m> is commutative, we have 
+              <me>\igen{x^2 + 1} = \{ g(x)(x^2 + 1) \mid g(x)\in \R[x] \},</me> 
+              so <m>\igen{x^2 + 1}</m> is simply the collection of polynomials having <m>x^2 + 1</m> as a factor. I claim that <m>\R[x]/\igen{x^2 + 1}</m> is isomorphic as a ring to <m>\C</m>. To prove this we define a map <me>\phi: \R[x] \to \C</me> sending <m>f(x)</m> to <m>f(i)</m>, the evaluation of <m>f</m> at <m>i</m>. It is easy to check <m>\phi</m> is a ring homomorphism and it is onto since elements of the form <m>a + bx</m> in the source map to all possible complex numbers under <m>\phi</m>. We claim the kernel of <m>\phi</m> is <m>(x^2 +1)</m>. It is clear that <m>x^2 + 1 \in \ker(\phi)</m> and it follows that <m>\igen{x^2 + 1} \subseteq \ker(\phi),</m> since <m>\ker(\phi)</m> is a two-sided ideal. Suppose <m>\phi(f(x)) = 0</m> and write <m>f(x) = (x^2 + 1)q(x) + r(x)</m> with degree of <m>r(x)</m> at most one, using the division algorithm in the polynomial ring <m>\R[x]</m>. So <m>r(x) = a + bx</m> for real numbers <m>a,b</m>. If <m>r(x) \ne 0</m>, then <m>r(i) \ne 0</m>, which would contradict <m>f(i) = 0</m>. So we must have <m>r(x) = 0</m> and hence <m>f(x) \in (x^2 +1)</m>. Applying the First Isomorphism Theorem for Rings, we get <me>\R[x]/(x^2+1) \cong \C</me>via the map sending <m>f(x) + (x^2 + 1)</m> to <m>f(i)</m>. Intuitively, we have adjoined a formal symbol <m>x</m> to the real numbers, and by modding out <m>x^2 + 1</m> we have forced <m>x</m> to be a square root of <m>-1</m>. That is, we have adjoined <m>i</m> to the real numbers, obtaining <m>\C</m>.
+            </p>
+          </example>
+    
+          <example xml:id="ex-ideal-of-zx-and-isomorphism"><title><m>\Z[x]/(2) =\Z[x]/(2) \cong (\Z/2)[x]</m></title>
+            <p>
+              Consider the ideal <m>J = \igen{2, x^2 + x + 1}</m> of <m>\Z[x]</m>. Explicitly, by Lemma <xref provisional="cite"/> we have <me>J =\{ p(x)\cdot 2 + q(x)(x^2 + x+ 1) \mid p(x),q(x)\in\Z[x]\}.</me> Suppose we want to understand <m>\Z[x]/J</m>. Then the Third Isomorphism Theorem is our friend. Set <m>I=(2)</m> and note that <m>I \subseteq J</m>, and so by the Third Isomorphism Theorem <me>\Z[x]/J \cong \frac{\Z[x]/I}{J/I}.</me> Next we express both the numerator and the denominator in better terms. I claim <me>\Z[x]/I =\Z[x]/(2) \cong (\Z/2)[x].</me> To see this consider the reduction homomorphism <m>\rho: \Z[x] \to (\Z/2)[x]</m> sending a polynomial <m>p(x)</m> to its reduction modulo <m>2</m>. The kernel of this surjective ring map is <m>I</m>, establishing our claim by the First Isomorphism Theorem.
+            </p>
+    
+            <p>
+                Recall that <m>J/I</m> denotes the image of <m>J</m> under the quotient map <m>\pi:\Z[x]\to \Z[x]/I</m>. Therefore we have 
+                <md>
+                    <mrow> J/I &amp;=\pi(J)=\{\pi( p(x) \cdot 2 + q(x)(x^2 + x+ 1)) \mid p(x),q(x)\in\Z[x]\} </mrow>
+                    <mrow> &amp;=\{\pi( p(x)) \cdot \pi(2) + \pi(q(x))\pi(x^2 + x+ 1) \mid p(x),q(x)\in\Z[x]\} </mrow>
+                    <mrow> &amp;=\{\pi( p(x)) \cdot 0 + \pi(q(x))\pi(x^2 + x+ 1) \mid p(x),q(x)\in\Z[x]\} </mrow>
+                    <mrow> &amp;=\{ f(x)\pi(x^2 + x+ 1) \mid f(x)\in\Z[x]/I\}=\left((x^2+x+1)+I\right). </mrow>
+                </md> 
+                In other words, <m>J/I</m> is the ideal generated by the coset of <m>x^2+x+1</m> in <m>\Z[x]/(2)</m>. Moreover, under the isomorphism <m>\bar\rho:\Z[x]/I \to (\Z/2)[x]</m> discussed above, we have that <m>f(x)+I\mapsto \ov{f}(x)</m>, where <m>\ov{f}(x)</m> denotes the reduction of the coefficients of <m>f</m> modulo 2. Therefore <m>\bar \rho(J/I)=([1]x^2+[1]x+[1]),</m> where <m>[1]</m> denotes the congruence class of <m>1</m> modulo 2. Now we put everything together: consider the ring homomorphism <m>\varphi=\pi'\circ \bar \rho</m> where 
+                <me>
+                    \Z[x]/I\stackrel{\bar \rho}{\rightarrow}(\Z/2)[x] \stackrel{\pi'}\rightarrow \frac{(\Z/2)[x]}{([1]x^2+[1]x+[1])}.
+                </me> 
+                Notice that since <m>\bar\rho</m> and <m>\pi'</m> are surjective, so is <m>\varphi</m>, thus <m>\im(\varphi)=\frac{(\Z/2)[x]}{([1]x^2+[1]x+[1])}</m> and 
+                <me>
+                    \ker(\varphi)=\ker(\pi'\circ \bar \rho)=\ker(\pi')=([1]x^2+[1]x+[1])
+                </me> 
+                since <m>\bar\rho</m> is an isomorphism and <m>\pi'</m> is a quotient map. Applying the <xref text="title" ref="thm-ring-fit"/> to <m>\varphi</m> gives 
+                <me>
+                    \frac{\Z[x]/I}{J/I}\cong \frac{(\Z/2)[x]}{([1]x^2+[1]x+[1])}
+                </me> 
+                and combining this with the <xref text="title" ref="thm-ring-tit"/> to <m>\varphi</m> further yields 
+                <me>
+                    \Z[x]/J \cong \frac{(\Z/2)[x]}{([1]x^2+[1]x+[1])}.
+                </me>
+            </p>
+          </example>
+    
+          <example xml:id="ex-ideal-and-lit">
+            <p>
+              It turns out that the ring <m>F=\frac{(\Z/2)[x]}{([1]x^2+[1]x+[1])}</m> we discussed in <xref ref="ex-ideal-of-zx-and-isomorphism"/> to <m>\varphi</m> is a field and by a problem from HW 11, any field <m>F</m> has only two ideals <m>(0)</m> and <m>F</m> itself. This implies via the <xref text="title" ref="thm-ring-lit"/> to <m>\varphi</m> that there are only two ideals in <m>(\Z/2)[x]</m> which contain <m>([1]x^2+[1]x+[1])</m>, namely <m>([1]x^2+[1]x+[1])=\pi^{-1}(0)</m> and <m>(\Z/2)[x]=\pi^{-1}(F)</m>.
+            </p>
+          </example>
+
+          -->
     
           <proposition xml:id="prop-ump-for-polynomial-rings"><title>UMP for Polynomial Rings</title>
             <statement>
@@ -9078,200 +9072,41 @@
             </proof>
           </proposition>
     
-          <problem xml:id="exe-evaluation-homomorphism"><title>Evalutation Homomorphism</title>
+          <exercise xml:id="exe-evaluation-homomorphism"><title>Evalutation Homomorphism</title>
             <p>
               If <m>R\subseteq S</m> are commutative rings with <m>1\neq 0</m> and <m>a\in S</m>, then the evaluation at <m>a</m> function <m>\phi:R[x]\to S</m> given by <m>\phi(f(x))=f(a)</m> is a ring homomorphism.
             </p>
-          </problem>
+          </exercise>
     
-          <problem xml:id="exe-applying-ring-homomorphism-to-coefficients"><title>Ring Maps and Coefficients</title>
+          <example xml:id="ex-applying-ring-homomorphism-to-coefficients"><title>Ring Maps and Coefficients</title>
             <p>
               Given a ring map <m>\phi: R \to S</m> between commutative rings, we may apply the Proposition to the composition <m>R \xra{\phi} S \hookrightarrow S[x]</m> using the element <m>s = x</m> of <m>S[x]</m> to get an induced ring map <me>\tilde{\phi}: R[x] \to S[x]</me> that sends <m>\sum_i r_i x^i</m> to <m>\sum_i \phi(r_i) x^i</m>. That is, the map <m>\tilde{\phi}</m> applies <m>\phi</m> to the coefficients of a polynomial. This can be generalized to more than one variable in the obvious way.       
             </p>
-          </problem>
+          </example>
     
-          <problem xml:id="exe-the-reduction-homomorphism"><title>Reduction Homomorphism</title>
+          <exercise xml:id="exe-the-reduction-homomorphism"><title>Reduction Homomorphism</title>
             <p>
-              Continuing with the previous example, we could have <m>S = R/I</m> for an ideal <m>I</m> of <m>R</m> and <m>\phi</m> could be the quotient map. Then <me>\tilde{\phi}: R[x_1, \dots, x_n] \to (R/I)[x_1, \dots, x_n]</me> takes a polynomial and “reduces'' its coefficients modulo <m>I</m>. We will usually denote the image of <m>f(x)</m> through the reduction homomorphism by <m>\ov{f}(x)</m>.
+              Continuing with <xref ref="ex-applying-ring-homomorphism-to-coefficients"/>, we could have <m>S = R/I</m> for an ideal <m>I</m> of <m>R</m> and <m>\phi</m> could be the quotient map. Then 
+              <me>\tilde{\phi}: R[x_1, \dots, x_n] \to (R/I)[x_1, \dots, x_n]</me> 
+              takes a polynomial and <q>reduces </q> its coefficients modulo <m>I</m>. We will usually denote the image of <m>f(x)</m> through the reduction homomorphism by <m>\ov{f}(x)</m>.
             </p>
-          </problem>
-    
-          <problem xml:id="all-ideals-containing-6-x2-x-1"><title>Qual</title>
-          <statement>
-            <p>
-              Find all the ideals of <m>\Z[x]</m> that contain <m>(6, x^2 + x + 1)</m>, the ideal of <m>\Z[x]</m> generated by <m>6</m> and <m>x^2 + x + 1</m>. For each such ideal, give an explicit list of generators, and determine whether the ideal is prime, maximal, or neither.
-            </p>
-          </statement>
-    
-            <solution>
+          </exercise>
+
+          <theorem xml:id="thm-polynomial-divison-algorithm"><title>Polynomial Division Algorithm</title>
+            <statement>
               <p>
-                First, notice that <m>x^2+x+1</m> is irreducible in <m>\Z[x]</m> as it is a cyclotomic polynomial. Thus the possibilities are the following: 
-                <ol>
-                  <li>
-                    <p>
-                      <m>I=(3,x^2+x+1)</m>, 
-                    </p>
-                  </li>
-    
-                  <li>
-                    <p>
-                      <m>J=(2,x^2+x+1)</m>, 
-                    </p>
-                  </li>
-    
-                  <li>
-                    <p>
-                      <m>L=(6,x^2+x+1)</m>, 
-                    </p>
-                  </li>
-    
-                  <li>
-                    <p>
-                      <m>\Z[x]</m>.
-                    </p>
-                  </li>
-                </ol>
-                Notice that <m>\Z[x]=(1)</m>, which is neither prime nor maximal, as those ideals must be proper. The ideal <m>L</m> is not maximal as it is contained in both <m>I</m> and <m>J</m>, nor is it prime, given that <m>3\cdot2\in L</m> but neither <m>3</m> nor <m>2</m> are in <m>L</m>.
+                Let <m>R</m> be a commutative ring with identity and <m>f,g\in R[x]</m>. Assume the leading coefficient of <m>g</m> is a unit in <m>R</m>. Then there exists a unique <m>q,r\in R[x]</m> such that <m>f=gq+r</m>, and <m>\operatorname{deg}r&lt;\operatorname{deg}g=n</m>.
               </p>
-    
+            </statement>
+          </theorem>
+
+          <corollary xml:id="thm-root-thm"><title>Root Theorem</title>
+            <statement>
               <p>
-                Both <m>I</m> and <m>J</m> are generated with irreducible elements, making them irreducible ideals and thus maximal.
+                Let <m>R</m> be a commutative ring with identity, <m>f(x)\in R[x]</m> and <m>a\in R</m>. Then <m>f(a)=0</m> if and only if <m>(x-a)|f(x)</m>. 
               </p>
-            </solution>
-          </problem>
-    
-          <problem><title>Qual</title>
-            <p>
-              Find, with justification, all the ideals of the ring <m>\Z[x]</m> that contain the ideal <m>I = (3, x^3 + x + 1)</m>.
-            </p>
-          </problem>
-    
-          <problem><title>January 2012 (6)</title>
-            <p>
-              Let <m>F</m> be any field, and let <m>x, y</m>, and <m>t</m> be indeterminates. Prove in detail that <m>F[x,y]/(y^2-x^3)</m> and <m>F[t^2,t^3]</m> are isomorphic rings.
-            </p>
-          </problem>
-    
-          <problem xml:id="exe-ideal-generated-by-irreducible-polynomial-prime"><title>Qual</title>
-          <statement>
-            <p>
-                        Prove the ideal <m>I = (2, 1 + \sqrt{-13})</m> of the commutative ring <m>R = \Z[\sqrt{-13}]</m> is not a principal ideal.
-                    </p>
-                  </statement>
-    
-            <solution>
-              <p>
-                Let <m>R</m> be a commutative ring with unity and <m>f\in R[x]</m> an irreducible polynomial. We want to show that <m>(f)</m> is a prime ideal in <m>R[x]</m>.
-              </p>
-    
-              <p>
-                First, note that <m>(f)</m> is an ideal of <m>R[x]</m>, since it is generated by a single polynomial.
-              </p>
-    
-              <p>
-                Suppose that <m>g,h\in R[x]</m> with <m>gh\in (f)</m>. Then <m>gh=fk</m> for some <m>k\in R[x]</m>. Since <m>f</m> is irreducible, it cannot be written as a product of two non-constant polynomials, so either <m>f</m> divides <m>g</m> or <m>f</m> divides <m>h</m>. Without loss of generality, assume that <m>f</m> divides <m>g</m>. Then <m>g=fq</m> for some <m>q\in R[x]</m>. Substituting into <m>gh=fk</m> yields <m>fh=fqk</m>, and cancelling the factor of <m>f</m> gives <m>h=qk</m>. Thus, <m>h\in (f)</m>, and so <m>(f)</m> is a prime ideal of <m>R[x]</m>.
-              </p>
-            </solution>
-          </problem>
-    
-          <exercises>
-    
-            <exercisegroup>
-              <title>Computations and Examples</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-    
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-    
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          
-            <exercisegroup>
-              <title>Formal Proofs</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-    
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-    
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          
-            <exercisegroup>
-              <title>Qualifying Exam Problems</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-    
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-    
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          </exercises>
+            </statement>
+          </corollary>
           
         </section>
       </chapter>
@@ -9701,7 +9536,7 @@
               <attribution>Alan Perlis</attribution>
             </blockquote>
 
-            <lemma xml:id="lem-cosets-abelian">
+            <lemma xml:id="lem-cosets-abelian"><title>Additive Cosets form Abelian Group</title>
               <statement>
                 <p>
                   For a two-sided ideal <m>I</m> of <m>R</m>, the set of additive cosets modulo <m>I</m> is <m>R/I=\{r+I : r\in R\}.</m> This is an abelian group with respect to addition given by <m>(r + I) + (s + I) = (r +s ) + I</m>.
@@ -9749,22 +9584,13 @@
                   Let <m>R</m> be a ring. A subset <m>I</m> of <m>R</m> is an ideal of <m>R</m> if and only if there exists a ring homomorphism <m>\varphi</m> such that <m>\ker(\varphi)=I</m>
                 </p>
               </statement>
-            </theorem>
-    
-            
+            </theorem>         
             
           </subsection>
     
           <subsection xml:id="subsec-ring-iso-thms"><title>The Ring Isomorphism Theorems</title>
 
-            <blockquote>
-              <p>
-                <q>
-                  I'm not a very structured person, so when I get some structure, it's cool; it's good for me.
-                </q>
-              </p>
-              <attribution>J. Cole</attribution>
-            </blockquote>
+            <blockquote><p><q>I'm not a very structured person, so when I get some structure, it's cool; it's good for me.</q></p><attribution>J. Cole</attribution></blockquote>
 
             <p>We arrive at the isomorphism theorems for rings. We've seen most of this stuff before in different packaging, so lets jump right in.</p>
 
@@ -10047,12 +9873,7 @@
     
           <subsection xml:id="subsec-maximal-ideals"><title>Maximal Ideals</title>
 
-            <blockquote>
-              <p>
-                <q>It's just like, we know how to push ourselves to the max.</q>
-              </p>
-              <attribution>Young Dolph</attribution>
-            </blockquote>
+            <blockquote><p><q>It's just like, we know how to push ourselves to the max.</q></p><attribution>Young Dolph</attribution></blockquote>
     
             <definition xml:id="def-maximal-ideal"><title>Maximal Ideal</title>
               <statement>
@@ -10063,6 +9884,12 @@
             </definition>
 
             <remark><p>It is not uncommon to denote maximal ideals with <m>M</m>. We reserve this notation for <xref ref="part-modules"/> when we dive into modules.</p></remark>
+
+            <exercise xml:id="exe-2x-prime-and-maximal-in-zx"><title><m>\igen{2,x}</m> in <m>\Z[x]</m></title>
+              <p>
+                In <m>\Z[x]</m> the ideal <m>\igen{2,x}</m> is maximal and prime, the ideals <m>\igen2</m> and <m>\igen x</m> are prime but not maximal.
+              </p>
+            </exercise>
     
             <p>And, matching up quite nicely with <xref ref="thm-prime-iff-domain"/>, we have one of the spicier meatballs of the chapter.</p>
     
@@ -10104,14 +9931,13 @@
               </statement>
             </exercise>
     
-            <theorem xml:id="thm-zorn"><title>Zorn's Lemma</title>          
-              
+            <lemma xml:id="lem-zorn"><title>Zorn's Lemma</title>          
               <statement>
                 <p>
                   Let <m>P</m> be a non-empty family of sets. Suppose that for each chain <m>C</m> in <m>P</m>, the set <m>\bigcup_{C_{i}\in C}C_{i}</m> is in <m>P</m>. Then <m>P</m> has a maximal element.
                 </p>
               </statement>
-            </theorem>
+            </lemma>
     
             <theorem xml:id="thm-all-ideals-contained-in-maximal-ideal"><title>All Ideals Contained in Maximal Ideal</title>
               <statement>
@@ -10147,7 +9973,7 @@
               </proof>
             </theorem>
     
-            <proposition xml:id="prop-annihilator-ideal-and-quotient-field"><title>Qual</title>
+            <proposition><title>Qual</title>
               <statement>
                 <p>
                   Let <m>R</m> be a commutative ring, and set <m>I = \{r \in  R | rn = 0 \;\text{for some integer}\; n\}</m>. Prove that following assertions.
@@ -10195,7 +10021,7 @@
               </proof>
             </proposition>
     
-            <proposition xml:id="prop-prime-ideal-with-finite-index"><title>Qual</title>
+            <proposition><title>Qual</title>
               <statement>
                 <p>
                   <ol>
@@ -10247,7 +10073,7 @@
               </proof>
             </proposition>
     
-            <proposition xml:id="prop-prime-ideals-maximal-in-finite-rings"><title>Qual</title>
+            <proposition><title>Qual</title>
               <statement>
                 <p>
                   Let <m>R</m> be a commutative ring with identity, and assume <m>1\neq0</m>.
@@ -10291,7 +10117,7 @@
           </proof>
             </proposition>
     
-            <proposition xml:id="prop-when-xnx-all-prime-ideals-are-maximal"><title>Qual</title>
+            <proposition><title>Qual</title>
               <statement>
                 <p>
                   Let <m>R</m> be a commutative ring in which every element <m>x</m> satisfies <m>x^n = x</m> for some <m>n &gt; 1</m>. Show that every prime ideal in R is maximal.
@@ -10309,15 +10135,14 @@
               </proof>
             </proposition>
     
-            <proposition xml:id="prop-minimal-prime"><title>Qual</title>
+            <proposition ><title>Qual</title>
               <statement>
                 <p>
                   Let <m>R</m> be a commutative ring with identity (with <m>1\neq0</m>) and <m>I</m> a proper ideal. Prove there exists a prime ideal <m>p</m> containing <m>I</m> such that whenever <m>p ⊇ q ⊇ I</m> where <m>q</m> is also a prime ideal, then <m>p = q</m>. (Hint: use Zorn's lemma.)
                 </p>
               </statement>
             </proposition>
-    
-            
+      
           </subsection>
     
           <exercises>
@@ -10602,9 +10427,9 @@
 
           <blockquote>
             <p>
-              <q></q>
+              <q>One chance is all you need.</q>
             </p>
-            <attribution></attribution>
+            <attribution>Jesse Owens</attribution>
           </blockquote>
     
           <definition xml:id="def-pid"><title>PID</title>
@@ -11116,9 +10941,9 @@
 
           <blockquote>
             <p>
-              <q></q>
+              <q>Always remember that you are absolutely unique. Just like everyone else.</q>
             </p>
-            <attribution></attribution>
+            <attribution>Margaret Mead</attribution>
           </blockquote>
     
           <definition xml:id="def-ufd"><title>UFD</title>
@@ -11366,13 +11191,13 @@
                    
         </section>
     
-        <section xml:id="subsec-noeth"><title>Noetherian Domains</title>
+        <section xml:id="subsec-noeth"><title>Noetherian Rings</title>
 
           <blockquote>
             <p>
-              <q></q>
+              <q>All good things must come to an end.</q>
             </p>
-            <attribution></attribution>
+            <attribution>Geoffrey Chaucer</attribution>
           </blockquote>
           
           <definition xml:id="def-noetherian-ring"><title>Noetherian Ring</title>
@@ -11560,299 +11385,294 @@
 
         <section xml:id="sec-defmod"><title>Module Basics</title>
 
-            <definition xml:id="def-module"><title>Module</title>
-              <statement>
-                <p>
-                  Let <m>R</m> be a ring (with <m>1</m>). A left <m>R</m>-module is an abelian group <m>(M,+)</m> together with a pairing <m>R \times M \to M</m>, written <m>(r,m) \mapsto rm</m>, such that for all <m>r,s \in R</m> and <m>m,n \in M</m> 
-                  <ol>
-                    <li>
-                      <p>
-                        <m>(r + s)m = rm + sm</m>, 
-                      </p>
-                    </li>
-
-                    <li>
-                      <p>
-                        <m>(rs)m = r(sm)</m>, 
-                      </p>
-                    </li>
-
-                    <li>
-                      <p>
-                        <m>r(m + n) = rm + rn</m>, and 
-                      </p>
-                    </li>
-
-                    <li>
-                      <p>
-                        <m>1m = m</m>.
-                      </p>
-                    </li>
-                  </ol>
-                </p>
-              </statement>
-            </definition>
-
-            <remark>
+          <definition xml:id="def-module"><title>Module</title>
+            <statement>
               <p>
-                If <m>R</m> is a commutative ring, then any left <m>R</m>-module <m>M</m> may be regarded as a right <m>R</m>-module by setting <m>m r = r m</m>. Likewise, any right <m>R</m>-module may be regarded as a left <m>R</m>-module. But for non-commutative rings, left and right modules are not the same: trying to make a left <m>R</m>-module <m>M</m> into a right one by setting <m>mr = rm</m> fails to satisfy the second axiom, since <m>m(rs) = (rs)m</m> and <m>(mr)s = (rm)s = s(rm) = (sr)m</m>, and, unless <m>rs =sr</m>, we cannot conclude that <m>m(rs) = (mr)s</m>.
+                Let <m>R</m> be a ring (with <m>1</m>). A left <m>R</m>-module is an abelian group <m>(M,+)</m> together with a pairing <m>R \times M \to M</m>, written <m>(r,m) \mapsto rm</m>, such that for all <m>r,s \in R</m> and <m>m,n \in M</m> 
+                <ol>
+                  <li>
+                    <p>
+                      <m>(r + s)m = rm + sm</m>, 
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>(rs)m = r(sm)</m>, 
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>r(m + n) = rm + rn</m>, and 
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>1m = m</m>.
+                    </p>
+                  </li>
+                </ol>
               </p>
-            </remark>
+            </statement>
+          </definition>
 
-            <proposition xml:id="prop-opposite-ring-module"><title>Module and Opposite Ring</title>
-              <statement>
-                <p>
-                  Given a ring <m>R</m>, let <m>R^{op}</m> denote the “opposite ring''. This is the same underlying set as <m>R</m> equipped with the same rule for <m>+</m> as <m>R</m>, but with multiplication rule (which I will write here as <m>\cdot_{op}</m>) redefined to be <m>a \cdot_{op} b := b a</m> (where <m>ba</m> refers to the original multiplication rule for <m>R</m>). Then <m>R^{op}</m> is also a ring — you don't need to prove that.
-                </p>
-      
-                <p>
-                  Given a left <m>R</m>-module <m>M</m>, prove that <m>M</m> is a right <m>R^{op}</m>-module via the same rule for addition but with the rule for scaling on the right defined to be <m>m r := rm</m> for any <m>r \in R</m> and <m>m \in M</m>. 
-                </p>
-              </statement>
-            </proposition>
+          <remark><p>If <m>R</m> is a commutative ring, then any left <m>R</m>-module <m>M</m> may be regarded as a right <m>R</m>-module by setting <m>m r = r m</m>. Likewise, any right <m>R</m>-module may be regarded as a left <m>R</m>-module. But for non-commutative rings, left and right modules are not the same: trying to make a left <m>R</m>-module <m>M</m> into a right one by setting <m>mr = rm</m> fails to satisfy the second axiom, since <m>m(rs) = (rs)m</m> and <m>(mr)s = (rm)s = s(rm) = (sr)m</m>, and, unless <m>rs =sr</m>, we cannot conclude that <m>m(rs) = (mr)s</m>.</p></remark>
 
-            <lemma xml:id="lem-module-arithmetic"><title>Arithmetic in Modules</title>
-              <statement>
-                <p>
-                  Let <m>R</m> be a ring and let <m>M</m> be a (left) <m>R</m>-module. Then for all <m>r \in R</m> and <m>m \in M</m> we have 
-                  <ol>
-                    <li>
-                      <p>
-                        <m>0_Rm = 0_M</m>, 
-                      </p>
-                    </li>
-
-                    <li>
-                      <p>
-                        <m>r 0_M = 0_M</m>, 
-                      </p>
-                    </li>
-
-                    <li>
-                      <p>
-                        <m>(-1_R)m = -m</m>, and 
-                      </p>
-                    </li>
-
-                    <li>
-                      <p>
-                        <m>(-r)m = -(rm)</m>.
-                      </p>
-                    </li>
-                  </ol>
-                </p>
-              </statement>
-            
-              <proof>
-                <p><ol>
-                  <li>
-                  For the first, <m>0m = (0+0)m = 0m + 0m</m> and hence <m>0m = 0</m>.
-                  </li>
+          <proposition xml:id="prop-opposite-ring-module"><title>Module and Opposite Ring</title>
+            <statement>
+              <p>
+                Given a ring <m>R</m>, let <m>R^{op}</m> denote the “opposite ring''. This is the same underlying set as <m>R</m> equipped with the same rule for <m>+</m> as <m>R</m>, but with multiplication rule (which I will write here as <m>\cdot_{op}</m>) redefined to be <m>a \cdot_{op} b := b a</m> (where <m>ba</m> refers to the original multiplication rule for <m>R</m>). Then <m>R^{op}</m> is also a ring — you don't need to prove that.
+              </p>
     
+              <p>
+                Given a left <m>R</m>-module <m>M</m>, prove that <m>M</m> is a right <m>R^{op}</m>-module via the same rule for addition but with the rule for scaling on the right defined to be <m>m r := rm</m> for any <m>r \in R</m> and <m>m \in M</m>. 
+              </p>
+            </statement>
+          </proposition>
+
+          <lemma xml:id="lem-module-arithmetic"><title>Arithmetic in Modules</title>
+            <statement>
+              <p>
+                Let <m>R</m> be a ring and let <m>M</m> be a (left) <m>R</m>-module. Then for all <m>r \in R</m> and <m>m \in M</m> we have 
+                <ol>
                   <li>
-                  For the second, <m>0_Rm = (0_R + 0_R)m = 0_Rm + 0_Rm</m> and hence <m>0_Rm = 0_M</m> since <m>M</m> is an abelian group.
+                    <p>
+                      <m>0_Rm = 0_M</m>, 
+                    </p>
                   </li>
-    
+
                   <li>
-                  For the third, <m>m + (-1)m = 1 m + (-1)m = (1 + (-1))m = (1 - 1)m = 0_Rm = 0_M</m> (using the second) and hence <m>(-1)m</m> is the additive inverse of <m>m</m>.
+                    <p>
+                      <m>r 0_M = 0_M</m>, 
+                    </p>
                   </li>
-    
+
                   <li>
-                  Finally, <m>(-r)m = ((-1)r)(m) = (-1)(rm) = -(rm)</m> (using the fact that <m>(-1)r = -r</m> holds in any ring and the previous result).
+                    <p>
+                      <m>(-1_R)m = -m</m>, and 
+                    </p>
                   </li>
-    
-                </ol></p>
-              </proof>
-            </lemma>
-      
-            <example xml:id="ex-modules"><title>Examples of Modules</title>
-                <p><ol>
+
                   <li>
-                  For any ring <m>R</m>, the trivial module is <m>0=\{0\}</m> with <m>r0=0</m> for any <m>r\in R</m>.
+                    <p>
+                      <m>(-r)m = -(rm)</m>.
+                    </p>
                   </li>
-      
-                  <li>
-                  Every ring <m>R</m> is a left module over itself whit the rule for scaling given by the ring multiplication rule. It is also a right module over itself.
-                  </li>
-      
-                  <li>
-                  More generally, if <m>R</m> is any ring and <m>I</m> is a left ideal, then <m>I</m> is a left-<m>R</m>-module.
-                  </li>
-      
-                  <li>
-                  Let <m>F</m> be a field and <m>R = \Mat_{n \times n}(F)</m> (the ring of <m>n \times n</m> matrices with entries in <m>F</m>). Let <m>M</m> be the collection of column vectors with entries in <m>F</m> having <m>n</m> entries. The usual rules for adding column vectors and multiplying column vectors on the left by matrices make <m>M</m> into a left <m>R</m>-module. Likewise if <m>N</m> is the collection of all row vector with <m>n</m> entries in <m>F</m>, the <m>N</m> is a right <m>R</m>-module via addition and matrix multiplication.
-                  </li>
-                </ol></p>
-      
-            </example>
-      
-            <example xml:id="ex-standard-free-module"><title>Standard Free Module</title>
+                </ol>
+              </p>
+            </statement>
           
+            <proof>
+              <p><ol>
+                <li>
+                For the first, <m>0m = (0+0)m = 0m + 0m</m> and hence <m>0m = 0</m>.
+                </li>
+  
+                <li>
+                For the second, <m>0_Rm = (0_R + 0_R)m = 0_Rm + 0_Rm</m> and hence <m>0_Rm = 0_M</m> since <m>M</m> is an abelian group.
+                </li>
+  
+                <li>
+                For the third, <m>m + (-1)m = 1 m + (-1)m = (1 + (-1))m = (1 - 1)m = 0_Rm = 0_M</m> (using the second) and hence <m>(-1)m</m> is the additive inverse of <m>m</m>.
+                </li>
+  
+                <li>
+                Finally, <m>(-r)m = ((-1)r)(m) = (-1)(rm) = -(rm)</m> (using the fact that <m>(-1)r = -r</m> holds in any ring and the previous result).
+                </li>
+  
+              </ol></p>
+            </proof>
+          </lemma>
+    
+          <example xml:id="ex-modules"><title>Examples of Modules</title>
+              <p><ol>
+                <li>
+                For any ring <m>R</m>, the trivial module is <m>0=\{0\}</m> with <m>r0=0</m> for any <m>r\in R</m>.
+                </li>
+    
+                <li>
+                Every ring <m>R</m> is a left module over itself whit the rule for scaling given by the ring multiplication rule. It is also a right module over itself.
+                </li>
+    
+                <li>
+                More generally, if <m>R</m> is any ring and <m>I</m> is a left ideal, then <m>I</m> is a left-<m>R</m>-module.
+                </li>
+    
+                <li>
+                Let <m>F</m> be a field and <m>R = \Mat_{n \times n}(F)</m> (the ring of <m>n \times n</m> matrices with entries in <m>F</m>). Let <m>M</m> be the collection of column vectors with entries in <m>F</m> having <m>n</m> entries. The usual rules for adding column vectors and multiplying column vectors on the left by matrices make <m>M</m> into a left <m>R</m>-module. Likewise if <m>N</m> is the collection of all row vector with <m>n</m> entries in <m>F</m>, the <m>N</m> is a right <m>R</m>-module via addition and matrix multiplication.
+                </li>
+              </ol></p>
+    
+          </example>
+    
+          <example xml:id="ex-standard-free-module"><title>Standard Free Module</title>
+        
+            <p>
+              For a non-negative integer <m>n</m>, the “standard" free (left) <m>R</m>-module of rank <m>n</m> is the set 
+              <me>
+                R^n=\left\{\begin{bmatrix} r_1\\ \vdots \\r_n \end{bmatrix} \mid r_i\in R, 1\leq i\leq n\right\}
+              </me> 
+                equipped with the operations 
+              <me>
+                \begin{bmatrix} r_1\\ \vdots\\r_n \end{bmatrix} +\begin{bmatrix} r'_1\\ \vdots\\r'_n \end{bmatrix} =\begin{bmatrix} r_1+r'_1\\ \vdots\\r_n +r'_n\end{bmatrix} \text{ and }
+                r\begin{bmatrix} r_1\\ \vdots\\r_n \end{bmatrix}=\begin{bmatrix} rr_1\\ \vdots\\ rr_n \end{bmatrix}. 
+              </me>
+            </p>
+  
+          </example>
+
+          <definition xml:id="def-vector-space"><title>Vector Space</title>
+            <statement>
               <p>
-                For a non-negative integer <m>n</m>, the “standard" free (left) <m>R</m>-module of rank <m>n</m> is the set 
+                Let <m>F</m> be a field. An <m>F</m>-vector space is a (left) <m>F</m>-module.
+              </p>
+            </statement>
+          </definition>
+
+          <proposition xml:id="prop-abelian-groups-are-z-modules"><title>Abelian Groups are <m>\Z</m>-modules</title>
+            <statement>
+              <p>
+                Let <m>M</m> be an abelian group under <m>+</m>. Then <m>M</m> becomes a <m>\Z</m>-module upon defining the rule for scaling to be <m>nm :=</m> 
                 <me>
-                  R^n=\left\{\begin{bmatrix} r_1\\ \vdots \\r_n \end{bmatrix} \mid r_i\in R, 1\leq i\leq n\right\}
+                  0 \textrm{ if } n=0,</me> <me>\overbrace{m + \cdots + m}^{\text{n times}},  \text{ if } n &gt; 0, \text{ and }
                 </me> 
-                  equipped with the operations 
                 <me>
-                  \begin{bmatrix} r_1\\ \vdots\\r_n \end{bmatrix} +\begin{bmatrix} r'_1\\ \vdots\\r'_n \end{bmatrix} =\begin{bmatrix} r_1+r'_1\\ \vdots\\r_n +r'_n\end{bmatrix} \text{ and }
-                  r\begin{bmatrix} r_1\\ \vdots\\r_n \end{bmatrix}=\begin{bmatrix} rr_1\\ \vdots\\ rr_n \end{bmatrix}. 
-                </me>
+                  (\overbrace{m + \cdots + m}^{\text{|n| times}}), \text{ if }n &lt; 0,
+                </me> 
+                for any <m>n \in \Z</m> and <m>m \in M</m>.
               </p>
-    
-            </example>
+            </statement>
 
-            <definition xml:id="def-vector-space"><title>Vector Space</title>
-              <statement>
-                <p>
-                  Let <m>F</m> be a field. An <m>F</m>-vector space is a (left) <m>F</m>-module.
-                </p>
-              </statement>
-            </definition>
+          </proposition>
 
-            <proposition xml:id="prop-abelian-groups-are-z-modules"><title>Abelian Groups are <m>\Z</m>-modules</title>
-              <statement>
+          <proposition xml:id="prop-zn-modules"><title><m>\Z/n</m> Modules</title>
+            <statement>
+              <p>
+                Let <m>n</m> be a positive integer and recall that <m>\Z/n</m> denotes the ring of integers modulo <m>n</m> (whose elements I will write as <m>\ov{0}, \ov1, \cdots, \ov{n-1}</m>). 
+                <ol>
+                  <li>
+                    <p>
+                      Show that if <m>M</m> is any abelian group (under the operation <m>+</m>) such that <m>nx = 0</m> for all <m>x \in M</m> (where <m>nx := \overbrace{x + x + \cdots + x}^{\text{n times}}</m>), then the pairing <m>\Z/n \times M \to M</m> given <m>(\ov{j}, m) \mapsto jm</m> makes <m>M</m> into a <m>\Z/n</m>-module. (Be sure to check this pairing is well-defined.) 
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Conversely, show that if <m>M</m> is a <m>\Z/n</m>-module, then the underlying abelian group <m>(M, +)</m> has the property that <m>nx = 0</m> for all <m>x \in M</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+          </proposition>
+
+          <theorem xml:id="thm-restriction-of-scalars"><title>Restriction of Scalars</title>
+            <statement>
+              <p>
+                Let <m>\phi: R \to S</m> be a ring homomorphism. Any left <m>S</m>-module <m>M</m> may be regarded via <em>restriction of scalars</em> as a left <m>R</m>-module with the following structure: - the rule for addition <m>+</m> on <m>M</m> is the same as in the original structure and - the rule for scaling by elements of <m>R</m> is 
+                <me>
+                  r \cdot m := \phi(r)m \text{ for any }r \in R \text{ and }m\in M.
+                </me> 
+              </p>
+            </statement>
+
+              <proof>
                 <p>
-                  Let <m>M</m> be an abelian group under <m>+</m>. Then <m>M</m> becomes a <m>\Z</m>-module upon defining the rule for scaling to be <m>nm :=</m> 
+                  Let <m>x,y \in R</m> and <m>m,n \in M</m>. One checks that the properties in the definition of module hold for the given action using properties of ring homomorphisms. In detail, 
                   <me>
-                    0 \textrm{ if } n=0,</me> <me>\overbrace{m + \cdots + m}^{\text{n times}},  \text{ if } n &gt; 0, \text{ and }
+                    (x+y)m =\phi(x + y)m= (\phi(x)+\phi(y))m=\phi(x)m + \phi(y)m=xm+ym,
                   </me> 
+                  since <m>\phi</m> preserves addition, 
                   <me>
-                    (\overbrace{m + \cdots + m}^{\text{|n| times}}), \text{ if }n &lt; 0,
+                    x(ym)=\phi(x) (\phi(y)m) = (\phi(x) \phi(y)) m = \phi(xy) m = (xy) m,
                   </me> 
-                  for any <m>n \in \Z</m> and <m>m \in M</m>.
-                </p>
-              </statement>
-
-            </proposition>
-
-            <proposition xml:id="prop-zn-modules"><title><m>\Z/n</m> Modules</title>
-              <statement>
-                <p>
-                  Let <m>n</m> be a positive integer and recall that <m>\Z/n</m> denotes the ring of integers modulo <m>n</m> (whose elements I will write as <m>\ov{0}, \ov1, \cdots, \ov{n-1}</m>). 
-                  <ol>
-                    <li>
-                      <p>
-                        Show that if <m>M</m> is any abelian group (under the operation <m>+</m>) such that <m>nx = 0</m> for all <m>x \in M</m> (where <m>nx := \overbrace{x + x + \cdots + x}^{\text{n times}}</m>), then the pairing <m>\Z/n \times M \to M</m> given <m>(\ov{j}, m) \mapsto jm</m> makes <m>M</m> into a <m>\Z/n</m>-module. (Be sure to check this pairing is well-defined.) 
-                      </p>
-                    </li>
-
-                    <li>
-                      <p>
-                        Conversely, show that if <m>M</m> is a <m>\Z/n</m>-module, then the underlying abelian group <m>(M, +)</m> has the property that <m>nx = 0</m> for all <m>x \in M</m>.
-                      </p>
-                    </li>
-                  </ol>
-                </p>
-              </statement>
-            </proposition>
-
-            <theorem xml:id="thm-restriction-of-scalars"><title>Restriction of Scalars</title>
-              <statement>
-                <p>
-                  Let <m>\phi: R \to S</m> be a ring homomorphism. Any left <m>S</m>-module <m>M</m> may be regarded via <em>restriction of scalars</em> as a left <m>R</m>-module with the following structure: - the rule for addition <m>+</m> on <m>M</m> is the same as in the original structure and - the rule for scaling by elements of <m>R</m> is 
+                  since <m>\phi</m> preserves multiplication, and 
                   <me>
-                    r \cdot m := \phi(r)m \text{ for any }r \in R \text{ and }m\in M.
+                    1 \cdot m = \phi(1) m = 1_S m = m
                   </me> 
+                  since <m>\phi</m> preserves multiplicative identities. This gives three of the axioms. The final also holds: 
+                  <me>
+                    x(m + n) = \phi(x) (m+n) = \phi(x)m + \phi(x)n = xm + xn.
+                  </me>
                 </p>
-              </statement>
+              </proof>
+          </theorem>
 
-                <proof>
-                  <p>
-                    Let <m>x,y \in R</m> and <m>m,n \in M</m>. One checks that the properties in the definition of module hold for the given action using properties of ring homomorphisms. In detail, 
-                    <me>
-                      (x+y)m =\phi(x + y)m= (\phi(x)+\phi(y))m=\phi(x)m + \phi(y)m=xm+ym,
-                    </me> 
-                    since <m>\phi</m> preserves addition, 
-                    <me>
-                      x(ym)=\phi(x) (\phi(y)m) = (\phi(x) \phi(y)) m = \phi(xy) m = (xy) m,
-                    </me> 
-                    since <m>\phi</m> preserves multiplication, and 
-                    <me>
-                      1 \cdot m = \phi(1) m = 1_S m = m
-                    </me> 
-                    since <m>\phi</m> preserves multiplicative identities. This gives three of the axioms. The final also holds: 
-                    <me>
-                      x(m + n) = \phi(x) (m+n) = \phi(x)m + \phi(x)n = xm + xn.
-                    </me>
-                  </p>
-                </proof>
-            </theorem>
-
-            <example xml:id="ex-complex-vector-spaces-are-real-vector-spaces"><title>Complex Vector Spaces are Real</title>
-              <statement>
-                <p>
-                  For example, since <m>\R</m> is a subring of <m>\C</m>, every complex vector space may be regarded as a real vector space, by restriction of scalars from <m>\C</m> to <m>\R</m>. Likewise, any real vector space may be regarded as a rational vector space. Etc.
-                </p>
-              </statement>
-            </example>
-
-            <proposition xml:id="prop-homomorphisms-and-restriction-of-scalars"><title>Ring Maps and Restriction of Scalars</title>
-              <statement>
-                <p>
-                  If <m>S</m> and <m>R</m> are rings and <m>\phi: S \to R</m> is a ring homomorphism, then since <m>S</m> is a left <m>S</m>-module, it is also a left <m>R</m>-module via restriction of scalars. Note that the rule for scaling given by <m>r s := \phi(r) s</m>.
-              </p>
-    
+          <example xml:id="ex-complex-vector-spaces-are-real-vector-spaces"><title>Complex Vector Spaces are Real</title>
+            <statement>
               <p>
-                As a special case of this, if <m>S</m> is a subring of a ring <m>R</m> then <m>R</m> is an <m>S</m>-module (restriction of scalars along the inclusion map).
+                For example, since <m>\R</m> is a subring of <m>\C</m>, every complex vector space may be regarded as a real vector space, by restriction of scalars from <m>\C</m> to <m>\R</m>. Likewise, any real vector space may be regarded as a rational vector space. Etc.
               </p>
-    
+            </statement>
+          </example>
+
+          <proposition xml:id="prop-homomorphisms-and-restriction-of-scalars"><title>Ring Maps and Restriction of Scalars</title>
+            <statement>
               <p>
-                For instance, <m>R[x_1,\ldots,x_n]</m> is a left <m>R</m>-module for any <m>n\geq 0</m> via the evident injective ring homomorphism <m>R \into R[x_1, \ldots, x_n]</m>.
+                If <m>S</m> and <m>R</m> are rings and <m>\phi: S \to R</m> is a ring homomorphism, then since <m>S</m> is a left <m>S</m>-module, it is also a left <m>R</m>-module via restriction of scalars. Note that the rule for scaling given by <m>r s := \phi(r) s</m>.
+            </p>
+  
+            <p>
+              As a special case of this, if <m>S</m> is a subring of a ring <m>R</m> then <m>R</m> is an <m>S</m>-module (restriction of scalars along the inclusion map).
+            </p>
+  
+            <p>
+              For instance, <m>R[x_1,\ldots,x_n]</m> is a left <m>R</m>-module for any <m>n\geq 0</m> via the evident injective ring homomorphism <m>R \into R[x_1, \ldots, x_n]</m>.
+            </p>
+  
+            <p>
+              Also, <m>\Mat_{n \times n}(R)</m> is a left <m>R</m>-module for <m>n\geq 1</m> given by the ring map <m>R \to \Mat_{n \times n}(R)</m> sending <m>r</m> to <m>r \cdot I_n</m>.
+            
               </p>
-    
-              <p>
-                Also, <m>\Mat_{n \times n}(R)</m> is a left <m>R</m>-module for <m>n\geq 1</m> given by the ring map <m>R \to \Mat_{n \times n}(R)</m> sending <m>r</m> to <m>r \cdot I_n</m>.
-              
-                </p>
-              </statement>
-            </proposition>
+            </statement>
+          </proposition>
 
-            <example xml:id="exe-ri-module-is-an-r-module"><title><m>R/I</m> is an <m>R</m>-module</title>
+          <example xml:id="exe-ri-module-is-an-r-module"><title><m>R/I</m> is an <m>R</m>-module</title>
+            <p>
+              If <m>I</m> is a (two-sided) ideal of a ring <m>R</m> then applying restriction of scalars along the quotient homomorphism <m>q:R\to R/I</m> gives that any left <m>R/I</m>-module is also a left <m>R</m>-module.
+            </p>
+  
+            <p>
+              In particular, applying this to the <m>R/I</m>-module <m>R/I</m> gives that <m>R/I</m> is a left <m>R</m>-module. The rule for scaling is <m>r \cdot (r' + I) = rr' + I</m>.
+            </p>
+          </example>
+
+          <definition xml:id="def-submodule"><title>Submodule</title>
+            <statement>
               <p>
-                If <m>I</m> is a (two-sided) ideal of a ring <m>R</m> then applying restriction of scalars along the quotient homomorphism <m>q:R\to R/I</m> gives that any left <m>R/I</m>-module is also a left <m>R</m>-module.
+                Let <m>R</m> be a ring and let <m>M</m> be a left <m>R</m>-module. An <em><m>R</m>-submodule</em> of <m>M</m> is a subset <m>N \subseteq M</m> such that 
+                <ol>
+                  <li>
+                    <p>
+                      <m>N</m> is a subgroup of <m>M</m> under <m>+</m> (so, we have <m>0 \in N</m>, if <m>n \in N</m> then <m>-n \in N</m>, and if <m>n_1, n_2 \in N</m> then <m>n_1 + n_2 \in N</m>), and 
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>rn \in N</m> for all <m>r \in R</m> and <m>n \in N</m>.
+                    </p>
+                  </li>
+                </ol>
               </p>
-    
+            </statement>
+          </definition>
+
+          <example>
+            <p>
+              Let <m>M</m> be an <m>R</m>-module and <m>I</m> be an ideal in <m>R</m>. Show that the set <me>N = \{ m \in M \mid am = 0 \textrm{ for all } a \in I \}</me> is an <m>R</m>-submodule of <m>M</m>.
+            </p>
+          </example>
+
+          <proposition>
+            <statement>
               <p>
-                In particular, applying this to the <m>R/I</m>-module <m>R/I</m> gives that <m>R/I</m> is a left <m>R</m>-module. The rule for scaling is <m>r \cdot (r' + I) = rr' + I</m>.
+                Let <m>R</m> be a commutative ring with <m>1 \neq 0</m>. An <m>R</m>-module <m>M</m> is simple if it has no nontrivial submodules. Show that <m>M \neq 0</m> is simple if and only if there exists a maximal ideal <m>\fm</m> of <m>R</m> such that <m>M \cong R/\fm</m>.
               </p>
-            </example>
-
-            <definition xml:id="def-submodule"><title>Submodule</title>
-              <statement>
-                <p>
-                  Let <m>R</m> be a ring and let <m>M</m> be a left <m>R</m>-module. An <em><m>R</m>-submodule</em> of <m>M</m> is a subset <m>N \subseteq M</m> such that 
-                  <ol>
-                    <li>
-                      <p>
-                        <m>N</m> is a subgroup of <m>M</m> under <m>+</m> (so, we have <m>0 \in N</m>, if <m>n \in N</m> then <m>-n \in N</m>, and if <m>n_1, n_2 \in N</m> then <m>n_1 + n_2 \in N</m>), and 
-                      </p>
-                    </li>
-
-                    <li>
-                      <p>
-                        <m>rn \in N</m> for all <m>r \in R</m> and <m>n \in N</m>.
-                      </p>
-                    </li>
-                  </ol>
-                </p>
-              </statement>
-            </definition>
-
-              <example>
-                <p>
-                  Let <m>M</m> be an <m>R</m>-module and <m>I</m> be an ideal in <m>R</m>. Show that the set <me>N = \{ m \in M \mid am = 0 \textrm{ for all } a \in I \}</me> is an <m>R</m>-submodule of <m>M</m>.
-                </p>
-              </example>
-
-              <proposition>
-                <statement>
-                  <p>
-                    Let <m>R</m> be a commutative ring with <m>1 \neq 0</m>. An <m>R</m>-module <m>M</m> is simple if it has no nontrivial submodules. Show that <m>M \neq 0</m> is simple if and only if there exists a maximal ideal <m>\fm</m> of <m>R</m> such that <m>M \cong R/\fm</m>.
-                  </p>
-                </statement>
-              </proposition>
-
+            </statement>
+          </proposition>
 
           <exercises>
 
@@ -12716,7 +12536,7 @@
         
         <section xml:id="sec-modgen"><title>Generated Modules</title>
 
-          <proposition>
+          <proposition><title>Finite Generation and Quotient Modules</title>
             <statement>
               <p>
                 Let <m>R</m> be a ring with <m>0\neq 1</m>. Prove that if <m>M</m> is an <m>R</m>-module and <m>N</m> is a submodule of <m>M</m> such that <m>N</m> and <m>M/N</m> are finitely generated, then <m>M</m> is finitely generated.
@@ -12725,7 +12545,6 @@
           </proposition>
 
           <proposition xml:id="prop-every-cyclic-r-module-cong-to-ri-for-some-i"><title>Every Cyclic <m>R</m>-module <m>\cong</m> to <m>R/I</m> for some <m>I</m></title>
-
             <statement>
               <p>
                 Every cyclic <m>R</m>-module is isomorphic to <m>R/I</m> for some left ideal <m>I</m>.
@@ -19617,9 +19436,9 @@
 
           <blockquote>
             <p>
-              <q></q>
+              <q>Eliminate all other factors, and the one which remains must be the truth.</q>
             </p>
-            <attribution></attribution>
+            <attribution>Sir Arthur Conan Doyle</attribution>
           </blockquote>
 
           <definition xml:id="def-irreducible-polynomial">
@@ -25136,6 +24955,11 @@
 
         <section xml:id="sec-matrices"><title>Matrices and Vector Spaces (*)</title>
 
+          <p>Coming soon!</p>
+          
+        </section>
+
+        <section xml:id="sec-poset-lattice"><title>Posets, Lattices, Chains (*)</title>
           <p>Coming soon!</p>
           
         </section>

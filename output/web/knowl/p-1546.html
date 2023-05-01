@@ -12,7 +12,32 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">If <span class="process-math">\((x) = (y)\)</span> then <span class="process-math">\(x \in (y)\)</span> and so <span class="process-math">\(x = yu\)</span> for some <span class="process-math">\(u\text{.}\)</span> Similarly <span class="process-math">\(y = xs\)</span> and hence <span class="process-math">\(y = yus\text{.}\)</span> Since <span class="process-math">\(R\)</span> is a domain, either <span class="process-math">\(y = 0\)</span> or <span class="process-math">\(su = 1\text{.}\)</span> If <span class="process-math">\(y= 0\text{,}\)</span> then <span class="process-math">\(x = 0 = 1 y\)</span> and otherwise <span class="process-math">\(u\)</span> is a unit.</div>
+<div class="para logical">
+<div class="para">First, notice that <span class="process-math">\(2\cdot 2=6=(1+\sqrt{-3})(1-\sqrt{-3})\text{.}\)</span> Define a function</div>
+<div class="displaymath process-math">
+\begin{equation*}
+N:\Z[\sqrt{-3}]\to\Z, N(a+b \sqrt{-3})=a^2+3b^2.
+\end{equation*}
+</div>
+<div class="para">Let <span class="process-math">\(\alpha,\beta\in\Z[i]\)</span> and behold</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+N(\alpha\beta)
+&amp;=N((a+b \sqrt{-3})(c+d \sqrt{-3}))\\
+&amp;=N(ac-3bd+ad \sqrt{-3}+bc \sqrt{-3})\\
+&amp;=(ac-3bd)^2+3(ad+bc)^2\\
+&amp;=((ac)^2-6acbd+9(bd)^2)+3((ad)^2+2abcd+(bc^2))\\
+&amp;=a^2c^2+9b^2d^2+3a^2d^2+3b^2c^2\\
+&amp;=(a^2c^2+3a^2d^2)+(3b^2c^2+9b^2d^2)\\
+&amp;=a^2(c^2+3d^2)+3b^2(c^2+3d^2)\\
+&amp;N(\alpha)N(\beta)\\
+&amp;=(a^2+3b^2)(c^2+3d^2).
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">So there's that done.</div>
+</div>
 <span class="incontext"><a href="sec-pids.html#p-1546" class="internal">in-context</a></span>
 </body>
 </html>

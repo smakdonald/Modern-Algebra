@@ -11,8 +11,46 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<div class="para">Let <span class="process-math">\(G\)</span> be a group and <span class="process-math">\(H\nsg G\text{.}\)</span> Let <span class="process-math">\(x\in C_H(G)\text{,}\)</span> and consider <span class="process-math">\(gxg\inv\text{.}\)</span> Let <span class="process-math">\(h\in H\text{.}\)</span> As <span class="process-math">\(H\nsg G\)</span> we have <span class="process-math">\(h=gh'g\inv\)</span> for some <span class="process-math">\(h\in H\text{,}\)</span> and thus that 1. <span class="process-math">\(g\inv h=h'g\inv\)</span> and 2. <span class="process-math">\(hg=gh'\text{.}\)</span> Consider <span class="process-math">\(gxg\inv h\text{.}\)</span> By (1), we see <span class="process-math">\(gxg\inv h=gxh'g\inv\text{.}\)</span> As <span class="process-math">\(x\)</span> commutes with everything in <span class="process-math">\(H\)</span> we have <span class="process-math">\(gh'xg\inv\text{,}\)</span> and by (2) we have <span class="process-math">\(hgxg\inv\text{.}\)</span> Thus <span class="process-math">\(C_H(G)\nsg G\text{.}\)</span>
-</div> <div class="para">Let <span class="process-math">\(G\)</span> act on the left cosets of <span class="process-math">\(C_G(H)\)</span> by left multiplication, giving rise to the permutation representation homomorphism <span class="process-math">\(\rho:G/C_G(H)\to\Aut(H)\text{.}\)</span> By the <a href="" class="xref" data-knowl="./knowl/thm-fit-group.html" title="Theorem 4.49: First Isomorphism Theorem">First Isomorphism Theorem</a> we see that <span class="process-math">\(G/C_G(H)\)</span> is isomorphic to a subgroup of the automorphism group of <span class="process-math">\(H\text{.}\)</span>
+<div class="para">Let <span class="process-math">\(T:V \to V\)</span> be the linear operator given by <span class="process-math">\(T(p) = xp'\)</span> (where <span class="process-math">\(p'\)</span> denotes the derivative of <span class="process-math">\(p).\)</span>
+</div> <div class="para logical">
+<div class="para">Part (a) Note that the change of basis matrix for this operator is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{bmatrix}
+0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; \cdots &amp; 0 &amp; 0 \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\
+0 &amp; 0 &amp; \cdots &amp; 0 &amp; n-1 \\   
+\end{bmatrix},
+\end{equation*}
+</div>
+<div class="para">with the basis <span class="process-math">\(\{1,x,\dots,x^{n-1}\}\text{.}\)</span> Thus <span class="process-math">\(\cp_A(x)\)</span> will be given by the determinant of the matrix</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{bmatrix}
+x &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
+0 &amp; x-1 &amp; \cdots &amp; 0 &amp; 0 \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\
+0 &amp; 0 &amp; \cdots &amp; 0 &amp; x-(n-1) \\   
+\end{bmatrix},
+\end{equation*}
+</div>
+<div class="para">which is diagonal. Hence <span class="process-math">\(\cp_AT(x)=\displaystyle\prod_{i=0}^{n-1}(x-i)\text{.}\)</span>
+</div>
+</div> <div class="para">Part (b) Our <span class="process-math">\(\cp_AT(x)\)</span> factors into distinct linear polynomials, each of which is in the form <span class="process-math">\((x-i)^1\)</span> for <span class="process-math">\(0\leq i\leq n-1\text{.}\)</span> Thus each linear term is an elementary divisor. However, as none of these elementary divisors divide any of the others, we see that the only invariant factor is <span class="process-math">\(\cp_AT(x)\)</span> itself.</div> <div class="para logical">
+<div class="para">Part (c) As each linear term is an elementary divisor, each Jordan block a <span class="process-math">\(1\times1\)</span> matrix with <span class="process-math">\(i\)</span> as the only entry. Thus the Jordan Canonical form is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{bmatrix}
+0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; \cdots &amp; 0 &amp; 0 \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\
+0 &amp; 0 &amp; \cdots &amp; 0 &amp; n-1 \\   
+\end{bmatrix}.
+\end{equation*}
+</div>
+<div class="para">As the only invariant factor is <span class="process-math">\(\cp_AT(x)\text{,}\)</span> we see that the Rational Canonical Form of <span class="process-math">\(T\)</span> is <span class="process-math">\(C(\cp_AT(x))\text{.}\)</span>
+</div>
 </div>
 </div></body>
 </html>
