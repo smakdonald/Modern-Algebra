@@ -12,21 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para logical">
-<div class="para">A ring <span class="process-math">\(R\)</span> is called a <em class="emphasis">unique factorization domain</em>, or UFD for short, if <span class="process-math">\(R\)</span> is an integral domain and every element <span class="process-math">\(r \in R\)</span> that is non-zero and not a unit can be written as a finite product</div>
-<div class="displaymath process-math">
-\begin{equation*}
-r = p_1 \cdots p_n
-\end{equation*}
-</div>
-<div class="para">of (not necessarily distinct) irreducible elements <span class="process-math">\(p_1, \dots, p_n\)</span> of <span class="process-math">\(R\)</span> in a way that is unique up to ordering and associates. That is, if</div>
-<div class="displaymath process-math">
-\begin{equation*}
-r = q_1 \cdots q_m
-\end{equation*}
-</div>
-<div class="para">also holds with each <span class="process-math">\(q_i\)</span> irreducible, then <span class="process-math">\(m = n\)</span> and there is a permutation <span class="process-math">\(\sigma\)</span> such that, for all <span class="process-math">\(i\text{,}\)</span> we have <span class="process-math">\(p_i\)</span> and <span class="process-math">\(q_{\sigma(i)}\)</span> are associates.</div>
-</div>
-<span class="incontext"><a href="subsec-ufds.html#p-1650" class="internal">in-context</a></span>
+<div class="para">We need to rule out the possibility that the process never terminates. If it never terminates, we will have built an infinite binary tree with the property that some route downward through the tree consists of an infinite list of irreducible elements <span class="process-math">\(y_1, y_2, y_3,\dots\)</span> such that <span class="process-math">\(x = y_1z_1\)</span> for a non-unit <span class="process-math">\(z_1\)</span> and, for each <span class="process-math">\(i \geq 1\text{,}\)</span> <span class="process-math">\(y_{i} = y_{i+1} z_{i+1}\)</span> for a non-unit <span class="process-math">\(z_{i+1}\text{.}\)</span> Since <span class="process-math">\(R\)</span> is an integral domain, we have <span class="process-math">\((x) \subsetneq (y_1)\)</span> and <span class="process-math">\((y_i) \subsetneq (y_{i+1})\)</span> for all <span class="process-math">\(i \geq 1\text{.}\)</span> (E.g., if <span class="process-math">\((x) = (y_1)\)</span> then <span class="process-math">\(y_1 = xv\)</span> and hence <span class="process-math">\(x = xvz_1\text{,}\)</span> so that <span class="process-math">\(vz_1 = 1\text{,}\)</span> contrary to <span class="process-math">\(z_1\)</span> being a non-unit.)</div>
+<span class="incontext"><a href="subsec-noeth.html#p-1650" class="internal">in-context</a></span>
 </body>
 </html>

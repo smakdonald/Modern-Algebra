@@ -10,16 +10,29 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para">Note that <span class="process-math">\(I \cdot J \subseteq I \cap J\)</span> holds in general for any pair of ideals. If <span class="process-math">\(I + J = R\)</span> then <span class="process-math">\(a + b = 1\)</span> for some <span class="process-math">\(a \in I\)</span> and <span class="process-math">\(b \in J\text{.}\)</span> Given <span class="process-math">\(x \in I \cap J\)</span> we have <span class="process-math">\(xa + xb = x\)</span> with <span class="process-math">\(xa \in I \cdot J\)</span> and <span class="process-math">\(xb \in I \cdot J\text{,}\)</span> which proves <span class="process-math">\(x \in I \cdot J\text{.}\)</span>
-</div> <div class="para logical">
-<div class="para">For the second assertion define <span class="process-math">\(g: R \to R/I \oplus R/J\)</span> to be the <span class="process-math">\(R\)</span>-module homomorphism <span class="process-math">\(g(r) = (r +I, r + J)\text{.}\)</span> Note that the kernel of <span class="process-math">\(g\)</span> is <span class="process-math">\(I \cap J\)</span> which equals <span class="process-math">\(I\cdot J\)</span> by the first assertion. I claim <span class="process-math">\(g\)</span> is onto: Pick <span class="process-math">\((x + I, y +J) \in R/I \oplus R/J\text{.}\)</span> With <span class="process-math">\(a,b\)</span> chosen as above, we have</div>
+<body class="ignore-math"><article class="hiddenproof"><div class="para logical">
+<div class="para">Suppose <span class="process-math">\(f = gh\)</span> with <span class="process-math">\(g, h \in F[x]\text{.}\)</span> We can find an element <span class="process-math">\(M\)</span> of <span class="process-math">\(R\)</span> such that <span class="process-math">\(M \cdot g(x) \in R[x]\text{.}\)</span> (We can take <span class="process-math">\(M\)</span> to be the product of all the denominators of the coefficients of <span class="process-math">\(g\text{,}\)</span> for example; this is called “clearing denominators''.) Similarly, there is an <span class="process-math">\(N \in R\)</span> such that <span class="process-math">\(N \cdot h(x) \in R[x]\text{.}\)</span> Further, write <span class="process-math">\(M \cdot g(x) = a \cdot l(x)\)</span> where <span class="process-math">\(a = \cont(M g(x)) \in R\text{,}\)</span> <span class="process-math">\(l(x) \in R[x]\text{,}\)</span> and <span class="process-math">\(\cont(l) = 1,\)</span> and similarly <span class="process-math">\(N \cdot g(x) = b \cdot m(x)\)</span> where <span class="process-math">\(b = \cont(N h(x)) \in R\text{,}\)</span> <span class="process-math">\(m(x) \in R[x]\text{,}\)</span> and <span class="process-math">\(\cont(m) = 1\text{.}\)</span> We have</div>
 <div class="displaymath process-math">
 \begin{equation*}
-g(xb + ya) = (xb + ya + I, xb + ya + J) = (xb + I, ya + J) = (x + I, y +J).
+abl(x)m(x) = MN f(x)
 \end{equation*}
 </div>
-<div class="para">The last equation holds since <span class="process-math">\(xa + xb = x\)</span> and thus <span class="process-math">\(xb + I = xb + xa + I = x + I\)</span> and similarly <span class="process-math">\(ya + J = y + J\text{.}\)</span>
+<div class="para">Using Gauss's Lemma, Part 1, we have <span class="process-math">\(\cont(lm) = \cont(l) \cont(m) = 1\)</span> and hence</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\cont(ab l(x) m(x)) = ab \cont(l(x) m(x)) = ab.
+\end{equation*}
 </div>
-</div> <div class="para">For the final assertion, recall that when <span class="process-math">\(R\)</span> is a UFD, two principle ideals <span class="process-math">\(Rx\)</span> and <span class="process-math">\(Ry\)</span> satisfy <span class="process-math">\(Rx + Ry = R\)</span> if and only if <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are relatively prime. Also, for <span class="process-math">\(I = Rx\)</span> and <span class="process-math">\(J = Ry\text{,}\)</span> we have <span class="process-math">\(I\cdot J = R(xy)\text{.}\)</span>
+<div class="para">We also have <span class="process-math">\(\cont(MNf(x)) = MN\cont(f) = MN\)</span> (since we've already proven that <span class="process-math">\(\cont(f) = 1\)</span>).</div>
+</div> <div class="para logical">
+<div class="para">So <span class="process-math">\(ab = MN\)</span> and thus by dividing we arrive at</div>
+<div class="displaymath process-math">
+\begin{equation*}
+l(x) m(x) = f(x).
+\end{equation*}
+</div>
+<div class="para">But <span class="process-math">\(f(x)\)</span> is irreducible in <span class="process-math">\(R[x]\text{.}\)</span> It follows that either <span class="process-math">\(l\)</span> or <span class="process-math">\(m\)</span> must be a unit in <span class="process-math">\(R[x]\)</span> (i.e., a unit in <span class="process-math">\(R\)</span>) and it follows that either <span class="process-math">\(g(x)\)</span> or <span class="process-math">\(h(x)\)</span> is a unit in <span class="process-math">\(F[x]\text{.}\)</span> This proves <span class="process-math">\(f(x)\)</span> is irreducible in <span class="process-math">\(F[x]\text{.}\)</span>
+</div>
+</div> <div class="para">(<span class="process-math">\(\Leftarrow\)</span>) Say <span class="process-math">\(f(x) \in R[x]\)</span> irreducible in <span class="process-math">\(F[x]\)</span> and <span class="process-math">\(\cont(f) = 1\text{.}\)</span> If <span class="process-math">\(f = q(x) r(x)\)</span> with <span class="process-math">\(q,r \in R[x]\)</span> then, since <span class="process-math">\(f\)</span> is irreducible in <span class="process-math">\(F[x]\text{,}\)</span> one of <span class="process-math">\(q\)</span> or <span class="process-math">\(r\)</span> must be a constant. But since <span class="process-math">\(\cont(f) = 1\text{,}\)</span> this constant must be <span class="process-math">\(1\text{.}\)</span>
 </div></article></body>
 </html>

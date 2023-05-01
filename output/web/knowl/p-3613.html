@@ -13,19 +13,31 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Define the function</div>
+<div class="para">Now let <span class="process-math">\(n\)</span> be arbitrary and <span class="process-math">\(\tau = (i \, j)\)</span> for some <span class="process-math">\(1 \leq i &lt; j \leq n\text{.}\)</span> In this case we need to show</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\det: \Mat_{n \times n} (R) \to R
+\phi(v_1, \dots, v_n) = - \phi(v_1, \dots, v_{i-1}, v_{j}, v_{i+1}, v_{i+2}, \dots, v_{j-1}, v_i, v_{j+1}, \dots, v_n)
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(v_1, \dots, v_n \in V\text{.}\)</span> Fix <span class="process-math">\(n-2\)</span> elements <span class="process-math">\(v_1, \dots, v_{i-1}, v_{i+1}, \dots, v_{j-1}, v_{j+1}, \dots, v_n\)</span> and define</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\psi: V^{\times 2} \to R
 \end{equation*}
 </div>
 <div class="para">by</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\det(A) = \sum_{\s \in S_n} \sign(\s) \prod_{i=1}^n a_{\s(i), i}
+\psi(v,w) = \phi(v_1, \dots, v_{i-1}, v, v_{i+1}, \dots, v_{j-1}, w,  v_{j+1}, \dots, v_n)
 \end{equation*}
 </div>
-<div class="para">where <span class="process-math">\(S_n\)</span> is the group of all permutations of <span class="process-math">\(\{1, \dots, n\}\)</span> and <span class="process-math">\(\sign(\s)\)</span> refers to the sign of a permutation.</div>
+<div class="para">for any <span class="process-math">\(v,w \in V\text{.}\)</span> With this notation the goal is to show</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\psi(v,w) = -\psi(w,v)
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(\phi\)</span> is <span class="process-math">\(R\)</span>-multi-linear and alternating, <span class="process-math">\(\psi: V \times V\to R\)</span> is <span class="process-math">\(R\)</span>-bilinear and alternating, and so the case already proven gives the result.</div>
 </div>
 <span class="incontext"><a href="section-66.html#p-3613" class="internal">in-context</a></span>
 </body>

@@ -12,7 +12,33 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">If the operation is of type I, <span class="process-math">\(\det(B) = \det(A)\text{.}\)</span>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(\phi\)</span> be any function with the three properties stated in the Theorem. Let <span class="process-math">\(A = (a_{i,j})\)</span> be any square matrix with columns <span class="process-math">\(v_1, \dots, v_n\text{.}\)</span> Note that <span class="process-math">\(v_j = \sum_i a_{i,j} e_i\)</span> where <span class="process-math">\(e_i\)</span> is the <span class="process-math">\(i\)</span>-th standard basis (column) vector. Using the <span class="process-math">\(R\)</span>-multi-linearity property repeatedly we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\phi(A) &amp; = \phi(\sum_{i_1} a_{i_1,1} e_{i_1},  \sum_{i_2} a_{i_2,2} e_{i_2}, \cdots, \sum_{i_n} a_{i_n,n} e_{i_n}) \\
+&amp; = \sum_{i_1} a_{i_1,1} \phi(e_{i_1},  \sum_{i_2} a_{i_2,2} e_{i_2}, \cdots, \sum_{i_n} a_{i_n,n} e_{i_n}) \\
+&amp; = \sum_{i_1}a_{i_1,1} \sum_{i_2} a_{i_2,2} \phi(e_{i_1},   e_{i_2}, \cdots, \sum_{i_n} a_{i_n,n} e_{i_n}) \\
+&amp; = \vdots \\
+&amp; = \sum_{ i_1, \dots, i_n } a_{i_1, 1} \cdots a_{i_n,n} \phi(e_{i_1}, \dots, e_{i_n}) \\
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">where each of <span class="process-math">\(i_1, \dots, i_n\)</span> ranges from <span class="process-math">\(1\)</span> to <span class="process-math">\(n\text{.}\)</span> By the alternating property <span class="process-math">\(\phi(e_{i_1}, \dots, e_{i_n}) = 0\)</span> unless all the <span class="process-math">\(i_1, \dots, i_n\)</span> are distinct. If they are distinct, then by Lemma  we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi(e_{i_1}, \dots, e_{i_n}) = \sign(\s) \phi(e_1, \dots, e_n)
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(\s\)</span> is the permutation defined as <span class="process-math">\(\s(t) = i_t\text{.}\)</span> Finally, recall <span class="process-math">\(\phi(e_1, \dots, e_n) = 1\)</span> by assumption. Putting all of this together gives</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi(A) = \sum_{\text{ distinct  $i_1, \dots, i_n$}} \sign(\text{the permutation $t \mapsto i_t$}) a_{i_1, 1} \cdots a_{i_n,n}.
+\end{equation*}
+</div>
+<div class="para">This is just a re-writing of the formula for <span class="process-math">\(\det\text{;}\)</span> so <span class="process-math">\(\phi = \det\text{.}\)</span>
+</div>
 </div>
 <span class="incontext"><a href="section-66.html#p-3631" class="internal">in-context</a></span>
 </body>

@@ -11,22 +11,27 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h6 class="heading"><span class="type">Paragraph</span></h6>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">First note that if <span class="process-math">\(T\)</span> is a scalar of the identity matrix then its only eigenvalue is <span class="process-math">\(0\text{.}\)</span> Let <span class="process-math">\(\mu\)</span> be an eigenvalue of <span class="process-math">\(p(T)\text{.}\)</span> Thus <span class="process-math">\((p(T)-\mu I)v=0\)</span> for some <span class="process-math">\(v\text{.}\)</span> As <span class="process-math">\(\C\)</span> is algebraically closed we can factor the polynomial <span class="process-math">\(p(x)-\mu\)</span> into linear terms:</div>
+<div class="para">Consider the matrix</div>
 <div class="displaymath process-math">
 \begin{equation*}
-p(x)-\mu=c(x-r_1)\dots(x-r_n)
+A=\begin{bmatrix}
+x &amp; 1 &amp; 0 \\
+1 &amp; x &amp; -3 \\
+0 &amp; 0 &amp; x-1
+\end{bmatrix}
+\in \M_{3,3}(R),
 \end{equation*}
 </div>
-<div class="para">for roots <span class="process-math">\(r_i\text{.}\)</span> Note that <span class="process-math">\(p(r_i)-\mu=0\)</span> for all <span class="process-math">\(r_i\text{.}\)</span> Observe</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{align}(p(T)-\mu I)v&amp;=p(T)v-(\mu I)v\\&amp;=c(T-r_nI)\dots(T-r_1I)v\\&amp;=0.\end{align}
-\end{equation*}
+<div class="para">where <span class="process-math">\(R=\Q[x]\text{.}\)</span>
 </div>
-<div class="para">Thus one of these terms must be sent to zero. Note that if <span class="process-math">\(T-r_iI=0\)</span> for any <span class="process-math">\(I\)</span> this would make <span class="process-math">\(T\)</span> a scaler of the identity matrix. Thus there exists some <span class="process-math">\(i\)</span> such that <span class="process-math">\((T-r_iI)v=0\text{,}\)</span> making <span class="process-math">\(r_i\)</span> an eigenvalue of <span class="process-math">\(T\text{.}\)</span> Notice that as <span class="process-math">\(p(r_i)-\mu=0\)</span> we have <span class="process-math">\(p(r_i)=\mu\text{,}\)</span> completing the proof.</div>
+<ol class="decimal">
+<li><div class="para">Determine the Smith normal form for <span class="process-math">\(A\text{.}\)</span>
+</div></li>
+<li><div class="para">Determine the representative in the isomorphism class of the module presented by <span class="process-math">\(A\)</span> which is written in invariant factor form and in elementary divisor form.</div></li>
+</ol>
 </div>
-<span class="incontext"><a href="sec-operator.html#p-2373" class="internal">in-context</a></span>
+<span class="incontext"><a href="sec-modclass.html#p-2373" class="internal">in-context</a></span>
 </body>
 </html>

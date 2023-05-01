@@ -12,32 +12,15 @@
 </head>
 <body class="ignore-math">
 <article class="proposition theorem-like"><h3 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.26</span><span class="period">.</span>
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.26</span><span class="period">.</span><span class="space"> </span><span class="title">Split Injection.</span>
 </h3>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(F\)</span> be any field and <span class="process-math">\(R\)</span> the set of infinte-by-infinite, column-finite matrices. That is, <span class="process-math">\(R\)</span> consists of arrays <span class="process-math">\(A = (a_{i,j})_{i \in \N, j \in \N}\text{,}\)</span> where <span class="process-math">\(\N = \{1, 2, \dots \}\)</span> and <span class="process-math">\(a_{i,j} \in R\)</span> for all <span class="process-math">\(i,j\text{,}\)</span> such that for each <span class="process-math">\(j\text{,}\)</span> there exists an <span class="process-math">\(I\)</span> (depending on <span class="process-math">\(j\)</span>) such that <span class="process-math">\(a_{i,j} = 0\)</span> for all <span class="process-math">\(i \geq I\text{.}\)</span> That is, <span class="process-math">\(R\)</span> consists of elements of the form</div>
-<div class="displaymath process-math">
-\begin{equation*}
-A = \begin{bmatrix}
-a_{1,1} &amp; a_{1,2} &amp; \cdots \\
-a_{2,1} &amp; a_{2,2} &amp;  \cdots \\
-\vdots &amp; \vdots &amp;  \\
-\end{bmatrix}
-\end{equation*}
-</div>
-<div class="para">such that each column has only a finite number of non-zero entries (but, importantly, there is no uniform bound on the number of non-zero entries a column may have). It is not difficult to see that <span class="process-math">\(R\)</span> is a ring under the usual rules for adding and multiplying matrices: Given <span class="process-math">\(A\)</span> as above and <span class="process-math">\(B=(b_{i,j})_{i \in \N, j \in \N}\)</span> we define</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\text{the $(i,j)$ entry of $A + B$ to be $a_{i,j} + b_{i,j}$}
-\end{equation*}
-</div>
-<div class="para">and</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\text{the $(i,j)$ entry of $AB$ to be $\sum_l a_{i,l} b_{l , j}$}.
-\end{equation*}
-</div>
-<div class="para">Note that the latter is a finite sum since, given <span class="process-math">\(j\text{,}\)</span> there is an <span class="process-math">\(L\)</span> such that <span class="process-math">\(b_{l,j} = 0\)</span> for all <span class="process-math">\(l \geq L\text{.}\)</span> Moreover, <span class="process-math">\(AB\)</span> is column-finite since, for each such <span class="process-math">\(j\text{,}\)</span> each of the columns <span class="process-math">\(1, \dots, L-1\)</span> of <span class="process-math">\(A\)</span> has only a finite number of non-zero elements. The multiplicative identity is the infinite identity matrix. You need not prove any of this.</div>
-</div> <div class="para">Do prove that <span class="process-math">\(R \cong R^2\)</span> as left <span class="process-math">\(R\)</span>-modules. {} Think about splitting up an element of <span class="process-math">\(R\)</span> into its even and odd columns.</div></article><span class="incontext"><a href="sec-modhom.html#proposition-54" class="internal">in-context</a></span>
+<div class="para">Assume <span class="process-math">\(R\)</span> is a ring, <span class="process-math">\(W\)</span> an <span class="process-math">\(R\)</span>-module, and <span class="process-math">\(i: V \to W\)</span> an injective <span class="process-math">\(R\)</span>-module homomorphism. We say <span class="process-math">\(i\)</span> is a <em class="emphasis">split injection</em> if there exists an <span class="process-math">\(R\)</span>-module homomorphism <span class="process-math">\(q: W \to V\)</span> such that <span class="process-math">\(q \circ i = id_V\)</span> (i.e., <span class="process-math">\(q(i(v)) = v\)</span> for all <span class="process-math">\(v \in V\)</span>).</div>
+<ol class="decimal">
+<li><div class="para"></div></li>
+<li><div class="para">Prove that if <span class="process-math">\(R\)</span> is a field, <span class="process-math">\(V\)</span> is a subspace (i.e., submodule) of <span class="process-math">\(W\text{,}\)</span> and <span class="process-math">\(i\)</span> is the inclusion map, then <span class="process-math">\(i\)</span> is a split injection. Note that since <span class="process-math">\(i\)</span> is the inclusion map, what you need to prove is that there exists an <span class="process-math">\(R\)</span>-module homomorphism <span class="process-math">\(q: W \to V\)</span> such that <span class="process-math">\(q(v) = v\text{.}\)</span> {}: Start by picking a basis <span class="process-math">\(B\)</span> of <span class="process-math">\(V\)</span> and use a theorem proven in class to show that <span class="process-math">\(B\)</span> can be extended to a basis <span class="process-math">\(C\)</span> of <span class="process-math">\(W\text{.}\)</span> Use <span class="process-math">\(C\)</span> to construct <span class="process-math">\(q\text{.}\)</span> (I am assuming that <span class="process-math">\(V\)</span> is a subspace of <span class="process-math">\(W\)</span> and that <span class="process-math">\(i\)</span> is the inclusion map just for simplicity — more generally, it is true that every injective <span class="process-math">\(R\)</span>-module homomorphism is a split injection whenever <span class="process-math">\(R\)</span> is a field.)</div></li>
+<li><div class="para">Assume <span class="process-math">\(R\)</span> is a non-zero integral domain, but that it is not a field. Prove there exists an <span class="process-math">\(R\)</span>-module homomorphism that is an injection but {} a split injection. {}: Pick <span class="process-math">\(a \in R\)</span> such that <span class="process-math">\(a \neq 0\)</span> and <span class="process-math">\(a\)</span> is not a unit, let <span class="process-math">\(I\)</span> be the proper ideal <span class="process-math">\(I = R \cdot a\)</span> generated by <span class="process-math">\(a\)</span> and show the inclusion map <span class="process-math">\(i: I \to R\)</span> is not a split injection.</div></li>
+</ol>
+</div></article><span class="incontext"><a href="sec-modgen.html#proposition-54" class="internal">in-context</a></span>
 </body>
 </html>

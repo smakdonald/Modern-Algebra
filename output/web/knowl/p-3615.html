@@ -12,7 +12,20 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">If <span class="process-math">\(A\)</span> is upper triangular, then <span class="process-math">\(\det(A) = \prod_i a_{i,i}\text{.}\)</span> For note that for such a matrix the only non-zero terms in the formula for <span class="process-math">\(\det(A)\)</span> occur when <span class="process-math">\(\s(i) \leq i\)</span> for all <span class="process-math">\(i\text{,}\)</span> and this can only happen when <span class="process-math">\(\s = \id\text{.}\)</span> Similarly, if <span class="process-math">\(A\)</span> is lower triangular, then <span class="process-math">\(\det(A) = \prod_i a_{i,i}\text{.}\)</span>
+<div class="para logical">
+<div class="para">Define the function</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\det: \Mat_{n \times n} (R) \to R
+\end{equation*}
+</div>
+<div class="para">by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\det(A) = \sum_{\s \in S_n} \sign(\s) \prod_{i=1}^n a_{\s(i), i}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(S_n\)</span> is the group of all permutations of <span class="process-math">\(\{1, \dots, n\}\)</span> and <span class="process-math">\(\sign(\s)\)</span> refers to the sign of a permutation.</div>
 </div>
 <span class="incontext"><a href="section-66.html#p-3615" class="internal">in-context</a></span>
 </body>

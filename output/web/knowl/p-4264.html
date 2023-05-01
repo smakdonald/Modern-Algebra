@@ -12,7 +12,21 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">The only possible invariant factors involving <span class="process-math">\(x^3\)</span> are 1. <span class="process-math">\(x,x,x\text{;}\)</span> 2. <span class="process-math">\(x,x^2\text{;}\)</span> and 3. <span class="process-math">\(x^3\)</span> itself. However, if <span class="process-math">\(x,x,x\)</span> are the invariant factors then the rank of <span class="process-math">\(A\)</span> would be 3, making it invertible, contradicting the fact that 0 is an eigenvalue of <span class="process-math">\(A\text{.}\)</span> Thus we need only consider the latter two cases.</div>
+<div class="para logical">
+<div class="para">Next, observe</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{align}
+\rank(AP\inv)&amp;=\rank((AP\inv)^T)\\
+&amp;=\rank(P^{-1^T}A^T)\\
+&amp;=\rank(A^T)\\
+&amp;=\rank(A),
+\end{align}
+\end{equation*}
+</div>
+<div class="para">as <span class="process-math">\((P^{-1})^T\)</span> is an invertible matrix. Thus <span class="process-math">\(\rank(B)=\rank(PAP\inv)=\rank(A)\text{.}\)</span>
+</div>
+</div>
 <span class="incontext"><a href="section-79.html#p-4264" class="internal">in-context</a></span>
 </body>
 </html>

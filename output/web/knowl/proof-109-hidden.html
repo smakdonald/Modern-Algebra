@@ -10,13 +10,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para">(<span class="process-math">\(\Leftarrow\)</span>) Every elementary matrix is invertible and a product of invertible matrices is again invertible.</div> <div class="para logical">
-<div class="para">(<span class="process-math">\(\Rightarrow\)</span>) If <span class="process-math">\(A\)</span> is invertible, then by the previous Corollary and Lemma  there exists elementary matrices <span class="process-math">\(E_1, \dots, E_s\text{,}\)</span> <span class="process-math">\(F_1, \dots, F_t\)</span> of type I or II such that</div>
+<body class="ignore-math"><article class="hiddenproof"><div class="para logical">
+<div class="para">First write <span class="process-math">\(M\)</span> in invariant factor form <span class="process-math">\(M \cong R^r \oplus R/(d_1) \oplus \dots \oplus R/(d_k)\text{.}\)</span> For any non-zero, non-unit element <span class="process-math">\(d\)</span> of <span class="process-math">\(R\text{,}\)</span> we have <span class="process-math">\(d = p_1^{e_1} \cdots p_m^{e_m}\)</span> for some distinct (non-associate) prime elements <span class="process-math">\(p_j\)</span> and integers <span class="process-math">\(e_j \geq 1\text{.}\)</span> By the Chinese remainder theorem (applied over and over again) we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
-E_s \cdots E_1 \cdot A \cdot F_1 \cdots F_t= I_n
+R/(d)\cong R/(p_1^{e_1})  \oplus \cdots \oplus R/(p_m^{e_m})
 \end{equation*}
 </div>
-<div class="para">and hence <span class="process-math">\(A = E_1^{-1} \cdots E_s^{-1}F_t^{-1} \cdots F^{-1}_1\text{.}\)</span> This proves the statement since the inverse of an elementary matrix is an elementary matrix.</div>
-</div></article></body>
+<div class="para">Doing this for each fact <span class="process-math">\(R/(d_i)\)</span> in the invariant factor form of <span class="process-math">\(M\)</span> we obtain the existence of an elementary divisor form of <span class="process-math">\(M\text{.}\)</span>
+</div>
+</div> <div class="para">Uniqueness follows from the uniqueness of the invariant factor form and of the prime factorizations of the <span class="process-math">\(d_i\)</span>'s.</div></article></body>
 </html>

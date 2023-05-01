@@ -12,7 +12,23 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">The trivial subgroup has order <span class="process-math">\(1=p^0\text{.}\)</span> Suppose inductively that there exists a subgroup of order <span class="process-math">\(p^{j}\)</span> that has a subgroup for every power of <span class="process-math">\(p\)</span> in between.</div>
+<div class="para logical">
+<div class="para">
+<a href="" class="xref" data-knowl="./knowl/thm-class-eq.html" title="Theorem 5.41: Class Equation">Class Equation</a> tells us</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-class-eq.html">
+\begin{equation*}
+|G|=|Z(G)|+\sum\limits_{g\in G}[G:C_G(g)],
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(C_G(g)\)</span> are the centralizers with more than one element. Notice that this means <span class="process-math">\(|C_G(g)|\big||G|\text{,}\)</span> and thus each centralizer is a power of <span class="process-math">\(p\text{.}\)</span> Thus we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-class-eq.html">
+\begin{equation*}
+p^n=|Z(G)|+pk
+\end{equation*}
+</div>
+<div class="para">for some <span class="process-math">\(k\in\N\text{.}\)</span> Thus the center of <span class="process-math">\(G\)</span> cannot be trivial, else we would not be able to sum to a power of <span class="process-math">\(p\text{.}\)</span>
+</div>
+</div>
 <span class="incontext"><a href="sec-p-groups.html#p-803" class="internal">in-context</a></span>
 </body>
 </html>

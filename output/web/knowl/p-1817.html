@@ -12,7 +12,15 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Show that if <span class="process-math">\(M\)</span> is any abelian group (under the operation <span class="process-math">\(+\)</span>) such that <span class="process-math">\(nx = 0\)</span> for all <span class="process-math">\(x \in M\)</span> (where <span class="process-math">\(nx := \overbrace{x + x + \cdots + x}^{\text{n times}}\)</span>), then the pairing <span class="process-math">\(\Z/n \times M \to M\)</span> given <span class="process-math">\((\ov{j}, m) \mapsto jm\)</span> makes <span class="process-math">\(M\)</span> into a <span class="process-math">\(\Z/n\)</span>-module. (Be sure to check this pairing is well-defined.)</div>
-<span class="incontext"><a href="sec-defmod.html#p-1817" class="internal">in-context</a></span>
+<div class="para logical">
+<div class="para">We already showed that the rule for scaling is well defined, and we know from 817 that the rule for addition is well-defined and that <span class="process-math">\((M/IM, +)\)</span> is an abelian group. To show <span class="process-math">\(M/IM\)</span> is an <span class="process-math">\(R/I\)</span>-module, there remain four axioms to verify. For instance,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+((r+I)(s+I))(m +IM) = (rs + I)(m + IM) = (rsm + IM) = (r+I)(sm +IM) = (r+I)((s+I)(m+IM)),
+\end{equation*}
+</div>
+<div class="para">which verifies one of them; the other proofs are similar.</div>
+</div>
+<span class="incontext"><a href="sec-modgen.html#p-1817" class="internal">in-context</a></span>
 </body>
 </html>

@@ -10,15 +10,20 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para">Among the many things to check here, we will only check a couple.</div> <div class="para">We need to prove the rule for scaling by <span class="process-math">\(R\)</span> on <span class="process-math">\(M/N\)</span> is well-defined: If <span class="process-math">\(m+N=m'+N\)</span> then <span class="process-math">\(m-m'\in N\)</span> so <span class="process-math">\(r(m-m')\in N\)</span> by the definition of submodule. This gives that <span class="process-math">\(rm-rm'\in N\text{,}\)</span> hence <span class="process-math">\(rm+N=rm'+N\text{.}\)</span> The module axioms are then pretty straightforward. We already know from 817 that <span class="process-math">\(M/N\)</span> is an abelian group under <span class="process-math">\(+\text{.}\)</span>
-</div> <div class="para logical">
-<div class="para">Let us check one of the four axioms involving scaling. We have</div>
+<body class="ignore-math"><article class="hiddenproof"><div class="para">Let <span class="process-math">\(C = \{w_1, \dots, w_m\}\text{.}\)</span> As noted, the sublemma establishes the case <span class="process-math">\(w = 1\)</span> of the Exchange Lemma. The general case proceeds recursively:</div> <div class="para">Suppose that for some <span class="process-math">\(0 \leq k &lt; m\text{,}\)</span> we have found <span class="process-math">\(v_1, \dots, v_k \in B\)</span> such that <span class="process-math">\(B'' := (B \setminus \{v_1, \dots, v_k\}) \cup \{w_1, \dots, w_k\}\)</span> is a basis for some <span class="process-math">\(k &lt; m\text{.}\)</span> We need to show we can “swap out one more''; that is, we need to prove there is a <span class="process-math">\(v_{k+1} \in(B \setminus \{v_1, \dots, v_k\})\)</span> such that <span class="process-math">\((B'' \setminus \{v_{k+1}\}) \cup \{w_{k+1}\}\)</span> is also a basis.</div> <div class="para logical">
+<div class="para">Since <span class="process-math">\(B''\)</span> is a basis, there is a (unique) equation of the form</div>
 <div class="displaymath process-math">
 \begin{equation*}
-r( (m_1 +N) + (m_2 +N)) = r((m_1 + m_2) + N) = (r(m_1+m_2)) + N = (rm_1 + rm_2) + N = (rm_1 + N) + (rm_2 + N),
+w_{k+1} = \sum_{i=1}^n a_i u_i
 \end{equation*}
 </div>
-<div class="para">which gives the third such axiom. The other three are also straightforward.</div>
-</div> <div class="para">The fact that <span class="process-math">\(\pi\)</span> is an <span class="process-math">\(R\)</span>-module homomorphism is also straightforward. Its kernel is <span class="process-math">\(\{m \in M \mid m + N = N\}\text{,}\)</span> which is equal to <span class="process-math">\(N\text{.}\)</span>
+<div class="para">with <span class="process-math">\(u_i \in B''\)</span> and <span class="process-math">\(a_i \ne 0\text{.}\)</span> Now, there must be at least one <span class="process-math">\(u_i\)</span> that is not in <span class="process-math">\(\{w_1, \dots, w_k\}\text{,}\)</span> for otherwise we would have <span class="process-math">\(w_{k+1} \in \Span( w_1, \dots, w_k)\text{,}\)</span> contrary to <span class="process-math">\(C\)</span> being linearly independent. Let <span class="process-math">\(v_{k+1} = u_i\)</span> for such an <span class="process-math">\(i\text{.}\)</span> Then by the sublemma</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(B'' \setminus \{v_{k+1}\}) \cup \{w_{k+1}\}
+\end{equation*}
+</div>
+<div class="para">is a basis of <span class="process-math">\(V\text{.}\)</span>
+</div>
 </div></article></body>
 </html>
