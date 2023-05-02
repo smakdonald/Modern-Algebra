@@ -13,11 +13,19 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h3 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">G.95.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">G.111.1</span><span class="period">.</span>
 </h3>
-<div class="para">Let <span class="process-math">\(F \subseteq L\)</span> be a finite Galois field extension of degree <span class="process-math">\(45\text{.}\)</span>
-</div> <div class="para">Note that as <span class="process-math">\(45=5\cdot 9\text{,}\)</span> we see that the number of Sylow-<span class="process-math">\(5\)</span> subgroups of <span class="process-math">\(G\)</span> divides <span class="process-math">\(9\)</span> and is congruent to <span class="process-math">\(1\mod{5}\text{.}\)</span> Thus there is exactly one Sylow-<span class="process-math">\(5\)</span> subgroup of <span class="process-math">\(G\text{,}\)</span> which we denote <span class="process-math">\(H\text{.}\)</span> By the Fundamental Theorem of Galois Theory, <span class="process-math">\(H\)</span> corresponds to an intermediate field extension <span class="process-math">\(E\text{.}\)</span> Note that as <span class="process-math">\(H\)</span> has order 5, we see that <span class="process-math">\([G:H]=9\text{,}\)</span> and thus <span class="process-math">\([L:E]=9\)</span> as well. By the Degree Formula we see that <span class="process-math">\([L:F]=[L:E][E:F]\text{.}\)</span> As <span class="process-math">\([L:F]=45\)</span> and <span class="process-math">\([L:E]=9\text{,}\)</span> we see that <span class="process-math">\([E:F]=5\text{,}\)</span> as desired. As <span class="process-math">\(E\)</span> corresponds to the unique subgroup of <span class="process-math">\(G\)</span> or order 5, we see that this extension must be unique as well.</div>
+<div class="para logical">
+<div class="para">Part (a) Let <span class="process-math">\(L\)</span> be a group, <span class="process-math">\(H\)</span> be a direct factor of <span class="process-math">\(G\text{,}\)</span> and <span class="process-math">\(\phi : H \to L\)</span> a group homomorphism. As <span class="process-math">\(H\)</span> is a direct factor of <span class="process-math">\(G\text{,}\)</span> there exists some <span class="process-math">\(K\nsg G\)</span> such that <span class="process-math">\(G=H\times K\text{.}\)</span> Thus there exists some isomorphism <span class="process-math">\(\psi:G\to H\times K\text{.}\)</span> Define <span class="process-math">\(\widetilde{\phi} : G \to L\)</span> such that <span class="process-math">\(\widetilde{\phi}(g)=h\text{,}\)</span> where <span class="process-math">\(\psi(g)=(h,k)\text{.}\)</span> Let <span class="process-math">\(x,y\in G\text{,}\)</span> and notice</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\psi(x)=(h,k)\psi(y)=(h',k')=(hh',kk')=\psi(xy),
+\end{equation*}
 </div>
-<span class="incontext"><a href="section-79.html#solution-316" class="internal">in-context</a></span>
+<div class="para">as <span class="process-math">\(\psi\)</span> is an isomorphism. Observe <span class="process-math">\(\widetilde{\phi}(xy)=hh'=\widetilde{\phi}(x)\widetilde{\phi}(y)\text{.}\)</span> Thus <span class="process-math">\(\widetilde{\phi}\)</span> is a homomorphism, and for any <span class="process-math">\(h\in H\)</span> we have <span class="process-math">\(\widetilde{\phi}(h)=h\text{.}\)</span>
+</div>
+</div> <div class="para">Part (b)</div>
+</div>
+<span class="incontext"><a href="section-81.html#solution-316" class="internal">in-context</a></span>
 </body>
 </html>

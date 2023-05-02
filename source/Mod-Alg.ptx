@@ -9092,7 +9092,7 @@
             </p>
           </exercise>
 
-          <theorem xml:id="thm-polynomial-divison-algorithm"><title>Polynomial Division Algorithm</title>
+          <theorem xml:id="thm-polynomial-division-algorithm"><title>Polynomial Division Algorithm</title>
             <statement>
               <p>
                 Let <m>R</m> be a commutative ring with identity and <m>f,g\in R[x]</m>. Assume the leading coefficient of <m>g</m> is a unit in <m>R</m>. Then there exists a unique <m>q,r\in R[x]</m> such that <m>f=gq+r</m>, and <m>\operatorname{deg}r&lt;\operatorname{deg}g=n</m>.
@@ -10258,17 +10258,12 @@
     
         <section xml:id="sec-eds"><title>Euclidian Domains</title>
 
-          <blockquote>
-            <p>
-              <q></q>
-            </p>
-            <attribution></attribution>
-          </blockquote>
+          <blockquote><p><q>Find your domain and serve it to the world.</q></p><attribution>Myles Munroe</attribution></blockquote>
     
           <definition xml:id="def-ed"><title>Euclidean Domain</title>
             <statement>
               <p>
-                A <em>Euclidean domain (ED)</em> is a domain <m>R</m> together with a function <m>N: R \to \Z_{\geq 0}</m> such that <m>N(0) = 0</m> and the following property holds: for any two elements <m>a, b \in R</m> with <m>b \ne 0</m>, there are elements <m>q</m> and <m>r</m> of <m>R</m> such that 
+                A <em>Euclidean domain (ED)</em> is a domain <m>R</m> together with a <em>norm</em> function <m>N: R \to \Z_{\geq 0}</m> such that <m>N(0) = 0</m> and the following property holds: for any two elements <m>a, b \in R</m> with <m>b \ne 0</m>, there are elements <m>q</m> and <m>r</m> of <m>R</m> such that 
                 <me>
                   a = qb + r \;\text{and either}\; r = 0 \;\text{or}\; N(r) &lt; N(b).
                 </me>
@@ -10276,24 +10271,35 @@
             </statement>
           </definition>
 
+          <p>In a Euclidean domain, division with remainder is possible, and the remainder is always smaller than the divisor. This property is similar to the division algorithm for integers, which is what makes Euclidean domains so useful in number theory and algebra.</p>
+
+          <historical><title>Euclidean Domains</title>
+            <p>
+              Euclidean domains were named after the ancient Greek mathematician Euclid; however, it was actually Ernst Eduard Kummer, a German mathematician, who first introduced the concept of Euclidean domains in the 19th century.
+            </p>
+          </historical>
+
+          <p>Lets take a look at some examples to deepen our understanding.</p>
+
           <example xml:id="ex-trivial-norm"><title>Trivial Norm</title>
             <p>
-              A "degenerate example" is a field <m>F</m> equipped with the trivial norm <m>N(r) = 0</m> for all <m>r</m>. Given <m>a,b \in F</m> with <m>b \ne 0</m>, we have <m>a =(ab^{-1})b + 0</m>. Note that in this example there is no need to include <m>r=0</m> in the description of the division algorithm, since <m>b \ne 0</m> implies <m>|0| &lt; |b|</m>. This is not the case in other examples. Also observe that as we've defined remainders they are {} unique. For example, in dividing <m>13</m> by <m>5</m>, both <me>13 = 2 \cdot 5 + 3 \text{ and } 13 = 3 \cdot 5 + (- 2)</me> are considered valid. This calculation shows, more generally, that if <m>b</m> is a unit, then for all <m>a</m> there exists an equation <m>a = bq + r</m> with <m>r = 0</m>, not matter what norm <m>N</m> is used. One could make remainders (and hence quotients) unique for <m>\Z</m> by insisting that remainders always be non-negative, but this is not part of the abstract theory since it doesn't generalize to all cases well.
+              A "degenerate example" is a field <m>F</m> equipped with the trivial norm <m>N(r) = 0</m> for all <m>r</m>. Given <m>a,b \in F</m> with <m>b \ne 0</m>, we have <m>a =(ab^{-1})b + 0</m>. Note that in this example there is no need to include <m>r=0</m> in the description of the division algorithm, since <m>b \ne 0</m> implies <m>|0| &lt; |b|</m>. This is not the case in other examples. Also observe that as we've defined remainders they are <em>not</em> unique. For example, in dividing <m>13</m> by <m>5</m>, both 
+              <me>13 = 2 \cdot 5 + 3 \text{ and } 13 = 3 \cdot 5 + (- 2)</me> 
+              are considered valid. This calculation shows, more generally, that if <m>b</m> is a unit, then for all <m>a</m> there exists an equation <m>a = bq + r</m> with <m>r = 0</m>, not matter what norm <m>N</m> is used. One could make remainders (and hence quotients) unique for <m>\Z</m> by insisting that remainders always be non-negative, but this is not part of the abstract theory since it doesn't generalize to all cases well.
+            </p>
+          </example>
+
+          <example xml:id="ex-degree-and-norm"><title>Polynomial Rings over Fields are Euclidean Domains</title>
+            <p>
+              The next classical example is <m>F[x]</m> with <m>F</m> a field and where we define the norm to be polynomial degree: <m>N(f(x)) = \deg(f(x))</m> if <m>f\neq 0</m> and <m>N(0)=0</m>. This ring is a Euclidean Domain because of the familiar long division for polynomials, as proved in <xref ref="thm-polynomial-division-algorithm"/>.
             </p>
           </example>
           
-    
-          <problem xml:id="ex-gaussian-integers-are-an-ed"> <title>Guassian Integers are a Euclidian Domain</title>
+          <example xml:id="ex-gaussian-integers-are-an-ed"> <title>Guassian Integers are a Euclidian Domain</title>
             <p>
               The ring <m>R = \Z[i]</m> of Gaussian integers is a Euclidean domain with <m>N</m> being the usual complex (Euclidean) square norm <m>N(a+bi)=a^2+b^2</m>. Let <m>\alpha</m>, <m>\beta</m> <m>\in \Z[i]</m> and let <m>\frac{\alpha}{\beta}=p+qi \in \Q(i)</m> (here we use that the fraction field of <m>\Z[i]</m> is <m>\Q(i)</m>). Now pick <m>s,t\in\Z</m> so that <m>|p-s|\leq 1/2</m> and <m>|q-t|\leq 1/2</m>. We have <me>\a=\beta(s+ti)+\beta(p+qi)-\beta(s+ti).</me> Set <m>q=s+ti</m> and set <m>r=\beta(p+qi)-\beta(s+ti)=\beta(s+ti-(p+qi))</m> and notice that <m>q\in \Z[i]</m> because <m>s,t\in\Z</m> and <m>r\in \Z[i]</m> by closure. If <m>r=0</m> we're good, and if <m>r\neq 0</m> then, using that the complex squared norm is multiplicative as well as the Pythagorean Theorem and the choice for <m>s,t</m>, we have <me>N(r)=N(\beta(s+ti-(p+qi)))=N(\beta)N(s+ti-(p+qi))\leq N(\beta)\cdot(1/4+1/4)&lt;N(\beta).</me> Thus the norm function <m>N</m> makes <m>\Z[i]</m> into a Euclidean domain.
             </p>
-          </problem>
-    
-          <problem xml:id="ex-degree-and-norm"><title>Degree and Norm</title>
-            <p>
-              The next classical example is <m>R = F[x]</m> with <m>F</m> a field and where we define the norm to be degree: <m>N(f(x)) = \deg(f(x))</m> if <m>f\neq 0</m> and <m>N(0)=0</m>. This ring is a ED because of the familiar long division for polynomials.
-            </p>
-          </problem>
+          </example> 
     
           <definition xml:id="def-ed-gcd"><title>GCD</title>
             <statement>
@@ -10316,121 +10322,13 @@
             </statement>
           </definition>
     
-          <remark>
-            <p>
-              Note that <m>b\mid a</m> is equivalent to <m>b\in(a)</m>.
-            </p>
-          </remark>
-    
-          <exercises>
-    
-            <exercisegroup>
-              <title>Computations and Examples</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-    
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-    
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          
-            <exercisegroup>
-              <title>Formal Proofs</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-    
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-    
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          
-            <exercisegroup>
-              <title>Qualifying Exam Problems</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-    
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-    
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          </exercises>
+          <remark><p>Note that <m>b\mid a</m> is equivalent to <m>b\in\igen a</m>.</p></remark>
           
         </section>
     
         <section xml:id="sec-pids"><title>Principal Ideal Domains</title>
 
-          <blockquote>
-            <p>
-              <q>One chance is all you need.</q>
-            </p>
-            <attribution>Jesse Owens</attribution>
-          </blockquote>
+          <blockquote><p><q>One chance is all you need.</q></p><attribution>Jesse Owens</attribution></blockquote>
     
           <definition xml:id="def-pid"><title>PID</title>
             <statement>
@@ -10439,12 +10337,16 @@
               </p>
             </statement>
           </definition>
+
+          <historical><title>PIDs</title>
+            <p>The concept of principal ideal domains (PIDs) was introduced by the German mathematician Ernst Eduard Kummer in the 19th century, as a generalization of the concept of Euclidean domains.</p>
+          </historical>
     
-          <problem xml:id="exe-fx-is-a-pid"><title>Polynomial Rings over Fields are PIDs</title>
+          <exercise xml:id="exe-fx-is-a-pid"><title>Polynomial Rings over Fields are PIDs</title>
             <p>
               For any field <m>F</m>, every ideal of <m>F[x]</m> is principal (<m>F[x]</m> is a PID)
             </p>
-          </problem>
+          </exercise>
     
           <theorem xml:id="thm-ed-is-a-pid"><title>Euclidean Domains are PIDs</title>
             <statement>
@@ -10463,18 +10365,22 @@
               </p>
             </proof>
           </theorem>
+
+          <p>The converse is not true in general.</p>
     
-          <problem xml:id="ex-pid-not-ed"><title>PIDs Need not be Euclidean Domains</title>
+          <example xml:id="ex-pid-not-ed"><title>PIDs Need not be Euclidean Domains</title>
             <p>
               The ring <m>\Z\left[ \frac{1 + \sqrt{-19}}{2}\right]=\left\{a+ b\frac{1 + \sqrt{-19}}{2} \mid a,b\in \Z\right\}</m> is a PID, but not a Euclidean domain. It is the simplest example of such a ring, but the proofs of these claims are not easy. I will not cover a proof of this fact.
             </p>
-          </problem>
+          </example>
     
-          <problem xml:id="exe-nonzero-primes-maximal-in-pid"><title>Nonzero Primes are Maximal in PIDs</title>
-            <p>
-              If <m>R</m> is a PID, then every nonzero prime ideal is maximal.
-            </p>
-          </problem>
+          <proposition xml:id="exe-nonzero-primes-maximal-in-pid"><title>Nonzero Primes are Maximal in PIDs</title>
+            <statement>
+              <p>
+                If <m>R</m> is a PID, then every nonzero prime ideal is maximal.
+              </p>
+            </statement>
+          </proposition>
     
           <definition xml:id="def-associate"><title>Associate</title>
             <statement>
@@ -10487,17 +10393,17 @@
           <lemma xml:id="lem-associates-and-principal-ideals"><title>Associates and Principal Ideals</title>
             <statement>
               <p>
-                Two elements <m>x,y</m> of a domain <m>R</m> are associates if and only if <m>(x) = (y)</m>.
+                Two elements <m>x,y</m> of a domain <m>R</m> are associates if and only if <m>\igen x = \igen y</m>.
               </p>
             </statement>
     
             <proof>
               <p>
-                If <m>(x) = (y)</m> then <m>x \in (y)</m> and so <m>x = yu</m> for some <m>u</m>. Similarly <m>y = xs</m> and hence <m>y = yus</m>. Since <m>R</m> is a domain, either <m>y = 0</m> or <m>su = 1</m>. If <m>y= 0</m>, then <m>x = 0 = 1 y</m> and otherwise <m>u</m> is a unit.
+                If <m>\igen x = \igen y</m> then <m>x \in \igen y</m> and so <m>x = yu</m> for some <m>u</m>. Similarly <m>y = xs</m> and hence <m>y = yus</m>. Since <m>R</m> is a domain, either <m>y = 0</m> or <m>su = 1</m>. If <m>y= 0</m>, then <m>x = 0 = 1 y</m> and otherwise <m>u</m> is a unit.
               </p>
     
               <p>
-                If <m>x = uy</m> for a unit <m>u</m>, then <m>y = u^{-1}x</m> and so <m>x \in (y)</m> and <m>y \in (x)</m>, from which is follows that <m>(x) \subseteq (y)</m> and <m>(y) \subseteq (x)</m>.
+                If <m>x = uy</m> for a unit <m>u</m>, then <m>y = u^{-1}x</m> and so <m>x \in \igen y</m> and <m>y \in \igen x</m>, from which is follows that <m>\igen x \subseteq \igen y</m> and <m>\igen y \subseteq \igen x</m>.
               </p>
             </proof>
           </lemma>
@@ -10509,7 +10415,7 @@
                 <ol>
                   <li>
                     <p>
-                      <m>(a,b)=(g)</m> for some <m>g\in R</m> and any such <m>g</m> is a gcd of <m>a</m> and <m>b</m> 
+                      <m>\igen{a,b}=\igen g</m> for some <m>g\in R</m> and any such <m>g</m> is a gcd of <m>a</m> and <m>b</m> 
                     </p>
                   </li>
     
@@ -10524,16 +10430,12 @@
     
             <proof>
               <p>
-                The existence of <m>g</m> is granted by definition in a PID. Now <m>a,b\in (g)</m> gives that <m>g\mid a</m> and <m>g\mid b</m>. If <m>g'\mid a</m> and <m>g'\mid b</m> we have that <m>a,b\in (g')</m>, so <m>(g)=(a,b)\subseteq (g')</m> by minimality. This gives <m>g\in(g')</m>, hence <m>g'\mid g</m>.
+                The existence of <m>g</m> is granted by definition in a PID. Now <m>a,b\in \igen g</m> gives that <m>g\mid a</m> and <m>g\mid b</m>. If <m>g'\mid a</m> and <m>g'\mid b</m> we have that <m>a,b\in \igen{g'}</m>, so <m>\igen g=\igen{a,b}\subseteq \igen{g'}</m> by minimality. This gives <m>g\in\igen{g'}</m>, hence <m>g'\mid g</m>.
               </p>
             </proof>
           </proposition>
     
-          <remark>
-            <p>
-              If <m>R</m> is not only a PID but a Euclidean domain with norm function <m>N</m>, then the Euclidean algorithm can be used to compute a gcd of any two nonzero <m>a,b\in R</m>.
-            </p>  
-          </remark>
+          <remark><p>If <m>R</m> is not only a PID but a Euclidean domain with norm function <m>N</m>, then the Euclidean algorithm can be used to compute a gcd of any two nonzero <m>a,b\in R</m>.</p></remark>
     
           <definition xml:id="def-prime-element"><title>Prime</title>
             <statement>
@@ -10573,7 +10475,7 @@
             </p>
           </example>
     
-          <problem xml:id="ex-in-zsqrt-5-2-irreducible-but-not-prime"><title>In <m>\Z[\sqrt{-5}]</m>, <m>2</m> Prime but not Irreducible</title>
+          <exercise xml:id="ex-in-zsqrt-5-2-irreducible-but-not-prime"><title>In <m>\Z[\sqrt{-5}]</m>, <m>2</m> Prime but not Irreducible</title>
             <statement>
               <p>
                 In the domain <m>\Z[\sqrt{-5}]</m> the element <m>2</m> is irreducible but not prime.
@@ -10585,9 +10487,9 @@
                 Note that <m>2\cdot 3=(1+\sqrt{-5})(1-\sqrt{-5})</m> and thus <m>(1+\sqrt{-5})(1-\sqrt{-5})\in (2)</m>. However we claim that neither <m>1+\sqrt{-5}</m> nor <m>1-\sqrt{-5}</m> are in <m>(2)</m>. If <m>\a=1\pm\sqrt{-5}\in (2)</m> then <m>\a=2\beta</m> for some <m>\beta\in\Z[\sqrt{-5}]</m> and so <m>6=N(\a)=N(2)N(\beta)=4N(\beta)</m>, a contradiction. Thus <m>2</m> is not prime.
               </p>
             </solution>
-          </problem>
+          </exercise>
     
-          <problem xml:id="ex-cxyx2-y3-y-irreducible-but-not-prime">
+          <exercise xml:id="ex-cxyx2-y3-y-irreducible-but-not-prime">
           <statement>
             <p>
               In the ring <m>\C[x,y]/(x^2-y^3)</m> the element <m>y</m> is irreducible but not prime. 
@@ -10599,7 +10501,7 @@
                 Since <m>\C[x,y]/(x^2-y^3)\cong \C[t^3, t^2]\subseteq \C[t]</m> this ring is a domain. The element <m>y</m> is irreducible for degree reasons. The ideal <m>(y)</m> contains <m>x^2</m> but doesn't contain <m>x</m> so <m>y</m> is not prime.
               </p>
             </solution>
-          </problem>
+          </exercise>
     
           <theorem xml:id="thm-irreducible-is-prime-in-pid"><title>Irreducible is Prime in PID</title>
             <statement>
@@ -10631,374 +10533,7 @@
               </p>
             </proof>
           </theorem>
-    
-          <problem xml:id="rx-a-pid-iff-r-a-field"><title>Duplicate?</title>
-          <statement>
-            <p>
-              Let <m>R</m> be a commutative ring and <m>x</m> an indeterminant. Prove that <m>R[x]</m> is a PID if and only if <m>R</m> is a field.
-            </p>
-          </statement>
-    
-            <solution>
-              <p>
-                First, suppose <m>R[x]</m> is a PID. Let <m>I</m> be a nonzero ideal in <m>R</m>, and consider the ideal <m>(I,x)\in R[x]</m>. As <m>R[x]</m> is a PID we see <m>(I,x)=(z)</m> for some <m>z\in R[x]</m>. Then <m>z|x</m>, but <m>x</m> is an indeterminant and thus irreducible, so <m>z</m> must be a unit or <m>x</m> itself. But <m>z</m> also generates <m>I</m>, so <m>z</m> can't be <m>x</m>, so <m>z</m> is a unit, meaning <m>z\in R</m> and so <m>I=(R)</m>. Thus the only ideals of <m>R</m> are <m>(0)</m> and <m>R</m>, making <m>R</m> a field.
-              </p>
-    
-              <p>
-                Next, suppose <m>R</m> is a field. Let <m>J</m> be an ideal in <m>R[x]</m>. If <m>J\in R</m> then <m>J=R</m> or <m>J=(0)</m>, both of which are principal. Thus <m>x\in J</m>, and so <m>J=(x)</m>, making <m>J</m> principal as well. Hence <m>R[x]</m> is a PID.
-              </p>
-            </solution>
-          </problem>
-    
-          <problem xml:id="irreducible-not-prime-inz-sqrt-ten"><title>Qual</title>
-          <statement>
-            <p>
-              Consider the subring <m>\Z[\sqrt{10}] = \{a + b\sqrt{10} | a, b \in \Z\}</m> of <m>\R</m>. Show that <m>2</m> is irreducible but not prime in <m>\Z[\sqrt{10}].</m> Hint: Consider the function <m>N : \Z[\sqrt{10}]\to \Z, N (a + b\sqrt{10}) = a^2-10b^2</m>.
-            </p>
-          </statement>
-    
-            <solution>
-              <p>
-                Consider <m>2\in\Z[\sqrt{10}]</m> and the function <m>N : \Z[\sqrt{10}]\to \Z, N (a + b\sqrt{10}) = a^2-10b^2</m>.
-              </p>
-    
-              <p>
-                Suppose by way of contradiction there exist <m>\a,\b</m> such that <m>2=\a\b</m>. Then <m>\a=a+b\sqrt{10}</m> and <m>\b=c+d\sqrt{10}</m>, and <me>N(2)=4=N(\a\b)=N(\a)N(\b)=(a^2-10b^2)(c^2-10d^2).</me> Thus <m>(a^2-10b^2)=\pm1,\pm2,</m> or <m>\pm4</m>, as these are the only integer divisors of <m>4</m>. However, there do not exist integers <m>a,b</m> such that this is true. Thus <m>2</m> is irreducible in <m>\Z[\sqrt{10}]</m>.
-              </p>
-    
-              <p>
-                Suppose by way of contradiction that <m>2</m> is prime in <m>\Z[\sqrt{10}]</m>. Note that <m>2|6=(4+\sqrt{10})(4-\sqrt{10})</m>. Thus <m>2</m> divides one of these factors.
-              </p>
-    
-              <p>
-                First, suppose there exists some <m>a+b\sqrt{10}</m> such that <m>2(a+b\sqrt{10})=(4\pm\sqrt{10})</m>. Thus <m>2a+2b\sqrt{10}=4\pm\sqrt{10}</m>, and so <m>2b=\pm1</m>. However, <m>\pm\frac12</m> is not an integer, and thus <m>2</m> cannot divide either of these factors. Thus <m>2</m> is not prime in <m>\Z[\sqrt{10}]</m>.
-              </p>
-            </solution>
-          </problem>
-    
-          <problem xml:id="problem-4-zsqrt-3"><title>Qual</title>
-          <statement>
-            <p>
-              In the commutative ring <m>R = \Z[\sqrt{-3}]</m>, show that the element <m>2</m> is irreducible but not prime.
-            </p>
-          </statement>
-    
-            <solution>
-              
-              <p>
-                
-                First, notice that <m>2\cdot 2=6=(1+\sqrt{-3})(1-\sqrt{-3})</m>. Define a function 
-                <me>
-                  N:\Z[\sqrt{-3}]\to\Z, N(a+b \sqrt{-3})=a^2+3b^2.
-                </me> Let <m>\alpha,\beta\in\Z[i]</m> 
-                and behold 
-                <me>
-                \begin{aligned}
-                  N(\alpha\beta)
-                  &amp;=N((a+b \sqrt{-3})(c+d \sqrt{-3}))\\
-                  &amp;=N(ac-3bd+ad \sqrt{-3}+bc \sqrt{-3})\\
-                  &amp;=(ac-3bd)^2+3(ad+bc)^2\\
-                  &amp;=((ac)^2-6acbd+9(bd)^2)+3((ad)^2+2abcd+(bc^2))\\
-                  &amp;=a^2c^2+9b^2d^2+3a^2d^2+3b^2c^2\\
-                  &amp;=(a^2c^2+3a^2d^2)+(3b^2c^2+9b^2d^2)\\
-                  &amp;=a^2(c^2+3d^2)+3b^2(c^2+3d^2)\\
-                  &amp;N(\alpha)N(\beta)\\
-                  &amp;=(a^2+3b^2)(c^2+3d^2).
-                \end{aligned}
-                </me>
-                So there's that done.
-              </p>
-              
-    
-              <p>
-                Suppose by way of contradiction there exist <m>\a,\b</m> such that <m>2=\a\b</m>. Then <m>\a=a+b\sqrt{-3}</m> and <m>\b=c+d\sqrt{-3}</m>, and <me>N(2)=4=N(\a\b)=N(\a)N(\b)=(a^2+3b^2)(c^2+3d^2).</me> Thus <m>(a^2+3b^2)=\pm1,\pm2,</m> or <m>\pm4</m>, as these are the only integer divisors of <m>4</m>. However, there do not exist integers <m>a,b</m> such that this is true. Thus <m>2</m> is irreducible in <m>\Z[\sqrt{-3}]</m>.
-              </p>
-    
-              <p>
-                Suppose by way of contradiction that <m>2</m> is prime in <m>\Z[\sqrt{-3}]</m>. Note that <m>2|6=(1+\sqrt{-3})(1-\sqrt{-3})</m>. Thus <m>2</m> divides one of these factors.
-              </p>
-    
-              <p>
-                First, suppose there exists some <m>a+b\sqrt{-3}</m> such that <m>2(a+b\sqrt{-3})=(1\pm\sqrt{-3})</m>. Thus <m>2a+2b\sqrt{-5}=1\pm\sqrt{-3}</m>, and so <m>2a=\pm1</m>. However, <m>\pm\frac12</m> is not an integer, and thus <m>2</m> cannot divide either of these factors. Thus <m>2</m> is not prime in <m>\Z[\sqrt{-3}]</m>.
-              </p>
-            </solution>
-          </problem>
-    
-          <problem><title>June 2010 Problem (8)</title>
-            
-            <p>
-              Prove <m>\Z[2i] = \{a + 2bi | a \;\text{and}\; b \;\text{are integers}\}</m> is not a PID. <em>Hint:</em> One method is to use (with proof) the fact that <m>2 + 2i</m> is irreducible in this ring.
-            </p>
-          </problem>
-    
-          <problem><title>June 2011 (8)</title>
-          <statement>
-            <p>
-              Let <m>R</m> be a commutative ring with <m>1</m>. Recall that <m>r \in R</m> is called nilpotent if <m>r^n = 0</m> for some integer <m>n &gt; 0.</m> Let <m>N</m> be the set of nilpotent elements of <m>R</m>. 
-              <ol>
-                <li>
-                  <p>
-                    Show that <m>N</m> is an ideal of <m>R</m>. 
-                  </p>
-                </li>
-    
-                <li>
-                  <p>
-                    Show that the ring <m>R/N</m> has no nonzero nilpotent elements. 
-                  </p>
-                </li>
-    
-                <li>
-                  <p>
-                    For a polynomial <m>f(x) \in R[x]</m>, prove that <m>f(x)</m> is a nilpotent element of <m>R[x]</m> if and only if every coefficient of <m>f(x)</m> is nilpotent.
-                  </p>
-                </li>
-              </ol>
-            </p>
-          </statement>
-    
-            <solution>
-              <p>
-                Let <m>R</m> be a commutative ring with <m>1</m> and Let <m>N</m> be the set of nilpotent elements of <m>R</m>.
-              </p>
-    
-              <p>
-                <ol>
-                  <li>
-                    <p>
-                      Let <m>r,s\in N</m>. Then <m>r^n=0</m> and <m>s^m=0</m> for <m>n,m\in\N</m>. Consider <m>(r+s)^{mn}</m>, which, by the binomial theorem, has each term raised to either the <m>n</m>th or <m>m</m>th power, sending the whole thing to <m>0</m>.
-                    </p>
-    
-                    <p>
-                      Additionally, if <m>r\in N</m> consider <m>r\inv=-r</m> when viewed as an additive group. Notice <m>-r^{2n}=r(2n)=0</m>. Finally, let <m>x\not\in N</m> and consider <m>(rx)^n=r^nx^n=0</m>, so <m>rx\in N</m>. Thus we have our ideal.
-                    </p>
-                  </li>
-    
-                  <li>
-                    <p>
-                      Let <m>rN</m> be a nilpotent element in <m>R/N</m>. Then <m>r^nN=N</m>, meaning <m>r^n\in N</m>. This means there exists some <m>m\in\N</m> such that <m>r^{n^m}=r^{nm}=0</m>, placing <m>r\in N</m>. Thus all nilpotent elements in <m>R/N</m> are actually <m>0</m> (possibly four <m>0</m>'s in a trench coat).
-                    </p>
-                  </li>
-    
-                  <li>
-                    <p>
-                      Let <m>f\in R[x]</m>.
-                    </p>
-    
-                    <p>
-                      First, suppose <m>f</m> is a nilpotent element of <m>R[x]</m>. Thus <m>f^n=0</m> for some <m>n\in\N</m>. By the binomial shenanigans every product of coefficients must to go <m>0</m>.
-                    </p>
-      
-                    <p>
-                      Next, suppose every coefficient of <m>f</m> is nilpotent. Let <m>n</m> be equal to the product of all the smallest powers that send each coefficient to <m>0</m>. Thus by more binomial shenanigans we have <m>f^n=0</m>.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </solution>
-          </problem>
-    
-          <problem><title>Qual</title>
-          <statement>
-            <p>
-              Let <m>R</m> be a PID and <m>S</m> a multiplicatively closed subset of <m>R</m> such that <m>0 \not\in S</m>. Prove that <m>S\inv R</m> is also a PID. Tip: Given an ideal <m>I</m> of <m>S\inv R</m>, consider <m>I \cap R</m>.
-            </p>
-          </statement>
-    
-            <solution>
-              <p>
-                Let <m>R</m> be a PID, <m>S</m> a multiplicatively closed subset of <m>R</m> such that <m>0 \not\in S</m>, and <m>I</m> an ideal in <m>S\inv R</m>. Consider <m>I \cap R</m>, which is an ideal in <m>R</m> and is thus generated by some <m>x\in R</m>.
-              </p>
-            </solution>
-          </problem>
-    
-          <problem><title>Qual</title>
-            <p>
-              Let <m>R</m> be an integral domain with field of fractions <m>Q</m>. Let <m>P</m> be a prime ideal of <m>R</m> and let 
-              <me>
-                S =  \bigg\{ \frac rd\in Q|d\not\in P\bigg\}.
-              </me>
-              <ol>
-                <li>
-                  <p>
-                    Show that <m>S</m> is a subring of <m>Q</m>. 
-                  </p>
-                </li>
-    
-                <li>
-                  <p>
-                    Show that <me>I =  \bigg\{ \frac pd|p\in P, d\not\in P\bigg\}</me> is a prime ideal of <m>S</m>.
-                  </p>
-                </li>
-              </ol>
-            </p>
-          </problem>
 
-          <exercises>
-    
-            <exercisegroup>
-              <title>Computations and Examples</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-    
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-    
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          
-            <exercisegroup>
-              <title>Formal Proofs</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-    
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-    
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          
-            <exercisegroup>
-              <title>Qualifying Exam Problems</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-    
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-    
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          </exercises>
-          
-          
-          
-        </section>
-    
-        <section xml:id="subsec-ufds"><title>Unique Factorization Domains</title>
-
-          <blockquote>
-            <p>
-              <q>Always remember that you are absolutely unique. Just like everyone else.</q>
-            </p>
-            <attribution>Margaret Mead</attribution>
-          </blockquote>
-    
-          <definition xml:id="def-ufd"><title>UFD</title>
-            <statement>
-              <p>
-                A ring <m>R</m> is called a <em>unique factorization domain</em>, or UFD for short, if <m>R</m> is an integral domain and every element <m>r \in R</m> that is non-zero and not a unit can be written as a finite product <me>r = p_1 \cdots p_n</me> of (not necessarily distinct) irreducible elements <m>p_1, \dots, p_n</m> of <m>R</m> in a way that is unique up to ordering and associates. That is, if <me>r = q_1 \cdots q_m</me> also holds with each <m>q_i</m> irreducible, then <m>m = n</m> and there is a permutation <m>\sigma</m> such that, for all <m>i</m>, we have <m>p_i</m> and <m>q_{\sigma(i)}</m> are associates.
-              </p>
-            </statement>
-          </definition>
-    
-          <example xml:id="ex-ufd-exs"><title>Examples of UFDs</title>
-            <p><ol>
-              <li>
-              <m>\Z</m> is a UFD by the Fundamental Theorem of Arithmetic.
-              </li>
-    
-              <li>
-              <m>F[x]</m> where <m>F</m> is a field is a UFD. This is the case because <m>F[x]</m> is a Euclidean domain and Euclidean domains are UFD's (we'll prove this shortly).
-              </li>
-    
-              <li>
-              We will eventually prove that if <m>R</m> is a UFD then so is <m>R[x]</m>. It follows that <m>F[x_1, \dots, x_n]</m> is a UFD for all <m>n</m>. Note that if <m>n &gt; 1</m>, this ring is not a PID and hence not a Euclidean domain.
-              </li>
-    
-            </ol></p>
-          </example>
-    
-          <problem xml:id="ex-zx-not-a-pid"><title><m>\Z[x]</m> is a UFD</title>
-            <p>
-              <m>\Z[x]</m> is not a PID hence also not a Euclidean domain. For <m>\ex</m>, this can be seen because the ideal <m>(2,x)</m> is not a principal ideal. It is a UFD because <m>\Z</m> is a UFD (based on the result that if <m>R</m> is a UFD then so is <m>R[x]</m> which we will prove shortly).
-            </p>
-          </problem>
-    
-          <problem xml:id="ex-zsqrt-5-not-a-ufd"><title>January 2014 (7)</title>
-          <statement>
-            <p>
-              <m>\Z[\sqrt{-5}]</m> is a domain that is not a UFD.
-            </p>
-          </statement>
-    
-            <solution>
-              <p>
-                Consider <m>6=(1 + \sqrt{-5}) (1 - \sqrt{-5})=2\cdot 3</m> and each of <m>1 + \sqrt{-5},1 - \sqrt{-5},2, 3</m> are irreducible by a norm argument (exercise). Notice also that <m>\Z[\sqrt{-5}]</m> contains elements that are irreducible but not prime: <m>2</m> is irreducible, by a norm argument. But it is not prime since <m>(1 + \sqrt{-5}) (1 - \sqrt{-5})\in (2)</m> but neither <m>1 + \sqrt{-5}</m> nor <m>1 - \sqrt{-5}</m> is in <m>(2).</m>
-              </p>
-            </solution>
-          </problem>
-    
-          <theorem xml:id="thm-pid-implies-ufd"><title>PIDs are UFDs</title>
-            <statement>
-              <p>
-                If <m>R</m> is a PID then <m>R</m> is a UFD.
-              </p>
-            </statement>
-          </theorem>
-    
           <theorem xml:id="thm-factorizations-permutations-and-associates"><title>Factorizations and Permutations</title>
             <statement>
               <p>
@@ -11036,169 +10571,73 @@
               </p>
             </proof>
           </theorem>
+          
+        </section>
     
-          <problem xml:id="prime-in-ufd-zsqrt-5-not-ufd"><title>Qual</title>
-          <statement>
+        <section xml:id="subsec-ufds"><title>Unique Factorization Domains</title>
+
+          <blockquote><p><q>Always remember that you are absolutely unique. Just like everyone else.</q></p><attribution>Margaret Mead</attribution></blockquote>
+    
+          <definition xml:id="def-ufd"><title>UFD</title>
+            <statement>
+              <p>
+                A ring <m>R</m> is called a <em>unique factorization domain</em>, or UFD for short, if <m>R</m> is an integral domain and every element <m>r \in R</m> that is non-zero and not a unit can be written as a finite product <me>r = p_1 \cdots p_n</me> of (not necessarily distinct) irreducible elements <m>p_1, \dots, p_n</m> of <m>R</m> in a way that is unique up to ordering and associates. That is, if <me>r = q_1 \cdots q_m</me> also holds with each <m>q_i</m> irreducible, then <m>m = n</m> and there is a permutation <m>\sigma</m> such that, for all <m>i</m>, we have <m>p_i</m> and <m>q_{\sigma(i)}</m> are associates.
+              </p>
+            </statement>
+          </definition>
+
+          <historical><title>UFDs</title>
+            <p>The concept of unique factorization was first introduced by mathematicians Carl Friedrich Gauss and Ernst Eduard Kummer in the 19th century.</p>
+
+            <p>The term "unique factorization domain" was coined by Emmy Noether in the 20th century, to describe integral domains in which every non-zero, non-unit element has a unique factorization into irreducible elements.</p>
+          </historical>
+    
+          <example xml:id="ex-ufd-exs"><title>Examples of UFDs</title>
             <p><ol>
               <li>
-              Prove that in a UFD an element <m>p</m> is irreducible if and only if the ideal <m>(p)</m>[^1] is prime.
+                <m>\Z</m> is a UFD by the Fundamental Theorem of Arithmetic.
               </li>
     
               <li>
-              Prove that <m>\Z[\sqrt{-5}]</m> is not a UFD.
+                <m>F[x]</m> where <m>F</m> is a field is a UFD. This is the case because <m>F[x]</m> is a Euclidean domain and Euclidean domains are UFD's (we'll prove this shortly).
+              </li>
+    
+              <li>
+                We will eventually prove that if <m>R</m> is a UFD then so is <m>R[x]</m>. It follows that <m>F[x_1, \dots, x_n]</m> is a UFD for all <m>n</m>. Note that if <m>n &gt; 1</m>, this ring is not a PID and hence not a Euclidean domain.
               </li>
     
             </ol></p>
-          </statement>
+          </example>
     
-            <solution>
-                <p>
-                    <ol>
-                        <li>
-                            <p>
-                                Let <m>R</m> be a UFD.
-                            </p>
+          <exercise xml:id="ex-zx-not-a-pid"><title><m>\Z[x]</m> is a UFD</title>
+            <p>
+              <m>\Z[x]</m> is not a PID hence also not a Euclidean domain. For example, this can be seen because the ideal <m>(2,x)</m> is not a principal ideal. It is a UFD because <m>\Z</m> is a UFD (based on the result that if <m>R</m> is a UFD then so is <m>R[x]</m> which we will prove shortly).
+            </p>
+          </exercise>
     
-                            <p>
-                                First, suppose <m>p</m> is irreducible, and consider the ideal <m>(p)</m>. Let <m>a,b\in R</m> such that <m>ab\in(p)</m>. Thus <m>p|ab</m>, so there exists some <m>k\in R</m> such that <m>pk=ab</m>. As we are in a UFD the elements <m>a,b,</m> and <m>k</m> all have unique (up to associates) factorizations of irreducible elements. Thus <m>p</m> must be an associate of one of the irreducible elements in the factorization of <m>a</m> or <m>b</m>, and so <m>a\in(p)</m> or <m>b\in(p)</m>, making <m>(p)</m> prime.
-                            </p>
-                
-                            <p>
-                                Now suppose that <m>(p)</m> is prime and that <m>p=ab</m> for some <m>ab\in R</m>. Thus <m>p|ab</m> and <m>ab\in(p)</m>, so either <m>a\in(p)</m> or <m>b\in(p)</m>, as <m>(p)</m> is a prime ideal. Assume without loss of generality that <m>a|p</m>. Thus <m>ak=p</m> for some <m>k\in R</m>. Thus <m>ab=pkb</m> and <m>p=pkb</m> As UFDs are integral domains we see <m>kb=1</m>, making <m>b</m> a unit. Thus <m>p</m> is irreducible.
-                            </p>
-                        </li>
-    
-                        <li>
-                            <p>
-                                First, notice that <m>2\cdot 3=6=(1+\sqrt{-5})(1-\sqrt{-5})</m>. Define a function <me>N:\Z[\sqrt{-5}]\to\Z, N(a+b \sqrt{-5})=a^2+5b^2.</me> Let <m>\alpha,\beta\in\Z[\sqrt{-5}]</m> and behold
-                            </p>
-                
-                            <p>
-                                Suppose by way of contradiction there exist <m>\a,\b</m> such that <m>2=\a\b</m>. Then <m>\a=a+b\sqrt{-5}</m> and <m>\b=c+d\sqrt{-5}</m>, and <me>N(2)=4=N(\a\b)=N(\a)N(\b)=(a^2+5b^2)(c^2+5d^2).</me> Thus <m>(a^2+5b^2)=\pm1,\pm2,</m> or <m>\pm4</m>, as these are the only integer divisors of <m>4</m>. However, there do not exist integers <m>a,b</m> such that this is true. Thus <m>2</m> is irreducible in <m>\Z[\sqrt{-5}]</m>.
-                            </p>
-                
-                            <p>
-                                Suppose by way of contradiction that <m>2</m> is prime in <m>\Z[\sqrt{-5}]</m>. Note that <m>2|6=(1+\sqrt{-5})(1-\sqrt{-5})</m>. Thus <m>2</m> divides one of these factors.
-                            </p>
-                
-                            <p>
-                                First, suppose there exists some <m>a+b\sqrt{-5}</m> such that <m>2(a+b\sqrt{-5})=(1\pm\sqrt{-5})</m>. Thus <m>2a+2b\sqrt{-5}=1\pm\sqrt{-5}</m>, and so <m>2a=\pm1</m>. However, <m>\pm\frac12</m> is not an integer, and thus <m>2</m> cannot divide either of these factors. Thus <m>2</m> is not prime in <m>\Z[\sqrt{-5}]</m>. By Part (a), this is not a UFD.                      
-                            </p>
-                        </li>
-                    </ol>
+          <theorem xml:id="thm-pid-implies-ufd"><title>PIDs are UFDs</title>
+            <statement>
+              <p>
+                If <m>R</m> is a PID then <m>R</m> is a UFD.
               </p>
-            </solution>
-          </problem>
-    
-          <exercises>
-    
-            <exercisegroup>
-              <title>Computations and Examples</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-    
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-    
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          
-            <exercisegroup>
-              <title>Formal Proofs</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-    
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-    
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          
-            <exercisegroup>
-              <title>Qualifying Exam Problems</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-    
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-    
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          </exercises>
-                   
+            </statement>
+          </theorem>
+
+          <theorem xml:id="thm-polynomials-over-ufd-ufd"><title>Polynomial Rings over UFDs are UFDs</title>
+            <statement>
+              <p>
+                If <m>R</m> is a UFD then so is <m>R[x]</m>.
+              </p>
+            </statement>
+          </theorem>
+       
         </section>
     
         <section xml:id="subsec-noeth"><title>Noetherian Rings</title>
 
-          <blockquote>
-            <p>
-              <q>All good things must come to an end.</q>
-            </p>
-            <attribution>Geoffrey Chaucer</attribution>
-          </blockquote>
+          <blockquote><p><q>All good things must come to an end.</q></p><attribution>Geoffrey Chaucer</attribution></blockquote>
+
+          <p>Most rings that commutative algebraists naturally want to study are noetherian. Noetherian rings are named after Emmy Noether, who is in many ways the mother of modern commutative algebra.</p>
           
           <definition xml:id="def-noetherian-ring"><title>Noetherian Ring</title>
             <statement>
@@ -11211,8 +10650,10 @@
               </p>
             </statement>
           </definition>
+
+          <remark><p>Unlike many modern sources, we choose not to capitalize <q>noetherian</q>. The convention of not capitalizing mathematical adjectives has a long history and is widely followed in mathematical literature. For example, other mathematical adjectives that are not capitalized include "abelian", "euclidean", and "gaussian" </p></remark>
     
-          <lemma xml:id="lem-pids-are-noetherian"><title>PIDs are Noetherian</title>
+          <theorem xml:id="lem-pids-are-noetherian"><title>PIDs are Noetherian</title>
             <statement>
               <p>
                 If <m>R</m> is a PID then <m>R</m> is noetherian.
@@ -11224,15 +10665,15 @@
                 Consider and ascending chain of ideals of <m>R</m>; it must have the form <me>(a_1)\subseteq (a_2) \subseteq (a_3) \subseteq \cdots \subseteq (a_i)\subseteq (a_{i+1})\subseteq \cdots.</me> Consider <m>I=\bigcup_{i\geq 1} (a_i)</m> which is an ideal of <m>R</m> by the argument given in Theorem . Since <m>R</m> is a PID, <m>I=(b)</m> for some <m>b\in R</m>. Since <m>b\in I=\bigcup_{i\geq 1} (a_i)</m>, we must have <m>b\in (a_n)</m> for some <m>n</m>. Then we see that <m>I=(b)\subseteq (a_n)\subseteq (a_{n+1})\subseteq \cdots (a_j) \subseteq \cdots \subseteq I</m> for all <m>j\geq n</m>, thus <m>I=(a_j)</m> for <m>j\geq n</m> and the chain stabilizes as desired.
               </p>
             </proof>
-          </lemma>
+          </theorem>
     
-          <problem xml:id="exe-fields-are-noetherian"><title>Fields are Noetherian</title>
+          <corollary xml:id="cor-fields-are-noetherian"><title>Fields are Noetherian</title>
             <p>
               Every field is noetherian.
             </p>
-          </problem>
+          </corollary>
     
-          <lemma xml:id="lem-factorization-in-noetherian-domains"><title>Factorization in Noetherian Domains</title>
+          <theorem xml:id="lem-factorization-in-noetherian-domains"><title>Factorization in Noetherian Domains</title>
             <statement>
               <p>
                 If <m>R</m> is a noetherian integral domain, then every non-zero, not-unit element factors into a finite product of irreducible elements.
@@ -11260,7 +10701,7 @@
                 which is not possible in a Noetherian ring.
               </p>
             </proof>
-          </lemma>
+          </theorem>
     
           <exercises>
     
@@ -24760,7 +24201,7 @@
           </subsection>          
         </section>
 
-        <section xml:id="sec-numbers-and-cardinality"><title>Number Systems, Counting, and Cardinality</title>
+        <section xml:id="sec-numbers-and-cardinality"><title>Number Systems, Counting, Cardinality</title>
 
           <subsection xml:id="subsec-number-systems"><title>Number Systems (*)</title>
 
@@ -24953,7 +24394,7 @@
                         
         </section>
 
-        <section xml:id="sec-matrices"><title>Matrices and Vector Spaces (*)</title>
+        <section xml:id="sec-matrices"><title>Matrices, Vector Spaces (*)</title>
 
           <p>Coming soon!</p>
           
@@ -26168,7 +25609,7 @@
       <appendix xml:id="appendix-list-results">
         <title>List of Results</title>
       
-        <list-of elements="theorem lemma proposition corollary" divisions="chapter" empty="yes"/>
+        <list-of elements="theorem lemma proposition corollary" divisions="chapter appendix" empty="yes"/>
       </appendix>
 
       <appendix xml:id="appendix-biograhy"><title>Biographies</title>

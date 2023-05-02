@@ -12,13 +12,21 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para logical"><ol class="decimal">
-<li><div class="para">For a specific example, the field of fractions of <span class="process-math">\(\mathbb{Z}\)</span> is <span class="process-math">\(\mathbb{Q}\text{.}\)</span>
-</div></li>
-<li><div class="para">or another, if <span class="process-math">\(d\)</span> is a squarefree integer and <span class="process-math">\(R = \mathbb{Z}[\sqrt{d}]\)</span> is an integral domain and we will show soon that its field of fractions is (isomorphic to) the field <span class="process-math">\(\mathbb{Q}(\sqrt{d})\text{.}\)</span>
-</div></li>
-<li><div class="para">For yet another, <span class="process-math">\({\mathbb{R}}[x]\)</span> is an integral domain. Its field of fractions, usually denoted <span class="process-math">\({\mathbb{R}}(x)\)</span> constists of all <em class="emphasis">rational functions</em>. This last example could be generalized by replacing <span class="process-math">\({\mathbb{R}}\)</span> with any field and also by using any number of variables.</div></li>
-</ol></div>
-<span class="incontext"><a href="sec-field-of-fractions.html#p-2662" class="internal">in-context</a></span>
+<div class="para logical">
+<div class="para">Consider the ring isomorphism <span class="process-math">\(\phi: \Q[x] \xra{\cong} \Q[y]\)</span> given by <span class="process-math">\(\phi(h(x)) = h(y+1)\text{.}\)</span> I claim that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi(f(x)) = y^{p-1} + p y^{p-2} + {p \choose 2} y^{p-3} +{p \choose 3} y^{p-4} +\cdots + {p \choose p-1} y + p.
+\end{equation*}
+</div>
+<div class="para">To see this, we note that <span class="process-math">\(f(x) (x-1) = x^p - 1\)</span> and by the binomial theorem we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi(x^p-1) = (y+1)^p - 1 = y^p + p y^{p-1} + {p \choose 2} y^{p-2} + \cdots + py.
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(\phi(x^p-1) = \phi(f(x)) \phi(x-1) = \phi(f(x)) y\text{,}\)</span> the claim follows.</div>
+</div>
+<span class="incontext"><a href="sec-irrpoly.html#p-2662" class="internal">in-context</a></span>
 </body>
 </html>

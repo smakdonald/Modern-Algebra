@@ -13,12 +13,26 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h3 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">G.67.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">G.83.1</span><span class="period">.</span>
 </h3>
-<div class="para">Part (a) Let <span class="process-math">\(G\)</span> be a simple group of order <span class="process-math">\(60=2^2\cdot3\cdot 5.\)</span> By <a href="" class="xref" data-knowl="./knowl/thm-sylow.html" title="Theorem 6.11: Sylow's Theorem">Sylow's Theorem</a> we know that <span class="process-math">\(n_5|12\)</span> and that <span class="process-math">\(n_5\equiv 1\mod{5}\text{.}\)</span> Thus the options for <span class="process-math">\(n_5\)</span> are <span class="process-math">\(1\)</span> and <span class="process-math">\(6\text{.}\)</span> Since <span class="process-math">\(G\)</span> is simple we see that <span class="process-math">\(n_5=6\text{.}\)</span> As each Sylow <span class="process-math">\(5\)</span>-subgroup of <span class="process-math">\(G\)</span> has <span class="process-math">\(4\)</span> unique elements of order <span class="process-math">\(5\)</span> and the identity we see that the number of elements or order <span class="process-math">\(5\)</span> in <span class="process-math">\(G\)</span> is <span class="process-math">\((5-1)\cdot 6=24\text{.}\)</span>
-</div> <div class="para">Part (b) Suppose by way of contradiction that <span class="process-math">\(G\)</span> is a simple group of order <span class="process-math">\(30\text{.}\)</span> Similarly to above, <span class="process-math">\(n_5=6\text{,}\)</span> yielding <span class="process-math">\(24\)</span> elements of order <span class="process-math">\(5\text{.}\)</span> Now, <span class="process-math">\(n_3|10\)</span> and <span class="process-math">\(n_3\equiv 1\mod{3}\text{,}\)</span> so <span class="process-math">\(n_3=10\text{,}\)</span> yielding far too many elements to fit in <span class="process-math">\(G\text{.}\)</span>
+<div class="para">Let <span class="process-math">\(G\)</span> be a group of order <span class="process-math">\(p^mq\)</span> where <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> are distinct primes and <span class="process-math">\(m \geq 1\text{.}\)</span> Assume that <span class="process-math">\(G\)</span> has at least one element of order <span class="process-math">\(p^m\text{.}\)</span> Let <span class="process-math">\(S\)</span> be the set of all elements of <span class="process-math">\(G\)</span> of order <span class="process-math">\(p^m\)</span>
+</div> <div class="para">Part (a) First, notice that <span class="process-math">\(e\cdot x=exe=x\)</span> for all <span class="process-math">\(x\in S\text{.}\)</span> Next, let <span class="process-math">\(g,h\in G\)</span> and consider <span class="process-math">\(gh\cdot x=ghx(gh)\inv=ghxh\inv g\inv=g\cdot(h\cdot x)\text{.}\)</span> Thus <span class="process-math">\(G\)</span> acts on <span class="process-math">\(S\)</span> by conjugation.</div> <div class="para logical">
+<div class="para">Part (b) Suppose <span class="process-math">\(Z(G)\)</span> is trivial, and let <span class="process-math">\(G\)</span> act on <span class="process-math">\(S\)</span> by conjugation. Thus the orbits of this action correspond the normalizers of elements and the stabilizers correspond to the centralizers. Recall that the orbits of this action partition <span class="process-math">\(S\text{,}\)</span> so we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-orbit-stabilizer.html ./knowl/thm-class-eq.html">
+\begin{equation*}
+|S|=\sum\limits_{x\in S}|\Orb_G(x)|
+\end{equation*}
 </div>
+<div class="para">for distinct orbits. However, by <a href="" class="xref" data-knowl="./knowl/cor-orbit-stabilizer.html" title="Corollary 5.29: Orbit-Stabilizer Theorem">Orbit-Stabilizer Theorem</a> we also have <span class="process-math">\(|G|=|\Orb(x)|\cdot |\Stab(x)|\)</span> for all <span class="process-math">\(x\in S\text{.}\)</span> Now recall the <a href="" class="xref" data-knowl="./knowl/thm-class-eq.html" title="Theorem 5.41: Class Equation">Class Equation</a>:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-orbit-stabilizer.html ./knowl/thm-class-eq.html">
+\begin{equation*}
+|G|=|Z(G)|+\sum\limits_{g\in G}[G:C_G(g)]
+\end{equation*}
 </div>
-<span class="incontext"><a href="section-76.html#solution-288" class="internal">in-context</a></span>
+<div class="para">With all that out of the way, let <span class="process-math">\(x,y\in S\text{.}\)</span> Notice that <span class="process-math">\(x^{p^{m}}=e=y^{p^{m}}\)</span>
+</div>
+</div> <div class="para"><span class="process-math">\(xyx\inv\)</span></div>
+</div>
+<span class="incontext"><a href="section-78.html#solution-288" class="internal">in-context</a></span>
 </body>
 </html>

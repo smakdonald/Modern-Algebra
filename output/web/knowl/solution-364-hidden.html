@@ -11,38 +11,24 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<div class="para logical">
-<div class="para">First, notice that <span class="process-math">\(2\cdot 3=6=(1+\sqrt{-5})(1-\sqrt{-5})\text{.}\)</span> Define a function</div>
-<div class="displaymath process-math">
-\begin{equation*}
-N:\Z[\sqrt{-5}]\to\Z, N(a+b \sqrt{-5})=a^2+5b^2.
-\end{equation*}
-</div>
-<div class="para">Let <span class="process-math">\(\alpha,\beta\in\Z[\sqrt{-5}]\)</span> and behold</div>
+<div class="para">Let <span class="process-math">\(\a = \sqrt2+\sqrt5 \in\R\text{.}\)</span>
+</div> <div class="para logical"><ol class="decimal">
+<li><div class="para logical">
+<div class="para">Let</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \begin{align}
-N(\alpha\beta)
-&amp;=N((a+b \sqrt{-5})(c+d \sqrt{-5}))\\
-&amp;=N(ac-5bd+ad \sqrt{-5}+bc \sqrt{-5})\\
-&amp;=(ac-5bd)^2+5(ad+bc)^2\\
-&amp;=((ac)^2-10acbd+25(bd)^2)+5((ad)^2+2abcd+(bc^2))\\
-&amp;=a^2c^2+25b^2d^2+5a^2d^2+5b^2c^2\\
-&amp;=(a^2c^2+5a^2d^2)+(5b^2c^2+25b^2d^2)\\
-&amp;=a^2(c^2+5d^2)+5b^2(c^2+5d^2)\\
-N(\alpha)N(\beta)&amp;=(a^2+5b^2)(c^2+5d^2).\end{align}
+f(x)&amp;=(x+\sqrt2 + \sqrt5)(x+\sqrt2 - \sqrt5)(x-\sqrt2 + \sqrt5)(x-\sqrt2 - \sqrt5)\\ &amp;=(x^2-2\sqrt{ 2 }-3)(x^2+2\sqrt{ 2 }-3)\\&amp;=x^4-14x^2+9,
+\end{align}
 \end{equation*}
 </div>
-<div class="para">So there's that done.</div>
-</div> <div class="para logical">
-<div class="para">Suppose by way of contradiction there exist <span class="process-math">\(\a,\b\)</span> such that <span class="process-math">\(2=\a\b\text{.}\)</span> Then <span class="process-math">\(\a=a+b\sqrt{-5}\)</span> and <span class="process-math">\(\b=c+d\sqrt{-5}\text{,}\)</span> and</div>
-<div class="displaymath process-math">
-\begin{equation*}
-N(2)=4=N(\a\b)=N(\a)N(\b)=(a^2+5b^2)(c^2+5d^2).
-\end{equation*}
+<div class="para">which factors as two irreducible polynomials and has no roots in <span class="process-math">\(\Q\text{,}\)</span> making it irreducible. Thus <span class="process-math">\(f\)</span> is the minimal polynomial of <span class="process-math">\(\a\)</span>
 </div>
-<div class="para">Thus <span class="process-math">\((a^2+5b^2)=\pm1,\pm2,\)</span> or <span class="process-math">\(\pm4\text{,}\)</span> as these are the only integer divisors of <span class="process-math">\(4\text{.}\)</span> However, there do not exist integers <span class="process-math">\(a,b\)</span> such that this is true. Thus <span class="process-math">\(2\)</span> is irreducible in <span class="process-math">\(\Z[\sqrt{-5}]\text{.}\)</span>
-</div>
-</div> <div class="para">Suppose by way of contradiction that <span class="process-math">\(2\)</span> is prime in <span class="process-math">\(\Z[\sqrt{-5}]\text{.}\)</span> Note that <span class="process-math">\(2|6=(1+\sqrt{-5})(1-\sqrt{-5})\text{.}\)</span> Thus <span class="process-math">\(2\)</span> divides one of these factors.</div> <div class="para">First, suppose there exists some <span class="process-math">\(a+b\sqrt{-5}\)</span> such that <span class="process-math">\(2(a+b\sqrt{-5})=(1\pm\sqrt{-5})\text{.}\)</span> Thus <span class="process-math">\(2a+2b\sqrt{-5}=1\pm\sqrt{-5}\text{,}\)</span> and so <span class="process-math">\(2a=\pm1\text{.}\)</span> However, <span class="process-math">\(\pm\frac12\)</span> is not an integer, and thus <span class="process-math">\(2\)</span> cannot divide either of these factors. Thus <span class="process-math">\(2\)</span> is not prime in <span class="process-math">\(\Z[\sqrt{-5}]\text{.}\)</span> By Part (a), this is not a UFD.</div>
+</div></li>
+<li><div class="para">Notice that <span class="process-math">\(E=\Q(\sqrt{ 2 },\sqrt{ 5 })\)</span> which also has degree <span class="process-math">\(4\text{.}\)</span> Let <span class="process-math">\(G\)</span> denote the Galois group of <span class="process-math">\(E/\Q\text{.}\)</span> Thus <span class="process-math">\(G\)</span> is a group of order <span class="process-math">\(4\text{,}\)</span> making it isomorphic to <span class="process-math">\(\Z_2\times\Z_2\)</span> or <span class="process-math">\(\Z_4\text{.}\)</span> Notice that the elements of <span class="process-math">\(G\)</span> are the following: - <span class="process-math">\(\id(\sqrt{ 2 })=\sqrt{ 2 }\)</span> and <span class="process-math">\(\id(\sqrt{ 5 })=\sqrt{ 5 }\text{,}\)</span> - <span class="process-math">\(\tau(\sqrt{ 2 })=\sqrt{ 2 }\)</span> and <span class="process-math">\(\s(\sqrt{ 5 })=-\sqrt{ 5 }\text{,}\)</span> - <span class="process-math">\(\g(\sqrt{ 2 })=-\sqrt{ 2 }\)</span> and <span class="process-math">\(\s(\sqrt{ 5 })=-\sqrt{ 5 }\text{,}\)</span> and - <span class="process-math">\(\l(\sqrt{ 2 })=-\sqrt{ 2 }\)</span> and <span class="process-math">\(\s(\sqrt{ 5 })=\sqrt{ 5 }\text{.}\)</span> All of these automorphisms have degree <span class="process-math">\(2\text{,}\)</span> making <span class="process-math">\(G\cong\Z_2\times\Z_2\text{.}\)</span>
+</div></li>
+<li><div class="para">Thus are only two subgroups of <span class="process-math">\(G\text{,}\)</span> <span class="process-math">\(H\cong\Z_2\)</span> and <span class="process-math">\(K\cong\Z_2\text{.}\)</span> The first, <span class="process-math">\(H\text{,}\)</span> corresponds to <span class="process-math">\(\Q(\sqrt{ 2 })\)</span> and is generated by <span class="process-math">\(\sqrt{ 2 }\text{,}\)</span> where <span class="process-math">\(K\)</span> corresponds to <span class="process-math">\(\Q(\sqrt{ 5 })\)</span> and is generated by <span class="process-math">\(\sqrt{ 5 }\text{.}\)</span>
+</div></li>
+</ol></div>
 </div></body>
 </html>

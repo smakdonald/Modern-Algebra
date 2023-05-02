@@ -4042,9 +4042,9 @@ var ptx_lunr_docs = [
   "body": "Reduction Homomorphism Continuing with , we could have for an ideal of and could be the quotient map. Then takes a polynomial and reduces its coefficients modulo . We will usually denote the image of through the reduction homomorphism by . "
 },
 {
-  "id": "thm-polynomial-divison-algorithm",
+  "id": "thm-polynomial-division-algorithm",
   "level": "2",
-  "url": "sec-polyrings.html#thm-polynomial-divison-algorithm",
+  "url": "sec-polyrings.html#thm-polynomial-division-algorithm",
   "type": "Theorem",
   "number": "9.63",
   "title": "Polynomial Division Algorithm.",
@@ -4624,7 +4624,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "11.1",
   "title": "Euclidian Domains",
-  "body": "Euclidian Domains        Euclidean Domain   A Euclidean domain (ED) is a domain together with a function such that and the following property holds: for any two elements with , there are elements and of such that     Trivial Norm  A \"degenerate example\" is a field equipped with the trivial norm for all . Given with , we have . Note that in this example there is no need to include in the description of the division algorithm, since implies . This is not the case in other examples. Also observe that as we've defined remainders they are {} unique. For example, in dividing by , both are considered valid. This calculation shows, more generally, that if is a unit, then for all there exists an equation with , not matter what norm is used. One could make remainders (and hence quotients) unique for by insisting that remainders always be non-negative, but this is not part of the abstract theory since it doesn't generalize to all cases well.    Guassian Integers are a Euclidian Domain  The ring of Gaussian integers is a Euclidean domain with being the usual complex (Euclidean) square norm . Let ,  and let (here we use that the fraction field of is ). Now pick so that and . We have Set and set and notice that because and by closure. If we're good, and if then, using that the complex squared norm is multiplicative as well as the Pythagorean Theorem and the choice for , we have Thus the norm function makes into a Euclidean domain.   Degree and Norm  The next classical example is with a field and where we define the norm to be degree: if and . This ring is a ED because of the familiar long division for polynomials.   GCD   Given elements , not both , of a Euclidean domain with Euclidean norm , a of and is an element such that:    and ; and    If and , then .        Note that is equivalent to .     Computations and Examples       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Formal Proofs       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Qualifying Exam Problems       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     "
+  "body": "Euclidian Domains  Find your domain and serve it to the world. Myles Munroe  Euclidean Domain   A Euclidean domain (ED) is a domain together with a norm function such that and the following property holds: for any two elements with , there are elements and of such that     In a Euclidean domain, division with remainder is possible, and the remainder is always smaller than the divisor. This property is similar to the division algorithm for integers, which is what makes Euclidean domains so useful in number theory and algebra.  Euclidean Domains  Euclidean domains were named after the ancient Greek mathematician Euclid; however, it was actually Ernst Eduard Kummer, a German mathematician, who first introduced the concept of Euclidean domains in the 19th century.   Lets take a look at some examples to deepen our understanding.  Trivial Norm  A \"degenerate example\" is a field equipped with the trivial norm for all . Given with , we have . Note that in this example there is no need to include in the description of the division algorithm, since implies . This is not the case in other examples. Also observe that as we've defined remainders they are not unique. For example, in dividing by , both are considered valid. This calculation shows, more generally, that if is a unit, then for all there exists an equation with , not matter what norm is used. One could make remainders (and hence quotients) unique for by insisting that remainders always be non-negative, but this is not part of the abstract theory since it doesn't generalize to all cases well.   Polynomial Rings over Fields are Euclidean Domains  The next classical example is with a field and where we define the norm to be polynomial degree: if and . This ring is a Euclidean Domain because of the familiar long division for polynomials, as proved in .    Guassian Integers are a Euclidian Domain  The ring of Gaussian integers is a Euclidean domain with being the usual complex (Euclidean) square norm . Let ,  and let (here we use that the fraction field of is ). Now pick so that and . We have Set and set and notice that because and by closure. If we're good, and if then, using that the complex squared norm is multiplicative as well as the Pythagorean Theorem and the choice for , we have Thus the norm function makes into a Euclidean domain.   GCD   Given elements , not both , of a Euclidean domain with Euclidean norm , a of and is an element such that:    and ; and    If and , then .       Note that is equivalent to .  "
 },
 {
   "id": "def-ed",
@@ -4633,7 +4633,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "11.1",
   "title": "Euclidean Domain.",
-  "body": "Euclidean Domain   A Euclidean domain (ED) is a domain together with a function such that and the following property holds: for any two elements with , there are elements and of such that    "
+  "body": "Euclidean Domain   A Euclidean domain (ED) is a domain together with a norm function such that and the following property holds: for any two elements with , there are elements and of such that    "
 },
 {
   "id": "ex-trivial-norm",
@@ -4642,25 +4642,25 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "11.2",
   "title": "Trivial Norm.",
-  "body": "Trivial Norm  A \"degenerate example\" is a field equipped with the trivial norm for all . Given with , we have . Note that in this example there is no need to include in the description of the division algorithm, since implies . This is not the case in other examples. Also observe that as we've defined remainders they are {} unique. For example, in dividing by , both are considered valid. This calculation shows, more generally, that if is a unit, then for all there exists an equation with , not matter what norm is used. One could make remainders (and hence quotients) unique for by insisting that remainders always be non-negative, but this is not part of the abstract theory since it doesn't generalize to all cases well.  "
-},
-{
-  "id": "ex-gaussian-integers-are-an-ed",
-  "level": "2",
-  "url": "sec-eds.html#ex-gaussian-integers-are-an-ed",
-  "type": "Problem",
-  "number": "11.3",
-  "title": "Guassian Integers are a Euclidian Domain.",
-  "body": " Guassian Integers are a Euclidian Domain  The ring of Gaussian integers is a Euclidean domain with being the usual complex (Euclidean) square norm . Let ,  and let (here we use that the fraction field of is ). Now pick so that and . We have Set and set and notice that because and by closure. If we're good, and if then, using that the complex squared norm is multiplicative as well as the Pythagorean Theorem and the choice for , we have Thus the norm function makes into a Euclidean domain.  "
+  "body": "Trivial Norm  A \"degenerate example\" is a field equipped with the trivial norm for all . Given with , we have . Note that in this example there is no need to include in the description of the division algorithm, since implies . This is not the case in other examples. Also observe that as we've defined remainders they are not unique. For example, in dividing by , both are considered valid. This calculation shows, more generally, that if is a unit, then for all there exists an equation with , not matter what norm is used. One could make remainders (and hence quotients) unique for by insisting that remainders always be non-negative, but this is not part of the abstract theory since it doesn't generalize to all cases well.  "
 },
 {
   "id": "ex-degree-and-norm",
   "level": "2",
   "url": "sec-eds.html#ex-degree-and-norm",
-  "type": "Problem",
+  "type": "Example",
+  "number": "11.3",
+  "title": "Polynomial Rings over Fields are Euclidean Domains.",
+  "body": "Polynomial Rings over Fields are Euclidean Domains  The next classical example is with a field and where we define the norm to be polynomial degree: if and . This ring is a Euclidean Domain because of the familiar long division for polynomials, as proved in .  "
+},
+{
+  "id": "ex-gaussian-integers-are-an-ed",
+  "level": "2",
+  "url": "sec-eds.html#ex-gaussian-integers-are-an-ed",
+  "type": "Example",
   "number": "11.4",
-  "title": "Degree and Norm.",
-  "body": "Degree and Norm  The next classical example is with a field and where we define the norm to be degree: if and . This ring is a ED because of the familiar long division for polynomials.  "
+  "title": "Guassian Integers are a Euclidian Domain.",
+  "body": " Guassian Integers are a Euclidian Domain  The ring of Gaussian integers is a Euclidean domain with being the usual complex (Euclidean) square norm . Let ,  and let (here we use that the fraction field of is ). Now pick so that and . We have Set and set and notice that because and by closure. If we're good, and if then, using that the complex squared norm is multiplicative as well as the Pythagorean Theorem and the choice for , we have Thus the norm function makes into a Euclidean domain.  "
 },
 {
   "id": "def-ed-gcd",
@@ -4678,34 +4678,7 @@ var ptx_lunr_docs = [
   "type": "Remark",
   "number": "11.6",
   "title": "",
-  "body": " Note that is equivalent to .  "
-},
-{
-  "id": "exercise-159",
-  "level": "2",
-  "url": "sec-eds.html#exercise-159",
-  "type": "Exercise",
-  "number": "11.1.1",
-  "title": ".",
-  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
-},
-{
-  "id": "exercise-160",
-  "level": "2",
-  "url": "sec-eds.html#exercise-160",
-  "type": "Exercise",
-  "number": "11.1.2",
-  "title": ".",
-  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
-},
-{
-  "id": "exercise-161",
-  "level": "2",
-  "url": "sec-eds.html#exercise-161",
-  "type": "Exercise",
-  "number": "11.1.3",
-  "title": ".",
-  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
+  "body": "Note that is equivalent to . "
 },
 {
   "id": "sec-pids",
@@ -4714,7 +4687,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "11.2",
   "title": "Principal Ideal Domains",
-  "body": "Principal Ideal Domains        PID   A ring is called a principal ideal domain (PID) if it is a domain with the property that every ideal is principal, i.e., for each ideal , we have for some     Polynomial Rings over Fields are PIDs  For any field , every ideal of is principal ( is a PID)   Euclidean Domains are PIDs   If is a Euclidean domain, then is a PID.    Let be the norm function making into a Euclidean domain. Pick an ideal . If is the zero ideal, . Otherwise pick a non-zero element of with as small as possible. (Such a exists by the well-ordering of .) I claim . It is clear that . Pick . Then and either or . But note that , and we cannot have both and by our choice of . So it must be that , and hence .    PIDs Need not be Euclidean Domains  The ring is a PID, but not a Euclidean domain. It is the simplest example of such a ring, but the proofs of these claims are not easy. I will not cover a proof of this fact.   Nonzero Primes are Maximal in PIDs  If is a PID, then every nonzero prime ideal is maximal.   Associate   Let be a domain. Two elements are associates if there is a unit of R such that .    Associates and Principal Ideals   Two elements of a domain are associates if and only if .    If then and so for some . Similarly and hence . Since is a domain, either or . If , then and otherwise is a unit.  If for a unit , then and so and , from which is follows that and .    GCDs and Units in PIDs   If is a PID and , then    for some and any such is a gcd of and     the gcd of and is unique up to multiplication by a unit.       The existence of is granted by definition in a PID. Now gives that and . If and we have that , so by minimality. This gives , hence .     If is not only a PID but a Euclidean domain with norm function , then the Euclidean algorithm can be used to compute a gcd of any two nonzero .   Prime   Suppose is a domain. An element is a prime element if and the ideal is a prime ideal.    Irreducible   Suppose is a domain. An element is irreducible if , is not a unit, and whenever with then either or is a unit.    Examples of Primes and Irreducibles    the prime elements of are the prime integers and their negatives; they are also irreducible  any element with a prime integer is irreducible e.g. is irreducible  the element is not irreducible in   the polynomial is irreducible; indeed if it factors nontrivially, it must factor as a product of two linear polynomials: . Then is a root for . But neither nor are roots for this polynomial, a contradiction.     In , Prime but not Irreducible   In the domain the element is irreducible but not prime.    Note that and thus . However we claim that neither nor are in . If then for some and so , a contradiction. Thus is not prime.      In the ring the element is irreducible but not prime.    Since this ring is a domain. The element is irreducible for degree reasons. The ideal contains but doesn't contain so is not prime.    Irreducible is Prime in PID   Let be a domain and let .   If is a prime element, then is irreducible.    If is a PID and is irreducible, then is a prime element.       Suppose is an integral domain and that is prime. Then and is not a unit. Suppose . Then and hence by definition either or . If , we have for some and so . Since , , and is an integral domain, we must have , showing that is a unit.  Assume is a PID and that is irreducible. Since is not a unit, is a proper ideal and hence is contained in a maximal ideal by Theorem . We show and hence is prime. Since is a PID, for some . So for some . But is irreducible and is not a unit, which forces to be a unit and hence .    Duplicate?   Let be a commutative ring and an indeterminant. Prove that is a PID if and only if is a field.    First, suppose is a PID. Let be a nonzero ideal in , and consider the ideal . As is a PID we see for some . Then , but is an indeterminant and thus irreducible, so must be a unit or itself. But also generates , so can't be , so is a unit, meaning and so . Thus the only ideals of are and , making a field.  Next, suppose is a field. Let be an ideal in . If then or , both of which are principal. Thus , and so , making principal as well. Hence is a PID.    Qual   Consider the subring of . Show that is irreducible but not prime in Hint: Consider the function .    Consider and the function .  Suppose by way of contradiction there exist such that . Then and , and Thus or , as these are the only integer divisors of . However, there do not exist integers such that this is true. Thus is irreducible in .  Suppose by way of contradiction that is prime in . Note that . Thus divides one of these factors.  First, suppose there exists some such that . Thus , and so . However, is not an integer, and thus cannot divide either of these factors. Thus is not prime in .    Qual   In the commutative ring , show that the element is irreducible but not prime.    First, notice that . Define a function Let and behold So there's that done.  Suppose by way of contradiction there exist such that . Then and , and Thus or , as these are the only integer divisors of . However, there do not exist integers such that this is true. Thus is irreducible in .  Suppose by way of contradiction that is prime in . Note that . Thus divides one of these factors.  First, suppose there exists some such that . Thus , and so . However, is not an integer, and thus cannot divide either of these factors. Thus is not prime in .    June 2010 Problem (8)  Prove is not a PID. Hint: One method is to use (with proof) the fact that is irreducible in this ring.   June 2011 (8)   Let be a commutative ring with . Recall that is called nilpotent if for some integer Let be the set of nilpotent elements of .   Show that is an ideal of .    Show that the ring has no nonzero nilpotent elements.    For a polynomial , prove that is a nilpotent element of if and only if every coefficient of is nilpotent.       Let be a commutative ring with and Let be the set of nilpotent elements of .     Let . Then and for . Consider , which, by the binomial theorem, has each term raised to either the th or th power, sending the whole thing to .  Additionally, if consider when viewed as an additive group. Notice . Finally, let and consider , so . Thus we have our ideal.    Let be a nilpotent element in . Then , meaning . This means there exists some such that , placing . Thus all nilpotent elements in are actually (possibly four 's in a trench coat).    Let .  First, suppose is a nilpotent element of . Thus for some . By the binomial shenanigans every product of coefficients must to go .  Next, suppose every coefficient of is nilpotent. Let be equal to the product of all the smallest powers that send each coefficient to . Thus by more binomial shenanigans we have .       Qual   Let be a PID and a multiplicatively closed subset of such that . Prove that is also a PID. Tip: Given an ideal of , consider .    Let be a PID, a multiplicatively closed subset of such that , and an ideal in . Consider , which is an ideal in and is thus generated by some .    Qual  Let be an integral domain with field of fractions . Let be a prime ideal of and let    Show that is a subring of .    Show that is a prime ideal of .        Computations and Examples       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Formal Proofs       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Qualifying Exam Problems       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     "
+  "body": "Principal Ideal Domains  One chance is all you need. Jesse Owens  PID   A ring is called a principal ideal domain (PID) if it is a domain with the property that every ideal is principal, i.e., for each ideal , we have for some     PIDs  The concept of principal ideal domains (PIDs) was introduced by the German mathematician Ernst Eduard Kummer in the 19th century, as a generalization of the concept of Euclidean domains.   Polynomial Rings over Fields are PIDs For any field , every ideal of is principal ( is a PID)  Euclidean Domains are PIDs   If is a Euclidean domain, then is a PID.    Let be the norm function making into a Euclidean domain. Pick an ideal . If is the zero ideal, . Otherwise pick a non-zero element of with as small as possible. (Such a exists by the well-ordering of .) I claim . It is clear that . Pick . Then and either or . But note that , and we cannot have both and by our choice of . So it must be that , and hence .    The converse is not true in general.  PIDs Need not be Euclidean Domains  The ring is a PID, but not a Euclidean domain. It is the simplest example of such a ring, but the proofs of these claims are not easy. I will not cover a proof of this fact.   Nonzero Primes are Maximal in PIDs   If is a PID, then every nonzero prime ideal is maximal.    Associate   Let be a domain. Two elements are associates if there is a unit of R such that .    Associates and Principal Ideals   Two elements of a domain are associates if and only if .    If then and so for some . Similarly and hence . Since is a domain, either or . If , then and otherwise is a unit.  If for a unit , then and so and , from which is follows that and .    GCDs and Units in PIDs   If is a PID and , then    for some and any such is a gcd of and     the gcd of and is unique up to multiplication by a unit.       The existence of is granted by definition in a PID. Now gives that and . If and we have that , so by minimality. This gives , hence .    If is not only a PID but a Euclidean domain with norm function , then the Euclidean algorithm can be used to compute a gcd of any two nonzero .  Prime   Suppose is a domain. An element is a prime element if and the ideal is a prime ideal.    Irreducible   Suppose is a domain. An element is irreducible if , is not a unit, and whenever with then either or is a unit.    Examples of Primes and Irreducibles    the prime elements of are the prime integers and their negatives; they are also irreducible  any element with a prime integer is irreducible e.g. is irreducible  the element is not irreducible in   the polynomial is irreducible; indeed if it factors nontrivially, it must factor as a product of two linear polynomials: . Then is a root for . But neither nor are roots for this polynomial, a contradiction.     In , Prime but not Irreducible  In the domain the element is irreducible but not prime.   Note that and thus . However we claim that neither nor are in . If then for some and so , a contradiction. Thus is not prime.    In the ring the element is irreducible but not prime.   Since this ring is a domain. The element is irreducible for degree reasons. The ideal contains but doesn't contain so is not prime.   Irreducible is Prime in PID   Let be a domain and let .   If is a prime element, then is irreducible.    If is a PID and is irreducible, then is a prime element.       Suppose is an integral domain and that is prime. Then and is not a unit. Suppose . Then and hence by definition either or . If , we have for some and so . Since , , and is an integral domain, we must have , showing that is a unit.  Assume is a PID and that is irreducible. Since is not a unit, is a proper ideal and hence is contained in a maximal ideal by Theorem . We show and hence is prime. Since is a PID, for some . So for some . But is irreducible and is not a unit, which forces to be a unit and hence .    Factorizations and Permutations   Assume is a PID is non zero and not a unit and are two different irreducible factorization of . Then and there is a permutation such that, for all , we have and are associates.    Without loss of generality, assume . We induct on .  If then as well since and would yield , a contradiction. If we have and there is nothing more to prove.  Assume and that irreducible factorizations with factors are unique up to reordering factors and taking associates.  Since is a PID, irreducible elements are prime by Theorem . Since we have that and since is a prime ideal it follows that for some . Upon reordering, we may as well assume . Thus for some . Since is irreducible and is not a unit, must be a unit. We get and hence, since is an integral domain, we may divide by to obtain Notice that is a prime ideal so is irreducible by Theorem .  By the inductive hypothesis we deduce that hence and also that are associates to in some order. This together with associate to establishes the claim.    "
 },
 {
   "id": "def-pid",
@@ -4729,10 +4702,10 @@ var ptx_lunr_docs = [
   "id": "exe-fx-is-a-pid",
   "level": "2",
   "url": "sec-pids.html#exe-fx-is-a-pid",
-  "type": "Problem",
+  "type": "Exploration",
   "number": "11.8",
   "title": "Polynomial Rings over Fields are PIDs.",
-  "body": "Polynomial Rings over Fields are PIDs  For any field , every ideal of is principal ( is a PID)  "
+  "body": "Polynomial Rings over Fields are PIDs For any field , every ideal of is principal ( is a PID) "
 },
 {
   "id": "thm-ed-is-a-pid",
@@ -4747,7 +4720,7 @@ var ptx_lunr_docs = [
   "id": "ex-pid-not-ed",
   "level": "2",
   "url": "sec-pids.html#ex-pid-not-ed",
-  "type": "Problem",
+  "type": "Example",
   "number": "11.10",
   "title": "PIDs Need not be Euclidean Domains.",
   "body": "PIDs Need not be Euclidean Domains  The ring is a PID, but not a Euclidean domain. It is the simplest example of such a ring, but the proofs of these claims are not easy. I will not cover a proof of this fact.  "
@@ -4756,10 +4729,10 @@ var ptx_lunr_docs = [
   "id": "exe-nonzero-primes-maximal-in-pid",
   "level": "2",
   "url": "sec-pids.html#exe-nonzero-primes-maximal-in-pid",
-  "type": "Problem",
+  "type": "Proposition",
   "number": "11.11",
   "title": "Nonzero Primes are Maximal in PIDs.",
-  "body": "Nonzero Primes are Maximal in PIDs  If is a PID, then every nonzero prime ideal is maximal.  "
+  "body": "Nonzero Primes are Maximal in PIDs   If is a PID, then every nonzero prime ideal is maximal.   "
 },
 {
   "id": "def-associate",
@@ -4795,7 +4768,7 @@ var ptx_lunr_docs = [
   "type": "Remark",
   "number": "11.15",
   "title": "",
-  "body": " If is not only a PID but a Euclidean domain with norm function , then the Euclidean algorithm can be used to compute a gcd of any two nonzero .  "
+  "body": "If is not only a PID but a Euclidean domain with norm function , then the Euclidean algorithm can be used to compute a gcd of any two nonzero . "
 },
 {
   "id": "def-prime-element",
@@ -4828,19 +4801,19 @@ var ptx_lunr_docs = [
   "id": "ex-in-zsqrt-5-2-irreducible-but-not-prime",
   "level": "2",
   "url": "sec-pids.html#ex-in-zsqrt-5-2-irreducible-but-not-prime",
-  "type": "Problem",
+  "type": "Exploration",
   "number": "11.19",
   "title": "In <span class=\"process-math\">\\(\\Z[\\sqrt{-5}]\\text{,}\\)<\/span> <span class=\"process-math\">\\(2\\)<\/span> Prime but not Irreducible.",
-  "body": "In , Prime but not Irreducible   In the domain the element is irreducible but not prime.    Note that and thus . However we claim that neither nor are in . If then for some and so , a contradiction. Thus is not prime.   "
+  "body": "In , Prime but not Irreducible  In the domain the element is irreducible but not prime.   Note that and thus . However we claim that neither nor are in . If then for some and so , a contradiction. Thus is not prime.  "
 },
 {
   "id": "ex-cxyx2-y3-y-irreducible-but-not-prime",
   "level": "2",
   "url": "sec-pids.html#ex-cxyx2-y3-y-irreducible-but-not-prime",
-  "type": "Problem",
+  "type": "Exploration",
   "number": "11.20",
   "title": "",
-  "body": "  In the ring the element is irreducible but not prime.    Since this ring is a domain. The element is irreducible for degree reasons. The ideal contains but doesn't contain so is not prime.   "
+  "body": " In the ring the element is irreducible but not prime.   Since this ring is a domain. The element is irreducible for degree reasons. The ideal contains but doesn't contain so is not prime.  "
 },
 {
   "id": "thm-irreducible-is-prime-in-pid",
@@ -4852,94 +4825,13 @@ var ptx_lunr_docs = [
   "body": "Irreducible is Prime in PID   Let be a domain and let .   If is a prime element, then is irreducible.    If is a PID and is irreducible, then is a prime element.       Suppose is an integral domain and that is prime. Then and is not a unit. Suppose . Then and hence by definition either or . If , we have for some and so . Since , , and is an integral domain, we must have , showing that is a unit.  Assume is a PID and that is irreducible. Since is not a unit, is a proper ideal and hence is contained in a maximal ideal by Theorem . We show and hence is prime. Since is a PID, for some . So for some . But is irreducible and is not a unit, which forces to be a unit and hence .   "
 },
 {
-  "id": "rx-a-pid-iff-r-a-field",
+  "id": "thm-factorizations-permutations-and-associates",
   "level": "2",
-  "url": "sec-pids.html#rx-a-pid-iff-r-a-field",
-  "type": "Problem",
+  "url": "sec-pids.html#thm-factorizations-permutations-and-associates",
+  "type": "Theorem",
   "number": "11.22",
-  "title": "Duplicate?",
-  "body": "Duplicate?   Let be a commutative ring and an indeterminant. Prove that is a PID if and only if is a field.    First, suppose is a PID. Let be a nonzero ideal in , and consider the ideal . As is a PID we see for some . Then , but is an indeterminant and thus irreducible, so must be a unit or itself. But also generates , so can't be , so is a unit, meaning and so . Thus the only ideals of are and , making a field.  Next, suppose is a field. Let be an ideal in . If then or , both of which are principal. Thus , and so , making principal as well. Hence is a PID.   "
-},
-{
-  "id": "irreducible-not-prime-inz-sqrt-ten",
-  "level": "2",
-  "url": "sec-pids.html#irreducible-not-prime-inz-sqrt-ten",
-  "type": "Problem",
-  "number": "11.23",
-  "title": "Qual.",
-  "body": "Qual   Consider the subring of . Show that is irreducible but not prime in Hint: Consider the function .    Consider and the function .  Suppose by way of contradiction there exist such that . Then and , and Thus or , as these are the only integer divisors of . However, there do not exist integers such that this is true. Thus is irreducible in .  Suppose by way of contradiction that is prime in . Note that . Thus divides one of these factors.  First, suppose there exists some such that . Thus , and so . However, is not an integer, and thus cannot divide either of these factors. Thus is not prime in .   "
-},
-{
-  "id": "problem-4-zsqrt-3",
-  "level": "2",
-  "url": "sec-pids.html#problem-4-zsqrt-3",
-  "type": "Problem",
-  "number": "11.24",
-  "title": "Qual.",
-  "body": "Qual   In the commutative ring , show that the element is irreducible but not prime.    First, notice that . Define a function Let and behold So there's that done.  Suppose by way of contradiction there exist such that . Then and , and Thus or , as these are the only integer divisors of . However, there do not exist integers such that this is true. Thus is irreducible in .  Suppose by way of contradiction that is prime in . Note that . Thus divides one of these factors.  First, suppose there exists some such that . Thus , and so . However, is not an integer, and thus cannot divide either of these factors. Thus is not prime in .   "
-},
-{
-  "id": "problem-11",
-  "level": "2",
-  "url": "sec-pids.html#problem-11",
-  "type": "Problem",
-  "number": "11.25",
-  "title": "June 2010 Problem (8).",
-  "body": "June 2010 Problem (8)  Prove is not a PID. Hint: One method is to use (with proof) the fact that is irreducible in this ring.  "
-},
-{
-  "id": "problem-12",
-  "level": "2",
-  "url": "sec-pids.html#problem-12",
-  "type": "Problem",
-  "number": "11.26",
-  "title": "June 2011 (8).",
-  "body": "June 2011 (8)   Let be a commutative ring with . Recall that is called nilpotent if for some integer Let be the set of nilpotent elements of .   Show that is an ideal of .    Show that the ring has no nonzero nilpotent elements.    For a polynomial , prove that is a nilpotent element of if and only if every coefficient of is nilpotent.       Let be a commutative ring with and Let be the set of nilpotent elements of .     Let . Then and for . Consider , which, by the binomial theorem, has each term raised to either the th or th power, sending the whole thing to .  Additionally, if consider when viewed as an additive group. Notice . Finally, let and consider , so . Thus we have our ideal.    Let be a nilpotent element in . Then , meaning . This means there exists some such that , placing . Thus all nilpotent elements in are actually (possibly four 's in a trench coat).    Let .  First, suppose is a nilpotent element of . Thus for some . By the binomial shenanigans every product of coefficients must to go .  Next, suppose every coefficient of is nilpotent. Let be equal to the product of all the smallest powers that send each coefficient to . Thus by more binomial shenanigans we have .      "
-},
-{
-  "id": "problem-13",
-  "level": "2",
-  "url": "sec-pids.html#problem-13",
-  "type": "Problem",
-  "number": "11.27",
-  "title": "Qual.",
-  "body": "Qual   Let be a PID and a multiplicatively closed subset of such that . Prove that is also a PID. Tip: Given an ideal of , consider .    Let be a PID, a multiplicatively closed subset of such that , and an ideal in . Consider , which is an ideal in and is thus generated by some .   "
-},
-{
-  "id": "problem-14",
-  "level": "2",
-  "url": "sec-pids.html#problem-14",
-  "type": "Problem",
-  "number": "11.28",
-  "title": "Qual.",
-  "body": "Qual  Let be an integral domain with field of fractions . Let be a prime ideal of and let    Show that is a subring of .    Show that is a prime ideal of .     "
-},
-{
-  "id": "exercise-162",
-  "level": "2",
-  "url": "sec-pids.html#exercise-162",
-  "type": "Exercise",
-  "number": "11.2.1",
-  "title": ".",
-  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
-},
-{
-  "id": "exercise-163",
-  "level": "2",
-  "url": "sec-pids.html#exercise-163",
-  "type": "Exercise",
-  "number": "11.2.2",
-  "title": ".",
-  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
-},
-{
-  "id": "exercise-164",
-  "level": "2",
-  "url": "sec-pids.html#exercise-164",
-  "type": "Exercise",
-  "number": "11.2.3",
-  "title": ".",
-  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
+  "title": "Factorizations and Permutations.",
+  "body": "Factorizations and Permutations   Assume is a PID is non zero and not a unit and are two different irreducible factorization of . Then and there is a permutation such that, for all , we have and are associates.    Without loss of generality, assume . We induct on .  If then as well since and would yield , a contradiction. If we have and there is nothing more to prove.  Assume and that irreducible factorizations with factors are unique up to reordering factors and taking associates.  Since is a PID, irreducible elements are prime by Theorem . Since we have that and since is a prime ideal it follows that for some . Upon reordering, we may as well assume . Thus for some . Since is irreducible and is not a unit, must be a unit. We get and hence, since is an integral domain, we may divide by to obtain Notice that is a prime ideal so is irreducible by Theorem .  By the inductive hypothesis we deduce that hence and also that are associates to in some order. This together with associate to establishes the claim.   "
 },
 {
   "id": "subsec-ufds",
@@ -4948,14 +4840,14 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "11.3",
   "title": "Unique Factorization Domains",
-  "body": "Unique Factorization Domains        UFD   A ring is called a unique factorization domain , or UFD for short, if is an integral domain and every element that is non-zero and not a unit can be written as a finite product of (not necessarily distinct) irreducible elements of in a way that is unique up to ordering and associates. That is, if also holds with each irreducible, then and there is a permutation such that, for all , we have and are associates.    Examples of UFDs    is a UFD by the Fundamental Theorem of Arithmetic.   where is a field is a UFD. This is the case because is a Euclidean domain and Euclidean domains are UFD's (we'll prove this shortly).  We will eventually prove that if is a UFD then so is . It follows that is a UFD for all . Note that if , this ring is not a PID and hence not a Euclidean domain.    is a UFD   is not a PID hence also not a Euclidean domain. For , this can be seen because the ideal is not a principal ideal. It is a UFD because is a UFD (based on the result that if is a UFD then so is which we will prove shortly).   January 2014 (7)    is a domain that is not a UFD.    Consider and each of are irreducible by a norm argument (exercise). Notice also that contains elements that are irreducible but not prime: is irreducible, by a norm argument. But it is not prime since but neither nor is in     PIDs are UFDs   If is a PID then is a UFD.    Factorizations and Permutations   Assume is a PID is non zero and not a unit and are two different irreducible factorization of . Then and there is a permutation such that, for all , we have and are associates.    Without loss of generality, assume . We induct on .  If then as well since and would yield , a contradiction. If we have and there is nothing more to prove.  Assume and that irreducible factorizations with factors are unique up to reordering factors and taking associates.  Since is a PID, irreducible elements are prime by Theorem . Since we have that and since is a prime ideal it follows that for some . Upon reordering, we may as well assume . Thus for some . Since is irreducible and is not a unit, must be a unit. We get and hence, since is an integral domain, we may divide by to obtain Notice that is a prime ideal so is irreducible by Theorem .  By the inductive hypothesis we deduce that hence and also that are associates to in some order. This together with associate to establishes the claim.    Qual    Prove that in a UFD an element is irreducible if and only if the ideal [^1] is prime.  Prove that is not a UFD.        Let be a UFD.  First, suppose is irreducible, and consider the ideal . Let such that . Thus , so there exists some such that . As we are in a UFD the elements and all have unique (up to associates) factorizations of irreducible elements. Thus must be an associate of one of the irreducible elements in the factorization of or , and so or , making prime.  Now suppose that is prime and that for some . Thus and , so either or , as is a prime ideal. Assume without loss of generality that . Thus for some . Thus and As UFDs are integral domains we see , making a unit. Thus is irreducible.    First, notice that . Define a function Let and behold  Suppose by way of contradiction there exist such that . Then and , and Thus or , as these are the only integer divisors of . However, there do not exist integers such that this is true. Thus is irreducible in .  Suppose by way of contradiction that is prime in . Note that . Thus divides one of these factors.  First, suppose there exists some such that . Thus , and so . However, is not an integer, and thus cannot divide either of these factors. Thus is not prime in . By Part (a), this is not a UFD.         Computations and Examples       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Formal Proofs       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Qualifying Exam Problems       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     "
+  "body": "Unique Factorization Domains  Always remember that you are absolutely unique. Just like everyone else. Margaret Mead  UFD   A ring is called a unique factorization domain , or UFD for short, if is an integral domain and every element that is non-zero and not a unit can be written as a finite product of (not necessarily distinct) irreducible elements of in a way that is unique up to ordering and associates. That is, if also holds with each irreducible, then and there is a permutation such that, for all , we have and are associates.    UFDs  The concept of unique factorization was first introduced by mathematicians Carl Friedrich Gauss and Ernst Eduard Kummer in the 19th century.  The term \"unique factorization domain\" was coined by Emmy Noether in the 20th century, to describe integral domains in which every non-zero, non-unit element has a unique factorization into irreducible elements.   Examples of UFDs    is a UFD by the Fundamental Theorem of Arithmetic.   where is a field is a UFD. This is the case because is a Euclidean domain and Euclidean domains are UFD's (we'll prove this shortly).  We will eventually prove that if is a UFD then so is . It follows that is a UFD for all . Note that if , this ring is not a PID and hence not a Euclidean domain.    is a UFD  is not a PID hence also not a Euclidean domain. For example, this can be seen because the ideal is not a principal ideal. It is a UFD because is a UFD (based on the result that if is a UFD then so is which we will prove shortly).  PIDs are UFDs   If is a PID then is a UFD.    Polynomial Rings over UFDs are UFDs   If is a UFD then so is .    "
 },
 {
   "id": "def-ufd",
   "level": "2",
   "url": "subsec-ufds.html#def-ufd",
   "type": "Definition",
-  "number": "11.29",
+  "number": "11.23",
   "title": "UFD.",
   "body": "UFD   A ring is called a unique factorization domain , or UFD for short, if is an integral domain and every element that is non-zero and not a unit can be written as a finite product of (not necessarily distinct) irreducible elements of in a way that is unique up to ordering and associates. That is, if also holds with each irreducible, then and there is a permutation such that, for all , we have and are associates.   "
 },
@@ -4964,7 +4856,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "subsec-ufds.html#ex-ufd-exs",
   "type": "Example",
-  "number": "11.30",
+  "number": "11.24",
   "title": "Examples of UFDs.",
   "body": "Examples of UFDs    is a UFD by the Fundamental Theorem of Arithmetic.   where is a field is a UFD. This is the case because is a Euclidean domain and Euclidean domains are UFD's (we'll prove this shortly).  We will eventually prove that if is a UFD then so is . It follows that is a UFD for all . Note that if , this ring is not a PID and hence not a Euclidean domain.   "
 },
@@ -4972,73 +4864,28 @@ var ptx_lunr_docs = [
   "id": "ex-zx-not-a-pid",
   "level": "2",
   "url": "subsec-ufds.html#ex-zx-not-a-pid",
-  "type": "Problem",
-  "number": "11.31",
+  "type": "Exploration",
+  "number": "11.25",
   "title": "<span class=\"process-math\">\\(\\Z[x]\\)<\/span> is a UFD.",
-  "body": "is a UFD   is not a PID hence also not a Euclidean domain. For , this can be seen because the ideal is not a principal ideal. It is a UFD because is a UFD (based on the result that if is a UFD then so is which we will prove shortly).  "
-},
-{
-  "id": "ex-zsqrt-5-not-a-ufd",
-  "level": "2",
-  "url": "subsec-ufds.html#ex-zsqrt-5-not-a-ufd",
-  "type": "Problem",
-  "number": "11.32",
-  "title": "January 2014 (7).",
-  "body": "January 2014 (7)    is a domain that is not a UFD.    Consider and each of are irreducible by a norm argument (exercise). Notice also that contains elements that are irreducible but not prime: is irreducible, by a norm argument. But it is not prime since but neither nor is in    "
+  "body": "is a UFD  is not a PID hence also not a Euclidean domain. For example, this can be seen because the ideal is not a principal ideal. It is a UFD because is a UFD (based on the result that if is a UFD then so is which we will prove shortly). "
 },
 {
   "id": "thm-pid-implies-ufd",
   "level": "2",
   "url": "subsec-ufds.html#thm-pid-implies-ufd",
   "type": "Theorem",
-  "number": "11.33",
+  "number": "11.26",
   "title": "PIDs are UFDs.",
   "body": "PIDs are UFDs   If is a PID then is a UFD.   "
 },
 {
-  "id": "thm-factorizations-permutations-and-associates",
+  "id": "thm-polynomials-over-ufd-ufd",
   "level": "2",
-  "url": "subsec-ufds.html#thm-factorizations-permutations-and-associates",
+  "url": "subsec-ufds.html#thm-polynomials-over-ufd-ufd",
   "type": "Theorem",
-  "number": "11.34",
-  "title": "Factorizations and Permutations.",
-  "body": "Factorizations and Permutations   Assume is a PID is non zero and not a unit and are two different irreducible factorization of . Then and there is a permutation such that, for all , we have and are associates.    Without loss of generality, assume . We induct on .  If then as well since and would yield , a contradiction. If we have and there is nothing more to prove.  Assume and that irreducible factorizations with factors are unique up to reordering factors and taking associates.  Since is a PID, irreducible elements are prime by Theorem . Since we have that and since is a prime ideal it follows that for some . Upon reordering, we may as well assume . Thus for some . Since is irreducible and is not a unit, must be a unit. We get and hence, since is an integral domain, we may divide by to obtain Notice that is a prime ideal so is irreducible by Theorem .  By the inductive hypothesis we deduce that hence and also that are associates to in some order. This together with associate to establishes the claim.   "
-},
-{
-  "id": "prime-in-ufd-zsqrt-5-not-ufd",
-  "level": "2",
-  "url": "subsec-ufds.html#prime-in-ufd-zsqrt-5-not-ufd",
-  "type": "Problem",
-  "number": "11.35",
-  "title": "Qual.",
-  "body": "Qual    Prove that in a UFD an element is irreducible if and only if the ideal [^1] is prime.  Prove that is not a UFD.        Let be a UFD.  First, suppose is irreducible, and consider the ideal . Let such that . Thus , so there exists some such that . As we are in a UFD the elements and all have unique (up to associates) factorizations of irreducible elements. Thus must be an associate of one of the irreducible elements in the factorization of or , and so or , making prime.  Now suppose that is prime and that for some . Thus and , so either or , as is a prime ideal. Assume without loss of generality that . Thus for some . Thus and As UFDs are integral domains we see , making a unit. Thus is irreducible.    First, notice that . Define a function Let and behold  Suppose by way of contradiction there exist such that . Then and , and Thus or , as these are the only integer divisors of . However, there do not exist integers such that this is true. Thus is irreducible in .  Suppose by way of contradiction that is prime in . Note that . Thus divides one of these factors.  First, suppose there exists some such that . Thus , and so . However, is not an integer, and thus cannot divide either of these factors. Thus is not prime in . By Part (a), this is not a UFD.      "
-},
-{
-  "id": "exercise-165",
-  "level": "2",
-  "url": "subsec-ufds.html#exercise-165",
-  "type": "Exercise",
-  "number": "11.3.1",
-  "title": ".",
-  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
-},
-{
-  "id": "exercise-166",
-  "level": "2",
-  "url": "subsec-ufds.html#exercise-166",
-  "type": "Exercise",
-  "number": "11.3.2",
-  "title": ".",
-  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
-},
-{
-  "id": "exercise-167",
-  "level": "2",
-  "url": "subsec-ufds.html#exercise-167",
-  "type": "Exercise",
-  "number": "11.3.3",
-  "title": ".",
-  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
+  "number": "11.27",
+  "title": "Polynomial Rings over UFDs are UFDs.",
+  "body": "Polynomial Rings over UFDs are UFDs   If is a UFD then so is .   "
 },
 {
   "id": "subsec-noeth",
@@ -5047,14 +4894,14 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "11.4",
   "title": "Noetherian Rings",
-  "body": "Noetherian Rings        Noetherian Ring   Suppose is a commutative ring. Then is called a noetherian ring if satisfies the ascending chain condition on ideals - i.e., for every chain of ideals of  there exists a positive integer such that for all .    PIDs are Noetherian   If is a PID then is noetherian.    Consider and ascending chain of ideals of ; it must have the form Consider which is an ideal of by the argument given in Theorem . Since is a PID, for some . Since , we must have for some . Then we see that for all , thus for and the chain stabilizes as desired.    Fields are Noetherian  Every field is noetherian.   Factorization in Noetherian Domains   If is a noetherian integral domain, then every non-zero, not-unit element factors into a finite product of irreducible elements.    Pick with and . If is irreducible, there is nothing to prove. Otherwise, we have for non-units . If both are irreducible, the proof is complete. Otherwise, one or both of them factors non-trivially. We may express this conveniently by saying that and such that either and are both non-units or and are both non-units. (E.g., if is irreducible, we could set .) Continuing in the this manner, we form a binary tree with at the top, one level down, one level below that, etc.  We halt the process of building the tree if at some stage all the leaves of the tree are irreducible elements, at which point we will have proven that factors in to a product of the irreducible elements given by these leaves.  We need to rule out the possibility that the process never terminates. If it never terminates, we will have built an infinite binary tree with the property that some route downward through the tree consists of an infinite list of irreducible elements such that for a non-unit and, for each , for a non-unit . Since is an integral domain, we have and for all . (E.g., if then and hence , so that , contrary to being a non-unit.)  But then we have arrived at an infinite ascending chain of ideals in , which is not possible in a Noetherian ring.      Computations and Examples       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Formal Proofs       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Qualifying Exam Problems       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     "
+  "body": "Noetherian Rings  All good things must come to an end. Geoffrey Chaucer  Noetherian Ring   Suppose is a commutative ring. Then is called a noetherian ring if satisfies the ascending chain condition on ideals - i.e., for every chain of ideals of  there exists a positive integer such that for all .    PIDs are Noetherian   If is a PID then is noetherian.    Consider and ascending chain of ideals of ; it must have the form Consider which is an ideal of by the argument given in Theorem . Since is a PID, for some . Since , we must have for some . Then we see that for all , thus for and the chain stabilizes as desired.    Fields are Noetherian  Every field is noetherian.   Factorization in Noetherian Domains   If is a noetherian integral domain, then every non-zero, not-unit element factors into a finite product of irreducible elements.    Pick with and . If is irreducible, there is nothing to prove. Otherwise, we have for non-units . If both are irreducible, the proof is complete. Otherwise, one or both of them factors non-trivially. We may express this conveniently by saying that and such that either and are both non-units or and are both non-units. (E.g., if is irreducible, we could set .) Continuing in the this manner, we form a binary tree with at the top, one level down, one level below that, etc.  We halt the process of building the tree if at some stage all the leaves of the tree are irreducible elements, at which point we will have proven that factors in to a product of the irreducible elements given by these leaves.  We need to rule out the possibility that the process never terminates. If it never terminates, we will have built an infinite binary tree with the property that some route downward through the tree consists of an infinite list of irreducible elements such that for a non-unit and, for each , for a non-unit . Since is an integral domain, we have and for all . (E.g., if then and hence , so that , contrary to being a non-unit.)  But then we have arrived at an infinite ascending chain of ideals in , which is not possible in a Noetherian ring.      Computations and Examples       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Formal Proofs       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Qualifying Exam Problems       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     "
 },
 {
   "id": "def-noetherian-ring",
   "level": "2",
   "url": "subsec-noeth.html#def-noetherian-ring",
   "type": "Definition",
-  "number": "11.36",
+  "number": "11.28",
   "title": "Noetherian Ring.",
   "body": "Noetherian Ring   Suppose is a commutative ring. Then is called a noetherian ring if satisfies the ascending chain condition on ideals - i.e., for every chain of ideals of  there exists a positive integer such that for all .   "
 },
@@ -5062,17 +4909,17 @@ var ptx_lunr_docs = [
   "id": "lem-pids-are-noetherian",
   "level": "2",
   "url": "subsec-noeth.html#lem-pids-are-noetherian",
-  "type": "Lemma",
-  "number": "11.37",
+  "type": "Theorem",
+  "number": "11.29",
   "title": "PIDs are Noetherian.",
   "body": "PIDs are Noetherian   If is a PID then is noetherian.    Consider and ascending chain of ideals of ; it must have the form Consider which is an ideal of by the argument given in Theorem . Since is a PID, for some . Since , we must have for some . Then we see that for all , thus for and the chain stabilizes as desired.   "
 },
 {
-  "id": "exe-fields-are-noetherian",
+  "id": "cor-fields-are-noetherian",
   "level": "2",
-  "url": "subsec-noeth.html#exe-fields-are-noetherian",
-  "type": "Problem",
-  "number": "11.38",
+  "url": "subsec-noeth.html#cor-fields-are-noetherian",
+  "type": "Corollary",
+  "number": "11.30",
   "title": "Fields are Noetherian.",
   "body": "Fields are Noetherian  Every field is noetherian.  "
 },
@@ -5080,33 +4927,33 @@ var ptx_lunr_docs = [
   "id": "lem-factorization-in-noetherian-domains",
   "level": "2",
   "url": "subsec-noeth.html#lem-factorization-in-noetherian-domains",
-  "type": "Lemma",
-  "number": "11.39",
+  "type": "Theorem",
+  "number": "11.31",
   "title": "Factorization in Noetherian Domains.",
   "body": "Factorization in Noetherian Domains   If is a noetherian integral domain, then every non-zero, not-unit element factors into a finite product of irreducible elements.    Pick with and . If is irreducible, there is nothing to prove. Otherwise, we have for non-units . If both are irreducible, the proof is complete. Otherwise, one or both of them factors non-trivially. We may express this conveniently by saying that and such that either and are both non-units or and are both non-units. (E.g., if is irreducible, we could set .) Continuing in the this manner, we form a binary tree with at the top, one level down, one level below that, etc.  We halt the process of building the tree if at some stage all the leaves of the tree are irreducible elements, at which point we will have proven that factors in to a product of the irreducible elements given by these leaves.  We need to rule out the possibility that the process never terminates. If it never terminates, we will have built an infinite binary tree with the property that some route downward through the tree consists of an infinite list of irreducible elements such that for a non-unit and, for each , for a non-unit . Since is an integral domain, we have and for all . (E.g., if then and hence , so that , contrary to being a non-unit.)  But then we have arrived at an infinite ascending chain of ideals in , which is not possible in a Noetherian ring.   "
 },
 {
-  "id": "exercise-168",
+  "id": "exercise-163",
   "level": "2",
-  "url": "subsec-noeth.html#exercise-168",
+  "url": "subsec-noeth.html#exercise-163",
   "type": "Exercise",
   "number": "11.4.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-169",
+  "id": "exercise-164",
   "level": "2",
-  "url": "subsec-noeth.html#exercise-169",
+  "url": "subsec-noeth.html#exercise-164",
   "type": "Exercise",
   "number": "11.4.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-170",
+  "id": "exercise-165",
   "level": "2",
-  "url": "subsec-noeth.html#exercise-170",
+  "url": "subsec-noeth.html#exercise-165",
   "type": "Exercise",
   "number": "11.4.3",
   "title": ".",
@@ -5248,45 +5095,45 @@ var ptx_lunr_docs = [
   "body": "Submodule   Let be a ring and let be a left -module. An -submodule of is a subset such that    is a subgroup of under (so, we have , if then , and if then ), and     for all and .      "
 },
 {
-  "id": "example-68",
+  "id": "example-71",
   "level": "2",
-  "url": "sec-defmod.html#example-68",
+  "url": "sec-defmod.html#example-71",
   "type": "Example",
   "number": "12.15",
   "title": "",
   "body": " Let be an -module and be an ideal in . Show that the set is an -submodule of .  "
 },
 {
-  "id": "proposition-41",
+  "id": "proposition-42",
   "level": "2",
-  "url": "sec-defmod.html#proposition-41",
+  "url": "sec-defmod.html#proposition-42",
   "type": "Proposition",
   "number": "12.16",
   "title": "",
   "body": "  Let be a commutative ring with . An -module is simple if it has no nontrivial submodules. Show that is simple if and only if there exists a maximal ideal of such that .   "
 },
 {
-  "id": "exercise-171",
+  "id": "exercise-166",
   "level": "2",
-  "url": "sec-defmod.html#exercise-171",
+  "url": "sec-defmod.html#exercise-166",
   "type": "Exercise",
   "number": "12.1.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-172",
+  "id": "exercise-167",
   "level": "2",
-  "url": "sec-defmod.html#exercise-172",
+  "url": "sec-defmod.html#exercise-167",
   "type": "Exercise",
   "number": "12.1.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-173",
+  "id": "exercise-168",
   "level": "2",
-  "url": "sec-defmod.html#exercise-173",
+  "url": "sec-defmod.html#exercise-168",
   "type": "Exercise",
   "number": "12.1.3",
   "title": "January 2012 Problem (8).",
@@ -5383,54 +5230,54 @@ var ptx_lunr_docs = [
   "body": "Kernels and Images are Submodules   Let be a ring and let be an -module homomorphism. Then    is an -submodule of and     is an -submodule of .      "
 },
 {
-  "id": "proposition-42",
+  "id": "proposition-43",
   "level": "2",
-  "url": "sec-modhom.html#proposition-42",
+  "url": "sec-modhom.html#proposition-43",
   "type": "Proposition",
   "number": "12.26",
   "title": "",
   "body": "  Let be any field and the set of infinte-by-infinite, column-finite matrices. That is, consists of arrays , where and for all , such that for each , there exists an (depending on ) such that for all . That is, consists of elements of the form such that each column has only a finite number of non-zero entries (but, importantly, there is no uniform bound on the number of non-zero entries a column may have). It is not difficult to see that is a ring under the usual rules for adding and multiplying matrices: Given as above and we define and Note that the latter is a finite sum since, given , there is an such that for all . Moreover, is column-finite since, for each such , each of the columns of has only a finite number of non-zero elements. The multiplicative identity is the infinite identity matrix. You need not prove any of this.  Do prove that as left -modules. {} Think about splitting up an element of into its even and odd columns.   "
 },
 {
-  "id": "proposition-43",
+  "id": "proposition-44",
   "level": "2",
-  "url": "sec-modhom.html#proposition-43",
+  "url": "sec-modhom.html#proposition-44",
   "type": "Proposition",
   "number": "12.27",
   "title": "",
   "body": "  Show that for every nonzero integers and there is a -module isomorphism .   "
 },
 {
-  "id": "proposition-44",
+  "id": "proposition-45",
   "level": "2",
-  "url": "sec-modhom.html#proposition-44",
+  "url": "sec-modhom.html#proposition-45",
   "type": "Proposition",
   "number": "12.28",
   "title": "",
   "body": "  Let be a commutative ring. Given an -module , its annihilator is the ideal Show that if there is an isomorphism of -modules , then .   "
 },
 {
-  "id": "exercise-174",
+  "id": "exercise-169",
   "level": "2",
-  "url": "sec-modhom.html#exercise-174",
+  "url": "sec-modhom.html#exercise-169",
   "type": "Exercise",
   "number": "12.2.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-175",
+  "id": "exercise-170",
   "level": "2",
-  "url": "sec-modhom.html#exercise-175",
+  "url": "sec-modhom.html#exercise-170",
   "type": "Exercise",
   "number": "12.2.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-176",
+  "id": "exercise-171",
   "level": "2",
-  "url": "sec-modhom.html#exercise-176",
+  "url": "sec-modhom.html#exercise-171",
   "type": "Exercise",
   "number": "12.2.3",
   "title": "Problem ().",
@@ -5500,27 +5347,27 @@ var ptx_lunr_docs = [
   "body": "Module Isomorphism Theorems   Let be a ring, and let be a -module.   - (UMP for Quotient Modules) Let be a submodule of , let be an -module, and let be an -module homomorphism. If (i.e., if ) then the function given by is a well-defined, -module homomorphism. In fact, is the unique -module homomorphism such that where denotes the canonical surjection .    - (First Isomorphism Theorem) Let be an -module and let be an -module homomorphism. Then is a submodule of and there is an -module isomorphism given by .    - (Second Isomorphism Theorem) Let and be submodules of , and define . Then is a submodule of , is a submodule of , and there is an -module isomorphism .    - (Third Isomorphism Theorem) Let and be submodules of with . Then is a submodule of and there is an -module isomorphism given by sending to .    - (Lattice Isomorphism Theorem) Let be a ring, let be a R-submodule of , and let be the canonical quotient map. Then the function defined by is a bijection, with inverse given by for each submodule of . Moreover, and preserve sums and intersections.       Ignoring the rules for scaling by , we know each of the frist four results holds for abelian groups (and the maps are the same). So, we merely need to prove that the rules for scaling are respected in each case. In more detail:  For the UMP, we already know that is a well-defined homomorphism of groups under and that it is the unique one such that . It remains only to show preserves scaling: This follows quickly from the definitions: where the third equation uses that preserves scaling.  For the First Isomorphism Theorem, we already know that there is an isomorphism of abelian groups under , given by , and it remains only to show this map preserves scaling. This is a special case of what we proved in part (0).  For the second isomorphism theorem, we need to first check that and are submodules. From 817 we already know they are subgroups under , and it is evident from the definitions that each is closed under scaling by elements of . Now, we know from 817 that there is an isomorphism of abelian groups given by . It remains only to show preserves scaling:   For the third, we already know (from 817) that is a subgroup of under . Given and we have which belongs to since . This proves is a submodule of . Also from 817 we know there is an isomorphism of abelian groups given by and it remains only to show it is -linear: .  The Lattice Theorem is the most complicaed to gerenlize. From 817 we know thre is a bijection between the set of sub groups of and that contain and subgroups of the quotient group , and the maps are the same as given in the statment. We just need to prove that these maps send submodules to submodules. If is a submodule of containing , then by part (3) we know is a submodule of .  If is a submodule of , then is an abelian group. For adn we have and hence too, since is a submodule. This proves is a submodule.   "
 },
 {
-  "id": "exercise-177",
+  "id": "exercise-172",
   "level": "2",
-  "url": "sec-quote.html#exercise-177",
+  "url": "sec-quote.html#exercise-172",
   "type": "Exercise",
   "number": "12.3.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-178",
+  "id": "exercise-173",
   "level": "2",
-  "url": "sec-quote.html#exercise-178",
+  "url": "sec-quote.html#exercise-173",
   "type": "Exercise",
   "number": "12.3.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-179",
+  "id": "exercise-174",
   "level": "2",
-  "url": "sec-quote.html#exercise-179",
+  "url": "sec-quote.html#exercise-174",
   "type": "Exercise",
   "number": "12.3.3",
   "title": ".",
@@ -5599,18 +5446,18 @@ var ptx_lunr_docs = [
   "body": "Cyclic -module  If , then (recalling that a -module is the same thing as an abelian group) we see that is a cyclic -module if and only if is a cyclic group.  "
 },
 {
-  "id": "proposition-46",
+  "id": "proposition-47",
   "level": "2",
-  "url": "sec-linear.html#proposition-46",
+  "url": "sec-linear.html#proposition-47",
   "type": "Proposition",
   "number": "13.8",
   "title": "Cyclic Modules and Ideals.",
   "body": "Cyclic Modules and Ideals   Show that the left -module is cyclic if and only if there exists a left ideal of such that .   "
 },
 {
-  "id": "proposition-47",
+  "id": "proposition-48",
   "level": "2",
-  "url": "sec-linear.html#proposition-47",
+  "url": "sec-linear.html#proposition-48",
   "type": "Proposition",
   "number": "13.9",
   "title": "",
@@ -5671,27 +5518,27 @@ var ptx_lunr_docs = [
   "body": "Linearly Independent in  The singleton is a linearly independent subset of the -module . But it does not generate all of . The subset does generate all of , but it is not linearly independent, since . More on this later.  "
 },
 {
-  "id": "exercise-180",
+  "id": "exercise-175",
   "level": "2",
-  "url": "sec-linear.html#exercise-180",
+  "url": "sec-linear.html#exercise-175",
   "type": "Exercise",
   "number": "13.1.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-181",
+  "id": "exercise-176",
   "level": "2",
-  "url": "sec-linear.html#exercise-181",
+  "url": "sec-linear.html#exercise-176",
   "type": "Exercise",
   "number": "13.1.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-182",
+  "id": "exercise-177",
   "level": "2",
-  "url": "sec-linear.html#exercise-182",
+  "url": "sec-linear.html#exercise-177",
   "type": "Exercise",
   "number": "13.1.3",
   "title": ".",
@@ -5707,9 +5554,9 @@ var ptx_lunr_docs = [
   "body": "Generated Modules  Finite Generation and Quotient Modules   Let be a ring with . Prove that if is an -module and is a submodule of such that and are finitely generated, then is finitely generated.    Every Cyclic -module to for some   Every cyclic -module is isomorphic to for some left ideal .    Say is cyclic and is a generator of , so that . Define to be the unique -map with . Here I am applying the UMP for bases, using that is a basis of as a left -modules. More explicitly, for all . Then is onto, since generates . Its kernel is a left ideal of , since submodules of are the same thing as left ideals. By the FIT, there is an isomorphism sending to .      Let be a ring. Recall that we proved in class that every cyclic -module is isomorphic to for some left ideal . Prove the left ideal occurring this statement is unique; that is, if a cyclic -module is isomorphic to and for left ideals and , then .     More generally, the same argument shows that if is a finitely generated module, say generated by elements, then for some submodule of .   is an -module   For a commutative ring , module and ideal , the rules for addition in and scaling by on introduced above make into an -module.  Moreover, given another -module and an -map , the function given by is a well-defined -module homomorphism.  Finally, if is yet another -module homomorphism, then , and we also have for any -module .    I leave some of the details as an exercise, but I will check a few of the necessary things:  We already showed that the rule for scaling is well defined, and we know from 817 that the rule for addition is well-defined and that is an abelian group. To show is an -module, there remain four axioms to verify. For instance, which verifies one of them; the other proofs are similar.  Next, let me verify that the function is a well-defined -map: Let be the composition of -maps (the second one being the canonical one), so that . Since for any 's belonging to and 's belonging to , we have . By the UMP for quotient modules, there is an induced -map given by . The map is so far only known to be an -map, but it is in fact an -map since The final assertions are clear from the formula for for an -map .     The Lemma shows that the rules and determine what is known as a functor from the category of -modules to the category of -modules.   Maximal Ideals and Vector Spaces  Suppose is a maximal ideal of a commutative ring . Then is a field, and given an -module , is a module over the field ; i.e., it is a vector space over this field. Moreover, if is an -map then is an -linear transformation.     Let be a non-zero commutative ring and suppose is a surjective homomorphism of -modules for some non-negative integers and .   Prove that if is a field, then .    Prove that if is any non-zero commutative ring, then .       Finitely Generated Modules and Submodules   Let be a ring, let be a left -module and let be a left -submodule.   Prove that if is finitely generated (as an -module), then so is .    Prove that if and are both finitely generated, then so is .    Prove the converse to the previous part is false, as follows: Let be a field and , the ring of polynomials in the infinite list of variables . (So, an element of is a {} -linear combination of monomials of the form for and . Note that each element of involves only a finite number of variables, but there is no uniform bound on how many such variables can be involved in the elements of .) You may assume without proof that is a ring with the usual rules for adding and multiplying polynomials, which make sense since each element of involves only a finite number of variables. Finally let be the ideal of generated by the variables . Prove is finitely generated as an -module but the submodule is not.       Split Surjection   Let be a ring, and left -modules, and an -module homomorphism. Assume that is surjective. We say is a split surjection if there exists an -module homomorphism such that (i.e., for all ).   Prove that if is free, then every surjective -module homomorphism of the form is a split surjection.    By giving an explicit example with justification, show the statement in part (1) would become false if were not assumed to be free.       Split Injection   Assume is a ring, an -module, and an injective -module homomorphism. We say is a split injection if there exists an -module homomorphism such that (i.e., for all ).       Prove that if is a field, is a subspace (i.e., submodule) of , and is the inclusion map, then is a split injection. Note that since is the inclusion map, what you need to prove is that there exists an -module homomorphism such that . {}: Start by picking a basis of and use a theorem proven in class to show that can be extended to a basis of . Use to construct . (I am assuming that is a subspace of and that is the inclusion map just for simplicity — more generally, it is true that every injective -module homomorphism is a split injection whenever is a field.)    Assume is a non-zero integral domain, but that it is not a field. Prove there exists an -module homomorphism that is an injection but {} a split injection. {}: Pick such that and is not a unit, let be the proper ideal generated by and show the inclusion map is not a split injection.         Prove that if is a commutative ring with then as -modules if and only if . In order to do that, you will complete the following steps:   Show that if is any ideal of and is any -module, then is an -module via     Show that if is any ideal of , then as -modules.    Apply the previous part when is a maximal ideal of . You will need to use the following fact, which we shall prove in class very soon: if is a field, then as -vector spaces if and only if .       Properties of Torsion Submodules   Let be a domain and let be an -module. The torsion submodule of is Elements of are called the torsion elements of , and the module is called torsion if . You may take for granted that this is actually a submodule of without proof.   Show that if and are -modules, then .    Show that if , then .    Show that if is a free -module then .    Show that if is an ideal of that is not principal, then is a torsion-free -module that is not a free -module.    Show that if is an ideal of then .    Suppose that R is a PID, and that is a finitely generated -module. Show that is a torsion-free -module if and only if is a free -module.       Annihilators and Direct Sums   Let be a commutative ring with . Show that       Computations and Examples       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Formal Proofs       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Qualifying Exam Problems      June 2010 Problem (5)  Let be a (not-necessarily commutative) ring let be a left -module. The annihilator of in is defined to be    Prove that is a -sided ideal of .    Suppose is an abelian group (i.e., a -module) such that and is the ideal generated by . How many possibilities, up to isomorphism, are there for ?         Let . Consider . Thus . Let and consider . Let and suppose for some . Add to both sides to see that . Thus and for all . So .  Note that as for all , we know that . As for all , we see that is a left sided ideal.  Suppose for some . This time we add to both sides, but as , we once again find that . Notice that this means for all and , and thus that elements of commute with elements of .  Let . Consider . Luckily, we know and thus that . Hence , making is a two sided ideal.    By the FTFGAG and Sunzi's Remainder Theorem, there are only so many options we have for :    ,     ,     ,     ,     ,     ,     ,          , and     .   However, as ideals are additive subgroups, we know that needs to contain a cyclic subgroup of order . Thus we need only consider decompositions with a in them, of which there are exactly two:                  June 2011 Problem (11)  Let be a commutative ring with , and let be a surjective homomorphism of free -modules. Prove that .   Coming soon to an OER near you!   Let and .  Let be a maximal ideal in . Thus is a field. Lemma 1.58 tells us that and are -vector spaces. Additionally, this gives rise to , which is a surjective -module linear transformation.  Note that is generated by for . Let and consider . For this to be we need it to be in , and thus all . So the set of is a basis for with elements. Likewise has a basis with elements. As we are surjective, Rank , . So by Rank-Nullity which is only positive with .    Recall that a -module is called torsion-free if its torsion submodule is where Consider the -module Show that is torsion free.   Let . Thus for some nonzero . Then , and so and . Then there exists such that and or and and . Notice that in we have , and thus neither nor can divide . Suppose and . As cannot divide we see that divides both and , placing them both . Thus . The same holds true if we use . Thus and .   June 2012 (5)  Let be a commutative integral domain and an -module. A subset of is called a maximal linearly independent subset of if is linearly independent and any subset of properly containing is linearly dependent.   Let be a linearly independent subset of . Prove that is contained in some maximal linearly independent subset of .    Let be a linearly independent subset of and let be the -submodule of generated by . Prove that is a maximal linearly independent subset if and only if is torsion. (Recall that an -module is called “torsion'' if for each , there is a such that and .)      Coming soon to an OER near you!    Let be an ideal in a commutative ring , let and be -modules and let be an -module homomorphism.   Prove there is a unique -module homomorphism such that , where and are the canonical quotient maps  Prove that if and is surjective, then so is . (Recall that is the ideal generated by all elements of the form , where .)         "
 },
 {
-  "id": "proposition-48",
+  "id": "proposition-49",
   "level": "2",
-  "url": "sec-modgen.html#proposition-48",
+  "url": "sec-modgen.html#proposition-49",
   "type": "Proposition",
   "number": "13.16",
   "title": "Finite Generation and Quotient Modules.",
@@ -5725,9 +5572,9 @@ var ptx_lunr_docs = [
   "body": "Every Cyclic -module to for some   Every cyclic -module is isomorphic to for some left ideal .    Say is cyclic and is a generator of , so that . Define to be the unique -map with . Here I am applying the UMP for bases, using that is a basis of as a left -modules. More explicitly, for all . Then is onto, since generates . Its kernel is a left ideal of , since submodules of are the same thing as left ideals. By the FIT, there is an isomorphism sending to .   "
 },
 {
-  "id": "proposition-50",
+  "id": "proposition-51",
   "level": "2",
-  "url": "sec-modgen.html#proposition-50",
+  "url": "sec-modgen.html#proposition-51",
   "type": "Proposition",
   "number": "13.18",
   "title": "",
@@ -5770,45 +5617,45 @@ var ptx_lunr_docs = [
   "body": "Maximal Ideals and Vector Spaces  Suppose is a maximal ideal of a commutative ring . Then is a field, and given an -module , is a module over the field ; i.e., it is a vector space over this field. Moreover, if is an -map then is an -linear transformation.  "
 },
 {
-  "id": "proposition-51",
+  "id": "proposition-52",
   "level": "2",
-  "url": "sec-modgen.html#proposition-51",
+  "url": "sec-modgen.html#proposition-52",
   "type": "Proposition",
   "number": "13.23",
   "title": "",
   "body": "  Let be a non-zero commutative ring and suppose is a surjective homomorphism of -modules for some non-negative integers and .   Prove that if is a field, then .    Prove that if is any non-zero commutative ring, then .      "
 },
 {
-  "id": "proposition-52",
+  "id": "proposition-53",
   "level": "2",
-  "url": "sec-modgen.html#proposition-52",
+  "url": "sec-modgen.html#proposition-53",
   "type": "Proposition",
   "number": "13.24",
   "title": "Finitely Generated Modules and Submodules.",
   "body": "Finitely Generated Modules and Submodules   Let be a ring, let be a left -module and let be a left -submodule.   Prove that if is finitely generated (as an -module), then so is .    Prove that if and are both finitely generated, then so is .    Prove the converse to the previous part is false, as follows: Let be a field and , the ring of polynomials in the infinite list of variables . (So, an element of is a {} -linear combination of monomials of the form for and . Note that each element of involves only a finite number of variables, but there is no uniform bound on how many such variables can be involved in the elements of .) You may assume without proof that is a ring with the usual rules for adding and multiplying polynomials, which make sense since each element of involves only a finite number of variables. Finally let be the ideal of generated by the variables . Prove is finitely generated as an -module but the submodule is not.      "
 },
 {
-  "id": "proposition-53",
+  "id": "proposition-54",
   "level": "2",
-  "url": "sec-modgen.html#proposition-53",
+  "url": "sec-modgen.html#proposition-54",
   "type": "Proposition",
   "number": "13.25",
   "title": "Split Surjection.",
   "body": "Split Surjection   Let be a ring, and left -modules, and an -module homomorphism. Assume that is surjective. We say is a split surjection if there exists an -module homomorphism such that (i.e., for all ).   Prove that if is free, then every surjective -module homomorphism of the form is a split surjection.    By giving an explicit example with justification, show the statement in part (1) would become false if were not assumed to be free.      "
 },
 {
-  "id": "proposition-54",
+  "id": "proposition-55",
   "level": "2",
-  "url": "sec-modgen.html#proposition-54",
+  "url": "sec-modgen.html#proposition-55",
   "type": "Proposition",
   "number": "13.26",
   "title": "Split Injection.",
   "body": "Split Injection   Assume is a ring, an -module, and an injective -module homomorphism. We say is a split injection if there exists an -module homomorphism such that (i.e., for all ).       Prove that if is a field, is a subspace (i.e., submodule) of , and is the inclusion map, then is a split injection. Note that since is the inclusion map, what you need to prove is that there exists an -module homomorphism such that . {}: Start by picking a basis of and use a theorem proven in class to show that can be extended to a basis of . Use to construct . (I am assuming that is a subspace of and that is the inclusion map just for simplicity — more generally, it is true that every injective -module homomorphism is a split injection whenever is a field.)    Assume is a non-zero integral domain, but that it is not a field. Prove there exists an -module homomorphism that is an injection but {} a split injection. {}: Pick such that and is not a unit, let be the proper ideal generated by and show the inclusion map is not a split injection.      "
 },
 {
-  "id": "proposition-55",
+  "id": "proposition-56",
   "level": "2",
-  "url": "sec-modgen.html#proposition-55",
+  "url": "sec-modgen.html#proposition-56",
   "type": "Proposition",
   "number": "13.27",
   "title": "",
@@ -5824,72 +5671,72 @@ var ptx_lunr_docs = [
   "body": "Properties of Torsion Submodules   Let be a domain and let be an -module. The torsion submodule of is Elements of are called the torsion elements of , and the module is called torsion if . You may take for granted that this is actually a submodule of without proof.   Show that if and are -modules, then .    Show that if , then .    Show that if is a free -module then .    Show that if is an ideal of that is not principal, then is a torsion-free -module that is not a free -module.    Show that if is an ideal of then .    Suppose that R is a PID, and that is a finitely generated -module. Show that is a torsion-free -module if and only if is a free -module.      "
 },
 {
-  "id": "proposition-56",
+  "id": "proposition-57",
   "level": "2",
-  "url": "sec-modgen.html#proposition-56",
+  "url": "sec-modgen.html#proposition-57",
   "type": "Proposition",
   "number": "13.29",
   "title": "Annihilators and Direct Sums.",
   "body": "Annihilators and Direct Sums   Let be a commutative ring with . Show that    "
 },
 {
-  "id": "exercise-183",
+  "id": "exercise-178",
   "level": "2",
-  "url": "sec-modgen.html#exercise-183",
+  "url": "sec-modgen.html#exercise-178",
   "type": "Exercise",
   "number": "13.2.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-184",
+  "id": "exercise-179",
   "level": "2",
-  "url": "sec-modgen.html#exercise-184",
+  "url": "sec-modgen.html#exercise-179",
   "type": "Exercise",
   "number": "13.2.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-185",
+  "id": "exercise-180",
   "level": "2",
-  "url": "sec-modgen.html#exercise-185",
+  "url": "sec-modgen.html#exercise-180",
   "type": "Exercise",
   "number": "13.2.3",
   "title": "June 2010 Problem (5).",
   "body": "June 2010 Problem (5)  Let be a (not-necessarily commutative) ring let be a left -module. The annihilator of in is defined to be    Prove that is a -sided ideal of .    Suppose is an abelian group (i.e., a -module) such that and is the ideal generated by . How many possibilities, up to isomorphism, are there for ?         Let . Consider . Thus . Let and consider . Let and suppose for some . Add to both sides to see that . Thus and for all . So .  Note that as for all , we know that . As for all , we see that is a left sided ideal.  Suppose for some . This time we add to both sides, but as , we once again find that . Notice that this means for all and , and thus that elements of commute with elements of .  Let . Consider . Luckily, we know and thus that . Hence , making is a two sided ideal.    By the FTFGAG and Sunzi's Remainder Theorem, there are only so many options we have for :    ,     ,     ,     ,     ,     ,     ,          , and     .   However, as ideals are additive subgroups, we know that needs to contain a cyclic subgroup of order . Thus we need only consider decompositions with a in them, of which there are exactly two:                 "
 },
 {
-  "id": "exercise-186",
+  "id": "exercise-181",
   "level": "2",
-  "url": "sec-modgen.html#exercise-186",
+  "url": "sec-modgen.html#exercise-181",
   "type": "Exercise",
   "number": "13.2.4",
   "title": "June 2011 Problem (11).",
   "body": "June 2011 Problem (11)  Let be a commutative ring with , and let be a surjective homomorphism of free -modules. Prove that .   Coming soon to an OER near you!   Let and .  Let be a maximal ideal in . Thus is a field. Lemma 1.58 tells us that and are -vector spaces. Additionally, this gives rise to , which is a surjective -module linear transformation.  Note that is generated by for . Let and consider . For this to be we need it to be in , and thus all . So the set of is a basis for with elements. Likewise has a basis with elements. As we are surjective, Rank , . So by Rank-Nullity which is only positive with .  "
 },
 {
-  "id": "exercise-187",
+  "id": "exercise-182",
   "level": "2",
-  "url": "sec-modgen.html#exercise-187",
+  "url": "sec-modgen.html#exercise-182",
   "type": "Exercise",
   "number": "13.2.5",
   "title": "",
   "body": " Recall that a -module is called torsion-free if its torsion submodule is where Consider the -module Show that is torsion free.   Let . Thus for some nonzero . Then , and so and . Then there exists such that and or and and . Notice that in we have , and thus neither nor can divide . Suppose and . As cannot divide we see that divides both and , placing them both . Thus . The same holds true if we use . Thus and .  "
 },
 {
-  "id": "exercise-188",
+  "id": "exercise-183",
   "level": "2",
-  "url": "sec-modgen.html#exercise-188",
+  "url": "sec-modgen.html#exercise-183",
   "type": "Exercise",
   "number": "13.2.6",
   "title": "June 2012 (5).",
   "body": "June 2012 (5)  Let be a commutative integral domain and an -module. A subset of is called a maximal linearly independent subset of if is linearly independent and any subset of properly containing is linearly dependent.   Let be a linearly independent subset of . Prove that is contained in some maximal linearly independent subset of .    Let be a linearly independent subset of and let be the -submodule of generated by . Prove that is a maximal linearly independent subset if and only if is torsion. (Recall that an -module is called “torsion'' if for each , there is a such that and .)      Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-189",
+  "id": "exercise-184",
   "level": "2",
-  "url": "sec-modgen.html#exercise-189",
+  "url": "sec-modgen.html#exercise-184",
   "type": "Exercise",
   "number": "13.2.7",
   "title": "",
@@ -5977,27 +5824,27 @@ var ptx_lunr_docs = [
   "body": "Bases are not Unique  As you likely know from a class in linear algebra, bases of free modules are rarely unique. Indeed, if is any ring, then any single unit forms a basis for as a module over itself. For another example, for any ring and any fixed element , the set forms a basis for the free -module .  "
 },
 {
-  "id": "proposition-57",
+  "id": "proposition-58",
   "level": "2",
-  "url": "sec-bases.html#proposition-57",
+  "url": "sec-bases.html#proposition-58",
   "type": "Proposition",
   "number": "13.38",
   "title": "Every Module over a Field is Free.",
   "body": "Every Module over a Field is Free   Let be a commutative ring with . Show that if every -module is free then is a field.   "
 },
 {
-  "id": "proposition-58",
+  "id": "proposition-59",
   "level": "2",
-  "url": "sec-bases.html#proposition-58",
+  "url": "sec-bases.html#proposition-59",
   "type": "Proposition",
   "number": "13.39",
   "title": "<span class=\"process-math\">\\(\\Q\\)<\/span> is not a Free <span class=\"process-math\">\\(\\Z\\)<\/span>-module.",
   "body": "is not a Free -module   An abelian group is called divisible if for each and , there exists such that . Prove that if is a divisible abelian group then is not a free -module. Deduce that is not a free -module.   "
 },
 {
-  "id": "proposition-59",
+  "id": "proposition-60",
   "level": "2",
-  "url": "sec-bases.html#proposition-59",
+  "url": "sec-bases.html#proposition-60",
   "type": "Proposition",
   "number": "13.40",
   "title": "Free Modules have Trivial Annihilators.",
@@ -6112,45 +5959,45 @@ var ptx_lunr_docs = [
   "body": "Bases of ideals in commutative rings      Assume is a non-zero, commutative ring and is a non-zero ideal. Prove is free as an -module if and only if for a non-zerodivisor . (Recall that an element is a non-zerodivisor in provided and implies for all . )    Let be a field and . Let , the ideal consisting of all polynomials with constant term. Prove is not free as an -module.      "
 },
 {
-  "id": "exercise-190",
+  "id": "exercise-185",
   "level": "2",
-  "url": "sec-bases.html#exercise-190",
+  "url": "sec-bases.html#exercise-185",
   "type": "Exercise",
   "number": "13.3.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-191",
+  "id": "exercise-186",
   "level": "2",
-  "url": "sec-bases.html#exercise-191",
+  "url": "sec-bases.html#exercise-186",
   "type": "Exercise",
   "number": "13.3.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-192",
+  "id": "exercise-187",
   "level": "2",
-  "url": "sec-bases.html#exercise-192",
+  "url": "sec-bases.html#exercise-187",
   "type": "Exercise",
   "number": "13.3.3",
   "title": ".",
   "body": " Let be a non-zero, unital ring, and let and be the standard free left -modules of finite rank and . Assume there is an isomorphism of -modules    Prove that if is commutative then . You may assume without justification that this holds in the special case when is a field.  Show, by example, than need not equal if is not assumed to be commutative.    Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-193",
+  "id": "exercise-188",
   "level": "2",
-  "url": "sec-bases.html#exercise-193",
+  "url": "sec-bases.html#exercise-188",
   "type": "Exercise",
   "number": "13.3.4",
   "title": "June 2012 (5) DUPLICATE.",
   "body": "June 2012 (5) DUPLICATE  Let be a commutative integral domain and an -module. Recall that a subset of is called a maximal linearly independent set of if is linearly independent and any subset of properly containing is linearly dependent.   Let be a linearly independent subset of . Prove that is contained in some maximal linearly independent subset of .  Let be a linearly independent subset of and the -submodule of generated by . Prove that is a maximal linearly independent subset if and only if is torsion. (Recall that an -module is called “torsion'' if for each , there is a such that and .)       Let be the set of all linearly independent subsets of that contain . We can order with respect to inclusion. Let be a totally ordered subset of , and let be the union of all elements in . Let be a set of elements in such that for some , where for some . As is the union of all elements in , there exists some such that . However, as is totally ordered, there exists some such that contains and . Continuing in this way, we see that there exists some such that . As is linearly independent, we know that means that for all . Thus is indeed linearly independent, making it an upper bound for . Thus by Zorn's Lemma there exists a maximal element of , which we denote . Thus is linearly independent, contains , and is maximal.     Suppose is maximal linearly independent, and suppose by way of contradiction that is not torsion. Thus there exists some such that for all , we see that . However, as and , this means that . Consider . This set is linearly independent, contradicting the assumption that was maximal.   Suppose is torsion. Let and consider . Consider . As is torsion, there exists an such that . Thus . (Note, if , then ). As and is generated by ( ), . Subtracting over we see that . But as , we see that each and are in , but the sum is 0. Thus is linearly dependent.     "
 },
 {
-  "id": "exercise-194",
+  "id": "exercise-189",
   "level": "2",
-  "url": "sec-bases.html#exercise-194",
+  "url": "sec-bases.html#exercise-189",
   "type": "Exercise",
   "number": "13.3.5",
   "title": "",
@@ -6247,27 +6094,27 @@ var ptx_lunr_docs = [
   "body": "Exchange Lemma   Let be a field, let be a basis of an -vector space , and let be any finite set of linearly independent vectors in . Then there are distinct vectors in , such that is also a basis .    Let . As noted, the sublemma establishes the case of the Exchange Lemma. The general case proceeds recursively:  Suppose that for some , we have found such that is a basis for some . We need to show we can “swap out one more''; that is, we need to prove there is a such that is also a basis.  Since is a basis, there is a (unique) equation of the form with and . Now, there must be at least one that is not in , for otherwise we would have , contrary to being linearly independent. Let for such an . Then by the sublemma is a basis of .   "
 },
 {
-  "id": "exercise-195",
+  "id": "exercise-190",
   "level": "2",
-  "url": "sec-vecbasis.html#exercise-195",
+  "url": "sec-vecbasis.html#exercise-190",
   "type": "Exercise",
   "number": "14.1.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-196",
+  "id": "exercise-191",
   "level": "2",
-  "url": "sec-vecbasis.html#exercise-196",
+  "url": "sec-vecbasis.html#exercise-191",
   "type": "Exercise",
   "number": "14.1.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-197",
+  "id": "exercise-192",
   "level": "2",
-  "url": "sec-vecbasis.html#exercise-197",
+  "url": "sec-vecbasis.html#exercise-192",
   "type": "Exercise",
   "number": "14.1.3",
   "title": "June 2010 Problem (6).",
@@ -6400,117 +6247,117 @@ var ptx_lunr_docs = [
   "body": " Suitably interpreted, this is valid even if is infinite dimensional.  "
 },
 {
-  "id": "proposition-62",
+  "id": "proposition-63",
   "level": "2",
-  "url": "sec-ranknul.html#proposition-62",
+  "url": "sec-ranknul.html#proposition-63",
   "type": "Proposition",
   "number": "14.23",
   "title": "",
   "body": "  Let be a field and let and be finite dimensional -vector spaces.   Let be an -linear transformation. Prove , where by definition .    Let be an -linear transformation from to itself. Prove that if , then . (Note: Recall that, by definition, .)    For extra credit: Let be an -linear transformation from to itself. Prove that if for some then .      "
 },
 {
-  "id": "proposition-63",
+  "id": "proposition-64",
   "level": "2",
-  "url": "sec-ranknul.html#proposition-63",
+  "url": "sec-ranknul.html#proposition-64",
   "type": "Proposition",
   "number": "14.24",
   "title": "",
   "body": "  Suppose where is a field and for some integer . Prove . {}: Note that for any , . Show that if equality holds then .   "
 },
 {
-  "id": "proposition-64",
+  "id": "proposition-65",
   "level": "2",
-  "url": "sec-ranknul.html#proposition-64",
+  "url": "sec-ranknul.html#proposition-65",
   "type": "Proposition",
   "number": "14.25",
   "title": "",
   "body": "  Recall that a -module is called torsion-free if the only element such that for some non-zero integer is the element . Let where is the homomorphism for the matrix . Prove is torsion-free.   "
 },
 {
-  "id": "proposition-65",
+  "id": "proposition-66",
   "level": "2",
-  "url": "sec-ranknul.html#proposition-65",
+  "url": "sec-ranknul.html#proposition-66",
   "type": "Proposition",
   "number": "14.26",
   "title": "",
   "body": "  Let be a finite dimensional vector space over a field and an -linear transformation. Prove the following assertions.   There exists an integer such that for there are equalities and . (Here denotes composed with itself times.)     for any as above.     for any s as above. (Recall for subspaces and if and . )      "
 },
 {
-  "id": "proposition-66",
+  "id": "proposition-67",
   "level": "2",
-  "url": "sec-ranknul.html#proposition-66",
+  "url": "sec-ranknul.html#proposition-67",
   "type": "Proposition",
   "number": "14.27",
   "title": "",
   "body": "  Let be a field, an -vector space, and a subspace of . A subspace of is called a {} of in if and .   Prove that for every and as above, has at least one complement in .    Prove that if is a complement of in and is finite dimensional, then .    Prove that if is a subspace of with finite dimensional and , then is non-zero.          "
 },
 {
-  "id": "proposition-67",
+  "id": "proposition-68",
   "level": "2",
-  "url": "sec-ranknul.html#proposition-67",
+  "url": "sec-ranknul.html#proposition-68",
   "type": "Proposition",
   "number": "14.28",
   "title": "June 2012 (6).",
   "body": "June 2012 (6)   Let be the set of all matrices over a field , let denote the group (where, recall, is the group of invertible matrices with entries in ) and set for all and .   Prove that the formula above defines a group action.    Prove that each orbit contains a matrix such that for all and for all     How many orbits are there?      "
 },
 {
-  "id": "proposition-68",
+  "id": "proposition-69",
   "level": "2",
-  "url": "sec-ranknul.html#proposition-68",
+  "url": "sec-ranknul.html#proposition-69",
   "type": "Proposition",
   "number": "14.29",
   "title": "",
   "body": "  Let be a field, be an -linear transformation, and . Prove that    "
 },
 {
-  "id": "proposition-69",
+  "id": "proposition-70",
   "level": "2",
-  "url": "sec-ranknul.html#proposition-69",
+  "url": "sec-ranknul.html#proposition-70",
   "type": "Proposition",
   "number": "14.30",
   "title": "",
   "body": "  Let be an -linear transformation. Prove that if , then    "
 },
 {
-  "id": "proposition-70",
+  "id": "proposition-71",
   "level": "2",
-  "url": "sec-ranknul.html#proposition-70",
+  "url": "sec-ranknul.html#proposition-71",
   "type": "Proposition",
   "number": "14.31",
   "title": "June 2012 Problem (4).",
   "body": "June 2012 Problem (4)   Let be a subspace of a finite-dimensional vector space, . Recall that a subspace of is called a complement of if . Prove the following statements.   Every complement of has dimension .    If is not or , then has more than one complement.    If is a subspace of with , then is non-zero.      "
 },
 {
-  "id": "exercise-198",
+  "id": "exercise-193",
   "level": "2",
-  "url": "sec-ranknul.html#exercise-198",
+  "url": "sec-ranknul.html#exercise-193",
   "type": "Exercise",
   "number": "14.2.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-199",
+  "id": "exercise-194",
   "level": "2",
-  "url": "sec-ranknul.html#exercise-199",
+  "url": "sec-ranknul.html#exercise-194",
   "type": "Exercise",
   "number": "14.2.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-200",
+  "id": "exercise-195",
   "level": "2",
-  "url": "sec-ranknul.html#exercise-200",
+  "url": "sec-ranknul.html#exercise-195",
   "type": "Exercise",
   "number": "14.2.3",
   "title": ".",
   "body": " Let be a field, an -vector space, and a subspace of . A subspace of is called a complement of in if is the internal direct sum of and ; that is, .   Prove that for every and as above, has at least one complement in .  Prove that if is a complement of in and is finite dimensional, then (where denotes the dimension of an -vector space).    Coming soon to an OER near you!   Let be a field, an -vector space, and a subspace of .   Let denote the set of all subspaces of such that . We can order with respect to inclusion. Let be a totally ordered subset of , and let be the union of all the elements in . Unions of subspaces are subspaces, and by DeMorgan's Laws we see that . Thus by Zorn's Lemma there exists a maximal element of which we denote . So by definition.  Suppose by way of contradiction there exists some such that .  Consider . As , for all , as we could just multiply by . Thus and , a contradiction, as was maximal. Thus is a complement of .    The Second Isomorphism Theorem tells us that . We also know that Put succinctly, and thus As , we see that .     "
 },
 {
-  "id": "exercise-201",
+  "id": "exercise-196",
   "level": "2",
-  "url": "sec-ranknul.html#exercise-201",
+  "url": "sec-ranknul.html#exercise-196",
   "type": "Exercise",
   "number": "14.2.4",
   "title": "",
@@ -6571,27 +6418,27 @@ var ptx_lunr_docs = [
   "body": "When FMH Matrix is Invertible   If is an isomorphism of free modules of finite rank, is an ordered basis of and is an ordered basis of , then is an invertible matrix and    "
 },
 {
-  "id": "exercise-202",
+  "id": "exercise-197",
   "level": "2",
-  "url": "sec-basics.html#exercise-202",
+  "url": "sec-basics.html#exercise-197",
   "type": "Exercise",
   "number": "15.1.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-203",
+  "id": "exercise-198",
   "level": "2",
-  "url": "sec-basics.html#exercise-203",
+  "url": "sec-basics.html#exercise-198",
   "type": "Exercise",
   "number": "15.1.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-204",
+  "id": "exercise-199",
   "level": "2",
-  "url": "sec-basics.html#exercise-204",
+  "url": "sec-basics.html#exercise-199",
   "type": "Exercise",
   "number": "15.1.3",
   "title": ".",
@@ -6760,27 +6607,27 @@ var ptx_lunr_docs = [
   "body": "Finding Unique Equivalent Matrix   Let be a non-zero commutative ring, let be a free -module of dimension , and let be any ordered basis of . If is any matrix with entries in that is invertible (i.e., there is another matrix such that ), then for a unique basis of .    Each of the maps is an isomorphism. (The one on the far right is the inverse of the one on the far left. The middle one is since is a two-sided inverse.) So the composition of all three of these maps, let us call it , is also an isomorphism. It follows that is a basis of . I leave it as an exercise for you to check that .  To show the uniqueness, say , say are ordered bases such that . Then For each we have and so that which gives .   "
 },
 {
-  "id": "exercise-205",
+  "id": "exercise-200",
   "level": "2",
-  "url": "sec-cob.html#exercise-205",
+  "url": "sec-cob.html#exercise-200",
   "type": "Exercise",
   "number": "15.3.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-206",
+  "id": "exercise-201",
   "level": "2",
-  "url": "sec-cob.html#exercise-206",
+  "url": "sec-cob.html#exercise-201",
   "type": "Exercise",
   "number": "15.3.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-207",
+  "id": "exercise-202",
   "level": "2",
-  "url": "sec-cob.html#exercise-207",
+  "url": "sec-cob.html#exercise-202",
   "type": "Exercise",
   "number": "15.3.3",
   "title": ".",
@@ -6913,27 +6760,27 @@ var ptx_lunr_docs = [
   "body": " For a ring , recall that is the group of invertible matrices with entries in . Let be the subset of consisting of all products of elementary matrices of type I. Since the inverse of an elementary matrix of type I is again an elementary matrix of type I, is a subgroup of . In fact it is a normal subgroup, at least when , and hence the quotient group is defined in this case.  As a consequence of the Theorem above, if is a field then there is an isomorphism of groups where is the group of units in .  For a general ring, the extent to which is “larger'' than measure the extent to which Theorem fails.  The algebraic -group is defined to be (and it is usually isomorphic to for ). Moreover, is the derived subgroup of , and hence is the abelianization of .  "
 },
 {
-  "id": "exercise-208",
+  "id": "exercise-203",
   "level": "2",
-  "url": "sec-elematix.html#exercise-208",
+  "url": "sec-elematix.html#exercise-203",
   "type": "Exercise",
   "number": "15.4.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-209",
+  "id": "exercise-204",
   "level": "2",
-  "url": "sec-elematix.html#exercise-209",
+  "url": "sec-elematix.html#exercise-204",
   "type": "Exercise",
   "number": "15.4.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-210",
+  "id": "exercise-205",
   "level": "2",
-  "url": "sec-elematix.html#exercise-210",
+  "url": "sec-elematix.html#exercise-205",
   "type": "Exercise",
   "number": "15.4.3",
   "title": "January 2012 (9).",
@@ -7012,27 +6859,27 @@ var ptx_lunr_docs = [
   "body": "Linear Operators and Bases   Let be a non-zero commutative ring. Given a linear operator on a free -module of finite rank , we have:   The matrices representing with respect to any two choices of bases of are similar    If represents with respect to a basis of and if is similar to , then there is a basis of such that the matrix representing with respect to is .       We proved the first assertion above.  Say and for some invertible matrix . By Proposition above, for a (unique) new basis . So .   "
 },
 {
-  "id": "exercise-211",
+  "id": "exercise-206",
   "level": "2",
-  "url": "sec-operator.html#exercise-211",
+  "url": "sec-operator.html#exercise-206",
   "type": "Exercise",
   "number": "15.5.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-212",
+  "id": "exercise-207",
   "level": "2",
-  "url": "sec-operator.html#exercise-212",
+  "url": "sec-operator.html#exercise-207",
   "type": "Exercise",
   "number": "15.5.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-213",
+  "id": "exercise-208",
   "level": "2",
-  "url": "sec-operator.html#exercise-213",
+  "url": "sec-operator.html#exercise-208",
   "type": "Exercise",
   "number": "15.5.3",
   "title": ".",
@@ -7111,27 +6958,27 @@ var ptx_lunr_docs = [
   "body": "Diagonal Presentation   Suppose is a commutative ring and is a matrix such that for all and set for all . If then and if then     Assume and define to be the map sending to where for . (I.e., is the unique -map sending the -th standard basis vector to with in the -th position, for , and to itself for .) Then is clearly onto and the kernel of is the set of those tuples such that for some for all and for . Given such a tuple, This proves is contained Arguing backwards we see that the opposite containment also holds, so that in fact .  By the First Isomorphism Theorem, If then, by deleting columns of all 's, we may reduce to the case when , which is included in the first case.   "
 },
 {
-  "id": "exercise-214",
+  "id": "exercise-209",
   "level": "2",
-  "url": "sec-modpres.html#exercise-214",
+  "url": "sec-modpres.html#exercise-209",
   "type": "Exercise",
   "number": "16.1.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-215",
+  "id": "exercise-210",
   "level": "2",
-  "url": "sec-modpres.html#exercise-215",
+  "url": "sec-modpres.html#exercise-210",
   "type": "Exercise",
   "number": "16.1.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-216",
+  "id": "exercise-211",
   "level": "2",
-  "url": "sec-modpres.html#exercise-216",
+  "url": "sec-modpres.html#exercise-211",
   "type": "Exercise",
   "number": "16.1.3",
   "title": ".",
@@ -7246,54 +7093,54 @@ var ptx_lunr_docs = [
   "body": " So, another way of finding the SNF of a matrix with entries in a Euclidean domain is to calculate for all . This is not practical except in very special cases.  "
 },
 {
-  "id": "exercise-217",
+  "id": "exercise-212",
   "level": "2",
-  "url": "sec-snf.html#exercise-217",
+  "url": "sec-snf.html#exercise-212",
   "type": "Exercise",
   "number": "16.2.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-218",
+  "id": "exercise-213",
   "level": "2",
-  "url": "sec-snf.html#exercise-218",
+  "url": "sec-snf.html#exercise-213",
   "type": "Exercise",
   "number": "16.2.2",
   "title": "",
   "body": " Let . Express the -module presented by as the direct sum of cyclic groups. Justify your answer.  "
 },
 {
-  "id": "exercise-219",
+  "id": "exercise-214",
   "level": "2",
-  "url": "sec-snf.html#exercise-219",
+  "url": "sec-snf.html#exercise-214",
   "type": "Exercise",
   "number": "16.2.3",
   "title": "",
   "body": " Let and , regarded as matrices with entries in .   Express the cokernel of (i.e., ) in elementary divisor form (that is, as a direct sum of cyclic groups each of which is either infinite or of prime power order).    Express the cokernel of in elementary divisor form.     "
 },
 {
-  "id": "exercise-220",
+  "id": "exercise-215",
   "level": "2",
-  "url": "sec-snf.html#exercise-220",
+  "url": "sec-snf.html#exercise-215",
   "type": "Exercise",
   "number": "16.2.4",
   "title": "",
   "body": " Consider the matrix Determine the simplest representative in the isomorphism class of the -module presented by .  "
 },
 {
-  "id": "exercise-221",
+  "id": "exercise-216",
   "level": "2",
-  "url": "sec-snf.html#exercise-221",
+  "url": "sec-snf.html#exercise-216",
   "type": "Exercise",
   "number": "16.2.5",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-222",
+  "id": "exercise-217",
   "level": "2",
-  "url": "sec-snf.html#exercise-222",
+  "url": "sec-snf.html#exercise-217",
   "type": "Exercise",
   "number": "16.2.6",
   "title": ".",
@@ -7372,9 +7219,9 @@ var ptx_lunr_docs = [
   "body": "Finite Presentations in Noetherian Rings   Any finitely generated module over a noetherian ring has a finite presentation; that is, given such a module over such a ring, there exists an matrix in and an isomorphism     We basically already proved this, but let me recap it:  If is finitely generated, then for some we can find a surjective -module homomorphism Since we assume is Noetherian, the kernel of is also finitely generated by the Proposition, and so we may find a surjection of -modules for some . The composition is equal to for some matrix . Since , the first isomorphism theorem gives an isomorphism    "
 },
 {
-  "id": "exercise-223",
+  "id": "exercise-218",
   "level": "2",
-  "url": "sec-noeth.html#exercise-223",
+  "url": "sec-noeth.html#exercise-218",
   "type": "Exploration",
   "number": "16.26",
   "title": "Quotient Rings Noetherian in Noetherian Rings.",
@@ -7462,9 +7309,9 @@ var ptx_lunr_docs = [
   "body": " Since , so the elementary divisors of are , and . The only invariant factor of is .  "
 },
 {
-  "id": "example-95",
+  "id": "example-98",
   "level": "2",
-  "url": "sec-modclass.html#example-95",
+  "url": "sec-modclass.html#example-98",
   "type": "Example",
   "number": "16.35",
   "title": "Direct Sums and <span class=\"process-math\">\\(\\Z\\)<\/span>.",
@@ -7498,54 +7345,54 @@ var ptx_lunr_docs = [
   "body": "Finding IFs and EDs  Find the invariant factor form and the elementary divisor form of the -module first when    ,     and     .     "
 },
 {
-  "id": "exercise-224",
+  "id": "exercise-219",
   "level": "2",
-  "url": "sec-modclass.html#exercise-224",
+  "url": "sec-modclass.html#exercise-219",
   "type": "Exploration",
   "number": "16.39",
   "title": "",
   "body": " Let be a Euclidean domain, an matrix with elements from , and the transpose matrix of . Let denote the quotient of by the submodule generated by the columns of . The {} submodule of an -module is the submodule (It is indeed a submodule and you need not prove this.)   Prove that the torsion submodules of and are isomorphic.    Prove that the modules and are isomorphic if and only if .     "
 },
 {
-  "id": "exercise-225",
+  "id": "exercise-220",
   "level": "2",
-  "url": "sec-modclass.html#exercise-225",
+  "url": "sec-modclass.html#exercise-220",
   "type": "Exploration",
   "number": "16.40",
   "title": "",
   "body": " Let be a PID and let be a finitely generated -module.   Determine a generator for the principal ideal in terms of the invariant factors and the free rank of .    Determine a generator for the principal ideal in terms of the elementary divisors and the free rank of .     "
 },
 {
-  "id": "exercise-226",
+  "id": "exercise-221",
   "level": "2",
-  "url": "sec-modclass.html#exercise-226",
+  "url": "sec-modclass.html#exercise-221",
   "type": "Exploration",
   "number": "16.41",
   "title": "",
   "body": " Consider the matrix where .   Determine the Smith normal form for .    Determine the representative in the isomorphism class of the module presented by which is written in invariant factor form and in elementary divisor form.     "
 },
 {
-  "id": "exercise-227",
+  "id": "exercise-222",
   "level": "2",
-  "url": "sec-modclass.html#exercise-227",
+  "url": "sec-modclass.html#exercise-222",
   "type": "Exercise",
   "number": "16.4.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-228",
+  "id": "exercise-223",
   "level": "2",
-  "url": "sec-modclass.html#exercise-228",
+  "url": "sec-modclass.html#exercise-223",
   "type": "Exercise",
   "number": "16.4.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-229",
+  "id": "exercise-224",
   "level": "2",
-  "url": "sec-modclass.html#exercise-229",
+  "url": "sec-modclass.html#exercise-224",
   "type": "Exercise",
   "number": "16.4.3",
   "title": ".",
@@ -7732,54 +7579,54 @@ var ptx_lunr_docs = [
   "body": "Finding IFs and RCF  Let Let us find the invariant factors and Rational Canonical Form of by finding the Smith Normal Form of .  We have A sequence of messy row and column operations yields Note that this is indeed in Smith Normal Form. It follows that the invariant factors of are and the RCF of is   For an alternative approach, we could use that the diagonal entries of the Smith Normal Form of satisfy , is the gcd of the minors of , and . It's clear that and an easy calculation gives that . There are nine minors of , and a tedious check reveals that each of them is one of , , or (up to signs). So . We get that as before.  "
 },
 {
-  "id": "exercise-230",
+  "id": "exercise-225",
   "level": "2",
-  "url": "sec-rcf.html#exercise-230",
+  "url": "sec-rcf.html#exercise-225",
   "type": "Exploration",
   "number": "17.20",
   "title": "Problem 7 - Nilpotent Matrices and Similarity.",
   "body": "Problem 7 - Nilpotent Matrices and Similarity  Let be a field and recall that a square matrix with entries in is called nilpotent if for some positive integer .   Prove that if is an nilpotent matrix, then .  Assume and prove that two nilpotent matrices are similar if and only if they have the same rank. (Recall the rank of a matrix is the dimension of the vector space spanned by its columns.)  Give an example, with justification, of two nilpotent matrices that have the same rank but are not similar.    Let be a field.     Let be an nilpotent matrix. Let be some eigenvalue of . Thus there exists some vector such that . Let's consider this the base-case of some rather banal induction. Now assume that for we have . Consider Recall that as is nilpotent, there exists some such that . As is an eigenvalue of , by the above induction we see that is an eigenvalue for . As is a field and thus an integral domain, we see that implies that is as well. As this holds in the algebraic closure of as well, we see that when factored into linear terms all the . Thus .  By the Cayley Hamilton Theorem we know , and thus .    Assume and let be nilpotent matrices with entries in .   Suppose . Thus there exists some invertible matrix such that by the definition of similar matrices. Let . Thus and . We multiply both sides by to see that . Therefore the , and hence the ranks of and are equal by Rank Nullity.  Next, observe as is an invertible matrix. Thus .   Suppose that . From Part (a) we know .  We consider the case where .  The only possible invariant factors involving are    ;     ; and     itself.   However, if are the invariant factors then the rank of would be 3, making it invertible, contradicting the fact that 0 is an eigenvalue of . Thus we need only consider the latter two cases.  Note that As has rank 1 and has rank 2, since we see that they must have the same invariant factors, making them similar.  If then the only possible invariant factor is , as having two 's would make and invertible again. If then and we're done.    Consider and .  Thus   both of which have rank and are in RCF. Thus they are not similar.     "
 },
 {
-  "id": "exercise-231",
+  "id": "exercise-226",
   "level": "2",
-  "url": "sec-rcf.html#exercise-231",
+  "url": "sec-rcf.html#exercise-226",
   "type": "Exploration",
   "number": "17.21",
   "title": "",
   "body": " Find the Rational Canonical Form of where is any field.  "
 },
 {
-  "id": "exercise-232",
+  "id": "exercise-227",
   "level": "2",
-  "url": "sec-rcf.html#exercise-232",
+  "url": "sec-rcf.html#exercise-227",
   "type": "Exploration",
   "number": "17.22",
   "title": "",
   "body": " Find, with justification, a complete and non-redundant list of conjugacy class representatives for the group , where is the field with two elements.   Let denote the field with two elements, and consider the group .  Recall that matrices are in the same conjugacy class if and only if they are similar, and that two matrices are similar if and only if they share the same invariant factors.  Let . All characteristic polynomials are monic, and as is invertible we see the term in the , and thus , the only other element in . There are only so many monic polynomials with coefficients in ; hence there are only four possible characteristic polynomials of :    ,     ,     and     .   Note that since , 0 cannot be a root of any of these polynomials. Thus all that remains is to check . Luckily, is not a root of or , so the only invariant factor of each is themselves. While 1 is a root of , we see that . As , neither of these polynomials can be invariant factors by the RCF theorem; thus the only invariant factor of is itself. However , and so its possible invariant factors are    ;     and     .   Let and . Thus the conjugacy class representatives for are    ,     ,     ,     ,     , and     .     "
 },
 {
-  "id": "exercise-233",
+  "id": "exercise-228",
   "level": "2",
-  "url": "sec-rcf.html#exercise-233",
+  "url": "sec-rcf.html#exercise-228",
   "type": "Exercise",
   "number": "17.1.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-234",
+  "id": "exercise-229",
   "level": "2",
-  "url": "sec-rcf.html#exercise-234",
+  "url": "sec-rcf.html#exercise-229",
   "type": "Exercise",
   "number": "17.1.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-235",
+  "id": "exercise-230",
   "level": "2",
-  "url": "sec-rcf.html#exercise-235",
+  "url": "sec-rcf.html#exercise-230",
   "type": "Exercise",
   "number": "17.1.3",
   "title": ".",
@@ -7867,108 +7714,108 @@ var ptx_lunr_docs = [
   "body": "Finding Minimum Polynomial (2)  Let's find the minimum polynomial of As in the previous example, and so by the Cayley-Hamilton Theorem for some . This time we notice that and so, since , .  "
 },
 {
-  "id": "exercise-236",
+  "id": "exercise-231",
   "level": "2",
-  "url": "sec-cayley-hamilton.html#exercise-236",
+  "url": "sec-cayley-hamilton.html#exercise-231",
   "type": "Exploration",
   "number": "17.31",
   "title": "Problem 6 - Similarity Classes and CharPoly.",
   "body": "Problem 6 - Similarity Classes and CharPoly  Determine all similarity classes of matrices with entries in with characteristic polynomial . Provide an explicit representative for each of these similarity classes.   Let be a matrix with entries in with characteristic polynomial .  By this Corollary we know that every matrix is similar to a unique matrix in RCF. Note that RCF is based on the invariant factors if a matrix, and thus if two matrices have the same invariant factors they will have the same RCF, making them both similar to the same (unique) matrix, making them similar to each other. By part (1) of this Theorem, the characteristic polynomial of a matrix is equal to the product of the invariant factors of that same matrix.  Recall that the invariant factors must divide all preceding invariant factors in RCF, and observe that factors as and factors as . Given this information, after some fiddling with the factors, we find four possible options for invariant factors of :    ,     ,     , and     .   Let  , and . Observe the companion matrices of each of these polynomials: Behold: explicit representatives of each similarity class:    ,     ,     , and     .     "
 },
 {
-  "id": "exercise-237",
+  "id": "exercise-232",
   "level": "2",
-  "url": "sec-cayley-hamilton.html#exercise-237",
+  "url": "sec-cayley-hamilton.html#exercise-232",
   "type": "Exploration",
   "number": "17.32",
   "title": "",
   "body": " Let be any field.   Let and be two matrices with entries in . Prove and are similar if and only if they have the same characteristic polynomial and the same minimum polynomial.  Show, by way of an example with justification, that the previous part would become false if were replaced by .  Give an example of a field and two matrices with entries in having the same minimum polynomial that are not similar.    Let be any field.     Let and be two matrices with entries in . First, suppose that . Matrices are similar if and only if they share the same invariant factors. As minimum polynomial is an invariant factor and the characteristic polynomial is a product of the invariant factors, we see that and must share the same invariant factors.  Next suppose that and share the same characteristic polynomial and the same minimal polynomial. As and are matrices, the characteristic polynomial of both and must be a degree polynomial. We proceed via cases based on the degree of . - First, suppose . Then , making the only invariant factor of both and . Thus and have the same invariant factors and are therefore similar. - Next, suppose . As and the degrees of all invariant factors must sum to the , we know that , where is a degree polynomial, which we denote for and for .. Since and share the same minimum and characteristic polynomials, we see and , and thus that . Hence and share the same invariant factors, making . - Finally, suppose . The minimum polynomial is the largest invariant factor, and thus the invariant factors of and must be , making them similar.    If we replaced with then this would allow for and , allowing two sets of invariant factors:  , Notice that and . Set and , so These matrices have the same and but are not similar.    Let . We define and . Notice that these matrices are in RCF. However, the invariant factors of are and the invariant factors of are . Thus is not similar to , but the minimal polynomial of both is .     "
 },
 {
-  "id": "exercise-238",
+  "id": "exercise-233",
   "level": "2",
-  "url": "sec-cayley-hamilton.html#exercise-238",
+  "url": "sec-cayley-hamilton.html#exercise-233",
   "type": "Exploration",
   "number": "17.33",
   "title": "Problem 6 - Unipotent 4 x 4 Matrices.",
   "body": "Problem 6 - Unipotent 4 x 4 Matrices  We say an matrix with entries in is unipotent if is nilpotent (i.e., for some ). For the field , find (with complete justification) the number of similarity classes of unipotent matrices and give an explicit representative for each class.   Let , a positive integer, and a unipotent matrix with entries in . Thus is nilpotent. Let be an eigenvalue of . Then , so and . As , we have and .  Notice that as is an eigenvalue of , we have as an eigenvalue of .  Assume inductively that is an eigenvalue of . Notice making an eigenvalue of . Thus if is an eigenvalue of , it is an eigenvalue of as well. As is nilpotent, there exists some such that . This means that . As and is a scalar in a field (and hence integral domain) we have . Thus the only eigenvalue of is , meaning that the only eigenvalue of is .  Eigenvalues of correspond to the roots of , which is a monic quartic polynomial, as is a matrix. Thus , as all roots must be .  Two matrices are similar if and only if they share the same invariant factors. Given that invariant factors divide and each invariant factor must divide the following one, the possible sets of invariant factors for are the following:    ,     ,     ,     , and     .   We identify the companion matrices for each possible invariant factor:  and We define the following:    ,     ,     ,     , and     .   As each of these matrices is in RCF, they are explicit representatives for each similarity class.  "
 },
 {
-  "id": "exercise-239",
+  "id": "exercise-234",
   "level": "2",
-  "url": "sec-cayley-hamilton.html#exercise-239",
+  "url": "sec-cayley-hamilton.html#exercise-234",
   "type": "Exploration",
   "number": "17.34",
   "title": "",
   "body": " Let and be matrices with entries in . Prove and are similar in if and only if and are similar in . (That is, show there is a such that if and only if there is a such that .) {}: Use the Theorem on Rational Canonical Forms.  "
 },
 {
-  "id": "exercise-240",
+  "id": "exercise-235",
   "level": "2",
-  "url": "sec-cayley-hamilton.html#exercise-240",
+  "url": "sec-cayley-hamilton.html#exercise-235",
   "type": "Exploration",
   "number": "17.35",
   "title": "",
   "body": " Similarity of two-by-two matrices:   Let be any field and , and assume that neither nor is a scalar matrix. (Recall that a scalar matrix is one of the form for some .) Prove and are similar if and only if they have the same determinant and the same trace.    Let be a finite field with elements. Find, with justification, the number of similarity classes of matrices with entries in .    Let be a finite field with elements. Find, with justification, the number of conjugacy classes of the group .         Coming soon to an OER near you!     "
 },
 {
-  "id": "exercise-241",
+  "id": "exercise-236",
   "level": "2",
-  "url": "sec-cayley-hamilton.html#exercise-241",
+  "url": "sec-cayley-hamilton.html#exercise-236",
   "type": "Exploration",
   "number": "17.36",
   "title": "",
   "body": " Let be any field. Up to similarity, how many matrices in of the form are there? Justify.  "
 },
 {
-  "id": "exercise-242",
+  "id": "exercise-237",
   "level": "2",
-  "url": "sec-cayley-hamilton.html#exercise-242",
+  "url": "sec-cayley-hamilton.html#exercise-237",
   "type": "Exploration",
   "number": "17.37",
   "title": "",
   "body": " Let be a field, a finite dimensional -vector space, and an -linear operator. Prove that the following are equivalent for an element :    is an eigenvalue of .     is a root of the minimum polynomial of .     is a root of the characteristic polynomial of . (Recall that is a {} of provided for some non-zero vector .)     "
 },
 {
-  "id": "exercise-243",
+  "id": "exercise-238",
   "level": "2",
-  "url": "sec-cayley-hamilton.html#exercise-243",
+  "url": "sec-cayley-hamilton.html#exercise-238",
   "type": "Exploration",
   "number": "17.38",
   "title": "",
   "body": " Suppose is any field. Recall that a square matrix with entries in is nilpotent if for some positive integer j.   Prove that if and is nilpotent, then .  Find, with justification, the number of similarity classes of nilpotent matrices with entries in .    "
 },
 {
-  "id": "exercise-244",
+  "id": "exercise-239",
   "level": "2",
-  "url": "sec-cayley-hamilton.html#exercise-244",
+  "url": "sec-cayley-hamilton.html#exercise-239",
   "type": "Exploration",
   "number": "17.39",
   "title": "",
   "body": " Find, with justification, a complete and non-redundant list of conjugacy class representatives for the group , where is the field with three elements.  "
 },
 {
-  "id": "exercise-245",
+  "id": "exercise-240",
   "level": "2",
-  "url": "sec-cayley-hamilton.html#exercise-245",
+  "url": "sec-cayley-hamilton.html#exercise-240",
   "type": "Exercise",
   "number": "17.2.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-246",
+  "id": "exercise-241",
   "level": "2",
-  "url": "sec-cayley-hamilton.html#exercise-246",
+  "url": "sec-cayley-hamilton.html#exercise-241",
   "type": "Exercise",
   "number": "17.2.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-247",
+  "id": "exercise-242",
   "level": "2",
-  "url": "sec-cayley-hamilton.html#exercise-247",
+  "url": "sec-cayley-hamilton.html#exercise-242",
   "type": "Exercise",
   "number": "17.2.3",
   "title": ".",
@@ -8074,135 +7921,135 @@ var ptx_lunr_docs = [
   "body": "Diagonalizable   Let be a finite dimensional vector space over a field and let be an -linear operator. We say is diagonalizable if there is a basis for such that the matrix is a diagonal matrix.   "
 },
 {
-  "id": "exercise-248",
+  "id": "exercise-243",
   "level": "2",
-  "url": "sec-jcf.html#exercise-248",
+  "url": "sec-jcf.html#exercise-243",
   "type": "Exploration",
   "number": "17.50",
   "title": "",
   "body": " Let with the standard basis and let be the linear transformation represented by the matrix    Find the invariant factor decomposition of the -module .    Find the characteristic and minimal polynomials of .    Find the rational canonical form of .    Find the Jordan canonical form of .     "
 },
 {
-  "id": "exercise-249",
+  "id": "exercise-244",
   "level": "2",
-  "url": "sec-jcf.html#exercise-249",
+  "url": "sec-jcf.html#exercise-244",
   "type": "Exercise",
   "number": "17.3.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-250",
+  "id": "exercise-245",
   "level": "2",
-  "url": "sec-jcf.html#exercise-250",
+  "url": "sec-jcf.html#exercise-245",
   "type": "Exercise",
   "number": "17.3.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-251",
+  "id": "exercise-246",
   "level": "2",
-  "url": "sec-jcf.html#exercise-251",
+  "url": "sec-jcf.html#exercise-246",
   "type": "Exercise",
   "number": "17.3.3",
   "title": ".",
   "body": " Consider the following matrix:    Find the rational canonical form of .    Find the Jordan canonical form of .      Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-252",
+  "id": "exercise-247",
   "level": "2",
-  "url": "sec-jcf.html#exercise-252",
+  "url": "sec-jcf.html#exercise-247",
   "type": "Exercise",
   "number": "17.3.4",
   "title": ".",
   "body": " Let be a positive integer and let be the Jordan block matrix of size with eigenvalue 0 in .   Find the minimal polynomials for and for , with justification.  Find the Jordan canonical form of , with justification. Hint : consider the kernel of .    Coming soon to an OER near you!   Let be a positive integer and let be the Jordan block matrix of size with eigenvalue 0 in .   Notice that is a triangular matrix with 's along the diagonal. Thus , the product of the diagonal entries of the matrix .  Squaring a triangular matrix moves everything one down (Proof?), and so should do it. Squaring just moves us one closer, so     As , the only roots of it are , and thus these are the only elementary divisors of .     "
 },
 {
-  "id": "exercise-253",
+  "id": "exercise-248",
   "level": "2",
-  "url": "sec-jcf.html#exercise-253",
+  "url": "sec-jcf.html#exercise-248",
   "type": "Exercise",
   "number": "17.3.5",
   "title": ".",
   "body": " On canonical forms   Consider the -module and let the -vector space obtained from by restriction of scalars along the evident inclusion and let be the -linear transformation given as multiplication by . Find, with justification, the rational canonical form of .    Consider the -module and let the -vector space obtained from by restriction of scalars along and let be the -linear transformation given as multiplication by . Find, with justification, the Jordan canonical form of .      Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-254",
+  "id": "exercise-249",
   "level": "2",
-  "url": "sec-jcf.html#exercise-254",
+  "url": "sec-jcf.html#exercise-249",
   "type": "Exercise",
   "number": "17.3.6",
   "title": "June 2011 (9).",
   "body": "June 2011 (9)  Consider the following matrix over :    Show that the characteristic and minimal polynomials of are, respectively, and .    Find the rational canonical form of and the Jordan canonical form of .    Find an invertible matrix such that .      Coming soon to an OER near you!   Let denote the above matrix.     As and , we know that our characteristic polynomial factors into linear factors, so does indeed have a JCF. This also means that only has one elementary divisor, , which corresponds to the Jordan Block , a matrix with s along the diagonal, s along the subdiagonal, and everywhere else. This is the JCF of .     "
 },
 {
-  "id": "exercise-255",
+  "id": "exercise-250",
   "level": "2",
-  "url": "sec-jcf.html#exercise-255",
+  "url": "sec-jcf.html#exercise-250",
   "type": "Exercise",
   "number": "17.3.7",
   "title": "January 2012 (7).",
   "body": "January 2012 (7)  Consider the following matrix over :    Show that the characteristic of is .    Find the rational canonical form of and the Jordan canonical form of .    Find an invertible matrix such that .      Coming soon to an OER near you!   Let denote the above matrix.     As and , we know that our characteristic polynomial factors into linear factors, so does indeed have a JCF. This also means that only has one elementary divisor, , which corresponds to the Jordan Block , a matrix with s along the diagonal, s along the subdiagonal, and everywhere else. This is the JCF of .     "
 },
 {
-  "id": "exercise-256",
+  "id": "exercise-251",
   "level": "2",
-  "url": "sec-jcf.html#exercise-256",
+  "url": "sec-jcf.html#exercise-251",
   "type": "Exercise",
   "number": "17.3.8",
   "title": ".",
   "body": " Let be a field and a monic polynomial of degree . Prove: all matrices in having characteristic polynomial are similar if and only if the irreducible factorization of has no repeated factors.   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-257",
+  "id": "exercise-252",
   "level": "2",
-  "url": "sec-jcf.html#exercise-257",
+  "url": "sec-jcf.html#exercise-252",
   "type": "Exercise",
   "number": "17.3.9",
   "title": ".",
   "body": " Let be a finite dimensional vector space over a field and let be an -linear operator on . Prove is diagonalizable over if and only if its minimum polynomial factors into distinct linear terms in .   Coming soon to an OER near you!    Suppose that is diagonalizable. Thus there exists a change of basis matrix such that is diagonal. As it is diagonal, its diagonal entries are the eigenvalues of , and thus the roots of the minimal polynomial of . Using row and column operations we can rearrange so that all repeated linear factors are next to each other in the diagonal, for convenience.  We know that is the smallest monic polynomial that sends to 0. Take all the distinct eigenvalues and consider .  We examine . It will be a product of matrices, one for each . First, take the first matrix in this product, , and note that it sends all in to 0. Thus all of the rows and columns that contained a are now 0, and thus all these rows and columns will be 0 in the final product . As this is we set for all , we see that for each row and column in there will exist a matrix in the product such that the row and column will be 0. Thus the entire matrix will be 0, and .  Note that if any were excluded from there would exist a non-zero row and column for every matrix in the product, and thus would not send to 0. Thus is indeed the minimal polynomial of . As , we see it does indeed factor into distinct linear terms.   Suppose the minimum polynomial of factors completely into distinct linear factors, each of which has the form for some . As each is distinct, each elementary divisor is of the form .  We construct the Jordan Canonical Form of . As the elementary divisors are linear the Jordan blocks are matrices, making the a diagonal matrix. As the JCF is itself a change of basis matrix, we see that is diagonalizable.  "
 },
 {
-  "id": "exercise-258",
+  "id": "exercise-253",
   "level": "2",
-  "url": "sec-jcf.html#exercise-258",
+  "url": "sec-jcf.html#exercise-253",
   "type": "Exercise",
   "number": "17.3.10",
   "title": ".",
   "body": " Consider the -vector space . (You may assume without proof that is n-dimensional.) Consider the following linear maps :  (where p' denotes the derivative of p). Determine the JCF of               Coming soon to an OER near you!      For any integer , consider the -vector space .  Let be the linear operator given by (where denotes the derivative of ). Note that the change of basis matrix for this operator is given by with the basis . Thus will be given by the determinant of the matrix     which is diagonal. Hence Thus factors into distinct linear polynomials, each of which is in the form for . Thus each linear term is an elementary divisor, making each Jordan Block a matrix with as the only entry. Thus the Jordan Canonical form is     This time around the change of basis matrix (denoted and using the same basis as above) for this matrix has 0s along the diagonal, and increasing natural numbers (starting at 0, sorry) along the upper diagonal. Thus .  Recall that the minimum polynomial corresponding to will be the the smallest monic polynomial such that is sent to 0. Note that as is the operator sending to its derivative, and that . Thus can be viewed as a change of basis matrix for taking the second derivative of the basis, and so on.  As the basis extends to , it requires derivatives to make this polynomial become 0. Thus the minimal polynomial of must be , as it it monic and . As the degree of the invariant factors must sum to and , which is itself an invariant factor, we see that it must in fact be the only one.  As is already a power of a prime, it is the only elementary divisor as well. Thus the Jordan Canonical Form for is an Jordan Block with 0s along the diagonal and 1s along the sub-diagonal.     "
 },
 {
-  "id": "exercise-259",
+  "id": "exercise-254",
   "level": "2",
-  "url": "sec-jcf.html#exercise-259",
+  "url": "sec-jcf.html#exercise-254",
   "type": "Exercise",
   "number": "17.3.11",
   "title": ".",
   "body": " Let be a positive integer. Consider the real vector space and the linear transformation , where is the derivative of p(x).   Find the characteristic polynomial and the minimum polynomial for .  Find the invariant factors and the elementary divisors for .  Find the RCF and the Jordan Canonical Form for .    Coming soon to an OER near you!   Let be the linear operator given by (where denotes the derivative of    Note that the change of basis matrix for this operator is given by with the basis . Thus will be given by the determinant of the matrix which is diagonal. Hence .    Our factors into distinct linear polynomials, each of which is in the form for . Thus each linear term is an elementary divisor. However, as none of these elementary divisors divide any of the others, we see that the only invariant factor is itself.    As each linear term is an elementary divisor, each Jordan block a matrix with as the only entry. Thus the Jordan Canonical form is As the only invariant factor is , we see that the Rational Canonical Form of is .     "
 },
 {
-  "id": "exercise-260",
+  "id": "exercise-255",
   "level": "2",
-  "url": "sec-jcf.html#exercise-260",
+  "url": "sec-jcf.html#exercise-255",
   "type": "Exercise",
   "number": "17.3.12",
   "title": "June 2010 (4).",
   "body": "June 2010 (4)  Let be the matrix with entries in     Find the Jordan Canonical Form of A.    Is similar to       Coming soon to an OER near you!      First, notice that is upwards triangular, and thus . By the Cayley Hamilton Theorem the minimum polynomial divides the characteristic polynomial, and from the definition of minimum polynomial we know is the smallest polynomial such that . Since must be a power of with , we plug in values of until we get . Shucks. Moving on, which is also not . However, multiplying one more time we see . By part (2) of this theorem is an invariant factor. By part (1) of that same theorem, invariant factors must multiply to , and so the invariant factors are and . These are also the elementary divisors. So       Let And notice that . Thus cannot be the minimal polynomial of . Two matrices are only similar if they share the same invariant factors (and thus the same minimum polynomial), so and are not similar.     "
 },
 {
-  "id": "exercise-261",
+  "id": "exercise-256",
   "level": "2",
-  "url": "sec-jcf.html#exercise-261",
+  "url": "sec-jcf.html#exercise-256",
   "type": "Exercise",
   "number": "17.3.13",
   "title": ".",
   "body": " For the matrix in :   Find the RCF of .    Determine whether or not has a Jordan Canonical Form, and if so, find this form.      Coming soon to an OER near you!      Notice . So we have Not so bad! Now, the invariant factors all divide the characteristic polynomial and must divide the following factor, so our options for sets of invariant factors are the following: - - However, the largest invariant factor is also the minimal polynomial. So we check to see if . Luckily, the very first calculation shows that this is not the case. Thus the minimum polynomial is the characteristic polynomial is the only invariant factor of . Thus the RCF of is     Luckily for us, factors completely into linear terms! So our elementary divisors are and . We see and , so the Jordan Canonical form of is      "
 },
 {
-  "id": "exercise-262",
+  "id": "exercise-257",
   "level": "2",
-  "url": "sec-jcf.html#exercise-262",
+  "url": "sec-jcf.html#exercise-257",
   "type": "Exercise",
   "number": "17.3.14",
   "title": "January 2014 (9).",
@@ -8227,9 +8074,9 @@ var ptx_lunr_docs = [
   "body": "Multiplicately Closed Set   Suppose is a commutative ring and is a subset such that      ,     is closed under multiplication (i.e., if , then ), and     does not contain nor any zerodivisors.     Such a subset is called a multiplicatively closed subset of non zerodivisors of .   "
 },
 {
-  "id": "example-107",
+  "id": "example-110",
   "level": "2",
-  "url": "sec-field-of-fractions.html#example-107",
+  "url": "sec-field-of-fractions.html#example-110",
   "type": "Example",
   "number": "18.2",
   "title": "Examples of Multaplicatively Closed Sets.",
@@ -8254,9 +8101,9 @@ var ptx_lunr_docs = [
   "body": "Field of Fractions is a Field   If is an integral domain and is a multiplicatively closed subset of nonzerodivisors, the rules given in the above definition for and make into a field. Moreover, the function sending to is an injective ring homomorphism.    There is a lot of small things to check and we'll just do a few. Right off the bat we need to be sure the given equivalence relation really is one. The reflexive and symmetric properties are clear. But the proof of transitivity illustrates a key point: Say . Then and . We need to deduce that . The given equations imply and since is a nonzerodivisor we conclude . This is in fact the only time that the fact that consists of nonzerodivisors is used.  We also need to be sure our rules for and make sense and are independent of representation. They make sense since we assume is closed under . To show is independent of representations, say , so that . Then and and so we need to show . This is clear upon expaning out both sides and using . In a similar way one shows is well-defined.  From now on we just write instead of when dealing with fractions.  The associative and distributive axioms involve a straightfoward but tedious check, and we skip them entirely. The fact that and are commutative is clear from their definitions. is a group under addition since it has a element, namely , and , with the last equality holding since . The element is . (Note that we have used that a couple times here — indeed, without this assumption could be empty and then would be the empty set.)   being a domain means implies ( or ). The contrapositive to this statement is: if and then , which shows is a multiplicatively closed set of nonzerodivisors.  It remains only to show every non-zero element of is a unit. Given , note that and hence . So is also an element of . We have , where the last equation holds by the definition of .  The fact that is a ring homomorphism is straightforward to check. Its injective since implies .   "
 },
 {
-  "id": "example-108",
+  "id": "example-111",
   "level": "2",
-  "url": "sec-field-of-fractions.html#example-108",
+  "url": "sec-field-of-fractions.html#example-111",
   "type": "Example",
   "number": "18.5",
   "title": "Examples of Fields of Fractions.",
@@ -8290,27 +8137,27 @@ var ptx_lunr_docs = [
   "body": "June 2012 (7)   Let be a commutative integral domain and its field of fractions. Let and be nonzero elements of , such that . Let be the unique ring homomorphism with for and . Prove that a polynomial satisfies if and only if for some polynomial . (Hint: one way is to use induction on deg(p(x)).)   "
 },
 {
-  "id": "exercise-263",
+  "id": "exercise-258",
   "level": "2",
-  "url": "sec-field-of-fractions.html#exercise-263",
+  "url": "sec-field-of-fractions.html#exercise-258",
   "type": "Exercise",
   "number": "18.1.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-264",
+  "id": "exercise-259",
   "level": "2",
-  "url": "sec-field-of-fractions.html#exercise-264",
+  "url": "sec-field-of-fractions.html#exercise-259",
   "type": "Exercise",
   "number": "18.1.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-265",
+  "id": "exercise-260",
   "level": "2",
-  "url": "sec-field-of-fractions.html#exercise-265",
+  "url": "sec-field-of-fractions.html#exercise-260",
   "type": "Exercise",
   "number": "18.1.3",
   "title": ".",
@@ -8326,36 +8173,36 @@ var ptx_lunr_docs = [
   "body": "Roots of Unity         June 2011 (4)   Fix a prime number , and let denote the abelian group of all complex roots of unity whose orders are powers of ; that is Prove the following statements.   Every non-trivial subgroup of contains the group of roots of unity.    Every proper subgroup of is cyclic.    If and are subgroups of , then either or .    For each there exists a unique subgroup of with elements.       Let be a non-trivial subgroup of . Then there exists some such that . Then yields a primitive root of unity, which can be used to generate the other roots as well. Thus contains the roots of unity.  Suppose is a proper subgroup of , meaning it is missing some root of unity. But the subgroup of those roots of unity is cyclic and is generated by every element, so that entire subgroup must be missing. But that subgroup can be generated with any primitive root of a higher power of , so must be finite and there must be some element of maximum order, which can be used to generate the whole group. Thus is cyclic.  Suppose and are subgroups of such that . Then is a proper subgroup of , making it finite as seen above. If there exists a higher power of in then it generates .  Let . Then the subgroup generated by the roots of unity have elements, and it is unique since it is generated by every such root.      Computations and Examples       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Formal Proofs       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Qualifying Exam Problems       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     "
 },
 {
-  "id": "proposition-84",
+  "id": "proposition-85",
   "level": "2",
-  "url": "sec-roots.html#proposition-84",
+  "url": "sec-roots.html#proposition-85",
   "type": "Proposition",
   "number": "18.9",
   "title": "June 2011 (4).",
   "body": " June 2011 (4)   Fix a prime number , and let denote the abelian group of all complex roots of unity whose orders are powers of ; that is Prove the following statements.   Every non-trivial subgroup of contains the group of roots of unity.    Every proper subgroup of is cyclic.    If and are subgroups of , then either or .    For each there exists a unique subgroup of with elements.       Let be a non-trivial subgroup of . Then there exists some such that . Then yields a primitive root of unity, which can be used to generate the other roots as well. Thus contains the roots of unity.  Suppose is a proper subgroup of , meaning it is missing some root of unity. But the subgroup of those roots of unity is cyclic and is generated by every element, so that entire subgroup must be missing. But that subgroup can be generated with any primitive root of a higher power of , so must be finite and there must be some element of maximum order, which can be used to generate the whole group. Thus is cyclic.  Suppose and are subgroups of such that . Then is a proper subgroup of , making it finite as seen above. If there exists a higher power of in then it generates .  Let . Then the subgroup generated by the roots of unity have elements, and it is unique since it is generated by every such root.   "
 },
 {
-  "id": "exercise-266",
+  "id": "exercise-261",
   "level": "2",
-  "url": "sec-roots.html#exercise-266",
+  "url": "sec-roots.html#exercise-261",
   "type": "Exercise",
   "number": "18.2.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-267",
+  "id": "exercise-262",
   "level": "2",
-  "url": "sec-roots.html#exercise-267",
+  "url": "sec-roots.html#exercise-262",
   "type": "Exercise",
   "number": "18.2.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-268",
+  "id": "exercise-263",
   "level": "2",
-  "url": "sec-roots.html#exercise-268",
+  "url": "sec-roots.html#exercise-263",
   "type": "Exercise",
   "number": "18.2.3",
   "title": ".",
@@ -8368,7 +8215,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "18.3",
   "title": "Irredicuble Polynomials",
-  "body": "Irredicuble Polynomials          For an integral domain , a polynomial is called irreducible if is not a unit and whenever , either or is a unit. (It follows that such a also cannot be .)      Let be a field and .   If has degree one, it is irreducible.    If has a root and , then is not irreducible (since it factors as for some of degree at least ).    If , then is irreducible if and only if has no roots.    (Rational Root Test) If and all the coefficients of are integers and is a root of with , then divides and divides . More generally, the same holds with replaced by any PID and replaced by its field of fractions.        Never, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever try to use the converse of (2) or a version of (3) for polynomials of degree more than ; they are false.    Does have any roots? No. The only possible roots are and , and a careful check rules these out. Is irreducible? No, it factors as times      For a PID and , define the content of , written , to be the gcd of the coefficients of . Equivalently, is the generator of the principal ideal generated by the coefficients of .     Gauss's Lemma: Part 1   Let where is a PID. Then (up to associates).    We first show the following special case: If and , then .  To see this, pick a prime and write for the result of modding out the coefficients of by . Then (since the map sending to is a ring map). Since , we have that and . Since is a domain, it follows that . This proves does not divide all of the coefficients of . Since was arbitrary, .  For the general case, let and where and . Note that and . By the case already proven, . It follows .     Gauss's Lemma: Part 2   Let be a PID and let be its field of fractions, and assume is a non-constant polynomial with coefficients in . is irreducible in if and only if it is irreducible in and .    Suppose with . We can find an element of such that . (We can take to be the product of all the denominators of the coefficients of , for example; this is called “clearing denominators''.) Similarly, there is an such that . Further, write where , , and and similarly where , , and . We have Using Gauss's Lemma, Part 1, we have and hence We also have (since we've already proven that ).  So and thus by dividing we arrive at But is irreducible in . It follows that either or must be a unit in (i.e., a unit in ) and it follows that either or is a unit in . This proves is irreducible in .  ( ) Say irreducible in and . If with then, since is irreducible in , one of or must be a constant. But since , this constant must be .     Let's prove is irreducible. By Gauss's Lemma, we just need to show it is irreducible in .  If did factor in as a product of monic polynomials, then would also factor in this way. Now . This has no roots (the only possibilities are or ) and so if it did factor it would have to factor as a product of two quadratic, irreducible polynomials. The only such polynomial in is (the others all have roots). But . This proves is irreducible in and hence must be irreducible in .    Eisenstein's Criterion   Let be a PID with field of fractions and assume is a polynomial. Suppose there is a prime element such that , for all , and . Then is irreducible in .    We have with and . Since does not divide the leading coefficient of , we have . It therefore follows that the three assumptions involving the coefficients of are also satisfied by the coefficients . Moreover, is irreducible in if and only if is irreducible in . We may therefore assume without loss of generality that .  By Gauss's Lemma we just need to prove it is irreducible in . Suppose with , where and where and .  Upon modding out by we get The assumptions on give that with . Since is a domain, it follows that On the other hand, we also have and since , we have that or . So or . This can only occur if or .  We have shown that if factors in as , then at least one of of must be a constant polynomial. Since , this factor must be a unit. So is irreducible in .     For instance, is irreducible in thanks to Eisenstein applied with . (Note that it isn't irreducible in since it does not have unit content.)     For any prime , the -th cyclotomic polynomial  is irreducible in .    Consider the ring isomorphism given by . I claim that To see this, we note that and by the binomial theorem we have Since , the claim follows.  By Eisenstein, is irreducible in and, since is an isomorphism, it follows that is irreducible in .      Assume is an integral domain and is a monic polynomial with coefficients in . If there is a prime element such that is irreducible in , then is irreducible in .    We prove the contra-positive. Suppose is reducible in . Then we have for some monic, non-constant polynomials and in . It follows that holds in . But since and are monic, non-constant polynomials, and are both non-constant polynomials in and hence is reducible in .     The assumption that be monic in this Proposition is necessary. Consider for instance . Modding out by yields a linear polynomial in which is thus irreducible. But clearly isn't irreducible in . (The Proposition can be generalized to non-monic polynomials by adding the assumption that does not divided the leading coefficient of .)     Let be a field and a finite subgroup of the multiplicative group . Prove that is cyclic.    Let be a field and a finite subgroup of order the multiplicative group . Let denote the LCM of all orders of elements in . Notice that as for all we have .  However, as for all we know that is the root of the polynomial in . By the [[Mathematics\/Number Theory\/Results\/Lemma - Factor Theorem|Factor Theorem]] there are thus at most roots of , but there are distinct roots. Thus .  Thus the LCM of all orders of elements in is . Notice that as is abelian every Sylow -subgroup of is normal, and thus there is only one of each. This means that can be written as a direct product of cyclic groups of relatively prime order; Hence is itself cyclic.      Let and and recall (from 817) that is a PID and is its field of fractions.   Prove is irreducible in .    Prove is irreducible in but is reducible in .       Let and .  Suppose by way of contradiction that is not prime in . Thus , with non-units and where and , for . Thus . As , we see that . Note that the possible factorizations of 49 in are and .  However, if then , making it a unit. So and thus . As , either or . But then either or , and as , we have a contradiction. Thus is prime in . Using Eisenstein's Criterion with , we see that is irreducible in .  Using Eisenstein's Criterion with , we see that is irreducible in . However, in observe that As neither nor are units in (as has no inverse), we see that is reducible in .      Show that is irreducible.        Let be a field and be irreducible. Prove the is a field.  Give an explicit construction (with justification) of a field of size . (You may use without proof that the unique irreducible quadratic in is .      Let be a field and be irreducible. Thus is prime, making a prime ideal in and a domain. Suppose that there existed a proper ideal such that . However, as is a field we know that is a PID, meaning for some . If then , meaning that . Thus is a maximal ideal and we have a field.  Let . Let . Suppose with irreducible. Thus either both and have degree or one of them has degree . As , we see that without loss of generality . Then or , but neither divide . Thus is irreducible, making a field, the elements of which are: 1. 0 2. 1 3. 4. 5. 6. 7. 8. 9. 10. 11. 12. 13. 14. 15. 16. , making it a field of order .      Let be a field and a finite subgroup of the multiplicative group . Prove that is cyclic.    Let be a field and a finite subgroup of order the multiplicative group . Let denote the LCM of all orders of elements in . Notice that as for all we have .  However, as for all we know that is the root of the polynomial in . By the [[Mathematics\/Number Theory\/Results\/Lemma - Factor Theorem|Factor Theorem]] there are thus at most roots of , but there are distinct roots. Thus .  Thus the LCM of all orders of elements in is . Notice that as is abelian every Sylow -subgroup of is normal, and thus there is only one of each. This means that can be written as a direct product of cyclic groups of relatively prime order; Hence is itself cyclic.     January 2014 (4)   Let be a field and its group of units.   Prove that any finite subgroup of is cyclic.  Suppose that is algebraically closed that has characteristic . For any positive integer , prove that has a subgroup of order if and only if does not divide .     Let be a field and its group of units.  Let be a finite subgroup of . Let .  Let be the LCM of all orders of elements in . Then and thus is a root of the polynomial for all . By every element divides , and so we have . However, by the Factor Theorem the polynomial can have at most roots, and we have distinct elements, and thus we have . Thus there must exist an element of order in , making cyclic, as desired.  Let and suppose that has characteristic and is algebraically closed.  First, suppose by way of contradiction that has a subgroup of order , , and . From Part (a) is cyclic and generated by some such that . However, as we see that , given that we are in an additive group. This contradicts the fact that is the smallest number such that .  Now we proceed via the contrapositive. Suppose does not have a subgroup of order . Then there cannot exist a unit such that . Consider the polynomial . As is algebraically closed there exists some root . (how do we know this isn't 1???) Notice that this means and so is a unit in . As cannot have order , it must have an order that divides . We also know that as we are in a field of characteristic . Thus either divides or is . Either there is a non-identity root of . Note that in this case as we are...      Computations and Examples       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Formal Proofs       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Qualifying Exam Problems       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     "
+  "body": "Irredicuble Polynomials    Eliminate all other factors, and the one which remains must be the truth.   Sir Arthur Conan Doyle     For an integral domain , a polynomial is called irreducible if is not a unit and whenever , either or is a unit. (It follows that such a also cannot be .)      Let be a field and .   If has degree one, it is irreducible.    If has a root and , then is not irreducible (since it factors as for some of degree at least ).    If , then is irreducible if and only if has no roots.    (Rational Root Test) If and all the coefficients of are integers and is a root of with , then divides and divides . More generally, the same holds with replaced by any PID and replaced by its field of fractions.        Never, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever try to use the converse of (2) or a version of (3) for polynomials of degree more than ; they are false.    Does have any roots? No. The only possible roots are and , and a careful check rules these out. Is irreducible? No, it factors as times      For a PID and , define the content of , written , to be the gcd of the coefficients of . Equivalently, is the generator of the principal ideal generated by the coefficients of .     Gauss's Lemma: Part 1   Let where is a PID. Then (up to associates).    We first show the following special case: If and , then .  To see this, pick a prime and write for the result of modding out the coefficients of by . Then (since the map sending to is a ring map). Since , we have that and . Since is a domain, it follows that . This proves does not divide all of the coefficients of . Since was arbitrary, .  For the general case, let and where and . Note that and . By the case already proven, . It follows .     Gauss's Lemma: Part 2   Let be a PID and let be its field of fractions, and assume is a non-constant polynomial with coefficients in . is irreducible in if and only if it is irreducible in and .    Suppose with . We can find an element of such that . (We can take to be the product of all the denominators of the coefficients of , for example; this is called “clearing denominators''.) Similarly, there is an such that . Further, write where , , and and similarly where , , and . We have Using Gauss's Lemma, Part 1, we have and hence We also have (since we've already proven that ).  So and thus by dividing we arrive at But is irreducible in . It follows that either or must be a unit in (i.e., a unit in ) and it follows that either or is a unit in . This proves is irreducible in .  ( ) Say irreducible in and . If with then, since is irreducible in , one of or must be a constant. But since , this constant must be .     Let's prove is irreducible. By Gauss's Lemma, we just need to show it is irreducible in .  If did factor in as a product of monic polynomials, then would also factor in this way. Now . This has no roots (the only possibilities are or ) and so if it did factor it would have to factor as a product of two quadratic, irreducible polynomials. The only such polynomial in is (the others all have roots). But . This proves is irreducible in and hence must be irreducible in .    Eisenstein's Criterion   Let be a PID with field of fractions and assume is a polynomial. Suppose there is a prime element such that , for all , and . Then is irreducible in .    We have with and . Since does not divide the leading coefficient of , we have . It therefore follows that the three assumptions involving the coefficients of are also satisfied by the coefficients . Moreover, is irreducible in if and only if is irreducible in . We may therefore assume without loss of generality that .  By Gauss's Lemma we just need to prove it is irreducible in . Suppose with , where and where and .  Upon modding out by we get The assumptions on give that with . Since is a domain, it follows that On the other hand, we also have and since , we have that or . So or . This can only occur if or .  We have shown that if factors in as , then at least one of of must be a constant polynomial. Since , this factor must be a unit. So is irreducible in .     For instance, is irreducible in thanks to Eisenstein applied with . (Note that it isn't irreducible in since it does not have unit content.)     For any prime , the -th cyclotomic polynomial  is irreducible in .    Consider the ring isomorphism given by . I claim that To see this, we note that and by the binomial theorem we have Since , the claim follows.  By Eisenstein, is irreducible in and, since is an isomorphism, it follows that is irreducible in .      Assume is an integral domain and is a monic polynomial with coefficients in . If there is a prime element such that is irreducible in , then is irreducible in .    We prove the contra-positive. Suppose is reducible in . Then we have for some monic, non-constant polynomials and in . It follows that holds in . But since and are monic, non-constant polynomials, and are both non-constant polynomials in and hence is reducible in .     The assumption that be monic in this Proposition is necessary. Consider for instance . Modding out by yields a linear polynomial in which is thus irreducible. But clearly isn't irreducible in . (The Proposition can be generalized to non-monic polynomials by adding the assumption that does not divided the leading coefficient of .)     Let be a field and a finite subgroup of the multiplicative group . Prove that is cyclic.    Let be a field and a finite subgroup of order the multiplicative group . Let denote the LCM of all orders of elements in . Notice that as for all we have .  However, as for all we know that is the root of the polynomial in . By the [[Mathematics\/Number Theory\/Results\/Lemma - Factor Theorem|Factor Theorem]] there are thus at most roots of , but there are distinct roots. Thus .  Thus the LCM of all orders of elements in is . Notice that as is abelian every Sylow -subgroup of is normal, and thus there is only one of each. This means that can be written as a direct product of cyclic groups of relatively prime order; Hence is itself cyclic.      Let and and recall (from 817) that is a PID and is its field of fractions.   Prove is irreducible in .    Prove is irreducible in but is reducible in .       Let and .  Suppose by way of contradiction that is not prime in . Thus , with non-units and where and , for . Thus . As , we see that . Note that the possible factorizations of 49 in are and .  However, if then , making it a unit. So and thus . As , either or . But then either or , and as , we have a contradiction. Thus is prime in . Using Eisenstein's Criterion with , we see that is irreducible in .  Using Eisenstein's Criterion with , we see that is irreducible in . However, in observe that As neither nor are units in (as has no inverse), we see that is reducible in .      Show that is irreducible.        Let be a field and be irreducible. Prove the is a field.  Give an explicit construction (with justification) of a field of size . (You may use without proof that the unique irreducible quadratic in is .      Let be a field and be irreducible. Thus is prime, making a prime ideal in and a domain. Suppose that there existed a proper ideal such that . However, as is a field we know that is a PID, meaning for some . If then , meaning that . Thus is a maximal ideal and we have a field.  Let . Let . Suppose with irreducible. Thus either both and have degree or one of them has degree . As , we see that without loss of generality . Then or , but neither divide . Thus is irreducible, making a field, the elements of which are: 1. 0 2. 1 3. 4. 5. 6. 7. 8. 9. 10. 11. 12. 13. 14. 15. 16. , making it a field of order .      Let be a field and a finite subgroup of the multiplicative group . Prove that is cyclic.    Let be a field and a finite subgroup of order the multiplicative group . Let denote the LCM of all orders of elements in . Notice that as for all we have .  However, as for all we know that is the root of the polynomial in . By the [[Mathematics\/Number Theory\/Results\/Lemma - Factor Theorem|Factor Theorem]] there are thus at most roots of , but there are distinct roots. Thus .  Thus the LCM of all orders of elements in is . Notice that as is abelian every Sylow -subgroup of is normal, and thus there is only one of each. This means that can be written as a direct product of cyclic groups of relatively prime order; Hence is itself cyclic.     January 2014 (4)   Let be a field and its group of units.   Prove that any finite subgroup of is cyclic.  Suppose that is algebraically closed that has characteristic . For any positive integer , prove that has a subgroup of order if and only if does not divide .     Let be a field and its group of units.  Let be a finite subgroup of . Let .  Let be the LCM of all orders of elements in . Then and thus is a root of the polynomial for all . By every element divides , and so we have . However, by the Factor Theorem the polynomial can have at most roots, and we have distinct elements, and thus we have . Thus there must exist an element of order in , making cyclic, as desired.  Let and suppose that has characteristic and is algebraically closed.  First, suppose by way of contradiction that has a subgroup of order , , and . From Part (a) is cyclic and generated by some such that . However, as we see that , given that we are in an additive group. This contradicts the fact that is the smallest number such that .  Now we proceed via the contrapositive. Suppose does not have a subgroup of order . Then there cannot exist a unit such that . Consider the polynomial . As is algebraically closed there exists some root . (how do we know this isn't 1???) Notice that this means and so is a unit in . As cannot have order , it must have an order that divides . We also know that as we are in a field of characteristic . Thus either divides or is . Either there is a non-identity root of . Note that in this case as we are...      Computations and Examples       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Formal Proofs       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Qualifying Exam Problems       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     "
 },
 {
   "id": "def-irreducible-polynomial",
@@ -8542,27 +8389,27 @@ var ptx_lunr_docs = [
   "body": " January 2014 (4)   Let be a field and its group of units.   Prove that any finite subgroup of is cyclic.  Suppose that is algebraically closed that has characteristic . For any positive integer , prove that has a subgroup of order if and only if does not divide .     Let be a field and its group of units.  Let be a finite subgroup of . Let .  Let be the LCM of all orders of elements in . Then and thus is a root of the polynomial for all . By every element divides , and so we have . However, by the Factor Theorem the polynomial can have at most roots, and we have distinct elements, and thus we have . Thus there must exist an element of order in , making cyclic, as desired.  Let and suppose that has characteristic and is algebraically closed.  First, suppose by way of contradiction that has a subgroup of order , , and . From Part (a) is cyclic and generated by some such that . However, as we see that , given that we are in an additive group. This contradicts the fact that is the smallest number such that .  Now we proceed via the contrapositive. Suppose does not have a subgroup of order . Then there cannot exist a unit such that . Consider the polynomial . As is algebraically closed there exists some root . (how do we know this isn't 1???) Notice that this means and so is a unit in . As cannot have order , it must have an order that divides . We also know that as we are in a field of characteristic . Thus either divides or is . Either there is a non-identity root of . Note that in this case as we are...   "
 },
 {
-  "id": "exercise-269",
+  "id": "exercise-264",
   "level": "2",
-  "url": "sec-irrpoly.html#exercise-269",
+  "url": "sec-irrpoly.html#exercise-264",
   "type": "Exercise",
   "number": "18.3.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-270",
+  "id": "exercise-265",
   "level": "2",
-  "url": "sec-irrpoly.html#exercise-270",
+  "url": "sec-irrpoly.html#exercise-265",
   "type": "Exercise",
   "number": "18.3.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-271",
+  "id": "exercise-266",
   "level": "2",
-  "url": "sec-irrpoly.html#exercise-271",
+  "url": "sec-irrpoly.html#exercise-266",
   "type": "Exercise",
   "number": "18.3.3",
   "title": ".",
@@ -8758,18 +8605,18 @@ var ptx_lunr_docs = [
   "body": " Regard as a subfield of and let . We may also describe as where we set .  I claim that is in fact a simple extension of . For example, say . I claim that . Note that and So , and hence . Likewise, So . This example is an illustration of the Primitive Element Theorem (which we might or might not have time to prove this semester): Every finite extension of is generated by a single element (or, in other words, is simple). This example shows is simple and is a primitive element of this field extension.  "
 },
 {
-  "id": "exercise-272",
+  "id": "exercise-267",
   "level": "2",
-  "url": "field-extension-basics.html#exercise-272",
+  "url": "field-extension-basics.html#exercise-267",
   "type": "Exercise",
   "number": "19.1.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-273",
+  "id": "exercise-268",
   "level": "2",
-  "url": "field-extension-basics.html#exercise-273",
+  "url": "field-extension-basics.html#exercise-268",
   "type": "Exercise",
   "number": "19.1.2",
   "title": ".",
@@ -9001,108 +8848,108 @@ var ptx_lunr_docs = [
   "body": "  Assume that is a finite extension of fields of degree .   Prove that if is irreducible of degree and then remains irreducible when regarded as an element of the ring .  Show, by means of an explicit example with justification, that the statement in part (a) would become false if the assumption that were omitted.      Let be a finite extension of fields of degree .  Suppose that is irreducible of degree and .  First, note that if then will remain irreducible in  . Suppose then that . There exists an algebraically closed extension such that has a root  . Consider . As is algebraic in we know there exists some unique irreducible minimum polynomial of degree , and thus that  . Using the Degree Formula we see that However, and so for some , so . As we must have . But was defined to be the degree of , which divides . As and , we see that , so so for some . As irreducible polynomials multiplied by a constant are still irreducible, we see that is indeed irreducible in .  Let be a non-constant irreducible polynomial of degree in . Let . Because is irreducible and is a PID, is a maximal ideal. Thus is a field , , and is a root of in  . Hence is no longer irreducible by Theorem 2.2   "
 },
 {
-  "id": "proposition-100",
+  "id": "proposition-101",
   "level": "2",
-  "url": "sec-algebraic.html#proposition-100",
+  "url": "sec-algebraic.html#proposition-101",
   "type": "Proposition",
   "number": "19.43",
   "title": "",
   "body": "  Consider the two field extensions and .   Prove they have degrees and , respectively. {}: For the second one, show is irreducible in .    Find a primitive element for the extension and find .    Find a primitive element for the extension and find .       Consider the polynomial . This has a root , which is not in . Thus, as has degree 2, it is irreducible by Theorem 2.2 , making it the minimal polynomial of . Thus by Theorem 2.31 we see that .  Next, consider the polynomial . This has a root , which is not in as and . Let for convenience. As , has degree 2, it is irreducible by Theorem 2.2 , making it the minimal polynomial of . Thus by Theorem 2.31 we see that . Thus by the degree formula we have .  By Example 2.22 we see that . However, as is the root of it is algebraic over we see that and thus that .  Next, consider the polynomial . This has a root , which is not in as and . Let for convenience. As , has degree 2, it is irreducible by Theorem 2.2 , making it the minimal polynomial of . Thus by Theorem 2.31 we see that . Thus by the degree formula we have .  Consider , and note that and . Thus and . Thus is a primitive element of this extension field.  Next, consider the monic polynomial , and observe However, as , we see that is the root of this polynomial. Since this is a monic polynomial of degree , it must be the minimal polynomial as well. Thus the minimal polynomial of .  Consider , and note that , and .  Consider , and note that , and thus . Thus , so is a root of this polynomial. Since this is a monic polynomial of degree , it must be the minimal polynomial as well. Thus the minimal polynomial of .   "
 },
 {
-  "id": "proposition-101",
+  "id": "proposition-102",
   "level": "2",
-  "url": "sec-algebraic.html#proposition-101",
+  "url": "sec-algebraic.html#proposition-102",
   "type": "Proposition",
   "number": "19.44",
   "title": "",
   "body": "  Let be the field extension of obtained by adjoining to all four complex roots of the polynomial . ( is what's known as the “splitting field\" of over .) That is, where , , , and .   Prove that there exist a field extension such that , and . Tip : Note that is real number; find it explicitly.    Determine, with justification, .       Let be the field extension of obtained by adjoining to all four complex roots of the polynomial .  Let . Note that by Eisenstein's Criterion using we see that is the root of an irreducible polynomial in . Thus by Theorem 2.31 we see that is the degree of the minimum polynomial of this extension. However, as is monic and of degree 4, we see that it is the minimal polynomial and thus that . As , this extension will be contained in the real numbers, and thus that .  Next, observe and thus that .  Note that is the root of , and since and , we see that is irreducible in due to it having degree 2. As is monic and degree 2 we see its the minimal polynomial of . By the Degree Formula, we see that .  Note that   ,   ,   , and   , all of which can be written with and . Thus .  We already know that , and thus all that remains is to show that can be expressed in terms of the . Observe and thus that . Thus , and . Hence .   "
 },
 {
-  "id": "proposition-102",
+  "id": "proposition-103",
   "level": "2",
-  "url": "sec-algebraic.html#proposition-102",
+  "url": "sec-algebraic.html#proposition-103",
   "type": "Proposition",
   "number": "19.45",
   "title": "",
   "body": "  Let be the splitting field of over where is an odd prime integer. Find . Tip : Consider both chains and .    As seen in Example 2.60, is a root of the th cyclotomic polynomial, which is monic and irreducible in . Hence is the minimal polynomial of the th cyclotomic polynomial in , and thus the field extension has degree over by Theorem 2.31. It follows that .  Next, note that is a root of the polynomial , making it algebraic over . Using Eisenstein's Criterion in conjunction with the prime we see that is irreducible in . As , by Problem 5 on the previous homework we see that is irreducible in as well. As is irreducible and monic, we see that it is the minimal polynomial of in , and thus Using the degree formula, we see that Notice that , where , which are all roots of . By the Factor Theorem, there can be no other roots of this polynomial. Thus .  Additionally, notice that and are both roots of . Thus they are both contained in . Observe . Hence , and thus we see that . Therefore, .   "
 },
 {
-  "id": "proposition-103",
+  "id": "proposition-104",
   "level": "2",
-  "url": "sec-algebraic.html#proposition-103",
+  "url": "sec-algebraic.html#proposition-104",
   "type": "Proposition",
   "number": "19.46",
   "title": "",
   "body": "  Consider the two field extensions and .   Show that has degree .    Show that has degree .    Find a primitive element for the extension .    Find .      "
 },
 {
-  "id": "proposition-104",
+  "id": "proposition-105",
   "level": "2",
-  "url": "sec-algebraic.html#proposition-104",
+  "url": "sec-algebraic.html#proposition-105",
   "type": "Proposition",
   "number": "19.47",
   "title": "January 2014 (5).",
   "body": "January 2014 (5)   Let be a subfield of and suppose every element of is a root of a polynomial of degree in . Prove that . (Note: is not assumed to be a finite extension of .)   "
 },
 {
-  "id": "proposition-105",
+  "id": "proposition-106",
   "level": "2",
-  "url": "sec-algebraic.html#proposition-105",
+  "url": "sec-algebraic.html#proposition-106",
   "type": "Proposition",
   "number": "19.48",
   "title": "",
   "body": "  Let be a prime integer and let be a root of the polynomial .   Find, with justification, the degree of the field extension over .  Deduce that the polynomial is irreducible in .     "
 },
 {
-  "id": "proposition-106",
+  "id": "proposition-107",
   "level": "2",
-  "url": "sec-algebraic.html#proposition-106",
+  "url": "sec-algebraic.html#proposition-107",
   "type": "Proposition",
   "number": "19.49",
   "title": "",
   "body": "  Let be the splitting field over of the polynomial   Find, with justification, .  Note that (where is the unique positive, real fifth root of ) is one of the roots of . Prove is the trivial group.      Let be the splitting field over of the polynomial   Note that is irreducible in by Eisenstein's Criterion ( ). The roots of are                   5.      As is monic and irreducible it is the minimum polynomial of . Let , and notice . Note that   Let be a primitive root of unity. This is the root a cyclotomic polynomial of degree which is irreducible in . As this has relatively prime order to it is irreducible there as well. Let , and notice . Notice that , and so , completing the proof.   "
 },
 {
-  "id": "proposition-107",
+  "id": "proposition-108",
   "level": "2",
-  "url": "sec-algebraic.html#proposition-107",
+  "url": "sec-algebraic.html#proposition-108",
   "type": "Proposition",
   "number": "19.50",
   "title": "",
   "body": "  Let and be subfields of a field with and . Let and . Recall that denotes the smallest (with respect to containment) subfield of which satisfies and .   Show that .  Show that if then   Give an example satisfying       Let and be subfields of a field with and . Let and .  We're going to go slightly out of order. By Part (b), we see when . This is the largest possible size of , as everything is irreducible where it can be. Thus   Suppose . As and are finite extensions of they are also algebraic. Thus there exists and such that has degree and has degree .  Thus , making irreducible in . Thus . Notice that , as it is the smallest (with respect to containment) subfield of which satisfies and . Thus we have , as desired.  Let , , and Notice that , and thus .   "
 },
 {
-  "id": "exercise-276",
+  "id": "exercise-271",
   "level": "2",
-  "url": "sec-algebraic.html#exercise-276",
+  "url": "sec-algebraic.html#exercise-271",
   "type": "Exercise",
   "number": "19.2.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-277",
+  "id": "exercise-272",
   "level": "2",
-  "url": "sec-algebraic.html#exercise-277",
+  "url": "sec-algebraic.html#exercise-272",
   "type": "Exercise",
   "number": "19.2.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-278",
+  "id": "exercise-273",
   "level": "2",
-  "url": "sec-algebraic.html#exercise-278",
+  "url": "sec-algebraic.html#exercise-273",
   "type": "Exercise",
   "number": "19.2.3",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-279",
+  "id": "exercise-274",
   "level": "2",
-  "url": "sec-algebraic.html#exercise-279",
+  "url": "sec-algebraic.html#exercise-274",
   "type": "Exercise",
   "number": "19.2.4",
   "title": "Qual.",
@@ -9217,36 +9064,36 @@ var ptx_lunr_docs = [
   "body": "June 2011 (10)   Let and be matrices with entries in . Recall that and are said to be similar over if there exists an invertible matrix, with entries in , such that . Prove the following statements about matrices and with entries in :   If is a field extension, and and are similar over , then they are similar over .   is similar over to its transpose .     Suppose and are similar in . As and have entries in , then they are both in . Thus there exist matrices in RCF such that is similar to and that is similar to . However, is similar to and that is similar to in as well. Notice and are still in RCF. However, as the RCF is unique, this means that in , making them equal in as well. Thus is similar to , as similarity is transitive.  Let be the algebraic closure of . Thus has a Jordan Canonical Form in . For each Jordan Block in the JCF of , let denote the transpose of the identity matrix, and notice that . As this is the case for every Jordan block, we see that the JCF of , , is similar to its transpose. As the is similar to , is similar to , and is similar to , we see that in by transitivity. From Part (1), this yields in .   "
 },
 {
-  "id": "exercise-280",
+  "id": "exercise-275",
   "level": "2",
-  "url": "sec-closure.html#exercise-280",
+  "url": "sec-closure.html#exercise-275",
   "type": "Exploration",
   "number": "19.62",
   "title": "",
   "body": " In each part, determine, with justification, the degree of the given field extension.   1. .     .     "
 },
 {
-  "id": "exercise-281",
+  "id": "exercise-276",
   "level": "2",
-  "url": "sec-closure.html#exercise-281",
+  "url": "sec-closure.html#exercise-276",
   "type": "Exercise",
   "number": "19.3.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-282",
+  "id": "exercise-277",
   "level": "2",
-  "url": "sec-closure.html#exercise-282",
+  "url": "sec-closure.html#exercise-277",
   "type": "Exercise",
   "number": "19.3.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-283",
+  "id": "exercise-278",
   "level": "2",
-  "url": "sec-closure.html#exercise-283",
+  "url": "sec-closure.html#exercise-278",
   "type": "Exercise",
   "number": "19.3.3",
   "title": ".",
@@ -9379,18 +9226,18 @@ var ptx_lunr_docs = [
   "body": "  Assume is an algebraic field extension such that every non-constant polynomial in splits completely into linear factors in . Prove is an algebraic closure of .    Let be an algebraic field extension such that every non-constant polynomial in splits completely into linear factors in .  Let be a polynomial in , so , with , and let be a root of . There [[Theorem – Existence and Uniqueness of Algebraic Closures|exists]] some field extension such that is algebraically closed, meaning . Notice that is [[Mathematics\/Definitions\/Algebraic|algebraic]] over .  Consider the chain of field extensions making algebraic over as well. As every non-constant polynomial in splits completely into linear factors in , this yields .   "
 },
 {
-  "id": "proposition-117",
+  "id": "proposition-118",
   "level": "2",
-  "url": "sec-splitting.html#proposition-117",
+  "url": "sec-splitting.html#proposition-118",
   "type": "Proposition",
   "number": "19.76",
   "title": "",
   "body": "  Let be the splitting field of over . (Recall that this extension occurred on the last problem set, and that where - , - , - , and - .) Prove .    Note that from the previous homework, we know that , and that . Additionally, we know the following: - , - , - , and - . Note that by Eisenstein's Criterion using we see that is irreducible in . As has characteristic 0, we see that is separable as well.  As is the splitting field of an irreducible polynomial in , by Theorem 2.90 we see that . In the Gaussian integers, it is known that if both and are nonzero then, is a Gaussian prime if and only if is an ordinary prime. Note that , and that , which is prime. Thus is prime in . Thus we may invoke Eisenstein's Criterion using to see that is irreducible in , as does not divide 5, but we'll prove it just to be sure.  Suppose . Then , so , and thus . As 5 has no imaginary component, it must be the case that , and thus that . Substituting in, we see that , and thus that , which has historically not been an integer.  Anyway, we may thus apply Porism 2.61 to see that there exists some such that . We may regard as an element of since, by definition, is a subgroup of .  As , observe the following glory: With that in mind, we examine and and don't forget So corresponds to the permutation (1 2 3 4). We have proven that is isomorphic to a subgroup of having order at most 8 and that it contains an element or order 2 and (1 2 3 4), an element of order 4. Since the subgroup generated by these two elements has order 8, we see that . (Also by , only has one subgroup of order 8, and it is ).   "
 },
 {
-  "id": "proposition-118",
+  "id": "proposition-119",
   "level": "2",
-  "url": "sec-splitting.html#proposition-118",
+  "url": "sec-splitting.html#proposition-119",
   "type": "Proposition",
   "number": "19.77",
   "title": "",
@@ -9424,27 +9271,27 @@ var ptx_lunr_docs = [
   "body": "  Let where is an odd prime, and let be the splitting field of over . Find, with justification, .    Let where is an odd prime, and let be the splitting field of over . Using Eisenstein's Criterion with we see that is irreducible in . Notice that is a root of this polynomial. As is monic and irreducible it is the minimum polynomial of , and thus . Let be a primitive root of unity. Notice that is a root of the cyclotomic polynomial, , which is irreducible in by the Gospel of Mark.  As is the splitting field of , there exists a root of . Consider . As is algebraic in we know there exists some unique irreducible minimal polynomial of degree , and thus that . By the Degree Formula we see However, and so for some , so . As we must have . But was defined to be the degree of , which divides . As and , we see that , so for some . As irreducible polynomials multiplied by a constant are still irreducible, we see that is indeed irreducible in .  As is monic and irreducible in we see that it is the minimum polynomial of , and thus . As , we have .   "
 },
 {
-  "id": "exercise-284",
+  "id": "exercise-279",
   "level": "2",
-  "url": "sec-splitting.html#exercise-284",
+  "url": "sec-splitting.html#exercise-279",
   "type": "Exercise",
   "number": "19.4.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-285",
+  "id": "exercise-280",
   "level": "2",
-  "url": "sec-splitting.html#exercise-285",
+  "url": "sec-splitting.html#exercise-280",
   "type": "Exercise",
   "number": "19.4.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-286",
+  "id": "exercise-281",
   "level": "2",
-  "url": "sec-splitting.html#exercise-286",
+  "url": "sec-splitting.html#exercise-281",
   "type": "Exercise",
   "number": "19.4.3",
   "title": ".",
@@ -9622,45 +9469,45 @@ var ptx_lunr_docs = [
   "body": " Let and be indeterminants. The extension of fields given by identifying with is not separable. Somewhat more precisely, is isomorphism to the subfield of consisting of elements of the form , with the isomorphism given by sending to .  Then is a root of the polynomial . Moreover since is the field of fractions of the PID and is a prime element of , we may apply Eisenstein (and Gauss) to conclude that is irreducible in . This proves that . This polynomial is not separable since in it is equal to and hence has a repeated root. (Or, you may use that its derivative is .)  "
 },
 {
-  "id": "exercise-287",
+  "id": "exercise-282",
   "level": "2",
-  "url": "sec-separable.html#exercise-287",
+  "url": "sec-separable.html#exercise-282",
   "type": "Exercise",
   "number": "19.5.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-288",
+  "id": "exercise-283",
   "level": "2",
-  "url": "sec-separable.html#exercise-288",
+  "url": "sec-separable.html#exercise-283",
   "type": "Exercise",
   "number": "19.5.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-289",
+  "id": "exercise-284",
   "level": "2",
-  "url": "sec-separable.html#exercise-289",
+  "url": "sec-separable.html#exercise-284",
   "type": "Exercise",
   "number": "19.5.3",
   "title": ".",
   "body": " Assume is field and let . Recall that is separable if has no repeated roots in an [[Mathematics\/Definitions\/Algebraic Closure|algebraic closure]] of .   Assume . Prove that is separable if and only if the irreducible factorization of in has no repeated factors.  Fix a prime integer , let be the field with elements, and let be the [[Mathematics\/Definitions\/Field of Fractions|field of fractions]] of the polynomial ring . Prove is irreducible in but not separable.    Coming soon to an OER near you!       Suppose that is not separable, so has a repeated root in , which we denote . So is a factor of . By Corollary 2.96, is separable, so the minimal polynomial of in has no repeated root in . As does have a repeated root (by supposition) it cannot be the minimum polynomial of . Thus for some such that has as a root, otherwise would not obtain its repeated root. However, this means that , meaning that has as a factor as well. Thus we see that is a repeated factor of , one from the minimum polynomial, one from .   Suppose that the prime factorization of in admits a repeated factor. Thus there exists some prime (and thus irreducible) such that . However, has a root in , so in we see that has as a root as well, as . But since has factor , it shows up twice in the factorization of because . So has multiplicity at least 2, so is not separable.    Let be indeterminants, , and such that (as seen in Example 2.78). Note then that is a root of the polynomial .  Moreover, since is the field of fractions of the PID and is a prime element of , we may apply Eisenstein's Criterion (using ) to conclude that is irreducible in . Thus is the minimum polynomial of in .  However, as the derivative of this polynomial is , we see that the is not separable by Proposition 2.72. However, by the Freshman's Dream, we see that . But as , we see that the prime factorization of admits no repeated factor.     "
 },
 {
-  "id": "exercise-290",
+  "id": "exercise-285",
   "level": "2",
-  "url": "sec-separable.html#exercise-290",
+  "url": "sec-separable.html#exercise-285",
   "type": "Exercise",
   "number": "19.5.4",
   "title": "June 2011 (5).",
   "body": "June 2011 (5)  Let F be a field, and let . Recall that is separable provided, for every extension field has no multiple roots in . (A multiple root is an element such that in    Prove that is separable if and only if and its derivative are relatively prime in .  Suppose that is irreducible and that the degree of is not a multiple of the characteristic of . Prove that is separable.     Coming soon to an OER near you!   Let is a finite extension of fields and that the characteristic of is , where is a prime, and suppose there exists an element such that .  Consider the polynomial , and notice that , as we are in a field of characteristic . However, this characteristic also yields . As is a field we have as a UFD, and thus as is irreducible in it is also prime. Therefore this is the unique factorization of up to associates. If was reducible it would thus have to be divisible into power os , which will never be reducible as . Thus is irreducible in , making it the minimal polynomial of . However, if this would make the splitting field of over , which it is not, given . Thus .  "
 },
 {
-  "id": "exercise-291",
+  "id": "exercise-286",
   "level": "2",
-  "url": "sec-separable.html#exercise-291",
+  "url": "sec-separable.html#exercise-286",
   "type": "Exercise",
   "number": "19.5.5",
   "title": ".",
@@ -9847,90 +9694,90 @@ var ptx_lunr_docs = [
   "body": "Galois and Characteristic  Let be a field of characteristic , for a prime integer , and assume is a finite field extension of such that there exists an element of with but . Then is not Galois since in this case. You will prove this in the Homework.  "
 },
 {
-  "id": "exercise-292",
+  "id": "exercise-287",
   "level": "2",
-  "url": "sec-galext.html#exercise-292",
+  "url": "sec-galext.html#exercise-287",
   "type": "Exercise",
   "number": "20.1.1",
   "title": ".",
   "body": " Let be a finite Galois extension and let be the Galois group of . Suppose that and let be the minimum polynomial of over . Prove that    Coming soon to an OER near you!   Let be a finite Galois extension and let be the Galois group of . Suppose that and let be the minimal polynomial of over . Thus acts on the roots of faithfully. Additionally, as is the minimal polynomial of it is irreducible, making the action transitive as well.  As is Galois over we know that splits into linear factors, each of the form , where is a root of . As our action is transitive, for every root there exists a such that , or .  "
 },
 {
-  "id": "exercise-293",
+  "id": "exercise-288",
   "level": "2",
-  "url": "sec-galext.html#exercise-293",
+  "url": "sec-galext.html#exercise-288",
   "type": "Exercise",
   "number": "20.1.2",
   "title": ".",
   "body": " Let be a field of characteristic , , and consider the polynomial .   Prove that is either irreducible over or it splits into distinct linear factors over . ( Hint : If is a root of , consider for .)  Suppose is irreducible over and let be a splitting field of over . Prove that the Galois group of over is cyclic.    Coming soon to an OER near you!   Let be a field of characteristic , , and consider the polynomial .   Suppose has a root, , in . Then . Consider for some , and observe . By The Freshman's Dream, we have , but as , we really have . By Fermat's Little Theorem, , and thus . Thus we have found roots of , and thus splits into linear factors.  Suppose then that no root of exists in . Let be a splitting field of over , and note that from the above paragraph we have . As , we see , and thus is separable. Hence is a Galois extension. Thus there exists a such that . So for some . Notice . As is prime, we see that , and thus we need to apply to  times in order to get back to . Thus , so . Thus . Thus the minimum polynomial of must have degree . As is a root of and is monic, it must be the minimal polynomial and is thus irreducible.    Suppose is irreducible over and let be a splitting field of over . Let be a root of Consider . By part (a), contains all the roots of , hence . As is monic and irreducible, it is the minimum polynomial of , and thus . Hence . All groups of prime order are cyclic, completing the proof.     "
 },
 {
-  "id": "exercise-294",
+  "id": "exercise-289",
   "level": "2",
-  "url": "sec-galext.html#exercise-294",
+  "url": "sec-galext.html#exercise-289",
   "type": "Exercise",
   "number": "20.1.3",
   "title": "June 2010 Problem (9).",
   "body": "June 2010 Problem (9)  Consider .   Let be a root of and prove is a Galois field extension of . (Hint: First show is primitive -th root of unity.)    Find the Galois group .      Consider .   Let be a root of . Note that , and so so yay! It's primitive. Using one th primitive root we can obtain all the others, specifically . So we multiply each root by this to get all the others. So we have our splitting field.    Since is Galois, we see that . So is either or The roots of are for .  By the Porism there exists a such that . Let , and note that . Additionally, note that when and when .  Observe then that Similarly, we see that and . Thus corresponds to the permutation .  Using the Porism again we see there exists a such that . Using a similar process as above we see that corresponds to . However, observe that , while . Thus these elements do not commute, so we cannot be in . Thus .     "
 },
 {
-  "id": "exercise-295",
+  "id": "exercise-290",
   "level": "2",
-  "url": "sec-galext.html#exercise-295",
+  "url": "sec-galext.html#exercise-290",
   "type": "Exercise",
   "number": "20.1.4",
   "title": "January 2014 (6).",
   "body": "January 2014 (6)  Let be a primitive th root of unity.   Find and generator(s) for .    Draw the subfield lattice for and indicate the degrees of each extension. (You do not have to find generators for each of the subfields)      Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-296",
+  "id": "exercise-291",
   "level": "2",
-  "url": "sec-galext.html#exercise-296",
+  "url": "sec-galext.html#exercise-291",
   "type": "Exercise",
   "number": "20.1.5",
   "title": ".",
   "body": " Let be a finite Galois field extension of . Let and be subfields of such that is normal, and . Prove that    Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-297",
+  "id": "exercise-292",
   "level": "2",
-  "url": "sec-galext.html#exercise-297",
+  "url": "sec-galext.html#exercise-292",
   "type": "Exercise",
   "number": "20.1.6",
   "title": "June 2011 (6).",
   "body": "June 2011 (6)  Let be the splitting field of the polynomial over . Find , and describe the elements of explicitly.   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-298",
+  "id": "exercise-293",
   "level": "2",
-  "url": "sec-galext.html#exercise-298",
+  "url": "sec-galext.html#exercise-293",
   "type": "Exercise",
   "number": "20.1.7",
   "title": ".",
   "body": " Let be a finite Galois field extension, , and . Let be an element of and its minimal polynomial over ; set .    Prove there are distinct elements in the set .  Prove      Coming soon to an OER near you!   Let be a finite Galois field extension, , and . Let be an element of and its minimal polynomial over ; set .  "
 },
 {
-  "id": "exercise-299",
+  "id": "exercise-294",
   "level": "2",
-  "url": "sec-galext.html#exercise-299",
+  "url": "sec-galext.html#exercise-294",
   "type": "Exercise",
   "number": "20.1.8",
   "title": ".",
   "body": " Let be an extension of fields and let . Show that    Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-300",
+  "id": "exercise-295",
   "level": "2",
-  "url": "sec-galext.html#exercise-300",
+  "url": "sec-galext.html#exercise-295",
   "type": "Exercise",
   "number": "20.1.9",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-301",
+  "id": "exercise-296",
   "level": "2",
-  "url": "sec-galext.html#exercise-301",
+  "url": "sec-galext.html#exercise-296",
   "type": "Exercise",
   "number": "20.1.10",
   "title": ".",
@@ -10045,135 +9892,135 @@ var ptx_lunr_docs = [
   "body": "Finding Unique Intermediate Field   If is a finite Galois extension of degree , then I claim there is a unique intermediate field with and that must be a Galois extension over .  To see this, set . Then and by the Sylow theorems, there is a unique Sylow -subgroup, call it , and hence is normal in . It follows from the Fundamental Theorem that is an intermediate field that   is Galois over and    satisfies . Moreover, it is unique since has just one subgroup of index .     In fact, there are exactly two groups of order up to isomorphism, the cyclic one and one that is a (non-trivial) semi-direct product of by . So, there are just two possible lattices of intermediate fields for such a field extension.   "
 },
 {
-  "id": "exercise-302",
+  "id": "exercise-297",
   "level": "2",
-  "url": "sec-ftgt.html#exercise-302",
+  "url": "sec-ftgt.html#exercise-297",
   "type": "Exercise",
   "number": "20.2.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-303",
+  "id": "exercise-298",
   "level": "2",
-  "url": "sec-ftgt.html#exercise-303",
+  "url": "sec-ftgt.html#exercise-298",
   "type": "Exercise",
   "number": "20.2.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-304",
+  "id": "exercise-299",
   "level": "2",
-  "url": "sec-ftgt.html#exercise-304",
+  "url": "sec-ftgt.html#exercise-299",
   "type": "Exercise",
   "number": "20.2.3",
   "title": "",
   "body": " Let be the splitting field over of the polynomial .   Find all intermediate fields with (including possibly and ) such that is Galois over .    For each field you found in (a), find with justification a primitive generator (i.e., find so that .      Let be the splitting field over of the polynomial    First, notice that is irreducible in by Eisenstein's Criterion . Let denote a primitive third root of unity. The roots of are the following:    ,     , and     .   As is irreducible and monic we see that it is the minimum polynomial of over . Let and notice .  Recall that is isomorphic to a subgroup of . As and , we see another extension is needed, and that extension will have at least degree . Thus, due to size constraints, we see .  By the FTGT each Galois intermediate extension between and corresponds to a normal subgroup of , which are the normal subgroups of .  The elements of are the following: The subgroup has index in and is thus normal. None of the order subgroups are normal in , so is the only strictly intermediate extension.  Recall , meaning , so corresponds to a subgroup of order in , so its not Galois unfortunately. However, is a degree extension that is an intermediate field, as is a root of the irreducible polynomial .  With all this in mind, notice: - is a splitting field of , and has the primitive generator by . - is our only strictly intermediate field, and has the primitive generator - Finally, is Galois over , and has the primitive generator .       "
 },
 {
-  "id": "exercise-305",
+  "id": "exercise-300",
   "level": "2",
-  "url": "sec-ftgt.html#exercise-305",
+  "url": "sec-ftgt.html#exercise-300",
   "type": "Exercise",
   "number": "20.2.4",
   "title": ".",
   "body": " Let be the splitting field over of the polynomial . Prove that the Galois group is isomorphic to .   Coming soon to an OER near you!   Let be the splitting field over of the polynomial , the roots of which are:         , and     . Using Eisenstein's Criterion]] with we see that is irreducible in . As is monic and irreducible it is the minimum polynomial of and . Thus, by the FTGT we know there exists an element of order in .     Notice now that has exactly two complex roots, making complex conjugation correspond to a transposition in . Thus we have an element of order and an element of order , so the order of must be at least by .  As we know is isomorphic to a subgroup of , which has order . Thus is isomorphic to .  "
 },
 {
-  "id": "exercise-306",
+  "id": "exercise-301",
   "level": "2",
-  "url": "sec-ftgt.html#exercise-306",
+  "url": "sec-ftgt.html#exercise-301",
   "type": "Exercise",
   "number": "20.2.5",
   "title": ".",
   "body": " Let be an irreducible cubic (degree ) polynomial having exactly one real root. Let be the splitting field of over . Show that .   Coming soon to an OER near you!   Let be an irreducible cubic (degree ) polynomial having exactly one real root, and let be the splitting field of over .  As is the splitting field of , it is a normal extension]. As has characteristic 0, is separable (because is algebraic extension, as its the extension caused by adjoining each root of , and algebraic extensions of algebraic extensions are algebraic). Thus by we see .  By Proposition 2.83 we see that is isomorphic to some subgroup of , where is the number of distinct roots of . As cubic and irreducible we know that the real root must be irrational, which we will denote . Consider the extension . As , we see that . However, neither of our complex roots are in this extension, and so another extension is needed to reach . But this extension would also have a degree larger than , so . As , there exists no subgroup of it that can be isomorphic to, given that . Thus we see that , meaning that our complex roots are distinct.  Then or , the only possible sizes of subgroups of . However, by the previous argument we see that as , the only viable subgroup of is itself. Thus .  "
 },
 {
-  "id": "exercise-307",
+  "id": "exercise-302",
   "level": "2",
-  "url": "sec-ftgt.html#exercise-307",
+  "url": "sec-ftgt.html#exercise-302",
   "type": "Exercise",
   "number": "20.2.6",
   "title": ".",
   "body": " Let be a Galois extension of with .   Prove that there exists a subfield of containing F with .    Determine whether there must also exist a subfield of containing with .      Coming soon to an OER near you!   Let be a Galois extension of with .   Let be a Sylow -subgroup of . Notice that . By the FTGT there exists an intermediate field extension such that . By the Degree Formula, we have , with and . Thus .    Notice that as is a prime dividing the order of there must exist an element of order by Cauchy's Theorem. The cyclic subgroup, , generated by this element has order . By the FTGT there exists an intermediate field extension such that . By the Degree Formula, we have , with and . Thus .     "
 },
 {
-  "id": "exercise-308",
+  "id": "exercise-303",
   "level": "2",
-  "url": "sec-ftgt.html#exercise-308",
+  "url": "sec-ftgt.html#exercise-303",
   "type": "Exercise",
   "number": "20.2.7",
   "title": ".",
   "body": " Suppose that is a finite Galois extension with Galois group , and that . Prove that if and only if the images of under elements of are distinct.   Coming soon to an OER near you!   First, suppose that . As is a Galois extension the minimum polynomial of in splits completely into linear factors. Thus acts faithfully on the roots of , which includes . Thus the images of under elements of are distinct.  Now suppose that the images of under elements of are distinct, and suppose by way of contradiction that there exists some that is not in . Consider the intermediate field . By the FTGT there exists a nontrivial subgroup of whose elements fix elements of , including , a contradiction.  "
 },
 {
-  "id": "exercise-309",
+  "id": "exercise-304",
   "level": "2",
-  "url": "sec-ftgt.html#exercise-309",
+  "url": "sec-ftgt.html#exercise-304",
   "type": "Exercise",
   "number": "20.2.8",
   "title": "January 2012 (5).",
   "body": "January 2012 (5)  Let .   Find the minimum polynomial of over .    Let be the splitting field of over . Find the Galois group of .    Find all subgroups of and generators for the corresponding intermediate fields of .      Coming soon to an OER near you!   Let .   Let which factors as two irreducible polynomials and has no roots in , making it irreducible. Thus is the minimal polynomial of .    Notice that which also has degree . Let denote the Galois group of . Thus is a group of order , making it isomorphic to or . Notice that the elements of are the following: - and , - and , - and , and - and . All of these automorphisms have degree , making .    Thus are only two subgroups of , and . The first, , corresponds to and is generated by , where corresponds to and is generated by .     "
 },
 {
-  "id": "exercise-310",
+  "id": "exercise-305",
   "level": "2",
-  "url": "sec-ftgt.html#exercise-310",
+  "url": "sec-ftgt.html#exercise-305",
   "type": "Exercise",
   "number": "20.2.9",
   "title": ".",
   "body": " Let be the splitting field of over . Prove there exists a unique intermediate field such that and is a Galois extension.   Coming soon to an OER near you!   Let be the splitting field of over . Let be a primitive fourth root of unity. Thus .  Notice that the roots of are the following: - , - , - , and - . Thus .  Using Eisenstein's Criterion]] with we see that is irreducible in . Let , and notice that is the minimum polynomial of . Let and observe .  As is the root of the monic irreducible polynomial we have and . Thus is isomorphic to a subgroup of of order , making it .  Notice that is an extension of degree , and thus by the FTGT we have a subgroup such that . As we have , and thus . This makes the cyclic subgroup of generated by a reflection, the only element of order in , making it unique. This is also a normal subgroup of , making Galois over .  "
 },
 {
-  "id": "exercise-311",
+  "id": "exercise-306",
   "level": "2",
-  "url": "sec-ftgt.html#exercise-311",
+  "url": "sec-ftgt.html#exercise-306",
   "type": "Exercise",
   "number": "20.2.10",
   "title": ".",
   "body": " Consider This polynomial has exactly three real roots, a fact that you may use without proof.   Show that is irreducible in .  Let be a splitting field of $over . Show that is a Galois extension and find the isomorphism class of the Galois group .    Coming soon to an OER near you!      Notice that is prime in , and thus is irreducible in by Eisenstein's Criterion.    Let be a real root of . As is irreducible this root is not in . As is the root of a monic irreducible polynomial of degree , we see that . By the FTGT there exists a subgroup of with order , making it a cyclic subgroup generated by some element of order .  However, as only has complex roots we see that complex conjugation corresponds to an element of order in . Thus we have a transposition and a -cycle, meaning we can generate all of . .     "
 },
 {
-  "id": "exercise-312",
+  "id": "exercise-307",
   "level": "2",
-  "url": "sec-ftgt.html#exercise-312",
+  "url": "sec-ftgt.html#exercise-307",
   "type": "Exercise",
   "number": "20.2.11",
   "title": ".",
   "body": " Consider . This polynomial has exactly three real roots, a fact that you may use without proof.   Show that is irreducible in .  Let be a splitting field of over . Show that is a Galois extension with Galois group isomorphic to the symmetric group .    Coming soon to an OER near you!   Consider .   Using Eisenstein's Criterion with we see that is indeed irreducible in .    Let be a splitting field of over . As is monic and irreducible, it is the minimum polynomial for some such that . As has complex roots, we know that , and is thus an intermediate field. By the FTGT there exists a subgroup of such that . As we know , making for some . Thus is an element of order in . As is a degree polynomial, we know is isomorphic to a subgroup of . Thus must be a -cycle.  Recall that has exactly two complex roots. Thus , the complex conjugation automorphism, has order , making it a transposition. From the Gospel of Mark we were told that we did not need to prove that a transposition and an -cycle generate all of , and thus      "
 },
 {
-  "id": "exercise-313",
+  "id": "exercise-308",
   "level": "2",
-  "url": "sec-ftgt.html#exercise-313",
+  "url": "sec-ftgt.html#exercise-308",
   "type": "Exercise",
   "number": "20.2.12",
   "title": ".",
   "body": " Let be a finite Galois field extension of degree . Prove there exists a unique intermediate field (i.e., such that .   Coming soon to an OER near you!   Let be a finite Galois field extension of degree .  Note that as , we see that the number of Sylow- subgroups of divides and is congruent to . Thus there is exactly one Sylow- subgroup of , which we denote . By the Fundamental Theorem of Galois Theory, corresponds to an intermediate field extension . Note that as has order 5, we see that , and thus as well. By the Degree Formula we see that . As and , we see that , as desired. As corresponds to the unique subgroup of or order 5, we see that this extension must be unique as well.  "
 },
 {
-  "id": "exercise-314",
+  "id": "exercise-309",
   "level": "2",
-  "url": "sec-ftgt.html#exercise-314",
+  "url": "sec-ftgt.html#exercise-309",
   "type": "Exercise",
   "number": "20.2.13",
   "title": ".",
   "body": " Let be the splitting field over of the polynomial .   Find all intermediate fields with (including possibly and ) such that is Galois over .    For each field you found in (a), find with justification a primitive generator (i.e., find so that ).      Coming soon to an OER near you!      Invoking Eisenstein's Criterion and setting we see that is an irreducible cubic with exactly one real root. Thus . Thus the subgroups of are as follows: and By the Fundamental Theorem of Galois Theory there exist four intermediate field extensions: , and . Note that as and are all Sylow-2 subgroups of , by none are normal in . However, as , the smallest prime dividing 6, we see that is the only strictly intermediate field that is Galois over .    As the identity map is the only automorphism from that fixes and , we see that is Galois over itself. As all finite extensions of fields with characteristic are separable, we see that is also Galois over . Thus and are the only intermediate fields that are Galois over .     "
 },
 {
-  "id": "exercise-315",
+  "id": "exercise-310",
   "level": "2",
-  "url": "sec-ftgt.html#exercise-315",
+  "url": "sec-ftgt.html#exercise-310",
   "type": "Exercise",
   "number": "20.2.14",
   "title": ".",
   "body": " Let be the splitting field of the polynomial over . Give, with full justification, a presentation for the Galois group that has two generators.   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-316",
+  "id": "exercise-311",
   "level": "2",
-  "url": "sec-ftgt.html#exercise-316",
+  "url": "sec-ftgt.html#exercise-311",
   "type": "Exercise",
   "number": "20.2.15",
   "title": ".",
@@ -10351,9 +10198,9 @@ var ptx_lunr_docs = [
   "body": "IASN   If , and for all , then    .     .     . If moreover is injective, then .     . If moreover is injective, then .      "
 },
 {
-  "id": "theorem-122",
+  "id": "theorem-125",
   "level": "2",
-  "url": "sec-sets-functions.html#theorem-122",
+  "url": "sec-sets-functions.html#theorem-125",
   "type": "Theorem",
   "number": "A.19",
   "title": "Containments of Images, Preimages.",
@@ -10396,9 +10243,9 @@ var ptx_lunr_docs = [
   "body": "Properties of Projections and Product Inclusions      Projection maps are surjections.    Product inclusion maps are injections.      "
 },
 {
-  "id": "lemma-37",
+  "id": "lemma-35",
   "level": "2",
-  "url": "sec-sets-functions.html#lemma-37",
+  "url": "sec-sets-functions.html#lemma-35",
   "type": "Lemma",
   "number": "A.24",
   "title": "Subsets of Cartesian Products.",
@@ -10446,8 +10293,8 @@ var ptx_lunr_docs = [
   "url": "sec-numbers-and-cardinality.html",
   "type": "Section",
   "number": "A.2",
-  "title": "Number Systems, Counting, and Cardinality",
-  "body": "Number Systems, Counting, and Cardinality  Number Systems (*)  Natural Numbers        Divide       Prime       GCD, LCM       Division Algorithm        Counting (*)  Binomial Coefficient       Binomial Theorem   EMPTY     Cardinality    A set is finite if there is a bijection for some natural number , or is empty. In this case the number is called the cardinality of .  A set is infinite if is not finite. A set is countable if there is an injection .      Let be a set.   The following are equivalent:    is finite.    There is an onto function for some     There is a one-to-one function for some .       The following are equivalent:    is infinite.    There is an onto function .    There is a one-to-one function .       The following are equivalent:    is countable.    There is an onto function .    There is an injection .               The class of finite sets is closed under: subsets, intersections, finite unions, and finite products.    The class of countable sets is closed under: subsets, intersections, countable unions, and finite products.        "
+  "title": "Number Systems, Counting, Cardinality",
+  "body": "Number Systems, Counting, Cardinality  Number Systems (*)  Natural Numbers        Divide       Prime       GCD, LCM       Division Algorithm        Counting (*)  Binomial Coefficient       Binomial Theorem   EMPTY     Cardinality    A set is finite if there is a bijection for some natural number , or is empty. In this case the number is called the cardinality of .  A set is infinite if is not finite. A set is countable if there is an injection .      Let be a set.   The following are equivalent:    is finite.    There is an onto function for some     There is a one-to-one function for some .       The following are equivalent:    is infinite.    There is an onto function .    There is a one-to-one function .       The following are equivalent:    is countable.    There is an onto function .    There is an injection .               The class of finite sets is closed under: subsets, intersections, finite unions, and finite products.    The class of countable sets is closed under: subsets, intersections, countable unions, and finite products.        "
 },
 {
   "id": "def-natural-numbers",
@@ -10545,8 +10392,8 @@ var ptx_lunr_docs = [
   "url": "sec-matrices.html",
   "type": "Section",
   "number": "A.3",
-  "title": "Matrices and Vector Spaces (*)",
-  "body": "Matrices and Vector Spaces (*)  Coming soon!  "
+  "title": "Matrices, Vector Spaces (*)",
+  "body": "Matrices, Vector Spaces (*)  Coming soon!  "
 },
 {
   "id": "sec-poset-lattice",
@@ -10576,9 +10423,9 @@ var ptx_lunr_docs = [
   "body": "Divisible Group   An additive group is divisible if for every and every nonzero integer , there exists an element such that .   "
 },
 {
-  "id": "example-153",
+  "id": "example-156",
   "level": "2",
-  "url": "section-65.html#example-153",
+  "url": "section-65.html#example-156",
   "type": "Example",
   "number": "B.2",
   "title": "Examples of Divisble Groups.",
@@ -10666,45 +10513,45 @@ var ptx_lunr_docs = [
   "body": "Composition Factors   If a group has a composition series (for example, if is finite), then the factors of such a composition series are called the composition factors of . They are well-defined up to ordering and isomorphism, thanks to .   "
 },
 {
-  "id": "example-154",
+  "id": "example-157",
   "level": "2",
-  "url": "section-65.html#example-154",
+  "url": "section-65.html#example-157",
   "type": "Example",
   "number": "B.12",
   "title": "",
   "body": "  Suppose is cyclic of order and say is a prime factorization of . Then the factors of are of order , respectively, and hence are all simple group. Thus the composition factors of are    "
 },
 {
-  "id": "example-155",
+  "id": "example-158",
   "level": "2",
-  "url": "section-65.html#example-155",
+  "url": "section-65.html#example-158",
   "type": "Example",
   "number": "B.13",
   "title": "",
   "body": "   is a normal series. Since is cyclic of order , it has a composition series as in the previous example. By inserting this into the length two normal series given here, we obtain a composition series of with composition factors    "
 },
 {
-  "id": "proposition-131",
+  "id": "proposition-132",
   "level": "2",
-  "url": "section-65.html#proposition-131",
+  "url": "section-65.html#proposition-132",
   "type": "Proposition",
   "number": "B.14",
   "title": "",
   "body": "  ssume is a group and . If and both have composition series, then so does . Moreover, in this case, the list of composition factors of is the concatenation of the lists of composition factors of and .    This is a consequence of the Isomorphism Theorems. In detail, a composition series for has the form where . If is a composition seires for , then is a composition series for since for all . (For the case , interpret as .)   "
 },
 {
-  "id": "example-156",
+  "id": "example-159",
   "level": "2",
-  "url": "section-65.html#example-156",
+  "url": "section-65.html#example-159",
   "type": "Example",
   "number": "B.15",
   "title": "",
   "body": "  As you showed in the homework, has a normal subgroup of order . has a composition series of the form and so the composition factors of are .  The group has order and it has an element of order , namely . If is any group of oder with an element or order , then the composition factors of are . (In fact, every group of order has an element of order .) To see this, note that is normal in since it has index two.  Using the Proposition, the compition factors of are   We can make this more explicit too. The subgroup of generated by corresponds to the subgroup of that is generated by the elements of along with . We have with factors .   "
 },
 {
-  "id": "example-157",
+  "id": "example-160",
   "level": "2",
-  "url": "section-65.html#example-157",
+  "url": "section-65.html#example-160",
   "type": "Example",
   "number": "B.16",
   "title": "",
@@ -10720,18 +10567,18 @@ var ptx_lunr_docs = [
   "body": "Butterly Lemma of Zassenhaus   If is a group, , , , and , then , , , and there is an isomorphism    "
 },
 {
-  "id": "theorem-130",
+  "id": "theorem-133",
   "level": "2",
-  "url": "section-65.html#theorem-130",
+  "url": "section-65.html#theorem-133",
   "type": "Theorem",
   "number": "B.18",
   "title": "",
   "body": "  Any two normal series of a group admit equivalent refinements.    Given two normal series and of a group , the idea is to insert a copy of each into the other. In more detail, we form a refinement of the first normal series by replacing the single step with for each , noting that and . Create a refinement of the second normal series in an analogous way. The Butterfly Lemma implies that these two refinements are equivalent to each other.   "
 },
 {
-  "id": "exercise-318",
+  "id": "exercise-313",
   "level": "2",
-  "url": "section-65.html#exercise-318",
+  "url": "section-65.html#exercise-313",
   "type": "Exploration",
   "number": "B.19",
   "title": "",
@@ -11206,18 +11053,18 @@ var ptx_lunr_docs = [
   "body": "Triangular Matrix and CharPoly  If is upper or lower triangular, then . As you may recall from an undergraduate class, in this case are the eigenvalues of . More on this later.  "
 },
 {
-  "id": "example-171",
+  "id": "example-174",
   "level": "2",
-  "url": "section-67.html#example-171",
+  "url": "section-67.html#example-174",
   "type": "Example",
   "number": "B.70",
   "title": "Problem.",
   "body": "Problem  Let be the -vector space consisting of polynomials in the variable of degree at most and let be the -linear operator given by where and denote the first and second derivatives of . (You may take it on faith that is -linear.) Find the determinant, the trace, and the characteristic polynomial of .  "
 },
 {
-  "id": "example-172",
+  "id": "example-175",
   "level": "2",
-  "url": "section-67.html#example-172",
+  "url": "section-67.html#example-175",
   "type": "Example",
   "number": "B.71",
   "title": "Problem.",
@@ -11278,81 +11125,81 @@ var ptx_lunr_docs = [
   "body": "May 2022  Section I: Group Theory  Problem 1   Let be a finite -group for some prime and a normal subgroup of . Prove that , where is the center of .    Let be a finite -group for some prime and a normal subgroup of .  First, we show that the center of is nontrivial. Suppose by way of contradiction that . We examine the conjugacy classes of . From the , we know Note that for some , meaning that the only divisors of are powers of . In finite groups, each conjugacy class must [[Corollary – for Finite Groups|divide]] the order of the group. By , , where . Since |Z(G)|=1, we see that , which is impossible given that . Thus .  As it is a [[Mathematics\/Modern Algebra\/Results\/Corollary – Disjoint Union of Conjugacy Classes|union]] of conjugacy classes of the elements it contains, one of which is . Assume by way of contradiction that , meaning that is the only element in whose conjugacy class is a singleton. This yields However, by  must also be a group, and thus by an analogous element counting argument as above we see that there exists some such that , or that for all . Thankfully, this means that , and thus we have .    Problem 2   A non-abelian group of order .   Prove there exists a non-abelian group of .    Find, with justification, a presentation of the group you found in part (1).       Use a semi-direct product.     Let be the cyclic group of order , and let be the cyclic group of order . Let be the homomorphism defined by for , where we identify with via the isomorphism given by sending the non-identity automorphism to the generator of .   Then the semi-direct product has order and is non-abelian. To see that is non-abelian, note that for any , since has no non-trivial automorphisms.   To find a presentation of , we need to identify the generators and relations. Since and are both cyclic, we can take the generators to be and respectively. Moreover, since is normal in , we have for some .   To determine the value of , note that acts on by automorphisms, and the non-identity automorphism of is inversion . Since , we must have .  Therefore, a presentation of is given by .    Problem 3   Let G be a group of order . Prove that is not simple.    By we know that and . Thus our options are and . Suppose that .  Let act on by conjugation, yielding the homomorphism via the . This map is non-trivial from part (2) of , but does not divide , and thus cannot be injective. Then the kernel of this homomorphism is non-trivial, normal subgroup of by . Thus is not simple.     Section  Problem 4   Let be a commutative ring with identity, and assume . Let and be ideals such that .   Prove .  Prove the following special case of : There is an isomorphism of rings of the form .     Let be a commutative ring with identity, and assume . Let and be ideals such that .     First, note that both and are ideals (See: [[Proposition – Combinations of Ideals|Result]]).  Let . Thus , where each and . As and are both ideals, each term in this sum is contained both in and . Thus, by absorption, . Hence .  Let . Thus and . Note that as , there exists some and such that . So . As we see that , with and . Thus , yielding .    Let be defined by .  Notice that if , we have , and so . Let . Thus and , and so and . Hence , and so .  Observe making a homomorphism of rings.  Let . As , we can write and as and . However, as and , we have .  Consider the element , and observe However, as and , we see Thus is a surjective homomorphism. Hence, by the First Isomorphism Theorem, we see .       Problem 5   Prove the Rank-Nullity Theorem: If is a field, and are a finite dimensional -vector spaces, and is an -linear transformation, then (Recall the rank of is the dimension of its image and the nullity of is the dimension of its kernel.)    See:    Problem 6   Let be a field and a positive integer. We say an matrix with entries in is unipotent if is nilpotent (i.e., for some ). For the field , find (with complete justification) the number of similarity classes of unipotent matrices and give an explicit representative for each class.    Let , a positive integer, and a unipotent matrix with entries in . Thus is nilpotent. Let be an eigenvalue of . Then , so and . As , we have and .  Notice that as is an eigenvalue of , we have as an eigenvalue of .  Assume inductively that is an eigenvalue of . Notice making an eigenvalue of . Thus if is an eigenvalue of , it is an eigenvalue of as well. As is nilpotent, there exists some such that . This means that . As and is a scalar in a field (and hence integral domain) we have . Thus the only eigenvalue of is , meaning that the only eigenvalue of is .  Eigenvalues of correspond to the roots of , which is a monic quartic polynomial, as is a matrix. Thus , as all roots must be .  Two matrices are similar if and only if they share the same invariant factors. Given that invariant factors divide and each invariant factor must divide the following one, the possible sets of invariant factors for are the following:    ,     ,     ,     , and     .   We identify the companion matrices for each possible invariant factor:   and We define the following: 1. , 2. , 3. , 4. , and 5. . As each of these matrices is in , they are explicit representatives for each similarity class.     Section  Problem 7   Let be the splitting field of over    Find, with justification, the degree of over .  Let where , a primitive root of unity. Prove is irreducible in .     Let be the splitting field of over   Part (a) First, notice that by ( ) we have irreducible in .  The roots of are the following: 1. 2. 3. 4. 5.   As is monic and irreducible, it is the minimum polynomial of . Let and notice .  Notice that , a primitive -th root of unity, is the root of , the fourth cyclotomic polynomial, which is monic and irreducible in (See: [[Proposition – Cyclotomic Polynomial Irreducible|Result]]). Thus is the minimum polynomial of and .  We know that , as every generator of can be written using and Let , , and . By the , we have - , and thus - , and thus As and we know that .  Thus we have .  Part (b) Let where . From Part (a) we know . As , we know that has degree . As is a monic polynomial of degree , we see that it is the minimum polynomial and thus irreducible.    Problem 8   Let be the splitting field of over . Prove there exists a unique intermediate field such that and is a Galois extension.    Let be the splitting field of over . Let be a primitive fourth root of unity. Thus .  Notice that the roots of are the following: - , - , - , and - . Thus .  Using with we see that is irreducible in . Let , and notice that is the minimum polynomial of . Let and observe .  As is the root of the monic irreducible polynomial we have and . Thus is isomorphic to a subgroup of of order , making it .  Notice that is an extension of degree , and thus by the we have a subgroup such that . As we have , and thus . This makes the cyclic subgroup of generated by a reflection, the only element of order in , making it unique. This is also a normal subgroup of , making Galois over .    Problem 9   Assume is an algebraic field extension such that every non-constant polynomial in splits completely into linear factors in . Prove is an algebraic closure of .    Let be an algebraic field extension such that every non-constant polynomial in splits completely into linear factors in .  Let be a polynomial in , so , with , and let be a root of . There [[Theorem – Existence and Uniqueness of Algebraic Closures|exists]] some field extension such that is algebraically closed, meaning . Notice that is algebraic over .  Consider the chain of field extensions making algebraic over as well. As every non-constant polynomial in splits completely into linear factors in , this yields .     "
 },
 {
-  "id": "problem-19",
+  "id": "problem-1",
   "level": "2",
-  "url": "section-69.html#problem-19",
+  "url": "section-69.html#problem-1",
   "type": "Problem",
   "number": "G.1",
   "title": "Problem 1.",
   "body": "Problem 1   Let be a finite -group for some prime and a normal subgroup of . Prove that , where is the center of .    Let be a finite -group for some prime and a normal subgroup of .  First, we show that the center of is nontrivial. Suppose by way of contradiction that . We examine the conjugacy classes of . From the , we know Note that for some , meaning that the only divisors of are powers of . In finite groups, each conjugacy class must [[Corollary – for Finite Groups|divide]] the order of the group. By , , where . Since |Z(G)|=1, we see that , which is impossible given that . Thus .  As it is a [[Mathematics\/Modern Algebra\/Results\/Corollary – Disjoint Union of Conjugacy Classes|union]] of conjugacy classes of the elements it contains, one of which is . Assume by way of contradiction that , meaning that is the only element in whose conjugacy class is a singleton. This yields However, by  must also be a group, and thus by an analogous element counting argument as above we see that there exists some such that , or that for all . Thankfully, this means that , and thus we have .   "
 },
 {
-  "id": "problem-20",
+  "id": "problem-2",
   "level": "2",
-  "url": "section-69.html#problem-20",
+  "url": "section-69.html#problem-2",
   "type": "Problem",
   "number": "G.2",
   "title": "Problem 2.",
   "body": "Problem 2   A non-abelian group of order .   Prove there exists a non-abelian group of .    Find, with justification, a presentation of the group you found in part (1).       Use a semi-direct product.     Let be the cyclic group of order , and let be the cyclic group of order . Let be the homomorphism defined by for , where we identify with via the isomorphism given by sending the non-identity automorphism to the generator of .   Then the semi-direct product has order and is non-abelian. To see that is non-abelian, note that for any , since has no non-trivial automorphisms.   To find a presentation of , we need to identify the generators and relations. Since and are both cyclic, we can take the generators to be and respectively. Moreover, since is normal in , we have for some .   To determine the value of , note that acts on by automorphisms, and the non-identity automorphism of is inversion . Since , we must have .  Therefore, a presentation of is given by .   "
 },
 {
-  "id": "problem-21",
+  "id": "problem-3",
   "level": "2",
-  "url": "section-69.html#problem-21",
+  "url": "section-69.html#problem-3",
   "type": "Problem",
   "number": "G.3",
   "title": "Problem 3.",
   "body": "Problem 3   Let G be a group of order . Prove that is not simple.    By we know that and . Thus our options are and . Suppose that .  Let act on by conjugation, yielding the homomorphism via the . This map is non-trivial from part (2) of , but does not divide , and thus cannot be injective. Then the kernel of this homomorphism is non-trivial, normal subgroup of by . Thus is not simple.   "
 },
 {
-  "id": "problem-22",
+  "id": "problem-4",
   "level": "2",
-  "url": "section-69.html#problem-22",
+  "url": "section-69.html#problem-4",
   "type": "Problem",
   "number": "G.4",
   "title": "Problem 4.",
   "body": "Problem 4   Let be a commutative ring with identity, and assume . Let and be ideals such that .   Prove .  Prove the following special case of : There is an isomorphism of rings of the form .     Let be a commutative ring with identity, and assume . Let and be ideals such that .     First, note that both and are ideals (See: [[Proposition – Combinations of Ideals|Result]]).  Let . Thus , where each and . As and are both ideals, each term in this sum is contained both in and . Thus, by absorption, . Hence .  Let . Thus and . Note that as , there exists some and such that . So . As we see that , with and . Thus , yielding .    Let be defined by .  Notice that if , we have , and so . Let . Thus and , and so and . Hence , and so .  Observe making a homomorphism of rings.  Let . As , we can write and as and . However, as and , we have .  Consider the element , and observe However, as and , we see Thus is a surjective homomorphism. Hence, by the First Isomorphism Theorem, we see .      "
 },
 {
-  "id": "problem-23",
+  "id": "problem-5",
   "level": "2",
-  "url": "section-69.html#problem-23",
+  "url": "section-69.html#problem-5",
   "type": "Problem",
   "number": "G.5",
   "title": "Problem 5.",
   "body": "Problem 5   Prove the Rank-Nullity Theorem: If is a field, and are a finite dimensional -vector spaces, and is an -linear transformation, then (Recall the rank of is the dimension of its image and the nullity of is the dimension of its kernel.)    See:   "
 },
 {
-  "id": "problem-24",
+  "id": "problem-6",
   "level": "2",
-  "url": "section-69.html#problem-24",
+  "url": "section-69.html#problem-6",
   "type": "Problem",
   "number": "G.6",
   "title": "Problem 6.",
   "body": "Problem 6   Let be a field and a positive integer. We say an matrix with entries in is unipotent if is nilpotent (i.e., for some ). For the field , find (with complete justification) the number of similarity classes of unipotent matrices and give an explicit representative for each class.    Let , a positive integer, and a unipotent matrix with entries in . Thus is nilpotent. Let be an eigenvalue of . Then , so and . As , we have and .  Notice that as is an eigenvalue of , we have as an eigenvalue of .  Assume inductively that is an eigenvalue of . Notice making an eigenvalue of . Thus if is an eigenvalue of , it is an eigenvalue of as well. As is nilpotent, there exists some such that . This means that . As and is a scalar in a field (and hence integral domain) we have . Thus the only eigenvalue of is , meaning that the only eigenvalue of is .  Eigenvalues of correspond to the roots of , which is a monic quartic polynomial, as is a matrix. Thus , as all roots must be .  Two matrices are similar if and only if they share the same invariant factors. Given that invariant factors divide and each invariant factor must divide the following one, the possible sets of invariant factors for are the following:    ,     ,     ,     , and     .   We identify the companion matrices for each possible invariant factor:   and We define the following: 1. , 2. , 3. , 4. , and 5. . As each of these matrices is in , they are explicit representatives for each similarity class.   "
 },
 {
-  "id": "problem-25",
+  "id": "problem-7",
   "level": "2",
-  "url": "section-69.html#problem-25",
+  "url": "section-69.html#problem-7",
   "type": "Problem",
   "number": "G.7",
   "title": "Problem 7.",
   "body": "Problem 7   Let be the splitting field of over    Find, with justification, the degree of over .  Let where , a primitive root of unity. Prove is irreducible in .     Let be the splitting field of over   Part (a) First, notice that by ( ) we have irreducible in .  The roots of are the following: 1. 2. 3. 4. 5.   As is monic and irreducible, it is the minimum polynomial of . Let and notice .  Notice that , a primitive -th root of unity, is the root of , the fourth cyclotomic polynomial, which is monic and irreducible in (See: [[Proposition – Cyclotomic Polynomial Irreducible|Result]]). Thus is the minimum polynomial of and .  We know that , as every generator of can be written using and Let , , and . By the , we have - , and thus - , and thus As and we know that .  Thus we have .  Part (b) Let where . From Part (a) we know . As , we know that has degree . As is a monic polynomial of degree , we see that it is the minimum polynomial and thus irreducible.   "
 },
 {
-  "id": "problem-26",
+  "id": "problem-8",
   "level": "2",
-  "url": "section-69.html#problem-26",
+  "url": "section-69.html#problem-8",
   "type": "Problem",
   "number": "G.8",
   "title": "Problem 8.",
   "body": "Problem 8   Let be the splitting field of over . Prove there exists a unique intermediate field such that and is a Galois extension.    Let be the splitting field of over . Let be a primitive fourth root of unity. Thus .  Notice that the roots of are the following: - , - , - , and - . Thus .  Using with we see that is irreducible in . Let , and notice that is the minimum polynomial of . Let and observe .  As is the root of the monic irreducible polynomial we have and . Thus is isomorphic to a subgroup of of order , making it .  Notice that is an extension of degree , and thus by the we have a subgroup such that . As we have , and thus . This makes the cyclic subgroup of generated by a reflection, the only element of order in , making it unique. This is also a normal subgroup of , making Galois over .   "
 },
 {
-  "id": "problem-27",
+  "id": "problem-9",
   "level": "2",
-  "url": "section-69.html#problem-27",
+  "url": "section-69.html#problem-9",
   "type": "Problem",
   "number": "G.9",
   "title": "Problem 9.",
@@ -11368,81 +11215,81 @@ var ptx_lunr_docs = [
   "body": "January 2022  Section I: Group Theory  Problem 1   Let be a group, and be subgroups of .   Give an example of and such that is not a subgroup of .    Suppose now that and where is prime. Prove that either or .          Let , , and . Notice that , and thus , which does not divide . Thus is not a subgroup of , as this would contradict     Suppose there exists some such that . We examine . Notice that since has prime order it is cyclic by , and thus generated by any non-identity element, such as . Thus any element in can be written in the form , and any element in can subsequently be written as for some . Thus .         Problem 2   Let be a group of order .   Show that there are at most two options for , the number of Sylow -subgroups of and list them.  Prove that is not simple.     Let be a group of order .     By we know that and . The possible options are thus and .    Suppose by way of contradiction that is simple. Thus , so . Let act on the by conjugation, yielding the homomorphism granted via the . By (2) in we see that is not trivial. As we see that , meaning that the is non-trivial, yielding a non-trivial normal subgroup of , a contradiction.         Problem 3 (*)    Let be a subgroup of a group . Prove that if and only if there is a group and a homomorphism such that   Let be the group of all matrices with entries from having determinant . Let be prime number, and take to be the subset of consisting of all with and . Prove that is a normal subgroup of .        First, suppose . Let (which is a group since is normal in ) and define such that . Let , and observe that , and so . Let , meaning that , placing . As [[Lemma – Quotient Map is Surjective Homomorphism|quotient maps are homomorphisms]], this direction is complete.  Next, suppose there exists a group and and a homomorphism such that . Let and consider . Observe given that . Thus for all , making a normal subgroup of .    So , and are multiples of Let mod out each of the entries of a matrix by . Thus any matrix in sent to must have congruent to and congruent to . So is the kernel of this map.  f(AB)=AB mod p f(A)f(B)=Amodp Bmodp        Section  Problem 4 (*)    Prove that a finite integral domain must be a field.  Prove that if is a commutative ring and is a prime ideal such that has finite index as an additive subgroup of , then is a maximal ideal. Give an example to show that this implication may fail if the finite index assumption is dropped.     Coming Soon!    Problem 5 (*)   Let F be a field, and finite dimensional -vector spaces, and an -linear transformation.   Prove that there exists bases of and such that the matrix representing with respect to these bases has the form where is the identity matrix and all the 's denote zero matrices of the appropriate size.  Prove that the number appearing in part (a) is independent of choice of bases; that is, if, for another pair of bases of and , the matrix representing has the form then .     Let F be a field, and finite dimensional -vector spaces, and an -linear transformation.     We form and in steps.  Start by picking an ordered basis of the image of . For each pick such that and set . Then pick a basis of the kernel of . Let us list the elements of as .  I claim that is a basis of . (Note that since for all with and for all .) Pick . Then, since spans the image of , we have for some scalars . It follows that and hence, since the kernel is spanned by , we have for some . We rearranging this equation, we conclude and thus spans .  Now say for some 's in . Since for all and for all , this gives that . Since is linearly independent, we have for . Going back to the original equation   , we see that and hence for all , since is linearly independent.  Finally we extend to an ordered basis of arbitrarily.  By our construction, for any we have and hence     Coming soon!       Problem 6   Let be any field.   Let and be two matrices with entries in . Prove and are similar if and only if they have the same characteristic polynomial and the same minimum polynomial.  Show, by way of an example with justification, that the previous part would become false if were replaced by .  Give an example of a field and two matrices with entries in having the same minimum polynomial that are not similar.     Let be any field.     Let and be two matrices with entries in . First, suppose that . Matrices are similar if and only if they share the same invariant factors. As minimum polynomial is an invariant factor and the characteristic polynomial is a product of the invariant factors, we see that and must share the same invariant factors.  Next suppose that and share the same characteristic polynomial and the same minimal polynomial. As and are matrices, the characteristic polynomial of both and must be a degree polynomial. We proceed via cases based on the degree of . - First, suppose . Then , making the only invariant factor of both and . Thus and have the same invariant factors and are therefore similar. - Next, suppose . As and the degrees of all invariant factors must sum to the , we know that , where is a degree polynomial, which we denote for and for .. Since and share the same minimum and characteristic polynomials, we see and , and thus that . Hence and share the same invariant factors, making . - Finally, suppose . The minimum polynomial is the largest invariant factor, and thus the invariant factors of and must be , making them similar.    If we replaced with then this would allow for and , allowing two sets of invariant factors:  , Notice that and . Set and , so These matrices have the same and but are not similar.    Let . We define and . Notice that these matrices are in [[Theorem – Rational Canonical Form|rational canonical form]]. However, the invariant factors of are and the invariant factors of are . Thus is not similar to , but the minimal polynomial of both is .        Section  Problem 7   Let be the splitting field of over .   Prove, by adding two appropriate roots of or otherwise, that there exists such that and .    Determine, with justification, .       Let be the splitting field of over .     First, we note that the roots of are the following:   and First we examine . Notice that is a root of the polynomial , which is irreducible in using with . Thus is monic and irreducible, making it the minimal polynomial of . Thus . Notice that , so . Thus there exists such that and .    Now let . Notice that is a root of the polynomial , which is irreducible in as and . Thus is monic and irreducible, making it the minimal polynomial of Thus and by the .  Notice that , so . Thus so is , and so we see that , and thus that as well, making . As seen in Part (a), each root can be expressed in terms of and , and so as well. Hence and we have .       Problem 8   Let be the splitting field over of the polynomial . Prove that the Galois group is isomorphic to .    Let be the splitting field over of the polynomial , the roots of which are: 1. 2. , and 3. . Using with we see that is irreducible in . As is monic and irreducible it is the minimum polynomial of and . Thus, by the we know there exists an element of order in .  Notice now that has exactly two complex roots, making complex conjugation correspond to a transposition in . Thus we have an element of order and an element of order , so the order of must be at least by .  As we know is isomorphic to a subgroup of (See: [[Proposition – Automorphisms and Permutations (Fields)|Proposition]]), which has order . Thus is isomorphic to .    Problem 9    Let be a field and be irreducible. Prove the is a field.  Give an explicit construction (with justification) of a field of size . (You may use without proof that the unique irreducible quadratic in is         Let be a field and be irreducible. Thus is prime, making a prime ideal in and a domain. Suppose that there existed a proper ideal such that . However, as is a field we know that is a PID, meaning for some . If then , meaning that . Thus is a maximal ideal and we have a field.    Let . Let . Suppose with irreducible. Thus either both and have degree or one of them has degree . As , we see that without loss of generality . Then or , but neither divide . Thus is irreducible, making a field, the elements of which are: 1. 2. 3. 4. 5. 6. 7. 8. 9. 10. 11. 12. 13. 14. 15. 16. , making it a field of order .          "
 },
 {
-  "id": "problem-28",
+  "id": "problem-10",
   "level": "2",
-  "url": "section-70.html#problem-28",
+  "url": "section-70.html#problem-10",
   "type": "Problem",
   "number": "G.10",
   "title": "Problem 1.",
   "body": "Problem 1   Let be a group, and be subgroups of .   Give an example of and such that is not a subgroup of .    Suppose now that and where is prime. Prove that either or .          Let , , and . Notice that , and thus , which does not divide . Thus is not a subgroup of , as this would contradict     Suppose there exists some such that . We examine . Notice that since has prime order it is cyclic by , and thus generated by any non-identity element, such as . Thus any element in can be written in the form , and any element in can subsequently be written as for some . Thus .        "
 },
 {
-  "id": "problem-29",
+  "id": "problem-11",
   "level": "2",
-  "url": "section-70.html#problem-29",
+  "url": "section-70.html#problem-11",
   "type": "Problem",
   "number": "G.11",
   "title": "Problem 2.",
   "body": "Problem 2   Let be a group of order .   Show that there are at most two options for , the number of Sylow -subgroups of and list them.  Prove that is not simple.     Let be a group of order .     By we know that and . The possible options are thus and .    Suppose by way of contradiction that is simple. Thus , so . Let act on the by conjugation, yielding the homomorphism granted via the . By (2) in we see that is not trivial. As we see that , meaning that the is non-trivial, yielding a non-trivial normal subgroup of , a contradiction.        "
 },
 {
-  "id": "problem-30",
+  "id": "problem-12",
   "level": "2",
-  "url": "section-70.html#problem-30",
+  "url": "section-70.html#problem-12",
   "type": "Problem",
   "number": "G.12",
   "title": "Problem 3 (*).",
   "body": "Problem 3 (*)    Let be a subgroup of a group . Prove that if and only if there is a group and a homomorphism such that   Let be the group of all matrices with entries from having determinant . Let be prime number, and take to be the subset of consisting of all with and . Prove that is a normal subgroup of .        First, suppose . Let (which is a group since is normal in ) and define such that . Let , and observe that , and so . Let , meaning that , placing . As [[Lemma – Quotient Map is Surjective Homomorphism|quotient maps are homomorphisms]], this direction is complete.  Next, suppose there exists a group and and a homomorphism such that . Let and consider . Observe given that . Thus for all , making a normal subgroup of .    So , and are multiples of Let mod out each of the entries of a matrix by . Thus any matrix in sent to must have congruent to and congruent to . So is the kernel of this map.  f(AB)=AB mod p f(A)f(B)=Amodp Bmodp      "
 },
 {
-  "id": "problem-31",
+  "id": "problem-13",
   "level": "2",
-  "url": "section-70.html#problem-31",
+  "url": "section-70.html#problem-13",
   "type": "Problem",
   "number": "G.13",
   "title": "Problem 4 (*).",
   "body": "Problem 4 (*)    Prove that a finite integral domain must be a field.  Prove that if is a commutative ring and is a prime ideal such that has finite index as an additive subgroup of , then is a maximal ideal. Give an example to show that this implication may fail if the finite index assumption is dropped.     Coming Soon!   "
 },
 {
-  "id": "problem-32",
+  "id": "problem-14",
   "level": "2",
-  "url": "section-70.html#problem-32",
+  "url": "section-70.html#problem-14",
   "type": "Problem",
   "number": "G.14",
   "title": "Problem 5 (*).",
   "body": "Problem 5 (*)   Let F be a field, and finite dimensional -vector spaces, and an -linear transformation.   Prove that there exists bases of and such that the matrix representing with respect to these bases has the form where is the identity matrix and all the 's denote zero matrices of the appropriate size.  Prove that the number appearing in part (a) is independent of choice of bases; that is, if, for another pair of bases of and , the matrix representing has the form then .     Let F be a field, and finite dimensional -vector spaces, and an -linear transformation.     We form and in steps.  Start by picking an ordered basis of the image of . For each pick such that and set . Then pick a basis of the kernel of . Let us list the elements of as .  I claim that is a basis of . (Note that since for all with and for all .) Pick . Then, since spans the image of , we have for some scalars . It follows that and hence, since the kernel is spanned by , we have for some . We rearranging this equation, we conclude and thus spans .  Now say for some 's in . Since for all and for all , this gives that . Since is linearly independent, we have for . Going back to the original equation   , we see that and hence for all , since is linearly independent.  Finally we extend to an ordered basis of arbitrarily.  By our construction, for any we have and hence     Coming soon!      "
 },
 {
-  "id": "problem-33",
+  "id": "problem-15",
   "level": "2",
-  "url": "section-70.html#problem-33",
+  "url": "section-70.html#problem-15",
   "type": "Problem",
   "number": "G.15",
   "title": "Problem 6.",
   "body": "Problem 6   Let be any field.   Let and be two matrices with entries in . Prove and are similar if and only if they have the same characteristic polynomial and the same minimum polynomial.  Show, by way of an example with justification, that the previous part would become false if were replaced by .  Give an example of a field and two matrices with entries in having the same minimum polynomial that are not similar.     Let be any field.     Let and be two matrices with entries in . First, suppose that . Matrices are similar if and only if they share the same invariant factors. As minimum polynomial is an invariant factor and the characteristic polynomial is a product of the invariant factors, we see that and must share the same invariant factors.  Next suppose that and share the same characteristic polynomial and the same minimal polynomial. As and are matrices, the characteristic polynomial of both and must be a degree polynomial. We proceed via cases based on the degree of . - First, suppose . Then , making the only invariant factor of both and . Thus and have the same invariant factors and are therefore similar. - Next, suppose . As and the degrees of all invariant factors must sum to the , we know that , where is a degree polynomial, which we denote for and for .. Since and share the same minimum and characteristic polynomials, we see and , and thus that . Hence and share the same invariant factors, making . - Finally, suppose . The minimum polynomial is the largest invariant factor, and thus the invariant factors of and must be , making them similar.    If we replaced with then this would allow for and , allowing two sets of invariant factors:  , Notice that and . Set and , so These matrices have the same and but are not similar.    Let . We define and . Notice that these matrices are in [[Theorem – Rational Canonical Form|rational canonical form]]. However, the invariant factors of are and the invariant factors of are . Thus is not similar to , but the minimal polynomial of both is .      "
 },
 {
-  "id": "problem-34",
+  "id": "problem-16",
   "level": "2",
-  "url": "section-70.html#problem-34",
+  "url": "section-70.html#problem-16",
   "type": "Problem",
   "number": "G.16",
   "title": "Problem 7.",
   "body": "Problem 7   Let be the splitting field of over .   Prove, by adding two appropriate roots of or otherwise, that there exists such that and .    Determine, with justification, .       Let be the splitting field of over .     First, we note that the roots of are the following:   and First we examine . Notice that is a root of the polynomial , which is irreducible in using with . Thus is monic and irreducible, making it the minimal polynomial of . Thus . Notice that , so . Thus there exists such that and .    Now let . Notice that is a root of the polynomial , which is irreducible in as and . Thus is monic and irreducible, making it the minimal polynomial of Thus and by the .  Notice that , so . Thus so is , and so we see that , and thus that as well, making . As seen in Part (a), each root can be expressed in terms of and , and so as well. Hence and we have .      "
 },
 {
-  "id": "problem-35",
+  "id": "problem-17",
   "level": "2",
-  "url": "section-70.html#problem-35",
+  "url": "section-70.html#problem-17",
   "type": "Problem",
   "number": "G.17",
   "title": "Problem 8.",
   "body": "Problem 8   Let be the splitting field over of the polynomial . Prove that the Galois group is isomorphic to .    Let be the splitting field over of the polynomial , the roots of which are: 1. 2. , and 3. . Using with we see that is irreducible in . As is monic and irreducible it is the minimum polynomial of and . Thus, by the we know there exists an element of order in .  Notice now that has exactly two complex roots, making complex conjugation correspond to a transposition in . Thus we have an element of order and an element of order , so the order of must be at least by .  As we know is isomorphic to a subgroup of (See: [[Proposition – Automorphisms and Permutations (Fields)|Proposition]]), which has order . Thus is isomorphic to .   "
 },
 {
-  "id": "problem-36",
+  "id": "problem-18",
   "level": "2",
-  "url": "section-70.html#problem-36",
+  "url": "section-70.html#problem-18",
   "type": "Problem",
   "number": "G.18",
   "title": "Problem 9.",
@@ -11458,81 +11305,81 @@ var ptx_lunr_docs = [
   "body": "May 2021  Section I: Group Theory  Problem 1   Let be a group (not necessarily finite) and a nonempty subset of that is [[Mathematics\/Definitions\/Multiplicatively Closed Set|closed under multiplication]]. Suppose that for all we have . Prove the following: (a) is a subgroup of (b) is normal (c) (See: [[Mathematics\/Definitions\/Coset]]) is abelian.    Let be a group, a multiplicatively closed subset of , and suppose that for all .  Part (a) First, notice that . Let , and consider . Notice that . As is multiplicatively closed, we see that . Thus is a subgroup of by the [[Lemma – Subgroup Tests|subgroup test]].  Part (b) Let , , and consider . Notice that . Multiplying by on the right we see , as it is multiplicatively closed and . We rewrite , given that elements always commute with their inverses. As , we see that as well. Thus is normal in .  Part (c) Let . As for every , every element has order . Thus and so , making the group abelian.    Problem 2   Construct a nonabelian group of order and give a [[Mathematics\/Definitions\/Presentation|presentation]] for your group (with justification).    First, we know that is a group of order . By [[Theorem – Cauchy's Theorem|Cauchy's Theorem]], as and are primes dividing the order of there exist elements of orders , , respectively. Consider and , both of which are subgroups of . By we see (See: [[Mathematics\/Definitions\/Index]]), the smallest prime dividing , making normal in Thus , but as we have and thus that . By the [[Proposition – Recognition Theorem Internal Semidirect Products|Recognition Theorem]] we have , where is the [[Proposition – Permutation Representation|permutation representation]] of the action of on via automorphisms given by conjugation in .    Problem 3   Let be a group and let be the number of Sylow -subgroups of , where is a prime dividing the order of . (a) Prove that if is simple then (b) Deduce that there is no simple group of order .    Let be a group, a prime dividing the order of , and the number of Sylow -subgroups of .  Part (a) Let act on by conjugation, inducing the homomorphism via the [[Proposition – Permutation Representation|permutation representation]]. Notice that the order of is conspicuously . The kernel of this map is a normal subgroup of (See: [[Corollary – Normal iff Kernel of Homomorphism|Corollary]]). Note that since is simple the only normal subgroups of are the trivial subgroup and itself. However, the kernel cannot be all of as this would make trivial, which cannot be the case given that our action is transitive by Part (2) of . Thus , making injective. Thus . As the [[Mathematics\/Definitions\/Image|image]] is a subgroup of , the result follows from .  Part (b) Let be a group of order . Suppose by way of contradiction that is simple. . Thus the number of Sylow- subgroups is congruent to and divides , the options of which are 1 and 16 (See: ). As does not divide this contradicts part (a). Thus there are no simple groups of order .     Section  Problem 4    Suppose that is an integral domain that contains a field as a [[Mathematics\/Definitions\/Subring|subring]], and that moreover is finite dimensional as an -vector space. Prove that is a field.  Give an example to show that the finite dimension condition is necessary.     Part (a) Let be an integral domain that contains a field as a subring, and that moreover is finite dimensional as an -vector space.  Say 𝐴 has dimension over . Let . Consider elements which cannot be independent because of the finite dimension. So we may choose so that is linearly dependent over and is as small as possible. This means that we may find , not all equal to , such that . Note that , as this would contradict the minimality of . Then is invertible, so 𝑥 is invertible as well, making a field.  Part (b) Consider , which contains the subring . However, this is not a finite dimensional vector space over , and is not a field, as has no inverse.    Problem 5   Suppose that is a [[Mathematics\/Definitions\/Linear Transformation|linear map]], where is a finite dimensional -vector space. Fix a polynomial .   Prove that if is an [[Mathematics\/Definitions\/Eigenvalue|eigenvalue]] of then is an eigenvalue of .  Prove conversely that if is an eigenvalue of then there exists an eigenvalue of such that .     Part (a) Let be an eigenvalue of . Thus there exists some such that . Notice that and . Then making an eigenvalue of .  Part (b) First note that if is a scalar of the identity matrix then its only eigenvalue is . Let be an eigenvalue of . Thus for some . As is algebraically closed we can factor the polynomial into linear terms: for roots . Note that for all . Observe Thus one of these terms must be sent to zero. Note that if for any this would make a scaler of the identity matrix. Thus there exists some such that , making an eigenvalue of . Notice that as we have , completing the proof.    Problem 6   Consider the -vector space . (You may assume without proof that is n-[[Mathematics\/Definitions\/Dimension (Vector Space)|dimensional]].) Consider the following [[Mathematics\/Definitions\/Linear Operator|linear maps]] :  (where p' denotes the [[Mathematics\/Definitions\/Derivative|derivative]] of p). Determine the [[Theorem – Jordan Canonical Form|Jordan normal form]] of (a) (b)     Part (a) For any integer , consider the -vector space .  Let be the [[Mathematics\/Definitions\/Linear Operator|linear operator]] given by (where denotes the derivative of ). Note that the [[Mathematics\/Definitions\/Change of Basis Matrix|change of basis]] matrix for this operator is given by with the basis . Thus will be given by the [[Determinant|determinant]] of the matrix     which is [[Mathematics\/Definitions\/Diagonal Matrix|diagonal]]. Hence Thus factors into distinct linear polynomials, each of which is in the form for . Thus each linear term is an elementary divisor, making each [[Mathematics\/Definitions\/Jordan Block|Jordan block]] a matrix with as the only entry. Thus the Jordan Canonical form is   Part (b) This time around the change of basis matrix (denoted and using the same basis as above) for this matrix has 0s along the diagonal, and increasing natural numbers (starting at 0, sorry) along the upper diagonal. Thus .  Recall that the minimal polynomial corresponding to will be the the smallest monic polynomial such that is sent to 0. Note that as is the operator sending to its derivative, and that . Thus can be viewed as a change of basis matrix for taking the second derivative of the basis, and so on.  As the basis extends to , it requires derivatives to make this polynomial become 0. Thus the minimal polynomial of must be , as it it monic and . As the degree of the invariant factors must sum to and , which is itself an invariant factor, we see that it must in fact be the only one.  As is already a power of a prime, it is the only elementary divisor as well. Thus the Jordan Canonical Form for is an Jordan Block with 0s along the diagonal and 1s along the sub-diagonal.     Section  Problem 7   Assume that is a finite extension of fields of degree .   Prove that if is irreducible of degree and then remains irreducible when regarded as an element of the ring .  Show, by means of an explicit example with justification, that the statement in part (a) would become false if the assumption that were omitted.     Let be a finite extension of fields of degree .  Part (a) Suppose that is irreducible of degree and .  First, note that if then will remain irreducible in (See: [[Theorem – Degree and Irreducibility|Theorem]]). Suppose then that . There exists an algebraically closed extension such that has a root (See: [[Theorem – Existence and Uniqueness of Algebraic Closures|Theorem]]). Consider . As is algebraic in we know there exists some unique irreducible minimal polynomial of degree , and thus that (See: [[Theorem – Properties of Algebraic Elements|Theorem]]). Using the we see that However, and so for some , so . As we must have . But was defined to be the degree of , which divides . As and , we see that , so so for some . As irreducible polynomials multiplied by a constant are still irreducible, we see that is indeed irreducible in .  Part (b) Let be a non-constant irreducible polynomial of degree in . Let . Because is irreducible and is a PID, is a maximal ideal. Thus is a field (See: [[Theorem – Prime, Maximal, Domain, Field|Theorem]]), , and is a root of in (See: [[Proposition – Properties of Extension Degrees|Proposition]]). Hence is no longer irreducible by Theorem 2.2.    Problem 8   Suppose that is a finite Galois extension with Galois group , and that . Prove that if and only if the images of under elements of are distinct.    First, suppose that . As is a Galois extension the minimum polynomial of in splits completely into linear factors (See: [[Theorem – Galois Extension Equivalencies|Theorem]]). Thus acts faithfully on the roots of , which includes (See: [[Corollary – Automorphisms and Group Actions (Fields)|Corollary]]). Thus the images of under elements of are distinct.  Now suppose that the images of under elements of are distinct, and suppose by way of contradiction that there exists some that is not in . Consider the intermediate field . By the [[Mathematics\/Modern Algebra\/Results\/Theorem – Fundamental Theorem of Galois Theory|FTGT]] there exists a nontrivial subgroup of whose elements fix elements of , including , a contradiction.    Problem 9   Let , and let be its splitting field over . Prove that if is a root of then . Hence (or otherwise) determine . (Hint: Consider the value of .)    Let , and let be its splitting field over and suppose is a root of . Note that , and so making a primitive sixth root of unity. By squaring primitive sixth roots of unity over and over we get all of the other sixth roots of unity as well, and so . Thus we have all the roots of , and so and .     "
 },
 {
-  "id": "problem-37",
+  "id": "problem-19",
   "level": "2",
-  "url": "section-71.html#problem-37",
+  "url": "section-71.html#problem-19",
   "type": "Problem",
   "number": "G.19",
   "title": "Problem 1.",
   "body": "Problem 1   Let be a group (not necessarily finite) and a nonempty subset of that is [[Mathematics\/Definitions\/Multiplicatively Closed Set|closed under multiplication]]. Suppose that for all we have . Prove the following: (a) is a subgroup of (b) is normal (c) (See: [[Mathematics\/Definitions\/Coset]]) is abelian.    Let be a group, a multiplicatively closed subset of , and suppose that for all .  Part (a) First, notice that . Let , and consider . Notice that . As is multiplicatively closed, we see that . Thus is a subgroup of by the [[Lemma – Subgroup Tests|subgroup test]].  Part (b) Let , , and consider . Notice that . Multiplying by on the right we see , as it is multiplicatively closed and . We rewrite , given that elements always commute with their inverses. As , we see that as well. Thus is normal in .  Part (c) Let . As for every , every element has order . Thus and so , making the group abelian.   "
 },
 {
-  "id": "problem-38",
+  "id": "problem-20",
   "level": "2",
-  "url": "section-71.html#problem-38",
+  "url": "section-71.html#problem-20",
   "type": "Problem",
   "number": "G.20",
   "title": "Problem 2.",
   "body": "Problem 2   Construct a nonabelian group of order and give a [[Mathematics\/Definitions\/Presentation|presentation]] for your group (with justification).    First, we know that is a group of order . By [[Theorem – Cauchy's Theorem|Cauchy's Theorem]], as and are primes dividing the order of there exist elements of orders , , respectively. Consider and , both of which are subgroups of . By we see (See: [[Mathematics\/Definitions\/Index]]), the smallest prime dividing , making normal in Thus , but as we have and thus that . By the [[Proposition – Recognition Theorem Internal Semidirect Products|Recognition Theorem]] we have , where is the [[Proposition – Permutation Representation|permutation representation]] of the action of on via automorphisms given by conjugation in .   "
 },
 {
-  "id": "problem-39",
+  "id": "problem-21",
   "level": "2",
-  "url": "section-71.html#problem-39",
+  "url": "section-71.html#problem-21",
   "type": "Problem",
   "number": "G.21",
   "title": "Problem 3.",
   "body": "Problem 3   Let be a group and let be the number of Sylow -subgroups of , where is a prime dividing the order of . (a) Prove that if is simple then (b) Deduce that there is no simple group of order .    Let be a group, a prime dividing the order of , and the number of Sylow -subgroups of .  Part (a) Let act on by conjugation, inducing the homomorphism via the [[Proposition – Permutation Representation|permutation representation]]. Notice that the order of is conspicuously . The kernel of this map is a normal subgroup of (See: [[Corollary – Normal iff Kernel of Homomorphism|Corollary]]). Note that since is simple the only normal subgroups of are the trivial subgroup and itself. However, the kernel cannot be all of as this would make trivial, which cannot be the case given that our action is transitive by Part (2) of . Thus , making injective. Thus . As the [[Mathematics\/Definitions\/Image|image]] is a subgroup of , the result follows from .  Part (b) Let be a group of order . Suppose by way of contradiction that is simple. . Thus the number of Sylow- subgroups is congruent to and divides , the options of which are 1 and 16 (See: ). As does not divide this contradicts part (a). Thus there are no simple groups of order .   "
 },
 {
-  "id": "problem-40",
+  "id": "problem-22",
   "level": "2",
-  "url": "section-71.html#problem-40",
+  "url": "section-71.html#problem-22",
   "type": "Problem",
   "number": "G.22",
   "title": "Problem 4.",
   "body": "Problem 4    Suppose that is an integral domain that contains a field as a [[Mathematics\/Definitions\/Subring|subring]], and that moreover is finite dimensional as an -vector space. Prove that is a field.  Give an example to show that the finite dimension condition is necessary.     Part (a) Let be an integral domain that contains a field as a subring, and that moreover is finite dimensional as an -vector space.  Say 𝐴 has dimension over . Let . Consider elements which cannot be independent because of the finite dimension. So we may choose so that is linearly dependent over and is as small as possible. This means that we may find , not all equal to , such that . Note that , as this would contradict the minimality of . Then is invertible, so 𝑥 is invertible as well, making a field.  Part (b) Consider , which contains the subring . However, this is not a finite dimensional vector space over , and is not a field, as has no inverse.   "
 },
 {
-  "id": "problem-41",
+  "id": "problem-23",
   "level": "2",
-  "url": "section-71.html#problem-41",
+  "url": "section-71.html#problem-23",
   "type": "Problem",
   "number": "G.23",
   "title": "Problem 5.",
   "body": "Problem 5   Suppose that is a [[Mathematics\/Definitions\/Linear Transformation|linear map]], where is a finite dimensional -vector space. Fix a polynomial .   Prove that if is an [[Mathematics\/Definitions\/Eigenvalue|eigenvalue]] of then is an eigenvalue of .  Prove conversely that if is an eigenvalue of then there exists an eigenvalue of such that .     Part (a) Let be an eigenvalue of . Thus there exists some such that . Notice that and . Then making an eigenvalue of .  Part (b) First note that if is a scalar of the identity matrix then its only eigenvalue is . Let be an eigenvalue of . Thus for some . As is algebraically closed we can factor the polynomial into linear terms: for roots . Note that for all . Observe Thus one of these terms must be sent to zero. Note that if for any this would make a scaler of the identity matrix. Thus there exists some such that , making an eigenvalue of . Notice that as we have , completing the proof.   "
 },
 {
-  "id": "problem-42",
+  "id": "problem-24",
   "level": "2",
-  "url": "section-71.html#problem-42",
+  "url": "section-71.html#problem-24",
   "type": "Problem",
   "number": "G.24",
   "title": "Problem 6.",
   "body": "Problem 6   Consider the -vector space . (You may assume without proof that is n-[[Mathematics\/Definitions\/Dimension (Vector Space)|dimensional]].) Consider the following [[Mathematics\/Definitions\/Linear Operator|linear maps]] :  (where p' denotes the [[Mathematics\/Definitions\/Derivative|derivative]] of p). Determine the [[Theorem – Jordan Canonical Form|Jordan normal form]] of (a) (b)     Part (a) For any integer , consider the -vector space .  Let be the [[Mathematics\/Definitions\/Linear Operator|linear operator]] given by (where denotes the derivative of ). Note that the [[Mathematics\/Definitions\/Change of Basis Matrix|change of basis]] matrix for this operator is given by with the basis . Thus will be given by the [[Determinant|determinant]] of the matrix     which is [[Mathematics\/Definitions\/Diagonal Matrix|diagonal]]. Hence Thus factors into distinct linear polynomials, each of which is in the form for . Thus each linear term is an elementary divisor, making each [[Mathematics\/Definitions\/Jordan Block|Jordan block]] a matrix with as the only entry. Thus the Jordan Canonical form is   Part (b) This time around the change of basis matrix (denoted and using the same basis as above) for this matrix has 0s along the diagonal, and increasing natural numbers (starting at 0, sorry) along the upper diagonal. Thus .  Recall that the minimal polynomial corresponding to will be the the smallest monic polynomial such that is sent to 0. Note that as is the operator sending to its derivative, and that . Thus can be viewed as a change of basis matrix for taking the second derivative of the basis, and so on.  As the basis extends to , it requires derivatives to make this polynomial become 0. Thus the minimal polynomial of must be , as it it monic and . As the degree of the invariant factors must sum to and , which is itself an invariant factor, we see that it must in fact be the only one.  As is already a power of a prime, it is the only elementary divisor as well. Thus the Jordan Canonical Form for is an Jordan Block with 0s along the diagonal and 1s along the sub-diagonal.   "
 },
 {
-  "id": "problem-43",
+  "id": "problem-25",
   "level": "2",
-  "url": "section-71.html#problem-43",
+  "url": "section-71.html#problem-25",
   "type": "Problem",
   "number": "G.25",
   "title": "Problem 7.",
   "body": "Problem 7   Assume that is a finite extension of fields of degree .   Prove that if is irreducible of degree and then remains irreducible when regarded as an element of the ring .  Show, by means of an explicit example with justification, that the statement in part (a) would become false if the assumption that were omitted.     Let be a finite extension of fields of degree .  Part (a) Suppose that is irreducible of degree and .  First, note that if then will remain irreducible in (See: [[Theorem – Degree and Irreducibility|Theorem]]). Suppose then that . There exists an algebraically closed extension such that has a root (See: [[Theorem – Existence and Uniqueness of Algebraic Closures|Theorem]]). Consider . As is algebraic in we know there exists some unique irreducible minimal polynomial of degree , and thus that (See: [[Theorem – Properties of Algebraic Elements|Theorem]]). Using the we see that However, and so for some , so . As we must have . But was defined to be the degree of , which divides . As and , we see that , so so for some . As irreducible polynomials multiplied by a constant are still irreducible, we see that is indeed irreducible in .  Part (b) Let be a non-constant irreducible polynomial of degree in . Let . Because is irreducible and is a PID, is a maximal ideal. Thus is a field (See: [[Theorem – Prime, Maximal, Domain, Field|Theorem]]), , and is a root of in (See: [[Proposition – Properties of Extension Degrees|Proposition]]). Hence is no longer irreducible by Theorem 2.2.   "
 },
 {
-  "id": "problem-44",
+  "id": "problem-26",
   "level": "2",
-  "url": "section-71.html#problem-44",
+  "url": "section-71.html#problem-26",
   "type": "Problem",
   "number": "G.26",
   "title": "Problem 8.",
   "body": "Problem 8   Suppose that is a finite Galois extension with Galois group , and that . Prove that if and only if the images of under elements of are distinct.    First, suppose that . As is a Galois extension the minimum polynomial of in splits completely into linear factors (See: [[Theorem – Galois Extension Equivalencies|Theorem]]). Thus acts faithfully on the roots of , which includes (See: [[Corollary – Automorphisms and Group Actions (Fields)|Corollary]]). Thus the images of under elements of are distinct.  Now suppose that the images of under elements of are distinct, and suppose by way of contradiction that there exists some that is not in . Consider the intermediate field . By the [[Mathematics\/Modern Algebra\/Results\/Theorem – Fundamental Theorem of Galois Theory|FTGT]] there exists a nontrivial subgroup of whose elements fix elements of , including , a contradiction.   "
 },
 {
-  "id": "problem-45",
+  "id": "problem-27",
   "level": "2",
-  "url": "section-71.html#problem-45",
+  "url": "section-71.html#problem-27",
   "type": "Problem",
   "number": "G.27",
   "title": "Problem 9.",
@@ -11548,81 +11395,81 @@ var ptx_lunr_docs = [
   "body": "January 2021  Section I: Group Theory  Problem 1   Let and be the set of elements of of order . Prove that is not a conjugacy class of .    Elements of order in must permute all elements, making them of the form . There are such permutations, given that we can always reorder them so that is first, leaving remaining spots without replacement. Let denote the set of these elements.  Suppose by way of contradiction there existed some such that . Let act on itself through conjugation, making by the definition of conjugacy class. The tells us that , meaning that the order of must divide the order of . However, and , so this is a contradiction. Thus is not a conjugacy class of .    Problem 2   Let be a group acting transitively on a set . For , let be the stabilizer of under the action from .   Let . Prove there exists such that .  Suppose has more than one element and that is finite. Prove that there exists which has no fixed point, that is, for all      Proof. Let be a group acting transitively on a set .  Part (a) The action is transitive, so there exists some such that .  Let , consider b. Since , we have , stabilizes so now , but . So .  Let . We know and also , and so . Applying to both to see . This puts . Thus , completing the proof.  Part (b) The action is transitive, so there is only one orbit, and so . Since is finite, the tells us . Since every orbit has the same order as , we see for all . Thus there cannot exist any fixed points.    Problem 3   Let be a group of order and suppose contains an element of order . Prove that is abelian.    First, note that , not . You hate to see it. Anyway, let be an element of order and consider , a cyclic subgroup of order . The possible number of Sylow -subgroups of is exactly , making this subgroup and thus normal in . Let be a Sylow subgroup, it intersects trivially and thus , where . The order of is , which is relatively prime to , making trivial and and thus abelian.     Section  Problem 4   Let be a commutative ring with identity, and assume .   Prove that every maximal ideal of is a prime ideal.  Assume is a finite ring. Prove that every prime ideal is a maximal ideal.     Part (a) Let be a maximal ideal of . We show that is a field (See: [[Theorem – Prime, Maximal, Domain, Field|Theorem]]). By the [[Theorem – The Lattice Isomorphism Theorem|Lattice Isomorphism Theorem]] we know there is a one-to-one correspondence between the ideals of and the ideals of containing . However, as is maximal, the only ideals of containing are and itself, meaning that has exactly two ideals, making a field.  We show that since is a domain, must be prime. (See: [[Theorem – Prime, Maximal, Domain, Field|Theorem]]). Suppose by way of contradiction that is not prime, so exist elements such that but neither nor are in . Thus , making and zero-divisors in , contradicting the fact that is a field. Thus is prime.  Part (b)  Let be a finite ring, and let be a prime ideal in . We show , a finite integral domain, is a field (See: ) Let , and consider for all . As is finite, there exists some such that . Then , meaning that . Thus has inverse , making a unit. Thus is a field, making a maximal ideal (See: [[Theorem – Prime, Maximal, Domain, Field|Theorem]])    Problem 5   Let be an integral domain and let be an -module. Recall that a subset of is linearly independent if whenever for ring elements and elements , we must have for all . We say is maximally linearly independent if it is linearly independent and it is not properly contained in a linear independent subset of . Finally, recall that we say an -module is torsion if for all for some non-zero .   Suppose is a linearly independent subset of and let be the submodule of generated by . Prove it is maximally linearly independent if and only if is torsion.  Prove that if for every module every maximally independent subset of generates as an -module, then must be a field.     Part (a)  Part (b)    Problem 6   Let be a commutative ring with and let be a surjective -module homomorphism, with and integers. Prove .    Let and .  Let be a maximal ideal in . Thus is a field. Lemma tells us that and are -vector spaces. Additionally, this gives rise to , which is a surjective -module linear transformation.  Note that is generated by for . Let and consider . For this to be we need it to be in , and thus all . So the set of is a basis for with elements. Likewise has a basis with elements. As we are surjective, Rank , . So by Rank-Nullity which is only positive with .     Section  Problem 7   On canonical forms (a) Consider the -module and let the -vector space obtained from by restriction of scalars along the evident inclusion and let be the -linear transformation given as multiplication by . Find, with justification, the rational canonical form of . (b) Consider the -module and let the -vector space obtained from by restriction of scalars along and let be the -linear transformation given as multiplication by . Find, with justification, the Jordan canonical form of .    Coming Soon!    Problem 8   Let where is an odd prime, and let be the splitting field of over . Find, with justification, .    Let where is an odd prime, and let be the splitting field of over . Using Eisenstein's Criterion with we see that is irreducible in . Notice that is a root of this polynomial. As is monic and irreducible it is the minimum polynomial of , and thus . Let be a primitive root of unity. Notice that is a root of the cyclotomic polynomial, , which is irreducible in by the Gospel of Mark.  As is the splitting field of , there exists a root of . Consider . As is algebraic in we know there exists some unique irreducible minimal polynomial of degree , and thus that . By the Degree Formula we see However, and so for some , so . As we must have . But was defined to be the degree of , which divides . As and , we see that , so for some . As irreducible polynomials multiplied by a constant are still irreducible, we see that is indeed irreducible in .  As is monic and irreducible in we see that it is the minimum polynomial of , and thus . As , we have .    Problem 9   Let be a field, an -vector space, and a subspace of . A subspace of is called a complement of in if is the internal direct sum of and ; that is, .   Prove that for every and as above, has at least one complement in .  Prove that if is a complement of in and is finite dimensional, then (where denotes the dimension of an -vector space).     Let be a field, an -vector space, and a subspace of .  Part (a) Let denote the set of all subspaces of such that . We can order with respect to inclusion. Let be a totally ordered subset of , and let be the union of all the elements in . Unions of subspaces are subspaces, and by DeMorgan's Laws we see that . Thus by Zorn's Lemma there exists a maximal element of which we denote . So by definition.  Suppose by way of contradiction there exists some such that .  Consider . As , for all , as we could just multiply by . Thus and , a contradiction, as was maximal. Thus is a complement of .  Part (b) The Second Isomorphism Theorem tells us that . We also know that Put succinctly, and thus As , we see that .     "
 },
 {
-  "id": "problem-46",
+  "id": "problem-28",
   "level": "2",
-  "url": "section-72.html#problem-46",
+  "url": "section-72.html#problem-28",
   "type": "Problem",
   "number": "G.28",
   "title": "Problem 1.",
   "body": "Problem 1   Let and be the set of elements of of order . Prove that is not a conjugacy class of .    Elements of order in must permute all elements, making them of the form . There are such permutations, given that we can always reorder them so that is first, leaving remaining spots without replacement. Let denote the set of these elements.  Suppose by way of contradiction there existed some such that . Let act on itself through conjugation, making by the definition of conjugacy class. The tells us that , meaning that the order of must divide the order of . However, and , so this is a contradiction. Thus is not a conjugacy class of .   "
 },
 {
-  "id": "problem-47",
+  "id": "problem-29",
   "level": "2",
-  "url": "section-72.html#problem-47",
+  "url": "section-72.html#problem-29",
   "type": "Problem",
   "number": "G.29",
   "title": "Problem 2.",
   "body": "Problem 2   Let be a group acting transitively on a set . For , let be the stabilizer of under the action from .   Let . Prove there exists such that .  Suppose has more than one element and that is finite. Prove that there exists which has no fixed point, that is, for all      Proof. Let be a group acting transitively on a set .  Part (a) The action is transitive, so there exists some such that .  Let , consider b. Since , we have , stabilizes so now , but . So .  Let . We know and also , and so . Applying to both to see . This puts . Thus , completing the proof.  Part (b) The action is transitive, so there is only one orbit, and so . Since is finite, the tells us . Since every orbit has the same order as , we see for all . Thus there cannot exist any fixed points.   "
 },
 {
-  "id": "problem-48",
+  "id": "problem-30",
   "level": "2",
-  "url": "section-72.html#problem-48",
+  "url": "section-72.html#problem-30",
   "type": "Problem",
   "number": "G.30",
   "title": "Problem 3.",
   "body": "Problem 3   Let be a group of order and suppose contains an element of order . Prove that is abelian.    First, note that , not . You hate to see it. Anyway, let be an element of order and consider , a cyclic subgroup of order . The possible number of Sylow -subgroups of is exactly , making this subgroup and thus normal in . Let be a Sylow subgroup, it intersects trivially and thus , where . The order of is , which is relatively prime to , making trivial and and thus abelian.   "
 },
 {
-  "id": "problem-49",
+  "id": "problem-31",
   "level": "2",
-  "url": "section-72.html#problem-49",
+  "url": "section-72.html#problem-31",
   "type": "Problem",
   "number": "G.31",
   "title": "Problem 4.",
   "body": "Problem 4   Let be a commutative ring with identity, and assume .   Prove that every maximal ideal of is a prime ideal.  Assume is a finite ring. Prove that every prime ideal is a maximal ideal.     Part (a) Let be a maximal ideal of . We show that is a field (See: [[Theorem – Prime, Maximal, Domain, Field|Theorem]]). By the [[Theorem – The Lattice Isomorphism Theorem|Lattice Isomorphism Theorem]] we know there is a one-to-one correspondence between the ideals of and the ideals of containing . However, as is maximal, the only ideals of containing are and itself, meaning that has exactly two ideals, making a field.  We show that since is a domain, must be prime. (See: [[Theorem – Prime, Maximal, Domain, Field|Theorem]]). Suppose by way of contradiction that is not prime, so exist elements such that but neither nor are in . Thus , making and zero-divisors in , contradicting the fact that is a field. Thus is prime.  Part (b)  Let be a finite ring, and let be a prime ideal in . We show , a finite integral domain, is a field (See: ) Let , and consider for all . As is finite, there exists some such that . Then , meaning that . Thus has inverse , making a unit. Thus is a field, making a maximal ideal (See: [[Theorem – Prime, Maximal, Domain, Field|Theorem]])   "
 },
 {
-  "id": "problem-50",
+  "id": "problem-32",
   "level": "2",
-  "url": "section-72.html#problem-50",
+  "url": "section-72.html#problem-32",
   "type": "Problem",
   "number": "G.32",
   "title": "Problem 5.",
   "body": "Problem 5   Let be an integral domain and let be an -module. Recall that a subset of is linearly independent if whenever for ring elements and elements , we must have for all . We say is maximally linearly independent if it is linearly independent and it is not properly contained in a linear independent subset of . Finally, recall that we say an -module is torsion if for all for some non-zero .   Suppose is a linearly independent subset of and let be the submodule of generated by . Prove it is maximally linearly independent if and only if is torsion.  Prove that if for every module every maximally independent subset of generates as an -module, then must be a field.     Part (a)  Part (b)   "
 },
 {
-  "id": "problem-51",
+  "id": "problem-33",
   "level": "2",
-  "url": "section-72.html#problem-51",
+  "url": "section-72.html#problem-33",
   "type": "Problem",
   "number": "G.33",
   "title": "Problem 6.",
   "body": "Problem 6   Let be a commutative ring with and let be a surjective -module homomorphism, with and integers. Prove .    Let and .  Let be a maximal ideal in . Thus is a field. Lemma tells us that and are -vector spaces. Additionally, this gives rise to , which is a surjective -module linear transformation.  Note that is generated by for . Let and consider . For this to be we need it to be in , and thus all . So the set of is a basis for with elements. Likewise has a basis with elements. As we are surjective, Rank , . So by Rank-Nullity which is only positive with .   "
 },
 {
-  "id": "problem-52",
+  "id": "problem-34",
   "level": "2",
-  "url": "section-72.html#problem-52",
+  "url": "section-72.html#problem-34",
   "type": "Problem",
   "number": "G.34",
   "title": "Problem 7.",
   "body": "Problem 7   On canonical forms (a) Consider the -module and let the -vector space obtained from by restriction of scalars along the evident inclusion and let be the -linear transformation given as multiplication by . Find, with justification, the rational canonical form of . (b) Consider the -module and let the -vector space obtained from by restriction of scalars along and let be the -linear transformation given as multiplication by . Find, with justification, the Jordan canonical form of .    Coming Soon!   "
 },
 {
-  "id": "problem-53",
+  "id": "problem-35",
   "level": "2",
-  "url": "section-72.html#problem-53",
+  "url": "section-72.html#problem-35",
   "type": "Problem",
   "number": "G.35",
   "title": "Problem 8.",
   "body": "Problem 8   Let where is an odd prime, and let be the splitting field of over . Find, with justification, .    Let where is an odd prime, and let be the splitting field of over . Using Eisenstein's Criterion with we see that is irreducible in . Notice that is a root of this polynomial. As is monic and irreducible it is the minimum polynomial of , and thus . Let be a primitive root of unity. Notice that is a root of the cyclotomic polynomial, , which is irreducible in by the Gospel of Mark.  As is the splitting field of , there exists a root of . Consider . As is algebraic in we know there exists some unique irreducible minimal polynomial of degree , and thus that . By the Degree Formula we see However, and so for some , so . As we must have . But was defined to be the degree of , which divides . As and , we see that , so for some . As irreducible polynomials multiplied by a constant are still irreducible, we see that is indeed irreducible in .  As is monic and irreducible in we see that it is the minimum polynomial of , and thus . As , we have .   "
 },
 {
-  "id": "problem-54",
+  "id": "problem-36",
   "level": "2",
-  "url": "section-72.html#problem-54",
+  "url": "section-72.html#problem-36",
   "type": "Problem",
   "number": "G.36",
   "title": "Problem 9.",
@@ -11638,81 +11485,81 @@ var ptx_lunr_docs = [
   "body": "June 2020  Section I: Group Theory  Problem 1   Let be a prime. (a) Prove that every group of order is abelian. (Provide as many details as you can, but you may use main theorems – such as or the – without proof.) (b) Prove that there exists a non-abelian group of order for any prime . (You may use facts about automorphism groups here without proof, although they should be clearly stated.)    Part (a) Show the center is non-trivial, and thus has order or . If then and we're done. If , then the tells us . Since , for each . But there are elements, so there is only one conjugacy class for these elements. But since there exists some such that , and thus . Since is not in the center and is not in the conjugacy class of , we have a contradiction.  Alternatively, has elements, making it cyclic.  Part (b) Consider and . Consider the external semidirect product , where .    Problem 2   Let be a group of order for some odd integer . Let be the group of permutations on the elements of (i.e., the group of bijective functions from G to G). You may use without proof that .   Let be given by for all , where is defined by for all . Prove that is an injective group homomorphism.  Prove that if is an element of order then is a product of transpositions.  Prove contains a subgroup of index and is consequently not simple. (Tip: Consider the inverse image under of the subgroup of consisting of the even permutations.)     Coming Soon!    Problem 3   Let be a finite group and a prime dividing the order of . Let P be a Sylow -subgroup. (a) Suppose is a Sylow -subgroup distinct from . Prove that is not a subgroup of . (Recall that .) (b) Prove that where denotes the normalizer in of a subgroup .    Let be a finite group and a prime dividing the order of . Let P be a Sylow -subgroup.  Part (a) We proceed via the contrapositive. Let be a Sylow -subgroup, and suppose . Thus   Note that and both have elements, where is the largest power of that divides the order of . Recall . As is the largest power of that divides the order of , we see that must be at least . Thus .  Part (b) First, note that . Note that is the largest subgroup of such that is normal in , making the only Sylow -subgroup of . Let . Notice that , but as we have . As is a Sylow -subgroup that is contained in , we see that , placing . Thus . ## Section II: Ring Theory and Module theory Solve two of the following three problems.     Section  Problem 4   Let be a commutative ring with identity, and assume . Let and be ideals such that .   Prove .  Prove the following special case of the : There is an isomorphism of rings of the form .     Let be a commutative ring with identity, and assume . Let and be ideals such that .  Part (a) First, note that both and are ideals (See: [[Modern Algebra#Proposition – all Ideals|Proposition]]).  Let . Thus , where each and . As and are both ideals, each term in this sum is contained both in and . Thus, by absorption, . Hence .  Let . Thus and . Note that as , there exists some and such that . So . As we see that , with and . Thus , yielding .  Part (b)  Let be defined by .  Notice that if , we have , and so . Let . Thus and , and so and . Hence , and so .  Observe making a homomorphism of rings.  Let . As , we can write and as and . However, as and , we have .  Consider the element , and observe However, as and , we see Thus is a surjective homomorphism. Hence, by the First Isomorphism Theorem, we see .    Problem 5   Let be a non-zero, unital ring, and let and be the standard free left -modules of finite rank and . Assume there is an isomorphism of -modules    Prove that if is commutative then . You may assume without justification that this holds in the special case when is a field.  Show, by example, than need not equal if is not assumed to be commutative.     Part (a) Let be a maximal ideal in and consider the residue field . As , we can tensor both sides to see , and so . As both of these are finitely dimensional vector spaces, they must have the same rank, and thus .  Part (b)    Problem 6   Find all the ideals of that contain , the ideal of generated by and . For each such ideal, give an explicit list of generators, and determine whether the ideal is prime, maximal, or neither.    First, notice that is irreducible in as it is a cyclotomic polynomial. Thus the possibilities are the following: - , - , - , - . Notice that , which is neither prime nor maximal, as those ideals must be proper. The ideal is not maximal as it is contained in both and , nor is it prime, given that but neither nor are in .  Both and are generated with irreducible elements, making them irreducible ideals and thus maximal.     Section  Problem 7   Suppose is any field. Recall that a square matrix with entries in is nilpotent if for some positive integer j.   Prove that if and is nilpotent, then .  Find, with justification, the number of similarity classes of nilpotent matrices with entries in .     Let be a field.  Part (a) Midterm problem, needs fleshing out  Part (b) Let be a nilpotent matrix. There exists some such that . Let be an eigenvalue of , and so is an eigenvalue for . As is a field and thus an integral domain, we see that implies that as well.  As this holds in the algebraic closure of as well, we see that when factored into linear terms all the . Thus .  The possible invariant factors involving are 1. , 2. , 3. , 4. , 5. 6. 7. However, in the first case the rank of would be , making it invertible, contradicting the fact that 0 is an eigenvalue of . Thus we need only consider the latter cases.    Problem 8   Let be the splitting field over of the polynomial (a) Find, with justification, . (b) Note that (where is the unique positive, real fifth root of ) is one of the roots of . Prove is the trivial group.    Let be the splitting field over of the polynomial   Part (a) Note that is irreducible in by Eisenstein's Criterion ( ). The roots of are 1. 2. 3. 4. 5.   As is monic and irreducible it is the minimum polynomial of . Let , and notice . Note that   Let be a primitive root of unity. This is the root a cyclotomic polynomial of degree which is irreducible in . As this has relatively prime order to it is irreducible there as well. Let , and notice . Notice that , and so , completing the proof.  Part (b)    Problem 9   Assume is field and let . Recall that is separable if has no repeated roots in an [[Mathematics\/Definitions\/Algebraic Closure|algebraic closure]] of .   Assume . Prove that is separable if and only if the irreducible factorization of in has no repeated factors.  Fix a prime integer , let be the field with elements, and let be the [[Mathematics\/Definitions\/Field of Fractions|field of fractions]] of the polynomial ring . Prove is irreducible in but not separable.     Part (a) Suppose that is not separable, so has a repeated root in , which we denote . So is a factor of . By Corollary 2.96, is separable, so the minimal polynomial of in has no repeated root in . As does have a repeated root (by supposition) it cannot be the minimum polynomial of . Thus for some such that has as a root, otherwise would not obtain its repeated root. However, this means that , meaning that has as a factor as well. Thus we see that is a repeated factor of , one from the minimum polynomial, one from .   Suppose that the prime factorization of in admits a repeated factor. Thus there exists some prime (and thus irreducible) such that . However, has a root in , so in we see that has as a root as well, as . But since has factor , it shows up twice in the factorization of because . So has multiplicity at least 2, so is not separable.  Part (b) Let be indeterminants, , and such that (as seen in Example 2.78). Note then that is a root of the polynomial .  Moreover, since is the field of fractions of the PID and is a prime element of , we may apply Eisenstein's Criterion (using ) to conclude that is irreducible in . Thus is the minimum polynomial of in .  However, as the derivative of this polynomial is , we see that the is not separable by Proposition 2.72. However, by the Freshman's Dream, we see that . But as , we see that the prime factorization of admits no repeated factor.     "
 },
 {
-  "id": "problem-55",
+  "id": "problem-37",
   "level": "2",
-  "url": "section-73.html#problem-55",
+  "url": "section-73.html#problem-37",
   "type": "Problem",
   "number": "G.37",
   "title": "Problem 1.",
   "body": "Problem 1   Let be a prime. (a) Prove that every group of order is abelian. (Provide as many details as you can, but you may use main theorems – such as or the – without proof.) (b) Prove that there exists a non-abelian group of order for any prime . (You may use facts about automorphism groups here without proof, although they should be clearly stated.)    Part (a) Show the center is non-trivial, and thus has order or . If then and we're done. If , then the tells us . Since , for each . But there are elements, so there is only one conjugacy class for these elements. But since there exists some such that , and thus . Since is not in the center and is not in the conjugacy class of , we have a contradiction.  Alternatively, has elements, making it cyclic.  Part (b) Consider and . Consider the external semidirect product , where .   "
 },
 {
-  "id": "problem-56",
+  "id": "problem-38",
   "level": "2",
-  "url": "section-73.html#problem-56",
+  "url": "section-73.html#problem-38",
   "type": "Problem",
   "number": "G.38",
   "title": "Problem 2.",
   "body": "Problem 2   Let be a group of order for some odd integer . Let be the group of permutations on the elements of (i.e., the group of bijective functions from G to G). You may use without proof that .   Let be given by for all , where is defined by for all . Prove that is an injective group homomorphism.  Prove that if is an element of order then is a product of transpositions.  Prove contains a subgroup of index and is consequently not simple. (Tip: Consider the inverse image under of the subgroup of consisting of the even permutations.)     Coming Soon!   "
 },
 {
-  "id": "problem-57",
+  "id": "problem-39",
   "level": "2",
-  "url": "section-73.html#problem-57",
+  "url": "section-73.html#problem-39",
   "type": "Problem",
   "number": "G.39",
   "title": "Problem 3.",
   "body": "Problem 3   Let be a finite group and a prime dividing the order of . Let P be a Sylow -subgroup. (a) Suppose is a Sylow -subgroup distinct from . Prove that is not a subgroup of . (Recall that .) (b) Prove that where denotes the normalizer in of a subgroup .    Let be a finite group and a prime dividing the order of . Let P be a Sylow -subgroup.  Part (a) We proceed via the contrapositive. Let be a Sylow -subgroup, and suppose . Thus   Note that and both have elements, where is the largest power of that divides the order of . Recall . As is the largest power of that divides the order of , we see that must be at least . Thus .  Part (b) First, note that . Note that is the largest subgroup of such that is normal in , making the only Sylow -subgroup of . Let . Notice that , but as we have . As is a Sylow -subgroup that is contained in , we see that , placing . Thus . ## Section II: Ring Theory and Module theory Solve two of the following three problems.   "
 },
 {
-  "id": "problem-58",
+  "id": "problem-40",
   "level": "2",
-  "url": "section-73.html#problem-58",
+  "url": "section-73.html#problem-40",
   "type": "Problem",
   "number": "G.40",
   "title": "Problem 4.",
   "body": "Problem 4   Let be a commutative ring with identity, and assume . Let and be ideals such that .   Prove .  Prove the following special case of the : There is an isomorphism of rings of the form .     Let be a commutative ring with identity, and assume . Let and be ideals such that .  Part (a) First, note that both and are ideals (See: [[Modern Algebra#Proposition – all Ideals|Proposition]]).  Let . Thus , where each and . As and are both ideals, each term in this sum is contained both in and . Thus, by absorption, . Hence .  Let . Thus and . Note that as , there exists some and such that . So . As we see that , with and . Thus , yielding .  Part (b)  Let be defined by .  Notice that if , we have , and so . Let . Thus and , and so and . Hence , and so .  Observe making a homomorphism of rings.  Let . As , we can write and as and . However, as and , we have .  Consider the element , and observe However, as and , we see Thus is a surjective homomorphism. Hence, by the First Isomorphism Theorem, we see .   "
 },
 {
-  "id": "problem-59",
+  "id": "problem-41",
   "level": "2",
-  "url": "section-73.html#problem-59",
+  "url": "section-73.html#problem-41",
   "type": "Problem",
   "number": "G.41",
   "title": "Problem 5.",
   "body": "Problem 5   Let be a non-zero, unital ring, and let and be the standard free left -modules of finite rank and . Assume there is an isomorphism of -modules    Prove that if is commutative then . You may assume without justification that this holds in the special case when is a field.  Show, by example, than need not equal if is not assumed to be commutative.     Part (a) Let be a maximal ideal in and consider the residue field . As , we can tensor both sides to see , and so . As both of these are finitely dimensional vector spaces, they must have the same rank, and thus .  Part (b)   "
 },
 {
-  "id": "problem-60",
+  "id": "problem-42",
   "level": "2",
-  "url": "section-73.html#problem-60",
+  "url": "section-73.html#problem-42",
   "type": "Problem",
   "number": "G.42",
   "title": "Problem 6.",
   "body": "Problem 6   Find all the ideals of that contain , the ideal of generated by and . For each such ideal, give an explicit list of generators, and determine whether the ideal is prime, maximal, or neither.    First, notice that is irreducible in as it is a cyclotomic polynomial. Thus the possibilities are the following: - , - , - , - . Notice that , which is neither prime nor maximal, as those ideals must be proper. The ideal is not maximal as it is contained in both and , nor is it prime, given that but neither nor are in .  Both and are generated with irreducible elements, making them irreducible ideals and thus maximal.   "
 },
 {
-  "id": "problem-61",
+  "id": "problem-43",
   "level": "2",
-  "url": "section-73.html#problem-61",
+  "url": "section-73.html#problem-43",
   "type": "Problem",
   "number": "G.43",
   "title": "Problem 7.",
   "body": "Problem 7   Suppose is any field. Recall that a square matrix with entries in is nilpotent if for some positive integer j.   Prove that if and is nilpotent, then .  Find, with justification, the number of similarity classes of nilpotent matrices with entries in .     Let be a field.  Part (a) Midterm problem, needs fleshing out  Part (b) Let be a nilpotent matrix. There exists some such that . Let be an eigenvalue of , and so is an eigenvalue for . As is a field and thus an integral domain, we see that implies that as well.  As this holds in the algebraic closure of as well, we see that when factored into linear terms all the . Thus .  The possible invariant factors involving are 1. , 2. , 3. , 4. , 5. 6. 7. However, in the first case the rank of would be , making it invertible, contradicting the fact that 0 is an eigenvalue of . Thus we need only consider the latter cases.   "
 },
 {
-  "id": "problem-62",
+  "id": "problem-44",
   "level": "2",
-  "url": "section-73.html#problem-62",
+  "url": "section-73.html#problem-44",
   "type": "Problem",
   "number": "G.44",
   "title": "Problem 8.",
   "body": "Problem 8   Let be the splitting field over of the polynomial (a) Find, with justification, . (b) Note that (where is the unique positive, real fifth root of ) is one of the roots of . Prove is the trivial group.    Let be the splitting field over of the polynomial   Part (a) Note that is irreducible in by Eisenstein's Criterion ( ). The roots of are 1. 2. 3. 4. 5.   As is monic and irreducible it is the minimum polynomial of . Let , and notice . Note that   Let be a primitive root of unity. This is the root a cyclotomic polynomial of degree which is irreducible in . As this has relatively prime order to it is irreducible there as well. Let , and notice . Notice that , and so , completing the proof.  Part (b)   "
 },
 {
-  "id": "problem-63",
+  "id": "problem-45",
   "level": "2",
-  "url": "section-73.html#problem-63",
+  "url": "section-73.html#problem-45",
   "type": "Problem",
   "number": "G.45",
   "title": "Problem 9.",
@@ -11728,81 +11575,81 @@ var ptx_lunr_docs = [
   "body": "January 2020  Section I: Group Theory  Problem 1   Let be a finite group.   Suppose every subgroup of is normal. Prove that given any positive divisor of there exists a subgroup of of order .    Give an example, with justification, of a finite group and a positive divisor of such that has no subgroup of order .       Let be a finite group.  Part (a) Suppose every subgroup of is normal. Let be a positive divisor of . For every prime dividing the order of there is exactly one Sylow -subgroup of , given that Sylow -subgroups are normal if and only if they are unique. Thus can be written as a direct product of its Sylow -subgroups. Given the prime factorization of , the direct product of the Sylow -subgroups such that is 1. A subgroup of as each Sylow -subgroup is normal, and 2. A direct product of cyclic groups of relatively prime order, yielding an element of order . The subgroup generated by this element is a subgroup of of order .  Part (b) We take a peak at with . Suppose had a subgroup of order , . First, note that , the smallest prime dividing the order of , making normal in .  As there are eight -cycles in , there exists some -cycle, , such that . Consider then and in . Since , it must be the case that either or .   If then . As we have , but as is a subgroup this would mean , which is not the case.  If then , but , and so we have a contradiction. Thus cannot exist, and has no subgroup of order .     Problem 2   Let be a group of order for some prime acting on a finite set .   Suppose does not divide . Prove that there exists some element of fixed by all elements of .  Suppose acts faithfully on . Prove that .     Let be a group of order , for some prime , acting on a finite set .  Part (a) Suppose there is no element in that is fixed by all elements of .  By we know that for all . Thus every orbit under this action has an order dividing , so either or some positive power of However, as no element of is fixed by every element of , there exists no stabilizer which is all of , and thus there exist no orbits that have order .  Recall that the orbits of this action partition , and thus . As every orbit is divisible by , so too must be .  Part (b) Suppose acts faithfully on . Thus the permutation representation homomorphism is injective. Let denote the order of . Then , which as order . As is injective, we see that , and thus .  Thus must show up in the factorization of at least times, meaning that .    Problem 3   Prove that any group of order is abelian.    Let be a group of order . By we see the following: - and , and so . - and , and so as well. - and , so actually too. Thus the unique Sylow -subgroup and Sylow -subgroup, denoted and , respectively, are normal in .  As and are normal in and intersect trivially, we see that . Let and consider . Let and notice . As and we see and , thus , making .  Let be the unique Sylow -subgroup, which has order . As and intersects with trivially, we see , a direct product of cyclic groups of relatively prime order, making abelian.     Section  Problem 4   Let be a commutative domain.   State the definition for to be a Euclidean domain.    Prove that in a Euclidean domain every ideal is principal.       Let be a commutative domain.  Part (a)  Part (b) Let be an ideal in , and let denote the set of norms for a nonzero generating set of . If none exist then then in it is principally generated, so we can assume there is some nonzero , meaning our set is nonempty.  As is a set of natural numbers bounded below, by the Least Upper Bound Axiom there exists a smallest element. Let denote the nonzero element in with smallest norm.  Suppose and are nonzero elements of the generating set for . As is an ED there exist such that with either or .  Notice that , where and by absorption. Thus , meaning that . Thus . Then , meaning that . Thus every element in the generating set for is contained in , and thus , making principally generated.    Problem 5   Let be a commutative ring in which every element satisfies for some Show that every prime ideal in R is maximal.    Let be a commutative ring in which every element satisfies for some Let be a prime ideal in .  Let , meaning . Then for some . As is a domain we can cancel an to see that , and thus , making a unit in . Thus is a field, making maximal in .    Problem 6   Let be a positive integer and let be the Jordan block matrix of size with eigenvalue 0 in .    Find the minimal polynomials for and for , with justification.  Find the Jordan canonical form of , with justification. Hint : consider the kernel of .     Let be a positive integer and let be the Jordan block matrix of size with eigenvalue 0 in .  Part (a) Notice that is a triangular matrix with 's along the diagonal. Thus , the product of the diagonal entries of the matrix .  Squaring a triangular matrix moves everything one down (Proof?), and so should do it. Squaring just moves us one closer, so   Part (b) As , the only roots of it are , and thus these are the only elementary divisors of .     Section  Problem 7   Let be a field extension and let . Show that if is algebraically closed, then K is algebraically closed.    Let be a field extension let , and suppose that is algebraically closed. Thus every polynomial in has a root in .  Let and let be a root of . Thus , where each . By definition of , each is algebraic over . Notice that as well, making algebraic over this extension as well.  Consider the chain of extensions As is algebraic over for all and is algebraic over we see that each step in this chain has finite degree by Theorem. By the Degree Formula, is finite and thus so is . By the Theorem again, is algebraic over . Thus is algebraic over , hence , making algebraically closed.    Problem 8   Let be a positive integer and let be a prime integer. Consider the polynomial and define to be the splitting field of over .   Show that the set of roots of in is a subfield of .  Show that has exactly elements.     Let be a positive integer and let be a prime integer. Consider the polynomial and define to be the splitting field of over .  Part (a) Let denote the set of roots of . Let . Thus . By the Factor Theorem there can be at most roots. Suppose for roots .  Part (b)    Problem 9   Consider . This polynomial has exactly three real roots, a fact that you may use without proof.   Show that is irreducible in .  Let be a splitting field of over . Show that is a Galois extension with Galois group isomorphic to the symmetric group .     Consider .  Part (a) Using Eisenstein's Criterion with we see that is indeed irreducible in .  Part (b) Let be a splitting field of over . As is monic and irreducible, it is the minimum polynomial for some such that . As has complex roots, we know that , and is thus an intermediate field. By the FTGT there exists a subgroup of such that . As we know , making for some . Thus is an element of order in . As is a degree polynomial, we know is isomorphic to a subgroup of . Thus must be a -cycle.  Recall that has exactly two complex roots. Thus , the complex conjugation automorphism, has order , making it a transposition. From the Gospel of Mark we were told that we did not need to prove that a transposition and an -cycle generate all of , and thus      "
 },
 {
-  "id": "problem-64",
+  "id": "problem-46",
   "level": "2",
-  "url": "section-74.html#problem-64",
+  "url": "section-74.html#problem-46",
   "type": "Problem",
   "number": "G.46",
   "title": "Problem 1.",
   "body": "Problem 1   Let be a finite group.   Suppose every subgroup of is normal. Prove that given any positive divisor of there exists a subgroup of of order .    Give an example, with justification, of a finite group and a positive divisor of such that has no subgroup of order .       Let be a finite group.  Part (a) Suppose every subgroup of is normal. Let be a positive divisor of . For every prime dividing the order of there is exactly one Sylow -subgroup of , given that Sylow -subgroups are normal if and only if they are unique. Thus can be written as a direct product of its Sylow -subgroups. Given the prime factorization of , the direct product of the Sylow -subgroups such that is 1. A subgroup of as each Sylow -subgroup is normal, and 2. A direct product of cyclic groups of relatively prime order, yielding an element of order . The subgroup generated by this element is a subgroup of of order .  Part (b) We take a peak at with . Suppose had a subgroup of order , . First, note that , the smallest prime dividing the order of , making normal in .  As there are eight -cycles in , there exists some -cycle, , such that . Consider then and in . Since , it must be the case that either or .   If then . As we have , but as is a subgroup this would mean , which is not the case.  If then , but , and so we have a contradiction. Thus cannot exist, and has no subgroup of order .    "
 },
 {
-  "id": "problem-65",
+  "id": "problem-47",
   "level": "2",
-  "url": "section-74.html#problem-65",
+  "url": "section-74.html#problem-47",
   "type": "Problem",
   "number": "G.47",
   "title": "Problem 2.",
   "body": "Problem 2   Let be a group of order for some prime acting on a finite set .   Suppose does not divide . Prove that there exists some element of fixed by all elements of .  Suppose acts faithfully on . Prove that .     Let be a group of order , for some prime , acting on a finite set .  Part (a) Suppose there is no element in that is fixed by all elements of .  By we know that for all . Thus every orbit under this action has an order dividing , so either or some positive power of However, as no element of is fixed by every element of , there exists no stabilizer which is all of , and thus there exist no orbits that have order .  Recall that the orbits of this action partition , and thus . As every orbit is divisible by , so too must be .  Part (b) Suppose acts faithfully on . Thus the permutation representation homomorphism is injective. Let denote the order of . Then , which as order . As is injective, we see that , and thus .  Thus must show up in the factorization of at least times, meaning that .   "
 },
 {
-  "id": "problem-66",
+  "id": "problem-48",
   "level": "2",
-  "url": "section-74.html#problem-66",
+  "url": "section-74.html#problem-48",
   "type": "Problem",
   "number": "G.48",
   "title": "Problem 3.",
   "body": "Problem 3   Prove that any group of order is abelian.    Let be a group of order . By we see the following: - and , and so . - and , and so as well. - and , so actually too. Thus the unique Sylow -subgroup and Sylow -subgroup, denoted and , respectively, are normal in .  As and are normal in and intersect trivially, we see that . Let and consider . Let and notice . As and we see and , thus , making .  Let be the unique Sylow -subgroup, which has order . As and intersects with trivially, we see , a direct product of cyclic groups of relatively prime order, making abelian.   "
 },
 {
-  "id": "problem-67",
+  "id": "problem-49",
   "level": "2",
-  "url": "section-74.html#problem-67",
+  "url": "section-74.html#problem-49",
   "type": "Problem",
   "number": "G.49",
   "title": "Problem 4.",
   "body": "Problem 4   Let be a commutative domain.   State the definition for to be a Euclidean domain.    Prove that in a Euclidean domain every ideal is principal.       Let be a commutative domain.  Part (a)  Part (b) Let be an ideal in , and let denote the set of norms for a nonzero generating set of . If none exist then then in it is principally generated, so we can assume there is some nonzero , meaning our set is nonempty.  As is a set of natural numbers bounded below, by the Least Upper Bound Axiom there exists a smallest element. Let denote the nonzero element in with smallest norm.  Suppose and are nonzero elements of the generating set for . As is an ED there exist such that with either or .  Notice that , where and by absorption. Thus , meaning that . Thus . Then , meaning that . Thus every element in the generating set for is contained in , and thus , making principally generated.   "
 },
 {
-  "id": "problem-68",
+  "id": "problem-50",
   "level": "2",
-  "url": "section-74.html#problem-68",
+  "url": "section-74.html#problem-50",
   "type": "Problem",
   "number": "G.50",
   "title": "Problem 5.",
   "body": "Problem 5   Let be a commutative ring in which every element satisfies for some Show that every prime ideal in R is maximal.    Let be a commutative ring in which every element satisfies for some Let be a prime ideal in .  Let , meaning . Then for some . As is a domain we can cancel an to see that , and thus , making a unit in . Thus is a field, making maximal in .   "
 },
 {
-  "id": "problem-69",
+  "id": "problem-51",
   "level": "2",
-  "url": "section-74.html#problem-69",
+  "url": "section-74.html#problem-51",
   "type": "Problem",
   "number": "G.51",
   "title": "Problem 6.",
   "body": "Problem 6   Let be a positive integer and let be the Jordan block matrix of size with eigenvalue 0 in .    Find the minimal polynomials for and for , with justification.  Find the Jordan canonical form of , with justification. Hint : consider the kernel of .     Let be a positive integer and let be the Jordan block matrix of size with eigenvalue 0 in .  Part (a) Notice that is a triangular matrix with 's along the diagonal. Thus , the product of the diagonal entries of the matrix .  Squaring a triangular matrix moves everything one down (Proof?), and so should do it. Squaring just moves us one closer, so   Part (b) As , the only roots of it are , and thus these are the only elementary divisors of .   "
 },
 {
-  "id": "problem-70",
+  "id": "problem-52",
   "level": "2",
-  "url": "section-74.html#problem-70",
+  "url": "section-74.html#problem-52",
   "type": "Problem",
   "number": "G.52",
   "title": "Problem 7.",
   "body": "Problem 7   Let be a field extension and let . Show that if is algebraically closed, then K is algebraically closed.    Let be a field extension let , and suppose that is algebraically closed. Thus every polynomial in has a root in .  Let and let be a root of . Thus , where each . By definition of , each is algebraic over . Notice that as well, making algebraic over this extension as well.  Consider the chain of extensions As is algebraic over for all and is algebraic over we see that each step in this chain has finite degree by Theorem. By the Degree Formula, is finite and thus so is . By the Theorem again, is algebraic over . Thus is algebraic over , hence , making algebraically closed.   "
 },
 {
-  "id": "problem-71",
+  "id": "problem-53",
   "level": "2",
-  "url": "section-74.html#problem-71",
+  "url": "section-74.html#problem-53",
   "type": "Problem",
   "number": "G.53",
   "title": "Problem 8.",
   "body": "Problem 8   Let be a positive integer and let be a prime integer. Consider the polynomial and define to be the splitting field of over .   Show that the set of roots of in is a subfield of .  Show that has exactly elements.     Let be a positive integer and let be a prime integer. Consider the polynomial and define to be the splitting field of over .  Part (a) Let denote the set of roots of . Let . Thus . By the Factor Theorem there can be at most roots. Suppose for roots .  Part (b)   "
 },
 {
-  "id": "problem-72",
+  "id": "problem-54",
   "level": "2",
-  "url": "section-74.html#problem-72",
+  "url": "section-74.html#problem-54",
   "type": "Problem",
   "number": "G.54",
   "title": "Problem 9.",
@@ -11818,90 +11665,90 @@ var ptx_lunr_docs = [
   "body": "May 2019  Section I: Group Theory  Problem 1   Let be a group. A subgroup of is called maximal if (that is, is a proper subgroup of ) and whenever is another subgroup of containing , either or . Show that every nontrivial finitely generated group possesses maximal subgroups.    Let be a group.  Let be the poset of all proper subgroups of ordered in terms of inclusion. Consider a string of these. Consider the union of them all. Luckily, unions of subgroups are subgroups if and only if there is containment, which there is, since everything is in the union. Thus its a subgroup. Since union in and yields an upper bound, by Zorn's Lemma we a maximal element. Thus possesses maximal subgroups.    Problem 2   Let be a group and a subgroup of . Recall that the centralizer of in is Prove that if is normal in , then so is and that is isomorphic to a subgroup of the automorphism group of .    Let be a group and . Let , and consider . Let . As we have for some , and thus that 1. and 2. . Consider . By (1), we see . As commutes with everything in we have , and by (2) we have . Thus .  Let act on the left cosets of by left multiplication, giving rise to the permutation representation homomorphism . By the we see that is isomorphic to a subgroup of the automorphism group of .    Problem 3   Let be a group of order where and are distinct primes. (a) Prove that contains a normal [[Mathematics\/Definitions\/Sylow p-Subgroup|Sylow subgroup]]. (b) Suppose and the Sylow -subgroup is cyclic and normal. Prove that is abelian.    ##### Part (a) Let be a group of order where and are distinct primes. Suppose by way of contradiction that has no normal Sylow -subgroup.  First, suppose . By we know the following: - and , so or , so - and , so or , so . We know there must be elements of order . Luckily, there is more than one Sylow -subgroup with elements, so there isn't room for all of them.  Suppose then that . By we know the following: - and , so , so we're definitely good there.  Part (b) Suppose and the Sylow -subgroup, , is cyclic and normal. We know from Part (a) that there are either or Sylow -subgroups, but since there are already elements of order there is only room for one, , which is also cyclic, given its prime power. As and are thus normal in and only intersect trivially, we see that , meaning that . Thus is the product of two cyclic groups of relatively prime order, making cyclic as well. Cyclic groups are abelian, so we are done.    Problem 3?   Let be a finite group of order with prime numbers. Show that is not a simple group.    Let be a finite group of order with prime numbers, and suppose by way of contradiction that is simple. By we have the following: - and , and thus . - and , and thus . From this information we see that there are elements of order and elements of order , for a lovely total of elements, which is too many.     Section  Problem 4   Consider the [[Mathematics\/Definitions\/Subring|subring]] of . Show that is irreducible but not prime in Hint: Consider the function .    Consider and the function .  Let and behold So there's that done.  Suppose by way of contradiction there exist such that . Then and , and Thus or , as these are the only integer divisors of . However, there do not exist integers such that this is true. Thus is irreducible in .  Suppose by way of contradiction that is prime in . Note that . Thus divides one of these factors.  First, suppose there exists some such that . Thus , and so . However, is not an integer, and thus cannot divide either of these factors. Thus is not prime in .    Problem 5   Recall that a -module is called torsion-free if its torsion submodule is where Consider the -module Show that is torsion free.    Let . Thus for some nonzero . Then , and so and . Then there exists such that and or and and . Notice that in we have , and thus neither nor can divide . Suppose and . As cannot divide we see that divides both and , placing them both . Thus . The same holds true if we use . Thus and .    Problem 6   Let be a positive integer. Consider the real vector space and the [[Mathematics\/Definitions\/Linear Transformation|linear transformation]] , where is the [[Mathematics\/Definitions\/Derivative|derivative]] of p(x).   Find the characteristic polynomial and the minimal polynomial for .  Find the [[Mathematics\/Definitions\/Invariant Factor|invariant factors]] and the [[Mathematics\/Definitions\/Elementary Divisor|elementary divisors]] for .  Find the [[Theorem – Rational Canonical Form|rational canonical form]] and the [[Theorem – Jordan Canonical Form|Jordan canonical form]] for .     Let be the linear operator given by (where denotes the derivative of   Part (a) Note that the change of basis matrix for this operator is given by with the basis . Thus will be given by the determinant of the matrix which is diagonal. Hence .  Part (b) Our factors into distinct linear polynomials, each of which is in the form for . Thus each linear term is an elementary divisor. However, as none of these elementary divisors divide any of the others, we see that the only invariant factor is itself.  Part (c) As each linear term is an elementary divisor, each Jordan block a matrix with as the only entry. Thus the Jordan Canonical form is As the only invariant factor is , we see that the Rational Canonical Form of is .     Section  Problem 7   Let and be subfields of a field with and . Let and . Recall that denotes the smallest (with respect to containment) subfield of which satisfies and .   Show that .  Show that if then   Give an example satisfying      Let and be subfields of a field with and . Let and .  Part (a) We're going to go slightly out of order. By Part (b), we see when . This is the largest possible size of , as everything is irreducible where it can be. Thus   Part (b) Suppose . As and are finite extensions of they are also algebraic. Thus there exists and such that has degree and has degree .  Thus , making irreducible in . Thus . Notice that , as it is the smallest (with respect to containment) subfield of which satisfies and . Thus we have , as desired.  Part (c) Let , , and Notice that , and thus .    Problem 8   Let be fields and let be algebraic elements over . Prove that and are also algebraic elements of over .    Let be fields and let be algebraic elements over First, notice that and are contained in . As is algebraic over , it is the root of some polynomial with coefficients in . But is also contained in , and thus the extension is algebraic. As is algebraic as well, we see that is an algebraic extension of fields. Thus and are algebraic over .    Problem 9   Consider This polynomial has exactly three real roots, a fact that you may use without proof.   Show that is irreducible in .  Let be a splitting field of $over . Show that is a Galois extension and find the isomorphism class of the Galois group .     Part (a) Notice that is prime in , and thus is irreducible in by Eisenstein's Criterion.  Part (b) Let be a real root of . As is irreducible this root is not in . As is the root of a monic irreducible polynomial of degree , we see that . By the FTGT there exists a subgroup of with order , making it a cyclic subgroup generated by some element of order .  However, as only has complex roots we see that complex conjugation corresponds to an element of order in . Thus we have a transposition and a -cycle, meaning we can generate all of . .     "
 },
 {
-  "id": "problem-73",
+  "id": "problem-55",
   "level": "2",
-  "url": "section-75.html#problem-73",
+  "url": "section-75.html#problem-55",
   "type": "Problem",
   "number": "G.55",
   "title": "Problem 1.",
   "body": "Problem 1   Let be a group. A subgroup of is called maximal if (that is, is a proper subgroup of ) and whenever is another subgroup of containing , either or . Show that every nontrivial finitely generated group possesses maximal subgroups.    Let be a group.  Let be the poset of all proper subgroups of ordered in terms of inclusion. Consider a string of these. Consider the union of them all. Luckily, unions of subgroups are subgroups if and only if there is containment, which there is, since everything is in the union. Thus its a subgroup. Since union in and yields an upper bound, by Zorn's Lemma we a maximal element. Thus possesses maximal subgroups.   "
 },
 {
-  "id": "problem-74",
+  "id": "problem-56",
   "level": "2",
-  "url": "section-75.html#problem-74",
+  "url": "section-75.html#problem-56",
   "type": "Problem",
   "number": "G.56",
   "title": "Problem 2.",
   "body": "Problem 2   Let be a group and a subgroup of . Recall that the centralizer of in is Prove that if is normal in , then so is and that is isomorphic to a subgroup of the automorphism group of .    Let be a group and . Let , and consider . Let . As we have for some , and thus that 1. and 2. . Consider . By (1), we see . As commutes with everything in we have , and by (2) we have . Thus .  Let act on the left cosets of by left multiplication, giving rise to the permutation representation homomorphism . By the we see that is isomorphic to a subgroup of the automorphism group of .   "
 },
 {
-  "id": "problem-75",
+  "id": "problem-57",
   "level": "2",
-  "url": "section-75.html#problem-75",
+  "url": "section-75.html#problem-57",
   "type": "Problem",
   "number": "G.57",
   "title": "Problem 3.",
   "body": "Problem 3   Let be a group of order where and are distinct primes. (a) Prove that contains a normal [[Mathematics\/Definitions\/Sylow p-Subgroup|Sylow subgroup]]. (b) Suppose and the Sylow -subgroup is cyclic and normal. Prove that is abelian.    ##### Part (a) Let be a group of order where and are distinct primes. Suppose by way of contradiction that has no normal Sylow -subgroup.  First, suppose . By we know the following: - and , so or , so - and , so or , so . We know there must be elements of order . Luckily, there is more than one Sylow -subgroup with elements, so there isn't room for all of them.  Suppose then that . By we know the following: - and , so , so we're definitely good there.  Part (b) Suppose and the Sylow -subgroup, , is cyclic and normal. We know from Part (a) that there are either or Sylow -subgroups, but since there are already elements of order there is only room for one, , which is also cyclic, given its prime power. As and are thus normal in and only intersect trivially, we see that , meaning that . Thus is the product of two cyclic groups of relatively prime order, making cyclic as well. Cyclic groups are abelian, so we are done.   "
 },
 {
-  "id": "problem-76",
+  "id": "problem-58",
   "level": "2",
-  "url": "section-75.html#problem-76",
+  "url": "section-75.html#problem-58",
   "type": "Problem",
   "number": "G.58",
   "title": "Problem 3?",
   "body": "Problem 3?   Let be a finite group of order with prime numbers. Show that is not a simple group.    Let be a finite group of order with prime numbers, and suppose by way of contradiction that is simple. By we have the following: - and , and thus . - and , and thus . From this information we see that there are elements of order and elements of order , for a lovely total of elements, which is too many.   "
 },
 {
-  "id": "problem-77",
+  "id": "problem-59",
   "level": "2",
-  "url": "section-75.html#problem-77",
+  "url": "section-75.html#problem-59",
   "type": "Problem",
   "number": "G.59",
   "title": "Problem 4.",
   "body": "Problem 4   Consider the [[Mathematics\/Definitions\/Subring|subring]] of . Show that is irreducible but not prime in Hint: Consider the function .    Consider and the function .  Let and behold So there's that done.  Suppose by way of contradiction there exist such that . Then and , and Thus or , as these are the only integer divisors of . However, there do not exist integers such that this is true. Thus is irreducible in .  Suppose by way of contradiction that is prime in . Note that . Thus divides one of these factors.  First, suppose there exists some such that . Thus , and so . However, is not an integer, and thus cannot divide either of these factors. Thus is not prime in .   "
 },
 {
-  "id": "problem-78",
+  "id": "problem-60",
   "level": "2",
-  "url": "section-75.html#problem-78",
+  "url": "section-75.html#problem-60",
   "type": "Problem",
   "number": "G.60",
   "title": "Problem 5.",
   "body": "Problem 5   Recall that a -module is called torsion-free if its torsion submodule is where Consider the -module Show that is torsion free.    Let . Thus for some nonzero . Then , and so and . Then there exists such that and or and and . Notice that in we have , and thus neither nor can divide . Suppose and . As cannot divide we see that divides both and , placing them both . Thus . The same holds true if we use . Thus and .   "
 },
 {
-  "id": "problem-79",
+  "id": "problem-61",
   "level": "2",
-  "url": "section-75.html#problem-79",
+  "url": "section-75.html#problem-61",
   "type": "Problem",
   "number": "G.61",
   "title": "Problem 6.",
   "body": "Problem 6   Let be a positive integer. Consider the real vector space and the [[Mathematics\/Definitions\/Linear Transformation|linear transformation]] , where is the [[Mathematics\/Definitions\/Derivative|derivative]] of p(x).   Find the characteristic polynomial and the minimal polynomial for .  Find the [[Mathematics\/Definitions\/Invariant Factor|invariant factors]] and the [[Mathematics\/Definitions\/Elementary Divisor|elementary divisors]] for .  Find the [[Theorem – Rational Canonical Form|rational canonical form]] and the [[Theorem – Jordan Canonical Form|Jordan canonical form]] for .     Let be the linear operator given by (where denotes the derivative of   Part (a) Note that the change of basis matrix for this operator is given by with the basis . Thus will be given by the determinant of the matrix which is diagonal. Hence .  Part (b) Our factors into distinct linear polynomials, each of which is in the form for . Thus each linear term is an elementary divisor. However, as none of these elementary divisors divide any of the others, we see that the only invariant factor is itself.  Part (c) As each linear term is an elementary divisor, each Jordan block a matrix with as the only entry. Thus the Jordan Canonical form is As the only invariant factor is , we see that the Rational Canonical Form of is .   "
 },
 {
-  "id": "problem-80",
+  "id": "problem-62",
   "level": "2",
-  "url": "section-75.html#problem-80",
+  "url": "section-75.html#problem-62",
   "type": "Problem",
   "number": "G.62",
   "title": "Problem 7.",
   "body": "Problem 7   Let and be subfields of a field with and . Let and . Recall that denotes the smallest (with respect to containment) subfield of which satisfies and .   Show that .  Show that if then   Give an example satisfying      Let and be subfields of a field with and . Let and .  Part (a) We're going to go slightly out of order. By Part (b), we see when . This is the largest possible size of , as everything is irreducible where it can be. Thus   Part (b) Suppose . As and are finite extensions of they are also algebraic. Thus there exists and such that has degree and has degree .  Thus , making irreducible in . Thus . Notice that , as it is the smallest (with respect to containment) subfield of which satisfies and . Thus we have , as desired.  Part (c) Let , , and Notice that , and thus .   "
 },
 {
-  "id": "problem-81",
+  "id": "problem-63",
   "level": "2",
-  "url": "section-75.html#problem-81",
+  "url": "section-75.html#problem-63",
   "type": "Problem",
   "number": "G.63",
   "title": "Problem 8.",
   "body": "Problem 8   Let be fields and let be algebraic elements over . Prove that and are also algebraic elements of over .    Let be fields and let be algebraic elements over First, notice that and are contained in . As is algebraic over , it is the root of some polynomial with coefficients in . But is also contained in , and thus the extension is algebraic. As is algebraic as well, we see that is an algebraic extension of fields. Thus and are algebraic over .   "
 },
 {
-  "id": "problem-82",
+  "id": "problem-64",
   "level": "2",
-  "url": "section-75.html#problem-82",
+  "url": "section-75.html#problem-64",
   "type": "Problem",
   "number": "G.64",
   "title": "Problem 9.",
@@ -11917,81 +11764,81 @@ var ptx_lunr_docs = [
   "body": "January 2019  Section I: Group Theory  Problem 1   Let be a group. A subgroup of is called a characteristic subgroup of if for every automorphism of . Show that if is a characteristic subgroup of and is a normal subgroup of , then is a normal subgroup of .    Let be a group, is a normal subgroup of , and a characteristic subgroup of . Let and consider the automorphism given by .  Let and notice , as . Thus is well defined. Let . As , we can write for some . Then , making surjective. As we see that is a bijection. The homomorphism piece we get for free from , making .  Let . As is a characteristic subgroup of , we see that for all and for all . Thus is normal in .    Problem 2   Let be a group acting on a set , and let be a subgroup of satisfying that the induced action of on is transitive (that is, for all a there is an with ). Let , and let be the stabilizer of in . Show that .    Let be a group acting on a set , and let be a subgroup of satisfying that the induced action of on is transitive. Let , and let be the stabilizer of in .  Let . Note that for all . If then . Suppose then that . Suppose for some . As acts transitively on there exists some such that . So , placing . Thus , so .    Problem 3    Let G be a simple group of order 60. Determine the number of elements of G of order 5.  Show that there is no simple group of order 30.     Part (a) Let be a simple group of order By we know that and that . Thus the options for are and . Since is simple we see that . As each Sylow -subgroup of has unique elements of order and the identity we see that the number of elements or order in is .  Part (b) Suppose by way of contradiction that is a simple group of order . Similarly to above, , yielding elements of order . Now, and , so , yielding far too many elements to fit in .     Section  Problem 4   Let be a square-free integer. The ring is the subring of defined by Show that there is a ring isomorphism .    Let such that .  Let , and notice that , giving us surjectivity. Also, and making a homomorphism as well.  Let , and let . As is a division ring we can write for some such that or . Thus has degree , making .    Problem 5   Let be a –module and let be any integer. Show that there is a -module isomorphism is a submodule of . (Note: You may use the fact that is a –module without proof.)    Coming Soon!    Problem 6   Determine all similarity classes of matrices with entries in with characteristic polynomial . Provide an explicit representative for each of these similarity classes.    Let be a matrix with entries in with characteristic polynomial .  By this [[Corollary – Every Matrix Similar to Unique RCF Matrix|Corollary]] we know that every matrix is similar to a unique matrix in RCF. Note that RCF is based on the invariant factors if a matrix, and thus if two matrices have the same invariant factors they will have the same RCF, making them both similar to the same (unique) matrix, making them similar to each other. By part (1) of this [[Theorem – Cayley-Hamilton Theorem|Theorem]], the characteristic polynomial of a matrix is equal to the product of the invariant factors of that same matrix.  Recall that the invariant factors must divide all preceding invariant factors in RCF (See: [[Theorem – Rational Canonical Form|Theorem]]), and observe that factors as and factors as . Given this information, after some fiddling with the factors, we find four possible options for invariant factors of : 1. , 2. , 3. , and 4. . Let  , and . Observe the companion matrices of each of these polynomials: Behold: explicit representatives of each similarity class: 1. , 2. , 3. , and 4. .     Section  Problem 7   Let be a prime integer and let be a root of the polynomial .   Find, with justification, the degree of the field extension over .  Deduce that the polynomial is irreducible in .     Let be a prime integer and let be a root of the polynomial .  Part (a) First, notice that by Eisenstein's Criterion ( ) we have irreducible in .  Let be a primitive root of unity. The roots of are the following:      . Total is by degree formula.  Part (b)    Problem 8    Show that any finite extension of fields is algebraic.  Let denote the subfield of consisting of all the complex numbers which are algebraic over . (You may use that is a field without proof.) Show that is an algebraic extension, but not a finite extension.     Part (a) Let be a finite extension of fields. Let . By the we have . Thus is finite, making algebraic over .. Part (b) Notice that for all and that is a root of the polynomial , which is irreducible in by ( ). Thus . As must be added to for all , we see that this extension is not finite.    Problem 9   Let be a Galois extension of with .   Prove that there exists a subfield of containing F with .    Determine whether there must also exist a subfield of containing with .       Let be a Galois extension of with .  Part (a) Let be a Sylow -subgroup of . Notice that . By the [[Mathematics\/Modern Algebra\/Results\/Theorem – Fundamental Theorem of Galois Theory|FTGT]] there exists an intermediate field extension such that . By the [[Mathematics\/Modern Algebra\/Results\/Proposition – The Degree Formula|Degree Formula]], we have , with and . Thus .  Part (b) Notice that as is a prime dividing the order of there must exist an element of order by [[Mathematics\/Modern Algebra\/Results\/Theorem – Cauchy's Theorem|Cauchy's Theorem]]. The cyclic subgroup, , generated by this element has order . By the FTGT there exists an intermediate field extension such that . By the Degree Formula, we have , with and . Thus .     "
 },
 {
-  "id": "problem-83",
+  "id": "problem-65",
   "level": "2",
-  "url": "section-76.html#problem-83",
+  "url": "section-76.html#problem-65",
   "type": "Problem",
   "number": "G.65",
   "title": "Problem 1.",
   "body": "Problem 1   Let be a group. A subgroup of is called a characteristic subgroup of if for every automorphism of . Show that if is a characteristic subgroup of and is a normal subgroup of , then is a normal subgroup of .    Let be a group, is a normal subgroup of , and a characteristic subgroup of . Let and consider the automorphism given by .  Let and notice , as . Thus is well defined. Let . As , we can write for some . Then , making surjective. As we see that is a bijection. The homomorphism piece we get for free from , making .  Let . As is a characteristic subgroup of , we see that for all and for all . Thus is normal in .   "
 },
 {
-  "id": "problem-84",
+  "id": "problem-66",
   "level": "2",
-  "url": "section-76.html#problem-84",
+  "url": "section-76.html#problem-66",
   "type": "Problem",
   "number": "G.66",
   "title": "Problem 2.",
   "body": "Problem 2   Let be a group acting on a set , and let be a subgroup of satisfying that the induced action of on is transitive (that is, for all a there is an with ). Let , and let be the stabilizer of in . Show that .    Let be a group acting on a set , and let be a subgroup of satisfying that the induced action of on is transitive. Let , and let be the stabilizer of in .  Let . Note that for all . If then . Suppose then that . Suppose for some . As acts transitively on there exists some such that . So , placing . Thus , so .   "
 },
 {
-  "id": "problem-85",
+  "id": "problem-67",
   "level": "2",
-  "url": "section-76.html#problem-85",
+  "url": "section-76.html#problem-67",
   "type": "Problem",
   "number": "G.67",
   "title": "Problem 3.",
   "body": "Problem 3    Let G be a simple group of order 60. Determine the number of elements of G of order 5.  Show that there is no simple group of order 30.     Part (a) Let be a simple group of order By we know that and that . Thus the options for are and . Since is simple we see that . As each Sylow -subgroup of has unique elements of order and the identity we see that the number of elements or order in is .  Part (b) Suppose by way of contradiction that is a simple group of order . Similarly to above, , yielding elements of order . Now, and , so , yielding far too many elements to fit in .   "
 },
 {
-  "id": "problem-86",
+  "id": "problem-68",
   "level": "2",
-  "url": "section-76.html#problem-86",
+  "url": "section-76.html#problem-68",
   "type": "Problem",
   "number": "G.68",
   "title": "Problem 4.",
   "body": "Problem 4   Let be a square-free integer. The ring is the subring of defined by Show that there is a ring isomorphism .    Let such that .  Let , and notice that , giving us surjectivity. Also, and making a homomorphism as well.  Let , and let . As is a division ring we can write for some such that or . Thus has degree , making .   "
 },
 {
-  "id": "problem-87",
+  "id": "problem-69",
   "level": "2",
-  "url": "section-76.html#problem-87",
+  "url": "section-76.html#problem-69",
   "type": "Problem",
   "number": "G.69",
   "title": "Problem 5.",
   "body": "Problem 5   Let be a –module and let be any integer. Show that there is a -module isomorphism is a submodule of . (Note: You may use the fact that is a –module without proof.)    Coming Soon!   "
 },
 {
-  "id": "problem-88",
+  "id": "problem-70",
   "level": "2",
-  "url": "section-76.html#problem-88",
+  "url": "section-76.html#problem-70",
   "type": "Problem",
   "number": "G.70",
   "title": "Problem 6.",
   "body": "Problem 6   Determine all similarity classes of matrices with entries in with characteristic polynomial . Provide an explicit representative for each of these similarity classes.    Let be a matrix with entries in with characteristic polynomial .  By this [[Corollary – Every Matrix Similar to Unique RCF Matrix|Corollary]] we know that every matrix is similar to a unique matrix in RCF. Note that RCF is based on the invariant factors if a matrix, and thus if two matrices have the same invariant factors they will have the same RCF, making them both similar to the same (unique) matrix, making them similar to each other. By part (1) of this [[Theorem – Cayley-Hamilton Theorem|Theorem]], the characteristic polynomial of a matrix is equal to the product of the invariant factors of that same matrix.  Recall that the invariant factors must divide all preceding invariant factors in RCF (See: [[Theorem – Rational Canonical Form|Theorem]]), and observe that factors as and factors as . Given this information, after some fiddling with the factors, we find four possible options for invariant factors of : 1. , 2. , 3. , and 4. . Let  , and . Observe the companion matrices of each of these polynomials: Behold: explicit representatives of each similarity class: 1. , 2. , 3. , and 4. .   "
 },
 {
-  "id": "problem-89",
+  "id": "problem-71",
   "level": "2",
-  "url": "section-76.html#problem-89",
+  "url": "section-76.html#problem-71",
   "type": "Problem",
   "number": "G.71",
   "title": "Problem 7.",
   "body": "Problem 7   Let be a prime integer and let be a root of the polynomial .   Find, with justification, the degree of the field extension over .  Deduce that the polynomial is irreducible in .     Let be a prime integer and let be a root of the polynomial .  Part (a) First, notice that by Eisenstein's Criterion ( ) we have irreducible in .  Let be a primitive root of unity. The roots of are the following:      . Total is by degree formula.  Part (b)   "
 },
 {
-  "id": "problem-90",
+  "id": "problem-72",
   "level": "2",
-  "url": "section-76.html#problem-90",
+  "url": "section-76.html#problem-72",
   "type": "Problem",
   "number": "G.72",
   "title": "Problem 8.",
   "body": "Problem 8    Show that any finite extension of fields is algebraic.  Let denote the subfield of consisting of all the complex numbers which are algebraic over . (You may use that is a field without proof.) Show that is an algebraic extension, but not a finite extension.     Part (a) Let be a finite extension of fields. Let . By the we have . Thus is finite, making algebraic over .. Part (b) Notice that for all and that is a root of the polynomial , which is irreducible in by ( ). Thus . As must be added to for all , we see that this extension is not finite.   "
 },
 {
-  "id": "problem-91",
+  "id": "problem-73",
   "level": "2",
-  "url": "section-76.html#problem-91",
+  "url": "section-76.html#problem-73",
   "type": "Problem",
   "number": "G.73",
   "title": "Problem 9.",
@@ -12007,81 +11854,81 @@ var ptx_lunr_docs = [
   "body": "May 2018  Section I: Group Theory  Problem 1   Let and be groups. (a) Show that the direct product group is isomorphic to a subgroup of . (b) Give an example, with justification, of groups and for which is not isomorphic to .    Proof. Let and be groups.  Part (a) First, let and . Let be defined by . Let . As automorphisms, there exist such that and . Thus we have surjectivity, and hence bijectivity, given the equal cardinalities. The homomorphism element is verifiable, I'll do it later. Thus is indeed an automorphism of .  Define by . Suppose two elements map to the same place. Then they were the same! Thus, by the First Isomorphism, we have the result.  Part (b)  Let , the cyclic group of order . Then since there is only one non-identity automorphism (namely, the map that sends the generator to its inverse), and for the same reason. Therefore, , which is abelian.  On the other hand, is also abelian. Let be the nontrivial automorphism of , which sends to and to . Then the automorphism is nontrivial and sends to itself, so it is an automorphism of . Therefore, contains a nonabelian subgroup, and in particular is not isomorphic to .    Problem 2   Let be a normal subgroup of a group . Recall that a group is solvable if there is a sequence of subgroups for some such that for all the quotient group is abelian. Show that if both and are solvable groups, then is solvable.    Suppose that is solvable, and is a subgroup of . Since is solvable, it has a filtration: where is abelian. Let . Since is normal in , it is obvious that is normal in .    Problem 3   Determine all of the groups of order , up to isomorphism    By we know the following: - and , so . - and , so as well. Thus there is exactly one Sylow -subgroup, , and exactly one Sylow -subgroup, . Both are normal in . Notice that has order , a prime squared. Thus is abelian. By the [[Mathematics\/Modern Algebra\/Results\/Theorem – FTFGAG Elementary Divisor form|Fundamental Theorem of Finitely Generated Abelian Groups]], is either isomorphic to or . Thus or .     Section  Problem 4   In the commutative ring , show that the element is irreducible but not prime.    First, notice that . Define a function Let and behold So there's that done.  Suppose by way of contradiction there exist such that . Then and , and Thus or , as these are the only integer divisors of . However, there do not exist integers such that this is true. Thus is irreducible in .  Suppose by way of contradiction that is prime in . Note that . Thus divides one of these factors.  First, suppose there exists some such that . Thus , and so . However, is not an integer, and thus cannot divide either of these factors. Thus is not prime in .    Problem 5   Let be a commutative ring (with ) and let be an -module. Show that if and the only submodules of are and , then there is a maximal ideal I of such that is isomorphic to .    Let be a commutative ring (with ) and let be an -module such that and the only submodules of are and .  As , there exists a non-zero element . Let be defined by . Since and , we have . By the [[Theorem – Module Isomorphism Theorems|First Isomorphism Theorem]] we see that , making an ideal in , which we shall conspicuously denote as henceforth. By the Lattice Isomorphism Theorem the only two ideals of are and , making a field, and a maximal ideal in .    Problem 6   For the matrix in : (a) Find the [[Theorem – Rational Canonical Form|rational canonical form]] of . (b) Determine whether or not has a [[Theorem – Jordan Canonical Form|Jordan canonical form]], and if so, find this form.    Part (a) Notice . So we have Not so bad! Now, the invariant factors all divide the characteristic polynomial and must divide the following factor, so our options for sets of invariant factors are the following: - - However, the largest invariant factor is also the minimal polynomial. So we check to see if . Luckily, the very first calculation shows that this is not the case. Thus the minimum polynomial is the characteristic polynomial is the only invariant factor of . Thus the RCF of is   Part (b) Luckily for us, factors completely into linear terms! So our elementary divisors are and . We see and , so the Jordan Canonical form of is      Section  Problem 7   Suppose that is a finite extension of fields such that the degree is odd. Show that if , then .    Let be a finite extension of fields such that the degree is odd.  Notice that as everything in can be written in terms of . Suppose by way of contradiction that there exists some such that . Then . Notice that is a root of the polynomial , which is irreducible in as it is a degree polynomial that has no roots in . Thus is the minimum polynomial of and   However, by the [[Mathematics\/Modern Algebra\/Results\/Proposition – The Degree Formula|Degree Formula]] , which is a problem, given now divides , an odd number. Thus .    Problem 8   Let be an extension of fields and let . Show that    Let . Then is an automorphism of that restricts to the identity on . As we see that restricts both of these to the identity as well. Thus .  Next, suppose . Thus restricts to the identity on and . Let .    Problem 9   Let be the splitting field of over (a) Find a basis for as a vector space over . (b) Show that is not abelian.    Part (a) First, note that is irreducible in by Eisenstein's Criterion ( ) The roots of are - , - , - , and - . Let and notice . As we see that , and thus , meaning our basis will have eight elements: 1. 1 2. 3. 4. 5. 6. 7. 8.   Part (b) Now that has been verified to be a splitting field, we see that is isomorphic to a subgroup of of degree .  Any subgroup of of order is a Sylow -subgroup. By s, the number of Sylow -subgroups is either or .  If there are three they are all conjugate, and conjugation induces an isomorphism on the group, we see that all three subgroups are isomorphic.  Let be the set of left cosets of the subgroup of . Note that . Let act on by left multiplication. This action induces a homomorphism where is the permutation group on . As shown in class, the kernel of this homomorphism is the largest normal subgroup contained in , which is . Thus, is injective and the image of is a subgroup of isomorphic to .     "
 },
 {
-  "id": "problem-92",
+  "id": "problem-74",
   "level": "2",
-  "url": "section-77.html#problem-92",
+  "url": "section-77.html#problem-74",
   "type": "Problem",
   "number": "G.74",
   "title": "Problem 1.",
   "body": "Problem 1   Let and be groups. (a) Show that the direct product group is isomorphic to a subgroup of . (b) Give an example, with justification, of groups and for which is not isomorphic to .    Proof. Let and be groups.  Part (a) First, let and . Let be defined by . Let . As automorphisms, there exist such that and . Thus we have surjectivity, and hence bijectivity, given the equal cardinalities. The homomorphism element is verifiable, I'll do it later. Thus is indeed an automorphism of .  Define by . Suppose two elements map to the same place. Then they were the same! Thus, by the First Isomorphism, we have the result.  Part (b)  Let , the cyclic group of order . Then since there is only one non-identity automorphism (namely, the map that sends the generator to its inverse), and for the same reason. Therefore, , which is abelian.  On the other hand, is also abelian. Let be the nontrivial automorphism of , which sends to and to . Then the automorphism is nontrivial and sends to itself, so it is an automorphism of . Therefore, contains a nonabelian subgroup, and in particular is not isomorphic to .   "
 },
 {
-  "id": "problem-93",
+  "id": "problem-75",
   "level": "2",
-  "url": "section-77.html#problem-93",
+  "url": "section-77.html#problem-75",
   "type": "Problem",
   "number": "G.75",
   "title": "Problem 2.",
   "body": "Problem 2   Let be a normal subgroup of a group . Recall that a group is solvable if there is a sequence of subgroups for some such that for all the quotient group is abelian. Show that if both and are solvable groups, then is solvable.    Suppose that is solvable, and is a subgroup of . Since is solvable, it has a filtration: where is abelian. Let . Since is normal in , it is obvious that is normal in .   "
 },
 {
-  "id": "problem-94",
+  "id": "problem-76",
   "level": "2",
-  "url": "section-77.html#problem-94",
+  "url": "section-77.html#problem-76",
   "type": "Problem",
   "number": "G.76",
   "title": "Problem 3.",
   "body": "Problem 3   Determine all of the groups of order , up to isomorphism    By we know the following: - and , so . - and , so as well. Thus there is exactly one Sylow -subgroup, , and exactly one Sylow -subgroup, . Both are normal in . Notice that has order , a prime squared. Thus is abelian. By the [[Mathematics\/Modern Algebra\/Results\/Theorem – FTFGAG Elementary Divisor form|Fundamental Theorem of Finitely Generated Abelian Groups]], is either isomorphic to or . Thus or .   "
 },
 {
-  "id": "problem-95",
+  "id": "problem-77",
   "level": "2",
-  "url": "section-77.html#problem-95",
+  "url": "section-77.html#problem-77",
   "type": "Problem",
   "number": "G.77",
   "title": "Problem 4.",
   "body": "Problem 4   In the commutative ring , show that the element is irreducible but not prime.    First, notice that . Define a function Let and behold So there's that done.  Suppose by way of contradiction there exist such that . Then and , and Thus or , as these are the only integer divisors of . However, there do not exist integers such that this is true. Thus is irreducible in .  Suppose by way of contradiction that is prime in . Note that . Thus divides one of these factors.  First, suppose there exists some such that . Thus , and so . However, is not an integer, and thus cannot divide either of these factors. Thus is not prime in .   "
 },
 {
-  "id": "problem-96",
+  "id": "problem-78",
   "level": "2",
-  "url": "section-77.html#problem-96",
+  "url": "section-77.html#problem-78",
   "type": "Problem",
   "number": "G.78",
   "title": "Problem 5.",
   "body": "Problem 5   Let be a commutative ring (with ) and let be an -module. Show that if and the only submodules of are and , then there is a maximal ideal I of such that is isomorphic to .    Let be a commutative ring (with ) and let be an -module such that and the only submodules of are and .  As , there exists a non-zero element . Let be defined by . Since and , we have . By the [[Theorem – Module Isomorphism Theorems|First Isomorphism Theorem]] we see that , making an ideal in , which we shall conspicuously denote as henceforth. By the Lattice Isomorphism Theorem the only two ideals of are and , making a field, and a maximal ideal in .   "
 },
 {
-  "id": "problem-97",
+  "id": "problem-79",
   "level": "2",
-  "url": "section-77.html#problem-97",
+  "url": "section-77.html#problem-79",
   "type": "Problem",
   "number": "G.79",
   "title": "Problem 6.",
   "body": "Problem 6   For the matrix in : (a) Find the [[Theorem – Rational Canonical Form|rational canonical form]] of . (b) Determine whether or not has a [[Theorem – Jordan Canonical Form|Jordan canonical form]], and if so, find this form.    Part (a) Notice . So we have Not so bad! Now, the invariant factors all divide the characteristic polynomial and must divide the following factor, so our options for sets of invariant factors are the following: - - However, the largest invariant factor is also the minimal polynomial. So we check to see if . Luckily, the very first calculation shows that this is not the case. Thus the minimum polynomial is the characteristic polynomial is the only invariant factor of . Thus the RCF of is   Part (b) Luckily for us, factors completely into linear terms! So our elementary divisors are and . We see and , so the Jordan Canonical form of is    "
 },
 {
-  "id": "problem-98",
+  "id": "problem-80",
   "level": "2",
-  "url": "section-77.html#problem-98",
+  "url": "section-77.html#problem-80",
   "type": "Problem",
   "number": "G.80",
   "title": "Problem 7.",
   "body": "Problem 7   Suppose that is a finite extension of fields such that the degree is odd. Show that if , then .    Let be a finite extension of fields such that the degree is odd.  Notice that as everything in can be written in terms of . Suppose by way of contradiction that there exists some such that . Then . Notice that is a root of the polynomial , which is irreducible in as it is a degree polynomial that has no roots in . Thus is the minimum polynomial of and   However, by the [[Mathematics\/Modern Algebra\/Results\/Proposition – The Degree Formula|Degree Formula]] , which is a problem, given now divides , an odd number. Thus .   "
 },
 {
-  "id": "problem-99",
+  "id": "problem-81",
   "level": "2",
-  "url": "section-77.html#problem-99",
+  "url": "section-77.html#problem-81",
   "type": "Problem",
   "number": "G.81",
   "title": "Problem 8.",
   "body": "Problem 8   Let be an extension of fields and let . Show that    Let . Then is an automorphism of that restricts to the identity on . As we see that restricts both of these to the identity as well. Thus .  Next, suppose . Thus restricts to the identity on and . Let .   "
 },
 {
-  "id": "problem-100",
+  "id": "problem-82",
   "level": "2",
-  "url": "section-77.html#problem-100",
+  "url": "section-77.html#problem-82",
   "type": "Problem",
   "number": "G.82",
   "title": "Problem 9.",
@@ -12097,81 +11944,81 @@ var ptx_lunr_docs = [
   "body": "May 2017  Section I: Group Theory  Problem 1   Let be a group of order where and are distinct primes and . Assume that has at least one element of order . Let be the set of all elements of of order , that is . (a) Prove that acts on by conjugation. (b) Prove that if then divides .    Let be a group of order where and are distinct primes and . Assume that has at least one element of order . Let be the set of all elements of of order   Part (a) First, notice that for all . Next, let and consider . Thus acts on by conjugation.  Part (b) Suppose is trivial, and let act on by conjugation. Thus the orbits of this action correspond the normalizers of elements and the stabilizers correspond to the centralizers. Recall that the orbits of this action partition , so we have for distinct orbits. However, by we also have for all . Now recall the : With all that out of the way, let . Notice that        Problem 2   Prove there are exactly three groups, up to isomorphism, of order .    Let be a group of order .  By we know the following: - and , so our options are and . - and , so there can only be one. Let denote the unique Sylow -subgroup, which has order and is normal in . As is a group of order we know that it is abelian. Thus there are only two options for up to isomorphism: and .  Let denote a Sylow -subgroup. All Sylow -subgroups are isomorphic to each other and there is only one group of order , which is .  Suppose . As and , we have that , where . Note that , which is cyclic of order . Since and , we conclude that must be the trivial map. Hence, .  Now suppose .    Problem 3   Prove that no group of order with is simple.    Let be a group of order with and suppose by way of contradiction that is simple.  By we know the following: - and , and - and , so our options are .  Let act on by conjugation, yielding the permutation representation homomorphism . The kernel of this homomorphism cannot be trivial as the conjugation action on Sylow subgroups is transitive by Part (2) of . Notice that if is or then does not divide the order of , so our kernel cannot be all of , making a nontrivial normal subgroup of .  If , then must divide , meaning that . However, by the cyclic subgroup generated by an element of order has index in , making it normal.  Thus cannot be simple.     Section  Problem 4    Prove that in a UFD an element is irreducible if and only if the ideal is prime.  Prove that is not a UFD.     Part (a) Let be a UFD.  First, suppose is irreducible, and consider the ideal . Let such that . Thus , so there exists some such that . As we are in a UFD the elements and all have unique (up to associates) factorizations of irreducible elements. Thus must be an associate of one of the irreducible elements in the factorization of or , and so or , making prime.  Now suppose that is prime and that for some . Thus and , so either or , as is a prime ideal. Assume without loss of generality that . Thus for some . Thus and As UFDs are integral domains we see , making a unit. Thus is irreducible.  Part (b) First, notice that . Define a function Let and behold So there's that done.  Suppose by way of contradiction there exist such that . Then and , and Thus or , as these are the only integer divisors of . However, there do not exist integers such that this is true. Thus is irreducible in .  Suppose by way of contradiction that is prime in . Note that . Thus divides one of these factors.  First, suppose there exists some such that . Thus , and so . However, is not an integer, and thus cannot divide either of these factors. Thus is not prime in . By Part (a), this is not a UFD.    Problem 5   Let be a field and a monic polynomial of degree . Prove: all matrices in having characteristic polynomial are similar if and only if the irreducible factorization of has no repeated factors.    Let be a field, a monic polynomial of degree , and matrices in having characteristic polynomial .    Problem 6   Make into a -module by letting for any vector in , where is the matrix    Coming Soon!     Section  Problem 7   Let be a finite extension of fields and let be an irreducible polynomial of degree . Prove that, if , then is also irreducible in .    Let be a finite extension of fields and let be an irreducible polynomial of degree such that . Let   First, note that if then is always irreducible, so we may reduce to the case where .  Let denote the algebraic closure of , let be a root of , and consider and . Let denote the minimal polynomial of , and let . Thus . By the Degree Formula we have - - for some . Thus and As and are relatively prime we have . However, is the minimal polynomial of , and thus , yielding . Thus for some . As irreducible polynomials multiplied by a constant are still irreducible, we see that is indeed irreducible in .    Problem 8   Let be a field extension with algebraically closed. Consider the set (a) Show that is a field. (b) Show that is algebraically closed.    Part (a) Let . Notice that and are contained in . As , there exists some polynomial with coefficients in such that is a root. However, this polynomial also lives in , so we have [[Mathematics\/Definitions\/Algebraic#$ defn$ – Algebraic (Extension)|algebraic]]. As is also algebraic, we have algebraic as well, as it is a finite extension by the . Thus and are algebraic over as well, making a field.  Part (b) Let . Thus is the root of a polynomial , where . Notice that is a polynomial in as well, and thus is algebraic over this extension as well. Consider the chain of extensions As is algebraic over for all and is algebraic over we see that each step in this chain has finite degree by. By the Degree Formula, is finite and thus so is . Thus is algebraic over , hence , making algebraically closed.    Problem 9   Let be an irreducible cubic (degree ) polynomial having exactly one real root. Let be the splitting field of over . Show that .    Let be an irreducible cubic (degree ) polynomial having exactly one real root, and let be the splitting field of over .  As is the splitting field of , it is a [[Mathematics\/Definitions\/Normal Extension|normal extension]]. As has characteristic 0, is separable (because is algebraic extension, as its the extension caused by adjoining each root of , and algebraic extensions of algebraic extensions are algebraic). Thus by we see .  By Proposition 2.83 we see that is isomorphic to some subgroup of , where is the number of distinct roots of . As cubic and irreducible we know that the real root must be irrational, which we will denote . Consider the extension . As , we see that . However, neither of our complex roots are in this extension, and so another extension is needed to reach . But this extension would also have a degree larger than , so . As , there exists no subgroup of it that can be isomorphic to, given that . Thus we see that , meaning that our complex roots are distinct.  Then or , the only possible sizes of subgroups of . However, by the previous argument we see that as , the only viable subgroup of is itself. Thus .     "
 },
 {
-  "id": "problem-101",
+  "id": "problem-83",
   "level": "2",
-  "url": "section-78.html#problem-101",
+  "url": "section-78.html#problem-83",
   "type": "Problem",
   "number": "G.83",
   "title": "Problem 1.",
   "body": "Problem 1   Let be a group of order where and are distinct primes and . Assume that has at least one element of order . Let be the set of all elements of of order , that is . (a) Prove that acts on by conjugation. (b) Prove that if then divides .    Let be a group of order where and are distinct primes and . Assume that has at least one element of order . Let be the set of all elements of of order   Part (a) First, notice that for all . Next, let and consider . Thus acts on by conjugation.  Part (b) Suppose is trivial, and let act on by conjugation. Thus the orbits of this action correspond the normalizers of elements and the stabilizers correspond to the centralizers. Recall that the orbits of this action partition , so we have for distinct orbits. However, by we also have for all . Now recall the : With all that out of the way, let . Notice that       "
 },
 {
-  "id": "problem-102",
+  "id": "problem-84",
   "level": "2",
-  "url": "section-78.html#problem-102",
+  "url": "section-78.html#problem-84",
   "type": "Problem",
   "number": "G.84",
   "title": "Problem 2.",
   "body": "Problem 2   Prove there are exactly three groups, up to isomorphism, of order .    Let be a group of order .  By we know the following: - and , so our options are and . - and , so there can only be one. Let denote the unique Sylow -subgroup, which has order and is normal in . As is a group of order we know that it is abelian. Thus there are only two options for up to isomorphism: and .  Let denote a Sylow -subgroup. All Sylow -subgroups are isomorphic to each other and there is only one group of order , which is .  Suppose . As and , we have that , where . Note that , which is cyclic of order . Since and , we conclude that must be the trivial map. Hence, .  Now suppose .   "
 },
 {
-  "id": "problem-103",
+  "id": "problem-85",
   "level": "2",
-  "url": "section-78.html#problem-103",
+  "url": "section-78.html#problem-85",
   "type": "Problem",
   "number": "G.85",
   "title": "Problem 3.",
   "body": "Problem 3   Prove that no group of order with is simple.    Let be a group of order with and suppose by way of contradiction that is simple.  By we know the following: - and , and - and , so our options are .  Let act on by conjugation, yielding the permutation representation homomorphism . The kernel of this homomorphism cannot be trivial as the conjugation action on Sylow subgroups is transitive by Part (2) of . Notice that if is or then does not divide the order of , so our kernel cannot be all of , making a nontrivial normal subgroup of .  If , then must divide , meaning that . However, by the cyclic subgroup generated by an element of order has index in , making it normal.  Thus cannot be simple.   "
 },
 {
-  "id": "problem-104",
+  "id": "problem-86",
   "level": "2",
-  "url": "section-78.html#problem-104",
+  "url": "section-78.html#problem-86",
   "type": "Problem",
   "number": "G.86",
   "title": "Problem 4.",
   "body": "Problem 4    Prove that in a UFD an element is irreducible if and only if the ideal is prime.  Prove that is not a UFD.     Part (a) Let be a UFD.  First, suppose is irreducible, and consider the ideal . Let such that . Thus , so there exists some such that . As we are in a UFD the elements and all have unique (up to associates) factorizations of irreducible elements. Thus must be an associate of one of the irreducible elements in the factorization of or , and so or , making prime.  Now suppose that is prime and that for some . Thus and , so either or , as is a prime ideal. Assume without loss of generality that . Thus for some . Thus and As UFDs are integral domains we see , making a unit. Thus is irreducible.  Part (b) First, notice that . Define a function Let and behold So there's that done.  Suppose by way of contradiction there exist such that . Then and , and Thus or , as these are the only integer divisors of . However, there do not exist integers such that this is true. Thus is irreducible in .  Suppose by way of contradiction that is prime in . Note that . Thus divides one of these factors.  First, suppose there exists some such that . Thus , and so . However, is not an integer, and thus cannot divide either of these factors. Thus is not prime in . By Part (a), this is not a UFD.   "
 },
 {
-  "id": "problem-105",
+  "id": "problem-87",
   "level": "2",
-  "url": "section-78.html#problem-105",
+  "url": "section-78.html#problem-87",
   "type": "Problem",
   "number": "G.87",
   "title": "Problem 5.",
   "body": "Problem 5   Let be a field and a monic polynomial of degree . Prove: all matrices in having characteristic polynomial are similar if and only if the irreducible factorization of has no repeated factors.    Let be a field, a monic polynomial of degree , and matrices in having characteristic polynomial .   "
 },
 {
-  "id": "problem-106",
+  "id": "problem-88",
   "level": "2",
-  "url": "section-78.html#problem-106",
+  "url": "section-78.html#problem-88",
   "type": "Problem",
   "number": "G.88",
   "title": "Problem 6.",
   "body": "Problem 6   Make into a -module by letting for any vector in , where is the matrix    Coming Soon!   "
 },
 {
-  "id": "problem-107",
+  "id": "problem-89",
   "level": "2",
-  "url": "section-78.html#problem-107",
+  "url": "section-78.html#problem-89",
   "type": "Problem",
   "number": "G.89",
   "title": "Problem 7.",
   "body": "Problem 7   Let be a finite extension of fields and let be an irreducible polynomial of degree . Prove that, if , then is also irreducible in .    Let be a finite extension of fields and let be an irreducible polynomial of degree such that . Let   First, note that if then is always irreducible, so we may reduce to the case where .  Let denote the algebraic closure of , let be a root of , and consider and . Let denote the minimal polynomial of , and let . Thus . By the Degree Formula we have - - for some . Thus and As and are relatively prime we have . However, is the minimal polynomial of , and thus , yielding . Thus for some . As irreducible polynomials multiplied by a constant are still irreducible, we see that is indeed irreducible in .   "
 },
 {
-  "id": "problem-108",
+  "id": "problem-90",
   "level": "2",
-  "url": "section-78.html#problem-108",
+  "url": "section-78.html#problem-90",
   "type": "Problem",
   "number": "G.90",
   "title": "Problem 8.",
   "body": "Problem 8   Let be a field extension with algebraically closed. Consider the set (a) Show that is a field. (b) Show that is algebraically closed.    Part (a) Let . Notice that and are contained in . As , there exists some polynomial with coefficients in such that is a root. However, this polynomial also lives in , so we have [[Mathematics\/Definitions\/Algebraic#$ defn$ – Algebraic (Extension)|algebraic]]. As is also algebraic, we have algebraic as well, as it is a finite extension by the . Thus and are algebraic over as well, making a field.  Part (b) Let . Thus is the root of a polynomial , where . Notice that is a polynomial in as well, and thus is algebraic over this extension as well. Consider the chain of extensions As is algebraic over for all and is algebraic over we see that each step in this chain has finite degree by. By the Degree Formula, is finite and thus so is . Thus is algebraic over , hence , making algebraically closed.   "
 },
 {
-  "id": "problem-109",
+  "id": "problem-91",
   "level": "2",
-  "url": "section-78.html#problem-109",
+  "url": "section-78.html#problem-91",
   "type": "Problem",
   "number": "G.91",
   "title": "Problem 9.",
@@ -12187,81 +12034,81 @@ var ptx_lunr_docs = [
   "body": "January 2017  Section I: Group Theory  Problem 1   Prove that no group of order with is simple.    Let be a group of order with , and suppose by way of contradiction that is simple. By we know the following: - and , and - and , so our options are and . Suppose its . Let act on by conjugation, yielding the permutation representation homomorphism . The kernel of this homomorphism cannot be trivial as the conjugation action on Sylow subgroups is transitive by Part (2) of . Notice does not divide the order of , so our kernel cannot be all of , making a nontrivial normal subgroup of .  If , then must divide , meaning that . However, by the cyclic subgroup generated by an element of order has index in , making it normal.  Thus cannot be simple.    Problem 2   Let be a group of order where is a prime and .   Prove the center of G is not trivial.    Prove there exists a subgroup of order for each satisfying        Let be a group of order where is a prime and .  The tells us where are the centralizers with more than one element. Notice that this means , and thus each centralizer is a power of . Thus we have for some . Thus the center of cannot be trivial, else we would not be able to sum to a power of .  Part (b) The trivial subgroup has order . Suppose inductively that there exists a subgroup of order that has a subgroup for every power of in between.  Consider, if you will, a group of order , . As this is a -group, by Part (a) the center is nontrivial, making it a group as well, and thus it has a subgroup of order , , which is normal in as it lies within the center, so we mod out by to see that has a subgroup of order , which has subgroups of all the other powers by the induction hypothesis.    Problem 3   Let be any positive prime integer. Prove that the number of groups of order , up to isomorphism, is exactly    Let be any positive prime integer.  First, suppose . Thus is a group of order , making it abelian. So the only groups of order are and . The same applies when , where the groups are and .  Let be a Sylow -subgroup of , and note that , the smallest prime dividing the order of , making . Let denote a Sylow -subgroup of . As and are groups of relatively prime order we have and thus , where . Notice that since , we have . Thus, by the  As has three elements, the kernel of must be either all of or trivial. However, the order of the image must divide , which is only possible when . Thus when this is the case there are two groups of order , otherwise the kernel is always trivial and we have as the only group.     Section  Problem 4   Let be a finite Galois field extension of degree . Prove there exists a unique intermediate field (i.e., such that .    Let be a finite Galois field extension of degree .  Note that as , we see that the number of Sylow- subgroups of divides and is congruent to . Thus there is exactly one Sylow- subgroup of , which we denote . By the Fundamental Theorem of Galois Theory, corresponds to an intermediate field extension . Note that as has order 5, we see that , and thus as well. By the Degree Formula we see that . As and , we see that , as desired. As corresponds to the unique subgroup of or order 5, we see that this extension must be unique as well.    Problem 5   Let be the splitting field of the polynomial over . Give, with full justification, a presentation for the Galois group that has two generators.    Let be the splitting field of the polynomial over . First, note that is irreducible in by Eisenstein's Criterion ( ). The roots of are the following: - , - , - , - , - , - , and - . Let , which is the root of the cyclotomic polynomial (which has degree and thus irreducible in . Let and . Thus we have and . By the irreducible argument we see that . Yeesh.  Let . From we have the following: , as , and , so is either or .    Problem 6   Assume is a finite extension of fields and that the characteristic of is , where p is a prime. Prove that if there exists an element such that , then . You may use, without proof, the fact that for any finite extension of fields     Let is a finite extension of fields and that the characteristic of is , where is a prime, and suppose there exists an element such that .  Consider the polynomial , and notice that , as we are in a field of characteristic . However, this characteristic also yields . As is a field we have as a UFD, and thus as is irreducible in it is also prime. Therefore this is the unique factorization of up to associates. If was reducible it would thus have to be divisible into power os , which will never be reducible as . Thus is irreducible in , making it the minimal polynomial of . However, if this would make the splitting field of over , which it is not, given . Thus .     Section  Problem 7   Let be a PID and a multiplicatively closed subset of such that . Prove that is also a PID. Tip: Given an ideal of , consider .    Let be a PID, a multiplicatively closed subset of such that , and an ideal in . Consider , which is an ideal in and is thus generated by some .    Problem 8   Find, with justification, all the ideals of the ring that contain the ideal .    First, notice that is irreducible in by the Rational Root Test. Thus the possibilities are the following: - , - . Let be an ideal containing .    Problem 9   Let be a field, a finite dimensional -vector space, and an -linear operator. Prove is diagonalizable if and only if its minimum polynomial factors into distinct linear factors.     Suppose that is diagonalizable. Thus there exists a change of basis matrix such that is diagonal. As it is diagonal, its diagonal entries are the eigenvalues of , and thus the roots of the minimal polynomial of . Using row and column operations we can rearrange so that all repeated linear factors are next to each other in the diagonal, for convenience.  We know that is the smallest monic polynomial that sends to 0. Take all the distinct eigenvalues and consider .  We examine . It will be a product of matrices, one for each . First, take the first matrix in this product, , and note that it sends all in to 0. Thus all of the rows and columns that contained a are now 0, and thus all these rows and columns will be 0 in the final product . As this is we set for all , we see that for each row and column in there will exist a matrix in the product such that the row and column will be 0. Thus the entire matrix will be 0, and .  Note that if any were excluded from there would exist a non-zero row and column for every matrix in the product, and thus would not send to 0. Thus is indeed the minimal polynomial of . As , we see it does indeed factor into distinct linear terms.   Suppose the minimum polynomial of factors completely into distinct linear factors, each of which has the form for some . As each is distinct, each elementary divisor is of the form .  We construct the Jordan Canonical Form of . As the elementary divisors are linear the Jordan blocks are matrices, making the a diagonal matrix. As the JCF is itself a change of basis matrix, we see that is diagonalizable.     "
 },
 {
-  "id": "problem-110",
+  "id": "problem-92",
   "level": "2",
-  "url": "section-79.html#problem-110",
+  "url": "section-79.html#problem-92",
   "type": "Problem",
   "number": "G.92",
   "title": "Problem 1.",
   "body": "Problem 1   Prove that no group of order with is simple.    Let be a group of order with , and suppose by way of contradiction that is simple. By we know the following: - and , and - and , so our options are and . Suppose its . Let act on by conjugation, yielding the permutation representation homomorphism . The kernel of this homomorphism cannot be trivial as the conjugation action on Sylow subgroups is transitive by Part (2) of . Notice does not divide the order of , so our kernel cannot be all of , making a nontrivial normal subgroup of .  If , then must divide , meaning that . However, by the cyclic subgroup generated by an element of order has index in , making it normal.  Thus cannot be simple.   "
 },
 {
-  "id": "problem-111",
+  "id": "problem-93",
   "level": "2",
-  "url": "section-79.html#problem-111",
+  "url": "section-79.html#problem-93",
   "type": "Problem",
   "number": "G.93",
   "title": "Problem 2.",
   "body": "Problem 2   Let be a group of order where is a prime and .   Prove the center of G is not trivial.    Prove there exists a subgroup of order for each satisfying        Let be a group of order where is a prime and .  The tells us where are the centralizers with more than one element. Notice that this means , and thus each centralizer is a power of . Thus we have for some . Thus the center of cannot be trivial, else we would not be able to sum to a power of .  Part (b) The trivial subgroup has order . Suppose inductively that there exists a subgroup of order that has a subgroup for every power of in between.  Consider, if you will, a group of order , . As this is a -group, by Part (a) the center is nontrivial, making it a group as well, and thus it has a subgroup of order , , which is normal in as it lies within the center, so we mod out by to see that has a subgroup of order , which has subgroups of all the other powers by the induction hypothesis.   "
 },
 {
-  "id": "problem-112",
+  "id": "problem-94",
   "level": "2",
-  "url": "section-79.html#problem-112",
+  "url": "section-79.html#problem-94",
   "type": "Problem",
   "number": "G.94",
   "title": "Problem 3.",
   "body": "Problem 3   Let be any positive prime integer. Prove that the number of groups of order , up to isomorphism, is exactly    Let be any positive prime integer.  First, suppose . Thus is a group of order , making it abelian. So the only groups of order are and . The same applies when , where the groups are and .  Let be a Sylow -subgroup of , and note that , the smallest prime dividing the order of , making . Let denote a Sylow -subgroup of . As and are groups of relatively prime order we have and thus , where . Notice that since , we have . Thus, by the  As has three elements, the kernel of must be either all of or trivial. However, the order of the image must divide , which is only possible when . Thus when this is the case there are two groups of order , otherwise the kernel is always trivial and we have as the only group.   "
 },
 {
-  "id": "problem-113",
+  "id": "problem-95",
   "level": "2",
-  "url": "section-79.html#problem-113",
+  "url": "section-79.html#problem-95",
   "type": "Problem",
   "number": "G.95",
   "title": "Problem 4.",
   "body": "Problem 4   Let be a finite Galois field extension of degree . Prove there exists a unique intermediate field (i.e., such that .    Let be a finite Galois field extension of degree .  Note that as , we see that the number of Sylow- subgroups of divides and is congruent to . Thus there is exactly one Sylow- subgroup of , which we denote . By the Fundamental Theorem of Galois Theory, corresponds to an intermediate field extension . Note that as has order 5, we see that , and thus as well. By the Degree Formula we see that . As and , we see that , as desired. As corresponds to the unique subgroup of or order 5, we see that this extension must be unique as well.   "
 },
 {
-  "id": "problem-114",
+  "id": "problem-96",
   "level": "2",
-  "url": "section-79.html#problem-114",
+  "url": "section-79.html#problem-96",
   "type": "Problem",
   "number": "G.96",
   "title": "Problem 5.",
   "body": "Problem 5   Let be the splitting field of the polynomial over . Give, with full justification, a presentation for the Galois group that has two generators.    Let be the splitting field of the polynomial over . First, note that is irreducible in by Eisenstein's Criterion ( ). The roots of are the following: - , - , - , - , - , - , and - . Let , which is the root of the cyclotomic polynomial (which has degree and thus irreducible in . Let and . Thus we have and . By the irreducible argument we see that . Yeesh.  Let . From we have the following: , as , and , so is either or .   "
 },
 {
-  "id": "problem-115",
+  "id": "problem-97",
   "level": "2",
-  "url": "section-79.html#problem-115",
+  "url": "section-79.html#problem-97",
   "type": "Problem",
   "number": "G.97",
   "title": "Problem 6.",
   "body": "Problem 6   Assume is a finite extension of fields and that the characteristic of is , where p is a prime. Prove that if there exists an element such that , then . You may use, without proof, the fact that for any finite extension of fields     Let is a finite extension of fields and that the characteristic of is , where is a prime, and suppose there exists an element such that .  Consider the polynomial , and notice that , as we are in a field of characteristic . However, this characteristic also yields . As is a field we have as a UFD, and thus as is irreducible in it is also prime. Therefore this is the unique factorization of up to associates. If was reducible it would thus have to be divisible into power os , which will never be reducible as . Thus is irreducible in , making it the minimal polynomial of . However, if this would make the splitting field of over , which it is not, given . Thus .   "
 },
 {
-  "id": "problem-116",
+  "id": "problem-98",
   "level": "2",
-  "url": "section-79.html#problem-116",
+  "url": "section-79.html#problem-98",
   "type": "Problem",
   "number": "G.98",
   "title": "Problem 7.",
   "body": "Problem 7   Let be a PID and a multiplicatively closed subset of such that . Prove that is also a PID. Tip: Given an ideal of , consider .    Let be a PID, a multiplicatively closed subset of such that , and an ideal in . Consider , which is an ideal in and is thus generated by some .   "
 },
 {
-  "id": "problem-117",
+  "id": "problem-99",
   "level": "2",
-  "url": "section-79.html#problem-117",
+  "url": "section-79.html#problem-99",
   "type": "Problem",
   "number": "G.99",
   "title": "Problem 8.",
   "body": "Problem 8   Find, with justification, all the ideals of the ring that contain the ideal .    First, notice that is irreducible in by the Rational Root Test. Thus the possibilities are the following: - , - . Let be an ideal containing .   "
 },
 {
-  "id": "problem-118",
+  "id": "problem-100",
   "level": "2",
-  "url": "section-79.html#problem-118",
+  "url": "section-79.html#problem-100",
   "type": "Problem",
   "number": "G.100",
   "title": "Problem 9.",
@@ -12277,81 +12124,81 @@ var ptx_lunr_docs = [
   "body": "May 2016  Section I: Group Theory  Problem 1   Let be a (not necessarily finite) group and a subgroup of index . Define (i.e., is the intersection of all the conjugates of K    Prove is a the largest normal subgroup of that is contained in .  Prove divides .     Part (a) Let act on the left cosets of in by left multiplication, yielding the permutation representation homomorphism . Let conspicuously denote the kernel of this function.  Let . Then , the automorphism defined by is precisely the identity permutation. Thus for all and for all , so This means the elements of are precisely those that are in the conjugacy class of for all . There cannot exist a larger normal subgroup of contained in , as it would contain an element that was not in some conjugacy class for , negating the definition of a normal subgroup.  Part (b) Recall the permutation representation homomorphism . The tells us , which has order . Thus .    Problem 2   Prove that if is a finite group of odd order, then for any non-identity element , is not conjugate to .    Let be a finite group of odd order, and let act on itself via conjugation. Under this action, the orbit of an element is exactly its conjugacy class. By the we have . Thus the order of an element divides the order of the group, and so every orbit must have odd order.  Suppose there exists an element such that for some . Thus . Let . Thus for some . Then . However, as , we have . As and are both in , we see that as well. As , we see that this means that the orbit of would have even order, which is not possible.    Problem 3   Groups of order 75. (a) Prove that if is a group of order that contains an element of order , then is cyclic. (b) Prove there exists a non-abelian group of order .    Let be a group of order .  Part (a) Suppose has an element of order . Let be the cyclic subgroup generated by this element, and notice that , the smallest prime dividing the order of . Thus . Let be a Sylow -subgroup of . Notice that this group has order and is thus cyclic as well. Thus we have , where is a homomorphism. Note that , which is cyclic of order . Since and , we conclude that must be the trivial map. Hence, , which is a direct product of cyclic groups of relatively prime order. Hence, is cyclic.  Part (b)     Section  Problem 4   Let be the splitting field over of the polynomial . (a) Find all intermediate fields with (including possibly and ) such that is Galois over . (b) For each field you found in (a), find with justification a primitive generator (i.e., find so that .    Let be the splitting field over of the polynomial   Part (a) First, notice that is irreducible in by [[Mathematics\/Modern Algebra\/Results\/Theorem – Eisenstein's Criterion|Eisenstein's Criterion]] . Let denote a primitive third root of unity. The roots of are the following: 1. , 2. , and 3. . As is irreducible and monic we see that it is the [[Mathematics\/Definitions\/Minimum Polynomial|minimum polynomial ]]of over . Let and notice .  Recall that is isomorphic to a subgroup of . As and , we see another extension is needed, and that extension will have at least degree . Thus, due to size constraints, we see .  By the [[Mathematics\/Modern Algebra\/Results\/Theorem – Fundamental Theorem of Galois Theory|FTGT]] each Galois intermediate extension between and corresponds to a normal subgroup of , which are the normal subgroups of .  The elements of are the following: 1. 2. 3. 4. 5. 6. The subgroup has index in and is thus normal. None of the order subgroups are normal in , so is the only strictly intermediate extension.  Recall , meaning , so corresponds to a subgroup of order in , so its not Galois unfortunately. However, is a degree extension that is an intermediate field, as is a root of the irreducible polynomial .  With all this in mind, notice: - is a splitting field of , and has the primitive generator by . - is our only strictly intermediate field, and has the primitive generator - Finally, is Galois over , and has the primitive generator .  Part (b)    Problem 5   Let be any positive prime integer.   Prove that if for some integer k, then p is not an irreducible element of .  Prove is irreducible in .     Let be any positive prime integer.  Part (a) Suppose for some integer . As , is not an irreducible element of .  Part (b) As is irreducible in (Eisenstein, ) and is monic, we see that . As is irreducible and monic, we see that . By the Degree Formula we have . Note that the four roots of are the following: - , - , - and - . As , we see that is the splitting field of . Note then that as and the degree of the splitting field is 8, by the Degree Formula we see that the degree of the splitting field of over . As is monic and degree , it must be the minimal polynomial of the second extension and thus irreducible in .    Problem 6   For fields and , we say is a finite splitting field over if is the splitting field over of some polynomial . Assume and are both finite splitting fields over and prove is also a finite splitting field over .    Let and be finite splitting fields over . So there exist polynomials such that splits in and splits in . Note that both and are finite extensions, as each can be reached by adjoining each of the roots of and , respectfully.  If then we have our splitting field, as is a splitting field over itself.  Let be an irreducible polynomial in with a root in . Then has a root in and a root in . If a splitting field has one root of a polynomial it has them all, and so we see that splits in both of these fields. Thus it splits in .     Section  Problem 7   Let be a field and recall that a square matrix with entries in is called [[Mathematics\/Definitions\/Nilpotent|nilpotent]] if for some positive integer .   Prove that if is an nilpotent matrix, then .  Assume and prove that two nilpotent matrices are similar if and only if they have the same [[Mathematics\/Definitions\/Rank|rank]]. (Recall the rank of a matrix is the [[Mathematics\/Definitions\/Dimension (Vector Space)|dimension]] of the vector space spanned by its columns.)  Give an example, with justification, of two nilpotent matrices that have the same rank but are not similar.     Let be a field.  Part (a) Let be an nilpotent matrix. Let be some eigenvalue of . Thus there exists some vector such that . Let's consider this the base-case of some rather banal induction. Now assume that for we have . Consider Recall that as is nilpotent, there exists some such that . As is an eigenvalue of , by the above induction we see that is an eigenvalue for . As is a field and thus an integral domain, we see that implies that is as well. As this holds in the algebraic closure of as well, we see that when factored into linear terms all the . Thus .  By the Cayley Hamilton Theorem we know , and thus .  Part (b) Assume and let be nilpotent matrices with entries in .   Suppose . Thus there exists some invertible matrix such that by the definition of [[Mathematics\/Definitions\/Definitions#Similar Matrices|similar matrices]]. Let . Thus and . We multiply both sides by to see that . Therefore the , and hence the ranks of and are equal by the [[Mathematics\/Modern Algebra\/Results#Corollary – Rank Nullity Theorem|Rank-Nullity Theorem]].  Next, observe as is an invertible matrix. Thus .   Suppose that . From Part (a) we know .  We consider the case where .  The only possible invariant factors involving are 1. ; 2. ; and 3. itself. However, if are the invariant factors then the rank of would be 3, making it invertible, contradicting the fact that 0 is an eigenvalue of . Thus we need only consider the latter two cases.  Note that As has rank 1 and has rank 2, since we see that they must have the same invariant factors, making them similar.  If then the only possible invariant factor is , as having two 's would make and invertible again. If then and we're done.  Part (c) Consider and .  Thus   both of which have rank and are in RCF. Thus they are not similar.    Problem 8   Let be a commutative ring and an indeterminant. Prove that is a PID if and only if is a field.    Let be a commutative ring and an indeterminant.  First, suppose is a PID. Let be a nonzero ideal in , and consider the ideal . As is a PID we see for some . Then , but is an indeterminant and thus irreducible, so must be a unit or itself. But also generates , so can't be , so is a unit, meaning and so . Thus the only ideals of are and , making a field.  Next, suppose is a field. Let be an ideal in . If then or , both of which are principal. Thus , and so , making principal as well. Hence is a PID.    Problem 9   Find, with justification, a complete and non-redundant list of conjugacy class representatives for the group , where is the field with three elements.    Let denote the field with three elements, and consider the group .  Recall that matrices are in the same conjugacy class if and only if they are similar, and that two matrices are similar if and only if they share the same invariant factors.  Let . All characteristic polynomials are monic, and as is invertible we see the term in the , and thus is either or , the only other elements in . There are only so many monic polynomials of degree with coefficients in ; hence the only possible characteristic polynomials of are the following: 1. , 2. , 3. , 4. . 5. . 6. Note that since , 0 cannot be a root of any of these polynomials. Thus all that remains is to check and .     "
 },
 {
-  "id": "problem-119",
+  "id": "problem-101",
   "level": "2",
-  "url": "section-80.html#problem-119",
+  "url": "section-80.html#problem-101",
   "type": "Problem",
   "number": "G.101",
   "title": "Problem 1.",
   "body": "Problem 1   Let be a (not necessarily finite) group and a subgroup of index . Define (i.e., is the intersection of all the conjugates of K    Prove is a the largest normal subgroup of that is contained in .  Prove divides .     Part (a) Let act on the left cosets of in by left multiplication, yielding the permutation representation homomorphism . Let conspicuously denote the kernel of this function.  Let . Then , the automorphism defined by is precisely the identity permutation. Thus for all and for all , so This means the elements of are precisely those that are in the conjugacy class of for all . There cannot exist a larger normal subgroup of contained in , as it would contain an element that was not in some conjugacy class for , negating the definition of a normal subgroup.  Part (b) Recall the permutation representation homomorphism . The tells us , which has order . Thus .   "
 },
 {
-  "id": "problem-120",
+  "id": "problem-102",
   "level": "2",
-  "url": "section-80.html#problem-120",
+  "url": "section-80.html#problem-102",
   "type": "Problem",
   "number": "G.102",
   "title": "Problem 2.",
   "body": "Problem 2   Prove that if is a finite group of odd order, then for any non-identity element , is not conjugate to .    Let be a finite group of odd order, and let act on itself via conjugation. Under this action, the orbit of an element is exactly its conjugacy class. By the we have . Thus the order of an element divides the order of the group, and so every orbit must have odd order.  Suppose there exists an element such that for some . Thus . Let . Thus for some . Then . However, as , we have . As and are both in , we see that as well. As , we see that this means that the orbit of would have even order, which is not possible.   "
 },
 {
-  "id": "problem-121",
+  "id": "problem-103",
   "level": "2",
-  "url": "section-80.html#problem-121",
+  "url": "section-80.html#problem-103",
   "type": "Problem",
   "number": "G.103",
   "title": "Problem 3.",
   "body": "Problem 3   Groups of order 75. (a) Prove that if is a group of order that contains an element of order , then is cyclic. (b) Prove there exists a non-abelian group of order .    Let be a group of order .  Part (a) Suppose has an element of order . Let be the cyclic subgroup generated by this element, and notice that , the smallest prime dividing the order of . Thus . Let be a Sylow -subgroup of . Notice that this group has order and is thus cyclic as well. Thus we have , where is a homomorphism. Note that , which is cyclic of order . Since and , we conclude that must be the trivial map. Hence, , which is a direct product of cyclic groups of relatively prime order. Hence, is cyclic.  Part (b)   "
 },
 {
-  "id": "problem-122",
+  "id": "problem-104",
   "level": "2",
-  "url": "section-80.html#problem-122",
+  "url": "section-80.html#problem-104",
   "type": "Problem",
   "number": "G.104",
   "title": "Problem 4.",
   "body": "Problem 4   Let be the splitting field over of the polynomial . (a) Find all intermediate fields with (including possibly and ) such that is Galois over . (b) For each field you found in (a), find with justification a primitive generator (i.e., find so that .    Let be the splitting field over of the polynomial   Part (a) First, notice that is irreducible in by [[Mathematics\/Modern Algebra\/Results\/Theorem – Eisenstein's Criterion|Eisenstein's Criterion]] . Let denote a primitive third root of unity. The roots of are the following: 1. , 2. , and 3. . As is irreducible and monic we see that it is the [[Mathematics\/Definitions\/Minimum Polynomial|minimum polynomial ]]of over . Let and notice .  Recall that is isomorphic to a subgroup of . As and , we see another extension is needed, and that extension will have at least degree . Thus, due to size constraints, we see .  By the [[Mathematics\/Modern Algebra\/Results\/Theorem – Fundamental Theorem of Galois Theory|FTGT]] each Galois intermediate extension between and corresponds to a normal subgroup of , which are the normal subgroups of .  The elements of are the following: 1. 2. 3. 4. 5. 6. The subgroup has index in and is thus normal. None of the order subgroups are normal in , so is the only strictly intermediate extension.  Recall , meaning , so corresponds to a subgroup of order in , so its not Galois unfortunately. However, is a degree extension that is an intermediate field, as is a root of the irreducible polynomial .  With all this in mind, notice: - is a splitting field of , and has the primitive generator by . - is our only strictly intermediate field, and has the primitive generator - Finally, is Galois over , and has the primitive generator .  Part (b)   "
 },
 {
-  "id": "problem-123",
+  "id": "problem-105",
   "level": "2",
-  "url": "section-80.html#problem-123",
+  "url": "section-80.html#problem-105",
   "type": "Problem",
   "number": "G.105",
   "title": "Problem 5.",
   "body": "Problem 5   Let be any positive prime integer.   Prove that if for some integer k, then p is not an irreducible element of .  Prove is irreducible in .     Let be any positive prime integer.  Part (a) Suppose for some integer . As , is not an irreducible element of .  Part (b) As is irreducible in (Eisenstein, ) and is monic, we see that . As is irreducible and monic, we see that . By the Degree Formula we have . Note that the four roots of are the following: - , - , - and - . As , we see that is the splitting field of . Note then that as and the degree of the splitting field is 8, by the Degree Formula we see that the degree of the splitting field of over . As is monic and degree , it must be the minimal polynomial of the second extension and thus irreducible in .   "
 },
 {
-  "id": "problem-124",
+  "id": "problem-106",
   "level": "2",
-  "url": "section-80.html#problem-124",
+  "url": "section-80.html#problem-106",
   "type": "Problem",
   "number": "G.106",
   "title": "Problem 6.",
   "body": "Problem 6   For fields and , we say is a finite splitting field over if is the splitting field over of some polynomial . Assume and are both finite splitting fields over and prove is also a finite splitting field over .    Let and be finite splitting fields over . So there exist polynomials such that splits in and splits in . Note that both and are finite extensions, as each can be reached by adjoining each of the roots of and , respectfully.  If then we have our splitting field, as is a splitting field over itself.  Let be an irreducible polynomial in with a root in . Then has a root in and a root in . If a splitting field has one root of a polynomial it has them all, and so we see that splits in both of these fields. Thus it splits in .   "
 },
 {
-  "id": "problem-125",
+  "id": "problem-107",
   "level": "2",
-  "url": "section-80.html#problem-125",
+  "url": "section-80.html#problem-107",
   "type": "Problem",
   "number": "G.107",
   "title": "Problem 7.",
   "body": "Problem 7   Let be a field and recall that a square matrix with entries in is called [[Mathematics\/Definitions\/Nilpotent|nilpotent]] if for some positive integer .   Prove that if is an nilpotent matrix, then .  Assume and prove that two nilpotent matrices are similar if and only if they have the same [[Mathematics\/Definitions\/Rank|rank]]. (Recall the rank of a matrix is the [[Mathematics\/Definitions\/Dimension (Vector Space)|dimension]] of the vector space spanned by its columns.)  Give an example, with justification, of two nilpotent matrices that have the same rank but are not similar.     Let be a field.  Part (a) Let be an nilpotent matrix. Let be some eigenvalue of . Thus there exists some vector such that . Let's consider this the base-case of some rather banal induction. Now assume that for we have . Consider Recall that as is nilpotent, there exists some such that . As is an eigenvalue of , by the above induction we see that is an eigenvalue for . As is a field and thus an integral domain, we see that implies that is as well. As this holds in the algebraic closure of as well, we see that when factored into linear terms all the . Thus .  By the Cayley Hamilton Theorem we know , and thus .  Part (b) Assume and let be nilpotent matrices with entries in .   Suppose . Thus there exists some invertible matrix such that by the definition of [[Mathematics\/Definitions\/Definitions#Similar Matrices|similar matrices]]. Let . Thus and . We multiply both sides by to see that . Therefore the , and hence the ranks of and are equal by the [[Mathematics\/Modern Algebra\/Results#Corollary – Rank Nullity Theorem|Rank-Nullity Theorem]].  Next, observe as is an invertible matrix. Thus .   Suppose that . From Part (a) we know .  We consider the case where .  The only possible invariant factors involving are 1. ; 2. ; and 3. itself. However, if are the invariant factors then the rank of would be 3, making it invertible, contradicting the fact that 0 is an eigenvalue of . Thus we need only consider the latter two cases.  Note that As has rank 1 and has rank 2, since we see that they must have the same invariant factors, making them similar.  If then the only possible invariant factor is , as having two 's would make and invertible again. If then and we're done.  Part (c) Consider and .  Thus   both of which have rank and are in RCF. Thus they are not similar.   "
 },
 {
-  "id": "problem-126",
+  "id": "problem-108",
   "level": "2",
-  "url": "section-80.html#problem-126",
+  "url": "section-80.html#problem-108",
   "type": "Problem",
   "number": "G.108",
   "title": "Problem 8.",
   "body": "Problem 8   Let be a commutative ring and an indeterminant. Prove that is a PID if and only if is a field.    Let be a commutative ring and an indeterminant.  First, suppose is a PID. Let be a nonzero ideal in , and consider the ideal . As is a PID we see for some . Then , but is an indeterminant and thus irreducible, so must be a unit or itself. But also generates , so can't be , so is a unit, meaning and so . Thus the only ideals of are and , making a field.  Next, suppose is a field. Let be an ideal in . If then or , both of which are principal. Thus , and so , making principal as well. Hence is a PID.   "
 },
 {
-  "id": "problem-127",
+  "id": "problem-109",
   "level": "2",
-  "url": "section-80.html#problem-127",
+  "url": "section-80.html#problem-109",
   "type": "Problem",
   "number": "G.109",
   "title": "Problem 9.",
@@ -12367,81 +12214,81 @@ var ptx_lunr_docs = [
   "body": "January 2016  Section I: Group Theory  Problem 1   Let be a prime and a finite -group.   (a) Suppose acts on the finite set , and let be the fixed points of the action, i.e., Prove that .    (b) Suppose is a finite group and (where is still a finite -group). Prove that        Let be a prime and a finite -group. Part (a) Suppose acts on the finite set , and let be the fixed points of the action. Let , and note that . By Stabilizer we see .  The orbits of an action partition the set , and as orbits are either disjoint or equal, we see .  Part (b)    Problem 2 (*)   A normal subgroup of is called a direct factor of if there is some normal subgroup of such that (internal direct product).   If is a direct factor of , is any group, and is any group homomorphism, prove that extends to a homomorphism such that for all .    Provide a counter-example (with justification) to the previous part if is assumed to be a normal subgroup of , but not a direct factor. Hint: One such example involves .       Part (a) Let be a group, be a direct factor of , and a group homomorphism. As is a direct factor of , there exists some such that . Thus there exists some isomorphism . Define such that , where . Let , and notice as is an isomorphism. Observe . Thus is a homomorphism, and for any we have .  Part (b)    Problem 3   Suppose is a group of order and that contains an element of order . Prove is abelian.    By we know the number of Sylow -subgroups of must divide and be congruent to , the only option of which is . Let denote the unique Sylow -subgroup and let be the cyclic subgroup generated by the element of order .  As is unique it is normal in , and it also means we have . Notice that as and are groups of relatively prime order we have . Thus , and so , making , a direct product of abelian groups. Thus is abelian.     Section  Problem 4   Let be the splitting field of    Prove that .    Find a basis for as a -vector space.       Let be the splitting field of    The roots of are the following:                      Notice that , and thus .    The polynomial is irreducible in by Eisenstein's Criterion ( ). Thus it is the minimal polynomial of , and so is a field extension of of degree . After adjoining as well we see that is an extension of degree . Thus a basis of as a -vector space is the following:          Problem 5   Let be a field and a finite subgroup of , the multiplicative group of units of . Prove that is cyclic.    Let be a finite subgroup of . Let .  Let be the LCM of all orders of elements in . Then and thus is a root of the polynomial for all . By every element divides , and so we have . However, by the Factor Theorem the polynomial can have at most roots, and we have distinct elements, and thus we have . Thus there must exist an element of order in , making cyclic, as desired.    Problem 6   Let be a finite Galois field extension of . Let and be subfields of such that is normal, and . Prove that     Coming Soon!     Section  Problem 7   Let be a finite dimensional vector space over a field and let be an -[[Mathematics\/Definitions\/Linear Operator|linear operator]] on . Prove is [[Mathematics\/Definitions\/Diagonalizable|diagonalizable]] over if and only if its minimum polynomial factors into distinct linear terms in .     Suppose that is diagonalizable. Thus there exists a change of basis matrix such that is diagonal. As it is diagonal, its diagonal entries are the [[Mathematics\/Definitions\/Eigenvalue|eigenvalues]] of , and thus the roots of the minimal polynomial of . Using row and column operations we can rearrange so that all repeated linear factors are next to each other in the diagonal, for convenience.  We know that is the smallest monic polynomial that sends to 0. Take all the distinct eigenvalues and consider .  We examine . It will be a product of matrices, one for each . First, take the first matrix in this product, , and note that it sends all in to 0. Thus all of the rows and columns that contained a are now 0, and thus all these rows and columns will be 0 in the final product . As this is we set for all , we see that for each row and column in there will exist a matrix in the product such that the row and column will be 0. Thus the entire matrix will be 0, and .  Note that if any were excluded from there would exist a non-zero row and column for every matrix in the product, and thus would not send to 0. Thus is indeed the minimal polynomial of . As , we see it does indeed factor into distinct linear terms.   Suppose the minimum polynomial of factors completely into distinct linear factors, each of which has the form for some . As each is distinct, each elementary divisor is of the form .  We construct the Jordan Canonical Form of . As the elementary divisors are linear the Jordan blocks are matrices, making the a diagonal matrix. As the JCF is itself a change of basis matrix, we see that is diagonalizable.    Problem 8   Prove the ideal of the commutative ring is not a principal ideal.    Define norm function, yada yada    Problem 9   Let be an ideal in a commutative ring , let and be -modules and let be an -module homomorphism.   Prove there is a unique -module homomorphism such that , where and are the canonical quotient maps  Prove that if and is surjective, then so is . (Recall that is the ideal generated by all elements of the form , where .)     Part (a)  Part (b)     "
 },
 {
-  "id": "problem-128",
+  "id": "problem-110",
   "level": "2",
-  "url": "section-81.html#problem-128",
+  "url": "section-81.html#problem-110",
   "type": "Problem",
   "number": "G.110",
   "title": "Problem 1.",
   "body": "Problem 1   Let be a prime and a finite -group.   (a) Suppose acts on the finite set , and let be the fixed points of the action, i.e., Prove that .    (b) Suppose is a finite group and (where is still a finite -group). Prove that        Let be a prime and a finite -group. Part (a) Suppose acts on the finite set , and let be the fixed points of the action. Let , and note that . By Stabilizer we see .  The orbits of an action partition the set , and as orbits are either disjoint or equal, we see .  Part (b)   "
 },
 {
-  "id": "problem-129",
+  "id": "problem-111",
   "level": "2",
-  "url": "section-81.html#problem-129",
+  "url": "section-81.html#problem-111",
   "type": "Problem",
   "number": "G.111",
   "title": "Problem 2 (*).",
   "body": "Problem 2 (*)   A normal subgroup of is called a direct factor of if there is some normal subgroup of such that (internal direct product).   If is a direct factor of , is any group, and is any group homomorphism, prove that extends to a homomorphism such that for all .    Provide a counter-example (with justification) to the previous part if is assumed to be a normal subgroup of , but not a direct factor. Hint: One such example involves .       Part (a) Let be a group, be a direct factor of , and a group homomorphism. As is a direct factor of , there exists some such that . Thus there exists some isomorphism . Define such that , where . Let , and notice as is an isomorphism. Observe . Thus is a homomorphism, and for any we have .  Part (b)   "
 },
 {
-  "id": "problem-130",
+  "id": "problem-112",
   "level": "2",
-  "url": "section-81.html#problem-130",
+  "url": "section-81.html#problem-112",
   "type": "Problem",
   "number": "G.112",
   "title": "Problem 3.",
   "body": "Problem 3   Suppose is a group of order and that contains an element of order . Prove is abelian.    By we know the number of Sylow -subgroups of must divide and be congruent to , the only option of which is . Let denote the unique Sylow -subgroup and let be the cyclic subgroup generated by the element of order .  As is unique it is normal in , and it also means we have . Notice that as and are groups of relatively prime order we have . Thus , and so , making , a direct product of abelian groups. Thus is abelian.   "
 },
 {
-  "id": "problem-131",
+  "id": "problem-113",
   "level": "2",
-  "url": "section-81.html#problem-131",
+  "url": "section-81.html#problem-113",
   "type": "Problem",
   "number": "G.113",
   "title": "Problem 4.",
   "body": "Problem 4   Let be the splitting field of    Prove that .    Find a basis for as a -vector space.       Let be the splitting field of    The roots of are the following:                      Notice that , and thus .    The polynomial is irreducible in by Eisenstein's Criterion ( ). Thus it is the minimal polynomial of , and so is a field extension of of degree . After adjoining as well we see that is an extension of degree . Thus a basis of as a -vector space is the following:         "
 },
 {
-  "id": "problem-132",
+  "id": "problem-114",
   "level": "2",
-  "url": "section-81.html#problem-132",
+  "url": "section-81.html#problem-114",
   "type": "Problem",
   "number": "G.114",
   "title": "Problem 5.",
   "body": "Problem 5   Let be a field and a finite subgroup of , the multiplicative group of units of . Prove that is cyclic.    Let be a finite subgroup of . Let .  Let be the LCM of all orders of elements in . Then and thus is a root of the polynomial for all . By every element divides , and so we have . However, by the Factor Theorem the polynomial can have at most roots, and we have distinct elements, and thus we have . Thus there must exist an element of order in , making cyclic, as desired.   "
 },
 {
-  "id": "problem-133",
+  "id": "problem-115",
   "level": "2",
-  "url": "section-81.html#problem-133",
+  "url": "section-81.html#problem-115",
   "type": "Problem",
   "number": "G.115",
   "title": "Problem 6.",
   "body": "Problem 6   Let be a finite Galois field extension of . Let and be subfields of such that is normal, and . Prove that     Coming Soon!   "
 },
 {
-  "id": "problem-134",
+  "id": "problem-116",
   "level": "2",
-  "url": "section-81.html#problem-134",
+  "url": "section-81.html#problem-116",
   "type": "Problem",
   "number": "G.116",
   "title": "Problem 7.",
   "body": "Problem 7   Let be a finite dimensional vector space over a field and let be an -[[Mathematics\/Definitions\/Linear Operator|linear operator]] on . Prove is [[Mathematics\/Definitions\/Diagonalizable|diagonalizable]] over if and only if its minimum polynomial factors into distinct linear terms in .     Suppose that is diagonalizable. Thus there exists a change of basis matrix such that is diagonal. As it is diagonal, its diagonal entries are the [[Mathematics\/Definitions\/Eigenvalue|eigenvalues]] of , and thus the roots of the minimal polynomial of . Using row and column operations we can rearrange so that all repeated linear factors are next to each other in the diagonal, for convenience.  We know that is the smallest monic polynomial that sends to 0. Take all the distinct eigenvalues and consider .  We examine . It will be a product of matrices, one for each . First, take the first matrix in this product, , and note that it sends all in to 0. Thus all of the rows and columns that contained a are now 0, and thus all these rows and columns will be 0 in the final product . As this is we set for all , we see that for each row and column in there will exist a matrix in the product such that the row and column will be 0. Thus the entire matrix will be 0, and .  Note that if any were excluded from there would exist a non-zero row and column for every matrix in the product, and thus would not send to 0. Thus is indeed the minimal polynomial of . As , we see it does indeed factor into distinct linear terms.   Suppose the minimum polynomial of factors completely into distinct linear factors, each of which has the form for some . As each is distinct, each elementary divisor is of the form .  We construct the Jordan Canonical Form of . As the elementary divisors are linear the Jordan blocks are matrices, making the a diagonal matrix. As the JCF is itself a change of basis matrix, we see that is diagonalizable.   "
 },
 {
-  "id": "problem-135",
+  "id": "problem-117",
   "level": "2",
-  "url": "section-81.html#problem-135",
+  "url": "section-81.html#problem-117",
   "type": "Problem",
   "number": "G.117",
   "title": "Problem 8.",
   "body": "Problem 8   Prove the ideal of the commutative ring is not a principal ideal.    Define norm function, yada yada   "
 },
 {
-  "id": "problem-136",
+  "id": "problem-118",
   "level": "2",
-  "url": "section-81.html#problem-136",
+  "url": "section-81.html#problem-118",
   "type": "Problem",
   "number": "G.118",
   "title": "Problem 9.",
@@ -12457,81 +12304,81 @@ var ptx_lunr_docs = [
   "body": "January 2015  Section I: Group Theory  Problem 1   Let be a finite group and let be a subgroup of of index , where is the smallest prime divisor of the order of . Prove that is normal in .    Let and note that . Let denote the kernel of the generated by acting on by left multiplication.  The tells us that . Thus by . Let . Then for all , making for all including . Thus .  This yields by . Let , giving us . As we have , so . But is the smallest prime dividing the order of , and thus , making and .    Problem 2   Let be a group of order . Prove that has a normal subgroup of order and that the center of contains a subgroup of order     Let be a group of order . By we know the and , and so , making , the unique Sylow -subgroup of , normal in by . Things are looking good thus far. We also know and , so as well. Yeehaw.  Let denote the unique Sylow -subgroup, and let act on by conjugation. Thus . The tells us that , where is the kernel of . However, by we know , meaning that the order of must divide both and by , which cannot happen. Thus must be trivial, meaning that for every and , making a subgroup of of order .    Problem 3   Let be a group and a subgroup of . Recall that the centralizer of in is Prove that if is normal in , then so is and that is isomorphic to a subgroup of the automorphism group of .    Let be a group and . Let , and consider . Let . As we have for some , and thus that 1. and 2. . Consider . By (1), we see . As commutes with everything in we have , and by (2) we have . Thus .  Let act on the left cosets of by left multiplication, giving rise to the permutation representation homomorphism . By the we see that is isomorphic to a subgroup of the automorphism group of .     Section  Problem 4   Let be fields.   Prove that is algebraic over if and only if is algebraic over and is algebraic over .  Give an example where and are finite Galois extensions but is not Galois.     Let be extensions of fields, not necessarily finite.  Part (a) Suppose that and are algebraic extensions. Let . Then is the root of the polynomial with . Notice that is a polynomial in , making is algebraic over this as well. Consider the chain of field extensions Since is algebraic over for all and is algebraic over , by [[Theorem – Properties of Algebraic Elements|Theorem]] each step in this chain has finite degree. By the Degree Formula, is finite and thus so is . By the Theorem again, is algebraic over .  Next suppose that is algebraic. Let . Then , and so it is algebraic over . Now let . Then is the root of a polynomial in , which is also in , so is algebraic as well.  Part (b) is Galois over , and is Galois over , but is not Galois over , as the splitting field of has degree .    Problem 5   Let be a finite Galois extension and let be the Galois group of . Suppose that and let be the minimal polynomial of over . Prove that    Let be a finite Galois extension and let be the Galois group of . Suppose that and let be the minimal polynomial of over . Thus [[Mathematics\/Definitions\/Group Action|acts]] on the roots of faithfully. Additionally, as is the minimal polynomial of it is irreducible, making the action transitive as well.  As is Galois over we know that splits into linear factors, each of the form , where is a root of . As our action is transitive, for every root there exists a such that , or .    Problem 6   Let be a field and a finite subgroup of the multiplicative group . Prove that is cyclic.    Let be a field and a finite subgroup of order the multiplicative group . Let denote the LCM of all orders of elements in . Notice that as for all we have .  However, as for all we know that is the root of the polynomial in . By the [[Mathematics\/Number Theory\/Results\/Lemma – Factor Theorem|Factor Theorem]] there are thus at most roots of , but there are distinct roots. Thus .  Thus the LCM of all orders of elements in is . Notice that as is abelian every Sylow -subgroup of is normal, and thus there is only one of each. This means that can be written as a direct product of cyclic groups of relatively prime order; Hence is itself cyclic.     Section  Problem 7   Let be a field and a square matrix with entries from . Prove that is similar to its transpose.    Let be the algebraic closure of . Thus has a Jordan Canonical Form in . For each Jordan block in the JCF of , let denote the transpose of the identity matrix, and notice that . As this is the case for every Jordan block, we see that the JCF of , , is similar to its transpose. As the is similar to , is similar to , and is similar to , we see that in by transitivity.  Suppose and are similar in . As and have entries in , then they are both in . Thus there exist matrices in RCF such that is similar to and that is similar to . However, is similar to and that is similar to in as well. Notice and are still in RCF. However, as the RCF is unique, this means that in , making them equal in as well. Thus is similar to , as similarity is transitive.  This yields in .    Problem 8   Consider the following matrix: (a) Find the rational canonical form of . (b) Find the Jordan canonical form of .    Part (a) First, note that , and thus   Part (b)    Problem 9   Let be a commutative ring with identity (with ) and a proper ideal. Prove there exists a prime ideal containing such that whenever where is also a prime ideal, then . (Hint: use Zorn's lemma.)    Coming Soon!     "
 },
 {
-  "id": "problem-137",
+  "id": "problem-119",
   "level": "2",
-  "url": "section-82.html#problem-137",
+  "url": "section-82.html#problem-119",
   "type": "Problem",
   "number": "G.119",
   "title": "Problem 1.",
   "body": "Problem 1   Let be a finite group and let be a subgroup of of index , where is the smallest prime divisor of the order of . Prove that is normal in .    Let and note that . Let denote the kernel of the generated by acting on by left multiplication.  The tells us that . Thus by . Let . Then for all , making for all including . Thus .  This yields by . Let , giving us . As we have , so . But is the smallest prime dividing the order of , and thus , making and .   "
 },
 {
-  "id": "problem-138",
+  "id": "problem-120",
   "level": "2",
-  "url": "section-82.html#problem-138",
+  "url": "section-82.html#problem-120",
   "type": "Problem",
   "number": "G.120",
   "title": "Problem 2.",
   "body": "Problem 2   Let be a group of order . Prove that has a normal subgroup of order and that the center of contains a subgroup of order     Let be a group of order . By we know the and , and so , making , the unique Sylow -subgroup of , normal in by . Things are looking good thus far. We also know and , so as well. Yeehaw.  Let denote the unique Sylow -subgroup, and let act on by conjugation. Thus . The tells us that , where is the kernel of . However, by we know , meaning that the order of must divide both and by , which cannot happen. Thus must be trivial, meaning that for every and , making a subgroup of of order .   "
 },
 {
-  "id": "problem-139",
+  "id": "problem-121",
   "level": "2",
-  "url": "section-82.html#problem-139",
+  "url": "section-82.html#problem-121",
   "type": "Problem",
   "number": "G.121",
   "title": "Problem 3.",
   "body": "Problem 3   Let be a group and a subgroup of . Recall that the centralizer of in is Prove that if is normal in , then so is and that is isomorphic to a subgroup of the automorphism group of .    Let be a group and . Let , and consider . Let . As we have for some , and thus that 1. and 2. . Consider . By (1), we see . As commutes with everything in we have , and by (2) we have . Thus .  Let act on the left cosets of by left multiplication, giving rise to the permutation representation homomorphism . By the we see that is isomorphic to a subgroup of the automorphism group of .   "
 },
 {
-  "id": "problem-140",
+  "id": "problem-122",
   "level": "2",
-  "url": "section-82.html#problem-140",
+  "url": "section-82.html#problem-122",
   "type": "Problem",
   "number": "G.122",
   "title": "Problem 4.",
   "body": "Problem 4   Let be fields.   Prove that is algebraic over if and only if is algebraic over and is algebraic over .  Give an example where and are finite Galois extensions but is not Galois.     Let be extensions of fields, not necessarily finite.  Part (a) Suppose that and are algebraic extensions. Let . Then is the root of the polynomial with . Notice that is a polynomial in , making is algebraic over this as well. Consider the chain of field extensions Since is algebraic over for all and is algebraic over , by [[Theorem – Properties of Algebraic Elements|Theorem]] each step in this chain has finite degree. By the Degree Formula, is finite and thus so is . By the Theorem again, is algebraic over .  Next suppose that is algebraic. Let . Then , and so it is algebraic over . Now let . Then is the root of a polynomial in , which is also in , so is algebraic as well.  Part (b) is Galois over , and is Galois over , but is not Galois over , as the splitting field of has degree .   "
 },
 {
-  "id": "problem-141",
+  "id": "problem-123",
   "level": "2",
-  "url": "section-82.html#problem-141",
+  "url": "section-82.html#problem-123",
   "type": "Problem",
   "number": "G.123",
   "title": "Problem 5.",
   "body": "Problem 5   Let be a finite Galois extension and let be the Galois group of . Suppose that and let be the minimal polynomial of over . Prove that    Let be a finite Galois extension and let be the Galois group of . Suppose that and let be the minimal polynomial of over . Thus [[Mathematics\/Definitions\/Group Action|acts]] on the roots of faithfully. Additionally, as is the minimal polynomial of it is irreducible, making the action transitive as well.  As is Galois over we know that splits into linear factors, each of the form , where is a root of . As our action is transitive, for every root there exists a such that , or .   "
 },
 {
-  "id": "problem-142",
+  "id": "problem-124",
   "level": "2",
-  "url": "section-82.html#problem-142",
+  "url": "section-82.html#problem-124",
   "type": "Problem",
   "number": "G.124",
   "title": "Problem 6.",
   "body": "Problem 6   Let be a field and a finite subgroup of the multiplicative group . Prove that is cyclic.    Let be a field and a finite subgroup of order the multiplicative group . Let denote the LCM of all orders of elements in . Notice that as for all we have .  However, as for all we know that is the root of the polynomial in . By the [[Mathematics\/Number Theory\/Results\/Lemma – Factor Theorem|Factor Theorem]] there are thus at most roots of , but there are distinct roots. Thus .  Thus the LCM of all orders of elements in is . Notice that as is abelian every Sylow -subgroup of is normal, and thus there is only one of each. This means that can be written as a direct product of cyclic groups of relatively prime order; Hence is itself cyclic.   "
 },
 {
-  "id": "problem-143",
+  "id": "problem-125",
   "level": "2",
-  "url": "section-82.html#problem-143",
+  "url": "section-82.html#problem-125",
   "type": "Problem",
   "number": "G.125",
   "title": "Problem 7.",
   "body": "Problem 7   Let be a field and a square matrix with entries from . Prove that is similar to its transpose.    Let be the algebraic closure of . Thus has a Jordan Canonical Form in . For each Jordan block in the JCF of , let denote the transpose of the identity matrix, and notice that . As this is the case for every Jordan block, we see that the JCF of , , is similar to its transpose. As the is similar to , is similar to , and is similar to , we see that in by transitivity.  Suppose and are similar in . As and have entries in , then they are both in . Thus there exist matrices in RCF such that is similar to and that is similar to . However, is similar to and that is similar to in as well. Notice and are still in RCF. However, as the RCF is unique, this means that in , making them equal in as well. Thus is similar to , as similarity is transitive.  This yields in .   "
 },
 {
-  "id": "problem-144",
+  "id": "problem-126",
   "level": "2",
-  "url": "section-82.html#problem-144",
+  "url": "section-82.html#problem-126",
   "type": "Problem",
   "number": "G.126",
   "title": "Problem 8.",
   "body": "Problem 8   Consider the following matrix: (a) Find the rational canonical form of . (b) Find the Jordan canonical form of .    Part (a) First, note that , and thus   Part (b)   "
 },
 {
-  "id": "problem-145",
+  "id": "problem-127",
   "level": "2",
-  "url": "section-82.html#problem-145",
+  "url": "section-82.html#problem-127",
   "type": "Problem",
   "number": "G.127",
   "title": "Problem 9.",
@@ -12547,81 +12394,81 @@ var ptx_lunr_docs = [
   "body": "June 2014  Section I: Group Theory  Problem 1   Let be a (not necessarily finite) group and and normal subgroups such that . Prove that     Let defined such that . Let . Then showing is a homomorphism.  Let . As , we have and with and . As and we see .  Consider and making surjective as well.  Let . Then , and so . Let . Then , so and , placing . Thus, by the , we have     Problem 2   Suppose is a finite group which has precisely one subgroup of order for each divisor of . Prove that is cyclic.    First, suppose that is a -group. Let have biggest order. Let . So . Since , it also has exactly one subgroup for each divisor. But (h) has the same order as one of those subgroups, so they must be the same group. So . Since was arbitrary, then . So when is a -group then it is cyclic.  If its not a -group then we can decompose into relatively prime powers of primes, all of which are -groups and maintain this property. Thus is the product of relatively prime cyclic groups, making it cyclic itself.    Problem 3   Let be a group of order and let denote the set of Sylow -subgroups of . (a) Suppose for any either or Prove that is not simple. (b) Suppose there exists such that . Prove that is not simple. (Hint: Consider the normalizer of .)    Let be a group of order and let denote the set of Sylow -subgroups of . Part (a) Suppose by way of contradiction that is simple. By we know the following: - and is congruent to . As is simple there must be ten of the fuckers. - and is congruent to . As is simple there must be six of them. Since each Sylow -subgroup will have non-identity elements and they are all distinct that accounts for elements of order . However, there are also elements or order to account for, which is a problem. Thus cannot be simple.  Part (b) Suppose now that there exists such that . . Given this intersection, we know that . Additionally, note that as is a subgroup of both and with index 3 in both, the smallest prime dividing the order or both, that is normal in both.  We now consider the normalizer of , which we denote for simplicity. As is a subgroup of its order must divide by . However, , and so must have at least elements, leaving the options of and . If then , making normal in , a problem.  If then , the smallest prime dividing . Thus is still normal, which is still a problem. Thus cannot be simple.     Section  Problem 4   Let be a field of characteristic , , and consider the polynomial .   Prove that is either irreducible over or it splits into distinct linear factors over . ( Hint : If is a root of , consider for .)  Suppose is irreducible over and let be a splitting field of over . Prove that the Galois group of over is cyclic.   Let be a field of characteristic , , and consider the polynomial .  Part (a) Suppose has a root, , in . Then . Consider for some , and observe . By The Freshman's Dream, we have , but as , we really have . By Fermat's Little Theorem, , and thus . Thus we have found roots of , and thus splits into linear factors.  Suppose then that no root of exists in . Let be a splitting field of over , and note that from the above paragraph we have . As , we see , and thus is separable. Hence is a Galois extension. Thus there exists a such that . So for some . Notice . As is prime, we see that , and thus we need to apply to  times in order to get back to . Thus , so . Thus . Thus the minimum polynomial of must have degree . As is a root of and is monic, it must be the minimal polynomial and is thus irreducible.  Part (b) Suppose is irreducible over and let be a splitting field of over . Let be a root of Consider . By part (a), contains all the roots of , hence . As is monic and irreducible, it is the minimum polynomial of , and thus . Hence . All groups of prime order are cyclic, completing the proof.    Coming Soon!    Problem 5   Let . (a) Find the minimal polynomial of over . (b) Let be the splitting field of over . Find the Galois group of . (c) Find all subgroups of and generators for the corresponding intermediate fields of .    Let .  Part (a) Let which factors as two irreducible polynomials and has no roots in , making it irreducible. Thus is the minimal polynomial of .  Part (b) Notice that which also has degree . Let denote the Galois group of . Thus is a group of order , making it isomorphic to or . Notice that the elements of are the following: - and , - and , - and , and - and . All of these automorphisms have degree , making .  Part (c) Thus are only two subgroups of , and . The first, , corresponds to and is generated by , where corresponds to and is generated by .    Problem 6   Let be any field, and let , and be indeterminates. Prove in detail that and are isomorphic rings.    Coming Soon!     Section  Problem 7   Consider the following matrix over the complex numbers: (a) (b)    Coming Soon!    Problem 8   Let N be a submodule of an R-module M. Using Zorn's Lemma, prove that there is a submodule N' such that 1. , and 2. for every non-zero submodule N'' of M.    Coming Soon!    Problem 9   Let be a square matrix over the field of complex numbers.   Suppose is invertible. Prove that there is a square matrix over such that . (Hint: Reduce to the case that where is the identity matrix and is a nilpotent matrix.)  Show by example that (a) can fail if is not assumed to be invertible.     Coming Soon!     "
 },
 {
-  "id": "problem-146",
+  "id": "problem-128",
   "level": "2",
-  "url": "section-83.html#problem-146",
+  "url": "section-83.html#problem-128",
   "type": "Problem",
   "number": "G.128",
   "title": "Problem 1.",
   "body": "Problem 1   Let be a (not necessarily finite) group and and normal subgroups such that . Prove that     Let defined such that . Let . Then showing is a homomorphism.  Let . As , we have and with and . As and we see .  Consider and making surjective as well.  Let . Then , and so . Let . Then , so and , placing . Thus, by the , we have    "
 },
 {
-  "id": "problem-147",
+  "id": "problem-129",
   "level": "2",
-  "url": "section-83.html#problem-147",
+  "url": "section-83.html#problem-129",
   "type": "Problem",
   "number": "G.129",
   "title": "Problem 2.",
   "body": "Problem 2   Suppose is a finite group which has precisely one subgroup of order for each divisor of . Prove that is cyclic.    First, suppose that is a -group. Let have biggest order. Let . So . Since , it also has exactly one subgroup for each divisor. But (h) has the same order as one of those subgroups, so they must be the same group. So . Since was arbitrary, then . So when is a -group then it is cyclic.  If its not a -group then we can decompose into relatively prime powers of primes, all of which are -groups and maintain this property. Thus is the product of relatively prime cyclic groups, making it cyclic itself.   "
 },
 {
-  "id": "problem-148",
+  "id": "problem-130",
   "level": "2",
-  "url": "section-83.html#problem-148",
+  "url": "section-83.html#problem-130",
   "type": "Problem",
   "number": "G.130",
   "title": "Problem 3.",
   "body": "Problem 3   Let be a group of order and let denote the set of Sylow -subgroups of . (a) Suppose for any either or Prove that is not simple. (b) Suppose there exists such that . Prove that is not simple. (Hint: Consider the normalizer of .)    Let be a group of order and let denote the set of Sylow -subgroups of . Part (a) Suppose by way of contradiction that is simple. By we know the following: - and is congruent to . As is simple there must be ten of the fuckers. - and is congruent to . As is simple there must be six of them. Since each Sylow -subgroup will have non-identity elements and they are all distinct that accounts for elements of order . However, there are also elements or order to account for, which is a problem. Thus cannot be simple.  Part (b) Suppose now that there exists such that . . Given this intersection, we know that . Additionally, note that as is a subgroup of both and with index 3 in both, the smallest prime dividing the order or both, that is normal in both.  We now consider the normalizer of , which we denote for simplicity. As is a subgroup of its order must divide by . However, , and so must have at least elements, leaving the options of and . If then , making normal in , a problem.  If then , the smallest prime dividing . Thus is still normal, which is still a problem. Thus cannot be simple.   "
 },
 {
-  "id": "problem-149",
+  "id": "problem-131",
   "level": "2",
-  "url": "section-83.html#problem-149",
+  "url": "section-83.html#problem-131",
   "type": "Problem",
   "number": "G.131",
   "title": "Problem 4.",
   "body": "Problem 4   Let be a field of characteristic , , and consider the polynomial .   Prove that is either irreducible over or it splits into distinct linear factors over . ( Hint : If is a root of , consider for .)  Suppose is irreducible over and let be a splitting field of over . Prove that the Galois group of over is cyclic.   Let be a field of characteristic , , and consider the polynomial .  Part (a) Suppose has a root, , in . Then . Consider for some , and observe . By The Freshman's Dream, we have , but as , we really have . By Fermat's Little Theorem, , and thus . Thus we have found roots of , and thus splits into linear factors.  Suppose then that no root of exists in . Let be a splitting field of over , and note that from the above paragraph we have . As , we see , and thus is separable. Hence is a Galois extension. Thus there exists a such that . So for some . Notice . As is prime, we see that , and thus we need to apply to  times in order to get back to . Thus , so . Thus . Thus the minimum polynomial of must have degree . As is a root of and is monic, it must be the minimal polynomial and is thus irreducible.  Part (b) Suppose is irreducible over and let be a splitting field of over . Let be a root of Consider . By part (a), contains all the roots of , hence . As is monic and irreducible, it is the minimum polynomial of , and thus . Hence . All groups of prime order are cyclic, completing the proof.    Coming Soon!   "
 },
 {
-  "id": "problem-150",
+  "id": "problem-132",
   "level": "2",
-  "url": "section-83.html#problem-150",
+  "url": "section-83.html#problem-132",
   "type": "Problem",
   "number": "G.132",
   "title": "Problem 5.",
   "body": "Problem 5   Let . (a) Find the minimal polynomial of over . (b) Let be the splitting field of over . Find the Galois group of . (c) Find all subgroups of and generators for the corresponding intermediate fields of .    Let .  Part (a) Let which factors as two irreducible polynomials and has no roots in , making it irreducible. Thus is the minimal polynomial of .  Part (b) Notice that which also has degree . Let denote the Galois group of . Thus is a group of order , making it isomorphic to or . Notice that the elements of are the following: - and , - and , - and , and - and . All of these automorphisms have degree , making .  Part (c) Thus are only two subgroups of , and . The first, , corresponds to and is generated by , where corresponds to and is generated by .   "
 },
 {
-  "id": "problem-151",
+  "id": "problem-133",
   "level": "2",
-  "url": "section-83.html#problem-151",
+  "url": "section-83.html#problem-133",
   "type": "Problem",
   "number": "G.133",
   "title": "Problem 6.",
   "body": "Problem 6   Let be any field, and let , and be indeterminates. Prove in detail that and are isomorphic rings.    Coming Soon!   "
 },
 {
-  "id": "problem-152",
+  "id": "problem-134",
   "level": "2",
-  "url": "section-83.html#problem-152",
+  "url": "section-83.html#problem-134",
   "type": "Problem",
   "number": "G.134",
   "title": "Problem 7.",
   "body": "Problem 7   Consider the following matrix over the complex numbers: (a) (b)    Coming Soon!   "
 },
 {
-  "id": "problem-153",
+  "id": "problem-135",
   "level": "2",
-  "url": "section-83.html#problem-153",
+  "url": "section-83.html#problem-135",
   "type": "Problem",
   "number": "G.135",
   "title": "Problem 8.",
   "body": "Problem 8   Let N be a submodule of an R-module M. Using Zorn's Lemma, prove that there is a submodule N' such that 1. , and 2. for every non-zero submodule N'' of M.    Coming Soon!   "
 },
 {
-  "id": "problem-154",
+  "id": "problem-136",
   "level": "2",
-  "url": "section-83.html#problem-154",
+  "url": "section-83.html#problem-136",
   "type": "Problem",
   "number": "G.136",
   "title": "Problem 9.",
@@ -12637,81 +12484,81 @@ var ptx_lunr_docs = [
   "body": "January 2014  Section I: Group Theory  Problem 1   Prove that any group of order has a normal subgroup of order or .    Let be a group of order . By we have and , and thus . If then the unique Sylow -subgroup is normal by , giving us a normal subgroup of order .  Suppose then that , let be one of the subgroups of order , and let act on the cosets of by left multiplication, inducing the homomorphism via the This is because there are elements in , and thus there are left cosets by .  As , we see that cannot be injective by and thus is a non-trivial normal subgroup of by .  Recall that the action of on its cosets by left multiplication is always a transitive action , meaning there is exactly one orbit, , for some , which must then have all elements of in it. By , , and thus . So there are elements in that fix for any .  Let and . Notice that . As , We know that yields the identity permutation, and thus that .  Thus , which has order 9.    Problem 2   Let be a finite group and let be a proper subgroup of with .   Prove that has at most distinct conjugate sets for .  Prove that .        Let be defined by . Suppose . Notice that and , but as we have equality, and thus is well defined. Let be a conjugate set, and let . Then , and so we have surjectivity. As , there can be at most distinct conjugate sets for .    Let act on by conjugation. We know that the orbits of this action partition by . However, under this action the orbits are exactly the conjugacy classes of by . There are at most conjugacy classes. Each conjugacy class has at most elements in it, and each one has the identity. As there are at most of them then when we add all of their orders we get at most , which is less than the order of .       Problem 3 (*)   Let be an odd prime, a group of order , and a Sylow -subgroup of . Assume that is not normal in .   Prove that the normalizer of in is exactly .    Let and an element of order in (such an element exists because is even). Prove that the elements are all distinct.       Let be an odd prime, a group of order , and a Sylow -subgroup of that is not normal in .     First, by we see that . So there are elements of order , and . So there are elements left.  Also from we know acts on by conjugation. The normalizer of is the set , which is exactly the stabilizer of under this action by .  Let , and observe , so , and .  The conjugation action on Sylow subgroups is transitive by Part (2) of , and thus there is exactly one orbit under this action by . By we have , and thus for every . However, of these elements are accounted for by and the last element is the identity, thus the only elements of are those in .    Let , be an element of order in , and . Suppose by way of contradiction that . By strategic multiplication we see , where . Thus we can reduce to the case where As for some .  As has order two, it is contained in some Sylow -subgroup of . Since we have for some . Notice then that means that , placing , contradicting the fact that , as it does not have order . Thus is distinct from for all . If any two powers of        Section II  Problem 4   Let be a field and its group of units.   Prove that any finite subgroup of is cyclic.  Suppose that is algebraically closed that has characteristic . For any positive integer , prove that has a subgroup of order if and only if does not divide .     Part (a) Let be a finite subgroup of . Let .  Let be the LCM of all orders of elements in . Then and thus is a root of the polynomial for all . By every element divides , and so we have . However, by the Factor Theorem the polynomial can have at most roots, and we have distinct elements, and thus we have . Thus there must exist an element of order in , making cyclic, as desired.  Part (b) Let and suppose that has characteristic and is algebraically closed.  First, suppose by way of contradiction that has a subgroup of order , , and . From Part (a) is cyclic and generated by some such that . However, as we see that , given that we are in an additive group. This contradicts the fact that is the smallest number such that .  Now we proceed via the contrapositive. Suppose does not have a subgroup of order . Then there cannot exist a unit such that . Consider the polynomial . As is algebraically closed there exists some root . (how do we know this isn't 1???) Notice that this means and so is a unit in . As cannot have order , it must have an order that divides . We also know that as we are in a field of characteristic . Thus either divides or is . Either there is a non-identity root of . Note that in this case as we are    Problem 5   Let be a subfield of and suppose every element of is a root of a polynomial of degree in . Prove that . (Note: is not assumed to be a finite extension of .)    Coming Soon!    Problem 6   Let be a primitive th root of unity. (a) Find and generator(s) for . (b) Draw the subfield lattice for and indicate the degrees of each extension. (You do not have to find generators for each of the subfields)    Let be a primitive th root of unity.  As is a th root of unity we see that and thus that it is the root of the polynomial . We can factor out an from to see , and thus is a root of as well. Notice that the content of , and thus by Gauss's Lemma is irreducible in if and only if it is irreducible in .     Section III  Problem 7   Prove that is not a UFD. Justify all details.    First, notice that . Define a function Let and behold So there's that done.  Suppose by way of contradiction there exist such that . Then and , and Thus or , as these are the only integer divisors of . However, there do not exist integers such that this is true. Thus is irreducible in .  Suppose by way of contradiction that is prime in . Note that . Thus divides one of these factors.  First, suppose there exists some such that . Thus , and so . However, is not an integer, and thus cannot divide either of these factors. Thus is not prime in . By Part (a), this is not a UFD.    Problem 8   Coming Soon!    Coming Soon!    Problem 9   Let be a field and a square matrix with entries from . Prove that is similar to its transpose.    Let be the algebraic closure of . Thus has a Jordan Canonical Form in . For each Jordan block in the JCF of , let denote the transpose of the identity matrix, and notice that . As this is the case for every Jordan block, we see that the JCF of , , is similar to its transpose. As the is similar to , is similar to , and is similar to , we see that in by transitivity.  Suppose and are similar in . As and have entries in , then they are both in . Thus there exist matrices in RCF such that is similar to and that is similar to . However, is similar to and that is similar to in as well. Notice and are still in RCF. However, as the RCF is unique, this means that in , making them equal in as well. Thus is similar to , as similarity is transitive.  This yields in . # Jan 15     "
 },
 {
-  "id": "problem-155",
+  "id": "problem-137",
   "level": "2",
-  "url": "section-84.html#problem-155",
+  "url": "section-84.html#problem-137",
   "type": "Problem",
   "number": "G.137",
   "title": "Problem 1.",
   "body": "Problem 1   Prove that any group of order has a normal subgroup of order or .    Let be a group of order . By we have and , and thus . If then the unique Sylow -subgroup is normal by , giving us a normal subgroup of order .  Suppose then that , let be one of the subgroups of order , and let act on the cosets of by left multiplication, inducing the homomorphism via the This is because there are elements in , and thus there are left cosets by .  As , we see that cannot be injective by and thus is a non-trivial normal subgroup of by .  Recall that the action of on its cosets by left multiplication is always a transitive action , meaning there is exactly one orbit, , for some , which must then have all elements of in it. By , , and thus . So there are elements in that fix for any .  Let and . Notice that . As , We know that yields the identity permutation, and thus that .  Thus , which has order 9.   "
 },
 {
-  "id": "problem-156",
+  "id": "problem-138",
   "level": "2",
-  "url": "section-84.html#problem-156",
+  "url": "section-84.html#problem-138",
   "type": "Problem",
   "number": "G.138",
   "title": "Problem 2.",
   "body": "Problem 2   Let be a finite group and let be a proper subgroup of with .   Prove that has at most distinct conjugate sets for .  Prove that .        Let be defined by . Suppose . Notice that and , but as we have equality, and thus is well defined. Let be a conjugate set, and let . Then , and so we have surjectivity. As , there can be at most distinct conjugate sets for .    Let act on by conjugation. We know that the orbits of this action partition by . However, under this action the orbits are exactly the conjugacy classes of by . There are at most conjugacy classes. Each conjugacy class has at most elements in it, and each one has the identity. As there are at most of them then when we add all of their orders we get at most , which is less than the order of .      "
 },
 {
-  "id": "problem-157",
+  "id": "problem-139",
   "level": "2",
-  "url": "section-84.html#problem-157",
+  "url": "section-84.html#problem-139",
   "type": "Problem",
   "number": "G.139",
   "title": "Problem 3 (*).",
   "body": "Problem 3 (*)   Let be an odd prime, a group of order , and a Sylow -subgroup of . Assume that is not normal in .   Prove that the normalizer of in is exactly .    Let and an element of order in (such an element exists because is even). Prove that the elements are all distinct.       Let be an odd prime, a group of order , and a Sylow -subgroup of that is not normal in .     First, by we see that . So there are elements of order , and . So there are elements left.  Also from we know acts on by conjugation. The normalizer of is the set , which is exactly the stabilizer of under this action by .  Let , and observe , so , and .  The conjugation action on Sylow subgroups is transitive by Part (2) of , and thus there is exactly one orbit under this action by . By we have , and thus for every . However, of these elements are accounted for by and the last element is the identity, thus the only elements of are those in .    Let , be an element of order in , and . Suppose by way of contradiction that . By strategic multiplication we see , where . Thus we can reduce to the case where As for some .  As has order two, it is contained in some Sylow -subgroup of . Since we have for some . Notice then that means that , placing , contradicting the fact that , as it does not have order . Thus is distinct from for all . If any two powers of      "
 },
 {
-  "id": "problem-158",
+  "id": "problem-140",
   "level": "2",
-  "url": "section-84.html#problem-158",
+  "url": "section-84.html#problem-140",
   "type": "Problem",
   "number": "G.140",
   "title": "Problem 4.",
   "body": "Problem 4   Let be a field and its group of units.   Prove that any finite subgroup of is cyclic.  Suppose that is algebraically closed that has characteristic . For any positive integer , prove that has a subgroup of order if and only if does not divide .     Part (a) Let be a finite subgroup of . Let .  Let be the LCM of all orders of elements in . Then and thus is a root of the polynomial for all . By every element divides , and so we have . However, by the Factor Theorem the polynomial can have at most roots, and we have distinct elements, and thus we have . Thus there must exist an element of order in , making cyclic, as desired.  Part (b) Let and suppose that has characteristic and is algebraically closed.  First, suppose by way of contradiction that has a subgroup of order , , and . From Part (a) is cyclic and generated by some such that . However, as we see that , given that we are in an additive group. This contradicts the fact that is the smallest number such that .  Now we proceed via the contrapositive. Suppose does not have a subgroup of order . Then there cannot exist a unit such that . Consider the polynomial . As is algebraically closed there exists some root . (how do we know this isn't 1???) Notice that this means and so is a unit in . As cannot have order , it must have an order that divides . We also know that as we are in a field of characteristic . Thus either divides or is . Either there is a non-identity root of . Note that in this case as we are   "
 },
 {
-  "id": "problem-159",
+  "id": "problem-141",
   "level": "2",
-  "url": "section-84.html#problem-159",
+  "url": "section-84.html#problem-141",
   "type": "Problem",
   "number": "G.141",
   "title": "Problem 5.",
   "body": "Problem 5   Let be a subfield of and suppose every element of is a root of a polynomial of degree in . Prove that . (Note: is not assumed to be a finite extension of .)    Coming Soon!   "
 },
 {
-  "id": "problem-160",
+  "id": "problem-142",
   "level": "2",
-  "url": "section-84.html#problem-160",
+  "url": "section-84.html#problem-142",
   "type": "Problem",
   "number": "G.142",
   "title": "Problem 6.",
   "body": "Problem 6   Let be a primitive th root of unity. (a) Find and generator(s) for . (b) Draw the subfield lattice for and indicate the degrees of each extension. (You do not have to find generators for each of the subfields)    Let be a primitive th root of unity.  As is a th root of unity we see that and thus that it is the root of the polynomial . We can factor out an from to see , and thus is a root of as well. Notice that the content of , and thus by Gauss's Lemma is irreducible in if and only if it is irreducible in .   "
 },
 {
-  "id": "problem-161",
+  "id": "problem-143",
   "level": "2",
-  "url": "section-84.html#problem-161",
+  "url": "section-84.html#problem-143",
   "type": "Problem",
   "number": "G.143",
   "title": "Problem 7.",
   "body": "Problem 7   Prove that is not a UFD. Justify all details.    First, notice that . Define a function Let and behold So there's that done.  Suppose by way of contradiction there exist such that . Then and , and Thus or , as these are the only integer divisors of . However, there do not exist integers such that this is true. Thus is irreducible in .  Suppose by way of contradiction that is prime in . Note that . Thus divides one of these factors.  First, suppose there exists some such that . Thus , and so . However, is not an integer, and thus cannot divide either of these factors. Thus is not prime in . By Part (a), this is not a UFD.   "
 },
 {
-  "id": "problem-162",
+  "id": "problem-144",
   "level": "2",
-  "url": "section-84.html#problem-162",
+  "url": "section-84.html#problem-144",
   "type": "Problem",
   "number": "G.144",
   "title": "Problem 8.",
   "body": "Problem 8   Coming Soon!    Coming Soon!   "
 },
 {
-  "id": "problem-163",
+  "id": "problem-145",
   "level": "2",
-  "url": "section-84.html#problem-163",
+  "url": "section-84.html#problem-145",
   "type": "Problem",
   "number": "G.145",
   "title": "Problem 9.",
@@ -12727,81 +12574,81 @@ var ptx_lunr_docs = [
   "body": "June 2012  Section I: Group Theory  Problem 1   Let be a group of order (a) Prove that has a unique -Sylow subgroup (b) Prove that the -Sylow subgroup is contained in the center of .    Part (a) By we know and is congruent to . The only possibility for such is , meaning that has exactly Sylow -subgroup.  Part (b) Let act on by conjugation. This gives rise to the [[Proposition – Permutation Representation|permutation representation]] homomorphism . However, has prime order, making it a cyclic group isomorphic to .  By the we know that . However, , which has order . As this is a homomorphism, we see the order of must divide both and , two numbers that are relatively prime. Thus , meaning that conjugation is equivalent to the identity map, or that for all . Thus .    Problem 2   Let be a group with a subgroup so that . (a) Prove that there is a normal subgroup of , so that and (b) Prove that if is [[Mathematics\/Definitions\/Generator|finitely generated]], there are most finitely many subgroups with index . (Hint: you might want to consider maps .)    Coming Soon!    Problem 3   Let be a finite -group and its center. If is a normal subgroup of , prove that .    Let be a finite -group for some prime and a normal subgroup of .  First, we show that the center of is nontrivial. (See: [[Modern Algebra#Corollary – Center of -group is Nontrivial|Corollary]]) Suppose by way of contradiction that . We examine the conjugacy classes of . From the [ , we know Note that for some , meaning that the only divisors of are powers of . In finite groups, each conjugacy class must divide the order of the group. By , , where . Since |Z(G)|=1, we see that , which is impossible given that . Thus .  As it is a union of conjugacy classes of the elements it contains, one of which is . Assume by way of contradiction that , meaning that is the only element in whose conjugacy class is a singleton. This yields However, by  must also be a group, and thus by an analogous element counting argument as above we see that there exists some such that , or that for all . Thankfully, this means that , and thus we have .     Section  Problem 4   Let be a subspace of a finite-dimensional vector space, . Recall that a subspace of is called a complement of if . Prove the following statements.   Every complement of has dimension .  If is not or , then has more than one complement.  If is a subspace of with , then is non-zero.     Coming Soon!    Problem 5   Let be a commutative integral domain and an -module. Recall that a subset of is called a maximal linearly independent set of if is linearly independent and any subset of properly containing is linearly dependent.   Let be a linearly independent subset of . Prove that is contained in some maximal linearly independent subset of .  Let be a linearly independent subset of and the -submodule of generated by . Prove that is a maximal linearly independent subset if and only if is torsion. (Recall that an -module is called “torsion'' if for each , there is a such that and .)     Part (a) Let be the set of all linearly independent subsets of that contain . We can order with respect to inclusion. Let be a totally ordered subset of , and let be the union of all elements in . Let be a set of elements in such that for some , where for some . As is the union of all elements in , there exists some such that . However, as is totally ordered, there exists some such that contains and . Continuing in this way, we see that there exists some such that . As is linearly independent, we know that means that for all . Thus is indeed linearly independent, making it an upper bound for . Thus by [[Mathematics\/Foundations\/Results\/Theorem – Zorn's Lemma|Zorn's Lemma]] there exists a maximal element of , which we denote . Thus is linearly independent, contains , and is maximal.  Part (b) Suppose is maximal linearly independent, and suppose by way of contradiction that is not torsion. Thus there exists some such that for all , we see that . However, as and , this means that . Consider . This set is linearly independent, contradicting the assumption that was maximal.   Suppose is torsion. Let and consider . Consider . As is torsion, there exists an such that . Thus . (Note, if , then ). As and is generated by ( ), . Subtracting over we see that . But as , we see that each and are in , but the sum is 0. Thus is linearly dependent.    Problem 6   Let be the set of all matrices over , let denote the group , and set  Part (a) Prove that the formula above defines a group action.  Part (b) Prove that each orbit contains a matrix such that  Part (c) How many orbits are there?    Coming Soon!     Section  Problem 7   Let be a commutative integral domain and its field of fractions. Let and be nonzero elements of , such that . Let be the unique ring homomorphism with for and . Prove that a polynomial satisfies if and only if for some polynomial . (Hint: one way is to use induction on deg(p(x)).)    Coming Soon!    Problem 8   Let a be an integer that is not a square, and set (a) Prove that is a subring of . When b is an integer that is not a square, prove the following assertions: (b) There is an isomorphism of abelian groups (under addition) . (c) There is an isomorphism of rings if and only if .    Coming Soon!    Problem 9   Suppose and are subfields of a field extension with and both finite. Let be the subfield of K generated by and . (a) Show that (b) Prove that equality holds when and are relatively prime. (c) Prove there are two subfields of , and , neither contained in the other, so that the inequality in part (a) is strict.    Coming Soon!     "
 },
 {
-  "id": "problem-164",
+  "id": "problem-146",
   "level": "2",
-  "url": "section-85.html#problem-164",
+  "url": "section-85.html#problem-146",
   "type": "Problem",
   "number": "G.146",
   "title": "Problem 1.",
   "body": "Problem 1   Let be a group of order (a) Prove that has a unique -Sylow subgroup (b) Prove that the -Sylow subgroup is contained in the center of .    Part (a) By we know and is congruent to . The only possibility for such is , meaning that has exactly Sylow -subgroup.  Part (b) Let act on by conjugation. This gives rise to the [[Proposition – Permutation Representation|permutation representation]] homomorphism . However, has prime order, making it a cyclic group isomorphic to .  By the we know that . However, , which has order . As this is a homomorphism, we see the order of must divide both and , two numbers that are relatively prime. Thus , meaning that conjugation is equivalent to the identity map, or that for all . Thus .   "
 },
 {
-  "id": "problem-165",
+  "id": "problem-147",
   "level": "2",
-  "url": "section-85.html#problem-165",
+  "url": "section-85.html#problem-147",
   "type": "Problem",
   "number": "G.147",
   "title": "Problem 2.",
   "body": "Problem 2   Let be a group with a subgroup so that . (a) Prove that there is a normal subgroup of , so that and (b) Prove that if is [[Mathematics\/Definitions\/Generator|finitely generated]], there are most finitely many subgroups with index . (Hint: you might want to consider maps .)    Coming Soon!   "
 },
 {
-  "id": "problem-166",
+  "id": "problem-148",
   "level": "2",
-  "url": "section-85.html#problem-166",
+  "url": "section-85.html#problem-148",
   "type": "Problem",
   "number": "G.148",
   "title": "Problem 3.",
   "body": "Problem 3   Let be a finite -group and its center. If is a normal subgroup of , prove that .    Let be a finite -group for some prime and a normal subgroup of .  First, we show that the center of is nontrivial. (See: [[Modern Algebra#Corollary – Center of -group is Nontrivial|Corollary]]) Suppose by way of contradiction that . We examine the conjugacy classes of . From the [ , we know Note that for some , meaning that the only divisors of are powers of . In finite groups, each conjugacy class must divide the order of the group. By , , where . Since |Z(G)|=1, we see that , which is impossible given that . Thus .  As it is a union of conjugacy classes of the elements it contains, one of which is . Assume by way of contradiction that , meaning that is the only element in whose conjugacy class is a singleton. This yields However, by  must also be a group, and thus by an analogous element counting argument as above we see that there exists some such that , or that for all . Thankfully, this means that , and thus we have .   "
 },
 {
-  "id": "problem-167",
+  "id": "problem-149",
   "level": "2",
-  "url": "section-85.html#problem-167",
+  "url": "section-85.html#problem-149",
   "type": "Problem",
   "number": "G.149",
   "title": "Problem 4.",
   "body": "Problem 4   Let be a subspace of a finite-dimensional vector space, . Recall that a subspace of is called a complement of if . Prove the following statements.   Every complement of has dimension .  If is not or , then has more than one complement.  If is a subspace of with , then is non-zero.     Coming Soon!   "
 },
 {
-  "id": "problem-168",
+  "id": "problem-150",
   "level": "2",
-  "url": "section-85.html#problem-168",
+  "url": "section-85.html#problem-150",
   "type": "Problem",
   "number": "G.150",
   "title": "Problem 5.",
   "body": "Problem 5   Let be a commutative integral domain and an -module. Recall that a subset of is called a maximal linearly independent set of if is linearly independent and any subset of properly containing is linearly dependent.   Let be a linearly independent subset of . Prove that is contained in some maximal linearly independent subset of .  Let be a linearly independent subset of and the -submodule of generated by . Prove that is a maximal linearly independent subset if and only if is torsion. (Recall that an -module is called “torsion'' if for each , there is a such that and .)     Part (a) Let be the set of all linearly independent subsets of that contain . We can order with respect to inclusion. Let be a totally ordered subset of , and let be the union of all elements in . Let be a set of elements in such that for some , where for some . As is the union of all elements in , there exists some such that . However, as is totally ordered, there exists some such that contains and . Continuing in this way, we see that there exists some such that . As is linearly independent, we know that means that for all . Thus is indeed linearly independent, making it an upper bound for . Thus by [[Mathematics\/Foundations\/Results\/Theorem – Zorn's Lemma|Zorn's Lemma]] there exists a maximal element of , which we denote . Thus is linearly independent, contains , and is maximal.  Part (b) Suppose is maximal linearly independent, and suppose by way of contradiction that is not torsion. Thus there exists some such that for all , we see that . However, as and , this means that . Consider . This set is linearly independent, contradicting the assumption that was maximal.   Suppose is torsion. Let and consider . Consider . As is torsion, there exists an such that . Thus . (Note, if , then ). As and is generated by ( ), . Subtracting over we see that . But as , we see that each and are in , but the sum is 0. Thus is linearly dependent.   "
 },
 {
-  "id": "problem-169",
+  "id": "problem-151",
   "level": "2",
-  "url": "section-85.html#problem-169",
+  "url": "section-85.html#problem-151",
   "type": "Problem",
   "number": "G.151",
   "title": "Problem 6.",
   "body": "Problem 6   Let be the set of all matrices over , let denote the group , and set  Part (a) Prove that the formula above defines a group action.  Part (b) Prove that each orbit contains a matrix such that  Part (c) How many orbits are there?    Coming Soon!   "
 },
 {
-  "id": "problem-170",
+  "id": "problem-152",
   "level": "2",
-  "url": "section-85.html#problem-170",
+  "url": "section-85.html#problem-152",
   "type": "Problem",
   "number": "G.152",
   "title": "Problem 7.",
   "body": "Problem 7   Let be a commutative integral domain and its field of fractions. Let and be nonzero elements of , such that . Let be the unique ring homomorphism with for and . Prove that a polynomial satisfies if and only if for some polynomial . (Hint: one way is to use induction on deg(p(x)).)    Coming Soon!   "
 },
 {
-  "id": "problem-171",
+  "id": "problem-153",
   "level": "2",
-  "url": "section-85.html#problem-171",
+  "url": "section-85.html#problem-153",
   "type": "Problem",
   "number": "G.153",
   "title": "Problem 8.",
   "body": "Problem 8   Let a be an integer that is not a square, and set (a) Prove that is a subring of . When b is an integer that is not a square, prove the following assertions: (b) There is an isomorphism of abelian groups (under addition) . (c) There is an isomorphism of rings if and only if .    Coming Soon!   "
 },
 {
-  "id": "problem-172",
+  "id": "problem-154",
   "level": "2",
-  "url": "section-85.html#problem-172",
+  "url": "section-85.html#problem-154",
   "type": "Problem",
   "number": "G.154",
   "title": "Problem 9.",
@@ -12817,81 +12664,81 @@ var ptx_lunr_docs = [
   "body": "January 2012  Section I: Group Theory  Problem 1   Let be a (not necessarily finite) group and and normal subgroups such that . Prove that     Let defined such that . Let . Then showing is a homomorphism.  Let . As , we have and with and . As and we see .  Consider and making surjective as well.  Let . Then , and so . Let . Then , so and , placing . Thus, by the , we have     Problem 2   Suppose is a finite group which has precisely one subgroup of order for each divisor of . Prove that is cyclic.    First, suppose that is a -group. Let have biggest order. Let . So . Since , it also has exactly one subgroup for each divisor. But has the same order as one of those subgroups, so they must be the same group. So . Since was arbitrary, then . So when is a -group then it is cyclic.  If its not a -group then we can decompose into relatively prime powers of primes, all of which are -groups and maintain this property. Thus is the product of relatively prime cyclic groups, making it cyclic itself.    Problem 3   Let be a group of order and let denote the set of Sylow -subgroups of .   Suppose for any either or Prove that is not simple.    Suppose there exists such that . Prove that is not simple.       Consider the normalizer of .    Let be a group of order and let denote the set of Sylow -subgroups of .   Suppose by way of contradiction that is simple. By we know the following:    and is congruent to . As is simple there must be ten.     and is congruent to . As is simple there must be six.   Since each Sylow -subgroup will have non-identity elements and they are all distinct that accounts for elements of order . However, there are also elements or order to account for, which is a problem. Thus cannot be simple.    Suppose now that there exists such that . Given this intersection, we know that . Additionally, note that as is a subgroup of both and with index Since this is the smallest prime dividing the order of both and , by we see that is normal in both.  We now consider the normalizer of , which we denote for simplicity. As is a subgroup of its order must divide by . However, , and so must have at least elements, leaving the options of and . If then , making normal in , a problem.  If then , the smallest prime dividing . Thus is still normal by , which is still a problem. Hence cannot be simple.        Section  Problem 4   Let be a field of characteristic , , and consider the polynomial .   Prove that is either irreducible over or it splits into distinct linear factors over .  Suppose is irreducible over and let be a splitting field of over . Prove that the Galois group of over is cyclic.     If is a root of , consider for .    Let be a field of characteristic , , and consider the polynomial .     Suppose has a root, , in . Then . Consider for some , and observe . By The Freshman's Dream, we have , but as , we really have . By Fermat's Little Theorem, , and thus . Thus we have found roots of , and thus splits into linear factors.    Suppose is irreducible over and let be a splitting field of over . Let be a root of Consider . By part (1), contains all the roots of , hence . As is monic and irreducible, it is the minimum polynomial of , and thus . Hence . All groups of prime order are cyclic, completing the proof.       Problem 5   Let .   Find the minimal polynomial of over .    Let be the splitting field of over . Find the Galois group of .    Find all subgroups of and generators for the corresponding intermediate fields of .       Let .     Let which factors as two irreducible polynomials and has no roots in , making it irreducible. Thus is the minimal polynomial of     Notice that which also has degree . Let denote the Galois group of . Thus is a group of order , making it isomorphic to or . Notice that the elements of are the following: - and , - and , - and , and - and . All of these automorphisms have degree , making .    Thus are only two subgroups of , and . The first, , corresponds to and is generated by , where corresponds to and is generated by .       Problem 6 (*)   Let be any field, and let , and be indeterminates. Prove in detail that and are isomorphic rings.    Coming Soon!     Section III  Problem 7 (*)   Consider the following matrix over the complex numbers:    Coming Soon!    Problem 8 (*)   Let N be a submodule of an R-module M. Using Zorn's Lemma, prove that there is a submodule N' such that    , and     for every non-zero submodule N'' of M.       Coming Soon!    Problem 9 (*)   Let be a square matrix over the field of complex numbers.   Suppose is invertible. Prove that there is a square matrix over such that .  Show by example that (1) can fail if is not assumed to be invertible.     Reduce to the case that where is the identity matrix and is a nilpotent matrix.    Coming Soon!     "
 },
 {
-  "id": "problem-173",
+  "id": "problem-155",
   "level": "2",
-  "url": "section-86.html#problem-173",
+  "url": "section-86.html#problem-155",
   "type": "Problem",
   "number": "G.155",
   "title": "Problem 1.",
   "body": "Problem 1   Let be a (not necessarily finite) group and and normal subgroups such that . Prove that     Let defined such that . Let . Then showing is a homomorphism.  Let . As , we have and with and . As and we see .  Consider and making surjective as well.  Let . Then , and so . Let . Then , so and , placing . Thus, by the , we have    "
 },
 {
-  "id": "problem-174",
+  "id": "problem-156",
   "level": "2",
-  "url": "section-86.html#problem-174",
+  "url": "section-86.html#problem-156",
   "type": "Problem",
   "number": "G.156",
   "title": "Problem 2.",
   "body": "Problem 2   Suppose is a finite group which has precisely one subgroup of order for each divisor of . Prove that is cyclic.    First, suppose that is a -group. Let have biggest order. Let . So . Since , it also has exactly one subgroup for each divisor. But has the same order as one of those subgroups, so they must be the same group. So . Since was arbitrary, then . So when is a -group then it is cyclic.  If its not a -group then we can decompose into relatively prime powers of primes, all of which are -groups and maintain this property. Thus is the product of relatively prime cyclic groups, making it cyclic itself.   "
 },
 {
-  "id": "problem-175",
+  "id": "problem-157",
   "level": "2",
-  "url": "section-86.html#problem-175",
+  "url": "section-86.html#problem-157",
   "type": "Problem",
   "number": "G.157",
   "title": "Problem 3.",
   "body": "Problem 3   Let be a group of order and let denote the set of Sylow -subgroups of .   Suppose for any either or Prove that is not simple.    Suppose there exists such that . Prove that is not simple.       Consider the normalizer of .    Let be a group of order and let denote the set of Sylow -subgroups of .   Suppose by way of contradiction that is simple. By we know the following:    and is congruent to . As is simple there must be ten.     and is congruent to . As is simple there must be six.   Since each Sylow -subgroup will have non-identity elements and they are all distinct that accounts for elements of order . However, there are also elements or order to account for, which is a problem. Thus cannot be simple.    Suppose now that there exists such that . Given this intersection, we know that . Additionally, note that as is a subgroup of both and with index Since this is the smallest prime dividing the order of both and , by we see that is normal in both.  We now consider the normalizer of , which we denote for simplicity. As is a subgroup of its order must divide by . However, , and so must have at least elements, leaving the options of and . If then , making normal in , a problem.  If then , the smallest prime dividing . Thus is still normal by , which is still a problem. Hence cannot be simple.      "
 },
 {
-  "id": "problem-176",
+  "id": "problem-158",
   "level": "2",
-  "url": "section-86.html#problem-176",
+  "url": "section-86.html#problem-158",
   "type": "Problem",
   "number": "G.158",
   "title": "Problem 4.",
   "body": "Problem 4   Let be a field of characteristic , , and consider the polynomial .   Prove that is either irreducible over or it splits into distinct linear factors over .  Suppose is irreducible over and let be a splitting field of over . Prove that the Galois group of over is cyclic.     If is a root of , consider for .    Let be a field of characteristic , , and consider the polynomial .     Suppose has a root, , in . Then . Consider for some , and observe . By The Freshman's Dream, we have , but as , we really have . By Fermat's Little Theorem, , and thus . Thus we have found roots of , and thus splits into linear factors.    Suppose is irreducible over and let be a splitting field of over . Let be a root of Consider . By part (1), contains all the roots of , hence . As is monic and irreducible, it is the minimum polynomial of , and thus . Hence . All groups of prime order are cyclic, completing the proof.      "
 },
 {
-  "id": "problem-177",
+  "id": "problem-159",
   "level": "2",
-  "url": "section-86.html#problem-177",
+  "url": "section-86.html#problem-159",
   "type": "Problem",
   "number": "G.159",
   "title": "Problem 5.",
   "body": "Problem 5   Let .   Find the minimal polynomial of over .    Let be the splitting field of over . Find the Galois group of .    Find all subgroups of and generators for the corresponding intermediate fields of .       Let .     Let which factors as two irreducible polynomials and has no roots in , making it irreducible. Thus is the minimal polynomial of     Notice that which also has degree . Let denote the Galois group of . Thus is a group of order , making it isomorphic to or . Notice that the elements of are the following: - and , - and , - and , and - and . All of these automorphisms have degree , making .    Thus are only two subgroups of , and . The first, , corresponds to and is generated by , where corresponds to and is generated by .      "
 },
 {
-  "id": "problem-178",
+  "id": "problem-160",
   "level": "2",
-  "url": "section-86.html#problem-178",
+  "url": "section-86.html#problem-160",
   "type": "Problem",
   "number": "G.160",
   "title": "Problem 6 (*).",
   "body": "Problem 6 (*)   Let be any field, and let , and be indeterminates. Prove in detail that and are isomorphic rings.    Coming Soon!   "
 },
 {
-  "id": "problem-179",
+  "id": "problem-161",
   "level": "2",
-  "url": "section-86.html#problem-179",
+  "url": "section-86.html#problem-161",
   "type": "Problem",
   "number": "G.161",
   "title": "Problem 7 (*).",
   "body": "Problem 7 (*)   Consider the following matrix over the complex numbers:    Coming Soon!   "
 },
 {
-  "id": "problem-180",
+  "id": "problem-162",
   "level": "2",
-  "url": "section-86.html#problem-180",
+  "url": "section-86.html#problem-162",
   "type": "Problem",
   "number": "G.162",
   "title": "Problem 8 (*).",
   "body": "Problem 8 (*)   Let N be a submodule of an R-module M. Using Zorn's Lemma, prove that there is a submodule N' such that    , and     for every non-zero submodule N'' of M.       Coming Soon!   "
 },
 {
-  "id": "problem-181",
+  "id": "problem-163",
   "level": "2",
-  "url": "section-86.html#problem-181",
+  "url": "section-86.html#problem-163",
   "type": "Problem",
   "number": "G.163",
   "title": "Problem 9 (*).",
@@ -12907,99 +12754,99 @@ var ptx_lunr_docs = [
   "body": "June 2011  Section I: Group Theory  Problem 1   Prove that no group of order 150 is simple.    Let be a group of order and suppose by way of contradiction that is simple. Notice that . By , we know and divides , the only options are thus and . Since is simple, there must be exactly , where . Let act on by conjugation. Thus is a [[Mathematics\/Definitions\/Homomorphism|group homomorphism]]. Note that , and that the order of does not divide . By Part (2) of this action is transitive, meaning that the kernel of cannot be trivial. Thus is a nontrivial normal subgroup of , a contradiction. Thus no group of order is simple.    Problem 2   Let be a finite group. (a) If is a normal subgroup of and , prove that is contained in the center of . (b) Suppose that is odd and that contains a non-trivial simple subgroup with . Prove that is the only non-trivial proper normal subgroup of .    Part (a) Let and let . As is normal, we see , and thus one of the following must be true: - , where is the identity element of , or - , the only other element of . However, in the first case we would have by multiplying and over, and thus it must be the case that , or . Thus .  Part (b) From we know that , meaning that has an even number of elements. Thus is the smallest prime dividing the order of , making normal in (See: ).  Suppose by way of contradiction there exists some non-trivial proper normal subgroup of that is not . As is normal, by the [[Theorem – Second Isomorphism Theorem|Second Isomorphism Theorem]] we have . However, as is simple, this means that . SIT also tells us that . As , this makes and . From part (a), . However, this contradicts , as does not divide any odd numbers.    Problem 3   Let be a normal subgroup of a finite group , a prime dividing the order of , and a Sylow -subgroup of . Prove that  Hint : For , consider the subgroup .    First, note that .  Let act on by conjugation, which is a transitive action by part (2) of . Therefore acts transitively on this set as well. Under this action, .  Let , and let . Consider . As the action by is transitive there exists some such that . This means that stabilizes . Then stabilizes as well, so . But notice that , where and . Thus .    Problem 4   Fix a prime number , and let denote the abelian group of all complex roots of unity whose orders are powers of ; that is Prove the following statements. (a) Every non-trivial subgroup of contains the group of roots of unity. (b) Every proper subgroup of is cyclic. (c) If and are subgroups of , then either or . (d) For each there exists a unique subgroup of with elements.    Part (a) Let be a non-trivial subgroup of . Then there exists some such that . Then yields a primitive root of unity, which can be used to generate the other roots as well. Thus contains the roots of unity.  Part (b) Suppose is a proper subgroup of , meaning it is missing some root of unity. But the subgroup of those roots of unity is cyclic and is generated by every element, so that entire subgroup must be missing. But that subgroup can be generated with any primitive root of a higher power of , so must be finite and there must be some element of maximum order, which can be used to generate the whole group. Thus is cyclic.  Part (c) Suppose and are subgroups of such that . Then is a proper subgroup of , making it finite as seen above. If there exists a higher power of in then it generates .  Part (d) Let . Then the subgroup generated by the roots of unity have elements, and it is unique since it is generated by every such root.     Section  Problem 5   Let F be a field, and let . Recall that is separable provided, for every extension field has no multiple roots in . (A multiple root is an element such that in    Prove that is separable if and only if and its derivative are relatively prime in .  Suppose that is irreducible and that the degree of is not a multiple of the characteristic of . Prove that is separable.     Part (a) If two polynomials factor completely into linear factors, then they are relatively prime if and only if they have no linear factors in common, which is equivalent to their having no roots in common. Thus they cannot be generated by the same thing  Part (b)    Problem 6   Let be the splitting field of the polynomial over . Find , and describe the elements of explicitly.    First, notice that is irreducible in , using Eisenstein's Criterion and . By the Factor Theorem there are at most distinct roots of . Notice that is one such root. The roots of are for .  Given that is irreducible and monic in , this makes the minimal polynomial of in and thus that . Take a seventh root of unity, cyclo time, degree 6, for a grand total of 42, which is 2 times 3 times 7    Problem 7   Let p be a prime number, let be the field with elements, and let be a positive integer. Prove that , where, for a positive divisor of , denotes the product of all monic irreducible polynomials of degree in . (You may assume basic results on the structure of finite fields and their subfields.)    Coming Soon!    Problem 8   Let be a commutative ring with . Recall that is called [[Mathematics\/Definitions\/Nilpotent|nilpotent]] i\/f for some integer Let be the set of nilpotent elements of . (a) Show that is an ideal of . (b) Show that the ring has no nonzero nilpotent elements. (c) For a polynomial , prove that is a nilpotent element of if and only if every coefficient of is nilpotent.    Let be a commutative ring with and Let be the set of nilpotent elements of .  Part (a) Let . Then and for . Consider , which, by the binomial theorem, has each term raised to either the th or th power, sending the whole thing to .  Additionally, if consider when viewed as an additive group. Notice . Finally, let and consider , so . Thus we have our ideal.  Part (b) Let be a nilpotent element in . Then , meaning . This means there exists some such that , placing . Thus all nilpotent elements in are actually (possibly four 's in a trench coat).  Part (c) Let .  First, suppose is a nilpotent element of . Thus for some . By the binomial shenanigans every product of coefficients must to go .  Next, suppose every coefficient of is nilpotent. Let be equal to the product of all the smallest powers that send each coefficient to . Thus by more binomial shenanigans we have .     Section  Problem 9   Consider the following matrix over : (a) Show that the characteristic and minimal polynomials of are, respectively, and . (b) Find the rational canonical form of and the Jordan canonical form of . (c) Find an invertible matrix such that .    Part (a) Let denote the above matrix.  Part (b) As and , we know that our characteristic polynomial factors into linear factors, so does indeed have a JCF. This also means that only has one elementary divisor, , which corresponds to the Jordan Block , a matrix with s along the diagonal, s along the subdiagonal, and everywhere else. This is the JCF of .  Part (c)    Problem 10   Let and be matrices with entries in . Recall that and are said to be similar over if there exists an [[Mathematics\/Definitions\/Invertible Matrix|invertible]] matrix, with entries in , such that . Prove the following statements about matrices and with entries in :   If is a field extension, and and are similar over , then they are similar over .   is similar over to its [[Mathematics\/Definitions\/Transpose|transpose]] .     Part (a) Suppose and are similar in . As and have entries in , then they are both in . Thus there exist matrices in [[Mathematics\/Modern Algebra\/Results\/Theorem – Rational Canonical Form|RCF]] such that is similar to and that is similar to . However, is similar to and that is similar to in as well. Notice and are still in RCF. However, as the RCF is unique, this means that in , making them equal in as well. Thus is similar to , as similarity is transitive.  Part (b) Let be the [[Mathematics\/Definitions\/Algebraic Closure|algebraic closure]] of . Thus has a [[Mathematics\/Modern Algebra\/Results\/Theorem – Jordan Canonical Form|Jordan Canonical Form]] in . For each [[Mathematics\/Definitions\/Jordan Block|Jordan block]] in the JCF of , let denote the transpose of the identity matrix, and notice that . As this is the case for every Jordan block, we see that the JCF of , , is similar to its transpose. As the is similar to , is similar to , and is similar to , we see that in by transitivity. From Part (a), this yields in .    Problem 11   Let be a commutative ring with , and let be a surjective homomorphism of [[Mathematics\/Definitions\/Basis|free]] -modules. Prove that .    Let be a maximal ideal in . Thus is a field. Lemma 1.58 tells us that and are -vector spaces. Additionally, this gives rise to , which is a surjective -module linear transformation.  Note that is generated by for . Let and consider . For this to be we need it to be in , and thus all . So the set of is a basis for with elements. Likewise has a basis with elements. As we are surjective, Rank , . So by Rank-Nullity which is only positive with .     "
 },
 {
-  "id": "problem-182",
+  "id": "problem-164",
   "level": "2",
-  "url": "section-87.html#problem-182",
+  "url": "section-87.html#problem-164",
   "type": "Problem",
   "number": "G.164",
   "title": "Problem 1.",
   "body": "Problem 1   Prove that no group of order 150 is simple.    Let be a group of order and suppose by way of contradiction that is simple. Notice that . By , we know and divides , the only options are thus and . Since is simple, there must be exactly , where . Let act on by conjugation. Thus is a [[Mathematics\/Definitions\/Homomorphism|group homomorphism]]. Note that , and that the order of does not divide . By Part (2) of this action is transitive, meaning that the kernel of cannot be trivial. Thus is a nontrivial normal subgroup of , a contradiction. Thus no group of order is simple.   "
 },
 {
-  "id": "problem-183",
+  "id": "problem-165",
   "level": "2",
-  "url": "section-87.html#problem-183",
+  "url": "section-87.html#problem-165",
   "type": "Problem",
   "number": "G.165",
   "title": "Problem 2.",
   "body": "Problem 2   Let be a finite group. (a) If is a normal subgroup of and , prove that is contained in the center of . (b) Suppose that is odd and that contains a non-trivial simple subgroup with . Prove that is the only non-trivial proper normal subgroup of .    Part (a) Let and let . As is normal, we see , and thus one of the following must be true: - , where is the identity element of , or - , the only other element of . However, in the first case we would have by multiplying and over, and thus it must be the case that , or . Thus .  Part (b) From we know that , meaning that has an even number of elements. Thus is the smallest prime dividing the order of , making normal in (See: ).  Suppose by way of contradiction there exists some non-trivial proper normal subgroup of that is not . As is normal, by the [[Theorem – Second Isomorphism Theorem|Second Isomorphism Theorem]] we have . However, as is simple, this means that . SIT also tells us that . As , this makes and . From part (a), . However, this contradicts , as does not divide any odd numbers.   "
 },
 {
-  "id": "problem-184",
+  "id": "problem-166",
   "level": "2",
-  "url": "section-87.html#problem-184",
+  "url": "section-87.html#problem-166",
   "type": "Problem",
   "number": "G.166",
   "title": "Problem 3.",
   "body": "Problem 3   Let be a normal subgroup of a finite group , a prime dividing the order of , and a Sylow -subgroup of . Prove that  Hint : For , consider the subgroup .    First, note that .  Let act on by conjugation, which is a transitive action by part (2) of . Therefore acts transitively on this set as well. Under this action, .  Let , and let . Consider . As the action by is transitive there exists some such that . This means that stabilizes . Then stabilizes as well, so . But notice that , where and . Thus .   "
 },
 {
-  "id": "problem-185",
+  "id": "problem-167",
   "level": "2",
-  "url": "section-87.html#problem-185",
+  "url": "section-87.html#problem-167",
   "type": "Problem",
   "number": "G.167",
   "title": "Problem 4.",
   "body": "Problem 4   Fix a prime number , and let denote the abelian group of all complex roots of unity whose orders are powers of ; that is Prove the following statements. (a) Every non-trivial subgroup of contains the group of roots of unity. (b) Every proper subgroup of is cyclic. (c) If and are subgroups of , then either or . (d) For each there exists a unique subgroup of with elements.    Part (a) Let be a non-trivial subgroup of . Then there exists some such that . Then yields a primitive root of unity, which can be used to generate the other roots as well. Thus contains the roots of unity.  Part (b) Suppose is a proper subgroup of , meaning it is missing some root of unity. But the subgroup of those roots of unity is cyclic and is generated by every element, so that entire subgroup must be missing. But that subgroup can be generated with any primitive root of a higher power of , so must be finite and there must be some element of maximum order, which can be used to generate the whole group. Thus is cyclic.  Part (c) Suppose and are subgroups of such that . Then is a proper subgroup of , making it finite as seen above. If there exists a higher power of in then it generates .  Part (d) Let . Then the subgroup generated by the roots of unity have elements, and it is unique since it is generated by every such root.   "
 },
 {
-  "id": "problem-186",
+  "id": "problem-168",
   "level": "2",
-  "url": "section-87.html#problem-186",
+  "url": "section-87.html#problem-168",
   "type": "Problem",
   "number": "G.168",
   "title": "Problem 5.",
   "body": "Problem 5   Let F be a field, and let . Recall that is separable provided, for every extension field has no multiple roots in . (A multiple root is an element such that in    Prove that is separable if and only if and its derivative are relatively prime in .  Suppose that is irreducible and that the degree of is not a multiple of the characteristic of . Prove that is separable.     Part (a) If two polynomials factor completely into linear factors, then they are relatively prime if and only if they have no linear factors in common, which is equivalent to their having no roots in common. Thus they cannot be generated by the same thing  Part (b)   "
 },
 {
-  "id": "problem-187",
+  "id": "problem-169",
   "level": "2",
-  "url": "section-87.html#problem-187",
+  "url": "section-87.html#problem-169",
   "type": "Problem",
   "number": "G.169",
   "title": "Problem 6.",
   "body": "Problem 6   Let be the splitting field of the polynomial over . Find , and describe the elements of explicitly.    First, notice that is irreducible in , using Eisenstein's Criterion and . By the Factor Theorem there are at most distinct roots of . Notice that is one such root. The roots of are for .  Given that is irreducible and monic in , this makes the minimal polynomial of in and thus that . Take a seventh root of unity, cyclo time, degree 6, for a grand total of 42, which is 2 times 3 times 7   "
 },
 {
-  "id": "problem-188",
+  "id": "problem-170",
   "level": "2",
-  "url": "section-87.html#problem-188",
+  "url": "section-87.html#problem-170",
   "type": "Problem",
   "number": "G.170",
   "title": "Problem 7.",
   "body": "Problem 7   Let p be a prime number, let be the field with elements, and let be a positive integer. Prove that , where, for a positive divisor of , denotes the product of all monic irreducible polynomials of degree in . (You may assume basic results on the structure of finite fields and their subfields.)    Coming Soon!   "
 },
 {
-  "id": "problem-189",
+  "id": "problem-171",
   "level": "2",
-  "url": "section-87.html#problem-189",
+  "url": "section-87.html#problem-171",
   "type": "Problem",
   "number": "G.171",
   "title": "Problem 8.",
   "body": "Problem 8   Let be a commutative ring with . Recall that is called [[Mathematics\/Definitions\/Nilpotent|nilpotent]] i\/f for some integer Let be the set of nilpotent elements of . (a) Show that is an ideal of . (b) Show that the ring has no nonzero nilpotent elements. (c) For a polynomial , prove that is a nilpotent element of if and only if every coefficient of is nilpotent.    Let be a commutative ring with and Let be the set of nilpotent elements of .  Part (a) Let . Then and for . Consider , which, by the binomial theorem, has each term raised to either the th or th power, sending the whole thing to .  Additionally, if consider when viewed as an additive group. Notice . Finally, let and consider , so . Thus we have our ideal.  Part (b) Let be a nilpotent element in . Then , meaning . This means there exists some such that , placing . Thus all nilpotent elements in are actually (possibly four 's in a trench coat).  Part (c) Let .  First, suppose is a nilpotent element of . Thus for some . By the binomial shenanigans every product of coefficients must to go .  Next, suppose every coefficient of is nilpotent. Let be equal to the product of all the smallest powers that send each coefficient to . Thus by more binomial shenanigans we have .   "
 },
 {
-  "id": "problem-190",
+  "id": "problem-172",
   "level": "2",
-  "url": "section-87.html#problem-190",
+  "url": "section-87.html#problem-172",
   "type": "Problem",
   "number": "G.172",
   "title": "Problem 9.",
   "body": "Problem 9   Consider the following matrix over : (a) Show that the characteristic and minimal polynomials of are, respectively, and . (b) Find the rational canonical form of and the Jordan canonical form of . (c) Find an invertible matrix such that .    Part (a) Let denote the above matrix.  Part (b) As and , we know that our characteristic polynomial factors into linear factors, so does indeed have a JCF. This also means that only has one elementary divisor, , which corresponds to the Jordan Block , a matrix with s along the diagonal, s along the subdiagonal, and everywhere else. This is the JCF of .  Part (c)   "
 },
 {
-  "id": "problem-191",
+  "id": "problem-173",
   "level": "2",
-  "url": "section-87.html#problem-191",
+  "url": "section-87.html#problem-173",
   "type": "Problem",
   "number": "G.173",
   "title": "Problem 10.",
   "body": "Problem 10   Let and be matrices with entries in . Recall that and are said to be similar over if there exists an [[Mathematics\/Definitions\/Invertible Matrix|invertible]] matrix, with entries in , such that . Prove the following statements about matrices and with entries in :   If is a field extension, and and are similar over , then they are similar over .   is similar over to its [[Mathematics\/Definitions\/Transpose|transpose]] .     Part (a) Suppose and are similar in . As and have entries in , then they are both in . Thus there exist matrices in [[Mathematics\/Modern Algebra\/Results\/Theorem – Rational Canonical Form|RCF]] such that is similar to and that is similar to . However, is similar to and that is similar to in as well. Notice and are still in RCF. However, as the RCF is unique, this means that in , making them equal in as well. Thus is similar to , as similarity is transitive.  Part (b) Let be the [[Mathematics\/Definitions\/Algebraic Closure|algebraic closure]] of . Thus has a [[Mathematics\/Modern Algebra\/Results\/Theorem – Jordan Canonical Form|Jordan Canonical Form]] in . For each [[Mathematics\/Definitions\/Jordan Block|Jordan block]] in the JCF of , let denote the transpose of the identity matrix, and notice that . As this is the case for every Jordan block, we see that the JCF of , , is similar to its transpose. As the is similar to , is similar to , and is similar to , we see that in by transitivity. From Part (a), this yields in .   "
 },
 {
-  "id": "problem-192",
+  "id": "problem-174",
   "level": "2",
-  "url": "section-87.html#problem-192",
+  "url": "section-87.html#problem-174",
   "type": "Problem",
   "number": "G.174",
   "title": "Problem 11.",
@@ -13015,81 +12862,81 @@ var ptx_lunr_docs = [
   "body": "June 2010  Section I: Group Theory  Problem 1   Let be a group and a subgroup of . Recall that the centralizer of in is Prove that if is normal in , then so is and that is isomorphic to a subgroup of the automorphism group of .    Let be a group and . Let , and consider . Let . As we have for some , and thus that 1. and 2. . Consider . By (1), we see . As commutes with everything in we have , and by (2) we have . Thus .  Let act on the left cosets of by left multiplication, giving rise to the permutation representation homomorphism . By the we see that is isomorphic to a subgroup of the automorphism group of .    Problem 2    Suppose is a subgroup of a group and . Prove contains a normal subgroup such that and   Prove is the best possible bound for the previous part — i.e., prove there is a group and a subgroup with such that for every normal subgroup of with , we have .     Part (a) Let act on by multiplication on left cosets. Thus . The kernel of this map is the set of all elements in such that is the identity, meaning that for all . Then and .  Part (b)    Problem 3   Suppose is a simple group of order (Yes, there is such a group.)   How many elements of order does have?    Show that has at least elements of order        Part (a) By , and divides . Thus the only options are and . However, as is simple there cannot be only one Sylow -Subgroup, as it would be normal. Thus there are , each having unique elements and the identity. Thus there are elements of order .  Part (b) By , and divides . As is simple there cannot be one, so there must be at least , each with non-identity elements. Thus there must be at least elements of order .     Section  Problem 4   Let be the matrix with entries in     Find the [[Theorem – Jordan Canonical Form|Jordan canonical form]] of A.    Is similar to        Part (a) First, notice that is upwards triangular, and thus . By the [[Mathematics\/Modern Algebra\/Results#Theorem – Cayley-Hamilton Theorem|Cayley-Hamilton Theorem]] the minimum polynomial divides the characteristic polynomial, and from the definition of minimum polynomial we know is the smallest polynomial such that . Since must be a power of with , we plug in values of until we get . Shucks. Moving on, which is also not . However, multiplying one more time we see . By part (2) of this [[Results#Theorem – Cayley-Hamilton Theorem|theorem]] is an invariant factor. By part (1) of that same theorem, invariant factors must multiply to , and so the invariant factors are and . These are also the elementary divisors. So     Part (b) Let And notice that . Thus cannot be the minimal polynomial of . Two matrices are only similar if they share the same invariant factors (and thus the same minimum polynomial), so and are not similar.    Problem 5   Let be a (not-necessarily commutative) ring let be a left -module. The annihilator of in is defined to be (a) Prove that is a -sided ideal of . (b) Suppose is an abelian group (i.e., a -module) such that and is the ideal generated by . How many possibilities, up to isomorphism, are there for ?    Part (a) Let . Consider . Thus . Let and consider . Let and suppose for some . Add to both sides to see that . Thus and for all . So .  Note that as for all , we know that . As for all , we see that is a left sided ideal.  Suppose for some . This time we add to both sides, but as , we once again find that . Notice that this means for all and , and thus that elements of commute with elements of .  Let . Consider . Luckily, we know and thus that . Hence , making is a two sided ideal.  Part (b) By the [[Mathematics\/Modern Algebra\/Results\/Theorem – FTFGAG Elementary Divisor form|Fundamental Theorem of Finitely Generated Abelian Groups (Elementary Divisor Form)]] and [[Mathematics\/Number Theory\/Results\/Theorem – Sunzi's Remainder Theorem|Sunzi's Remainder Theorem]], there are only so many options we have for : - , - , - , - , - , - , - , - - , and - . However, as ideals are additive subgroups, we know that needs to contain a cyclic subgroup of order . Thus we need only consider decompositions with a in them, of which there are exactly two: 1. 2.     Problem 6   Let be a field and a vector space (not necessarily finite-dimensional) over . Prove that every linearly independent subset of is contained in a basis for .    Let be linearly independent in . Add elements to it until it spans , and denote this new set . Let denote the collection of all subsets of such that and is linearly independent. We make into a poset by the order relation , set containment.  We note that .  Let be any totally ordered subset of . If is empty, then is (vacuously) bounded above by . Assume is non-empty. Let . I claim .  Given , for each we have for some . Since is totally ordered, one of contains all the others and hence it contains all the 's. Since each is linearly independent, this shows are linearly independent. We have shown that every finite subset of is linearly independent, and hence is linearly independent. Since is non-empty, . Since each member of is contained in , . Thus, , and it is clearly an upper bound for .  We may thus apply Zorn's Lemma to conclude that has at least one maximal element, . I claim is a basis of .  Note that is linearly independent and by construction. We need to show that it spans . Suppose not. Since spans , if , then would have to be all of . (For note that if and , then for any we may write for and with and hence , which implies .)  Since we are assuming , there must be at least one such that . Set . Clearly, and, by Lemma , is linearly independent. This shows that is an element of that is strictly bigger than , contrary to the maximality of . So, must span and hence it is a basis.  Thus is contained in the basis .     Section  Problem 7   Let be an integral domain with field of fractions . Let be a prime ideal of and let (a) Show that is a subring of . (b) Show that is a prime ideal of .    Part (a) First, notice that since is prime, is multiplicatively closed. Let . Thus the denominators of and will still not be in , making multiplicatively closed.  Part (b)    Problem 8   Prove is not a PID. Hint : One method is to use (with proof) the fact that is irreducible in this ring.    Coming soon!    Problem 9   Consider . (a) Let be a root of and prove is a Galois field extension of . (Hint: First show is primitive -th root of unity.) (b) Find the Galois group .    Consider . Part (a) Let be a root of . Note that , and so so yay! It's primitive. Using one th primitive root we can obtain all the others, specifically . So we multiply each root by this to get all the others. So we have our splitting field.  Part (b) Since is Galois, we see that . So is either or The roots of are for .  By the Porism there exists a such that . Let , and note that . Additionally, note that when and when .  Observe then that Similarly, we see that and . Thus corresponds to the permutation .  Using the Porism again we see there exists a such that . Using a similar process as above we see that corresponds to . However, observe that , while . Thus these elements do not commute, so we cannot be in . Thus .     "
 },
 {
-  "id": "problem-193",
+  "id": "problem-175",
   "level": "2",
-  "url": "section-88.html#problem-193",
+  "url": "section-88.html#problem-175",
   "type": "Problem",
   "number": "G.175",
   "title": "Problem 1.",
   "body": "Problem 1   Let be a group and a subgroup of . Recall that the centralizer of in is Prove that if is normal in , then so is and that is isomorphic to a subgroup of the automorphism group of .    Let be a group and . Let , and consider . Let . As we have for some , and thus that 1. and 2. . Consider . By (1), we see . As commutes with everything in we have , and by (2) we have . Thus .  Let act on the left cosets of by left multiplication, giving rise to the permutation representation homomorphism . By the we see that is isomorphic to a subgroup of the automorphism group of .   "
 },
 {
-  "id": "problem-194",
+  "id": "problem-176",
   "level": "2",
-  "url": "section-88.html#problem-194",
+  "url": "section-88.html#problem-176",
   "type": "Problem",
   "number": "G.176",
   "title": "Problem 2.",
   "body": "Problem 2    Suppose is a subgroup of a group and . Prove contains a normal subgroup such that and   Prove is the best possible bound for the previous part — i.e., prove there is a group and a subgroup with such that for every normal subgroup of with , we have .     Part (a) Let act on by multiplication on left cosets. Thus . The kernel of this map is the set of all elements in such that is the identity, meaning that for all . Then and .  Part (b)   "
 },
 {
-  "id": "problem-195",
+  "id": "problem-177",
   "level": "2",
-  "url": "section-88.html#problem-195",
+  "url": "section-88.html#problem-177",
   "type": "Problem",
   "number": "G.177",
   "title": "Problem 3.",
   "body": "Problem 3   Suppose is a simple group of order (Yes, there is such a group.)   How many elements of order does have?    Show that has at least elements of order        Part (a) By , and divides . Thus the only options are and . However, as is simple there cannot be only one Sylow -Subgroup, as it would be normal. Thus there are , each having unique elements and the identity. Thus there are elements of order .  Part (b) By , and divides . As is simple there cannot be one, so there must be at least , each with non-identity elements. Thus there must be at least elements of order .   "
 },
 {
-  "id": "problem-196",
+  "id": "problem-178",
   "level": "2",
-  "url": "section-88.html#problem-196",
+  "url": "section-88.html#problem-178",
   "type": "Problem",
   "number": "G.178",
   "title": "Problem 4.",
   "body": "Problem 4   Let be the matrix with entries in     Find the [[Theorem – Jordan Canonical Form|Jordan canonical form]] of A.    Is similar to        Part (a) First, notice that is upwards triangular, and thus . By the [[Mathematics\/Modern Algebra\/Results#Theorem – Cayley-Hamilton Theorem|Cayley-Hamilton Theorem]] the minimum polynomial divides the characteristic polynomial, and from the definition of minimum polynomial we know is the smallest polynomial such that . Since must be a power of with , we plug in values of until we get . Shucks. Moving on, which is also not . However, multiplying one more time we see . By part (2) of this [[Results#Theorem – Cayley-Hamilton Theorem|theorem]] is an invariant factor. By part (1) of that same theorem, invariant factors must multiply to , and so the invariant factors are and . These are also the elementary divisors. So     Part (b) Let And notice that . Thus cannot be the minimal polynomial of . Two matrices are only similar if they share the same invariant factors (and thus the same minimum polynomial), so and are not similar.   "
 },
 {
-  "id": "problem-197",
+  "id": "problem-179",
   "level": "2",
-  "url": "section-88.html#problem-197",
+  "url": "section-88.html#problem-179",
   "type": "Problem",
   "number": "G.179",
   "title": "Problem 5.",
   "body": "Problem 5   Let be a (not-necessarily commutative) ring let be a left -module. The annihilator of in is defined to be (a) Prove that is a -sided ideal of . (b) Suppose is an abelian group (i.e., a -module) such that and is the ideal generated by . How many possibilities, up to isomorphism, are there for ?    Part (a) Let . Consider . Thus . Let and consider . Let and suppose for some . Add to both sides to see that . Thus and for all . So .  Note that as for all , we know that . As for all , we see that is a left sided ideal.  Suppose for some . This time we add to both sides, but as , we once again find that . Notice that this means for all and , and thus that elements of commute with elements of .  Let . Consider . Luckily, we know and thus that . Hence , making is a two sided ideal.  Part (b) By the [[Mathematics\/Modern Algebra\/Results\/Theorem – FTFGAG Elementary Divisor form|Fundamental Theorem of Finitely Generated Abelian Groups (Elementary Divisor Form)]] and [[Mathematics\/Number Theory\/Results\/Theorem – Sunzi's Remainder Theorem|Sunzi's Remainder Theorem]], there are only so many options we have for : - , - , - , - , - , - , - , - - , and - . However, as ideals are additive subgroups, we know that needs to contain a cyclic subgroup of order . Thus we need only consider decompositions with a in them, of which there are exactly two: 1. 2.    "
 },
 {
-  "id": "problem-198",
+  "id": "problem-180",
   "level": "2",
-  "url": "section-88.html#problem-198",
+  "url": "section-88.html#problem-180",
   "type": "Problem",
   "number": "G.180",
   "title": "Problem 6.",
   "body": "Problem 6   Let be a field and a vector space (not necessarily finite-dimensional) over . Prove that every linearly independent subset of is contained in a basis for .    Let be linearly independent in . Add elements to it until it spans , and denote this new set . Let denote the collection of all subsets of such that and is linearly independent. We make into a poset by the order relation , set containment.  We note that .  Let be any totally ordered subset of . If is empty, then is (vacuously) bounded above by . Assume is non-empty. Let . I claim .  Given , for each we have for some . Since is totally ordered, one of contains all the others and hence it contains all the 's. Since each is linearly independent, this shows are linearly independent. We have shown that every finite subset of is linearly independent, and hence is linearly independent. Since is non-empty, . Since each member of is contained in , . Thus, , and it is clearly an upper bound for .  We may thus apply Zorn's Lemma to conclude that has at least one maximal element, . I claim is a basis of .  Note that is linearly independent and by construction. We need to show that it spans . Suppose not. Since spans , if , then would have to be all of . (For note that if and , then for any we may write for and with and hence , which implies .)  Since we are assuming , there must be at least one such that . Set . Clearly, and, by Lemma , is linearly independent. This shows that is an element of that is strictly bigger than , contrary to the maximality of . So, must span and hence it is a basis.  Thus is contained in the basis .   "
 },
 {
-  "id": "problem-199",
+  "id": "problem-181",
   "level": "2",
-  "url": "section-88.html#problem-199",
+  "url": "section-88.html#problem-181",
   "type": "Problem",
   "number": "G.181",
   "title": "Problem 7.",
   "body": "Problem 7   Let be an integral domain with field of fractions . Let be a prime ideal of and let (a) Show that is a subring of . (b) Show that is a prime ideal of .    Part (a) First, notice that since is prime, is multiplicatively closed. Let . Thus the denominators of and will still not be in , making multiplicatively closed.  Part (b)   "
 },
 {
-  "id": "problem-200",
+  "id": "problem-182",
   "level": "2",
-  "url": "section-88.html#problem-200",
+  "url": "section-88.html#problem-182",
   "type": "Problem",
   "number": "G.182",
   "title": "Problem 8.",
   "body": "Problem 8   Prove is not a PID. Hint : One method is to use (with proof) the fact that is irreducible in this ring.    Coming soon!   "
 },
 {
-  "id": "problem-201",
+  "id": "problem-183",
   "level": "2",
-  "url": "section-88.html#problem-201",
+  "url": "section-88.html#problem-183",
   "type": "Problem",
   "number": "G.183",
   "title": "Problem 9.",

@@ -13,20 +13,15 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Consider the ring isomorphism <span class="process-math">\(\phi: \Q[x] \xra{\cong} \Q[y]\)</span> given by <span class="process-math">\(\phi(h(x)) = h(y+1)\text{.}\)</span> I claim that</div>
+<div class="para">If <span class="process-math">\(F \subseteq L\)</span> is a field extension and <span class="process-math">\(A\)</span> is any subset of <span class="process-math">\(L\text{,}\)</span> we write <span class="process-math">\(F(A)\)</span> for the smallest subfield of <span class="process-math">\(L\)</span> that contains all of <span class="process-math">\(F\)</span> and <span class="process-math">\(A\)</span> and it is called the <em class="emphasis">subfield generated</em> by <span class="process-math">\(A\)</span> over <span class="process-math">\(F\text{.}\)</span> Since the intersection of any two subfields of <span class="process-math">\(L\)</span> is again a subfield, <span class="process-math">\(F(A)\)</span> exists and is</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\phi(f(x)) = y^{p-1} + p y^{p-2} + {p \choose 2} y^{p-3} +{p \choose 3} y^{p-4} +\cdots + {p \choose p-1} y + p.
+F(A) = \bigcap_{\text{$E$ is a subfield of $L$ such that $E \supseteq F \cup A$}} E.
 \end{equation*}
 </div>
-<div class="para">To see this, we note that <span class="process-math">\(f(x) (x-1) = x^p - 1\)</span> and by the binomial theorem we have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\phi(x^p-1) = (y+1)^p - 1 = y^p + p y^{p-1} + {p \choose 2} y^{p-2} + \cdots + py.
-\end{equation*}
+<div class="para">where <span class="process-math">\(E\)</span> <em class="emphasis">fix</em> Nearly always <span class="process-math">\(A\)</span> will be a finite set, <span class="process-math">\(A = \{a_1, \dots, a_n\}\text{,}\)</span> and we write <span class="process-math">\(F(a_1, \dots, a_n)\)</span> for <span class="process-math">\(F(A)\text{.}\)</span>
 </div>
-<div class="para">Since <span class="process-math">\(\phi(x^p-1) = \phi(f(x)) \phi(x-1) = \phi(f(x)) y\text{,}\)</span> the claim follows.</div>
 </div>
-<span class="incontext"><a href="sec-irrpoly.html#p-2732" class="internal">in-context</a></span>
+<span class="incontext"><a href="field-extension-basics.html#p-2732" class="internal">in-context</a></span>
 </body>
 </html>

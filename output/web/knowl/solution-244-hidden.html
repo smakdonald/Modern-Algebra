@@ -11,29 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<div class="para logical">
-<div class="para">Part (a) Let <span class="process-math">\(\l\)</span> be an eigenvalue of <span class="process-math">\(T\text{.}\)</span> Thus there exists some <span class="process-math">\(v\)</span> such that <span class="process-math">\(Tv=\l v\text{.}\)</span> Notice that <span class="process-math">\(p(T)v=a_nT^nv+\dots+a_0Iv=0\)</span> and <span class="process-math">\(p(\l)=a_n\l^n+\dots+a_0\text{.}\)</span> Then</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{align}(p(T)-p(\l I))v&amp;=p(T)v-p(\l I)v\\&amp;=(a_nT^nv+\dots+a_0Iv)-(a_n\l^nv+\dots+a_0v)\\&amp;=a_n(T^n-\l^n)v+\dots a_0(I-I)v\\&amp;=0,\end{align}
-\end{equation*}
-</div>
-<div class="para">making <span class="process-math">\(p(\l)\)</span> an eigenvalue of <span class="process-math">\(p(T)\text{.}\)</span>
-</div>
-</div> <div class="para logical">
-<div class="para">Part (b) First note that if <span class="process-math">\(T\)</span> is a scalar of the identity matrix then its only eigenvalue is <span class="process-math">\(0\text{.}\)</span> Let <span class="process-math">\(\mu\)</span> be an eigenvalue of <span class="process-math">\(p(T)\text{.}\)</span> Thus <span class="process-math">\((p(T)-\mu I)v=0\)</span> for some <span class="process-math">\(v\text{.}\)</span> As <span class="process-math">\(\C\)</span> is algebraically closed we can factor the polynomial <span class="process-math">\(p(x)-\mu\)</span> into linear terms:</div>
-<div class="displaymath process-math">
-\begin{equation*}
-p(x)-\mu=c(x-r_1)\dots(x-r_n)
-\end{equation*}
-</div>
-<div class="para">for roots <span class="process-math">\(r_i\text{.}\)</span> Note that <span class="process-math">\(p(r_i)-\mu=0\)</span> for all <span class="process-math">\(r_i\text{.}\)</span> Observe</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{align}(p(T)-\mu I)v&amp;=p(T)v-(\mu I)v\\&amp;=c(T-r_nI)\dots(T-r_1I)v\\&amp;=0.\end{align}
-\end{equation*}
-</div>
-<div class="para">Thus one of these terms must be sent to zero. Note that if <span class="process-math">\(T-r_iI=0\)</span> for any <span class="process-math">\(I\)</span> this would make <span class="process-math">\(T\)</span> a scaler of the identity matrix. Thus there exists some <span class="process-math">\(i\)</span> such that <span class="process-math">\((T-r_iI)v=0\text{,}\)</span> making <span class="process-math">\(r_i\)</span> an eigenvalue of <span class="process-math">\(T\text{.}\)</span> Notice that as <span class="process-math">\(p(r_i)-\mu=0\)</span> we have <span class="process-math">\(p(r_i)=\mu\text{,}\)</span> completing the proof.</div>
-</div>
+<div class="para">Let <span class="process-math">\(G\)</span> be a finite group and <span class="process-math">\(p\)</span> a prime dividing the order of <span class="process-math">\(G\text{.}\)</span> Let P be a Sylow <span class="process-math">\(p\)</span>-subgroup.</div> <div class="para">Part (a) We proceed via the contrapositive. Let <span class="process-math">\(Q\)</span> be a Sylow <span class="process-math">\(p\)</span>-subgroup, and suppose <span class="process-math">\(PQ\leq G\text{.}\)</span> Thus <span class="process-math">\(|PG|\big||G|\)</span>
+</div> <div class="para">Note that <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\)</span> both have <span class="process-math">\(p^k\)</span> elements, where <span class="process-math">\(p^k\)</span> is the largest power of <span class="process-math">\(p\)</span> that divides the order of <span class="process-math">\(G\text{.}\)</span> Recall <span class="process-math">\(|PQ|=\frac{|P||Q|}{|P\cap Q|}=\frac{p^{2k}}{|P\cap Q|}\text{.}\)</span> As <span class="process-math">\(p^k\)</span> is the largest power of <span class="process-math">\(p\)</span> that divides the order of <span class="process-math">\(G\text{,}\)</span> we see that <span class="process-math">\(|P\cap Q|\)</span> must be at least <span class="process-math">\(p^k\text{.}\)</span> Thus <span class="process-math">\(P=Q\text{.}\)</span>
+</div> <div class="para">Part (b) First, note that <span class="process-math">\(P\leq N_{G}(P)\leq N_G(N_G(P))\text{.}\)</span> Note that <span class="process-math">\(N_G(P)\)</span> is the largest subgroup of <span class="process-math">\(G\)</span> such that <span class="process-math">\(P\)</span> is normal in <span class="process-math">\(G\text{,}\)</span> making <span class="process-math">\(P\)</span> the only Sylow <span class="process-math">\(p\)</span>-subgroup of <span class="process-math">\(N_G(P)\text{.}\)</span> Let <span class="process-math">\(x\in N_G(N_G(P))\text{.}\)</span> Notice that <span class="process-math">\(xPx\inv\leq xN_G(P)x\inv\text{,}\)</span> but as <span class="process-math">\(x\in N_G(N_G(P))\)</span> we have <span class="process-math">\(xN_G(P)x\inv=N_G(P)\text{.}\)</span> As <span class="process-math">\(xPx\inv\)</span> is a Sylow <span class="process-math">\(p\)</span>-subgroup that is contained in <span class="process-math">\(N_G(P)\text{,}\)</span> we see that <span class="process-math">\(xPx\inv=P\text{,}\)</span> placing <span class="process-math">\(x\in N_G(P)\text{.}\)</span> Thus <span class="process-math">\(N_G(P)=N_G(N_G(P))\text{.}\)</span> ## Section II: Ring Theory and Module theory Solve two of the following three problems.</div>
 </div></body>
 </html>
