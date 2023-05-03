@@ -12,7 +12,14 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">The map <span class="process-math">\(\C \to \C\)</span> given by complex conjugation permutes the roots of <span class="process-math">\(x^4 - 2\)</span> and it restricts to an automorphism of <span class="process-math">\(L\)</span> — specially, it fixes <span class="process-math">\(z_1, z_3\)</span> and interchanges <span class="process-math">\(z_2\)</span> and <span class="process-math">\(z_4\text{.}\)</span> It follows that complex conjugation determines an element <span class="process-math">\(\s \in \Aut(L/\Q)\)</span> that corresponds to <span class="process-math">\((2 \, 4) \in H \leq S_4\text{.}\)</span>
+<div class="para logical">
+<div class="para">Let us compute <span class="process-math">\([L:\Q]\text{.}\)</span> Note that <span class="process-math">\(i \in L\)</span> since <span class="process-math">\(i = z_2/z_1\)</span> and in fact <span class="process-math">\(L = \Q(z_1, i)\text{.}\)</span> In the chain of extensions</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Q \subset \Q(z_1) \subset L = \Q(z_1)(i)
+\end{equation*}
+</div>
+<div class="para">the first one has degree <span class="process-math">\(4\text{,}\)</span> since <span class="process-math">\(x^4 - 2\)</span> is irreducible by Eisenstein, and the second has degree at most <span class="process-math">\(2\)</span> since <span class="process-math">\(i\)</span> is a root of <span class="process-math">\(x^2 + 1\text{.}\)</span> It would be less than two if <span class="process-math">\(x^2+1\)</span> factors in <span class="process-math">\(\Q(z_2)[x]\text{.}\)</span> But since <span class="process-math">\(\Q(z_1) \subset \R\)</span> and <span class="process-math">\(L\)</span> is not contained in <span class="process-math">\(\R\text{,}\)</span> the second extension cannot be trivial and so must have degree exactly <span class="process-math">\(2\text{.}\)</span> We conclude <span class="process-math">\([L:\Q] = 8\text{.}\)</span> It follows from Proposition  that <span class="process-math">\(|\Aut(L/\Q)| \leq 8\text{.}\)</span> (In fact, since <span class="process-math">\(L\)</span> is the splitting field of a separable polynomial, the Theorem below will tell us that <span class="process-math">\(|\Aut(L/\Q)| = 8\text{.}\)</span> But we won't appeal to this fact here.)</div>
 </div>
 <span class="incontext"><a href="sec-galext.html#p-3141" class="internal">in-context</a></span>
 </body>

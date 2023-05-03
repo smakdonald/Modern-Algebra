@@ -393,11 +393,11 @@
 
     <part xml:id="part-group"><title>Group Theory</title>
 
-    <!--
-    ************
-    Group Theory
-    ************
-    -->
+      <!--
+      ************
+      Group Theory
+      ************
+      -->
       
       <chapter xml:id="ch-intro-groups"><title>Intro to Groups</title>
       
@@ -467,9 +467,9 @@
               </p>
             </historical>
 
-            <figure xml:id="figure-magma">
-              <caption>Reltions between algebraic structures. One day I will get this to work.</caption>
-              <image source="images/magma.pdf" width="30%"/>
+            <figure xml:id="figure-magma"><title>Algebraic Structures</title>
+              <caption>Relations between algebraic structures. <url href="https://q.uiver.app/?q=WzAsOCxbMiwwLCJcXHRleHR7TWFnbWF9Il0sWzIsMiwiXFx0ZXh0e1VuaXRhbCBNYWdtYX0iXSxbMiw0LCJcXHRleHR7SW52ZXJzZSBTZW1pZ3JvdXB9Il0sWzIsNiwiXFx0ZXh0e0dyb3VwfSJdLFs0LDQsIlxcdGV4dHtNb25vaWR9Il0sWzQsMiwiXFx0ZXh0e1NlbWlncm91cH0iXSxbMCwyLCJcXHRleHR7UXVhc2lncm91cH0iXSxbMCw0LCJcXHRleHR7TG9vcH0iXSxbNywzLCJcXHRleHR7YXNzb2NpYXRpdml0eX0iLDEseyJjb2xvdXIiOlsxMjAsNjAsNjBdfSxbMTIwLDYwLDYwLDFdXSxbNiwyLCJcXHRleHR7YXNzb2NpYXRpdml0eX0iLDAseyJsYWJlbF9wb3NpdGlvbiI6NDAsImNvbG91ciI6WzEyMCw2MCw2MF19LFsxMjAsNjAsNjAsMV1dLFsxLDQsIlxcdGV4dHthc3NvY2lhdGl2aXR5fSIsMCx7ImxhYmVsX3Bvc2l0aW9uIjo0MCwiY29sb3VyIjpbMTIwLDYwLDYwXX0sWzEyMCw2MCw2MCwxXV0sWzAsNSwiXFx0ZXh0e2Fzc29jaWF0aXZpdHl9IiwxLHsiY29sb3VyIjpbMTIwLDYwLDYwXX0sWzEyMCw2MCw2MCwxXV0sWzAsMSwiXFx0ZXh0e2lkZW50aXR5fSIsMSx7ImNvbG91ciI6WzI3MCw2MCw2MF19LFsyNzAsNjAsNjAsMV1dLFsyLDMsIlxcdGV4dHtpZGVudGl0eX0iLDEseyJjb2xvdXIiOlsyNzAsNjAsNjBdfSxbMjcwLDYwLDYwLDFdXSxbNiw3LCJcXHRleHR7aWRlbnRpdHl9IiwxLHsiY29sb3VyIjpbMjcwLDYwLDYwXX0sWzI3MCw2MCw2MCwxXV0sWzUsNCwiXFx0ZXh0e2lkZW50aXR5fSIsMSx7ImNvbG91ciI6WzI3MCw2MCw2MF19LFsyNzAsNjAsNjAsMV1dLFswLDYsIlxcdGV4dHtkaXZpc2liaWxpdHl9IiwxLHsiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXSxbMSw3LCJcXHRleHR7ZGl2aXNpYmlsaXR5fSIsMCx7ImxhYmVsX3Bvc2l0aW9uIjo2MCwiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXSxbNSwyLCJcXHRleHR7aW52ZXJzZXN9IiwwLHsibGFiZWxfcG9zaXRpb24iOjYwLCJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dLFs0LDMsIlxcdGV4dHtpbnZlcnNlc30iLDEseyJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dXQ==" visual="">Quiver</url></caption>
+              <image source="images/magma.png" width="100%"/>
             </figure>
 
             <definition xml:id="def-group"><title>Group</title>
@@ -527,24 +527,24 @@
               </statement>
             </example>
             
-            <theorem xml:id="thm-properties-of-groups"><title>Properties of (Semi)Groups</title>
+            <theorem xml:id="thm-properties-of-groups"><title>Properties of Groups (and sometimes Monoids)</title>
               <statement>
                 <p>
                   <ol>
                     <li><title>Unique Identity</title>
-                      <p xml:id="part-unique-group-identity">
+                      <p xml:id="list-unique-group-identity">
                         In a monoid <m>G</m>, the element <m>e</m> satisfying the Idenity axiom of <xref ref="def-monoid" /> is unique, and we thus refer to it as the <em>identity element</em><idx><h>identity element</h></idx> of <m>G</m>.
                       </p>
                     </li>
       
                     <li><title>Unique Inverses</title>
-                      <p xml:id="part-unique-group-inverse">
+                      <p xml:id="list-unique-group-inverse">
                         In a group <m>G</m>, for each <m>x</m>, the element <m>y</m> satisfying the Inverses axiom of <xref ref="def-group" /> is unique, and we thus refer to it as the <em>the inverse</em> of <m>x</m> and we will henceforth denote it by <m>x^{-1}</m>.
                       </p>
                     </li>
       
                     <li><title>Cancellation</title><idx><h>cancellation</h></idx>
-                      <p xml:id="part-cancellation">
+                      <p xml:id="list-cancellation">
                         In a group <m>G</m>, if <m>xy = xz</m> then <m>y=z</m>. Similarly, if <m>yx = zx</m> we have <m>y = z</m>.
                       </p>
                     </li>
@@ -8004,13 +8004,13 @@
 
               <historical><title>Rings</title>
                 <p>
-                  Rings were first discovered (or created) by the German mathematician David Hilbert in the early 20th century, who used the term "Ring" because of the circular nature of the structure. The operations interact with each other in a circular way, such that multiplication distributes over addition, and addition and multiplication satisfy certain other algebraic properties.
+                  Rings were first discovered (or created) by the German mathematician <xref text="title" ref="bio-hilbert"/> in the early 20th century, who used the term "Ring" because of the circular nature of the structure. The operations interact with each other in a circular way, such that multiplication distributes over addition, and addition and multiplication satisfy certain other algebraic properties.
                 </p>
               </historical>
 
               <p>Here are some basic consequences of the axioms.</p>
   
-              <proposition xml:id="prop-ring-arithmetic"><title>Ring Arithmetic</title>     
+              <proposition xml:id="prop-ring-arithmetic"><title>Ring Arithmetic</title>
   
                 <statement>
                 <p>
@@ -8395,7 +8395,7 @@
 
               <remark><p>Note that by <xref ref="exe-1-is-0"/> saying that <m>1\neq0</m> is equivalent to saying that <m>R</m> is nontrivial.</p></remark>
 
-              <p>Unlike in groups, which have a notion of <em>cancellation</em>, rings do not necessarily come equipped with this property. One of the main niceties of integral domains is that cancellation is indeed possible (and in many cases encouraged).</p>
+              <p>Unlike in groups, which have a notion of <xref text="title" ref="list-cancellation"/>, rings do not necessarily come equipped with this property. One of the main niceties of integral domains is that cancellation is indeed possible (and in many cases encouraged).</p>
 
               <lemma xml:id="lem-cancellation-in-integral-domains"><title>Cancellation in Domains</title>
               <statement>
@@ -24067,7 +24067,7 @@
               <definition xml:id="def-cartesian-product"><title>Cartesian Product</title>
                 <statement>
                   <p>
-                    Let <m>A, B,</m> and <m>A_\alpha</m>  for <m>all \alpha  \in  J</m> be sets. The<em>Cartesian product</em> <m>A \times  B := \{(a,b) | a \in  A, b \in  B\}</m> and <m>\prod_{\alpha\in J} A_\alpha  := \{(a_\alpha )_{\alpha  \in  J} | a_\alpha  \in  A_\alpha\}</m>
+                    Let <m>A, B,</m> and <m>A_\alpha</m>  for <m>all \alpha  \in  J</m> be sets. The <em>Cartesian product</em> <m>A \times  B := \{(a,b) | a \in  A, b \in  B\}</m> and <m>\prod_{\alpha\in J} A_\alpha  := \{(a_\alpha )_{\alpha  \in  J} | a_\alpha  \in  A_\alpha\}</m>
                   </p>
                 </statement>
               </definition>
@@ -24075,7 +24075,7 @@
               <definition xml:id="def-projection-map"><title>Projection Map</title>
                 <statement>
                   <p>
-                    Let <m>A_\alpha</m> for all <m>\alpha  \in  J</m> be sets and let <m>\beta  in J</m>. The<em>projection</em> map <m>\pi_\beta : \prod_{ \alpha  \in  J} A_\alpha  \to  A_\beta</m> is defined by <m>\pi_\beta ((a_\alpha )_{\alpha  \in  J}) = a_\beta  \text{ for all }(a_\alpha )_{\alpha  \in  J} \in  \prod_{\alpha  \in  J} A_\alpha</m> .
+                    Let <m>A_\alpha</m> for all <m>\alpha  \in  J</m> be sets and let <m>\beta  in J</m>. The <em>projection</em> map <m>\pi_\beta : \prod_{ \alpha  \in  J} A_\alpha  \to  A_\beta</m> is defined by <m>\pi_\beta ((a_\alpha )_{\alpha  \in  J}) = a_\beta  \text{ for all }(a_\alpha )_{\alpha  \in  J} \in  \prod_{\alpha  \in  J} A_\alpha</m> .
                   </p>
                 </statement>
               </definition>
@@ -24083,7 +24083,7 @@
               <definition xml:id="def-product-inclusion"><title>Product Inclusion Map</title>
                 <statement>
                   <p>
-                    Let <m>A_\alpha</m> for all <m>\alpha  \in  J</m> be sets, let <m>\beta  \in  J</m>, and for each <m>\alpha  \in  J \sm \{\beta \}</m>, let <m>b_\alpha  \in  A_\alpha</m>. The associated <em>product inclusion</em>map <m>\iota_\beta : A_\beta  \to  \prod_{\alpha  \in  J} A_\alpha</m>  is defined for each <m>a \in  A_\beta</m>  by <m>\iota_\beta (a) := (a_\alpha )_{\alpha  \in  J}</m>, where <m>a_\beta  := a \text{ and } a_\alpha  := b_\alpha  \text{ for all } \alpha  \in  J \sm \{\beta \}</m>.
+                    Let <m>A_\alpha</m> for all <m>\alpha  \in  J</m> be sets, let <m>\beta  \in  J</m>, and for each <m>\alpha  \in  J \sm \{\beta \}</m>, let <m>b_\alpha  \in  A_\alpha</m>. The associated <em>product inclusion</em> map <m>\iota_\beta : A_\beta  \to  \prod_{\alpha  \in  J} A_\alpha</m>  is defined for each <m>a \in  A_\beta</m>  by <m>\iota_\beta (a) := (a_\alpha )_{\alpha  \in  J}</m>, where <m>a_\beta  := a \text{ and } a_\alpha  := b_\alpha  \text{ for all } \alpha  \in  J \sm \{\beta \}</m>.
                   </p>
                 </statement>
               </definition>
@@ -24108,7 +24108,7 @@
                 </statement>
               </theorem>
 
-              <lemma><title>Subsets of Cartesian Products</title>
+              <lemma xml:id="lem-cartesian-subsets"><title>Subsets of Cartesian Products</title>
                 <statement>
                   <p>
                     If <m>A \subseteq  G</m> and <m>B \subseteq  H</m>, then <m>A \times  B \subseteq  G \times  H</m>.
@@ -24119,10 +24119,10 @@
               
             <subsubsection xml:id="subsubsec-quotient-sets"><title>Equivalence Relations and Modular Arithmetic</title>
 
-              <definition xml:id="def-equivalence-relation">
+              <definition xml:id="def-equivalence-relation"><title>Equivalence Relation</title>
                 <statement>
                   <p>
-                    An<em>equivalence relation</em>\sim  on a set <m>X</m> is a subset <m>S of X \times  X</m> (where <m>(a,b) \in  S</m> is written <m>a \sim  b</m>) that satisfies the following for all <m>a,b,c</m> in <m>X</m>: 
+                    An <em>equivalence relation</em> <m>\sim</m>  on a set <m>X</m> is a subset <m>S of X \times  X</m> (where <m>(a,b) \in  S</m> is written <m>a \sim  b</m>) that satisfies the following for all <m>a,b,c</m> in <m>X</m>: 
                     <ol>
                       <li><title>Reflexivity</title>
                         <p>
@@ -24162,7 +24162,7 @@
               <definition xml:id="def-partition"><title>Partition</title>
                 <statement>
                   <p>
-                    A<em>partition</em>of a set <m>X</m> is a collection of nonempty disjoint subsets of <m>X</m> whose union is <m>X</m>.
+                    A <em>partition</em> of a set <m>X</m> is a collection of nonempty disjoint subsets of <m>X</m> whose union is <m>X</m>.
                   </p>
                 </statement>
               </definition>
@@ -24188,7 +24188,7 @@
                 </statement>
               </theorem>
 
-              <definition xml:id="def-integers-modulo"><title>The Integers Modulo <m>n</m></title>
+              <definition xml:id="def-integers-modulo"><title>The Integers Modulo <m>n</m> (*)</title>
                 <statement>
                   <p>
                     
@@ -24205,7 +24205,7 @@
 
           <subsection xml:id="subsec-number-systems"><title>Number Systems (*)</title>
 
-            <definition xml:id="def-natural-numbers"><title>Natural Numbers</title>
+            <definition xml:id="def-natural-numbers"><title>Natural Numbers (*)</title>
               <statement>
                 <p>
                   <m>\N</m>
@@ -24213,7 +24213,7 @@
               </statement>
             </definition>
 
-            <definition xml:id="def-divides"><title>Divide</title>
+            <definition xml:id="def-divides"><title>Divide (*)</title>
               <statement>
                 <p>
                   
@@ -24221,7 +24221,7 @@
               </statement>
             </definition>
 
-            <definition xml:id="def-prime-number"><title>Prime</title>
+            <definition xml:id="def-prime-number"><title>Prime (*)</title>
               <statement>
                 <p>
                   
@@ -24229,7 +24229,7 @@
               </statement>
             </definition>
             
-            <definition xml:id="def-gcd-lcm"><title>GCD, LCM</title>
+            <definition xml:id="def-gcd-lcm"><title>GCD, LCM (*)</title>
               <statement>
                 <p>
                   
@@ -24251,7 +24251,7 @@
           
           <subsection xml:id="subsec-counting"><title>Counting (*)</title>
 
-            <definition xml:id="def-binomial-coefficient"><title>Binomial Coefficient</title>
+            <definition xml:id="def-binomial-coefficient"><title>Binomial Coefficient (*)</title>
               <statement>
                 <p>
                   
@@ -24259,12 +24259,12 @@
               </statement>
             </definition>
 
-            <theorem xml:id="thm-binomial-theorem"><title>Binomial Theorem</title>
+            <theorem xml:id="thm-binomial-theorem"><title>Binomial Theorem (*)</title>
             
             
               <statement>
                 <p>
-                  EMPTY
+                  
                 </p>
               </statement>
             </theorem>
@@ -24276,11 +24276,11 @@
             <definition xml:id="def-cardinality">
               <statement>
                 <p>
-                  A set <m>X</m> is<em>finite</em>if there is a bijection <m>X \to  \{1,...,n\}</m> for some natural number <m>n</m>, or <m>X</m> is empty. In this case the number <m>n</m> is called the<em>cardinality</em>of <m>X</m>.  
+                  A set <m>X</m> is <em>finite</em> if there is a bijection <m>X \to  \{1,...,n\}</m> for some natural number <m>n</m>, or <m>X</m> is empty. In this case the number <m>n</m> is called the<em>cardinality</em>of <m>X</m>.  
                 </p>
 
                 <p>
-                  A set <m>X</m> is<em>infinite</em>if <m>X</m> is not finite. A set <m>X</m> is<em>countable</em>if there is an injection <m>X \hookrightarrow  \N</m>.
+                  A set <m>X</m> is <em>infinite</em> if <m>X</m> is not finite. A set <m>X</m> is <em>countable</em> if there is an injection <m>X \hookrightarrow  \N</m>.
                 </p>
               </statement>
             </definition>
@@ -25600,15 +25600,488 @@
 
       <appendix xml:id="app-notation"><title>Notation</title>
         <notation-list/>
+
+        <table><title>Notation</title>
+  <tabular>
+  
+  
+    <row>
+      <cell>
+        <m>=</m>
+      </cell>
+      <cell>
+        equal to
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>\neq</m>
+      </cell>
+      <cell>
+        not equal to
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>\in</m>
+      </cell>
+      <cell>
+        in
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>\subseteq</m>
+      </cell>
+      <cell>
+        subset
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>\subset</m>
+      </cell>
+      <cell>
+        proper subset
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>\supseteq</m>
+      </cell>
+      <cell>
+        subset
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>\supset</m>
+      </cell>
+      <cell>
+        proper subset
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>\leq</m>
+      </cell>
+      <cell>
+        less than or equal to
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>\lt </m>
+      </cell>
+      <cell>
+        less than
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>\geq</m>
+      </cell>
+      <cell>
+        greater than or equal to
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>\gt </m>
+      </cell>
+      <cell>
+        greater than
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>\cup</m>
+      </cell>
+      <cell>
+        union
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>\cap</m>
+      </cell>
+      <cell>
+        intersection
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>\setminus</m>
+      </cell>
+      <cell>
+        set difference
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>\cdot</m>
+      </cell>
+      <cell>
+        multiplicative operation
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>+</m>
+      </cell>
+      <cell>
+        additive operation
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>-</m>
+      </cell>
+      <cell>
+        additive inverse
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>^{-1}</m>
+      </cell>
+      <cell>
+        multiplicative inverse, inverse function
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>\circ</m>
+      </cell>
+      <cell>
+        composition operation
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>|</m>
+      </cell>
+      <cell>
+        divides
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>\to</m>
+      </cell>
+      <cell>
+        function from domain to codomain
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>\mapsto</m>
+      </cell>
+      <cell>
+        where input is mapped by function
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>\into</m>
+      </cell>
+      <cell>
+        injective function
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>\onto</m>
+      </cell>
+      <cell>
+        surjective function
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>\cong</m>
+      </cell>
+      <cell>
+        isomorphic
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>\xrightarrow\cong</m>
+      </cell>
+      <cell>
+        isomorphism
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>\equiv</m>
+      </cell>
+      <cell>
+        congruent
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>\sim</m>
+      </cell>
+      <cell>
+        relation
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>[-]</m>
+      </cell>
+      <cell>
+        equivalence class
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>\times</m>
+      </cell>
+      <cell>
+        direct product
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>\oplus</m>
+      </cell>
+      <cell>
+        direct sum
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>\tensor</m>
+      </cell>
+      <cell>
+        tensor product
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>!</m>
+      </cell>
+      <cell>
+        factorial
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>\sum</m>
+      </cell>
+      <cell>
+        sum
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>\prod</m>
+      </cell>
+      <cell>
+        product
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>\forall</m>
+      </cell>
+      <cell>
+        for all
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>\exists</m>
+      </cell>
+      <cell>
+        there exists
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>\exists!</m>
+      </cell>
+      <cell>
+        unique existence
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>\{-|-\}</m>
+      </cell>
+      <cell>
+        set notation
+      </cell>
+      <cell>
+      </cell>
+      <cell>
+      </cell>
+    </row>
+  </tabular>
+</table>
       </appendix>
 
       <appendix xml:id="appendix-list-definitions"><title>List of Definitions</title>
         <list-of elements="definition" divisions="chapter appendix" empty="no"/>
       </appendix>
 
-      <appendix xml:id="appendix-list-results">
-        <title>List of Results</title>
-      
+      <appendix xml:id="appendix-list-results"><title>List of Results</title>
         <list-of elements="theorem lemma proposition corollary" divisions="chapter appendix" empty="yes"/>
       </appendix>
 
@@ -25872,11 +26345,13 @@
           </p>
 
           <p>
-            First, we show that the center of <m>G</m> is nontrivial. Suppose by way of contradiction that <m>Z(G)=\{e\}</m>. We examine the conjugacy classes of <m>G</m>. From the <xref text="title" ref="thm-class-eq"/>, we know<me>|G| = |Z(G)| + \sum_i^r |G : C_G(g_i)|.</me>Note that <m>|G|=p^n</m> for some <m>n\in\N</m>, meaning that the only divisors of <m>|G|</m> are powers of <m>p</m>. In finite groups, each conjugacy class must [[Corollary – <m>C_G(g_i) big G</m> for Finite Groups|divide]] the order of the group. By <xref text="title" ref="thm-lagrange"/>, <m>|G : C_G(g_i)|=\frac{|G|}{|C_G(g_i)|}=\frac{p^n}{p^m}=p^k</m>, where <m>m,k\in\N</m>. Since |Z(G)|=1, we see that <m>\sum_i^r |G : C_G(g_i)|\bigg|p^n-1</m>, which is impossible given that <m>p^{n-1} \not\mid p^n</m>. Thus <m>Z(G)\neq\{e\}</m>.
+            First, we show that the center of <m>G</m> is nontrivial. Suppose by way of contradiction that <m>Z(G)=\{e\}</m>. We examine the conjugacy classes of <m>G</m>. From the <xref text="title" ref="thm-class-eq"/>, we know<me>|G| = |Z(G)| + \sum_i^r |G : C_G(g_i)|.</me>Note that <m>|G|=p^n</m> for some <m>n\in\N</m>, meaning that the only divisors of <m>|G|</m> are powers of <m>p</m>. In finite groups, each conjugacy class must 
+            [[Corollary – <m>C_G(g_i) big G</m> for Finite Groups|divide]] the order of the group. By <xref text="title" ref="thm-lagrange"/>, <m>|G : C_G(g_i)|=\frac{|G|}{|C_G(g_i)|}=\frac{p^n}{p^m}=p^k</m>, where <m>m,k\in\N</m>. Since <m>|Z(G)|=1</m>, we see that <m>\sum_i^r |G : C_G(g_i)|\bigg|p^n-1</m>, which is impossible given that <m>p^{n-1} \not\mid p^n</m>. Thus <m>Z(G)\neq\{e\}</m>.
           </p>
 
           <p>
-            As <m>N\nsg G</m> it is a [[Mathematics/Modern Algebra/Results/Corollary – Disjoint Union of Conjugacy Classes|union]] of conjugacy classes of the elements it contains, one of which is <m>e</m>. Assume by way of contradiction that <m>N\cap Z(G)={e}</m>, meaning that <m>e</m> is the only element in <m>N</m> whose conjugacy class is a singleton. This yields <me>|N| = 1+ \sum_i^r |G : C_G(g_i)|.</me> However, by <xref text="title" ref="thm-lagrange"/> <m>N</m> must also be a <m>p-</m>group, and thus by an analogous element counting argument as above we see that there exists some <m>x\in N</m> such that <m>C_G(x)=\{x\}</m>, or that <m>gxg\inv=x</m> for all <m>g\in G</m>. Thankfully, this means that <m>x\in Z(G)</m>, and thus we have <m>Z(G)\cap N\neq 1</m>.
+            As <m>N\nsg G</m> it is a 
+            [[Mathematics/Modern Algebra/Results/Corollary – Disjoint Union of Conjugacy Classes|union]] of conjugacy classes of the elements it contains, one of which is <m>e</m>. Assume by way of contradiction that <m>N\cap Z(G)={e}</m>, meaning that <m>e</m> is the only element in <m>N</m> whose conjugacy class is a singleton. This yields <me>|N| = 1+ \sum_i^r |G : C_G(g_i)|.</me> However, by <xref text="title" ref="thm-lagrange"/> <m>N</m> must also be a <m>p-</m>group, and thus by an analogous element counting argument as above we see that there exists some <m>x\in N</m> such that <m>C_G(x)=\{x\}</m>, or that <m>gxg\inv=x</m> for all <m>g\in G</m>. Thankfully, this means that <m>x\in Z(G)</m>, and thus we have <m>Z(G)\cap N\neq 1</m>.
           </p>
               </solution>
             
@@ -25911,21 +26386,23 @@
               <solution>
                 <p><ol>
                   <li>
+                    <p>
                     Let <m>C_3 = \langle a \rangle</m> be the cyclic group of order <m>3</m>, and let <m>C_9 = \langle b \rangle</m> be the cyclic group of order <m>9</m>. Let <m>\phi \colon C_9 \to \operatorname{Aut}(C_3)</m> be the homomorphism defined by <m>\phi(b^i)(a) = a^i</m> for <m>0 \le i \le 8</m>, where we identify <m>\operatorname{Aut}(C_3)</m> with <m>C_2</m> via the isomorphism <m>\operatorname{Aut}(C_3) \cong C_2</m> given by sending the non-identity automorphism to the generator of <m>C_2</m>.
-                  </li>
+                  </p>
 
-                </ol></p>
+                
 
                 <p>
                   Then the semi-direct product <m>G = C_3 \rtimes_{\phi} C_9</m> has order <m>27</m> and is non-abelian. To see that <m>G</m> is non-abelian, note that <m>bab^{-1} \neq a</m> for any <m>b \in C_9 \setminus {1}</m>, since <m>a</m> has no non-trivial automorphisms.
                 </p>
-
-                <p><ol>
+              </li>
+                
                   <li>
+                    <p>
                   To find a presentation of <m>G</m>, we need to identify the generators and relations. Since <m>C_3</m> and <m>C_9</m> are both cyclic, we can take the generators to be <m>a</m> and <m>b</m> respectively. Moreover, since <m>C_3</m> is normal in <m>G</m>, we have <m>bab^{-1} = a^i</m> for some <m>i \in {1, 2}</m>.
-                  </li>
+                  </p>
 
-                </ol></p>
+                
 
                 <p>
                   To determine the value of <m>i</m>, note that <m>C_9</m> acts on <m>C_3</m> by automorphisms, and the non-identity automorphism of <m>C_3</m> is inversion <m>a \mapsto a^{-1}</m>. Since <m>bab^{-1} \neq a^{-1}</m>, we must have <m>i = 2</m>.
@@ -25934,6 +26411,8 @@
                 <p>
                   Therefore, a presentation of <m>G</m> is given by <m>\langle a, b \mid a^3 = b^9 = 1, bab^{-1} = a^2\rangle</m>.
                 </p>
+                </li>
+                </ol></p>
               </solution>
             
             </problem>
@@ -25987,9 +26466,6 @@
               <p>
                 <ol>
                   <li>
-                    <p>
-                      First, note that both <m>IJ</m> and <m>I\cap J</m> are ideals (See: [[Proposition – Combinations of Ideals|Result]]).
-                    </p>
 
                     <p>
                       Let <m>x\in IJ</m>. Thus <m>x=\sum a_ib_j</m>, where each <m>a_i\in I</m> and <m>b_j\in J</m>. As <m>I</m> and <m>J</m> are both ideals, each term in this sum is contained both in <m>I</m> and <m>J</m>. Thus, by absorption, <m>x\in I\cap J</m>. Hence <m>IJ\subseteq I\cap J</m>.
@@ -26006,11 +26482,19 @@
                     </p>
 
                     <p>
-                      Notice that if <m>x\in I\cap J</m>, we have <m>f(x)=(I,J)</m>, and so <m>x\in\Ker(f)</m>. Let <m>x\in\Ker(f)</m>. Thus <m>x+I=I</m> and <m>x+J=J</m>, and so <m>x\in I</m> and <m>x\in J</m>. Hence <m>x\in I\cap J</m>, and so <m>\Ker(f)=I\cap J</m>.
+                      Notice that if <m>x\in I\cap J</m>, we have <m>f(x)=(I,J)</m>, and so <m>x\in\ker(f)</m>. Let <m>x\in\ker(f)</m>. Thus <m>x+I=I</m> and <m>x+J=J</m>, and so <m>x\in I</m> and <m>x\in J</m>. Hence <m>x\in I\cap J</m>, and so <m>\ker(f)=I\cap J</m>.
                     </p>
 
                     <p>
-                      Observe <me>f(x+y)=((x+y)+I,(x+y)+J)=((x+I)+(y+I),(x+J)+(y+J))=((x+I),(x+J))+(y+I),(y+J))=f(x)+f(y),</me> making <m>f</m> a homomorphism of rings.
+                      Observe <me>
+                      \begin{aligned*}
+                      f(x+y)=&amp;((x+y)+I,(x+y)+J)\\
+                      =&amp;((x+I)+(y+I),(x+J)+(y+J))\\
+                      =&amp;((x+I),(x+J))+(y+I),(y+J)\\
+                      =&amp;f(x)+f(y),
+                       \end{aligned*}</me> 
+                      
+                      making <m>f</m> a homomorphism of rings.
                     </p>
 
                     <p>
@@ -26018,7 +26502,7 @@
                     </p>
 
                     <p>
-                      Consider the element <m>x=(a_j+b_i)\in R</m>, and observe <me>f(x)=f(a_j+b_i)=(a_j+b_i+I, b_i+a_j+J).</me>However, as <m>b_i\in I</m> and <m>a_j\in J</m>, we see <me>(a_j+b_i+I, b_i+a_j+J)=(a_j+I,b_i+J)=(a+I,b+J).</me> Thus <m>f</m> is a surjective homomorphism. Hence, by the First Isomorphism Theorem, we see <m>R/(I \cap J)\cong R/I \times R/J</m>.
+                      Consider the element <m>x=(a_j+b_i)\in R</m>, and observe <me>f(x)=f(a_j+b_i)=(a_j+b_i+I, b_i+a_j+J).</me>However, as <m>b_i\in I</m> and <m>a_j\in J</m>, we see <me>(a_j+b_i+I, b_i+a_j+J)=(a_j+I,b_i+J)=(a+I,b+J).</me> Thus <m>f</m> is a surjective homomorphism. Hence, by the <xref text="title" ref="thm-fit-group"/>, we see <m>R/(I \cap J)\cong R/I \times R/J</m>.
                     </p>
                   </li>
                 </ol>
@@ -26030,7 +26514,7 @@
           <problem><title>Problem 5</title>
             <statement>
               <p>
-					      Prove the Rank-Nullity Theorem: If <m>F</m> is a field, <m>V</m> and <m>W</m> are a finite dimensional <m>F</m> -vector spaces, and <m>g : V \to W</m> is an <m>F</m> -linear transformation, then <me>\rank(g) + \nullity(g) = \dim(V). </me>(Recall the <em>rank</em> of <m>g</m> is the dimension of its image and the nullity of <m>g</m> is the dimension of its kernel.)
+					      Prove the Rank-Nullity Theorem: If <m>F</m> is a field, <m>V</m> and <m>W</m> are a finite dimensional <m>F</m> -vector spaces, and <m>g : V \to W</m> is an <m>F</m>-linear transformation, then <me>\rank(g) + \operatorname{nullity}(g) = \dim(V). </me>(Recall the <em>rank</em> of <m>g</m> is the dimension of its image and the nullity of <m>g</m> is the dimension of its kernel.)
 				      </p>
             </statement>
 
@@ -26098,16 +26582,71 @@
                   </li>
                 </ul>
                 We identify the companion matrices for each possible invariant factor: 
-                <me>C(x-1)=\begin{bmatrix} 1 \end{bmatrix},</me>
+                <ul>
+                  <li>
+                    <p>
+                                      <me>C(x-1)=\begin{bmatrix} 1 \end{bmatrix},</me>
+
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
                 <me>C((x-1)^2)=C(x^2-2x+1)=\begin{bmatrix} 0 &amp; -1 \\ 1 &amp; 2\end{bmatrix},</me> 
+
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
                 <me>C((x-1)^3)=C(x^3+3x^2+3x-1)=\begin{bmatrix} 0 &amp; 0 &amp; 1 \\ 1 &amp; 0 &amp; -3 \\ 0 &amp; 1 &amp; -3\end{bmatrix},</me> and 
+
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
                 <me>C((x-1)^4)=C(x^4-4x^3+6x^2-4x+1)=\begin{bmatrix} 0 &amp; 0 &amp; 0 &amp; -1 \\ 1 &amp; 0 &amp; 0 &amp; 4 \\ 0 &amp; 1 &amp; 0 &amp; -6 \\ 0 &amp; 0 &amp; 1 &amp; 4\end{bmatrix}.</me> 
+                    </p>
+                  </li>
+                </ul>
                 We define the following: 
-                1. <m>B=C((x-1)^4)</m>, 
-                2. <m>C=C(x-1)\oplus C((x-1)^3)</m>, 
-                3. <m>D=C(x-1)\oplus C(x-1)\oplus C((x-1)^2)</m>, 
-                4. <m>E=C((x-1)^2)\oplus C((x-1)^2)</m>, and 
-                5. <m>F=C(x-1)\oplus C(x-1)\oplus C(x-1)\oplus C(x-1)</m>. 
+                <ul>
+                  <li>
+                    <p>
+                        <m>B=C((x-1)^4)</m>, 
+
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                <m>C=C(x-1)\oplus C((x-1)^3)</m>, 
+
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+              <m>D=C(x-1)\oplus C(x-1)\oplus C((x-1)^2)</m>, 
+
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                <m>E=C((x-1)^2)\oplus C((x-1)^2)</m>, and 
+
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                <m>F=C(x-1)\oplus C(x-1)\oplus C(x-1)\oplus C(x-1)</m>. 
+
+                    </p>
+                  </li>
+                </ul>
                 As each of these matrices is in <xref text="title" ref="thm-rcf"/>, they are explicit representatives for each similarity class.
               </p>
             </solution>
@@ -26142,16 +26681,46 @@
 					</p>
 
 					<p>
-						Part (a) First, notice that by <xref text="title" ref="thm-eisensteins-criterion"/> (<m>p=11</m>) we have <m>f</m> irreducible in <m>\Q</m>.
-					</p>
+            <ol>
+              <li>
+                <p>
+                  			First, notice that by <xref text="title" ref="thm-eisensteins-criterion"/> (<m>p=11</m>) we have <m>f</m> irreducible in <m>\Q</m>.
 
-					<p>
+                </p>
+
+                <p>
 						The roots of <m>f</m> are the following: 
-            1. <m>\a_1=\sqrt[5]{11}\z</m> 
-            2. <m>\a_2=\sqrt[5]{11}\z^2</m> 
-            3. <m>\a_3=\sqrt[5]{11}\z^3</m> 
-            4. <m>\a_4=\sqrt[5]{11}\z^4</m> 
-            5. <m>\a_5=\sqrt[5]{11}\z^5=\sqrt[5]{11}</m>
+            <ul>
+              <li>
+                <p>
+            <m>\a_1=\sqrt[5]{11}\z</m> 
+                </p>
+              </li>
+
+              <li>
+                <p>
+            <m>\a_2=\sqrt[5]{11}\z^2</m> 
+                </p>
+              </li>
+
+              <li>
+                <p>
+            <m>\a_3=\sqrt[5]{11}\z^3</m> 
+                </p>
+              </li>
+
+              <li>
+                <p>
+            <m>\a_4=\sqrt[5]{11}\z^4</m> 
+                </p>
+              </li>
+
+              <li>
+                <p>
+            <m>\a_5=\sqrt[5]{11}\z^5=\sqrt[5]{11}</m>
+                </p>
+              </li>
+            </ul>
 					</p>
 
 					<p>
@@ -26165,22 +26734,39 @@
 					</p>
 
 					<p>
-						We know that <m>L=\Q(\sqrt[5]{11},\z)</m>, as every generator of <m>L</m> can be written using <m>\z</m> and <m>\sqrt[5]{11}.</m> Let <m>[L:\Q]=n</m>, <m>[L:F]=p</m>, and <m>[L:E]=q</m>. By the 
-             <xref text="title" ref="thm-degree-formula"/>, 
-            we have 
-            - <m>[L:\Q]=[L:F][F:\Q]</m>, and thus <m>n=4p</m> 
-            - <m>[L:\Q]=[L:E][E:\Q]</m>, and thus <m>n=5q</m> 
-            
+						We know that <m>L=\Q(\sqrt[5]{11},\z)</m>, as every generator of <m>L</m> can be written using <m>\z</m> and <m>\sqrt[5]{11}.</m> Let <m>[L:\Q]=n</m>, <m>[L:F]=p</m>, and <m>[L:E]=q</m>. By the <xref text="title" ref="thm-degree-formula"/>, we have 
+            <ul>
+              <li>
+                <p>
+                     <m>[L:\Q]=[L:F][F:\Q]</m>, and thus <m>n=4p</m> 
+
+                </p>
+              </li>
+
+              <li>
+                <p>
+            <m>[L:\Q]=[L:E][E:\Q]</m>, and thus <m>n=5q</m> 
+
+                </p>
+              </li>
+            </ul>
             As <m>E\neq L</m> and <m>F\neq L</m> we know that <m>p,q&gt;1</m>.
 					</p>
 
 					<p>
 						Thus we have <m>n=20</m>.
 					</p>
+              </li>
 
-					<p>
-						Part (b) Let <m>F = \Q(\zeta)</m> where <m>\zeta = e^{2\pi i/5}</m>. From Part (a) we know <m>[L:F]=5</m>. As <m>L=F(\a)</m>, we know that <m>\mp_\a(x)</m> has degree <m>5</m>. As <m>f</m> is a monic polynomial of degree <m>5</m>, we see that it is the minimum polynomial and thus irreducible.
+              <li>
+                <p>
+                  Let <m>F = \Q(\zeta)</m> where <m>\zeta = e^{2\pi i/5}</m>. From Part (a) we know <m>[L:F]=5</m>. As <m>L=F(\a)</m>, we know that <m>\mp_\a(x)</m> has degree <m>5</m>. As <m>f</m> is a monic polynomial of degree <m>5</m>, we see that it is the minimum polynomial and thus irreducible.
+
+                </p>
+              </li>
+            </ol>
 					</p>
+
             </solution>
           
           </problem>
@@ -26199,7 +26785,33 @@
 					</p>
 
 					<p>
-						Notice that the roots of <m>f</m> are the following: - <m>\sqrt[4]{2022} i</m>, - <m>\sqrt[4]{2022}i^2=-\sqrt[4]{2022}</m>, - <m>\sqrt[4]{2022}i^3=-\sqrt[4]{2022}i</m>, and - <m>\sqrt[4]{2022}i^4=\sqrt[4]{2022}</m>. Thus <m>L=\Q(\sqrt[4]{2022},i)</m>.
+						Notice that the roots of <m>f</m> are the following: 
+            <ul>
+              <li>
+                <p>
+            <m>\sqrt[4]{2022} i</m>, 
+                </p>
+              </li>
+
+              <li>
+                <p>
+            <m>\sqrt[4]{2022}i^2=-\sqrt[4]{2022}</m>, 
+                </p>
+              </li>
+
+              <li>
+                <p>
+            <m>\sqrt[4]{2022}i^3=-\sqrt[4]{2022}i</m>, and 
+                </p>
+              </li>
+
+              <li>
+                <p>
+            <m>\sqrt[4]{2022}i^4=\sqrt[4]{2022}</m>. 
+                </p>
+              </li>
+            </ul>
+            Thus <m>L=\Q(\sqrt[4]{2022},i)</m>.
 					</p>
 
 					<p>
@@ -26275,7 +26887,6 @@
                   <li>
                     <p>
                       Let <m>G=S_3</m>, <m>H=\langle(12)\rangle</m>, and <m>K=\langle(13)\rangle</m>. Notice that <m>H\cap K=\{e\}</m>, and thus <m>|HK|=4</m>, which does not divide <m>6</m>. Thus <m>HK</m> is not a subgroup of <m>G</m>, as this would contradict <xref text="title" ref="thm-lagrange"/>
-
                     </p>
                   </li>
 
@@ -26285,30 +26896,28 @@
                     </p>
                   </li>
                 </ol>
-          </p>
-
-          <p>
-          </p>
+              </p>
             </solution>
           
           </problem>
 
           <problem><title>Problem 2</title>
             <statement>
-            <p>
-            Let <m>G</m> be a group of order <m>2835 = 3^4\cdot 5\cdot 7</m>.
-          </p>
+              <p>
+                Let <m>G</m> be a group of order <m>2835 = 3^4\cdot 5\cdot 7</m>.
+              </p>
 
-          <p><ol>
-            <li>
-            Show that there are at most two options for <m>n_3</m>, the number of Sylow <m>3</m>-subgroups of <m>G,</m> and list them.
-            </li>
+              <p>
+                <ol>
+                  <li>
+                    Show that there are at most two options for <m>n_3</m>, the number of Sylow <m>3</m>-subgroups of <m>G,</m> and list them.
+                  </li>
 
-            <li>
-            Prove that <m>G</m> is not simple.
-            </li>
-
-          </ol></p>
+                  <li>
+                    Prove that <m>G</m> is not simple.
+                  </li>
+                </ol>
+              </p>
             </statement>
 
             <solution>
@@ -26494,18 +27103,19 @@
             Let <m>F</m> be any field.
           </p>
 
-          <p><ol>
-            <li>
-            Let <m>A</m> and <m>B</m> be two <m>3\times 3</m> matrices with entries in <m>F</m>. Prove <m>A</m> and <m>B</m> are similar if and only if they have the same characteristic polynomial and the same minimum polynomial.
-            </li>
+          <p>
+            <ol>
+              <li>
+                Let <m>A</m> and <m>B</m> be two <m>3\times 3</m> matrices with entries in <m>F</m>. Prove <m>A</m> and <m>B</m> are similar if and only if they have the same characteristic polynomial and the same minimum polynomial.
+              </li>
 
-            <li>
-            Show, by way of an example with justification, that the previous part would become false if <q><m>3\times 3</m></q> were replaced by <q><m>4\times 4</m></q>.
-            </li>
+              <li>
+                Show, by way of an example with justification, that the previous part would become false if <q><m>3\times 3</m></q> were replaced by <q><m>4\times 4</m></q>.
+              </li>
 
-            <li>
-            Give an example of a field <m>F</m> and two <m>3\times 3</m> matrices with entries in <m>F</m> having the same minimum polynomial that are not similar.
-            </li>
+              <li>
+                Give an example of a field <m>F</m> and two <m>3\times 3</m> matrices with entries in <m>F</m> having the same minimum polynomial that are not similar.
+              </li>
 
           </ol></p>
             </statement>
@@ -26523,7 +27133,28 @@
                   </p>
 
                   <p>
-                    Next suppose that <m>A</m> and <m>B</m> share the same characteristic polynomial and the same minimal polynomial. As <m>A</m> and <m>B</m> are <m>3\times 3</m> matrices, the characteristic polynomial of both <m>A</m> and <m>B</m> must be a degree <m>3</m> polynomial. We proceed via cases based on the degree of <m>\mp_{A,B}(x)</m>. - First, suppose <m>\deg\mp_{A,B}(x)=3</m>. Then <m>\mp_{A,B}(x)=\cp_{A,B}(x)</m>, making <m>\cp_{A,B}(x)</m> the only invariant factor of both <m>A</m> and <m>B</m>. Thus <m>A</m> and <m>B</m> have the same invariant factors and are therefore similar. - Next, suppose <m>\deg\mp_{A,B}(x)=2</m>. As <m>\mp|\cp</m> and the degrees of all invariant factors must sum to the <m>\deg\cp</m>, we know that <m>\cp=\mp\cdot k(x)</m>, where <m>k(x)</m> is a degree <m>1</m> polynomial, which we denote <m>f(x)</m> for <m>A</m> and <m>g(x)</m> for <m>B</m>.. Since <m>A</m> and <m>B</m> share the same minimum and characteristic polynomials, we see <m>\mp\cdot f=\cp</m> and <m>\mp\cdot g=\cp</m>, and thus that <m>f=g</m>. Hence <m>A</m> and <m>B</m> share the same invariant factors, making <m>A\sim B</m>. - Finally, suppose <m>\deg\mp=1</m>. The minimum polynomial is the largest invariant factor, and thus the invariant factors of <m>A</m> and <m>B</m> must be <m>\{\mp,\mp\mp\}</m>, making them similar.
+                    Next suppose that <m>A</m> and <m>B</m> share the same characteristic polynomial and the same minimal polynomial. As <m>A</m> and <m>B</m> are <m>3\times 3</m> matrices, the characteristic polynomial of both <m>A</m> and <m>B</m> must be a degree <m>3</m> polynomial. We proceed via cases based on the degree of <m>\mp_{A,B}(x)</m>. 
+                    <ul>
+                      <li>
+                        <p>
+                          First, suppose <m>\deg\mp_{A,B}(x)=3</m>. Then <m>\mp_{A,B}(x)=\cp_{A,B}(x)</m>, making <m>\cp_{A,B}(x)</m> the only invariant factor of both <m>A</m> and <m>B</m>. Thus <m>A</m> and <m>B</m> have the same invariant factors and are therefore similar. 
+
+                        </p>
+                      </li>
+
+                      <li>
+                        <p>
+                    Next, suppose <m>\deg\mp_{A,B}(x)=2</m>. As <m>\mp|\cp</m> and the degrees of all invariant factors must sum to the <m>\deg\cp</m>, we know that <m>\cp=\mp\cdot k(x)</m>, where <m>k(x)</m> is a degree <m>1</m> polynomial, which we denote <m>f(x)</m> for <m>A</m> and <m>g(x)</m> for <m>B</m>. Since <m>A</m> and <m>B</m> share the same minimum and characteristic polynomials, we see <m>\mp\cdot f=\cp</m> and <m>\mp\cdot g=\cp</m>, and thus that <m>f=g</m>. Hence <m>A</m> and <m>B</m> share the same invariant factors, making <m>A\sim B</m>. 
+
+                        </p>
+                      </li>
+
+                      <li>
+                        <p>
+                    Finally, suppose <m>\deg\mp=1</m>. The minimum polynomial is the largest invariant factor, and thus the invariant factors of <m>A</m> and <m>B</m> must be <m>\{\mp,\mp\mp\}</m>, making them similar.
+                        </p>
+                      </li>
+                    </ul>
                   </p>
                 </li>
 
@@ -26535,8 +27166,7 @@
 
                 <li>
                   <p>
-                    Let <m>F=\Q</m>. We define <m>A=C(x-1)\oplus C(x^2-1)</m> and <m>B=C(x+1)\oplus C(x^2-1)</m>. Notice that these matrices are in [[Theorem – Rational Canonical Form|rational canonical form]]. However, the invariant factors of <m>A</m> are <m>\{(x+1), (x^2-1)\}</m> and the invariant factors of <m>B</m> are <m>\{(x-1)(x^2-1)\}</m>. Thus <m>A</m> is not similar to <m>B</m>, but the minimal polynomial of both is <m>x^2-1</m>.
-
+                    Let <m>F=\Q</m>. We define <m>A=C(x-1)\oplus C(x^2-1)</m> and <m>B=C(x+1)\oplus C(x^2-1)</m>. Notice that these matrices are in rational canonical form. However, the invariant factors of <m>A</m> are <m>\{(x+1), (x^2-1)\}</m> and the invariant factors of <m>B</m> are <m>\{(x-1)(x^2-1)\}</m>. Thus <m>A</m> is not similar to <m>B</m>, but the minimal polynomial of both is <m>x^2-1</m>.
                   </p>
                 </li>
               </ol>
@@ -26580,10 +27210,31 @@
                 <li>
                   <p>
                     First, we note that the roots of <m>f</m> are the following: 
-                    <m>\a_1=\sqrt[4]5e^{\pi i/4}=\sqrt[4]5 (\cos(\frac{\pi}{4}))+i\sin(\frac{\pi}{4}))=\sqrt[4]5(\frac{\sqrt 2}{2}+i\frac{\sqrt 2}{2})=\frac{\sqrt 2}{2}\sqrt[4]5(1+i)=\frac{\sqrt[4]{20}}{2}(1+i),</m> 
-                    <m>\a_2=\sqrt[4]5e^{3\pi i/4}=\sqrt[4]5 (\cos(\frac{3\pi}{4}))+i\sin(\frac{3\pi}{4}))=\sqrt[4]5(\frac{-\sqrt 2}{2}+i\frac{\sqrt 2}{2})=\frac{\sqrt 2}{2}\sqrt[4]5(-1+i)=\frac{\sqrt[4]{20}}{2}(-1+i),</m> 
-                    <m>\a_3=\sqrt[4]5e^{5\pi i/4}=\sqrt[4]5 (\cos(\frac{5\pi}{4}))+i\sin(\frac{5\pi}{4}))=\sqrt[4]5(\frac{-\sqrt 2}{2}+i\frac{-\sqrt 2}{2})=\frac{\sqrt 2}{2}\sqrt[4]5(-1-i)=\frac{\sqrt[4]{20}}{2}(-1-i),</m> and 
-                    <m>\a_4=\sqrt[4]5e^{7\pi i/4}=\sqrt[4]5 (\cos(\frac{7\pi}{4}))+i\sin(\frac{7\pi}{4}))=\sqrt[4]5(\frac{\sqrt 2}{2}+i\frac{-\sqrt 2}{2})=\frac{\sqrt 2}{2}\sqrt[4]5(1-i)=\frac{\sqrt[4]{20}}{2}(1-i).</m> 
+                    <ul>
+                      <li>
+                        <p>
+                          <m>\a_1=\sqrt[4]5e^{\pi i/4}=\sqrt[4]5 (\cos(\frac{\pi}{4}))+i\sin(\frac{\pi}{4})=\sqrt[4]5(\frac{\sqrt 2}{2}+i\frac{\sqrt 2}{2})=\frac{\sqrt 2}{2}\sqrt[4]5(1+i)=\frac{\sqrt[4]{20}}{2}(1+i),</m> 
+                        </p>
+                      </li>
+
+                       <li>
+                        <p>
+                    <m>\a_2=\sqrt[4]5e^{3\pi i/4}=\sqrt[4]5 (\cos(\frac{3\pi}{4}))+i\sin(\frac{3\pi}{4})=\sqrt[4]5(\frac{-\sqrt 2}{2}+i\frac{\sqrt 2}{2})=\frac{\sqrt 2}{2}\sqrt[4]5(-1+i)=\frac{\sqrt[4]{20}}{2}(-1+i),</m> 
+                        </p>
+                      </li>
+
+                       <li>
+                        <p>
+                    <m>\a_3=\sqrt[4]5e^{5\pi i/4}=\sqrt[4]5 (\cos(\frac{5\pi}{4}))+i\sin(\frac{5\pi}{4})=\sqrt[4]5(\frac{-\sqrt 2}{2}+i\frac{-\sqrt 2}{2})=\frac{\sqrt 2}{2}\sqrt[4]5(-1-i)=\frac{\sqrt[4]{20}}{2}(-1-i),</m> and 
+                        </p>
+                      </li>
+
+                       <li>
+                        <p>
+                    <m>\a_4=\sqrt[4]5e^{7\pi i/4}=\sqrt[4]5 (\cos(\frac{7\pi}{4}))+i\sin(\frac{7\pi}{4})=\sqrt[4]5(\frac{\sqrt 2}{2}+i\frac{-\sqrt 2}{2})=\frac{\sqrt 2}{2}\sqrt[4]5(1-i)=\frac{\sqrt[4]{20}}{2}(1-i).</m> 
+                        </p>
+                      </li>
+                    </ul>
                     First we examine <m>F=\Q(\sqrt[4]{20})</m>. Notice that <m>\sqrt[4]{20}</m> is a root of the polynomial <m>x^4-20</m>, which is irreducible in <m>\Q[x]</m> using <xref text="title" ref="thm-eisensteins-criterion"/> with <m>p=5</m>. Thus <m>x^4-20</m> is monic and irreducible, making it the minimal polynomial of <m>\sqrt[4]{20}</m>. Thus <m>[F:\Q]=4</m>. Notice that <m>\a_1+\a_4=\frac{\sqrt[4]{20}}{2}(1+i+1-i)=\sqrt[4]{20}</m>, so <m>\sqrt[4]{20}\in E</m>. Thus there exists <m>\Q\subseteq F\subseteq E</m> such that <m>F \sse \R</m> and <m>[F : \Q] = 4</m>.
                   </p>
                 </li>
@@ -26614,9 +27265,25 @@
             <solution>
               <p>
               Let <m>F</m> be the splitting field over <m>\Q</m> of the polynomial <m>f(x)=x^3-2</m>, the roots of which are: 
-              1. <m>\sqrt[3]2</m> 
-              2. <m>\sqrt[3]2e^{2\pi i/3}</m>, and 
-              3. <m>\sqrt[3]2e^{4\pi i/3}</m>. 
+              <ul>
+                <li>
+                  <p>
+                    <m>\sqrt[3]2</m> 
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>\sqrt[3]2e^{2\pi i/3}</m>, and 
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>\sqrt[3]2e^{4\pi i/3}</m>. 
+                  </p>
+                </li>
+              </ul>
               Using <xref text="title" ref="thm-eisensteins-criterion"/> with <m>p=2</m> we see that <m>f</m> is irreducible in <m>\Q[x]</m>. As <m>f</m> is monic and irreducible it is the minimum polynomial of <m>\sqrt[3]2\in\Q[x]</m> and <m>[\Q(\sqrt[3]2):\Q]=3</m>. Thus, by the <xref text="title" ref="thm-ftgt"/> we know there exists an element of order <m>3</m> in <m>\Gal(F:\Q)</m>.
             </p>
 
@@ -26696,7 +27363,26 @@
           <problem><title>Problem 1</title>
             <statement>
               <p>
-					Let <m>G</m> be a group (not necessarily finite) and <m>H</m> a nonempty subset of <m>G</m> that is [[Mathematics/Definitions/Multiplicatively Closed Set|closed under multiplication]]. Suppose that for all <m>g\in G</m> we have <m>g^2\in H</m>. Prove the following: (a) <m>H</m> is a subgroup of <m>G</m> (b) <m>H</m> is normal (c) <m>G/H</m> (See: [[Mathematics/Definitions/Coset]]) is abelian.
+					Let <m>G</m> be a group (not necessarily finite) and <m>H</m> a nonempty subset of <m>G</m> that is closed under multiplication. Suppose that for all <m>g\in G</m> we have <m>g^2\in H</m>. Prove the following: 
+          <ol>
+            <li>
+              <p>
+                <m>H</m> is a subgroup of <m>G</m> 
+              </p>
+            </li>
+
+            <li>
+              <p>
+                 <m>H</m> is normal 
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>G/H</m> is abelian.
+              </p>
+            </li>
+          </ol>
 				</p>
             </statement>
 
@@ -26706,15 +27392,28 @@
 				</p>
 
 				<p>
-					Part (a) First, notice that <m>e^2=e\in H</m>. Let <m>x\in H</m>, and consider <m>x\inv</m>. Notice that <m>(x{\inv})^2=x^{-2}\in H</m>. As <m>H</m> is multiplicatively closed, we see that <m>xx^{-2}=x\inv\in H</m>. Thus <m>H</m> is a subgroup of <m>G</m> by the [[Lemma – Subgroup Tests|subgroup test]].
-				</p>
+          <ol>
+            <li>
+              <p>
+                First, notice that <m>e^2=e\in H</m>. Let <m>x\in H</m>, and consider <m>x\inv</m>. Notice that <m>(x{\inv})^2=x^{-2}\in H</m>. As <m>H</m> is multiplicatively closed, we see that <m>xx^{-2}=x\inv\in H</m>. Thus <m>H</m> is a subgroup of <m>G</m> by the [[Lemma – Subgroup Tests|subgroup test]].
 
-				<p>
-					Part (b) Let <m>g\in G</m>, <m>h\in H</m>, and consider <m>gh</m>. Notice that <m>(gh)^2=ghgh\in H</m>. Multiplying by <m>h\inv</m> on the right we see <m>ghg\in H</m>, as it is multiplicatively closed and <m>h\inv\in H</m>. We rewrite <m>ghg=ghggg\inv=ghg\inv g^2</m>, given that elements always commute with their inverses. As <m>g^2\in H</m>, we see that <m>ghg\inv\in H</m> as well. Thus <m>H</m> is normal in <m>G</m>.
-				</p>
+              </p>
+            </li>
 
-				<p>
-					Part (c) Let <m>x,y\in G/H</m>. As <m>g^2\in H</m> for every <m>g\in G</m>, every element <m>G/H</m> has order <m>2</m>. Thus <m>xyxy=e</m> and so <m>xy=(xy)\inv=yx</m>, making the group abelian.
+            <li>
+              <p>
+					Let <m>g\in G</m>, <m>h\in H</m>, and consider <m>gh</m>. Notice that <m>(gh)^2=ghgh\in H</m>. Multiplying by <m>h\inv</m> on the right we see <m>ghg\in H</m>, as it is multiplicatively closed and <m>h\inv\in H</m>. We rewrite <m>ghg=ghggg\inv=ghg\inv g^2</m>, given that elements always commute with their inverses. As <m>g^2\in H</m>, we see that <m>ghg\inv\in H</m> as well. Thus <m>H</m> is normal in <m>G</m>.
+
+              </p>
+            </li>
+
+            <li>
+              <p>
+					Let <m>x,y\in G/H</m>. As <m>g^2\in H</m> for every <m>g\in G</m>, every element <m>G/H</m> has order <m>2</m>. Thus <m>xyxy=e</m> and so <m>xy=(xy)\inv=yx</m>, making the group abelian.
+
+              </p>
+            </li>
+          </ol>
 				</p>
             </solution>
           
@@ -26723,13 +27422,15 @@
           <problem><title>Problem 2</title>
             <statement>
               <p>
-					Construct a nonabelian group of order <m>21</m> and give a [[Mathematics/Definitions/Presentation|presentation]] for your group (with justification).
+					Construct a nonabelian group of order <m>21</m> and give a presentation for your group (with justification).
 				</p>
             </statement>
 
             <solution>
               <p>
-						First, we know that <m>G=C_{21}</m> is a group of order <m>21</m>. By [[Theorem – Cauchy's Theorem|Cauchy's Theorem]], as <m>3</m> and <m>7</m> are primes dividing the order of <m>G</m> there exist elements <m>k,h</m> of orders <m>3</m>, <m>7</m>, respectively. Consider <m>K=\langle k\rangle</m> and <m>H=\langle h\rangle</m>, both of which are subgroups of <m>C_{21}</m>. By <xref text="title" ref="thm-lagrange"/> we see <m>[C_{21}:H]=3</m> (See: [[Mathematics/Definitions/Index]]), the smallest prime dividing <m>21</m>, making <m>H</m> normal in <m>G.</m> Thus <m>HK\leq G</m>, but as <m>K\cap H=\{e\}</m> we have <m>|HK|=21=|G|</m> and thus that <m>HK=G</m>. By the [[Proposition – Recognition Theorem Internal Semidirect Products|Recognition Theorem]] we have <m>H\sdp_\rho K\cong G</m>, where <m>\rho:K\to\Aut(H)</m> is the [[Proposition – Permutation Representation|permutation representation]] of the action of <m>K</m> on <m>H</m> via automorphisms given by conjugation in <m>G</m>.
+						First, we know that <m>G=C_{21}</m> is a group of order <m>21</m>. By <xref text="title" ref="thm-cauchy"/>, as <m>3</m> and <m>7</m> are primes dividing the order of <m>G</m> there exist elements <m>k,h</m> of orders <m>3</m>, <m>7</m>, respectively. Consider <m>K=\langle k\rangle</m> and <m>H=\langle h\rangle</m>, both of which are subgroups of <m>C_{21}</m>. By <xref text="title" ref="thm-lagrange"/> we see <m>[C_{21}:H]=3</m>, the smallest prime dividing <m>21</m>, making <m>H</m> normal in <m>G.</m> Thus <m>HK\leq G</m>, but as <m>K\cap H=\{e\}</m> we have <m>|HK|=21=|G|</m> and thus that <m>HK=G</m>. By the 
+            [[Proposition – Recognition Theorem Internal Semidirect Products|Recognition Theorem]] we have <m>H\sdp_\rho K\cong G</m>, where <m>\rho:K\to\Aut(H)</m> is the 
+            [[Proposition – Permutation Representation|permutation representation]] of the action of <m>K</m> on <m>H</m> via automorphisms given by conjugation in <m>G</m>.
 					</p>
             </solution>
           
@@ -26738,21 +27439,47 @@
           <problem><title>Problem 3</title>
             <statement>
               <p>
-					Let <m>G</m> be a group and let <m>n_p</m> be the number of Sylow <m>p</m>-subgroups of <m>G</m>, where <m>p</m> is a prime dividing the order of <m>G</m>. (a) Prove that if <m>G</m> is simple then <m>|G|\big|n_p!</m> (b) Deduce that there is no simple group of order <m>1,000,000</m>.
-				</p>
+                Let <m>G</m> be a group and let <m>n_p</m> be the number of Sylow <m>p</m>-subgroups of <m>G</m>, where <m>p</m> is a prime dividing the order of <m>G</m>. 
+                <ol>
+                  <li>
+                    <p>
+                      Prove that if <m>G</m> is simple then <m>|G|\big|n_p!</m> 
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Deduce that there is no simple group of order <m>1,000,000</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
             </statement>
 
             <solution>
               <p>
-					 Let <m>G</m> be a group, <m>p</m> a prime dividing the order of <m>G</m>, and <m>n_p</m> the number of Sylow <m>p</m>-subgroups of <m>G</m>.
+                Let <m>G</m> be a group, <m>p</m> a prime dividing the order of <m>G</m>, and <m>n_p</m> the number of Sylow <m>p</m>-subgroups of <m>G</m>.
+              </p>
+
+				<p>
+          <ol>
+            <li>
+              <p>
+                Let <m>G</m> act on <m>\Syl_p(G)</m> by conjugation, inducing the homomorphism <m>\rho: G\to S_{n_p}</m> via the 
+                [[Proposition – Permutation Representation|permutation representation]]. Notice that the order of <m>S_{n_p}</m> is conspicuously <m>n_p!</m>. The kernel of this map is a normal subgroup of <m>G</m> 
+                (See: [[Corollary – Normal iff Kernel of Homomorphism|Corollary]]). Note that since <m>G</m> is simple the only normal subgroups of <m>G</m> are the trivial subgroup and <m>G</m> itself. However, the kernel cannot be all of <m>G</m> as this would make <m>\rho</m> trivial, which cannot be the case given that our action is transitive by Part (2) of <xref text="title" ref="thm-sylow"/>. Thus <m>\ker(\rho)=\{e\}</m>, making <m>\rho</m> injective. Thus <m>|\im(\rho)|=|G|</m>. As the image is a subgroup of <m>S_{n_p}</m>, the result follows from <xref text="title" ref="thm-lagrange"/>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+					      Let <m>G</m> be a group of order <m>1,000,000</m>. Suppose by way of contradiction that <m>G</m> is simple. <m>1,000,000=10^6=2^6\cdot 5^6</m>. Thus the number of Sylow-<m>5</m> subgroups is congruent to <m>1\mod 5</m> and divides <m>2^6=64</m>, the options of which are 1 and 16 (See: <xref text="title" ref="thm-sylow"/>). As <m>|G|</m> does not divide <m>16!,</m> this contradicts part (a). Thus there are no simple groups of order <m>1,000,000</m>.
+              </p>
+            </li>
+          </ol>
 				</p>
 
 				<p>
-					Part (a) Let <m>G</m> act on <m>\Syl_p(G)</m> by conjugation, inducing the homomorphism <m>\rho: G\to S_{n_p}</m> via the [[Proposition – Permutation Representation|permutation representation]]. Notice that the order of <m>S_{n_p}</m> is conspicuously <m>n_p!</m>. The kernel of this map is a normal subgroup of <m>G</m> (See: [[Corollary – Normal iff Kernel of Homomorphism|Corollary]]). Note that since <m>G</m> is simple the only normal subgroups of <m>G</m> are the trivial subgroup and <m>G</m> itself. However, the kernel cannot be all of <m>G</m> as this would make <m>\rho</m> trivial, which cannot be the case given that our action is transitive by Part (2) of <xref text="title" ref="thm-sylow"/>. Thus <m>\ker(\rho)=\{e\}</m>, making <m>\rho</m> injective. Thus <m>|\im(\rho)|=|G|</m>. As the [[Mathematics/Definitions/Image|image]] is a subgroup of <m>S_{n_p}</m>, the result follows from <xref text="title" ref="thm-lagrange"/>.
-				</p>
-
-				<p>
-					Part (b) Let <m>G</m> be a group of order <m>1,000,000</m>. Suppose by way of contradiction that <m>G</m> is simple. <m>1,000,000=10^6=2^6\cdot 5^6</m>. Thus the number of Sylow-<m>5</m> subgroups is congruent to <m>1\mod 5</m> and divides <m>2^6=64</m>, the options of which are 1 and 16 (See: <xref text="title" ref="thm-sylow"/>). As <m>|G|</m> does not divide <m>16!,</m> this contradicts part (a). Thus there are no simple groups of order <m>1,000,000</m>.
 				</p>
             </solution>
           
@@ -26766,7 +27493,7 @@
             <statement>
               <p><ol>
 					<li>
-					Suppose that <m>A</m> is an integral domain that contains a field <m>F</m> as a [[Mathematics/Definitions/Subring|subring]], and that moreover <m>A</m> is finite dimensional as an <m>F</m>-vector space. Prove that <m>A</m> is a field.
+					Suppose that <m>A</m> is an integral domain that contains a field <m>F</m> as a subring, and that moreover <m>A</m> is finite dimensional as an <m>F</m>-vector space. Prove that <m>A</m> is a field.
 					</li>
 
 					<li>
@@ -26778,16 +27505,24 @@
 
             <solution>
               <p>
-					 Part (a) Let <m>A</m> be an integral domain that contains a field <m>F</m> as a subring, and that moreover <m>A</m> is finite dimensional as an <m>F</m>-vector space.
-				</p>
+                <ol>
+                  <li>
+                    <p>
+                      Let <m>A</m> be an integral domain that contains a field <m>F</m> as a subring, and that moreover <m>A</m> is finite dimensional as an <m>F</m>-vector space.
+                    </p>
 
-				<p>
-					Say 𝐴 has dimension <m>n</m> over <m>K</m>. Let <m>x\in A,x\neq0</m>. Consider elements <m>1,x,x^2,x^{3,\dots,}</m> which cannot be independent because of the finite dimension. So we may choose <m>m</m> so that <m>1,x,\dots,x^m</m> is linearly dependent over <m>K</m> and is as small as possible. This means that we may find <m>c_0,c_1,\dots,c^{m}\in K</m>, not all equal to <m>0</m>, such that <m>c_0+c_1x+\dots+c_mx^m=0</m>. Note that <m>c_0\neq0</m>, as this would contradict the minimality of <m>m</m>. Then <m>x(c_1+\dots+c)_mx^{m-1})</m> is invertible, so 𝑥 is invertible as well, making <m>A</m> a field.
-				</p>
+                    <p>
+					            Say <m>A</m> has dimension <m>n</m> over <m>K</m>. Let <m>x\in A,x\neq0</m>. Consider elements <m>1,x,x^2,x^{3,\dots,}</m> which cannot be independent because of the finite dimension. So we may choose <m>m</m> so that <m>1,x,\dots,x^m</m> is linearly dependent over <m>K</m> and is as small as possible. This means that we may find <m>c_0,c_1,\dots,c^{m}\in K</m>, not all equal to <m>0</m>, such that <m>c_0+c_1x+\dots+c_mx^m=0</m>. Note that <m>c_0\neq0</m>, as this would contradict the minimality of <m>m</m>. Then <m>x(c_1+\dots+c)_mx^{m-1})</m> is invertible, so <m>x</m> is invertible as well, making <m>A</m> a field.
+			            	</p>
+                  </li>
 
-				<p>
-					Part (b) Consider <m>\Q[x]</m>, which contains the subring <m>\Q</m>. However, this is not a finite dimensional vector space over <m>F</m>, and <m>\Q[x]</m> is not a field, as <m>x</m> has no inverse.
-				</p>
+                  <li>
+                    <p>
+					            Consider <m>\Q[x]</m>, which contains the subring <m>\Q</m>. However, this is not a finite dimensional vector space over <m>F</m>, and <m>\Q[x]</m> is not a field, as <m>x</m> has no inverse.
+                    </p>
+                  </li>
+                </ol>
+				      </p>
             </solution>
           
           </problem>
@@ -26795,12 +27530,12 @@
           <problem><title>Problem 5</title>
             <statement>
               <p>
-					Suppose that <m>T : V\to V</m> is a [[Mathematics/Definitions/Linear Transformation|linear map]], where <m>V</m> is a finite dimensional <m>\C</m>-vector space. Fix a polynomial <m>p\in \C[x]</m>.
+					Suppose that <m>T : V\to V</m> is a linear map, where <m>V</m> is a finite dimensional <m>\C</m>-vector space. Fix a polynomial <m>p\in \C[x]</m>.
 				</p>
 
 				<p><ol>
 					<li>
-					Prove that if <m>\lambda</m> is an [[Mathematics/Definitions/Eigenvalue|eigenvalue]] of <m>T</m> then <m>p(\lambda)</m> is an eigenvalue of <m>p(T)</m>.
+					Prove that if <m>\lambda</m> is an eigenvalue of <m>T</m> then <m>p(\lambda)</m> is an eigenvalue of <m>p(T)</m>.
 					</li>
 
 					<li>
@@ -26812,11 +27547,24 @@
 
             <solution>
               <p>
-						Part (a) Let <m>\l</m> be an eigenvalue of <m>T</m>. Thus there exists some <m>v</m> such that <m>Tv=\l v</m>. Notice that <m>p(T)v=a_nT^nv+\dots+a_0Iv=0</m> and <m>p(\l)=a_n\l^n+\dots+a_0</m>. Then <me>\begin{align}(p(T)-p(\l I))v&amp;=p(T)v-p(\l I)v\\&amp;=(a_nT^nv+\dots+a_0Iv)-(a_n\l^nv+\dots+a_0v)\\&amp;=a_n(T^n-\l^n)v+\dots a_0(I-I)v\\&amp;=0,\end{align}</me>making <m>p(\l)</m> an eigenvalue of <m>p(T)</m>.
-					</p>
+                <ol>
+                  <li>
+                    <p>
+                      				Let <m>\l</m> be an eigenvalue of <m>T</m>. Thus there exists some <m>v</m> such that <m>Tv=\l v</m>. Notice that <m>p(T)v=a_nT^nv+\dots+a_0Iv=0</m> and <m>p(\l)=a_n\l^n+\dots+a_0</m>. Then 
+                              <me>
+                              \begin{aligned}(p(T)-p(\l I))v&amp;=p(T)v-p(\l I)v\\&amp;=(a_nT^nv+\dots+a_0Iv)-(a_n\l^nv+\dots+a_0v)\\&amp;=a_n(T^n-\l^n)v+\dots a_0(I-I)v\\&amp;=0,\end{aligned}</me>
+                              making <m>p(\l)</m> an eigenvalue of <m>p(T)</m>.
 
-					<p>
-						Part (b) First note that if <m>T</m> is a scalar of the identity matrix then its only eigenvalue is <m>0</m>. Let <m>\mu</m> be an eigenvalue of <m>p(T)</m>. Thus <m>(p(T)-\mu I)v=0</m> for some <m>v</m>. As <m>\C</m> is algebraically closed we can factor the polynomial <m>p(x)-\mu</m> into linear terms: <me>p(x)-\mu=c(x-r_1)\dots(x-r_n)</me>for roots <m>r_i</m>. Note that <m>p(r_i)-\mu=0</m> for all <m>r_i</m>. Observe <me>\begin{align}(p(T)-\mu I)v&amp;=p(T)v-(\mu I)v\\&amp;=c(T-r_nI)\dots(T-r_1I)v\\&amp;=0.\end{align}</me>Thus one of these terms must be sent to zero. Note that if <m>T-r_iI=0</m> for any <m>I</m> this would make <m>T</m> a scaler of the identity matrix. Thus there exists some <m>i</m> such that <m>(T-r_iI)v=0</m>, making <m>r_i</m> an eigenvalue of <m>T</m>. Notice that as <m>p(r_i)-\mu=0</m> we have <m>p(r_i)=\mu</m>, completing the proof.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+						First note that if <m>T</m> is a scalar of the identity matrix then its only eigenvalue is <m>0</m>. Let <m>\mu</m> be an eigenvalue of <m>p(T)</m>. Thus <m>(p(T)-\mu I)v=0</m> for some <m>v</m>. As <m>\C</m> is algebraically closed we can factor the polynomial <m>p(x)-\mu</m> into linear terms: <me>p(x)-\mu=c(x-r_1)\dots(x-r_n)</me>for roots <m>r_i</m>. Note that <m>p(r_i)-\mu=0</m> for all <m>r_i</m>. Observe <me>\begin{aligned}(p(T)-\mu I)v&amp;=p(T)v-(\mu I)v\\&amp;=c(T-r_nI)\dots(T-r_1I)v\\&amp;=0.\end{aligned}</me>Thus one of these terms must be sent to zero. Note that if <m>T-r_iI=0</m> for any <m>I</m> this would make <m>T</m> a scaler of the identity matrix. Thus there exists some <m>i</m> such that <m>(T-r_iI)v=0</m>, making <m>r_i</m> an eigenvalue of <m>T</m>. Notice that as <m>p(r_i)-\mu=0</m> we have <m>p(r_i)=\mu</m>, completing the proof.
+
+                    </p>
+                  </li>
+                </ol>
 					</p>
             </solution>
           
@@ -26825,49 +27573,70 @@
           <problem><title>Problem 6</title>
             <statement>
               <p>
-					Consider the <m>\C</m>-vector space <m>V = {p \in \C[x] : \deg(p) \leq n - 1}</m>. (You may assume without proof that <m>V</m> is n-[[Mathematics/Definitions/Dimension (Vector Space)|dimensional]].) Consider the following [[Mathematics/Definitions/Linear Operator|linear maps]] <m>V \to V</m>: <me>D : V \to V \hspace{4cm} T : V \to V</me> <me>p\mapsto p'\hspace{4cm} p\mapsto xp'</me> (where p' denotes the [[Mathematics/Definitions/Derivative|derivative]] of p). Determine the [[Theorem – Jordan Canonical Form|Jordan normal form]] of (a) <m>D</m> (b) <m>B</m>
+					Consider the <m>\C</m>-vector space <m>V = {p \in \C[x] : \deg(p) \leq n - 1}</m>. (You may assume without proof that <m>V</m> is n-dimensional.) Consider the following linear maps <m>V \to V</m>: <me>D : V \to V \hspace{4cm} T : V \to V</me> <me>p\mapsto p'\hspace{4cm} p\mapsto xp'</me> (where <m>p'</m> denotes the derivative of <m>p</m>). Determine the Jordan normal form of 
+          <ol>
+            <li>
+              <p>
+                <m>D</m> 
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>B</m>
+              </p>
+            </li>
+          </ol>
 				</p>
             </statement>
 
             <solution>
               <p>
-						Part (a) For any integer <m>n \geq 1</m>, consider the <m>\C</m>-vector space <m>V = \{p \in \C[x] : \deg(p) \leq n - 1\}</m>.
-					</p>
+                <ol>
+                  <li>
+                    <p>
+                      	For any integer <m>n \geq 1</m>, consider the <m>\C</m>-vector space <m>V = \{p \in \C[x] : \deg(p) \leq n - 1\}</m>.
 
-					<p>
-						Let <m>T:V \to V</m> be the [[Mathematics/Definitions/Linear Operator|linear operator]] given by <m>T(p) = xp'</m> (where <m>p'</m> denotes the derivative of <m>p</m>). Note that the [[Mathematics/Definitions/Change of Basis Matrix|change of basis]] matrix for this operator is given by <me>
-\begin{bmatrix}
-  0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
-  0 &amp; 1 &amp; \cdots &amp; 0 &amp; 0 \\
-  \vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\
-  0 &amp; 0 &amp; \cdots &amp; 0 &amp; n-1 \\   
-\end{bmatrix},
-</me> with the basis <m>\{1,x,\dots,x^{n-1}\}</m>. Thus <m>\cp_A(x)</m> will be given by the [[Determinant|determinant]] of the matrix
-					</p>
+                    </p>
 
-					<p>
-						<me>
-\begin{bmatrix}
-  x &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
-  0 &amp; x-1 &amp; \cdots &amp; 0 &amp; 0 \\
-  \vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\
-  0 &amp; 0 &amp; \cdots &amp; 0 &amp; x-(n-1) \\   
-\end{bmatrix},
-</me>
-					</p>
+                    <p>
+                      Let <m>T:V \to V</m> be the linear operator given by <m>T(p) = xp'</m> (where <m>p'</m> denotes the derivative of <m>p</m>). Note that the change of basis matrix for this operator is given by 
+                      <me>
+                      \begin{bmatrix}
+                        0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
+                        0 &amp; 1 &amp; \cdots &amp; 0 &amp; 0 \\
+                        \vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\
+                        0 &amp; 0 &amp; \cdots &amp; 0 &amp; n-1 \\   
+                      \end{bmatrix},
+                      </me> with the basis <m>\{1,x,\dots,x^{n-1}\}</m>. Thus <m>\cp_A(x)</m> will be given by the determinant of the matrix
+					            </p>
 
-					<p>
-						which is [[Mathematics/Definitions/Diagonal Matrix|diagonal]]. Hence <me>\cp_AT(x)=\displaystyle\prod_{i=0}^{n-1}(x-i).</me>Thus <m>\cp_AT(x)</m> factors into distinct linear polynomials, each of which is in the form <m>(x-i)</m> for <m>0\leq i\leq n-1</m>. Thus each linear term is an elementary divisor, making each [[Mathematics/Definitions/Jordan Block|Jordan block]] a <m>1\times1</m> matrix with <m>i</m> as the only entry. Thus the Jordan Canonical form is <me>\begin{bmatrix}
-  0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
-  0 &amp; 1 &amp; \cdots &amp; 0 &amp; 0 \\
-  \vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\
-  0 &amp; 0 &amp; \cdots &amp; 0 &amp; n-1 \\   
-\end{bmatrix}.
-</me>
-					</p>
+                            <p>
+                              <me>
+                  \begin{bmatrix}
+                    x &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
+                    0 &amp; x-1 &amp; \cdots &amp; 0 &amp; 0 \\
+                    \vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\
+                    0 &amp; 0 &amp; \cdots &amp; 0 &amp; x-(n-1) \\   
+                  \end{bmatrix},
+                  </me>
+                            </p>
 
-					<p>
-						Part (b) This time around the change of basis matrix (denoted <m>B</m> and using the same basis as above) for this matrix has 0s along the diagonal, and increasing natural numbers (starting at 0, sorry) along the upper diagonal. Thus <m>\cp_B(x)=x^n</m>.
+                            <p>
+                              which is diagonal. Hence <me>\cp_AT(x)=\displaystyle\prod_{i=0}^{n-1}(x-i).</me>Thus <m>\cp_AT(x)</m> factors into distinct linear polynomials, each of which is in the form <m>(x-i)</m> for <m>0\leq i\leq n-1</m>. Thus each linear term is an elementary divisor, making each Jordan block a <m>1\times1</m> matrix with <m>i</m> as the only entry. Thus the Jordan Canonical form is 
+                              <me>\begin{bmatrix}
+                                0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
+                                0 &amp; 1 &amp; \cdots &amp; 0 &amp; 0 \\
+                                \vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\
+                                0 &amp; 0 &amp; \cdots &amp; 0 &amp; n-1 \\   
+                              \end{bmatrix}.
+                  </me>
+                            </p>
+                  </li>
+
+                  <li>
+                    <p>
+						This time around the change of basis matrix (denoted <m>B</m> and using the same basis as above) for this matrix has 0s along the diagonal, and increasing natural numbers (starting at <m>0</m>, sorry) along the upper diagonal. Thus <m>\cp_B(x)=x^n</m>.
 					</p>
 
 					<p>
@@ -26875,11 +27644,14 @@
 					</p>
 
 					<p>
-						As the basis extends to <m>x^{n-1}</m>, it requires <m>n</m> derivatives to make this polynomial become 0. Thus the minimal polynomial of <m>B</m> must be <m>x^n</m>, as it it monic and <m>B^n=0</m>. As the degree of the invariant factors must sum to <m>n</m> and <m>\mp_B(x)=x^n</m>, which is itself an invariant factor, we see that it must in fact be the only one.
+						As the basis extends to <m>x^{n-1}</m>, it requires <m>n</m> derivatives to make this polynomial become <m>0</m>. Thus the minimal polynomial of <m>B</m> must be <m>x^n</m>, as it it monic and <m>B^n=0</m>. As the degree of the invariant factors must sum to <m>n</m> and <m>\mp_B(x)=x^n</m>, which is itself an invariant factor, we see that it must in fact be the only one.
 					</p>
 
 					<p>
-						As <m>x^n</m> is already a power of a prime, it is the only elementary divisor as well. Thus the Jordan Canonical Form for <m>B</m> is an <m>n\times n</m> Jordan Block with 0s along the diagonal and 1s along the sub-diagonal.
+						As <m>x^n</m> is already a power of a prime, it is the only elementary divisor as well. Thus the Jordan Canonical Form for <m>B</m> is an <m>n\times n</m> Jordan Block with <m>0</m>s along the diagonal and <m>1</m>s along the sub-diagonal.
+					</p>
+                  </li>
+                </ol>
 					</p>
             </solution>
           
@@ -26911,15 +27683,32 @@
 			</p>
 
 			<p>
-				Part (a) Suppose that <m>f \in F[x]</m> is irreducible of degree <m>d</m> and <m>\gcd(d, n) = 1</m>.
-			</p>
+        <ol>
+          <li>
+            <p>
+              Suppose that <m>f \in F[x]</m> is irreducible of degree <m>d</m> and <m>\gcd(d, n) = 1</m>.
 
-			<p>
-				First, note that if <m>d=1</m> then <m>f(x)</m> will remain irreducible in <m>K[x]</m> (See: [[Theorem – Degree and Irreducibility|Theorem]]). Suppose then that <m>d&gt;1</m>. There exists an algebraically closed extension <m>\widetilde F</m> such that <m>f</m> has a root <m>r</m> (See: [[Theorem – Existence and Uniqueness of Algebraic Closures|Theorem]]). Consider <m>K(r)</m>. As <m>r</m> is algebraic in <m>K(r)</m> we know there exists some unique irreducible minimal polynomial <m>g</m> of degree <m>q</m>, and thus that <m>[K(r):K]=q</m> (See: [[Theorem – Properties of Algebraic Elements|Theorem]]). Using the  <xref text="title" ref="thm-degree-formula"/> we see that <me>[K(r):F]=[K(r):K][K:F]=qn.</me>However, <m>[K(r):F]=[K(r):F(r)][F(r):F]</m> and so <m>qn=md</m> for some <m>m\in\Z</m>, so <m>d|qn</m>. As <m>\gcd(n,d)=1</m> we must have <m>d|q</m>. But <m>q</m> was defined to be the degree of <m>g</m>, which divides <m>f</m>. As <m>d|q</m> and <m>q\leq d</m>, we see that <m>d=q</m>, so so <m>f=kg</m> for some <m>k\in F</m>. As irreducible polynomials multiplied by a constant are still irreducible, we see that <m>f</m> is indeed irreducible in <m>K[x]</m>.
-			</p>
+            </p>
 
-			<p>
-				Part (b) Let <m>p(x)</m> be a non-constant irreducible polynomial of degree <m>d</m> in <m>F[x]</m>. Let <m>K=F[x]/p(x)</m>. Because <m>p(x)</m> is irreducible and <m>F[x]</m> is a PID, <m>(p(x))</m> is a maximal ideal. Thus <m>K = F[x]/(p(x))</m> is a field (See: [[Theorem – Prime, Maximal, Domain, Field|Theorem]]), <m>[K:F]=d</m>, and <m>x+p(x)</m> is a root of <m>p(x)</m> in <m>K</m> (See: [[Proposition – Properties of Extension Degrees|Proposition]]). Hence <m>p(x)</m> is no longer irreducible by Theorem 2.2.
+            <p>
+				First, note that if <m>d=1</m> then <m>f(x)</m> will remain irreducible in <m>K[x]</m> 
+        (See: [[Theorem – Degree and Irreducibility|Theorem]]). Suppose then that <m>d&gt;1</m>. There exists an algebraically closed extension <m>\widetilde F</m> such that <m>f</m> has a root <m>r</m> 
+        (See: [[Theorem – Existence and Uniqueness of Algebraic Closures|Theorem]]). Consider <m>K(r)</m>. As <m>r</m> is algebraic in <m>K(r)</m> we know there exists some unique irreducible minimal polynomial <m>g</m> of degree <m>q</m>, and thus that <m>[K(r):K]=q</m> 
+        (See: [[Theorem – Properties of Algebraic Elements|Theorem]]). Using the  <xref text="title" ref="thm-degree-formula"/> we see that 
+        <me>[K(r):F]=[K(r):K][K:F]=qn.</me>
+        However, <m>[K(r):F]=[K(r):F(r)][F(r):F]</m> and so <m>qn=md</m> for some <m>m\in\Z</m>, so <m>d|qn</m>. As <m>\gcd(n,d)=1</m> we must have <m>d|q</m>. But <m>q</m> was defined to be the degree of <m>g</m>, which divides <m>f</m>. As <m>d|q</m> and <m>q\leq d</m>, we see that <m>d=q</m>, so so <m>f=kg</m> for some <m>k\in F</m>. As irreducible polynomials multiplied by a constant are still irreducible, we see that <m>f</m> is indeed irreducible in <m>K[x]</m>.
+			</p>
+          </li>
+
+          <li>
+            <p>
+				Let <m>p(x)</m> be a non-constant irreducible polynomial of degree <m>d</m> in <m>F[x]</m>. Let <m>K=F[x]/p(x)</m>. Because <m>p(x)</m> is irreducible and <m>F[x]</m> is a PID, <m>(p(x))</m> is a maximal ideal. Thus <m>K = F[x]/(p(x))</m> is a field 
+        (See: [[Theorem – Prime, Maximal, Domain, Field|Theorem]]), <m>[K:F]=d</m>, and <m>x+p(x)</m> is a root of <m>p(x)</m> in <m>K</m> 
+        (See: [[Proposition – Properties of Extension Degrees|Proposition]]). Hence <m>p(x)</m> is no longer irreducible by 
+        Theorem 2.2.
+			</p>
+          </li>
+        </ol>
 			</p>
             </solution>
           
@@ -26934,11 +27723,14 @@
 
             <solution>
               <p>
-						First, suppose that <m>L=F(\a)</m>. As <m>L</m> is a Galois extension the minimum polynomial of <m>\a</m> in <m>F</m> splits completely into linear factors (See: [[Theorem – Galois Extension Equivalencies|Theorem]]). Thus <m>G</m> acts faithfully on the roots of <m>\mp_\a(x)</m>, which includes <m>\a</m> (See: [[Corollary – Automorphisms and Group Actions (Fields)|Corollary]]). Thus the images of <m>\a</m> under elements of <m>G</m> are distinct.
+						First, suppose that <m>L=F(\a)</m>. As <m>L</m> is a Galois extension the minimum polynomial of <m>\a</m> in <m>F</m> splits completely into linear factors 
+            (See: [[Theorem – Galois Extension Equivalencies|Theorem]]). Thus <m>G</m> acts faithfully on the roots of <m>\mp_\a(x)</m>, which includes <m>\a</m> 
+            (See: [[Corollary – Automorphisms and Group Actions (Fields)|Corollary]]). Thus the images of <m>\a</m> under elements of <m>G</m> are distinct.
 					</p>
 
 					<p>
-						Now suppose that the images of <m>\a</m> under elements of <m>G</m> are distinct, and suppose by way of contradiction that there exists some <m>\b\in L</m> that is not in <m>F(\a)</m>. Consider the intermediate field <m>F(\a,\b)</m>. By the [[Mathematics/Modern Algebra/Results/Theorem – Fundamental Theorem of Galois Theory|FTGT]] there exists a nontrivial subgroup of <m>G</m> whose elements fix elements of <m>F(\a,\b)</m>, including <m>\a</m>, a contradiction.
+						Now suppose that the images of <m>\a</m> under elements of <m>G</m> are distinct, and suppose by way of contradiction that there exists some <m>\b\in L</m> that is not in <m>F(\a)</m>. Consider the intermediate field <m>F(\a,\b)</m>. By the 
+            [[Mathematics/Modern Algebra/Results/Theorem – Fundamental Theorem of Galois Theory|FTGT]] there exists a nontrivial subgroup of <m>G</m> whose elements fix elements of <m>F(\a,\b)</m>, including <m>\a</m>, a contradiction.
 					</p>
             </solution>
           
@@ -26947,9 +27739,15 @@
           <problem><title>Problem 9</title>
             <statement>
               <p>
-					Let <m>p = x^6 + 3 \in \Q[x]</m>, and let <m>L</m> be its splitting field over <m>\Q</m>. Prove that if <m>\a</m> is a root of <m>p</m> then <m>L = \Q(\a)</m>. Hence (or otherwise) determine <m>[L : Q]</m>. (Hint: Consider the value of <m>\a_3</m>.)
+					Let <m>p = x^6 + 3 \in \Q[x]</m>, and let <m>L</m> be its splitting field over <m>\Q</m>. Prove that if <m>\a</m> is a root of <m>p</m> then <m>L = \Q(\a)</m>. Hence (or otherwise) determine <m>[L : Q]</m>.
 				</p>
             </statement>
+
+            <hint>
+              <p>
+                Hint: Consider the value of <m>\a_3</m>.
+              </p>
+            </hint>
 
             <solution>
               <p>
@@ -27008,19 +27806,30 @@
           </p>
 
           <p>
-            Part (a) The action is transitive, so there exists some <m>g\in G</m> such that <m>ga=b</m>.
-          </p>
 
-          <p>
+            <ol>
+              <li>
+                <p>
+                         The action is transitive, so there exists some <m>g\in G</m> such that <m>ga=b</m>.
+
+                </p>
+
+                <p>
             Let <m>x\in\Stab(a)</m>, consider <m>gxg\inv</m>b. Since <m>g\inv b=a</m>, we have <m>gxa</m>, <m>x</m> stabilizes <m>a</m> so now <m>ga</m>, but <m>ga=b</m>. So <m>g\Stab(a)g\inv\subseteq\Stab(b)</m>.
           </p>
 
           <p>
             Let <m>x\in\Stab(b)</m>. We know <m>xb=b</m> and also <m>ga=b</m>, and so <m>xga=ga</m>. Applying <m>g\inv</m> to both to see <m>g\inv xga=a</m>. This puts <m>g\inv xg\in\Stab(a)</m>. Thus <m>x\in g\Stab(a)g\inv</m>, completing the proof.
           </p>
+              </li>
 
-          <p>
-            Part (b) The action is transitive, so there is only one orbit, and so <m>\Orb(a)=\Orb(b)=G</m>. Since <m>G</m> is finite, the <xref text="title" ref="cor-orbit-stabilizer"/> tells us <m>|\Orb(a)|=|G|/|\Stab(a)|</m>. Since every orbit has the same order as <m>G</m>, we see <m>\Stab(a)=\{e\}</m> for all <m>a\in S</m>. Thus there cannot exist any fixed points.
+              <li>
+                <p>
+                     The action is transitive, so there is only one orbit, and so <m>\Orb(a)=\Orb(b)=G</m>. Since <m>G</m> is finite, the <xref text="title" ref="cor-orbit-stabilizer"/> tells us <m>|\Orb(a)|=|G|/|\Stab(a)|</m>. Since every orbit has the same order as <m>G</m>, we see <m>\Stab(a)=\{e\}</m> for all <m>a\in S</m>. Thus there cannot exist any fixed points.
+
+                </p>
+              </li>
+            </ol>
           </p>
             </solution>
           
@@ -27065,19 +27874,28 @@
 
             <solution>
               <p>
-             Part (a) Let <m>M</m> be a maximal ideal of <m>R</m>. We show that <m>R/M</m> is a field (See: [[Theorem – Prime, Maximal, Domain, Field|Theorem]]). By the [[Theorem – The Lattice Isomorphism Theorem|Lattice Isomorphism Theorem]] we know there is a one-to-one correspondence between the ideals of <m>R/M</m> and the ideals of <m>R</m> containing <m>M</m>. However, as <m>M</m> is maximal, the only ideals of <m>R</m> containing <m>M</m> are <m>R</m> and <m>M</m> itself, meaning that <m>R/M</m> has exactly two ideals, making <m>R/M</m> a field.
-          </p>
+                <ol>
+                  <li>
+                    <p>
+                      Let <m>M</m> be a maximal ideal of <m>R</m>. We show that <m>R/M</m> is a field 
+                      (See: [[Theorem – Prime, Maximal, Domain, Field|Theorem]]). By the 
+                      [[Theorem – The Lattice Isomorphism Theorem|Lattice Isomorphism Theorem]] we know there is a one-to-one correspondence between the ideals of <m>R/M</m> and the ideals of <m>R</m> containing <m>M</m>. However, as <m>M</m> is maximal, the only ideals of <m>R</m> containing <m>M</m> are <m>R</m> and <m>M</m> itself, meaning that <m>R/M</m> has exactly two ideals, making <m>R/M</m> a field.
 
-          <p>
-            We show that since <m>R/M</m> is a domain, <m>M</m> must be prime. (See: [[Theorem – Prime, Maximal, Domain, Field|Theorem]]). Suppose by way of contradiction that <m>M</m> is not prime, so exist elements <m>x,y\in R</m> such that <m>xy\in M</m> but neither <m>x</m> nor <m>y</m> are in <m>M</m>. Thus <m>xM\cdot yM=xyM=M</m>, making <m>x</m> and <m>y</m> zero-divisors in <m>R/M</m>, contradicting the fact that <m>R/M</m> is a field. Thus <m>M</m> is prime.
-          </p>
+                    </p>
 
-          <p>
-            Part (b)
+                    <p>
+            We show that since <m>R/M</m> is a domain, <m>M</m> must be prime. 
+            (See: [[Theorem – Prime, Maximal, Domain, Field|Theorem]]). Suppose by way of contradiction that <m>M</m> is not prime, so exist elements <m>x,y\in R</m> such that <m>xy\in M</m> but neither <m>x</m> nor <m>y</m> are in <m>M</m>. Thus <m>xM\cdot yM=xyM=M</m>, making <m>x</m> and <m>y</m> zero-divisors in <m>R/M</m>, contradicting the fact that <m>R/M</m> is a field. Thus <m>M</m> is prime.
           </p>
+                  </li>
 
-          <p>
-            Let <m>R</m> be a finite ring, and let <m>P</m> be a prime ideal in <m>R</m>. We show <m>R/P</m>, a finite integral domain, is a field (See: ) Let <m>a\not\in P</m>, and consider <m>a^n</m> for all <m>n\in\N</m>. As <m>R/P</m> is finite, there exists some <m>k&lt;m\in N</m> such that <m>a^k=a^m</m>. Then <m>a^{m-k}\cdot a^k=a^m=a^k</m>, meaning that <m>a^{m-k}=e</m>. Thus <m>a</m> has inverse <m>a^{m-k-1}</m>, making <m>a</m> a unit. Thus <m>R/P</m> is a field, making <m>P</m> a maximal ideal (See: [[Theorem – Prime, Maximal, Domain, Field|Theorem]])
+                  <li>
+                    <p>
+            Let <m>R</m> be a finite ring, and let <m>P</m> be a prime ideal in <m>R</m>. We show <m>R/P</m>, a finite integral domain, is a field. Let <m>a\not\in P</m>, and consider <m>a^n</m> for all <m>n\in\N</m>. As <m>R/P</m> is finite, there exists some <m>k&lt;m\in N</m> such that <m>a^k=a^m</m>. Then <m>a^{m-k}\cdot a^k=a^m=a^k</m>, meaning that <m>a^{m-k}=e</m>. Thus <m>a</m> has inverse <m>a^{m-k-1}</m>, making <m>a</m> a unit. Thus <m>R/P</m> is a field, making <m>P</m> a maximal ideal 
+            (See: [[Theorem – Prime, Maximal, Domain, Field|Theorem]])
+          </p>
+                  </li>
+                </ol>
           </p>
             </solution>
           
@@ -27103,11 +27921,11 @@
 
             <solution>
               <p>
-              Part (a)
+              Coming soon!
             </p>
 
             <p>
-              Part (b)
+              Coming soon!
             </p>
             </solution>
           
@@ -27130,7 +27948,9 @@
             </p>
 
             <p>
-              Note that <m>M</m> is generated by <m>e_i+IM</m> for <m>i\leq m</m>. Let <m>a_i\in R</m> and consider <m>\sum a_ie_i=0</m>. For this to be <m>0</m> we need it to be in <m>IM</m>, and thus all <m>a_i\in I</m>. So the set of <m>e_i</m> is a basis for <m>M/IM</m> with <m>m</m> elements. Likewise <m>N/IN</m> has a basis with <m>n</m> elements. As we are surjective, Rank<m>=n</m>, <m>\dim=m</m>. So by Rank-Nullity <m>\dim(\ker)=m-n</m> which is only positive with <m>m\geq n</m>.
+              Note that <m>M</m> is generated by <m>e_i+IM</m> for <m>i\leq m</m>. Let <m>a_i\in R</m> and consider <m>\sum a_ie_i=0</m>. For this to be <m>0</m> we need it to be in <m>IM</m>, and thus all <m>a_i\in I</m>. So the set of <m>e_i</m> is a basis for <m>M/IM</m> with <m>m</m> elements. Likewise <m>N/IN</m> has a basis with <m>n</m> elements. As we are surjective, Rank<m>=n</m>, <m>\dim=m</m>. So by 
+              Rank-Nullity 
+              <m>\dim(\ker)=m-n</m> which is only positive with <m>m\geq n</m>.
             </p>
             </solution>
           
@@ -27143,7 +27963,24 @@
           <problem><title>Problem 7</title>
             <statement>
               <p>
-            On canonical forms (a) Consider the <m>\Q[x]</m>-module <me>M=\frac{\Q[x]}{(x^4-1)}\oplus\frac{\Q[x]}{x^2(x-1)}</me> and let <m>V</m> the <m>\Q</m>-vector space obtained from <m>M</m> by restriction of scalars along the evident inclusion <m>\Q ⊆ \Q[x]</m> and let <m>t : V → V</m> be the <m>\Q</m>-linear transformation given as multiplication by <m>x</m>. Find, with justification, the rational canonical form of <m>t</m>. (b) Consider the <m>\C[x]</m>-module <me>N=\frac{\C[x]}{(x^4-1)}\oplus\frac{\Q[x]}{x^2(x-1)}</me>and let <m>W</m> the <m>\C</m>-vector space obtained from <m>N</m> by restriction of scalars along <m>\C ⊆ \C[x]</m> and let <m>t : W → W</m> be the <m>\C</m>-linear transformation given as multiplication by <m>x</m>. Find, with justification, the Jordan canonical form of <m>t</m>.
+            On canonical forms 
+            <ol>
+              <li>
+                <p>
+                   Consider the <m>\Q[x]</m>-module 
+                   <me>M=\frac{\Q[x]}{(x^4-1)}\oplus\frac{\Q[x]}{x^2(x-1)}</me> 
+                   and let <m>V</m> the <m>\Q</m>-vector space obtained from <m>M</m> by restriction of scalars along the evident inclusion <m>\Q ⊆ \Q[x]</m> and let <m>t : V → V</m> be the <m>\Q</m>-linear transformation given as multiplication by <m>x</m>. Find, with justification, the rational canonical form of <m>t</m>. 
+                </p>
+              </li>
+
+               <li>
+                <p>
+                  Consider the <m>\C[x]</m>-module 
+                  <me>N=\frac{\C[x]}{(x^4-1)}\oplus\frac{\Q[x]}{x^2(x-1)}</me>
+                  and let <m>W</m> the <m>\C</m>-vector space obtained from <m>N</m> by restriction of scalars along <m>\C ⊆ \C[x]</m> and let <m>t : W → W</m> be the <m>\C</m>-linear transformation given as multiplication by <m>x</m>. Find, with justification, the Jordan canonical form of <m>t</m>.
+                </p>
+              </li>
+            </ol>
           </p>
             </statement>
 
@@ -27162,11 +27999,15 @@
 
             <solution>
               <p>
-              Let <m>f (x) = x^p-5 \in \Q[x]</m> where <m>p</m> is an odd prime, and let <m>L</m> be the splitting field of <m>f (x)</m> over <m>\Q</m>. Using Eisenstein's Criterion with <m>p=5</m> we see that <m>f</m> is irreducible in <m>\Q[x]</m>. Notice that <m>\sqrt[p]5</m> is a root of this polynomial. As <m>f</m> is monic and irreducible it is the minimum polynomial of <m>\sqrt[p]5</m>, and thus <m>[\Q(\sqrt[p]5):\Q]=p</m>. Let <m>\z</m> be a primitive <m>p\th</m> root of unity. Notice that <m>\z</m> is a root of the <m>(p-1)\th</m> cyclotomic polynomial, <m>g(x)</m>, which is irreducible in <m>\Q[x]</m> by the Gospel of Mark.
+              Let <m>f (x) = x^p-5 \in \Q[x]</m> where <m>p</m> is an odd prime, and let <m>L</m> be the splitting field of <m>f (x)</m> over <m>\Q</m>. Using 
+              Eisenstein's Criterion 
+              with <m>p=5</m> we see that <m>f</m> is irreducible in <m>\Q[x]</m>. Notice that <m>\sqrt[p]5</m> is a root of this polynomial. As <m>f</m> is monic and irreducible it is the minimum polynomial of <m>\sqrt[p]5</m>, and thus <m>[\Q(\sqrt[p]5):\Q]=p</m>. Let <m>\z</m> be a primitive <m>p\th</m> root of unity. Notice that <m>\z</m> is a root of the <m>(p-1)\th</m> cyclotomic polynomial, <m>g(x)</m>, which is irreducible in <m>\Q[x]</m> by the Gospel of Mark.
             </p>
 
             <p>
-              As <m>L</m> is the splitting field of <m>g</m>, there exists a root <m>\a</m> of <m>g\in L</m>. Consider <m>\Q(\sqrt[p]5,\a)</m>. As <m>\a</m> is algebraic in <m>\Q(\sqrt[p]5,\a)</m> we know there exists some unique irreducible minimal polynomial <m>h</m> of degree <m>q</m>, and thus that <m>[\Q(\sqrt[p]5,\a):\Q(\sqrt[p]5)]=q</m>. By the Degree Formula we see <me>[\Q(\sqrt[p]5,\a):\Q]=[\Q(\sqrt[p]5,\a):\Q(\sqrt[p]5][\Q(\sqrt[p]5:\Q]=pq.</me>However, <m>[\Q(\sqrt[p]5,\a):\Q]=[\Q(\sqrt[p]5,\a):\Q(\a)][\Q(\a):\Q]</m> and so <m>pq=(p-1)m</m> for some <m>m\in\Z</m>, so <m>(p-1)|pq</m>. As <m>\gcd((p-1),p)=1</m> we must have <m>(p-1)|q</m>. But <m>q</m> was defined to be the degree of <m>h</m>, which divides <m>g</m>. As <m>(p-1)|q</m> and <m>q\leq (p-1)</m>, we see that <m>(p-1)=q</m>, so <m>g=kh</m> for some <m>k\in \Q</m>. As irreducible polynomials multiplied by a constant are still irreducible, we see that <m>g</m> is indeed irreducible in <m>\Q(\sqrt[p]5)</m>.
+              As <m>L</m> is the splitting field of <m>g</m>, there exists a root <m>\a</m> of <m>g\in L</m>. Consider <m>\Q(\sqrt[p]5,\a)</m>. As <m>\a</m> is algebraic in <m>\Q(\sqrt[p]5,\a)</m> we know there exists some unique irreducible minimal polynomial <m>h</m> of degree <m>q</m>, and thus that <m>[\Q(\sqrt[p]5,\a):\Q(\sqrt[p]5)]=q</m>. By the 
+              Degree Formula 
+              we see <me>[\Q(\sqrt[p]5,\a):\Q]=[\Q(\sqrt[p]5,\a):\Q(\sqrt[p]5][\Q(\sqrt[p]5:\Q]=pq.</me>However, <m>[\Q(\sqrt[p]5,\a):\Q]=[\Q(\sqrt[p]5,\a):\Q(\a)][\Q(\a):\Q]</m> and so <m>pq=(p-1)m</m> for some <m>m\in\Z</m>, so <m>(p-1)|pq</m>. As <m>\gcd((p-1),p)=1</m> we must have <m>(p-1)|q</m>. But <m>q</m> was defined to be the degree of <m>h</m>, which divides <m>g</m>. As <m>(p-1)|q</m> and <m>q\leq (p-1)</m>, we see that <m>(p-1)=q</m>, so <m>g=kh</m> for some <m>k\in \Q</m>. As irreducible polynomials multiplied by a constant are still irreducible, we see that <m>g</m> is indeed irreducible in <m>\Q(\sqrt[p]5)</m>.
             </p>
 
             <p>
@@ -27200,20 +28041,37 @@
             </p>
 
             <p>
-              Part (a) Let <m>A</m> denote the set of all subspaces of <m>V</m> such that <m>A\cap W=\{0\}</m>. We can order <m>A</m> with respect to inclusion. Let <m>X</m> be a totally ordered subset of <m>A</m>, and let <m>B</m> be the union of all the elements in <m>X</m>. Unions of subspaces are subspaces, and by DeMorgan's Laws we see that <m>B\cap W=\{0\}</m>. Thus by Zorn's Lemma there exists a maximal element of <m>A,</m> which we denote <m>U</m>. So <m>U\cap W=\{0\}</m> by definition.
-            </p>
+              <ol>
+                <li>
+                  <p>
+                          Let <m>A</m> denote the set of all subspaces of <m>V</m> such that <m>A\cap W=\{0\}</m>. We can order <m>A</m> with respect to inclusion. Let <m>X</m> be a totally ordered subset of <m>A</m>, and let <m>B</m> be the union of all the elements in <m>X</m>. Unions of subspaces are subspaces, and by 
+                          DeMorgan's Laws 
+                          we see that <m>B\cap W=\{0\}</m>. Thus by 
+                          Zorn's Lemma 
+                          there exists a maximal element of <m>A,</m> which we denote <m>U</m>. So <m>U\cap W=\{0\}</m> by definition.
 
-            <p>
+                  </p>
+
+                  <p>
               Suppose by way of contradiction there exists some <m>x\in V</m> such that <m>x\not\in U+W</m>.
             </p>
 
             <p>
               Consider <m>U+Vx</m>. As <m>x\not\in W</m>, <m>vx\not\in W</m> for all <m>v\in V</m>, as we could just multiply by <m>v\inv</m>. Thus <m>W\cap U+Vx=\{0\}</m> and <m>U\subsetneq U+Vx</m>, a contradiction, as <m>U</m> was maximal. Thus <m>U</m> is a complement of <m>W</m>.
             </p>
+                </li>
 
-            <p>
-              Part (b) The Second Isomorphism Theorem tells us that <m>U+W/W\cong U/(U\cap W)</m>. We also know that <me>\dim(U)-\dim(U\cap W)=\dim(U/U\cap W)=\dim(U+W/W)=\dim(U+W)-\dim(W).</me> Put succinctly, <me>\dim(U)-\dim(U\cap W)=\dim(U+W)-\dim(W),</me> and thus <me>\dim(U)+\dim(W)=\dim(U+W)+\dim(U\cap W).</me> As <m>U\cap W=\{0\}</m>, we see that <m>\dim_F(V)=\dim_F(W)+\dim_F(U)</m>.
+                <li>
+                  <p>
+                         The 
+                         Second Isomorphism Theorem 
+                         tells us that <m>U+W/W\cong U/(U\cap W)</m>. We also know that <me>\dim(U)-\dim(U\cap W)=\dim(U/U\cap W)=\dim(U+W/W)=\dim(U+W)-\dim(W).</me> Put succinctly, <me>\dim(U)-\dim(U\cap W)=\dim(U+W)-\dim(W),</me> and thus <me>\dim(U)+\dim(W)=\dim(U+W)+\dim(U\cap W).</me> As <m>U\cap W=\{0\}</m>, we see that <m>\dim_F(V)=\dim_F(W)+\dim_F(U)</m>.
+
+                  </p>
+                </li>
+              </ol>
             </p>
+
             </solution>
           
           </problem>
@@ -27227,27 +28085,51 @@
           <problem><title>Problem 1</title>
             <statement>
               <p>
-            Let <m>p</m> be a prime. (a) Prove that every group of order <m>p^2</m> is abelian. (Provide as many details as you can, but you may use main theorems – such as <xref text="title" ref="thm-lagrange"/> or the <xref text="title" ref="thm-class-eq"/> – without proof.) (b) Prove that there exists a non-abelian group of order <m>p^3</m> for any prime <m>p</m>. (You may use facts about automorphism groups here without proof, although they should be clearly stated.)
-          </p>
+                Let <m>p</m> be a prime. 
+                <ol>
+                  <li>
+                    <p>
+                      Prove that every group of order <m>p^2</m> is abelian. (Provide as many details as you can, but you may use main theorems - such as <xref text="title" ref="thm-lagrange"/> or the <xref text="title" ref="thm-class-eq"/> - without proof.) 
+                    </p>
+                  </li>
+
+                   <li>
+                    <p>
+                      Prove that there exists a non-abelian group of order <m>p^3</m> for any prime <m>p</m>. (You may use facts about automorphism groups here without proof, although they should be clearly stated.)
+                    </p>
+                  </li>
+                </ol>
+              </p>
             </statement>
 
             <solution>
               <p>
-            Part (a) Show the center is non-trivial, and thus has order <m>p</m> or <m>p^2</m>. If <m>p^2</m> then <m>Z(G)=G</m> and we're done. If <m>|Z(G)|=p</m>, then the <xref text="title" ref="thm-class-eq"/> tells us <m>p^2=p+\sum[G:C_G(g)]</m>. Since <m>|G|=p^2</m>, <m>C_G(g)=1,p</m> for each <m>g\not\in Z(G)</m>. But there are <m>p</m> elements, so there is only one conjugacy class for these elements. But since <m>g\not\in Z(G)</m> there exists some <m>x\in G</m> such that <m>gx\neq xg</m>, and thus <m>xgx\inv\neq g</m>. Since <m>x</m> is not in the center and <m>x</m> is not in the conjugacy class of <m>g</m>, we have a contradiction.
-          </p>
+                <ol>
+                  <li>
+                    <p>
+                      Show the center is non-trivial, and thus has order <m>p</m> or <m>p^2</m>. If <m>p^2</m> then <m>Z(G)=G</m> and we're done. If <m>|Z(G)|=p</m>, then the <xref text="title" ref="thm-class-eq"/> tells us <m>p^2=p+\sum[G:C_G(g)]</m>. Since <m>|G|=p^2</m>, <m>C_G(g)=1,p</m> for each <m>g\not\in Z(G)</m>. But there are <m>p</m> elements, so there is only one conjugacy class for these elements. But since <m>g\not\in Z(G)</m> there exists some <m>x\in G</m> such that <m>gx\neq xg</m>, and thus <m>xgx\inv\neq g</m>. Since <m>x</m> is not in the center and <m>x</m> is not in the conjugacy class of <m>g</m>, we have a contradiction.
+                      Alternatively, <m>G/Z(G)</m> has <m>p</m> elements, making it cyclic.
+                    </p>
+                  </li>
 
-          <p>
-            Alternatively, <m>G/Z(G)</m> has <m>p</m> elements, making it cyclic.
-          </p>
+                  <li>
+                    <p>
+                      Consider <m>H=C_p</m> and <m>K=C_{p^2}</m> and the external semidirect product <m>H\sdp_\rho K</m>, where <m>\rho: K\to\Aut(H)</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
 
-          <p>
-            Part (b) Consider <m>H=C_p</m> and <m>K=C_{p^2}</m>. Consider the external semidirect product <m>H\sdp_\rho K</m>, where <m>\rho: K\to\Aut(H)</m>.
-          </p>
+              <p>
+              </p>
+
+              <p>
+              </p>
             </solution>
           
           </problem>
 
-          <problem><title>Problem 2</title>
+          <problem><title>Problem 2 (*)</title>
             <statement>
               <p>
             Let <m>G</m> be a group of order <m>2m</m> for some odd integer <m>m &gt; 1</m>. Let <m>\Perm(G)</m> be the group of permutations on the elements of <m>G</m> (i.e., the group of bijective functions from G to G). You may use without proof that <m>\Perm(G)\cong S_{2m}</m>.
@@ -27278,26 +28160,45 @@
           <problem><title>Problem 3</title>
             <statement>
               <p>
-            Let <m>G</m> be a finite group and <m>p</m> a prime dividing the order of <m>G</m>. Let P be a Sylow <m>p</m>-subgroup. (a) Suppose <m>Q</m> is a Sylow <m>p</m>-subgroup distinct from <m>P</m>. Prove that <m>PQ</m> is not a subgroup of <m>G</m>. (Recall that <m>PQ = {pq | p ∈ P, q ∈ Q}</m>.) (b) Prove that <m>N_G(P ) = N_G(N_G(P ))</m> where <m>N_G(H)</m> denotes the normalizer in <m>G</m> of a subgroup <m>H</m>.
-          </p>
+                Let <m>G</m> be a finite group and <m>p</m> a prime dividing the order of <m>G</m>. Let P be a Sylow <m>p</m>-subgroup. 
+                  <ol>
+                    <li>
+                      <p>
+                        Suppose <m>Q</m> is a Sylow <m>p</m>-subgroup distinct from <m>P</m>. Prove that <m>PQ</m> is not a subgroup of <m>G</m>. (Recall that <m>PQ = {pq | p ∈ P, q ∈ Q}</m>.) 
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Prove that <m>N_G(P ) = N_G(N_G(P))</m> where <m>N_G(H)</m> denotes the normalizer in <m>G</m> of a subgroup <m>H</m>.
+                      </p>
+                    </li>
+                  </ol>
+              </p>
             </statement>
 
             <solution>
               <p>
-             Let <m>G</m> be a finite group and <m>p</m> a prime dividing the order of <m>G</m>. Let P be a Sylow <m>p</m>-subgroup.
-          </p>
+                Let <m>G</m> be a finite group and <m>p</m> a prime dividing the order of <m>G</m>. Let <m>P</m> be a Sylow <m>p</m>-subgroup.
 
-          <p>
-            Part (a) We proceed via the contrapositive. Let <m>Q</m> be a Sylow <m>p</m>-subgroup, and suppose <m>PQ\leq G</m>. Thus <m>|PG|\big||G|</m>
-          </p>
+                <ol>
+                  <li>
+                    <p>
+                      We proceed via the contrapositive. Let <m>Q</m> be a Sylow <m>p</m>-subgroup, and suppose <m>PQ\leq G</m>. Thus <m>|PG|\big||G|</m>
+                    </p>
 
-          <p>
-            Note that <m>P</m> and <m>Q</m> both have <m>p^k</m> elements, where <m>p^k</m> is the largest power of <m>p</m> that divides the order of <m>G</m>. Recall <m>|PQ|=\frac{|P||Q|}{|P\cap Q|}=\frac{p^{2k}}{|P\cap Q|}</m>. As <m>p^k</m> is the largest power of <m>p</m> that divides the order of <m>G</m>, we see that <m>|P\cap Q|</m> must be at least <m>p^k</m>. Thus <m>P=Q</m>.
-          </p>
+                    <p>
+                      Note that <m>P</m> and <m>Q</m> both have <m>p^k</m> elements, where <m>p^k</m> is the largest power of <m>p</m> that divides the order of <m>G</m>. Recall <m>|PQ|=\frac{|P||Q|}{|P\cap Q|}=\frac{p^{2k}}{|P\cap Q|}</m>. As <m>p^k</m> is the largest power of <m>p</m> that divides the order of <m>G</m>, we see that <m>|P\cap Q|</m> must be at least <m>p^k</m>. Thus <m>P=Q</m>.
+                    </p>
+                  </li>
 
-          <p>
-            Part (b) First, note that <m>P\leq N_{G}(P)\leq N_G(N_G(P))</m>. Note that <m>N_G(P)</m> is the largest subgroup of <m>G</m> such that <m>P</m> is normal in <m>G</m>, making <m>P</m> the only Sylow <m>p</m>-subgroup of <m>N_G(P)</m>. Let <m>x\in N_G(N_G(P))</m>. Notice that <m>xPx\inv\leq xN_G(P)x\inv</m>, but as <m>x\in N_G(N_G(P))</m> we have <m>xN_G(P)x\inv=N_G(P)</m>. As <m>xPx\inv</m> is a Sylow <m>p</m>-subgroup that is contained in <m>N_G(P)</m>, we see that <m>xPx\inv=P</m>, placing <m>x\in N_G(P)</m>. Thus <m>N_G(P)=N_G(N_G(P))</m>. ## Section II: Ring Theory and Module theory Solve two of the following three problems.
-          </p>
+                  <li>
+                    <p>
+                      First, note that <m>P\leq N_{G}(P)\leq N_G(N_G(P))</m>. Note that <m>N_G(P)</m> is the largest subgroup of <m>G</m> such that <m>P</m> is normal in <m>G</m>, making <m>P</m> the only Sylow <m>p</m>-subgroup of <m>N_G(P)</m>. Let <m>x\in N_G(N_G(P))</m>. Notice that <m>xPx\inv\leq xN_G(P)x\inv</m>, but as <m>x\in N_G(N_G(P))</m> we have <m>xN_G(P)x\inv=N_G(P)</m>. As <m>xPx\inv</m> is a Sylow <m>p</m>-subgroup that is contained in <m>N_G(P)</m>, we see that <m>xPx\inv=P</m>, placing <m>x\in N_G(P)</m>. Thus <m>N_G(P)=N_G(N_G(P))</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
             </solution>
           
           </problem>
@@ -27309,8 +28210,8 @@
           <problem><title>Problem 4</title>
             <statement>
               <p>
-            Let <m>R</m> be a commutative ring with identity, and assume <m>1\neq0</m>. Let <m>I</m> and <m>J</m> be ideals such that <m>I + J = R</m>.
-          </p>
+                Let <m>R</m> be a commutative ring with identity, and assume <m>1\neq0</m>. Let <m>I</m> and <m>J</m> be ideals such that <m>I + J = R</m>.
+              </p>
 
           <p><ol>
             <li>
@@ -27326,44 +28227,48 @@
 
             <solution>
               <p>
-             Let <m>R</m> be a commutative ring with identity, and assume <m>1\neq0</m>. Let <m>I</m> and <m>J</m> be ideals such that <m>I + J = R</m>.
-          </p>
+                Let <m>R</m> be a commutative ring with identity, and assume <m>1\neq0</m>. Let <m>I</m> and <m>J</m> be ideals such that <m>I + J = R</m>.
+              </p>
 
-          <p>
-            Part (a) First, note that both <m>IJ</m> and <m>I\cap J</m> are ideals (See: [[Modern Algebra#Proposition – <m>I+J, I cap J, IJ, bigcap_{ a in J} I_ a</m> all Ideals|Proposition]]).
-          </p>
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      Let <m>x\in IJ</m>. Thus <m>x=\sum a_ib_j</m>, where each <m>a_i\in I</m> and <m>b_j\in J</m>. As <m>I</m> and <m>J</m> are both ideals, each term in this sum is contained both in <m>I</m> and <m>J</m>. Thus, by absorption, <m>x\in I\cap J</m>. Hence <m>IJ\subseteq I\cap J</m>.
+                    </p>
 
-          <p>
-            Let <m>x\in IJ</m>. Thus <m>x=\sum a_ib_j</m>, where each <m>a_i\in I</m> and <m>b_j\in J</m>. As <m>I</m> and <m>J</m> are both ideals, each term in this sum is contained both in <m>I</m> and <m>J</m>. Thus, by absorption, <m>x\in I\cap J</m>. Hence <m>IJ\subseteq I\cap J</m>.
-          </p>
+                    <p>
+                      Let <m>x\in I\cap J</m>. Thus <m>x\in I</m> and <m>x\in J</m>. Note that as <m>I+J=R</m>, there exists some <m>a\in I</m> and <m>b\in J</m> such that <m>a+b=1</m>. So <m>x=x1=xa+xb</m>. As <m>x\in I\cap J</m> we see that <m>x=ax+xb</m>, with <m>a,x\in I</m> and <m>b,x\in J</m>. Thus <m>x\in IJ</m>, yielding <m>IJ=I\cap J</m>.
+                    </p>
+                  </li>
 
-          <p>
-            Let <m>x\in I\cap J</m>. Thus <m>x\in I</m> and <m>x\in J</m>. Note that as <m>I+J=R</m>, there exists some <m>a\in I</m> and <m>b\in J</m> such that <m>a+b=1</m>. So <m>x=x1=xa+xb</m>. As <m>x\in I\cap J</m> we see that <m>x=ax+xb</m>, with <m>a,x\in I</m> and <m>b,x\in J</m>. Thus <m>x\in IJ</m>, yielding <m>IJ=I\cap J</m>.
-          </p>
+                  <li>
+                    <p>
+                      Let <m>f:R\to R/I\times R/J</m> be defined by <m>f(x)=(x+I,x+J)</m>.
+                    </p>
 
-          <p>
-            Part (b)
-          </p>
+                    <p>
+                      Notice that if <m>x\in I\cap J</m>, we have <m>f(x)=(I,J)</m>, and so <m>x\in\ker(f)</m>. Let <m>x\in\ker(f)</m>. Thus <m>x+I=I</m> and <m>x+J=J</m>, and so <m>x\in I</m> and <m>x\in J</m>. Hence <m>x\in I\cap J</m>, and so <m>\ker(f)=I\cap J</m>.
+                    </p>
 
-          <p>
-            Let <m>f:R\to R/I\times R/J</m> be defined by <m>f(x)=(x+I,x+J)</m>.
-          </p>
+                    <p>
+                      Observe <me>f(x+y)=((x+y)+I,(x+y)+J)=((x+I)+(y+I),(x+J)+(y+J))=((x+I),(x+J))+(y+I),(y+J))=f(x)+f(y),</me> making <m>f</m> a homomorphism of rings.
+                    </p>
 
-          <p>
-            Notice that if <m>x\in I\cap J</m>, we have <m>f(x)=(I,J)</m>, and so <m>x\in\ker(f)</m>. Let <m>x\in\ker(f)</m>. Thus <m>x+I=I</m> and <m>x+J=J</m>, and so <m>x\in I</m> and <m>x\in J</m>. Hence <m>x\in I\cap J</m>, and so <m>\ker(f)=I\cap J</m>.
-          </p>
+                    <p>
+                      Let <m>(a+I,b+J)\in R/I\times R/J</m>. As <m>R=I+J</m>, we can write <m>a</m> and <m>b</m> as <m>a_i+a_j</m> and <m>b_i+b_j</m>. However, as <m>a_i\in I</m> and <m>b_j\in J</m>, we have <m>(a+I,b+J)=(a_j+I, b_i+J)</m>.
+                    </p>
 
-          <p>
-            Observe <me>f(x+y)=((x+y)+I,(x+y)+J)=((x+I)+(y+I),(x+J)+(y+J))=((x+I),(x+J))+(y+I),(y+J))=f(x)+f(y),</me> making <m>f</m> a homomorphism of rings.
-          </p>
-
-          <p>
-            Let <m>(a+I,b+J)\in R/I\times R/J</m>. As <m>R=I+J</m>, we can write <m>a</m> and <m>b</m> as <m>a_i+a_j</m> and <m>b_i+b_j</m>. However, as <m>a_i\in I</m> and <m>b_j\in J</m>, we have <m>(a+I,b+J)=(a_j+I, b_i+J)</m>.
-          </p>
-
-          <p>
-            Consider the element <m>x=(a_j+b_i)\in R</m>, and observe <me>f(x)=f(a_j+b_i)=(a_j+b_i+I, b_i+a_j+J).</me>However, as <m>b_i\in I</m> and <m>a_j\in J</m>, we see <me>(a_j+b_i+I, b_i+a_j+J)=(a_j+I,b_i+J)=(a+I,b+J).</me> Thus <m>f</m> is a surjective homomorphism. Hence, by the First Isomorphism Theorem, we see <m>R/(I \cap J)\cong R/I \times R/J</m>.
-          </p>
+                    <p>
+                      Consider the element <m>x=(a_j+b_i)\in R</m>, and observe 
+                      <me>f(x)=f(a_j+b_i)=(a_j+b_i+I, b_i+a_j+J).</me>
+                      However, as <m>b_i\in I</m> and <m>a_j\in J</m>, we see 
+                      <me>(a_j+b_i+I, b_i+a_j+J)=(a_j+I,b_i+J)=(a+I,b+J).</me> 
+                      Thus <m>f</m> is a surjective homomorphism. Hence, by the <xref text="title" ref="thm-fit-group"/>, we see <m>R/(I \cap J)\cong R/I \times R/J</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
             </solution>
           
           </problem>
@@ -27371,29 +28276,37 @@
           <problem><title>Problem 5</title>
             <statement>
               <p>
-            Let <m>R</m> be a non-zero, unital ring, and let <m>R^m</m> and <m>R^n</m> be the standard free left <m>R</m>-modules of finite rank <m>m</m> and <m>n</m>. Assume there is an isomorphism of <m>R</m>-modules <m>R^m \cong R^n.</m>
-          </p>
+                Let <m>R</m> be a non-zero, unital ring, and let <m>R^m</m> and <m>R^n</m> be the standard free left <m>R</m>-modules of finite rank <m>m</m> and <m>n</m>. Assume there is an isomorphism of <m>R</m>-modules <m>R^m \cong R^n.</m>
+              </p>
 
-          <p><ol>
-            <li>
-            Prove that if <m>R</m> is commutative then <m>m = n</m>. You may assume without justification that this holds in the special case when <m>R</m> is a field.
-            </li>
+              <p><ol>
+                <li>
+                Prove that if <m>R</m> is commutative then <m>m = n</m>. You may assume without justification that this holds in the special case when <m>R</m> is a field.
+                </li>
 
-            <li>
-            Show, by example, than <m>m</m> need not equal <m>n</m> if <m>R</m> is not assumed to be commutative.
-            </li>
+                <li>
+                Show, by example, than <m>m</m> need not equal <m>n</m> if <m>R</m> is not assumed to be commutative.
+                </li>
 
-          </ol></p>
+              </ol></p>
             </statement>
 
             <solution>
               <p>
-              Part (a) Let <m>I</m> be a maximal ideal in <m>R</m> and consider the residue field <m>R/I</m>. As <m>R^m\cong R^n</m>, we can tensor both sides to see <m>R^m\tensor I\cong R^n\tensor I</m>, and so <m>R^m/IR^m\cong R^n/IR^n</m>. As both of these are finitely dimensional vector spaces, they must have the same rank, and thus <m>m=n</m>.
-            </p>
+                <ol>
+                  <li>
+                    <p>
+                      Let <m>I</m> be a maximal ideal in <m>R</m> and consider the residue field <m>R/I</m>. As <m>R^m\cong R^n</m>, we can tensor both sides to see <m>R^m\tensor I\cong R^n\tensor I</m>, and so <m>R^m/IR^m\cong R^n/IR^n</m>. As both of these are finitely dimensional vector spaces, they must have the same rank, and thus <m>m=n</m>.
+                    </p>
+                  </li>
 
-            <p>
-              Part (b)
-            </p>
+                  <li>
+                    <p>
+                      Coming soon!
+                    </p>
+                  </li>
+                </ol>
+              </p>
             </solution>
           
           </problem>
@@ -27401,18 +28314,18 @@
           <problem><title>Problem 6</title>
             <statement>
               <p>
-            Find all the ideals of <m>\Z[x]</m> that contain <m>(6, x^2 + x + 1)</m>, the ideal of <m>\Z[x]</m> generated by <m>6</m> and <m>x^2 + x + 1</m>. For each such ideal, give an explicit list of generators, and determine whether the ideal is prime, maximal, or neither.
-          </p>
+                Find all the ideals of <m>\Z[x]</m> that contain <m>(6, x^2 + x + 1)</m>, the ideal of <m>\Z[x]</m> generated by <m>6</m> and <m>x^2 + x + 1</m>. For each such ideal, give an explicit list of generators, and determine whether the ideal is prime, maximal, or neither.
+              </p>
             </statement>
 
             <solution>
               <p>
-              First, notice that <m>x^2+x+1</m> is irreducible in <m>\Z[x]</m> as it is a cyclotomic polynomial. Thus the possibilities are the following: - <m>I=(3,x^2+x+1)</m>, - <m>J=(2,x^2+x+1)</m>, - <m>L=(6,x^2+x+1)</m>, - <m>\Z[x]</m>. Notice that <m>\Z[x]=(1)</m>, which is neither prime nor maximal, as those ideals must be proper. The ideal <m>L</m> is not maximal as it is contained in both <m>I</m> and <m>J</m>, nor is it prime, given that <m>3\cdot2\in L</m> but neither <m>3</m> nor <m>2</m> are in <m>L</m>.
-            </p>
+                First, notice that <m>x^2+x+1</m> is irreducible in <m>\Z[x]</m> as it is a cyclotomic polynomial. Thus the possibilities are the following: - <m>I=(3,x^2+x+1)</m>, - <m>J=(2,x^2+x+1)</m>, - <m>L=(6,x^2+x+1)</m>, - <m>\Z[x]</m>. Notice that <m>\Z[x]=(1)</m>, which is neither prime nor maximal, as those ideals must be proper. The ideal <m>L</m> is not maximal as it is contained in both <m>I</m> and <m>J</m>, nor is it prime, given that <m>3\cdot2\in L</m> but neither <m>3</m> nor <m>2</m> are in <m>L</m>.
+              </p>
 
-            <p>
-              Both <m>I</m> and <m>J</m> are generated with irreducible elements, making them irreducible ideals and thus maximal.
-            </p>
+              <p>
+                Both <m>I</m> and <m>J</m> are generated with irreducible elements, making them irreducible ideals and thus maximal.
+              </p>
             </solution>
           
           </problem>
@@ -27424,31 +28337,36 @@
           <problem><title>Problem 7</title>
             <statement>
               <p>
-            Suppose <m>F</m> is any field. Recall that a square matrix <m>A</m> with entries in <m>F</m> is nilpotent if <m>A^j = 0</m> for some positive integer j.
-          </p>
+                Suppose <m>F</m> is any field. Recall that a square matrix <m>A</m> with entries in <m>F</m> is nilpotent if <m>A^j = 0</m> for some positive integer j.
+              </p>
 
-          <p><ol>
-            <li>
-            Prove that if <m>A\in Mat_{n\times n}(F)</m> and <m>A</m> is nilpotent, then <m>A^n = 0</m>.
-            </li>
+              <p><ol>
+                <li>
+                Prove that if <m>A\in Mat_{n\times n}(F)</m> and <m>A</m> is nilpotent, then <m>A^n = 0</m>.
+                </li>
 
-            <li>
-            Find, with justification, the number of similarity classes of <m>5 \times 5</m> nilpotent matrices with entries in <m>F</m>.
-            </li>
+                <li>
+                Find, with justification, the number of similarity classes of <m>5 \times 5</m> nilpotent matrices with entries in <m>F</m>.
+                </li>
 
-          </ol></p>
+              </ol></p>
             </statement>
 
             <solution>
               <p>
-             Let <m>F</m> be a field.
-          </p>
+                Let <m>F</m> be a field.
+              </p>
 
           <p>
-            Part (a) Midterm problem, needs fleshing out
-          </p>
+            <ol>
+              <li>
+                <p>
+                  Coming soon!
+                </p>
+              </li>
 
-          <p>
+              <li>
+                <p>
             Part (b) Let <m>A</m> be a nilpotent <m>5\times 5</m> matrix. There exists some <m>m\in\N</m> such that <m>A^m=0</m>. Let <m>\lambda</m> be an eigenvalue of <m>A</m>, and so <m>\lambda^m</m> is an eigenvalue for <m>A^m=0</m>. As <m>F</m> is a field and thus an integral domain, we see that <m>\lambda^n=0</m> implies that <m>\lambda=0</m> as well.
           </p>
 
@@ -27459,6 +28377,11 @@
           <p>
             The possible invariant factors involving <m>x^5</m> are 1. <m>\{x,x,x,x,x\}</m>, 2. <m>\{x,x,x,x^2\}</m>, 3. <m>\{x,x,x^3\}</m>, 4. <m>\{x,x^2,x^2\}</m>, 5. <m>\{x,x^4\}</m> 6. <m>\{x^2,x^3\}</m> 7. <m>\{x^5\}</m> However, in the first case the rank of <m>A</m> would be <m>5</m>, making it invertible, contradicting the fact that 0 is an eigenvalue of <m>A</m>. Thus we need only consider the latter cases.
           </p>
+              </li>
+            </ol>
+          </p>
+
+          
             </solution>
           
           </problem>
@@ -27466,7 +28389,20 @@
           <problem><title>Problem 8</title>
             <statement>
               <p>
-            Let <m>L</m> be the splitting field over <m>\Q</m> of the polynomial <m>f(x) = x^5 + 2 \in \Q[x].</m> (a) Find, with justification, <m>[L : \Q]</m>. (b) Note that <m>w=-\sqrt[5]{2}</m> (where <m>\sqrt[5]{2}</m> is the unique positive, real fifth root of <m>2</m>) is one of the roots of <m>f (x)</m>. Prove <m>\Aut(\Q(w)/\Q)</m> is the trivial group.
+            Let <m>L</m> be the splitting field over <m>\Q</m> of the polynomial <m>f(x) = x^5 + 2 \in \Q[x].</m> 
+            <ol>
+              <li>
+                <p>
+                  Find, with justification, <m>[L : \Q]</m>. 
+                </p>
+              </li>
+
+               <li>
+                <p>
+                  Note that <m>w=-\sqrt[5]{2}</m> (where <m>\sqrt[5]{2}</m> is the unique positive, real fifth root of <m>2</m>) is one of the roots of <m>f (x)</m>. Prove <m>\Aut(\Q(w)/\Q)</m> is the trivial group.
+                </p>
+              </li>
+            </ol>
           </p>
             </statement>
 
@@ -27476,19 +28412,58 @@
           </p>
 
           <p>
-            Part (a) Note that <m>f</m> is irreducible in <m>\Q[x]</m> by Eisenstein's Criterion (<m>p=2</m>). The roots of <m>f</m> are 1. <m>\a_1=\sqrt[5]{2}e^{\pi i/5}</m> 2. <m>\a_2=\sqrt[5]{2}e^{3\pi i/5}</m> 3. <m>\a_3=\sqrt[5]{2}e^{5\pi i/5}=-\sqrt[5]{2}</m> 4. <m>\a_4=\sqrt[5]{2}e^{7\pi i/5}</m> 5. <m>\a_5=\sqrt[5]{2}e^{9\pi i/5}</m>
-          </p>
+            <ol>
+              <li>
+                <p>
+                  Note that <m>f</m> is irreducible in <m>\Q[x]</m> by Eisenstein's Criterion (<m>p=2</m>). The roots of <m>f</m> are 
+                  <ul>
+                    <li>
+                      <p>
+                        <m>\a_1=\sqrt[5]{2}e^{\pi i/5}</m> 
+                      </p>
+                    </li>
 
-          <p>
+                    <li>
+                      <p>
+                  <m>\a_2=\sqrt[5]{2}e^{3\pi i/5}</m> 
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                  <m>\a_3=\sqrt[5]{2}e^{5\pi i/5}=-\sqrt[5]{2}</m> 
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                  <m>\a_4=\sqrt[5]{2}e^{7\pi i/5}</m> 
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                  <m>\a_5=\sqrt[5]{2}e^{9\pi i/5}</m>
+                      </p>
+                    </li>
+                  </ul>
+                </p>
+
+                <p>
             As <m>f</m> is monic and irreducible it is the minimum polynomial of <m>\sqrt[5]{2}\in\Q[x]</m>. Let <m>F=\Q(\sqrt[5]{2})</m>, and notice <m>[F:\Q]=5</m>. Note that <m>F\subseteq\R</m>
           </p>
 
           <p>
             Let <m>\z=e^{\frac{\pi i}{5}}</m> be a primitive <m>10\th</m> root of unity. This is the root a cyclotomic polynomial of degree <m>9</m> which is irreducible in <m>\Q[x]</m>. As this has relatively prime order to <m>F</m> it is irreducible there as well. Let <m>K=F(\z)</m>, and notice <m>[K:\Q]=40</m>. Notice that <m>\a_1\cdot\a_3\inv=\z</m>, and so <m>L=K</m>, completing the proof.
           </p>
+              </li>
 
-          <p>
-            Part (b)
+              <li>
+                <p>
+                  Coming soon!
+                </p>
+              </li>
+            </ol>
           </p>
             </solution>
           
@@ -27497,7 +28472,7 @@
           <problem><title>Problem 9</title>
             <statement>
               <p>
-            Assume <m>F</m> is field and let <m>f(x)\in F [x]</m>. Recall that <m>f (x)</m> is separable if <m>f (x)</m> has no repeated roots in an [[Mathematics/Definitions/Algebraic Closure|algebraic closure]] of <m>F</m>.
+            Assume <m>F</m> is field and let <m>f(x)\in F [x]</m>. Recall that <m>f (x)</m> is separable if <m>f (x)</m> has no repeated roots in an algebraic closure of <m>F</m>.
           </p>
 
           <p><ol>
@@ -27514,15 +28489,20 @@
 
             <solution>
               <p>
-            Part (a) <m>(\Rightarrow)</m> Suppose that <m>f</m> is not separable, so <m>f</m> has a repeated root in <m>\overline{F}</m>, which we denote <m>\alpha</m>. So <m>x-\alpha</m> is a factor of <m>f(x)</m>. By Corollary 2.96, <m>F(\alpha)</m> is separable, so the minimal polynomial of <m>\alpha</m> in <m>F[x]</m> has no repeated root in <m>\overline{F}</m>. As <m>f</m> does have a repeated root (by supposition) it cannot be the minimum polynomial of <m>\alpha</m>. Thus <m>f(x)=\mp_{\alpha,F[x]}(x)g(x)</m> for some <m>g(x)\in F[x]</m> such that <m>g(x)</m> has <m>\alpha</m> as a root, otherwise <m>f</m> would not obtain its repeated root. However, this means that <m>\mp_{\alpha,F[x]}(x)\big|g(x)</m>, meaning that <m>g(x)</m> has <m>x-\alpha</m> as a factor as well. Thus we see that <m>x-\alpha</m> is a repeated factor of <m>f(x)</m>, one from the minimum polynomial, one from <m>g(x)</m>.
-          </p>
+                <ol>
+                  <li>
+                    <p>
+                      <m>(\Rightarrow)</m> Suppose that <m>f</m> is not separable, so <m>f</m> has a repeated root in <m>\overline{F}</m>, which we denote <m>\alpha</m>. So <m>x-\alpha</m> is a factor of <m>f(x)</m>. By Corollary 2.96, <m>F(\alpha)</m> is separable, so the minimal polynomial of <m>\alpha</m> in <m>F[x]</m> has no repeated root in <m>\overline{F}</m>. As <m>f</m> does have a repeated root (by supposition) it cannot be the minimum polynomial of <m>\alpha</m>. Thus <m>f(x)=\mp_{\alpha,F[x]}(x)g(x)</m> for some <m>g(x)\in F[x]</m> such that <m>g(x)</m> has <m>\alpha</m> as a root, otherwise <m>f</m> would not obtain its repeated root. However, this means that <m>\mp_{\alpha,F[x]}(x)\big|g(x)</m>, meaning that <m>g(x)</m> has <m>x-\alpha</m> as a factor as well. Thus we see that <m>x-\alpha</m> is a repeated factor of <m>f(x)</m>, one from the minimum polynomial, one from <m>g(x)</m>.
+                    </p>
 
-          <p>
-            <m>(\Leftarrow)</m> Suppose that the prime factorization of <m>f(x)</m> in <m>F[x]</m> admits a repeated factor. Thus there exists some prime (and thus irreducible) <m>g(x)</m> such that <m>g(x)g(x)|f(x)</m>. However, <m>g</m> has a root <m>\alpha</m> in <m>\overline{F}</m>, so in <m>F(\alpha)</m> we see that <m>f(x)</m> has <m>\alpha</m> as a root as well, as <m>g(a)=0</m>. But since <m>g(x)</m> has factor <m>x-\alpha</m>, it shows up twice in the factorization of <m>f</m> because <m>g(x)g(x)|f(x)</m>. So <m>\alpha</m> has multiplicity at least 2, so <m>f</m> is not separable.
-          </p>
+                    <p>
+                      <m>(\Leftarrow)</m> Suppose that the prime factorization of <m>f(x)</m> in <m>F[x]</m> admits a repeated factor. Thus there exists some prime (and thus irreducible) <m>g(x)</m> such that <m>g(x)g(x)|f(x)</m>. However, <m>g</m> has a root <m>\alpha</m> in <m>\overline{F}</m>, so in <m>F(\alpha)</m> we see that <m>f(x)</m> has <m>\alpha</m> as a root as well, as <m>g(a)=0</m>. But since <m>g(x)</m> has factor <m>x-\alpha</m>, it shows up twice in the factorization of <m>f</m> because <m>g(x)g(x)|f(x)</m>. So <m>\alpha</m> has multiplicity at least 2, so <m>f</m> is not separable.
+                    </p>
+                  </li>
 
-          <p>
-            Part (b) Let <m>y,z</m> be indeterminants, <m>F=\F_{p}[y]</m>, and <m>L=\F_{p}[z]</m> such that <m>z^3=y</m> (as seen in Example 2.78). Note then that <m>z^3</m> is a root of the polynomial <m>x^p-y\in F[x]</m>.
+                  <li>
+                    <p>
+            Let <m>y,z</m> be indeterminants, <m>F=\F_{p}[y]</m>, and <m>L=\F_{p}[z]</m> such that <m>z^3=y</m> (as seen in Example 2.78). Note then that <m>z^3</m> is a root of the polynomial <m>x^p-y\in F[x]</m>.
           </p>
 
           <p>
@@ -27532,6 +28512,10 @@
           <p>
             However, as the derivative of this polynomial is <m>0</m>, we see that the <m>\mp_{z,F[x]}(x)</m> is not separable by Proposition 2.72. However, by the Freshman's Dream, we see that <m>x^3-y=x^p-z^p=(x-z)^p\in L</m>. But as <m>z\not\in F</m>, we see that the prime factorization of <m>x^p-y</m> admits no repeated factor.
           </p>
+                  </li>
+                </ol>
+          </p>
+          
             </solution>
           
           </problem>
@@ -27568,11 +28552,18 @@
           </p>
 
           <p>
-            Part (a) Suppose every subgroup of <m>G</m> is normal. Let <m>d</m> be a positive divisor of <m>|G|</m>. For every prime <m>p</m> dividing the order of <m>G</m> there is exactly one Sylow <m>p</m>-subgroup of <m>G</m>, given that Sylow <m>p</m>-subgroups are normal if and only if they are unique. Thus <m>G</m> can be written as a direct product of its Sylow <m>p</m>-subgroups. Given the prime factorization of <m>d</m>, the direct product of the Sylow <m>p</m>-subgroups such that <m>p|d</m> is 1. A subgroup of <m>G</m> as each Sylow <m>p</m>-subgroup is normal, and 2. A direct product of cyclic groups of relatively prime order, yielding an element of order <m>d</m>. The subgroup generated by this element is a subgroup of <m>G</m> of order <m>d</m>.
-          </p>
+            <ol>
+              <li>
+                <p>
+                   Suppose every subgroup of <m>G</m> is normal. Let <m>d</m> be a positive divisor of <m>|G|</m>. For every prime <m>p</m> dividing the order of <m>G</m> there is exactly one Sylow <m>p</m>-subgroup of <m>G</m>, given that Sylow <m>p</m>-subgroups are normal if and only if they are unique. Thus <m>G</m> can be written as a direct product of its Sylow <m>p</m>-subgroups. Given the prime factorization of <m>d</m>, the direct product of the Sylow <m>p</m>-subgroups such that <m>p|d</m> is 1. A subgroup of <m>G</m> as each Sylow <m>p</m>-subgroup is normal, and 2. A direct product of cyclic groups of relatively prime order, yielding an element of order <m>d</m>. The subgroup generated by this element is a subgroup of <m>G</m> of order <m>d</m>.
 
-          <p>
-            Part (b) We take a peak at <m>G=A_4</m> with <m>d=6</m>. Suppose <m>A_4</m> had a subgroup of order <m>6</m>, <m>H</m>. First, note that <m>[G:H]=2</m>, the smallest prime dividing the order of <m>G</m>, making <m>H</m> normal in <m>G</m>.
+                </p>
+              </li>
+
+              <li>
+                <p>
+        We take a peak at <m>G=A_4</m> with <m>d=6</m>. Suppose <m>A_4</m> had a subgroup of order <m>6</m>, <m>H</m>. First, note that <m>[G:H]=2</m>, the 
+        smallest prime dividing the order of <m>G</m>, making <m>H</m> normal in <m>G</m>.
           </p>
 
           <p>
@@ -27589,6 +28580,11 @@
             </li>
 
           </ul></p>
+              </li>
+            </ol>
+          </p>
+
+          
             </solution>
           
           </problem>
@@ -27617,23 +28613,32 @@
           </p>
 
           <p>
-            Part (a) Suppose there is no element in <m>X</m> that is fixed by all elements of <m>G</m>.
-          </p>
+            <ol>
+              <li>
+                <p>
+                        Suppose there is no element in <m>X</m> that is fixed by all elements of <m>G</m>.
 
-          <p>
+                </p>
+
+                <p>
             By <xref text="title" ref="cor-orbit-stabilizer"/> we know that <m>|\Orb_G(x)|\big||G|</m> for all <m>x\in X</m>. Thus every orbit under this action has an order dividing <m>p^n</m>, so either <m>1</m> or some positive power of <m>p.</m> However, as no element of <m>X</m> is fixed by every element of <m>G</m>, there exists no stabilizer which is all of <m>G</m>, and thus there exist no orbits that have order <m>1</m>.
           </p>
 
           <p>
             Recall that the orbits of this action partition <m>X</m>, and thus <m>|X|=\sum_{x\in X}|\Orb_G(x)|</m>. As every orbit is divisible by <m>p</m>, so too must be <m>X</m>.
           </p>
+              </li>
 
-          <p>
-            Part (b) Suppose <m>G</m> acts faithfully on <m>X</m>. Thus the permutation representation homomorphism <m>\rho:G\to\Perm(X)</m> is injective. Let <m>k</m> denote the order of <m>X</m>. Then <m>\Perm(X)\cong S_k</m>, which as order <m>k!</m>. As <m>G</m> is injective, we see that <m>|G|=|\im\rho|\leq S_k</m>, and thus <m>p^n|k!</m>.
+              <li>
+                <p>
+            Suppose <m>G</m> acts faithfully on <m>X</m>. Thus the permutation representation homomorphism <m>\rho:G\to\Perm(X)</m> is injective. Let <m>k</m> denote the order of <m>X</m>. Then <m>\Perm(X)\cong S_k</m>, which as order <m>k!</m>. As <m>G</m> is injective, we see that <m>|G|=|\im\rho|\leq S_k</m>, and thus <m>p^n|k!</m>.
           </p>
 
           <p>
             Thus <m>p</m> must show up in the factorization of <m>k!</m> at least <m>n</m> times, meaning that <m>|X| \geq np</m>.
+          </p>
+              </li>
+            </ol>
           </p>
             </solution>
           
@@ -27648,7 +28653,21 @@
 
             <solution>
               <p>
-             Let <m>G</m> be a group of order <m>3^2\cdot 11\cdot 17</m>. By <xref text="title" ref="thm-sylow"/> we see the following: - <m>n_{11}|153</m> and <m>n_{11}\equiv 1\mod{11}</m>, and so <m>n_{11}=1</m>. - <m>n_{17}|99</m> and <m>n_{17}\equiv 1\mod{17}</m>, and so <m>n_{17}=1</m> as well. - <m>n_3|187</m> and <m>n_3\cong 1\mod{3}</m>, so actually <m>n_3=1</m> too. Thus the unique Sylow <m>11</m>-subgroup and Sylow <m>17</m>-subgroup, denoted <m>P</m> and <m>Q</m>, respectively, are normal in <m>G</m>.
+             Let <m>G</m> be a group of order <m>3^2\cdot 11\cdot 17</m>. By <xref text="title" ref="thm-sylow"/> we see the following: 
+             <ul>
+              <li>
+                <p>
+                  <m>n_{11}|153</m> and <m>n_{11}\equiv 1\mod{11}</m>, and so <m>n_{11}=1</m>.
+
+                </p>
+              </li>
+
+              <li>
+                <p>
+            <m>n_{17}|99</m> and <m>n_{17}\equiv 1\mod{17}</m>, and so <m>n_{17}=1</m> as well. - <m>n_3|187</m> and <m>n_3\cong 1\mod{3}</m>, so actually <m>n_3=1</m> too. Thus the unique Sylow <m>11</m>-subgroup and Sylow <m>17</m>-subgroup, denoted <m>P</m> and <m>Q</m>, respectively, are normal in <m>G</m>.
+                </p>
+              </li>
+             </ul>
           </p>
 
           <p>
@@ -27692,15 +28711,22 @@
               </p>
 
               <p>
-                Part (a)
+                <ol>
+                  <li>
+                    <p>
+                      <xref text="title" ref="def-ed"/>
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                Let <m>I</m> be an ideal in <m>R</m>, and let <m>S</m> denote the set of norms for a nonzero generating set of <m>I</m>. If none exist then <m>I=(0)</m> then in it is principally generated, so we can assume there is some nonzero <m>x\in I</m>, meaning our set <m>S</m> is nonempty.
               </p>
 
               <p>
-                Part (b) Let <m>I</m> be an ideal in <m>R</m>, and let <m>S</m> denote the set of norms for a nonzero generating set of <m>I</m>. If none exist then <m>I=(0)</m> then in it is principally generated, so we can assume there is some nonzero <m>x\in I</m>, meaning our set <m>S</m> is nonempty.
-              </p>
-
-              <p>
-                As <m>S</m> is a set of natural numbers bounded below, by the Least Upper Bound Axiom there exists a smallest element. Let <m>b</m> denote the nonzero element in <m>S</m> with smallest norm.
+                As <m>S</m> is a set of natural numbers bounded below, by the 
+                Least Upper Bound Axiom 
+                there exists a smallest element. Let <m>b</m> denote the nonzero element in <m>S</m> with smallest norm.
               </p>
 
               <p>
@@ -27710,6 +28736,11 @@
               <p>
                 Notice that <m>r=a-qb</m>, where <m>a\in I</m> and <m>-qb\in I</m> by absorption. Thus <m>r\in I</m>, meaning that <m>N(r)\geq N(b)</m>. Thus <m>r=0</m>. Then <m>a=qb</m>, meaning that <m>a\in (b)</m>. Thus every element in the generating set for <m>I</m> is contained in <m>(b)</m>, and thus <m>I=(b)</m>, making <m>I</m> principally generated.
               </p>
+                  </li>
+                </ol>
+              </p>
+
+              
             </solution>
           
           </problem>
@@ -27746,11 +28777,17 @@
                 </li>
 
                 <li>
-                  Find the Jordan canonical form of <m>J^2</m>, with justification. <em>Hint</em>: consider the kernel of <m>J^2</m>.
+                  Find the Jordan canonical form of <m>J^2</m>, with justification. 
                 </li>
 
               </ol></p>
             </statement>
+
+            <hint>
+              <p>
+                Consider the kernel of <m>J^2</m>.
+              </p>
+            </hint>
 
             <solution>
               <p>
@@ -27758,15 +28795,23 @@
           </p>
 
           <p>
-            Part (a) Notice that <m>J</m> is a triangular matrix with <m>0</m>'s along the diagonal. Thus <m>\cp_J(x)=x^{2n}</m>, the product of the diagonal entries of the matrix <m>J-xI</m>.
-          </p>
+            <ol>
+              <li>
+                <p>
+                  Notice that <m>J</m> is a triangular matrix with <m>0</m>'s along the diagonal. Thus <m>\cp_J(x)=x^{2n}</m>, the product of the diagonal entries of the matrix <m>J-xI</m>.
+                </p>
 
-          <p>
+                <p>
             Squaring a triangular matrix moves everything one down (Proof?), and so <m>x^{2n-1}</m> should do it. Squaring <m>J</m> just moves us one closer, so <m>x^{2n-2}</m>
           </p>
+              </li>
 
-          <p>
-            Part (b) As <m>\cp_{J^2}(x)=x^{2n}</m>, the only roots of it are <m>0</m>, and thus these are the only elementary divisors of <m>J^2</m>.
+              <li>
+                <p>
+         As <m>\cp_{J^2}(x)=x^{2n}</m>, the only roots of it are <m>0</m>, and thus these are the only elementary divisors of <m>J^2</m>.
+          </p>
+              </li>
+            </ol>
           </p>
             </solution>
           
@@ -27779,7 +28824,7 @@
           <problem><title>Problem 7</title>
             <statement>
               <p>
-                Let <m>L/F</m> be a field extension and let <m>K := \{a\in L | a \text{ is algebraic over }F \}</m>. Show that if <m>L</m> is algebraically closed, then K is algebraically closed.
+                Let <m>L/F</m> be a field extension and let <m>K := \{a\in L | a \text{ is algebraic over }F \}</m>. Show that if <m>L</m> is algebraically closed, then <m>K</m> is algebraically closed.
               </p>
             </statement>
 
@@ -27793,7 +28838,13 @@
           </p>
 
           <p>
-            Consider the chain of extensions <me>F \subseteq F(a_0) \subseteq F(a_0,a_1) \subseteq \cdots \subseteq F(a_0, a_1, \dots, a_{n-1} )\subseteq F(a_0, \dots, a_{n}, \a).</me>As <m>a_i</m> is algebraic over <m>F</m> for all <m>i</m> and <m>\a</m> is algebraic over <m>F(a_0,\dots,a_n)[x]</m> we see that each step in this chain has finite degree by Theorem. By the Degree Formula, <m>[F(a_0, \dots, a_{n}, \a): F]</m> is finite and thus so is <m>[F(\a):F]</m>. By the Theorem again, <m>\a</m> is algebraic over <m>F</m>. Thus <m>\a</m> is algebraic over <m>F</m>, hence <m>\a\in K</m>, making <m>K</m> algebraically closed.
+            Consider the chain of extensions <me>F \subseteq F(a_0) \subseteq F(a_0,a_1) \subseteq \cdots \subseteq F(a_0, a_1, \dots, a_{n-1} )\subseteq F(a_0, \dots, a_{n}, \a).</me>As <m>a_i</m> is algebraic over <m>F</m> for all <m>i</m> and <m>\a</m> is algebraic over <m>F(a_0,\dots,a_n)[x]</m> we see that each step in this chain has finite degree by 
+            Theorem. 
+            By the 
+            Degree Formula, 
+            <m>[F(a_0, \dots, a_{n}, \a): F]</m> is finite and thus so is <m>[F(\a):F]</m>. By the 
+            Theorem 
+            again, <m>\a</m> is algebraic over <m>F</m>. Thus <m>\a</m> is algebraic over <m>F</m>, hence <m>\a\in K</m>, making <m>K</m> algebraically closed.
           </p>
             </solution>
           
@@ -27823,11 +28874,21 @@
           </p>
 
           <p>
-            Part (a) Let <m>E</m> denote the set of roots of <m>q(x)</m>. Let <m>\a\in E</m>. Thus <m>\a^{p^n}-\a=0</m>. By the Factor Theorem there can be at most <m>p^n</m> roots. Suppose <m>\a=\b</m> for roots <m>\a,\b</m>.
-          </p>
+            <ol>
+              <li>
+                <p>
+                  Let <m>E</m> denote the set of roots of <m>q(x)</m>. Let <m>\a\in E</m>. Thus <m>\a^{p^n}-\a=0</m>. By the 
+                  Factor Theorem 
+                  there can be at most <m>p^n</m> roots. Suppose <m>\a=\b</m> for roots <m>\a,\b</m>.
+                </p>
+              </li>
 
-          <p>
-            Part (b)
+              <li>
+                <p>
+                  Coming soon!
+                </p>
+              </li>
+            </ol>
           </p>
             </solution>
           
@@ -27857,16 +28918,29 @@
           </p>
 
           <p>
-            Part (a) Using Eisenstein's Criterion with <m>p=2</m> we see that <m>f</m> is indeed irreducible in <m>\Q[x]</m>.
-          </p>
+            <ol>
+              <li>
+                <p>
+                    Using Eisenstein's Criterion with <m>p=2</m> we see that <m>f</m> is indeed irreducible in <m>\Q[x]</m>.
 
-          <p>
-            Part (b) Let <m>L</m> be a splitting field of <m>f</m> over <m>\Q</m>. As <m>f</m> is monic and irreducible, it is the minimum polynomial for some <m>\a\in L</m> such that <m>[\Q(\a):\Q]=5</m>. As <m>f</m> has complex roots, we know that <m>\Q(\a)\neq L</m>, and is thus an intermediate field. By the FTGT there exists a subgroup <m>H</m> of <m>\Gal(L/\Q)</m> such that <m>H=\Gal(\Q(\a)/\Q)</m>. As <m>[\Q(\a):\Q]=5</m> we know <m>|H|=5</m>, making <m>H=\langle\s\rangle</m> for some <m>\s\in H</m>. Thus <m>\s</m> is an element of order <m>5</m> in <m>\Gal(L/\Q)</m>. As <m>f</m> is a degree <m>5</m> polynomial, we know <m>\Gal(L/\Q)</m> is isomorphic to a subgroup of <m>S_5</m>. Thus <m>\s</m> must be a <m>5</m>-cycle.
+                </p>
+              </li>
+
+              <li>
+                <p>
+            Let <m>L</m> be a splitting field of <m>f</m> over <m>\Q</m>. As <m>f</m> is monic and irreducible, it is the minimum polynomial for some <m>\a\in L</m> such that <m>[\Q(\a):\Q]=5</m>. As <m>f</m> has complex roots, we know that <m>\Q(\a)\neq L</m>, and is thus an intermediate field. By the 
+            FTGT 
+            there exists a subgroup <m>H</m> of <m>\Gal(L/\Q)</m> such that <m>H=\Gal(\Q(\a)/\Q)</m>. As <m>[\Q(\a):\Q]=5</m> we know <m>|H|=5</m>, making <m>H=\langle\s\rangle</m> for some <m>\s\in H</m>. Thus <m>\s</m> is an element of order <m>5</m> in <m>\Gal(L/\Q)</m>. As <m>f</m> is a degree <m>5</m> polynomial, we know <m>\Gal(L/\Q)</m> is isomorphic to a subgroup of <m>S_5</m>. Thus <m>\s</m> must be a <m>5</m>-cycle.
           </p>
 
           <p>
             Recall that <m>f</m> has exactly two complex roots. Thus <m>\tau</m>, the complex conjugation automorphism, has order <m>2</m>, making it a transposition. From the Gospel of Mark we were told that we did not need to prove that a transposition and an <m>n</m>-cycle generate all of <m>S_n</m>, and thus <m>\Gal(L/\Q)\cong S_5</m>
           </p>
+              </li>
+            </ol>
+          </p>
+
+          
             </solution>
           
           </problem>
@@ -27890,7 +28964,9 @@
 				</p>
 
 				<p>
-					Let <m>S</m> be the poset of all proper subgroups of <m>G</m> ordered in terms of inclusion. Consider a string of these. Consider the union of them all. Luckily, unions of subgroups are subgroups if and only if there is containment, which there is, since everything is in the union. Thus its a subgroup. Since union in <m>S</m> and yields an upper bound, by Zorn's Lemma we a maximal element. Thus <m>G</m> possesses maximal subgroups.
+					Let <m>S</m> be the poset of all proper subgroups of <m>G</m> ordered in terms of inclusion. Consider a string of these. Consider the union of them all. Luckily, unions of subgroups are subgroups if and only if there is containment, which there is, since everything is in the union. Thus its a subgroup. Since union in <m>S</m> and yields an upper bound, by 
+          Zorn's Lemma 
+          we have a maximal element. Thus <m>G</m> possesses maximal subgroups.
 				</p>
             </solution>
           
@@ -27905,7 +28981,10 @@
 
             <solution>
               <p>
-					 Let <m>G</m> be a group and <m>H\nsg G</m>. Let <m>x\in C_H(G)</m>, and consider <m>gxg\inv</m>. Let <m>h\in H</m>. As <m>H\nsg G</m> we have <m>h=gh'g\inv</m> for some <m>h\in H</m>, and thus that 1. <m>g\inv h=h'g\inv</m> and 2. <m>hg=gh'</m>. Consider <m>gxg\inv h</m>. By (1), we see <m>gxg\inv h=gxh'g\inv</m>. As <m>x</m> commutes with everything in <m>H</m> we have <m>gh'xg\inv</m>, and by (2) we have <m>hgxg\inv</m>. Thus <m>C_H(G)\nsg G</m>.
+					 Let <m>G</m> be a group and <m>H\nsg G</m>. Let <m>x\in C_H(G)</m>, and consider <m>gxg\inv</m>. Let <m>h\in H</m>. As <m>H\nsg G</m> we have <m>h=gh'g\inv</m> for some <m>h\in H</m>, and thus that 
+           1. <m>g\inv h=h'g\inv</m> and 
+           2. <m>hg=gh'</m>. Consider <m>gxg\inv h</m>. 
+           By (1), we see <m>gxg\inv h=gxh'g\inv</m>. As <m>x</m> commutes with everything in <m>H</m> we have <m>gh'xg\inv</m>, and by (2) we have <m>hgxg\inv</m>. Thus <m>C_H(G)\nsg G</m>.
 				</p>
 
 				<p>
@@ -27918,26 +28997,70 @@
           <problem><title>Problem 3</title>
             <statement>
               <p>
-					Let <m>G</m> be a group of order <m>p^2q</m> where <m>p</m> and <m>q</m> are distinct primes. (a) Prove that <m>G</m> contains a normal [[Mathematics/Definitions/Sylow p-Subgroup|Sylow subgroup]]. (b) Suppose <m>p &lt; q</m> and the Sylow <m>p</m>-subgroup is cyclic and normal. Prove that <m>G</m> is abelian.
+					Let <m>G</m> be a group of order <m>p^2q</m> where <m>p</m> and <m>q</m> are distinct primes. 
+          <ol>
+            <li>
+              <p>
+                  Prove that <m>G</m> contains a normal Sylow subgroup. 
+
+              </p>
+            </li>
+
+            <li>
+              <p>
+          Suppose <m>p &lt; q</m> and the Sylow <m>p</m>-subgroup is cyclic and normal. Prove that <m>G</m> is abelian.
+
+              </p>
+            </li>
+          </ol>
 				</p>
             </statement>
 
             <solution>
               <p>
-					 ##### Part (a) Let <m>G</m> be a group of order <m>p^2q</m> where <m>p</m> and <m>q</m> are distinct primes. Suppose by way of contradiction that <m>G</m> has no normal Sylow <m>p</m>-subgroup.
+                <ol>
+                  <li>
+                    <p>
+                      Let <m>G</m> be a group of order <m>p^2q</m> where <m>p</m> and <m>q</m> are distinct primes. Suppose by way of contradiction that <m>G</m> has no normal Sylow <m>p</m>-subgroup.
+
+                    </p>
+
+                    <p>
+					First, suppose <m>p&lt;q</m>. By <xref text="title" ref="thm-sylow"/> we know the following: 
+          <ul>
+            <li>
+              <p>
+                          <m>n_p|q</m> and <m>n_p\equiv 1\mod{p}</m>, so <m>n_p=1</m> or <m>q</m>, so <m>q</m> 
+
+              </p>
+            </li>
+
+            <li>
+              <p>
+                          <m>n_q|p^2</m> and <m>n_q\equiv 1\mod{q}</m>, so <m>n_q=1</m> or <m>p^2</m>, so <m>p^2</m>. 
+
+              </p>
+            </li>
+          </ul>
+          We know there must be <m>(q-1)\cdot p^2=p^2q-p^2</m> elements of order <m>p</m>. Luckily, there is more than one Sylow <m>p</m>-subgroup with <m>p^2</m> elements, so there isn't room for all of them.
 				</p>
 
 				<p>
-					First, suppose <m>p&lt;q</m>. By <xref text="title" ref="thm-sylow"/> we know the following: - <m>n_p|q</m> and <m>n_p\equiv 1\mod{p}</m>, so <m>n_p=1</m> or <m>q</m>, so <m>q</m> - <m>n_q|p^2</m> and <m>n_q\equiv 1\mod{q}</m>, so <m>n_q=1</m> or <m>p^2</m>, so <m>p^2</m>. We know there must be <m>(q-1)\cdot p^2=p^2q-p^2</m> elements of order <m>p</m>. Luckily, there is more than one Sylow <m>p</m>-subgroup with <m>p^2</m> elements, so there isn't room for all of them.
+					Suppose then that <m>q&gt;p</m>. By <xref text="title" ref="thm-sylow"/> we know <m>n_p|q</m> and <m>n_p\equiv 1\mod{p}</m>, so <m>n_p=1</m>, so we're definitely good there.
+				</p>
+                  </li>
+
+                  <li>
+                   <p>
+					 Suppose <m>p &lt; q</m> and the Sylow <m>p</m>-subgroup, <m>P</m>, is cyclic and normal. We know from Part (a) that there are either <m>1</m> or <m>p^2</m> Sylow <m>q</m>-subgroups, but since there are already <m>p^2</m> elements of order <m>p</m> there is only room for one, <m>Q</m>, which is also cyclic, given its prime power. As <m>P</m> and <m>Q</m> are thus normal in <m>G</m> and only intersect trivially, we see that <m>PQ=G</m>, meaning that <m>G=P\times Q</m>. Thus <m>G</m> is the product of two cyclic groups of relatively prime order, making <m>G</m> cyclic as well. Cyclic groups are abelian, so we are done.
+				</p>
+                  </li>
+                </ol>
 				</p>
 
-				<p>
-					Suppose then that <m>q&gt;p</m>. By <xref text="title" ref="thm-sylow"/> we know the following: - <m>n_p|q</m> and <m>n_p\equiv 1\mod{p}</m>, so <m>n_p=1</m>, so we're definitely good there.
-				</p>
+				
 
-				<p>
-					Part (b) Suppose <m>p &lt; q</m> and the Sylow <m>p</m>-subgroup, <m>P</m>, is cyclic and normal. We know from Part (a) that there are either <m>1</m> or <m>p^2</m> Sylow <m>q</m>-subgroups, but since there are already <m>p^2</m> elements of order <m>p</m> there is only room for one, <m>Q</m>, which is also cyclic, given its prime power. As <m>P</m> and <m>Q</m> are thus normal in <m>G</m> and only intersect trivially, we see that <m>PQ=G</m>, meaning that <m>G=P\times Q</m>. Thus <m>G</m> is the product of two cyclic groups of relatively prime order, making <m>G</m> cyclic as well. Cyclic groups are abelian, so we are done.
-				</p>
+				
             </solution>
           
           </problem>
@@ -27951,7 +29074,10 @@
 
             <solution>
               <p>
-					 Let <m>G</m> be a finite group of order <m>p^2q</m> with <m>p &lt; q</m> prime numbers, and suppose by way of contradiction that <m>G</m> is simple. By <xref text="title" ref="thm-sylow"/> we have the following: - <m>n_p|q</m> and <m>n_p\cong 1\mod{p}</m>, and thus <m>n_p=q</m>. - <m>n_q|p^2</m> and <m>n_q\cong 1\mod{q}</m>, and thus <m>n_q=p^2</m>. From this information we see that there are <m>p^2(q-1)</m> elements of order <m>q</m> and <m>(p^2-1)q</m> elements of order <m>p</m>, for a lovely total of <m>p^2q-p^2+p^2q-q</m> elements, which is too many.
+					 Let <m>G</m> be a finite group of order <m>p^2q</m> with <m>p &lt; q</m> prime numbers, and suppose by way of contradiction that <m>G</m> is simple. By <xref text="title" ref="thm-sylow"/> we have the following: 
+           - <m>n_p|q</m> and <m>n_p\cong 1\mod{p}</m>, and thus <m>n_p=q</m>. 
+           - <m>n_q|p^2</m> and <m>n_q\cong 1\mod{q}</m>, and thus <m>n_q=p^2</m>. 
+           From this information we see that there are <m>p^2(q-1)</m> elements of order <m>q</m> and <m>(p^2-1)q</m> elements of order <m>p</m>, for a lovely total of <m>p^2q-p^2+p^2q-q</m> elements, which is too many.
 				</p>
             </solution>
           
@@ -27964,9 +29090,15 @@
           <problem><title>Problem 4</title>
             <statement>
               <p>
-					Consider the [[Mathematics/Definitions/Subring|subring]] <m>\Z[\sqrt{10}] = \{a + b\sqrt{10} | a, b \in \Z\}</m> of <m>\R</m>. Show that <m>2</m> is irreducible but not prime in <m>\Z[\sqrt{10}].</m> Hint: Consider the function <m>N : \Z[\sqrt{10}]\to \Z, N (a + b\sqrt{10}) = a^2-10b^2</m>.
+					Consider the subring <m>\Z[\sqrt{10}] = \{a + b\sqrt{10} | a, b \in \Z\}</m> of <m>\R</m>. Show that <m>2</m> is irreducible but not prime in <m>\Z[\sqrt{10}].</m>.
 				</p>
             </statement>
+
+            <hint>
+              <p>
+                Consider the function <m>N : \Z[\sqrt{10}]\to \Z, N (a + b\sqrt{10}) = a^2-10b^2</m>
+              </p>
+            </hint>
 
             <solution>
              <p>
@@ -28017,7 +29149,7 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
           <problem><title>Problem 6</title>
             <statement>
               <p>
-					Let <m>n</m> be a positive integer. Consider the real vector space <m>V = \{p \in R[x] | \deg(p) \leq n\}</m> and the [[Mathematics/Definitions/Linear Transformation|linear transformation]] <m>T : V \to V, T (p) = p'</m>, where <m>p'(x)</m> is the [[Mathematics/Definitions/Derivative|derivative]] of p(x).
+					Let <m>n</m> be a positive integer. Consider the real vector space <m>V = \{p \in R[x] | \deg(p) \leq n\}</m> and the linear transformation <m>T : V \to V, T (p) = p'</m>, where <m>p'(x)</m> is the derivative of <m>p(x)</m>.
 				</p>
 
 				<p><ol>
@@ -28026,11 +29158,11 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
 					</li>
 
 					<li>
-					Find the [[Mathematics/Definitions/Invariant Factor|invariant factors]] and the [[Mathematics/Definitions/Elementary Divisor|elementary divisors]] for <m>T</m>.
+					Find the invariant factors and the elementary divisors for <m>T</m>.
 					</li>
 
 					<li>
-					Find the [[Theorem – Rational Canonical Form|rational canonical form]] and the [[Theorem – Jordan Canonical Form|Jordan canonical form]] for <m>T</m>.
+					Find the rational canonical form and the Jordan canonical form for <m>T</m>.
 					</li>
 
 				</ol></p>
@@ -28042,7 +29174,10 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
 				</p>
 
 				<p>
-					Part (a) Note that the change of basis matrix for this operator is given by <me>
+          <ol>
+            <li>
+              <p>
+            Note that the change of basis matrix for this operator is given by <me>
 \begin{bmatrix}
   0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
   0 &amp; 1 &amp; \cdots &amp; 0 &amp; 0 \\
@@ -28055,19 +29190,28 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
   \vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\
   0 &amp; 0 &amp; \cdots &amp; 0 &amp; x-(n-1) \\   
 \end{bmatrix},</me> which is diagonal. Hence <m>\cp_AT(x)=\displaystyle\prod_{i=0}^{n-1}(x-i)</m>.
-				</p>
+              </p>
+            </li>
 
-				<p>
-					Part (b) Our <m>\cp_AT(x)</m> factors into distinct linear polynomials, each of which is in the form <m>(x-i)^1</m> for <m>0\leq i\leq n-1</m>. Thus each linear term is an elementary divisor. However, as none of these elementary divisors divide any of the others, we see that the only invariant factor is <m>\cp_AT(x)</m> itself.
-				</p>
+            <li>
+              <p>
+                Our <m>\cp_AT(x)</m> factors into distinct linear polynomials, each of which is in the form <m>(x-i)^1</m> for <m>0\leq i\leq n-1</m>. Thus each linear term is an elementary divisor. However, as none of these elementary divisors divide any of the others, we see that the only invariant factor is <m>\cp_AT(x)</m> itself.
 
-				<p>
-					Part (c) As each linear term is an elementary divisor, each Jordan block a <m>1\times1</m> matrix with <m>i</m> as the only entry. Thus the Jordan Canonical form is <me>\begin{bmatrix}
+              </p>
+            </li>
+
+            <li>
+              <p>
+				As each linear term is an elementary divisor, each Jordan block a <m>1\times1</m> matrix with <m>i</m> as the only entry. Thus the Jordan Canonical form is <me>\begin{bmatrix}
   0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
   0 &amp; 1 &amp; \cdots &amp; 0 &amp; 0 \\
   \vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\
   0 &amp; 0 &amp; \cdots &amp; 0 &amp; n-1 \\   
 \end{bmatrix}.</me> As the only invariant factor is <m>\cp_AT(x)</m>, we see that the Rational Canonical Form of <m>T</m> is <m>C(\cp_AT(x))</m>.
+				</p>
+            </li>
+          </ol>
+					
 				</p>
             </solution>
           
@@ -28105,19 +29249,32 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
 				</p>
 
 				<p>
-					Part (a) We're going to go slightly out of order. By Part (b), we see <m>[KL : E] = k\ell</m> when <m>\gcd(k,\ell) = 1</m>. This is the largest possible size of <m>KL</m>, as everything is irreducible where it can be. Thus <m>[KL : E] \leq k\ell</m>
-				</p>
+          <ol>
+            <li>
+              <p>
+                					Part (a) We're going to go slightly out of order. By Part (b), we see <m>[KL : E] = k\ell</m> when <m>\gcd(k,\ell) = 1</m>. This is the largest possible size of <m>KL</m>, as everything is irreducible where it can be. Thus <m>[KL : E] \leq k\ell</m>
 
-				<p>
+              </p>
+            </li>
+
+            <li>
+              <p>
 					Part (b) Suppose <m>\gcd(k,\ell) = 1</m>. As <m>K</m> and <m>L</m> are finite extensions of <m>E</m> they are also algebraic. Thus there exists <m>\a\in K</m> and <m>\b\in L</m> such that <m>\mp_\a(x)</m> has degree <m>k</m> and <m>\mp_\b(x)</m> has degree <m>\ell</m>.
-				</p>
 
-				<p>
+              </p>
+
+              <p>
 					Thus <m>\gcd(\deg\mp_\a(x),\ell) = 1</m>, making <m>\mp_\a(x)</m> irreducible in <m>L[x]</m>. Thus <m>[L(\a):L]=k</m>. Notice that <m>E(\a,\b)=KL</m>, as it is the smallest (with respect to containment) subfield of <m>F</m> which satisfies <m>K\subseteq KL</m> and <m>L\subseteq KL</m>. Thus we have <m>[KL:E]=k\ell</m>, as desired.
 				</p>
+            </li>
 
-				<p>
+            <li>
+              <p>
 					Part (c) Let <m>E=\Q</m>, <m>L=K=\Q(\sqrt2)</m>, and <m>F=\Q(\sqrt2,i)</m> Notice that <m>KL=K=L</m>, and thus <m>[KL:E]=[L:E]=\ell&lt;\ell^2=k\ell</m>.
+
+              </p>
+            </li>
+          </ol>
 				</p>
             </solution>
           
@@ -28158,16 +29315,26 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
 
             <solution>
               <p>
-					Part (a) Notice that <m>p=2</m> is prime in <m>\Q[x]</m>, and thus <m>f(x)</m> is irreducible in <m>\Q[x]</m> by Eisenstein's Criterion.
-				</p>
+                <ol>
+                  <li>
+                    <p>
+                      					Part (a) Notice that <m>p=2</m> is prime in <m>\Q[x]</m>, and thus <m>f(x)</m> is irreducible in <m>\Q[x]</m> by Eisenstein's Criterion.
 
-				<p>
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
 					Part (b) Let <m>\alpha</m> be a real root of <m>f(x)</m>. As <m>f</m> is irreducible this root is not in <m>\Q</m>. As <m>\alpha</m> is the root of a monic irreducible polynomial of degree <m>5</m>, we see that <m>[\Q(\alpha):\Q]=5</m>. By the FTGT there exists a subgroup of <m>\Gal(L/\Q)</m> with order <m>5</m>, making it a cyclic subgroup generated by some element of order <m>5</m>.
 				</p>
 
 				<p>
 					However, as <m>f</m> only has <m>2</m> complex roots we see that complex conjugation corresponds to an element of order <m>2</m> in <m>\Gal(L/\Q)\cong H\leq S_5</m>. Thus we have a transposition and a <m>5</m>-cycle, meaning we can generate all of <m>S_5</m>. <m>\Gal(L/\Q)\cong S_5</m>.
 				</p>
+                  </li>
+                </ol>
+				</p>
+				
             </solution>
           
           </problem>
@@ -28297,11 +29464,40 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
             </p>
 
             <p>
-              By this [[Corollary – Every Matrix Similar to Unique RCF Matrix|Corollary]] we know that every matrix is similar to a unique matrix in RCF. Note that RCF is based on the invariant factors if a matrix, and thus if two matrices have the same invariant factors they will have the same RCF, making them both similar to the same (unique) matrix, making them similar to each other. By part (1) of this [[Theorem – Cayley-Hamilton Theorem|Theorem]], the characteristic polynomial of a matrix is equal to the product of the invariant factors of that same matrix.
+              By this 
+              [[Corollary – Every Matrix Similar to Unique RCF Matrix|Corollary]] we know that every matrix is similar to a unique matrix in RCF. Note that RCF is based on the invariant factors if a matrix, and thus if two matrices have the same invariant factors they will have the same RCF, making them both similar to the same (unique) matrix, making them similar to each other. By part (1) of this [[Theorem – Cayley-Hamilton Theorem|Theorem]], the characteristic polynomial of a matrix is equal to the product of the invariant factors of that same matrix.
             </p>
 
             <p>
-              Recall that the invariant factors must divide all preceding invariant factors in RCF (See: [[Theorem – Rational Canonical Form|Theorem]]), and observe that <m>(x^4-1)</m> factors as <m>(x^2-1)(x^2+1)</m> and <m>(x^2-1)</m> factors as <m>(x-1)(x+1)</m>. Given this information, after some fiddling with the factors, we find four possible options for invariant factors of <m>A</m>: 1. <m>x^6-x^4-x^2+1=(x^2 -1)(x^4- 1)</m>, 2. <m>(x^2-1),(x^4-1)</m>, 3. <m>(x+1), (x-1)(x^4-1)</m>, and 4. <m>(x-1),(x+1)(x^4-1)</m>. Let <m>f(x)=x^6-x^4-x^2+1, g(x)=(x^4-1),</m> <m>h(x)=x^2-1</m>, <m>j(x)=(x-1),</m> and <m>k(x)=(x+1)</m>. Observe the companion matrices of each of these polynomials: <me>C(f)=\begin{bmatrix}
+              Recall that the invariant factors must divide all preceding invariant factors in RCF 
+              (See: [[Theorem – Rational Canonical Form|Theorem]]), and observe that <m>(x^4-1)</m> factors as <m>(x^2-1)(x^2+1)</m> and <m>(x^2-1)</m> factors as <m>(x-1)(x+1)</m>. Given this information, after some fiddling with the factors, we find four possible options for invariant factors of <m>A</m>: 
+              <ul>
+                <li>
+                  <p>
+              <m>x^6-x^4-x^2+1=(x^2 -1)(x^4- 1)</m>, 
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+              <m>(x^2-1),(x^4-1)</m>, 
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+              <m>(x+1), (x-1)(x^4-1)</m>, and 
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+              <m>(x-1),(x+1)(x^4-1)</m>. 
+                  </p>
+                </li>
+              </ul>
+              Let <m>f(x)=x^6-x^4-x^2+1, g(x)=(x^4-1),</m> <m>h(x)=x^2-1</m>, <m>j(x)=(x-1),</m> and <m>k(x)=(x+1)</m>. Observe the companion matrices of each of these polynomials: 
+              <me>C(f)=\begin{bmatrix}
   0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; -1\\
   1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
   0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 1\\
@@ -28325,7 +29521,31 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
   C(k)=\begin{bmatrix}
   -1\\ 
   \end{bmatrix}
-  </me> Behold: explicit representatives of each similarity class: 1. <m>C(f)</m>, 2. <m>C(g)\oplus C(h)</m>, 3. <m>C(k)\oplus C(gj)</m>, and 4. <m>C(j)\oplus C(gk)</m>.
+  </me> Behold: explicit representatives of each similarity class: 
+<ul>
+<li><p>
+<m>C(f)</m>, 
+</p></li>
+
+<li>
+<p>
+<m>C(g)\oplus C(h)</m>, 
+</p>
+</li>
+
+<li>
+<p>
+<m>C(k)\oplus C(gj)</m>, and 
+</p>
+</li>
+
+<li>
+<p>
+<m>C(j)\oplus C(gk)</m>.
+
+</p>
+</li>
+</ul>
             </p>
             </solution>
           
@@ -31020,7 +32240,7 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
           <problem><title>Problem 1</title>
             <statement>
               <p>
-            Prove that no group of order 150 is simple.
+            Prove that no group of order <m>150</m> is simple.
           </p>
             </statement>
 
@@ -31035,7 +32255,9 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
           <problem><title>Problem 2</title>
             <statement>
               <p>
-            Let <m>G</m> be a finite group. (a) If <m>N</m> is a normal subgroup of <m>G</m> and <m>|N | = 2</m>, prove that <m>N</m> is contained in the center <m>Z(G)</m> of <m>G</m>. (b) Suppose that <m>| Z(G)|</m> is odd and that <m>G</m> contains a non-trivial simple subgroup <m>H</m> with <m>[G : H] = 2</m>. Prove that <m>H</m> is the only non-trivial proper normal subgroup of <m>G</m>.
+            Let <m>G</m> be a finite group. 
+            (a) If <m>N</m> is a normal subgroup of <m>G</m> and <m>|N | = 2</m>, prove that <m>N</m> is contained in the center <m>Z(G)</m> of <m>G</m>. 
+            (b) Suppose that <m>| Z(G)|</m> is odd and that <m>G</m> contains a non-trivial simple subgroup <m>H</m> with <m>[G : H] = 2</m>. Prove that <m>H</m> is the only non-trivial proper normal subgroup of <m>G</m>.
           </p>
             </statement>
 

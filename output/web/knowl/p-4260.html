@@ -13,14 +13,20 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(f:G\to G/H\times G/K\)</span> defined such that <span class="process-math">\(f(g)=(gH, gK)\text{.}\)</span> Let <span class="process-math">\(x,y\in G\text{.}\)</span> Then</div>
+<div class="para">Next, observe</div>
 <div class="displaymath process-math">
 \begin{equation*}
-f(xy)=(xyH,xyK)=(xHyH,xKyK)=(xH,yH)\cdot(xKyK)=f(x)f(y),
+\begin{align}
+\rank(AP\inv)&amp;=\rank((AP\inv)^T)\\
+&amp;=\rank(P^{-1^T}A^T)\\
+&amp;=\rank(A^T)\\
+&amp;=\rank(A),
+\end{align}
 \end{equation*}
 </div>
-<div class="para">showing <span class="process-math">\(f\)</span> is a homomorphism.</div>
+<div class="para">as <span class="process-math">\((P^{-1})^T\)</span> is an invertible matrix. Thus <span class="process-math">\(\rank(B)=\rank(PAP\inv)=\rank(A)\text{.}\)</span>
 </div>
-<span class="incontext"><a href="section-83.html#p-4260" class="internal">in-context</a></span>
+</div>
+<span class="incontext"><a href="section-80.html#p-4260" class="internal">in-context</a></span>
 </body>
 </html>
