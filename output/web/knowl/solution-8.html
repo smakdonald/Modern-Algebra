@@ -12,24 +12,12 @@
 </head>
 <body class="ignore-math">
 <div class="solution solution-like">
-<h3 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.21.1</span><span class="period">.</span>
-</h3>
-<div class="para logical">
-<div class="para">Consider</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/ex-normal-examples.html ./knowl/exe-order-4-abelian.html ./knowl/ex-normal-examples.html">
-\begin{equation*}
-V=\{e, (1 2)(3 4), (1 3)(2 4), (1 4)(2 3)\}.
-\end{equation*}
-</div>
-<div class="para">From <a href="" class="xref" data-knowl="./knowl/ex-normal-examples.html" title="Example 4.20: Examples of Normal Subgroups">Example 4.20</a> we have <span class="process-math">\(V \nsg S_4\text{.}\)</span> The group <span class="process-math">\(V\)</span> has order <span class="process-math">\(4\text{,}\)</span> making it ableian from <a href="" class="xref" data-knowl="./knowl/exe-order-4-abelian.html" title="Exploration 1.27: Marley's Conjecture">Exploration 1.27</a>. Thus every subgroup of <span class="process-math">\(V\)</span> is normal in <span class="process-math">\(V\)</span> by <a href="" class="xref" data-knowl="./knowl/ex-normal-examples.html" title="Example 4.20: Examples of Normal Subgroups">Example 4.20</a>.</div>
-</div> <div class="para logical">
-<div class="para">Now consider the subgroup <span class="process-math">\(H = \{e,(12)(34)\}\text{.}\)</span> But <span class="process-math">\(H\)</span> is not normal in <span class="process-math">\(S_4\text{,}\)</span> since for example</div>
-<div class="displaymath process-math">
-\begin{equation*}
-(1 3) [(1 2)(3 4)] (1 3)^{-1} = (3 2)(1 4) \not\in H.
-\end{equation*}
-</div>
+<h4 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.2.2.1</span><span class="period">.</span>
+</h4>
+<div class="para">Let <span class="process-math">\(G\)</span> be a group, <span class="process-math">\(N\)</span> is a normal subgroup of <span class="process-math">\(G\text{,}\)</span> and <span class="process-math">\(H\)</span> a characteristic subgroup of <span class="process-math">\(N\text{.}\)</span> Let <span class="process-math">\(g\in G\)</span> and consider the automorphism <span class="process-math">\(a_g:G\to G\)</span> given by <span class="process-math">\(a_g(g')=gg'g^{-1}\text{.}\)</span>
+</div> <div class="para">Let <span class="process-math">\(n\in N\)</span> and notice <span class="process-math">\(a_g(n)=gng\inv\in N\text{,}\)</span> as <span class="process-math">\(N\nsg G\text{.}\)</span> Thus <span class="process-math">\(a_g:N\to N\)</span> is well defined. Let <span class="process-math">\(n\in N\text{.}\)</span> As <span class="process-math">\(gNg\inv=N\text{,}\)</span> we can write <span class="process-math">\(n=gn'g\inv\)</span> for some <span class="process-math">\(n'\in N\text{.}\)</span> Then <span class="process-math">\(a_g(n')=gn'g\inv=n\text{,}\)</span> making <span class="process-math">\(a_g\)</span> surjective. As <span class="process-math">\(|N|=|N|\)</span> we see that <span class="process-math">\(a_g\)</span> is a bijection. The homomorphism piece we get for free from <span class="process-math">\(G\text{,}\)</span> making <span class="process-math">\(a_g\in\Aut(N)\text{.}\)</span>
+</div> <div class="para">Let <span class="process-math">\(h\in H\text{.}\)</span> As <span class="process-math">\(H\)</span> is a characteristic subgroup of <span class="process-math">\(N\text{,}\)</span> we see that <span class="process-math">\(a_g(h)=ghg\inv=h\)</span> for all <span class="process-math">\(h\in H\)</span> and for all <span class="process-math">\(g\in G\text{.}\)</span> Thus <span class="process-math">\(H\)</span> is normal in <span class="process-math">\(G\text{.}\)</span>
 </div>
 </div>
 <span class="incontext"><a href="sec-normal-subgroups.html#solution-8" class="internal">in-context</a></span>

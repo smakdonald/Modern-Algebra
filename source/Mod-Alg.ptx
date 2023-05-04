@@ -22,12 +22,6 @@
     <initialism>AATA</initialism>
     -->
 
-    <!-- Math-related macros from "macros.tex" in previous LaTeX version -->
-    <!-- \notdivide replaces \notmid to avoid conflict with tikz - TWJ 5/6/2010 -->
-    <!-- Added operator \gf  - TWJ 2/26/2013 -->
-    <!-- Added operator \inn - TWJ 4/6/2013  -->
-    <!-- Added operator \aut - TWJ 4/6/2013  -->
-    <!-- Added operator \Hom - TWJ 8/19/2010 -->
     <macros>
         <!-- Operators     -->
         \def\ann{\operatorname{ann}}
@@ -313,7 +307,6 @@
     \usetikzlibrary{backgrounds}
     \usetikzlibrary{arrows,matrix}
     \usetikzlibrary{snakes}
-    \usepackage{quiver}
     </latex-image-preamble>
 
     <rename element="insight">Mark</rename>  
@@ -400,6 +393,12 @@
       -->
       
       <chapter xml:id="ch-intro-groups"><title>Intro to Groups</title>
+
+        <introduction><title>A Brief Notational Note</title>
+          <p>
+            At various points throughout this text, the author may use "mathcal" notation for definitions that do not normally require it (such as <m>\G</m> for a group, <m>\R</m> for a ring, etc.) In the realm of higher mathematics, this is what is known as a <em>typo</em>, and should be reported to the proper authorities as soon as possible.
+          </p>
+        </introduction>
       
         <section xml:id="sec-group-basics"><title>Group Basics </title>
 
@@ -457,7 +456,9 @@
 
             <insight xml:id="mark"> <p>We often write <m>xy</m> instead of <m>x\cdot y</m> for simplicity.<fn>This is the one and only "Mark". All following "Marks" will be "Remarks".</fn></p></insight>
 
-            <remark><p>The Closure axiom in <xref ref="def-monoid"/> is technically redundant. Closure is really part of the definition of a <xref text="title" ref="def-binop"/> on a set, and it is implicitly assumed whenever we consider such an operation. Howewever, redundancy is not a bad thing, and it never hurts to state it explicitely.</p></remark>
+            <remark><p>The <xref text="title" ref="closure-axiom"/> in <xref ref="def-monoid"/> is technically redundant. Closure is really part of <xref ref="def-binop"/>, and it is implicitly assumed whenever we consider such an operation. Howewever, redundancy is not a bad thing, and it never hurts to state it explicitely.</p></remark>
+
+            <remark><p>The notation <m>1</m> is often used for the identity element of a group, though we will not do so here.</p></remark>
 
             <remark><p>For those interested, a pairing <m>(G,\cdot)</m> that only satisfies the first two properties of <xref ref="def-monoid"/> is called a <em>semigroup</em><idx><h>semigroup</h></idx>. If <m>(G,\cdot)</m> only satisfies the first property, it is known as a <em>magma</em><idx><h>magma</h></idx>.</p></remark>
 
@@ -466,6 +467,8 @@
                 The term "magma" was coined by the mathematician Benjamin Peirce in the 1870s to describe a set with a binary operation. The word "magma" is derived from the Latin word "magmus," meaning "mass" or "heap," which suggests a collection of objects with no particular order or structure.
               </p>
             </historical>
+
+            <p>For those who are even <em>more</em> interested, here is a handy little graphic.</p>
 
             <figure xml:id="figure-magma"><title>Algebraic Structures</title>
               <caption>Relations between algebraic structures. <url href="https://q.uiver.app/?q=WzAsOCxbMiwwLCJcXHRleHR7TWFnbWF9Il0sWzIsMiwiXFx0ZXh0e1VuaXRhbCBNYWdtYX0iXSxbMiw0LCJcXHRleHR7SW52ZXJzZSBTZW1pZ3JvdXB9Il0sWzIsNiwiXFx0ZXh0e0dyb3VwfSJdLFs0LDQsIlxcdGV4dHtNb25vaWR9Il0sWzQsMiwiXFx0ZXh0e1NlbWlncm91cH0iXSxbMCwyLCJcXHRleHR7UXVhc2lncm91cH0iXSxbMCw0LCJcXHRleHR7TG9vcH0iXSxbNywzLCJcXHRleHR7YXNzb2NpYXRpdml0eX0iLDEseyJjb2xvdXIiOlsxMjAsNjAsNjBdfSxbMTIwLDYwLDYwLDFdXSxbNiwyLCJcXHRleHR7YXNzb2NpYXRpdml0eX0iLDAseyJsYWJlbF9wb3NpdGlvbiI6NDAsImNvbG91ciI6WzEyMCw2MCw2MF19LFsxMjAsNjAsNjAsMV1dLFsxLDQsIlxcdGV4dHthc3NvY2lhdGl2aXR5fSIsMCx7ImxhYmVsX3Bvc2l0aW9uIjo0MCwiY29sb3VyIjpbMTIwLDYwLDYwXX0sWzEyMCw2MCw2MCwxXV0sWzAsNSwiXFx0ZXh0e2Fzc29jaWF0aXZpdHl9IiwxLHsiY29sb3VyIjpbMTIwLDYwLDYwXX0sWzEyMCw2MCw2MCwxXV0sWzAsMSwiXFx0ZXh0e2lkZW50aXR5fSIsMSx7ImNvbG91ciI6WzI3MCw2MCw2MF19LFsyNzAsNjAsNjAsMV1dLFsyLDMsIlxcdGV4dHtpZGVudGl0eX0iLDEseyJjb2xvdXIiOlsyNzAsNjAsNjBdfSxbMjcwLDYwLDYwLDFdXSxbNiw3LCJcXHRleHR7aWRlbnRpdHl9IiwxLHsiY29sb3VyIjpbMjcwLDYwLDYwXX0sWzI3MCw2MCw2MCwxXV0sWzUsNCwiXFx0ZXh0e2lkZW50aXR5fSIsMSx7ImNvbG91ciI6WzI3MCw2MCw2MF19LFsyNzAsNjAsNjAsMV1dLFswLDYsIlxcdGV4dHtkaXZpc2liaWxpdHl9IiwxLHsiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXSxbMSw3LCJcXHRleHR7ZGl2aXNpYmlsaXR5fSIsMCx7ImxhYmVsX3Bvc2l0aW9uIjo2MCwiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXSxbNSwyLCJcXHRleHR7aW52ZXJzZXN9IiwwLHsibGFiZWxfcG9zaXRpb24iOjYwLCJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dLFs0LDMsIlxcdGV4dHtpbnZlcnNlc30iLDEseyJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dXQ==" visual="">Quiver</url></caption>
@@ -492,11 +495,11 @@
 
             <historical><title>Groups</title>
               <p>
-                The term "group" was introduced in the early 20th century by the French mathematician <xref text="title" ref="bio-galois"/> to describe a set of mathematical objects that exhibit certain symmetry properties.
+                The term "group" was introduced in the early 1831 century by the French mathematician <xref text="title" ref="bio-galois"/> to describe a set of mathematical objects that exhibit certain symmetry properties.
               </p>
 
               <p>
-                It was later adopted and popularized by other mathematicians such as <xref text="title" ref="bio-cayley"/> and <xref text="title" ref="bio-cauchy"/>.
+                It was later adopted and popularized by other mathematicians such as <xref text="title" ref="bio-cayley"/> and <xref text="title" ref="bio-cauchy"/>, though the axiomatic definition was not given until 1882 by Heinrich Weber.
               </p>
             </historical>
 
@@ -508,6 +511,8 @@
               <p>When we refer to exponents in groups, we are talking about repeated applications of the given operation, which in many cases is denoted multiplicatively, hence the exponent notation. However, for additive groups such as <m>(\Z,+)</m>, we find ourselves in the uncomfortable situation where statements such as <m>2^3=2+2+2=6</m> are technically true. Thus, in additive groups it is more customary to denote expressions such as the one above in more traditional notation: namely, <m>3\cdot 2=2+2+2=6</m>.</p>
             </warning>
 
+            <!--
+
             <exercise xml:id="exe-lr-inverses"><title>Left and Right Inverses</title>
               <statement>
                 <p>
@@ -516,29 +521,25 @@
               </statement>
               <solution>
                 <p>
-                  Coming soon to an OER near you!
+                  Consider the set <m>\Fun(\N,\N)</m> of all functions from <m>\N</m> to itself.
                 </p>
               </solution>
             </exercise>
 
-            <example xml:id="ex-n-monoid"><title>Au Naturale</title>
-              <statement>
-                <p>The <xref text="title" ref="def-natural-numbers"/> <m>\N</m> form a monoid under addition. However, <m>(\N,+)</m> does <em>not</em> form a group.</p>
-              </statement>
-            </example>
-            
+            -->
+
             <theorem xml:id="thm-properties-of-groups"><title>Properties of Groups (and sometimes Monoids)</title>
               <statement>
                 <p>
                   <ol>
-                    <li><title>Unique Identity</title>
-                      <p xml:id="list-unique-group-identity">
+                    <li xml:id="list-unique-group-identity"><title>Unique Identity</title>
+                      <p>
                         In a monoid <m>G</m>, the element <m>e</m> satisfying the Idenity axiom of <xref ref="def-monoid" /> is unique, and we thus refer to it as the <em>identity element</em><idx><h>identity element</h></idx> of <m>G</m>.
                       </p>
                     </li>
       
-                    <li><title>Unique Inverses</title>
-                      <p xml:id="list-unique-group-inverse">
+                    <li xml:id="list-unique-group-inverse"><title>Unique Inverses</title>
+                      <p>
                         In a group <m>G</m>, for each <m>x</m>, the element <m>y</m> satisfying the Inverses axiom of <xref ref="def-group" /> is unique, and we thus refer to it as the <em>the inverse</em> of <m>x</m> and we will henceforth denote it by <m>x^{-1}</m>.
                       </p>
                     </li>
@@ -589,8 +590,10 @@
                 </p>
               </proof>
             </theorem>
+
+            <p>Before we see some examples, let's define one very special kind of group that we'll be seeing a lot of.</p>
       
-            <definition xml:id="def-abelian"> <title>Abelian Group</title>
+            <definition xml:id="def-abelian"><title>Abelian Group</title>
               <statement>
                 <p>
                   A group <m>G</m> is an <em>abelian group</em><idx><h>abelian group</h></idx> if <m>\cdot</m> is commutative; i.e., <m>x \cdot y = y \cdot x</m> for all <m>x,y \in G</m>. 
@@ -623,12 +626,20 @@
                         <m>(\Z,+), (\Q,+), (\R,+),</m> and <m>(\C,+)</m> each form an abelian group, where <m>+</m> denotes traditional addition.
                       </p>
                     </li>
-      
+
+                    <li>
+                      <p>
+                        The <xref text="title" ref="def-natural-numbers"/> <m>\N</m> form a monoid under addition. However, <m>(\N,+)</m> does <em>not</em> form a group.
+                      </p>
+                    </li>
+
+                    <!--
                     <li>
                       <p>
                         <m>\Q^+</m> and <m>\R^+</m> form groups under traditional multiplication.
                       </p>
                     </li>
+                    -->
       
                     <li><title>General Linear Group</title>
                       <p>
@@ -636,7 +647,7 @@
                         <me>
                           \operatorname{GL}_n(\C)=\{ \text{invertible } n \times n \;\text{matrices with entries in}\; \C\}.
                         </me> 
-                        By invertible I mean those matrices that have two-sided inverses, but it turns out that if an <m>n \times n</m> matrix has a left inverse then it it is automatically a right inverse too, and vice versa. Then <m>\operatorname{GL}_n(\C)</m> is a non-abelian group under matrix multiplication, known as the <em>general linear group</em><idx><h>general linear group</h></idx>.<fn>In general this is true for any field <m>F</m>, whatever those are.</fn>
+                          Then <m>\operatorname{GL}_n(\C)</m> is a non-abelian group under matrix multiplication known as the <em>general linear group</em><idx><h>general linear group</h></idx>.<fn>In general this is true for any field <m>F</m>, whatever those are.</fn>
                         <notation><usage><m>\GL</m></usage><description>General linear group</description></notation> 
                       </p>
                     </li>
@@ -647,26 +658,28 @@
                       </p>
                     </li>
 
+                    <li xml:id="exe-opposite-group"><title>Opposite Group</title>
+                      <p>
+                        Let <m>G</m> be a multiplicative group, and define <m>G^{op}</m><idx><h>opposite group</h></idx> be the set <m>G</m> equipped with the operation <m>*</m>, where <m>x*y=yx</m>.<fn>Opposite groups are used in category theory to describe duality between algebraic structures.</fn> Then <m>G^{op}</m> is a group.
+                      </p>
+                    </li>
+
+                    <!--
                     <li>
                       <p>
                         The subset <m>L=\{1,-1,i,-i\}</m> of the complex numbers forms an abelian group under multiplication.
                       </p>
                     </li>
+                    -->
                   </ol>
                 </p>
             </example>
 
-            <exercise xml:id="exe-opposite-group"><title>Opposite Day</title>
-              <p>
-                Let <m>G</m> be a multiplicative group, and define <m>G^{op}</m><idx><h>opposite group</h></idx> be the set <m>G</m> equipped with the operation <m>*</m>, where <m>x*y=yx</m>.<fn>Opposite groups are used in category theory to describe duality between algebraic structures.</fn> Then <m>G^{op}</m> is a group.
-              </p>
-            </exercise>
-
+            <!--
             <exercise xml:id="exe-not-groups"><title>Inches From Greatness...</title>
               <statement>
                 <p>
                   Explain why each of the following is <em>not</em> a group. If you're feeling fancy, determine which are monoids as well.
-  
                   <ol>
                     <li>
                       <p>
@@ -696,6 +709,7 @@
                 </p>
               </statement>
             </exercise>
+            -->
 
             <p>The following example illustrates a few important examples of something called a <xref text="title" ref="def-group-of-units"/>, which is defined explicitely in terms of rings (whatever those are) in <xref ref="part-rings"/>.</p>
 
@@ -730,6 +744,8 @@
                 <p>Prove that <m>\Z/p^\times=\mathbb{Z}/p\setminus\{0\}</m></p>
               </statement>
             </exercise>
+
+            <!--
 
             <exercise xml:id="exe-group-exponents"><title>Group Exponents</title>
               <statement>
@@ -798,9 +814,10 @@
                 </p>
               </solution>
             </exercise>
+
+            -->
             
-            <lemma xml:id="lem-group-inverses"><title>Properties of Inverses</title>
-              
+            <lemma xml:id="lem-group-inverses"><title>Properties of Inverses</title>  
               <statement>
                 <p>
                   If <m>G</m> is a group and <m>g, x_1,\ldots,x_n \in G</m>, then:
@@ -837,12 +854,13 @@
                   </ol>
                 </p>
               </proof>
-            </lemma>          
+            </lemma>         
+
+            <!-- 
 
             <exercise xml:id="exe-groups-but-false"><title>Wouldn't it be Nice</title>
               <p>
                 Find counterexamples to each of the following (false) statements.
-  
                 <ol>
                   <li>
                     <p>
@@ -873,6 +891,8 @@
             </exercise>
 
             <p>But that's enough confusion for now. I know just the thing to get us back on track.</p>
+
+            -->
     
           </subsection>
 
@@ -983,6 +1003,8 @@
   
             </exercise>
 
+            <!--
+
             <exercise xml:id="exe-finite-order"><title>Product Order</title>
               <statement>
                 <p>
@@ -990,53 +1012,38 @@
                 </p>
               </statement>
             </exercise>
+
+            -->
         
-            <!--
-            <proposition xml:id="prop-orderelgp">
+            <theorem xml:id="thm-element-order"><title>Element Order</title>
               <statement>
                 <p>
                   Let <m>G</m> be a group and <m>x \in G</m> any element. 
                     <ol>
                       <li>
                         <p>
-                          Prove that if <m>|x| = n</m>, then <m>e, x, \dots, x^{n-1}</m> are all distinct elements of <m>G</m>.
+                          If <m>|x| = n</m>, then <m>e, x, \dots, x^{n-1}</m> are all distinct elements of <m>G</m>.
                         </p>
                       </li>
                           
                       <li>
                         <p>
-                          Prove that if <m>|x| = \infty</m>, then <m>x^i \ne x^j</m> for all integers (positive or negative) <m>,j</m> with <m>i \ne j</m>.
+                          If <m>|x| = \infty</m>, then <m>x^i \ne x^j</m> for all integers (positive or negative) <m>,j</m> with <m>i \ne j</m>.
                         </p>
                       </li>
         
                       <li>
                         <p>
-                          Conclude <m>|x| \leq |G|</m> in all cases.
+                          <m>|x| \leq |G|</m>.
+                        </p>
+                      </li>
+
+                      <li>
+                        <p>
+                          If <m>x^m = e</m> then <m>|x| \mid m</m>.
                         </p>
                       </li>
                     </ol>
-                </p>
-              </statement>
-            </proposition>
-            -->
-      
-            <theorem xml:id="thm-element-order"><title>Element Order</title>
-              <statement>
-                <p>
-                  Let <m>G</m> be a group and let <m>x\in G</m>. Then 
-                  <ol>
-                    <li>
-                      <p>
-                        If <m>x^m = e</m> then <m>|x| \mid m</m>.
-                      </p>
-                    </li>
-
-                    <li>
-                      <p>
-                        <m>|x|=\left|\{x^n \ | n\in \Z \}\right|</m> and in particular <m>|x| \leq |G|</m>.
-                      </p>
-                    </li>
-                  </ol>
                 </p>
               </statement>
 
@@ -1045,7 +1052,7 @@
                   <ol>
                     <li>
                       <p>
-                        Let <m>n = |x|</m>. We have <m>m = nq + r</m> for some <m>0 \leq r &lt; n</m> by the <q>division algorithm</q>. We have <m>x^r = (x^n)^qx^r = x^m = e</m> and so, by the definition of <q>order</q>, it must be that <m>r = 0</m>
+                        Coming soon!
                       </p>
                     </li>
 
@@ -1054,14 +1061,25 @@
                         Coming soon!
                       </p>
                     </li>
+
+                    <li>
+                      <p>
+                        Coming soon!
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Let <m>n = |x|</m>. We have <m>m = nq + r</m> for some <m>0 \leq r &lt; n</m> by the <q>division algorithm</q>. We have <m>x^r = (x^n)^qx^r = x^m = e</m> and so, by the definition of <q>order</q>, it must be that <m>r = 0</m>
+                      </p>
+                    </li>
                   </ol>
                 </p>
               </proof>
-            </theorem>
-
+            </theorem>         
+      
             <exercise xml:id="exe-order-and-gcd"><title>Order Hors d'oeuvre</title>
               <statement>
-    
               <p>
                 Let <m>G</m> be a group. 
                 <ol>
@@ -1084,21 +1102,18 @@
             </statement>
             </exercise>
 
-            <remark><p>A brief note on notation before we progress to the exercises and beyond. At various points throughout this text, the author may use "mathcal" notation for definitions that do not normally require it (such as <m>\G</m> for a group, <m>\R</m> for a ring, etc.) In the realm of higher mathematics, this is what is known as a <em>typo</em>, and should be reported to the proper authorities as soon as possible.</p></remark>
           </subsection>
     
         </section>
       
         <section xml:id="sec-common-groups"><title>Common Groups</title>
 
-          <introduction><p>We examine two of the most commonly encountered groups in all of algebra: the dihedral group and the symmetric group...the quaternions are also here.</p></introduction>
+          <introduction><p>We examine two of the most commonly encountered groups in all of algebra: the dihedral group and the symmetric group.<fn>The quaternions are also here.</fn></p></introduction>
       
           <subsection xml:id="subsec-d2n"><title>Dihedral Groups</title> 
 
-            <blockquote><p><q>Reality prefers symmetry.</q></p><attribution>Jorge Luis Borges</attribution> </blockquote>
-            
-            <p>We now discuss the important example of dihedral groups in detail.</p>
-      
+            <blockquote><p><q>Reality prefers symmetry.</q></p><attribution>Jorge Luis Borges</attribution></blockquote>
+                  
             <definition xml:id="def-iso-and-sym"><title>Isometry and Symmetry</title>
               <statement>
                 <p>
@@ -1218,6 +1233,44 @@
                 Prove <m>|S_n|=n!</m>.
               </p>
             </exercise>
+
+            <table><title>Cayley Table of <m>S_2</m></title>
+              <tabular>
+                <row>
+                  <cell>
+                    <m>S_2</m>
+                  </cell>
+                  <cell>
+                    <m>(1)</m>
+                  </cell>
+                  <cell>
+                    <m>(12)</m>
+                  </cell>
+                </row>
+                <row>
+                  <cell>
+                    <m>(1)</m>
+                  </cell>
+                  <cell>
+                    <m>(1)</m>
+                  </cell>
+                  <cell>
+                    <m>(12)</m>
+                  </cell>
+                </row>
+                <row>
+                  <cell>
+                    <m>(12)</m>
+                  </cell>
+                  <cell>
+                    <m>(12)</m>
+                  </cell>
+                  <cell>
+                    <m>(1)</m>
+                  </cell>
+                </row>
+              </tabular>
+            </table>
      
             <definition xml:id="def-cycle"><title>Cycles and Transpositions</title>
               <statement>
@@ -1412,10 +1465,6 @@
                 </statement>
             </definition>
 
-            <exercise xml:id="exe-alternating-group"><title>Left at the Alter(nating Group)</title>
-              <p>Verify that <m>A_n</m> is indeed a group.</p>
-            </exercise>
-
             <exercise xml:id="exe-an-order"><title>Order of <m>A_n</m></title>
               <p>Prove <m>|A_n|=\frac{n!}{2}</m>.</p>
             </exercise>
@@ -1543,7 +1592,6 @@
               
               <p>
                 Determine (with justification) which of the following functions are group homomorphisms
-    
                 <ol>
                   <li>
                     <p>
@@ -1626,7 +1674,7 @@
             <exercise xml:id="exe-group-hom"><title><m>\Hom</m> Sweet <m>\Hom</m></title>
               <statement>
                 <p>
-                  Let <m>G</m> and <m>H</m> be abelian groups. Then the set <m>\Hom(G, H)</m> of all group homomorphisms from <m>G</m> to <m>H</m> is itself an abelian group.
+                  Let <m>G</m> and <m>H</m> be abelian groups. Then the set <m>\Hom(G,H)</m> of all group homomorphisms from <m>G</m> to <m>H</m> is itself an abelian group.
                 </p>
               </statement>
             </exercise>
@@ -1673,7 +1721,7 @@
                   -1 &amp; 0 \\
                   0 &amp; 1 
                   \end{bmatrix}.
-                </me> 
+                </me> <idx><h>cosine function</h></idx><idx><h>sine function</h></idx>
                 Then one may check that <m>x^n = e</m>, <m>y^2 = e</m> and <m>yxyx = e</m>. <xref ref="prop-d2n-mapping"/> gives that there is a group homomorphism <m>f: D_{2n} \to \operatorname{GL}_2({\mathbb{R}})</m> such that <m>f(r) = x</m> and <m>f(s) = y</m>. This is not at all surprising, since the matrix <m>x</m> represents rotation by <m>2 \pi/n</m> radians counter-clockwise and <m>y</m> represents reflection about the <m>y</m>-axis. Indeed, one could define <m>D_{2n}</m> as the subgroup of <m>\operatorname{GL}_2({\mathbb{R}})</m> consisting of elements <m>1, x, \dots, x^{n-1}, y, xy \cdots, x^{n-1}y</m>.
               </p>
             </example>
@@ -1780,11 +1828,11 @@
             <definition xml:id="def-gpiso"><title>Group Ismorphism</title>
               <statement>
                 <p>
-                  A homomorphism <m>f: G \to H</m> is called an <em>isomorphism</em> if there exists a homomorphism <m>g: H \to G</m> such that <m>f \circ g = \text{id}_H</m> and <m>g \circ f = \text{id}_G</m>.
+                  A homomorphism <m>f: G \to H</m> is called an <em>isomorphism</em><idx><h>isomorphism</h></idx> if there exists a homomorphism <m>g: H \to G</m> such that <m>f \circ g = \text{id}_H</m> and <m>g \circ f = \text{id}_G</m>.
                 </p>
       
                 <p>
-                  If <m>f:G\to H</m> is an isomorphism, <m>G</m> and <m>H</m> are called <em>isomorphic</em>, written <m>G\cong H</m>.
+                  If <m>f:G\to H</m> is an isomorphism, <m>G</m> and <m>H</m> are called <em>isomorphic</em><idx><h>isomorphic</h></idx>, written <m>G\cong H</m>.
                   <notation><usage><m>\cong</m></usage><description>Isomorphic</description></notation> 
                 </p>
               </statement>
@@ -1793,9 +1841,7 @@
             <remark><p>The meaning of the word <q>isomorphism</q> in any context (sets, groups, rings, fields, topological spaces, whatever) is always <q>a morphism that has a two-sided inverse</q>. In many contexts this turns out to be equivalent to the notion of being <q>one-to-one and onto</q>. But there are contexts in which this is not the case. For example a one-to-one and onto continuous map of topological spaces need not be a homeomorphism. (A homeomorphism is a term one uses for isomorphism of topological spaces, for historical reasons.)</p></remark>
       
             <p>Intuitively, a group isomorphism establishes a one-to-one correspondence between the elements of two groups, such that they have exactly the same algebraic structure. This means that the groups are essentially the same, up to a relabeling of their elements.</p>
-      
-            <p>Group isomorphisms allow us to identify different groups that have the same algebraic structure. This can simplify the study of groups by reducing the number of cases that need to be considered, and it can also provide insight into the connections between seemingly unrelated groups.</p>
-      
+            
             <theorem xml:id="thm-iso-def"><title>Equivalent Isomorphism Characterization</title>
               <statement>
                 <p>Suppose <m>\varphi: G \to H</m> is a group homomorphism. Then <m>\varphi</m> an isomorphism if and only if <m>\varphi</m> is bijective (one-to-one and onto).</p>
@@ -1981,12 +2027,12 @@
             <definition xml:id="def-gp-automorphism"><title>Group Automorphism</title>
               <statement>
                 <p>
-                  Let <m>G</m> be a group. An isomorphism <m>\varphi:G\to G</m> is called an <em>automorphism</em> of <m>G</m>. The set of automorphisms of a group <m>G</m> is called the <term>automorphism group</term> of <m>G</m> and denoted <m>\Aut(G)</m>.
+                  Let <m>G</m> be a group. An isomorphism <m>\varphi:G\to G</m> is called an <em>automorphism</em><idx><h>automorphism</h></idx> of <m>G</m>. The set of automorphisms of a group <m>G</m> is called the <term>automorphism group</term><idx><h>automorphism group</h></idx> of <m>G</m> and denoted <m>\Aut(G)</m>.
                 </p>
               </statement>
             </definition>
 
-            <remark><p>A homomorphism from a group to itself is called an <em>endomorphism</em></p></remark>
+            <remark><p>A homomorphism from a group to itself is called an <em>endomorphism</em><idx><h>endomorphism</h></idx></p></remark>
 
             <example xml:id="ex-identity-automorphism">
               <p>
@@ -1994,8 +2040,7 @@
               </p>
             </example>
 
-            <proposition xml:id="prop-aut-is-group">
-              <title>The Automorphism Group</title>
+            <proposition xml:id="prop-aut-is-group"><title>The Automorphism Group</title>
               <statement>
                 <p>
                   The set of automorphisms of <m>G</m>, denoted <m>\operatorname{Aut}(G)</m>, is a group under composition.
@@ -2036,8 +2081,8 @@
             <definition xml:id="def-inner-automorphisms"><title>Inner Automorphism</title>
               <statement>
                 <p>
-                  Let <m>G</m> be a group and <m>x\in G</m>. The function <m>\psi_x:G\to G</m> defined by <m>\psi_x(a)=xax^{-1}</m> is called the <em>inner automorphism</em> of <m>G</m> induced by <m>x</m>.
-                  The set of <em>inner automorphisms</em> of <m>G</m> is denoted <m>\Inn(G)=\{\psi_x\mid x\in G\}</m>.
+                  Let <m>G</m> be a group and <m>x\in G</m>. The function <m>\psi_x:G\to G</m> defined by <m>\psi_x(a)=xax^{-1}</m> is called the <em>inner automorphism</em><idx><h>inner automorphism</h></idx> of <m>G</m> induced by <m>x</m>.
+                  The set of <em>inner automorphisms</em><idx><h>inner automorphism group</h></idx> of <m>G</m> is denoted <m>\Inn(G)=\{\psi_x\mid x\in G\}</m>.
                 </p>
               </statement>
             </definition>
@@ -2137,19 +2182,19 @@
         
           <subsection xml:id="subsec-subgroup-basics"><title>Subgroup Basics</title>
 
-            <blockquote><p><q>I have this fear of falling in front of large groups...that's why I tend not to wear heels.</q></p><attribution>Taylor Swift</attribution></blockquote>
+            <blockquote><p><q>I have this fear of falling in front of large groups...that's why I tend not to wear heels.</q><idx><h>Taylor Swift</h></idx></p><attribution>Taylor Swift</attribution></blockquote>
       
             <definition xml:id="def-subgroup"><title>Subgroup</title>
               <statement>
                 <p>
-                  A nonempty subset <m>H</m> of a group <m>G</m> is called a <em>subgroup</em>, denoted <m>H\leq G</m>, 
+                  A nonempty subset <m>H</m> of a group <m>G</m> is called a <em>subgroup</em><idx><h>subgroup</h></idx>, denoted <m>H\leq G</m>, 
                   <notation><usage><m>\leq</m></usage><description>Subgroup</description></notation> 
                   <notation><usage><m>H,K</m></usage><description>in group theory, <m>H</m> and <m>K</m> usually denote subgroups.</description></notation> 
                   provided <m>H</m> is a group under the multiplication law of <m>G</m>.
                 </p>
       
                 <p>
-                  A subgroup <m>H</m> of a group <m>G</m> is a <em>proper</em> subgroup, denoted <m>H&lt;G</m> if <m>H\neq G</m>.
+                  A subgroup <m>H</m> of a group <m>G</m> is a <em>proper</em><idx><h>proper subgroup</h></idx> subgroup, denoted <m>H&lt;G</m> if <m>H\neq G</m>.
                 </p>
               </statement>
             </definition>
@@ -2263,7 +2308,6 @@
             <remark><p>In fact, in the case of <xref ref="ex-nz"/>, these turn out to be the <em>only</em> subgroups of <m>\Z</m>, a fact which you may prove in <xref ref="exe-subgroups-of-z"/> </p></remark>
 
             <example xml:id="ex-uncommon-subgroups"><title>Less Common Subgroups</title>
-
               <p>
                 <ol>
                   <li>
@@ -2293,13 +2337,12 @@
               </p>
             </example>
 
-            <exercise xml:id="exe-torsion-subgroup"><title>Torision Subgroup</title>
-              
+            <exercise xml:id="exe-torsion-subgroup"><title>Torision Subgroup</title>      
               <p>
                 <ol>
                   <li>
                     <p>
-                      Let <m>G</m> be an abelian group. Then the set of elements of finite order, which we denote <m>T</m>, is a subgroup of <m>G</m>, called the <term>torsion subgroup</term>.
+                      Let <m>G</m> be an abelian group. Then the set of elements of finite order, which we denote <m>T</m>, is a subgroup of <m>G</m>, called the <term>torsion subgroup</term><idx><h>torision subgroup</h></idx>.
                     </p>
                   </li>
 
@@ -2389,13 +2432,12 @@
               </solution>
             </exercise>
 
-            <exercise xml:id="exe-subgroup-not-symmetric"><title>Subgroups not Symmetric</title>
-              
+            <exercise xml:id="exe-subgroup-not-symmetric"><title>Subgroups not Symmetric</title>   
               <statement>
-              <p>
-                In <xref ref="thm-subgroup-properties"/> we showed that subgroups form a transitve relation. Prove that the relation is reflexive (it can be one sentence), <em>not</em> symmetric, and thus not an equivalence relation.
-              </p>
-            </statement>
+                <p>
+                  In <xref ref="thm-subgroup-properties"/> we showed that subgroups form a transitve relation. Prove that the relation is reflexive (it can be one sentence), <em>not</em> symmetric, and thus not an equivalence relation.
+                </p>
+              </statement>
             </exercise>
 
             <exercise xml:id="exe-subgroups-of-z"><title>Subgroups of <m>\Z</m></title>
@@ -2421,7 +2463,7 @@
             <definition xml:id="def-special-linear-group"><title>Special Linear Group</title>
               <statement>
                 <p>
-                  The <em>special linear group</em> with complex entries is defined
+                  The <em>special linear group</em><idx><h>special linear group</h></idx> with complex entries is defined
                   <me>
                     \SL_n(\C)=\{A \mid A = n\times n \;\text{matrix with entries in}\; \C, \det(A)=1\}
                   </me>
@@ -2472,7 +2514,7 @@
               </statement>
             </theorem>
 
-            <historical>
+            <historical><title>Cayly's Theorem</title>
               <p>Cayley's Theorem is named after the British mathematician Arthur Cayley. Cayley was a prolific mathematician who made significant contributions to a wide range of fields, including algebra, geometry, and graph theory. Cayley was also a strong advocate for women's education and played an important role in the movement to admit women to Cambridge University. In the 1860s, he was part of a group of academics who lobbied for women to be allowed to take the Cambridge Mathematical Tripos exam, which was the standard test for mathematics students at the time.</p>
             </historical>
 
@@ -2486,7 +2528,7 @@
             <definition xml:id="def-group-center"><title><m>Z(G)</m></title>
               <statement>
                 <p>
-                  The <em>center</em> of a group <m>G</m>, often written <m>Z(G)</m>, is the set of elements of <m>G</m> that commute with every element of <m>G</m>. That is, 
+                  The <em>center</em><idx><h>center of a group</h></idx> of a group <m>G</m>, often written <m>Z(G)</m>, is the set of elements of <m>G</m> that commute with every element of <m>G</m>. That is, 
                   <me>
                     Z(G)=\{x \in G \, | \, xy = yx\,\text{ for all }$y \in G$}.
                   </me>
@@ -2584,143 +2626,147 @@
             <exercise xml:id="exe-even-groups-order-2"><title>Even Order Groups</title>
               <p>
                 Every group of even order contains an element of order <m>2</m>.
-              <fn>This is a direct result of <xref ref="thm-cauchy"/>, but proving it is possible with the tools we have</fn>
+              <fn>This is a direct result of <xref ref="thm-cauchy"/>, but proving it is possible with the tools we have.</fn>
               </p>
             </exercise>
           </subsection>
 
-         <subsection xml:id="subsec-gp-generators"><title>Generators</title>
+          <subsection xml:id="subsec-gp-generators"><title>Generators</title>
 
-            <blockquote><p><q>How often misused words generate misleading thoughts.</q></p><attribution>Herbert Spencer</attribution></blockquote>
+              <blockquote><p><q>How often misused words generate misleading thoughts.</q></p><attribution>Herbert Spencer</attribution></blockquote>
+            
+              <definition xml:id="def-gensubgroup"><title>Generated Subgroup</title>
+                <statement>
+                  <p>
+                    Given a group <m>G</m> and a subset <m>S</m> of <m>G</m>, the <em>subgroup of <m>G</m> generated by <m>S</m></em><idx><h>generated subgroup</h></idx> is 
+                    <me>
+                      \langle S \rangle := \bigcap_{H \leq G, H \supseteq X} H.
+                    </me> 
+                    If <m>S=\{s\}</m> is a set with one element then we write <m>\langle S \rangle=\langle s \rangle</m> and we refer to this as the <em>cyclic subgroup generated by</em><idx><h>generated cyclic subgroup</h></idx> <m>s</m>.
+                    <notation><usage><m>\langle S \rangle</m></usage><description>the subgroup generated by <m>S</m></description></notation>
+                  </p>
+
+                  <p>
+                    The elements of <m>S</m> are known as <em>generators</em><idx><h>generator</h></idx>
+                  </p>
+                </statement>
+              </definition>
+
+              <lemma xml:id="lem-gensubgp"><title>Elements of <m>\igen X</m></title>
+                <statement>
+                  <p>
+                    For a subset <m>X</m> of <m>G</m>, the elements of <m>\langle X \rangle</m> can be described as: 
+                    <me>
+                      \langle X \rangle = \left\{x_1^{j_1} \cdots x_m^{j_m} \mid m \geq 0, j_1, \dots, j_m \in \mathbb{Z}\text{ and }x_1, \dots, x_m \in X \right\}.
+                    </me>
+                  </p>
+                </statement>
+        
+                <proof>
+                  <p>
+                    Let <m>S= \left\{x_1^{j_1} \cdots x_m^{j_m} \mid m \geq 0, j_1, \dots, j_m \in \mathbb{Z}\text{ and }x_1, \dots, x_m \in X \right\}</m>. Since <m>\langle X \rangle</m> is a subgroup that contains <m>X</m>, it is closed under products and inverses, and thus must contain all elements of <m>S</m>.
+                  </p>
+                  <p>
+                    For the opposite containment, we just need to show the set <m>S</m> really is a subgroup. We use the one step test:
+                  </p>
           
-            <definition xml:id="def-gensubgroup"><title>Generated Subgroup</title>
-              <statement>
-                <p>
-                  Given a group <m>G</m> and a subset <m>X</m> of <m>G</m>, the <em>subgroup of <m>G</m> generated by <m>X</m></em> is 
-                  <me>
-                    \langle X \rangle := \bigcap_{H \leq G, H \supseteq X} H.
-                  </me> 
-                  If <m>X=\{x\}</m> is a set with one element then we write <m>\langle X \rangle=\langle x \rangle</m> and we refer to this as the <em>cyclic subgroup generated by</em> <m>x</m>.
-                  <notation><usage><m>\langle X \rangle</m></usage><description>the subgroup generated by <m>X</m></description></notation>
-                </p>
-              </statement>
-            </definition>
-
-            <lemma xml:id="lem-gensubgp"><title>Elements of <m>\igen X</m></title>
-              <statement>
-                <p>
-                  For a subset <m>X</m> of <m>G</m>, the elements of <m>\langle X \rangle</m> can be described as: 
-                  <me>
-                    \langle X \rangle = \left\{x_1^{j_1} \cdots x_m^{j_m} \mid m \geq 0, j_1, \dots, j_m \in \mathbb{Z}\text{ and }x_1, \dots, x_m \in X \right\}.
-                  </me>
-                </p>
-              </statement>
-      
-              <proof>
-                <p>
-                  Let <m>S= \left\{x_1^{j_1} \cdots x_m^{j_m} \mid m \geq 0, j_1, \dots, j_m \in \mathbb{Z}\text{ and }x_1, \dots, x_m \in X \right\}</m>. Since <m>\langle X \rangle</m> is a subgroup that contains <m>X</m>, it is closed under products and inverses, and thus must contain all elements of <m>S</m>.
-                </p>
-                <p>
-                  For the opposite containment, we just need to show the set <m>S</m> really is a subgroup. We use the one step test:
-                </p>
-        
-                <p>
-                  <ul>
-                    <li>
-                      <p>
-                        <m>S \ne \emptyset</m> since we allow <m>m = 0</m> and declare the empty product to be <m>e_G</m>.
-                      </p>
-                    </li>
-        
-                    <li>
-                      <p>
-                        If <m>x_1^{j_1} \cdots x_m^{j_m}</m> and <m>y_1^{i_1} \cdots y_n^{i_m}</m> are in <m>S</m> then 
-                        <me>
-                          x_1^{j_1} \cdots x_m^{j_m}(y_1^{i_1} \cdots y_n^{i_m})^{-1}=x_1^{j_1} \cdots x_m^{j_m} y_n^{-i_m} \cdots y_1^{-i_1}
-                        </me> 
-                        is also in <m>S</m>.
-                      </p>
-                    </li>
-                  </ul>
-                </p>
+                  <p>
+                    <ul>
+                      <li>
+                        <p>
+                          <m>S \ne \emptyset</m> since we allow <m>m = 0</m> and declare the empty product to be <m>e_G</m>.
+                        </p>
+                      </li>
           
-                <p>
-                  Therefore <m>S\leq G</m> and <m>X\subseteq S</m> (by taking <m>m=1</m> and <m>j_1=1</m>) and by the minimality of <m>\langle X \rangle</m> we obtain <m>\langle X \rangle\subseteq S</m>.
-                </p>
-              </proof>
-            </lemma>
+                      <li>
+                        <p>
+                          If <m>x_1^{j_1} \cdots x_m^{j_m}</m> and <m>y_1^{i_1} \cdots y_n^{i_m}</m> are in <m>S</m> then 
+                          <me>
+                            x_1^{j_1} \cdots x_m^{j_m}(y_1^{i_1} \cdots y_n^{i_m})^{-1}=x_1^{j_1} \cdots x_m^{j_m} y_n^{-i_m} \cdots y_1^{-i_1}
+                          </me> 
+                          is also in <m>S</m>.
+                        </p>
+                      </li>
+                    </ul>
+                  </p>
+            
+                  <p>
+                    Therefore <m>S\leq G</m> and <m>X\subseteq S</m> (by taking <m>m=1</m> and <m>j_1=1</m>) and by the minimality of <m>\langle X \rangle</m> we obtain <m>\langle X \rangle\subseteq S</m>.
+                  </p>
+                </proof>
+              </lemma>
 
-            <p>Lets look at some examples for context.</p>
+              <p>Lets look at some examples for context.</p>
 
-            <example xml:id="ex-nz-generated"><title><m>n\Z=\igen n</m></title>
-              <statement>
-                <p>
-                  <m>n\Z=\igen n</m> for every <m>n\in\Z</m>.
-                </p>
+              <example xml:id="ex-nz-generated"><title><m>n\Z=\igen n</m></title>
+                <statement>
+                  <p>
+                    <m>n\Z=\igen n</m> for every <m>n\in\Z</m>.
+                  </p>
+                </statement>
+              </example>
+
+              <example xml:id="ex-d2n-rs"><title>Generating <m>D_{2p}</m></title>
+                <p><m>\igen{r,s}=D_{2n}</m></p>
+              </example>
+
+              <exercise xml:id="exe-d2p"><title>Generating <m>D_{2p}</m> but Different</title>
+                <statement>
+                <p>Let <m>p\ge 3</m> be prime and <m>r,r'</m> be any two distinct reflections in <m>D_{2p}</m>. Then <m>\igen{r,r'}=D_{2p}</m>.</p>
               </statement>
-            </example>
+              </exercise>
 
-            <example xml:id="ex-d2n-rs"><title>Generating <m>D_{2p}</m></title>
-              <p><m>\igen{r,s}=D_{2n}</m></p>
-            </example>
-
-            <exercise xml:id="exe-d2p"><title>Generating <m>D_{2p}</m> but Different</title>
-              <statement>
-              <p>Let <m>p\ge 3</m> be prime and <m>r,r'</m> be any two distinct reflections in <m>D_{2p}</m>. Then <m>\igen{r,r'}=D_{2p}</m>.</p>
-            </statement>
-            </exercise>
-
-            <exercise xml:id="generating-gl"><title>Generating <m>\GL_n(\R)</m></title>
-              <statement>
-               <p>For any integer <m>n \geq 1</m>, the set of column vectors <m>e_i</m> consisting of <m>1</m> in the <m>i\th</m> row and <m>0</m> elsewhere generate <m>\GL_n(\R)</m>. As you may recall from a linear algebra course, these are called the <em>elementary matrices</em>. (Bonus: what subgroup do the <q>type I</q> elementary matrices generate?)</p>
-            </statement>
-            </exercise>
-
-            <proposition xml:id="prop-generating-an"><title>Generating <m>A_n</m></title>
-              <statement>
-                <p>
-                  <m>A_n</m> is the subgroup of <m>S_n</m> generated by all produts of <m>2</m>-cyclies (disjoint or not). In symbols, 
-                  <me>
-                    A_n=\langle (i \ j )(k \ l) \mid i,j,k,l \in \{1, \ldots, n\}\rangle.
-                  </me>
-                </p>
+              <exercise xml:id="generating-gl"><title>Generating <m>\GL_n(\R)</m></title>
+                <statement>
+                <p>For any integer <m>n \geq 1</m>, the set of column vectors <m>e_i</m> consisting of <m>1</m> in the <m>i\th</m> row and <m>0</m> elsewhere generate <m>\GL_n(\R)</m>. As you may recall from a linear algebra course, these are called the <em>elementary matrices</em>. (Bonus: what subgroup do the <q>type I</q> elementary matrices generate?)</p>
               </statement>
-            </proposition>
+              </exercise>
 
-            <remark><p>Note that in <xref ref="thm-cycledecomp"/> we showed <m>S_n</m> is generated by transpositions. However, there's more than one way to fry an egg (or in this case generate one) </p></remark>
+              <proposition xml:id="prop-generating-an"><title>Generating <m>A_n</m></title>
+                <statement>
+                  <p>
+                    <m>A_n</m> is the subgroup of <m>S_n</m> generated by all produts of <m>2</m>-cyclies (disjoint or not). In symbols, 
+                    <me>
+                      A_n=\langle (i \ j )(k \ l) \mid i,j,k,l \in \{1, \ldots, n\}\rangle.
+                    </me>
+                  </p>
+                </statement>
+              </proposition>
 
-            <theorem xml:id="thm-generating-sn"><title>Generating <m>S_n</m></title>
-              <statement>
+              <remark><p>Note that in <xref ref="thm-cycledecomp"/> we showed <m>S_n</m> is generated by transpositions. However, there's more than one way to fry an egg (or in this case generate one) </p></remark>
+
+              <theorem xml:id="thm-generating-sn"><title>Generating <m>S_n</m></title>
+                <statement>
+                  <p>
+                    For <m>n\ge 2</m> prove that <m>S_n</m> is generated by <m>(12)</m> and the <m>n</m>-cycle <m>(12\cdots n)</m>.
+                  </p>
+                </statement>
+              </theorem>
+
+              <remark><p>This theorem will prove surprisingly useful all the way down in <xref text="title" ref="ch-galois"/>, saving us a lot of time with our proof of unsolvable quintic polyomials. </p></remark>
+
+              <p>Lets look at another example.</p>
+          
+              <example xml:id="ex-commutator-subgroup"><title>Commutator Subgroup</title>
                 <p>
-                  For <m>n\ge 2</m> prove that <m>S_n</m> is generated by <m>(12)</m> and the <m>n</m>-cycle <m>(12\cdots n)</m>.
+                  Let <m>G</m> be a group, <m>S=\{aba\inv b\inv|a,b\in G\}</m>, and <m>G'=\igen S</m>. This is known as the <term>commutator subgroup</term><idx><h>commutator subgroup</h></idx> of <m>G</m>.
+                <notation><usage><m>G'</m></usage><description> the commutator subgroup <m>\cdot</m></description></notation>          
                 </p>
-              </statement>
-            </theorem>
-
-            <aside><title>Foreshadowing</title><p>This theorem will prove surprisingly useful all the way down in <xref text="title" ref="ch-galois"/>, saving us a lot of time with our proof of unsolvable quintic polyomials. </p></aside>
-
-            <p>Lets look at another example.</p>
+              </example>
         
-            <example xml:id="ex-commutator-subgroup"><title>Commutator Subgroup</title>
-              <p>
-                Let <m>G</m> be a group, <m>S=\{aba\inv b\inv|a,b\in G\}</m>, and <m>G'=\igen S</m>. This is known as the <term>commutator subgroup</term> of <m>G</m>.
-              <notation><usage><m>G'</m></usage><description> the commutator subgroup <m>\cdot</m></description></notation>          
-              </p>
-            </example>
-      
-            <remark><p>Commutator subgroups prove invaluable when it comes to something called <em>abelianization</em>, which is, loosely speaking, a way of "modding out" the non-commutative part of <m>G</m> to obtain a new group that is abelian. This is seen rigorously in <xref ref="ex-abelianization"/></p></remark>
+              <remark><p>Commutator subgroups prove invaluable when it comes to something called <em>abelianization</em><idx><h>abelianization</h></idx>, which is, loosely speaking, a way of "modding out" the non-commutative part of <m>G</m> to obtain a new group that is abelian. This is seen rigorously in <xref ref="ex-abelianization"/></p></remark>
 
-            <p>A nice property of a <xref text="title" ref="def-gensubgroup"/> is that once you've located the generators, you've found the whole group:</p>
+              <p>A nice property of a <xref text="title" ref="def-gensubgroup"/> is that once you've located the generators, you've found the whole group:</p>
 
-            <proposition xml:id="prop-generators-of-subgroup"><title>Generators of Subgroups</title>
-              <statement>
-                <p>
-                  If <m>H</m> is a subgroup of <m>G</m> that contains <m>S</m>, then <m>\igen S\leq H</m>.
-                </p>
-              </statement>
-            </proposition>
+              <proposition xml:id="prop-generators-of-subgroup"><title>Generators of Subgroups</title>
+                <statement>
+                  <p>
+                    If <m>H</m> is a subgroup of <m>G</m> that contains <m>S</m>, then <m>\igen S\leq H</m>.
+                  </p>
+                </statement>
+              </proposition>
 
-            <p>In this way, if we can understand something about the generators of a group, we can (for the most part) extend that knowledge to the group as a whole. This is something you may have seen in the form of a basis, either for a vector space or a topological space. </p>
+              <p>In this way, if we can understand something about the generators of a group, we can (for the most part) extend that knowledge to the group as a whole. This is something you may have seen in the form of a basis, either for a vector space or a topological space.</p>
 
           </subsection>
       
@@ -2753,411 +2799,412 @@
         
         </section>
 
-      <section xml:id="sec-cyclic"><title>Cyclic Groups</title>
+        <section xml:id="sec-cyclic"><title>Cyclic Groups</title>
 
-        <subsection xml:id="subsec-"><title>Cyclic Groups</title>
+          <subsection xml:id="subsec-"><title>Cyclic Groups</title>
 
-          <blockquote><p><q>Madness is the exception in individuals and the rule in groups.</q></p><attribution>Friedrich Nietzsche</attribution></blockquote>
-              
-          <p>We zoom in now on the wondrous case in which a group can be generated by a single element.</p>
-
-          <definition xml:id="def-cyclic-group"><title>Cylic Group</title>
-            <statement>
-              <p>If <m>G</m> is a generated by a single element, i.e. <m>G= \langle x \rangle</m> for some <m>x \in G</m>, then <m>G</m> is called a <em>cyclic group</em>.</p>
-
-              <p>We use the notation <m>C_n</m> to denote an arbitrary cyclic group of order <m>n</m> and <m>C_\infty</m> to denote a cyclic group of infinite order.</p>
-            </statement>
-          </definition>
-
-          <example xml:id="ex-cyclic-examples"><title>Examples of Cyclic Groups</title>
-            <statement>
-            <p>
-              <ol>
-                <li>
-                  <p>
-                    <m>(\Z,+)</m> is a cyclic group.
-                  </p>
-                </li>
-
-                <li>
-                  <p>
-                    <m>(\Z/n,+)</m> is a cyclic group.
-                  </p>
-                </li>
-
-                <li>
-                  <p>
-                    The group <m>L=\{1,-1,i,-i\}</m> is cyclic.
-                  </p>
-                </li>
-              </ol>
-            </p>
-            </statement>
-
-            <answer>
-              <p>
-                <ol>
-                  <li>
-                    <p>
-                      <m>(\Z,+)=\igen 1</m>, for example.
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      <m>(\Z/n,+)\igen{1}</m>, for example.
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      <m>L=\{1,-1,i,-i\}=\igen i</m>, for example. 
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </answer>
-          </example>
-
-          <exercise xml:id="exe-not-cyclic"><title>Not Quite Cyclic Groups</title>
-            <p><ol>
-                <li>
-                  <p>
-                    Prove that <m>(\mathbb Q, +)</m> is not a cyclic group.
-                  </p>
-                </li>
-    
-                <li>
-                  <p>
-                    Prove that <m>\operatorname{GL}_2(\mathbb Z/2)</m> is not cyclic.
-                  </p>
-                </li>
-            </ol></p>
-          </exercise>
-
-          <p>Recalling <xref ref="lem-gensubgp"/>, we can describe the elements of a cylic group explicitely.</p>
-
-          <corollary xml:id="cor-cyclic-subgroup"><title>Elements of <m>\igen x</m></title>
-            <statement>
-            <p>For an element <m>x</m> of <m>G</m>, the elements of <m>\langle x \rangle</m> can be described as: <m>\langle x\rangle=\{x^j \mid j\in \mathbb{Z}\}</m>.</p>
-            </statement>
-
-            <proof>
-              <p>
-                By Lemma <xref ref="lem-gensubgp" />, the group <m>G</m> has the following elements <m>G=\{x^i \mid i\in \mathbb{Z}\}</m>. We show that
-              </p>
-
-              <p>
-                <ul>
-                  <li>
-                    <p>
-                      <m>|G|\geq n</m> by showing the elements <m>x^0, x^1, \dots, x^{n-1}</m> are distinct. Indeed, if <m>0\leq i&lt;j&lt;n</m> and <m>x^i=x^j</m> then <m>x^{j-i}=e</m> and <m>1\leq j-i&lt;n</m>, contradicting the minimality of the order of <m>x</m>.
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      <m>|G|\leq n</m> by showing <m>G\subseteq\{x^0, x^1, \dots, x^{n-1}\}</m> (this implies <m>G=\{e,x,\ldots,x^{n-1}\}</m>). Indeed, for any <m>m\in \mathbb{Z}</m> division by <m>n</m> yields integers <m>q,r</m> with <m>0\leq r\leq n-1</m> such that <m>m=nq+r</m>. Then <m>x^m=x^{nq+r}=(x^n)^qx^r=x^r\in\{x^0, x^1, \dots, x^{n-1}\}</m>.
-                    </p>
-                  </li>
-                </ul>
-              </p>
-            </proof>
-          </corollary>
-
-          <p>Generators are not unique.</p>
-
-          <exercise xml:id="exe-non-unique-cyclic-generators"><title>Cyclic Generators Need not be Unique</title> 
-            <statement>
-              <p>Let <m>G=\langle x\rangle</m> be a cyclic group. Then <m>G=\langle x^{-1}\rangle</m>.</p>
-            </statement>
-          </exercise>
-
-          <p>Here is a more general criteria for determining when an element of a cyclic group is a generator.</p>
-
-          <proposition xml:id="prop-cyclic-criteria"><title>Criteria for Cyclic Generators</title>
-            <statement>
-              <p>
-                Let <m>G=\igen x</m> be a cyclic group of order <m>n</m>, and let <m>y=x^m\in G</m>. Then <m>y</m> generates <m>G</m> if and only if <m>\gcd(n,m)=1</m>.
-              </p>
-            </statement>
-          </proposition>
-
-          <p>One quick way of seeing if a group is cyclic is to find an element with the same order as the group.</p>
-
-          <proposition xml:id="prop-cyclic-equivalencies"><title>Cyclci iff Element of Order <m>|G|</m></title>
-            <statement>
-              <p>Let <m>G</m> be a finite group. Then <m>G</m> is cyclic if and only if there exists an <m>x\in G</m> such that <m>|x|=|G|</m></p>
-            </statement>
-          </proposition>
-
-          <p>Conveniently enough, cyclic groups are always abelian.</p>
-    
-          <theorem xml:id="thm-cyclic-abelian"><title>Cyclic Groups are Abelian</title>
-            <statement>
-              <p>
-                Every cyclic group is abelian.
-              </p>
-            </statement>
-          </theorem>
-
-          <example xml:id="ex-group-of-unity"><title>Roots of Unity</title>
-            <p>
-              For a fixed <m>n \geq 1</m>, <me>\mu_n := \{z \in \mathbb{C}\mid z^n = 1\}</me> is a subgroup of <m>(\mathbb{C}\setminus \{0\}, \cdot)</m>. Since <m>\|z\|^n = \| z^n \|</m> and so if <m>z \in \mu</m>, then <m>\|z\| = 1</m> and hence <m>z = e^{ri}</m> for some real number <m>r</m>. Moreover, <m>1 = z^n = e^{nri}</m> implies that <m>nr</m> is an integer multiple of <m>2 \pi</m>. It follows that <me>\mu_n = \{1, e^{2 \pi i/n}, e^{4 \pi i/n}, \cdots , e^{(n-1) 2 \pi i/n}\}</me> and that <m>e^{2 \pi i/n}</m> generates <m>\mu_n</m>. So, <m>\mu_n</m> is cyclic or order <m>n</m>. It is therefore isomorphism to <m>\mathbb{Z}/n</m>, via the map <m>\overline{j} \mapsto e^{2 j \pii/n}</m>.
-            </p>
-          </example>
-
-          <p>One of the first things one does when encountering a new group is to examine its subgroups. As it turns out, cyclic groups have some very special properties when it comes to subgroups, though proving them will be more technical than anything we have encountered thus far.</p>
-
-          <theorem xml:id="thm-cyclic-divisors-and-subgroups"><title>Subgroups of Cyclic Groups</title>
-            <statement>
-              <p>
-                Let <m>G=\langle x\rangle</m>, where <m>x</m> has finite order <m>n</m>. Then there is a bijection 
-                <me>
-                  \Psi : \{\text{divisors of } |G|\} \to \{\text{subgroups of } G\} \text{ given by } \Psi(d) = \langle x^{\frac{|G|}{d}}  \rangle
-                </me> 
-                for each divisor <m>d</m> of <m>|G|</m>. Moreover, for each subgroup <m>H</m> of <m>G</m>, <m>\Psi^{-1}(H) = |H|</m>. In particular, all subgroups of <m>G</m> are cyclic and there is a unique subgroup of each order.  
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                <ol>
-
-                  <li>
-                    <p>
-                      <em>Claim 1:</em> For any <m>\{e\}\neq H\leq G</m>, setting <m>k=\min\{i \mid i\in \mathbb{Z}, i&gt;0, g^i\in H\}</m> gives that <m>H=\langle g^k \rangle</m>.
-                    </p>
-            
-                    <p>
-                      Since <m>H\subseteq G=\langle g\rangle</m> any element of <m>H</m> is of the form <m>g^m</m> for some <m>m\in \mathbb{Z}</m>. By the Division Theorem <m>m=kq+r</m> for some <m>r\in \mathbb{Z}</m>, <m>0\leq r&lt;k</m>. Since <m>g^m</m> and <m>g^k</m> are elements of <m>H</m>, <m>g^r=g^m(g^{k})^{-q}\in H</m>. Since <m>r&lt;k</m> and <m>g^r\in H</m>, by the minimality of <m>k</m> it follows that <m>r</m> cannot be positive and thus <m>r=0</m>. Therefore <m>m=kq</m> and we have shown that <m>H\subseteq \langle g^k \rangle</m>. The opposite containment follows because <m>g^k\in H</m> and <m>\langle g^k \rangle</m> is the smallest subgroup of <m>G</m> containing <m>g^k</m>. Thus <m>H=\langle g^k \rangle</m>.
-                    </p>
-            
-                    <p>
-                      Let <m>\Phi:\{\text{subgroups of } G\} \to  \{\text{divisors of } |G|\}</m> be given by <m>\Phi(H)=|H|</m>.
-                    </p>
-            
-                    <p>
-                      <em>Claim 2:</em> For any divisor <m>d</m> of <m>|G|</m>, we have <m>(\Psi\circ\Phi)(d)=d</m>.
-                    </p>
-            
-                    <p>
-                      We have <m>(\Psi\circ\Phi)(d)=\left| \langle g^{\frac{|G|}{d}}\rangle\right|=\left| g^{\frac{|G|}{d}}\right|=\frac{|G|}{\operatorname{gcd}(|G|/d,|G|)}=\frac{|G|}{|G|/d}=d.</m>
-                    </p>
-            
-                    <p>
-                      <em>Claim 3:</em> For any subgroup <m>H</m> of <m>G</m>, we have <m>(\Phi\circ\Psi)(H)=H</m>.
-                    </p>
-            
-                    <p>
-                      By Claim 1, any <m>H\leq G</m> is either <m>H=\{e\}</m>, for which <m>(\Phi\circ\Psi)(\{e\})=\Phi(1)=\langle g^{|G|} \rangle=\{e\}</m> or is of the form <m>H=\langle g^k \rangle</m>. In the latter case, setting <m>|G|=n</m> we have <m>|H|=|g^k|=\frac{n}{\operatorname{gcd}(n,k)}</m> and <m>(\Phi\circ\Psi)(H)=\langle g^{\frac{n}{n/\operatorname{gcd}(n,k)}} \rangle=\langle g^{\operatorname{gcd}(n,k)}\rangle.</m> It remains to show that <m>\langle g^{\operatorname{gcd}(n,k)}\rangle=\langle g^k\rangle=H</m>. By Bézout's Identity, <m>\operatorname{gcd}(n,k)=an+bk</m> for some integers <m>a,b</m>. Since <m>g^{\operatorname{gcd}(n,k)}=(g^n)^a(g^k)^b=e^a(g^k)^b=(g^k)^b\in \langle g^k \rangle</m> if follows that <m>\langle g^{\operatorname{gcd}(n,k)}\rangle \subseteq \langle g^k \rangle</m>. On the other hand <m>k</m> is a multiple of <m>\operatorname{gcd}(n,k)</m> so <m>g^k\in \langle g^{\operatorname{gcd}(n,k)}\rangle</m> and thus <m>\langle g^k \rangle \subseteq \langle g^{\operatorname{gcd}(n,k)}\rangle</m>. Finally, we conclude that <m>(\Phi\circ\Psi)(\langle g^k \rangle)=\langle g^{\operatorname{gcd}(n,k)}\rangle=\langle g^k \rangle</m> for any <m>k\in \mathbb{Z},k&gt;0</m>.
-                    </p>
-            
-                    <p>
-                      Claims 2 and 3 establish that <m>\Phi</m> is a two sided inverse to <m>\Phi</m>, thus <m>\Phi</m> is a bijection.
-                      
-                    </p>
-                  </li>
-              
-                  </ol>
-              </p>
-            </proof>
-          </theorem>
-
-          <exercise xml:id="exe-small-cyclic"><title>Cyclic Groups of Small Order</title>
-            <statement>
-              <p>
-                <ol>
-                  <li>
-                    <p>
-                      Every group of orders <m>1,2,3</m> are cyclic.
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      Every abelian group of order <m>6</m> is cyclic.
-                    </p>
-                  </li>
-                </ol>
+            <blockquote><p><q>Madness is the exception in individuals and the rule in groups.</q></p><attribution>Friedrich Nietzsche</attribution></blockquote>
                 
-              </p>
-            </statement>
-          </exercise>
+            <p>We zoom in now on the wondrous case in which a group can be generated by a single element.</p>
 
-        </subsection>
+            <definition xml:id="def-cyclic-group"><title>Cylic Group</title>
+              <statement>
+                <p>If <m>G</m> is a generated by a single element, i.e. <m>G= \langle x \rangle</m> for some <m>x \in G</m>, then <m>G</m> is called a <em>cyclic group</em><idx><h>cyclic group</h></idx><idx><h>cyclic</h></idx>.</p>
 
-        <subsection xml:id="subsec-cyclic-uniqueness"><title>Uniqueness of Cyclic Groups</title>
+                <p>We use the notation <m>C_n</m> to denote an arbitrary cyclic group of order <m>n</m> and <m>C_\infty</m> to denote a cyclic group of infinite order.</p>
+              </statement>
+            </definition>
 
-          <blockquote><p><q>There is no way to be in cyclic existence without creating the causes of suffering.</q></p><attribution>Jetsunma Ahkon Lhamo</attribution></blockquote>
-    
-          <blockquote><p><q>I used to wonder when my boomerang would come back to me. Then it hit me.</q></p><attribution>Ancient Proverb</attribution></blockquote>
-    
-          <proposition xml:id="prop-ump-cyclic"><title>UMP for Cyclic Groups</title>  
-            <statement>
+            <example xml:id="ex-cyclic-examples"><title>Examples of Cyclic Groups</title>
+              <statement>
               <p>
-                Assume <m>G = \langle x \rangle</m> and let <m>H</m> be any group. If <m>|x| = n &lt; \infty</m>, then for each <m>y \in H</m> such that <m>y^n = e</m>, there is a unique group homomorphism 
-                <me>
-                  f: G \to H
-                </me> 
-                such that <m>f(x) = y</m>. If <m>|x| = \infty</m>, then for each <m>y \in H</m>, there is a unique group homomorphism 
-                <me>
-                  f: G \to H
-                </me> 
-                such that <m>f(x) = y</m>. In both cases this unique group homomorphism is given by <m>f(x^i)=y^i</m> for any <m>i</m>.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                Recall that either <m>G = \{e,x,x^2, \dots, x^{n-1}\}</m> (with no repetitions) if <m>|x| = n</m> or <m>G = \{ \cdots, x^{-2}, x^{-1}, e, x, x^e, \dots \}</m> (with no repetitions) if <m>|x| = \infty</m>.
-              </p>
-
-              <p>
-                <em>Uniqueness:</em> We show that if <m>f:G\to H</m> is a group homomorphism, then <m>f(x^i)=y^i</m> for all <m>i\in \mathbb{Z}</m>.
-              </p>
-      
-              <p>
-                <ul>
-                  <li>
-                    <p>
-                      if <m>i=0</m> then <m>f(x^0)=f(e_G)=e_H=y^0</m>
-                    </p>
-                  </li>
-      
-                  <li>
-                    <p>
-                      if <m>i&gt;0</m> then <m>f(x^i)=f(\underbrace{x\cdots x}_{i \text{ times}})=\underbrace{f(x)\cdots f(x)}_{i \text{ times}})=y^i</m>
-                    </p>
-                  </li>
-      
-                  <li>
-                    <p>
-                      if <m>i&lt;0</m> then <m>f(x^i)=f\left((x^{-i})^{-1}\right)=f\left((x^{-i})\right)^{-1}=(y^{-i})^{-1}=y^i</m>, using the formula above for <m>-i&gt;0</m>
-                    </p>
-                  </li>
-                </ul>
-              </p>
-      
-              <p>
-                <em>Existence:</em> In either case, define <m>f(x^i) = y^i</m> for all relevant <m>i</m> (i.e., in the first case, for <m>0 \leq i \leq n-1</m> and in the second for all <m>i \in\mathbb{Z}</m>). We need to show this function is a well-defined group homomorphism. To see that <m>f</m> is well defined, suppose <m>x^i=x^j</m> for some <m>i,j\in \mathbb{Z}</m>. Then, since <m>x^{i-j}=e_G</m>, suing Lemma <xref provisional="prop96" /> or the definition for order we have 
-                <me>
-                  \begin{cases}
-                  n\mid i-j &amp; \text{ if } |x|=n\\
-                  i-j=0 &amp; \text{ if } |x|=\infty\\
-                  \end{cases}
-                  \Rightarrow
-                  \begin{cases}
-                  y^ {i-j}=y^{nk} &amp; \text{ if } |x|=n\\
-                  y^{i-j}=y^0 &amp; \text{ if } |x|=\infty\\
-                  \end{cases}
-                  \Rightarrow y^ {i-j}=e_H
-                  \Rightarrow y^ i=y^j.
-                </me> 
-                Thus, if <m>x^i=x^j</m> then <m>f(x^i)=y^i=y^j=f(x^j)</m>.
-              </p>
-      
-              <p>
-                The homomorphism property is immediate: <m>f^(x^ix^j)=f(x^{i+j})=y^{i+j}=y^iy^j=f(x^i)f(x^j)</m>. ◻
-              </p>
-            </proof>
-          </proposition>
-    
-          <remark><p>This is a particular case of the universal mapping property of a presentation (which we will covered later), since a cyclic group is either presented by <m>\langle x | x^n = e \rangle</m> or <m>\langle x \mid  -\rangle</m>.</p></remark>
-    
-          <theorem xml:id="thm-cyclic-classification"><title>Classification Theorem for Cyclic Groups</title>
-            
-            <statement>
-              <p>
-                Every infinite cyclic group is isomorphic to <m>\Z</m>. Every cyclic group of order <m>n</m> is isomorphic to <m>Z/n</m>.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                Suppose <m>G = \langle x \rangle</m> with <m>|x| = n</m> or <m>|x| = \infty</m> and set <m>H=C_n</m> in the first case and <m>H=C_\infty</m> in the second case. Then by <xref ref="prop-ump-cyclic" />, there are homomorphisms <m>f: G \to H</m> and <m>g: G \to H</m> such that <m>f(x) = a</m> and <m>g(a) =x</m>. So <m>g \circ f</m> is an endomorphisms of <m>G</m> mapping <m>x</m> to <m>x</m>. But the identity map also has this property, and so the uniqueness clause gives <m>g \circ f = \text{id}_G</m>. Similarly, <m>f \circ g = \text{id}_H</m>.
-              </p>
-            </proof>
-          </theorem>
-
-          <paragraphs> <title>Notation: <m>C_n</m> and <m>C_\infty</m></title><p>Moving forward, it is customary to denote <em>the</em> cyclic group of order <m>n</m> with the notation <m>C_n</m>. We similarly denote <em>the</em> infinite cyclic group <m>C_\infty</m>. Why the integers aren't enough for some people, I'll never know.</p></paragraphs>
-
-          <lemma xml:id="lem-cyclic-relprime"><title>Cyclic Groups of Relatively Prime Order</title>
-            <statement>
-              <p>Prove that if <m>m,n</m> are positive integers such that <m>\gcd(m,n)=1</m> then there is a group isomorphism <m>C_{mn}=C_m\times C_n</m>.</p>
-            </statement>
-    
-          </lemma>
-
-          <theorem xml:id="thm-sunzi"><title>Sunzi's Remainder Theorem</title>
-            <statement>
-              <p>
-                Suppose <m>m = p_1^{e_1} \cdots p_l^{e_l}</m> for distinct primes <m>p_1, \dots, p_l</m>. Then there is an isomorphism 
-                <me>
-                  \phi: \mathbb{Z}/m \xrightarrow{\cong} \mathbb{Z}/(p_1^{e_1}) \times \cdots \times \mathbb{Z}/(p_l^{e_l})
-                </me> 
-                given by 
-                <me>
-                  \phi([j]_m) = ([j]_{{p_1}^{e_1}}, \cdots, [j]_{{p_l}^{e_l}})
-                </me> 
-                where <m>[j]_b</m> denote the class of an integer <m>j</m> in <m>\mathbb{Z}/b</m>.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                Using <xref ref="prop-ump-cyclic"/>, we let <m>\psi: \mathbb{Z}\to \mathbb{Z}/(p_1^{e_1}) \times \cdots \times \mathbb{Z}/(p_l^{e_l})</m> be the unique homomorhism that sends <m>1</m> to <m>([1]_{{p_1}^{e_1}}, \cdots, [1]_{{p_l}^{e_l}})</m>. Then 
-                <me>
-                  \psi(j) = ([j]_{{p_1}^{e_1}}, \cdots, [j]_{{p_l}^{e_l}}).
-                </me> 
-                Clearly <m>m \in \operatorname{Ker}(\psi)</m> and so <m>\langle m \rangle \subseteq \operatorname{Ker}(\psi)</m>. Conversely, if <m>\psi(n) = 0</m>, then <m>p_i^{e_i} \mid n</m> for all <m>i</m> and since <m>p_1^{e_1}, \dots, p_l^{e_l}</m> are pairwise relatively prime, it follows that <m>m \mid n</m>. This proves <m>\operatorname{Ker}(\psi) = \langle m \rangle</m>. The claim follows by the <xref text="title" ref="thm-fit-group"/>.
-              </p>
-            </proof>
-          </theorem>
-
-          <remark><p>This theorem frequently goes by the name of The Chinese Remainder Theorem, but it has been remarked that this is somewhat like referencing the Pythagorean Theorem as The Greek Triangle Theorem or Fermat's Little Theorem as The French Power Postulate. In the interest of giving credit where credit is due, we include it here with the name of the 3rd-century Chinese mathematician, Sunzi, to whom the result is often attributed.</p></remark>
-            
-
-        </subsection>
-
-
-
-        <exercises><title>Qualifying Exam Problems</title>
-    
-            <exercise>
-              <p>
-                Consider the set <m>\mu=\{z\in \C^\times \mid z^n = 1 \;\text{for some integer}\;n \geq 1\}</m>.
                 <ol>
                   <li>
                     <p>
-                      Prove that <m>\mu\leq\C^\times</m>.
+                      <m>(\Z,+)</m> is a cyclic group.
                     </p>
                   </li>
-    
+
                   <li>
                     <p>
-                      Prove that for each integer <m>m \geq 1</m>, there is a unique subgroup <m>H_m\leq \mu</m> with <m>|H_m|=m</m> and that <m>H_m</m> is cyclic. 
+                      <m>(\Z/n,+)</m> is a cyclic group.
                     </p>
                   </li>
-    
+
                   <li>
                     <p>
-                      Prove that every finitely generated subgroup of <m>\mu</m> has finitely many elements. 
-                    </p>
-                  </li>
-    
-                  <li>
-                    <p>
-                      Prove that <m>\mu</m> is not finitely generated.
+                      The group <m>L=\{1,-1,i,-i\}</m> is cyclic.
                     </p>
                   </li>
                 </ol>
               </p>
-            </exercise>
+              </statement>
+
+              <answer>
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        <m>(\Z,+)=\igen 1</m>, for example.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        <m>(\Z/n,+)\igen{1}</m>, for example.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        <m>L=\{1,-1,i,-i\}=\igen i</m>, for example. 
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </answer>
+            </example>
+
+            <exercise xml:id="exe-not-cyclic"><title>Not Quite Cyclic Groups</title>
+              <p><ol>
+                  <li>
+                    <p>
+                      Prove that <m>(\mathbb Q, +)</m> is not a cyclic group.
+                    </p>
+                  </li>
       
-          </exercises>
+                  <li>
+                    <p>
+                      Prove that <m>\operatorname{GL}_2(\mathbb Z/2)</m> is not cyclic.
+                    </p>
+                  </li>
+              </ol></p>
+            </exercise>
+
+            <p>Recalling <xref ref="lem-gensubgp"/>, we can describe the elements of a cylic group explicitely.</p>
+
+            <corollary xml:id="cor-cyclic-subgroup"><title>Elements of <m>\igen x</m></title>
+              <statement>
+              <p>For an element <m>x</m> of <m>G</m>, the elements of <m>\langle x \rangle</m> can be described as: <m>\langle x\rangle=\{x^j \mid j\in \mathbb{Z}\}</m>.</p>
+              </statement>
+
+              <proof>
+                <p>
+                  By Lemma <xref ref="lem-gensubgp" />, the group <m>G</m> has the following elements <m>G=\{x^i \mid i\in \mathbb{Z}\}</m>. We show that
+                </p>
+
+                <p>
+                  <ul>
+                    <li>
+                      <p>
+                        <m>|G|\geq n</m> by showing the elements <m>x^0, x^1, \dots, x^{n-1}</m> are distinct. Indeed, if <m>0\leq i&lt;j&lt;n</m> and <m>x^i=x^j</m> then <m>x^{j-i}=e</m> and <m>1\leq j-i&lt;n</m>, contradicting the minimality of the order of <m>x</m>.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        <m>|G|\leq n</m> by showing <m>G\subseteq\{x^0, x^1, \dots, x^{n-1}\}</m> (this implies <m>G=\{e,x,\ldots,x^{n-1}\}</m>). Indeed, for any <m>m\in \mathbb{Z}</m> division by <m>n</m> yields integers <m>q,r</m> with <m>0\leq r\leq n-1</m> such that <m>m=nq+r</m>. Then <m>x^m=x^{nq+r}=(x^n)^qx^r=x^r\in\{x^0, x^1, \dots, x^{n-1}\}</m>.
+                      </p>
+                    </li>
+                  </ul>
+                </p>
+              </proof>
+            </corollary>
+
+            <p>Generators are not unique.</p>
+
+            <exercise xml:id="exe-non-unique-cyclic-generators"><title>Cyclic Generators Need not be Unique</title> 
+              <statement>
+                <p>Let <m>G=\langle x\rangle</m> be a cyclic group. Then <m>G=\langle x^{-1}\rangle</m>.</p>
+              </statement>
+            </exercise>
+
+            <p>Here is a more general criteria for determining when an element of a cyclic group is a generator.</p>
+
+            <proposition xml:id="prop-cyclic-criteria"><title>Criteria for Cyclic Generators</title>
+              <statement>
+                <p>
+                  Let <m>G=\igen x</m> be a cyclic group of order <m>n</m>, and let <m>y=x^m\in G</m>. Then <m>y</m> generates <m>G</m> if and only if <m>\gcd(n,m)=1</m>.
+                </p>
+              </statement>
+            </proposition>
+
+            <p>One quick way of seeing if a group is cyclic is to find an element with the same order as the group.</p>
+
+            <proposition xml:id="prop-cyclic-equivalencies"><title>Cyclci iff Element of Order <m>|G|</m></title>
+              <statement>
+                <p>Let <m>G</m> be a finite group. Then <m>G</m> is cyclic if and only if there exists an <m>x\in G</m> such that <m>|x|=|G|</m></p>
+              </statement>
+            </proposition>
+
+            <p>Conveniently enough, cyclic groups are always abelian.</p>
+      
+            <theorem xml:id="thm-cyclic-abelian"><title>Cyclic Groups are Abelian</title>
+              <statement>
+                <p>
+                  Every cyclic group is abelian.
+                </p>
+              </statement>
+            </theorem>
+
+            <example xml:id="ex-group-of-unity"><title>Roots of Unity</title>
+              <p>
+                For a fixed <m>n \geq 1</m>, 
+                <me>\mu_n := \{z \in \mathbb{C}\mid z^n = 1\}</me> 
+                is a subgroup of <m>(\mathbb{C}\setminus \{0\}, \cdot)</m>. Since <m>\|z\|^n = \| z^n \|</m> and so if <m>z \in \mu</m>, then <m>\|z\| = 1</m> and hence <m>z = e^{ri}</m> for some real number <m>r</m>. Moreover, <m>1 = z^n = e^{nri}</m> implies that <m>nr</m> is an integer multiple of <m>2 \pi</m>. It follows that 
+                <me>\mu_n = \{1, e^{2 \pi i/n}, e^{4 \pi i/n}, \cdots , e^{(n-1) 2 \pi i/n}\}</me> 
+                and that <m>e^{2 \pi i/n}</m> generates <m>\mu_n</m>. So, <m>\mu_n</m> is cyclic or order <m>n</m>. It is therefore isomorphic to <m>\mathbb{Z}/n</m>, via the map <m>\overline{j} \mapsto e^{2 j \pii/n}</m>.
+              </p>
+            </example>
+
+            <p>One of the first things one does when encountering a new group is to examine its subgroups. As it turns out, cyclic groups have some very special properties when it comes to subgroups, though proving them will be more technical than anything we have encountered thus far.</p>
+
+            <theorem xml:id="thm-cyclic-divisors-and-subgroups"><title>Subgroups of Cyclic Groups</title>
+              <statement>
+                <p>
+                  Let <m>G=\langle x\rangle</m>, where <m>x</m> has finite order <m>n</m>. Then there is a bijection 
+                  <me>
+                    \Psi : \{\text{divisors of } |G|\} \to \{\text{subgroups of } G\} \text{ given by } \Psi(d) = \langle x^{\frac{|G|}{d}}  \rangle
+                  </me> 
+                  for each divisor <m>d</m> of <m>|G|</m>. Moreover, for each subgroup <m>H</m> of <m>G</m>, <m>\Psi^{-1}(H) = |H|</m>. In particular, all subgroups of <m>G</m> are cyclic and there is a unique subgroup of each order.  
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  <ol>
+
+                    <li>
+                      <p>
+                        <em>Claim 1:</em> For any <m>\{e\}\neq H\leq G</m>, setting <m>k=\min\{i \mid i\in \mathbb{Z}, i&gt;0, g^i\in H\}</m> gives that <m>H=\langle g^k \rangle</m>.
+                      </p>
+              
+                      <p>
+                        Since <m>H\subseteq G=\langle g\rangle</m> any element of <m>H</m> is of the form <m>g^m</m> for some <m>m\in \mathbb{Z}</m>. By the Division Theorem <m>m=kq+r</m> for some <m>r\in \mathbb{Z}</m>, <m>0\leq r&lt;k</m>. Since <m>g^m</m> and <m>g^k</m> are elements of <m>H</m>, <m>g^r=g^m(g^{k})^{-q}\in H</m>. Since <m>r&lt;k</m> and <m>g^r\in H</m>, by the minimality of <m>k</m> it follows that <m>r</m> cannot be positive and thus <m>r=0</m>. Therefore <m>m=kq</m> and we have shown that <m>H\subseteq \langle g^k \rangle</m>. The opposite containment follows because <m>g^k\in H</m> and <m>\langle g^k \rangle</m> is the smallest subgroup of <m>G</m> containing <m>g^k</m>. Thus <m>H=\langle g^k \rangle</m>.
+                      </p>
+              
+                      <p>
+                        Let <m>\Phi:\{\text{subgroups of } G\} \to  \{\text{divisors of } |G|\}</m> be given by <m>\Phi(H)=|H|</m>.
+                      </p>
+              
+                      <p>
+                        <em>Claim 2:</em> For any divisor <m>d</m> of <m>|G|</m>, we have <m>(\Psi\circ\Phi)(d)=d</m>.
+                      </p>
+              
+                      <p>
+                        We have <m>(\Psi\circ\Phi)(d)=\left| \langle g^{\frac{|G|}{d}}\rangle\right|=\left| g^{\frac{|G|}{d}}\right|=\frac{|G|}{\operatorname{gcd}(|G|/d,|G|)}=\frac{|G|}{|G|/d}=d.</m>
+                      </p>
+              
+                      <p>
+                        <em>Claim 3:</em> For any subgroup <m>H</m> of <m>G</m>, we have <m>(\Phi\circ\Psi)(H)=H</m>.
+                      </p>
+              
+                      <p>
+                        By Claim 1, any <m>H\leq G</m> is either <m>H=\{e\}</m>, for which <m>(\Phi\circ\Psi)(\{e\})=\Phi(1)=\langle g^{|G|} \rangle=\{e\}</m> or is of the form <m>H=\langle g^k \rangle</m>. In the latter case, setting <m>|G|=n</m> we have <m>|H|=|g^k|=\frac{n}{\operatorname{gcd}(n,k)}</m> and <m>(\Phi\circ\Psi)(H)=\langle g^{\frac{n}{n/\operatorname{gcd}(n,k)}} \rangle=\langle g^{\operatorname{gcd}(n,k)}\rangle.</m> It remains to show that <m>\langle g^{\operatorname{gcd}(n,k)}\rangle=\langle g^k\rangle=H</m>. By Bézout's Identity, <m>\operatorname{gcd}(n,k)=an+bk</m> for some integers <m>a,b</m>. Since <m>g^{\operatorname{gcd}(n,k)}=(g^n)^a(g^k)^b=e^a(g^k)^b=(g^k)^b\in \langle g^k \rangle</m> if follows that <m>\langle g^{\operatorname{gcd}(n,k)}\rangle \subseteq \langle g^k \rangle</m>. On the other hand <m>k</m> is a multiple of <m>\operatorname{gcd}(n,k)</m> so <m>g^k\in \langle g^{\operatorname{gcd}(n,k)}\rangle</m> and thus <m>\langle g^k \rangle \subseteq \langle g^{\operatorname{gcd}(n,k)}\rangle</m>. Finally, we conclude that <m>(\Phi\circ\Psi)(\langle g^k \rangle)=\langle g^{\operatorname{gcd}(n,k)}\rangle=\langle g^k \rangle</m> for any <m>k\in \mathbb{Z},k&gt;0</m>.
+                      </p>
+              
+                      <p>
+                        Claims 2 and 3 establish that <m>\Phi</m> is a two sided inverse to <m>\Phi</m>, thus <m>\Phi</m> is a bijection.
+                        
+                      </p>
+                    </li>
+                
+                    </ol>
+                </p>
+              </proof>
+            </theorem>
+
+            <exercise xml:id="exe-small-cyclic"><title>Cyclic Groups of Small Order</title>
+              <statement>
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        Every group of orders <m>1,2,3</m> are cyclic.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Every abelian group of order <m>6</m> is cyclic.
+                      </p>
+                    </li>
+                  </ol>
+                  
+                </p>
+              </statement>
+            </exercise>
+
+          </subsection>
+
+          <subsection xml:id="subsec-cyclic-uniqueness"><title>Uniqueness of Cyclic Groups</title>
+
+            <blockquote><p><q>There is no way to be in cyclic existence without creating the causes of suffering.</q></p><attribution>Jetsunma Ahkon Lhamo</attribution></blockquote>
+      
+            <blockquote><p><q>I used to wonder when my boomerang would come back to me. Then it hit me.</q></p><attribution>Ancient Proverb</attribution></blockquote>
+      
+            <proposition xml:id="prop-ump-cyclic"><title>UMP for Cyclic Groups</title>  
+              <statement>
+                <p><idx><h>universal mapping property for a cyclic group</h></idx>
+                  Assume <m>G = \langle x \rangle</m> and let <m>H</m> be any group. If <m>|x| = n &lt; \infty</m>, then for each <m>y \in H</m> such that <m>y^n = e</m>, there is a unique group homomorphism 
+                  <me>
+                    f: G \to H
+                  </me> 
+                  such that <m>f(x) = y</m>. If <m>|x| = \infty</m>, then for each <m>y \in H</m>, there is a unique group homomorphism 
+                  <me>
+                    f: G \to H
+                  </me> 
+                  such that <m>f(x) = y</m>. In both cases this unique group homomorphism is given by <m>f(x^i)=y^i</m> for any <m>i</m>.
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  Recall that either <m>G = \{e,x,x^2, \dots, x^{n-1}\}</m> (with no repetitions) if <m>|x| = n</m> or <m>G = \{ \cdots, x^{-2}, x^{-1}, e, x, x^e, \dots \}</m> (with no repetitions) if <m>|x| = \infty</m>.
+                </p>
+
+                <p>
+                  <em>Uniqueness:</em> We show that if <m>f:G\to H</m> is a group homomorphism, then <m>f(x^i)=y^i</m> for all <m>i\in \mathbb{Z}</m>.
+                </p>
         
-      </section>
+                <p>
+                  <ul>
+                    <li>
+                      <p>
+                        if <m>i=0</m> then <m>f(x^0)=f(e_G)=e_H=y^0</m>
+                      </p>
+                    </li>
+        
+                    <li>
+                      <p>
+                        if <m>i&gt;0</m> then <m>f(x^i)=f(\underbrace{x\cdots x}_{i \text{ times}})=\underbrace{f(x)\cdots f(x)}_{i \text{ times}})=y^i</m>
+                      </p>
+                    </li>
+        
+                    <li>
+                      <p>
+                        if <m>i&lt;0</m> then <m>f(x^i)=f\left((x^{-i})^{-1}\right)=f\left((x^{-i})\right)^{-1}=(y^{-i})^{-1}=y^i</m>, using the formula above for <m>-i&gt;0</m>
+                      </p>
+                    </li>
+                  </ul>
+                </p>
+        
+                <p>
+                  <em>Existence:</em> In either case, define <m>f(x^i) = y^i</m> for all relevant <m>i</m> (i.e., in the first case, for <m>0 \leq i \leq n-1</m> and in the second for all <m>i \in\mathbb{Z}</m>). We need to show this function is a well-defined group homomorphism. To see that <m>f</m> is well defined, suppose <m>x^i=x^j</m> for some <m>i,j\in \mathbb{Z}</m>. Then, since <m>x^{i-j}=e_G</m>, suing Lemma <xref provisional="prop96" /> or the definition for order we have 
+                  <me>
+                    \begin{cases}
+                    n\mid i-j &amp; \text{ if } |x|=n\\
+                    i-j=0 &amp; \text{ if } |x|=\infty\\
+                    \end{cases}
+                    \Rightarrow
+                    \begin{cases}
+                    y^ {i-j}=y^{nk} &amp; \text{ if } |x|=n\\
+                    y^{i-j}=y^0 &amp; \text{ if } |x|=\infty\\
+                    \end{cases}
+                    \Rightarrow y^ {i-j}=e_H
+                    \Rightarrow y^ i=y^j.
+                  </me> 
+                  Thus, if <m>x^i=x^j</m> then <m>f(x^i)=y^i=y^j=f(x^j)</m>.
+                </p>
+        
+                <p>
+                  The homomorphism property is immediate: <m>f^(x^ix^j)=f(x^{i+j})=y^{i+j}=y^iy^j=f(x^i)f(x^j)</m>. ◻
+                </p>
+              </proof>
+            </proposition>
+      
+            <remark><p>This is a particular case of the universal mapping property of a presentation (which is covered in <xref ref="subsec-presentations"/>), since a cyclic group is either presented by <m>\langle x | x^n = e \rangle</m> or <m>\langle x \mid  -\rangle</m>.</p></remark>
+      
+            <theorem xml:id="thm-cyclic-classification"><title>Classification Theorem for Cyclic Groups</title>
+              <statement>
+                <p><idx><h>classification of cyclic groups</h></idx>
+                  Every infinite cyclic group is isomorphic to <m>\Z</m>. Every cyclic group of order <m>n</m> is isomorphic to <m>Z/n</m>.
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  Suppose <m>G = \langle x \rangle</m> with <m>|x| = n</m> or <m>|x| = \infty</m> and set <m>H=C_n</m> in the first case and <m>H=C_\infty</m> in the second case. Then by <xref ref="prop-ump-cyclic" />, there are homomorphisms <m>f: G \to H</m> and <m>g: G \to H</m> such that <m>f(x) = a</m> and <m>g(a) =x</m>. So <m>g \circ f</m> is an endomorphisms of <m>G</m> mapping <m>x</m> to <m>x</m>. But the identity map also has this property, and so the uniqueness clause gives <m>g \circ f = \text{id}_G</m>. Similarly, <m>f \circ g = \text{id}_H</m>.
+                </p>
+              </proof>
+            </theorem>
+
+            <paragraphs><title>Notation: <m>C_n</m> and <m>C_\infty</m></title><p>Moving forward, it is customary to denote <em>the</em> cyclic group of order <m>n</m> with the notation <m>C_n</m>. We similarly denote <em>the</em> infinite cyclic group <m>C_\infty</m>. Why the integers aren't enough for some people, I'll never know.</p></paragraphs>
+
+            <lemma xml:id="lem-cyclic-relprime"><title>Cyclic Groups of Relatively Prime Order</title>
+              <statement>
+                <p>Prove that if <m>m,n</m> are positive integers such that <m>\gcd(m,n)=1</m> then there is a group isomorphism <m>C_{mn}=C_m\times C_n</m>.</p>
+              </statement>
+      
+            </lemma>
+
+            <theorem xml:id="thm-sunzi"><title>Sunzi's Remainder Theorem</title>
+              <statement>
+                <p><idx><h>Sunzi's Remainder Theorem for groups</h></idx>
+                  Suppose <m>m = p_1^{e_1} \cdots p_l^{e_l}</m> for distinct primes <m>p_1, \dots, p_l</m>. Then there is an isomorphism 
+                  <me>
+                    \phi: \mathbb{Z}/m \xrightarrow{\cong} \mathbb{Z}/(p_1^{e_1}) \times \cdots \times \mathbb{Z}/(p_l^{e_l})
+                  </me> 
+                  given by 
+                  <me>
+                    \phi([j]_m) = ([j]_{{p_1}^{e_1}}, \cdots, [j]_{{p_l}^{e_l}})
+                  </me> 
+                  where <m>[j]_b</m> denote the class of an integer <m>j</m> in <m>\mathbb{Z}/b</m>.
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  Using <xref ref="prop-ump-cyclic"/>, we let <m>\psi: \mathbb{Z}\to \mathbb{Z}/(p_1^{e_1}) \times \cdots \times \mathbb{Z}/(p_l^{e_l})</m> be the unique homomorhism that sends <m>1</m> to <m>([1]_{{p_1}^{e_1}}, \cdots, [1]_{{p_l}^{e_l}})</m>. Then 
+                  <me>
+                    \psi(j) = ([j]_{{p_1}^{e_1}}, \cdots, [j]_{{p_l}^{e_l}}).
+                  </me> 
+                  Clearly <m>m \in \operatorname{Ker}(\psi)</m> and so <m>\langle m \rangle \subseteq \operatorname{Ker}(\psi)</m>. Conversely, if <m>\psi(n) = 0</m>, then <m>p_i^{e_i} \mid n</m> for all <m>i</m> and since <m>p_1^{e_1}, \dots, p_l^{e_l}</m> are pairwise relatively prime, it follows that <m>m \mid n</m>. This proves <m>\operatorname{Ker}(\psi) = \langle m \rangle</m>. The claim follows by the <xref text="title" ref="thm-fit-group"/>.
+                </p>
+              </proof>
+            </theorem>
+
+            <remark><p>This theorem frequently goes by the name of The Chinese Remainder Theorem<idx><h>Chinese Remainder Theorem</h></idx>, but it has been remarked that this is somewhat like referencing the Pythagorean Theorem as The Greek Triangle Theorem or Fermat's Little Theorem as The French Power Postulate. In the interest of giving credit where credit is due, we include it here with the name of the 3rd-century Chinese mathematician, Sunzi, to whom the result is often attributed.</p></remark>
+              
+
+          </subsection>
+
+          <exercises><title>Qualifying Exam Problems</title>
+      
+              <exercise>
+                <p>
+                  Consider the set <m>\mu=\{z\in \C^\times \mid z^n = 1 \;\text{for some integer}\;n \geq 1\}</m>.
+                  <ol>
+                    <li>
+                      <p>
+                        Prove that <m>\mu\leq\C^\times</m>.
+                      </p>
+                    </li>
+      
+                    <li>
+                      <p>
+                        Prove that for each integer <m>m \geq 1</m>, there is a unique subgroup <m>H_m\leq \mu</m> with <m>|H_m|=m</m> and that <m>H_m</m> is cyclic. 
+                      </p>
+                    </li>
+      
+                    <li>
+                      <p>
+                        Prove that every finitely generated subgroup of <m>\mu</m> has finitely many elements. 
+                      </p>
+                    </li>
+      
+                    <li>
+                      <p>
+                        Prove that <m>\mu</m> is not finitely generated.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </exercise>
+        
+          </exercises>
+          
+        </section>
 
       </chapter>
                                                                               
@@ -8113,10 +8160,14 @@
               <definition xml:id="def-commutative-ring"><title>Commutative Ring</title>
                 <statement>
                   <p>
-                    A ring <m>R</m> is <em>commutative</em> if <m>a \cdot b = b \cdot a</m> holds for all <m>a,b \in R</m>.
+                    A ring <m>R</m> is <em>commutative</em> if <m>a \cdot b = b \cdot a</m> holds for all <m>a,b \in R</m>
                     </p>
                 </statement>
               </definition>
+
+              <exercise><title>Discussion</title>
+                <p>One could argue that commutative rings should really be called <em>abelian rings</em> to remain consistent with abelian groups. Discuss.</p>
+              </exercise>
 
               <p>We can go <alert>deeper</alert>.</p>
 
@@ -9806,11 +9857,11 @@
               <p>
                 <ul>
                   <li>
-                  In <m>\Z</m>, the prime ideals are <m>(0)</m> and the ideals generated by prime integers <m>P=(p)</m>, where <m>p</m> is a prime integer. The maximal ideals are the ideals generated by prime integers. In particular <m>(0)</m> is prime but not maximal.
+                  In <m>\Z</m>, the prime ideals are <m>\igen0</m> and the ideals generated by prime integers <m>P=\igen p</m>, where <m>p</m> is a prime integer. The maximal ideals are the ideals generated by prime integers. In particular <m>\igen0</m> is prime but not maximal.
                   </li>
       
                   <li>
-                  In <m>\Z[i]</m> the ideal <m>(13)</m> is not prime, because <m>13=(3+2i)(3-2i)\in(13)</m>, but <m>3+2i\not \in (13)</m> and <m>3-2i\not \in (13)</m> (because if <m>3\pm2i=13\a</m> then <m>N(3\pm2i)=N(13)N(\a)</m> so <m>13=13^2N(\a)</m>, a contradiction).
+                  In <m>\Z[i]</m> the ideal <m>\igen{13}</m> is not prime, because <m>13=(3+2i)(3-2i)\in\igen{13}</m>, but <m>3+2i\not \in \igen{13}</m> and <m>3-2i\not \in \igen{13}</m> (because if <m>3\pm2i=13\a</m> then <m>N(3\pm2i)=N(13)N(\a)</m> so <m>13=13^2N(\a)</m>, a contradiction).
                   </li>
                 </ul>
               </p>
@@ -9847,7 +9898,7 @@
             <proposition xml:id="prop-equivalent-integral-domain-definition"><title>Equivalent Domain Characterization</title>
               <statement>
                 <p>
-                  Let <m>A</m> be a nontrivial ring. Then <m>A</m> is an integral domain if and only if the ideal <m>(0)</m> is prime.
+                  Let <m>A</m> be a nontrivial ring. Then <m>A</m> is an integral domain if and only if the ideal <m>\igen0</m> is prime.
                 </p>
               </statement>
             </proposition>
@@ -9928,6 +9979,7 @@
 
             <p>Unlike their prime counterparts, maximal ideals are not preserved by preimages in general.</p>
 
+            <!--
             <exercise xml:id="exe-preimage-of-maximal-ideal-possibly-not-maximal"><title>Preimage of Maximal Ideal not Necessarily Maximal</title>
               <statement>
                 <p>
@@ -9935,7 +9987,8 @@
                 </p>
               </statement>
             </exercise>
-    
+            -->
+
             <lemma xml:id="lem-zorn"><title>Zorn's Lemma</title>          
               <statement>
                 <p>
@@ -10341,50 +10394,50 @@
                   Let <m>I</m> be an ideal of a ring <m>R</m>. The ideal <m>I</m> is <em>principal</em> if <m>I = \igen a</m> for some <m>a \in R</m>, that is, <m>I</m> is generated by a set with a single element.
                 </p>
               </statement>
-            </definition>
+          </definition>
 
-            <exercise xml:id="exe-properties-of-principal-ideals-in-z"><title>Principal Ideals in <m>\Z</m></title>
-              
-              <p>
-                Let <m>(x),(y)</m> be ideals in <m>\Z</m>. Then
-                <ul>
-                  <li>
-                    <m>(m)+(n)=(\gcd(m,n))</m>
-                  </li>
-    
-                  <li>
-                    <m>(m)\cap(n)=(\lcm(m,n))</m>
-                  </li>
-    
-                  <li>
-                    <m>(m)(n)=(mn)</m> Conclude that <m>(m)(n)=(m)\cap(n)</m> if and only if <m>m</m> and <m>n</m> are relatively prime.
-                  </li>
-                </ul>
-              </p>
-            </exercise>
+          <exercise xml:id="exe-properties-of-principal-ideals-in-z"><title>Principal Ideals in <m>\Z</m></title>
+            
+            <p>
+              Let <m>\igen m,\igen n</m> be ideals in <m>\Z</m>. Then
+              <ul>
+                <li>
+                  <m>\igen m+\igen n=\igen{\gcd(m,n)}</m>
+                </li>
+  
+                <li>
+                  <m>\igen m\cap\igen n=\igen{\lcm(m,n)}</m>
+                </li>
+  
+                <li>
+                  <m>\igen m\igen n=\igen {mn}</m> Conclude that <m>\igen m\igen n=\igen m\cap\igen n</m> if and only if <m>m</m> and <m>n</m> are relatively prime.
+                </li>
+              </ul>
+            </p>
+          </exercise>
 
-            <example xml:id="ex-principal-ideals"><title>Examples of Principal Ideals</title>
-              <p>
-                <ul>
-                  <li>
-                    every ideal of <m>\Z</m> is principal with <m>I=\igen n</m> for some <m>n\in \Z</m><fn>This means <m>\Z</m> is a PID, something that will be defined in <xref ref="sec-pids"/></fn> 
-                  </li>
-    
-                  <li>
-                    for any field <m>F</m>, every ideal of <m>F[x]</m> is principal.
-                  </li>
-    
-                  <li>
-                    for any field <m>F</m>, every ideal in <m>F[x_1,\ldots,x_n]</m> is finitely generated, but not necessarily principal. This is a consequence of a deep theorem called the Hilbert Basis Theorem, which you will see in Math 905.
-                  </li>
-                </ul>
-              </p>
-            </example>
+          <example xml:id="ex-principal-ideals"><title>Examples of Principal Ideals</title>
+            <p>
+              <ul>
+                <li>
+                  every ideal of <m>\Z</m> is principal with <m>I=\igen n</m> for some <m>n\in \Z</m><fn>This means <m>\Z</m> is a PID, something that will be defined in <xref ref="sec-pids"/></fn> 
+                </li>
+  
+                <li>
+                  for any field <m>F</m>, every ideal of <m>F[x]</m> is principal.
+                </li>
+  
+                <li>
+                  for any field <m>F</m>, every ideal in <m>F[x_1,\ldots,x_n]</m> is finitely generated, but not necessarily principal. This is a consequence of a deep theorem called the Hilbert Basis Theorem, which you will see in Math 905.
+                </li>
+              </ul>
+            </p>
+          </example>
     
           <definition xml:id="def-pid"><title>PID</title>
             <statement>
               <p>
-                A ring <m>R</m> is called a <em>principal ideal domain (PID)</em> if it is a domain with the property that every ideal is principal, i.e., for each ideal <m>I</m>, we have <m>I = (a)</m> for some <m>a \in R.</m>
+                A ring <m>R</m> is called a <em>principal ideal domain (PID)</em> if it is a domain with the property that every ideal is principal, i.e., for each ideal <m>I</m>, we have <m>I = \igen a</m> for some <m>a \in R.</m>
               </p>
             </statement>
           </definition>
@@ -10408,11 +10461,11 @@
     
             <proof>
               <p>
-                Let <m>N</m> be the norm function making <m>R</m> into a Euclidean domain. Pick an ideal <m>I</m>. If <m>I</m> is the zero ideal, <m>I = (0)</m>. Otherwise pick a non-zero element <m>b</m> of <m>I</m> with <m>N(b)</m> as small as possible. (Such a <m>b</m> exists by the well-ordering of <m>\Z_{\geq 0}</m>.) I claim <m>I = (b)</m>. It is clear that <m>(b) \subseteq I</m>. Pick <m>a \in I</m>. Then 
+                Let <m>N</m> be the norm function making <m>R</m> into a Euclidean domain. Pick an ideal <m>I</m>. If <m>I</m> is the zero ideal, <m>I = \igen0</m>. Otherwise pick a non-zero element <m>b</m> of <m>I</m> with <m>N(b)</m> as small as possible. (Such a <m>b</m> exists by the well-ordering of <m>\Z_{\geq 0}</m>.) I claim <m>I = \igen b</m>. It is clear that <m>\igen b \subseteq I</m>. Pick <m>a \in I</m>. Then 
                 <me>
                   a = bq + r
                 </me> 
-                and either <m>r = 0</m> or <m>N(r) &lt; N(b)</m>. But note that <m>r = a - bq \in I</m>, and we cannot have both <m>r \ne 0</m> and <m>N(r) &lt; N(b)</m> by our choice of <m>b</m>. So it must be that <m>r = 0</m>, and hence <m>a\in (b)</m>.
+                and either <m>r = 0</m> or <m>N(r) &lt; N(b)</m>. But note that <m>r = a - bq \in I</m>, and we cannot have both <m>r \ne 0</m> and <m>N(r) &lt; N(b)</m> by our choice of <m>b</m>. So it must be that <m>r = 0</m>, and hence <m>a\in \igen b</m>.
               </p>
             </proof>
           </theorem>
@@ -10541,15 +10594,15 @@
           </exercise>
     
           <exercise xml:id="ex-cxyx2-y3-y-irreducible-but-not-prime">
-          <statement>
-            <p>
-              In the ring <m>\C[x,y]/(x^2-y^3)</m> the element <m>y</m> is irreducible but not prime. 
-            </p>
-          </statement>
+            <statement>
+              <p>
+                In the ring <m>\C[x,y]/\igen{x^2-y^3}</m> the element <m>y</m> is irreducible but not prime. 
+              </p>
+            </statement>
     
             <solution>
               <p>
-                Since <m>\C[x,y]/(x^2-y^3)\cong \C[t^3, t^2]\subseteq \C[t]</m> this ring is a domain. The element <m>y</m> is irreducible for degree reasons. The ideal <m>(y)</m> contains <m>x^2</m> but doesn't contain <m>x</m> so <m>y</m> is not prime.
+                Since <m>\C[x,y]/\igen{x^2-y^3}\cong \C[t^3, t^2]\subseteq \C[t]</m> this ring is a domain. The element <m>y</m> is irreducible for degree reasons. The ideal <m>\igen{y}</m> contains <m>x^2</m> but doesn't contain <m>x</m> so <m>y</m> is not prime.
               </p>
             </solution>
           </exercise>
@@ -10576,11 +10629,11 @@
     
             <proof>
               <p>
-                Suppose <m>R</m> is an integral domain and that <m>r</m> is prime. Then <m>r \ne 0</m> and <m>r</m> is not a unit. Suppose <m>r = yz</m>. Then <m>yz \in (r)</m> and hence by definition either <m>y \in (r)</m> or <m>z \in (r)</m>. If <m>y \in (r)</m>, we have <m>y = rt</m> for some <m>t</m> and so <m>y = yzt</m>. Since <m>r \ne 0</m>, <m>y \ne 0</m>, and <m>R</m> is an integral domain, we must have <m>zt = 1</m>, showing that <m>z</m> is a unit.
+                Suppose <m>R</m> is an integral domain and that <m>r</m> is prime. Then <m>r \ne 0</m> and <m>r</m> is not a unit. Suppose <m>r = yz</m>. Then <m>yz \in \igen r</m> and hence by definition either <m>y \in \igen r</m> or <m>z \in \igen r</m>. If <m>y \in \igen r</m>, we have <m>y = rt</m> for some <m>t</m> and so <m>y = yzt</m>. Since <m>r \ne 0</m>, <m>y \ne 0</m>, and <m>R</m> is an integral domain, we must have <m>zt = 1</m>, showing that <m>z</m> is a unit.
               </p>
     
               <p>
-                Assume <m>R</m> is a PID and that <m>r</m> is irreducible. Since <m>r</m> is not a unit, <m>(r)</m> is a proper ideal and hence is contained in a maximal ideal <m>M</m> by Theorem . We show <m>(r)= M</m> and hence <m>(r)</m> is prime. Since <m>R</m> is a PID, <m>M = (y)</m> for some <m>y</m>. So <m>x = yt</m> for some <m>t</m>. But <m>x</m> is irreducible and <m>y</m> is not a unit, which forces <m>t</m> to be a unit and hence <m>(x) = (y) = M</m>.
+                Assume <m>R</m> is a PID and that <m>r</m> is irreducible. Since <m>r</m> is not a unit, <m>\igen r</m> is a proper ideal and hence is contained in a maximal ideal <m>M</m> by Theorem . We show <m>\igen r= M</m> and hence <m>\igen r</m> is prime. Since <m>R</m> is a PID, <m>M = \igen y</m> for some <m>y</m>. So <m>x = yt</m> for some <m>t</m>. But <m>x</m> is irreducible and <m>y</m> is not a unit, which forces <m>t</m> to be a unit and hence <m>\igen x = \igen y = M</m>.
               </p>
             </proof>
           </theorem>
@@ -10662,7 +10715,7 @@
     
           <exercise xml:id="ex-zx-not-a-pid"><title><m>\Z[x]</m> is a UFD</title>
             <p>
-              <m>\Z[x]</m> is not a PID hence also not a Euclidean domain. For example, this can be seen because the ideal <m>(2,x)</m> is not a principal ideal. It is a UFD because <m>\Z</m> is a UFD (based on the result that if <m>R</m> is a UFD then so is <m>R[x]</m> which we will prove shortly).
+              <m>\Z[x]</m> is not a PID hence also not a Euclidean domain. For example, this can be seen because the ideal <m>\igen{2,x}</m> is not a principal ideal. It is a UFD because <m>\Z</m> is a UFD (based on the result that if <m>R</m> is a UFD then so is <m>R[x]</m> which we will prove shortly).
             </p>
           </exercise>
     
@@ -10753,6 +10806,8 @@
               </p>
             </proof>
           </theorem>
+
+          <remark><p>For those mathematicians who refute the Axiom of Choice (though they are few and far between), noetherian rings provide a haven of sorts within the world of algebra. This is because the existence of a maximal ideal is guarenteed in noetherian rings, given that every ascending chain of ideals stabilizes.</p></remark>
     
           <exercises>
     

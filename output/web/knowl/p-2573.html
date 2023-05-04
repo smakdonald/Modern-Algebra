@@ -11,8 +11,22 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h6 class="heading"><span class="type">Paragraph</span></h6>
-<div class="para">Let <span class="process-math">\(L\)</span> be the algebraic closure of <span class="process-math">\(F\text{.}\)</span> Thus <span class="process-math">\(A\)</span> has a Jordan Canonical Form in <span class="process-math">\(L\text{.}\)</span> For each Jordan block <span class="process-math">\(J_i\)</span> in the JCF of <span class="process-math">\(A\text{,}\)</span> let <span class="process-math">\(B_i\)</span> denote the transpose of the identity matrix, and notice that <span class="process-math">\(B_iJ_iB_i\inv=J_i^T\text{.}\)</span> As this is the case for every Jordan block, we see that the JCF of <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(J\text{,}\)</span> is similar to its transpose. As the <span class="process-math">\(A\)</span> is similar to <span class="process-math">\(J\text{,}\)</span> <span class="process-math">\(A^T\)</span> is similar to <span class="process-math">\(J^T\text{,}\)</span> and <span class="process-math">\(J\)</span> is similar to <span class="process-math">\(J^T\text{,}\)</span> we see that <span class="process-math">\(A\sim A^T\)</span> in <span class="process-math">\(L\)</span> by transitivity.</div>
-<span class="incontext"><a href="sec-jcf.html#p-2573" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">We also need to be sure our rules for <span class="process-math">\(+\)</span> and <span class="process-math">\(\cdot\)</span> make sense and are independent of representation. They “make sense” since we assume <span class="process-math">\(S\)</span> is closed under <span class="process-math">\(\cdot\text{.}\)</span> To show <span class="process-math">\(+\)</span> is independent of representations, say <span class="process-math">\(\frac{r}{s} \sim \frac{r''}{s''}\text{,}\)</span> so that <span class="process-math">\(rs'' = r''s\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{r}{s} + \frac{r'}{s'} := \frac{rs' + r's}{ss'}
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{r''}{s''} + \frac{r'}{s'} := \frac{r''s' + r's''}{s''s'}
+\end{equation*}
+</div>
+<div class="para">and so we need to show <span class="process-math">\((rs' + r's)(s''s') \sim (r''s' + r's'')(ss')\text{.}\)</span> This is clear upon expaning out both sides and using <span class="process-math">\(rs'' = r''s\text{.}\)</span> In a similar way one shows <span class="process-math">\(\cdot\)</span> is well-defined.</div>
+</div>
+<span class="incontext"><a href="sec-field-of-fractions.html#p-2573" class="internal">in-context</a></span>
 </body>
 </html>

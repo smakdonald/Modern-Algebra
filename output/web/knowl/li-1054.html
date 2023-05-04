@@ -14,7 +14,16 @@
 <article class="li"><h4 class="heading">
 <span class="type">Item</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span>
 </h4>
-<div class="para">Give an example of <span class="process-math">\(G, H,\)</span> and <span class="process-math">\(K\)</span> such that <span class="process-math">\(HK\)</span> is not a subgroup of <span class="process-math">\(G\text{.}\)</span>
+<div class="para">First, suppose <span class="process-math">\(K\nsg G\text{.}\)</span> Let <span class="process-math">\(H=G/K\)</span> (which is a group since <span class="process-math">\(K\)</span> is normal in <span class="process-math">\(G\)</span>) and define <span class="process-math">\(\varphi: G\to G/K\)</span> such that <span class="process-math">\(\varphi(g)=gK\text{.}\)</span> Let <span class="process-math">\(k\in K\text{,}\)</span> and observe that <span class="process-math">\(\varphi(k)=kK=K\text{,}\)</span> and so <span class="process-math">\(k\in\ker(\varphi)\text{.}\)</span> Let <span class="process-math">\(g\in\ker(\varphi)\text{,}\)</span> meaning that <span class="process-math">\(\varphi(g)=K\text{,}\)</span> placing <span class="process-math">\(g\in K\text{.}\)</span> As [[Lemma – Quotient Map is Surjective Homomorphism|quotient maps are homomorphisms]], this direction is complete.</div>
+<div class="para logical">
+<div class="para">Next, suppose there exists a group <span class="process-math">\(H\)</span> and and a homomorphism <span class="process-math">\(\varphi : G\to H\)</span> such that <span class="process-math">\(K = \ker(\varphi)\text{.}\)</span> Let <span class="process-math">\(g\in G\)</span> and consider <span class="process-math">\(gKg\inv\text{.}\)</span> Observe</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\varphi(gKg\inv)=\varphi(g)\varphi(K)\varphi(g\inv)=0,
+\end{equation*}
+</div>
+<div class="para">given that <span class="process-math">\(\ker(\varphi)=K\text{.}\)</span> Thus <span class="process-math">\(gKg\inv\subseteq K\)</span> for all <span class="process-math">\(g\in G\text{,}\)</span> making <span class="process-math">\(K\)</span> a normal subgroup of <span class="process-math">\(G\text{.}\)</span>
+</div>
 </div></article><span class="incontext"><a href="section-70.html#li-1054" class="internal">in-context</a></span>
 </body>
 </html>

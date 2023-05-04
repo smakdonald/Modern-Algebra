@@ -11,15 +11,64 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<div class="para">By <a href="" class="xref" data-knowl="./knowl/thm-sylow.html" title="Theorem 6.11: Sylow's Theorem">Sylow's Theorem</a> we know that <span class="process-math">\(\Syl_7(G)\equiv 1\mod{7}\)</span> and <span class="process-math">\(\Syl_7(G)|2^5=32\text{.}\)</span> Thus our options are <span class="process-math">\(1\)</span> and <span class="process-math">\(8\text{.}\)</span> Suppose that <span class="process-math">\(\Syl_7(G)=8\text{.}\)</span>
+<div class="para">Let <span class="process-math">\(F=\Q\text{,}\)</span> <span class="process-math">\(n\)</span> a positive integer, and <span class="process-math">\(A\)</span> a unipotent <span class="process-math">\(4\times 4\)</span> matrix with entries in <span class="process-math">\(F\text{.}\)</span> Thus <span class="process-math">\(A-I\)</span> is nilpotent. Let <span class="process-math">\(\l\)</span> be an eigenvalue of <span class="process-math">\(A-I\text{.}\)</span> Then <span class="process-math">\((A-I)v=\l v\text{,}\)</span> so <span class="process-math">\(Av-Iv=\l v\)</span> and <span class="process-math">\(Av=\l v+Iv\text{.}\)</span> As <span class="process-math">\(Iv=v\text{,}\)</span> we have <span class="process-math">\(Av=\l v+v\)</span> and <span class="process-math">\(Av=(\l+1)v\text{.}\)</span>
+</div> <div class="para">Notice that as <span class="process-math">\(\l\)</span> is an eigenvalue of <span class="process-math">\(I\text{,}\)</span> we have <span class="process-math">\(\l +1\)</span> as an eigenvalue of <span class="process-math">\(A\text{.}\)</span>
 </div> <div class="para logical">
-<div class="para">Let <span class="process-math">\(G\)</span> act on <span class="process-math">\(\Syl_7(G)\)</span> by conjugation, yielding the homomorphism</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-permrep.html ./knowl/thm-sylow.html ">
+<div class="para">Assume inductively that <span class="process-math">\(\l^{n-1}\)</span> is an eigenvalue of <span class="process-math">\((A-I)^{n-1}\text{.}\)</span> Notice</div>
+<div class="displaymath process-math">
 \begin{equation*}
-\rho: G \to S_8
+(A+I)^nv=(A+I)(A+I)^{n-1}v=(A+I)\l^{n-1}v=\l^{n-1}(A+I)v=\l^{n-1}\l=\l^n,
 \end{equation*}
 </div>
-<div class="para">via the <a href="" class="xref" data-knowl="./knowl/thm-permrep.html" title="Theorem 5.4: The Permutation Representation">The Permutation Representation</a>. This map is non-trivial from part (2) of <a href="" class="xref" data-knowl="./knowl/thm-sylow.html" title="Theorem 6.11: Sylow's Theorem">Sylow's Theorem</a>, but <span class="process-math">\(2^5\cdot 7^3\)</span> does not divide <span class="process-math">\(|S_8|=8!\text{,}\)</span> and thus <span class="process-math">\(\rho\)</span> cannot be injective. Then the kernel of this homomorphism is non-trivial, normal subgroup of <span class="process-math">\(G\)</span> by <code class="code-inline tex2jax_ignore">[provisional cross-reference: thm-kernel-iff-normal]</code>. Thus <span class="process-math">\(G\)</span> is not simple.</div>
+<div class="para">making <span class="process-math">\(\l\)</span> an eigenvalue of <span class="process-math">\((A+I)^n\text{.}\)</span> Thus if <span class="process-math">\(\l\)</span> is an eigenvalue of <span class="process-math">\(A-I\text{,}\)</span> it is an eigenvalue of <span class="process-math">\((A-I)^n\)</span> as well. As <span class="process-math">\((A-I)\)</span> is nilpotent, there exists some <span class="process-math">\(k\)</span> such that <span class="process-math">\((A-I)^k=0\text{.}\)</span> This means that <span class="process-math">\(\l^kv=0\text{.}\)</span> As <span class="process-math">\(v\neq 0\)</span> and <span class="process-math">\(\l^k\)</span> is a scalar in a field (and hence integral domain) we have <span class="process-math">\(\l=0\text{.}\)</span> Thus the only eigenvalue of <span class="process-math">\((A-I)\)</span> is <span class="process-math">\(0\text{,}\)</span> meaning that the only eigenvalue of <span class="process-math">\(A\)</span> is <span class="process-math">\(1\text{.}\)</span>
+</div>
+</div> <div class="para">Eigenvalues of <span class="process-math">\(A\)</span> correspond to the roots of <span class="process-math">\(\cp_A(x)\text{,}\)</span> which is a monic quartic polynomial, as <span class="process-math">\(A\)</span> is a <span class="process-math">\(4\times 4\)</span> matrix. Thus <span class="process-math">\(\cp_A(x)=(x-1)^4\text{,}\)</span> as all roots must be <span class="process-math">\(1\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Two matrices are similar if and only if they share the same invariant factors. Given that invariant factors divide <span class="process-math">\(\cp_A(x)\)</span> and each invariant factor must divide the following one, the possible sets of invariant factors for <span class="process-math">\(A\)</span> are the following:</div>
+<ul class="disc">
+<li><div class="para"><span class="process-math">\(\{(x-1)^4\}\text{,}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\{(x-1),(x-1)^3\}\text{,}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\{(x-1), (x-1), (x-1)^2\}\text{,}\)</span></div></li>
+<li><div class="para">
+<span class="process-math">\(\{(x-1)^2, (x-1)^2\}\text{,}\)</span> and</div></li>
+<li><div class="para"><span class="process-math">\(\{(x-1), (x-1), (x-1), (x-1)\}\text{.}\)</span></div></li>
+</ul>
+<div class="para">We identify the companion matrices for each possible invariant factor:</div>
+<ul class="disc">
+<li><div class="para logical"><div class="displaymath process-math">
+\begin{equation*}
+C(x-1)=\begin{bmatrix} 1 \end{bmatrix},
+\end{equation*}
+</div></div></li>
+<li><div class="para logical"><div class="displaymath process-math">
+\begin{equation*}
+C((x-1)^2)=C(x^2-2x+1)=\begin{bmatrix} 0 &amp; -1 \\ 1 &amp; 2\end{bmatrix},
+\end{equation*}
+</div></div></li>
+<li><div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+C((x-1)^3)=C(x^3+3x^2+3x-1)=\begin{bmatrix} 0 &amp; 0 &amp; 1 \\ 1 &amp; 0 &amp; -3 \\ 0 &amp; 1 &amp; -3\end{bmatrix},
+\end{equation*}
+</div>
+<div class="para">and</div>
+</div></li>
+<li><div class="para logical"><div class="displaymath process-math">
+\begin{equation*}
+C((x-1)^4)=C(x^4-4x^3+6x^2-4x+1)=\begin{bmatrix} 0 &amp; 0 &amp; 0 &amp; -1 \\ 1 &amp; 0 &amp; 0 &amp; 4 \\ 0 &amp; 1 &amp; 0 &amp; -6 \\ 0 &amp; 0 &amp; 1 &amp; 4\end{bmatrix}.
+\end{equation*}
+</div></div></li>
+</ul>
+<div class="para">We define the following:</div>
+<ul class="disc">
+<li><div class="para"><span class="process-math">\(B=C((x-1)^4)\text{,}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(C=C(x-1)\oplus C((x-1)^3)\text{,}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(D=C(x-1)\oplus C(x-1)\oplus C((x-1)^2)\text{,}\)</span></div></li>
+<li><div class="para">
+<span class="process-math">\(E=C((x-1)^2)\oplus C((x-1)^2)\text{,}\)</span> and</div></li>
+<li><div class="para"><span class="process-math">\(F=C(x-1)\oplus C(x-1)\oplus C(x-1)\oplus C(x-1)\text{.}\)</span></div></li>
+</ul>
+<div class="para">As each of these matrices is in <a href="" class="xref" data-knowl="./knowl/thm-rcf.html" title="Theorem 17.9: Rational Canonical Form">Rational Canonical Form</a>, they are explicit representatives for each similarity class.</div>
 </div>
 </div></body>
 </html>

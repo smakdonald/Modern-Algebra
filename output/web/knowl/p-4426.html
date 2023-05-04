@@ -13,29 +13,15 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">First, notice that <span class="process-math">\(2\cdot 3=6=(1+\sqrt{-5})(1-\sqrt{-5})\text{.}\)</span> Define a function</div>
-<div class="displaymath process-math">
+<div class="para">First, we show that the center of <span class="process-math">\(G\)</span> is nontrivial. (See: [[Modern Algebra#Corollary – Center of <span class="process-math">\(p\)</span>-group is Nontrivial|Corollary]]) Suppose by way of contradiction that <span class="process-math">\(Z(G)=\{e\}\text{.}\)</span> We examine the conjugacy classes of <span class="process-math">\(G\text{.}\)</span> From the [<a href="" class="xref" data-knowl="./knowl/thm-class-eq.html" title="Theorem 5.41: Class Equation">Class Equation</a>, we know</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-class-eq.html ./knowl/thm-lagrange.html">
 \begin{equation*}
-N:\Z[\sqrt{-5}]\to\Z, N(a+b \sqrt{-5})=a^2+5b^2.
+|G| = |Z(G)| + \sum_i^r |G : C_G(g_i)|.
 \end{equation*}
 </div>
-<div class="para">Let <span class="process-math">\(\alpha,\beta\in\Z[\sqrt{-5}]\)</span> and behold</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{align}
-N(\alpha\beta)
-&amp;=N((a+b \sqrt{-5})(c+d \sqrt{-5}))\\
-&amp;=N(ac-5bd+ad \sqrt{-5}+bc \sqrt{-5})\\
-&amp;=(ac-5bd)^2+5(ad+bc)^2\\
-&amp;=((ac)^2-10acbd+25(bd)^2)+5((ad)^2+2abcd+(bc^2))\\
-&amp;=a^2c^2+25b^2d^2+5a^2d^2+5b^2c^2\\
-&amp;=(a^2c^2+5a^2d^2)+(5b^2c^2+25b^2d^2)\\
-&amp;=a^2(c^2+5d^2)+5b^2(c^2+5d^2)\\
-N(\alpha)N(\beta)&amp;=(a^2+5b^2)(c^2+5d^2).\end{align}
-\end{equation*}
+<div class="para">Note that <span class="process-math">\(|G|=p^n\)</span> for some <span class="process-math">\(n\in\N\text{,}\)</span> meaning that the only divisors of <span class="process-math">\(|G|\)</span> are powers of <span class="process-math">\(p\text{.}\)</span> In finite groups, each conjugacy class must divide the order of the group. By <a href="" class="xref" data-knowl="./knowl/thm-lagrange.html" title="Theorem 4.13: Lagrange's Theorem">Lagrange's Theorem</a>, <span class="process-math">\(|G : C_G(g_i)|=\frac{|G|}{|C_G(g_i)|}=\frac{p^n}{p^m}=p^k\text{,}\)</span> where <span class="process-math">\(m,k\in\N\text{.}\)</span> Since |Z(G)|=1, we see that <span class="process-math">\(\sum_i^r |G : C_G(g_i)|\bigg|p^n-1\text{,}\)</span> which is impossible given that <span class="process-math">\(p^n-1 \not|p^n\text{.}\)</span> Thus <span class="process-math">\(Z(G)\neq\{e\}\text{.}\)</span>
 </div>
-<div class="para">So there's that done.</div>
 </div>
-<span class="incontext"><a href="section-84.html#p-4426" class="internal">in-context</a></span>
+<span class="incontext"><a href="section-85.html#p-4426" class="internal">in-context</a></span>
 </body>
 </html>

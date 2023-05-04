@@ -11,30 +11,11 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<div class="para logical">
-<div class="para">Let <span class="process-math">\(E\)</span> be the splitting field of <span class="process-math">\(f(x)=x^4 + 7 \in \Q[x].\)</span>
-</div>
-<ol class="decimal">
-<li><div class="para logical">
-<div class="para">The roots of <span class="process-math">\(f\)</span> are the following:</div>
-<ul class="disc">
-<li><div class="para"><span class="process-math">\(\displaystyle \a_{1}=\sqrt[4]{7}e^{\frac{\pi i}{4}}=\sqrt[4]{7}(\cos(\frac{\pi}{4})+i\sin(\frac{\pi}{4}))=\sqrt[4]{7}\cdot \frac{\sqrt{2}}{2}(1+i)=\frac{\sqrt[4]{28}}{2}(1+i)\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\displaystyle \a_{2}=\sqrt[4]{7}e^{\frac{3\pi i}{4}}=\sqrt[4]{7}(\cos(\frac{3\pi}{4})+i\sin(\frac{3\pi}{4}))=\sqrt[4]{7}\cdot \frac{\sqrt{2}}{2}(-1+i)=\frac{\sqrt[4]{28}}{2}(-1+i)\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\displaystyle \a_{3}=\sqrt[4]{7}e^{\frac{5\pi i}{4}}=\sqrt[4]{7}(\cos(\frac{5\pi}{4})+i\sin(\frac{5\pi}{4}))=\sqrt[4]{7}\cdot \frac{\sqrt{2}}{2}(-1-i)=\frac{\sqrt[4]{28}}{2}(-1-i)\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\displaystyle \a_{4}=\sqrt[4]{7}e^{\frac{7\pi i}{4}}=\sqrt[4]{7}(\cos(\frac{7\pi}{2})+i\sin(\frac{7\pi}{2}))=\sqrt[4]{7}\cdot \frac{\sqrt{2}}{2}(1-i)=\frac{\sqrt[4]{28}}{2}(1-i)\)</span></div></li>
-</ul>
-<div class="para">Notice that <span class="process-math">\(\a_1+\a_4=\sqrt[4]{28}\text{,}\)</span> and thus <span class="process-math">\(\sqrt[4]{28}\in E\text{.}\)</span>
-</div>
-</div></li>
-<li><div class="para logical">
-<div class="para">The polynomial <span class="process-math">\(g(x)=x^4-28\)</span> is irreducible in <span class="process-math">\(\Q[x]\)</span> by Eisenstein's Criterion (<span class="process-math">\(p=7\)</span>). Thus it is the minimal polynomial of <span class="process-math">\(\sqrt[4]{28}\text{,}\)</span> and so <span class="process-math">\(F=\Q(\sqrt[4]{28})\)</span> is a field extension of <span class="process-math">\(\Q\)</span> of degree <span class="process-math">\(4\text{.}\)</span> After adjoining <span class="process-math">\(i\)</span> as well we see that <span class="process-math">\(E\)</span> is an extension of degree <span class="process-math">\(8\text{.}\)</span> Thus a basis of <span class="process-math">\(E\)</span> as a <span class="process-math">\(\Q\)</span>-vector space is the following:</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\{1,\sqrt[4]{28},\sqrt[4]{28}^2,\sqrt[4]{28}^3,i,\sqrt[4]{28}i,\sqrt[4]{28}^2i,\sqrt[4]{28}^3i\}
-\end{equation*}
-</div>
-</div></li>
-</ol>
-</div> <div class="para"></div>
+<div class="para">
+<span class="process-math">\((\Rightarrow)\)</span> Suppose that <span class="process-math">\(g\)</span> is diagonalizable. Thus there exists a change of basis matrix <span class="process-math">\(A\)</span> such that <span class="process-math">\(A\)</span> is diagonal. As it is diagonal, its diagonal entries are the [[Mathematics/Definitions/Eigenvalue|eigenvalues]] of <span class="process-math">\(g\text{,}\)</span> and thus the roots of the minimal polynomial of <span class="process-math">\(g\text{.}\)</span> Using row and column operations we can rearrange <span class="process-math">\(A\)</span> so that all repeated linear factors are next to each other in the diagonal, for convenience.</div> <div class="para">We know that <span class="process-math">\(\mp_A(x)\)</span> is the smallest monic polynomial that sends <span class="process-math">\(A\)</span> to 0. Take all the distinct eigenvalues <span class="process-math">\(\lambda_i\)</span> and consider <span class="process-math">\(q(x)=\prod(x-\lambda_i)\text{.}\)</span>
+</div> <div class="para">We examine <span class="process-math">\(q(A)\text{.}\)</span> It will be a product of matrices, one for each <span class="process-math">\(\lambda_i\text{.}\)</span> First, take the first matrix in this product, <span class="process-math">\((A-\lambda_1I)\text{,}\)</span> and note that it sends all <span class="process-math">\(\lambda_1\)</span> in <span class="process-math">\(A\)</span> to 0. Thus all of the rows and columns that contained a <span class="process-math">\(\lambda_1\)</span> are now 0, and thus all these rows and columns will be 0 in the final product <span class="process-math">\(q(A)\text{.}\)</span> As this is we set <span class="process-math">\(q(x)=\prod(x-\lambda_i)\)</span> for all <span class="process-math">\(l\lambda_i\in A\text{,}\)</span> we see that for each row and column in <span class="process-math">\(A\)</span> there will exist a matrix <span class="process-math">\(A-\lambda_iI\)</span> in the product <span class="process-math">\(q(A)\)</span> such that the row and column will be 0. Thus the entire matrix will be 0, and <span class="process-math">\(q(A)=0\text{.}\)</span>
+</div> <div class="para">Note that if any <span class="process-math">\(\lambda_i\)</span> were excluded from <span class="process-math">\(q(x)\)</span> there would exist a non-zero row and column for every matrix in the product, and thus <span class="process-math">\(q\)</span> would not send <span class="process-math">\(A\)</span> to 0. Thus <span class="process-math">\(q(x)\)</span> is indeed the minimal polynomial of <span class="process-math">\(A\text{.}\)</span> As <span class="process-math">\(q(x)=\prod(x-\lambda_i)\text{,}\)</span> we see it does indeed factor into distinct linear terms.</div> <div class="para">
+<span class="process-math">\((\Leftarrow)\)</span> Suppose the minimum polynomial of <span class="process-math">\(g\)</span> factors completely into distinct linear factors, each of which has the form <span class="process-math">\(x-\lambda_i\)</span> for some <span class="process-math">\(\lambda_i\in F\text{.}\)</span> As each <span class="process-math">\(\lambda_i\)</span> is distinct, each elementary divisor is of the form <span class="process-math">\((x-\lambda_i)^1\text{.}\)</span>
+</div> <div class="para">We construct the Jordan Canonical Form of <span class="process-math">\(g\text{.}\)</span> As the elementary divisors are linear the Jordan blocks are <span class="process-math">\(1\times1\)</span> matrices, making the <span class="process-math">\(JCF\)</span> a diagonal matrix. As the JCF is itself a change of basis matrix, we see that <span class="process-math">\(g\)</span> is diagonalizable.</div>
 </div></body>
 </html>

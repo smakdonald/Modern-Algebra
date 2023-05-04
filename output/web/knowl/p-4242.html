@@ -12,7 +12,15 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Recall that <span class="process-math">\(G=\Gal(L/\Q)\)</span> is isomorphic to a subgroup of <span class="process-math">\(S_3\text{.}\)</span> As <span class="process-math">\(E_1\sse \R\)</span> and <span class="process-math">\(\a_1\not\in\R\text{,}\)</span> we see another extension is needed, and that extension will have at least degree <span class="process-math">\(2\text{.}\)</span> Thus, due to size constraints, we see <span class="process-math">\(G\cong S_3\text{.}\)</span>
+<div class="para logical">
+<div class="para">Part (a) Let <span class="process-math">\(A\)</span> be an <span class="process-math">\(n \times n\)</span> nilpotent matrix. Let <span class="process-math">\(\lambda\)</span> be some eigenvalue of <span class="process-math">\(A\text{.}\)</span> Thus there exists some vector <span class="process-math">\(v\)</span> such that <span class="process-math">\(A\lambda=\lambda v\text{.}\)</span> Let's consider this the base-case of some rather banal induction. Now assume that for <span class="process-math">\(n\)</span> we have <span class="process-math">\(A^nv=\lambda^nv\text{.}\)</span> Consider</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A^{n+1}v=A(A^nv)=A(\lambda^n v)=\lambda^n(Av)=\lambda^{n+1}v.
+\end{equation*}
+</div>
+<div class="para">Recall that as <span class="process-math">\(A\)</span> is nilpotent, there exists some <span class="process-math">\(m\in\N\)</span> such that <span class="process-math">\(A^m=0\text{.}\)</span> As <span class="process-math">\(\lambda\)</span> is an eigenvalue of <span class="process-math">\(A\text{,}\)</span> by the above induction we see that <span class="process-math">\(\lambda^m\)</span> is an eigenvalue for <span class="process-math">\(A^m=0\text{.}\)</span> As <span class="process-math">\(F\)</span> is a field and thus an integral domain, we see that <span class="process-math">\(\lambda^n=0\)</span> implies that <span class="process-math">\(\lambda=0\)</span> is as well. As this holds in the algebraic closure of <span class="process-math">\(F\)</span> as well, we see that when factored into linear terms all the <span class="process-math">\(\lambda=0\text{.}\)</span> Thus <span class="process-math">\(\cp_A(x)=x^n\text{.}\)</span>
+</div>
 </div>
 <span class="incontext"><a href="section-80.html#p-4242" class="internal">in-context</a></span>
 </body>

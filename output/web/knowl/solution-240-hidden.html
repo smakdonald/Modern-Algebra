@@ -11,10 +11,47 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<div class="para logical"><ol class="decimal">
-<li><div class="para">Show the center is non-trivial, and thus has order <span class="process-math">\(p\)</span> or <span class="process-math">\(p^2\text{.}\)</span> If <span class="process-math">\(p^2\)</span> then <span class="process-math">\(Z(G)=G\)</span> and we're done. If <span class="process-math">\(|Z(G)|=p\text{,}\)</span> then the <a href="" class="xref" data-knowl="./knowl/thm-class-eq.html" title="Theorem 5.41: Class Equation">Class Equation</a> tells us <span class="process-math">\(p^2=p+\sum[G:C_G(g)]\text{.}\)</span> Since <span class="process-math">\(|G|=p^2\text{,}\)</span> <span class="process-math">\(C_G(g)=1,p\)</span> for each <span class="process-math">\(g\not\in Z(G)\text{.}\)</span> But there are <span class="process-math">\(p\)</span> elements, so there is only one conjugacy class for these elements. But since <span class="process-math">\(g\not\in Z(G)\)</span> there exists some <span class="process-math">\(x\in G\)</span> such that <span class="process-math">\(gx\neq xg\text{,}\)</span> and thus <span class="process-math">\(xgx\inv\neq g\text{.}\)</span> Since <span class="process-math">\(x\)</span> is not in the center and <span class="process-math">\(x\)</span> is not in the conjugacy class of <span class="process-math">\(g\text{,}\)</span> we have a contradiction. Alternatively, <span class="process-math">\(G/Z(G)\)</span> has <span class="process-math">\(p\)</span> elements, making it cyclic.</div></li>
-<li><div class="para">Consider <span class="process-math">\(H=C_p\)</span> and <span class="process-math">\(K=C_{p^2}\)</span> and the external semidirect product <span class="process-math">\(H\sdp_\rho K\text{,}\)</span> where <span class="process-math">\(\rho: K\to\Aut(H)\text{.}\)</span>
-</div></li>
-</ol></div> <div class="para"></div> <div class="para"></div>
+<div class="para">Let <span class="process-math">\(R\)</span> be a commutative ring with identity, and assume <span class="process-math">\(1\neq0\text{.}\)</span> Let <span class="process-math">\(I\)</span> and <span class="process-math">\(J\)</span> be ideals such that <span class="process-math">\(I + J = R\text{.}\)</span>
+</div> <div class="para logical"><ol class="decimal">
+<li>
+<div class="para">Let <span class="process-math">\(x\in IJ\text{.}\)</span> Thus <span class="process-math">\(x=\sum a_ib_j\text{,}\)</span> where each <span class="process-math">\(a_i\in I\)</span> and <span class="process-math">\(b_j\in J\text{.}\)</span> As <span class="process-math">\(I\)</span> and <span class="process-math">\(J\)</span> are both ideals, each term in this sum is contained both in <span class="process-math">\(I\)</span> and <span class="process-math">\(J\text{.}\)</span> Thus, by absorption, <span class="process-math">\(x\in I\cap J\text{.}\)</span> Hence <span class="process-math">\(IJ\subseteq I\cap J\text{.}\)</span>
+</div>
+<div class="para">Let <span class="process-math">\(x\in I\cap J\text{.}\)</span> Thus <span class="process-math">\(x\in I\)</span> and <span class="process-math">\(x\in J\text{.}\)</span> Note that as <span class="process-math">\(I+J=R\text{,}\)</span> there exists some <span class="process-math">\(a\in I\)</span> and <span class="process-math">\(b\in J\)</span> such that <span class="process-math">\(a+b=1\text{.}\)</span> So <span class="process-math">\(x=x1=xa+xb\text{.}\)</span> As <span class="process-math">\(x\in I\cap J\)</span> we see that <span class="process-math">\(x=ax+xb\text{,}\)</span> with <span class="process-math">\(a,x\in I\)</span> and <span class="process-math">\(b,x\in J\text{.}\)</span> Thus <span class="process-math">\(x\in IJ\text{,}\)</span> yielding <span class="process-math">\(IJ=I\cap J\text{.}\)</span>
+</div>
+</li>
+<li>
+<div class="para">Let <span class="process-math">\(f:R\to R/I\times R/J\)</span> be defined by <span class="process-math">\(f(x)=(x+I,x+J)\text{.}\)</span>
+</div>
+<div class="para">Notice that if <span class="process-math">\(x\in I\cap J\text{,}\)</span> we have <span class="process-math">\(f(x)=(I,J)\text{,}\)</span> and so <span class="process-math">\(x\in\ker(f)\text{.}\)</span> Let <span class="process-math">\(x\in\ker(f)\text{.}\)</span> Thus <span class="process-math">\(x+I=I\)</span> and <span class="process-math">\(x+J=J\text{,}\)</span> and so <span class="process-math">\(x\in I\)</span> and <span class="process-math">\(x\in J\text{.}\)</span> Hence <span class="process-math">\(x\in I\cap J\text{,}\)</span> and so <span class="process-math">\(\ker(f)=I\cap J\text{.}\)</span>
+</div>
+<div class="para logical">
+<div class="para">Observe</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x+y)=((x+y)+I,(x+y)+J)=((x+I)+(y+I),(x+J)+(y+J))=((x+I),(x+J))+(y+I),(y+J))=f(x)+f(y),
+\end{equation*}
+</div>
+<div class="para">making <span class="process-math">\(f\)</span> a homomorphism of rings.</div>
+</div>
+<div class="para">Let <span class="process-math">\((a+I,b+J)\in R/I\times R/J\text{.}\)</span> As <span class="process-math">\(R=I+J\text{,}\)</span> we can write <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> as <span class="process-math">\(a_i+a_j\)</span> and <span class="process-math">\(b_i+b_j\text{.}\)</span> However, as <span class="process-math">\(a_i\in I\)</span> and <span class="process-math">\(b_j\in J\text{,}\)</span> we have <span class="process-math">\((a+I,b+J)=(a_j+I, b_i+J)\text{.}\)</span>
+</div>
+<div class="para logical">
+<div class="para">Consider the element <span class="process-math">\(x=(a_j+b_i)\in R\text{,}\)</span> and observe</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-fit-group.html">
+\begin{equation*}
+f(x)=f(a_j+b_i)=(a_j+b_i+I, b_i+a_j+J).
+\end{equation*}
+</div>
+<div class="para">However, as <span class="process-math">\(b_i\in I\)</span> and <span class="process-math">\(a_j\in J\text{,}\)</span> we see</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-fit-group.html">
+\begin{equation*}
+(a_j+b_i+I, b_i+a_j+J)=(a_j+I,b_i+J)=(a+I,b+J).
+\end{equation*}
+</div>
+<div class="para">Thus <span class="process-math">\(f\)</span> is a surjective homomorphism. Hence, by the <a href="" class="xref" data-knowl="./knowl/thm-fit-group.html" title="Theorem 4.49: First Isomorphism Theorem">First Isomorphism Theorem</a>, we see <span class="process-math">\(R/(I \cap J)\cong R/I \times R/J\text{.}\)</span>
+</div>
+</div>
+</li>
+</ol></div>
 </div></body>
 </html>

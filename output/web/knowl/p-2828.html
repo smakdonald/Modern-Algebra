@@ -12,7 +12,21 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">By Example 2.22 <code class="code-inline tex2jax_ignore">[provisional cross-reference: empty]</code> we see that <span class="process-math">\([\Q[\sqrt[3]{2}]:\Q]=3\text{.}\)</span> However, as <span class="process-math">\(\sqrt[3]{2}\)</span> is the root of <span class="process-math">\(x^3-2\)</span> it is algebraic over we see that <span class="process-math">\(\Q[\sqrt[3]{2}]=\Q(\sqrt[3]{2})\)</span> and thus that <span class="process-math">\([\Q(\sqrt[3]{2}):\Q]=3\text{.}\)</span>
+<div class="para logical">
+<div class="para">We already know that <span class="process-math">\(\alpha_1+\alpha_4=\sqrt[4]{20}\text{,}\)</span> and thus all that remains is to show that <span class="process-math">\(i\)</span> can be expressed in terms of the <span class="process-math">\(\alpha\text{.}\)</span> Observe</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{align}
+\alpha_1+\alpha_2&amp;=e^{\pi i/4}\sqrt[4]{5}+e^{3\pi i/4}\sqrt[4]{5}\\
+&amp;=(\cos(\frac{\pi}{4})+i\sin(\frac{\pi}{4}))\sqrt[4]{5}+(\cos(\frac{3\pi}{4})+i\sin(\frac{3\pi}{4}))\sqrt[4]{5}\\
+&amp;=(\frac{\sqrt{2}}{2}+i\frac{\sqrt{2}}{2})\sqrt[4]{5}+(\frac{\sqrt{2}}{2}+i\frac{\sqrt{2}}{2})\sqrt[4]{5}\\
+&amp;=\sqrt{2}\sqrt[4]{5}\\
+&amp;=\sqrt[4]{20}i,
+\end{align}
+\end{equation*}
+</div>
+<div class="para">and thus that <span class="process-math">\((\alpha_1+\alpha_2)(\alpha_1+\alpha_4)\inv=i\text{.}\)</span> Thus <span class="process-math">\(F(i)\subseteq E\text{,}\)</span> and <span class="process-math">\(F(i)=E\text{.}\)</span> Hence <span class="process-math">\([E:\Q]=8\text{.}\)</span>
+</div>
 </div>
 <span class="incontext"><a href="sec-algebraic.html#p-2828" class="internal">in-context</a></span>
 </body>
