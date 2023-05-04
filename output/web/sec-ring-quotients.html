@@ -495,10 +495,7 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-gphoms.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Group Homomorphisms</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="sec-gphoms.html#subsec-homom-def-ex" class="internal"><span class="title">Homomorphism? I Barely Know 'em!</span></a></div></li>
-<li><div class="toc-item"><a href="sec-gphoms.html#subsec-kernel-image" class="internal"><span class="title">Kernels and Images</span></a></div></li>
-</ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-gphoms.html#subsec-homom-def-ex" class="internal"><span class="title">Homomorphism? I Barely Know 'em!</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-gpisos.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Group Isomorphisms</span></a></div>
@@ -645,7 +642,8 @@ window.MathJax = {
 <div class="toc-item"><a href="sec-defn-ex.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Ring Basics</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-defn-ex.html#subsec-rings" class="internal"><span class="title">From Rings to Fields</span></a></div></li>
-<li><div class="toc-item"><a href="sec-defn-ex.html#subsec-units" class="internal"><span class="title">Units, Zerodivisors, Integral Domains</span></a></div></li>
+<li><div class="toc-item"><a href="sec-defn-ex.html#subsec-units" class="internal"><span class="title">Absolute Units</span></a></div></li>
+<li><div class="toc-item"><a href="sec-defn-ex.html#subsec-zerodivisors" class="internal"><span class="title">A Zero Divided Cannot Stand</span></a></div></li>
 </ul>
 </li>
 <li><div class="toc-item"><a href="sec-subrings.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Subrings</span></a></div></li>
@@ -659,7 +657,7 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="sec-ideals.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Ideals</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-ideals.html#subsec-ideal-def" class="internal"><span class="title">Definition and First Properties</span></a></div></li>
+<li><div class="toc-item"><a href="sec-ideals.html#subsec-ideal-def" class="internal"><span class="title">Ideal or No Deal</span></a></div></li>
 <li><div class="toc-item"><a href="sec-ideals.html#subsec-generated-ideals" class="internal"><span class="title">Generated Ideals</span></a></div></li>
 </ul>
 </li>
@@ -703,7 +701,7 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-defmod.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Module Basics</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-defmod.html#exercises-17" class="internal"><span class="codenumber">12.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-defmod.html#exercises-17" class="internal"><span class="codenumber">12.1</span> <span class="title">Qualifying Exam Problems</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-modhom.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Module Homomorphisms</span></a></div>
@@ -1103,53 +1101,55 @@ window.MathJax = {
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-ring-quotients"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="sec-ring-quotients"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">10.2</span> <span class="title">Quotient Rings</span>
 </h2>
 <section class="subsection" id="subsec-quotient-rings"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Quotient Rings</span>
 </h3>
-<blockquote class="blockquote" id="blockquote-48">
-<div class="para" id="p-1385">“Fools ignore complexity. Pragmatists suffer it. Some can avoid it. Geniuses remove it.”</div> <cite class="attribution">―Alan Perlis</cite>
+<blockquote class="blockquote" id="blockquote-49">
+<div class="para" id="p-1394">“Fools ignore complexity. Pragmatists suffer it. Some can avoid it. Geniuses remove it.”</div> <cite class="attribution">―Alan Perlis</cite>
 </blockquote>
 <article class="lemma theorem-like" id="lem-cosets-abelian"><h4 class="heading">
-<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">10.22</span><span class="period">.</span><span class="space"> </span><span class="title">Additive Cosets form Abelian Group.</span>
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">10.20</span><span class="period">.</span><span class="space"> </span><span class="title">Additive Cosets form Abelian Group.</span>
 </h4>
-<div class="para" id="p-1386">For a two-sided ideal <span class="process-math">\(I\)</span> of <span class="process-math">\(R\text{,}\)</span> the set of additive cosets modulo <span class="process-math">\(I\)</span> is <span class="process-math">\(R/I=\{r+I : r\in R\}.\)</span> This is an abelian group with respect to addition given by <span class="process-math">\((r + I) + (s + I) = (r +s ) + I\text{.}\)</span>
+<div class="para" id="p-1395">For a two-sided ideal <span class="process-math">\(I\)</span> of <span class="process-math">\(R\text{,}\)</span> the set of additive cosets modulo <span class="process-math">\(I\)</span> is <span class="process-math">\(R/I=\{r+I : r\in R\}.\)</span> This is an abelian group with respect to addition given by <span class="process-math">\((r + I) + (s + I) = (r +s ) + I\text{.}\)</span>
 </div></article><article class="definition definition-like" id="def-quotient-ring"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">10.23</span><span class="period">.</span><span class="space"> </span><span class="title">Quotient Ring.</span>
-</h4> <div class="para" id="p-1387">For a two-sided ideal <span class="process-math">\(I\)</span> of <span class="process-math">\(R\)</span> The <em class="emphasis">quotient ring</em> of <span class="process-math">\(R\)</span> modulo <span class="process-math">\(I\)</span> is the set <span class="process-math">\(R/I\)</span> with addition defined as above and multiplication given by <span class="process-math">\((r + I) \cdot (s + I) = (rs) + I.\)</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">10.21</span><span class="period">.</span><span class="space"> </span><span class="title">Quotient Ring.</span>
+</h4> <div class="para" id="p-1396">For a two-sided ideal <span class="process-math">\(I\)</span> of <span class="process-math">\(R\)</span> The <em class="emphasis">quotient ring</em> of <span class="process-math">\(R\)</span> modulo <span class="process-math">\(I\)</span> is the set <span class="process-math">\(R/I\)</span> with addition defined as above and multiplication given by <span class="process-math">\((r + I) \cdot (s + I) = (rs) + I.\)</span>
 </div></article><article class="exercise exercise-like" id="exe-quotient-ring-is-ring"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-quotient-ring-is-ring"><h4 class="heading">
-<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">10.24</span><span class="period">.</span><span class="space"> </span><span class="title">Quotient Rings are Rings.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-quotient-ring-is-ring"><article class="exercise exercise-like"><div class="para" id="p-1388">Given a two-sided ideal <span class="process-math">\(I\)</span> of <span class="process-math">\(R\text{,}\)</span> prove that the quotient ring <span class="process-math">\(R/I\)</span> is indeed a ring.</div></article></div>
-<div class="para" id="p-1389">Just like we had with groups, it turns out our dear friend <span class="process-math">\(\Z/n\)</span> has been a quotient all along</div>
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">10.22</span><span class="period">.</span><span class="space"> </span><span class="title">Quotient Rings are Rings.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-quotient-ring-is-ring"><article class="exercise exercise-like"><div class="para" id="p-1397">Given a two-sided ideal <span class="process-math">\(I\)</span> of <span class="process-math">\(R\text{,}\)</span> prove that the quotient ring <span class="process-math">\(R/I\)</span> is indeed a ring.</div></article></div>
+<div class="para" id="p-1398">Just like we had with groups, it turns out our dear friend <span class="process-math">\(\Z/n\)</span> has been a quotient all along.</div>
 <article class="example example-like" id="ex-quotient-of-z"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.25</span><span class="period">.</span><span class="space"> </span><span class="title">Quotients of <span class="process-math">\(\Z\)</span>.</span>
-</h4> <div class="para" id="p-1390">If <span class="process-math">\(I=\igen n\)</span> is an ideal in the ring <span class="process-math">\(\Z\text{,}\)</span> then the quotient ring <span class="process-math">\(\Z/n\)</span> is the familiar ring <span class="process-math">\(\Z/n\text{.}\)</span>
-</div></article><article class="remark remark-like" id="remark-50"><h4 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">10.26</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.23</span><span class="period">.</span><span class="space"> </span><span class="title">Quotients of <span class="process-math">\(\Z\)</span>.</span>
+</h4> <div class="para" id="p-1399">If <span class="process-math">\(I=\igen n\)</span> is an ideal in the ring <span class="process-math">\(\Z\text{,}\)</span> then the quotient ring <span class="process-math">\(\Z/n\)</span> is the familiar ring <span class="process-math">\(\Z/n\text{.}\)</span>
+</div></article><article class="remark remark-like" id="remark-51"><h4 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">10.24</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-1391">This is where the common notation <span class="process-math">\(\Z/(n)\)</span> comes from.</div></article><div class="para" id="p-1392">And, once again, we have a quotient map that turns out to be a homomorphism.</div>
+<div class="para" id="p-1400">This is where the common notation <span class="process-math">\(\Z/(n)\)</span> comes from, even though it should be <span class="process-math">\(\Z/\igen n\)</span> anyway.</div></article><div class="para" id="p-1401">And, once again, we have a quotient map that turns out to be a homomorphism.</div>
 <article class="exercise exercise-like" id="quotient-map-is-surjective-homomorphism"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-quotient-map-is-surjective-homomorphism"><h4 class="heading">
-<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">10.27</span><span class="period">.</span><span class="space"> </span><span class="title">Quotient Map is Surjective Ring Map.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-quotient-map-is-surjective-homomorphism"><article class="exercise exercise-like"><div class="para" id="p-1393">Prove that the canonical quotient map <span class="process-math">\(q:R\to R/I\)</span> is a surjective ring homomorphism.</div></article></div>
-<div class="para" id="p-1394">Last but certainly not least, we have an analogue of <a href="" class="xref" data-knowl="./knowl/thm-norm-iff-ker.html" title="Theorem 4.44: Normal Subgroup iff Kernel">Theorem 4.44</a> for ideals.</div>
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">10.25</span><span class="period">.</span><span class="space"> </span><span class="title">Quotient Map is Surjective Ring Map.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-quotient-map-is-surjective-homomorphism"><article class="exercise exercise-like"><div class="para" id="p-1402">Prove that the canonical quotient map <span class="process-math">\(q:R\to R/I\)</span> is a surjective ring homomorphism.</div></article></div>
+<div class="para" id="p-1403">Last but certainly not least, we have an analogue of <a href="" class="xref" data-knowl="./knowl/thm-norm-iff-ker.html" title="Theorem 4.44: Normal Subgroup iff Kernel">Theorem 4.44</a> for ideals.<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-26" id="fn-26"><sup> 2 </sup></a>
+</div>
 <article class="theorem theorem-like" id="thm-ideal-iff-kernel-of-ring-map"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">10.28</span><span class="period">.</span><span class="space"> </span><span class="title">Ideal iff Kernel of Ring Map.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">10.26</span><span class="period">.</span><span class="space"> </span><span class="title">Ideal iff Kernel of Ring Map.</span>
 </h4>
-<div class="para" id="p-1395">Let <span class="process-math">\(R\)</span> be a ring. A subset <span class="process-math">\(I\)</span> of <span class="process-math">\(R\)</span> is an ideal of <span class="process-math">\(R\)</span> if and only if there exists a ring homomorphism <span class="process-math">\(\varphi\)</span> such that <span class="process-math">\(\ker(\varphi)=I\)</span>
+<div class="para" id="p-1404">Let <span class="process-math">\(R\)</span> be a ring. A subset <span class="process-math">\(I\)</span> of <span class="process-math">\(R\)</span> is an ideal of <span class="process-math">\(R\)</span> if and only if there exists a ring homomorphism <span class="process-math">\(\varphi\)</span> such that <span class="process-math">\(\ker(\varphi)=I\text{.}\)</span>
 </div></article></section><section class="subsection" id="subsec-ring-iso-thms"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">The Ring Isomorphism Theorems</span>
 </h3>
-<blockquote class="blockquote" id="blockquote-49">
-<div class="para" id="p-1396">“I'm not a very structured person, so when I get some structure, it's cool; it's good for me.”</div>
+<blockquote class="blockquote" id="blockquote-50">
+<div class="para" id="p-1405">“I'm not a very structured person, so when I get some structure, it's cool; it's good for me.”</div>
 <cite class="attribution">―J. Cole</cite>
 </blockquote>
-<div class="para" id="p-1397">We arrive at the isomorphism theorems for rings. We've seen most of this stuff before in different packaging, so lets jump right in.</div>
+<div class="para" id="p-1406">We arrive at the isomorphism theorems for rings. We've seen most of this stuff before in different packaging, so lets jump right in.</div>
 <article class="theorem theorem-like" id="thm-ump-for-quotient-rings"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">10.29</span><span class="period">.</span><span class="space"> </span><span class="title">UMP for Quotient Rings.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">10.27</span><span class="period">.</span><span class="space"> </span><span class="title">UMP for Quotient Rings.</span>
 </h4>
-<div class="para" id="p-1398">If <span class="process-math">\(f: R \to S\)</span> is a ring homomorphism and <span class="process-math">\(I \subseteq R\)</span> is an ideal such that <span class="process-math">\(I \subseteq \ker(f)\)</span>[^1], there exists a well defined ring homomorphism <span class="process-math">\(\overline{f}: R/I \to S\)</span> such that <span class="process-math">\(\overline{f} (r+I) = f(r)\text{.}\)</span> Furthermore, if <span class="process-math">\(f\)</span> is surjective then <span class="process-math">\(\overline{f}\)</span> is surjective and if <span class="process-math">\(I=\ker(f)\)</span> then <span class="process-math">\(\overline{f}\)</span> is injective.</div></article><article class="hiddenproof" id="proof-53"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-53"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-53"><article class="hiddenproof"><div class="para logical" id="p-1399">
+<div class="para" id="p-1407">If <span class="process-math">\(f: R \to S\)</span> is a ring homomorphism and <span class="process-math">\(I \subseteq R\)</span> is an ideal such that <span class="process-math">\(I \subseteq \ker(f)\text{,}\)</span> there exists a well defined ring homomorphism <span class="process-math">\(\overline{f}: R/I \to S\)</span> such that <span class="process-math">\(\overline{f} (r+I) = f(r)\text{.}\)</span> Furthermore, if <span class="process-math">\(f\)</span> is surjective then <span class="process-math">\(\overline{f}\)</span> is surjective and if <span class="process-math">\(I=\ker(f)\)</span> then <span class="process-math">\(\overline{f}\)</span> is injective.</div></article><article class="hiddenproof" id="proof-53"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-53"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-53"><article class="hiddenproof"><div class="para logical" id="p-1408">
 <div class="para">Ignoring <span class="process-math">\(\cdot\)</span> for a minute, we know that there is a unique homomorphism <span class="process-math">\(\overline{f}\)</span> of abelian groups from <span class="process-math">\((R/I, +)\)</span> to <span class="process-math">\((S, +)\)</span> such that <span class="process-math">\(\overline{f} (r+I) = f(r)\text{.}\)</span> It remains only to check that <span class="process-math">\(\overline{f}\)</span> preserves multiplication: Given elements <span class="process-math">\(r + I, s + I \in R/I\text{,}\)</span> their product is <span class="process-math">\(rs + I\text{,}\)</span> and we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1159,14 +1159,14 @@ window.MathJax = {
 <div class="para">since <span class="process-math">\(f\)</span> preserves multiplication.</div>
 </div></article></div>
 <article class="theorem theorem-like" id="thm-ring-fit"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">10.30</span><span class="period">.</span><span class="space"> </span><span class="title">First Isomorphism Theorem for Rings.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">10.28</span><span class="period">.</span><span class="space"> </span><span class="title">First Isomorphism Theorem for Rings.</span>
 </h4>
-<div class="para" id="p-1400">If <span class="process-math">\(f: R \to S\)</span> is a ring homomorphism, then <span class="process-math">\(R/\ker(f)\cong \im(f)\)</span> via the map <span class="process-math">\(\overline{f}\)</span> given by <span class="process-math">\(\ov{f}(r + \ker(f)) = f(r)\text{.}\)</span>
-</div></article><article class="hiddenproof" id="proof-54"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-54"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-54"><article class="hiddenproof"><div class="para" id="p-1401">The map <span class="process-math">\(\overline{f}\)</span> is a well-defined ring homomorphism by <a href="" class="xref" data-knowl="./knowl/thm-ump-for-quotient-rings.html" title="Theorem 10.29: UMP for Quotient Rings">Theorem 10.29</a>. By the <a href="" class="xref" data-knowl="./knowl/thm-fit-group.html" title="Theorem 4.49: First Isomorphism Theorem">First Isomorphism Theorem</a> for groups, the map <span class="process-math">\(\ov{f}\)</span> is bijective, finishing the proof.</div></article></div>
+<div class="para" id="p-1409">If <span class="process-math">\(f: R \to S\)</span> is a ring homomorphism, then <span class="process-math">\(R/\ker(f)\cong \im(f)\)</span> via the map <span class="process-math">\(\overline{f}\)</span> given by <span class="process-math">\(\ov{f}(r + \ker(f)) = f(r)\text{.}\)</span>
+</div></article><article class="hiddenproof" id="proof-54"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-54"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-54"><article class="hiddenproof"><div class="para" id="p-1410">The map <span class="process-math">\(\overline{f}\)</span> is a well-defined ring homomorphism by <a href="" class="xref" data-knowl="./knowl/thm-ump-for-quotient-rings.html" title="Theorem 10.27: UMP for Quotient Rings">Theorem 10.27</a>. By the <a href="" class="xref" data-knowl="./knowl/thm-fit-group.html" title="Theorem 4.49: First Isomorphism Theorem">First Isomorphism Theorem</a> for groups, the map <span class="process-math">\(\ov{f}\)</span> is bijective, finishing the proof.</div></article></div>
 <article class="theorem theorem-like" id="thm-ring-sit"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">10.31</span><span class="period">.</span><span class="space"> </span><span class="title">Second Isomorphism Theorem for Rings.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">10.29</span><span class="period">.</span><span class="space"> </span><span class="title">Second Isomorphism Theorem for Rings.</span>
 </h4>
-<div class="para logical" id="p-1402">
+<div class="para logical" id="p-1411">
 <div class="para">Let <span class="process-math">\(S\)</span> be a subring and let <span class="process-math">\(I\)</span> be an ideal of <span class="process-math">\(R\text{.}\)</span> Then <span class="process-math">\(S + I = \{s + i \mid s \in S, i \in I\}\)</span> is a subring of <span class="process-math">\(R\text{,}\)</span> <span class="process-math">\(S \cap I\)</span> is an ideal of <span class="process-math">\(S\text{,}\)</span> and</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1174,9 +1174,9 @@ window.MathJax = {
 \end{equation*}
 </div>
 </div></article><article class="theorem theorem-like" id="thm-ring-tit"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">10.32</span><span class="period">.</span><span class="space"> </span><span class="title">Third Isomorphism Theorem for Rings.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">10.30</span><span class="period">.</span><span class="space"> </span><span class="title">Third Isomorphism Theorem for Rings.</span>
 </h4>
-<div class="para logical" id="p-1403">
+<div class="para logical" id="p-1412">
 <div class="para">If <span class="process-math">\(R\)</span> is a ring and <span class="process-math">\(I \subseteq J\)</span> are two ideals of <span class="process-math">\(R\text{,}\)</span> then <span class="process-math">\(J/I\)</span> is an ideal of <span class="process-math">\(R/I\)</span> and</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1184,9 +1184,9 @@ window.MathJax = {
 \end{equation*}
 </div>
 </div></article><article class="theorem theorem-like" id="thm-ring-lit"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">10.33</span><span class="period">.</span><span class="space"> </span><span class="title">Lattice Isomorphism Theorem for Quotient Rings.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">10.31</span><span class="period">.</span><span class="space"> </span><span class="title">Lattice Isomorphism Theorem for Quotient Rings.</span>
 </h4>
-<div class="para logical" id="p-1404">
+<div class="para logical" id="p-1413">
 <div class="para">Suppose <span class="process-math">\(R\)</span> is a ring and <span class="process-math">\(I\)</span> is a two-sided ideal of <span class="process-math">\(R,\)</span> and write <span class="process-math">\(\pi: R \to R/I\)</span> for the quotient ring homomorphism. There is a bijection</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1212,43 +1212,44 @@ window.MathJax = {
 </h3>
 <div class="exercisegroup" id="exercisegroup-2">
 <h4 class="heading"><span class="title">Computations and Examples.</span></h4>
-<div class="introduction" id="introduction-5"><div class="para" id="p-1405"></div></div>
+<div class="introduction" id="introduction-5"><div class="para" id="p-1414"></div></div>
 <div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="exercise-151"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-151"><h5 class="heading">
+<article class="exercise exercise-like" id="exercise-153"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-153"><h5 class="heading">
 <span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-151"><article class="exercise exercise-like"><div class="para" id="p-1406">Coming soon to an OER near you!</div>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-153"><article class="exercise exercise-like"><div class="para" id="p-1415">Coming soon to an OER near you!</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-18" id="hint-18"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-18"><div class="hint solution-like"><div class="para" id="p-1407">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-67" id="solution-67"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-67"><div class="solution solution-like"><div class="para" id="p-1408">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-18" id="hint-18"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-18"><div class="hint solution-like"><div class="para" id="p-1416">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-67" id="solution-67"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-67"><div class="solution solution-like"><div class="para" id="p-1417">Coming soon to an OER near you!</div></div></div>
 </div></article></div>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-3">
 <h4 class="heading"><span class="title">Formal Proofs.</span></h4>
-<div class="introduction" id="introduction-6"><div class="para" id="p-1409"></div></div>
+<div class="introduction" id="introduction-6"><div class="para" id="p-1418"></div></div>
 <div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="exercise-152"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-152"><h5 class="heading">
+<article class="exercise exercise-like" id="exercise-154"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-154"><h5 class="heading">
 <span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-152"><article class="exercise exercise-like"><div class="para" id="p-1410">Coming soon to an OER near you!</div>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-154"><article class="exercise exercise-like"><div class="para" id="p-1419">Coming soon to an OER near you!</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-19" id="hint-19"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-19"><div class="hint solution-like"><div class="para" id="p-1411">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-68" id="solution-68"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-68"><div class="solution solution-like"><div class="para" id="p-1412">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-19" id="hint-19"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-19"><div class="hint solution-like"><div class="para" id="p-1420">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-68" id="solution-68"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-68"><div class="solution solution-like"><div class="para" id="p-1421">Coming soon to an OER near you!</div></div></div>
 </div></article></div>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-4">
 <h4 class="heading"><span class="title">Qualifying Exam Problems.</span></h4>
-<div class="introduction" id="introduction-7"><div class="para" id="p-1413"></div></div>
+<div class="introduction" id="introduction-7"><div class="para" id="p-1422"></div></div>
 <div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="exercise-153"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-153"><h5 class="heading">
+<article class="exercise exercise-like" id="exercise-155"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-155"><h5 class="heading">
 <span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-153"><article class="exercise exercise-like"><div class="para" id="p-1414">Coming soon to an OER near you!</div>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-155"><article class="exercise exercise-like"><div class="para" id="p-1423">Coming soon to an OER near you!</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-20" id="hint-20"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-20"><div class="hint solution-like"><div class="para" id="p-1415">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-69" id="solution-69"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-69"><div class="solution solution-like"><div class="para" id="p-1416">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-20" id="hint-20"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-20"><div class="hint solution-like"><div class="para" id="p-1424">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-69" id="solution-69"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-69"><div class="solution solution-like"><div class="para" id="p-1425">Coming soon to an OER near you!</div></div></div>
 </div></article></div>
 </div>
-</div></section></section></div>
+</div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-26"><div class="fn">Once again, I would like to suggest that “ideal subgroup” is a far better name for a normal subgroup.</div></div>
+</div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-ideals.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-primemax-ideals.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

@@ -13,10 +13,24 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h3 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">G.66.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">G.68.1</span><span class="period">.</span>
 </h3>
-<div class="para">Let <span class="process-math">\(G\)</span> be a group acting on a set <span class="process-math">\(A\text{,}\)</span> and let <span class="process-math">\(H\)</span> be a subgroup of <span class="process-math">\(G\)</span> satisfying that the induced action of <span class="process-math">\(H\)</span> on <span class="process-math">\(A\)</span> is transitive. Let <span class="process-math">\(t\in A\text{,}\)</span> and let <span class="process-math">\(\Stab_G(t)\)</span> be the stabilizer of <span class="process-math">\(t\)</span> in <span class="process-math">\(G\text{.}\)</span>
-</div> <div class="para">Let <span class="process-math">\(g\in G\text{.}\)</span> Note that <span class="process-math">\(e\in\Stab_G(t)\)</span> for all <span class="process-math">\(t\in A\text{.}\)</span> If <span class="process-math">\(g\in H\)</span> then <span class="process-math">\(g=ge\text{.}\)</span> Suppose then that <span class="process-math">\(g\not\in H\text{.}\)</span> Suppose <span class="process-math">\(gt=a\)</span> for some <span class="process-math">\(a\in A\text{.}\)</span> As <span class="process-math">\(H\)</span> acts transitively on <span class="process-math">\(A\)</span> there exists some <span class="process-math">\(h\)</span> such that <span class="process-math">\(ht=a\text{.}\)</span> So <span class="process-math">\(h\inv gt=a\text{,}\)</span> placing <span class="process-math">\(h\inv g\in\Stab(t)\text{.}\)</span> Thus <span class="process-math">\(g=h(h\inv g)\text{,}\)</span> so <span class="process-math">\(G=H\Stab_G(t)\text{.}\)</span>
+<div class="para">Let <span class="process-math">\(f:\Q[x]\to\Q[\sqrt d]\)</span> such that <span class="process-math">\(f(x)=\sqrt{d}\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Let <span class="process-math">\(a+b\sqrt d\in\)</span><span class="process-math">\(\Q(\sqrt d)\text{,}\)</span> and notice that <span class="process-math">\(f(a+bx)=a+b\sqrt d\text{,}\)</span> giving us surjectivity. Also,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f((a+b\sqrt d)(p+q\sqrt d))=(a+bx)(p+qx)=f(a+b\sqrt d)f(p+q\sqrt d)
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f((a+b\sqrt d)+(p+q\sqrt d))=(a+bx)+(p+qx)=f(a+b\sqrt d)+f(p+q\sqrt d),
+\end{equation*}
+</div>
+<div class="para">making <span class="process-math">\(f\)</span> a homomorphism as well.</div>
+</div> <div class="para">Let <span class="process-math">\(K=\ker(f)\text{,}\)</span> and let <span class="process-math">\(p=a+bx\in K\text{.}\)</span> As <span class="process-math">\(\Q[x]\)</span> is a division ring we can write <span class="process-math">\(p(x)=(x^2-d)q(x)+r(x)\)</span> for some <span class="process-math">\(p(x),r(x)\)</span> such that <span class="process-math">\(r(x)=0\)</span> or <span class="process-math">\(\deg r(x)&lt;\deg (x^2-d)\text{.}\)</span> Thus <span class="process-math">\(r(x)\)</span> has degree <span class="process-math">\(1\text{,}\)</span> making <span class="process-math">\(r(x)=sx+t\text{.}\)</span>
 </div>
 </div>
 <span class="incontext"><a href="section-76.html#solution-271" class="internal">in-context</a></span>

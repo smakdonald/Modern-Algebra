@@ -12,7 +12,25 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Next, we apply Porism , which gives <span class="process-math">\(\gamma \in \Aut(K/\Q)\)</span> such that <span class="process-math">\(\gamma(\sqrt[3]{2})=e^{2 \pi i/3} \sqrt[3]{2}\text{.}\)</span> So, in the numbering above, <span class="process-math">\(\gamma\)</span> corresponds to either <span class="process-math">\((1 \, 2)\)</span> or <span class="process-math">\((1 \, 2 \, 3)\)</span> in <span class="process-math">\(S_3\text{.}\)</span> We don't really know which of these it is. (In fact, both will occur — the map <span class="process-math">\(\gamma\)</span> is not unique.) But either way we have proven the claim: For notice that both subsets <span class="process-math">\(\{ (2 \, 3), (1 \, 2)\}\)</span> and <span class="process-math">\(\{ (2 \, 3), (1 \, 2 \, 3)\}\)</span> of <span class="process-math">\(S_3\)</span> generated all of <span class="process-math">\(S_3\text{.}\)</span>
+<div class="para logical">
+<div class="para">For a more complicated example, let <span class="process-math">\(K\)</span> be the splitting field of <span class="process-math">\(x^3 - 2\)</span> over <span class="process-math">\(\Q\text{.}\)</span> Recall</div>
+<div class="displaymath process-math">
+\begin{equation*}
+K= \Q(\a_1, \a_2, \a_3)
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\a_1 = \sqrt[3]{2}, \a_2 = e^{2 \pi i/3}\sqrt[3]{2}, \a_3 = e^{4 \pi i/3}\sqrt[3]{2}.
+\end{equation*}
+</div>
+<div class="para">Let us ponder how big <span class="process-math">\(\Aut(K/\Q)\)</span> could be. Pick any <span class="process-math">\(\s \in \Aut(K/\Q)\text{.}\)</span> Since <span class="process-math">\(\s\)</span> is a ring homomorphism, for any <span class="process-math">\(i\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\s(\a_i)^3 = \s(\a_i^3) = \s(2) = 2
+\end{equation*}
+</div>
+<div class="para">and thus <span class="process-math">\(\s(\a_i)\)</span> is also a root of <span class="process-math">\(x^2 - 2\text{.}\)</span> In other words, for each <span class="process-math">\(i\)</span> we have <span class="process-math">\(\s(\a_i) = \a_j\)</span> for some <span class="process-math">\(j\text{.}\)</span> Moreover, since <span class="process-math">\(K\)</span> is generated as a field extension of <span class="process-math">\(\Q\)</span> by <span class="process-math">\(\a_1, \a_2, \a_3\text{,}\)</span> the action of <span class="process-math">\(\s\)</span> on the three roots completely determines the action of <span class="process-math">\(\s\)</span> on all of <span class="process-math">\(K\text{.}\)</span> In more detail, every element of <span class="process-math">\(K\)</span> is given taking <span class="process-math">\(\Q\)</span>-linear combinations of sums and products and quotients of these roots, and any element of <span class="process-math">\(\Aut(K/\Q)\)</span> preserves sums, products and <span class="process-math">\(\Q\)</span>-linear combinations.</div>
 </div>
 <span class="incontext"><a href="sec-galext.html#p-3114" class="internal">in-context</a></span>
 </body>

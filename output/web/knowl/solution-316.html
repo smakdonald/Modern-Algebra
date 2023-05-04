@@ -13,18 +13,33 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h3 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">G.111.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">G.113.1</span><span class="period">.</span>
 </h3>
 <div class="para logical">
-<div class="para">Part (a) Let <span class="process-math">\(L\)</span> be a group, <span class="process-math">\(H\)</span> be a direct factor of <span class="process-math">\(G\text{,}\)</span> and <span class="process-math">\(\phi : H \to L\)</span> a group homomorphism. As <span class="process-math">\(H\)</span> is a direct factor of <span class="process-math">\(G\text{,}\)</span> there exists some <span class="process-math">\(K\nsg G\)</span> such that <span class="process-math">\(G=H\times K\text{.}\)</span> Thus there exists some isomorphism <span class="process-math">\(\psi:G\to H\times K\text{.}\)</span> Define <span class="process-math">\(\widetilde{\phi} : G \to L\)</span> such that <span class="process-math">\(\widetilde{\phi}(g)=h\text{,}\)</span> where <span class="process-math">\(\psi(g)=(h,k)\text{.}\)</span> Let <span class="process-math">\(x,y\in G\text{,}\)</span> and notice</div>
+<div class="para">Let <span class="process-math">\(E\)</span> be the splitting field of <span class="process-math">\(f(x)=x^4 + 7 \in \Q[x].\)</span>
+</div>
+<ol class="decimal">
+<li><div class="para logical">
+<div class="para">The roots of <span class="process-math">\(f\)</span> are the following:</div>
+<ul class="disc">
+<li><div class="para"><span class="process-math">\(\displaystyle \a_{1}=\sqrt[4]{7}e^{\frac{\pi i}{4}}=\sqrt[4]{7}(\cos(\frac{\pi}{4})+i\sin(\frac{\pi}{4}))=\sqrt[4]{7}\cdot \frac{\sqrt{2}}{2}(1+i)=\frac{\sqrt[4]{28}}{2}(1+i)\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle \a_{2}=\sqrt[4]{7}e^{\frac{3\pi i}{4}}=\sqrt[4]{7}(\cos(\frac{3\pi}{4})+i\sin(\frac{3\pi}{4}))=\sqrt[4]{7}\cdot \frac{\sqrt{2}}{2}(-1+i)=\frac{\sqrt[4]{28}}{2}(-1+i)\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle \a_{3}=\sqrt[4]{7}e^{\frac{5\pi i}{4}}=\sqrt[4]{7}(\cos(\frac{5\pi}{4})+i\sin(\frac{5\pi}{4}))=\sqrt[4]{7}\cdot \frac{\sqrt{2}}{2}(-1-i)=\frac{\sqrt[4]{28}}{2}(-1-i)\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle \a_{4}=\sqrt[4]{7}e^{\frac{7\pi i}{4}}=\sqrt[4]{7}(\cos(\frac{7\pi}{2})+i\sin(\frac{7\pi}{2}))=\sqrt[4]{7}\cdot \frac{\sqrt{2}}{2}(1-i)=\frac{\sqrt[4]{28}}{2}(1-i)\)</span></div></li>
+</ul>
+<div class="para">Notice that <span class="process-math">\(\a_1+\a_4=\sqrt[4]{28}\text{,}\)</span> and thus <span class="process-math">\(\sqrt[4]{28}\in E\text{.}\)</span>
+</div>
+</div></li>
+<li><div class="para logical">
+<div class="para">The polynomial <span class="process-math">\(g(x)=x^4-28\)</span> is irreducible in <span class="process-math">\(\Q[x]\)</span> by Eisenstein's Criterion (<span class="process-math">\(p=7\)</span>). Thus it is the minimal polynomial of <span class="process-math">\(\sqrt[4]{28}\text{,}\)</span> and so <span class="process-math">\(F=\Q(\sqrt[4]{28})\)</span> is a field extension of <span class="process-math">\(\Q\)</span> of degree <span class="process-math">\(4\text{.}\)</span> After adjoining <span class="process-math">\(i\)</span> as well we see that <span class="process-math">\(E\)</span> is an extension of degree <span class="process-math">\(8\text{.}\)</span> Thus a basis of <span class="process-math">\(E\)</span> as a <span class="process-math">\(\Q\)</span>-vector space is the following:</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\psi(x)=(h,k)\psi(y)=(h',k')=(hh',kk')=\psi(xy),
+\{1,\sqrt[4]{28},\sqrt[4]{28}^2,\sqrt[4]{28}^3,i,\sqrt[4]{28}i,\sqrt[4]{28}^2i,\sqrt[4]{28}^3i\}
 \end{equation*}
 </div>
-<div class="para">as <span class="process-math">\(\psi\)</span> is an isomorphism. Observe <span class="process-math">\(\widetilde{\phi}(xy)=hh'=\widetilde{\phi}(x)\widetilde{\phi}(y)\text{.}\)</span> Thus <span class="process-math">\(\widetilde{\phi}\)</span> is a homomorphism, and for any <span class="process-math">\(h\in H\)</span> we have <span class="process-math">\(\widetilde{\phi}(h)=h\text{.}\)</span>
-</div>
-</div> <div class="para">Part (b)</div>
+</div></li>
+</ol>
+</div> <div class="para"></div>
 </div>
 <span class="incontext"><a href="section-81.html#solution-316" class="internal">in-context</a></span>
 </body>

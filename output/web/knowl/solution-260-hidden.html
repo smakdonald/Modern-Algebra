@@ -10,7 +10,23 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like">
-<div class="para">Let <span class="process-math">\(G\)</span> be a group.</div> <div class="para">Let <span class="process-math">\(S\)</span> be the poset of all proper subgroups of <span class="process-math">\(G\)</span> ordered in terms of inclusion. Consider a string of these. Consider the union of them all. Luckily, unions of subgroups are subgroups if and only if there is containment, which there is, since everything is in the union. Thus its a subgroup. Since union in <span class="process-math">\(S\)</span> and yields an upper bound, by Zorn's Lemma we have a maximal element. Thus <span class="process-math">\(G\)</span> possesses maximal subgroups.</div>
-</div></body>
+<body class="ignore-math"><div class="solution solution-like"><div class="para logical"><ol class="decimal">
+<li>
+<div class="para">Let <span class="process-math">\(G\)</span> be a group of order <span class="process-math">\(p^2q\)</span> where <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> are distinct primes. Suppose by way of contradiction that <span class="process-math">\(G\)</span> has no normal Sylow <span class="process-math">\(p\)</span>-subgroup.</div>
+<div class="para logical">
+<div class="para">First, suppose <span class="process-math">\(p&lt;q\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/thm-sylow.html" title="Theorem 6.11: Sylow's Theorem">Sylow's Theorem</a> we know the following:</div>
+<ul class="disc">
+<li><div class="para">
+<span class="process-math">\(n_p|q\)</span> and <span class="process-math">\(n_p\equiv 1\mod{p}\text{,}\)</span> so <span class="process-math">\(n_p=1\)</span> or <span class="process-math">\(q\text{,}\)</span> so <span class="process-math">\(q\)</span>
+</div></li>
+<li><div class="para">
+<span class="process-math">\(n_q|p^2\)</span> and <span class="process-math">\(n_q\equiv 1\mod{q}\text{,}\)</span> so <span class="process-math">\(n_q=1\)</span> or <span class="process-math">\(p^2\text{,}\)</span> so <span class="process-math">\(p^2\text{.}\)</span>
+</div></li>
+</ul>
+<div class="para">We know there must be <span class="process-math">\((q-1)\cdot p^2=p^2q-p^2\)</span> elements of order <span class="process-math">\(p\text{.}\)</span> Luckily, there is more than one Sylow <span class="process-math">\(p\)</span>-subgroup with <span class="process-math">\(p^2\)</span> elements, so there isn't room for all of them.</div>
+</div>
+<div class="para">Suppose then that <span class="process-math">\(q&gt;p\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/thm-sylow.html" title="Theorem 6.11: Sylow's Theorem">Sylow's Theorem</a> we know <span class="process-math">\(n_p|q\)</span> and <span class="process-math">\(n_p\equiv 1\mod{p}\text{,}\)</span> so <span class="process-math">\(n_p=1\text{,}\)</span> so we're definitely good there.</div>
+</li>
+<li><div class="para">Suppose <span class="process-math">\(p &lt; q\)</span> and the Sylow <span class="process-math">\(p\)</span>-subgroup, <span class="process-math">\(P\text{,}\)</span> is cyclic and normal. We know from Part (a) that there are either <span class="process-math">\(1\)</span> or <span class="process-math">\(p^2\)</span> Sylow <span class="process-math">\(q\)</span>-subgroups, but since there are already <span class="process-math">\(p^2\)</span> elements of order <span class="process-math">\(p\)</span> there is only room for one, <span class="process-math">\(Q\text{,}\)</span> which is also cyclic, given its prime power. As <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\)</span> are thus normal in <span class="process-math">\(G\)</span> and only intersect trivially, we see that <span class="process-math">\(PQ=G\text{,}\)</span> meaning that <span class="process-math">\(G=P\times Q\text{.}\)</span> Thus <span class="process-math">\(G\)</span> is the product of two cyclic groups of relatively prime order, making <span class="process-math">\(G\)</span> cyclic as well. Cyclic groups are abelian, so we are done.</div></li>
+</ol></div></div></body>
 </html>

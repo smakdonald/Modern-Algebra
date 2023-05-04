@@ -592,7 +592,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.1",
   "title": "Group Homomorphisms",
-  "body": "Group Homomorphisms  Homomorphism? I Barely Know 'em!  In the end, the character of a civilization is encased in its structures. Frank Gehry  Group Homomorphism   If and are groups, a homomorphism group homomorphism from is is a function such that , where and denote the multiplication rules for and , respectively. the common symbols we use to denote homomorphisms     Homomorphism  The word \"homomorphism\" comes from the Greek words \"homo\" meaning \"same\" and \"morphe\" meaning \"form\" or \"shape\".  Several mathematicians have been creditied with inventing \/ discovering homomorphisms, such as Frobenius, Galois, Klein, and Jordan.   Intuitively, a group homomorphism preserves the algebraic structure of the group, while allowing us to compare and relate different groups. In this way, group homomorphisms allow us to study the properties of groups by comparing them to other groups that we already understand well.  Homormophism Examples     The identity map is a group homomorphism for any group , this is known as the trivial homomorphism trivial homomorphism .    The function given by is a homomorphism.    The sign homomorphism sign homomorphism  that sends even permuations to and odd permutations to is a homomorphism.    The exponential map exponential map  is a homomorphism.    The natural log map natural log map  is a homomorphism.    For any positive integer the map determinant map determinant map  is a group homomorphism.      Determining Group Homomorphisms Determine (with justification) which of the following functions are group homomorphisms   The function defined by .    The function defined by .    The function defined by .    The function defined by      Finding Injective Homomorphisms   Find, with justification, an injective group homomorphism .  Find, with justification, an injective group homomorphism .    Specifically, homomorphisms will preserve the additive structure, such as the identity element and inverse elements.  Homomorphism Preservations   If is a homomorphism of groups, then    and     .       For the first, and now multiply by . For the second, implies .    Compositions of Homomorphisms   If and are group homomorphisms, the composition is a group homomorphism.    Sweet  Let and be abelian groups. Then the set of all group homomorphisms from to is itself an abelian group.   Here is a proposition that might appear to come out of the blue. #1c1cf0, to be precise.  Generators and Unique Homomorphism   If is a group and are elements such that , , and for some integer , then there exists a unique group homomorphism such that and .    Recall that the elements of are and that this list has no repetitions. Given , , and , if exists it is clearly unique, since we have and , so that the value of on every element of is determined by its values on just and .  To prove existence, define a function by for and for . Then one may painstakenly checks that in each of the cases or or or . For example, using that , we have and For the last string of equalities, we have used that, since , we have in too. Note also that might be negative, in which case is really and so really we would have . But this is OK since too, since .  I'll skip the verifications of the other three cases.    This is techincally an specific instance of the UMP for a Presentation, which is not covered here.  Let's take a peak at what this might look like in practice.  Mapping Example  Consider the group and elements Then one may check that , and . gives that there is a group homomorphism such that and . This is not at all surprising, since the matrix represents rotation by radians counter-clockwise and represents reflection about the -axis. Indeed, one could define as the subgroup of consisting of elements .   Another Mapping  Let and , in order to distinguish them. Find a homomorphism from to with and prove that it is unique.    gives a group homomorhism . Let and , in order to distinguish them. Then since , there is a unique homomorphism from to with . For example, .    Kernels and Images  May your passion be the kernel of corn stuck between your molars, always reminding you there's something to tend to. Jeb Dickerson  The image is one thing and the human being is another. It's very hard to live up to an image, put it that way. Elvis Presley  Kernel   Let is a homomorphism of groups. The kernel kernel of a group homomorphism of is the set  the kernel of a homomorphism      Kernel  The term \"kernel\" was first used in mathematics by the German mathematician Ferdinand Georg Frobenius in the late 19th century.  The term \"kernel\" comes from the German word \"Kern\", which means \"core\" or \"nucleus\". In the context of a homomorphism, the kernel is the subgroup of the domain group that is \"killed\" by the homomorphism.   Injective and Surjective Homomorphisms      A group homomorphism is injective if and only if .    A group homomorphism is surjective if and only if .           is immediate from the definitions (since for all homomorphisms ). If and then and thus which implies .    This is identical to , the homomorphism aspect adds nothing of interest.       Homomorphisms and Order  If is a homomorphism of groups and is finte, then .    "
+  "body": "Group Homomorphisms  Homomorphism? I Barely Know 'em!  In the end, the character of a civilization is encased in its structures. Frank Gehry  Group Homomorphism   If and are groups, a homomorphism group homomorphism from is is a function such that , where and denote the multiplication rules for and , respectively. the common symbols we use to denote homomorphisms     Homomorphism  The word \"homomorphism\" comes from the Greek words \"homo\" meaning \"same\" and \"morphe\" meaning \"form\" or \"shape\".  Several mathematicians have been creditied with inventing \/ discovering homomorphisms, such as Frobenius, Galois, Klein, and Jordan.   Intuitively, a group homomorphism preserves the algebraic structure of the group, while allowing us to compare and relate different groups. In this way, group homomorphisms allow us to study the properties of groups by comparing them to other groups that we already understand well.  Homormophism Examples     The identity map is a group homomorphism for any group , this is known as the trivial homomorphism trivial homomorphism .    The function given by is a homomorphism.    The sign homomorphism sign homomorphism  that sends even permuations to and odd permutations to is a homomorphism.    The exponential map exponential map  is a homomorphism.    The natural log map natural log map  is a homomorphism.    For any positive integer the map determinant map determinant map  is a group homomorphism.      Determining Group Homomorphisms Determine (with justification) which of the following functions are group homomorphisms   The function defined by .    The function defined by .    The function defined by .    The function defined by      Finding Injective Homomorphisms   Find, with justification, an injective group homomorphism .  Find, with justification, an injective group homomorphism .    Specifically, homomorphisms will preserve the additive structure, such as the identity element and inverse elements.  Homomorphism Preservations   If is a homomorphism of groups, then    and     .       For the first, and now multiply by . For the second, implies .    Compositions of Homomorphisms   If and are group homomorphisms, the composition is a group homomorphism.    Sweet  Let and be abelian groups. Then the set of all group homomorphisms from to is itself an abelian group.   Here is a proposition that might appear to come out of the blue. #1c1cf0, to be precise.  Generators and Unique Homomorphism   If is a group and are elements such that , , and for some integer , then there exists a unique group homomorphism such that and .    Recall that the elements of are and that this list has no repetitions. Given , , and , if exists it is clearly unique, since we have and , so that the value of on every element of is determined by its values on just and .  To prove existence, define a function by for and for . Then one may painstakenly checks that in each of the cases or or or . For example, using that , we have and For the last string of equalities, we have used that, since , we have in too. Note also that might be negative, in which case is really and so really we would have . But this is OK since too, since .  I'll skip the verifications of the other three cases.    This is techincally an specific instance of the UMP for a Presentation, which is not covered here.  Let's take a peak at what this might look like in practice.  Mapping Example  Consider the group and elements Then one may check that , and . gives that there is a group homomorphism such that and . This is not at all surprising, since the matrix represents rotation by radians counter-clockwise and represents reflection about the -axis. Indeed, one could define as the subgroup of consisting of elements .   Another Mapping  Let and , in order to distinguish them. Find a homomorphism from to with and prove that it is unique.    gives a group homomorhism . Let and , in order to distinguish them. Then since , there is a unique homomorphism from to with . For example, .   May your passion be the kernel of corn stuck between your molars, always reminding you there's something to tend to. Jeb Dickerson  The image is one thing and the human being is another. It's very hard to live up to an image, put it that way. Elvis Presley  Kernel   Let is a homomorphism of groups. The kernel kernel of a group homomorphism of is the set  the kernel of a homomorphism      Kernel  The term \"kernel\" was first used in mathematics by the German mathematician Ferdinand Georg Frobenius in the late 19th century.  The term \"kernel\" comes from the German word \"Kern\", which means \"core\" or \"nucleus\". In the context of a homomorphism, the kernel is the subgroup of the domain group that is \"killed\" by the homomorphism.   Injective and Surjective Homomorphisms      A group homomorphism is injective if and only if .    A group homomorphism is surjective if and only if .           is immediate from the definitions (since for all homomorphisms ). If and then and thus which implies .    This is identical to , the homomorphism aspect adds nothing of interest.       Homomorphisms and Order  If is a homomorphism of groups and is finte, then .    "
 },
 {
   "id": "def-ghom",
@@ -3454,7 +3454,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "9.1",
   "title": "Ring Basics",
-  "body": "Ring Basics  From Rings to Fields  I made a lot of mistakes out of the ring, but I never made any in it. Jack Johnson  Ring   A ring is a set equipped with two binary operations, and , satisfying:      is an with identity element denoted ,    Associative Multiplication   is associative (making a )    Distributive Law   and hold for all .       Rings  Rings were first discovered (or created) by the German mathematician in the early 20th century, who used the term \"Ring\" because of the circular nature of the structure. The operations interact with each other in a circular way, such that multiplication distributes over addition, and addition and multiplication satisfy certain other algebraic properties.   Here are some basic consequences of the axioms.  Ring Arithmetic   For any ring and all we have:      ,     ,     .       Let be a ring with identity.   Let . Observe that by the distributive law. Subtracting from both sides we have . A similar argument shows that .    Let . Note that . Consider . Using the distributive law we see that . Thus and are both additive inverses of making them unique.       Unital Ring   A ring is a unital ring (or a ring with identity ) if there is a multiplicative identity element, written as , such that for all .    Around these parts most of us generally include in our definition of a ring, referring to a ring without an identity as a rng Get it? . However, we'll stick with the more classical definition for now.  Some additional consequences.  Unital Ring Arithmetic   For a unital ring and all we have:      is unique, and     .       We can go deeper.  Division Ring   A unital ring is a division ring if and is a group under (i.e. every has a multiplicative inverse)    We can go deeper .  Commutative Ring   A ring is commutative if holds for all .    We can go deeper .  Field   A ring is a field if it is a commutative division ring.    Fields  The term \"Field\" was first introduced by the German mathematician Ernst Steinitz in the early 20th century. It was chosen because of the analogy with the physical concept of a field, such as an electric field or a gravitational field, which also has a notion of addition and multiplication, and satisfies certain algebraic properties.   Phew. That was pretty deep. Let's take a breather and see some examples.  Relevant Rings     Trivial Ring   is called the trivial ring . Personally, I am in favor of calling this the bor-ring .      is a commutative ring.     is a commutative ring under addition and multiplication modulo .    The familiar sets of “numbers\" are fields.   Gaussian Integers  The set is a commutative ring known as the Gaussian integers .    Matrix Ring  If is any ring (not necessarily commutative), so is for any natural number , using the usual rules for addition and multiplication of square matrices.    Direct Product of Rings  The cartesian product of two rings and has a natural ring structure with addition and multiplication defined componentwise:         Let be a ring. Prove that if and only if .   Notice that in the trivial ring . Conversely, if in a ring, then , since in this case for all , we have and hence .   Less Relevant Rings     The Real Hamiltonian Quaternion Ring  Let be formal symbols and set to be the four dimensional -vector space consisting of all expressions of the form with . Addition is vector space addition: Multiplication is uniquely determined by the axioms of a ring together with the rules and the fact that the real coefficients commute with each other and .  It's not obvious that the multiplication defined in this way satisfies associativity, but in fact it does (this amounts conditions very similar to the associativity of the group ).   is a division ring, since one can check that where   In the equation above is non-zero real number if is not the zero element. The quantity is called the norm of the quaternion .    Function Ring  If is a set and is a ring, let be the collection of set theoretic functions from to , and define and . Then is a ring. If is a finite set and , then may be identified with , the direct product of copies of .    Endomorphism Ring  If is any abelian group, set to be the collection of endomorphisms of — that is, the set of group homomorphisms from to itself.  Then is a ring with addition and multiplication . This is almost always a non-commutative ring.      Here is a nice generalization.  Binomial Theorem for Commutative Rings   For any commutative ring and any elements and in , we have: where is the binomial coefficient, defined as: with integers and such that .     Units, Zerodivisors, Integral Domains  There is more power in unity than division. Emmanuel Cleaver  Unit   An element of a unital ring with is called a unit there exists such that and . In case such exists, it is unique, it is called the inverse of and denoted by .    Group of Units   The set of units of a non-trivial unital ring is denoted . This forms a group with respect to multiplication.    Finally, we have a formal definition for groups of units.  Sweet, Sweet Rigor The group of units is indeed a group with respect to multiplication.  Well, that was validating. Not as validating as it will be when we prove that matrix multiplication is associative, finally allowing us to complete the proof that is indeed a group. Soon... Months in the making. But enough vindication: we move forward. It's all we've ever known.  Units in Fields  Let be a field. Prove that every non-zero element of is a unit. In symbols, show .   is usually the standard way of proving that something is a field.  If you'll remember all the way back to , you'll see that we verified for and . This also explains why and had a different structure: they weren't fields.  is a Field!  In we showed that . Thus is a field for all primes .   Matrices and Units For any field we have .  Gaussian Units  Let be the ring of Gaussian integers. Define a function    Prove that for any .    Use the function to determine the units of .         Let and behold So there's that done.    Suppose . Then by Part (1) we know so , with . Thus we have . So the units of are .      The function in is some incredibly spicy foreshadowing of something called a norm function, which we'll see more of in  We might not be able to divide by zero, but sometimes we can get the next best thing.  Zerodivisor   A zerodivisor in a ring is an element such that or for some . We once again jump the gun on the lack-of-hyphenation situation. Language evolves at its own rate, but who has time for that?     However, as it turns out, most of the time we are trying to avoid the next best thing.  Integral Domain   A unital ring is an integral domain (often shortened to domain ) if , is commutative, and has no zerodivisors.     The term \"integral domain\" was coined by Richard Dedekind, a German mathematician who lived in the 19th century.  The word \"integral\" comes from the Latin \"integer,\" meaning \"whole\" or \"untouched,\" which is fitting because in an integral domain, the product of two nonzero elements is never \"broken apart\" into smaller pieces by a zerodivisor.   Note that by saying that is equivalent to saying that is nontrivial.  Unlike in groups, which have a notion of , rings do not necessarily come equipped with this property. One of the main niceties of integral domains is that cancellation is indeed possible (and in many cases encouraged).  Cancellation in Domains   Let be a commutative ring with identity. Then is an integral domain if and only if for all such that , we have . This property is called cancellation .    Rather than jumping in and proving a few examples directly, let's be a little more efficient and discover a whole class of examples in one fell swoop. Well, actually two fell swoops, since we'll need a quick lemma first.  Zerodivisors and Units   If is a zerodivisor in a ring , then is not a unit.    Suppose that is both a zerodivisor and a unit. Then there exists such that or . Multiplying either of these equations by gives , a contradiction.    All right. Now it's one fell swoop.  Domains and Fields      Every field is an integral domain.    A finite integral domain must be a field.          Let be a field. By we know that every nonzero element of is a unit. Thus has no zerodivisors by .    Let , and consider the set . As is finite there must exist such that . Since is an integral domain allows us to cancel an from both sides, yielding , and thus , making a unit of . Thus is a field by .       In an introductory high school or college algebra course, this notion is known as the zero factor principle for the real numbers, which is what allowes us to solve for the -intercepts (or zeros) of a polynomial equation after factoring it.  Finite Zerdivisors and Units    Prove that if is finite then every element is either a unit of a zerodivisor.    Give an example of a ring and an element which is neither a unit nor a zerodivisor.     Nilpotent  An element of a ring is called nilpotent if for some integer .   Nilpotents and Units  If is a nilpotent element in a unital ring , then is a unit.   Let be a nilpotent element of a ring. Show that is a unit of Deduce that the sum of a nilpotent element and a unit is a unit.  Idempotent  Let be a ring with identity. An element is called idempotent if .   Potent Idempotents Let be a ring with identity.   Give an example of a ring which has an idempotent other than or .    Prove that if is idempotent, so is .    Suppose is commutative and an idempotent. Let . Prove that is a commutative ring (with identity ).       "
+  "body": "Ring Basics  From Rings to Fields  I made a lot of mistakes out of the ring, but I never made any in it. Jack Johnson  Ring   A ring is a set equipped with two binary operations, and , satisfying:      is an with identity element denoted ,    Associative Multiplication   is associative (making a )    Distributive Law   and hold for all .       Rings  Rings were first discovered (or created) by the German mathematician in the early 20th century, who used the term \"Ring\" because of the circular nature of the structure. The operations interact with each other in a circular way, such that multiplication distributes over addition, and addition and multiplication satisfy certain other algebraic properties.   Here are some basic consequences of the axioms.  Ring Arithmetic   For any ring and all we have:      ,     ,     .       Let be a ring with identity.   Let . Observe that by the distributive law. Subtracting from both sides we have . A similar argument shows that .    Let . Note that . Consider . Using the distributive law we see that . Thus and are both additive inverses of making them unique.       Unital Ring   A ring is a unital ring (or a ring with identity ) if there is a multiplicative identity element, written as , such that for all .    Around these parts most of us generally include in our definition of a ring, referring to a ring without an identity as a rng Get it? . However, we'll stick with the more classical definition for now.  Some additional consequences.  Unital Ring Arithmetic   For a unital ring and all we have:      is unique, and     .       We can go deeper.  Division Ring   A unital ring is a division ring if and is a group under (i.e. every has a multiplicative inverse)    We can go deeper .  Commutative Ring   A ring is commutative if holds for all .    We can go deeper .  Field   A ring is a field if it is a commutative division ring.    Fields  The term \"Field\" was first introduced by the German mathematician Ernst Steinitz in the early 20th century. It was chosen because of the analogy with the physical concept of a field, such as an electric field or a gravitational field, which also has a notion of addition and multiplication, and satisfies certain algebraic properties.   Phew. That was pretty deep. Let's take a breather and see some examples.  Relevant Rings     Trivial Ring   is called the trivial ring , or zero ring . Personally, I am in favor of calling this the bor-ring .      is a commutative ring.     is a commutative ring under addition and multiplication modulo .    The familiar sets are fields.   Gaussian Integers  The set is a commutative ring known as the Gaussian integers .   Matrix Ring  If is any ring (not necessarily commutative), so is for any natural number , using the usual rules for addition and multiplication of square matrices.    Direct Product of Rings  The cartesian product of two rings and has a natural ring structure with addition and multiplication defined componentwise:         Let be a ring. Prove that if and only if .   Notice that in the trivial ring . Conversely, if in a ring, then , since in this case for all , we have and hence .   Direct Product Preservations Let and be rings. The Cartesian product is commutative if and only if and are commutative. Similarly, has identity if and only if both and do as well.  Less Relevant Rings    Opposite Day  Given a ring , let denote the “opposite ring''. This is the same underlying set as equipped with the same rule for as , but with multiplication rule (which I will write here as ) redefined to be (where refers to the original multiplication rule for ). Then is also a ring   The Real Hamiltonian Quaternion Ring  Let be formal symbols and set to be the four dimensional -vector space consisting of all expressions of the form with . Addition is vector space addition: Multiplication is uniquely determined by the axioms of a ring together with the rules and the fact that the real coefficients commute with each other and .  It's not obvious that the multiplication defined in this way satisfies associativity, but in fact it does (this amounts conditions very similar to the associativity of the group ).   is a division ring, since one can check that where   In the equation above is non-zero real number if is not the zero element. The quantity is called the norm of the quaternion .    Function Ring  If is a set and is a ring, let be the collection of set theoretic functions from to , and define and . Then is a ring. If is a finite set and , then may be identified with , the direct product of copies of .    Endomorphism Ring  If is any abelian group, set to be the collection of endomorphisms of — that is, the set of group homomorphisms from to itself.  Then is a ring with addition and multiplication . This is almost always a non-commutative ring.      Here is a nice generalization.  Binomial Theorem for Commutative Rings   For any commutative ring and any elements and in , we have: where is the binomial coefficient, defined as: with integers and such that .     Absolute Units  There is more power in unity than division. Emmanuel Cleaver  Unit   An element of a unital ring with is called a unit there exists such that and . In case such exists, it is unique, it is called the inverse of and denoted by .    Group of Units   The set of units of a non-trivial unital ring is denoted . This forms a group with respect to multiplication.    Finally, we have a formal definition for groups of units.  Sweet, Sweet Rigor The group of units is indeed a group with respect to multiplication.  Well, that was validating. Not as validating as it will be when we prove that matrix multiplication is associative, finally allowing us to complete the proof that is indeed a group. Soon... Months in the making. But enough vindication: we move forward. It's all we've ever known.  Units in Fields  Let be a field. Prove that every non-zero element of is a unit. In symbols, show .   is usually the standard way of proving that something is a field.  If you'll remember all the way back to , you'll see that we verified for and . This also explains why and had a different structure: they weren't fields.  is a Field!  In we showed that . Thus is a field for all primes .   Matrices and Units For any field we have .  Units in matrix rings are called invertible matrices , but they aren't very useful and we'll probably never see them again.  Gaussian Units  Let be the ring of Gaussian integers. Define a function    Prove that for any .    Use the function to determine the units of .         Let and behold So there's that done.    Suppose . Then by Part (1) we know so , with . Thus we have . So the units of are .      The function in is some incredibly spicy foreshadowing of something called a norm function, which we'll see more of in   A Zero Divided Cannot Stand  The only way on Earth to multiply happiness is to divide it. Paul Scherrer  We might not be able to divide by zero, but sometimes we can get the next best thing.  Zerodivisor   A zerodivisor in a ring is an element such that or for some . We once again jump the gun on the lack-of-hyphenation situation. Language evolves at its own rate, but who has time for that?     However, as it turns out, most of the time we are trying to avoid the next best thing.  Integral Domain   A unital ring is an integral domain (often shortened to domain ) if , is commutative, and has no zerodivisors.     The term \"integral domain\" was coined by , a German mathematician who lived in the 19th century.  The word \"integral\" comes from the Latin \"integer,\" meaning \"whole\" or \"untouched,\" which is fitting because in an integral domain, the product of two nonzero elements is never \"broken apart\" into smaller pieces by a zerodivisor.   Note that by saying that is equivalent to saying that is nontrivial.  is an Integral Domain  The ring of integers is an integral domain. Find two nonzero integers that multiply to . I dare you. This is, in our humble opinion, how all conjectures should be proven moving forward.    Unlike in groups, which have a notion of , rings do not necessarily come equipped with this property. One of the main niceties of integral domains is that cancellation is indeed possible (and in many cases encouraged).  Cancellation in Domains   Let be a commutative ring with identity. Then is an integral domain if and only if for all such that , we have . This property is called cancellation .    This is sometimes taken to be the definition of an integral domain, but only by those that are left handed. No one knows why.  Rather than jumping in and proving too many examples directly, let's be a little more efficient and discover a whole class of examples in one fell swoop. Well, actually two fell swoops, since we'll need a quick lemma first.  Zerodivisors and Units   If is a zerodivisor in a ring , then is not a unit.    Suppose that is both a zerodivisor and a unit. Then there exists such that or . Multiplying either of these equations by gives , a contradiction.    All right. Now it's one fell swoop.  Domains and Fields      Every field is an integral domain.    A finite integral domain must be a field.          Let be a field. By we know that every nonzero element of is a unit. Thus has no zerodivisors by .    Let , and consider the set . As is finite there must exist such that . Since is an integral domain allows us to cancel an from both sides, yielding , and thus , making a unit of . Thus is a field by .       In an introductory high school or college algebra course this notion is known as the zero factor principle for the real numbers, which is what allowes us to solve for the -intercepts (or zeros) of a polynomial equation after factoring it.  Finite Zerdivisors and Units    Prove that if is finite then every element is either a unit or a zerodivisor.    Give an example of a ring and an element which is neither a unit nor a zerodivisor.     Nilpotent  An element of a ring is called nilpotent if for some integer .   Nilpotents and Units  If is a nilpotent element in a unital ring , then is a unit.   Let be a nilpotent element of a ring. Show that is a unit of Deduce that the sum of a nilpotent element and a unit is a unit.  Idempotent  Let be a ring with identity. An element is called idempotent if .   Potent Idempotents Let be a ring with identity.   Give an example of a ring which has an idempotent other than or .    Prove that if is idempotent, so is .    Suppose is commutative and an idempotent. Let . Prove that is a commutative ring (with identity ).     Integral Idempotents Prove that the only idempotents in an integral domain are and .    "
 },
 {
   "id": "def-ring",
@@ -3535,7 +3535,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "9.9",
   "title": "Relevant Rings.",
-  "body": "Relevant Rings     Trivial Ring   is called the trivial ring . Personally, I am in favor of calling this the bor-ring .      is a commutative ring.     is a commutative ring under addition and multiplication modulo .    The familiar sets of “numbers\" are fields.   Gaussian Integers  The set is a commutative ring known as the Gaussian integers .    Matrix Ring  If is any ring (not necessarily commutative), so is for any natural number , using the usual rules for addition and multiplication of square matrices.    Direct Product of Rings  The cartesian product of two rings and has a natural ring structure with addition and multiplication defined componentwise:       "
+  "body": "Relevant Rings     Trivial Ring   is called the trivial ring , or zero ring . Personally, I am in favor of calling this the bor-ring .      is a commutative ring.     is a commutative ring under addition and multiplication modulo .    The familiar sets are fields.   Gaussian Integers  The set is a commutative ring known as the Gaussian integers .   Matrix Ring  If is any ring (not necessarily commutative), so is for any natural number , using the usual rules for addition and multiplication of square matrices.    Direct Product of Rings  The cartesian product of two rings and has a natural ring structure with addition and multiplication defined componentwise:       "
 },
 {
   "id": "exe-1-is-0",
@@ -3547,20 +3547,29 @@ var ptx_lunr_docs = [
   "body": " Let be a ring. Prove that if and only if .   Notice that in the trivial ring . Conversely, if in a ring, then , since in this case for all , we have and hence .  "
 },
 {
+  "id": "exercise-124",
+  "level": "2",
+  "url": "sec-defn-ex.html#exercise-124",
+  "type": "Exploration",
+  "number": "9.11",
+  "title": "Direct Product Preservations.",
+  "body": "Direct Product Preservations Let and be rings. The Cartesian product is commutative if and only if and are commutative. Similarly, has identity if and only if both and do as well. "
+},
+{
   "id": "example-53",
   "level": "2",
   "url": "sec-defn-ex.html#example-53",
   "type": "Example",
-  "number": "9.11",
+  "number": "9.12",
   "title": "Less Relevant Rings.",
-  "body": "Less Relevant Rings     The Real Hamiltonian Quaternion Ring  Let be formal symbols and set to be the four dimensional -vector space consisting of all expressions of the form with . Addition is vector space addition: Multiplication is uniquely determined by the axioms of a ring together with the rules and the fact that the real coefficients commute with each other and .  It's not obvious that the multiplication defined in this way satisfies associativity, but in fact it does (this amounts conditions very similar to the associativity of the group ).   is a division ring, since one can check that where   In the equation above is non-zero real number if is not the zero element. The quantity is called the norm of the quaternion .    Function Ring  If is a set and is a ring, let be the collection of set theoretic functions from to , and define and . Then is a ring. If is a finite set and , then may be identified with , the direct product of copies of .    Endomorphism Ring  If is any abelian group, set to be the collection of endomorphisms of — that is, the set of group homomorphisms from to itself.  Then is a ring with addition and multiplication . This is almost always a non-commutative ring.     "
+  "body": "Less Relevant Rings    Opposite Day  Given a ring , let denote the “opposite ring''. This is the same underlying set as equipped with the same rule for as , but with multiplication rule (which I will write here as ) redefined to be (where refers to the original multiplication rule for ). Then is also a ring   The Real Hamiltonian Quaternion Ring  Let be formal symbols and set to be the four dimensional -vector space consisting of all expressions of the form with . Addition is vector space addition: Multiplication is uniquely determined by the axioms of a ring together with the rules and the fact that the real coefficients commute with each other and .  It's not obvious that the multiplication defined in this way satisfies associativity, but in fact it does (this amounts conditions very similar to the associativity of the group ).   is a division ring, since one can check that where   In the equation above is non-zero real number if is not the zero element. The quantity is called the norm of the quaternion .    Function Ring  If is a set and is a ring, let be the collection of set theoretic functions from to , and define and . Then is a ring. If is a finite set and , then may be identified with , the direct product of copies of .    Endomorphism Ring  If is any abelian group, set to be the collection of endomorphisms of — that is, the set of group homomorphisms from to itself.  Then is a ring with addition and multiplication . This is almost always a non-commutative ring.     "
 },
 {
   "id": "thm-binomial-thm-rings",
   "level": "2",
   "url": "sec-defn-ex.html#thm-binomial-thm-rings",
   "type": "Theorem",
-  "number": "9.12",
+  "number": "9.13",
   "title": "Binomial Theorem for Commutative Rings.",
   "body": "Binomial Theorem for Commutative Rings   For any commutative ring and any elements and in , we have: where is the binomial coefficient, defined as: with integers and such that .   "
 },
@@ -3569,7 +3578,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-defn-ex.html#def-unit",
   "type": "Definition",
-  "number": "9.13",
+  "number": "9.14",
   "title": "Unit.",
   "body": "Unit   An element of a unital ring with is called a unit there exists such that and . In case such exists, it is unique, it is called the inverse of and denoted by .   "
 },
@@ -3578,7 +3587,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-defn-ex.html#def-group-of-units",
   "type": "Definition",
-  "number": "9.14",
+  "number": "9.15",
   "title": "Group of Units.",
   "body": "Group of Units   The set of units of a non-trivial unital ring is denoted . This forms a group with respect to multiplication.   "
 },
@@ -3587,7 +3596,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-defn-ex.html#exe-group-of-units-is-a-group",
   "type": "Exploration",
-  "number": "9.15",
+  "number": "9.16",
   "title": "Sweet, Sweet Rigor.",
   "body": "Sweet, Sweet Rigor The group of units is indeed a group with respect to multiplication. "
 },
@@ -3596,7 +3605,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-defn-ex.html#thm-units-in-fields",
   "type": "Theorem",
-  "number": "9.16",
+  "number": "9.17",
   "title": "Units in Fields.",
   "body": "Units in Fields  Let be a field. Prove that every non-zero element of is a unit. In symbols, show .  "
 },
@@ -3605,7 +3614,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-defn-ex.html#remark-40",
   "type": "Remark",
-  "number": "9.17",
+  "number": "9.18",
   "title": "",
   "body": "is usually the standard way of proving that something is a field. "
 },
@@ -3614,7 +3623,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-defn-ex.html#zp-field",
   "type": "Example",
-  "number": "9.18",
+  "number": "9.19",
   "title": "<span class=\"process-math\">\\(\\Z\/p\\)<\/span> is a Field!",
   "body": "is a Field!  In we showed that . Thus is a field for all primes .  "
 },
@@ -3623,18 +3632,9 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-defn-ex.html#exe-matrices-and-units",
   "type": "Exploration",
-  "number": "9.19",
+  "number": "9.20",
   "title": "Matrices and Units.",
   "body": "Matrices and Units For any field we have . "
-},
-{
-  "id": "exe-gaussian-units",
-  "level": "2",
-  "url": "sec-defn-ex.html#exe-gaussian-units",
-  "type": "Exploration",
-  "number": "9.20",
-  "title": "Gaussian Units.",
-  "body": "Gaussian Units  Let be the ring of Gaussian integers. Define a function    Prove that for any .    Use the function to determine the units of .         Let and behold So there's that done.    Suppose . Then by Part (1) we know so , with . Thus we have . So the units of are .     "
 },
 {
   "id": "remark-41",
@@ -3643,6 +3643,24 @@ var ptx_lunr_docs = [
   "type": "Remark",
   "number": "9.21",
   "title": "",
+  "body": "Units in matrix rings are called invertible matrices , but they aren't very useful and we'll probably never see them again. "
+},
+{
+  "id": "exe-gaussian-units",
+  "level": "2",
+  "url": "sec-defn-ex.html#exe-gaussian-units",
+  "type": "Exploration",
+  "number": "9.22",
+  "title": "Gaussian Units.",
+  "body": "Gaussian Units  Let be the ring of Gaussian integers. Define a function    Prove that for any .    Use the function to determine the units of .         Let and behold So there's that done.    Suppose . Then by Part (1) we know so , with . Thus we have . So the units of are .     "
+},
+{
+  "id": "remark-42",
+  "level": "2",
+  "url": "sec-defn-ex.html#remark-42",
+  "type": "Remark",
+  "number": "9.23",
+  "title": "",
   "body": "The function in is some incredibly spicy foreshadowing of something called a norm function, which we'll see more of in "
 },
 {
@@ -3650,7 +3668,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-defn-ex.html#def-zerodivisor",
   "type": "Definition",
-  "number": "9.22",
+  "number": "9.24",
   "title": "Zerodivisor.",
   "body": "Zerodivisor   A zerodivisor in a ring is an element such that or for some . We once again jump the gun on the lack-of-hyphenation situation. Language evolves at its own rate, but who has time for that?    "
 },
@@ -3659,34 +3677,52 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-defn-ex.html#def-integral-domain",
   "type": "Definition",
-  "number": "9.23",
+  "number": "9.25",
   "title": "Integral Domain.",
   "body": "Integral Domain   A unital ring is an integral domain (often shortened to domain ) if , is commutative, and has no zerodivisors.   "
 },
 {
-  "id": "remark-42",
+  "id": "remark-43",
   "level": "2",
-  "url": "sec-defn-ex.html#remark-42",
+  "url": "sec-defn-ex.html#remark-43",
   "type": "Remark",
-  "number": "9.24",
+  "number": "9.26",
   "title": "",
   "body": "Note that by saying that is equivalent to saying that is nontrivial. "
+},
+{
+  "id": "ex-z-integral-domain",
+  "level": "2",
+  "url": "sec-defn-ex.html#ex-z-integral-domain",
+  "type": "Example",
+  "number": "9.27",
+  "title": "<span class=\"process-math\">\\(\\Z\\)<\/span> is an Integral Domain.",
+  "body": "is an Integral Domain  The ring of integers is an integral domain. Find two nonzero integers that multiply to . I dare you. This is, in our humble opinion, how all conjectures should be proven moving forward.   "
 },
 {
   "id": "lem-cancellation-in-integral-domains",
   "level": "2",
   "url": "sec-defn-ex.html#lem-cancellation-in-integral-domains",
   "type": "Lemma",
-  "number": "9.25",
+  "number": "9.28",
   "title": "Cancellation in Domains.",
   "body": "Cancellation in Domains   Let be a commutative ring with identity. Then is an integral domain if and only if for all such that , we have . This property is called cancellation .   "
+},
+{
+  "id": "remark-44",
+  "level": "2",
+  "url": "sec-defn-ex.html#remark-44",
+  "type": "Remark",
+  "number": "9.29",
+  "title": "",
+  "body": "This is sometimes taken to be the definition of an integral domain, but only by those that are left handed. No one knows why. "
 },
 {
   "id": "lem-zerodivisor-not-unit",
   "level": "2",
   "url": "sec-defn-ex.html#lem-zerodivisor-not-unit",
   "type": "Lemma",
-  "number": "9.26",
+  "number": "9.30",
   "title": "Zerodivisors and Units.",
   "body": "Zerodivisors and Units   If is a zerodivisor in a ring , then is not a unit.    Suppose that is both a zerodivisor and a unit. Then there exists such that or . Multiplying either of these equations by gives , a contradiction.   "
 },
@@ -3695,34 +3731,34 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-defn-ex.html#integral-domains-and-fields",
   "type": "Theorem",
-  "number": "9.27",
+  "number": "9.31",
   "title": "Domains and Fields.",
   "body": "Domains and Fields      Every field is an integral domain.    A finite integral domain must be a field.          Let be a field. By we know that every nonzero element of is a unit. Thus has no zerodivisors by .    Let , and consider the set . As is finite there must exist such that . Since is an integral domain allows us to cancel an from both sides, yielding , and thus , making a unit of . Thus is a field by .      "
 },
 {
-  "id": "remark-43",
+  "id": "remark-45",
   "level": "2",
-  "url": "sec-defn-ex.html#remark-43",
+  "url": "sec-defn-ex.html#remark-45",
   "type": "Remark",
-  "number": "9.28",
+  "number": "9.32",
   "title": "",
-  "body": "In an introductory high school or college algebra course, this notion is known as the zero factor principle for the real numbers, which is what allowes us to solve for the -intercepts (or zeros) of a polynomial equation after factoring it. "
+  "body": "In an introductory high school or college algebra course this notion is known as the zero factor principle for the real numbers, which is what allowes us to solve for the -intercepts (or zeros) of a polynomial equation after factoring it. "
 },
 {
   "id": "exe-neither-zerodivisor-nor-unit",
   "level": "2",
   "url": "sec-defn-ex.html#exe-neither-zerodivisor-nor-unit",
   "type": "Exploration",
-  "number": "9.29",
+  "number": "9.33",
   "title": "Finite Zerdivisors and Units.",
-  "body": "Finite Zerdivisors and Units    Prove that if is finite then every element is either a unit of a zerodivisor.    Give an example of a ring and an element which is neither a unit nor a zerodivisor.    "
+  "body": "Finite Zerdivisors and Units    Prove that if is finite then every element is either a unit or a zerodivisor.    Give an example of a ring and an element which is neither a unit nor a zerodivisor.    "
 },
 {
   "id": "def-nilpotent",
   "level": "2",
   "url": "sec-defn-ex.html#def-nilpotent",
   "type": "Definition",
-  "number": "9.30",
+  "number": "9.34",
   "title": "Nilpotent.",
   "body": "Nilpotent  An element of a ring is called nilpotent if for some integer .  "
 },
@@ -3731,7 +3767,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-defn-ex.html#lem-nilpotents-and-units",
   "type": "Lemma",
-  "number": "9.31",
+  "number": "9.35",
   "title": "Nilpotents and Units.",
   "body": "Nilpotents and Units  If is a nilpotent element in a unital ring , then is a unit.  "
 },
@@ -3740,7 +3776,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-defn-ex.html#exe-one-plus-nilpotent-is-unit",
   "type": "Exploration",
-  "number": "9.32",
+  "number": "9.36",
   "title": "",
   "body": "Let be a nilpotent element of a ring. Show that is a unit of Deduce that the sum of a nilpotent element and a unit is a unit. "
 },
@@ -3749,18 +3785,27 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-defn-ex.html#def-idempotent",
   "type": "Definition",
-  "number": "9.33",
+  "number": "9.37",
   "title": "Idempotent.",
   "body": "Idempotent  Let be a ring with identity. An element is called idempotent if .  "
 },
 {
-  "id": "exercise-129",
+  "id": "exercise-130",
   "level": "2",
-  "url": "sec-defn-ex.html#exercise-129",
+  "url": "sec-defn-ex.html#exercise-130",
   "type": "Exploration",
-  "number": "9.34",
+  "number": "9.38",
   "title": "Potent Idempotents.",
   "body": "Potent Idempotents Let be a ring with identity.   Give an example of a ring which has an idempotent other than or .    Prove that if is idempotent, so is .    Suppose is commutative and an idempotent. Let . Prove that is a commutative ring (with identity ).    "
+},
+{
+  "id": "exercise-131",
+  "level": "2",
+  "url": "sec-defn-ex.html#exercise-131",
+  "type": "Exploration",
+  "number": "9.39",
+  "title": "Integral Idempotents.",
+  "body": "Integral Idempotents Prove that the only idempotents in an integral domain are and . "
 },
 {
   "id": "sec-subrings",
@@ -3769,32 +3814,32 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "9.2",
   "title": "Subrings",
-  "body": "Subrings  We all live in a yellow subma-ring (Ring)o Starr  We will spend the first half of our exploration of rings following the same general structure as we did in . First, we looked at rings in general, and now we will examine subrings, just as we did with subgroups. Then it's off to homomorphisms, isomorphisms, and quotients. It'll be just like old times.  Subring   A subring of a ring is a subset such that is a ring under the operations of .  When is a field we call a subfield of We generally do not define subdomains, subcommutativerings, or subdivisionringswithidentity, but if you're feeling inspired I say go for it. .    Unlike with groups, we generally do not use the notation to denote a subring. In fact, I'm not sure if we have any notation for it at all. You know what that means!  Discussion Come up with some spiffy new notation for a subring. I have absolutely no ideas, so good luck.  Subring Test   A nonempty subset of a ring is a subring if and only if either one of the following hold:    is a subgroup of closed under multiplication.     is closed under subtraction and multiplication.       Subring Preservations Any subring of a commutative ring is a commutative ring. Any unital subring of an integral domain is an integral domain.  Examples of Subrings    is a subring of , which is a subring of , which is a subring of .   is a subring without of the ring with .  The set of continuous functions mapping is a subring of , denoted .   , the ring of Gaussian Integers, is a subring of .    Fancy Subrings If is a ring and is a subring of , it can happen that    is unital but is not (e.g. )     is unital but is not    both and are unital but    Find examples for each of these situations!  Center of a Ring   The center of a ring is the set     Center is a Subring   The center is a subring of . If is a ring with identity then is a subring that contains the same .    Centers of rings don't show up as much in ring theory as they did with groups, but that might also be because there hasn't been a non-commutative ring spotted within twenty miles of UNL since 1977.  Determine the center of the real quaternion ring .    Let be a squarefree integer (that is, the prime factorization of has no repeated primes). Then the subset of is a subring that is a field (called a quadratic field ), and is a subring of .    Both and are closed under subtraction and multiplication, so they are subrings of .  The fact that is a {} follows since is also closed under taking inverses. Indeed the inverse of (from ) turns out to be whenever . A slightly subtle point here is that the fraction above makes sense since provided and are not simultaneously . This is because, if then either , which contradicts the assumption that is squarefree, or , which contradicts the assumption .    Note the difference in notation between and : one uses parenthesis and the other brackets. This is to denote that one (the one with parentheses) is a field, whereas the other [the one with brackets] is not. This is also some spicy foreshadowing that won't pay off until all the way down in . Stay tuned.  "
+  "body": "Subrings  We all live in a yellow subma-ring (Ring)o Starr  We will spend the first half of our exploration of rings following the same general structure as we did in . First, we looked at rings in general, and now we will examine subrings, just as we did with subgroups. Then it's off to homomorphisms, isomorphisms, and quotients. It'll be just like old times.  Subring   A subring of a ring is a subset such that is a ring under the operations of .  When is a field we call a subfield of We generally do not define subdomains, subcommutativerings, or subdivisionringswithidentity, but if you're feeling inspired I say go for it. .    Unlike with groups, we generally do not use the notation to denote a subring. In fact, I'm not sure if we have any notation for it at all. You know what that means!  Discussion Come up with some spiffy new notation for a subring. I have absolutely no ideas, so good luck.  Subring Test   A nonempty subset of a ring is a subring if and only if either one of the following hold:    is a subgroup of closed under multiplication.     is closed under subtraction and multiplication.       Subring Preservations Any subring of a commutative ring is a commutative ring. Any unital subring of an integral domain is an integral domain.  Examples of Subrings    is a subring of , which is a subring of , which is a subring of .   is a subring without of the ring with .  The set of continuous functions mapping is a subring of , denoted .   , the ring of Gaussian Integers, is a subring of .    Nilradical Radishes Prove that the set of all nilpotent elements of a ring is a subring of , which we call the nilradical .  Fancy Subrings If is a ring and is a subring of , it can happen that    is unital but is not (e.g. )     is unital but is not    both and are unital but    Find examples for each of these situations!  Center of a Ring   The center of a ring is the set     Center is a Subring   The center is a subring of . If is a ring with identity then is a subring that contains the same .    Centers of rings don't show up as much in ring theory as they did with groups, but that might also be because there hasn't been a non-commutative ring spotted within twenty miles of UNL since 1977.  Determine the center of the real quaternion ring .    Let be a squarefree integer (that is, the prime factorization of has no repeated primes). Then the subset of is a subring that is a field (called a quadratic field ), and is a subring of .    Both and are closed under subtraction and multiplication, so they are subrings of .  The fact that is a {} follows since is also closed under taking inverses. Indeed the inverse of (from ) turns out to be whenever . A slightly subtle point here is that the fraction above makes sense since provided and are not simultaneously . This is because, if then either , which contradicts the assumption that is squarefree, or , which contradicts the assumption .    Note the difference in notation between and : one uses parenthesis and the other brackets. This is to denote that one (the one with parentheses) is a field, whereas the other [the one with brackets] is not. This is also some spicy foreshadowing that won't pay off until all the way down in . Stay tuned.  "
 },
 {
   "id": "def-subring",
   "level": "2",
   "url": "sec-subrings.html#def-subring",
   "type": "Definition",
-  "number": "9.35",
+  "number": "9.40",
   "title": "Subring.",
   "body": "Subring   A subring of a ring is a subset such that is a ring under the operations of .  When is a field we call a subfield of We generally do not define subdomains, subcommutativerings, or subdivisionringswithidentity, but if you're feeling inspired I say go for it. .   "
 },
 {
-  "id": "remark-44",
+  "id": "remark-46",
   "level": "2",
-  "url": "sec-subrings.html#remark-44",
+  "url": "sec-subrings.html#remark-46",
   "type": "Remark",
-  "number": "9.36",
+  "number": "9.41",
   "title": "",
   "body": "Unlike with groups, we generally do not use the notation to denote a subring. In fact, I'm not sure if we have any notation for it at all. You know what that means! "
 },
 {
-  "id": "exercise-130",
+  "id": "exercise-132",
   "level": "2",
-  "url": "sec-subrings.html#exercise-130",
+  "url": "sec-subrings.html#exercise-132",
   "type": "Exploration",
-  "number": "9.37",
+  "number": "9.42",
   "title": "Discussion.",
   "body": "Discussion Come up with some spiffy new notation for a subring. I have absolutely no ideas, so good luck. "
 },
@@ -3803,7 +3848,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subrings.html#lem-subring-test",
   "type": "Lemma",
-  "number": "9.38",
+  "number": "9.43",
   "title": "Subring Test.",
   "body": "Subring Test   A nonempty subset of a ring is a subring if and only if either one of the following hold:    is a subgroup of closed under multiplication.     is closed under subtraction and multiplication.      "
 },
@@ -3812,7 +3857,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subrings.html#exe-subring-preservations",
   "type": "Exploration",
-  "number": "9.39",
+  "number": "9.44",
   "title": "Subring Preservations.",
   "body": "Subring Preservations Any subring of a commutative ring is a commutative ring. Any unital subring of an integral domain is an integral domain. "
 },
@@ -3821,16 +3866,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subrings.html#ex-subring-examples",
   "type": "Example",
-  "number": "9.40",
+  "number": "9.45",
   "title": "Examples of Subrings.",
   "body": "Examples of Subrings    is a subring of , which is a subring of , which is a subring of .   is a subring without of the ring with .  The set of continuous functions mapping is a subring of , denoted .   , the ring of Gaussian Integers, is a subring of .   "
+},
+{
+  "id": "exercise-134",
+  "level": "2",
+  "url": "sec-subrings.html#exercise-134",
+  "type": "Exploration",
+  "number": "9.46",
+  "title": "Nilradical Radishes.",
+  "body": "Nilradical Radishes Prove that the set of all nilpotent elements of a ring is a subring of , which we call the nilradical . "
 },
 {
   "id": "exe-finding-subring-counterexamples",
   "level": "2",
   "url": "sec-subrings.html#exe-finding-subring-counterexamples",
   "type": "Exploration",
-  "number": "9.41",
+  "number": "9.47",
   "title": "Fancy Subrings.",
   "body": "Fancy Subrings If is a ring and is a subring of , it can happen that    is unital but is not (e.g. )     is unital but is not    both and are unital but    Find examples for each of these situations! "
 },
@@ -3839,7 +3893,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subrings.html#def-center-ring",
   "type": "Definition",
-  "number": "9.42",
+  "number": "9.48",
   "title": "Center of a Ring.",
   "body": "Center of a Ring   The center of a ring is the set    "
 },
@@ -3848,7 +3902,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subrings.html#lem-center-is-subring",
   "type": "Lemma",
-  "number": "9.43",
+  "number": "9.49",
   "title": "Center is a Subring.",
   "body": "Center is a Subring   The center is a subring of . If is a ring with identity then is a subring that contains the same .   "
 },
@@ -3857,7 +3911,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subrings.html#exe-center-of-quaternion-ring",
   "type": "Exploration",
-  "number": "9.44",
+  "number": "9.50",
   "title": "<span class=\"process-math\">\\(Z(\\H)\\)<\/span>.",
   "body": "Determine the center of the real quaternion ring . "
 },
@@ -3866,16 +3920,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-subrings.html#lem-quadratic-field",
   "type": "Lemma",
-  "number": "9.45",
+  "number": "9.51",
   "title": "<span class=\"process-math\">\\(\\Q(\\sqrt {d})\\)<\/span>.",
   "body": "  Let be a squarefree integer (that is, the prime factorization of has no repeated primes). Then the subset of is a subring that is a field (called a quadratic field ), and is a subring of .    Both and are closed under subtraction and multiplication, so they are subrings of .  The fact that is a {} follows since is also closed under taking inverses. Indeed the inverse of (from ) turns out to be whenever . A slightly subtle point here is that the fraction above makes sense since provided and are not simultaneously . This is because, if then either , which contradicts the assumption that is squarefree, or , which contradicts the assumption .   "
 },
 {
-  "id": "remark-45",
+  "id": "remark-47",
   "level": "2",
-  "url": "sec-subrings.html#remark-45",
+  "url": "sec-subrings.html#remark-47",
   "type": "Remark",
-  "number": "9.46",
+  "number": "9.52",
   "title": "",
   "body": "Note the difference in notation between and : one uses parenthesis and the other brackets. This is to denote that one (the one with parentheses) is a field, whereas the other [the one with brackets] is not. This is also some spicy foreshadowing that won't pay off until all the way down in . Stay tuned. "
 },
@@ -3893,7 +3947,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-ring-hom.html#def-ring-homomorphism",
   "type": "Definition",
-  "number": "9.47",
+  "number": "9.53",
   "title": "Ring Homomorphism.",
   "body": "Ring Homomorphism   If and are rings, a ring homomorphism from to is a function that satisfies:    for all ,     for all .   Ring homomorphisms are often referred to as ring maps .   "
 },
@@ -3902,7 +3956,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-ring-hom.html#def-ring-isomorphism",
   "type": "Definition",
-  "number": "9.48",
+  "number": "9.54",
   "title": "Ring Isomorphism.",
   "body": "Ring Isomorphism   A ring homomorphism that is bijective is called a ring isomorphism . Two rings and are isomorphic , written , if there is an isomorphism from to . Ring isomorphisms are not usually referred to as super ring maps , but it would be cool if they were.    "
 },
@@ -3911,7 +3965,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-ring-hom.html#prop-ring-isomorphism-invariants",
   "type": "Proposition",
-  "number": "9.49",
+  "number": "9.55",
   "title": "Isomorphism Invariants.",
   "body": "Isomorphism Invariants   The following are ring isomorphism invariants:   all group isomorphism invariants of the additive group, including the isomorphism class (i.e., if then ).    being unital, being commutative, division ring, field, integral domain    the number of zerodivisors.    if is unital, all group isomorphism invariants of the group of units, including the isomorphism class (i.e., if then ).    the isomorphism type of the center (i.e., if then ).      "
 },
@@ -3920,7 +3974,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-ring-hom.html#exe-ring-homomorphisms-examples",
   "type": "Example",
-  "number": "9.50",
+  "number": "9.56",
   "title": "Examples of Ring Maps.",
   "body": "Examples of Ring Maps    The identity map is a ring isomorphism.  The zero map is a ring map.  Let be a subring of a ring . The inclusion mapping of into is a ring homomorphism.  Projection maps are ring homomorphisms.    "
 },
@@ -3929,7 +3983,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-ring-hom.html#lem-ring-homomorphism-properties",
   "type": "Lemma",
-  "number": "9.51",
+  "number": "9.57",
   "title": "Properties of Ring Maps.",
   "body": "Properties of Ring Maps   If is a ring homomorphism, then    and .    if , are unital then can be either or a zerodivisor.    If and then .    If and are ring homomorphisms (or isomorphisms, respectively), then is a ring homomorphism (or isomorphism).         Since we have , thus Now either or (which yields ) or both of these are nonzero and then they are complementary zerodivisors (in particular, is a zerodivisor).     "
 },
@@ -3938,25 +3992,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-ring-hom.html#exe-equivalent-field-definitions",
   "type": "Exploration",
-  "number": "9.52",
+  "number": "9.58",
   "title": "Equivalent Field Characterizations.",
   "body": "Equivalent Field Characterizations  Let be a nontrivial ring. Then is a field if and only if every homomorphism of into a nonzero ring is injective.  "
 },
 {
-  "id": "exercise-135",
+  "id": "exercise-138",
   "level": "2",
-  "url": "sec-ring-hom.html#exercise-135",
+  "url": "sec-ring-hom.html#exercise-138",
   "type": "Exploration",
-  "number": "9.53",
+  "number": "9.59",
   "title": "Isomorphisms and Idempotents.",
   "body": "Isomorphisms and Idempotents Suppose is commutative and an idempotent. Let . Prove that the map given by is a ring isomorphism. "
 },
 {
-  "id": "exercise-136",
+  "id": "exercise-139",
   "level": "2",
-  "url": "sec-ring-hom.html#exercise-136",
+  "url": "sec-ring-hom.html#exercise-139",
   "type": "Exploration",
-  "number": "9.54",
+  "number": "9.60",
   "title": "More Isomorphisms.",
   "body": "More Isomorphisms Let be squarefree integers and set and .   There is a group isomorphism .    There is a ring isomorphism if and only if .    "
 },
@@ -3967,50 +4021,59 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "9.4",
   "title": "Polynomial Rings",
-  "body": "Polynomial Rings  I had a polynomial once. My doctor removed it. Michael Grant, Gone  Polynomial Ring   For any commutative ring , the polynomial ring in the variable  , written , is the set with addition defined by and multiplication defined by For any commutative ring , the polynomial ring in  , written , is defined inductively as , but more easily thought of as the set consisting of (finite) sums of the form with addition and multiplication defined by rules similar to the ones seen above.    If , letting , then consists of all expressions of the form with for all but a finite number of .  One often views as the subring of consisting of the constant polynomials.  Polynomials, Domains, Degrees, Units   If is a domain, then    is a domain    for any nonzero polynomials ,     the units of are the units of ( )        UMP for Polynomial Rings   Let and be commutative rings, is a ring homomorphism and arbitrary elements of . Then there exists a unique ring homomorphism such that and for all , namely     Let's observe first that if such a map exists it is unique. For if is a ring map extending and sending to . Then using that preserves and .  For existence, let's assume at first. Given and , define by It is elementary (but tedious) to check really is a ring homomorphism. The fact that it restricts to is clear, however.  For the general case, we proceed by induction on the number of variables . The induction hypothesis shows that there is a ring homomorphism such that and , . Applying the case to gives with and . Setting gives a map with the needed properties.    Evalutation Homomorphism If are commutative rings with and , then the evaluation at function given by is a ring homomorphism.  Ring Maps and Coefficients  Given a ring map between commutative rings, we may apply the Proposition to the composition using the element of to get an induced ring map that sends to . That is, the map applies to the coefficients of a polynomial. This can be generalized to more than one variable in the obvious way.   Reduction Homomorphism Continuing with , we could have for an ideal of and could be the quotient map. Then takes a polynomial and reduces its coefficients modulo . We will usually denote the image of through the reduction homomorphism by .  Polynomial Division Algorithm   Let be a commutative ring with identity and . Assume the leading coefficient of is a unit in . Then there exists a unique such that , and .    Root Theorem   Let be a commutative ring with identity, and . Then if and only if .    "
+  "body": "Polynomial Rings  I had a polynomial once. My doctor removed it. Michael Grant, Gone  Polynomial Ring   For any commutative ring , the polynomial ring in the variable  , written , is the set with addition defined by and multiplication defined by For any commutative ring , the polynomial ring in  , written , is defined inductively as , but more easily thought of as the set consisting of (finite) sums of the form with addition and multiplication defined by rules similar to the ones seen above.    One often views as the subring of consisting of the constant polynomials.  Let's remind ourselves of some classic notions of polynomials.  Degree   Let , . Say , where . Then is the degree of .    Monic   A polynomial is monic if . Please do not confuse this with the notion of a yonic polynomial, which does not yet exist and should probably stay that way. Algebraists are already on very thin ice for some of the things they've named over the years.     Polynomials, Domains, Degrees, Units   If is a domain, then    is a domain    for any nonzero polynomials ,     the units of are the units of ( )        Its been far too long since we've had ourselves a universal mapping property, I think we've earned one.  UMP for Polynomial Rings   Let and be commutative rings, is a ring homomorphism and arbitrary elements of . Then there exists a unique ring homomorphism such that and for all , namely     Let's observe first that if such a map exists it is unique. For if is a ring map extending and sending to . Then using that preserves and .  For existence, let's assume at first. Given and , define by It is elementary (but tedious) to check really is a ring homomorphism. The fact that it restricts to is clear, however.  For the general case, we proceed by induction on the number of variables . The induction hypothesis shows that there is a ring homomorphism such that and , . Applying the case to gives with and . Setting gives a map with the needed properties.    Evalutation Homomorphism If are commutative rings with and , then the evaluation at function given by is a ring homomorphism.  Ring Maps and Coefficients  Given a ring map between commutative rings, we may apply to the composition using the element of to get an induced ring map that sends to . That is, the map applies to the coefficients of a polynomial. This can be generalized to more than one variable in the obvious way.   Reduction Homomorphism Continuing with , we could have for an ideal of and could be the quotient map. Then takes a polynomial and reduces its coefficients modulo . We will usually denote the image of through the reduction homomorphism by .  Polynomial Division Algorithm   Let be a commutative ring with identity and . Assume the leading coefficient of is a unit in . Then there exists a unique such that , and .    Factor Theorem   Let be a commutative ring with identity, and . Then if and only if .    "
 },
 {
   "id": "def-polynomial-ring",
   "level": "2",
   "url": "sec-polyrings.html#def-polynomial-ring",
   "type": "Definition",
-  "number": "9.55",
+  "number": "9.61",
   "title": "Polynomial Ring.",
   "body": "Polynomial Ring   For any commutative ring , the polynomial ring in the variable  , written , is the set with addition defined by and multiplication defined by For any commutative ring , the polynomial ring in  , written , is defined inductively as , but more easily thought of as the set consisting of (finite) sums of the form with addition and multiplication defined by rules similar to the ones seen above.   "
 },
 {
-  "id": "remark-46",
+  "id": "remark-48",
   "level": "2",
-  "url": "sec-polyrings.html#remark-46",
+  "url": "sec-polyrings.html#remark-48",
   "type": "Remark",
-  "number": "9.56",
-  "title": "",
-  "body": "If , letting , then consists of all expressions of the form with for all but a finite number of . "
-},
-{
-  "id": "remark-47",
-  "level": "2",
-  "url": "sec-polyrings.html#remark-47",
-  "type": "Remark",
-  "number": "9.57",
+  "number": "9.62",
   "title": "",
   "body": "One often views as the subring of consisting of the constant polynomials. "
+},
+{
+  "id": "def-degree",
+  "level": "2",
+  "url": "sec-polyrings.html#def-degree",
+  "type": "Definition",
+  "number": "9.63",
+  "title": "Degree.",
+  "body": "Degree   Let , . Say , where . Then is the degree of .   "
+},
+{
+  "id": "def-monic",
+  "level": "2",
+  "url": "sec-polyrings.html#def-monic",
+  "type": "Definition",
+  "number": "9.64",
+  "title": "Monic.",
+  "body": "Monic   A polynomial is monic if . Please do not confuse this with the notion of a yonic polynomial, which does not yet exist and should probably stay that way. Algebraists are already on very thin ice for some of the things they've named over the years.    "
 },
 {
   "id": "prop-polynomials-domains-degrees-units",
   "level": "2",
   "url": "sec-polyrings.html#prop-polynomials-domains-degrees-units",
   "type": "Proposition",
-  "number": "9.58",
+  "number": "9.65",
   "title": "Polynomials, Domains, Degrees, Units.",
   "body": "Polynomials, Domains, Degrees, Units   If is a domain, then    is a domain    for any nonzero polynomials ,     the units of are the units of ( )      "
 },
 {
-  "id": "prop-ump-for-polynomial-rings",
+  "id": "thm-ump-for-polynomial-rings",
   "level": "2",
-  "url": "sec-polyrings.html#prop-ump-for-polynomial-rings",
-  "type": "Proposition",
-  "number": "9.59",
+  "url": "sec-polyrings.html#thm-ump-for-polynomial-rings",
+  "type": "Theorem",
+  "number": "9.66",
   "title": "UMP for Polynomial Rings.",
   "body": "UMP for Polynomial Rings   Let and be commutative rings, is a ring homomorphism and arbitrary elements of . Then there exists a unique ring homomorphism such that and for all , namely     Let's observe first that if such a map exists it is unique. For if is a ring map extending and sending to . Then using that preserves and .  For existence, let's assume at first. Given and , define by It is elementary (but tedious) to check really is a ring homomorphism. The fact that it restricts to is clear, however.  For the general case, we proceed by induction on the number of variables . The induction hypothesis shows that there is a ring homomorphism such that and , . Applying the case to gives with and . Setting gives a map with the needed properties.   "
 },
@@ -4019,7 +4082,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-polyrings.html#exe-evaluation-homomorphism",
   "type": "Exploration",
-  "number": "9.60",
+  "number": "9.67",
   "title": "Evalutation Homomorphism.",
   "body": "Evalutation Homomorphism If are commutative rings with and , then the evaluation at function given by is a ring homomorphism. "
 },
@@ -4028,16 +4091,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-polyrings.html#ex-applying-ring-homomorphism-to-coefficients",
   "type": "Example",
-  "number": "9.61",
+  "number": "9.68",
   "title": "Ring Maps and Coefficients.",
-  "body": "Ring Maps and Coefficients  Given a ring map between commutative rings, we may apply the Proposition to the composition using the element of to get an induced ring map that sends to . That is, the map applies to the coefficients of a polynomial. This can be generalized to more than one variable in the obvious way.  "
+  "body": "Ring Maps and Coefficients  Given a ring map between commutative rings, we may apply to the composition using the element of to get an induced ring map that sends to . That is, the map applies to the coefficients of a polynomial. This can be generalized to more than one variable in the obvious way.  "
 },
 {
   "id": "exe-the-reduction-homomorphism",
   "level": "2",
   "url": "sec-polyrings.html#exe-the-reduction-homomorphism",
   "type": "Exploration",
-  "number": "9.62",
+  "number": "9.69",
   "title": "Reduction Homomorphism.",
   "body": "Reduction Homomorphism Continuing with , we could have for an ideal of and could be the quotient map. Then takes a polynomial and reduces its coefficients modulo . We will usually denote the image of through the reduction homomorphism by . "
 },
@@ -4046,18 +4109,18 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-polyrings.html#thm-polynomial-division-algorithm",
   "type": "Theorem",
-  "number": "9.63",
+  "number": "9.70",
   "title": "Polynomial Division Algorithm.",
   "body": "Polynomial Division Algorithm   Let be a commutative ring with identity and . Assume the leading coefficient of is a unit in . Then there exists a unique such that , and .   "
 },
 {
-  "id": "thm-root-thm",
+  "id": "thm-factor-thm",
   "level": "2",
-  "url": "sec-polyrings.html#thm-root-thm",
-  "type": "Corollary",
-  "number": "9.64",
-  "title": "Root Theorem.",
-  "body": "Root Theorem   Let be a commutative ring with identity, and . Then if and only if .   "
+  "url": "sec-polyrings.html#thm-factor-thm",
+  "type": "Theorem",
+  "number": "9.71",
+  "title": "Factor Theorem.",
+  "body": "Factor Theorem   Let be a commutative ring with identity, and . Then if and only if .   "
 },
 {
   "id": "sec-ideals",
@@ -4066,7 +4129,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "10.1",
   "title": "Ideals",
-  "body": "Ideals  Definition and First Properties  It is a useless life that is not consecrated to a great ideal. It is like a stone wasted on the field without becoming a part of any edifice. Jose Rizal  Ideal   For a ring , an ideal (or a two sided ideal ) of is a non empty subset such that    is a subgroup of and    for all and , we have and (we can write this concisely as for all  and ). This is often called absorption .   For a ring , a proper ideal is an ideal such that .    Ideal  Ideals were first introduced by Richard Dedekind in the 1870s in his work on algebraic number theory. The term \"ideal\" was chosen by Dedekind to suggest the notion of an \"ideal\" number, which he saw as a kind of idealization of a real number. Similarly, Dedekind saw an ideal in a ring as an idealization of an element in the ring.   To simplify to an excessive degree, ideals are the normal subgroups of rings. This is not accurate in the techincal sense, but it does communicate the vibe of what ideals are and how we will be using them in this text.  Examples of Ideals    In any ring , and itself are ideals.  The ideals of are .  The sets and are a right ideal and a left ideal of respectively. Neither are two-sided ideals.  The set of all nilpotent elements in a ring is an ideal, and has no nonzero nilpotent elements.   Let be a commutative ring, and set . Then is an ideal in .      A fun fact about ideals is that they are subrings.  Ideals are Subrings   Any ideal of a ring is a subring of     The converse need not be true, however.  Subrings Need not be Ideals  Any ideal of a ring is a subring of , but not any subring is an ideal.   For example, in , the set of polynomials for which every term has even degree is a subring (it's closed under subtraction and multiplication), but it is not an ideal because it is not closed under multiplication by arbitrary polynomials. Indeed, , but .   Another fun fact is that we can combine ideals in all sorts of ways to get new ones!  Combinations of Ideals   Let be a ring and let be ideals of . Then    is an ideal     is an ideal     is an ideal and .    The intersection of any collection of ideals of is an ideal.   The set of all ideals of a ring is a lattice with respect to the partial order given by containment. In this lattice, the supremum of a pair of ideals is and the infimum is .    Union of Ideals Need not be an Ideal Give an example  Ideals are also commutative and associative. This is taken for granted or stated as tedious in most cases, but we include it here to be thorough.  Ideals Commute and Associate Let be ideals in . Then                                  For those interested in digging a little deeper into ideal arithmetic, here are some more properties to investigate.  Ideals Distribute in Let be ideals in . Then   Ideals Don't Distribute in General Give an example of a ring where ideals do not distribute.  Modular Law Let be ideals in such that or . Then   And here are some important properties to wrap up on.  Proper Ideals, Fields, and Units   An ideal of a unital ring is proper if and only if contains no units. Moreover, if is a field it has only two ideals and .    Homomorphisms and Ideals   If is a ring homomorphism, then   the image of is a subring of and    the kernel of is an ideal of .     is injective if and only if .    if is an ideal of then is an ideal of .    if is an ideal of then is an ideal of .         Since is a ring homomorphism, it is in particular a group homomorphism . We know the kernel of a group homomorphism is a subgroup, so . All that remains to be shown is that for any  and . Let ; then and , show .       Generated Ideals    If you make yourself more than just a man, if you devote yourself to an ideal, you become something else entirely.   Liam Neeson, Batman Begins   Generated Ideals   If is any subset of a ring , the ideal generated by  , denoted , is the intersection of all ideals of that contain : An ideal is finitely generated if for some finite subset of .    It is common for to be written as ; this is often taken as the standard notation. We will not do so here to maintain notational consistency and to avoid confusion.   By Proposition, is an ideal and it is the smallest ideal of that contains .   Elements in Generated Ideals   For a subset of a ring with , the ideal generated by is given by If is commutative and is any subset, then there is a simpler formula     Generated Ideals and    In the commutative ring , we have . Indeed any element can be written as . Note that .    In the commutative ring , we have , the set of all even integers. Notice this shows that different sets can generate the same ideal. Also note that .     Finitely Generated Ideals and Nilpotent Elements Let be a finitely generated ideal of . Suppose every element of is nilpotent. Prove that there exists an integer such that for all .  Infinitely Generated Ideal Let    Prove that is an ideal of .    Prove that is not finitely generated.     Principal Ideal   Let be an ideal of a ring . The ideal is principal if for some , that is, is generated by a set with a single element.    Principal Ideals in Let be ideals in . Then         Conclude that if and only if and are relatively prime.      "
+  "body": "Ideals  Ideal or No Deal  It is a useless life that is not consecrated to a great ideal. It is like a stone wasted on the field without becoming a part of any edifice. Jose Rizal  Ideal   For a ring , an ideal (or a two sided ideal ) of is a non empty subset such that    is a subgroup of and    for all and , we have and . This is often called absorption Personally I think it would be splendid if we could rename ideals sponges to match this imagery. .   For a ring , a proper ideal is an ideal such that .    Ideal  Ideals were first introduced by in the 1870s in his work on algebraic number theory. The term \"ideal\" was chosen by Dedekind to suggest the notion of an \"ideal\" number, which he saw as a kind of idealization of a real number. Similarly, Dedekind saw an ideal in a ring as an idealization of an element in the ring.   To simplify to an excessive degree, ideals are the normal subgroups of rings. This is not accurate in the techincal sense, but it does communicate the vibe of what ideals are and how we will be using them in this text.  Examples of Ideals    In any ring , and itself are ideals.  The ideals of are .  The sets and are a right ideal and a left ideal of respectively. Neither are two-sided ideals.  The set of all nilpotent elements in a ring is an ideal.   Let be a commutative ring, and set . Then is an ideal in .      A fun fact about ideals is that they are subrings.  Ideals are Subrings   Any ideal of a ring is a subring of     The converse need not be true, however.  Subrings Need not be Ideals  Find, with justification, a subring which is not an ideal.   For example, in , the set of polynomials for which every term has even degree is a subring (it's closed under subtraction and multiplication), but it is not an ideal because it is not closed under multiplication by arbitrary polynomials. Indeed, , but .   Another fun fact is that we can combine ideals in all sorts of ways to get new ones!  Combinations of Ideals   Let be a ring and let be ideals of . Then    is an ideal     is an ideal     is an ideal and .    The intersection of any collection of ideals of is an ideal.   The set of all ideals of a ring is a lattice with respect to the partial order given by containment. In this lattice, the supremum of a pair of ideals is and the infimum is .    Union of Ideals Need not be an Ideal Give an example  Ideals are also commutative and associative. This is taken for granted or stated as tedious in most cases, but we include it here to be thorough.  Ideals Commute and Associate Let be ideals in . Then                                  For those interested in digging a little deeper into ideal arithmetic, here are some more properties to investigate.  Ideals Distribute in Let be ideals in . Then   Ideals Don't Distribute in General Give an example of a ring where ideals do not distribute.  Modular Law Let be ideals in such that or . Then   And here are some important properties to wrap up on.  Proper Ideals, Fields, and Units   An ideal of a unital ring is proper if and only if contains no units. Moreover, if is a field it has only two ideals and .    Homomorphisms and Ideals   If is a ring homomorphism, then   the image of is a subring of and    the kernel of is an ideal of .     is injective if and only if .    if is an ideal of then is an ideal of .    if is an ideal of then is an ideal of .         Since is a ring homomorphism, it is in particular a group homomorphism . We know the kernel of a group homomorphism is a subgroup, so . All that remains to be shown is that for any  and . Let ; then and , show .       Generated Ideals    If you make yourself more than just a man, if you devote yourself to an ideal, you become something else entirely.   Liam Neeson, Batman Begins   Generated Ideals   If is any subset of a ring , the ideal generated by  , denoted , is the intersection of all ideals of that contain : An ideal is finitely generated if for some finite subset of .    It is common for to be written as ; this is often taken as the standard notation. We will not do so here to maintain notational consistency and to avoid confusion.   By Proposition, is an ideal and it is the smallest ideal of that contains .   Elements in Generated Ideals   For a subset of a ring with , the ideal generated by is given by If is commutative and is any subset, then there is a simpler formula     Generated Ideals and    In the commutative ring , we have . Indeed any element can be written as . Note that .    In the commutative ring , we have , the set of all even integers. Notice this shows that different sets can generate the same ideal. Also note that .     Finitely Generated Ideals and Nilpotent Elements Let be a finitely generated ideal of . Suppose every element of is nilpotent. Prove that there exists an integer such that for all .  Infinitely Generated Ideal Let    Prove that is an ideal of .    Prove that is not finitely generated.      "
 },
 {
   "id": "def-ideal",
@@ -4075,7 +4138,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "10.1",
   "title": "Ideal.",
-  "body": "Ideal   For a ring , an ideal (or a two sided ideal ) of is a non empty subset such that    is a subgroup of and    for all and , we have and (we can write this concisely as for all  and ). This is often called absorption .   For a ring , a proper ideal is an ideal such that .   "
+  "body": "Ideal   For a ring , an ideal (or a two sided ideal ) of is a non empty subset such that    is a subgroup of and    for all and , we have and . This is often called absorption Personally I think it would be splendid if we could rename ideals sponges to match this imagery. .   For a ring , a proper ideal is an ideal such that .   "
 },
 {
   "id": "ex-ideal-examples",
@@ -4084,7 +4147,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "10.2",
   "title": "Examples of Ideals.",
-  "body": "Examples of Ideals    In any ring , and itself are ideals.  The ideals of are .  The sets and are a right ideal and a left ideal of respectively. Neither are two-sided ideals.  The set of all nilpotent elements in a ring is an ideal, and has no nonzero nilpotent elements.   Let be a commutative ring, and set . Then is an ideal in .     "
+  "body": "Examples of Ideals    In any ring , and itself are ideals.  The ideals of are .  The sets and are a right ideal and a left ideal of respectively. Neither are two-sided ideals.  The set of all nilpotent elements in a ring is an ideal.   Let be a commutative ring, and set . Then is an ideal in .     "
 },
 {
   "id": "prop-ideals-are-subrings",
@@ -4096,13 +4159,13 @@ var ptx_lunr_docs = [
   "body": "Ideals are Subrings   Any ideal of a ring is a subring of    "
 },
 {
-  "id": "exercise-139",
+  "id": "exercise-142",
   "level": "2",
-  "url": "sec-ideals.html#exercise-139",
+  "url": "sec-ideals.html#exercise-142",
   "type": "Exploration",
   "number": "10.4",
   "title": "Subrings Need not be Ideals.",
-  "body": "Subrings Need not be Ideals  Any ideal of a ring is a subring of , but not any subring is an ideal.   For example, in , the set of polynomials for which every term has even degree is a subring (it's closed under subtraction and multiplication), but it is not an ideal because it is not closed under multiplication by arbitrary polynomials. Indeed, , but .  "
+  "body": "Subrings Need not be Ideals  Find, with justification, a subring which is not an ideal.   For example, in , the set of polynomials for which every term has even degree is a subring (it's closed under subtraction and multiplication), but it is not an ideal because it is not closed under multiplication by arbitrary polynomials. Indeed, , but .  "
 },
 {
   "id": "prop-properties-of-ideals",
@@ -4186,18 +4249,18 @@ var ptx_lunr_docs = [
   "body": "Generated Ideals   If is any subset of a ring , the ideal generated by  , denoted , is the intersection of all ideals of that contain : An ideal is finitely generated if for some finite subset of .   "
 },
 {
-  "id": "remark-48",
+  "id": "remark-49",
   "level": "2",
-  "url": "sec-ideals.html#remark-48",
+  "url": "sec-ideals.html#remark-49",
   "type": "Remark",
   "number": "10.14",
   "title": "",
   "body": "It is common for to be written as ; this is often taken as the standard notation. We will not do so here to maintain notational consistency and to avoid confusion. "
 },
 {
-  "id": "remark-49",
+  "id": "remark-50",
   "level": "2",
-  "url": "sec-ideals.html#remark-49",
+  "url": "sec-ideals.html#remark-50",
   "type": "Remark",
   "number": "10.15",
   "title": "",
@@ -4231,31 +4294,13 @@ var ptx_lunr_docs = [
   "body": "Finitely Generated Ideals and Nilpotent Elements Let be a finitely generated ideal of . Suppose every element of is nilpotent. Prove that there exists an integer such that for all . "
 },
 {
-  "id": "exercise-147",
+  "id": "exercise-150",
   "level": "2",
-  "url": "sec-ideals.html#exercise-147",
+  "url": "sec-ideals.html#exercise-150",
   "type": "Exploration",
   "number": "10.19",
   "title": "Infinitely Generated Ideal.",
   "body": "Infinitely Generated Ideal Let    Prove that is an ideal of .    Prove that is not finitely generated.    "
-},
-{
-  "id": "def-principal-ideal",
-  "level": "2",
-  "url": "sec-ideals.html#def-principal-ideal",
-  "type": "Definition",
-  "number": "10.20",
-  "title": "Principal Ideal.",
-  "body": "Principal Ideal   Let be an ideal of a ring . The ideal is principal if for some , that is, is generated by a set with a single element.   "
-},
-{
-  "id": "exe-properties-of-principal-ideals-in-z",
-  "level": "2",
-  "url": "sec-ideals.html#exe-properties-of-principal-ideals-in-z",
-  "type": "Exploration",
-  "number": "10.21",
-  "title": "Principal Ideals in <span class=\"process-math\">\\(\\Z\\)<\/span>.",
-  "body": "Principal Ideals in Let be ideals in . Then         Conclude that if and only if and are relatively prime.   "
 },
 {
   "id": "sec-ring-quotients",
@@ -4264,14 +4309,14 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "10.2",
   "title": "Quotient Rings",
-  "body": "Quotient Rings  Quotient Rings    Fools ignore complexity. Pragmatists suffer it. Some can avoid it. Geniuses remove it.   Alan Perlis   Additive Cosets form Abelian Group   For a two-sided ideal of , the set of additive cosets modulo is This is an abelian group with respect to addition given by .    Quotient Ring   For a two-sided ideal of The quotient ring of modulo is the set with addition defined as above and multiplication given by     Quotient Rings are Rings Given a two-sided ideal of , prove that the quotient ring is indeed a ring.  Just like we had with groups, it turns out our dear friend has been a quotient all along  Quotients of  If is an ideal in the ring , then the quotient ring is the familiar ring .   This is where the common notation comes from.  And, once again, we have a quotient map that turns out to be a homomorphism.  Quotient Map is Surjective Ring Map Prove that the canonical quotient map is a surjective ring homomorphism.  Last but certainly not least, we have an analogue of for ideals.  Ideal iff Kernel of Ring Map   Let be a ring. A subset of is an ideal of if and only if there exists a ring homomorphism such that      The Ring Isomorphism Theorems  I'm not a very structured person, so when I get some structure, it's cool; it's good for me. J. Cole  We arrive at the isomorphism theorems for rings. We've seen most of this stuff before in different packaging, so lets jump right in.  UMP for Quotient Rings   If is a ring homomorphism and is an ideal such that [^1], there exists a well defined ring homomorphism such that . Furthermore, if is surjective then is surjective and if then is injective.    Ignoring for a minute, we know that there is a unique homomorphism of abelian groups from to such that . It remains only to check that preserves multiplication: Given elements , their product is , and we have since preserves multiplication.    First Isomorphism Theorem for Rings   If is a ring homomorphism, then via the map given by .    The map is a well-defined ring homomorphism by . By the for groups, the map is bijective, finishing the proof.    Second Isomorphism Theorem for Rings   Let be a subring and let be an ideal of . Then is a subring of , is an ideal of , and     Third Isomorphism Theorem for Rings   If is a ring and are two ideals of , then is an ideal of and     Lattice Isomorphism Theorem for Quotient Rings   Suppose is a ring and is a two-sided ideal of and write for the quotient ring homomorphism. There is a bijection with inverse Moreover this bijection induces a bijection between since is an ideal of containing if and only if is an ideal of .       Computations and Examples       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Formal Proofs       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Qualifying Exam Problems       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     "
+  "body": "Quotient Rings  Quotient Rings    Fools ignore complexity. Pragmatists suffer it. Some can avoid it. Geniuses remove it.   Alan Perlis   Additive Cosets form Abelian Group   For a two-sided ideal of , the set of additive cosets modulo is This is an abelian group with respect to addition given by .    Quotient Ring   For a two-sided ideal of The quotient ring of modulo is the set with addition defined as above and multiplication given by     Quotient Rings are Rings Given a two-sided ideal of , prove that the quotient ring is indeed a ring.  Just like we had with groups, it turns out our dear friend has been a quotient all along.  Quotients of  If is an ideal in the ring , then the quotient ring is the familiar ring .   This is where the common notation comes from, even though it should be anyway.  And, once again, we have a quotient map that turns out to be a homomorphism.  Quotient Map is Surjective Ring Map Prove that the canonical quotient map is a surjective ring homomorphism.  Last but certainly not least, we have an analogue of for ideals. Once again, I would like to suggest that ideal subgroup is a far better name for a normal subgroup.  Ideal iff Kernel of Ring Map   Let be a ring. A subset of is an ideal of if and only if there exists a ring homomorphism such that .     The Ring Isomorphism Theorems  I'm not a very structured person, so when I get some structure, it's cool; it's good for me. J. Cole  We arrive at the isomorphism theorems for rings. We've seen most of this stuff before in different packaging, so lets jump right in.  UMP for Quotient Rings   If is a ring homomorphism and is an ideal such that , there exists a well defined ring homomorphism such that . Furthermore, if is surjective then is surjective and if then is injective.    Ignoring for a minute, we know that there is a unique homomorphism of abelian groups from to such that . It remains only to check that preserves multiplication: Given elements , their product is , and we have since preserves multiplication.    First Isomorphism Theorem for Rings   If is a ring homomorphism, then via the map given by .    The map is a well-defined ring homomorphism by . By the for groups, the map is bijective, finishing the proof.    Second Isomorphism Theorem for Rings   Let be a subring and let be an ideal of . Then is a subring of , is an ideal of , and     Third Isomorphism Theorem for Rings   If is a ring and are two ideals of , then is an ideal of and     Lattice Isomorphism Theorem for Quotient Rings   Suppose is a ring and is a two-sided ideal of and write for the quotient ring homomorphism. There is a bijection with inverse Moreover this bijection induces a bijection between since is an ideal of containing if and only if is an ideal of .       Computations and Examples       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Formal Proofs       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Qualifying Exam Problems       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     "
 },
 {
   "id": "lem-cosets-abelian",
   "level": "2",
   "url": "sec-ring-quotients.html#lem-cosets-abelian",
   "type": "Lemma",
-  "number": "10.22",
+  "number": "10.20",
   "title": "Additive Cosets form Abelian Group.",
   "body": "Additive Cosets form Abelian Group   For a two-sided ideal of , the set of additive cosets modulo is This is an abelian group with respect to addition given by .   "
 },
@@ -4280,7 +4325,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-ring-quotients.html#def-quotient-ring",
   "type": "Definition",
-  "number": "10.23",
+  "number": "10.21",
   "title": "Quotient Ring.",
   "body": "Quotient Ring   For a two-sided ideal of The quotient ring of modulo is the set with addition defined as above and multiplication given by    "
 },
@@ -4289,7 +4334,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-ring-quotients.html#exe-quotient-ring-is-ring",
   "type": "Exploration",
-  "number": "10.24",
+  "number": "10.22",
   "title": "Quotient Rings are Rings.",
   "body": "Quotient Rings are Rings Given a two-sided ideal of , prove that the quotient ring is indeed a ring. "
 },
@@ -4298,25 +4343,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-ring-quotients.html#ex-quotient-of-z",
   "type": "Example",
-  "number": "10.25",
+  "number": "10.23",
   "title": "Quotients of <span class=\"process-math\">\\(\\Z\\)<\/span>.",
   "body": "Quotients of  If is an ideal in the ring , then the quotient ring is the familiar ring .  "
 },
 {
-  "id": "remark-50",
+  "id": "remark-51",
   "level": "2",
-  "url": "sec-ring-quotients.html#remark-50",
+  "url": "sec-ring-quotients.html#remark-51",
   "type": "Remark",
-  "number": "10.26",
+  "number": "10.24",
   "title": "",
-  "body": "This is where the common notation comes from. "
+  "body": "This is where the common notation comes from, even though it should be anyway. "
 },
 {
   "id": "quotient-map-is-surjective-homomorphism",
   "level": "2",
   "url": "sec-ring-quotients.html#quotient-map-is-surjective-homomorphism",
   "type": "Exploration",
-  "number": "10.27",
+  "number": "10.25",
   "title": "Quotient Map is Surjective Ring Map.",
   "body": "Quotient Map is Surjective Ring Map Prove that the canonical quotient map is a surjective ring homomorphism. "
 },
@@ -4325,25 +4370,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-ring-quotients.html#thm-ideal-iff-kernel-of-ring-map",
   "type": "Theorem",
-  "number": "10.28",
+  "number": "10.26",
   "title": "Ideal iff Kernel of Ring Map.",
-  "body": "Ideal iff Kernel of Ring Map   Let be a ring. A subset of is an ideal of if and only if there exists a ring homomorphism such that    "
+  "body": "Ideal iff Kernel of Ring Map   Let be a ring. A subset of is an ideal of if and only if there exists a ring homomorphism such that .   "
 },
 {
   "id": "thm-ump-for-quotient-rings",
   "level": "2",
   "url": "sec-ring-quotients.html#thm-ump-for-quotient-rings",
   "type": "Theorem",
-  "number": "10.29",
+  "number": "10.27",
   "title": "UMP for Quotient Rings.",
-  "body": "UMP for Quotient Rings   If is a ring homomorphism and is an ideal such that [^1], there exists a well defined ring homomorphism such that . Furthermore, if is surjective then is surjective and if then is injective.    Ignoring for a minute, we know that there is a unique homomorphism of abelian groups from to such that . It remains only to check that preserves multiplication: Given elements , their product is , and we have since preserves multiplication.   "
+  "body": "UMP for Quotient Rings   If is a ring homomorphism and is an ideal such that , there exists a well defined ring homomorphism such that . Furthermore, if is surjective then is surjective and if then is injective.    Ignoring for a minute, we know that there is a unique homomorphism of abelian groups from to such that . It remains only to check that preserves multiplication: Given elements , their product is , and we have since preserves multiplication.   "
 },
 {
   "id": "thm-ring-fit",
   "level": "2",
   "url": "sec-ring-quotients.html#thm-ring-fit",
   "type": "Theorem",
-  "number": "10.30",
+  "number": "10.28",
   "title": "First Isomorphism Theorem for Rings.",
   "body": "First Isomorphism Theorem for Rings   If is a ring homomorphism, then via the map given by .    The map is a well-defined ring homomorphism by . By the for groups, the map is bijective, finishing the proof.   "
 },
@@ -4352,7 +4397,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-ring-quotients.html#thm-ring-sit",
   "type": "Theorem",
-  "number": "10.31",
+  "number": "10.29",
   "title": "Second Isomorphism Theorem for Rings.",
   "body": "Second Isomorphism Theorem for Rings   Let be a subring and let be an ideal of . Then is a subring of , is an ideal of , and    "
 },
@@ -4361,7 +4406,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-ring-quotients.html#thm-ring-tit",
   "type": "Theorem",
-  "number": "10.32",
+  "number": "10.30",
   "title": "Third Isomorphism Theorem for Rings.",
   "body": "Third Isomorphism Theorem for Rings   If is a ring and are two ideals of , then is an ideal of and    "
 },
@@ -4370,32 +4415,32 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-ring-quotients.html#thm-ring-lit",
   "type": "Theorem",
-  "number": "10.33",
+  "number": "10.31",
   "title": "Lattice Isomorphism Theorem for Quotient Rings.",
   "body": "Lattice Isomorphism Theorem for Quotient Rings   Suppose is a ring and is a two-sided ideal of and write for the quotient ring homomorphism. There is a bijection with inverse Moreover this bijection induces a bijection between since is an ideal of containing if and only if is an ideal of .   "
 },
 {
-  "id": "exercise-151",
+  "id": "exercise-153",
   "level": "2",
-  "url": "sec-ring-quotients.html#exercise-151",
+  "url": "sec-ring-quotients.html#exercise-153",
   "type": "Exercise",
   "number": "1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-152",
+  "id": "exercise-154",
   "level": "2",
-  "url": "sec-ring-quotients.html#exercise-152",
+  "url": "sec-ring-quotients.html#exercise-154",
   "type": "Exercise",
   "number": "2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-153",
+  "id": "exercise-155",
   "level": "2",
-  "url": "sec-ring-quotients.html#exercise-153",
+  "url": "sec-ring-quotients.html#exercise-155",
   "type": "Exercise",
   "number": "3",
   "title": ".",
@@ -4415,16 +4460,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-primemax-ideals.html#def-prime-ideal",
   "type": "Definition",
-  "number": "10.34",
+  "number": "10.32",
   "title": "Prime Ideal.",
   "body": "Prime Ideal   A prime ideal of a commutative ring is a proper ideal such that whenever for , we have or .   "
 },
 {
-  "id": "remark-51",
+  "id": "remark-52",
   "level": "2",
-  "url": "sec-primemax-ideals.html#remark-51",
+  "url": "sec-primemax-ideals.html#remark-52",
   "type": "Remark",
-  "number": "10.35",
+  "number": "10.33",
   "title": "",
   "body": "We often refer to prime ideals as just primes , this will become gently confusing later and we will avoid doing so when possible. "
 },
@@ -4433,7 +4478,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-primemax-ideals.html#ex-prime-ideals",
   "type": "Example",
-  "number": "10.36",
+  "number": "10.34",
   "title": "Examples of Prime Ideals.",
   "body": "Examples of Prime Ideals    In , the prime ideals are and the ideals generated by prime integers , where is a prime integer. The maximal ideals are the ideals generated by prime integers. In particular is prime but not maximal.  In the ideal is not prime, because , but and (because if then so , a contradiction).    "
 },
@@ -4442,7 +4487,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-primemax-ideals.html#prop-prime-iff-complement-closed",
   "type": "Proposition",
-  "number": "10.37",
+  "number": "10.35",
   "title": "Prime iff Complement is Closed.",
   "body": "Prime iff Complement is Closed   An ideal is prime if and only if is closed under multiplication.   "
 },
@@ -4451,7 +4496,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-primemax-ideals.html#thm-prime-iff-domain",
   "type": "Theorem",
-  "number": "10.38",
+  "number": "10.36",
   "title": "Prime iff Quotient is Domain.",
   "body": "Prime iff Quotient is Domain   Let be a commutative ring with , and let be an ideal of . The ideal is prime if and only if is an integral domain.    Suppose is prime. If , then and hence either or , so that either or . This proves is a domain. Suppose is a domain and that . Then in and hence either or . It follows or , so that is prime.   "
 },
@@ -4460,7 +4505,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-primemax-ideals.html#prop-equivalent-integral-domain-definition",
   "type": "Proposition",
-  "number": "10.39",
+  "number": "10.37",
   "title": "Equivalent Domain Characterization.",
   "body": "Equivalent Domain Characterization   Let be a nontrivial ring. Then is an integral domain if and only if the ideal is prime.   "
 },
@@ -4469,7 +4514,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-primemax-ideals.html#thm-primes-and-maps",
   "type": "Theorem",
-  "number": "10.40",
+  "number": "10.38",
   "title": "Prime Ideals and Ring Maps.",
   "body": "Prime Ideals and Ring Maps      If is a domain, is a ring and is a ring homomorphism, then is a prime ideal.    If is a ring homomorphism and is a prime ideal in , then is prime in .      "
 },
@@ -4478,16 +4523,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-primemax-ideals.html#def-maximal-ideal",
   "type": "Definition",
-  "number": "10.41",
+  "number": "10.39",
   "title": "Maximal Ideal.",
   "body": "Maximal Ideal   A maximal ideal of an arbitrary ring is a proper ideal such that the only ideals of containing are and .   "
 },
 {
-  "id": "remark-52",
+  "id": "remark-53",
   "level": "2",
-  "url": "sec-primemax-ideals.html#remark-52",
+  "url": "sec-primemax-ideals.html#remark-53",
   "type": "Remark",
-  "number": "10.42",
+  "number": "10.40",
   "title": "",
   "body": "It is not uncommon to denote maximal ideals with . We reserve this notation for when we dive into modules. "
 },
@@ -4496,7 +4541,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-primemax-ideals.html#exe-2x-prime-and-maximal-in-zx",
   "type": "Exploration",
-  "number": "10.43",
+  "number": "10.41",
   "title": "<span class=\"process-math\">\\(\\igen{2,x}\\)<\/span> in <span class=\"process-math\">\\(\\Z[x]\\)<\/span>.",
   "body": "in In the ideal is maximal and prime, the ideals and are prime but not maximal. "
 },
@@ -4505,7 +4550,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-primemax-ideals.html#thm-maximal-iff-field",
   "type": "Theorem",
-  "number": "10.44",
+  "number": "10.42",
   "title": "Maximal Ideal iff Quotient is a Field.",
   "body": "Maximal Ideal iff Quotient is a Field   Let be a commutative ring with , and let be an ideal of . The ideal is maximal if and only if is a field.    The first assertion follows immediately from the Lattice Isomorphism Theorem and the fact that is a field if and only if its only ideals are and .   "
 },
@@ -4514,7 +4559,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-primemax-ideals.html#cor-maximal-prime",
   "type": "Corollary",
-  "number": "10.45",
+  "number": "10.43",
   "title": "Maximal Ideals are Prime.",
   "body": "Maximal Ideals are Prime   Every maximal ideal is prime.    If is maximal, then is a field, which in particular implies that is a domain, so is prime.   "
 },
@@ -4523,7 +4568,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-primemax-ideals.html#exe-preimage-of-maximal-ideal-possibly-not-maximal",
   "type": "Exploration",
-  "number": "10.46",
+  "number": "10.44",
   "title": "Preimage of Maximal Ideal not Necessarily Maximal.",
   "body": "Preimage of Maximal Ideal not Necessarily Maximal  Give an explicit example of a ring homomorphism and maximal ideal of such that is not maximal in .  "
 },
@@ -4532,7 +4577,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-primemax-ideals.html#lem-zorn",
   "type": "Lemma",
-  "number": "10.47",
+  "number": "10.45",
   "title": "Zorn's Lemma.",
   "body": "Zorn's Lemma   Let be a non-empty family of sets. Suppose that for each chain in , the set is in . Then has a maximal element.   "
 },
@@ -4541,77 +4586,77 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-primemax-ideals.html#thm-all-ideals-contained-in-maximal-ideal",
   "type": "Theorem",
-  "number": "10.48",
+  "number": "10.46",
   "title": "All Ideals Contained in Maximal Ideal.",
   "body": "All Ideals Contained in Maximal Ideal   If is a ring with and is a proper ideal of , then there is a maximal ideal of containing . In particular every ring contains a maximal ideal.    Let be the set of proper ideals of that contain and view as a poset under containment. We will apply Zorn's Lemma. Suppose is a totally ordered subset of . We need to show has an upper bound in . If is empty, is such a bound. Otherwise, let .  Since is non-empty, we have and so .  Given , then for some . Since is totally ordered, either or , and hence or . Either way, .  For and , we have for some and hence .  This proves is an ideal that contains . Since every is a proper ideal, , so and hence is a proper ideal, so . By Zorn's Lemma, we conclude has at least one maximal element . This is a maximal ideal in the sense of definition since if is an ideal of and then either or, if is proper, then , which yields by using that is a maximal element of .  The existence of a maximal ideal follows by applying the first part of the theorem for .   "
+},
+{
+  "id": "proposition-30",
+  "level": "2",
+  "url": "sec-primemax-ideals.html#proposition-30",
+  "type": "Proposition",
+  "number": "10.47",
+  "title": "Qual.",
+  "body": "Qual   Let be a commutative ring, and set . Prove that following assertions.     is an ideal in .  If is a field, then each element of is either a unit or in .         Let . Thus there exists integers such that . Consider Thus . Additionally, , and so as well.  We now consider as an additive group. Notice that and thus the identity is in there. Let We examine . Since we have and so . So . Perfect. We have ourselves a subring.    Suppose now that is a field. Luckily for us, this makes a maximal ideal.  Let . If , great. Suppose its not. Then in  is a unit, since we're in a field now. So for some . Thus for some . Since and a maximal and thus prime ideal, we have or , a contradiction.      "
 },
 {
   "id": "proposition-31",
   "level": "2",
   "url": "sec-primemax-ideals.html#proposition-31",
   "type": "Proposition",
-  "number": "10.49",
+  "number": "10.48",
   "title": "Qual.",
-  "body": "Qual   Let be a commutative ring, and set . Prove that following assertions.     is an ideal in .  If is a field, then each element of is either a unit or in .         Let . Thus there exists integers such that . Consider Thus . Additionally, , and so as well.  We now consider as an additive group. Notice that and thus the identity is in there. Let We examine . Since we have and so . So . Perfect. We have ourselves a subring.    Suppose now that is a field. Luckily for us, this makes a maximal ideal.  Let . If , great. Suppose its not. Then in  is a unit, since we're in a field now. So for some . Thus for some . Since and a maximal and thus prime ideal, we have or , a contradiction.      "
+  "body": "Qual      Prove that a finite integral domain must be a field.    Prove that if is a commutative ring and is a prime ideal such that has finite index as an additive subgroup of , then is a maximal ideal. Give an example to show that this implication may fail if the finite index assumption is dropped.       Let be a finite integral domain.   Let , and consider the set . As is finite there must exist such that . In integral domains cancellation is allowed, and thus we can cancel an from both sides, yielding , and thus , making a unit of . Thus is a field.    Let be a commutative ring and a prime ideal such that has finite index as an additive subgroup of .  Consider , which is a domain since is a prime ideal. As for some , we know that , making it a finite domain. Thus is a field by Part (a), making maximal by the same theorem as above.  Let and consider , in which is a prime ideal. However, , which does not have finite order, nor is it a field.      "
 },
 {
   "id": "proposition-32",
   "level": "2",
   "url": "sec-primemax-ideals.html#proposition-32",
   "type": "Proposition",
-  "number": "10.50",
+  "number": "10.49",
   "title": "Qual.",
-  "body": "Qual      Prove that a finite integral domain must be a field.    Prove that if is a commutative ring and is a prime ideal such that has finite index as an additive subgroup of , then is a maximal ideal. Give an example to show that this implication may fail if the finite index assumption is dropped.       Let be a finite integral domain.   Let , and consider the set . As is finite there must exist such that . In integral domains cancellation is allowed, and thus we can cancel an from both sides, yielding , and thus , making a unit of . Thus is a field.    Let be a commutative ring and a prime ideal such that has finite index as an additive subgroup of .  Consider , which is a domain since is a prime ideal. As for some , we know that , making it a finite domain. Thus is a field by Part (a), making maximal by the same theorem as above.  Let and consider , in which is a prime ideal. However, , which does not have finite order, nor is it a field.      "
+  "body": "Qual   Let be a commutative ring with identity, and assume .    Prove that every maximal ideal of is a prime ideal.  Assume is a finite ring. Prove that every prime ideal is a maximal ideal.         Let be a maximal ideal of . We show that is a field By the Lattice Isomorphism Theorem we know there is a one-to-one correspondence between the ideals of and the ideals of containing . However, as is maximal, the only ideals of containing are and itself, meaning that has exactly two ideals, making a field.  We show that since is a domain, must be prime. Suppose by way of contradiction that is not prime, so exist elements such that but neither nor are in . Thus , making and zerodivisors in , contradicting the fact that is a field. Thus is prime.    Let be a finite ring, and let be a prime ideal in , making an integral domain by . We show is a field. Let , and consider for all . As is finite, there exists some such that . Then , meaning that . Thus has inverse , making a unit. Thus is a field, making a maximal ideal by       "
 },
 {
   "id": "proposition-33",
   "level": "2",
   "url": "sec-primemax-ideals.html#proposition-33",
   "type": "Proposition",
-  "number": "10.51",
+  "number": "10.50",
   "title": "Qual.",
-  "body": "Qual   Let be a commutative ring with identity, and assume .    Prove that every maximal ideal of is a prime ideal.  Assume is a finite ring. Prove that every prime ideal is a maximal ideal.         Let be a maximal ideal of . We show that is a field By the Lattice Isomorphism Theorem we know there is a one-to-one correspondence between the ideals of and the ideals of containing . However, as is maximal, the only ideals of containing are and itself, meaning that has exactly two ideals, making a field.  We show that since is a domain, must be prime. Suppose by way of contradiction that is not prime, so exist elements such that but neither nor are in . Thus , making and zerodivisors in , contradicting the fact that is a field. Thus is prime.    Let be a finite ring, and let be a prime ideal in , making an integral domain by . We show is a field. Let , and consider for all . As is finite, there exists some such that . Then , meaning that . Thus has inverse , making a unit. Thus is a field, making a maximal ideal by       "
+  "body": "Qual   Let be a commutative ring in which every element satisfies for some . Show that every prime ideal in R is maximal.    Let be a commutative ring in which every element satisfies for some . Let be a prime ideal in .  Let , meaning . Then for some . As is a domain   we can cancel an to see that , and thus , making a unit in . Thus is a field, making maximal in .   "
 },
 {
   "id": "proposition-34",
   "level": "2",
   "url": "sec-primemax-ideals.html#proposition-34",
   "type": "Proposition",
-  "number": "10.52",
-  "title": "Qual.",
-  "body": "Qual   Let be a commutative ring in which every element satisfies for some . Show that every prime ideal in R is maximal.    Let be a commutative ring in which every element satisfies for some . Let be a prime ideal in .  Let , meaning . Then for some . As is a domain   we can cancel an to see that , and thus , making a unit in . Thus is a field, making maximal in .   "
-},
-{
-  "id": "proposition-35",
-  "level": "2",
-  "url": "sec-primemax-ideals.html#proposition-35",
-  "type": "Proposition",
-  "number": "10.53",
+  "number": "10.51",
   "title": "Qual.",
   "body": "Qual   Let be a commutative ring with identity (with ) and a proper ideal. Prove there exists a prime ideal containing such that whenever where is also a prime ideal, then . (Hint: use Zorn's lemma.)   "
 },
 {
-  "id": "exercise-156",
+  "id": "exercise-158",
   "level": "2",
-  "url": "sec-primemax-ideals.html#exercise-156",
+  "url": "sec-primemax-ideals.html#exercise-158",
   "type": "Exercise",
   "number": "1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-157",
+  "id": "exercise-159",
   "level": "2",
-  "url": "sec-primemax-ideals.html#exercise-157",
+  "url": "sec-primemax-ideals.html#exercise-159",
   "type": "Exercise",
   "number": "2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-158",
+  "id": "exercise-160",
   "level": "2",
-  "url": "sec-primemax-ideals.html#exercise-158",
+  "url": "sec-primemax-ideals.html#exercise-160",
   "type": "Exercise",
   "number": "3",
   "title": ".",
@@ -4672,9 +4717,9 @@ var ptx_lunr_docs = [
   "body": "GCD   Given elements , not both , of a Euclidean domain with Euclidean norm , a of and is an element such that:    and ; and    If and , then .      "
 },
 {
-  "id": "remark-53",
+  "id": "remark-54",
   "level": "2",
-  "url": "sec-eds.html#remark-53",
+  "url": "sec-eds.html#remark-54",
   "type": "Remark",
   "number": "11.6",
   "title": "",
@@ -4687,14 +4732,41 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "11.2",
   "title": "Principal Ideal Domains",
-  "body": "Principal Ideal Domains  One chance is all you need. Jesse Owens  PID   A ring is called a principal ideal domain (PID) if it is a domain with the property that every ideal is principal, i.e., for each ideal , we have for some     PIDs  The concept of principal ideal domains (PIDs) was introduced by the German mathematician Ernst Eduard Kummer in the 19th century, as a generalization of the concept of Euclidean domains.   Polynomial Rings over Fields are PIDs For any field , every ideal of is principal ( is a PID)  Euclidean Domains are PIDs   If is a Euclidean domain, then is a PID.    Let be the norm function making into a Euclidean domain. Pick an ideal . If is the zero ideal, . Otherwise pick a non-zero element of with as small as possible. (Such a exists by the well-ordering of .) I claim . It is clear that . Pick . Then and either or . But note that , and we cannot have both and by our choice of . So it must be that , and hence .    The converse is not true in general.  PIDs Need not be Euclidean Domains  The ring is a PID, but not a Euclidean domain. It is the simplest example of such a ring, but the proofs of these claims are not easy. I will not cover a proof of this fact.   Nonzero Primes are Maximal in PIDs   If is a PID, then every nonzero prime ideal is maximal.    Associate   Let be a domain. Two elements are associates if there is a unit of R such that .    Associates and Principal Ideals   Two elements of a domain are associates if and only if .    If then and so for some . Similarly and hence . Since is a domain, either or . If , then and otherwise is a unit.  If for a unit , then and so and , from which is follows that and .    GCDs and Units in PIDs   If is a PID and , then    for some and any such is a gcd of and     the gcd of and is unique up to multiplication by a unit.       The existence of is granted by definition in a PID. Now gives that and . If and we have that , so by minimality. This gives , hence .    If is not only a PID but a Euclidean domain with norm function , then the Euclidean algorithm can be used to compute a gcd of any two nonzero .  Prime   Suppose is a domain. An element is a prime element if and the ideal is a prime ideal.    Irreducible   Suppose is a domain. An element is irreducible if , is not a unit, and whenever with then either or is a unit.    Examples of Primes and Irreducibles    the prime elements of are the prime integers and their negatives; they are also irreducible  any element with a prime integer is irreducible e.g. is irreducible  the element is not irreducible in   the polynomial is irreducible; indeed if it factors nontrivially, it must factor as a product of two linear polynomials: . Then is a root for . But neither nor are roots for this polynomial, a contradiction.     In , Prime but not Irreducible  In the domain the element is irreducible but not prime.   Note that and thus . However we claim that neither nor are in . If then for some and so , a contradiction. Thus is not prime.    In the ring the element is irreducible but not prime.   Since this ring is a domain. The element is irreducible for degree reasons. The ideal contains but doesn't contain so is not prime.   Irreducible is Prime in PID   Let be a domain and let .   If is a prime element, then is irreducible.    If is a PID and is irreducible, then is a prime element.       Suppose is an integral domain and that is prime. Then and is not a unit. Suppose . Then and hence by definition either or . If , we have for some and so . Since , , and is an integral domain, we must have , showing that is a unit.  Assume is a PID and that is irreducible. Since is not a unit, is a proper ideal and hence is contained in a maximal ideal by Theorem . We show and hence is prime. Since is a PID, for some . So for some . But is irreducible and is not a unit, which forces to be a unit and hence .    Factorizations and Permutations   Assume is a PID is non zero and not a unit and are two different irreducible factorization of . Then and there is a permutation such that, for all , we have and are associates.    Without loss of generality, assume . We induct on .  If then as well since and would yield , a contradiction. If we have and there is nothing more to prove.  Assume and that irreducible factorizations with factors are unique up to reordering factors and taking associates.  Since is a PID, irreducible elements are prime by Theorem . Since we have that and since is a prime ideal it follows that for some . Upon reordering, we may as well assume . Thus for some . Since is irreducible and is not a unit, must be a unit. We get and hence, since is an integral domain, we may divide by to obtain Notice that is a prime ideal so is irreducible by Theorem .  By the inductive hypothesis we deduce that hence and also that are associates to in some order. This together with associate to establishes the claim.    "
+  "body": "Principal Ideal Domains  One chance is all you need. Jesse Owens  Principal Ideal   Let be an ideal of a ring . The ideal is principal if for some , that is, is generated by a set with a single element.    Principal Ideals in Let be ideals in . Then         Conclude that if and only if and are relatively prime.    Examples of Principal Ideals    every ideal of is principal with for some This means is a PID, something that will be defined in   for any field , every ideal of is principal.  for any field , every ideal in is finitely generated, but not necessarily principal. This is a consequence of a deep theorem called the Hilbert Basis Theorem, which you will see in Math 905.     PID   A ring is called a principal ideal domain (PID) if it is a domain with the property that every ideal is principal, i.e., for each ideal , we have for some     PIDs  The concept of principal ideal domains (PIDs) was introduced by the German mathematician Ernst Eduard Kummer in the 19th century, as a generalization of the concept of Euclidean domains.   Polynomial Rings over Fields are PIDs For any field , every ideal of is principal ( is a PID)  Euclidean Domains are PIDs   If is a Euclidean domain, then is a PID.    Let be the norm function making into a Euclidean domain. Pick an ideal . If is the zero ideal, . Otherwise pick a non-zero element of with as small as possible. (Such a exists by the well-ordering of .) I claim . It is clear that . Pick . Then and either or . But note that , and we cannot have both and by our choice of . So it must be that , and hence .    The converse is not true in general.  PIDs Need not be Euclidean Domains  The ring is a PID, but not a Euclidean domain. It is the simplest example of such a ring, but the proofs of these claims are not easy. I will not cover a proof of this fact.   Nonzero Primes are Maximal in PIDs   If is a PID, then every nonzero prime ideal is maximal.    Associate   Let be a domain. Two elements are associates if there is a unit of R such that .    Associates and Principal Ideals   Two elements of a domain are associates if and only if .    If then and so for some . Similarly and hence . Since is a domain, either or . If , then and otherwise is a unit.  If for a unit , then and so and , from which is follows that and .    GCDs and Units in PIDs   If is a PID and , then    for some and any such is a gcd of and     the gcd of and is unique up to multiplication by a unit.       The existence of is granted by definition in a PID. Now gives that and . If and we have that , so by minimality. This gives , hence .    If is not only a PID but a Euclidean domain with norm function , then the Euclidean algorithm can be used to compute a gcd of any two nonzero .  Prime   Suppose is a domain. An element is a prime element if and the ideal is a prime ideal.    Irreducible   Suppose is a domain. An element is irreducible if , is not a unit, and whenever with then either or is a unit.    Examples of Primes and Irreducibles    the prime elements of are the prime integers and their negatives; they are also irreducible  any element with a prime integer is irreducible e.g. is irreducible  the element is not irreducible in   the polynomial is irreducible; indeed if it factors nontrivially, it must factor as a product of two linear polynomials: . Then is a root for . But neither nor are roots for this polynomial, a contradiction.     In , Prime but not Irreducible  In the domain the element is irreducible but not prime.   Note that and thus . However we claim that neither nor are in . If then for some and so , a contradiction. Thus is not prime.    In the ring the element is irreducible but not prime.   Since this ring is a domain. The element is irreducible for degree reasons. The ideal contains but doesn't contain so is not prime.   Irreducible is Prime in PID   Let be a domain and let .   If is a prime element, then is irreducible.    If is a PID and is irreducible, then is a prime element.       Suppose is an integral domain and that is prime. Then and is not a unit. Suppose . Then and hence by definition either or . If , we have for some and so . Since , , and is an integral domain, we must have , showing that is a unit.  Assume is a PID and that is irreducible. Since is not a unit, is a proper ideal and hence is contained in a maximal ideal by Theorem . We show and hence is prime. Since is a PID, for some . So for some . But is irreducible and is not a unit, which forces to be a unit and hence .    Factorizations and Permutations   Assume is a PID is non zero and not a unit and are two different irreducible factorization of . Then and there is a permutation such that, for all , we have and are associates.    Without loss of generality, assume . We induct on .  If then as well since and would yield , a contradiction. If we have and there is nothing more to prove.  Assume and that irreducible factorizations with factors are unique up to reordering factors and taking associates.  Since is a PID, irreducible elements are prime by Theorem . Since we have that and since is a prime ideal it follows that for some . Upon reordering, we may as well assume . Thus for some . Since is irreducible and is not a unit, must be a unit. We get and hence, since is an integral domain, we may divide by to obtain Notice that is a prime ideal so is irreducible by Theorem .  By the inductive hypothesis we deduce that hence and also that are associates to in some order. This together with associate to establishes the claim.    "
+},
+{
+  "id": "def-principal-ideal",
+  "level": "2",
+  "url": "sec-pids.html#def-principal-ideal",
+  "type": "Definition",
+  "number": "11.7",
+  "title": "Principal Ideal.",
+  "body": "Principal Ideal   Let be an ideal of a ring . The ideal is principal if for some , that is, is generated by a set with a single element.   "
+},
+{
+  "id": "exe-properties-of-principal-ideals-in-z",
+  "level": "2",
+  "url": "sec-pids.html#exe-properties-of-principal-ideals-in-z",
+  "type": "Exploration",
+  "number": "11.8",
+  "title": "Principal Ideals in <span class=\"process-math\">\\(\\Z\\)<\/span>.",
+  "body": "Principal Ideals in Let be ideals in . Then         Conclude that if and only if and are relatively prime.   "
+},
+{
+  "id": "ex-principal-ideals",
+  "level": "2",
+  "url": "sec-pids.html#ex-principal-ideals",
+  "type": "Example",
+  "number": "11.9",
+  "title": "Examples of Principal Ideals.",
+  "body": "Examples of Principal Ideals    every ideal of is principal with for some This means is a PID, something that will be defined in   for any field , every ideal of is principal.  for any field , every ideal in is finitely generated, but not necessarily principal. This is a consequence of a deep theorem called the Hilbert Basis Theorem, which you will see in Math 905.    "
 },
 {
   "id": "def-pid",
   "level": "2",
   "url": "sec-pids.html#def-pid",
   "type": "Definition",
-  "number": "11.7",
+  "number": "11.10",
   "title": "PID.",
   "body": "PID   A ring is called a principal ideal domain (PID) if it is a domain with the property that every ideal is principal, i.e., for each ideal , we have for some    "
 },
@@ -4703,7 +4775,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-pids.html#exe-fx-is-a-pid",
   "type": "Exploration",
-  "number": "11.8",
+  "number": "11.11",
   "title": "Polynomial Rings over Fields are PIDs.",
   "body": "Polynomial Rings over Fields are PIDs For any field , every ideal of is principal ( is a PID) "
 },
@@ -4712,7 +4784,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-pids.html#thm-ed-is-a-pid",
   "type": "Theorem",
-  "number": "11.9",
+  "number": "11.12",
   "title": "Euclidean Domains are PIDs.",
   "body": "Euclidean Domains are PIDs   If is a Euclidean domain, then is a PID.    Let be the norm function making into a Euclidean domain. Pick an ideal . If is the zero ideal, . Otherwise pick a non-zero element of with as small as possible. (Such a exists by the well-ordering of .) I claim . It is clear that . Pick . Then and either or . But note that , and we cannot have both and by our choice of . So it must be that , and hence .   "
 },
@@ -4721,7 +4793,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-pids.html#ex-pid-not-ed",
   "type": "Example",
-  "number": "11.10",
+  "number": "11.13",
   "title": "PIDs Need not be Euclidean Domains.",
   "body": "PIDs Need not be Euclidean Domains  The ring is a PID, but not a Euclidean domain. It is the simplest example of such a ring, but the proofs of these claims are not easy. I will not cover a proof of this fact.  "
 },
@@ -4730,7 +4802,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-pids.html#exe-nonzero-primes-maximal-in-pid",
   "type": "Proposition",
-  "number": "11.11",
+  "number": "11.14",
   "title": "Nonzero Primes are Maximal in PIDs.",
   "body": "Nonzero Primes are Maximal in PIDs   If is a PID, then every nonzero prime ideal is maximal.   "
 },
@@ -4739,7 +4811,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-pids.html#def-associate",
   "type": "Definition",
-  "number": "11.12",
+  "number": "11.15",
   "title": "Associate.",
   "body": "Associate   Let be a domain. Two elements are associates if there is a unit of R such that .   "
 },
@@ -4748,7 +4820,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-pids.html#lem-associates-and-principal-ideals",
   "type": "Lemma",
-  "number": "11.13",
+  "number": "11.16",
   "title": "Associates and Principal Ideals.",
   "body": "Associates and Principal Ideals   Two elements of a domain are associates if and only if .    If then and so for some . Similarly and hence . Since is a domain, either or . If , then and otherwise is a unit.  If for a unit , then and so and , from which is follows that and .   "
 },
@@ -4757,16 +4829,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-pids.html#prop-gcds-and-units-in-pids",
   "type": "Proposition",
-  "number": "11.14",
+  "number": "11.17",
   "title": "GCDs and Units in PIDs.",
   "body": "GCDs and Units in PIDs   If is a PID and , then    for some and any such is a gcd of and     the gcd of and is unique up to multiplication by a unit.       The existence of is granted by definition in a PID. Now gives that and . If and we have that , so by minimality. This gives , hence .   "
 },
 {
-  "id": "remark-54",
+  "id": "remark-55",
   "level": "2",
-  "url": "sec-pids.html#remark-54",
+  "url": "sec-pids.html#remark-55",
   "type": "Remark",
-  "number": "11.15",
+  "number": "11.18",
   "title": "",
   "body": "If is not only a PID but a Euclidean domain with norm function , then the Euclidean algorithm can be used to compute a gcd of any two nonzero . "
 },
@@ -4775,7 +4847,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-pids.html#def-prime-element",
   "type": "Definition",
-  "number": "11.16",
+  "number": "11.19",
   "title": "Prime.",
   "body": "Prime   Suppose is a domain. An element is a prime element if and the ideal is a prime ideal.   "
 },
@@ -4784,7 +4856,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-pids.html#def-irreducible",
   "type": "Definition",
-  "number": "11.17",
+  "number": "11.20",
   "title": "Irreducible.",
   "body": "Irreducible   Suppose is a domain. An element is irreducible if , is not a unit, and whenever with then either or is a unit.   "
 },
@@ -4793,7 +4865,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-pids.html#ex-prime-and-irreducible-elements",
   "type": "Example",
-  "number": "11.18",
+  "number": "11.21",
   "title": "Examples of Primes and Irreducibles.",
   "body": "Examples of Primes and Irreducibles    the prime elements of are the prime integers and their negatives; they are also irreducible  any element with a prime integer is irreducible e.g. is irreducible  the element is not irreducible in   the polynomial is irreducible; indeed if it factors nontrivially, it must factor as a product of two linear polynomials: . Then is a root for . But neither nor are roots for this polynomial, a contradiction.    "
 },
@@ -4802,7 +4874,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-pids.html#ex-in-zsqrt-5-2-irreducible-but-not-prime",
   "type": "Exploration",
-  "number": "11.19",
+  "number": "11.22",
   "title": "In <span class=\"process-math\">\\(\\Z[\\sqrt{-5}]\\text{,}\\)<\/span> <span class=\"process-math\">\\(2\\)<\/span> Prime but not Irreducible.",
   "body": "In , Prime but not Irreducible  In the domain the element is irreducible but not prime.   Note that and thus . However we claim that neither nor are in . If then for some and so , a contradiction. Thus is not prime.  "
 },
@@ -4811,7 +4883,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-pids.html#ex-cxyx2-y3-y-irreducible-but-not-prime",
   "type": "Exploration",
-  "number": "11.20",
+  "number": "11.23",
   "title": "",
   "body": " In the ring the element is irreducible but not prime.   Since this ring is a domain. The element is irreducible for degree reasons. The ideal contains but doesn't contain so is not prime.  "
 },
@@ -4820,7 +4892,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-pids.html#thm-irreducible-is-prime-in-pid",
   "type": "Theorem",
-  "number": "11.21",
+  "number": "11.24",
   "title": "Irreducible is Prime in PID.",
   "body": "Irreducible is Prime in PID   Let be a domain and let .   If is a prime element, then is irreducible.    If is a PID and is irreducible, then is a prime element.       Suppose is an integral domain and that is prime. Then and is not a unit. Suppose . Then and hence by definition either or . If , we have for some and so . Since , , and is an integral domain, we must have , showing that is a unit.  Assume is a PID and that is irreducible. Since is not a unit, is a proper ideal and hence is contained in a maximal ideal by Theorem . We show and hence is prime. Since is a PID, for some . So for some . But is irreducible and is not a unit, which forces to be a unit and hence .   "
 },
@@ -4829,7 +4901,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-pids.html#thm-factorizations-permutations-and-associates",
   "type": "Theorem",
-  "number": "11.22",
+  "number": "11.25",
   "title": "Factorizations and Permutations.",
   "body": "Factorizations and Permutations   Assume is a PID is non zero and not a unit and are two different irreducible factorization of . Then and there is a permutation such that, for all , we have and are associates.    Without loss of generality, assume . We induct on .  If then as well since and would yield , a contradiction. If we have and there is nothing more to prove.  Assume and that irreducible factorizations with factors are unique up to reordering factors and taking associates.  Since is a PID, irreducible elements are prime by Theorem . Since we have that and since is a prime ideal it follows that for some . Upon reordering, we may as well assume . Thus for some . Since is irreducible and is not a unit, must be a unit. We get and hence, since is an integral domain, we may divide by to obtain Notice that is a prime ideal so is irreducible by Theorem .  By the inductive hypothesis we deduce that hence and also that are associates to in some order. This together with associate to establishes the claim.   "
 },
@@ -4847,7 +4919,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "subsec-ufds.html#def-ufd",
   "type": "Definition",
-  "number": "11.23",
+  "number": "11.26",
   "title": "UFD.",
   "body": "UFD   A ring is called a unique factorization domain , or UFD for short, if is an integral domain and every element that is non-zero and not a unit can be written as a finite product of (not necessarily distinct) irreducible elements of in a way that is unique up to ordering and associates. That is, if also holds with each irreducible, then and there is a permutation such that, for all , we have and are associates.   "
 },
@@ -4856,7 +4928,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "subsec-ufds.html#ex-ufd-exs",
   "type": "Example",
-  "number": "11.24",
+  "number": "11.27",
   "title": "Examples of UFDs.",
   "body": "Examples of UFDs    is a UFD by the Fundamental Theorem of Arithmetic.   where is a field is a UFD. This is the case because is a Euclidean domain and Euclidean domains are UFD's (we'll prove this shortly).  We will eventually prove that if is a UFD then so is . It follows that is a UFD for all . Note that if , this ring is not a PID and hence not a Euclidean domain.   "
 },
@@ -4865,7 +4937,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "subsec-ufds.html#ex-zx-not-a-pid",
   "type": "Exploration",
-  "number": "11.25",
+  "number": "11.28",
   "title": "<span class=\"process-math\">\\(\\Z[x]\\)<\/span> is a UFD.",
   "body": "is a UFD  is not a PID hence also not a Euclidean domain. For example, this can be seen because the ideal is not a principal ideal. It is a UFD because is a UFD (based on the result that if is a UFD then so is which we will prove shortly). "
 },
@@ -4874,7 +4946,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "subsec-ufds.html#thm-pid-implies-ufd",
   "type": "Theorem",
-  "number": "11.26",
+  "number": "11.29",
   "title": "PIDs are UFDs.",
   "body": "PIDs are UFDs   If is a PID then is a UFD.   "
 },
@@ -4883,7 +4955,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "subsec-ufds.html#thm-polynomials-over-ufd-ufd",
   "type": "Theorem",
-  "number": "11.27",
+  "number": "11.30",
   "title": "Polynomial Rings over UFDs are UFDs.",
   "body": "Polynomial Rings over UFDs are UFDs   If is a UFD then so is .   "
 },
@@ -4901,16 +4973,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "subsec-noeth.html#def-noetherian-ring",
   "type": "Definition",
-  "number": "11.28",
+  "number": "11.31",
   "title": "Noetherian Ring.",
   "body": "Noetherian Ring   Suppose is a commutative ring. Then is called a noetherian ring if satisfies the ascending chain condition on ideals - i.e., for every chain of ideals of  there exists a positive integer such that for all .   "
 },
 {
-  "id": "remark-55",
+  "id": "remark-56",
   "level": "2",
-  "url": "subsec-noeth.html#remark-55",
+  "url": "subsec-noeth.html#remark-56",
   "type": "Remark",
-  "number": "11.29",
+  "number": "11.32",
   "title": "",
   "body": "Unlike many modern sources, we choose not to capitalize noetherian . The convention of not capitalizing mathematical adjectives has a long history and is widely followed in mathematical literature. For example, other mathematical adjectives that are not capitalized include \"abelian\", \"euclidean\", and \"gaussian\" "
 },
@@ -4919,7 +4991,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "subsec-noeth.html#lem-pids-are-noetherian",
   "type": "Theorem",
-  "number": "11.30",
+  "number": "11.33",
   "title": "PIDs are Noetherian.",
   "body": "PIDs are Noetherian   If is a PID then is noetherian.    Consider and ascending chain of ideals of ; it must have the form Consider which is an ideal of by the argument given in Theorem . Since is a PID, for some . Since , we must have for some . Then we see that for all , thus for and the chain stabilizes as desired.   "
 },
@@ -4928,7 +5000,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "subsec-noeth.html#cor-fields-are-noetherian",
   "type": "Corollary",
-  "number": "11.31",
+  "number": "11.34",
   "title": "Fields are Noetherian.",
   "body": "Fields are Noetherian  Every field is noetherian.  "
 },
@@ -4937,32 +5009,32 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "subsec-noeth.html#lem-factorization-in-noetherian-domains",
   "type": "Theorem",
-  "number": "11.32",
+  "number": "11.35",
   "title": "Factorization in Noetherian Domains.",
   "body": "Factorization in Noetherian Domains   If is a noetherian integral domain, then every non-zero, not-unit element factors into a finite product of irreducible elements.    Pick with and . If is irreducible, there is nothing to prove. Otherwise, we have for non-units . If both are irreducible, the proof is complete. Otherwise, one or both of them factors non-trivially. We may express this conveniently by saying that and such that either and are both non-units or and are both non-units. (E.g., if is irreducible, we could set .) Continuing in the this manner, we form a binary tree with at the top, one level down, one level below that, etc.  We halt the process of building the tree if at some stage all the leaves of the tree are irreducible elements, at which point we will have proven that factors in to a product of the irreducible elements given by these leaves.  We need to rule out the possibility that the process never terminates. If it never terminates, we will have built an infinite binary tree with the property that some route downward through the tree consists of an infinite list of irreducible elements such that for a non-unit and, for each , for a non-unit . Since is an integral domain, we have and for all . (E.g., if then and hence , so that , contrary to being a non-unit.)  But then we have arrived at an infinite ascending chain of ideals in , which is not possible in a Noetherian ring.   "
 },
 {
-  "id": "exercise-163",
+  "id": "exercise-166",
   "level": "2",
-  "url": "subsec-noeth.html#exercise-163",
+  "url": "subsec-noeth.html#exercise-166",
   "type": "Exercise",
   "number": "11.4.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-164",
+  "id": "exercise-167",
   "level": "2",
-  "url": "subsec-noeth.html#exercise-164",
+  "url": "subsec-noeth.html#exercise-167",
   "type": "Exercise",
   "number": "11.4.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-165",
+  "id": "exercise-168",
   "level": "2",
-  "url": "subsec-noeth.html#exercise-165",
+  "url": "subsec-noeth.html#exercise-168",
   "type": "Exercise",
   "number": "11.4.3",
   "title": ".",
@@ -4975,7 +5047,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "12.1",
   "title": "Module Basics",
-  "body": "Module Basics  Module   Let be a ring (with ). A left -module is an abelian group together with a pairing , written , such that for all and     ,     ,     , and     .       If is a commutative ring, then any left -module may be regarded as a right -module by setting . Likewise, any right -module may be regarded as a left -module. But for non-commutative rings, left and right modules are not the same: trying to make a left -module into a right one by setting fails to satisfy the second axiom, since and , and, unless , we cannot conclude that .  Module and Opposite Ring   Given a ring , let denote the “opposite ring''. This is the same underlying set as equipped with the same rule for as , but with multiplication rule (which I will write here as ) redefined to be (where refers to the original multiplication rule for ). Then is also a ring — you don't need to prove that.  Given a left -module , prove that is a right -module via the same rule for addition but with the rule for scaling on the right defined to be for any and .    Arithmetic in Modules   Let be a ring and let be a (left) -module. Then for all and we have    ,     ,     , and     .        For the first, and hence .  For the second, and hence since is an abelian group.  For the third, (using the second) and hence is the additive inverse of .  Finally, (using the fact that holds in any ring and the previous result).     Examples of Modules   For any ring , the trivial module is with for any .  Every ring is a left module over itself whit the rule for scaling given by the ring multiplication rule. It is also a right module over itself.  More generally, if is any ring and is a left ideal, then is a left- -module.  Let be a field and (the ring of matrices with entries in ). Let be the collection of column vectors with entries in having entries. The usual rules for adding column vectors and multiplying column vectors on the left by matrices make into a left -module. Likewise if is the collection of all row vector with entries in , the is a right -module via addition and matrix multiplication.    Standard Free Module  For a non-negative integer , the “standard\" free (left) -module of rank is the set equipped with the operations    Vector Space   Let be a field. An -vector space is a (left) -module.    Abelian Groups are -modules   Let be an abelian group under . Then becomes a -module upon defining the rule for scaling to be    for any and .    Modules   Let be a positive integer and recall that denotes the ring of integers modulo (whose elements I will write as ).   Show that if is any abelian group (under the operation ) such that for all (where ), then the pairing given makes into a -module. (Be sure to check this pairing is well-defined.)    Conversely, show that if is a -module, then the underlying abelian group has the property that for all .       Restriction of Scalars   Let be a ring homomorphism. Any left -module may be regarded via restriction of scalars as a left -module with the following structure: - the rule for addition on is the same as in the original structure and - the rule for scaling by elements of is     Let and . One checks that the properties in the definition of module hold for the given action using properties of ring homomorphisms. In detail, since preserves addition, since preserves multiplication, and since preserves multiplicative identities. This gives three of the axioms. The final also holds:     Complex Vector Spaces are Real   For example, since is a subring of , every complex vector space may be regarded as a real vector space, by restriction of scalars from to . Likewise, any real vector space may be regarded as a rational vector space. Etc.    Ring Maps and Restriction of Scalars   If and are rings and is a ring homomorphism, then since is a left -module, it is also a left -module via restriction of scalars. Note that the rule for scaling given by .  As a special case of this, if is a subring of a ring then is an -module (restriction of scalars along the inclusion map).  For instance, is a left -module for any via the evident injective ring homomorphism .  Also, is a left -module for given by the ring map sending to .    is an -module  If is a (two-sided) ideal of a ring then applying restriction of scalars along the quotient homomorphism gives that any left -module is also a left -module.  In particular, applying this to the -module gives that is a left -module. The rule for scaling is .   Submodule   Let be a ring and let be a left -module. An -submodule of is a subset such that    is a subgroup of under (so, we have , if then , and if then ), and     for all and .        Let be an -module and be an ideal in . Show that the set is an -submodule of .     Let be a commutative ring with . An -module is simple if it has no nontrivial submodules. Show that is simple if and only if there exists a maximal ideal of such that .      Computations and Examples       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Formal Proofs       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Qualifying Exam Problems      January 2012 Problem (8)  Let be a submodule of an -module . Using Zorn's Lemma, prove that there is a submodule such that    , and     for every non-zero submodule of .      Coming soon to an OER near you!   Coming soon to an OER near you!     "
+  "body": "Module Basics  Module   Let be a ring (with ). A left -module is an abelian group together with a pairing , written , such that for all and     ,     ,     , and     .       If is a commutative ring, then any left -module may be regarded as a right -module by setting . Likewise, any right -module may be regarded as a left -module. But for non-commutative rings, left and right modules are not the same: trying to make a left -module into a right one by setting fails to satisfy the second axiom, since and , and, unless , we cannot conclude that .  Module and Opposite Ring   Given a ring , let denote the “opposite ring''. This is the same underlying set as equipped with the same rule for as , but with multiplication rule (which I will write here as ) redefined to be (where refers to the original multiplication rule for ). Then is also a ring — you don't need to prove that.  Given a left -module , prove that is a right -module via the same rule for addition but with the rule for scaling on the right defined to be for any and .    Arithmetic in Modules   Let be a ring and let be a (left) -module. Then for all and we have    ,     ,     , and     .        For the first, and hence .  For the second, and hence since is an abelian group.  For the third, (using the second) and hence is the additive inverse of .  Finally, (using the fact that holds in any ring and the previous result).     Examples of Modules   For any ring , the trivial module is with for any .  Every ring is a left module over itself whit the rule for scaling given by the ring multiplication rule. It is also a right module over itself.  More generally, if is any ring and is a left ideal, then is a left- -module.  Let be a field and (the ring of matrices with entries in ). Let be the collection of column vectors with entries in having entries. The usual rules for adding column vectors and multiplying column vectors on the left by matrices make into a left -module. Likewise if is the collection of all row vector with entries in , the is a right -module via addition and matrix multiplication.    Standard Free Module  For a non-negative integer , the “standard\" free (left) -module of rank is the set equipped with the operations    Vector Space   Let be a field. An -vector space is a (left) -module.    Abelian Groups are -modules   Let be an abelian group under . Then becomes a -module upon defining the rule for scaling to be    for any and .    Modules   Let be a positive integer and recall that denotes the ring of integers modulo (whose elements I will write as ).   Show that if is any abelian group (under the operation ) such that for all (where ), then the pairing given makes into a -module. (Be sure to check this pairing is well-defined.)    Conversely, show that if is a -module, then the underlying abelian group has the property that for all .       Restriction of Scalars   Let be a ring homomorphism. Any left -module may be regarded via restriction of scalars as a left -module with the following structure: - the rule for addition on is the same as in the original structure and - the rule for scaling by elements of is     Let and . One checks that the properties in the definition of module hold for the given action using properties of ring homomorphisms. In detail, since preserves addition, since preserves multiplication, and since preserves multiplicative identities. This gives three of the axioms. The final also holds:     Complex Vector Spaces are Real   For example, since is a subring of , every complex vector space may be regarded as a real vector space, by restriction of scalars from to . Likewise, any real vector space may be regarded as a rational vector space. Etc.    Ring Maps and Restriction of Scalars   If and are rings and is a ring homomorphism, then since is a left -module, it is also a left -module via restriction of scalars. Note that the rule for scaling given by .  As a special case of this, if is a subring of a ring then is an -module (restriction of scalars along the inclusion map).  For instance, is a left -module for any via the evident injective ring homomorphism .  Also, is a left -module for given by the ring map sending to .    is an -module  If is a (two-sided) ideal of a ring then applying restriction of scalars along the quotient homomorphism gives that any left -module is also a left -module.  In particular, applying this to the -module gives that is a left -module. The rule for scaling is .   Submodule   Let be a ring and let be a left -module. An -submodule of is a subset such that    is a subgroup of under (so, we have , if then , and if then ), and     for all and .        Let be an -module and be an ideal in . Show that the set is an -submodule of .     Let be a commutative ring with . An -module is simple if it has no nontrivial submodules. Show that is simple if and only if there exists a maximal ideal of such that .    Qualifying Exam Problems  January 2012 Problem (8)  Let be a submodule of an -module . Using Zorn's Lemma, prove that there is a submodule such that    , and     for every non-zero submodule of .      Coming soon to an OER near you!   Coming soon to an OER near you!    "
 },
 {
   "id": "def-module",
@@ -4987,9 +5059,9 @@ var ptx_lunr_docs = [
   "body": "Module   Let be a ring (with ). A left -module is an abelian group together with a pairing , written , such that for all and     ,     ,     , and     .      "
 },
 {
-  "id": "remark-56",
+  "id": "remark-57",
   "level": "2",
-  "url": "sec-defmod.html#remark-56",
+  "url": "sec-defmod.html#remark-57",
   "type": "Remark",
   "number": "12.2",
   "title": "",
@@ -5104,47 +5176,29 @@ var ptx_lunr_docs = [
   "body": "Submodule   Let be a ring and let be a left -module. An -submodule of is a subset such that    is a subgroup of under (so, we have , if then , and if then ), and     for all and .      "
 },
 {
-  "id": "example-71",
+  "id": "example-73",
   "level": "2",
-  "url": "sec-defmod.html#example-71",
+  "url": "sec-defmod.html#example-73",
   "type": "Example",
   "number": "12.15",
   "title": "",
   "body": " Let be an -module and be an ideal in . Show that the set is an -submodule of .  "
 },
 {
-  "id": "proposition-42",
+  "id": "proposition-41",
   "level": "2",
-  "url": "sec-defmod.html#proposition-42",
+  "url": "sec-defmod.html#proposition-41",
   "type": "Proposition",
   "number": "12.16",
   "title": "",
   "body": "  Let be a commutative ring with . An -module is simple if it has no nontrivial submodules. Show that is simple if and only if there exists a maximal ideal of such that .   "
 },
 {
-  "id": "exercise-166",
+  "id": "exercise-169",
   "level": "2",
-  "url": "sec-defmod.html#exercise-166",
+  "url": "sec-defmod.html#exercise-169",
   "type": "Exercise",
   "number": "12.1.1",
-  "title": ".",
-  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
-},
-{
-  "id": "exercise-167",
-  "level": "2",
-  "url": "sec-defmod.html#exercise-167",
-  "type": "Exercise",
-  "number": "12.1.2",
-  "title": ".",
-  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
-},
-{
-  "id": "exercise-168",
-  "level": "2",
-  "url": "sec-defmod.html#exercise-168",
-  "type": "Exercise",
-  "number": "12.1.3",
   "title": "January 2012 Problem (8).",
   "body": "January 2012 Problem (8)  Let be a submodule of an -module . Using Zorn's Lemma, prove that there is a submodule such that    , and     for every non-zero submodule of .      Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
@@ -5167,9 +5221,9 @@ var ptx_lunr_docs = [
   "body": "Module Homomorphism   Let be a ring and let and be -modules. An -module homomorphism from to sometimes called an - map , is a function such that for all and we have    , i.e. is an additive group homomorphism, and     .      "
 },
 {
-  "id": "remark-57",
+  "id": "remark-58",
   "level": "2",
-  "url": "sec-modhom.html#remark-57",
+  "url": "sec-modhom.html#remark-58",
   "type": "Remark",
   "number": "12.18",
   "title": "",
@@ -5239,47 +5293,38 @@ var ptx_lunr_docs = [
   "body": "Kernels and Images are Submodules   Let be a ring and let be an -module homomorphism. Then    is an -submodule of and     is an -submodule of .      "
 },
 {
-  "id": "proposition-43",
+  "id": "proposition-42",
   "level": "2",
-  "url": "sec-modhom.html#proposition-43",
+  "url": "sec-modhom.html#proposition-42",
   "type": "Proposition",
   "number": "12.26",
   "title": "",
   "body": "  Let be any field and the set of infinte-by-infinite, column-finite matrices. That is, consists of arrays , where and for all , such that for each , there exists an (depending on ) such that for all . That is, consists of elements of the form such that each column has only a finite number of non-zero entries (but, importantly, there is no uniform bound on the number of non-zero entries a column may have). It is not difficult to see that is a ring under the usual rules for adding and multiplying matrices: Given as above and we define and Note that the latter is a finite sum since, given , there is an such that for all . Moreover, is column-finite since, for each such , each of the columns of has only a finite number of non-zero elements. The multiplicative identity is the infinite identity matrix. You need not prove any of this.  Do prove that as left -modules. {} Think about splitting up an element of into its even and odd columns.   "
 },
 {
-  "id": "proposition-44",
+  "id": "proposition-43",
   "level": "2",
-  "url": "sec-modhom.html#proposition-44",
+  "url": "sec-modhom.html#proposition-43",
   "type": "Proposition",
   "number": "12.27",
   "title": "",
   "body": "  Show that for every nonzero integers and there is a -module isomorphism .   "
 },
 {
-  "id": "proposition-45",
+  "id": "proposition-44",
   "level": "2",
-  "url": "sec-modhom.html#proposition-45",
+  "url": "sec-modhom.html#proposition-44",
   "type": "Proposition",
   "number": "12.28",
   "title": "",
   "body": "  Let be a commutative ring. Given an -module , its annihilator is the ideal Show that if there is an isomorphism of -modules , then .   "
 },
 {
-  "id": "exercise-169",
-  "level": "2",
-  "url": "sec-modhom.html#exercise-169",
-  "type": "Exercise",
-  "number": "12.2.1",
-  "title": ".",
-  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
-},
-{
   "id": "exercise-170",
   "level": "2",
   "url": "sec-modhom.html#exercise-170",
   "type": "Exercise",
-  "number": "12.2.2",
+  "number": "12.2.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
@@ -5287,6 +5332,15 @@ var ptx_lunr_docs = [
   "id": "exercise-171",
   "level": "2",
   "url": "sec-modhom.html#exercise-171",
+  "type": "Exercise",
+  "number": "12.2.2",
+  "title": ".",
+  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
+},
+{
+  "id": "exercise-172",
+  "level": "2",
+  "url": "sec-modhom.html#exercise-172",
   "type": "Exercise",
   "number": "12.2.3",
   "title": "Problem ().",
@@ -5356,20 +5410,11 @@ var ptx_lunr_docs = [
   "body": "Module Isomorphism Theorems   Let be a ring, and let be a -module.   - (UMP for Quotient Modules) Let be a submodule of , let be an -module, and let be an -module homomorphism. If (i.e., if ) then the function given by is a well-defined, -module homomorphism. In fact, is the unique -module homomorphism such that where denotes the canonical surjection .    - (First Isomorphism Theorem) Let be an -module and let be an -module homomorphism. Then is a submodule of and there is an -module isomorphism given by .    - (Second Isomorphism Theorem) Let and be submodules of , and define . Then is a submodule of , is a submodule of , and there is an -module isomorphism .    - (Third Isomorphism Theorem) Let and be submodules of with . Then is a submodule of and there is an -module isomorphism given by sending to .    - (Lattice Isomorphism Theorem) Let be a ring, let be a R-submodule of , and let be the canonical quotient map. Then the function defined by is a bijection, with inverse given by for each submodule of . Moreover, and preserve sums and intersections.       Ignoring the rules for scaling by , we know each of the frist four results holds for abelian groups (and the maps are the same). So, we merely need to prove that the rules for scaling are respected in each case. In more detail:  For the UMP, we already know that is a well-defined homomorphism of groups under and that it is the unique one such that . It remains only to show preserves scaling: This follows quickly from the definitions: where the third equation uses that preserves scaling.  For the First Isomorphism Theorem, we already know that there is an isomorphism of abelian groups under , given by , and it remains only to show this map preserves scaling. This is a special case of what we proved in part (0).  For the second isomorphism theorem, we need to first check that and are submodules. From 817 we already know they are subgroups under , and it is evident from the definitions that each is closed under scaling by elements of . Now, we know from 817 that there is an isomorphism of abelian groups given by . It remains only to show preserves scaling:   For the third, we already know (from 817) that is a subgroup of under . Given and we have which belongs to since . This proves is a submodule of . Also from 817 we know there is an isomorphism of abelian groups given by and it remains only to show it is -linear: .  The Lattice Theorem is the most complicaed to gerenlize. From 817 we know thre is a bijection between the set of sub groups of and that contain and subgroups of the quotient group , and the maps are the same as given in the statment. We just need to prove that these maps send submodules to submodules. If is a submodule of containing , then by part (3) we know is a submodule of .  If is a submodule of , then is an abelian group. For adn we have and hence too, since is a submodule. This proves is a submodule.   "
 },
 {
-  "id": "exercise-172",
-  "level": "2",
-  "url": "sec-quote.html#exercise-172",
-  "type": "Exercise",
-  "number": "12.3.1",
-  "title": ".",
-  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
-},
-{
   "id": "exercise-173",
   "level": "2",
   "url": "sec-quote.html#exercise-173",
   "type": "Exercise",
-  "number": "12.3.2",
+  "number": "12.3.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
@@ -5377,6 +5422,15 @@ var ptx_lunr_docs = [
   "id": "exercise-174",
   "level": "2",
   "url": "sec-quote.html#exercise-174",
+  "type": "Exercise",
+  "number": "12.3.2",
+  "title": ".",
+  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
+},
+{
+  "id": "exercise-175",
+  "level": "2",
+  "url": "sec-quote.html#exercise-175",
   "type": "Exercise",
   "number": "12.3.3",
   "title": ".",
@@ -5401,9 +5455,9 @@ var ptx_lunr_docs = [
   "body": "Linear Combination   Let be an -module and . An - linear combination of is an element of of the form for some and . (If , this gives the empty sum which is interpreted to give .)   "
 },
 {
-  "id": "remark-58",
+  "id": "remark-59",
   "level": "2",
-  "url": "sec-linear.html#remark-58",
+  "url": "sec-linear.html#remark-59",
   "type": "Remark",
   "number": "13.2",
   "title": "",
@@ -5428,9 +5482,9 @@ var ptx_lunr_docs = [
   "body": "Finitely Generated Module   A module is finitely generated if there exists some finite subset of such that .   "
 },
 {
-  "id": "remark-59",
+  "id": "remark-60",
   "level": "2",
-  "url": "sec-linear.html#remark-59",
+  "url": "sec-linear.html#remark-60",
   "type": "Remark",
   "number": "13.5",
   "title": "",
@@ -5455,18 +5509,18 @@ var ptx_lunr_docs = [
   "body": "Cyclic -module  If , then (recalling that a -module is the same thing as an abelian group) we see that is a cyclic -module if and only if is a cyclic group.  "
 },
 {
-  "id": "proposition-47",
+  "id": "proposition-46",
   "level": "2",
-  "url": "sec-linear.html#proposition-47",
+  "url": "sec-linear.html#proposition-46",
   "type": "Proposition",
   "number": "13.8",
   "title": "Cyclic Modules and Ideals.",
   "body": "Cyclic Modules and Ideals   Show that the left -module is cyclic if and only if there exists a left ideal of such that .   "
 },
 {
-  "id": "proposition-48",
+  "id": "proposition-47",
   "level": "2",
-  "url": "sec-linear.html#proposition-48",
+  "url": "sec-linear.html#proposition-47",
   "type": "Proposition",
   "number": "13.9",
   "title": "",
@@ -5500,9 +5554,9 @@ var ptx_lunr_docs = [
   "body": "Linearly Dependent   Let be an -module and let be a subset of . The set is linearly dependent if and only if there is an equation of the form where for all , for all but a finite number of s, and for at least one .   "
 },
 {
-  "id": "remark-60",
+  "id": "remark-61",
   "level": "2",
-  "url": "sec-linear.html#remark-60",
+  "url": "sec-linear.html#remark-61",
   "type": "Remark",
   "number": "13.13",
   "title": "",
@@ -5527,20 +5581,11 @@ var ptx_lunr_docs = [
   "body": "Linearly Independent in  The singleton is a linearly independent subset of the -module . But it does not generate all of . The subset does generate all of , but it is not linearly independent, since . More on this later.  "
 },
 {
-  "id": "exercise-175",
-  "level": "2",
-  "url": "sec-linear.html#exercise-175",
-  "type": "Exercise",
-  "number": "13.1.1",
-  "title": ".",
-  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
-},
-{
   "id": "exercise-176",
   "level": "2",
   "url": "sec-linear.html#exercise-176",
   "type": "Exercise",
-  "number": "13.1.2",
+  "number": "13.1.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
@@ -5548,6 +5593,15 @@ var ptx_lunr_docs = [
   "id": "exercise-177",
   "level": "2",
   "url": "sec-linear.html#exercise-177",
+  "type": "Exercise",
+  "number": "13.1.2",
+  "title": ".",
+  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
+},
+{
+  "id": "exercise-178",
+  "level": "2",
+  "url": "sec-linear.html#exercise-178",
   "type": "Exercise",
   "number": "13.1.3",
   "title": ".",
@@ -5563,9 +5617,9 @@ var ptx_lunr_docs = [
   "body": "Generated Modules  Finite Generation and Quotient Modules   Let be a ring with . Prove that if is an -module and is a submodule of such that and are finitely generated, then is finitely generated.    Every Cyclic -module to for some   Every cyclic -module is isomorphic to for some left ideal .    Say is cyclic and is a generator of , so that . Define to be the unique -map with . Here I am applying the UMP for bases, using that is a basis of as a left -modules. More explicitly, for all . Then is onto, since generates . Its kernel is a left ideal of , since submodules of are the same thing as left ideals. By the FIT, there is an isomorphism sending to .      Let be a ring. Recall that we proved in class that every cyclic -module is isomorphic to for some left ideal . Prove the left ideal occurring this statement is unique; that is, if a cyclic -module is isomorphic to and for left ideals and , then .     More generally, the same argument shows that if is a finitely generated module, say generated by elements, then for some submodule of .   is an -module   For a commutative ring , module and ideal , the rules for addition in and scaling by on introduced above make into an -module.  Moreover, given another -module and an -map , the function given by is a well-defined -module homomorphism.  Finally, if is yet another -module homomorphism, then , and we also have for any -module .    I leave some of the details as an exercise, but I will check a few of the necessary things:  We already showed that the rule for scaling is well defined, and we know from 817 that the rule for addition is well-defined and that is an abelian group. To show is an -module, there remain four axioms to verify. For instance, which verifies one of them; the other proofs are similar.  Next, let me verify that the function is a well-defined -map: Let be the composition of -maps (the second one being the canonical one), so that . Since for any 's belonging to and 's belonging to , we have . By the UMP for quotient modules, there is an induced -map given by . The map is so far only known to be an -map, but it is in fact an -map since The final assertions are clear from the formula for for an -map .     The Lemma shows that the rules and determine what is known as a functor from the category of -modules to the category of -modules.   Maximal Ideals and Vector Spaces  Suppose is a maximal ideal of a commutative ring . Then is a field, and given an -module , is a module over the field ; i.e., it is a vector space over this field. Moreover, if is an -map then is an -linear transformation.     Let be a non-zero commutative ring and suppose is a surjective homomorphism of -modules for some non-negative integers and .   Prove that if is a field, then .    Prove that if is any non-zero commutative ring, then .       Finitely Generated Modules and Submodules   Let be a ring, let be a left -module and let be a left -submodule.   Prove that if is finitely generated (as an -module), then so is .    Prove that if and are both finitely generated, then so is .    Prove the converse to the previous part is false, as follows: Let be a field and , the ring of polynomials in the infinite list of variables . (So, an element of is a {} -linear combination of monomials of the form for and . Note that each element of involves only a finite number of variables, but there is no uniform bound on how many such variables can be involved in the elements of .) You may assume without proof that is a ring with the usual rules for adding and multiplying polynomials, which make sense since each element of involves only a finite number of variables. Finally let be the ideal of generated by the variables . Prove is finitely generated as an -module but the submodule is not.       Split Surjection   Let be a ring, and left -modules, and an -module homomorphism. Assume that is surjective. We say is a split surjection if there exists an -module homomorphism such that (i.e., for all ).   Prove that if is free, then every surjective -module homomorphism of the form is a split surjection.    By giving an explicit example with justification, show the statement in part (1) would become false if were not assumed to be free.       Split Injection   Assume is a ring, an -module, and an injective -module homomorphism. We say is a split injection if there exists an -module homomorphism such that (i.e., for all ).       Prove that if is a field, is a subspace (i.e., submodule) of , and is the inclusion map, then is a split injection. Note that since is the inclusion map, what you need to prove is that there exists an -module homomorphism such that . {}: Start by picking a basis of and use a theorem proven in class to show that can be extended to a basis of . Use to construct . (I am assuming that is a subspace of and that is the inclusion map just for simplicity — more generally, it is true that every injective -module homomorphism is a split injection whenever is a field.)    Assume is a non-zero integral domain, but that it is not a field. Prove there exists an -module homomorphism that is an injection but {} a split injection. {}: Pick such that and is not a unit, let be the proper ideal generated by and show the inclusion map is not a split injection.         Prove that if is a commutative ring with then as -modules if and only if . In order to do that, you will complete the following steps:   Show that if is any ideal of and is any -module, then is an -module via     Show that if is any ideal of , then as -modules.    Apply the previous part when is a maximal ideal of . You will need to use the following fact, which we shall prove in class very soon: if is a field, then as -vector spaces if and only if .       Properties of Torsion Submodules   Let be a domain and let be an -module. The torsion submodule of is Elements of are called the torsion elements of , and the module is called torsion if . You may take for granted that this is actually a submodule of without proof.   Show that if and are -modules, then .    Show that if , then .    Show that if is a free -module then .    Show that if is an ideal of that is not principal, then is a torsion-free -module that is not a free -module.    Show that if is an ideal of then .    Suppose that R is a PID, and that is a finitely generated -module. Show that is a torsion-free -module if and only if is a free -module.       Annihilators and Direct Sums   Let be a commutative ring with . Show that       Computations and Examples       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Formal Proofs       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Qualifying Exam Problems      June 2010 Problem (5)  Let be a (not-necessarily commutative) ring let be a left -module. The annihilator of in is defined to be    Prove that is a -sided ideal of .    Suppose is an abelian group (i.e., a -module) such that and is the ideal generated by . How many possibilities, up to isomorphism, are there for ?         Let . Consider . Thus . Let and consider . Let and suppose for some . Add to both sides to see that . Thus and for all . So .  Note that as for all , we know that . As for all , we see that is a left sided ideal.  Suppose for some . This time we add to both sides, but as , we once again find that . Notice that this means for all and , and thus that elements of commute with elements of .  Let . Consider . Luckily, we know and thus that . Hence , making is a two sided ideal.    By the FTFGAG and Sunzi's Remainder Theorem, there are only so many options we have for :    ,     ,     ,     ,     ,     ,     ,          , and     .   However, as ideals are additive subgroups, we know that needs to contain a cyclic subgroup of order . Thus we need only consider decompositions with a in them, of which there are exactly two:                  June 2011 Problem (11)  Let be a commutative ring with , and let be a surjective homomorphism of free -modules. Prove that .   Coming soon to an OER near you!   Let and .  Let be a maximal ideal in . Thus is a field. Lemma 1.58 tells us that and are -vector spaces. Additionally, this gives rise to , which is a surjective -module linear transformation.  Note that is generated by for . Let and consider . For this to be we need it to be in , and thus all . So the set of is a basis for with elements. Likewise has a basis with elements. As we are surjective, Rank , . So by Rank-Nullity which is only positive with .    Recall that a -module is called torsion-free if its torsion submodule is where Consider the -module Show that is torsion free.   Let . Thus for some nonzero . Then , and so and . Then there exists such that and or and and . Notice that in we have , and thus neither nor can divide . Suppose and . As cannot divide we see that divides both and , placing them both . Thus . The same holds true if we use . Thus and .   June 2012 (5)  Let be a commutative integral domain and an -module. A subset of is called a maximal linearly independent subset of if is linearly independent and any subset of properly containing is linearly dependent.   Let be a linearly independent subset of . Prove that is contained in some maximal linearly independent subset of .    Let be a linearly independent subset of and let be the -submodule of generated by . Prove that is a maximal linearly independent subset if and only if is torsion. (Recall that an -module is called “torsion'' if for each , there is a such that and .)      Coming soon to an OER near you!    Let be an ideal in a commutative ring , let and be -modules and let be an -module homomorphism.   Prove there is a unique -module homomorphism such that , where and are the canonical quotient maps  Prove that if and is surjective, then so is . (Recall that is the ideal generated by all elements of the form , where .)         "
 },
 {
-  "id": "proposition-49",
+  "id": "proposition-48",
   "level": "2",
-  "url": "sec-modgen.html#proposition-49",
+  "url": "sec-modgen.html#proposition-48",
   "type": "Proposition",
   "number": "13.16",
   "title": "Finite Generation and Quotient Modules.",
@@ -5581,18 +5635,18 @@ var ptx_lunr_docs = [
   "body": "Every Cyclic -module to for some   Every cyclic -module is isomorphic to for some left ideal .    Say is cyclic and is a generator of , so that . Define to be the unique -map with . Here I am applying the UMP for bases, using that is a basis of as a left -modules. More explicitly, for all . Then is onto, since generates . Its kernel is a left ideal of , since submodules of are the same thing as left ideals. By the FIT, there is an isomorphism sending to .   "
 },
 {
-  "id": "proposition-51",
+  "id": "proposition-50",
   "level": "2",
-  "url": "sec-modgen.html#proposition-51",
+  "url": "sec-modgen.html#proposition-50",
   "type": "Proposition",
   "number": "13.18",
   "title": "",
   "body": "  Let be a ring. Recall that we proved in class that every cyclic -module is isomorphic to for some left ideal . Prove the left ideal occurring this statement is unique; that is, if a cyclic -module is isomorphic to and for left ideals and , then .   "
 },
 {
-  "id": "remark-61",
+  "id": "remark-62",
   "level": "2",
-  "url": "sec-modgen.html#remark-61",
+  "url": "sec-modgen.html#remark-62",
   "type": "Remark",
   "number": "13.19",
   "title": "",
@@ -5608,9 +5662,9 @@ var ptx_lunr_docs = [
   "body": "is an -module   For a commutative ring , module and ideal , the rules for addition in and scaling by on introduced above make into an -module.  Moreover, given another -module and an -map , the function given by is a well-defined -module homomorphism.  Finally, if is yet another -module homomorphism, then , and we also have for any -module .    I leave some of the details as an exercise, but I will check a few of the necessary things:  We already showed that the rule for scaling is well defined, and we know from 817 that the rule for addition is well-defined and that is an abelian group. To show is an -module, there remain four axioms to verify. For instance, which verifies one of them; the other proofs are similar.  Next, let me verify that the function is a well-defined -map: Let be the composition of -maps (the second one being the canonical one), so that . Since for any 's belonging to and 's belonging to , we have . By the UMP for quotient modules, there is an induced -map given by . The map is so far only known to be an -map, but it is in fact an -map since The final assertions are clear from the formula for for an -map .   "
 },
 {
-  "id": "remark-62",
+  "id": "remark-63",
   "level": "2",
-  "url": "sec-modgen.html#remark-62",
+  "url": "sec-modgen.html#remark-63",
   "type": "Remark",
   "number": "13.21",
   "title": "",
@@ -5626,45 +5680,45 @@ var ptx_lunr_docs = [
   "body": "Maximal Ideals and Vector Spaces  Suppose is a maximal ideal of a commutative ring . Then is a field, and given an -module , is a module over the field ; i.e., it is a vector space over this field. Moreover, if is an -map then is an -linear transformation.  "
 },
 {
-  "id": "proposition-52",
+  "id": "proposition-51",
   "level": "2",
-  "url": "sec-modgen.html#proposition-52",
+  "url": "sec-modgen.html#proposition-51",
   "type": "Proposition",
   "number": "13.23",
   "title": "",
   "body": "  Let be a non-zero commutative ring and suppose is a surjective homomorphism of -modules for some non-negative integers and .   Prove that if is a field, then .    Prove that if is any non-zero commutative ring, then .      "
 },
 {
-  "id": "proposition-53",
+  "id": "proposition-52",
   "level": "2",
-  "url": "sec-modgen.html#proposition-53",
+  "url": "sec-modgen.html#proposition-52",
   "type": "Proposition",
   "number": "13.24",
   "title": "Finitely Generated Modules and Submodules.",
   "body": "Finitely Generated Modules and Submodules   Let be a ring, let be a left -module and let be a left -submodule.   Prove that if is finitely generated (as an -module), then so is .    Prove that if and are both finitely generated, then so is .    Prove the converse to the previous part is false, as follows: Let be a field and , the ring of polynomials in the infinite list of variables . (So, an element of is a {} -linear combination of monomials of the form for and . Note that each element of involves only a finite number of variables, but there is no uniform bound on how many such variables can be involved in the elements of .) You may assume without proof that is a ring with the usual rules for adding and multiplying polynomials, which make sense since each element of involves only a finite number of variables. Finally let be the ideal of generated by the variables . Prove is finitely generated as an -module but the submodule is not.      "
 },
 {
-  "id": "proposition-54",
+  "id": "proposition-53",
   "level": "2",
-  "url": "sec-modgen.html#proposition-54",
+  "url": "sec-modgen.html#proposition-53",
   "type": "Proposition",
   "number": "13.25",
   "title": "Split Surjection.",
   "body": "Split Surjection   Let be a ring, and left -modules, and an -module homomorphism. Assume that is surjective. We say is a split surjection if there exists an -module homomorphism such that (i.e., for all ).   Prove that if is free, then every surjective -module homomorphism of the form is a split surjection.    By giving an explicit example with justification, show the statement in part (1) would become false if were not assumed to be free.      "
 },
 {
-  "id": "proposition-55",
+  "id": "proposition-54",
   "level": "2",
-  "url": "sec-modgen.html#proposition-55",
+  "url": "sec-modgen.html#proposition-54",
   "type": "Proposition",
   "number": "13.26",
   "title": "Split Injection.",
   "body": "Split Injection   Assume is a ring, an -module, and an injective -module homomorphism. We say is a split injection if there exists an -module homomorphism such that (i.e., for all ).       Prove that if is a field, is a subspace (i.e., submodule) of , and is the inclusion map, then is a split injection. Note that since is the inclusion map, what you need to prove is that there exists an -module homomorphism such that . {}: Start by picking a basis of and use a theorem proven in class to show that can be extended to a basis of . Use to construct . (I am assuming that is a subspace of and that is the inclusion map just for simplicity — more generally, it is true that every injective -module homomorphism is a split injection whenever is a field.)    Assume is a non-zero integral domain, but that it is not a field. Prove there exists an -module homomorphism that is an injection but {} a split injection. {}: Pick such that and is not a unit, let be the proper ideal generated by and show the inclusion map is not a split injection.      "
 },
 {
-  "id": "proposition-56",
+  "id": "proposition-55",
   "level": "2",
-  "url": "sec-modgen.html#proposition-56",
+  "url": "sec-modgen.html#proposition-55",
   "type": "Proposition",
   "number": "13.27",
   "title": "",
@@ -5680,29 +5734,20 @@ var ptx_lunr_docs = [
   "body": "Properties of Torsion Submodules   Let be a domain and let be an -module. The torsion submodule of is Elements of are called the torsion elements of , and the module is called torsion if . You may take for granted that this is actually a submodule of without proof.   Show that if and are -modules, then .    Show that if , then .    Show that if is a free -module then .    Show that if is an ideal of that is not principal, then is a torsion-free -module that is not a free -module.    Show that if is an ideal of then .    Suppose that R is a PID, and that is a finitely generated -module. Show that is a torsion-free -module if and only if is a free -module.      "
 },
 {
-  "id": "proposition-57",
+  "id": "proposition-56",
   "level": "2",
-  "url": "sec-modgen.html#proposition-57",
+  "url": "sec-modgen.html#proposition-56",
   "type": "Proposition",
   "number": "13.29",
   "title": "Annihilators and Direct Sums.",
   "body": "Annihilators and Direct Sums   Let be a commutative ring with . Show that    "
 },
 {
-  "id": "exercise-178",
-  "level": "2",
-  "url": "sec-modgen.html#exercise-178",
-  "type": "Exercise",
-  "number": "13.2.1",
-  "title": ".",
-  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
-},
-{
   "id": "exercise-179",
   "level": "2",
   "url": "sec-modgen.html#exercise-179",
   "type": "Exercise",
-  "number": "13.2.2",
+  "number": "13.2.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
@@ -5711,41 +5756,50 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-modgen.html#exercise-180",
   "type": "Exercise",
-  "number": "13.2.3",
-  "title": "June 2010 Problem (5).",
-  "body": "June 2010 Problem (5)  Let be a (not-necessarily commutative) ring let be a left -module. The annihilator of in is defined to be    Prove that is a -sided ideal of .    Suppose is an abelian group (i.e., a -module) such that and is the ideal generated by . How many possibilities, up to isomorphism, are there for ?         Let . Consider . Thus . Let and consider . Let and suppose for some . Add to both sides to see that . Thus and for all . So .  Note that as for all , we know that . As for all , we see that is a left sided ideal.  Suppose for some . This time we add to both sides, but as , we once again find that . Notice that this means for all and , and thus that elements of commute with elements of .  Let . Consider . Luckily, we know and thus that . Hence , making is a two sided ideal.    By the FTFGAG and Sunzi's Remainder Theorem, there are only so many options we have for :    ,     ,     ,     ,     ,     ,     ,          , and     .   However, as ideals are additive subgroups, we know that needs to contain a cyclic subgroup of order . Thus we need only consider decompositions with a in them, of which there are exactly two:                 "
+  "number": "13.2.2",
+  "title": ".",
+  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
   "id": "exercise-181",
   "level": "2",
   "url": "sec-modgen.html#exercise-181",
   "type": "Exercise",
-  "number": "13.2.4",
-  "title": "June 2011 Problem (11).",
-  "body": "June 2011 Problem (11)  Let be a commutative ring with , and let be a surjective homomorphism of free -modules. Prove that .   Coming soon to an OER near you!   Let and .  Let be a maximal ideal in . Thus is a field. Lemma 1.58 tells us that and are -vector spaces. Additionally, this gives rise to , which is a surjective -module linear transformation.  Note that is generated by for . Let and consider . For this to be we need it to be in , and thus all . So the set of is a basis for with elements. Likewise has a basis with elements. As we are surjective, Rank , . So by Rank-Nullity which is only positive with .  "
+  "number": "13.2.3",
+  "title": "June 2010 Problem (5).",
+  "body": "June 2010 Problem (5)  Let be a (not-necessarily commutative) ring let be a left -module. The annihilator of in is defined to be    Prove that is a -sided ideal of .    Suppose is an abelian group (i.e., a -module) such that and is the ideal generated by . How many possibilities, up to isomorphism, are there for ?         Let . Consider . Thus . Let and consider . Let and suppose for some . Add to both sides to see that . Thus and for all . So .  Note that as for all , we know that . As for all , we see that is a left sided ideal.  Suppose for some . This time we add to both sides, but as , we once again find that . Notice that this means for all and , and thus that elements of commute with elements of .  Let . Consider . Luckily, we know and thus that . Hence , making is a two sided ideal.    By the FTFGAG and Sunzi's Remainder Theorem, there are only so many options we have for :    ,     ,     ,     ,     ,     ,     ,          , and     .   However, as ideals are additive subgroups, we know that needs to contain a cyclic subgroup of order . Thus we need only consider decompositions with a in them, of which there are exactly two:                 "
 },
 {
   "id": "exercise-182",
   "level": "2",
   "url": "sec-modgen.html#exercise-182",
   "type": "Exercise",
-  "number": "13.2.5",
-  "title": "",
-  "body": " Recall that a -module is called torsion-free if its torsion submodule is where Consider the -module Show that is torsion free.   Let . Thus for some nonzero . Then , and so and . Then there exists such that and or and and . Notice that in we have , and thus neither nor can divide . Suppose and . As cannot divide we see that divides both and , placing them both . Thus . The same holds true if we use . Thus and .  "
+  "number": "13.2.4",
+  "title": "June 2011 Problem (11).",
+  "body": "June 2011 Problem (11)  Let be a commutative ring with , and let be a surjective homomorphism of free -modules. Prove that .   Coming soon to an OER near you!   Let and .  Let be a maximal ideal in . Thus is a field. Lemma 1.58 tells us that and are -vector spaces. Additionally, this gives rise to , which is a surjective -module linear transformation.  Note that is generated by for . Let and consider . For this to be we need it to be in , and thus all . So the set of is a basis for with elements. Likewise has a basis with elements. As we are surjective, Rank , . So by Rank-Nullity which is only positive with .  "
 },
 {
   "id": "exercise-183",
   "level": "2",
   "url": "sec-modgen.html#exercise-183",
   "type": "Exercise",
-  "number": "13.2.6",
-  "title": "June 2012 (5).",
-  "body": "June 2012 (5)  Let be a commutative integral domain and an -module. A subset of is called a maximal linearly independent subset of if is linearly independent and any subset of properly containing is linearly dependent.   Let be a linearly independent subset of . Prove that is contained in some maximal linearly independent subset of .    Let be a linearly independent subset of and let be the -submodule of generated by . Prove that is a maximal linearly independent subset if and only if is torsion. (Recall that an -module is called “torsion'' if for each , there is a such that and .)      Coming soon to an OER near you!  "
+  "number": "13.2.5",
+  "title": "",
+  "body": " Recall that a -module is called torsion-free if its torsion submodule is where Consider the -module Show that is torsion free.   Let . Thus for some nonzero . Then , and so and . Then there exists such that and or and and . Notice that in we have , and thus neither nor can divide . Suppose and . As cannot divide we see that divides both and , placing them both . Thus . The same holds true if we use . Thus and .  "
 },
 {
   "id": "exercise-184",
   "level": "2",
   "url": "sec-modgen.html#exercise-184",
+  "type": "Exercise",
+  "number": "13.2.6",
+  "title": "June 2012 (5).",
+  "body": "June 2012 (5)  Let be a commutative integral domain and an -module. A subset of is called a maximal linearly independent subset of if is linearly independent and any subset of properly containing is linearly dependent.   Let be a linearly independent subset of . Prove that is contained in some maximal linearly independent subset of .    Let be a linearly independent subset of and let be the -submodule of generated by . Prove that is a maximal linearly independent subset if and only if is torsion. (Recall that an -module is called “torsion'' if for each , there is a such that and .)      Coming soon to an OER near you!  "
+},
+{
+  "id": "exercise-185",
+  "level": "2",
+  "url": "sec-modgen.html#exercise-185",
   "type": "Exercise",
   "number": "13.2.7",
   "title": "",
@@ -5833,45 +5887,45 @@ var ptx_lunr_docs = [
   "body": "Bases are not Unique  As you likely know from a class in linear algebra, bases of free modules are rarely unique. Indeed, if is any ring, then any single unit forms a basis for as a module over itself. For another example, for any ring and any fixed element , the set forms a basis for the free -module .  "
 },
 {
-  "id": "proposition-58",
+  "id": "proposition-57",
   "level": "2",
-  "url": "sec-bases.html#proposition-58",
+  "url": "sec-bases.html#proposition-57",
   "type": "Proposition",
   "number": "13.38",
   "title": "Every Module over a Field is Free.",
   "body": "Every Module over a Field is Free   Let be a commutative ring with . Show that if every -module is free then is a field.   "
 },
 {
-  "id": "proposition-59",
+  "id": "proposition-58",
   "level": "2",
-  "url": "sec-bases.html#proposition-59",
+  "url": "sec-bases.html#proposition-58",
   "type": "Proposition",
   "number": "13.39",
   "title": "<span class=\"process-math\">\\(\\Q\\)<\/span> is not a Free <span class=\"process-math\">\\(\\Z\\)<\/span>-module.",
   "body": "is not a Free -module   An abelian group is called divisible if for each and , there exists such that . Prove that if is a divisible abelian group then is not a free -module. Deduce that is not a free -module.   "
 },
 {
-  "id": "proposition-60",
+  "id": "proposition-59",
   "level": "2",
-  "url": "sec-bases.html#proposition-60",
+  "url": "sec-bases.html#proposition-59",
   "type": "Proposition",
   "number": "13.40",
   "title": "Free Modules have Trivial Annihilators.",
   "body": "Free Modules have Trivial Annihilators   Let be a commutative ring with .   Show that if is a free -module, then .    Give an example of a ring an a nonzero module such that .      "
 },
 {
-  "id": "remark-63",
+  "id": "remark-64",
   "level": "2",
-  "url": "sec-bases.html#remark-63",
+  "url": "sec-bases.html#remark-64",
   "type": "Remark",
   "number": "13.41",
   "title": "",
   "body": " A key difference between free modules over rings that are not fields and vector spaces is that not every linearly independent subset of a free module can be extended to a basis. For example, is a linearly independent subset of , but it cannot be extended to a basis. Indeed, any set of the form with is linearly dependent since .  Likewise, over arbitrary rings, not every subset that generates a free module necessarily contains a basis. For instance, generated as a module over itself, but no subset of it is a basis.  (Note that has precisely two bases as a module over itself: and . )  "
 },
 {
-  "id": "remark-64",
+  "id": "remark-65",
   "level": "2",
-  "url": "sec-bases.html#remark-64",
+  "url": "sec-bases.html#remark-65",
   "type": "Remark",
   "number": "13.42",
   "title": "",
@@ -5905,9 +5959,9 @@ var ptx_lunr_docs = [
   "body": "UMP for Free -Modules   Let be a ring, let be a free -module with basis , let be an -module, and let be any function. Then there is a unique -module homomorphism such that for all .  In other words, there is a bijection of sets given by sending a homomorphisms to its restriction to . (Here, is the set of all -module homomorphisms from to and is the set of all functions from to .)    {} Given a function , define as follows: Given , by Lemma can be written uniquely as a finite sum . We set Note that is a well-defined function by the uniqueness of the equation .  We need to prove is an -module homomorphism. I'll just show it preserves scaling — the proof for addition is similar. Given and , we have for some , and hence . By definition of ,   Finally, for any we have where if and if . So by construction. This proves existence.  {} Let be another -module homomorphism such that for each . Given we have and hence and hence .   "
 },
 {
-  "id": "remark-65",
+  "id": "remark-66",
   "level": "2",
-  "url": "sec-bases.html#remark-65",
+  "url": "sec-bases.html#remark-66",
   "type": "Remark",
   "number": "13.46",
   "title": "",
@@ -5932,9 +5986,9 @@ var ptx_lunr_docs = [
   "body": "as -modules  If is a free -module that has a basis of cardinality , then as -modules. This holds since, as seen above, has a basis of cardinality , namely the standard basis .  More precisely, as the proof makes clear, if is an (ordered) basis of , there is an isomorphism that sends to .  "
 },
 {
-  "id": "remark-66",
+  "id": "remark-67",
   "level": "2",
-  "url": "sec-bases.html#remark-66",
+  "url": "sec-bases.html#remark-67",
   "type": "Remark",
   "number": "13.49",
   "title": "",
@@ -5968,20 +6022,11 @@ var ptx_lunr_docs = [
   "body": "Bases of ideals in commutative rings      Assume is a non-zero, commutative ring and is a non-zero ideal. Prove is free as an -module if and only if for a non-zerodivisor . (Recall that an element is a non-zerodivisor in provided and implies for all . )    Let be a field and . Let , the ideal consisting of all polynomials with constant term. Prove is not free as an -module.      "
 },
 {
-  "id": "exercise-185",
-  "level": "2",
-  "url": "sec-bases.html#exercise-185",
-  "type": "Exercise",
-  "number": "13.3.1",
-  "title": ".",
-  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
-},
-{
   "id": "exercise-186",
   "level": "2",
   "url": "sec-bases.html#exercise-186",
   "type": "Exercise",
-  "number": "13.3.2",
+  "number": "13.3.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
@@ -5990,23 +6035,32 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-bases.html#exercise-187",
   "type": "Exercise",
-  "number": "13.3.3",
+  "number": "13.3.2",
   "title": ".",
-  "body": " Let be a non-zero, unital ring, and let and be the standard free left -modules of finite rank and . Assume there is an isomorphism of -modules    Prove that if is commutative then . You may assume without justification that this holds in the special case when is a field.  Show, by example, than need not equal if is not assumed to be commutative.    Coming soon to an OER near you!   Coming soon to an OER near you!  "
+  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
   "id": "exercise-188",
   "level": "2",
   "url": "sec-bases.html#exercise-188",
   "type": "Exercise",
-  "number": "13.3.4",
-  "title": "June 2012 (5) DUPLICATE.",
-  "body": "June 2012 (5) DUPLICATE  Let be a commutative integral domain and an -module. Recall that a subset of is called a maximal linearly independent set of if is linearly independent and any subset of properly containing is linearly dependent.   Let be a linearly independent subset of . Prove that is contained in some maximal linearly independent subset of .  Let be a linearly independent subset of and the -submodule of generated by . Prove that is a maximal linearly independent subset if and only if is torsion. (Recall that an -module is called “torsion'' if for each , there is a such that and .)       Let be the set of all linearly independent subsets of that contain . We can order with respect to inclusion. Let be a totally ordered subset of , and let be the union of all elements in . Let be a set of elements in such that for some , where for some . As is the union of all elements in , there exists some such that . However, as is totally ordered, there exists some such that contains and . Continuing in this way, we see that there exists some such that . As is linearly independent, we know that means that for all . Thus is indeed linearly independent, making it an upper bound for . Thus by Zorn's Lemma there exists a maximal element of , which we denote . Thus is linearly independent, contains , and is maximal.     Suppose is maximal linearly independent, and suppose by way of contradiction that is not torsion. Thus there exists some such that for all , we see that . However, as and , this means that . Consider . This set is linearly independent, contradicting the assumption that was maximal.   Suppose is torsion. Let and consider . Consider . As is torsion, there exists an such that . Thus . (Note, if , then ). As and is generated by ( ), . Subtracting over we see that . But as , we see that each and are in , but the sum is 0. Thus is linearly dependent.     "
+  "number": "13.3.3",
+  "title": ".",
+  "body": " Let be a non-zero, unital ring, and let and be the standard free left -modules of finite rank and . Assume there is an isomorphism of -modules    Prove that if is commutative then . You may assume without justification that this holds in the special case when is a field.  Show, by example, than need not equal if is not assumed to be commutative.    Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
   "id": "exercise-189",
   "level": "2",
   "url": "sec-bases.html#exercise-189",
+  "type": "Exercise",
+  "number": "13.3.4",
+  "title": "June 2012 (5) DUPLICATE.",
+  "body": "June 2012 (5) DUPLICATE  Let be a commutative integral domain and an -module. Recall that a subset of is called a maximal linearly independent set of if is linearly independent and any subset of properly containing is linearly dependent.   Let be a linearly independent subset of . Prove that is contained in some maximal linearly independent subset of .  Let be a linearly independent subset of and the -submodule of generated by . Prove that is a maximal linearly independent subset if and only if is torsion. (Recall that an -module is called “torsion'' if for each , there is a such that and .)       Let be the set of all linearly independent subsets of that contain . We can order with respect to inclusion. Let be a totally ordered subset of , and let be the union of all elements in . Let be a set of elements in such that for some , where for some . As is the union of all elements in , there exists some such that . However, as is totally ordered, there exists some such that contains and . Continuing in this way, we see that there exists some such that . As is linearly independent, we know that means that for all . Thus is indeed linearly independent, making it an upper bound for . Thus by Zorn's Lemma there exists a maximal element of , which we denote . Thus is linearly independent, contains , and is maximal.     Suppose is maximal linearly independent, and suppose by way of contradiction that is not torsion. Thus there exists some such that for all , we see that . However, as and , this means that . Consider . This set is linearly independent, contradicting the assumption that was maximal.   Suppose is torsion. Let and consider . Consider . As is torsion, there exists an such that . Thus . (Note, if , then ). As and is generated by ( ), . Subtracting over we see that . But as , we see that each and are in , but the sum is 0. Thus is linearly dependent.     "
+},
+{
+  "id": "exercise-190",
+  "level": "2",
+  "url": "sec-bases.html#exercise-190",
   "type": "Exercise",
   "number": "13.3.5",
   "title": "",
@@ -6040,9 +6094,9 @@ var ptx_lunr_docs = [
   "body": "Linear Independence and Span   Suppose is a linearly independent subset of an -vector space and , then is also linearly independent.    We need to prove that every finite subset of is linearly independent. Let be a list of distinct elements of and suppose for some . If for all , then for all since is linearly independent. Without loss, say . If , then , contrary to the assumption. So we must have . But then for all by the same reasoning as in the first case.   "
 },
 {
-  "id": "remark-67",
+  "id": "remark-68",
   "level": "2",
-  "url": "sec-vecbasis.html#remark-67",
+  "url": "sec-vecbasis.html#remark-68",
   "type": "Remark",
   "number": "14.3",
   "title": "",
@@ -6067,9 +6121,9 @@ var ptx_lunr_docs = [
   "body": "Every Vector Space has a Basis   Every -vector space has a basis. Moreover, every linearly independent subset of is contained in some basis, and every set of vectors that spans contains some basis.    For this first part, apply the theorem with and . For the second and third, use arbitrary and and and arbitrary, respectively.   "
 },
 {
-  "id": "remark-68",
+  "id": "remark-69",
   "level": "2",
-  "url": "sec-vecbasis.html#remark-68",
+  "url": "sec-vecbasis.html#remark-69",
   "type": "Remark",
   "number": "14.6",
   "title": "",
@@ -6085,9 +6139,9 @@ var ptx_lunr_docs = [
   "body": "Basis of Subspaces Extent   Suppose is a field an is a subspace (i.e., submodule) of the -vector space (i.e., -module) . Then every basis of extends to a basis of - that is, if is a basis of then there exists a basis of such that is a subset of .    Just apply the Theorem with and . (Since is a basis of , it is linearly independent, and observe that remains linearly independent when regarded as a subset of .)   "
 },
 {
-  "id": "remark-69",
+  "id": "remark-70",
   "level": "2",
-  "url": "sec-vecbasis.html#remark-69",
+  "url": "sec-vecbasis.html#remark-70",
   "type": "Remark",
   "number": "14.8",
   "title": "",
@@ -6103,20 +6157,11 @@ var ptx_lunr_docs = [
   "body": "Exchange Lemma   Let be a field, let be a basis of an -vector space , and let be any finite set of linearly independent vectors in . Then there are distinct vectors in , such that is also a basis .    Let . As noted, the sublemma establishes the case of the Exchange Lemma. The general case proceeds recursively:  Suppose that for some , we have found such that is a basis for some . We need to show we can “swap out one more''; that is, we need to prove there is a such that is also a basis.  Since is a basis, there is a (unique) equation of the form with and . Now, there must be at least one that is not in , for otherwise we would have , contrary to being linearly independent. Let for such an . Then by the sublemma is a basis of .   "
 },
 {
-  "id": "exercise-190",
-  "level": "2",
-  "url": "sec-vecbasis.html#exercise-190",
-  "type": "Exercise",
-  "number": "14.1.1",
-  "title": ".",
-  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
-},
-{
   "id": "exercise-191",
   "level": "2",
   "url": "sec-vecbasis.html#exercise-191",
   "type": "Exercise",
-  "number": "14.1.2",
+  "number": "14.1.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
@@ -6124,6 +6169,15 @@ var ptx_lunr_docs = [
   "id": "exercise-192",
   "level": "2",
   "url": "sec-vecbasis.html#exercise-192",
+  "type": "Exercise",
+  "number": "14.1.2",
+  "title": ".",
+  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
+},
+{
+  "id": "exercise-193",
+  "level": "2",
+  "url": "sec-vecbasis.html#exercise-193",
   "type": "Exercise",
   "number": "14.1.3",
   "title": "June 2010 Problem (6).",
@@ -6184,18 +6238,18 @@ var ptx_lunr_docs = [
   "body": "SubLemma and  For a visual interpretation of the sublemma, suppose and is its standard basis. Given , if is a non-zero multiple of one of the members of , say for , then is also basis of . If lies one of the coordinate planes but is not on a axis, say for , then both and are bases. If lies on none of the coordinate planes, then for and each of , and is a basis. So, the sublemma is saying that we can swap in for any of the basis elements that occur with a non-zero coefficient in the unique expression of as a linear combination of the basis. (This includes the case when , since no such basis vectors occur.)  "
 },
 {
-  "id": "remark-70",
+  "id": "remark-71",
   "level": "2",
-  "url": "sec-ranknul.html#remark-70",
+  "url": "sec-ranknul.html#remark-71",
   "type": "Remark",
   "number": "14.15",
   "title": "",
   "body": " This completes the proof that, for a commutative ring with , any two finite bases of a free -module have the same cardinality. (In the proof of this fact given above, we had assumed it held for fields.)  "
 },
 {
-  "id": "remark-71",
+  "id": "remark-72",
   "level": "2",
-  "url": "sec-ranknul.html#remark-71",
+  "url": "sec-ranknul.html#remark-72",
   "type": "Remark",
   "number": "14.16",
   "title": "",
@@ -6220,9 +6274,9 @@ var ptx_lunr_docs = [
   "body": "Dimension and Subspaces   Let be a field and let be a subspace of a finite dimensional -vector space . Then     Pick a basis of . Regarded as a subset of , remains linearly independent and thus it may be extended to a basis of by Corollary . Let us write this basis of as with .  Let . I claim that is a basis of .  Given we have for some and scalars . Since for all , we have . This proves spans. Say for some . Then and hence , whence . Since is linearly independent, and for all . This proves is linearly independent.  We have with the second equality holding since and are disjoint.   "
 },
 {
-  "id": "remark-72",
+  "id": "remark-73",
   "level": "2",
-  "url": "sec-ranknul.html#remark-72",
+  "url": "sec-ranknul.html#remark-73",
   "type": "Remark",
   "number": "14.19",
   "title": "",
@@ -6247,110 +6301,101 @@ var ptx_lunr_docs = [
   "body": "Rank Nullity Theorem   Let be a field and an -linear transformation between -vector spaces and , and assume is finite dimensional. Then or equivalently     By the first isomorphism theorem for modules we have , thus . By the previous theorem we have    "
 },
 {
-  "id": "remark-73",
+  "id": "remark-74",
   "level": "2",
-  "url": "sec-ranknul.html#remark-73",
+  "url": "sec-ranknul.html#remark-74",
   "type": "Remark",
   "number": "14.22",
   "title": "",
   "body": " Suitably interpreted, this is valid even if is infinite dimensional.  "
 },
 {
-  "id": "proposition-63",
+  "id": "proposition-62",
   "level": "2",
-  "url": "sec-ranknul.html#proposition-63",
+  "url": "sec-ranknul.html#proposition-62",
   "type": "Proposition",
   "number": "14.23",
   "title": "",
   "body": "  Let be a field and let and be finite dimensional -vector spaces.   Let be an -linear transformation. Prove , where by definition .    Let be an -linear transformation from to itself. Prove that if , then . (Note: Recall that, by definition, .)    For extra credit: Let be an -linear transformation from to itself. Prove that if for some then .      "
 },
 {
-  "id": "proposition-64",
+  "id": "proposition-63",
   "level": "2",
-  "url": "sec-ranknul.html#proposition-64",
+  "url": "sec-ranknul.html#proposition-63",
   "type": "Proposition",
   "number": "14.24",
   "title": "",
   "body": "  Suppose where is a field and for some integer . Prove . {}: Note that for any , . Show that if equality holds then .   "
 },
 {
-  "id": "proposition-65",
+  "id": "proposition-64",
   "level": "2",
-  "url": "sec-ranknul.html#proposition-65",
+  "url": "sec-ranknul.html#proposition-64",
   "type": "Proposition",
   "number": "14.25",
   "title": "",
   "body": "  Recall that a -module is called torsion-free if the only element such that for some non-zero integer is the element . Let where is the homomorphism for the matrix . Prove is torsion-free.   "
 },
 {
-  "id": "proposition-66",
+  "id": "proposition-65",
   "level": "2",
-  "url": "sec-ranknul.html#proposition-66",
+  "url": "sec-ranknul.html#proposition-65",
   "type": "Proposition",
   "number": "14.26",
   "title": "",
   "body": "  Let be a finite dimensional vector space over a field and an -linear transformation. Prove the following assertions.   There exists an integer such that for there are equalities and . (Here denotes composed with itself times.)     for any as above.     for any s as above. (Recall for subspaces and if and . )      "
 },
 {
-  "id": "proposition-67",
+  "id": "proposition-66",
   "level": "2",
-  "url": "sec-ranknul.html#proposition-67",
+  "url": "sec-ranknul.html#proposition-66",
   "type": "Proposition",
   "number": "14.27",
   "title": "",
   "body": "  Let be a field, an -vector space, and a subspace of . A subspace of is called a {} of in if and .   Prove that for every and as above, has at least one complement in .    Prove that if is a complement of in and is finite dimensional, then .    Prove that if is a subspace of with finite dimensional and , then is non-zero.          "
 },
 {
-  "id": "proposition-68",
+  "id": "proposition-67",
   "level": "2",
-  "url": "sec-ranknul.html#proposition-68",
+  "url": "sec-ranknul.html#proposition-67",
   "type": "Proposition",
   "number": "14.28",
   "title": "June 2012 (6).",
   "body": "June 2012 (6)   Let be the set of all matrices over a field , let denote the group (where, recall, is the group of invertible matrices with entries in ) and set for all and .   Prove that the formula above defines a group action.    Prove that each orbit contains a matrix such that for all and for all     How many orbits are there?      "
 },
 {
-  "id": "proposition-69",
+  "id": "proposition-68",
   "level": "2",
-  "url": "sec-ranknul.html#proposition-69",
+  "url": "sec-ranknul.html#proposition-68",
   "type": "Proposition",
   "number": "14.29",
   "title": "",
   "body": "  Let be a field, be an -linear transformation, and . Prove that    "
 },
 {
-  "id": "proposition-70",
+  "id": "proposition-69",
   "level": "2",
-  "url": "sec-ranknul.html#proposition-70",
+  "url": "sec-ranknul.html#proposition-69",
   "type": "Proposition",
   "number": "14.30",
   "title": "",
   "body": "  Let be an -linear transformation. Prove that if , then    "
 },
 {
-  "id": "proposition-71",
+  "id": "proposition-70",
   "level": "2",
-  "url": "sec-ranknul.html#proposition-71",
+  "url": "sec-ranknul.html#proposition-70",
   "type": "Proposition",
   "number": "14.31",
   "title": "June 2012 Problem (4).",
   "body": "June 2012 Problem (4)   Let be a subspace of a finite-dimensional vector space, . Recall that a subspace of is called a complement of if . Prove the following statements.   Every complement of has dimension .    If is not or , then has more than one complement.    If is a subspace of with , then is non-zero.      "
 },
 {
-  "id": "exercise-193",
-  "level": "2",
-  "url": "sec-ranknul.html#exercise-193",
-  "type": "Exercise",
-  "number": "14.2.1",
-  "title": ".",
-  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
-},
-{
   "id": "exercise-194",
   "level": "2",
   "url": "sec-ranknul.html#exercise-194",
   "type": "Exercise",
-  "number": "14.2.2",
+  "number": "14.2.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
@@ -6359,14 +6404,23 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-ranknul.html#exercise-195",
   "type": "Exercise",
-  "number": "14.2.3",
+  "number": "14.2.2",
   "title": ".",
-  "body": " Let be a field, an -vector space, and a subspace of . A subspace of is called a complement of in if is the internal direct sum of and ; that is, .   Prove that for every and as above, has at least one complement in .  Prove that if is a complement of in and is finite dimensional, then (where denotes the dimension of an -vector space).    Coming soon to an OER near you!   Let be a field, an -vector space, and a subspace of .   Let denote the set of all subspaces of such that . We can order with respect to inclusion. Let be a totally ordered subset of , and let be the union of all the elements in . Unions of subspaces are subspaces, and by DeMorgan's Laws we see that . Thus by Zorn's Lemma there exists a maximal element of which we denote . So by definition.  Suppose by way of contradiction there exists some such that .  Consider . As , for all , as we could just multiply by . Thus and , a contradiction, as was maximal. Thus is a complement of .    The Second Isomorphism Theorem tells us that . We also know that Put succinctly, and thus As , we see that .     "
+  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
   "id": "exercise-196",
   "level": "2",
   "url": "sec-ranknul.html#exercise-196",
+  "type": "Exercise",
+  "number": "14.2.3",
+  "title": ".",
+  "body": " Let be a field, an -vector space, and a subspace of . A subspace of is called a complement of in if is the internal direct sum of and ; that is, .   Prove that for every and as above, has at least one complement in .  Prove that if is a complement of in and is finite dimensional, then (where denotes the dimension of an -vector space).    Coming soon to an OER near you!   Let be a field, an -vector space, and a subspace of .   Let denote the set of all subspaces of such that . We can order with respect to inclusion. Let be a totally ordered subset of , and let be the union of all the elements in . Unions of subspaces are subspaces, and by DeMorgan's Laws we see that . Thus by Zorn's Lemma there exists a maximal element of which we denote . So by definition.  Suppose by way of contradiction there exists some such that .  Consider . As , for all , as we could just multiply by . Thus and , a contradiction, as was maximal. Thus is a complement of .    The Second Isomorphism Theorem tells us that . We also know that Put succinctly, and thus As , we see that .     "
+},
+{
+  "id": "exercise-197",
+  "level": "2",
+  "url": "sec-ranknul.html#exercise-197",
   "type": "Exercise",
   "number": "14.2.4",
   "title": "",
@@ -6382,9 +6436,9 @@ var ptx_lunr_docs = [
   "body": "Basics  Recall that when is a field an -module homomorphism is called a -linear transformation. Since every -vector space has a basis, every linear transformation between finite dimensional vector spaces may be represented by a matrix, as we noted before.  Matrix of Free Module Homomorphism   Let be a non-zero commutative ring and let , be -modules of finite rank and , respectively. (For instance, could be a field and and could be arbitrary finite dimensional vector spaces.) Let and be ordered bases of and .   For each , let denote the unique column vector such that . Define for similarly.    If is an -module homomorphism then we define elements for and by the formulas    Define to be the matrix EMPTY    -Vector Space of Polynomials ( )  Let denote the the -vector space of polynomials of degree at most (including the zero polynomial) and consider the linear transformation given by , i.e. taking the derivative. Take for an ordered basis of and for an ordered basis of . Then for we have and We have confirming in this example one of the assertions of the Lemma.  Let be the linear map . Then Note that and as predicted by .   Identity Automorphism of Free -Module  If is the identity automorphism of an -dimensional free -module , then for any basis of we have for all and hence    When FMH Matrix is Invertible   If is an isomorphism of free modules of finite rank, is an ordered basis of and is an ordered basis of , then is an invertible matrix and       Computations and Examples       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Formal Proofs       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Qualifying Exam Problems       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     "
 },
 {
-  "id": "remark-74",
+  "id": "remark-75",
   "level": "2",
-  "url": "sec-basics.html#remark-74",
+  "url": "sec-basics.html#remark-75",
   "type": "Remark",
   "number": "15.1",
   "title": "",
@@ -6427,20 +6481,11 @@ var ptx_lunr_docs = [
   "body": "When FMH Matrix is Invertible   If is an isomorphism of free modules of finite rank, is an ordered basis of and is an ordered basis of , then is an invertible matrix and    "
 },
 {
-  "id": "exercise-197",
-  "level": "2",
-  "url": "sec-basics.html#exercise-197",
-  "type": "Exercise",
-  "number": "15.1.1",
-  "title": ".",
-  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
-},
-{
   "id": "exercise-198",
   "level": "2",
   "url": "sec-basics.html#exercise-198",
   "type": "Exercise",
-  "number": "15.1.2",
+  "number": "15.1.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
@@ -6448,6 +6493,15 @@ var ptx_lunr_docs = [
   "id": "exercise-199",
   "level": "2",
   "url": "sec-basics.html#exercise-199",
+  "type": "Exercise",
+  "number": "15.1.2",
+  "title": ".",
+  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
+},
+{
+  "id": "exercise-200",
+  "level": "2",
+  "url": "sec-basics.html#exercise-200",
   "type": "Exercise",
   "number": "15.1.3",
   "title": ".",
@@ -6472,27 +6526,27 @@ var ptx_lunr_docs = [
   "body": "Bijection of Matrices and Hom Functor   Suppose is a ring and and are free -modules with ordered bases and , respectively. There is a bijective correspondence that sends a matrix to the unique -module homomorphism satisfying for each .   "
 },
 {
-  "id": "remark-75",
+  "id": "remark-76",
   "level": "2",
-  "url": "subsec-free-modules-and-matrices.html#remark-75",
+  "url": "subsec-free-modules-and-matrices.html#remark-76",
   "type": "Remark",
   "number": "15.7",
   "title": "",
   "body": " It is of paramount importance to realize that the bijection between maps and matrices {}.  In particular, the -map written as that we associate to the matrix in this proposition depends on the basis and , and so it should really be written as something like . I will occasionally do so.  "
 },
 {
-  "id": "remark-76",
+  "id": "remark-77",
   "level": "2",
-  "url": "subsec-free-modules-and-matrices.html#remark-76",
+  "url": "subsec-free-modules-and-matrices.html#remark-77",
   "type": "Remark",
   "number": "15.8",
   "title": "",
   "body": " Let us rephrase the Proposition in terms of usual matrix multiplication in the case when is {}.  Given an -module homomorphism with and as in the proposition, let be the matrix attached to it using the bases and as described above. Then the diagram #empty  commutes, where and are defined in and and by we mean the map where denotes the usual rule for matrix multiplication. (Recall elements of are represented as column vectors.)  Conversely, given a matrix , the corresponding map is the unique one causing this square to commute; i.e. .  "
 },
 {
-  "id": "remark-77",
+  "id": "remark-78",
   "level": "2",
-  "url": "subsec-free-modules-and-matrices.html#remark-77",
+  "url": "subsec-free-modules-and-matrices.html#remark-78",
   "type": "Remark",
   "number": "15.9",
   "title": "",
@@ -6508,9 +6562,9 @@ var ptx_lunr_docs = [
   "body": "Matrix Multiplication is Associative   Let be a commutative ring, let be free -modules having finite bases of size , respectively. Given a matrix and a matrix , let denote the matrix obtained by the usual formula for matrix multiplication, and let , and be the maps associated to these matrices relative to the specified bases, as given in Proposition. Then In particular, matrix multiplication is associative.    For the first assertion we just need to check the two maps agree on for all : We have (with the second equation using that is an -map) and (I have left off the superscripts etc. for the sake of my sanity.) These two expressions agree since is commutative.  The second assertion holds since composition of functions is associative.   "
 },
 {
-  "id": "remark-78",
+  "id": "remark-79",
   "level": "2",
-  "url": "subsec-free-modules-and-matrices.html#remark-78",
+  "url": "subsec-free-modules-and-matrices.html#remark-79",
   "type": "Remark",
   "number": "15.11",
   "title": "",
@@ -6535,9 +6589,9 @@ var ptx_lunr_docs = [
   "body": "Change of Basis Matrix (CoB)   Let be a finite rank free module over a commutative ring , and let and be bases of . Let be the identity map on . Then is called the change of basis matrix from to    "
 },
 {
-  "id": "remark-79",
+  "id": "remark-80",
   "level": "2",
-  "url": "sec-cob.html#remark-79",
+  "url": "sec-cob.html#remark-80",
   "type": "Remark",
   "number": "15.13",
   "title": "",
@@ -6580,9 +6634,9 @@ var ptx_lunr_docs = [
   "body": "Equivalent Matrices   Two matrices and are equivalent if there exists invertible matrices and (of the appropriate sizes) so that .   "
 },
 {
-  "id": "remark-80",
+  "id": "remark-81",
   "level": "2",
-  "url": "sec-cob.html#remark-80",
+  "url": "sec-cob.html#remark-81",
   "type": "Remark",
   "number": "15.18",
   "title": "",
@@ -6616,20 +6670,11 @@ var ptx_lunr_docs = [
   "body": "Finding Unique Equivalent Matrix   Let be a non-zero commutative ring, let be a free -module of dimension , and let be any ordered basis of . If is any matrix with entries in that is invertible (i.e., there is another matrix such that ), then for a unique basis of .    Each of the maps is an isomorphism. (The one on the far right is the inverse of the one on the far left. The middle one is since is a two-sided inverse.) So the composition of all three of these maps, let us call it , is also an isomorphism. It follows that is a basis of . I leave it as an exercise for you to check that .  To show the uniqueness, say , say are ordered bases such that . Then For each we have and so that which gives .   "
 },
 {
-  "id": "exercise-200",
-  "level": "2",
-  "url": "sec-cob.html#exercise-200",
-  "type": "Exercise",
-  "number": "15.3.1",
-  "title": ".",
-  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
-},
-{
   "id": "exercise-201",
   "level": "2",
   "url": "sec-cob.html#exercise-201",
   "type": "Exercise",
-  "number": "15.3.2",
+  "number": "15.3.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
@@ -6637,6 +6682,15 @@ var ptx_lunr_docs = [
   "id": "exercise-202",
   "level": "2",
   "url": "sec-cob.html#exercise-202",
+  "type": "Exercise",
+  "number": "15.3.2",
+  "title": ".",
+  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
+},
+{
+  "id": "exercise-203",
+  "level": "2",
+  "url": "sec-cob.html#exercise-203",
   "type": "Exercise",
   "number": "15.3.3",
   "title": ".",
@@ -6679,9 +6733,9 @@ var ptx_lunr_docs = [
   "body": "Elementary Matrix   Let be a commutative ring with . An elementary matrix over is an matrix obtained from by applying a single elementary column operation (or, equivalently, a single elementary column operation). In more detail:   (Type I) For and with , let be the type I elementary matrix with 's on the diagonal, in the position, and everywhere else.    (Type II) For and let be the type II elementary matrix with entry , entry for all , and everywhere else.    (Type III) For with , let be the type III elementary matrix with in the and positions and in the positions for all , and 0 in all other entries.      "
 },
 {
-  "id": "remark-81",
+  "id": "remark-82",
   "level": "2",
-  "url": "sec-elematix.html#remark-81",
+  "url": "sec-elematix.html#remark-82",
   "type": "Remark",
   "number": "15.25",
   "title": "",
@@ -6697,9 +6751,9 @@ var ptx_lunr_docs = [
   "body": "Properties of Elementary Matrices   Let be an elementary matrix.   For a free -module with basis such that , is the change of basis matrix , where is the basis obtained from by the corresponding elementary basis change operation.    If , then the product matrix is the result of performing the corresponding elementary column operation on .    If , then the product matrix is the result of performing the corresponding elementary column operation on .      "
 },
 {
-  "id": "remark-82",
+  "id": "remark-83",
   "level": "2",
-  "url": "sec-elematix.html#remark-82",
+  "url": "sec-elematix.html#remark-83",
   "type": "Remark",
   "number": "15.27",
   "title": "",
@@ -6715,9 +6769,9 @@ var ptx_lunr_docs = [
   "body": "Matrix Invertible iff Columns Span   Let be a field and let be an matrix for . is invertible if and only if its columns span .     is invertible if and only if the associated linear map given by is an isomorphism. By the rank-nullity Theorem, if and only if if and only if is an isomorphism. The result follows, since and is the span of the columns of .   "
 },
 {
-  "id": "remark-83",
+  "id": "remark-84",
   "level": "2",
-  "url": "sec-elematix.html#remark-83",
+  "url": "sec-elematix.html#remark-84",
   "type": "Remark",
   "number": "15.29",
   "title": "",
@@ -6760,29 +6814,20 @@ var ptx_lunr_docs = [
   "body": "Equivalent Matrices Characterization   Given two matrices and with entries in a field, and are equivalent if and only if each can be transformed to the other via elementary column and column operations.   "
 },
 {
-  "id": "remark-84",
+  "id": "remark-85",
   "level": "2",
-  "url": "sec-elematix.html#remark-84",
+  "url": "sec-elematix.html#remark-85",
   "type": "Remark",
   "number": "15.34",
   "title": "",
   "body": " For a ring , recall that is the group of invertible matrices with entries in . Let be the subset of consisting of all products of elementary matrices of type I. Since the inverse of an elementary matrix of type I is again an elementary matrix of type I, is a subgroup of . In fact it is a normal subgroup, at least when , and hence the quotient group is defined in this case.  As a consequence of the Theorem above, if is a field then there is an isomorphism of groups where is the group of units in .  For a general ring, the extent to which is “larger'' than measure the extent to which Theorem fails.  The algebraic -group is defined to be (and it is usually isomorphic to for ). Moreover, is the derived subgroup of , and hence is the abelianization of .  "
 },
 {
-  "id": "exercise-203",
-  "level": "2",
-  "url": "sec-elematix.html#exercise-203",
-  "type": "Exercise",
-  "number": "15.4.1",
-  "title": ".",
-  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
-},
-{
   "id": "exercise-204",
   "level": "2",
   "url": "sec-elematix.html#exercise-204",
   "type": "Exercise",
-  "number": "15.4.2",
+  "number": "15.4.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
@@ -6790,6 +6835,15 @@ var ptx_lunr_docs = [
   "id": "exercise-205",
   "level": "2",
   "url": "sec-elematix.html#exercise-205",
+  "type": "Exercise",
+  "number": "15.4.2",
+  "title": ".",
+  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
+},
+{
+  "id": "exercise-206",
+  "level": "2",
+  "url": "sec-elematix.html#exercise-206",
   "type": "Exercise",
   "number": "15.4.3",
   "title": "January 2012 (9).",
@@ -6814,9 +6868,9 @@ var ptx_lunr_docs = [
   "body": "Linear Operator   By a linear operator (or -linear operator) on we mean an -module endomorphism of .   "
 },
 {
-  "id": "remark-85",
+  "id": "remark-86",
   "level": "2",
-  "url": "sec-operator.html#remark-85",
+  "url": "sec-operator.html#remark-86",
   "type": "Remark",
   "number": "15.36",
   "title": "",
@@ -6832,9 +6886,9 @@ var ptx_lunr_docs = [
   "body": "Representing Bases  Here is a concrete example. Let , the collection of polynomials in with coefficients in of degree at most . Let be the map sending a polynomial to its derivative. The most obvious choice for a bases of is . With respect to this basis, the map is represented by the matrix   If, when , we instead used as a basis, then the matrix for would be   "
 },
 {
-  "id": "remark-86",
+  "id": "remark-87",
   "level": "2",
-  "url": "sec-operator.html#remark-86",
+  "url": "sec-operator.html#remark-87",
   "type": "Remark",
   "number": "15.38",
   "title": "",
@@ -6850,9 +6904,9 @@ var ptx_lunr_docs = [
   "body": "Similar Matrices   Two matrices and with entries in a commutative ring are called similar if for some invertible matrix .   "
 },
 {
-  "id": "remark-87",
+  "id": "remark-88",
   "level": "2",
-  "url": "sec-operator.html#remark-87",
+  "url": "sec-operator.html#remark-88",
   "type": "Remark",
   "number": "15.40",
   "title": "",
@@ -6868,20 +6922,11 @@ var ptx_lunr_docs = [
   "body": "Linear Operators and Bases   Let be a non-zero commutative ring. Given a linear operator on a free -module of finite rank , we have:   The matrices representing with respect to any two choices of bases of are similar    If represents with respect to a basis of and if is similar to , then there is a basis of such that the matrix representing with respect to is .       We proved the first assertion above.  Say and for some invertible matrix . By Proposition above, for a (unique) new basis . So .   "
 },
 {
-  "id": "exercise-206",
-  "level": "2",
-  "url": "sec-operator.html#exercise-206",
-  "type": "Exercise",
-  "number": "15.5.1",
-  "title": ".",
-  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
-},
-{
   "id": "exercise-207",
   "level": "2",
   "url": "sec-operator.html#exercise-207",
   "type": "Exercise",
-  "number": "15.5.2",
+  "number": "15.5.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
@@ -6889,6 +6934,15 @@ var ptx_lunr_docs = [
   "id": "exercise-208",
   "level": "2",
   "url": "sec-operator.html#exercise-208",
+  "type": "Exercise",
+  "number": "15.5.2",
+  "title": ".",
+  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
+},
+{
+  "id": "exercise-209",
+  "level": "2",
+  "url": "sec-operator.html#exercise-209",
   "type": "Exercise",
   "number": "15.5.3",
   "title": ".",
@@ -6904,9 +6958,9 @@ var ptx_lunr_docs = [
   "body": "Finitely Presented Modules   You have seen presentations for groups in the past; these consisted of a set of generators and a set of relations among these generators. Presentations are important for modules as well. In the case of modules, the relations may be encoded by a matrix.   -Module Presentation   Let be a non-zero commutative ring, let , and let be the -module homomorphism represented by with respect to the standard bases; that is, define . The - module presented by  is the -module .  Equivalently, the module presented by is where are the columns of .    -Module Presentation  What -module is presented by Formally, is the quotient module , where is defined by . Since is generated by its standard basis elements , it follows that is generated by the cosets of the . To keep the notation short, we set .  Let and note that is the submodule of generated by the columns of , i.e. Since maps to under the quotient map , we have that the relations of can be written as We can now see that this is a rather inefficient presentation, since we can clearly use the first equation to solve for for . This implies that can be generated using only and that is This eliminates the first equation, and by substituting the latter two relations become Now we can also eliminate , i.e leaving just two generators that satisfy Let us notice that what we have really done is to perform certain transformations of the matrix . In detail, we can use elementary row operations to “make zeros'' on the 1st and 2nd columns as follows: Eliminating the generators and amounts to dropping the first two columns (which are the 3rd and 4th standard basis vectors) as well as the last two rows. As we will prove soon, this shows that the -module presented by is isomorphic to the -module presented by We can go further. Set . Then and also form a generating set of . The relation on translates to given by the matrix Note that we have done a row operation (subtract twice row 1 from row 2) to get from to . Continuing in this fashion by subtracting 12 row 2 from row 1 we also form The last matrix presents the module with generators  ) and relation . As we will see, this proves .   Matrices, Modules, and Isomorphisms   Let be a non-zero commutative ring and let and for some . Then and present isomorphic -modules if can be obtained from by any finite sequence of operations of the following form:   an elementary row operation,    an elementary column operation,    deletion of the -th column and -th row of a matrix whose -th column is the vector ,    the reverse of (3),    deletion of a column of all 's,    the reverse of (5).       Note: This proof was not covered in class. Assume is obtained from by a single one of the steps listed above. We need to prove that there is an isomorphism of -modules.   In this case, for some elementary matrix . More generally, let be any invertible matrix such that . Then is an isomorphism and it maps bijectively onto . It follows that the kernel of the composition is and hence by the first isomorphism theorem it induces an isomorphism     In this case, for some elementary matrix . More generally, assume is any invertible matrix such that . Since is an isomorphism, we have and so . (For this one we get equality, not merely an isomorphism.)    For notational simplicity, let us assume ; that is, the first column of is and is obtained by deleting the first row and column of , giving a matrix. So where denotes some row vector and denotes a column of all 's. Let and be projection onto the last and components, respectively. Because of the nature of and , the diagram (page 40 in notes) commutes. Moreover, the kernel of is and the kernel of is , and since the first column of is , maps the kernel of bijectively onto the kernel of . A “diagram chase'' shows that . In detail: Since the diagram commutes, and hence induces an -module homomorphism (by the -th isomorphism theorem). Since is onto, so is . Suppose . So, . Say . Since is onto, for some . Then and thus . As noted above, maps onto and hence for some vector . This proves and hence that in . This proves is one-to-one.    It is clear that the columns of generate the same submodule of as do the columns of , and thus and .    Since the isomorphism relation is reflexive, the statements of parts 3. & 5. show that parts 4.& 6. are true as well.        The converse is true for some rings , including Euclidean domains.    In fact, if and are equivalent matrices, then , as I shall prove below. This implies both (1) and (2) from the Theorem.   Diagonal Presentation   Suppose is a commutative ring and is a matrix such that for all and set for all . If then and if then     Assume and define to be the map sending to where for . (I.e., is the unique -map sending the -th standard basis vector to with in the -th position, for , and to itself for .) Then is clearly onto and the kernel of is the set of those tuples such that for some for all and for . Given such a tuple, This proves is contained Arguing backwards we see that the opposite containment also holds, so that in fact .  By the First Isomorphism Theorem, If then, by deleting columns of all 's, we may reduce to the case when , which is included in the first case.      Computations and Examples       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Formal Proofs       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Qualifying Exam Problems       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     "
 },
 {
-  "id": "remark-88",
+  "id": "remark-89",
   "level": "2",
-  "url": "sec-modpres.html#remark-88",
+  "url": "sec-modpres.html#remark-89",
   "type": "Remark",
   "number": "16.1",
   "title": "",
@@ -6940,18 +6994,18 @@ var ptx_lunr_docs = [
   "body": "Matrices, Modules, and Isomorphisms   Let be a non-zero commutative ring and let and for some . Then and present isomorphic -modules if can be obtained from by any finite sequence of operations of the following form:   an elementary row operation,    an elementary column operation,    deletion of the -th column and -th row of a matrix whose -th column is the vector ,    the reverse of (3),    deletion of a column of all 's,    the reverse of (5).       Note: This proof was not covered in class. Assume is obtained from by a single one of the steps listed above. We need to prove that there is an isomorphism of -modules.   In this case, for some elementary matrix . More generally, let be any invertible matrix such that . Then is an isomorphism and it maps bijectively onto . It follows that the kernel of the composition is and hence by the first isomorphism theorem it induces an isomorphism     In this case, for some elementary matrix . More generally, assume is any invertible matrix such that . Since is an isomorphism, we have and so . (For this one we get equality, not merely an isomorphism.)    For notational simplicity, let us assume ; that is, the first column of is and is obtained by deleting the first row and column of , giving a matrix. So where denotes some row vector and denotes a column of all 's. Let and be projection onto the last and components, respectively. Because of the nature of and , the diagram (page 40 in notes) commutes. Moreover, the kernel of is and the kernel of is , and since the first column of is , maps the kernel of bijectively onto the kernel of . A “diagram chase'' shows that . In detail: Since the diagram commutes, and hence induces an -module homomorphism (by the -th isomorphism theorem). Since is onto, so is . Suppose . So, . Say . Since is onto, for some . Then and thus . As noted above, maps onto and hence for some vector . This proves and hence that in . This proves is one-to-one.    It is clear that the columns of generate the same submodule of as do the columns of , and thus and .    Since the isomorphism relation is reflexive, the statements of parts 3. & 5. show that parts 4.& 6. are true as well.      "
 },
 {
-  "id": "remark-89",
+  "id": "remark-90",
   "level": "2",
-  "url": "sec-modpres.html#remark-89",
+  "url": "sec-modpres.html#remark-90",
   "type": "Remark",
   "number": "16.5",
   "title": "",
   "body": " The converse is true for some rings , including Euclidean domains.  "
 },
 {
-  "id": "remark-90",
+  "id": "remark-91",
   "level": "2",
-  "url": "sec-modpres.html#remark-90",
+  "url": "sec-modpres.html#remark-91",
   "type": "Remark",
   "number": "16.6",
   "title": "",
@@ -6967,20 +7021,11 @@ var ptx_lunr_docs = [
   "body": "Diagonal Presentation   Suppose is a commutative ring and is a matrix such that for all and set for all . If then and if then     Assume and define to be the map sending to where for . (I.e., is the unique -map sending the -th standard basis vector to with in the -th position, for , and to itself for .) Then is clearly onto and the kernel of is the set of those tuples such that for some for all and for . Given such a tuple, This proves is contained Arguing backwards we see that the opposite containment also holds, so that in fact .  By the First Isomorphism Theorem, If then, by deleting columns of all 's, we may reduce to the case when , which is included in the first case.   "
 },
 {
-  "id": "exercise-209",
-  "level": "2",
-  "url": "sec-modpres.html#exercise-209",
-  "type": "Exercise",
-  "number": "16.1.1",
-  "title": ".",
-  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
-},
-{
   "id": "exercise-210",
   "level": "2",
   "url": "sec-modpres.html#exercise-210",
   "type": "Exercise",
-  "number": "16.1.2",
+  "number": "16.1.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
@@ -6988,6 +7033,15 @@ var ptx_lunr_docs = [
   "id": "exercise-211",
   "level": "2",
   "url": "sec-modpres.html#exercise-211",
+  "type": "Exercise",
+  "number": "16.1.2",
+  "title": ".",
+  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
+},
+{
+  "id": "exercise-212",
+  "level": "2",
+  "url": "sec-modpres.html#exercise-212",
   "type": "Exercise",
   "number": "16.1.3",
   "title": ".",
@@ -7012,9 +7066,9 @@ var ptx_lunr_docs = [
   "body": "Smith Normal Form   Let be a Euclidean domain and let . Then there is a sequence of elementary column and column operations that transform into a matrix such that all non-diagonal entries of are and the diagonal entries of satisfy     The main point of the proof is to establish:  {}: There is a sequence of row and column operations that transforms to for some matrix and where . (We adopt the convention that if is the matrix of all 's, then .) Note that, by Lemma , we have and thus .  Granting this claim, by applying it again to we arrive at a matrix of the form where and and . (Observe that the row and column operations on will not affect the first row and column of .) Continuing in this fashion, we arrive at the matrix in the statement.  To prove the claim, let be the upper-left entry of .  Suppose happens to be . Then, in particular, it divides every entry of the first row and column of , and so by doing row and column operations of type I, we may out these entries to arrive at a matrix of the desired form directly.  In general, let to be the number of prime factors in a prime factorization of of , and proceed by induction on .  If , then (up to associates), and we already did this case.  Assume . Then there is at least one entry such that .  Case I: There is such a belonging to the first row of . In this case we we may implement the Euclidean algorithm in the form of suitable column operations to replace by and by , as in the example above. Since , is a proper divisor of , and it follows that the number of factors in a prime factorization of is smaller than , and we are done by induction.  Case II: There is such a in the first column. Just as in the previous case, we are done by induction upon implementing the Euclidean algorithm using suitable row operations.  Case III: divides every entry of the first row and first column. In this case, suitable row and column operations transform to By Lemma we have , and thus there is some element of such that (since we are assuming is not the gcd of ). A suitable row operation puts into row one without affecting , and we are back to the previously solved Case I.   "
 },
 {
-  "id": "remark-91",
+  "id": "remark-92",
   "level": "2",
-  "url": "sec-snf.html#remark-91",
+  "url": "sec-snf.html#remark-92",
   "type": "Remark",
   "number": "16.9",
   "title": "",
@@ -7048,9 +7102,9 @@ var ptx_lunr_docs = [
   "body": "Finding SNF  Consider the matrix with entries in  Do row and column operations to put into its Smith Normal Form: Conclude that the module presented by is isomorphic to .  "
 },
 {
-  "id": "remark-92",
+  "id": "remark-93",
   "level": "2",
-  "url": "sec-snf.html#remark-92",
+  "url": "sec-snf.html#remark-93",
   "type": "Remark",
   "number": "16.13",
   "title": "",
@@ -7093,63 +7147,63 @@ var ptx_lunr_docs = [
   "body": "Smith Normal Form is Unique   Assume is a PID and . Suppose can be obtained from via a sequence of elementary column and column operations and that is diagonal with diagonal entries such that . Then In particular, the SNF of a matrix is unique up to associates.    Recall that for a PID , the gcd of any set of elements is defined to be a generatpr of the ideal they generate. So, Lemma implies that for all . Since is diagonal, the only non-zero minors of are those given by indices and for which for all , and moreover such a minor is equal to . Since for all , it follows that divides for all . Thus , for each , and hence as claimed.   "
 },
 {
-  "id": "remark-93",
+  "id": "remark-94",
   "level": "2",
-  "url": "sec-snf.html#remark-93",
+  "url": "sec-snf.html#remark-94",
   "type": "Remark",
   "number": "16.18",
   "title": "",
   "body": " So, another way of finding the SNF of a matrix with entries in a Euclidean domain is to calculate for all . This is not practical except in very special cases.  "
 },
 {
-  "id": "exercise-212",
+  "id": "exercise-213",
   "level": "2",
-  "url": "sec-snf.html#exercise-212",
+  "url": "sec-snf.html#exercise-213",
   "type": "Exercise",
   "number": "16.2.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-213",
+  "id": "exercise-214",
   "level": "2",
-  "url": "sec-snf.html#exercise-213",
+  "url": "sec-snf.html#exercise-214",
   "type": "Exercise",
   "number": "16.2.2",
   "title": "",
   "body": " Let . Express the -module presented by as the direct sum of cyclic groups. Justify your answer.  "
 },
 {
-  "id": "exercise-214",
+  "id": "exercise-215",
   "level": "2",
-  "url": "sec-snf.html#exercise-214",
+  "url": "sec-snf.html#exercise-215",
   "type": "Exercise",
   "number": "16.2.3",
   "title": "",
   "body": " Let and , regarded as matrices with entries in .   Express the cokernel of (i.e., ) in elementary divisor form (that is, as a direct sum of cyclic groups each of which is either infinite or of prime power order).    Express the cokernel of in elementary divisor form.     "
 },
 {
-  "id": "exercise-215",
+  "id": "exercise-216",
   "level": "2",
-  "url": "sec-snf.html#exercise-215",
+  "url": "sec-snf.html#exercise-216",
   "type": "Exercise",
   "number": "16.2.4",
   "title": "",
   "body": " Consider the matrix Determine the simplest representative in the isomorphism class of the -module presented by .  "
 },
 {
-  "id": "exercise-216",
+  "id": "exercise-217",
   "level": "2",
-  "url": "sec-snf.html#exercise-216",
+  "url": "sec-snf.html#exercise-217",
   "type": "Exercise",
   "number": "16.2.5",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-217",
+  "id": "exercise-218",
   "level": "2",
-  "url": "sec-snf.html#exercise-217",
+  "url": "sec-snf.html#exercise-218",
   "type": "Exercise",
   "number": "16.2.6",
   "title": ".",
@@ -7165,9 +7219,9 @@ var ptx_lunr_docs = [
   "body": "Noetherian Rings   We now address the question of which modules have finite presentations. It is clear than any such module must be finitely generated (since the cosets of generate for any matrix ). If is finitely generated, say by elements, then we can find a surjective -module homomorphism Provided the kernel of is also finitely generated, say by elements, then we may find a surjection The composition is a map between free -modules and is thus equal to for some matrix . Clearly and hence by the first isomorphism theorem so that is finitely presented.  So the real question is: For a given ring , is it the case that for all , every submodule of is finitely generated? The answer is “no'' in general, but it does hold for many rings of interest:   Ascending Chain Condition   A commutative ring has the ascending chain condition (on ideals) if given any chain of ideals in of the form there is an such that     Noetherian Rings   Suppose is a commutative ring. The following conditions are equivalent:    has the ascending chain condition on ideals.    Every ideal of is finitely generated — i.e., for every ideal , there exists a finite set of elements in such that . In this case we say is Noetherian .       Assume every ideal is finitely generated and that such a chain is given. Let . Then it is easy to see that is an ideal. (In detail, for we have for some and hence .  If , then and for some and hence there is a such that . It follows that . Finally .) Thus by assumption is finitely generated, say for some .  Each belongs to one of the 's and hence, since there are only a finite number of such elements and ideas are nested, there is an such that . It follows that and hence .  Assume has the acc for ideals and let be any ideal. Pick any element and set . If we are done. If not, pick and set . If we are done and if not pick and let . In this way we form a strictly ascending chain , and this process cannot be continued forever since has the acc. When it terminates, we have for some and thus is finitely generated.    Hilbert's Basis Theorem   If is a noetherian ring, then the polynomial rings and are noetherian for any .    Finitely Generated Modules in Noetherian Rings   If is a noetherian commutative ring, then every submodule of a finitely generated module is again finitely generated.    I will just prove the following special case (since it is all we need): For each , every submodule of is finitely generated. The base case holds by definition (and Lemma ), since a submodule of is the same thing as an ideal.  Assume and the result holds for . Let be any submodule of . Define to be the projection onto the last component of . The kernel of may be identified with and so is a submodule of , and it is therefore finitely generated by assumption. The image of under is a submodule of , that is, an ideal of , and so it too is finitely generated by assumption (and Lemma ).  Furthermore, by the first isomorphism theorem is also finitely generated. By a homework problem, we deduce that is a finitely generated module.  % I'll just sketch the general case (which I don't think we'll actually need): let be any finitely generated -module and any submodule. % Since is finitely generated, there exists a surjective -module homomorphism for some . Then is a submodule of and % hence it is finitely generated by the case we already proved. Moreover, induces a surjective -module homomorphism , % and hence is isomorphic to a quotient of a finitely generated -module and thus it is also finitely generated.     The converse is also true: If is not Noetherian, there there exists an ideal that is not finitely generated (by the Lemma). This gives an example of a non-finitely-generated submodule, namely , of a finitely generated module, namely .   Finite Presentations in Noetherian Rings   Any finitely generated module over a noetherian ring has a finite presentation; that is, given such a module over such a ring, there exists an matrix in and an isomorphism     We basically already proved this, but let me recap it:  If is finitely generated, then for some we can find a surjective -module homomorphism Since we assume is Noetherian, the kernel of is also finitely generated by the Proposition, and so we may find a surjection of -modules for some . The composition is equal to for some matrix . Since , the first isomorphism theorem gives an isomorphism     Quotient Rings Noetherian in Noetherian Rings  Let be a commutative ring and an ideal of . Show that if is noetherian then is also noetherian.   "
 },
 {
-  "id": "remark-94",
+  "id": "remark-95",
   "level": "2",
-  "url": "sec-noeth.html#remark-94",
+  "url": "sec-noeth.html#remark-95",
   "type": "Remark",
   "number": "16.19",
   "title": "",
@@ -7210,9 +7264,9 @@ var ptx_lunr_docs = [
   "body": "Finitely Generated Modules in Noetherian Rings   If is a noetherian commutative ring, then every submodule of a finitely generated module is again finitely generated.    I will just prove the following special case (since it is all we need): For each , every submodule of is finitely generated. The base case holds by definition (and Lemma ), since a submodule of is the same thing as an ideal.  Assume and the result holds for . Let be any submodule of . Define to be the projection onto the last component of . The kernel of may be identified with and so is a submodule of , and it is therefore finitely generated by assumption. The image of under is a submodule of , that is, an ideal of , and so it too is finitely generated by assumption (and Lemma ).  Furthermore, by the first isomorphism theorem is also finitely generated. By a homework problem, we deduce that is a finitely generated module.  % I'll just sketch the general case (which I don't think we'll actually need): let be any finitely generated -module and any submodule. % Since is finitely generated, there exists a surjective -module homomorphism for some . Then is a submodule of and % hence it is finitely generated by the case we already proved. Moreover, induces a surjective -module homomorphism , % and hence is isomorphic to a quotient of a finitely generated -module and thus it is also finitely generated.   "
 },
 {
-  "id": "remark-95",
+  "id": "remark-96",
   "level": "2",
-  "url": "sec-noeth.html#remark-95",
+  "url": "sec-noeth.html#remark-96",
   "type": "Remark",
   "number": "16.24",
   "title": "",
@@ -7228,9 +7282,9 @@ var ptx_lunr_docs = [
   "body": "Finite Presentations in Noetherian Rings   Any finitely generated module over a noetherian ring has a finite presentation; that is, given such a module over such a ring, there exists an matrix in and an isomorphism     We basically already proved this, but let me recap it:  If is finitely generated, then for some we can find a surjective -module homomorphism Since we assume is Noetherian, the kernel of is also finitely generated by the Proposition, and so we may find a surjection of -modules for some . The composition is equal to for some matrix . Since , the first isomorphism theorem gives an isomorphism    "
 },
 {
-  "id": "exercise-218",
+  "id": "exercise-219",
   "level": "2",
-  "url": "sec-noeth.html#exercise-218",
+  "url": "sec-noeth.html#exercise-219",
   "type": "Exploration",
   "number": "16.26",
   "title": "Quotient Rings Noetherian in Noetherian Rings.",
@@ -7318,9 +7372,9 @@ var ptx_lunr_docs = [
   "body": " Since , so the elementary divisors of are , and . The only invariant factor of is .  "
 },
 {
-  "id": "example-98",
+  "id": "example-100",
   "level": "2",
-  "url": "sec-modclass.html#example-98",
+  "url": "sec-modclass.html#example-100",
   "type": "Example",
   "number": "16.35",
   "title": "Direct Sums and <span class=\"process-math\">\\(\\Z\\)<\/span>.",
@@ -7354,47 +7408,38 @@ var ptx_lunr_docs = [
   "body": "Finding IFs and EDs  Find the invariant factor form and the elementary divisor form of the -module first when    ,     and     .     "
 },
 {
-  "id": "exercise-219",
+  "id": "exercise-220",
   "level": "2",
-  "url": "sec-modclass.html#exercise-219",
+  "url": "sec-modclass.html#exercise-220",
   "type": "Exploration",
   "number": "16.39",
   "title": "",
   "body": " Let be a Euclidean domain, an matrix with elements from , and the transpose matrix of . Let denote the quotient of by the submodule generated by the columns of . The {} submodule of an -module is the submodule (It is indeed a submodule and you need not prove this.)   Prove that the torsion submodules of and are isomorphic.    Prove that the modules and are isomorphic if and only if .     "
 },
 {
-  "id": "exercise-220",
+  "id": "exercise-221",
   "level": "2",
-  "url": "sec-modclass.html#exercise-220",
+  "url": "sec-modclass.html#exercise-221",
   "type": "Exploration",
   "number": "16.40",
   "title": "",
   "body": " Let be a PID and let be a finitely generated -module.   Determine a generator for the principal ideal in terms of the invariant factors and the free rank of .    Determine a generator for the principal ideal in terms of the elementary divisors and the free rank of .     "
 },
 {
-  "id": "exercise-221",
+  "id": "exercise-222",
   "level": "2",
-  "url": "sec-modclass.html#exercise-221",
+  "url": "sec-modclass.html#exercise-222",
   "type": "Exploration",
   "number": "16.41",
   "title": "",
   "body": " Consider the matrix where .   Determine the Smith normal form for .    Determine the representative in the isomorphism class of the module presented by which is written in invariant factor form and in elementary divisor form.     "
 },
 {
-  "id": "exercise-222",
-  "level": "2",
-  "url": "sec-modclass.html#exercise-222",
-  "type": "Exercise",
-  "number": "16.4.1",
-  "title": ".",
-  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
-},
-{
   "id": "exercise-223",
   "level": "2",
   "url": "sec-modclass.html#exercise-223",
   "type": "Exercise",
-  "number": "16.4.2",
+  "number": "16.4.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
@@ -7402,6 +7447,15 @@ var ptx_lunr_docs = [
   "id": "exercise-224",
   "level": "2",
   "url": "sec-modclass.html#exercise-224",
+  "type": "Exercise",
+  "number": "16.4.2",
+  "title": ".",
+  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
+},
+{
+  "id": "exercise-225",
+  "level": "2",
+  "url": "sec-modclass.html#exercise-225",
   "type": "Exercise",
   "number": "16.4.3",
   "title": ".",
@@ -7417,9 +7471,9 @@ var ptx_lunr_docs = [
   "body": "Rational Canonical Form  Suppose is a field and is a -module. By restriction of scalars along the canonical ring map we may regard as a -vector space — let us write this vector space as to be precise. Let be the map given by . Then is an -linear operator on . So, to a -module we may associate the pair where is an -vector space and is an -linear operator on . This process is reversible:  -Module   Let be a field, let be a finite dimensional vector space over , and let be an -linear operator. The -module is defined to be the abelian group equipped with the rule for scaling given by for any polynomial and vector .    is Actually a -Module   Given a pair as in the definition, really is a -module.    Special Case of  We have the following special case (it isn't really special — the general case reduces to this one upon choosing a basis):  Given a matrix , then is the -module whose underlying abelian group is (column vectors) with the usual rule for addition and with the rule for scaling given by for any column vector . For short, we write this rule as for any polynomial , where is the matrix obtained by evaluating at in the evident sense.    Let and let be the -module . So as a -vector space, and acts on by sending to . I claim there is an isomorphism of -modules.  Let . Note that and that and span as a -vector space. It follows that generates as a -module; in detail, for any we have .  Define a -module homomorphism by sending to and hence to . It is onto since generates as a -module. The kernel will be a (necessarily principle) ideal of ; we just need to find it. Note that , and are linearly dependent and in fact we have and hence . This gives that is in the kernel of and hence, by the -th Isomorphism Theorem we have an induced homomorphism of -modules induced by . The map is onto since is onto. Since the source and target both have dimension two as -vector spaces, is -linear, and is onto, it must in fact be an isomorphism of -modules (by the Rank-Nullity Theorem).   Equality of -Modules   The two assignments and defined above are mutually inverse: Given a -module , there is an equality of -modules and given a pair with an -vector space and an -linear operator on we have an equality of pairs .    In fact, these rules determine an “isomorphism of categories''.  Block Diagonal Matrix   Given square matrices , we define to be the block diagonal matrix which belongs to for .    Rational Canonical Form   Given a finite dimensional -vector space and an -linear operator , there is a basis of such that the matrix representing relative to is for monic polynomials of degree at least one such that . Moreover, this matrix is unique, and is known as the rational canonical form of the operator .    We know by the Fundamental Theorem of modules over (i.e., Corollary ) that there is a -module isomorphism for some unique list of monic, non-constant polynomials with for all . Recall that the operator on is given as (multiplication by ) on . Since this is a -module isomorphism, corresponds to multiplication by on each summand . As we have seen before, for each , the matrix representing on relative to the basis of is the companion matrix of . Let be the -basis of given by tuples (in that order). Then the matrix of on for is .  This gives existence. Uniqueness is a consequence of the uniqueness of the list , but I will omit the details.    The matrix is unique, but the basis that realizes it is, in general, not unique. As an extreme example illustrating this: Take to be the identity operator on a finite dimensional vector space . Then holds for any basis . (Note that is indeed in rational canonical form: it is equal to .)  Invariant Factor   In Theorem , the number is the rank of , the numbers are the invariant factors of , and the decomposition of in part (1) is the invariant factor decomposition of .    Back to  Let us return to the example of to illustrate the Theorem and its proof. By the previous example we have an isomorphism of -module Recall that (multiplication by ) on is given by multiplication by the matrix . This is an isomorphism of -modules, and so corresponds to the operator on . As we have seen before, relative to the basis , the matrix for is This is the Rational Canonical Form of . has just one invariant factor, namely .  By the way, tracking through the calculations that got us here, we see that the basis of that gives the RCF of if of .   Every Matrix Similar to Unique RCF Matrix   Every matrix is similar to a unique matrix in RCF.    Similarity Classes of Matrices  Let be the field with elements for some prime . Up to similarity, how many matrices are there with entries in ?  Each such matrix is similar to a unique one of the form with monic polynomials of positive degree such that . Moreover, since is a matrix where , we must have . So the goal becomes to count all such tuples of polynomials. We proceed by cases on . Note that is not possible. - Case . Then and the number of such polynomials is (since and has elements). - Case : Note that is not possible. If then , and there are possibilities. If , then and with monic and . There are possibilities for and for , for a total of in this subcase. The total for this case is thus . - Case : The only possibilities are , and so that and with . We get possibilities. - Case . We must have with each of degree , for a total of possibilities. The total is     The proof of Theorem makes clear the following fact:   For a field , finite dimensional vector space , and -linear operator ,the invariant factors of the operator are identical to the invariant factors of the -module .   The following result is thus very useful for finding the Rational Canonical Form of an operator (we will state it just for operators given explicitly by matrices):   RCF and Cokernels   Let be a field and let . The matrix presents the -module ; that is, there is an isomorphism of -modules     For this proof it is useful to identity with where the latter refers to all expressions of the form with . For instance, (when ) we identify with . Using this identification we define by . Then is a -module homomorphism — I leave it to you to verify this. is onto since, e.g., for any we have .  We have and hence . By the -th isomorphism theorem, there is an induced -module homomorphism induced by , and it is onto since is onto. It remains to show this map is one-to-one.  Since is -linear it is certainly -linear. Since , to prove is one-to-one, it suffices to prove (by Rank-Nullity). I claim the images of the standard basis in span it as an -vector space. To see this, note that , for , span as an -vector space, and hence they span the quotient. It thus suffices to show lies in the span of in for all and . We have and thus and by repeating this argument we have     Invariant Factors are Diagonal SNF Entries   The invariant factors of a matrix are the non-zero, non-unit diagonal entries of the SNF of .    Let be the Smith Normal Form of and let be its diagonal entries. As proven before, the matrix and present isomorphic -modules, and thus the Theorem gives an isomorphism Since , none of the 's can be zero. So, each is monic and . Now some of the might be non-zero constants, in which case is a unit and . Upon tossing those out, we are left with with each monic of positive degree and . These are, by definition, the invariant factors of .    Once More to Back to  Let's find the invariant factors of the matrix we looked at before, but this time using the Theorem and its Corollary.  We have To find the invariant factors of we just need to find the Smith Normal Form of . I'll do this two ways:  Method I: Do row and column operations using the generalized Euclidean algorithm: Tossing out the unit, we see that the only invariant factor is , as before.  Method II: Call the entries on the diagonal of the SNF of . Recall from Theorem that is the gcd of the entries of and . Thus and . Therefore the only invariant factor of is .   Finding IFs and RCF  Let Let us find the invariant factors and Rational Canonical Form of by finding the Smith Normal Form of .  We have A sequence of messy row and column operations yields Note that this is indeed in Smith Normal Form. It follows that the invariant factors of are and the RCF of is   For an alternative approach, we could use that the diagonal entries of the Smith Normal Form of satisfy , is the gcd of the minors of , and . It's clear that and an easy calculation gives that . There are nine minors of , and a tedious check reveals that each of them is one of , , or (up to signs). So . We get that as before.   Problem 7 - Nilpotent Matrices and Similarity  Let be a field and recall that a square matrix with entries in is called nilpotent if for some positive integer .   Prove that if is an nilpotent matrix, then .  Assume and prove that two nilpotent matrices are similar if and only if they have the same rank. (Recall the rank of a matrix is the dimension of the vector space spanned by its columns.)  Give an example, with justification, of two nilpotent matrices that have the same rank but are not similar.    Let be a field.     Let be an nilpotent matrix. Let be some eigenvalue of . Thus there exists some vector such that . Let's consider this the base-case of some rather banal induction. Now assume that for we have . Consider Recall that as is nilpotent, there exists some such that . As is an eigenvalue of , by the above induction we see that is an eigenvalue for . As is a field and thus an integral domain, we see that implies that is as well. As this holds in the algebraic closure of as well, we see that when factored into linear terms all the . Thus .  By the Cayley Hamilton Theorem we know , and thus .    Assume and let be nilpotent matrices with entries in .   Suppose . Thus there exists some invertible matrix such that by the definition of similar matrices. Let . Thus and . We multiply both sides by to see that . Therefore the , and hence the ranks of and are equal by Rank Nullity.  Next, observe as is an invertible matrix. Thus .   Suppose that . From Part (a) we know .  We consider the case where .  The only possible invariant factors involving are    ;     ; and     itself.   However, if are the invariant factors then the rank of would be 3, making it invertible, contradicting the fact that 0 is an eigenvalue of . Thus we need only consider the latter two cases.  Note that As has rank 1 and has rank 2, since we see that they must have the same invariant factors, making them similar.  If then the only possible invariant factor is , as having two 's would make and invertible again. If then and we're done.    Consider and .  Thus   both of which have rank and are in RCF. Thus they are not similar.       Find the Rational Canonical Form of where is any field.    Find, with justification, a complete and non-redundant list of conjugacy class representatives for the group , where is the field with two elements.   Let denote the field with two elements, and consider the group .  Recall that matrices are in the same conjugacy class if and only if they are similar, and that two matrices are similar if and only if they share the same invariant factors.  Let . All characteristic polynomials are monic, and as is invertible we see the term in the , and thus , the only other element in . There are only so many monic polynomials with coefficients in ; hence there are only four possible characteristic polynomials of :    ,     ,     and     .   Note that since , 0 cannot be a root of any of these polynomials. Thus all that remains is to check . Luckily, is not a root of or , so the only invariant factor of each is themselves. While 1 is a root of , we see that . As , neither of these polynomials can be invariant factors by the RCF theorem; thus the only invariant factor of is itself. However , and so its possible invariant factors are    ;     and     .   Let and . Thus the conjugacy class representatives for are    ,     ,     ,     ,     , and     .        Computations and Examples       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Formal Proofs       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Qualifying Exam Problems       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     "
 },
 {
-  "id": "remark-96",
+  "id": "remark-97",
   "level": "2",
-  "url": "sec-rcf.html#remark-96",
+  "url": "sec-rcf.html#remark-97",
   "type": "Remark",
   "number": "17.1",
   "title": "",
@@ -7471,9 +7525,9 @@ var ptx_lunr_docs = [
   "body": "Equality of -Modules   The two assignments and defined above are mutually inverse: Given a -module , there is an equality of -modules and given a pair with an -vector space and an -linear operator on we have an equality of pairs .   "
 },
 {
-  "id": "remark-97",
+  "id": "remark-98",
   "level": "2",
-  "url": "sec-rcf.html#remark-97",
+  "url": "sec-rcf.html#remark-98",
   "type": "Remark",
   "number": "17.7",
   "title": "",
@@ -7498,9 +7552,9 @@ var ptx_lunr_docs = [
   "body": "Rational Canonical Form   Given a finite dimensional -vector space and an -linear operator , there is a basis of such that the matrix representing relative to is for monic polynomials of degree at least one such that . Moreover, this matrix is unique, and is known as the rational canonical form of the operator .    We know by the Fundamental Theorem of modules over (i.e., Corollary ) that there is a -module isomorphism for some unique list of monic, non-constant polynomials with for all . Recall that the operator on is given as (multiplication by ) on . Since this is a -module isomorphism, corresponds to multiplication by on each summand . As we have seen before, for each , the matrix representing on relative to the basis of is the companion matrix of . Let be the -basis of given by tuples (in that order). Then the matrix of on for is .  This gives existence. Uniqueness is a consequence of the uniqueness of the list , but I will omit the details.   "
 },
 {
-  "id": "remark-98",
+  "id": "remark-99",
   "level": "2",
-  "url": "sec-rcf.html#remark-98",
+  "url": "sec-rcf.html#remark-99",
   "type": "Remark",
   "number": "17.10",
   "title": "",
@@ -7543,9 +7597,9 @@ var ptx_lunr_docs = [
   "body": "Similarity Classes of Matrices  Let be the field with elements for some prime . Up to similarity, how many matrices are there with entries in ?  Each such matrix is similar to a unique one of the form with monic polynomials of positive degree such that . Moreover, since is a matrix where , we must have . So the goal becomes to count all such tuples of polynomials. We proceed by cases on . Note that is not possible. - Case . Then and the number of such polynomials is (since and has elements). - Case : Note that is not possible. If then , and there are possibilities. If , then and with monic and . There are possibilities for and for , for a total of in this subcase. The total for this case is thus . - Case : The only possibilities are , and so that and with . We get possibilities. - Case . We must have with each of degree , for a total of possibilities. The total is   "
 },
 {
-  "id": "remark-99",
+  "id": "remark-100",
   "level": "2",
-  "url": "sec-rcf.html#remark-99",
+  "url": "sec-rcf.html#remark-100",
   "type": "Remark",
   "number": "17.15",
   "title": "",
@@ -7588,47 +7642,38 @@ var ptx_lunr_docs = [
   "body": "Finding IFs and RCF  Let Let us find the invariant factors and Rational Canonical Form of by finding the Smith Normal Form of .  We have A sequence of messy row and column operations yields Note that this is indeed in Smith Normal Form. It follows that the invariant factors of are and the RCF of is   For an alternative approach, we could use that the diagonal entries of the Smith Normal Form of satisfy , is the gcd of the minors of , and . It's clear that and an easy calculation gives that . There are nine minors of , and a tedious check reveals that each of them is one of , , or (up to signs). So . We get that as before.  "
 },
 {
-  "id": "exercise-225",
+  "id": "exercise-226",
   "level": "2",
-  "url": "sec-rcf.html#exercise-225",
+  "url": "sec-rcf.html#exercise-226",
   "type": "Exploration",
   "number": "17.20",
   "title": "Problem 7 - Nilpotent Matrices and Similarity.",
   "body": "Problem 7 - Nilpotent Matrices and Similarity  Let be a field and recall that a square matrix with entries in is called nilpotent if for some positive integer .   Prove that if is an nilpotent matrix, then .  Assume and prove that two nilpotent matrices are similar if and only if they have the same rank. (Recall the rank of a matrix is the dimension of the vector space spanned by its columns.)  Give an example, with justification, of two nilpotent matrices that have the same rank but are not similar.    Let be a field.     Let be an nilpotent matrix. Let be some eigenvalue of . Thus there exists some vector such that . Let's consider this the base-case of some rather banal induction. Now assume that for we have . Consider Recall that as is nilpotent, there exists some such that . As is an eigenvalue of , by the above induction we see that is an eigenvalue for . As is a field and thus an integral domain, we see that implies that is as well. As this holds in the algebraic closure of as well, we see that when factored into linear terms all the . Thus .  By the Cayley Hamilton Theorem we know , and thus .    Assume and let be nilpotent matrices with entries in .   Suppose . Thus there exists some invertible matrix such that by the definition of similar matrices. Let . Thus and . We multiply both sides by to see that . Therefore the , and hence the ranks of and are equal by Rank Nullity.  Next, observe as is an invertible matrix. Thus .   Suppose that . From Part (a) we know .  We consider the case where .  The only possible invariant factors involving are    ;     ; and     itself.   However, if are the invariant factors then the rank of would be 3, making it invertible, contradicting the fact that 0 is an eigenvalue of . Thus we need only consider the latter two cases.  Note that As has rank 1 and has rank 2, since we see that they must have the same invariant factors, making them similar.  If then the only possible invariant factor is , as having two 's would make and invertible again. If then and we're done.    Consider and .  Thus   both of which have rank and are in RCF. Thus they are not similar.     "
 },
 {
-  "id": "exercise-226",
+  "id": "exercise-227",
   "level": "2",
-  "url": "sec-rcf.html#exercise-226",
+  "url": "sec-rcf.html#exercise-227",
   "type": "Exploration",
   "number": "17.21",
   "title": "",
   "body": " Find the Rational Canonical Form of where is any field.  "
 },
 {
-  "id": "exercise-227",
+  "id": "exercise-228",
   "level": "2",
-  "url": "sec-rcf.html#exercise-227",
+  "url": "sec-rcf.html#exercise-228",
   "type": "Exploration",
   "number": "17.22",
   "title": "",
   "body": " Find, with justification, a complete and non-redundant list of conjugacy class representatives for the group , where is the field with two elements.   Let denote the field with two elements, and consider the group .  Recall that matrices are in the same conjugacy class if and only if they are similar, and that two matrices are similar if and only if they share the same invariant factors.  Let . All characteristic polynomials are monic, and as is invertible we see the term in the , and thus , the only other element in . There are only so many monic polynomials with coefficients in ; hence there are only four possible characteristic polynomials of :    ,     ,     and     .   Note that since , 0 cannot be a root of any of these polynomials. Thus all that remains is to check . Luckily, is not a root of or , so the only invariant factor of each is themselves. While 1 is a root of , we see that . As , neither of these polynomials can be invariant factors by the RCF theorem; thus the only invariant factor of is itself. However , and so its possible invariant factors are    ;     and     .   Let and . Thus the conjugacy class representatives for are    ,     ,     ,     ,     , and     .     "
 },
 {
-  "id": "exercise-228",
-  "level": "2",
-  "url": "sec-rcf.html#exercise-228",
-  "type": "Exercise",
-  "number": "17.1.1",
-  "title": ".",
-  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
-},
-{
   "id": "exercise-229",
   "level": "2",
   "url": "sec-rcf.html#exercise-229",
   "type": "Exercise",
-  "number": "17.1.2",
+  "number": "17.1.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
@@ -7636,6 +7681,15 @@ var ptx_lunr_docs = [
   "id": "exercise-230",
   "level": "2",
   "url": "sec-rcf.html#exercise-230",
+  "type": "Exercise",
+  "number": "17.1.2",
+  "title": ".",
+  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
+},
+{
+  "id": "exercise-231",
+  "level": "2",
+  "url": "sec-rcf.html#exercise-231",
   "type": "Exercise",
   "number": "17.1.3",
   "title": ".",
@@ -7651,9 +7705,9 @@ var ptx_lunr_docs = [
   "body": "The Cayley-Hamilton Theorem  Given a square matrix and polynomial , recall that refers to the square matrix .  Ideals and   Given a matrix with entries in a field , the set forms a non-zero ideal of .     is an ideal since the result of evaluating the sum of two polynomials at is . the result of evaluating the product at is .  To show it is non-zero, consider the matrices . This is a collection of matrices in the dimensional -vector space , and hence the must be linearly dependent: there are , not all of which are , such that . This proves .    Minimum Polynomial of a Matrix   Let be a field and let . The minimum polynomial of , denoted , is the unique monic generator of the ideal . Equivalently, is the monic polynomial of least degree such that .    iff Annihilates   Given an matrix and polynomial , we have if and only if annihilates the -module .  In particular, is the unique monic generator of the annihilator ideal     If , then for each , by definition of the action of on we have and so annihilates . Conversely, if annihilates , then for all . Taking for each , this says that each column of is and hence is the zero matrix.    Minimum Polynomial   More generally, let be an -vector space of dimension , and let be a linear transformation. The minimum polynomial of , denoted , is the unique monic polynomial generating the ideal or, equivalently, the annihilator ideal .    Theorem - Cayley-Hamilton   Let be a field, a finite dimensional -vector space, and an -linear operator. Let be the invariant factors of .   The product of the invariant factors of equals the characteristic polynomial of :     The largest invariant factor of is equal to the minimum polynomial of :     (The Cayley-Hamilton Theorem) The minimum polynomial of divides its characteristic polynomial. In particular, satisfies its characteristic polynomial:        The first assertion is a consequence of Corollary , since the product of the diagonal elements of the Smith Normal Form of is equal to the determinant of . (Technically, we can only conclude at first that they are only associates, but since each is monic, they must be equal.)  For the second, we use the isomorphism of -modules Note that a polynomial annihilates if and only if divides . Since , the annihilator of the -module is generated by . Thus the annihilator of is also generated by , and by the Proposition is the minimum polynomial of .  The third assertion is an immediate consequence of the first two.    Finding Minimum Polynomial  Let's find the minimum polynomial of   We apply the Cayley-Hamilton Theorem: . The polynomial is easy to compute since this matrix is upper-triangular: So for some . By brute-force, we verify that and thus it must be the case that .   Finding Minimum Polynomial (2)  Let's find the minimum polynomial of As in the previous example, and so by the Cayley-Hamilton Theorem for some . This time we notice that and so, since , .   Problem 6 - Similarity Classes and CharPoly  Determine all similarity classes of matrices with entries in with characteristic polynomial . Provide an explicit representative for each of these similarity classes.   Let be a matrix with entries in with characteristic polynomial .  By this Corollary we know that every matrix is similar to a unique matrix in RCF. Note that RCF is based on the invariant factors if a matrix, and thus if two matrices have the same invariant factors they will have the same RCF, making them both similar to the same (unique) matrix, making them similar to each other. By part (1) of this Theorem, the characteristic polynomial of a matrix is equal to the product of the invariant factors of that same matrix.  Recall that the invariant factors must divide all preceding invariant factors in RCF, and observe that factors as and factors as . Given this information, after some fiddling with the factors, we find four possible options for invariant factors of :    ,     ,     , and     .   Let  , and . Observe the companion matrices of each of these polynomials: Behold: explicit representatives of each similarity class:    ,     ,     , and     .       Let be any field.   Let and be two matrices with entries in . Prove and are similar if and only if they have the same characteristic polynomial and the same minimum polynomial.  Show, by way of an example with justification, that the previous part would become false if were replaced by .  Give an example of a field and two matrices with entries in having the same minimum polynomial that are not similar.    Let be any field.     Let and be two matrices with entries in . First, suppose that . Matrices are similar if and only if they share the same invariant factors. As minimum polynomial is an invariant factor and the characteristic polynomial is a product of the invariant factors, we see that and must share the same invariant factors.  Next suppose that and share the same characteristic polynomial and the same minimal polynomial. As and are matrices, the characteristic polynomial of both and must be a degree polynomial. We proceed via cases based on the degree of . - First, suppose . Then , making the only invariant factor of both and . Thus and have the same invariant factors and are therefore similar. - Next, suppose . As and the degrees of all invariant factors must sum to the , we know that , where is a degree polynomial, which we denote for and for .. Since and share the same minimum and characteristic polynomials, we see and , and thus that . Hence and share the same invariant factors, making . - Finally, suppose . The minimum polynomial is the largest invariant factor, and thus the invariant factors of and must be , making them similar.    If we replaced with then this would allow for and , allowing two sets of invariant factors:  , Notice that and . Set and , so These matrices have the same and but are not similar.    Let . We define and . Notice that these matrices are in RCF. However, the invariant factors of are and the invariant factors of are . Thus is not similar to , but the minimal polynomial of both is .      Problem 6 - Unipotent 4 x 4 Matrices  We say an matrix with entries in is unipotent if is nilpotent (i.e., for some ). For the field , find (with complete justification) the number of similarity classes of unipotent matrices and give an explicit representative for each class.   Let , a positive integer, and a unipotent matrix with entries in . Thus is nilpotent. Let be an eigenvalue of . Then , so and . As , we have and .  Notice that as is an eigenvalue of , we have as an eigenvalue of .  Assume inductively that is an eigenvalue of . Notice making an eigenvalue of . Thus if is an eigenvalue of , it is an eigenvalue of as well. As is nilpotent, there exists some such that . This means that . As and is a scalar in a field (and hence integral domain) we have . Thus the only eigenvalue of is , meaning that the only eigenvalue of is .  Eigenvalues of correspond to the roots of , which is a monic quartic polynomial, as is a matrix. Thus , as all roots must be .  Two matrices are similar if and only if they share the same invariant factors. Given that invariant factors divide and each invariant factor must divide the following one, the possible sets of invariant factors for are the following:    ,     ,     ,     , and     .   We identify the companion matrices for each possible invariant factor:  and We define the following:    ,     ,     ,     , and     .   As each of these matrices is in RCF, they are explicit representatives for each similarity class.    Let and be matrices with entries in . Prove and are similar in if and only if and are similar in . (That is, show there is a such that if and only if there is a such that .) {}: Use the Theorem on Rational Canonical Forms.    Similarity of two-by-two matrices:   Let be any field and , and assume that neither nor is a scalar matrix. (Recall that a scalar matrix is one of the form for some .) Prove and are similar if and only if they have the same determinant and the same trace.    Let be a finite field with elements. Find, with justification, the number of similarity classes of matrices with entries in .    Let be a finite field with elements. Find, with justification, the number of conjugacy classes of the group .         Coming soon to an OER near you!       Let be any field. Up to similarity, how many matrices in of the form are there? Justify.    Let be a field, a finite dimensional -vector space, and an -linear operator. Prove that the following are equivalent for an element :    is an eigenvalue of .     is a root of the minimum polynomial of .     is a root of the characteristic polynomial of . (Recall that is a {} of provided for some non-zero vector .)       Suppose is any field. Recall that a square matrix with entries in is nilpotent if for some positive integer j.   Prove that if and is nilpotent, then .  Find, with justification, the number of similarity classes of nilpotent matrices with entries in .      Find, with justification, a complete and non-redundant list of conjugacy class representatives for the group , where is the field with three elements.     Computations and Examples       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Formal Proofs       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Qualifying Exam Problems       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     "
 },
 {
-  "id": "remark-100",
+  "id": "remark-101",
   "level": "2",
-  "url": "sec-cayley-hamilton.html#remark-100",
+  "url": "sec-cayley-hamilton.html#remark-101",
   "type": "Remark",
   "number": "17.23",
   "title": "",
@@ -7723,101 +7777,92 @@ var ptx_lunr_docs = [
   "body": "Finding Minimum Polynomial (2)  Let's find the minimum polynomial of As in the previous example, and so by the Cayley-Hamilton Theorem for some . This time we notice that and so, since , .  "
 },
 {
-  "id": "exercise-231",
+  "id": "exercise-232",
   "level": "2",
-  "url": "sec-cayley-hamilton.html#exercise-231",
+  "url": "sec-cayley-hamilton.html#exercise-232",
   "type": "Exploration",
   "number": "17.31",
   "title": "Problem 6 - Similarity Classes and CharPoly.",
   "body": "Problem 6 - Similarity Classes and CharPoly  Determine all similarity classes of matrices with entries in with characteristic polynomial . Provide an explicit representative for each of these similarity classes.   Let be a matrix with entries in with characteristic polynomial .  By this Corollary we know that every matrix is similar to a unique matrix in RCF. Note that RCF is based on the invariant factors if a matrix, and thus if two matrices have the same invariant factors they will have the same RCF, making them both similar to the same (unique) matrix, making them similar to each other. By part (1) of this Theorem, the characteristic polynomial of a matrix is equal to the product of the invariant factors of that same matrix.  Recall that the invariant factors must divide all preceding invariant factors in RCF, and observe that factors as and factors as . Given this information, after some fiddling with the factors, we find four possible options for invariant factors of :    ,     ,     , and     .   Let  , and . Observe the companion matrices of each of these polynomials: Behold: explicit representatives of each similarity class:    ,     ,     , and     .     "
 },
 {
-  "id": "exercise-232",
+  "id": "exercise-233",
   "level": "2",
-  "url": "sec-cayley-hamilton.html#exercise-232",
+  "url": "sec-cayley-hamilton.html#exercise-233",
   "type": "Exploration",
   "number": "17.32",
   "title": "",
   "body": " Let be any field.   Let and be two matrices with entries in . Prove and are similar if and only if they have the same characteristic polynomial and the same minimum polynomial.  Show, by way of an example with justification, that the previous part would become false if were replaced by .  Give an example of a field and two matrices with entries in having the same minimum polynomial that are not similar.    Let be any field.     Let and be two matrices with entries in . First, suppose that . Matrices are similar if and only if they share the same invariant factors. As minimum polynomial is an invariant factor and the characteristic polynomial is a product of the invariant factors, we see that and must share the same invariant factors.  Next suppose that and share the same characteristic polynomial and the same minimal polynomial. As and are matrices, the characteristic polynomial of both and must be a degree polynomial. We proceed via cases based on the degree of . - First, suppose . Then , making the only invariant factor of both and . Thus and have the same invariant factors and are therefore similar. - Next, suppose . As and the degrees of all invariant factors must sum to the , we know that , where is a degree polynomial, which we denote for and for .. Since and share the same minimum and characteristic polynomials, we see and , and thus that . Hence and share the same invariant factors, making . - Finally, suppose . The minimum polynomial is the largest invariant factor, and thus the invariant factors of and must be , making them similar.    If we replaced with then this would allow for and , allowing two sets of invariant factors:  , Notice that and . Set and , so These matrices have the same and but are not similar.    Let . We define and . Notice that these matrices are in RCF. However, the invariant factors of are and the invariant factors of are . Thus is not similar to , but the minimal polynomial of both is .     "
 },
 {
-  "id": "exercise-233",
+  "id": "exercise-234",
   "level": "2",
-  "url": "sec-cayley-hamilton.html#exercise-233",
+  "url": "sec-cayley-hamilton.html#exercise-234",
   "type": "Exploration",
   "number": "17.33",
   "title": "Problem 6 - Unipotent 4 x 4 Matrices.",
   "body": "Problem 6 - Unipotent 4 x 4 Matrices  We say an matrix with entries in is unipotent if is nilpotent (i.e., for some ). For the field , find (with complete justification) the number of similarity classes of unipotent matrices and give an explicit representative for each class.   Let , a positive integer, and a unipotent matrix with entries in . Thus is nilpotent. Let be an eigenvalue of . Then , so and . As , we have and .  Notice that as is an eigenvalue of , we have as an eigenvalue of .  Assume inductively that is an eigenvalue of . Notice making an eigenvalue of . Thus if is an eigenvalue of , it is an eigenvalue of as well. As is nilpotent, there exists some such that . This means that . As and is a scalar in a field (and hence integral domain) we have . Thus the only eigenvalue of is , meaning that the only eigenvalue of is .  Eigenvalues of correspond to the roots of , which is a monic quartic polynomial, as is a matrix. Thus , as all roots must be .  Two matrices are similar if and only if they share the same invariant factors. Given that invariant factors divide and each invariant factor must divide the following one, the possible sets of invariant factors for are the following:    ,     ,     ,     , and     .   We identify the companion matrices for each possible invariant factor:  and We define the following:    ,     ,     ,     , and     .   As each of these matrices is in RCF, they are explicit representatives for each similarity class.  "
 },
 {
-  "id": "exercise-234",
+  "id": "exercise-235",
   "level": "2",
-  "url": "sec-cayley-hamilton.html#exercise-234",
+  "url": "sec-cayley-hamilton.html#exercise-235",
   "type": "Exploration",
   "number": "17.34",
   "title": "",
   "body": " Let and be matrices with entries in . Prove and are similar in if and only if and are similar in . (That is, show there is a such that if and only if there is a such that .) {}: Use the Theorem on Rational Canonical Forms.  "
 },
 {
-  "id": "exercise-235",
+  "id": "exercise-236",
   "level": "2",
-  "url": "sec-cayley-hamilton.html#exercise-235",
+  "url": "sec-cayley-hamilton.html#exercise-236",
   "type": "Exploration",
   "number": "17.35",
   "title": "",
   "body": " Similarity of two-by-two matrices:   Let be any field and , and assume that neither nor is a scalar matrix. (Recall that a scalar matrix is one of the form for some .) Prove and are similar if and only if they have the same determinant and the same trace.    Let be a finite field with elements. Find, with justification, the number of similarity classes of matrices with entries in .    Let be a finite field with elements. Find, with justification, the number of conjugacy classes of the group .         Coming soon to an OER near you!     "
 },
 {
-  "id": "exercise-236",
+  "id": "exercise-237",
   "level": "2",
-  "url": "sec-cayley-hamilton.html#exercise-236",
+  "url": "sec-cayley-hamilton.html#exercise-237",
   "type": "Exploration",
   "number": "17.36",
   "title": "",
   "body": " Let be any field. Up to similarity, how many matrices in of the form are there? Justify.  "
 },
 {
-  "id": "exercise-237",
+  "id": "exercise-238",
   "level": "2",
-  "url": "sec-cayley-hamilton.html#exercise-237",
+  "url": "sec-cayley-hamilton.html#exercise-238",
   "type": "Exploration",
   "number": "17.37",
   "title": "",
   "body": " Let be a field, a finite dimensional -vector space, and an -linear operator. Prove that the following are equivalent for an element :    is an eigenvalue of .     is a root of the minimum polynomial of .     is a root of the characteristic polynomial of . (Recall that is a {} of provided for some non-zero vector .)     "
 },
 {
-  "id": "exercise-238",
+  "id": "exercise-239",
   "level": "2",
-  "url": "sec-cayley-hamilton.html#exercise-238",
+  "url": "sec-cayley-hamilton.html#exercise-239",
   "type": "Exploration",
   "number": "17.38",
   "title": "",
   "body": " Suppose is any field. Recall that a square matrix with entries in is nilpotent if for some positive integer j.   Prove that if and is nilpotent, then .  Find, with justification, the number of similarity classes of nilpotent matrices with entries in .    "
 },
 {
-  "id": "exercise-239",
+  "id": "exercise-240",
   "level": "2",
-  "url": "sec-cayley-hamilton.html#exercise-239",
+  "url": "sec-cayley-hamilton.html#exercise-240",
   "type": "Exploration",
   "number": "17.39",
   "title": "",
   "body": " Find, with justification, a complete and non-redundant list of conjugacy class representatives for the group , where is the field with three elements.  "
 },
 {
-  "id": "exercise-240",
-  "level": "2",
-  "url": "sec-cayley-hamilton.html#exercise-240",
-  "type": "Exercise",
-  "number": "17.2.1",
-  "title": ".",
-  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
-},
-{
   "id": "exercise-241",
   "level": "2",
   "url": "sec-cayley-hamilton.html#exercise-241",
   "type": "Exercise",
-  "number": "17.2.2",
+  "number": "17.2.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
@@ -7825,6 +7870,15 @@ var ptx_lunr_docs = [
   "id": "exercise-242",
   "level": "2",
   "url": "sec-cayley-hamilton.html#exercise-242",
+  "type": "Exercise",
+  "number": "17.2.2",
+  "title": ".",
+  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
+},
+{
+  "id": "exercise-243",
+  "level": "2",
+  "url": "sec-cayley-hamilton.html#exercise-243",
   "type": "Exercise",
   "number": "17.2.3",
   "title": ".",
@@ -7849,9 +7903,9 @@ var ptx_lunr_docs = [
   "body": "Companion Matrix and Jordan Blocks  Let us consider the companion matrix of : We can interpret this matrix as arising from the linear transformation on defined as multiplication by . Recall that the ordered basis of that gives the matrix is the “obvious one'': But notice that is also a basis of . Let us calculate what the operator does to this alternative basis. We could work this out by brute force, but a cleaner way is to first compute what the operator does. Since is multiplication by , it sends each basis element to the next one, except for the last one, which is sent to . It follows that the matrix of this operator relative to the ordered basis is and hence the matrix for itself for this basis is This is what's known as a Jordan Block.  "
 },
 {
-  "id": "remark-101",
+  "id": "remark-102",
   "level": "2",
-  "url": "sec-jcf.html#remark-101",
+  "url": "sec-jcf.html#remark-102",
   "type": "Remark",
   "number": "17.41",
   "title": "",
@@ -7867,9 +7921,9 @@ var ptx_lunr_docs = [
   "body": "Jordan Block   Given a field , and integer , and an element , the Jordan block  is the with entries in such that its diagonal entries are all , each entry just below the diagonal is a , and all other entries are : (More precisely, for all , for all , and for all other .)   "
 },
 {
-  "id": "remark-102",
+  "id": "remark-103",
   "level": "2",
-  "url": "sec-jcf.html#remark-102",
+  "url": "sec-jcf.html#remark-103",
   "type": "Remark",
   "number": "17.43",
   "title": "",
@@ -7885,18 +7939,18 @@ var ptx_lunr_docs = [
   "body": "Jordan Canonical Form   Let be a field, let be a finite dimensional -vector space, and let be a linear transformation satisfying the property that the characteristic polynomial of factors completely in into linear factors. Then there is an ordered basis for such that where , the 's, and the 's are such that are the elementary divisors of the -module . Moreover, this matrix is unique up to ordering of the Jordan Blocks, and it is known as “the'' Jordan Canonical Form of .    The proof is similar to the proof the RCF theorem, using the idea of Example above, but starting with the FTFGMPIDEDF (instead of the FTFGMPIDIFF). Here are the details:  We consider the -module . Since we assume factors completely, the only irreducible polynomials in its factorization are linear. Thus the invariant factors of are products of polynomials of the form for various and integers . It follows that the elementary divisors have this form too. The FTFGMPIDEDF therefore gives an isomorphism of -modules Now pick ordered bases for each of the summands and set to be their “ordered union'' just as we did for the proof of the Theorem on RCF. By the same argument as in Example applied to each summand individually, the matrix representing multiplication by on each summand is . This gives the existence of the JCF.  The uniqueness follows from the uniqueness clause in the FTFGMPIDEDF.   "
 },
 {
-  "id": "remark-103",
+  "id": "remark-104",
   "level": "2",
-  "url": "sec-jcf.html#remark-103",
+  "url": "sec-jcf.html#remark-104",
   "type": "Remark",
   "number": "17.45",
   "title": "",
   "body": "Not every operator has a Jordan Canonical Form: The Theorem only applies if factors completely, and, conversely, if an operator is represented by any lower-triangular matrix, then its characteristic polynomial must be a product of linear polynomials. For algebraically closed fields, such as , every linear operator does indeed have a JCF. "
 },
 {
-  "id": "remark-104",
+  "id": "remark-105",
   "level": "2",
-  "url": "sec-jcf.html#remark-104",
+  "url": "sec-jcf.html#remark-105",
   "type": "Remark",
   "number": "17.46",
   "title": "",
@@ -7930,29 +7984,20 @@ var ptx_lunr_docs = [
   "body": "Diagonalizable   Let be a finite dimensional vector space over a field and let be an -linear operator. We say is diagonalizable if there is a basis for such that the matrix is a diagonal matrix.   "
 },
 {
-  "id": "exercise-243",
+  "id": "exercise-244",
   "level": "2",
-  "url": "sec-jcf.html#exercise-243",
+  "url": "sec-jcf.html#exercise-244",
   "type": "Exploration",
   "number": "17.50",
   "title": "",
   "body": " Let with the standard basis and let be the linear transformation represented by the matrix    Find the invariant factor decomposition of the -module .    Find the characteristic and minimal polynomials of .    Find the rational canonical form of .    Find the Jordan canonical form of .     "
 },
 {
-  "id": "exercise-244",
-  "level": "2",
-  "url": "sec-jcf.html#exercise-244",
-  "type": "Exercise",
-  "number": "17.3.1",
-  "title": ".",
-  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
-},
-{
   "id": "exercise-245",
   "level": "2",
   "url": "sec-jcf.html#exercise-245",
   "type": "Exercise",
-  "number": "17.3.2",
+  "number": "17.3.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
@@ -7961,104 +8006,113 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-jcf.html#exercise-246",
   "type": "Exercise",
-  "number": "17.3.3",
+  "number": "17.3.2",
   "title": ".",
-  "body": " Consider the following matrix:    Find the rational canonical form of .    Find the Jordan canonical form of .      Coming soon to an OER near you!   Coming soon to an OER near you!  "
+  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
   "id": "exercise-247",
   "level": "2",
   "url": "sec-jcf.html#exercise-247",
   "type": "Exercise",
-  "number": "17.3.4",
+  "number": "17.3.3",
   "title": ".",
-  "body": " Let be a positive integer and let be the Jordan block matrix of size with eigenvalue 0 in .   Find the minimal polynomials for and for , with justification.  Find the Jordan canonical form of , with justification. Hint : consider the kernel of .    Coming soon to an OER near you!   Let be a positive integer and let be the Jordan block matrix of size with eigenvalue 0 in .   Notice that is a triangular matrix with 's along the diagonal. Thus , the product of the diagonal entries of the matrix .  Squaring a triangular matrix moves everything one down (Proof?), and so should do it. Squaring just moves us one closer, so     As , the only roots of it are , and thus these are the only elementary divisors of .     "
+  "body": " Consider the following matrix:    Find the rational canonical form of .    Find the Jordan canonical form of .      Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
   "id": "exercise-248",
   "level": "2",
   "url": "sec-jcf.html#exercise-248",
   "type": "Exercise",
-  "number": "17.3.5",
+  "number": "17.3.4",
   "title": ".",
-  "body": " On canonical forms   Consider the -module and let the -vector space obtained from by restriction of scalars along the evident inclusion and let be the -linear transformation given as multiplication by . Find, with justification, the rational canonical form of .    Consider the -module and let the -vector space obtained from by restriction of scalars along and let be the -linear transformation given as multiplication by . Find, with justification, the Jordan canonical form of .      Coming soon to an OER near you!   Coming soon to an OER near you!  "
+  "body": " Let be a positive integer and let be the Jordan block matrix of size with eigenvalue 0 in .   Find the minimal polynomials for and for , with justification.  Find the Jordan canonical form of , with justification. Hint : consider the kernel of .    Coming soon to an OER near you!   Let be a positive integer and let be the Jordan block matrix of size with eigenvalue 0 in .   Notice that is a triangular matrix with 's along the diagonal. Thus , the product of the diagonal entries of the matrix .  Squaring a triangular matrix moves everything one down (Proof?), and so should do it. Squaring just moves us one closer, so     As , the only roots of it are , and thus these are the only elementary divisors of .     "
 },
 {
   "id": "exercise-249",
   "level": "2",
   "url": "sec-jcf.html#exercise-249",
   "type": "Exercise",
-  "number": "17.3.6",
-  "title": "June 2011 (9).",
-  "body": "June 2011 (9)  Consider the following matrix over :    Show that the characteristic and minimal polynomials of are, respectively, and .    Find the rational canonical form of and the Jordan canonical form of .    Find an invertible matrix such that .      Coming soon to an OER near you!   Let denote the above matrix.     As and , we know that our characteristic polynomial factors into linear factors, so does indeed have a JCF. This also means that only has one elementary divisor, , which corresponds to the Jordan Block , a matrix with s along the diagonal, s along the subdiagonal, and everywhere else. This is the JCF of .     "
+  "number": "17.3.5",
+  "title": ".",
+  "body": " On canonical forms   Consider the -module and let the -vector space obtained from by restriction of scalars along the evident inclusion and let be the -linear transformation given as multiplication by . Find, with justification, the rational canonical form of .    Consider the -module and let the -vector space obtained from by restriction of scalars along and let be the -linear transformation given as multiplication by . Find, with justification, the Jordan canonical form of .      Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
   "id": "exercise-250",
   "level": "2",
   "url": "sec-jcf.html#exercise-250",
   "type": "Exercise",
-  "number": "17.3.7",
-  "title": "January 2012 (7).",
-  "body": "January 2012 (7)  Consider the following matrix over :    Show that the characteristic of is .    Find the rational canonical form of and the Jordan canonical form of .    Find an invertible matrix such that .      Coming soon to an OER near you!   Let denote the above matrix.     As and , we know that our characteristic polynomial factors into linear factors, so does indeed have a JCF. This also means that only has one elementary divisor, , which corresponds to the Jordan Block , a matrix with s along the diagonal, s along the subdiagonal, and everywhere else. This is the JCF of .     "
+  "number": "17.3.6",
+  "title": "June 2011 (9).",
+  "body": "June 2011 (9)  Consider the following matrix over :    Show that the characteristic and minimal polynomials of are, respectively, and .    Find the rational canonical form of and the Jordan canonical form of .    Find an invertible matrix such that .      Coming soon to an OER near you!   Let denote the above matrix.     As and , we know that our characteristic polynomial factors into linear factors, so does indeed have a JCF. This also means that only has one elementary divisor, , which corresponds to the Jordan Block , a matrix with s along the diagonal, s along the subdiagonal, and everywhere else. This is the JCF of .     "
 },
 {
   "id": "exercise-251",
   "level": "2",
   "url": "sec-jcf.html#exercise-251",
   "type": "Exercise",
-  "number": "17.3.8",
-  "title": ".",
-  "body": " Let be a field and a monic polynomial of degree . Prove: all matrices in having characteristic polynomial are similar if and only if the irreducible factorization of has no repeated factors.   Coming soon to an OER near you!   Coming soon to an OER near you!  "
+  "number": "17.3.7",
+  "title": "January 2012 (7).",
+  "body": "January 2012 (7)  Consider the following matrix over :    Show that the characteristic of is .    Find the rational canonical form of and the Jordan canonical form of .    Find an invertible matrix such that .      Coming soon to an OER near you!   Let denote the above matrix.     As and , we know that our characteristic polynomial factors into linear factors, so does indeed have a JCF. This also means that only has one elementary divisor, , which corresponds to the Jordan Block , a matrix with s along the diagonal, s along the subdiagonal, and everywhere else. This is the JCF of .     "
 },
 {
   "id": "exercise-252",
   "level": "2",
   "url": "sec-jcf.html#exercise-252",
   "type": "Exercise",
-  "number": "17.3.9",
+  "number": "17.3.8",
   "title": ".",
-  "body": " Let be a finite dimensional vector space over a field and let be an -linear operator on . Prove is diagonalizable over if and only if its minimum polynomial factors into distinct linear terms in .   Coming soon to an OER near you!    Suppose that is diagonalizable. Thus there exists a change of basis matrix such that is diagonal. As it is diagonal, its diagonal entries are the eigenvalues of , and thus the roots of the minimal polynomial of . Using row and column operations we can rearrange so that all repeated linear factors are next to each other in the diagonal, for convenience.  We know that is the smallest monic polynomial that sends to 0. Take all the distinct eigenvalues and consider .  We examine . It will be a product of matrices, one for each . First, take the first matrix in this product, , and note that it sends all in to 0. Thus all of the rows and columns that contained a are now 0, and thus all these rows and columns will be 0 in the final product . As this is we set for all , we see that for each row and column in there will exist a matrix in the product such that the row and column will be 0. Thus the entire matrix will be 0, and .  Note that if any were excluded from there would exist a non-zero row and column for every matrix in the product, and thus would not send to 0. Thus is indeed the minimal polynomial of . As , we see it does indeed factor into distinct linear terms.   Suppose the minimum polynomial of factors completely into distinct linear factors, each of which has the form for some . As each is distinct, each elementary divisor is of the form .  We construct the Jordan Canonical Form of . As the elementary divisors are linear the Jordan blocks are matrices, making the a diagonal matrix. As the JCF is itself a change of basis matrix, we see that is diagonalizable.  "
+  "body": " Let be a field and a monic polynomial of degree . Prove: all matrices in having characteristic polynomial are similar if and only if the irreducible factorization of has no repeated factors.   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
   "id": "exercise-253",
   "level": "2",
   "url": "sec-jcf.html#exercise-253",
   "type": "Exercise",
-  "number": "17.3.10",
+  "number": "17.3.9",
   "title": ".",
-  "body": " Consider the -vector space . (You may assume without proof that is n-dimensional.) Consider the following linear maps :  (where p' denotes the derivative of p). Determine the JCF of               Coming soon to an OER near you!      For any integer , consider the -vector space .  Let be the linear operator given by (where denotes the derivative of ). Note that the change of basis matrix for this operator is given by with the basis . Thus will be given by the determinant of the matrix     which is diagonal. Hence Thus factors into distinct linear polynomials, each of which is in the form for . Thus each linear term is an elementary divisor, making each Jordan Block a matrix with as the only entry. Thus the Jordan Canonical form is     This time around the change of basis matrix (denoted and using the same basis as above) for this matrix has 0s along the diagonal, and increasing natural numbers (starting at 0, sorry) along the upper diagonal. Thus .  Recall that the minimum polynomial corresponding to will be the the smallest monic polynomial such that is sent to 0. Note that as is the operator sending to its derivative, and that . Thus can be viewed as a change of basis matrix for taking the second derivative of the basis, and so on.  As the basis extends to , it requires derivatives to make this polynomial become 0. Thus the minimal polynomial of must be , as it it monic and . As the degree of the invariant factors must sum to and , which is itself an invariant factor, we see that it must in fact be the only one.  As is already a power of a prime, it is the only elementary divisor as well. Thus the Jordan Canonical Form for is an Jordan Block with 0s along the diagonal and 1s along the sub-diagonal.     "
+  "body": " Let be a finite dimensional vector space over a field and let be an -linear operator on . Prove is diagonalizable over if and only if its minimum polynomial factors into distinct linear terms in .   Coming soon to an OER near you!    Suppose that is diagonalizable. Thus there exists a change of basis matrix such that is diagonal. As it is diagonal, its diagonal entries are the eigenvalues of , and thus the roots of the minimal polynomial of . Using row and column operations we can rearrange so that all repeated linear factors are next to each other in the diagonal, for convenience.  We know that is the smallest monic polynomial that sends to 0. Take all the distinct eigenvalues and consider .  We examine . It will be a product of matrices, one for each . First, take the first matrix in this product, , and note that it sends all in to 0. Thus all of the rows and columns that contained a are now 0, and thus all these rows and columns will be 0 in the final product . As this is we set for all , we see that for each row and column in there will exist a matrix in the product such that the row and column will be 0. Thus the entire matrix will be 0, and .  Note that if any were excluded from there would exist a non-zero row and column for every matrix in the product, and thus would not send to 0. Thus is indeed the minimal polynomial of . As , we see it does indeed factor into distinct linear terms.   Suppose the minimum polynomial of factors completely into distinct linear factors, each of which has the form for some . As each is distinct, each elementary divisor is of the form .  We construct the Jordan Canonical Form of . As the elementary divisors are linear the Jordan blocks are matrices, making the a diagonal matrix. As the JCF is itself a change of basis matrix, we see that is diagonalizable.  "
 },
 {
   "id": "exercise-254",
   "level": "2",
   "url": "sec-jcf.html#exercise-254",
   "type": "Exercise",
-  "number": "17.3.11",
+  "number": "17.3.10",
   "title": ".",
-  "body": " Let be a positive integer. Consider the real vector space and the linear transformation , where is the derivative of p(x).   Find the characteristic polynomial and the minimum polynomial for .  Find the invariant factors and the elementary divisors for .  Find the RCF and the Jordan Canonical Form for .    Coming soon to an OER near you!   Let be the linear operator given by (where denotes the derivative of    Note that the change of basis matrix for this operator is given by with the basis . Thus will be given by the determinant of the matrix which is diagonal. Hence .    Our factors into distinct linear polynomials, each of which is in the form for . Thus each linear term is an elementary divisor. However, as none of these elementary divisors divide any of the others, we see that the only invariant factor is itself.    As each linear term is an elementary divisor, each Jordan block a matrix with as the only entry. Thus the Jordan Canonical form is As the only invariant factor is , we see that the Rational Canonical Form of is .     "
+  "body": " Consider the -vector space . (You may assume without proof that is n-dimensional.) Consider the following linear maps :  (where p' denotes the derivative of p). Determine the JCF of               Coming soon to an OER near you!      For any integer , consider the -vector space .  Let be the linear operator given by (where denotes the derivative of ). Note that the change of basis matrix for this operator is given by with the basis . Thus will be given by the determinant of the matrix     which is diagonal. Hence Thus factors into distinct linear polynomials, each of which is in the form for . Thus each linear term is an elementary divisor, making each Jordan Block a matrix with as the only entry. Thus the Jordan Canonical form is     This time around the change of basis matrix (denoted and using the same basis as above) for this matrix has 0s along the diagonal, and increasing natural numbers (starting at 0, sorry) along the upper diagonal. Thus .  Recall that the minimum polynomial corresponding to will be the the smallest monic polynomial such that is sent to 0. Note that as is the operator sending to its derivative, and that . Thus can be viewed as a change of basis matrix for taking the second derivative of the basis, and so on.  As the basis extends to , it requires derivatives to make this polynomial become 0. Thus the minimal polynomial of must be , as it it monic and . As the degree of the invariant factors must sum to and , which is itself an invariant factor, we see that it must in fact be the only one.  As is already a power of a prime, it is the only elementary divisor as well. Thus the Jordan Canonical Form for is an Jordan Block with 0s along the diagonal and 1s along the sub-diagonal.     "
 },
 {
   "id": "exercise-255",
   "level": "2",
   "url": "sec-jcf.html#exercise-255",
   "type": "Exercise",
-  "number": "17.3.12",
-  "title": "June 2010 (4).",
-  "body": "June 2010 (4)  Let be the matrix with entries in     Find the Jordan Canonical Form of A.    Is similar to       Coming soon to an OER near you!      First, notice that is upwards triangular, and thus . By the Cayley Hamilton Theorem the minimum polynomial divides the characteristic polynomial, and from the definition of minimum polynomial we know is the smallest polynomial such that . Since must be a power of with , we plug in values of until we get . Shucks. Moving on, which is also not . However, multiplying one more time we see . By part (2) of this theorem is an invariant factor. By part (1) of that same theorem, invariant factors must multiply to , and so the invariant factors are and . These are also the elementary divisors. So       Let And notice that . Thus cannot be the minimal polynomial of . Two matrices are only similar if they share the same invariant factors (and thus the same minimum polynomial), so and are not similar.     "
+  "number": "17.3.11",
+  "title": ".",
+  "body": " Let be a positive integer. Consider the real vector space and the linear transformation , where is the derivative of p(x).   Find the characteristic polynomial and the minimum polynomial for .  Find the invariant factors and the elementary divisors for .  Find the RCF and the Jordan Canonical Form for .    Coming soon to an OER near you!   Let be the linear operator given by (where denotes the derivative of    Note that the change of basis matrix for this operator is given by with the basis . Thus will be given by the determinant of the matrix which is diagonal. Hence .    Our factors into distinct linear polynomials, each of which is in the form for . Thus each linear term is an elementary divisor. However, as none of these elementary divisors divide any of the others, we see that the only invariant factor is itself.    As each linear term is an elementary divisor, each Jordan block a matrix with as the only entry. Thus the Jordan Canonical form is As the only invariant factor is , we see that the Rational Canonical Form of is .     "
 },
 {
   "id": "exercise-256",
   "level": "2",
   "url": "sec-jcf.html#exercise-256",
   "type": "Exercise",
-  "number": "17.3.13",
-  "title": ".",
-  "body": " For the matrix in :   Find the RCF of .    Determine whether or not has a Jordan Canonical Form, and if so, find this form.      Coming soon to an OER near you!      Notice . So we have Not so bad! Now, the invariant factors all divide the characteristic polynomial and must divide the following factor, so our options for sets of invariant factors are the following: - - However, the largest invariant factor is also the minimal polynomial. So we check to see if . Luckily, the very first calculation shows that this is not the case. Thus the minimum polynomial is the characteristic polynomial is the only invariant factor of . Thus the RCF of is     Luckily for us, factors completely into linear terms! So our elementary divisors are and . We see and , so the Jordan Canonical form of is      "
+  "number": "17.3.12",
+  "title": "June 2010 (4).",
+  "body": "June 2010 (4)  Let be the matrix with entries in     Find the Jordan Canonical Form of A.    Is similar to       Coming soon to an OER near you!      First, notice that is upwards triangular, and thus . By the Cayley Hamilton Theorem the minimum polynomial divides the characteristic polynomial, and from the definition of minimum polynomial we know is the smallest polynomial such that . Since must be a power of with , we plug in values of until we get . Shucks. Moving on, which is also not . However, multiplying one more time we see . By part (2) of this theorem is an invariant factor. By part (1) of that same theorem, invariant factors must multiply to , and so the invariant factors are and . These are also the elementary divisors. So       Let And notice that . Thus cannot be the minimal polynomial of . Two matrices are only similar if they share the same invariant factors (and thus the same minimum polynomial), so and are not similar.     "
 },
 {
   "id": "exercise-257",
   "level": "2",
   "url": "sec-jcf.html#exercise-257",
+  "type": "Exercise",
+  "number": "17.3.13",
+  "title": ".",
+  "body": " For the matrix in :   Find the RCF of .    Determine whether or not has a Jordan Canonical Form, and if so, find this form.      Coming soon to an OER near you!      Notice . So we have Not so bad! Now, the invariant factors all divide the characteristic polynomial and must divide the following factor, so our options for sets of invariant factors are the following: - - However, the largest invariant factor is also the minimal polynomial. So we check to see if . Luckily, the very first calculation shows that this is not the case. Thus the minimum polynomial is the characteristic polynomial is the only invariant factor of . Thus the RCF of is     Luckily for us, factors completely into linear terms! So our elementary divisors are and . We see and , so the Jordan Canonical form of is      "
+},
+{
+  "id": "exercise-258",
+  "level": "2",
+  "url": "sec-jcf.html#exercise-258",
   "type": "Exercise",
   "number": "17.3.14",
   "title": "January 2014 (9).",
@@ -8083,9 +8137,9 @@ var ptx_lunr_docs = [
   "body": "Multiplicately Closed Set   Suppose is a commutative ring and is a subset such that      ,     is closed under multiplication (i.e., if , then ), and     does not contain nor any zerodivisors.     Such a subset is called a multiplicatively closed subset of non zerodivisors of .   "
 },
 {
-  "id": "example-110",
+  "id": "example-112",
   "level": "2",
-  "url": "sec-field-of-fractions.html#example-110",
+  "url": "sec-field-of-fractions.html#example-112",
   "type": "Example",
   "number": "18.2",
   "title": "Examples of Multaplicatively Closed Sets.",
@@ -8110,9 +8164,9 @@ var ptx_lunr_docs = [
   "body": "Field of Fractions is a Field   If is an integral domain and is a multiplicatively closed subset of nonzerodivisors, the rules given in the above definition for and make into a field. Moreover, the function sending to is an injective ring homomorphism.    There is a lot of small things to check and we'll just do a few. Right off the bat we need to be sure the given equivalence relation really is one. The reflexive and symmetric properties are clear. But the proof of transitivity illustrates a key point: Say . Then and . We need to deduce that . The given equations imply and since is a nonzerodivisor we conclude . This is in fact the only time that the fact that consists of nonzerodivisors is used.  We also need to be sure our rules for and make sense and are independent of representation. They make sense since we assume is closed under . To show is independent of representations, say , so that . Then and and so we need to show . This is clear upon expaning out both sides and using . In a similar way one shows is well-defined.  From now on we just write instead of when dealing with fractions.  The associative and distributive axioms involve a straightfoward but tedious check, and we skip them entirely. The fact that and are commutative is clear from their definitions. is a group under addition since it has a element, namely , and , with the last equality holding since . The element is . (Note that we have used that a couple times here — indeed, without this assumption could be empty and then would be the empty set.)   being a domain means implies ( or ). The contrapositive to this statement is: if and then , which shows is a multiplicatively closed set of nonzerodivisors.  It remains only to show every non-zero element of is a unit. Given , note that and hence . So is also an element of . We have , where the last equation holds by the definition of .  The fact that is a ring homomorphism is straightforward to check. Its injective since implies .   "
 },
 {
-  "id": "example-111",
+  "id": "example-113",
   "level": "2",
-  "url": "sec-field-of-fractions.html#example-111",
+  "url": "sec-field-of-fractions.html#example-113",
   "type": "Example",
   "number": "18.5",
   "title": "Examples of Fields of Fractions.",
@@ -8146,20 +8200,11 @@ var ptx_lunr_docs = [
   "body": "June 2012 (7)   Let be a commutative integral domain and its field of fractions. Let and be nonzero elements of , such that . Let be the unique ring homomorphism with for and . Prove that a polynomial satisfies if and only if for some polynomial . (Hint: one way is to use induction on deg(p(x)).)   "
 },
 {
-  "id": "exercise-258",
-  "level": "2",
-  "url": "sec-field-of-fractions.html#exercise-258",
-  "type": "Exercise",
-  "number": "18.1.1",
-  "title": ".",
-  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
-},
-{
   "id": "exercise-259",
   "level": "2",
   "url": "sec-field-of-fractions.html#exercise-259",
   "type": "Exercise",
-  "number": "18.1.2",
+  "number": "18.1.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
@@ -8167,6 +8212,15 @@ var ptx_lunr_docs = [
   "id": "exercise-260",
   "level": "2",
   "url": "sec-field-of-fractions.html#exercise-260",
+  "type": "Exercise",
+  "number": "18.1.2",
+  "title": ".",
+  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
+},
+{
+  "id": "exercise-261",
+  "level": "2",
+  "url": "sec-field-of-fractions.html#exercise-261",
   "type": "Exercise",
   "number": "18.1.3",
   "title": ".",
@@ -8182,29 +8236,20 @@ var ptx_lunr_docs = [
   "body": "Roots of Unity         June 2011 (4)   Fix a prime number , and let denote the abelian group of all complex roots of unity whose orders are powers of ; that is Prove the following statements.   Every non-trivial subgroup of contains the group of roots of unity.    Every proper subgroup of is cyclic.    If and are subgroups of , then either or .    For each there exists a unique subgroup of with elements.       Let be a non-trivial subgroup of . Then there exists some such that . Then yields a primitive root of unity, which can be used to generate the other roots as well. Thus contains the roots of unity.  Suppose is a proper subgroup of , meaning it is missing some root of unity. But the subgroup of those roots of unity is cyclic and is generated by every element, so that entire subgroup must be missing. But that subgroup can be generated with any primitive root of a higher power of , so must be finite and there must be some element of maximum order, which can be used to generate the whole group. Thus is cyclic.  Suppose and are subgroups of such that . Then is a proper subgroup of , making it finite as seen above. If there exists a higher power of in then it generates .  Let . Then the subgroup generated by the roots of unity have elements, and it is unique since it is generated by every such root.      Computations and Examples       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Formal Proofs       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Qualifying Exam Problems       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     "
 },
 {
-  "id": "proposition-85",
+  "id": "proposition-84",
   "level": "2",
-  "url": "sec-roots.html#proposition-85",
+  "url": "sec-roots.html#proposition-84",
   "type": "Proposition",
   "number": "18.9",
   "title": "June 2011 (4).",
   "body": " June 2011 (4)   Fix a prime number , and let denote the abelian group of all complex roots of unity whose orders are powers of ; that is Prove the following statements.   Every non-trivial subgroup of contains the group of roots of unity.    Every proper subgroup of is cyclic.    If and are subgroups of , then either or .    For each there exists a unique subgroup of with elements.       Let be a non-trivial subgroup of . Then there exists some such that . Then yields a primitive root of unity, which can be used to generate the other roots as well. Thus contains the roots of unity.  Suppose is a proper subgroup of , meaning it is missing some root of unity. But the subgroup of those roots of unity is cyclic and is generated by every element, so that entire subgroup must be missing. But that subgroup can be generated with any primitive root of a higher power of , so must be finite and there must be some element of maximum order, which can be used to generate the whole group. Thus is cyclic.  Suppose and are subgroups of such that . Then is a proper subgroup of , making it finite as seen above. If there exists a higher power of in then it generates .  Let . Then the subgroup generated by the roots of unity have elements, and it is unique since it is generated by every such root.   "
 },
 {
-  "id": "exercise-261",
-  "level": "2",
-  "url": "sec-roots.html#exercise-261",
-  "type": "Exercise",
-  "number": "18.2.1",
-  "title": ".",
-  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
-},
-{
   "id": "exercise-262",
   "level": "2",
   "url": "sec-roots.html#exercise-262",
   "type": "Exercise",
-  "number": "18.2.2",
+  "number": "18.2.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
@@ -8212,6 +8257,15 @@ var ptx_lunr_docs = [
   "id": "exercise-263",
   "level": "2",
   "url": "sec-roots.html#exercise-263",
+  "type": "Exercise",
+  "number": "18.2.2",
+  "title": ".",
+  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
+},
+{
+  "id": "exercise-264",
+  "level": "2",
+  "url": "sec-roots.html#exercise-264",
   "type": "Exercise",
   "number": "18.2.3",
   "title": ".",
@@ -8245,9 +8299,9 @@ var ptx_lunr_docs = [
   "body": "  Let be a field and .   If has degree one, it is irreducible.    If has a root and , then is not irreducible (since it factors as for some of degree at least ).    If , then is irreducible if and only if has no roots.    (Rational Root Test) If and all the coefficients of are integers and is a root of with , then divides and divides . More generally, the same holds with replaced by any PID and replaced by its field of fractions.      "
 },
 {
-  "id": "remark-105",
+  "id": "remark-106",
   "level": "2",
-  "url": "sec-irrpoly.html#remark-105",
+  "url": "sec-irrpoly.html#remark-106",
   "type": "Remark",
   "number": "18.12",
   "title": "",
@@ -8398,20 +8452,11 @@ var ptx_lunr_docs = [
   "body": " January 2014 (4)   Let be a field and its group of units.   Prove that any finite subgroup of is cyclic.  Suppose that is algebraically closed that has characteristic . For any positive integer , prove that has a subgroup of order if and only if does not divide .     Let be a field and its group of units.  Let be a finite subgroup of . Let .  Let be the LCM of all orders of elements in . Then and thus is a root of the polynomial for all . By every element divides , and so we have . However, by the Factor Theorem the polynomial can have at most roots, and we have distinct elements, and thus we have . Thus there must exist an element of order in , making cyclic, as desired.  Let and suppose that has characteristic and is algebraically closed.  First, suppose by way of contradiction that has a subgroup of order , , and . From Part (a) is cyclic and generated by some such that . However, as we see that , given that we are in an additive group. This contradicts the fact that is the smallest number such that .  Now we proceed via the contrapositive. Suppose does not have a subgroup of order . Then there cannot exist a unit such that . Consider the polynomial . As is algebraically closed there exists some root . (how do we know this isn't 1???) Notice that this means and so is a unit in . As cannot have order , it must have an order that divides . We also know that as we are in a field of characteristic . Thus either divides or is . Either there is a non-identity root of . Note that in this case as we are...   "
 },
 {
-  "id": "exercise-264",
-  "level": "2",
-  "url": "sec-irrpoly.html#exercise-264",
-  "type": "Exercise",
-  "number": "18.3.1",
-  "title": ".",
-  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
-},
-{
   "id": "exercise-265",
   "level": "2",
   "url": "sec-irrpoly.html#exercise-265",
   "type": "Exercise",
-  "number": "18.3.2",
+  "number": "18.3.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
@@ -8419,6 +8464,15 @@ var ptx_lunr_docs = [
   "id": "exercise-266",
   "level": "2",
   "url": "sec-irrpoly.html#exercise-266",
+  "type": "Exercise",
+  "number": "18.3.2",
+  "title": ".",
+  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
+},
+{
+  "id": "exercise-267",
+  "level": "2",
+  "url": "sec-irrpoly.html#exercise-267",
   "type": "Exercise",
   "number": "18.3.3",
   "title": ".",
@@ -8443,18 +8497,18 @@ var ptx_lunr_docs = [
   "body": "Field Extension   A field extension is an inclusion of one field into a larger field , making into a subfield of . We will write either or to signify that is a field extension of .   "
 },
 {
-  "id": "remark-106",
+  "id": "remark-107",
   "level": "2",
-  "url": "field-extension-basics.html#remark-106",
+  "url": "field-extension-basics.html#remark-107",
   "type": "Remark",
   "number": "19.2",
   "title": "",
   "body": " So a field extension is just another name for a subfield, but the emphasis is different. We think of as coming first and later.  "
 },
 {
-  "id": "remark-107",
+  "id": "remark-108",
   "level": "2",
-  "url": "field-extension-basics.html#remark-107",
+  "url": "field-extension-basics.html#remark-108",
   "type": "Remark",
   "number": "19.3",
   "title": "",
@@ -8470,9 +8524,9 @@ var ptx_lunr_docs = [
   "body": "Examples of Field Extensions   and are basic examples of field extensions.  Recall that is a field. So is another example of a field extension.  "
 },
 {
-  "id": "remark-108",
+  "id": "remark-109",
   "level": "2",
-  "url": "field-extension-basics.html#remark-108",
+  "url": "field-extension-basics.html#remark-109",
   "type": "Remark",
   "number": "19.5",
   "title": "",
@@ -8506,9 +8560,9 @@ var ptx_lunr_docs = [
   "body": "  If is a field extension and , show, using only the definition of , that    "
 },
 {
-  "id": "remark-109",
+  "id": "remark-110",
   "level": "2",
-  "url": "field-extension-basics.html#remark-109",
+  "url": "field-extension-basics.html#remark-110",
   "type": "Remark",
   "number": "19.9",
   "title": "",
@@ -8614,18 +8668,18 @@ var ptx_lunr_docs = [
   "body": " Regard as a subfield of and let . We may also describe as where we set .  I claim that is in fact a simple extension of . For example, say . I claim that . Note that and So , and hence . Likewise, So . This example is an illustration of the Primitive Element Theorem (which we might or might not have time to prove this semester): Every finite extension of is generated by a single element (or, in other words, is simple). This example shows is simple and is a primitive element of this field extension.  "
 },
 {
-  "id": "exercise-267",
+  "id": "exercise-268",
   "level": "2",
-  "url": "field-extension-basics.html#exercise-267",
+  "url": "field-extension-basics.html#exercise-268",
   "type": "Exercise",
   "number": "19.1.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-268",
+  "id": "exercise-269",
   "level": "2",
-  "url": "field-extension-basics.html#exercise-268",
+  "url": "field-extension-basics.html#exercise-269",
   "type": "Exercise",
   "number": "19.1.2",
   "title": ".",
@@ -8656,7 +8710,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "19.2",
   "title": "Algebraic Extensions",
-  "body": "Algebraic Extensions  Algebraic Element   For a field extension and , we say is algebraic over if for some non-zero polynomial . Otherwise, is transcendental over .      is algebraic over . Indeed, every element of is algebraic over . (E.g., is a root of .) ia algebraic over . So is for any . The numbers and of are transcendental over ; these are deep facts.   Properties of Algebraic Elements   Suppose is a field extension and . Define a subset of .   The subset is an ideal of .   if and only if is transcendental over ; so if and only if is algebraic over .  Assume is algebraic over .  The unique monic generator of , which we will write as , is irreducible (and hence is a prime ideal).  There is a unique isomorphism of fields sending identically to and sending to .   and in particular is a field.     is algebraic over if and only if . In this case,[^5]    is transcendental over if and only if . In this case, there is a unique isomorphism of fields sending identically to and sending to . (Here, is the field of fractions of .)     All parts use the following construction:  Let be the evaluation homomorphism, given by sending to  . Note that satisfies and . We have by definition of the latter. The First Isomorphism Theorem for rings thus gives that induces a ring isomorphism given by . In particular, since is a subring of , it is an integral domain, and hence must be a prime ideal (possibly the ideal).   Let us now prove the various parts:    holds because is the kernel of the ring map .    is by definition.    For (3) assume is algebraic. Then and hence it has a unique monic generator, which we write . Since is prime, is irreducible ; this proves (3a). Also, this shows that is a field and hence so is . Since , contains and , and is a field, we must have . This proves (3b) and (3c).  For (4), if is algebraic over , then by (3b) and Proposition . For the converse, if , then the infinite list of elements of cannot be -linearly independent . So, for some and some not all of which are . This shows is the root of a non-zero polynomial.  For (5), if is transcendental, then and so is injective. Since is a field, is a domain , and is injective , it can be extended to the field of fractions of , i.e. there is a ring homomorphism given by for all with . The image of is precisely . The map is injective since it is a ring homomorphism whose source is a field.     Minimum Polynomial   If is algebraic over the subfield , the unique monic generator of the ideal in the previous theorem, written , is called the minimum polynomial of over .     Note that the minimum polynomial of over (if it exists) divides every polynomial in that has as a root. In particular, it is the unique monic, irreducible polynomial having as a root. It can also be characterized as the monic polynomial in of least degree having as a root.    For any prime integer , set , a so-called “primitive -th root of unity\". Let us find . Note that is a root of which factors as where . As we showed before , is irreducible in . Since is not a root of , it must be a root of , and since is irreducible, it must be (see the Remark).    Uniqueness of Field Extensions   Let be irreducible and let (respectively, ) be a root of in some field extension (respectively, ) of . Then there is an isomorphism of fields such that and .    Note that is (up to a non-zero constant factor) the minimum polynomial of both and . So, we may apply (3b) of the Theorem twice to give a pair of isomorphisms of fields, given by sending to (for the left one) and (for the right one). Take to be the inverse of the one on the left composed with the right one.      A simple example illustrating the Corollary is that and are isomorphic fields. In fact, the are equal: . But the Corollary gives that there is an interesting isomorphism that sends to . In general, we have for . This previews the central idea of Galois theory.    Let (the unique real cube-root of ) and (one of the two imaginary cube roots of ).  Then by the Corollary (applied with ) there is an isomorphism of fields that restricts to the identity map on . Note that these two fields are not equal since the former is contained in and the latter is not.   The Degree Formula   Suppose are field extensions. Then In particular, the composition of two finite extensions of fields is again a finite extension.    Let be a basis for as an -vector space and let be a basis for as an -vector space. Let denote the subset of . The Proposition follows from the following two facts: - is a basis of as an -vector space and - the function is bijective (so that the cardinality of is ). Concerning (a), for , we have for some and . For each , is an -linear combination of a finite set of elements of . Combining these gives that is in the -span of .  To prove linear independence, it suffices to prove that if and be distinct elements of and respectively, then the set is linearly independent. Suppose for some . Since the 's are -linearly independent and and , we get that, for each , . Using now that the 's are -linearly independent, we have that for all and all , . This proves is linearly independent over , and hence is linearly independent over .  Concerning (b), if for some , then , and since the 's are -linearly independent, we must have and hence .     Say is a field extension of prime degree . Given , by the Degree Formula we have . Since , and so . It follows that , whence . As a (very simple) example of this, since is prime, for any complex number that is not real.    Let be the result of adjoining to all of the roots in of . That is, where , , , and . As we shall see later, is an example of a “splitting field\". Let's find .  First, let us note that we can also describe as . This holds since each of belongs to and hence . The opposite containment holds because , with the latter being true because .  Set . Then . Since and is a root of , we have is at most and it will be exactly if and only if is irreducible in . This is unclear.  So instead let's try a different approach. Let . Then since is irreducible in by Eisenstein, we have . Since and is a root of , we have . But since . Note that if and only if . Thus .  By the degree formula we conclude that Note that, in hindsight, it must have been true that is irreducible in , since otherwise the degree formula would give that .     Suppose that is a finite extension of fields such that the degree is odd. Show that if , then .    Let be a finite extension of fields such that the degree is odd.  Notice that as everything in can be written in terms of . Suppose by way of contradiction that there exists some such that . Then . Notice that is a root of the polynomial , which is irreducible in as it is a degree polynomial that has no roots in . Thus is the minimum polynomial of and    However, by the Degree Formula  , which is a problem, given now divides , an odd number. Thus .    Algebraic Extension   A field extension is called algebraic if every element is algebraic over (i.e., if every element of is the root of a non-zero polynomial with coefficients in ).    Finite Extensions are Algebraic   If is a finite extension of fields, then it is algebraic.    Pick . Since is a -vector subspace of and we have . (One could also appeal to the Degree Formula for this.) So by (4) of Theorem , is algebraic of .    Infinite Algebraic Extension  Let and set . Then is a subfield of : To see this, note first that provided . Given , we have and for some and and hence are both in . Since is a field, we have , , and (provided ) all belong to and hence to . This proves is field extension of . It is algebraic over since each is. But it is not a finite extension of , since (since is irreducible in by Eisenstein ) and hence for all .    Transitivity of Algebraic Extensions   Let be extensions of fields, not necessarily finite.   Prove that and are algebraic if and only if is algebraic.  Give an example where and are Galois but is not Galois.     Let be extensions of fields, not necessarily finite.  Suppose that and are algebraic extensions. Let . Then is the root of the polynomial with . Notice that is a polynomial in , making is algebraic over this as well. Consider the chain of field extensions Since is algebraic over for all and is algebraic over , by Theorem each step in this chain has finite degree. By the Degree Formula, is finite and thus so is . By the Theorem again, is algebraic over .  Next suppose that is algebraic. Let . Then , and so it is algebraic over . Now let . Then is the root of a polynomial in , which is also in , so is algebraic as well.   is Galois over , and is Galois over , but is not Galois over as the splitting field of has degree .      Let be fields and let be algebraic elements over . Prove that and are also algebraic elements of over .    Let be fields and let be algebraic elements over First, notice that and are contained in . As is algebraic over , it is the root of some polynomial with coefficients in . But is also contained in , and thus the extension is algebraic. As is algebraic as well, we see that is an algebraic extension of fields. Thus and are algebraic over .     The converse of this proposition is also true: Given field extensions , if is algebraic then so are and . This is more or less obvious from the definition.      Show that any finite extension of fields is algebraic.  Let denote the subfield of consisting of all the complex numbers which are algebraic over . (You may use that is a field without proof.) Show that is an algebraic extension, but not a finite extension.        Let be a finite extension of fields. Let . By the we have . Thus is finite, making algebraic over .    Notice that for all and that is a root of the polynomial , which is irreducible in by Eisenstein's Criterion]] ( ). Thus . As must be added to for all , we see that this extension is not finite.         Let be the splitting field of    Prove that .    Find a basis for as a -vector space.       Let be the splitting field of Part (a) The roots of are the following:                      Notice that , and thus .  The polynomial is irreducible in by Eisenstein's Criterion ( ). Thus it is the minimal polynomial of , and so is a field extension of of degree . After adjoining as well we see that is an extension of degree . Thus a basis of as a -vector space is the following:       Assume that is a finite extension of fields of degree .   Prove that if is irreducible of degree and then remains irreducible when regarded as an element of the ring .  Show, by means of an explicit example with justification, that the statement in part (a) would become false if the assumption that were omitted.      Let be a finite extension of fields of degree .  Suppose that is irreducible of degree and .  First, note that if then will remain irreducible in  . Suppose then that . There exists an algebraically closed extension such that has a root  . Consider . As is algebraic in we know there exists some unique irreducible minimum polynomial of degree , and thus that  . Using the Degree Formula we see that However, and so for some , so . As we must have . But was defined to be the degree of , which divides . As and , we see that , so so for some . As irreducible polynomials multiplied by a constant are still irreducible, we see that is indeed irreducible in .  Let be a non-constant irreducible polynomial of degree in . Let . Because is irreducible and is a PID, is a maximal ideal. Thus is a field , , and is a root of in  . Hence is no longer irreducible by Theorem 2.2      Consider the two field extensions and .   Prove they have degrees and , respectively. {}: For the second one, show is irreducible in .    Find a primitive element for the extension and find .    Find a primitive element for the extension and find .       Consider the polynomial . This has a root , which is not in . Thus, as has degree 2, it is irreducible by Theorem 2.2 , making it the minimal polynomial of . Thus by Theorem 2.31 we see that .  Next, consider the polynomial . This has a root , which is not in as and . Let for convenience. As , has degree 2, it is irreducible by Theorem 2.2 , making it the minimal polynomial of . Thus by Theorem 2.31 we see that . Thus by the degree formula we have .  By Example 2.22 we see that . However, as is the root of it is algebraic over we see that and thus that .  Next, consider the polynomial . This has a root , which is not in as and . Let for convenience. As , has degree 2, it is irreducible by Theorem 2.2 , making it the minimal polynomial of . Thus by Theorem 2.31 we see that . Thus by the degree formula we have .  Consider , and note that and . Thus and . Thus is a primitive element of this extension field.  Next, consider the monic polynomial , and observe However, as , we see that is the root of this polynomial. Since this is a monic polynomial of degree , it must be the minimal polynomial as well. Thus the minimal polynomial of .  Consider , and note that , and .  Consider , and note that , and thus . Thus , so is a root of this polynomial. Since this is a monic polynomial of degree , it must be the minimal polynomial as well. Thus the minimal polynomial of .      Let be the field extension of obtained by adjoining to all four complex roots of the polynomial . ( is what's known as the “splitting field\" of over .) That is, where , , , and .   Prove that there exist a field extension such that , and . Tip : Note that is real number; find it explicitly.    Determine, with justification, .       Let be the field extension of obtained by adjoining to all four complex roots of the polynomial .  Let . Note that by Eisenstein's Criterion using we see that is the root of an irreducible polynomial in . Thus by Theorem 2.31 we see that is the degree of the minimum polynomial of this extension. However, as is monic and of degree 4, we see that it is the minimal polynomial and thus that . As , this extension will be contained in the real numbers, and thus that .  Next, observe and thus that .  Note that is the root of , and since and , we see that is irreducible in due to it having degree 2. As is monic and degree 2 we see its the minimal polynomial of . By the Degree Formula, we see that .  Note that   ,   ,   , and   , all of which can be written with and . Thus .  We already know that , and thus all that remains is to show that can be expressed in terms of the . Observe and thus that . Thus , and . Hence .      Let be the splitting field of over where is an odd prime integer. Find . Tip : Consider both chains and .    As seen in Example 2.60, is a root of the th cyclotomic polynomial, which is monic and irreducible in . Hence is the minimal polynomial of the th cyclotomic polynomial in , and thus the field extension has degree over by Theorem 2.31. It follows that .  Next, note that is a root of the polynomial , making it algebraic over . Using Eisenstein's Criterion in conjunction with the prime we see that is irreducible in . As , by Problem 5 on the previous homework we see that is irreducible in as well. As is irreducible and monic, we see that it is the minimal polynomial of in , and thus Using the degree formula, we see that Notice that , where , which are all roots of . By the Factor Theorem, there can be no other roots of this polynomial. Thus .  Additionally, notice that and are both roots of . Thus they are both contained in . Observe . Hence , and thus we see that . Therefore, .      Consider the two field extensions and .   Show that has degree .    Show that has degree .    Find a primitive element for the extension .    Find .       January 2014 (5)   Let be a subfield of and suppose every element of is a root of a polynomial of degree in . Prove that . (Note: is not assumed to be a finite extension of .)      Let be a prime integer and let be a root of the polynomial .   Find, with justification, the degree of the field extension over .  Deduce that the polynomial is irreducible in .        Let be the splitting field over of the polynomial   Find, with justification, .  Note that (where is the unique positive, real fifth root of ) is one of the roots of . Prove is the trivial group.      Let be the splitting field over of the polynomial   Note that is irreducible in by Eisenstein's Criterion ( ). The roots of are                   5.      As is monic and irreducible it is the minimum polynomial of . Let , and notice . Note that   Let be a primitive root of unity. This is the root a cyclotomic polynomial of degree which is irreducible in . As this has relatively prime order to it is irreducible there as well. Let , and notice . Notice that , and so , completing the proof.      Let and be subfields of a field with and . Let and . Recall that denotes the smallest (with respect to containment) subfield of which satisfies and .   Show that .  Show that if then   Give an example satisfying       Let and be subfields of a field with and . Let and .  We're going to go slightly out of order. By Part (b), we see when . This is the largest possible size of , as everything is irreducible where it can be. Thus   Suppose . As and are finite extensions of they are also algebraic. Thus there exists and such that has degree and has degree .  Thus , making irreducible in . Thus . Notice that , as it is the smallest (with respect to containment) subfield of which satisfies and . Thus we have , as desired.  Let , , and Notice that , and thus .      Computations and Examples       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Formal Proofs       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Qualifying Exam Problems       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!   Qual  Let and be subfields of a field with and . Let and . Recall that denotes the smallest (with respect to containment) subfield of which satisfies and .   Show that .  Show that if then   Give an example satisfying      Let and be subfields of a field with and . Let and .  We're going to go slightly out of order. By Part (b), we see when . This is the largest possible size of , as everything is irreducible where it can be. Thus   Suppose . As and are finite extensions of they are also algebraic. Thus there exists and such that has degree and has degree .  Thus , making irreducible in . Thus . Notice that , as it is the smallest (with respect to containment) subfield of which satisfies and . Thus we have , as desired.  Let , , and Notice that , and thus .     "
+  "body": "Algebraic Extensions  Algebraic Element   For a field extension and , we say is algebraic over if for some non-zero polynomial . Otherwise, is transcendental over .      is algebraic over . Indeed, every element of is algebraic over . (E.g., is a root of .) ia algebraic over . So is for any . The numbers and of are transcendental over ; these are deep facts.   Properties of Algebraic Elements   Suppose is a field extension and . Define a subset of .   The subset is an ideal of .   if and only if is transcendental over ; so if and only if is algebraic over .  Assume is algebraic over .  The unique monic generator of , which we will write as , is irreducible (and hence is a prime ideal).  There is a unique isomorphism of fields sending identically to and sending to .   and in particular is a field.     is algebraic over if and only if . In this case,    is transcendental over if and only if . In this case, there is a unique isomorphism of fields sending identically to and sending to . (Here, is the field of fractions of .)     All parts use the following construction:  Let be the evaluation homomorphism, given by sending to  . Note that satisfies and . We have by definition of the latter. The First Isomorphism Theorem for rings thus gives that induces a ring isomorphism given by . In particular, since is a subring of , it is an integral domain, and hence must be a prime ideal (possibly the ideal).   Let us now prove the various parts:    holds because is the kernel of the ring map .    is by definition.    For (3) assume is algebraic. Then and hence it has a unique monic generator, which we write . Since is prime, is irreducible ; this proves (3a). Also, this shows that is a field and hence so is . Since , contains and , and is a field, we must have . This proves (3b) and (3c).  For (4), if is algebraic over , then by (3b) and Proposition . For the converse, if , then the infinite list of elements of cannot be -linearly independent . So, for some and some not all of which are . This shows is the root of a non-zero polynomial.  For (5), if is transcendental, then and so is injective. Since is a field, is a domain , and is injective , it can be extended to the field of fractions of , i.e. there is a ring homomorphism given by for all with . The image of is precisely . The map is injective since it is a ring homomorphism whose source is a field.     Minimum Polynomial   If is algebraic over the subfield , the unique monic generator of the ideal in the previous theorem, written , is called the minimum polynomial of over .     Note that the minimum polynomial of over (if it exists) divides every polynomial in that has as a root. In particular, it is the unique monic, irreducible polynomial having as a root. It can also be characterized as the monic polynomial in of least degree having as a root.    For any prime integer , set , a so-called “primitive -th root of unity\". Let us find . Note that is a root of which factors as where . As we showed before , is irreducible in . Since is not a root of , it must be a root of , and since is irreducible, it must be (see the Remark).    Uniqueness of Field Extensions   Let be irreducible and let (respectively, ) be a root of in some field extension (respectively, ) of . Then there is an isomorphism of fields such that and .    Note that is (up to a non-zero constant factor) the minimum polynomial of both and . So, we may apply (3b) of the Theorem twice to give a pair of isomorphisms of fields, given by sending to (for the left one) and (for the right one). Take to be the inverse of the one on the left composed with the right one.      A simple example illustrating the Corollary is that and are isomorphic fields. In fact, the are equal: . But the Corollary gives that there is an interesting isomorphism that sends to . In general, we have for . This previews the central idea of Galois theory.    Let (the unique real cube-root of ) and (one of the two imaginary cube roots of ).  Then by the Corollary (applied with ) there is an isomorphism of fields that restricts to the identity map on . Note that these two fields are not equal since the former is contained in and the latter is not.   The Degree Formula   Suppose are field extensions. Then In particular, the composition of two finite extensions of fields is again a finite extension.    Let be a basis for as an -vector space and let be a basis for as an -vector space. Let denote the subset of . The Proposition follows from the following two facts: - is a basis of as an -vector space and - the function is bijective (so that the cardinality of is ). Concerning (a), for , we have for some and . For each , is an -linear combination of a finite set of elements of . Combining these gives that is in the -span of .  To prove linear independence, it suffices to prove that if and be distinct elements of and respectively, then the set is linearly independent. Suppose for some . Since the 's are -linearly independent and and , we get that, for each , . Using now that the 's are -linearly independent, we have that for all and all , . This proves is linearly independent over , and hence is linearly independent over .  Concerning (b), if for some , then , and since the 's are -linearly independent, we must have and hence .     Say is a field extension of prime degree . Given , by the Degree Formula we have . Since , and so . It follows that , whence . As a (very simple) example of this, since is prime, for any complex number that is not real.    Let be the result of adjoining to all of the roots in of . That is, where , , , and . As we shall see later, is an example of a “splitting field\". Let's find .  First, let us note that we can also describe as . This holds since each of belongs to and hence . The opposite containment holds because , with the latter being true because .  Set . Then . Since and is a root of , we have is at most and it will be exactly if and only if is irreducible in . This is unclear.  So instead let's try a different approach. Let . Then since is irreducible in by Eisenstein, we have . Since and is a root of , we have . But since . Note that if and only if . Thus .  By the degree formula we conclude that Note that, in hindsight, it must have been true that is irreducible in , since otherwise the degree formula would give that .     Suppose that is a finite extension of fields such that the degree is odd. Show that if , then .    Let be a finite extension of fields such that the degree is odd.  Notice that as everything in can be written in terms of . Suppose by way of contradiction that there exists some such that . Then . Notice that is a root of the polynomial , which is irreducible in as it is a degree polynomial that has no roots in . Thus is the minimum polynomial of and    However, by the Degree Formula  , which is a problem, given now divides , an odd number. Thus .    Algebraic Extension   A field extension is called algebraic if every element is algebraic over (i.e., if every element of is the root of a non-zero polynomial with coefficients in ).    Finite Extensions are Algebraic   If is a finite extension of fields, then it is algebraic.    Pick . Since is a -vector subspace of and we have . (One could also appeal to the Degree Formula for this.) So by (4) of Theorem , is algebraic of .    Infinite Algebraic Extension  Let and set . Then is a subfield of : To see this, note first that provided . Given , we have and for some and and hence are both in . Since is a field, we have , , and (provided ) all belong to and hence to . This proves is field extension of . It is algebraic over since each is. But it is not a finite extension of , since (since is irreducible in by Eisenstein ) and hence for all .    Transitivity of Algebraic Extensions   Let be extensions of fields, not necessarily finite.   Prove that and are algebraic if and only if is algebraic.  Give an example where and are Galois but is not Galois.     Let be extensions of fields, not necessarily finite.  Suppose that and are algebraic extensions. Let . Then is the root of the polynomial with . Notice that is a polynomial in , making is algebraic over this as well. Consider the chain of field extensions Since is algebraic over for all and is algebraic over , by Theorem each step in this chain has finite degree. By the Degree Formula, is finite and thus so is . By the Theorem again, is algebraic over .  Next suppose that is algebraic. Let . Then , and so it is algebraic over . Now let . Then is the root of a polynomial in , which is also in , so is algebraic as well.   is Galois over , and is Galois over , but is not Galois over as the splitting field of has degree .      Let be fields and let be algebraic elements over . Prove that and are also algebraic elements of over .    Let be fields and let be algebraic elements over First, notice that and are contained in . As is algebraic over , it is the root of some polynomial with coefficients in . But is also contained in , and thus the extension is algebraic. As is algebraic as well, we see that is an algebraic extension of fields. Thus and are algebraic over .     The converse of this proposition is also true: Given field extensions , if is algebraic then so are and . This is more or less obvious from the definition.      Show that any finite extension of fields is algebraic.  Let denote the subfield of consisting of all the complex numbers which are algebraic over . (You may use that is a field without proof.) Show that is an algebraic extension, but not a finite extension.        Let be a finite extension of fields. Let . By the we have . Thus is finite, making algebraic over .    Notice that for all and that is a root of the polynomial , which is irreducible in by Eisenstein's Criterion]] ( ). Thus . As must be added to for all , we see that this extension is not finite.         Let be the splitting field of    Prove that .    Find a basis for as a -vector space.       Let be the splitting field of Part (a) The roots of are the following:                      Notice that , and thus .  The polynomial is irreducible in by Eisenstein's Criterion ( ). Thus it is the minimal polynomial of , and so is a field extension of of degree . After adjoining as well we see that is an extension of degree . Thus a basis of as a -vector space is the following:       Assume that is a finite extension of fields of degree .   Prove that if is irreducible of degree and then remains irreducible when regarded as an element of the ring .  Show, by means of an explicit example with justification, that the statement in part (a) would become false if the assumption that were omitted.      Let be a finite extension of fields of degree .  Suppose that is irreducible of degree and .  First, note that if then will remain irreducible in  . Suppose then that . There exists an algebraically closed extension such that has a root  . Consider . As is algebraic in we know there exists some unique irreducible minimum polynomial of degree , and thus that  . Using the Degree Formula we see that However, and so for some , so . As we must have . But was defined to be the degree of , which divides . As and , we see that , so so for some . As irreducible polynomials multiplied by a constant are still irreducible, we see that is indeed irreducible in .  Let be a non-constant irreducible polynomial of degree in . Let . Because is irreducible and is a PID, is a maximal ideal. Thus is a field , , and is a root of in  . Hence is no longer irreducible by Theorem 2.2      Consider the two field extensions and .   Prove they have degrees and , respectively. {}: For the second one, show is irreducible in .    Find a primitive element for the extension and find .    Find a primitive element for the extension and find .       Consider the polynomial . This has a root , which is not in . Thus, as has degree 2, it is irreducible by Theorem 2.2 , making it the minimal polynomial of . Thus by Theorem 2.31 we see that .  Next, consider the polynomial . This has a root , which is not in as and . Let for convenience. As , has degree 2, it is irreducible by Theorem 2.2 , making it the minimal polynomial of . Thus by Theorem 2.31 we see that . Thus by the degree formula we have .  By Example 2.22 we see that . However, as is the root of it is algebraic over we see that and thus that .  Next, consider the polynomial . This has a root , which is not in as and . Let for convenience. As , has degree 2, it is irreducible by Theorem 2.2 , making it the minimal polynomial of . Thus by Theorem 2.31 we see that . Thus by the degree formula we have .  Consider , and note that and . Thus and . Thus is a primitive element of this extension field.  Next, consider the monic polynomial , and observe However, as , we see that is the root of this polynomial. Since this is a monic polynomial of degree , it must be the minimal polynomial as well. Thus the minimal polynomial of .  Consider , and note that , and .  Consider , and note that , and thus . Thus , so is a root of this polynomial. Since this is a monic polynomial of degree , it must be the minimal polynomial as well. Thus the minimal polynomial of .      Let be the field extension of obtained by adjoining to all four complex roots of the polynomial . ( is what's known as the “splitting field\" of over .) That is, where , , , and .   Prove that there exist a field extension such that , and . Tip : Note that is real number; find it explicitly.    Determine, with justification, .       Let be the field extension of obtained by adjoining to all four complex roots of the polynomial .  Let . Note that by Eisenstein's Criterion using we see that is the root of an irreducible polynomial in . Thus by Theorem 2.31 we see that is the degree of the minimum polynomial of this extension. However, as is monic and of degree 4, we see that it is the minimal polynomial and thus that . As , this extension will be contained in the real numbers, and thus that .  Next, observe and thus that .  Note that is the root of , and since and , we see that is irreducible in due to it having degree 2. As is monic and degree 2 we see its the minimal polynomial of . By the Degree Formula, we see that .  Note that   ,   ,   , and   , all of which can be written with and . Thus .  We already know that , and thus all that remains is to show that can be expressed in terms of the . Observe and thus that . Thus , and . Hence .      Let be the splitting field of over where is an odd prime integer. Find . Tip : Consider both chains and .    As seen in Example 2.60, is a root of the th cyclotomic polynomial, which is monic and irreducible in . Hence is the minimal polynomial of the th cyclotomic polynomial in , and thus the field extension has degree over by Theorem 2.31. It follows that .  Next, note that is a root of the polynomial , making it algebraic over . Using Eisenstein's Criterion in conjunction with the prime we see that is irreducible in . As , by Problem 5 on the previous homework we see that is irreducible in as well. As is irreducible and monic, we see that it is the minimal polynomial of in , and thus Using the degree formula, we see that Notice that , where , which are all roots of . By the Factor Theorem, there can be no other roots of this polynomial. Thus .  Additionally, notice that and are both roots of . Thus they are both contained in . Observe . Hence , and thus we see that . Therefore, .      Consider the two field extensions and .   Show that has degree .    Show that has degree .    Find a primitive element for the extension .    Find .       January 2014 (5)   Let be a subfield of and suppose every element of is a root of a polynomial of degree in . Prove that . (Note: is not assumed to be a finite extension of .)      Let be a prime integer and let be a root of the polynomial .   Find, with justification, the degree of the field extension over .  Deduce that the polynomial is irreducible in .        Let be the splitting field over of the polynomial   Find, with justification, .  Note that (where is the unique positive, real fifth root of ) is one of the roots of . Prove is the trivial group.      Let be the splitting field over of the polynomial   Note that is irreducible in by Eisenstein's Criterion ( ). The roots of are                   5.      As is monic and irreducible it is the minimum polynomial of . Let , and notice . Note that   Let be a primitive root of unity. This is the root a cyclotomic polynomial of degree which is irreducible in . As this has relatively prime order to it is irreducible there as well. Let , and notice . Notice that , and so , completing the proof.      Let and be subfields of a field with and . Let and . Recall that denotes the smallest (with respect to containment) subfield of which satisfies and .   Show that .  Show that if then   Give an example satisfying       Let and be subfields of a field with and . Let and .  We're going to go slightly out of order. By Part (b), we see when . This is the largest possible size of , as everything is irreducible where it can be. Thus   Suppose . As and are finite extensions of they are also algebraic. Thus there exists and such that has degree and has degree .  Thus , making irreducible in . Thus . Notice that , as it is the smallest (with respect to containment) subfield of which satisfies and . Thus we have , as desired.  Let , , and Notice that , and thus .      Computations and Examples       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Formal Proofs       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Qualifying Exam Problems       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!   Qual  Let and be subfields of a field with and . Let and . Recall that denotes the smallest (with respect to containment) subfield of which satisfies and .   Show that .  Show that if then   Give an example satisfying      Let and be subfields of a field with and . Let and .  We're going to go slightly out of order. By Part (b), we see when . This is the largest possible size of , as everything is irreducible where it can be. Thus   Suppose . As and are finite extensions of they are also algebraic. Thus there exists and such that has degree and has degree .  Thus , making irreducible in . Thus . Notice that , as it is the smallest (with respect to containment) subfield of which satisfies and . Thus we have , as desired.  Let , , and Notice that , and thus .     "
 },
 {
   "id": "def-algebraic-element",
@@ -8683,7 +8737,7 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "19.23",
   "title": "Properties of Algebraic Elements.",
-  "body": "Properties of Algebraic Elements   Suppose is a field extension and . Define a subset of .   The subset is an ideal of .   if and only if is transcendental over ; so if and only if is algebraic over .  Assume is algebraic over .  The unique monic generator of , which we will write as , is irreducible (and hence is a prime ideal).  There is a unique isomorphism of fields sending identically to and sending to .   and in particular is a field.     is algebraic over if and only if . In this case,[^5]    is transcendental over if and only if . In this case, there is a unique isomorphism of fields sending identically to and sending to . (Here, is the field of fractions of .)     All parts use the following construction:  Let be the evaluation homomorphism, given by sending to  . Note that satisfies and . We have by definition of the latter. The First Isomorphism Theorem for rings thus gives that induces a ring isomorphism given by . In particular, since is a subring of , it is an integral domain, and hence must be a prime ideal (possibly the ideal).   Let us now prove the various parts:    holds because is the kernel of the ring map .    is by definition.    For (3) assume is algebraic. Then and hence it has a unique monic generator, which we write . Since is prime, is irreducible ; this proves (3a). Also, this shows that is a field and hence so is . Since , contains and , and is a field, we must have . This proves (3b) and (3c).  For (4), if is algebraic over , then by (3b) and Proposition . For the converse, if , then the infinite list of elements of cannot be -linearly independent . So, for some and some not all of which are . This shows is the root of a non-zero polynomial.  For (5), if is transcendental, then and so is injective. Since is a field, is a domain , and is injective , it can be extended to the field of fractions of , i.e. there is a ring homomorphism given by for all with . The image of is precisely . The map is injective since it is a ring homomorphism whose source is a field.    "
+  "body": "Properties of Algebraic Elements   Suppose is a field extension and . Define a subset of .   The subset is an ideal of .   if and only if is transcendental over ; so if and only if is algebraic over .  Assume is algebraic over .  The unique monic generator of , which we will write as , is irreducible (and hence is a prime ideal).  There is a unique isomorphism of fields sending identically to and sending to .   and in particular is a field.     is algebraic over if and only if . In this case,    is transcendental over if and only if . In this case, there is a unique isomorphism of fields sending identically to and sending to . (Here, is the field of fractions of .)     All parts use the following construction:  Let be the evaluation homomorphism, given by sending to  . Note that satisfies and . We have by definition of the latter. The First Isomorphism Theorem for rings thus gives that induces a ring isomorphism given by . In particular, since is a subring of , it is an integral domain, and hence must be a prime ideal (possibly the ideal).   Let us now prove the various parts:    holds because is the kernel of the ring map .    is by definition.    For (3) assume is algebraic. Then and hence it has a unique monic generator, which we write . Since is prime, is irreducible ; this proves (3a). Also, this shows that is a field and hence so is . Since , contains and , and is a field, we must have . This proves (3b) and (3c).  For (4), if is algebraic over , then by (3b) and Proposition . For the converse, if , then the infinite list of elements of cannot be -linearly independent . So, for some and some not all of which are . This shows is the root of a non-zero polynomial.  For (5), if is transcendental, then and so is injective. Since is a field, is a domain , and is injective , it can be extended to the field of fractions of , i.e. there is a ring homomorphism given by for all with . The image of is precisely . The map is injective since it is a ring homomorphism whose source is a field.    "
 },
 {
   "id": "def-minimum-polynomial",
@@ -8695,9 +8749,9 @@ var ptx_lunr_docs = [
   "body": "Minimum Polynomial   If is algebraic over the subfield , the unique monic generator of the ideal in the previous theorem, written , is called the minimum polynomial of over .   "
 },
 {
-  "id": "remark-110",
+  "id": "remark-111",
   "level": "2",
-  "url": "sec-algebraic.html#remark-110",
+  "url": "sec-algebraic.html#remark-111",
   "type": "Remark",
   "number": "19.25",
   "title": "",
@@ -8821,9 +8875,9 @@ var ptx_lunr_docs = [
   "body": "  Let be fields and let be algebraic elements over . Prove that and are also algebraic elements of over .    Let be fields and let be algebraic elements over First, notice that and are contained in . As is algebraic over , it is the root of some polynomial with coefficients in . But is also contained in , and thus the extension is algebraic. As is algebraic as well, we see that is an algebraic extension of fields. Thus and are algebraic over .   "
 },
 {
-  "id": "remark-111",
+  "id": "remark-112",
   "level": "2",
-  "url": "sec-algebraic.html#remark-111",
+  "url": "sec-algebraic.html#remark-112",
   "type": "Remark",
   "number": "19.39",
   "title": "",
@@ -8857,92 +8911,83 @@ var ptx_lunr_docs = [
   "body": "  Assume that is a finite extension of fields of degree .   Prove that if is irreducible of degree and then remains irreducible when regarded as an element of the ring .  Show, by means of an explicit example with justification, that the statement in part (a) would become false if the assumption that were omitted.      Let be a finite extension of fields of degree .  Suppose that is irreducible of degree and .  First, note that if then will remain irreducible in  . Suppose then that . There exists an algebraically closed extension such that has a root  . Consider . As is algebraic in we know there exists some unique irreducible minimum polynomial of degree , and thus that  . Using the Degree Formula we see that However, and so for some , so . As we must have . But was defined to be the degree of , which divides . As and , we see that , so so for some . As irreducible polynomials multiplied by a constant are still irreducible, we see that is indeed irreducible in .  Let be a non-constant irreducible polynomial of degree in . Let . Because is irreducible and is a PID, is a maximal ideal. Thus is a field , , and is a root of in  . Hence is no longer irreducible by Theorem 2.2   "
 },
 {
-  "id": "proposition-101",
+  "id": "proposition-100",
   "level": "2",
-  "url": "sec-algebraic.html#proposition-101",
+  "url": "sec-algebraic.html#proposition-100",
   "type": "Proposition",
   "number": "19.43",
   "title": "",
   "body": "  Consider the two field extensions and .   Prove they have degrees and , respectively. {}: For the second one, show is irreducible in .    Find a primitive element for the extension and find .    Find a primitive element for the extension and find .       Consider the polynomial . This has a root , which is not in . Thus, as has degree 2, it is irreducible by Theorem 2.2 , making it the minimal polynomial of . Thus by Theorem 2.31 we see that .  Next, consider the polynomial . This has a root , which is not in as and . Let for convenience. As , has degree 2, it is irreducible by Theorem 2.2 , making it the minimal polynomial of . Thus by Theorem 2.31 we see that . Thus by the degree formula we have .  By Example 2.22 we see that . However, as is the root of it is algebraic over we see that and thus that .  Next, consider the polynomial . This has a root , which is not in as and . Let for convenience. As , has degree 2, it is irreducible by Theorem 2.2 , making it the minimal polynomial of . Thus by Theorem 2.31 we see that . Thus by the degree formula we have .  Consider , and note that and . Thus and . Thus is a primitive element of this extension field.  Next, consider the monic polynomial , and observe However, as , we see that is the root of this polynomial. Since this is a monic polynomial of degree , it must be the minimal polynomial as well. Thus the minimal polynomial of .  Consider , and note that , and .  Consider , and note that , and thus . Thus , so is a root of this polynomial. Since this is a monic polynomial of degree , it must be the minimal polynomial as well. Thus the minimal polynomial of .   "
 },
 {
-  "id": "proposition-102",
+  "id": "proposition-101",
   "level": "2",
-  "url": "sec-algebraic.html#proposition-102",
+  "url": "sec-algebraic.html#proposition-101",
   "type": "Proposition",
   "number": "19.44",
   "title": "",
   "body": "  Let be the field extension of obtained by adjoining to all four complex roots of the polynomial . ( is what's known as the “splitting field\" of over .) That is, where , , , and .   Prove that there exist a field extension such that , and . Tip : Note that is real number; find it explicitly.    Determine, with justification, .       Let be the field extension of obtained by adjoining to all four complex roots of the polynomial .  Let . Note that by Eisenstein's Criterion using we see that is the root of an irreducible polynomial in . Thus by Theorem 2.31 we see that is the degree of the minimum polynomial of this extension. However, as is monic and of degree 4, we see that it is the minimal polynomial and thus that . As , this extension will be contained in the real numbers, and thus that .  Next, observe and thus that .  Note that is the root of , and since and , we see that is irreducible in due to it having degree 2. As is monic and degree 2 we see its the minimal polynomial of . By the Degree Formula, we see that .  Note that   ,   ,   , and   , all of which can be written with and . Thus .  We already know that , and thus all that remains is to show that can be expressed in terms of the . Observe and thus that . Thus , and . Hence .   "
 },
 {
-  "id": "proposition-103",
+  "id": "proposition-102",
   "level": "2",
-  "url": "sec-algebraic.html#proposition-103",
+  "url": "sec-algebraic.html#proposition-102",
   "type": "Proposition",
   "number": "19.45",
   "title": "",
   "body": "  Let be the splitting field of over where is an odd prime integer. Find . Tip : Consider both chains and .    As seen in Example 2.60, is a root of the th cyclotomic polynomial, which is monic and irreducible in . Hence is the minimal polynomial of the th cyclotomic polynomial in , and thus the field extension has degree over by Theorem 2.31. It follows that .  Next, note that is a root of the polynomial , making it algebraic over . Using Eisenstein's Criterion in conjunction with the prime we see that is irreducible in . As , by Problem 5 on the previous homework we see that is irreducible in as well. As is irreducible and monic, we see that it is the minimal polynomial of in , and thus Using the degree formula, we see that Notice that , where , which are all roots of . By the Factor Theorem, there can be no other roots of this polynomial. Thus .  Additionally, notice that and are both roots of . Thus they are both contained in . Observe . Hence , and thus we see that . Therefore, .   "
 },
 {
-  "id": "proposition-104",
+  "id": "proposition-103",
   "level": "2",
-  "url": "sec-algebraic.html#proposition-104",
+  "url": "sec-algebraic.html#proposition-103",
   "type": "Proposition",
   "number": "19.46",
   "title": "",
   "body": "  Consider the two field extensions and .   Show that has degree .    Show that has degree .    Find a primitive element for the extension .    Find .      "
 },
 {
-  "id": "proposition-105",
+  "id": "proposition-104",
   "level": "2",
-  "url": "sec-algebraic.html#proposition-105",
+  "url": "sec-algebraic.html#proposition-104",
   "type": "Proposition",
   "number": "19.47",
   "title": "January 2014 (5).",
   "body": "January 2014 (5)   Let be a subfield of and suppose every element of is a root of a polynomial of degree in . Prove that . (Note: is not assumed to be a finite extension of .)   "
 },
 {
-  "id": "proposition-106",
+  "id": "proposition-105",
   "level": "2",
-  "url": "sec-algebraic.html#proposition-106",
+  "url": "sec-algebraic.html#proposition-105",
   "type": "Proposition",
   "number": "19.48",
   "title": "",
   "body": "  Let be a prime integer and let be a root of the polynomial .   Find, with justification, the degree of the field extension over .  Deduce that the polynomial is irreducible in .     "
 },
 {
-  "id": "proposition-107",
+  "id": "proposition-106",
   "level": "2",
-  "url": "sec-algebraic.html#proposition-107",
+  "url": "sec-algebraic.html#proposition-106",
   "type": "Proposition",
   "number": "19.49",
   "title": "",
   "body": "  Let be the splitting field over of the polynomial   Find, with justification, .  Note that (where is the unique positive, real fifth root of ) is one of the roots of . Prove is the trivial group.      Let be the splitting field over of the polynomial   Note that is irreducible in by Eisenstein's Criterion ( ). The roots of are                   5.      As is monic and irreducible it is the minimum polynomial of . Let , and notice . Note that   Let be a primitive root of unity. This is the root a cyclotomic polynomial of degree which is irreducible in . As this has relatively prime order to it is irreducible there as well. Let , and notice . Notice that , and so , completing the proof.   "
 },
 {
-  "id": "proposition-108",
+  "id": "proposition-107",
   "level": "2",
-  "url": "sec-algebraic.html#proposition-108",
+  "url": "sec-algebraic.html#proposition-107",
   "type": "Proposition",
   "number": "19.50",
   "title": "",
   "body": "  Let and be subfields of a field with and . Let and . Recall that denotes the smallest (with respect to containment) subfield of which satisfies and .   Show that .  Show that if then   Give an example satisfying       Let and be subfields of a field with and . Let and .  We're going to go slightly out of order. By Part (b), we see when . This is the largest possible size of , as everything is irreducible where it can be. Thus   Suppose . As and are finite extensions of they are also algebraic. Thus there exists and such that has degree and has degree .  Thus , making irreducible in . Thus . Notice that , as it is the smallest (with respect to containment) subfield of which satisfies and . Thus we have , as desired.  Let , , and Notice that , and thus .   "
 },
 {
-  "id": "exercise-271",
-  "level": "2",
-  "url": "sec-algebraic.html#exercise-271",
-  "type": "Exercise",
-  "number": "19.2.1",
-  "title": ".",
-  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
-},
-{
   "id": "exercise-272",
   "level": "2",
   "url": "sec-algebraic.html#exercise-272",
   "type": "Exercise",
-  "number": "19.2.2",
+  "number": "19.2.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
@@ -8951,7 +8996,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-algebraic.html#exercise-273",
   "type": "Exercise",
-  "number": "19.2.3",
+  "number": "19.2.2",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
@@ -8959,6 +9004,15 @@ var ptx_lunr_docs = [
   "id": "exercise-274",
   "level": "2",
   "url": "sec-algebraic.html#exercise-274",
+  "type": "Exercise",
+  "number": "19.2.3",
+  "title": ".",
+  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
+},
+{
+  "id": "exercise-275",
+  "level": "2",
+  "url": "sec-algebraic.html#exercise-275",
   "type": "Exercise",
   "number": "19.2.4",
   "title": "Qual.",
@@ -9073,29 +9127,20 @@ var ptx_lunr_docs = [
   "body": "June 2011 (10)   Let and be matrices with entries in . Recall that and are said to be similar over if there exists an invertible matrix, with entries in , such that . Prove the following statements about matrices and with entries in :   If is a field extension, and and are similar over , then they are similar over .   is similar over to its transpose .     Suppose and are similar in . As and have entries in , then they are both in . Thus there exist matrices in RCF such that is similar to and that is similar to . However, is similar to and that is similar to in as well. Notice and are still in RCF. However, as the RCF is unique, this means that in , making them equal in as well. Thus is similar to , as similarity is transitive.  Let be the algebraic closure of . Thus has a Jordan Canonical Form in . For each Jordan Block in the JCF of , let denote the transpose of the identity matrix, and notice that . As this is the case for every Jordan block, we see that the JCF of , , is similar to its transpose. As the is similar to , is similar to , and is similar to , we see that in by transitivity. From Part (1), this yields in .   "
 },
 {
-  "id": "exercise-275",
+  "id": "exercise-276",
   "level": "2",
-  "url": "sec-closure.html#exercise-275",
+  "url": "sec-closure.html#exercise-276",
   "type": "Exploration",
   "number": "19.62",
   "title": "",
   "body": " In each part, determine, with justification, the degree of the given field extension.   1. .     .     "
 },
 {
-  "id": "exercise-276",
-  "level": "2",
-  "url": "sec-closure.html#exercise-276",
-  "type": "Exercise",
-  "number": "19.3.1",
-  "title": ".",
-  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
-},
-{
   "id": "exercise-277",
   "level": "2",
   "url": "sec-closure.html#exercise-277",
   "type": "Exercise",
-  "number": "19.3.2",
+  "number": "19.3.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
@@ -9103,6 +9148,15 @@ var ptx_lunr_docs = [
   "id": "exercise-278",
   "level": "2",
   "url": "sec-closure.html#exercise-278",
+  "type": "Exercise",
+  "number": "19.3.2",
+  "title": ".",
+  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
+},
+{
+  "id": "exercise-279",
+  "level": "2",
+  "url": "sec-closure.html#exercise-279",
   "type": "Exercise",
   "number": "19.3.3",
   "title": ".",
@@ -9136,9 +9190,9 @@ var ptx_lunr_docs = [
   "body": "Examples of Splitting Fields   As a silly example, if already splits into linear factors over , then itself is the splitting field of over .  The splitting field of over is .  If is any irreducible quadratic polynomial in , then the splitting field of is .  In general, given , a splitting field of is given by where are all of the roots of in .   "
 },
 {
-  "id": "remark-112",
+  "id": "remark-113",
   "level": "2",
-  "url": "sec-splitting.html#remark-112",
+  "url": "sec-splitting.html#remark-113",
   "type": "Remark",
   "number": "19.65",
   "title": "",
@@ -9154,9 +9208,9 @@ var ptx_lunr_docs = [
   "body": "Properties of Splitting Fields   Let be a field and a non-constant polynomial.   There exists a splitting field for over .    If is another splitting field of over , then there is a field isomorphism such that .    The degree of any splitting field of is at most where .       For (1), let be an algebraic closure of , which exists by the previous Theorem. Let be the roots of in , and set .  It is clear is a splitting field.  To prove (2), we proceed by induction on the degree of . If is linear, then the only splitting field of over is itself and so the result is clear in this case. Say and are the roots of in and , respectively, and say they are ordered so that, and are roots of the same irreducible factor of in .  By Corollary there is an isomorphism that fixes . Note that factors as in and that is the splitting field of over , and similarly factors as in and that is the splitting field of over . If we blur our eyes slightly and pretend is the identity map, we can apply the inductive hypothesis, since , to conclude that there is an isomorphism as in the statement. I leave a more rigorous argument to your imaginations.  To prove (3), we also proceed by induction on the degree of , using the same notation as in the proof of (2).  Since is a root of , we have and hence In we have with and, as before, is the splitting field of over , so that by induction . By the degree formula    "
 },
 {
-  "id": "remark-113",
+  "id": "remark-114",
   "level": "2",
-  "url": "sec-splitting.html#remark-113",
+  "url": "sec-splitting.html#remark-114",
   "type": "Remark",
   "number": "19.67",
   "title": "",
@@ -9235,18 +9289,18 @@ var ptx_lunr_docs = [
   "body": "  Assume is an algebraic field extension such that every non-constant polynomial in splits completely into linear factors in . Prove is an algebraic closure of .    Let be an algebraic field extension such that every non-constant polynomial in splits completely into linear factors in .  Let be a polynomial in , so , with , and let be a root of . There [[Theorem – Existence and Uniqueness of Algebraic Closures|exists]] some field extension such that is algebraically closed, meaning . Notice that is [[Mathematics\/Definitions\/Algebraic|algebraic]] over .  Consider the chain of field extensions making algebraic over as well. As every non-constant polynomial in splits completely into linear factors in , this yields .   "
 },
 {
-  "id": "proposition-118",
+  "id": "proposition-117",
   "level": "2",
-  "url": "sec-splitting.html#proposition-118",
+  "url": "sec-splitting.html#proposition-117",
   "type": "Proposition",
   "number": "19.76",
   "title": "",
   "body": "  Let be the splitting field of over . (Recall that this extension occurred on the last problem set, and that where - , - , - , and - .) Prove .    Note that from the previous homework, we know that , and that . Additionally, we know the following: - , - , - , and - . Note that by Eisenstein's Criterion using we see that is irreducible in . As has characteristic 0, we see that is separable as well.  As is the splitting field of an irreducible polynomial in , by Theorem 2.90 we see that . In the Gaussian integers, it is known that if both and are nonzero then, is a Gaussian prime if and only if is an ordinary prime. Note that , and that , which is prime. Thus is prime in . Thus we may invoke Eisenstein's Criterion using to see that is irreducible in , as does not divide 5, but we'll prove it just to be sure.  Suppose . Then , so , and thus . As 5 has no imaginary component, it must be the case that , and thus that . Substituting in, we see that , and thus that , which has historically not been an integer.  Anyway, we may thus apply Porism 2.61 to see that there exists some such that . We may regard as an element of since, by definition, is a subgroup of .  As , observe the following glory: With that in mind, we examine and and don't forget So corresponds to the permutation (1 2 3 4). We have proven that is isomorphic to a subgroup of having order at most 8 and that it contains an element or order 2 and (1 2 3 4), an element of order 4. Since the subgroup generated by these two elements has order 8, we see that . (Also by , only has one subgroup of order 8, and it is ).   "
 },
 {
-  "id": "proposition-119",
+  "id": "proposition-118",
   "level": "2",
-  "url": "sec-splitting.html#proposition-119",
+  "url": "sec-splitting.html#proposition-118",
   "type": "Proposition",
   "number": "19.77",
   "title": "",
@@ -9280,20 +9334,11 @@ var ptx_lunr_docs = [
   "body": "  Let where is an odd prime, and let be the splitting field of over . Find, with justification, .    Let where is an odd prime, and let be the splitting field of over . Using Eisenstein's Criterion with we see that is irreducible in . Notice that is a root of this polynomial. As is monic and irreducible it is the minimum polynomial of , and thus . Let be a primitive root of unity. Notice that is a root of the cyclotomic polynomial, , which is irreducible in by the Gospel of Mark.  As is the splitting field of , there exists a root of . Consider . As is algebraic in we know there exists some unique irreducible minimal polynomial of degree , and thus that . By the Degree Formula we see However, and so for some , so . As we must have . But was defined to be the degree of , which divides . As and , we see that , so for some . As irreducible polynomials multiplied by a constant are still irreducible, we see that is indeed irreducible in .  As is monic and irreducible in we see that it is the minimum polynomial of , and thus . As , we have .   "
 },
 {
-  "id": "exercise-279",
-  "level": "2",
-  "url": "sec-splitting.html#exercise-279",
-  "type": "Exercise",
-  "number": "19.4.1",
-  "title": ".",
-  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
-},
-{
   "id": "exercise-280",
   "level": "2",
   "url": "sec-splitting.html#exercise-280",
   "type": "Exercise",
-  "number": "19.4.2",
+  "number": "19.4.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
@@ -9301,6 +9346,15 @@ var ptx_lunr_docs = [
   "id": "exercise-281",
   "level": "2",
   "url": "sec-splitting.html#exercise-281",
+  "type": "Exercise",
+  "number": "19.4.2",
+  "title": ".",
+  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
+},
+{
+  "id": "exercise-282",
+  "level": "2",
+  "url": "sec-splitting.html#exercise-282",
   "type": "Exercise",
   "number": "19.4.3",
   "title": ".",
@@ -9325,9 +9379,9 @@ var ptx_lunr_docs = [
   "body": "Characteristic   Let R be a commutative ring. The characteristic of , written , is the unique non-negative generator of the kernel of the unique ring homomorphism . (Recall .)  Equivalently, is the smallest positive integer such that , if such and integer exists, and otherwise.   "
 },
 {
-  "id": "remark-114",
+  "id": "remark-115",
   "level": "2",
-  "url": "sec-separable.html#remark-114",
+  "url": "sec-separable.html#remark-115",
   "type": "Remark",
   "number": "19.82",
   "title": "",
@@ -9478,20 +9532,11 @@ var ptx_lunr_docs = [
   "body": " Let and be indeterminants. The extension of fields given by identifying with is not separable. Somewhat more precisely, is isomorphism to the subfield of consisting of elements of the form , with the isomorphism given by sending to .  Then is a root of the polynomial . Moreover since is the field of fractions of the PID and is a prime element of , we may apply Eisenstein (and Gauss) to conclude that is irreducible in . This proves that . This polynomial is not separable since in it is equal to and hence has a repeated root. (Or, you may use that its derivative is .)  "
 },
 {
-  "id": "exercise-282",
-  "level": "2",
-  "url": "sec-separable.html#exercise-282",
-  "type": "Exercise",
-  "number": "19.5.1",
-  "title": ".",
-  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
-},
-{
   "id": "exercise-283",
   "level": "2",
   "url": "sec-separable.html#exercise-283",
   "type": "Exercise",
-  "number": "19.5.2",
+  "number": "19.5.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
@@ -9500,23 +9545,32 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separable.html#exercise-284",
   "type": "Exercise",
-  "number": "19.5.3",
+  "number": "19.5.2",
   "title": ".",
-  "body": " Assume is field and let . Recall that is separable if has no repeated roots in an [[Mathematics\/Definitions\/Algebraic Closure|algebraic closure]] of .   Assume . Prove that is separable if and only if the irreducible factorization of in has no repeated factors.  Fix a prime integer , let be the field with elements, and let be the [[Mathematics\/Definitions\/Field of Fractions|field of fractions]] of the polynomial ring . Prove is irreducible in but not separable.    Coming soon to an OER near you!       Suppose that is not separable, so has a repeated root in , which we denote . So is a factor of . By Corollary 2.96, is separable, so the minimal polynomial of in has no repeated root in . As does have a repeated root (by supposition) it cannot be the minimum polynomial of . Thus for some such that has as a root, otherwise would not obtain its repeated root. However, this means that , meaning that has as a factor as well. Thus we see that is a repeated factor of , one from the minimum polynomial, one from .   Suppose that the prime factorization of in admits a repeated factor. Thus there exists some prime (and thus irreducible) such that . However, has a root in , so in we see that has as a root as well, as . But since has factor , it shows up twice in the factorization of because . So has multiplicity at least 2, so is not separable.    Let be indeterminants, , and such that (as seen in Example 2.78). Note then that is a root of the polynomial .  Moreover, since is the field of fractions of the PID and is a prime element of , we may apply Eisenstein's Criterion (using ) to conclude that is irreducible in . Thus is the minimum polynomial of in .  However, as the derivative of this polynomial is , we see that the is not separable by Proposition 2.72. However, by the Freshman's Dream, we see that . But as , we see that the prime factorization of admits no repeated factor.     "
+  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
   "id": "exercise-285",
   "level": "2",
   "url": "sec-separable.html#exercise-285",
   "type": "Exercise",
-  "number": "19.5.4",
-  "title": "June 2011 (5).",
-  "body": "June 2011 (5)  Let F be a field, and let . Recall that is separable provided, for every extension field has no multiple roots in . (A multiple root is an element such that in    Prove that is separable if and only if and its derivative are relatively prime in .  Suppose that is irreducible and that the degree of is not a multiple of the characteristic of . Prove that is separable.     Coming soon to an OER near you!   Let is a finite extension of fields and that the characteristic of is , where is a prime, and suppose there exists an element such that .  Consider the polynomial , and notice that , as we are in a field of characteristic . However, this characteristic also yields . As is a field we have as a UFD, and thus as is irreducible in it is also prime. Therefore this is the unique factorization of up to associates. If was reducible it would thus have to be divisible into power os , which will never be reducible as . Thus is irreducible in , making it the minimal polynomial of . However, if this would make the splitting field of over , which it is not, given . Thus .  "
+  "number": "19.5.3",
+  "title": ".",
+  "body": " Assume is field and let . Recall that is separable if has no repeated roots in an [[Mathematics\/Definitions\/Algebraic Closure|algebraic closure]] of .   Assume . Prove that is separable if and only if the irreducible factorization of in has no repeated factors.  Fix a prime integer , let be the field with elements, and let be the [[Mathematics\/Definitions\/Field of Fractions|field of fractions]] of the polynomial ring . Prove is irreducible in but not separable.    Coming soon to an OER near you!       Suppose that is not separable, so has a repeated root in , which we denote . So is a factor of . By Corollary 2.96, is separable, so the minimal polynomial of in has no repeated root in . As does have a repeated root (by supposition) it cannot be the minimum polynomial of . Thus for some such that has as a root, otherwise would not obtain its repeated root. However, this means that , meaning that has as a factor as well. Thus we see that is a repeated factor of , one from the minimum polynomial, one from .   Suppose that the prime factorization of in admits a repeated factor. Thus there exists some prime (and thus irreducible) such that . However, has a root in , so in we see that has as a root as well, as . But since has factor , it shows up twice in the factorization of because . So has multiplicity at least 2, so is not separable.    Let be indeterminants, , and such that (as seen in Example 2.78). Note then that is a root of the polynomial .  Moreover, since is the field of fractions of the PID and is a prime element of , we may apply Eisenstein's Criterion (using ) to conclude that is irreducible in . Thus is the minimum polynomial of in .  However, as the derivative of this polynomial is , we see that the is not separable by Proposition 2.72. However, by the Freshman's Dream, we see that . But as , we see that the prime factorization of admits no repeated factor.     "
 },
 {
   "id": "exercise-286",
   "level": "2",
   "url": "sec-separable.html#exercise-286",
+  "type": "Exercise",
+  "number": "19.5.4",
+  "title": "June 2011 (5).",
+  "body": "June 2011 (5)  Let F be a field, and let . Recall that is separable provided, for every extension field has no multiple roots in . (A multiple root is an element such that in    Prove that is separable if and only if and its derivative are relatively prime in .  Suppose that is irreducible and that the degree of is not a multiple of the characteristic of . Prove that is separable.     Coming soon to an OER near you!   Let is a finite extension of fields and that the characteristic of is , where is a prime, and suppose there exists an element such that .  Consider the polynomial , and notice that , as we are in a field of characteristic . However, this characteristic also yields . As is a field we have as a UFD, and thus as is irreducible in it is also prime. Therefore this is the unique factorization of up to associates. If was reducible it would thus have to be divisible into power os , which will never be reducible as . Thus is irreducible in , making it the minimal polynomial of . However, if this would make the splitting field of over , which it is not, given . Thus .  "
+},
+{
+  "id": "exercise-287",
+  "level": "2",
+  "url": "sec-separable.html#exercise-287",
   "type": "Exercise",
   "number": "19.5.5",
   "title": ".",
@@ -9658,9 +9712,9 @@ var ptx_lunr_docs = [
   "body": "Galois Extension   A finite extension of fields is a Galois extension if the three equivalence conditions of this theorem hold:        The extension is both normal and separable.     is the splitting field of some separable polynomial with coefficients in .     In this case it is customary to write for the group and to refer to it as the Galois group of the extension - they are exactly the same group, but the former is used only when the extension is Galois.   "
 },
 {
-  "id": "remark-115",
+  "id": "remark-116",
   "level": "2",
-  "url": "sec-galext.html#remark-115",
+  "url": "sec-galext.html#remark-116",
   "type": "Remark",
   "number": "20.15",
   "title": "",
@@ -9703,90 +9757,90 @@ var ptx_lunr_docs = [
   "body": "Galois and Characteristic  Let be a field of characteristic , for a prime integer , and assume is a finite field extension of such that there exists an element of with but . Then is not Galois since in this case. You will prove this in the Homework.  "
 },
 {
-  "id": "exercise-287",
+  "id": "exercise-288",
   "level": "2",
-  "url": "sec-galext.html#exercise-287",
+  "url": "sec-galext.html#exercise-288",
   "type": "Exercise",
   "number": "20.1.1",
   "title": ".",
   "body": " Let be a finite Galois extension and let be the Galois group of . Suppose that and let be the minimum polynomial of over . Prove that    Coming soon to an OER near you!   Let be a finite Galois extension and let be the Galois group of . Suppose that and let be the minimal polynomial of over . Thus acts on the roots of faithfully. Additionally, as is the minimal polynomial of it is irreducible, making the action transitive as well.  As is Galois over we know that splits into linear factors, each of the form , where is a root of . As our action is transitive, for every root there exists a such that , or .  "
 },
 {
-  "id": "exercise-288",
+  "id": "exercise-289",
   "level": "2",
-  "url": "sec-galext.html#exercise-288",
+  "url": "sec-galext.html#exercise-289",
   "type": "Exercise",
   "number": "20.1.2",
   "title": ".",
   "body": " Let be a field of characteristic , , and consider the polynomial .   Prove that is either irreducible over or it splits into distinct linear factors over . ( Hint : If is a root of , consider for .)  Suppose is irreducible over and let be a splitting field of over . Prove that the Galois group of over is cyclic.    Coming soon to an OER near you!   Let be a field of characteristic , , and consider the polynomial .   Suppose has a root, , in . Then . Consider for some , and observe . By The Freshman's Dream, we have , but as , we really have . By Fermat's Little Theorem, , and thus . Thus we have found roots of , and thus splits into linear factors.  Suppose then that no root of exists in . Let be a splitting field of over , and note that from the above paragraph we have . As , we see , and thus is separable. Hence is a Galois extension. Thus there exists a such that . So for some . Notice . As is prime, we see that , and thus we need to apply to  times in order to get back to . Thus , so . Thus . Thus the minimum polynomial of must have degree . As is a root of and is monic, it must be the minimal polynomial and is thus irreducible.    Suppose is irreducible over and let be a splitting field of over . Let be a root of Consider . By part (a), contains all the roots of , hence . As is monic and irreducible, it is the minimum polynomial of , and thus . Hence . All groups of prime order are cyclic, completing the proof.     "
 },
 {
-  "id": "exercise-289",
+  "id": "exercise-290",
   "level": "2",
-  "url": "sec-galext.html#exercise-289",
+  "url": "sec-galext.html#exercise-290",
   "type": "Exercise",
   "number": "20.1.3",
   "title": "June 2010 Problem (9).",
   "body": "June 2010 Problem (9)  Consider .   Let be a root of and prove is a Galois field extension of . (Hint: First show is primitive -th root of unity.)    Find the Galois group .      Consider .   Let be a root of . Note that , and so so yay! It's primitive. Using one th primitive root we can obtain all the others, specifically . So we multiply each root by this to get all the others. So we have our splitting field.    Since is Galois, we see that . So is either or The roots of are for .  By the Porism there exists a such that . Let , and note that . Additionally, note that when and when .  Observe then that Similarly, we see that and . Thus corresponds to the permutation .  Using the Porism again we see there exists a such that . Using a similar process as above we see that corresponds to . However, observe that , while . Thus these elements do not commute, so we cannot be in . Thus .     "
 },
 {
-  "id": "exercise-290",
+  "id": "exercise-291",
   "level": "2",
-  "url": "sec-galext.html#exercise-290",
+  "url": "sec-galext.html#exercise-291",
   "type": "Exercise",
   "number": "20.1.4",
   "title": "January 2014 (6).",
   "body": "January 2014 (6)  Let be a primitive th root of unity.   Find and generator(s) for .    Draw the subfield lattice for and indicate the degrees of each extension. (You do not have to find generators for each of the subfields)      Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-291",
+  "id": "exercise-292",
   "level": "2",
-  "url": "sec-galext.html#exercise-291",
+  "url": "sec-galext.html#exercise-292",
   "type": "Exercise",
   "number": "20.1.5",
   "title": ".",
   "body": " Let be a finite Galois field extension of . Let and be subfields of such that is normal, and . Prove that    Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-292",
+  "id": "exercise-293",
   "level": "2",
-  "url": "sec-galext.html#exercise-292",
+  "url": "sec-galext.html#exercise-293",
   "type": "Exercise",
   "number": "20.1.6",
   "title": "June 2011 (6).",
   "body": "June 2011 (6)  Let be the splitting field of the polynomial over . Find , and describe the elements of explicitly.   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-293",
+  "id": "exercise-294",
   "level": "2",
-  "url": "sec-galext.html#exercise-293",
+  "url": "sec-galext.html#exercise-294",
   "type": "Exercise",
   "number": "20.1.7",
   "title": ".",
   "body": " Let be a finite Galois field extension, , and . Let be an element of and its minimal polynomial over ; set .    Prove there are distinct elements in the set .  Prove      Coming soon to an OER near you!   Let be a finite Galois field extension, , and . Let be an element of and its minimal polynomial over ; set .  "
 },
 {
-  "id": "exercise-294",
+  "id": "exercise-295",
   "level": "2",
-  "url": "sec-galext.html#exercise-294",
+  "url": "sec-galext.html#exercise-295",
   "type": "Exercise",
   "number": "20.1.8",
   "title": ".",
   "body": " Let be an extension of fields and let . Show that    Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-295",
+  "id": "exercise-296",
   "level": "2",
-  "url": "sec-galext.html#exercise-295",
+  "url": "sec-galext.html#exercise-296",
   "type": "Exercise",
   "number": "20.1.9",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
-  "id": "exercise-296",
+  "id": "exercise-297",
   "level": "2",
-  "url": "sec-galext.html#exercise-296",
+  "url": "sec-galext.html#exercise-297",
   "type": "Exercise",
   "number": "20.1.10",
   "title": ".",
@@ -9874,9 +9928,9 @@ var ptx_lunr_docs = [
   "body": "Cyclotomic Extensions Revisited  Let be a field, let be a positive integer such that does not divide , and let be the algebraic closure of . If is a primitive -th root of 1 over , then is a finite Galois extension, and is a cyclic group that is isomorphic to a subgroup of .  "
 },
 {
-  "id": "remark-116",
+  "id": "remark-117",
   "level": "2",
-  "url": "sec-ftgt.html#remark-116",
+  "url": "sec-ftgt.html#remark-117",
   "type": "Remark",
   "number": "20.28",
   "title": "",
@@ -9901,20 +9955,11 @@ var ptx_lunr_docs = [
   "body": "Finding Unique Intermediate Field   If is a finite Galois extension of degree , then I claim there is a unique intermediate field with and that must be a Galois extension over .  To see this, set . Then and by the Sylow theorems, there is a unique Sylow -subgroup, call it , and hence is normal in . It follows from the Fundamental Theorem that is an intermediate field that   is Galois over and    satisfies . Moreover, it is unique since has just one subgroup of index .     In fact, there are exactly two groups of order up to isomorphism, the cyclic one and one that is a (non-trivial) semi-direct product of by . So, there are just two possible lattices of intermediate fields for such a field extension.   "
 },
 {
-  "id": "exercise-297",
-  "level": "2",
-  "url": "sec-ftgt.html#exercise-297",
-  "type": "Exercise",
-  "number": "20.2.1",
-  "title": ".",
-  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
-},
-{
   "id": "exercise-298",
   "level": "2",
   "url": "sec-ftgt.html#exercise-298",
   "type": "Exercise",
-  "number": "20.2.2",
+  "number": "20.2.1",
   "title": ".",
   "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
@@ -9923,113 +9968,122 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-ftgt.html#exercise-299",
   "type": "Exercise",
-  "number": "20.2.3",
-  "title": "",
-  "body": " Let be the splitting field over of the polynomial .   Find all intermediate fields with (including possibly and ) such that is Galois over .    For each field you found in (a), find with justification a primitive generator (i.e., find so that .      Let be the splitting field over of the polynomial    First, notice that is irreducible in by Eisenstein's Criterion . Let denote a primitive third root of unity. The roots of are the following:    ,     , and     .   As is irreducible and monic we see that it is the minimum polynomial of over . Let and notice .  Recall that is isomorphic to a subgroup of . As and , we see another extension is needed, and that extension will have at least degree . Thus, due to size constraints, we see .  By the FTGT each Galois intermediate extension between and corresponds to a normal subgroup of , which are the normal subgroups of .  The elements of are the following: The subgroup has index in and is thus normal. None of the order subgroups are normal in , so is the only strictly intermediate extension.  Recall , meaning , so corresponds to a subgroup of order in , so its not Galois unfortunately. However, is a degree extension that is an intermediate field, as is a root of the irreducible polynomial .  With all this in mind, notice: - is a splitting field of , and has the primitive generator by . - is our only strictly intermediate field, and has the primitive generator - Finally, is Galois over , and has the primitive generator .       "
+  "number": "20.2.2",
+  "title": ".",
+  "body": " Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!  "
 },
 {
   "id": "exercise-300",
   "level": "2",
   "url": "sec-ftgt.html#exercise-300",
   "type": "Exercise",
-  "number": "20.2.4",
-  "title": ".",
-  "body": " Let be the splitting field over of the polynomial . Prove that the Galois group is isomorphic to .   Coming soon to an OER near you!   Let be the splitting field over of the polynomial , the roots of which are:         , and     . Using Eisenstein's Criterion]] with we see that is irreducible in . As is monic and irreducible it is the minimum polynomial of and . Thus, by the FTGT we know there exists an element of order in .     Notice now that has exactly two complex roots, making complex conjugation correspond to a transposition in . Thus we have an element of order and an element of order , so the order of must be at least by .  As we know is isomorphic to a subgroup of , which has order . Thus is isomorphic to .  "
+  "number": "20.2.3",
+  "title": "",
+  "body": " Let be the splitting field over of the polynomial .   Find all intermediate fields with (including possibly and ) such that is Galois over .    For each field you found in (a), find with justification a primitive generator (i.e., find so that .      Let be the splitting field over of the polynomial    First, notice that is irreducible in by Eisenstein's Criterion . Let denote a primitive third root of unity. The roots of are the following:    ,     , and     .   As is irreducible and monic we see that it is the minimum polynomial of over . Let and notice .  Recall that is isomorphic to a subgroup of . As and , we see another extension is needed, and that extension will have at least degree . Thus, due to size constraints, we see .  By the FTGT each Galois intermediate extension between and corresponds to a normal subgroup of , which are the normal subgroups of .  The elements of are the following: The subgroup has index in and is thus normal. None of the order subgroups are normal in , so is the only strictly intermediate extension.  Recall , meaning , so corresponds to a subgroup of order in , so its not Galois unfortunately. However, is a degree extension that is an intermediate field, as is a root of the irreducible polynomial .  With all this in mind, notice: - is a splitting field of , and has the primitive generator by . - is our only strictly intermediate field, and has the primitive generator - Finally, is Galois over , and has the primitive generator .       "
 },
 {
   "id": "exercise-301",
   "level": "2",
   "url": "sec-ftgt.html#exercise-301",
   "type": "Exercise",
-  "number": "20.2.5",
+  "number": "20.2.4",
   "title": ".",
-  "body": " Let be an irreducible cubic (degree ) polynomial having exactly one real root. Let be the splitting field of over . Show that .   Coming soon to an OER near you!   Let be an irreducible cubic (degree ) polynomial having exactly one real root, and let be the splitting field of over .  As is the splitting field of , it is a normal extension]. As has characteristic 0, is separable (because is algebraic extension, as its the extension caused by adjoining each root of , and algebraic extensions of algebraic extensions are algebraic). Thus by we see .  By Proposition 2.83 we see that is isomorphic to some subgroup of , where is the number of distinct roots of . As cubic and irreducible we know that the real root must be irrational, which we will denote . Consider the extension . As , we see that . However, neither of our complex roots are in this extension, and so another extension is needed to reach . But this extension would also have a degree larger than , so . As , there exists no subgroup of it that can be isomorphic to, given that . Thus we see that , meaning that our complex roots are distinct.  Then or , the only possible sizes of subgroups of . However, by the previous argument we see that as , the only viable subgroup of is itself. Thus .  "
+  "body": " Let be the splitting field over of the polynomial . Prove that the Galois group is isomorphic to .   Coming soon to an OER near you!   Let be the splitting field over of the polynomial , the roots of which are:         , and     . Using Eisenstein's Criterion]] with we see that is irreducible in . As is monic and irreducible it is the minimum polynomial of and . Thus, by the FTGT we know there exists an element of order in .     Notice now that has exactly two complex roots, making complex conjugation correspond to a transposition in . Thus we have an element of order and an element of order , so the order of must be at least by .  As we know is isomorphic to a subgroup of , which has order . Thus is isomorphic to .  "
 },
 {
   "id": "exercise-302",
   "level": "2",
   "url": "sec-ftgt.html#exercise-302",
   "type": "Exercise",
-  "number": "20.2.6",
+  "number": "20.2.5",
   "title": ".",
-  "body": " Let be a Galois extension of with .   Prove that there exists a subfield of containing F with .    Determine whether there must also exist a subfield of containing with .      Coming soon to an OER near you!   Let be a Galois extension of with .   Let be a Sylow -subgroup of . Notice that . By the FTGT there exists an intermediate field extension such that . By the Degree Formula, we have , with and . Thus .    Notice that as is a prime dividing the order of there must exist an element of order by Cauchy's Theorem. The cyclic subgroup, , generated by this element has order . By the FTGT there exists an intermediate field extension such that . By the Degree Formula, we have , with and . Thus .     "
+  "body": " Let be an irreducible cubic (degree ) polynomial having exactly one real root. Let be the splitting field of over . Show that .   Coming soon to an OER near you!   Let be an irreducible cubic (degree ) polynomial having exactly one real root, and let be the splitting field of over .  As is the splitting field of , it is a normal extension]. As has characteristic 0, is separable (because is algebraic extension, as its the extension caused by adjoining each root of , and algebraic extensions of algebraic extensions are algebraic). Thus by we see .  By Proposition 2.83 we see that is isomorphic to some subgroup of , where is the number of distinct roots of . As cubic and irreducible we know that the real root must be irrational, which we will denote . Consider the extension . As , we see that . However, neither of our complex roots are in this extension, and so another extension is needed to reach . But this extension would also have a degree larger than , so . As , there exists no subgroup of it that can be isomorphic to, given that . Thus we see that , meaning that our complex roots are distinct.  Then or , the only possible sizes of subgroups of . However, by the previous argument we see that as , the only viable subgroup of is itself. Thus .  "
 },
 {
   "id": "exercise-303",
   "level": "2",
   "url": "sec-ftgt.html#exercise-303",
   "type": "Exercise",
-  "number": "20.2.7",
+  "number": "20.2.6",
   "title": ".",
-  "body": " Suppose that is a finite Galois extension with Galois group , and that . Prove that if and only if the images of under elements of are distinct.   Coming soon to an OER near you!   First, suppose that . As is a Galois extension the minimum polynomial of in splits completely into linear factors. Thus acts faithfully on the roots of , which includes . Thus the images of under elements of are distinct.  Now suppose that the images of under elements of are distinct, and suppose by way of contradiction that there exists some that is not in . Consider the intermediate field . By the FTGT there exists a nontrivial subgroup of whose elements fix elements of , including , a contradiction.  "
+  "body": " Let be a Galois extension of with .   Prove that there exists a subfield of containing F with .    Determine whether there must also exist a subfield of containing with .      Coming soon to an OER near you!   Let be a Galois extension of with .   Let be a Sylow -subgroup of . Notice that . By the FTGT there exists an intermediate field extension such that . By the Degree Formula, we have , with and . Thus .    Notice that as is a prime dividing the order of there must exist an element of order by Cauchy's Theorem. The cyclic subgroup, , generated by this element has order . By the FTGT there exists an intermediate field extension such that . By the Degree Formula, we have , with and . Thus .     "
 },
 {
   "id": "exercise-304",
   "level": "2",
   "url": "sec-ftgt.html#exercise-304",
   "type": "Exercise",
-  "number": "20.2.8",
-  "title": "January 2012 (5).",
-  "body": "January 2012 (5)  Let .   Find the minimum polynomial of over .    Let be the splitting field of over . Find the Galois group of .    Find all subgroups of and generators for the corresponding intermediate fields of .      Coming soon to an OER near you!   Let .   Let which factors as two irreducible polynomials and has no roots in , making it irreducible. Thus is the minimal polynomial of .    Notice that which also has degree . Let denote the Galois group of . Thus is a group of order , making it isomorphic to or . Notice that the elements of are the following: - and , - and , - and , and - and . All of these automorphisms have degree , making .    Thus are only two subgroups of , and . The first, , corresponds to and is generated by , where corresponds to and is generated by .     "
+  "number": "20.2.7",
+  "title": ".",
+  "body": " Suppose that is a finite Galois extension with Galois group , and that . Prove that if and only if the images of under elements of are distinct.   Coming soon to an OER near you!   First, suppose that . As is a Galois extension the minimum polynomial of in splits completely into linear factors. Thus acts faithfully on the roots of , which includes . Thus the images of under elements of are distinct.  Now suppose that the images of under elements of are distinct, and suppose by way of contradiction that there exists some that is not in . Consider the intermediate field . By the FTGT there exists a nontrivial subgroup of whose elements fix elements of , including , a contradiction.  "
 },
 {
   "id": "exercise-305",
   "level": "2",
   "url": "sec-ftgt.html#exercise-305",
   "type": "Exercise",
-  "number": "20.2.9",
-  "title": ".",
-  "body": " Let be the splitting field of over . Prove there exists a unique intermediate field such that and is a Galois extension.   Coming soon to an OER near you!   Let be the splitting field of over . Let be a primitive fourth root of unity. Thus .  Notice that the roots of are the following: - , - , - , and - . Thus .  Using Eisenstein's Criterion]] with we see that is irreducible in . Let , and notice that is the minimum polynomial of . Let and observe .  As is the root of the monic irreducible polynomial we have and . Thus is isomorphic to a subgroup of of order , making it .  Notice that is an extension of degree , and thus by the FTGT we have a subgroup such that . As we have , and thus . This makes the cyclic subgroup of generated by a reflection, the only element of order in , making it unique. This is also a normal subgroup of , making Galois over .  "
+  "number": "20.2.8",
+  "title": "January 2012 (5).",
+  "body": "January 2012 (5)  Let .   Find the minimum polynomial of over .    Let be the splitting field of over . Find the Galois group of .    Find all subgroups of and generators for the corresponding intermediate fields of .      Coming soon to an OER near you!   Let .   Let which factors as two irreducible polynomials and has no roots in , making it irreducible. Thus is the minimal polynomial of .    Notice that which also has degree . Let denote the Galois group of . Thus is a group of order , making it isomorphic to or . Notice that the elements of are the following: - and , - and , - and , and - and . All of these automorphisms have degree , making .    Thus are only two subgroups of , and . The first, , corresponds to and is generated by , where corresponds to and is generated by .     "
 },
 {
   "id": "exercise-306",
   "level": "2",
   "url": "sec-ftgt.html#exercise-306",
   "type": "Exercise",
-  "number": "20.2.10",
+  "number": "20.2.9",
   "title": ".",
-  "body": " Consider This polynomial has exactly three real roots, a fact that you may use without proof.   Show that is irreducible in .  Let be a splitting field of $over . Show that is a Galois extension and find the isomorphism class of the Galois group .    Coming soon to an OER near you!      Notice that is prime in , and thus is irreducible in by Eisenstein's Criterion.    Let be a real root of . As is irreducible this root is not in . As is the root of a monic irreducible polynomial of degree , we see that . By the FTGT there exists a subgroup of with order , making it a cyclic subgroup generated by some element of order .  However, as only has complex roots we see that complex conjugation corresponds to an element of order in . Thus we have a transposition and a -cycle, meaning we can generate all of . .     "
+  "body": " Let be the splitting field of over . Prove there exists a unique intermediate field such that and is a Galois extension.   Coming soon to an OER near you!   Let be the splitting field of over . Let be a primitive fourth root of unity. Thus .  Notice that the roots of are the following: - , - , - , and - . Thus .  Using Eisenstein's Criterion]] with we see that is irreducible in . Let , and notice that is the minimum polynomial of . Let and observe .  As is the root of the monic irreducible polynomial we have and . Thus is isomorphic to a subgroup of of order , making it .  Notice that is an extension of degree , and thus by the FTGT we have a subgroup such that . As we have , and thus . This makes the cyclic subgroup of generated by a reflection, the only element of order in , making it unique. This is also a normal subgroup of , making Galois over .  "
 },
 {
   "id": "exercise-307",
   "level": "2",
   "url": "sec-ftgt.html#exercise-307",
   "type": "Exercise",
-  "number": "20.2.11",
+  "number": "20.2.10",
   "title": ".",
-  "body": " Consider . This polynomial has exactly three real roots, a fact that you may use without proof.   Show that is irreducible in .  Let be a splitting field of over . Show that is a Galois extension with Galois group isomorphic to the symmetric group .    Coming soon to an OER near you!   Consider .   Using Eisenstein's Criterion with we see that is indeed irreducible in .    Let be a splitting field of over . As is monic and irreducible, it is the minimum polynomial for some such that . As has complex roots, we know that , and is thus an intermediate field. By the FTGT there exists a subgroup of such that . As we know , making for some . Thus is an element of order in . As is a degree polynomial, we know is isomorphic to a subgroup of . Thus must be a -cycle.  Recall that has exactly two complex roots. Thus , the complex conjugation automorphism, has order , making it a transposition. From the Gospel of Mark we were told that we did not need to prove that a transposition and an -cycle generate all of , and thus      "
+  "body": " Consider This polynomial has exactly three real roots, a fact that you may use without proof.   Show that is irreducible in .  Let be a splitting field of $over . Show that is a Galois extension and find the isomorphism class of the Galois group .    Coming soon to an OER near you!      Notice that is prime in , and thus is irreducible in by Eisenstein's Criterion.    Let be a real root of . As is irreducible this root is not in . As is the root of a monic irreducible polynomial of degree , we see that . By the FTGT there exists a subgroup of with order , making it a cyclic subgroup generated by some element of order .  However, as only has complex roots we see that complex conjugation corresponds to an element of order in . Thus we have a transposition and a -cycle, meaning we can generate all of . .     "
 },
 {
   "id": "exercise-308",
   "level": "2",
   "url": "sec-ftgt.html#exercise-308",
   "type": "Exercise",
-  "number": "20.2.12",
+  "number": "20.2.11",
   "title": ".",
-  "body": " Let be a finite Galois field extension of degree . Prove there exists a unique intermediate field (i.e., such that .   Coming soon to an OER near you!   Let be a finite Galois field extension of degree .  Note that as , we see that the number of Sylow- subgroups of divides and is congruent to . Thus there is exactly one Sylow- subgroup of , which we denote . By the Fundamental Theorem of Galois Theory, corresponds to an intermediate field extension . Note that as has order 5, we see that , and thus as well. By the Degree Formula we see that . As and , we see that , as desired. As corresponds to the unique subgroup of or order 5, we see that this extension must be unique as well.  "
+  "body": " Consider . This polynomial has exactly three real roots, a fact that you may use without proof.   Show that is irreducible in .  Let be a splitting field of over . Show that is a Galois extension with Galois group isomorphic to the symmetric group .    Coming soon to an OER near you!   Consider .   Using Eisenstein's Criterion with we see that is indeed irreducible in .    Let be a splitting field of over . As is monic and irreducible, it is the minimum polynomial for some such that . As has complex roots, we know that , and is thus an intermediate field. By the FTGT there exists a subgroup of such that . As we know , making for some . Thus is an element of order in . As is a degree polynomial, we know is isomorphic to a subgroup of . Thus must be a -cycle.  Recall that has exactly two complex roots. Thus , the complex conjugation automorphism, has order , making it a transposition. From the Gospel of Mark we were told that we did not need to prove that a transposition and an -cycle generate all of , and thus      "
 },
 {
   "id": "exercise-309",
   "level": "2",
   "url": "sec-ftgt.html#exercise-309",
   "type": "Exercise",
-  "number": "20.2.13",
+  "number": "20.2.12",
   "title": ".",
-  "body": " Let be the splitting field over of the polynomial .   Find all intermediate fields with (including possibly and ) such that is Galois over .    For each field you found in (a), find with justification a primitive generator (i.e., find so that ).      Coming soon to an OER near you!      Invoking Eisenstein's Criterion and setting we see that is an irreducible cubic with exactly one real root. Thus . Thus the subgroups of are as follows: and By the Fundamental Theorem of Galois Theory there exist four intermediate field extensions: , and . Note that as and are all Sylow-2 subgroups of , by none are normal in . However, as , the smallest prime dividing 6, we see that is the only strictly intermediate field that is Galois over .    As the identity map is the only automorphism from that fixes and , we see that is Galois over itself. As all finite extensions of fields with characteristic are separable, we see that is also Galois over . Thus and are the only intermediate fields that are Galois over .     "
+  "body": " Let be a finite Galois field extension of degree . Prove there exists a unique intermediate field (i.e., such that .   Coming soon to an OER near you!   Let be a finite Galois field extension of degree .  Note that as , we see that the number of Sylow- subgroups of divides and is congruent to . Thus there is exactly one Sylow- subgroup of , which we denote . By the Fundamental Theorem of Galois Theory, corresponds to an intermediate field extension . Note that as has order 5, we see that , and thus as well. By the Degree Formula we see that . As and , we see that , as desired. As corresponds to the unique subgroup of or order 5, we see that this extension must be unique as well.  "
 },
 {
   "id": "exercise-310",
   "level": "2",
   "url": "sec-ftgt.html#exercise-310",
   "type": "Exercise",
-  "number": "20.2.14",
+  "number": "20.2.13",
   "title": ".",
-  "body": " Let be the splitting field of the polynomial over . Give, with full justification, a presentation for the Galois group that has two generators.   Coming soon to an OER near you!   Coming soon to an OER near you!  "
+  "body": " Let be the splitting field over of the polynomial .   Find all intermediate fields with (including possibly and ) such that is Galois over .    For each field you found in (a), find with justification a primitive generator (i.e., find so that ).      Coming soon to an OER near you!      Invoking Eisenstein's Criterion and setting we see that is an irreducible cubic with exactly one real root. Thus . Thus the subgroups of are as follows: and By the Fundamental Theorem of Galois Theory there exist four intermediate field extensions: , and . Note that as and are all Sylow-2 subgroups of , by none are normal in . However, as , the smallest prime dividing 6, we see that is the only strictly intermediate field that is Galois over .    As the identity map is the only automorphism from that fixes and , we see that is Galois over itself. As all finite extensions of fields with characteristic are separable, we see that is also Galois over . Thus and are the only intermediate fields that are Galois over .     "
 },
 {
   "id": "exercise-311",
   "level": "2",
   "url": "sec-ftgt.html#exercise-311",
+  "type": "Exercise",
+  "number": "20.2.14",
+  "title": ".",
+  "body": " Let be the splitting field of the polynomial over . Give, with full justification, a presentation for the Galois group that has two generators.   Coming soon to an OER near you!   Coming soon to an OER near you!  "
+},
+{
+  "id": "exercise-312",
+  "level": "2",
+  "url": "sec-ftgt.html#exercise-312",
   "type": "Exercise",
   "number": "20.2.15",
   "title": ".",
@@ -10090,18 +10144,18 @@ var ptx_lunr_docs = [
   "body": "De Morgan's Laws    and    "
 },
 {
-  "id": "remark-117",
+  "id": "remark-118",
   "level": "2",
-  "url": "sec-sets-functions.html#remark-117",
+  "url": "sec-sets-functions.html#remark-118",
   "type": "Remark",
   "number": "A.6",
   "title": "",
   "body": "Notation for indices: for finite or countably many indices, for arbitrarily many indices. "
 },
 {
-  "id": "remark-118",
+  "id": "remark-119",
   "level": "2",
-  "url": "sec-sets-functions.html#remark-118",
+  "url": "sec-sets-functions.html#remark-119",
   "type": "Remark",
   "number": "A.7",
   "title": "",
@@ -10135,9 +10189,9 @@ var ptx_lunr_docs = [
   "body": "Welldefined Function   A function is well-defined if whenever and , then .   "
 },
 {
-  "id": "remark-119",
+  "id": "remark-120",
   "level": "2",
-  "url": "sec-sets-functions.html#remark-119",
+  "url": "sec-sets-functions.html#remark-120",
   "type": "Remark",
   "number": "A.11",
   "title": "",
@@ -10207,9 +10261,9 @@ var ptx_lunr_docs = [
   "body": "IASN   If , and for all , then    .     .     . If moreover is injective, then .     . If moreover is injective, then .      "
 },
 {
-  "id": "theorem-125",
+  "id": "theorem-127",
   "level": "2",
-  "url": "sec-sets-functions.html#theorem-125",
+  "url": "sec-sets-functions.html#theorem-127",
   "type": "Theorem",
   "number": "A.19",
   "title": "Containments of Images, Preimages.",
@@ -10303,7 +10357,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "A.2",
   "title": "Number Systems, Counting, Cardinality",
-  "body": "Number Systems, Counting, Cardinality  Number Systems (*)  Natural Numbers (*)        Divide (*)       Prime (*)       GCD, LCM (*)       Division Algorithm        Counting (*)  Binomial Coefficient (*)       Binomial Theorem (*)        Cardinality    A set is finite if there is a bijection for some natural number , or is empty. In this case the number is called the cardinality of .  A set is infinite if is not finite. A set is countable if there is an injection .      Let be a set.   The following are equivalent:    is finite.    There is an onto function for some     There is a one-to-one function for some .       The following are equivalent:    is infinite.    There is an onto function .    There is a one-to-one function .       The following are equivalent:    is countable.    There is an onto function .    There is an injection .               The class of finite sets is closed under: subsets, intersections, finite unions, and finite products.    The class of countable sets is closed under: subsets, intersections, countable unions, and finite products.        "
+  "body": "Number Systems, Counting, Cardinality  Number Systems (*)  Natural Numbers (*)        Divide (*)       Prime (*)       GCD, LCM (*)       Division Algorithm   Let and be integers with . Then there exist unique integers and such that     Coming soon!     Counting (*)  Binomial Coefficient (*)       Binomial Theorem (*)        Cardinality    A set is finite if there is a bijection for some natural number , or is empty. In this case the number is called the cardinality of .  A set is infinite if is not finite. A set is countable if there is an injection .      Let be a set.   The following are equivalent:    is finite.    There is an onto function for some     There is a one-to-one function for some .       The following are equivalent:    is infinite.    There is an onto function .    There is a one-to-one function .       The following are equivalent:    is countable.    There is an onto function .    There is an injection .               The class of finite sets is closed under: subsets, intersections, finite unions, and finite products.    The class of countable sets is closed under: subsets, intersections, countable unions, and finite products.        "
 },
 {
   "id": "def-natural-numbers",
@@ -10348,7 +10402,7 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "A.33",
   "title": "Division Algorithm.",
-  "body": "Division Algorithm      "
+  "body": "Division Algorithm   Let and be integers with . Then there exist unique integers and such that     Coming soon!   "
 },
 {
   "id": "def-binomial-coefficient",
@@ -10432,9 +10486,9 @@ var ptx_lunr_docs = [
   "body": "Divisible Group   An additive group is divisible if for every and every nonzero integer , there exists an element such that .   "
 },
 {
-  "id": "example-156",
+  "id": "example-158",
   "level": "2",
-  "url": "section-65.html#example-156",
+  "url": "section-65.html#example-158",
   "type": "Example",
   "number": "B.2",
   "title": "Examples of Divisble Groups.",
@@ -10522,45 +10576,45 @@ var ptx_lunr_docs = [
   "body": "Composition Factors   If a group has a composition series (for example, if is finite), then the factors of such a composition series are called the composition factors of . They are well-defined up to ordering and isomorphism, thanks to .   "
 },
 {
-  "id": "example-157",
+  "id": "example-159",
   "level": "2",
-  "url": "section-65.html#example-157",
+  "url": "section-65.html#example-159",
   "type": "Example",
   "number": "B.12",
   "title": "",
   "body": "  Suppose is cyclic of order and say is a prime factorization of . Then the factors of are of order , respectively, and hence are all simple group. Thus the composition factors of are    "
 },
 {
-  "id": "example-158",
+  "id": "example-160",
   "level": "2",
-  "url": "section-65.html#example-158",
+  "url": "section-65.html#example-160",
   "type": "Example",
   "number": "B.13",
   "title": "",
   "body": "   is a normal series. Since is cyclic of order , it has a composition series as in the previous example. By inserting this into the length two normal series given here, we obtain a composition series of with composition factors    "
 },
 {
-  "id": "proposition-132",
+  "id": "proposition-131",
   "level": "2",
-  "url": "section-65.html#proposition-132",
+  "url": "section-65.html#proposition-131",
   "type": "Proposition",
   "number": "B.14",
   "title": "",
   "body": "  ssume is a group and . If and both have composition series, then so does . Moreover, in this case, the list of composition factors of is the concatenation of the lists of composition factors of and .    This is a consequence of the Isomorphism Theorems. In detail, a composition series for has the form where . If is a composition seires for , then is a composition series for since for all . (For the case , interpret as .)   "
 },
 {
-  "id": "example-159",
+  "id": "example-161",
   "level": "2",
-  "url": "section-65.html#example-159",
+  "url": "section-65.html#example-161",
   "type": "Example",
   "number": "B.15",
   "title": "",
   "body": "  As you showed in the homework, has a normal subgroup of order . has a composition series of the form and so the composition factors of are .  The group has order and it has an element of order , namely . If is any group of oder with an element or order , then the composition factors of are . (In fact, every group of order has an element of order .) To see this, note that is normal in since it has index two.  Using the Proposition, the compition factors of are   We can make this more explicit too. The subgroup of generated by corresponds to the subgroup of that is generated by the elements of along with . We have with factors .   "
 },
 {
-  "id": "example-160",
+  "id": "example-162",
   "level": "2",
-  "url": "section-65.html#example-160",
+  "url": "section-65.html#example-162",
   "type": "Example",
   "number": "B.16",
   "title": "",
@@ -10576,18 +10630,18 @@ var ptx_lunr_docs = [
   "body": "Butterly Lemma of Zassenhaus   If is a group, , , , and , then , , , and there is an isomorphism    "
 },
 {
-  "id": "theorem-133",
+  "id": "theorem-135",
   "level": "2",
-  "url": "section-65.html#theorem-133",
+  "url": "section-65.html#theorem-135",
   "type": "Theorem",
   "number": "B.18",
   "title": "",
   "body": "  Any two normal series of a group admit equivalent refinements.    Given two normal series and of a group , the idea is to insert a copy of each into the other. In more detail, we form a refinement of the first normal series by replacing the single step with for each , noting that and . Create a refinement of the second normal series in an analogous way. The Butterfly Lemma implies that these two refinements are equivalent to each other.   "
 },
 {
-  "id": "exercise-313",
+  "id": "exercise-314",
   "level": "2",
-  "url": "section-65.html#exercise-313",
+  "url": "section-65.html#exercise-314",
   "type": "Exploration",
   "number": "B.19",
   "title": "",
@@ -10747,9 +10801,9 @@ var ptx_lunr_docs = [
   "body": "Determinant Formula Using Bilinear Map  For and , defined by is both -bilinear and alternating. This is of course the familiar determinant formula.  "
 },
 {
-  "id": "remark-120",
+  "id": "remark-121",
   "level": "2",
-  "url": "section-67.html#remark-120",
+  "url": "section-67.html#remark-121",
   "type": "Remark",
   "number": "B.35",
   "title": "",
@@ -10801,9 +10855,9 @@ var ptx_lunr_docs = [
   "body": "Transpose Preserves Det  Prove where denotes transpose.  "
 },
 {
-  "id": "remark-121",
+  "id": "remark-122",
   "level": "2",
-  "url": "section-67.html#remark-121",
+  "url": "section-67.html#remark-122",
   "type": "Remark",
   "number": "B.41",
   "title": "",
@@ -10828,9 +10882,9 @@ var ptx_lunr_docs = [
   "body": "  Let be any non-zero commutative ring. Let be a square matrix and let be a matrix obtained form by a single elementary column operation:   If the operation is of type I, .    If the operation is of type II, given by multiplying a column of by a unit , then .    If the operation is of type III, .       The first claim follows from multi-linearity and alternating properties: For notational simplicity say and . Then The second is immediate from (the second part of) -multi-linearity. The last is a special case of Lemma .   "
 },
 {
-  "id": "remark-122",
+  "id": "remark-123",
   "level": "2",
-  "url": "section-67.html#remark-122",
+  "url": "section-67.html#remark-123",
   "type": "Remark",
   "number": "B.44",
   "title": "",
@@ -10855,9 +10909,9 @@ var ptx_lunr_docs = [
   "body": "  For a field, we have if and only if is invertible.    If is not invertible, then the column space of is a proper subspace of and hence the columns of must be linearly dependent. Say the column is a linear combination of the rest: . Then If is invertible, then by Corollary can be obtained from via a sequence of elementary column operations. The result thus follows from Proposition and the fact that .   "
 },
 {
-  "id": "remark-123",
+  "id": "remark-124",
   "level": "2",
-  "url": "section-67.html#remark-123",
+  "url": "section-67.html#remark-124",
   "type": "Remark",
   "number": "B.47",
   "title": "",
@@ -10891,18 +10945,18 @@ var ptx_lunr_docs = [
   "body": "Det Splits Across Multiplication: Commutative Ring   For any non-zero commutative ring and matrices , we have     We have already proven that this holds when is a field.  We next show that it holds whenever is an integral domain. In this case, is a subring of a field (namely, the field of fractions of ). So, we know that the equation holds in if we interpret and as belonging to . But the value of is the same if we interpret these matrices as having entries in or in . So holds in .  We finally prove that the Theorem for any non-zero commutative ring by building on the fact that it holds for domains. We do so by contructing a ring homomorphism and matrices and in such that is an integral domain, and . Granting such a and exist, the result follows from the naturality of (Lemma ). In detail, we know , since is a domain. Since the rule for multiplying matrices involves only sums and products of ring elements, we have . So It remains to prove such a , , and exists. Suppose and . Form the polynomial ring of variables with -coefficients. By the UMP for polynomial rings with integer coefficients, since is commutative, there is a (unique) ring map such that and for all . That is, is the evaluation map given by setting and for all , and interpreting integers as elements of . Let be the evident matrices of indeterminants.Then is a domain, is a ring homomorphism, and , as desired.   "
 },
 {
-  "id": "remark-124",
+  "id": "remark-125",
   "level": "2",
-  "url": "section-67.html#remark-124",
+  "url": "section-67.html#remark-125",
   "type": "Remark",
   "number": "B.51",
   "title": "",
   "body": " Another way to deduce the Theorem for arbitrary commutative rings from the case of a domain is to use the following fact: If is a non-zero commutative ring, there there exists a surjective ring homomorphism of the form where is a domain. So see this, let be a (possibly very large) set of indeterminants such that there is a bijection of sets . Let , the polynomial ring with integer coefficients in the variables . So, a typical element of is a polynomial the form for some finite subset of . By the UMP for polynomial rings, there is a unique ring map such that for all . That is, sends as above to . The ring map is clearly onto since for each , there is an with and hence . Finally, is an integral domain.  "
 },
 {
-  "id": "remark-125",
+  "id": "remark-126",
   "level": "2",
-  "url": "section-67.html#remark-125",
+  "url": "section-67.html#remark-126",
   "type": "Remark",
   "number": "B.52",
   "title": "",
@@ -10954,9 +11008,9 @@ var ptx_lunr_docs = [
   "body": "Companion Matrix  Let where is a field, with a monic polynomial. Say . Recall that every element of is uniquely represented by a coset of the form where is a polynomial of degree at most .  We will regard as an -vector space (via restriction of scalars along ). Then is finite dimensional — for instance, a basis of is given by .  Let be the function given as multiplication by . Then is an -linear operator, since and . (In fact, is -linear, but we won't use that fact.) Relative to the ordered basis , the matrix of is The right-most column is due to the fact that, since in , we have The matrix is known as the companion matrix of - it is defined for any monic polynomials with entries in a field.  We have , since the only permutation that gives a non-zero term in the formula for is the -cycle , and its has sign is . So .  "
 },
 {
-  "id": "remark-126",
+  "id": "remark-127",
   "level": "2",
-  "url": "section-67.html#remark-126",
+  "url": "section-67.html#remark-127",
   "type": "Remark",
   "number": "B.58",
   "title": "",
@@ -11026,9 +11080,9 @@ var ptx_lunr_docs = [
   "body": "Characteristic Polynomial   Let where is a field. The characteristic polynomial of is Note that is a monic polynomial of degree with coefficients in . More generally, if is a finite dimensional -vector space and is an -linear operator on , then where is the matrix representing with respect to a choice of basis of .   "
 },
 {
-  "id": "remark-127",
+  "id": "remark-128",
   "level": "2",
-  "url": "section-67.html#remark-127",
+  "url": "section-67.html#remark-128",
   "type": "Remark",
   "number": "B.66",
   "title": "",
@@ -11062,18 +11116,18 @@ var ptx_lunr_docs = [
   "body": "Triangular Matrix and CharPoly  If is upper or lower triangular, then . As you may recall from an undergraduate class, in this case are the eigenvalues of . More on this later.  "
 },
 {
-  "id": "example-174",
+  "id": "example-176",
   "level": "2",
-  "url": "section-67.html#example-174",
+  "url": "section-67.html#example-176",
   "type": "Example",
   "number": "B.70",
   "title": "Problem.",
   "body": "Problem  Let be the -vector space consisting of polynomials in the variable of degree at most and let be the -linear operator given by where and denote the first and second derivatives of . (You may take it on faith that is -linear.) Find the determinant, the trace, and the characteristic polynomial of .  "
 },
 {
-  "id": "example-175",
+  "id": "example-177",
   "level": "2",
-  "url": "section-67.html#example-175",
+  "url": "section-67.html#example-177",
   "type": "Example",
   "number": "B.71",
   "title": "Problem.",

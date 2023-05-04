@@ -11,38 +11,6 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<div class="para logical">
-<div class="para">First, notice that <span class="process-math">\(2\cdot 3=6=(1+\sqrt{-5})(1-\sqrt{-5})\text{.}\)</span> Define a function</div>
-<div class="displaymath process-math">
-\begin{equation*}
-N:\Z[\sqrt{-5}]\to\Z, N(a+b \sqrt{-5})=a^2+5b^2.
-\end{equation*}
-</div>
-<div class="para">Let <span class="process-math">\(\alpha,\beta\in\Z[\sqrt{-5}]\)</span> and behold</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{align}
-N(\alpha\beta)
-&amp;=N((a+b \sqrt{-5})(c+d \sqrt{-5}))\\
-&amp;=N(ac-5bd+ad \sqrt{-5}+bc \sqrt{-5})\\
-&amp;=(ac-5bd)^2+5(ad+bc)^2\\
-&amp;=((ac)^2-10acbd+25(bd)^2)+5((ad)^2+2abcd+(bc^2))\\
-&amp;=a^2c^2+25b^2d^2+5a^2d^2+5b^2c^2\\
-&amp;=(a^2c^2+5a^2d^2)+(5b^2c^2+25b^2d^2)\\
-&amp;=a^2(c^2+5d^2)+5b^2(c^2+5d^2)\\
-N(\alpha)N(\beta)&amp;=(a^2+5b^2)(c^2+5d^2).\end{align}
-\end{equation*}
-</div>
-<div class="para">So there's that done.</div>
-</div> <div class="para logical">
-<div class="para">Suppose by way of contradiction there exist <span class="process-math">\(\a,\b\)</span> such that <span class="process-math">\(2=\a\b\text{.}\)</span> Then <span class="process-math">\(\a=a+b\sqrt{-5}\)</span> and <span class="process-math">\(\b=c+d\sqrt{-5}\text{,}\)</span> and</div>
-<div class="displaymath process-math">
-\begin{equation*}
-N(2)=4=N(\a\b)=N(\a)N(\b)=(a^2+5b^2)(c^2+5d^2).
-\end{equation*}
-</div>
-<div class="para">Thus <span class="process-math">\((a^2+5b^2)=\pm1,\pm2,\)</span> or <span class="process-math">\(\pm4\text{,}\)</span> as these are the only integer divisors of <span class="process-math">\(4\text{.}\)</span> However, there do not exist integers <span class="process-math">\(a,b\)</span> such that this is true. Thus <span class="process-math">\(2\)</span> is irreducible in <span class="process-math">\(\Z[\sqrt{-5}]\text{.}\)</span>
-</div>
-</div> <div class="para">Suppose by way of contradiction that <span class="process-math">\(2\)</span> is prime in <span class="process-math">\(\Z[\sqrt{-5}]\text{.}\)</span> Note that <span class="process-math">\(2|6=(1+\sqrt{-5})(1-\sqrt{-5})\text{.}\)</span> Thus <span class="process-math">\(2\)</span> divides one of these factors.</div> <div class="para">First, suppose there exists some <span class="process-math">\(a+b\sqrt{-5}\)</span> such that <span class="process-math">\(2(a+b\sqrt{-5})=(1\pm\sqrt{-5})\text{.}\)</span> Thus <span class="process-math">\(2a+2b\sqrt{-5}=1\pm\sqrt{-5}\text{,}\)</span> and so <span class="process-math">\(2a=\pm1\text{.}\)</span> However, <span class="process-math">\(\pm\frac12\)</span> is not an integer, and thus <span class="process-math">\(2\)</span> cannot divide either of these factors. Thus <span class="process-math">\(2\)</span> is not prime in <span class="process-math">\(\Z[\sqrt{-5}]\text{.}\)</span> By Part (a), this is not a UFD.</div>
+<div class="para">Let <span class="process-math">\(L\)</span> be the algebraic closure of <span class="process-math">\(F\text{.}\)</span> Thus <span class="process-math">\(A\)</span> has a Jordan Canonical Form in <span class="process-math">\(L\text{.}\)</span> For each Jordan block <span class="process-math">\(J_i\)</span> in the JCF of <span class="process-math">\(A\text{,}\)</span> let <span class="process-math">\(B_i\)</span> denote the transpose of the identity matrix, and notice that <span class="process-math">\(B_iJ_iB_i\inv=J_i^T\text{.}\)</span> As this is the case for every Jordan block, we see that the JCF of <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(J\text{,}\)</span> is similar to its transpose. As the <span class="process-math">\(A\)</span> is similar to <span class="process-math">\(J\text{,}\)</span> <span class="process-math">\(A^T\)</span> is similar to <span class="process-math">\(J^T\text{,}\)</span> and <span class="process-math">\(J\)</span> is similar to <span class="process-math">\(J^T\text{,}\)</span> we see that <span class="process-math">\(A\sim A^T\)</span> in <span class="process-math">\(L\)</span> by transitivity.</div> <div class="para">Suppose <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are similar in <span class="process-math">\(\Mat_{n \times n}(L)\text{.}\)</span> As <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> have entries in <span class="process-math">\(F\text{,}\)</span> then they are both in <span class="process-math">\(\Mat_{n \times n}(F)\text{.}\)</span> Thus there exist matrices <span class="process-math">\(C,D\in\Mat_{n \times n}(F)\)</span> in RCF such that <span class="process-math">\(A\)</span> is similar to <span class="process-math">\(C\)</span> and that <span class="process-math">\(B\)</span> is similar to <span class="process-math">\(D\text{.}\)</span> However, <span class="process-math">\(A\)</span> is similar to <span class="process-math">\(C\)</span> and that <span class="process-math">\(B\)</span> is similar to <span class="process-math">\(D\)</span> in <span class="process-math">\(\Mat_{n \times n}(L)\)</span> as well. Notice <span class="process-math">\(C\)</span> and <span class="process-math">\(D\)</span> are still in RCF. However, as the RCF is unique, this means that <span class="process-math">\(C=D\)</span> in <span class="process-math">\(\Mat_{n \times n}(L)\text{,}\)</span> making them equal in <span class="process-math">\(\Mat_{n \times n}(F)\)</span> as well. Thus <span class="process-math">\(A\)</span> is similar to <span class="process-math">\(B\text{,}\)</span> as similarity is transitive.</div> <div class="para">This yields <span class="process-math">\(A\sim A^T\)</span> in <span class="process-math">\(F\text{.}\)</span> # Jan 15</div>
 </div></body>
 </html>

@@ -543,8 +543,8 @@
                       </p>
                     </li>
       
-                    <li><title>Cancellation</title><idx><h>cancellation</h></idx>
-                      <p xml:id="list-cancellation">
+                    <li xml:id="list-cancellation"><title>Cancellation</title><idx><h>cancellation</h></idx>
+                      <p>
                         In a group <m>G</m>, if <m>xy = xz</m> then <m>y=z</m>. Similarly, if <m>yx = zx</m> we have <m>y = z</m>.
                       </p>
                     </li>
@@ -1692,9 +1692,9 @@
               </solution>
             </exercise>
 
-          </subsection>
+          
 
-          <subsection xml:id="subsec-kernel-image"><title>Kernels and Images</title>
+          
 
             <blockquote><p><q>May your passion be the kernel of corn stuck between your molars, always reminding you there's something to tend to.</q></p><attribution>Jeb Dickerson</attribution></blockquote>
 
@@ -2488,7 +2488,7 @@
                 <p>
                   The <em>center</em> of a group <m>G</m>, often written <m>Z(G)</m>, is the set of elements of <m>G</m> that commute with every element of <m>G</m>. That is, 
                   <me>
-                    Z(G)=\{x \in G \, | \, xy = yx\,\text{ for all $y \in G$}\}.
+                    Z(G)=\{x \in G \, | \, xy = yx\,\text{ for all }$y \in G$}.
                   </me>
                   <notation><usage><m>Z(G)</m></usage><description>the center of a group <m>G</m></description></notation>          
                 </p>
@@ -8141,11 +8141,11 @@
                   <ol>
                     <li> <title>Trivial Ring</title>
                       <p>
-                        <m>R=\{0\}</m> is called the <em>trivial ring</em>.<fn>Personally, I am in favor of calling this the <em>bor-ring</em>.</fn>
+                        <m>R=\{0\}</m> is called the <em>trivial ring</em>, or <em>zero ring</em>.<fn>Personally, I am in favor of calling this the <em>bor-ring</em>.</fn>
                       </p>
                     </li>
 
-                    <li> 
+                    <li>
                       <p>
                         <m>\mathbb{Z}</m> is a commutative ring.
                       </p>
@@ -8159,7 +8159,7 @@
 
                     <li>
                       <p>
-                        The familiar sets of “numbers" <m>\mathbb{Q}, {\mathbb{R}}, \mathbb{C}</m> are fields.
+                        The familiar sets <m>\mathbb{Q}, {\mathbb{R}}, \mathbb{C}</m> are fields.
                       </p>
                     </li>
 
@@ -8169,7 +8169,7 @@
                       </p>
                     </li>
 
-                    <li> <title>Matrix Ring</title>
+                    <li><title>Matrix Ring</title>
                       <p>
                         If <m>R</m> is any ring (not necessarily commutative), so is <m>\operatorname{M}_{n}(R)</m> for any natural number <m>n</m>, using the usual rules for addition and multiplication of square matrices.
                       </p>
@@ -8177,7 +8177,8 @@
 
                     <li> <title>Direct Product of Rings</title>
                       <p>
-                        The cartesian product <m>R\times R'</m> of two rings <m>R</m> and <m>R'</m> has a natural ring structure with addition and multiplication defined componentwise: <me>(a,b)+(c,d)=(a+c,b+d)</me> <me>(a,b)\cdot(c,d)=(a\cdot c,b\cdot d)</me>
+                        The cartesian product <m>R\times R'</m> of two rings <m>R</m> and <m>R'</m> has a natural ring structure with addition and multiplication defined componentwise: 
+                        <me>(a,b)+(c,d)=(a+c,b+d)</me> <me>(a,b)\cdot(c,d)=(a\cdot c,b\cdot d)</me>
                       </p>
                     </li>
                   </ol>
@@ -8197,10 +8198,19 @@
                 </solution>
               </exercise>
 
+              <exercise><title>Direct Product Preservations</title>
+              <p>Let <m>R</m> and <m>S</m> be rings. The Cartesian product <m>R\times S</m> is commutative if and only if <m>R</m> and <m>S</m> are commutative. Similarly, <m>R\times S</m> has identity if and only if both <m>R</m> and <m>S</m> do as well.</p>
+              </exercise>
+
               <example><title>Less Relevant Rings</title>
                 <p>
                   <ol>
-                    <li> <title>The Real Hamiltonian Quaternion Ring</title>
+                    <li xml:id="list-opposite-ring"><title>Opposite Day</title>
+                      <p>
+                        Given a ring <m>R</m>, let <m>R^{op}</m> denote the “opposite ring''. This is the same underlying set as <m>R</m> equipped with the same rule for <m>+</m> as <m>R</m>, but with multiplication rule (which I will write here as <m>\cdot_{op}</m>) redefined to be <m>a \cdot_{op} b := b a</m> (where <m>ba</m> refers to the original multiplication rule for <m>R</m>). Then <m>R^{op}</m> is also a ring
+                      </p>
+                    </li>
+                    <li><title>The Real Hamiltonian Quaternion Ring</title>
                       <p>
                         Let <m>i,j,k</m> be formal symbols and set <m>{\mathbb{H}}</m> to be the four dimensional <m>{\mathbb{R}}</m>-vector space consisting of all expressions of the form <m>a + bi + cj + dk</m> with <m>a,b,c,d \in {\mathbb{R}}</m>. Addition is vector space addition: 
                         <me>
@@ -8258,110 +8268,119 @@
               </theorem>         
   
           </subsection>  
-  
-          <subsection xml:id="subsec-units"><title>Units, Zerodivisors, Integral Domains</title>
 
-              <blockquote><p><q>There is more power in unity than division.</q></p><attribution>Emmanuel Cleaver</attribution></blockquote>
-  
-              <definition xml:id="def-unit"><title>Unit</title>
+          <subsection xml:id="subsec-units"><title>Absolute Units</title>
+
+          <blockquote><p><q>There is more power in unity than division.</q></p><attribution>Emmanuel Cleaver</attribution></blockquote>
+
+          <definition xml:id="def-unit"><title>Unit</title>
                 <statement>
                   <p>
                     An element <m>u</m> of a unital ring <m>R</m> with <m>1\neq 0</m> is called a <em>unit</em> there exists <m>v\in R</m> such that <m>uv=1</m> and <m>vu=1</m>. In case such <m>v</m> exists, it is unique, it is called the inverse of <m>u</m> and denoted by <m>u^{-1}</m>.
                   </p>
                 </statement>
-              </definition>
+          </definition>
   
-              <definition xml:id="def-group-of-units"><title>Group of Units</title>
-                <statement>
+          <definition xml:id="def-group-of-units"><title>Group of Units</title>
+            <statement>
+              <p>
+                The set of units of a non-trivial unital ring <m>R</m> is denoted <m>R^\times</m>. This forms a group <m>(R^\times,\cdot)</m> with respect to multiplication.
+              </p>
+            </statement>
+          </definition>
+
+          <p>Finally, we have a formal definition for groups of units.</p>
+
+          <exercise xml:id="exe-group-of-units-is-a-group"><title>Sweet, Sweet Rigor</title>
+            <p>
+              The group of units is indeed a group <m>(R^\times,\cdot)</m> with respect to multiplication.
+            </p>
+          </exercise>
+
+          <p>Well, that was validating.<fn>Not as validating as it will be when we prove that matrix multiplication is associative, finally allowing us to complete the proof that <m>\GL_n(F)</m> is indeed a group. Soon...</fn> Months in the making. But enough vindication: we move forward. It's all we've ever known.</p>
+
+          <theorem xml:id="thm-units-in-fields"><title>Units in Fields</title>
+            <p>
+              Let <m>F</m> be a field. Prove that every non-zero element of <m>F</m> is a unit. In symbols, show <m>F^\times=F\setminus\{0\}</m>.
+            </p>
+          </theorem>
+
+          <remark><p><xref ref="thm-units-in-fields"/> is usually the standard way of proving that something is a field.</p></remark>
+
+          <p>If you'll remember all the way back to <xref ref="ex-group-of-units"/>, you'll see that we verified <xref ref="thm-units-in-fields"/> for <m>\Q,\R,</m> and <m>\C</m>. This also explains why <m>\Z^\times</m> and <m>\Z/n^\times</m> had a different structure: they weren't fields.</p>
+
+          <example xml:id="zp-field"><title><m>\Z/p</m> is a Field!</title>
+            <p>In <xref ref="exe-group-of-units-in-zp"/> we showed that <m>\Z/p^\times=\Z/p\sm\{0\}</m>. Thus <m>\Z/p</m> is a field for all primes <m>p</m>.</p>
+          </example>
+
+          <exercise xml:id="exe-matrices-and-units"><title>Matrices and Units</title>
+            <p>
+              For any field <m>F</m> we have <m>\operatorname{M}_{n}(F)^\times = \operatorname{GL}_n(F)</m>.
+            </p>
+          </exercise>
+
+          <remark><p>Units in matrix rings are called <em>invertible matrices</em>, but they aren't very useful and we'll probably never see them again.</p></remark>
+
+          <exercise xml:id="exe-gaussian-units"><title>Gaussian Units</title>
+            <statement>
+              <p>
+                Let <m>\Z[i] = \{a + bi \mid a,b \in \Z\}</m> be the ring of Gaussian integers. Define a function 
+                <me>
+                  N:\Z[i]\to\Z, N(a+bi)=a^2+b^2.
+                </me>
+
+              
+              <ol>
+                <li>
                   <p>
-                    The set of units of a non-trivial unital ring <m>R</m> is denoted <m>R^\times</m>. This forms a group <m>(R^\times,\cdot)</m> with respect to multiplication.
+                    Prove that <m>N(\a\b)=N(\a)N(\b)</m> for any <m>\a,\b\in \Z[i]</m>.
                   </p>
-                </statement>
-              </definition>
+                </li>
 
-              <p>Finally, we have a formal definition for groups of units.</p>
-
-              <exercise xml:id="exe-group-of-units-is-a-group"><title>Sweet, Sweet Rigor</title>
-                <p>
-                  The group of units is indeed a group <m>(R^\times,\cdot)</m> with respect to multiplication.
-                </p>
-              </exercise>
-
-              <p>Well, that was validating.<fn>Not as validating as it will be when we prove that matrix multiplication is associative, finally allowing us to complete the proof that <m>\GL_n(F)</m> is indeed a group. Soon...</fn> Months in the making. But enough vindication: we move forward. It's all we've ever known.</p>
-
-              <theorem xml:id="thm-units-in-fields"><title>Units in Fields</title>
-                <p>
-                  Let <m>F</m> be a field. Prove that every non-zero element of <m>F</m> is a unit. In symbols, show <m>F^\times=F\setminus\{0\}</m>.
-                </p>
-              </theorem>
-
-              <remark><p><xref ref="thm-units-in-fields"/> is usually the standard way of proving that something is a field.</p></remark>
-
-              <p>If you'll remember all the way back to <xref ref="ex-group-of-units"/>, you'll see that we verified <xref ref="thm-units-in-fields"/> for <m>\Q,\R,</m> and <m>\C</m>. This also explains why <m>\Z^times</m> and <m>\Z/n^times</m> had a different structure: they weren't fields.</p>
-
-              <example xml:id="zp-field"><title><m>\Z/p</m> is a Field!</title>
-                <p>In <xref ref="exe-group-of-units-in-zp"/> we showed that <m>\Z/p^\times=\Z/p\sm\{0\}</m>. Thus <m>\Z/p</m> is a field for all primes <m>p</m>.</p>
-              </example>
-
-              <exercise xml:id="exe-matrices-and-units"><title>Matrices and Units</title>
-                <p>
-                  For any field <m>F</m> we have <m>\operatorname{M}_{n}(F)^\times = \operatorname{GL}_n(F)</m>.
-                </p>
-              </exercise>
-
-               <exercise xml:id="exe-gaussian-units"><title>Gaussian Units</title>
-                <statement>
+                <li>
                   <p>
-                    Let <m>\Z[i] = \{a + bi \mid a,b \in \Z\}</m> be the ring of Gaussian integers. Define a function 
-                    <me>
-                      N:\Z[i]\to\Z, N(a+bi)=a^2+b^2.
-                    </me>
-    
-                  
-                  <ol>
-                    <li>
-                      <p>
-                        Prove that <m>N(\a\b)=N(\a)N(\b)</m> for any <m>\a,\b\in \Z[i]</m>.
-                      </p>
-                    </li>
-    
-                    <li>
-                      <p>
-                        Use the function <m>N</m> to determine the units of <m>\Z[i]</m>.
-                      </p>
-                    </li>
-                  </ol>
-    
-                </p>
-              </statement>
-  
-              <solution>
-                <p>
-                  <ol>
-                    <li>
-                      <p>
-                        Let <m>\alpha,\beta\in\Z[i]</m> and behold 
-                        <me>\begin{aligned}N(\alpha\beta)&amp;=N((a+bi)(c+di))\\&amp;=N(ac-bd+adi+bci)\\&amp;=(ac-bd)^2+(ad+bc)^2\\&amp;=((ac)^2-2acbd+(bd)^2)+((ad)^2+2abcd+(bc^2))\\&amp;=a^2c^2+b^2d^2+a^2d^2+b^2c^2\\&amp;=(a^2c^2+a^2d^2)+(b^2c^2+b^2d^2)\\&amp;=a^2(c^2+d^2)+b^2(c^2+d^2)\\N(\alpha)N(\beta)&amp;=(a^2+b^2)(c^2+d^2).\end{aligned}</me> 
-                        So there's that done.
-                      </p>
-                    </li>
-  
-                    <li>
-                      <p>
-                        Suppose <m>\alpha\beta=1</m>. Then by Part (1) we know 
-                        <me>
-                          N(\alpha)N(\beta)=N(\alpha\beta)=N(1)=1,
-                        </me> 
-                        so <m>(a^2+b^2)(c^2+d^2)=1</m>, with <m>a,b,c,d\in\Z</m>. Thus we have <m>a^2+b^2=1=c^2+d^2</m>. So the units of <m>\Z[i]</m> are <m>\{\pm 1,\pm i\}</m>.
-                      </p>
-                    </li>
-                  </ol>
-                </p>
-              </solution>
-  
-              </exercise>
+                    Use the function <m>N</m> to determine the units of <m>\Z[i]</m>.
+                  </p>
+                </li>
+              </ol>
 
-              <remark><p>The function <m>N</m> in <xref ref="exe-gaussian-units"/> is some incredibly spicy foreshadowing of something called a <em>norm</em> function, which we'll see more of in <xref ref="sec-eds"/></p></remark>
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              <ol>
+                <li>
+                  <p>
+                    Let <m>\alpha,\beta\in\Z[i]</m> and behold 
+                    <me>\begin{aligned}N(\alpha\beta)&amp;=N((a+bi)(c+di))\\&amp;=N(ac-bd+adi+bci)\\&amp;=(ac-bd)^2+(ad+bc)^2\\&amp;=((ac)^2-2acbd+(bd)^2)+((ad)^2+2abcd+(bc^2))\\&amp;=a^2c^2+b^2d^2+a^2d^2+b^2c^2\\&amp;=(a^2c^2+a^2d^2)+(b^2c^2+b^2d^2)\\&amp;=a^2(c^2+d^2)+b^2(c^2+d^2)\\N(\alpha)N(\beta)&amp;=(a^2+b^2)(c^2+d^2).\end{aligned}</me> 
+                    So there's that done.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Suppose <m>\alpha\beta=1</m>. Then by Part (1) we know 
+                    <me>
+                      N(\alpha)N(\beta)=N(\alpha\beta)=N(1)=1,
+                    </me> 
+                    so <m>(a^2+b^2)(c^2+d^2)=1</m>, with <m>a,b,c,d\in\Z</m>. Thus we have <m>a^2+b^2=1=c^2+d^2</m>. So the units of <m>\Z[i]</m> are <m>\{\pm 1,\pm i\}</m>.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </solution>
+
+          </exercise>
+
+          <remark><p>The function <m>N</m> in <xref ref="exe-gaussian-units"/> is some incredibly spicy foreshadowing of something called a <em>norm</em> function, which we'll see more of in <xref ref="sec-eds"/></p></remark>
+
+          
+          </subsection>
+  
+          <subsection xml:id="subsec-zerodivisors"><title>A Zero Divided Cannot Stand</title>
+
+              <blockquote><p><q>The only way on Earth to multiply happiness is to divide it.</q></p><attribution>Paul Scherrer</attribution></blockquote>
 
               <p>We might not be able to divide by zero, but sometimes we can get the next best thing.</p>
   
@@ -8385,7 +8404,7 @@
 
               <historical>
                 <p>
-                  The term "integral domain" was coined by Richard Dedekind, a German mathematician who lived in the 19th century.
+                  The term "integral domain" was coined by <xref text="title" ref="bio-dedekind"/>, a German mathematician who lived in the 19th century.
                 </p>
 
                 <p>
@@ -8394,6 +8413,12 @@
               </historical>
 
               <remark><p>Note that by <xref ref="exe-1-is-0"/> saying that <m>1\neq0</m> is equivalent to saying that <m>R</m> is nontrivial.</p></remark>
+
+              <example xml:id="ex-z-integral-domain"><title><m>\Z</m> is an Integral Domain</title>
+                <p>
+                  The ring of integers <m>\Z</m> is an integral domain. Find two nonzero integers that multiply to <m>0</m>. I dare you.<fn>This is, in our humble opinion, how all conjectures should be proven moving forward.</fn>
+                </p>
+              </example>
 
               <p>Unlike in groups, which have a notion of <xref text="title" ref="list-cancellation"/>, rings do not necessarily come equipped with this property. One of the main niceties of integral domains is that cancellation is indeed possible (and in many cases encouraged).</p>
 
@@ -8405,7 +8430,9 @@
               </statement>
               </lemma>
 
-              <p>Rather than jumping in and proving a few examples directly, let's be a little more efficient and discover a whole class of examples in one fell swoop. Well, actually two fell swoops, since we'll need a quick lemma first.</p>   
+              <remark><p>This is sometimes taken to be the definition of an integral domain, but only by those that are left handed. No one knows why.</p></remark>
+
+              <p>Rather than jumping in and proving too many examples directly, let's be a little more efficient and discover a whole class of examples in one fell swoop. Well, actually two fell swoops, since we'll need a quick lemma first.</p>   
 
               <lemma xml:id="lem-zerodivisor-not-unit"><title>Zerodivisors and Units</title>
                 <statement>
@@ -8461,7 +8488,7 @@
                 </proof>
               </theorem>
 
-              <remark><p>In an introductory high school or college algebra course, this notion is known as the <term>zero factor principle</term> for the real numbers, which is what allowes us to solve for the <m>x</m>-intercepts (or zeros) of a polynomial equation after factoring it.</p></remark>
+              <remark><p>In an introductory high school or college algebra course this notion is known as the <term>zero factor principle</term> for the real numbers, which is what allowes us to solve for the <m>x</m>-intercepts (or zeros) of a polynomial equation after factoring it.</p></remark>
   
               <exercise xml:id="exe-neither-zerodivisor-nor-unit"><title>Finite Zerdivisors and Units</title>
                 
@@ -8469,7 +8496,7 @@
                   <ol>
                     <li>
                       <p>
-                        Prove that if <m>R</m> is finite then every element is either a unit of a zerodivisor.
+                        Prove that if <m>R</m> is finite then every element is either a unit or a zerodivisor.
                       </p>
                     </li>
 
@@ -8529,6 +8556,10 @@
                     </li>
                   </ol>
                 </p>
+              </exercise>
+
+              <exercise><title>Integral Idempotents</title>
+                <p>Prove that the only idempotents in an integral domain are <m>0</m> and <m>1</m>.</p>
               </exercise>
   
               <!--
@@ -8630,7 +8661,7 @@
               </li>
     
               <li>
-                <m>2\Z</m> is a subring without <m>1</m> of the ring <m>Z</m> with <m>1</m>.
+                <m>n\Z</m> is a subring without <m>1</m> of the ring <m>Z</m> with <m>1</m>.
               </li>
     
               <li>
@@ -8643,6 +8674,10 @@
     
             </ul></p>
           </example>
+
+          <exercise><title>Nilradical Radishes</title>
+            <p>Prove that the set of all nilpotent elements of a ring <m>R</m> is a subring of <m>R</m>, which we call the <term>nilradical</term>.</p>
+          </exercise>
 
           <exercise xml:id="exe-finding-subring-counterexamples"><title>Fancy Subrings</title>
             <p>
@@ -8909,14 +8944,14 @@
               <p>
                 For any commutative ring <m>R</m>, the <em>polynomial ring in the variable</em> <m>x</m>, written <m>R[x]</m>, is the set 
                 <me>
-                  R[x]=\{ a_nx^n+\ldots+a_1x+a_0\mid  n\in \Z, n\geq 0, a_i\in R\}
+                  R[x]=\{a_nx^n+\ldots+a_0\mid  n\in \Z, n\geq 0, a_i\in R\}
                 </me> 
                 with addition defined by 
                 <me>
-                  (a_nx^n+\ldots+a_1x+a_0)+(b_nx^n+\ldots+b_1x+b_0)=(a_n+b_n)x^n+\ldots+(a_1+b_1)x+(a_0+b_0)
+                  (a_nx^n+\ldots+a_0)+(b_nx^n+\ldots+b_0)=(a_n+b_n)x^n+\ldots++(a_0+b_0)
                 </me>and multiplication defined by 
                 <me>
-                  (a_nx^n+\ldots+a_1x+a_0)(b_mx^n+\ldots+b_1x+b_0)=\sum_{k=0}^{n+m}\left(\sum_{i=0}^k a_ib_{k-i}\right)x^i.
+                  (a_nx^n+\ldots+a_0)(b_mx^n+\ldots+b_0)=\sum_{k=0}^{n+m}\left(\sum_{i=0}^k a_ib_{k-i}\right)x^i.
                 </me>
                 For any commutative ring <m>R</m>, the <em>polynomial ring in</em> <m>x_1, \dots, x_n</m>, written <m>R[x_1, \dots, x_n]</m>, is defined inductively as <m>R[x_1, \dots, x_n]=R[x_1, \dots, x_{n-1}][x_n]</m>, but more easily thought of as the set consisting of (finite) sums of the form 
                 <me> 
@@ -8926,10 +8961,26 @@
               </p>
             </statement>
           </definition>
-    
-          <remark><p>If <m>n = 1</m>, letting <m>x = x_1</m>, then <m>R[x]</m> consists of all expressions of the form <m>\sum_{i=0}^\infty r_i x^i</m> with <m>r_i = 0</m> for all but a finite number of <m>i</m>.</p></remark>
-    
+        
           <remark><p>One often views <m>R</m> as the subring of <m>R[x_1, \dots, x_n]</m> consisting of the constant polynomials.</p></remark>
+
+          <p>Let's remind ourselves of some classic notions of polynomials.</p>
+
+          <definition xml:id="def-degree"><title>Degree</title>
+            <statement>
+              <p>
+                Let <m>f(x)\in R[x]</m>, <m>f(x)\neq0</m>. Say <m>f(x)=a_nx^n+\cdots+a_1x+a_0</m>, where <m>a_n\neq0</m>. Then <m>n</m> is the <em>degree</em>of <m>f</m>.
+              </p>
+            </statement>
+          </definition>
+
+          <definition xml:id="def-monic"><title>Monic</title>
+            <statement>
+              <p>
+                A polynomial <m>f(x)=a_nx^n+\cdots+a_1x+a_0</m> is <em>monic</em> if <m>a_n=1</m>.<fn>Please do not confuse this with the notion of a <em>yonic</em> polynomial, which does not yet exist and should probably stay that way. Algebraists are already on very thin ice for some of the things they've named over the years.</fn>
+              </p>
+            </statement>
+          </definition>
           
           <proposition xml:id="prop-polynomials-domains-degrees-units"><title>Polynomials, Domains, Degrees, Units</title>
             <statement>
@@ -9030,8 +9081,10 @@
           </example>
 
           -->
-    
-          <proposition xml:id="prop-ump-for-polynomial-rings"><title>UMP for Polynomial Rings</title>
+
+          <p>Its been far too long since we've had ourselves a universal mapping property, I think we've earned one.</p>
+
+          <theorem xml:id="thm-ump-for-polynomial-rings"><title>UMP for Polynomial Rings</title>
             <statement>
               <p>
                 Let <m>R</m> and <m>S</m> be commutative rings, <m>\phi: R \to S</m> is a ring homomorphism and <m>s_1, \dots, s_n</m> arbitrary elements of <m>S</m>. Then there exists a unique ring homomorphism 
@@ -9047,30 +9100,30 @@
     
             <proof>
               <p>
-                Let's observe first that if such a map exists it is unique. For if <m>\tilde\phi: R[x_1, \dots, x_n] \to S</m> is a ring map extending <m>\phi</m> and sending <m>x_i</m> to <m>s_i</m>. Then <me>\begin{align*}
+                Let's observe first that if such a map exists it is unique. For if <m>\tilde\phi: R[x_1, \dots, x_n] \to S</m> is a ring map extending <m>\phi</m> and sending <m>x_i</m> to <m>s_i</m>. Then <me>\begin{aligned*}
                   \tilde\phi(\sum_{e_1, \dots, e_n \geq 0} r_{e_1, \dots, e_n} x_1^{e_1} \cdots x_n^{e_n}) &amp;=
-                  \sum_{e_1, \dots, e_n \geq 0} \phi(r_{e_1, \dots, e_n}) \phi(x_1)^{e_1} \cdots \phi(x_n)^{e_n}) \\
+                  \sum_{e_1, \dots, e_n \geq 0} \phi(r_{e_1, \dots, e_n}) \phi(x_1)^{e_1} \cdots \phi(x_n)^{e_n} \\
                   &amp;=
                   \sum_{e_1, \dots, e_n \geq 0} \phi(r_{e_1, \dots, e_n}) s_1^{e_1} \cdots s_n^{e_n},
-                  \end{align*}</me> using that <m>\tilde\phi</m> preserves <m>+</m> and <m>\cdot</m>.
+                  \end{aligned*}</me> using that <m>\tilde\phi</m> preserves <m>+</m> and <m>\cdot</m>.
               </p>
               <p>
                 For existence, let's assume <m>n = 1</m> at first. Given <m>\phi: R \to S</m> and <m>s \in S</m>, define <me>
-    \tilde{\phi}: R[x] \to S
-    </me> by <me>
-    \tilde{\phi}(\sum_i r_i x^i) = \sum_i \phi(r_i) s^i.
-    </me> It is elementary (but tedious) to check <m>\tilde{\phi}</m> really is a ring homomorphism. The fact that it restricts to <m>\phi</m> is clear, however.
+                \tilde{\phi}: R[x] \to S
+                </me> by <me>
+                \tilde{\phi}(\sum_i r_i x^i) = \sum_i \phi(r_i) s^i.
+                </me> It is elementary (but tedious) to check <m>\tilde{\phi}</m> really is a ring homomorphism. The fact that it restricts to <m>\phi</m> is clear, however.
               </p>
     
               <p>
                 For the general case, we proceed by induction on the number of variables <m>n</m>. The induction hypothesis shows that there is a ring homomorphism <me>
-    \psi: R[x_1, \dots, x_{n-1}] \to S
-    </me> such that <m>\psi|_R = \phi</m> and <m>\psi(x_i) = s_i</m>, <m>i = 1, \dots, n-1</m>. Applying the <m>n=1</m> case to <m>\psi</m> gives <me>
-    \tilde{\psi}: (R[x_1, \dots, x_{n-1}])[x_n] \to S
-    </me> with <m>\tilde\psi|_{R[x_1, \dots, x_{n-1}]} = \psi</m> and <m>\tilde{\psi}(x_n) = s_n</m>. Setting <m>\tilde\phi=\tilde\psi</m> gives a map <m>\tilde{\phi}</m> with the needed properties.
+                \psi: R[x_1, \dots, x_{n-1}] \to S
+                </me> such that <m>\psi|_R = \phi</m> and <m>\psi(x_i) = s_i</m>, <m>i = 1, \dots, n-1</m>. Applying the <m>n=1</m> case to <m>\psi</m> gives <me>
+                \tilde{\psi}: (R[x_1, \dots, x_{n-1}])[x_n] \to S
+                </me> with <m>\tilde\psi|_{R[x_1, \dots, x_{n-1}]} = \psi</m> and <m>\tilde{\psi}(x_n) = s_n</m>. Setting <m>\tilde\phi=\tilde\psi</m> gives a map <m>\tilde{\phi}</m> with the needed properties.
               </p>
             </proof>
-          </proposition>
+          </theorem>
     
           <exercise xml:id="exe-evaluation-homomorphism"><title>Evalutation Homomorphism</title>
             <p>
@@ -9080,7 +9133,9 @@
     
           <example xml:id="ex-applying-ring-homomorphism-to-coefficients"><title>Ring Maps and Coefficients</title>
             <p>
-              Given a ring map <m>\phi: R \to S</m> between commutative rings, we may apply the Proposition to the composition <m>R \xra{\phi} S \hookrightarrow S[x]</m> using the element <m>s = x</m> of <m>S[x]</m> to get an induced ring map <me>\tilde{\phi}: R[x] \to S[x]</me> that sends <m>\sum_i r_i x^i</m> to <m>\sum_i \phi(r_i) x^i</m>. That is, the map <m>\tilde{\phi}</m> applies <m>\phi</m> to the coefficients of a polynomial. This can be generalized to more than one variable in the obvious way.       
+              Given a ring map <m>\phi: R \to S</m> between commutative rings, we may apply <xref ref="thm-ump-for-polynomial-rings"/> to the composition <m>R \xra{\phi} S \hookrightarrow S[x]</m> using the element <m>s = x</m> of <m>S[x]</m> to get an induced ring map 
+              <me>\tilde{\phi}: R[x] \to S[x]</me>
+              that sends <m>\sum_i r_i x^i</m> to <m>\sum_i \phi(r_i) x^i</m>. That is, the map <m>\tilde{\phi}</m> applies <m>\phi</m> to the coefficients of a polynomial. This can be generalized to more than one variable in the obvious way.       
             </p>
           </example>
     
@@ -9100,13 +9155,13 @@
             </statement>
           </theorem>
 
-          <corollary xml:id="thm-root-thm"><title>Root Theorem</title>
+          <theorem xml:id="thm-factor-thm"><title>Factor Theorem</title>
             <statement>
               <p>
                 Let <m>R</m> be a commutative ring with identity, <m>f(x)\in R[x]</m> and <m>a\in R</m>. Then <m>f(a)=0</m> if and only if <m>(x-a)|f(x)</m>. 
               </p>
             </statement>
-          </corollary>
+          </theorem>
           
         </section>
       </chapter>
@@ -9121,7 +9176,7 @@
         
         <section xml:id="sec-ideals"><title>Ideals</title>
     
-          <subsection xml:id="subsec-ideal-def"><title>Definition and First Properties</title>
+          <subsection xml:id="subsec-ideal-def"><title>Ideal or No Deal</title>
 
             <blockquote><p><q>It is a useless life that is not consecrated to a great ideal. It is like a stone wasted on the field without becoming a part of any edifice.</q></p><attribution>Jose Rizal</attribution></blockquote>
             
@@ -9138,7 +9193,7 @@
     
                     <li>
                       <p>
-                        for all <m>r \in R</m> and <m>a \in I</m>, we have <m>ra \in I</m> and <m>ar \in I</m> (we can write this concisely as for all <m>r \in R,</m> <m>rI\subseteq I</m> and <m>Ir\subseteq I</m> ). This is often called <em>absorption</em>.
+                        for all <m>r \in R</m> and <m>a \in I</m>, we have <m>ra \in I</m> and <m>ar \in I</m>. This is often called <em>absorption</em><fn>Personally I think it would be splendid if we could rename ideals <em>sponges</em> to match this imagery.</fn>.
                       </p>
                     </li>
                   </ol>
@@ -9149,7 +9204,7 @@
             </definition>
 
             <historical><title>Ideal</title>
-              <p>Ideals were first introduced by Richard Dedekind in the 1870s in his work on algebraic number theory. The term "ideal" was chosen by Dedekind to suggest the notion of an "ideal" number, which he saw as a kind of idealization of a real number. Similarly, Dedekind saw an ideal in a ring as an idealization of an element in the ring.</p>
+              <p>Ideals were first introduced by <xref ref="bio-dedekind"/> in the 1870s in his work on algebraic number theory. The term "ideal" was chosen by Dedekind to suggest the notion of an "ideal" number, which he saw as a kind of idealization of a real number. Similarly, Dedekind saw an ideal in a ring as an idealization of an element in the ring.</p>
             </historical>
 
             <p>To simplify to an excessive degree, ideals are the normal subgroups of rings. This is not <q>accurate</q> in the techincal sense, but it does communicate the vibe of what ideals are and how we will be using them in this text.</p>
@@ -9170,7 +9225,7 @@
                   </li>
       
                   <li>
-                    The set <m>\cR</m> of all nilpotent elements in a ring <m>A</m> is an ideal, and <m>A/\cR</m> has no nonzero nilpotent elements.
+                    The set <m>\cR</m> of all nilpotent elements in a ring <m>A</m> is an ideal.
                   </li>
     
                   <li>
@@ -9197,7 +9252,7 @@
             <exercise><title>Subrings Need not be Ideals</title>
             <statement>
               <p>
-                Any ideal <m>I</m> of a ring <m>R</m> is a subring of <m>R</m>, but not any subring is an ideal.
+                Find, with justification, a subring which is not an ideal.
               </p>
             </statement>
     
@@ -9453,12 +9508,12 @@
     
             <exercise><title>Infinitely Generated Ideal</title>
               <p>
-                Let <m>I=\{f\in C[0,1]|f(x)=0\text{ on } [0,b]\;\text{for some}\; b&gt;0\}</m>
+                Let <m>I=\{f\in \cC[0,1]|f(x)=0\text{ on } [0,b]\;\text{for some}\; b&gt;0\}</m>
     
                 <ol>
                   <li>
                     <p>
-                      Prove that <m>I</m> is an ideal of <m>C[0,1]</m>.
+                      Prove that <m>I</m> is an ideal of <m>\cC[0,1]</m>.
                     </p>
                   </li>
     
@@ -9470,57 +9525,7 @@
                 </ol>
               </p>
             </exercise>
-    
-            <definition xml:id="def-principal-ideal"><title>Principal Ideal</title>
-              <statement>
-                <p>
-                  Let <m>I</m> be an ideal of a ring <m>R</m>. The ideal <m>I</m> is <em>principal</em> if <m>I = \igen a</m> for some <m>a \in R</m>, that is, <m>I</m> is generated by a set with a single element.
-                </p>
-              </statement>
-            </definition>
 
-            <exercise xml:id="exe-properties-of-principal-ideals-in-z"><title>Principal Ideals in <m>\Z</m></title>
-              
-              <p>
-                Let <m>(x),(y)</m> be ideals in <m>\Z</m>. Then
-                <ul>
-                  <li>
-                    <m>(m)+(n)=(\gcd(m,n))</m>
-                  </li>
-    
-                  <li>
-                    <m>(m)\cap(n)=(\lcm(m,n))</m>
-                  </li>
-    
-                  <li>
-                    <m>(m)(n)=(mn)</m> Conclude that <m>(m)(n)=(m)\cap(n)</m> if and only if <m>m</m> and <m>n</m> are relatively prime.
-                  </li>
-                </ul>
-              </p>
-            </exercise>
-    
-          <!--
-
-            <example xml:id="ex-principal-ideals"><title>Examples of Principal Ideals</title>
-              <p>
-                <ul>
-                  <li>
-                    every ideal of <m>\Z</m> is principal with <m>I=\igen n</m> for some <m>n\in \Z</m><fn>This means <m>\Z</m> is a PID, something that will be defined in <xref ref="sec-pids"/></fn> 
-                  </li>
-    
-                  <li>
-                    for any field <m>F</m>, every ideal of <m>F[x]</m> is principal.
-                  </li>
-    
-                  <li>
-                    for any field <m>F</m>, every ideal in <m>F[x_1,\ldots,x_n]</m> is finitely generated, but not necessarily principal. This is a consequence of a deep theorem called the Hilbert Basis Theorem, which you will see in Math 905.
-                  </li>
-                </ul>
-              </p>
-            </example>
-
-          -->
-            
           </subsection>
           
         </section>
@@ -9558,7 +9563,7 @@
               </p>
             </exercise>
 
-            <p>Just like we had with groups, it turns out our dear friend <m>\Z/n</m> has been a quotient all along</p>
+            <p>Just like we had with groups, it turns out our dear friend <m>\Z/n</m> has been a quotient all along.</p>
     
             <example xml:id="ex-quotient-of-z"><title>Quotients of <m>\Z</m></title>
               <p>
@@ -9566,7 +9571,7 @@
               </p>
             </example>
 
-            <remark><p>This is where the common notation <m>\Z/(n)</m> comes from.</p></remark>
+            <remark><p>This is where the common notation <m>\Z/(n)</m> comes from, even though it should be <m>\Z/\igen n</m> anyway.</p></remark>
 
             <p>And, once again, we have a quotient map that turns out to be a homomorphism.</p>
     
@@ -9576,12 +9581,12 @@
               </p>
             </exercise>
 
-            <p>Last but certainly not least, we have an analogue of <xref ref="thm-norm-iff-ker"/> for ideals.</p>
+            <p>Last but certainly not least, we have an analogue of <xref ref="thm-norm-iff-ker"/> for ideals.<fn>Once again, I would like to suggest that <q>ideal subgroup</q> is a far better name for a normal subgroup.</fn></p>
     
             <theorem xml:id="thm-ideal-iff-kernel-of-ring-map"><title>Ideal iff Kernel of Ring Map</title>
               <statement>
                 <p>
-                  Let <m>R</m> be a ring. A subset <m>I</m> of <m>R</m> is an ideal of <m>R</m> if and only if there exists a ring homomorphism <m>\varphi</m> such that <m>\ker(\varphi)=I</m>
+                  Let <m>R</m> be a ring. A subset <m>I</m> of <m>R</m> is an ideal of <m>R</m> if and only if there exists a ring homomorphism <m>\varphi</m> such that <m>\ker(\varphi)=I</m>.
                 </p>
               </statement>
             </theorem>         
@@ -9598,7 +9603,7 @@
               
               <statement>
                 <p>
-                  If <m>f: R \to S</m> is a ring homomorphism and <m>I \subseteq R</m> is an ideal such that <m>I \subseteq \ker(f)</m>[^1], there exists a well defined ring homomorphism <m>\overline{f}: R/I \to S</m> such that <m>\overline{f} (r+I) = f(r)</m>. Furthermore, if <m>f</m> is surjective then <m>\overline{f}</m> is surjective and if <m>I=\ker(f)</m> then <m>\overline{f}</m> is injective.
+                  If <m>f: R \to S</m> is a ring homomorphism and <m>I \subseteq R</m> is an ideal such that <m>I \subseteq \ker(f)</m>, there exists a well defined ring homomorphism <m>\overline{f}: R/I \to S</m> such that <m>\overline{f} (r+I) = f(r)</m>. Furthermore, if <m>f</m> is surjective then <m>\overline{f}</m> is surjective and if <m>I=\ker(f)</m> then <m>\overline{f}</m> is injective.
                 </p>
               </statement>
     
@@ -10329,6 +10334,52 @@
         <section xml:id="sec-pids"><title>Principal Ideal Domains</title>
 
           <blockquote><p><q>One chance is all you need.</q></p><attribution>Jesse Owens</attribution></blockquote>
+
+          <definition xml:id="def-principal-ideal"><title>Principal Ideal</title>
+              <statement>
+                <p>
+                  Let <m>I</m> be an ideal of a ring <m>R</m>. The ideal <m>I</m> is <em>principal</em> if <m>I = \igen a</m> for some <m>a \in R</m>, that is, <m>I</m> is generated by a set with a single element.
+                </p>
+              </statement>
+            </definition>
+
+            <exercise xml:id="exe-properties-of-principal-ideals-in-z"><title>Principal Ideals in <m>\Z</m></title>
+              
+              <p>
+                Let <m>(x),(y)</m> be ideals in <m>\Z</m>. Then
+                <ul>
+                  <li>
+                    <m>(m)+(n)=(\gcd(m,n))</m>
+                  </li>
+    
+                  <li>
+                    <m>(m)\cap(n)=(\lcm(m,n))</m>
+                  </li>
+    
+                  <li>
+                    <m>(m)(n)=(mn)</m> Conclude that <m>(m)(n)=(m)\cap(n)</m> if and only if <m>m</m> and <m>n</m> are relatively prime.
+                  </li>
+                </ul>
+              </p>
+            </exercise>
+
+            <example xml:id="ex-principal-ideals"><title>Examples of Principal Ideals</title>
+              <p>
+                <ul>
+                  <li>
+                    every ideal of <m>\Z</m> is principal with <m>I=\igen n</m> for some <m>n\in \Z</m><fn>This means <m>\Z</m> is a PID, something that will be defined in <xref ref="sec-pids"/></fn> 
+                  </li>
+    
+                  <li>
+                    for any field <m>F</m>, every ideal of <m>F[x]</m> is principal.
+                  </li>
+    
+                  <li>
+                    for any field <m>F</m>, every ideal in <m>F[x_1,\ldots,x_n]</m> is finitely generated, but not necessarily principal. This is a consequence of a deep theorem called the Hilbert Basis Theorem, which you will see in Math 905.
+                  </li>
+                </ul>
+              </p>
+            </example>
     
           <definition xml:id="def-pid"><title>PID</title>
             <statement>
@@ -11115,78 +11166,7 @@
             </statement>
           </proposition>
 
-          <exercises>
-
-            <exercisegroup>
-              <title>Computations and Examples</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-  
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-  
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          
-            <exercisegroup>
-              <title>Formal Proofs</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-  
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-  
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          
-            <exercisegroup>
-              <title>Qualifying Exam Problems</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
+          <exercises><title>Qualifying Exam Problems</title>
           
               <exercise><title>January 2012 Problem (8)</title>
                 
@@ -11222,8 +11202,7 @@
                   </p>
                 </solution>
               </exercise>
-          
-            </exercisegroup>
+
           </exercises>
           
         </section>
@@ -19752,7 +19731,7 @@
                   </li>
       
                   <li>
-                  <m>\a</m> is algebraic over <m>F</m> if and only if <m>[F(\a): F] &lt; \infty</m>. In this case,[^5] <me>[F(\a): F] = \deg(m_{\a, F}(x)).</me>
+                  <m>\a</m> is algebraic over <m>F</m> if and only if <m>[F(\a): F] &lt; \infty</m>. In this case, <me>[F(\a): F] = \deg(m_{\a, F}(x)).</me>
                   </li>
       
                   <li>
@@ -24240,12 +24219,17 @@
             <theorem xml:id="thm-division-algorithm"><title>Division Algorithm</title>
               <statement>
                 <p>
-                  
+                  Let <m>a</m> and <m>b</m> be integers with <m>b&gt;0</m>. Then there exist unique integers <m>q</m> and <m>r</m> such that 
+                  <me>a=bq+r\quad\text{and}\quad 0\leq r&lt;b</me>
                 </p>
               </statement>
-            </theorem>
-            
 
+              <proof>
+                <p>
+                  Coming soon!
+                </p>
+              </proof>
+            </theorem>
             
           </subsection>
           
@@ -25602,479 +25586,479 @@
         <notation-list/>
 
         <table><title>Notation</title>
-  <tabular>
-  
-  
-    <row>
-      <cell>
-        <m>=</m>
-      </cell>
-      <cell>
-        equal to
-      </cell>
-      <cell>
-      </cell>
-      <cell>
-      </cell>
-    </row>
-    <row>
-      <cell>
-        <m>\neq</m>
-      </cell>
-      <cell>
-        not equal to
-      </cell>
-      <cell>
-      </cell>
-      <cell>
-      </cell>
-    </row>
-    <row>
-      <cell>
-        <m>\in</m>
-      </cell>
-      <cell>
-        in
-      </cell>
-      <cell>
-      </cell>
-      <cell>
-      </cell>
-    </row>
-    <row>
-      <cell>
-        <m>\subseteq</m>
-      </cell>
-      <cell>
-        subset
-      </cell>
-      <cell>
-      </cell>
-      <cell>
-      </cell>
-    </row>
-    <row>
-      <cell>
-        <m>\subset</m>
-      </cell>
-      <cell>
-        proper subset
-      </cell>
-      <cell>
-      </cell>
-      <cell>
-      </cell>
-    </row>
-    <row>
-      <cell>
-        <m>\supseteq</m>
-      </cell>
-      <cell>
-        subset
-      </cell>
-      <cell>
-      </cell>
-      <cell>
-      </cell>
-    </row>
-    <row>
-      <cell>
-        <m>\supset</m>
-      </cell>
-      <cell>
-        proper subset
-      </cell>
-      <cell>
-      </cell>
-      <cell>
-      </cell>
-    </row>
-    <row>
-      <cell>
-        <m>\leq</m>
-      </cell>
-      <cell>
-        less than or equal to
-      </cell>
-      <cell>
-      </cell>
-      <cell>
-      </cell>
-    </row>
-    <row>
-      <cell>
-        <m>\lt </m>
-      </cell>
-      <cell>
-        less than
-      </cell>
-      <cell>
-      </cell>
-      <cell>
-      </cell>
-    </row>
-    <row>
-      <cell>
-        <m>\geq</m>
-      </cell>
-      <cell>
-        greater than or equal to
-      </cell>
-      <cell>
-      </cell>
-      <cell>
-      </cell>
-    </row>
-    <row>
-      <cell>
-        <m>\gt </m>
-      </cell>
-      <cell>
-        greater than
-      </cell>
-      <cell>
-      </cell>
-      <cell>
-      </cell>
-    </row>
-    <row>
-      <cell>
-        <m>\cup</m>
-      </cell>
-      <cell>
-        union
-      </cell>
-      <cell>
-      </cell>
-      <cell>
-      </cell>
-    </row>
-    <row>
-      <cell>
-        <m>\cap</m>
-      </cell>
-      <cell>
-        intersection
-      </cell>
-      <cell>
-      </cell>
-      <cell>
-      </cell>
-    </row>
-    <row>
-      <cell>
-        <m>\setminus</m>
-      </cell>
-      <cell>
-        set difference
-      </cell>
-      <cell>
-      </cell>
-      <cell>
-      </cell>
-    </row>
-    <row>
-      <cell>
-        <m>\cdot</m>
-      </cell>
-      <cell>
-        multiplicative operation
-      </cell>
-      <cell>
-      </cell>
-      <cell>
-      </cell>
-    </row>
-    <row>
-      <cell>
-        <m>+</m>
-      </cell>
-      <cell>
-        additive operation
-      </cell>
-      <cell>
-      </cell>
-      <cell>
-      </cell>
-    </row>
-    <row>
-      <cell>
-        <m>-</m>
-      </cell>
-      <cell>
-        additive inverse
-      </cell>
-      <cell>
-      </cell>
-      <cell>
-      </cell>
-    </row>
-    <row>
-      <cell>
-        <m>^{-1}</m>
-      </cell>
-      <cell>
-        multiplicative inverse, inverse function
-      </cell>
-      <cell>
-      </cell>
-      <cell>
-      </cell>
-    </row>
-    <row>
-      <cell>
-        <m>\circ</m>
-      </cell>
-      <cell>
-        composition operation
-      </cell>
-      <cell>
-      </cell>
-      <cell>
-      </cell>
-    </row>
-    <row>
-      <cell>
-        <m>|</m>
-      </cell>
-      <cell>
-        divides
-      </cell>
-      <cell>
-      </cell>
-      <cell>
-      </cell>
-    </row>
-    <row>
-      <cell>
-        <m>\to</m>
-      </cell>
-      <cell>
-        function from domain to codomain
-      </cell>
-      <cell>
-      </cell>
-      <cell>
-      </cell>
-    </row>
-    <row>
-      <cell>
-        <m>\mapsto</m>
-      </cell>
-      <cell>
-        where input is mapped by function
-      </cell>
-      <cell>
-      </cell>
-      <cell>
-      </cell>
-    </row>
-    <row>
-      <cell>
-        <m>\into</m>
-      </cell>
-      <cell>
-        injective function
-      </cell>
-      <cell>
-      </cell>
-      <cell>
-      </cell>
-    </row>
-    <row>
-      <cell>
-        <m>\onto</m>
-      </cell>
-      <cell>
-        surjective function
-      </cell>
-      <cell>
-      </cell>
-      <cell>
-      </cell>
-    </row>
-    <row>
-      <cell>
-        <m>\cong</m>
-      </cell>
-      <cell>
-        isomorphic
-      </cell>
-      <cell>
-      </cell>
-      <cell>
-      </cell>
-    </row>
-    <row>
-      <cell>
-        <m>\xrightarrow\cong</m>
-      </cell>
-      <cell>
-        isomorphism
-      </cell>
-      <cell>
-      </cell>
-      <cell>
-      </cell>
-    </row>
-    <row>
-      <cell>
-        <m>\equiv</m>
-      </cell>
-      <cell>
-        congruent
-      </cell>
-      <cell>
-      </cell>
-      <cell>
-      </cell>
-    </row>
-    <row>
-      <cell>
-        <m>\sim</m>
-      </cell>
-      <cell>
-        relation
-      </cell>
-      <cell>
-      </cell>
-      <cell>
-      </cell>
-    </row>
-    <row>
-      <cell>
-        <m>[-]</m>
-      </cell>
-      <cell>
-        equivalence class
-      </cell>
-      <cell>
-      </cell>
-      <cell>
-      </cell>
-    </row>
-    <row>
-      <cell>
-        <m>\times</m>
-      </cell>
-      <cell>
-        direct product
-      </cell>
-      <cell>
-      </cell>
-      <cell>
-      </cell>
-    </row>
-    <row>
-      <cell>
-        <m>\oplus</m>
-      </cell>
-      <cell>
-        direct sum
-      </cell>
-      <cell>
-      </cell>
-      <cell>
-      </cell>
-    </row>
-    <row>
-      <cell>
-        <m>\tensor</m>
-      </cell>
-      <cell>
-        tensor product
-      </cell>
-      <cell>
-      </cell>
-      <cell>
-      </cell>
-    </row>
-    <row>
-      <cell>
-        <m>!</m>
-      </cell>
-      <cell>
-        factorial
-      </cell>
-      <cell>
-      </cell>
-      <cell>
-      </cell>
-    </row>
-    <row>
-      <cell>
-        <m>\sum</m>
-      </cell>
-      <cell>
-        sum
-      </cell>
-      <cell>
-      </cell>
-      <cell>
-      </cell>
-    </row>
-    <row>
-      <cell>
-        <m>\prod</m>
-      </cell>
-      <cell>
-        product
-      </cell>
-      <cell>
-      </cell>
-      <cell>
-      </cell>
-    </row>
-    <row>
-      <cell>
-        <m>\forall</m>
-      </cell>
-      <cell>
-        for all
-      </cell>
-      <cell>
-      </cell>
-      <cell>
-      </cell>
-    </row>
-    <row>
-      <cell>
-        <m>\exists</m>
-      </cell>
-      <cell>
-        there exists
-      </cell>
-      <cell>
-      </cell>
-      <cell>
-      </cell>
-    </row>
-    <row>
-      <cell>
-        <m>\exists!</m>
-      </cell>
-      <cell>
-        unique existence
-      </cell>
-      <cell>
-      </cell>
-      <cell>
-      </cell>
-    </row>
-    <row>
-      <cell>
-        <m>\{-|-\}</m>
-      </cell>
-      <cell>
-        set notation
-      </cell>
-      <cell>
-      </cell>
-      <cell>
-      </cell>
-    </row>
-  </tabular>
-</table>
+          <tabular>
+          
+          
+            <row>
+              <cell>
+                <m>=</m>
+              </cell>
+              <cell>
+                equal to
+              </cell>
+              <cell>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <m>\neq</m>
+              </cell>
+              <cell>
+                not equal to
+              </cell>
+              <cell>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <m>\in</m>
+              </cell>
+              <cell>
+                in
+              </cell>
+              <cell>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <m>\subseteq</m>
+              </cell>
+              <cell>
+                subset
+              </cell>
+              <cell>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <m>\subset</m>
+              </cell>
+              <cell>
+                proper subset
+              </cell>
+              <cell>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <m>\supseteq</m>
+              </cell>
+              <cell>
+                subset
+              </cell>
+              <cell>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <m>\supset</m>
+              </cell>
+              <cell>
+                proper subset
+              </cell>
+              <cell>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <m>\leq</m>
+              </cell>
+              <cell>
+                less than or equal to
+              </cell>
+              <cell>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <m>\lt </m>
+              </cell>
+              <cell>
+                less than
+              </cell>
+              <cell>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <m>\geq</m>
+              </cell>
+              <cell>
+                greater than or equal to
+              </cell>
+              <cell>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <m>\gt </m>
+              </cell>
+              <cell>
+                greater than
+              </cell>
+              <cell>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <m>\cup</m>
+              </cell>
+              <cell>
+                union
+              </cell>
+              <cell>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <m>\cap</m>
+              </cell>
+              <cell>
+                intersection
+              </cell>
+              <cell>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <m>\setminus</m>
+              </cell>
+              <cell>
+                set difference
+              </cell>
+              <cell>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <m>\cdot</m>
+              </cell>
+              <cell>
+                multiplicative operation
+              </cell>
+              <cell>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <m>+</m>
+              </cell>
+              <cell>
+                additive operation
+              </cell>
+              <cell>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <m>-</m>
+              </cell>
+              <cell>
+                additive inverse
+              </cell>
+              <cell>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <m>^{-1}</m>
+              </cell>
+              <cell>
+                multiplicative inverse, inverse function
+              </cell>
+              <cell>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <m>\circ</m>
+              </cell>
+              <cell>
+                composition operation
+              </cell>
+              <cell>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <m>|</m>
+              </cell>
+              <cell>
+                divides
+              </cell>
+              <cell>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <m>\to</m>
+              </cell>
+              <cell>
+                function from domain to codomain
+              </cell>
+              <cell>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <m>\mapsto</m>
+              </cell>
+              <cell>
+                where input is mapped by function
+              </cell>
+              <cell>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <m>\into</m>
+              </cell>
+              <cell>
+                injective function
+              </cell>
+              <cell>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <m>\onto</m>
+              </cell>
+              <cell>
+                surjective function
+              </cell>
+              <cell>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <m>\cong</m>
+              </cell>
+              <cell>
+                isomorphic
+              </cell>
+              <cell>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <m>\xrightarrow\cong</m>
+              </cell>
+              <cell>
+                isomorphism
+              </cell>
+              <cell>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <m>\equiv</m>
+              </cell>
+              <cell>
+                congruent
+              </cell>
+              <cell>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <m>\sim</m>
+              </cell>
+              <cell>
+                relation
+              </cell>
+              <cell>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <m>[-]</m>
+              </cell>
+              <cell>
+                equivalence class
+              </cell>
+              <cell>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <m>\times</m>
+              </cell>
+              <cell>
+                direct product
+              </cell>
+              <cell>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <m>\oplus</m>
+              </cell>
+              <cell>
+                direct sum
+              </cell>
+              <cell>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <m>\tensor</m>
+              </cell>
+              <cell>
+                tensor product
+              </cell>
+              <cell>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <m>!</m>
+              </cell>
+              <cell>
+                factorial
+              </cell>
+              <cell>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <m>\sum</m>
+              </cell>
+              <cell>
+                sum
+              </cell>
+              <cell>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <m>\prod</m>
+              </cell>
+              <cell>
+                product
+              </cell>
+              <cell>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <m>\forall</m>
+              </cell>
+              <cell>
+                for all
+              </cell>
+              <cell>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <m>\exists</m>
+              </cell>
+              <cell>
+                there exists
+              </cell>
+              <cell>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <m>\exists!</m>
+              </cell>
+              <cell>
+                unique existence
+              </cell>
+              <cell>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <m>\{-|-\}</m>
+              </cell>
+              <cell>
+                set notation
+              </cell>
+              <cell>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+          </tabular>
+        </table>
       </appendix>
 
       <appendix xml:id="appendix-list-definitions"><title>List of Definitions</title>

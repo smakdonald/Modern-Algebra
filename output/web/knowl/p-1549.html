@@ -13,14 +13,20 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Consider and ascending chain of ideals of <span class="process-math">\(R\text{;}\)</span> it must have the form</div>
+<div class="para">A ring <span class="process-math">\(R\)</span> is called a <em class="emphasis">unique factorization domain</em>, or UFD for short, if <span class="process-math">\(R\)</span> is an integral domain and every element <span class="process-math">\(r \in R\)</span> that is non-zero and not a unit can be written as a finite product</div>
 <div class="displaymath process-math">
 \begin{equation*}
-(a_1)\subseteq (a_2) \subseteq (a_3) \subseteq \cdots \subseteq (a_i)\subseteq (a_{i+1})\subseteq \cdots.
+r = p_1 \cdots p_n
 \end{equation*}
 </div>
-<div class="para">Consider <span class="process-math">\(I=\bigcup_{i\geq 1} (a_i)\)</span> which is an ideal of <span class="process-math">\(R\)</span> by the argument given in Theorem . Since <span class="process-math">\(R\)</span> is a PID, <span class="process-math">\(I=(b)\)</span> for some <span class="process-math">\(b\in R\text{.}\)</span> Since <span class="process-math">\(b\in I=\bigcup_{i\geq 1} (a_i)\text{,}\)</span> we must have <span class="process-math">\(b\in (a_n)\)</span> for some <span class="process-math">\(n\text{.}\)</span> Then we see that <span class="process-math">\(I=(b)\subseteq (a_n)\subseteq (a_{n+1})\subseteq \cdots (a_j) \subseteq \cdots \subseteq I\)</span> for all <span class="process-math">\(j\geq n\text{,}\)</span> thus <span class="process-math">\(I=(a_j)\)</span> for <span class="process-math">\(j\geq n\)</span> and the chain stabilizes as desired.</div>
+<div class="para">of (not necessarily distinct) irreducible elements <span class="process-math">\(p_1, \dots, p_n\)</span> of <span class="process-math">\(R\)</span> in a way that is unique up to ordering and associates. That is, if</div>
+<div class="displaymath process-math">
+\begin{equation*}
+r = q_1 \cdots q_m
+\end{equation*}
 </div>
-<span class="incontext"><a href="subsec-noeth.html#p-1549" class="internal">in-context</a></span>
+<div class="para">also holds with each <span class="process-math">\(q_i\)</span> irreducible, then <span class="process-math">\(m = n\)</span> and there is a permutation <span class="process-math">\(\sigma\)</span> such that, for all <span class="process-math">\(i\text{,}\)</span> we have <span class="process-math">\(p_i\)</span> and <span class="process-math">\(q_{\sigma(i)}\)</span> are associates.</div>
+</div>
+<span class="incontext"><a href="subsec-ufds.html#p-1549" class="internal">in-context</a></span>
 </body>
 </html>

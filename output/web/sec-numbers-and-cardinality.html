@@ -495,10 +495,7 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-gphoms.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Group Homomorphisms</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="sec-gphoms.html#subsec-homom-def-ex" class="internal"><span class="title">Homomorphism? I Barely Know 'em!</span></a></div></li>
-<li><div class="toc-item"><a href="sec-gphoms.html#subsec-kernel-image" class="internal"><span class="title">Kernels and Images</span></a></div></li>
-</ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-gphoms.html#subsec-homom-def-ex" class="internal"><span class="title">Homomorphism? I Barely Know 'em!</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-gpisos.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Group Isomorphisms</span></a></div>
@@ -645,7 +642,8 @@ window.MathJax = {
 <div class="toc-item"><a href="sec-defn-ex.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Ring Basics</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-defn-ex.html#subsec-rings" class="internal"><span class="title">From Rings to Fields</span></a></div></li>
-<li><div class="toc-item"><a href="sec-defn-ex.html#subsec-units" class="internal"><span class="title">Units, Zerodivisors, Integral Domains</span></a></div></li>
+<li><div class="toc-item"><a href="sec-defn-ex.html#subsec-units" class="internal"><span class="title">Absolute Units</span></a></div></li>
+<li><div class="toc-item"><a href="sec-defn-ex.html#subsec-zerodivisors" class="internal"><span class="title">A Zero Divided Cannot Stand</span></a></div></li>
 </ul>
 </li>
 <li><div class="toc-item"><a href="sec-subrings.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Subrings</span></a></div></li>
@@ -659,7 +657,7 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="sec-ideals.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Ideals</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-ideals.html#subsec-ideal-def" class="internal"><span class="title">Definition and First Properties</span></a></div></li>
+<li><div class="toc-item"><a href="sec-ideals.html#subsec-ideal-def" class="internal"><span class="title">Ideal or No Deal</span></a></div></li>
 <li><div class="toc-item"><a href="sec-ideals.html#subsec-generated-ideals" class="internal"><span class="title">Generated Ideals</span></a></div></li>
 </ul>
 </li>
@@ -703,7 +701,7 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-defmod.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Module Basics</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-defmod.html#exercises-17" class="internal"><span class="codenumber">12.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-defmod.html#exercises-17" class="internal"><span class="codenumber">12.1</span> <span class="title">Qualifying Exam Problems</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-modhom.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Module Homomorphisms</span></a></div>
@@ -1111,55 +1109,52 @@ window.MathJax = {
 </h3>
 <article class="definition definition-like" id="def-natural-numbers"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">A.29</span><span class="period">.</span><span class="space"> </span><span class="title">Natural Numbers (*).</span>
-</h3> <div class="para" id="p-3413"><span class="process-math">\(\N\)</span></div></article><article class="definition definition-like" id="def-divides"><h3 class="heading">
+</h3> <div class="para" id="p-3416"><span class="process-math">\(\N\)</span></div></article><article class="definition definition-like" id="def-divides"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">A.30</span><span class="period">.</span><span class="space"> </span><span class="title">Divide (*).</span>
-</h3> <div class="para" id="p-3414"></div></article><article class="definition definition-like" id="def-prime-number"><h3 class="heading">
+</h3> <div class="para" id="p-3417"></div></article><article class="definition definition-like" id="def-prime-number"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">A.31</span><span class="period">.</span><span class="space"> </span><span class="title">Prime (*).</span>
-</h3> <div class="para" id="p-3415"></div></article><article class="definition definition-like" id="def-gcd-lcm"><h3 class="heading">
+</h3> <div class="para" id="p-3418"></div></article><article class="definition definition-like" id="def-gcd-lcm"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">A.32</span><span class="period">.</span><span class="space"> </span><span class="title">GCD, LCM (*).</span>
-</h3> <div class="para" id="p-3416"></div></article><article class="theorem theorem-like" id="thm-division-algorithm"><h3 class="heading">
+</h3> <div class="para" id="p-3419"></div></article><article class="theorem theorem-like" id="thm-division-algorithm"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">A.33</span><span class="period">.</span><span class="space"> </span><span class="title">Division Algorithm.</span>
 </h3>
-<div class="para" id="p-3417"></div></article></section><section class="subsection" id="subsec-counting"><h3 class="heading hide-type">
+<div class="para logical" id="p-3420">
+<div class="para">Let <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> be integers with <span class="process-math">\(b&gt;0\text{.}\)</span> Then there exist unique integers <span class="process-math">\(q\)</span> and <span class="process-math">\(r\)</span> such that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a=bq+r\quad\text{and}\quad 0\leq r&lt;b
+\end{equation*}
+</div>
+</div></article><article class="hiddenproof" id="proof-171"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-171"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-171"><article class="hiddenproof"><div class="para" id="p-3421">Coming soon!</div></article></div></section><section class="subsection" id="subsec-counting"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Counting (*)</span>
 </h3>
 <article class="definition definition-like" id="def-binomial-coefficient"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">A.34</span><span class="period">.</span><span class="space"> </span><span class="title">Binomial Coefficient (*).</span>
-</h3> <div class="para" id="p-3418"></div></article><article class="theorem theorem-like" id="thm-binomial-theorem"><h3 class="heading">
+</h3> <div class="para" id="p-3422"></div></article><article class="theorem theorem-like" id="thm-binomial-theorem"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">A.35</span><span class="period">.</span><span class="space"> </span><span class="title">Binomial Theorem (*).</span>
 </h3>
-<div class="para" id="p-3419"></div></article></section><section class="subsection" id="subsec-cardinality"><h3 class="heading hide-type">
+<div class="para" id="p-3423"></div></article></section><section class="subsection" id="subsec-cardinality"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Cardinality</span>
 </h3>
 <article class="definition definition-like" id="def-cardinality"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">A.36</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-3420">A set <span class="process-math">\(X\)</span> is <em class="emphasis">finite</em> if there is a bijection <span class="process-math">\(X \to  \{1,...,n\}\)</span> for some natural number <span class="process-math">\(n\text{,}\)</span> or <span class="process-math">\(X\)</span> is empty. In this case the number <span class="process-math">\(n\)</span> is called the<em class="emphasis">cardinality</em>of <span class="process-math">\(X\text{.}\)</span>
-</div> <div class="para" id="p-3421">A set <span class="process-math">\(X\)</span> is <em class="emphasis">infinite</em> if <span class="process-math">\(X\)</span> is not finite. A set <span class="process-math">\(X\)</span> is <em class="emphasis">countable</em> if there is an injection <span class="process-math">\(X \hookrightarrow  \N\text{.}\)</span>
+<div class="para" id="p-3424">A set <span class="process-math">\(X\)</span> is <em class="emphasis">finite</em> if there is a bijection <span class="process-math">\(X \to  \{1,...,n\}\)</span> for some natural number <span class="process-math">\(n\text{,}\)</span> or <span class="process-math">\(X\)</span> is empty. In this case the number <span class="process-math">\(n\)</span> is called the<em class="emphasis">cardinality</em>of <span class="process-math">\(X\text{.}\)</span>
+</div> <div class="para" id="p-3425">A set <span class="process-math">\(X\)</span> is <em class="emphasis">infinite</em> if <span class="process-math">\(X\)</span> is not finite. A set <span class="process-math">\(X\)</span> is <em class="emphasis">countable</em> if there is an injection <span class="process-math">\(X \hookrightarrow  \N\text{.}\)</span>
 </div></article><article class="theorem theorem-like" id="thm-cardinality-equivalencies"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">A.37</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-3422">
+<div class="para logical" id="p-3426">
 <div class="para">Let <span class="process-math">\(X\)</span> be a set.</div>
 <ol class="decimal">
-<li id="li-974"><div class="para logical" id="p-3423">
-<div class="para">The following are equivalent:</div>
-<ol class="lower-alpha">
-<li id="li-975"><div class="para" id="p-3424">
-<span class="process-math">\(X\)</span> is finite.</div></li>
-<li id="li-976"><div class="para" id="p-3425">There is an onto function <span class="process-math">\(\{1,...,n\} \onto X\)</span> for some <span class="process-math">\(n \in  \N.\)</span>
-</div></li>
-<li id="li-977"><div class="para" id="p-3426">There is a one-to-one function <span class="process-math">\(X \hookrightarrow  \{1,...,n\}\)</span> for some <span class="process-math">\(n \in \N\text{.}\)</span>
-</div></li>
-</ol>
-</div></li>
 <li id="li-978"><div class="para logical" id="p-3427">
 <div class="para">The following are equivalent:</div>
 <ol class="lower-alpha">
 <li id="li-979"><div class="para" id="p-3428">
-<span class="process-math">\(X\)</span> is infinite.</div></li>
-<li id="li-980"><div class="para" id="p-3429">There is an onto function <span class="process-math">\(X \onto \N\)</span> .</div></li>
-<li id="li-981"><div class="para" id="p-3430">There is a one-to-one function <span class="process-math">\(\N  \hookrightarrow  X\text{.}\)</span>
+<span class="process-math">\(X\)</span> is finite.</div></li>
+<li id="li-980"><div class="para" id="p-3429">There is an onto function <span class="process-math">\(\{1,...,n\} \onto X\)</span> for some <span class="process-math">\(n \in  \N.\)</span>
+</div></li>
+<li id="li-981"><div class="para" id="p-3430">There is a one-to-one function <span class="process-math">\(X \hookrightarrow  \{1,...,n\}\)</span> for some <span class="process-math">\(n \in \N\text{.}\)</span>
 </div></li>
 </ol>
 </div></li>
@@ -1167,19 +1162,29 @@ window.MathJax = {
 <div class="para">The following are equivalent:</div>
 <ol class="lower-alpha">
 <li id="li-983"><div class="para" id="p-3432">
-<span class="process-math">\(X\)</span> is countable.</div></li>
-<li id="li-984"><div class="para" id="p-3433">There is an onto function <span class="process-math">\(\N  \to  X\text{.}\)</span>
+<span class="process-math">\(X\)</span> is infinite.</div></li>
+<li id="li-984"><div class="para" id="p-3433">There is an onto function <span class="process-math">\(X \onto \N\)</span> .</div></li>
+<li id="li-985"><div class="para" id="p-3434">There is a one-to-one function <span class="process-math">\(\N  \hookrightarrow  X\text{.}\)</span>
 </div></li>
-<li id="li-985"><div class="para" id="p-3434">There is an injection <span class="process-math">\(X \hookrightarrow  \N\)</span> .</div></li>
+</ol>
+</div></li>
+<li id="li-986"><div class="para logical" id="p-3435">
+<div class="para">The following are equivalent:</div>
+<ol class="lower-alpha">
+<li id="li-987"><div class="para" id="p-3436">
+<span class="process-math">\(X\)</span> is countable.</div></li>
+<li id="li-988"><div class="para" id="p-3437">There is an onto function <span class="process-math">\(\N  \to  X\text{.}\)</span>
+</div></li>
+<li id="li-989"><div class="para" id="p-3438">There is an injection <span class="process-math">\(X \hookrightarrow  \N\)</span> .</div></li>
 </ol>
 </div></li>
 </ol>
 </div></article><article class="theorem theorem-like" id="thm-cardinality-closures"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">A.38</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-3435"><ol class="decimal">
-<li id="li-986"><div class="para" id="p-3436">The class of finite sets is closed under: subsets, intersections, finite unions, and finite products.</div></li>
-<li id="li-987"><div class="para" id="p-3437">The class of countable sets is closed under: subsets, intersections, countable unions, and finite products.</div></li>
+<div class="para logical" id="p-3439"><ol class="decimal">
+<li id="li-990"><div class="para" id="p-3440">The class of finite sets is closed under: subsets, intersections, finite unions, and finite products.</div></li>
+<li id="li-991"><div class="para" id="p-3441">The class of countable sets is closed under: subsets, intersections, countable unions, and finite products.</div></li>
 </ol></div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-sets-functions.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-matrices.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

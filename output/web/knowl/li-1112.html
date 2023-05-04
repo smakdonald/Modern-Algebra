@@ -14,49 +14,14 @@
 <article class="li"><h4 class="heading">
 <span class="type">Item</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span>
 </h4>
-<div class="para">For any integer <span class="process-math">\(n \geq 1\text{,}\)</span> consider the <span class="process-math">\(\C\)</span>-vector space <span class="process-math">\(V = \{p \in \C[x] : \deg(p) \leq n - 1\}\text{.}\)</span>
-</div>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(T:V \to V\)</span> be the linear operator given by <span class="process-math">\(T(p) = xp'\)</span> (where <span class="process-math">\(p'\)</span> denotes the derivative of <span class="process-math">\(p\)</span>). Note that the change of basis matrix for this operator is given by</div>
+<div class="para">Let <span class="process-math">\(\l\)</span> be an eigenvalue of <span class="process-math">\(T\text{.}\)</span> Thus there exists some <span class="process-math">\(v\)</span> such that <span class="process-math">\(Tv=\l v\text{.}\)</span> Notice that <span class="process-math">\(p(T)v=a_nT^nv+\dots+a_0Iv=0\)</span> and <span class="process-math">\(p(\l)=a_n\l^n+\dots+a_0\text{.}\)</span> Then</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\begin{bmatrix}
-0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
-0 &amp; 1 &amp; \cdots &amp; 0 &amp; 0 \\
-\vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\
-0 &amp; 0 &amp; \cdots &amp; 0 &amp; n-1 \\   
-\end{bmatrix},
+\begin{aligned}(p(T)-p(\l I))v&amp;=p(T)v-p(\l I)v\\&amp;=(a_nT^nv+\dots+a_0Iv)-(a_n\l^nv+\dots+a_0v)\\&amp;=a_n(T^n-\l^n)v+\dots a_0(I-I)v\\&amp;=0,\end{aligned}
 \end{equation*}
 </div>
-<div class="para">with the basis <span class="process-math">\(\{1,x,\dots,x^{n-1}\}\text{.}\)</span> Thus <span class="process-math">\(\cp_A(x)\)</span> will be given by the determinant of the matrix</div>
-</div>
-<div class="para logical"><div class="displaymath process-math">
-\begin{equation*}
-\begin{bmatrix}
-x &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
-0 &amp; x-1 &amp; \cdots &amp; 0 &amp; 0 \\
-\vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\
-0 &amp; 0 &amp; \cdots &amp; 0 &amp; x-(n-1) \\   
-\end{bmatrix},
-\end{equation*}
-</div></div>
-<div class="para logical">
-<div class="para">which is diagonal. Hence</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\cp_AT(x)=\displaystyle\prod_{i=0}^{n-1}(x-i).
-\end{equation*}
-</div>
-<div class="para">Thus <span class="process-math">\(\cp_AT(x)\)</span> factors into distinct linear polynomials, each of which is in the form <span class="process-math">\((x-i)\)</span> for <span class="process-math">\(0\leq i\leq n-1\text{.}\)</span> Thus each linear term is an elementary divisor, making each Jordan block a <span class="process-math">\(1\times1\)</span> matrix with <span class="process-math">\(i\)</span> as the only entry. Thus the Jordan Canonical form is</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{bmatrix}
-0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
-0 &amp; 1 &amp; \cdots &amp; 0 &amp; 0 \\
-\vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\
-0 &amp; 0 &amp; \cdots &amp; 0 &amp; n-1 \\   
-\end{bmatrix}.
-\end{equation*}
+<div class="para">making <span class="process-math">\(p(\l)\)</span> an eigenvalue of <span class="process-math">\(p(T)\text{.}\)</span>
 </div>
 </div></article><span class="incontext"><a href="section-71.html#li-1112" class="internal">in-context</a></span>
 </body>

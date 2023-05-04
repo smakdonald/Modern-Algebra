@@ -10,14 +10,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like"><div class="para logical">
-<div class="para">Let <span class="process-math">\(p = x^6 + 3 \in \Q[x]\text{,}\)</span> and let <span class="process-math">\(L\)</span> be its splitting field over <span class="process-math">\(\Q\)</span> and suppose <span class="process-math">\(\a\)</span> is a root of <span class="process-math">\(p\text{.}\)</span> Note that <span class="process-math">\((\frac{\a^3+1}{2})^2=\frac{\a^3-1}{2}\text{,}\)</span> and so</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\left(\frac{\a^3+1}{2}\right)^6=\left(\left(\frac{\a^3+1}{2}\right)^2\right)^3=\left(\frac{\a^3-1}{2}\right)^3=1,
-\end{equation*}
+<body class="ignore-math"><div class="solution solution-like">
+<div class="para">Proof. Let <span class="process-math">\(G\)</span> be a group acting transitively on a set <span class="process-math">\(S\text{.}\)</span>
+</div> <div class="para logical"><ol class="decimal">
+<li>
+<div class="para">The action is transitive, so there exists some <span class="process-math">\(g\in G\)</span> such that <span class="process-math">\(ga=b\text{.}\)</span>
 </div>
-<div class="para">making <span class="process-math">\(\a\)</span> a primitive sixth root of unity. By squaring primitive sixth roots of unity over and over we get all of the other sixth roots of unity as well, and so <span class="process-math">\(e^{2\pi i/6}\in L\text{.}\)</span> Thus we have all the roots of <span class="process-math">\(p\text{,}\)</span> and so <span class="process-math">\(L=\Q(a)\)</span> and <span class="process-math">\([L:\Q]=6\text{.}\)</span>
+<div class="para">Let <span class="process-math">\(x\in\Stab(a)\text{,}\)</span> consider <span class="process-math">\(gxg\inv\)</span>b. Since <span class="process-math">\(g\inv b=a\text{,}\)</span> we have <span class="process-math">\(gxa\text{,}\)</span> <span class="process-math">\(x\)</span> stabilizes <span class="process-math">\(a\)</span> so now <span class="process-math">\(ga\text{,}\)</span> but <span class="process-math">\(ga=b\text{.}\)</span> So <span class="process-math">\(g\Stab(a)g\inv\subseteq\Stab(b)\text{.}\)</span>
 </div>
-</div></div></body>
+<div class="para">Let <span class="process-math">\(x\in\Stab(b)\text{.}\)</span> We know <span class="process-math">\(xb=b\)</span> and also <span class="process-math">\(ga=b\text{,}\)</span> and so <span class="process-math">\(xga=ga\text{.}\)</span> Applying <span class="process-math">\(g\inv\)</span> to both to see <span class="process-math">\(g\inv xga=a\text{.}\)</span> This puts <span class="process-math">\(g\inv xg\in\Stab(a)\text{.}\)</span> Thus <span class="process-math">\(x\in g\Stab(a)g\inv\text{,}\)</span> completing the proof.</div>
+</li>
+<li><div class="para">The action is transitive, so there is only one orbit, and so <span class="process-math">\(\Orb(a)=\Orb(b)=G\text{.}\)</span> Since <span class="process-math">\(G\)</span> is finite, the <a href="" class="xref" data-knowl="./knowl/cor-orbit-stabilizer.html" title="Corollary 5.29: Orbit-Stabilizer Theorem">Orbit-Stabilizer Theorem</a> tells us <span class="process-math">\(|\Orb(a)|=|G|/|\Stab(a)|\text{.}\)</span> Since every orbit has the same order as <span class="process-math">\(G\text{,}\)</span> we see <span class="process-math">\(\Stab(a)=\{e\}\)</span> for all <span class="process-math">\(a\in S\text{.}\)</span> Thus there cannot exist any fixed points.</div></li>
+</ol></div>
+</div></body>
 </html>
