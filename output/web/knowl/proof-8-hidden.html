@@ -10,21 +10,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para">Recall that the elements of <span class="process-math">\(D_{2n}\)</span> are <span class="process-math">\(e, r, \dots, r^{n-1}, s, rs, \dots, r^{n-1}s\)</span> and that this list has no repetitions. Given <span class="process-math">\(G\text{,}\)</span> <span class="process-math">\(x\text{,}\)</span> and <span class="process-math">\(y\text{,}\)</span> if <span class="process-math">\(f\)</span> exists it is clearly unique, since we have <span class="process-math">\(f(r^i) = f(r)^i = x^i\)</span> and <span class="process-math">\(f(r^is) = f(r)^if(s) = x^iy\text{,}\)</span> so that the value of <span class="process-math">\(f\)</span> on every element of <span class="process-math">\(G\)</span> is determined by its values on just <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{.}\)</span>
-</div> <div class="para logical">
-<div class="para">To prove existence, define a function <span class="process-math">\(f: D_{2n} \to G\)</span> by <span class="process-math">\(f(r^i) = x^i\)</span> for <span class="process-math">\(0 \leq i \leq n-1\)</span> and <span class="process-math">\(f(r^is) = x^is\)</span> for <span class="process-math">\(0 \leq i \leq n-1\text{.}\)</span> Then one may painstakenly checks that <span class="process-math">\(f(ab) = f(a)f(b)\)</span> in each of the cases <span class="process-math">\(a = r^j, b= r^i\)</span> or <span class="process-math">\(a = r^j, b = r^is\)</span> or <span class="process-math">\(a = r^js, b = r^i\)</span> or <span class="process-math">\(a = r^js, b = r^is\text{.}\)</span> For example, using that <span class="process-math">\(sr^i = r^{-i}s\text{,}\)</span> we have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-f((r^js)(r^i)) = f(r^j(sr^i) = f(r^{j-i}s) = x^{j-i}y
-\end{equation*}
-</div>
-<div class="para">and</div>
-<div class="displaymath process-math">
-\begin{equation*}
-f(r^js)f(r^i)) = x^jy x^i =x^j x^{-i} y = x^{j-i} y.
-\end{equation*}
-</div>
-<div class="para">For the last string of equalities, we have used that, since <span class="process-math">\(yxy = x^{-1}\text{,}\)</span> we have <span class="process-math">\(yx^i = x^{-i} y\)</span> in <span class="process-math">\(G\)</span> too. Note also that <span class="process-math">\(j-i\)</span> might be negative, in which case <span class="process-math">\(r^{j-i}\)</span> is really <span class="process-math">\(r^{n+j-i}\)</span> and so really we would have <span class="process-math">\(f(r^{j-i}s) = x^{n+j-i}y\text{.}\)</span> But this is OK since <span class="process-math">\(x^{j-i} = x^{n+j-i}\)</span> too, since <span class="process-math">\(x^n = e\text{.}\)</span>
-</div>
-</div> <div class="para">I'll skip the verifications of the other three cases.</div></article></body>
+<body class="ignore-math"><article class="hiddenproof"><div class="para logical"><ol class="decimal">
+<li><div class="para">
+<span class="process-math">\(\Rightarrow\)</span> is immediate from the definitions (since <span class="process-math">\(e_G \in \operatorname{ker}(f)\)</span> for all homomorphisms <span class="process-math">\(f\)</span>). If <span class="process-math">\(\operatorname{ker}(f) = \{e_G\}\)</span> and <span class="process-math">\(f(h) = f(h')\)</span> then <span class="process-math">\(f(h^{-1}h') = f(h)^{-1}f(h') = e_H\)</span> and thus <span class="process-math">\(h^{-1}h' = e_G\)</span> which implies <span class="process-math">\(h = h'\text{.}\)</span>
+</div></li>
+<li><div class="para">This is identical to <a href="" class="xref" data-knowl="./knowl/surjective-iff-image.html" title="Exploration A.13: Surjective iff Image is Codomain">Exploration A.13</a>, the homomorphism aspect adds nothing of interest.</div></li>
+</ol></div></article></body>
 </html>

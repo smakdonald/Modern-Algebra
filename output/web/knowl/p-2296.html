@@ -12,7 +12,17 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Let <span class="process-math">\(F = \Z/p\)</span> be the field with <span class="process-math">\(p\)</span> elements for some prime <span class="process-math">\(p\text{.}\)</span> Up to similarity, how many <span class="process-math">\(4 \times 4\)</span> matrices are there with entries in <span class="process-math">\(F\text{?}\)</span>
+<div class="para logical">
+<div class="para">Method I: Do row and column operations using the generalized Euclidean algorithm:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{bmatrix} x-1 &amp; -1 \\ 0 &amp; x-1  \end{bmatrix} \mapsto
+\begin{bmatrix} x-1 &amp; -1 \\ (x-1)^2 &amp; 0   \end{bmatrix} \mapsto
+\begin{bmatrix} 0 &amp; -1 \\ (x-1)^2 &amp; 0   \end{bmatrix} \mapsto
+\begin{bmatrix} 1 &amp; 0 \\ 0 &amp; (x-1)^2  \end{bmatrix}.
+\end{equation*}
+</div>
+<div class="para">Tossing out the unit, we see that the only invariant factor is <span class="process-math">\((x-1)^2\text{,}\)</span> as before.</div>
 </div>
 <span class="incontext"><a href="sec-rcf.html#p-2296" class="internal">in-context</a></span>
 </body>

@@ -13,15 +13,19 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">{} Let <span class="process-math">\(g:M\to N\)</span> be another <span class="process-math">\(R\)</span>-module homomorphism such that <span class="process-math">\(g(b)=g(b)\)</span> for each <span class="process-math">\(b \in B\text{.}\)</span> Given <span class="process-math">\(m \in M\)</span> we have <span class="process-math">\(m = \sum_{b \in B} r_b b\)</span> and hence</div>
+<div class="para">Next, I claim that there is an isomorphism</div>
 <div class="displaymath process-math">
 \begin{equation*}
-g(m) = \sum_b g(r_b (b)  = \sum_b r_b g(b)  = 
-\sum_b r_b j(b) = f(m).
+R^n/IR^n \cong (R/I)^n
 \end{equation*}
 </div>
-<div class="para">and hence <span class="process-math">\(g = f\text{.}\)</span>
+<div class="para">of <span class="process-math">\(R/I\)</span>-modules. Define <span class="process-math">\(R^n \to (R/I)^n\)</span> in the evident way (modding out by <span class="process-math">\(I\)</span> entry-wise). It is a surjective map of <span class="process-math">\(R\)</span>-modules with kernel <span class="process-math">\(I R^n\)</span> and thus, by the First Isomorphism Theorem, it induces an isomorphism</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g: R^n/I R^n \xra{\cong} (R/I)^n
+\end{equation*}
 </div>
+<div class="para">given by <span class="process-math">\(g((r_1, \dots, r_n)^\tau + IR^n) = (r_1 + I, \dots, r_n + I)^\tau\)</span> (where <span class="process-math">\(\tau\)</span> denotes taking the transpose). Now, what we have said so far only shows that <span class="process-math">\(g\)</span> is isomorphism of <span class="process-math">\(R\)</span>-modules, but it is easy to see that <span class="process-math">\(g\)</span> is in fact <span class="process-math">\(R/I\)</span>-linear (I'll leave that to you) and thus it is an isomorphism of <span class="process-math">\(R/I\)</span>-modules.</div>
 </div>
 <span class="incontext"><a href="sec-bases.html#p-1807" class="internal">in-context</a></span>
 </body>
