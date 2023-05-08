@@ -12,8 +12,18 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Let <span class="process-math">\(H\)</span> and <span class="process-math">\(K\)</span> be groups. (a) Show that the direct product group <span class="process-math">\(\Aut(H)\times \Aut(K)\)</span> is isomorphic to a subgroup of <span class="process-math">\(\Aut(H\times K)\text{.}\)</span> (b) Give an example, with justification, of groups <span class="process-math">\(H\)</span> and <span class="process-math">\(K\)</span> for which <span class="process-math">\(\Aut(H) \times\Aut(K)\)</span> is not isomorphic to <span class="process-math">\(\Aut(H\times K)\text{.}\)</span>
+<div class="para logical"><ol class="decimal">
+<li>
+<div class="para">First, let <span class="process-math">\(\psi\in\Aut(H)\)</span> and <span class="process-math">\(\phi\in\Aut(K)\text{.}\)</span> Let <span class="process-math">\(\varphi:H\times K\to H\times K\)</span> be defined by <span class="process-math">\(\varphi(h,k)=(\psi(h),\phi(k))\text{.}\)</span> Let <span class="process-math">\((h,k)\in H\times K\text{.}\)</span> As <span class="process-math">\(\psi,\phi\)</span> automorphisms, there exist <span class="process-math">\(h',k'\)</span> such that <span class="process-math">\(\psi(h')=h\)</span> and <span class="process-math">\(\phi(k')=k\text{.}\)</span> Thus we have surjectivity, and hence bijectivity, given the equal cardinalities. The homomorphism element is verifiable, I'll do it later. Thus <span class="process-math">\(\varphi\)</span> is indeed an automorphism of <span class="process-math">\(H\times K\text{.}\)</span>
 </div>
-<span class="incontext"><a href="section-77.html#p-4085" class="internal">in-context</a></span>
+<div class="para">Define <span class="process-math">\(f:\Aut(H)\times \Aut(K)\to\Aut(H\times K)\)</span> by <span class="process-math">\(f(\psi,\phi)=\varphi\text{.}\)</span> Suppose two elements map to the same place. Then they were the same! Thus, by the First Isomorphism, we have the result.</div>
+</li>
+<li>
+<div class="para">Let <span class="process-math">\(H = K = \mathbb{Z}_2\text{,}\)</span> the cyclic group of order <span class="process-math">\(2\text{.}\)</span> Then <span class="process-math">\(\Aut(H) \cong \mathbb{Z}_2\)</span> since there is only one non-identity automorphism (namely, the map that sends the generator to its inverse), and <span class="process-math">\(\Aut(K) \cong \mathbb{Z}_2\)</span> for the same reason. Therefore, <span class="process-math">\(\Aut(H) \times \Aut(K) \cong \mathbb{Z}_2 \times \mathbb{Z}_2\text{,}\)</span> which is abelian.</div>
+<div class="para">On the other hand, <span class="process-math">\(H\times K \cong \mathbb{Z}_2\times\mathbb{Z}_2\)</span> is also abelian. Let <span class="process-math">\(\varphi\)</span> be the nontrivial automorphism of <span class="process-math">\(\mathbb{Z}_2\text{,}\)</span> which sends <span class="process-math">\(0\)</span> to <span class="process-math">\(1\)</span> and <span class="process-math">\(1\)</span> to <span class="process-math">\(0\text{.}\)</span> Then the automorphism <span class="process-math">\((g,h) \mapsto (\varphi(g), \varphi(h))\)</span> is nontrivial and sends <span class="process-math">\((0,0)\)</span> to itself, so it is an automorphism of <span class="process-math">\(H\times K\text{.}\)</span> Therefore, <span class="process-math">\(\Aut(H\times K)\)</span> contains a nonabelian subgroup, and in particular <span class="process-math">\(\Aut(H) \times \Aut(K)\)</span> is not isomorphic to <span class="process-math">\(\Aut(H\times K)\text{.}\)</span>
+</div>
+</li>
+</ol></div>
+<span class="incontext"><a href="section-78.html#p-4085" class="internal">in-context</a></span>
 </body>
 </html>

@@ -19090,7 +19090,7 @@
               </p>
 
               <p>
-                However, as <m>g^k=1</m> for all <m>g\in G</m> we know that <m>g</m> is the root of the polynomial <m>f(x)=x^k-1</m> in <m>F[x]</m>. By the [[Mathematics/Number Theory/Results/Lemma - Factor Theorem|Factor Theorem]] there are thus at most <m>k</m> roots of <m>f</m>, but there are <m>n</m> distinct roots. Thus <m>k=n</m>.
+                However, as <m>g^k=1</m> for all <m>g\in G</m> we know that <m>g</m> is the root of the polynomial <m>f(x)=x^k-1</m> in <m>F[x]</m>. By the <xref text="title" ref="thm-factor-thm"/> there are thus at most <m>k</m> roots of <m>f</m>, but there are <m>n</m> distinct roots. Thus <m>k=n</m>.
               </p>
 
               <p>
@@ -19202,7 +19202,7 @@
               </p>
 
               <p>
-                However, as <m>g^k=1</m> for all <m>g\in G</m> we know that <m>g</m> is the root of the polynomial <m>f(x)=x^k-1</m> in <m>F[x]</m>. By the [[Mathematics/Number Theory/Results/Lemma - Factor Theorem|Factor Theorem]] there are thus at most <m>k</m> roots of <m>f</m>, but there are <m>n</m> distinct roots. Thus <m>k=n</m>.
+                However, as <m>g^k=1</m> for all <m>g\in G</m> we know that <m>g</m> is the root of the polynomial <m>f(x)=x^k-1</m> in <m>F[x]</m>. By the <xref text="title" ref="thm-factor-thm"/> there are thus at most <m>k</m> roots of <m>f</m>, but there are <m>n</m> distinct roots. Thus <m>k=n</m>.
               </p>
 
               <p>
@@ -19868,7 +19868,7 @@
     
             <example xml:id="exe-rwc-for-all-wnotinr">
               <p>
-                Say <m>F \subseteq L</m> is a field extension of prime degree <m>p</m>. Given <m>w \in L \setminus F</m>, by the Degree Formula <xref provisional="empty"/> we have <m>[L:F(w)][F(w):F] = [L:F] = p</m>. Since <m>w \notin F</m>, <m>F \subsetneq F(w)</m> and so <m>[F(w): F] &gt; 1</m>. It follows that <m>[L: F(w)] = 1</m>, whence <m>L = F(w)</m>. As a (very simple) example of this, since <m>[\C: \R]</m> is prime, <m>\R(w) = \C</m> for any complex number <m>w</m> that is not real.
+                Say <m>F \subseteq L</m> is a field extension of prime degree <m>p</m>. Given <m>w \in L \setminus F</m>, by the <xref text="title" ref="thm-degree-formula"/> we have <m>[L:F(w)][F(w):F] = [L:F] = p</m>. Since <m>w \notin F</m>, <m>F \subsetneq F(w)</m> and so <m>[F(w): F] &gt; 1</m>. It follows that <m>[L: F(w)] = 1</m>, whence <m>L = F(w)</m>. As a (very simple) example of this, since <m>[\C: \R]</m> is prime, <m>\R(w) = \C</m> for any complex number <m>w</m> that is not real.
               </p>
             </example>
     
@@ -19890,11 +19890,11 @@
               </p>
     
               <p>
-                By the degree formula <xref provisional="empty"/> we conclude that 
+                By the <xref text="title" ref="thm-degree-formula"/> <xref provisional="empty"/> we conclude that 
                 <me>
                     [F: \Q] = [F:L][L:\Q] = 2 \cdot 4 = 8.
                 </me> 
-                Note that, in hindsight, it must have been true that <m>x^4 - 5</m> is irreducible in <m>\Q(i)[x]</m>, since otherwise the degree formula would give that <m>[F: \Q] &lt; 8</m>.
+                Note that, in hindsight, it must have been true that <m>x^4 - 5</m> is irreducible in <m>\Q(i)[x]</m>, since otherwise the <xref text="title" ref="thm-degree-formula"/> would give that <m>[F: \Q] &lt; 8</m>.
               </p>
             </example>
     
@@ -19915,7 +19915,7 @@
                 </p>
     
                 <p>
-                  However, by the Degree Formula <xref provisional="empty"/> <m>[K:F]=[K:F(b)][F(b):F(b^2)][F(b^2):F]</m>, which is a problem, given <m>2</m> now divides <m>[K:F]</m>, an odd number. Thus <m>F (b) = F (b^2)</m>. 
+                  However, by the <xref text="title" ref="thm-degree-formula"/> <xref provisional="empty"/> <m>[K:F]=[K:F(b)][F(b):F(b^2)][F(b^2):F]</m>, which is a problem, given <m>2</m> now divides <m>[K:F]</m>, an odd number. Thus <m>F (b) = F (b^2)</m>. 
                 </p>
               </proof>
             </proposition>
@@ -19937,7 +19937,7 @@
     
               <proof>
                 <p>
-                  Pick <m>\a \in L</m>. Since <m>F(\a)</m> is a <m>F</m>-vector subspace of <m>L</m> and <m>\dim_F(L) = [L: F] &lt; \infty</m> we have <m>[F(\a): F] &lt; \infty</m>. (One could also appeal to the Degree Formula <xref provisional="empty"/> for this.) So by (4) of Theorem <xref provisional="empty"/>, <m>\a</m> is algebraic of <m>F</m>.
+                  Pick <m>\a \in L</m>. Since <m>F(\a)</m> is a <m>F</m>-vector subspace of <m>L</m> and <m>\dim_F(L) = [L: F] &lt; \infty</m> we have <m>[F(\a): F] &lt; \infty</m>. (One could also appeal to the <xref text="title" ref="thm-degree-formula"/> <xref provisional="empty"/> for this.) So by (4) of Theorem <xref provisional="empty"/>, <m>\a</m> is algebraic of <m>F</m>.
                 </p>
               </proof>
             </proposition>
@@ -19972,7 +19972,7 @@
                 </p>
     
                 <p>
-                  Suppose that <m>K/F</m> and <m>L/K</m> are algebraic extensions. Let <m>\a\in L</m>. Then <m>\a</m> is the root of the polynomial<me>f(x)=a_nx^n+\dots+a_0,</me>with <m>a_{i}\in K</m>. Notice that <m>f</m> is a polynomial in <m>F(a_n,\dots,a_0)[x]</m>, making <m>\a</m> is algebraic over this as well. Consider the chain of field extensions <me>F \subseteq F(a_0) \subseteq F(a_0,a_1) \subseteq \cdots \subseteq F(a_0, a_1, \dots, a_{n-1} )\subseteq F(a_0, \dots, a_{n}, \a)</me> Since <m>a_i</m> is algebraic over <m>F</m> for all <m>i</m> and <m>\a</m> is algebraic over <m>F(a_0, a_1, \dots, a_{n})</m>, by Theorem each step in this chain has finite degree. By the Degree Formula, <m>[F(a_0, \dots, a_{n}, \a): F]</m> is finite and thus so is <m>[F(\a):F]</m>. By the Theorem again, <m>\a</m> is algebraic over <m>F</m>.
+                  Suppose that <m>K/F</m> and <m>L/K</m> are algebraic extensions. Let <m>\a\in L</m>. Then <m>\a</m> is the root of the polynomial<me>f(x)=a_nx^n+\dots+a_0,</me>with <m>a_{i}\in K</m>. Notice that <m>f</m> is a polynomial in <m>F(a_n,\dots,a_0)[x]</m>, making <m>\a</m> is algebraic over this as well. Consider the chain of field extensions <me>F \subseteq F(a_0) \subseteq F(a_0,a_1) \subseteq \cdots \subseteq F(a_0, a_1, \dots, a_{n-1} )\subseteq F(a_0, \dots, a_{n}, \a)</me> Since <m>a_i</m> is algebraic over <m>F</m> for all <m>i</m> and <m>\a</m> is algebraic over <m>F(a_0, a_1, \dots, a_{n})</m>, by Theorem each step in this chain has finite degree. By the <xref text="title" ref="thm-degree-formula"/>, <m>[F(a_0, \dots, a_{n}, \a): F]</m> is finite and thus so is <m>[F(\a):F]</m>. By the Theorem again, <m>\a</m> is algebraic over <m>F</m>.
                 </p>
     
                 <p>
@@ -20129,7 +20129,7 @@
                 </p>
     
                 <p>
-                    First, note that if <m>d=1</m> then <m>f(x)</m> will remain irreducible in <m>K[x]</m> <xref provisional="empty"/>. Suppose then that <m>d&gt;1</m>. There exists an algebraically closed extension <m>\widetilde F</m> such that <m>f</m> has a root <m>r</m> <xref provisional="empty"/>. Consider <m>K(r)</m>. As <m>r</m> is algebraic in <m>K(r)</m> we know there exists some unique irreducible minimum polynomial <m>g</m> of degree <m>q</m>, and thus that <m>[K(r):K]=q</m> <xref provisional="empty"/>. Using the Degree Formula <xref provisional="empty"/> we see that <me>[K(r):F]=[K(r):K][K:F]=qn.</me> However, <m>[K(r):F]=[K(r):F(r)][F(r):F]</m> and so <m>qn=md</m> for some <m>m\in\Z</m>, so <m>d|qn</m>. As <m>\gcd(n,d)=1</m> we must have <m>d|q</m>. But <m>q</m> was defined to be the degree of <m>g</m>, which divides <m>f</m>. As <m>d|q</m> and <m>q\leq d</m>, we see that <m>d=q</m>, so so <m>f=kg</m> for some <m>k\in F</m>. As irreducible polynomials multiplied by a constant are still irreducible, we see that <m>f</m> is indeed irreducible in <m>K[x]</m>.
+                    First, note that if <m>d=1</m> then <m>f(x)</m> will remain irreducible in <m>K[x]</m> <xref provisional="empty"/>. Suppose then that <m>d&gt;1</m>. There exists an algebraically closed extension <m>\widetilde F</m> such that <m>f</m> has a root <m>r</m> <xref provisional="empty"/>. Consider <m>K(r)</m>. As <m>r</m> is algebraic in <m>K(r)</m> we know there exists some unique irreducible minimum polynomial <m>g</m> of degree <m>q</m>, and thus that <m>[K(r):K]=q</m> <xref provisional="empty"/>. Using the <xref text="title" ref="thm-degree-formula"/> <xref provisional="empty"/> we see that <me>[K(r):F]=[K(r):K][K:F]=qn.</me> However, <m>[K(r):F]=[K(r):F(r)][F(r):F]</m> and so <m>qn=md</m> for some <m>m\in\Z</m>, so <m>d|qn</m>. As <m>\gcd(n,d)=1</m> we must have <m>d|q</m>. But <m>q</m> was defined to be the degree of <m>g</m>, which divides <m>f</m>. As <m>d|q</m> and <m>q\leq d</m>, we see that <m>d=q</m>, so so <m>f=kg</m> for some <m>k\in F</m>. As irreducible polynomials multiplied by a constant are still irreducible, we see that <m>f</m> is indeed irreducible in <m>K[x]</m>.
                 </p>
     
               <p>
@@ -20171,7 +20171,7 @@
                 </p>
     
                 <p>
-                  Next, consider the polynomial <m>x^2+1</m>. This has a root <m>i</m>, which is not in <m>\Q(\sqrt[3]{2})</m> as <m>\Q(\sqrt[3]{2})\subseteq\R</m> and <m>i\not\in\R</m>. Let <m>K=\Q(\sqrt[3]{2})</m> for convenience. As <m>x^2+1</m>, has degree 2, it is irreducible by Theorem 2.2 <xref provisional="empty"/>, making it the minimal polynomial of <m>K(i)</m>. Thus by Theorem 2.31 <xref provisional="empty"/> we see that <m>[K(i):K]=2</m>. Thus by the degree formula <xref provisional="empty"/> we have <m>[K(i):\Q]=[K(i):K][K:\Q]=2(2)=4</m>.
+                  Next, consider the polynomial <m>x^2+1</m>. This has a root <m>i</m>, which is not in <m>\Q(\sqrt[3]{2})</m> as <m>\Q(\sqrt[3]{2})\subseteq\R</m> and <m>i\not\in\R</m>. Let <m>K=\Q(\sqrt[3]{2})</m> for convenience. As <m>x^2+1</m>, has degree 2, it is irreducible by Theorem 2.2 <xref provisional="empty"/>, making it the minimal polynomial of <m>K(i)</m>. Thus by Theorem 2.31 <xref provisional="empty"/> we see that <m>[K(i):K]=2</m>. Thus by the <xref text="title" ref="thm-degree-formula"/> <xref provisional="empty"/> we have <m>[K(i):\Q]=[K(i):K][K:\Q]=2(2)=4</m>.
                 </p>
     
                 <p>
@@ -20179,7 +20179,7 @@
                 </p>
     
                 <p>
-                  Next, consider the polynomial <m>x^2+1</m>. This has a root <m>i</m>, which is not in <m>\Q(\sqrt[3]{2})</m> as <m>\Q(\sqrt[3]{2})\subseteq\R</m> and <m>i\not\in\R</m>. Let <m>L=\Q(\sqrt[3]{2})</m> for convenience. As <m>x^2+1</m>, has degree 2, it is irreducible by Theorem 2.2 <xref provisional="empty"/>, making it the minimal polynomial of <m>L(i)</m>. Thus by Theorem 2.31 <xref provisional="empty"/> we see that <m>[L(i):L]=2</m>. Thus by the degree formula <xref provisional="empty"/> we have <m>[L(i):\Q]=[L(i):L][L:\Q]=2(3)=6</m>.
+                  Next, consider the polynomial <m>x^2+1</m>. This has a root <m>i</m>, which is not in <m>\Q(\sqrt[3]{2})</m> as <m>\Q(\sqrt[3]{2})\subseteq\R</m> and <m>i\not\in\R</m>. Let <m>L=\Q(\sqrt[3]{2})</m> for convenience. As <m>x^2+1</m>, has degree 2, it is irreducible by Theorem 2.2 <xref provisional="empty"/>, making it the minimal polynomial of <m>L(i)</m>. Thus by Theorem 2.31 <xref provisional="empty"/> we see that <m>[L(i):L]=2</m>. Thus by the <xref text="title" ref="thm-degree-formula"/> <xref provisional="empty"/> we have <m>[L(i):\Q]=[L(i):L][L:\Q]=2(3)=6</m>.
                 </p>
     
                 <p>
@@ -20246,7 +20246,7 @@
                 </p>
     
                 <p>
-                  Note that <m>i</m> is the root of <m>x^2+1</m>, and since <m>F\subseteq\R</m> and <m>i\not\in\R</m>, we see that <m>x^2+1</m> is irreducible in <m>F</m> due to it having degree 2. As <m>x^2+1</m> is monic and degree 2 we see its the minimal polynomial of <m>[F(i):F]=2</m>. By the Degree Formula, we see that <m>[F(i):\Q]=[F(i):F][F:\Q]=(2)(4)=8</m>.
+                  Note that <m>i</m> is the root of <m>x^2+1</m>, and since <m>F\subseteq\R</m> and <m>i\not\in\R</m>, we see that <m>x^2+1</m> is irreducible in <m>F</m> due to it having degree 2. As <m>x^2+1</m> is monic and degree 2 we see its the minimal polynomial of <m>[F(i):F]=2</m>. By the <xref text="title" ref="thm-degree-formula"/>, we see that <m>[F(i):\Q]=[F(i):F][F:\Q]=(2)(4)=8</m>.
                 </p>
     
                 <p>
@@ -20294,7 +20294,7 @@
                 </p>
     
                 <p>
-                  Next, note that <m>\sqrt[p]{2}</m> is a root of the polynomial <m>x^p-2</m>, making it algebraic over <m>\Q</m>. Using Eisenstein's Criterion in conjunction with the prime <m>q=2</m> we see that <m>x^p-2</m> is irreducible in <m>\Q[x]</m>. As <m>\gcd(p,p-1)=1</m>, by Problem 5 on the previous homework we see that <m>x^p-2</m> is irreducible in <m>\Q(\sqrt[p]{2})</m> as well. As <m>x^p-2</m> is irreducible and monic, we see that it is the minimal polynomial of <m>\sqrt[p]{2}</m> in <m>\Q(e^{2\pi i/p})[x]</m>, and thus <me>[\Q(e^{2\pi i/p},\sqrt[p]{2}):\Q(e^{2\pi i/p})]=p.</me> Using the degree formula, we see that <me>[\Q(\sqrt[p]{2},e^{2\pi i/p}):\Q]=[\Q(e^{2\pi i/p},\sqrt[p]{2}):\Q(e^{2\pi i/p})][\Q(\sqrt[p]{2}):\Q]=p(p-1).</me> Notice that <m>\sqrt[p]{2}\cdot (e^{{2\pi i/p}^n})</m>, where <m>1\leq n\leq p</m>, which are all roots of <m>x^p-2</m>. By the Factor Theorem, there can be no other roots of this polynomial. Thus <m>L\subseteq\Q(\sqrt[p]{2},e^{2\pi i/p})</m>.
+                  Next, note that <m>\sqrt[p]{2}</m> is a root of the polynomial <m>x^p-2</m>, making it algebraic over <m>\Q</m>. Using Eisenstein's Criterion in conjunction with the prime <m>q=2</m> we see that <m>x^p-2</m> is irreducible in <m>\Q[x]</m>. As <m>\gcd(p,p-1)=1</m>, by Problem 5 on the previous homework we see that <m>x^p-2</m> is irreducible in <m>\Q(\sqrt[p]{2})</m> as well. As <m>x^p-2</m> is irreducible and monic, we see that it is the minimal polynomial of <m>\sqrt[p]{2}</m> in <m>\Q(e^{2\pi i/p})[x]</m>, and thus <me>[\Q(e^{2\pi i/p},\sqrt[p]{2}):\Q(e^{2\pi i/p})]=p.</me> Using the <xref text="title" ref="thm-degree-formula"/>, we see that <me>[\Q(\sqrt[p]{2},e^{2\pi i/p}):\Q]=[\Q(e^{2\pi i/p},\sqrt[p]{2}):\Q(e^{2\pi i/p})][\Q(\sqrt[p]{2}):\Q]=p(p-1).</me> Notice that <m>\sqrt[p]{2}\cdot (e^{{2\pi i/p}^n})</m>, where <m>1\leq n\leq p</m>, which are all roots of <m>x^p-2</m>. By the Factor Theorem, there can be no other roots of this polynomial. Thus <m>L\subseteq\Q(\sqrt[p]{2},e^{2\pi i/p})</m>.
                 </p>
     
                 <p>
@@ -20755,7 +20755,7 @@
                 </p>
     
                 <p>
-                  Let <m>\a\in K</m>. Thus <m>\a</m> is the root of a polynomial <m>f(x)=a_nx^n+\dots+a_0</m>, where <m>a_{i}\in F</m>. Notice that <m>f</m> is a polynomial in <m>F(a_n,\dots,a_0)</m> as well, and thus <m>\a</m> is algebraic over this extension as well. Consider the chain of extensions <me>F \subseteq F(a_0) \subseteq F(a_0,a_1) \subseteq \cdots \subseteq F(a_0, a_1, \dots, a_{n-1} )\subseteq F(a_0, \dots, a_{n}, \a).</me>As <m>a_i</m> is algebraic over <m>F</m> for all <m>i</m> and <m>\a</m> is algebraic over <m>F(a_0,\dots,a_n)[x]</m> we see that each step in this chain has finite degree by. By the Degree Formula, <m>[F(a_0, \dots, a_{n}, \a): F]</m> is finite and thus so is <m>[F(\a):F]</m>. Thus <m>\a</m> is algebraic over <m>F</m>, hence <m>\a\in K</m>, making <m>K</m> algebraically closed.
+                  Let <m>\a\in K</m>. Thus <m>\a</m> is the root of a polynomial <m>f(x)=a_nx^n+\dots+a_0</m>, where <m>a_{i}\in F</m>. Notice that <m>f</m> is a polynomial in <m>F(a_n,\dots,a_0)</m> as well, and thus <m>\a</m> is algebraic over this extension as well. Consider the chain of extensions <me>F \subseteq F(a_0) \subseteq F(a_0,a_1) \subseteq \cdots \subseteq F(a_0, a_1, \dots, a_{n-1} )\subseteq F(a_0, \dots, a_{n}, \a).</me>As <m>a_i</m> is algebraic over <m>F</m> for all <m>i</m> and <m>\a</m> is algebraic over <m>F(a_0,\dots,a_n)[x]</m> we see that each step in this chain has finite degree by. By the <xref text="title" ref="thm-degree-formula"/>, <m>[F(a_0, \dots, a_{n}, \a): F]</m> is finite and thus so is <m>[F(\a):F]</m>. Thus <m>\a</m> is algebraic over <m>F</m>, hence <m>\a\in K</m>, making <m>K</m> algebraically closed.
                 </p>
               </proof>
             </proposition>
@@ -20763,7 +20763,7 @@
             <theorem xml:id="thm-existence-and-uniqueness-of-algebraic-closures"><title>Existence and Uniqueness of Algebraic Closures</title>
               <statement>
                 <p>
-                  For any field <m>F</m>, there exists an [[Mathematics/Definitions/Algebraic Closure|algebraic closure]] of <m>F</m>. If <m>L</m> and <m>L'</m> are two algebraic closures of the same field <m>F</m>, then there exists a field isomorphism <m>\phi: L \xra{\cong} L'</m> such that <m>\phi|_F = \id_F</m> (i.e., <m>\phi(a) = a</m> for all <m>a \in F</m>).
+                  For any field <m>F</m>, there exists an algebraic closure of <m>F</m>. If <m>L</m> and <m>L'</m> are two algebraic closures of the same field <m>F</m>, then there exists a field isomorphism <m>\phi: L \xra{\cong} L'</m> such that <m>\phi|_F = \id_F</m> (i.e., <m>\phi(a) = a</m> for all <m>a \in F</m>).
                 </p>
               </statement>
     
@@ -20793,7 +20793,7 @@
             <proposition xml:id="prop-when-set-of-algebraic-elements-closed">
               <statement>
                 <p>
-                  Let <m>L/F</m> be a [[Mathematics/Definitions/Field Extension|field extension]] and let <m>K := \{a\in L | a \text{ is algebraic over }F \}</m>. Show that if <m>L</m> is algebraically closed, then K is algebraically closed.
+                  Let <m>L/F</m> be a field extension and let <m>K := \{a\in L | a \text{ is algebraic over }F \}</m>. Show that if <m>L</m> is algebraically closed, then K is algebraically closed.
                 </p>
               </statement>
     
@@ -20807,7 +20807,7 @@
                 </p>
     
                 <p>
-                  Consider the chain of extensions <me>F \subseteq F(a_0) \subseteq F(a_0,a_1) \subseteq \cdots \subseteq F(a_0, a_1, \dots, a_{n-1} )\subseteq F(a_0, \dots, a_{n}, \a).</me>As <m>a_i</m> is algebraic over <m>F</m> for all <m>i</m> and <m>\a</m> is algebraic over <m>F(a_0,\dots,a_n)[x]</m> we see that each step in this chain has finite degree by Theorem. By the Degree Formula, <m>[F(a_0, \dots, a_{n}, \a): F]</m> is finite and thus so is <m>[F(\a):F]</m>. By the Theorem again, <m>\a</m> is algebraic over <m>F</m>. Thus <m>\a</m> is algebraic over <m>F</m>, hence <m>\a\in K</m>, making <m>K</m> algebraically closed.
+                  Consider the chain of extensions <me>F \subseteq F(a_0) \subseteq F(a_0,a_1) \subseteq \cdots \subseteq F(a_0, a_1, \dots, a_{n-1} )\subseteq F(a_0, \dots, a_{n}, \a).</me>As <m>a_i</m> is algebraic over <m>F</m> for all <m>i</m> and <m>\a</m> is algebraic over <m>F(a_0,\dots,a_n)[x]</m> we see that each step in this chain has finite degree by Theorem. By the <xref text="title" ref="thm-degree-formula"/>, <m>[F(a_0, \dots, a_{n}, \a): F]</m> is finite and thus so is <m>[F(\a):F]</m>. By the Theorem again, <m>\a</m> is algebraic over <m>F</m>. Thus <m>\a</m> is algebraic over <m>F</m>, hence <m>\a\in K</m>, making <m>K</m> algebraically closed.
                 </p>
               </proof>
             </proposition>
@@ -20840,7 +20840,7 @@
                 </p>
     
                 <p>
-                  As <m>x^4-p</m> is irreducible in <m>Q</m> (Eisenstein, <m>p=p</m>) and <m>x^4-p</m> is monic, we see that <m>[\Q(\sqrt[4]{p}):\Q]=4</m>. As <m>x^2+1</m> is irreducible and monic, we see that <m>[\Q(\sqrt[4]{p},i):\Q(\sqrt[4]{p})]=2</m>. By the Degree Formula we have <m>[\Q(\sqrt[4]{p},i):\Q]=8</m>. Note that the four roots of <m>(x^4 - p)</m> are the following: - <m>\sqrt[4]{p}</m>, - <m>-\sqrt[4]{p}</m>, - <m>\sqrt[4]{p}i,</m> and - <m>-\sqrt[4]{p}i</m>. As <m>\frac{\sqrt[4]{p}i}{\sqrt[4]{p}}=i</m>, we see that <m>\Q(\sqrt[4]{p})</m> is the splitting field of <m>F</m>. Note then that as <m>[\Q(i):\Q]=2</m> and the degree of the splitting field is 8, by the Degree Formula we see that the degree of the splitting field of <m>x^4-p</m> over <m>\Q(i)=4</m>. As <m>x^4-p</m> is monic and degree <m>4</m>, it must be the minimal polynomial of the second extension and thus irreducible in <m>\Q(i)[x]</m>.
+                  As <m>x^4-p</m> is irreducible in <m>Q</m> (Eisenstein, <m>p=p</m>) and <m>x^4-p</m> is monic, we see that <m>[\Q(\sqrt[4]{p}):\Q]=4</m>. As <m>x^2+1</m> is irreducible and monic, we see that <m>[\Q(\sqrt[4]{p},i):\Q(\sqrt[4]{p})]=2</m>. By the <xref text="title" ref="thm-degree-formula"/> we have <m>[\Q(\sqrt[4]{p},i):\Q]=8</m>. Note that the four roots of <m>(x^4 - p)</m> are the following: - <m>\sqrt[4]{p}</m>, - <m>-\sqrt[4]{p}</m>, - <m>\sqrt[4]{p}i,</m> and - <m>-\sqrt[4]{p}i</m>. As <m>\frac{\sqrt[4]{p}i}{\sqrt[4]{p}}=i</m>, we see that <m>\Q(\sqrt[4]{p})</m> is the splitting field of <m>F</m>. Note then that as <m>[\Q(i):\Q]=2</m> and the degree of the splitting field is 8, by the <xref text="title" ref="thm-degree-formula"/> we see that the degree of the splitting field of <m>x^4-p</m> over <m>\Q(i)=4</m>. As <m>x^4-p</m> is monic and degree <m>4</m>, it must be the minimal polynomial of the second extension and thus irreducible in <m>\Q(i)[x]</m>.
                 </p> 
               </proof>
             </proposition>
@@ -21103,7 +21103,7 @@
                 </p>
     
                 <p>
-                  Since <m>\a_n</m> is a root of <m>f(x)</m>, we have <m>m_{F,\a_n} \mid f(x)</m> and hence <me>[F(\a_n): F] = \deg(m_{F,\a_n})  \leq n.</me> In <m>F(\a_n)</m> we have <m>f(x) = (x-\a_n) g(x)</m> with <m>g(x) \in F(\a_n)[x]</m> and, as before, <m>L</m> is the splitting field of <m>g(x)</m> over <m>F(\a_n)</m>, so that by induction <m>[L: F(\a_n)] \leq (n-1)!</m>. By the degree formula <me>[L: F] = [L: F(\a_n)][F(\a_n): F] \leq (n-1)! \cdot n = n!.</me>
+                  Since <m>\a_n</m> is a root of <m>f(x)</m>, we have <m>m_{F,\a_n} \mid f(x)</m> and hence <me>[F(\a_n): F] = \deg(m_{F,\a_n})  \leq n.</me> In <m>F(\a_n)</m> we have <m>f(x) = (x-\a_n) g(x)</m> with <m>g(x) \in F(\a_n)[x]</m> and, as before, <m>L</m> is the splitting field of <m>g(x)</m> over <m>F(\a_n)</m>, so that by induction <m>[L: F(\a_n)] \leq (n-1)!</m>. By the <xref text="title" ref="thm-degree-formula"/> <me>[L: F] = [L: F(\a_n)][F(\a_n): F] \leq (n-1)! \cdot n = n!.</me>
                 </p>
               </proof>
             </theorem>
@@ -21116,7 +21116,7 @@
             
             <example xml:id="exe-splitting-fields-and-x3-2">
               <p>
-                The splitting field <m>L</m> of <m>x^3 -2</m> over <m>\Q</m> is <m>L = \Q(\sqrt[3]{2}, \zeta_3 \sqrt[3]{2}, \zeta_3^2 \sqrt[3]{2})</m>, where <m>\zeta_3 = e^{\frac{2 \pi i}{3}}</m>. It is not hard to see that <m>L = \Q(\sqrt[3]{2}, \zeta_3)</m>. We have <m>[\Q(\sqrt[3]{2}): \Q] = 3</m> since <m>x^3 - 2</m> is irreducible in <m>\Q[x]</m> (by Eisenstein). Since <m>\Q(\sqrt[3]{2}) \subseteq \R</m> and thus <m>\Q(\sqrt[3]{2}) \ne L</m>, the degree formula gives that <m>[L: \Q] \geq 6</m>. By the Theorem, <m>[L: \Q] \leq 6</m> and hence <m>[L: \Q] = 6</m>. (We could also have proven this without appealing to the Theorem.)
+                The splitting field <m>L</m> of <m>x^3 -2</m> over <m>\Q</m> is <m>L = \Q(\sqrt[3]{2}, \zeta_3 \sqrt[3]{2}, \zeta_3^2 \sqrt[3]{2})</m>, where <m>\zeta_3 = e^{\frac{2 \pi i}{3}}</m>. It is not hard to see that <m>L = \Q(\sqrt[3]{2}, \zeta_3)</m>. We have <m>[\Q(\sqrt[3]{2}): \Q] = 3</m> since <m>x^3 - 2</m> is irreducible in <m>\Q[x]</m> (by Eisenstein). Since <m>\Q(\sqrt[3]{2}) \subseteq \R</m> and thus <m>\Q(\sqrt[3]{2}) \ne L</m>, the <xref text="title" ref="thm-degree-formula"/> gives that <m>[L: \Q] \geq 6</m>. By the Theorem, <m>[L: \Q] \leq 6</m> and hence <m>[L: \Q] = 6</m>. (We could also have proven this without appealing to the Theorem.)
               </p>
             </example>
     
@@ -21149,7 +21149,7 @@
             <corollary xml:id="cor-porism"><title>The Porism</title>
               <statement>
                 <p>
-                  If <m>L</m> is the splitting field over <m>F</m> of an irreducible polynomial <m>f(x) \in \F[x]</m> and if <m>\a, \beta \in L</m> are any two roots of <m>f</m>, then there is a field [[Mathematics/Definitions/Automorphism|automorphism]] <m>\s: L \xra{\cong} L</m> such that <m>\s|_F = \id_F</m> and <m>\s(\a) = \beta</m>.
+                  If <m>L</m> is the splitting field over <m>F</m> of an irreducible polynomial <m>f(x) \in \F[x]</m> and if <m>\a, \beta \in L</m> are any two roots of <m>f</m>, then there is a field automorphism <m>\s: L \xra{\cong} L</m> such that <m>\s|_F = \id_F</m> and <m>\s(\a) = \beta</m>.
                 </p>
               </statement>
     
@@ -21269,7 +21269,9 @@
                 </p>
     
                 <p>
-                  Let <m>f</m> be a polynomial in <m>L[x]</m>, so <m>f=a_nx^n+\dots+a_1x+a_0</m>, with <m>a_i\in L</m>, and let <m>\a</m> be a root of <m>f</m>. There [[Theorem – Existence and Uniqueness of Algebraic Closures|exists]] some field extension <m>L\subseteq K</m> such that <m>K</m> is algebraically closed, meaning <m>\a\in K</m>. Notice that <m>\a</m> is [[Mathematics/Definitions/Algebraic|algebraic]] over <m>L(\a)</m>.
+                  Let <m>f</m> be a polynomial in <m>L[x]</m>, so <m>f=a_nx^n+\dots+a_1x+a_0</m>, with <m>a_i\in L</m>, and let <m>\a</m> be a root of <m>f</m>. There 
+                  [[Theorem – Existence and Uniqueness of Algebraic Closures|exists]] 
+                  some field extension <m>L\subseteq K</m> such that <m>K</m> is algebraically closed, meaning <m>\a\in K</m>. Notice that <m>\a</m> is algebraic over <m>L(\a)</m>.
                 </p>
     
                 <p>
@@ -21425,7 +21427,9 @@
                 </p>
     
                 <p>
-                  Notice that <m>\z</m>, a primitive <m>5</m>-th root of unity, is the root of <m>g(x)=x^4+x^3+x^2+x+1</m>, the fourth cyclotomic polynomial, which is monic and irreducible in <m>\Q[x]</m> (See: [[Proposition – Cyclotomic Polynomial Irreducible|Result]]). Thus <m>g</m> is the minimum polynomial of <m>\z</m> and <m>[F:\Q]=4</m>.
+                  Notice that <m>\z</m>, a primitive <m>5</m>-th root of unity, is the root of <m>g(x)=x^4+x^3+x^2+x+1</m>, the fourth cyclotomic polynomial, which is monic and irreducible in <m>\Q[x]</m> 
+                  (See: [[Proposition – Cyclotomic Polynomial Irreducible|Result]]). 
+                  Thus <m>g</m> is the minimum polynomial of <m>\z</m> and <m>[F:\Q]=4</m>.
                 </p>
     
                 <p>
@@ -21500,7 +21504,7 @@
                   </p>
       
                   <p>
-                    As <m>L</m> is the splitting field of <m>g</m>, there exists a root <m>\a</m> of <m>g\in L</m>. Consider <m>\Q(\sqrt[p]5,\a)</m>. As <m>\a</m> is algebraic in <m>\Q(\sqrt[p]5,\a)</m> we know there exists some unique irreducible minimal polynomial <m>h</m> of degree <m>q</m>, and thus that <m>[\Q(\sqrt[p]5,\a):\Q(\sqrt[p]5)]=q</m>. By the Degree Formula we see <me>[\Q(\sqrt[p]5,\a):\Q]=[\Q(\sqrt[p]5,\a):\Q(\sqrt[p]5][\Q(\sqrt[p]5:\Q]=pq.</me>However, <m>[\Q(\sqrt[p]5,\a):\Q]=[\Q(\sqrt[p]5,\a):\Q(\a)][\Q(\a):\Q]</m> and so <m>pq=(p-1)m</m> for some <m>m\in\Z</m>, so <m>(p-1)|pq</m>. As <m>\gcd((p-1),p)=1</m> we must have <m>(p-1)|q</m>. But <m>q</m> was defined to be the degree of <m>h</m>, which divides <m>g</m>. As <m>(p-1)|q</m> and <m>q\leq (p-1)</m>, we see that <m>(p-1)=q</m>, so <m>g=kh</m> for some <m>k\in \Q</m>. As irreducible polynomials multiplied by a constant are still irreducible, we see that <m>g</m> is indeed irreducible in <m>\Q(\sqrt[p]5)</m>.
+                    As <m>L</m> is the splitting field of <m>g</m>, there exists a root <m>\a</m> of <m>g\in L</m>. Consider <m>\Q(\sqrt[p]5,\a)</m>. As <m>\a</m> is algebraic in <m>\Q(\sqrt[p]5,\a)</m> we know there exists some unique irreducible minimal polynomial <m>h</m> of degree <m>q</m>, and thus that <m>[\Q(\sqrt[p]5,\a):\Q(\sqrt[p]5)]=q</m>. By the <xref text="title" ref="thm-degree-formula"/> we see <me>[\Q(\sqrt[p]5,\a):\Q]=[\Q(\sqrt[p]5,\a):\Q(\sqrt[p]5][\Q(\sqrt[p]5:\Q]=pq.</me>However, <m>[\Q(\sqrt[p]5,\a):\Q]=[\Q(\sqrt[p]5,\a):\Q(\a)][\Q(\a):\Q]</m> and so <m>pq=(p-1)m</m> for some <m>m\in\Z</m>, so <m>(p-1)|pq</m>. As <m>\gcd((p-1),p)=1</m> we must have <m>(p-1)|q</m>. But <m>q</m> was defined to be the degree of <m>h</m>, which divides <m>g</m>. As <m>(p-1)|q</m> and <m>q\leq (p-1)</m>, we see that <m>(p-1)=q</m>, so <m>g=kh</m> for some <m>k\in \Q</m>. As irreducible polynomials multiplied by a constant are still irreducible, we see that <m>g</m> is indeed irreducible in <m>\Q(\sqrt[p]5)</m>.
                   </p>
       
                   <p>
@@ -21744,7 +21748,7 @@
 
                   <li>
                     <p>
-                      Let <m>\overline{F}</m> be an [[Mathematics/Definitions/Algebraic Closure|algebraic closure]] of <m>F</m>. <m>\gcd_{F[x]}(f,g) = 1</m> if any only if <m>f</m> and <m>g</m> have no common roots in <m>\overline{F}</m>.
+                      Let <m>\overline{F}</m> be an algebraic closure of <m>F</m>. <m>\gcd_{F[x]}(f,g) = 1</m> if any only if <m>f</m> and <m>g</m> have no common roots in <m>\overline{F}</m>.
                     </p>
                   </li>
                 </ol> 
@@ -21769,7 +21773,7 @@
 
             <statement>
               <p>
-                Let <m>F</m> be field and <m>\ov{F}</m> an [[Mathematics/Definitions/Algebraic Closure]] of <m>F</m>. 
+                Let <m>F</m> be field and <m>\ov{F}</m> an algebraic closure of <m>F</m>. 
                 <ol>
                   <li>
                     <p>
@@ -21839,7 +21843,7 @@
 
             <statement>
               <p>
-                If <m>f(x)</m> is an irreducible polynomial with coefficients in a field of characteristic <m>0</m>, then <m>f(x)</m> is [[Mathematics/Definitions/Multiplicity|separable]]. More generally, if <m>f(x)</m> is irreducible of degree <m>n</m> and <m>\char(F) \nmid n</m>, then <m>f(x)</m> is separable.
+                If <m>f(x)</m> is an irreducible polynomial with coefficients in a field of characteristic <m>0</m>, then <m>f(x)</m> is separable. More generally, if <m>f(x)</m> is irreducible of degree <m>n</m> and <m>\char(F) \nmid n</m>, then <m>f(x)</m> is separable.
               </p>
             </statement>
             
@@ -21848,7 +21852,7 @@
           <definition xml:id="def-separable-field-extension"><title>Separable (Field Extension)</title>
             <statement>
               <p>
-                An algebraic field extension <m>F \subseteq L</m> is called <em>separable</em> if for every <m>\a \in L</m> its minimum polynomial <m>m_{\a, F}(x)</m> is [[Mathematics/Definitions/Multiplicity|separable]] (i.e., has no repeated roots in an algebraic closure of <m>F</m>).
+                An algebraic field extension <m>F \subseteq L</m> is called <em>separable</em> if for every <m>\a \in L</m> its minimum polynomial <m>m_{\a, F}(x)</m> is separable (i.e., has no repeated roots in an algebraic closure of <m>F</m>).
               </p>
             </statement>
           </definition>
@@ -21964,7 +21968,7 @@
                 
                 <statement>
                   <p>
-                    Assume <m>F</m> is field and let <m>f(x)\in F [x]</m>. Recall that <m>f (x)</m> is separable if <m>f (x)</m> has no repeated roots in an [[Mathematics/Definitions/Algebraic Closure|algebraic closure]] of <m>F</m>.
+                    Assume <m>F</m> is field and let <m>f(x)\in F [x]</m>. Recall that <m>f (x)</m> is separable if <m>f (x)</m> has no repeated roots in an algebraic closure of <m>F</m>.
                   </p>
         
                   <p><ol>
@@ -21973,7 +21977,7 @@
                     </li>
         
                     <li>
-                    Fix a prime integer <m>p</m>, let <m>\F_p</m> be the field with <m>p</m> elements, and let <m>F</m> be the [[Mathematics/Definitions/Field of Fractions|field of fractions]] of the polynomial ring <m>\F_{p}[y]</m>. Prove <m>x^p-y</m> is irreducible in <m>F[x]</m> but not separable.
+                    Fix a prime integer <m>p</m>, let <m>\F_p</m> be the field with <m>p</m> elements, and let <m>F</m> be the field of fractions of the polynomial ring <m>\F_{p}[y]</m>. Prove <m>x^p-y</m> is irreducible in <m>F[x]</m> but not separable.
                     </li>
         
                   </ol></p>
@@ -22252,7 +22256,7 @@
               </p>
   
               <p>
-                For <m>[L: F] &gt; 1</m>, pick <m>\a \in L \setminus F</m> and let <m>p(x) = m_{\a, F}(x)</m>. Consider the extension <m>F \subseteq F(\a)</m>. Note that <m>H = \Aut(L/F(\a))</m> is a subgroup of <m>G = \Aut(L/F)</m>, by definition. By induction we have <m>|H| \leq [L: F(\a)]</m>. Using the degree formula and the fact that <m>|G| = |H| \cdot [G:H]</m>, it suffices to prove <m>[G:H] \leq [F(\a):F]</m>. This follows from:
+                For <m>[L: F] &gt; 1</m>, pick <m>\a \in L \setminus F</m> and let <m>p(x) = m_{\a, F}(x)</m>. Consider the extension <m>F \subseteq F(\a)</m>. Note that <m>H = \Aut(L/F(\a))</m> is a subgroup of <m>G = \Aut(L/F)</m>, by definition. By induction we have <m>|H| \leq [L: F(\a)]</m>. Using the <xref text="title" ref="thm-degree-formula"/> and the fact that <m>|G| = |H| \cdot [G:H]</m>, it suffices to prove <m>[G:H] \leq [F(\a):F]</m>. This follows from:
               </p>
   
               <p>
@@ -22285,7 +22289,7 @@
               </p>
   
               <p>
-                For <m>[L: F] &gt; 1</m>, pick <m>\a \in L \setminus F</m> and let <m>p(x) = m_{\a, F}(x)</m>. Consider the extension <m>F \subseteq F(\a)</m>. Note that <m>H = \Aut(L/F(\a))</m> is a subgroup of <m>G = \Aut(L/F)</m>, by definition. By induction we have <m>|H| \leq [L: F(\a)]</m>. Using the degree formula and the fact that <m>|G| = |H| \cdot [G:H]</m>, it suffices to prove <m>[G:H] \leq [F(\a):F]</m>. This follows from:
+                For <m>[L: F] &gt; 1</m>, pick <m>\a \in L \setminus F</m> and let <m>p(x) = m_{\a, F}(x)</m>. Consider the extension <m>F \subseteq F(\a)</m>. Note that <m>H = \Aut(L/F(\a))</m> is a subgroup of <m>G = \Aut(L/F)</m>, by definition. By induction we have <m>|H| \leq [L: F(\a)]</m>. Using the <xref text="title" ref="thm-degree-formula"/> and the fact that <m>|G| = |H| \cdot [G:H]</m>, it suffices to prove <m>[G:H] \leq [F(\a):F]</m>. This follows from:
               </p>
   
               <p>
@@ -22325,7 +22329,7 @@
             </p>
   
             <p>
-              By the degree formula we get <m>[L: \Q(i)] = 4</m>. Since <m>L = \Q(i)(z_1)</m>, the degree of <m>m_{z_1, \Q(i)}(x)</m> must be <m>4</m>. This shows that <m>x^4 - 2</m> must remain irreducible as a polynomial in <m>\Q(i)[x]</m>; this is not obvious, but we have now proven it, and this fact will be useful in what we do next.
+              By the <xref text="title" ref="thm-degree-formula"/> we get <m>[L: \Q(i)] = 4</m>. Since <m>L = \Q(i)(z_1)</m>, the degree of <m>m_{z_1, \Q(i)}(x)</m> must be <m>4</m>. This shows that <m>x^4 - 2</m> must remain irreducible as a polynomial in <m>\Q(i)[x]</m>; this is not obvious, but we have now proven it, and this fact will be useful in what we do next.
             </p>
   
             <p>
@@ -23354,13 +23358,13 @@
                     <ol>
                       <li>
                         <p>
-                          Let <m>P</m> be a Sylow <m>2</m>-subgroup of <m>\Gal(K/F)</m>. Notice that <m>|P|=4</m>. By the FTGT there exists an intermediate field extension <m>E</m> such that <m>|\Gal(K/E)|=4</m>. By the Degree Formula, we have <m>[K:F]=[K:E][E:F]</m>, with <m>[K:F]=20</m> and <m>[K:L]=4</m>. Thus <m>[L:F]=5</m>.
+                          Let <m>P</m> be a Sylow <m>2</m>-subgroup of <m>\Gal(K/F)</m>. Notice that <m>|P|=4</m>. By the FTGT there exists an intermediate field extension <m>E</m> such that <m>|\Gal(K/E)|=4</m>. By the <xref text="title" ref="thm-degree-formula"/>, we have <m>[K:F]=[K:E][E:F]</m>, with <m>[K:F]=20</m> and <m>[K:L]=4</m>. Thus <m>[L:F]=5</m>.
                         </p>
                       </li>
     
                       <li>
                         <p>
-                          Notice that as <m>2</m> is a prime dividing the order of <m>\Gal(K/F )</m> there must exist an element of order <m>2</m> by Cauchy's Theorem. The cyclic subgroup, <m>H</m>, generated by this element has order <m>2</m>. By the FTGT there exists an intermediate field extension <m>L</m> such that <m>|\Gal(K/L)|=2</m>. By the Degree Formula, we have <m>[K:F]=[K:L][L:F]</m>, with <m>[K:F]=20</m> and <m>[K:L]=2</m>. Thus <m>[L:F]=2</m>. 
+                          Notice that as <m>2</m> is a prime dividing the order of <m>\Gal(K/F )</m> there must exist an element of order <m>2</m> by Cauchy's Theorem. The cyclic subgroup, <m>H</m>, generated by this element has order <m>2</m>. By the FTGT there exists an intermediate field extension <m>L</m> such that <m>|\Gal(K/L)|=2</m>. By the <xref text="title" ref="thm-degree-formula"/>, we have <m>[K:F]=[K:L][L:F]</m>, with <m>[K:F]=20</m> and <m>[K:L]=2</m>. Thus <m>[L:F]=2</m>. 
                         </p>
                       </li>
                     </ol>
@@ -23622,7 +23626,7 @@
                   </p>
       
                   <p>
-                    Note that as <m>45=5\cdot 9</m>, we see that the number of Sylow-<m>5</m> subgroups of <m>G</m> divides <m>9</m> and is congruent to <m>1\mod{5}</m>. Thus there is exactly one Sylow-<m>5</m> subgroup of <m>G</m>, which we denote <m>H</m>. By the Fundamental Theorem of Galois Theory, <m>H</m> corresponds to an intermediate field extension <m>E</m>. Note that as <m>H</m> has order 5, we see that <m>[G:H]=9</m>, and thus <m>[L:E]=9</m> as well. By the Degree Formula we see that <m>[L:F]=[L:E][E:F]</m>. As <m>[L:F]=45</m> and <m>[L:E]=9</m>, we see that <m>[E:F]=5</m>, as desired. As <m>E</m> corresponds to the unique subgroup of <m>G</m> or order 5, we see that this extension must be unique as well.
+                    Note that as <m>45=5\cdot 9</m>, we see that the number of Sylow-<m>5</m> subgroups of <m>G</m> divides <m>9</m> and is congruent to <m>1\mod{5}</m>. Thus there is exactly one Sylow-<m>5</m> subgroup of <m>G</m>, which we denote <m>H</m>. By the Fundamental Theorem of Galois Theory, <m>H</m> corresponds to an intermediate field extension <m>E</m>. Note that as <m>H</m> has order 5, we see that <m>[G:H]=9</m>, and thus <m>[L:E]=9</m> as well. By the <xref text="title" ref="thm-degree-formula"/> we see that <m>[L:F]=[L:E][E:F]</m>. As <m>[L:F]=45</m> and <m>[L:E]=9</m>, we see that <m>[E:F]=5</m>, as desired. As <m>E</m> corresponds to the unique subgroup of <m>G</m> or order 5, we see that this extension must be unique as well.
                   </p>
                 </solution>
               </exercise>
@@ -26334,7 +26338,8 @@
 
           <p>
             First, we show that the center of <m>G</m> is nontrivial. Suppose by way of contradiction that <m>Z(G)=\{e\}</m>. We examine the conjugacy classes of <m>G</m>. From the <xref text="title" ref="thm-class-eq"/>, we know<me>|G| = |Z(G)| + \sum_i^r |G : C_G(g_i)|.</me>Note that <m>|G|=p^n</m> for some <m>n\in\N</m>, meaning that the only divisors of <m>|G|</m> are powers of <m>p</m>. In finite groups, each conjugacy class must 
-            [[Corollary – <m>C_G(g_i) big G</m> for Finite Groups|divide]] the order of the group. By <xref text="title" ref="thm-lagrange"/>, <m>|G : C_G(g_i)|=\frac{|G|}{|C_G(g_i)|}=\frac{p^n}{p^m}=p^k</m>, where <m>m,k\in\N</m>. Since <m>|Z(G)|=1</m>, we see that <m>\sum_i^r |G : C_G(g_i)|\bigg|p^n-1</m>, which is impossible given that <m>p^{n-1} \not\mid p^n</m>. Thus <m>Z(G)\neq\{e\}</m>.
+            [[Corollary – <m>C_G(g_i) big G</m> for Finite Groups|divide]] 
+            the order of the group. By <xref text="title" ref="thm-lagrange"/>, <m>|G : C_G(g_i)|=\frac{|G|}{|C_G(g_i)|}=\frac{p^n}{p^m}=p^k</m>, where <m>m,k\in\N</m>. Since <m>|Z(G)|=1</m>, we see that <m>\sum_i^r |G : C_G(g_i)|\bigg|p^n-1</m>, which is impossible given that <m>p^{n-1} \not\mid p^n</m>. Thus <m>Z(G)\neq\{e\}</m>.
           </p>
 
           <p>
@@ -26955,7 +26960,8 @@
                 <ol>
                   <li>
                     <p>
-                      First, suppose <m>K\nsg G</m>. Let <m>H=G/K</m> (which is a group since <m>K</m> is normal in <m>G</m>) and define <m>\varphi: G\to G/K</m> such that <m>\varphi(g)=gK</m>. Let <m>k\in K</m>, and observe that <m>\varphi(k)=kK=K</m>, and so <m>k\in\ker(\varphi)</m>. Let <m>g\in\ker(\varphi)</m>, meaning that <m>\varphi(g)=K</m>, placing <m>g\in K</m>. As [[Lemma – Quotient Map is Surjective Homomorphism|quotient maps are homomorphisms]], this direction is complete.
+                      First, suppose <m>K\nsg G</m>. Let <m>H=G/K</m> (which is a group since <m>K</m> is normal in <m>G</m>) and define <m>\varphi: G\to G/K</m> such that <m>\varphi(g)=gK</m>. Let <m>k\in K</m>, and observe that <m>\varphi(k)=kK=K</m>, and so <m>k\in\ker(\varphi)</m>. Let <m>g\in\ker(\varphi)</m>, meaning that <m>\varphi(g)=K</m>, placing <m>g\in K</m>. As 
+                      [[Lemma – Quotient Map is Surjective Homomorphism|quotient maps are homomorphisms]], this direction is complete.
                     </p>
 
                     <p>
@@ -27383,7 +27389,8 @@
           <ol>
             <li>
               <p>
-                First, notice that <m>e^2=e\in H</m>. Let <m>x\in H</m>, and consider <m>x\inv</m>. Notice that <m>(x{\inv})^2=x^{-2}\in H</m>. As <m>H</m> is multiplicatively closed, we see that <m>xx^{-2}=x\inv\in H</m>. Thus <m>H</m> is a subgroup of <m>G</m> by the [[Lemma – Subgroup Tests|subgroup test]].
+                First, notice that <m>e^2=e\in H</m>. Let <m>x\in H</m>, and consider <m>x\inv</m>. Notice that <m>(x{\inv})^2=x^{-2}\in H</m>. As <m>H</m> is multiplicatively closed, we see that <m>xx^{-2}=x\inv\in H</m>. Thus <m>H</m> is a subgroup of <m>G</m> by the 
+                <xref text="title" ref="thm-subgroup-test"/>.
 
               </p>
             </li>
@@ -27418,7 +27425,7 @@
               <p>
 						First, we know that <m>G=C_{21}</m> is a group of order <m>21</m>. By <xref text="title" ref="thm-cauchy"/>, as <m>3</m> and <m>7</m> are primes dividing the order of <m>G</m> there exist elements <m>k,h</m> of orders <m>3</m>, <m>7</m>, respectively. Consider <m>K=\langle k\rangle</m> and <m>H=\langle h\rangle</m>, both of which are subgroups of <m>C_{21}</m>. By <xref text="title" ref="thm-lagrange"/> we see <m>[C_{21}:H]=3</m>, the smallest prime dividing <m>21</m>, making <m>H</m> normal in <m>G.</m> Thus <m>HK\leq G</m>, but as <m>K\cap H=\{e\}</m> we have <m>|HK|=21=|G|</m> and thus that <m>HK=G</m>. By the 
             [[Proposition – Recognition Theorem Internal Semidirect Products|Recognition Theorem]] we have <m>H\sdp_\rho K\cong G</m>, where <m>\rho:K\to\Aut(H)</m> is the 
-            [[Proposition – Permutation Representation|permutation representation]] of the action of <m>K</m> on <m>H</m> via automorphisms given by conjugation in <m>G</m>.
+            <xref text="title" ref="thm-permrep"/> of the action of <m>K</m> on <m>H</m> via automorphisms given by conjugation in <m>G</m>.
 					</p>
             </solution>
           
@@ -27454,7 +27461,7 @@
             <li>
               <p>
                 Let <m>G</m> act on <m>\Syl_p(G)</m> by conjugation, inducing the homomorphism <m>\rho: G\to S_{n_p}</m> via the 
-                [[Proposition – Permutation Representation|permutation representation]]. Notice that the order of <m>S_{n_p}</m> is conspicuously <m>n_p!</m>. The kernel of this map is a normal subgroup of <m>G</m> 
+                <xref text="title" ref="thm-permrep"/>. Notice that the order of <m>S_{n_p}</m> is conspicuously <m>n_p!</m>. The kernel of this map is a normal subgroup of <m>G</m> 
                 (See: [[Corollary – Normal iff Kernel of Homomorphism|Corollary]]). Note that since <m>G</m> is simple the only normal subgroups of <m>G</m> are the trivial subgroup and <m>G</m> itself. However, the kernel cannot be all of <m>G</m> as this would make <m>\rho</m> trivial, which cannot be the case given that our action is transitive by Part (2) of <xref text="title" ref="thm-sylow"/>. Thus <m>\ker(\rho)=\{e\}</m>, making <m>\rho</m> injective. Thus <m>|\im(\rho)|=|G|</m>. As the image is a subgroup of <m>S_{n_p}</m>, the result follows from <xref text="title" ref="thm-lagrange"/>.
               </p>
             </li>
@@ -27718,7 +27725,7 @@
 
 					<p>
 						Now suppose that the images of <m>\a</m> under elements of <m>G</m> are distinct, and suppose by way of contradiction that there exists some <m>\b\in L</m> that is not in <m>F(\a)</m>. Consider the intermediate field <m>F(\a,\b)</m>. By the 
-            [[Mathematics/Modern Algebra/Results/Theorem – Fundamental Theorem of Galois Theory|FTGT]] there exists a nontrivial subgroup of <m>G</m> whose elements fix elements of <m>F(\a,\b)</m>, including <m>\a</m>, a contradiction.
+            <xref text="title" ref="thm-ftgt"/> there exists a nontrivial subgroup of <m>G</m> whose elements fix elements of <m>F(\a,\b)</m>, including <m>\a</m>, a contradiction.
 					</p>
             </solution>
           
@@ -27994,7 +28001,7 @@
 
             <p>
               As <m>L</m> is the splitting field of <m>g</m>, there exists a root <m>\a</m> of <m>g\in L</m>. Consider <m>\Q(\sqrt[p]5,\a)</m>. As <m>\a</m> is algebraic in <m>\Q(\sqrt[p]5,\a)</m> we know there exists some unique irreducible minimal polynomial <m>h</m> of degree <m>q</m>, and thus that <m>[\Q(\sqrt[p]5,\a):\Q(\sqrt[p]5)]=q</m>. By the 
-              Degree Formula 
+              <xref text="title" ref="thm-degree-formula"/> 
               we see <me>[\Q(\sqrt[p]5,\a):\Q]=[\Q(\sqrt[p]5,\a):\Q(\sqrt[p]5][\Q(\sqrt[p]5:\Q]=pq.</me>However, <m>[\Q(\sqrt[p]5,\a):\Q]=[\Q(\sqrt[p]5,\a):\Q(\a)][\Q(\a):\Q]</m> and so <m>pq=(p-1)m</m> for some <m>m\in\Z</m>, so <m>(p-1)|pq</m>. As <m>\gcd((p-1),p)=1</m> we must have <m>(p-1)|q</m>. But <m>q</m> was defined to be the degree of <m>h</m>, which divides <m>g</m>. As <m>(p-1)|q</m> and <m>q\leq (p-1)</m>, we see that <m>(p-1)=q</m>, so <m>g=kh</m> for some <m>k\in \Q</m>. As irreducible polynomials multiplied by a constant are still irreducible, we see that <m>g</m> is indeed irreducible in <m>\Q(\sqrt[p]5)</m>.
             </p>
 
@@ -28469,7 +28476,7 @@
             </li>
 
             <li>
-            Fix a prime integer <m>p</m>, let <m>\F_p</m> be the field with <m>p</m> elements, and let <m>F</m> be the [[Mathematics/Definitions/Field of Fractions|field of fractions]] of the polynomial ring <m>\F_{p}[y]</m>. Prove <m>x^p-y</m> is irreducible in <m>F[x]</m> but not separable.
+            Fix a prime integer <m>p</m>, let <m>\F_p</m> be the field with <m>p</m> elements, and let <m>F</m> be the field of fractions of the polynomial ring <m>\F_{p}[y]</m>. Prove <m>x^p-y</m> is irreducible in <m>F[x]</m> but not separable.
             </li>
 
           </ol></p>
@@ -28829,7 +28836,7 @@
             Consider the chain of extensions <me>F \subseteq F(a_0) \subseteq F(a_0,a_1) \subseteq \cdots \subseteq F(a_0, a_1, \dots, a_{n-1} )\subseteq F(a_0, \dots, a_{n}, \a).</me>As <m>a_i</m> is algebraic over <m>F</m> for all <m>i</m> and <m>\a</m> is algebraic over <m>F(a_0,\dots,a_n)[x]</m> we see that each step in this chain has finite degree by 
             Theorem. 
             By the 
-            Degree Formula, 
+            <xref text="title" ref="thm-degree-formula"/>, 
             <m>[F(a_0, \dots, a_{n}, \a): F]</m> is finite and thus so is <m>[F(\a):F]</m>. By the 
             Theorem 
             again, <m>\a</m> is algebraic over <m>F</m>. Thus <m>\a</m> is algebraic over <m>F</m>, hence <m>\a\in K</m>, making <m>K</m> algebraically closed.
@@ -29391,11 +29398,22 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
 
             <solution>
             <p>
-            Part (a) Let <m>G</m> be a simple group of order <m>60=2^2\cdot3\cdot 5.</m> By <xref text="title" ref="thm-sylow"/> we know that <m>n_5|12</m> and that <m>n_5\equiv 1\mod{5}</m>. Thus the options for <m>n_5</m> are <m>1</m> and <m>6</m>. Since <m>G</m> is simple we see that <m>n_5=6</m>. As each Sylow <m>5</m>-subgroup of <m>G</m> has <m>4</m> unique elements of order <m>5</m> and the identity we see that the number of elements or order <m>5</m> in <m>G</m> is <m>(5-1)\cdot 6=24</m>.
+              <ol>
+                <li>
+                  <p>
+                    Let <m>G</m> be a simple group of order <m>60=2^2\cdot3\cdot 5.</m> By <xref text="title" ref="thm-sylow"/> we know that <m>n_5|12</m> and that <m>n_5\equiv 1\mod{5}</m>. Thus the options for <m>n_5</m> are <m>1</m> and <m>6</m>. Since <m>G</m> is simple we see that <m>n_5=6</m>. As each Sylow <m>5</m>-subgroup of <m>G</m> has <m>4</m> unique elements of order <m>5</m> and the identity we see that the number of elements or order <m>5</m> in <m>G</m> is <m>(5-1)\cdot 6=24</m>.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+            Suppose by way of contradiction that <m>G</m> is a simple group of order <m>30</m>. Similarly to above, <m>n_5=6</m>, yielding <m>24</m> elements of order <m>5</m>. Now, <m>n_3|10</m> and <m>n_3\equiv 1\mod{3}</m>, so <m>n_3=10</m>, yielding far too many elements to fit in <m>G</m>.
+                  </p>
+                </li>
+              </ol>
           </p>
 
           <p>
-            Part (b) Suppose by way of contradiction that <m>G</m> is a simple group of order <m>30</m>. Similarly to above, <m>n_5=6</m>, yielding <m>24</m> elements of order <m>5</m>. Now, <m>n_3|10</m> and <m>n_3\equiv 1\mod{3}</m>, so <m>n_3=10</m>, yielding far too many elements to fit in <m>G</m>.
           </p>
             </solution>
           
@@ -29429,7 +29447,9 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
           <problem><title>Problem 5</title>
             <statement>
               <p>
-            Let <m>A</m> be a <m>\Z</m>–module and let <m>n</m> be any integer. Show that there is a <m>\Z</m>-module isomorphism <me>\Hom_\Z(\Z/n\Z, A)\cong A_n, \text{ where }A_n = \{a \in A | na = 0\}</me> is a submodule of <m>A</m>. (Note: You may use the fact that <m>A_n</m> is a <m>\Z</m>–module without proof.)
+            Let <m>A</m> be a <m>\Z</m>-module and let <m>n</m> be any integer. Show that there is a <m>\Z</m>-module isomorphism 
+            <me>\Hom_\Z(\Z/n\Z, A)\cong A_n, \text{ where }A_n = \{a \in A | na = 0\}</me> 
+            is a submodule of <m>A</m>. (Note: You may use the fact that <m>A_n</m> is a <m>\Z</m>-module without proof.)
           </p>
             </statement>
 
@@ -29458,7 +29478,7 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
 
             <p>
               Recall that the invariant factors must divide all preceding invariant factors in RCF 
-              (See: [[Theorem – Rational Canonical Form|Theorem]]), and observe that <m>(x^4-1)</m> factors as <m>(x^2-1)(x^2+1)</m> and <m>(x^2-1)</m> factors as <m>(x-1)(x+1)</m>. Given this information, after some fiddling with the factors, we find four possible options for invariant factors of <m>A</m>: 
+              (See: <xref text="title" ref="thm-rcf"/>, and observe that <m>(x^4-1)</m> factors as <m>(x^2-1)(x^2+1)</m> and <m>(x^2-1)</m> factors as <m>(x-1)(x+1)</m>. Given this information, after some fiddling with the factors, we find four possible options for invariant factors of <m>A</m>: 
               <ul>
                 <li>
                   <p>
@@ -29567,20 +29587,29 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
             </p>
 
             <p>
-              Part (a) First, notice that by Eisenstein's Criterion (<m>p=p</m>) we have <m>f</m> irreducible in <m>\Q[x]</m>.
-            </p>
+              <ol>
+                <li>
+                  <p>
+                    First, notice that by Eisenstein's Criterion (<m>p=p</m>) we have <m>f</m> irreducible in <m>\Q[x]</m>.
+                  </p>
 
-            <p>
+                  <p>
               Let <m>\z</m> be a primitive <m>3^{\text {rd}}</m> root of unity. The roots of <m>f</m> are the following: <m>\a_1=\sqrt[3]p\cdot\z</m> <m>\a_2=\sqrt[3]p\cdot\z^2</m> <m>\a_3=\sqrt[3]p\cdot\z^3=\sqrt[3]p</m>
             </p>
 
             <p>
-              <m>[\Q(\sqrt[3]p):\Q]=3</m>. <m>[\Q(\sqrt[3]p,i):\Q\sqrt[3]p]=2</m> Total is <m>6</m> by degree formula.
+              <m>[\Q(\sqrt[3]p):\Q]=3</m>. <m>[\Q(\sqrt[3]p,i):\Q\sqrt[3]p]=2</m> Total is <m>6</m> by <xref text="title" ref="thm-degree-formula"/>.
+            </p>
+                </li>
+
+                <li>
+                  <p>
+                    Coming soon!
+                  </p>
+                </li>
+              </ol>
             </p>
 
-            <p>
-              Part (b)
-            </p>
             </solution>
           
           </problem>
@@ -29601,7 +29630,19 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
 
             <solution>
               <p>
-              Part (a) Let <m>K/F</m> be a finite extension of fields. Let <m>\a\in L</m>. By the  <xref text="title" ref="thm-degree-formula"/> we have <m>[K:F(a)]=[K:F(\a)][F(\a):F]</m>. Thus <m>[F(\a):F]</m> is finite, making <m>\a</m> algebraic over <m>F</m>.. Part (b) Notice that <m>\a_n\sqrt[n]2\in\overline{\Q}</m> for all <m>n\in\N</m> and that <m>\a_n</m> is a root of the polynomial <m>x^n-2</m>, which is irreducible in <m>\Q[x]</m> by <xref text="title" ref="thm-eisensteins-criterion"/> (<m>p=2</m>). Thus <m>[\Q(\a_n):\Q]=n</m>. As <m>\a_n</m> must be added to <m>\Q</m> for all <m>n</m>, we see that this extension is not finite.
+                <ol>
+                  <li>
+                    <p>
+                        Let <m>K/F</m> be a finite extension of fields. Let <m>\a\in L</m>. By the  <xref text="title" ref="thm-degree-formula"/> we have <m>[K:F(a)]=[K:F(\a)][F(\a):F]</m>. Thus <m>[F(\a):F]</m> is finite, making <m>\a</m> algebraic over <m>F</m>.. Part (b) Notice that <m>\a_n\sqrt[n]2\in\overline{\Q}</m> for all <m>n\in\N</m> and that <m>\a_n</m> is a root of the polynomial <m>x^n-2</m>, which is irreducible in <m>\Q[x]</m> by <xref text="title" ref="thm-eisensteins-criterion"/> (<m>p=2</m>). Thus <m>[\Q(\a_n):\Q]=n</m>. As <m>\a_n</m> must be added to <m>\Q</m> for all <m>n</m>, we see that this extension is not finite.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Coming soon!
+                    </p>
+                  </li>
+                </ol>
             </p>
             </solution>
           
@@ -29633,11 +29674,27 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
           </p>
 
           <p>
-            Part (a) Let <m>P</m> be a Sylow <m>2</m>-subgroup of <m>\Gal(K/F)</m>. Notice that <m>|P|=4</m>. By the [[Mathematics/Modern Algebra/Results/Theorem – Fundamental Theorem of Galois Theory|FTGT]] there exists an intermediate field extension <m>E</m> such that <m>|\Gal(K/E)|=4</m>. By the [[Mathematics/Modern Algebra/Results/Proposition – The Degree Formula|Degree Formula]], we have <m>[K:F]=[K:E][E:F]</m>, with <m>[K:F]=20</m> and <m>[K:L]=4</m>. Thus <m>[L:F]=5</m>.
+            <ol>
+              <li>
+                <p>
+                  Let <m>P</m> be a Sylow <m>2</m>-subgroup of <m>\Gal(K/F)</m>. Notice that <m>|P|=4</m>. By the 
+                  <xref text="title" ref="thm-ftgt"/> there exists an intermediate field extension <m>E</m> such that <m>|\Gal(K/E)|=4</m>. By the 
+                  <xref text="title" ref="thm-degree-formula"/>, we have <m>[K:F]=[K:E][E:F]</m>, with <m>[K:F]=20</m> and <m>[K:L]=4</m>. Thus <m>[L:F]=5</m>.
+                </p>
+              </li>
+
+               <li>
+                <p>
+                  Notice that as <m>2</m> is a prime dividing the order of <m>\Gal(K/F )</m> there must exist an element of order <m>2</m> by 
+                  <xref text="title" ref="thm-cauchy"/>. The cyclic subgroup, <m>H</m>, generated by this element has order <m>2</m>. By the 
+                  FTGT there exists an intermediate field extension <m>L</m> such that <m>|\Gal(K/L)|=2</m>. By the 
+                  <xref text="title" ref="thm-degree-formula"/>, we have <m>[K:F]=[K:L][L:F]</m>, with <m>[K:F]=20</m> and <m>[K:L]=2</m>. Thus <m>[L:F]=2</m>.
+                </p>
+              </li>
+            </ol>
           </p>
 
           <p>
-            Part (b) Notice that as <m>2</m> is a prime dividing the order of <m>\Gal(K/F )</m> there must exist an element of order <m>2</m> by [[Mathematics/Modern Algebra/Results/Theorem – Cauchy's Theorem|Cauchy's Theorem]]. The cyclic subgroup, <m>H</m>, generated by this element has order <m>2</m>. By the FTGT there exists an intermediate field extension <m>L</m> such that <m>|\Gal(K/L)|=2</m>. By the Degree Formula, we have <m>[K:F]=[K:L][L:F]</m>, with <m>[K:F]=20</m> and <m>[K:L]=2</m>. Thus <m>[L:F]=2</m>.
           </p>
             </solution>
           
@@ -29652,34 +29709,53 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
           <problem><title>Problem 1</title>
             <statement>
               <p>
-					Let <m>H</m> and <m>K</m> be groups. (a) Show that the direct product group <m>\Aut(H)\times \Aut(K)</m> is isomorphic to a subgroup of <m>\Aut(H\times K)</m>. (b) Give an example, with justification, of groups <m>H</m> and <m>K</m> for which <m>\Aut(H) \times\Aut(K)</m> is not isomorphic to <m>\Aut(H\times K)</m>.
-				</p>
+                Let <m>H</m> and <m>K</m> be groups. 
+                <ol>
+                  <li>
+                    <p>
+                      Show that the direct product group <m>\Aut(H)\times \Aut(K)</m> is isomorphic to a subgroup of <m>\Aut(H\times K)</m>. 
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Give an example, with justification, of groups <m>H</m> and <m>K</m> for which <m>\Aut(H) \times\Aut(K)</m> is not isomorphic to <m>\Aut(H\times K)</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
             </statement>
 
             <solution>
               <p>
-					Proof. Let <m>H</m> and <m>K</m> be groups.
+					Let <m>H</m> and <m>K</m> be groups.
 				</p>
 
 				<p>
-					Part (a) First, let <m>\psi\in\Aut(H)</m> and <m>\phi\in\Aut(K)</m>. Let <m>\varphi:H\times K\to H\times K</m> be defined by <m>\varphi(h,k)=(\psi(h),\phi(k))</m>. Let <m>(h,k)\in H\times K</m>. As <m>\psi,\phi</m> automorphisms, there exist <m>h',k'</m> such that <m>\psi(h')=h</m> and <m>\phi(k')=k</m>. Thus we have surjectivity, and hence bijectivity, given the equal cardinalities. The homomorphism element is verifiable, I'll do it later. Thus <m>\varphi</m> is indeed an automorphism of <m>H\times K</m>.
-				</p>
+          <ol>
+            <li>
+              <p>
+                First, let <m>\psi\in\Aut(H)</m> and <m>\phi\in\Aut(K)</m>. Let <m>\varphi:H\times K\to H\times K</m> be defined by <m>\varphi(h,k)=(\psi(h),\phi(k))</m>. Let <m>(h,k)\in H\times K</m>. As <m>\psi,\phi</m> automorphisms, there exist <m>h',k'</m> such that <m>\psi(h')=h</m> and <m>\phi(k')=k</m>. Thus we have surjectivity, and hence bijectivity, given the equal cardinalities. The homomorphism element is verifiable, I'll do it later. Thus <m>\varphi</m> is indeed an automorphism of <m>H\times K</m>.
 
-				<p>
+              </p>
+
+              <p>
 					Define <m>f:\Aut(H)\times \Aut(K)\to\Aut(H\times K)</m> by <m>f(\psi,\phi)=\varphi</m>. Suppose two elements map to the same place. Then they were the same! Thus, by the First Isomorphism, we have the result.
 				</p>
+            </li>
 
-				<p>
-					Part (b)
-				</p>
-
-				<p>
+            <li>
+              <p>
 					Let <m>H = K = \mathbb{Z}_2</m>, the cyclic group of order <m>2</m>. Then <m>\Aut(H) \cong \mathbb{Z}_2</m> since there is only one non-identity automorphism (namely, the map that sends the generator to its inverse), and <m>\Aut(K) \cong \mathbb{Z}_2</m> for the same reason. Therefore, <m>\Aut(H) \times \Aut(K) \cong \mathbb{Z}_2 \times \mathbb{Z}_2</m>, which is abelian.
 				</p>
 
 				<p>
 					On the other hand, <m>H\times K \cong \mathbb{Z}_2\times\mathbb{Z}_2</m> is also abelian. Let <m>\varphi</m> be the nontrivial automorphism of <m>\mathbb{Z}_2</m>, which sends <m>0</m> to <m>1</m> and <m>1</m> to <m>0</m>. Then the automorphism <m>(g,h) \mapsto (\varphi(g), \varphi(h))</m> is nontrivial and sends <m>(0,0)</m> to itself, so it is an automorphism of <m>H\times K</m>. Therefore, <m>\Aut(H\times K)</m> contains a nonabelian subgroup, and in particular <m>\Aut(H) \times \Aut(K)</m> is not isomorphic to <m>\Aut(H\times K)</m>.
 				</p>
+            </li>
+          </ol>
+				</p>
+
             </solution>
           
           </problem>
@@ -29708,7 +29784,23 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
 
             <solution>
               <p>
-					 By <xref text="title" ref="thm-sylow"/> we know the following: - <m>n_3|5</m> and <m>n_3\equiv 1\mod{3}</m>, so <m>n_3=1</m>. - <m>n_5|</m> and <m>n_5\equiv1\mod{5}</m>, so <m>n_5=1</m> as well. Thus there is exactly one Sylow <m>5</m>-subgroup, <m>P</m>, and exactly one Sylow <m>3</m>-subgroup, <m>Q</m>. Both are normal in <m>G</m>. Notice that <m>Q</m> has order <m>9</m>, a prime squared. Thus <m>Q</m> is abelian. By the [[Mathematics/Modern Algebra/Results/Theorem – FTFGAG Elementary Divisor form|Fundamental Theorem of Finitely Generated Abelian Groups]], <m>Q</m> is either isomorphic to <m>\Z_3\times\Z_3</m> or <m>\Z_9</m>. Thus <m>G\cong\Z_5\times\Z_9</m> or <m>G\cong\Z_5\times\Z_3\times\Z_3</m>.
+					 By <xref text="title" ref="thm-sylow"/> we know the following: 
+           <ul>
+            <li>
+              <p>
+                 <m>n_3|5</m> and <m>n_3\equiv 1\mod{3}</m>, so <m>n_3=1</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+           <m>n_5|</m> and <m>n_5\equiv1\mod{5}</m>, so <m>n_5=1</m> as well. 
+              </p>
+            </li>
+           </ul>
+                      Thus there is exactly one Sylow <m>5</m>-subgroup, <m>P</m>, and exactly one Sylow <m>3</m>-subgroup, <m>Q</m>. Both are normal in <m>G</m>. Notice that <m>Q</m> has order <m>9</m>, a prime squared. Thus <m>Q</m> is abelian. By the 
+                      [[Mathematics/Modern Algebra/Results/Theorem – FTFGAG Elementary Divisor form|Fundamental Theorem of Finitely Generated Abelian Groups]], <m>Q</m> is either isomorphic to <m>\Z_3\times\Z_3</m> or <m>\Z_9</m>. Thus <m>G\cong\Z_5\times\Z_9</m> or <m>G\cong\Z_5\times\Z_3\times\Z_3</m>.
+
 				</p>
             </solution>
           
@@ -29727,16 +29819,16 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
 
             <solution>
              <p>
-					 First, notice that <m>2\cdot 2=6=(1+\sqrt{-3})(1-\sqrt{-3})</m>. Define a function <me>N:\Z[\sqrt{-3}]\to\Z, N(a+b \sqrt{-3})=a^2+3b^2.</me> Let <m>\alpha,\beta\in\Z[i]</m> and behold <me>\begin{align}
-N(\alpha\beta)
-&amp;=N((a+b \sqrt{-3})(c+d \sqrt{-3}))\\
-&amp;=N(ac-3bd+ad \sqrt{-3}+bc \sqrt{-3})\\
-&amp;=(ac-3bd)^2+3(ad+bc)^2\\
-&amp;=((ac)^2-6acbd+9(bd)^2)+3((ad)^2+2abcd+(bc^2))\\
-&amp;=a^2c^2+9b^2d^2+3a^2d^2+3b^2c^2\\
-&amp;=(a^2c^2+3a^2d^2)+(3b^2c^2+9b^2d^2)\\
-&amp;=a^2(c^2+3d^2)+3b^2(c^2+3d^2)\\
-N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done.
+					 First, notice that <m>2\cdot 2=6=(1+\sqrt{-3})(1-\sqrt{-3})</m>. Define a function <me>N:\Z[\sqrt{-3}]\to\Z, N(a+b \sqrt{-3})=a^2+3b^2.</me> Let <m>\alpha,\beta\in\Z[i]</m> and behold <me>\begin{aligned*}
+          N(\alpha\beta)
+          &amp;=N((a+b \sqrt{-3})(c+d \sqrt{-3}))\\
+          &amp;=N(ac-3bd+ad \sqrt{-3}+bc \sqrt{-3})\\
+          &amp;=(ac-3bd)^2+3(ad+bc)^2\\
+          &amp;=((ac)^2-6acbd+9(bd)^2)+3((ad)^2+2abcd+(bc^2))\\
+          &amp;=a^2c^2+9b^2d^2+3a^2d^2+3b^2c^2\\
+          &amp;=(a^2c^2+3a^2d^2)+(3b^2c^2+9b^2d^2)\\
+          &amp;=a^2(c^2+3d^2)+3b^2(c^2+3d^2)\\
+          N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{aligned*}</me>So there's that done.
 				</p>
 
 				<p>
@@ -29757,7 +29849,7 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
           <problem><title>Problem 5</title>
             <statement>
               <p>
-					Let <m>R</m> be a commutative ring (with <m>1</m>) and let <m>M</m> be an <m>R</m>-module. Show that if <m>M\neq 0</m> and the only submodules of <m>M</m> are <m>0</m> and <m>M</m>, then there is a maximal ideal I of <m>R</m> such that <m>M</m> is isomorphic to <m>R/I</m>.
+					Let <m>R</m> be a commutative ring (with <m>1</m>) and let <m>M</m> be an <m>R</m>-module. Show that if <m>M\neq 0</m> and the only submodules of <m>M</m> are <m>0</m> and <m>M</m>, then there is a maximal ideal <m>I</m> of <m>R</m> such that <m>M</m> is isomorphic to <m>R/I</m>.
 				</p>
             </statement>
 
@@ -29767,7 +29859,9 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
 					</p>
 
 					<p>
-						As <m>M\neq 0</m>, there exists a non-zero element <m>m\in M</m>. Let <m>f:R\to M</m> be defined by <m>f(r)=rm</m>. Since <m>1\in R</m> and <m>1m=m\in Rm</m>, we have <m>Rm=M</m>. By the [[Theorem – Module Isomorphism Theorems|First Isomorphism Theorem]] we see that <m>R/\ker(f)\cong M</m>, making <m>\ker(f)</m> an ideal in <m>R</m>, which we shall conspicuously denote as <m>I</m> henceforth. By the Lattice Isomorphism Theorem the only two ideals of <m>R/I</m> are <m>0</m> and <m>R/I</m>, making <m>R/I</m> a field, and <m>I</m> a maximal ideal in <m>R</m>.
+						As <m>M\neq 0</m>, there exists a non-zero element <m>m\in M</m>. Let <m>f:R\to M</m> be defined by <m>f(r)=rm</m>. Since <m>1\in R</m> and <m>1m=m\in Rm</m>, we have <m>Rm=M</m>. By the 
+            [[Theorem – Module Isomorphism Theorems|First Isomorphism Theorem]] we see that <m>R/\ker(f)\cong M</m>, making <m>\ker(f)</m> an ideal in <m>R</m>, which we shall conspicuously denote as <m>I</m> henceforth. By the 
+            Lattice Isomorphism Theorem the only two ideals of <m>R/I</m> are <m>0</m> and <m>R/I</m>, making <m>R/I</m> a field, and <m>I</m> a maximal ideal in <m>R</m>.
 					</p>
             </solution>
           
@@ -29776,17 +29870,43 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
           <problem><title>Problem 6</title>
             <statement>
               <p>
-					For the matrix <me>A=\begin{bmatrix} 0 &amp; -1 &amp; 2 \\ 1 &amp; 0 &amp; 0 \\0 &amp; 1 &amp; -2\end{bmatrix}</me>in <m>\Mat_{3\times3}(\R)</m>: (a) Find the [[Theorem – Rational Canonical Form|rational canonical form]] of <m>A</m>. (b) Determine whether or not <m>A</m> has a [[Theorem – Jordan Canonical Form|Jordan canonical form]], and if so, find this form.
+					For the matrix <me>A=\begin{bmatrix} 0 &amp; -1 &amp; 2 \\ 1 &amp; 0 &amp; 0 \\0 &amp; 1 &amp; -2\end{bmatrix}</me>in <m>\Mat_{3\times3}(\R)</m>: 
+          <ol>
+            <li>
+              <p>
+                          Find the rational canonical form of <m>A</m>. 
+
+              </p>
+            </li>
+
+            <li>
+              <p>
+          Determine whether or not <m>A</m> has a Jordan canonical form, and if so, find this form.
+
+              </p>
+            </li>
+          </ol>
 				</p>
             </statement>
 
             <solution>
               <p>
-						Part (a) Notice <m>\cp_A(x)=\det(A-xI)</m>. So we have <me>\begin{align}\cp_A(x)&amp;=-x\det\begin{bmatrix} -x &amp; 0 \\ 1 &amp; -2-x\end{bmatrix}-(-1)\det\begin{bmatrix} 1 &amp; 0 \\ 0 &amp; -2-x\end{bmatrix}+2\det\begin{bmatrix} 1 &amp; -x \\ 0 &amp; 1\end{bmatrix}\\&amp;=-x(-x(-2-x))+(-2-x)+2(1)\\&amp;=-x^3-2x^2-x\\&amp;-x(x^2+2x+1)\\&amp;=-x(x+1)^2.\end{align}</me>Not so bad! Now, the invariant factors all divide the characteristic polynomial and must divide the following factor, so our options for sets of invariant factors are the following: - <m>\{-x(x+1)^2\}</m> - <m>\{(x+1),-x(x+1)\}</m> However, the largest invariant factor is also the minimal polynomial. So we check to see if <m>-A(A+I)=0</m>. Luckily, the very first calculation shows that this is not the case. Thus the minimum polynomial is the characteristic polynomial is the only invariant factor of <m>A</m>. Thus the RCF of <m>A</m> is <me>C(-x^3-2x^2-x)=\begin{bmatrix} 0 &amp; 0 &amp; 0 \\ 1 &amp; 0 &amp; 1 \\0 &amp; 1 &amp; 2\end{bmatrix}.</me>
+                <ol>
+                  <li>
+                    <p>
+                      Notice <m>\cp_A(x)=\det(A-xI)</m>. So we have <me>\begin{align}\cp_A(x)&amp;=-x\det\begin{bmatrix} -x &amp; 0 \\ 1 &amp; -2-x\end{bmatrix}-(-1)\det\begin{bmatrix} 1 &amp; 0 \\ 0 &amp; -2-x\end{bmatrix}+2\det\begin{bmatrix} 1 &amp; -x \\ 0 &amp; 1\end{bmatrix}\\&amp;=-x(-x(-2-x))+(-2-x)+2(1)\\&amp;=-x^3-2x^2-x\\&amp;-x(x^2+2x+1)\\&amp;=-x(x+1)^2.\end{align}</me>Not so bad! Now, the invariant factors all divide the characteristic polynomial and must divide the following factor, so our options for sets of invariant factors are the following: - <m>\{-x(x+1)^2\}</m> - <m>\{(x+1),-x(x+1)\}</m> However, the largest invariant factor is also the minimal polynomial. So we check to see if <m>-A(A+I)=0</m>. Luckily, the very first calculation shows that this is not the case. Thus the minimum polynomial is the characteristic polynomial is the only invariant factor of <m>A</m>. Thus the RCF of <m>A</m> is <me>C(-x^3-2x^2-x)=\begin{bmatrix} 0 &amp; 0 &amp; 0 \\ 1 &amp; 0 &amp; 1 \\0 &amp; 1 &amp; 2\end{bmatrix}.</me>
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+						          Luckily for us, <m>\cp_A(x)</m> factors completely into linear terms! So our elementary divisors are <m>-x</m> and <m>(x+1)^2</m>. We see <m>J_1(0)=\begin{bmatrix} 0 \end{bmatrix}</m> and <m>J_2(-1)=\begin{bmatrix} -1 &amp; 0 \\ 1 &amp; -1\end{bmatrix}</m>, so the Jordan Canonical form of <m>A</m> is <me>J=\begin{bmatrix} 0 &amp; 0 &amp; 0 \\ 0 &amp; -1 &amp; 0 \\0 &amp; 1 &amp; -1\end{bmatrix}.</me>
+                    </p>
+                  </li>
+                </ol>
 					</p>
 
 					<p>
-						Part (b) Luckily for us, <m>\cp_A(x)</m> factors completely into linear terms! So our elementary divisors are <m>-x</m> and <m>(x+1)^2</m>. We see <m>J_1(0)=\begin{bmatrix} 0 \end{bmatrix}</m> and <m>J_2(-1)=\begin{bmatrix} -1 &amp; 0 \\ 1 &amp; -1\end{bmatrix}</m>, so the Jordan Canonical form of <m>A</m> is <me>J=\begin{bmatrix} 0 &amp; 0 &amp; 0 \\ 0 &amp; -1 &amp; 0 \\0 &amp; 1 &amp; -1\end{bmatrix}.</me>
 					</p>
             </solution>
           
@@ -29813,7 +29933,8 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
 					</p>
 
 					<p>
-						However, by the [[Mathematics/Modern Algebra/Results/Proposition – The Degree Formula|Degree Formula]] <m>[K:F]=[K:F(b)][F(b):F(b^2)][F(b^2):F]</m>, which is a problem, given <m>2</m> now divides <m>[K:F]</m>, an odd number. Thus <m>F (b) = F (b^2)</m>.
+						However, by the 
+            <xref text="title" ref="thm-degree-formula"/> <m>[K:F]=[K:F(b)][F(b):F(b^2)][F(b^2):F]</m>, which is a problem, given <m>2</m> now divides <m>[K:F]</m>, an odd number. Thus <m>F (b) = F (b^2)</m>.
 					</p>
             </solution>
           
@@ -29837,20 +29958,43 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
           <problem><title>Problem 9</title>
             <statement>
               <p>
-					Let <m>K</m> be the splitting field of <m>x^4-3</m> over <m>\Q</m> (a) Find a basis for <m>K</m> as a vector space over <m>\Q</m>. (b) Show that <m>\Aut(K/Q)</m> is not abelian.
+					Let <m>K</m> be the splitting field of <m>x^4-3</m> over <m>\Q</m> 
+          <ol>
+            <li>
+              <p>
+                          Find a basis for <m>K</m> as a vector space over <m>\Q</m>. 
+
+              </p>
+            </li>
+
+            <li>
+              <p>
+          Show that <m>\Aut(K/Q)</m> is not abelian.
+
+              </p>
+            </li>
+          </ol>
+  
 				</p>
             </statement>
 
             <solution>
               <p>
-					Part (a) First, note that <m>f</m> is irreducible in <m>\Q[x]</m> by Eisenstein's Criterion (<m>p=3</m>) The roots of <m>f</m> are - <m>\sqrt[4]3</m>, - <m>\sqrt[4]3i</m>, - <m>-\sqrt[4]3</m>, and - <m>-\sqrt[4]3i</m>. Let <m>F=\Q(\sqrt[4]3)</m> and notice <m>[F:\Q]=4</m>. As <m>F\subseteq\R</m> we see that <m>[F(i):F]=2</m>, and thus <m>[K:\Q]=8</m>, meaning our basis will have eight elements: 1. 1 2. <m>\sqrt[4]3</m> 3. <m>(\sqrt[4]3)^2</m> 4. <m>(\sqrt[4]3)^3</m> 5. <m>i</m> 6. <m>\sqrt[4]3i</m> 7. <m>(\sqrt[4]3)^2i</m> 8. <m>(\sqrt[4]3)^3i</m>
-				</p>
+                <ol>
+                  <li>
+                    <p>
+                      					First, note that <m>f</m> is irreducible in <m>\Q[x]</m> by Eisenstein's Criterion (<m>p=3</m>) The roots of <m>f</m> are - <m>\sqrt[4]3</m>, - <m>\sqrt[4]3i</m>, - <m>-\sqrt[4]3</m>, and - <m>-\sqrt[4]3i</m>. Let <m>F=\Q(\sqrt[4]3)</m> and notice <m>[F:\Q]=4</m>. As <m>F\subseteq\R</m> we see that <m>[F(i):F]=2</m>, and thus <m>[K:\Q]=8</m>, meaning our basis will have eight elements: 1. 1 2. <m>\sqrt[4]3</m> 3. <m>(\sqrt[4]3)^2</m> 4. <m>(\sqrt[4]3)^3</m> 5. <m>i</m> 6. <m>\sqrt[4]3i</m> 7. <m>(\sqrt[4]3)^2i</m> 8. <m>(\sqrt[4]3)^3i</m>
 
-				<p>
-					Part (b) Now that <m>K</m> has been verified to be a splitting field, we see that <m>\Aut(K/Q)</m> is isomorphic to a subgroup of <m>S_4</m> of degree <m>8</m>.
-				</p>
+                    </p>
+                  </li>
 
-				<p>
+                  <li>
+                    <p>
+          Now that <m>K</m> has been verified to be a splitting field, we see that <m>\Aut(K/Q)</m> is isomorphic to a subgroup of <m>S_4</m> of degree <m>8</m>.
+
+                    </p>
+
+                    <p>
 					Any subgroup of <m>S_4</m> of order <m>8</m> is a Sylow <m>2</m>-subgroup. By <xref text="title" ref="thm-sylow"/>s, the number of Sylow <m>2</m>-subgroups is either <m>1</m> or <m>3</m>.
 				</p>
 
@@ -29861,6 +30005,11 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
 				<p>
 					Let <m>X</m> be the set of left cosets of the subgroup <m>\{e,s\}</m> of <m>D_8</m>. Note that <m>|X| = 4</m>. Let <m>G</m> act on <m>X</m> by left multiplication. This action induces a homomorphism <m>\varphi : G \to P(X)</m> where <m>P(X)\cong S_4</m> is the permutation group on <m>X</m>. As shown in class, the kernel of this homomorphism is the largest normal subgroup contained in <m>\{e,s\}</m>, which is <m>\{e\}</m>. Thus, <m>\varphi</m> is injective and the image of <m>\varphi</m> is a subgroup of <m>S_4</m> isomorphic to <m>D_8</m>.
 				</p>
+                  </li>
+                </ol>
+				</p>
+
+				
             </solution>
           
           </problem>
@@ -30068,7 +30217,7 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
             </p>
 
             <p>
-              Let <m>K</m> denote the algebraic closure of <m>F</m>, let <m>\a</m> be a root of <m>f\in K</m>, and consider <m>F(\a)</m> and <m>L(\a)</m>. Let <m>g(x)</m> denote the minimal polynomial of <m>\a\in L(\a)</m>, and let <m>\deg(g)=q</m>. Thus <m>[L(\a):L]=q</m>. By the Degree Formula we have - <m>[L(\a):F]=[L(\a):L][L:F]=qn</m> - <m>[L(\a):F]=[L(\a):F(a)][F(a):F]=md</m> for some <m>m\in \N</m>. Thus <m>qn=md</m> and <m>md|qn</m> As <m>n</m> and <m>d</m> are relatively prime we have <m>d|q</m>. However, <m>q</m> is the minimal polynomial of <m>\a</m>, and thus <m>q\leq d</m>, yielding <m>q=d</m>. Thus <m>f=kg</m> for some <m>k\in F</m>. As irreducible polynomials multiplied by a constant are still irreducible, we see that <m>f</m> is indeed irreducible in <m>K[x]</m>.
+              Let <m>K</m> denote the algebraic closure of <m>F</m>, let <m>\a</m> be a root of <m>f\in K</m>, and consider <m>F(\a)</m> and <m>L(\a)</m>. Let <m>g(x)</m> denote the minimal polynomial of <m>\a\in L(\a)</m>, and let <m>\deg(g)=q</m>. Thus <m>[L(\a):L]=q</m>. By the <xref text="title" ref="thm-degree-formula"/> we have - <m>[L(\a):F]=[L(\a):L][L:F]=qn</m> - <m>[L(\a):F]=[L(\a):F(a)][F(a):F]=md</m> for some <m>m\in \N</m>. Thus <m>qn=md</m> and <m>md|qn</m> As <m>n</m> and <m>d</m> are relatively prime we have <m>d|q</m>. However, <m>q</m> is the minimal polynomial of <m>\a</m>, and thus <m>q\leq d</m>, yielding <m>q=d</m>. Thus <m>f=kg</m> for some <m>k\in F</m>. As irreducible polynomials multiplied by a constant are still irreducible, we see that <m>f</m> is indeed irreducible in <m>K[x]</m>.
             </p>
             </solution>
           
@@ -30083,11 +30232,11 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
 
             <solution>
               <p>
-              Part (a) Let <m>a,b\in K</m>. Notice that <m>a\inv, ab,</m> and <m>a+b</m> are contained in <m>F(a,b)</m>. As <m>b\in K</m>, there exists some polynomial with coefficients in <m>F</m> such that <m>b</m> is a root. However, this polynomial also lives in <m>F(a)</m>, so we have <m>[F(a,b):F(a)]</m> [[Mathematics/Definitions/Algebraic#$ defn$ – Algebraic (Extension)|algebraic]]. As <m>[F(a):F]</m> is also algebraic, we have <m>F[a,b]</m> algebraic as well, as it is a finite extension by the  <xref text="title" ref="thm-degree-formula"/>. Thus <m>a+b, a\inv,</m> and <m>ab</m> are algebraic over <m>F</m> as well, making <m>K</m> a field.
+              Part (a) Let <m>a,b\in K</m>. Notice that <m>a\inv, ab,</m> and <m>a+b</m> are contained in <m>F(a,b)</m>. As <m>b\in K</m>, there exists some polynomial with coefficients in <m>F</m> such that <m>b</m> is a root. However, this polynomial also lives in <m>F(a)</m>, so we have <m>[F(a,b):F(a)]</m> algebraic. As <m>[F(a):F]</m> is also algebraic, we have <m>F[a,b]</m> algebraic as well, as it is a finite extension by the  <xref text="title" ref="thm-degree-formula"/>. Thus <m>a+b, a\inv,</m> and <m>ab</m> are algebraic over <m>F</m> as well, making <m>K</m> a field.
             </p>
 
             <p>
-              Part (b) Let <m>\a\in K</m>. Thus <m>\a</m> is the root of a polynomial <m>f(x)=a_nx^n+\dots+a_0</m>, where <m>a_{i}\in F</m>. Notice that <m>f</m> is a polynomial in <m>F(a_n,\dots,a_0)</m> as well, and thus <m>\a</m> is algebraic over this extension as well. Consider the chain of extensions <me>F \subseteq F(a_0) \subseteq F(a_0,a_1) \subseteq \cdots \subseteq F(a_0, a_1, \dots, a_{n-1} )\subseteq F(a_0, \dots, a_{n}, \a).</me>As <m>a_i</m> is algebraic over <m>F</m> for all <m>i</m> and <m>\a</m> is algebraic over <m>F(a_0,\dots,a_n)[x]</m> we see that each step in this chain has finite degree by. By the Degree Formula, <m>[F(a_0, \dots, a_{n}, \a): F]</m> is finite and thus so is <m>[F(\a):F]</m>. Thus <m>\a</m> is algebraic over <m>F</m>, hence <m>\a\in K</m>, making <m>K</m> algebraically closed.
+              Part (b) Let <m>\a\in K</m>. Thus <m>\a</m> is the root of a polynomial <m>f(x)=a_nx^n+\dots+a_0</m>, where <m>a_{i}\in F</m>. Notice that <m>f</m> is a polynomial in <m>F(a_n,\dots,a_0)</m> as well, and thus <m>\a</m> is algebraic over this extension as well. Consider the chain of extensions <me>F \subseteq F(a_0) \subseteq F(a_0,a_1) \subseteq \cdots \subseteq F(a_0, a_1, \dots, a_{n-1} )\subseteq F(a_0, \dots, a_{n}, \a).</me>As <m>a_i</m> is algebraic over <m>F</m> for all <m>i</m> and <m>\a</m> is algebraic over <m>F(a_0,\dots,a_n)[x]</m> we see that each step in this chain has finite degree by. By the <xref text="title" ref="thm-degree-formula"/>, <m>[F(a_0, \dots, a_{n}, \a): F]</m> is finite and thus so is <m>[F(\a):F]</m>. Thus <m>\a</m> is algebraic over <m>F</m>, hence <m>\a\in K</m>, making <m>K</m> algebraically closed.
             </p>
             </solution>
           
@@ -30107,7 +30256,7 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
           </p>
 
           <p>
-            As <m>L</m> is the splitting field of <m>f</m>, it is a [[Mathematics/Definitions/Normal Extension|normal extension]]. As <m>\Q</m> has characteristic 0, <m>L</m> is separable (because <m>L</m> is algebraic extension, as its the extension caused by adjoining each root of <m>f</m>, and algebraic extensions of algebraic extensions are algebraic). Thus by we see <m>|\Aut(L/\Q)|=[L:F]</m>.
+            As <m>L</m> is the splitting field of <m>f</m>, it is a normal extension. As <m>\Q</m> has characteristic <m>0</m>, <m>L</m> is separable (because <m>L</m> is algebraic extension, as its the extension caused by adjoining each root of <m>f</m>, and algebraic extensions of algebraic extensions are algebraic). Thus by we see <m>|\Aut(L/\Q)|=[L:F]</m>.
           </p>
 
           <p>
@@ -30227,7 +30376,7 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
           </p>
 
           <p>
-            Note that as <m>45=5\cdot 9</m>, we see that the number of Sylow-<m>5</m> subgroups of <m>G</m> divides <m>9</m> and is congruent to <m>1\mod{5}</m>. Thus there is exactly one Sylow-<m>5</m> subgroup of <m>G</m>, which we denote <m>H</m>. By the Fundamental Theorem of Galois Theory, <m>H</m> corresponds to an intermediate field extension <m>E</m>. Note that as <m>H</m> has order 5, we see that <m>[G:H]=9</m>, and thus <m>[L:E]=9</m> as well. By the Degree Formula we see that <m>[L:F]=[L:E][E:F]</m>. As <m>[L:F]=45</m> and <m>[L:E]=9</m>, we see that <m>[E:F]=5</m>, as desired. As <m>E</m> corresponds to the unique subgroup of <m>G</m> or order 5, we see that this extension must be unique as well.
+            Note that as <m>45=5\cdot 9</m>, we see that the number of Sylow-<m>5</m> subgroups of <m>G</m> divides <m>9</m> and is congruent to <m>1\mod{5}</m>. Thus there is exactly one Sylow-<m>5</m> subgroup of <m>G</m>, which we denote <m>H</m>. By the Fundamental Theorem of Galois Theory, <m>H</m> corresponds to an intermediate field extension <m>E</m>. Note that as <m>H</m> has order 5, we see that <m>[G:H]=9</m>, and thus <m>[L:E]=9</m> as well. By the <xref text="title" ref="thm-degree-formula"/> we see that <m>[L:F]=[L:E][E:F]</m>. As <m>[L:F]=45</m> and <m>[L:E]=9</m>, we see that <m>[E:F]=5</m>, as desired. As <m>E</m> corresponds to the unique subgroup of <m>G</m> or order 5, we see that this extension must be unique as well.
           </p>
 
             </solution>
@@ -30440,7 +30589,7 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
           </p>
 
           <p>
-            Part (a) First, notice that <m>f</m> is irreducible in <m>\Q[x]</m> by [[Mathematics/Modern Algebra/Results/Theorem – Eisenstein's Criterion|Eisenstein's Criterion]] <m>(p=7)</m>. Let <m>\z</m> denote a primitive third root of unity. The roots of <m>f</m> are the following: 1. <m>\a_1=\sqrt[3]{7}\z</m>, 2. <m>\a_2=\sqrt[3]{7}\z^2</m>, and 3. <m>\a_3=\sqrt[3]{7}\z^3=\sqrt[3]{7}</m>. As <m>f</m> is irreducible and monic we see that it is the [[Mathematics/Definitions/Minimum Polynomial|minimum polynomial ]]of <m>\a_3</m> over <m>\Q</m>. Let <m>E_1=\Q(\a_3)</m> and notice <m>[E_1:\Q]=3</m>.
+            Part (a) First, notice that <m>f</m> is irreducible in <m>\Q[x]</m> by <xref text="title" ref="thm-eisensteins-criterion"/> <m>(p=7)</m>. Let <m>\z</m> denote a primitive third root of unity. The roots of <m>f</m> are the following: 1. <m>\a_1=\sqrt[3]{7}\z</m>, 2. <m>\a_2=\sqrt[3]{7}\z^2</m>, and 3. <m>\a_3=\sqrt[3]{7}\z^3=\sqrt[3]{7}</m>. As <m>f</m> is irreducible and monic we see that it is the [[Mathematics/Definitions/Minimum Polynomial|minimum polynomial ]]of <m>\a_3</m> over <m>\Q</m>. Let <m>E_1=\Q(\a_3)</m> and notice <m>[E_1:\Q]=3</m>.
           </p>
 
           <p>
@@ -30448,11 +30597,17 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
           </p>
 
           <p>
-            By the [[Mathematics/Modern Algebra/Results/Theorem – Fundamental Theorem of Galois Theory|FTGT]] each Galois intermediate extension between <m>\Q</m> and <m>L</m> corresponds to a normal subgroup of <m>G</m>, which are the normal subgroups of <m>S_3</m>.
+            By the <xref text="title" ref="thm-ftgt"/> each Galois intermediate extension between <m>\Q</m> and <m>L</m> corresponds to a normal subgroup of <m>G</m>, which are the normal subgroups of <m>S_3</m>.
           </p>
 
           <p>
-            The elements of <m>S_3</m> are the following: 1. <m>(1)</m> 2. <m>(12)</m> 3. <m>(13)</m> 4. <m>(23)</m> 5. <m>(123)</m> 6. <m>(132)</m> The subgroup <m>F=\langle(123)\rangle=\{(123),(132)\}</m> has index <m>2</m> in <m>G</m> and is thus normal. None of the order <m>2</m> subgroups are normal in <m>S_3</m>, so <m>F</m> is the only strictly intermediate extension.
+            The elements of <m>S_3</m> are the following: 
+            1. <m>(1)</m> 
+            2. <m>(12)</m>
+            3. <m>(13)</m> 
+            4. <m>(23)</m> 
+            5. <m>(123)</m> 
+            6. <m>(132)</m> The subgroup <m>F=\langle(123)\rangle=\{(123),(132)\}</m> has index <m>2</m> in <m>G</m> and is thus normal. None of the order <m>2</m> subgroups are normal in <m>S_3</m>, so <m>F</m> is the only strictly intermediate extension.
           </p>
 
           <p>
@@ -30498,7 +30653,7 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
             </p>
 
             <p>
-              Part (b) As <m>x^4-p</m> is irreducible in <m>Q</m> (Eisenstein, <m>p=p</m>) and <m>x^4-p</m> is monic, we see that <m>[\Q(\sqrt[4]{p}):\Q]=4</m>. As <m>x^2+1</m> is irreducible and monic, we see that <m>[\Q(\sqrt[4]{p},i):\Q(\sqrt[4]{p})]=2</m>. By the Degree Formula we have <m>[\Q(\sqrt[4]{p},i):\Q]=8</m>. Note that the four roots of <m>(x^4 - p)</m> are the following: - <m>\sqrt[4]{p}</m>, - <m>-\sqrt[4]{p}</m>, - <m>\sqrt[4]{p}i,</m> and - <m>-\sqrt[4]{p}i</m>. As <m>\frac{\sqrt[4]{p}i}{\sqrt[4]{p}}=i</m>, we see that <m>\Q(\sqrt[4]{p})</m> is the splitting field of <m>F</m>. Note then that as <m>[\Q(i):\Q]=2</m> and the degree of the splitting field is 8, by the Degree Formula we see that the degree of the splitting field of <m>x^4-p</m> over <m>\Q(i)=4</m>. As <m>x^4-p</m> is monic and degree <m>4</m>, it must be the minimal polynomial of the second extension and thus irreducible in <m>\Q(i)[x]</m>.
+              Part (b) As <m>x^4-p</m> is irreducible in <m>Q</m> (Eisenstein, <m>p=p</m>) and <m>x^4-p</m> is monic, we see that <m>[\Q(\sqrt[4]{p}):\Q]=4</m>. As <m>x^2+1</m> is irreducible and monic, we see that <m>[\Q(\sqrt[4]{p},i):\Q(\sqrt[4]{p})]=2</m>. By the <xref text="title" ref="thm-degree-formula"/> we have <m>[\Q(\sqrt[4]{p},i):\Q]=8</m>. Note that the four roots of <m>(x^4 - p)</m> are the following: - <m>\sqrt[4]{p}</m>, - <m>-\sqrt[4]{p}</m>, - <m>\sqrt[4]{p}i,</m> and - <m>-\sqrt[4]{p}i</m>. As <m>\frac{\sqrt[4]{p}i}{\sqrt[4]{p}}=i</m>, we see that <m>\Q(\sqrt[4]{p})</m> is the splitting field of <m>F</m>. Note then that as <m>[\Q(i):\Q]=2</m> and the degree of the splitting field is 8, by the <xref text="title" ref="thm-degree-formula"/> we see that the degree of the splitting field of <m>x^4-p</m> over <m>\Q(i)=4</m>. As <m>x^4-p</m> is monic and degree <m>4</m>, it must be the minimal polynomial of the second extension and thus irreducible in <m>\Q(i)[x]</m>.
             </p>
             </solution>
           
@@ -30534,7 +30689,7 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
           <problem><title>Problem 7</title>
             <statement>
               <p>
-            Let <m>F</m> be a field and recall that a square matrix <m>A</m> with entries in <m>F</m> is called [[Mathematics/Definitions/Nilpotent|nilpotent]] if <m>A^m = 0</m> for some positive integer <m>m</m>.
+            Let <m>F</m> be a field and recall that a square matrix <m>A</m> with entries in <m>F</m> is called nilpotent if <m>A^m = 0</m> for some positive integer <m>m</m>.
           </p>
 
           <p><ol>
@@ -30543,7 +30698,7 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
             </li>
 
             <li>
-            Assume <m>n \leq 3</m> and prove that two <m>n \times n</m> nilpotent matrices are similar if and only if they have the same [[Mathematics/Definitions/Rank|rank]]. (Recall the rank of a matrix is the [[Mathematics/Definitions/Dimension (Vector Space)|dimension]] of the vector space spanned by its columns.)
+            Assume <m>n \leq 3</m> and prove that two <m>n \times n</m> nilpotent matrices are similar if and only if they have the same rank. (Recall the rank of a matrix is the dimension of the vector space spanned by its columns.)
             </li>
 
             <li>
@@ -30571,7 +30726,7 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
             </p>
 
             <p>
-              <m>(\Rightarrow)</m> Suppose <m>A\sim B</m>. Thus there exists some invertible matrix <m>P</m> such that <m>PAP\inv=B</m> by the definition of [[Mathematics/Definitions/Definitions#Similar Matrices|similar matrices]]. Let <m>U\in\ker(PA)</m>. Thus <m>PA(U)=0</m> and <m>P(AU)=0</m>. We multiply both sides by <m>P\inv</m> to see that <m>AU=0</m>. Therefore the <m>\ker(PA)=\ker(A)</m>, and hence the ranks of <m>PA</m> and <m>A</m> are equal by the [[Mathematics/Modern Algebra/Results#Corollary – Rank Nullity Theorem|Rank-Nullity Theorem]].
+              <m>(\Rightarrow)</m> Suppose <m>A\sim B</m>. Thus there exists some invertible matrix <m>P</m> such that <m>PAP\inv=B</m> by the definition of similar matrices. Let <m>U\in\ker(PA)</m>. Thus <m>PA(U)=0</m> and <m>P(AU)=0</m>. We multiply both sides by <m>P\inv</m> to see that <m>AU=0</m>. Therefore the <m>\ker(PA)=\ker(A)</m>, and hence the ranks of <m>PA</m> and <m>A</m> are equal by <xref text="title" ref="thm-rank-nullity"/>.
             </p>
 
             <p>
@@ -30904,17 +31059,17 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
           <problem><title>Problem 7</title>
             <statement>
               <p>
-            Let <m>V</m> be a finite dimensional vector space over a field <m>F</m> and let <m>\t : V \to V</m> be an <m>F</m>-[[Mathematics/Definitions/Linear Operator|linear operator]] on <m>V</m>. Prove <m>\t</m> is [[Mathematics/Definitions/Diagonalizable|diagonalizable]] over <m>F</m> if and only if its minimum polynomial <m>p(x)</m> factors into distinct linear terms in <m>F[x]</m>.
+            Let <m>V</m> be a finite dimensional vector space over a field <m>F</m> and let <m>\t : V \to V</m> be an <m>F</m>-linear operator on <m>V</m>. Prove <m>\t</m> is diagonalizable over <m>F</m> if and only if its minimum polynomial <m>p(x)</m> factors into distinct linear terms in <m>F[x]</m>.
           </p>
             </statement>
 
             <solution>
               <p>
-              <m>(\Rightarrow)</m> Suppose that <m>g</m> is diagonalizable. Thus there exists a change of basis matrix <m>A</m> such that <m>A</m> is diagonal. As it is diagonal, its diagonal entries are the [[Mathematics/Definitions/Eigenvalue|eigenvalues]] of <m>g</m>, and thus the roots of the minimal polynomial of <m>g</m>. Using row and column operations we can rearrange <m>A</m> so that all repeated linear factors are next to each other in the diagonal, for convenience.
+              <m>(\Rightarrow)</m> Suppose that <m>g</m> is diagonalizable. Thus there exists a change of basis matrix <m>A</m> such that <m>A</m> is diagonal. As it is diagonal, its diagonal entries are the eigenvalues of <m>g</m>, and thus the roots of the minimal polynomial of <m>g</m>. Using row and column operations we can rearrange <m>A</m> so that all repeated linear factors are next to each other in the diagonal, for convenience.
             </p>
 
             <p>
-              We know that <m>\mp_A(x)</m> is the smallest monic polynomial that sends <m>A</m> to 0. Take all the distinct eigenvalues <m>\lambda_i</m> and consider <m>q(x)=\prod(x-\lambda_i)</m>.
+              We know that <m>\mp_A(x)</m> is the smallest monic polynomial that sends <m>A</m> to <m>0</m>. Take all the distinct eigenvalues <m>\lambda_i</m> and consider <m>q(x)=\prod(x-\lambda_i)</m>.
             </p>
 
             <p>
@@ -31081,7 +31236,11 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
             </p>
 
             <p>
-              Part (a) Suppose that <m>K/F</m> and <m>L/K</m> are algebraic extensions. Let <m>\a\in L</m>. Then <m>\a</m> is the root of the polynomial <me>f(x)=a_nx^n+\dots+a_0,</me>with <m>a_{i}\in K</m>. Notice that <m>f</m> is a polynomial in <m>F(a_n,\dots,a_0)[x]</m>, making <m>\a</m> is algebraic over this as well. Consider the chain of field extensions <me>F \subseteq F(a_0) \subseteq F(a_0,a_1) \subseteq \cdots \subseteq F(a_0, a_1, \dots, a_{n-1} )\subseteq F(a_0, \dots, a_{n}, \a)</me> Since <m>a_i</m> is algebraic over <m>F</m> for all <m>i</m> and <m>\a</m> is algebraic over <m>F(a_0, a_1, \dots, a_{n})</m>, by [[Theorem – Properties of Algebraic Elements|Theorem]] each step in this chain has finite degree. By the Degree Formula, <m>[F(a_0, \dots, a_{n}, \a): F]</m> is finite and thus so is <m>[F(\a):F]</m>. By the Theorem again, <m>\a</m> is algebraic over <m>F</m>.
+              Part (a) Suppose that <m>K/F</m> and <m>L/K</m> are algebraic extensions. Let <m>\a\in L</m>. Then <m>\a</m> is the root of the polynomial <me>f(x)=a_nx^n+\dots+a_0,</me>with <m>a_{i}\in K</m>. Notice that <m>f</m> is a polynomial in <m>F(a_n,\dots,a_0)[x]</m>, making <m>\a</m> is algebraic over this as well. Consider the chain of field extensions <me>F \subseteq F(a_0) \subseteq F(a_0,a_1) \subseteq \cdots \subseteq F(a_0, a_1, \dots, a_{n-1} )\subseteq F(a_0, \dots, a_{n}, \a)</me> Since <m>a_i</m> is algebraic over <m>F</m> for all <m>i</m> and <m>\a</m> is algebraic over <m>F(a_0, a_1, \dots, a_{n})</m>, by 
+              [[Theorem – Properties of Algebraic Elements|Theorem]] 
+              each step in this chain has finite degree. By the <xref text="title" ref="thm-degree-formula"/>, <m>[F(a_0, \dots, a_{n}, \a): F]</m> is finite and thus so is <m>[F(\a):F]</m>. By the 
+              Theorem again, 
+              <m>\a</m> is algebraic over <m>F</m>.
             </p>
 
             <p>
@@ -31101,7 +31260,7 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
             </statement>
 
             <solution>
-              <p>Let <m>E/F</m> be a finite Galois extension and let <m>G</m> be the Galois group of <m>E/F</m>. Suppose that <m>E = F (\a)</m> and let <m>f(x)</m> be the minimal polynomial of <m>\a</m> over <m>F</m>. Thus <m>G</m> [[Mathematics/Definitions/Group Action|acts]] on the roots of <m>f</m> faithfully. Additionally, as <m>f</m> is the minimal polynomial of <m>\a</m> it is irreducible, making the action transitive as well.</p>
+              <p>Let <m>E/F</m> be a finite Galois extension and let <m>G</m> be the Galois group of <m>E/F</m>. Suppose that <m>E = F (\a)</m> and let <m>f(x)</m> be the minimal polynomial of <m>\a</m> over <m>F</m>. Thus <m>G</m> acts on the roots of <m>f</m> faithfully. Additionally, as <m>f</m> is the minimal polynomial of <m>\a</m> it is irreducible, making the action transitive as well.</p>
 
                 <p>
             As <m>E</m> is Galois over <m>F</m> we know that <m>f</m> splits into linear factors, each of the form <m>x-\b</m>, where <m>\b</m> is a root of <m>f</m>. As our action is transitive, for every root <m>\b</m> there exists a <m>\s\in G</m> such that <m>\s\cdot\a=b</m>, or <m>\s(\a)=\b</m>.
@@ -31123,7 +31282,7 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
             </p>
 
             <p>
-              However, as <m>g^k=1</m> for all <m>g\in G</m> we know that <m>g</m> is the root of the polynomial <m>f(x)=x^k-1</m> in <m>F[x]</m>. By the [[Mathematics/Number Theory/Results/Lemma – Factor Theorem|Factor Theorem]] there are thus at most <m>k</m> roots of <m>f</m>, but there are <m>n</m> distinct roots. Thus <m>k=n</m>.
+              However, as <m>g^k=1</m> for all <m>g\in G</m> we know that <m>g</m> is the root of the polynomial <m>f(x)=x^k-1</m> in <m>F[x]</m>. By the <xref text="title" ref="thm-factor-thm"/> there are thus at most <m>k</m> roots of <m>f</m>, but there are <m>n</m> distinct roots. Thus <m>k=n</m>.
             </p>
 
             <p>
@@ -31719,7 +31878,7 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
           </p>
 
           <p>
-            Part (b) Let <m>G</m> act on <m>P</m> by conjugation. This gives rise to the [[Proposition – Permutation Representation|permutation representation]] homomorphism <m>\rho: G\to S_{11}</m>. However, <m>P</m> has prime order, making it a cyclic group isomorphic to <m>\Z_{11}</m>.
+            Part (b) Let <m>G</m> act on <m>P</m> by conjugation. This gives rise to the <xref text="title" ref="thm-permrep"/> homomorphism <m>\rho: G\to S_{11}</m>. However, <m>P</m> has prime order, making it a cyclic group isomorphic to <m>\Z_{11}</m>.
           </p>
 
           <p>
@@ -31732,7 +31891,7 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
           <problem><title>Problem 2</title>
             <statement>
               <p>
-            Let <m>G</m> be a group with a subgroup <m>H</m> so that <m>[G : H] = n &lt; \infty</m>. (a) Prove that there is a normal subgroup of <m>G, N</m> , so that <m>N\subseteq H</m> and <m>[G : N ] \leq n!.</m> (b) Prove that if <m>G</m> is [[Mathematics/Definitions/Generator|finitely generated]], there are most finitely many subgroups with index <m>n</m>. (Hint: you might want to consider maps <m>G\to S_n</m>.)
+            Let <m>G</m> be a group with a subgroup <m>H</m> so that <m>[G : H] = n &lt; \infty</m>. (a) Prove that there is a normal subgroup of <m>G, N</m> , so that <m>N\subseteq H</m> and <m>[G : N ] \leq n!.</m> (b) Prove that if <m>G</m> is finitely generated, there are most finitely many subgroups with index <m>n</m>. (Hint: you might want to consider maps <m>G\to S_n</m>.)
           </p>
             </statement>
 
@@ -31755,7 +31914,9 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
           </p>
 
           <p>
-            First, we show that the center of <m>G</m> is nontrivial. (See: [[Modern Algebra#Corollary – Center of <m>p</m>-group is Nontrivial|Corollary]]) Suppose by way of contradiction that <m>Z(G)=\{e\}</m>. We examine the conjugacy classes of <m>G</m>. From the [<xref text="title" ref="thm-class-eq"/>, we know<me>|G| = |Z(G)| + \sum_i^r |G : C_G(g_i)|.</me>Note that <m>|G|=p^n</m> for some <m>n\in\N</m>, meaning that the only divisors of <m>|G|</m> are powers of <m>p</m>. In finite groups, each conjugacy class must divide the order of the group. By <xref text="title" ref="thm-lagrange"/>, <m>|G : C_G(g_i)|=\frac{|G|}{|C_G(g_i)|}=\frac{p^n}{p^m}=p^k</m>, where <m>m,k\in\N</m>. Since |Z(G)|=1, we see that <m>\sum_i^r |G : C_G(g_i)|\bigg|p^n-1</m>, which is impossible given that <m>p^n-1 \not|p^n</m>. Thus <m>Z(G)\neq\{e\}</m>.
+            First, we show that the center of <m>G</m> is nontrivial. 
+            (See: [[Modern Algebra#Corollary – Center of <m>p</m>-group is Nontrivial|Corollary]]) 
+            Suppose by way of contradiction that <m>Z(G)=\{e\}</m>. We examine the conjugacy classes of <m>G</m>. From the [<xref text="title" ref="thm-class-eq"/>, we know<me>|G| = |Z(G)| + \sum_i^r |G : C_G(g_i)|.</me>Note that <m>|G|=p^n</m> for some <m>n\in\N</m>, meaning that the only divisors of <m>|G|</m> are powers of <m>p</m>. In finite groups, each conjugacy class must divide the order of the group. By <xref text="title" ref="thm-lagrange"/>, <m>|G : C_G(g_i)|=\frac{|G|}{|C_G(g_i)|}=\frac{p^n}{p^m}=p^k</m>, where <m>m,k\in\N</m>. Since |Z(G)|=1, we see that <m>\sum_i^r |G : C_G(g_i)|\bigg|p^n-1</m>, which is impossible given that <m>p^n-1 \not|p^n</m>. Thus <m>Z(G)\neq\{e\}</m>.
           </p>
 
           <p>
@@ -31817,7 +31978,7 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
 
             <solution>
               <p>
-              Part (a) Let <m>A</m> be the set of all linearly independent subsets of <m>M</m> that contain <m>T</m>. We can order <m>A</m> with respect to inclusion. Let <m>X</m> be a totally ordered subset of <m>A</m>, and let <m>U</m> be the union of all elements in <m>X</m>. Let <m>\{u_i\}</m> be a set of elements in <m>U</m> such that <m>\sum_{i=0}^nr_iu_i=0</m> for some <m>r_i\in R</m>, where <m>i\leq n</m> for some <m>n\in\N</m>. As <m>U</m> is the union of all elements in <m>X</m>, there exists some <m>B_1</m> such that <m>u_1\in B_1</m>. However, as <m>X</m> is totally ordered, there exists some <m>B_2</m> such that <m>B_2</m> contains <m>B_1</m> and <m>u_2\in B_2</m>. Continuing in this way, we see that there exists some <m>B_n\in X</m> such that <m>\{u_i\}\subseteq B_n</m>. As <m>B_n</m> is linearly independent, we know that <m>\sum_{i=0}^nr_iu_i=0</m> means that <m>r_i=0</m> for all <m>i</m>. Thus <m>U</m> is indeed linearly independent, making it an upper bound for <m>X</m>. Thus by [[Mathematics/Foundations/Results/Theorem – Zorn's Lemma|Zorn's Lemma]] there exists a maximal element of <m>A</m>, which we denote <m>S</m>. Thus <m>S</m> is linearly independent, contains <m>T</m>, and is maximal.
+              Part (a) Let <m>A</m> be the set of all linearly independent subsets of <m>M</m> that contain <m>T</m>. We can order <m>A</m> with respect to inclusion. Let <m>X</m> be a totally ordered subset of <m>A</m>, and let <m>U</m> be the union of all elements in <m>X</m>. Let <m>\{u_i\}</m> be a set of elements in <m>U</m> such that <m>\sum_{i=0}^nr_iu_i=0</m> for some <m>r_i\in R</m>, where <m>i\leq n</m> for some <m>n\in\N</m>. As <m>U</m> is the union of all elements in <m>X</m>, there exists some <m>B_1</m> such that <m>u_1\in B_1</m>. However, as <m>X</m> is totally ordered, there exists some <m>B_2</m> such that <m>B_2</m> contains <m>B_1</m> and <m>u_2\in B_2</m>. Continuing in this way, we see that there exists some <m>B_n\in X</m> such that <m>\{u_i\}\subseteq B_n</m>. As <m>B_n</m> is linearly independent, we know that <m>\sum_{i=0}^nr_iu_i=0</m> means that <m>r_i=0</m> for all <m>i</m>. Thus <m>U</m> is indeed linearly independent, making it an upper bound for <m>X</m>. Thus by <xref text="title" ref="lem-zorn"/> there exists a maximal element of <m>A</m>, which we denote <m>S</m>. Thus <m>S</m> is linearly independent, contains <m>T</m>, and is maximal.
             </p>
 
             <p>
@@ -32234,7 +32395,7 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
 
             <solution>
               <p>
-             Let <m>G</m> be a group of order <m>150</m> and suppose by way of contradiction that <m>G</m> is simple. Notice that <m>150=2\cdot 3\cdot 5^2</m>. By <xref text="title" ref="thm-sylow"/>, we know <m>|\Syl_5(G)|\equiv 1\mod{5}</m> and divides <m>6</m>, the only options are thus <m>1</m> and <m>6</m>. Since <m>G</m> is simple, there must be exactly <m>n_5=6</m>, where <m>n_5=\Syl_5(G)</m>. Let <m>G</m> act on <m>\Syl_5(G)</m> by conjugation. Thus <m>\rho: G\to S_6</m> is a [[Mathematics/Definitions/Homomorphism|group homomorphism]]. Note that <m>|S_6|=720</m>, and that the order of <m>G</m> does not divide <m>720</m>. By Part (2) of <xref text="title" ref="thm-sylow"/> this action is transitive, meaning that the kernel of <m>\rho</m> cannot be trivial. Thus <m>\ker(\rho)</m> is a nontrivial normal subgroup of <m>G</m>, a contradiction. Thus no group of order <m>150</m> is simple.
+             Let <m>G</m> be a group of order <m>150</m> and suppose by way of contradiction that <m>G</m> is simple. Notice that <m>150=2\cdot 3\cdot 5^2</m>. By <xref text="title" ref="thm-sylow"/>, we know <m>|\Syl_5(G)|\equiv 1\mod{5}</m> and divides <m>6</m>, the only options are thus <m>1</m> and <m>6</m>. Since <m>G</m> is simple, there must be exactly <m>n_5=6</m>, where <m>n_5=\Syl_5(G)</m>. Let <m>G</m> act on <m>\Syl_5(G)</m> by conjugation. Thus <m>\rho: G\to S_6</m> is a group homomorphism. Note that <m>|S_6|=720</m>, and that the order of <m>G</m> does not divide <m>720</m>. By Part (2) of <xref text="title" ref="thm-sylow"/> this action is transitive, meaning that the kernel of <m>\rho</m> cannot be trivial. Thus <m>\ker(\rho)</m> is a nontrivial normal subgroup of <m>G</m>, a contradiction. Thus no group of order <m>150</m> is simple.
           </p>
             </solution>
           
@@ -32244,23 +32405,49 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
             <statement>
               <p>
             Let <m>G</m> be a finite group. 
-            (a) If <m>N</m> is a normal subgroup of <m>G</m> and <m>|N | = 2</m>, prove that <m>N</m> is contained in the center <m>Z(G)</m> of <m>G</m>. 
-            (b) Suppose that <m>| Z(G)|</m> is odd and that <m>G</m> contains a non-trivial simple subgroup <m>H</m> with <m>[G : H] = 2</m>. Prove that <m>H</m> is the only non-trivial proper normal subgroup of <m>G</m>.
+            <ol>
+              <li>
+                <p>
+                  If <m>N</m> is a normal subgroup of <m>G</m> and <m>|N | = 2</m>, prove that <m>N</m> is contained in the center <m>Z(G)</m> of <m>G</m>. 
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Suppose that <m>|Z(G)|</m> is odd and that <m>G</m> contains a non-trivial simple subgroup <m>H</m> with <m>[G : H] = 2</m>. Prove that <m>H</m> is the only non-trivial proper normal subgroup of <m>G</m>.
+                </p>
+              </li>
+            </ol>
           </p>
             </statement>
 
             <solution>
               <p>
-            Part (a) Let <m>x\in N</m> and let <m>g\in G</m>. As <m>N</m> is normal, we see <m>gxg\inv\in N</m>, and thus one of the following must be true: - <m>gxg\inv=e</m>, where <m>e</m> is the identity element of <m>G</m>, or - <m>gxg\inv=x</m>, the only other element of <m>N</m>. However, in the first case we would have <m>x=e</m> by multiplying <m>g</m> and <m>g\inv</m> over, and thus it must be the case that <m>gxg\inv=x</m>, or <m>gx=xg</m>. Thus <m>x\in Z(G)</m>.
-          </p>
+                <ol>
+                  <li>
+                    <p>
+                      Let <m>x\in N</m> and let <m>g\in G</m>. As <m>N</m> is normal, we see <m>gxg\inv\in N</m>, and thus one of the following must be true: - <m>gxg\inv=e</m>, where <m>e</m> is the identity element of <m>G</m>, or - <m>gxg\inv=x</m>, the only other element of <m>N</m>. However, in the first case we would have <m>x=e</m> by multiplying <m>g</m> and <m>g\inv</m> over, and thus it must be the case that <m>gxg\inv=x</m>, or <m>gx=xg</m>. Thus <m>x\in Z(G)</m>.
+                    </p>
+                  </li>
 
-          <p>
-            Part (b) From <xref text="title" ref="thm-lagrange"/> we know that <m>|G|/|H|=2</m>, meaning that <m>G</m> has an even number of elements. Thus <m>2</m> is the smallest prime dividing the order of <m>G</m>, making <m>H</m> normal in <m>G</m> (See: ).
-          </p>
+                  <li>
+                    <p>
+                      From <xref text="title" ref="thm-lagrange"/> we know that <m>|G|/|H|=2</m>, meaning that <m>G</m> has an even number of elements. Thus <m>2</m> is the smallest prime dividing the order of <m>G</m>, making <m>H</m> normal in <m>G</m> (See: ).
+                    </p>
 
-          <p>
-            Suppose by way of contradiction there exists some non-trivial proper normal subgroup <m>N</m> of <m>G</m> that is not <m>H</m>. As <m>H</m> is normal, by the [[Theorem – Second Isomorphism Theorem|Second Isomorphism Theorem]] we have <m>H\cap N\nsg H</m>. However, as <m>H</m> is simple, this means that <m>H\cap N=\{e\}</m>. SIT also tells us that <m>HN\leq G</m>. As <m>|H|=|G|/2</m>, this makes <m>|N|=2</m> and <m>G=HN</m>. From part (a), <m>N\leq Z(G)</m>. However, this contradicts <xref text="title" ref="thm-lagrange"/>, as <m>2</m> does not divide any odd numbers.
-          </p>
+                    <p>
+                      Suppose by way of contradiction there exists some non-trivial proper normal subgroup <m>N</m> of <m>G</m> that is not <m>H</m>. As <m>H</m> is normal, by the 
+                      <xref text="title" ref="thm-sit-group"/> 
+                      we have <m>H\cap N\nsg H</m>. However, as <m>H</m> is simple, this means that <m>H\cap N=\{e\}</m>. 
+                      The <xref text="title" ref="thm-sit-group"/> also tells us that <m>HN\leq G</m>. As <m>|H|=|G|/2</m>, this makes <m>|N|=2</m> and <m>G=HN</m>. From part (1), <m>N\leq Z(G)</m>. However, this contradicts <xref text="title" ref="thm-lagrange"/>, as <m>2</m> does not divide any odd numbers.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+
+          
+
+          
             </solution>
           
           </problem>
@@ -32268,9 +32455,15 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
           <problem><title>Problem 3</title>
             <statement>
               <p>
-            Let <m>H</m> be a normal subgroup of a finite group <m>G</m>, <m>p</m> a prime dividing the order of <m>H</m>, and <m>P</m> a Sylow <m>p</m>-subgroup of <m>H</m>. Prove that <m>G = H N_G(P )</m> <em>Hint</em>: For <m>g \in G</m>, consider the subgroup <m>gPg\inv</m>.
+            Let <m>H</m> be a normal subgroup of a finite group <m>G</m>, <m>p</m> a prime dividing the order of <m>H</m>, and <m>P</m> a Sylow <m>p</m>-subgroup of <m>H</m>. Prove that <m>G = H N_G(P )</m> 
           </p>
             </statement>
+
+            <hint>
+              <p>
+                For <m>g \in G</m>, consider the subgroup <m>gPg\inv</m>.
+              </p>
+            </hint>
 
             <solution>
               <p>
@@ -32291,25 +32484,74 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
           <problem><title>Problem 4</title>
             <statement>
               <p>
-            Fix a prime number <m>p</m>, and let <m>A</m> denote the abelian group of all complex roots of unity whose orders are powers of <m>p</m>; that is <me>A = \{z \in \C | z^{p^n} = 1 \text{ for some integer } n \leq 1\} .</me>Prove the following statements. (a) Every non-trivial subgroup of <m>A</m> contains the group of <m>p^{\text{th}}</m> roots of unity. (b) Every proper subgroup of <m>A</m> is cyclic. (c) If <m>B</m> and <m>C</m> are subgroups of <m>A</m>, then either <m>B \subseteq C</m> or <m>C \subseteq B</m>. (d) For each <m>n \geq 0</m> there exists a unique subgroup of <m>A</m> with <m>p^n</m> elements.
-          </p>
+                Fix a prime number <m>p</m>, and let <m>A</m> denote the abelian group of all complex roots of unity whose orders are powers of <m>p</m>; that is <me>A = \{z \in \C | z^{p^n} = 1 \text{ for some integer } n \leq 1\} .</me>Prove the following statements.
+                <ol>
+                  <li>
+                    <p>
+                Every non-trivial subgroup of <m>A</m> contains the group of <m>p^{\text{th}}</m> roots of unity. 
+                    </p>
+                  </li>
+
+                   <li>
+                    <p>
+                Every proper subgroup of <m>A</m> is cyclic. 
+                    </p>
+                  </li>
+
+                   <li>
+                    <p>
+                If <m>B</m> and <m>C</m> are subgroups of <m>A</m>, then either <m>B \subseteq C</m> or <m>C \subseteq B</m>. 
+                    </p>
+                  </li>
+
+                   <li>
+                    <p>
+                For each <m>n \geq 0</m> there exists a unique subgroup of <m>A</m> with <m>p^n</m> elements.
+                    </p>
+                  </li>
+                </ol>
+              </p>
             </statement>
 
             <solution>
               <p>
-             Part (a) Let <m>H</m> be a non-trivial subgroup of <m>A</m>. Then there exists some <m>z</m> such that <m>z^{p^n}=1</m>. Then <m>z^{p^{n-1}}</m> yields a primitive <m>p\th</m> root of unity, which can be used to generate the other roots as well. Thus <m>H</m> contains the <m>p\th</m> roots of unity.
+                <ol>
+                  <li>
+                    <p>
+                      Let <m>H</m> be a non-trivial subgroup of <m>A</m>. Then there exists some <m>z</m> such that <m>z^{p^n}=1</m>. Then <m>z^{p^{n-1}}</m> yields a primitive <m>p\th</m> root of unity, which can be used to generate the other roots as well. Thus <m>H</m> contains the <m>p\th</m> roots of unity.
+
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+            Suppose <m>H</m> is a proper subgroup of <m>A</m>, meaning it is missing some <m>p^{n{\th}}</m> root of unity. But the subgroup of those roots of unity is cyclic and is generated by every element, so that entire subgroup must be missing. But that subgroup can be generated with any primitive root of a higher power of <m>p</m>, so <m>H</m> must be finite and there must be some element of maximum order, which can be used to generate the whole group. Thus <m>H</m> is cyclic.
+
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+            Suppose <m>B</m> and <m>C</m> are subgroups of <m>A</m> such that <m>B\not\subseteq C</m>. Then <m>C</m> is a proper subgroup of <m>A</m>, making it finite as seen above. If there exists a higher power of <m>p</m> in <m>B</m> then it generates <m>C</m>.
+
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+            Let <m>n\geq 0</m>. Then the subgroup generated by the <m>p^{n^{\th}}</m> roots of unity have <m>p^n</m> elements, and it is unique since it is generated by every such root.
+                    </p>
+                  </li>
+                </ol>
           </p>
 
           <p>
-            Part (b) Suppose <m>H</m> is a proper subgroup of <m>A</m>, meaning it is missing some <m>p^{n{\th}}</m> root of unity. But the subgroup of those roots of unity is cyclic and is generated by every element, so that entire subgroup must be missing. But that subgroup can be generated with any primitive root of a higher power of <m>p</m>, so <m>H</m> must be finite and there must be some element of maximum order, which can be used to generate the whole group. Thus <m>H</m> is cyclic.
           </p>
 
           <p>
-            Part (c) Suppose <m>B</m> and <m>C</m> are subgroups of <m>A</m> such that <m>B\not\subseteq C</m>. Then <m>C</m> is a proper subgroup of <m>A</m>, making it finite as seen above. If there exists a higher power of <m>p</m> in <m>B</m> then it generates <m>C</m>.
           </p>
 
           <p>
-            Part (d) Let <m>n\geq 0</m>. Then the subgroup generated by the <m>p^{n^{\th}}</m> roots of unity have <m>p^n</m> elements, and it is unique since it is generated by every such root.
           </p>
             </solution>
           
@@ -32322,7 +32564,7 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
           <problem><title>Problem 5</title>
             <statement>
               <p>
-            Let F be a field, and let <m>f (x) ∈ F [x]</m>. Recall that <m>f (x)</m> is separable provided, for every extension field <m>K/F , f (x)</m> has no multiple roots in <m>K</m>. (A multiple root is an element <m>α ∈ K</m> such that <m>(x − α)^2 | f (x)</m> in <m>K[x].)</m>
+            Let <m>F</m> be a field, and let <m>f (x) ∈ F [x]</m>. Recall that <m>f (x)</m> is separable provided, for every extension field <m>K/F , f (x)</m> has no multiple roots in <m>K</m>. (A multiple root is an element <m>α ∈ K</m> such that <m>(x − α)^2 | f (x)</m> in <m>K[x].)</m>
           </p>
 
           <p><ol>
@@ -32339,12 +32581,21 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
 
             <solution>
               <p>
-             Part (a) If two polynomials factor completely into linear factors, then they are relatively prime if and only if they have no linear factors in common, which is equivalent to their having no roots in common. Thus they cannot be generated by the same thing
-          </p>
+                <ol>
+                  <li>
+                    <p>
+                      If two polynomials factor completely into linear factors, then they are relatively prime if and only if they have no linear factors in common, which is equivalent to their having no roots in common. Thus they cannot be generated by the same thing
+                    </p>
+                  </li>
 
-          <p>
-            Part (b)
-          </p>
+                  <li>
+                    <p>
+                      Coming soon!
+                    </p>
+                  </li>
+                </ol>
+              </p>
+
             </solution>
           
           </problem>
@@ -32358,11 +32609,15 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
 
             <solution>
               <p>
-              First, notice that <m>f(x)=x^7-12</m> is irreducible in <m>\Q</m>, using Eisenstein's Criterion and <m>p=3</m>. By the Factor Theorem there are at most <m>7</m> distinct roots of <m>f</m>. Notice that <m>\sqrt[7]{12}</m> is one such root. The roots of <m>f</m> are <m>\alpha_i=\sqrt[7]{12}e^{{(2\pi i/7)}^{2i-1}}</m> for <m>1\leq i\leq 7</m>.
+              First, notice that <m>f(x)=x^7-12</m> is irreducible in <m>\Q</m>, using 
+              Eisenstein's Criterion 
+              and <m>p=3</m>. By the 
+              Factor Theorem 
+              there are at most <m>7</m> distinct roots of <m>f</m>. Notice that <m>\sqrt[7]{12}</m> is one such root. The roots of <m>f</m> are <m>\alpha_i=\sqrt[7]{12}e^{{(2\pi i/7)}^{2i-1}}</m> for <m>1\leq i\leq 7</m>.
             </p>
 
             <p>
-              Given that <m>f</m> is irreducible and monic in <m>\Q</m>, this makes <m>f</m> the minimal polynomial of <m>\sqrt[7]{12}</m> in <m>\Q</m> and thus that <m>[\Q(\sqrt[7]{12}):\Q]=7</m>. Take a seventh root of unity, cyclo time, degree 6, for a grand total of 42, which is 2 times 3 times 7
+              Given that <m>f</m> is irreducible and monic in <m>\Q</m>, this makes <m>f</m> the minimal polynomial of <m>\sqrt[7]{12}</m> in <m>\Q</m> and thus that <m>[\Q(\sqrt[7]{12}):\Q]=7</m>. Take a seventh root of unity, cyclo time, degree <m>6</m>, for a grand total of <m>42</m>, which is <m>2</m> times <m>3</m> times <m>7</m>.
             </p>
             </solution>
           
@@ -32384,7 +32639,26 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
           <problem><title>Problem 8</title>
             <statement>
               <p>
-            Let <m>R</m> be a commutative ring with <m>1</m>. Recall that <m>r \in R</m> is called [[Mathematics/Definitions/Nilpotent|nilpotent]] i/f <m>r^n = 0</m> for some integer <m>n &gt; 0.</m> Let <m>N</m> be the set of nilpotent elements of <m>R</m>. (a) Show that <m>N</m> is an ideal of <m>R</m>. (b) Show that the ring <m>R/N</m> has no nonzero nilpotent elements. (c) For a polynomial <m>f(x) \in R[x]</m>, prove that <m>f(x)</m> is a nilpotent element of <m>R[x]</m> if and only if every coefficient of <m>f(x)</m> is nilpotent.
+            Let <m>R</m> be a commutative ring with <m>1</m>. Recall that <m>r \in R</m> is called nilpotent if <m>r^n = 0</m> for some integer <m>n &gt; 0.</m> Let <m>N</m> be the set of nilpotent elements of <m>R</m>. 
+            <ol>
+              <li>
+                <p>
+                            Show that <m>N</m> is an ideal of <m>R</m>. 
+                </p>
+              </li>
+
+              <li>
+                <p>
+            Show that the ring <m>R/N</m> has no nonzero nilpotent elements. 
+                </p>
+              </li>
+
+              <li>
+                <p>
+            For a polynomial <m>f(x) \in R[x]</m>, prove that <m>f(x)</m> is a nilpotent element of <m>R[x]</m> if and only if every coefficient of <m>f(x)</m> is nilpotent.
+                </p>
+              </li>
+            </ol>
           </p>
             </statement>
 
@@ -32394,19 +32668,28 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
             </p>
 
             <p>
-              Part (a) Let <m>r,s\in N</m>. Then <m>r^n=0</m> and <m>s^m=0</m> for <m>n,m\in\N</m>. Consider <m>(r+s)^{mn}</m>, which, by the binomial theorem, has each term raised to either the <m>n</m>th or <m>m</m>th power, sending the whole thing to <m>0</m>.
-            </p>
+              <ol>
+                <li>
+                  <p>
+                    Let <m>r,s\in N</m>. Then <m>r^n=0</m> and <m>s^m=0</m> for <m>n,m\in\N</m>. Consider <m>(r+s)^{mn}</m>, which, by the binomial theorem, has each term raised to either the <m>n</m>th or <m>m</m>th power, sending the whole thing to <m>0</m>.
 
-            <p>
+                  </p>
+                  <p>
+
               Additionally, if <m>r\in N</m> consider <m>r\inv=-r</m> when viewed as an additive group. Notice <m>-r^{2n}=r(2n)=0</m>. Finally, let <m>x\not\in N</m> and consider <m>(rx)^n=r^nx^n=0</m>, so <m>rx\in N</m>. Thus we have our ideal.
             </p>
+                </li>
 
-            <p>
-              Part (b) Let <m>rN</m> be a nilpotent element in <m>R/N</m>. Then <m>r^nN=N</m>, meaning <m>r^n\in N</m>. This means there exists some <m>m\in\N</m> such that <m>r^{n^m}=r^{nm}=0</m>, placing <m>r\in N</m>. Thus all nilpotent elements in <m>R/N</m> are actually <m>0</m> (possibly four <m>0</m>'s in a trench coat).
-            </p>
+                <li>
+                  <p>
+              Let <m>rN</m> be a nilpotent element in <m>R/N</m>. Then <m>r^nN=N</m>, meaning <m>r^n\in N</m>. This means there exists some <m>m\in\N</m> such that <m>r^{n^m}=r^{nm}=0</m>, placing <m>r\in N</m>. Thus all nilpotent elements in <m>R/N</m> are actually <m>0</m> (possibly four <m>0</m>'s in a trench coat).
 
-            <p>
-              Part (c) Let <m>f\in R[x]</m>.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+              Let <m>f\in R[x]</m>.
             </p>
 
             <p>
@@ -32416,6 +32699,12 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
             <p>
               Next, suppose every coefficient of <m>f</m> is nilpotent. Let <m>n</m> be equal to the product of all the smallest powers that send each coefficient to <m>0</m>. Thus by more binomial shenanigans we have <m>f^n=0</m>.
             </p>
+                </li>
+              </ol>
+            </p>
+
+     
+            
             </solution>
           
           </problem>
@@ -32427,21 +32716,57 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
           <problem><title>Problem 9</title>
             <statement>
               <p>
-              Consider the following matrix over <m>\Q</m>: <me>\begin{bmatrix}-1&amp;0&amp;0&amp;0\\0&amp;-1&amp;0&amp;0\\-2&amp;-2&amp;0&amp;1\\-2&amp;0&amp;-1&amp;-2\end{bmatrix}</me> (a) Show that the characteristic and minimal polynomials of <m>A</m> are, respectively, <m>(x + 1)^4</m> and <m>(x + 1)^3</m>. (b) Find the rational canonical form <m>R</m> of <m>A</m> and the Jordan canonical form <m>J</m> of <m>A</m>. (c) Find an invertible matrix <m>P</m> such that <m>P\inv AP = J</m>.</p>
+              Consider the following matrix over <m>\Q</m>: <me>\begin{bmatrix}-1&amp;0&amp;0&amp;0\\0&amp;-1&amp;0&amp;0\\-2&amp;-2&amp;0&amp;1\\-2&amp;0&amp;-1&amp;-2\end{bmatrix}</me> 
+              <ol>
+                <li>
+                  <p>
+                    Show that the characteristic and minimal polynomials of <m>A</m> are, respectively, <m>(x + 1)^4</m> and <m>(x + 1)^3</m>. 
+
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+              Find the rational canonical form <m>R</m> of <m>A</m> and the Jordan canonical form <m>J</m> of <m>A</m>. 
+
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+              Find an invertible matrix <m>P</m> such that <m>P\inv AP = J</m>.
+
+                  </p>
+                </li>
+              </ol>
+              </p>
             </statement>
 
             <solution>
               <p>
-            Part (a) Let <m>A</m> denote the above matrix.
+                <ol>
+                  <li>
+                    <p>
+                      Coming soon!
+
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+            As <m>\cp_A(x)=(x + 1)^4</m> and <m>\mp_A(x)=(x + 1)^3</m>, we know that our characteristic polynomial factors into linear factors, so <m>A</m> does indeed have a JCF. This also means that <m>A</m> only has one elementary divisor, <m>(x + 1)^4</m>, which corresponds to the Jordan Block <m>J_4(-1)</m>, a matrix with <m>-1</m>s along the diagonal, <m>1</m>s along the subdiagonal, and <m>0</m> everywhere else. This is the JCF of <m>A</m>.
+
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+Coming soon!
+                    </p>
+                  </li>
+                </ol>
           </p>
 
-          <p>
-            Part (b) As <m>\cp_A(x)=(x + 1)^4</m> and <m>\mp_A(x)=(x + 1)^3</m>, we know that our characteristic polynomial factors into linear factors, so <m>A</m> does indeed have a JCF. This also means that <m>A</m> only has one elementary divisor, <m>(x + 1)^4</m>, which corresponds to the Jordan Block <m>J_4(-1)</m>, a matrix with <m>-1</m>s along the diagonal, <m>1</m>s along the subdiagonal, and <m>0</m> everywhere else. This is the JCF of <m>A</m>.
-          </p>
-
-          <p>
-            Part (c)
-          </p>
             </solution>
           
           </problem>
@@ -32449,7 +32774,7 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
           <problem><title>Problem 10</title>
             <statement>
               <p>
-            Let <m>A</m> and <m>B</m> be <m>n\times n</m> matrices with entries in <m>F</m>. Recall that <m>A</m> and <m>B</m> are said to be similar over <m>F</m> if there exists an [[Mathematics/Definitions/Invertible Matrix|invertible]] <m>n\times n</m> matrix, with entries in <m>F</m>, such that <m>B = P\inv AP</m>. Prove the following statements about matrices <m>A</m> and <m>B</m> with entries in <m>F</m>:
+            Let <m>A</m> and <m>B</m> be <m>n\times n</m> matrices with entries in <m>F</m>. Recall that <m>A</m> and <m>B</m> are said to be similar over <m>F</m> if there exists an invertible <m>n\times n</m> matrix, with entries in <m>F</m>, such that <m>B = P\inv AP</m>. Prove the following statements about matrices <m>A</m> and <m>B</m> with entries in <m>F</m>:
           </p>
 
           <p><ol>
@@ -32458,7 +32783,7 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
             </li>
 
             <li>
-            <m>A</m> is similar over <m>F</m> to its [[Mathematics/Definitions/Transpose|transpose]] <m>A^T</m>.
+            <m>A</m> is similar over <m>F</m> to its transpose <m>A^T</m>.
             </li>
 
           </ol></p>
@@ -32466,12 +32791,22 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
 
             <solution>
               <p>
-            Part (a) Suppose <m>A</m> and <m>B</m> are similar in <m>\Mat_{n \times n}(K)</m>. As <m>A</m> and <m>B</m> have entries in <m>F</m>, then they are both in <m>\Mat_{n \times n}(F)</m>. Thus there exist matrices <m>C,D\in\Mat_{n \times n}(F)</m> in [[Mathematics/Modern Algebra/Results/Theorem – Rational Canonical Form|RCF]] such that <m>A</m> is similar to <m>C</m> and that <m>B</m> is similar to <m>D</m>. However, <m>A</m> is similar to <m>C</m> and that <m>B</m> is similar to <m>D</m> in <m>\Mat_{n \times n}(K)</m> as well. Notice <m>C</m> and <m>D</m> are still in RCF. However, as the RCF is unique, this means that <m>C=D</m> in <m>\Mat_{n \times n}(K)</m>, making them equal in <m>\Mat_{n \times n}(F)</m> as well. Thus <m>A</m> is similar to <m>B</m>, as similarity is transitive.
+                <ol>
+                  <li>
+                    <p>
+                      Suppose <m>A</m> and <m>B</m> are similar in <m>\Mat_{n \times n}(K)</m>. As <m>A</m> and <m>B</m> have entries in <m>F</m>, then they are both in <m>\Mat_{n \times n}(F)</m>. Thus there exist matrices <m>C,D\in\Mat_{n \times n}(F)</m> in RCF such that <m>A</m> is similar to <m>C</m> and that <m>B</m> is similar to <m>D</m>. However, <m>A</m> is similar to <m>C</m> and that <m>B</m> is similar to <m>D</m> in <m>\Mat_{n \times n}(K)</m> as well. Notice <m>C</m> and <m>D</m> are still in RCF. However, as the RCF is unique, this means that <m>C=D</m> in <m>\Mat_{n \times n}(K)</m>, making them equal in <m>\Mat_{n \times n}(F)</m> as well. Thus <m>A</m> is similar to <m>B</m>, as similarity is transitive.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+            Let <m>L</m> be the algebraic closure of <m>F</m>. Thus <m>A</m> has a Jordan Canonical Form in <m>L</m>. For each Jordan block <m>J_i</m> in the JCF of <m>A</m>, let <m>B_i</m> denote the transpose of the identity matrix, and notice that <m>B_iJ_iB_i\inv=J_i^T</m>. As this is the case for every Jordan block, we see that the JCF of <m>A</m>, <m>J</m>, is similar to its transpose. As the <m>A</m> is similar to <m>J</m>, <m>A^T</m> is similar to <m>J^T</m>, and <m>J</m> is similar to <m>J^T</m>, we see that <m>A\sim A^T</m> in <m>L</m> by transitivity. From Part (a), this yields <m>A\sim A^T</m> in <m>F</m>.
+
+                    </p>
+                  </li>
+                </ol>
           </p>
 
-          <p>
-            Part (b) Let <m>L</m> be the [[Mathematics/Definitions/Algebraic Closure|algebraic closure]] of <m>F</m>. Thus <m>A</m> has a [[Mathematics/Modern Algebra/Results/Theorem – Jordan Canonical Form|Jordan Canonical Form]] in <m>L</m>. For each [[Mathematics/Definitions/Jordan Block|Jordan block]] <m>J_i</m> in the JCF of <m>A</m>, let <m>B_i</m> denote the transpose of the identity matrix, and notice that <m>B_iJ_iB_i\inv=J_i^T</m>. As this is the case for every Jordan block, we see that the JCF of <m>A</m>, <m>J</m>, is similar to its transpose. As the <m>A</m> is similar to <m>J</m>, <m>A^T</m> is similar to <m>J^T</m>, and <m>J</m> is similar to <m>J^T</m>, we see that <m>A\sim A^T</m> in <m>L</m> by transitivity. From Part (a), this yields <m>A\sim A^T</m> in <m>F</m>.
-          </p>
             </solution>
           
           </problem>
@@ -32479,7 +32814,7 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
           <problem><title>Problem 11</title>
             <statement>
               <p>
-            Let <m>R</m> be a commutative ring with <m>1\neq 0</m>, and let <m>f : R^m\to R^n</m> be a surjective homomorphism of [[Mathematics/Definitions/Basis|free]] <m>R</m>-modules. Prove that <m>m \leq n</m>.
+            Let <m>R</m> be a commutative ring with <m>1\neq 0</m>, and let <m>f : R^m\to R^n</m> be a surjective homomorphism of free <m>R</m>-modules. Prove that <m>m \leq n</m>.
           </p>
             </statement>
 
@@ -32508,11 +32843,17 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
 
             <solution>
               <p>
-           Let <m>G</m> be a group and <m>H\nsg G</m>. Let <m>x\in C_H(G)</m>, and consider <m>gxg\inv</m>. Let <m>h\in H</m>. As <m>H\nsg G</m> we have <m>h=gh'g\inv</m> for some <m>h\in H</m>, and thus that 1. <m>g\inv h=h'g\inv</m> and 2. <m>hg=gh'</m>. Consider <m>gxg\inv h</m>. By (1), we see <m>gxg\inv h=gxh'g\inv</m>. As <m>x</m> commutes with everything in <m>H</m> we have <m>gh'xg\inv</m>, and by (2) we have <m>hgxg\inv</m>. Thus <m>C_H(G)\nsg G</m>.
+           Let <m>G</m> be a group and <m>H\nsg G</m>. Let <m>x\in C_H(G)</m>, and consider <m>gxg\inv</m>. Let <m>h\in H</m>. As <m>H\nsg G</m> we have <m>h=gh'g\inv</m> for some <m>h\in H</m>, and thus that 
+           1. <m>g\inv h=h'g\inv</m> and 
+           2. <m>hg=gh'</m>. Consider <m>gxg\inv h</m>. By (1), we see <m>gxg\inv h=gxh'g\inv</m>. As <m>x</m> commutes with everything in <m>H</m> we have <m>gh'xg\inv</m>, and by (2) we have <m>hgxg\inv</m>. Thus <m>C_H(G)\nsg G</m>.
         </p>
 
         <p>
-          Let <m>G</m> act on the left cosets of <m>C_G(H)</m> by left multiplication, giving rise to the permutation representation homomorphism <m>\rho:G/C_G(H)\to\Aut(H)</m>. By the <xref text="title" ref="thm-fit-group"/> we see that <m>G/C_G(H)</m> is isomorphic to a subgroup of the automorphism group of <m>H</m>.
+          Let <m>G</m> act on the left cosets of <m>C_G(H)</m> by 
+          left multiplication, 
+          giving rise to the 
+          permutation representation homomorphism 
+          <m>\rho:G/C_G(H)\to\Aut(H)</m>. By the <xref text="title" ref="thm-fit-group"/> we see that <m>G/C_G(H)</m> is isomorphic to a subgroup of the automorphism group of <m>H</m>.
         </p>
             </solution>
           
@@ -32522,7 +32863,7 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
             <statement>
               <p><ol>
             <li>
-            Suppose <m>H</m> is a subgroup of a group <m>G</m> and <m>[G : H] = 7</m>. Prove <m>G</m> contains a normal subgroup <m>N</m> such that <m>N ⊂ H</m> and <m>[G : N ] ≤ 7!</m>
+            Suppose <m>H</m> is a subgroup of a group <m>G</m> and <m>[G : H] = 7</m>. Prove <m>G</m> contains a normal subgroup <m>N</m> such that <m>N ⊂ H</m> and <m>[G : N ] \leq 7!</m>
             </li>
 
             <li>
@@ -32533,12 +32874,22 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
             </statement>
 
             <solution>
-            <p>  Part (a) Let <m>G</m> act on <m>H</m> by multiplication on left cosets. Thus <m>\rho: G\to\Aut(H)\cong S_7</m>. The kernel of this map is the set of all elements in <m>G</m> such that <m>\rho(g)=\phi_g</m> is the identity, meaning that <m>\phi_g(xH)=gxH=xH</m> for all <m>xH\in G/H</m>. Then <m>x\inv gxH=H</m> and <m>x\inv gx\in H</m>.
+            <p> 
+              <ol>
+                <li>
+                  <p>
+                    Let <m>G</m> act on <m>H</m> by multiplication on left cosets. Thus <m>\rho: G\to\Aut(H)\cong S_7</m>. The kernel of this map is the set of all elements in <m>G</m> such that <m>\rho(g)=\phi_g</m> is the identity, meaning that <m>\phi_g(xH)=gxH=xH</m> for all <m>xH\in G/H</m>. Then <m>x\inv gxH=H</m> and <m>x\inv gx\in H</m>.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Coming soon!
+                  </p>
+                </li>
+              </ol>
           </p>
 
-          <p>
-            Part (b)
-          </p>
             </solution>
           
           </problem>
@@ -32565,11 +32916,20 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
 
             <solution>
               <p>
-             Part (a) By <xref text="title" ref="thm-sylow"/>, <m>|\Syl_7(G)|\equiv 1\mod{7}</m> and divides <m>2^3\cdot 3=24</m>. Thus the only options are <m>1</m> and <m>8</m>. However, as <m>G</m> is simple there cannot be only one Sylow <m>7</m>-Subgroup, as it would be normal. Thus there are <m>8</m>, each having <m>7</m> unique elements and the identity. Thus there are <m>49</m> elements of order <m>7</m>.
-          </p>
+                <ol>
+                  <li>
+                    <p>
+                       By <xref text="title" ref="thm-sylow"/>, <m>|\Syl_7(G)|\equiv 1\mod{7}</m> and divides <m>2^3\cdot 3=24</m>. Thus the only options are <m>1</m> and <m>8</m>. However, as <m>G</m> is simple there cannot be only one Sylow <m>7</m>-Subgroup, as it would be normal. Thus there are <m>8</m>, each having <m>7</m> unique elements and the identity. Thus there are <m>49</m> elements of order <m>7</m>.
 
-          <p>
-            Part (b) By <xref text="title" ref="thm-sylow"/>, <m>|\Syl_3(G)|\equiv 1\mod{3}</m> and divides <m>2^3\cdot 7=56</m>. As <m>G</m> is simple there cannot be one, so there must be at least <m>7</m>, each with <m>2</m> non-identity elements. Thus there must be at least <m>14</m> elements of order <m>3</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      By <xref text="title" ref="thm-sylow"/>, <m>|\Syl_3(G)|\equiv 1\mod{3}</m> and divides <m>2^3\cdot 7=56</m>. As <m>G</m> is simple there cannot be one, so there must be at least <m>7</m>, each with <m>2</m> non-identity elements. Thus there must be at least <m>14</m> elements of order <m>3</m>.
+                    </p>
+                  </li>
+                </ol>
           </p>
             </solution>
           
@@ -32591,7 +32951,7 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
   <ol>
     <li>
       <p>
-        Find the [[Theorem – Jordan Canonical Form|Jordan canonical form]] of A. 
+        Find the Jordan canonical form of <m>A</m>. 
       </p>
     </li>
 
@@ -32612,7 +32972,7 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
 
             <solution>
               <p>
-             Part (a) First, notice that <m>A</m> is upwards triangular, and thus <m>\cp_A(x)=(x-3)^4</m>. By the [[Mathematics/Modern Algebra/Results#Theorem – Cayley-Hamilton Theorem|Cayley-Hamilton Theorem]] the minimum polynomial divides the characteristic polynomial, and from the definition of minimum polynomial we know <m>\mp_A(x)</m> is the smallest polynomial such that <m>\mp_A(A) = 0</m>. Since <m>\mp_A(x)</m> must be a power of <m>(x-3)^n</m> with <m>n\leq 4</m>, we plug in values of <m>n</m> until we get <m>0</m>. <me>(A-3I)^1=\begin{bmatrix}
+             Part (a) First, notice that <m>A</m> is upwards triangular, and thus <m>\cp_A(x)=(x-3)^4</m>. By the <xref text="title" ref="thm-cayley-hamilton-thm"/> the minimum polynomial divides the characteristic polynomial, and from the definition of minimum polynomial we know <m>\mp_A(x)</m> is the smallest polynomial such that <m>\mp_A(A) = 0</m>. Since <m>\mp_A(x)</m> must be a power of <m>(x-3)^n</m> with <m>n\leq 4</m>, we plug in values of <m>n</m> until we get <m>0</m>. <me>(A-3I)^1=\begin{bmatrix}
   0 &amp; 0 &amp; 0 &amp; 0\\
   1 &amp; 0 &amp; 0 &amp; 0\\
   1 &amp; 0 &amp; 0 &amp; 0\\
@@ -32632,7 +32992,7 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
   0 &amp; 0 &amp; 0 &amp; 0\\
   0 &amp; 0 &amp; 0 &amp; 0\\
   3 &amp; 0 &amp; 0 &amp; 0\\
-  \end{bmatrix},</me>which is also not <m>0</m>. However, multiplying one more time we see <m>\mp_A(x)=(x-3)^3</m>. By part (2) of this [[Results#Theorem – Cayley-Hamilton Theorem|theorem]] <m>(x-3)^3</m> is an invariant factor. By part (1) of that same theorem, invariant factors must multiply to <m>\cp_A(x)</m>, and so the invariant factors are <m>x-3</m> and <m>(x-3)^3</m>. These are also the elementary divisors. So
+  \end{bmatrix},</me>which is also not <m>0</m>. However, multiplying one more time we see <m>\mp_A(x)=(x-3)^3</m>. By part (2) of the <xref text="title" ref="thm-cayley-hamilton-thm"/> <m>(x-3)^3</m> is an invariant factor. By part (1) of that same theorem, invariant factors must multiply to <m>\cp_A(x)</m>, and so the invariant factors are <m>x-3</m> and <m>(x-3)^3</m>. These are also the elementary divisors. So
           </p>
 
           <p>
@@ -32659,16 +33019,33 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
           <problem><title>Problem 5</title>
             <statement>
               <p>
-            Let <m>R</m> be a (not-necessarily commutative) ring let <m>M</m> be a left <m>R</m>-module. The annihilator of <m>M</m> in <m>R</m> is defined to be <me>\ann_R(M) = \{ r \in R \mid rm = 0 \text{ for all $m \in M$}\}.</me>(a) Prove that <m>\ann_R(M)</m> is a <m>2</m>-sided ideal of <m>R</m>. (b) Suppose <m>M</m> is an abelian group (i.e., a <m>\Z</m>-module) such that <m>|M| = 400</m> and <m>\ann_\Z(M)</m> is the ideal generated by <m>20</m>. How many possibilities, up to isomorphism, are there for <m>M</m>?
+            Let <m>R</m> be a (not-necessarily commutative) ring let <m>M</m> be a left <m>R</m>-module. The annihilator of <m>M</m> in <m>R</m> is defined to be <me>\ann_R(M) = \{ r \in R \mid rm = 0 \text{ for all $m \in M$}\}.</me>
+            <ol>
+              <li>
+                <p>
+            Prove that <m>\ann_R(M)</m> is a <m>2</m>-sided ideal of <m>R</m>. 
+                </p>
+              </li>
+
+              <li>
+                <p>
+            Suppose <m>M</m> is an abelian group (i.e., a <m>\Z</m>-module) such that <m>|M| = 400</m> and <m>\ann_\Z(M)</m> is the ideal generated by <m>20</m>. How many possibilities, up to isomorphism, are there for <m>M</m>?
+                </p>
+              </li>
+            </ol>
           </p>
             </statement>
 
             <solution>
               <p>
-              Part (a) Let <m>a,b\in \ann_R(M)</m>. Consider <m>(a+b)m=am+bm=0</m>. Thus <m>a+b\in \ann_R(M)</m>. Let <m>r\in\ann_R(M)</m> and consider <m>-r</m>. Let <m>m\in M</m> and suppose <m>-rm=n</m> for some <m>n\in R</m>. Add <m>rm</m> to both sides to see that <m>0=n+rm=n</m>. Thus <m>n=0</m> and <m>-rm=0</m> for all <m>m\in M</m>. So <m>-r\in\ann_R(M)</m>.
-            </p>
+                <ol>
+                  <li>
+                    <p>
+                          Let <m>a,b\in \ann_R(M)</m>. Consider <m>(a+b)m=am+bm=0</m>. Thus <m>a+b\in \ann_R(M)</m>. Let <m>r\in\ann_R(M)</m> and consider <m>-r</m>. Let <m>m\in M</m> and suppose <m>-rm=n</m> for some <m>n\in R</m>. Add <m>rm</m> to both sides to see that <m>0=n+rm=n</m>. Thus <m>n=0</m> and <m>-rm=0</m> for all <m>m\in M</m>. So <m>-r\in\ann_R(M)</m>.
 
-            <p>
+                    </p>
+
+                    <p>
               Note that as <m>0m=0=m0</m> for all <m>m\in M</m>, we know that <m>0\in\ann_R(M)</m>. As <m>rm=0</m> for all <m>m\in M</m>, we see that <m>\ann_R(M)</m> is a left sided ideal.
             </p>
 
@@ -32679,9 +33056,99 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
             <p>
               Let <m>a,b\in \ann_R(M)</m>. Consider <m>m(a+b)=ma+mb</m>. Luckily, we know <m>ma=am=0=bm=mb,</m> and thus that <m>ma+mb=0+0=0</m>. Hence <m>a+b\in \ann_R(M)</m>, making <m>\ann_R(M)</m> is a two sided ideal.
             </p>
+                  </li>
 
-            <p>
-              Part (b) By the [[Mathematics/Modern Algebra/Results/Theorem – FTFGAG Elementary Divisor form|Fundamental Theorem of Finitely Generated Abelian Groups (Elementary Divisor Form)]] and [[Mathematics/Number Theory/Results/Theorem – Sunzi's Remainder Theorem|Sunzi's Remainder Theorem]], there are only so many options we have for <m>M</m>: - <m>\Z_{16}\times \Z_{25}</m>, - <m>\Z_{8}\times \Z_{2}\times \Z_{25}</m>, - <m>\Z_{4}\times \Z_{4}\times \Z_{25}</m>, - <m>\Z_{4}\times \Z_{2}\times \Z_{2}\times \Z_{25}</m>, - <m>\Z_{2}\times\Z_{2}\times \Z_{2}\times \Z_{2}\times \Z_{25}</m>, - <m>\Z_{16}\times \Z_{5}\times \Z_{5}</m>, - <m>\Z_{8}\times \Z_{2}\times \Z_{5}\times \Z_{5}</m>, - <m>\Z_{4}\times \Z_{5}\times \Z_{20}</m> - <m>\Z_{4}\times \Z_{2}\times \Z_{2}\times \Z_{5}\times \Z_{5}</m>, and - <m>\Z_{2}\times\Z_{2}\times \Z_{5}\times \Z_{20}</m>. However, as ideals are additive subgroups, we know that <m>M</m> needs to contain a cyclic subgroup of order <m>20</m>. Thus we need only consider decompositions with a <m>\Z_{20}</m> in them, of which there are exactly two: 1. <m>\Z_{4}\times \Z_{5}\times \Z_{20}</m> 2. <m>\Z_{2}\times\Z_{2}\times \Z_{5}\times \Z_{20}</m>
+                  <li>
+                    <p>
+                      By the 
+                      [[Mathematics/Modern Algebra/Results/Theorem – FTFGAG Elementary Divisor form|Fundamental Theorem of Finitely Generated Abelian Groups (Elementary Divisor Form)]] and 
+                      <xref text="title" ref="thm-sunzi"/>, there are only so many options we have for <m>M</m>: 
+                      <ul>
+                        <li>
+                          <p>
+                            <m>\Z_{16}\times \Z_{25}</m>, 
+                          </p>
+                        </li>
+
+                        <li>
+                          <p>
+                      <m>\Z_{8}\times \Z_{2}\times \Z_{25}</m>, 
+              
+                          </p>
+                        </li>
+
+                        <li>
+                          <p>
+                      <m>\Z_{4}\times \Z_{4}\times \Z_{25}</m>, 
+              
+                          </p>
+                        </li>
+
+                        <li>
+                          <p>
+                      <m>\Z_{4}\times \Z_{2}\times \Z_{2}\times \Z_{25}</m>, 
+              
+                          </p>
+                        </li>
+
+                        <li>
+                          <p>
+                      <m>\Z_{2}\times\Z_{2}\times \Z_{2}\times \Z_{2}\times \Z_{25}</m>, 
+              
+                          </p>
+                        </li>
+
+                        <li>
+                          <p>
+                      <m>\Z_{16}\times \Z_{5}\times \Z_{5}</m>, 
+              
+                          </p>
+                        </li>
+
+                        <li>
+                          <p>
+                      <m>\Z_{8}\times \Z_{2}\times \Z_{5}\times \Z_{5}</m>, 
+              
+                          </p>
+                        </li>
+
+                        <li>
+                          <p>
+                      <m>\Z_{4}\times \Z_{5}\times \Z_{20}</m> 
+              
+                          </p>
+                        </li>
+
+                        <li>
+                          <p>
+                      <m>\Z_{4}\times \Z_{2}\times \Z_{2}\times \Z_{5}\times \Z_{5}</m>, and 
+              
+                          </p>
+                        </li>
+
+                        <li>
+                          <p>
+                      <m>\Z_{2}\times\Z_{2}\times \Z_{5}\times \Z_{20}</m>. 
+                          </p>
+                        </li>
+                      </ul>
+                      However, as ideals are additive subgroups, we know that <m>M</m> needs to contain a cyclic subgroup of order <m>20</m>. Thus we need only consider decompositions with a <m>\Z_{20}</m> in them, of which there are exactly two: 
+                      <ol>
+                        <li>
+                          <p>
+                              <m>\Z_{4}\times \Z_{5}\times \Z_{20}</m> and 
+                          </p>
+                        </li>
+
+                        <li>
+                          <p>
+                      <m>\Z_{2}\times\Z_{2}\times \Z_{5}\times \Z_{20}</m>
+                          </p>
+                        </li>
+                      </ol>
+                    </p>
+                  </li>
+                </ol>
             </p>
             </solution>
           
@@ -32712,7 +33179,9 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
             </p>
 
             <p>
-              We may thus apply Zorn's Lemma to conclude that <m>\cP</m> has at least one maximal element, <m>B</m>. I claim <m>B</m> is a basis of <m>V</m>.
+              We may thus apply 
+              Zorn's Lemma 
+              to conclude that <m>\cP</m> has at least one maximal element, <m>B</m>. I claim <m>B</m> is a basis of <m>V</m>.
             </p>
 
             <p>
@@ -32737,18 +33206,40 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
           <problem><title>Problem 7</title>
             <statement>
               <p>
-            Let <m>R</m> be an integral domain with field of fractions <m>Q</m>. Let <m>P</m> be a prime ideal of <m>R</m> and let <me>S =  \bigg\{ \frac rd\in Q|d\not\in P\bigg\}.</me>(a) Show that <m>S</m> is a subring of <m>Q</m>. (b) Show that <me>I =  \bigg\{ \frac pd|p\in P, d\not\in P\bigg\}</me> is a prime ideal of <m>S</m>.
+                Let <m>R</m> be an integral domain with field of fractions <m>Q</m>. Let <m>P</m> be a prime ideal of <m>R</m> and let <me>S =  \bigg\{ \frac rd\in Q|d\not\in P\bigg\}.</me>
+            <ol>
+              <li>
+                <p>
+                  Show that <m>S</m> is a subring of <m>Q</m>. 
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Show that <me>I =  \bigg\{ \frac pd|p\in P, d\not\in P\bigg\}</me> is a prime ideal of <m>S</m>.
+                </p>
+              </li>
+            </ol>
           </p>
             </statement>
 
             <solution>
               <p>
-              Part (a) First, notice that since <m>P</m> is prime, <m>R-P</m> is multiplicatively closed. Let <m>x,y\in S</m>. Thus the denominators of <m>x</m> and <m>y</m> will still not be in <m>P</m>, making <m>S</m> multiplicatively closed.
+                <ol>
+                  <li>
+                    <p>
+                      First, notice that since <m>P</m> is prime, <m>R\sm P</m> is multiplicatively closed. Let <m>x,y\in S</m>. Thus the denominators of <m>x</m> and <m>y</m> will still not be in <m>P</m>, making <m>S</m> multiplicatively closed.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Coming soon!
+                    </p>
+                  </li>
+                </ol>
             </p>
 
-            <p>
-              Part (b)
-            </p>
             </solution>
           
           </problem>
@@ -32756,44 +33247,85 @@ N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{align}</me>So there's that done
           <problem><title>Problem 8</title>
             <statement>
               <p>
-            Prove <m>Z[2i] = \{a + 2bi | a \text{ and } b \text{ are integers}\}</m> is not a PID. <em>Hint</em>: One method is to use (with proof) the fact that <m>2 + 2i</m> is irreducible in this ring.
-          </p>
+                 Prove <m>Z[2i] = \{a + 2bi | a \text{ and } b \text{ are integers}\}</m> is not a PID. 
+              </p>
             </statement>
+
+            <hint>
+              <p>
+                One method is to use (with proof) the fact that <m>2 + 2i</m> is irreducible in this ring.
+              </p>
+            </hint>
 
             <solution>
               <p>
                 Coming soon!
-          </p>
+              </p>
             </solution>
           
           </problem>
 
           <problem><title>Problem 9</title>
             <statement>
-              <p>					Consider <m>f(x) = x^6 + 3 \in \Q[x]</m>. (a) Let <m>a</m> be a root of <m>f(x)</m> and prove <m>\Q(a)</m> is a Galois field extension of <m>\Q</m>. (Hint: First show <m>\frac{a^3+1}2</m> is primitive <m>6</m>-th root of unity.) (b) Find the Galois group <m>\Gal(\Q(a)/\Q)</m>.
-  </p>
+              <p>Consider <m>f(x) = x^6 + 3 \in \Q[x]</m>. 
+              <ol>
+                <li>
+                  <p>
+                    Let <m>a</m> be a root of <m>f(x)</m> and prove <m>\Q(a)</m> is a Galois field extension of <m>\Q</m>.  
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Find the Galois group <m>\Gal(\Q(a)/\Q)</m>.
+                  </p>
+                </li>
+              </ol>
+            </p>
             </statement>
+
+            <hint>
+              <p>
+                First show <m>\frac{a^3+1}2</m> is primitive <m>6</m>-th root of unity.
+              </p>
+            </hint>
 
             <solution>
               <p>
-             Consider <m>f(x) = x^6 + 3 \in \Q[x]</m>. Part (a) Let <m>a</m> be a root of <m>f(x)</m>. Note that <m>(\frac{a^3+1}{2})^2=\frac{a^3-1}{2}</m>, and so <me>(\frac{a^3+1}{2})^6=((\frac{a^3+1}{2})^2)^3=(\frac{a^3-1}{2})^3=1,</me>so yay! It's primitive. Using one <m>6</m>th primitive root we can obtain all the others, specifically <m>e^{2\pi i/6}</m>. So we multiply each root by this to get all the others. So we have our splitting field.
+             Consider <m>f(x) = x^6 + 3 \in \Q[x]</m>. 
+             <ol>
+              <li>
+                <p>
+                  Let <m>a</m> be a root of <m>f(x)</m>. Note that <m>(\frac{a^3+1}{2})^2=\frac{a^3-1}{2}</m>, and so <me>(\frac{a^3+1}{2})^6=((\frac{a^3+1}{2})^2)^3=(\frac{a^3-1}{2})^3=1,</me>so yay! It's primitive. Using one <m>6</m>th primitive root we can obtain all the others, specifically <m>e^{2\pi i/6}</m>. So we multiply each root by this to get all the others. So we have our splitting field.
+
+                </p>
+              </li>
+
+               <li>
+               <p>
+            Since <m>\Q(a)</m> is Galois, we see that <m>[\Q(a):\Q]=6</m>. So <m>\Gal(\Q(a)/\Q)</m> is either <m>S_3</m> or <m>\Z/6.</m> The roots of <m>f</m> are <m>\alpha_i=\sqrt[6]{3}e^{{(\pi i/6)}^{2i-1}}</m> for <m>1\leq i\leq 6</m>.
           </p>
 
           <p>
-            Part (b) Since <m>\Q(a)</m> is Galois, we see that <m>[\Q(a):\Q]=6</m>. So <m>\Gal(\Q(a)/\Q)</m> is either <m>S_3</m> or <m>\Z/6.</m> The roots of <m>f</m> are <m>\alpha_i=\sqrt[6]{3}e^{{(\pi i/6)}^{2i-1}}</m> for <m>1\leq i\leq 6</m>.
+            By the 
+            Porism 
+            there exists a <m>\sigma\in\Gal(\Q(a)/\Q)</m> such that <m>\sigma(\alpha_1)=\alpha_2</m>. Let <m>\zeta=e^{\pi i/3}</m>, and note that <m>\alpha_i=\alpha_{i-1}\zeta</m>. Additionally, note that <m>\frac{\alpha_i^3+1}{2}=\zeta</m> when <m>i=1,3,5</m> and <m>\frac{\alpha_i^3+1}{2}=\zeta^5</m> when <m>i=2,4,6</m>.
           </p>
 
           <p>
-            By the Porism there exists a <m>\sigma\in\Gal(\Q(a)/\Q)</m> such that <m>\sigma(\alpha_1)=\alpha_2</m>. Let <m>\zeta=e^{\pi i/3}</m>, and note that <m>\alpha_i=\alpha_{i-1}\zeta</m>. Additionally, note that <m>\frac{\alpha_i^3+1}{2}=\zeta</m> when <m>i=1,3,5</m> and <m>\frac{\alpha_i^3+1}{2}=\zeta^5</m> when <m>i=2,4,6</m>.
+            Observe then that <me>\sigma(\alpha_2)=\sigma(\alpha_1)\sigma(\zeta)=\alpha_2\frac{\sigma(\alpha_1)^3+1}{2}=\alpha_2\zeta^5=\alpha_1.</me> Similarly, we see that <m>\sigma(\alpha_3)=\alpha_6</m> and <m>\sigma(\alpha_4)=\alpha_5</m>. Thus <m>\sigma</m> corresponds to the permutation <m>(12)(36)(45)</m>.
           </p>
 
           <p>
-            Observe then that <me>\sigma(\alpha_2)=\sigma(\alpha_1)\sigma(\zeta)=\alpha_2\frac{\sigma(\alpha_1)^3+1}{2}=\alpha_2\zeta^5=\alpha_1.</me>Similarly, we see that <m>\sigma(\alpha_3)=\alpha_6</m> and <m>\sigma(\alpha_4)=\alpha_5</m>. Thus <m>\sigma</m> corresponds to the permutation <m>(12)(36)(45)</m>.
+            Using the 
+            Porism 
+            again we see there exists a <m>\tau\in\Gal(\Q(a)/\Q)</m> such that <m>\tau(\alpha_2)=\alpha_3</m>. Using a similar process as above we see that <m>\tau</m> corresponds to <m>(14)(23)(46)</m>. However, observe that <m>\sigma\tau=(153)(264)</m>, while <m>\tau\sigma=(135)(246)</m>. Thus these elements do not commute, so we cannot be in <m>\Z/6</m>. Thus <m>\Gal(\Q(a)/\Q)\cong S_3</m>.
+          </p>
+              </li>
+             </ol>
           </p>
 
-          <p>
-            Using the Porism again we see there exists a <m>\tau\in\Gal(\Q(a)/\Q)</m> such that <m>\tau(\alpha_2)=\alpha_3</m>. Using a similar process as above we see that <m>\tau</m> corresponds to <m>(14)(23)(46)</m>. However, observe that <m>\sigma\tau=(153)(264)</m>, while <m>\tau\sigma=(135)(246)</m>. Thus these elements do not commute, so we cannot be in <m>\Z/6</m>. Thus <m>\Gal(\Q(a)/\Q)\cong S_3</m>.
-          </p>
+          
             </solution>
           
           </problem>

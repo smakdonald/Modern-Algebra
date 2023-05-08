@@ -12,8 +12,21 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">
-<span class="process-math">\(S\)</span> is closed under multiplication (i.e., if <span class="process-math">\(x,y \in S\text{,}\)</span> then <span class="process-math">\(xy \in S\)</span>), and</div>
+<div class="para logical">
+<div class="para">We also need to be sure our rules for <span class="process-math">\(+\)</span> and <span class="process-math">\(\cdot\)</span> make sense and are independent of representation. They “make sense” since we assume <span class="process-math">\(S\)</span> is closed under <span class="process-math">\(\cdot\text{.}\)</span> To show <span class="process-math">\(+\)</span> is independent of representations, say <span class="process-math">\(\frac{r}{s} \sim \frac{r''}{s''}\text{,}\)</span> so that <span class="process-math">\(rs'' = r''s\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{r}{s} + \frac{r'}{s'} := \frac{rs' + r's}{ss'}
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{r''}{s''} + \frac{r'}{s'} := \frac{r''s' + r's''}{s''s'}
+\end{equation*}
+</div>
+<div class="para">and so we need to show <span class="process-math">\((rs' + r's)(s''s') \sim (r''s' + r's'')(ss')\text{.}\)</span> This is clear upon expaning out both sides and using <span class="process-math">\(rs'' = r''s\text{.}\)</span> In a similar way one shows <span class="process-math">\(\cdot\)</span> is well-defined.</div>
+</div>
 <span class="incontext"><a href="sec-field-of-fractions.html#p-2549" class="internal">in-context</a></span>
 </body>
 </html>

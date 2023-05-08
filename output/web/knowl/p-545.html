@@ -13,23 +13,30 @@
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
 <div class="para logical"><ol class="decimal">
-<li><div class="para logical">
-<div class="para">If such a <span class="process-math">\(\overline{f}\)</span> exists, it is necessarily unique since <span class="process-math">\(G \twoheadrightarrow G/N\)</span> is onto. In fact, if <span class="process-math">\(f=\pi\circ \overline{f}\)</span> then <span class="process-math">\(\overline{f}\)</span> has to be given by the formula</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\overline{f}(gN) = f(g).
-\end{equation*}
-</div>
-<div class="para">We now need to show that this formula determines a well-defined homomorphism: If <span class="process-math">\(xN = yN\text{,}\)</span> then <span class="process-math">\(y^{-1}x \in N \subseteq \operatorname{Ker}(f)\)</span> and so <span class="process-math">\(f(y)^{-1} f(x) = e\text{,}\)</span> whence <span class="process-math">\(f(y) = f(x)\text{.}\)</span> For any <span class="process-math">\(x,y\)</span> we have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\overline{f}(xNyN) = \overline{f}(xyN) = f(xy) = f(x)f(y) =\overline{f}(xN) \overline{f}(yN).
-\end{equation*}
-</div>
+<li>
+<div class="para">(normal) subgroups correspond to normal subgroups i.e.,</div>
+<div class="para logical"><ul class="disc">
+<li><div class="para">
+<span class="process-math">\(H\leq G\)</span> iff <span class="process-math">\(\overline{H}\leq \overline{G}\)</span> and <span class="process-math">\(\mathcal{H}\leq \overline{G}\)</span> iff <span class="process-math">\(\Phi(\mathcal{H})\leq G\)</span>
 </div></li>
-<li><div class="para">The formula for <span class="process-math">\(\overline{f}\)</span> given above ensures that <span class="process-math">\(\operatorname{Im}f=\operatorname{Im}\overline{f}\)</span> hence <span class="process-math">\(f\)</span> is surjective if and only if <span class="process-math">\(\overline{f}\)</span> is surjective.</div></li>
-<li><div class="para">We have <span class="process-math">\(\overline{f}(xN) = e_H\)</span> iff <span class="process-math">\(f(x) = e_H\)</span> iff <span class="process-math">\(x \in \operatorname{Ker}(f)\)</span> iff <span class="process-math">\(xN \in  \operatorname{Ker}(f)/N\text{.}\)</span> If <span class="process-math">\(xN \in \operatorname{Ker}(f)/N\)</span> for some <span class="process-math">\(x \in G\text{,}\)</span> then <span class="process-math">\(xN = yN\)</span> for some <span class="process-math">\(y \in \operatorname{Ker}(f)\)</span> and hence <span class="process-math">\(x = yz\)</span> for some <span class="process-math">\(z \in N\text{.}\)</span> Since <span class="process-math">\(N \subseteq \operatorname{Ker}(f)\text{,}\)</span> we have <span class="process-math">\(x \in \operatorname{Ker}(f)\text{.}\)</span>
+<li><div class="para">
+<span class="process-math">\(H\mathrel{\unlhd}G\)</span> iff <span class="process-math">\(\overline{H}\mathrel{\unlhd}\overline{G}\)</span> and <span class="process-math">\(\mathcal{H}\mathrel{\unlhd}\overline{G}\)</span> iff <span class="process-math">\(\Phi(\mathcal{H})\mathrel{\unlhd}G\)</span>
 </div></li>
+</ul></div>
+</li>
+<li><div class="para">indices are preserved; i.e., <span class="process-math">\([G:H] = [\overline{G} : \overline{H}]\)</span> and <span class="process-math">\([G: \Phi(\mathcal{H})] = [\overline{G} : \mathcal{H}]\text{.}\)</span>
+</div></li>
+<li>
+<div class="para">the supremums and infimums are preserved (this makes <span class="process-math">\(\Phi\)</span> and <span class="process-math">\(\Psi\)</span> lattice isomorphisms)</div>
+<div class="para logical"><ul class="disc">
+<li><div class="para">
+<span class="process-math">\(\overline{H} \cap \overline{K} = \overline{H \cap H}\)</span> and <span class="process-math">\(\langle \overline{H}\cup \overline{K} \rangle = \overline{\langle H\cup K \rangle}\)</span>
+</div></li>
+<li><div class="para">
+<span class="process-math">\(\Phi(\mathcal{H}) \cap \Phi(\mathcal K) = \Phi(\mathcal{H}\cap \mathcal K)\)</span> and <span class="process-math">\(\langle \Phi(\mathcal{H})\cup\Phi(\mathcal K) \rangle = \Phi\left(\langle \mathcal{H}\cup\mathcal K\rangle\right)\)</span>
+</div></li>
+</ul></div>
+</li>
 </ol></div>
 <span class="incontext"><a href="sec-quotient-groups.html#p-545" class="internal">in-context</a></span>
 </body>
