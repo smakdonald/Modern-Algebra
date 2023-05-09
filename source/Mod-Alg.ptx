@@ -3876,8 +3876,7 @@
     
         <section xml:id="sec-quotient-groups"><title>Quotient Groups</title>
 
-          <subsection xml:id="subsec-quotients">
-            <title>Quotient Groups</title>
+          <subsection xml:id="subsec-quotients"><title>Quotient Groups</title>
   
             <blockquote>
               <p>
@@ -3888,8 +3887,7 @@
       
             <p>In previous sections we have spent time discussing the existence and properties of cosets, but we have yet to lump them all together into one set. If one were to do so, a natural question to ask would be when such a set defines a group in its own right. Is it always? It sure would be nice if it was always.</p>
 
-            <exercise>
-              <title>It is Not Always</title>
+            <exercise><title>It is Not Always</title>
               <p>
                 Prove that it is not always.
               </p>
@@ -3897,8 +3895,7 @@
 
             <p>Darn. Is it ever? It sure would be nice if it was at least sometimes. </p>
 
-            <exercise>
-              <title>It is Sometimes</title>
+            <exercise><title>It is Sometimes</title>
               <p>
                 Find an example of when it is.
               </p>
@@ -3906,8 +3903,7 @@
 
             <p>Woohoo! So the set of cosets forms a group sometimes. But when? As it turns out (serendipidous, I know) we discovered the exact property a subgroup needs to ensure its cosets form a well-defined group. At least, normally they do...</p>
             
-            <definition xml:id="def-quotient-group">
-              <title>Quotient Group</title>
+            <definition xml:id="def-quotient-group"><title>Quotient Group</title>
               <statement>
                 <p>
                   For any normal subgroup <m>N</m> of a group <m>G</m>, the <em>quotient group</em> <m>G/N</m> is the set of left cosets of <m>N</m> in <m>G</m> with multiplication given by <m>xN\cdot yN=(xy)N</m>.
@@ -3917,8 +3913,7 @@
 
             <p>Before we get too ahead of ourselves, we should probably make sure that this thing is actually a well-defined bona-fide group. Don't take my word for it, I made this for fun, I could always be lying.</p>
       
-            <theorem xml:id="thm-quotient-iff-normal">
-              <title>Quotients and Normal Subgroups</title>
+            <theorem xml:id="thm-quotient-iff-normal"><title>Quotients and Normal Subgroups</title>
               <creator>1889</creator>
               <statement>
                 <p>
@@ -5084,7 +5079,7 @@
               </statement>
             </corollary>
 
-            <aside><p>One of my biggest pet peeves in math is when things with "Theorem" or "Lemma" in the title aren't given the corresponding classification. Why is Zorn's Lemma always a theorem? Why must the Orbit-Stabilizer <em>Theorem</em> be a corollary? Why do the good die young?</p></aside>
+            <aside><p>One of my biggest pet peeves in math is when things with "Theorem" or "Lemma" in the title aren't given the corresponding classification. Why is <xref text="title" ref="lem-zorn"/> always a theorem? Why must the Orbit-Stabilizer <em>Theorem</em> be a corollary? Why do the good die young?</p></aside>
       
             <warning><p>Take note that <xref text="title" ref="cor-orbit-stabilizer"/> only applies when <m>G</m> is a <em>finite</em> group.</p></warning>
 
@@ -7935,7 +7930,7 @@
                 </p>
       
                 <p>
-                  Let <m>S</m> be the poset of all proper subgroups of <m>G</m> ordered in terms of inclusion. Consider a string of these. Consider the union of them all. Luckily, unions of subgroups are subgroups if and only if there is containment, which there is, since everything is in the union. Thus its a subgroup. Since union in <m>S</m> and yields an upper bound, by Zorn's Lemma we a maximal element. Thus <m>G</m> possesses maximal subgroups.
+                  Let <m>S</m> be the poset of all proper subgroups of <m>G</m> ordered in terms of inclusion. Consider a string of these. Consider the union of them all. Luckily, unions of subgroups are subgroups if and only if there is containment, which there is, since everything is in the union. Thus its a subgroup. Since union in <m>S</m> and yields an upper bound, by <xref text="title" ref="lem-zorn"/> we a maximal element. Thus <m>G</m> possesses maximal subgroups.
                 </p>
               </solution>
             </exercise>
@@ -9955,7 +9950,7 @@
     
               <proof>
                 <p>
-                  Let <m>\cC</m> be the set of proper ideals of <m>R</m> that contain <m>I</m> and view <m>\cC</m> as a poset under containment. We will apply Zorn's Lemma. Suppose <m>\cT</m> is a totally ordered subset of <m>\cC</m>. We need to show <m>\cT</m> has an upper bound in <m>\cC</m>. If <m>\cT</m> is empty, <m>I</m> is such a bound. Otherwise, let <m>U = \bigcup_{L \in \cT} L</m>.
+                  Let <m>\cC</m> be the set of proper ideals of <m>R</m> that contain <m>I</m> and view <m>\cC</m> as a poset under containment. We will apply <xref text="title" ref="lem-zorn"/>. Suppose <m>\cT</m> is a totally ordered subset of <m>\cC</m>. We need to show <m>\cT</m> has an upper bound in <m>\cC</m>. If <m>\cT</m> is empty, <m>I</m> is such a bound. Otherwise, let <m>U = \bigcup_{L \in \cT} L</m>.
                 </p>
     
                 <p>
@@ -9971,7 +9966,7 @@
                 </p>
     
                 <p>
-                  This proves <m>U</m> is an ideal that contains <m>I</m>. Since every <m>L\in\cT</m> is a proper ideal, <m>L\cap R^\times =\emptyset</m>, so <m>U\cap R^\times = \bigcup_{L \in \cT} L\cap R^\times=\emptyset</m> and hence <m>U</m> is a proper ideal, so <m>U\in\cC</m>. By Zorn's Lemma, we conclude <m>\cC</m> has at least one maximal element <m>M</m>. This is a maximal ideal in the sense of definition  since if <m>J</m> is an ideal of <m>R</m> and <m>M\subseteq J</m> then either <m>J=R</m> or, if <m>J</m> is proper, then <m>J\in \cC</m>, which yields <m>J=M</m> by using that <m>M</m> is a maximal element of <m>\cC</m>.
+                  This proves <m>U</m> is an ideal that contains <m>I</m>. Since every <m>L\in\cT</m> is a proper ideal, <m>L\cap R^\times =\emptyset</m>, so <m>U\cap R^\times = \bigcup_{L \in \cT} L\cap R^\times=\emptyset</m> and hence <m>U</m> is a proper ideal, so <m>U\in\cC</m>. By <xref text="title" ref="lem-zorn"/>, we conclude <m>\cC</m> has at least one maximal element <m>M</m>. This is a maximal ideal in the sense of definition  since if <m>J</m> is an ideal of <m>R</m> and <m>M\subseteq J</m> then either <m>J=R</m> or, if <m>J</m> is proper, then <m>J\in \cC</m>, which yields <m>J=M</m> by using that <m>M</m> is a maximal element of <m>\cC</m>.
                 </p>
     
                 <p>
@@ -10145,7 +10140,7 @@
             <proposition ><title>Qual</title>
               <statement>
                 <p>
-                  Let <m>R</m> be a commutative ring with identity (with <m>1\neq0</m>) and <m>I</m> a proper ideal. Prove there exists a prime ideal <m>p</m> containing <m>I</m> such that whenever <m>p ⊇ q ⊇ I</m> where <m>q</m> is also a prime ideal, then <m>p = q</m>. (Hint: use Zorn's lemma.)
+                  Let <m>R</m> be a commutative ring with identity (with <m>1\neq0</m>) and <m>I</m> a proper ideal. Prove there exists a prime ideal <m>p</m> containing <m>I</m> such that whenever <m>p ⊇ q ⊇ I</m> where <m>q</m> is also a prime ideal, then <m>p = q</m>. (Hint: use <xref text="title" ref="lem-zorn"/>.)
                 </p>
               </statement>
             </proposition>
@@ -11177,7 +11172,7 @@
                 
                 <statement>
                   <p>
-                    Let <m>N</m> be a submodule of an <m>R</m>-module <m>N</m>. Using Zorn's Lemma, prove that there is a submodule <m>N'</m> such that 
+                    Let <m>N</m> be a submodule of an <m>R</m>-module <m>N</m>. Using <xref text="title" ref="lem-zorn"/>, prove that there is a submodule <m>N'</m> such that 
                     <ol>
                       <li>
                         <p>
@@ -12771,7 +12766,7 @@
               </p>
   
               <p>
-                Since <m>R</m> is not the zero ring, it contains at least one maximal ideal <m>I</m>. (This is proven using Zorn's Lemma.) Recall that <m>R/I</m> is a field.
+                Since <m>R</m> is not the zero ring, it contains at least one maximal ideal <m>I</m>. (This is proven using <xref text="title" ref="lem-zorn"/>.) Recall that <m>R/I</m> is a field.
               </p>
   
               <p>
@@ -12966,7 +12961,7 @@
                     <ol>
                       <li>
                         <p>
-                          Let <m>A</m> be the set of all linearly independent subsets of <m>M</m> that contain <m>T</m>. We can order <m>A</m> with respect to inclusion. Let <m>X</m> be a totally ordered subset of <m>A</m>, and let <m>U</m> be the union of all elements in <m>X</m>. Let <m>\{u_i\}</m> be a set of elements in <m>U</m> such that <m>\sum_{i=0}^nr_iu_i=0</m> for some <m>r_i\in R</m>, where <m>i\leq n</m> for some <m>n\in\N</m>. As <m>U</m> is the union of all elements in <m>X</m>, there exists some <m>B_1</m> such that <m>u_1\in B_1</m>. However, as <m>X</m> is totally ordered, there exists some <m>B_2</m> such that <m>B_2</m> contains <m>B_1</m> and <m>u_2\in B_2</m>. Continuing in this way, we see that there exists some <m>B_n\in X</m> such that <m>\{u_i\}\subseteq B_n</m>. As <m>B_n</m> is linearly independent, we know that <m>\sum_{i=0}^nr_iu_i=0</m> means that <m>r_i=0</m> for all <m>i</m>. Thus <m>U</m> is indeed linearly independent, making it an upper bound for <m>X</m>. Thus by Zorn's Lemma there exists a maximal element of <m>A</m>, which we denote <m>S</m>. Thus <m>S</m> is linearly independent, contains <m>T</m>, and is maximal.
+                          Let <m>A</m> be the set of all linearly independent subsets of <m>M</m> that contain <m>T</m>. We can order <m>A</m> with respect to inclusion. Let <m>X</m> be a totally ordered subset of <m>A</m>, and let <m>U</m> be the union of all elements in <m>X</m>. Let <m>\{u_i\}</m> be a set of elements in <m>U</m> such that <m>\sum_{i=0}^nr_iu_i=0</m> for some <m>r_i\in R</m>, where <m>i\leq n</m> for some <m>n\in\N</m>. As <m>U</m> is the union of all elements in <m>X</m>, there exists some <m>B_1</m> such that <m>u_1\in B_1</m>. However, as <m>X</m> is totally ordered, there exists some <m>B_2</m> such that <m>B_2</m> contains <m>B_1</m> and <m>u_2\in B_2</m>. Continuing in this way, we see that there exists some <m>B_n\in X</m> such that <m>\{u_i\}\subseteq B_n</m>. As <m>B_n</m> is linearly independent, we know that <m>\sum_{i=0}^nr_iu_i=0</m> means that <m>r_i=0</m> for all <m>i</m>. Thus <m>U</m> is indeed linearly independent, making it an upper bound for <m>X</m>. Thus by <xref text="title" ref="lem-zorn"/> there exists a maximal element of <m>A</m>, which we denote <m>S</m>. Thus <m>S</m> is linearly independent, contains <m>T</m>, and is maximal.
                         </p>
                       </li>
 
@@ -13079,7 +13074,7 @@
               </p>
   
               <p>
-                We may thus apply Zorn's Lemma to conclude that <m>\cP</m> has at least one maximal element, <m>B</m>. I claim <m>B</m> is a basis of <m>V</m>. Note that <m>B</m> is linearly independent and <m>I \subseteq B \subseteq S</m> by construction. We need to show that it spans <m>V</m>. Suppose not. Since <m>S</m> spans <m>V</m>, if <m>S \subseteq \Span(B)</m>, then <m>\Span(B)</m> would have to be all of <m>V</m>. (For note that if <m>\Span(S) = V</m> and <m>S \subseteq \Span(B)</m>, then for any <m>v \in V</m> we may write <m>v = \sum_i c_i s_i</m> for <m>s_i \in S</m> and <m>s_i = \sum_j a_{i,j} b_{i,j}</m> with <m>b_{i,j} \in B</m> and hence <m>v= \sum_{i,j} c_i a_{i,j} b_{i,j}</m>, which implies <m>\Span(B) = V</m>.) Since we are assuming <m>\Span(B) \ne V</m>, there must be at least one <m>v \in S</m> such that <m>v \notin \Span(B)</m>. Set <m>X := B \cup \{v\}</m>. Clearly, <m>I \subset X \subseteq S</m> and, by Lemma , <m>X</m> is linearly independent. This shows that <m>X</m> is an element of <m>\cP</m> that is strictly bigger than <m>B</m>, contrary to the maximality of <m>B</m>. So, <m>B</m> must span <m>V</m> and hence it is a basis.
+                We may thus apply <xref text="title" ref="lem-zorn"/> to conclude that <m>\cP</m> has at least one maximal element, <m>B</m>. I claim <m>B</m> is a basis of <m>V</m>. Note that <m>B</m> is linearly independent and <m>I \subseteq B \subseteq S</m> by construction. We need to show that it spans <m>V</m>. Suppose not. Since <m>S</m> spans <m>V</m>, if <m>S \subseteq \Span(B)</m>, then <m>\Span(B)</m> would have to be all of <m>V</m>. (For note that if <m>\Span(S) = V</m> and <m>S \subseteq \Span(B)</m>, then for any <m>v \in V</m> we may write <m>v = \sum_i c_i s_i</m> for <m>s_i \in S</m> and <m>s_i = \sum_j a_{i,j} b_{i,j}</m> with <m>b_{i,j} \in B</m> and hence <m>v= \sum_{i,j} c_i a_{i,j} b_{i,j}</m>, which implies <m>\Span(B) = V</m>.) Since we are assuming <m>\Span(B) \ne V</m>, there must be at least one <m>v \in S</m> such that <m>v \notin \Span(B)</m>. Set <m>X := B \cup \{v\}</m>. Clearly, <m>I \subset X \subseteq S</m> and, by Lemma , <m>X</m> is linearly independent. This shows that <m>X</m> is an element of <m>\cP</m> that is strictly bigger than <m>B</m>, contrary to the maximality of <m>B</m>. So, <m>B</m> must span <m>V</m> and hence it is a basis.
               </p>
             </proof>
           </theorem>
@@ -13270,7 +13265,7 @@
                   </p>
       
                   <p>
-                    We may thus apply Zorn's Lemma to conclude that <m>\cP</m> has at least one maximal element, <m>B</m>. I claim <m>B</m> is a basis of <m>V</m>.
+                    We may thus apply <xref text="title" ref="lem-zorn"/> to conclude that <m>\cP</m> has at least one maximal element, <m>B</m>. I claim <m>B</m> is a basis of <m>V</m>.
                   </p>
       
                   <p>
@@ -13760,7 +13755,7 @@
                     <ol>
                       <li>
                         <p>
-                          Let <m>A</m> denote the set of all subspaces of <m>V</m> such that <m>A\cap W=\{0\}</m>. We can order <m>A</m> with respect to inclusion. Let <m>X</m> be a totally ordered subset of <m>A</m>, and let <m>B</m> be the union of all the elements in <m>X</m>. Unions of subspaces are subspaces, and by DeMorgan's Laws we see that <m>B\cap W=\{0\}</m>. Thus by Zorn's Lemma there exists a maximal element of <m>A,</m> which we denote <m>U</m>. So <m>U\cap W=\{0\}</m> by definition.
+                          Let <m>A</m> denote the set of all subspaces of <m>V</m> such that <m>A\cap W=\{0\}</m>. We can order <m>A</m> with respect to inclusion. Let <m>X</m> be a totally ordered subset of <m>A</m>, and let <m>B</m> be the union of all the elements in <m>X</m>. Unions of subspaces are subspaces, and by DeMorgan's Laws we see that <m>B\cap W=\{0\}</m>. Thus by <xref text="title" ref="lem-zorn"/> there exists a maximal element of <m>A,</m> which we denote <m>U</m>. So <m>U\cap W=\{0\}</m> by definition.
                         </p>
           
                         <p>
@@ -19027,7 +19022,7 @@
 
           <example xml:id="ex-using-eisenstein">
             <p>
-              For instance, <m>5x^{11} - 30 x^4 +60 x^3 +360 x- 30</m> is irreducible in <m>\Q[x]</m> thanks to Eisenstein applied with <m>p = 2</m>. (Note that it isn't irreducible in <m>\Z[x]</m> since it does not have unit content.)
+              For instance, <m>5x^{11} - 30 x^4 +60 x^3 +360 x- 30</m> is irreducible in <m>\Q[x]</m> thanks to <xref text="title" ref="thm-eisensteins-criterion"/> applied with <m>p = 2</m>. (Note that it isn't irreducible in <m>\Z[x]</m> since it does not have unit content.)
             </p>
           </example>
 
@@ -19052,7 +19047,7 @@
               </p>
 
               <p>
-                By Eisenstein, <m>\phi(f(x))</m> is irreducible in <m>\Q[y]</m> and, since <m>\phi</m> is an isomorphism, it follows that <m>f(x)</m> is irreducible in <m>\Q[x]</m>.
+                By <xref text="title" ref="thm-eisensteins-criterion"/>, <m>\phi(f(x))</m> is irreducible in <m>\Q[y]</m> and, since <m>\phi</m> is an isomorphism, it follows that <m>f(x)</m> is irreducible in <m>\Q[x]</m>.
               </p>
             </proof>
           </proposition>
@@ -19129,11 +19124,11 @@
               </p>
 
               <p>
-                However, if <m>\overline{\alpha}=49</m> then <m>\overline{\beta}=1</m>, making it a unit. So <m>\overline{\alpha}=7</m> and thus <m>a^2+b^2=7</m>. As <m>a^2, b^2\leq0</m>, either <m>a=0</m> or <m>b=0</m>. But then either <m>a^2=7</m> or <m>b^2=7</m>, and as <m>\sqrt{7}\not\in\Z</m>, we have a contradiction. Thus <m>7</m> is prime in <m>\Z[i]</m>. Using Eisenstein's Criterion with <m>p=7</m>, we see that <m>x^6 + 7</m> is irreducible in <m>\Q(i)[x]</m>.
+                However, if <m>\overline{\alpha}=49</m> then <m>\overline{\beta}=1</m>, making it a unit. So <m>\overline{\alpha}=7</m> and thus <m>a^2+b^2=7</m>. As <m>a^2, b^2\leq0</m>, either <m>a=0</m> or <m>b=0</m>. But then either <m>a^2=7</m> or <m>b^2=7</m>, and as <m>\sqrt{7}\not\in\Z</m>, we have a contradiction. Thus <m>7</m> is prime in <m>\Z[i]</m>. Using <xref text="title" ref="thm-eisensteins-criterion"/> with <m>p=7</m>, we see that <m>x^6 + 7</m> is irreducible in <m>\Q(i)[x]</m>.
               </p>
 
               <p>
-                Using Eisenstein's Criterion with <m>p=2</m>, we see that <m>x^4 - 6x^2 + 10</m> is irreducible in <m>\Q[x]</m>. However, in <m>\Q(i)[x]</m> observe that <me>x^4-6x^2+10=(x^2-(3+i))(x^2-(3-i)).</me> As neither <m>(x^2-(3+i))</m> nor <m>(x^2-(3-i))</m> are units in <m>\Q(i)[x]</m> (as <m>x</m> has no inverse), we see that <m>x^4-6x^2+10</m> is reducible in <m>\Q(i)[x]</m>.
+                Using <xref text="title" ref="thm-eisensteins-criterion"/> with <m>p=2</m>, we see that <m>x^4 - 6x^2 + 10</m> is irreducible in <m>\Q[x]</m>. However, in <m>\Q(i)[x]</m> observe that <me>x^4-6x^2+10=(x^2-(3+i))(x^2-(3-i)).</me> As neither <m>(x^2-(3+i))</m> nor <m>(x^2-(3-i))</m> are units in <m>\Q(i)[x]</m> (as <m>x</m> has no inverse), we see that <m>x^4-6x^2+10</m> is reducible in <m>\Q(i)[x]</m>.
               </p>
             </proof>
           </proposition>
@@ -19406,7 +19401,7 @@
     
             <example xml:id="exe-more-field-extensions"><title>Yet More Field Extensions</title>
               <p>
-                Consider <m>x^3 - 2 \in \Q[x]</m>. It is irreducible (e.g., by Eisenstein)<xref provisional="empty"/> and has roots <m>\a = \sqrt[3]{2}</m>, <m>\beta = e^{2 \pi i/3} \sqrt[3]{2}</m> and <m>\g = e^{4 \pi i/3} \sqrt[3]{2}</m> in <m>\C</m>. So there are three ways in which we could “adjoin a root" to <m>\Q</m>: First we could form the field 
+                Consider <m>x^3 - 2 \in \Q[x]</m>. It is irreducible (e.g., by <xref text="title" ref="thm-eisensteins-criterion"/>) and has roots <m>\a = \sqrt[3]{2}</m>, <m>\beta = e^{2 \pi i/3} \sqrt[3]{2}</m> and <m>\g = e^{4 \pi i/3} \sqrt[3]{2}</m> in <m>\C</m>. So there are three ways in which we could “adjoin a root" to <m>\Q</m>: First we could form the field 
                 <me>
                   \Q[\a] = \{a + b \a + c \a^2 \mid a,b,c \in \Q\}.
                 </me> 
@@ -19886,7 +19881,7 @@
               </p>
     
               <p>
-                So instead let's try a different approach. Let <m>L = \Q(\sqrt[4]{5})</m>. Then since <m>x^4 - 5</m> is irreducible in <m>\Q[x]</m> by Eisenstein, we have <m>[L: \Q] = 4</m>. Since <m>F = L(i)</m> and <m>i</m> is a root of <m>x^2 +1</m>, we have <m>[F:L] \leq 2</m>. But <m>F \ne L</m> since <m>F \subseteq \R</m>. Note that <m>[F:L] = 1</m> if and only if <m>F = L</m>. Thus <m>[F:L] = 2</m>.
+                So instead let's try a different approach. Let <m>L = \Q(\sqrt[4]{5})</m>. Then since <m>x^4 - 5</m> is irreducible in <m>\Q[x]</m> by <xref text="title" ref="thm-eisensteins-criterion"/>, we have <m>[L: \Q] = 4</m>. Since <m>F = L(i)</m> and <m>i</m> is a root of <m>x^2 +1</m>, we have <m>[F:L] \leq 2</m>. But <m>F \ne L</m> since <m>F \subseteq \R</m>. Note that <m>[F:L] = 1</m> if and only if <m>F = L</m>. Thus <m>[F:L] = 2</m>.
               </p>
     
               <p>
@@ -19944,7 +19939,7 @@
     
             <example xml:id="exe-infinite-algebraic-extension"><title>Infinite Algebraic Extension</title>
               <p>
-                Let <m>E_n = \Q(\sqrt[n]{2})</m> and set <m>F = \bigcup_n E_n</m>. Then <m>F</m> is a subfield of <m>\C</m>: To see this, note first that <m>E_n \subseteq E_m</m> provided <m>n \mid m</m>. Given <m>a, b \in F</m>, we have <m>a \in E_n</m> and <m>b \in E_m</m> for some <m>n</m> and <m>m</m> and hence <m>a,b</m> are both in <m>E_{mn}</m>. Since <m>E_{mn}</m> is a field, we have <m>a + b</m>, <m>a-b</m>, <m>a \cdot b</m> and (provided <m>a \ne 0</m>) <m>\frac{1}{a}</m> all belong to <m>E_{mn}</m> and hence to <m>F</m>. This proves <m>F</m> is field extension of <m>\Q</m>. It is algebraic over <m>\Q</m> since each <m>E_n</m> is. But it is not a finite extension of <m>\Q</m>, since <m>[E_n: \Q] = n</m> (since <m>x^n - 2</m> is irreducible in <m>\Q[x]</m> by Eisenstein <xref provisional="empty"/>) and hence <m>[F: \Q] \geq n</m> for all <m>n</m>. <xref provisional="empty"/>
+                Let <m>E_n = \Q(\sqrt[n]{2})</m> and set <m>F = \bigcup_n E_n</m>. Then <m>F</m> is a subfield of <m>\C</m>: To see this, note first that <m>E_n \subseteq E_m</m> provided <m>n \mid m</m>. Given <m>a, b \in F</m>, we have <m>a \in E_n</m> and <m>b \in E_m</m> for some <m>n</m> and <m>m</m> and hence <m>a,b</m> are both in <m>E_{mn}</m>. Since <m>E_{mn}</m> is a field, we have <m>a + b</m>, <m>a-b</m>, <m>a \cdot b</m> and (provided <m>a \ne 0</m>) <m>\frac{1}{a}</m> all belong to <m>E_{mn}</m> and hence to <m>F</m>. This proves <m>F</m> is field extension of <m>\Q</m>. It is algebraic over <m>\Q</m> since each <m>E_n</m> is. But it is not a finite extension of <m>\Q</m>, since <m>[E_n: \Q] = n</m> (since <m>x^n - 2</m> is irreducible in <m>\Q[x]</m> by <xref text="title" ref="thm-eisensteins-criterion"/>) and hence <m>[F: \Q] \geq n</m> for all <m>n</m>. <xref provisional="empty"/>
               </p>
             </example>
     
@@ -20032,7 +20027,7 @@
 
                     <li>
                       <p>
-                        Notice that <m>\a_n\sqrt[n]2\in\overline{\Q}</m> for all <m>n\in\N</m> and that <m>\a_n</m> is a root of the polynomial <m>x^n-2</m>, which is irreducible in <m>\Q[x]</m> by Eisenstein's Criterion]] (<m>p=2</m>). Thus <m>[\Q(\a_n):\Q]=n</m>. As <m>\a_n</m> must be added to <m>\Q</m> for all <m>n</m>, we see that this extension is not finite.
+                        Notice that <m>\a_n\sqrt[n]2\in\overline{\Q}</m> for all <m>n\in\N</m> and that <m>\a_n</m> is a root of the polynomial <m>x^n-2</m>, which is irreducible in <m>\Q[x]</m> by <xref text="title" ref="thm-eisensteins-criterion"/> (<m>p=2</m>). Thus <m>[\Q(\a_n):\Q]=n</m>. As <m>\a_n</m> must be added to <m>\Q</m> for all <m>n</m>, we see that this extension is not finite.
                       </p>
                     </li>
                   </ol>
@@ -20095,7 +20090,7 @@
                 </p>
     
                 <p>
-                  The polynomial <m>g(x)=x^4-28</m> is irreducible in <m>\Q[x]</m> by Eisenstein's Criterion (<m>p=7</m>). Thus it is the minimal polynomial of <m>\sqrt[4]{28}</m>, and so <m>F=\Q(\sqrt[4]{28})</m> is a field extension of <m>\Q</m> of degree <m>4</m>. After adjoining <m>i</m> as well we see that <m>E</m> is an extension of degree <m>8</m>. Thus a basis of <m>E</m> as a <m>\Q</m>-vector space is the following: <me>\{1,\sqrt[4]{28},\sqrt[4]{28}^2,\sqrt[4]{28}^3,i,\sqrt[4]{28}i,\sqrt[4]{28}^2i,\sqrt[4]{28}^3i\}</me>
+                  The polynomial <m>g(x)=x^4-28</m> is irreducible in <m>\Q[x]</m> by <xref text="title" ref="thm-eisensteins-criterion"/> (<m>p=7</m>). Thus it is the minimal polynomial of <m>\sqrt[4]{28}</m>, and so <m>F=\Q(\sqrt[4]{28})</m> is a field extension of <m>\Q</m> of degree <m>4</m>. After adjoining <m>i</m> as well we see that <m>E</m> is an extension of degree <m>8</m>. Thus a basis of <m>E</m> as a <m>\Q</m>-vector space is the following: <me>\{1,\sqrt[4]{28},\sqrt[4]{28}^2,\sqrt[4]{28}^3,i,\sqrt[4]{28}i,\sqrt[4]{28}^2i,\sqrt[4]{28}^3i\}</me>
                 </p>
                 </proof>
             </proposition>
@@ -20232,7 +20227,7 @@
                 </p>
     
                 <p>
-                  Let <m>F=\Q(\sqrt[4]{20})</m>. Note that by Eisenstein's Criterion using <m>p=5</m> we see that <m>\sqrt[4]{20}</m> is the root of an irreducible polynomial <m>x^4-20</m> in <m>\Q</m>. Thus by Theorem 2.31 we see that <m>[F:\Q]</m> is the degree of the minimum polynomial of this extension. However, as <m>x^4-20</m> is monic and of degree 4, we see that it is the minimal polynomial and thus that <m>[F:\Q]=4</m>. As <m>\sqrt[4]{20}\in\R-\Q</m>, this extension will be contained in the real numbers, and thus that <m>F\subseteq\R</m>.
+                  Let <m>F=\Q(\sqrt[4]{20})</m>. Note that by <xref text="title" ref="thm-eisensteins-criterion"/> using <m>p=5</m> we see that <m>\sqrt[4]{20}</m> is the root of an irreducible polynomial <m>x^4-20</m> in <m>\Q</m>. Thus by Theorem 2.31 we see that <m>[F:\Q]</m> is the degree of the minimum polynomial of this extension. However, as <m>x^4-20</m> is monic and of degree 4, we see that it is the minimal polynomial and thus that <m>[F:\Q]=4</m>. As <m>\sqrt[4]{20}\in\R-\Q</m>, this extension will be contained in the real numbers, and thus that <m>F\subseteq\R</m>.
                 </p>
     
                 <p>
@@ -20294,7 +20289,7 @@
                 </p>
     
                 <p>
-                  Next, note that <m>\sqrt[p]{2}</m> is a root of the polynomial <m>x^p-2</m>, making it algebraic over <m>\Q</m>. Using Eisenstein's Criterion in conjunction with the prime <m>q=2</m> we see that <m>x^p-2</m> is irreducible in <m>\Q[x]</m>. As <m>\gcd(p,p-1)=1</m>, by Problem 5 on the previous homework we see that <m>x^p-2</m> is irreducible in <m>\Q(\sqrt[p]{2})</m> as well. As <m>x^p-2</m> is irreducible and monic, we see that it is the minimal polynomial of <m>\sqrt[p]{2}</m> in <m>\Q(e^{2\pi i/p})[x]</m>, and thus <me>[\Q(e^{2\pi i/p},\sqrt[p]{2}):\Q(e^{2\pi i/p})]=p.</me> Using the <xref text="title" ref="thm-degree-formula"/>, we see that <me>[\Q(\sqrt[p]{2},e^{2\pi i/p}):\Q]=[\Q(e^{2\pi i/p},\sqrt[p]{2}):\Q(e^{2\pi i/p})][\Q(\sqrt[p]{2}):\Q]=p(p-1).</me> Notice that <m>\sqrt[p]{2}\cdot (e^{{2\pi i/p}^n})</m>, where <m>1\leq n\leq p</m>, which are all roots of <m>x^p-2</m>. By the Factor Theorem, there can be no other roots of this polynomial. Thus <m>L\subseteq\Q(\sqrt[p]{2},e^{2\pi i/p})</m>.
+                  Next, note that <m>\sqrt[p]{2}</m> is a root of the polynomial <m>x^p-2</m>, making it algebraic over <m>\Q</m>. Using <xref text="title" ref="thm-eisensteins-criterion"/> in conjunction with the prime <m>q=2</m> we see that <m>x^p-2</m> is irreducible in <m>\Q[x]</m>. As <m>\gcd(p,p-1)=1</m>, by Problem 5 on the previous homework we see that <m>x^p-2</m> is irreducible in <m>\Q(\sqrt[p]{2})</m> as well. As <m>x^p-2</m> is irreducible and monic, we see that it is the minimal polynomial of <m>\sqrt[p]{2}</m> in <m>\Q(e^{2\pi i/p})[x]</m>, and thus <me>[\Q(e^{2\pi i/p},\sqrt[p]{2}):\Q(e^{2\pi i/p})]=p.</me> Using the <xref text="title" ref="thm-degree-formula"/>, we see that <me>[\Q(\sqrt[p]{2},e^{2\pi i/p}):\Q]=[\Q(e^{2\pi i/p},\sqrt[p]{2}):\Q(e^{2\pi i/p})][\Q(\sqrt[p]{2}):\Q]=p(p-1).</me> Notice that <m>\sqrt[p]{2}\cdot (e^{{2\pi i/p}^n})</m>, where <m>1\leq n\leq p</m>, which are all roots of <m>x^p-2</m>. By the Factor Theorem, there can be no other roots of this polynomial. Thus <m>L\subseteq\Q(\sqrt[p]{2},e^{2\pi i/p})</m>.
                 </p>
     
                 <p>
@@ -20385,7 +20380,7 @@
       </p>
     
       <p>
-        Note that <m>f</m> is irreducible in <m>\Q[x]</m> by Eisenstein's Criterion (<m>p=2</m>). The roots of <m>f</m> are 
+        Note that <m>f</m> is irreducible in <m>\Q[x]</m> by <xref text="title" ref="thm-eisensteins-criterion"/> (<m>p=2</m>). The roots of <m>f</m> are 
         <ol>
           <li>
             <p>
@@ -20777,7 +20772,7 @@
                 </p>
     
                 <p>
-                  Let <m>\cT</m> be any totally ordered subset of <m>\cS</m>. If <m>\cT</m> is empty, then <m>F \in \cS</m> is an upper bound for <m>\cT</m>. If <m>\cT</m> is non-empty, set <m>K := \cup_{E \in \cT} E</m>. Using that <m>\cT</m> is totally ordered, it is not hard to see that <m>K</m> is indeed a field. It clearly contains <m>F</m> as a subfield and every element of it is algebraic over <m>F</m>. So <m>K \in \cS</m> and it is an upper bound for <m>\cT</m>. By Zorn's Lemma, <m>\cS</m> has a maximal member <m>L</m>.
+                  Let <m>\cT</m> be any totally ordered subset of <m>\cS</m>. If <m>\cT</m> is empty, then <m>F \in \cS</m> is an upper bound for <m>\cT</m>. If <m>\cT</m> is non-empty, set <m>K := \cup_{E \in \cT} E</m>. Using that <m>\cT</m> is totally ordered, it is not hard to see that <m>K</m> is indeed a field. It clearly contains <m>F</m> as a subfield and every element of it is algebraic over <m>F</m>. So <m>K \in \cS</m> and it is an upper bound for <m>\cT</m>. By <xref text="title" ref="lem-zorn"/>, <m>\cS</m> has a maximal member <m>L</m>.
                 </p>
     
                 <p>
@@ -20840,7 +20835,7 @@
                 </p>
     
                 <p>
-                  As <m>x^4-p</m> is irreducible in <m>Q</m> (Eisenstein, <m>p=p</m>) and <m>x^4-p</m> is monic, we see that <m>[\Q(\sqrt[4]{p}):\Q]=4</m>. As <m>x^2+1</m> is irreducible and monic, we see that <m>[\Q(\sqrt[4]{p},i):\Q(\sqrt[4]{p})]=2</m>. By the <xref text="title" ref="thm-degree-formula"/> we have <m>[\Q(\sqrt[4]{p},i):\Q]=8</m>. Note that the four roots of <m>(x^4 - p)</m> are the following: - <m>\sqrt[4]{p}</m>, - <m>-\sqrt[4]{p}</m>, - <m>\sqrt[4]{p}i,</m> and - <m>-\sqrt[4]{p}i</m>. As <m>\frac{\sqrt[4]{p}i}{\sqrt[4]{p}}=i</m>, we see that <m>\Q(\sqrt[4]{p})</m> is the splitting field of <m>F</m>. Note then that as <m>[\Q(i):\Q]=2</m> and the degree of the splitting field is 8, by the <xref text="title" ref="thm-degree-formula"/> we see that the degree of the splitting field of <m>x^4-p</m> over <m>\Q(i)=4</m>. As <m>x^4-p</m> is monic and degree <m>4</m>, it must be the minimal polynomial of the second extension and thus irreducible in <m>\Q(i)[x]</m>.
+                  As <m>x^4-p</m> is irreducible in <m>Q</m> (<xref text="title" ref="thm-eisensteins-criterion"/>, <m>p=p</m>) and <m>x^4-p</m> is monic, we see that <m>[\Q(\sqrt[4]{p}):\Q]=4</m>. As <m>x^2+1</m> is irreducible and monic, we see that <m>[\Q(\sqrt[4]{p},i):\Q(\sqrt[4]{p})]=2</m>. By the <xref text="title" ref="thm-degree-formula"/> we have <m>[\Q(\sqrt[4]{p},i):\Q]=8</m>. Note that the four roots of <m>(x^4 - p)</m> are the following: - <m>\sqrt[4]{p}</m>, - <m>-\sqrt[4]{p}</m>, - <m>\sqrt[4]{p}i,</m> and - <m>-\sqrt[4]{p}i</m>. As <m>\frac{\sqrt[4]{p}i}{\sqrt[4]{p}}=i</m>, we see that <m>\Q(\sqrt[4]{p})</m> is the splitting field of <m>F</m>. Note then that as <m>[\Q(i):\Q]=2</m> and the degree of the splitting field is 8, by the <xref text="title" ref="thm-degree-formula"/> we see that the degree of the splitting field of <m>x^4-p</m> over <m>\Q(i)=4</m>. As <m>x^4-p</m> is monic and degree <m>4</m>, it must be the minimal polynomial of the second extension and thus irreducible in <m>\Q(i)[x]</m>.
                 </p> 
               </proof>
             </proposition>
@@ -21116,7 +21111,7 @@
             
             <example xml:id="exe-splitting-fields-and-x3-2">
               <p>
-                The splitting field <m>L</m> of <m>x^3 -2</m> over <m>\Q</m> is <m>L = \Q(\sqrt[3]{2}, \zeta_3 \sqrt[3]{2}, \zeta_3^2 \sqrt[3]{2})</m>, where <m>\zeta_3 = e^{\frac{2 \pi i}{3}}</m>. It is not hard to see that <m>L = \Q(\sqrt[3]{2}, \zeta_3)</m>. We have <m>[\Q(\sqrt[3]{2}): \Q] = 3</m> since <m>x^3 - 2</m> is irreducible in <m>\Q[x]</m> (by Eisenstein). Since <m>\Q(\sqrt[3]{2}) \subseteq \R</m> and thus <m>\Q(\sqrt[3]{2}) \ne L</m>, the <xref text="title" ref="thm-degree-formula"/> gives that <m>[L: \Q] \geq 6</m>. By the Theorem, <m>[L: \Q] \leq 6</m> and hence <m>[L: \Q] = 6</m>. (We could also have proven this without appealing to the Theorem.)
+                The splitting field <m>L</m> of <m>x^3 -2</m> over <m>\Q</m> is <m>L = \Q(\sqrt[3]{2}, \zeta_3 \sqrt[3]{2}, \zeta_3^2 \sqrt[3]{2})</m>, where <m>\zeta_3 = e^{\frac{2 \pi i}{3}}</m>. It is not hard to see that <m>L = \Q(\sqrt[3]{2}, \zeta_3)</m>. We have <m>[\Q(\sqrt[3]{2}): \Q] = 3</m> since <m>x^3 - 2</m> is irreducible in <m>\Q[x]</m> (by <xref text="title" ref="thm-eisensteins-criterion"/>). Since <m>\Q(\sqrt[3]{2}) \subseteq \R</m> and thus <m>\Q(\sqrt[3]{2}) \ne L</m>, the <xref text="title" ref="thm-degree-formula"/> gives that <m>[L: \Q] \geq 6</m>. By the Theorem, <m>[L: \Q] \leq 6</m> and hence <m>[L: \Q] = 6</m>. (We could also have proven this without appealing to the Theorem.)
               </p>
             </example>
     
@@ -21226,7 +21221,7 @@
                 </p>
     
                 <p>
-                  First, note that <m>f</m> is irreducible in <m>\Q[x]</m> by Eisenstein's Criterion (<m>p=3</m>) The roots of <m>f</m> are 
+                  First, note that <m>f</m> is irreducible in <m>\Q[x]</m> by <xref text="title" ref="thm-eisensteins-criterion"/> (<m>p=3</m>) The roots of <m>f</m> are 
                   - <m>\sqrt[4]3</m>,
                   - <m>\sqrt[4]3i</m>, 
                   - <m>-\sqrt[4]3</m>, and 
@@ -21289,11 +21284,11 @@
     
               <proof>
                 <p>
-                  Note that from the previous homework, we know that <m>[E:\Q]=8</m>, and that <m>E=\Q(\sqrt[4]{20},i)</m>. Additionally, we know the following: - <m>\a_1 = e^{\pi i/4}\sqrt[4]{5} = \cos(\frac{\pi}{4})+i\sin(\frac{\pi}{4})\sqrt[4]{5} = \frac{\sqrt{2}}{2}\sqrt[4]{5}+i\frac{\sqrt{2}}{2}\sqrt[4]{5}=\sqrt[4]{5/4}(1+i)</m>, - <m>\a_2 = e^{3\pi i/4}\sqrt[4]{5} = \cos(\frac{3\pi}{4})+i\sin(\frac{3\pi}{4})\sqrt[4]{5} = \frac{-\sqrt{2}}{2}\sqrt[4]{5}-i\frac{\sqrt{2}}{2}\sqrt[4]{5}=\sqrt[4]{5/4}(-1+i)</m>, - <m>\a_3 = e^{5\pi i/4}\sqrt[4]{5} = \cos(\frac{5\pi}{4})+i\sin(\frac{5\pi}{4})\sqrt[4]{5} = \frac{\sqrt{2}}{2}\sqrt[4]{5}+i\frac{\sqrt{2}}{2}\sqrt[4]{5}=\sqrt[4]{5/4}(-1-i)</m>, and - <m>\a_4 = e^{7\pi i/4}\sqrt[4]{5} = \cos(\frac{7\pi}{4})+i\sin(\frac{7\pi}{4})\sqrt[4]{5} = \frac{\sqrt{2}}{2}\sqrt[4]{5}-i\frac{\sqrt{2}}{2}\sqrt[4]{5}=\sqrt[4]{5/4}(1-i)</m>. Note that by Eisenstein's Criterion using <m>p=5</m> we see that <m>x^4+5</m> is irreducible in <m>\Q</m>. As <m>\Q</m> has characteristic 0, we see that <m>x^4+5</m> is separable as well.
+                  Note that from the previous homework, we know that <m>[E:\Q]=8</m>, and that <m>E=\Q(\sqrt[4]{20},i)</m>. Additionally, we know the following: - <m>\a_1 = e^{\pi i/4}\sqrt[4]{5} = \cos(\frac{\pi}{4})+i\sin(\frac{\pi}{4})\sqrt[4]{5} = \frac{\sqrt{2}}{2}\sqrt[4]{5}+i\frac{\sqrt{2}}{2}\sqrt[4]{5}=\sqrt[4]{5/4}(1+i)</m>, - <m>\a_2 = e^{3\pi i/4}\sqrt[4]{5} = \cos(\frac{3\pi}{4})+i\sin(\frac{3\pi}{4})\sqrt[4]{5} = \frac{-\sqrt{2}}{2}\sqrt[4]{5}-i\frac{\sqrt{2}}{2}\sqrt[4]{5}=\sqrt[4]{5/4}(-1+i)</m>, - <m>\a_3 = e^{5\pi i/4}\sqrt[4]{5} = \cos(\frac{5\pi}{4})+i\sin(\frac{5\pi}{4})\sqrt[4]{5} = \frac{\sqrt{2}}{2}\sqrt[4]{5}+i\frac{\sqrt{2}}{2}\sqrt[4]{5}=\sqrt[4]{5/4}(-1-i)</m>, and - <m>\a_4 = e^{7\pi i/4}\sqrt[4]{5} = \cos(\frac{7\pi}{4})+i\sin(\frac{7\pi}{4})\sqrt[4]{5} = \frac{\sqrt{2}}{2}\sqrt[4]{5}-i\frac{\sqrt{2}}{2}\sqrt[4]{5}=\sqrt[4]{5/4}(1-i)</m>. Note that by <xref text="title" ref="thm-eisensteins-criterion"/> using <m>p=5</m> we see that <m>x^4+5</m> is irreducible in <m>\Q</m>. As <m>\Q</m> has characteristic 0, we see that <m>x^4+5</m> is separable as well.
                 </p>
     
                 <p>
-                  As <m>E</m> is the splitting field of an irreducible polynomial in <m>F[x]</m>, by Theorem 2.90 we see that <m>|\Aut(E/\Q)|=[E:\Q]=8</m>. In the Gaussian integers, it is known that if both <m>a</m> and <m>b</m> are nonzero then, <m>a+bi</m> is a Gaussian prime if and only if <m>a^2+b^2</m> is an ordinary prime. Note that <m>5=(2-i)(2+i)</m>, and that <m>2^2+i^2=3</m>, which is prime. Thus <m>2+i</m> is prime in <m>\Z[i]</m>. Thus we may invoke Eisenstein's Criterion using <m>p=2+i</m> to see that <m>x^4+5</m> is irreducible in <m>\Q(i)</m>, as <m>(2+i)^2=3-2i</m> does not divide 5, but we'll prove it just to be sure.
+                  As <m>E</m> is the splitting field of an irreducible polynomial in <m>F[x]</m>, by Theorem 2.90 we see that <m>|\Aut(E/\Q)|=[E:\Q]=8</m>. In the Gaussian integers, it is known that if both <m>a</m> and <m>b</m> are nonzero then, <m>a+bi</m> is a Gaussian prime if and only if <m>a^2+b^2</m> is an ordinary prime. Note that <m>5=(2-i)(2+i)</m>, and that <m>2^2+i^2=3</m>, which is prime. Thus <m>2+i</m> is prime in <m>\Z[i]</m>. Thus we may invoke <xref text="title" ref="thm-eisensteins-criterion"/> using <m>p=2+i</m> to see that <m>x^4+5</m> is irreducible in <m>\Q(i)</m>, as <m>(2+i)^2=3-2i</m> does not divide 5, but we'll prove it just to be sure.
                 </p>
     
                 <p>
@@ -21384,7 +21379,7 @@
                 </p>
     
                 <p>
-                  First, notice that by Eisenstein's Criterion]] (<m>p=11</m>) we have <m>f</m> irreducible in <m>\Q</m>.
+                  First, notice that by <xref text="title" ref="thm-eisensteins-criterion"/> (<m>p=11</m>) we have <m>f</m> irreducible in <m>\Q</m>.
                 </p>
     
                 <p>
@@ -21478,7 +21473,7 @@
                     <m>\a_2=\sqrt[4]5e^{3\pi i/4}=\sqrt[4]5 (\cos(\frac{3\pi}{4}))+i\sin(\frac{3\pi}{4}))=\sqrt[4]5(\frac{-\sqrt 2}{2}+i\frac{\sqrt 2}{2})=\frac{\sqrt 2}{2}\sqrt[4]5(-1+i)=\frac{\sqrt[4]{20}}{2}(-1+i),</m> 
                     <m>\a_3=\sqrt[4]5e^{5\pi i/4}=\sqrt[4]5 (\cos(\frac{5\pi}{4}))+i\sin(\frac{5\pi}{4}))=\sqrt[4]5(\frac{-\sqrt 2}{2}+i\frac{-\sqrt 2}{2})=\frac{\sqrt 2}{2}\sqrt[4]5(-1-i)=\frac{\sqrt[4]{20}}{2}(-1-i),</m> and 
                     <m>\a_4=\sqrt[4]5e^{7\pi i/4}=\sqrt[4]5 (\cos(\frac{7\pi}{4}))+i\sin(\frac{7\pi}{4}))=\sqrt[4]5(\frac{\sqrt 2}{2}+i\frac{-\sqrt 2}{2})=\frac{\sqrt 2}{2}\sqrt[4]5(1-i)=\frac{\sqrt[4]{20}}{2}(1-i).</m> 
-                    First we examine <m>F=\Q(\sqrt[4]{20})</m>. Notice that <m>\sqrt[4]{20}</m> is a root of the polynomial <m>x^4-20</m>, which is irreducible in <m>\Q[x]</m> using Eisenstein's Criterion]] with <m>p=5</m>. Thus <m>x^4-20</m> is monic and irreducible, making it the minimum polynomial of <m>\sqrt[4]{20}</m>. Thus <m>[F:\Q]=4</m>. Notice that <m>\a_1+\a_4=\frac{\sqrt[4]{20}}{2}(1+i+1-i)=\sqrt[4]{20}</m>, so <m>\sqrt[4]{20}\in E</m>. Thus there exists <m>\Q\subseteq F\subseteq E</m> such that <m>F \sse \R</m> and <m>[F : \Q] = 4</m>.
+                    First we examine <m>F=\Q(\sqrt[4]{20})</m>. Notice that <m>\sqrt[4]{20}</m> is a root of the polynomial <m>x^4-20</m>, which is irreducible in <m>\Q[x]</m> using <xref text="title" ref="thm-eisensteins-criterion"/> with <m>p=5</m>. Thus <m>x^4-20</m> is monic and irreducible, making it the minimum polynomial of <m>\sqrt[4]{20}</m>. Thus <m>[F:\Q]=4</m>. Notice that <m>\a_1+\a_4=\frac{\sqrt[4]{20}}{2}(1+i+1-i)=\sqrt[4]{20}</m>, so <m>\sqrt[4]{20}\in E</m>. Thus there exists <m>\Q\subseteq F\subseteq E</m> such that <m>F \sse \R</m> and <m>[F : \Q] = 4</m>.
                   </p>
     
                   <p>
@@ -21500,7 +21495,7 @@
     
                 <proof>
                   <p>
-                    Let <m>f (x) = x^p-5 \in \Q[x]</m> where <m>p</m> is an odd prime, and let <m>L</m> be the splitting field of <m>f (x)</m> over <m>\Q</m>. Using Eisenstein's Criterion with <m>p=5</m> we see that <m>f</m> is irreducible in <m>\Q[x]</m>. Notice that <m>\sqrt[p]5</m> is a root of this polynomial. As <m>f</m> is monic and irreducible it is the minimum polynomial of <m>\sqrt[p]5</m>, and thus <m>[\Q(\sqrt[p]5):\Q]=p</m>. Let <m>\z</m> be a primitive <m>p\th</m> root of unity. Notice that <m>\z</m> is a root of the <m>(p-1)\th</m> cyclotomic polynomial, <m>g(x)</m>, which is irreducible in <m>\Q[x]</m> by the Gospel of Mark.
+                    Let <m>f (x) = x^p-5 \in \Q[x]</m> where <m>p</m> is an odd prime, and let <m>L</m> be the splitting field of <m>f (x)</m> over <m>\Q</m>. Using <xref text="title" ref="thm-eisensteins-criterion"/> with <m>p=5</m> we see that <m>f</m> is irreducible in <m>\Q[x]</m>. Notice that <m>\sqrt[p]5</m> is a root of this polynomial. As <m>f</m> is monic and irreducible it is the minimum polynomial of <m>\sqrt[p]5</m>, and thus <m>[\Q(\sqrt[p]5):\Q]=p</m>. Let <m>\z</m> be a primitive <m>p\th</m> root of unity. Notice that <m>\z</m> is a root of the <m>(p-1)\th</m> cyclotomic polynomial, <m>g(x)</m>, which is irreducible in <m>\Q[x]</m> by the Gospel of Mark.
                   </p>
       
                   <p>
@@ -21834,7 +21829,7 @@
             </p>
   
             <p>
-              It is less obvious that it is irreducible, but we can see that this is indeed the case in a specific example: Take <m>F = \Z/p(y)</m> (the field of fractions of the polynomial ring <m>\Z/p[y]</m>) and let <m>a = y</m>. In this case, <m>x^p - y</m> is seen to be irreducible, by Eisenstein, but not separable.
+              It is less obvious that it is irreducible, but we can see that this is indeed the case in a specific example: Take <m>F = \Z/p(y)</m> (the field of fractions of the polynomial ring <m>\Z/p[y]</m>) and let <m>a = y</m>. In this case, <m>x^p - y</m> is seen to be irreducible, by <xref text="title" ref="thm-eisensteins-criterion"/>, but not separable.
             </p>
 
           </example>
@@ -21883,7 +21878,7 @@
             </p>
   
             <p>
-              Then <m>z \in L</m> is a root of the polynomial <m>x^p - y \in F[x]</m>. Moreover since <m>F</m> is the field of fractions of the PID <m>R = (\Z/p)[y]</m> and <m>y</m> is a prime element of <m>R</m>, we may apply Eisenstein (and Gauss) to conclude that <m>x^p - y</m> is irreducible in <m>F[x]</m>. This proves that <m>m_{z, F}(x) = x^p - y</m>. This polynomial is not separable since in <m>L[x]</m> it is equal to <m>(x-z)^p</m> and hence has a repeated root. (Or, you may use that its derivative is <m>0</m>.)
+              Then <m>z \in L</m> is a root of the polynomial <m>x^p - y \in F[x]</m>. Moreover since <m>F</m> is the field of fractions of the PID <m>R = (\Z/p)[y]</m> and <m>y</m> is a prime element of <m>R</m>, we may apply <xref text="title" ref="thm-eisensteins-criterion"/> (and Gauss) to conclude that <m>x^p - y</m> is irreducible in <m>F[x]</m>. This proves that <m>m_{z, F}(x) = x^p - y</m>. This polynomial is not separable since in <m>L[x]</m> it is equal to <m>(x-z)^p</m> and hence has a repeated root. (Or, you may use that its derivative is <m>0</m>.)
             </p>
 
           </example>
@@ -22008,7 +22003,7 @@
                         </p>
           
                         <p>
-                          Moreover, since <m>F</m> is the field of fractions of the PID <m>R=\F_{p}[y]</m> and <m>y</m> is a prime element of <m>R</m>, we may apply Eisenstein's Criterion (using <m>p=y</m>) to conclude that <m>x^p-y</m> is irreducible in <m>F[x]</m>. Thus <m>x^p-y</m> is the minimum polynomial of <m>z</m> in <m>F[x]</m>.
+                          Moreover, since <m>F</m> is the field of fractions of the PID <m>R=\F_{p}[y]</m> and <m>y</m> is a prime element of <m>R</m>, we may apply <xref text="title" ref="thm-eisensteins-criterion"/> (using <m>p=y</m>) to conclude that <m>x^p-y</m> is irreducible in <m>F[x]</m>. Thus <m>x^p-y</m> is the minimum polynomial of <m>z</m> in <m>F[x]</m>.
                         </p>
           
                         <p>
@@ -22317,7 +22312,7 @@
             <p>
               Let us compute <m>[L:\Q]</m>. Note that <m>i \in L</m> since <m>i = z_2/z_1</m> and in fact <m>L = \Q(z_1, i)</m>. In the chain of extensions <me>
   \Q \subset \Q(z_1) \subset L = \Q(z_1)(i)
-  </me> the first one has degree <m>4</m>, since <m>x^4 - 2</m> is irreducible by Eisenstein, and the second has degree at most <m>2</m> since <m>i</m> is a root of <m>x^2 + 1</m>. It would be less than two if <m>x^2+1</m> factors in <m>\Q(z_2)[x]</m>. But since <m>\Q(z_1) \subset \R</m> and <m>L</m> is not contained in <m>\R</m>, the second extension cannot be trivial and so must have degree exactly <m>2</m>. We conclude <m>[L:\Q] = 8</m>. It follows from Proposition  that <m>|\Aut(L/\Q)| \leq 8</m>. (In fact, since <m>L</m> is the splitting field of a separable polynomial, the Theorem below will tell us that <m>|\Aut(L/\Q)| = 8</m>. But we won't appeal to this fact here.)
+  </me> the first one has degree <m>4</m>, since <m>x^4 - 2</m> is irreducible by <xref text="title" ref="thm-eisensteins-criterion"/>, and the second has degree at most <m>2</m> since <m>i</m> is a root of <m>x^2 + 1</m>. It would be less than two if <m>x^2+1</m> factors in <m>\Q(z_2)[x]</m>. But since <m>\Q(z_1) \subset \R</m> and <m>L</m> is not contained in <m>\R</m>, the second extension cannot be trivial and so must have degree exactly <m>2</m>. We conclude <m>[L:\Q] = 8</m>. It follows from Proposition  that <m>|\Aut(L/\Q)| \leq 8</m>. (In fact, since <m>L</m> is the splitting field of a separable polynomial, the Theorem below will tell us that <m>|\Aut(L/\Q)| = 8</m>. But we won't appeal to this fact here.)
             </p>
   
             <p>
@@ -23179,7 +23174,7 @@
                     <ol>
                       <li>
                         <p>
-                          First, notice that <m>f</m> is irreducible in <m>\Q[x]</m> by Eisenstein's Criterion <m>(p=7)</m>. Let <m>\z</m> denote a primitive third root of unity. The roots of <m>f</m> are the following: 
+                          First, notice that <m>f</m> is irreducible in <m>\Q[x]</m> by <xref text="title" ref="thm-eisensteins-criterion"/> <m>(p=7)</m>. Let <m>\z</m> denote a primitive third root of unity. The roots of <m>f</m> are the following: 
                           <ol>
                             <li>
                               <p>
@@ -23272,7 +23267,7 @@
 
                       <li>
                         <p>
-                          <m>\sqrt[3]2e^{4\pi i/3}</m>. Using Eisenstein's Criterion]] with <m>p=2</m> we see that <m>f</m> is irreducible in <m>\Q[x]</m>. As <m>f</m> is monic and irreducible it is the minimum polynomial of <m>\sqrt[3]2\in\Q[x]</m> and <m>[\Q(\sqrt[3]2):\Q]=3</m>. Thus, by the FTGT we know there exists an element of order <m>3</m> in <m>\Gal(F:\Q)</m>.
+                          <m>\sqrt[3]2e^{4\pi i/3}</m>. Using <xref text="title" ref="thm-eisensteins-criterion"/> with <m>p=2</m> we see that <m>f</m> is irreducible in <m>\Q[x]</m>. As <m>f</m> is monic and irreducible it is the minimum polynomial of <m>\sqrt[3]2\in\Q[x]</m> and <m>[\Q(\sqrt[3]2):\Q]=3</m>. Thus, by the FTGT we know there exists an element of order <m>3</m> in <m>\Gal(F:\Q)</m>.
                         </p>
                       </li>
                     </ol>
@@ -23489,7 +23484,7 @@
                   </p>
     
                   <p>
-                    Using Eisenstein's Criterion]] with <m>p=2</m> we see that <m>f</m> is irreducible in <m>\Q[x]</m>. Let <m>\a=\sqrt[4]{2022}</m>, and notice that <m>f</m> is the minimum polynomial of <m>\a</m>. Let <m>K=\Q(\a)</m> and observe <m>[K:\Q]=4</m>.
+                    Using <xref text="title" ref="thm-eisensteins-criterion"/> with <m>p=2</m> we see that <m>f</m> is irreducible in <m>\Q[x]</m>. Let <m>\a=\sqrt[4]{2022}</m>, and notice that <m>f</m> is the minimum polynomial of <m>\a</m>. Let <m>K=\Q(\a)</m> and observe <m>[K:\Q]=4</m>.
                   </p>
     
                   <p>
@@ -23534,7 +23529,7 @@
                     <ol>
                       <li>
                         <p>
-                          Notice that <m>p=2</m> is prime in <m>\Q[x]</m>, and thus <m>f(x)</m> is irreducible in <m>\Q[x]</m> by Eisenstein's Criterion.
+                          Notice that <m>p=2</m> is prime in <m>\Q[x]</m>, and thus <m>f(x)</m> is irreducible in <m>\Q[x]</m> by <xref text="title" ref="thm-eisensteins-criterion"/>.
                         </p>
                       </li>
     
@@ -23586,7 +23581,7 @@
                     <ol>
                       <li>
                         <p>
-                          Using Eisenstein's Criterion with <m>p=2</m> we see that <m>f</m> is indeed irreducible in <m>\Q[x]</m>.
+                          Using <xref text="title" ref="thm-eisensteins-criterion"/> with <m>p=2</m> we see that <m>f</m> is indeed irreducible in <m>\Q[x]</m>.
                         </p>
                       </li>
     
@@ -23664,7 +23659,7 @@
                     <ol>
                       <li>
                         <p>
-                          Invoking Eisenstein's Criterion and setting <m>p=7</m> we see that <m>x^3 - 7</m> is an irreducible cubic with exactly one real root. Thus <m>\Gal(L/\Q)\cong S_3</m>. Thus the subgroups of <m>\Gal(L/\Q)</m> are as follows: <m>H_1\cong\langle(12)\rangle, H_2\cong\langle(13)\rangle, H_3\cong\langle(23)\rangle,</m> and <m>H_4\cong\langle(123)\rangle.</m> By the Fundamental Theorem of Galois Theory there exist four intermediate field extensions: <m>E_1=L^{H_1}, E_2=L^{H_2}, E_3=L^{H_3}</m>, and <m>E_4=L^{H_4}</m>. Note that as <m>H_1,H_2,</m> and <m>H_3</m> are all Sylow-2 subgroups of <m>S_3</m>, by <xref text="title" ref="thm-sylow"/> none are normal in <m>S_3</m>. However, as <m>[G:H_4]=2</m>, the smallest prime dividing 6, we see that <m>E_4</m> is the only strictly intermediate field that is Galois over <m>\Q</m>.
+                          Invoking <xref text="title" ref="thm-eisensteins-criterion"/> and setting <m>p=7</m> we see that <m>x^3 - 7</m> is an irreducible cubic with exactly one real root. Thus <m>\Gal(L/\Q)\cong S_3</m>. Thus the subgroups of <m>\Gal(L/\Q)</m> are as follows: <m>H_1\cong\langle(12)\rangle, H_2\cong\langle(13)\rangle, H_3\cong\langle(23)\rangle,</m> and <m>H_4\cong\langle(123)\rangle.</m> By the Fundamental Theorem of Galois Theory there exist four intermediate field extensions: <m>E_1=L^{H_1}, E_2=L^{H_2}, E_3=L^{H_3}</m>, and <m>E_4=L^{H_4}</m>. Note that as <m>H_1,H_2,</m> and <m>H_3</m> are all Sylow-2 subgroups of <m>S_3</m>, by <xref text="title" ref="thm-sylow"/> none are normal in <m>S_3</m>. However, as <m>[G:H_4]=2</m>, the smallest prime dividing 6, we see that <m>E_4</m> is the only strictly intermediate field that is Galois over <m>\Q</m>.
                         </p>
                       </li>
     
@@ -26327,25 +26322,26 @@
             <problem><title>Problem 1</title>
               <statement>
                 <p>
-            Let <m>G</m> be a finite <m>p</m>-group for some prime <m>p</m> and <m>N\neq {1}</m> a normal subgroup of <m>G</m>. Prove that <m>N\cap Z(G)\neq{1}</m>, where <m>Z(G)</m> is the center of <m>G</m>.
-          </p>
+                  Let <m>G</m> be a finite <m>p</m>-group for some prime <m>p</m> and <m>N\neq {1}</m> a normal subgroup of <m>G</m>. Prove that <m>N\cap Z(G)\neq{1}</m>, where <m>Z(G)</m> is the center of <m>G</m>.
+                </p>
               </statement>
 
               <solution>
                 <p>
-            Let <m>G</m> be a finite <m>p</m>-group for some prime <m>p</m> and <m>N\neq {1}</m> a normal subgroup of <m>G</m>.
-          </p>
+                  Let <m>G</m> be a finite <m>p</m>-group for some prime <m>p</m> and <m>N\neq {1}</m> a normal subgroup of <m>G</m>.
+                </p>
 
-          <p>
-            First, we show that the center of <m>G</m> is nontrivial. Suppose by way of contradiction that <m>Z(G)=\{e\}</m>. We examine the conjugacy classes of <m>G</m>. From the <xref text="title" ref="thm-class-eq"/>, we know<me>|G| = |Z(G)| + \sum_i^r |G : C_G(g_i)|.</me>Note that <m>|G|=p^n</m> for some <m>n\in\N</m>, meaning that the only divisors of <m>|G|</m> are powers of <m>p</m>. In finite groups, each conjugacy class must 
-            [[Corollary – <m>C_G(g_i) big G</m> for Finite Groups|divide]] 
-            the order of the group. By <xref text="title" ref="thm-lagrange"/>, <m>|G : C_G(g_i)|=\frac{|G|}{|C_G(g_i)|}=\frac{p^n}{p^m}=p^k</m>, where <m>m,k\in\N</m>. Since <m>|Z(G)|=1</m>, we see that <m>\sum_i^r |G : C_G(g_i)|\bigg|p^n-1</m>, which is impossible given that <m>p^{n-1} \not\mid p^n</m>. Thus <m>Z(G)\neq\{e\}</m>.
-          </p>
+                <p>
+                  First, we show that the center of <m>G</m> is nontrivial. Suppose by way of contradiction that <m>Z(G)=\{e\}</m>. We examine the conjugacy classes of <m>G</m>. From the <xref text="title" ref="thm-class-eq"/>, we know
+                  <me>|G| = |Z(G)| + \sum_i^r |G : C_G(g_i)|.</me>
+                  Note that <m>|G|=p^n</m> for some <m>n\in\N</m>, meaning that the only divisors of <m>|G|</m> are powers of <m>p</m>. In finite groups, each conjugacy class must divide the order of the group by <xref ref="thm-conjugacy-divides-order"/>. By <xref text="title" ref="thm-lagrange"/>, <m>|G : C_G(g_i)|=\frac{|G|}{|C_G(g_i)|}=\frac{p^n}{p^m}=p^k</m>, where <m>m,k\in\N</m>. Since <m>|Z(G)|=1</m>, we see that <m>\sum_i^r |G : C_G(g_i)|\bigg|p^n-1</m>, which is impossible given that <m>p^{n-1} \not\mid p^n</m>. Thus <m>Z(G)\neq\{e\}</m>.
+                </p>
 
-          <p>
-            As <m>N\nsg G</m> it is a 
-            [[Mathematics/Modern Algebra/Results/Corollary – Disjoint Union of Conjugacy Classes|union]] of conjugacy classes of the elements it contains, one of which is <m>e</m>. Assume by way of contradiction that <m>N\cap Z(G)={e}</m>, meaning that <m>e</m> is the only element in <m>N</m> whose conjugacy class is a singleton. This yields <me>|N| = 1+ \sum_i^r |G : C_G(g_i)|.</me> However, by <xref text="title" ref="thm-lagrange"/> <m>N</m> must also be a <m>p-</m>group, and thus by an analogous element counting argument as above we see that there exists some <m>x\in N</m> such that <m>C_G(x)=\{x\}</m>, or that <m>gxg\inv=x</m> for all <m>g\in G</m>. Thankfully, this means that <m>x\in Z(G)</m>, and thus we have <m>Z(G)\cap N\neq 1</m>.
-          </p>
+                <p>
+                  As <m>N\nsg G</m>, by <xref ref="cor-normal-union-of-conjugacy-classes"/> it is a union of conjugacy classes of the elements it contains, one of which is <m>e</m>. Assume by way of contradiction that <m>N\cap Z(G)={e}</m>, meaning that <m>e</m> is the only element in <m>N</m> whose conjugacy class is a singleton. This yields 
+                  <me>|N| = 1+ \sum_i^r |G : C_G(g_i)|.</me> 
+                  However, by <xref text="title" ref="thm-lagrange"/> <m>N</m> must also be a <m>p-</m>group, and thus by an analogous element counting argument as above we see that there exists some <m>x\in N</m> such that <m>C_G(x)=\{x\}</m>, or that <m>gxg\inv=x</m> for all <m>g\in G</m>. Thankfully, this means that <m>x\in Z(G)</m>, and thus we have <m>Z(G)\cap N\neq 1</m>.
+                </p>
               </solution>
             
             </problem>
@@ -26423,7 +26419,7 @@
                 </p>
 
                 <p>
-                  Let <m>G</m> act on <m>\Syl_7(G)</m> by conjugation, yielding the homomorphism <me>\rho: G \to S_8</me> via the <xref text="title" ref="thm-permrep"/>. This map is non-trivial from part (2) of <xref text="title" ref="thm-sylow"/>, but <m>2^5\cdot 7^3</m> does not divide <m>|S_8|=8!</m>, and thus <m>\rho</m> cannot be injective. Then the kernel of this homomorphism is non-trivial, normal subgroup of <m>G</m> by <xref provisional="thm-kernel-iff-normal"/>. Thus <m>G</m> is not simple.
+                  Let <m>G</m> act on <m>\Syl_7(G)</m> by conjugation, yielding the homomorphism <m>\rho: G \to S_8</m> via the <xref text="title" ref="thm-permrep"/>. This map is non-trivial from part (2) of <xref text="title" ref="thm-sylow"/>, but <m>2^5\cdot 7^3</m> does not divide <m>|S_8|=8!</m>, and thus <m>\rho</m> cannot be injective. Then the kernel of this homomorphism is non-trivial, normal subgroup of <m>G</m> by <xref ref="thm-norm-iff-ker"/>. Thus <m>G</m> is not simple.
                 </p>
               </solution>
             
@@ -26653,112 +26649,111 @@
           <problem><title>Problem 7</title>
             <statement>
               <p>
-					Let <m>L</m> be the splitting field of <m>x^5 - 11</m> over <m>\Q</m>
-				</p>
+                Let <m>L</m> be the splitting field of <m>x^5 - 11</m> over <m>\Q</m>
+              </p>
 
-				<p><ol>
-					<li>
-					Find, with justification, the degree of <m>L</m> over <m>\Q</m>.
-					</li>
+              <p>
+                <ol>
+                  <li>
+                    Find, with justification, the degree of <m>L</m> over <m>\Q</m>.
+                  </li>
 
-					<li>
-					Let <m>F = \Q(\zeta)</m> where <m>\zeta = e^{2\pi i/5}</m>, a primitive <m>5\th</m> root of unity. Prove <m>x^5 - 11</m> is irreducible in <m>F[x]</m>.
-					</li>
-
-				</ol></p>
+                  <li>
+                    Let <m>F = \Q(\zeta)</m> where <m>\zeta = e^{2\pi i/5}</m>, a primitive <m>5\th</m> root of unity. Prove <m>x^5 - 11</m> is irreducible in <m>F[x]</m>.
+                  </li>
+                </ol>
+              </p>
             </statement>
 
             <solution>
               <p>
-						Let <m>L</m> be the splitting field of <m>f(x)=x^5 - 11</m> over <m>\Q</m>
-					</p>
+                Let <m>L</m> be the splitting field of <m>f(x)=x^5 - 11</m> over <m>\Q</m>
+              </p>
 
-					<p>
-            <ol>
-              <li>
-                <p>
-                  			First, notice that by <xref text="title" ref="thm-eisensteins-criterion"/> (<m>p=11</m>) we have <m>f</m> irreducible in <m>\Q</m>.
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      First, notice that by <xref text="title" ref="thm-eisensteins-criterion"/> (<m>p=11</m>) we have <m>f</m> irreducible in <m>\Q</m>.
+                    </p>
 
-                </p>
+                    <p>
+                      The roots of <m>f</m> are the following: 
+                      <ul>
+                        <li>
+                          <p>
+                            <m>\a_1=\sqrt[5]{11}\z</m> 
+                          </p>
+                        </li>
 
-                <p>
-						The roots of <m>f</m> are the following: 
-            <ul>
-              <li>
-                <p>
-            <m>\a_1=\sqrt[5]{11}\z</m> 
-                </p>
-              </li>
+                        <li>
+                          <p>
+                            <m>\a_2=\sqrt[5]{11}\z^2</m> 
+                          </p>
+                        </li>
 
-              <li>
-                <p>
-            <m>\a_2=\sqrt[5]{11}\z^2</m> 
-                </p>
-              </li>
+                        <li>
+                          <p>
+                            <m>\a_3=\sqrt[5]{11}\z^3</m> 
+                          </p>
+                        </li>
 
-              <li>
-                <p>
-            <m>\a_3=\sqrt[5]{11}\z^3</m> 
-                </p>
-              </li>
+                        <li>
+                          <p>
+                            <m>\a_4=\sqrt[5]{11}\z^4</m> 
+                          </p>
+                        </li>
 
-              <li>
-                <p>
-            <m>\a_4=\sqrt[5]{11}\z^4</m> 
-                </p>
-              </li>
+                        <li>
+                          <p>
+                            <m>\a_5=\sqrt[5]{11}\z^5=\sqrt[5]{11}</m>
+                          </p>
+                        </li>
+                      </ul>
+                    </p>
 
-              <li>
-                <p>
-            <m>\a_5=\sqrt[5]{11}\z^5=\sqrt[5]{11}</m>
-                </p>
-              </li>
-            </ul>
-					</p>
+                    <p>
+                      As <m>f</m> is monic and irreducible, it is the minimum polynomial of <m>\a_5</m>. Let <m>E=\Q(\a_5)</m> and notice <m>[E:\Q]=5</m>.
+                    </p>
 
-					<p>
-						As <m>f</m> is monic and irreducible, it is the minimum polynomial of <m>\a_5</m>. Let <m>E=\Q(\a_5)</m> and notice <m>[E:\Q]=5</m>.
-					</p>
+                    <p>
+                      Notice that <m>\z</m>, a primitive <m>5</m>-th root of unity, is the root of <m>g(x)=x^4+x^3+x^2+x+1</m>, the fourth cyclotomic polynomial, which is monic and irreducible in <m>\Q[x]</m> by <xref provisional="prop-cylcotomic-irreducible"/>. 
+                      Thus <m>g</m> is the minimum polynomial of <m>\z</m> and <m>[F:\Q]=4</m>.
+                    </p>
 
-					<p>
-						Notice that <m>\z</m>, a primitive <m>5</m>-th root of unity, is the root of <m>g(x)=x^4+x^3+x^2+x+1</m>, the fourth cyclotomic polynomial, which is monic and irreducible in <m>\Q[x]</m> 
-            (See: [[Proposition – Cyclotomic Polynomial Irreducible|Result]]). 
-            Thus <m>g</m> is the minimum polynomial of <m>\z</m> and <m>[F:\Q]=4</m>.
-					</p>
+              <p>
+                We know that <m>L=\Q(\sqrt[5]{11},\z)</m>, as every generator of <m>L</m> can be written using <m>\z</m> and <m>\sqrt[5]{11}.</m> Let <m>[L:\Q]=n</m>, <m>[L:F]=p</m>, and <m>[L:E]=q</m>. By the <xref text="title" ref="thm-degree-formula"/>, we have 
+                <ul>
+                  <li>
+                    <p>
+                        <m>[L:\Q]=[L:F][F:\Q]</m>, and thus <m>n=4p</m> 
 
-					<p>
-						We know that <m>L=\Q(\sqrt[5]{11},\z)</m>, as every generator of <m>L</m> can be written using <m>\z</m> and <m>\sqrt[5]{11}.</m> Let <m>[L:\Q]=n</m>, <m>[L:F]=p</m>, and <m>[L:E]=q</m>. By the <xref text="title" ref="thm-degree-formula"/>, we have 
-            <ul>
-              <li>
-                <p>
-                     <m>[L:\Q]=[L:F][F:\Q]</m>, and thus <m>n=4p</m> 
+                    </p>
+                  </li>
 
-                </p>
-              </li>
+                  <li>
+                    <p>
+                <m>[L:\Q]=[L:E][E:\Q]</m>, and thus <m>n=5q</m> 
 
-              <li>
-                <p>
-            <m>[L:\Q]=[L:E][E:\Q]</m>, and thus <m>n=5q</m> 
+                    </p>
+                  </li>
+                </ul>
+                As <m>E\neq L</m> and <m>F\neq L</m> we know that <m>p,q&gt;1</m>.
+              </p>
 
-                </p>
-              </li>
-            </ul>
-            As <m>E\neq L</m> and <m>F\neq L</m> we know that <m>p,q&gt;1</m>.
-					</p>
+              <p>
+                Thus we have <m>n=20</m>.
+              </p>
+                  </li>
 
-					<p>
-						Thus we have <m>n=20</m>.
-					</p>
-              </li>
+                  <li>
+                    <p>
+                      Let <m>F = \Q(\zeta)</m> where <m>\zeta = e^{2\pi i/5}</m>. From Part (a) we know <m>[L:F]=5</m>. As <m>L=F(\a)</m>, we know that <m>\mp_\a(x)</m> has degree <m>5</m>. As <m>f</m> is a monic polynomial of degree <m>5</m>, we see that it is the minimum polynomial and thus irreducible.
 
-              <li>
-                <p>
-                  Let <m>F = \Q(\zeta)</m> where <m>\zeta = e^{2\pi i/5}</m>. From Part (a) we know <m>[L:F]=5</m>. As <m>L=F(\a)</m>, we know that <m>\mp_\a(x)</m> has degree <m>5</m>. As <m>f</m> is a monic polynomial of degree <m>5</m>, we see that it is the minimum polynomial and thus irreducible.
-
-                </p>
-              </li>
-            </ol>
-					</p>
+                    </p>
+                  </li>
+                </ol>
+              </p>
 
             </solution>
           
@@ -27995,7 +27990,7 @@
             <solution>
               <p>
               Let <m>f (x) = x^p-5 \in \Q[x]</m> where <m>p</m> is an odd prime, and let <m>L</m> be the splitting field of <m>f (x)</m> over <m>\Q</m>. Using 
-              Eisenstein's Criterion 
+              <xref text="title" ref="thm-eisensteins-criterion"/> 
               with <m>p=5</m> we see that <m>f</m> is irreducible in <m>\Q[x]</m>. Notice that <m>\sqrt[p]5</m> is a root of this polynomial. As <m>f</m> is monic and irreducible it is the minimum polynomial of <m>\sqrt[p]5</m>, and thus <m>[\Q(\sqrt[p]5):\Q]=p</m>. Let <m>\z</m> be a primitive <m>p\th</m> root of unity. Notice that <m>\z</m> is a root of the <m>(p-1)\th</m> cyclotomic polynomial, <m>g(x)</m>, which is irreducible in <m>\Q[x]</m> by the Gospel of Mark.
             </p>
 
@@ -28410,7 +28405,7 @@
             <ol>
               <li>
                 <p>
-                  Note that <m>f</m> is irreducible in <m>\Q[x]</m> by Eisenstein's Criterion (<m>p=2</m>). The roots of <m>f</m> are 
+                  Note that <m>f</m> is irreducible in <m>\Q[x]</m> by <xref text="title" ref="thm-eisensteins-criterion"/> (<m>p=2</m>). The roots of <m>f</m> are 
                   <ul>
                     <li>
                       <p>
@@ -28501,7 +28496,7 @@
           </p>
 
           <p>
-            Moreover, since <m>F</m> is the field of fractions of the PID <m>R=\F_{p}[y]</m> and <m>y</m> is a prime element of <m>R</m>, we may apply Eisenstein's Criterion (using <m>p=y</m>) to conclude that <m>x^p-y</m> is irreducible in <m>F[x]</m>. Thus <m>x^p-y</m> is the minimum polynomial of <m>z</m> in <m>F[x]</m>.
+            Moreover, since <m>F</m> is the field of fractions of the PID <m>R=\F_{p}[y]</m> and <m>y</m> is a prime element of <m>R</m>, we may apply <xref text="title" ref="thm-eisensteins-criterion"/> (using <m>p=y</m>) to conclude that <m>x^p-y</m> is irreducible in <m>F[x]</m>. Thus <m>x^p-y</m> is the minimum polynomial of <m>z</m> in <m>F[x]</m>.
           </p>
 
           <p>
@@ -28916,7 +28911,7 @@
             <ol>
               <li>
                 <p>
-                    Using Eisenstein's Criterion with <m>p=2</m> we see that <m>f</m> is indeed irreducible in <m>\Q[x]</m>.
+                    Using <xref text="title" ref="thm-eisensteins-criterion"/> with <m>p=2</m> we see that <m>f</m> is indeed irreducible in <m>\Q[x]</m>.
 
                 </p>
               </li>
@@ -29313,7 +29308,7 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
                 <ol>
                   <li>
                     <p>
-                      					Part (a) Notice that <m>p=2</m> is prime in <m>\Q[x]</m>, and thus <m>f(x)</m> is irreducible in <m>\Q[x]</m> by Eisenstein's Criterion.
+                      					Part (a) Notice that <m>p=2</m> is prime in <m>\Q[x]</m>, and thus <m>f(x)</m> is irreducible in <m>\Q[x]</m> by <xref text="title" ref="thm-eisensteins-criterion"/>.
 
                     </p>
                   </li>
@@ -29590,7 +29585,7 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
               <ol>
                 <li>
                   <p>
-                    First, notice that by Eisenstein's Criterion (<m>p=p</m>) we have <m>f</m> irreducible in <m>\Q[x]</m>.
+                    First, notice that by <xref text="title" ref="thm-eisensteins-criterion"/> (<m>p=p</m>) we have <m>f</m> irreducible in <m>\Q[x]</m>.
                   </p>
 
                   <p>
@@ -29983,7 +29978,7 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
                 <ol>
                   <li>
                     <p>
-                      					First, note that <m>f</m> is irreducible in <m>\Q[x]</m> by Eisenstein's Criterion (<m>p=3</m>) The roots of <m>f</m> are - <m>\sqrt[4]3</m>, - <m>\sqrt[4]3i</m>, - <m>-\sqrt[4]3</m>, and - <m>-\sqrt[4]3i</m>. Let <m>F=\Q(\sqrt[4]3)</m> and notice <m>[F:\Q]=4</m>. As <m>F\subseteq\R</m> we see that <m>[F(i):F]=2</m>, and thus <m>[K:\Q]=8</m>, meaning our basis will have eight elements: 1. 1 2. <m>\sqrt[4]3</m> 3. <m>(\sqrt[4]3)^2</m> 4. <m>(\sqrt[4]3)^3</m> 5. <m>i</m> 6. <m>\sqrt[4]3i</m> 7. <m>(\sqrt[4]3)^2i</m> 8. <m>(\sqrt[4]3)^3i</m>
+                      					First, note that <m>f</m> is irreducible in <m>\Q[x]</m> by <xref text="title" ref="thm-eisensteins-criterion"/> (<m>p=3</m>) The roots of <m>f</m> are - <m>\sqrt[4]3</m>, - <m>\sqrt[4]3i</m>, - <m>-\sqrt[4]3</m>, and - <m>-\sqrt[4]3i</m>. Let <m>F=\Q(\sqrt[4]3)</m> and notice <m>[F:\Q]=4</m>. As <m>F\subseteq\R</m> we see that <m>[F(i):F]=2</m>, and thus <m>[K:\Q]=8</m>, meaning our basis will have eight elements: 1. 1 2. <m>\sqrt[4]3</m> 3. <m>(\sqrt[4]3)^2</m> 4. <m>(\sqrt[4]3)^3</m> 5. <m>i</m> 6. <m>\sqrt[4]3i</m> 7. <m>(\sqrt[4]3)^2i</m> 8. <m>(\sqrt[4]3)^3i</m>
 
                     </p>
                   </li>
@@ -30392,7 +30387,7 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
 
             <solution>
               <p>
-              Let <m>L</m> be the splitting field of the polynomial <m>f(x)=x^7-18</m> over <m>\Q</m>. First, note that <m>f</m> is irreducible in <m>\Q[x]</m> by Eisenstein's Criterion (<m>p=2</m>). The roots of <m>f</m> are the following: - <m>a_1=\sqrt[7]{18}e^{\frac{2\pi i}{7}}</m>, - <m>a_2=\sqrt[7]{18}e^{\frac{4\pi i}{7}}</m>, - <m>a_3=\sqrt[7]{18}e^{\frac{6\pi i}{7}}</m>, - <m>a_4=\sqrt[7]{18}e^{\frac{8\pi i}{7}}</m>, - <m>a_5=\sqrt[7]{18}e^{\frac{10\pi i}{7}}</m>, - <m>a_6=\sqrt[7]{18}e^{\frac{12\pi i}{7}}</m>, and - <m>a_7=\sqrt[7]{18}e^{\frac{14\pi i}{7}}=\sqrt[7]{18}</m>. Let <m>\z=e^{\frac{2\pi i}{7}}</m>, which is the root of the <m>7\th</m> cyclotomic polynomial (which has degree <m>6,</m> and thus irreducible in <m>\Q[x]</m>. Let <m>F=\Q(\z)</m> and <m>E=\Q(\sqrt[7]{18})</m>. Thus we have <m>[F:\Q]=6</m> and <m>[E:\Q]=7</m>. By the <m>\gcd</m> irreducible argument we see that <m>[L:\Q]=42</m>. Yeesh.
+              Let <m>L</m> be the splitting field of the polynomial <m>f(x)=x^7-18</m> over <m>\Q</m>. First, note that <m>f</m> is irreducible in <m>\Q[x]</m> by <xref text="title" ref="thm-eisensteins-criterion"/> (<m>p=2</m>). The roots of <m>f</m> are the following: - <m>a_1=\sqrt[7]{18}e^{\frac{2\pi i}{7}}</m>, - <m>a_2=\sqrt[7]{18}e^{\frac{4\pi i}{7}}</m>, - <m>a_3=\sqrt[7]{18}e^{\frac{6\pi i}{7}}</m>, - <m>a_4=\sqrt[7]{18}e^{\frac{8\pi i}{7}}</m>, - <m>a_5=\sqrt[7]{18}e^{\frac{10\pi i}{7}}</m>, - <m>a_6=\sqrt[7]{18}e^{\frac{12\pi i}{7}}</m>, and - <m>a_7=\sqrt[7]{18}e^{\frac{14\pi i}{7}}=\sqrt[7]{18}</m>. Let <m>\z=e^{\frac{2\pi i}{7}}</m>, which is the root of the <m>7\th</m> cyclotomic polynomial (which has degree <m>6,</m> and thus irreducible in <m>\Q[x]</m>. Let <m>F=\Q(\z)</m> and <m>E=\Q(\sqrt[7]{18})</m>. Thus we have <m>[F:\Q]=6</m> and <m>[E:\Q]=7</m>. By the <m>\gcd</m> irreducible argument we see that <m>[L:\Q]=42</m>. Yeesh.
             </p>
 
             <p>
@@ -30653,7 +30648,7 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
             </p>
 
             <p>
-              Part (b) As <m>x^4-p</m> is irreducible in <m>Q</m> (Eisenstein, <m>p=p</m>) and <m>x^4-p</m> is monic, we see that <m>[\Q(\sqrt[4]{p}):\Q]=4</m>. As <m>x^2+1</m> is irreducible and monic, we see that <m>[\Q(\sqrt[4]{p},i):\Q(\sqrt[4]{p})]=2</m>. By the <xref text="title" ref="thm-degree-formula"/> we have <m>[\Q(\sqrt[4]{p},i):\Q]=8</m>. Note that the four roots of <m>(x^4 - p)</m> are the following: - <m>\sqrt[4]{p}</m>, - <m>-\sqrt[4]{p}</m>, - <m>\sqrt[4]{p}i,</m> and - <m>-\sqrt[4]{p}i</m>. As <m>\frac{\sqrt[4]{p}i}{\sqrt[4]{p}}=i</m>, we see that <m>\Q(\sqrt[4]{p})</m> is the splitting field of <m>F</m>. Note then that as <m>[\Q(i):\Q]=2</m> and the degree of the splitting field is 8, by the <xref text="title" ref="thm-degree-formula"/> we see that the degree of the splitting field of <m>x^4-p</m> over <m>\Q(i)=4</m>. As <m>x^4-p</m> is monic and degree <m>4</m>, it must be the minimal polynomial of the second extension and thus irreducible in <m>\Q(i)[x]</m>.
+              Part (b) As <m>x^4-p</m> is irreducible in <m>Q</m> (<xref text="title" ref="thm-eisensteins-criterion"/>, <m>p=p</m>) and <m>x^4-p</m> is monic, we see that <m>[\Q(\sqrt[4]{p}):\Q]=4</m>. As <m>x^2+1</m> is irreducible and monic, we see that <m>[\Q(\sqrt[4]{p},i):\Q(\sqrt[4]{p})]=2</m>. By the <xref text="title" ref="thm-degree-formula"/> we have <m>[\Q(\sqrt[4]{p},i):\Q]=8</m>. Note that the four roots of <m>(x^4 - p)</m> are the following: - <m>\sqrt[4]{p}</m>, - <m>-\sqrt[4]{p}</m>, - <m>\sqrt[4]{p}i,</m> and - <m>-\sqrt[4]{p}i</m>. As <m>\frac{\sqrt[4]{p}i}{\sqrt[4]{p}}=i</m>, we see that <m>\Q(\sqrt[4]{p})</m> is the splitting field of <m>F</m>. Note then that as <m>[\Q(i):\Q]=2</m> and the degree of the splitting field is 8, by the <xref text="title" ref="thm-degree-formula"/> we see that the degree of the splitting field of <m>x^4-p</m> over <m>\Q(i)=4</m>. As <m>x^4-p</m> is monic and degree <m>4</m>, it must be the minimal polynomial of the second extension and thus irreducible in <m>\Q(i)[x]</m>.
             </p>
             </solution>
           
@@ -31008,7 +31003,7 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
 
                   <li>
                     <p>
-                      The polynomial <m>g(x)=x^4-28</m> is irreducible in <m>\Q[x]</m> by Eisenstein's Criterion (<m>p=7</m>). Thus it is the minimal polynomial of <m>\sqrt[4]{28}</m>, and so <m>F=\Q(\sqrt[4]{28})</m> is a field extension of <m>\Q</m> of degree <m>4</m>. After adjoining <m>i</m> as well we see that <m>E</m> is an extension of degree <m>8</m>. Thus a basis of <m>E</m> as a <m>\Q</m>-vector space is the following: <me>\{1,\sqrt[4]{28},\sqrt[4]{28}^2,\sqrt[4]{28}^3,i,\sqrt[4]{28}i,\sqrt[4]{28}^2i,\sqrt[4]{28}^3i\}</me>
+                      The polynomial <m>g(x)=x^4-28</m> is irreducible in <m>\Q[x]</m> by <xref text="title" ref="thm-eisensteins-criterion"/> (<m>p=7</m>). Thus it is the minimal polynomial of <m>\sqrt[4]{28}</m>, and so <m>F=\Q(\sqrt[4]{28})</m> is a field extension of <m>\Q</m> of degree <m>4</m>. After adjoining <m>i</m> as well we see that <m>E</m> is an extension of degree <m>8</m>. Thus a basis of <m>E</m> as a <m>\Q</m>-vector space is the following: <me>\{1,\sqrt[4]{28},\sqrt[4]{28}^2,\sqrt[4]{28}^3,i,\sqrt[4]{28}i,\sqrt[4]{28}^2i,\sqrt[4]{28}^3i\}</me>
                     </p>
                   </li>
                 </ol>
@@ -31535,7 +31530,22 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
           <problem><title>Problem 8</title>
             <statement>
               <p>
-            Let N be a submodule of an R-module M. Using Zorn's Lemma, prove that there is a submodule N' such that 1. <m>N\cap N' = (0)</m>, and 2. <m>N''\cap(N + N')\neq(0)</m> for every non-zero submodule N'' of M.
+            Let <m>N</m> be a submodule of an <m>R</m>-module <m>M</m>. Using <xref text="title" ref="lem-zorn"/>, prove that there is a submodule <m>N'</m> such that 
+            <ul>
+              <li>
+                <p>
+                              <m>N\cap N' = (0)</m>, and 
+
+                </p>
+              </li>
+
+              <li>
+                <p>
+            <m>N''\cap(N + N')\neq(0)</m> for every non-zero submodule <m>N''</m> of <m>M</m>.
+
+                </p>
+              </li>
+            </ul>
           </p>
             </statement>
 
@@ -31557,7 +31567,7 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
             </li>
 
             <li>
-            Show by example that (a) can fail if <m>A</m> is not assumed to be invertible.
+            Show by example that (1) can fail if <m>A</m> is not assumed to be invertible.
             </li>
 
           </ol></p>
@@ -32327,7 +32337,7 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
 
           <problem><title>Problem 8 (*)</title>
             <statement>
-              <p>Let N be a submodule of an R-module M. Using Zorn's Lemma, prove that there is a submodule N' such that 
+              <p>Let N be a submodule of an R-module M. Using <xref text="title" ref="lem-zorn"/>, prove that there is a submodule N' such that 
                 <ol>
                   <li>
                     <p>
@@ -32610,9 +32620,9 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
             <solution>
               <p>
               First, notice that <m>f(x)=x^7-12</m> is irreducible in <m>\Q</m>, using 
-              Eisenstein's Criterion 
+              <xref text="title" ref="thm-eisensteins-criterion"/> 
               and <m>p=3</m>. By the 
-              Factor Theorem 
+              <xref text="title" ref="thm-factor-thm"/> 
               there are at most <m>7</m> distinct roots of <m>f</m>. Notice that <m>\sqrt[7]{12}</m> is one such root. The roots of <m>f</m> are <m>\alpha_i=\sqrt[7]{12}e^{{(2\pi i/7)}^{2i-1}}</m> for <m>1\leq i\leq 7</m>.
             </p>
 
@@ -33179,9 +33189,7 @@ Coming soon!
             </p>
 
             <p>
-              We may thus apply 
-              Zorn's Lemma 
-              to conclude that <m>\cP</m> has at least one maximal element, <m>B</m>. I claim <m>B</m> is a basis of <m>V</m>.
+              We may thus apply <xref text="title" ref="lem-zorn"/> to conclude that <m>\cP</m> has at least one maximal element, <m>B</m>. I claim <m>B</m> is a basis of <m>V</m>.
             </p>
 
             <p>
