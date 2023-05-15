@@ -12,7 +12,29 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Consider the polynomial <span class="process-math">\(f(x)=x^{p}-\a^p\in F[x]\text{,}\)</span> and notice that <span class="process-math">\(f'(x)=px^{p-1}=0\text{,}\)</span> as we are in a field of characteristic <span class="process-math">\(p\text{.}\)</span> However, this characteristic also yields <span class="process-math">\(x^p-\a^p=(x-\a)^p\text{.}\)</span> As <span class="process-math">\(F\)</span> is a field we have <span class="process-math">\(F[x]\)</span> as a UFD, and thus as <span class="process-math">\(x-\a\)</span> is irreducible in <span class="process-math">\(F[x]\)</span> it is also prime. Therefore this is the unique factorization of <span class="process-math">\(f\)</span> up to associates. If <span class="process-math">\(f\)</span> was reducible <span class="process-math">\(F\)</span> it would thus have to be divisible into power os <span class="process-math">\(x-\a\text{,}\)</span> which will never be reducible as <span class="process-math">\(\a\not\in F\text{.}\)</span> Thus <span class="process-math">\(f\)</span> is irreducible in <span class="process-math">\(F[x]\text{,}\)</span> making it the minimal polynomial of <span class="process-math">\(\a\text{.}\)</span> However, if <span class="process-math">\(|\Aut(L/F )|= [L : F ]\)</span> this would make <span class="process-math">\(L\)</span> the splitting field of <span class="process-math">\(f\)</span> over <span class="process-math">\(F\text{,}\)</span> which it is not, given <span class="process-math">\(\a\not\in F\text{.}\)</span> Thus <span class="process-math">\(|\Aut(L/F )| &lt; [L : F ]\text{.}\)</span>
+<div class="para logical">
+<div class="para">Part (b) First, notice that <span class="process-math">\(2\cdot 3=6=(1+\sqrt{-5})(1-\sqrt{-5})\text{.}\)</span> Define a function</div>
+<div class="displaymath process-math">
+\begin{equation*}
+N:\Z[\sqrt{-5}]\to\Z, N(a+b \sqrt{-5})=a^2+5b^2.
+\end{equation*}
+</div>
+<div class="para">Let <span class="process-math">\(\alpha,\beta\in\Z[\sqrt{-5}]\)</span> and behold</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{align}
+N(\alpha\beta)
+&amp;=N((a+b \sqrt{-5})(c+d \sqrt{-5}))\\
+&amp;=N(ac-5bd+ad \sqrt{-5}+bc \sqrt{-5})\\
+&amp;=(ac-5bd)^2+5(ad+bc)^2\\
+&amp;=((ac)^2-10acbd+25(bd)^2)+5((ad)^2+2abcd+(bc^2))\\
+&amp;=a^2c^2+25b^2d^2+5a^2d^2+5b^2c^2\\
+&amp;=(a^2c^2+5a^2d^2)+(5b^2c^2+25b^2d^2)\\
+&amp;=a^2(c^2+5d^2)+5b^2(c^2+5d^2)\\
+N(\alpha)N(\beta)&amp;=(a^2+5b^2)(c^2+5d^2).\end{align}
+\end{equation*}
+</div>
+<div class="para">So there's that done.</div>
 </div>
 <span class="incontext"><a href="section-80.html#p-4191" class="internal">in-context</a></span>
 </body>

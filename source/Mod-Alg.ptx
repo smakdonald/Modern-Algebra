@@ -311,6 +311,7 @@
 
     <rename element="insight">Mark</rename>  
     <rename element="inlineexercise">Exploration</rename>
+    <rename element="exploration">Discussion</rename> 
 
   </docinfo>
   
@@ -330,7 +331,6 @@
       </titlepage>
 
       <colophon>
-
         <website>
           <name>
             <c>smakdonald.github</c>
@@ -380,6 +380,93 @@
 
         <p>Coming soon!</p>
 
+
+        
+
+        <paragraphs><title>Blocks</title>
+
+          <p>
+            <ul>
+              <li><title><term>Definition </term></title>
+                <p>
+                  These are pretty standard and probably what you'd be expecting. 
+                </p>
+              </li>
+
+              <li><title><term>Examples </term></title>
+                <p>
+                  Specific instances of a definition.
+                </p>
+              </li>
+
+              <li><title><term>Theorem </term></title>
+                <p>
+                  A result. 
+                </p>
+              </li>
+
+              <li><title><term>Lemma </term></title>
+                <p>
+                  A more technical result used specifically in the proof of a larger result.
+                </p>
+              </li>
+
+              <li><title><term>Corollary </term></title>
+                <p>
+                  An important result whose proof comes directly from a previous theorem.
+                </p>
+              </li>
+
+              <li><title><term>Proposition </term></title>
+                <p>
+                  Results that require proof but are more specific and/or contained in a larger result coming later.
+                </p>
+              </li>
+
+              <li><title><term>Exploration </term></title>
+                <p>
+                  Generalizations, specifics, smaller results, things are are less essential to the course or results who's proofs are usually skipped. 
+                </p>
+              </li>
+
+              <li><title><term>Problem </term></title>
+                <p>
+                  Used for qualifying exam problems.
+                </p>
+              </li>
+
+              <li><title><term>Remark </term></title>
+                <p>
+                  Providing context in the form of foreshadowing or content not covered in this text.
+
+                  In general, there shouldn't be anything defined in a remark, they should be entirely optional. 
+                </p>
+              </li>
+
+              <li><title><term>Discussion </term></title>
+                <p>
+                  Usually for arguing about notation.
+                </p>
+              </li>
+
+              <li><title><term>Context </term></title>
+                <p>
+                  Historical and etymogical origins. 
+                </p>
+              </li>
+
+              <li><title><term>Footnotes </term></title>
+                <p>
+                  Add little to no educational value, at least in the traditional sense.<fn>It should really be <q>feetnote</q> if you think about it.</fn> 
+                </p>
+              </li>
+            </ul>
+            
+            
+          </p>
+          
+        </paragraphs>
+
       </preface>
 
     </frontmatter>
@@ -394,17 +481,26 @@
       
       <chapter xml:id="ch-intro-groups"><title>Intro to Groups</title>
 
-        <introduction><title>A Brief Notational Note</title>
+        <introduction><title>Setting the Stage (*)</title>
           <p>
-            At various points throughout this text, the author may use "mathcal" notation for definitions that do not normally require it (such as <m>\G</m> for a group, <m>\R</m> for a ring, etc.) In the realm of higher mathematics, this is what is known as a <em>typo</em>, and should be reported to the proper authorities as soon as possible.
+            
           </p>
+          
         </introduction>
       
-        <section xml:id="sec-group-basics"><title>Group Basics </title>
+        <section xml:id="sec-group-basics"><title>Group Basics</title>
 
           <subsection xml:id="subsec-beginnings"><title>Binary Operations and Groups</title>
 
+            <paragraphs><title>A Brief Notational Note</title>
+              <p>
+                At various points throughout this text, the author may use "mathcal" notation for definitions that do not normally require it (such as <m>\G</m> for a group, <m>\R</m> for a ring, etc.) In the realm of higher mathematics, this is what is known as a <em>typo</em>, and should be reported to the proper authorities as soon as possible.
+              </p>
+            </paragraphs>
+
             <blockquote><p><q>Most great learning happens in groups.</q></p><attribution>Ken Robinson</attribution></blockquote>
+
+            <p>We begin, as all great volumes of mathematics are like to do, somewhere in the middle.<fn>Though everything that you need from the beginning can be found in <xref ref="app-foundations"/>.</fn></p>
 
             <definition xml:id="def-binop"><title>Binary Operation</title> 
       
@@ -418,7 +514,7 @@
               </statement>
             </definition>
 
-            <p>Binary operations are especially useful when they posess some special properties, such as the following:</p>
+            <p>Binary operations on a set are especially useful when they posess some special properties, which garner them some special names.</p>
 
             <definition xml:id="def-monoid"><title>Monoid</title>
               <statement>
@@ -460,6 +556,12 @@
 
             <remark><p>The notation <m>1</m> is often used for the identity element of a group, though we will not do so here.</p></remark>
 
+            <example xml:id="ex-natural-monoid"><title>Au Naturale</title>
+              <p>
+                The <xref text="title" ref="def-natural-numbers"/> <m>\N</m> form a monoid under addition. However, <m>(\N,+)</m> does <em>not</em> form a group.
+              </p>
+            </example>
+
             <remark><p>For those interested, a pairing <m>(G,\cdot)</m> that only satisfies the first two properties of <xref ref="def-monoid"/> is called a <em>semigroup</em><idx><h>semigroup</h></idx>. If <m>(G,\cdot)</m> only satisfies the first property, it is known as a <em>magma</em><idx><h>magma</h></idx>.</p></remark>
 
             <historical><title>Magma</title>
@@ -475,6 +577,16 @@
               <image source="images/magma.png" width="80%"/>
             </figure>
 
+            <exercise xml:id="exe-general-associativity"><title>Generalized Associative Law</title>
+              <p>
+                If an element of a monoid is contructed from a sequence of elements <m>x_1,\dots,x_n</m> in this order by repeatedly inserting parenthesis and applying the operation, the element must equal 
+                <me>(\cdots((x_1\cdot x_2)\cdot x_3)\cdots)\cdot x_n</me>
+                and so is independent of the mode of bracketing.
+              </p>
+            </exercise>
+
+            <p>As a result of <xref ref="exe-general-associativity"/> any expression formed from the elements <m>x_1\dots,x_n</m> in that order can be written without parenthesis, which will save us oodles of time down the line.</p>
+
             <definition xml:id="def-group"><title>Group</title>
               <statement>
                 <p>
@@ -488,8 +600,10 @@
                   </ul>
                   <notation><usage><m>(G,\cdot)</m></usage><description>a group (or monoid) <m>G</m> and its binary operation <m>\cdot</m></description></notation>    
                   <notation><usage><m>g,h,k,x,y,z</m></usage><description>lowercase letters reserved for elements of a group <m>\cdot</m></description></notation>          
-      
                 </p>
+
+                <p>When the operation of a group is <m>\cdot</m>, we refer to <m>G</m> as a <em>multiplicative group</em><idx><h>multiplicative group</h></idx>. If the operation <m>+</m> is used, then <m>G</m> is referred to as an <em>additive group</em><idx><h>additive group</h></idx>.</p>
+
               </statement>
             </definition>
 
@@ -503,13 +617,7 @@
               </p>
             </historical>
 
-            <remark><p> a group is a pair, we will usually refer to the group by only naming the underlying set, <m>G</m>.</p></remark>
-
-            <warning> <title>Additive and Multiplicative Notation</title>
-              <p>When the operation of a group is <m>\cdot</m>, we refer to <m>G</m> as a <em>multiplicative group</em><idx><h>multiplicative group</h></idx>. If the operation <m>+</m> is used, then <m>G</m> is referred to as an <em>additive group</em><idx><h>additive group</h></idx>.</p>
-
-              <p>When we refer to exponents in groups, we are talking about repeated applications of the given operation, which in many cases is denoted multiplicatively, hence the exponent notation. However, for additive groups such as <m>(\Z,+)</m>, we find ourselves in the uncomfortable situation where statements such as <m>2^3=2+2+2=6</m> are technically true. Thus, in additive groups it is more customary to denote expressions such as the one above in more traditional notation: namely, <m>3\cdot 2=2+2+2=6</m>.</p>
-            </warning>
+            <remark><p>Though a group is a pair, we will usually refer to the group by only naming the underlying set, <m>G</m>.</p></remark>
 
             <!--
 
@@ -576,13 +684,13 @@
                       <p>
                         Suppose <m>xy = xz</m> for some <m>x,y,z\in G</m>. By multiplying on both sides by <m>x\inv</m>, we see 
                         <me>
-                          \begin{align}
+                          \begin{aligned}
                             xy &amp;= xz \\
                             x\inv(xy) &amp;= x\inv(xz) \\
                             (x\inv x)y &amp;= (x\inv x)z \\
                             (e)y &amp;= (e)z \\
                             y &amp;= z.
-                          \end{align}
+                          \end{aligned}
                         </me>
                       </p>
                     </li>
@@ -596,21 +704,21 @@
             <definition xml:id="def-abelian"><title>Abelian Group</title>
               <statement>
                 <p>
-                  A group <m>G</m> is an <em>abelian group</em><idx><h>abelian group</h></idx> if <m>\cdot</m> is commutative; i.e., <m>x \cdot y = y \cdot x</m> for all <m>x,y \in G</m>. 
+                  A group <m>G</m> is an <em>abelian group</em><idx><h>abelian group</h></idx> if the operation <m>\cdot</m> is commutative; i.e., <m>x \cdot y = y \cdot x</m> for all <m>x,y \in G</m>. 
                 </p>
               </statement>
             </definition>
 
-            <remark><p>Two elements <m>x,y</m> of a group are said to <em>commute</em><idx><h>commute</h></idx> if <m>xy=yx</m>.</p></remark>
-
-            <p>As we progress through the text, one might start to recognize that groups are much more agreeable when they are abelian. They behave in ways we expect and are often times much more likely to do what we want. If all groups were abelain, group theory would not be anywhere near as widespread (or interesting, though that is more a matter of opinion). Because of this, a common motif in this course is finding, constructing, and fiddling with groups that are 'almost' abelian, whatever that means.</p>
-      
             <historical><title>Abelian Groups</title>
               <p>
                 The term "Abelian groups" was introduced by the mathematician and physicist James Clerk Maxwell in the 1870s. Maxwell named these groups after the Norwegian mathematician <xref text="title" ref="bio-abel"/>, who made important contributions to the theory of equations, including the study of what we now call abelian groups.
               </p>
             </historical>
 
+            <remark><p>Two elements <m>x,y</m> of a group are said to <em>commute</em><idx><h>commute</h></idx> if <m>xy=yx</m>.</p></remark>
+
+            <p>As we progress through the text, one might start to recognize that groups are much more agreeable when they are abelian. They behave in ways we expect and are often times much more likely to do what we want. If all groups were abelain, group theory would not be anywhere near as widespread (or interesting, though that is more a matter of opinion). Because of this, a common motif in this course is finding, constructing, and fiddling with groups that are 'almost' abelian, whatever that means.</p>
+      
             <example xml:id="ex-group-examples"><title>Group Examples</title>
                 <p>
                   <ol>
@@ -624,12 +732,6 @@
                     <li>
                       <p>
                         <m>(\Z,+), (\Q,+), (\R,+),</m> and <m>(\C,+)</m> each form an abelian group, where <m>+</m> denotes traditional addition.
-                      </p>
-                    </li>
-
-                    <li>
-                      <p>
-                        The <xref text="title" ref="def-natural-numbers"/> <m>\N</m> form a monoid under addition. However, <m>(\N,+)</m> does <em>not</em> form a group.
                       </p>
                     </li>
 
@@ -647,7 +749,7 @@
                         <me>
                           \operatorname{GL}_n(\C)=\{ \text{invertible } n \times n \;\text{matrices with entries in}\; \C\}.
                         </me> 
-                          Then <m>\operatorname{GL}_n(\C)</m> is a non-abelian group under matrix multiplication known as the <em>general linear group</em><idx><h>general linear group</h></idx>.<fn>In general this is true for any field <m>F</m>, whatever those are.</fn>
+                          Then <m>\operatorname{GL}_n(\C)</m> is a non-abelian group under matrix multiplication known as the <em>general linear group</em><idx><h>general linear group</h></idx>.
                         <notation><usage><m>\GL</m></usage><description>General linear group</description></notation> 
                       </p>
                     </li>
@@ -655,18 +757,6 @@
                     <li>
                       <p>
                         For any <m>n\in\N</m>, let <m>\Z/n</m> denote the <xref text="title" ref="def-integers-modulo"/>. Then <m>(\Z/n,+)</m> forms an abelian group where <m>+</m> denotes addition modulo <m>n</m>.
-                      </p>
-                    </li>
-
-                    <li xml:id="exe-opposite-group"><title>Opposite Group</title>
-                      <p>
-                        Let <m>G</m> be a multiplicative group, and define <m>G^{op}</m><idx><h>opposite group</h></idx> be the set <m>G</m> equipped with the operation <m>*</m>, where <m>x*y=yx</m>.<fn>Opposite groups are used in category theory to describe duality between algebraic structures.</fn> Then <m>G^{op}</m> is a group.
-                      </p>
-                    </li>
-
-                    <li xml:id="ex-even-odd-groups"><title>Evening the Odds</title>
-                      <p>
-                        Let <m>\E</m> denote the set of even integers and <m>\O</m> denote the set of odd integers. Then <m>(\E,+)</m> is a group, whereas <m>(\O,+)</m> is not.
                       </p>
                     </li>
 
@@ -717,6 +807,10 @@
             </exercise>
             -->
 
+            <remark><title>Specific General Linear Groups</title>
+              <p>In general, <m>\GL_n(R)</m> is a group for any ring <m>R</m> (whatever those are).</p>
+            </remark>
+
             <p>The following example illustrates a few important examples of something called a <xref text="title" ref="def-group-of-units"/>, which is defined explicitely in terms of rings (whatever those are) in <xref ref="part-rings"/>.</p>
 
             <example xml:id="ex-group-of-units"><title>Groups of Units</title>
@@ -751,54 +845,26 @@
               </statement>
             </exercise>
 
-            <!--
-
-            <exercise xml:id="exe-group-exponents"><title>Group Exponents</title>
-              <statement>
-                <p>
-                  Verify that exponents behave how we would expect (hope) them to in groups. That is, 
-                  <ol>
-                    <li>
+            <exercise><title>Some Extra Groups</title>
+              <p>
+                Verify the following:
+                <ul>
+                  <li xml:id="exe-opposite-group"><title>Opposite Group</title>
                       <p>
-                        <m>x^m\cdot x^n = x^{n+m}</m>.
+                        Let <m>G</m> be a multiplicative group, and define <m>G^{op}</m><idx><h>opposite group</h></idx> be the set <m>G</m> equipped with the operation <m>*</m>, where <m>x*y=yx</m>.<fn>Opposite groups are used in category theory to describe duality between algebraic structures.</fn> Then <m>G^{op}</m> is a group.
                       </p>
                     </li>
 
-                    <li>
+                    <li xml:id="ex-even-odd-groups"><title>Evening the Odds</title>
                       <p>
-                        <m>(x^{m})^{n} = x^{mn}</m>.
+                        Let <m>\E</m> denote the set of even integers and <m>\O</m> denote the set of odd integers. Then <m>(\E,+)</m> is a group, whereas <m>(\O,+)</m> is not.
                       </p>
                     </li>
-                  </ol>
-                </p>
-              </statement>
-        
-              <solution>
-                <p>
-                  <ol>
-                    <li>
-                      <p>
-                        We expand <m>x^m</m> and <m>x^n</m> to see
-                        <me>
-                          \begin{aligned}
-                            x^m\cdot\x^n &amp;=\underbrace{x\cdot\dots\cdot x} \cdot \underbrace{x\cdot\dots\cdot x}\\ 
-                            &amp;= \underbrace{x\cdot\dots\cdot x}\\ 
-                            &amp;= x^{m+n}.
-                          \end{aligned}
-                        </me>
-                      </p>
-                    </li>
-
-                    <li>
-                      <p>
-                        Coming soon!
-                      </p>
-                    </li>
-                  </ol>
-                </p>
-              </solution>
+                </ul>
+              </p>
             </exercise>
 
+            <!--
             <exercise xml:id="exe-more-group-properties"><title>Properties for a Rainy Day</title>
               <statement>
                 <p>
@@ -820,23 +886,22 @@
                 </p>
               </solution>
             </exercise>
-
             -->
             
-            <lemma xml:id="lem-group-inverses"><title>Properties of Inverses</title>  
+            <theorem xml:id="thm-group-inverses"><title>Properties of Inverses</title>
               <statement>
                 <p>
-                  If <m>G</m> is a group and <m>g, x_1,\ldots,x_n \in G</m>, then:
+                  If <m>G</m> is a group and <m>x,y\in G</m>, then:
                   <ol>
                     <li>
                       <p>
-                        <m>(g^{-1})^{-1} = g</m>.
+                        <m>(x^{-1})^{-1} = x</m>.
                       </p>
                     </li>
 
                     <li>
                       <p>
-                        <m>(x_1 \dots x_n)^{-1} = x_n^{-1} \dots x_1^{-1}</m>. 
+                        <m>(xy)\inv=x\inv y\inv</m>
                       </p>
                     </li>
                   </ol>
@@ -860,10 +925,29 @@
                   </ol>
                 </p>
               </proof>
-            </lemma>         
+            </theorem>
+
+            <p>The second portion of <xref ref="thm-group-inverses"/> can be generalized.</p>
+
+            <exercise xml:id="exe-big-inverses"><title>Big 'Ole Inverses</title>
+              <statement>
+                <p>
+                  If <m>G</m> is a group and <m>x_1,\ldots,x_n \in G</m>, then <m>(x_1 \dots x_n)^{-1} = x_n^{-1} \dots x_1^{-1}</m>. 
+                </p>
+              </statement>
+            </exercise>
+
+            <p>It can also be specialized.</p>
+
+            <exercise xml:id="exe-abelian-exponents"><title>Abelian Exponents</title>
+              <statement>
+                <p>
+                  Let <m>x,y\in G</m>. The equation <m>(xy)^n=x^ny^n</m> holds for all <m>n\in\Z</m> if and only if <m>G</m> is abelian.
+                </p>
+              </statement>
+            </exercise>  
 
             <!-- 
-
             <exercise xml:id="exe-groups-but-false"><title>Wouldn't it be Nice</title>
               <p>
                 Find counterexamples to each of the following (false) statements.
@@ -897,15 +981,74 @@
             </exercise>
 
             <p>But that's enough confusion for now. I know just the thing to get us back on track.</p>
-
             -->
     
           </subsection>
+    
+        </section>
+
+        <section xml:id="sec-order-power"><title>Order and Power</title>
 
           <subsection xml:id="subsec-order"><title>Order</title>
 
-            <blockquote><p><q>Good order is the foundation of all things.</q></p><attribution>Edmund Burke</attribution></blockquote>
-    
+            <blockquote><p><q>In order to make a choice, you need the power to see there is one.</q></p><attribution>Gloria Steinem</attribution></blockquote>
+
+            <p>Though it might be natural to write the product <m>x\cdot x</m> using the notation <m>x^2</m>, we have no notion of what that means in the world of groups. Do exponents behave the way we want them to in groups, or does something disasterous occur? Do exponents even <em>exist</em>? Do <em>I</em>? We can answer most of these questions, and attempt to do so now.</p>
+
+            <definition xml:id="def-power"><title><m>n\th</m> power</title>
+              <statement>
+                <p>
+                  Let <m>x</m> be an element of a multiplicative group <m>G</m>. For <m>n\in\Z</m>, the <m>n\th</m> <term>power</term> <m>x^n</m> of <m>x</m> is defined recursively as follows:
+                  <ul>
+                    <li>
+                      <p>
+                        <m>x^0=e</m>, <m>x^1=x</m>, and <m>x\inv=x\inv</m><fn>Convenient notation, isn't it? Almost like we planned it.</fn>;
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        <m>x^{n+1}=x^nx</m> when <m>n&lt;0</m>; and 
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        <m>x^n=(x^{-n})\inv</m> when <m>n&gt;0</m>.
+                      </p>
+                    </li>
+                  </ul>
+                </p>
+              </statement>
+            </definition>
+
+            <remark><p>If <m>G</m> was an additive group, then we would write <m>nx</m> intead of <m>x^n</m>. This would be called a <term>multiple</term> of <m>x</m> instead of a power.</p></remark>
+
+            <theorem xml:id="thm-exponent-laws"><title>Laws of Exponents</title>
+              <statement>
+                <p>
+                  Let <m>m,n\in\Z</m> and <m>x</m> be an element of a group <m>G</m>. Then 
+                  <ol>
+                    <li>
+                      <p>
+                        <m>x^mx^n=x^{m+n}=x^nx^m</m> and
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        <m>(x^m)^n=x^{mn}=(x^n)^m</m>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+
+              <proof>
+                <p>Coming soon!</p>
+              </proof>
+            </theorem>
+            
             <definition xml:id="def-order"><title>Order</title>
               <statement>
                 <p>
@@ -929,6 +1072,10 @@
             </definition>
 
             <remark><p>Some authors use the notation <m>\#G</m> or <m>o(G)</m> to refer to the order of a group. We won't name names, but they know who they are. (See: <xref ref="mark"/>)</p></remark>
+
+            <exploration>
+              <p>What notation do you think should be used for the order of a group?</p>
+            </exploration>
       
             <example xml:id="ex-order"><title>Order Examples</title>
               <p>
@@ -1010,7 +1157,6 @@
             </exercise>
 
             <!--
-
             <exercise xml:id="exe-finite-order"><title>Product Order</title>
               <statement>
                 <p>
@@ -1018,7 +1164,6 @@
                 </p>
               </statement>
             </exercise>
-
             -->
         
             <theorem xml:id="thm-element-order"><title>Element Order</title>
@@ -1109,7 +1254,7 @@
             </exercise>
 
           </subsection>
-    
+
         </section>
       
         <section xml:id="sec-common-groups"><title>Common Groups</title>
@@ -4541,9 +4686,9 @@
             </statement>
           </definition>
 
-           <exercise><title>Discussion</title>
+           <exploration>
             <p>Should an action which is not faithful be called <em>unfaithful</em>? <em>Adulterous</em>? Discuss. </p>
-          </exercise>
+          </exploration>
 
           <example xml:id="def-trivial-action-not-faithful"><title>Trivial Adultery</title>
             <p>The trivial action is not faithful.<fn>This has probably been said by a divorce lawyer at some point.</fn></p>
@@ -6556,9 +6701,9 @@
               </statement>
             </definition>
 
-            <exercise><title>Discussion</title>
+            <exploration>
               <p>There has to be a better name for this, right? I can't think of one, but maybe you can. Discuss.</p>
-            </exercise>
+            </exploration>
       
             <theorem xml:id="hk-normal"><title><m>HK</m> Subgroup Criteria</title>
               <statement>
@@ -7001,11 +7146,11 @@
               </statement>
             </definition>
 
-            <exercise><title>Discussion</title>
+            <exploration>
               <statement>
                 <p>Decide amongst yourselves whether it should be spelled "semidirect", "semi-direct", "semi direct".</p>
               </statement>
-            </exercise>
+            </exploration>
   
             <p>Before we prove that the construction above actually gives a group, let's compute a few examples.</p>
   
@@ -8109,9 +8254,9 @@
                 </statement>
               </definition>
 
-              <exercise><title>Discussion</title>
+              <exploration>
                 <p>One could argue that commutative rings should really be called <em>abelian rings</em> to remain consistent with abelian groups. Discuss.</p>
-              </exercise>
+              </exploration>
 
               <p>We can go <alert>deeper</alert>.</p>
 
@@ -8618,9 +8763,9 @@
 
           <remark><p>Unlike with groups, we generally do not use the notation <q><m>\leq</m></q> to denote a subring. In fact, I'm not sure if we have any notation for it at all. You know what that means!</p></remark>
 
-          <exercise><title>Discussion</title>
+          <exploration>
             <p>Come up with some spiffy new notation for a subring. I have absolutely no ideas, so good luck.</p>
-          </exercise>
+          </exploration>
     
           <lemma xml:id="lem-subring-test"><title>Subring Test</title>
             <statement>
@@ -10909,19 +11054,21 @@
             </statement>
           </definition>
 
+          <historical><title>Modules</title>
+            <p>
+              The term "module" comes from the Latin word "modulus", which means "measure". In mathematics, a module is a mathematical object that measures the size and shape of a vector space over a given ring. The term "module" is used to emphasize the idea that these objects are generalizations of vector spaces, and that they measure the extent to which a given vector space can be transformed using the ring operations.
+            </p>
+          </historical>
+
           <remark><p>If <m>R</m> is a commutative ring, then any left <m>R</m>-module <m>M</m> may be regarded as a right <m>R</m>-module by setting <m>m r = r m</m>. Likewise, any right <m>R</m>-module may be regarded as a left <m>R</m>-module. But for non-commutative rings, left and right modules are not the same: trying to make a left <m>R</m>-module <m>M</m> into a right one by setting <m>mr = rm</m> fails to satisfy the second axiom, since <m>m(rs) = (rs)m</m> and <m>(mr)s = (rm)s = s(rm) = (sr)m</m>, and, unless <m>rs =sr</m>, we cannot conclude that <m>m(rs) = (mr)s</m>.</p></remark>
 
-          <proposition xml:id="prop-opposite-ring-module"><title>Module and Opposite Ring</title>
+          <exercise xml:id="exe-opposite-ring-module"><title>Module and Opposite Ring</title>
             <statement>
               <p>
-                Given a ring <m>R</m>, let <m>R^{op}</m> denote the “opposite ring''. This is the same underlying set as <m>R</m> equipped with the same rule for <m>+</m> as <m>R</m>, but with multiplication rule (which I will write here as <m>\cdot_{op}</m>) redefined to be <m>a \cdot_{op} b := b a</m> (where <m>ba</m> refers to the original multiplication rule for <m>R</m>). Then <m>R^{op}</m> is also a ring — you don't need to prove that.
-              </p>
-    
-              <p>
-                Given a left <m>R</m>-module <m>M</m>, prove that <m>M</m> is a right <m>R^{op}</m>-module via the same rule for addition but with the rule for scaling on the right defined to be <m>m r := rm</m> for any <m>r \in R</m> and <m>m \in M</m>. 
+                For a ring <m>R</m>, recall the opposite ring, <m>R^{op}</m>, as defined in <xref ref="list-opposite-ring"/>. Given a left <m>R</m>-module <m>M</m>, prove that <m>M</m> is a right <m>R^{op}</m>-module via the same rule for addition but with the rule for scaling on the right defined to be <m>m r := rm</m> for any <m>r \in R</m> and <m>m \in M</m>. 
               </p>
             </statement>
-          </proposition>
+          </exercise>
 
           <lemma xml:id="lem-module-arithmetic"><title>Arithmetic in Modules</title>
             <statement>
@@ -10984,7 +11131,7 @@
                 </li>
     
                 <li>
-                Every ring <m>R</m> is a left module over itself whit the rule for scaling given by the ring multiplication rule. It is also a right module over itself.
+                Every ring <m>R</m> is a left module over itself with the rule for scaling given by the ring multiplication rule. It is also a right module over itself.
                 </li>
     
                 <li>
@@ -11022,7 +11169,7 @@
             </statement>
           </definition>
 
-          <proposition xml:id="prop-abelian-groups-are-z-modules"><title>Abelian Groups are <m>\Z</m>-modules</title>
+          <theorem xml:id="thm-abelian-groups-are-z-modules"><title>Abelian Groups are <m>\Z</m>-modules</title>
             <statement>
               <p>
                 Let <m>M</m> be an abelian group under <m>+</m>. Then <m>M</m> becomes a <m>\Z</m>-module upon defining the rule for scaling to be <m>nm :=</m> 
@@ -11036,9 +11183,9 @@
               </p>
             </statement>
 
-          </proposition>
+          </theorem>
 
-          <proposition xml:id="prop-zn-modules"><title><m>\Z/n</m> Modules</title>
+          <exercise xml:id="exe-zn-modules"><title><m>\Z/n</m> Modules</title>
             <statement>
               <p>
                 Let <m>n</m> be a positive integer and recall that <m>\Z/n</m> denotes the ring of integers modulo <m>n</m> (whose elements I will write as <m>\ov{0}, \ov1, \cdots, \ov{n-1}</m>). 
@@ -11057,15 +11204,31 @@
                 </ol>
               </p>
             </statement>
-          </proposition>
+          </exercise>
+
+          <p>For an <m>R</m>-module <m>M</m> the ring <m>R</m> is often referred to as the <q>ring of scalars</q> for the module (by analogy to the vector space case). Given an action of a ring of scalars on a module, we can sometimes produce an action of a different ring of scalars on the same set, producing in effect a new module structure.</p>
 
           <theorem xml:id="thm-restriction-of-scalars"><title>Restriction of Scalars</title>
             <statement>
               <p>
-                Let <m>\phi: R \to S</m> be a ring homomorphism. Any left <m>S</m>-module <m>M</m> may be regarded via <em>restriction of scalars</em> as a left <m>R</m>-module with the following structure: - the rule for addition <m>+</m> on <m>M</m> is the same as in the original structure and - the rule for scaling by elements of <m>R</m> is 
-                <me>
-                  r \cdot m := \phi(r)m \text{ for any }r \in R \text{ and }m\in M.
-                </me> 
+                Let <m>\phi: R \to S</m> be a ring homomorphism. Any left <m>S</m>-module <m>M</m> may be regarded via <em>restriction of scalars</em> as a left <m>R</m>-module with the following structure: 
+                <ul>
+                  <li>
+                    <p>
+                      the rule for addition <m>+</m> on <m>M</m> is the same as in the original structure and 
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      the rule for scaling by elements of <m>R</m> is 
+                        <me>
+                          r \cdot m := \phi(r)m \text{ for any }r \in R \text{ and }m\in M.
+                        </me>  
+                    </p>
+                  </li>
+                </ul>
+                
               </p>
             </statement>
 
@@ -11091,6 +11254,8 @@
               </proof>
           </theorem>
 
+          <p>As a special case of <xref ref="thm-restriction-of-scalars"/>, if <m>R</m> is a subring of <m>S</m>, then every left <m>S</m>-module becomes a left <m>R</m>-module via restriction of scalars along the inclusion map of <m>R</m> into <m>S</m>. This explains the use of the phrase <q>restriction of scalars</q>. </p>
+
           <example xml:id="ex-complex-vector-spaces-are-real-vector-spaces"><title>Complex Vector Spaces are Real</title>
             <statement>
               <p>
@@ -11099,7 +11264,7 @@
             </statement>
           </example>
 
-          <proposition xml:id="prop-homomorphisms-and-restriction-of-scalars"><title>Ring Maps and Restriction of Scalars</title>
+          <example xml:id="ex-homomorphisms-and-restriction-of-scalars"><title>Ring Maps and Restriction of Scalars</title>
             <statement>
               <p>
                 If <m>S</m> and <m>R</m> are rings and <m>\phi: S \to R</m> is a ring homomorphism, then since <m>S</m> is a left <m>S</m>-module, it is also a left <m>R</m>-module via restriction of scalars. Note that the rule for scaling given by <m>r s := \phi(r) s</m>.
@@ -11118,7 +11283,7 @@
             
               </p>
             </statement>
-          </proposition>
+          </example>
 
           <example xml:id="exe-ri-module-is-an-r-module"><title><m>R/I</m> is an <m>R</m>-module</title>
             <p>
@@ -11150,6 +11315,8 @@
               </p>
             </statement>
           </definition>
+
+          <p>We could equivalently define <q>submodule</q> to be a subset of $M$ that is an $R$-module using the same operations of addition and scaling as in $M$.</p>
 
           <example>
             <p>
@@ -11229,11 +11396,9 @@
             </statement>
           </definition>
 
-          <remark>
-            <p>
-              Does not need to send 1 to 1. Have them find an example maybe?
-            </p>
-          </remark>
+          <remark><p>Unlike its group or ring counterparts, a module homomorphism does <em>not</em> need to map <m>1</m> to <m>1</m>.</p></remark>
+
+          <p>When the ring of scalars is a field, special terminology is used:</p>
           
           <definition xml:id="def-linear-transformation"><title>Linear Transformation</title>
             <statement>
@@ -11459,7 +11624,7 @@
           <definition xml:id="def-quotient-module"><title>Quotient Module</title>
             <statement>
               <p>
-                Let <m>R</m> be a ring, let <m>M</m> be an R-module, and let <m>N</m> be a submodule of <m>M</m>. The <em>quotient module</em> <m>M/N</m> is the quotient group <m>M/N</m> under <m>+</m> (so elements of <m>M/N</m> are additive cosets of the form <m>m + N</m> with <m>m \in M</m> and addition is defined by <m>(m_1 + N) + (m_2 + N) = (m_1+m_2) + N</m>) and with the rule for scaling by <m>R</m> defined to be <me>r \cdot (m + N) = rm + N</me> for all <m>r \in R</m> and <m>m + N \in M/N</m>.
+                Let <m>R</m> be a ring, let <m>M</m> be an <m>R</m>-module, and let <m>N</m> be a submodule of <m>M</m>. The <em>quotient module</em> <m>M/N</m> is the quotient group <m>M/N</m> under <m>+</m> (so elements of <m>M/N</m> are additive cosets of the form <m>m + N</m> with <m>m \in M</m> and addition is defined by <m>(m_1 + N) + (m_2 + N) = (m_1+m_2) + N</m>) and with the rule for scaling by <m>R</m> defined to be <me>r \cdot (m + N) = rm + N</me> for all <m>r \in R</m> and <m>m + N \in M/N</m>.
               </p>
             </statement>
           </definition>
@@ -11522,9 +11687,8 @@
 
           <example xml:id="exe-z-modules-and-quotients"><title><m>\Z</m>-modules and Quotients</title>
             <p>
-              Recall that <m>\Z</m>-module are the same as abelian groups. submodules and quotient <m>\Z</m>-modules are the same things as subgroups and quotients of abelian groups.
+              Recall that <m>\Z</m>-modules are the same as abelian groups by <xref ref="thm-abelian-groups-are-z-modules"/>. Submodules and quotient <m>\Z</m>-modules are the same things as subgroups and quotients of abelian groups.
             </p>
-
           </example>
 
           <theorem xml:id="thm-module-isomorphism-thms"><title>Module Isomorphism Theorems</title>
@@ -11534,31 +11698,30 @@
                 <ol>
                   <li>
                     <p>
-                                      - (UMP for Quotient Modules) Let <m>N</m> be a submodule of <m>M</m>, let <m>T</m> be an <m>R</m>-module, and let <m>f: M \to T</m> be an <m>R</m>-module homomorphism. If <m>f(M) = 0</m> (i.e., if <m>N \subseteq \ker(f)</m>) then the function <m>\ov{f}: M/N \to T</m> given by <m>\ov{f}(m + N) = f(m)</m> is a well-defined, <m>R</m>-module homomorphism. In fact, <m>\ov{f}: M/N \to T</m> is the unique <m>R</m>-module homomorphism such that <m>\ov{f}\circ \can = f</m> where <m>\can</m> denotes the canonical surjection <m>M \onto M/N</m>. 
+                      (UMP for Quotient Modules) Let <m>N</m> be a submodule of <m>M</m>, let <m>T</m> be an <m>R</m>-module, and let <m>f: M \to T</m> be an <m>R</m>-module homomorphism. If <m>f(M) = 0</m> (i.e., if <m>N \subseteq \ker(f)</m>) then the function <m>\ov{f}: M/N \to T</m> given by <m>\ov{f}(m + N) = f(m)</m> is a well-defined, <m>R</m>-module homomorphism. In fact, <m>\ov{f}: M/N \to T</m> is the unique <m>R</m>-module homomorphism such that <m>\ov{f}\circ \can = f</m> where <m>\can</m> denotes the canonical surjection <m>M \onto M/N</m>. 
 
                     </p>
                   </li>
                   <li>
                     <p>
-                                      - (First Isomorphism Theorem) Let <m>T</m> be an <m>R</m>-module and let <m>h: M \to T</m> be an <m>R</m>-module homomorphism. Then <m>\ker(h)</m> is a submodule of <m>M</m> and there is an <m>R</m>-module isomorphism <m>M/\ker(h) \cong \im(h)</m> given by <m>m + \ker(h) \mapsto h(m)</m>. 
+                      (First Isomorphism Theorem) Let <m>T</m> be an <m>R</m>-module and let <m>h: M \to T</m> be an <m>R</m>-module homomorphism. Then <m>\ker(h)</m> is a submodule of <m>M</m> and there is an <m>R</m>-module isomorphism <m>M/\ker(h) \cong \im(h)</m> given by <m>m + \ker(h) \mapsto h(m)</m>. 
 
                     </p>
                   </li>
                   <li>
                     <p>
-                                      - (Second Isomorphism Theorem) Let <m>A</m> and <m>B</m> be submodules of <m>M</m>, and define <m>A + B = \{a+b \mid a \in A, b \in B\}</m>. Then <m>A + B</m> is a submodule of <m>M</m>, <m>A \cap B</m> is a submodule of <m>A</m>, and there is an <m>R</m>-module isomorphism <m>(A + B)/B \cong A/(A \cap B)</m>. 
+                      (Second Isomorphism Theorem) Let <m>A</m> and <m>B</m> be submodules of <m>M</m>, and define <m>A + B = \{a+b \mid a \in A, b \in B\}</m>. Then <m>A + B</m> is a submodule of <m>M</m>, <m>A \cap B</m> is a submodule of <m>A</m>, and there is an <m>R</m>-module isomorphism <m>(A + B)/B \cong A/(A \cap B)</m>. 
 
                     </p>
                   </li>
                   <li>
                     <p>
-                                      - (Third Isomorphism Theorem) Let <m>A</m> and <m>B</m> be submodules of <m>M</m> with <m>A \subseteq B</m>. Then <m>B/A</m> is a submodule of <m>M/A</m> and there is an <m>R</m>-module isomorphism <m>(M/A)/(B/A) \cong M/B</m> given by sending <m>(m + A) + B/A</m> to <m>m + B</m>. 
-
+                      (Third Isomorphism Theorem) Let <m>A</m> and <m>B</m> be submodules of <m>M</m> with <m>A \subseteq B</m>. Then <m>B/A</m> is a submodule of <m>M/A</m> and there is an <m>R</m>-module isomorphism <m>(M/A)/(B/A) \cong M/B</m> given by sending <m>(m + A) + B/A</m> to <m>m + B</m>. 
                     </p>
                   </li>
                   <li>
                     <p>
-                                      - (Lattice Isomorphism Theorem) Let <m>R</m> be a ring, let <m>N</m> be a R-submodule of <m>M</m>, and let <m>\pi: M \to M/N</m> be the canonical quotient map. Then the function <me>\Psi : \{R-\text{submodules of } M \text{ containing }N\} \to \{R-\text{submodules of }M/N\}</me>defined by <m>\Psi(K) = K/N</m> is a bijection, with inverse given by <m>\Psi^{-1}(T) = \pi^{-1}(T)</m> for each <m>R</m> submodule <m>T</m> of <m>M/N</m>. Moreover, <m>\Psi</m> and <m>\Psi^{-1}</m> preserve sums and intersections.
+                      (Lattice Isomorphism Theorem) Let <m>R</m> be a ring, let <m>N</m> be a R-submodule of <m>M</m>, and let <m>\pi: M \to M/N</m> be the canonical quotient map. Then the function <me>\Psi : \{R-\text{submodules of } M \text{ containing }N\} \to \{R-\text{submodules of }M/N\}</me>defined by <m>\Psi(K) = K/N</m> is a bijection, with inverse given by <m>\Psi^{-1}(T) = \pi^{-1}(T)</m> for each <m>R</m> submodule <m>T</m> of <m>M/N</m>. Moreover, <m>\Psi</m> and <m>\Psi^{-1}</m> preserve sums and intersections.
                     </p>
                   </li>
                 </ol>
@@ -11605,8 +11768,6 @@
               </p>
             </proof>
           </theorem>
-  
-
 
           <exercises>
 
@@ -24397,7 +24558,66 @@
       <appendix xml:id="app-extras"><title>Extras</title>
 
         <section><title>Group Theory</title>
-          <subsection xml:id="subsec-divisible-groups"><title>Divisible Groups (*)</title>
+
+          <subsection xml:id="subsec-magma"><title>Grouplike Structures</title>
+
+            
+
+            <definition xml:id="def-semigroup">
+              <statement>
+                <p>
+                  If a binary operation is associative then the pair (S,*) is called a semigroup.
+                </p>
+              </statement>
+            </definition>
+
+            <p>
+              Generalized Associative Law
+
+              xy\inv=y\invx\inv
+              
+              Powers of an element
+              x^0=e, x^1=x, x^-1 is inverse 
+              x^n+1=x^nx if n big 0
+              x^n=x^(-n)-1 if n less 0
+
+              Laws of Exponents
+
+              x^mx^n=x^m+n
+              (x^m)^n=x^mn=(x^n)^m
+            </p>
+            
+          </subsection>
+
+          <subsection xml:id="subsec-torsion-subgroups"><title>Torsion Subgroups (*)</title>
+
+            <definition xml:id="def-torsion-subgroup"><title>Torsion Subgroup </title>
+              <statement>
+                <p>
+                  Given an abelian group <m>G</m>, the set of elements of <m>G</m> with finite order forms a group, <m>T</m>, which we call the <term>torision subgroup</term> of <m>G</m>. If <m>G=T</m>, then we say that <m>G</m> is <term>torsion</term>
+                </p>
+
+                <p>
+                  If the only element of <m>G</m> with finite order is the identity element <m>e</m>, we say that <m>G</m> is <term>torision-free</term>.
+                </p>
+              </statement>
+            </definition>
+
+            <definition xml:id="def-primary-component"><title><m>p</m>-primary Component</title>
+              <statement>
+                <p>
+                  Given an abelian group <m>G</m>, the set <m>G_p</m> of all elements with order <m>p^k</m> for some prime <m>p</m> and <m>k\in\Z^+</m> forms the <m>p</m><term>-primary component</term> of <m>G</m>.
+                </p>
+              </statement>
+            </definition>
+
+            <theorem xml:id="thm-primary-decomp"><title>Primary Decomposition Theorem</title>
+              <statement>
+                <p>
+                  In an abelian group <m>G</m> the torsion subgroup <m>T</m> is the direct sum of the primary components of <m>G</m>.
+                </p>
+              </statement>
+            </theorem>
 
             <definition xml:id="def-divisible-group"><title>Divisible Group</title>
               <statement>
@@ -24425,6 +24645,14 @@
               </p>
             </example>
 
+            <exercise>
+              <statement>
+                <p>
+                  Show that the circle group is torsion. 
+                </p>
+              </statement>
+            </exercise>
+
             <proposition xml:id="prop-divisible-group-properties"><title>Properties of Divisible Groups</title>
               <statement>
                 <p>
@@ -24444,18 +24672,6 @@
                 </p>
               </statement>
             </proposition>
-            
-          </subsection>
-
-          <subsection xml:id="subsec-torsion-subgroups"><title>Torsion Subgroups (*)</title>
-
-            <definition xml:id="def-torsion-subgroup"><title>Torsion Subgroup </title>
-              <statement>
-                <p>
-
-                </p>
-              </statement>
-            </definition>
             
           </subsection>
 
@@ -26333,8 +26549,8 @@
 
                 <p>
                   First, we show that the center of <m>G</m> is nontrivial. Suppose by way of contradiction that <m>Z(G)=\{e\}</m>. We examine the conjugacy classes of <m>G</m>. From the <xref text="title" ref="thm-class-eq"/>, we know
-                  <me>|G| = |Z(G)| + \sum_i^r |G : C_G(g_i)|.</me>
-                  Note that <m>|G|=p^n</m> for some <m>n\in\N</m>, meaning that the only divisors of <m>|G|</m> are powers of <m>p</m>. In finite groups, each conjugacy class must divide the order of the group by <xref ref="thm-conjugacy-divides-order"/>. By <xref text="title" ref="thm-lagrange"/>, <m>|G : C_G(g_i)|=\frac{|G|}{|C_G(g_i)|}=\frac{p^n}{p^m}=p^k</m>, where <m>m,k\in\N</m>. Since <m>|Z(G)|=1</m>, we see that <m>\sum_i^r |G : C_G(g_i)|\bigg|p^n-1</m>, which is impossible given that <m>p^{n-1} \not\mid p^n</m>. Thus <m>Z(G)\neq\{e\}</m>.
+                  <me>|G| = |Z(G)| + \sum_i^r [G : C_G(g_i)].</me>
+                  Note that <m>|G|=p^n</m> for some <m>n\in\N</m>, meaning that the only divisors of <m>|G|</m> are powers of <m>p</m>. In finite groups, each conjugacy class must divide the order of the group by <xref ref="thm-conjugacy-divides-order"/>. By <xref text="title" ref="thm-lagrange"/>, <m>[G : C_G(g_i)]=\frac{|G|}{|C_G(g_i)|}=\frac{p^n}{p^m}=p^k</m>, where <m>m,k\in\N</m>. Since <m>|Z(G)|=1</m>, we see that <m>\sum_i^r |G : C_G(g_i)|\bigg|p^n-1</m>, which is impossible given that <m>p^{n-1} \not\mid p^n</m>. Thus <m>Z(G)\neq\{e\}</m>.
                 </p>
 
                 <p>
@@ -26476,12 +26692,12 @@
 
                     <p>
                       Observe <me>
-                      \begin{aligned*}
+                      \begin{aligned}
                       f(x+y)=&amp;((x+y)+I,(x+y)+J)\\
                       =&amp;((x+I)+(y+I),(x+J)+(y+J))\\
                       =&amp;((x+I),(x+J))+(y+I),(y+J)\\
                       =&amp;f(x)+f(y),
-                       \end{aligned*}</me> 
+                       \end{aligned}</me> 
                       
                       making <m>f</m> a homomorphism of rings.
                     </p>
@@ -26491,7 +26707,7 @@
                     </p>
 
                     <p>
-                      Consider the element <m>x=(a_j+b_i)\in R</m>, and observe <me>f(x)=f(a_j+b_i)=(a_j+b_i+I, b_i+a_j+J).</me>However, as <m>b_i\in I</m> and <m>a_j\in J</m>, we see <me>(a_j+b_i+I, b_i+a_j+J)=(a_j+I,b_i+J)=(a+I,b+J).</me> Thus <m>f</m> is a surjective homomorphism. Hence, by the <xref text="title" ref="thm-fit-group"/>, we see <m>R/(I \cap J)\cong R/I \times R/J</m>.
+                      Consider the element <m>x=(a_j+b_i)\in R</m>, and observe <me>f(x)=f(a_j+b_i)=(a_j+b_i+I, b_i+a_j+J).</me>However, as <m>b_i\in I</m> and <m>a_j\in J</m>, we see <me>(a_j+b_i+I, b_i+a_j+J)=(a_j+I,b_i+J)=(a+I,b+J).</me> Thus <m>f</m> is a surjective homomorphism. Hence, by the <xref text="title" ref="thm-ring-fit"/>, we see <m>R/(I \cap J)\cong R/I \times R/J</m>.
                     </p>
                   </li>
                 </ol>

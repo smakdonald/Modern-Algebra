@@ -12,10 +12,16 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para logical"><ol class="decimal">
-<li><div class="para">Suppose <span class="process-math">\(f\)</span> has a root, <span class="process-math">\(\alpha\text{,}\)</span> in <span class="process-math">\(F\text{.}\)</span> Then <span class="process-math">\(\alpha^p-\alpha-a=0\text{.}\)</span> Consider <span class="process-math">\(\alpha+j\)</span> for some <span class="process-math">\(j\in\Z/p\text{,}\)</span> and observe <span class="process-math">\((\alpha+j)^p-(\alpha+j)-a\text{.}\)</span> By The Freshman's Dream, we have <span class="process-math">\(\alpha^p+j^p-\alpha-j-a\text{,}\)</span> but as <span class="process-math">\(\alpha^p-\alpha-a=0\text{,}\)</span> we really have <span class="process-math">\(j^p-j\text{.}\)</span> By Fermat's Little Theorem, <span class="process-math">\(p|j^p-j\text{,}\)</span> and thus <span class="process-math">\(f(\alpha+j)=0\text{.}\)</span> Thus we have found <span class="process-math">\(p\)</span> roots of <span class="process-math">\(f\text{,}\)</span> and thus <span class="process-math">\(f\)</span> splits into linear factors.</div></li>
-<li><div class="para">Suppose <span class="process-math">\(f(x)\)</span> is irreducible over <span class="process-math">\(F\)</span> and let <span class="process-math">\(L\)</span> be a splitting field of <span class="process-math">\(f\)</span> over <span class="process-math">\(F\text{.}\)</span> Let <span class="process-math">\(\alpha\)</span> be a root of <span class="process-math">\(f.\)</span> Consider <span class="process-math">\(F(\alpha)\text{.}\)</span> By part (1), <span class="process-math">\(F(\alpha)\)</span> contains all the roots of <span class="process-math">\(f\text{,}\)</span> hence <span class="process-math">\(L=F(\alpha)\text{.}\)</span> As <span class="process-math">\(f\)</span> is monic and irreducible, it is the minimum polynomial of <span class="process-math">\(f\text{,}\)</span> and thus <span class="process-math">\([L:F]=p\text{.}\)</span> Hence <span class="process-math">\(|\Gal(L/F)|=p\text{.}\)</span> All groups of prime order are cyclic, completing the proof.</div></li>
-</ol></div>
+<div class="para logical">
+<div class="para">As <span class="process-math">\(N\nsg G\)</span> it is a union of conjugacy classes of the elements it contains, one of which is <span class="process-math">\(e\text{.}\)</span> Assume by way of contradiction that <span class="process-math">\(N\cap Z(G)={e}\text{,}\)</span> meaning that <span class="process-math">\(e\)</span> is the only element in <span class="process-math">\(N\)</span> whose conjugacy class is a singleton. This yields</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-lagrange.html">
+\begin{equation*}
+|N| = 1+ \sum_i^r |G : C_G(n_i)|.
+\end{equation*}
+</div>
+<div class="para">However, by <a href="" class="xref" data-knowl="./knowl/thm-lagrange.html" title="Theorem 4.13: Lagrange's Theorem">Lagrange's Theorem</a> <span class="process-math">\(N\)</span> must also be a <span class="process-math">\(p-\)</span>group, and thus by an analogous element counting argument as above we see that there exists some <span class="process-math">\(x\in N\)</span> such that <span class="process-math">\(C_G(x)=\{x\}\text{,}\)</span> or that <span class="process-math">\(gxg\inv=x\)</span> for all <span class="process-math">\(g\in G\text{.}\)</span> Thankfully, this means that <span class="process-math">\(x\in Z(G)\text{,}\)</span> and thus we have <span class="process-math">\(Z(G)\cap N\neq 1\text{.}\)</span>
+</div>
+</div>
 <span class="incontext"><a href="section-87.html#p-4466" class="internal">in-context</a></span>
 </body>
 </html>

@@ -12,7 +12,25 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>
-<div class="para">Let <span class="process-math">\(u \in X\text{.}\)</span> As the action is transitive, by the exercise above we have that the kernel of the action is the intersection of <span class="process-math">\(gG_ug\inv\)</span> over all <span class="process-math">\(g \in G\text{.}\)</span> However, as <span class="process-math">\(G\)</span> is abelian, <span class="process-math">\(gG_ug\inv = G_u\)</span> for all <span class="process-math">\(g \in G\text{.}\)</span> Hence, the kernel of the action is <span class="process-math">\(G_u\)</span> for any <span class="process-math">\(u \in X\text{.}\)</span> On the other hand, the action is faithful, which means the kernel of the action is the identity. It follows that <span class="process-math">\(G_u = \{e\}\)</span> for every <span class="process-math">\(u \in X\text{.}\)</span> Finally, as the action is transitive, <span class="process-math">\(X = \Orb(u)\)</span> for some (any) <span class="process-math">\(u \in X\text{.}\)</span> By the <a href="" class="xref" data-knowl="./knowl/cor-orbit-stabilizer.html" title="Corollary 5.29: Orbit-Stabilizer Theorem">Orbit-Stabilizer Theorem</a>, <span class="process-math">\(|X|= |\Orb(u)|= [G : G_u] = |G|\text{.}\)</span>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(\mathcal L\)</span> be the collection of left cosets of <span class="process-math">\(\operatorname{Stab}_G(s)\)</span> in <span class="process-math">\(G\text{.}\)</span> Define a function</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\alpha: \mathcal L\to \operatorname{Orbit}_G(s)
+\end{equation*}
+</div>
+<div class="para">by <span class="process-math">\(\alpha(x \operatorname{Stab}_G(s)) = x \cdot s\text{.}\)</span> This function is well defined and one-to-one:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x \operatorname{Stab}_G(s) = y \operatorname{Stab}_G(s)\iff x^{-1}y \in \operatorname{Stab}_G(s) \iff x^{-1}y \cdot s = s \iff y \cdot s = x \cdot s.
+\end{equation*}
+</div>
+<div class="para">The function <span class="process-math">\(\alpha\)</span> is onto by definition of <span class="process-math">\(\operatorname{Orbit}_G(s)\text{.}\)</span> Thus <span class="process-math">\(\alpha\)</span> is a bijection and it yields equalities</div>
+<div class="displaymath process-math">
+\begin{equation*}
+[G: \operatorname{Stab}_G(s)]=|\mathcal L|=|\operatorname{Orbit}_G(s)|.
+\end{equation*}
+</div>
 </div></article><span class="incontext"><a href="sec-orbit-stab-class-eq.html#proof-33" class="internal">in-context</a></span>
 </body>
 </html>

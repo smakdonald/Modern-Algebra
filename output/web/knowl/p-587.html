@@ -11,22 +11,33 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para logical"><ol class="decimal">
-<li>
-<span class="heading"><span class="title">Trivial Action.</span></span><div class="para">For any group <span class="process-math">\(G\)</span> and any set <span class="process-math">\(S\text{,}\)</span> <span class="process-math">\(g \cdot s := s\)</span> defines an action, the <em class="emphasis">trivial action</em>.</div>
-</li>
-<li>
-<span class="heading"><span class="title">Left Multiplication.</span></span><div class="para">For any group <span class="process-math">\(G\)</span> and any set <span class="process-math">\(S\text{,}\)</span> <span class="process-math">\(g \cdot s := gs\)</span> defines an action, the <em class="emphasis">left multiplication action</em><a href="" class="fn-knowl original" data-knowl="./knowl/fn-14-hidden.html" title="Footnote 5.1"><sup> 1 </sup></a>.</div>
-</li>
-<li>
-<span class="heading"><span class="title">Conjugation.</span></span><div class="para">For any group <span class="process-math">\(G\)</span> and any set <span class="process-math">\(S\text{,}\)</span> <span class="process-math">\(g \cdot s := gxg\inv\)</span> defines an action, the <em class="emphasis">conjugation action</em>.</div>
-</li>
-<li><div class="para">The group <span class="process-math">\(S_n\)</span> acts on the set <span class="process-math">\(X=\{1,2,\dots,n\}\)</span> such that <span class="process-math">\(\sigma\cdot i=\sigma(i)\text{.}\)</span>
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<div class="para logical"><ul class="disc">
+<li><div class="para">
+<span class="process-math">\(\Psi\)</span> is well defined (correct codomain) since for <span class="process-math">\(H\leq G\)</span> we have <span class="process-math">\(\pi(H)\leq G/N\)</span> (since images of subgroups through group homomorphisms are subgroups). <code class="code-inline tex2jax_ignore">[provisional cross-reference: cite]</code>
 </div></li>
-<li><div class="para">The group <span class="process-math">\(\GL_n(\R)\)</span> acts on vectors in <span class="process-math">\(\R^n\)</span> by left multiplication: given <span class="process-math">\(A\in\GL_n(\R)\)</span> and <span class="process-math">\(\v\in\R^n\text{,}\)</span> we have <span class="process-math">\(A\cdot\v=A\v\text{.}\)</span>
+<li><div class="para logical">
+<div class="para">
+<span class="process-math">\(\Phi\)</span> is well defined (correct codomain) since for <span class="process-math">\(\mathcal{H}\leq G\)</span> we have <span class="process-math">\(\pi^{-1}(\mathcal{H})\leq G\)</span> (since preimages of subgroups through group homomorphisms are subgroups) <code class="code-inline tex2jax_ignore">[provisional cross-reference: cite]</code> and for any <span class="process-math">\(\mathcal{H}\leq G\)</span> we have <span class="process-math">\(\{e_GN\}\subseteq \mathcal{H}\text{,}\)</span> hence</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+N=\operatorname{Ker}(\pi)=\pi^{-1}(\{e_GN\})\subseteq \pi^{-1}(\mathcal{H})=\Phi(\mathcal{H}).
+\end{equation*}
+</div>
 </div></li>
-</ol></div>
-<span class="incontext"><a href="graction.html#p-587" class="internal">in-context</a></span>
+<li><div class="para logical">
+<div class="para">
+<span class="process-math">\(\Phi\)</span> and <span class="process-math">\(\Psi\)</span> are mutual inverses: <span class="process-math">\((\Psi\circ\Phi)(\mathcal{H})=\pi(\pi^{-1}(\mathcal{H}))=\mathcal{H}\)</span> since <span class="process-math">\(\pi\)</span> is surjective and <span class="process-math">\((\Phi\circ\Psi)(H)=\pi^{-1}(\pi(H))=\pi^{-1}(H/N)=H\text{,}\)</span> with the last equality justified by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+x\in \pi^{-1}(H/N) &amp;\iff \pi(x)\in H/N \iff xN=hN \text{ for some } h\in H \\
+&amp; \iff x\in hN \text{ for some } h\in H \iff x\in H \text{ (using that } N\subseteq H).\\
+\end{aligned}
+\end{equation*}
+</div>
+</div></li>
+</ul></div>
+<span class="incontext"><a href="sec-quotient-groups.html#p-587" class="internal">in-context</a></span>
 </body>
 </html>

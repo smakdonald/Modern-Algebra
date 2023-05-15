@@ -10,7 +10,28 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para">Let <span class="process-math">\(G\)</span> be a group of order <span class="process-math">\(6\text{.}\)</span> Cayley's theorem gives that there exist elements <span class="process-math">\(x,y\in G\)</span> with <span class="process-math">\(|x|=2\)</span> and <span class="process-math">\(|y|=3\text{.}\)</span> Let <span class="process-math">\(K=\langle x \rangle\)</span> and <span class="process-math">\(H=\langle y\rangle\text{.}\)</span> Since <span class="process-math">\([G:H]=2\text{,}\)</span> <span class="process-math">\(H\)</span> is a normal subgroup of <span class="process-math">\(G\)</span> and since <span class="process-math">\(H\cap K\)</span> is a common subgroup of <span class="process-math">\(H\)</span> and <span class="process-math">\(K\)</span> <a href="" class="xref" data-knowl="./knowl/thm-lagrange.html" title="Theorem 4.13: Lagrange's Theorem">Lagrange's Theorem</a> gives that <span class="process-math">\(|H\cap K|\mid \operatorname{gcd}(|H|,|K|)=1\text{.}\)</span> Thus <span class="process-math">\(H\cap K=\{e\}\)</span> and since <span class="process-math">\(|HK|=\frac{|H||K|}{|H\cap K|}=6=|G|\)</span> we deduce that <span class="process-math">\(HK=G\text{.}\)</span> Proposition <code class="code-inline tex2jax_ignore">[provisional cross-reference: prop:internaldirprod]</code> now gives that <span class="process-math">\(G\)</span> is the internal semidirect product of <span class="process-math">\(H\)</span> and <span class="process-math">\(K\text{.}\)</span> More to the point, <span class="process-math">\(G\cong H\rtimes_\rho K\text{,}\)</span> where <span class="process-math">\(\rho:K\to \operatorname{Aut}(H)\)</span> gives the action of <span class="process-math">\(K\)</span> on <span class="process-math">\(H\)</span> by <a href="" class="xref" data-knowl="./knowl/ex-conj.html" title="Item 3: Conjugation">Conjugation</a>.</div> <div class="para">We now analyze the possibilities for <span class="process-math">\(\rho\text{.}\)</span> By Lemma <a href="" class="xref" data-knowl="./knowl/thm-aut-cn.html" title="Theorem 3.47: \Aut(C_n)">Theorem 3.47</a>, <span class="process-math">\(\operatorname{Aut}(H)\cong\operatorname{Aut}(\mathbb{Z}/3)\cong (\mathbb{Z}/3^\times, \cdot)=(\{\pm 1\},\cdot)\text{.}\)</span> There are two possibilities for the image of <span class="process-math">\(\rho\text{:}\)</span> either <span class="process-math">\(\operatorname{Im}(\rho)=\{\text{id}_H\}\)</span> or <span class="process-math">\(\operatorname{Im}(\rho)=\operatorname{Aut}(H)\text{.}\)</span>
-</div> <div class="para">If <span class="process-math">\(\operatorname{Im}(\rho)=\{\text{id}_H\}\text{,}\)</span> then <span class="process-math">\(\rho(x)=c_x=\text{id}_H\)</span> (which implies <span class="process-math">\(xy=yx\)</span>) and <span class="process-math">\(H\rtimes_\rho K=H\times K\text{.}\)</span> Therefore, in this case <span class="process-math">\(G\cong H\times K\cong C_3\times C_2\cong C_6\text{,}\)</span> where the last isomorphism uses the Chinese Remainder Theorem <code class="code-inline tex2jax_ignore">[provisional cross-reference: thm-sunzi-remainder-thm]</code>.</div> <div class="para">If <span class="process-math">\(\operatorname{Im}(\rho)=\operatorname{Aut}(H)\text{,}\)</span> then <span class="process-math">\(\rho(x)\)</span> is the map <span class="process-math">\(y^i\mapsto y^{-1}\)</span> and by an earlier example for this <span class="process-math">\(\rho\)</span> we have <span class="process-math">\(H\rtimes_\rho K\cong D_6\text{,}\)</span> so <span class="process-math">\(G\cong D_6\text{.}\)</span>
-</div> <div class="para">Finally, <span class="process-math">\(C_6\not \cong D_6\)</span> because the former is abelian and the latter is not.</div></article></body>
+<body class="ignore-math"><article class="hiddenproof"><div class="para logical">
+<div class="para">It suffices prove that for a given group <span class="process-math">\(G\text{,}\)</span> we can recover its invariant factor form from its elementary divisor form, and vice versa. We will be a bit hand-wavey for this following the ideas from the above examples.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+G \cong  \mathbb{Z}^r \times \mathbb{Z}/p_1^{e_1} \times \cdots \times \mathbb{Z}/p_l^{e_l}.
+\end{equation*}
+</div>
+<div class="para">by applying the Chinese Remainder Theorem we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+G \cong \mathbb{Z}^r \times \mathbb{Z}/d_1 \times \cdots \times \mathbb{Z}/d_n
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(d_1\)</span> is the product of the elementary divisors of highest power for each <em class="emphasis">distinct</em> prime in the list <span class="process-math">\(p_1, \dots, p_l\text{,}\)</span> <span class="process-math">\(d_2\)</span> is the product of the next highest possible prime powers, and so on. We will have that <span class="process-math">\(d_2\mid d_1\)</span> and in general that <span class="process-math">\(d_{i+1}\mid d_i\)</span> since by definition the exponent of <span class="process-math">\(p_j\in d_i\)</span> is greater or equal to the exponent of <span class="process-math">\(p_j\in d_{i+1}\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">Conversely, given</div>
+<div class="displaymath process-math">
+\begin{equation*}
+G \cong \mathbb{Z}^r \times \mathbb{Z}/d_1 \times \cdots \times \mathbb{Z}/d_n
+\end{equation*}
+</div>
+<div class="para">with <span class="process-math">\(d_1 \mid d_2 \mid \cdots \mid d_n\text{,}\)</span> we may apply the CRT to each <span class="process-math">\(\mathbb{Z}/d_i\)</span> to find its elementary divisor form.</div>
+</div></article></body>
 </html>

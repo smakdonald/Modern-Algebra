@@ -13,14 +13,32 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">The key idea in the proof of the Theorem can be used to deduce many other identities over commutative rings from known identities over fields. E.g., it can be used to show that</div>
+<div class="para">Now let <span class="process-math">\(n\)</span> be arbitrary and <span class="process-math">\(\tau = (i \, j)\)</span> for some <span class="process-math">\(1 \leq i &lt; j \leq n\text{.}\)</span> In this case we need to show</div>
 <div class="displaymath process-math">
 \begin{equation*}
-A A^{adj} = \det(A) I_n = A^{adj} A
+\phi(v_1, \dots, v_n) = - \phi(v_1, \dots, v_{i-1}, v_{j}, v_{i+1}, v_{i+2}, \dots, v_{j-1}, v_i, v_{j+1}, \dots, v_n)
 \end{equation*}
 </div>
-<div class="para">holds for any commutative ring <span class="process-math">\(R\)</span> and for any <span class="process-math">\(A \in \Mat_{n \times n}(R)\text{,}\)</span> where <span class="process-math">\(A^{adj}\)</span> is the “adjugate'' of <span class="process-math">\(A\text{,}\)</span> granting that this equation holds when <span class="process-math">\(R\)</span> is a field. Recall <span class="process-math">\(A^{adj}\)</span> is the <span class="process-math">\(n \times n\)</span> matrix whose <span class="process-math">\((i,j)\)</span> entry is <span class="process-math">\((-1)^{i+j} \det(A_{i,j})\)</span> where <span class="process-math">\(A_{i,j}\)</span> is the <span class="process-math">\((n-1) \times (n-1)\)</span> matrix obtained by deleting the <span class="process-math">\(i\)</span>-th column and <span class="process-math">\(j\)</span>-th row of <span class="process-math">\(A\text{.}\)</span> I will likely have you do this as an exercise.</div>
+<div class="para">for all <span class="process-math">\(v_1, \dots, v_n \in V\text{.}\)</span> Fix <span class="process-math">\(n-2\)</span> elements <span class="process-math">\(v_1, \dots, v_{i-1}, v_{i+1}, \dots, v_{j-1}, v_{j+1}, \dots, v_n\)</span> and define</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\psi: V^{\times 2} \to R
+\end{equation*}
 </div>
-<span class="incontext"><a href="section-68.html#p-3523" class="internal">in-context</a></span>
+<div class="para">by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\psi(v,w) = \phi(v_1, \dots, v_{i-1}, v, v_{i+1}, \dots, v_{j-1}, w,  v_{j+1}, \dots, v_n)
+\end{equation*}
+</div>
+<div class="para">for any <span class="process-math">\(v,w \in V\text{.}\)</span> With this notation the goal is to show</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\psi(v,w) = -\psi(w,v)
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(\phi\)</span> is <span class="process-math">\(R\)</span>-multi-linear and alternating, <span class="process-math">\(\psi: V \times V\to R\)</span> is <span class="process-math">\(R\)</span>-bilinear and alternating, and so the case already proven gives the result.</div>
+</div>
+<span class="incontext"><a href="section-69.html#p-3523" class="internal">in-context</a></span>
 </body>
 </html>

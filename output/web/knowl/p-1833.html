@@ -12,8 +12,21 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Assume <span class="process-math">\(\cT\)</span> is non-empty. Let <span class="process-math">\(Z = \bigcup_{Y \in \cT} Y\text{.}\)</span> I claim <span class="process-math">\(Z \in \cP\text{.}\)</span> Given <span class="process-math">\(z_1, \dots, z_m \in Z\text{,}\)</span> for each <span class="process-math">\(i\)</span> we have <span class="process-math">\(z_i \in Y_i\)</span> for some <span class="process-math">\(Y_{i} \in \cT\text{.}\)</span> Since <span class="process-math">\(\cT\)</span> is totally ordered, one of <span class="process-math">\(Y_1, \dots, Y_m\)</span> contains all the others and hence it contains all the <span class="process-math">\(z_i\)</span>'s. Since each <span class="process-math">\(Y_i\)</span> is linearly independent, this shows <span class="process-math">\(z_1, \dots, z_m\)</span> are linearly independent. We have shown that every finite subset of <span class="process-math">\(Z\)</span> is linearly independent, and hence <span class="process-math">\(Z\)</span> is linearly independent. Since <span class="process-math">\(\cT\)</span> is non-empty, <span class="process-math">\(Z \supseteq I\text{.}\)</span> Since each member of <span class="process-math">\(\cT\)</span> is contained in <span class="process-math">\(S\text{,}\)</span> <span class="process-math">\(Z \subseteq S\text{.}\)</span> Thus, <span class="process-math">\(Z \in \cP\text{,}\)</span> and it is clearly an upper bound for <span class="process-math">\(\cT\text{.}\)</span>
+<div class="para logical">
+<div class="para">Next, I claim that there is an isomorphism</div>
+<div class="displaymath process-math">
+\begin{equation*}
+R^n/IR^n \cong (R/I)^n
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec-vecbasis.html#p-1833" class="internal">in-context</a></span>
+<div class="para">of <span class="process-math">\(R/I\)</span>-modules. Define <span class="process-math">\(R^n \to (R/I)^n\)</span> in the evident way (modding out by <span class="process-math">\(I\)</span> entry-wise). It is a surjective map of <span class="process-math">\(R\)</span>-modules with kernel <span class="process-math">\(I R^n\)</span> and thus, by the First Isomorphism Theorem, it induces an isomorphism</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g: R^n/I R^n \xra{\cong} (R/I)^n
+\end{equation*}
+</div>
+<div class="para">given by <span class="process-math">\(g((r_1, \dots, r_n)^\tau + IR^n) = (r_1 + I, \dots, r_n + I)^\tau\)</span> (where <span class="process-math">\(\tau\)</span> denotes taking the transpose). Now, what we have said so far only shows that <span class="process-math">\(g\)</span> is isomorphism of <span class="process-math">\(R\)</span>-modules, but it is easy to see that <span class="process-math">\(g\)</span> is in fact <span class="process-math">\(R/I\)</span>-linear (I'll leave that to you) and thus it is an isomorphism of <span class="process-math">\(R/I\)</span>-modules.</div>
+</div>
+<span class="incontext"><a href="sec-bases.html#p-1833" class="internal">in-context</a></span>
 </body>
 </html>

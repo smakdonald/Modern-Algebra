@@ -13,19 +13,13 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Suppose that <span class="process-math">\(K/F\)</span> and <span class="process-math">\(L/K\)</span> are algebraic extensions. Let <span class="process-math">\(\a\in L\text{.}\)</span> Then <span class="process-math">\(\a\)</span> is the root of the polynomial</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-degree-formula.html">
+<div class="para">Let <span class="process-math">\(\phi: F[x] \to L\)</span> be the evaluation homomorphism, given by sending <span class="process-math">\(f(x)\)</span> to <span class="process-math">\(f(\a)\)</span> <code class="code-inline tex2jax_ignore">[provisional cross-reference: empty]</code>. Note that <span class="process-math">\(\phi\)</span> satisfies <span class="process-math">\(\phi|_F = \id_F\)</span> and <span class="process-math">\(\phi(x) = \alpha\text{.}\)</span> We have <span class="process-math">\(\im(\phi) = F[\a]\)</span> by definition of the latter. The First Isomorphism Theorem for rings <code class="code-inline tex2jax_ignore">[provisional cross-reference: empty]</code> thus gives that <span class="process-math">\(\phi\)</span> induces a ring isomorphism</div>
+<div class="displaymath process-math" data-contains-math-knowls="   ">
 \begin{equation*}
-f(x)=a_nx^n+\dots+a_0,
+\ov{\phi}: \frac{F[x]}{I}  \xra{\cong} F[\a]
 \end{equation*}
 </div>
-<div class="para">with <span class="process-math">\(a_{i}\in K\text{.}\)</span> Notice that <span class="process-math">\(f\)</span> is a polynomial in <span class="process-math">\(F(a_n,\dots,a_0)[x]\text{,}\)</span> making <span class="process-math">\(\a\)</span> is algebraic over this as well. Consider the chain of field extensions</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-degree-formula.html">
-\begin{equation*}
-F \subseteq F(a_0) \subseteq F(a_0,a_1) \subseteq \cdots \subseteq F(a_0, a_1, \dots, a_{n-1} )\subseteq F(a_0, \dots, a_{n}, \a)
-\end{equation*}
-</div>
-<div class="para">Since <span class="process-math">\(a_i\)</span> is algebraic over <span class="process-math">\(F\)</span> for all <span class="process-math">\(i\)</span> and <span class="process-math">\(\a\)</span> is algebraic over <span class="process-math">\(F(a_0, a_1, \dots, a_{n})\text{,}\)</span> by Theorem each step in this chain has finite degree. By the <a href="" class="xref" data-knowl="./knowl/thm-degree-formula.html" title="Theorem 19.30: The Degree Formula">The Degree Formula</a>, <span class="process-math">\([F(a_0, \dots, a_{n}, \a): F]\)</span> is finite and thus so is <span class="process-math">\([F(\a):F]\text{.}\)</span> By the Theorem again, <span class="process-math">\(\a\)</span> is algebraic over <span class="process-math">\(F\text{.}\)</span>
+<div class="para">given by <span class="process-math">\(\ov{\phi}(f(x)+(p(x)))={\phi}(f(x))=f(\a)\text{.}\)</span> In particular, since <span class="process-math">\(F[\a]\)</span> is a subring of <span class="process-math">\(L\text{,}\)</span> it is an integral domain, <code class="code-inline tex2jax_ignore">[provisional cross-reference: empty]</code> and hence <span class="process-math">\(I\)</span> must be a prime ideal (possibly the <span class="process-math">\(0\)</span> ideal). <code class="code-inline tex2jax_ignore">[provisional cross-reference: empty]</code>
 </div>
 </div>
 <span class="incontext"><a href="sec-algebraic.html#p-2755" class="internal">in-context</a></span>
