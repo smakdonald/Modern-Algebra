@@ -12,7 +12,22 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Let <span class="process-math">\(F\)</span> be a field and <span class="process-math">\(n\)</span> a positive integer. We say an <span class="process-math">\(n\times n\)</span> matrix <span class="process-math">\(A\)</span> with entries in <span class="process-math">\(F\)</span> is <em class="emphasis">unipotent</em> if <span class="process-math">\(A-In\)</span> is nilpotent (i.e., <span class="process-math">\((A-In)^k = 0\)</span> for some <span class="process-math">\(k \geq 1\)</span>). For the field <span class="process-math">\(F = \Q\text{,}\)</span> find (with complete justification) the number of similarity classes of <span class="process-math">\(4\times 4\)</span> unipotent matrices and give an explicit representative for each class.</div>
+<div class="para logical">
+<div class="para">Consider the element <span class="process-math">\(x=(a_j+b_i)\in R\text{,}\)</span> and observe</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-ring-fit.html">
+\begin{equation*}
+f(x)=f(a_j+b_i)=(a_j+b_i+I, b_i+a_j+J).
+\end{equation*}
+</div>
+<div class="para">However, as <span class="process-math">\(b_i\in I\)</span> and <span class="process-math">\(a_j\in J\text{,}\)</span> we see</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-ring-fit.html">
+\begin{equation*}
+(a_j+b_i+I, b_i+a_j+J)=(a_j+I,b_i+J)=(a+I,b+J).
+\end{equation*}
+</div>
+<div class="para">Thus <span class="process-math">\(f\)</span> is a surjective homomorphism. Hence, by the <a href="" class="xref" data-knowl="./knowl/thm-ring-fit.html" title="Theorem 10.28: First Isomorphism Theorem for Rings">First Isomorphism Theorem for Rings</a>, we see <span class="process-math">\(R/(I \cap J)\cong R/I \times R/J\text{.}\)</span>
+</div>
+</div>
 <span class="incontext"><a href="section-71.html#p-3678" class="internal">in-context</a></span>
 </body>
 </html>

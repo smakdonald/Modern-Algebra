@@ -13,11 +13,19 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(p\)</span> be any positive prime integer. Prove that the number of groups of order <span class="process-math">\(3\cdot p\text{,}\)</span> up to isomorphism, is exactly</div>
-<div class="displaymath process-math">
+<div class="para">The <a href="" class="xref" data-knowl="./knowl/thm-class-eq.html" title="Theorem 5.40: Class Equation">Class Equation</a> tells us</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-class-eq.html">
 \begin{equation*}
-\begin{cases} 2, \text{ when }p = 2, p = 3, \text{ or }p\equiv 1 \mod 3, \text{ and }\\ 1, \text{ otherwise }\end{cases}
+|G|=|Z(G)|+\sum\limits_{g\in G}[G:C_G(g)],
 \end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(C_G(g)\)</span> are the centralizers with more than one element. Notice that this means <span class="process-math">\(|C_G(g)|\big||G|\text{,}\)</span> and thus each centralizer is a power of <span class="process-math">\(p\text{.}\)</span> Thus we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-class-eq.html">
+\begin{equation*}
+p^n=|Z(G)|+pk
+\end{equation*}
+</div>
+<div class="para">for some <span class="process-math">\(k\in\N\text{.}\)</span> Thus the center of <span class="process-math">\(G\)</span> cannot be trivial, else we would not be able to sum to a power of <span class="process-math">\(p\text{.}\)</span>
 </div>
 </div>
 <span class="incontext"><a href="section-81.html#p-4222" class="internal">in-context</a></span>

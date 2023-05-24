@@ -380,9 +380,6 @@
 
         <p>Coming soon!</p>
 
-
-        
-
         <paragraphs><title>Blocks</title>
 
           <p>
@@ -457,7 +454,7 @@
 
               <li><title><term>Footnotes </term></title>
                 <p>
-                  Add little to no educational value, at least in the traditional sense.<fn>It should really be <q>feetnote</q> if you think about it.</fn> 
+                  Sometimes act like remarks. However, most are strictly for fun and add little to no educational value, at least in the traditional sense.<fn>It should really be <q>feetnote</q> if you think about it.</fn> 
                 </p>
               </li>
             </ul>
@@ -481,34 +478,29 @@
       
       <chapter xml:id="ch-intro-groups"><title>Intro to Groups</title>
 
-        <introduction><title>Setting the Stage (*)</title>
-          <p>
-            
-          </p>
-          
-        </introduction>
+  
       
         <section xml:id="sec-group-basics"><title>Group Basics</title>
 
           <subsection xml:id="subsec-beginnings"><title>Binary Operations and Groups</title>
 
-            <paragraphs><title>A Brief Notational Note</title>
+            <blockquote><p><q>Most great learning happens in groups.</q></p><attribution>Ken Robinson</attribution></blockquote>
+
+            <paragraphs>
+              <title>A Brief Notational Note</title>
               <p>
                 At various points throughout this text, the author may use "mathcal" notation for definitions that do not normally require it (such as <m>\G</m> for a group, <m>\R</m> for a ring, etc.) In the realm of higher mathematics, this is what is known as a <em>typo</em>, and should be reported to the proper authorities as soon as possible.
               </p>
             </paragraphs>
 
-            <blockquote><p><q>Most great learning happens in groups.</q></p><attribution>Ken Robinson</attribution></blockquote>
-
             <p>We begin, as all great volumes of mathematics are like to do, somewhere in the middle.<fn>Though everything that you need from the beginning can be found in <xref ref="app-foundations"/>.</fn></p>
 
             <definition xml:id="def-binop"><title>Binary Operation</title> 
-      
               <statement>
                 <p>
                   A <em>binary operation</em><idx><h>binary operation</h></idx><idx><h>operation</h></idx> on a set <m>S</m> is a <xref text="title" ref="def-function"/>
                   <me>
-                    -\cdot-:S\times S\to S,\text{given by } (x,y)\to x\cdot y.
+                    -\cdot-:S\times S\to S,\text{given by } (x,y)\mapsto x\cdot y.
                   </me>
                 </p>
               </statement>
@@ -554,11 +546,11 @@
 
             <remark><p>The <xref text="title" ref="closure-axiom"/> in <xref ref="def-monoid"/> is technically redundant. Closure is really part of <xref ref="def-binop"/>, and it is implicitly assumed whenever we consider such an operation. Howewever, redundancy is not a bad thing, and it never hurts to state it explicitely.</p></remark>
 
-            <remark><p>The notation <m>1</m> is often used for the identity element of a group, though we will not do so here.</p></remark>
+            <remark><p>The notation <q><m>1</m></q> is often used for the identity element of a group, though we will not do so here.</p></remark>
 
             <example xml:id="ex-natural-monoid"><title>Au Naturale</title>
               <p>
-                The <xref text="title" ref="def-natural-numbers"/> <m>\N</m> form a monoid under addition. However, <m>(\N,+)</m> does <em>not</em> form a group.
+                The <xref text="title" ref="def-natural-numbers"/> <m>\N</m> form a monoid under addition.
               </p>
             </example>
 
@@ -580,7 +572,7 @@
             <exercise xml:id="exe-general-associativity"><title>Generalized Associative Law</title>
               <p>
                 If an element of a monoid is contructed from a sequence of elements <m>x_1,\dots,x_n</m> in this order by repeatedly inserting parenthesis and applying the operation, the element must equal 
-                <me>(\cdots((x_1\cdot x_2)\cdot x_3)\cdots)\cdot x_n</me>
+                <me>(\cdots((x_1x_2)x_3)\cdots)x_n</me>
                 and so is independent of the mode of bracketing.
               </p>
             </exercise>
@@ -590,7 +582,7 @@
             <definition xml:id="def-group"><title>Group</title>
               <statement>
                 <p>
-                  A <em>group</em><idx><h>group</h></idx> is a monoid <m>(G,\cdot)</m> with the following additional property:
+                  A <em>group</em><idx><h>group</h></idx> is a <xref text="title" ref="def-monoid"/> <m>(G,\cdot)</m> with the following additional property:
                   <ul>
                     <li xml:id="inverse-axiom"><title>Inverse Axiom</title><idx><h>inverse</h></idx>
                       <p>
@@ -704,7 +696,14 @@
             <definition xml:id="def-abelian"><title>Abelian Group</title>
               <statement>
                 <p>
-                  A group <m>G</m> is an <em>abelian group</em><idx><h>abelian group</h></idx> if the operation <m>\cdot</m> is commutative; i.e., <m>x \cdot y = y \cdot x</m> for all <m>x,y \in G</m>. 
+                  A group <m>G</m> is an <em>abelian group</em><idx><h>abelian group</h></idx> if the operation <m>\cdot</m> satisfies the following additional property:
+                  <ul>
+                    <li xml:id="commutative-axiom"><title>Commutative Axiom</title><idx><h>commutative</h></idx>
+                      <p>
+                        <m>x \cdot y = y \cdot x</m> for all <m>x,y \in G</m>. 
+                      </p>
+                    </li>
+                  </ul>
                 </p>
               </statement>
             </definition>
@@ -808,7 +807,7 @@
             -->
 
             <remark><title>Specific General Linear Groups</title>
-              <p>In general, <m>\GL_n(R)</m> is a group for any ring <m>R</m> (whatever those are).</p>
+              <p>In general, <m>\GL_n(F)</m> is a group for any field <m>F</m> (whatever those are).</p>
             </remark>
 
             <p>The following example illustrates a few important examples of something called a <xref text="title" ref="def-group-of-units"/>, which is defined explicitely in terms of rings (whatever those are) in <xref ref="part-rings"/>.</p>
@@ -1002,7 +1001,7 @@
                   <ul>
                     <li>
                       <p>
-                        <m>x^0=e</m>, <m>x^1=x</m>, and <m>x\inv=x\inv</m><fn>Convenient notation, isn't it? Almost like we planned it.</fn>;
+                        <m>x^0=e</m>, <m>x^1=x</m>, and <m>x\inv=x\inv</m>;<fn>Convenient notation, isn't it? Almost like we planned it.</fn>
                       </p>
                     </li>
 
@@ -1048,6 +1047,8 @@
                 <p>Coming soon!</p>
               </proof>
             </theorem>
+
+            <p>After stumbling around with your newfound power for some time, you might chance upon the fact that while your power may be unlimited, its impacts may be very limited indeed. For example, no matter how high you climb into the natural numbers you will always find that <m>e^n=e</m>. It seems the identity element is immune to corruption by your power, which one should probably find reassuring. Still, this raises questions that need answering, and thus we will need to reach in and pluck order out of the chaos.</p>
             
             <definition xml:id="def-order"><title>Order</title>
               <statement>
@@ -1082,7 +1083,7 @@
                 <ol>
                   <li>
                     <p>
-                      <m>|e|=1</m>
+                      <m>|e|=1</m> in every group <m>G</m>.
                     </p>
                   </li>
       
@@ -1094,7 +1095,7 @@
       
                   <li>
                     <p>
-                      In the additive groups <m>\Z</m>, <m>\Q</m>, <m>\R</m>, and <m>\C</m> every nonzero (i.e., nonidentity) element has infinite order.
+                      In the additive groups <m>\Z</m>, <m>\Q</m>, <m>\R</m>, and <m>\C</m> every nonzero (i.e., nonidentity) element has infinite order.<fn>Groups with this property are known as <em>torsion-free</em>, a concept explored in more advanced contexts.</fn>
                     </p>
                   </li>
 
@@ -1588,6 +1589,12 @@
 
             <blockquote><p><q>Quaternions...though beautifully ingenious, have been an unmixed evil to those who have touched them in any way.</q></p><attribution>William Thomson</attribution></blockquote>
                   
+            <historical><title>Quaternions</title>
+              <p>
+                Quaternions were invented by the Irish mathematician <xref text="title" ref="bio-hamilton"/> in 1843. Hamilton named them "quaternions" because they are a generalization of complex numbers, which he called "duads". Since quaternions involve four components instead of two, Hamilton chose the name "quaternions" to reflect this. The word "quaternion" itself means a group of four things or a fourfold entity, which is a fitting name for a mathematical object with four components.
+              </p>
+            </historical>
+
             <definition xml:id="def-quaternions"><title>Quaternions</title>
               <statement>
                 <p>
@@ -1606,12 +1613,6 @@
               </statement>
             </definition>
 
-            <historical><title>Quaternions</title>
-              <p>
-                Quaternions were invented by the Irish mathematician <xref text="title" ref="bio-hamilton"/> in 1843. Hamilton named them "quaternions" because they are a generalization of complex numbers, which he called "duads". Since quaternions involve four components instead of two, Hamilton chose the name "quaternions" to reflect this. The word "quaternion" itself means a group of four things or a fourfold entity, which is a fitting name for a mathematical object with four components.
-              </p>
-            </historical>
-      
             <p>The quaternion group arises in the study of rotations in three dimensions. It has important applications in computer graphics and computer vision, as well as in physics and algebra.</p>
 
             <exercise xml:id="exe-heinous-commutes"><title>Heinous Commutes</title>
@@ -2275,8 +2276,6 @@
               </p>
               </proof>
             </theorem>
-
-
       
             <example xml:id="ex-common-subgroups"><title>Common Subgroups</title>
               <p>
@@ -2442,7 +2441,7 @@
             <exercise xml:id="exe-subgroup-not-symmetric"><title>Subgroups not Symmetric</title>   
               <statement>
                 <p>
-                  In <xref ref="thm-subgroup-properties"/> we showed that subgroups form a transitve relation. Prove that the relation is reflexive (it can be one sentence), <em>not</em> symmetric, and thus not an equivalence relation.
+                  In <xref ref="thm-subgroup-properties"/> we showed that subgroups form a transitve relation. Prove that the relation is reflexive (it can be one sentence) but <em>not</em> symmetric, and thus not an equivalence relation.
                 </p>
               </statement>
             </exercise>
@@ -2459,7 +2458,7 @@
               </statement>
             </definition>
       
-            <proposition xml:id="prop-slg-subgroup"><title><m>\SL_n(\C)\leq\SL_n(\C)</m></title>
+            <proposition xml:id="prop-slg-subgroup"><title><m>\SL_n(\C)\leq\GL_n(\C)</m></title>
               <statement>
                 <p>
                   The special linear group <m>\SL_n(\C)</m> is a subgroup of the general linear group <m>\GL_n(\C)</m>.
@@ -2535,7 +2534,7 @@
                 <p>
                   The <em>center</em><idx><h>center of a group</h></idx> of a group <m>G</m>, often written <m>Z(G)</m>, is the set of elements of <m>G</m> that commute with every element of <m>G</m>. That is, 
                   <me>
-                    Z(G)=\{x \in G \, | \, xy = yx\,\text{ for all }y \in G}.
+                    Z(G)=\{x \in G \, | \, xy = yx\,\text{ for all }y \in G\}.
                   </me>
                   <notation><usage><m>Z(G)</m></usage><description>the center of a group <m>G</m></description></notation>          
                 </p>
@@ -2744,11 +2743,11 @@
             </statement>
           </example>
 
-          <example xml:id="ex-d2n-rs"><title>Generating <m>D_{2p}</m></title>
+          <example xml:id="ex-d2n-rs"><title>Generating <m>D_{2n}</m></title>
             <p><m>\igen{r,s}=D_{2n}</m></p>
           </example>
 
-          <exercise xml:id="exe-d2p"><title>Generating <m>D_{2p}</m> but Different</title>
+          <exercise xml:id="exe-d2p"><title>Generating <m>D_{2p}</m></title>
             <statement>
             <p>Let <m>p\ge 3</m> be prime and <m>r,r'</m> be any two distinct reflections in <m>D_{2p}</m>. Then <m>\igen{r,r'}=D_{2p}</m>.</p>
           </statement>
@@ -2885,6 +2884,44 @@
               </statement>
             </definition>
 
+            <p>Recalling <xref ref="lem-gensubgp"/>, we can describe the elements of a cylic group explicitely.</p>
+
+            <corollary xml:id="cor-cyclic-subgroup"><title>Elements of <m>\igen x</m></title>
+              <statement>
+              <p>For an element <m>x</m> of <m>G</m>, the elements of <m>\langle x \rangle</m> can be described as: <m>\langle x\rangle=\{x^j \mid j\in \mathbb{Z}\}</m>.</p>
+              </statement>
+
+              <proof>
+                <p>
+                  By Lemma <xref ref="lem-gensubgp" />, the group <m>G</m> has the following elements <m>G=\{x^i \mid i\in \mathbb{Z}\}</m>. We show that
+                </p>
+
+                <p>
+                  <ul>
+                    <li>
+                      <p>
+                        <m>|G|\geq n</m> by showing the elements <m>x^0, x^1, \dots, x^{n-1}</m> are distinct. Indeed, if <m>0\leq i&lt;j&lt;n</m> and <m>x^i=x^j</m> then <m>x^{j-i}=e</m> and <m>1\leq j-i&lt;n</m>, contradicting the minimality of the order of <m>x</m>.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        <m>|G|\leq n</m> by showing <m>G\subseteq\{x^0, x^1, \dots, x^{n-1}\}</m> (this implies <m>G=\{e,x,\ldots,x^{n-1}\}</m>). Indeed, for any <m>m\in \mathbb{Z}</m> division by <m>n</m> yields integers <m>q,r</m> with <m>0\leq r\leq n-1</m> such that <m>m=nq+r</m>. Then <m>x^m=x^{nq+r}=(x^n)^qx^r=x^r\in\{x^0, x^1, \dots, x^{n-1}\}</m>.
+                      </p>
+                    </li>
+                  </ul>
+                </p>
+              </proof>
+            </corollary>
+
+            <p>One quick way of seeing if a finite group is cyclic is to find an element with the same order as the group.</p>
+
+            <proposition xml:id="prop-cyclic-equivalencies"><title>Cyclic iff Element of Order <m>|G|</m></title>
+              <statement>
+                <p>Let <m>G</m> be a finite group. Then <m>G</m> is cyclic if and only if there exists an <m>x\in G</m> such that <m>|x|=|G|</m></p>
+              </statement>
+            </proposition>
+
             <example xml:id="ex-cyclic-examples"><title>Examples of Cyclic Groups</title>
               <statement>
               <p>
@@ -2951,39 +2988,9 @@
               </ol></p>
             </exercise>
 
-            <p>Recalling <xref ref="lem-gensubgp"/>, we can describe the elements of a cylic group explicitely.</p>
-
-            <corollary xml:id="cor-cyclic-subgroup"><title>Elements of <m>\igen x</m></title>
-              <statement>
-              <p>For an element <m>x</m> of <m>G</m>, the elements of <m>\langle x \rangle</m> can be described as: <m>\langle x\rangle=\{x^j \mid j\in \mathbb{Z}\}</m>.</p>
-              </statement>
-
-              <proof>
-                <p>
-                  By Lemma <xref ref="lem-gensubgp" />, the group <m>G</m> has the following elements <m>G=\{x^i \mid i\in \mathbb{Z}\}</m>. We show that
-                </p>
-
-                <p>
-                  <ul>
-                    <li>
-                      <p>
-                        <m>|G|\geq n</m> by showing the elements <m>x^0, x^1, \dots, x^{n-1}</m> are distinct. Indeed, if <m>0\leq i&lt;j&lt;n</m> and <m>x^i=x^j</m> then <m>x^{j-i}=e</m> and <m>1\leq j-i&lt;n</m>, contradicting the minimality of the order of <m>x</m>.
-                      </p>
-                    </li>
-
-                    <li>
-                      <p>
-                        <m>|G|\leq n</m> by showing <m>G\subseteq\{x^0, x^1, \dots, x^{n-1}\}</m> (this implies <m>G=\{e,x,\ldots,x^{n-1}\}</m>). Indeed, for any <m>m\in \mathbb{Z}</m> division by <m>n</m> yields integers <m>q,r</m> with <m>0\leq r\leq n-1</m> such that <m>m=nq+r</m>. Then <m>x^m=x^{nq+r}=(x^n)^qx^r=x^r\in\{x^0, x^1, \dots, x^{n-1}\}</m>.
-                      </p>
-                    </li>
-                  </ul>
-                </p>
-              </proof>
-            </corollary>
-
             <p>Generators are not unique.</p>
 
-            <exercise xml:id="exe-non-unique-cyclic-generators"><title>Cyclic Generators Need not be Unique</title> 
+            <exercise xml:id="exe-non-unique-cyclic-generators"><title>Cyclic Generators are not Unique</title> 
               <statement>
                 <p>Let <m>G=\langle x\rangle</m> be a cyclic group. Then <m>G=\langle x^{-1}\rangle</m>.</p>
               </statement>
@@ -2991,21 +2998,13 @@
 
             <p>Here is a more general criteria for determining when an element of a cyclic group is a generator.</p>
 
-            <proposition xml:id="prop-cyclic-criteria"><title>Criteria for Cyclic Generators</title>
+            <theorem xml:id="thm-cyclic-criteria"><title>Criteria for Cyclic Generators</title>
               <statement>
                 <p>
                   Let <m>G=\igen x</m> be a cyclic group of order <m>n</m>, and let <m>y=x^m\in G</m>. Then <m>y</m> generates <m>G</m> if and only if <m>\gcd(n,m)=1</m>.
                 </p>
               </statement>
-            </proposition>
-
-            <p>One quick way of seeing if a group is cyclic is to find an element with the same order as the group.</p>
-
-            <proposition xml:id="prop-cyclic-equivalencies"><title>Cyclci iff Element of Order <m>|G|</m></title>
-              <statement>
-                <p>Let <m>G</m> be a finite group. Then <m>G</m> is cyclic if and only if there exists an <m>x\in G</m> such that <m>|x|=|G|</m></p>
-              </statement>
-            </proposition>
+            </theorem>
 
             <p>Conveniently enough, cyclic groups are always abelian.</p>
       
@@ -3023,7 +3022,7 @@
                 <me>\mu_n := \{z \in \mathbb{C}\mid z^n = 1\}</me> 
                 is a subgroup of <m>(\mathbb{C}\setminus \{0\}, \cdot)</m>. Since <m>\|z\|^n = \| z^n \|</m> and so if <m>z \in \mu</m>, then <m>\|z\| = 1</m> and hence <m>z = e^{ri}</m> for some real number <m>r</m>. Moreover, <m>1 = z^n = e^{nri}</m> implies that <m>nr</m> is an integer multiple of <m>2 \pi</m>. It follows that 
                 <me>\mu_n = \{1, e^{2 \pi i/n}, e^{4 \pi i/n}, \cdots , e^{(n-1) 2 \pi i/n}\}</me> 
-                and that <m>e^{2 \pi i/n}</m> generates <m>\mu_n</m>. So, <m>\mu_n</m> is cyclic or order <m>n</m>. It is therefore isomorphic to <m>\mathbb{Z}/n</m>, via the map <m>\overline{j} \mapsto e^{2 j \pii/n}</m>.
+                and that <m>e^{2 \pi i/n}</m> generates <m>\mu_n</m>. So, <m>\mu_n</m> is cyclic or order <m>n</m>. It is therefore isomorphic to <m>\mathbb{Z}/n</m>, via the map <m>\overline{j} \mapsto e^{2 j \pi i/n}</m>.
               </p>
             </example>
 
@@ -8459,7 +8458,7 @@
             </p>
           </exercise>
 
-          <remark><p>Units in matrix rings are called <em>invertible matrices</em>, but they aren't very useful and we'll probably never see them again.</p></remark>
+          <remark><p>Units in matrix rings are called <em>invertible matrices</em>, but they aren't very useful and we'll probably never see them again.<fn>That was a joke. I'm very funny.</fn></p></remark>
 
           <exercise xml:id="exe-gaussian-units"><title>Gaussian Units</title>
             <statement>
@@ -8513,7 +8512,7 @@
 
           </exercise>
 
-          <remark><p>The function <m>N</m> in <xref ref="exe-gaussian-units"/> is some incredibly spicy foreshadowing of something called a <em>norm</em> function, which we'll see more of in <xref ref="sec-eds"/></p></remark>
+          <remark><p>The function <m>N</m> in <xref ref="exe-gaussian-units"/> is some incredibly spicy foreshadowing of something called a <em>norm</em> function, which we'll see more of in <xref ref="sec-eds"/>.</p></remark>
 
           
           </subsection>
@@ -8570,7 +8569,9 @@
               </statement>
               </lemma>
 
-              <remark><p>This is sometimes taken to be the definition of an integral domain, but only by those that are left handed. No one knows why.</p></remark>
+              <remark><p>This is sometimes taken to be the definition of an integral domain, but only by those that are aren't left handed. No one knows why; it just seemed right.</p></remark>
+
+              <remark><p>In an introductory high school or college algebra course this notion is known as the <term>zero factor principle</term> of the real numbers, which is what allowes us to solve for the <m>x</m>-intercepts (or zeros) of a polynomial equation after factoring it.</p></remark>
 
               <p>Rather than jumping in and proving too many examples directly, let's be a little more efficient and discover a whole class of examples in one fell swoop. Well, actually two fell swoops, since we'll need a quick lemma first.</p>   
 
@@ -8627,8 +8628,6 @@
                   </p>
                 </proof>
               </theorem>
-
-              <remark><p>In an introductory high school or college algebra course this notion is known as the <term>zero factor principle</term> for the real numbers, which is what allowes us to solve for the <m>x</m>-intercepts (or zeros) of a polynomial equation after factoring it.</p></remark>
   
               <exercise xml:id="exe-neither-zerodivisor-nor-unit"><title>Finite Zerdivisors and Units</title>
                 

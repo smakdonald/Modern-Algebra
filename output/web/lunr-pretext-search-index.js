@@ -25,7 +25,7 @@ var ptx_lunr_docs = [
   "type": "Preface",
   "number": "",
   "title": "How to Use This Book (*)",
-  "body": "How to Use This Book (*)  Coming soon!     Definition     Examples     Theorem  A result.   Lemma  A more technical result used specifically in the proof of a larger result.   Corollary  An important result whose proof comes directly from a previous theorem.   Proposition  Results that require proof but are more specific and\/or contained in a larger result coming later.   Exploration  Generalizations, specifics, smaller results, things are are less essential to the course or results who's proofs are usually skipped.   Problem  Used for qualifying exam problems.   Remark  Providing context in the form of foreshadowing or content not covered in this text. In general, there shouldn't be anything defined in a remark, they should be entirely optional.   Context  Historical and etymogical origins.   Footnotes  Add little to no educational value. It should really be feetnote if you think about it.       "
+  "body": "How to Use This Book (*)  Coming soon!  Blocks    Definition  These are pretty standard and probably what you'd be expecting.   Examples  Specific instances of a definition.   Theorem  A result.   Lemma  A more technical result used specifically in the proof of a larger result.   Corollary  An important result whose proof comes directly from a previous theorem.   Proposition  Results that require proof but are more specific and\/or contained in a larger result coming later.   Exploration  Generalizations, specifics, smaller results, things are are less essential to the course or results who's proofs are usually skipped.   Problem  Used for qualifying exam problems.   Remark  Providing context in the form of foreshadowing or content not covered in this text. In general, there shouldn't be anything defined in a remark, they should be entirely optional.   Discussion  Usually for arguing about notation.   Context  Historical and etymogical origins.   Footnotes  Sometimes act like remarks. However, most are strictly for fun and add little to no educational value, at least in the traditional sense. It should really be feetnote if you think about it.       "
 },
 {
   "id": "p-7",
@@ -34,7 +34,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "Definition Examples Theorem Lemma Corollary Proposition Exploration Problem Remark Context Footnotes "
+  "body": "Definition Examples Theorem Lemma Corollary Proposition Exploration Problem Remark Discussion Context Footnotes "
 },
 {
   "id": "sec-group-basics",
@@ -43,7 +43,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.1",
   "title": "Group Basics",
-  "body": "Group Basics  Binary Operations and Groups  A Brief Notational Note  At various points throughout this text, the author may use \"mathcal\" notation for definitions that do not normally require it (such as for a group, for a ring, etc.) In the realm of higher mathematics, this is what is known as a typo , and should be reported to the proper authorities as soon as possible.   Most great learning happens in groups. Ken Robinson  We begin, as all great volumes of mathematics are like to do, somewhere in the middle. Though everything that you need from the beginning can be found in .  Binary Operation   A binary operation binary operation operation on a set is a      Binary operations on a set are especially useful when they posess some special properties, which garner them some special names.  Monoid   A monoid monoid is a pair where is a set and is a on satisfying the following properties:  Closure Axiom closure  for each , .   Associativity Axiom associativity  for all we have    Identity Axiom identity  there exists such that for all  the identity element of a group        Monoid  The word \"monoid\" was first used by the mathematician Garrett Birkhoff in his 1935 paper \"On the Structure of Abstract Algebras\".    We often write instead of for simplicity. This is the one and only \"Mark\". All following \"Marks\" will be \"Remarks\".  The in is technically redundant. Closure is really part of , and it is implicitly assumed whenever we consider such an operation. Howewever, redundancy is not a bad thing, and it never hurts to state it explicitely.  The notation is often used for the identity element of a group, though we will not do so here.  Au Naturale  The  form a monoid under addition. However, does not form a group.   For those interested, a pairing that only satisfies the first two properties of is called a semigroup semigroup . If only satisfies the first property, it is known as a magma magma .  Magma  The term \"magma\" was coined by the mathematician Benjamin Peirce in the 1870s to describe a set with a binary operation. The word \"magma\" is derived from the Latin word \"magmus,\" meaning \"mass\" or \"heap,\" which suggests a collection of objects with no particular order or structure.   For those who are even more interested, here is a handy little graphic.  Algebraic Structures  Relations between algebraic structures. Quiver    Generalized Associative Law If an element of a monoid is contructed from a sequence of elements in this order by repeatedly inserting parenthesis and applying the operation, the element must equal and so is independent of the mode of bracketing.  As a result of any expression formed from the elements in that order can be written without parenthesis, which will save us oodles of time down the line.  Group   A group group is a monoid with the following additional property:  Inverse Axiom inverse  for each , there is an element such that .    a group (or monoid) and its binary operation  lowercase letters reserved for elements of a group   When the operation of a group is , we refer to as a multiplicative group multiplicative group . If the operation is used, then is referred to as an additive group additive group .    Groups  The term \"group\" was introduced in the early 1831 century by the French mathematician to describe a set of mathematical objects that exhibit certain symmetry properties.  It was later adopted and popularized by other mathematicians such as and , though the axiomatic definition was not given until 1882 by Heinrich Weber.   Though a group is a pair, we will usually refer to the group by only naming the underlying set, .   Properties of Groups (and sometimes Monoids)     Unique Identity  In a monoid , the element satisfying the Idenity axiom of is unique, and we thus refer to it as the identity element identity element of .   Unique Inverses  In a group , for each , the element satisfying the Inverses axiom of is unique, and we thus refer to it as the the inverse of and we will henceforth denote it by .   Cancellation cancellation  In a group , if then . Similarly, if we have .          Suppose there exist two elements and such that and for all . Then Thus only one element can satisfy this property, making the identity element unique.    For a given , if and fo some and , then .    Suppose for some . By multiplying on both sides by , we see        Before we see some examples, let's define one very special kind of group that we'll be seeing a lot of.  Abelian Group   A group is an abelian group abelian group if the operation is commutative; i.e., for all .    Abelian Groups  The term \"Abelian groups\" was introduced by the mathematician and physicist James Clerk Maxwell in the 1870s. Maxwell named these groups after the Norwegian mathematician , who made important contributions to the theory of equations, including the study of what we now call abelian groups.   Two elements of a group are said to commute commute if .  As we progress through the text, one might start to recognize that groups are much more agreeable when they are abelian. They behave in ways we expect and are often times much more likely to do what we want. If all groups were abelain, group theory would not be anywhere near as widespread (or interesting, though that is more a matter of opinion). Because of this, a common motif in this course is finding, constructing, and fiddling with groups that are 'almost' abelian, whatever that means.  Group Examples     Trivial Subgroup  The trivial subgroup trivial group is the group with a single element . the trivial group: e.g. the group containing only an identity element      and each form an abelian group, where denotes traditional addition.    General Linear Group  For any positive integer , let Then is a non-abelian group under matrix multiplication known as the general linear group general linear group . General linear group     For any , let denote the . Then forms an abelian group where denotes addition modulo .        Specific General Linear Groups  In general, is a group for any ring (whatever those are).   The following example illustrates a few important examples of something called a , which is defined explicitely in terms of rings (whatever those are) in .  Groups of Units   Each of the following subsets form an abelian group under multiplication.   The subset of .     , , and .    For each , the subset of .        Prove that   Some Extra Groups Verify the following:  Opposite Group  Let be a multiplicative group, and define opposite group be the set equipped with the operation , where . Opposite groups are used in category theory to describe duality between algebraic structures. Then is a group.   Evening the Odds  Let denote the set of even integers and denote the set of odd integers. Then is a group, whereas is not.      Properties of Inverses   If is a group and , then:    .               First, recall from that . However, it is also the case that . By part (2) of we know that inverses are unique, and thus it must be the case that .    Coming soon to an OER near you!       The second portion of can be generalized.  Big 'Ole Inverses  If is a group and , then .   It can also be specialized.  Abelian Exponents  Let . The equation holds for all if and only if is abelian.     "
+  "body": "Group Basics  Binary Operations and Groups  Most great learning happens in groups. Ken Robinson   A Brief Notational Note  At various points throughout this text, the author may use \"mathcal\" notation for definitions that do not normally require it (such as for a group, for a ring, etc.) In the realm of higher mathematics, this is what is known as a typo , and should be reported to the proper authorities as soon as possible.   We begin, as all great volumes of mathematics are like to do, somewhere in the middle. Though everything that you need from the beginning can be found in .  Binary Operation   A binary operation binary operation operation on a set is a      Binary operations on a set are especially useful when they posess some special properties, which garner them some special names.  Monoid   A monoid monoid is a pair where is a set and is a on satisfying the following properties:  Closure Axiom closure  for each , .   Associativity Axiom associativity  for all we have    Identity Axiom identity  there exists such that for all  the identity element of a group        Monoid  The word \"monoid\" was first used by the mathematician Garrett Birkhoff in his 1935 paper \"On the Structure of Abstract Algebras\".    We often write instead of for simplicity. This is the one and only \"Mark\". All following \"Marks\" will be \"Remarks\".  The in is technically redundant. Closure is really part of , and it is implicitly assumed whenever we consider such an operation. Howewever, redundancy is not a bad thing, and it never hurts to state it explicitely.  The notation is often used for the identity element of a group, though we will not do so here.  Au Naturale  The  form a monoid under addition.   For those interested, a pairing that only satisfies the first two properties of is called a semigroup semigroup . If only satisfies the first property, it is known as a magma magma .  Magma  The term \"magma\" was coined by the mathematician Benjamin Peirce in the 1870s to describe a set with a binary operation. The word \"magma\" is derived from the Latin word \"magmus,\" meaning \"mass\" or \"heap,\" which suggests a collection of objects with no particular order or structure.   For those who are even more interested, here is a handy little graphic.  Algebraic Structures  Relations between algebraic structures. Quiver    Generalized Associative Law If an element of a monoid is contructed from a sequence of elements in this order by repeatedly inserting parenthesis and applying the operation, the element must equal and so is independent of the mode of bracketing.  As a result of any expression formed from the elements in that order can be written without parenthesis, which will save us oodles of time down the line.  Group   A group group is a  with the following additional property:  Inverse Axiom inverse  for each , there is an element such that .    a group (or monoid) and its binary operation  lowercase letters reserved for elements of a group   When the operation of a group is , we refer to as a multiplicative group multiplicative group . If the operation is used, then is referred to as an additive group additive group .    Groups  The term \"group\" was introduced in the early 1831 century by the French mathematician to describe a set of mathematical objects that exhibit certain symmetry properties.  It was later adopted and popularized by other mathematicians such as and , though the axiomatic definition was not given until 1882 by Heinrich Weber.   Though a group is a pair, we will usually refer to the group by only naming the underlying set, .   Properties of Groups (and sometimes Monoids)     Unique Identity  In a monoid , the element satisfying the Idenity axiom of is unique, and we thus refer to it as the identity element identity element of .   Unique Inverses  In a group , for each , the element satisfying the Inverses axiom of is unique, and we thus refer to it as the the inverse of and we will henceforth denote it by .   Cancellation cancellation  In a group , if then . Similarly, if we have .          Suppose there exist two elements and such that and for all . Then Thus only one element can satisfy this property, making the identity element unique.    For a given , if and fo some and , then .    Suppose for some . By multiplying on both sides by , we see        Before we see some examples, let's define one very special kind of group that we'll be seeing a lot of.  Abelian Group   A group is an abelian group abelian group if the operation satisfies the following additional property:  Commutative Axiom commutative   for all .       Abelian Groups  The term \"Abelian groups\" was introduced by the mathematician and physicist James Clerk Maxwell in the 1870s. Maxwell named these groups after the Norwegian mathematician , who made important contributions to the theory of equations, including the study of what we now call abelian groups.   Two elements of a group are said to commute commute if .  As we progress through the text, one might start to recognize that groups are much more agreeable when they are abelian. They behave in ways we expect and are often times much more likely to do what we want. If all groups were abelain, group theory would not be anywhere near as widespread (or interesting, though that is more a matter of opinion). Because of this, a common motif in this course is finding, constructing, and fiddling with groups that are 'almost' abelian, whatever that means.  Group Examples     Trivial Subgroup  The trivial subgroup trivial group is the group with a single element . the trivial group: e.g. the group containing only an identity element      and each form an abelian group, where denotes traditional addition.    General Linear Group  For any positive integer , let Then is a non-abelian group under matrix multiplication known as the general linear group general linear group . General linear group     For any , let denote the . Then forms an abelian group where denotes addition modulo .        Specific General Linear Groups  In general, is a group for any field (whatever those are).   The following example illustrates a few important examples of something called a , which is defined explicitely in terms of rings (whatever those are) in .  Groups of Units   Each of the following subsets form an abelian group under multiplication.   The subset of .     , , and .    For each , the subset of .        Prove that   Some Extra Groups Verify the following:  Opposite Group  Let be a multiplicative group, and define opposite group be the set equipped with the operation , where . Opposite groups are used in category theory to describe duality between algebraic structures. Then is a group.   Evening the Odds  Let denote the set of even integers and denote the set of odd integers. Then is a group, whereas is not.      Properties of Inverses   If is a group and , then:    .               First, recall from that . However, it is also the case that . By part (2) of we know that inverses are unique, and thus it must be the case that .    Coming soon to an OER near you!       The second portion of can be generalized.  Big 'Ole Inverses  If is a group and , then .   It can also be specialized.  Abelian Exponents  Let . The equation holds for all if and only if is abelian.     "
 },
 {
   "id": "def-binop",
@@ -97,7 +97,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.6",
   "title": "Au Naturale.",
-  "body": "Au Naturale  The  form a monoid under addition. However, does not form a group.  "
+  "body": "Au Naturale  The  form a monoid under addition.  "
 },
 {
   "id": "remark-3",
@@ -133,7 +133,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "1.10",
   "title": "Group.",
-  "body": "Group   A group group is a monoid with the following additional property:  Inverse Axiom inverse  for each , there is an element such that .    a group (or monoid) and its binary operation  lowercase letters reserved for elements of a group   When the operation of a group is , we refer to as a multiplicative group multiplicative group . If the operation is used, then is referred to as an additive group additive group .   "
+  "body": "Group   A group group is a  with the following additional property:  Inverse Axiom inverse  for each , there is an element such that .    a group (or monoid) and its binary operation  lowercase letters reserved for elements of a group   When the operation of a group is , we refer to as a multiplicative group multiplicative group . If the operation is used, then is referred to as an additive group additive group .   "
 },
 {
   "id": "remark-4",
@@ -160,7 +160,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "1.13",
   "title": "Abelian Group.",
-  "body": "Abelian Group   A group is an abelian group abelian group if the operation is commutative; i.e., for all .   "
+  "body": "Abelian Group   A group is an abelian group abelian group if the operation satisfies the following additional property:  Commutative Axiom commutative   for all .      "
 },
 {
   "id": "remark-5",
@@ -187,7 +187,7 @@ var ptx_lunr_docs = [
   "type": "Remark",
   "number": "1.16",
   "title": "Specific General Linear Groups.",
-  "body": "Specific General Linear Groups  In general, is a group for any ring (whatever those are).  "
+  "body": "Specific General Linear Groups  In general, is a group for any field (whatever those are).  "
 },
 {
   "id": "ex-group-of-units",
@@ -250,7 +250,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.2",
   "title": "Order and Power",
-  "body": "Order and Power  Order  In order to make a choice, you need the power to see there is one. Gloria Steinem  Though it might be natural to write the product using the notation , we have no notion of what that means in the world of groups. Do exponents behave the way we want them to in groups, or does something disasterous occur? Do exponents even exist ? Do I ? We can answer most of these questions, and attempt to do so now.  power   Let be an element of a multiplicative group . For , the  power  of is defined recursively as follows:    , , and Convenient notation, isn't it? Almost like we planned it. ;     when ; and     when .       If was an additive group, then we would write intead of . This would be called a multiple of instead of a power.  Laws of Exponents   Let and be an element of a group . Then    and     .       Coming soon!    Order      In a group , the order of an element order of a group element  is the least positive integer such that . If no such exists, we say has infinite order. We write for the order of . Order of an element     The order of a group order of a group  is the of the set , denoted . Order of a group        Some authors use the notation or to refer to the order of a group. We won't name names, but they know who they are. (See: )  Order Examples           in     In the additive groups , , , and every nonzero (i.e., nonidentity) element has infinite order.    In the additve group , the element has order , as and .      We arrive at one of the central conjectures of group theory, posed by none other tha UNL's Tom \"Destroyer of Worlds\" Marley. Best of luck. For the more astute reader, you may observe that this is one of the more solvable conjectures in mathematics. This is the first problem Tom assigns every time he teaches 817 and it's become a bit of a running joke.  Marley's Conjecture  Every group of order is abelian.   Let be a group with elements, and suppose there are elements such that for some elements . Since , we must have , , and . Since has only elements and , either or . Without loss, say the former occurs. But implies and we know commutes with , and hence this is not possible. If , then and if then , both of which are impossible. Since were arbitrary, must be abelian.   Properties of Order      An element of a group has order if and only if .         If for and  , then .       there or  If is a group such every non-identity element has order , then is abelian.    Element Order   Let be a group and any element.   If , then are all distinct elements of .    If , then for all integers (positive or negative) with .     .    If then .          Coming soon!    Coming soon!    Coming soon!    Let . We have for some by the division algorithm . We have and so, by the definition of order , it must be that        Order Hors d'oeuvre  Let be a group.   Let be an element of finite order. Show that has finite order for any integer , and in fact     Prove that for all in , holds.       "
+  "body": "Order and Power  Order  In order to make a choice, you need the power to see there is one. Gloria Steinem  Though it might be natural to write the product using the notation , we have no notion of what that means in the world of groups. Do exponents behave the way we want them to in groups, or does something disasterous occur? Do exponents even exist ? Do I ? We can answer most of these questions, and attempt to do so now.  power   Let be an element of a multiplicative group . For , the  power  of is defined recursively as follows:    , , and ; Convenient notation, isn't it? Almost like we planned it.      when ; and     when .       If was an additive group, then we would write intead of . This would be called a multiple of instead of a power.  Laws of Exponents   Let and be an element of a group . Then    and     .       Coming soon!    After stumbling around with your newfound power for some time, you might chance upon the fact that while your power may be unlimited, its impacts may be very limited indeed. For example, no matter how high you climb into the natural numbers you will always find that . It seems the identity element is immune to corruption by your power, which one should probably find reassuring. Still, this raises questions that need answering, and thus we will need to reach in and pluck order out of the chaos.  Order      In a group , the order of an element order of a group element  is the least positive integer such that . If no such exists, we say has infinite order. We write for the order of . Order of an element     The order of a group order of a group  is the of the set , denoted . Order of a group        Some authors use the notation or to refer to the order of a group. We won't name names, but they know who they are. (See: )   What notation do you think should be used for the order of a group?   Order Examples      in every group .     in     In the additive groups , , , and every nonzero (i.e., nonidentity) element has infinite order. Groups with this property are known as torsion-free , a concept explored in more advanced contexts.     In the additve group , the element has order , as and .      We arrive at one of the central conjectures of group theory, posed by none other tha UNL's Tom \"Destroyer of Worlds\" Marley. Best of luck. For the more astute reader, you may observe that this is one of the more solvable conjectures in mathematics. This is the first problem Tom assigns every time he teaches 817 and it's become a bit of a running joke.  Marley's Conjecture  Every group of order is abelian.   Let be a group with elements, and suppose there are elements such that for some elements . Since , we must have , , and . Since has only elements and , either or . Without loss, say the former occurs. But implies and we know commutes with , and hence this is not possible. If , then and if then , both of which are impossible. Since were arbitrary, must be abelian.   Properties of Order      An element of a group has order if and only if .         If for and  , then .       there or  If is a group such every non-identity element has order , then is abelian.    Element Order   Let be a group and any element.   If , then are all distinct elements of .    If , then for all integers (positive or negative) with .     .    If then .          Coming soon!    Coming soon!    Coming soon!    Let . We have for some by the division algorithm . We have and so, by the definition of order , it must be that        Order Hors d'oeuvre  Let be a group.   Let be an element of finite order. Show that has finite order for any integer , and in fact     Prove that for all in , holds.       "
 },
 {
   "id": "def-power",
@@ -259,7 +259,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "1.23",
   "title": "<span class=\"process-math\">\\(n\\th\\)<\/span> power.",
-  "body": "power   Let be an element of a multiplicative group . For , the  power  of is defined recursively as follows:    , , and Convenient notation, isn't it? Almost like we planned it. ;     when ; and     when .      "
+  "body": "power   Let be an element of a multiplicative group . For , the  power  of is defined recursively as follows:    , , and ; Convenient notation, isn't it? Almost like we planned it.      when ; and     when .      "
 },
 {
   "id": "remark-7",
@@ -298,13 +298,22 @@ var ptx_lunr_docs = [
   "body": "Some authors use the notation or to refer to the order of a group. We won't name names, but they know who they are. (See: ) "
 },
 {
+  "id": "exploration-1",
+  "level": "2",
+  "url": "sec-order-power.html#exploration-1",
+  "type": "Discussion",
+  "number": "1.1",
+  "title": "",
+  "body": " What notation do you think should be used for the order of a group?  "
+},
+{
   "id": "ex-order",
   "level": "2",
   "url": "sec-order-power.html#ex-order",
   "type": "Example",
   "number": "1.28",
   "title": "Order Examples.",
-  "body": "Order Examples           in     In the additive groups , , , and every nonzero (i.e., nonidentity) element has infinite order.    In the additve group , the element has order , as and .     "
+  "body": "Order Examples      in every group .     in     In the additive groups , , , and every nonzero (i.e., nonidentity) element has infinite order. Groups with this property are known as torsion-free , a concept explored in more advanced contexts.     In the additve group , the element has order , as and .     "
 },
 {
   "id": "exe-order-4-abelian",
@@ -358,7 +367,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.3",
   "title": "Common Groups",
-  "body": "Common Groups  We examine two of the most commonly encountered groups in all of algebra: the dihedral group and the symmetric group. The quaternions are also here.  Dihedral Groups  Reality prefers symmetry. Jorge Luis Borges  Isometry and Symmetry   For any integer , let denote a regular -gon regular -gon . An isometry isometry of the plane is a function that is a bijection and preserves the Euclidean distance for any ). A symmetry symmetry of is an isometry that maps to itself.    By the latter I don't mean that fixes each of the points of , but rather that , that is every point of is mapped to a (possibly different) point of and every point of is the image of some point in via .  Composition of Symmetries The of two symmetries of is again a symmetry of .  Dihedral Group   The dihedral group  dihedral group is the set of symmetries of the regular -gon equipped with the binary operation given by composition. Dihedral Group      The name \"dihedral group\" is a natural choice for these groups, as they are intimately connected to the study of dihedral angles and the symmetries of regular polygons.   Rotations and Reflections  Assume that the regular -gon is drawn in the plane with its center at the origin and one vertex on the axis.   If rotation denotes rotation about the origin by radians counter-clockwise, then . It's inverse is rotation by clock-wise.    For another example, for any line of symmetry of , reflection about that line gives an element of . By our convention for how to draw , the -axis is a line of symmetry for , and we let reflection denote reflection about the -axis.      We see and , which may make some intuitive sense. The fact that is a reflection and hence that may be slightly less aparent.  Order of      Every element in can be written as or for .            We will use some geometric notions freely without complete justification. For example, we use that if an isometry of fixes two points and , then it is either the identity element or it is reflection about the line . We also use that every element of maps the origin to itself (since the origin is the center of mass of ). Finally, we use that every isometry of is either orientation preserving or orientation reversing .  Label the vertices of as , with being the vertex located on the positive -axis, being the vertex adjacent to in the counter-clockwise direction, etc. We have , , etc., and so . Moreover any isometry must send a vertex to a vertex because the vertices are the points on at largest distance from the origin.  Let be an arbitrary symmetry of . Then for some . Then the element fixes and the origin, and hence either or from the discussion above. We get that or , proving the first assertion.  Since , we see that if for , then . We have for any since the former is orientation reversing and the latter is orientation preserving. If for , then upon multiplying on the left of we get .     Symmetric Groups  Every possible permutation is still in play. Michael Cullen  Let's introduce another very important example: symmetric groups.  Permutation   A permutation permutation of a set is a bijective function . The set of all permutations of a set is denoted permutation group .    Symmetric Group   For any , the symmetric group symmetric group is the set equipped with the composition of functions as its binary operation. Symmetric group     Order of Prove .  Cycles and Transpositions   If are distinct integers between and , then denotes the element of that satisfies Such a permutation is called a cycle cycle or an -cycle if we want to emphasize its length. A -cycle is often called a transposition transposition .    Cycle Example  For example, , regarded as an element of sends to , to and to , and it fixes . (Note that the value of in cycle notation is sometime ambiguous.)   -Cycles in Determine the number of -cycles in .  Note that distinct lists of integers represent the same cycle if they are cyclical rearrangements of each other, e.g., . However, .  Composing Cycle  We compose cycles the same way we compose functions. So, for example This equation might lead you to the false belief that every element of is a cycle. This is not true — for example, the product cannot be written as a single cycle. What is true is that every element of is uniquely (up to ordering) the product of disjoint cycles. We'll prove that soon in .   Disjoint Commutes   Disjoint cycles commute, disjoint cycles that is, if , and then .    While sufficent, this is not a necessary condition.  Non-Disjoint Commutes  Find elements that commute but are not disjoint.   Cycle Decompostion      Each can be written as a product (composition) of disjoint cycles cycle decompostion , and such a factorization is unique up to the ordering of the factors.    Each can be written a product of transpositions.          First, note that the identity element of is the empty product of cycles.  Fix and let . The homomorphism given as the inclusion of into determines an action of on the set . This action decomposes into disjoint orbits. Since generates , belong to the same orbit iff for some . Let be any one of these orbits with size at least . Now pick any element . Consider the sequence of element of . The axioms of a group action gives us that the first time this sequence has a repitition occurs when , where . Let for and let be the -cycle . Then and  act the same on . More formally, fixes all elements of . Also, fixes . It follows that where the product is taken over all orbits of size at least . This proves existense.  For uniqueness, if is a product of disjoint cycles, then the orbits under the action of are the one-element orbits along with the orbits of each . Moreover, if the orbit of is , then and act the same on and fixes . It follows that .    It suffices to prove this for a single cycle and, by symmetry, for the cycle . The equation is seen to hold by direct calculation.       For the uniqueness part of statement (1) in one needs to establish a convention regarding -cycles, that is one needs to stipulate either that the -cycles will not be recorded (which gives the shortest such factorization) or that all the -cycles will be recorded (which gives the longest such factorization, but also the only one that makes it clear what the number is).  Now that we know that every permutation can be written as a product of transpositions, we can utilize this to gain insight into many aspects of the group structure, such as the order of elements.  Permutation Order   The order of a permutation is the least common multiple of the lengths of the cycles it is a product of.  In particular, every transposition is its own inverse and the order of a -cycle in is .    Coming soon!    We can also categorize elements of permutation groups by the number of transpositions it is a product of.  Even and Odd Permutaitons   A permutation is even even permutation is if is the product of an even number of transpositions, otherwise it is odd odd permutation .    Even and Odd Properties      A -cycle is even if and only if is odd.    Products of even permutations are even, products of odd permutations are even, products of even and odd permutations are odd.    The identity permutation in is even, but not odd.    No permutation in is both even and odd.       Alternating Group   The alternating group alternating group  is the subset of all even cycles of . the alternating group on elements     Order of Prove .   The Quaternions  Quaternions...though beautifully ingenious, have been an unmixed evil to those who have touched them in any way. William Thomson  Quaternions   The quaternion group quaternion group  is a set with elements satisfying the following relations: is the identity element and      Quaternions  Quaternions were invented by the Irish mathematician in 1843. Hamilton named them \"quaternions\" because they are a generalization of complex numbers, which he called \"duads\". Since quaternions involve four components instead of two, Hamilton chose the name \"quaternions\" to reflect this. The word \"quaternion\" itself means a group of four things or a fourfold entity, which is a fitting name for a mathematical object with four components.   The quaternion group arises in the study of rotations in three dimensions. It has important applications in computer graphics and computer vision, as well as in physics and algebra.  Heinous Commutes Provide explicit examples to show , and are not abelian groups when .  There isn't much for us to do with right now, but you'd be surprised by the unusual places this group manages to crop up.   "
+  "body": "Common Groups  We examine two of the most commonly encountered groups in all of algebra: the dihedral group and the symmetric group. The quaternions are also here.  Dihedral Groups  Reality prefers symmetry. Jorge Luis Borges  Isometry and Symmetry   For any integer , let denote a regular -gon regular -gon . An isometry isometry of the plane is a function that is a bijection and preserves the Euclidean distance for any ). A symmetry symmetry of is an isometry that maps to itself.    By the latter I don't mean that fixes each of the points of , but rather that , that is every point of is mapped to a (possibly different) point of and every point of is the image of some point in via .  Composition of Symmetries The of two symmetries of is again a symmetry of .  Dihedral Group   The dihedral group  dihedral group is the set of symmetries of the regular -gon equipped with the binary operation given by composition. Dihedral Group      The name \"dihedral group\" is a natural choice for these groups, as they are intimately connected to the study of dihedral angles and the symmetries of regular polygons.   Rotations and Reflections  Assume that the regular -gon is drawn in the plane with its center at the origin and one vertex on the axis.   If rotation denotes rotation about the origin by radians counter-clockwise, then . It's inverse is rotation by clock-wise.    For another example, for any line of symmetry of , reflection about that line gives an element of . By our convention for how to draw , the -axis is a line of symmetry for , and we let reflection denote reflection about the -axis.      We see and , which may make some intuitive sense. The fact that is a reflection and hence that may be slightly less aparent.  Order of      Every element in can be written as or for .            We will use some geometric notions freely without complete justification. For example, we use that if an isometry of fixes two points and , then it is either the identity element or it is reflection about the line . We also use that every element of maps the origin to itself (since the origin is the center of mass of ). Finally, we use that every isometry of is either orientation preserving or orientation reversing .  Label the vertices of as , with being the vertex located on the positive -axis, being the vertex adjacent to in the counter-clockwise direction, etc. We have , , etc., and so . Moreover any isometry must send a vertex to a vertex because the vertices are the points on at largest distance from the origin.  Let be an arbitrary symmetry of . Then for some . Then the element fixes and the origin, and hence either or from the discussion above. We get that or , proving the first assertion.  Since , we see that if for , then . We have for any since the former is orientation reversing and the latter is orientation preserving. If for , then upon multiplying on the left of we get .     Symmetric Groups  Every possible permutation is still in play. Michael Cullen  Let's introduce another very important example: symmetric groups.  Permutation   A permutation permutation of a set is a bijective function . The set of all permutations of a set is denoted permutation group .    Symmetric Group   For any , the symmetric group symmetric group is the set equipped with the composition of functions as its binary operation. Symmetric group     Order of Prove .  Cycles and Transpositions   If are distinct integers between and , then denotes the element of that satisfies Such a permutation is called a cycle cycle or an -cycle if we want to emphasize its length. A -cycle is often called a transposition transposition .    Cycle Example  For example, , regarded as an element of sends to , to and to , and it fixes . (Note that the value of in cycle notation is sometime ambiguous.)   -Cycles in Determine the number of -cycles in .  Note that distinct lists of integers represent the same cycle if they are cyclical rearrangements of each other, e.g., . However, .  Composing Cycle  We compose cycles the same way we compose functions. So, for example This equation might lead you to the false belief that every element of is a cycle. This is not true — for example, the product cannot be written as a single cycle. What is true is that every element of is uniquely (up to ordering) the product of disjoint cycles. We'll prove that soon in .   Disjoint Commutes   Disjoint cycles commute, disjoint cycles that is, if , and then .    While sufficent, this is not a necessary condition.  Non-Disjoint Commutes  Find elements that commute but are not disjoint.   Cycle Decompostion      Each can be written as a product (composition) of disjoint cycles cycle decompostion , and such a factorization is unique up to the ordering of the factors.    Each can be written a product of transpositions.          First, note that the identity element of is the empty product of cycles.  Fix and let . The homomorphism given as the inclusion of into determines an action of on the set . This action decomposes into disjoint orbits. Since generates , belong to the same orbit iff for some . Let be any one of these orbits with size at least . Now pick any element . Consider the sequence of element of . The axioms of a group action gives us that the first time this sequence has a repitition occurs when , where . Let for and let be the -cycle . Then and  act the same on . More formally, fixes all elements of . Also, fixes . It follows that where the product is taken over all orbits of size at least . This proves existense.  For uniqueness, if is a product of disjoint cycles, then the orbits under the action of are the one-element orbits along with the orbits of each . Moreover, if the orbit of is , then and act the same on and fixes . It follows that .    It suffices to prove this for a single cycle and, by symmetry, for the cycle . The equation is seen to hold by direct calculation.       For the uniqueness part of statement (1) in one needs to establish a convention regarding -cycles, that is one needs to stipulate either that the -cycles will not be recorded (which gives the shortest such factorization) or that all the -cycles will be recorded (which gives the longest such factorization, but also the only one that makes it clear what the number is).  Now that we know that every permutation can be written as a product of transpositions, we can utilize this to gain insight into many aspects of the group structure, such as the order of elements.  Permutation Order   The order of a permutation is the least common multiple of the lengths of the cycles it is a product of.  In particular, every transposition is its own inverse and the order of a -cycle in is .    Coming soon!    We can also categorize elements of permutation groups by the number of transpositions it is a product of.  Even and Odd Permutaitons   A permutation is even even permutation is if is the product of an even number of transpositions, otherwise it is odd odd permutation .    Even and Odd Properties      A -cycle is even if and only if is odd.    Products of even permutations are even, products of odd permutations are even, products of even and odd permutations are odd.    The identity permutation in is even, but not odd.    No permutation in is both even and odd.       Alternating Group   The alternating group alternating group  is the subset of all even cycles of . the alternating group on elements     Order of Prove .   The Quaternions  Quaternions...though beautifully ingenious, have been an unmixed evil to those who have touched them in any way. William Thomson  Quaternions  Quaternions were invented by the Irish mathematician in 1843. Hamilton named them \"quaternions\" because they are a generalization of complex numbers, which he called \"duads\". Since quaternions involve four components instead of two, Hamilton chose the name \"quaternions\" to reflect this. The word \"quaternion\" itself means a group of four things or a fourfold entity, which is a fitting name for a mathematical object with four components.   Quaternions   The quaternion group quaternion group  is a set with elements satisfying the following relations: is the identity element and      The quaternion group arises in the study of rotations in three dimensions. It has important applications in computer graphics and computer vision, as well as in physics and algebra.  Heinous Commutes Provide explicit examples to show , and are not abelian groups when .  There isn't much for us to do with right now, but you'd be surprised by the unusual places this group manages to crop up.   "
 },
 {
   "id": "def-iso-and-sym",
@@ -853,7 +862,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.1",
   "title": "Subgroups",
-  "body": "Subgroups  Subgrub: Eat Fresh  I have this fear of falling in front of large groups...that's why I tend not to wear heels. Taylor Swift Taylor Swift  Subgroup   A nonempty subset of a group is called a subgroup subgroup , denoted , Subgroup  in group theory, and usually denote subgroups. provided is a group under the multiplication law of .  A subgroup of a group is a proper proper subgroup subgroup, denoted if .    Subgroup Tests     Two Step Subgroup Test  If a subset of a group is nonempty and closed under multiplication and inversion, then is a subgroup.   One Step Subgroup Test  If a subset of a group is nonempty and satisfies for all , , then is a subgroup.   Finite Step Subgroup Test  If a finite subset of a group is nonempty and closed under multiplication, then is a subgroup.       We prove the one-step test first.  Assume is non-empty and for all , . Since is non-empty, there is an and hence . Since for any , is an identity element for . For any , , and so every element of has an inverse inside . For we have and thus and hence is closed under . This means that the restriction of the group operation of to is a well-defined group operation. This operation is associative by the axioms for the group . The axioms of a group have now been established for .  Now we prove the two step test.  Assume is non-empty and closed under multiplication and inversion. Then, for we have and . Since the hypothesis of the one-step test is satisfied, is a subgroup of .    Common Subgroups      and are the trivial subgroups of .               for all .     .    The set of all rotations is a subgroup of . Similarly, the set of reflections is also a subgroup.    Let and define . Then for all .       In fact, in the case of , these turn out to be the only subgroups of .  Subgroups of  The only subgroups of are the sets .   Whilst perusing , you may have noticed the following: If you didn't, don't worry. I won't tell anyeone ;)  Subgroups Preservations  Let be a subgroup of . Then the following hold:    .    If is abelian then so is .      Here are some slightly more eventful properties.  Properties of Subgroups      Transitivity of Subgroups  If is a subgroup of and is a subgroup of , then is a subgroup of .    Intersections of Subgroups  If is a subgroup of for all in an index set , then is a subgroup of .    Unions of Subgroups  Let be a group and , subgroups. Prove that is a subgroup if and only if or .          Coming soon!    Let denote any indexing set and for each , let be a subgroup of . We need to prove is a subgroup. It's not empty since for all . If , then for each , and hence . It follows that .    Coming soon!       No Proper Unions  Every finite group cannot be expressed as the union of two proper subgroups.   Part (3) of may prove useful!   Coming soon to an OER near you!   Subgroups not Symmetric  In we showed that subgroups form a transitve relation. Prove that the relation is reflexive (it can be one sentence), not symmetric, and thus not an equivalence relation.   Special Linear Group   The special linear group special linear group with complex entries is defined  the special linear group       The special linear group is a subgroup of the general linear group .    Torsion Subgroup    Let be an abelian group. Then the set of elements of finite order, which we denote , is a subgroup of , called the torsion subgroup torision subgroup .    Show that the torision subgroup may not in fact be a subgroup if is not assumed to be abelian.     Group Homomorphism Subgroups     Images are Subgroups  If is a homomorphism of groups, then the image of is a subgroup of .   Kernels are Subgroups  If is a homomorphism of groups, then the kernel of is a subgroup of .   Preimages are Subgroups  Prove that if is a group homomorphism and then the preimage of , defined as , is a subgroup of .       Cayley's Theorem   Every group is isomorphic to a subgroup of .    Cayly's Theorem  Cayley's Theorem is named after the British mathematician Arthur Cayley. Cayley was a prolific mathematician who made significant contributions to a wide range of fields, including algebra, geometry, and graph theory. Cayley was also a strong advocate for women's education and played an important role in the movement to admit women to Cambridge University. In the 1860s, he was part of a group of academics who lobbied for women to be allowed to take the Cambridge Mathematical Tripos exam, which was the standard test for mathematics students at the time.   This is a nearly useless theorem.   Stuck in the Middle  Stay in the center, and you will be ready to move in any direction. Alan Watts  Center of a Group   The center center of a group of a group , often written , is the set of elements of that commute with every element of . That is,  the center of a group      Center is a Subgroup            is abelian    If , then        Only Element of Order Let be a group and . If is the only element of order in , then .  Even Order Groups Every group of even order contains an element of order . This is a direct result of , but proving it is possible with the tools we have.    Qualifying Exam Problems  May 2021 (1a)  Let be a group (not necessarily finite) and a nonempty subset of that is closed under multiplication. Suppose that for all we have . Prove is a subgroup of .   Coming soon to an OER near you!   Coming soon to an OER near you!    "
+  "body": "Subgroups  Subgrub: Eat Fresh  I have this fear of falling in front of large groups...that's why I tend not to wear heels. Taylor Swift Taylor Swift  Subgroup   A nonempty subset of a group is called a subgroup subgroup , denoted , Subgroup  in group theory, and usually denote subgroups. provided is a group under the multiplication law of .  A subgroup of a group is a proper proper subgroup subgroup, denoted if .    Subgroup Tests     Two Step Subgroup Test  If a subset of a group is nonempty and closed under multiplication and inversion, then is a subgroup.   One Step Subgroup Test  If a subset of a group is nonempty and satisfies for all , , then is a subgroup.   Finite Step Subgroup Test  If a finite subset of a group is nonempty and closed under multiplication, then is a subgroup.       We prove the one-step test first.  Assume is non-empty and for all , . Since is non-empty, there is an and hence . Since for any , is an identity element for . For any , , and so every element of has an inverse inside . For we have and thus and hence is closed under . This means that the restriction of the group operation of to is a well-defined group operation. This operation is associative by the axioms for the group . The axioms of a group have now been established for .  Now we prove the two step test.  Assume is non-empty and closed under multiplication and inversion. Then, for we have and . Since the hypothesis of the one-step test is satisfied, is a subgroup of .    Common Subgroups      and are the trivial subgroups of .               for all .     .    The set of all rotations is a subgroup of . Similarly, the set of reflections is also a subgroup.    Let and define . Then for all .       In fact, in the case of , these turn out to be the only subgroups of .  Subgroups of  The only subgroups of are the sets .   Whilst perusing , you may have noticed the following: If you didn't, don't worry. I won't tell anyeone ;)  Subgroups Preservations  Let be a subgroup of . Then the following hold:    .    If is abelian then so is .      Here are some slightly more eventful properties.  Properties of Subgroups      Transitivity of Subgroups  If is a subgroup of and is a subgroup of , then is a subgroup of .    Intersections of Subgroups  If is a subgroup of for all in an index set , then is a subgroup of .    Unions of Subgroups  Let be a group and , subgroups. Prove that is a subgroup if and only if or .          Coming soon!    Let denote any indexing set and for each , let be a subgroup of . We need to prove is a subgroup. It's not empty since for all . If , then for each , and hence . It follows that .    Coming soon!       No Proper Unions  Every finite group cannot be expressed as the union of two proper subgroups.   Part (3) of may prove useful!   Coming soon to an OER near you!   Subgroups not Symmetric  In we showed that subgroups form a transitve relation. Prove that the relation is reflexive (it can be one sentence) but not symmetric, and thus not an equivalence relation.   Special Linear Group   The special linear group special linear group with complex entries is defined  the special linear group       The special linear group is a subgroup of the general linear group .    Torsion Subgroup    Let be an abelian group. Then the set of elements of finite order, which we denote , is a subgroup of , called the torsion subgroup torision subgroup .    Show that the torision subgroup may not in fact be a subgroup if is not assumed to be abelian.     Group Homomorphism Subgroups     Images are Subgroups  If is a homomorphism of groups, then the image of is a subgroup of .   Kernels are Subgroups  If is a homomorphism of groups, then the kernel of is a subgroup of .   Preimages are Subgroups  Prove that if is a group homomorphism and then the preimage of , defined as , is a subgroup of .       Cayley's Theorem   Every group is isomorphic to a subgroup of .    Cayly's Theorem  Cayley's Theorem is named after the British mathematician Arthur Cayley. Cayley was a prolific mathematician who made significant contributions to a wide range of fields, including algebra, geometry, and graph theory. Cayley was also a strong advocate for women's education and played an important role in the movement to admit women to Cambridge University. In the 1860s, he was part of a group of academics who lobbied for women to be allowed to take the Cambridge Mathematical Tripos exam, which was the standard test for mathematics students at the time.   This is a nearly useless theorem.   Stuck in the Middle  Stay in the center, and you will be ready to move in any direction. Alan Watts  Center of a Group   The center center of a group of a group , often written , is the set of elements of that commute with every element of . That is,  the center of a group      Center is a Subgroup            is abelian    If , then        Only Element of Order Let be a group and . If is the only element of order in , then .  Even Order Groups Every group of even order contains an element of order . This is a direct result of , but proving it is possible with the tools we have.    Qualifying Exam Problems  May 2021 (1a)  Let be a group (not necessarily finite) and a nonempty subset of that is closed under multiplication. Suppose that for all we have . Prove is a subgroup of .   Coming soon to an OER near you!   Coming soon to an OER near you!    "
 },
 {
   "id": "def-subgroup",
@@ -925,7 +934,7 @@ var ptx_lunr_docs = [
   "type": "Exploration",
   "number": "3.8",
   "title": "Subgroups not Symmetric.",
-  "body": "Subgroups not Symmetric  In we showed that subgroups form a transitve relation. Prove that the relation is reflexive (it can be one sentence), not symmetric, and thus not an equivalence relation.  "
+  "body": "Subgroups not Symmetric  In we showed that subgroups form a transitve relation. Prove that the relation is reflexive (it can be one sentence) but not symmetric, and thus not an equivalence relation.  "
 },
 {
   "id": "def-special-linear-group",
@@ -942,7 +951,7 @@ var ptx_lunr_docs = [
   "url": "sec-subgroups.html#prop-slg-subgroup",
   "type": "Proposition",
   "number": "3.10",
-  "title": "<span class=\"process-math\">\\(\\SL_n(\\C)\\leq\\SL_n(\\C)\\)<\/span>.",
+  "title": "<span class=\"process-math\">\\(\\SL_n(\\C)\\leq\\GL_n(\\C)\\)<\/span>.",
   "body": "  The special linear group is a subgroup of the general linear group .   "
 },
 {
@@ -1033,7 +1042,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.2",
   "title": "Generated Subgroups",
-  "body": "Generated Subgroups  How often misused words generate misleading thoughts. Herbert Spencer  Generated Subgroup   Given a group and a subset of , the subgroup of generated by generated subgroup is If is a set with one element then we write and we refer to this as the cyclic subgroup generated by generated cyclic subgroup  . the subgroup generated by   The elements of are known as generators generator     Elements of   For a subset of , the elements of can be described as:     Let . Since is a subgroup that contains , it is closed under products and inverses, and thus must contain all elements of .  For the opposite containment, we just need to show the set really is a subgroup. We use the one step test:      since we allow and declare the empty product to be .    If and are in then is also in .     Therefore and (by taking and ) and by the minimality of we obtain .    Lets look at some examples for context.     for every .    Generating    Generating but Different  Let be prime and be any two distinct reflections in . Then .   Generating  For any integer , the set of column vectors consisting of in the row and elsewhere generate . As you may recall from a linear algebra course, these are called the elementary matrices . (Bonus: what subgroup do the type I elementary matrices generate?)   Generating    is the subgroup of generated by all produts of -cyclies (disjoint or not). In symbols,     Note that in we showed is generated by transpositions. However, there's more than one way to fry an egg (or in this case generate one)  Generating   For prove that is generated by and the -cycle .    This theorem will prove surprisingly useful all the way down in , saving us a lot of time with our proof of unsolvable quintic polyomials.  Lets look at another example.  Commutator Subgroup  Let be a group, , and . This is known as the commutator subgroup commutator subgroup of . the commutator subgroup    Commutator subgroups prove invaluable when it comes to something called abelianization abelianization , which is, loosely speaking, a way of \"modding out\" the non-commutative part of to obtain a new group that is abelian. This is seen rigorously in  A nice property of a is that once you've located the generators, you've found the whole group:  Generators of Subgroups   If is a subgroup of that contains , then .    In this way, if we can understand something about the generators of a group, we can (for the most part) extend that knowledge to the group as a whole. This is something you may have seen in the form of a basis, either for a vector space or a topological space.  Here is a proposition that might appear to come out of the blue. #1c1cf0, to be precise.  Generators and Unique Homomorphism   If is a group and are elements such that , , and for some integer , then there exists a unique group homomorphism such that and .    Recall that the elements of are and that this list has no repetitions. Given , , and , if exists it is clearly unique, since we have and , so that the value of on every element of is determined by its values on just and .  To prove existence, define a function by for and for . Then one may painstakenly checks that in each of the cases or or or . For example, using that , we have and For the last string of equalities, we have used that, since , we have in too. Note also that might be negative, in which case is really and so really we would have . But this is OK since too, since .  I'll skip the verifications of the other three cases.    This is techincally an specific instance of the UMP for a Presentation, which is not covered here.  Let's take a peak at what this might look like in practice.  Mapping Example  Consider the group and elements  cosine function sine function Then one may check that , and . gives that there is a group homomorphism such that and . This is not at all surprising, since the matrix represents rotation by radians counter-clockwise and represents reflection about the -axis. Indeed, one could define as the subgroup of consisting of elements .   Another Mapping  Let and , in order to distinguish them. Find a homomorphism from to with and prove that it is unique.    gives a group homomorhism . Let and , in order to distinguish them. Then since , there is a unique homomorphism from to with . For example, .   "
+  "body": "Generated Subgroups  How often misused words generate misleading thoughts. Herbert Spencer  Generated Subgroup   Given a group and a subset of , the subgroup of generated by generated subgroup is If is a set with one element then we write and we refer to this as the cyclic subgroup generated by generated cyclic subgroup  . the subgroup generated by   The elements of are known as generators generator     Elements of   For a subset of , the elements of can be described as:     Let . Since is a subgroup that contains , it is closed under products and inverses, and thus must contain all elements of .  For the opposite containment, we just need to show the set really is a subgroup. We use the one step test:      since we allow and declare the empty product to be .    If and are in then is also in .     Therefore and (by taking and ) and by the minimality of we obtain .    Lets look at some examples for context.     for every .    Generating    Generating  Let be prime and be any two distinct reflections in . Then .   Generating  For any integer , the set of column vectors consisting of in the row and elsewhere generate . As you may recall from a linear algebra course, these are called the elementary matrices . (Bonus: what subgroup do the type I elementary matrices generate?)   Generating    is the subgroup of generated by all produts of -cyclies (disjoint or not). In symbols,     Note that in we showed is generated by transpositions. However, there's more than one way to fry an egg (or in this case generate one)  Generating   For prove that is generated by and the -cycle .    This theorem will prove surprisingly useful all the way down in , saving us a lot of time with our proof of unsolvable quintic polyomials.  Lets look at another example.  Commutator Subgroup  Let be a group, , and . This is known as the commutator subgroup commutator subgroup of . the commutator subgroup    Commutator subgroups prove invaluable when it comes to something called abelianization abelianization , which is, loosely speaking, a way of \"modding out\" the non-commutative part of to obtain a new group that is abelian. This is seen rigorously in  A nice property of a is that once you've located the generators, you've found the whole group:  Generators of Subgroups   If is a subgroup of that contains , then .    In this way, if we can understand something about the generators of a group, we can (for the most part) extend that knowledge to the group as a whole. This is something you may have seen in the form of a basis, either for a vector space or a topological space.  Here is a proposition that might appear to come out of the blue. #1c1cf0, to be precise.  Generators and Unique Homomorphism   If is a group and are elements such that , , and for some integer , then there exists a unique group homomorphism such that and .    Recall that the elements of are and that this list has no repetitions. Given , , and , if exists it is clearly unique, since we have and , so that the value of on every element of is determined by its values on just and .  To prove existence, define a function by for and for . Then one may painstakenly checks that in each of the cases or or or . For example, using that , we have and For the last string of equalities, we have used that, since , we have in too. Note also that might be negative, in which case is really and so really we would have . But this is OK since too, since .  I'll skip the verifications of the other three cases.    This is techincally an specific instance of the UMP for a Presentation, which is not covered here.  Let's take a peak at what this might look like in practice.  Mapping Example  Consider the group and elements  cosine function sine function Then one may check that , and . gives that there is a group homomorphism such that and . This is not at all surprising, since the matrix represents rotation by radians counter-clockwise and represents reflection about the -axis. Indeed, one could define as the subgroup of consisting of elements .   Another Mapping  Let and , in order to distinguish them. Find a homomorphism from to with and prove that it is unique.    gives a group homomorhism . Let and , in order to distinguish them. Then since , there is a unique homomorphism from to with . For example, .   "
 },
 {
   "id": "def-gensubgroup",
@@ -1068,7 +1077,7 @@ var ptx_lunr_docs = [
   "url": "sec-gp-generators.html#ex-d2n-rs",
   "type": "Example",
   "number": "3.22",
-  "title": "Generating <span class=\"process-math\">\\(D_{2p}\\)<\/span>.",
+  "title": "Generating <span class=\"process-math\">\\(D_{2n}\\)<\/span>.",
   "body": "Generating   "
 },
 {
@@ -1077,8 +1086,8 @@ var ptx_lunr_docs = [
   "url": "sec-gp-generators.html#exe-d2p",
   "type": "Exploration",
   "number": "3.23",
-  "title": "Generating <span class=\"process-math\">\\(D_{2p}\\)<\/span> but Different.",
-  "body": "Generating but Different  Let be prime and be any two distinct reflections in . Then .  "
+  "title": "Generating <span class=\"process-math\">\\(D_{2p}\\)<\/span>.",
+  "body": "Generating  Let be prime and be any two distinct reflections in . Then .  "
 },
 {
   "id": "generating-gl",
@@ -1195,7 +1204,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.3",
   "title": "Cyclic Groups",
-  "body": "Cyclic Groups  Cyclic Groups  Madness is the exception in individuals and the rule in groups. Friedrich Nietzsche  We zoom in now on the wondrous case in which a group can be generated by a single element.  Cylic Group   If is a generated by a single element, i.e. for some , then is called a cyclic group cyclic group cyclic .  We use the notation to denote an arbitrary cyclic group of order and to denote a cyclic group of infinite order.    Examples of Cyclic Groups       is a cyclic group.     is a cyclic group.    The group is cyclic.           , for example.     , for example.     , for example.       Not Quite Cyclic Groups   Prove that is not a cyclic group.    Prove that is not cyclic.    Recalling , we can describe the elements of a cylic group explicitely.  Elements of   For an element of , the elements of can be described as: .    By Lemma , the group has the following elements . We show that      by showing the elements are distinct. Indeed, if and then and , contradicting the minimality of the order of .     by showing (this implies ). Indeed, for any division by yields integers with such that . Then .       Generators are not unique.  Cyclic Generators Need not be Unique  Let be a cyclic group. Then .   Here is a more general criteria for determining when an element of a cyclic group is a generator.  Criteria for Cyclic Generators   Let be a cyclic group of order , and let . Then generates if and only if .    One quick way of seeing if a group is cyclic is to find an element with the same order as the group.  Cyclci iff Element of Order   Let be a finite group. Then is cyclic if and only if there exists an such that    Conveniently enough, cyclic groups are always abelian.  Cyclic Groups are Abelian   Every cyclic group is abelian.    Roots of Unity  For a fixed , is a subgroup of . Since and so if , then and hence for some real number . Moreover, implies that is an integer multiple of . It follows that and that generates . So, is cyclic or order . It is therefore isomorphic to , via the map .   One of the first things one does when encountering a new group is to examine its subgroups. As it turns out, cyclic groups have some very special properties when it comes to subgroups, though proving them will be more technical than anything we have encountered thus far.  Subgroups of Cyclic Groups   Let , where has finite order . Then there is a bijection for each divisor of . Moreover, for each subgroup of , . In particular, all subgroups of are cyclic and there is a unique subgroup of each order.        Claim 1: For any , setting gives that .  Since any element of is of the form for some . By the Division Theorem for some , . Since and are elements of , . Since and , by the minimality of it follows that cannot be positive and thus . Therefore and we have shown that . The opposite containment follows because and is the smallest subgroup of containing . Thus .  Let be given by .   Claim 2: For any divisor of , we have .  We have    Claim 3: For any subgroup of , we have .  By Claim 1, any is either , for which or is of the form . In the latter case, setting we have and It remains to show that . By Bézout's Identity, for some integers . Since if follows that . On the other hand is a multiple of so and thus . Finally, we conclude that for any .  Claims 2 and 3 establish that is a two sided inverse to , thus is a bijection.       Cyclic Groups of Small Order     Every group of orders are cyclic.    Every abelian group of order is cyclic.      Finally, we end with two results that will prove invaluable later in the course. Though we won't see them for some time, proving them now will be good practice and save us time later on.    The automorphism group of is isomorphic to the multiplicative group of units of via the map where .    In particular:    If is prime the automorphism group of is cyclic, namely .     Uniqueness of Cyclic Groups  There is no way to be in cyclic existence without creating the causes of suffering. Jetsunma Ahkon Lhamo  I used to wonder when my boomerang would come back to me. Then it hit me. Ancient Proverb  UMP for Cyclic Groups   universal mapping property for a cyclic group Assume and let be any group. If , then for each such that , there is a unique group homomorphism such that . If , then for each , there is a unique group homomorphism such that . In both cases this unique group homomorphism is given by for any .    Recall that either (with no repetitions) if or (with no repetitions) if .   Uniqueness: We show that if is a group homomorphism, then for all .     if then     if then     if then , using the formula above for       Existence: In either case, define for all relevant (i.e., in the first case, for and in the second for all ). We need to show this function is a well-defined group homomorphism. To see that is well defined, suppose for some . Then, since , suing Lemma or the definition for order we have Thus, if then .  The homomorphism property is immediate: . ◻    This is a particular case of the universal mapping property of a presentation (which is covered in ), since a cyclic group is either presented by or .  Classification Theorem for Cyclic Groups   classification of cyclic groups Every infinite cyclic group is isomorphic to . Every cyclic group of order is isomorphic to .    Suppose with or and set in the first case and in the second case. Then by , there are homomorphisms and such that and . So is an endomorphisms of mapping to . But the identity map also has this property, and so the uniqueness clause gives . Similarly, .    Notation: and Moving forward, it is customary to denote the cyclic group of order with the notation . We similarly denote the infinite cyclic group . Why the integers aren't enough for some people, I'll never know.  Cyclic Groups of Relatively Prime Order   Prove that if are positive integers such that then there is a group isomorphism .    Sunzi's Remainder Theorem   Sunzi's Remainder Theorem for groups Suppose for distinct primes . Then there is an isomorphism given by where denote the class of an integer in .    Using , we let be the unique homomorhism that sends to . Then Clearly and so . Conversely, if , then for all and since are pairwise relatively prime, it follows that . This proves . The claim follows by the .    This theorem frequently goes by the name of The Chinese Remainder Theorem Chinese Remainder Theorem , but it has been remarked that this is somewhat like referencing the Pythagorean Theorem as The Greek Triangle Theorem or Fermat's Little Theorem as The French Power Postulate. In the interest of giving credit where credit is due, we include it here with the name of the 3rd-century Chinese mathematician, Sunzi, to whom the result is often attributed.   Qualifying Exam Problems  Consider the set .   Prove that .    Prove that for each integer , there is a unique subgroup with and that is cyclic.    Prove that every finitely generated subgroup of has finitely many elements.    Prove that is not finitely generated.      "
+  "body": "Cyclic Groups  Cyclic Groups  Madness is the exception in individuals and the rule in groups. Friedrich Nietzsche  We zoom in now on the wondrous case in which a group can be generated by a single element.  Cylic Group   If is a generated by a single element, i.e. for some , then is called a cyclic group cyclic group cyclic .  We use the notation to denote an arbitrary cyclic group of order and to denote a cyclic group of infinite order.    Recalling , we can describe the elements of a cylic group explicitely.  Elements of   For an element of , the elements of can be described as: .    By Lemma , the group has the following elements . We show that      by showing the elements are distinct. Indeed, if and then and , contradicting the minimality of the order of .     by showing (this implies ). Indeed, for any division by yields integers with such that . Then .       One quick way of seeing if a finite group is cyclic is to find an element with the same order as the group.  Cyclic iff Element of Order   Let be a finite group. Then is cyclic if and only if there exists an such that    Examples of Cyclic Groups       is a cyclic group.     is a cyclic group.    The group is cyclic.           , for example.     , for example.     , for example.       Not Quite Cyclic Groups   Prove that is not a cyclic group.    Prove that is not cyclic.    Generators are not unique.  Cyclic Generators are not Unique  Let be a cyclic group. Then .   Here is a more general criteria for determining when an element of a cyclic group is a generator.  Criteria for Cyclic Generators   Let be a cyclic group of order , and let . Then generates if and only if .    Conveniently enough, cyclic groups are always abelian.  Cyclic Groups are Abelian   Every cyclic group is abelian.    Roots of Unity  For a fixed , is a subgroup of . Since and so if , then and hence for some real number . Moreover, implies that is an integer multiple of . It follows that and that generates . So, is cyclic or order . It is therefore isomorphic to , via the map .   One of the first things one does when encountering a new group is to examine its subgroups. As it turns out, cyclic groups have some very special properties when it comes to subgroups, though proving them will be more technical than anything we have encountered thus far.  Subgroups of Cyclic Groups   Let , where has finite order . Then there is a bijection for each divisor of . Moreover, for each subgroup of , . In particular, all subgroups of are cyclic and there is a unique subgroup of each order.        Claim 1: For any , setting gives that .  Since any element of is of the form for some . By the Division Theorem for some , . Since and are elements of , . Since and , by the minimality of it follows that cannot be positive and thus . Therefore and we have shown that . The opposite containment follows because and is the smallest subgroup of containing . Thus .  Let be given by .   Claim 2: For any divisor of , we have .  We have    Claim 3: For any subgroup of , we have .  By Claim 1, any is either , for which or is of the form . In the latter case, setting we have and It remains to show that . By Bézout's Identity, for some integers . Since if follows that . On the other hand is a multiple of so and thus . Finally, we conclude that for any .  Claims 2 and 3 establish that is a two sided inverse to , thus is a bijection.       Cyclic Groups of Small Order     Every group of orders are cyclic.    Every abelian group of order is cyclic.      Finally, we end with two results that will prove invaluable later in the course. Though we won't see them for some time, proving them now will be good practice and save us time later on.    The automorphism group of is isomorphic to the multiplicative group of units of via the map where .    In particular:    If is prime the automorphism group of is cyclic, namely .     Uniqueness of Cyclic Groups  There is no way to be in cyclic existence without creating the causes of suffering. Jetsunma Ahkon Lhamo  I used to wonder when my boomerang would come back to me. Then it hit me. Ancient Proverb  UMP for Cyclic Groups   universal mapping property for a cyclic group Assume and let be any group. If , then for each such that , there is a unique group homomorphism such that . If , then for each , there is a unique group homomorphism such that . In both cases this unique group homomorphism is given by for any .    Recall that either (with no repetitions) if or (with no repetitions) if .   Uniqueness: We show that if is a group homomorphism, then for all .     if then     if then     if then , using the formula above for       Existence: In either case, define for all relevant (i.e., in the first case, for and in the second for all ). We need to show this function is a well-defined group homomorphism. To see that is well defined, suppose for some . Then, since , suing Lemma or the definition for order we have Thus, if then .  The homomorphism property is immediate: . ◻    This is a particular case of the universal mapping property of a presentation (which is covered in ), since a cyclic group is either presented by or .  Classification Theorem for Cyclic Groups   classification of cyclic groups Every infinite cyclic group is isomorphic to . Every cyclic group of order is isomorphic to .    Suppose with or and set in the first case and in the second case. Then by , there are homomorphisms and such that and . So is an endomorphisms of mapping to . But the identity map also has this property, and so the uniqueness clause gives . Similarly, .    Notation: and Moving forward, it is customary to denote the cyclic group of order with the notation . We similarly denote the infinite cyclic group . Why the integers aren't enough for some people, I'll never know.  Cyclic Groups of Relatively Prime Order   Prove that if are positive integers such that then there is a group isomorphism .    Sunzi's Remainder Theorem   Sunzi's Remainder Theorem for groups Suppose for distinct primes . Then there is an isomorphism given by where denote the class of an integer in .    Using , we let be the unique homomorhism that sends to . Then Clearly and so . Conversely, if , then for all and since are pairwise relatively prime, it follows that . This proves . The claim follows by the .    This theorem frequently goes by the name of The Chinese Remainder Theorem Chinese Remainder Theorem , but it has been remarked that this is somewhat like referencing the Pythagorean Theorem as The Greek Triangle Theorem or Fermat's Little Theorem as The French Power Postulate. In the interest of giving credit where credit is due, we include it here with the name of the 3rd-century Chinese mathematician, Sunzi, to whom the result is often attributed.   Qualifying Exam Problems  Consider the set .   Prove that .    Prove that for each integer , there is a unique subgroup with and that is cyclic.    Prove that every finitely generated subgroup of has finitely many elements.    Prove that is not finitely generated.      "
 },
 {
   "id": "def-cyclic-group",
@@ -1207,11 +1216,29 @@ var ptx_lunr_docs = [
   "body": "Cylic Group   If is a generated by a single element, i.e. for some , then is called a cyclic group cyclic group cyclic .  We use the notation to denote an arbitrary cyclic group of order and to denote a cyclic group of infinite order.   "
 },
 {
+  "id": "cor-cyclic-subgroup",
+  "level": "2",
+  "url": "sec-cyclic.html#cor-cyclic-subgroup",
+  "type": "Corollary",
+  "number": "3.37",
+  "title": "Elements of <span class=\"process-math\">\\(\\igen x\\)<\/span>.",
+  "body": "Elements of   For an element of , the elements of can be described as: .    By Lemma , the group has the following elements . We show that      by showing the elements are distinct. Indeed, if and then and , contradicting the minimality of the order of .     by showing (this implies ). Indeed, for any division by yields integers with such that . Then .      "
+},
+{
+  "id": "prop-cyclic-equivalencies",
+  "level": "2",
+  "url": "sec-cyclic.html#prop-cyclic-equivalencies",
+  "type": "Proposition",
+  "number": "3.38",
+  "title": "Cyclic iff Element of Order <span class=\"process-math\">\\(|G|\\)<\/span>.",
+  "body": "Cyclic iff Element of Order   Let be a finite group. Then is cyclic if and only if there exists an such that   "
+},
+{
   "id": "ex-cyclic-examples",
   "level": "2",
   "url": "sec-cyclic.html#ex-cyclic-examples",
   "type": "Example",
-  "number": "3.37",
+  "number": "3.39",
   "title": "Examples of Cyclic Groups.",
   "body": "Examples of Cyclic Groups       is a cyclic group.     is a cyclic group.    The group is cyclic.           , for example.     , for example.     , for example.      "
 },
@@ -1220,45 +1247,27 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-cyclic.html#exe-not-cyclic",
   "type": "Exploration",
-  "number": "3.38",
+  "number": "3.40",
   "title": "Not Quite Cyclic Groups.",
   "body": "Not Quite Cyclic Groups   Prove that is not a cyclic group.    Prove that is not cyclic.   "
-},
-{
-  "id": "cor-cyclic-subgroup",
-  "level": "2",
-  "url": "sec-cyclic.html#cor-cyclic-subgroup",
-  "type": "Corollary",
-  "number": "3.39",
-  "title": "Elements of <span class=\"process-math\">\\(\\igen x\\)<\/span>.",
-  "body": "Elements of   For an element of , the elements of can be described as: .    By Lemma , the group has the following elements . We show that      by showing the elements are distinct. Indeed, if and then and , contradicting the minimality of the order of .     by showing (this implies ). Indeed, for any division by yields integers with such that . Then .      "
 },
 {
   "id": "exe-non-unique-cyclic-generators",
   "level": "2",
   "url": "sec-cyclic.html#exe-non-unique-cyclic-generators",
   "type": "Exploration",
-  "number": "3.40",
-  "title": "Cyclic Generators Need not be Unique.",
-  "body": "Cyclic Generators Need not be Unique  Let be a cyclic group. Then .  "
+  "number": "3.41",
+  "title": "Cyclic Generators are not Unique.",
+  "body": "Cyclic Generators are not Unique  Let be a cyclic group. Then .  "
 },
 {
-  "id": "prop-cyclic-criteria",
+  "id": "thm-cyclic-criteria",
   "level": "2",
-  "url": "sec-cyclic.html#prop-cyclic-criteria",
-  "type": "Proposition",
-  "number": "3.41",
+  "url": "sec-cyclic.html#thm-cyclic-criteria",
+  "type": "Theorem",
+  "number": "3.42",
   "title": "Criteria for Cyclic Generators.",
   "body": "Criteria for Cyclic Generators   Let be a cyclic group of order , and let . Then generates if and only if .   "
-},
-{
-  "id": "prop-cyclic-equivalencies",
-  "level": "2",
-  "url": "sec-cyclic.html#prop-cyclic-equivalencies",
-  "type": "Proposition",
-  "number": "3.42",
-  "title": "Cyclci iff Element of Order <span class=\"process-math\">\\(|G|\\)<\/span>.",
-  "body": "Cyclci iff Element of Order   Let be a finite group. Then is cyclic if and only if there exists an such that   "
 },
 {
   "id": "thm-cyclic-abelian",
@@ -1981,9 +1990,9 @@ var ptx_lunr_docs = [
   "body": "Faithful Action   An action of a group on a set is called faithful if the associated group homomorphism is injective. Equivalently, an action is faithful if and only if for a given , whenever for all , it must be that .   "
 },
 {
-  "id": "exploration-1",
+  "id": "exploration-2",
   "level": "2",
-  "url": "graction.html#exploration-1",
+  "url": "graction.html#exploration-2",
   "type": "Discussion",
   "number": "5.1",
   "title": "",
@@ -2908,9 +2917,9 @@ var ptx_lunr_docs = [
   "body": "  Let and be subgroups of a group and define the set  I wish this had a name other than \"HK\"    "
 },
 {
-  "id": "exploration-2",
+  "id": "exploration-3",
   "level": "2",
-  "url": "sec-dps.html#exploration-2",
+  "url": "sec-dps.html#exploration-3",
   "type": "Discussion",
   "number": "7.1",
   "title": "",
@@ -3079,9 +3088,9 @@ var ptx_lunr_docs = [
   "body": "External Semidirect Products   Let and be groups and let be a homomorphism. The (external) semidirect product induced by is the set with the binary operation defined by This group is denoted by .   "
 },
 {
-  "id": "exploration-3",
+  "id": "exploration-4",
   "level": "2",
-  "url": "sec-spds.html#exploration-3",
+  "url": "sec-spds.html#exploration-4",
   "type": "Discussion",
   "number": "7.2",
   "title": "",
@@ -3382,7 +3391,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "9.1",
   "title": "Ring Basics",
-  "body": "Ring Basics  From Rings to Fields  I made a lot of mistakes out of the ring, but I never made any in it. Jack Johnson  Ring   A ring is a set equipped with two binary operations, and , satisfying:      is an with identity element denoted ,    Associative Multiplication   is associative (making a )    Distributive Law   and hold for all .       Rings  Rings were first discovered (or created) by the German mathematician in the early 20th century, who used the term \"Ring\" because of the circular nature of the structure. The operations interact with each other in a circular way, such that multiplication distributes over addition, and addition and multiplication satisfy certain other algebraic properties.   Here are some basic consequences of the axioms.  Ring Arithmetic   For any ring and all we have:      ,     ,     .       Let be a ring with identity.   Let . Observe that by the distributive law. Subtracting from both sides we have . A similar argument shows that .    Let . Note that . Consider . Using the distributive law we see that . Thus and are both additive inverses of making them unique.       Unital Ring   A ring is a unital ring (or a ring with identity ) if there is a multiplicative identity element, written as , such that for all .    Around these parts most of us generally include in our definition of a ring, referring to a ring without an identity as a rng Get it? . However, we'll stick with the more classical definition for now.  Some additional consequences.  Unital Ring Arithmetic   For a unital ring and all we have:      is unique, and     .       We can go deeper.  Division Ring   A unital ring is a division ring if and is a group under (i.e. every has a multiplicative inverse)    We can go deeper .  Commutative Ring   A ring is commutative if holds for all      One could argue that commutative rings should really be called abelian rings to remain consistent with abelian groups. Discuss.   We can go deeper .  Field   A ring is a field if it is a commutative division ring.    Fields  The term \"Field\" was first introduced by the German mathematician Ernst Steinitz in the early 20th century. It was chosen because of the analogy with the physical concept of a field, such as an electric field or a gravitational field, which also has a notion of addition and multiplication, and satisfies certain algebraic properties.   Phew. That was pretty deep. Let's take a breather and see some examples.  Relevant Rings     Trivial Ring   is called the trivial ring , or zero ring . Personally, I am in favor of calling this the bor-ring .      is a commutative ring.     is a commutative ring under addition and multiplication modulo .    The familiar sets are fields.   Gaussian Integers  The set is a commutative ring known as the Gaussian integers .   Matrix Ring  If is any ring (not necessarily commutative), so is for any natural number , using the usual rules for addition and multiplication of square matrices.    Direct Product of Rings  The cartesian product of two rings and has a natural ring structure with addition and multiplication defined componentwise:         Let be a ring. Prove that if and only if .   Notice that in the trivial ring . Conversely, if in a ring, then , since in this case for all , we have and hence .   Direct Product Preservations Let and be rings. The Cartesian product is commutative if and only if and are commutative. Similarly, has identity if and only if both and do as well.  Less Relevant Rings    Opposite Day  Given a ring , let denote the “opposite ring''. This is the same underlying set as equipped with the same rule for as , but with multiplication rule (which I will write here as ) redefined to be (where refers to the original multiplication rule for ). Then is also a ring   The Real Hamiltonian Quaternion Ring  Let be formal symbols and set to be the four dimensional -vector space consisting of all expressions of the form with . Addition is vector space addition: Multiplication is uniquely determined by the axioms of a ring together with the rules and the fact that the real coefficients commute with each other and .  It's not obvious that the multiplication defined in this way satisfies associativity, but in fact it does (this amounts conditions very similar to the associativity of the group ).   is a division ring, since one can check that where   In the equation above is non-zero real number if is not the zero element. The quantity is called the norm of the quaternion .    Function Ring  If is a set and is a ring, let be the collection of set theoretic functions from to , and define and . Then is a ring. If is a finite set and , then may be identified with , the direct product of copies of .    Endomorphism Ring  If is any abelian group, set to be the collection of endomorphisms of — that is, the set of group homomorphisms from to itself.  Then is a ring with addition and multiplication . This is almost always a non-commutative ring.      Here is a nice generalization.  Binomial Theorem for Commutative Rings   For any commutative ring and any elements and in , we have: where is the binomial coefficient, defined as: with integers and such that .     Absolute Units  There is more power in unity than division. Emmanuel Cleaver  Unit   An element of a unital ring with is called a unit there exists such that and . In case such exists, it is unique, it is called the inverse of and denoted by .    Group of Units   The set of units of a non-trivial unital ring is denoted . This forms a group with respect to multiplication.    Finally, we have a formal definition for groups of units.  Sweet, Sweet Rigor The group of units is indeed a group with respect to multiplication.  Well, that was validating. Not as validating as it will be when we prove that matrix multiplication is associative, finally allowing us to complete the proof that is indeed a group. Soon... Months in the making. But enough vindication: we move forward. It's all we've ever known.  Units in Fields  Let be a field. Prove that every non-zero element of is a unit. In symbols, show .   is usually the standard way of proving that something is a field.  If you'll remember all the way back to , you'll see that we verified for and . This also explains why and had a different structure: they weren't fields.  is a Field!  In we showed that . Thus is a field for all primes .   Matrices and Units For any field we have .  Units in matrix rings are called invertible matrices , but they aren't very useful and we'll probably never see them again.  Gaussian Units  Let be the ring of Gaussian integers. Define a function    Prove that for any .    Use the function to determine the units of .         Let and behold So there's that done.    Suppose . Then by Part (1) we know so , with . Thus we have . So the units of are .      The function in is some incredibly spicy foreshadowing of something called a norm function, which we'll see more of in   A Zero Divided Cannot Stand  The only way on Earth to multiply happiness is to divide it. Paul Scherrer  We might not be able to divide by zero, but sometimes we can get the next best thing.  Zerodivisor   A zerodivisor in a ring is an element such that or for some . We once again jump the gun on the lack-of-hyphenation situation. Language evolves at its own rate, but who has time for that?     However, as it turns out, most of the time we are trying to avoid the next best thing.  Integral Domain   A unital ring is an integral domain (often shortened to domain ) if , is commutative, and has no zerodivisors.     The term \"integral domain\" was coined by , a German mathematician who lived in the 19th century.  The word \"integral\" comes from the Latin \"integer,\" meaning \"whole\" or \"untouched,\" which is fitting because in an integral domain, the product of two nonzero elements is never \"broken apart\" into smaller pieces by a zerodivisor.   Note that by saying that is equivalent to saying that is nontrivial.  is an Integral Domain  The ring of integers is an integral domain. Find two nonzero integers that multiply to . I dare you. This is, in our humble opinion, how all conjectures should be proven moving forward.    Unlike in groups, which have a notion of , rings do not necessarily come equipped with this property. One of the main niceties of integral domains is that cancellation is indeed possible (and in many cases encouraged).  Cancellation in Domains   Let be a commutative ring with identity. Then is an integral domain if and only if for all such that , we have . This property is called cancellation .    This is sometimes taken to be the definition of an integral domain, but only by those that are left handed. No one knows why.  Rather than jumping in and proving too many examples directly, let's be a little more efficient and discover a whole class of examples in one fell swoop. Well, actually two fell swoops, since we'll need a quick lemma first.  Zerodivisors and Units   If is a zerodivisor in a ring , then is not a unit.    Suppose that is both a zerodivisor and a unit. Then there exists such that or . Multiplying either of these equations by gives , a contradiction.    All right. Now it's one fell swoop.  Domains and Fields      Every field is an integral domain.    A finite integral domain must be a field.          Let be a field. By we know that every nonzero element of is a unit. Thus has no zerodivisors by .    Let , and consider the set . As is finite there must exist such that . Since is an integral domain allows us to cancel an from both sides, yielding , and thus , making a unit of . Thus is a field by .       In an introductory high school or college algebra course this notion is known as the zero factor principle for the real numbers, which is what allowes us to solve for the -intercepts (or zeros) of a polynomial equation after factoring it.  Finite Zerdivisors and Units    Prove that if is finite then every element is either a unit or a zerodivisor.    Give an example of a ring and an element which is neither a unit nor a zerodivisor.     Nilpotent  An element of a ring is called nilpotent if for some integer .   Nilpotents and Units  If is a nilpotent element in a unital ring , then is a unit.   Let be a nilpotent element of a ring. Show that is a unit of Deduce that the sum of a nilpotent element and a unit is a unit.  Idempotent  Let be a ring with identity. An element is called idempotent if .   Potent Idempotents Let be a ring with identity.   Give an example of a ring which has an idempotent other than or .    Prove that if is idempotent, so is .    Suppose is commutative and an idempotent. Let . Prove that is a commutative ring (with identity ).     Integral Idempotents Prove that the only idempotents in an integral domain are and .    "
+  "body": "Ring Basics  From Rings to Fields  I made a lot of mistakes out of the ring, but I never made any in it. Jack Johnson  Ring   A ring is a set equipped with two binary operations, and , satisfying:      is an with identity element denoted ,    Associative Multiplication   is associative (making a )    Distributive Law   and hold for all .       Rings  Rings were first discovered (or created) by the German mathematician in the early 20th century, who used the term \"Ring\" because of the circular nature of the structure. The operations interact with each other in a circular way, such that multiplication distributes over addition, and addition and multiplication satisfy certain other algebraic properties.   Here are some basic consequences of the axioms.  Ring Arithmetic   For any ring and all we have:      ,     ,     .       Let be a ring with identity.   Let . Observe that by the distributive law. Subtracting from both sides we have . A similar argument shows that .    Let . Note that . Consider . Using the distributive law we see that . Thus and are both additive inverses of making them unique.       Unital Ring   A ring is a unital ring (or a ring with identity ) if there is a multiplicative identity element, written as , such that for all .    Around these parts most of us generally include in our definition of a ring, referring to a ring without an identity as a rng Get it? . However, we'll stick with the more classical definition for now.  Some additional consequences.  Unital Ring Arithmetic   For a unital ring and all we have:      is unique, and     .       We can go deeper.  Division Ring   A unital ring is a division ring if and is a group under (i.e. every has a multiplicative inverse)    We can go deeper .  Commutative Ring   A ring is commutative if holds for all      One could argue that commutative rings should really be called abelian rings to remain consistent with abelian groups. Discuss.   We can go deeper .  Field   A ring is a field if it is a commutative division ring.    Fields  The term \"Field\" was first introduced by the German mathematician Ernst Steinitz in the early 20th century. It was chosen because of the analogy with the physical concept of a field, such as an electric field or a gravitational field, which also has a notion of addition and multiplication, and satisfies certain algebraic properties.   Phew. That was pretty deep. Let's take a breather and see some examples.  Relevant Rings     Trivial Ring   is called the trivial ring , or zero ring . Personally, I am in favor of calling this the bor-ring .      is a commutative ring.     is a commutative ring under addition and multiplication modulo .    The familiar sets are fields.   Gaussian Integers  The set is a commutative ring known as the Gaussian integers .   Matrix Ring  If is any ring (not necessarily commutative), so is for any natural number , using the usual rules for addition and multiplication of square matrices.    Direct Product of Rings  The cartesian product of two rings and has a natural ring structure with addition and multiplication defined componentwise:         Let be a ring. Prove that if and only if .   Notice that in the trivial ring . Conversely, if in a ring, then , since in this case for all , we have and hence .   Direct Product Preservations Let and be rings. The Cartesian product is commutative if and only if and are commutative. Similarly, has identity if and only if both and do as well.  Less Relevant Rings    Opposite Day  Given a ring , let denote the “opposite ring''. This is the same underlying set as equipped with the same rule for as , but with multiplication rule (which I will write here as ) redefined to be (where refers to the original multiplication rule for ). Then is also a ring   The Real Hamiltonian Quaternion Ring  Let be formal symbols and set to be the four dimensional -vector space consisting of all expressions of the form with . Addition is vector space addition: Multiplication is uniquely determined by the axioms of a ring together with the rules and the fact that the real coefficients commute with each other and .  It's not obvious that the multiplication defined in this way satisfies associativity, but in fact it does (this amounts conditions very similar to the associativity of the group ).   is a division ring, since one can check that where   In the equation above is non-zero real number if is not the zero element. The quantity is called the norm of the quaternion .    Function Ring  If is a set and is a ring, let be the collection of set theoretic functions from to , and define and . Then is a ring. If is a finite set and , then may be identified with , the direct product of copies of .    Endomorphism Ring  If is any abelian group, set to be the collection of endomorphisms of — that is, the set of group homomorphisms from to itself.  Then is a ring with addition and multiplication . This is almost always a non-commutative ring.      Here is a nice generalization.  Binomial Theorem for Commutative Rings   For any commutative ring and any elements and in , we have: where is the binomial coefficient, defined as: with integers and such that .     Absolute Units  There is more power in unity than division. Emmanuel Cleaver  Unit   An element of a unital ring with is called a unit there exists such that and . In case such exists, it is unique, it is called the inverse of and denoted by .    Group of Units   The set of units of a non-trivial unital ring is denoted . This forms a group with respect to multiplication.    Finally, we have a formal definition for groups of units.  Sweet, Sweet Rigor The group of units is indeed a group with respect to multiplication.  Well, that was validating. Not as validating as it will be when we prove that matrix multiplication is associative, finally allowing us to complete the proof that is indeed a group. Soon... Months in the making. But enough vindication: we move forward. It's all we've ever known.  Units in Fields  Let be a field. Prove that every non-zero element of is a unit. In symbols, show .   is usually the standard way of proving that something is a field.  If you'll remember all the way back to , you'll see that we verified for and . This also explains why and had a different structure: they weren't fields.  is a Field!  In we showed that . Thus is a field for all primes .   Matrices and Units For any field we have .  Units in matrix rings are called invertible matrices , but they aren't very useful and we'll probably never see them again. That was a joke. I'm very funny.  Gaussian Units  Let be the ring of Gaussian integers. Define a function    Prove that for any .    Use the function to determine the units of .         Let and behold So there's that done.    Suppose . Then by Part (1) we know so , with . Thus we have . So the units of are .      The function in is some incredibly spicy foreshadowing of something called a norm function, which we'll see more of in .   A Zero Divided Cannot Stand  The only way on Earth to multiply happiness is to divide it. Paul Scherrer  We might not be able to divide by zero, but sometimes we can get the next best thing.  Zerodivisor   A zerodivisor in a ring is an element such that or for some . We once again jump the gun on the lack-of-hyphenation situation. Language evolves at its own rate, but who has time for that?     However, as it turns out, most of the time we are trying to avoid the next best thing.  Integral Domain   A unital ring is an integral domain (often shortened to domain ) if , is commutative, and has no zerodivisors.     The term \"integral domain\" was coined by , a German mathematician who lived in the 19th century.  The word \"integral\" comes from the Latin \"integer,\" meaning \"whole\" or \"untouched,\" which is fitting because in an integral domain, the product of two nonzero elements is never \"broken apart\" into smaller pieces by a zerodivisor.   Note that by saying that is equivalent to saying that is nontrivial.  is an Integral Domain  The ring of integers is an integral domain. Find two nonzero integers that multiply to . I dare you. This is, in our humble opinion, how all conjectures should be proven moving forward.    Unlike in groups, which have a notion of , rings do not necessarily come equipped with this property. One of the main niceties of integral domains is that cancellation is indeed possible (and in many cases encouraged).  Cancellation in Domains   Let be a commutative ring with identity. Then is an integral domain if and only if for all such that , we have . This property is called cancellation .    This is sometimes taken to be the definition of an integral domain, but only by those that are aren't left handed. No one knows why; it just seemed right.  In an introductory high school or college algebra course this notion is known as the zero factor principle of the real numbers, which is what allowes us to solve for the -intercepts (or zeros) of a polynomial equation after factoring it.  Rather than jumping in and proving too many examples directly, let's be a little more efficient and discover a whole class of examples in one fell swoop. Well, actually two fell swoops, since we'll need a quick lemma first.  Zerodivisors and Units   If is a zerodivisor in a ring , then is not a unit.    Suppose that is both a zerodivisor and a unit. Then there exists such that or . Multiplying either of these equations by gives , a contradiction.    All right. Now it's one fell swoop.  Domains and Fields      Every field is an integral domain.    A finite integral domain must be a field.          Let be a field. By we know that every nonzero element of is a unit. Thus has no zerodivisors by .    Let , and consider the set . As is finite there must exist such that . Since is an integral domain allows us to cancel an from both sides, yielding , and thus , making a unit of . Thus is a field by .       Finite Zerdivisors and Units    Prove that if is finite then every element is either a unit or a zerodivisor.    Give an example of a ring and an element which is neither a unit nor a zerodivisor.     Nilpotent  An element of a ring is called nilpotent if for some integer .   Nilpotents and Units  If is a nilpotent element in a unital ring , then is a unit.   Let be a nilpotent element of a ring. Show that is a unit of Deduce that the sum of a nilpotent element and a unit is a unit.  Idempotent  Let be a ring with identity. An element is called idempotent if .   Potent Idempotents Let be a ring with identity.   Give an example of a ring which has an idempotent other than or .    Prove that if is idempotent, so is .    Suppose is commutative and an idempotent. Let . Prove that is a commutative ring (with identity ).     Integral Idempotents Prove that the only idempotents in an integral domain are and .    "
 },
 {
   "id": "def-ring",
@@ -3448,9 +3457,9 @@ var ptx_lunr_docs = [
   "body": "Commutative Ring   A ring is commutative if holds for all    "
 },
 {
-  "id": "exploration-4",
+  "id": "exploration-5",
   "level": "2",
-  "url": "sec-defn-ex.html#exploration-4",
+  "url": "sec-defn-ex.html#exploration-5",
   "type": "Discussion",
   "number": "9.1",
   "title": "",
@@ -3580,7 +3589,7 @@ var ptx_lunr_docs = [
   "type": "Remark",
   "number": "9.21",
   "title": "",
-  "body": "Units in matrix rings are called invertible matrices , but they aren't very useful and we'll probably never see them again. "
+  "body": "Units in matrix rings are called invertible matrices , but they aren't very useful and we'll probably never see them again. That was a joke. I'm very funny. "
 },
 {
   "id": "exe-gaussian-units",
@@ -3598,7 +3607,7 @@ var ptx_lunr_docs = [
   "type": "Remark",
   "number": "9.23",
   "title": "",
-  "body": "The function in is some incredibly spicy foreshadowing of something called a norm function, which we'll see more of in "
+  "body": "The function in is some incredibly spicy foreshadowing of something called a norm function, which we'll see more of in . "
 },
 {
   "id": "def-zerodivisor",
@@ -3652,14 +3661,23 @@ var ptx_lunr_docs = [
   "type": "Remark",
   "number": "9.29",
   "title": "",
-  "body": "This is sometimes taken to be the definition of an integral domain, but only by those that are left handed. No one knows why. "
+  "body": "This is sometimes taken to be the definition of an integral domain, but only by those that are aren't left handed. No one knows why; it just seemed right. "
+},
+{
+  "id": "remark-45",
+  "level": "2",
+  "url": "sec-defn-ex.html#remark-45",
+  "type": "Remark",
+  "number": "9.30",
+  "title": "",
+  "body": "In an introductory high school or college algebra course this notion is known as the zero factor principle of the real numbers, which is what allowes us to solve for the -intercepts (or zeros) of a polynomial equation after factoring it. "
 },
 {
   "id": "lem-zerodivisor-not-unit",
   "level": "2",
   "url": "sec-defn-ex.html#lem-zerodivisor-not-unit",
   "type": "Lemma",
-  "number": "9.30",
+  "number": "9.31",
   "title": "Zerodivisors and Units.",
   "body": "Zerodivisors and Units   If is a zerodivisor in a ring , then is not a unit.    Suppose that is both a zerodivisor and a unit. Then there exists such that or . Multiplying either of these equations by gives , a contradiction.   "
 },
@@ -3668,18 +3686,9 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-defn-ex.html#integral-domains-and-fields",
   "type": "Theorem",
-  "number": "9.31",
+  "number": "9.32",
   "title": "Domains and Fields.",
   "body": "Domains and Fields      Every field is an integral domain.    A finite integral domain must be a field.          Let be a field. By we know that every nonzero element of is a unit. Thus has no zerodivisors by .    Let , and consider the set . As is finite there must exist such that . Since is an integral domain allows us to cancel an from both sides, yielding , and thus , making a unit of . Thus is a field by .      "
-},
-{
-  "id": "remark-45",
-  "level": "2",
-  "url": "sec-defn-ex.html#remark-45",
-  "type": "Remark",
-  "number": "9.32",
-  "title": "",
-  "body": "In an introductory high school or college algebra course this notion is known as the zero factor principle for the real numbers, which is what allowes us to solve for the -intercepts (or zeros) of a polynomial equation after factoring it. "
 },
 {
   "id": "exe-neither-zerodivisor-nor-unit",
@@ -3772,9 +3781,9 @@ var ptx_lunr_docs = [
   "body": "Unlike with groups, we generally do not use the notation to denote a subring. In fact, I'm not sure if we have any notation for it at all. You know what that means! "
 },
 {
-  "id": "exploration-5",
+  "id": "exploration-6",
   "level": "2",
-  "url": "sec-subrings.html#exploration-5",
+  "url": "sec-subrings.html#exploration-6",
   "type": "Discussion",
   "number": "9.2",
   "title": "",
@@ -4519,45 +4528,45 @@ var ptx_lunr_docs = [
   "body": "All Ideals Contained in Maximal Ideal   If is a ring with and is a proper ideal of , then there is a maximal ideal of containing . In particular every ring contains a maximal ideal.    Let be the set of proper ideals of that contain and view as a poset under containment. We will apply . Suppose is a totally ordered subset of . We need to show has an upper bound in . If is empty, is such a bound. Otherwise, let .  Since is non-empty, we have and so .  Given , then for some . Since is totally ordered, either or , and hence or . Either way, .  For and , we have for some and hence .  This proves is an ideal that contains . Since every is a proper ideal, , so and hence is a proper ideal, so . By , we conclude has at least one maximal element . This is a maximal ideal in the sense of definition since if is an ideal of and then either or, if is proper, then , which yields by using that is a maximal element of .  The existence of a maximal ideal follows by applying the first part of the theorem for .   "
 },
 {
-  "id": "proposition-31",
+  "id": "proposition-30",
   "level": "2",
-  "url": "sec-primemax-ideals.html#proposition-31",
+  "url": "sec-primemax-ideals.html#proposition-30",
   "type": "Proposition",
   "number": "10.46",
   "title": "Qual.",
   "body": "Qual   Let be a commutative ring, and set . Prove that following assertions.     is an ideal in .  If is a field, then each element of is either a unit or in .         Let . Thus there exists integers such that . Consider Thus . Additionally, , and so as well.  We now consider as an additive group. Notice that and thus the identity is in there. Let We examine . Since we have and so . So . Perfect. We have ourselves a subring.    Suppose now that is a field. Luckily for us, this makes a maximal ideal.  Let . If , great. Suppose its not. Then in  is a unit, since we're in a field now. So for some . Thus for some . Since and a maximal and thus prime ideal, we have or , a contradiction.      "
 },
 {
-  "id": "proposition-32",
+  "id": "proposition-31",
   "level": "2",
-  "url": "sec-primemax-ideals.html#proposition-32",
+  "url": "sec-primemax-ideals.html#proposition-31",
   "type": "Proposition",
   "number": "10.47",
   "title": "Qual.",
   "body": "Qual      Prove that a finite integral domain must be a field.    Prove that if is a commutative ring and is a prime ideal such that has finite index as an additive subgroup of , then is a maximal ideal. Give an example to show that this implication may fail if the finite index assumption is dropped.       Let be a finite integral domain.   Let , and consider the set . As is finite there must exist such that . In integral domains cancellation is allowed, and thus we can cancel an from both sides, yielding , and thus , making a unit of . Thus is a field.    Let be a commutative ring and a prime ideal such that has finite index as an additive subgroup of .  Consider , which is a domain since is a prime ideal. As for some , we know that , making it a finite domain. Thus is a field by Part (a), making maximal by the same theorem as above.  Let and consider , in which is a prime ideal. However, , which does not have finite order, nor is it a field.      "
 },
 {
-  "id": "proposition-33",
+  "id": "proposition-32",
   "level": "2",
-  "url": "sec-primemax-ideals.html#proposition-33",
+  "url": "sec-primemax-ideals.html#proposition-32",
   "type": "Proposition",
   "number": "10.48",
   "title": "Qual.",
   "body": "Qual   Let be a commutative ring with identity, and assume .    Prove that every maximal ideal of is a prime ideal.  Assume is a finite ring. Prove that every prime ideal is a maximal ideal.         Let be a maximal ideal of . We show that is a field By the Lattice Isomorphism Theorem we know there is a one-to-one correspondence between the ideals of and the ideals of containing . However, as is maximal, the only ideals of containing are and itself, meaning that has exactly two ideals, making a field.  We show that since is a domain, must be prime. Suppose by way of contradiction that is not prime, so exist elements such that but neither nor are in . Thus , making and zerodivisors in , contradicting the fact that is a field. Thus is prime.    Let be a finite ring, and let be a prime ideal in , making an integral domain by . We show is a field. Let , and consider for all . As is finite, there exists some such that . Then , meaning that . Thus has inverse , making a unit. Thus is a field, making a maximal ideal by       "
 },
 {
-  "id": "proposition-34",
+  "id": "proposition-33",
   "level": "2",
-  "url": "sec-primemax-ideals.html#proposition-34",
+  "url": "sec-primemax-ideals.html#proposition-33",
   "type": "Proposition",
   "number": "10.49",
   "title": "Qual.",
   "body": "Qual   Let be a commutative ring in which every element satisfies for some . Show that every prime ideal in R is maximal.    Let be a commutative ring in which every element satisfies for some . Let be a prime ideal in .  Let , meaning . Then for some . As is a domain   we can cancel an to see that , and thus , making a unit in . Thus is a field, making maximal in .   "
 },
 {
-  "id": "proposition-35",
+  "id": "proposition-34",
   "level": "2",
-  "url": "sec-primemax-ideals.html#proposition-35",
+  "url": "sec-primemax-ideals.html#proposition-34",
   "type": "Proposition",
   "number": "10.50",
   "title": "Qual.",
@@ -5122,9 +5131,9 @@ var ptx_lunr_docs = [
   "body": " Let be an -module and be an ideal in . Show that the set is an -submodule of .  "
 },
 {
-  "id": "proposition-38",
+  "id": "proposition-37",
   "level": "2",
-  "url": "sec-defmod.html#proposition-38",
+  "url": "sec-defmod.html#proposition-37",
   "type": "Proposition",
   "number": "12.16",
   "title": "",
@@ -5230,27 +5239,27 @@ var ptx_lunr_docs = [
   "body": "Kernels and Images are Submodules   Let be a ring and let be an -module homomorphism. Then    is an -submodule of and     is an -submodule of .      "
 },
 {
-  "id": "proposition-39",
+  "id": "proposition-38",
   "level": "2",
-  "url": "sec-modhom.html#proposition-39",
+  "url": "sec-modhom.html#proposition-38",
   "type": "Proposition",
   "number": "12.26",
   "title": "",
   "body": "  Let be any field and the set of infinte-by-infinite, column-finite matrices. That is, consists of arrays , where and for all , such that for each , there exists an (depending on ) such that for all . That is, consists of elements of the form such that each column has only a finite number of non-zero entries (but, importantly, there is no uniform bound on the number of non-zero entries a column may have). It is not difficult to see that is a ring under the usual rules for adding and multiplying matrices: Given as above and we define and Note that the latter is a finite sum since, given , there is an such that for all . Moreover, is column-finite since, for each such , each of the columns of has only a finite number of non-zero elements. The multiplicative identity is the infinite identity matrix. You need not prove any of this.  Do prove that as left -modules. {} Think about splitting up an element of into its even and odd columns.   "
 },
 {
-  "id": "proposition-40",
+  "id": "proposition-39",
   "level": "2",
-  "url": "sec-modhom.html#proposition-40",
+  "url": "sec-modhom.html#proposition-39",
   "type": "Proposition",
   "number": "12.27",
   "title": "",
   "body": "  Show that for every nonzero integers and there is a -module isomorphism .   "
 },
 {
-  "id": "proposition-41",
+  "id": "proposition-40",
   "level": "2",
-  "url": "sec-modhom.html#proposition-41",
+  "url": "sec-modhom.html#proposition-40",
   "type": "Proposition",
   "number": "12.28",
   "title": "",
@@ -5446,18 +5455,18 @@ var ptx_lunr_docs = [
   "body": "Cyclic -module  If , then (recalling that a -module is the same thing as an abelian group) we see that is a cyclic -module if and only if is a cyclic group.  "
 },
 {
-  "id": "proposition-43",
+  "id": "proposition-42",
   "level": "2",
-  "url": "sec-linear.html#proposition-43",
+  "url": "sec-linear.html#proposition-42",
   "type": "Proposition",
   "number": "13.8",
   "title": "Cyclic Modules and Ideals.",
   "body": "Cyclic Modules and Ideals   Show that the left -module is cyclic if and only if there exists a left ideal of such that .   "
 },
 {
-  "id": "proposition-44",
+  "id": "proposition-43",
   "level": "2",
-  "url": "sec-linear.html#proposition-44",
+  "url": "sec-linear.html#proposition-43",
   "type": "Proposition",
   "number": "13.9",
   "title": "",
@@ -5554,9 +5563,9 @@ var ptx_lunr_docs = [
   "body": "Generated Modules  Finite Generation and Quotient Modules   Let be a ring with . Prove that if is an -module and is a submodule of such that and are finitely generated, then is finitely generated.    Every Cyclic -module to for some   Every cyclic -module is isomorphic to for some left ideal .    Say is cyclic and is a generator of , so that . Define to be the unique -map with . Here I am applying the UMP for bases, using that is a basis of as a left -modules. More explicitly, for all . Then is onto, since generates . Its kernel is a left ideal of , since submodules of are the same thing as left ideals. By the FIT, there is an isomorphism sending to .      Let be a ring. Recall that we proved in class that every cyclic -module is isomorphic to for some left ideal . Prove the left ideal occurring this statement is unique; that is, if a cyclic -module is isomorphic to and for left ideals and , then .     More generally, the same argument shows that if is a finitely generated module, say generated by elements, then for some submodule of .   is an -module   For a commutative ring , module and ideal , the rules for addition in and scaling by on introduced above make into an -module.  Moreover, given another -module and an -map , the function given by is a well-defined -module homomorphism.  Finally, if is yet another -module homomorphism, then , and we also have for any -module .    I leave some of the details as an exercise, but I will check a few of the necessary things:  We already showed that the rule for scaling is well defined, and we know from 817 that the rule for addition is well-defined and that is an abelian group. To show is an -module, there remain four axioms to verify. For instance, which verifies one of them; the other proofs are similar.  Next, let me verify that the function is a well-defined -map: Let be the composition of -maps (the second one being the canonical one), so that . Since for any 's belonging to and 's belonging to , we have . By the UMP for quotient modules, there is an induced -map given by . The map is so far only known to be an -map, but it is in fact an -map since The final assertions are clear from the formula for for an -map .     The Lemma shows that the rules and determine what is known as a functor from the category of -modules to the category of -modules.   Maximal Ideals and Vector Spaces  Suppose is a maximal ideal of a commutative ring . Then is a field, and given an -module , is a module over the field ; i.e., it is a vector space over this field. Moreover, if is an -map then is an -linear transformation.     Let be a non-zero commutative ring and suppose is a surjective homomorphism of -modules for some non-negative integers and .   Prove that if is a field, then .    Prove that if is any non-zero commutative ring, then .       Finitely Generated Modules and Submodules   Let be a ring, let be a left -module and let be a left -submodule.   Prove that if is finitely generated (as an -module), then so is .    Prove that if and are both finitely generated, then so is .    Prove the converse to the previous part is false, as follows: Let be a field and , the ring of polynomials in the infinite list of variables . (So, an element of is a {} -linear combination of monomials of the form for and . Note that each element of involves only a finite number of variables, but there is no uniform bound on how many such variables can be involved in the elements of .) You may assume without proof that is a ring with the usual rules for adding and multiplying polynomials, which make sense since each element of involves only a finite number of variables. Finally let be the ideal of generated by the variables . Prove is finitely generated as an -module but the submodule is not.       Split Surjection   Let be a ring, and left -modules, and an -module homomorphism. Assume that is surjective. We say is a split surjection if there exists an -module homomorphism such that (i.e., for all ).   Prove that if is free, then every surjective -module homomorphism of the form is a split surjection.    By giving an explicit example with justification, show the statement in part (1) would become false if were not assumed to be free.       Split Injection   Assume is a ring, an -module, and an injective -module homomorphism. We say is a split injection if there exists an -module homomorphism such that (i.e., for all ).       Prove that if is a field, is a subspace (i.e., submodule) of , and is the inclusion map, then is a split injection. Note that since is the inclusion map, what you need to prove is that there exists an -module homomorphism such that . {}: Start by picking a basis of and use a theorem proven in class to show that can be extended to a basis of . Use to construct . (I am assuming that is a subspace of and that is the inclusion map just for simplicity — more generally, it is true that every injective -module homomorphism is a split injection whenever is a field.)    Assume is a non-zero integral domain, but that it is not a field. Prove there exists an -module homomorphism that is an injection but {} a split injection. {}: Pick such that and is not a unit, let be the proper ideal generated by and show the inclusion map is not a split injection.         Prove that if is a commutative ring with then as -modules if and only if . In order to do that, you will complete the following steps:   Show that if is any ideal of and is any -module, then is an -module via     Show that if is any ideal of , then as -modules.    Apply the previous part when is a maximal ideal of . You will need to use the following fact, which we shall prove in class very soon: if is a field, then as -vector spaces if and only if .       Properties of Torsion Submodules   Let be a domain and let be an -module. The torsion submodule of is Elements of are called the torsion elements of , and the module is called torsion if . You may take for granted that this is actually a submodule of without proof.   Show that if and are -modules, then .    Show that if , then .    Show that if is a free -module then .    Show that if is an ideal of that is not principal, then is a torsion-free -module that is not a free -module.    Show that if is an ideal of then .    Suppose that R is a PID, and that is a finitely generated -module. Show that is a torsion-free -module if and only if is a free -module.       Annihilators and Direct Sums   Let be a commutative ring with . Show that       Computations and Examples       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Formal Proofs       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Qualifying Exam Problems      June 2010 Problem (5)  Let be a (not-necessarily commutative) ring let be a left -module. The annihilator of in is defined to be    Prove that is a -sided ideal of .    Suppose is an abelian group (i.e., a -module) such that and is the ideal generated by . How many possibilities, up to isomorphism, are there for ?         Let . Consider . Thus . Let and consider . Let and suppose for some . Add to both sides to see that . Thus and for all . So .  Note that as for all , we know that . As for all , we see that is a left sided ideal.  Suppose for some . This time we add to both sides, but as , we once again find that . Notice that this means for all and , and thus that elements of commute with elements of .  Let . Consider . Luckily, we know and thus that . Hence , making is a two sided ideal.    By the FTFGAG and Sunzi's Remainder Theorem, there are only so many options we have for :    ,     ,     ,     ,     ,     ,     ,          , and     .   However, as ideals are additive subgroups, we know that needs to contain a cyclic subgroup of order . Thus we need only consider decompositions with a in them, of which there are exactly two:                  June 2011 Problem (11)  Let be a commutative ring with , and let be a surjective homomorphism of free -modules. Prove that .   Coming soon to an OER near you!   Let and .  Let be a maximal ideal in . Thus is a field. Lemma 1.58 tells us that and are -vector spaces. Additionally, this gives rise to , which is a surjective -module linear transformation.  Note that is generated by for . Let and consider . For this to be we need it to be in , and thus all . So the set of is a basis for with elements. Likewise has a basis with elements. As we are surjective, Rank , . So by Rank-Nullity which is only positive with .    Recall that a -module is called torsion-free if its torsion submodule is where Consider the -module Show that is torsion free.   Let . Thus for some nonzero . Then , and so and . Then there exists such that and or and and . Notice that in we have , and thus neither nor can divide . Suppose and . As cannot divide we see that divides both and , placing them both . Thus . The same holds true if we use . Thus and .   June 2012 (5)  Let be a commutative integral domain and an -module. A subset of is called a maximal linearly independent subset of if is linearly independent and any subset of properly containing is linearly dependent.   Let be a linearly independent subset of . Prove that is contained in some maximal linearly independent subset of .    Let be a linearly independent subset of and let be the -submodule of generated by . Prove that is a maximal linearly independent subset if and only if is torsion. (Recall that an -module is called “torsion'' if for each , there is a such that and .)      Coming soon to an OER near you!    Let be an ideal in a commutative ring , let and be -modules and let be an -module homomorphism.   Prove there is a unique -module homomorphism such that , where and are the canonical quotient maps  Prove that if and is surjective, then so is . (Recall that is the ideal generated by all elements of the form , where .)         "
 },
 {
-  "id": "proposition-45",
+  "id": "proposition-44",
   "level": "2",
-  "url": "sec-modgen.html#proposition-45",
+  "url": "sec-modgen.html#proposition-44",
   "type": "Proposition",
   "number": "13.16",
   "title": "Finite Generation and Quotient Modules.",
@@ -5572,9 +5581,9 @@ var ptx_lunr_docs = [
   "body": "Every Cyclic -module to for some   Every cyclic -module is isomorphic to for some left ideal .    Say is cyclic and is a generator of , so that . Define to be the unique -map with . Here I am applying the UMP for bases, using that is a basis of as a left -modules. More explicitly, for all . Then is onto, since generates . Its kernel is a left ideal of , since submodules of are the same thing as left ideals. By the FIT, there is an isomorphism sending to .   "
 },
 {
-  "id": "proposition-47",
+  "id": "proposition-46",
   "level": "2",
-  "url": "sec-modgen.html#proposition-47",
+  "url": "sec-modgen.html#proposition-46",
   "type": "Proposition",
   "number": "13.18",
   "title": "",
@@ -5617,45 +5626,45 @@ var ptx_lunr_docs = [
   "body": "Maximal Ideals and Vector Spaces  Suppose is a maximal ideal of a commutative ring . Then is a field, and given an -module , is a module over the field ; i.e., it is a vector space over this field. Moreover, if is an -map then is an -linear transformation.  "
 },
 {
-  "id": "proposition-48",
+  "id": "proposition-47",
   "level": "2",
-  "url": "sec-modgen.html#proposition-48",
+  "url": "sec-modgen.html#proposition-47",
   "type": "Proposition",
   "number": "13.23",
   "title": "",
   "body": "  Let be a non-zero commutative ring and suppose is a surjective homomorphism of -modules for some non-negative integers and .   Prove that if is a field, then .    Prove that if is any non-zero commutative ring, then .      "
 },
 {
-  "id": "proposition-49",
+  "id": "proposition-48",
   "level": "2",
-  "url": "sec-modgen.html#proposition-49",
+  "url": "sec-modgen.html#proposition-48",
   "type": "Proposition",
   "number": "13.24",
   "title": "Finitely Generated Modules and Submodules.",
   "body": "Finitely Generated Modules and Submodules   Let be a ring, let be a left -module and let be a left -submodule.   Prove that if is finitely generated (as an -module), then so is .    Prove that if and are both finitely generated, then so is .    Prove the converse to the previous part is false, as follows: Let be a field and , the ring of polynomials in the infinite list of variables . (So, an element of is a {} -linear combination of monomials of the form for and . Note that each element of involves only a finite number of variables, but there is no uniform bound on how many such variables can be involved in the elements of .) You may assume without proof that is a ring with the usual rules for adding and multiplying polynomials, which make sense since each element of involves only a finite number of variables. Finally let be the ideal of generated by the variables . Prove is finitely generated as an -module but the submodule is not.      "
 },
 {
-  "id": "proposition-50",
+  "id": "proposition-49",
   "level": "2",
-  "url": "sec-modgen.html#proposition-50",
+  "url": "sec-modgen.html#proposition-49",
   "type": "Proposition",
   "number": "13.25",
   "title": "Split Surjection.",
   "body": "Split Surjection   Let be a ring, and left -modules, and an -module homomorphism. Assume that is surjective. We say is a split surjection if there exists an -module homomorphism such that (i.e., for all ).   Prove that if is free, then every surjective -module homomorphism of the form is a split surjection.    By giving an explicit example with justification, show the statement in part (1) would become false if were not assumed to be free.      "
 },
 {
-  "id": "proposition-51",
+  "id": "proposition-50",
   "level": "2",
-  "url": "sec-modgen.html#proposition-51",
+  "url": "sec-modgen.html#proposition-50",
   "type": "Proposition",
   "number": "13.26",
   "title": "Split Injection.",
   "body": "Split Injection   Assume is a ring, an -module, and an injective -module homomorphism. We say is a split injection if there exists an -module homomorphism such that (i.e., for all ).       Prove that if is a field, is a subspace (i.e., submodule) of , and is the inclusion map, then is a split injection. Note that since is the inclusion map, what you need to prove is that there exists an -module homomorphism such that . {}: Start by picking a basis of and use a theorem proven in class to show that can be extended to a basis of . Use to construct . (I am assuming that is a subspace of and that is the inclusion map just for simplicity — more generally, it is true that every injective -module homomorphism is a split injection whenever is a field.)    Assume is a non-zero integral domain, but that it is not a field. Prove there exists an -module homomorphism that is an injection but {} a split injection. {}: Pick such that and is not a unit, let be the proper ideal generated by and show the inclusion map is not a split injection.      "
 },
 {
-  "id": "proposition-52",
+  "id": "proposition-51",
   "level": "2",
-  "url": "sec-modgen.html#proposition-52",
+  "url": "sec-modgen.html#proposition-51",
   "type": "Proposition",
   "number": "13.27",
   "title": "",
@@ -5671,9 +5680,9 @@ var ptx_lunr_docs = [
   "body": "Properties of Torsion Submodules   Let be a domain and let be an -module. The torsion submodule of is Elements of are called the torsion elements of , and the module is called torsion if . You may take for granted that this is actually a submodule of without proof.   Show that if and are -modules, then .    Show that if , then .    Show that if is a free -module then .    Show that if is an ideal of that is not principal, then is a torsion-free -module that is not a free -module.    Show that if is an ideal of then .    Suppose that R is a PID, and that is a finitely generated -module. Show that is a torsion-free -module if and only if is a free -module.      "
 },
 {
-  "id": "proposition-53",
+  "id": "proposition-52",
   "level": "2",
-  "url": "sec-modgen.html#proposition-53",
+  "url": "sec-modgen.html#proposition-52",
   "type": "Proposition",
   "number": "13.29",
   "title": "Annihilators and Direct Sums.",
@@ -5824,27 +5833,27 @@ var ptx_lunr_docs = [
   "body": "Bases are not Unique  As you likely know from a class in linear algebra, bases of free modules are rarely unique. Indeed, if is any ring, then any single unit forms a basis for as a module over itself. For another example, for any ring and any fixed element , the set forms a basis for the free -module .  "
 },
 {
-  "id": "proposition-54",
+  "id": "proposition-53",
   "level": "2",
-  "url": "sec-bases.html#proposition-54",
+  "url": "sec-bases.html#proposition-53",
   "type": "Proposition",
   "number": "13.38",
   "title": "Every Module over a Field is Free.",
   "body": "Every Module over a Field is Free   Let be a commutative ring with . Show that if every -module is free then is a field.   "
 },
 {
-  "id": "proposition-55",
+  "id": "proposition-54",
   "level": "2",
-  "url": "sec-bases.html#proposition-55",
+  "url": "sec-bases.html#proposition-54",
   "type": "Proposition",
   "number": "13.39",
   "title": "<span class=\"process-math\">\\(\\Q\\)<\/span> is not a Free <span class=\"process-math\">\\(\\Z\\)<\/span>-module.",
   "body": "is not a Free -module   An abelian group is called divisible if for each and , there exists such that . Prove that if is a divisible abelian group then is not a free -module. Deduce that is not a free -module.   "
 },
 {
-  "id": "proposition-56",
+  "id": "proposition-55",
   "level": "2",
-  "url": "sec-bases.html#proposition-56",
+  "url": "sec-bases.html#proposition-55",
   "type": "Proposition",
   "number": "13.40",
   "title": "Free Modules have Trivial Annihilators.",
@@ -6247,81 +6256,81 @@ var ptx_lunr_docs = [
   "body": " Suitably interpreted, this is valid even if is infinite dimensional.  "
 },
 {
-  "id": "proposition-59",
+  "id": "proposition-58",
   "level": "2",
-  "url": "sec-ranknul.html#proposition-59",
+  "url": "sec-ranknul.html#proposition-58",
   "type": "Proposition",
   "number": "14.23",
   "title": "",
   "body": "  Let be a field and let and be finite dimensional -vector spaces.   Let be an -linear transformation. Prove , where by definition .    Let be an -linear transformation from to itself. Prove that if , then . (Note: Recall that, by definition, .)    For extra credit: Let be an -linear transformation from to itself. Prove that if for some then .      "
 },
 {
-  "id": "proposition-60",
+  "id": "proposition-59",
   "level": "2",
-  "url": "sec-ranknul.html#proposition-60",
+  "url": "sec-ranknul.html#proposition-59",
   "type": "Proposition",
   "number": "14.24",
   "title": "",
   "body": "  Suppose where is a field and for some integer . Prove . {}: Note that for any , . Show that if equality holds then .   "
 },
 {
-  "id": "proposition-61",
+  "id": "proposition-60",
   "level": "2",
-  "url": "sec-ranknul.html#proposition-61",
+  "url": "sec-ranknul.html#proposition-60",
   "type": "Proposition",
   "number": "14.25",
   "title": "",
   "body": "  Recall that a -module is called torsion-free if the only element such that for some non-zero integer is the element . Let where is the homomorphism for the matrix . Prove is torsion-free.   "
 },
 {
-  "id": "proposition-62",
+  "id": "proposition-61",
   "level": "2",
-  "url": "sec-ranknul.html#proposition-62",
+  "url": "sec-ranknul.html#proposition-61",
   "type": "Proposition",
   "number": "14.26",
   "title": "",
   "body": "  Let be a finite dimensional vector space over a field and an -linear transformation. Prove the following assertions.   There exists an integer such that for there are equalities and . (Here denotes composed with itself times.)     for any as above.     for any s as above. (Recall for subspaces and if and . )      "
 },
 {
-  "id": "proposition-63",
+  "id": "proposition-62",
   "level": "2",
-  "url": "sec-ranknul.html#proposition-63",
+  "url": "sec-ranknul.html#proposition-62",
   "type": "Proposition",
   "number": "14.27",
   "title": "",
   "body": "  Let be a field, an -vector space, and a subspace of . A subspace of is called a {} of in if and .   Prove that for every and as above, has at least one complement in .    Prove that if is a complement of in and is finite dimensional, then .    Prove that if is a subspace of with finite dimensional and , then is non-zero.          "
 },
 {
-  "id": "proposition-64",
+  "id": "proposition-63",
   "level": "2",
-  "url": "sec-ranknul.html#proposition-64",
+  "url": "sec-ranknul.html#proposition-63",
   "type": "Proposition",
   "number": "14.28",
   "title": "June 2012 (6).",
   "body": "June 2012 (6)   Let be the set of all matrices over a field , let denote the group (where, recall, is the group of invertible matrices with entries in ) and set for all and .   Prove that the formula above defines a group action.    Prove that each orbit contains a matrix such that for all and for all     How many orbits are there?      "
 },
 {
-  "id": "proposition-65",
+  "id": "proposition-64",
   "level": "2",
-  "url": "sec-ranknul.html#proposition-65",
+  "url": "sec-ranknul.html#proposition-64",
   "type": "Proposition",
   "number": "14.29",
   "title": "",
   "body": "  Let be a field, be an -linear transformation, and . Prove that    "
 },
 {
-  "id": "proposition-66",
+  "id": "proposition-65",
   "level": "2",
-  "url": "sec-ranknul.html#proposition-66",
+  "url": "sec-ranknul.html#proposition-65",
   "type": "Proposition",
   "number": "14.30",
   "title": "",
   "body": "  Let be an -linear transformation. Prove that if , then    "
 },
 {
-  "id": "proposition-67",
+  "id": "proposition-66",
   "level": "2",
-  "url": "sec-ranknul.html#proposition-67",
+  "url": "sec-ranknul.html#proposition-66",
   "type": "Proposition",
   "number": "14.31",
   "title": "June 2012 Problem (4).",
@@ -8173,9 +8182,9 @@ var ptx_lunr_docs = [
   "body": "Roots of Unity         June 2011 (4)   Fix a prime number , and let denote the abelian group of all complex roots of unity whose orders are powers of ; that is Prove the following statements.   Every non-trivial subgroup of contains the group of roots of unity.    Every proper subgroup of is cyclic.    If and are subgroups of , then either or .    For each there exists a unique subgroup of with elements.       Let be a non-trivial subgroup of . Then there exists some such that . Then yields a primitive root of unity, which can be used to generate the other roots as well. Thus contains the roots of unity.  Suppose is a proper subgroup of , meaning it is missing some root of unity. But the subgroup of those roots of unity is cyclic and is generated by every element, so that entire subgroup must be missing. But that subgroup can be generated with any primitive root of a higher power of , so must be finite and there must be some element of maximum order, which can be used to generate the whole group. Thus is cyclic.  Suppose and are subgroups of such that . Then is a proper subgroup of , making it finite as seen above. If there exists a higher power of in then it generates .  Let . Then the subgroup generated by the roots of unity have elements, and it is unique since it is generated by every such root.      Computations and Examples       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Formal Proofs       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Qualifying Exam Problems       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     "
 },
 {
-  "id": "proposition-81",
+  "id": "proposition-80",
   "level": "2",
-  "url": "sec-roots.html#proposition-81",
+  "url": "sec-roots.html#proposition-80",
   "type": "Proposition",
   "number": "18.9",
   "title": "June 2011 (4).",
@@ -8848,72 +8857,72 @@ var ptx_lunr_docs = [
   "body": "  Assume that is a finite extension of fields of degree .   Prove that if is irreducible of degree and then remains irreducible when regarded as an element of the ring .  Show, by means of an explicit example with justification, that the statement in part (a) would become false if the assumption that were omitted.      Let be a finite extension of fields of degree .  Suppose that is irreducible of degree and .  First, note that if then will remain irreducible in  . Suppose then that . There exists an algebraically closed extension such that has a root  . Consider . As is algebraic in we know there exists some unique irreducible minimum polynomial of degree , and thus that  . Using the  we see that However, and so for some , so . As we must have . But was defined to be the degree of , which divides . As and , we see that , so so for some . As irreducible polynomials multiplied by a constant are still irreducible, we see that is indeed irreducible in .  Let be a non-constant irreducible polynomial of degree in . Let . Because is irreducible and is a PID, is a maximal ideal. Thus is a field , , and is a root of in  . Hence is no longer irreducible by Theorem 2.2   "
 },
 {
-  "id": "proposition-97",
+  "id": "proposition-96",
   "level": "2",
-  "url": "sec-algebraic.html#proposition-97",
+  "url": "sec-algebraic.html#proposition-96",
   "type": "Proposition",
   "number": "19.43",
   "title": "",
   "body": "  Consider the two field extensions and .   Prove they have degrees and , respectively. {}: For the second one, show is irreducible in .    Find a primitive element for the extension and find .    Find a primitive element for the extension and find .       Consider the polynomial . This has a root , which is not in . Thus, as has degree 2, it is irreducible by Theorem 2.2 , making it the minimal polynomial of . Thus by Theorem 2.31 we see that .  Next, consider the polynomial . This has a root , which is not in as and . Let for convenience. As , has degree 2, it is irreducible by Theorem 2.2 , making it the minimal polynomial of . Thus by Theorem 2.31 we see that . Thus by the  we have .  By Example 2.22 we see that . However, as is the root of it is algebraic over we see that and thus that .  Next, consider the polynomial . This has a root , which is not in as and . Let for convenience. As , has degree 2, it is irreducible by Theorem 2.2 , making it the minimal polynomial of . Thus by Theorem 2.31 we see that . Thus by the  we have .  Consider , and note that and . Thus and . Thus is a primitive element of this extension field.  Next, consider the monic polynomial , and observe However, as , we see that is the root of this polynomial. Since this is a monic polynomial of degree , it must be the minimal polynomial as well. Thus the minimal polynomial of .  Consider , and note that , and .  Consider , and note that , and thus . Thus , so is a root of this polynomial. Since this is a monic polynomial of degree , it must be the minimal polynomial as well. Thus the minimal polynomial of .   "
 },
 {
-  "id": "proposition-98",
+  "id": "proposition-97",
   "level": "2",
-  "url": "sec-algebraic.html#proposition-98",
+  "url": "sec-algebraic.html#proposition-97",
   "type": "Proposition",
   "number": "19.44",
   "title": "",
   "body": "  Let be the field extension of obtained by adjoining to all four complex roots of the polynomial . ( is what's known as the “splitting field\" of over .) That is, where , , , and .   Prove that there exist a field extension such that , and . Tip : Note that is real number; find it explicitly.    Determine, with justification, .       Let be the field extension of obtained by adjoining to all four complex roots of the polynomial .  Let . Note that by using we see that is the root of an irreducible polynomial in . Thus by Theorem 2.31 we see that is the degree of the minimum polynomial of this extension. However, as is monic and of degree 4, we see that it is the minimal polynomial and thus that . As , this extension will be contained in the real numbers, and thus that .  Next, observe and thus that .  Note that is the root of , and since and , we see that is irreducible in due to it having degree 2. As is monic and degree 2 we see its the minimal polynomial of . By the , we see that .  Note that   ,   ,   , and   , all of which can be written with and . Thus .  We already know that , and thus all that remains is to show that can be expressed in terms of the . Observe and thus that . Thus , and . Hence .   "
 },
 {
-  "id": "proposition-99",
+  "id": "proposition-98",
   "level": "2",
-  "url": "sec-algebraic.html#proposition-99",
+  "url": "sec-algebraic.html#proposition-98",
   "type": "Proposition",
   "number": "19.45",
   "title": "",
   "body": "  Let be the splitting field of over where is an odd prime integer. Find . Tip : Consider both chains and .    As seen in Example 2.60, is a root of the th cyclotomic polynomial, which is monic and irreducible in . Hence is the minimal polynomial of the th cyclotomic polynomial in , and thus the field extension has degree over by Theorem 2.31. It follows that .  Next, note that is a root of the polynomial , making it algebraic over . Using in conjunction with the prime we see that is irreducible in . As , by Problem 5 on the previous homework we see that is irreducible in as well. As is irreducible and monic, we see that it is the minimal polynomial of in , and thus Using the , we see that Notice that , where , which are all roots of . By the Factor Theorem, there can be no other roots of this polynomial. Thus .  Additionally, notice that and are both roots of . Thus they are both contained in . Observe . Hence , and thus we see that . Therefore, .   "
 },
 {
-  "id": "proposition-100",
+  "id": "proposition-99",
   "level": "2",
-  "url": "sec-algebraic.html#proposition-100",
+  "url": "sec-algebraic.html#proposition-99",
   "type": "Proposition",
   "number": "19.46",
   "title": "",
   "body": "  Consider the two field extensions and .   Show that has degree .    Show that has degree .    Find a primitive element for the extension .    Find .      "
 },
 {
-  "id": "proposition-101",
+  "id": "proposition-100",
   "level": "2",
-  "url": "sec-algebraic.html#proposition-101",
+  "url": "sec-algebraic.html#proposition-100",
   "type": "Proposition",
   "number": "19.47",
   "title": "January 2014 (5).",
   "body": "January 2014 (5)   Let be a subfield of and suppose every element of is a root of a polynomial of degree in . Prove that . (Note: is not assumed to be a finite extension of .)   "
 },
 {
-  "id": "proposition-102",
+  "id": "proposition-101",
   "level": "2",
-  "url": "sec-algebraic.html#proposition-102",
+  "url": "sec-algebraic.html#proposition-101",
   "type": "Proposition",
   "number": "19.48",
   "title": "",
   "body": "  Let be a prime integer and let be a root of the polynomial .   Find, with justification, the degree of the field extension over .  Deduce that the polynomial is irreducible in .     "
 },
 {
-  "id": "proposition-103",
+  "id": "proposition-102",
   "level": "2",
-  "url": "sec-algebraic.html#proposition-103",
+  "url": "sec-algebraic.html#proposition-102",
   "type": "Proposition",
   "number": "19.49",
   "title": "",
   "body": "  Let be the splitting field over of the polynomial   Find, with justification, .  Note that (where is the unique positive, real fifth root of ) is one of the roots of . Prove is the trivial group.      Let be the splitting field over of the polynomial   Note that is irreducible in by ( ). The roots of are                   5.      As is monic and irreducible it is the minimum polynomial of . Let , and notice . Note that   Let be a primitive root of unity. This is the root a cyclotomic polynomial of degree which is irreducible in . As this has relatively prime order to it is irreducible there as well. Let , and notice . Notice that , and so , completing the proof.   "
 },
 {
-  "id": "proposition-104",
+  "id": "proposition-103",
   "level": "2",
-  "url": "sec-algebraic.html#proposition-104",
+  "url": "sec-algebraic.html#proposition-103",
   "type": "Proposition",
   "number": "19.50",
   "title": "",
@@ -9226,18 +9235,18 @@ var ptx_lunr_docs = [
   "body": "  Assume is an algebraic field extension such that every non-constant polynomial in splits completely into linear factors in . Prove is an algebraic closure of .    Let be an algebraic field extension such that every non-constant polynomial in splits completely into linear factors in .  Let be a polynomial in , so , with , and let be a root of . There [[Theorem – Existence and Uniqueness of Algebraic Closures|exists]] some field extension such that is algebraically closed, meaning . Notice that is algebraic over .  Consider the chain of field extensions making algebraic over as well. As every non-constant polynomial in splits completely into linear factors in , this yields .   "
 },
 {
-  "id": "proposition-114",
+  "id": "proposition-113",
   "level": "2",
-  "url": "sec-splitting.html#proposition-114",
+  "url": "sec-splitting.html#proposition-113",
   "type": "Proposition",
   "number": "19.76",
   "title": "",
   "body": "  Let be the splitting field of over . (Recall that this extension occurred on the last problem set, and that where - , - , - , and - .) Prove .    Note that from the previous homework, we know that , and that . Additionally, we know the following: - , - , - , and - . Note that by using we see that is irreducible in . As has characteristic 0, we see that is separable as well.  As is the splitting field of an irreducible polynomial in , by Theorem 2.90 we see that . In the Gaussian integers, it is known that if both and are nonzero then, is a Gaussian prime if and only if is an ordinary prime. Note that , and that , which is prime. Thus is prime in . Thus we may invoke using to see that is irreducible in , as does not divide 5, but we'll prove it just to be sure.  Suppose . Then , so , and thus . As 5 has no imaginary component, it must be the case that , and thus that . Substituting in, we see that , and thus that , which has historically not been an integer.  Anyway, we may thus apply Porism 2.61 to see that there exists some such that . We may regard as an element of since, by definition, is a subgroup of .  As , observe the following glory: With that in mind, we examine and and don't forget So corresponds to the permutation (1 2 3 4). We have proven that is isomorphic to a subgroup of having order at most 8 and that it contains an element or order 2 and (1 2 3 4), an element of order 4. Since the subgroup generated by these two elements has order 8, we see that . (Also by , only has one subgroup of order 8, and it is ).   "
 },
 {
-  "id": "proposition-115",
+  "id": "proposition-114",
   "level": "2",
-  "url": "sec-splitting.html#proposition-115",
+  "url": "sec-splitting.html#proposition-114",
   "type": "Proposition",
   "number": "19.77",
   "title": "",
@@ -10198,9 +10207,9 @@ var ptx_lunr_docs = [
   "body": "IASN   If , and for all , then    .     .     . If moreover is injective, then .     . If moreover is injective, then .      "
 },
 {
-  "id": "theorem-129",
+  "id": "theorem-130",
   "level": "2",
-  "url": "sec-sets-functions.html#theorem-129",
+  "url": "sec-sets-functions.html#theorem-130",
   "type": "Theorem",
   "number": "A.19",
   "title": "Containments of Images, Preimages.",
@@ -10567,9 +10576,9 @@ var ptx_lunr_docs = [
   "body": "   is a normal series. Since is cyclic of order , it has a composition series as in the previous example. By inserting this into the length two normal series given here, we obtain a composition series of with composition factors    "
 },
 {
-  "id": "proposition-128",
+  "id": "proposition-127",
   "level": "2",
-  "url": "section-67.html#proposition-128",
+  "url": "section-67.html#proposition-127",
   "type": "Proposition",
   "number": "B.18",
   "title": "",
@@ -10603,9 +10612,9 @@ var ptx_lunr_docs = [
   "body": "Butterly Lemma of Zassenhaus   If is a group, , , , and , then , , , and there is an isomorphism    "
 },
 {
-  "id": "theorem-138",
+  "id": "theorem-139",
   "level": "2",
-  "url": "section-67.html#theorem-138",
+  "url": "section-67.html#theorem-139",
   "type": "Theorem",
   "number": "B.22",
   "title": "",

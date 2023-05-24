@@ -13,13 +13,17 @@
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(G\)</span> be any group, and recall the <a href="" class="xref" data-knowl="./knowl/ex-commutator-subgroup.html" title="Example 3.29: Commutator Subgroup">Commutator Subgroup</a>. In <code class="code-inline tex2jax_ignore">[provisional cross-reference: G' normal]</code> we saw <span class="process-math">\(G'\nsg G\text{.}\)</span> Now let <span class="process-math">\(\varphi: G \to A\)</span> be any group homomorphism from <span class="process-math">\(G\)</span> to an abelian group <span class="process-math">\(A\text{.}\)</span> Since <span class="process-math">\(\varphi([x,y]) = [\varphi(x),\varphi(y)] = e\)</span> for all <span class="process-math">\(x, y \in G\)</span> (since <span class="process-math">\(A\)</span> is abelian), we have that <span class="process-math">\(\operatorname{ker}(\varphi)\)</span> must contain <span class="process-math">\(G'\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/thm-ump-quotient.html" title="Theorem 4.47: UMP for Quotients">Theorem 4.47</a>, we get that <span class="process-math">\(\varphi\)</span> factors as</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/ex-commutator-subgroup.html  ./knowl/thm-ump-quotient.html">
+<div class="para">If such a <span class="process-math">\(\overline{f}\)</span> exists, it is necessarily unique since <span class="process-math">\(G \twoheadrightarrow G/N\)</span> is onto. In fact, if <span class="process-math">\(f=\pi\circ \overline{f}\)</span> then <span class="process-math">\(\overline{f}\)</span> has to be given by the formula</div>
+<div class="displaymath process-math">
 \begin{equation*}
-\varphi:G \xrightarrow{{\pi}} G/G' \xrightarrow{\overline{\varphi}} A
+\overline{f}(gN) = f(g).
 \end{equation*}
 </div>
-<div class="para">for a unique group homomorphism <span class="process-math">\(\overline{\varphi}\text{.}\)</span>
+<div class="para">We now need to show that this formula determines a well-defined homomorphism: If <span class="process-math">\(xN = yN\text{,}\)</span> then <span class="process-math">\(y^{-1}x \in N \subseteq \operatorname{Ker}(f)\)</span> and so <span class="process-math">\(f(y)^{-1} f(x) = e\text{,}\)</span> whence <span class="process-math">\(f(y) = f(x)\text{.}\)</span> For any <span class="process-math">\(x,y\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\overline{f}(xNyN) = \overline{f}(xyN) = f(xy) = f(x)f(y) =\overline{f}(xN) \overline{f}(yN).
+\end{equation*}
 </div>
 </div>
 <span class="incontext"><a href="sec-quotient-groups.html#p-569" class="internal">in-context</a></span>
