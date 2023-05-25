@@ -478,8 +478,6 @@
       
       <chapter xml:id="ch-intro-groups"><title>Intro to Groups</title>
 
-  
-      
         <section xml:id="sec-group-basics"><title>Group Basics</title>
 
           <subsection xml:id="subsec-beginnings"><title>Binary Operations and Groups</title>
@@ -988,7 +986,7 @@
 
         <section xml:id="sec-order-power"><title>Order and Power</title>
 
-          <subsection xml:id="subsec-order"><title>Order</title>
+          <subsection xml:id="subsec-power"><title>Power</title>
 
             <blockquote><p><q>In order to make a choice, you need the power to see there is one.</q></p><attribution>Gloria Steinem</attribution></blockquote>
 
@@ -1049,6 +1047,10 @@
             </theorem>
 
             <p>After stumbling around with your newfound power for some time, you might chance upon the fact that while your power may be unlimited, its impacts may be very limited indeed. For example, no matter how high you climb into the natural numbers you will always find that <m>e^n=e</m>. It seems the identity element is immune to corruption by your power, which one should probably find reassuring. Still, this raises questions that need answering, and thus we will need to reach in and pluck order out of the chaos.</p>
+
+          </subsection>
+
+          <subsection xml:id="subsec-order"><title>Order</title>
             
             <definition xml:id="def-order"><title>Order</title>
               <statement>
@@ -24347,10 +24349,40 @@
 
           <subsection xml:id="subsec-number-systems"><title>Number Systems (*)</title>
 
-            <definition xml:id="def-natural-numbers"><title>Natural Numbers (*)</title>
+            <definition xml:id="def-number-sets"><title>Sets of Numbers</title>
               <statement>
                 <p>
-                  <m>\N</m>
+                  <ul>
+                    <li xml:id="def-natural-numbers"><title>Natural Numbers</title>
+                      <p>
+                        The set of <term>natural numbers</term> is denoted by <m>\N=\{1,2,3\dots\}</m>
+                      </p>
+                    </li>
+
+                    <li xml:id="def-integers"><title>Integers</title>
+                      <p>
+                        The set of <term>integers</term> is denoted by <m>\Z=\{\dots,-2,-1,0,1,2\dots\}</m>
+                      </p>
+                    </li>
+
+                    <li xml:id="def-rational-numbers"><title>Rational Numbers</title>
+                      <p>
+                        The set of <term>rational numbers</term> is denoted by <m>\Q=\{\frac{p}{q}|p,q\in\Z,q\neq 0}</m>
+                      </p>
+                    </li>
+
+                    <li xml:id="def-real-numbers"><title>Real Numbers</title>
+                      <p>
+                        The set of <term>real numbers</term> is denoted by <m>\R</m>, and is a little trickier to define both rigorously and succinctly. Heuristically, it is the set of all numbers on the number line.
+                      </p>
+                    </li>
+
+                    <li xml:id="def-complex-numbers"><title>Complex Numbers</title>
+                      <p>
+                        The set of <term>complex numbers</term> is denoted by <m>\C=\{a+bi|a,b\in\R}</m>
+                      </p>
+                    </li>
+                  </ul>
                 </p>
               </statement>
             </definition>
@@ -30924,7 +30956,9 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
             </p>
 
             <p>
-              Part (a) Let <m>A</m> be an <m>n \times n</m> nilpotent matrix. Let <m>\lambda</m> be some eigenvalue of <m>A</m>. Thus there exists some vector <m>v</m> such that <m>A\lambda=\lambda v</m>. Let's consider this the base-case of some rather banal induction. Now assume that for <m>n</m> we have <m>A^nv=\lambda^nv</m>. Consider <me>A^{n+1}v=A(A^nv)=A(\lambda^n v)=\lambda^n(Av)=\lambda^{n+1}v.</me>Recall that as <m>A</m> is nilpotent, there exists some <m>m\in\N</m> such that <m>A^m=0</m>. As <m>\lambda</m> is an eigenvalue of <m>A</m>, by the above induction we see that <m>\lambda^m</m> is an eigenvalue for <m>A^m=0</m>. As <m>F</m> is a field and thus an integral domain, we see that <m>\lambda^n=0</m> implies that <m>\lambda=0</m> is as well. As this holds in the algebraic closure of <m>F</m> as well, we see that when factored into linear terms all the <m>\lambda=0</m>. Thus <m>\cp_A(x)=x^n</m>.
+              Part (a) Let <m>A</m> be an <m>n \times n</m> nilpotent matrix. Let <m>\lambda</m> be some eigenvalue of <m>A</m>. Thus there exists some vector <m>v</m> such that <m>A\lambda=\lambda v</m>. Let's consider this the base-case of some rather banal induction. Now assume that for <m>n</m> we have <m>A^nv=\lambda^nv</m>. Consider 
+              <me>A^{n+1}v=A(A^nv)=A(\lambda^n v)=\lambda^n(Av)=\lambda^{n+1}v.</me>
+              Recall that as <m>A</m> is nilpotent, there exists some <m>m\in\N</m> such that <m>A^m=0</m>. As <m>\lambda</m> is an eigenvalue of <m>A</m>, by the above induction we see that <m>\lambda^m</m> is an eigenvalue for <m>A^m=0</m>. As <m>F</m> is a field and thus an integral domain, we see that <m>\lambda^n=0</m> implies that <m>\lambda=0</m> is as well. As this holds in the algebraic closure of <m>F</m> as well, we see that when factored into linear terms all the <m>\lambda=0</m>. Thus <m>\cp_A(x)=x^n</m>.
             </p>
 
             <p>
@@ -30940,12 +30974,12 @@ N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}</me> So there's that d
             </p>
 
             <p>
-              Next, observe <me>\begin{align}
+              Next, observe <me>\begin{aligned}
       \rank(AP\inv)&amp;=\rank((AP\inv)^T)\\
       &amp;=\rank(P^{-1^T}A^T)\\
       &amp;=\rank(A^T)\\
       &amp;=\rank(A),
-  \end{align}</me>as <m>(P^{-1})^T</m> is an invertible matrix. Thus <m>\rank(B)=\rank(PAP\inv)=\rank(A)</m>.
+  \end{aligned}</me>as <m>(P^{-1})^T</m> is an invertible matrix. Thus <m>\rank(B)=\rank(PAP\inv)=\rank(A)</m>.
             </p>
 
             <p>
