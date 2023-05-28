@@ -25,12 +25,12 @@ var ptx_lunr_docs = [
   "type": "Preface",
   "number": "",
   "title": "How to Use This Book (*)",
-  "body": "How to Use This Book (*)  Coming soon!  Blocks    Definition  These are pretty standard and probably what you'd be expecting.   Examples  Specific instances of a definition.   Theorem  A result.   Lemma  A more technical result used specifically in the proof of a larger result.   Corollary  An important result whose proof comes directly from a previous theorem.   Proposition  Results that require proof but are more specific and\/or contained in a larger result coming later.   Exploration  Generalizations, specifics, smaller results, things are are less essential to the course or results who's proofs are usually skipped.   Problem  Used for qualifying exam problems.   Remark  Providing context in the form of foreshadowing or content not covered in this text. In general, there shouldn't be anything defined in a remark, they should be entirely optional.   Discussion  Usually for arguing about notation.   Context  Historical and etymogical origins.   Footnotes  Sometimes act like remarks. However, most are strictly for fun and add little to no educational value, at least in the traditional sense. It should really be feetnote if you think about it.       "
+  "body": "How to Use This Book (*)  I'm still in the process of figuring out exactly what this is for.   Future lecture notes for the hopeful possibility that one day I am teaching a course over this material.    Current notes for students taking the first year algebra sequence.    Assistance in studying for the Algebra Qualifying Exam at UNL.    Clout.     Blocks    Definition  These are pretty standard and probably what you'd be expecting. The building blocks of what we'll be working with.   Examples  Specific instances of a definition.   Theorem  A result.   Lemma  A more technical result used specifically in the proof of a larger result.   Corollary  An important result whose proof comes directly from a previous theorem.   Proposition  Results that require proof but are more specific and\/or contained in a larger result coming later.   Exploration  Generalizations, specifics, smaller results, things are are less essential to the course or results who's proofs are usually skipped.   Problem  Used for qualifying exam problems.   Remark  Providing context in the form of foreshadowing or content not covered in this text. In general, there shouldn't be anything defined in a remark, they should be entirely optional.   Discussion  Usually for arguing about notation.   Context  Historical and etymogical origins.   Footnotes  Sometimes act like remarks. However, most are strictly for fun and add little to no educational value, at least in the traditional sense. It should really be feetnote if you think about it.       "
 },
 {
-  "id": "p-7",
+  "id": "p-11",
   "level": "2",
-  "url": "preface-1.html#p-7",
+  "url": "preface-1.html#p-11",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -43,7 +43,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.1",
   "title": "Group Basics",
-  "body": "Group Basics  Binary Operations and Groups  Most great learning happens in groups. Ken Robinson   A Brief Notational Note  At various points throughout this text, the author may use \"mathcal\" notation for definitions that do not normally require it (such as for a group, for a ring, etc.) In the realm of higher mathematics, this is what is known as a typo , and should be reported to the proper authorities as soon as possible.   We begin, as all great volumes of mathematics are like to do, somewhere in the middle. Though everything that you need from the beginning can be found in .  Binary Operation   A binary operation binary operation operation on a set is a      Binary operations on a set are especially useful when they posess some special properties, which garner them some special names.  Monoid   A monoid monoid is a pair where is a set and is a on satisfying the following properties:  Closure Axiom closure  for each , .   Associativity Axiom associativity  for all we have    Identity Axiom identity  there exists such that for all  the identity element of a group        Monoid  The word \"monoid\" was first used by the mathematician Garrett Birkhoff in his 1935 paper \"On the Structure of Abstract Algebras\".    We often write instead of for simplicity. This is the one and only \"Mark\". All following \"Marks\" will be \"Remarks\".  The in is technically redundant. Closure is really part of , and it is implicitly assumed whenever we consider such an operation. Howewever, redundancy is not a bad thing, and it never hurts to state it explicitely.  The notation is often used for the identity element of a group, though we will not do so here.  Au Naturale  The  form a monoid under addition.   For those interested, a pairing that only satisfies the first two properties of is called a semigroup semigroup . If only satisfies the first property, it is known as a magma magma .  Magma  The term \"magma\" was coined by the mathematician Benjamin Peirce in the 1870s to describe a set with a binary operation. The word \"magma\" is derived from the Latin word \"magmus,\" meaning \"mass\" or \"heap,\" which suggests a collection of objects with no particular order or structure.   For those who are even more interested, here is a handy little graphic.  Algebraic Structures  Relations between algebraic structures. Quiver    Generalized Associative Law If an element of a monoid is contructed from a sequence of elements in this order by repeatedly inserting parenthesis and applying the operation, the element must equal and so is independent of the mode of bracketing.  As a result of any expression formed from the elements in that order can be written without parenthesis, which will save us oodles of time down the line.  Group   A group group is a  with the following additional property:  Inverse Axiom inverse  for each , there is an element such that .    a group (or monoid) and its binary operation  lowercase letters reserved for elements of a group   When the operation of a group is , we refer to as a multiplicative group multiplicative group . If the operation is used, then is referred to as an additive group additive group .    Groups  The term \"group\" was introduced in the early 1831 century by the French mathematician to describe a set of mathematical objects that exhibit certain symmetry properties.  It was later adopted and popularized by other mathematicians such as and , though the axiomatic definition was not given until 1882 by Heinrich Weber.   Though a group is a pair, we will usually refer to the group by only naming the underlying set, .   Properties of Groups (and sometimes Monoids)     Unique Identity  In a monoid , the element satisfying the Idenity axiom of is unique, and we thus refer to it as the identity element identity element of .   Unique Inverses  In a group , for each , the element satisfying the Inverses axiom of is unique, and we thus refer to it as the the inverse of and we will henceforth denote it by .   Cancellation cancellation  In a group , if then . Similarly, if we have .          Suppose there exist two elements and such that and for all . Then Thus only one element can satisfy this property, making the identity element unique.    For a given , if and fo some and , then .    Suppose for some . By multiplying on both sides by , we see        Before we see some examples, let's define one very special kind of group that we'll be seeing a lot of.  Abelian Group   A group is an abelian group abelian group if the operation satisfies the following additional property:  Commutative Axiom commutative   for all .       Abelian Groups  The term \"Abelian groups\" was introduced by the mathematician and physicist James Clerk Maxwell in the 1870s. Maxwell named these groups after the Norwegian mathematician , who made important contributions to the theory of equations, including the study of what we now call abelian groups.   Two elements of a group are said to commute commute if .  As we progress through the text, one might start to recognize that groups are much more agreeable when they are abelian. They behave in ways we expect and are often times much more likely to do what we want. If all groups were abelain, group theory would not be anywhere near as widespread (or interesting, though that is more a matter of opinion). Because of this, a common motif in this course is finding, constructing, and fiddling with groups that are 'almost' abelian, whatever that means.  Group Examples     Trivial Subgroup  The trivial subgroup trivial group is the group with a single element . the trivial group: e.g. the group containing only an identity element      and each form an abelian group, where denotes traditional addition.    General Linear Group  For any positive integer , let Then is a non-abelian group under matrix multiplication known as the general linear group general linear group . General linear group     For any , let denote the . Then forms an abelian group where denotes addition modulo .        Specific General Linear Groups  In general, is a group for any field (whatever those are).   The following example illustrates a few important examples of something called a , which is defined explicitely in terms of rings (whatever those are) in .  Groups of Units   Each of the following subsets form an abelian group under multiplication.   The subset of .     , , and .    For each , the subset of .        Prove that   Some Extra Groups Verify the following:  Opposite Group  Let be a multiplicative group, and define opposite group be the set equipped with the operation , where . Opposite groups are used in category theory to describe duality between algebraic structures. Then is a group.   Evening the Odds  Let denote the set of even integers and denote the set of odd integers. Then is a group, whereas is not.      Properties of Inverses   If is a group and , then:    .               First, recall from that . However, it is also the case that . By part (2) of we know that inverses are unique, and thus it must be the case that .    Coming soon to an OER near you!       The second portion of can be generalized.  Big 'Ole Inverses  If is a group and , then .   It can also be specialized.  Abelian Exponents  Let . The equation holds for all if and only if is abelian.     "
+  "body": "Group Basics  Binary Operations and Groups  Most great learning happens in groups. Ken Robinson  A Brief Notational Note  At various points throughout this text, the author may use \"mathcal\" notation for definitions that do not normally require it (such as for a group, for a ring, etc.) In the realm of higher mathematics, this is what is known as a typo , and should be reported to the proper authorities as soon as possible.   We begin, as all great volumes of mathematics are like to do, somewhere in the middle. Though everything that you need from the beginning can be found in .   Binary Operation   A binary operation binary operation operation on a set is a      Binary operations on a set are especially useful when they posess some special properties, which garner them some special names.  Monoid   A monoid monoid is a pair where is a set and is a on satisfying the following properties:  Closure Axiom closure  for each , .   Associativity Axiom associativity  for all we have    Identity Axiom identity  there exists such that for all  the identity element of a group        Monoid  The word \"monoid\" was first used by the mathematician Garrett Birkhoff in his 1935 paper \"On the Structure of Abstract Algebras\".    We often write instead of for simplicity. This is the one and only \"Mark\". All following \"Marks\" will be \"Remarks\".     The in is technically redundant. Closure is really part of , and it is implicitly assumed whenever we consider such an operation. Howewever, redundancy is not a bad thing, and it never hurts to state it explicitely.   Au Naturale   The  form a monoid under addition.    Coming soon!     For those interested, a pairing that only satisfies the first two properties of is called a semigroup semigroup . If only satisfies the first property, it is known as a magma magma .   Magma  The term magma was coined by the mathematician Benjamin Peirce in the 1870s to describe a set with a binary operation. The word magma is derived from the Latin word magmus , meaning mass or heap , which suggests a collection of objects with no particular order or structure.   For those who are even more interested, here is a handy little graphic.  Algebraic Structures  Relations between algebraic structures. Quiver    Generalized Associative Law If an element of a monoid is contructed from a sequence of elements in this order by repeatedly inserting parenthesis and applying the operation, the element must equal and so is independent of the mode of bracketing.  As a result of any expression formed from the elements in that order can be written without parenthesis, which will save us oodles of time down the line.  Group   A group group is a  with the following additional property:  Inverse Axiom inverse  for each , there is an element such that .    a group (or monoid) and its binary operation   When the operation of a group is , we refer to as a multiplicative group multiplicative group . If the operation is used, then is referred to as an additive group additive group    Groups  The term group was introduced in 1831 by the French mathematician to describe a set of mathematical objects that exhibit certain symmetry properties.  It was later adopted and popularized by other mathematicians such as and , though the axiomatic definition was not given until 1882 by Heinrich Weber.    Though a group is a pair, we will usually refer to the group by only naming the underlying set, .    Properties of Groups   Let be a group.  Unique Identity  The element satisfying the of is unique, and we thus refer to it as the identity element identity element of .   Unique Inverses  For each , the element satisfying the of is unique, and we thus refer to it as the the inverse of .   Cancellation cancellation  Suppose . If then . Similarly, if we have .          Suppose there exist two elements and such that and for all . Then Thus , making the identity element unique.    For a given , if and for some and , then Thus , making inverses unique.    Suppose for some . By the , there exists some such that . Observe          holds in monoids as well.   Before we see some examples, let's define one very special kind of group that we'll be seeing a lot of.  Abelian Group   A group is an abelian group abelian group if the operation satisfies the following additional property:  Commutative Axiom commutative   for all .       Abelian Groups  The term abelian groups was introduced by the mathematician and physicist James Clerk Maxwell in the 1870s. Maxwell named these groups after the Norwegian mathematician .    Two elements of a group are said to commute commute if .   Group Examples     Trivial Subgroup  The trivial subgroup trivial group is the group with a single element . the trivial group: e.g. the group containing only an identity element      and each form an abelian group, where denotes traditional addition.   General Linear Group  For any positive integer , let Then is a non-abelian group under matrix multiplication known as the general linear group general linear group . General linear group     For any , let denote the . Then forms an abelian group where denotes addition modulo .       In familiar groups of numbers, is used for the identity element of a multiplicative group (and likewise in additive groups). Often, is used for the identity element in arbitrary groups, though we will not do so here.    Specific General Linear Groups  In general, is a group for any field (whatever those are).   The following example illustrates a few important examples of something called a , which is defined explicitely in terms of rings (whatever those are) in .  Groups of Units   Each of the following subsets form an abelian group under multiplication.   The subset of .     , , and .    For each , the subset of .        Prove that   Some Extra Groups   Opposite Group  Let be a multiplicative group, and define opposite group be the set equipped with the operation , where . Opposite groups are used in category theory to describe something called duality between algebraic structures. Then is a group.   Evening the Odds  Let denote the set of even integers and denote the set of odd integers. Then is a group, whereas is not.      Properties of Inverses   If is a group and , then:    .               We show that both and are inverses of the element . First, recall from that . However, it is also the case that . By part (2) of we know that inverses are unique, and thus it must be the case that .    By definition, is the inverse of the element . However, we also have Thus both and are inverses of , making them equal by part (2) of .       The second portion of can be generalized.  Big 'Ole Inverses  If is a group and , then .   It can also be specialized.  Abelian Exponents  Let . The equation holds for all if and only if is abelian.     "
 },
 {
   "id": "def-binop",
@@ -70,7 +70,7 @@ var ptx_lunr_docs = [
   "type": "Mark",
   "number": "1.3",
   "title": "",
-  "body": " We often write instead of for simplicity. This is the one and only \"Mark\". All following \"Marks\" will be \"Remarks\". "
+  "body": " We often write instead of for simplicity. This is the one and only \"Mark\". All following \"Marks\" will be \"Remarks\".   "
 },
 {
   "id": "remark-1",
@@ -79,41 +79,32 @@ var ptx_lunr_docs = [
   "type": "Remark",
   "number": "1.4",
   "title": "",
-  "body": "The in is technically redundant. Closure is really part of , and it is implicitly assumed whenever we consider such an operation. Howewever, redundancy is not a bad thing, and it never hurts to state it explicitely. "
-},
-{
-  "id": "remark-2",
-  "level": "2",
-  "url": "sec-group-basics.html#remark-2",
-  "type": "Remark",
-  "number": "1.5",
-  "title": "",
-  "body": "The notation is often used for the identity element of a group, though we will not do so here. "
+  "body": " The in is technically redundant. Closure is really part of , and it is implicitly assumed whenever we consider such an operation. Howewever, redundancy is not a bad thing, and it never hurts to state it explicitely.  "
 },
 {
   "id": "ex-natural-monoid",
   "level": "2",
   "url": "sec-group-basics.html#ex-natural-monoid",
   "type": "Example",
-  "number": "1.6",
+  "number": "1.5",
   "title": "Au Naturale.",
-  "body": "Au Naturale  The  form a monoid under addition.  "
+  "body": "Au Naturale   The  form a monoid under addition.    Coming soon!   "
 },
 {
-  "id": "remark-3",
+  "id": "remark-2",
   "level": "2",
-  "url": "sec-group-basics.html#remark-3",
+  "url": "sec-group-basics.html#remark-2",
   "type": "Remark",
-  "number": "1.7",
+  "number": "1.6",
   "title": "",
-  "body": "For those interested, a pairing that only satisfies the first two properties of is called a semigroup semigroup . If only satisfies the first property, it is known as a magma magma . "
+  "body": " For those interested, a pairing that only satisfies the first two properties of is called a semigroup semigroup . If only satisfies the first property, it is known as a magma magma .  "
 },
 {
   "id": "figure-magma",
   "level": "2",
   "url": "sec-group-basics.html#figure-magma",
   "type": "Figure",
-  "number": "1.8",
+  "number": "1.7",
   "title": "Algebraic Structures",
   "body": "Algebraic Structures  Relations between algebraic structures. Quiver   "
 },
@@ -122,7 +113,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-group-basics.html#exe-general-associativity",
   "type": "Exploration",
-  "number": "1.9",
+  "number": "1.8",
   "title": "Generalized Associative Law.",
   "body": "Generalized Associative Law If an element of a monoid is contructed from a sequence of elements in this order by repeatedly inserting parenthesis and applying the operation, the element must equal and so is independent of the mode of bracketing. "
 },
@@ -131,27 +122,36 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-group-basics.html#def-group",
   "type": "Definition",
-  "number": "1.10",
+  "number": "1.9",
   "title": "Group.",
-  "body": "Group   A group group is a  with the following additional property:  Inverse Axiom inverse  for each , there is an element such that .    a group (or monoid) and its binary operation  lowercase letters reserved for elements of a group   When the operation of a group is , we refer to as a multiplicative group multiplicative group . If the operation is used, then is referred to as an additive group additive group .   "
+  "body": "Group   A group group is a  with the following additional property:  Inverse Axiom inverse  for each , there is an element such that .    a group (or monoid) and its binary operation   When the operation of a group is , we refer to as a multiplicative group multiplicative group . If the operation is used, then is referred to as an additive group additive group   "
 },
 {
-  "id": "remark-4",
+  "id": "convention-1",
   "level": "2",
-  "url": "sec-group-basics.html#remark-4",
-  "type": "Remark",
-  "number": "1.11",
+  "url": "sec-group-basics.html#convention-1",
+  "type": "Convention",
+  "number": "1.10",
   "title": "",
-  "body": "Though a group is a pair, we will usually refer to the group by only naming the underlying set, . "
+  "body": " Though a group is a pair, we will usually refer to the group by only naming the underlying set, .  "
 },
 {
   "id": "thm-properties-of-groups",
   "level": "2",
   "url": "sec-group-basics.html#thm-properties-of-groups",
   "type": "Theorem",
+  "number": "1.11",
+  "title": "Properties of Groups.",
+  "body": "Properties of Groups   Let be a group.  Unique Identity  The element satisfying the of is unique, and we thus refer to it as the identity element identity element of .   Unique Inverses  For each , the element satisfying the of is unique, and we thus refer to it as the the inverse of .   Cancellation cancellation  Suppose . If then . Similarly, if we have .          Suppose there exist two elements and such that and for all . Then Thus , making the identity element unique.    For a given , if and for some and , then Thus , making inverses unique.    Suppose for some . By the , there exists some such that . Observe       "
+},
+{
+  "id": "remark-3",
+  "level": "2",
+  "url": "sec-group-basics.html#remark-3",
+  "type": "Remark",
   "number": "1.12",
-  "title": "Properties of Groups (and sometimes Monoids).",
-  "body": "Properties of Groups (and sometimes Monoids)     Unique Identity  In a monoid , the element satisfying the Idenity axiom of is unique, and we thus refer to it as the identity element identity element of .   Unique Inverses  In a group , for each , the element satisfying the Inverses axiom of is unique, and we thus refer to it as the the inverse of and we will henceforth denote it by .   Cancellation cancellation  In a group , if then . Similarly, if we have .          Suppose there exist two elements and such that and for all . Then Thus only one element can satisfy this property, making the identity element unique.    For a given , if and fo some and , then .    Suppose for some . By multiplying on both sides by , we see       "
+  "title": "",
+  "body": "  holds in monoids as well.  "
 },
 {
   "id": "def-abelian",
@@ -163,13 +163,13 @@ var ptx_lunr_docs = [
   "body": "Abelian Group   A group is an abelian group abelian group if the operation satisfies the following additional property:  Commutative Axiom commutative   for all .      "
 },
 {
-  "id": "remark-5",
+  "id": "remark-4",
   "level": "2",
-  "url": "sec-group-basics.html#remark-5",
+  "url": "sec-group-basics.html#remark-4",
   "type": "Remark",
   "number": "1.14",
   "title": "",
-  "body": "Two elements of a group are said to commute commute if . "
+  "body": " Two elements of a group are said to commute commute if .  "
 },
 {
   "id": "ex-group-examples",
@@ -178,14 +178,23 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.15",
   "title": "Group Examples.",
-  "body": "Group Examples     Trivial Subgroup  The trivial subgroup trivial group is the group with a single element . the trivial group: e.g. the group containing only an identity element      and each form an abelian group, where denotes traditional addition.    General Linear Group  For any positive integer , let Then is a non-abelian group under matrix multiplication known as the general linear group general linear group . General linear group     For any , let denote the . Then forms an abelian group where denotes addition modulo .      "
+  "body": "Group Examples     Trivial Subgroup  The trivial subgroup trivial group is the group with a single element . the trivial group: e.g. the group containing only an identity element      and each form an abelian group, where denotes traditional addition.   General Linear Group  For any positive integer , let Then is a non-abelian group under matrix multiplication known as the general linear group general linear group . General linear group     For any , let denote the . Then forms an abelian group where denotes addition modulo .     "
 },
 {
-  "id": "remark-6",
+  "id": "convention-2",
   "level": "2",
-  "url": "sec-group-basics.html#remark-6",
-  "type": "Remark",
+  "url": "sec-group-basics.html#convention-2",
+  "type": "Convention",
   "number": "1.16",
+  "title": "",
+  "body": " In familiar groups of numbers, is used for the identity element of a multiplicative group (and likewise in additive groups). Often, is used for the identity element in arbitrary groups, though we will not do so here.  "
+},
+{
+  "id": "remark-5",
+  "level": "2",
+  "url": "sec-group-basics.html#remark-5",
+  "type": "Remark",
+  "number": "1.17",
   "title": "Specific General Linear Groups.",
   "body": "Specific General Linear Groups  In general, is a group for any field (whatever those are).  "
 },
@@ -194,7 +203,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-group-basics.html#ex-group-of-units",
   "type": "Example",
-  "number": "1.17",
+  "number": "1.18",
   "title": "Groups of Units.",
   "body": "Groups of Units   Each of the following subsets form an abelian group under multiplication.   The subset of .     , , and .    For each , the subset of .      "
 },
@@ -203,7 +212,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-group-basics.html#exe-group-of-units-in-zp",
   "type": "Exploration",
-  "number": "1.18",
+  "number": "1.19",
   "title": "<span class=\"process-math\">\\(\\Z\/p^\\times\\)<\/span>.",
   "body": " Prove that  "
 },
@@ -212,25 +221,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-group-basics.html#exercise-3",
   "type": "Exploration",
-  "number": "1.19",
+  "number": "1.20",
   "title": "Some Extra Groups.",
-  "body": "Some Extra Groups Verify the following:  Opposite Group  Let be a multiplicative group, and define opposite group be the set equipped with the operation , where . Opposite groups are used in category theory to describe duality between algebraic structures. Then is a group.   Evening the Odds  Let denote the set of even integers and denote the set of odd integers. Then is a group, whereas is not.    "
+  "body": "Some Extra Groups   Opposite Group  Let be a multiplicative group, and define opposite group be the set equipped with the operation , where . Opposite groups are used in category theory to describe something called duality between algebraic structures. Then is a group.   Evening the Odds  Let denote the set of even integers and denote the set of odd integers. Then is a group, whereas is not.    "
 },
 {
   "id": "thm-group-inverses",
   "level": "2",
   "url": "sec-group-basics.html#thm-group-inverses",
   "type": "Theorem",
-  "number": "1.20",
+  "number": "1.21",
   "title": "Properties of Inverses.",
-  "body": "Properties of Inverses   If is a group and , then:    .               First, recall from that . However, it is also the case that . By part (2) of we know that inverses are unique, and thus it must be the case that .    Coming soon to an OER near you!      "
+  "body": "Properties of Inverses   If is a group and , then:    .               We show that both and are inverses of the element . First, recall from that . However, it is also the case that . By part (2) of we know that inverses are unique, and thus it must be the case that .    By definition, is the inverse of the element . However, we also have Thus both and are inverses of , making them equal by part (2) of .      "
 },
 {
   "id": "exe-big-inverses",
   "level": "2",
   "url": "sec-group-basics.html#exe-big-inverses",
   "type": "Exploration",
-  "number": "1.21",
+  "number": "1.22",
   "title": "Big 'Ole Inverses.",
   "body": "Big 'Ole Inverses  If is a group and , then .  "
 },
@@ -239,7 +248,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-group-basics.html#exe-abelian-exponents",
   "type": "Exploration",
-  "number": "1.22",
+  "number": "1.23",
   "title": "Abelian Exponents.",
   "body": "Abelian Exponents  Let . The equation holds for all if and only if is abelian.  "
 },
@@ -250,32 +259,32 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.2",
   "title": "Order and Power",
-  "body": "Order and Power  Power  In order to make a choice, you need the power to see there is one. Gloria Steinem  Though it might be natural to write the product using the notation , we have no notion of what that means in the world of groups. Do exponents behave the way we want them to in groups, or does something disasterous occur? Do exponents even exist ? Do I ? We can answer most of these questions, and attempt to do so now.  power   Let be an element of a multiplicative group . For , the  power  of is defined recursively as follows:    , , and ; Convenient notation, isn't it? Almost like we planned it.      when ; and     when .       If was an additive group, then we would write intead of . This would be called a multiple of instead of a power.  Laws of Exponents   Let and be an element of a group . Then    and     .       Coming soon!    After stumbling around with your newfound power for some time, you might chance upon the fact that while your power may be unlimited, its impacts may be very limited indeed. For example, no matter how high you climb into the natural numbers you will always find that . It seems the identity element is immune to corruption by your power, which one should probably find reassuring. Still, this raises questions that need answering, and thus we will need to reach in and pluck order out of the chaos.   Order  Order      In a group , the order of an element order of a group element  is the least positive integer such that . If no such exists, we say has infinite order. We write for the order of . Order of an element     The order of a group order of a group  is the of the set , denoted . Order of a group        Some authors use the notation or to refer to the order of a group. We won't name names, but they know who they are. (See: )   What notation do you think should be used for the order of a group?   Order Examples      in every group .     in     In the additive groups , , , and every nonzero (i.e., nonidentity) element has infinite order. Groups with this property are known as torsion-free , a concept explored in more advanced contexts.     In the additve group , the element has order , as and .      We arrive at one of the central conjectures of group theory, posed by none other tha UNL's Tom \"Destroyer of Worlds\" Marley. Best of luck. For the more astute reader, you may observe that this is one of the more solvable conjectures in mathematics. This is the first problem Tom assigns every time he teaches 817 and it's become a bit of a running joke.  Marley's Conjecture  Every group of order is abelian.   Let be a group with elements, and suppose there are elements such that for some elements . Since , we must have , , and . Since has only elements and , either or . Without loss, say the former occurs. But implies and we know commutes with , and hence this is not possible. If , then and if then , both of which are impossible. Since were arbitrary, must be abelian.   Properties of Order      An element of a group has order if and only if .         If for and  , then .       there or  If is a group such every non-identity element has order , then is abelian.    Element Order   Let be a group and any element.   If , then are all distinct elements of .    If , then for all integers (positive or negative) with .     .    If then .          Coming soon!    Coming soon!    Coming soon!    Let . We have for some by the division algorithm . We have and so, by the definition of order , it must be that        Order Hors d'oeuvre  Let be a group.   Let be an element of finite order. Show that has finite order for any integer , and in fact     Prove that for all in , holds.       "
+  "body": "Order and Power  Power  In order to make a choice, you need the power to see there is one. Gloria Steinem  Though it might seem natural to write the product using the notation , we have no notion of what that means in the world of groups. Do exponents behave the way we want them to in groups, or does something disasterous occur? Do exponents even exist ? Do I ? We can answer most of these questions, and attempt to do so now.  power   Let be an element of a multiplicative group . For , the  power  of is defined recursively as follows:    , , and ; Convenient notation, isn't it? Almost like we planned it.      when ; and     when .        If was an additive group, then we would write intead of . This would be called a multiple of instead of a power.   Laws of Exponents   Let and be an element of a group . Then    and     .       Coming soon!     Order  Order      In a group , the order of an element order of a group element  is the least positive integer such that . If no such exists, we say has infinite order. We write for the order of . Order of an element     The order of a group order of a group  is the of the set , denoted . Order of a group         Some authors use the notation or to refer to the order of a group. We won't name names, but they know who they are.   Order Examples      in every group .     in     In the additive groups , , , and every nonzero (i.e., nonidentity) element has infinite order. Groups with this property are known as torsion-free , a concept explored in more advanced contexts.     In the additve group , the element has order , as and .      We arrive at one of the central conjectures of group theory, posed by none other tha UNL's Tom \"Destroyer of Worlds\" Marley. Best of luck. For the more astute reader, you may observe that this is one of the more solvable conjectures in mathematics. This is the first problem Tom assigns every time he teaches 817 and it's become a bit of a running joke.   Marley's Conjecture  Every group of order is abelian.   Let be a group with elements, and suppose there are elements such that for some elements . Since , we must have , , and . Since has only elements and , either or . Without loss, say the former occurs. But implies and we know commutes with , and hence this is not possible. If , then and if then , both of which are impossible. Since were arbitrary, must be abelian.   Properties of Order      An element of a group has order if and only if .         If for and  , then .       Coming soon!    there or  If is a group such every non-identity element has order , then is abelian.    Element Order   Let be a group and any element.   If , then are all distinct elements of .    If , then for all integers (positive or negative) with .     .    If then .          Coming soon!    Coming soon!    Coming soon!    Let . We have for some by the division algorithm . We have and so, by the definition of order , it must be that        Order Hors d'oeuvre  Let be a group.   Let be an element of finite order. Show that has finite order for any integer , and in fact     Prove that for all in , holds.       "
 },
 {
   "id": "def-power",
   "level": "2",
   "url": "sec-order-power.html#def-power",
   "type": "Definition",
-  "number": "1.23",
+  "number": "1.24",
   "title": "<span class=\"process-math\">\\(n\\th\\)<\/span> power.",
   "body": "power   Let be an element of a multiplicative group . For , the  power  of is defined recursively as follows:    , , and ; Convenient notation, isn't it? Almost like we planned it.      when ; and     when .      "
 },
 {
-  "id": "remark-7",
+  "id": "remark-6",
   "level": "2",
-  "url": "sec-order-power.html#remark-7",
+  "url": "sec-order-power.html#remark-6",
   "type": "Remark",
-  "number": "1.24",
+  "number": "1.25",
   "title": "",
-  "body": "If was an additive group, then we would write intead of . This would be called a multiple of instead of a power. "
+  "body": " If was an additive group, then we would write intead of . This would be called a multiple of instead of a power.  "
 },
 {
   "id": "thm-exponent-laws",
   "level": "2",
   "url": "sec-order-power.html#thm-exponent-laws",
   "type": "Theorem",
-  "number": "1.25",
+  "number": "1.26",
   "title": "Laws of Exponents.",
   "body": "Laws of Exponents   Let and be an element of a group . Then    and     .       Coming soon!   "
 },
@@ -284,34 +293,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-order-power.html#def-order",
   "type": "Definition",
-  "number": "1.26",
+  "number": "1.27",
   "title": "Order.",
   "body": "Order      In a group , the order of an element order of a group element  is the least positive integer such that . If no such exists, we say has infinite order. We write for the order of . Order of an element     The order of a group order of a group  is the of the set , denoted . Order of a group       "
 },
 {
-  "id": "remark-8",
+  "id": "remark-7",
   "level": "2",
-  "url": "sec-order-power.html#remark-8",
+  "url": "sec-order-power.html#remark-7",
   "type": "Remark",
-  "number": "1.27",
+  "number": "1.28",
   "title": "",
-  "body": "Some authors use the notation or to refer to the order of a group. We won't name names, but they know who they are. (See: ) "
-},
-{
-  "id": "exploration-1",
-  "level": "2",
-  "url": "sec-order-power.html#exploration-1",
-  "type": "Discussion",
-  "number": "1.1",
-  "title": "",
-  "body": " What notation do you think should be used for the order of a group?  "
+  "body": " Some authors use the notation or to refer to the order of a group. We won't name names, but they know who they are.  "
 },
 {
   "id": "ex-order",
   "level": "2",
   "url": "sec-order-power.html#ex-order",
   "type": "Example",
-  "number": "1.28",
+  "number": "1.29",
   "title": "Order Examples.",
   "body": "Order Examples      in every group .     in     In the additive groups , , , and every nonzero (i.e., nonidentity) element has infinite order. Groups with this property are known as torsion-free , a concept explored in more advanced contexts.     In the additve group , the element has order , as and .     "
 },
@@ -320,7 +320,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-order-power.html#exe-order-4-abelian",
   "type": "Exploration",
-  "number": "1.29",
+  "number": "1.30",
   "title": "Marley's Conjecture.",
   "body": "Marley's Conjecture  Every group of order is abelian.   Let be a group with elements, and suppose there are elements such that for some elements . Since , we must have , , and . Since has only elements and , either or . Without loss, say the former occurs. But implies and we know commutes with , and hence this is not possible. If , then and if then , both of which are impossible. Since were arbitrary, must be abelian.  "
 },
@@ -329,16 +329,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-order-power.html#thm-order-properties",
   "type": "Theorem",
-  "number": "1.30",
+  "number": "1.31",
   "title": "Properties of Order.",
-  "body": "Properties of Order      An element of a group has order if and only if .         If for and  , then .      "
+  "body": "Properties of Order      An element of a group has order if and only if .         If for and  , then .       Coming soon!   "
 },
 {
   "id": "exe-every-element-order-2",
   "level": "2",
   "url": "sec-order-power.html#exe-every-element-order-2",
   "type": "Exploration",
-  "number": "1.31",
+  "number": "1.32",
   "title": "<span class=\"process-math\">\\(b\\)<\/span> there or <span class=\"process-math\">\\(b^2=e\\)<\/span>.",
   "body": "there or  If is a group such every non-identity element has order , then is abelian.  "
 },
@@ -347,7 +347,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-order-power.html#thm-element-order",
   "type": "Theorem",
-  "number": "1.32",
+  "number": "1.33",
   "title": "Element Order.",
   "body": "Element Order   Let be a group and any element.   If , then are all distinct elements of .    If , then for all integers (positive or negative) with .     .    If then .          Coming soon!    Coming soon!    Coming soon!    Let . We have for some by the division algorithm . We have and so, by the definition of order , it must be that       "
 },
@@ -356,7 +356,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-order-power.html#exe-order-and-gcd",
   "type": "Exploration",
-  "number": "1.33",
+  "number": "1.34",
   "title": "Order Hors d'oeuvre.",
   "body": "Order Hors d'oeuvre  Let be a group.   Let be an element of finite order. Show that has finite order for any integer , and in fact     Prove that for all in , holds.     "
 },
@@ -367,32 +367,32 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.3",
   "title": "Common Groups",
-  "body": "Common Groups  We examine two of the most commonly encountered groups in all of algebra: the dihedral group and the symmetric group. The quaternions are also here.  Dihedral Groups  Reality prefers symmetry. Jorge Luis Borges  Isometry and Symmetry   For any integer , let denote a regular -gon regular -gon . An isometry isometry of the plane is a function that is a bijection and preserves the Euclidean distance for any ). A symmetry symmetry of is an isometry that maps to itself.    By the latter I don't mean that fixes each of the points of , but rather that , that is every point of is mapped to a (possibly different) point of and every point of is the image of some point in via .  Composition of Symmetries The of two symmetries of is again a symmetry of .  Dihedral Group   The dihedral group  dihedral group is the set of symmetries of the regular -gon equipped with the binary operation given by composition. Dihedral Group      The name \"dihedral group\" is a natural choice for these groups, as they are intimately connected to the study of dihedral angles and the symmetries of regular polygons.   Rotations and Reflections  Assume that the regular -gon is drawn in the plane with its center at the origin and one vertex on the axis.   If rotation denotes rotation about the origin by radians counter-clockwise, then . It's inverse is rotation by clock-wise.    For another example, for any line of symmetry of , reflection about that line gives an element of . By our convention for how to draw , the -axis is a line of symmetry for , and we let reflection denote reflection about the -axis.      We see and , which may make some intuitive sense. The fact that is a reflection and hence that may be slightly less aparent.  Order of      Every element in can be written as or for .            We will use some geometric notions freely without complete justification. For example, we use that if an isometry of fixes two points and , then it is either the identity element or it is reflection about the line . We also use that every element of maps the origin to itself (since the origin is the center of mass of ). Finally, we use that every isometry of is either orientation preserving or orientation reversing .  Label the vertices of as , with being the vertex located on the positive -axis, being the vertex adjacent to in the counter-clockwise direction, etc. We have , , etc., and so . Moreover any isometry must send a vertex to a vertex because the vertices are the points on at largest distance from the origin.  Let be an arbitrary symmetry of . Then for some . Then the element fixes and the origin, and hence either or from the discussion above. We get that or , proving the first assertion.  Since , we see that if for , then . We have for any since the former is orientation reversing and the latter is orientation preserving. If for , then upon multiplying on the left of we get .     Symmetric Groups  Every possible permutation is still in play. Michael Cullen  Let's introduce another very important example: symmetric groups.  Permutation   A permutation permutation of a set is a bijective function . The set of all permutations of a set is denoted permutation group .    Symmetric Group   For any , the symmetric group symmetric group is the set equipped with the composition of functions as its binary operation. Symmetric group     Order of Prove .  Cycles and Transpositions   If are distinct integers between and , then denotes the element of that satisfies Such a permutation is called a cycle cycle or an -cycle if we want to emphasize its length. A -cycle is often called a transposition transposition .    Cycle Example  For example, , regarded as an element of sends to , to and to , and it fixes . (Note that the value of in cycle notation is sometime ambiguous.)   -Cycles in Determine the number of -cycles in .  Note that distinct lists of integers represent the same cycle if they are cyclical rearrangements of each other, e.g., . However, .  Composing Cycle  We compose cycles the same way we compose functions. So, for example This equation might lead you to the false belief that every element of is a cycle. This is not true — for example, the product cannot be written as a single cycle. What is true is that every element of is uniquely (up to ordering) the product of disjoint cycles. We'll prove that soon in .   Disjoint Commutes   Disjoint cycles commute, disjoint cycles that is, if , and then .    While sufficent, this is not a necessary condition.  Non-Disjoint Commutes  Find elements that commute but are not disjoint.   Cycle Decompostion      Each can be written as a product (composition) of disjoint cycles cycle decompostion , and such a factorization is unique up to the ordering of the factors.    Each can be written a product of transpositions.          First, note that the identity element of is the empty product of cycles.  Fix and let . The homomorphism given as the inclusion of into determines an action of on the set . This action decomposes into disjoint orbits. Since generates , belong to the same orbit iff for some . Let be any one of these orbits with size at least . Now pick any element . Consider the sequence of element of . The axioms of a group action gives us that the first time this sequence has a repitition occurs when , where . Let for and let be the -cycle . Then and  act the same on . More formally, fixes all elements of . Also, fixes . It follows that where the product is taken over all orbits of size at least . This proves existense.  For uniqueness, if is a product of disjoint cycles, then the orbits under the action of are the one-element orbits along with the orbits of each . Moreover, if the orbit of is , then and act the same on and fixes . It follows that .    It suffices to prove this for a single cycle and, by symmetry, for the cycle . The equation is seen to hold by direct calculation.       For the uniqueness part of statement (1) in one needs to establish a convention regarding -cycles, that is one needs to stipulate either that the -cycles will not be recorded (which gives the shortest such factorization) or that all the -cycles will be recorded (which gives the longest such factorization, but also the only one that makes it clear what the number is).  Now that we know that every permutation can be written as a product of transpositions, we can utilize this to gain insight into many aspects of the group structure, such as the order of elements.  Permutation Order   The order of a permutation is the least common multiple of the lengths of the cycles it is a product of.  In particular, every transposition is its own inverse and the order of a -cycle in is .    Coming soon!    We can also categorize elements of permutation groups by the number of transpositions it is a product of.  Even and Odd Permutaitons   A permutation is even even permutation is if is the product of an even number of transpositions, otherwise it is odd odd permutation .    Even and Odd Properties      A -cycle is even if and only if is odd.    Products of even permutations are even, products of odd permutations are even, products of even and odd permutations are odd.    The identity permutation in is even, but not odd.    No permutation in is both even and odd.       Alternating Group   The alternating group alternating group  is the subset of all even cycles of . the alternating group on elements     Order of Prove .   The Quaternions  Quaternions...though beautifully ingenious, have been an unmixed evil to those who have touched them in any way. William Thomson  Quaternions  Quaternions were invented by the Irish mathematician in 1843. Hamilton named them \"quaternions\" because they are a generalization of complex numbers, which he called \"duads\". Since quaternions involve four components instead of two, Hamilton chose the name \"quaternions\" to reflect this. The word \"quaternion\" itself means a group of four things or a fourfold entity, which is a fitting name for a mathematical object with four components.   Quaternions   The quaternion group quaternion group  is a set with elements satisfying the following relations: is the identity element and      The quaternion group arises in the study of rotations in three dimensions. It has important applications in computer graphics and computer vision, as well as in physics and algebra.  Heinous Commutes Provide explicit examples to show , and are not abelian groups when .  There isn't much for us to do with right now, but you'd be surprised by the unusual places this group manages to crop up.   "
+  "body": "Common Groups   We examine two of the most commonly encountered groups in all of algebra: the dihedral group and the symmetric group. The quaternions are also here.    Dihedral Groups  Reflection is one of the most underused yet powerful tools for success. Richard Carlson  Isometry and Symmetry   For any integer , let denote a regular -gon regular -gon . An isometry isometry of the plane is a function that is a bijection and preserves the Euclidean distance for any ). A symmetry symmetry of is an isometry that maps to itself.     By the latter I don't mean that fixes each of the points of , but rather that , that is every point of is mapped to a (possibly different) point of and every point of is the image of some point in via .   Composition of Symmetries The of two symmetries of is again a symmetry of .  Dihedral Group   The dihedral group  dihedral group is the set of symmetries of the regular -gon equipped with the binary operation given by composition. Dihedral Group      The name \"dihedral group\" is a natural choice for these groups, as they are intimately connected to the study of dihedral angles and the symmetries of regular polygons.   Rotations and Reflections  Assume that the regular -gon is drawn in the plane with its center at the origin and one vertex on the axis.   If rotation denotes rotation about the origin by radians counter-clockwise, then . It's inverse is rotation by clock-wise.    For another example, for any line of symmetry of , reflection about that line gives an element of . By our convention for how to draw , the -axis is a line of symmetry for , and we let reflection denote reflection about the -axis.       We see and , which may make some intuitive sense. The fact that is a reflection and hence that may be slightly less aparent.   Order of      Every element in can be written as or for .            We will use some geometric notions freely without complete justification. For example, we use that if an isometry of fixes two points and , then it is either the identity element or it is reflection about the line . We also use that every element of maps the origin to itself (since the origin is the center of mass of ). Finally, we use that every isometry of is either orientation preserving or orientation reversing .  Label the vertices of as , with being the vertex located on the positive -axis, being the vertex adjacent to in the counter-clockwise direction, etc. We have , , etc., and so . Moreover any isometry must send a vertex to a vertex because the vertices are the points on at largest distance from the origin.  Let be an arbitrary symmetry of . Then for some . Then the element fixes and the origin, and hence either or from the discussion above. We get that or , proving the first assertion.  Since , we see that if for , then . We have for any since the former is orientation reversing and the latter is orientation preserving. If for , then upon multiplying on the left of we get .     Symmetric Groups  Every possible permutation is still in play. Michael Cullen  Let's introduce another very important example: symmetric groups.  Permutation   A permutation permutation of a set is a bijective function . The set of all permutations of a set is denoted permutation group .    Symmetric Group   For any , the symmetric group symmetric group is the set equipped with the composition of functions as its binary operation. Symmetric group     Order of Prove .  Cycles and Transpositions   If are distinct integers between and , then denotes the element of that satisfies Such a permutation is called a cycle cycle or an -cycle if we want to emphasize its length. A -cycle is often called a transposition transposition .    Cycle Example  For example, , regarded as an element of sends to , to and to , and it fixes . (Note that the value of in cycle notation is sometime ambiguous.)   -Cycles in Determine the number of -cycles in .   Note that distinct lists of integers represent the same cycle if they are cyclical rearrangements of each other, e.g., . However, .   We compose cycles the same way we compose functions.  Composing Cycles  Consider This equation might lead you to the false belief that every element of is a cycle. This is not true — for example, the product cannot be written as a single cycle. What is true is that every element of is uniquely (up to ordering) the product of disjoint cycles. We'll prove that soon in .   Disjoint Commutes   Disjoint cycles commute, disjoint cycles that is, if , and then .    While sufficent, this is not a necessary condition.  Non-Disjoint Commutes  Find elements that commute but are not disjoint.   Cycle Decompostion      Each can be written as a product (composition) of disjoint cycles cycle decompostion , and such a factorization is unique up to the ordering of the factors.    Each can be written a product of transpositions.          First, note that the identity element of is the empty product of cycles.  Fix and let . The homomorphism given as the inclusion of into determines an action of on the set . This action decomposes into disjoint orbits. Since generates , belong to the same orbit iff for some . Let be any one of these orbits with size at least . Now pick any element . Consider the sequence of element of . The axioms of a group action gives us that the first time this sequence has a repitition occurs when , where . Let for and let be the -cycle . Then and  act the same on . More formally, fixes all elements of . Also, fixes . It follows that where the product is taken over all orbits of size at least . This proves existense.  For uniqueness, if is a product of disjoint cycles, then the orbits under the action of are the one-element orbits along with the orbits of each . Moreover, if the orbit of is , then and act the same on and fixes . It follows that .    It suffices to prove this for a single cycle and, by symmetry, for the cycle . The equation is seen to hold by direct calculation.        For the uniqueness part of statement (1) in one needs to establish a convention regarding -cycles, that is one needs to stipulate either that the -cycles will not be recorded (which gives the shortest such factorization) or that all the -cycles will be recorded (which gives the longest such factorization, but also the only one that makes it clear what the number is).   Now that we know that every permutation can be written as a product of transpositions, we can utilize this to gain insight into many aspects of the group structure, such as the order of elements.  Permutation Order   The order of a permutation is the least common multiple of the lengths of the cycles it is a product of.  In particular, every transposition is its own inverse and the order of a -cycle in is .    Coming soon!    We can also categorize elements of permutation groups by the number of transpositions it is a product of.  Even and Odd Permutaitons   A permutation is even even permutation is if is the product of an even number of transpositions, otherwise it is odd odd permutation .    Even and Odd Properties      A -cycle is even if and only if is odd.    Products of even permutations are even, products of odd permutations are even, products of even and odd permutations are odd.    The identity permutation in is even, but not odd.    No permutation in is both even and odd.       Alternating Group   The alternating group alternating group  is the subset of all even cycles of . the alternating group on elements     Order of Prove .   The Quaternions  Quaternions...though beautifully ingenious, have been an unmixed evil to those who have touched them in any way. William Thomson  Quaternions  Quaternions were invented by the Irish mathematician in 1843. Hamilton named them \"quaternions\" because they are a generalization of complex numbers, which he called \"duads\". Since quaternions involve four components instead of two, Hamilton chose the name \"quaternions\" to reflect this. The word \"quaternion\" itself means a group of four things or a fourfold entity, which is a fitting name for a mathematical object with four components.   Quaternions   The quaternion group quaternion group  is a set with elements satisfying the following relations: is the identity element and      The quaternion group arises in the study of rotations in three dimensions. It has important applications in computer graphics and computer vision, as well as in physics and algebra.  Heinous Commutes Provide explicit examples to show , and are not abelian groups when .  There isn't much for us to do with right now, but you'd be surprised by the unusual places this group manages to crop up.   "
 },
 {
   "id": "def-iso-and-sym",
   "level": "2",
   "url": "sec-common-groups.html#def-iso-and-sym",
   "type": "Definition",
-  "number": "1.34",
+  "number": "1.35",
   "title": "Isometry and Symmetry.",
   "body": "Isometry and Symmetry   For any integer , let denote a regular -gon regular -gon . An isometry isometry of the plane is a function that is a bijection and preserves the Euclidean distance for any ). A symmetry symmetry of is an isometry that maps to itself.   "
 },
 {
-  "id": "remark-9",
+  "id": "remark-8",
   "level": "2",
-  "url": "sec-common-groups.html#remark-9",
+  "url": "sec-common-groups.html#remark-8",
   "type": "Remark",
-  "number": "1.35",
+  "number": "1.36",
   "title": "",
-  "body": "By the latter I don't mean that fixes each of the points of , but rather that , that is every point of is mapped to a (possibly different) point of and every point of is the image of some point in via . "
+  "body": " By the latter I don't mean that fixes each of the points of , but rather that , that is every point of is mapped to a (possibly different) point of and every point of is the image of some point in via .  "
 },
 {
   "id": "exercise-9",
   "level": "2",
   "url": "sec-common-groups.html#exercise-9",
   "type": "Exploration",
-  "number": "1.36",
+  "number": "1.37",
   "title": "Composition of Symmetries.",
   "body": "Composition of Symmetries The of two symmetries of is again a symmetry of . "
 },
@@ -401,7 +401,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-common-groups.html#def-d2n",
   "type": "Definition",
-  "number": "1.37",
+  "number": "1.38",
   "title": "Dihedral Group.",
   "body": "Dihedral Group   The dihedral group  dihedral group is the set of symmetries of the regular -gon equipped with the binary operation given by composition. Dihedral Group    "
 },
@@ -410,25 +410,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-common-groups.html#ex-d2n-elements",
   "type": "Example",
-  "number": "1.38",
+  "number": "1.39",
   "title": "Rotations and Reflections.",
   "body": "Rotations and Reflections  Assume that the regular -gon is drawn in the plane with its center at the origin and one vertex on the axis.   If rotation denotes rotation about the origin by radians counter-clockwise, then . It's inverse is rotation by clock-wise.    For another example, for any line of symmetry of , reflection about that line gives an element of . By our convention for how to draw , the -axis is a line of symmetry for , and we let reflection denote reflection about the -axis.     "
 },
 {
-  "id": "remark-10",
+  "id": "remark-9",
   "level": "2",
-  "url": "sec-common-groups.html#remark-10",
+  "url": "sec-common-groups.html#remark-9",
   "type": "Remark",
-  "number": "1.39",
+  "number": "1.40",
   "title": "",
-  "body": "We see and , which may make some intuitive sense. The fact that is a reflection and hence that may be slightly less aparent. "
+  "body": " We see and , which may make some intuitive sense. The fact that is a reflection and hence that may be slightly less aparent.  "
 },
 {
   "id": "thm-d2n-order",
   "level": "2",
   "url": "sec-common-groups.html#thm-d2n-order",
   "type": "Proposition",
-  "number": "1.40",
+  "number": "1.41",
   "title": "Order of <span class=\"process-math\">\\(D_{2n}\\)<\/span>.",
   "body": "Order of      Every element in can be written as or for .            We will use some geometric notions freely without complete justification. For example, we use that if an isometry of fixes two points and , then it is either the identity element or it is reflection about the line . We also use that every element of maps the origin to itself (since the origin is the center of mass of ). Finally, we use that every isometry of is either orientation preserving or orientation reversing .  Label the vertices of as , with being the vertex located on the positive -axis, being the vertex adjacent to in the counter-clockwise direction, etc. We have , , etc., and so . Moreover any isometry must send a vertex to a vertex because the vertices are the points on at largest distance from the origin.  Let be an arbitrary symmetry of . Then for some . Then the element fixes and the origin, and hence either or from the discussion above. We get that or , proving the first assertion.  Since , we see that if for , then . We have for any since the former is orientation reversing and the latter is orientation preserving. If for , then upon multiplying on the left of we get .   "
 },
@@ -437,7 +437,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-common-groups.html#def-permutation",
   "type": "Definition",
-  "number": "1.41",
+  "number": "1.42",
   "title": "Permutation.",
   "body": "Permutation   A permutation permutation of a set is a bijective function . The set of all permutations of a set is denoted permutation group .   "
 },
@@ -446,7 +446,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-common-groups.html#def-symmetric-group",
   "type": "Definition",
-  "number": "1.42",
+  "number": "1.43",
   "title": "Symmetric Group <span class=\"process-math\">\\(S_n\\)<\/span>.",
   "body": "Symmetric Group   For any , the symmetric group symmetric group is the set equipped with the composition of functions as its binary operation. Symmetric group    "
 },
@@ -455,7 +455,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-common-groups.html#exe-sn-order",
   "type": "Exploration",
-  "number": "1.43",
+  "number": "1.44",
   "title": "Order of <span class=\"process-math\">\\(S_n\\)<\/span>.",
   "body": "Order of Prove . "
 },
@@ -464,7 +464,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-common-groups.html#def-cycle",
   "type": "Definition",
-  "number": "1.44",
+  "number": "1.45",
   "title": "Cycles and Transpositions.",
   "body": "Cycles and Transpositions   If are distinct integers between and , then denotes the element of that satisfies Such a permutation is called a cycle cycle or an -cycle if we want to emphasize its length. A -cycle is often called a transposition transposition .   "
 },
@@ -473,7 +473,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-common-groups.html#ex-cycle",
   "type": "Example",
-  "number": "1.45",
+  "number": "1.46",
   "title": "Cycle Example.",
   "body": "Cycle Example  For example, , regarded as an element of sends to , to and to , and it fixes . (Note that the value of in cycle notation is sometime ambiguous.)  "
 },
@@ -482,34 +482,34 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-common-groups.html#exe-1-cycles",
   "type": "Exploration",
-  "number": "1.46",
+  "number": "1.47",
   "title": "<span class=\"process-math\">\\(1\\)<\/span>-Cycles in <span class=\"process-math\">\\(S_n\\)<\/span>.",
   "body": "-Cycles in Determine the number of -cycles in . "
 },
 {
-  "id": "remark-11",
+  "id": "remark-10",
   "level": "2",
-  "url": "sec-common-groups.html#remark-11",
+  "url": "sec-common-groups.html#remark-10",
   "type": "Remark",
-  "number": "1.47",
+  "number": "1.48",
   "title": "",
-  "body": "Note that distinct lists of integers represent the same cycle if they are cyclical rearrangements of each other, e.g., . However, . "
+  "body": " Note that distinct lists of integers represent the same cycle if they are cyclical rearrangements of each other, e.g., . However, .  "
 },
 {
   "id": "exe-composing-cycles",
   "level": "2",
   "url": "sec-common-groups.html#exe-composing-cycles",
   "type": "Example",
-  "number": "1.48",
-  "title": "Composing Cycle.",
-  "body": "Composing Cycle  We compose cycles the same way we compose functions. So, for example This equation might lead you to the false belief that every element of is a cycle. This is not true — for example, the product cannot be written as a single cycle. What is true is that every element of is uniquely (up to ordering) the product of disjoint cycles. We'll prove that soon in .  "
+  "number": "1.49",
+  "title": "Composing Cycles.",
+  "body": "Composing Cycles  Consider This equation might lead you to the false belief that every element of is a cycle. This is not true — for example, the product cannot be written as a single cycle. What is true is that every element of is uniquely (up to ordering) the product of disjoint cycles. We'll prove that soon in .  "
 },
 {
   "id": "prop-disjoint-cycles-commute",
   "level": "2",
   "url": "sec-common-groups.html#prop-disjoint-cycles-commute",
   "type": "Proposition",
-  "number": "1.49",
+  "number": "1.50",
   "title": "Disjoint Commutes.",
   "body": "Disjoint Commutes   Disjoint cycles commute, disjoint cycles that is, if , and then .   "
 },
@@ -518,7 +518,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-common-groups.html#exercise-12",
   "type": "Exploration",
-  "number": "1.50",
+  "number": "1.51",
   "title": "Non-Disjoint Commutes.",
   "body": "Non-Disjoint Commutes  Find elements that commute but are not disjoint.  "
 },
@@ -527,25 +527,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-common-groups.html#thm-cycledecomp",
   "type": "Theorem",
-  "number": "1.51",
+  "number": "1.52",
   "title": "Cycle Decompostion.",
   "body": "Cycle Decompostion      Each can be written as a product (composition) of disjoint cycles cycle decompostion , and such a factorization is unique up to the ordering of the factors.    Each can be written a product of transpositions.          First, note that the identity element of is the empty product of cycles.  Fix and let . The homomorphism given as the inclusion of into determines an action of on the set . This action decomposes into disjoint orbits. Since generates , belong to the same orbit iff for some . Let be any one of these orbits with size at least . Now pick any element . Consider the sequence of element of . The axioms of a group action gives us that the first time this sequence has a repitition occurs when , where . Let for and let be the -cycle . Then and  act the same on . More formally, fixes all elements of . Also, fixes . It follows that where the product is taken over all orbits of size at least . This proves existense.  For uniqueness, if is a product of disjoint cycles, then the orbits under the action of are the one-element orbits along with the orbits of each . Moreover, if the orbit of is , then and act the same on and fixes . It follows that .    It suffices to prove this for a single cycle and, by symmetry, for the cycle . The equation is seen to hold by direct calculation.      "
 },
 {
-  "id": "remark-12",
+  "id": "remark-11",
   "level": "2",
-  "url": "sec-common-groups.html#remark-12",
+  "url": "sec-common-groups.html#remark-11",
   "type": "Remark",
-  "number": "1.52",
+  "number": "1.53",
   "title": "",
-  "body": "For the uniqueness part of statement (1) in one needs to establish a convention regarding -cycles, that is one needs to stipulate either that the -cycles will not be recorded (which gives the shortest such factorization) or that all the -cycles will be recorded (which gives the longest such factorization, but also the only one that makes it clear what the number is). "
+  "body": " For the uniqueness part of statement (1) in one needs to establish a convention regarding -cycles, that is one needs to stipulate either that the -cycles will not be recorded (which gives the shortest such factorization) or that all the -cycles will be recorded (which gives the longest such factorization, but also the only one that makes it clear what the number is).  "
 },
 {
   "id": "exe-permutation-order",
   "level": "2",
   "url": "sec-common-groups.html#exe-permutation-order",
   "type": "Proposition",
-  "number": "1.53",
+  "number": "1.54",
   "title": "Permutation Order.",
   "body": "Permutation Order   The order of a permutation is the least common multiple of the lengths of the cycles it is a product of.  In particular, every transposition is its own inverse and the order of a -cycle in is .    Coming soon!   "
 },
@@ -554,7 +554,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-common-groups.html#def-even-odd-permutation",
   "type": "Definition",
-  "number": "1.54",
+  "number": "1.55",
   "title": "Even and Odd Permutaitons.",
   "body": "Even and Odd Permutaitons   A permutation is even even permutation is if is the product of an even number of transpositions, otherwise it is odd odd permutation .   "
 },
@@ -563,7 +563,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-common-groups.html#prop-even-odd-properties",
   "type": "Proposition",
-  "number": "1.55",
+  "number": "1.56",
   "title": "Even and Odd Properties.",
   "body": "Even and Odd Properties      A -cycle is even if and only if is odd.    Products of even permutations are even, products of odd permutations are even, products of even and odd permutations are odd.    The identity permutation in is even, but not odd.    No permutation in is both even and odd.      "
 },
@@ -572,7 +572,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-common-groups.html#def-alternating-group",
   "type": "Definition",
-  "number": "1.56",
+  "number": "1.57",
   "title": "Alternating Group.",
   "body": "Alternating Group   The alternating group alternating group  is the subset of all even cycles of . the alternating group on elements    "
 },
@@ -581,7 +581,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-common-groups.html#exe-an-order",
   "type": "Exploration",
-  "number": "1.57",
+  "number": "1.58",
   "title": "Order of <span class=\"process-math\">\\(A_n\\)<\/span>.",
   "body": "Order of Prove . "
 },
@@ -590,7 +590,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-common-groups.html#def-quaternions",
   "type": "Definition",
-  "number": "1.58",
+  "number": "1.59",
   "title": "Quaternions.",
   "body": "Quaternions   The quaternion group quaternion group  is a set with elements satisfying the following relations: is the identity element and     "
 },
@@ -599,7 +599,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-common-groups.html#exe-heinous-commutes",
   "type": "Exploration",
-  "number": "1.59",
+  "number": "1.60",
   "title": "Heinous Commutes.",
   "body": "Heinous Commutes Provide explicit examples to show , and are not abelian groups when . "
 },
@@ -610,7 +610,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.1",
   "title": "Group Homomorphisms",
-  "body": "Group Homomorphisms  Homomorphism? I Barely Know 'em!  In the end, the character of a civilization is encased in its structures. Frank Gehry  Group Homomorphism   If and are groups, a homomorphism group homomorphism from is is a function such that , where and denote the multiplication rules for and , respectively. the common symbols we use to denote homomorphisms     Homomorphism  The word \"homomorphism\" comes from the Greek words \"homo\" meaning \"same\" and \"morphe\" meaning \"form\" or \"shape\".  Several mathematicians have been creditied with inventing \/ discovering homomorphisms, such as Frobenius, Galois, Klein, and Jordan.   Intuitively, a group homomorphism preserves the algebraic structure of the group, while allowing us to compare and relate different groups. In this way, group homomorphisms allow us to study the properties of groups by comparing them to other groups that we already understand well.  Homormophism Examples     The identity map is a group homomorphism for any group , this is known as the trivial homomorphism trivial homomorphism .    The zero map is a group homomorphism for any group .    The function given by is a homomorphism.    The sign homomorphism sign homomorphism  that sends even permuations to and odd permutations to is a homomorphism.    The exponential map exponential map  is a homomorphism.    The natural log map natural log map  is a homomorphism.    For any positive integer the map determinant map determinant map  is a group homomorphism.       Specifically, homomorphisms will preserve the additive structure, such as the identity element and inverse elements.  Homomorphism Preservations   If is a homomorphism of groups, then    and     .       For the first, and now multiply by . For the second, implies .    Compositions of Homomorphisms   If and are group homomorphisms, the composition is a group homomorphism.    Sweet  Let and be abelian groups. Then the set of all group homomorphisms from to is itself an abelian group.    Kernel   Let is a homomorphism of groups. The kernel kernel of a group homomorphism of is the set  the kernel of a homomorphism      Kernel  The term \"kernel\" was first used in mathematics by the German mathematician in the late 19th century.  The term \"kernel\" comes from the German word \"Kern\", which means \"core\" or \"nucleus\". In the context of a homomorphism, the kernel is the subgroup of the domain group that is \"killed\" by the homomorphism.   Injective and Surjective Homomorphisms      A group homomorphism is injective if and only if .    A group homomorphism is surjective if and only if .           is immediate from the definitions (since for all homomorphisms ). If and then and thus which implies .    This is identical to , the homomorphism aspect adds nothing of interest.       Homomorphisms and Order  If is a homomorphism of groups and is finte, then .    "
+  "body": "Group Homomorphisms  Homomorphism? I Barely Know 'em!  In the end, the character of a civilization is encased in its structures. Frank Gehry  Group Homomorphism   If and are groups, a homomorphism group homomorphism from is is a function such that , where and denote the multiplication rules for and , respectively. the common symbols we use to denote homomorphisms     Homomorphism  The word \"homomorphism\" comes from the Greek words \"homo\" meaning \"same\" and \"morphe\" meaning \"form\" or \"shape\".  Several mathematicians have been creditied with inventing \/ discovering homomorphisms, such as Frobenius, Galois, Klein, and Jordan.    We use to denote an arbitrary homomorphism instead of to differenetiate between homormorphisms and ordinary functions. Other greek letters, such as and are used for more specific homomorphisms, as we will see in the coming sections. For those interested, is used for inner automorphisms, is used permutation representations corresponding to group actions, and is used for permutation representations of the left regular action.    Intuitively, a group homomorphism preserves the algebraic structure of the group, while allowing us to compare and relate different groups. In this way, group homomorphisms allow us to study the properties of groups by comparing them to other groups that we already understand well.  Homormophism Examples     The identity map is a group homomorphism for any group , this is known as the trivial homomorphism trivial homomorphism .    The zero map is a group homomorphism for any group .    The function given by is a homomorphism.    The sign homomorphism sign homomorphism  that sends even permuations to and odd permutations to is a homomorphism.    The exponential map exponential map  is a homomorphism.    The natural log map natural log map  is a homomorphism.    For any positive integer the map determinant map determinant map  is a group homomorphism.       Specifically, homomorphisms will preserve the additive structure, such as the identity element and inverse elements.  Homomorphism Preservations   If is a homomorphism of groups, then    and     .       For the first, and now multiply by . For the second, implies .    Compositions of Homomorphisms   If and are group homomorphisms, the composition is a group homomorphism.    Sweet  Let and be abelian groups. Then the set of all group homomorphisms from to is itself an abelian group.    Kernel   Let be a homomorphism of groups. The kernel kernel of a group homomorphism of is the set  the kernel of a homomorphism      Kernel  The term kernel was first used in mathematics by the German mathematician in the late 19th century.  The term kernel comes from the German word kern , which means core or nucleus . In the context of a homomorphism, the kernel is the subgroup of the domain group that is killed by the homomorphism.   Injective and Surjective Homomorphisms      A group homomorphism is injective if and only if .    A group homomorphism is surjective if and only if .           is immediate from the definitions (since for all homomorphisms ). If and then and thus which implies .    This is identical to ; the homomorphism aspect adds nothing of interest. Though one could argue that adding nothing of interest is interesting, causing it to add something of interest.        Homomorphisms and Order  If is a homomorphism of groups and is finte, then .    "
 },
 {
   "id": "def-ghom",
@@ -622,11 +622,20 @@ var ptx_lunr_docs = [
   "body": "Group Homomorphism   If and are groups, a homomorphism group homomorphism from is is a function such that , where and denote the multiplication rules for and , respectively. the common symbols we use to denote homomorphisms    "
 },
 {
+  "id": "convention-3",
+  "level": "2",
+  "url": "sec-gphoms.html#convention-3",
+  "type": "Convention",
+  "number": "2.2",
+  "title": "",
+  "body": " We use to denote an arbitrary homomorphism instead of to differenetiate between homormorphisms and ordinary functions. Other greek letters, such as and are used for more specific homomorphisms, as we will see in the coming sections. For those interested, is used for inner automorphisms, is used permutation representations corresponding to group actions, and is used for permutation representations of the left regular action.   "
+},
+{
   "id": "ex-group-homom-examples",
   "level": "2",
   "url": "sec-gphoms.html#ex-group-homom-examples",
   "type": "Example",
-  "number": "2.2",
+  "number": "2.3",
   "title": "Homormophism Examples.",
   "body": "Homormophism Examples     The identity map is a group homomorphism for any group , this is known as the trivial homomorphism trivial homomorphism .    The zero map is a group homomorphism for any group .    The function given by is a homomorphism.    The sign homomorphism sign homomorphism  that sends even permuations to and odd permutations to is a homomorphism.    The exponential map exponential map  is a homomorphism.    The natural log map natural log map  is a homomorphism.    For any positive integer the map determinant map determinant map  is a group homomorphism.     "
 },
@@ -635,7 +644,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gphoms.html#thm-grphomom-preservations",
   "type": "Theorem",
-  "number": "2.3",
+  "number": "2.4",
   "title": "Homomorphism Preservations.",
   "body": "Homomorphism Preservations   If is a homomorphism of groups, then    and     .       For the first, and now multiply by . For the second, implies .   "
 },
@@ -644,7 +653,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gphoms.html#thm-ghom-composition",
   "type": "Theorem",
-  "number": "2.4",
+  "number": "2.5",
   "title": "Compositions of Homomorphisms.",
   "body": "Compositions of Homomorphisms   If and are group homomorphisms, the composition is a group homomorphism.   "
 },
@@ -653,7 +662,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gphoms.html#exe-group-hom",
   "type": "Exploration",
-  "number": "2.5",
+  "number": "2.6",
   "title": "<span class=\"process-math\">\\(\\Hom\\)<\/span> Sweet <span class=\"process-math\">\\(\\Hom\\)<\/span>.",
   "body": "Sweet  Let and be abelian groups. Then the set of all group homomorphisms from to is itself an abelian group.  "
 },
@@ -662,25 +671,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gphoms.html#def-group-kernel",
   "type": "Definition",
-  "number": "2.6",
+  "number": "2.7",
   "title": "Kernel.",
-  "body": "Kernel   Let is a homomorphism of groups. The kernel kernel of a group homomorphism of is the set  the kernel of a homomorphism     "
+  "body": "Kernel   Let be a homomorphism of groups. The kernel kernel of a group homomorphism of is the set  the kernel of a homomorphism     "
 },
 {
   "id": "thm-inj-surj-ghom",
   "level": "2",
   "url": "sec-gphoms.html#thm-inj-surj-ghom",
   "type": "Theorem",
-  "number": "2.7",
+  "number": "2.8",
   "title": "Injective and Surjective Homomorphisms.",
-  "body": "Injective and Surjective Homomorphisms      A group homomorphism is injective if and only if .    A group homomorphism is surjective if and only if .           is immediate from the definitions (since for all homomorphisms ). If and then and thus which implies .    This is identical to , the homomorphism aspect adds nothing of interest.      "
+  "body": "Injective and Surjective Homomorphisms      A group homomorphism is injective if and only if .    A group homomorphism is surjective if and only if .           is immediate from the definitions (since for all homomorphisms ). If and then and thus which implies .    This is identical to ; the homomorphism aspect adds nothing of interest. Though one could argue that adding nothing of interest is interesting, causing it to add something of interest.       "
 },
 {
   "id": "exe-order-preservation",
   "level": "2",
   "url": "sec-gphoms.html#exe-order-preservation",
   "type": "Exploration",
-  "number": "2.8",
+  "number": "2.9",
   "title": "Homomorphisms and Order.",
   "body": "Homomorphisms and Order  If is a homomorphism of groups and is finte, then .  "
 },
@@ -691,14 +700,14 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.2",
   "title": "Group Isomorphisms",
-  "body": "Group Isomorphisms  Isomorphisms  The test of a first-rate intelligence is the ability to hold two opposed ideas in mind at the same time and still retain the ability to function. F. Scott Fitzgerald  Group Ismorphism   A homomorphism is called an isomorphism isomorphism if there exists a homomorphism such that and .  If is an isomorphism, and are called isomorphic isomorphic , written . Isomorphic     The meaning of the word isomorphism in any context (sets, groups, rings, fields, topological spaces, whatever) is always a morphism that has a two-sided inverse . In many contexts this turns out to be equivalent to the notion of being one-to-one and onto . But there are contexts in which this is not the case. For example a one-to-one and onto continuous map of topological spaces need not be a homeomorphism. (A homeomorphism is a term one uses for isomorphism of topological spaces, for historical reasons.)  Intuitively, a group isomorphism establishes a one-to-one correspondence between the elements of two groups, such that they have exactly the same algebraic structure. This means that the groups are essentially the same, up to a relabeling of their elements.  Equivalent Isomorphism Characterization   Suppose is a group homomorphism. Then an isomorphism if and only if is bijective (one-to-one and onto).    We start by recalling that a function between two sets is bijective if and only if there is a function such that and .  The is thus immediate. For the direction, if is bijective homomorphism, then it certainly has a set-theoretic two-sided inverse . But we need to show is actually a homomorphism: for we have . Since is one-to-one, .    Moving forward, we will essentially treat as the de-facto definition of a group isomorphism. Rather than end every proof with a reference to , we will instead enshrine its monumental achievements of within this remark. To alleviate some of the corresponding guilt asociated with this decision I am referencing as many times as possible, as is important and should not be forgotten.  Isomorphism Examples    The identity map is a group isomomorphism for any group .    , where is as defined in .       The exponential and natural logarithm maps from are inverses, making them isomorphisms as well.      Opposite Day Let be a group and the of . Then .    Something's Missing Justify why the following pairs of groups are not isomorphic.   and    and    and    and     Now seems like an exceptional time to recall .  Composition of Isomorphisms   The composition of two isomorphisms is an isomorphism.      Automorphisms  Self preservation is the first law of nature. Samuel Butler  Group Automorphism   Let be a group. An isomorphism is called an automorphism automorphism of . The set of automorphisms of a group is called the automorphism group automorphism group of and denoted .    A homomorphism from a group to itself is called an endomorphism endomorphism Though decaf automorphism has a better ring (whatever those are) to it in my opinion.   In we saw that the identity map is a group isomomorphism from a group to itself, making an automorphism. This may prove (pun intended) useful in the following proposition.   The Automorphism Group   The set of automorphisms of , denoted , is a group under composition. the automorphism group of a group     Complex Conjugation Automorphism Prove that the function given by is an automorphism.   Notice that we have actually shown that the composition of automorphisms is an automorphism, both through (as automorphisms are isomorphisms) and (as groups are closed under their operation)  Automorphism groups may also give us information about whether or not our group is abelian.  Abelian Groups and Automorphisms  Let be a group.   The map given by for all is an automorphism if and only if is abelian.    If then is abelian and every non-identity element of has order .      Inner Automorphism   Let be a group and . The function defined by is called the inner automorphism inner automorphism of induced by . The set of inner automorphisms inner automorphism group of is denoted .    Let's make sure this is indeed an automorphism to avoid any potential awkwardness down the line.  The Conjugation Automorphism   Let be a group and . Then for all .    Notice , proving that is a homomorhism from to itself.  Observe that for any , we have since . Also, , which is obvious. It follows that and . This proves has a two-sided inveerse and hence is an isomorphism. In fact, it shows that .      June 2020 (2)  Let be a group of order for some odd integer . Let be the group of permutations on the elements of (i.e., the group of bijective functions from G to G). You may use without proof that .   Let be given by for all , where is defined by for all . Prove that is an injective group homomorphism.  Prove that if is an element of order then is a product of transpositions.  Prove contains a subgroup of index and is consequently not simple.    For part (3), consider the inverse image under of the subgroup of consisting of the even permutations.    "
+  "body": "Group Isomorphisms  Isomorphisms  The test of a first-rate intelligence is the ability to hold two opposed ideas in mind at the same time and still retain the ability to function. F. Scott Fitzgerald  Group Ismorphism   A homomorphism is called an isomorphism isomorphism if there exists a homomorphism such that and .  If is an isomorphism, and are called isomorphic isomorphic , written . Isomorphic      The meaning of the word isomorphism in any context (sets, groups, rings, fields, topological spaces, whatever) is always a morphism that has a two-sided inverse . In many contexts this turns out to be equivalent to the notion of being one-to-one and onto . But there are contexts in which this is not the case. For example a one-to-one and onto continuous map of topological spaces need not be a homeomorphism. (A homeomorphism is a term one uses for isomorphism of topological spaces, for historical reasons.)  Intuitively, a group isomorphism establishes a one-to-one correspondence between the elements of two groups, such that they have exactly the same algebraic structure. This means that the groups are essentially the same, up to a relabeling of their elements.  Equivalent Isomorphism Characterization   Suppose is a group homomorphism. Then an isomorphism if and only if is bijective (one-to-one and onto).    We start by recalling that a function between two sets is bijective if and only if there is a function such that and .  The is thus immediate. For the direction, if is bijective homomorphism, then it certainly has a set-theoretic two-sided inverse . But we need to show is actually a homomorphism: for we have . Since is one-to-one, .     Moving forward, we will essentially treat as the de-facto definition of a group isomorphism. Rather than end every proof with a reference to , we will instead enshrine its monumental achievements of within this remark. To alleviate some of the corresponding guilt asociated with this decision I am referencing as many times as possible, as is important and should not be forgotten.   Isomorphism Examples     The identity map is a group isomomorphism for any group .     , where is as defined in .         The exponential and natural logarithm maps from are inverses, making them isomorphisms as well.      Opposite Day  Let be a group and the of . Then .   Coming soon!     Something's Missing  Justify why the following pairs of groups are not isomorphic.   and    and    and    and      Coming soon!   Now seems like an exceptional time to recall .  Composition of Isomorphisms   The composition of two isomorphisms is an isomorphism.      Automorphisms  Self preservation is the first law of nature. Samuel Butler  Group Automorphism   Let be a group. An isomorphism is called an automorphism automorphism of . The set of automorphisms of a group is called the automorphism group automorphism group of and denoted .     A homomorphism from a group to itself is called an endomorphism endomorphism  Though decaf automorphism has a better ring (whatever those are) to it in my opinion.     In we saw that the identity map is a group isomomorphism from a group to itself, making an automorphism. This may prove (pun intended) useful in the following proposition.   The Automorphism Group   The set of automorphisms of , denoted , is a group under composition. the automorphism group of a group     Coming soon!    Complex Conjugation Automorphism  Prove that the function given by is an automorphism.   Coming soon!        Coming soon!    Notice that we have actually shown that the composition of automorphisms is an automorphism, both through (as automorphisms are isomorphisms) and (as groups are closed under their operation)   Automorphism groups may also give us information about whether or not our group is abelian.  Abelian Groups and Automorphisms  Let be a group.   The map given by for all is an automorphism if and only if is abelian.    If then is abelian and every non-identity element of has order .      Inner Automorphism   Let be a group and . The function defined by is called the inner automorphism inner automorphism of induced by . The set of inner automorphisms inner automorphism group of is denoted .    Let's make sure this is indeed an automorphism to avoid any potential awkwardness down the line.  The Conjugation Automorphism   Let be a group and . Then for all .    Notice , proving that is a homomorhism from to itself.  Observe that for any , we have since . Also, , which is obvious. It follows that and . This proves has a two-sided inveerse and hence is an isomorphism. In fact, it shows that .      June 2020 (2)  Let be a group of order for some odd integer . Let be the group of permutations on the elements of (i.e., the group of bijective functions from G to G). You may use without proof that .   Let be given by for all , where is defined by for all . Prove that is an injective group homomorphism.  Prove that if is an element of order then is a product of transpositions.  Prove contains a subgroup of index and is consequently not simple.    For part (3), consider the inverse image under of the subgroup of consisting of the even permutations.    "
 },
 {
   "id": "def-gpiso",
   "level": "2",
   "url": "sec-gpisos.html#def-gpiso",
   "type": "Definition",
-  "number": "2.9",
+  "number": "2.10",
   "title": "Group Ismorphism.",
   "body": "Group Ismorphism   A homomorphism is called an isomorphism isomorphism if there exists a homomorphism such that and .  If is an isomorphism, and are called isomorphic isomorphic , written . Isomorphic    "
 },
@@ -707,52 +716,52 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gpisos.html#thm-iso-def",
   "type": "Theorem",
-  "number": "2.10",
+  "number": "2.11",
   "title": "Equivalent Isomorphism Characterization.",
   "body": "Equivalent Isomorphism Characterization   Suppose is a group homomorphism. Then an isomorphism if and only if is bijective (one-to-one and onto).    We start by recalling that a function between two sets is bijective if and only if there is a function such that and .  The is thus immediate. For the direction, if is bijective homomorphism, then it certainly has a set-theoretic two-sided inverse . But we need to show is actually a homomorphism: for we have . Since is one-to-one, .   "
 },
 {
-  "id": "remark-13",
+  "id": "remark-12",
   "level": "2",
-  "url": "sec-gpisos.html#remark-13",
+  "url": "sec-gpisos.html#remark-12",
   "type": "Remark",
-  "number": "2.11",
+  "number": "2.12",
   "title": "",
-  "body": "Moving forward, we will essentially treat as the de-facto definition of a group isomorphism. Rather than end every proof with a reference to , we will instead enshrine its monumental achievements of within this remark. To alleviate some of the corresponding guilt asociated with this decision I am referencing as many times as possible, as is important and should not be forgotten. "
+  "body": " Moving forward, we will essentially treat as the de-facto definition of a group isomorphism. Rather than end every proof with a reference to , we will instead enshrine its monumental achievements of within this remark. To alleviate some of the corresponding guilt asociated with this decision I am referencing as many times as possible, as is important and should not be forgotten.  "
 },
 {
   "id": "ex-group-iso-examples",
   "level": "2",
   "url": "sec-gpisos.html#ex-group-iso-examples",
   "type": "Example",
-  "number": "2.12",
+  "number": "2.13",
   "title": "Isomorphism Examples.",
-  "body": "Isomorphism Examples    The identity map is a group isomomorphism for any group .    , where is as defined in .       The exponential and natural logarithm maps from are inverses, making them isomorphisms as well.     "
+  "body": "Isomorphism Examples     The identity map is a group isomomorphism for any group .     , where is as defined in .         The exponential and natural logarithm maps from are inverses, making them isomorphisms as well.     "
 },
 {
   "id": "exe-isomorphic-to-opposite",
   "level": "2",
   "url": "sec-gpisos.html#exe-isomorphic-to-opposite",
   "type": "Exploration",
-  "number": "2.13",
+  "number": "2.14",
   "title": "Opposite Day.",
-  "body": "Opposite Day Let be a group and the of . Then . "
+  "body": "Opposite Day  Let be a group and the of . Then .   Coming soon!  "
 },
 {
   "id": "exe-not-isomorphic",
   "level": "2",
   "url": "sec-gpisos.html#exe-not-isomorphic",
   "type": "Exploration",
-  "number": "2.14",
+  "number": "2.15",
   "title": "Something's Missing.",
-  "body": "Something's Missing Justify why the following pairs of groups are not isomorphic.   and    and    and    and    "
+  "body": "Something's Missing  Justify why the following pairs of groups are not isomorphic.   and    and    and    and      Coming soon!  "
 },
 {
   "id": "cor-composition-of-isos",
   "level": "2",
   "url": "sec-gpisos.html#cor-composition-of-isos",
   "type": "Corollary",
-  "number": "2.15",
+  "number": "2.16",
   "title": "Composition of Isomorphisms.",
   "body": "Composition of Isomorphisms   The composition of two isomorphisms is an isomorphism.   "
 },
@@ -761,25 +770,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gpisos.html#def-gp-automorphism",
   "type": "Definition",
-  "number": "2.16",
+  "number": "2.17",
   "title": "Group Automorphism.",
   "body": "Group Automorphism   Let be a group. An isomorphism is called an automorphism automorphism of . The set of automorphisms of a group is called the automorphism group automorphism group of and denoted .   "
 },
 {
-  "id": "remark-14",
+  "id": "remark-13",
   "level": "2",
-  "url": "sec-gpisos.html#remark-14",
+  "url": "sec-gpisos.html#remark-13",
   "type": "Remark",
-  "number": "2.17",
+  "number": "2.18",
   "title": "",
-  "body": "A homomorphism from a group to itself is called an endomorphism endomorphism Though decaf automorphism has a better ring (whatever those are) to it in my opinion. "
+  "body": " A homomorphism from a group to itself is called an endomorphism endomorphism  Though decaf automorphism has a better ring (whatever those are) to it in my opinion.   "
 },
 {
   "id": "ex-identity-automorphism",
   "level": "2",
   "url": "sec-gpisos.html#ex-identity-automorphism",
   "type": "Example",
-  "number": "2.18",
+  "number": "2.19",
   "title": "",
   "body": " In we saw that the identity map is a group isomomorphism from a group to itself, making an automorphism. This may prove (pun intended) useful in the following proposition.  "
 },
@@ -788,43 +797,43 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gpisos.html#prop-aut-is-group",
   "type": "Proposition",
-  "number": "2.19",
+  "number": "2.20",
   "title": "The Automorphism Group.",
-  "body": "The Automorphism Group   The set of automorphisms of , denoted , is a group under composition. the automorphism group of a group    "
+  "body": "The Automorphism Group   The set of automorphisms of , denoted , is a group under composition. the automorphism group of a group     Coming soon!   "
 },
 {
   "id": "exe-complex-conjugation-automorphism",
   "level": "2",
   "url": "sec-gpisos.html#exe-complex-conjugation-automorphism",
   "type": "Exploration",
-  "number": "2.20",
+  "number": "2.21",
   "title": "Complex Conjugation Automorphism.",
-  "body": "Complex Conjugation Automorphism Prove that the function given by is an automorphism. "
+  "body": "Complex Conjugation Automorphism  Prove that the function given by is an automorphism.   Coming soon!  "
 },
 {
   "id": "ex-z-aut",
   "level": "2",
   "url": "sec-gpisos.html#ex-z-aut",
   "type": "Exploration",
-  "number": "2.21",
+  "number": "2.22",
   "title": "<span class=\"process-math\">\\(\\Aut(\\Z)\\)<\/span>.",
-  "body": ""
+  "body": "     Coming soon!  "
 },
 {
-  "id": "remark-15",
+  "id": "remark-14",
   "level": "2",
-  "url": "sec-gpisos.html#remark-15",
+  "url": "sec-gpisos.html#remark-14",
   "type": "Remark",
-  "number": "2.22",
+  "number": "2.23",
   "title": "",
-  "body": "Notice that we have actually shown that the composition of automorphisms is an automorphism, both through (as automorphisms are isomorphisms) and (as groups are closed under their operation) "
+  "body": " Notice that we have actually shown that the composition of automorphisms is an automorphism, both through (as automorphisms are isomorphisms) and (as groups are closed under their operation)  "
 },
 {
   "id": "exe-inverse-map-and-abelian",
   "level": "2",
   "url": "sec-gpisos.html#exe-inverse-map-and-abelian",
   "type": "Exploration",
-  "number": "2.23",
+  "number": "2.24",
   "title": "Abelian Groups and Automorphisms.",
   "body": "Abelian Groups and Automorphisms  Let be a group.   The map given by for all is an automorphism if and only if is abelian.    If then is abelian and every non-identity element of has order .     "
 },
@@ -833,7 +842,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gpisos.html#def-inner-automorphisms",
   "type": "Definition",
-  "number": "2.24",
+  "number": "2.25",
   "title": "Inner Automorphism.",
   "body": "Inner Automorphism   Let be a group and . The function defined by is called the inner automorphism inner automorphism of induced by . The set of inner automorphisms inner automorphism group of is denoted .   "
 },
@@ -842,7 +851,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gpisos.html#prop-conjugation-automorphism",
   "type": "Proposition",
-  "number": "2.25",
+  "number": "2.26",
   "title": "The Conjugation Automorphism.",
   "body": "The Conjugation Automorphism   Let be a group and . Then for all .    Notice , proving that is a homomorhism from to itself.  Observe that for any , we have since . Also, , which is obvious. It follows that and . This proves has a two-sided inveerse and hence is an isomorphism. In fact, it shows that .   "
 },
@@ -982,9 +991,9 @@ var ptx_lunr_docs = [
   "body": "Cayley's Theorem   Every group is isomorphic to a subgroup of .   "
 },
 {
-  "id": "remark-16",
+  "id": "remark-15",
   "level": "2",
-  "url": "sec-subgroups.html#remark-16",
+  "url": "sec-subgroups.html#remark-15",
   "type": "Remark",
   "number": "3.14",
   "title": "",
@@ -1108,9 +1117,9 @@ var ptx_lunr_docs = [
   "body": "Generating    is the subgroup of generated by all produts of -cyclies (disjoint or not). In symbols,    "
 },
 {
-  "id": "remark-17",
+  "id": "remark-16",
   "level": "2",
-  "url": "sec-gp-generators.html#remark-17",
+  "url": "sec-gp-generators.html#remark-16",
   "type": "Remark",
   "number": "3.26",
   "title": "",
@@ -1126,9 +1135,9 @@ var ptx_lunr_docs = [
   "body": "Generating   For prove that is generated by and the -cycle .   "
 },
 {
-  "id": "remark-18",
+  "id": "remark-17",
   "level": "2",
-  "url": "sec-gp-generators.html#remark-18",
+  "url": "sec-gp-generators.html#remark-17",
   "type": "Remark",
   "number": "3.28",
   "title": "",
@@ -1144,9 +1153,9 @@ var ptx_lunr_docs = [
   "body": "Commutator Subgroup  Let be a group, , and . This is known as the commutator subgroup commutator subgroup of . the commutator subgroup   "
 },
 {
-  "id": "remark-19",
+  "id": "remark-18",
   "level": "2",
-  "url": "sec-gp-generators.html#remark-19",
+  "url": "sec-gp-generators.html#remark-18",
   "type": "Remark",
   "number": "3.30",
   "title": "",
@@ -1171,9 +1180,9 @@ var ptx_lunr_docs = [
   "body": "Generators and Unique Homomorphism   If is a group and are elements such that , , and for some integer , then there exists a unique group homomorphism such that and .    Recall that the elements of are and that this list has no repetitions. Given , , and , if exists it is clearly unique, since we have and , so that the value of on every element of is determined by its values on just and .  To prove existence, define a function by for and for . Then one may painstakenly checks that in each of the cases or or or . For example, using that , we have and For the last string of equalities, we have used that, since , we have in too. Note also that might be negative, in which case is really and so really we would have . But this is OK since too, since .  I'll skip the verifications of the other three cases.   "
 },
 {
-  "id": "remark-20",
+  "id": "remark-19",
   "level": "2",
-  "url": "sec-gp-generators.html#remark-20",
+  "url": "sec-gp-generators.html#remark-19",
   "type": "Remark",
   "number": "3.33",
   "title": "",
@@ -1333,9 +1342,9 @@ var ptx_lunr_docs = [
   "body": "UMP for Cyclic Groups   universal mapping property for a cyclic group Assume and let be any group. If , then for each such that , there is a unique group homomorphism such that . If , then for each , there is a unique group homomorphism such that . In both cases this unique group homomorphism is given by for any .    Recall that either (with no repetitions) if or (with no repetitions) if .   Uniqueness: We show that if is a group homomorphism, then for all .     if then     if then     if then , using the formula above for       Existence: In either case, define for all relevant (i.e., in the first case, for and in the second for all ). We need to show this function is a well-defined group homomorphism. To see that is well defined, suppose for some . Then, since , suing Lemma or the definition for order we have Thus, if then .  The homomorphism property is immediate: . ◻   "
 },
 {
-  "id": "remark-21",
+  "id": "remark-20",
   "level": "2",
-  "url": "sec-cyclic.html#remark-21",
+  "url": "sec-cyclic.html#remark-20",
   "type": "Remark",
   "number": "3.50",
   "title": "",
@@ -1369,9 +1378,9 @@ var ptx_lunr_docs = [
   "body": "Sunzi's Remainder Theorem   Sunzi's Remainder Theorem for groups Suppose for distinct primes . Then there is an isomorphism given by where denote the class of an integer in .    Using , we let be the unique homomorhism that sends to . Then Clearly and so . Conversely, if , then for all and since are pairwise relatively prime, it follows that . This proves . The claim follows by the .   "
 },
 {
-  "id": "remark-22",
+  "id": "remark-21",
   "level": "2",
-  "url": "sec-cyclic.html#remark-22",
+  "url": "sec-cyclic.html#remark-21",
   "type": "Remark",
   "number": "3.54",
   "title": "",
@@ -1414,9 +1423,9 @@ var ptx_lunr_docs = [
   "body": "Abelian Cosets  If is an abelian then for all .  "
 },
 {
-  "id": "remark-23",
+  "id": "remark-22",
   "level": "2",
-  "url": "sec-cosets.html#remark-23",
+  "url": "sec-cosets.html#remark-22",
   "type": "Remark",
   "number": "4.3",
   "title": "",
@@ -1648,9 +1657,9 @@ var ptx_lunr_docs = [
   "body": "Subgroup of Index is Normal   Show that any subgroup of index two is normal. This means: show that if is a group, is a subgroup and , i.e the number of left (or right) cosets of in is two, then is normal.    Coming soon to an OER near you!   "
 },
 {
-  "id": "remark-24",
+  "id": "remark-23",
   "level": "2",
-  "url": "sec-normal-subgroups.html#remark-24",
+  "url": "sec-normal-subgroups.html#remark-23",
   "type": "Remark",
   "number": "4.28",
   "title": "",
@@ -1756,9 +1765,9 @@ var ptx_lunr_docs = [
   "body": "Quotients and Normal Subgroups  1889   Let . Then is a group if and only if .   "
 },
 {
-  "id": "remark-25",
+  "id": "remark-24",
   "level": "2",
-  "url": "sec-quotient-groups.html#remark-25",
+  "url": "sec-quotient-groups.html#remark-24",
   "type": "Remark",
   "number": "4.35",
   "title": "",
@@ -1954,9 +1963,9 @@ var ptx_lunr_docs = [
   "body": "Common Group Actions     Trivial Action  For any group and any set , defines an action, the trivial action .    Left Multiplication  For any group and any set , defines an action, the left multiplication action And similarly for right multiplication, yet we do not speak of that here. .    Conjugation  For any group and any set , defines an action, the conjugation action .    The group acts on the set such that .    The group acts on vectors in by left multiplication: given and , we have .     "
 },
 {
-  "id": "remark-26",
+  "id": "remark-25",
   "level": "2",
-  "url": "graction.html#remark-26",
+  "url": "graction.html#remark-25",
   "type": "Remark",
   "number": "5.3",
   "title": "",
@@ -1990,9 +1999,9 @@ var ptx_lunr_docs = [
   "body": "Faithful Action   An action of a group on a set is called faithful if the associated group homomorphism is injective. Equivalently, an action is faithful if and only if for a given , whenever for all , it must be that .   "
 },
 {
-  "id": "exploration-2",
+  "id": "exploration-1",
   "level": "2",
-  "url": "graction.html#exploration-2",
+  "url": "graction.html#exploration-1",
   "type": "Discussion",
   "number": "5.1",
   "title": "",
@@ -2017,9 +2026,9 @@ var ptx_lunr_docs = [
   "body": "Transitive Action   An action is transitive if for all there is a such that .   "
 },
 {
-  "id": "remark-27",
+  "id": "remark-26",
   "level": "2",
-  "url": "graction.html#remark-27",
+  "url": "graction.html#remark-26",
   "type": "Remark",
   "number": "5.9",
   "title": "",
@@ -2089,9 +2098,9 @@ var ptx_lunr_docs = [
   "body": "Left Regular Action  Let be any group and define an action of on (regarded as just a set) by the rule   "
 },
 {
-  "id": "remark-28",
+  "id": "remark-27",
   "level": "2",
-  "url": "sec-left-mult-conjugation.html#remark-28",
+  "url": "sec-left-mult-conjugation.html#remark-27",
   "type": "Remark",
   "number": "5.16",
   "title": "",
@@ -2215,9 +2224,9 @@ var ptx_lunr_docs = [
   "body": "Stabilizer   Let be a group acting on a set . For an element the stabilizer is  the stabilizer of .    "
 },
 {
-  "id": "remark-29",
+  "id": "remark-28",
   "level": "2",
-  "url": "sec-orbit-stab-class-eq.html#remark-29",
+  "url": "sec-orbit-stab-class-eq.html#remark-28",
   "type": "Remark",
   "number": "5.25",
   "title": "",
@@ -2305,9 +2314,9 @@ var ptx_lunr_docs = [
   "body": "Centralizer   Let be a group. For any , is called the centralizer of in  the centralizer of an element    "
 },
 {
-  "id": "remark-30",
+  "id": "remark-29",
   "level": "2",
-  "url": "sec-orbit-stab-class-eq.html#remark-30",
+  "url": "sec-orbit-stab-class-eq.html#remark-29",
   "type": "Remark",
   "number": "5.35",
   "title": "",
@@ -2431,9 +2440,9 @@ var ptx_lunr_docs = [
   "body": "Center of -group is Nontrivial   If is a prime number and is a finite group of order for some , then is not the trivial group (In fact for some ).    Let be a list of unique representatives of all of the conjugacy classes of of size greater than as in . Then for each , so . Since , it follows that for each . From we deduce that so, .   "
 },
 {
-  "id": "remark-31",
+  "id": "remark-30",
   "level": "2",
-  "url": "sec-p-groups.html#remark-31",
+  "url": "sec-p-groups.html#remark-30",
   "type": "Remark",
   "number": "6.3",
   "title": "",
@@ -2458,9 +2467,9 @@ var ptx_lunr_docs = [
   "body": "Sylow -subgroup   Let be a finite group and a prime. Write the order of as where . A Sylow -subgroup of is a subgroup such that . That is, a Sylow -subgroup of is a subgroup whose order is the highest conceivable power of according to .  We set to be the collection of all Sylow -subgroups of and to be the number of Sylow -subgroups. the collection of all Sylow -subgroups of  the the number of Sylow -subgroups    "
 },
 {
-  "id": "remark-32",
+  "id": "remark-31",
   "level": "2",
-  "url": "sec-p-groups.html#remark-32",
+  "url": "sec-p-groups.html#remark-31",
   "type": "Remark",
   "number": "6.6",
   "title": "",
@@ -2548,9 +2557,9 @@ var ptx_lunr_docs = [
   "body": "Sylow's Theorem   Assume is a group of order where is prime, , and .    (there exists at least one Sylow -subgroup of ).    If is a Sylow -subgroup of and is any -subgroup of (i.e., a subgroup whose order is some power of ), then there is a such that . In particular, the action of on by is transitive — i.e., any two Sylow -subgroups are conjugate.    We have     For any , and hence       "
 },
 {
-  "id": "remark-33",
+  "id": "remark-32",
   "level": "2",
-  "url": "sec-sylowthm.html#remark-33",
+  "url": "sec-sylowthm.html#remark-32",
   "type": "Remark",
   "number": "6.12",
   "title": "",
@@ -2674,9 +2683,9 @@ var ptx_lunr_docs = [
   "body": "No Simple Groups of Order   Let us prove that no group or order is simple. Let be any group of order . We will prove that must have either a normal subgroup of order or a normal subgroups of oder .  gives that is either or and is either or . If either of these numbers is , we have a unique subgroup of order or of order , and such a subgroup must be normal. Suppose these numbers are and , respectively. We deduce a contradition by counting elements .  In detail, say are the Sylow -subgroups. By  for all . Thus the set  has elements, one of which is and the other of which must have order . That is, there are elements of order in . But now consider the three Sylow -subgroups . Each has order and for all . It follows that for all , and thus , a contradiction.   "
 },
 {
-  "id": "remark-34",
+  "id": "remark-33",
   "level": "2",
-  "url": "sec-simple-groups.html#remark-34",
+  "url": "sec-simple-groups.html#remark-33",
   "type": "Remark",
   "number": "6.19",
   "title": "",
@@ -2719,9 +2728,9 @@ var ptx_lunr_docs = [
   "body": "the Unique Simple Group of Order   If is a simple group of order , then .    Assume is simple of order . Let us first observe that it suffices to construct a non-trivial action of on a set with elements. For given such an action we obtain a non-trivial homomorphism . Since it's non-trivial and is simple, we must have , so that is injective. Thus , and . But we already know that is the only subgroup of of order , and thus .  So, we only need to find such an action, and one's first guess would be the action on one of the sets of Sylow -subgroups. By Sylow Theory and the fact that is simple (so that no Sylow -subgroup for can be unique) we get   The next important observation is:   There is no non-trivial action of on a set of size at most .   For if there was such a non-trivial action, we would get a homomorphism for (if , the only action is the trivial one). Such a homomorphism cannot be injective by order considerations. So, it's kernel would be a proper, non-trivial normal subgroup, which do not exist.  In particular, and , so that   If then we are done, since this action is transitive and thus certainly non-trivial.  Suppose and let be all the Sylow -subgroups. Since and , has elements of order or . If for all , we would have elements of order or , which is far too many elements in total. At least two of these must therefore intersect non-trivially and without loss say has two elements. We consider . As in the preivious example, and hence , , and . The possibilities are If then , which is impossible. If , then we obtain an transitive action of on the three element set of left cosets of in , which as shown above is not possible. We are left with . Thus acts transitively (and hence non-trivially) on the five element set of left cosets of in . ◻   "
 },
 {
-  "id": "remark-35",
+  "id": "remark-34",
   "level": "2",
-  "url": "sec-simple-groups.html#remark-35",
+  "url": "sec-simple-groups.html#remark-34",
   "type": "Remark",
   "number": "6.24",
   "title": "",
@@ -2836,9 +2845,9 @@ var ptx_lunr_docs = [
   "body": "Direct Product, Direct Sum   Let be a group for all in an index set . The direct product of the groups is the Cartesian product with multiplication defined by The direct sum of the groups is the subset of the direct product given by with the same multiplication as the direct product.   "
 },
 {
-  "id": "remark-36",
+  "id": "remark-35",
   "level": "2",
-  "url": "sec-dps.html#remark-36",
+  "url": "sec-dps.html#remark-35",
   "type": "Remark",
   "number": "7.2",
   "title": "",
@@ -2854,9 +2863,9 @@ var ptx_lunr_docs = [
   "body": "Direct Product of Groups is a Group   The direct product of a collection of groups is a group, and the direct sum of the collection is a subgroup of the direct product.   "
 },
 {
-  "id": "remark-37",
+  "id": "remark-36",
   "level": "2",
-  "url": "sec-dps.html#remark-37",
+  "url": "sec-dps.html#remark-36",
   "type": "Remark",
   "number": "7.4",
   "title": "",
@@ -2917,9 +2926,9 @@ var ptx_lunr_docs = [
   "body": "  Let and be subgroups of a group and define the set  I wish this had a name other than \"HK\"    "
 },
 {
-  "id": "exploration-3",
+  "id": "exploration-2",
   "level": "2",
-  "url": "sec-dps.html#exploration-3",
+  "url": "sec-dps.html#exploration-2",
   "type": "Discussion",
   "number": "7.1",
   "title": "",
@@ -3088,9 +3097,9 @@ var ptx_lunr_docs = [
   "body": "External Semidirect Products   Let and be groups and let be a homomorphism. The (external) semidirect product induced by is the set with the binary operation defined by This group is denoted by .   "
 },
 {
-  "id": "exploration-4",
+  "id": "exploration-3",
   "level": "2",
-  "url": "sec-spds.html#exploration-4",
+  "url": "sec-spds.html#exploration-3",
   "type": "Discussion",
   "number": "7.2",
   "title": "",
@@ -3205,9 +3214,9 @@ var ptx_lunr_docs = [
   "body": "Finitely Generated Group   A group is finitely generated provided that , where is a finite set.   "
 },
 {
-  "id": "remark-38",
+  "id": "remark-37",
   "level": "2",
-  "url": "sec-ftfgag.html#remark-38",
+  "url": "sec-ftfgag.html#remark-37",
   "type": "Remark",
   "number": "8.2",
   "title": "",
@@ -3421,9 +3430,9 @@ var ptx_lunr_docs = [
   "body": "Unital Ring   A ring is a unital ring (or a ring with identity ) if there is a multiplicative identity element, written as , such that for all .   "
 },
 {
-  "id": "remark-39",
+  "id": "remark-38",
   "level": "2",
-  "url": "sec-defn-ex.html#remark-39",
+  "url": "sec-defn-ex.html#remark-38",
   "type": "Remark",
   "number": "9.4",
   "title": "",
@@ -3457,9 +3466,9 @@ var ptx_lunr_docs = [
   "body": "Commutative Ring   A ring is commutative if holds for all    "
 },
 {
-  "id": "exploration-5",
+  "id": "exploration-4",
   "level": "2",
-  "url": "sec-defn-ex.html#exploration-5",
+  "url": "sec-defn-ex.html#exploration-4",
   "type": "Discussion",
   "number": "9.1",
   "title": "",
@@ -3556,9 +3565,9 @@ var ptx_lunr_docs = [
   "body": "Units in Fields  Let be a field. Prove that every non-zero element of is a unit. In symbols, show .  "
 },
 {
-  "id": "remark-40",
+  "id": "remark-39",
   "level": "2",
-  "url": "sec-defn-ex.html#remark-40",
+  "url": "sec-defn-ex.html#remark-39",
   "type": "Remark",
   "number": "9.18",
   "title": "",
@@ -3583,9 +3592,9 @@ var ptx_lunr_docs = [
   "body": "Matrices and Units For any field we have . "
 },
 {
-  "id": "remark-41",
+  "id": "remark-40",
   "level": "2",
-  "url": "sec-defn-ex.html#remark-41",
+  "url": "sec-defn-ex.html#remark-40",
   "type": "Remark",
   "number": "9.21",
   "title": "",
@@ -3601,9 +3610,9 @@ var ptx_lunr_docs = [
   "body": "Gaussian Units  Let be the ring of Gaussian integers. Define a function    Prove that for any .    Use the function to determine the units of .         Let and behold So there's that done.    Suppose . Then by Part (1) we know so , with . Thus we have . So the units of are .     "
 },
 {
-  "id": "remark-42",
+  "id": "remark-41",
   "level": "2",
-  "url": "sec-defn-ex.html#remark-42",
+  "url": "sec-defn-ex.html#remark-41",
   "type": "Remark",
   "number": "9.23",
   "title": "",
@@ -3628,9 +3637,9 @@ var ptx_lunr_docs = [
   "body": "Integral Domain   A unital ring is an integral domain (often shortened to domain ) if , is commutative, and has no zerodivisors.   "
 },
 {
-  "id": "remark-43",
+  "id": "remark-42",
   "level": "2",
-  "url": "sec-defn-ex.html#remark-43",
+  "url": "sec-defn-ex.html#remark-42",
   "type": "Remark",
   "number": "9.26",
   "title": "",
@@ -3655,18 +3664,18 @@ var ptx_lunr_docs = [
   "body": "Cancellation in Domains   Let be a commutative ring with identity. Then is an integral domain if and only if for all such that , we have . This property is called cancellation .   "
 },
 {
-  "id": "remark-44",
+  "id": "remark-43",
   "level": "2",
-  "url": "sec-defn-ex.html#remark-44",
+  "url": "sec-defn-ex.html#remark-43",
   "type": "Remark",
   "number": "9.29",
   "title": "",
   "body": "This is sometimes taken to be the definition of an integral domain, but only by those that are aren't left handed. No one knows why; it just seemed right. "
 },
 {
-  "id": "remark-45",
+  "id": "remark-44",
   "level": "2",
-  "url": "sec-defn-ex.html#remark-45",
+  "url": "sec-defn-ex.html#remark-44",
   "type": "Remark",
   "number": "9.30",
   "title": "",
@@ -3772,18 +3781,18 @@ var ptx_lunr_docs = [
   "body": "Subring   A subring of a ring is a subset such that is a ring under the operations of .  When is a field we call a subfield of We generally do not define subdomains, subcommutativerings, or subdivisionringswithidentity, but if you're feeling inspired I say go for it. .   "
 },
 {
-  "id": "remark-46",
+  "id": "remark-45",
   "level": "2",
-  "url": "sec-subrings.html#remark-46",
+  "url": "sec-subrings.html#remark-45",
   "type": "Remark",
   "number": "9.41",
   "title": "",
   "body": "Unlike with groups, we generally do not use the notation to denote a subring. In fact, I'm not sure if we have any notation for it at all. You know what that means! "
 },
 {
-  "id": "exploration-6",
+  "id": "exploration-5",
   "level": "2",
-  "url": "sec-subrings.html#exploration-6",
+  "url": "sec-subrings.html#exploration-5",
   "type": "Discussion",
   "number": "9.2",
   "title": "",
@@ -3871,9 +3880,9 @@ var ptx_lunr_docs = [
   "body": "  Let be a squarefree integer (that is, the prime factorization of has no repeated primes). Then the subset of is a subring that is a field (called a quadratic field ), and is a subring of .    Both and are closed under subtraction and multiplication, so they are subrings of .  The fact that is a {} follows since is also closed under taking inverses. Indeed the inverse of (from ) turns out to be whenever . A slightly subtle point here is that the fraction above makes sense since provided and are not simultaneously . This is because, if then either , which contradicts the assumption that is squarefree, or , which contradicts the assumption .   "
 },
 {
-  "id": "remark-47",
+  "id": "remark-46",
   "level": "2",
-  "url": "sec-subrings.html#remark-47",
+  "url": "sec-subrings.html#remark-46",
   "type": "Remark",
   "number": "9.51",
   "title": "",
@@ -3979,9 +3988,9 @@ var ptx_lunr_docs = [
   "body": "Polynomial Ring   For any commutative ring , the polynomial ring in the variable  , written , is the set with addition defined by and multiplication defined by For any commutative ring , the polynomial ring in  , written , is defined inductively as , but more easily thought of as the set consisting of (finite) sums of the form with addition and multiplication defined by rules similar to the ones seen above.   "
 },
 {
-  "id": "remark-48",
+  "id": "remark-47",
   "level": "2",
-  "url": "sec-polyrings.html#remark-48",
+  "url": "sec-polyrings.html#remark-47",
   "type": "Remark",
   "number": "9.61",
   "title": "",
@@ -4195,18 +4204,18 @@ var ptx_lunr_docs = [
   "body": "Generated Ideals   If is any subset of a ring , the ideal generated by  , denoted , is the intersection of all ideals of that contain : An ideal is finitely generated if for some finite subset of .   "
 },
 {
-  "id": "remark-49",
+  "id": "remark-48",
   "level": "2",
-  "url": "sec-ideals.html#remark-49",
+  "url": "sec-ideals.html#remark-48",
   "type": "Remark",
   "number": "10.14",
   "title": "",
   "body": "It is common for to be written as ; this is often taken as the standard notation. We will not do so here to maintain notational consistency and to avoid confusion. "
 },
 {
-  "id": "remark-50",
+  "id": "remark-49",
   "level": "2",
-  "url": "sec-ideals.html#remark-50",
+  "url": "sec-ideals.html#remark-49",
   "type": "Remark",
   "number": "10.15",
   "title": "",
@@ -4294,9 +4303,9 @@ var ptx_lunr_docs = [
   "body": "Quotients of  If is an ideal in the ring , then the quotient ring is the familiar ring .  "
 },
 {
-  "id": "remark-51",
+  "id": "remark-50",
   "level": "2",
-  "url": "sec-ring-quotients.html#remark-51",
+  "url": "sec-ring-quotients.html#remark-50",
   "type": "Remark",
   "number": "10.24",
   "title": "",
@@ -4411,9 +4420,9 @@ var ptx_lunr_docs = [
   "body": "Prime Ideal   A prime ideal of a commutative ring is a proper ideal such that whenever for , we have or .   "
 },
 {
-  "id": "remark-52",
+  "id": "remark-51",
   "level": "2",
-  "url": "sec-primemax-ideals.html#remark-52",
+  "url": "sec-primemax-ideals.html#remark-51",
   "type": "Remark",
   "number": "10.33",
   "title": "",
@@ -4474,9 +4483,9 @@ var ptx_lunr_docs = [
   "body": "Maximal Ideal   A maximal ideal of an arbitrary ring is a proper ideal such that the only ideals of containing are and .   "
 },
 {
-  "id": "remark-53",
+  "id": "remark-52",
   "level": "2",
-  "url": "sec-primemax-ideals.html#remark-53",
+  "url": "sec-primemax-ideals.html#remark-52",
   "type": "Remark",
   "number": "10.40",
   "title": "",
@@ -4654,9 +4663,9 @@ var ptx_lunr_docs = [
   "body": "GCD   Given elements , not both , of a Euclidean domain with Euclidean norm , a of and is an element such that:    and ; and    If and , then .      "
 },
 {
-  "id": "remark-54",
+  "id": "remark-53",
   "level": "2",
-  "url": "sec-eds.html#remark-54",
+  "url": "sec-eds.html#remark-53",
   "type": "Remark",
   "number": "11.6",
   "title": "",
@@ -4771,9 +4780,9 @@ var ptx_lunr_docs = [
   "body": "GCDs and Units in PIDs   If is a PID and , then    for some and any such is a gcd of and     the gcd of and is unique up to multiplication by a unit.       The existence of is granted by definition in a PID. Now gives that and . If and we have that , so by minimality. This gives , hence .   "
 },
 {
-  "id": "remark-55",
+  "id": "remark-54",
   "level": "2",
-  "url": "sec-pids.html#remark-55",
+  "url": "sec-pids.html#remark-54",
   "type": "Remark",
   "number": "11.18",
   "title": "",
@@ -4915,9 +4924,9 @@ var ptx_lunr_docs = [
   "body": "Noetherian Ring   Suppose is a commutative ring. Then is called a noetherian ring if satisfies the ascending chain condition on ideals - i.e., for every chain of ideals of  there exists a positive integer such that for all .   "
 },
 {
-  "id": "remark-56",
+  "id": "remark-55",
   "level": "2",
-  "url": "subsec-noeth.html#remark-56",
+  "url": "subsec-noeth.html#remark-55",
   "type": "Remark",
   "number": "11.32",
   "title": "",
@@ -4951,9 +4960,9 @@ var ptx_lunr_docs = [
   "body": "Factorization in Noetherian Domains   If is a noetherian integral domain, then every non-zero, not-unit element factors into a finite product of irreducible elements.    Pick with and . If is irreducible, there is nothing to prove. Otherwise, we have for non-units . If both are irreducible, the proof is complete. Otherwise, one or both of them factors non-trivially. We may express this conveniently by saying that and such that either and are both non-units or and are both non-units. (E.g., if is irreducible, we could set .) Continuing in the this manner, we form a binary tree with at the top, one level down, one level below that, etc.  We halt the process of building the tree if at some stage all the leaves of the tree are irreducible elements, at which point we will have proven that factors in to a product of the irreducible elements given by these leaves.  We need to rule out the possibility that the process never terminates. If it never terminates, we will have built an infinite binary tree with the property that some route downward through the tree consists of an infinite list of irreducible elements such that for a non-unit and, for each , for a non-unit . Since is an integral domain, we have and for all . (E.g., if then and hence , so that , contrary to being a non-unit.)  But then we have arrived at an infinite ascending chain of ideals in , which is not possible in a Noetherian ring.   "
 },
 {
-  "id": "remark-57",
+  "id": "remark-56",
   "level": "2",
-  "url": "subsec-noeth.html#remark-57",
+  "url": "subsec-noeth.html#remark-56",
   "type": "Remark",
   "number": "11.36",
   "title": "",
@@ -5005,9 +5014,9 @@ var ptx_lunr_docs = [
   "body": "Module   Let be a ring (with ). A left -module is an abelian group together with a pairing , written , such that for all and     ,     ,     , and     .      "
 },
 {
-  "id": "remark-58",
+  "id": "remark-57",
   "level": "2",
-  "url": "sec-defmod.html#remark-58",
+  "url": "sec-defmod.html#remark-57",
   "type": "Remark",
   "number": "12.2",
   "title": "",
@@ -5167,9 +5176,9 @@ var ptx_lunr_docs = [
   "body": "Module Homomorphism   Let be a ring and let and be -modules. An -module homomorphism from to sometimes called an - map , is a function such that for all and we have    , i.e. is an additive group homomorphism, and     .      "
 },
 {
-  "id": "remark-59",
+  "id": "remark-58",
   "level": "2",
-  "url": "sec-modhom.html#remark-59",
+  "url": "sec-modhom.html#remark-58",
   "type": "Remark",
   "number": "12.18",
   "title": "",
@@ -5401,9 +5410,9 @@ var ptx_lunr_docs = [
   "body": "Linear Combination   Let be an -module and . An - linear combination of is an element of of the form for some and . (If , this gives the empty sum which is interpreted to give .)   "
 },
 {
-  "id": "remark-60",
+  "id": "remark-59",
   "level": "2",
-  "url": "sec-linear.html#remark-60",
+  "url": "sec-linear.html#remark-59",
   "type": "Remark",
   "number": "13.2",
   "title": "",
@@ -5428,9 +5437,9 @@ var ptx_lunr_docs = [
   "body": "Finitely Generated Module   A module is finitely generated if there exists some finite subset of such that .   "
 },
 {
-  "id": "remark-61",
+  "id": "remark-60",
   "level": "2",
-  "url": "sec-linear.html#remark-61",
+  "url": "sec-linear.html#remark-60",
   "type": "Remark",
   "number": "13.5",
   "title": "",
@@ -5500,9 +5509,9 @@ var ptx_lunr_docs = [
   "body": "Linearly Dependent   Let be an -module and let be a subset of . The set is linearly dependent if and only if there is an equation of the form where for all , for all but a finite number of s, and for at least one .   "
 },
 {
-  "id": "remark-62",
+  "id": "remark-61",
   "level": "2",
-  "url": "sec-linear.html#remark-62",
+  "url": "sec-linear.html#remark-61",
   "type": "Remark",
   "number": "13.13",
   "title": "",
@@ -5590,9 +5599,9 @@ var ptx_lunr_docs = [
   "body": "  Let be a ring. Recall that we proved in class that every cyclic -module is isomorphic to for some left ideal . Prove the left ideal occurring this statement is unique; that is, if a cyclic -module is isomorphic to and for left ideals and , then .   "
 },
 {
-  "id": "remark-63",
+  "id": "remark-62",
   "level": "2",
-  "url": "sec-modgen.html#remark-63",
+  "url": "sec-modgen.html#remark-62",
   "type": "Remark",
   "number": "13.19",
   "title": "",
@@ -5608,9 +5617,9 @@ var ptx_lunr_docs = [
   "body": "is an -module   For a commutative ring , module and ideal , the rules for addition in and scaling by on introduced above make into an -module.  Moreover, given another -module and an -map , the function given by is a well-defined -module homomorphism.  Finally, if is yet another -module homomorphism, then , and we also have for any -module .    I leave some of the details as an exercise, but I will check a few of the necessary things:  We already showed that the rule for scaling is well defined, and we know from 817 that the rule for addition is well-defined and that is an abelian group. To show is an -module, there remain four axioms to verify. For instance, which verifies one of them; the other proofs are similar.  Next, let me verify that the function is a well-defined -map: Let be the composition of -maps (the second one being the canonical one), so that . Since for any 's belonging to and 's belonging to , we have . By the UMP for quotient modules, there is an induced -map given by . The map is so far only known to be an -map, but it is in fact an -map since The final assertions are clear from the formula for for an -map .   "
 },
 {
-  "id": "remark-64",
+  "id": "remark-63",
   "level": "2",
-  "url": "sec-modgen.html#remark-64",
+  "url": "sec-modgen.html#remark-63",
   "type": "Remark",
   "number": "13.21",
   "title": "",
@@ -5860,18 +5869,18 @@ var ptx_lunr_docs = [
   "body": "Free Modules have Trivial Annihilators   Let be a commutative ring with .   Show that if is a free -module, then .    Give an example of a ring an a nonzero module such that .      "
 },
 {
-  "id": "remark-65",
+  "id": "remark-64",
   "level": "2",
-  "url": "sec-bases.html#remark-65",
+  "url": "sec-bases.html#remark-64",
   "type": "Remark",
   "number": "13.41",
   "title": "",
   "body": " A key difference between free modules over rings that are not fields and vector spaces is that not every linearly independent subset of a free module can be extended to a basis. For example, is a linearly independent subset of , but it cannot be extended to a basis. Indeed, any set of the form with is linearly dependent since .  Likewise, over arbitrary rings, not every subset that generates a free module necessarily contains a basis. For instance, generated as a module over itself, but no subset of it is a basis.  (Note that has precisely two bases as a module over itself: and . )  "
 },
 {
-  "id": "remark-66",
+  "id": "remark-65",
   "level": "2",
-  "url": "sec-bases.html#remark-66",
+  "url": "sec-bases.html#remark-65",
   "type": "Remark",
   "number": "13.42",
   "title": "",
@@ -5905,9 +5914,9 @@ var ptx_lunr_docs = [
   "body": "UMP for Free -Modules   Let be a ring, let be a free -module with basis , let be an -module, and let be any function. Then there is a unique -module homomorphism such that for all .  In other words, there is a bijection of sets given by sending a homomorphisms to its restriction to . (Here, is the set of all -module homomorphisms from to and is the set of all functions from to .)    {} Given a function , define as follows: Given , by Lemma can be written uniquely as a finite sum . We set Note that is a well-defined function by the uniqueness of the equation .  We need to prove is an -module homomorphism. I'll just show it preserves scaling — the proof for addition is similar. Given and , we have for some , and hence . By definition of ,   Finally, for any we have where if and if . So by construction. This proves existence.  {} Let be another -module homomorphism such that for each . Given we have and hence and hence .   "
 },
 {
-  "id": "remark-67",
+  "id": "remark-66",
   "level": "2",
-  "url": "sec-bases.html#remark-67",
+  "url": "sec-bases.html#remark-66",
   "type": "Remark",
   "number": "13.46",
   "title": "",
@@ -5932,9 +5941,9 @@ var ptx_lunr_docs = [
   "body": "as -modules  If is a free -module that has a basis of cardinality , then as -modules. This holds since, as seen above, has a basis of cardinality , namely the standard basis .  More precisely, as the proof makes clear, if is an (ordered) basis of , there is an isomorphism that sends to .  "
 },
 {
-  "id": "remark-68",
+  "id": "remark-67",
   "level": "2",
-  "url": "sec-bases.html#remark-68",
+  "url": "sec-bases.html#remark-67",
   "type": "Remark",
   "number": "13.49",
   "title": "",
@@ -6040,9 +6049,9 @@ var ptx_lunr_docs = [
   "body": "Linear Independence and Span   Suppose is a linearly independent subset of an -vector space and , then is also linearly independent.    We need to prove that every finite subset of is linearly independent. Let be a list of distinct elements of and suppose for some . If for all , then for all since is linearly independent. Without loss, say . If , then , contrary to the assumption. So we must have . But then for all by the same reasoning as in the first case.   "
 },
 {
-  "id": "remark-69",
+  "id": "remark-68",
   "level": "2",
-  "url": "sec-vecbasis.html#remark-69",
+  "url": "sec-vecbasis.html#remark-68",
   "type": "Remark",
   "number": "14.3",
   "title": "",
@@ -6067,9 +6076,9 @@ var ptx_lunr_docs = [
   "body": "Every Vector Space has a Basis   Every -vector space has a basis. Moreover, every linearly independent subset of is contained in some basis, and every set of vectors that spans contains some basis.    For this first part, apply the theorem with and . For the second and third, use arbitrary and and and arbitrary, respectively.   "
 },
 {
-  "id": "remark-70",
+  "id": "remark-69",
   "level": "2",
-  "url": "sec-vecbasis.html#remark-70",
+  "url": "sec-vecbasis.html#remark-69",
   "type": "Remark",
   "number": "14.6",
   "title": "",
@@ -6085,9 +6094,9 @@ var ptx_lunr_docs = [
   "body": "Basis of Subspaces Extent   Suppose is a field an is a subspace (i.e., submodule) of the -vector space (i.e., -module) . Then every basis of extends to a basis of - that is, if is a basis of then there exists a basis of such that is a subset of .    Just apply the Theorem with and . (Since is a basis of , it is linearly independent, and observe that remains linearly independent when regarded as a subset of .)   "
 },
 {
-  "id": "remark-71",
+  "id": "remark-70",
   "level": "2",
-  "url": "sec-vecbasis.html#remark-71",
+  "url": "sec-vecbasis.html#remark-70",
   "type": "Remark",
   "number": "14.8",
   "title": "",
@@ -6184,18 +6193,18 @@ var ptx_lunr_docs = [
   "body": "SubLemma and  For a visual interpretation of the sublemma, suppose and is its standard basis. Given , if is a non-zero multiple of one of the members of , say for , then is also basis of . If lies one of the coordinate planes but is not on a axis, say for , then both and are bases. If lies on none of the coordinate planes, then for and each of , and is a basis. So, the sublemma is saying that we can swap in for any of the basis elements that occur with a non-zero coefficient in the unique expression of as a linear combination of the basis. (This includes the case when , since no such basis vectors occur.)  "
 },
 {
-  "id": "remark-72",
+  "id": "remark-71",
   "level": "2",
-  "url": "sec-ranknul.html#remark-72",
+  "url": "sec-ranknul.html#remark-71",
   "type": "Remark",
   "number": "14.15",
   "title": "",
   "body": " This completes the proof that, for a commutative ring with , any two finite bases of a free -module have the same cardinality. (In the proof of this fact given above, we had assumed it held for fields.)  "
 },
 {
-  "id": "remark-73",
+  "id": "remark-72",
   "level": "2",
-  "url": "sec-ranknul.html#remark-73",
+  "url": "sec-ranknul.html#remark-72",
   "type": "Remark",
   "number": "14.16",
   "title": "",
@@ -6220,9 +6229,9 @@ var ptx_lunr_docs = [
   "body": "Dimension and Subspaces   Let be a field and let be a subspace of a finite dimensional -vector space . Then     Pick a basis of . Regarded as a subset of , remains linearly independent and thus it may be extended to a basis of by Corollary . Let us write this basis of as with .  Let . I claim that is a basis of .  Given we have for some and scalars . Since for all , we have . This proves spans. Say for some . Then and hence , whence . Since is linearly independent, and for all . This proves is linearly independent.  We have with the second equality holding since and are disjoint.   "
 },
 {
-  "id": "remark-74",
+  "id": "remark-73",
   "level": "2",
-  "url": "sec-ranknul.html#remark-74",
+  "url": "sec-ranknul.html#remark-73",
   "type": "Remark",
   "number": "14.19",
   "title": "",
@@ -6247,9 +6256,9 @@ var ptx_lunr_docs = [
   "body": "Rank Nullity Theorem   Let be a field and an -linear transformation between -vector spaces and , and assume is finite dimensional. Then or equivalently     By the first isomorphism theorem for modules we have , thus . By the previous theorem we have    "
 },
 {
-  "id": "remark-75",
+  "id": "remark-74",
   "level": "2",
-  "url": "sec-ranknul.html#remark-75",
+  "url": "sec-ranknul.html#remark-74",
   "type": "Remark",
   "number": "14.22",
   "title": "",
@@ -6382,9 +6391,9 @@ var ptx_lunr_docs = [
   "body": "Basics  Recall that when is a field an -module homomorphism is called a -linear transformation. Since every -vector space has a basis, every linear transformation between finite dimensional vector spaces may be represented by a matrix, as we noted before.  Matrix of Free Module Homomorphism   Let be a non-zero commutative ring and let , be -modules of finite rank and , respectively. (For instance, could be a field and and could be arbitrary finite dimensional vector spaces.) Let and be ordered bases of and .   For each , let denote the unique column vector such that . Define for similarly.    If is an -module homomorphism then we define elements for and by the formulas    Define to be the matrix EMPTY    -Vector Space of Polynomials ( )  Let denote the the -vector space of polynomials of degree at most (including the zero polynomial) and consider the linear transformation given by , i.e. taking the derivative. Take for an ordered basis of and for an ordered basis of . Then for we have and We have confirming in this example one of the assertions of the Lemma.  Let be the linear map . Then Note that and as predicted by .   Identity Automorphism of Free -Module  If is the identity automorphism of an -dimensional free -module , then for any basis of we have for all and hence    When FMH Matrix is Invertible   If is an isomorphism of free modules of finite rank, is an ordered basis of and is an ordered basis of , then is an invertible matrix and       Computations and Examples       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Formal Proofs       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Qualifying Exam Problems       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     "
 },
 {
-  "id": "remark-76",
+  "id": "remark-75",
   "level": "2",
-  "url": "sec-basics.html#remark-76",
+  "url": "sec-basics.html#remark-75",
   "type": "Remark",
   "number": "15.1",
   "title": "",
@@ -6472,27 +6481,27 @@ var ptx_lunr_docs = [
   "body": "Bijection of Matrices and Hom Functor   Suppose is a ring and and are free -modules with ordered bases and , respectively. There is a bijective correspondence that sends a matrix to the unique -module homomorphism satisfying for each .   "
 },
 {
-  "id": "remark-77",
+  "id": "remark-76",
   "level": "2",
-  "url": "subsec-free-modules-and-matrices.html#remark-77",
+  "url": "subsec-free-modules-and-matrices.html#remark-76",
   "type": "Remark",
   "number": "15.7",
   "title": "",
   "body": " It is of paramount importance to realize that the bijection between maps and matrices {}.  In particular, the -map written as that we associate to the matrix in this proposition depends on the basis and , and so it should really be written as something like . I will occasionally do so.  "
 },
 {
-  "id": "remark-78",
+  "id": "remark-77",
   "level": "2",
-  "url": "subsec-free-modules-and-matrices.html#remark-78",
+  "url": "subsec-free-modules-and-matrices.html#remark-77",
   "type": "Remark",
   "number": "15.8",
   "title": "",
   "body": " Let us rephrase the Proposition in terms of usual matrix multiplication in the case when is {}.  Given an -module homomorphism with and as in the proposition, let be the matrix attached to it using the bases and as described above. Then the diagram #empty  commutes, where and are defined in and and by we mean the map where denotes the usual rule for matrix multiplication. (Recall elements of are represented as column vectors.)  Conversely, given a matrix , the corresponding map is the unique one causing this square to commute; i.e. .  "
 },
 {
-  "id": "remark-79",
+  "id": "remark-78",
   "level": "2",
-  "url": "subsec-free-modules-and-matrices.html#remark-79",
+  "url": "subsec-free-modules-and-matrices.html#remark-78",
   "type": "Remark",
   "number": "15.9",
   "title": "",
@@ -6508,9 +6517,9 @@ var ptx_lunr_docs = [
   "body": "Matrix Multiplication is Associative   Let be a commutative ring, let be free -modules having finite bases of size , respectively. Given a matrix and a matrix , let denote the matrix obtained by the usual formula for matrix multiplication, and let , and be the maps associated to these matrices relative to the specified bases, as given in Proposition. Then In particular, matrix multiplication is associative.    For the first assertion we just need to check the two maps agree on for all : We have (with the second equation using that is an -map) and (I have left off the superscripts etc. for the sake of my sanity.) These two expressions agree since is commutative.  The second assertion holds since composition of functions is associative.   "
 },
 {
-  "id": "remark-80",
+  "id": "remark-79",
   "level": "2",
-  "url": "subsec-free-modules-and-matrices.html#remark-80",
+  "url": "subsec-free-modules-and-matrices.html#remark-79",
   "type": "Remark",
   "number": "15.11",
   "title": "",
@@ -6535,9 +6544,9 @@ var ptx_lunr_docs = [
   "body": "Change of Basis Matrix (CoB)   Let be a finite rank free module over a commutative ring , and let and be bases of . Let be the identity map on . Then is called the change of basis matrix from to    "
 },
 {
-  "id": "remark-81",
+  "id": "remark-80",
   "level": "2",
-  "url": "sec-cob.html#remark-81",
+  "url": "sec-cob.html#remark-80",
   "type": "Remark",
   "number": "15.13",
   "title": "",
@@ -6580,9 +6589,9 @@ var ptx_lunr_docs = [
   "body": "Equivalent Matrices   Two matrices and are equivalent if there exists invertible matrices and (of the appropriate sizes) so that .   "
 },
 {
-  "id": "remark-82",
+  "id": "remark-81",
   "level": "2",
-  "url": "sec-cob.html#remark-82",
+  "url": "sec-cob.html#remark-81",
   "type": "Remark",
   "number": "15.18",
   "title": "",
@@ -6679,9 +6688,9 @@ var ptx_lunr_docs = [
   "body": "Elementary Matrix   Let be a commutative ring with . An elementary matrix over is an matrix obtained from by applying a single elementary column operation (or, equivalently, a single elementary column operation). In more detail:   (Type I) For and with , let be the type I elementary matrix with 's on the diagonal, in the position, and everywhere else.    (Type II) For and let be the type II elementary matrix with entry , entry for all , and everywhere else.    (Type III) For with , let be the type III elementary matrix with in the and positions and in the positions for all , and 0 in all other entries.      "
 },
 {
-  "id": "remark-83",
+  "id": "remark-82",
   "level": "2",
-  "url": "sec-elematix.html#remark-83",
+  "url": "sec-elematix.html#remark-82",
   "type": "Remark",
   "number": "15.25",
   "title": "",
@@ -6697,9 +6706,9 @@ var ptx_lunr_docs = [
   "body": "Properties of Elementary Matrices   Let be an elementary matrix.   For a free -module with basis such that , is the change of basis matrix , where is the basis obtained from by the corresponding elementary basis change operation.    If , then the product matrix is the result of performing the corresponding elementary column operation on .    If , then the product matrix is the result of performing the corresponding elementary column operation on .      "
 },
 {
-  "id": "remark-84",
+  "id": "remark-83",
   "level": "2",
-  "url": "sec-elematix.html#remark-84",
+  "url": "sec-elematix.html#remark-83",
   "type": "Remark",
   "number": "15.27",
   "title": "",
@@ -6715,9 +6724,9 @@ var ptx_lunr_docs = [
   "body": "Matrix Invertible iff Columns Span   Let be a field and let be an matrix for . is invertible if and only if its columns span .     is invertible if and only if the associated linear map given by is an isomorphism. By the rank-nullity Theorem, if and only if if and only if is an isomorphism. The result follows, since and is the span of the columns of .   "
 },
 {
-  "id": "remark-85",
+  "id": "remark-84",
   "level": "2",
-  "url": "sec-elematix.html#remark-85",
+  "url": "sec-elematix.html#remark-84",
   "type": "Remark",
   "number": "15.29",
   "title": "",
@@ -6760,9 +6769,9 @@ var ptx_lunr_docs = [
   "body": "Equivalent Matrices Characterization   Given two matrices and with entries in a field, and are equivalent if and only if each can be transformed to the other via elementary column and column operations.   "
 },
 {
-  "id": "remark-86",
+  "id": "remark-85",
   "level": "2",
-  "url": "sec-elematix.html#remark-86",
+  "url": "sec-elematix.html#remark-85",
   "type": "Remark",
   "number": "15.34",
   "title": "",
@@ -6814,9 +6823,9 @@ var ptx_lunr_docs = [
   "body": "Linear Operator   By a linear operator (or -linear operator) on we mean an -module endomorphism of .   "
 },
 {
-  "id": "remark-87",
+  "id": "remark-86",
   "level": "2",
-  "url": "sec-operator.html#remark-87",
+  "url": "sec-operator.html#remark-86",
   "type": "Remark",
   "number": "15.36",
   "title": "",
@@ -6832,9 +6841,9 @@ var ptx_lunr_docs = [
   "body": "Representing Bases  Here is a concrete example. Let , the collection of polynomials in with coefficients in of degree at most . Let be the map sending a polynomial to its derivative. The most obvious choice for a bases of is . With respect to this basis, the map is represented by the matrix   If, when , we instead used as a basis, then the matrix for would be   "
 },
 {
-  "id": "remark-88",
+  "id": "remark-87",
   "level": "2",
-  "url": "sec-operator.html#remark-88",
+  "url": "sec-operator.html#remark-87",
   "type": "Remark",
   "number": "15.38",
   "title": "",
@@ -6850,9 +6859,9 @@ var ptx_lunr_docs = [
   "body": "Similar Matrices   Two matrices and with entries in a commutative ring are called similar if for some invertible matrix .   "
 },
 {
-  "id": "remark-89",
+  "id": "remark-88",
   "level": "2",
-  "url": "sec-operator.html#remark-89",
+  "url": "sec-operator.html#remark-88",
   "type": "Remark",
   "number": "15.40",
   "title": "",
@@ -6904,9 +6913,9 @@ var ptx_lunr_docs = [
   "body": "Finitely Presented Modules   You have seen presentations for groups in the past; these consisted of a set of generators and a set of relations among these generators. Presentations are important for modules as well. In the case of modules, the relations may be encoded by a matrix.   -Module Presentation   Let be a non-zero commutative ring, let , and let be the -module homomorphism represented by with respect to the standard bases; that is, define . The - module presented by  is the -module .  Equivalently, the module presented by is where are the columns of .    -Module Presentation  What -module is presented by Formally, is the quotient module , where is defined by . Since is generated by its standard basis elements , it follows that is generated by the cosets of the . To keep the notation short, we set .  Let and note that is the submodule of generated by the columns of , i.e. Since maps to under the quotient map , we have that the relations of can be written as We can now see that this is a rather inefficient presentation, since we can clearly use the first equation to solve for for . This implies that can be generated using only and that is This eliminates the first equation, and by substituting the latter two relations become Now we can also eliminate , i.e leaving just two generators that satisfy Let us notice that what we have really done is to perform certain transformations of the matrix . In detail, we can use elementary row operations to “make zeros'' on the 1st and 2nd columns as follows: Eliminating the generators and amounts to dropping the first two columns (which are the 3rd and 4th standard basis vectors) as well as the last two rows. As we will prove soon, this shows that the -module presented by is isomorphic to the -module presented by We can go further. Set . Then and also form a generating set of . The relation on translates to given by the matrix Note that we have done a row operation (subtract twice row 1 from row 2) to get from to . Continuing in this fashion by subtracting 12 row 2 from row 1 we also form The last matrix presents the module with generators  ) and relation . As we will see, this proves .   Matrices, Modules, and Isomorphisms   Let be a non-zero commutative ring and let and for some . Then and present isomorphic -modules if can be obtained from by any finite sequence of operations of the following form:   an elementary row operation,    an elementary column operation,    deletion of the -th column and -th row of a matrix whose -th column is the vector ,    the reverse of (3),    deletion of a column of all 's,    the reverse of (5).       Note: This proof was not covered in class. Assume is obtained from by a single one of the steps listed above. We need to prove that there is an isomorphism of -modules.   In this case, for some elementary matrix . More generally, let be any invertible matrix such that . Then is an isomorphism and it maps bijectively onto . It follows that the kernel of the composition is and hence by the first isomorphism theorem it induces an isomorphism     In this case, for some elementary matrix . More generally, assume is any invertible matrix such that . Since is an isomorphism, we have and so . (For this one we get equality, not merely an isomorphism.)    For notational simplicity, let us assume ; that is, the first column of is and is obtained by deleting the first row and column of , giving a matrix. So where denotes some row vector and denotes a column of all 's. Let and be projection onto the last and components, respectively. Because of the nature of and , the diagram (page 40 in notes) commutes. Moreover, the kernel of is and the kernel of is , and since the first column of is , maps the kernel of bijectively onto the kernel of . A “diagram chase'' shows that . In detail: Since the diagram commutes, and hence induces an -module homomorphism (by the -th isomorphism theorem). Since is onto, so is . Suppose . So, . Say . Since is onto, for some . Then and thus . As noted above, maps onto and hence for some vector . This proves and hence that in . This proves is one-to-one.    It is clear that the columns of generate the same submodule of as do the columns of , and thus and .    Since the isomorphism relation is reflexive, the statements of parts 3. & 5. show that parts 4.& 6. are true as well.        The converse is true for some rings , including Euclidean domains.    In fact, if and are equivalent matrices, then , as I shall prove below. This implies both (1) and (2) from the Theorem.   Diagonal Presentation   Suppose is a commutative ring and is a matrix such that for all and set for all . If then and if then     Assume and define to be the map sending to where for . (I.e., is the unique -map sending the -th standard basis vector to with in the -th position, for , and to itself for .) Then is clearly onto and the kernel of is the set of those tuples such that for some for all and for . Given such a tuple, This proves is contained Arguing backwards we see that the opposite containment also holds, so that in fact .  By the First Isomorphism Theorem, If then, by deleting columns of all 's, we may reduce to the case when , which is included in the first case.      Computations and Examples       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Formal Proofs       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Qualifying Exam Problems       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     "
 },
 {
-  "id": "remark-90",
+  "id": "remark-89",
   "level": "2",
-  "url": "sec-modpres.html#remark-90",
+  "url": "sec-modpres.html#remark-89",
   "type": "Remark",
   "number": "16.1",
   "title": "",
@@ -6940,18 +6949,18 @@ var ptx_lunr_docs = [
   "body": "Matrices, Modules, and Isomorphisms   Let be a non-zero commutative ring and let and for some . Then and present isomorphic -modules if can be obtained from by any finite sequence of operations of the following form:   an elementary row operation,    an elementary column operation,    deletion of the -th column and -th row of a matrix whose -th column is the vector ,    the reverse of (3),    deletion of a column of all 's,    the reverse of (5).       Note: This proof was not covered in class. Assume is obtained from by a single one of the steps listed above. We need to prove that there is an isomorphism of -modules.   In this case, for some elementary matrix . More generally, let be any invertible matrix such that . Then is an isomorphism and it maps bijectively onto . It follows that the kernel of the composition is and hence by the first isomorphism theorem it induces an isomorphism     In this case, for some elementary matrix . More generally, assume is any invertible matrix such that . Since is an isomorphism, we have and so . (For this one we get equality, not merely an isomorphism.)    For notational simplicity, let us assume ; that is, the first column of is and is obtained by deleting the first row and column of , giving a matrix. So where denotes some row vector and denotes a column of all 's. Let and be projection onto the last and components, respectively. Because of the nature of and , the diagram (page 40 in notes) commutes. Moreover, the kernel of is and the kernel of is , and since the first column of is , maps the kernel of bijectively onto the kernel of . A “diagram chase'' shows that . In detail: Since the diagram commutes, and hence induces an -module homomorphism (by the -th isomorphism theorem). Since is onto, so is . Suppose . So, . Say . Since is onto, for some . Then and thus . As noted above, maps onto and hence for some vector . This proves and hence that in . This proves is one-to-one.    It is clear that the columns of generate the same submodule of as do the columns of , and thus and .    Since the isomorphism relation is reflexive, the statements of parts 3. & 5. show that parts 4.& 6. are true as well.      "
 },
 {
-  "id": "remark-91",
+  "id": "remark-90",
   "level": "2",
-  "url": "sec-modpres.html#remark-91",
+  "url": "sec-modpres.html#remark-90",
   "type": "Remark",
   "number": "16.5",
   "title": "",
   "body": " The converse is true for some rings , including Euclidean domains.  "
 },
 {
-  "id": "remark-92",
+  "id": "remark-91",
   "level": "2",
-  "url": "sec-modpres.html#remark-92",
+  "url": "sec-modpres.html#remark-91",
   "type": "Remark",
   "number": "16.6",
   "title": "",
@@ -7012,9 +7021,9 @@ var ptx_lunr_docs = [
   "body": "Smith Normal Form   Let be a Euclidean domain and let . Then there is a sequence of elementary column and column operations that transform into a matrix such that all non-diagonal entries of are and the diagonal entries of satisfy     The main point of the proof is to establish:  {}: There is a sequence of row and column operations that transforms to for some matrix and where . (We adopt the convention that if is the matrix of all 's, then .) Note that, by Lemma , we have and thus .  Granting this claim, by applying it again to we arrive at a matrix of the form where and and . (Observe that the row and column operations on will not affect the first row and column of .) Continuing in this fashion, we arrive at the matrix in the statement.  To prove the claim, let be the upper-left entry of .  Suppose happens to be . Then, in particular, it divides every entry of the first row and column of , and so by doing row and column operations of type I, we may out these entries to arrive at a matrix of the desired form directly.  In general, let to be the number of prime factors in a prime factorization of of , and proceed by induction on .  If , then (up to associates), and we already did this case.  Assume . Then there is at least one entry such that .  Case I: There is such a belonging to the first row of . In this case we we may implement the Euclidean algorithm in the form of suitable column operations to replace by and by , as in the example above. Since , is a proper divisor of , and it follows that the number of factors in a prime factorization of is smaller than , and we are done by induction.  Case II: There is such a in the first column. Just as in the previous case, we are done by induction upon implementing the Euclidean algorithm using suitable row operations.  Case III: divides every entry of the first row and first column. In this case, suitable row and column operations transform to By Lemma we have , and thus there is some element of such that (since we are assuming is not the gcd of ). A suitable row operation puts into row one without affecting , and we are back to the previously solved Case I.   "
 },
 {
-  "id": "remark-93",
+  "id": "remark-92",
   "level": "2",
-  "url": "sec-snf.html#remark-93",
+  "url": "sec-snf.html#remark-92",
   "type": "Remark",
   "number": "16.9",
   "title": "",
@@ -7048,9 +7057,9 @@ var ptx_lunr_docs = [
   "body": "Finding SNF  Consider the matrix with entries in  Do row and column operations to put into its Smith Normal Form: Conclude that the module presented by is isomorphic to .  "
 },
 {
-  "id": "remark-94",
+  "id": "remark-93",
   "level": "2",
-  "url": "sec-snf.html#remark-94",
+  "url": "sec-snf.html#remark-93",
   "type": "Remark",
   "number": "16.13",
   "title": "",
@@ -7093,9 +7102,9 @@ var ptx_lunr_docs = [
   "body": "Smith Normal Form is Unique   Assume is a PID and . Suppose can be obtained from via a sequence of elementary column and column operations and that is diagonal with diagonal entries such that . Then In particular, the SNF of a matrix is unique up to associates.    Recall that for a PID , the gcd of any set of elements is defined to be a generatpr of the ideal they generate. So, Lemma implies that for all . Since is diagonal, the only non-zero minors of are those given by indices and for which for all , and moreover such a minor is equal to . Since for all , it follows that divides for all . Thus , for each , and hence as claimed.   "
 },
 {
-  "id": "remark-95",
+  "id": "remark-94",
   "level": "2",
-  "url": "sec-snf.html#remark-95",
+  "url": "sec-snf.html#remark-94",
   "type": "Remark",
   "number": "16.18",
   "title": "",
@@ -7165,9 +7174,9 @@ var ptx_lunr_docs = [
   "body": "Noetherian Rings   We now address the question of which modules have finite presentations. It is clear than any such module must be finitely generated (since the cosets of generate for any matrix ). If is finitely generated, say by elements, then we can find a surjective -module homomorphism Provided the kernel of is also finitely generated, say by elements, then we may find a surjection The composition is a map between free -modules and is thus equal to for some matrix . Clearly and hence by the first isomorphism theorem so that is finitely presented.  So the real question is: For a given ring , is it the case that for all , every submodule of is finitely generated? The answer is “no'' in general, but it does hold for many rings of interest:   Ascending Chain Condition   A commutative ring has the ascending chain condition (on ideals) if given any chain of ideals in of the form there is an such that     Noetherian Rings   Suppose is a commutative ring. The following conditions are equivalent:    has the ascending chain condition on ideals.    Every ideal of is finitely generated — i.e., for every ideal , there exists a finite set of elements in such that . In this case we say is Noetherian .       Assume every ideal is finitely generated and that such a chain is given. Let . Then it is easy to see that is an ideal. (In detail, for we have for some and hence .  If , then and for some and hence there is a such that . It follows that . Finally .) Thus by assumption is finitely generated, say for some .  Each belongs to one of the 's and hence, since there are only a finite number of such elements and ideas are nested, there is an such that . It follows that and hence .  Assume has the acc for ideals and let be any ideal. Pick any element and set . If we are done. If not, pick and set . If we are done and if not pick and let . In this way we form a strictly ascending chain , and this process cannot be continued forever since has the acc. When it terminates, we have for some and thus is finitely generated.    Hilbert's Basis Theorem   If is a noetherian ring, then the polynomial rings and are noetherian for any .    Finitely Generated Modules in Noetherian Rings   If is a noetherian commutative ring, then every submodule of a finitely generated module is again finitely generated.    I will just prove the following special case (since it is all we need): For each , every submodule of is finitely generated. The base case holds by definition (and Lemma ), since a submodule of is the same thing as an ideal.  Assume and the result holds for . Let be any submodule of . Define to be the projection onto the last component of . The kernel of may be identified with and so is a submodule of , and it is therefore finitely generated by assumption. The image of under is a submodule of , that is, an ideal of , and so it too is finitely generated by assumption (and Lemma ).  Furthermore, by the first isomorphism theorem is also finitely generated. By a homework problem, we deduce that is a finitely generated module.  % I'll just sketch the general case (which I don't think we'll actually need): let be any finitely generated -module and any submodule. % Since is finitely generated, there exists a surjective -module homomorphism for some . Then is a submodule of and % hence it is finitely generated by the case we already proved. Moreover, induces a surjective -module homomorphism , % and hence is isomorphic to a quotient of a finitely generated -module and thus it is also finitely generated.     The converse is also true: If is not Noetherian, there there exists an ideal that is not finitely generated (by the Lemma). This gives an example of a non-finitely-generated submodule, namely , of a finitely generated module, namely .   Finite Presentations in Noetherian Rings   Any finitely generated module over a noetherian ring has a finite presentation; that is, given such a module over such a ring, there exists an matrix in and an isomorphism     We basically already proved this, but let me recap it:  If is finitely generated, then for some we can find a surjective -module homomorphism Since we assume is Noetherian, the kernel of is also finitely generated by the Proposition, and so we may find a surjection of -modules for some . The composition is equal to for some matrix . Since , the first isomorphism theorem gives an isomorphism     Quotient Rings Noetherian in Noetherian Rings  Let be a commutative ring and an ideal of . Show that if is noetherian then is also noetherian.   "
 },
 {
-  "id": "remark-96",
+  "id": "remark-95",
   "level": "2",
-  "url": "sec-noeth.html#remark-96",
+  "url": "sec-noeth.html#remark-95",
   "type": "Remark",
   "number": "16.19",
   "title": "",
@@ -7210,9 +7219,9 @@ var ptx_lunr_docs = [
   "body": "Finitely Generated Modules in Noetherian Rings   If is a noetherian commutative ring, then every submodule of a finitely generated module is again finitely generated.    I will just prove the following special case (since it is all we need): For each , every submodule of is finitely generated. The base case holds by definition (and Lemma ), since a submodule of is the same thing as an ideal.  Assume and the result holds for . Let be any submodule of . Define to be the projection onto the last component of . The kernel of may be identified with and so is a submodule of , and it is therefore finitely generated by assumption. The image of under is a submodule of , that is, an ideal of , and so it too is finitely generated by assumption (and Lemma ).  Furthermore, by the first isomorphism theorem is also finitely generated. By a homework problem, we deduce that is a finitely generated module.  % I'll just sketch the general case (which I don't think we'll actually need): let be any finitely generated -module and any submodule. % Since is finitely generated, there exists a surjective -module homomorphism for some . Then is a submodule of and % hence it is finitely generated by the case we already proved. Moreover, induces a surjective -module homomorphism , % and hence is isomorphic to a quotient of a finitely generated -module and thus it is also finitely generated.   "
 },
 {
-  "id": "remark-97",
+  "id": "remark-96",
   "level": "2",
-  "url": "sec-noeth.html#remark-97",
+  "url": "sec-noeth.html#remark-96",
   "type": "Remark",
   "number": "16.24",
   "title": "",
@@ -7417,9 +7426,9 @@ var ptx_lunr_docs = [
   "body": "Rational Canonical Form  Suppose is a field and is a -module. By restriction of scalars along the canonical ring map we may regard as a -vector space — let us write this vector space as to be precise. Let be the map given by . Then is an -linear operator on . So, to a -module we may associate the pair where is an -vector space and is an -linear operator on . This process is reversible:  -Module   Let be a field, let be a finite dimensional vector space over , and let be an -linear operator. The -module is defined to be the abelian group equipped with the rule for scaling given by for any polynomial and vector .    is Actually a -Module   Given a pair as in the definition, really is a -module.    Special Case of  We have the following special case (it isn't really special — the general case reduces to this one upon choosing a basis):  Given a matrix , then is the -module whose underlying abelian group is (column vectors) with the usual rule for addition and with the rule for scaling given by for any column vector . For short, we write this rule as for any polynomial , where is the matrix obtained by evaluating at in the evident sense.    Let and let be the -module . So as a -vector space, and acts on by sending to . I claim there is an isomorphism of -modules.  Let . Note that and that and span as a -vector space. It follows that generates as a -module; in detail, for any we have .  Define a -module homomorphism by sending to and hence to . It is onto since generates as a -module. The kernel will be a (necessarily principle) ideal of ; we just need to find it. Note that , and are linearly dependent and in fact we have and hence . This gives that is in the kernel of and hence, by the -th Isomorphism Theorem we have an induced homomorphism of -modules induced by . The map is onto since is onto. Since the source and target both have dimension two as -vector spaces, is -linear, and is onto, it must in fact be an isomorphism of -modules (by the Rank-Nullity Theorem).   Equality of -Modules   The two assignments and defined above are mutually inverse: Given a -module , there is an equality of -modules and given a pair with an -vector space and an -linear operator on we have an equality of pairs .    In fact, these rules determine an “isomorphism of categories''.  Block Diagonal Matrix   Given square matrices , we define to be the block diagonal matrix which belongs to for .    Rational Canonical Form   Given a finite dimensional -vector space and an -linear operator , there is a basis of such that the matrix representing relative to is for monic polynomials of degree at least one such that . Moreover, this matrix is unique, and is known as the rational canonical form of the operator .    We know by the Fundamental Theorem of modules over (i.e., Corollary ) that there is a -module isomorphism for some unique list of monic, non-constant polynomials with for all . Recall that the operator on is given as (multiplication by ) on . Since this is a -module isomorphism, corresponds to multiplication by on each summand . As we have seen before, for each , the matrix representing on relative to the basis of is the companion matrix of . Let be the -basis of given by tuples (in that order). Then the matrix of on for is .  This gives existence. Uniqueness is a consequence of the uniqueness of the list , but I will omit the details.    The matrix is unique, but the basis that realizes it is, in general, not unique. As an extreme example illustrating this: Take to be the identity operator on a finite dimensional vector space . Then holds for any basis . (Note that is indeed in rational canonical form: it is equal to .)  Invariant Factor   In Theorem , the number is the rank of , the numbers are the invariant factors of , and the decomposition of in part (1) is the invariant factor decomposition of .    Back to  Let us return to the example of to illustrate the Theorem and its proof. By the previous example we have an isomorphism of -module Recall that (multiplication by ) on is given by multiplication by the matrix . This is an isomorphism of -modules, and so corresponds to the operator on . As we have seen before, relative to the basis , the matrix for is This is the Rational Canonical Form of . has just one invariant factor, namely .  By the way, tracking through the calculations that got us here, we see that the basis of that gives the RCF of if of .   Every Matrix Similar to Unique RCF Matrix   Every matrix is similar to a unique matrix in RCF.    Similarity Classes of Matrices  Let be the field with elements for some prime . Up to similarity, how many matrices are there with entries in ?  Each such matrix is similar to a unique one of the form with monic polynomials of positive degree such that . Moreover, since is a matrix where , we must have . So the goal becomes to count all such tuples of polynomials. We proceed by cases on . Note that is not possible. - Case . Then and the number of such polynomials is (since and has elements). - Case : Note that is not possible. If then , and there are possibilities. If , then and with monic and . There are possibilities for and for , for a total of in this subcase. The total for this case is thus . - Case : The only possibilities are , and so that and with . We get possibilities. - Case . We must have with each of degree , for a total of possibilities. The total is     The proof of Theorem makes clear the following fact:   For a field , finite dimensional vector space , and -linear operator ,the invariant factors of the operator are identical to the invariant factors of the -module .   The following result is thus very useful for finding the Rational Canonical Form of an operator (we will state it just for operators given explicitly by matrices):   RCF and Cokernels   Let be a field and let . The matrix presents the -module ; that is, there is an isomorphism of -modules     For this proof it is useful to identity with where the latter refers to all expressions of the form with . For instance, (when ) we identify with . Using this identification we define by . Then is a -module homomorphism — I leave it to you to verify this. is onto since, e.g., for any we have .  We have and hence . By the -th isomorphism theorem, there is an induced -module homomorphism induced by , and it is onto since is onto. It remains to show this map is one-to-one.  Since is -linear it is certainly -linear. Since , to prove is one-to-one, it suffices to prove (by Rank-Nullity). I claim the images of the standard basis in span it as an -vector space. To see this, note that , for , span as an -vector space, and hence they span the quotient. It thus suffices to show lies in the span of in for all and . We have and thus and by repeating this argument we have     Invariant Factors are Diagonal SNF Entries   The invariant factors of a matrix are the non-zero, non-unit diagonal entries of the SNF of .    Let be the Smith Normal Form of and let be its diagonal entries. As proven before, the matrix and present isomorphic -modules, and thus the Theorem gives an isomorphism Since , none of the 's can be zero. So, each is monic and . Now some of the might be non-zero constants, in which case is a unit and . Upon tossing those out, we are left with with each monic of positive degree and . These are, by definition, the invariant factors of .    Once More to Back to  Let's find the invariant factors of the matrix we looked at before, but this time using the Theorem and its Corollary.  We have To find the invariant factors of we just need to find the Smith Normal Form of . I'll do this two ways:  Method I: Do row and column operations using the generalized Euclidean algorithm: Tossing out the unit, we see that the only invariant factor is , as before.  Method II: Call the entries on the diagonal of the SNF of . Recall from Theorem that is the gcd of the entries of and . Thus and . Therefore the only invariant factor of is .   Finding IFs and RCF  Let Let us find the invariant factors and Rational Canonical Form of by finding the Smith Normal Form of .  We have A sequence of messy row and column operations yields Note that this is indeed in Smith Normal Form. It follows that the invariant factors of are and the RCF of is   For an alternative approach, we could use that the diagonal entries of the Smith Normal Form of satisfy , is the gcd of the minors of , and . It's clear that and an easy calculation gives that . There are nine minors of , and a tedious check reveals that each of them is one of , , or (up to signs). So . We get that as before.   Problem 7 - Nilpotent Matrices and Similarity  Let be a field and recall that a square matrix with entries in is called nilpotent if for some positive integer .   Prove that if is an nilpotent matrix, then .  Assume and prove that two nilpotent matrices are similar if and only if they have the same rank. (Recall the rank of a matrix is the dimension of the vector space spanned by its columns.)  Give an example, with justification, of two nilpotent matrices that have the same rank but are not similar.    Let be a field.     Let be an nilpotent matrix. Let be some eigenvalue of . Thus there exists some vector such that . Let's consider this the base-case of some rather banal induction. Now assume that for we have . Consider Recall that as is nilpotent, there exists some such that . As is an eigenvalue of , by the above induction we see that is an eigenvalue for . As is a field and thus an integral domain, we see that implies that is as well. As this holds in the algebraic closure of as well, we see that when factored into linear terms all the . Thus .  By the Cayley Hamilton Theorem we know , and thus .    Assume and let be nilpotent matrices with entries in .   Suppose . Thus there exists some invertible matrix such that by the definition of similar matrices. Let . Thus and . We multiply both sides by to see that . Therefore the , and hence the ranks of and are equal by Rank Nullity.  Next, observe as is an invertible matrix. Thus .   Suppose that . From Part (a) we know .  We consider the case where .  The only possible invariant factors involving are    ;     ; and     itself.   However, if are the invariant factors then the rank of would be 3, making it invertible, contradicting the fact that 0 is an eigenvalue of . Thus we need only consider the latter two cases.  Note that As has rank 1 and has rank 2, since we see that they must have the same invariant factors, making them similar.  If then the only possible invariant factor is , as having two 's would make and invertible again. If then and we're done.    Consider and .  Thus   both of which have rank and are in RCF. Thus they are not similar.       Find the Rational Canonical Form of where is any field.    Find, with justification, a complete and non-redundant list of conjugacy class representatives for the group , where is the field with two elements.   Let denote the field with two elements, and consider the group .  Recall that matrices are in the same conjugacy class if and only if they are similar, and that two matrices are similar if and only if they share the same invariant factors.  Let . All characteristic polynomials are monic, and as is invertible we see the term in the , and thus , the only other element in . There are only so many monic polynomials with coefficients in ; hence there are only four possible characteristic polynomials of :    ,     ,     and     .   Note that since , 0 cannot be a root of any of these polynomials. Thus all that remains is to check . Luckily, is not a root of or , so the only invariant factor of each is themselves. While 1 is a root of , we see that . As , neither of these polynomials can be invariant factors by the RCF theorem; thus the only invariant factor of is itself. However , and so its possible invariant factors are    ;     and     .   Let and . Thus the conjugacy class representatives for are    ,     ,     ,     ,     , and     .        Computations and Examples       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Formal Proofs       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Qualifying Exam Problems       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     "
 },
 {
-  "id": "remark-98",
+  "id": "remark-97",
   "level": "2",
-  "url": "sec-rcf.html#remark-98",
+  "url": "sec-rcf.html#remark-97",
   "type": "Remark",
   "number": "17.1",
   "title": "",
@@ -7471,9 +7480,9 @@ var ptx_lunr_docs = [
   "body": "Equality of -Modules   The two assignments and defined above are mutually inverse: Given a -module , there is an equality of -modules and given a pair with an -vector space and an -linear operator on we have an equality of pairs .   "
 },
 {
-  "id": "remark-99",
+  "id": "remark-98",
   "level": "2",
-  "url": "sec-rcf.html#remark-99",
+  "url": "sec-rcf.html#remark-98",
   "type": "Remark",
   "number": "17.7",
   "title": "",
@@ -7498,9 +7507,9 @@ var ptx_lunr_docs = [
   "body": "Rational Canonical Form   Given a finite dimensional -vector space and an -linear operator , there is a basis of such that the matrix representing relative to is for monic polynomials of degree at least one such that . Moreover, this matrix is unique, and is known as the rational canonical form of the operator .    We know by the Fundamental Theorem of modules over (i.e., Corollary ) that there is a -module isomorphism for some unique list of monic, non-constant polynomials with for all . Recall that the operator on is given as (multiplication by ) on . Since this is a -module isomorphism, corresponds to multiplication by on each summand . As we have seen before, for each , the matrix representing on relative to the basis of is the companion matrix of . Let be the -basis of given by tuples (in that order). Then the matrix of on for is .  This gives existence. Uniqueness is a consequence of the uniqueness of the list , but I will omit the details.   "
 },
 {
-  "id": "remark-100",
+  "id": "remark-99",
   "level": "2",
-  "url": "sec-rcf.html#remark-100",
+  "url": "sec-rcf.html#remark-99",
   "type": "Remark",
   "number": "17.10",
   "title": "",
@@ -7543,9 +7552,9 @@ var ptx_lunr_docs = [
   "body": "Similarity Classes of Matrices  Let be the field with elements for some prime . Up to similarity, how many matrices are there with entries in ?  Each such matrix is similar to a unique one of the form with monic polynomials of positive degree such that . Moreover, since is a matrix where , we must have . So the goal becomes to count all such tuples of polynomials. We proceed by cases on . Note that is not possible. - Case . Then and the number of such polynomials is (since and has elements). - Case : Note that is not possible. If then , and there are possibilities. If , then and with monic and . There are possibilities for and for , for a total of in this subcase. The total for this case is thus . - Case : The only possibilities are , and so that and with . We get possibilities. - Case . We must have with each of degree , for a total of possibilities. The total is   "
 },
 {
-  "id": "remark-101",
+  "id": "remark-100",
   "level": "2",
-  "url": "sec-rcf.html#remark-101",
+  "url": "sec-rcf.html#remark-100",
   "type": "Remark",
   "number": "17.15",
   "title": "",
@@ -7651,9 +7660,9 @@ var ptx_lunr_docs = [
   "body": "The Cayley-Hamilton Theorem  Given a square matrix and polynomial , recall that refers to the square matrix .  Ideals and   Given a matrix with entries in a field , the set forms a non-zero ideal of .     is an ideal since the result of evaluating the sum of two polynomials at is . the result of evaluating the product at is .  To show it is non-zero, consider the matrices . This is a collection of matrices in the dimensional -vector space , and hence the must be linearly dependent: there are , not all of which are , such that . This proves .    Minimum Polynomial of a Matrix   Let be a field and let . The minimum polynomial of , denoted , is the unique monic generator of the ideal . Equivalently, is the monic polynomial of least degree such that .    iff Annihilates   Given an matrix and polynomial , we have if and only if annihilates the -module .  In particular, is the unique monic generator of the annihilator ideal     If , then for each , by definition of the action of on we have and so annihilates . Conversely, if annihilates , then for all . Taking for each , this says that each column of is and hence is the zero matrix.    Minimum Polynomial   More generally, let be an -vector space of dimension , and let be a linear transformation. The minimum polynomial of , denoted , is the unique monic polynomial generating the ideal or, equivalently, the annihilator ideal .    Theorem - Cayley-Hamilton   Let be a field, a finite dimensional -vector space, and an -linear operator. Let be the invariant factors of .   The product of the invariant factors of equals the characteristic polynomial of :     The largest invariant factor of is equal to the minimum polynomial of :     (The Cayley-Hamilton Theorem) The minimum polynomial of divides its characteristic polynomial. In particular, satisfies its characteristic polynomial:        The first assertion is a consequence of Corollary , since the product of the diagonal elements of the Smith Normal Form of is equal to the determinant of . (Technically, we can only conclude at first that they are only associates, but since each is monic, they must be equal.)  For the second, we use the isomorphism of -modules Note that a polynomial annihilates if and only if divides . Since , the annihilator of the -module is generated by . Thus the annihilator of is also generated by , and by the Proposition is the minimum polynomial of .  The third assertion is an immediate consequence of the first two.    Finding Minimum Polynomial  Let's find the minimum polynomial of   We apply the Cayley-Hamilton Theorem: . The polynomial is easy to compute since this matrix is upper-triangular: So for some . By brute-force, we verify that and thus it must be the case that .   Finding Minimum Polynomial (2)  Let's find the minimum polynomial of As in the previous example, and so by the Cayley-Hamilton Theorem for some . This time we notice that and so, since , .   Problem 6 - Similarity Classes and CharPoly  Determine all similarity classes of matrices with entries in with characteristic polynomial . Provide an explicit representative for each of these similarity classes.   Let be a matrix with entries in with characteristic polynomial .  By this Corollary we know that every matrix is similar to a unique matrix in RCF. Note that RCF is based on the invariant factors if a matrix, and thus if two matrices have the same invariant factors they will have the same RCF, making them both similar to the same (unique) matrix, making them similar to each other. By part (1) of this Theorem, the characteristic polynomial of a matrix is equal to the product of the invariant factors of that same matrix.  Recall that the invariant factors must divide all preceding invariant factors in RCF, and observe that factors as and factors as . Given this information, after some fiddling with the factors, we find four possible options for invariant factors of :    ,     ,     , and     .   Let  , and . Observe the companion matrices of each of these polynomials: Behold: explicit representatives of each similarity class:    ,     ,     , and     .       Let be any field.   Let and be two matrices with entries in . Prove and are similar if and only if they have the same characteristic polynomial and the same minimum polynomial.  Show, by way of an example with justification, that the previous part would become false if were replaced by .  Give an example of a field and two matrices with entries in having the same minimum polynomial that are not similar.    Let be any field.     Let and be two matrices with entries in . First, suppose that . Matrices are similar if and only if they share the same invariant factors. As minimum polynomial is an invariant factor and the characteristic polynomial is a product of the invariant factors, we see that and must share the same invariant factors.  Next suppose that and share the same characteristic polynomial and the same minimal polynomial. As and are matrices, the characteristic polynomial of both and must be a degree polynomial. We proceed via cases based on the degree of . - First, suppose . Then , making the only invariant factor of both and . Thus and have the same invariant factors and are therefore similar. - Next, suppose . As and the degrees of all invariant factors must sum to the , we know that , where is a degree polynomial, which we denote for and for .. Since and share the same minimum and characteristic polynomials, we see and , and thus that . Hence and share the same invariant factors, making . - Finally, suppose . The minimum polynomial is the largest invariant factor, and thus the invariant factors of and must be , making them similar.    If we replaced with then this would allow for and , allowing two sets of invariant factors:  , Notice that and . Set and , so These matrices have the same and but are not similar.    Let . We define and . Notice that these matrices are in RCF. However, the invariant factors of are and the invariant factors of are . Thus is not similar to , but the minimal polynomial of both is .      Problem 6 - Unipotent 4 x 4 Matrices  We say an matrix with entries in is unipotent if is nilpotent (i.e., for some ). For the field , find (with complete justification) the number of similarity classes of unipotent matrices and give an explicit representative for each class.   Let , a positive integer, and a unipotent matrix with entries in . Thus is nilpotent. Let be an eigenvalue of . Then , so and . As , we have and .  Notice that as is an eigenvalue of , we have as an eigenvalue of .  Assume inductively that is an eigenvalue of . Notice making an eigenvalue of . Thus if is an eigenvalue of , it is an eigenvalue of as well. As is nilpotent, there exists some such that . This means that . As and is a scalar in a field (and hence integral domain) we have . Thus the only eigenvalue of is , meaning that the only eigenvalue of is .  Eigenvalues of correspond to the roots of , which is a monic quartic polynomial, as is a matrix. Thus , as all roots must be .  Two matrices are similar if and only if they share the same invariant factors. Given that invariant factors divide and each invariant factor must divide the following one, the possible sets of invariant factors for are the following:    ,     ,     ,     , and     .   We identify the companion matrices for each possible invariant factor:  and We define the following:    ,     ,     ,     , and     .   As each of these matrices is in RCF, they are explicit representatives for each similarity class.    Let and be matrices with entries in . Prove and are similar in if and only if and are similar in . (That is, show there is a such that if and only if there is a such that .) {}: Use the Theorem on Rational Canonical Forms.    Similarity of two-by-two matrices:   Let be any field and , and assume that neither nor is a scalar matrix. (Recall that a scalar matrix is one of the form for some .) Prove and are similar if and only if they have the same determinant and the same trace.    Let be a finite field with elements. Find, with justification, the number of similarity classes of matrices with entries in .    Let be a finite field with elements. Find, with justification, the number of conjugacy classes of the group .         Coming soon to an OER near you!       Let be any field. Up to similarity, how many matrices in of the form are there? Justify.    Let be a field, a finite dimensional -vector space, and an -linear operator. Prove that the following are equivalent for an element :    is an eigenvalue of .     is a root of the minimum polynomial of .     is a root of the characteristic polynomial of . (Recall that is a {} of provided for some non-zero vector .)       Suppose is any field. Recall that a square matrix with entries in is nilpotent if for some positive integer j.   Prove that if and is nilpotent, then .  Find, with justification, the number of similarity classes of nilpotent matrices with entries in .      Find, with justification, a complete and non-redundant list of conjugacy class representatives for the group , where is the field with three elements.     Computations and Examples       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Formal Proofs       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     Qualifying Exam Problems       Coming soon to an OER near you!   Coming soon to an OER near you!   Coming soon to an OER near you!     "
 },
 {
-  "id": "remark-102",
+  "id": "remark-101",
   "level": "2",
-  "url": "sec-cayley-hamilton.html#remark-102",
+  "url": "sec-cayley-hamilton.html#remark-101",
   "type": "Remark",
   "number": "17.23",
   "title": "",
@@ -7849,9 +7858,9 @@ var ptx_lunr_docs = [
   "body": "Companion Matrix and Jordan Blocks  Let us consider the companion matrix of : We can interpret this matrix as arising from the linear transformation on defined as multiplication by . Recall that the ordered basis of that gives the matrix is the “obvious one'': But notice that is also a basis of . Let us calculate what the operator does to this alternative basis. We could work this out by brute force, but a cleaner way is to first compute what the operator does. Since is multiplication by , it sends each basis element to the next one, except for the last one, which is sent to . It follows that the matrix of this operator relative to the ordered basis is and hence the matrix for itself for this basis is This is what's known as a Jordan Block.  "
 },
 {
-  "id": "remark-103",
+  "id": "remark-102",
   "level": "2",
-  "url": "sec-jcf.html#remark-103",
+  "url": "sec-jcf.html#remark-102",
   "type": "Remark",
   "number": "17.41",
   "title": "",
@@ -7867,9 +7876,9 @@ var ptx_lunr_docs = [
   "body": "Jordan Block   Given a field , and integer , and an element , the Jordan block  is the with entries in such that its diagonal entries are all , each entry just below the diagonal is a , and all other entries are : (More precisely, for all , for all , and for all other .)   "
 },
 {
-  "id": "remark-104",
+  "id": "remark-103",
   "level": "2",
-  "url": "sec-jcf.html#remark-104",
+  "url": "sec-jcf.html#remark-103",
   "type": "Remark",
   "number": "17.43",
   "title": "",
@@ -7885,18 +7894,18 @@ var ptx_lunr_docs = [
   "body": "Jordan Canonical Form   Let be a field, let be a finite dimensional -vector space, and let be a linear transformation satisfying the property that the characteristic polynomial of factors completely in into linear factors. Then there is an ordered basis for such that where , the 's, and the 's are such that are the elementary divisors of the -module . Moreover, this matrix is unique up to ordering of the Jordan Blocks, and it is known as “the'' Jordan Canonical Form of .    The proof is similar to the proof the RCF theorem, using the idea of Example above, but starting with the FTFGMPIDEDF (instead of the FTFGMPIDIFF). Here are the details:  We consider the -module . Since we assume factors completely, the only irreducible polynomials in its factorization are linear. Thus the invariant factors of are products of polynomials of the form for various and integers . It follows that the elementary divisors have this form too. The FTFGMPIDEDF therefore gives an isomorphism of -modules Now pick ordered bases for each of the summands and set to be their “ordered union'' just as we did for the proof of the Theorem on RCF. By the same argument as in Example applied to each summand individually, the matrix representing multiplication by on each summand is . This gives the existence of the JCF.  The uniqueness follows from the uniqueness clause in the FTFGMPIDEDF.   "
 },
 {
-  "id": "remark-105",
+  "id": "remark-104",
   "level": "2",
-  "url": "sec-jcf.html#remark-105",
+  "url": "sec-jcf.html#remark-104",
   "type": "Remark",
   "number": "17.45",
   "title": "",
   "body": "Not every operator has a Jordan Canonical Form: The Theorem only applies if factors completely, and, conversely, if an operator is represented by any lower-triangular matrix, then its characteristic polynomial must be a product of linear polynomials. For algebraically closed fields, such as , every linear operator does indeed have a JCF. "
 },
 {
-  "id": "remark-106",
+  "id": "remark-105",
   "level": "2",
-  "url": "sec-jcf.html#remark-106",
+  "url": "sec-jcf.html#remark-105",
   "type": "Remark",
   "number": "17.46",
   "title": "",
@@ -8245,9 +8254,9 @@ var ptx_lunr_docs = [
   "body": "  Let be a field and .   If has degree one, it is irreducible.    If has a root and , then is not irreducible (since it factors as for some of degree at least ).    If , then is irreducible if and only if has no roots.    (Rational Root Test) If and all the coefficients of are integers and is a root of with , then divides and divides . More generally, the same holds with replaced by any PID and replaced by its field of fractions.      "
 },
 {
-  "id": "remark-107",
+  "id": "remark-106",
   "level": "2",
-  "url": "sec-irrpoly.html#remark-107",
+  "url": "sec-irrpoly.html#remark-106",
   "type": "Remark",
   "number": "18.12",
   "title": "",
@@ -8443,18 +8452,18 @@ var ptx_lunr_docs = [
   "body": "Field Extension   A field extension is an inclusion of one field into a larger field , making into a subfield of . We will write either or to signify that is a field extension of .   "
 },
 {
-  "id": "remark-108",
+  "id": "remark-107",
   "level": "2",
-  "url": "field-extension-basics.html#remark-108",
+  "url": "field-extension-basics.html#remark-107",
   "type": "Remark",
   "number": "19.2",
   "title": "",
   "body": " So a field extension is just another name for a subfield, but the emphasis is different. We think of as coming first and later.  "
 },
 {
-  "id": "remark-109",
+  "id": "remark-108",
   "level": "2",
-  "url": "field-extension-basics.html#remark-109",
+  "url": "field-extension-basics.html#remark-108",
   "type": "Remark",
   "number": "19.3",
   "title": "",
@@ -8470,9 +8479,9 @@ var ptx_lunr_docs = [
   "body": "Examples of Field Extensions   and are basic examples of field extensions.  Recall that is a field. So is another example of a field extension.  "
 },
 {
-  "id": "remark-110",
+  "id": "remark-109",
   "level": "2",
-  "url": "field-extension-basics.html#remark-110",
+  "url": "field-extension-basics.html#remark-109",
   "type": "Remark",
   "number": "19.5",
   "title": "",
@@ -8506,9 +8515,9 @@ var ptx_lunr_docs = [
   "body": "  If is a field extension and , show, using only the definition of , that    "
 },
 {
-  "id": "remark-111",
+  "id": "remark-110",
   "level": "2",
-  "url": "field-extension-basics.html#remark-111",
+  "url": "field-extension-basics.html#remark-110",
   "type": "Remark",
   "number": "19.9",
   "title": "",
@@ -8695,9 +8704,9 @@ var ptx_lunr_docs = [
   "body": "Minimum Polynomial   If is algebraic over the subfield , the unique monic generator of the ideal in the previous theorem, written , is called the minimum polynomial of over .   "
 },
 {
-  "id": "remark-112",
+  "id": "remark-111",
   "level": "2",
-  "url": "sec-algebraic.html#remark-112",
+  "url": "sec-algebraic.html#remark-111",
   "type": "Remark",
   "number": "19.25",
   "title": "",
@@ -8821,9 +8830,9 @@ var ptx_lunr_docs = [
   "body": "  Let be fields and let be algebraic elements over . Prove that and are also algebraic elements of over .    Let be fields and let be algebraic elements over First, notice that and are contained in . As is algebraic over , it is the root of some polynomial with coefficients in . But is also contained in , and thus the extension is algebraic. As is algebraic as well, we see that is an algebraic extension of fields. Thus and are algebraic over .   "
 },
 {
-  "id": "remark-113",
+  "id": "remark-112",
   "level": "2",
-  "url": "sec-algebraic.html#remark-113",
+  "url": "sec-algebraic.html#remark-112",
   "type": "Remark",
   "number": "19.39",
   "title": "",
@@ -9136,9 +9145,9 @@ var ptx_lunr_docs = [
   "body": "Examples of Splitting Fields   As a silly example, if already splits into linear factors over , then itself is the splitting field of over .  The splitting field of over is .  If is any irreducible quadratic polynomial in , then the splitting field of is .  In general, given , a splitting field of is given by where are all of the roots of in .   "
 },
 {
-  "id": "remark-114",
+  "id": "remark-113",
   "level": "2",
-  "url": "sec-splitting.html#remark-114",
+  "url": "sec-splitting.html#remark-113",
   "type": "Remark",
   "number": "19.65",
   "title": "",
@@ -9154,9 +9163,9 @@ var ptx_lunr_docs = [
   "body": "Properties of Splitting Fields   Let be a field and a non-constant polynomial.   There exists a splitting field for over .    If is another splitting field of over , then there is a field isomorphism such that .    The degree of any splitting field of is at most where .       For (1), let be an algebraic closure of , which exists by the previous Theorem. Let be the roots of in , and set .  It is clear is a splitting field.  To prove (2), we proceed by induction on the degree of . If is linear, then the only splitting field of over is itself and so the result is clear in this case. Say and are the roots of in and , respectively, and say they are ordered so that, and are roots of the same irreducible factor of in .  By Corollary there is an isomorphism that fixes . Note that factors as in and that is the splitting field of over , and similarly factors as in and that is the splitting field of over . If we blur our eyes slightly and pretend is the identity map, we can apply the inductive hypothesis, since , to conclude that there is an isomorphism as in the statement. I leave a more rigorous argument to your imaginations.  To prove (3), we also proceed by induction on the degree of , using the same notation as in the proof of (2).  Since is a root of , we have and hence In we have with and, as before, is the splitting field of over , so that by induction . By the     "
 },
 {
-  "id": "remark-115",
+  "id": "remark-114",
   "level": "2",
-  "url": "sec-splitting.html#remark-115",
+  "url": "sec-splitting.html#remark-114",
   "type": "Remark",
   "number": "19.67",
   "title": "",
@@ -9325,9 +9334,9 @@ var ptx_lunr_docs = [
   "body": "Characteristic   Let R be a commutative ring. The characteristic of , written , is the unique non-negative generator of the kernel of the unique ring homomorphism . (Recall .)  Equivalently, is the smallest positive integer such that , if such and integer exists, and otherwise.   "
 },
 {
-  "id": "remark-116",
+  "id": "remark-115",
   "level": "2",
-  "url": "sec-separable.html#remark-116",
+  "url": "sec-separable.html#remark-115",
   "type": "Remark",
   "number": "19.82",
   "title": "",
@@ -9658,9 +9667,9 @@ var ptx_lunr_docs = [
   "body": "Galois Extension   A finite extension of fields is a Galois extension if the three equivalence conditions of this theorem hold:        The extension is both normal and separable.     is the splitting field of some separable polynomial with coefficients in .     In this case it is customary to write for the group and to refer to it as the Galois group of the extension - they are exactly the same group, but the former is used only when the extension is Galois.   "
 },
 {
-  "id": "remark-117",
+  "id": "remark-116",
   "level": "2",
-  "url": "sec-galext.html#remark-117",
+  "url": "sec-galext.html#remark-116",
   "type": "Remark",
   "number": "20.15",
   "title": "",
@@ -9874,9 +9883,9 @@ var ptx_lunr_docs = [
   "body": "Cyclotomic Extensions Revisited  Let be a field, let be a positive integer such that does not divide , and let be the algebraic closure of . If is a primitive -th root of 1 over , then is a finite Galois extension, and is a cyclic group that is isomorphic to a subgroup of .  "
 },
 {
-  "id": "remark-118",
+  "id": "remark-117",
   "level": "2",
-  "url": "sec-ftgt.html#remark-118",
+  "url": "sec-ftgt.html#remark-117",
   "type": "Remark",
   "number": "20.28",
   "title": "",
@@ -10090,18 +10099,18 @@ var ptx_lunr_docs = [
   "body": "De Morgan's Laws    and    "
 },
 {
-  "id": "remark-119",
+  "id": "remark-118",
   "level": "2",
-  "url": "sec-sets-functions.html#remark-119",
+  "url": "sec-sets-functions.html#remark-118",
   "type": "Remark",
   "number": "A.6",
   "title": "",
   "body": "Notation for indices: for finite or countably many indices, for arbitrarily many indices. "
 },
 {
-  "id": "remark-120",
+  "id": "remark-119",
   "level": "2",
-  "url": "sec-sets-functions.html#remark-120",
+  "url": "sec-sets-functions.html#remark-119",
   "type": "Remark",
   "number": "A.7",
   "title": "",
@@ -10135,9 +10144,9 @@ var ptx_lunr_docs = [
   "body": "Welldefined Function   A function is well-defined if whenever and , then .   "
 },
 {
-  "id": "remark-121",
+  "id": "remark-120",
   "level": "2",
-  "url": "sec-sets-functions.html#remark-121",
+  "url": "sec-sets-functions.html#remark-120",
   "type": "Remark",
   "number": "A.11",
   "title": "",
@@ -10783,9 +10792,9 @@ var ptx_lunr_docs = [
   "body": "Determinant Formula Using Bilinear Map  For and , defined by is both -bilinear and alternating. This is of course the familiar determinant formula.  "
 },
 {
-  "id": "remark-122",
+  "id": "remark-121",
   "level": "2",
-  "url": "section-69.html#remark-122",
+  "url": "section-69.html#remark-121",
   "type": "Remark",
   "number": "B.39",
   "title": "",
@@ -10837,9 +10846,9 @@ var ptx_lunr_docs = [
   "body": "Transpose Preserves Det  Prove where denotes transpose.  "
 },
 {
-  "id": "remark-123",
+  "id": "remark-122",
   "level": "2",
-  "url": "section-69.html#remark-123",
+  "url": "section-69.html#remark-122",
   "type": "Remark",
   "number": "B.45",
   "title": "",
@@ -10864,9 +10873,9 @@ var ptx_lunr_docs = [
   "body": "  Let be any non-zero commutative ring. Let be a square matrix and let be a matrix obtained form by a single elementary column operation:   If the operation is of type I, .    If the operation is of type II, given by multiplying a column of by a unit , then .    If the operation is of type III, .       The first claim follows from multi-linearity and alternating properties: For notational simplicity say and . Then The second is immediate from (the second part of) -multi-linearity. The last is a special case of Lemma .   "
 },
 {
-  "id": "remark-124",
+  "id": "remark-123",
   "level": "2",
-  "url": "section-69.html#remark-124",
+  "url": "section-69.html#remark-123",
   "type": "Remark",
   "number": "B.48",
   "title": "",
@@ -10891,9 +10900,9 @@ var ptx_lunr_docs = [
   "body": "  For a field, we have if and only if is invertible.    If is not invertible, then the column space of is a proper subspace of and hence the columns of must be linearly dependent. Say the column is a linear combination of the rest: . Then If is invertible, then by Corollary can be obtained from via a sequence of elementary column operations. The result thus follows from Proposition and the fact that .   "
 },
 {
-  "id": "remark-125",
+  "id": "remark-124",
   "level": "2",
-  "url": "section-69.html#remark-125",
+  "url": "section-69.html#remark-124",
   "type": "Remark",
   "number": "B.51",
   "title": "",
@@ -10927,18 +10936,18 @@ var ptx_lunr_docs = [
   "body": "Det Splits Across Multiplication: Commutative Ring   For any non-zero commutative ring and matrices , we have     We have already proven that this holds when is a field.  We next show that it holds whenever is an integral domain. In this case, is a subring of a field (namely, the field of fractions of ). So, we know that the equation holds in if we interpret and as belonging to . But the value of is the same if we interpret these matrices as having entries in or in . So holds in .  We finally prove that the Theorem for any non-zero commutative ring by building on the fact that it holds for domains. We do so by contructing a ring homomorphism and matrices and in such that is an integral domain, and . Granting such a and exist, the result follows from the naturality of (Lemma ). In detail, we know , since is a domain. Since the rule for multiplying matrices involves only sums and products of ring elements, we have . So It remains to prove such a , , and exists. Suppose and . Form the polynomial ring of variables with -coefficients. By the UMP for polynomial rings with integer coefficients, since is commutative, there is a (unique) ring map such that and for all . That is, is the evaluation map given by setting and for all , and interpreting integers as elements of . Let be the evident matrices of indeterminants.Then is a domain, is a ring homomorphism, and , as desired.   "
 },
 {
-  "id": "remark-126",
+  "id": "remark-125",
   "level": "2",
-  "url": "section-69.html#remark-126",
+  "url": "section-69.html#remark-125",
   "type": "Remark",
   "number": "B.55",
   "title": "",
   "body": " Another way to deduce the Theorem for arbitrary commutative rings from the case of a domain is to use the following fact: If is a non-zero commutative ring, there there exists a surjective ring homomorphism of the form where is a domain. So see this, let be a (possibly very large) set of indeterminants such that there is a bijection of sets . Let , the polynomial ring with integer coefficients in the variables . So, a typical element of is a polynomial the form for some finite subset of . By the UMP for polynomial rings, there is a unique ring map such that for all . That is, sends as above to . The ring map is clearly onto since for each , there is an with and hence . Finally, is an integral domain.  "
 },
 {
-  "id": "remark-127",
+  "id": "remark-126",
   "level": "2",
-  "url": "section-69.html#remark-127",
+  "url": "section-69.html#remark-126",
   "type": "Remark",
   "number": "B.56",
   "title": "",
@@ -10990,9 +10999,9 @@ var ptx_lunr_docs = [
   "body": "Companion Matrix  Let where is a field, with a monic polynomial. Say . Recall that every element of is uniquely represented by a coset of the form where is a polynomial of degree at most .  We will regard as an -vector space (via restriction of scalars along ). Then is finite dimensional — for instance, a basis of is given by .  Let be the function given as multiplication by . Then is an -linear operator, since and . (In fact, is -linear, but we won't use that fact.) Relative to the ordered basis , the matrix of is The right-most column is due to the fact that, since in , we have The matrix is known as the companion matrix of - it is defined for any monic polynomials with entries in a field.  We have , since the only permutation that gives a non-zero term in the formula for is the -cycle , and its has sign is . So .  "
 },
 {
-  "id": "remark-128",
+  "id": "remark-127",
   "level": "2",
-  "url": "section-69.html#remark-128",
+  "url": "section-69.html#remark-127",
   "type": "Remark",
   "number": "B.62",
   "title": "",
@@ -11062,9 +11071,9 @@ var ptx_lunr_docs = [
   "body": "Characteristic Polynomial   Let where is a field. The characteristic polynomial of is Note that is a monic polynomial of degree with coefficients in . More generally, if is a finite dimensional -vector space and is an -linear operator on , then where is the matrix representing with respect to a choice of basis of .   "
 },
 {
-  "id": "remark-129",
+  "id": "remark-128",
   "level": "2",
-  "url": "section-69.html#remark-129",
+  "url": "section-69.html#remark-128",
   "type": "Remark",
   "number": "B.70",
   "title": "",

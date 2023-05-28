@@ -1110,7 +1110,7 @@ window.MathJax = {
 </h2>
 <article class="example example-like" id="compantion-matrix-and-jordan-blocks"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">17.40</span><span class="period">.</span><span class="space"> </span><span class="title">Companion Matrix and Jordan Blocks.</span>
-</h3> <div class="para logical" id="p-2462">
+</h3> <div class="para logical" id="p-2473">
 <div class="para">Let us consider the companion matrix of <span class="process-math">\((x-2)^3 = x^3 -6x^2 + 12x -8\text{:}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -1164,13 +1164,13 @@ B'=\{\ov{1}, \ov{x-2}, \ov{(x-2)^2}\}
 \end{equation*}
 </div>
 <div class="para">This is what's known as a Jordan Block.</div>
-</div></article><article class="remark remark-like" id="remark-103"><h3 class="heading">
+</div></article><article class="remark remark-like" id="remark-102"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">17.41</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-2463">In this example, if we used the basis <span class="process-math">\(\{ \ov{(x-2)^2}, \ov{x-2}, \ov{1}\}\)</span> instead we would have gotten the transpose of <span class="process-math">\(J_3(2)\text{.}\)</span>
+<div class="para" id="p-2474">In this example, if we used the basis <span class="process-math">\(\{ \ov{(x-2)^2}, \ov{x-2}, \ov{1}\}\)</span> instead we would have gotten the transpose of <span class="process-math">\(J_3(2)\text{.}\)</span>
 </div></article><article class="definition definition-like" id="def-jordan-block"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">17.42</span><span class="period">.</span><span class="space"> </span><span class="title">Jordan Block.</span>
-</h3> <div class="para logical" id="p-2464">
+</h3> <div class="para logical" id="p-2475">
 <div class="para">Given a field <span class="process-math">\(F\text{,}\)</span> and integer <span class="process-math">\(n \geq 1\text{,}\)</span> and an element <span class="process-math">\(r\in F\text{,}\)</span> the <em class="emphasis">Jordan block</em> <span class="process-math">\(J_n(r)\)</span> is the <span class="process-math">\(n \times n\)</span> with entries in <span class="process-math">\(F\)</span> such that its diagonal entries are all <span class="process-math">\(r\text{,}\)</span> each entry just below the diagonal is a <span class="process-math">\(1\text{,}\)</span> and all other entries are <span class="process-math">\(0\text{:}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -1186,13 +1186,13 @@ r &amp; 0 &amp; 0 &amp; \cdots &amp; 0 \\
 \end{equation*}
 </div>
 <div class="para">(More precisely, <span class="process-math">\(a_{i,i} = r\)</span> for all <span class="process-math">\(1 \leq i \leq n\text{,}\)</span> <span class="process-math">\(a_{i,i-1} = 1\)</span> for all <span class="process-math">\(2 \leq i \leq n\text{,}\)</span> and <span class="process-math">\(a_{i,j} = 0\)</span> for all other <span class="process-math">\(i,j\text{.}\)</span>)</div>
-</div></article><article class="remark remark-like" id="remark-104"><h3 class="heading">
+</div></article><article class="remark remark-like" id="remark-103"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">17.43</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-2465">Some people (including I think the authors or our text) defined a Jordan block to be the transpose of what I have defined it to be.</div></article><article class="theorem theorem-like" id="thm-jcf"><h3 class="heading">
+<div class="para" id="p-2476">Some people (including I think the authors or our text) defined a Jordan block to be the transpose of what I have defined it to be.</div></article><article class="theorem theorem-like" id="thm-jcf"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">17.44</span><span class="period">.</span><span class="space"> </span><span class="title">Jordan Canonical Form.</span>
 </h3>
-<div class="para logical" id="p-2466">
+<div class="para logical" id="p-2477">
 <div class="para">Let <span class="process-math">\(F\)</span> be a field, let <span class="process-math">\(V\)</span> be a finite dimensional <span class="process-math">\(F\)</span>-vector space, and let <span class="process-math">\(g: V \to V\)</span> be a linear transformation satisfying the property that the characteristic polynomial <span class="process-math">\(\cp_g(x)\)</span> of <span class="process-math">\(g\)</span> factors completely in <span class="process-math">\(F[x]\)</span> into linear factors. Then there is an ordered basis <span class="process-math">\(B\)</span> for <span class="process-math">\(V\)</span> such that</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1207,7 +1207,7 @@ J_{e_1}(r_1) &amp; 0 &amp; 0 &amp; \cdots &amp; 0 \\
 </div>
 <div class="para">where <span class="process-math">\(m\text{,}\)</span> the <span class="process-math">\(e_i\)</span>'s, and the <span class="process-math">\(r_i\)</span>'s are such that <span class="process-math">\((x - r_1)^{e_1}, \ldots, (x - r_m)^{e^m}\)</span> are the elementary divisors of the <span class="process-math">\(F[x]\)</span>-module <span class="process-math">\(V_g\text{.}\)</span> Moreover, this matrix is unique up to ordering of the Jordan Blocks, and it is known as “the'' <em class="emphasis">Jordan Canonical Form</em> of <span class="process-math">\(g\text{.}\)</span>
 </div>
-</div></article><article class="hiddenproof" id="proof-117"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-117"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-117"><article class="hiddenproof"><div class="para" id="p-2467">The proof is similar to the proof the RCF theorem, using the idea of Example  above, but starting with the FTFGMPIDEDF (instead of the FTFGMPIDIFF). Here are the details:</div> <div class="para logical" id="p-2468">
+</div></article><article class="hiddenproof" id="proof-119"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-119"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-119"><article class="hiddenproof"><div class="para" id="p-2478">The proof is similar to the proof the RCF theorem, using the idea of Example  above, but starting with the FTFGMPIDEDF (instead of the FTFGMPIDIFF). Here are the details:</div> <div class="para logical" id="p-2479">
 <div class="para">We consider the <span class="process-math">\(F[x]\)</span>-module <span class="process-math">\(V_g\text{.}\)</span> Since we assume <span class="process-math">\(\cp_g(x)\)</span> factors completely, the only irreducible polynomials in its factorization are linear. Thus the invariant factors of <span class="process-math">\(V_g\)</span> are products of polynomials of the form <span class="process-math">\((x-r)^e\)</span> for various <span class="process-math">\(r \in F\)</span> and integers <span class="process-math">\(e \geq 1\text{.}\)</span> It follows that the elementary divisors have this form too. The FTFGMPIDEDF therefore gives an isomorphism of <span class="process-math">\(F[x]\)</span>-modules</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1215,19 +1215,19 @@ V_g\cong \frac{F[x]}{(x - r_1)^{e_1}} \oplus \frac{F[x]}{(x -r_2)^{e_2}} \oplus 
 \end{equation*}
 </div>
 <div class="para">Now pick ordered bases <span class="process-math">\(B_i=\{\ov{1}, \ov{x-r_i}, \ldots, \ov{(x-r_i)^{e_i-1}}\}\)</span> for each of the summands and set <span class="process-math">\(B\)</span> to be their “ordered union'' just as we did for the proof of the Theorem on RCF. By the same argument as in Example  applied to each summand individually, the matrix representing multiplication by <span class="process-math">\(x\)</span> on each summand is <span class="process-math">\(J_{e_i}(r_i)\text{.}\)</span> This gives the existence of the JCF.</div>
-</div> <div class="para" id="p-2469">The uniqueness follows from the uniqueness clause in the FTFGMPIDEDF.</div></article></div>
-<article class="remark remark-like" id="remark-105"><h3 class="heading">
+</div> <div class="para" id="p-2480">The uniqueness follows from the uniqueness clause in the FTFGMPIDEDF.</div></article></div>
+<article class="remark remark-like" id="remark-104"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">17.45</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-2470">Not every operator has a Jordan Canonical Form: The Theorem only applies if <span class="process-math">\(\cp_g(x)\)</span> factors completely, and, conversely, if an operator <span class="process-math">\(g\)</span> is represented by any lower-triangular matrix, then its characteristic polynomial must be a product of linear polynomials. For algebraically closed fields, such as <span class="process-math">\(\C\text{,}\)</span> every linear operator does indeed have a JCF.</div></article><article class="remark remark-like" id="remark-106"><h3 class="heading">
+<div class="para" id="p-2481">Not every operator has a Jordan Canonical Form: The Theorem only applies if <span class="process-math">\(\cp_g(x)\)</span> factors completely, and, conversely, if an operator <span class="process-math">\(g\)</span> is represented by any lower-triangular matrix, then its characteristic polynomial must be a product of linear polynomials. For algebraically closed fields, such as <span class="process-math">\(\C\text{,}\)</span> every linear operator does indeed have a JCF.</div></article><article class="remark remark-like" id="remark-105"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">17.46</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-2471">If we flip the order of each <span class="process-math">\(B_i\)</span> in the proof, we would end up with the transpose of what I have defined the JCF to be. This is what our text does, and it defines the JCF as the transpose of what I have defined it to be.</div></article><article class="corollary theorem-like" id="cor-jcf-exists-if-charpoly-factors-linearly"><h3 class="heading">
+<div class="para" id="p-2482">If we flip the order of each <span class="process-math">\(B_i\)</span> in the proof, we would end up with the transpose of what I have defined the JCF to be. This is what our text does, and it defines the JCF as the transpose of what I have defined it to be.</div></article><article class="corollary theorem-like" id="cor-jcf-exists-if-charpoly-factors-linearly"><h3 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">17.47</span><span class="period">.</span><span class="space"> </span><span class="title">JCF Exists if CharPoly Factors Linearly.</span>
 </h3>
-<div class="para" id="p-2472">If <span class="process-math">\(A\)</span> is an <span class="process-math">\(n \times n\)</span> matrix with entries in a field <span class="process-math">\(F\)</span> and <span class="process-math">\(\cp_A(x)\)</span> factors completely into linear factors, then <span class="process-math">\(A\)</span> is similar to a matrix in Jordan Canonical Form, and this matrix is unique up to the ordering of the Jordan Blocks.</div></article><article class="example example-like" id="exe-finding-jcf"><h3 class="heading">
+<div class="para" id="p-2483">If <span class="process-math">\(A\)</span> is an <span class="process-math">\(n \times n\)</span> matrix with entries in a field <span class="process-math">\(F\)</span> and <span class="process-math">\(\cp_A(x)\)</span> factors completely into linear factors, then <span class="process-math">\(A\)</span> is similar to a matrix in Jordan Canonical Form, and this matrix is unique up to the ordering of the Jordan Blocks.</div></article><article class="example example-like" id="exe-finding-jcf"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">17.48</span><span class="period">.</span><span class="space"> </span><span class="title">Finding JCF.</span>
-</h3> <div class="para logical" id="p-2473">
+</h3> <div class="para logical" id="p-2484">
 <div class="para">Let us find the Jordan Canonical Form of</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1240,7 +1240,7 @@ A =
 \in \Mat_{3 \times 3}(\Q).
 \end{equation*}
 </div>
-</div> <div class="para logical" id="p-2474">
+</div> <div class="para logical" id="p-2485">
 <div class="para">We found the Rational Canonical Form of this matrix before. In the process we showed that we have an isomorphism of <span class="process-math">\(\Q[x]\)</span>-module.</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1261,9 +1261,9 @@ J_1(1) \oplus J_1(1) \oplus J_1(-1) = \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &am
 </div>
 </div></article><article class="definition definition-like" id="def-diagonalizable"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">17.49</span><span class="period">.</span><span class="space"> </span><span class="title">Diagonalizable.</span>
-</h3> <div class="para" id="p-2475">Let <span class="process-math">\(V\)</span> be a finite dimensional vector space over a field <span class="process-math">\(F\)</span> and let <span class="process-math">\(g: V \to V\)</span> be an <span class="process-math">\(F\)</span>-linear operator. We say <span class="process-math">\(g\)</span> is <em class="emphasis">diagonalizable</em> if there is a basis <span class="process-math">\(B\)</span> for <span class="process-math">\(V\)</span> such that the matrix <span class="process-math">\([g]_B^B\)</span> is a diagonal matrix.</div></article><article class="exercise exercise-like" id="exercise-232"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-232"><h3 class="heading">
+</h3> <div class="para" id="p-2486">Let <span class="process-math">\(V\)</span> be a finite dimensional vector space over a field <span class="process-math">\(F\)</span> and let <span class="process-math">\(g: V \to V\)</span> be an <span class="process-math">\(F\)</span>-linear operator. We say <span class="process-math">\(g\)</span> is <em class="emphasis">diagonalizable</em> if there is a basis <span class="process-math">\(B\)</span> for <span class="process-math">\(V\)</span> such that the matrix <span class="process-math">\([g]_B^B\)</span> is a diagonal matrix.</div></article><article class="exercise exercise-like" id="exercise-232"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-232"><h3 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">17.50</span><span class="period">.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-232"><article class="exercise exercise-like"><div class="para logical" id="p-2476">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-232"><article class="exercise exercise-like"><div class="para logical" id="p-2487">
 <div class="para">Let <span class="process-math">\(V = \R^3\)</span> with the standard basis <span class="process-math">\(B=\{e_1,e_2,e_3\}\)</span> and let <span class="process-math">\(t: V \to V\)</span> be the linear transformation represented by the matrix</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1276,13 +1276,13 @@ J_1(1) \oplus J_1(1) \oplus J_1(-1) = \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &am
 \end{equation*}
 </div>
 <ol class="decimal">
-<li id="li-703"><div class="para" id="p-2477">Find the invariant factor decomposition of the <span class="process-math">\(\R[x]\)</span>-module <span class="process-math">\(V_t\text{.}\)</span>
+<li id="li-707"><div class="para" id="p-2488">Find the invariant factor decomposition of the <span class="process-math">\(\R[x]\)</span>-module <span class="process-math">\(V_t\text{.}\)</span>
 </div></li>
-<li id="li-704"><div class="para" id="p-2478">Find the characteristic and minimal polynomials of <span class="process-math">\(t\text{.}\)</span>
+<li id="li-708"><div class="para" id="p-2489">Find the characteristic and minimal polynomials of <span class="process-math">\(t\text{.}\)</span>
 </div></li>
-<li id="li-705"><div class="para" id="p-2479">Find the rational canonical form of <span class="process-math">\(t\text{.}\)</span>
+<li id="li-709"><div class="para" id="p-2490">Find the rational canonical form of <span class="process-math">\(t\text{.}\)</span>
 </div></li>
-<li id="li-706"><div class="para" id="p-2480">Find the Jordan canonical form of <span class="process-math">\(t\text{.}\)</span>
+<li id="li-710"><div class="para" id="p-2491">Find the Jordan canonical form of <span class="process-math">\(t\text{.}\)</span>
 </div></li>
 </ol>
 </div></article></div>
@@ -1291,37 +1291,37 @@ J_1(1) \oplus J_1(1) \oplus J_1(-1) = \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &am
 </h3>
 <div class="exercisegroup" id="exercisegroup-59">
 <h4 class="heading"><span class="title">Computations and Examples.</span></h4>
-<div class="introduction" id="introduction-62"><div class="para" id="p-2481"></div></div>
+<div class="introduction" id="introduction-62"><div class="para" id="p-2492"></div></div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-233"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-233"><h5 class="heading">
 <span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-233"><article class="exercise exercise-like"><div class="para" id="p-2482">Coming soon to an OER near you!</div>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-233"><article class="exercise exercise-like"><div class="para" id="p-2493">Coming soon to an OER near you!</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-76" id="hint-76"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-76"><div class="hint solution-like"><div class="para" id="p-2483">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-136" id="solution-136"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-136"><div class="solution solution-like"><div class="para" id="p-2484">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-76" id="hint-76"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-76"><div class="hint solution-like"><div class="para" id="p-2494">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-141" id="solution-141"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-141"><div class="solution solution-like"><div class="para" id="p-2495">Coming soon to an OER near you!</div></div></div>
 </div></article></div>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-60">
 <h4 class="heading"><span class="title">Formal Proofs.</span></h4>
-<div class="introduction" id="introduction-63"><div class="para" id="p-2485"></div></div>
+<div class="introduction" id="introduction-63"><div class="para" id="p-2496"></div></div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-234"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-234"><h5 class="heading">
 <span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-234"><article class="exercise exercise-like"><div class="para" id="p-2486">Coming soon to an OER near you!</div>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-234"><article class="exercise exercise-like"><div class="para" id="p-2497">Coming soon to an OER near you!</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-77" id="hint-77"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-77"><div class="hint solution-like"><div class="para" id="p-2487">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-137" id="solution-137"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-137"><div class="solution solution-like"><div class="para" id="p-2488">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-77" id="hint-77"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-77"><div class="hint solution-like"><div class="para" id="p-2498">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-142" id="solution-142"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-142"><div class="solution solution-like"><div class="para" id="p-2499">Coming soon to an OER near you!</div></div></div>
 </div></article></div>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-61">
 <h4 class="heading"><span class="title">Qualifying Exam Problems.</span></h4>
-<div class="introduction" id="introduction-64"><div class="para" id="p-2489"></div></div>
+<div class="introduction" id="introduction-64"><div class="para" id="p-2500"></div></div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-235"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-235"><h5 class="heading">
 <span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-235"><article class="exercise exercise-like"><div class="para logical" id="p-2490">
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-235"><article class="exercise exercise-like"><div class="para logical" id="p-2501">
 <div class="para">Consider the following matrix:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1329,47 +1329,47 @@ A=\begin{bmatrix} -1 &amp; 3 &amp; 0\\0 &amp; 2 &amp; 0\\2 &amp; 1 &amp; -1\end{
 \end{equation*}
 </div>
 <ol class="lower-alpha">
-<li id="li-707"><div class="para" id="p-2491">Find the rational canonical form of <span class="process-math">\(A\text{.}\)</span>
+<li id="li-711"><div class="para" id="p-2502">Find the rational canonical form of <span class="process-math">\(A\text{.}\)</span>
 </div></li>
-<li id="li-708"><div class="para" id="p-2492">Find the Jordan canonical form of <span class="process-math">\(A\text{.}\)</span>
+<li id="li-712"><div class="para" id="p-2503">Find the Jordan canonical form of <span class="process-math">\(A\text{.}\)</span>
 </div></li>
 </ol>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-78" id="hint-78"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-78"><div class="hint solution-like"><div class="para" id="p-2493">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-138" id="solution-138"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-138"><div class="solution solution-like"><div class="para" id="p-2494">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-78" id="hint-78"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-78"><div class="hint solution-like"><div class="para" id="p-2504">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-143" id="solution-143"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-143"><div class="solution solution-like"><div class="para" id="p-2505">Coming soon to an OER near you!</div></div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-236"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-236"><h5 class="heading">
 <span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-236"><article class="exercise exercise-like"><div class="para" id="p-2495">Let <span class="process-math">\(n\)</span> be a positive integer and let <span class="process-math">\(J = J_{2n}(0)\)</span> be the Jordan block matrix of size <span class="process-math">\(2n \times 2n\)</span> with eigenvalue 0 in <span class="process-math">\(M_{2n\times2n}(\C)\text{.}\)</span>
-</div> <div class="para logical" id="p-2496"><ol class="lower-alpha">
-<li id="li-709"><div class="para" id="p-derived-li-709">Find the minimal polynomials for <span class="process-math">\(J\)</span> and for <span class="process-math">\(J^2\text{,}\)</span> with justification.</div></li>
-<li id="li-710"><div class="para" id="p-derived-li-710">Find the Jordan canonical form of <span class="process-math">\(J^2\text{,}\)</span> with justification. <em class="emphasis">Hint</em>: consider the kernel of <span class="process-math">\(J^2\text{.}\)</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-236"><article class="exercise exercise-like"><div class="para" id="p-2506">Let <span class="process-math">\(n\)</span> be a positive integer and let <span class="process-math">\(J = J_{2n}(0)\)</span> be the Jordan block matrix of size <span class="process-math">\(2n \times 2n\)</span> with eigenvalue 0 in <span class="process-math">\(M_{2n\times2n}(\C)\text{.}\)</span>
+</div> <div class="para logical" id="p-2507"><ol class="lower-alpha">
+<li id="li-713"><div class="para" id="p-derived-li-713">Find the minimal polynomials for <span class="process-math">\(J\)</span> and for <span class="process-math">\(J^2\text{,}\)</span> with justification.</div></li>
+<li id="li-714"><div class="para" id="p-derived-li-714">Find the Jordan canonical form of <span class="process-math">\(J^2\text{,}\)</span> with justification. <em class="emphasis">Hint</em>: consider the kernel of <span class="process-math">\(J^2\text{.}\)</span>
 </div></li>
 </ol></div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-79" id="hint-79"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-79"><div class="hint solution-like"><div class="para" id="p-2497">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-139" id="solution-139"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-139"><div class="solution solution-like"><div class="para logical" id="p-2498">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-79" id="hint-79"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-79"><div class="hint solution-like"><div class="para" id="p-2508">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-144" id="solution-144"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-144"><div class="solution solution-like"><div class="para logical" id="p-2509">
 <div class="para">Let <span class="process-math">\(n\)</span> be a positive integer and let <span class="process-math">\(J = J_{2n}(0)\)</span> be the Jordan block matrix of size <span class="process-math">\(2n \times 2n\)</span> with eigenvalue 0 in <span class="process-math">\(M_{2n\times2n}(\C)\text{.}\)</span>
 </div>
 <ol class="lower-alpha">
-<li id="li-711">
-<div class="para" id="p-2499">Notice that <span class="process-math">\(J\)</span> is a triangular matrix with <span class="process-math">\(0\)</span>'s along the diagonal. Thus <span class="process-math">\(\cp_J(x)=x^{2n}\text{,}\)</span> the product of the diagonal entries of the matrix <span class="process-math">\(J-xI\text{.}\)</span>
+<li id="li-715">
+<div class="para" id="p-2510">Notice that <span class="process-math">\(J\)</span> is a triangular matrix with <span class="process-math">\(0\)</span>'s along the diagonal. Thus <span class="process-math">\(\cp_J(x)=x^{2n}\text{,}\)</span> the product of the diagonal entries of the matrix <span class="process-math">\(J-xI\text{.}\)</span>
 </div>
-<div class="para" id="p-2500">Squaring a triangular matrix moves everything one down (Proof?), and so <span class="process-math">\(x^{2n-1}\)</span> should do it. Squaring <span class="process-math">\(J\)</span> just moves us one closer, so <span class="process-math">\(x^{2n-2}\)</span>
+<div class="para" id="p-2511">Squaring a triangular matrix moves everything one down (Proof?), and so <span class="process-math">\(x^{2n-1}\)</span> should do it. Squaring <span class="process-math">\(J\)</span> just moves us one closer, so <span class="process-math">\(x^{2n-2}\)</span>
 </div>
 </li>
-<li id="li-712"><div class="para" id="p-2501">As <span class="process-math">\(\cp_{J^2}(x)=x^{2n}\text{,}\)</span> the only roots of it are <span class="process-math">\(0\text{,}\)</span> and thus these are the only elementary divisors of <span class="process-math">\(J^2\text{.}\)</span>
+<li id="li-716"><div class="para" id="p-2512">As <span class="process-math">\(\cp_{J^2}(x)=x^{2n}\text{,}\)</span> the only roots of it are <span class="process-math">\(0\text{,}\)</span> and thus these are the only elementary divisors of <span class="process-math">\(J^2\text{.}\)</span>
 </div></li>
 </ol>
 </div></div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-237"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-237"><h5 class="heading">
 <span class="codenumber">5<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-237"><article class="exercise exercise-like"><div class="para logical" id="p-2502">
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-237"><article class="exercise exercise-like"><div class="para logical" id="p-2513">
 <div class="para">On canonical forms</div>
 <ol class="lower-alpha">
-<li id="li-713"><div class="para logical" id="p-2503">
+<li id="li-717"><div class="para logical" id="p-2514">
 <div class="para">Consider the <span class="process-math">\(\Q[x]\)</span>-module</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1379,7 +1379,7 @@ M=\frac{\Q[x]}{(x^4-1)}\oplus\frac{\Q[x]}{x^2(x-1)}
 <div class="para">and let <span class="process-math">\(V\)</span> the <span class="process-math">\(\Q\)</span>-vector space obtained from <span class="process-math">\(M\)</span> by restriction of scalars along the evident inclusion <span class="process-math">\(\Q ⊆ \Q[x]\)</span> and let <span class="process-math">\(t : V → V\)</span> be the <span class="process-math">\(\Q\)</span>-linear transformation given as multiplication by <span class="process-math">\(x\text{.}\)</span> Find, with justification, the rational canonical form of <span class="process-math">\(t\text{.}\)</span>
 </div>
 </div></li>
-<li id="li-714"><div class="para logical" id="p-2504">
+<li id="li-718"><div class="para logical" id="p-2515">
 <div class="para">Consider the <span class="process-math">\(\C[x]\)</span>-module</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1392,12 +1392,12 @@ N=\frac{\C[x]}{(x^4-1)}\oplus\frac{\Q[x]}{x^2(x-1)}
 </ol>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-80" id="hint-80"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-80"><div class="hint solution-like"><div class="para" id="p-2505">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-140" id="solution-140"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-140"><div class="solution solution-like"><div class="para" id="p-2506">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-80" id="hint-80"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-80"><div class="hint solution-like"><div class="para" id="p-2516">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-145" id="solution-145"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-145"><div class="solution solution-like"><div class="para" id="p-2517">Coming soon to an OER near you!</div></div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-238"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-238"><h5 class="heading">
 <span class="codenumber">6<span class="period">.</span></span><span class="space"> </span><span class="title">June 2011 (9).</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-238"><article class="exercise exercise-like"><div class="para logical" id="p-2507">
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-238"><article class="exercise exercise-like"><div class="para logical" id="p-2518">
 <div class="para">Consider the following matrix over <span class="process-math">\(\Q\text{:}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -1406,24 +1406,24 @@ N=\frac{\C[x]}{(x^4-1)}\oplus\frac{\Q[x]}{x^2(x-1)}
 \end{equation*}
 </div>
 <ol class="lower-alpha">
-<li id="li-715"><div class="para" id="p-2508">Show that the characteristic and minimal polynomials of <span class="process-math">\(A\)</span> are, respectively, <span class="process-math">\((x + 1)^4\)</span> and <span class="process-math">\((x + 1)^3\text{.}\)</span>
+<li id="li-719"><div class="para" id="p-2519">Show that the characteristic and minimal polynomials of <span class="process-math">\(A\)</span> are, respectively, <span class="process-math">\((x + 1)^4\)</span> and <span class="process-math">\((x + 1)^3\text{.}\)</span>
 </div></li>
-<li id="li-716"><div class="para" id="p-2509">Find the rational canonical form <span class="process-math">\(R\)</span> of <span class="process-math">\(A\)</span> and the Jordan canonical form <span class="process-math">\(J\)</span> of <span class="process-math">\(A\text{.}\)</span>
+<li id="li-720"><div class="para" id="p-2520">Find the rational canonical form <span class="process-math">\(R\)</span> of <span class="process-math">\(A\)</span> and the Jordan canonical form <span class="process-math">\(J\)</span> of <span class="process-math">\(A\text{.}\)</span>
 </div></li>
-<li id="li-717"><div class="para" id="p-2510">Find an invertible matrix <span class="process-math">\(P\)</span> such that <span class="process-math">\(P\inv AP = J\text{.}\)</span>
+<li id="li-721"><div class="para" id="p-2521">Find an invertible matrix <span class="process-math">\(P\)</span> such that <span class="process-math">\(P\inv AP = J\text{.}\)</span>
 </div></li>
 </ol>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-81" id="hint-81"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-81"><div class="hint solution-like"><div class="para" id="p-2511">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-141" id="solution-141"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-141"><div class="solution solution-like">
-<div class="para" id="p-2512">Let <span class="process-math">\(A\)</span> denote the above matrix.</div> <div class="para logical" id="p-2513"><ol class="lower-alpha"><li id="li-718"><div class="para" id="p-2514">As <span class="process-math">\(\cp_A(x)=(x + 1)^4\)</span> and <span class="process-math">\(\mp_A(x)=(x + 1)^3\text{,}\)</span> we know that our characteristic polynomial factors into linear factors, so <span class="process-math">\(A\)</span> does indeed have a JCF. This also means that <span class="process-math">\(A\)</span> only has one elementary divisor, <span class="process-math">\((x + 1)^4\text{,}\)</span> which corresponds to the Jordan Block <span class="process-math">\(J_4(-1)\text{,}\)</span> a matrix with <span class="process-math">\(-1\)</span>s along the diagonal, <span class="process-math">\(1\)</span>s along the subdiagonal, and <span class="process-math">\(0\)</span> everywhere else. This is the JCF of <span class="process-math">\(A\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-81" id="hint-81"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-81"><div class="hint solution-like"><div class="para" id="p-2522">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-146" id="solution-146"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-146"><div class="solution solution-like">
+<div class="para" id="p-2523">Let <span class="process-math">\(A\)</span> denote the above matrix.</div> <div class="para logical" id="p-2524"><ol class="lower-alpha"><li id="li-722"><div class="para" id="p-2525">As <span class="process-math">\(\cp_A(x)=(x + 1)^4\)</span> and <span class="process-math">\(\mp_A(x)=(x + 1)^3\text{,}\)</span> we know that our characteristic polynomial factors into linear factors, so <span class="process-math">\(A\)</span> does indeed have a JCF. This also means that <span class="process-math">\(A\)</span> only has one elementary divisor, <span class="process-math">\((x + 1)^4\text{,}\)</span> which corresponds to the Jordan Block <span class="process-math">\(J_4(-1)\text{,}\)</span> a matrix with <span class="process-math">\(-1\)</span>s along the diagonal, <span class="process-math">\(1\)</span>s along the subdiagonal, and <span class="process-math">\(0\)</span> everywhere else. This is the JCF of <span class="process-math">\(A\text{.}\)</span>
 </div></li></ol></div>
 </div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-239"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-239"><h5 class="heading">
 <span class="codenumber">7<span class="period">.</span></span><span class="space"> </span><span class="title">January 2012 (7).</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-239"><article class="exercise exercise-like"><div class="para logical" id="p-2515">
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-239"><article class="exercise exercise-like"><div class="para logical" id="p-2526">
 <div class="para">Consider the following matrix over <span class="process-math">\(\Q\text{:}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -1432,46 +1432,46 @@ N=\frac{\C[x]}{(x^4-1)}\oplus\frac{\Q[x]}{x^2(x-1)}
 \end{equation*}
 </div>
 <ol class="lower-alpha">
-<li id="li-719"><div class="para" id="p-2516">Show that the characteristic of <span class="process-math">\(A\)</span> is <span class="process-math">\((t - 2)^4\text{.}\)</span>
+<li id="li-723"><div class="para" id="p-2527">Show that the characteristic of <span class="process-math">\(A\)</span> is <span class="process-math">\((t - 2)^4\text{.}\)</span>
 </div></li>
-<li id="li-720"><div class="para" id="p-2517">Find the rational canonical form <span class="process-math">\(J\)</span> of <span class="process-math">\(A\)</span> and the Jordan canonical form <span class="process-math">\(J\)</span> of <span class="process-math">\(A\text{.}\)</span>
+<li id="li-724"><div class="para" id="p-2528">Find the rational canonical form <span class="process-math">\(J\)</span> of <span class="process-math">\(A\)</span> and the Jordan canonical form <span class="process-math">\(J\)</span> of <span class="process-math">\(A\text{.}\)</span>
 </div></li>
-<li id="li-721"><div class="para" id="p-2518">Find an invertible matrix <span class="process-math">\(P\)</span> such that <span class="process-math">\(P\inv AP = J\text{.}\)</span>
+<li id="li-725"><div class="para" id="p-2529">Find an invertible matrix <span class="process-math">\(P\)</span> such that <span class="process-math">\(P\inv AP = J\text{.}\)</span>
 </div></li>
 </ol>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-82" id="hint-82"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-82"><div class="hint solution-like"><div class="para" id="p-2519">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-142" id="solution-142"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-142"><div class="solution solution-like">
-<div class="para" id="p-2520">Let <span class="process-math">\(A\)</span> denote the above matrix.</div> <div class="para logical" id="p-2521"><ol class="lower-alpha"><li id="li-722"><div class="para" id="p-2522">As <span class="process-math">\(\cp_A(x)=(x + 1)^4\)</span> and <span class="process-math">\(\mp_A(x)=(x + 1)^3\text{,}\)</span> we know that our characteristic polynomial factors into linear factors, so <span class="process-math">\(A\)</span> does indeed have a JCF. This also means that <span class="process-math">\(A\)</span> only has one elementary divisor, <span class="process-math">\((x + 1)^4\text{,}\)</span> which corresponds to the Jordan Block <span class="process-math">\(J_4(-1)\text{,}\)</span> a matrix with <span class="process-math">\(-1\)</span>s along the diagonal, <span class="process-math">\(1\)</span>s along the subdiagonal, and <span class="process-math">\(0\)</span> everywhere else. This is the JCF of <span class="process-math">\(A\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-82" id="hint-82"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-82"><div class="hint solution-like"><div class="para" id="p-2530">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-147" id="solution-147"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-147"><div class="solution solution-like">
+<div class="para" id="p-2531">Let <span class="process-math">\(A\)</span> denote the above matrix.</div> <div class="para logical" id="p-2532"><ol class="lower-alpha"><li id="li-726"><div class="para" id="p-2533">As <span class="process-math">\(\cp_A(x)=(x + 1)^4\)</span> and <span class="process-math">\(\mp_A(x)=(x + 1)^3\text{,}\)</span> we know that our characteristic polynomial factors into linear factors, so <span class="process-math">\(A\)</span> does indeed have a JCF. This also means that <span class="process-math">\(A\)</span> only has one elementary divisor, <span class="process-math">\((x + 1)^4\text{,}\)</span> which corresponds to the Jordan Block <span class="process-math">\(J_4(-1)\text{,}\)</span> a matrix with <span class="process-math">\(-1\)</span>s along the diagonal, <span class="process-math">\(1\)</span>s along the subdiagonal, and <span class="process-math">\(0\)</span> everywhere else. This is the JCF of <span class="process-math">\(A\text{.}\)</span>
 </div></li></ol></div>
 </div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-240"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-240"><h5 class="heading">
 <span class="codenumber">8<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-240"><article class="exercise exercise-like"><div class="para" id="p-2523">Let <span class="process-math">\(F\)</span> be a field and <span class="process-math">\(f(x) \in F[x]\)</span> a monic polynomial of degree <span class="process-math">\(n\text{.}\)</span> Prove: all matrices in <span class="process-math">\(M_{n\times n}(F)\)</span> having characteristic polynomial <span class="process-math">\(f (x)\)</span> are similar if and only if the irreducible factorization of <span class="process-math">\(f(x)\)</span> has no repeated factors.</div>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-240"><article class="exercise exercise-like"><div class="para" id="p-2534">Let <span class="process-math">\(F\)</span> be a field and <span class="process-math">\(f(x) \in F[x]\)</span> a monic polynomial of degree <span class="process-math">\(n\text{.}\)</span> Prove: all matrices in <span class="process-math">\(M_{n\times n}(F)\)</span> having characteristic polynomial <span class="process-math">\(f (x)\)</span> are similar if and only if the irreducible factorization of <span class="process-math">\(f(x)\)</span> has no repeated factors.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-83" id="hint-83"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-83"><div class="hint solution-like"><div class="para" id="p-2524">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-143" id="solution-143"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-143"><div class="solution solution-like"><div class="para" id="p-2525">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-83" id="hint-83"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-83"><div class="hint solution-like"><div class="para" id="p-2535">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-148" id="solution-148"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-148"><div class="solution solution-like"><div class="para" id="p-2536">Coming soon to an OER near you!</div></div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-241"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-241"><h5 class="heading">
 <span class="codenumber">9<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-241"><article class="exercise exercise-like"><div class="para" id="p-2526">Let <span class="process-math">\(V\)</span> be a finite dimensional vector space over a field <span class="process-math">\(F\)</span> and let <span class="process-math">\(\t : V \to V\)</span> be an <span class="process-math">\(F\)</span>-linear operator on <span class="process-math">\(V\text{.}\)</span> Prove <span class="process-math">\(\t\)</span> is diagonalizable over <span class="process-math">\(F\)</span> if and only if its minimum polynomial <span class="process-math">\(p(x)\)</span> factors into distinct linear terms in <span class="process-math">\(F[x]\text{.}\)</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-241"><article class="exercise exercise-like"><div class="para" id="p-2537">Let <span class="process-math">\(V\)</span> be a finite dimensional vector space over a field <span class="process-math">\(F\)</span> and let <span class="process-math">\(\t : V \to V\)</span> be an <span class="process-math">\(F\)</span>-linear operator on <span class="process-math">\(V\text{.}\)</span> Prove <span class="process-math">\(\t\)</span> is diagonalizable over <span class="process-math">\(F\)</span> if and only if its minimum polynomial <span class="process-math">\(p(x)\)</span> factors into distinct linear terms in <span class="process-math">\(F[x]\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-84" id="hint-84"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-84"><div class="hint solution-like"><div class="para" id="p-2527">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-144" id="solution-144"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-144"><div class="solution solution-like">
-<div class="para" id="p-2528">
-<span class="process-math">\((\Rightarrow)\)</span> Suppose that <span class="process-math">\(g\)</span> is diagonalizable. Thus there exists a change of basis matrix <span class="process-math">\(A\)</span> such that <span class="process-math">\(A\)</span> is diagonal. As it is diagonal, its diagonal entries are the eigenvalues of <span class="process-math">\(g\text{,}\)</span> and thus the roots of the minimal polynomial of <span class="process-math">\(g\text{.}\)</span> Using row and column operations we can rearrange <span class="process-math">\(A\)</span> so that all repeated linear factors are next to each other in the diagonal, for convenience.</div> <div class="para" id="p-2529">We know that <span class="process-math">\(\mp_A(x)\)</span> is the smallest monic polynomial that sends <span class="process-math">\(A\)</span> to 0. Take all the distinct eigenvalues <span class="process-math">\(\lambda_i\)</span> and consider <span class="process-math">\(q(x)=\prod(x-\lambda_i)\text{.}\)</span>
-</div> <div class="para" id="p-2530">We examine <span class="process-math">\(q(A)\text{.}\)</span> It will be a product of matrices, one for each <span class="process-math">\(\lambda_i\text{.}\)</span> First, take the first matrix in this product, <span class="process-math">\((A-\lambda_1I)\text{,}\)</span> and note that it sends all <span class="process-math">\(\lambda_1\)</span> in <span class="process-math">\(A\)</span> to 0. Thus all of the rows and columns that contained a <span class="process-math">\(\lambda_1\)</span> are now 0, and thus all these rows and columns will be 0 in the final product <span class="process-math">\(q(A)\text{.}\)</span> As this is we set <span class="process-math">\(q(x)=\prod(x-\lambda_i)\)</span> for all <span class="process-math">\(l\lambda_i\in A\text{,}\)</span> we see that for each row and column in <span class="process-math">\(A\)</span> there will exist a matrix <span class="process-math">\(A-\lambda_iI\)</span> in the product <span class="process-math">\(q(A)\)</span> such that the row and column will be 0. Thus the entire matrix will be 0, and <span class="process-math">\(q(A)=0\text{.}\)</span>
-</div> <div class="para" id="p-2531">Note that if any <span class="process-math">\(\lambda_i\)</span> were excluded from <span class="process-math">\(q(x)\)</span> there would exist a non-zero row and column for every matrix in the product, and thus <span class="process-math">\(q\)</span> would not send <span class="process-math">\(A\)</span> to 0. Thus <span class="process-math">\(q(x)\)</span> is indeed the minimal polynomial of <span class="process-math">\(A\text{.}\)</span> As <span class="process-math">\(q(x)=\prod(x-\lambda_i)\text{,}\)</span> we see it does indeed factor into distinct linear terms.</div> <div class="para" id="p-2532">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-84" id="hint-84"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-84"><div class="hint solution-like"><div class="para" id="p-2538">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-149" id="solution-149"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-149"><div class="solution solution-like">
+<div class="para" id="p-2539">
+<span class="process-math">\((\Rightarrow)\)</span> Suppose that <span class="process-math">\(g\)</span> is diagonalizable. Thus there exists a change of basis matrix <span class="process-math">\(A\)</span> such that <span class="process-math">\(A\)</span> is diagonal. As it is diagonal, its diagonal entries are the eigenvalues of <span class="process-math">\(g\text{,}\)</span> and thus the roots of the minimal polynomial of <span class="process-math">\(g\text{.}\)</span> Using row and column operations we can rearrange <span class="process-math">\(A\)</span> so that all repeated linear factors are next to each other in the diagonal, for convenience.</div> <div class="para" id="p-2540">We know that <span class="process-math">\(\mp_A(x)\)</span> is the smallest monic polynomial that sends <span class="process-math">\(A\)</span> to 0. Take all the distinct eigenvalues <span class="process-math">\(\lambda_i\)</span> and consider <span class="process-math">\(q(x)=\prod(x-\lambda_i)\text{.}\)</span>
+</div> <div class="para" id="p-2541">We examine <span class="process-math">\(q(A)\text{.}\)</span> It will be a product of matrices, one for each <span class="process-math">\(\lambda_i\text{.}\)</span> First, take the first matrix in this product, <span class="process-math">\((A-\lambda_1I)\text{,}\)</span> and note that it sends all <span class="process-math">\(\lambda_1\)</span> in <span class="process-math">\(A\)</span> to 0. Thus all of the rows and columns that contained a <span class="process-math">\(\lambda_1\)</span> are now 0, and thus all these rows and columns will be 0 in the final product <span class="process-math">\(q(A)\text{.}\)</span> As this is we set <span class="process-math">\(q(x)=\prod(x-\lambda_i)\)</span> for all <span class="process-math">\(l\lambda_i\in A\text{,}\)</span> we see that for each row and column in <span class="process-math">\(A\)</span> there will exist a matrix <span class="process-math">\(A-\lambda_iI\)</span> in the product <span class="process-math">\(q(A)\)</span> such that the row and column will be 0. Thus the entire matrix will be 0, and <span class="process-math">\(q(A)=0\text{.}\)</span>
+</div> <div class="para" id="p-2542">Note that if any <span class="process-math">\(\lambda_i\)</span> were excluded from <span class="process-math">\(q(x)\)</span> there would exist a non-zero row and column for every matrix in the product, and thus <span class="process-math">\(q\)</span> would not send <span class="process-math">\(A\)</span> to 0. Thus <span class="process-math">\(q(x)\)</span> is indeed the minimal polynomial of <span class="process-math">\(A\text{.}\)</span> As <span class="process-math">\(q(x)=\prod(x-\lambda_i)\text{,}\)</span> we see it does indeed factor into distinct linear terms.</div> <div class="para" id="p-2543">
 <span class="process-math">\((\Leftarrow)\)</span> Suppose the minimum polynomial of <span class="process-math">\(g\)</span> factors completely into distinct linear factors, each of which has the form <span class="process-math">\(x-\lambda_i\)</span> for some <span class="process-math">\(\lambda_i\in F\text{.}\)</span> As each <span class="process-math">\(\lambda_i\)</span> is distinct, each elementary divisor is of the form <span class="process-math">\((x-\lambda_i)^1\text{.}\)</span>
-</div> <div class="para" id="p-2533">We construct the Jordan Canonical Form of <span class="process-math">\(g\text{.}\)</span> As the elementary divisors are linear the Jordan blocks are <span class="process-math">\(1\times1\)</span> matrices, making the <span class="process-math">\(JCF\)</span> a diagonal matrix. As the JCF is itself a change of basis matrix, we see that <span class="process-math">\(g\)</span> is diagonalizable.</div>
+</div> <div class="para" id="p-2544">We construct the Jordan Canonical Form of <span class="process-math">\(g\text{.}\)</span> As the elementary divisors are linear the Jordan blocks are <span class="process-math">\(1\times1\)</span> matrices, making the <span class="process-math">\(JCF\)</span> a diagonal matrix. As the JCF is itself a change of basis matrix, we see that <span class="process-math">\(g\)</span> is diagonalizable.</div>
 </div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-242"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-242"><h5 class="heading">
 <span class="codenumber">10<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-242"><article class="exercise exercise-like"><div class="para logical" id="p-2534">
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-242"><article class="exercise exercise-like"><div class="para logical" id="p-2545">
 <div class="para">Consider the <span class="process-math">\(\C\)</span>-vector space <span class="process-math">\(V = {p \in \C[x] : \deg(p) \leq n - 1}\text{.}\)</span> (You may assume without proof that <span class="process-math">\(V\)</span> is n-dimensional.) Consider the following linear maps <span class="process-math">\(V \to V\text{:}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -1486,17 +1486,17 @@ p\mapsto p'\hspace{4cm} p\mapsto xp'
 </div>
 <div class="para">(where p' denotes the derivative of p). Determine the JCF of</div>
 <ol class="lower-alpha">
-<li id="li-723"><div class="para" id="p-2535"><span class="process-math">\(\displaystyle D\)</span></div></li>
-<li id="li-724"><div class="para" id="p-2536"><span class="process-math">\(\displaystyle B\)</span></div></li>
+<li id="li-727"><div class="para" id="p-2546"><span class="process-math">\(\displaystyle D\)</span></div></li>
+<li id="li-728"><div class="para" id="p-2547"><span class="process-math">\(\displaystyle B\)</span></div></li>
 </ol>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-85" id="hint-85"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-85"><div class="hint solution-like"><div class="para" id="p-2537">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-145" id="solution-145"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-145"><div class="solution solution-like"><div class="para logical" id="p-2538"><ol class="lower-alpha">
-<li id="li-725">
-<div class="para" id="p-2539">For any integer <span class="process-math">\(n \geq 1\text{,}\)</span> consider the <span class="process-math">\(\C\)</span>-vector space <span class="process-math">\(V = \{p \in \C[x] : \deg(p) \leq n - 1\}\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-85" id="hint-85"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-85"><div class="hint solution-like"><div class="para" id="p-2548">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-150" id="solution-150"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-150"><div class="solution solution-like"><div class="para logical" id="p-2549"><ol class="lower-alpha">
+<li id="li-729">
+<div class="para" id="p-2550">For any integer <span class="process-math">\(n \geq 1\text{,}\)</span> consider the <span class="process-math">\(\C\)</span>-vector space <span class="process-math">\(V = \{p \in \C[x] : \deg(p) \leq n - 1\}\text{.}\)</span>
 </div>
-<div class="para logical" id="p-2540">
+<div class="para logical" id="p-2551">
 <div class="para">Let <span class="process-math">\(T:V \to V\)</span> be the linear operator given by <span class="process-math">\(T(p) = xp'\)</span> (where <span class="process-math">\(p'\)</span> denotes the derivative of <span class="process-math">\(p\)</span>). Note that the change of basis matrix for this operator is given by</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1510,7 +1510,7 @@ p\mapsto p'\hspace{4cm} p\mapsto xp'
 </div>
 <div class="para">with the basis <span class="process-math">\(\{1,x,\dots,x^{n-1}\}\text{.}\)</span> Thus <span class="process-math">\(\cp_A(x)\)</span> will be given by the determinant of the matrix</div>
 </div>
-<div class="para logical" id="p-2541"><div class="displaymath process-math">
+<div class="para logical" id="p-2552"><div class="displaymath process-math">
 \begin{equation*}
 \begin{bmatrix}
 x &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
@@ -1520,7 +1520,7 @@ x &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
 \end{bmatrix},
 \end{equation*}
 </div></div>
-<div class="para logical" id="p-2542">
+<div class="para logical" id="p-2553">
 <div class="para">which is diagonal. Hence</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1540,32 +1540,32 @@ x &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
 </div>
 </div>
 </li>
-<li id="li-726">
-<div class="para" id="p-2543">This time around the change of basis matrix (denoted <span class="process-math">\(B\)</span> and using the same basis as above) for this matrix has 0s along the diagonal, and increasing natural numbers (starting at 0, sorry) along the upper diagonal. Thus <span class="process-math">\(\cp_B(x)=x^n\text{.}\)</span>
+<li id="li-730">
+<div class="para" id="p-2554">This time around the change of basis matrix (denoted <span class="process-math">\(B\)</span> and using the same basis as above) for this matrix has 0s along the diagonal, and increasing natural numbers (starting at 0, sorry) along the upper diagonal. Thus <span class="process-math">\(\cp_B(x)=x^n\text{.}\)</span>
 </div>
-<div class="para" id="p-2544">Recall that the minimum polynomial corresponding to <span class="process-math">\(B\)</span> will be the the smallest monic polynomial such that <span class="process-math">\(B\)</span> is sent to 0. Note that as <span class="process-math">\(D\)</span> is the operator sending <span class="process-math">\(p\)</span> to its derivative, and that <span class="process-math">\(D^{(2)}=D(D(p))=p''=p^{(2)}\text{.}\)</span> Thus <span class="process-math">\(B^2\)</span> can be viewed as a change of basis matrix for taking the second derivative of the basis, and so on.</div>
-<div class="para" id="p-2545">As the basis extends to <span class="process-math">\(x^{n-1}\text{,}\)</span> it requires <span class="process-math">\(n\)</span> derivatives to make this polynomial become 0. Thus the minimal polynomial of <span class="process-math">\(B\)</span> must be <span class="process-math">\(x^n\text{,}\)</span> as it it monic and <span class="process-math">\(B^n=0\text{.}\)</span> As the degree of the invariant factors must sum to <span class="process-math">\(n\)</span> and <span class="process-math">\(\mp_B(x)=x^n\text{,}\)</span> which is itself an invariant factor, we see that it must in fact be the only one.</div>
-<div class="para" id="p-2546">As <span class="process-math">\(x^n\)</span> is already a power of a prime, it is the only elementary divisor as well. Thus the Jordan Canonical Form for <span class="process-math">\(B\)</span> is an <span class="process-math">\(n\times n\)</span> Jordan Block with 0s along the diagonal and 1s along the sub-diagonal.</div>
+<div class="para" id="p-2555">Recall that the minimum polynomial corresponding to <span class="process-math">\(B\)</span> will be the the smallest monic polynomial such that <span class="process-math">\(B\)</span> is sent to 0. Note that as <span class="process-math">\(D\)</span> is the operator sending <span class="process-math">\(p\)</span> to its derivative, and that <span class="process-math">\(D^{(2)}=D(D(p))=p''=p^{(2)}\text{.}\)</span> Thus <span class="process-math">\(B^2\)</span> can be viewed as a change of basis matrix for taking the second derivative of the basis, and so on.</div>
+<div class="para" id="p-2556">As the basis extends to <span class="process-math">\(x^{n-1}\text{,}\)</span> it requires <span class="process-math">\(n\)</span> derivatives to make this polynomial become 0. Thus the minimal polynomial of <span class="process-math">\(B\)</span> must be <span class="process-math">\(x^n\text{,}\)</span> as it it monic and <span class="process-math">\(B^n=0\text{.}\)</span> As the degree of the invariant factors must sum to <span class="process-math">\(n\)</span> and <span class="process-math">\(\mp_B(x)=x^n\text{,}\)</span> which is itself an invariant factor, we see that it must in fact be the only one.</div>
+<div class="para" id="p-2557">As <span class="process-math">\(x^n\)</span> is already a power of a prime, it is the only elementary divisor as well. Thus the Jordan Canonical Form for <span class="process-math">\(B\)</span> is an <span class="process-math">\(n\times n\)</span> Jordan Block with 0s along the diagonal and 1s along the sub-diagonal.</div>
 </li>
 </ol></div></div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-243"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-243"><h5 class="heading">
 <span class="codenumber">11<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-243"><article class="exercise exercise-like"><div class="para" id="p-2547">Let <span class="process-math">\(n\)</span> be a positive integer. Consider the real vector space <span class="process-math">\(V = \{p \in R[x] | \deg(p) \leq n\}\)</span> and the linear transformation <span class="process-math">\(T : V \to V, T (p) = p'\text{,}\)</span> where <span class="process-math">\(p'(x)\)</span> is the derivative of p(x).</div> <div class="para logical" id="p-2548"><ol class="lower-alpha">
-<li id="li-727"><div class="para" id="p-derived-li-727">Find the characteristic polynomial and the minimum polynomial for <span class="process-math">\(T\text{.}\)</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-243"><article class="exercise exercise-like"><div class="para" id="p-2558">Let <span class="process-math">\(n\)</span> be a positive integer. Consider the real vector space <span class="process-math">\(V = \{p \in R[x] | \deg(p) \leq n\}\)</span> and the linear transformation <span class="process-math">\(T : V \to V, T (p) = p'\text{,}\)</span> where <span class="process-math">\(p'(x)\)</span> is the derivative of p(x).</div> <div class="para logical" id="p-2559"><ol class="lower-alpha">
+<li id="li-731"><div class="para" id="p-derived-li-731">Find the characteristic polynomial and the minimum polynomial for <span class="process-math">\(T\text{.}\)</span>
 </div></li>
-<li id="li-728"><div class="para" id="p-derived-li-728">Find the invariant factors and the elementary divisors for <span class="process-math">\(T\text{.}\)</span>
+<li id="li-732"><div class="para" id="p-derived-li-732">Find the invariant factors and the elementary divisors for <span class="process-math">\(T\text{.}\)</span>
 </div></li>
-<li id="li-729"><div class="para" id="p-derived-li-729">Find the RCF and the Jordan Canonical Form for <span class="process-math">\(T\text{.}\)</span>
+<li id="li-733"><div class="para" id="p-derived-li-733">Find the RCF and the Jordan Canonical Form for <span class="process-math">\(T\text{.}\)</span>
 </div></li>
 </ol></div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-86" id="hint-86"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-86"><div class="hint solution-like"><div class="para" id="p-2549">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-146" id="solution-146"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-146"><div class="solution solution-like"><div class="para logical" id="p-2550">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-86" id="hint-86"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-86"><div class="hint solution-like"><div class="para" id="p-2560">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-151" id="solution-151"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-151"><div class="solution solution-like"><div class="para logical" id="p-2561">
 <div class="para">Let <span class="process-math">\(T:V \to V\)</span> be the linear operator given by <span class="process-math">\(T(p) = xp'\)</span> (where <span class="process-math">\(p'\)</span> denotes the derivative of <span class="process-math">\(p).\)</span>
 </div>
 <ol class="lower-alpha">
-<li id="li-730"><div class="para logical" id="p-2551">
+<li id="li-734"><div class="para logical" id="p-2562">
 <div class="para">Note that the change of basis matrix for this operator is given by</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1591,8 +1591,8 @@ x &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
 <div class="para">which is diagonal. Hence <span class="process-math">\(\cp_AT(x)=\displaystyle\prod_{i=0}^{n-1}(x-i)\text{.}\)</span>
 </div>
 </div></li>
-<li id="li-731"><div class="para" id="p-2552">Our <span class="process-math">\(\cp_AT(x)\)</span> factors into distinct linear polynomials, each of which is in the form <span class="process-math">\((x-i)^1\)</span> for <span class="process-math">\(0\leq i\leq n-1\text{.}\)</span> Thus each linear term is an elementary divisor. However, as none of these elementary divisors divide any of the others, we see that the only invariant factor is <span class="process-math">\(\cp_AT(x)\)</span> itself.</div></li>
-<li id="li-732"><div class="para logical" id="p-2553">
+<li id="li-735"><div class="para" id="p-2563">Our <span class="process-math">\(\cp_AT(x)\)</span> factors into distinct linear polynomials, each of which is in the form <span class="process-math">\((x-i)^1\)</span> for <span class="process-math">\(0\leq i\leq n-1\text{.}\)</span> Thus each linear term is an elementary divisor. However, as none of these elementary divisors divide any of the others, we see that the only invariant factor is <span class="process-math">\(\cp_AT(x)\)</span> itself.</div></li>
+<li id="li-736"><div class="para logical" id="p-2564">
 <div class="para">As each linear term is an elementary divisor, each Jordan block a <span class="process-math">\(1\times1\)</span> matrix with <span class="process-math">\(i\)</span> as the only entry. Thus the Jordan Canonical form is</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1612,7 +1612,7 @@ x &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-244"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-244"><h5 class="heading">
 <span class="codenumber">12<span class="period">.</span></span><span class="space"> </span><span class="title">June 2010 (4).</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-244"><article class="exercise exercise-like"><div class="para logical" id="p-2554">
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-244"><article class="exercise exercise-like"><div class="para logical" id="p-2565">
 <div class="para">Let <span class="process-math">\(A\)</span> be the matrix with entries in <span class="process-math">\(\C\)</span>
 </div>
 <div class="displaymath process-math">
@@ -1626,8 +1626,8 @@ A=\begin{bmatrix}
 \end{equation*}
 </div>
 <ol class="lower-alpha">
-<li id="li-733"><div class="para" id="p-2555">Find the Jordan Canonical Form of A.</div></li>
-<li id="li-734"><div class="para logical" id="p-2556">
+<li id="li-737"><div class="para" id="p-2566">Find the Jordan Canonical Form of A.</div></li>
+<li id="li-738"><div class="para logical" id="p-2567">
 <div class="para">Is <span class="process-math">\(A\)</span> similar to</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1643,10 +1643,10 @@ A=\begin{bmatrix}
 </ol>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-87" id="hint-87"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-87"><div class="hint solution-like"><div class="para" id="p-2557">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-147" id="solution-147"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-147"><div class="solution solution-like"><div class="para logical" id="p-2558"><ol class="lower-alpha">
-<li id="li-735">
-<div class="para logical" id="p-2559">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-87" id="hint-87"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-87"><div class="hint solution-like"><div class="para" id="p-2568">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-152" id="solution-152"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-152"><div class="solution solution-like"><div class="para logical" id="p-2569"><ol class="lower-alpha">
+<li id="li-739">
+<div class="para logical" id="p-2570">
 <div class="para">First, notice that <span class="process-math">\(A\)</span> is upwards triangular, and thus <span class="process-math">\(\cp_A(x)=(x-3)^4\text{.}\)</span> By the Cayley Hamilton Theorem the minimum polynomial divides the characteristic polynomial, and from the definition of minimum polynomial we know <span class="process-math">\(\mp_A(x)\)</span> is the smallest polynomial such that <span class="process-math">\(\mp_A(A) = 0\text{.}\)</span> Since <span class="process-math">\(\mp_A(x)\)</span> must be a power of <span class="process-math">\((x-3)^n\)</span> with <span class="process-math">\(n\leq 4\text{,}\)</span> we plug in values of <span class="process-math">\(n\)</span> until we get <span class="process-math">\(0\text{.}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -1682,7 +1682,7 @@ A=\begin{bmatrix}
 </div>
 <div class="para">which is also not <span class="process-math">\(0\text{.}\)</span> However, multiplying one more time we see <span class="process-math">\(\mp_A(x)=(x-3)^3\text{.}\)</span> By part (2) of this theorem <span class="process-math">\((x-3)^3\)</span> is an invariant factor. By part (1) of that same theorem, invariant factors must multiply to <span class="process-math">\(\cp_A(x)\text{,}\)</span> and so the invariant factors are <span class="process-math">\(x-3\)</span> and <span class="process-math">\((x-3)^3\text{.}\)</span> These are also the elementary divisors. So</div>
 </div>
-<div class="para logical" id="p-2560"><div class="displaymath process-math">
+<div class="para logical" id="p-2571"><div class="displaymath process-math">
 \begin{equation*}
 J_1(3)\oplus J_3(3)=\begin{bmatrix}
 3 &amp; 0 &amp; 0 &amp; 0\\
@@ -1693,7 +1693,7 @@ J_1(3)\oplus J_3(3)=\begin{bmatrix}
 \end{equation*}
 </div></div>
 </li>
-<li id="li-736"><div class="para logical" id="p-2561">
+<li id="li-740"><div class="para logical" id="p-2572">
 <div class="para">Let</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1711,7 +1711,7 @@ B=\begin{bmatrix}
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-245"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-245"><h5 class="heading">
 <span class="codenumber">13<span class="period">.</span></span><span class="space"> </span><span class="title">.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-245"><article class="exercise exercise-like"><div class="para logical" id="p-2562">
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-245"><article class="exercise exercise-like"><div class="para logical" id="p-2573">
 <div class="para">For the matrix</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1721,15 +1721,15 @@ A=\begin{bmatrix} 0 &amp; -1 &amp; 2 \\ 1 &amp; 0 &amp; 0 \\0 &amp; 1 &amp; -2\e
 <div class="para">in <span class="process-math">\(\Mat_{3\times3}(\R)\text{:}\)</span>
 </div>
 <ol class="lower-alpha">
-<li id="li-737"><div class="para" id="p-2563">Find the RCF of <span class="process-math">\(A\text{.}\)</span>
+<li id="li-741"><div class="para" id="p-2574">Find the RCF of <span class="process-math">\(A\text{.}\)</span>
 </div></li>
-<li id="li-738"><div class="para" id="p-2564">Determine whether or not <span class="process-math">\(A\)</span> has a Jordan Canonical Form, and if so, find this form.</div></li>
+<li id="li-742"><div class="para" id="p-2575">Determine whether or not <span class="process-math">\(A\)</span> has a Jordan Canonical Form, and if so, find this form.</div></li>
 </ol>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-88" id="hint-88"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-88"><div class="hint solution-like"><div class="para" id="p-2565">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-148" id="solution-148"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-148"><div class="solution solution-like"><div class="para logical" id="p-2566"><ol class="lower-alpha">
-<li id="li-739"><div class="para logical" id="p-2567">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-88" id="hint-88"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-88"><div class="hint solution-like"><div class="para" id="p-2576">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-153" id="solution-153"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-153"><div class="solution solution-like"><div class="para logical" id="p-2577"><ol class="lower-alpha">
+<li id="li-743"><div class="para logical" id="p-2578">
 <div class="para">Notice <span class="process-math">\(\cp_A(x)=\det(A-xI)\text{.}\)</span> So we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1743,7 +1743,7 @@ C(-x^3-2x^2-x)=\begin{bmatrix} 0 &amp; 0 &amp; 0 \\ 1 &amp; 0 &amp; 1 \\0 &amp; 
 \end{equation*}
 </div>
 </div></li>
-<li id="li-740"><div class="para logical" id="p-2568">
+<li id="li-744"><div class="para logical" id="p-2579">
 <div class="para">Luckily for us, <span class="process-math">\(\cp_A(x)\)</span> factors completely into linear terms! So our elementary divisors are <span class="process-math">\(-x\)</span> and <span class="process-math">\((x+1)^2\text{.}\)</span> We see <span class="process-math">\(J_1(0)=\begin{bmatrix} 0 \end{bmatrix}\)</span> and <span class="process-math">\(J_2(-1)=\begin{bmatrix} -1 &amp; 0 \\ 1 &amp; -1\end{bmatrix}\text{,}\)</span> so the Jordan Canonical form of <span class="process-math">\(A\)</span> is</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1755,11 +1755,11 @@ J=\begin{bmatrix} 0 &amp; 0 &amp; 0 \\ 0 &amp; -1 &amp; 0 \\0 &amp; 1 &amp; -1\e
 </div></article></div>
 <article class="exercise exercise-like" id="exercise-246"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-246"><h5 class="heading">
 <span class="codenumber">14<span class="period">.</span></span><span class="space"> </span><span class="title">January 2014 (9).</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-246"><article class="exercise exercise-like"><div class="para" id="p-2569">Let <span class="process-math">\(F\)</span> be a field and <span class="process-math">\(A\)</span> a square matrix with entries from <span class="process-math">\(F\text{.}\)</span> Prove that <span class="process-math">\(A\)</span> is similar to its transpose.</div>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-246"><article class="exercise exercise-like"><div class="para" id="p-2580">Let <span class="process-math">\(F\)</span> be a field and <span class="process-math">\(A\)</span> a square matrix with entries from <span class="process-math">\(F\text{.}\)</span> Prove that <span class="process-math">\(A\)</span> is similar to its transpose.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-89" id="hint-89"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-89"><div class="hint solution-like"><div class="para" id="p-2570">Coming soon to an OER near you!</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-149" id="solution-149"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-149"><div class="solution solution-like">
-<div class="para" id="p-2571">Let <span class="process-math">\(L\)</span> be the algebraic closure of <span class="process-math">\(F\text{.}\)</span> Thus <span class="process-math">\(A\)</span> has a Jordan Canonical Form in <span class="process-math">\(L\text{.}\)</span> For each Jordan block <span class="process-math">\(J_i\)</span> in the JCF of <span class="process-math">\(A\text{,}\)</span> let <span class="process-math">\(B_i\)</span> denote the transpose of the identity matrix, and notice that <span class="process-math">\(B_iJ_iB_i\inv=J_i^T\text{.}\)</span> As this is the case for every Jordan block, we see that the JCF of <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(J\text{,}\)</span> is similar to its transpose. As the <span class="process-math">\(A\)</span> is similar to <span class="process-math">\(J\text{,}\)</span> <span class="process-math">\(A^T\)</span> is similar to <span class="process-math">\(J^T\text{,}\)</span> and <span class="process-math">\(J\)</span> is similar to <span class="process-math">\(J^T\text{,}\)</span> we see that <span class="process-math">\(A\sim A^T\)</span> in <span class="process-math">\(L\)</span> by transitivity.</div> <div class="para" id="p-2572">Suppose <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are similar in <span class="process-math">\(\Mat_{n \times n}(L)\text{.}\)</span> As <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> have entries in <span class="process-math">\(F\text{,}\)</span> then they are both in <span class="process-math">\(\Mat_{n \times n}(F)\text{.}\)</span> Thus there exist matrices <span class="process-math">\(C,D\in\Mat_{n \times n}(F)\)</span> in RCF such that <span class="process-math">\(A\)</span> is similar to <span class="process-math">\(C\)</span> and that <span class="process-math">\(B\)</span> is similar to <span class="process-math">\(D\text{.}\)</span> However, <span class="process-math">\(A\)</span> is similar to <span class="process-math">\(C\)</span> and that <span class="process-math">\(B\)</span> is similar to <span class="process-math">\(D\)</span> in <span class="process-math">\(\Mat_{n \times n}(L)\)</span> as well. Notice <span class="process-math">\(C\)</span> and <span class="process-math">\(D\)</span> are still in RCF. However, as the RCF is unique, this means that <span class="process-math">\(C=D\)</span> in <span class="process-math">\(\Mat_{n \times n}(L)\text{,}\)</span> making them equal in <span class="process-math">\(\Mat_{n \times n}(F)\)</span> as well. Thus <span class="process-math">\(A\)</span> is similar to <span class="process-math">\(B\text{,}\)</span> as similarity is transitive.</div> <div class="para" id="p-2573">This yields <span class="process-math">\(A\sim A^T\)</span> in <span class="process-math">\(F\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-89" id="hint-89"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-89"><div class="hint solution-like"><div class="para" id="p-2581">Coming soon to an OER near you!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-154" id="solution-154"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-154"><div class="solution solution-like">
+<div class="para" id="p-2582">Let <span class="process-math">\(L\)</span> be the algebraic closure of <span class="process-math">\(F\text{.}\)</span> Thus <span class="process-math">\(A\)</span> has a Jordan Canonical Form in <span class="process-math">\(L\text{.}\)</span> For each Jordan block <span class="process-math">\(J_i\)</span> in the JCF of <span class="process-math">\(A\text{,}\)</span> let <span class="process-math">\(B_i\)</span> denote the transpose of the identity matrix, and notice that <span class="process-math">\(B_iJ_iB_i\inv=J_i^T\text{.}\)</span> As this is the case for every Jordan block, we see that the JCF of <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(J\text{,}\)</span> is similar to its transpose. As the <span class="process-math">\(A\)</span> is similar to <span class="process-math">\(J\text{,}\)</span> <span class="process-math">\(A^T\)</span> is similar to <span class="process-math">\(J^T\text{,}\)</span> and <span class="process-math">\(J\)</span> is similar to <span class="process-math">\(J^T\text{,}\)</span> we see that <span class="process-math">\(A\sim A^T\)</span> in <span class="process-math">\(L\)</span> by transitivity.</div> <div class="para" id="p-2583">Suppose <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are similar in <span class="process-math">\(\Mat_{n \times n}(L)\text{.}\)</span> As <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> have entries in <span class="process-math">\(F\text{,}\)</span> then they are both in <span class="process-math">\(\Mat_{n \times n}(F)\text{.}\)</span> Thus there exist matrices <span class="process-math">\(C,D\in\Mat_{n \times n}(F)\)</span> in RCF such that <span class="process-math">\(A\)</span> is similar to <span class="process-math">\(C\)</span> and that <span class="process-math">\(B\)</span> is similar to <span class="process-math">\(D\text{.}\)</span> However, <span class="process-math">\(A\)</span> is similar to <span class="process-math">\(C\)</span> and that <span class="process-math">\(B\)</span> is similar to <span class="process-math">\(D\)</span> in <span class="process-math">\(\Mat_{n \times n}(L)\)</span> as well. Notice <span class="process-math">\(C\)</span> and <span class="process-math">\(D\)</span> are still in RCF. However, as the RCF is unique, this means that <span class="process-math">\(C=D\)</span> in <span class="process-math">\(\Mat_{n \times n}(L)\text{,}\)</span> making them equal in <span class="process-math">\(\Mat_{n \times n}(F)\)</span> as well. Thus <span class="process-math">\(A\)</span> is similar to <span class="process-math">\(B\text{,}\)</span> as similarity is transitive.</div> <div class="para" id="p-2584">This yields <span class="process-math">\(A\sim A^T\)</span> in <span class="process-math">\(F\text{.}\)</span>
 </div>
 </div></div>
 </div></article></div>

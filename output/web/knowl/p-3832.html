@@ -13,30 +13,8 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical"><ol class="decimal">
-<li><div class="para logical">
-<div class="para">Let <span class="process-math">\(\l\)</span> be an eigenvalue of <span class="process-math">\(T\text{.}\)</span> Thus there exists some <span class="process-math">\(v\)</span> such that <span class="process-math">\(Tv=\l v\text{.}\)</span> Notice that <span class="process-math">\(p(T)v=a_nT^nv+\dots+a_0Iv=0\)</span> and <span class="process-math">\(p(\l)=a_n\l^n+\dots+a_0\text{.}\)</span> Then</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{aligned}(p(T)-p(\l I))v&amp;=p(T)v-p(\l I)v\\&amp;=(a_nT^nv+\dots+a_0Iv)-(a_n\l^nv+\dots+a_0v)\\&amp;=a_n(T^n-\l^n)v+\dots a_0(I-I)v\\&amp;=0,\end{aligned}
-\end{equation*}
-</div>
-<div class="para">making <span class="process-math">\(p(\l)\)</span> an eigenvalue of <span class="process-math">\(p(T)\text{.}\)</span>
-</div>
-</div></li>
-<li><div class="para logical">
-<div class="para">First note that if <span class="process-math">\(T\)</span> is a scalar of the identity matrix then its only eigenvalue is <span class="process-math">\(0\text{.}\)</span> Let <span class="process-math">\(\mu\)</span> be an eigenvalue of <span class="process-math">\(p(T)\text{.}\)</span> Thus <span class="process-math">\((p(T)-\mu I)v=0\)</span> for some <span class="process-math">\(v\text{.}\)</span> As <span class="process-math">\(\C\)</span> is algebraically closed we can factor the polynomial <span class="process-math">\(p(x)-\mu\)</span> into linear terms:</div>
-<div class="displaymath process-math">
-\begin{equation*}
-p(x)-\mu=c(x-r_1)\dots(x-r_n)
-\end{equation*}
-</div>
-<div class="para">for roots <span class="process-math">\(r_i\text{.}\)</span> Note that <span class="process-math">\(p(r_i)-\mu=0\)</span> for all <span class="process-math">\(r_i\text{.}\)</span> Observe</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{aligned}(p(T)-\mu I)v&amp;=p(T)v-(\mu I)v\\&amp;=c(T-r_nI)\dots(T-r_1I)v\\&amp;=0.\end{aligned}
-\end{equation*}
-</div>
-<div class="para">Thus one of these terms must be sent to zero. Note that if <span class="process-math">\(T-r_iI=0\)</span> for any <span class="process-math">\(I\)</span> this would make <span class="process-math">\(T\)</span> a scaler of the identity matrix. Thus there exists some <span class="process-math">\(i\)</span> such that <span class="process-math">\((T-r_iI)v=0\text{,}\)</span> making <span class="process-math">\(r_i\)</span> an eigenvalue of <span class="process-math">\(T\text{.}\)</span> Notice that as <span class="process-math">\(p(r_i)-\mu=0\)</span> we have <span class="process-math">\(p(r_i)=\mu\text{,}\)</span> completing the proof.</div>
+<li><div class="para">Let <span class="process-math">\(G\)</span> act on <span class="process-math">\(\Syl_p(G)\)</span> by conjugation, inducing the homomorphism <span class="process-math">\(\rho: G\to S_{n_p}\)</span> via the <a href="" class="xref" data-knowl="./knowl/thm-permrep.html" title="Theorem 5.4: The Permutation Representation">The Permutation Representation</a>. Notice that the order of <span class="process-math">\(S_{n_p}\)</span> is conspicuously <span class="process-math">\(n_p!\text{.}\)</span> The kernel of this map is a normal subgroup of <span class="process-math">\(G\)</span> (See: [[Corollary – Normal iff Kernel of Homomorphism|Corollary]]). Note that since <span class="process-math">\(G\)</span> is simple the only normal subgroups of <span class="process-math">\(G\)</span> are the trivial subgroup and <span class="process-math">\(G\)</span> itself. However, the kernel cannot be all of <span class="process-math">\(G\)</span> as this would make <span class="process-math">\(\rho\)</span> trivial, which cannot be the case given that our action is transitive by Part (2) of <a href="" class="xref" data-knowl="./knowl/thm-sylow.html" title="Theorem 6.11: Sylow's Theorem">Sylow's Theorem</a>. Thus <span class="process-math">\(\ker(\rho)=\{e\}\text{,}\)</span> making <span class="process-math">\(\rho\)</span> injective. Thus <span class="process-math">\(|\im(\rho)|=|G|\text{.}\)</span> As the image is a subgroup of <span class="process-math">\(S_{n_p}\text{,}\)</span> the result follows from <a href="" class="xref" data-knowl="./knowl/thm-lagrange.html" title="Theorem 4.13: Lagrange's Theorem">Lagrange's Theorem</a>.</div></li>
+<li><div class="para">Let <span class="process-math">\(G\)</span> be a group of order <span class="process-math">\(1,000,000\text{.}\)</span> Suppose by way of contradiction that <span class="process-math">\(G\)</span> is simple. <span class="process-math">\(1,000,000=10^6=2^6\cdot 5^6\text{.}\)</span> Thus the number of Sylow-<span class="process-math">\(5\)</span> subgroups is congruent to <span class="process-math">\(1\mod 5\)</span> and divides <span class="process-math">\(2^6=64\text{,}\)</span> the options of which are 1 and 16 (See: <a href="" class="xref" data-knowl="./knowl/thm-sylow.html" title="Theorem 6.11: Sylow's Theorem">Sylow's Theorem</a>). As <span class="process-math">\(|G|\)</span> does not divide <span class="process-math">\(16!,\)</span> this contradicts part (a). Thus there are no simple groups of order <span class="process-math">\(1,000,000\text{.}\)</span>
 </div></li>
 </ol></div>
 <span class="incontext"><a href="section-73.html#p-3832" class="internal">in-context</a></span>

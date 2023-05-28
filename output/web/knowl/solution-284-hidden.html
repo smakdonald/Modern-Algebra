@@ -11,11 +11,29 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<div class="para">Let <span class="process-math">\(G\)</span> be a group of order <span class="process-math">\(75=3\cdot 5^2\text{.}\)</span>
-</div> <div class="para">By <a href="" class="xref" data-knowl="./knowl/thm-sylow.html" title="Theorem 6.11: Sylow's Theorem">Sylow's Theorem</a> we know the following: - <span class="process-math">\(n_3|25\)</span> and <span class="process-math">\(n_{3}\equiv1\mod{3}\text{,}\)</span> so our options are <span class="process-math">\(1\)</span> and <span class="process-math">\(25\text{.}\)</span> - <span class="process-math">\(n_5|3\)</span> and <span class="process-math">\(n_{3}\equiv1\mod{5}\text{,}\)</span> so there can only be one. Let <span class="process-math">\(P\)</span> denote the unique Sylow <span class="process-math">\(5\)</span>-subgroup, which has order <span class="process-math">\(25\)</span> and is normal in <span class="process-math">\(G\text{.}\)</span> As <span class="process-math">\(P\)</span> is a group of order <span class="process-math">\(p^2\)</span> we know that it is abelian. Thus there are only two options for <span class="process-math">\(P\)</span> up to isomorphism: <span class="process-math">\(\Z_5\times\Z_5\)</span> and <span class="process-math">\(\Z_{25}\text{.}\)</span>
-</div> <div class="para">Let <span class="process-math">\(Q\)</span> denote a Sylow <span class="process-math">\(3\)</span>-subgroup. All Sylow <span class="process-math">\(3\)</span>-subgroups are isomorphic to each other and there is only one group of order <span class="process-math">\(3\text{,}\)</span> which is <span class="process-math">\(\Z_3\text{.}\)</span>
-</div> <div class="para">Suppose <span class="process-math">\(P=\Z_{25}\text{.}\)</span> As <span class="process-math">\(G = PQ\)</span> and <span class="process-math">\(P\cap Q = \{e\}\text{,}\)</span> we have that <span class="process-math">\(G = P\sdp_\phi Q\text{,}\)</span> where <span class="process-math">\(\phi : Q \to\Aut(P)\text{.}\)</span> Note that <span class="process-math">\(\Aut(P)\cong\Z^\times_{25}\text{,}\)</span> which is cyclic of order <span class="process-math">\(20\text{.}\)</span> Since <span class="process-math">\(|Q| = 3\)</span> and <span class="process-math">\(\gcd(3,20) = 1\text{,}\)</span> we conclude that <span class="process-math">\(\phi\)</span> must be the trivial map. Hence, <span class="process-math">\(G = P\times Q\text{.}\)</span>
-</div> <div class="para">Now suppose <span class="process-math">\(P=\Z_5\times\Z_5\text{.}\)</span>
+<div class="para logical"><ol class="decimal">
+<li><div class="para logical">
+<div class="para">Notice <span class="process-math">\(\cp_A(x)=\det(A-xI)\text{.}\)</span> So we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{align}\cp_A(x)&amp;=-x\det\begin{bmatrix} -x &amp; 0 \\ 1 &amp; -2-x\end{bmatrix}-(-1)\det\begin{bmatrix} 1 &amp; 0 \\ 0 &amp; -2-x\end{bmatrix}+2\det\begin{bmatrix} 1 &amp; -x \\ 0 &amp; 1\end{bmatrix}\\&amp;=-x(-x(-2-x))+(-2-x)+2(1)\\&amp;=-x^3-2x^2-x\\&amp;-x(x^2+2x+1)\\&amp;=-x(x+1)^2.\end{align}
+\end{equation*}
 </div>
+<div class="para">Not so bad! Now, the invariant factors all divide the characteristic polynomial and must divide the following factor, so our options for sets of invariant factors are the following: - <span class="process-math">\(\{-x(x+1)^2\}\)</span> - <span class="process-math">\(\{(x+1),-x(x+1)\}\)</span> However, the largest invariant factor is also the minimal polynomial. So we check to see if <span class="process-math">\(-A(A+I)=0\text{.}\)</span> Luckily, the very first calculation shows that this is not the case. Thus the minimum polynomial is the characteristic polynomial is the only invariant factor of <span class="process-math">\(A\text{.}\)</span> Thus the RCF of <span class="process-math">\(A\)</span> is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C(-x^3-2x^2-x)=\begin{bmatrix} 0 &amp; 0 &amp; 0 \\ 1 &amp; 0 &amp; 1 \\0 &amp; 1 &amp; 2\end{bmatrix}.
+\end{equation*}
+</div>
+</div></li>
+<li><div class="para logical">
+<div class="para">Luckily for us, <span class="process-math">\(\cp_A(x)\)</span> factors completely into linear terms! So our elementary divisors are <span class="process-math">\(-x\)</span> and <span class="process-math">\((x+1)^2\text{.}\)</span> We see <span class="process-math">\(J_1(0)=\begin{bmatrix} 0 \end{bmatrix}\)</span> and <span class="process-math">\(J_2(-1)=\begin{bmatrix} -1 &amp; 0 \\ 1 &amp; -1\end{bmatrix}\text{,}\)</span> so the Jordan Canonical form of <span class="process-math">\(A\)</span> is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+J=\begin{bmatrix} 0 &amp; 0 &amp; 0 \\ 0 &amp; -1 &amp; 0 \\0 &amp; 1 &amp; -1\end{bmatrix}.
+\end{equation*}
+</div>
+</div></li>
+</ol></div> <div class="para"></div>
 </div></body>
 </html>

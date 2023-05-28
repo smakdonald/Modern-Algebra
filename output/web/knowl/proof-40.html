@@ -11,22 +11,37 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>
-<div class="para">The first two assertions are immediate from the definitions.</div> <div class="para logical">
-<div class="para">The kernel of the canonical map <span class="process-math">\({\pi}: G \twoheadrightarrow G/N\)</span> contains <span class="process-math">\(M\)</span> and so by <a href="" class="xref" data-knowl="./knowl/thm-ump-quotient.html" title="Theorem 4.47: UMP for Quotients">Theorem 4.47</a> we get an induced homomorhism</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-ump-quotient.html ./knowl/thm-fit-group.html">
+<article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
+<div class="para">Assume <span class="process-math">\(G\)</span> is simple of order <span class="process-math">\(60\text{.}\)</span> Let us first observe that it suffices to construct a non-trivial action of <span class="process-math">\(G\)</span> on a set with <span class="process-math">\(5\)</span> elements. For given such an action we obtain a non-trivial homomorphism <span class="process-math">\(g: G \to S_5\text{.}\)</span> Since it's non-trivial and <span class="process-math">\(G\)</span> is simple, we must have <span class="process-math">\(\operatorname{ker}(g) = \{e\}\text{,}\)</span> so that <span class="process-math">\(g\)</span> is injective. Thus <span class="process-math">\(G \cong \operatorname{im}(g)\text{,}\)</span> and <span class="process-math">\(\# \operatorname{im}(g) = 60\text{.}\)</span> But we already know that <span class="process-math">\(A_5\)</span> is the only subgroup of <span class="process-math">\(S_5\)</span> of order <span class="process-math">\(60\text{,}\)</span> and thus <span class="process-math">\(G \cong \operatorname{im}(g) =
+A_5\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">So, we only need to find such an action, and one's first guess would be the action on one of the sets of Sylow <span class="process-math">\(p\)</span>-subgroups. By Sylow Theory and the fact that <span class="process-math">\(G\)</span> is simple (so that no Sylow <span class="process-math">\(p\)</span>-subgroup for <span class="process-math">\(p=2,3,5\)</span> can be unique) we get</div>
+<div class="displaymath process-math">
 \begin{equation*}
-\phi: G/M \to G/N
+\# \operatorname{Syl}_2(G) \in \{3,5,15\},
+\# \operatorname{Syl}_3(G) \in \{4,10\},
+\# \operatorname{Syl}_5(G) = 6.
 \end{equation*}
 </div>
-<div class="para">with <span class="process-math">\(\phi(gM) = {\pi}(g) = gN\text{.}\)</span> Moreover, we know</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-ump-quotient.html ./knowl/thm-fit-group.html">
+</div> <div class="para">The next important observation is:</div> <blockquote class="blockquote"><div class="para">There is no non-trivial action of <span class="process-math">\(G\)</span> on a set <span class="process-math">\(S\)</span> of size at most <span class="process-math">\(4\text{.}\)</span>
+</div></blockquote> <div class="para">For if there was such a non-trivial action, we would get a homomorphism <span class="process-math">\(\rho: G \to S_n\)</span> for <span class="process-math">\(2 \leq n \leq 4\)</span> (if <span class="process-math">\(n=1\text{,}\)</span> the only action is the trivial one). Such a homomorphism cannot be injective by order considerations. So, it's kernel would be a proper, non-trivial normal subgroup, which do not exist.</div> <div class="para logical">
+<div class="para">In particular, <span class="process-math">\(\# \operatorname{Syl}_2(G) \ne 3\)</span> and <span class="process-math">\(\# \operatorname{Syl}_4(G) \ne 4\text{,}\)</span> so that</div>
+<div class="displaymath process-math">
 \begin{equation*}
-\operatorname{Ker}(\phi) = \operatorname{Ker}({\pi})/M = N/M.
+\# \operatorname{Syl}_2(G) \in \{5,15\},
+\# \operatorname{Syl}_3(G) = 10,
+\# \operatorname{Syl}_5(G) = 6.
 \end{equation*}
 </div>
-<div class="para">Finally apply the <a href="" class="xref" data-knowl="./knowl/thm-fit-group.html" title="Theorem 4.49: First Isomorphism Theorem">First Isomorphism Theorem</a> to <span class="process-math">\(\phi\text{.}\)</span>
+</div> <div class="para">If <span class="process-math">\(\# \operatorname{Syl}_2(G) = 5\)</span> then we are done, since this action is transitive and thus certainly non-trivial.</div> <div class="para logical">
+<div class="para">Suppose <span class="process-math">\(\# \operatorname{Syl}_2(G) = 15\)</span> and let <span class="process-math">\(P_1, \dots, P_{15}\)</span> be all the Sylow <span class="process-math">\(2\)</span>-subgroups. Since <span class="process-math">\(\# \operatorname{Syl}_3(G) = 10\)</span> and <span class="process-math">\(\# \operatorname{Syl}_5(G) = 6\text{,}\)</span> <span class="process-math">\(G\)</span> has <span class="process-math">\(10 \cdot 2 + 6 \cdot 4 = 44\)</span> elements of order <span class="process-math">\(3\)</span> or <span class="process-math">\(5\text{.}\)</span> If <span class="process-math">\(P_i \cap P_j = \{e\}\)</span> for all <span class="process-math">\(i \ne
+j\text{,}\)</span> we would have <span class="process-math">\(15 \cdot 3\)</span> elements of order <span class="process-math">\(2\)</span> or <span class="process-math">\(4\text{,}\)</span> which is far too many elements in total. At least two of these must therefore intersect non-trivially and without loss say <span class="process-math">\(H = P_1 \cap P_2\)</span> has two elements. We consider <span class="process-math">\(K = N_G(H)\text{.}\)</span> As in the preivious example, <span class="process-math">\(K \supseteq P_1 \cup P_2\)</span> and hence <span class="process-math">\(\# K \geq 6\text{,}\)</span> <span class="process-math">\(4 \mid \#K\text{,}\)</span> and <span class="process-math">\(\#K \mid 60\text{.}\)</span> The possibilities are</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\# K = 12, 20, 60
+\end{equation*}
 </div>
-</div></article><span class="incontext"><a href="sec-dps.html#proof-40" class="internal">in-context</a></span>
+<div class="para">If <span class="process-math">\(\# K = 60\)</span> then <span class="process-math">\(H \unlhd G\text{,}\)</span> which is impossible. If <span class="process-math">\(\# K = 20\text{,}\)</span> then we obtain an transitive action of <span class="process-math">\(G\)</span> on the three element set of left cosets of <span class="process-math">\(K\)</span> in <span class="process-math">\(G\text{,}\)</span> which as shown above is not possible. We are left with <span class="process-math">\(\# K = 12\text{.}\)</span> Thus <span class="process-math">\(G\)</span> acts transitively (and hence non-trivially) on the five element set of left cosets of <span class="process-math">\(K\)</span> in <span class="process-math">\(G\text{.}\)</span> ◻</div>
+</div></article><span class="incontext"><a href="sec-simple-groups.html#proof-40" class="internal">in-context</a></span>
 </body>
 </html>

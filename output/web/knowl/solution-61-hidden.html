@@ -10,6 +10,42 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like"><div class="para">Notice that in the trivial ring <span class="process-math">\(0=1\text{.}\)</span> Conversely, if <span class="process-math">\(1 = 0\)</span> in a ring, then <span class="process-math">\(R = \{0\}\text{,}\)</span> since in this case for all <span class="process-math">\(a\text{,}\)</span> we have <span class="process-math">\(a \cdot 0 = 0\)</span> and hence <span class="process-math">\(a = a \cdot 1 = a \cdot 0 = 0\text{.}\)</span>
-</div></div></body>
+<body class="ignore-math"><div class="solution solution-like">
+<div class="para">As we will show below, every such group is a semi-direct product. Let's start by building all the groups we can as semi-direct products. As a matter of noation, let's write <span class="process-math">\(C_n\)</span> for a cyclic group of order <span class="process-math">\(n\text{.}\)</span> Let's consider the four possibilities:</div> <div class="para logical"><ol class="decimal">
+<li><div class="para"><span class="process-math">\(C_4 \rtimes_\rho C_3\text{,}\)</span></div></li>
+<li><div class="para"><span class="process-math">\((C_2 \times C_2) \rtimes_\rho C_3\text{,}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(C_3 \rtimes_\rho C_4\text{,}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(C_3 \rtimes_\rho (C_2 \times C_2)\text{.}\)</span></div></li>
+</ol></div> <div class="para">In case (1), since <span class="process-math">\(\# \operatorname{Aut}(C_4) = 2\text{,}\)</span> we have only the abelian group <span class="process-math">\(C_4 \times C_3\text{.}\)</span>
+</div> <div class="para">In case (2), <span class="process-math">\(\# \operatorname{Aut}(C_2 \times C_2) = \# \operatorname{GL}_2(\mathbb{F}_2) = 6\)</span> and so there is a unique subgroup of order <span class="process-math">\(3\text{.}\)</span> These leads to three possibities for <span class="process-math">\(\rho\text{,}\)</span> including the trivial one. The two non-trivial maps have conjugate (in fact, equal) images. By the homework problem, we get just two possible groups: one is the abelian group <span class="process-math">\(C_2 \times C_2 \times C_3\)</span> and the other is non-abelian.</div> <div class="para">In case (3), <span class="process-math">\(\# \operatorname{Aut}(C_3) = 2\)</span> and so there are two possibilities for <span class="process-math">\(\rho\)</span> including the trivial map. These leads to <span class="process-math">\(C_3 \times C_4\)</span> and a non-abelian group.</div> <div class="para logical">
+<div class="para">Case (4) is more complicated. We have <span class="process-math">\(\operatorname{Aut}(C_3)\)</span> is itself cyclic of order <span class="process-math">\(2\text{.}\)</span> Switching to additive notation, the map</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\rho: C_2 \times C_2 \to \operatorname{Aut}(C_3)
+\end{equation*}
+</div>
+<div class="para">is given as a map</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\rho: \mathbb{Z}/2 \times \mathbb{Z}/2 \to \mathbb{Z}/2,
+\end{equation*}
+</div>
+<div class="para">of elementary abelian <span class="process-math">\(2\)</span>-groups. Thus, <span class="process-math">\(\rho\)</span> may be represented by a <span class="process-math">\(1 \times 2\)</span> matrix with entries in <span class="process-math">\(\mathbb{F}_2\text{;}\)</span> there are <span class="process-math">\(4\)</span> such maps. But, using linear algebra, if <span class="process-math">\(\rho_1, \rho_2\)</span> are any two non-trivial maps of this form, then there is an automorhism <span class="process-math">\(\beta\)</span> of <span class="process-math">\(\mathbb{Z}/2 \times \mathbb{Z}/2\)</span> such that <span class="process-math">\(\rho_2 = \rho_1 \circ \beta\text{.}\)</span> Using the Lemma below, this proves that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(\mathbb{Z}/2 \times \mathbb{Z}/2) \rtimes_{\rho_1} \mathbb{Z}/2 \cong
+(\mathbb{Z}/2 \times \mathbb{Z}/2) \rtimes_{\rho_2} \mathbb{Z}/2
+\end{equation*}
+</div>
+<div class="para">for any two non-trivial map. Thus, in case (4) we again get just two groups up to isomorphism: the abelian group <span class="process-math">\(C_3 \times C_2 \times C_2\)</span> and a non-abelian one.</div>
+</div> <div class="para">We must now beware to toss out reptitions: we've counted each abelian group twice. So, in total we've found at most five groups of order <span class="process-math">\(12\text{:}\)</span>
+</div> <div class="para logical"><ol class="decimal">
+<li><div class="para"><span class="process-math">\(C_4 \times C_3\text{,}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(C_2 \times C_2 \times C_3\text{,}\)</span></div></li>
+<li><div class="para"><span class="process-math">\((C_2 \times C_2) \rtimes_{\rho_1} C_3\text{,}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(C_3 \rtimes_{\rho_2} C_4\text{,}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(C_3 \rtimes_{\rho_3} (C_2 \times C_2)\text{,}\)</span></div></li>
+</ol></div> <div class="para">where each of <span class="process-math">\(\rho_1, \rho_2, \rho_3\)</span> is non-trivial.</div> <div class="para">To see that no two of these are isomorphic, note that (a) and (b) are abelian and (c), (d), and (e) are not. Every Sylow <span class="process-math">\(2\)</span>-subgroup of (d) is <span class="process-math">\(C_4\)</span> whereas the Sylow <span class="process-math">\(2\)</span>-subgroups for (c) and (e) are <span class="process-math">\(C_2 \times C_2\text{.}\)</span> Finally, (c) and (e) are not isomorphic since the former has a normal Sylow <span class="process-math">\(2\)</span>-subgroup and the latter does not.</div> <div class="para">Finally, we need to prove we've found all groups of order <span class="process-math">\(12\text{.}\)</span> If <span class="process-math">\(\# G = 12\text{,}\)</span> then <span class="process-math">\(\operatorname{Syl}_2(G) \in \{1, 3\}\)</span> and <span class="process-math">\(\operatorname{Syl}_3(G) \in \{1, 4\}\text{.}\)</span> <span class="process-math">\(\operatorname{Syl}_2(G) = 3\)</span> and <span class="process-math">\(\operatorname{Syl}_3(G) = 4\)</span> cannot both occur since that would lead to at least <span class="process-math">\(8 + 6\)</span> elements. This gives the existence of <span class="process-math">\(N \unlhd G\)</span> and <span class="process-math">\(H \leq G\)</span> with either <span class="process-math">\(\# N = 4, \# H = 3\)</span> or <span class="process-math">\(\# N = 3, \# H = 4\text{.}\)</span> The usual reasoning gives <span class="process-math">\(H \cap N  = \{e\}\)</span> and <span class="process-math">\(HN = G\text{,}\)</span> so that <span class="process-math">\(G \cong N \rtimes_\rho H\)</span> for some <span class="process-math">\(\rho: H \to \operatorname{Aut}(N)\text{.}\)</span>
+</div>
+</div></body>
 </html>

@@ -13,27 +13,40 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">By the [[Mathematics/Modern Algebra/Results/Theorem – FTFGAG Elementary Divisor form|Fundamental Theorem of Finitely Generated Abelian Groups (Elementary Divisor Form)]] and <a href="" class="xref" data-knowl="./knowl/thm-sunzi.html" title="Theorem 3.53: Sunzi's Remainder Theorem">Sunzi's Remainder Theorem</a>, there are only so many options we have for <span class="process-math">\(M\text{:}\)</span>
+<div class="para">Part (a) First, notice that <span class="process-math">\(A\)</span> is upwards triangular, and thus <span class="process-math">\(\cp_A(x)=(x-3)^4\text{.}\)</span> By the <a href="" class="xref" data-knowl="./knowl/thm-cayley-hamilton-thm.html" title="Theorem 17.28: Theorem - Cayley-Hamilton \thm">Theorem - Cayley-Hamilton <span class="process-math">\(\thm\)</span></a> the minimum polynomial divides the characteristic polynomial, and from the definition of minimum polynomial we know <span class="process-math">\(\mp_A(x)\)</span> is the smallest polynomial such that <span class="process-math">\(\mp_A(A) = 0\text{.}\)</span> Since <span class="process-math">\(\mp_A(x)\)</span> must be a power of <span class="process-math">\((x-3)^n\)</span> with <span class="process-math">\(n\leq 4\text{,}\)</span> we plug in values of <span class="process-math">\(n\)</span> until we get <span class="process-math">\(0\text{.}\)</span>
 </div>
-<ul class="disc">
-<li><div class="para"><span class="process-math">\(\Z_{16}\times \Z_{25}\text{,}\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\Z_{8}\times \Z_{2}\times \Z_{25}\text{,}\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\Z_{4}\times \Z_{4}\times \Z_{25}\text{,}\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\Z_{4}\times \Z_{2}\times \Z_{2}\times \Z_{25}\text{,}\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\Z_{2}\times\Z_{2}\times \Z_{2}\times \Z_{2}\times \Z_{25}\text{,}\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\Z_{16}\times \Z_{5}\times \Z_{5}\text{,}\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\Z_{8}\times \Z_{2}\times \Z_{5}\times \Z_{5}\text{,}\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\displaystyle \Z_{4}\times \Z_{5}\times \Z_{20}\)</span></div></li>
-<li><div class="para">
-<span class="process-math">\(\Z_{4}\times \Z_{2}\times \Z_{2}\times \Z_{5}\times \Z_{5}\text{,}\)</span> and</div></li>
-<li><div class="para"><span class="process-math">\(\Z_{2}\times\Z_{2}\times \Z_{5}\times \Z_{20}\text{.}\)</span></div></li>
-</ul>
-<div class="para">However, as ideals are additive subgroups, we know that <span class="process-math">\(M\)</span> needs to contain a cyclic subgroup of order <span class="process-math">\(20\text{.}\)</span> Thus we need only consider decompositions with a <span class="process-math">\(\Z_{20}\)</span> in them, of which there are exactly two:</div>
-<ol class="lower-alpha">
-<li><div class="para">
-<span class="process-math">\(\Z_{4}\times \Z_{5}\times \Z_{20}\)</span> and</div></li>
-<li><div class="para"><span class="process-math">\(\displaystyle \Z_{2}\times\Z_{2}\times \Z_{5}\times \Z_{20}\)</span></div></li>
-</ol>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-cayley-hamilton-thm.html ./knowl/thm-cayley-hamilton-thm.html">
+\begin{equation*}
+(A-3I)^1=\begin{bmatrix}
+0 &amp; 0 &amp; 0 &amp; 0\\
+1 &amp; 0 &amp; 0 &amp; 0\\
+1 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 2 &amp; 1 &amp; 0\\
+\end{bmatrix}
+\end{equation*}
+</div>
+<div class="para">Shucks. Moving on,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-cayley-hamilton-thm.html ./knowl/thm-cayley-hamilton-thm.html">
+\begin{equation*}
+(A-3I)^2=\begin{bmatrix}
+0 &amp; 0 &amp; 0 &amp; 0\\
+1 &amp; 0 &amp; 0 &amp; 0\\
+1 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 2 &amp; 1 &amp; 0\\
+\end{bmatrix}\cdot\begin{bmatrix}
+0 &amp; 0 &amp; 0 &amp; 0\\
+1 &amp; 0 &amp; 0 &amp; 0\\
+1 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 2 &amp; 1 &amp; 0\\
+\end{bmatrix}=\begin{bmatrix}
+0 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 0\\
+3 &amp; 0 &amp; 0 &amp; 0\\
+\end{bmatrix},
+\end{equation*}
+</div>
+<div class="para">which is also not <span class="process-math">\(0\text{.}\)</span> However, multiplying one more time we see <span class="process-math">\(\mp_A(x)=(x-3)^3\text{.}\)</span> By part (2) of the <a href="" class="xref" data-knowl="./knowl/thm-cayley-hamilton-thm.html" title="Theorem 17.28: Theorem - Cayley-Hamilton \thm">Theorem - Cayley-Hamilton <span class="process-math">\(\thm\)</span></a> <span class="process-math">\((x-3)^3\)</span> is an invariant factor. By part (1) of that same theorem, invariant factors must multiply to <span class="process-math">\(\cp_A(x)\text{,}\)</span> and so the invariant factors are <span class="process-math">\(x-3\)</span> and <span class="process-math">\((x-3)^3\text{.}\)</span> These are also the elementary divisors. So</div>
 </div>
 <span class="incontext"><a href="section-90.html#p-4633" class="internal">in-context</a></span>
 </body>

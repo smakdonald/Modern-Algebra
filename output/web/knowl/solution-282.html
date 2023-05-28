@@ -13,21 +13,42 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h3 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">G.82.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">G.77.1</span><span class="period">.</span>
 </h3>
-<div class="para logical"><ol class="decimal">
-<li><div class="para">First, note that <span class="process-math">\(f\)</span> is irreducible in <span class="process-math">\(\Q[x]\)</span> by <a href="" class="xref" data-knowl="./knowl/thm-eisensteins-criterion.html" title="Theorem 18.18: Eisenstein's Criterion">Eisenstein's Criterion</a> (<span class="process-math">\(p=3\)</span>) The roots of <span class="process-math">\(f\)</span> are - <span class="process-math">\(\sqrt[4]3\text{,}\)</span> - <span class="process-math">\(\sqrt[4]3i\text{,}\)</span> - <span class="process-math">\(-\sqrt[4]3\text{,}\)</span> and - <span class="process-math">\(-\sqrt[4]3i\text{.}\)</span> Let <span class="process-math">\(F=\Q(\sqrt[4]3)\)</span> and notice <span class="process-math">\([F:\Q]=4\text{.}\)</span> As <span class="process-math">\(F\subseteq\R\)</span> we see that <span class="process-math">\([F(i):F]=2\text{,}\)</span> and thus <span class="process-math">\([K:\Q]=8\text{,}\)</span> meaning our basis will have eight elements: 1. 1 2. <span class="process-math">\(\sqrt[4]3\)</span> 3. <span class="process-math">\((\sqrt[4]3)^2\)</span> 4. <span class="process-math">\((\sqrt[4]3)^3\)</span> 5. <span class="process-math">\(i\)</span> 6. <span class="process-math">\(\sqrt[4]3i\)</span> 7. <span class="process-math">\((\sqrt[4]3)^2i\)</span> 8. <span class="process-math">\((\sqrt[4]3)^3i\)</span>
-</div></li>
-<li>
-<div class="para">Now that <span class="process-math">\(K\)</span> has been verified to be a splitting field, we see that <span class="process-math">\(\Aut(K/Q)\)</span> is isomorphic to a subgroup of <span class="process-math">\(S_4\)</span> of degree <span class="process-math">\(8\text{.}\)</span>
+<div class="para logical">
+<div class="para">First, notice that <span class="process-math">\(2\cdot 2=6=(1+\sqrt{-3})(1-\sqrt{-3})\text{.}\)</span> Define a function</div>
+<div class="displaymath process-math">
+\begin{equation*}
+N:\Z[\sqrt{-3}]\to\Z, N(a+b \sqrt{-3})=a^2+3b^2.
+\end{equation*}
 </div>
-<div class="para">Any subgroup of <span class="process-math">\(S_4\)</span> of order <span class="process-math">\(8\)</span> is a Sylow <span class="process-math">\(2\)</span>-subgroup. By <a href="" class="xref" data-knowl="./knowl/thm-sylow.html" title="Theorem 6.11: Sylow's Theorem">Sylow's Theorem</a>s, the number of Sylow <span class="process-math">\(2\)</span>-subgroups is either <span class="process-math">\(1\)</span> or <span class="process-math">\(3\text{.}\)</span>
+<div class="para">Let <span class="process-math">\(\alpha,\beta\in\Z[i]\)</span> and behold</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned*}
+N(\alpha\beta)
+&amp;=N((a+b \sqrt{-3})(c+d \sqrt{-3}))\\
+&amp;=N(ac-3bd+ad \sqrt{-3}+bc \sqrt{-3})\\
+&amp;=(ac-3bd)^2+3(ad+bc)^2\\
+&amp;=((ac)^2-6acbd+9(bd)^2)+3((ad)^2+2abcd+(bc^2))\\
+&amp;=a^2c^2+9b^2d^2+3a^2d^2+3b^2c^2\\
+&amp;=(a^2c^2+3a^2d^2)+(3b^2c^2+9b^2d^2)\\
+&amp;=a^2(c^2+3d^2)+3b^2(c^2+3d^2)\\
+N(\alpha)N(\beta)&amp;=(a^2+3b^2)(c^2+3d^2).\end{aligned*}
+\end{equation*}
 </div>
-<div class="para">If there are three they are all conjugate, and conjugation induces an isomorphism on the group, we see that all three subgroups are isomorphic.</div>
-<div class="para">Let <span class="process-math">\(X\)</span> be the set of left cosets of the subgroup <span class="process-math">\(\{e,s\}\)</span> of <span class="process-math">\(D_8\text{.}\)</span> Note that <span class="process-math">\(|X| = 4\text{.}\)</span> Let <span class="process-math">\(G\)</span> act on <span class="process-math">\(X\)</span> by left multiplication. This action induces a homomorphism <span class="process-math">\(\varphi : G \to P(X)\)</span> where <span class="process-math">\(P(X)\cong S_4\)</span> is the permutation group on <span class="process-math">\(X\text{.}\)</span> As shown in class, the kernel of this homomorphism is the largest normal subgroup contained in <span class="process-math">\(\{e,s\}\text{,}\)</span> which is <span class="process-math">\(\{e\}\text{.}\)</span> Thus, <span class="process-math">\(\varphi\)</span> is injective and the image of <span class="process-math">\(\varphi\)</span> is a subgroup of <span class="process-math">\(S_4\)</span> isomorphic to <span class="process-math">\(D_8\text{.}\)</span>
+<div class="para">So there's that done.</div>
+</div> <div class="para logical">
+<div class="para">Suppose by way of contradiction there exist <span class="process-math">\(\a,\b\)</span> such that <span class="process-math">\(2=\a\b\text{.}\)</span> Then <span class="process-math">\(\a=a+b\sqrt{-3}\)</span> and <span class="process-math">\(\b=c+d\sqrt{-3}\text{,}\)</span> and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+N(2)=4=N(\a\b)=N(\a)N(\b)=(a^2+3b^2)(c^2+3d^2).
+\end{equation*}
 </div>
-</li>
-</ol></div>
+<div class="para">Thus <span class="process-math">\((a^2+3b^2)=\pm1,\pm2,\)</span> or <span class="process-math">\(\pm4\text{,}\)</span> as these are the only integer divisors of <span class="process-math">\(4\text{.}\)</span> However, there do not exist integers <span class="process-math">\(a,b\)</span> such that this is true. Thus <span class="process-math">\(2\)</span> is irreducible in <span class="process-math">\(\Z[\sqrt{-3}]\text{.}\)</span>
+</div>
+</div> <div class="para">Suppose by way of contradiction that <span class="process-math">\(2\)</span> is prime in <span class="process-math">\(\Z[\sqrt{-3}]\text{.}\)</span> Note that <span class="process-math">\(2|6=(1+\sqrt{-3})(1-\sqrt{-3})\text{.}\)</span> Thus <span class="process-math">\(2\)</span> divides one of these factors.</div> <div class="para">First, suppose there exists some <span class="process-math">\(a+b\sqrt{-3}\)</span> such that <span class="process-math">\(2(a+b\sqrt{-3})=(1\pm\sqrt{-3})\text{.}\)</span> Thus <span class="process-math">\(2a+2b\sqrt{-5}=1\pm\sqrt{-3}\text{,}\)</span> and so <span class="process-math">\(2a=\pm1\text{.}\)</span> However, <span class="process-math">\(\pm\frac12\)</span> is not an integer, and thus <span class="process-math">\(2\)</span> cannot divide either of these factors. Thus <span class="process-math">\(2\)</span> is not prime in <span class="process-math">\(\Z[\sqrt{-3}]\text{.}\)</span>
+</div>
 </div>
 <span class="incontext"><a href="section-79.html#solution-282" class="internal">in-context</a></span>
 </body>
