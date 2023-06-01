@@ -12,26 +12,21 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para logical"><ol class="decimal">
-<li>
-<span class="heading"><span class="title">Trivial Subgroup.</span></span><div class="para">The <dfn class="terminology">trivial subgroup</dfn> is the group with a single element <span class="process-math">\(\{e\}\text{.}\)</span> </div>
-</li>
-<li><div class="para">
-<span class="process-math">\((\Z,+), (\Q,+), (\R,+),\)</span> and <span class="process-math">\((\C,+)\)</span> each form an abelian group, where <span class="process-math">\(+\)</span> denotes traditional addition.</div></li>
-<li>
-<span class="heading"><span class="title">General Linear Group.</span></span><div class="para logical">
-<div class="para">For any positive integer <span class="process-math">\(n\text{,}\)</span> let</div>
+<div class="para logical">
+<div class="para">For a given <span class="process-math">\(x\text{,}\)</span> if <span class="process-math">\(yx = xy = e\)</span> and <span class="process-math">\(zx = xz = e\)</span> for some <span class="process-math">\(y\)</span> and <span class="process-math">\(z\text{,}\)</span> then</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\operatorname{GL}_n(\C)=\{ \text{invertible } n \times n \;\text{matrices with entries in}\; \C\}.
+\begin{aligned}
+z &amp;= ez \\
+&amp;= (yx)z \\
+&amp;= y(xz) \\
+&amp;= ye \\
+&amp;= y.
+\end{aligned}
 \end{equation*}
 </div>
-<div class="para">Then <span class="process-math">\(\operatorname{GL}_n(\C)\)</span> is a non-abelian group under matrix multiplication known as the <dfn class="terminology">general linear group</dfn>. </div>
+<div class="para">Thus <span class="process-math">\(y=z\text{,}\)</span> making inverses unique.</div>
 </div>
-</li>
-<li><div class="para">For any <span class="process-math">\(n\in\N\text{,}\)</span> let <span class="process-math">\(\Z/n\)</span> denote the <a href="" class="xref" data-knowl="./knowl/def-integers-modulo.html" title="Definition A.28: The Integers Modulo n (*)">The Integers Modulo <span class="process-math">\(n\)</span> (*)</a>. Then <span class="process-math">\((\Z/n,+)\)</span> forms an abelian group where <span class="process-math">\(+\)</span> denotes addition modulo <span class="process-math">\(n\text{.}\)</span>
-</div></li>
-</ol></div>
 <span class="incontext"><a href="sec-group-basics.html#p-63" class="internal">in-context</a></span>
 </body>
 </html>

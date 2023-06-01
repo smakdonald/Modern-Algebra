@@ -12,9 +12,31 @@
 </head>
 <body class="ignore-math">
 <article class="li"><h5 class="heading">
-<span class="type">Item</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span>
+<span class="type">Item</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span>
 </h5>
-<div class="para">The zero map is a group homomorphism for any group <span class="process-math">\(G\text{.}\)</span>
-</div></article><span class="incontext"><a href="sec-gphoms.html#li-81" class="internal">in-context</a></span>
+<div class="para">First, note that the identity element of <span class="process-math">\(S_n\)</span> is the empty product of cycles.</div>
+<div class="para logical">
+<div class="para">Fix <span class="process-math">\(\sigma\in S_n\)</span> and let <span class="process-math">\(G = \langle \sigma\rangle\text{.}\)</span> The homomorphism given as the inclusion of <span class="process-math">\(G\)</span> into <span class="process-math">\(S_n\)</span> determines an action of <span class="process-math">\(G\)</span> on the set <span class="process-math">\(X := \{1, \dots, n\}\text{.}\)</span> This action decomposes <span class="process-math">\(X\)</span> into disjoint orbits. Since <span class="process-math">\(\sigma\)</span> generates <span class="process-math">\(G\text{,}\)</span> <span class="process-math">\(i, j\)</span> belong to the same orbit iff <span class="process-math">\(\sigma^k(i) = j\)</span> for some <span class="process-math">\(k \geq 0\text{.}\)</span> Let <span class="process-math">\(O\)</span> be any one of these orbits with size at least <span class="process-math">\(2\text{.}\)</span> Now pick any element <span class="process-math">\(i \in O\text{.}\)</span> Consider the sequence</div>
+<div class="displaymath process-math">
+\begin{equation*}
+i, \sigma(i), \sigma^2(i), \dots
+\end{equation*}
+</div>
+<div class="para">of element of <span class="process-math">\(O\text{.}\)</span> The axioms of a group action gives us that the first time this sequence has a repitition occurs when <span class="process-math">\(\sigma^p(i_1) = i_1\text{,}\)</span> where <span class="process-math">\(p = \#O\text{.}\)</span> Let <span class="process-math">\(j_t =\sigma^{t+1}(i)\)</span> for <span class="process-math">\(t = 1, \dots, p\)</span> and let <span class="process-math">\(\tau_O\)</span> be the <span class="process-math">\(p\)</span>-cycle <span class="process-math">\((j_1 \, \dots \, j_p)\text{.}\)</span> Then <span class="process-math">\(\sigma\)</span> and <span class="process-math">\(\tau_O\)</span> “act the same” on <span class="process-math">\(O\text{.}\)</span> More formally,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sigma\circ \tau_O^{-1}
+\end{equation*}
+</div>
+<div class="para">fixes all elements of <span class="process-math">\(O\text{.}\)</span> Also, <span class="process-math">\(\tau_O\)</span> fixes <span class="process-math">\(\{1, \dots, n\} \setminus O\text{.}\)</span> It follows that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sigma= \prod_{O} \tau_O
+\end{equation*}
+</div>
+<div class="para">where the product is taken over all orbits of size at least <span class="process-math">\(2\text{.}\)</span> This proves existense.</div>
+</div>
+<div class="para">For uniqueness, if <span class="process-math">\(\sigma= \prod_i \gamma_i\)</span> is a product of disjoint cycles, then the orbits <span class="process-math">\(X\)</span> under the action of <span class="process-math">\(G\)</span> are the one-element orbits along with the orbits of each <span class="process-math">\(\gamma_i\text{.}\)</span> Moreover, if the orbit of <span class="process-math">\(\gamma_i\)</span> is <span class="process-math">\(O\text{,}\)</span> then <span class="process-math">\(\gamma_i\)</span> and <span class="process-math">\(\sigma\)</span> act the same on <span class="process-math">\(O\)</span> and <span class="process-math">\(\gamma_i\)</span> fixes <span class="process-math">\(\{1, \dots, n\} \setminus O\text{.}\)</span> It follows that <span class="process-math">\(\gamma_i = \tau_O\text{.}\)</span>
+</div></article><span class="incontext"><a href="sec-common-groups.html#li-81" class="internal">in-context</a></span>
 </body>
 </html>

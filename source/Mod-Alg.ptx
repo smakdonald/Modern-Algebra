@@ -379,11 +379,11 @@
       <preface><title>How to Use This Book (*)</title>
 
         <p>
-          I'm still in the process of figuring out exactly what this is for.
+          I'm still in the process of figuring out exactly what this is for. Some possibilities include:
           <ul>
             <li>
               <p>
-                Future lecture notes for the hopeful possibility that one day I am teaching a course over this material.
+                Future lecture notes for the hopeful possibility that one day I will teach a course over this material.
               </p>
             </li>
 
@@ -410,16 +410,20 @@
 
         <paragraphs><title>Blocks</title>
           <p>
+            Here are the types of environments you are likely to encounter throughout the text and what they are used for.
             <ul>
               <li><title><term>Definition </term></title>
                 <p>
-                  These are pretty standard and probably what you'd be expecting. The building blocks of what we'll be working with. 
+                  These are pretty standard and probably what you'd be expecting. 
+                  The building blocks of what we'll be working with. 
                 </p>
               </li>
 
               <li><title><term>Examples </term></title>
                 <p>
                   Specific instances of a definition.
+                  For example, the empty set, <m>\emptyset</m> is an example of a set, and thus would be contained within an <q>example</q> environment.
+                  At some point the line between example and definition becomes incoherently blurred, but I have done my best to keep things consistent.
                 </p>
               </li>
 
@@ -491,6 +495,62 @@
           
         </paragraphs>
 
+      </preface>
+
+      <preface><title>Guide to Proof Writing</title>
+
+        <p>
+          <ol>
+            <li>
+              <p>
+                Never use the words "obvious", "clearly", "trivial", "of course", or synonyms of these.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Write words rather than symbols or abbreviations - a long string of symbols isn't as readable as an English sentence. 
+                Specifically: For all proofs you hand in, write out "for all", "there is", "implies", "if and only if", "therefore", "because", "such that", "for example". 
+                (That is, the symbols ∀, ∃, ⇒, ⇔, ∴, ∵, and s.t., should be avoided.)
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Every time you apply a definition, theorem, proposition, lemma, corollary, exercise, etc., in a proof that you are writing up, reference it. 
+                Reference a theorem, lemma, or proposition by its number in the text (for example <xref ref="thm-lagrange"/>); reference a definition as "the definition of ___" (or by its number in the text, such as <xref ref="def-group"/>). 
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Write sentences and paragraphs, and use correct grammar and punctuation. 
+                (For example, every sentence should end with a period.)
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Follow the standard mathematical conventions for notation.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Define every new variable letter at the first point it appears in your proof.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                The first sentence of a proof should suppose the hypotheses, and the last sentence of a proof should conclude the conclusion.
+              </p>
+            </li>
+          </ol>
+        </p>
+      
+      
+        
       </preface>
 
     </frontmatter>
@@ -2594,7 +2654,14 @@
                 </p>
       
                 <p>
-                  Assume <m>H</m> is non-empty and for all <m>x,y \in H</m>, <m>xy^{-1} \in H</m>. Since <m>H</m> is non-empty, there is an <m>h \in H</m> and hence <m>e_G = hh^{-1} \in H</m>. Since <m>e_Gx=x=xe_G</m> for any <m>x\in H</m>, <m>e_G</m> is an identity element for <m>H</m>. For any <m>h \in H</m>, <m>h^{-1} = eh^{-1}  \in H</m>, and so every element of <m>H</m> has an inverse inside <m>H</m>. For <m>x,y  \in H</m> we have <m>y^{-1} \in H</m> and thus <m>xy = x(y^{-1})^{-1} \in H</m> and hence <m>H</m> is closed under <m>\cdot</m>. This means that the restriction of the group operation of <m>G</m> to <m>H</m> is a well-defined group operation. This operation is associative by the axioms for the group <m>G</m>. The axioms of a group have now been established for <m>(H, \cdot)</m>.
+                  Assume <m>H</m> is non-empty and for all <m>x,y \in H</m>, <m>xy^{-1} \in H</m>. 
+                  Since <m>H</m> is non-empty, there is an <m>h \in H</m> and hence <m>e_G = hh^{-1} \in H</m>. 
+                  Since <m>e_Gx=x=xe_G</m> for any <m>x\in H</m>, <m>e_G</m> is an identity element for <m>H</m>. 
+                  For any <m>h \in H</m>, <m>h^{-1} = eh^{-1}  \in H</m>, and so every element of <m>H</m> has an inverse inside <m>H</m>. 
+                  For <m>x,y  \in H</m> we have <m>y^{-1} \in H</m> and thus <m>xy = x(y^{-1})^{-1} \in H</m> and hence <m>H</m> is closed under <m>\cdot</m>. 
+                  This means that the restriction of the group operation of <m>G</m> to <m>H</m> is a well-defined group operation. 
+                  This operation is associative by the axioms for the group <m>G</m>. 
+                  The axioms of a group have now been established for <m>(H, \cdot)</m>.
                 </p>
       
                 <p>
@@ -2602,8 +2669,10 @@
                 </p>
       
                 <p>
-                Assume <m>H</m> is non-empty and closed under multiplication and inversion. Then, for <m>x,y\in H</m> we have <m>y^{-1}\in H</m> and <m>xy^{-1}\in H</m>. Since the hypothesis of the one-step test is satisfied, <m>H</m> is a subgroup of <m>G</m>.
-              </p>
+                  Assume <m>H</m> is non-empty and closed under multiplication and inversion. 
+                  Then, for <m>x,y\in H</m> we have <m>y^{-1}\in H</m> and <m>xy^{-1}\in H</m>. 
+                  Since the hypothesis of the one-step test is satisfied, <m>H</m> is a subgroup of <m>G</m>.
+                </p>
               </proof>
             </theorem>
       
@@ -2642,13 +2711,15 @@
 
                   <li>
                     <p>
-                      The set of all rotations is a subgroup of <m>D_{2n}</m>. Similarly, the set of reflections is also a subgroup.
+                      The set of all rotations is a subgroup of <m>D_{2n}</m>. 
+                      Similarly, the set of reflections is also a subgroup.
                     </p>
                   </li>
       
                   <li xml:id="ex-nz">
                     <p>
-                      Let <m>n\in\N</m> and define <m>n\Z=\{x\in\Z|x=nk\;\text{for some}\;k\in\Z\}</m>. Then <m>n\Z\leq\Z</m> for all <m>n</m>.
+                      Let <m>n\in\N</m> and define <m>n\Z=\{x\in\Z|x=nk\;\text{for some}\;k\in\Z\}</m>. 
+                      Then <m>n\Z\leq\Z</m> for all <m>n</m>.
                       <notation><usage><m>n\Z</m></usage><description><m>n\Z=\{x\in\Z|x=nk\;\text{for some}\;k\in\Z\}</m></description></notation> 
                     </p>
                   </li>
@@ -2656,7 +2727,9 @@
               </p>
             </example>
 
-            <p>In fact, in the case of <xref ref="ex-nz"/>, these turn out to be the <em>only</em> subgroups of <m>\Z</m>.</p>
+            <p>
+              In fact, in the case of <xref ref="ex-nz"/>, these turn out to be the <em>only</em> subgroups of <m>\Z</m>.
+            </p>
 
             <exercise xml:id="exe-subgroups-of-z"><title>Subgroups of <m>\Z</m></title>
               <statement>
@@ -2666,7 +2739,10 @@
               </statement>
             </exercise>
 
-            <p>Whilst perusing <xref ref="ex-common-subgroups"/>, you may have noticed the following:<fn>If you didn't, don't worry. I won't tell anyeone ;)</fn></p>
+            <p>
+              Whilst perusing <xref ref="ex-common-subgroups"/>, you may have noticed the following:
+              <fn>If you didn't, don't worry. I won't tell anyeone ;)</fn>
+            </p>
 
             <exercise xml:id="exe-subgroup-preservations"><title>Subgroups Preservations</title>
               <statement>
@@ -2689,7 +2765,9 @@
               </statement>
             </exercise>
 
-            <p>Here are some slightly more eventful properties.</p>
+            <p>
+              Here are some slightly more eventful properties.
+            </p>
       
             <theorem xml:id="thm-subgroup-properties"><title>Properties of Subgroups</title>
               
@@ -2713,7 +2791,8 @@
                     <li>
                       <title>Unions of Subgroups</title>
                       <p>
-                        Let <m>G</m> be a group and <m>H</m>, <m>H'</m> subgroups. Prove that <m>H\cup H'</m> is a subgroup if and only if <m>H\subseteq H'</m> or <m>H'\subseteq H</m>.
+                        Let <m>G</m> be a group and <m>H</m>, <m>H'</m> subgroups. 
+                        Prove that <m>H\cup H'</m> is a subgroup if and only if <m>H\subseteq H'</m> or <m>H'\subseteq H</m>.
                       </p>
                     </li>
                   </ol>
@@ -2731,10 +2810,11 @@
 
                     <li>
                       <p>
-                        Let <m>I</m> denote any indexing set and for each <m>i \in
-                        I</m>, let <m>H_i</m> be a subgroup of <m>G</m>. We need to prove <me>H := \bigcap_{i \in I} H_i</me> is a subgroup. It's not empty since <m>e_G \in H_i</m> for all <m>i</m>. If <m>x,y
-                        \in G</m>, then for each <m>i</m>, <m>x,y \in H_i</m> and hence <m>xy^{-1} \in
-                        H_i</m>. It follows that <m>xy^{-1} \in H</m>.
+                        Let <m>I</m> denote any indexing set and for each <m>i \in I</m>, let <m>H_i</m> be a subgroup of <m>G</m>. 
+                        We need to prove <me>H := \bigcap_{i \in I} H_i</me> is a subgroup. 
+                        It's not empty since <m>e_G \in H_i</m> for all <m>i</m>. 
+                        If <m>x,y \in G</m>, then for each <m>i</m>, <m>x,y \in H_i</m> and hence <m>xy^{-1} \in H_i</m>. 
+                        It follows that <m>xy^{-1} \in H</m>.
                       </p>
                     </li>
 
@@ -2771,7 +2851,8 @@
             <exercise xml:id="exe-subgroup-not-symmetric"><title>Subgroups not Symmetric</title>   
               <statement>
                 <p>
-                  In <xref ref="thm-subgroup-properties"/> we showed that subgroups form a transitve relation. Prove that the relation is reflexive (it can be one sentence) but <em>not</em> symmetric, and thus not an equivalence relation.
+                  In <xref ref="thm-subgroup-properties"/> we showed that subgroups form a transitve relation. 
+                  Prove that the relation is reflexive (it can be one sentence) but <em>not</em> symmetric, and thus not an equivalence relation.
                 </p>
               </statement>
             </exercise>
@@ -2781,7 +2862,7 @@
                 <p>
                   The <em>special linear group</em><idx><h>special linear group</h></idx> with complex entries is defined
                   <me>
-                    \SL_n(\C)=\{A \mid A = n\times n \;\text{matrix with entries in}\; \C, \det(A)=1\}
+                    \SL_n(\C)=\{A \mid A = n\times n \;\text{matrix with entries in}\; \C, \det(A)=1\}.
                   </me>
                   <notation><usage><m>\SL</m></usage><description>the special linear group</description></notation>          
                 </p>
@@ -2801,7 +2882,8 @@
                 <ol>
                   <li>
                     <p>
-                      Let <m>G</m> be an abelian group. Then the set of elements of finite order, which we denote <m>T</m>, is a subgroup of <m>G</m>, called the <term>torsion subgroup</term><idx><h>torision subgroup</h></idx>.
+                      Let <m>G</m> be an abelian group. 
+                      Then the set of elements of finite order, which we denote <m>T</m>, is a subgroup of <m>G</m>, called the <term>torsion subgroup</term><idx><h>torision subgroup</h></idx>.
                     </p>
                   </li>
 
@@ -2849,10 +2931,19 @@
             </theorem>
 
             <historical><title>Cayly's Theorem</title>
-              <p>Cayley's Theorem is named after the British mathematician Arthur Cayley. Cayley was a prolific mathematician who made significant contributions to a wide range of fields, including algebra, geometry, and graph theory. Cayley was also a strong advocate for women's education and played an important role in the movement to admit women to Cambridge University. In the 1860s, he was part of a group of academics who lobbied for women to be allowed to take the Cambridge Mathematical Tripos exam, which was the standard test for mathematics students at the time.</p>
+              <p>
+                Cayley's Theorem is named after the British mathematician Arthur Cayley. 
+                Cayley was a prolific mathematician who made significant contributions to a wide range of fields, including algebra, geometry, and graph theory. 
+                Cayley was also a strong advocate for women's education and played an important role in the movement to admit women to Cambridge University. 
+                In the 1860s, he was part of a group of academics who lobbied for women to be allowed to take the Cambridge Mathematical Tripos exam, which was the standard test for mathematics students at the time.
+              </p>
             </historical>
 
-            <remark><p>This is a nearly useless theorem.</p></remark>
+            <remark>
+              <p>
+                This is a nearly useless theorem.
+              </p>
+            </remark>
           </subsection>
       
           <subsection xml:id="subsec-center"><title>Stuck in the Middle</title>
@@ -2862,7 +2953,8 @@
             <definition xml:id="def-group-center"><title>Center of a Group</title>
               <statement>
                 <p>
-                  The <em>center</em><idx><h>center of a group</h></idx> of a group <m>G</m>, often written <m>Z(G)</m>, is the set of elements of <m>G</m> that commute with every element of <m>G</m>. That is, 
+                  The <em>center</em><idx><h>center of a group</h></idx> of a group <m>G</m>, often written <m>Z(G)</m>, is the set of elements of <m>G</m> that commute with every element of <m>G</m>. 
+                  That is, 
                   <me>
                     Z(G)=\{x \in G \, | \, xy = yx\,\text{ for all }y \in G\}.
                   </me>
@@ -2957,14 +3049,15 @@
 
             <exercise xml:id="exe-only-element-of-order-2"><title>Only Element of Order <m>2</m></title>
               <p>
-                Let <m>G</m> be a group and <m>g\in G</m>. If <m>g</m> is the only element of order <m>2</m> in <m>G</m>, then <m>g\in Z(G)</m>.
+                Let <m>G</m> be a group and <m>g\in G</m>. 
+                If <m>g</m> is the only element of order <m>2</m> in <m>G</m>, then <m>g\in Z(G)</m>.
               </p>
             </exercise>
 
             <exercise xml:id="exe-even-groups-order-2"><title>Even Order Groups</title>
               <p>
                 Every group of even order contains an element of order <m>2</m>.
-              <fn>This is a direct result of <xref ref="thm-cauchy"/>, but proving it is possible with the tools we have.</fn>
+                <fn>This is a direct result of <xref ref="thm-cauchy"/>, but proving it is possible with the tools we have.</fn>
               </p>
             </exercise>
           </subsection>
@@ -2975,7 +3068,9 @@
   
               <statement>
                 <p>
-                  Let <m>G</m> be a group (not necessarily finite) and <m>H</m> a nonempty subset of <m>G</m> that is closed under multiplication. Suppose that for all <m>g\in G</m> we have <m>g^2\in H</m>. Prove <m>H</m> is a subgroup of <m>G</m>. 
+                  Let <m>G</m> be a group (not necessarily finite) and <m>H</m> a nonempty subset of <m>G</m> that is closed under multiplication. 
+                  Suppose that for all <m>g\in G</m> we have <m>g^2\in H</m>. 
+                  Prove <m>H</m> is a subgroup of <m>G</m>. 
                 </p>  
               </statement>
   
@@ -3014,7 +3109,7 @@
               </p>
 
               <p>
-                The elements of <m>S</m> are known as <em>generators</em><idx><h>generator</h></idx>
+                The elements of <m>S</m> are known as <em>generators.</em><idx><h>generator</h></idx>
               </p>
             </statement>
           </definition>
@@ -3031,10 +3126,13 @@
     
             <proof>
               <p>
-                Let <m>S= \left\{x_1^{j_1} \cdots x_m^{j_m} \mid m \geq 0, j_1, \dots, j_m \in \mathbb{Z}\text{ and }x_1, \dots, x_m \in X \right\}</m>. Since <m>\langle X \rangle</m> is a subgroup that contains <m>X</m>, it is closed under products and inverses, and thus must contain all elements of <m>S</m>.
+                Let <m>S= \left\{x_1^{j_1} \cdots x_m^{j_m} \mid m \geq 0, j_1, \dots, j_m \in \mathbb{Z}\text{ and }x_1, \dots, x_m \in X \right\}</m>. 
+                Since <m>\langle X \rangle</m> is a subgroup that contains <m>X</m>, it is closed under products and inverses, and thus must contain all elements of <m>S</m>.
               </p>
+
               <p>
-                For the opposite containment, we just need to show the set <m>S</m> really is a subgroup. We use the one step test:
+                For the opposite containment, we just need to show the set <m>S</m> really is a subgroup. 
+                We use the one step test:
               </p>
       
               <p>
@@ -3063,7 +3161,9 @@
             </proof>
           </lemma>
 
-          <p>Lets look at some examples for context.</p>
+          <p>
+            Lets look at some examples for context.
+          </p>
 
           <example xml:id="ex-nz-generated"><title><m>n\Z=\igen n</m></title>
             <statement>
@@ -3074,25 +3174,35 @@
           </example>
 
           <example xml:id="ex-d2n-rs"><title>Generating <m>D_{2n}</m></title>
-            <p><m>\igen{r,s}=D_{2n}</m></p>
+            <p>
+              <m>\igen{r,s}=D_{2n}</m>
+            </p>
           </example>
 
           <exercise xml:id="exe-d2p"><title>Generating <m>D_{2p}</m></title>
             <statement>
-            <p>Let <m>p\ge 3</m> be prime and <m>r,r'</m> be any two distinct reflections in <m>D_{2p}</m>. Then <m>\igen{r,r'}=D_{2p}</m>.</p>
+            <p>
+              Let <m>p\ge 3</m> be prime and <m>r,r'</m> be any two distinct reflections in <m>D_{2p}</m>. 
+              Then <m>\igen{r,r'}=D_{2p}</m>.
+            </p>
           </statement>
           </exercise>
 
           <exercise xml:id="generating-gl"><title>Generating <m>\GL_n(\R)</m></title>
             <statement>
-            <p>For any integer <m>n \geq 1</m>, the set of column vectors <m>e_i</m> consisting of <m>1</m> in the <m>i\th</m> row and <m>0</m> elsewhere generate <m>\GL_n(\R)</m>. As you may recall from a linear algebra course, these are called the <em>elementary matrices</em>. (Bonus: what subgroup do the <q>type I</q> elementary matrices generate?)</p>
-          </statement>
+              <p>
+                For any integer <m>n \geq 1</m>, the set of column vectors <m>e_i</m> consisting of <m>1</m> in the <m>i\th</m> row and <m>0</m> elsewhere generate <m>\GL_n(\R)</m>. 
+                As you may recall from a linear algebra course, these are called the <em>elementary matrices</em>. 
+                (Bonus: what subgroup do the <q>type I</q> elementary matrices generate?)
+              </p>
+            </statement>
           </exercise>
 
           <proposition xml:id="prop-generating-an"><title>Generating <m>A_n</m></title>
             <statement>
               <p>
-                <m>A_n</m> is the subgroup of <m>S_n</m> generated by all produts of <m>2</m>-cyclies (disjoint or not). In symbols, 
+                <m>A_n</m> is the subgroup of <m>S_n</m> generated by all produts of <m>2</m>-cyclies (disjoint or not). 
+                In symbols, 
                 <me>
                   A_n=\langle (i \ j )(k \ l) \mid i,j,k,l \in \{1, \ldots, n\}\rangle.
                 </me>
@@ -3100,7 +3210,12 @@
             </statement>
           </proposition>
 
-          <remark><p>Note that in <xref ref="thm-cycledecomp"/> we showed <m>S_n</m> is generated by transpositions. However, there's more than one way to fry an egg (or in this case generate one) </p></remark>
+          <remark>
+            <p>
+              Note that in <xref ref="thm-cycledecomp"/> we showed <m>S_n</m> is generated by transpositions. 
+              However, there's more than one way to fry an egg (or in this case, to generate one) 
+            </p>
+          </remark>
 
           <theorem xml:id="thm-generating-sn"><title>Generating <m>S_n</m></title>
             <statement>
@@ -3110,20 +3225,34 @@
             </statement>
           </theorem>
 
-          <remark><p>This theorem will prove surprisingly useful all the way down in <xref text="title" ref="ch-galois"/>, saving us a lot of time with our proof of unsolvable quintic polyomials. </p></remark>
+          <remark>
+            <p>
+              This theorem will prove surprisingly useful all the way down in <xref text="title" ref="ch-galois"/>, saving us a lot of time with our proof of unsolvable quintic polyomials. 
+            </p>
+          </remark>
 
-          <p>Lets look at another example.</p>
+          <p>
+            Lets look at another example.
+          </p>
       
           <example xml:id="ex-commutator-subgroup"><title>Commutator Subgroup</title>
             <p>
-              Let <m>G</m> be a group, <m>S=\{aba\inv b\inv|a,b\in G\}</m>, and <m>G'=\igen S</m>. This is known as the <term>commutator subgroup</term><idx><h>commutator subgroup</h></idx> of <m>G</m>.
-            <notation><usage><m>G'</m></usage><description> the commutator subgroup <m>\cdot</m></description></notation>          
+              Let <m>G</m> be a group, <m>S=\{aba\inv b\inv|a,b\in G\}</m>, and <m>G'=\igen S</m>. 
+              This is known as the <term>commutator subgroup</term><idx><h>commutator subgroup</h></idx> of <m>G</m>.
+              <notation><usage><m>G'</m></usage><description> the commutator subgroup <m>\cdot</m></description></notation>          
             </p>
           </example>
     
-          <remark><p>Commutator subgroups prove invaluable when it comes to something called <em>abelianization</em><idx><h>abelianization</h></idx>, which is, loosely speaking, a way of "modding out" the non-commutative part of <m>G</m> to obtain a new group that is abelian. This is seen rigorously in <xref ref="ex-abelianization"/></p></remark>
+          <remark>
+            <p>
+              Commutator subgroups prove invaluable when it comes to something called <em>abelianization</em><idx><h>abelianization</h></idx>, which is, loosely speaking, a way of "modding out" the non-commutative part of <m>G</m> to obtain a new group that is abelian. 
+              This is seen rigorously in <xref ref="ex-abelianization"/>
+            </p>
+          </remark>
 
-          <p>A nice property of a <xref text="title" ref="def-gensubgroup"/> is that once you've located the generators, you've found the whole group:</p>
+          <p>
+            A nice property of a <xref text="title" ref="def-gensubgroup"/> is that once you've located the generators, you've found the whole group:
+          </p>
 
           <proposition xml:id="prop-generators-of-subgroup"><title>Generators of Subgroups</title>
             <statement>
@@ -3133,23 +3262,37 @@
             </statement>
           </proposition>
 
-          <p>In this way, if we can understand something about the generators of a group, we can (for the most part) extend that knowledge to the group as a whole. This is something you may have seen in the form of a basis, either for a vector space or a topological space.</p>
+          <p>
+            In this way, if we can understand something about the generators of a group, we can (for the most part) extend that knowledge to the group as a whole. 
+            This is something you may have seen in the form of a basis, either for a vector space or a topological space.
+          </p>
 
-          <p>Here is a proposition that might appear to come out of the blue.<fn>#1c1cf0, to be precise.</fn></p>
+          <p>
+            Here is a proposition that might appear to come out of the blue.
+            <fn>#1c1cf0, to be precise.</fn>
+          </p>
 
           <proposition xml:id="prop-d2n-mapping"><title><m>D_{2n}</m> Generators and Unique Homomorphism</title>
 
             <statement>
-              <p>If <m>G</m> is a group and <m>x,y \in G</m> are elements such that <m>x^n = e</m>, <m>y^2 = e</m>, and <m>yxy = x^{-1}</m> for some integer <m>n \geq 3</m>, then there exists a unique group homomorphism <m>f: D_{2n} \to G</m> such that <m>f(r) = x</m> and <m>f(s) = y</m>.</p>
+              <p>
+                If <m>G</m> is a group and <m>x,y \in G</m> are elements such that <m>x^n = e</m>, <m>y^2 = e</m>, and <m>yxy = x^{-1}</m> for some integer <m>n \geq 3</m>, then there exists a unique group homomorphism <m>f: D_{2n} \to G</m> such that <m>f(r) = x</m> and <m>f(s) = y</m>.
+              </p>
             </statement>
 
             <proof>
               <p>
-                Recall that the elements of <m>D_{2n}</m> are <m>e, r, \dots, r^{n-1}, s, rs, \dots, r^{n-1}s</m> and that this list has no repetitions. Given <m>G</m>, <m>x</m>, and <m>y</m>, if <m>f</m> exists it is clearly unique, since we have <m>f(r^i) = f(r)^i = x^i</m> and <m>f(r^is) = f(r)^if(s) = x^iy</m>, so that the value of <m>f</m> on every element of <m>G</m> is determined by its values on just <m>x</m> and <m>y</m>.
+                Recall that the elements of <m>D_{2n}</m> are <m>e, r, \dots, r^{n-1}, s, rs, \dots, r^{n-1}s</m> and that this list has no repetitions. 
+                Given <m>G</m>, <m>x</m>, and <m>y</m>, if <m>f</m> exists it is clearly unique, since we have <m>f(r^i) = f(r)^i = x^i</m> and <m>f(r^is) = f(r)^if(s) = x^iy</m>, so that the value of <m>f</m> on every element of <m>G</m> is determined by its values on just <m>x</m> and <m>y</m>.
               </p>
 
               <p>
-                To prove existence, define a function <m>f: D_{2n} \to G</m> by <m>f(r^i) = x^i</m> for <m>0 \leq i \leq n-1</m> and <m>f(r^is) = x^is</m> for <m>0 \leq i \leq n-1</m>. Then one may painstakenly checks that <m>f(ab) = f(a)f(b)</m> in each of the cases <m>a = r^j, b= r^i</m> or <m>a = r^j, b = r^is</m> or <m>a = r^js, b = r^i</m> or <m>a = r^js, b = r^is</m>. For example, using that <m>sr^i = r^{-i}s</m>, we have <me>f((r^js)(r^i)) = f(r^j(sr^i) = f(r^{j-i}s) = x^{j-i}y</me> and <me>f(r^js)f(r^i)) = x^jy x^i =x^j x^{-i} y = x^{j-i} y.</me> For the last string of equalities, we have used that, since <m>yxy = x^{-1}</m>, we have <m>yx^i = x^{-i} y</m> in <m>G</m> too. Note also that <m>j-i</m> might be negative, in which case <m>r^{j-i}</m> is really <m>r^{n+j-i}</m> and so really we would have <m>f(r^{j-i}s) = x^{n+j-i}y</m>. But this is OK since <m>x^{j-i} = x^{n+j-i}</m> too, since <m>x^n = e</m>.
+                To prove existence, define a function <m>f: D_{2n} \to G</m> by <m>f(r^i) = x^i</m> for <m>0 \leq i \leq n-1</m> and <m>f(r^is) = x^is</m> for <m>0 \leq i \leq n-1</m>. 
+                Then one may painstakenly checks that <m>f(ab) = f(a)f(b)</m> in each of the cases <m>a = r^j, b= r^i</m> or <m>a = r^j, b = r^is</m> or <m>a = r^js, b = r^i</m> or <m>a = r^js, b = r^is</m>. 
+                For example, using that <m>sr^i = r^{-i}s</m>, we have <me>f((r^js)(r^i)) = f(r^j(sr^i) = f(r^{j-i}s) = x^{j-i}y</me> and <me>f(r^js)f(r^i)) = x^jy x^i =x^j x^{-i} y = x^{j-i} y.</me> 
+                For the last string of equalities, we have used that, since <m>yxy = x^{-1}</m>, we have <m>yx^i = x^{-i} y</m> in <m>G</m> too. 
+                Note also that <m>j-i</m> might be negative, in which case <m>r^{j-i}</m> is really <m>r^{n+j-i}</m> and so really we would have <m>f(r^{j-i}s) = x^{n+j-i}y</m>. 
+                But this is OK since <m>x^{j-i} = x^{n+j-i}</m> too, since <m>x^n = e</m>.
               </p>
 
               <p>
@@ -3158,9 +3301,15 @@
             </proof>
           </proposition>
 
-          <remark><p>This is techincally an specific instance of the UMP for a Presentation, which is not covered here.</p></remark>
+          <remark>
+            <p>
+              This is techincally an specific instance of the UMP for a Presentation, which is not covered here.
+            </p>
+          </remark>
 
-          <p>Let's take a peak at what this might look like in practice.</p>
+          <p>
+            Let's take a peak at what this might look like in practice.
+          </p>
 
           <example xml:id="ex-d2n-cos-sin"><title><m>D_{2n}</m> Mapping Example</title>
             <p>
@@ -3178,20 +3327,27 @@
                 0 &amp; 1 
                 \end{bmatrix}.
               </me> <idx><h>cosine function</h></idx><idx><h>sine function</h></idx>
-              Then one may check that <m>x^n = e</m>, <m>y^2 = e</m> and <m>yxyx = e</m>. <xref ref="prop-d2n-mapping"/> gives that there is a group homomorphism <m>f: D_{2n} \to \operatorname{GL}_2({\mathbb{R}})</m> such that <m>f(r) = x</m> and <m>f(s) = y</m>. This is not at all surprising, since the matrix <m>x</m> represents rotation by <m>2 \pi/n</m> radians counter-clockwise and <m>y</m> represents reflection about the <m>y</m>-axis. Indeed, one could define <m>D_{2n}</m> as the subgroup of <m>\operatorname{GL}_2({\mathbb{R}})</m> consisting of elements <m>1, x, \dots, x^{n-1}, y, xy \cdots, x^{n-1}y</m>.
+              Then one may check that <m>x^n = e</m>, <m>y^2 = e</m> and <m>yxyx = e</m>. 
+              <xref ref="prop-d2n-mapping"/> gives that there is a group homomorphism <m>f: D_{2n} \to \operatorname{GL}_2({\mathbb{R}})</m> such that <m>f(r) = x</m> and <m>f(s) = y</m>. 
+              This is not at all surprising, since the matrix <m>x</m> represents rotation by <m>2 \pi/n</m> radians counter-clockwise and <m>y</m> represents reflection about the <m>y</m>-axis. 
+              Indeed, one could define <m>D_{2n}</m> as the subgroup of <m>\operatorname{GL}_2({\mathbb{R}})</m> consisting of elements <m>1, x, \dots, x^{n-1}, y, xy \cdots, x^{n-1}y</m>.
             </p>
           </example>
 
           <exercise xml:id="exe-d12-d6"><title>Another <m>D_{2n}</m> Mapping</title>
             <statement>
               <p>
-                Let <m>r,s \in D_{12}</m> and <m>r',s' \in D_6</m>, in order to distinguish them. Find a homomorphism from <m>D_{12}</m> to <m>D_6</m> with <m>f(r) = r', f(s) = s'</m> and prove that it is unique.
+                Let <m>r,s \in D_{12}</m> and <m>r',s' \in D_6</m>, in order to distinguish them. 
+                Find a homomorphism from <m>D_{12}</m> to <m>D_6</m> with <m>f(r) = r', f(s) = s'</m> and prove that it is unique.
               </p>
             </statement>
 
             <solution>
               <p>
-                <xref ref="prop-d2n-mapping"/> gives a group homomorhism <m>f: D_{12} \to D_6</m>. Let <m>r,s \in D_{12}</m> and <m>r',s' \in D_6</m>, in order to distinguish them. Then since <m>(r')^6 = ((r')^3)^2 = e^2= e</m>, there is a unique homomorphism <m>f</m> from <m>D_{12}</m> to <m>D_6</m> with <m>f(r) = r', f(s) = s'</m>. For example, <m>f(r^3s) = e</m>.
+                <xref ref="prop-d2n-mapping"/> gives a group homomorhism <m>f: D_{12} \to D_6</m>. 
+                Let <m>r,s \in D_{12}</m> and <m>r',s' \in D_6</m>, in order to distinguish them. 
+                Then since <m>(r')^6 = ((r')^3)^2 = e^2= e</m>, there is a unique homomorphism <m>f</m> from <m>D_{12}</m> to <m>D_6</m> with <m>f(r) = r', f(s) = s'</m>. 
+                For example, <m>f(r^3s) = e</m>.
               </p>
             </solution>
           </exercise>
@@ -3204,39 +3360,50 @@
 
             <blockquote><p><q>Madness is the exception in individuals and the rule in groups.</q></p><attribution>Friedrich Nietzsche</attribution></blockquote>
                 
-            <p>We zoom in now on the wondrous case in which a group can be generated by a single element.</p>
+            <p>
+              We zoom in now on the wondrous case in which a group can be generated by a single element.
+            </p>
 
             <definition xml:id="def-cyclic-group"><title>Cylic Group</title>
               <statement>
-                <p>If <m>G</m> is a generated by a single element, i.e. <m>G= \langle x \rangle</m> for some <m>x \in G</m>, then <m>G</m> is called a <em>cyclic group</em><idx><h>cyclic group</h></idx><idx><h>cyclic</h></idx>.</p>
+                <p>
+                  If <m>G</m> is a generated by a single element, i.e. <m>G= \langle x \rangle</m> for some <m>x \in G</m>, then <m>G</m> is called a <em>cyclic group</em><idx><h>cyclic group</h></idx><idx><h>cyclic</h></idx>.
+                </p>
 
-                <p>We use the notation <m>C_n</m> to denote an arbitrary cyclic group of order <m>n</m> and <m>C_\infty</m> to denote a cyclic group of infinite order.</p>
+                <p>
+                  We use the notation <m>C_n</m> to denote an arbitrary cyclic group of order <m>n</m> and <m>C_\infty</m> to denote a cyclic group of infinite order.
+                </p>
               </statement>
             </definition>
 
-            <p>Recalling <xref ref="lem-gensubgp"/>, we can describe the elements of a cylic group explicitely.</p>
+            <p>
+              Recalling <xref ref="lem-gensubgp"/>, we can describe the elements of a cylic group explicitely.
+            </p>
 
             <corollary xml:id="cor-cyclic-subgroup"><title>Elements of <m>\igen x</m></title>
               <statement>
-              <p>For an element <m>x</m> of <m>G</m>, the elements of <m>\langle x \rangle</m> can be described as: <m>\langle x\rangle=\{x^j \mid j\in \mathbb{Z}\}</m>.</p>
+                <p>
+                  For an element <m>x</m> of <m>G</m>, the elements of <m>\langle x \rangle</m> can be described as: <m>\langle x\rangle=\{x^j \mid j\in \mathbb{Z}\}</m>.
+                </p>
               </statement>
 
               <proof>
                 <p>
-                  By Lemma <xref ref="lem-gensubgp" />, the group <m>G</m> has the following elements <m>G=\{x^i \mid i\in \mathbb{Z}\}</m>. We show that
-                </p>
-
-                <p>
+                  By <xref ref="lem-gensubgp" />, the group <m>G</m> has the following elements <m>G=\{x^i \mid i\in \mathbb{Z}\}</m>. 
+                  We show that
                   <ul>
                     <li>
                       <p>
-                        <m>|G|\geq n</m> by showing the elements <m>x^0, x^1, \dots, x^{n-1}</m> are distinct. Indeed, if <m>0\leq i&lt;j&lt;n</m> and <m>x^i=x^j</m> then <m>x^{j-i}=e</m> and <m>1\leq j-i&lt;n</m>, contradicting the minimality of the order of <m>x</m>.
+                        <m>|G|\geq n</m> by showing the elements <m>x^0, x^1, \dots, x^{n-1}</m> are distinct. 
+                        Indeed, if <m>0\leq i&lt;j&lt;n</m> and <m>x^i=x^j</m> then <m>x^{j-i}=e</m> and <m>1\leq j-i&lt;n</m>, contradicting the minimality of the order of <m>x</m>.
                       </p>
                     </li>
 
                     <li>
                       <p>
-                        <m>|G|\leq n</m> by showing <m>G\subseteq\{x^0, x^1, \dots, x^{n-1}\}</m> (this implies <m>G=\{e,x,\ldots,x^{n-1}\}</m>). Indeed, for any <m>m\in \mathbb{Z}</m> division by <m>n</m> yields integers <m>q,r</m> with <m>0\leq r\leq n-1</m> such that <m>m=nq+r</m>. Then <m>x^m=x^{nq+r}=(x^n)^qx^r=x^r\in\{x^0, x^1, \dots, x^{n-1}\}</m>.
+                        <m>|G|\leq n</m> by showing <m>G\subseteq\{x^0, x^1, \dots, x^{n-1}\}</m> (this implies <m>G=\{e,x,\ldots,x^{n-1}\}</m>). 
+                        Indeed, for any <m>m\in \mathbb{Z}</m> division by <m>n</m> yields integers <m>q,r</m> with <m>0\leq r\leq n-1</m> such that <m>m=nq+r</m>. 
+                        Then <m>x^m=x^{nq+r}=(x^n)^qx^r=x^r\in\{x^0, x^1, \dots, x^{n-1}\}</m>.
                       </p>
                     </li>
                   </ul>
@@ -3244,37 +3411,42 @@
               </proof>
             </corollary>
 
-            <p>One quick way of seeing if a finite group is cyclic is to find an element with the same order as the group.</p>
+            <p>
+              One quick way of seeing if a finite group is cyclic is to find an element with the same order as the group.
+            </p>
 
             <proposition xml:id="prop-cyclic-equivalencies"><title>Cyclic iff Element of Order <m>|G|</m></title>
               <statement>
-                <p>Let <m>G</m> be a finite group. Then <m>G</m> is cyclic if and only if there exists an <m>x\in G</m> such that <m>|x|=|G|</m></p>
+                <p>
+                  Let <m>G</m> be a finite group. 
+                  Then <m>G</m> is cyclic if and only if there exists an <m>x\in G</m> such that <m>|x|=|G|</m>
+                </p>
               </statement>
             </proposition>
 
             <example xml:id="ex-cyclic-examples"><title>Examples of Cyclic Groups</title>
               <statement>
-              <p>
-                <ol>
-                  <li>
-                    <p>
-                      <m>(\Z,+)</m> is a cyclic group.
-                    </p>
-                  </li>
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        <m>(\Z,+)</m> is a cyclic group.
+                      </p>
+                    </li>
 
-                  <li>
-                    <p>
-                      <m>(\Z/n,+)</m> is a cyclic group.
-                    </p>
-                  </li>
+                    <li>
+                      <p>
+                        <m>(\Z/n,+)</m> is a cyclic group.
+                      </p>
+                    </li>
 
-                  <li>
-                    <p>
-                      The group <m>L=\{1,-1,i,-i\}</m> is cyclic.
-                    </p>
-                  </li>
-                </ol>
-              </p>
+                    <li>
+                      <p>
+                        The group <m>L=\{1,-1,i,-i\}</m> is cyclic.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
               </statement>
 
               <answer>
@@ -3303,7 +3475,8 @@
             </example>
 
             <exercise xml:id="exe-not-cyclic"><title>Not Quite Cyclic Groups</title>
-              <p><ol>
+              <p>
+                <ol>
                   <li>
                     <p>
                       Prove that <m>(\mathbb Q, +)</m> is not a cyclic group.
@@ -3315,28 +3488,39 @@
                       Prove that <m>\operatorname{GL}_2(\mathbb Z/2)</m> is not cyclic.
                     </p>
                   </li>
-              </ol></p>
+                </ol>
+              </p>
             </exercise>
 
-            <p>Generators are not unique.</p>
+            <p>
+              Generators are not unique.
+            </p>
 
             <exercise xml:id="exe-non-unique-cyclic-generators"><title>Cyclic Generators are not Unique</title> 
               <statement>
-                <p>Let <m>G=\langle x\rangle</m> be a cyclic group. Then <m>G=\langle x^{-1}\rangle</m>.</p>
+                <p>
+                  Let <m>G=\langle x\rangle</m> be a cyclic group. 
+                  Then <m>G=\langle x^{-1}\rangle</m>.
+                </p>
               </statement>
             </exercise>
 
-            <p>Here is a more general criteria for determining when an element of a cyclic group is a generator.</p>
+            <p>
+              Here is a more general criteria for determining when an element of a cyclic group is a generator.
+            </p>
 
             <theorem xml:id="thm-cyclic-criteria"><title>Criteria for Cyclic Generators</title>
               <statement>
                 <p>
-                  Let <m>G=\igen x</m> be a cyclic group of order <m>n</m>, and let <m>y=x^m\in G</m>. Then <m>y</m> generates <m>G</m> if and only if <m>\gcd(n,m)=1</m>.
+                  Let <m>G=\igen x</m> be a cyclic group of order <m>n</m>, and let <m>y=x^m\in G</m>. 
+                  Then <m>y</m> generates <m>G</m> if and only if <m>\gcd(n,m)=1</m>.
                 </p>
               </statement>
             </theorem>
 
-            <p>Conveniently enough, cyclic groups are always abelian.</p>
+            <p>
+              Conveniently enough, cyclic groups are always abelian.
+            </p>
       
             <theorem xml:id="thm-cyclic-abelian"><title>Cyclic Groups are Abelian</title>
               <statement>
@@ -3349,14 +3533,26 @@
             <example xml:id="ex-group-of-unity"><title>Roots of Unity</title>
               <p>
                 For a fixed <m>n \geq 1</m>, 
-                <me>\mu_n := \{z \in \mathbb{C}\mid z^n = 1\}</me> 
-                is a subgroup of <m>(\mathbb{C}\setminus \{0\}, \cdot)</m>. Since <m>\|z\|^n = \| z^n \|</m> and so if <m>z \in \mu</m>, then <m>\|z\| = 1</m> and hence <m>z = e^{ri}</m> for some real number <m>r</m>. Moreover, <m>1 = z^n = e^{nri}</m> implies that <m>nr</m> is an integer multiple of <m>2 \pi</m>. It follows that 
-                <me>\mu_n = \{1, e^{2 \pi i/n}, e^{4 \pi i/n}, \cdots , e^{(n-1) 2 \pi i/n}\}</me> 
-                and that <m>e^{2 \pi i/n}</m> generates <m>\mu_n</m>. So, <m>\mu_n</m> is cyclic or order <m>n</m>. It is therefore isomorphic to <m>\mathbb{Z}/n</m>, via the map <m>\overline{j} \mapsto e^{2 j \pi i/n}</m>.
+                <me>
+                  \mu_n := \{z \in \mathbb{C}\mid z^n = 1\}
+                </me> 
+                is a subgroup of <m>(\mathbb{C}\setminus \{0\}, \cdot)</m>. 
+                Since <m>\|z\|^n = \| z^n \|</m> and so if <m>z \in \mu</m>, then <m>\|z\| = 1</m> and hence <m>z = e^{ri}</m> for some real number <m>r</m>. 
+                Moreover, <m>1 = z^n = e^{nri}</m> implies that <m>nr</m> is an integer multiple of <m>2 \pi</m>. 
+                It follows that 
+                <me>
+                  \mu_n = \{1, e^{2 \pi i/n}, e^{4 \pi i/n}, \cdots , e^{(n-1) 2 \pi i/n}\}
+                </me> 
+                and that <m>e^{2 \pi i/n}</m> generates <m>\mu_n</m>. 
+                So, <m>\mu_n</m> is cyclic or order <m>n</m>. 
+                It is therefore isomorphic to <m>\mathbb{Z}/n</m>, via the map <m>\overline{j} \mapsto e^{2 j \pi i/n}</m>.
               </p>
             </example>
 
-            <p>One of the first things one does when encountering a new group is to examine its subgroups. As it turns out, cyclic groups have some very special properties when it comes to subgroups, though proving them will be more technical than anything we have encountered thus far.</p>
+            <p>
+              One of the first things one does when encountering a new group is to examine its subgroups. 
+              As it turns out, cyclic groups have some very special properties when it comes to subgroups, though proving them will be more technical than anything we have encountered thus far.
+            </p>
 
             <theorem xml:id="thm-cyclic-divisors-and-subgroups"><title>Subgroups of Cyclic Groups</title>
               <statement>
@@ -3365,21 +3561,28 @@
                   <me>
                     \Psi : \{\text{divisors of } |G|\} \to \{\text{subgroups of } G\} \text{ given by } \Psi(d) = \langle x^{\frac{|G|}{d}}  \rangle
                   </me> 
-                  for each divisor <m>d</m> of <m>|G|</m>. Moreover, for each subgroup <m>H</m> of <m>G</m>, <m>\Psi^{-1}(H) = |H|</m>. In particular, all subgroups of <m>G</m> are cyclic and there is a unique subgroup of each order.  
+                  for each divisor <m>d</m> of <m>|G|</m>. 
+                  Moreover, for each subgroup <m>H</m> of <m>G</m>, <m>\Psi^{-1}(H) = |H|</m>. 
+                  In particular, all subgroups of <m>G</m> are cyclic and there is a unique subgroup of each order.  
                 </p>
               </statement>
 
               <proof>
                 <p>
                   <ol>
-
                     <li>
                       <p>
                         <em>Claim 1:</em> For any <m>\{e\}\neq H\leq G</m>, setting <m>k=\min\{i \mid i\in \mathbb{Z}, i&gt;0, g^i\in H\}</m> gives that <m>H=\langle g^k \rangle</m>.
                       </p>
               
                       <p>
-                        Since <m>H\subseteq G=\langle g\rangle</m> any element of <m>H</m> is of the form <m>g^m</m> for some <m>m\in \mathbb{Z}</m>. By the Division Theorem <m>m=kq+r</m> for some <m>r\in \mathbb{Z}</m>, <m>0\leq r&lt;k</m>. Since <m>g^m</m> and <m>g^k</m> are elements of <m>H</m>, <m>g^r=g^m(g^{k})^{-q}\in H</m>. Since <m>r&lt;k</m> and <m>g^r\in H</m>, by the minimality of <m>k</m> it follows that <m>r</m> cannot be positive and thus <m>r=0</m>. Therefore <m>m=kq</m> and we have shown that <m>H\subseteq \langle g^k \rangle</m>. The opposite containment follows because <m>g^k\in H</m> and <m>\langle g^k \rangle</m> is the smallest subgroup of <m>G</m> containing <m>g^k</m>. Thus <m>H=\langle g^k \rangle</m>.
+                        Since <m>H\subseteq G=\langle g\rangle</m> any element of <m>H</m> is of the form <m>g^m</m> for some <m>m\in \mathbb{Z}</m>. 
+                        By the Division Theorem <m>m=kq+r</m> for some <m>r\in \mathbb{Z}</m>, <m>0\leq r&lt;k</m>. 
+                        Since <m>g^m</m> and <m>g^k</m> are elements of <m>H</m>, <m>g^r=g^m(g^{k})^{-q}\in H</m>. 
+                        Since <m>r&lt;k</m> and <m>g^r\in H</m>, by the minimality of <m>k</m> it follows that <m>r</m> cannot be positive and thus <m>r=0</m>. 
+                        Therefore <m>m=kq</m> and we have shown that <m>H\subseteq \langle g^k \rangle</m>. 
+                        The opposite containment follows because <m>g^k\in H</m> and <m>\langle g^k \rangle</m> is the smallest subgroup of <m>G</m> containing <m>g^k</m>. 
+                        Thus <m>H=\langle g^k \rangle</m>.
                       </p>
               
                       <p>
@@ -3391,7 +3594,7 @@
                       </p>
               
                       <p>
-                        We have <m>(\Psi\circ\Phi)(d)=\left| \langle g^{\frac{|G|}{d}}\rangle\right|=\left| g^{\frac{|G|}{d}}\right|=\frac{|G|}{\operatorname{gcd}(|G|/d,|G|)}=\frac{|G|}{|G|/d}=d.</m>
+                        We have <m>(\Psi\circ\Phi)(d)=\left| \langle g^{\frac{|G|}{d}}\rangle\right|=\left| g^{\frac{|G|}{d}}\right|=\frac{|G|}{\operatorname{gcd}(|G|/d,|G|)}=\frac{|G|}{|G|/d}=d</m>.
                       </p>
               
                       <p>
@@ -3399,16 +3602,20 @@
                       </p>
               
                       <p>
-                        By Claim 1, any <m>H\leq G</m> is either <m>H=\{e\}</m>, for which <m>(\Phi\circ\Psi)(\{e\})=\Phi(1)=\langle g^{|G|} \rangle=\{e\}</m> or is of the form <m>H=\langle g^k \rangle</m>. In the latter case, setting <m>|G|=n</m> we have <m>|H|=|g^k|=\frac{n}{\operatorname{gcd}(n,k)}</m> and <m>(\Phi\circ\Psi)(H)=\langle g^{\frac{n}{n/\operatorname{gcd}(n,k)}} \rangle=\langle g^{\operatorname{gcd}(n,k)}\rangle.</m> It remains to show that <m>\langle g^{\operatorname{gcd}(n,k)}\rangle=\langle g^k\rangle=H</m>. By Bézout's Identity, <m>\operatorname{gcd}(n,k)=an+bk</m> for some integers <m>a,b</m>. Since <m>g^{\operatorname{gcd}(n,k)}=(g^n)^a(g^k)^b=e^a(g^k)^b=(g^k)^b\in \langle g^k \rangle</m> if follows that <m>\langle g^{\operatorname{gcd}(n,k)}\rangle \subseteq \langle g^k \rangle</m>. On the other hand <m>k</m> is a multiple of <m>\operatorname{gcd}(n,k)</m> so <m>g^k\in \langle g^{\operatorname{gcd}(n,k)}\rangle</m> and thus <m>\langle g^k \rangle \subseteq \langle g^{\operatorname{gcd}(n,k)}\rangle</m>. Finally, we conclude that <m>(\Phi\circ\Psi)(\langle g^k \rangle)=\langle g^{\operatorname{gcd}(n,k)}\rangle=\langle g^k \rangle</m> for any <m>k\in \mathbb{Z},k&gt;0</m>.
+                        By Claim 1, any <m>H\leq G</m> is either <m>H=\{e\}</m>, for which <m>(\Phi\circ\Psi)(\{e\})=\Phi(1)=\langle g^{|G|} \rangle=\{e\}</m> or is of the form <m>H=\langle g^k \rangle</m>. 
+                        In the latter case, setting <m>|G|=n</m> we have <m>|H|=|g^k|=\frac{n}{\operatorname{gcd}(n,k)}</m> and <m>(\Phi\circ\Psi)(H)=\langle g^{\frac{n}{n/\operatorname{gcd}(n,k)}} \rangle=\langle g^{\operatorname{gcd}(n,k)}\rangle.</m>.
+                        It remains to show that <m>\langle g^{\operatorname{gcd}(n,k)}\rangle=\langle g^k\rangle=H</m>. 
+                        By Bézout's Identity, <m>\operatorname{gcd}(n,k)=an+bk</m> for some integers <m>a,b</m>. 
+                        Since <m>g^{\operatorname{gcd}(n,k)}=(g^n)^a(g^k)^b=e^a(g^k)^b=(g^k)^b\in \langle g^k \rangle</m> if follows that <m>\langle g^{\operatorname{gcd}(n,k)}\rangle \subseteq \langle g^k \rangle</m>. 
+                        On the other hand <m>k</m> is a multiple of <m>\operatorname{gcd}(n,k)</m> so <m>g^k\in \langle g^{\operatorname{gcd}(n,k)}\rangle</m> and thus <m>\langle g^k \rangle \subseteq \langle g^{\operatorname{gcd}(n,k)}\rangle</m>. 
+                        Finally, we conclude that <m>(\Phi\circ\Psi)(\langle g^k \rangle)=\langle g^{\operatorname{gcd}(n,k)}\rangle=\langle g^k \rangle</m> for any <m>k\in \mathbb{Z},k&gt;0</m>.
                       </p>
               
                       <p>
                         Claims 2 and 3 establish that <m>\Phi</m> is a two sided inverse to <m>\Phi</m>, thus <m>\Phi</m> is a bijection.
-                        
                       </p>
                     </li>
-                
-                    </ol>
+                  </ol>
                 </p>
               </proof>
             </theorem>
@@ -3434,7 +3641,10 @@
               </statement>
             </exercise>
 
-            <p>Finally, we end with two results that will prove invaluable later in the course. Though we won't see them for some time, proving them now will be good practice and save us time later on.</p>
+            <p>
+              Finally, we end with two results that will prove invaluable later in the course. 
+              Though we won't see them for some time, proving them now will be good practice and save us time later on.
+            </p>
 
             <theorem xml:id="thm-aut-cn"><title><m>\Aut(C_n)</m></title>
               <statement>
@@ -3448,7 +3658,9 @@
               </statement>
             </theorem>
 
-            <p>In particular:</p>
+            <p>
+              In particular:
+            </p>
   
             <corollary xml:id="cor-aut-cp"><title><m>\Aut(C_p)</m></title>
               <statement>
@@ -3469,15 +3681,18 @@
             <proposition xml:id="prop-ump-cyclic"><title>UMP for Cyclic Groups</title>  
               <statement>
                 <p><idx><h>universal mapping property for a cyclic group</h></idx>
-                  Assume <m>G = \langle x \rangle</m> and let <m>H</m> be any group. If <m>|x| = n &lt; \infty</m>, then for each <m>y \in H</m> such that <m>y^n = e</m>, there is a unique group homomorphism 
+                  Assume <m>G = \langle x \rangle</m> and let <m>H</m> be any group. 
+                  If <m>|x| = n &lt; \infty</m>, then for each <m>y \in H</m> such that <m>y^n = e</m>, there is a unique group homomorphism 
                   <me>
                     f: G \to H
                   </me> 
-                  such that <m>f(x) = y</m>. If <m>|x| = \infty</m>, then for each <m>y \in H</m>, there is a unique group homomorphism 
+                  such that <m>f(x) = y</m>. 
+                  If <m>|x| = \infty</m>, then for each <m>y \in H</m>, there is a unique group homomorphism 
                   <me>
                     f: G \to H
                   </me> 
-                  such that <m>f(x) = y</m>. In both cases this unique group homomorphism is given by <m>f(x^i)=y^i</m> for any <m>i</m>.
+                  such that <m>f(x) = y</m>. 
+                  In both cases this unique group homomorphism is given by <m>f(x^i)=y^i</m> for any <m>i</m>.
                 </p>
               </statement>
 
@@ -3513,7 +3728,10 @@
                 </p>
         
                 <p>
-                  <em>Existence:</em> In either case, define <m>f(x^i) = y^i</m> for all relevant <m>i</m> (i.e., in the first case, for <m>0 \leq i \leq n-1</m> and in the second for all <m>i \in\mathbb{Z}</m>). We need to show this function is a well-defined group homomorphism. To see that <m>f</m> is well defined, suppose <m>x^i=x^j</m> for some <m>i,j\in \mathbb{Z}</m>. Then, since <m>x^{i-j}=e_G</m>, suing Lemma <xref provisional="prop96" /> or the definition for order we have 
+                  <em>Existence:</em> In either case, define <m>f(x^i) = y^i</m> for all relevant <m>i</m> (i.e., in the first case, for <m>0 \leq i \leq n-1</m> and in the second for all <m>i \in\mathbb{Z}</m>). 
+                  We need to show this function is a well-defined group homomorphism. 
+                  To see that <m>f</m> is well defined, suppose <m>x^i=x^j</m> for some <m>i,j\in \mathbb{Z}</m>. 
+                  Then, since <m>x^{i-j}=e_G</m>, suing Lemma <xref provisional="prop96" /> or the definition for order we have 
                   <me>
                     \begin{cases}
                     n\mid i-j &amp; \text{ if } |x|=n\\
@@ -3531,40 +3749,59 @@
                 </p>
         
                 <p>
-                  The homomorphism property is immediate: <m>f^(x^ix^j)=f(x^{i+j})=y^{i+j}=y^iy^j=f(x^i)f(x^j)</m>. ◻
+                  The homomorphism property is immediate: <m>f^(x^ix^j)=f(x^{i+j})=y^{i+j}=y^iy^j=f(x^i)f(x^j)</m>.
                 </p>
               </proof>
             </proposition>
       
-            <remark><p>This is a particular case of the universal mapping property of a presentation (which is covered in <xref ref="subsec-presentations"/>), since a cyclic group is either presented by <m>\langle x | x^n = e \rangle</m> or <m>\langle x \mid  -\rangle</m>.</p></remark>
+            <remark>
+              <p>
+                This is a particular case of the universal mapping property of a presentation (which is covered in <xref ref="subsec-presentations"/>), since a cyclic group is either presented by <m>\langle x | x^n = e \rangle</m> or <m>\langle x \mid  -\rangle</m>.
+              </p>
+            </remark>
       
             <theorem xml:id="thm-cyclic-classification"><title>Classification Theorem for Cyclic Groups</title>
               <statement>
                 <p><idx><h>classification of cyclic groups</h></idx>
-                  Every infinite cyclic group is isomorphic to <m>\Z</m>. Every cyclic group of order <m>n</m> is isomorphic to <m>Z/n</m>.
+                  Every infinite cyclic group is isomorphic to <m>\Z</m>. 
+                  Every cyclic group of order <m>n</m> is isomorphic to <m>Z/n</m>.
                 </p>
               </statement>
 
               <proof>
                 <p>
-                  Suppose <m>G = \langle x \rangle</m> with <m>|x| = n</m> or <m>|x| = \infty</m> and set <m>H=C_n</m> in the first case and <m>H=C_\infty</m> in the second case. Then by <xref ref="prop-ump-cyclic" />, there are homomorphisms <m>f: G \to H</m> and <m>g: G \to H</m> such that <m>f(x) = a</m> and <m>g(a) =x</m>. So <m>g \circ f</m> is an endomorphisms of <m>G</m> mapping <m>x</m> to <m>x</m>. But the identity map also has this property, and so the uniqueness clause gives <m>g \circ f = \text{id}_G</m>. Similarly, <m>f \circ g = \text{id}_H</m>.
+                  Suppose <m>G = \langle x \rangle</m> with <m>|x| = n</m> or <m>|x| = \infty</m> and set <m>H=C_n</m> in the first case and <m>H=C_\infty</m> in the second case. 
+                  Then by <xref ref="prop-ump-cyclic" />, there are homomorphisms <m>f: G \to H</m> and <m>g: G \to H</m> such that <m>f(x) = a</m> and <m>g(a) =x</m>. 
+                  So <m>g \circ f</m> is an endomorphism of <m>G</m> mapping <m>x</m> to <m>x</m>. 
+                  But the identity map also has this property, and so the uniqueness clause gives <m>g \circ f = \text{id}_G</m>. 
+                  Similarly, <m>f \circ g = \text{id}_H</m>.
                 </p>
               </proof>
             </theorem>
 
-            <paragraphs><title>Notation: <m>C_n</m> and <m>C_\infty</m></title><p>Moving forward, it is customary to denote <em>the</em> cyclic group of order <m>n</m> with the notation <m>C_n</m>. We similarly denote <em>the</em> infinite cyclic group <m>C_\infty</m>. Why the integers aren't enough for some people, I'll never know.</p></paragraphs>
+            <paragraphs><title>Notation: <m>C_n</m> and <m>C_\infty</m></title>
+              <p>
+                Moving forward, it is customary to denote <em>the</em> cyclic group of order <m>n</m> with the notation <m>C_n</m>. 
+                We similarly denote <em>the</em> infinite cyclic group <m>C_\infty</m>. 
+                Why the integers aren't enough for some people, I'll never know.
+              </p>
+            </paragraphs>
 
             <lemma xml:id="lem-cyclic-relprime"><title>Cyclic Groups of Relatively Prime Order</title>
               <statement>
-                <p>Prove that if <m>m,n</m> are positive integers such that <m>\gcd(m,n)=1</m> then there is a group isomorphism <m>C_{mn}=C_m\times C_n</m>.</p>
+                <p>
+                  Prove that if <m>m,n</m> are positive integers such that <m>\gcd(m,n)=1</m> then there is a group isomorphism <m>C_{mn}=C_m\times C_n</m>.
+                </p>
               </statement>
       
             </lemma>
 
             <theorem xml:id="thm-sunzi"><title>Sunzi's Remainder Theorem</title>
               <statement>
-                <p><idx><h>Sunzi's Remainder Theorem for groups</h></idx>
-                  Suppose <m>m = p_1^{e_1} \cdots p_l^{e_l}</m> for distinct primes <m>p_1, \dots, p_l</m>. Then there is an isomorphism 
+                <p>
+                  <idx><h>Sunzi's Remainder Theorem for groups</h></idx>
+                  Suppose <m>m = p_1^{e_1} \cdots p_l^{e_l}</m> for distinct primes <m>p_1, \dots, p_l</m>. 
+                  Then there is an isomorphism 
                   <me>
                     \phi: \mathbb{Z}/m \xrightarrow{\cong} \mathbb{Z}/(p_1^{e_1}) \times \cdots \times \mathbb{Z}/(p_l^{e_l})
                   </me> 
@@ -3578,17 +3815,25 @@
 
               <proof>
                 <p>
-                  Using <xref ref="prop-ump-cyclic"/>, we let <m>\psi: \mathbb{Z}\to \mathbb{Z}/(p_1^{e_1}) \times \cdots \times \mathbb{Z}/(p_l^{e_l})</m> be the unique homomorhism that sends <m>1</m> to <m>([1]_{{p_1}^{e_1}}, \cdots, [1]_{{p_l}^{e_l}})</m>. Then 
+                  Using <xref ref="prop-ump-cyclic"/>, we let <m>\psi: \mathbb{Z}\to \mathbb{Z}/(p_1^{e_1}) \times \cdots \times \mathbb{Z}/(p_l^{e_l})</m> be the unique homomorhism that sends <m>1</m> to <m>([1]_{{p_1}^{e_1}}, \cdots, [1]_{{p_l}^{e_l}})</m>. 
+                  Then 
                   <me>
                     \psi(j) = ([j]_{{p_1}^{e_1}}, \cdots, [j]_{{p_l}^{e_l}}).
                   </me> 
-                  Clearly <m>m \in \operatorname{Ker}(\psi)</m> and so <m>\langle m \rangle \subseteq \operatorname{Ker}(\psi)</m>. Conversely, if <m>\psi(n) = 0</m>, then <m>p_i^{e_i} \mid n</m> for all <m>i</m> and since <m>p_1^{e_1}, \dots, p_l^{e_l}</m> are pairwise relatively prime, it follows that <m>m \mid n</m>. This proves <m>\operatorname{Ker}(\psi) = \langle m \rangle</m>. The claim follows by the <xref text="title" ref="thm-fit-group"/>.
+                  Clearly <m>m \in \operatorname{Ker}(\psi)</m> and so <m>\langle m \rangle \subseteq \operatorname{Ker}(\psi)</m>. 
+                  Conversely, if <m>\psi(n) = 0</m>, then <m>p_i^{e_i} \mid n</m> for all <m>i</m> and since <m>p_1^{e_1}, \dots, p_l^{e_l}</m> are pairwise relatively prime, it follows that <m>m \mid n</m>. 
+                  This proves <m>\operatorname{Ker}(\psi) = \langle m \rangle</m>. 
+                  The claim follows by the <xref text="title" ref="thm-fit-group"/>.
                 </p>
               </proof>
             </theorem>
 
-            <remark><p>This theorem frequently goes by the name of The Chinese Remainder Theorem<idx><h>Chinese Remainder Theorem</h></idx>, but it has been remarked that this is somewhat like referencing the Pythagorean Theorem as The Greek Triangle Theorem or Fermat's Little Theorem as The French Power Postulate. In the interest of giving credit where credit is due, we include it here with the name of the 3rd-century Chinese mathematician, Sunzi, to whom the result is often attributed.</p></remark>
-              
+            <remark>
+              <p>
+                This theorem frequently goes by the name of The Chinese Remainder Theorem<idx><h>Chinese Remainder Theorem</h></idx>, but it has been remarked that this is somewhat like referencing the Pythagorean Theorem as The Greek Triangle Theorem or Fermat's Little Theorem as The French Power Postulate. 
+                In the interest of giving credit where credit is due, we include it here with the name of the 3rd-century Chinese mathematician, Sunzi, to whom the result is often attributed.
+              </p>
+            </remark>
 
           </subsection>
 
@@ -3657,7 +3902,11 @@
               </statement>
             </exercise>
       
-            <remark><p>Though mostly a matter of preference, we will focus primarily on left cosets.</p></remark>
+            <remark>
+              <p>
+                Though mostly a matter of preference, we will focus primarily on left cosets.
+              </p>
+            </remark>
 
             <proposition xml:id="prop-coset-properties"><title>Basic Coset Properties</title>
               <statement>
@@ -3749,7 +3998,8 @@
                 </p>
         
                 <p>
-                  <m>(2) \Rightarrow (6):</m> Suppose <m>x = yh</m> for some <m>h \in H</m>, then by <m>2. \Rightarrow 3.</m> we also have <m>y = xh''</m> for some <m>h'' \in H</m>. Then we have 
+                  <m>(2) \Rightarrow (6):</m> Suppose <m>x = yh</m> for some <m>h \in H</m>, then by <m>2. \Rightarrow 3.</m> we also have <m>y = xh''</m> for some <m>h'' \in H</m>. 
+                  Then we have 
                   <me>
                     xH=\{xh'\mid h'\in H\}=\{yhh'\mid h'\in H\}\subset yH \text{ and}
                   </me> 
@@ -3760,7 +4010,8 @@
                 </p>
         
                 <p>
-                  <m>(6) \Rightarrow (1):</m> Since <m>e_G=e_H\in H</m>, we have <m>x=xe_G\in xH</m> and <m>y=ye_G\in yH</m>. If <m>xH=yH</m> then, <m>x</m> and <m>y</m> belong to the same left coset.
+                  <m>(6) \Rightarrow (1):</m> Since <m>e_G=e_H\in H</m>, we have <m>x=xe_G\in xH</m> and <m>y=ye_G\in yH</m>. 
+                  If <m>xH=yH</m> then, <m>x</m> and <m>y</m> belong to the same left coset.
                 </p>
               </proof>
             </lemma>
@@ -3768,7 +4019,8 @@
             <lemma xml:id="lem-cosetpartition"><title>Cosets Partition a Group</title>
               <statement>
                 <p>
-                  For <m>H \leq G</m>, the collection of left cosets of <m>H</m> in <m>G</m> form a partition of <m>G</m>, and similarly for the collection of right cosets. That is,
+                  For <m>H \leq G</m>, the collection of left cosets of <m>H</m> in <m>G</m> form a partition of <m>G</m>, and similarly for the collection of right cosets. 
+                  That is,
       
                   <ul>
                     <li>
@@ -3784,22 +4036,30 @@
                     </li>
       
                   </ul>
-                  and similarly for right cosets. Moreover all left and right cosets have the same cardinality: <m>|xH| = |Hx|=|H|</m> for any <m>x\in G</m>.
+                  and similarly for right cosets. 
+                  Moreover all left and right cosets have the same cardinality: <m>|xH| = |Hx|=|H|</m> for any <m>x\in G</m>.
                 </p>
               </statement>
       
               <proof>
                 <p>
-                  Let me prove the assertions for right cosets. Clearly every element <m>g</m> of <m>G</m> belongs to at least one right coset, since <m>g \in Hg</m> (since <m>e \in H</m>). We need to show any two cosets are either identical or disjoint: if <m>Hx</m> and <m>Hy</m> share an element, then it follows from <m>(1)\Rightarrow (6)</m> of Lemma <xref ref="lem-cosetfacts" /> that <m>Hx=Hy</m>. This proves that the right cosets partition <m>G</m>. To see that all right cosets have the same cardinality as <m>H</m>, define a function 
+                  Let me prove the assertions for right cosets. 
+                  Clearly every element <m>g</m> of <m>G</m> belongs to at least one right coset, since <m>g \in Hg</m> (since <m>e \in H</m>). 
+                  We need to show any two cosets are either identical or disjoint: if <m>Hx</m> and <m>Hy</m> share an element, then it follows from <m>(1)\Rightarrow (6)</m> of Lemma <xref ref="lem-cosetfacts" /> that <m>Hx=Hy</m>. 
+                  This proves that the right cosets partition <m>G</m>. 
+                  To see that all right cosets have the same cardinality as <m>H</m>, define a function 
                   <me>
                     \rho: H \to Hg
                   </me> 
-                  by <m>\rho(h) = hg</m>. Clearly <m>\rho</m> is onto and if <m>\rho(h) = \rho(h')</m> then <m>hg = h'g</m> and hence <m>h = h'</m>, so that <m>\rho</m> is also one-to-one.
+                  by <m>\rho(h) = hg</m>. 
+                  Clearly <m>\rho</m> is onto and if <m>\rho(h) = \rho(h')</m> then <m>hg = h'g</m> and hence <m>h = h'</m>, so that <m>\rho</m> is also one-to-one.
                 </p>
               </proof>
             </lemma>
 
-            <p>As with any partition of a set, the collection of left cosets of <m>H</m> in <m>G</m> determine an equivalence relation on <m>G</m>, and similarly for the collection of right cosets.</p>
+            <p>
+              As with any partition of a set, the collection of left cosets of <m>H</m> in <m>G</m> determine an equivalence relation on <m>G</m>, and similarly for the collection of right cosets.
+            </p>
       
             <corollary xml:id="cor-left-right-cosets"><title>Number of Left and Right Cosets</title>
               <statement>
@@ -3818,12 +4078,15 @@
 
             <exercise xml:id="exe-left-right-cosets"><title>Number of Left and Right Cosets (Ininite Version)</title>
               <statement>
-                <p>Show that even if <m>G</m> is not finite the number of left and right cosets of a subgroup <m>H\leq G</m> is still the same.</p>
+                <p>
+                  Show that even if <m>G</m> is not finite the number of left and right cosets of a subgroup <m>H\leq G</m> is still the same.
+                </p>
               </statement>
 
               <hint>
                 <p>
-                  Consider the map <m>gH\mapsto Hg^{-1}</m> and show it's a bijection. Why is the inverse needed?
+                  Consider the map <m>gH\mapsto Hg^{-1}</m> and show it's a bijection. 
+                  Why is the inverse needed?
                 </p>
               </hint>
   
@@ -3848,22 +4111,31 @@
                 <me>
                   \{e, s\}, \{r, r^{-1}s\}, \{r^2, r^{-2}s\}, \cdots , \{r^{n-1}, r^{-n+1}s\}.
                 </me>
-                Note that these lists are <em>not</em> the same, but they do have the same length. We have <m>|G| = 2n</m>, <m>|H| = 2</m> and <m>[G:H] = n</m>.
+                Note that these lists are <em>not</em> the same, but they do have the same length. 
+                We have <m>|G| = 2n</m>, <m>|H| = 2</m> and <m>[G:H] = n</m>.
               </p>
             </example>
 
-            <p>The notion of index is most useful when it is finite, but note that this does not require that <m>G</m> to be finite. </p>
+            <p>
+              The notion of index is most useful when it is finite, but note that this does not require that <m>G</m> to be finite. 
+            </p>
 
             <example xml:id="ex-z-cosets"><title>Finite Index in Infinite Group</title>
-              <p>Let <m>G = \mathbb{Z}</m> and <m>H = 7\mathbb{Z}</m>. Then <m>[G:H] = 7</m> since the cosets are <m>H, 1 + H, 2 + H, \dots, 6 + H</m>. (Since <m>G</m> is abelian, left and right cosets are automatically the same.)</p>
+              <p>Let <m>G = \mathbb{Z}</m> and <m>H = 7\mathbb{Z}</m>. 
+              Then <m>[G:H] = 7</m> since the cosets are <m>H, 1 + H, 2 + H, \dots, 6 + H</m>. 
+              (Since <m>G</m> is abelian, left and right cosets are automatically the same.)</p>
             </example>
 
-            <p>This seems like it might be important.</p>
+            <p>
+              This seems like it might be important.
+            </p>
 
             <theorem xml:id="thm-index-tower"><title>The Index Tower</title>
               <statement>
                 <p>
-                  Let <m>G</m> be a group (possibly infinite) and <m>H \leq K</m> subgroups of <m>G</m>. Suppose <m>[G : H]</m> is finite. Prove that <m>[G : H] = [G : K][K : H]</m>.
+                  Let <m>G</m> be a group (possibly infinite) and <m>H \leq K</m> subgroups of <m>G</m>. 
+                  Suppose <m>[G : H]</m> is finite. 
+                  Then <m>[G : H] = [G : K][K : H]</m>.
                 </p>
               </statement>
             </theorem>
@@ -3878,10 +4150,15 @@
               <statement>
                 <p>
                   If <m>H</m> is a subgroup of a finite group <m>G</m>, then <m>|H|</m> divides <m>|G|</m>.
-                  <fn>Lagrange stated his version of this theorem in 1770, but the first complete proof was given by Pietro Abbati roughly 30 years later.</fn>
                 </p>
               </statement>
             </theorem>
+
+          <historical>
+            <p>
+              Lagrange stated his version of this theorem in 1770, but the first complete proof was given by Pietro Abbati roughly 30 years later.
+            </p>
+          </historical>
       
             <corollary xml:id="cor-lagrange"><title>Corollaries to Lagrange's Theorem</title>
               <statement>
@@ -3910,11 +4187,16 @@
               </statement>
             </corollary>
 
-            <p>Here are some more.</p>
+            <p>
+              Here are some more.
+            </p>
 
             <exercise xml:id="exe-nontrivial-subgroup">
               <statement>
-                <p>Let <m>G</m> be a group of composite order. Then <m>G</m> contains a non-trivial proper subgroup.</p>
+                <p>
+                  Let <m>G</m> be a group of composite order. 
+                  Then <m>G</m> contains a non-trivial proper subgroup.
+                </p>
               </statement>
             </exercise>
   
@@ -3924,7 +4206,11 @@
               </p>
             </exercise>
 
-            <p>If you can believe it, there's actually another important corollary to <xref text="title" ref="thm-lagrange"/>, but we'll cover it when its more relevant. Wouldn't want to spoil all the fun at once, right?<fn>To spoil all the fun at once, See: <xref ref="thm-order-p-cyclic"/></fn></p>
+            <p>
+              If you can believe it, there's actually another important corollary to <xref text="title" ref="thm-lagrange"/>, but we'll cover it when its more relevant. 
+              Wouldn't want to spoil all the fun at once, right?
+              <fn>To spoil all the fun at once, see: <xref ref="thm-order-p-cyclic"/></fn>
+            </p>
 
           </subsection> 
     
@@ -3936,15 +4222,23 @@
     
           <definition xml:id="def-normal-subgroup"><title>Normal Subgroup</title>
             <statement>
-              <p>A subgroup <m>N</m> of a group <m>G</m> is <em>normal</em> in <m>G</m>, written <m>N\nsg G</m>, if <m>gNg^{-1} = N</m> for all <m>g \in G</m>. </p>
+              <p>
+                A subgroup <m>N</m> of a group <m>G</m> is <em>normal</em> in <m>G</m>, written <m>N\nsg G</m>, if <m>gNg^{-1} = N</m> for all <m>g \in G</m>. 
+              </p>
             </statement>
           </definition>
 
-          <p>Normal subgroups are our next example of something that is <q>almost</q> abelian.</p>
+          <p>
+            Normal subgroups are our next example of something that is <q>almost</q> abelian.
+          </p>
 
           <exercise xml:id="exe-anything-but-normal"><title>Anything but Normal</title>
             <statement>
-              <p>Come up with a better name for normal subgroups than 'normal subgroup'. Give it some oomph. Make it <em>mean</em> something.</p>
+              <p>
+                Come up with a better name for normal subgroups than 'normal subgroup'. 
+                Give it some oomph. 
+                Make it <em>mean</em> something.
+              </p>
             </statement>
 
             <hint>
@@ -3953,27 +4247,29 @@
                 <ol>
                   <li>
                     <p>
-                      <em>Semiabelian </em>: Yes, its more letters, but so are semigroup, semisimple, semidirect, and semicircle. Imagine if we called all those things normal too! It would be a nightmare. And we would deserve it for our hubris.
+                      <em>Semiabelian </em>: Yes, its more letters, but so are semigroup, semisimple, semidirect, and semicircle. 
+                      Imagine if we called all those things normal too! 
+                      It would be a nightmare. 
+                      And we would deserve it for our hubris.
                     </p>
                   </li>
 
                   <li>
                     <p>
-                      <em>Ideal subgroup</em>: Look, its shorter! Normal subgroups and ideals parallel ideas in group and ring theory, and relabeling normal groups in this way would cement these similarities.
+                      <em>Ideal subgroup</em>: Look, its shorter! 
+                      Normal subgroups and ideals parallel ideas in group and ring theory, and relabeling normal groups in this way would cement these similarities.
                     </p>
                   </li>
                 </ol>
-                This author has recently become personally partial to the term 
-
               </p>
             </hint>
-            
           </exercise>
         
           <theorem xml:id="thm-equivdef-normal"><title>Equivalent Normal Definitions</title>
             <statement>
               <p>
-                Let <m>N</m> be a subgroup of a group <m>G</m>. The following are equivalent: 
+                Let <m>N</m> be a subgroup of a group <m>G</m>. 
+                The following are equivalent: 
                 <ol>
                   <li>
                     <p>
@@ -4061,7 +4357,8 @@
           <exercise xml:id="exe-normality-not-transitive"><title>Normality is not Transitive</title>
             <statement>
               <p>
-                Show that being a normal subgroup is not a transitive relation. In other words, find groups <m>K\leq H\leq G</m> such that <m>K\nsg H</m> and <m>H\nsg G</m>, but <m>K\not\nsg G</m>.
+                Show that being a normal subgroup is not a transitive relation. 
+                In other words, find groups <m>K\leq H\leq G</m> such that <m>K\nsg H</m> and <m>H\nsg G</m>, but <m>K\not\nsg G</m>.
               </p>
             </statement>
     
@@ -4077,14 +4374,17 @@
                 <me>
                   V=\{e, (1 2)(3 4), (1 3)(2 4), (1 4)(2 3)\}.
                 </me> 
-                From <xref ref="ex-normal-examples"/> we have <m>V \nsg S_4</m>. The group <m>V</m> has order <m>4</m>, making it ableian from <xref ref="exe-order-4-abelian"/>. Thus every subgroup of <m>V</m> is normal in <m>V</m> by <xref ref="ex-normal-examples"/>.
+                From <xref ref="ex-normal-examples"/> we have <m>V \nsg S_4</m>. 
+                The group <m>V</m> has order <m>4</m>, making it ableian from <xref ref="exe-order-4-abelian"/>. 
+                Thus every subgroup of <m>V</m> is normal in <m>V</m> by <xref ref="ex-normal-examples"/>.
               </p>
                 
               <p>
-                Now consider the subgroup <m>H = \{e,(12)(34)\}</m>. But <m>H</m> is not normal in <m>S_4</m>, since for example
-              <me>
-                (1 3) [(1 2)(3 4)] (1 3)^{-1} = (3 2)(1 4) \not\in H.
-              </me> 
+                Now consider the subgroup <m>H = \{e,(12)(34)\}</m>. 
+                But <m>H</m> is not normal in <m>S_4</m>, since for example
+                <me>
+                  (1 3) [(1 2)(3 4)] (1 3)^{-1} = (3 2)(1 4) \not\in H.
+                </me> 
               </p>
             </solution>
             
@@ -4106,7 +4406,9 @@
             </statement>
           </exercise>
 
-          <p>Here is a theorem that will prove exceedingly useful all the way down in <xref ref="ch-sylow"/></p>
+          <p>
+            Here is a theorem that will prove exceedingly useful all the way down in <xref ref="ch-sylow"/>
+          </p>
     
           <theorem xml:id="thm-unique-order-subgroup-normal"><title>Unique Order Subgroup is Normal</title>
             <statement>
@@ -4114,19 +4416,28 @@
             </statement>
           </theorem>
 
-          <p>We also have some criteria for when a generated subgroup is normal.</p>
+          <p>
+            We also have some criteria for when a generated subgroup is normal.
+          </p>
 
           <exercise xml:id="exe-normality-and-generated-subgroups"><title>Normality and Generated Subgroups</title>
             <statement>
-              <p>Let <m>G</m> be a group and <m>S</m> a subset of <m>G</m>. Let <m>H=\langle S \rangle</m>. Prove that <m>H\nsg G</m> if and only if <m>gsg^{-1}\in H</m> for every <m>s\in S</m> and <m>g\in G</m>.</p>
+              <p>
+                Let <m>G</m> be a group and <m>S</m> a subset of <m>G</m>. 
+                Suppose <m>H=\langle S \rangle</m>. 
+                Prove <m>H\nsg G</m> if and only if <m>gsg^{-1}\in H</m> for every <m>s\in S</m> and <m>g\in G</m>.
+              </p>
             </statement>
           </exercise>
 
-          <p>Or, if we're tired of generating subgroups that aren't as normal as we'd like them to be, we can just generate a normal subgroup explicitely.</p>
+          <p>
+            Or, if we're tired of generating subgroups that aren't as normal as we'd like them to be, we can generate a normal subgroup explicitely.
+          </p>
 
           <exercise xml:id="exe-generated-normal-subgroup"><title>Generated Normal Subgroup</title>
             <p>
-              Let <m>G</m> be a group and let <m>A \subseteq G</m> be a set. The <em>normal subgroup generated by <m>A</m></em>, denoted <m>\langle A \rangle ^N</m>, is the intersection of all the normal subgroups of <m>G</m> that contain <m>A</m>. 
+              Let <m>G</m> be a group and let <m>A \subseteq G</m> be a set. 
+              The <em>normal subgroup generated by <m>A</m></em>, denoted <m>\langle A \rangle ^N</m>, is the intersection of all the normal subgroups of <m>G</m> that contain <m>A</m>. 
               <ol>
                 <li>
                   <p>
@@ -4146,13 +4457,16 @@
             </p>
           </exercise>
 
-          <p>We conclude this section by taking a sneak peak at the interactions between the index of a subgroup and its normality.</p>
+          <p>
+            We conclude this section by taking a sneak peak at the interactions between the index of a subgroup and its normality.
+          </p>
 
           <proposition xml:id="exe-subgroup-index-2-normal"><title>Subgroup of Index <m>2</m> is Normal</title>
             <statement>
-            <p>
-              Show that any subgroup of index two is normal. This means: show that if <m>G</m> is a group, <m>H</m> is a subgroup and <m>[G:H]=2</m>, i.e the number of left (or right) cosets of <m>H</m> in <m>G</m> is two, then <m>H</m> is normal. 
-            </p>
+              <p>
+                Show that any subgroup of index two is normal. 
+                This means: show that if <m>G</m> is a group, <m>H</m> is a subgroup and <m>[G:H]=2</m>, i.e the number of left (or right) cosets of <m>H</m> in <m>G</m> is two, then <m>H</m> is normal. 
+              </p>
             </statement>
 
             <proof>
@@ -4162,7 +4476,11 @@
             </proof>
           </proposition>
 
-          <remark><p>This is a specific case of a much more powerful theorem that we will prove later on, we can tackle this smaller piece with the tools we have now.</p></remark>
+          <remark>
+            <p>
+              This is a specific case of a much more powerful theorem that we will prove later on, we can tackle this smaller piece with the tools we have now.
+            </p>
+          </remark>
 
           <exercise xml:id="exe-lagrange-converse-false"><title>Converse to Lagrange's Theorem is False</title>
 
@@ -4180,21 +4498,27 @@
 
             <solution>
               <p>
-                Consider <m>G=A_4</m>, and note that <m>|G|=12</m>. Suppose by way of contradiction that <m>H</m> is subgroup of <m>G</m> such that <m>|H|=6</m>. Notice that <m>[G:H]=2</m>, the smallest prime dividing the order of <m>G</m>, making <m>H</m> normal in <m>G</m>.
+                Consider <m>G=A_4</m>, and note that <m>|G|=12</m>. 
+                Suppose by way of contradiction that <m>H</m> is subgroup of <m>G</m> such that <m>|H|=6</m>. 
+                Notice that <m>[G:H]=2</m>, the smallest prime dividing the order of <m>G</m>, making <m>H</m> normal in <m>G</m>.
               </p>
   
               <p>
-                As there are eight <m>3</m>-cycles in <m>G</m>, there exists some <m>3</m>-cycle, <m>\sigma</m>, such that <m>\s\not\in H</m>. Consider then <m>H, \s H,</m> and <m>\s^2 H</m> in <m>G/H</m>. Since <m>|G/H|=\frac{|G|}{|H|}=2</m>, it must be the case that either <m>\s^2H=\s H</m> or <m>\s^2H=H</m>.
+                As there are eight <m>3</m>-cycles in <m>G</m>, there exists some <m>3</m>-cycle, <m>\sigma</m>, such that <m>\s\not\in H</m>. 
+                Consider then <m>H, \s H,</m> and <m>\s^2 H</m> in <m>G/H</m>. 
+                Since <m>|G/H|=\frac{|G|}{|H|}=2</m>, it must be the case that either <m>\s^2H=\s H</m> or <m>\s^2H=H</m>.
               </p>
   
               <p>
                 <ul>
                   <li>
-                    If <m>\s^2 H=H</m> then <m>\s^2\in H</m>. As <m>|\s|=3</m> we have <m>\s^2=\s\inv</m>, but as <m>H</m> is a subgroup this would mean <m>(\s\inv)\inv=\s\in H</m>, which is not the case.
+                    If <m>\s^2 H=H</m> then <m>\s^2\in H</m>. 
+                    As <m>|\s|=3</m> we have <m>\s^2=\s\inv</m>, but as <m>H</m> is a subgroup this would mean <m>(\s\inv)\inv=\s\in H</m>, which is not the case.
                   </li>
   
                   <li>
-                    If <m>\s^2 H=\s H</m> then <m>\s\inv\s^2\in H</m>, but <m>\s\inv\s^2=\s</m>, and so we have a contradiction. Thus <m>H</m> cannot exist, and <m>G</m> has no subgroup of order <m>6</m>.
+                    If <m>\s^2 H=\s H</m> then <m>\s\inv\s^2\in H</m>, but <m>\s\inv\s^2=\s</m>, and so we have a contradiction. 
+                    Thus <m>H</m> cannot exist, and <m>G</m> has no subgroup of order <m>6</m>.
                   </li>
                 </ul>
               </p>
@@ -4203,7 +4527,9 @@
 
           <proposition xml:id="exe-rel-prime-index-and-order"><title>Relatively Prime Index and Order</title>
             <statement>
-              <p>Let <m>G</m> be a finite group, <m>H</m> and <m>N</m> subgroups such that <m>|H|</m> and <m>[G : N]</m> are relatively prime and <m>N\nsg G</m>. Prove that <m>H \subseteq N</m>.</p>
+              <p>
+                Let <m>G</m> be a finite group, <m>H</m> and <m>N</m> subgroups such that <m>|H|</m> and <m>[G : N]</m> are relatively prime and <m>N\nsg G</m>. 
+                Then <m>H \subseteq N</m>.</p>
             </statement>
           </proposition>
           
@@ -4359,7 +4685,12 @@
               <attribution>Vincent Van Gogh</attribution>
             </blockquote>
       
-            <p>In previous sections we have spent time discussing the existence and properties of cosets, but we have yet to lump them all together into one set. If one were to do so, a natural question to ask would be when such a set defines a group in its own right. Is it always? It sure would be nice if it was always.</p>
+            <p>
+              In previous sections we have spent time discussing the existence and properties of cosets, but we have yet to lump them all together into one set. 
+              If one were to do so, a natural question to ask would be when such a set defines a group in its own right. 
+              Is it always? 
+              It sure would be nice if it was always.
+            </p>
 
             <exercise><title>It is Not Always</title>
               <p>
@@ -4367,7 +4698,11 @@
               </p>
             </exercise>
 
-            <p>Darn. Is it ever? It sure would be nice if it was at least sometimes. </p>
+            <p>
+              Darn. 
+              Is it sometimes? 
+              It sure would be nice if it was at least sometimes. 
+            </p>
 
             <exercise><title>It is Sometimes</title>
               <p>
@@ -4375,7 +4710,14 @@
               </p>
             </exercise>
 
-            <p>Woohoo! So the set of cosets forms a group sometimes. But when? As it turns out (serendipidous, I know) we discovered the exact property a subgroup needs to ensure its cosets form a well-defined group. At least, normally they do...</p>
+            <p>
+              Woohoo! 
+              So the set of cosets forms a group sometimes. 
+              But when? 
+              As it turns out (serendipidous, I know) we discovered the exact property a subgroup needs to ensure its cosets form a well-defined group. 
+              At least, normally they do...
+              <fn>Get it?</fn>
+            </p>
             
             <definition xml:id="def-quotient-group"><title>Quotient Group</title>
               <statement>
@@ -4385,34 +4727,46 @@
               </statement>
             </definition>
 
-            <p>Before we get too ahead of ourselves, we should probably make sure that this thing is actually a well-defined bona-fide group. Don't take my word for it, I made this for fun, I could always be lying.</p>
+            <p>
+              Before we get too ahead of ourselves, we should probably verify that this thing is actually a well-defined bona-fide group. 
+              Don't take my word for it, I made this for fun, I could always be lying.
+            </p>
       
             <theorem xml:id="thm-quotient-iff-normal"><title>Quotients and Normal Subgroups</title>
               <creator>1889</creator>
               <statement>
                 <p>
-                  Let <m>N\leq G</m>. Then <m>G/N</m> is a group if and only if <m>N\nsg G</m>.
+                  Let <m>N\leq G</m>. 
+                  Then <m>G/N</m> is a group if and only if <m>N\nsg G</m>.
                 </p>
               </statement>
             </theorem>
       
-            <remark><p>Don't forget that the set <m>G/H</m> exists for <em>any</em> subgroup <m>H\leq G</m>. However, this set only satisfies the axioms of a group when the subgroup is normal.</p></remark>
+            <remark>
+              <p>
+                Don't forget that the set <m>G/H</m> exists for <em>any</em> subgroup <m>H\leq G</m>. 
+                However, this set only satisfies the axioms of a group when the subgroup is normal.
+              </p>
+            </remark>
 
             <example>
               <p>
-                Let <m>H = \langle n \rangle</m> in <m>G = (\mathbb{Z}, +)</m>. It is automatic that <m>H</m> is normal since <m>G</m> is abelian. The quotient group <m>G/H</m> is our old friend <m>(\mathbb{Z}/n, +)</m>.
+                Let <m>H = \langle n \rangle</m> in <m>G = (\mathbb{Z}, +)</m>. 
+                It is automatic that <m>H</m> is normal since <m>G</m> is abelian. 
+                The quotient group <m>G/H</m> is our old friend <m>(\mathbb{Z}/n, +)</m>.
               </p>
             </example>
             
              <exercise xml:id="exe-mod-n-iso">
               <p>
-                Argue amongst yourselves what the 'best' notation for the integers <m>\mod n</m> Should be: <m>\Z/n,</m> <m>\Z/n\Z,</m>, <m>\Z/n,</m>, <m>\Z_n,</m>, <m>\Z/\igen n</m>, <m>\frac{\Z}{n},</m> or whatever other horrors you can conjure.
+                Argue amongst yourselves what the 'best' notation for the integers <m>\mod n</m> should be: <m>\Z/n,</m> <m>\Z/n\Z,</m>, <m>\Z/n,</m>, <m>\Z_n,</m>, <m>\Z/\igen n</m>, <m>\frac{\Z}{n},</m> or whatever other horrors you can conjure.
               </p>
             </exercise>
 
             <example>
               <p>
-                <m>H = \langle r \rangle</m> is a normal subgroup of <m>D_{2n}</m>. The quotient <m>D_{2n}/H</m> has just two elements, <m>H</m> and <m>sH</m>.
+                <m>H = \langle r \rangle</m> is a normal subgroup of <m>D_{2n}</m>. 
+                The quotient <m>D_{2n}/H</m> has just two elements, <m>H</m> and <m>sH</m>.
               </p>
             </example>
             
@@ -4420,7 +4774,8 @@
               <title>Quotient of Commutator Subgroup</title>
                 <statement>
                   <p>
-                    Let <m>G</m> be a group with commutator subgroup <m>G'</m>. Prove <m>G/G'</m> is abelian.
+                    Let <m>G</m> be a group with commutator subgroup <m>G'</m>. 
+                    Prove <m>G/G'</m> is abelian.
                   </p>
                 </statement>
             </exercise>
@@ -4434,15 +4789,23 @@
 
               <solution>
                 <p>
-                  Define a map <m>f: F \setminus \{0\}\to G/H</m> as the composition of <me>F \setminus \{0\} \xrightarrow{g} \operatorname{GL}_n(F) \twoheadrightarrow\operatorname{GL}_n(F)/\operatorname{SL}_n(F)</me> where <m>g(x)</m> is the <m>n \times n</m> matrix with <m>x</m> in the upper-left corner, <m>1</m>'s along the rest of the diaganal, and <m>0</m>'s everywhere else, and the second map is the canonical surjection. Then <m>g</m> is easily seen to be a homomorphism and hence so is <m>f</m> (since the composition of homomorhisms is a homomorphism). I claim <m>f</m> is one-to-one and onto. For any <m>A \in \operatorname{GL}_n(F)</m>, let <m>x = \det(A)</m> and note that <m>g(x)^{-1} \cdot A</m> has determinant <m>1</m> and thus belongs to <m>\operatorname{SL}_n(F)</m>. So <m>f(x) = g(x)\operatorname{SL}_n(F) = A \operatorname{SL}_n(F)</m>. This proves <m>f</m> is onto. If <m>f(x) = e</m>, then <m>g(x) \operatorname{SL}_n(F) = \operatorname{SL}_n(F)</m> and so <m>g(x) \in \operatorname{SL}_n(F)</m>. Clearly this means <m>x = 1</m>.
+                  Define a map <m>f: F \setminus \{0\}\to G/H</m> as the composition of <me>F \setminus \{0\} \xrightarrow{g} \operatorname{GL}_n(F) \twoheadrightarrow\operatorname{GL}_n(F)/\operatorname{SL}_n(F)</me> where <m>g(x)</m> is the <m>n \times n</m> matrix with <m>x</m> in the upper-left corner, <m>1</m>'s along the rest of the diaganal, and <m>0</m>'s everywhere else, and the second map is the canonical surjection. 
+                  Then <m>g</m> is easily seen to be a homomorphism and hence so is <m>f</m> (since the composition of homomorhisms is a homomorphism). 
+                  I claim <m>f</m> is one-to-one and onto. 
+                  For any <m>A \in \operatorname{GL}_n(F)</m>, let <m>x = \det(A)</m> and note that <m>g(x)^{-1} \cdot A</m> has determinant <m>1</m> and thus belongs to <m>\operatorname{SL}_n(F)</m>. 
+                  So <m>f(x) = g(x)\operatorname{SL}_n(F) = A \operatorname{SL}_n(F)</m>. 
+                  This proves <m>f</m> is onto. 
+                  If <m>f(x) = e</m>, then <m>g(x) \operatorname{SL}_n(F) = \operatorname{SL}_n(F)</m> and so <m>g(x) \in \operatorname{SL}_n(F)</m>. 
+                  Clearly this means <m>x = 1</m>.
                 </p>
               </solution>
             </exercise>
 
-            <p>Recalling <xref text="title" ref="thm-lagrange"/>, we have the following corollary:</p>
+            <p>
+              Recalling <xref text="title" ref="thm-lagrange"/>, we have the following corollary:
+            </p>
       
-            <corollary xml:id="cor-order-of-quotient">
-              <title>Order of Quotient Groups</title>
+            <corollary xml:id="cor-order-of-quotient"><title>Order of Quotient Groups</title>
               <statement>
                 <p>
                   If <m>G</m> is finite we have <m>\left | G/N\right |=\frac{|G|}{|N|}</m>.
@@ -4469,7 +4832,8 @@
       
               <proof>
                 <p>
-                  Surjectivity is immediate from the definition. The group homomorphism property follows from the computation below which uses the definition of <m>\pi</m> and the rule for multiplying cosets in <m>G/N</m>: 
+                  Surjectivity is immediate from the definition. 
+                  The group homomorphism property follows from the computation below which uses the definition of <m>\pi</m> and the rule for multiplying cosets in <m>G/N</m>: 
                   <me>
                     \pi(gg')=(gg')N=gN\cdot g'N=\pi(g)\pi(g').
                   </me> 
@@ -4478,8 +4842,7 @@
               </proof>
             </lemma>
       
-            <theorem xml:id="thm-norm-iff-ker">
-              <title>Normal Subgroup iff Kernel</title>
+            <theorem xml:id="thm-norm-iff-ker"><title>Normal Subgroup iff Kernel</title>
               <statement>
                 <p>
                   A subgroup <m>N</m> of a group <m>G</m> is normal in <m>G</m> if and only if <m>N</m> is the kernel of a homomorphism with domain <m>G</m>.
@@ -4496,7 +4859,8 @@
             <theorem xml:id="thm-gz-cyclic">
               <statement>
                 <p>
-                  Let <m>G</m> be a group with center <m>Z(G)</m>. If <m>G/Z(G)</m> is cyclic, then <m>G</m> is abelian.
+                  Let <m>G</m> be a group with center <m>Z(G)</m>. 
+                  If <m>G/Z(G)</m> is cyclic, then <m>G</m> is abelian.
                 </p>
               </statement>
             </theorem>
@@ -4514,36 +4878,51 @@
 
           <subsection xml:id="subsec-isomorphism-thms"><title>The Isomorphism Theorems</title>
 
-            <blockquote><p><q>If it's your job to eat a frog, it's best to do it first thing in the morning. And If it's your job to eat two frogs, it's best to eat the biggest one first.</q></p><attribution>Mark Twain</attribution></blockquote>
+            <blockquote>
+              <p>
+                <q>
+                  If it's your job to eat a frog, it's best to do it first thing in the morning. 
+                  And If it's your job to eat two frogs, it's best to eat the biggest one first.
+                </q>
+              </p>
+
+              <attribution>
+                Mark Twain
+              </attribution>
+            </blockquote>
       
-            <p>We come to the so-called Isomorphism Theorems.</p>
+            <p>
+              We come to the so-called Isomorphism Theorems.
+            </p>
       
             <theorem xml:id="thm-ump-quotient"><title>UMP for Quotients</title>
               <statement>
                 <p>
-                  Let <m>G</m> be a group and <m>N</m> a normal subgroup. If <m>f: G \to H</m> is a homomorphism of groups such that <m>N \subseteq \operatorname{Ker}(f)</m>, then
+                  Let <m>G</m> be a group and <m>N</m> a normal subgroup. 
+                  If <m>f: G \to H</m> is a homomorphism of groups such that <m>N \subseteq \operatorname{Ker}(f)</m>, then
                 </p>
       
-                <p><ol>
-                  <li>
-                    <p>
-                  there exists a unique group homomorphism <m>\overline{f}: G/N \to H</m> such that the composition of <m>\overline{f}</m> and the quotient map <m>{\pi}: G  \twoheadrightarrow G/N</m> is <m>f</m>.
-                </p>
-                  </li>
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        there exists a unique group homomorphism <m>\overline{f}: G/N \to H</m> such that the composition of <m>\overline{f}</m> and the quotient map <m>{\pi}: G\twoheadrightarrow G/N</m> is <m>f</m>.
+                      </p>
+                    </li>
       
-                  <li>
-                          <p>
-                  If <m>f</m> is onto, then <m>\overline{f}</m> is onto.
-                </p>
-                  </li>
+                    <li>
+                      <p>
+                        If <m>f</m> is onto, then <m>\overline{f}</m> is onto.
+                      </p>
+                    </li>
       
-                  <li>
-                          <p>
-                  Moreover, <m>\operatorname{Ker}(\overline{f}) = \operatorname{Ker}(f)/N = \{ g N \mid f(g) = e_H\}.</m>
+                    <li>
+                      <p>
+                        Moreover, <m>\operatorname{Ker}(\overline{f}) = \operatorname{Ker}(f)/N = \{ g N \mid f(g) = e_H\}.</m>
+                      </p>
+                    </li>   
+                  </ol>
                 </p>
-                  </li>
-      
-                </ol></p>
       
               </statement>
       
@@ -4553,11 +4932,13 @@
                   <ol>
                     <li>
                       <p>
-                        If such a <m>\overline{f}</m> exists, it is necessarily unique since <m>G \twoheadrightarrow G/N</m> is onto. In fact, if <m>f=\pi\circ \overline{f}</m> then <m>\overline{f}</m> has to be given by the formula 
+                        If such a <m>\overline{f}</m> exists, it is necessarily unique since <m>G \twoheadrightarrow G/N</m> is onto. 
+                        In fact, if <m>f=\pi\circ \overline{f}</m> then <m>\overline{f}</m> has to be given by the formula 
                         <me>
                           \overline{f}(gN) = f(g).
                         </me> 
-                        We now need to show that this formula determines a well-defined homomorphism: If <m>xN = yN</m>, then <m>y^{-1}x \in N \subseteq \operatorname{Ker}(f)</m> and so <m>f(y)^{-1} f(x) = e</m>, whence <m>f(y) = f(x)</m>. For any <m>x,y</m> we have 
+                        We now need to show that this formula determines a well-defined homomorphism: if <m>xN = yN</m>, then <m>y^{-1}x \in N \subseteq \operatorname{Ker}(f)</m> and so <m>f(y)^{-1} f(x) = e</m>, whence <m>f(y) = f(x)</m>. 
+                        For any <m>x,y</m> we have 
                         <me>
                           \overline{f}(xNyN) = \overline{f}(xyN) = f(xy) = f(x)f(y) =\overline{f}(xN) \overline{f}(yN).
                         </me>
@@ -4572,7 +4953,9 @@
 
                     <li>
                       <p>
-                        We have <m>\overline{f}(xN) = e_H</m> iff <m>f(x) = e_H</m> iff <m>x \in \operatorname{Ker}(f)</m> iff <m>xN \in  \operatorname{Ker}(f)/N</m>. If <m>xN \in \operatorname{Ker}(f)/N</m> for some <m>x \in G</m>, then <m>xN = yN</m> for some <m>y \in \operatorname{Ker}(f)</m> and hence <m>x = yz</m> for some <m>z \in N</m>. Since <m>N \subseteq \operatorname{Ker}(f)</m>, we have <m>x \in \operatorname{Ker}(f)</m>.
+                        We have <m>\overline{f}(xN) = e_H</m> iff <m>f(x) = e_H</m> iff <m>x \in \operatorname{Ker}(f)</m> iff <m>xN \in  \operatorname{Ker}(f)/N</m>. 
+                        If <m>xN \in \operatorname{Ker}(f)/N</m> for some <m>x \in G</m>, then <m>xN = yN</m> for some <m>y \in \operatorname{Ker}(f)</m> and hence <m>x = yz</m> for some <m>z \in N</m>. 
+                        Since <m>N \subseteq \operatorname{Ker}(f)</m>, we have <m>x \in \operatorname{Ker}(f)</m>.
                       </p>
                     </li>
                   </ol>
@@ -4583,7 +4966,11 @@
       
             <example xml:id="ex-abelianization"><title>Abelianization</title>
               <p>
-                Let <m>G</m> be any group, and recall the <xref text="title" ref="ex-commutator-subgroup"/>. In <xref provisional="G' normal"/> we saw <m>G'\nsg G</m>. Now let <m>\varphi: G \to A</m> be any group homomorphism from <m>G</m> to an abelian group <m>A</m>. Since <m>\varphi([x,y]) = [\varphi(x),\varphi(y)] = e</m> for all <m>x, y \in G</m> (since <m>A</m> is abelian), we have that <m>\operatorname{ker}(\varphi)</m> must contain <m>G'</m>. By <xref ref="thm-ump-quotient"/>, we get that <m>\varphi</m> factors as 
+                Let <m>G</m> be any group, and recall the <xref text="title" ref="ex-commutator-subgroup"/>. 
+                In <xref provisional="G' normal"/> we saw <m>G'\nsg G</m>. 
+                Now let <m>\varphi: G \to A</m> be any group homomorphism from <m>G</m> to an abelian group <m>A</m>. 
+                Since <m>\varphi([x,y]) = [\varphi(x),\varphi(y)] = e</m> for all <m>x, y \in G</m> (since <m>A</m> is abelian), we have that <m>\operatorname{ker}(\varphi)</m> must contain <m>G'</m>. 
+                By <xref ref="thm-ump-quotient"/>, we get that <m>\varphi</m> factors as 
                 <me>
                   \varphi:G \xrightarrow{{\pi}} G/G' \xrightarrow{\overline{\varphi}} A
                 </me> 
@@ -4591,7 +4978,7 @@
               </p>
       
               <p>
-                The group <m>G/G'</m> is called the <em>abelianization of <m>G</m></em> and the motto is: A homomorphism from a group to an abelian group factors uniquely through the abelianization.
+                The group <m>G/G'</m> is called the <em>abelianization of <m>G</m></em> and the motto is: a homomorphism from a group to an abelian group factors uniquely through the abelianization.
               </p>
       
             </example>
@@ -4608,121 +4995,132 @@
       
               <proof>
                 <p>
-                  By <xref ref="thm-ump-quotient"/>, there exists a homomorphism <m>\overline{f}</m> such that <m>\overline{f} \circ {\pi}= f</m>, and its kernel consists of just the one element <m>\operatorname{Ker}(f)/\operatorname{Ker}(f)</m> of <m>G/\operatorname{Ker}(f)</m>. So <m>\overline{f}</m> is one-to-one, and the image of <m>\overline{f}</m> is the same as the image of <m>f</m>.
+                  By <xref ref="thm-ump-quotient"/>, there exists a homomorphism <m>\overline{f}</m> such that <m>\overline{f} \circ {\pi}= f</m>, and its kernel consists of just the one element <m>\operatorname{Ker}(f)/\operatorname{Ker}(f)</m> of <m>G/\operatorname{Ker}(f)</m>. 
+                  So <m>\overline{f}</m> is one-to-one, and the image of <m>\overline{f}</m> is the same as the image of <m>f</m>.
                 </p>
               </proof>
             </theorem>
 
             <corollary xml:id="cor-homom-finite-groups"><title>Double Divide</title>
               <statement>
-                <p>If <m>\varphi</m> is a homomorphism from a finite group <m>G</m> to a group <m>H</m>, then <m>|\varphi(G)|</m> divides <m>|G|</m> and <m>|H|</m>.</p>
+                <p>
+                  If <m>\varphi</m> is a homomorphism from a finite group <m>G</m> to a group <m>H</m>, then <m>|\varphi(G)|</m> divides <m>|G|</m> and <m>|H|</m>.
+                </p>
               </statement>
             </corollary>
       
             <theorem xml:id="thm-lattice-iso-group"><title>The Lattice Isomorphism Theorem</title>
               <statement>
                 <p>
-                  Let <m>G</m> be a group and <m>N</m> a normal subgroup with canonical homomorphism <m>\pi:G\to G/N</m>. There is an containment-preserving bijection 
+                  Let <m>G</m> be a group and <m>N</m> a normal subgroup with canonical homomorphism <m>\pi:G\to G/N</m>. 
+                  There is an containment-preserving bijection 
                   <me>
                     \Psi:\{\text{subgroups of}\; G \;\text{that contain}\; N\} \xrightarrow{\text{bijective}}\{\text{subgroups of}\; G/N\}
                   </me> 
-                  given by <m>\Psi(H)= H/N</m> for <m>N \leq H \leq G</m>. The inverse is defined for <m>\mathcal{H}\leq G/N</m> by 
+                  given by <m>\Psi(H)= H/N</m> for <m>N \leq H \leq G</m>. 
+                  The inverse is defined for <m>\mathcal{H}\leq G/N</m> by 
                   <me>
                     \Phi(\mathcal{H})=\pi^{-1}(\mathcal{H}) = \{x \in G \mid \pi(x) \in \mathcal{H}\}
                   </me> 
-                  where <m>\pi: G \twoheadrightarrow G/N</m> is the quotient map. We denote <m>\Psi(H)=H/N=\overline{H}</m>.
+                  where <m>\pi: G \twoheadrightarrow G/N</m> is the quotient map. 
+                  We denote <m>\Psi(H)=H/N=\overline{H}</m>.
                 </p>
       
                 <p>
                   Then this bijection enjoys the following properties:
                 </p>
           
-                <p><ol>
-                  <li>
-                          <p>
-                  (normal) subgroups correspond to normal subgroups i.e.,
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        (normal) subgroups correspond to normal subgroups i.e.,
+                      </p>
+          
+                      <p>
+                        <ul>
+                          <li>
+                            <p>
+                              <m>H\leq G</m> iff <m>\overline{H}\leq \overline{G}</m> and <m>\mathcal{H}\leq \overline{G}</m> iff <m>\Phi(\mathcal{H})\leq G</m>
+                            </p>
+                          </li>
+          
+                          <li>
+                            <p>
+                              <m>H\mathrel{\unlhd}G</m> iff <m>\overline{H}\mathrel{\unlhd}\overline{G}</m> and <m>\mathcal{H}\mathrel{\unlhd}\overline{G}</m> iff <m>\Phi(\mathcal{H})\mathrel{\unlhd}G</m>
+                            </p>
+                          </li>
+                        </ul>
+                      </p>
+                    </li>
+          
+                    <li>
+                      <p>
+                        indices are preserved; i.e., <m>[G:H] = [\overline{G} : \overline{H}]</m> and <m>[G: \Phi(\mathcal{H})] = [\overline{G} : \mathcal{H}]</m>.
+                      </p>
+                    </li>
+                
+                    <li>
+                      <p>
+                        the supremums and infimums are preserved (this makes <m>\Phi</m> and <m>\Psi</m> lattice isomorphisms)
+                      </p>
+                
+                      <p>
+                        <ul>
+                          <li>
+                            <p>
+                              <m>\overline{H} \cap \overline{K} = \overline{H \cap H}</m> and <m>\langle \overline{H}\cup \overline{K} \rangle = \overline{\langle H\cup K \rangle}</m>
+                            </p>
+                          </li>
+          
+                          <li>
+                            <p>
+                              <m>\Phi(\mathcal{H}) \cap \Phi(\mathcal K) = \Phi(\mathcal{H}\cap \mathcal K)</m> and <m>\langle \Phi(\mathcal{H})\cup\Phi(\mathcal K) \rangle = \Phi\left(\langle \mathcal{H}\cup\mathcal K\rangle\right)</m>
+                            </p>
+                          </li>
+                        </ul>
+                      </p>
+                    </li>
+                  </ol>
                 </p>
-          
-                <p><ul>
-                  <li>
-                          <p>
-                  <m>H\leq G</m> iff <m>\overline{H}\leq \overline{G}</m> and <m>\mathcal{H}\leq \overline{G}</m> iff <m>\Phi(\mathcal{H})\leq G</m>
-                </p>
-                  </li>
-          
-                  <li>
-                          <p>
-                  <m>H\mathrel{\unlhd}G</m> iff <m>\overline{H}\mathrel{\unlhd}\overline{G}</m> and <m>\mathcal{H}\mathrel{\unlhd}\overline{G}</m> iff <m>\Phi(\mathcal{H})\mathrel{\unlhd}G</m>
-                </p>
-                  </li>
-          
-                </ul></p>
-                  </li>
-          
-                  <li>
-                          <p>
-                  indices are preserved; i.e., <m>[G:H] = [\overline{G} : \overline{H}]</m> and <m>[G: \Phi(\mathcal{H})] = [\overline{G} : \mathcal{H}]</m>.
-                </p>
-                  </li>
-          
-                  <li>
-                          <p>
-                  the supremums and infimums are preserved (this makes <m>\Phi</m> and <m>\Psi</m> lattice isomorphisms)
-                </p>
-          
-                <p><ul>
-                  <li>
-                          <p>
-                  <m>\overline{H} \cap \overline{K} = \overline{H \cap H}</m> and <m>\langle \overline{H}\cup \overline{K} \rangle = \overline{\langle H\cup K \rangle}</m>
-                </p>
-                  </li>
-          
-                  <li>
-                          <p>
-                  <m>\Phi(\mathcal{H}) \cap \Phi(\mathcal K) = \Phi(\mathcal{H}\cap \mathcal K)</m> and <m>\langle \Phi(\mathcal{H})\cup\Phi(\mathcal K) \rangle = \Phi\left(\langle \mathcal{H}\cup\mathcal K\rangle\right)</m>
-                </p>
-                  </li>
-          
-                </ul></p>
-                  </li>
-          
-                </ol></p>
               </statement>
       
               <proof>
                 <p>
-                  We have previously shown <xref provisional="cite"/> that the quotient map <m>\pi:G\to G/N</m> is a surjective group homomorphism. We show:
+                  We have previously shown <xref provisional="cite"/> that the quotient map <m>\pi:G\to G/N</m> is a surjective group homomorphism. 
+                  We show:
                 </p>
           
-                <p><ul>
-                  <li>
-                  <p>
-                  <m>\Psi</m> is well defined (correct codomain) since for <m>H\leq G</m> we have <m>\pi(H)\leq G/N</m> (since images of subgroups through group homomorphisms are subgroups). <xref provisional="cite"/>
-                </p>
-                  </li>
+                <p>
+                  <ul>
+                    <li>
+                      <p>
+                        <m>\Psi</m> is well defined (correct codomain) since for <m>H\leq G</m> we have <m>\pi(H)\leq G/N</m> (since images of subgroups through group homomorphisms are subgroups). <xref provisional="cite"/>
+                      </p>
+                    </li>
           
-                  <li>
-                          <p>
-                  <m>\Phi</m> is well defined (correct codomain) since for <m>\mathcal{H}\leq G</m> we have <m>\pi^{-1}(\mathcal{H})\leq G</m> (since preimages of subgroups through group homomorphisms are subgroups) <xref provisional="cite"/> and for any <m>\mathcal{H}\leq G</m> we have <m>\{e_GN\}\subseteq \mathcal{H}</m>, hence 
-                  <me>
-                    N=\operatorname{Ker}(\pi)=\pi^{-1}(\{e_GN\})\subseteq \pi^{-1}(\mathcal{H})=\Phi(\mathcal{H}).
-                  </me>
-                </p>
-                  </li>
+                    <li>
+                      <p>
+                        <m>\Phi</m> is well defined (correct codomain) since for <m>\mathcal{H}\leq G</m> we have <m>\pi^{-1}(\mathcal{H})\leq G</m> (since preimages of subgroups through group homomorphisms are subgroups) <xref provisional="cite"/> and for any <m>\mathcal{H}\leq G</m> we have <m>\{e_GN\}\subseteq \mathcal{H}</m>, hence 
+                        <me>
+                          N=\operatorname{Ker}(\pi)=\pi^{-1}(\{e_GN\})\subseteq \pi^{-1}(\mathcal{H})=\Phi(\mathcal{H}).
+                        </me>
+                      </p>
+                    </li>
           
-                  <li>
-                    <p>
-                      <m>\Phi</m> and <m>\Psi</m> are mutual inverses: <m>(\Psi\circ\Phi)(\mathcal{H})=\pi(\pi^{-1}(\mathcal{H}))=\mathcal{H}</m> since <m>\pi</m> is surjective and <m>(\Phi\circ\Psi)(H)=\pi^{-1}(\pi(H))=\pi^{-1}(H/N)=H</m>, with the last equality justified by 
-                      <me>
-                        \begin{aligned}
-                        x\in \pi^{-1}(H/N) &amp;\iff \pi(x)\in H/N \iff xN=hN \text{ for some } h\in H \\
-                        &amp; \iff x\in hN \text{ for some } h\in H \iff x\in H \text{ (using that } N\subseteq H).\\
-                        \end{aligned}
-                      </me>
+                    <li>
+                      <p>
+                        <m>\Phi</m> and <m>\Psi</m> are mutual inverses: <m>(\Psi\circ\Phi)(\mathcal{H})=\pi(\pi^{-1}(\mathcal{H}))=\mathcal{H}</m> since <m>\pi</m> is surjective and <m>(\Phi\circ\Psi)(H)=\pi^{-1}(\pi(H))=\pi^{-1}(H/N)=H</m>, with the last equality justified by 
+                        <me>
+                          \begin{aligned}
+                          x\in \pi^{-1}(H/N) &amp;\iff \pi(x)\in H/N \iff xN=hN \text{ for some } h\in H \\
+                          &amp; \iff x\in hN \text{ for some } h\in H \iff x\in H \text{ (using that } N\subseteq H).\\
+                          \end{aligned}
+                        </me>
+                      </p>
+                    </li>
+                  </ul>
                 </p>
-                  </li>
-          
-                </ul></p>
           
                 <p>
                   Thus, the two functions defined in the statement are well-defined and are mutually inverse.
@@ -4737,7 +5135,8 @@
                 </p>
           
                 <p>
-                  (1) If <m>N \leq H \leq G</m> and <m>H \unlhd G</m>, then <m>H/N \unlhd G/N</m> holds by part of the 3rd Isomorphism Theorem <xref provisional="cite"/> or by the exercise below, since <m>\pi</m> is surjective. The fact that the inverse function also sends normal subgroups to normal subgroups is a consequence of the statement that inverse images of normal subgroups are normal subgroups (see HW 4). <xref provisional="cite"/>
+                  (1) If <m>N \leq H \leq G</m> and <m>H \unlhd G</m>, then <m>H/N \unlhd G/N</m> holds by part of the 3rd Isomorphism Theorem <xref provisional="cite"/> or by the exercise below, since <m>\pi</m> is surjective. 
+                  The fact that the inverse function also sends normal subgroups to normal subgroups is a consequence of the statement that inverse images of normal subgroups are normal subgroups (see HW 4). <xref provisional="cite"/>
                 </p>
           
                 <p>

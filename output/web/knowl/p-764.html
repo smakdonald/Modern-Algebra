@@ -11,8 +11,16 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h6 class="heading"><span class="type">Paragraph</span></h6>
-<div class="para">Let <span class="process-math">\(G\)</span> be a finite group of odd order, and let <span class="process-math">\(G\)</span> act on itself via conjugation. Under this action, the orbit of an element is exactly its conjugacy class by <a href="" class="xref" data-knowl="./knowl/cor-familiar-orbits.html" title="Corollary 5.22: Familiar Orbits">Corollary 5.22</a>. By the <a href="" class="xref" data-knowl="./knowl/cor-orbit-stabilizer.html" title="Corollary 5.28: Orbit-Stabilizer Theorem">Orbit-Stabilizer Theorem</a> we have <span class="process-math">\(|G|=|\Orb(x)|\cdot|\Stab(x)|\text{.}\)</span> Thus the order of an element divides the order of the group, and so every orbit must have odd order.</div>
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<div class="para logical">
+<div class="para">The elements of <span class="process-math">\(Z(G)\)</span> are precisely the group elements that are conjugate to only themselves; that is, they are the one-element orbits for the conjugation action. Because the conjugacy classes (orbits of the conjugation action) partition <span class="process-math">\(G\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/lem-conjugation-and-lois.html ./knowl/thm-class-eq.html">
+\begin{equation*}
+|G| = |Z(G)| + \sum_i^r C_G(g_i).
+\end{equation*}
+</div>
+<div class="para">For each <span class="process-math">\(g_i\)</span> as in the statement, by <a href="" class="xref" data-knowl="./knowl/lem-conjugation-and-lois.html" title="Lemma 5.38: Conjugation Actions and LOIS">Lemma 5.38</a>, we have <span class="process-math">\([G: Z_G(g_i)] =C_G(g_i)\text{.}\)</span> The <a href="" class="xref" data-knowl="./knowl/thm-class-eq.html" title="Theorem 5.40: Class Equation">Class Equation</a> follows from substituting this into the equation above.</div>
+</div>
 <span class="incontext"><a href="sec-orbit-stab-class-eq.html#p-764" class="internal">in-context</a></span>
 </body>
 </html>
