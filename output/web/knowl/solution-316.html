@@ -13,19 +13,32 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h3 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">G.111.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">G.155.1</span><span class="period">.</span>
 </h3>
 <div class="para logical">
-<div class="para">Part (a) Let <span class="process-math">\(L\)</span> be a group, <span class="process-math">\(H\)</span> be a direct factor of <span class="process-math">\(G\text{,}\)</span> and <span class="process-math">\(\phi : H \to L\)</span> a group homomorphism. As <span class="process-math">\(H\)</span> is a direct factor of <span class="process-math">\(G\text{,}\)</span> there exists some <span class="process-math">\(K\nsg G\)</span> such that <span class="process-math">\(G=H\times K\text{.}\)</span> Thus there exists some isomorphism <span class="process-math">\(\psi:G\to H\times K\text{.}\)</span> Define <span class="process-math">\(\widetilde{\phi} : G \to L\)</span> such that <span class="process-math">\(\widetilde{\phi}(g)=h\text{,}\)</span> where <span class="process-math">\(\psi(g)=(h,k)\text{.}\)</span> Let <span class="process-math">\(x,y\in G\text{,}\)</span> and notice</div>
+<div class="para">Let <span class="process-math">\(f:G\to G/H\times G/K\)</span> defined such that <span class="process-math">\(f(g)=(gH, gK)\text{.}\)</span> Let <span class="process-math">\(x,y\in G\text{.}\)</span> Then</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\psi(x)=(h,k)\psi(y)=(h',k')=(hh',kk')=\psi(xy),
+\begin{align}
+f(xy)&amp;=(xyH,xyK)\\ 
+&amp;=(xHyH,xKyK)\\
+&amp;=(xH,yH)\cdot(xKyK)\\
+&amp;=f(x)f(y),
 \end{equation*}
 </div>
-<div class="para">as <span class="process-math">\(\psi\)</span> is an isomorphism. Observe <span class="process-math">\(\widetilde{\phi}(xy)=hh'=\widetilde{\phi}(x)\widetilde{\phi}(y)\text{.}\)</span> Thus <span class="process-math">\(\widetilde{\phi}\)</span> is a homomorphism, and for any <span class="process-math">\(h\in H\)</span> we have <span class="process-math">\(\widetilde{\phi}(h)=h\text{.}\)</span>
+<div class="para">showing <span class="process-math">\(f\)</span> is a homomorphism.</div>
+</div> <div class="para">Let <span class="process-math">\((xH,yK)\in G/H\times G/K\text{.}\)</span> As <span class="process-math">\(x,y\in G=HK\text{,}\)</span> we have <span class="process-math">\(x=hk\)</span> and <span class="process-math">\(y=h'k'\)</span> with <span class="process-math">\(h,h'\in H\)</span> and <span class="process-math">\(k,k'\in K\text{.}\)</span> As <span class="process-math">\(k'\in K\)</span> and <span class="process-math">\(h\in H\)</span> we see <span class="process-math">\((xH,yK)=(kH,h'K)\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Consider <span class="process-math">\(g=kh'\in G\)</span> and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(g)=f(kh')=(kh'H,kh'K)=(kH,h'K)=(xH,yK),
+\end{equation*}
 </div>
-</div> <div class="para">Part (b)</div>
+<div class="para">making <span class="process-math">\(f\)</span> surjective as well.</div>
+</div> <div class="para">Let <span class="process-math">\(g\in H\cap K\text{.}\)</span> Then <span class="process-math">\(f(g)=(gH,gK)=(H,K)\text{,}\)</span> and so <span class="process-math">\(g\in\ker(f)\text{.}\)</span> Let <span class="process-math">\(g\in\ker(f)\text{.}\)</span> Then <span class="process-math">\(f(g)=(H,K)\text{,}\)</span> so <span class="process-math">\(gH=H\)</span> and <span class="process-math">\(gK=K\text{,}\)</span> placing <span class="process-math">\(g\in H\cap K\text{.}\)</span> Thus, by the <a href="" class="xref" data-knowl="./knowl/thm-fit-group.html" title="Theorem 4.49: First Isomorphism Theorem">First Isomorphism Theorem</a>, we have <span class="process-math">\(G/(H\cap K)\cong G/H \times G/K.\)</span>
 </div>
-<span class="incontext"><a href="section-83.html#solution-316" class="internal">in-context</a></span>
+</div>
+<span class="incontext"><a href="section-88.html#solution-316" class="internal">in-context</a></span>
 </body>
 </html>

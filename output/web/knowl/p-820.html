@@ -11,17 +11,17 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">As <span class="process-math">\(N\nsg G\)</span> it is a union of conjugacy classes of the elements it contains, one of which is <span class="process-math">\(e\text{.}\)</span> Assume by way of contradiction that <span class="process-math">\(N\cap Z(G)={e}\text{,}\)</span> meaning that <span class="process-math">\(e\)</span> is the only element in <span class="process-math">\(N\)</span> whose conjugacy class is a singleton. This yields</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-lagrange.html">
+<div class="para">Suppose <span class="process-math">\(G\)</span> is a group with subgroups <span class="process-math">\(H\mathrel{\unlhd}G\)</span> and <span class="process-math">\(K\leq G\)</span> such that <span class="process-math">\(H\cap K=\{e\}\text{.}\)</span> Then we still have <span class="process-math">\(HK\leq G\text{;}\)</span> let's see what we would need the multiplication on the cartesian product <span class="process-math">\(H\times K\)</span> to be in order for <span class="process-math">\(\theta: H \times K \to HK\)</span> defined by <span class="process-math">\(\theta(h,k) = hk\)</span> to still be a group homomorphism:</div>
+<div class="displaymath process-math">
 \begin{equation*}
-|N| = 1+ \sum_i^r |G : C_G(n_i)|.
+\theta(h_1, k_1) \theta(h_2, k_2) = h_1k_1h_2k_2 = h_1h'_2k_1k_2=\theta(h_1h_2',k_1k_2),
 \end{equation*}
 </div>
-<div class="para">However, by <a href="" class="xref" data-knowl="./knowl/thm-lagrange.html" title="Theorem 4.13: Lagrange's Theorem">Lagrange's Theorem</a> <span class="process-math">\(N\)</span> must also be a <span class="process-math">\(p-\)</span>group, and thus by an analogous element counting argument as above we see that there exists some <span class="process-math">\(x\in N\)</span> such that <span class="process-math">\(C_G(x)=\{x\}\text{,}\)</span> or that <span class="process-math">\(gxg\inv=x\)</span> for all <span class="process-math">\(g\in G\text{.}\)</span> Thankfully, this means that <span class="process-math">\(x\in Z(G)\text{,}\)</span> and thus we have <span class="process-math">\(Z(G)\cap N\neq 1\text{.}\)</span>
+<div class="para">where <span class="process-math">\(h'_2\in H\)</span> is such that <span class="process-math">\(k_1h_2k_1^{-1}=h'_2\text{.}\)</span>
 </div>
 </div>
-<span class="incontext"><a href="sec-p-groups.html#p-820" class="internal">in-context</a></span>
+<span class="incontext"><a href="sec-spds.html#p-820" class="internal">in-context</a></span>
 </body>
 </html>

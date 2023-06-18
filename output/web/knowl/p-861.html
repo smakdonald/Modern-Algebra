@@ -12,8 +12,28 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">By the <a href="" class="xref" data-knowl="./knowl/thm-fit-group.html" title="Theorem 4.49: First Isomorphism Theorem">First Isomorphism Theorem</a> we know that <span class="process-math">\(G/\ker(\rho)\cong\im(\rho)=\Aut(P)\text{.}\)</span> However, <span class="process-math">\(\Aut(P)\cong\Aut(\Z_{11})\cong \Z^x\text{,}\)</span> which has order <span class="process-math">\(10\text{.}\)</span> As this is a homomorphism, we see the order of <span class="process-math">\(G/\ker(\rho)\)</span> must divide both <span class="process-math">\(10\)</span> and <span class="process-math">\(231\text{,}\)</span> two numbers that are relatively prime. Thus <span class="process-math">\(\ker(\rho)=1\text{,}\)</span> meaning that conjugation is equivalent to the identity map, or that <span class="process-math">\(gxg\inv=x\)</span> for all <span class="process-math">\(g\in G\text{.}\)</span> Thus <span class="process-math">\(P\in Z(G)\text{.}\)</span>
+<div class="para logical">
+<div class="para">The actions <span class="process-math">\(\rho\)</span> and <span class="process-math">\(\rho'\)</span> are not identical. For example, assuming <span class="process-math">\(n\geq 4\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\rho(x)(1 \, 2) (1 \, 2) (3 \, 4) = (1 \, 2) (3 \, 4) \text { maps } 1\mapsto 2
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec-sylowthm.html#p-861" class="internal">in-context</a></span>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\rho'(x)(1 \, 2) (3 \, 4) = (1 \, 3) (1 \, 2) (3 \, 4) (1 \, 3) \text { maps } 1\mapsto 4.
+\end{equation*}
+</div>
+<div class="para">Yet</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A_n \rtimes_{\rho} H \cong A_n \rtimes_{\rho'} H'
+\end{equation*}
+</div>
+<div class="para">since each is isomorphic to <span class="process-math">\(S_n\text{.}\)</span>
+</div>
+</div>
+<span class="incontext"><a href="sec-spds.html#p-861" class="internal">in-context</a></span>
 </body>
 </html>

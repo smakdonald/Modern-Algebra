@@ -11,31 +11,32 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<div class="para">Let <span class="process-math">\(F\)</span> be any field.</div> <div class="para logical"><ol class="decimal">
-<li>
-<div class="para">Let <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> be two <span class="process-math">\(3\times 3\)</span> matrices with entries in <span class="process-math">\(F\text{.}\)</span> First, suppose that <span class="process-math">\(A\sim B\text{.}\)</span> Matrices are similar if and only if they share the same invariant factors. As minimum polynomial is an invariant factor and the characteristic polynomial is a product of the invariant factors, we see that <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> must share the same invariant factors.</div>
-<div class="para logical">
-<div class="para">Next suppose that <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> share the same characteristic polynomial and the same minimal polynomial. As <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are <span class="process-math">\(3\times 3\)</span> matrices, the characteristic polynomial of both <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> must be a degree <span class="process-math">\(3\)</span> polynomial. We proceed via cases based on the degree of <span class="process-math">\(\mp_{A,B}(x)\text{.}\)</span>
-</div>
-<ul class="disc">
-<li><div class="para">First, suppose <span class="process-math">\(\deg\mp_{A,B}(x)=3\text{.}\)</span> Then <span class="process-math">\(\mp_{A,B}(x)=\cp_{A,B}(x)\text{,}\)</span> making <span class="process-math">\(\cp_{A,B}(x)\)</span> the only invariant factor of both <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{.}\)</span> Thus <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> have the same invariant factors and are therefore similar.</div></li>
-<li><div class="para">Next, suppose <span class="process-math">\(\deg\mp_{A,B}(x)=2\text{.}\)</span> As <span class="process-math">\(\mp|\cp\)</span> and the degrees of all invariant factors must sum to the <span class="process-math">\(\deg\cp\text{,}\)</span> we know that <span class="process-math">\(\cp=\mp\cdot k(x)\text{,}\)</span> where <span class="process-math">\(k(x)\)</span> is a degree <span class="process-math">\(1\)</span> polynomial, which we denote <span class="process-math">\(f(x)\)</span> for <span class="process-math">\(A\)</span> and <span class="process-math">\(g(x)\)</span> for <span class="process-math">\(B\text{.}\)</span> Since <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> share the same minimum and characteristic polynomials, we see <span class="process-math">\(\mp\cdot f=\cp\)</span> and <span class="process-math">\(\mp\cdot g=\cp\text{,}\)</span> and thus that <span class="process-math">\(f=g\text{.}\)</span> Hence <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> share the same invariant factors, making <span class="process-math">\(A\sim B\text{.}\)</span>
-</div></li>
-<li><div class="para">Finally, suppose <span class="process-math">\(\deg\mp=1\text{.}\)</span> The minimum polynomial is the largest invariant factor, and thus the invariant factors of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> must be <span class="process-math">\(\{\mp,\mp\mp\}\text{,}\)</span> making them similar.</div></li>
-</ul>
-</div>
-</li>
-<li><div class="para logical">
-<div class="para">If we replaced <span class="process-math">\(3\times 3\)</span> with <span class="process-math">\(4\times 4\)</span> then this would allow for <span class="process-math">\(\cp_{A,B}(x)=x^4\)</span> and <span class="process-math">\(\mp_{A,B}(x)=x^2\text{,}\)</span> allowing two sets of invariant factors: <span class="process-math">\(\{x^2,x^2\}\)</span> <span class="process-math">\(\{x,x,x^2\}\text{,}\)</span> Notice that <span class="process-math">\(C(x)=\begin{bmatrix}0\end{bmatrix}\)</span> and <span class="process-math">\(C(x^2)=\begin{bmatrix}0&amp;0\\1&amp;0\end{bmatrix}\text{.}\)</span> Set <span class="process-math">\(A=C(x^2)\oplus C(x^2)\)</span> and <span class="process-math">\(B=C(x)\oplus C(x)\oplus C(x^2)\text{,}\)</span> so</div>
+<div class="para">Consider <span class="process-math">\(2\in\Z[\sqrt{10}]\)</span> and the function <span class="process-math">\(N : \Z[\sqrt{10}]\to \Z, N (a + b\sqrt{10}) = a^2-10b^2\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Let <span class="process-math">\(\alpha,\beta\in\Z[\sqrt{10}]\)</span> and behold</div>
 <div class="displaymath process-math">
 \begin{equation*}
-A=\begin{bmatrix}0 &amp; 0 &amp; 0 &amp; 0 \\1 &amp; 0 &amp; 0 &amp; 0 \\0 &amp; 0 &amp; 0 &amp; 0\\ 0 &amp; 0 &amp; 1 &amp; 0\end{bmatrix} \text{ and } B=\begin{bmatrix}0 &amp; 0 &amp; 0 &amp; 0 \\0 &amp; 0 &amp; 0 &amp; 0 \\0 &amp; 0 &amp; 0 &amp; 0\\ 0 &amp; 0 &amp; 1 &amp; 0\end{bmatrix}.
+\begin{align}N(\alpha\beta)&amp;=N((a+b\sqrt{10})(c+d\sqrt{10}))\\
+&amp;=N(ac+10bd+(ad+bc)(\sqrt{10}))\\
+&amp;=(ac+10bd)^2-10(ad+bc)^2\\
+&amp;=((ac)^2+20acbd+100(bd)^2)+(-10(ad)^2-20abcd-10(bc)^2)\\
+&amp;=a^2c^2+100b^2d^2-10a^2d^2-10b^2c^2\\
+&amp;=(a^2c^2-10a^2d^2)+(-10b^2c^2-100b^2d^2)\\
+&amp;=a^2(c^2-10d^2)-10b^2(c^2-10d^2)\\
+N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}
 \end{equation*}
 </div>
-<div class="para">These matrices have the same <span class="process-math">\(\cp\)</span> and <span class="process-math">\(\mp\)</span> but are not similar.</div>
-</div></li>
-<li><div class="para">Let <span class="process-math">\(F=\Q\text{.}\)</span> We define <span class="process-math">\(A=C(x-1)\oplus C(x^2-1)\)</span> and <span class="process-math">\(B=C(x+1)\oplus C(x^2-1)\text{.}\)</span> Notice that these matrices are in rational canonical form. However, the invariant factors of <span class="process-math">\(A\)</span> are <span class="process-math">\(\{(x+1), (x^2-1)\}\)</span> and the invariant factors of <span class="process-math">\(B\)</span> are <span class="process-math">\(\{(x-1)(x^2-1)\}\text{.}\)</span> Thus <span class="process-math">\(A\)</span> is not similar to <span class="process-math">\(B\text{,}\)</span> but the minimal polynomial of both is <span class="process-math">\(x^2-1\text{.}\)</span>
-</div></li>
-</ol></div>
+<div class="para">So there's that done.</div>
+</div> <div class="para logical">
+<div class="para">Suppose by way of contradiction there exist <span class="process-math">\(\a,\b\)</span> such that <span class="process-math">\(2=\a\b\text{.}\)</span> Then <span class="process-math">\(\a=a+b\sqrt{10}\)</span> and <span class="process-math">\(\b=c+d\sqrt{10}\text{,}\)</span> and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+N(2)=4=N(\a\b)=N(\a)N(\b)=(a^2-10b^2)(c^2-10d^2).
+\end{equation*}
+</div>
+<div class="para">Thus <span class="process-math">\((a^2-10b^2)=\pm1,\pm2,\)</span> or <span class="process-math">\(\pm4\text{,}\)</span> as these are the only integer divisors of <span class="process-math">\(4\text{.}\)</span> However, there do not exist integers <span class="process-math">\(a,b\)</span> such that this is true. Thus <span class="process-math">\(2\)</span> is irreducible in <span class="process-math">\(\Z[\sqrt{10}]\text{.}\)</span>
+</div>
+</div> <div class="para">Suppose by way of contradiction that <span class="process-math">\(2\)</span> is prime in <span class="process-math">\(\Z[\sqrt{10}]\text{.}\)</span> Note that <span class="process-math">\(2|6=(4+\sqrt{10})(4-\sqrt{10})\text{.}\)</span> Thus <span class="process-math">\(2\)</span> divides one of these factors.</div> <div class="para">First, suppose there exists some <span class="process-math">\(a+b\sqrt{10}\)</span> such that <span class="process-math">\(2(a+b\sqrt{10})=(4\pm\sqrt{10})\text{.}\)</span> Thus <span class="process-math">\(2a+2b\sqrt{10}=4\pm\sqrt{10}\text{,}\)</span> and so <span class="process-math">\(2b=\pm1\text{.}\)</span> However, <span class="process-math">\(\pm\frac12\)</span> is not an integer, and thus <span class="process-math">\(2\)</span> cannot divide either of these factors. Thus <span class="process-math">\(2\)</span> is not prime in <span class="process-math">\(\Z[\sqrt{10}]\text{.}\)</span>
+</div>
 </div></body>
 </html>

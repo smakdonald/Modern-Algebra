@@ -11,11 +11,15 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<div class="para logical"><ol class="decimal">
-<li><div class="para">Let <span class="process-math">\(G\)</span> be a simple group of order <span class="process-math">\(60=2^2\cdot3\cdot 5.\)</span> By <a href="" class="xref" data-knowl="./knowl/thm-sylow.html" title="Theorem 6.11: Sylow's Theorem">Sylow's Theorem</a> we know that <span class="process-math">\(n_5|12\)</span> and that <span class="process-math">\(n_5\equiv 1\mod{5}\text{.}\)</span> Thus the options for <span class="process-math">\(n_5\)</span> are <span class="process-math">\(1\)</span> and <span class="process-math">\(6\text{.}\)</span> Since <span class="process-math">\(G\)</span> is simple we see that <span class="process-math">\(n_5=6\text{.}\)</span> As each Sylow <span class="process-math">\(5\)</span>-subgroup of <span class="process-math">\(G\)</span> has <span class="process-math">\(4\)</span> unique elements of order <span class="process-math">\(5\)</span> and the identity we see that the number of elements or order <span class="process-math">\(5\)</span> in <span class="process-math">\(G\)</span> is <span class="process-math">\((5-1)\cdot 6=24\text{.}\)</span>
-</div></li>
-<li><div class="para">Suppose by way of contradiction that <span class="process-math">\(G\)</span> is a simple group of order <span class="process-math">\(30\text{.}\)</span> Similarly to above, <span class="process-math">\(n_5=6\text{,}\)</span> yielding <span class="process-math">\(24\)</span> elements of order <span class="process-math">\(5\text{.}\)</span> Now, <span class="process-math">\(n_3|10\)</span> and <span class="process-math">\(n_3\equiv 1\mod{3}\text{,}\)</span> so <span class="process-math">\(n_3=10\text{,}\)</span> yielding far too many elements to fit in <span class="process-math">\(G\text{.}\)</span>
-</div></li>
-</ol></div> <div class="para"></div>
+<div class="para logical">
+<div class="para">Part (a) Let <span class="process-math">\(L\)</span> be a group, <span class="process-math">\(H\)</span> be a direct factor of <span class="process-math">\(G\text{,}\)</span> and <span class="process-math">\(\phi : H \to L\)</span> a group homomorphism. As <span class="process-math">\(H\)</span> is a direct factor of <span class="process-math">\(G\text{,}\)</span> there exists some <span class="process-math">\(K\nsg G\)</span> such that <span class="process-math">\(G=H\times K\text{.}\)</span> Thus there exists some isomorphism <span class="process-math">\(\psi:G\to H\times K\text{.}\)</span> Define <span class="process-math">\(\widetilde{\phi} : G \to L\)</span> such that <span class="process-math">\(\widetilde{\phi}(g)=h\text{,}\)</span> where <span class="process-math">\(\psi(g)=(h,k)\text{.}\)</span> Let <span class="process-math">\(x,y\in G\text{,}\)</span> and notice</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\psi(x)=(h,k)\psi(y)=(h',k')=(hh',kk')=\psi(xy),
+\end{equation*}
+</div>
+<div class="para">as <span class="process-math">\(\psi\)</span> is an isomorphism. Observe <span class="process-math">\(\widetilde{\phi}(xy)=hh'=\widetilde{\phi}(x)\widetilde{\phi}(y)\text{.}\)</span> Thus <span class="process-math">\(\widetilde{\phi}\)</span> is a homomorphism, and for any <span class="process-math">\(h\in H\)</span> we have <span class="process-math">\(\widetilde{\phi}(h)=h\text{.}\)</span>
+</div>
+</div> <div class="para">Part (b)</div>
 </div></body>
 </html>

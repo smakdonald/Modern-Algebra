@@ -12,21 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para logical">
-<div class="para">For the general case, we proceed by induction on the number of variables <span class="process-math">\(n\text{.}\)</span> The induction hypothesis shows that there is a ring homomorphism</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\psi: R[x_1, \dots, x_{n-1}] \to S
-\end{equation*}
-</div>
-<div class="para">such that <span class="process-math">\(\psi|_R = \phi\)</span> and <span class="process-math">\(\psi(x_i) = s_i\text{,}\)</span> <span class="process-math">\(i = 1, \dots, n-1\text{.}\)</span> Applying the <span class="process-math">\(n=1\)</span> case to <span class="process-math">\(\psi\)</span> gives</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\tilde{\psi}: (R[x_1, \dots, x_{n-1}])[x_n] \to S
-\end{equation*}
-</div>
-<div class="para">with <span class="process-math">\(\tilde\psi|_{R[x_1, \dots, x_{n-1}]} = \psi\)</span> and <span class="process-math">\(\tilde{\psi}(x_n) = s_n\text{.}\)</span> Setting <span class="process-math">\(\tilde\phi=\tilde\psi\)</span> gives a map <span class="process-math">\(\tilde{\phi}\)</span> with the needed properties.</div>
-</div>
-<span class="incontext"><a href="sec-polyrings.html#p-1347" class="internal">in-context</a></span>
+<div class="para">Pick <span class="process-math">\(x \in R\)</span> with <span class="process-math">\(x \ne 0\)</span> and <span class="process-math">\(x \notin R^\times\text{.}\)</span> If <span class="process-math">\(x\)</span> is irreducible, there is nothing to prove. Otherwise, we have <span class="process-math">\(x = x_1 x_2\)</span> for non-units <span class="process-math">\(x_1, x_2\text{.}\)</span> If both <span class="process-math">\(x_1, x_2\)</span> are irreducible, the proof is complete. Otherwise, one or both of them factors non-trivially. We may express this conveniently by saying that <span class="process-math">\(x_1 = x_3x_4\)</span> and <span class="process-math">\(x_2 = x_5x_6\)</span> such that either <span class="process-math">\(x_3\)</span> and <span class="process-math">\(x_4\)</span> are both non-units or <span class="process-math">\(x_5\)</span> and <span class="process-math">\(x_6\)</span> are both non-units. (E.g., if <span class="process-math">\(x_2\)</span> is irreducible, we could set <span class="process-math">\(x_5 = x_2, x_6 = 1\text{.}\)</span>) Continuing in the this manner, we form a binary tree with <span class="process-math">\(x\)</span> at the top, <span class="process-math">\(x_1, x_2\)</span> one level down, <span class="process-math">\(x_3,x_4,x_5,x_6\)</span> one level below that, etc.</div>
+<span class="incontext"><a href="subsec-noeth.html#p-1347" class="internal">in-context</a></span>
 </body>
 </html>

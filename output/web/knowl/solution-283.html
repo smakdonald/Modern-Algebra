@@ -13,12 +13,26 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h3 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">G.78.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">G.122.1</span><span class="period">.</span>
 </h3>
-<div class="para">Let <span class="process-math">\(R\)</span> be a commutative ring (with <span class="process-math">\(1\)</span>) and let <span class="process-math">\(M\)</span> be an <span class="process-math">\(R\)</span>-module such that <span class="process-math">\(M\neq 0\)</span> and the only submodules of <span class="process-math">\(M\)</span> are <span class="process-math">\(0\)</span> and <span class="process-math">\(M\text{.}\)</span>
-</div> <div class="para">As <span class="process-math">\(M\neq 0\text{,}\)</span> there exists a non-zero element <span class="process-math">\(m\in M\text{.}\)</span> Let <span class="process-math">\(f:R\to M\)</span> be defined by <span class="process-math">\(f(r)=rm\text{.}\)</span> Since <span class="process-math">\(1\in R\)</span> and <span class="process-math">\(1m=m\in Rm\text{,}\)</span> we have <span class="process-math">\(Rm=M\text{.}\)</span> By the [[Theorem – Module Isomorphism Theorems|First Isomorphism Theorem]] we see that <span class="process-math">\(R/\ker(f)\cong M\text{,}\)</span> making <span class="process-math">\(\ker(f)\)</span> an ideal in <span class="process-math">\(R\text{,}\)</span> which we shall conspicuously denote as <span class="process-math">\(I\)</span> henceforth. By the Lattice Isomorphism Theorem the only two ideals of <span class="process-math">\(R/I\)</span> are <span class="process-math">\(0\)</span> and <span class="process-math">\(R/I\text{,}\)</span> making <span class="process-math">\(R/I\)</span> a field, and <span class="process-math">\(I\)</span> a maximal ideal in <span class="process-math">\(R\text{.}\)</span>
+<div class="para">Let <span class="process-math">\(F \subseteq K \subseteq L\)</span> be extensions of fields, not necessarily finite.</div> <div class="para logical">
+<div class="para">Part (a) Suppose that <span class="process-math">\(K/F\)</span> and <span class="process-math">\(L/K\)</span> are algebraic extensions. Let <span class="process-math">\(\a\in L\text{.}\)</span> Then <span class="process-math">\(\a\)</span> is the root of the polynomial</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-degree-formula.html">
+\begin{equation*}
+f(x)=a_nx^n+\dots+a_0,
+\end{equation*}
+</div>
+<div class="para">with <span class="process-math">\(a_{i}\in K\text{.}\)</span> Notice that <span class="process-math">\(f\)</span> is a polynomial in <span class="process-math">\(F(a_n,\dots,a_0)[x]\text{,}\)</span> making <span class="process-math">\(\a\)</span> is algebraic over this as well. Consider the chain of field extensions</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-degree-formula.html">
+\begin{equation*}
+F \subseteq F(a_0) \subseteq F(a_0,a_1) \subseteq \cdots \subseteq F(a_0, a_1, \dots, a_{n-1} )\subseteq F(a_0, \dots, a_{n}, \a)
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(a_i\)</span> is algebraic over <span class="process-math">\(F\)</span> for all <span class="process-math">\(i\)</span> and <span class="process-math">\(\a\)</span> is algebraic over <span class="process-math">\(F(a_0, a_1, \dots, a_{n})\text{,}\)</span> by [[Theorem – Properties of Algebraic Elements|Theorem]] each step in this chain has finite degree. By the <a href="" class="xref" data-knowl="./knowl/thm-degree-formula.html" title="Theorem 19.30: The Degree Formula">The Degree Formula</a>, <span class="process-math">\([F(a_0, \dots, a_{n}, \a): F]\)</span> is finite and thus so is <span class="process-math">\([F(\a):F]\text{.}\)</span> By the Theorem again, <span class="process-math">\(\a\)</span> is algebraic over <span class="process-math">\(F\text{.}\)</span>
+</div>
+</div> <div class="para">Next suppose that <span class="process-math">\(L/F\)</span> is algebraic. Let <span class="process-math">\(\a\in K\text{.}\)</span> Then <span class="process-math">\(\a\in L\text{,}\)</span> and so it is algebraic over <span class="process-math">\(F\text{.}\)</span> Now let <span class="process-math">\(\b\in L\text{.}\)</span> Then <span class="process-math">\(\b\)</span> is the root of a polynomial in <span class="process-math">\(F\text{,}\)</span> which is also in <span class="process-math">\(K\text{,}\)</span> so <span class="process-math">\(L/K\)</span> is algebraic as well.</div> <div class="para">Part (b) <span class="process-math">\(K=\Q(\sqrt{2})\)</span> is Galois over <span class="process-math">\(F=\Q\text{,}\)</span> and <span class="process-math">\(L=\Q(\sqrt{2},\sqrt[4]{2})\)</span> is Galois over <span class="process-math">\(K\text{,}\)</span> but <span class="process-math">\(L\)</span> is not Galois over <span class="process-math">\(F\text{,}\)</span> as the splitting field of <span class="process-math">\(x^4-2\)</span> has degree <span class="process-math">\(8\text{.}\)</span>
 </div>
 </div>
-<span class="incontext"><a href="section-79.html#solution-283" class="internal">in-context</a></span>
+<span class="incontext"><a href="section-84.html#solution-283" class="internal">in-context</a></span>
 </body>
 </html>

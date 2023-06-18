@@ -12,7 +12,26 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Let <span class="process-math">\(A = (a_{i,j})\text{.}\)</span> Since <span class="process-math">\(A\)</span> is invertible, its column space must have dimension <span class="process-math">\(n\text{,}\)</span> by the previous Lemma, and in particular none of its columns can be <span class="process-math">\(0\)</span> (since otherwise the column space would be spanned by <span class="process-math">\(n-1\)</span> vectors and would thus have dimension at most <span class="process-math">\(n-1\)</span>). In particular, its second-to-last column has at least one non-zero entry. By either doing nothing or by adding a suitable row to the last row, we can assume <span class="process-math">\(a_{n,n-1} \ne 0\text{.}\)</span> By adding <span class="process-math">\((1 -a_{n,n}) a_{n,n-1}^{-1}\)</span> times column <span class="process-math">\(n-1\)</span> to column <span class="process-math">\(n\text{,}\)</span> we obtain <span class="process-math">\(a_{n,n} = 1\text{.}\)</span> Next do suitable column operations of type I to arrive at <span class="process-math">\(a_{n,j} = 0\)</span> for all <span class="process-math">\(j &lt; n\text{,}\)</span> and finally do row operations of type I to also get <span class="process-math">\(a_{i,n} = 0\)</span> for all <span class="process-math">\(i &lt; n\text{.}\)</span> We have thus transformed <span class="process-math">\(A\)</span> to a matrix of the form <span class="process-math">\(\begin{bmatrix} A' &amp; 0 \\ 0 &amp; 1 \end{bmatrix}\text{.}\)</span> Note that this matrix remains invertible (see Remark ) and so the columns of this matrix span <span class="process-math">\(F^n\)</span> by the previous Lemma. Since <span class="process-math">\(a_{n,j} = 0\)</span> for all <span class="process-math">\(j &lt; n\text{,}\)</span> the columns of <span class="process-math">\(A'\)</span> must span <span class="process-math">\(F^{n-1}\text{.}\)</span> Thus <span class="process-math">\(A'\)</span> is invertible by the previous Lemma. By induction, we can transform <span class="process-math">\(A'\)</span> via type I row and column operations to a matrix of the form as in the statement. Notice that since the <span class="process-math">\(a_{n,j} = 0\)</span> for all <span class="process-math">\(j &lt; n\)</span> and <span class="process-math">\(a_{i,n} = 0\)</span> for all <span class="process-math">\(i &lt; n\text{,}\)</span> such operations will also put <span class="process-math">\(A\)</span> into this form.</div>
-<span class="incontext"><a href="sec-elematix.html#p-2101" class="internal">in-context</a></span>
+<div class="para logical">
+<div class="para">Let us return to the example of <span class="process-math">\(A = \begin{bmatrix} 1 &amp; 1 \\ 0 &amp; 1 \end{bmatrix}\in \Mat_{2 \times 2}(\Q)\)</span> to illustrate the Theorem and its proof. By the previous example we have an isomorphism of <span class="process-math">\(\Q[x]\)</span>-module</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Q^2_A \cong \Q[x]/(x^2 - 2x + 1).
+\end{equation*}
+</div>
+<div class="para">Recall that <span class="process-math">\(\lx\)</span> (multiplication by <span class="process-math">\(x\)</span>) on <span class="process-math">\(\Q^2_A\)</span> is given by multiplication by the matrix <span class="process-math">\(A\text{.}\)</span> This is an isomorphism of <span class="process-math">\(\Q[x]\)</span>-modules, and so <span class="process-math">\(A\)</span> corresponds to the operator <span class="process-math">\(\lx\)</span> on <span class="process-math">\(\Q[x]/(x^2 - 2x + 1)\text{.}\)</span> As we have seen before, relative to the basis <span class="process-math">\(\{1, x\}\text{,}\)</span> the matrix for <span class="process-math">\(\lx\)</span> is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C(x^2 - 2x + 1) = 
+\begin{bmatrix} 
+0 &amp; -1 \\
+1 &amp; 2 \\
+\end{bmatrix}.
+\end{equation*}
+</div>
+<div class="para">This is the Rational Canonical Form of <span class="process-math">\(A\text{.}\)</span> <span class="process-math">\(A\)</span> has just one invariant factor, namely <span class="process-math">\(x^2 - 2x + 1\text{.}\)</span>
+</div>
+</div>
+<span class="incontext"><a href="sec-rcf.html#p-2101" class="internal">in-context</a></span>
 </body>
 </html>

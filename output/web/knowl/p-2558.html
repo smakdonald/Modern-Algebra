@@ -11,63 +11,9 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h6 class="heading"><span class="type">Paragraph</span></h6>
-<div class="para logical"><ol class="lower-alpha">
-<li>
-<div class="para">For any integer <span class="process-math">\(n \geq 1\text{,}\)</span> consider the <span class="process-math">\(\C\)</span>-vector space <span class="process-math">\(V = \{p \in \C[x] : \deg(p) \leq n - 1\}\text{.}\)</span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para">If <span class="process-math">\(\a \in L\)</span> is algebraic over the subfield <span class="process-math">\(F\text{,}\)</span> the unique monic generator of the ideal <span class="process-math">\(I\)</span> in the previous theorem, written <span class="process-math">\(m_{\a, F}(x)\text{,}\)</span> is called the <em class="emphasis">minimum polynomial</em> of <span class="process-math">\(\a\)</span> over <span class="process-math">\(F\text{.}\)</span>
 </div>
-<div class="para logical">
-<div class="para">Let <span class="process-math">\(T:V \to V\)</span> be the linear operator given by <span class="process-math">\(T(p) = xp'\)</span> (where <span class="process-math">\(p'\)</span> denotes the derivative of <span class="process-math">\(p\)</span>). Note that the change of basis matrix for this operator is given by</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{bmatrix}
-0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
-0 &amp; 1 &amp; \cdots &amp; 0 &amp; 0 \\
-\vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\
-0 &amp; 0 &amp; \cdots &amp; 0 &amp; n-1 \\   
-\end{bmatrix},
-\end{equation*}
-</div>
-<div class="para">with the basis <span class="process-math">\(\{1,x,\dots,x^{n-1}\}\text{.}\)</span> Thus <span class="process-math">\(\cp_A(x)\)</span> will be given by the determinant of the matrix</div>
-</div>
-<div class="para logical"><div class="displaymath process-math">
-\begin{equation*}
-\begin{bmatrix}
-x &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
-0 &amp; x-1 &amp; \cdots &amp; 0 &amp; 0 \\
-\vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\
-0 &amp; 0 &amp; \cdots &amp; 0 &amp; x-(n-1) \\   
-\end{bmatrix},
-\end{equation*}
-</div></div>
-<div class="para logical">
-<div class="para">which is diagonal. Hence</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\cp_AT(x)=\displaystyle\prod_{i=0}^{n-1}(x-i).
-\end{equation*}
-</div>
-<div class="para">Thus <span class="process-math">\(\cp_AT(x)\)</span> factors into distinct linear polynomials, each of which is in the form <span class="process-math">\((x-i)\)</span> for <span class="process-math">\(0\leq i\leq n-1\text{.}\)</span> Thus each linear term is an elementary divisor, making each Jordan Block a <span class="process-math">\(1\times1\)</span> matrix with <span class="process-math">\(i\)</span> as the only entry. Thus the Jordan Canonical form is</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{bmatrix}
-0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
-0 &amp; 1 &amp; \cdots &amp; 0 &amp; 0 \\
-\vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\
-0 &amp; 0 &amp; \cdots &amp; 0 &amp; n-1 \\   
-\end{bmatrix}.
-\end{equation*}
-</div>
-</div>
-</li>
-<li>
-<div class="para">This time around the change of basis matrix (denoted <span class="process-math">\(B\)</span> and using the same basis as above) for this matrix has 0s along the diagonal, and increasing natural numbers (starting at 0, sorry) along the upper diagonal. Thus <span class="process-math">\(\cp_B(x)=x^n\text{.}\)</span>
-</div>
-<div class="para">Recall that the minimum polynomial corresponding to <span class="process-math">\(B\)</span> will be the the smallest monic polynomial such that <span class="process-math">\(B\)</span> is sent to 0. Note that as <span class="process-math">\(D\)</span> is the operator sending <span class="process-math">\(p\)</span> to its derivative, and that <span class="process-math">\(D^{(2)}=D(D(p))=p''=p^{(2)}\text{.}\)</span> Thus <span class="process-math">\(B^2\)</span> can be viewed as a change of basis matrix for taking the second derivative of the basis, and so on.</div>
-<div class="para">As the basis extends to <span class="process-math">\(x^{n-1}\text{,}\)</span> it requires <span class="process-math">\(n\)</span> derivatives to make this polynomial become 0. Thus the minimal polynomial of <span class="process-math">\(B\)</span> must be <span class="process-math">\(x^n\text{,}\)</span> as it it monic and <span class="process-math">\(B^n=0\text{.}\)</span> As the degree of the invariant factors must sum to <span class="process-math">\(n\)</span> and <span class="process-math">\(\mp_B(x)=x^n\text{,}\)</span> which is itself an invariant factor, we see that it must in fact be the only one.</div>
-<div class="para">As <span class="process-math">\(x^n\)</span> is already a power of a prime, it is the only elementary divisor as well. Thus the Jordan Canonical Form for <span class="process-math">\(B\)</span> is an <span class="process-math">\(n\times n\)</span> Jordan Block with 0s along the diagonal and 1s along the sub-diagonal.</div>
-</li>
-</ol></div>
-<span class="incontext"><a href="sec-jcf.html#p-2558" class="internal">in-context</a></span>
+<span class="incontext"><a href="sec-algebraic.html#p-2558" class="internal">in-context</a></span>
 </body>
 </html>

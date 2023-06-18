@@ -11,60 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<div class="para">Let <span class="process-math">\(F=\Q\text{,}\)</span> <span class="process-math">\(n\)</span> a positive integer, and <span class="process-math">\(A\)</span> a unipotent <span class="process-math">\(4\times 4\)</span> matrix with entries in <span class="process-math">\(F\text{.}\)</span> Thus <span class="process-math">\(A-I\)</span> is nilpotent. Let <span class="process-math">\(\l\)</span> be an eigenvalue of <span class="process-math">\(A-I\text{.}\)</span> Then <span class="process-math">\((A-I)v=\l v\text{,}\)</span> so <span class="process-math">\(Av-Iv=\l v\)</span> and <span class="process-math">\(Av=\l v+Iv\text{.}\)</span> As <span class="process-math">\(Iv=v\text{,}\)</span> we have <span class="process-math">\(Av=\l v+v\)</span> and <span class="process-math">\(Av=(\l+1)v\text{.}\)</span>
-</div> <div class="para">Notice that as <span class="process-math">\(\l\)</span> is an eigenvalue of <span class="process-math">\(I\text{,}\)</span> we have <span class="process-math">\(\l +1\)</span> as an eigenvalue of <span class="process-math">\(A\text{.}\)</span>
-</div> <div class="para logical">
-<div class="para">Assume inductively that <span class="process-math">\(\l^{n-1}\)</span> is an eigenvalue of <span class="process-math">\((A-I)^{n-1}\text{.}\)</span> Notice</div>
-<div class="displaymath process-math">
-\begin{equation*}
-(A+I)^nv=(A+I)(A+I)^{n-1}v=(A+I)\l^{n-1}v=\l^{n-1}(A+I)v=\l^{n-1}\l=\l^n,
-\end{equation*}
-</div>
-<div class="para">making <span class="process-math">\(\l\)</span> an eigenvalue of <span class="process-math">\((A+I)^n\text{.}\)</span> Thus if <span class="process-math">\(\l\)</span> is an eigenvalue of <span class="process-math">\(A-I\text{,}\)</span> it is an eigenvalue of <span class="process-math">\((A-I)^n\)</span> as well. As <span class="process-math">\((A-I)\)</span> is nilpotent, there exists some <span class="process-math">\(k\)</span> such that <span class="process-math">\((A-I)^k=0\text{.}\)</span> This means that <span class="process-math">\(\l^kv=0\text{.}\)</span> As <span class="process-math">\(v\neq 0\)</span> and <span class="process-math">\(\l^k\)</span> is a scalar in a field (and hence integral domain) we have <span class="process-math">\(\l=0\text{.}\)</span> Thus the only eigenvalue of <span class="process-math">\((A-I)\)</span> is <span class="process-math">\(0\text{,}\)</span> meaning that the only eigenvalue of <span class="process-math">\(A\)</span> is <span class="process-math">\(1\text{.}\)</span>
-</div>
-</div> <div class="para">Eigenvalues of <span class="process-math">\(A\)</span> correspond to the roots of <span class="process-math">\(\cp_A(x)\text{,}\)</span> which is a monic quartic polynomial, as <span class="process-math">\(A\)</span> is a <span class="process-math">\(4\times 4\)</span> matrix. Thus <span class="process-math">\(\cp_A(x)=(x-1)^4\text{,}\)</span> as all roots must be <span class="process-math">\(1\text{.}\)</span>
-</div> <div class="para logical">
-<div class="para">Two matrices are similar if and only if they share the same invariant factors. Given that invariant factors divide <span class="process-math">\(\cp_A(x)\)</span> and each invariant factor must divide the following one, the possible sets of invariant factors for <span class="process-math">\(A\)</span> are the following:</div>
-<ol class="decimal">
-<li><div class="para"><span class="process-math">\(\{(x-1)^4\}\text{,}\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\{(x-1),(x-1)^3\}\text{,}\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\{(x-1), (x-1), (x-1)^2\}\text{,}\)</span></div></li>
-<li><div class="para">
-<span class="process-math">\(\{(x-1)^2, (x-1)^2\}\text{,}\)</span> and</div></li>
-<li><div class="para"><span class="process-math">\(\{(x-1), (x-1), (x-1), (x-1)\}\text{.}\)</span></div></li>
-</ol>
-<div class="para">We identify the companion matrices for each possible invariant factor:</div>
-<div class="displaymath process-math">
-\begin{equation*}
-C(x-1)=\begin{bmatrix} 1 \end{bmatrix},
-\end{equation*}
-</div>
-<div class="displaymath process-math">
-\begin{equation*}
-C((x-1)^2)=C(x^2-2x+1)=\begin{bmatrix} 0 &amp; -1 \\ 1 &amp; 2\end{bmatrix},
-\end{equation*}
-</div>
-<div class="displaymath process-math">
-\begin{equation*}
-C((x-1)^3)=C(x^3+3x^2+3x-1)=\begin{bmatrix} 0 &amp; 0 &amp; 1 \\ 1 &amp; 0 &amp; -3 \\ 0 &amp; 1 &amp; -3\end{bmatrix},
-\end{equation*}
-</div>
-<div class="para">and</div>
-<div class="displaymath process-math">
-\begin{equation*}
-C((x-1)^4)=C(x^4-4x^3+6x^2-4x+1)=\begin{bmatrix} 0 &amp; 0 &amp; 0 &amp; -1 \\ 1 &amp; 0 &amp; 0 &amp; 4 \\ 0 &amp; 1 &amp; 0 &amp; -6 \\ 0 &amp; 0 &amp; 1 &amp; 4\end{bmatrix}.
-\end{equation*}
-</div>
-<div class="para">We define the following:</div>
-<ol class="decimal">
-<li><div class="para"><span class="process-math">\(B=C((x-1)^4)\text{,}\)</span></div></li>
-<li><div class="para"><span class="process-math">\(C=C(x-1)\oplus C((x-1)^3)\text{,}\)</span></div></li>
-<li><div class="para"><span class="process-math">\(D=C(x-1)\oplus C(x-1)\oplus C((x-1)^2)\text{,}\)</span></div></li>
-<li><div class="para">
-<span class="process-math">\(E=C((x-1)^2)\oplus C((x-1)^2)\text{,}\)</span> and</div></li>
-<li><div class="para"><span class="process-math">\(F=C(x-1)\oplus C(x-1)\oplus C(x-1)\oplus C(x-1)\text{.}\)</span></div></li>
-</ol>
-<div class="para">As each of these matrices is in RCF, they are explicit representatives for each similarity class.</div>
+<div class="para">Let <span class="process-math">\(F \sse L\)</span> is a finite extension of fields and that the characteristic of <span class="process-math">\(F\)</span> is <span class="process-math">\(p\text{,}\)</span> where <span class="process-math">\(p\)</span> is a prime, and suppose there exists an element <span class="process-math">\(\a\in L\setminus F\)</span> such that <span class="process-math">\(\a^p \in F\text{.}\)</span>
+</div> <div class="para">Consider the polynomial <span class="process-math">\(f(x)=x^{p}-\a^p\in F[x]\text{,}\)</span> and notice that <span class="process-math">\(f'(x)=px^{p-1}=0\text{,}\)</span> as we are in a field of characteristic <span class="process-math">\(p\text{.}\)</span> However, this characteristic also yields <span class="process-math">\(x^p-\a^p=(x-\a)^p\text{.}\)</span> As <span class="process-math">\(F\)</span> is a field we have <span class="process-math">\(F[x]\)</span> as a UFD, and thus as <span class="process-math">\(x-\a\)</span> is irreducible in <span class="process-math">\(F[x]\)</span> it is also prime. Therefore this is the unique factorization of <span class="process-math">\(f\)</span> up to associates. If <span class="process-math">\(f\)</span> was reducible <span class="process-math">\(F\)</span> it would thus have to be divisible into power os <span class="process-math">\(x-\a\text{,}\)</span> which will never be reducible as <span class="process-math">\(\a\not\in F\text{.}\)</span> Thus <span class="process-math">\(f\)</span> is irreducible in <span class="process-math">\(F[x]\text{,}\)</span> making it the minimal polynomial of <span class="process-math">\(\a\text{.}\)</span> However, if <span class="process-math">\(|\Aut(L/F )|= [L : F ]\)</span> this would make <span class="process-math">\(L\)</span> the splitting field of <span class="process-math">\(f\)</span> over <span class="process-math">\(F\text{,}\)</span> which it is not, given <span class="process-math">\(\a\not\in F\text{.}\)</span> Thus <span class="process-math">\(|\Aut(L/F )| &lt; [L : F ]\text{.}\)</span>
 </div>
 </div></body>
 </html>

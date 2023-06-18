@@ -11,11 +11,24 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<div class="para">Let <span class="process-math">\(G\)</span> be a group of order <span class="process-math">\(75=3\cdot 5^2\text{.}\)</span>
-</div> <div class="para">By <a href="" class="xref" data-knowl="./knowl/thm-sylow.html" title="Theorem 6.11: Sylow's Theorem">Sylow's Theorem</a> we know the following: - <span class="process-math">\(n_3|25\)</span> and <span class="process-math">\(n_{3}\equiv1\mod{3}\text{,}\)</span> so our options are <span class="process-math">\(1\)</span> and <span class="process-math">\(25\text{.}\)</span> - <span class="process-math">\(n_5|3\)</span> and <span class="process-math">\(n_{3}\equiv1\mod{5}\text{,}\)</span> so there can only be one. Let <span class="process-math">\(P\)</span> denote the unique Sylow <span class="process-math">\(5\)</span>-subgroup, which has order <span class="process-math">\(25\)</span> and is normal in <span class="process-math">\(G\text{.}\)</span> As <span class="process-math">\(P\)</span> is a group of order <span class="process-math">\(p^2\)</span> we know that it is abelian. Thus there are only two options for <span class="process-math">\(P\)</span> up to isomorphism: <span class="process-math">\(\Z_5\times\Z_5\)</span> and <span class="process-math">\(\Z_{25}\text{.}\)</span>
-</div> <div class="para">Let <span class="process-math">\(Q\)</span> denote a Sylow <span class="process-math">\(3\)</span>-subgroup. All Sylow <span class="process-math">\(3\)</span>-subgroups are isomorphic to each other and there is only one group of order <span class="process-math">\(3\text{,}\)</span> which is <span class="process-math">\(\Z_3\text{.}\)</span>
-</div> <div class="para">Suppose <span class="process-math">\(P=\Z_{25}\text{.}\)</span> As <span class="process-math">\(G = PQ\)</span> and <span class="process-math">\(P\cap Q = \{e\}\text{,}\)</span> we have that <span class="process-math">\(G = P\sdp_\phi Q\text{,}\)</span> where <span class="process-math">\(\phi : Q \to\Aut(P)\text{.}\)</span> Note that <span class="process-math">\(\Aut(P)\cong\Z^\times_{25}\text{,}\)</span> which is cyclic of order <span class="process-math">\(20\text{.}\)</span> Since <span class="process-math">\(|Q| = 3\)</span> and <span class="process-math">\(\gcd(3,20) = 1\text{,}\)</span> we conclude that <span class="process-math">\(\phi\)</span> must be the trivial map. Hence, <span class="process-math">\(G = P\times Q\text{.}\)</span>
-</div> <div class="para">Now suppose <span class="process-math">\(P=\Z_5\times\Z_5\text{.}\)</span>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(f:G\to G/H\times G/K\)</span> defined such that <span class="process-math">\(f(g)=(gH, gK)\text{.}\)</span> Let <span class="process-math">\(x,y\in G\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(xy)=(xyH,xyK)=(xHyH,xKyK)=(xH,yH)\cdot(xKyK)=f(x)f(y),
+\end{equation*}
+</div>
+<div class="para">showing <span class="process-math">\(f\)</span> is a homomorphism.</div>
+</div> <div class="para">Let <span class="process-math">\((xH,yK)\in G/H\times G/K\text{.}\)</span> As <span class="process-math">\(x,y\in G=HK\text{,}\)</span> we have <span class="process-math">\(x=hk\)</span> and <span class="process-math">\(y=h'k'\)</span> with <span class="process-math">\(h,h'\in H\)</span> and <span class="process-math">\(k,k'\in K\text{.}\)</span> As <span class="process-math">\(k'\in K\)</span> and <span class="process-math">\(h\in H\)</span> we see <span class="process-math">\((xH,yK)=(kH,h'K)\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Consider <span class="process-math">\(g=kh'\in G\)</span> and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(g)=f(kh')=(kh'H,kh'K)=(kH,h'K)=(xH,yK),
+\end{equation*}
+</div>
+<div class="para">making <span class="process-math">\(f\)</span> surjective as well.</div>
+</div> <div class="para">Let <span class="process-math">\(g\in H\cap K\text{.}\)</span> Then <span class="process-math">\(f(g)=(gH,gK)=(H,K)\text{,}\)</span> and so <span class="process-math">\(g\in\ker(f)\text{.}\)</span> Let <span class="process-math">\(g\in\ker(f)\text{.}\)</span> Then <span class="process-math">\(f(g)=(H,K)\text{,}\)</span> so <span class="process-math">\(gH=H\)</span> and <span class="process-math">\(gK=K\text{,}\)</span> placing <span class="process-math">\(g\in H\cap K\text{.}\)</span> Thus, by the <a href="" class="xref" data-knowl="./knowl/thm-fit-group.html" title="Theorem 4.49: First Isomorphism Theorem">First Isomorphism Theorem</a>, we have <span class="process-math">\(G/(H\cap K)\cong G/H \times G/K.\)</span>
 </div>
 </div></body>
 </html>

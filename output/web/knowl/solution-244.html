@@ -13,22 +13,26 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h3 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">G.39.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">G.83.1</span><span class="period">.</span>
 </h3>
-<div class="para logical">
-<div class="para">Let <span class="process-math">\(G\)</span> be a finite group and <span class="process-math">\(p\)</span> a prime dividing the order of <span class="process-math">\(G\text{.}\)</span> Let <span class="process-math">\(P\)</span> be a Sylow <span class="process-math">\(p\)</span>-subgroup.</div>
-<ol class="decimal">
-<li>
-<div class="para">We proceed via the contrapositive. Let <span class="process-math">\(Q\)</span> be a Sylow <span class="process-math">\(p\)</span>-subgroup, and suppose <span class="process-math">\(PQ\leq G\text{.}\)</span> Thus <span class="process-math">\(|PG|\big||G|\)</span>
+<div class="para">Let <span class="process-math">\(G\)</span> be a group of order <span class="process-math">\(p^mq\)</span> where <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> are distinct primes and <span class="process-math">\(m \geq 1\text{.}\)</span> Assume that <span class="process-math">\(G\)</span> has at least one element of order <span class="process-math">\(p^m\text{.}\)</span> Let <span class="process-math">\(S\)</span> be the set of all elements of <span class="process-math">\(G\)</span> of order <span class="process-math">\(p^m\)</span>
+</div> <div class="para">Part (a) First, notice that <span class="process-math">\(e\cdot x=exe=x\)</span> for all <span class="process-math">\(x\in S\text{.}\)</span> Next, let <span class="process-math">\(g,h\in G\)</span> and consider <span class="process-math">\(gh\cdot x=ghx(gh)\inv=ghxh\inv g\inv=g\cdot(h\cdot x)\text{.}\)</span> Thus <span class="process-math">\(G\)</span> acts on <span class="process-math">\(S\)</span> by conjugation.</div> <div class="para logical">
+<div class="para">Part (b) Suppose <span class="process-math">\(Z(G)\)</span> is trivial, and let <span class="process-math">\(G\)</span> act on <span class="process-math">\(S\)</span> by conjugation. Thus the orbits of this action correspond the normalizers of elements and the stabilizers correspond to the centralizers. Recall that the orbits of this action partition <span class="process-math">\(S\text{,}\)</span> so we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-orbit-stabilizer.html ./knowl/thm-class-eq.html">
+\begin{equation*}
+|S|=\sum\limits_{x\in S}|\Orb_G(x)|
+\end{equation*}
 </div>
-<div class="para">Note that <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\)</span> both have <span class="process-math">\(p^k\)</span> elements, where <span class="process-math">\(p^k\)</span> is the largest power of <span class="process-math">\(p\)</span> that divides the order of <span class="process-math">\(G\text{.}\)</span> Recall <span class="process-math">\(|PQ|=\frac{|P||Q|}{|P\cap Q|}=\frac{p^{2k}}{|P\cap Q|}\text{.}\)</span> As <span class="process-math">\(p^k\)</span> is the largest power of <span class="process-math">\(p\)</span> that divides the order of <span class="process-math">\(G\text{,}\)</span> we see that <span class="process-math">\(|P\cap Q|\)</span> must be at least <span class="process-math">\(p^k\text{.}\)</span> Thus <span class="process-math">\(P=Q\text{.}\)</span>
+<div class="para">for distinct orbits. However, by <a href="" class="xref" data-knowl="./knowl/cor-orbit-stabilizer.html" title="Corollary 5.28: Orbit-Stabilizer Theorem">Orbit-Stabilizer Theorem</a> we also have <span class="process-math">\(|G|=|\Orb(x)|\cdot |\Stab(x)|\)</span> for all <span class="process-math">\(x\in S\text{.}\)</span> Now recall the <a href="" class="xref" data-knowl="./knowl/thm-class-eq.html" title="Theorem 5.40: Class Equation">Class Equation</a>:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-orbit-stabilizer.html ./knowl/thm-class-eq.html">
+\begin{equation*}
+|G|=|Z(G)|+\sum\limits_{g\in G}[G:C_G(g)]
+\end{equation*}
 </div>
-</li>
-<li><div class="para">First, note that <span class="process-math">\(P\leq N_{G}(P)\leq N_G(N_G(P))\text{.}\)</span> Note that <span class="process-math">\(N_G(P)\)</span> is the largest subgroup of <span class="process-math">\(G\)</span> such that <span class="process-math">\(P\)</span> is normal in <span class="process-math">\(G\text{,}\)</span> making <span class="process-math">\(P\)</span> the only Sylow <span class="process-math">\(p\)</span>-subgroup of <span class="process-math">\(N_G(P)\text{.}\)</span> Let <span class="process-math">\(x\in N_G(N_G(P))\text{.}\)</span> Notice that <span class="process-math">\(xPx\inv\leq xN_G(P)x\inv\text{,}\)</span> but as <span class="process-math">\(x\in N_G(N_G(P))\)</span> we have <span class="process-math">\(xN_G(P)x\inv=N_G(P)\text{.}\)</span> As <span class="process-math">\(xPx\inv\)</span> is a Sylow <span class="process-math">\(p\)</span>-subgroup that is contained in <span class="process-math">\(N_G(P)\text{,}\)</span> we see that <span class="process-math">\(xPx\inv=P\text{,}\)</span> placing <span class="process-math">\(x\in N_G(P)\text{.}\)</span> Thus <span class="process-math">\(N_G(P)=N_G(N_G(P))\text{.}\)</span>
-</div></li>
-</ol>
+<div class="para">With all that out of the way, let <span class="process-math">\(x,y\in S\text{.}\)</span> Notice that <span class="process-math">\(x^{p^{m}}=e=y^{p^{m}}\)</span>
 </div>
+</div> <div class="para"><span class="process-math">\(xyx\inv\)</span></div>
 </div>
-<span class="incontext"><a href="section-75.html#solution-244" class="internal">in-context</a></span>
+<span class="incontext"><a href="section-80.html#solution-244" class="internal">in-context</a></span>
 </body>
 </html>

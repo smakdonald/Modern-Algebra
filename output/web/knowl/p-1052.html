@@ -13,28 +13,15 @@
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
 <div class="para logical">
-<div class="para">The proof is straightforward but a bit messy. For associativity, note that</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{aligned}
-(y_1,x_1) \left( (y_2, x_2) (y_3, x_3) \right) &amp;=(y_1,x_1) (y_2\rho(x_2)(y_3), x_2x_3)\\
-&amp;=(y_1\rho(x_1)\left(y_2\rho(x_2)(y_3)\right), x_1x_2x_3)\\
-&amp;=(y_1\rho(x_1)(y_2)(\rho(x_1)\circ \rho(x_2))(y_3), x_1x_2x_3)\\
-&amp;=(y_1\rho(x_1)(y_2)\rho(x_1x_2)(y_3), x_1x_2x_3)\\
-\end{aligned}
-\end{equation*}
+<div class="para">Let <span class="process-math">\(R\)</span> be a ring with identity.</div>
+<ol class="decimal">
+<li><div class="para">Give an example of a ring which has an idempotent other than <span class="process-math">\(0\)</span> or <span class="process-math">\(1\text{.}\)</span>
+</div></li>
+<li><div class="para">Prove that if <span class="process-math">\(e\)</span> is idempotent, so is <span class="process-math">\(1-e\text{.}\)</span>
+</div></li>
+<li><div class="para">Suppose <span class="process-math">\(R\)</span> is commutative and <span class="process-math">\(e\)</span> an idempotent. Let <span class="process-math">\(Re:=\{re\mid r\in R\}\text{.}\)</span> Prove that <span class="process-math">\(Re\)</span> is a commutative ring (with identity <span class="process-math">\(e\)</span>).</div></li>
+</ol>
 </div>
-<div class="para">On the other hand</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{aligned}
-\left( (y_1,x_1) (y_2, x_2) \right) (y_3, x_3) &amp; = (y_1 \rho(x_1)(y_2), x_1 x_2)  (y_3, x_3) \\
-&amp; = (y_1 \rho(x_1)(y_2)\rho(x_1x_2)(y_3), x_1 x_2 x_3).
-\end{aligned}
-\end{equation*}
-</div>
-<div class="para">This gives associativity.</div>
-</div>
-<span class="incontext"><a href="sec-spds.html#p-1052" class="internal">in-context</a></span>
+<span class="incontext"><a href="sec-defn-ex.html#p-1052" class="internal">in-context</a></span>
 </body>
 </html>

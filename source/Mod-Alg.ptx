@@ -5989,14 +5989,20 @@
 
             <proof>
               <p>
-                Assume <m>G</m> is simple of order <m>60</m>. Let us first observe that it suffices to construct a non-trivial action of <m>G</m> on a set with <m>5</m> elements. For given such an action we obtain a non-trivial homomorphism <m>g: G \to S_5</m>. Since it's non-trivial and <m>G</m> is simple, we must have <m>\operatorname{ker}(g) = \{e\}</m>, so that <m>g</m> is injective. Thus <m>G \cong \operatorname{im}(g)</m>, and <m>\# \operatorname{im}(g) = 60</m>. But we already know that <m>A_5</m> is the only subgroup of <m>S_5</m> of order <m>60</m>, and thus <m>G \cong \operatorname{im}(g) =
-                  A_5</m>.
+                Assume <m>G</m> is simple of order <m>60</m>. 
+                Let us first observe that it suffices to construct a non-trivial action of <m>G</m> on a set with <m>5</m> elements. 
+                For given such an action we obtain a non-trivial homomorphism <m>g: G \to S_5</m>. 
+                Since it's non-trivial and <m>G</m> is simple, we must have <m>\operatorname{ker}(g) = \{e\}</m>, so that <m>g</m> is injective. 
+                Thus <m>G \cong \operatorname{im}(g)</m>, and <m>\# \operatorname{im}(g) = 60</m>. 
+                But we already know that <m>A_5</m> is the only subgroup of <m>S_5</m> of order <m>60</m>, and thus <m>G \cong \operatorname{im}(g)=A_5</m>.
               </p>
 
               <p>
-                So, we only need to find such an action, and one's first guess would be the action on one of the sets of Sylow <m>p</m>-subgroups. By Sylow Theory and the fact that <m>G</m> is simple (so that no Sylow <m>p</m>-subgroup for <m>p=2,3,5</m> can be unique) we get <me>\# \operatorname{Syl}_2(G) \in \{3,5,15\},
-        \# \operatorname{Syl}_3(G) \in \{4,10\},
-        \# \operatorname{Syl}_5(G) = 6.</me>
+                So, we only need to find such an action, and one's first guess would be the action on one of the sets of Sylow <m>p</m>-subgroups. 
+                By Sylow Theory and the fact that <m>G</m> is simple (so that no Sylow <m>p</m>-subgroup for <m>p=2,3,5</m> can be unique) we get 
+                <me>
+                  \# \operatorname{Syl}_2(G) \in \{3,5,15\},\# \operatorname{Syl}_3(G) \in \{4,10\},\# \operatorname{Syl}_5(G) = 6.
+                </me>
               </p>
         
               <p>
@@ -6004,19 +6010,21 @@
               </p>
         
               <blockquote>
-                      <p>
-                There is no non-trivial action of <m>G</m> on a set <m>S</m> of size at most <m>4</m>.
-              </p>
+                <p>
+                  There is no non-trivial action of <m>G</m> on a set <m>S</m> of size at most <m>4</m>.
+                </p>
               </blockquote>
         
               <p>
-                For if there was such a non-trivial action, we would get a homomorphism <m>\rho: G \to S_n</m> for <m>2 \leq n \leq 4</m> (if <m>n=1</m>, the only action is the trivial one). Such a homomorphism cannot be injective by order considerations. So, it's kernel would be a proper, non-trivial normal subgroup, which do not exist.
+                For if there was such a non-trivial action, we would get a homomorphism <m>\rho: G \to S_n</m> for <m>2 \leq n \leq 4</m> (if <m>n=1</m>, the only action is the trivial one). 
+                Such a homomorphism cannot be injective by order considerations. 
+                So, it's kernel would be a proper, non-trivial normal subgroup, which do not exist.
               </p>
         
               <p>
-                In particular, <m>\# \operatorname{Syl}_2(G) \ne 3</m> and <m>\# \operatorname{Syl}_4(G) \ne 4</m>, so that <me>\# \operatorname{Syl}_2(G) \in \{5,15\},
-        \# \operatorname{Syl}_3(G) = 10,
-        \# \operatorname{Syl}_5(G) = 6.</me>
+                In particular, <m>\# \operatorname{Syl}_2(G) \ne 3</m> and <m>\# \operatorname{Syl}_4(G) \ne 4</m>, so that 
+                <me>
+                \# \operatorname{Syl}_2(G) \in \{5,15\},\# \operatorname{Syl}_3(G) = 10,\# \operatorname{Syl}_5(G) = 6.</me>
               </p>
         
               <p>
@@ -6024,8 +6032,19 @@
               </p>
         
               <p>
-                Suppose <m>\# \operatorname{Syl}_2(G) = 15</m> and let <m>P_1, \dots, P_{15}</m> be all the Sylow <m>2</m>-subgroups. Since <m>\# \operatorname{Syl}_3(G) = 10</m> and <m>\# \operatorname{Syl}_5(G) = 6</m>, <m>G</m> has <m>10 \cdot 2 + 6 \cdot 4 = 44</m> elements of order <m>3</m> or <m>5</m>. If <m>P_i \cap P_j = \{e\}</m> for all <m>i \ne
-        j</m>, we would have <m>15 \cdot 3</m> elements of order <m>2</m> or <m>4</m>, which is far too many elements in total. At least two of these must therefore intersect non-trivially and without loss say <m>H = P_1 \cap P_2</m> has two elements. We consider <m>K = N_G(H)</m>. As in the preivious example, <m>K \supseteq P_1 \cup P_2</m> and hence <m>\# K \geq 6</m>, <m>4 \mid \#K</m>, and <m>\#K \mid 60</m>. The possibilities are <me>\# K = 12, 20, 60</me> If <m>\# K = 60</m> then <m>H \unlhd G</m>, which is impossible. If <m>\# K = 20</m>, then we obtain an transitive action of <m>G</m> on the three element set of left cosets of <m>K</m> in <m>G</m>, which as shown above is not possible. We are left with <m>\# K = 12</m>. Thus <m>G</m> acts transitively (and hence non-trivially) on the five element set of left cosets of <m>K</m> in <m>G</m>. ◻
+                Suppose <m>\# \operatorname{Syl}_2(G) = 15</m> and let <m>P_1, \dots, P_{15}</m> be all the Sylow <m>2</m>-subgroups. 
+                Since <m>\# \operatorname{Syl}_3(G) = 10</m> and <m>\# \operatorname{Syl}_5(G) = 6</m>, <m>G</m> has <m>10 \cdot 2 + 6 \cdot 4 = 44</m> elements of order <m>3</m> or <m>5</m>. 
+                If <m>P_i \cap P_j = \{e\}</m> for all <m>i \ne j</m>, we would have <m>15 \cdot 3</m> elements of order <m>2</m> or <m>4</m>, which is far too many elements in total. 
+                At least two of these must therefore intersect non-trivially and without loss say <m>H = P_1 \cap P_2</m> has two elements.
+                We consider <m>K = N_G(H)</m>. 
+                As in the preivious example, <m>K \supseteq P_1 \cup P_2</m> and hence <m>\# K \geq 6</m>, <m>4 \mid \#K</m>, and <m>\#K \mid 60</m>. 
+                The possibilities are 
+                <me>
+                  \# K = 12, 20, 60.
+                </me> 
+                If <m>\# K = 60</m> then <m>H \unlhd G</m>, which is impossible. 
+                If <m>\# K = 20</m>, then we obtain an transitive action of <m>G</m> on the three element set of left cosets of <m>K</m> in <m>G</m>, which as shown above is not possible. 
+                We are left with <m>\# K = 12</m>. Thus <m>G</m> acts transitively (and hence non-trivially) on the five element set of left cosets of <m>K</m> in <m>G</m>.
               </p>
             </proof>
           </theorem>
@@ -6059,7 +6078,8 @@
             <definition xml:id="def-dp-external"><title>Direct Product, Direct Sum</title>
               <statement>
                 <p>
-                  Let <m>G_\alpha</m> be a group for all <m>\alpha</m> in an index set <m>J</m>. The <em>direct product</em> of the groups <m>G_\alpha</m> is the Cartesian product <m>\prod_{\alpha\in J} G_\alpha</m> with multiplication defined by 
+                  Let <m>G_\alpha</m> be a group for all <m>\alpha</m> in an index set <m>J</m>.
+                  The <em>direct product</em> of the groups <m>G_\alpha</m> is the Cartesian product <m>\prod_{\alpha\in J} G_\alpha</m> with multiplication defined by 
                   <me>
                     (g_a)_{\alpha\in  J}(h_\alpha)_{\alpha\in J} = (g_\alpha h_\alpha)_{\alpha\in J}.
                   </me> 
@@ -6072,15 +6092,26 @@
               </statement>
             </definition>
 
-            <remark><p>A direct sum is the same thing as a finite direct product.</p></remark>
+            <remark>
+              <p>
+                A direct sum is the same thing as a finite direct product.
+              </p>
+            </remark>
   
             <theorem xml:id="thm-dp-a-group"><title>Direct Product of Groups is a Group</title>
               <statement>
-                <p>The direct product of a collection of groups is a group, and the direct sum of the collection is a subgroup of the direct product.</p>
+                <p>
+                  The direct product of a collection of groups is a group, and the direct sum of the collection is a subgroup of the direct product.
+                </p>
               </statement>
             </theorem>
 
-            <remark><p>The direct sum notation will not be seen or heard from again in group theory. It was fun while it lasted.</p></remark>
+            <remark>
+              <p>
+                The direct sum notation will not be seen or heard from again in group theory. 
+                It was fun while it lasted.
+              </p>
+            </remark>
 
             <theorem xml:id="thm-dp-properties"><title>Properties of Direct Products</title>
               <statement>
@@ -6094,7 +6125,8 @@
 
                     <li>
                       <p>
-                        Let <m>G</m> be a direct product of groups. If <m>H</m> is a direct product of subgroups of <m>G</m>, then <m>H\leq G</m>.
+                        Let <m>G</m> be a direct product of groups. 
+                        If <m>H</m> is a direct product of subgroups of <m>G</m>, then <m>H\leq G</m>.
                       </p>
                     </li>
 
@@ -6106,7 +6138,8 @@
 
                     <li>
                       <p>
-                        Let <m>(g_1,\cdots,g_n)\in G_1\times\cdots\times G_n</m>. Then <m>|(g_1,\cdots,g_n)|=\lcm(|g_1|,\dots,|g_n|)</m>.
+                        Let <m>(g_1,\cdots,g_n)\in G_1\times\cdots\times G_n</m>. 
+                        Then <m>|(g_1,\cdots,g_n)|=\lcm(|g_1|,\dots,|g_n|)</m>.
                       </p>
                     </li>
                   </ol>
@@ -6120,13 +6153,15 @@
                   <ol>
                     <li>
                       <p>
-                        Let <m>G</m> and <m>H</m> be groups. Then the projection map <m>\pi_G:G\times H\to G</m> is a surjective homomorphism of groups.
+                        Let <m>G</m> and <m>H</m> be groups. 
+                        Then the projection map <m>\pi_G:G\times H\to G</m> is a surjective homomorphism of groups.
                       </p>
                     </li>
 
                     <li>
                       <p>
-                        Let <m>G</m> and <m>H</m> be groups. Then the inclusion map <m>\iota_G:G\to G\times H</m> is an injective homomorphism of groups.
+                        Let <m>G</m> and <m>H</m> be groups. 
+                        Then the inclusion map <m>\iota_G:G\to G\times H</m> is an injective homomorphism of groups.
                       </p>
                     </li>
                   </ol>
@@ -6136,7 +6171,13 @@
 
             <example xml:id="ex-dp-cyclic"><title>Direct Product of Cyclic Groups</title>
               <p>
-                If <m>\operatorname{gcd}(m,n)=1</m> then <m>\mathbb{Z}/m\times \mathbb{Z}/n\cong \mathbb{Z}/mn</m>. Indeed consider the elements <m>x=(1,0)</m> and <m>y=(0,1)</m> in <m>\mathbb{Z}/m\times \mathbb{Z}/n</m>. Then <m>|x|=m, |y|=n</m> and <m>x+y=y+x=(1,1)</m>. Therefore <m>|xy|=\operatorname{lcm}(|x|,|y|)=mn</m>. Since <m>\langle x+y \rangle \subseteq \mathbb{Z}/m\times \mathbb{Z}/n</m> and both of these sets have cardinality <m>mn</m> it must be the case that <m>\mathbb{Z}/m\times \mathbb{Z}/n=\langle x+y \rangle=\langle (1,1) \rangle</m>. Since <m>\langle x+y \rangle</m> and <m>\mathbb{Z}/mn</m> are both cyclic groups of order <m>mn</m> they are isomorphic. Thus 
+                If <m>\operatorname{gcd}(m,n)=1</m> then <m>\mathbb{Z}/m\times \mathbb{Z}/n\cong \mathbb{Z}/mn</m>. 
+                Indeed consider the elements <m>x=(1,0)</m> and <m>y=(0,1)</m> in <m>\mathbb{Z}/m\times \mathbb{Z}/n</m>. 
+                Then <m>|x|=m, |y|=n</m> and <m>x+y=y+x=(1,1)</m>. 
+                Therefore <m>|xy|=\operatorname{lcm}(|x|,|y|)=mn</m>. 
+                Since <m>\langle x+y \rangle \subseteq \mathbb{Z}/m\times \mathbb{Z}/n</m> and both of these sets have cardinality <m>mn</m> it must be the case that <m>\mathbb{Z}/m\times \mathbb{Z}/n=\langle x+y \rangle=\langle (1,1) \rangle</m>. 
+                Since <m>\langle x+y \rangle</m> and <m>\mathbb{Z}/mn</m> are both cyclic groups of order <m>mn</m> they are isomorphic. 
+                Thus 
                 <me>
                   \mathbb{Z}/m\times \mathbb{Z}/n\cong \mathbb{Z}/mn.
                 </me>
@@ -6144,7 +6185,10 @@
             </example>
 
             <exercise xml:id="exe-no-group-cancellation-in-products"><title>No Cancellation in Products</title>
-              <p>Find an example of groups <m>G,H</m> such that there is an isomorphism <m>G\times H\cong G</m> but <m>H</m> is not trivial. Note: since <m>G\times H\cong G</m> can be rewritten as <m>G\times H\cong G\times \{e\}</m>, the above shows that in general one cannot cancel groups in isomorphisms between direct products.</p>
+              <p>
+                Find an example of groups <m>G,H</m> such that there is an isomorphism <m>G\times H\cong G</m> but <m>H</m> is not trivial. 
+                Note: since <m>G\times H\cong G</m> can be rewritten as <m>G\times H\cong G\times \{e\}</m>, the above shows that in general one cannot cancel groups in isomorphisms between direct products.
+              </p>
             </exercise>
             
           </subsection>
@@ -6383,42 +6427,53 @@
 
             <blockquote><p><q>Don't give up and always keep on believing in your product.</q></p><attribution>Niels van Deuren</attribution></blockquote>
 
-            <p> We now discuss an important generalization for the direct product and a new method of constructing a new groups from the action of one group on another.</p>
+            <p>
+              We now discuss an important generalization for the direct product and a new method of constructing a new groups from the action of one group on another.
+            </p>
             
             <p>
-              Suppose <m>G</m> is a group with subgroups <m>H\mathrel{\unlhd}G</m> and <m>K\leq G</m> such that <m>H\cap K=\{e\}</m>. Then we still have <m>HK\leq G</m>; let's see what we would need the multiplication on the cartesian product <m>H\times K</m> to be in order for <m>\theta: H \times K \to HK</m> defined by <m>\theta(h,k) = hk</m> to still be a group homomorphism: 
+              Suppose <m>G</m> is a group with subgroups <m>H\mathrel{\unlhd}G</m> and <m>K\leq G</m> such that <m>H\cap K=\{e\}</m>. 
+              Then we still have <m>HK\leq G</m>; let's see what we would need the multiplication on the cartesian product <m>H\times K</m> to be in order for <m>\theta: H \times K \to HK</m> defined by <m>\theta(h,k) = hk</m> to still be a group homomorphism: 
               <me>
                 \theta(h_1, k_1) \theta(h_2, k_2) = h_1k_1h_2k_2 = h_1h'_2k_1k_2=\theta(h_1h_2',k_1k_2),
               </me>
-               where <m>h'_2\in H</m> is such that <m>k_1h_2k_1^{-1}=h'_2</m>.
+              where <m>h'_2\in H</m> is such that <m>k_1h_2k_1^{-1}=h'_2</m>.
             </p>
     
             <p>
-              This means that we would need to have <m>(h_1, k_1)(h_2, k_2)=(h_1h_2',k_1k_2)</m> for <m>\theta</m> to be a homomorphism. This motivates the following definition.
+              This means that we would need to have <m>(h_1, k_1)(h_2, k_2)=(h_1h_2',k_1k_2)</m> for <m>\theta</m> to be a homomorphism. 
+              This motivates the following definition.
             </p>
             
             <definition xml:id="def-sdp-external"><title>External Semidirect Products</title>
               <statement>
                 <p>
-                  Let <m>H</m> and <m>K</m> be groups and let <m>\rho:K\to \operatorname{Aut}(H)</m> be a homomorphism. The (external) <em>semidirect product</em> induced by <m>\rho</m> is the set <m>H \times K</m> with the binary operation defined by 
+                  Let <m>H</m> and <m>K</m> be groups and let <m>\rho:K\to \operatorname{Aut}(H)</m> be a homomorphism. 
+                  The (external) <em>semidirect product</em> induced by <m>\rho</m> is the set <m>H \times K</m> with the binary operation defined by 
                   <me>
                     (h,k)(h',k') = (h\rho(k)(h'),kk').
-                  </me> This group is denoted by <m>H \rtimes_\rho K</m>.
+                  </me> 
+                  This group is denoted by <m>H \rtimes_\rho K</m>.
                 </p>
               </statement>
             </definition>
 
             <exploration>
               <statement>
-                <p>Decide amongst yourselves whether it should be spelled "semidirect", "semi-direct", "semi direct".</p>
+                <p>
+                  Decide amongst yourselves whether it should be spelled "semidirect", "semi-direct", "semi direct".
+                </p>
               </statement>
             </exploration>
   
-            <p>Before we prove that the construction above actually gives a group, let's compute a few examples.</p>
+            <p>
+              Before we prove that the construction above actually gives a group, let's compute a few examples.
+            </p>
   
             <example xml:id="def-trivial-sdp"><title>Semidirect, Sans the Semi</title>
               <p>
-                Given <m>H</m> and <m>K</m> we could always take <m>\rho</m> to be the trivial homomorphism, so that <m>\rho(y)(x) = x</m> for all <m>y \in K</m> and <m>x \in H</m>. Then <m>K \rtimes_\rho H</m> is just the usual direct product: 
+                Given <m>H</m> and <m>K</m> we could always take <m>\rho</m> to be the trivial homomorphism, so that <m>\rho(y)(x) = x</m> for all <m>y \in K</m> and <m>x \in H</m>. 
+                Then <m>K \rtimes_\rho H</m> is just the usual direct product: 
                 <me>
                   (y_1, x_1) (y_2, x_2) = (y_1 y_2, x_1 x_2).
                 </me>
@@ -6427,34 +6482,41 @@
   
             <example><title></title>
               <p>
-                Fix a group <m>G</m>, a normal subgroup <m>H \unlhd G</m> and a subgroup <m>K \leq G</m>. Then the function 
+                Fix a group <m>G</m>, a normal subgroup <m>H \unlhd G</m> and a subgroup <m>K \leq G</m>. 
+                Then the function 
                 <me>
                   \rho: K \to \operatorname{Aut}(H)
                 </me> 
-                given by <m>\rho(x)(y) = xyx^{-1}</m> for <m>x \in K, y \in H</m> is a homomorphism. Thus <m>K</m> acts on <m>H</m> via automorphisms.
+                given by <m>\rho(x)(y) = xyx^{-1}</m> for <m>x \in K, y \in H</m> is a homomorphism. 
+                Thus <m>K</m> acts on <m>H</m> via automorphisms.
               </p>
             </example>
   
             <example><title></title>
               <p>
-                Let <m>K = \langle x \rangle</m> be cyclic of order <m>2</m> and <m>H = \langle y \rangle</m> be cyclic of order <m>n</m> for any <m>n \geq 1</m>. There is an automorphism of <m>K</m> that sends <m>y</m> to <m>y^{-1}</m>. This automorphism is clearly its own inverse; i.e., it has order <m>2</m>. Therefore, by the UMP for cyclic groups, there is a group homomorphism 
+                Let <m>K = \langle x \rangle</m> be cyclic of order <m>2</m> and <m>H = \langle y \rangle</m> be cyclic of order <m>n</m> for any <m>n \geq 1</m>. 
+                There is an automorphism of <m>K</m> that sends <m>y</m> to <m>y^{-1}</m>. 
+                This automorphism is its own inverse; i.e., it has order <m>2</m>. 
+                Therefore, by <xref ref="prop-ump-cyclic"/>, there is a group homomorphism 
                 <me>
                   \rho: K \to \operatorname{Aut}(H)
                 </me> 
-                with <m>\rho(x)(y) = y^{-1}</m>. We may thus form the group 
+                with <m>\rho(x)(y) = y^{-1}</m>. 
+                We may thus form the group 
                 <me>
                   G := H \rtimes_\rho K.
                 </me> 
-                The elements of <m>G</m> are <m>(y^i, x^j)</m> for <m>0 \leq i \leq n-1</m> and <m>0 \leq j \leq 1</m>, in particular <m>|G|=2n</m>. Set 
+                The elements of <m>G</m> are <m>(y^i, x^j)</m> for <m>0 \leq i \leq n-1</m> and <m>0 \leq j \leq 1</m>, in particular <m>|G|=2n</m>. 
+                Set 
                 <me>
-                  \tilde y = (y,e) \in G \text{ and } \tilde x = (e,x) \in G
+                  \tilde y = (y,e) \in G \text{ and } \tilde x = (e,x) \in G.
                 </me> 
                 Then 
                 <me>
-                  \tilde y^n = (y,e_K)^n = (y^n,e_K) = (e_H, e_K)= e_G
+                  \tilde y^n = (y,e_K)^n = (y^n,e_K) = (e_H, e_K)= e_G,
                 </me> 
                 <me>
-                  \tilde x^2 = (e_H,x)^2 = (e_H, x^2) = (e_H, e_K)= e_G
+                  \tilde x^2 = (e_H,x)^2 = (e_H, x^2) = (e_H, e_K)= e_G,
                 </me>
                 and 
                 <me>
@@ -6468,11 +6530,13 @@
                 <me>
                   \theta: D_{2n} \to G
                 </me> 
-                such that <m>\theta(r) = (y,e_K)</m> and <m>\theta(s) = (x,e_H)</m>. Moreover, <m>\theta</m> is onto since 
+                such that <m>\theta(r) = (y,e_K)</m> and <m>\theta(s) = (x,e_H)</m>. 
+                Moreover, <m>\theta</m> is onto since 
                 <me>
                   \theta(r^is^j)=(y^i, x^j) \text{ for all } 0 \leq i \leq n-1, 0 \leq j \leq 1
                 </me> 
-                and since <m>|D_{2n}|=|G|=2n</m> it follows that <m>\theta</m> is a bijection. So the dihedral group is a semidirect product, in which the two component groups are cyclic of orders <m>n</m> and <m>2</m> respectively: 
+                and since <m>|D_{2n}|=|G|=2n</m> it follows that <m>\theta</m> is a bijection. 
+                So the dihedral group is a semidirect product, in which the two component groups are cyclic of orders <m>n</m> and <m>2</m> respectively: 
                 <me>
                   D_{2n} \cong \langle y \rangle \rtimes_\rho \langle x \rangle
                 </me> 
@@ -6534,7 +6598,7 @@
                       </p>
                           
                       <p>
-                          The fact that <m>(e,e)</m> is a two-sided identity follows from the fact that <m>\rho(e)(y) = \text{id}_H(y)=y</m>.
+                        The fact that <m>(e,e)</m> is a two-sided identity follows from the fact that <m>\rho(e)(y) = \text{id}_H(y)=y</m>.
                       </p>
               
                       <p>
@@ -6563,11 +6627,13 @@
                         <me>
                           i(y_1) i(y_2) = (y_1,e)(y_2,e) = (y_1\rho(e)(y_2) , ee) = (y_1 y_2, e) = i(y_1y_2).
                         </me> 
-                        The map is clearly injective and hence its image is isomorphic to <m>H</m>. In fact, the image is normal since the second component of 
+                        The map is clearly injective and hence its image is isomorphic to <m>H</m>. 
+                        In fact, the image is normal since the second component of 
                         <me>
                           (y,x) (y_2, e) (\rho(x^{-1})(y^{-1}), x^{-1})
                         </me> 
-                        is clearly <m>e</m>. Let us write this image as 
+                        is clearly <m>e</m>. 
+                        Let us write this image as 
                         <me>
                           H' := \{(y,e) \mid y \in H\} \unlhd H \rtimes_\rho K.
                         </me>
@@ -6582,7 +6648,9 @@
                         <me>
                           K' := \{(e,x) \mid x \in H \} \leq H \rtimes_\rho K
                         </me> 
-                        is isomorphic to <m>K</m>. <m>K'</m> is typically <em>not</em> normal, however. Finally, it is easy to see that <m>H'K'= H \rtimes_\rho K</m> and <m>H' \cap K' = \{e\}</m>. Putting this all together we have
+                        is isomorphic to <m>K</m>. <m>K'</m> is typically <em>not</em> normal, however. 
+                        Finally, it is easy to see that <m>H'K'= H \rtimes_\rho K</m> and <m>H' \cap K' = \{e\}</m>. 
+                        Putting this all together we have
                       </p>
               
                       <p>
@@ -6616,7 +6684,9 @@
 
                     <li>
                       <p>
-                        Consider the projection onto the second factor <m>\pi_2:H \rtimes_\rho K \to  K</m> given by <m>\pi_2(y,x)=x</m>. This is a goup homomorphism since the second component of <m>(y_1,x_1)(y_2,x_2)</m> is <m>x_1x_2</m> and is surjective by definition. Now 
+                        Consider the projection onto the second factor <m>\pi_2:H \rtimes_\rho K \to  K</m> given by <m>\pi_2(y,x)=x</m>. 
+                        This is a goup homomorphism since the second component of <m>(y_1,x_1)(y_2,x_2)</m> is <m>x_1x_2</m> and is surjective by definition.
+                        Now 
                         <me>
                           \operatorname{Ker}(\pi_2)=\{(y,e_K)\mid y\in H\}=H'\cong H.
                         </me> 
@@ -6634,76 +6704,96 @@
 
             <blockquote><p><q>I've often said there's nothing better for the inside of a man than the outside of a horse.</q></p><attribution>Ronald Reagan</attribution></blockquote>
             
-            <p>We can turn this around.<fn>the semidirect product, not the Reagan quote. </fn></p>
+            <p>
+              We can turn this around.
+              <fn>the semidirect product, not the Reagan quote.</fn>
+            </p>
   
             <theorem xml:id="thm-sdp-internal"><title>Recognition Theorem for Internal Semidirect Products</title>    
               <statement>
                 <p>For a group <m>G</m>, suppose we are given <m>H</m> and <m>K</m> so that</p>
   
-                <p><ul>
-                  <li>
-                          <p>
-                  <m>H \unlhd G</m>,
-                </p>
-                  </li>
+                <p>
+                  <ul>
+                    <li>
+                      <p>
+                        <m>H \unlhd G</m>,
+                      </p>
+                    </li>
         
-                  <li>
-                          <p>
-                  <m>K \leq G</m>,
-                </p>
-                  </li>
+                    <li>
+                      <p>
+                        <m>K \leq G</m>,
+                      </p>
+                    </li>
         
-                  <li>
-                          <p>
-                  <m>HK = G</m>, and
-                </p>
-                  </li>
+                    <li>
+                      <p>
+                        <m>HK = G</m>, and
+                      </p>
+                    </li>
         
-                  <li>
-                          <p>
-                  <m>H \cap K = \{e\}</m>.
+                    <li>
+                      <p>
+                        <m>H \cap K = \{e\}</m>.
+                      </p>
+                    </li>
+                  </ul>
                 </p>
-                  </li>
-        
-                </ul></p>
         
                 <p>
-                Let <m>\rho: K \to \operatorname{Aut}(H)</m> be the permutation representation of the action of <m>K</m> on <m>H</m> via automorphisms given by <xref text="title" ref="ex-conj"/> in <m>G</m>. (This means that for any <m>k\in K</m> <m>\rho(k)=c_k</m>, where <m>c_k\in \operatorname{Aut}(H)</m> is the function <m>c_k(h)=khk^{-1}</m> for all <m>h\in H</m>.) Then the function 
+                  Let <m>\rho: K \to \operatorname{Aut}(H)</m> be the permutation representation of the action of <m>K</m> on <m>H</m> via automorphisms given by <xref text="title" ref="ex-conj"/> in <m>G</m>. 
+                  (This means that for any <m>k\in K</m> <m>\rho(k)=c_k</m>, where <m>c_k\in \operatorname{Aut}(H)</m> is the function <m>c_k(h)=khk^{-1}</m> for all <m>h\in H</m>.) 
+                  Then the function 
                 <me>
                   \theta: H \rtimes_\rho K \to G
                 </me> 
-                defined by <m>\theta(y,x) = yx</m> is an isomorphism of groups. Moreover, under this isomorphism, <m>K</m> corresponds to <m>K'</m> and <m>H</m> corresponds to <m>H'</m> (referring to the notation in <xref ref="thm-sdp" /> above).
+                defined by <m>\theta(y,x) = yx</m> is an isomorphism of groups. 
+                Moreover, under this isomorphism, <m>K</m> corresponds to <m>K'</m> and <m>H</m> corresponds to <m>H'</m> (referring to the notation in <xref ref="thm-sdp" /> above).
                     </p>
                   </statement>
   
               <proof>
                 <p>
-                  We have <me>\begin{aligned}
+                  We have 
+                  <me>
+                    \begin{aligned}
                     \theta((y_1, x_1) (y_2, x_2))  &amp; = 
                     \theta(y_1 c_{x_1}(y_2), x_1 x_2) \\
                     &amp; = y_1x_1y_2x_1^{-1} x_1 x_2 \\
                     &amp; = y_1x_1y_2x_2 = \theta(y_1, x_1) \theta(y_2, x_2)
-                    \end{aligned}</me> and thus <m>\theta</m> is a homomorphism. It's kernel is <m>\{(y,x) \mid y = x^{-1}, y\in H, x\in K \}</m>, which is just <m>\{e\}</m> since <m>H \cap K = \{e\}</m>. The image of <m>\theta</m> is clearly <m>KH = G</m>. This proves <m>\theta</m> is an isomorphism. It is obvious that <m>\theta(K') = K</m> and <m>\theta(H')= H</m>.
+                    \end{aligned}
+                  </me> 
+                  and thus <m>\theta</m> is a homomorphism. 
+                  It's kernel is <m>\{(y,x) \mid y = x^{-1}, y\in H, x\in K \}</m>, which is just <m>\{e\}</m> since <m>H \cap K = \{e\}</m>. 
+                  The image of <m>\theta</m> is clearly <m>KH = G</m>. 
+                  This proves <m>\theta</m> is an isomorphism. 
+                  It is obvious that <m>\theta(K') = K</m> and <m>\theta(H')= H</m>.
                 </p>
               </proof>
             </theorem>
             
             <definition xml:id="def-spd-internal"><title>Internal Semidirect Product</title>
               <statement>
-                <p>In this situation of the <xref ref="thm-sdp-internal" />, we will say that <m>G</m> is the <em>internal semi-direct product</em> of <m>H</m> and <m>K</m>.</p>
+                <p>
+                  In this situation of the <xref ref="thm-sdp-internal" />, we will say that <m>G</m> is the <em>internal semi-direct product</em> of <m>H</m> and <m>K</m>.
+                </p>
               </statement>
             </definition>
   
             <example><title></title>
               <p>
-                Returning to <m>D_{2n}</m>, let <m>H = \langle s \rangle</m> and <m>K = \langle r \rangle</m>. Then <m>H \leq G</m>, <m>K \unlhd G</m>, <m>HK = G</m> and <m>H \cap K =
-                \{e\}</m>. So, <m>G</m> is isomorphic to a semi-direct product, as we already showed.
+                Returning to <m>D_{2n}</m>, let <m>H = \langle s \rangle</m> and <m>K = \langle r \rangle</m>. 
+                Then <m>H \leq G</m>, <m>K \unlhd G</m>, <m>HK = G</m> and <m>H \cap K =\{e\}</m>. 
+                So, <m>G</m> is isomorphic to a semi-direct product, as we already showed.
               </p>
             </example>
   
             <example><title></title>
               <p>
-                Let <m>G = S_n</m>, <m>K = A_n</m> and <m>H = \langle (1 \, 2) \rangle</m>. Then <m>K \unlhd G</m>, <m>H \leq G</m>, <m>KH = G</m> and <m>K \cap H  = \{e\}</m>. It follows that 
+                Let <m>G = S_n</m>, <m>K = A_n</m> and <m>H = \langle (1 \, 2) \rangle</m>. 
+                Then <m>K \unlhd G</m>, <m>H \leq G</m>, <m>KH = G</m> and <m>K \cap H  = \{e\}</m>. 
+                It follows that 
                 <me>
                   S_n \cong A_n \rtimes_\rho C_2
                 </me> 
@@ -6711,11 +6801,16 @@
               </p>
             </example>
   
-            <p>It is important to be aware that for a fixed pair of groups <m>H</m> and <m>K</m>, different actions of <m>H</m> on <m>K</m> via automorphisms can result in isomorphic semi-direct products. Indeed, determining when <m>K \rtimes_{\rho} H \cong K \rtimes_{\rho'} H</m> is in general a tricky business. The previous example shows this:</p>
+            <p>
+              It is important to be aware that for a fixed pair of groups <m>H</m> and <m>K</m>, different actions of <m>H</m> on <m>K</m> via automorphisms can result in isomorphic semi-direct products. 
+              Indeed, determining when <m>K \rtimes_{\rho} H \cong K \rtimes_{\rho'} H</m> is in general a tricky business. 
+              The previous example shows this.
+            </p>
   
             <example><title></title>
               <p>
-                Let <m>G = S_n</m> and <m>K = A_n</m> again, but this time take <m>H' = \langle (1 \, 3) \rangle = (1 \,2 \, 3) \langle (1 \, 2) \rangle (1 \,2 \, 3)^{-1}</m> (assuming <m>n \geq 3</m>). Then we get 
+                Let <m>G = S_n</m> and <m>K = A_n</m> again, but this time take <m>H' = \langle (1 \, 3) \rangle = (1 \,2 \, 3) \langle (1 \, 2) \rangle (1 \,2 \, 3)^{-1}</m> (assuming <m>n \geq 3</m>). 
+                Then we get 
                 <me>
                   S_n \cong A_n \rtimes_{\rho'} C_2
                 </me> 
@@ -6739,13 +6834,18 @@
               </p>
       
               <p>
-                On HW 8 you will give a more conceptual reason for why these two semidirect products turned out to be isomorphic: it is because <m>H</m> and <m>H'</m> are conjugate in <m>S_n</m>. More generally, below is a criterion for a two semidirect products to be isomorphic.
+                On HW 8 you will give a more conceptual reason for why these two semidirect products turned out to be isomorphic: it is because <m>H</m> and <m>H'</m> are conjugate in <m>S_n</m>. 
+                More generally, below is a criterion for a two semidirect products to be isomorphic.
               </p>
             </example>
   
             <theorem xml:id="thm-conjugate-aut"><title>Isomorphisms of Semidirect Products</title>
               <statement>
-                <p>Let <m>K</m> be a finite cyclic group and let <m>H</m> be an arbitrary group. Suppose that the images of <m>\phi: K \to \operatorname{Aut}(H)</m> and <m>\theta: K \to \operatorname{Aut}(H)</m> are conjugate subgroups of <m>\operatorname{Aut}(H)</m>. Then <m>H \rtimes_\phi K \cong H \rtimes_\theta K</m>.</p>
+                <p>
+                  Let <m>K</m> be a finite cyclic group and let <m>H</m> be an arbitrary group. 
+                  Suppose that the images of <m>\phi: K \to \operatorname{Aut}(H)</m> and <m>\theta: K \to \operatorname{Aut}(H)</m> are conjugate subgroups of <m>\operatorname{Aut}(H)</m>. 
+                  Then <m>H \rtimes_\phi K \cong H \rtimes_\theta K</m>.
+                </p>
               </statement>
             </theorem>
           </subsection>
@@ -6758,49 +6858,68 @@
 
         <section xml:id="sec-ftfgag"><title>Finitely Generated Abelian Groups</title>
 
-          <blockquote><p><q>The classification of the constituents of a chaos, nothing less is here essayed.</q></p><attribution>Herman Melville</attribution></blockquote>
+          <blockquote>
+            <p>
+              <q>The classification of the constituents of a chaos, nothing less is here essayed.</q>
+            </p>
+            <attribution>Herman Melville</attribution>
+          </blockquote>
 
-          <p>In this section we see that we can classify finitely generated abelian groups into isomorphism classes.</p>
+          <p>
+            In this section we see that we can classify finitely generated abelian groups into isomorphism classes.
+          </p>
 
           <definition xml:id="def-fg-group"><title>Finitely Generated Group</title>
             <statement>
-              <p>A group <m>G</m> is finitely generated provided that <m>G=\langle A \rangle</m>, where <m>A</m> is a finite set.</p>
+              <p>
+                A group <m>G</m> is finitely generated provided that <m>G=\langle A \rangle</m>, where <m>A</m> is a finite set.
+              </p>
             </statement>
           </definition>
 
-          <remark><p>Any finite group is finitely generated (take <m>A=G</m>), but a finitely generated group need not be finite.</p></remark>
+          <remark>
+            <p>
+              Any finite group is finitely generated (take <m>A=G</m>), but a finitely generated group need not be finite.
+            </p>
+          </remark>
 
-          <p>The following is the classification theorem for finitely generated abelian groups. We present it without proving it for now. The full proof will be given in the spring semester.</p>
+          <p>
+            The following is the classification theorem for finitely generated abelian groups. 
+            We present it without proving it for now. 
+            The full proof will be given in the spring semester.
+          </p>
 
           <theorem xml:id="thm-ftfgag"><title>Fundamental Theorem of Finitely Generated Abelian Groups (FTFGAG)</title>   
             
             <statement>
               <p>
-                Let <m>G</m> be a finitely generated abelian group. Then <m>G</m> is a direct product of cyclic groups. More precisely
+                Let <m>G</m> be a finitely generated abelian group. 
+                Then <m>G</m> is a direct product of cyclic groups. 
+                More precisely
               </p>
 
               <p>
                 <ol>
-                <li>
-                  <p>
-                There exist <m>r,s \geq 0</m>, prime integers <m>p_1&lt;\ldots&lt; p_s</m> and positive integers <m>a_i \geq 1</m> such that: <m>G \cong \mathbb{Z}^r\times Q_1 \times \dots \times Q_s</m> where <m>|Q_i| = p_i^{a_i}</m> for all <m>i</m>.
-                </p>
-                </li>
+                  <li>
+                    <p>
+                      There exist <m>r,s \geq 0</m>, prime integers <m>p_1&lt;\ldots&lt; p_s</m> and positive integers <m>a_i \geq 1</m> such that: <m>G \cong \mathbb{Z}^r\times Q_1 \times \dots \times Q_s</m> where <m>|Q_i| = p_i^{a_i}</m> for all <m>i</m>.
+                    </p>
+                  </li>
       
-                <li>
-                 <p>
-                For each index <m>1\leq i\leq s</m>, there is a partition <m>a_i = a_{i,1} + \dots + a_{i,j_i}</m> with each <m>a_{i,j} \geq 1</m>, such that <m>Q_i \cong (\mathbb{Z}/p_i^{a_{i1}}) \times \dots \times (\mathbb{Z}/p_i^{a_{i,j_i}})</m>, thus overall we have 
-                <me>
-                  G \cong (\mathbb{Z}/p_1^{a_{11}}) \times \dots \times (\mathbb{Z}/p_i^{a_{1,j_1}})\times \cdots \times (\mathbb{Z}/p_s^{a_{s1}}) \times \dots \times (\mathbb{Z}/p_s^{a_{s,j_s}}).
-                </me>
-                </p>
-                </li>
+                  <li>
+                    <p>
+                      For each index <m>1\leq i\leq s</m>, there is a partition <m>a_i = a_{i,1} + \dots + a_{i,j_i}</m> with each <m>a_{i,j} \geq 1</m>, such that <m>Q_i \cong (\mathbb{Z}/p_i^{a_{i1}}) \times \dots \times (\mathbb{Z}/p_i^{a_{i,j_i}})</m>, thus overall we have 
+                      <me>
+                        G \cong (\mathbb{Z}/p_1^{a_{11}}) \times \dots \times (\mathbb{Z}/p_i^{a_{1,j_1}})\times \cdots \times (\mathbb{Z}/p_s^{a_{s1}}) \times \dots \times (\mathbb{Z}/p_s^{a_{s,j_s}}).
+                      </me>
+                    </p>
+                  </li>
       
-                <li>
-               <p>
-                The <m>r,p_i</m>'s, <m>j_i</m>'s and <m>a_{i,j}</m>'s are uniquely determined by <m>G</m>.
-                </p>
-                 </li>
+                  <li>
+                    <p>
+                      The <m>r,p_i</m>'s, <m>j_i</m>'s and <m>a_{i,j}</m>'s are uniquely determined by <m>G</m>.
+                    </p>
+                  </li>
               
                   <li>
                     <p>
@@ -6875,7 +6994,7 @@
                 G \cong \mathbb{Z}^{3} \times \mathbb{Z}/(4 \cdot 9) \times \mathbb{Z}/(8 \cdot 27 \cdot 25).
               </me> 
               Since <m>n_2:=(4 \cdot 9) \mid n_1:=(8 \cdot 27 \cdot 25)</m>, this is in invariant factor form, and hence the rank of <m>A</m> is <m>3</m> and the invariant factors of <m>A</m> are <m>4 \cdot 9</m> and <m>8 \cdot 27 \cdot 25</m>.
-				</p>
+				    </p>
           </example>
 
           <example><title></title>
@@ -6892,7 +7011,9 @@
             </p>
           </example>
 
-          <p>The <xref text="title" ref="thm-ftfgag" /> makes classification of finite abelian groups a very quick matter.</p>
+          <p>
+            The <xref text="title" ref="thm-ftfgag"/>makes classification of finite abelian groups a very quick matter.
+          </p>
 
           <example><title>Abelian Groups of Order <m>75</m></title>
             <p>

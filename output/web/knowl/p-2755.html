@@ -13,15 +13,20 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">If <span class="process-math">\(F \subseteq L\)</span> is a field extension and <span class="process-math">\(A\)</span> is any subset of <span class="process-math">\(L\text{,}\)</span> we write <span class="process-math">\(F(A)\)</span> for the smallest subfield of <span class="process-math">\(L\)</span> that contains all of <span class="process-math">\(F\)</span> and <span class="process-math">\(A\)</span> and it is called the <em class="emphasis">subfield generated</em> by <span class="process-math">\(A\)</span> over <span class="process-math">\(F\text{.}\)</span> Since the intersection of any two subfields of <span class="process-math">\(L\)</span> is again a subfield, <span class="process-math">\(F(A)\)</span> exists and is</div>
-<div class="displaymath process-math">
+<div class="para">Since <span class="process-math">\(\a_n\)</span> is a root of <span class="process-math">\(f(x)\text{,}\)</span> we have <span class="process-math">\(m_{F,\a_n} \mid f(x)\)</span> and hence</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-degree-formula.html">
 \begin{equation*}
-F(A) = \bigcap_{\text{$E$ is a subfield of $L$ such that $E \supseteq F \cup A$}} E.
+[F(\a_n): F] = \deg(m_{F,\a_n})  \leq n.
 \end{equation*}
 </div>
-<div class="para">where <span class="process-math">\(E\)</span> <em class="emphasis">fix</em> Nearly always <span class="process-math">\(A\)</span> will be a finite set, <span class="process-math">\(A = \{a_1, \dots, a_n\}\text{,}\)</span> and we write <span class="process-math">\(F(a_1, \dots, a_n)\)</span> for <span class="process-math">\(F(A)\text{.}\)</span>
+<div class="para">In <span class="process-math">\(F(\a_n)\)</span> we have <span class="process-math">\(f(x) = (x-\a_n) g(x)\)</span> with <span class="process-math">\(g(x) \in F(\a_n)[x]\)</span> and, as before, <span class="process-math">\(L\)</span> is the splitting field of <span class="process-math">\(g(x)\)</span> over <span class="process-math">\(F(\a_n)\text{,}\)</span> so that by induction <span class="process-math">\([L: F(\a_n)] \leq (n-1)!\text{.}\)</span> By the <a href="" class="xref" data-knowl="./knowl/thm-degree-formula.html" title="Theorem 19.30: The Degree Formula">The Degree Formula</a>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-degree-formula.html">
+\begin{equation*}
+[L: F] = [L: F(\a_n)][F(\a_n): F] \leq (n-1)! \cdot n = n!.
+\end{equation*}
 </div>
 </div>
-<span class="incontext"><a href="field-extension-basics.html#p-2755" class="internal">in-context</a></span>
+<span class="incontext"><a href="sec-splitting.html#p-2755" class="internal">in-context</a></span>
 </body>
 </html>
