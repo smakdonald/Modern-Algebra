@@ -13,19 +13,13 @@
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
 <div class="para logical">
-<div class="para">We have</div>
-<div class="displaymath process-math">
+<div class="para">Let <span class="process-math">\(\rho: K \to \operatorname{Aut}(H)\)</span> be the permutation representation of the action of <span class="process-math">\(K\)</span> on <span class="process-math">\(H\)</span> via automorphisms given by <a href="" class="xref" data-knowl="./knowl/ex-conj.html" title="Item 3: Conjugation">Conjugation</a> in <span class="process-math">\(G\text{.}\)</span> (This means that for any <span class="process-math">\(k\in K\)</span> <span class="process-math">\(\rho(k)=c_k\text{,}\)</span> where <span class="process-math">\(c_k\in \operatorname{Aut}(H)\)</span> is the function <span class="process-math">\(c_k(h)=khk^{-1}\)</span> for all <span class="process-math">\(h\in H\text{.}\)</span>) Then the function</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/ex-conj.html ./knowl/thm-sdp.html">
 \begin{equation*}
-\begin{aligned}
-\theta((y_1, x_1) (y_2, x_2))  &amp; = 
-\theta(y_1 c_{x_1}(y_2), x_1 x_2) \\
-&amp; = y_1x_1y_2x_1^{-1} x_1 x_2 \\
-&amp; = y_1x_1y_2x_2 = \theta(y_1, x_1) \theta(y_2, x_2)
-\end{aligned}
+\theta: H \rtimes_\rho K \to G
 \end{equation*}
 </div>
-<div class="para">and thus <span class="process-math">\(\theta\)</span> is a homomorphism. It's kernel is <span class="process-math">\(\{(y,x) \mid y = x^{-1}, y\in H, x\in K \}\text{,}\)</span> which is just <span class="process-math">\(\{e\}\)</span> since <span class="process-math">\(H \cap K = \{e\}\text{.}\)</span> The image of <span class="process-math">\(\theta\)</span> is clearly <span class="process-math">\(KH = G\text{.}\)</span> This proves <span class="process-math">\(\theta\)</span> is an isomorphism. It is obvious that <span class="process-math">\(\theta(K') = K\)</span> and <span class="process-math">\(\theta(H')= H\text{.}\)</span>
-</div>
+<div class="para">defined by <span class="process-math">\(\theta(y,x) = yx\)</span> is an isomorphism of groups. Moreover, under this isomorphism, <span class="process-math">\(K\)</span> corresponds to <span class="process-math">\(K'\)</span> and <span class="process-math">\(H\)</span> corresponds to <span class="process-math">\(H'\)</span> (referring to the notation in <a href="" class="xref" data-knowl="./knowl/thm-sdp.html" title="Theorem 7.25: Semidirect Products are Groups">Theorem 7.25</a> above).</div>
 </div>
 <span class="incontext"><a href="sec-spds.html#p-1071" class="internal">in-context</a></span>
 </body>

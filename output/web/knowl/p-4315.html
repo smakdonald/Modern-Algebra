@@ -12,7 +12,29 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">If <span class="process-math">\(n=2\)</span> then the only possible invariant factor is <span class="process-math">\(x^2\text{,}\)</span> as having two <span class="process-math">\(x\)</span>'s would make <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> invertible again. If <span class="process-math">\(n=1\)</span> then <span class="process-math">\(A=B=0\)</span> and we're done.</div>
+<div class="para logical">
+<div class="para">Note that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C(x)=[0], C(x^2)=
+\begin{bmatrix}
+0 &amp; 0\\
+1 &amp; 0\\
+\end{bmatrix}, 
+C(x)\oplus C(x^2)\begin{bmatrix}
+0 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 0\\
+\end{bmatrix}, \textrm{ and } C(x^3)=
+\begin{bmatrix}
+0 &amp; 0 &amp; 0\\
+1 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 0\\
+\end{bmatrix}.
+\end{equation*}
+</div>
+<div class="para">As <span class="process-math">\(C(x)\oplus C(x^2)\)</span> has rank 1 and <span class="process-math">\(C(x^3)\)</span> has rank 2, since <span class="process-math">\(\rank(A)=\rank(B)\)</span> we see that they must have the same invariant factors, making them similar.</div>
+</div>
 <span class="incontext"><a href="section-82.html#p-4315" class="internal">in-context</a></span>
 </body>
 </html>

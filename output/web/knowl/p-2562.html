@@ -12,7 +12,24 @@
 </head>
 <body class="ignore-math">
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<div class="para">This time around the change of basis matrix (denoted <span class="process-math">\(B\)</span> and using the same basis as above) for this matrix has 0s along the diagonal, and increasing natural numbers (starting at 0, sorry) along the upper diagonal. Thus <span class="process-math">\(\cp_B(x)=x^n\text{.}\)</span>
+<div class="para logical">
+<div class="para">which is diagonal. Hence</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\cp_AT(x)=\displaystyle\prod_{i=0}^{n-1}(x-i).
+\end{equation*}
+</div>
+<div class="para">Thus <span class="process-math">\(\cp_AT(x)\)</span> factors into distinct linear polynomials, each of which is in the form <span class="process-math">\((x-i)\)</span> for <span class="process-math">\(0\leq i\leq n-1\text{.}\)</span> Thus each linear term is an elementary divisor, making each Jordan Block a <span class="process-math">\(1\times1\)</span> matrix with <span class="process-math">\(i\)</span> as the only entry. Thus the Jordan Canonical form is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{bmatrix}
+0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; \cdots &amp; 0 &amp; 0 \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\
+0 &amp; 0 &amp; \cdots &amp; 0 &amp; n-1 \\   
+\end{bmatrix}.
+\end{equation*}
+</div>
 </div>
 <span class="incontext"><a href="sec-jcf.html#p-2562" class="internal">in-context</a></span>
 </body>

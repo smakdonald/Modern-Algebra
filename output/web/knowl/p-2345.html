@@ -12,7 +12,17 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Method II: Call <span class="process-math">\(d_1, d_2\)</span> the entries on the diagonal of the SNF of <span class="process-math">\(xI_2-A\text{.}\)</span> Recall from Theorem  that <span class="process-math">\(d_1\)</span> is the gcd of the entries of <span class="process-math">\(xI_2-A\)</span> and <span class="process-math">\(d_1d_2=\det(xI_2-A)\text{.}\)</span> Thus <span class="process-math">\(d_1=1\)</span> and <span class="process-math">\(d_2=\det(xI_2-A)=(x-1)^2\text{.}\)</span> Therefore the only invariant factor of <span class="process-math">\(A\)</span> is <span class="process-math">\((x-1)^2\text{.}\)</span>
+<div class="para logical">
+<div class="para">Method I: Do row and column operations using the generalized Euclidean algorithm:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{bmatrix} x-1 &amp; -1 \\ 0 &amp; x-1  \end{bmatrix} \mapsto
+\begin{bmatrix} x-1 &amp; -1 \\ (x-1)^2 &amp; 0   \end{bmatrix} \mapsto
+\begin{bmatrix} 0 &amp; -1 \\ (x-1)^2 &amp; 0   \end{bmatrix} \mapsto
+\begin{bmatrix} 1 &amp; 0 \\ 0 &amp; (x-1)^2  \end{bmatrix}.
+\end{equation*}
+</div>
+<div class="para">Tossing out the unit, we see that the only invariant factor is <span class="process-math">\((x-1)^2\text{,}\)</span> as before.</div>
 </div>
 <span class="incontext"><a href="sec-rcf.html#p-2345" class="internal">in-context</a></span>
 </body>

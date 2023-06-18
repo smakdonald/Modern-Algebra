@@ -319,6 +319,7 @@
     <subtitle>Groups, Rings, Modules, Fields</subtitle>
 
     <frontmatter xml:id="frontmatter">
+
       <titlepage>
         <author>
           <personname>Sam Macdonald</personname>
@@ -571,12 +572,12 @@
 
             <blockquote><p><q>Most great learning happens in groups.</q></p><attribution>Ken Robinson</attribution></blockquote>
 
-            <paragraphs><title>A Brief Notational Note</title>
+            <aside><title>A Brief Notational Note</title>
               <p>
                 At various points throughout this text, the author may use "mathcal" notation for definitions that do not normally require it (such as <m>\G</m> for a group, <m>\R</m> for a ring, etc.) 
                 In the realm of higher mathematics, this is what is known as a <em>typo</em>, and should be reported to the proper authorities as soon as possible.
               </p>
-            </paragraphs>
+            </aside>
 
             <p>
               We begin, as all great volumes of mathematics are like to do, somewhere in the middle.
@@ -594,7 +595,9 @@
               </statement>
             </definition>
 
-            <p>Binary operations on a set are especially useful when they posess some special properties, which garner them some special names.</p>
+            <p>
+              Binary operations on a set are especially useful when they posess some special properties, which garner them some special names.
+            </p>
 
             <definition xml:id="def-monoid"><title>Monoid</title>
               <statement>
@@ -631,20 +634,20 @@
               </p>
             </historical>
 
-            <insight xml:id="mark"> 
+            <convention xml:id="mark"> 
               <p>
                 We often write <m>xy</m> instead of <m>x\cdot y</m> for simplicity.
-                <fn>This is the one and only "Mark". All following "Marks" will be "Remarks".</fn>
               </p>
-            </insight>
+            </convention>
 
-            <remark>
+            <insight>
               <p>
                 The <xref text="title" ref="closure-axiom"/> in <xref ref="def-monoid"/> is technically redundant. 
                 Closure is really part of <xref ref="def-binop"/>, and it is implicitly assumed whenever we consider such an operation. 
                 Howewever, redundancy is not a bad thing, and it never hurts to state it explicitely.
+                <fn>This is the one and only "Mark". All following "Marks" will be "Remarks".</fn>
               </p>
-            </remark>
+            </insight>
 
             <example xml:id="ex-natural-monoid"><title>Au Naturale</title>
               <statement>
@@ -693,6 +696,7 @@
 
             <p>
               As a result of <xref ref="exe-general-associativity"/> any expression formed from the elements <m>x_1\dots,x_n</m> in that order can be written without parenthesis, which will save us oodles of time down the line.
+              <fn>Yes, <em>oodles</em> is the best word to go here and no, I will not be changing it.</fn>
             </p>
 
             <definition xml:id="def-group"><title>Group</title>
@@ -709,7 +713,12 @@
                   <notation><usage><m>(G,\cdot)</m></usage><description>a group (or monoid) <m>G</m> and its binary operation <m>\cdot</m></description></notation>    
                 </p>
 
-                <p>When the operation of a group is <m>\cdot</m>, we refer to <m>G</m> as a <em>multiplicative group</em><idx><h>multiplicative group</h></idx>. If the operation <m>+</m> is used, then <m>G</m> is referred to as an <em>additive group</em><idx><h>additive group</h></idx></p>
+                <p>
+                  When the operation of a group is <m>\cdot</m>, we refer to <m>G</m> as a <em>multiplicative group</em>
+                  <idx><h>multiplicative group</h></idx>. 
+                  If the operation <m>+</m> is used, then <m>G</m> is referred to as an <em>additive group</em>
+                  <idx><h>additive group</h></idx>
+                </p>
 
               </statement>
             </definition>
@@ -727,6 +736,12 @@
             <convention>
               <p>
                 Though a group is a pair, we will usually refer to the group by only naming the underlying set, <m>G</m>.
+              </p>
+            </convention>
+
+            <convention>
+              <p>
+                In groups, the inverse of an element <m>x</m> is often written <m>x\inv</m>. This could cause some notational hoodoo when we talk about exponents in the next section, but luckily for us everything will dovetail nicely.
               </p>
             </convention>
 
@@ -754,13 +769,13 @@
                   <ol>
                     <li xml:id="list-unique-group-identity"><title>Unique Identity</title>
                       <p>
-                        The element <m>e</m> satisfying the <xref ref="identity-axiom"/> of <xref ref="def-monoid" /> is unique, and we thus refer to it as the <em>identity element</em><idx><h>identity element</h></idx> of <m>G</m>.
+                        The element <m>e</m> satisfying the <xref text="title" ref="identity-axiom"/> of <xref ref="def-monoid" /> is unique, and we thus refer to it as the <em>identity element</em><idx><h>identity element</h></idx> of <m>G</m>.
                       </p>
                     </li>
       
                     <li xml:id="list-unique-group-inverse"><title>Unique Inverses</title>
                       <p>
-                        For each <m>x\in G</m>, the element satisfying the <xref ref="inverse-axiom"/> of <xref ref="def-group" /> is unique, and we thus refer to it as the <em>the inverse</em> of <m>x</m>.
+                        For each <m>x\in G</m>, the element satisfying the <xref text="title" ref="inverse-axiom"/> of <xref ref="def-group" /> is unique, and we thus refer to it as the <em>the inverse</em> of <m>x</m>.
                       </p>
                     </li>
       
@@ -826,12 +841,12 @@
 
             <remark>
               <p>
-                 <xref ref="list-unique-group-identity"/> holds in monoids as well.
+                 The <xref text="title" ref="list-unique-group-identity"/> property of <xref ref="thm-properties-of-groups"/> holds in monoids as well.
               </p>
             </remark>
 
             <p>
-              Before we see some examples, let's define one very special kind of group that we'll be seeing a lot of.
+              Before we see some examples, let's define a very special kind of group that we'll be seeing a lot of.
             </p>
       
             <definition xml:id="def-abelian"><title>Abelian Group</title>
@@ -872,7 +887,7 @@
                       </p>
                     </li>
       
-                    <li>
+                    <li><title>Numerical Groups</title>
                       <p>
                         <m>(\Z,+), (\Q,+), (\R,+),</m> and <m>(\C,+)</m> each form an abelian group, where <m>+</m> denotes traditional addition.
                       </p>
@@ -889,7 +904,7 @@
                       </p>
                     </li>
       
-                    <li>
+                    <li><title>Modular Groups</title>
                       <p>
                         For any <m>n\in\N</m>, let <m>\Z/n</m> denote the <xref text="title" ref="def-integers-modulo"/>. 
                         Then <m>(\Z/n,+)</m> forms an abelian group where <m>+</m> denotes addition modulo <m>n</m>.
@@ -945,11 +960,12 @@
             <remark><title>Specific General Linear Groups</title>
               <p>
                 In general, <m>\GL_n(F)</m> is a group for any field <m>F</m> (whatever those are).
+                <fn>To jump ahead and discover what those are, see: <xref ref="def-field"/>.</fn>
               </p>
             </remark>
 
             <p>
-              The following example illustrates a few important examples of something called a <xref text="title" ref="def-group-of-units"/>, which is defined explicitely in terms of rings (whatever those are) in <xref ref="part-rings"/>.
+              The following example illustrates a few important examples of something called a <xref text="title" ref="def-group-of-units"/>, which is defined explicitely in terms of rings (whatever those are) in the aptly named <xref text="title" ref="part-rings"/>.
             </p>
 
             <example xml:id="ex-group-of-units"><title>Groups of Units</title>
@@ -984,7 +1000,7 @@
               </statement>
             </exercise>
 
-            <exercise><title>Some Extra Groups</title>
+            <exercise xml:id="exe-extra-groups"><title>Some Extra Groups</title>
               <p>
                 <ul>
                   <li xml:id="exe-opposite-group"><title>Opposite Group</title>
@@ -1156,9 +1172,9 @@
             <p>
               Though it might seem natural to write the product <m>x\cdot x</m> using the notation <m>x^2</m>, we have no notion of what that means in the world of groups. 
               Do exponents behave the way we want them to in groups, or does something disasterous occur? 
-              Do exponents even <em>exist</em>? 
+              Do exponents even exist? 
               Do <em>I</em>? 
-              We can answer most of these questions, and attempt to do so now.
+              In this section, we attempt to answer as many of these questions as is philosophically feasible.
             </p>
 
             <definition xml:id="def-power"><title><m>n\th</m> power</title>
@@ -1187,15 +1203,13 @@
                     </li>
                   </ul>
                 </p>
-              </statement>
-            </definition>
 
-            <remark>
-              <p>
+                <p>
                 If <m>G</m> was an additive group, then we would write <m>nx</m> intead of <m>x^n</m>. 
                 This would be called a <term>multiple</term> of <m>x</m> instead of a power.
               </p>
-            </remark>
+              </statement>
+            </definition>
 
             <theorem xml:id="thm-exponent-laws"><title>Laws of Exponents</title>
               <statement>
@@ -1251,12 +1265,12 @@
               </statement>
             </definition>
 
-            <remark>
+            <convention>
               <p>
-                Some authors use the notation <m>\#G</m> or <m>o(G)</m> to refer to the order of a group. 
+                Some authors use the notation <m>\#G</m> or <m>o(G)</m> to refer to the order of a group.
                 We won't name names, but they know who they are.
               </p>
-            </remark>
+            </convention>
       
             <example xml:id="ex-order"><title>Order Examples</title>
               <p>
@@ -1293,7 +1307,7 @@
 
             <p>
               We arrive at one of the central conjectures of group theory, posed by none other tha UNL's Tom "Destroyer of Worlds" Marley. 
-              Best of luck. 
+              Best of luck.
               <fn>For the more astute reader, you may observe that this is one of the more solvable conjectures in mathematics. This is the first problem Tom assigns every time he teaches 817 and it's become a bit of a running joke.</fn>
             </p>        
 
@@ -1931,7 +1945,7 @@
 
             <convention>
               <p>
-                We use <m>\varphi</m> to denote an arbitrary homomorphism instead of <m>f</m> to differenetiate between homormorphisms and ordinary functions. 
+                We use <m>\varphi</m> to denote an arbitrary homomorphism instead of <m>f</m> to differentiate between homormorphisms and ordinary functions. 
                 Other greek letters, such as <m>\psi,\rho,</m> and <m>\lambda</m> are used for more specific homomorphisms, as we will see in the coming sections.
                 <fn>For those interested, <m>\psi</m> is used for inner automorphisms, <m>\rho</m> is used permutation representations corresponding to group actions, and <m>\lambda</m> is used for permutation representations of the left regular action.</fn>
               </p>
@@ -2248,7 +2262,7 @@
                   
                   <li>
                     <p>
-                      <m>(\Z,+)\cong(\E,+)</m>, where <m>(\E,+)</m> is as defined in <xref ref="ex-even-odd-groups"/>.
+                      <m>(\Z,+)\cong(\E,+)</m>, where <m>(\E,+)</m> is as defined in <xref ref="exe-extra-groups"/>.
                     </p>
                   </li>
 
@@ -2381,7 +2395,9 @@
               </solution>
             </exercise>
   
-            <p>Now seems like an exceptional time to recall <xref ref="thm-ghom-composition"/>.</p>
+            <p>
+              Now seems like an exceptional time to recall <xref ref="thm-ghom-composition"/>.
+            </p>
       
             <corollary xml:id="cor-composition-of-isos"><title>Composition of Isomorphisms</title>
               <statement>
@@ -2435,8 +2451,9 @@
 
             <remark>
               <p>
-                A homomorphism from a group to itself is called an <em>endomorphism</em><idx><h>endomorphism</h></idx>
-                <fn>Though <em>decaf automorphism</em> has a better ring (whatever those are) to it in my opinion.</fn>
+                A homomorphism from a group to itself is called an <em>endomorphism</em>.
+                <idx><h>endomorphism</h></idx>
+                <fn>Though <em>decaf automorphism</em> has a better ring to it in my opinion.</fn>
               </p>
             </remark>
 
@@ -3178,6 +3195,11 @@
               <m>\igen{r,s}=D_{2n}</m>
             </p>
           </example>
+
+          <figure xml:id="figure-d4-pres"><title>Algebraic Structures</title>
+              <caption>Elements of <m>D_4</m> generated by <m>r</m> and <m>s</m>. <url href="https://q.uiver.app/#q=WzAsNTgsWzAsMCwiQiJdLFswLDIsIkMiXSxbMiwwLCJBIl0sWzIsMiwiRCJdLFs0LDAsIkMiXSxbNiwwLCJCIl0sWzYsMiwiQSJdLFs0LDIsIkQiXSxbOCwwLCJEIl0sWzgsMiwiQSJdLFsxMCwwLCJDIl0sWzEwLDIsIkIiXSxbMTIsMCwiQSJdLFsxNCwwLCJEIl0sWzE0LDIsIkMiXSxbMTIsMiwiQiJdLFswLDQsIkEiXSxbMiw0LCJCIl0sWzAsNiwiRCJdLFsyLDYsIkMiXSxbOCw0LCJDIl0sWzEwLDQsIkQiXSxbOCw2LCJCIl0sWzEwLDYsIkEiXSxbNCw0LCJEIl0sWzYsNCwiQSJdLFs2LDYsIkIiXSxbNCw2LCJDIl0sWzEyLDQsIkIiXSxbMTQsNiwiRCJdLFsxMiw2LCJBIl0sWzE0LDQsIkMiXSxbMSwzLCJqIixbMCwwLDEwMCwxXV0sWzUsMywiZiIsWzAsMCwxMDAsMV1dLFs3LDEsIlxcYnVsbGV0IixbMCwwLDEwMCwxXV0sWzksMywiXFxidWxsZXQiLFswLDAsMTAwLDFdXSxbMTEsMSwiXFxidWxsZXQiLFswLDAsMTAwLDFdXSxbMTUsMSwiXFxidWxsZXQiLFswLDAsMTAwLDFdXSxbMTMsMywiXFxidWxsZXQiLFswLDAsMTAwLDFdXSxbMSw3LCJcXGJ1bGxldCIsWzAsMCwxMDAsMV1dLFszLDUsIlxcYnVsbGV0IixbMCwwLDEwMCwxXV0sWzcsNSwiXFxidWxsZXQiLFswLDAsMTAwLDFdXSxbMTEsNSwiXFxidWxsZXQiLFswLDAsMTAwLDFdXSxbMTUsNSwiXFxidWxsZXQiLFswLDAsMTAwLDFdXSxbMTEsMywiXFxidWxsZXQiLFswLDAsMTAwLDFdXSxbMTUsNywiXFxidWxsZXQiLFswLDAsMTAwLDFdXSxbMTEsNywiXFxidWxsZXQiLFswLDAsMTAwLDFdXSxbMTUsMywiXFxidWxsZXQiLFswLDAsMTAwLDFdXSxbNywzLCJcXGJ1bGxldCIsWzAsMCwxMDAsMV1dLFs3LDcsIlxcYnVsbGV0IixbMCwwLDEwMCwxXV0sWzEsMSwiZSJdLFs1LDEsInIiXSxbOSwxLCJyXjIiXSxbMTMsMSwicl4zIl0sWzEsNSwicyJdLFs5LDUsInJeMnMiXSxbNSw1LCJycyJdLFsxMyw1LCJyXjNzIl0sWzAsMiwiIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiYmFycmVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMiwzLCIiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJzcXVpZ2dseSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzEsMywiIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMCwxLCIiLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs0LDcsIiIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzQsNSwiIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNSw2LCIiLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJiYXJyZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs3LDYsIiIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6InNxdWlnZ2x5In0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbOCwxMCwiIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbOCw5LCIiLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJzcXVpZ2dseSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzEwLDExLCIiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs5LDExLCIiLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJiYXJyZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxMiwxNSwiIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiYmFycmVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMTIsMTMsIiIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6InNxdWlnZ2x5In0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMTMsMTQsIiIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzE1LDE0LCIiLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxNiwxNywiIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiYmFycmVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMTYsMTgsIiIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6InNxdWlnZ2x5In0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMTcsMTksIiIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzE4LDE5LCIiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyMCwyMiwiIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMjAsMjEsIiIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzIxLDIzLCIiLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJzcXVpZ2dseSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzIyLDIzLCIiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJiYXJyZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyNCwyNSwiIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoic3F1aWdnbHkifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyNCwyNywiIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMjUsMjYsIiIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImJhcnJlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzI3LDI2LCIiLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyOCwzMCwiIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiYmFycmVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMjgsMzEsIiIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzMxLDI5LCIiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFszMCwyOSwiIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoic3F1aWdnbHkifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==" visual="">Quiver</url></caption>
+              <image source="images/d2n-pres.png" width="80%"/>
+          </figure>
 
           <exercise xml:id="exe-d2p"><title>Generating <m>D_{2p}</m></title>
             <statement>
@@ -25179,7 +25201,7 @@
 
           <subsection xml:id="subsec-cardinality"><title>Cardinality</title>
           
-            <definition xml:id="def-cardinality">
+            <definition xml:id="def-cardinality"><title>Cardinality</title>
               <statement>
                 <p>
                   A set <m>X</m> is <em>finite</em> if there is a bijection <m>X \to  \{1,...,n\}</m> for some natural number <m>n</m>, or <m>X</m> is empty. In this case the number <m>n</m> is called the<em>cardinality</em>of <m>X</m>.  
