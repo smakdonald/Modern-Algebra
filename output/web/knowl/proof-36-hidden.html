@@ -10,6 +10,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para">Let <span class="process-math">\(u \in X\text{.}\)</span> As the action is transitive, by the exercise above we have that the kernel of the action is the intersection of <span class="process-math">\(gG_ug\inv\)</span> over all <span class="process-math">\(g \in G\text{.}\)</span> However, as <span class="process-math">\(G\)</span> is abelian, <span class="process-math">\(gG_ug\inv = G_u\)</span> for all <span class="process-math">\(g \in G\text{.}\)</span> Hence, the kernel of the action is <span class="process-math">\(G_u\)</span> for any <span class="process-math">\(u \in X\text{.}\)</span> On the other hand, the action is faithful, which means the kernel of the action is the identity. It follows that <span class="process-math">\(G_u = \{e\}\)</span> for every <span class="process-math">\(u \in X\text{.}\)</span> Finally, as the action is transitive, <span class="process-math">\(X = \Orb(u)\)</span> for some (any) <span class="process-math">\(u \in X\text{.}\)</span> By the <a href="" class="xref" data-knowl="./knowl/cor-orbit-stabilizer.html" title="Corollary 5.28: Orbit-Stabilizer Theorem">Orbit-Stabilizer Theorem</a>, <span class="process-math">\(|X|= |\Orb(u)|= [G : G_u] = |G|\text{.}\)</span>
+<body class="ignore-math"><article class="hiddenproof"><div class="para logical">
+<div class="para">The elements of <span class="process-math">\(Z(G)\)</span> are precisely the group elements that are conjugate to only themselves; that is, they are the one-element orbits for the conjugation action. Because the conjugacy classes (orbits of the conjugation action) partition <span class="process-math">\(G\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/lem-conjugation-and-lois.html ./knowl/thm-class-eq.html">
+\begin{equation*}
+|G| = |Z(G)| + \sum_i^r C_G(g_i).
+\end{equation*}
+</div>
+<div class="para">For each <span class="process-math">\(g_i\)</span> as in the statement, by <a href="" class="xref" data-knowl="./knowl/lem-conjugation-and-lois.html" title="Lemma 5.39: Conjugation Actions and LOIS">Lemma 5.39</a>, we have <span class="process-math">\([G: Z_G(g_i)] =C_G(g_i)\text{.}\)</span> The <a href="" class="xref" data-knowl="./knowl/thm-class-eq.html" title="Theorem 5.41: Class Equation">Class Equation</a> follows from substituting this into the equation above.</div>
 </div></article></body>
 </html>

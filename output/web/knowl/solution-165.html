@@ -13,55 +13,24 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h3 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">G.4.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">G.8.1</span><span class="period">.</span>
 </h3>
-<div class="para">Let <span class="process-math">\(R\)</span> be a commutative ring with identity, and assume <span class="process-math">\(1\neq0\text{.}\)</span> Let <span class="process-math">\(I\)</span> and <span class="process-math">\(J\)</span> be ideals such that <span class="process-math">\(I + J = R\text{.}\)</span>
-</div> <div class="para logical"><ol class="decimal">
-<li>
-<div class="para">Let <span class="process-math">\(x\in IJ\text{.}\)</span> Thus <span class="process-math">\(x=\sum a_ib_j\text{,}\)</span> where each <span class="process-math">\(a_i\in I\)</span> and <span class="process-math">\(b_j\in J\text{.}\)</span> As <span class="process-math">\(I\)</span> and <span class="process-math">\(J\)</span> are both ideals, each term in this sum is contained both in <span class="process-math">\(I\)</span> and <span class="process-math">\(J\text{.}\)</span> Thus, by absorption, <span class="process-math">\(x\in I\cap J\text{.}\)</span> Hence <span class="process-math">\(IJ\subseteq I\cap J\text{.}\)</span>
+<div class="para">Let <span class="process-math">\(L\)</span> be the splitting field of <span class="process-math">\(f(x)=x^4-2022\)</span> over <span class="process-math">\(\Q\text{.}\)</span> Let <span class="process-math">\(\z\)</span> be a primitive fourth root of unity. Thus <span class="process-math">\(\z=e^{2\pi i/4}=e^{\pi/2}=\cos(\pi/2)+i\sin(\pi/2)=i\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Notice that the roots of <span class="process-math">\(f\)</span> are the following:</div>
+<ul class="disc">
+<li><div class="para"><span class="process-math">\(\sqrt[4]{2022} i\text{,}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\sqrt[4]{2022}i^2=-\sqrt[4]{2022}\text{,}\)</span></div></li>
+<li><div class="para">
+<span class="process-math">\(\sqrt[4]{2022}i^3=-\sqrt[4]{2022}i\text{,}\)</span> and</div></li>
+<li><div class="para"><span class="process-math">\(\sqrt[4]{2022}i^4=\sqrt[4]{2022}\text{.}\)</span></div></li>
+</ul>
+<div class="para">Thus <span class="process-math">\(L=\Q(\sqrt[4]{2022},i)\text{.}\)</span>
 </div>
-<div class="para">Let <span class="process-math">\(x\in I\cap J\text{.}\)</span> Thus <span class="process-math">\(x\in I\)</span> and <span class="process-math">\(x\in J\text{.}\)</span> Note that as <span class="process-math">\(I+J=R\text{,}\)</span> there exists some <span class="process-math">\(a\in I\)</span> and <span class="process-math">\(b\in J\)</span> such that <span class="process-math">\(a+b=1\text{.}\)</span> So <span class="process-math">\(x=x1=xa+xb\text{.}\)</span> As <span class="process-math">\(x\in I\cap J\)</span> we see that <span class="process-math">\(x=ax+xb\text{,}\)</span> with <span class="process-math">\(a,x\in I\)</span> and <span class="process-math">\(b,x\in J\text{.}\)</span> Thus <span class="process-math">\(x\in IJ\text{,}\)</span> yielding <span class="process-math">\(IJ=I\cap J\text{.}\)</span>
+</div> <div class="para">Using <a href="" class="xref" data-knowl="./knowl/thm-eisensteins-criterion.html" title="Theorem 18.18: Eisenstein's Criterion">Eisenstein's Criterion</a> with <span class="process-math">\(p=2\)</span> we see that <span class="process-math">\(f\)</span> is irreducible in <span class="process-math">\(\Q[x]\text{.}\)</span> Let <span class="process-math">\(\a=\sqrt[4]{2022}\text{,}\)</span> and notice that <span class="process-math">\(f\)</span> is the minimum polynomial of <span class="process-math">\(\a\text{.}\)</span> Let <span class="process-math">\(K=\Q(\a)\)</span> and observe <span class="process-math">\([K:\Q]=4\text{.}\)</span>
+</div> <div class="para">As <span class="process-math">\(i\)</span> is the root of the monic irreducible polynomial <span class="process-math">\(x^2+1\)</span> we have <span class="process-math">\([L:F]=2\)</span> and <span class="process-math">\([L:\Q]=[L:F][F:\Q]=2\cdot4=8\text{.}\)</span> Thus <span class="process-math">\(G=\Gal(L/\Q)\)</span> is isomorphic to a subgroup of <span class="process-math">\(S_4\)</span> of order <span class="process-math">\(8\text{,}\)</span> making it <span class="process-math">\(D_8\text{.}\)</span>
+</div> <div class="para">Notice that <span class="process-math">\(K\)</span> is an extension of degree <span class="process-math">\(24\text{,}\)</span> and thus by the <a href="" class="xref" data-knowl="./knowl/thm-ftgt.html" title="Theorem 20.24: Fundamental Theorem of Galois Theory">Fundamental Theorem of Galois Theory</a> we have a subgroup <span class="process-math">\(H\leq G\)</span> such that <span class="process-math">\(H=\Gal(L/K)\text{.}\)</span> As <span class="process-math">\([L:\Q]=[L:K][K:\Q]\)</span> we have <span class="process-math">\(8=[L:K]\cdot 4\text{,}\)</span> and thus <span class="process-math">\(|H|=2\text{.}\)</span> This makes <span class="process-math">\(H\)</span> the cyclic subgroup of <span class="process-math">\(D_8\)</span> generated by a reflection, the only element of order <span class="process-math">\(2\)</span> in <span class="process-math">\(D_8\text{,}\)</span> making it unique. This is also a normal subgroup of <span class="process-math">\(D_8\text{,}\)</span> making <span class="process-math">\(K\)</span> Galois over <span class="process-math">\(\Q\text{.}\)</span>
 </div>
-</li>
-<li>
-<div class="para">Let <span class="process-math">\(f:R\to R/I\times R/J\)</span> be defined by <span class="process-math">\(f(x)=(x+I,x+J)\text{.}\)</span>
-</div>
-<div class="para">Notice that if <span class="process-math">\(x\in I\cap J\text{,}\)</span> we have <span class="process-math">\(f(x)=(I,J)\text{,}\)</span> and so <span class="process-math">\(x\in\ker(f)\text{.}\)</span> Let <span class="process-math">\(x\in\ker(f)\text{.}\)</span> Thus <span class="process-math">\(x+I=I\)</span> and <span class="process-math">\(x+J=J\text{,}\)</span> and so <span class="process-math">\(x\in I\)</span> and <span class="process-math">\(x\in J\text{.}\)</span> Hence <span class="process-math">\(x\in I\cap J\text{,}\)</span> and so <span class="process-math">\(\ker(f)=I\cap J\text{.}\)</span>
-</div>
-<div class="para logical">
-<div class="para">Observe</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{aligned}
-f(x+y)=&amp;((x+y)+I,(x+y)+J)\\
-=&amp;((x+I)+(y+I),(x+J)+(y+J))\\
-=&amp;((x+I),(x+J))+(y+I),(y+J)\\
-=&amp;f(x)+f(y),
-\end{aligned}
-\end{equation*}
-</div>
-<div class="para">making <span class="process-math">\(f\)</span> a homomorphism of rings.</div>
-</div>
-<div class="para">Let <span class="process-math">\((a+I,b+J)\in R/I\times R/J\text{.}\)</span> As <span class="process-math">\(R=I+J\text{,}\)</span> we can write <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> as <span class="process-math">\(a_i+a_j\)</span> and <span class="process-math">\(b_i+b_j\text{.}\)</span> However, as <span class="process-math">\(a_i\in I\)</span> and <span class="process-math">\(b_j\in J\text{,}\)</span> we have <span class="process-math">\((a+I,b+J)=(a_j+I, b_i+J)\text{.}\)</span>
-</div>
-<div class="para logical">
-<div class="para">Consider the element <span class="process-math">\(x=(a_j+b_i)\in R\text{,}\)</span> and observe</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-ring-fit.html">
-\begin{equation*}
-f(x)=f(a_j+b_i)=(a_j+b_i+I, b_i+a_j+J).
-\end{equation*}
-</div>
-<div class="para">However, as <span class="process-math">\(b_i\in I\)</span> and <span class="process-math">\(a_j\in J\text{,}\)</span> we see</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-ring-fit.html">
-\begin{equation*}
-(a_j+b_i+I, b_i+a_j+J)=(a_j+I,b_i+J)=(a+I,b+J).
-\end{equation*}
-</div>
-<div class="para">Thus <span class="process-math">\(f\)</span> is a surjective homomorphism. Hence, by the <a href="" class="xref" data-knowl="./knowl/thm-ring-fit.html" title="Theorem 10.28: First Isomorphism Theorem for Rings">First Isomorphism Theorem for Rings</a>, we see <span class="process-math">\(R/(I \cap J)\cong R/I \times R/J\text{.}\)</span>
-</div>
-</div>
-</li>
-</ol></div>
 </div>
 <span class="incontext"><a href="section-71.html#solution-165" class="internal">in-context</a></span>
 </body>

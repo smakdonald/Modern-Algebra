@@ -11,16 +11,6 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<div class="para">Let <span class="process-math">\(n\)</span> be a positive integer and let <span class="process-math">\(J = J_{2n}(0)\)</span> be the Jordan block matrix of size <span class="process-math">\(2n \times 2n\)</span> with eigenvalue 0 in <span class="process-math">\(M_{2n\times2n}(\C)\text{.}\)</span>
-</div> <div class="para logical"><ol class="decimal">
-<li>
-<div class="para">Notice that <span class="process-math">\(J\)</span> is a triangular matrix with <span class="process-math">\(0\)</span>'s along the diagonal. Thus <span class="process-math">\(\cp_J(x)=x^{2n}\text{,}\)</span> the product of the diagonal entries of the matrix <span class="process-math">\(J-xI\text{.}\)</span>
-</div>
-<div class="para">Squaring a triangular matrix moves everything one down (Proof?), and so <span class="process-math">\(x^{2n-1}\)</span> should do it. Squaring <span class="process-math">\(J\)</span> just moves us one closer, so <span class="process-math">\(x^{2n-2}\)</span>
-</div>
-</li>
-<li><div class="para">As <span class="process-math">\(\cp_{J^2}(x)=x^{2n}\text{,}\)</span> the only roots of it are <span class="process-math">\(0\text{,}\)</span> and thus these are the only elementary divisors of <span class="process-math">\(J^2\text{.}\)</span>
-</div></li>
-</ol></div>
+<div class="para">Let <span class="process-math">\(G\)</span> be a group.</div> <div class="para">Let <span class="process-math">\(S\)</span> be the poset of all proper subgroups of <span class="process-math">\(G\)</span> ordered in terms of inclusion. Consider a string of these. Consider the union of them all. Luckily, unions of subgroups are subgroups if and only if there is containment, which there is, since everything is in the union. Thus its a subgroup. Since union in <span class="process-math">\(S\)</span> and yields an upper bound, by Zorn's Lemma we have a maximal element. Thus <span class="process-math">\(G\)</span> possesses maximal subgroups.</div>
 </div></body>
 </html>
