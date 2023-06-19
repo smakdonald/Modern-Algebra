@@ -12,20 +12,38 @@
 </head>
 <body class="ignore-math">
 <article class="li"><h4 class="heading">
-<span class="type">Item</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span>
+<span class="type">Item</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span>
 </h4>
+<div class="para">Let <span class="process-math">\(f:R\to R/I\times R/J\)</span> be defined by <span class="process-math">\(f(x)=(x+I,x+J)\text{.}\)</span>
+</div>
+<div class="para">Notice that if <span class="process-math">\(x\in I\cap J\text{,}\)</span> we have <span class="process-math">\(f(x)=(I,J)\text{,}\)</span> and so <span class="process-math">\(x\in\ker(f)\text{.}\)</span> Let <span class="process-math">\(x\in\ker(f)\text{.}\)</span> Thus <span class="process-math">\(x+I=I\)</span> and <span class="process-math">\(x+J=J\text{,}\)</span> and so <span class="process-math">\(x\in I\)</span> and <span class="process-math">\(x\in J\text{.}\)</span> Hence <span class="process-math">\(x\in I\cap J\text{,}\)</span> and so <span class="process-math">\(\ker(f)=I\cap J\text{.}\)</span>
+</div>
 <div class="para logical">
-<div class="para">Note that <span class="process-math">\(f\)</span> is irreducible in <span class="process-math">\(\Q[x]\)</span> by <a href="" class="xref" data-knowl="./knowl/thm-eisensteins-criterion.html" title="Theorem 18.18: Eisenstein's Criterion">Eisenstein's Criterion</a> (<span class="process-math">\(p=2\)</span>). The roots of <span class="process-math">\(f\)</span> are</div>
-<ul class="disc">
-<li><div class="para"><span class="process-math">\(\displaystyle \a_1=\sqrt[5]{2}e^{\pi i/5}\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\displaystyle \a_2=\sqrt[5]{2}e^{3\pi i/5}\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\displaystyle \a_3=\sqrt[5]{2}e^{5\pi i/5}=-\sqrt[5]{2}\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\displaystyle \a_4=\sqrt[5]{2}e^{7\pi i/5}\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\displaystyle \a_5=\sqrt[5]{2}e^{9\pi i/5}\)</span></div></li>
-</ul>
+<div class="para">Observe</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x+y)=((x+y)+I,(x+y)+J)=((x+I)+(y+I),(x+J)+(y+J))=((x+I),(x+J))+(y+I),(y+J))=f(x)+f(y),
+\end{equation*}
 </div>
-<div class="para">As <span class="process-math">\(f\)</span> is monic and irreducible it is the minimum polynomial of <span class="process-math">\(\sqrt[5]{2}\in\Q[x]\text{.}\)</span> Let <span class="process-math">\(F=\Q(\sqrt[5]{2})\text{,}\)</span> and notice <span class="process-math">\([F:\Q]=5\text{.}\)</span> Note that <span class="process-math">\(F\subseteq\R\)</span>
+<div class="para">making <span class="process-math">\(f\)</span> a homomorphism of rings.</div>
 </div>
-<div class="para">Let <span class="process-math">\(\z=e^{\frac{\pi i}{5}}\)</span> be a primitive <span class="process-math">\(10\th\)</span> root of unity. This is the root a cyclotomic polynomial of degree <span class="process-math">\(9\)</span> which is irreducible in <span class="process-math">\(\Q[x]\text{.}\)</span> As this has relatively prime order to <span class="process-math">\(F\)</span> it is irreducible there as well. Let <span class="process-math">\(K=F(\z)\text{,}\)</span> and notice <span class="process-math">\([K:\Q]=40\text{.}\)</span> Notice that <span class="process-math">\(\a_1\cdot\a_3\inv=\z\text{,}\)</span> and so <span class="process-math">\(L=K\text{,}\)</span> completing the proof.</div></article><span class="incontext"><a href="section-75.html#li-1106" class="internal">in-context</a></span>
+<div class="para">Let <span class="process-math">\((a+I,b+J)\in R/I\times R/J\text{.}\)</span> As <span class="process-math">\(R=I+J\text{,}\)</span> we can write <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> as <span class="process-math">\(a_i+a_j\)</span> and <span class="process-math">\(b_i+b_j\text{.}\)</span> However, as <span class="process-math">\(a_i\in I\)</span> and <span class="process-math">\(b_j\in J\text{,}\)</span> we have <span class="process-math">\((a+I,b+J)=(a_j+I, b_i+J)\text{.}\)</span>
+</div>
+<div class="para logical">
+<div class="para">Consider the element <span class="process-math">\(x=(a_j+b_i)\in R\text{,}\)</span> and observe</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-fit-group.html">
+\begin{equation*}
+f(x)=f(a_j+b_i)=(a_j+b_i+I, b_i+a_j+J).
+\end{equation*}
+</div>
+<div class="para">However, as <span class="process-math">\(b_i\in I\)</span> and <span class="process-math">\(a_j\in J\text{,}\)</span> we see</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-fit-group.html">
+\begin{equation*}
+(a_j+b_i+I, b_i+a_j+J)=(a_j+I,b_i+J)=(a+I,b+J).
+\end{equation*}
+</div>
+<div class="para">Thus <span class="process-math">\(f\)</span> is a surjective homomorphism. Hence, by the <a href="" class="xref" data-knowl="./knowl/thm-fit-group.html" title="Theorem 4.49: First Isomorphism Theorem">First Isomorphism Theorem</a>, we see <span class="process-math">\(R/(I \cap J)\cong R/I \times R/J\text{.}\)</span>
+</div>
+</div></article><span class="incontext"><a href="section-75.html#li-1106" class="internal">in-context</a></span>
 </body>
 </html>

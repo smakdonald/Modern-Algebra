@@ -653,13 +653,37 @@
             <example xml:id="ex-natural-monoid"><title>Au Naturale</title>
               <statement>
                 <p>
-                  The <xref text="title" ref="def-natural-numbers"/> <m>\N</m> form a monoid under addition.
+                  The <xref text="title" ref="def-natural-numbers"/> <m>\N</m> form a monoid under addition, provided you subscribe to the belief that <m>0\in\N</m>.
                 </p>
               </statement>
               
               <solution>
                 <p>
-                  Coming soon!
+                  Let's go through each property step by step:
+                  <ul>
+                    <li><title>Closure:</title>
+                      <p>
+                        To show closure, we need to demonstrate that the sum of any two natural numbers is always a natural number. 
+                        Since the sum of any two positive integers is still a positive integer, closure is satisfied.
+                      </p>
+                    </li>
+
+                    <li><title>Associativity:</title>
+                      <p>
+                        To prove associativity, we need to show that for any three natural numbers <m>a</m>, <m>b</m>, and <m>c</m>, the following holds: <m>(a + b) + c = a + (b + c)</m>. 
+                        Since addition is associative in the set of natural numbers, this property is satisfied.
+                      </p>
+                    </li>
+
+                    <li><title>Identity element:</title>
+                      <p>
+                        To establish the existence of an identity element, we need to find a natural number <m>e</m> such that for any natural number <m>n</m>,<m> e + n = n + e = n</m>. 
+                        The identity element for addition is <m>0</m> (zero). 
+                        For any natural number <m>n</m>, adding zero to it does not change its value, and hence, the identity element property is satisfied.
+                      </p>
+                    </li>
+                  </ul>
+                  Therefore, since the natural numbers satisfy all three properties (closure, associativity, and identity element), we can conclude that the natural numbers form a monoid under addition.
                 </p>
               </solution>
             </example>
@@ -895,11 +919,12 @@
             </remark>
       
             <example xml:id="ex-group-examples"><title>Group Examples</title>
+              <statement>
                 <p>
                   <ol>
-                    <li xml:id="trivial-group"> <title>Trivial Subgroup</title>
+                    <li xml:id="trivial-group"> <title>Trivial Group</title>
                       <p>
-                        The <term>trivial subgroup</term><idx><h>trivial group</h></idx> is the group with a single element <m>\{e\}</m>.
+                        The <term>trivial group</term><idx><h>trivial group</h></idx> is the group with a single element <m>\{e\}</m>.
                         <notation><usage><m>\{e\}</m></usage><description>the trivial group: e.g. the group containing only an identity element</description></notation>          
                       </p>
                     </li>
@@ -929,6 +954,27 @@
                     </li>
                   </ol>
                 </p>
+              </statement>
+
+              <solution>
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        Since there is only one element in the trivial group, closure is automatically satisfied. 
+                        In the case of the trivial group, there is only one element, so there are no distinct elements to consider. 
+                        Hence, associativity is trivially satisfied.
+                        In the trivial group, there is only one element, which can be chosen as the identity element. 
+                        Since there is only one element, multiplying it with itself or with any other element will result in the same element. 
+                        Therefore, the identity element property is satisfied.
+                        In the trivial group, there is only one element, and its inverse is itself. 
+                        Multiplying the element with itself will yield the identity element, which is the only element in the group. 
+                        Therefore, the inverse element property is satisfied.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </solution>
             </example>
 
             <convention>
@@ -1004,6 +1050,48 @@
                   </ul>
                 </p>
               </statement>
+
+              <solution>
+                <p>
+                  <ul>
+                    <li>
+                      <p>
+                        Since <m>G</m> is a group and its operation is associative, we have <m>(y · x) · z = y · (x · z)</m> for any elements <m>x</m>, <m>y</m>, <m>z</m> in <m>G</m>. 
+                        This implies that <m>(z · y) · x = z · (y · x)</m> for any elements <m>x, y, z</m> in <m>G^{op}</m>. 
+                        Thus, associativity is satisfied in <m>G^{op}</m>.
+
+                        Let <m>e</m> be the identity element of <m>G</m>. 
+                        In <m>G^{op}</m>, the identity element is still <m>e</m> because for any element <m>x</m> in <m>G^{op}</m>, we have <m>e · x = x · e = x</m>, where <m>·</m> denotes the operation in <m>G</m>. 
+                        Therefore, the identity element property is satisfied in <m>G^{op}</m>.
+
+                        Let <m>x</m> be an element in <m>G^{op}</m>. 
+                        Since <m>x</m> is also in <m>G</m>, <m>G</m> being a group implies that there exists an inverse element <m>x\inv</m> in <m>G</m> such that <m>x · x^\inv = x\inv · x = e</m>, where <m>e</m> is the identity element of <m>G</m>. 
+                        This implies that <m>x^\inv · x = x · x^\inv = e</m> in <m>G^{op}</m> as well. 
+                        Therefore, every element in <m>G^{op}</m> has an inverse in <m>G^{op}</m>, satisfying the inverse element property.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Integer addition is associative, which means that for any three integers <m>a, b</m>, and <m>c</m>, the expression <m>(a + b) + c</m> is equal to <m>a + (b + c)</m>. 
+                        Thus, associativity is satisfied for <m>\E</m>.
+
+                        The identity element for addition is <m>0</m>. 
+                        For any even integer <m>a</m>, adding <m>0</m> to it does not change its parity (evenness). 
+                        Hence, the identity element property is satisfied for <m>\E</m>.
+
+                        For every even integer <m>a</m>, there exists an inverse element denoted as <m>-a</m> such that <m>a + (-a) = (-a) + a = 0</m>. 
+                        The negative of an even integer is also an even integer. 
+                        Adding an even integer to its negative results in <m>0</m>, which is the identity element. 
+                        Therefore, the inverse element property is satisfied for <m>\E</m>.
+
+
+                        The identity element for addition is <m>0</m>. However, <m>0</m> is not an odd integer, so the identity element property is not satisfied for <m>\O</m>.
+                      </p>
+                    </li>
+                  </ul>
+                </p>
+              </solution>
             </exercise>
             
             <theorem xml:id="thm-group-inverses"><title>Properties of Inverses</title>
@@ -1289,7 +1377,16 @@
 
               <proof>
                 <p>
-                  Coming soon!
+                  <ol>
+                    <li>
+                      <p>
+                        Let <m>G</m> be a group and consider an element <m>a</m> in <m>G</m> with order <m>1</m>. 
+                        By definition, the order of an element is the smallest positive integer <m>n</m> such that <m>a^n = e</m>, where <m>e</m> is the identity element of <m>G</m>. 
+                        Since the order of <m>a</m> is <m>1</m>, we have <m>a^1 = a = e</m>. 
+                        This implies that <m>a</m> is equal to the identity element <m>e</m>.
+                      </p>
+                    </li>
+                  </ol>
                 </p>
               </proof>
             </theorem>
@@ -1438,6 +1535,19 @@
                   The <xref text="title" ref="def-composition"/> of two symmetries of <m>P_n</m> is again a symmetry of <m>P_n</m>.
                 </p>
               </statement>
+
+              <solution>
+                <p>
+                  Let <m>R = S ∘ T</m> be the composition of <m>S</m> and <m>T</m>, where <m>∘</m> denotes composition. 
+                  Let's take an arbitrary point <m>P</m> on the object.
+                  When we apply the symmetry <m>S</m> to <m>P</m>, it is mapped to a new point, let's call it <m>P1</m>. 
+                  Since <m>S</m> is a symmetry, <m>P1</m> is still on the object.
+                  Next, when we apply the symmetry <m>T</m> to <m>P1</m>, it is mapped to a new point, let's call it <m>P2</m>. 
+                  Again, since <m>T</m> is a symmetry, <m>P2</m> is still on the object.
+                  Therefore, the composition <m>R = S ∘ T</m> maps the point <m>P</m> on the object to the point <m>P2</m>, which is also on the object.
+                  Hence, the composition of symmetries is again a symmetry.
+                </p>
+              </solution>
             </exercise>
       
             <definition xml:id="def-d2n"><title>Dihedral Group</title>
@@ -1574,6 +1684,42 @@
                   Prove <m>|S_n|=n!</m>.
                 </p>
               </statement>
+
+              <solution>
+                <p>
+                  To count the number of permutations in <m>S_n</m>, we can consider the process of constructing a permutation step by step.
+                  <ul>
+                    <li>
+                      <p>
+                        For the first element, we have <m>n</m> choices. 
+                        We can choose any of the <m>n</m> elements as the image of the first element.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        For the second element, we have <m>(n-1)</m> choices. 
+                        After choosing the image of the first element, we have <m>(n-1)</m> remaining elements to choose from for the image of the second element.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Continuing this process, for the third element, we have <m>(n-2)</m> choices, for the fourth element we have <m>(n-3)</m> choices, and so on.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Finally, for the last element, we have only one choice remaining.
+                      </p>
+                    </li>
+                  </ul>
+                  The total number of permutations is obtained by multiplying the number of choices at each step. 
+                  Hence, the total number of permutations in <m>S_n</m> is given by <m>n \cdot (n-1) \cdot (n-2) \cdot \dots \cdot 3 \cdot 2 \cdot 1</m>, which is equal to <m>n!</m>.
+                  Therefore, the order of the symmetric group <m>S_n</m> is <m>n!</m>.
+                </p>
+              </solution>
             </exercise>
      
             <definition xml:id="def-cycle"><title>Cycles and Transpositions</title>
@@ -1642,6 +1788,27 @@
                   then <m>\sigma_1 \circ \sigma_2=\sigma_2\circ \sigma_1</m>.
                 </p>
               </statement>
+
+              <proof>
+                <p>
+                  Let's consider two disjoint cycles, denoted as <m>(a1 a2 ... am)</m> and <m>(b1 b2 ... bn)</m>, where <m>ai</m>'s and <m>bi</m>'s are distinct elements.
+                  Let's analyze the composition <m>(a1 a2 ... am) ∘ (b1 b2 ... bn)</m>:
+                  When we apply the composition to an element <m>ai</m>, we have:
+                  <me>(a1 a2 ... am) ∘ (b1 b2 ... bn)(ai) = (a1 a2 ... am)(b1 b2 ... bn(ai)) = (a1 a2 ... am)(ai) = ai+1 (\text{ if } ai ≠ am) \text{ or }a1 (\text{ if }ai = am)</me>
+                  Similarly, when we apply the composition to an element <m>bj</m>, we have:
+                  <me>(b1 b2 ... bn) ∘ (a1 a2 ... am)(bj) = (b1 b2 ... bn)(a1 a2 ... am(bj)) = (b1 b2 ... bn)(bj) = bj+1 (\text{ if } bj ≠ bn) \text{ or }b1 (\text{ if } bj = bn)</me>
+                  From these calculations, we can observe that the composition <m>(a1 a2 ... am) ∘ (b1 b2 ... bn)</m> maps each element <m>ai</m> to <m>ai+1</m> (if <m>ai ≠ am</m>), and it maps <m>am</m> to <m>a1</m>. 
+                  Similarly, the composition <m>(b1 b2 ... bn) ∘ (a1 a2 ... am)</m> maps each element <m>bj</m> to <m>bj+1</m> (if <m>bj ≠ bn</m>), and it maps <m>bn</m> to <m>b1</m>.
+
+                  Now, let's consider the composition <m>(b1 b2 ... bn) ∘ (a1 a2 ... am)</m> and evaluate its effect on the elements ai and am:
+                  <me>(b1 b2 ... bn) ∘ (a1 a2 ... am)(ai) = (b1 b2 ... bn)(a1 a2 ... am(ai)) = (b1 b2 ... bn)(ai) = ai+1 (\text{ if } ai ≠ am) \text{ or } a1 (\text{ if } ai = am)</me>
+                  <me>(b1 b2 ... bn) ∘ (a1 a2 ... am)(am) = (b1 b2 ... bn)(a1 a2 ... am(am)) = (b1 b2 ... bn)(a1 a2 ... am) = am+1 (\text{ if } am ≠ a1) \text{ or } a2 (\text{ if } am = a1)</me>
+                  Comparing these results with the previous composition, we see that the effects on <m>ai</m> and <m>am</m> are the same in both compositions. 
+                  This implies that the compositions <m>(a1 a2 ... am) ∘ (b1 b2 ... bn)</m> and <m>(b1 b2 ... bn) ∘ (a1 a2 ... am)</m> are identical.
+
+                  Therefore, we have shown that disjoint cycles commute, meaning that the order in which they are composed does not affect the final result.
+                </p>
+              </proof>
             </proposition>
 
             <p>
@@ -1805,6 +1972,23 @@
                   Prove <m>|A_n|=\frac{n!}{2}</m>.
                 </p>
               </statement>
+
+              <solution>
+                <p>
+                  For an element to be in An, it must be an even permutation. 
+                  This means it can be expressed as a product of an even number of transpositions. 
+                  Each transposition in the product swaps two elements. 
+                  There are n choices for the first element, and after fixing the first element, there are (n-1) choices for the second element. 
+                  This gives us n * (n-1) choices for the first transposition.
+                  For the second transposition, there are (n-2) choices for the first element and (n-3) choices for the second element. 
+                  Continuing this process, we have (n-2) * (n-3) * ... * 2 * 1 choices for the remaining transpositions.
+                  In total, the number of even permutations (elements in An) is given by n * (n-1) * (n-2) * ... * 2 * 1, which is equal to n!.
+                  However, we have counted each even permutation twice because we can write a given even permutation as a product in different orders. 
+                  For example, (1 2) * (3 4) is the same as (3 4) * (1 2).
+                  Therefore, we divide the total number of even permutations (n!) by 2 to remove the duplicate counting.
+                  Hence, the order of the alternating group An is n!/2.
+                </p>
+              </solution>
             </exercise>
       
           </subsection>
@@ -7870,16 +8054,8 @@
     </part>
 
     <part xml:id="part-rings"><title>Ring Theory</title>
-
-      <!-- Ring Theory -->
     
       <chapter xml:id="ch-rings"><title>Rings</title>
-
-       <!--
-       ***************
-        Chapter: Rings
-       ***************
-       -->
 
         <section xml:id="sec-defn-ex"><title>Ring Basics</title>
     

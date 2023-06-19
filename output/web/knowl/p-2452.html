@@ -12,7 +12,33 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Suppose by way of contradiction that <span class="process-math">\(7\)</span> is not prime in <span class="process-math">\(\Z[i]\text{.}\)</span> Thus <span class="process-math">\(7=\alpha\beta\text{,}\)</span> with <span class="process-math">\(\alpha,\beta\)</span> non-units and where <span class="process-math">\(\alpha=a+bi\)</span> and <span class="process-math">\(\beta=c+di\text{,}\)</span> for <span class="process-math">\(a,b,c,d\in Z\text{.}\)</span> Thus <span class="process-math">\(\overline{7}=\overline{\alpha\beta}=\overline{\alpha}\overline{\beta}\text{.}\)</span> As <span class="process-math">\(\overline{7+0i}=49\text{,}\)</span> we see that <span class="process-math">\(\overline{\alpha}=(a^2+b^2)|49\text{.}\)</span> Note that the possible factorizations of 49 in <span class="process-math">\(\Z\)</span> are <span class="process-math">\((1)(49)\)</span> and <span class="process-math">\((7)(7)\text{.}\)</span>
+<div class="para logical">
+<div class="para">Upon modding out by <span class="process-math">\(p\)</span> we get</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\ov{f} = \ov{g} \ov{h} \in (R/p)[x].
+\end{equation*}
+</div>
+<div class="para">The assumptions on <span class="process-math">\(f\)</span> give that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\ov{f} = \ov{a_n} x^n
+\end{equation*}
+</div>
+<div class="para">with <span class="process-math">\(\ov{a_n} \ne 0\text{.}\)</span> Since <span class="process-math">\(R/p\)</span> is a domain, it follows that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\ov{g} = \ov{b_m} x^m \, \text{ and  } \, \ov{h} = \ov{c_l} x^l
+\end{equation*}
+</div>
+<div class="para">On the other hand, we also have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a_0 = b_0c_0,
+\end{equation*}
+</div>
+<div class="para">and since <span class="process-math">\(p^2 \nmid a_0\text{,}\)</span> we have that <span class="process-math">\(p \nmid b_0\)</span> or <span class="process-math">\(p \nmid c_0\text{.}\)</span> So <span class="process-math">\(\ov{b_0} \ne 0\)</span> or <span class="process-math">\(\ov{c_0} \ne 0\text{.}\)</span> This can only occur if <span class="process-math">\(m = 0\)</span> or <span class="process-math">\(l = 0\text{.}\)</span>
+</div>
 </div>
 <span class="incontext"><a href="sec-irrpoly.html#p-2452" class="internal">in-context</a></span>
 </body>

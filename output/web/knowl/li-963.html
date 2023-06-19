@@ -12,13 +12,24 @@
 </head>
 <body class="ignore-math">
 <article class="li"><h4 class="heading">
-<span class="type">Item</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span>
+<span class="type">Item</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span>
 </h4>
-<div class="para">To find a presentation of <span class="process-math">\(G\text{,}\)</span> we need to identify the generators and relations. Since <span class="process-math">\(C_3\)</span> and <span class="process-math">\(C_9\)</span> are both cyclic, we can take the generators to be <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> respectively. Moreover, since <span class="process-math">\(C_3\)</span> is normal in <span class="process-math">\(G\text{,}\)</span> we have <span class="process-math">\(bab^{-1} = a^i\)</span> for some <span class="process-math">\(i \in {1, 2}\text{.}\)</span>
+<div class="para logical">
+<div class="para">
+<span class="process-math">\(\phi\)</span> is <span class="process-math">\(R\)</span>-<em class="emphasis">mutli-linear</em> if, for each <span class="process-math">\(i\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi(v_1, \dots, v_{i-1}, v_i + v'_i, v_{i+1}, \dots, v_n) = \phi(v_1, \dots, v_{i-1}, v_i , v_{i+1}, \dots, v_n) +\phi(v_1, \dots, v_{i-1},  v_i', v_{i+1}, \dots, v_n)
+\end{equation*}
 </div>
-<div class="para">To determine the value of <span class="process-math">\(i\text{,}\)</span> note that <span class="process-math">\(C_9\)</span> acts on <span class="process-math">\(C_3\)</span> by automorphisms, and the non-identity automorphism of <span class="process-math">\(C_3\)</span> is inversion <span class="process-math">\(a \mapsto a^{-1}\text{.}\)</span> Since <span class="process-math">\(bab^{-1} \neq a^{-1}\text{,}\)</span> we must have <span class="process-math">\(i = 2\text{.}\)</span>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi(v_1, \dots, v_{i-1}, r v_i, v_{i+1}, \dots, v_n) = r \phi(v_1, \dots, v_{i-1},  v_i, v_{i+1}, \dots, v_n) 
+\end{equation*}
 </div>
-<div class="para">Therefore, a presentation of <span class="process-math">\(G\)</span> is given by <span class="process-math">\(\langle a, b \mid a^3 = b^9 = 1, bab^{-1} = a^2\rangle\text{.}\)</span>
-</div></article><span class="incontext"><a href="section-71.html#li-963" class="internal">in-context</a></span>
+<div class="para">for all elements <span class="process-math">\(v_1, \dots, v_n, v_i'\)</span> in <span class="process-math">\(V\)</span> and all <span class="process-math">\(r \in R\text{.}\)</span>
+</div>
+</div></article><span class="incontext"><a href="section-69.html#li-963" class="internal">in-context</a></span>
 </body>
 </html>

@@ -13,14 +13,23 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">First, note that if <span class="process-math">\(d=1\)</span> then <span class="process-math">\(f(x)\)</span> will remain irreducible in <span class="process-math">\(K[x]\)</span> (See: [[Theorem – Degree and Irreducibility|Theorem]]). Suppose then that <span class="process-math">\(d&gt;1\text{.}\)</span> There exists an algebraically closed extension <span class="process-math">\(\widetilde F\)</span> such that <span class="process-math">\(f\)</span> has a root <span class="process-math">\(r\)</span> (See: [[Theorem – Existence and Uniqueness of Algebraic Closures|Theorem]]). Consider <span class="process-math">\(K(r)\text{.}\)</span> As <span class="process-math">\(r\)</span> is algebraic in <span class="process-math">\(K(r)\)</span> we know there exists some unique irreducible minimal polynomial <span class="process-math">\(g\)</span> of degree <span class="process-math">\(q\text{,}\)</span> and thus that <span class="process-math">\([K(r):K]=q\)</span> (See: [[Theorem – Properties of Algebraic Elements|Theorem]]). Using the  <a href="" class="xref" data-knowl="./knowl/thm-degree-formula.html" title="Theorem 19.30: The Degree Formula">The Degree Formula</a> we see that</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-degree-formula.html">
+<div class="para">Consider the <span class="process-math">\(\C\)</span>-vector space <span class="process-math">\(V = {p \in \C[x] : \deg(p) \leq n - 1}\text{.}\)</span> (You may assume without proof that <span class="process-math">\(V\)</span> is n-dimensional.) Consider the following linear maps <span class="process-math">\(V \to V\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
 \begin{equation*}
-[K(r):F]=[K(r):K][K:F]=qn.
+D : V \to V \hspace{4cm} T : V \to V
 \end{equation*}
 </div>
-<div class="para">However, <span class="process-math">\([K(r):F]=[K(r):F(r)][F(r):F]\)</span> and so <span class="process-math">\(qn=md\)</span> for some <span class="process-math">\(m\in\Z\text{,}\)</span> so <span class="process-math">\(d|qn\text{.}\)</span> As <span class="process-math">\(\gcd(n,d)=1\)</span> we must have <span class="process-math">\(d|q\text{.}\)</span> But <span class="process-math">\(q\)</span> was defined to be the degree of <span class="process-math">\(g\text{,}\)</span> which divides <span class="process-math">\(f\text{.}\)</span> As <span class="process-math">\(d|q\)</span> and <span class="process-math">\(q\leq d\text{,}\)</span> we see that <span class="process-math">\(d=q\text{,}\)</span> so so <span class="process-math">\(f=kg\)</span> for some <span class="process-math">\(k\in F\text{.}\)</span> As irreducible polynomials multiplied by a constant are still irreducible, we see that <span class="process-math">\(f\)</span> is indeed irreducible in <span class="process-math">\(K[x]\text{.}\)</span>
+<div class="displaymath process-math">
+\begin{equation*}
+p\mapsto p'\hspace{4cm} p\mapsto xp'
+\end{equation*}
 </div>
+<div class="para">(where <span class="process-math">\(p'\)</span> denotes the derivative of <span class="process-math">\(p\)</span>). Determine the Jordan normal form of</div>
+<ol class="decimal">
+<li><div class="para"><span class="process-math">\(\displaystyle D\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle B\)</span></div></li>
+</ol>
 </div>
 <span class="incontext"><a href="section-73.html#p-3626" class="internal">in-context</a></span>
 </body>

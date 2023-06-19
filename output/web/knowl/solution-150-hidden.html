@@ -11,25 +11,40 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like"><div class="para logical">
-<div class="para">Let <span class="process-math">\(\a = \sqrt2+\sqrt5 \in\R\text{.}\)</span>
+<div class="para">Let <span class="process-math">\(L\)</span> be the splitting field over <span class="process-math">\(\Q\)</span> of the polynomial <span class="process-math">\(f(x)=x^3-7\)</span>
 </div>
 <ol class="lower-alpha">
-<li><div class="para logical">
-<div class="para">Let</div>
+<li>
+<div class="para logical">
+<div class="para">First, notice that <span class="process-math">\(f\)</span> is irreducible in <span class="process-math">\(\Q[x]\)</span> by <a href="" class="xref" data-knowl="./knowl/thm-eisensteins-criterion.html" title="Theorem 18.18: Eisenstein's Criterion">Eisenstein's Criterion</a> <span class="process-math">\((p=7)\text{.}\)</span> Let <span class="process-math">\(\z\)</span> denote a primitive third root of unity. The roots of <span class="process-math">\(f\)</span> are the following:</div>
+<ol class="lower-roman">
+<li><div class="para"><span class="process-math">\(\a_1=\sqrt[3]{7}\z\text{,}\)</span></div></li>
+<li><div class="para">
+<span class="process-math">\(\a_2=\sqrt[3]{7}\z^2\text{,}\)</span> and</div></li>
+<li><div class="para"><span class="process-math">\(\a_3=\sqrt[3]{7}\z^3=\sqrt[3]{7}\text{.}\)</span></div></li>
+</ol>
+<div class="para">As <span class="process-math">\(f\)</span> is irreducible and monic we see that it is the minimum polynomial of <span class="process-math">\(\a_3\)</span> over <span class="process-math">\(\Q\text{.}\)</span> Let <span class="process-math">\(E_1=\Q(\a_3)\)</span> and notice <span class="process-math">\([E_1:\Q]=3\text{.}\)</span>
+</div>
+</div>
+<div class="para">Recall that <span class="process-math">\(G=\Gal(L/\Q)\)</span> is isomorphic to a subgroup of <span class="process-math">\(S_3\text{.}\)</span> As <span class="process-math">\(E_1\sse \R\)</span> and <span class="process-math">\(\a_1\not\in\R\text{,}\)</span> we see another extension is needed, and that extension will have at least degree <span class="process-math">\(2\text{.}\)</span> Thus, due to size constraints, we see <span class="process-math">\(G\cong S_3\text{.}\)</span>
+</div>
+<div class="para">By the FTGT each Galois intermediate extension between <span class="process-math">\(\Q\)</span> and <span class="process-math">\(L\)</span> corresponds to a normal subgroup of <span class="process-math">\(G\text{,}\)</span> which are the normal subgroups of <span class="process-math">\(S_3\text{.}\)</span>
+</div>
+<div class="para logical">
+<div class="para">The elements of <span class="process-math">\(S_3\)</span> are the following:</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\begin{align}
-f(x)&amp;=(x+\sqrt2 + \sqrt5)(x+\sqrt2 - \sqrt5)(x-\sqrt2 + \sqrt5)(x-\sqrt2 - \sqrt5)\\ &amp;=(x^2-2\sqrt{ 2 }-3)(x^2+2\sqrt{ 2 }-3)\\&amp;=x^4-14x^2+9,
-\end{align}
+\{(1), (12), (13), (23), (123), (132)\}
 \end{equation*}
 </div>
-<div class="para">which factors as two irreducible polynomials and has no roots in <span class="process-math">\(\Q\text{,}\)</span> making it irreducible. Thus <span class="process-math">\(f\)</span> is the minimal polynomial of <span class="process-math">\(\a\text{.}\)</span>
+<div class="para">The subgroup <span class="process-math">\(F=\langle(123)\rangle=\{(123),(132)\}\)</span> has index <span class="process-math">\(2\)</span> in <span class="process-math">\(G\)</span> and is thus normal. None of the order <span class="process-math">\(2\)</span> subgroups are normal in <span class="process-math">\(S_3\text{,}\)</span> so <span class="process-math">\(F\)</span> is the only strictly intermediate extension.</div>
 </div>
-</div></li>
-<li><div class="para">Notice that <span class="process-math">\(E=\Q(\sqrt{ 2 },\sqrt{ 5 })\)</span> which also has degree <span class="process-math">\(4\text{.}\)</span> Let <span class="process-math">\(G\)</span> denote the Galois group of <span class="process-math">\(E/\Q\text{.}\)</span> Thus <span class="process-math">\(G\)</span> is a group of order <span class="process-math">\(4\text{,}\)</span> making it isomorphic to <span class="process-math">\(\Z_2\times\Z_2\)</span> or <span class="process-math">\(\Z_4\text{.}\)</span> Notice that the elements of <span class="process-math">\(G\)</span> are the following: - <span class="process-math">\(\id(\sqrt{ 2 })=\sqrt{ 2 }\)</span> and <span class="process-math">\(\id(\sqrt{ 5 })=\sqrt{ 5 }\text{,}\)</span> - <span class="process-math">\(\tau(\sqrt{ 2 })=\sqrt{ 2 }\)</span> and <span class="process-math">\(\s(\sqrt{ 5 })=-\sqrt{ 5 }\text{,}\)</span> - <span class="process-math">\(\g(\sqrt{ 2 })=-\sqrt{ 2 }\)</span> and <span class="process-math">\(\s(\sqrt{ 5 })=-\sqrt{ 5 }\text{,}\)</span> and - <span class="process-math">\(\l(\sqrt{ 2 })=-\sqrt{ 2 }\)</span> and <span class="process-math">\(\s(\sqrt{ 5 })=\sqrt{ 5 }\text{.}\)</span> All of these automorphisms have degree <span class="process-math">\(2\text{,}\)</span> making <span class="process-math">\(G\cong\Z_2\times\Z_2\text{.}\)</span>
-</div></li>
-<li><div class="para">Thus are only two subgroups of <span class="process-math">\(G\text{,}\)</span> <span class="process-math">\(H\cong\Z_2\)</span> and <span class="process-math">\(K\cong\Z_2\text{.}\)</span> The first, <span class="process-math">\(H\text{,}\)</span> corresponds to <span class="process-math">\(\Q(\sqrt{ 2 })\)</span> and is generated by <span class="process-math">\(\sqrt{ 2 }\text{,}\)</span> where <span class="process-math">\(K\)</span> corresponds to <span class="process-math">\(\Q(\sqrt{ 5 })\)</span> and is generated by <span class="process-math">\(\sqrt{ 5 }\text{.}\)</span>
-</div></li>
+<div class="para">Recall <span class="process-math">\([E_1:\Q]=3\text{,}\)</span> meaning <span class="process-math">\(|\Gal(L/E_1)|=3\text{,}\)</span> so <span class="process-math">\(E\)</span> corresponds to a subgroup of order <span class="process-math">\(2\)</span> in <span class="process-math">\(G\text{,}\)</span> so its not Galois unfortunately. However, <span class="process-math">\(E_2=\Q(\z)\)</span> is a degree <span class="process-math">\(2\)</span> extension that is an intermediate field, as <span class="process-math">\(\z\)</span> is a root of the irreducible polynomial <span class="process-math">\(x^2+x+1\text{.}\)</span>
+</div>
+<div class="para">With all this in mind, notice: - <span class="process-math">\(\Q\)</span> is a splitting field of <span class="process-math">\(\Q\text{,}\)</span> and has the primitive generator by <span class="process-math">\(1\text{.}\)</span> - <span class="process-math">\(E_2\)</span> is our only strictly intermediate field, and has the primitive generator <span class="process-math">\(\z\)</span> - Finally, <span class="process-math">\(L\)</span> is Galois over <span class="process-math">\(\Q\text{,}\)</span> and has the primitive generator <span class="process-math">\(\z+\sqrt[3]{7}\text{.}\)</span>
+</div>
+</li>
+<li><div class="para"></div></li>
 </ol>
 </div></div></body>
 </html>

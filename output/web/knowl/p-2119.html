@@ -13,27 +13,38 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Note that</div>
+<div class="para">We have</div>
 <div class="displaymath process-math">
 \begin{equation*}
-C(x)=[0], C(x^2)=
-\begin{bmatrix}
-0 &amp; 0\\
-1 &amp; 0\\
-\end{bmatrix}, 
-C(x)\oplus C(x^2)\begin{bmatrix}
-0 &amp; 0 &amp; 0\\
-0 &amp; 0 &amp; 0\\
-0 &amp; 1 &amp; 0\\
-\end{bmatrix}, \textrm{ and } C(x^3)=
-\begin{bmatrix}
-0 &amp; 0 &amp; 0\\
-1 &amp; 0 &amp; 0\\
-0 &amp; 1 &amp; 0\\
+xI_3 - A =
+\begin{bmatrix} 
+x-1 &amp; 1 &amp; -1 \\
+0 &amp; x &amp; -1 \\
+0 &amp; -1 &amp; x \\
 \end{bmatrix}.
 \end{equation*}
 </div>
-<div class="para">As <span class="process-math">\(C(x)\oplus C(x^2)\)</span> has rank 1 and <span class="process-math">\(C(x^3)\)</span> has rank 2, since <span class="process-math">\(\rank(A)=\rank(B)\)</span> we see that they must have the same invariant factors, making them similar.</div>
+<div class="para">A sequence of messy row and column operations yields</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{bmatrix} 
+1 &amp; 0 &amp; 0 \\
+0 &amp; x-1 &amp; 0 \\
+0 &amp; 0 &amp; x^2-1 \\
+\end{bmatrix}.
+\end{equation*}
+</div>
+<div class="para">Note that this is indeed in Smith Normal Form. It follows that the invariant factors of <span class="process-math">\(A\)</span> are <span class="process-math">\(x-1, x^2-1\)</span> and the RCF of <span class="process-math">\(A\)</span> is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C(x-1) \oplus C(x^2-1) = 
+\begin{bmatrix} 
+1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 1 \\
+0 &amp; 1 &amp; 0 \\
+\end{bmatrix}.
+\end{equation*}
+</div>
 </div>
 <span class="incontext"><a href="sec-rcf.html#p-2119" class="internal">in-context</a></span>
 </body>

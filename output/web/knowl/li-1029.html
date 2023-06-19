@@ -12,9 +12,18 @@
 </head>
 <body class="ignore-math">
 <article class="li"><h4 class="heading">
-<span class="type">Item</span><span class="period">.</span>
+<span class="type">Item</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span>
 </h4>
-<div class="para">
-<span class="process-math">\(\a_3=\sqrt[4]5e^{5\pi i/4}=\sqrt[4]5 (\cos(\frac{5\pi}{4}))+i\sin(\frac{5\pi}{4})=\sqrt[4]5(\frac{-\sqrt 2}{2}+i\frac{-\sqrt 2}{2})=\frac{\sqrt 2}{2}\sqrt[4]5(-1-i)=\frac{\sqrt[4]{20}}{2}(-1-i),\)</span> and</div></article><span class="incontext"><a href="section-72.html#li-1029" class="internal">in-context</a></span>
+<div class="para">Let <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> be two <span class="process-math">\(3\times 3\)</span> matrices with entries in <span class="process-math">\(F\text{.}\)</span> First, suppose that <span class="process-math">\(A\sim B\text{.}\)</span> Matrices are similar if and only if they share the same invariant factors. As minimum polynomial is an invariant factor and the characteristic polynomial is a product of the invariant factors, we see that <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> must share the same invariant factors.</div>
+<div class="para logical">
+<div class="para">Next suppose that <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> share the same characteristic polynomial and the same minimal polynomial. As <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are <span class="process-math">\(3\times 3\)</span> matrices, the characteristic polynomial of both <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> must be a degree <span class="process-math">\(3\)</span> polynomial. We proceed via cases based on the degree of <span class="process-math">\(\mp_{A,B}(x)\text{.}\)</span>
+</div>
+<ul class="disc">
+<li><div class="para">First, suppose <span class="process-math">\(\deg\mp_{A,B}(x)=3\text{.}\)</span> Then <span class="process-math">\(\mp_{A,B}(x)=\cp_{A,B}(x)\text{,}\)</span> making <span class="process-math">\(\cp_{A,B}(x)\)</span> the only invariant factor of both <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{.}\)</span> Thus <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> have the same invariant factors and are therefore similar.</div></li>
+<li><div class="para">Next, suppose <span class="process-math">\(\deg\mp_{A,B}(x)=2\text{.}\)</span> As <span class="process-math">\(\mp|\cp\)</span> and the degrees of all invariant factors must sum to the <span class="process-math">\(\deg\cp\text{,}\)</span> we know that <span class="process-math">\(\cp=\mp\cdot k(x)\text{,}\)</span> where <span class="process-math">\(k(x)\)</span> is a degree <span class="process-math">\(1\)</span> polynomial, which we denote <span class="process-math">\(f(x)\)</span> for <span class="process-math">\(A\)</span> and <span class="process-math">\(g(x)\)</span> for <span class="process-math">\(B\text{.}\)</span> Since <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> share the same minimum and characteristic polynomials, we see <span class="process-math">\(\mp\cdot f=\cp\)</span> and <span class="process-math">\(\mp\cdot g=\cp\text{,}\)</span> and thus that <span class="process-math">\(f=g\text{.}\)</span> Hence <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> share the same invariant factors, making <span class="process-math">\(A\sim B\text{.}\)</span>
+</div></li>
+<li><div class="para">Finally, suppose <span class="process-math">\(\deg\mp=1\text{.}\)</span> The minimum polynomial is the largest invariant factor, and thus the invariant factors of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> must be <span class="process-math">\(\{\mp,\mp\mp\}\text{,}\)</span> making them similar.</div></li>
+</ul>
+</div></article><span class="incontext"><a href="section-72.html#li-1029" class="internal">in-context</a></span>
 </body>
 </html>

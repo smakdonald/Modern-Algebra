@@ -12,7 +12,19 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">If <span class="process-math">\(|N|=45\)</span> then <span class="process-math">\([G:N]=2\text{,}\)</span> the smallest prime dividing <span class="process-math">\(G\text{.}\)</span> Thus <span class="process-math">\(N\)</span> is still normal by <a href="" class="xref" data-knowl="./knowl/thm-smallest-prime-normal.html" title="Theorem 5.21: Smallest Prime Index is Normal">Theorem 5.21</a>, which is still a problem. Hence <span class="process-math">\(G\)</span> cannot be simple.</div>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(f:G\to G/H\times G/K\)</span> defined such that <span class="process-math">\(f(g)=(gH, gK)\text{.}\)</span> Let <span class="process-math">\(x,y\in G\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{align}
+f(xy)&amp;=(xyH,xyK)\\ 
+&amp;=(xHyH,xKyK)\\
+&amp;=(xH,yH)\cdot(xKyK)\\
+&amp;=f(x)f(y),
+\end{equation*}
+</div>
+<div class="para">showing <span class="process-math">\(f\)</span> is a homomorphism.</div>
+</div>
 <span class="incontext"><a href="section-88.html#p-4286" class="internal">in-context</a></span>
 </body>
 </html>

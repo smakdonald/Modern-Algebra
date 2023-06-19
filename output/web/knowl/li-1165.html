@@ -14,6 +14,31 @@
 <article class="li"><h4 class="heading">
 <span class="type">Item</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span>
 </h4>
-<div class="para">Part (a) Notice that <span class="process-math">\(p=2\)</span> is prime in <span class="process-math">\(\Q[x]\text{,}\)</span> and thus <span class="process-math">\(f(x)\)</span> is irreducible in <span class="process-math">\(\Q[x]\)</span> by <a href="" class="xref" data-knowl="./knowl/thm-eisensteins-criterion.html" title="Theorem 18.18: Eisenstein's Criterion">Eisenstein's Criterion</a>.</div></article><span class="incontext"><a href="section-77.html#li-1165" class="internal">in-context</a></span>
+<div class="para logical">
+<div class="para">Note that the change of basis matrix for this operator is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{bmatrix}
+0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; \cdots &amp; 0 &amp; 0 \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\
+0 &amp; 0 &amp; \cdots &amp; 0 &amp; n-1 \\   
+\end{bmatrix},
+\end{equation*}
+</div>
+<div class="para">with the basis <span class="process-math">\(\{1,x,\dots,x^{n-1}\}\text{.}\)</span> Thus <span class="process-math">\(\cp_A(x)\)</span> will be given by the determinant of the matrix</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{bmatrix}
+x &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
+0 &amp; x-1 &amp; \cdots &amp; 0 &amp; 0 \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\
+0 &amp; 0 &amp; \cdots &amp; 0 &amp; x-(n-1) \\   
+\end{bmatrix},
+\end{equation*}
+</div>
+<div class="para">which is diagonal. Hence <span class="process-math">\(\cp_AT(x)=\displaystyle\prod_{i=0}^{n-1}(x-i)\text{.}\)</span>
+</div>
+</div></article><span class="incontext"><a href="section-77.html#li-1165" class="internal">in-context</a></span>
 </body>
 </html>

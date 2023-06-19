@@ -13,20 +13,14 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(v_1, \dots, v_n\)</span> form the columns of a matrix <span class="process-math">\(A\text{.}\)</span> (I.e, the <span class="process-math">\(s\)</span>-th entry of <span class="process-math">\(v_t\)</span> is <span class="process-math">\(a_{s,t}\text{.}\)</span>) We have</div>
+<div class="para">Assume <span class="process-math">\(\phi: V^{\times n} \to R\)</span> is <span class="process-math">\(R\)</span>-multilinear and alternating. Then for any permutation <span class="process-math">\(\tau \in S_n\)</span> and <span class="process-math">\(v_1, \dots, v_n \in V\text{,}\)</span> we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\begin{aligned}
-\det(v_1, \dots, v_{i-1}, r v_i + v'_i, v_{i+1}, \dots, v_n) 
-&amp; =  \sum_{\s} \sign(\s) \prod_{j\ne i} a_{\s(j), j} \cdot (r a_{\s(i), i} + a'_{\s(i), i})\\
-&amp; =  r \sum_{\s} \sign(\s) \prod_{j\ne i} a_{\s(j), j} \cdot (a_{\s(i), i})  \\
-&amp; + \sum_{\s} \sign(\s) \prod_{j\ne i} a_{\s(j), j} \cdot (a'_{\s(i), i})  \\
-&amp; = r \det(v_1, \dots, v_{i-1}, v_i , v_{i+1}, \dots, v_n) +
-\det(v_1, \dots, v_{i-1},  v_i', v_{i+1}, \dots, v_n) \\
-\end{aligned}
+\phi(v_1, \dots, v_n) = \sign(\tau) \phi(v_{\tau(1)}, \dots, v_{\tau(n)})
 \end{equation*}
 </div>
-<div class="para">and this proves <span class="process-math">\(R\)</span>-multi-linearity.</div>
+<div class="para">where <span class="process-math">\(\sign(\tau)\)</span> is the sign of the permutation <span class="process-math">\(\tau\text{.}\)</span>
+</div>
 </div>
 <span class="incontext"><a href="section-69.html#p-3319" class="internal">in-context</a></span>
 </body>

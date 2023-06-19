@@ -12,14 +12,19 @@
 </head>
 <body class="ignore-math">
 <article class="li"><h5 class="heading">
-<span class="type">Item</span><span class="period">.</span>
+<span class="type">Item</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span>
 </h5>
 <div class="para logical">
-<div class="para">
-<span class="process-math">\(\Phi\)</span> is well defined (correct codomain) since for <span class="process-math">\(\mathcal{H}\leq G\)</span> we have <span class="process-math">\(\pi^{-1}(\mathcal{H})\leq G\)</span> (since preimages of subgroups through group homomorphisms are subgroups) <code class="code-inline tex2jax_ignore">[provisional cross-reference: cite]</code> and for any <span class="process-math">\(\mathcal{H}\leq G\)</span> we have <span class="process-math">\(\{e_GN\}\subseteq \mathcal{H}\text{,}\)</span> hence</div>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para">If such a <span class="process-math">\(\overline{\varphi}\)</span> exists, it is necessarily unique since <span class="process-math">\(G \twoheadrightarrow G/N\)</span> is onto. In fact, if <span class="process-math">\(\varphi=\pi\circ \overline{\varphi}\)</span> then <span class="process-math">\(\overline{\varphi}\)</span> has to be given by the formula</div>
+<div class="displaymath process-math">
 \begin{equation*}
-N=\operatorname{Ker}(\pi)=\pi^{-1}(\{e_GN\})\subseteq \pi^{-1}(\mathcal{H})=\Phi(\mathcal{H}).
+\overline{\varphi}(gN) = \varphi(g).
+\end{equation*}
+</div>
+<div class="para">We now need to show that this formula determines a well-defined homomorphism: if <span class="process-math">\(xN = yN\text{,}\)</span> then <span class="process-math">\(y^{-1}x \in N \subseteq \operatorname{ker}(\varphi)\)</span> and so <span class="process-math">\(\varphi(y)^{-1} \varphi(x) = e\text{,}\)</span> whence <span class="process-math">\(\varphi(y) = \varphi(x)\text{.}\)</span> For any <span class="process-math">\(x,y\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\overline{\varphi}(xNyN) = \overline{\varphi}(xyN) = \varphi(xy) = \varphi(x)\varphi(y) =\overline{\varphi}(xN) \overline{\varphi}(yN).
 \end{equation*}
 </div>
 </div></article><span class="incontext"><a href="sec-quotient-groups.html#li-205" class="internal">in-context</a></span>

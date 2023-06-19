@@ -11,8 +11,71 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Suppose <span class="process-math">\(R\)</span> is a commutative ring and <span class="process-math">\(S \subseteq R\)</span> is a subset such that</div>
-<span class="incontext"><a href="sec-field-of-fractions.html#p-2349" class="internal">in-context</a></span>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<div class="para logical"><ol class="lower-alpha">
+<li>
+<div class="para logical">
+<div class="para">First, notice that <span class="process-math">\(A\)</span> is upwards triangular, and thus <span class="process-math">\(\cp_A(x)=(x-3)^4\text{.}\)</span> By the Cayley Hamilton Theorem the minimum polynomial divides the characteristic polynomial, and from the definition of minimum polynomial we know <span class="process-math">\(\mp_A(x)\)</span> is the smallest polynomial such that <span class="process-math">\(\mp_A(A) = 0\text{.}\)</span> Since <span class="process-math">\(\mp_A(x)\)</span> must be a power of <span class="process-math">\((x-3)^n\)</span> with <span class="process-math">\(n\leq 4\text{,}\)</span> we plug in values of <span class="process-math">\(n\)</span> until we get <span class="process-math">\(0\text{.}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(A-3I)^1=\begin{bmatrix}
+0 &amp; 0 &amp; 0 &amp; 0\\
+1 &amp; 0 &amp; 0 &amp; 0\\
+1 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 2 &amp; 1 &amp; 0\\
+\end{bmatrix}
+\end{equation*}
+</div>
+<div class="para">Shucks. Moving on,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(A-3I)^2=\begin{bmatrix}
+0 &amp; 0 &amp; 0 &amp; 0\\
+1 &amp; 0 &amp; 0 &amp; 0\\
+1 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 2 &amp; 1 &amp; 0\\
+\end{bmatrix}\cdot\begin{bmatrix}
+0 &amp; 0 &amp; 0 &amp; 0\\
+1 &amp; 0 &amp; 0 &amp; 0\\
+1 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 2 &amp; 1 &amp; 0\\
+\end{bmatrix}=\begin{bmatrix}
+0 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 0\\
+3 &amp; 0 &amp; 0 &amp; 0\\
+\end{bmatrix},
+\end{equation*}
+</div>
+<div class="para">which is also not <span class="process-math">\(0\text{.}\)</span> However, multiplying one more time we see <span class="process-math">\(\mp_A(x)=(x-3)^3\text{.}\)</span> By part (2) of this theorem <span class="process-math">\((x-3)^3\)</span> is an invariant factor. By part (1) of that same theorem, invariant factors must multiply to <span class="process-math">\(\cp_A(x)\text{,}\)</span> and so the invariant factors are <span class="process-math">\(x-3\)</span> and <span class="process-math">\((x-3)^3\text{.}\)</span> These are also the elementary divisors. So</div>
+</div>
+<div class="para logical"><div class="displaymath process-math">
+\begin{equation*}
+J_1(3)\oplus J_3(3)=\begin{bmatrix}
+3 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 3 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 3 &amp; 0\\
+0 &amp; 0 &amp; 1 &amp; 3\\
+\end{bmatrix}.
+\end{equation*}
+</div></div>
+</li>
+<li><div class="para logical">
+<div class="para">Let</div>
+<div class="displaymath process-math">
+\begin{equation*}
+B=\begin{bmatrix}
+0 &amp; -9 &amp; 0 &amp; 0\\
+1 &amp; 6 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; -9\\
+0 &amp; 0 &amp; 1&amp; 6\\
+\end{bmatrix}
+\end{equation*}
+</div>
+<div class="para">And notice that <span class="process-math">\((B-3I)^2=0\text{.}\)</span> Thus <span class="process-math">\((x-3)^3\)</span> cannot be the minimal polynomial of <span class="process-math">\(B\text{.}\)</span> Two matrices are only similar if they share the same invariant factors (and thus the same minimum polynomial), so <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are not similar.</div>
+</div></li>
+</ol></div>
+<span class="incontext"><a href="sec-jcf.html#p-2349" class="internal">in-context</a></span>
 </body>
 </html>

@@ -11,64 +11,25 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<div class="para">Let <span class="process-math">\(F=\Q\text{,}\)</span> <span class="process-math">\(n\)</span> a positive integer, and <span class="process-math">\(A\)</span> a unipotent <span class="process-math">\(4\times 4\)</span> matrix with entries in <span class="process-math">\(F\text{.}\)</span> Thus <span class="process-math">\(A-I\)</span> is nilpotent. Let <span class="process-math">\(\l\)</span> be an eigenvalue of <span class="process-math">\(A-I\text{.}\)</span> Then <span class="process-math">\((A-I)v=\l v\text{,}\)</span> so <span class="process-math">\(Av-Iv=\l v\)</span> and <span class="process-math">\(Av=\l v+Iv\text{.}\)</span> As <span class="process-math">\(Iv=v\text{,}\)</span> we have <span class="process-math">\(Av=\l v+v\)</span> and <span class="process-math">\(Av=(\l+1)v\text{.}\)</span>
-</div> <div class="para">Notice that as <span class="process-math">\(\l\)</span> is an eigenvalue of <span class="process-math">\(I\text{,}\)</span> we have <span class="process-math">\(\l +1\)</span> as an eigenvalue of <span class="process-math">\(A\text{.}\)</span>
+<div class="para">Let <span class="process-math">\(G\)</span> be a finite <span class="process-math">\(p\)</span>-group for some prime <span class="process-math">\(p\)</span> and <span class="process-math">\(N\neq {1}\)</span> a normal subgroup of <span class="process-math">\(G\text{.}\)</span>
 </div> <div class="para logical">
-<div class="para">Assume inductively that <span class="process-math">\(\l^{n-1}\)</span> is an eigenvalue of <span class="process-math">\((A-I)^{n-1}\text{.}\)</span> Notice</div>
-<div class="displaymath process-math">
+<div class="para">First, we show that the center of <span class="process-math">\(G\)</span> is nontrivial. Suppose by way of contradiction that <span class="process-math">\(Z(G)=\{e\}\text{.}\)</span> We examine the conjugacy classes of <span class="process-math">\(G\text{.}\)</span> From the <a href="" class="xref" data-knowl="./knowl/thm-class-eq.html" title="Theorem 5.41: Class Equation">Class Equation</a>, we know</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-class-eq.html ./knowl/thm-conjugacy-divides-order.html ./knowl/thm-lagrange.html">
 \begin{equation*}
-(A+I)^nv=(A+I)(A+I)^{n-1}v=(A+I)\l^{n-1}v=\l^{n-1}(A+I)v=\l^{n-1}\l=\l^n,
+|G| = |Z(G)| + \sum_i^r [G : C_G(g_i)].
 \end{equation*}
 </div>
-<div class="para">making <span class="process-math">\(\l\)</span> an eigenvalue of <span class="process-math">\((A+I)^n\text{.}\)</span> Thus if <span class="process-math">\(\l\)</span> is an eigenvalue of <span class="process-math">\(A-I\text{,}\)</span> it is an eigenvalue of <span class="process-math">\((A-I)^n\)</span> as well. As <span class="process-math">\((A-I)\)</span> is nilpotent, there exists some <span class="process-math">\(k\)</span> such that <span class="process-math">\((A-I)^k=0\text{.}\)</span> This means that <span class="process-math">\(\l^kv=0\text{.}\)</span> As <span class="process-math">\(v\neq 0\)</span> and <span class="process-math">\(\l^k\)</span> is a scalar in a field (and hence integral domain) we have <span class="process-math">\(\l=0\text{.}\)</span> Thus the only eigenvalue of <span class="process-math">\((A-I)\)</span> is <span class="process-math">\(0\text{,}\)</span> meaning that the only eigenvalue of <span class="process-math">\(A\)</span> is <span class="process-math">\(1\text{.}\)</span>
+<div class="para">Note that <span class="process-math">\(|G|=p^n\)</span> for some <span class="process-math">\(n\in\N\text{,}\)</span> meaning that the only divisors of <span class="process-math">\(|G|\)</span> are powers of <span class="process-math">\(p\text{.}\)</span> In finite groups, each conjugacy class must divide the order of the group by <a href="" class="xref" data-knowl="./knowl/thm-conjugacy-divides-order.html" title="Theorem 5.40: Size of Conjugacy Class Divides |G|">Theorem 5.40</a>. By <a href="" class="xref" data-knowl="./knowl/thm-lagrange.html" title="Theorem 4.13: Lagrange's Theorem">Lagrange's Theorem</a>, <span class="process-math">\([G : C_G(g_i)]=\frac{|G|}{|C_G(g_i)|}=\frac{p^n}{p^m}=p^k\text{,}\)</span> where <span class="process-math">\(m,k\in\N\text{.}\)</span> Since <span class="process-math">\(|Z(G)|=1\text{,}\)</span> we see that <span class="process-math">\(\sum_i^r |G : C_G(g_i)|\bigg|p^n-1\text{,}\)</span> which is impossible given that <span class="process-math">\(p^{n-1} \not\mid p^n\text{.}\)</span> Thus <span class="process-math">\(Z(G)\neq\{e\}\text{.}\)</span>
 </div>
-</div> <div class="para">Eigenvalues of <span class="process-math">\(A\)</span> correspond to the roots of <span class="process-math">\(\cp_A(x)\text{,}\)</span> which is a monic quartic polynomial, as <span class="process-math">\(A\)</span> is a <span class="process-math">\(4\times 4\)</span> matrix. Thus <span class="process-math">\(\cp_A(x)=(x-1)^4\text{,}\)</span> as all roots must be <span class="process-math">\(1\text{.}\)</span>
 </div> <div class="para logical">
-<div class="para">Two matrices are similar if and only if they share the same invariant factors. Given that invariant factors divide <span class="process-math">\(\cp_A(x)\)</span> and each invariant factor must divide the following one, the possible sets of invariant factors for <span class="process-math">\(A\)</span> are the following:</div>
-<ul class="disc">
-<li><div class="para"><span class="process-math">\(\{(x-1)^4\}\text{,}\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\{(x-1),(x-1)^3\}\text{,}\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\{(x-1), (x-1), (x-1)^2\}\text{,}\)</span></div></li>
-<li><div class="para">
-<span class="process-math">\(\{(x-1)^2, (x-1)^2\}\text{,}\)</span> and</div></li>
-<li><div class="para"><span class="process-math">\(\{(x-1), (x-1), (x-1), (x-1)\}\text{.}\)</span></div></li>
-</ul>
-<div class="para">We identify the companion matrices for each possible invariant factor:</div>
-<ul class="disc">
-<li><div class="para logical"><div class="displaymath process-math">
+<div class="para">As <span class="process-math">\(N\nsg G\text{,}\)</span> by <a href="" class="xref" data-knowl="./knowl/cor-normal-union-of-conjugacy-classes.html" title="Corollary 5.15: Normal Subgroups are Unions of Conjugacy Classes">Corollary 5.15</a> it is a union of conjugacy classes of the elements it contains, one of which is <span class="process-math">\(e\text{.}\)</span> Assume by way of contradiction that <span class="process-math">\(N\cap Z(G)={e}\text{,}\)</span> meaning that <span class="process-math">\(e\)</span> is the only element in <span class="process-math">\(N\)</span> whose conjugacy class is a singleton. This yields</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-normal-union-of-conjugacy-classes.html ./knowl/thm-lagrange.html">
 \begin{equation*}
-C(x-1)=\begin{bmatrix} 1 \end{bmatrix},
-\end{equation*}
-</div></div></li>
-<li><div class="para logical"><div class="displaymath process-math">
-\begin{equation*}
-C((x-1)^2)=C(x^2-2x+1)=\begin{bmatrix} 0 &amp; -1 \\ 1 &amp; 2\end{bmatrix},
-\end{equation*}
-</div></div></li>
-<li><div class="para logical">
-<div class="displaymath process-math">
-\begin{equation*}
-C((x-1)^3)=C(x^3+3x^2+3x-1)=\begin{bmatrix} 0 &amp; 0 &amp; 1 \\ 1 &amp; 0 &amp; -3 \\ 0 &amp; 1 &amp; -3\end{bmatrix},
+|N| = 1+ \sum_i^r |G : C_G(g_i)|.
 \end{equation*}
 </div>
-<div class="para">and</div>
-</div></li>
-<li><div class="para logical"><div class="displaymath process-math">
-\begin{equation*}
-C((x-1)^4)=C(x^4-4x^3+6x^2-4x+1)=\begin{bmatrix} 0 &amp; 0 &amp; 0 &amp; -1 \\ 1 &amp; 0 &amp; 0 &amp; 4 \\ 0 &amp; 1 &amp; 0 &amp; -6 \\ 0 &amp; 0 &amp; 1 &amp; 4\end{bmatrix}.
-\end{equation*}
-</div></div></li>
-</ul>
-<div class="para">We define the following:</div>
-<ul class="disc">
-<li><div class="para"><span class="process-math">\(B=C((x-1)^4)\text{,}\)</span></div></li>
-<li><div class="para"><span class="process-math">\(C=C(x-1)\oplus C((x-1)^3)\text{,}\)</span></div></li>
-<li><div class="para"><span class="process-math">\(D=C(x-1)\oplus C(x-1)\oplus C((x-1)^2)\text{,}\)</span></div></li>
-<li><div class="para">
-<span class="process-math">\(E=C((x-1)^2)\oplus C((x-1)^2)\text{,}\)</span> and</div></li>
-<li><div class="para"><span class="process-math">\(F=C(x-1)\oplus C(x-1)\oplus C(x-1)\oplus C(x-1)\text{.}\)</span></div></li>
-</ul>
-<div class="para">As each of these matrices is in <a href="" class="xref" data-knowl="./knowl/thm-rcf.html" title="Theorem 17.9: Rational Canonical Form">Rational Canonical Form</a>, they are explicit representatives for each similarity class.</div>
+<div class="para">However, by <a href="" class="xref" data-knowl="./knowl/thm-lagrange.html" title="Theorem 4.13: Lagrange's Theorem">Lagrange's Theorem</a> <span class="process-math">\(N\)</span> must also be a <span class="process-math">\(p-\)</span>group, and thus by an analogous element counting argument as above we see that there exists some <span class="process-math">\(x\in N\)</span> such that <span class="process-math">\(C_G(x)=\{x\}\text{,}\)</span> or that <span class="process-math">\(gxg\inv=x\)</span> for all <span class="process-math">\(g\in G\text{.}\)</span> Thankfully, this means that <span class="process-math">\(x\in Z(G)\text{,}\)</span> and thus we have <span class="process-math">\(Z(G)\cap N\neq 1\text{.}\)</span>
+</div>
 </div>
 </div></body>
 </html>
