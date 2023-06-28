@@ -12,7 +12,12 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">For an element to be in An, it must be an even permutation. This means it can be expressed as a product of an even number of transpositions. Each transposition in the product swaps two elements. There are n choices for the first element, and after fixing the first element, there are (n-1) choices for the second element. This gives us n * (n-1) choices for the first transposition. For the second transposition, there are (n-2) choices for the first element and (n-3) choices for the second element. Continuing this process, we have (n-2) * (n-3) * ... * 2 * 1 choices for the remaining transpositions. In total, the number of even permutations (elements in An) is given by n * (n-1) * (n-2) * ... * 2 * 1, which is equal to n!. However, we have counted each even permutation twice because we can write a given even permutation as a product in different orders. For example, (1 2) * (3 4) is the same as (3 4) * (1 2). Therefore, we divide the total number of even permutations (n!) by 2 to remove the duplicate counting. Hence, the order of the alternating group An is n!/2.</div>
+<div class="para logical"><ol class="decimal">
+<li><div class="para">A <span class="process-math">\(k\)</span>-cycle is even if and only if <span class="process-math">\(k\)</span> is odd.</div></li>
+<li><div class="para">Products of even permutations are even, products of odd permutations are even, products of even and odd permutations are odd.</div></li>
+<li><div class="para">The identity permutation in <span class="process-math">\(S_n\)</span> is even, but not odd.</div></li>
+<li><div class="para">No permutation in <span class="process-math">\(S_n\)</span> is both even and odd.</div></li>
+</ol></div>
 <span class="incontext"><a href="sec-common-groups.html#p-211" class="internal">in-context</a></span>
 </body>
 </html>

@@ -720,6 +720,15 @@
                   <fn>This is similar to general relativity, relatively speaking ('Relatively' meaning 'not very much at all' in this context).</fn>
                 </p>
               </statement>
+
+              <solution>
+                <p>
+                   Certainly we may assume that <m>n &gt; 2</m>. 
+                   If <m>u</m> is an element constructed from <m>x_1, x_2 ,..., x_n</m> in the prescribed manner, we can write <m>u = vw</m> where <m>v</m> and <m>w</m> are constructed from <m>x_1 ,x_2 ,...,x_f</m> and <m>x_m , . . . , x_n</m> respectively <m>(1 &lt; i &lt; n)</m>. 
+                   If <m>w = x_n</m> , the result follows by induction on <m>n</m>. 
+                   Otherwise we can write <m>w = w'(x_n)</m> and <m>u = (vw')x_n</m> : once again the result follows by induction on n.
+                </p>
+              </solution>
             </exercise>
 
             <p>
@@ -932,6 +941,8 @@
                     <li><title>Numerical Groups</title>
                       <p>
                         <m>(\Z,+), (\Q,+), (\R,+),</m> and <m>(\C,+)</m> each form an abelian group, where <m>+</m> denotes traditional addition.
+                        The axioms of arithmetic guarantee the validity of the group axioms as well as the commutativity of the group operation. 
+                        Thus all four groups are abelian.
                       </p>
                     </li>
       
@@ -1254,7 +1265,19 @@
 
               <proof>
                 <p>
-                  Coming soon!
+                  <ol>
+                    <li>
+                      <p>
+                        Let <m>m &gt; 0</m> and <m>n &gt; 0</m>; then by induction on <m>n</m> and the definition x^mx^n =x^{m + n}. Applying 1.1.3 we deduce that x^n =x^{-m}x^{m+n} and x^m = x^{m + n} x^{-n} . Finally inversion of the equation x^mx^n =x^{m + n} and application of 1.1.4 yield x^{-n}x^{-m} = x^{-m + (-n)}. Hence the law is established in all cases.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        If <m>n &gt; 0</m>, it follows from (i) that <m>(x^m)^n =x^{mn}</m>. Now assume that <m>n &lt; 0</m>; then <m>(x^m)^n =((x^m)^{-n})\inv =(x^{-mn})\inv =x^{mn}</m> since <m>x^{-mn}x^{mn}=1</m>.
+                      </p>
+                    </li>
+                  </ol>
                 </p>
               </proof>
             </theorem>
@@ -1528,6 +1551,31 @@
                 By the latter I don't mean that <m>f</m> fixes each of the points of <m>P_n</m>, but rather that <m>f(P_n) = P_n</m>, that is every point of <m>P_n</m> is mapped to a (possibly different) point of <m>P_n</m> and every point of <m>P_n</m> is the image of some point in <m>P_n</m> via <m>f</m>.
               </p>
             </remark>
+
+            <p>
+              There are three natural types of isometry in <m>\R^2:</m>
+              <ol>
+                <li>
+                  <p>
+                    rotations about a point,
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    reflections in a line,
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    and translations: in the latter the point (x, y) is moved to (x + a, y + b) for some fixed a, b.
+                  </p>
+                </li>
+              </ol>
+
+              It can be shown that every isometry is a rotation, a translation, a reflection, or the product of a reflection and a translation.
+            </p>
 
             <exercise xml:id="exe-symmetry-compostion"><title>Composition of Symmetries</title>
               <statement>

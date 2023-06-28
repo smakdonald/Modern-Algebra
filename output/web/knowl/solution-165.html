@@ -13,10 +13,23 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h3 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">G.3.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">G.2.1</span><span class="period">.</span>
 </h3>
-<div class="para">By <a href="" class="xref" data-knowl="./knowl/thm-sylow.html" title="Theorem 6.11: Sylow's Theorem">Sylow's Theorem</a> we know that <span class="process-math">\(\Syl_7(G)\equiv 1\mod{7}\)</span> and <span class="process-math">\(\Syl_7(G)|2^5=32\text{.}\)</span> Thus our options are <span class="process-math">\(1\)</span> and <span class="process-math">\(8\text{.}\)</span> Suppose that <span class="process-math">\(\Syl_7(G)=8\text{.}\)</span>
-</div> <div class="para">Let <span class="process-math">\(G\)</span> act on <span class="process-math">\(\Syl_7(G)\)</span> by conjugation, yielding the homomorphism <span class="process-math">\(\rho: G \to S_8\)</span> via the <a href="" class="xref" data-knowl="./knowl/thm-permrep.html" title="Theorem 5.5: The Permutation Representation">The Permutation Representation</a>. This map is non-trivial from part (2) of <a href="" class="xref" data-knowl="./knowl/thm-sylow.html" title="Theorem 6.11: Sylow's Theorem">Sylow's Theorem</a>, but <span class="process-math">\(2^5\cdot 7^3\)</span> does not divide <span class="process-math">\(|S_8|=8!\text{,}\)</span> and thus <span class="process-math">\(\rho\)</span> cannot be injective. Then the kernel of this homomorphism is non-trivial, normal subgroup of <span class="process-math">\(G\)</span> by <a href="" class="xref" data-knowl="./knowl/thm-norm-iff-ker.html" title="Theorem 4.44: Normal Subgroup iff Kernel">Theorem 4.44</a>. Thus <span class="process-math">\(G\)</span> is not simple.</div>
+<div class="para logical"><ol class="decimal">
+<li>
+<div class="para">Let <span class="process-math">\(C_3 = \langle a \rangle\)</span> be the cyclic group of order <span class="process-math">\(3\text{,}\)</span> and let <span class="process-math">\(C_9 = \langle b \rangle\)</span> be the cyclic group of order <span class="process-math">\(9\text{.}\)</span> Let <span class="process-math">\(\phi \colon C_9 \to \operatorname{Aut}(C_3)\)</span> be the homomorphism defined by <span class="process-math">\(\phi(b^i)(a) = a^i\)</span> for <span class="process-math">\(0 \le i \le 8\text{,}\)</span> where we identify <span class="process-math">\(\operatorname{Aut}(C_3)\)</span> with <span class="process-math">\(C_2\)</span> via the isomorphism <span class="process-math">\(\operatorname{Aut}(C_3) \cong C_2\)</span> given by sending the non-identity automorphism to the generator of <span class="process-math">\(C_2\text{.}\)</span>
+</div>
+<div class="para">Then the semi-direct product <span class="process-math">\(G = C_3 \rtimes_{\phi} C_9\)</span> has order <span class="process-math">\(27\)</span> and is non-abelian. To see that <span class="process-math">\(G\)</span> is non-abelian, note that <span class="process-math">\(bab^{-1} \neq a\)</span> for any <span class="process-math">\(b \in C_9 \setminus {1}\text{,}\)</span> since <span class="process-math">\(a\)</span> has no non-trivial automorphisms.</div>
+</li>
+<li>
+<div class="para">To find a presentation of <span class="process-math">\(G\text{,}\)</span> we need to identify the generators and relations. Since <span class="process-math">\(C_3\)</span> and <span class="process-math">\(C_9\)</span> are both cyclic, we can take the generators to be <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> respectively. Moreover, since <span class="process-math">\(C_3\)</span> is normal in <span class="process-math">\(G\text{,}\)</span> we have <span class="process-math">\(bab^{-1} = a^i\)</span> for some <span class="process-math">\(i \in {1, 2}\text{.}\)</span>
+</div>
+<div class="para">To determine the value of <span class="process-math">\(i\text{,}\)</span> note that <span class="process-math">\(C_9\)</span> acts on <span class="process-math">\(C_3\)</span> by automorphisms, and the non-identity automorphism of <span class="process-math">\(C_3\)</span> is inversion <span class="process-math">\(a \mapsto a^{-1}\text{.}\)</span> Since <span class="process-math">\(bab^{-1} \neq a^{-1}\text{,}\)</span> we must have <span class="process-math">\(i = 2\text{.}\)</span>
+</div>
+<div class="para">Therefore, a presentation of <span class="process-math">\(G\)</span> is given by <span class="process-math">\(\langle a, b \mid a^3 = b^9 = 1, bab^{-1} = a^2\rangle\text{.}\)</span>
+</div>
+</li>
+</ol></div>
 </div>
 <span class="incontext"><a href="section-71.html#solution-165" class="internal">in-context</a></span>
 </body>

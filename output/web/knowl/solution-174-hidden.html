@@ -10,23 +10,20 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like"><div class="para logical"><ol class="decimal">
-<li>
-<div class="para">First, suppose <span class="process-math">\(K\nsg G\text{.}\)</span> Let <span class="process-math">\(H=G/K\)</span> (which is a group since <span class="process-math">\(K\)</span> is normal in <span class="process-math">\(G\)</span>) and define <span class="process-math">\(\varphi: G\to G/K\)</span> such that <span class="process-math">\(\varphi(g)=gK\text{.}\)</span> Let <span class="process-math">\(k\in K\text{,}\)</span> and observe that <span class="process-math">\(\varphi(k)=kK=K\text{,}\)</span> and so <span class="process-math">\(k\in\ker(\varphi)\text{.}\)</span> Let <span class="process-math">\(g\in\ker(\varphi)\text{,}\)</span> meaning that <span class="process-math">\(\varphi(g)=K\text{,}\)</span> placing <span class="process-math">\(g\in K\text{.}\)</span> As [[Lemma – Quotient Map is Surjective Homomorphism|quotient maps are homomorphisms]], this direction is complete.</div>
-<div class="para logical">
-<div class="para">Next, suppose there exists a group <span class="process-math">\(H\)</span> and and a homomorphism <span class="process-math">\(\varphi : G\to H\)</span> such that <span class="process-math">\(K = \ker(\varphi)\text{.}\)</span> Let <span class="process-math">\(g\in G\)</span> and consider <span class="process-math">\(gKg\inv\text{.}\)</span> Observe</div>
-<div class="displaymath process-math">
+<body class="ignore-math"><div class="solution solution-like">
+<div class="para">Let <span class="process-math">\(G\)</span> be a group of order <span class="process-math">\(2835\text{.}\)</span>
+</div> <div class="para logical"><ol class="decimal">
+<li><div class="para">By <a href="" class="xref" data-knowl="./knowl/thm-sylow.html" title="Theorem 6.11: Sylow's Theorem">Sylow's Theorem</a> we know that <span class="process-math">\(n_3=1\mod{3}\)</span> and <span class="process-math">\(n_3|35\text{.}\)</span> The possible options are thus <span class="process-math">\(1\)</span> and <span class="process-math">\(7\text{.}\)</span>
+</div></li>
+<li><div class="para logical">
+<div class="para">Suppose by way of contradiction that <span class="process-math">\(G\)</span> is simple. Thus <span class="process-math">\(n_3\neq 1\text{,}\)</span> so <span class="process-math">\(n_3=7\text{.}\)</span> Let <span class="process-math">\(G\)</span> act on the <span class="process-math">\(\Syl_3(G)\)</span> by conjugation, yielding the homomorphism</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-permrep.html ./knowl/thm-sylow.html">
 \begin{equation*}
-\varphi(gKg\inv)=\varphi(g)\varphi(K)\varphi(g\inv)=0,
+\rho: G\to S_7
 \end{equation*}
 </div>
-<div class="para">given that <span class="process-math">\(\ker(\varphi)=K\text{.}\)</span> Thus <span class="process-math">\(gKg\inv\subseteq K\)</span> for all <span class="process-math">\(g\in G\text{,}\)</span> making <span class="process-math">\(K\)</span> a normal subgroup of <span class="process-math">\(G\text{.}\)</span>
-</div>
-</div>
-</li>
-<li>
-<div class="para">So <span class="process-math">\(ad-bc=1\text{,}\)</span> <span class="process-math">\(b\)</span> and <span class="process-math">\(c\)</span> are multiples of <span class="process-math">\(p\)</span> Let <span class="process-math">\(f\)</span> mod out each of the entries of a matrix by <span class="process-math">\(p\text{.}\)</span> Thus any matrix in <span class="process-math">\(G\)</span> sent to <span class="process-math">\(I\)</span> must have <span class="process-math">\(a,d\)</span> congruent to <span class="process-math">\(1 \mod p\)</span> and <span class="process-math">\(b,c\)</span> congruent to <span class="process-math">\(0\text{.}\)</span> So <span class="process-math">\(K\)</span> is the kernel of this map.</div>
-<div class="para">f(AB)=AB mod p f(A)f(B)=Amodp Bmodp</div>
-</li>
-</ol></div></div></body>
+<div class="para">granted via the <a href="" class="xref" data-knowl="./knowl/thm-permrep.html" title="Theorem 5.5: The Permutation Representation">The Permutation Representation</a>. By (2) in <a href="" class="xref" data-knowl="./knowl/thm-sylow.html" title="Theorem 6.11: Sylow's Theorem">Sylow's Theorem</a> we see that <span class="process-math">\(\rho\)</span> is not trivial. As <span class="process-math">\(|S_7|=7!\)</span> we see that <span class="process-math">\(|G|\not\big||S_7|\text{,}\)</span> meaning that the <span class="process-math">\(\ker(\rho)\)</span> is non-trivial, yielding a non-trivial normal subgroup of <span class="process-math">\(G\text{,}\)</span> a contradiction.</div>
+</div></li>
+</ol></div> <div class="para"></div>
+</div></body>
 </html>

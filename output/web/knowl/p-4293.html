@@ -13,12 +13,17 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(G\)</span> be a group of order <span class="process-math">\(90 = 2 · 3^2 · 5\)</span> and let <span class="process-math">\(\Syl_3(G)\)</span> denote the set of Sylow <span class="process-math">\(3\)</span>-subgroups of <span class="process-math">\(G\text{.}\)</span>
+<div class="para">Let <span class="process-math">\(f:G\to G/H\times G/K\)</span> defined such that <span class="process-math">\(f(g)=(gH, gK)\text{.}\)</span> Let <span class="process-math">\(x,y\in G\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{align}
+f(xy)&amp;=(xyH,xyK)\\ 
+&amp;=(xHyH,xKyK)\\
+&amp;=(xH,yH)\cdot(xKyK)\\
+&amp;=f(x)f(y),
+\end{equation*}
 </div>
-<ol class="decimal">
-<li><div class="para">Suppose for any <span class="process-math">\(Q, Q' \in \Syl_3(G)\)</span> either <span class="process-math">\(Q = Q'\)</span> or <span class="process-math">\(Q \cap Q' = {1}.\)</span> Prove that <span class="process-math">\(G\)</span> is not simple.</div></li>
-<li><div class="para">Suppose there exists <span class="process-math">\(Q, Q' \in \Syl_3(G)\)</span> such that <span class="process-math">\(|Q \cap Q'| = 3\text{.}\)</span> Prove that <span class="process-math">\(G\)</span> is not simple.</div></li>
-</ol>
+<div class="para">showing <span class="process-math">\(f\)</span> is a homomorphism.</div>
 </div>
 <span class="incontext"><a href="section-88.html#p-4293" class="internal">in-context</a></span>
 </body>
