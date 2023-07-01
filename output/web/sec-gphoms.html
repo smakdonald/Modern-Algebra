@@ -477,7 +477,7 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="sec-group-basics.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Group Basics</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-group-basics.html#subsec-binop" class="internal"><span class="title">Binary Operations</span></a></div></li>
+<li><div class="toc-item"><a href="sec-group-basics.html#subsec-binop" class="internal"><span class="title">Binary Operations and Algebraic Structures</span></a></div></li>
 <li><div class="toc-item"><a href="sec-group-basics.html#subsec-groups" class="internal"><span class="title">Groups</span></a></div></li>
 </ul>
 </li>
@@ -1094,50 +1094,50 @@ window.MathJax = {
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Homomorphism? I Barely Know 'em!</span>
 </h3>
 <blockquote class="blockquote" id="blockquote-7">
-<div class="para" id="p-225">“In the end, the character of a civilization is encased in its structures.”</div> <cite class="attribution">―Frank Gehry</cite>
+<div class="para" id="p-223">“In the end, the character of a civilization is encased in its structures.”</div> <cite class="attribution">―Frank Gehry</cite>
 </blockquote>
 <article class="definition definition-like" id="def-ghom"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Group Homomorphism.</span>
-</h4> <div class="para" id="p-226">If <span class="process-math">\(G\)</span> and <span class="process-math">\(H\)</span> are groups, a <em class="emphasis">homomorphism</em> from <span class="process-math">\(G\)</span> is <span class="process-math">\(H\)</span> is a function <span class="process-math">\(\varphi: G \to H\)</span> such that <span class="process-math">\(\varphi(x \cdot_G y) = f(x) \cdot_H f(y)\text{,}\)</span> where <span class="process-math">\(\cdot_G\)</span> and <span class="process-math">\(\cdot_H\)</span> denote the multiplication rules for <span class="process-math">\(G\)</span> and <span class="process-math">\(H\text{,}\)</span> respectively. </div></article><aside class="historical aside-like" id="historical-7"><h4 class="heading"><span class="title">Homomorphism.</span></h4>
-<div class="para" id="p-227">The word "homomorphism" comes from the Greek words "homo" meaning "same" and "morphe" meaning "form" or "shape".</div>
-<div class="para" id="p-228">Several mathematicians have been creditied with inventing / discovering homomorphisms, such as Frobenius, Galois, Klein, and Jordan.</div></aside><article class="convention remark-like" id="convention-6"><h4 class="heading">
+</h4> <div class="para" id="p-224">If <span class="process-math">\(G\)</span> and <span class="process-math">\(H\)</span> are groups, a <em class="emphasis">homomorphism</em> from <span class="process-math">\(G\)</span> is <span class="process-math">\(H\)</span> is a function <span class="process-math">\(\varphi: G \to H\)</span> such that <span class="process-math">\(\varphi(x \cdot_G y) = f(x) \cdot_H f(y)\text{,}\)</span> where <span class="process-math">\(\cdot_G\)</span> and <span class="process-math">\(\cdot_H\)</span> denote the multiplication rules for <span class="process-math">\(G\)</span> and <span class="process-math">\(H\text{,}\)</span> respectively. </div></article><aside class="historical aside-like" id="historical-7"><h4 class="heading"><span class="title">Homomorphism.</span></h4>
+<div class="para" id="p-225">The word "homomorphism" comes from the Greek words "homo" meaning "same" and "morphe" meaning "form" or "shape".</div>
+<div class="para" id="p-226">Several mathematicians have been creditied with inventing / discovering homomorphisms, such as Frobenius, Galois, Klein, and Jordan.</div></aside><article class="convention remark-like" id="convention-6"><h4 class="heading">
 <span class="type">Convention</span><span class="space"> </span><span class="codenumber">2.2</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-229">We use <span class="process-math">\(\varphi\)</span> to denote an arbitrary homomorphism instead of <span class="process-math">\(f\)</span> to differentiate between homormorphisms and ordinary functions. Other greek letters, such as <span class="process-math">\(\psi,\rho,\)</span> and <span class="process-math">\(\lambda\)</span> are used for more specific homomorphisms, as we will see in the coming sections. <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-14" id="fn-14"><sup> 1 </sup></a>
-</div></article><div class="para" id="p-230">Intuitively, a group homomorphism preserves the algebraic structure of the group, while allowing us to compare and relate different groups. In this way, group homomorphisms allow us to study the properties of groups by comparing them to other groups that we already understand well.</div>
+<div class="para" id="p-227">We use <span class="process-math">\(\varphi\)</span> to denote an arbitrary homomorphism instead of <span class="process-math">\(f\)</span> to differentiate between homormorphisms and ordinary functions. Other greek letters, such as <span class="process-math">\(\psi,\rho,\)</span> and <span class="process-math">\(\lambda\)</span> are used for more specific homomorphisms, as we will see in the coming sections. <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-14" id="fn-14"><sup> 1 </sup></a>
+</div></article><div class="para" id="p-228">Intuitively, a group homomorphism preserves the algebraic structure of the group, while allowing us to compare and relate different groups. In this way, group homomorphisms allow us to study the properties of groups by comparing them to other groups that we already understand well.</div>
 <article class="example example-like" id="ex-group-homom-examples"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Homormophism Examples.</span>
-</h4> <div class="para logical" id="p-231"><ol class="decimal">
-<li id="li-103"><div class="para" id="p-232">The identity map is a group homomorphism for any group <span class="process-math">\(G\text{,}\)</span> this is known as the <em class="emphasis">trivial homomorphism</em>.</div></li>
-<li id="li-104"><div class="para" id="p-233">The zero map is a group homomorphism for any group <span class="process-math">\(G\text{.}\)</span>
+</h4> <div class="para logical" id="p-229"><ol class="decimal">
+<li id="li-106"><div class="para" id="p-230">The identity map is a group homomorphism for any group <span class="process-math">\(G\text{,}\)</span> this is known as the <em class="emphasis">trivial homomorphism</em>.</div></li>
+<li id="li-107"><div class="para" id="p-231">The zero map is a group homomorphism for any group <span class="process-math">\(G\text{.}\)</span>
 </div></li>
-<li id="li-105"><div class="para" id="p-234">The function <span class="process-math">\(\varphi:\Z\to\Z/5\)</span> given by <span class="process-math">\(\varphi(a)=[a]\)</span> is a homomorphism.</div></li>
-<li id="li-106"><div class="para" id="p-235">The <em class="emphasis">sign homomorphism</em> <span class="process-math">\(\sign: S_n\to \{-1,1\}\)</span> that sends even permuations to <span class="process-math">\(1\)</span> and odd permutations to <span class="process-math">\(-1\)</span> is a homomorphism.</div></li>
-<li id="li-107"><div class="para" id="p-236">The exponential map <span class="process-math">\(\exp: ({\mathbb{R}}, +) \to (\mathbb{R}^\times, \cdot)\)</span> is a homomorphism.</div></li>
-<li id="li-108"><div class="para" id="p-237">The natural log map  <span class="process-math">\(\ln: (\mathbb{R}^\times, \cdot) \to ({\mathbb{R}}, +)\)</span> is a homomorphism.</div></li>
-<li id="li-109"><div class="para" id="p-238">For any positive integer <span class="process-math">\(n\)</span> the map determinant map  <span class="process-math">\(\det: \operatorname{GL}_n(\C) \to (\C^\times, \cdot)\)</span> is a group homomorphism.</div></li>
-</ol></div></article><div class="para" id="p-239">Specifically, homomorphisms will preserve the additive structure, such as the identity element and inverse elements.</div>
+<li id="li-108"><div class="para" id="p-232">The function <span class="process-math">\(\varphi:\Z\to\Z/5\)</span> given by <span class="process-math">\(\varphi(a)=[a]\)</span> is a homomorphism.</div></li>
+<li id="li-109"><div class="para" id="p-233">The <em class="emphasis">sign homomorphism</em> <span class="process-math">\(\sign: S_n\to \{-1,1\}\)</span> that sends even permuations to <span class="process-math">\(1\)</span> and odd permutations to <span class="process-math">\(-1\)</span> is a homomorphism.</div></li>
+<li id="li-110"><div class="para" id="p-234">The exponential map <span class="process-math">\(\exp: ({\mathbb{R}}, +) \to (\mathbb{R}^\times, \cdot)\)</span> is a homomorphism.</div></li>
+<li id="li-111"><div class="para" id="p-235">The natural log map  <span class="process-math">\(\ln: (\mathbb{R}^\times, \cdot) \to ({\mathbb{R}}, +)\)</span> is a homomorphism.</div></li>
+<li id="li-112"><div class="para" id="p-236">For any positive integer <span class="process-math">\(n\)</span> the map determinant map  <span class="process-math">\(\det: \operatorname{GL}_n(\C) \to (\C^\times, \cdot)\)</span> is a group homomorphism.</div></li>
+</ol></div></article><div class="para" id="p-237">Specifically, homomorphisms will preserve the additive structure, such as the identity element and inverse elements.</div>
 <article class="theorem theorem-like" id="thm-grphomom-preservations"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Homomorphism Preservations.</span>
 </h4>
-<div class="para logical" id="p-240">
+<div class="para logical" id="p-238">
 <div class="para">If <span class="process-math">\(\varphi: G \to H\)</span> is a homomorphism of groups, then</div>
 <ol class="decimal">
-<li id="li-110"><div class="para" id="p-241">
+<li id="li-113"><div class="para" id="p-239">
 <span class="process-math">\(\varphi(e_G) = e_H\)</span> and</div></li>
-<li id="li-111"><div class="para" id="p-242"><span class="process-math">\(\varphi(x^{-1}) = \varphi(x)^{-1}\text{.}\)</span></div></li>
+<li id="li-114"><div class="para" id="p-240"><span class="process-math">\(\varphi(x^{-1}) = \varphi(x)^{-1}\text{.}\)</span></div></li>
 </ol>
-</div></article><article class="hiddenproof" id="proof-10"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-10"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-10"><article class="hiddenproof"><div class="para" id="p-243">For the first, <span class="process-math">\(\varphi(e_G) = \varphi(e_Ge_G) = \varphi(e_G)\varphi(e_G)\)</span> and now multiply by <span class="process-math">\(\varphi(e_G)^{-1}\text{.}\)</span> For the second, <span class="process-math">\(\varphi(x^{-1}) \varphi(x) = \varphi(e) = e\)</span> implies <span class="process-math">\(\varphi(x^{-1}) = \varphi(x)^{-1}\text{.}\)</span>
+</div></article><article class="hiddenproof" id="proof-10"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-10"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-10"><article class="hiddenproof"><div class="para" id="p-241">For the first, <span class="process-math">\(\varphi(e_G) = \varphi(e_Ge_G) = \varphi(e_G)\varphi(e_G)\)</span> and now multiply by <span class="process-math">\(\varphi(e_G)^{-1}\text{.}\)</span> For the second, <span class="process-math">\(\varphi(x^{-1}) \varphi(x) = \varphi(e) = e\)</span> implies <span class="process-math">\(\varphi(x^{-1}) = \varphi(x)^{-1}\text{.}\)</span>
 </div></article></div>
 <article class="theorem theorem-like" id="thm-ghom-composition"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.5</span><span class="period">.</span><span class="space"> </span><span class="title">Compositions of Homomorphisms.</span>
 </h4>
-<div class="para" id="p-244">If <span class="process-math">\(\varphi:G\to H\)</span> and <span class="process-math">\(\phi:H\to K\)</span> are group homomorphisms, the composition <span class="process-math">\(\phi\circ\varphi:G\to K\)</span> is a group homomorphism.</div></article><article class="exercise exercise-like" id="exe-group-hom"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-group-hom"><h4 class="heading">
+<div class="para" id="p-242">If <span class="process-math">\(\varphi:G\to H\)</span> and <span class="process-math">\(\phi:H\to K\)</span> are group homomorphisms, the composition <span class="process-math">\(\phi\circ\varphi:G\to K\)</span> is a group homomorphism.</div></article><article class="exercise exercise-like" id="exe-group-hom"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-group-hom"><h4 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.6</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\Hom\)</span> Sweet <span class="process-math">\(\Hom\)</span>.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-group-hom"><article class="exercise exercise-like"><div class="para" id="p-245">Let <span class="process-math">\(G\)</span> and <span class="process-math">\(H\)</span> be abelian groups. Then the set <span class="process-math">\(\Hom(G,H)\)</span> of all group homomorphisms from <span class="process-math">\(G\)</span> to <span class="process-math">\(H\)</span> is itself an abelian group.</div></article></div>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-group-hom"><article class="exercise exercise-like"><div class="para" id="p-243">Let <span class="process-math">\(G\)</span> and <span class="process-math">\(H\)</span> be abelian groups. Then the set <span class="process-math">\(\Hom(G,H)\)</span> of all group homomorphisms from <span class="process-math">\(G\)</span> to <span class="process-math">\(H\)</span> is itself an abelian group.</div></article></div>
 <article class="definition definition-like" id="def-group-kernel"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.7</span><span class="period">.</span><span class="space"> </span><span class="title">Kernel.</span>
-</h4> <div class="para logical" id="p-246">
+</h4> <div class="para logical" id="p-244">
 <div class="para">Let <span class="process-math">\(\varphi: G \to H\)</span> be a homomorphism of groups. The <em class="emphasis">kernel</em> of <span class="process-math">\(\varphi\)</span> is the set</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1145,25 +1145,25 @@ window.MathJax = {
 \end{equation*}
 </div>
 </div></article><aside class="historical aside-like" id="historical-8"><h4 class="heading"><span class="title">Kernel.</span></h4>
-<div class="para" id="p-247">The term “kernel” was first used in mathematics by the German mathematician <a href="" class="xref" data-knowl="./knowl/bio-frobenius.html" title="Paragraphs: Ferdinand Georg Frobenius">Ferdinand Georg Frobenius</a> in the late 19th century.</div>
-<div class="para" id="p-248">The term “kernel” comes from the German word “kern”, which means “core” or “nucleus”. In the context of a homomorphism, the kernel is the subgroup of the domain group that is “killed” by the homomorphism.</div></aside><article class="theorem theorem-like" id="thm-inj-surj-ghom"><h4 class="heading">
+<div class="para" id="p-245">The term “kernel” was first used in mathematics by the German mathematician <a href="" class="xref" data-knowl="./knowl/bio-frobenius.html" title="Paragraphs: Ferdinand Georg Frobenius">Ferdinand Georg Frobenius</a> in the late 19th century.</div>
+<div class="para" id="p-246">The term “kernel” comes from the German word “kern”, which means “core” or “nucleus”. In the context of a homomorphism, the kernel is the subgroup of the domain group that is “killed” by the homomorphism.</div></aside><article class="theorem theorem-like" id="thm-inj-surj-ghom"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.8</span><span class="period">.</span><span class="space"> </span><span class="title">Injective and Surjective Homomorphisms.</span>
 </h4>
-<div class="para logical" id="p-249"><ol class="decimal">
-<li id="li-112"><div class="para" id="p-250">A group homomorphism <span class="process-math">\(\varphi: G \to H\)</span> is injective if and only if <span class="process-math">\(\operatorname{ker}(\varphi) = \{e_G\}\text{.}\)</span>
+<div class="para logical" id="p-247"><ol class="decimal">
+<li id="li-115"><div class="para" id="p-248">A group homomorphism <span class="process-math">\(\varphi: G \to H\)</span> is injective if and only if <span class="process-math">\(\operatorname{ker}(\varphi) = \{e_G\}\text{.}\)</span>
 </div></li>
-<li id="li-113"><div class="para" id="p-251">A group homomorphism <span class="process-math">\(\varphi: G \to H\)</span> is surjective if and only if <span class="process-math">\(\operatorname{im}(\varphi) = H\text{.}\)</span>
+<li id="li-116"><div class="para" id="p-249">A group homomorphism <span class="process-math">\(\varphi: G \to H\)</span> is surjective if and only if <span class="process-math">\(\operatorname{im}(\varphi) = H\text{.}\)</span>
 </div></li>
-</ol></div></article><article class="hiddenproof" id="proof-11"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-11"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-11"><article class="hiddenproof"><div class="para logical" id="p-252"><ol class="decimal">
-<li id="li-114"><div class="para" id="p-253">
+</ol></div></article><article class="hiddenproof" id="proof-11"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-11"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-11"><article class="hiddenproof"><div class="para logical" id="p-250"><ol class="decimal">
+<li id="li-117"><div class="para" id="p-251">
 <span class="process-math">\(\Rightarrow\)</span> is immediate from the definitions (since <span class="process-math">\(e_G \in \operatorname{ker}(f)\)</span> for all homomorphisms <span class="process-math">\(f\)</span>). If <span class="process-math">\(\operatorname{ker}(f) = \{e_G\}\)</span> and <span class="process-math">\(f(h) = f(h')\)</span> then <span class="process-math">\(f(h^{-1}h') = f(h)^{-1}f(h') = e_H\)</span> and thus <span class="process-math">\(h^{-1}h' = e_G\)</span> which implies <span class="process-math">\(h = h'\text{.}\)</span>
 </div></li>
-<li id="li-115"><div class="para" id="p-254">This is identical to <a href="" class="xref" data-knowl="./knowl/surjective-iff-image.html" title="Exploration A.13: Surjective iff Image is Codomain">Exploration A.13</a>; the homomorphism aspect adds nothing of interest. <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-15" id="fn-15"><sup> 2 </sup></a>
+<li id="li-118"><div class="para" id="p-252">This is identical to <a href="" class="xref" data-knowl="./knowl/surjective-iff-image.html" title="Exploration A.13: Surjective iff Image is Codomain">Exploration A.13</a>; the homomorphism aspect adds nothing of interest. <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-15" id="fn-15"><sup> 2 </sup></a>
 </div></li>
 </ol></div></article></div>
 <article class="exercise exercise-like" id="exe-order-preservation"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-order-preservation"><h4 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.9</span><span class="period">.</span><span class="space"> </span><span class="title">Homomorphisms and Order.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-order-preservation"><article class="exercise exercise-like"><div class="para" id="p-255">If <span class="process-math">\(\varphi: G \to H\)</span> is a homomorphism of groups and <span class="process-math">\(|g|\)</span> is finte, then <span class="process-math">\(|\varphi(g)|\big||g|\text{.}\)</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-order-preservation"><article class="exercise exercise-like"><div class="para" id="p-253">If <span class="process-math">\(\varphi: G \to H\)</span> is a homomorphism of groups and <span class="process-math">\(|g|\)</span> is finte, then <span class="process-math">\(|\varphi(g)|\big||g|\text{.}\)</span>
 </div></article></div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-14"><div class="fn">For those interested, <span class="process-math">\(\psi\)</span> is used for inner automorphisms, <span class="process-math">\(\rho\)</span> is used permutation representations corresponding to group actions, and <span class="process-math">\(\lambda\)</span> is used for permutation representations of the left regular action.</div></div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-15"><div class="fn">Though one could argue that adding nothing of interest is interesting, causing it to add something of interest.</div></div>
 </div>

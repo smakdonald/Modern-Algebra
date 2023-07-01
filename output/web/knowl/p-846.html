@@ -13,12 +13,42 @@
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
 <div class="para logical">
-<div class="para">Given <span class="process-math">\(H\)</span> and <span class="process-math">\(K\)</span> we could always take <span class="process-math">\(\rho\)</span> to be the trivial homomorphism, so that <span class="process-math">\(\rho(y)(x) = x\)</span> for all <span class="process-math">\(y \in K\)</span> and <span class="process-math">\(x \in H\text{.}\)</span> Then <span class="process-math">\(K \rtimes_\rho H\)</span> is just the usual direct product:</div>
-<div class="displaymath process-math">
+<div class="para">Let <span class="process-math">\(K = \langle x \rangle\)</span> be cyclic of order <span class="process-math">\(2\)</span> and <span class="process-math">\(H = \langle y \rangle\)</span> be cyclic of order <span class="process-math">\(n\)</span> for any <span class="process-math">\(n \geq 1\text{.}\)</span> There is an automorphism of <span class="process-math">\(K\)</span> that sends <span class="process-math">\(y\)</span> to <span class="process-math">\(y^{-1}\text{.}\)</span> This automorphism is its own inverse; i.e., it has order <span class="process-math">\(2\text{.}\)</span> Therefore, by <a href="" class="xref" data-knowl="./knowl/prop-ump-cyclic.html" title="Proposition 3.50: UMP for Cyclic Groups">Proposition 3.50</a>, there is a group homomorphism</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-ump-cyclic.html">
 \begin{equation*}
-(y_1, x_1) (y_2, x_2) = (y_1 y_2, x_1 x_2).
+\rho: K \to \operatorname{Aut}(H)
 \end{equation*}
 </div>
+<div class="para">with <span class="process-math">\(\rho(x)(y) = y^{-1}\text{.}\)</span> We may thus form the group</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-ump-cyclic.html">
+\begin{equation*}
+G := H \rtimes_\rho K.
+\end{equation*}
+</div>
+<div class="para">The elements of <span class="process-math">\(G\)</span> are <span class="process-math">\((y^i, x^j)\)</span> for <span class="process-math">\(0 \leq i \leq n-1\)</span> and <span class="process-math">\(0 \leq j \leq 1\text{,}\)</span> in particular <span class="process-math">\(|G|=2n\text{.}\)</span> Set</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-ump-cyclic.html">
+\begin{equation*}
+\tilde y = (y,e) \in G \text{ and } \tilde x = (e,x) \in G.
+\end{equation*}
+</div>
+<div class="para">Then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-ump-cyclic.html">
+\begin{equation*}
+\tilde y^n = (y,e_K)^n = (y^n,e_K) = (e_H, e_K)= e_G,
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-ump-cyclic.html">
+\begin{equation*}
+\tilde x^2 = (e_H,x)^2 = (e_H, x^2) = (e_H, e_K)= e_G,
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-ump-cyclic.html">
+\begin{equation*}
+\tilde x \tilde y \tilde x \tilde y = (e_H,x)(y,e_K)(e_H, x)(y,e_K) = (\rho(x)(y),x)(\rho(x)(y),x) = (y^{-1},x)(y^{-1},x) = (y^{-1}y, e) = e_G.
+\end{equation*}
+</div>
+<div class="para">Looks familar!</div>
 </div>
 <span class="incontext"><a href="sec-spds.html#p-846" class="internal">in-context</a></span>
 </body>

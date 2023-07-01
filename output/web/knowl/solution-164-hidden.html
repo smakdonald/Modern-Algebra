@@ -10,26 +10,19 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like">
-<div class="para">Let <span class="process-math">\(G\)</span> be a finite <span class="process-math">\(p\)</span>-group for some prime <span class="process-math">\(p\)</span> and <span class="process-math">\(N\neq {1}\)</span> a normal subgroup of <span class="process-math">\(G\text{.}\)</span>
-</div> <div class="para logical">
-<div class="para">First, we show that the center of <span class="process-math">\(G\)</span> is nontrivial. Suppose by way of contradiction that <span class="process-math">\(Z(G)=\{e\}\text{.}\)</span> We examine the conjugacy classes of <span class="process-math">\(G\text{.}\)</span> From the <a href="" class="xref" data-knowl="./knowl/thm-class-eq.html" title="Theorem 5.41: Class Equation">Class Equation</a>, we know</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-class-eq.html ./knowl/thm-conjugacy-divides-order.html ./knowl/thm-lagrange.html">
-\begin{equation*}
-|G| = |Z(G)| + \sum_i^r [G : C_G(g_i)].
-\end{equation*}
+<body class="ignore-math"><div class="solution solution-like"><div class="para logical"><ol class="decimal">
+<li>
+<div class="para">Let <span class="process-math">\(C_3 = \langle a \rangle\)</span> be the cyclic group of order <span class="process-math">\(3\text{,}\)</span> and let <span class="process-math">\(C_9 = \langle b \rangle\)</span> be the cyclic group of order <span class="process-math">\(9\text{.}\)</span> Let <span class="process-math">\(\phi \colon C_9 \to \operatorname{Aut}(C_3)\)</span> be the homomorphism defined by <span class="process-math">\(\phi(b^i)(a) = a^i\)</span> for <span class="process-math">\(0 \le i \le 8\text{,}\)</span> where we identify <span class="process-math">\(\operatorname{Aut}(C_3)\)</span> with <span class="process-math">\(C_2\)</span> via the isomorphism <span class="process-math">\(\operatorname{Aut}(C_3) \cong C_2\)</span> given by sending the non-identity automorphism to the generator of <span class="process-math">\(C_2\text{.}\)</span>
 </div>
-<div class="para">Note that <span class="process-math">\(|G|=p^n\)</span> for some <span class="process-math">\(n\in\N\text{,}\)</span> meaning that the only divisors of <span class="process-math">\(|G|\)</span> are powers of <span class="process-math">\(p\text{.}\)</span> In finite groups, each conjugacy class must divide the order of the group by <a href="" class="xref" data-knowl="./knowl/thm-conjugacy-divides-order.html" title="Theorem 5.40: Size of Conjugacy Class Divides |G|">Theorem 5.40</a>. By <a href="" class="xref" data-knowl="./knowl/thm-lagrange.html" title="Theorem 4.13: Lagrange's Theorem">Lagrange's Theorem</a>, <span class="process-math">\([G : C_G(g_i)]=\frac{|G|}{|C_G(g_i)|}=\frac{p^n}{p^m}=p^k\text{,}\)</span> where <span class="process-math">\(m,k\in\N\text{.}\)</span> Since <span class="process-math">\(|Z(G)|=1\text{,}\)</span> we see that <span class="process-math">\(\sum_i^r |G : C_G(g_i)|\bigg|p^n-1\text{,}\)</span> which is impossible given that <span class="process-math">\(p^{n-1} \not\mid p^n\text{.}\)</span> Thus <span class="process-math">\(Z(G)\neq\{e\}\text{.}\)</span>
+<div class="para">Then the semi-direct product <span class="process-math">\(G = C_3 \rtimes_{\phi} C_9\)</span> has order <span class="process-math">\(27\)</span> and is non-abelian. To see that <span class="process-math">\(G\)</span> is non-abelian, note that <span class="process-math">\(bab^{-1} \neq a\)</span> for any <span class="process-math">\(b \in C_9 \setminus {1}\text{,}\)</span> since <span class="process-math">\(a\)</span> has no non-trivial automorphisms.</div>
+</li>
+<li>
+<div class="para">To find a presentation of <span class="process-math">\(G\text{,}\)</span> we need to identify the generators and relations. Since <span class="process-math">\(C_3\)</span> and <span class="process-math">\(C_9\)</span> are both cyclic, we can take the generators to be <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> respectively. Moreover, since <span class="process-math">\(C_3\)</span> is normal in <span class="process-math">\(G\text{,}\)</span> we have <span class="process-math">\(bab^{-1} = a^i\)</span> for some <span class="process-math">\(i \in {1, 2}\text{.}\)</span>
 </div>
-</div> <div class="para logical">
-<div class="para">As <span class="process-math">\(N\nsg G\text{,}\)</span> by <a href="" class="xref" data-knowl="./knowl/cor-normal-union-of-conjugacy-classes.html" title="Corollary 5.15: Normal Subgroups are Unions of Conjugacy Classes">Corollary 5.15</a> it is a union of conjugacy classes of the elements it contains, one of which is <span class="process-math">\(e\text{.}\)</span> Assume by way of contradiction that <span class="process-math">\(N\cap Z(G)={e}\text{,}\)</span> meaning that <span class="process-math">\(e\)</span> is the only element in <span class="process-math">\(N\)</span> whose conjugacy class is a singleton. This yields</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-normal-union-of-conjugacy-classes.html ./knowl/thm-lagrange.html">
-\begin{equation*}
-|N| = 1+ \sum_i^r |G : C_G(g_i)|.
-\end{equation*}
+<div class="para">To determine the value of <span class="process-math">\(i\text{,}\)</span> note that <span class="process-math">\(C_9\)</span> acts on <span class="process-math">\(C_3\)</span> by automorphisms, and the non-identity automorphism of <span class="process-math">\(C_3\)</span> is inversion <span class="process-math">\(a \mapsto a^{-1}\text{.}\)</span> Since <span class="process-math">\(bab^{-1} \neq a^{-1}\text{,}\)</span> we must have <span class="process-math">\(i = 2\text{.}\)</span>
 </div>
-<div class="para">However, by <a href="" class="xref" data-knowl="./knowl/thm-lagrange.html" title="Theorem 4.13: Lagrange's Theorem">Lagrange's Theorem</a> <span class="process-math">\(N\)</span> must also be a <span class="process-math">\(p-\)</span>group, and thus by an analogous element counting argument as above we see that there exists some <span class="process-math">\(x\in N\)</span> such that <span class="process-math">\(C_G(x)=\{x\}\text{,}\)</span> or that <span class="process-math">\(gxg\inv=x\)</span> for all <span class="process-math">\(g\in G\text{.}\)</span> Thankfully, this means that <span class="process-math">\(x\in Z(G)\text{,}\)</span> and thus we have <span class="process-math">\(Z(G)\cap N\neq 1\text{.}\)</span>
+<div class="para">Therefore, a presentation of <span class="process-math">\(G\)</span> is given by <span class="process-math">\(\langle a, b \mid a^3 = b^9 = 1, bab^{-1} = a^2\rangle\text{.}\)</span>
 </div>
-</div>
-</div></body>
+</li>
+</ol></div></div></body>
 </html>

@@ -13,13 +13,20 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">If <span class="process-math">\(\det(A)\)</span> is a unit, then, using the equation above, we have</div>
+<div class="para">If <span class="process-math">\(C\)</span> is another basis, then</div>
 <div class="displaymath process-math">
 \begin{equation*}
-A (A^{adj} \cdot \frac{1}{\det(A)}) =I_n = (A^{adj} \cdot \frac{1}{\det(A)}) A
+[\a]_C^C = P [\a]_B^B P^{-1}
 \end{equation*}
 </div>
-<div class="para">which proves <span class="process-math">\(A\)</span> has a two-sided inverse (namely, <span class="process-math">\(A^{adj} \frac{1}{\det(A)}\)</span>).</div>
+<div class="para">for an invertible matrix <span class="process-math">\(P\)</span> (specifically, <span class="process-math">\(P = [\id]_B^C\)</span>). Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\det([\a]_C^C)  = \det(P [\a]_B^B P^{-1}) = \det(P) \det([\a]_B^B) \det(P^{-1}) =\det(P) \det(P^{-1}) \det([\a]_B^B) 
+\end{equation*}
+</div>
+<div class="para">using the Theorem. Also by the Theorem <span class="process-math">\(\det(P) \det(P^{-1}) = \det(PP^{-1}) = \det(I_n) = 1\text{.}\)</span>
+</div>
 </div>
 <span class="incontext"><a href="section-69.html#p-3377" class="internal">in-context</a></span>
 </body>
