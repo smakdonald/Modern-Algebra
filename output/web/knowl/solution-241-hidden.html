@@ -11,29 +11,7 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<div class="para logical"><ol class="decimal">
-<li><div class="para logical">
-<div class="para">Notice <span class="process-math">\(\cp_A(x)=\det(A-xI)\text{.}\)</span> So we have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{align}\cp_A(x)&amp;=-x\det\begin{bmatrix} -x &amp; 0 \\ 1 &amp; -2-x\end{bmatrix}-(-1)\det\begin{bmatrix} 1 &amp; 0 \\ 0 &amp; -2-x\end{bmatrix}+2\det\begin{bmatrix} 1 &amp; -x \\ 0 &amp; 1\end{bmatrix}\\&amp;=-x(-x(-2-x))+(-2-x)+2(1)\\&amp;=-x^3-2x^2-x\\&amp;-x(x^2+2x+1)\\&amp;=-x(x+1)^2.\end{align}
-\end{equation*}
+<div class="para">Let <span class="process-math">\(L\)</span> be the splitting field of the polynomial <span class="process-math">\(f(x)=x^7-18\)</span> over <span class="process-math">\(\Q\text{.}\)</span> First, note that <span class="process-math">\(f\)</span> is irreducible in <span class="process-math">\(\Q[x]\)</span> by <a href="" class="xref" data-knowl="./knowl/thm-eisensteins-criterion.html" title="Theorem 18.18: Eisenstein's Criterion">Eisenstein's Criterion</a> (<span class="process-math">\(p=2\)</span>). The roots of <span class="process-math">\(f\)</span> are the following: - <span class="process-math">\(a_1=\sqrt[7]{18}e^{\frac{2\pi i}{7}}\text{,}\)</span> - <span class="process-math">\(a_2=\sqrt[7]{18}e^{\frac{4\pi i}{7}}\text{,}\)</span> - <span class="process-math">\(a_3=\sqrt[7]{18}e^{\frac{6\pi i}{7}}\text{,}\)</span> - <span class="process-math">\(a_4=\sqrt[7]{18}e^{\frac{8\pi i}{7}}\text{,}\)</span> - <span class="process-math">\(a_5=\sqrt[7]{18}e^{\frac{10\pi i}{7}}\text{,}\)</span> - <span class="process-math">\(a_6=\sqrt[7]{18}e^{\frac{12\pi i}{7}}\text{,}\)</span> and - <span class="process-math">\(a_7=\sqrt[7]{18}e^{\frac{14\pi i}{7}}=\sqrt[7]{18}\text{.}\)</span> Let <span class="process-math">\(\z=e^{\frac{2\pi i}{7}}\text{,}\)</span> which is the root of the <span class="process-math">\(7\th\)</span> cyclotomic polynomial (which has degree <span class="process-math">\(6,\)</span> and thus irreducible in <span class="process-math">\(\Q[x]\text{.}\)</span> Let <span class="process-math">\(F=\Q(\z)\)</span> and <span class="process-math">\(E=\Q(\sqrt[7]{18})\text{.}\)</span> Thus we have <span class="process-math">\([F:\Q]=6\)</span> and <span class="process-math">\([E:\Q]=7\text{.}\)</span> By the <span class="process-math">\(\gcd\)</span> irreducible argument we see that <span class="process-math">\([L:\Q]=42\text{.}\)</span> Yeesh.</div> <div class="para">Let <span class="process-math">\(G=\Gal(L/\Q)\text{.}\)</span> From <a href="" class="xref" data-knowl="./knowl/thm-sylow.html" title="Theorem 6.11: Sylow's Theorem">Sylow's Theorem</a> we have the following: <span class="process-math">\(n_7=1\text{,}\)</span> as <span class="process-math">\(7\not\mid6\text{,}\)</span> <span class="process-math">\(n_3|14\)</span> and <span class="process-math">\(n_3\equiv1\mod3\text{,}\)</span> so <span class="process-math">\(n_3\)</span> is either <span class="process-math">\(1\)</span> or <span class="process-math">\(7\text{.}\)</span>
 </div>
-<div class="para">Not so bad! Now, the invariant factors all divide the characteristic polynomial and must divide the following factor, so our options for sets of invariant factors are the following: - <span class="process-math">\(\{-x(x+1)^2\}\)</span> - <span class="process-math">\(\{(x+1),-x(x+1)\}\)</span> However, the largest invariant factor is also the minimal polynomial. So we check to see if <span class="process-math">\(-A(A+I)=0\text{.}\)</span> Luckily, the very first calculation shows that this is not the case. Thus the minimum polynomial is the characteristic polynomial is the only invariant factor of <span class="process-math">\(A\text{.}\)</span> Thus the RCF of <span class="process-math">\(A\)</span> is</div>
-<div class="displaymath process-math">
-\begin{equation*}
-C(-x^3-2x^2-x)=\begin{bmatrix} 0 &amp; 0 &amp; 0 \\ 1 &amp; 0 &amp; 1 \\0 &amp; 1 &amp; 2\end{bmatrix}.
-\end{equation*}
-</div>
-</div></li>
-<li><div class="para logical">
-<div class="para">Luckily for us, <span class="process-math">\(\cp_A(x)\)</span> factors completely into linear terms! So our elementary divisors are <span class="process-math">\(-x\)</span> and <span class="process-math">\((x+1)^2\text{.}\)</span> We see <span class="process-math">\(J_1(0)=\begin{bmatrix} 0 \end{bmatrix}\)</span> and <span class="process-math">\(J_2(-1)=\begin{bmatrix} -1 &amp; 0 \\ 1 &amp; -1\end{bmatrix}\text{,}\)</span> so the Jordan Canonical form of <span class="process-math">\(A\)</span> is</div>
-<div class="displaymath process-math">
-\begin{equation*}
-J=\begin{bmatrix} 0 &amp; 0 &amp; 0 \\ 0 &amp; -1 &amp; 0 \\0 &amp; 1 &amp; -1\end{bmatrix}.
-\end{equation*}
-</div>
-</div></li>
-</ol></div> <div class="para"></div>
 </div></body>
 </html>

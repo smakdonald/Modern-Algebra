@@ -12,17 +12,21 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<div class="para">Note that <span class="process-math">\(I \cdot J \subseteq I \cap J\)</span> holds in general for any pair of ideals. If <span class="process-math">\(I + J = R\)</span> then <span class="process-math">\(a + b = 1\)</span> for some <span class="process-math">\(a \in I\)</span> and <span class="process-math">\(b \in J\text{.}\)</span> Given <span class="process-math">\(x \in I \cap J\)</span> we have <span class="process-math">\(xa + xb = x\)</span> with <span class="process-math">\(xa \in I \cdot J\)</span> and <span class="process-math">\(xb \in I \cdot J\text{,}\)</span> which proves <span class="process-math">\(x \in I \cdot J\text{.}\)</span>
-</div> <div class="para logical">
-<div class="para">For the second assertion define <span class="process-math">\(g: R \to R/I \oplus R/J\)</span> to be the <span class="process-math">\(R\)</span>-module homomorphism <span class="process-math">\(g(r) = (r +I, r + J)\text{.}\)</span> Note that the kernel of <span class="process-math">\(g\)</span> is <span class="process-math">\(I \cap J\)</span> which equals <span class="process-math">\(I\cdot J\)</span> by the first assertion. I claim <span class="process-math">\(g\)</span> is onto: Pick <span class="process-math">\((x + I, y +J) \in R/I \oplus R/J\text{.}\)</span> With <span class="process-math">\(a,b\)</span> chosen as above, we have</div>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(S\)</span> be the Smith Normal Form of <span class="process-math">\(xI_n - A\)</span> and let <span class="process-math">\(d_1, \dots, d_n\)</span> be its diagonal entries. As proven before, the matrix <span class="process-math">\(xI_n - A\)</span> and <span class="process-math">\(S\)</span> present isomorphic <span class="process-math">\(F[x]\)</span>-modules, and thus the Theorem gives an isomorphism</div>
 <div class="displaymath process-math">
 \begin{equation*}
-g(xb + ya) = (xb + ya + I, xb + ya + J) = (xb + I, ya + J) = (x + I, y +J).
+F^n_A \cong F[x]/(d_1) \oplus \cdots \oplus F[x]/(d_n).
 \end{equation*}
 </div>
-<div class="para">The last equation holds since <span class="process-math">\(xa + xb = x\)</span> and thus <span class="process-math">\(xb + I = xb + xa + I = x + I\)</span> and similarly <span class="process-math">\(ya + J = y + J\text{.}\)</span>
+<div class="para">Since <span class="process-math">\(\dim_F F^n_A &lt; \infty\text{,}\)</span> none of the <span class="process-math">\(d_i\)</span>'s can be zero. So, each <span class="process-math">\(d_i\)</span> is monic and <span class="process-math">\(d_1 \mid \cdots \mid d_n\text{.}\)</span> Now some of the <span class="process-math">\(d_i\)</span> might be non-zero constants, in which case <span class="process-math">\(d_i\)</span> is a unit and <span class="process-math">\(F[x]/(d_i) = 0\text{.}\)</span> Upon tossing those out, we are left with</div>
+<div class="displaymath process-math">
+\begin{equation*}
+F^n_A \cong F[x]/(f_1) \oplus \cdots \oplus F[x]/(f_k)
+\end{equation*}
 </div>
-</div> <div class="para">For the final assertion, recall that when <span class="process-math">\(R\)</span> is a UFD, two principle ideals <span class="process-math">\(Rx\)</span> and <span class="process-math">\(Ry\)</span> satisfy <span class="process-math">\(Rx + Ry = R\)</span> if and only if <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are relatively prime. Also, for <span class="process-math">\(I = Rx\)</span> and <span class="process-math">\(J = Ry\text{,}\)</span> we have <span class="process-math">\(I\cdot J = R(xy)\text{.}\)</span>
-</div></article><span class="incontext"><a href="sec-modclass.html#proof-112" class="internal">in-context</a></span>
+<div class="para">with each <span class="process-math">\(f_i\)</span> monic of positive degree and <span class="process-math">\(f_1 \mid \cdots \mid f_k\text{.}\)</span> These are, by definition, the invariant factors of <span class="process-math">\(A\text{.}\)</span>
+</div>
+</div></article><span class="incontext"><a href="sec-rcf.html#proof-112" class="internal">in-context</a></span>
 </body>
 </html>

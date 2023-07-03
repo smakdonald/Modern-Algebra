@@ -588,65 +588,87 @@
             <definition xml:id="def-binop"><title>Binary Operation</title>
               <statement>
                 <p>
-                  A <em>binary operation</em><idx><h>binary operation</h></idx><idx><h>operation</h></idx> on a set <m>S</m> is a <xref text="title" ref="def-function"/>
+                  A <em>binary operation</em> on a set <m>S</m> is a <xref text="title" ref="def-function"/>
                   <me>
-                    -\cdot-:S\times S\to S,\text{given by } (x,y)\mapsto x\cdot y.
+                    -*-:S\times S\to S,\text{ given by } (x,y)\mapsto x * y.
                   </me>
+                  <notation><usage><m>*</m></usage><description>a binary operation</description></notation> 
+                  <idx><h>binary operation</h></idx>
                 </p>
               </statement>
             </definition>
 
-            <example>
+            <example xml:id="ex-binop"><title>Binary Relation Examples</title>
               <p>
                 <ul>
                   <li>
                     <p>
-                      Addition and mulitplication of real numbers
+                      Addition (<m>-+-</m>) and multiplication (<m>-\cdot-</m>) are both binary operations on <m>\Z,\Q,\R,</m> and <m>\C</m>.
                     </p>
                   </li>
 
                   <li>
                     <p>
-                      Set unions and intersections
+                      Let <m>\cP(A)</m> denote the power set of a set <m>S</m>.
+                      Then 
+                      <me>
+                        -\cup-:\cP(A)\to \cP(A)\text{ given by } (X,Y)\mapsto X\cup Y 
+                      </me>
+                      and 
+                      <me>
+                        -\cap-:\cP(A)\to \cP(A)\text{ given by } (X,Y)\mapsto X\cap Y 
+                      </me>
+                      are both binary relations on <m>\cP(A)</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Let <m>F(A)</m> denote the set of all functions from <m>S</m> to itself.
+                      Then 
+                      <me>
+                        -\circ-:F(A)\to F(A)\text{ given by } (f,g)\mapsto f\circ g
+                      </me>
+                      is a binary relation on <m>F(A)</m>.
                     </p>
                   </li>
                 </ul>
               </p>
             </example>
 
-            <p>
-              Binary operations on a set are especially useful when they posess some special properties, which garner them some special names.
-            </p>
-
             <definition xml:id="def-binary-properties"><title>Binary Properties</title> 
               <statement>
                 <p>
-                  Let <m>-\cdot-</m> be a binary operation on a set <m>S</m>.
+                  Let <m>-*-</m> be a binary operation on a set <m>S</m>.
                   <ul>
-                    <li xml:id="associative-property"><title>Associative Property</title><idx><h>associative property</h></idx>
+                    <li xml:id="associative-property"><title>Associative Property</title>
                       <p>
-                        An operation satisfies the <em>associative property</em> if for all <m>x,y,z\in S</m> we have <m>(x\cdot y)\cdot z=x\cdot (y\cdot z)</m>.
+                        An operation satisfies the <em>associative property</em> if for all <m>x,y,z\in S</m> we have <m>(x*y)*z=x*(y*z)</m>.
+                        <idx><h>associative property</h></idx>
                       </p>
                     </li>
 
-                    <li xml:id="commutative-axiom"><title>Commutative Property</title><idx><h>commutative property</h></idx>
+                    <li xml:id="commutative-axiom"><title>Commutative Property</title>
                       <p>
-                        An operation satisfies the <em>commutative</em> property if <m>x \cdot y = y \cdot x</m> for all <m>x,y \in S</m>. 
+                        An operation satisfies the <em>commutative</em> property if <m>x * y = y * x</m> for all <m>x,y \in S</m>. 
+                        <idx><h>commutative property</h></idx>
                       </p>
                     </li>
 
-                    <li xml:id="identity-property"><title>Identity Property</title><idx><h>identity property</h></idx>
+                    <li xml:id="identity-property"><title>Identity Property</title>
                       <p>
-                        An operation satisfies the <em>identity</em> property if there exists <m>e\in G</m> such that <m>e·g=x·g=x</m> for all <m>g\in G</m>.
+                        An operation satisfies the <em>identity</em> property if there exists <m>e\in G</m> such that <m>e*g=x*g=x</m> for all <m>g\in G</m>.
                         Such an element <m>e</m> is called an <em>identity element</em>.
                         <notation><usage><m>e</m></usage><description>the identity element of a group</description></notation> 
+                        <idx><h>identity property</h></idx>
                       </p>
                     </li>
 
-                    <li xml:id="inverse-property"><title>Inverse Property</title><idx><h>inverse property</h></idx>
+                    <li xml:id="inverse-property"><title>Inverse Property</title>
                       <p>
-                        An operation satisfies the <em>inverse</em> property if for each <m>x\in S</m>, there is an element <m>y\in S</m> such that <m>xy=e=yx</m>, where <m>e</m> is an identity element of <m>S</m>.
+                        An operation satisfies the <em>inverse</em> property if for each <m>x\in S</m>, there is an element <m>y\in S</m> such that <m>x * y=e=y * x</m>, where <m>e</m> is an identity element of <m>S</m>.
                         Such an element <m>y</m> is called an <em>inverse</em> of the element <m>x</m>.
+                        <idx><h>inverse property</h></idx>
                       </p>
                     </li>
                   </ul>
@@ -656,51 +678,54 @@
 
             <convention> 
               <p>
-                We often write <m>xy</m> instead of <m>x\cdot y</m> for simplicity.
+                The notation <m>*</m> is used for an arbitary binary operation.
+                When context is sufficient for understanding, we often write <m>xy</m> instead of <m>x * y</m> for simplicity.
               </p>
             </convention>
 
-            <convention>
+            <aside>
               <p>
-                The inverse of an element <m>x</m> is often written <m>x\inv</m>, for reasons we will see in the next section.
+                The notation <m>\cdot</m> is also sometimes used for an arbitary binary operation, though we avoid doing so here to prevent confusion with the mutliplication operation, as seen in in <xref ref="ex-binop"/>.
               </p>
-            </convention>
+            </aside>
 
             <definition xml:id="def-algebraic-structures"><title>Algebraic Structures</title> 
               <statement>
                 <p>
                   <ul>
-                    <li xml:id="def-magma"><title>Magma</title><idx><h>magma</h></idx>
+                    <li xml:id="def-magma"><title>Magma</title>
                       <p>
-                        A pair <m>(G, \cdot)</m> is called a <em>magma</em>.
+                        A <em>magma</em> (or <term>binary structure</term>) is a pair <m>(G, *)</m> where <m>G</m> is a set and <m>*</m> is a binary operation on <m>G</m>.
+                        <idx><h>magma</h></idx>
+                        <idx><h>binary structure</h></idx>
                       </p>
                     </li>
 
-                    <li xml:id="def-semigroup"><title>Semigroup</title><idx><h>semigroup</h></idx>
+                    <li xml:id="def-semigroup"><title>Semigroup</title>
                       <p>
-                        A <em>semigroup</em> is a pair <m>(G, \cdot)</m> where <m>G</m> is a set and <m>\cdot</m> is a <xref text="title" ref="def-binop"/> on <m>G</m> satisfying the associative property.
+                        A <em>semigroup</em> is a pair <m>(G, *)</m> where <m>G</m> is a set and <m>*</m> is a binary operation on <m>G</m> satisfying the associative property.
                         <idx><h>semigroup</h></idx>
                       </p>
                     </li>
 
-                    <li xml:id="def-monoid"><title>Monoid</title><idx><h>monoid</h></idx>
+                    <li xml:id="def-monoid"><title>Monoid</title>
                       <p>
-                        A <em>monoid</em> is a pair <m>(G, \cdot)</m> where <m>G</m> is a set and <m>\cdot</m> is a binary operation on <m>G</m> satisfying the associative and identity properties.
+                        A <em>monoid</em> is a pair <m>(G, *)</m> where <m>G</m> is a set and <m>*</m> is a binary operation on <m>G</m> satisfying the associative and identity properties.
                         <idx><h>monoid</h></idx>
                       </p>
                     </li>
 
-                    <li xml:id="def-group"><title>Group</title><idx><h>group</h></idx>
+                    <li xml:id="def-group"><title>Group</title>
                       <p>
-                        A <em>group</em> is a pair <m>(G, \cdot)</m> where <m>G</m> is a set and <m>\cdot</m> is a binary operation on <m>G</m> satisfying the associative, identity, and inverse properties.
-                        <notation><usage><m>(G,\cdot)</m></usage><description>a group <m>G</m> and its binary operation <m>\cdot</m></description></notation>
+                        A <em>group</em> is a pair <m>(G, *)</m> where <m>G</m> is a set and <m>*</m> is a binary operation on <m>G</m> satisfying the associative, identity, and inverse properties.
+                        <notation><usage><m>(G,*)</m></usage><description>a group <m>G</m> and its binary operation <m>*</m></description></notation>
                         <idx><h>group</h></idx>
                       </p>
                     </li>
 
-                    <li xml:id="def-abelian"><title>Abelian Group</title><idx><h>abelian group</h></idx>
+                    <li xml:id="def-abelian"><title>Abelian Group</title>
                       <p>
-                        An <em>abelian group</em> is a pair <m>(G, \cdot)</m> where <m>G</m> is a set and <m>\cdot</m> is a binary operation on <m>G</m> satisfying the associative, identity, inverse, and commutative properties.
+                        An <em>abelian group</em> is a pair <m>(G, *)</m> where <m>G</m> is a set and <m>*</m> is a binary operation on <m>G</m> satisfying the associative, identity, inverse, and commutative properties.
                         <idx><h>abelian group</h></idx>
                       </p>
                     </li>
@@ -769,13 +794,14 @@
                   <ol>
                     <li xml:id="list-unique-group-identity"><title>Unique Identity</title>
                       <p>
-                        The element <m>e</m> satisfying the <xref text="title" ref="identity-property"/> of <xref ref="def-monoid" /> is unique, and we thus refer to it as the <em>identity element</em><idx><h>identity element</h></idx> of <m>G</m>.
+                        The element <m>e\in G</m> satisfying the <xref text="title" ref="identity-property"/> of <xref ref="def-binary-properties"/> is unique, and we thus refer to it as the <em>identity element</em> of <m>G</m>.
+                        <idx><h>identity element</h></idx>
                       </p>
                     </li>
 
                     <li xml:id="list-unique-group-inverse"><title>Unique Inverses</title>
                       <p>
-                        For each <m>x\in G</m>, the element satisfying the <xref text="title" ref="inverse-property"/> of <xref ref="def-group" /> is unique, and we thus refer to it as the <em>the inverse</em> of <m>x</m>.
+                        For each <m>x\in G</m>, the element satisfying the <xref text="title" ref="inverse-property"/> of <xref ref="def-binary-properties"/> is unique, and we thus refer to it as <em>the inverse</em> of <m>x</m>.
                       </p>
                     </li>
       
@@ -841,9 +867,15 @@
 
             <remark>
               <p>
-                 The <xref text="title" ref="list-unique-group-identity"/> property of <xref ref="thm-properties-of-groups"/> holds in monoids as well.
+                 The <xref text="title" ref="list-unique-group-identity"/> property of <xref ref="thm-properties-of-groups"/> holds in monoids (and unital magmas) as well.
               </p>
             </remark>
+
+            <convention>
+              <p>
+                The inverse of an element <m>x</m> is often written <m>x\inv</m>, for reasons we will see in the next section.
+              </p>
+            </convention>
 
             <example xml:id="ex-group-examples"><title>Group Examples</title>
               <statement>
@@ -885,33 +917,14 @@
                 </p>
               </statement>
 
-              <solution>
-                <p>
-                  <ol>
-                    <li>
-                      <p>
-                        Since there is only one element in the trivial group, closure is automatically satisfied. 
-                        In the case of the trivial group, there is only one element, so there are no distinct elements to consider. 
-                        Hence, associativity is trivially satisfied.
-                        In the trivial group, there is only one element, which can be chosen as the identity element. 
-                        Since there is only one element, multiplying it with itself or with any other element will result in the same element. 
-                        Therefore, the identity element property is satisfied.
-                        In the trivial group, there is only one element, and its inverse is itself. 
-                        Multiplying the element with itself will yield the identity element, which is the only element in the group. 
-                        Therefore, the inverse element property is satisfied.
-                      </p>
-                    </li>
-                  </ol>
-                </p>
-              </solution>
             </example>
 
-            <convention>
+            <aside><title>Identity Theft</title>
               <p>
                 In familiar groups of numbers, <q><m>1</m></q> is used for the identity element of a multiplicative group (and likewise <q><m>0</m></q> in additive groups). 
                 Often, <q><m>1</m></q> is used for the identity element <m>e</m> in arbitrary groups, though we will not do so here.
               </p>
-            </convention>
+            </aside>
 
             <remark><title>Specific General Linear Groups</title>
               <p>
@@ -949,6 +962,13 @@
                   </p>
                 </statement>
             </example>
+
+            <aside>
+              <p>
+                Some texts use the notation <q><m>^*</m></q> to denote groups of units.
+                For example, <m>\Q^\times</m> would be written <m>\Q^*</m>. 
+              </p>
+            </aside>
 
             <exercise xml:id="exe-group-of-units-in-zp"><title><m>\Z/p^\times</m></title>
               <statement>
@@ -1123,7 +1143,7 @@
 
             <p>
               As a result of <xref ref="exe-general-associativity"/> any expression formed from the elements <m>x_1\dots,x_n</m> in that order can be written without parenthesis, which will save us oodles of time down the line.
-              <fn>Yes, <em>oodles</em> is the best word to go here and no, I will not be changing it.</fn>
+              <fn>This is usually a result that is simply taken for granted and left unstated; we leave it here for the sake of completeness and ~rigor~. And yes, <em>oodles</em> is the best word to go here and no, I will not be changing it.</fn>
             </p>
 
           </subsection>
@@ -1137,10 +1157,10 @@
             <blockquote>
               <p>
                 <q>
-                  In order to make a choice, you need the power to see there is one.
+                  Having power is not nearly as important as what you choose to do with it.
                 </q>
               </p>
-              <attribution>Gloria Steinem</attribution>
+              <attribution>Roald Dahl</attribution>
             </blockquote>
 
             <p>
@@ -1212,16 +1232,16 @@
                     <li>
                       <p>
                         Let <m>m &gt; 0</m> and <m>n &gt; 0</m>; then by induction on <m>n</m> and the definition <m>x^mx^n =x^{m + n}</m>. 
-                        Applying 1.1.3 we deduce that <m>x^n =x^{-m}x^{m+n}</m> and <m>x^m = x^{m + n} x^{-n}</m>. 
-                        Finally inversion of the equation <m>x^mx^n =x^{m + n}</m> and application of 1.1.4 yield <m>x^{-n}x^{-m} = x^{-m + (-n)}</m>. 
+                        Multiplying on both sides by <m>x^{-m}</m> we deduce that <m>x^n =x^{-m}x^{m+n}</m> and <m>x^m = x^{m + n} x^{-n}</m>. 
+                        Finally inversion of the equation <m>x^mx^n =x^{m + n}</m> yields <m>x^{-n}x^{-m} = x^{-m + (-n)}</m>. 
                         Hence the law is established in all cases.
                       </p>
                     </li>
 
                     <li>
                       <p>
-                        If <m>n &gt; 0</m>, it follows from (i) that <m>(x^m)^n =x^{mn}</m>. 
-                        Now assume that <m>n &lt; 0</m>; then <m>(x^m)^n =((x^m)^{-n})\inv =(x^{-mn})\inv =x^{mn}</m> since <m>x^{-mn}x^{mn}=1</m>.
+                        If <m>n &gt; 0</m>, it follows from (1) that <m>(x^m)^n =x^{mn}</m>. 
+                        Now assume that <m>n &lt; 0</m>; then <m>(x^m)^n =((x^m)^{-n})\inv =(x^{-mn})\inv =x^{mn}</m> since <m>x^{-mn}x^{mn}=e</m>.
                       </p>
                     </li>
                   </ol>
@@ -1232,6 +1252,15 @@
           </subsection>
 
           <subsection xml:id="subsec-order"><title>Order</title>
+
+            <blockquote>
+              <p>
+                <q>
+                  Good order is the foundation of all things.
+                </q>
+              </p>
+              <attribution>Edmund Burke</attribution>
+            </blockquote>
             
             <definition xml:id="def-order"><title>Order</title>
               <statement>
@@ -1257,18 +1286,12 @@
               </statement>
             </definition>
 
-            <convention>
+            <aside>
               <p>
                 Some authors use the notation <m>\#G</m> or <m>o(G)</m> to refer to the order of a group.
                 We won't name names, but they know who they are.
               </p>
-            </convention>
-
-            <exploration>
-              <p>
-                What do you think should be the default notation for the order of a group? Discuss.
-              </p>
-            </exploration>
+            </aside>
       
             <example xml:id="ex-order"><title>Order Examples</title>
               <p>
@@ -1582,6 +1605,11 @@
                 </ol>
               </p>
             </example>
+
+            <figure xml:id="figure-d4"><title>Elements of <m>D_4</m></title>
+              <caption>Elements of <m>D_4</m>. <url href="https://q.uiver.app/#q=WzAsNTYsWzAsMSwiQiJdLFswLDMsIkMiXSxbMiwxLCJBIl0sWzIsMywiRCJdLFs0LDEsIkMiXSxbNiwxLCJCIl0sWzYsMywiQSJdLFs0LDMsIkQiXSxbOCwxLCJEIl0sWzgsMywiQSJdLFsxMCwxLCJDIl0sWzEwLDMsIkIiXSxbMTIsMSwiQSJdLFsxNCwxLCJEIl0sWzE0LDMsIkMiXSxbMTIsMywiQiJdLFswLDUsIkEiXSxbMiw1LCJCIl0sWzAsNywiRCJdLFsyLDcsIkMiXSxbNCw1LCJDIl0sWzYsNSwiRCJdLFs0LDcsIkIiXSxbNiw3LCJBIl0sWzgsNSwiRCJdLFsxMCw1LCJBIl0sWzEwLDcsIkIiXSxbOCw3LCJDIl0sWzEyLDUsIkIiXSxbMTQsNywiRCJdLFsxMiw3LCJBIl0sWzE0LDUsIkMiXSxbNSwwLCI5MFxcZGVncmVlIl0sWzksMCwiMTgwXFxkZWdyZWUiXSxbMTMsMCwiMjcwXFxkZWdyZWUiXSxbNywyLCJcXGJ1bGxldCIsWzAsMCwxMDAsMV1dLFs5LDQsIlxcYnVsbGV0IixbMCwwLDEwMCwxXV0sWzExLDIsIlxcYnVsbGV0IixbMCwwLDEwMCwxXV0sWzE1LDIsIlxcYnVsbGV0IixbMCwwLDEwMCwxXV0sWzEzLDQsIlxcYnVsbGV0IixbMCwwLDEwMCwxXV0sWzEsOCwiXFxidWxsZXQiLFswLDAsMTAwLDFdXSxbMyw2LCJcXGJ1bGxldCIsWzAsMCwxMDAsMV1dLFs3LDYsIlxcYnVsbGV0IixbMCwwLDEwMCwxXV0sWzExLDYsIlxcYnVsbGV0IixbMCwwLDEwMCwxXV0sWzE1LDYsIlxcYnVsbGV0IixbMCwwLDEwMCwxXV0sWzExLDQsIlxcYnVsbGV0IixbMCwwLDEwMCwxXV0sWzE1LDgsIlxcYnVsbGV0IixbMCwwLDEwMCwxXV0sWzExLDgsIlxcYnVsbGV0IixbMCwwLDEwMCwxXV0sWzE1LDQsIlxcYnVsbGV0IixbMCwwLDEwMCwxXV0sWzcsOCwiXFxidWxsZXQiLFswLDAsMTAwLDFdXSxbMSw0LCJmIixbMCwwLDEwMCwxXV0sWzEsMCwiZSJdLFs0LDgsIlxcYnVsbGV0IixbMCwwLDEwMCwxXV0sWzYsOCwiXFxidWxsZXQiLFswLDAsMTAwLDFdXSxbMCw4LCJmIixbMCwwLDEwMCwxXV0sWzIsOCwiXFxidWxsZXQiLFswLDAsMTAwLDFdXSxbMCwyLCIiLDAseyJjb2xvdXIiOlswLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiYmFycmVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMiwzLCIiLDAseyJjb2xvdXIiOlsxMjAsNjAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJzcXVpZ2dseSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzEsMywiIiwyLHsiY29sb3VyIjpbMTgwLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMCwxLCIiLDIseyJjb2xvdXIiOlsyNzAsNjAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs0LDcsIiIsMCx7ImNvbG91ciI6WzE4MCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzQsNSwiIiwyLHsiY29sb3VyIjpbMjcwLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNSw2LCIiLDIseyJjb2xvdXIiOlswLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiYmFycmVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNyw2LCIiLDAseyJjb2xvdXIiOlsxMjAsNjAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJzcXVpZ2dseSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzgsMTAsIiIsMCx7ImNvbG91ciI6WzE4MCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzgsOSwiIiwyLHsiY29sb3VyIjpbMTIwLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoic3F1aWdnbHkifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxMCwxMSwiIiwwLHsiY29sb3VyIjpbMjcwLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbOSwxMSwiIiwyLHsiY29sb3VyIjpbMCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImJhcnJlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzEyLDE1LCIiLDIseyJjb2xvdXIiOlswLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiYmFycmVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMTIsMTMsIiIsMCx7ImNvbG91ciI6WzEyMCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6InNxdWlnZ2x5In0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMTMsMTQsIiIsMCx7ImNvbG91ciI6WzE4MCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzE1LDE0LCIiLDIseyJjb2xvdXIiOlsyNzAsNjAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxNiwxNywiIiwyLHsiY29sb3VyIjpbMCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImJhcnJlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzE2LDE4LCIiLDAseyJjb2xvdXIiOlsxMjAsNjAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJzcXVpZ2dseSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzE3LDE5LCIiLDIseyJjb2xvdXIiOlsyNzAsNjAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxOCwxOSwiIiwwLHsiY29sb3VyIjpbMTgwLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMjAsMjIsIiIsMCx7ImNvbG91ciI6WzI3MCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzIwLDIxLCIiLDIseyJjb2xvdXIiOlsxODAsNjAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyMSwyMywiIiwyLHsiY29sb3VyIjpbMTIwLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoic3F1aWdnbHkifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyMiwyMywiIiwwLHsiY29sb3VyIjpbMCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImJhcnJlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzI0LDI1LCIiLDAseyJjb2xvdXIiOlsxMjAsNjAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJzcXVpZ2dseSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzI0LDI3LCIiLDIseyJjb2xvdXIiOlsxODAsNjAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyNSwyNiwiIiwwLHsiY29sb3VyIjpbMCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImJhcnJlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzI3LDI2LCIiLDIseyJjb2xvdXIiOlsyNzAsNjAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyOCwzMCwiIiwyLHsiY29sb3VyIjpbMCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImJhcnJlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzI4LDMxLCIiLDAseyJjb2xvdXIiOlsyNzAsNjAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFszMSwyOSwiIiwwLHsiY29sb3VyIjpbMTgwLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMzAsMjksIiIsMix7ImNvbG91ciI6WzEyMCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6InNxdWlnZ2x5In0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMzIsMzUsInIiLDIseyJjdXJ2ZSI6LTN9XSxbMzMsMzcsIiIsMCx7ImN1cnZlIjotNH1dLFszNywzNiwiIiwwLHsiY3VydmUiOi00fV0sWzM0LDM4LCIiLDAseyJjdXJ2ZSI6LTR9XSxbMzgsMzksIiIsMCx7ImN1cnZlIjotNH1dLFszOSwzNywiIiwwLHsiY3VydmUiOi00fV0sWzQxLDQyLCJzIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiYXJyb3doZWFkIn19fV0sWzQ5LDQ1LCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJhcnJvd2hlYWQifX19XSxbNDYsNDUsIiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6ImFycm93aGVhZCJ9fX1dLFs1MCw0MCwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiYXJyb3doZWFkIn19fV0sWzUyLDUzLCJcXHRleHR7SG9yaXpvbnRhbCBGbGlwfSIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs1NCw1NSwiXFx0ZXh0e1ZlcnRpY2FsIEZsaXB9IiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV1d" visual="">Quiver</url></caption>
+              <image source="images/D4.png" width="100%"/>
+            </figure>
 
             <remark>
               <p>
@@ -2064,6 +2092,13 @@
                 <fn>For those interested, <m>\psi</m> is used for inner automorphisms, <m>\rho</m> is used permutation representations corresponding to group actions, and <m>\lambda</m> is used for permutation representations of the left regular action.</fn>
               </p>
             </convention>
+
+            <aside>
+              <p>
+                Some folk use <m>f</m> for homomorphisms as well as functions that are not homomorphisms. 
+                They should be avoided and probably smell weird.
+              </p>
+            </aside>
       
             <p>
               Intuitively, a group homomorphism preserves the algebraic structure of the group, while allowing us to compare and relate different groups. 
@@ -2087,12 +2122,6 @@
 
                   <li>
                     <p>
-                      The function <m>\varphi:\Z\to\Z/5</m> given by <m>\varphi(a)=[a]</m> is a homomorphism.
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
                       The <em>sign homomorphism</em><idx><h>sign homomorphism</h></idx> <m>\sign: S_n\to \{-1,1\}</m> that sends even permuations to <m>1</m> and odd permutations to <m>-1</m> is a homomorphism.
                     </p>
                   </li>
@@ -2111,7 +2140,7 @@
       
                   <li>
                     <p>
-                      For any positive integer <m>n</m> the map determinant map <idx><h>determinant map</h></idx> <m>\det: \operatorname{GL}_n(\C) \to (\C^\times, \cdot)</m> is a group homomorphism.
+                      For any positive integer <m>n</m>, the map determinant map <idx><h>determinant map</h></idx> <m>\det: \operatorname{GL}_n(\C) \to (\C^\times, \cdot)</m> is a group homomorphism.
                     </p>
                   </li>
                 </ol>
@@ -2318,8 +2347,6 @@
               </statement>
             </definition>
       
-            
-      
             <p>
               Intuitively, a group isomorphism establishes a one-to-one correspondence between the elements of two groups, such that they have exactly the same algebraic structure. 
               This means that the groups are essentially the same, up to a relabeling of their elements.
@@ -2494,16 +2521,8 @@
                 </p>
               </solution>
             </exercise>
-  
-      
-            <corollary xml:id="cor-composition-of-isos"><title>Composition of Isomorphisms</title>
-              <statement>
-                <p>The composition of two isomorphisms is an isomorphism.</p>
-              </statement>
-            </corollary>
 
-            <!--
-            <exercise xml:id="exe-iso-equivalence-relation"><title>Isomorphisms form Equivalence Relation</title>
+            <theorem xml:id="thm-iso-equivalence-relation"><title>Isomorphisms form <q>Equivalence</q> Relation</title>
               <statement>
                 <p>
                   <ol>
@@ -2527,9 +2546,14 @@
                   </ol>
                 </p>
               </statement>
-            </exercise>
-            -->
 
+              <proof>
+                <p>
+                  Coming soon!
+                </p>
+              </proof>
+            </theorem>
+            
           </subsection>
 
           <subsection xml:id="subsec-automorphisms"><title>Automorphisms</title>
@@ -2551,14 +2575,6 @@
                 </p>
               </statement>
             </definition>
-
-            <remark>
-              <p>
-                A homomorphism from a group to itself is called an <em>endomorphism</em>.
-                <idx><h>endomorphism</h></idx>
-                <fn>Though <em>decaf automorphism</em> has a better ring to it in my opinion.</fn>
-              </p>
-            </remark>
 
             <example xml:id="ex-identity-automorphism">
               <p>
@@ -2612,7 +2628,7 @@
       
             <remark>
               <p>
-                Notice that we have actually shown that the composition of automorphisms is an automorphism, both through <xref ref="cor-composition-of-isos"/> (as automorphisms are isomorphisms) and <xref ref="prop-aut-is-group"/> (as groups are closed under their operation)
+                Notice that we have actually shown that the composition of automorphisms is an automorphism, both through <xref ref="thm-iso-equivalence-relation"/> (as automorphisms are isomorphisms) and <xref ref="prop-aut-is-group"/> (as groups are closed under their operation)
               </p>
             </remark>
       
@@ -2709,14 +2725,14 @@
               <statement>
                 <p>
                   A nonempty subset <m>H</m> of a group <m>G</m> is called a <em>subgroup</em>, denoted <m>H\leq G</m>,  
-                  provided <m>H</m> is a group under the multiplication law of <m>G</m>.
+                  if and only if <m>H</m> is a group under the multiplication law of <m>G</m>.
                   <notation><usage><m>\leq</m></usage><description>Subgroup</description></notation> 
                   <notation><usage><m>H,K</m></usage><description>in group theory, <m>H</m> and <m>K</m> usually denote subgroups.</description></notation>
                   <idx><h>subgroup</h></idx>
                 </p>
       
                 <p>
-                  A subgroup <m>H</m> of a group <m>G</m> is a <em>proper</em> subgroup, denoted <m>H&lt;G</m> if <m>H\neq G</m>.
+                  A subgroup <m>H</m> of a group <m>G</m> is a called <em>proper</em> subgroup, denoted <m>H&lt;G</m>, if and only if <m>H\neq G</m>.
                   <idx><h>proper subgroup</h></idx>
                   <notation><usage><m>&lt;</m></usage><description>Proper subgroup</description></notation> 
                 </p>
@@ -2782,7 +2798,7 @@
                 <ol>
                   <li>
                     <p>
-                      <m>\{e_G\}</m> and <m>G</m> are the <term>trivial subgroups</term> of <m>G</m>.
+                      <m>\{e_G\}</m> and <m>G</m> are subroups of <m>G</m>, which we call the <term>trivial subgroups</term> of <m>G</m>.
                     </p>
                   </li>
       
@@ -2978,14 +2994,15 @@
               </statement>
             </proposition>
 
-            <exercise xml:id="exe-torsion-subgroup"><title>Torsion Subgroup</title>    
+            <exercise xml:id="exe-torsion-subgroup"><title>Torsion Subgroups</title>    
               <statement>
                 <p>
                   <ol>
                     <li>
                       <p>
                         Let <m>G</m> be an abelian group. 
-                        Then the set of elements of finite order, which we denote <m>T</m>, is a subgroup of <m>G</m>, called the <term>torsion subgroup</term><idx><h>torision subgroup</h></idx>.
+                        Then the set of elements of finite order, which we denote <m>T</m>, is a subgroup of <m>G</m>, called the <em>torsion subgroup</em> of <m>G</m>.
+                        <idx><h>torision subgroup</h></idx>
                       </p>
                     </li>
 
@@ -3327,7 +3344,7 @@
           <remark>
             <p>
               Commutator subgroups prove invaluable when it comes to something called <em>abelianization</em><idx><h>abelianization</h></idx>, which is, loosely speaking, a way of "modding out" the non-commutative part of <m>G</m> to obtain a new group that is abelian. 
-              This is seen rigorously in <xref ref="ex-abelianization"/>
+              This is seen rigorously in <xref ref="ex-abelianization"/>.
             </p>
           </remark>
 
@@ -3384,7 +3401,7 @@
 
           <remark>
             <p>
-              This is techincally an specific instance of the UMP for a Presentation, which is not covered here.
+              This is techincally an specific instance of the Universal Mapping Property for a Presentation, which is not covered here.
             </p>
           </remark>
 
@@ -7982,7 +7999,14 @@
     
           <subsection xml:id="subsec-rings"><title>From Rings to Fields</title>
               
-              <blockquote><p><q>I made a lot of mistakes out of the ring, but I never made any in it.</q></p><attribution>Jack Johnson</attribution></blockquote>
+              <blockquote>
+                <p>
+                  <q>
+                    I made a lot of mistakes out of the ring, but I never made any in it.
+                  </q>
+                </p>
+                <attribution>Jack Johnson</attribution>
+              </blockquote>
   
               <definition xml:id="def-ring"><title>Ring</title>
                 <statement>
@@ -7993,21 +8017,21 @@
                   <p>
                     <ul>
                       <li> 
-                          <p>
-                              <m>(R,+)</m> is an <xref text="title" ref="def-abelian"/> with identity element denoted <m>0</m>,
-                          </p>
+                        <p>
+                          <m>(R,+)</m> is an <xref text="title" ref="def-abelian"/> with identity element denoted <m>0</m>,
+                        </p>
                       </li>
 
-                      <li> <title>Associative Multiplication</title>
-                          <p>
-                              <m>\cdot</m> is associative (making <m>(R,\cdot)</m> a <xref text="title" ref="def-monoid"/>)
-                          </p>
+                      <li><title>Associative Multiplication</title>
+                        <p>
+                          <m>\cdot</m> is associative (making <m>(R,\cdot)</m> a <xref text="title" ref="def-monoid"/>)
+                        </p>
                       </li>
 
-                      <li> <title>Distributive Law</title>
-                          <p>
-                              <m>a \cdot (b + c) = a \cdot b + a \cdot c</m> and <m>(a + b) \cdot c = a \cdot c + b \cdot c</m> hold for all <m>a,b,c \in R</m>.
-                          </p>
+                      <li><title>Distributive Law</title>
+                        <p>
+                          <m>a \cdot (b + c) = a \cdot b + a \cdot c</m> and <m>(a + b) \cdot c = a \cdot c + b \cdot c</m> hold for all <m>a,b,c \in R</m>.
+                        </p>
                       </li>
                     </ul>
                   </p>
@@ -8015,37 +8039,37 @@
                 </statement>
               </definition>
 
-              <p>Here are some basic consequences of the axioms.</p>
+              <p>
+                Here are some basic consequences of the axioms.
+              </p>
   
               <proposition xml:id="prop-ring-arithmetic"><title>Ring Arithmetic</title>
-  
                 <statement>
-                <p>
+                  <p>
                     For any ring <m>R</m> and all <m>a,b \in R</m> we have:
-                </p>
+                  </p>
 
-                <p>
-                  <ol>
-                    <li>
-                      <p>
-                        <m>a \cdot 0 = 0 = 0 \cdot a</m>,
-                      </p>
-                    </li>
-        
-                    <li>
-                      <p>
-                        <m>(-a)b = -(ab) = a(-b)</m>,
-                      </p>
-                    </li>
-        
-                    <li>
-                      <p>
-                        <m>(-a)(-b) = ab</m>.
-                      </p>
-                    </li>
-                  </ol>
-                </p>
-                          
+                  <p>
+                    <ol>
+                      <li>
+                        <p>
+                          <m>a \cdot 0 = 0 = 0 \cdot a</m>,
+                        </p>
+                      </li>
+          
+                      <li>
+                        <p>
+                          <m>(-a)b = -(ab) = a(-b)</m>,
+                        </p>
+                      </li>
+          
+                      <li>
+                        <p>
+                          <m>(-a)(-b) = ab</m>.
+                        </p>
+                      </li>
+                    </ol>
+                  </p>    
                 </statement>
 
                 <proof>
@@ -8055,13 +8079,20 @@
                     <ol>
                       <li>
                         <p>
-                          Let <m>a\in R</m>. Observe that <m>0a=(0+0)a=0a+0a</m> by the distributive law. Subtracting <m>0a</m> from both sides we have <m>0=0a</m>. A similar argument shows that <m>0=a0</m>.
+                          Let <m>a\in R</m>. 
+                          Observe that <m>0a=(0+0)a=0a+0a</m> by the distributive law. 
+                          Subtracting <m>0a</m> from both sides we have <m>0=0a</m>. 
+                          A similar argument shows that <m>0=a0</m>.
                         </p>
                       </li>
 
                       <li>
                         <p>
-                          Let <m>a\in R</m>. Note that <m>-a+a=0</m>. Consider <m>(-1)a+a</m>. Using the distributive law we see that <m>(-1)a+a=a(-1+1)=a(0)=0</m>. Thus <m>-a</m> and <m>(-1)a</m> are both additive inverses of <m>a,</m> making them unique.
+                          Let <m>a\in R</m>. 
+                          Note that <m>-a+a=0</m>. 
+                          Consider <m>(-1)a+a</m>. 
+                          Using the distributive law we see that <m>(-1)a+a=a(-1+1)=a(0)=0</m>. 
+                          Thus <m>-a</m> and <m>(-1)a</m> are both additive inverses of <m>a,</m> making them unique.
                         </p>
                       </li>
                     </ol>
@@ -8077,9 +8108,17 @@
                 </statement>
               </definition>
 
-              <remark><p>Around these parts most of us generally include <m>1</m> in our definition of a ring, referring to a ring without an identity as a <em>rng</em><fn>Get it?</fn>. However, we'll stick with the more classical definition for now.</p></remark>
+              <remark>
+                <p>
+                  Around these parts most of us generally include <m>1</m> in our definition of a ring, referring to a ring without an identity as a <em>rng</em>
+                  <fn>Get it?</fn>. 
+                  However, we'll stick with the more classical definition for now.
+                </p>
+              </remark>
 
-              <p>Some additional consequences.</p>
+              <p>
+                Some additional consequences.
+              </p>
 
               <proposition xml:id="prop-unital-ring-arithmetic"><title>Unital Ring Arithmetic</title>
                 <statement>
@@ -8105,7 +8144,9 @@
                 </statement>
               </proposition>
 
-              <p>We can go deeper.</p>
+              <p>
+                We can go deeper.
+              </p>
 
               <definition xml:id="def-division-ring"><title>Division Ring</title>
                 <statement>
@@ -8115,36 +8156,47 @@
                 </statement>
               </definition>
 
-              <p>We can go <em>deeper</em>.</p>
+              <p>
+                We can go <em>deeper</em>.
+              </p>
 
               <definition xml:id="def-commutative-ring"><title>Commutative Ring</title>
                 <statement>
                   <p>
-                    A ring <m>R</m> is <em>commutative</em> if <m>a \cdot b = b \cdot a</m> holds for all <m>a,b \in R</m>
-                    </p>
-                </statement>
-              </definition>
-
-              <exploration>
-                <p>One could argue that commutative rings should really be called <em>abelian rings</em> to remain consistent with abelian groups. Discuss.</p>
-              </exploration>
-
-              <p>We can go <alert>deeper</alert>.</p>
-
-              <definition xml:id="def-field"><title>Field</title>
-                <statement>
-                  <p>
-                      A ring <m>R</m> is a <em>field</em> if it is a commutative division ring.
+                    A ring <m>R</m> is <em>commutative</em> if <m>a \cdot b = b \cdot a</m> holds for all <m>a,b \in R</m>.
                   </p>
                 </statement>
               </definition>
 
-              <p>Phew. That was pretty deep. Let's take a breather and see some examples.</p>
+              <exploration>
+                <p>
+                  One could argue that commutative rings should really be called <em>abelian rings</em> to remain consistent with abelian groups. 
+                  Discuss.
+                </p>
+              </exploration>
+
+              <p>
+                We can go <alert>deeper</alert>.
+              </p>
+
+              <definition xml:id="def-field"><title>Field</title>
+                <statement>
+                  <p>
+                    A ring <m>R</m> is a <em>field</em> if it is a commutative division ring.
+                  </p>
+                </statement>
+              </definition>
+
+              <p>
+                Phew. 
+                That was pretty deep. 
+                Let's take a breather and see some examples.
+              </p>
   
               <example xml:id="ex-ring-examples"><title>Relevant Rings</title>
                 <p>
                   <ol>
-                    <li> <title>Trivial Ring</title>
+                    <li><title>Trivial Ring</title>
                       <p>
                         <m>R=\{0\}</m> is called the <em>trivial ring</em>, or <em>zero ring</em>.<fn>Personally, I am in favor of calling this the <em>bor-ring</em>.</fn>
                       </p>
@@ -8180,7 +8232,7 @@
                       </p>
                     </li>
 
-                    <li> <title>Direct Product of Rings</title>
+                    <li><title>Direct Product of Rings</title>
                       <p>
                         The cartesian product <m>R\times R'</m> of two rings <m>R</m> and <m>R'</m> has a natural ring structure with addition and multiplication defined componentwise: 
                         <me>(a,b)+(c,d)=(a+c,b+d)</me> <me>(a,b)\cdot(c,d)=(a\cdot c,b\cdot d)</me>
@@ -8193,18 +8245,24 @@
               <exercise xml:id="exe-1-is-0"><title><m>1=0</m></title>
                 <statement>
                   <p>
-                    Let <m>R</m> be a ring. Prove that <m>R=\{0\}</m> if and only if <m>1=0</m>.
+                    Let <m>R</m> be a ring. 
+                    Prove that <m>R=\{0\}</m> if and only if <m>1=0</m>.
                   </p>
                 </statement>
                 <solution>
                   <p>
-                     Notice that in the trivial ring <m>0=1</m>. Conversely, if <m>1 = 0</m> in a ring, then <m>R = \{0\}</m>, since in this case for all <m>a</m>, we have <m>a \cdot 0 = 0</m> and hence <m>a = a \cdot 1 = a \cdot 0 = 0</m>.
+                    Notice that in the trivial ring <m>0=1</m>. 
+                    Conversely, if <m>1 = 0</m> in a ring, then <m>R = \{0\}</m>, since in this case for all <m>a</m>, we have <m>a \cdot 0 = 0</m> and hence <m>a = a \cdot 1 = a \cdot 0 = 0</m>.
                   </p>
                 </solution>
               </exercise>
 
               <exercise><title>Direct Product Preservations</title>
-              <p>Let <m>R</m> and <m>S</m> be rings. The Cartesian product <m>R\times S</m> is commutative if and only if <m>R</m> and <m>S</m> are commutative. Similarly, <m>R\times S</m> has identity if and only if both <m>R</m> and <m>S</m> do as well.</p>
+                <p>
+                  Let <m>R</m> and <m>S</m> be rings. 
+                  The Cartesian product <m>R\times S</m> is commutative if and only if <m>R</m> and <m>S</m> are commutative. 
+                  Similarly, <m>R\times S</m> has identity if and only if both <m>R</m> and <m>S</m> do as well.
+                </p>
               </exercise>
 
               <example><title>Less Relevant Rings</title>
@@ -8212,9 +8270,12 @@
                   <ol>
                     <li xml:id="list-opposite-ring"><title>Opposite Day</title>
                       <p>
-                        Given a ring <m>R</m>, let <m>R^{op}</m> denote the “opposite ring''. This is the same underlying set as <m>R</m> equipped with the same rule for <m>+</m> as <m>R</m>, but with multiplication rule (which I will write here as <m>\cdot_{op}</m>) redefined to be <m>a \cdot_{op} b := b a</m> (where <m>ba</m> refers to the original multiplication rule for <m>R</m>). Then <m>R^{op}</m> is also a ring
+                        Given a ring <m>R</m>, let <m>R^{op}</m> denote the “opposite ring''. 
+                        This is the same underlying set as <m>R</m> equipped with the same rule for <m>+</m> as <m>R</m>, but with multiplication rule (which I will write here as <m>\cdot_{op}</m>) redefined to be <m>a \cdot_{op} b := b a</m> (where <m>ba</m> refers to the original multiplication rule for <m>R</m>). 
+                        Then <m>R^{op}</m> is also a ring
                       </p>
                     </li>
+
                     <li><title>The Real Hamiltonian Quaternion Ring</title>
                       <p>
                         Let <m>i,j,k</m> be formal symbols and set <m>{\mathbb{H}}</m> to be the four dimensional <m>{\mathbb{R}}</m>-vector space consisting of all expressions of the form <m>a + bi + cj + dk</m> with <m>a,b,c,d \in {\mathbb{R}}</m>. Addition is vector space addition: 
@@ -8241,9 +8302,11 @@
                       </p>
                     </li>
 
-                    <li> <title>Function Ring</title>
+                    <li><title>Function Ring</title>
                       <p>
-                        If <m>X</m> is a set and <m>R</m> is a ring, let <m>\operatorname{Fun}(X, R)</m> be the collection of set theoretic functions from <m>X</m> to <m>R</m>, and define <m>(f + g)(x) = f(x) + g(x)</m> and <m>(f \cdot g)(x) := f(x) \cdot g(x)</m>. Then <m>\operatorname{Fun}(X,R)</m> is a ring. If <m>X</m> is a finite set and <m>|X|=n</m>, then <m>\operatorname{Fun}(X,R)</m> may be identified with <m>R^n=\underbrace{R \times \cdots \times R}_n</m>, the direct product of <m>n</m> copies of <m>R</m>.
+                        If <m>X</m> is a set and <m>R</m> is a ring, let <m>\operatorname{Fun}(X, R)</m> be the collection of set theoretic functions from <m>X</m> to <m>R</m>, and define <m>(f + g)(x) = f(x) + g(x)</m> and <m>(f \cdot g)(x) := f(x) \cdot g(x)</m>. 
+                        Then <m>\operatorname{Fun}(X,R)</m> is a ring.
+                         If <m>X</m> is a finite set and <m>|X|=n</m>, then <m>\operatorname{Fun}(X,R)</m> may be identified with <m>R^n=\underbrace{R \times \cdots \times R}_n</m>, the direct product of <m>n</m> copies of <m>R</m>.
                       </p>
                     </li>
                     
@@ -8253,134 +8316,190 @@
                       </p>
 
                       <p>
-                        Then <m>\operatorname{End}_{Ab}(A)</m> is a ring with addition <m>(f + g)(a) := f(a) + g(a)</m> and multiplication <m>f \cdot g := f \circ g</m>. This is almost always a non-commutative ring.
+                        Then <m>\operatorname{End}_{Ab}(A)</m> is a ring with addition <m>(f + g)(a) := f(a) + g(a)</m> and multiplication <m>f \cdot g := f \circ g</m>. 
+                        This is almost always a non-commutative ring.
                       </p>
                     </li>
                   </ol>
                 </p>
               </example>
 
-              <p>Here is a nice generalization.</p>
+              <p>
+                Here is a nice generalization that will prove usful quite a few times down the road.
+              </p>
 
               <theorem xml:id="thm-binomial-thm-rings"><title>Binomial Theorem for Commutative Rings</title>
                 <statement>
                   <p>
                     For any commutative ring <m>R</m> and any elements <m>a</m> and <m>b</m> in <m>R</m>, we have:
-                    <me>(a+b)^n = \sum_{i=0}^n {n\choose i} a^{n-i}b^i</me>
+                    <me>
+                      (a+b)^n = \sum_{i=0}^n {n\choose i} a^{n-i}b^i
+                    </me>
                     where <m>{n\choose i}</m> is the binomial coefficient, defined as: <m>{n\choose i} = \frac{n!}{i!(n-i)!}</m> with integers <m>n</m> and <m>i</m> such that <m>0\le i\le n</m>.
                   </p>
                 </statement>
               </theorem>         
   
           </subsection>  
+    
+        </section>
+
+        <section xml:id="sec-units-zerodivisors"><title>Units and Zerodivisors</title>
 
           <subsection xml:id="subsec-units"><title>Absolute Units</title>
 
-          <blockquote><p><q>There is more power in unity than division.</q></p><attribution>Emmanuel Cleaver</attribution></blockquote>
-
-          <definition xml:id="def-unit"><title>Unit</title>
-                <statement>
-                  <p>
-                    An element <m>u</m> of a unital ring <m>R</m> with <m>1\neq 0</m> is called a <em>unit</em> there exists <m>v\in R</m> such that <m>uv=1</m> and <m>vu=1</m>. In case such <m>v</m> exists, it is unique, it is called the inverse of <m>u</m> and denoted by <m>u^{-1}</m>.
-                  </p>
-                </statement>
-          </definition>
-  
-          <definition xml:id="def-group-of-units"><title>Group of Units</title>
-            <statement>
+            <blockquote>
               <p>
-                The set of units of a non-trivial unital ring <m>R</m> is denoted <m>R^\times</m>. This forms a group <m>(R^\times,\cdot)</m> with respect to multiplication.
+                <q>
+                  There is more power in unity than division.
+                </q>
               </p>
-            </statement>
-          </definition>
+              <attribution>Emmanuel Cleaver</attribution>
+            </blockquote>
 
-          <p>Finally, we have a formal definition for groups of units.</p>
+            <definition xml:id="def-unit"><title>Unit</title>
+              <statement>
+                <p>
+                  An element <m>u</m> of a unital ring <m>R</m> with <m>1\neq 0</m> is called a <em>unit</em> there exists <m>v\in R</m> such that <m>uv=1</m> and <m>vu=1</m>. 
+                  If such a <m>v</m> exists, it is unique, it is called the inverse of <m>u</m> and denoted by <m>u^{-1}</m>.
+                </p>
+              </statement>
+            </definition>
+    
+            <definition xml:id="def-group-of-units"><title>Group of Units</title>
+              <statement>
+                <p>
+                  The set of units of a non-trivial unital ring <m>R</m> is denoted <m>R^\times</m>. 
+                  This forms a group <m>(R^\times,\cdot)</m> with respect to multiplication.
+                </p>
+              </statement>
+            </definition>
 
-          <exercise xml:id="exe-group-of-units-is-a-group"><title>Sweet, Sweet Rigor</title>
             <p>
-              The group of units is indeed a group <m>(R^\times,\cdot)</m> with respect to multiplication.
+              Finally, we have a formal definition for groups of units.
             </p>
-          </exercise>
 
-          <p>Well, that was validating.<fn>Not as validating as it will be when we prove that matrix multiplication is associative, finally allowing us to complete the proof that <m>\GL_n(F)</m> is indeed a group. Soon...</fn> Months in the making. But enough vindication: we move forward. It's all we've ever known.</p>
-
-          <theorem xml:id="thm-units-in-fields"><title>Units in Fields</title>
-            <p>
-              Let <m>F</m> be a field. Prove that every non-zero element of <m>F</m> is a unit. In symbols, show <m>F^\times=F\setminus\{0\}</m>.
-            </p>
-          </theorem>
-
-          <remark><p><xref ref="thm-units-in-fields"/> is usually the standard way of proving that something is a field.</p></remark>
-
-          <p>If you'll remember all the way back to <xref ref="ex-group-of-units"/>, you'll see that we verified <xref ref="thm-units-in-fields"/> for <m>\Q,\R,</m> and <m>\C</m>. This also explains why <m>\Z^\times</m> and <m>\Z/n^\times</m> had a different structure: they weren't fields.</p>
-
-          <example xml:id="zp-field"><title><m>\Z/p</m> is a Field!</title>
-            <p>In <xref ref="exe-group-of-units-in-zp"/> we showed that <m>\Z/p^\times=\Z/p\sm\{0\}</m>. Thus <m>\Z/p</m> is a field for all primes <m>p</m>.</p>
-          </example>
-
-          <exercise xml:id="exe-matrices-and-units"><title>Matrices and Units</title>
-            <p>
-              For any field <m>F</m> we have <m>\operatorname{M}_{n}(F)^\times = \operatorname{GL}_n(F)</m>.
-            </p>
-          </exercise>
-
-          <remark><p>Units in matrix rings are called <em>invertible matrices</em>, but they aren't very useful and we'll probably never see them again.<fn>That was a joke. I'm very funny.</fn></p></remark>
-
-          <exercise xml:id="exe-gaussian-units"><title>Gaussian Units</title>
-            <statement>
+            <exercise xml:id="exe-group-of-units-is-a-group"><title>Sweet, Sweet Rigor</title>
               <p>
-                Let <m>\Z[i] = \{a + bi \mid a,b \in \Z\}</m> be the ring of Gaussian integers. Define a function 
-                <me>
-                  N:\Z[i]\to\Z, N(a+bi)=a^2+b^2.
-                </me>
+                The group of units is indeed a group <m>(R^\times,\cdot)</m> with respect to multiplication.
+              </p>
+            </exercise>
 
-              
-              <ol>
-                <li>
-                  <p>
-                    Prove that <m>N(\a\b)=N(\a)N(\b)</m> for any <m>\a,\b\in \Z[i]</m>.
-                  </p>
-                </li>
-
-                <li>
-                  <p>
-                    Use the function <m>N</m> to determine the units of <m>\Z[i]</m>.
-                  </p>
-                </li>
-              </ol>
-
-            </p>
-          </statement>
-
-          <solution>
             <p>
-              <ol>
-                <li>
-                  <p>
-                    Let <m>\alpha,\beta\in\Z[i]</m> and behold 
-                    <me>\begin{aligned}N(\alpha\beta)&amp;=N((a+bi)(c+di))\\&amp;=N(ac-bd+adi+bci)\\&amp;=(ac-bd)^2+(ad+bc)^2\\&amp;=((ac)^2-2acbd+(bd)^2)+((ad)^2+2abcd+(bc^2))\\&amp;=a^2c^2+b^2d^2+a^2d^2+b^2c^2\\&amp;=(a^2c^2+a^2d^2)+(b^2c^2+b^2d^2)\\&amp;=a^2(c^2+d^2)+b^2(c^2+d^2)\\N(\alpha)N(\beta)&amp;=(a^2+b^2)(c^2+d^2).\end{aligned}</me> 
-                    So there's that done.
-                  </p>
-                </li>
+              Well, that was validating.
+              <fn>Not as validating as it will be when we prove that matrix multiplication is associative, finally allowing us to complete the proof that <m>\GL_n(F)</m> is indeed a group. Soon...</fn> 
+              Months in the making. 
+              But enough vindication: we move forward. 
+              It's all we've ever known.</p>
 
-                <li>
-                  <p>
-                    Suppose <m>\alpha\beta=1</m>. Then by Part (1) we know 
-                    <me>
-                      N(\alpha)N(\beta)=N(\alpha\beta)=N(1)=1,
-                    </me> 
-                    so <m>(a^2+b^2)(c^2+d^2)=1</m>, with <m>a,b,c,d\in\Z</m>. Thus we have <m>a^2+b^2=1=c^2+d^2</m>. So the units of <m>\Z[i]</m> are <m>\{\pm 1,\pm i\}</m>.
-                  </p>
-                </li>
-              </ol>
+            <theorem xml:id="thm-units-in-fields"><title>Units in Fields</title>
+              <p>
+                Let <m>F</m> be a field. 
+                Prove that every non-zero element of <m>F</m> is a unit. 
+                In symbols, show <m>F^\times=F\setminus\{0\}</m>.
+              </p>
+            </theorem>
+
+            <remark>
+              <p>
+                <xref ref="thm-units-in-fields"/> is often the standard way of proving that something is a field.
+              </p>
+            </remark>
+
+            <p>
+              If you'll remember all the way back to <xref ref="ex-group-of-units"/>, you'll see that we verified <xref ref="thm-units-in-fields"/> for <m>\Q,\R,</m> and <m>\C</m>. 
+              This also explains why <m>\Z^\times</m> and <m>\Z/n^\times</m> had a different structure: they weren't fields.
             </p>
-          </solution>
 
-          </exercise>
+            <example xml:id="zp-field"><title><m>\Z/p</m> is a Field!</title>
+              <p>
+                In <xref ref="exe-group-of-units-in-zp"/> we showed that <m>\Z/p^\times=\Z/p\sm\{0\}</m>. 
+                Thus <m>\Z/p</m> is a field for all primes <m>p</m>.
+              </p>
+            </example>
 
-          <remark><p>The function <m>N</m> in <xref ref="exe-gaussian-units"/> is some incredibly spicy foreshadowing of something called a <em>norm</em> function, which we'll see more of in <xref ref="sec-eds"/>.</p></remark>
+            <exercise xml:id="exe-matrices-and-units"><title>Matrices and Units</title>
+              <p>
+                For any field <m>F</m> we have <m>\operatorname{M}_{n}(F)^\times = \operatorname{GL}_n(F)</m>.
+              </p>
+            </exercise>
 
-          
+            <remark>
+              <p>
+                Units in matrix rings are called <em>invertible matrices</em>, but they aren't very useful and we'll probably never see them again.
+                <fn>That was a joke. I'm very funny.</fn>
+              </p>
+            </remark>
+
+            <exercise xml:id="exe-gaussian-units"><title>Gaussian Units</title>
+              <statement>
+                <p>
+                  Let <m>\Z[i] = \{a + bi \mid a,b \in \Z\}</m> be the ring of Gaussian integers. 
+                  Define a function 
+                  <me>
+                    N:\Z[i]\to\Z, N(a+bi)=a^2+b^2.
+                  </me>
+                <ol>
+                  <li>
+                    <p>
+                      Prove that <m>N(\a\b)=N(\a)N(\b)</m> for any <m>\a,\b\in \Z[i]</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Use the function <m>N</m> to determine the units of <m>\Z[i]</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+              </statement>
+
+              <solution>
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        Let <m>\alpha,\beta\in\Z[i]</m> and behold 
+                        <me>
+                          \begin{aligned}
+                          N(\alpha\beta)&amp;=N((a+bi)(c+di))\\
+                          &amp;=N(ac-bd+adi+bci)\\
+                          &amp;=(ac-bd)^2+(ad+bc)^2\\
+                          &amp;=((ac)^2-2acbd+(bd)^2)+((ad)^2+2abcd+(bc^2))\\
+                          &amp;=a^2c^2+b^2d^2+a^2d^2+b^2c^2\\
+                          &amp;=(a^2c^2+a^2d^2)+(b^2c^2+b^2d^2)\\
+                          &amp;=a^2(c^2+d^2)+b^2(c^2+d^2)\\
+                          N(\alpha)N(\beta)&amp;=(a^2+b^2)(c^2+d^2).
+                          \end{aligned}
+                        </me> 
+                        So there's that done.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Suppose <m>\alpha\beta=1</m>. 
+                        Then by Part (1) we know 
+                        <me>
+                          N(\alpha)N(\beta)=N(\alpha\beta)=N(1)=1,
+                        </me> 
+                        so <m>(a^2+b^2)(c^2+d^2)=1</m>, with <m>a,b,c,d\in\Z</m>. 
+                        Thus we have <m>a^2+b^2=1=c^2+d^2</m>. 
+                        So the units of <m>\Z[i]</m> are <m>\{\pm 1,\pm i\}</m>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </solution>
+            </exercise>
+
+            <remark>
+              <p>
+                The function <m>N</m> in <xref ref="exe-gaussian-units"/> is some incredibly spicy foreshadowing of something called a <em>norm</em> function, which we'll see more of in <xref ref="sec-eds"/>.
+              </p>
+            </remark>
+
           </subsection>
   
           <subsection xml:id="subsec-zerodivisors"><title>A Zero Divided Cannot Stand</title>
@@ -8595,7 +8714,7 @@
               -->
   
           </subsection>
-    
+          
         </section>
     
         <section xml:id="sec-subrings"><title>Subrings</title>
@@ -9159,15 +9278,10 @@
           </theorem>
           
         </section>
+
       </chapter>
 
       <chapter xml:id="ch-idealquot"><title>Ideals and Quotient Rings</title>
-
-        <!--
-       ***************
-        Chapter: Ideals and Quotients
-       ****************
-        -->
         
         <section xml:id="sec-ideals"><title>Ideals</title>
     
@@ -9435,7 +9549,7 @@
               <p>
                 <q>If you make yourself more than just a man, if you devote yourself to an ideal, you become something else entirely.</q>
               </p>
-              <attribution>Liam Neeson, <em>Batman Begins</em></attribution>
+              <attribution>Liam Neeson, Batman Begins</attribution>
             </blockquote>
     
             <definition xml:id="def-generated-ideal"><title>Generated Ideals</title>
@@ -9671,105 +9785,6 @@
     
           </subsection>
     
-          <exercises>
-    
-            <exercisegroup>
-              <title>Computations and Examples</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-    
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-    
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          
-            <exercisegroup>
-              <title>Formal Proofs</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-    
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-    
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          
-            <exercisegroup>
-              <title>Qualifying Exam Problems</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-    
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-    
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          </exercises>
-    
         </section>
 
         <section xml:id="sec-primemax-ideals"><title>Prime and Maximal Ideals</title>
@@ -9778,7 +9793,9 @@
 
             <blockquote>
               <p>
-                <q>I have as much chance of becoming Prime Minister as of being decapitated by a frisbee or of finding Elvis.</q>
+                <q>
+                  I have as much chance of becoming Prime Minister as of being decapitated by a frisbee or of finding Elvis.
+                </q>
               </p>
               <attribution>Boris Johnson, former Prime Minister</attribution>
             </blockquote>
@@ -9970,289 +9987,14 @@
                 </p>
               </proof>
             </theorem>
-    
-            <proposition><title>Qual</title>
-              <statement>
-                <p>
-                  Let <m>R</m> be a commutative ring, and set <m>I = \{r \in  R | rn = 0 \;\text{for some integer}\; n\}</m>. Prove that following assertions.
-                </p>
-        
-                <p>
-                  <ol>
-                    <li>
-                      <m>I</m> is an ideal in <m>R</m>.
-                    </li>
-          
-                    <li>
-                      If <m>R/I</m> is a field, then each element of <m>R</m> is either a unit or in <m>I</m>.
-                    </li>
-                  </ol>
-                </p>
-              </statement>
-    
-              <proof>
-                <p>
-                  <ol>
-                    <li>
-                      <p>
-                        Let <m>x,y\in I</m>. Thus there exists integers <m>n,m</m> such that <m>xn=0=ym</m>. Consider <me>(xy)(nm)=(xn)(ym)=0.</me> Thus <m>xy\in I</m>. Additionally, <m>x+y(mn)=xmn+ymn=0+0=0</m>, and so <m>x+y\in I</m> as well.
-                      </p>
-    
-                      <p>
-                        We now consider <m>I</m> as an additive group. Notice that <m>0n=0</m> and thus the identity is in there. Let <m>x\in I.</m> We examine <m>x\inv</m>. Since <m>xn=0</m> we have <m>(xn)\inv=0</m> and so <m>x\inv n\inv=0</m>. So <m>x\inv\in I</m>. Perfect. We have ourselves a subring.
-                      </p>
-                    </li>
-          
-                    <li>
-                      <p>
-                        Suppose now that <m>R/I</m> is a field. Luckily for us, this makes <m>I</m> a maximal ideal.
-                      </p>
-    
-                      <p>
-                        Let <m>r\in R</m>. If <m>r\in I</m>, great. Suppose its not. Then in <m>R/I</m> <m>r</m> is a unit, since we're in a field now. So <m>ru\in I</m> for some <m>u\in R</m>. Thus <m>run=0</m> for some <m>n\in\Z</m>. Since <m>ru\in I</m> and <m>I</m> a maximal and thus prime ideal, we have <m>u\in I</m> or <m>r\in I</m>, a contradiction.
-                      </p>
-                    </li>
-                  </ol>
-                </p>
-    
-    
-              </proof>
-            </proposition>
-    
-            <proposition><title>Qual</title>
-              <statement>
-                <p>
-                  <ol>
-                    <li>
-                      <p>
-                        Prove that a finite integral domain <m>D</m> must be a field.
-                      </p>
-                    </li>
-          
-                    <li>
-                      <p>
-                        Prove that if <m>R</m> is a commutative ring and <m>P\subseteq R</m> is a prime ideal such that <m>P</m> has finite index as an additive subgroup of <m>R</m>, then <m>P</m> is a maximal ideal. Give an example to show that this implication may fail if the finite index assumption is dropped.
-                      </p>
-                    </li>
-                  </ol>
-                </p>
-              </statement>
-    
-              <proof>
-                <p>
-                  Let <m>D</m> be a finite integral domain.
-                
-                
-                <ol>
-                  <li>
-                    <p>
-                      Let <m>x\in D</m>, and consider the set <m>\{x^n|n\in\N\}</m>. As <m>D</m> is finite there must exist <m>n&lt;m\in\N</m> such that <m>x^n=x^m</m>. In integral domains cancellation is allowed, and thus we can cancel an <m>x^n</m> from both sides, yielding <m>e=x^{m-n}</m>, and thus <m>x\cdot x^{m-n-1}=e</m>, making <m>x</m> a unit of <m>D</m>. Thus <m>D</m> is a field.
-                    </p>
-                  </li>
-      
-                  <li>
-                    <p>
-                      Let <m>R</m> be a commutative ring and <m>P\subseteq R</m> a prime ideal such that <m>P</m> has finite index as an additive subgroup of <m>R</m>.
-                    </p>
-    
-                    <p>
-                      Consider <m>R/P</m>, which is a domain since <m>P</m> is a prime ideal. As <m>[R:P]=n</m> for some <m>n\in\N</m>, we know that <m>|R/P|=n</m>, making it a finite domain. Thus <m>R/P</m> is a field by Part (a), making <m>P</m> maximal by the same theorem as above.
-                    </p>
-    
-                    <p>
-                      Let <m>R=\Z</m> and consider <m>R[x]</m>, in which <m>(x)</m> is a prime ideal. However, <m>R[x]/(x)=\Z</m>, which does not have finite order, nor is it a field.
-                    </p>
-    
-                  </li>
-    
-                </ol>
-              </p>
-    
-              </proof>
-            </proposition>
-    
-            <proposition><title>Qual</title>
-              <statement>
-                <p>
-                  Let <m>R</m> be a commutative ring with identity, and assume <m>1\neq0</m>.
-              </p>
-    
-              <p>
-                  <ol>
-                      <li>
-                          Prove that every maximal ideal of <m>R</m> is a prime ideal.
-                      </li>
-    
-                      <li>
-                          Assume <m>R</m> is a finite ring. Prove that every prime ideal is a maximal ideal.
-                      </li>
-    
-                  </ol>
-              </p>
-              </statement>
-    
-              <proof>
-                <p>
-                    <ol>
-                        <li>
-                            <p>
-                                Let <m>M</m> be a maximal ideal of <m>R</m>. We show that <m>R/M</m> is a field By the Lattice Isomorphism Theorem we know there is a one-to-one correspondence between the ideals of <m>R/M</m> and the ideals of <m>R</m> containing <m>M</m>. However, as <m>M</m> is maximal, the only ideals of <m>R</m> containing <m>M</m> are <m>R</m> and <m>M</m> itself, meaning that <m>R/M</m> has exactly two ideals, making <m>R/M</m> a field.
-                            </p>
-    
-                            <p>
-                                We show that since <m>R/M</m> is a domain, <m>M</m> must be prime. Suppose by way of contradiction that <m>M</m> is not prime, so exist elements <m>x,y\in R</m> such that <m>xy\in M</m> but neither <m>x</m> nor <m>y</m> are in <m>M</m>. Thus <m>xM\cdot yM=xyM=M</m>, making <m>x</m> and <m>y</m> zerodivisors in <m>R/M</m>, contradicting the fact that <m>R/M</m> is a field. Thus <m>M</m> is prime.
-                            </p>
-                        </li>
-    
-            
-                        <li>
-                            <p>
-                                Let <m>R</m> be a finite ring, and let <m>P</m> be a prime ideal in <m>R</m>, making <m>R/P</m> an integral domain by <xref ref="thm-prime-iff-domain"/>. We show <m>R/P</m> is a field. Let <m>a\not\in P</m>, and consider <m>a^n</m> for all <m>n\in\N</m>. As <m>R/P</m> is finite, there exists some <m>k&lt;m\in N</m> such that <m>a^k=a^m</m>. Then <m>a^{m-k}\cdot a^k=a^m=a^k</m>, meaning that <m>a^{m-k}=e</m>. Thus <m>a</m> has inverse <m>a^{m-k-1}</m>, making <m>a</m> a unit. Thus <m>R/P</m> is a field, making <m>P</m> a maximal ideal by <xref ref="thm-maximal-iff-field"/>
-                            </p>
-                        </li>
-                    </ol>
-                </p>            
-          </proof>
-            </proposition>
-    
-            <proposition><title>Qual</title>
-              <statement>
-                <p>
-                  Let <m>R</m> be a commutative ring in which every element <m>x</m> satisfies <m>x^n = x</m> for some <m>n &gt; 1</m>. Show that every prime ideal in R is maximal.
-                </p>
-              </statement>
-    
-              <proof>
-                <p>
-                    Let <m>R</m> be a commutative ring in which every element <m>x</m> satisfies <m>x^n = x</m> for some <m>n &gt; 1</m>. Let <m>P</m> be a prime ideal in <m>R</m>.
-                  </p>
-        
-                  <p>
-                    Let <m>rP\in R/P</m>, meaning <m>r\not\in P</m>. Then <m>(rP)^n=r^nP=rP</m> for some <m>n&gt;1</m>. As <m>R/P</m> is a domain <fn> <xref ref= "thm-prime-iff-domain"/> </fn> we can cancel an <m>r</m> to see that <m>r^{n-1}P=P</m>, and thus <m>rP\cdot r^{n-2}P=P</m>, making <m>rP</m> a unit in <m>R/P</m>. Thus <m>R/P</m> is a field, making <m>P</m> maximal in <m>R</m>.
-                  </p>
-              </proof>
-            </proposition>
-    
-            <proposition ><title>Qual</title>
-              <statement>
-                <p>
-                  Let <m>R</m> be a commutative ring with identity (with <m>1\neq0</m>) and <m>I</m> a proper ideal. Prove there exists a prime ideal <m>p</m> containing <m>I</m> such that whenever <m>p ⊇ q ⊇ I</m> where <m>q</m> is also a prime ideal, then <m>p = q</m>. (Hint: use <xref text="title" ref="lem-zorn"/>.)
-                </p>
-              </statement>
-            </proposition>
       
           </subsection>
-    
-          <exercises>
-    
-            <exercisegroup>
-              <title>Computations and Examples</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-    
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-    
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          
-            <exercisegroup>
-              <title>Formal Proofs</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-    
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-    
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          
-            <exercisegroup>
-              <title>Qualifying Exam Problems</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-    
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-    
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          </exercises>
           
         </section>
     
       </chapter>
 
       <chapter xml:id="ch-domains"><title>Domains</title>
-
-        <!--
-       ***************
-        Chapter: Domains
-       ****************
-        -->
     
         <section xml:id="sec-eds"><title>Euclidian Domains</title>
 
@@ -10270,7 +10012,6 @@
           </definition>
 
           <p>In a Euclidean domain, division with remainder is possible, and the remainder is always smaller than the divisor. This property is similar to the division algorithm for integers, which is what makes Euclidean domains so useful in number theory and algebra.</p>
-
 
           <p>Lets take a look at some examples to deepen our understanding.</p>
 
@@ -10734,105 +10475,6 @@
 
           <remark><p>For those mathematicians who refute the Axiom of Choice (though they are few and far between), noetherian rings provide a haven of sorts within the world of algebra. This is because the existence of a maximal ideal is guarenteed in noetherian rings, given that every ascending chain of ideals stabilizes.</p></remark>
     
-          <exercises>
-    
-            <exercisegroup>
-              <title>Computations and Examples</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-    
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-    
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          
-            <exercisegroup>
-              <title>Formal Proofs</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-    
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-    
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          
-            <exercisegroup>
-              <title>Qualifying Exam Problems</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-    
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-    
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          </exercises>
-    
         </section>
         
       </chapter>
@@ -10841,19 +10483,7 @@
 
     <part xml:id="part-modules"><title>Module Theory</title>
 
-      <!--
-     *****************
-      Module Theory
-     *****************
-      -->
-
       <chapter xml:id="ch-mod"><title>Modules</title>
-
-        <!--
-       ***************
-        Chapter: Modules
-       ****************
-        -->
 
         <section xml:id="sec-defmod"><title>Module Basics</title>
 
@@ -11161,45 +10791,6 @@
               </p>
             </statement>
           </proposition>
-
-          <exercises><title>Qualifying Exam Problems</title>
-          
-              <exercise><title>January 2012 Problem (8)</title>
-                
-                
-                <statement>
-                  <p>
-                    Let <m>N</m> be a submodule of an <m>R</m>-module <m>N</m>. Using <xref text="title" ref="lem-zorn"/>, prove that there is a submodule <m>N'</m> such that 
-                    <ol>
-                      <li>
-                        <p>
-                          <m>N\cap N' = (0)</m>, and 
-                        </p>
-                      </li>
-  
-                      <li>
-                        <p>
-                          <m>N''\cap(N + N')\neq(0)</m> for every non-zero submodule <m>N"</m> of <m>N</m>.
-                        </p>
-                      </li>
-                    </ol>
-                  </p>
-                </statement>
-  
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-  
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-
-          </exercises>
           
         </section>
 
@@ -11598,122 +11189,12 @@
               </p>
             </proof>
           </theorem>
-
-          <exercises>
-
-            <exercisegroup>
-              <title>Computations and Examples</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-  
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-  
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          
-            <exercisegroup>
-              <title>Formal Proofs</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-  
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-  
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          
-            <exercisegroup>
-              <title>Qualifying Exam Problems</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Let <m>R</m> be a commutative ring (with <m>1</m>) and let <m>M</m> be an <m>R</m>-module. Show that if <m>M\neq 0</m> and the only submodules of <m>M</m> are <m>0</m> and <m>M</m>, then there is a maximal ideal I of <m>R</m> such that <m>M</m> is isomorphic to <m>R/I</m>.
-                  </p>
-                </statement>
-  
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-  
-                <solution>
-                  <p>
-                    Let <m>R</m> be a commutative ring (with <m>1</m>) and let <m>M</m> be an <m>R</m>-module such that <m>M\neq 0</m> and the only submodules of <m>M</m> are <m>0</m> and <m>M</m>.
-                  </p>
-      
-                  <p>
-                    As <m>M\neq 0</m>, there exists a non-zero element <m>m\in M</m>. Let <m>f:R\to M</m> be defined by <m>f(r)=rm</m>. Since <m>1\in R</m> and <m>1m=m\in Rm</m>, we have <m>Rm=M</m>. By the First Isomorphism Theorem we see that <m>R/\ker(f)\cong M</m>, making <m>\ker(f)</m> an ideal in <m>R</m>, which we shall conspicuously denote as <m>I</m> henceforth. By the Lattice Isomorphism Theorem the only two ideals of <m>R/I</m> are <m>0</m> and <m>R/I</m>, making <m>R/I</m> a field, and <m>I</m> a maximal ideal in <m>R</m>.
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          </exercises>
           
         </section>
 
       </chapter>
 
       <chapter xml:id="ch-freemod"><title>Free Modules</title>
-
-        <!--
-       ***************
-        Chapter: Free Modules
-       ****************
-        -->
-        
 
         <section xml:id="sec-linear"><title>Linear Independence</title>
 
@@ -11766,7 +11247,6 @@
           </definition>
 
           <example xml:id="exe-cyclic-z-module"><title>Cyclic <m>\Z</m>-module</title>
-
             <p>
               If <m>R = \Z</m>, then (recalling that a <m>\Z</m>-module is the same thing as an abelian group) we see that <m>M</m> is a cyclic <m>\Z</m>-module if and only if <m>M</m> is a cyclic group.
             </p>
@@ -11796,11 +11276,9 @@
             <p>
               In particular, taking <m>n = 1</m>, <m>R</m> is cyclic as a module over itself, since <m>R = R \cdot 1</m>. More generally, for any (two sided) ideal <m>I</m>, <m>R/I</m> is a cyclic left <m>R</m>-module, generated by <m>\ov{1}</m>.
             </p>
-
           </example>
 
           <definition xml:id="def-linearly-independent"><title>Linearly Independent</title>
-
             <statement>
               <p>
                 Let <m>M</m> be an <m>R</m>-module and let <m>A</m> be a subset of <m>M</m>. The set <m>A</m> is <em>linearly independent</em> if whenever <m>r_1,\ldots,r_n \in R</m> and <m>a_1,\ldots ,a_n</m> are distinct elements of <m>A</m> satisfying <m>r_1a_1 + \dots + r_na_n = 0</m>, then <m>r_1 = \dots = r_n = 0</m>. Equivalently, <m>A</m> is linearly independent if and only if given any equation of the form <m>\sum_a r_a a = 0</m> where <m>r_a \in R</m> for all <m>a \in A</m> and <m>r_a = 0</m> for all but a finite number of <m>a'</m>s, we must have <m>r_a = 0</m> for all <m>a</m>.
@@ -11809,7 +11287,6 @@
           </definition>
 
           <definition xml:id="def-linearly-dependent"><title>Linearly Dependent</title>
-
             <statement>
               <p>
                 Let <m>M</m> be an <m>R</m>-module and let <m>A</m> be a subset of <m>M</m>. The set <m>A</m> is <em>linearly dependent</em> if and only if there is an equation of the form <m>\sum_a r_a a = 0</m> where <m>r_a \in R</m> for all <m>a \in A</m>, <m>r_a = 0</m> for all but a finite number of <m>a'</m>s, and <m>r_a \ne 0</m> for at least one <m>a</m>.
@@ -11824,7 +11301,6 @@
           </remark>
 
           <example xml:id="ex-one-element-subsets-of-r-mods"><title>One Element Subsets of <m>R</m>-Modules</title>
-
             <p>
               A one element subset <m>\{m\}</m> of an <m>R</m>-module <m>M</m> is linearly independent if and only if whenever <m>rm =0</m>, we have <m>r = 0</m>.
             </p>
@@ -11835,112 +11311,10 @@
           </example>
 
           <example xml:id="exe-3-linearly-independent-in-z"><title><m>\{3\}</m> Linearly Independent in <m>\Z</m></title>
-
             <p>
               The singleton <m>\{3\}</m> is a linearly independent subset of the <m>\Z</m>-module <m>M = \Z</m>. But it does not generate all of <m>M</m>. The subset <m>\{3, 5\}</m> does generate all of <m>M</m>, but it is not linearly independent, since <m>5 \cdot 3 + (-3) \cdot 5 = 0</m>. More on this later.
             </p>
           </example>
-
-      
-
-          <exercises>
-
-            <exercisegroup>
-              <title>Computations and Examples</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-  
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-  
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          
-            <exercisegroup>
-              <title>Formal Proofs</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-  
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-  
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          
-            <exercisegroup>
-              <title>Qualifying Exam Problems</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-  
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-  
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          </exercises>
           
         </section>
         
@@ -18363,19 +17737,7 @@
 
     <part xml:id="part-fields"><title>Field Theory</title>
 
-      <!--
-     ****************
-      Field Theory
-     ****************
-      -->
-
       <chapter xml:id="ch-irreducible"><title>Irreducibility</title>
-
-        <!--
-       ***************
-        Chapter: Irreduibility
-       ****************
-        -->
 
         <section xml:id="sec-field-of-fractions"><title>Fields of Fractions</title>
 

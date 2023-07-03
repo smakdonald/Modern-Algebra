@@ -8,7 +8,7 @@
 <html lang="en-US">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>May 2022</title>
+<title>Field Theory</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -177,7 +177,7 @@ window.MathJax = {
 <span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
 </ol>
 </li>
-</ol></div></button><span class="treebuttons"><a class="previous-button button" href="appendix-quals.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="appendix-quals.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="section-72.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="section-70.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="app-extras.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="app-notation.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
 <input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
 </div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\def\ann{\operatorname{ann}}
 \newcommand{\Ass}{\operatorname{Ass}}
@@ -625,15 +625,18 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-defn-ex.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Ring Basics</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-defn-ex.html#subsec-rings" class="internal"><span class="title">From Rings to Fields</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-units-zerodivisors.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Units and Zerodivisors</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-defn-ex.html#subsec-rings" class="internal"><span class="title">From Rings to Fields</span></a></div></li>
-<li><div class="toc-item"><a href="sec-defn-ex.html#subsec-units" class="internal"><span class="title">Absolute Units</span></a></div></li>
-<li><div class="toc-item"><a href="sec-defn-ex.html#subsec-zerodivisors" class="internal"><span class="title">A Zero Divided Cannot Stand</span></a></div></li>
+<li><div class="toc-item"><a href="sec-units-zerodivisors.html#subsec-units" class="internal"><span class="title">Absolute Units</span></a></div></li>
+<li><div class="toc-item"><a href="sec-units-zerodivisors.html#subsec-zerodivisors" class="internal"><span class="title">A Zero Divided Cannot Stand</span></a></div></li>
 </ul>
 </li>
-<li><div class="toc-item"><a href="sec-subrings.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Subrings</span></a></div></li>
-<li><div class="toc-item"><a href="sec-ring-hom.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Homomorphisms</span></a></div></li>
-<li><div class="toc-item"><a href="sec-polyrings.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Polynomial Rings</span></a></div></li>
+<li><div class="toc-item"><a href="sec-subrings.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Subrings</span></a></div></li>
+<li><div class="toc-item"><a href="sec-ring-hom.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Homomorphisms</span></a></div></li>
+<li><div class="toc-item"><a href="sec-polyrings.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Polynomial Rings</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -651,7 +654,6 @@ window.MathJax = {
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-ring-quotients.html#subsec-quotient-rings" class="internal"><span class="title">Quotient Rings</span></a></div></li>
 <li><div class="toc-item"><a href="sec-ring-quotients.html#subsec-ring-iso-thms" class="internal"><span class="title">The Ring Isomorphism Theorems</span></a></div></li>
-<li><div class="toc-item"><a href="sec-ring-quotients.html#exercises-1" class="internal"><span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -659,7 +661,6 @@ window.MathJax = {
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-primemax-ideals.html#subsec-prime-ideals" class="internal"><span class="title">Prime Ideals</span></a></div></li>
 <li><div class="toc-item"><a href="sec-primemax-ideals.html#subsec-maximal-ideals" class="internal"><span class="title">Maximal Ideals</span></a></div></li>
-<li><div class="toc-item"><a href="sec-primemax-ideals.html#exercises-2" class="internal"><span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -670,10 +671,7 @@ window.MathJax = {
 <li><div class="toc-item"><a href="sec-eds.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Euclidian Domains</span></a></div></li>
 <li><div class="toc-item"><a href="sec-pids.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Principal Ideal Domains</span></a></div></li>
 <li><div class="toc-item"><a href="subsec-ufds.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Unique Factorization Domains</span></a></div></li>
-<li>
-<div class="toc-item"><a href="subsec-noeth.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Noetherian Rings</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="subsec-noeth.html#exercises-3" class="internal"><span class="codenumber">11.4</span> <span class="title">Exercises</span></a></div></li></ul>
-</li>
+<li><div class="toc-item"><a href="subsec-noeth.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Noetherian Rings</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -684,34 +682,25 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="ch-mod.html" class="internal"><span class="codenumber">12</span> <span class="title">Modules</span></a></div>
 <ul class="structural">
-<li>
-<div class="toc-item"><a href="sec-defmod.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Module Basics</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-defmod.html#exercises-4" class="internal"><span class="codenumber">12.1</span> <span class="title">Qualifying Exam Problems</span></a></div></li></ul>
-</li>
+<li><div class="toc-item"><a href="sec-defmod.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Module Basics</span></a></div></li>
 <li>
 <div class="toc-item"><a href="sec-modhom.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Module Homomorphisms</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-modhom.html#exercises-5" class="internal"><span class="codenumber">12.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-modhom.html#exercises-1" class="internal"><span class="codenumber">12.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
-<li>
-<div class="toc-item"><a href="sec-quote.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Quotient Modules</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-quote.html#exercises-6" class="internal"><span class="codenumber">12.3</span> <span class="title">Exercises</span></a></div></li></ul>
-</li>
+<li><div class="toc-item"><a href="sec-quote.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Quotient Modules</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="ch-freemod.html" class="internal"><span class="codenumber">13</span> <span class="title">Free Modules</span></a></div>
 <ul class="structural">
-<li>
-<div class="toc-item"><a href="sec-linear.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Linear Independence</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-linear.html#exercises-7" class="internal"><span class="codenumber">13.1</span> <span class="title">Exercises</span></a></div></li></ul>
-</li>
+<li><div class="toc-item"><a href="sec-linear.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Linear Independence</span></a></div></li>
 <li>
 <div class="toc-item"><a href="sec-modgen.html" class="internal"><span class="codenumber">13.2</span> <span class="title">Generated Modules</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-modgen.html#exercises-8" class="internal"><span class="codenumber">13.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-modgen.html#exercises-2" class="internal"><span class="codenumber">13.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-bases.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Bases</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-bases.html#exercises-9" class="internal"><span class="codenumber">13.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-bases.html#exercises-3" class="internal"><span class="codenumber">13.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -720,11 +709,11 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-vecbasis.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Existence of Bases</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-vecbasis.html#exercises-10" class="internal"><span class="codenumber">14.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-vecbasis.html#exercises-4" class="internal"><span class="codenumber">14.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-ranknul.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Dimension and Rank-Nullity</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-ranknul.html#exercises-11" class="internal"><span class="codenumber">14.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-ranknul.html#exercises-5" class="internal"><span class="codenumber">14.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -733,20 +722,20 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-basics.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Basics</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-basics.html#exercises-12" class="internal"><span class="codenumber">15.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-basics.html#exercises-6" class="internal"><span class="codenumber">15.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li><div class="toc-item"><a href="subsec-free-modules-and-matrices.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Free Modules and Matrices</span></a></div></li>
 <li>
 <div class="toc-item"><a href="sec-cob.html" class="internal"><span class="codenumber">15.3</span> <span class="title">Change of Basis</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-cob.html#exercises-13" class="internal"><span class="codenumber">15.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-cob.html#exercises-7" class="internal"><span class="codenumber">15.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-elematix.html" class="internal"><span class="codenumber">15.4</span> <span class="title">Elementary Matrices</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-elematix.html#exercises-14" class="internal"><span class="codenumber">15.4</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-elematix.html#exercises-8" class="internal"><span class="codenumber">15.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-operator.html" class="internal"><span class="codenumber">15.5</span> <span class="title">Linear Operators on Free Modules</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-operator.html#exercises-15" class="internal"><span class="codenumber">15.5</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-operator.html#exercises-9" class="internal"><span class="codenumber">15.5</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -755,16 +744,16 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-modpres.html" class="internal"><span class="codenumber">16.1</span> <span class="title">Finitely Presented Modules</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-modpres.html#exercises-16" class="internal"><span class="codenumber">16.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-modpres.html#exercises-10" class="internal"><span class="codenumber">16.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-snf.html" class="internal"><span class="codenumber">16.2</span> <span class="title">Smith Normal Form</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-snf.html#exercises-17" class="internal"><span class="codenumber">16.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-snf.html#exercises-11" class="internal"><span class="codenumber">16.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li><div class="toc-item"><a href="sec-noeth.html" class="internal"><span class="codenumber">16.3</span> <span class="title">Noetherian Rings</span></a></div></li>
 <li>
 <div class="toc-item"><a href="sec-modclass.html" class="internal"><span class="codenumber">16.4</span> <span class="title">Classifications</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-modclass.html#exercises-18" class="internal"><span class="codenumber">16.4</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-modclass.html#exercises-12" class="internal"><span class="codenumber">16.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -773,15 +762,15 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-rcf.html" class="internal"><span class="codenumber">17.1</span> <span class="title">Rational Canonical Form</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-rcf.html#exercises-19" class="internal"><span class="codenumber">17.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-rcf.html#exercises-13" class="internal"><span class="codenumber">17.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-cayley-hamilton.html" class="internal"><span class="codenumber">17.2</span> <span class="title">The Cayley-Hamilton Theorem</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-cayley-hamilton.html#exercises-20" class="internal"><span class="codenumber">17.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-cayley-hamilton.html#exercises-14" class="internal"><span class="codenumber">17.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-jcf.html" class="internal"><span class="codenumber">17.3</span> <span class="title">Jordan Canonical Form</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-jcf.html#exercises-21" class="internal"><span class="codenumber">17.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-jcf.html#exercises-15" class="internal"><span class="codenumber">17.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -795,15 +784,15 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-field-of-fractions.html" class="internal"><span class="codenumber">18.1</span> <span class="title">Fields of Fractions</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-field-of-fractions.html#exercises-22" class="internal"><span class="codenumber">18.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-field-of-fractions.html#exercises-16" class="internal"><span class="codenumber">18.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-roots.html" class="internal"><span class="codenumber">18.2</span> <span class="title">Roots of Unity</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-roots.html#exercises-23" class="internal"><span class="codenumber">18.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-roots.html#exercises-17" class="internal"><span class="codenumber">18.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-irrpoly.html" class="internal"><span class="codenumber">18.3</span> <span class="title">Irredicuble Polynomials</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-irrpoly.html#exercises-24" class="internal"><span class="codenumber">18.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-irrpoly.html#exercises-18" class="internal"><span class="codenumber">18.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -812,23 +801,23 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="field-extension-basics.html" class="internal"><span class="codenumber">19.1</span> <span class="title">Field Extension Basics</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="field-extension-basics.html#exercises-25" class="internal"><span class="codenumber">19.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="field-extension-basics.html#exercises-19" class="internal"><span class="codenumber">19.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-algebraic.html" class="internal"><span class="codenumber">19.2</span> <span class="title">Algebraic Extensions</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-algebraic.html#exercises-26" class="internal"><span class="codenumber">19.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-algebraic.html#exercises-20" class="internal"><span class="codenumber">19.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-closure.html" class="internal"><span class="codenumber">19.3</span> <span class="title">Algebraic Closures</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-closure.html#exercises-27" class="internal"><span class="codenumber">19.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-closure.html#exercises-21" class="internal"><span class="codenumber">19.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-splitting.html" class="internal"><span class="codenumber">19.4</span> <span class="title">Splitting Fields</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-splitting.html#exercises-28" class="internal"><span class="codenumber">19.4</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-splitting.html#exercises-22" class="internal"><span class="codenumber">19.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-separable.html" class="internal"><span class="codenumber">19.5</span> <span class="title">Separability</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-separable.html#exercises-29" class="internal"><span class="codenumber">19.5</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-separable.html#exercises-23" class="internal"><span class="codenumber">19.5</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -837,11 +826,11 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-galext.html" class="internal"><span class="codenumber">20.1</span> <span class="title">Galois Extensions</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-galext.html#exercises-30" class="internal"><span class="codenumber">20.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-galext.html#exercises-24" class="internal"><span class="codenumber">20.1</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li>
 <div class="toc-item"><a href="sec-ftgt.html" class="internal"><span class="codenumber">20.2</span> <span class="title">The Fundamental Theorem of Galois Theory</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-ftgt.html#exercises-31" class="internal"><span class="codenumber">20.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-ftgt.html#exercises-25" class="internal"><span class="codenumber">20.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -883,31 +872,31 @@ window.MathJax = {
 <div class="toc-item"><a href="app-extras.html" class="internal"><span class="codenumber">B</span> <span class="title">Extras</span></a></div>
 <ul class="structural">
 <li>
-<div class="toc-item"><a href="section-67.html" class="internal"><span class="codenumber">B.1</span> <span class="title">Group Theory</span></a></div>
+<div class="toc-item"><a href="section-68.html" class="internal"><span class="codenumber">B.1</span> <span class="title">Group Theory</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-67.html#subsec-magma" class="internal"><span class="title">Grouplike Structures</span></a></div></li>
-<li><div class="toc-item"><a href="section-67.html#subsec-torsion-subgroups" class="internal"><span class="title">Torsion Subgroups (*)</span></a></div></li>
-<li><div class="toc-item"><a href="section-67.html#subsec-composition-series" class="internal"><span class="title">Composition Series</span></a></div></li>
-<li><div class="toc-item"><a href="section-67.html#subsec-solvability" class="internal"><span class="title">Solvable Groups</span></a></div></li>
-<li><div class="toc-item"><a href="section-67.html#subsec-presentations" class="internal"><span class="title">Presentations (*)</span></a></div></li>
+<li><div class="toc-item"><a href="section-68.html#subsec-magma" class="internal"><span class="title">Grouplike Structures</span></a></div></li>
+<li><div class="toc-item"><a href="section-68.html#subsec-torsion-subgroups" class="internal"><span class="title">Torsion Subgroups (*)</span></a></div></li>
+<li><div class="toc-item"><a href="section-68.html#subsec-composition-series" class="internal"><span class="title">Composition Series</span></a></div></li>
+<li><div class="toc-item"><a href="section-68.html#subsec-solvability" class="internal"><span class="title">Solvable Groups</span></a></div></li>
+<li><div class="toc-item"><a href="section-68.html#subsec-presentations" class="internal"><span class="title">Presentations (*)</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="section-68.html" class="internal"><span class="codenumber">B.2</span> <span class="title">Ring Theory</span></a></div>
+<div class="toc-item"><a href="section-69.html" class="internal"><span class="codenumber">B.2</span> <span class="title">Ring Theory</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-68.html#subsec-nilradical" class="internal"><span class="title">Nilpotents and the Nilradical (*)</span></a></div></li>
-<li><div class="toc-item"><a href="section-68.html#subsec-group-rings" class="internal"><span class="title">Group Rings (*)</span></a></div></li>
+<li><div class="toc-item"><a href="section-69.html#subsec-nilradical" class="internal"><span class="title">Nilpotents and the Nilradical (*)</span></a></div></li>
+<li><div class="toc-item"><a href="section-69.html#subsec-group-rings" class="internal"><span class="title">Group Rings (*)</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="section-69.html" class="internal"><span class="codenumber">B.3</span> <span class="title">Module Theory</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="section-69.html#subsec-determinants" class="internal"><span class="title">Determinants</span></a></div></li></ul>
+<div class="toc-item"><a href="section-70.html" class="internal"><span class="codenumber">B.3</span> <span class="title">Module Theory</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-70.html#subsec-determinants" class="internal"><span class="title">Determinants</span></a></div></li></ul>
 </li>
-<li>
-<div class="toc-item"><a href="section-70.html" class="internal"><span class="codenumber">B.4</span> <span class="title">Field Theory</span></a></div>
+<li class="active">
+<div class="toc-item"><a href="section-71.html" class="internal"><span class="codenumber">B.4</span> <span class="title">Field Theory</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-70.html#subsec-solvability-by-radicals" class="internal"><span class="title">Solvability by Radicals (*)</span></a></div></li>
-<li><div class="toc-item"><a href="section-70.html#subsec-artins-theorem" class="internal"><span class="title">Artin's Theorem (*)</span></a></div></li>
+<li><div class="toc-item"><a href="section-71.html#subsec-solvability-by-radicals" class="internal"><span class="title">Solvability by Radicals (*)</span></a></div></li>
+<li><div class="toc-item"><a href="section-71.html#subsec-artins-theorem" class="internal"><span class="title">Artin's Theorem (*)</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -920,164 +909,164 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="appendix-quals.html" class="internal"><span class="codenumber">H</span> <span class="title">Qualifying Exams</span></a></div>
 <ul class="structural">
-<li class="active">
-<div class="toc-item"><a href="section-71.html" class="internal"><span class="codenumber">H.1</span> <span class="title">May 2022</span></a></div>
+<li>
+<div class="toc-item"><a href="section-72.html" class="internal"><span class="codenumber">H.1</span> <span class="title">May 2022</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-71.html#subsection-55" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li><div class="toc-item"><a href="section-71.html#subsection-56" class="internal"><span class="title">Section</span></a></div></li>
-<li><div class="toc-item"><a href="section-71.html#subsection-57" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-72.html#subsection-55" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="section-72.html#subsection-56" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-72.html#subsection-57" class="internal"><span class="title">Section</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="section-72.html" class="internal"><span class="codenumber">H.2</span> <span class="title">January 2022</span></a></div>
+<div class="toc-item"><a href="section-73.html" class="internal"><span class="codenumber">H.2</span> <span class="title">January 2022</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-72.html#subsection-58" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li><div class="toc-item"><a href="section-72.html#subsection-59" class="internal"><span class="title">Section</span></a></div></li>
-<li><div class="toc-item"><a href="section-72.html#subsection-60" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-73.html#subsection-58" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="section-73.html#subsection-59" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-73.html#subsection-60" class="internal"><span class="title">Section</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="section-73.html" class="internal"><span class="codenumber">H.3</span> <span class="title">May 2021</span></a></div>
+<div class="toc-item"><a href="section-74.html" class="internal"><span class="codenumber">H.3</span> <span class="title">May 2021</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-73.html#subsection-61" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li><div class="toc-item"><a href="section-73.html#subsection-62" class="internal"><span class="title">Section</span></a></div></li>
-<li><div class="toc-item"><a href="section-73.html#subsection-63" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-74.html#subsection-61" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="section-74.html#subsection-62" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-74.html#subsection-63" class="internal"><span class="title">Section</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="section-74.html" class="internal"><span class="codenumber">H.4</span> <span class="title">January 2021</span></a></div>
+<div class="toc-item"><a href="section-75.html" class="internal"><span class="codenumber">H.4</span> <span class="title">January 2021</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-74.html#subsection-64" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li><div class="toc-item"><a href="section-74.html#subsection-65" class="internal"><span class="title">Section</span></a></div></li>
-<li><div class="toc-item"><a href="section-74.html#subsection-66" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-75.html#subsection-64" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="section-75.html#subsection-65" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-75.html#subsection-66" class="internal"><span class="title">Section</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="section-75.html" class="internal"><span class="codenumber">H.5</span> <span class="title">June 2020</span></a></div>
+<div class="toc-item"><a href="section-76.html" class="internal"><span class="codenumber">H.5</span> <span class="title">June 2020</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-75.html#subsection-67" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li><div class="toc-item"><a href="section-75.html#subsection-68" class="internal"><span class="title">Section</span></a></div></li>
-<li><div class="toc-item"><a href="section-75.html#subsection-69" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-76.html#subsection-67" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="section-76.html#subsection-68" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-76.html#subsection-69" class="internal"><span class="title">Section</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="section-76.html" class="internal"><span class="codenumber">H.6</span> <span class="title">January 2020</span></a></div>
+<div class="toc-item"><a href="section-77.html" class="internal"><span class="codenumber">H.6</span> <span class="title">January 2020</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-76.html#subsection-70" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li><div class="toc-item"><a href="section-76.html#subsection-71" class="internal"><span class="title">Section</span></a></div></li>
-<li><div class="toc-item"><a href="section-76.html#subsection-72" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-77.html#subsection-70" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="section-77.html#subsection-71" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-77.html#subsection-72" class="internal"><span class="title">Section</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="section-77.html" class="internal"><span class="codenumber">H.7</span> <span class="title">May 2019</span></a></div>
+<div class="toc-item"><a href="section-78.html" class="internal"><span class="codenumber">H.7</span> <span class="title">May 2019</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-77.html#subsection-73" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li><div class="toc-item"><a href="section-77.html#subsection-74" class="internal"><span class="title">Section</span></a></div></li>
-<li><div class="toc-item"><a href="section-77.html#subsection-75" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-78.html#subsection-73" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="section-78.html#subsection-74" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-78.html#subsection-75" class="internal"><span class="title">Section</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="section-78.html" class="internal"><span class="codenumber">H.8</span> <span class="title">January 2019</span></a></div>
+<div class="toc-item"><a href="section-79.html" class="internal"><span class="codenumber">H.8</span> <span class="title">January 2019</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-78.html#subsection-76" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li><div class="toc-item"><a href="section-78.html#subsection-77" class="internal"><span class="title">Section</span></a></div></li>
-<li><div class="toc-item"><a href="section-78.html#subsection-78" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-79.html#subsection-76" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="section-79.html#subsection-77" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-79.html#subsection-78" class="internal"><span class="title">Section</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="section-79.html" class="internal"><span class="codenumber">H.9</span> <span class="title">May 2018</span></a></div>
+<div class="toc-item"><a href="section-80.html" class="internal"><span class="codenumber">H.9</span> <span class="title">May 2018</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-79.html#subsection-79" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li><div class="toc-item"><a href="section-79.html#subsection-80" class="internal"><span class="title">Section</span></a></div></li>
-<li><div class="toc-item"><a href="section-79.html#subsection-81" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-80.html#subsection-79" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="section-80.html#subsection-80" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-80.html#subsection-81" class="internal"><span class="title">Section</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="section-80.html" class="internal"><span class="codenumber">H.10</span> <span class="title">May 2017</span></a></div>
+<div class="toc-item"><a href="section-81.html" class="internal"><span class="codenumber">H.10</span> <span class="title">May 2017</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-80.html#subsection-82" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li><div class="toc-item"><a href="section-80.html#subsection-83" class="internal"><span class="title">Section</span></a></div></li>
-<li><div class="toc-item"><a href="section-80.html#subsection-84" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-81.html#subsection-82" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="section-81.html#subsection-83" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-81.html#subsection-84" class="internal"><span class="title">Section</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="section-81.html" class="internal"><span class="codenumber">H.11</span> <span class="title">January 2017</span></a></div>
+<div class="toc-item"><a href="section-82.html" class="internal"><span class="codenumber">H.11</span> <span class="title">January 2017</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-81.html#subsection-85" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li><div class="toc-item"><a href="section-81.html#subsection-86" class="internal"><span class="title">Section</span></a></div></li>
-<li><div class="toc-item"><a href="section-81.html#subsection-87" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-82.html#subsection-85" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="section-82.html#subsection-86" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-82.html#subsection-87" class="internal"><span class="title">Section</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="section-82.html" class="internal"><span class="codenumber">H.12</span> <span class="title">May 2016</span></a></div>
+<div class="toc-item"><a href="section-83.html" class="internal"><span class="codenumber">H.12</span> <span class="title">May 2016</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-82.html#subsection-88" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li><div class="toc-item"><a href="section-82.html#subsection-89" class="internal"><span class="title">Section</span></a></div></li>
-<li><div class="toc-item"><a href="section-82.html#subsection-90" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-83.html#subsection-88" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="section-83.html#subsection-89" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-83.html#subsection-90" class="internal"><span class="title">Section</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="section-83.html" class="internal"><span class="codenumber">H.13</span> <span class="title">January 2016</span></a></div>
+<div class="toc-item"><a href="section-84.html" class="internal"><span class="codenumber">H.13</span> <span class="title">January 2016</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-83.html#subsection-91" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li><div class="toc-item"><a href="section-83.html#subsection-92" class="internal"><span class="title">Section</span></a></div></li>
-<li><div class="toc-item"><a href="section-83.html#subsection-93" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-84.html#subsection-91" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="section-84.html#subsection-92" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-84.html#subsection-93" class="internal"><span class="title">Section</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="section-84.html" class="internal"><span class="codenumber">H.14</span> <span class="title">January 2015</span></a></div>
+<div class="toc-item"><a href="section-85.html" class="internal"><span class="codenumber">H.14</span> <span class="title">January 2015</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-84.html#subsection-94" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li><div class="toc-item"><a href="section-84.html#subsection-95" class="internal"><span class="title">Section</span></a></div></li>
-<li><div class="toc-item"><a href="section-84.html#subsection-96" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-85.html#subsection-94" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="section-85.html#subsection-95" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-85.html#subsection-96" class="internal"><span class="title">Section</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="section-85.html" class="internal"><span class="codenumber">H.15</span> <span class="title">June 2014</span></a></div>
+<div class="toc-item"><a href="section-86.html" class="internal"><span class="codenumber">H.15</span> <span class="title">June 2014</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-85.html#subsection-97" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li><div class="toc-item"><a href="section-85.html#subsection-98" class="internal"><span class="title">Section</span></a></div></li>
-<li><div class="toc-item"><a href="section-85.html#subsection-99" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-86.html#subsection-97" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="section-86.html#subsection-98" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-86.html#subsection-99" class="internal"><span class="title">Section</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="section-86.html" class="internal"><span class="codenumber">H.16</span> <span class="title">January 2014</span></a></div>
+<div class="toc-item"><a href="section-87.html" class="internal"><span class="codenumber">H.16</span> <span class="title">January 2014</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-86.html#subsection-100" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li><div class="toc-item"><a href="section-86.html#subsection-101" class="internal"><span class="title">Section II</span></a></div></li>
-<li><div class="toc-item"><a href="section-86.html#subsection-102" class="internal"><span class="title">Section III</span></a></div></li>
+<li><div class="toc-item"><a href="section-87.html#subsection-100" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="section-87.html#subsection-101" class="internal"><span class="title">Section II</span></a></div></li>
+<li><div class="toc-item"><a href="section-87.html#subsection-102" class="internal"><span class="title">Section III</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="section-87.html" class="internal"><span class="codenumber">H.17</span> <span class="title">June 2012</span></a></div>
+<div class="toc-item"><a href="section-88.html" class="internal"><span class="codenumber">H.17</span> <span class="title">June 2012</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-87.html#subsection-103" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li><div class="toc-item"><a href="section-87.html#subsection-104" class="internal"><span class="title">Section</span></a></div></li>
-<li><div class="toc-item"><a href="section-87.html#subsection-105" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-88.html#subsection-103" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="section-88.html#subsection-104" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-88.html#subsection-105" class="internal"><span class="title">Section</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="section-88.html" class="internal"><span class="codenumber">H.18</span> <span class="title">January 2012</span></a></div>
+<div class="toc-item"><a href="section-89.html" class="internal"><span class="codenumber">H.18</span> <span class="title">January 2012</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-88.html#subsection-106" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li><div class="toc-item"><a href="section-88.html#subsection-107" class="internal"><span class="title">Section</span></a></div></li>
-<li><div class="toc-item"><a href="section-88.html#subsection-108" class="internal"><span class="title">Section III</span></a></div></li>
+<li><div class="toc-item"><a href="section-89.html#subsection-106" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="section-89.html#subsection-107" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-89.html#subsection-108" class="internal"><span class="title">Section III</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="section-89.html" class="internal"><span class="codenumber">H.19</span> <span class="title">June 2011</span></a></div>
+<div class="toc-item"><a href="section-90.html" class="internal"><span class="codenumber">H.19</span> <span class="title">June 2011</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-89.html#subsection-109" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li><div class="toc-item"><a href="section-89.html#subsection-110" class="internal"><span class="title">Section</span></a></div></li>
-<li><div class="toc-item"><a href="section-89.html#subsection-111" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-90.html#subsection-109" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="section-90.html#subsection-110" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-90.html#subsection-111" class="internal"><span class="title">Section</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="section-90.html" class="internal"><span class="codenumber">H.20</span> <span class="title">June 2010</span></a></div>
+<div class="toc-item"><a href="section-91.html" class="internal"><span class="codenumber">H.20</span> <span class="title">June 2010</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-90.html#subsection-112" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li><div class="toc-item"><a href="section-90.html#subsection-113" class="internal"><span class="title">Section</span></a></div></li>
-<li><div class="toc-item"><a href="section-90.html#subsection-114" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-91.html#subsection-112" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="section-91.html#subsection-113" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-91.html#subsection-114" class="internal"><span class="title">Section</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -1088,320 +1077,17 @@ window.MathJax = {
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-71"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">H.1</span> <span class="title">May 2022</span>
+<span class="type">Section</span> <span class="codenumber">B.4</span> <span class="title">Field Theory</span>
 </h2>
-<section class="subsection" id="subsection-55"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Section I: Group Theory</span>
+<section class="subsection" id="subsec-solvability-by-radicals"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Solvability by Radicals (*)</span>
 </h3>
-<article class="problem example-like" id="problem-1"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">H.1</span><span class="period">.</span><span class="space"> </span><span class="title">Problem 1.</span>
+<div class="para" id="p-3285">Coming soon!</div></section><section class="subsection" id="subsec-artins-theorem"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Artin's Theorem (*)</span>
 </h3>
-<div class="para" id="p-3450">Let <span class="process-math">\(G\)</span> be a finite <span class="process-math">\(p\)</span>-group for some prime <span class="process-math">\(p\)</span> and <span class="process-math">\(N\neq {1}\)</span> a normal subgroup of <span class="process-math">\(G\text{.}\)</span> Prove that <span class="process-math">\(N\cap Z(G)\neq{1}\text{,}\)</span> where <span class="process-math">\(Z(G)\)</span> is the center of <span class="process-math">\(G\text{.}\)</span>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-163" id="solution-163"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-163"><div class="solution solution-like">
-<div class="para" id="p-3451">Let <span class="process-math">\(G\)</span> be a finite <span class="process-math">\(p\)</span>-group for some prime <span class="process-math">\(p\)</span> and <span class="process-math">\(N\neq {1}\)</span> a normal subgroup of <span class="process-math">\(G\text{.}\)</span>
-</div> <div class="para logical" id="p-3452">
-<div class="para">First, we show that the center of <span class="process-math">\(G\)</span> is nontrivial. Suppose by way of contradiction that <span class="process-math">\(Z(G)=\{e\}\text{.}\)</span> We examine the conjugacy classes of <span class="process-math">\(G\text{.}\)</span> From the <a href="" class="xref" data-knowl="./knowl/thm-class-eq.html" title="Theorem 5.41: Class Equation">Class Equation</a>, we know</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-class-eq.html ./knowl/thm-conjugacy-divides-order.html ./knowl/thm-lagrange.html">
-\begin{equation*}
-|G| = |Z(G)| + \sum_i^r [G : C_G(g_i)].
-\end{equation*}
-</div>
-<div class="para">Note that <span class="process-math">\(|G|=p^n\)</span> for some <span class="process-math">\(n\in\N\text{,}\)</span> meaning that the only divisors of <span class="process-math">\(|G|\)</span> are powers of <span class="process-math">\(p\text{.}\)</span> In finite groups, each conjugacy class must divide the order of the group by <a href="" class="xref" data-knowl="./knowl/thm-conjugacy-divides-order.html" title="Theorem 5.40: Size of Conjugacy Class Divides |G|">Theorem 5.40</a>. By <a href="" class="xref" data-knowl="./knowl/thm-lagrange.html" title="Theorem 4.13: Lagrange's Theorem">Lagrange's Theorem</a>, <span class="process-math">\([G : C_G(g_i)]=\frac{|G|}{|C_G(g_i)|}=\frac{p^n}{p^m}=p^k\text{,}\)</span> where <span class="process-math">\(m,k\in\N\text{.}\)</span> Since <span class="process-math">\(|Z(G)|=1\text{,}\)</span> we see that <span class="process-math">\(\sum_i^r |G : C_G(g_i)|\bigg|p^n-1\text{,}\)</span> which is impossible given that <span class="process-math">\(p^{n-1} \not\mid p^n\text{.}\)</span> Thus <span class="process-math">\(Z(G)\neq\{e\}\text{.}\)</span>
-</div>
-</div> <div class="para logical" id="p-3453">
-<div class="para">As <span class="process-math">\(N\nsg G\text{,}\)</span> by <a href="" class="xref" data-knowl="./knowl/cor-normal-union-of-conjugacy-classes.html" title="Corollary 5.15: Normal Subgroups are Unions of Conjugacy Classes">Corollary 5.15</a> it is a union of conjugacy classes of the elements it contains, one of which is <span class="process-math">\(e\text{.}\)</span> Assume by way of contradiction that <span class="process-math">\(N\cap Z(G)={e}\text{,}\)</span> meaning that <span class="process-math">\(e\)</span> is the only element in <span class="process-math">\(N\)</span> whose conjugacy class is a singleton. This yields</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-normal-union-of-conjugacy-classes.html ./knowl/thm-lagrange.html">
-\begin{equation*}
-|N| = 1+ \sum_i^r |G : C_G(g_i)|.
-\end{equation*}
-</div>
-<div class="para">However, by <a href="" class="xref" data-knowl="./knowl/thm-lagrange.html" title="Theorem 4.13: Lagrange's Theorem">Lagrange's Theorem</a> <span class="process-math">\(N\)</span> must also be a <span class="process-math">\(p-\)</span>group, and thus by an analogous element counting argument as above we see that there exists some <span class="process-math">\(x\in N\)</span> such that <span class="process-math">\(C_G(x)=\{x\}\text{,}\)</span> or that <span class="process-math">\(gxg\inv=x\)</span> for all <span class="process-math">\(g\in G\text{.}\)</span> Thankfully, this means that <span class="process-math">\(x\in Z(G)\text{,}\)</span> and thus we have <span class="process-math">\(Z(G)\cap N\neq 1\text{.}\)</span>
-</div>
-</div>
-</div></div>
-</div></article><article class="problem example-like" id="problem-2"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">H.2</span><span class="period">.</span><span class="space"> </span><span class="title">Problem 2.</span>
-</h3>
-<div class="para logical" id="p-3454">
-<div class="para">A non-abelian group of order <span class="process-math">\(27\text{.}\)</span>
-</div>
-<ol class="decimal">
-<li id="li-979"><div class="para" id="p-3455">Prove there exists a non-abelian group of <span class="process-math">\(27\text{.}\)</span>
-</div></li>
-<li id="li-980"><div class="para" id="p-3456">Find, with justification, a presentation of the group you found in part (1).</div></li>
-</ol>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-128" id="hint-128"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-128"><div class="hint solution-like"><div class="para" id="p-3457">Use a semi-direct product.</div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-164" id="solution-164"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-164"><div class="solution solution-like"><div class="para logical" id="p-3458"><ol class="decimal">
-<li id="li-981">
-<div class="para" id="p-3459">Let <span class="process-math">\(C_3 = \langle a \rangle\)</span> be the cyclic group of order <span class="process-math">\(3\text{,}\)</span> and let <span class="process-math">\(C_9 = \langle b \rangle\)</span> be the cyclic group of order <span class="process-math">\(9\text{.}\)</span> Let <span class="process-math">\(\phi \colon C_9 \to \operatorname{Aut}(C_3)\)</span> be the homomorphism defined by <span class="process-math">\(\phi(b^i)(a) = a^i\)</span> for <span class="process-math">\(0 \le i \le 8\text{,}\)</span> where we identify <span class="process-math">\(\operatorname{Aut}(C_3)\)</span> with <span class="process-math">\(C_2\)</span> via the isomorphism <span class="process-math">\(\operatorname{Aut}(C_3) \cong C_2\)</span> given by sending the non-identity automorphism to the generator of <span class="process-math">\(C_2\text{.}\)</span>
-</div>
-<div class="para" id="p-3460">Then the semi-direct product <span class="process-math">\(G = C_3 \rtimes_{\phi} C_9\)</span> has order <span class="process-math">\(27\)</span> and is non-abelian. To see that <span class="process-math">\(G\)</span> is non-abelian, note that <span class="process-math">\(bab^{-1} \neq a\)</span> for any <span class="process-math">\(b \in C_9 \setminus {1}\text{,}\)</span> since <span class="process-math">\(a\)</span> has no non-trivial automorphisms.</div>
-</li>
-<li id="li-982">
-<div class="para" id="p-3461">To find a presentation of <span class="process-math">\(G\text{,}\)</span> we need to identify the generators and relations. Since <span class="process-math">\(C_3\)</span> and <span class="process-math">\(C_9\)</span> are both cyclic, we can take the generators to be <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> respectively. Moreover, since <span class="process-math">\(C_3\)</span> is normal in <span class="process-math">\(G\text{,}\)</span> we have <span class="process-math">\(bab^{-1} = a^i\)</span> for some <span class="process-math">\(i \in {1, 2}\text{.}\)</span>
-</div>
-<div class="para" id="p-3462">To determine the value of <span class="process-math">\(i\text{,}\)</span> note that <span class="process-math">\(C_9\)</span> acts on <span class="process-math">\(C_3\)</span> by automorphisms, and the non-identity automorphism of <span class="process-math">\(C_3\)</span> is inversion <span class="process-math">\(a \mapsto a^{-1}\text{.}\)</span> Since <span class="process-math">\(bab^{-1} \neq a^{-1}\text{,}\)</span> we must have <span class="process-math">\(i = 2\text{.}\)</span>
-</div>
-<div class="para" id="p-3463">Therefore, a presentation of <span class="process-math">\(G\)</span> is given by <span class="process-math">\(\langle a, b \mid a^3 = b^9 = 1, bab^{-1} = a^2\rangle\text{.}\)</span>
-</div>
-</li>
-</ol></div></div></div>
-</div></article><article class="problem example-like" id="problem-3"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">H.3</span><span class="period">.</span><span class="space"> </span><span class="title">Problem 3.</span>
-</h3>
-<div class="para" id="p-3464">Let G be a group of order <span class="process-math">\(2^5\cdot 7^3\text{.}\)</span> Prove that <span class="process-math">\(G\)</span> is not simple.</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-165" id="solution-165"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-165"><div class="solution solution-like">
-<div class="para" id="p-3465">By <a href="" class="xref" data-knowl="./knowl/thm-sylow.html" title="Theorem 6.11: Sylow's Theorem">Sylow's Theorem</a> we know that <span class="process-math">\(\Syl_7(G)\equiv 1\mod{7}\)</span> and <span class="process-math">\(\Syl_7(G)|2^5=32\text{.}\)</span> Thus our options are <span class="process-math">\(1\)</span> and <span class="process-math">\(8\text{.}\)</span> Suppose that <span class="process-math">\(\Syl_7(G)=8\text{.}\)</span>
-</div> <div class="para" id="p-3466">Let <span class="process-math">\(G\)</span> act on <span class="process-math">\(\Syl_7(G)\)</span> by conjugation, yielding the homomorphism <span class="process-math">\(\rho: G \to S_8\)</span> via the <a href="" class="xref" data-knowl="./knowl/thm-permrep.html" title="Theorem 5.5: The Permutation Representation">The Permutation Representation</a>. This map is non-trivial from part (2) of <a href="" class="xref" data-knowl="./knowl/thm-sylow.html" title="Theorem 6.11: Sylow's Theorem">Sylow's Theorem</a>, but <span class="process-math">\(2^5\cdot 7^3\)</span> does not divide <span class="process-math">\(|S_8|=8!\text{,}\)</span> and thus <span class="process-math">\(\rho\)</span> cannot be injective. Then the kernel of this homomorphism is non-trivial, normal subgroup of <span class="process-math">\(G\)</span> by <a href="" class="xref" data-knowl="./knowl/thm-norm-iff-ker.html" title="Theorem 4.44: Normal Subgroup iff Kernel">Theorem 4.44</a>. Thus <span class="process-math">\(G\)</span> is not simple.</div>
-</div></div>
-</div></article></section><section class="subsection" id="subsection-56"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Section</span>
-</h3>
-<article class="problem example-like" id="problem-4"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">H.4</span><span class="period">.</span><span class="space"> </span><span class="title">Problem 4.</span>
-</h3>
-<div class="para" id="p-3467">Let <span class="process-math">\(R\)</span> be a commutative ring with identity, and assume <span class="process-math">\(1\neq0\text{.}\)</span> Let <span class="process-math">\(I\)</span> and <span class="process-math">\(J\)</span> be ideals such that <span class="process-math">\(I + J = R\text{.}\)</span>
-</div> <div class="para logical" id="p-3468"><ol class="decimal">
-<li id="li-983"><div class="para" id="p-derived-li-983">Prove <span class="process-math">\(IJ = I\cap J\text{.}\)</span>
-</div></li>
-<li id="li-984"><div class="para" id="p-derived-li-984">Prove the following special case of <a href="" class="xref" data-knowl="./knowl/thm-sunzi.html" title="Theorem 8.2: Sunzi's Remainder Theorem">Sunzi's Remainder Theorem</a>: There is an isomorphism of rings of the form <span class="process-math">\(R/(I \cap J)\cong R/I \times R/J\text{.}\)</span>
-</div></li>
-</ol></div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-166" id="solution-166"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-166"><div class="solution solution-like">
-<div class="para" id="p-3469">Let <span class="process-math">\(R\)</span> be a commutative ring with identity, and assume <span class="process-math">\(1\neq0\text{.}\)</span> Let <span class="process-math">\(I\)</span> and <span class="process-math">\(J\)</span> be ideals such that <span class="process-math">\(I + J = R\text{.}\)</span>
-</div> <div class="para logical" id="p-3470"><ol class="decimal">
-<li id="li-985">
-<div class="para" id="p-3471">Let <span class="process-math">\(x\in IJ\text{.}\)</span> Thus <span class="process-math">\(x=\sum a_ib_j\text{,}\)</span> where each <span class="process-math">\(a_i\in I\)</span> and <span class="process-math">\(b_j\in J\text{.}\)</span> As <span class="process-math">\(I\)</span> and <span class="process-math">\(J\)</span> are both ideals, each term in this sum is contained both in <span class="process-math">\(I\)</span> and <span class="process-math">\(J\text{.}\)</span> Thus, by absorption, <span class="process-math">\(x\in I\cap J\text{.}\)</span> Hence <span class="process-math">\(IJ\subseteq I\cap J\text{.}\)</span>
-</div>
-<div class="para" id="p-3472">Let <span class="process-math">\(x\in I\cap J\text{.}\)</span> Thus <span class="process-math">\(x\in I\)</span> and <span class="process-math">\(x\in J\text{.}\)</span> Note that as <span class="process-math">\(I+J=R\text{,}\)</span> there exists some <span class="process-math">\(a\in I\)</span> and <span class="process-math">\(b\in J\)</span> such that <span class="process-math">\(a+b=1\text{.}\)</span> So <span class="process-math">\(x=x1=xa+xb\text{.}\)</span> As <span class="process-math">\(x\in I\cap J\)</span> we see that <span class="process-math">\(x=ax+xb\text{,}\)</span> with <span class="process-math">\(a,x\in I\)</span> and <span class="process-math">\(b,x\in J\text{.}\)</span> Thus <span class="process-math">\(x\in IJ\text{,}\)</span> yielding <span class="process-math">\(IJ=I\cap J\text{.}\)</span>
-</div>
-</li>
-<li id="li-986">
-<div class="para" id="p-3473">Let <span class="process-math">\(f:R\to R/I\times R/J\)</span> be defined by <span class="process-math">\(f(x)=(x+I,x+J)\text{.}\)</span>
-</div>
-<div class="para" id="p-3474">Notice that if <span class="process-math">\(x\in I\cap J\text{,}\)</span> we have <span class="process-math">\(f(x)=(I,J)\text{,}\)</span> and so <span class="process-math">\(x\in\ker(f)\text{.}\)</span> Let <span class="process-math">\(x\in\ker(f)\text{.}\)</span> Thus <span class="process-math">\(x+I=I\)</span> and <span class="process-math">\(x+J=J\text{,}\)</span> and so <span class="process-math">\(x\in I\)</span> and <span class="process-math">\(x\in J\text{.}\)</span> Hence <span class="process-math">\(x\in I\cap J\text{,}\)</span> and so <span class="process-math">\(\ker(f)=I\cap J\text{.}\)</span>
-</div>
-<div class="para logical" id="p-3475">
-<div class="para">Observe</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{aligned}
-f(x+y)=&amp;((x+y)+I,(x+y)+J)\\
-=&amp;((x+I)+(y+I),(x+J)+(y+J))\\
-=&amp;((x+I),(x+J))+(y+I),(y+J)\\
-=&amp;f(x)+f(y),
-\end{aligned}
-\end{equation*}
-</div>
-<div class="para">making <span class="process-math">\(f\)</span> a homomorphism of rings.</div>
-</div>
-<div class="para" id="p-3476">Let <span class="process-math">\((a+I,b+J)\in R/I\times R/J\text{.}\)</span> As <span class="process-math">\(R=I+J\text{,}\)</span> we can write <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> as <span class="process-math">\(a_i+a_j\)</span> and <span class="process-math">\(b_i+b_j\text{.}\)</span> However, as <span class="process-math">\(a_i\in I\)</span> and <span class="process-math">\(b_j\in J\text{,}\)</span> we have <span class="process-math">\((a+I,b+J)=(a_j+I, b_i+J)\text{.}\)</span>
-</div>
-<div class="para logical" id="p-3477">
-<div class="para">Consider the element <span class="process-math">\(x=(a_j+b_i)\in R\text{,}\)</span> and observe</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-ring-fit.html">
-\begin{equation*}
-f(x)=f(a_j+b_i)=(a_j+b_i+I, b_i+a_j+J).
-\end{equation*}
-</div>
-<div class="para">However, as <span class="process-math">\(b_i\in I\)</span> and <span class="process-math">\(a_j\in J\text{,}\)</span> we see</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-ring-fit.html">
-\begin{equation*}
-(a_j+b_i+I, b_i+a_j+J)=(a_j+I,b_i+J)=(a+I,b+J).
-\end{equation*}
-</div>
-<div class="para">Thus <span class="process-math">\(f\)</span> is a surjective homomorphism. Hence, by the <a href="" class="xref" data-knowl="./knowl/thm-ring-fit.html" title="Theorem 10.28: First Isomorphism Theorem for Rings">First Isomorphism Theorem for Rings</a>, we see <span class="process-math">\(R/(I \cap J)\cong R/I \times R/J\text{.}\)</span>
-</div>
-</div>
-</li>
-</ol></div>
-</div></div>
-</div></article><article class="problem example-like" id="problem-5"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">H.5</span><span class="period">.</span><span class="space"> </span><span class="title">Problem 5.</span>
-</h3>
-<div class="para logical" id="p-3478">
-<div class="para">Prove the Rank-Nullity Theorem: If <span class="process-math">\(F\)</span> is a field, <span class="process-math">\(V\)</span> and <span class="process-math">\(W\)</span> are a finite dimensional <span class="process-math">\(F\)</span> -vector spaces, and <span class="process-math">\(g : V \to W\)</span> is an <span class="process-math">\(F\)</span>-linear transformation, then</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\rank(g) + \operatorname{nullity}(g) = \dim(V). 
-\end{equation*}
-</div>
-<div class="para">(Recall the <em class="emphasis">rank</em> of <span class="process-math">\(g\)</span> is the dimension of its image and the nullity of <span class="process-math">\(g\)</span> is the dimension of its kernel.)</div>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-167" id="solution-167"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-167"><div class="solution solution-like"><div class="para" id="p-3479">See: <a href="" class="xref" data-knowl="./knowl/thm-rank-nullity.html" title="Theorem 14.21: Rank Nullity Theorem">Rank Nullity Theorem</a>
-</div></div></div>
-</div></article><article class="problem example-like" id="problem-6"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">H.6</span><span class="period">.</span><span class="space"> </span><span class="title">Problem 6.</span>
-</h3>
-<div class="para" id="p-3480">Let <span class="process-math">\(F\)</span> be a field and <span class="process-math">\(n\)</span> a positive integer. We say an <span class="process-math">\(n\times n\)</span> matrix <span class="process-math">\(A\)</span> with entries in <span class="process-math">\(F\)</span> is <em class="emphasis">unipotent</em> if <span class="process-math">\(A-In\)</span> is nilpotent (i.e., <span class="process-math">\((A-In)^k = 0\)</span> for some <span class="process-math">\(k \geq 1\)</span>). For the field <span class="process-math">\(F = \Q\text{,}\)</span> find (with complete justification) the number of similarity classes of <span class="process-math">\(4\times 4\)</span> unipotent matrices and give an explicit representative for each class.</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-168" id="solution-168"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-168"><div class="solution solution-like">
-<div class="para" id="p-3481">Let <span class="process-math">\(F=\Q\text{,}\)</span> <span class="process-math">\(n\)</span> a positive integer, and <span class="process-math">\(A\)</span> a unipotent <span class="process-math">\(4\times 4\)</span> matrix with entries in <span class="process-math">\(F\text{.}\)</span> Thus <span class="process-math">\(A-I\)</span> is nilpotent. Let <span class="process-math">\(\l\)</span> be an eigenvalue of <span class="process-math">\(A-I\text{.}\)</span> Then <span class="process-math">\((A-I)v=\l v\text{,}\)</span> so <span class="process-math">\(Av-Iv=\l v\)</span> and <span class="process-math">\(Av=\l v+Iv\text{.}\)</span> As <span class="process-math">\(Iv=v\text{,}\)</span> we have <span class="process-math">\(Av=\l v+v\)</span> and <span class="process-math">\(Av=(\l+1)v\text{.}\)</span>
-</div> <div class="para" id="p-3482">Notice that as <span class="process-math">\(\l\)</span> is an eigenvalue of <span class="process-math">\(I\text{,}\)</span> we have <span class="process-math">\(\l +1\)</span> as an eigenvalue of <span class="process-math">\(A\text{.}\)</span>
-</div> <div class="para logical" id="p-3483">
-<div class="para">Assume inductively that <span class="process-math">\(\l^{n-1}\)</span> is an eigenvalue of <span class="process-math">\((A-I)^{n-1}\text{.}\)</span> Notice</div>
-<div class="displaymath process-math">
-\begin{equation*}
-(A+I)^nv=(A+I)(A+I)^{n-1}v=(A+I)\l^{n-1}v=\l^{n-1}(A+I)v=\l^{n-1}\l=\l^n,
-\end{equation*}
-</div>
-<div class="para">making <span class="process-math">\(\l\)</span> an eigenvalue of <span class="process-math">\((A+I)^n\text{.}\)</span> Thus if <span class="process-math">\(\l\)</span> is an eigenvalue of <span class="process-math">\(A-I\text{,}\)</span> it is an eigenvalue of <span class="process-math">\((A-I)^n\)</span> as well. As <span class="process-math">\((A-I)\)</span> is nilpotent, there exists some <span class="process-math">\(k\)</span> such that <span class="process-math">\((A-I)^k=0\text{.}\)</span> This means that <span class="process-math">\(\l^kv=0\text{.}\)</span> As <span class="process-math">\(v\neq 0\)</span> and <span class="process-math">\(\l^k\)</span> is a scalar in a field (and hence integral domain) we have <span class="process-math">\(\l=0\text{.}\)</span> Thus the only eigenvalue of <span class="process-math">\((A-I)\)</span> is <span class="process-math">\(0\text{,}\)</span> meaning that the only eigenvalue of <span class="process-math">\(A\)</span> is <span class="process-math">\(1\text{.}\)</span>
-</div>
-</div> <div class="para" id="p-3484">Eigenvalues of <span class="process-math">\(A\)</span> correspond to the roots of <span class="process-math">\(\cp_A(x)\text{,}\)</span> which is a monic quartic polynomial, as <span class="process-math">\(A\)</span> is a <span class="process-math">\(4\times 4\)</span> matrix. Thus <span class="process-math">\(\cp_A(x)=(x-1)^4\text{,}\)</span> as all roots must be <span class="process-math">\(1\text{.}\)</span>
-</div> <div class="para logical" id="p-3485">
-<div class="para">Two matrices are similar if and only if they share the same invariant factors. Given that invariant factors divide <span class="process-math">\(\cp_A(x)\)</span> and each invariant factor must divide the following one, the possible sets of invariant factors for <span class="process-math">\(A\)</span> are the following:</div>
-<ul class="disc">
-<li id="li-987"><div class="para" id="p-3486"><span class="process-math">\(\{(x-1)^4\}\text{,}\)</span></div></li>
-<li id="li-988"><div class="para" id="p-3487"><span class="process-math">\(\{(x-1),(x-1)^3\}\text{,}\)</span></div></li>
-<li id="li-989"><div class="para" id="p-3488"><span class="process-math">\(\{(x-1), (x-1), (x-1)^2\}\text{,}\)</span></div></li>
-<li id="li-990"><div class="para" id="p-3489">
-<span class="process-math">\(\{(x-1)^2, (x-1)^2\}\text{,}\)</span> and</div></li>
-<li id="li-991"><div class="para" id="p-3490"><span class="process-math">\(\{(x-1), (x-1), (x-1), (x-1)\}\text{.}\)</span></div></li>
-</ul>
-<div class="para">We identify the companion matrices for each possible invariant factor:</div>
-<ul class="disc">
-<li id="li-992"><div class="para logical" id="p-3491"><div class="displaymath process-math">
-\begin{equation*}
-C(x-1)=\begin{bmatrix} 1 \end{bmatrix},
-\end{equation*}
-</div></div></li>
-<li id="li-993"><div class="para logical" id="p-3492"><div class="displaymath process-math">
-\begin{equation*}
-C((x-1)^2)=C(x^2-2x+1)=\begin{bmatrix} 0 &amp; -1 \\ 1 &amp; 2\end{bmatrix},
-\end{equation*}
-</div></div></li>
-<li id="li-994"><div class="para logical" id="p-3493">
-<div class="displaymath process-math">
-\begin{equation*}
-C((x-1)^3)=C(x^3+3x^2+3x-1)=\begin{bmatrix} 0 &amp; 0 &amp; 1 \\ 1 &amp; 0 &amp; -3 \\ 0 &amp; 1 &amp; -3\end{bmatrix},
-\end{equation*}
-</div>
-<div class="para">and</div>
-</div></li>
-<li id="li-995"><div class="para logical" id="p-3494"><div class="displaymath process-math">
-\begin{equation*}
-C((x-1)^4)=C(x^4-4x^3+6x^2-4x+1)=\begin{bmatrix} 0 &amp; 0 &amp; 0 &amp; -1 \\ 1 &amp; 0 &amp; 0 &amp; 4 \\ 0 &amp; 1 &amp; 0 &amp; -6 \\ 0 &amp; 0 &amp; 1 &amp; 4\end{bmatrix}.
-\end{equation*}
-</div></div></li>
-</ul>
-<div class="para">We define the following:</div>
-<ul class="disc">
-<li id="li-996"><div class="para" id="p-3495"><span class="process-math">\(B=C((x-1)^4)\text{,}\)</span></div></li>
-<li id="li-997"><div class="para" id="p-3496"><span class="process-math">\(C=C(x-1)\oplus C((x-1)^3)\text{,}\)</span></div></li>
-<li id="li-998"><div class="para" id="p-3497"><span class="process-math">\(D=C(x-1)\oplus C(x-1)\oplus C((x-1)^2)\text{,}\)</span></div></li>
-<li id="li-999"><div class="para" id="p-3498">
-<span class="process-math">\(E=C((x-1)^2)\oplus C((x-1)^2)\text{,}\)</span> and</div></li>
-<li id="li-1000"><div class="para" id="p-3499"><span class="process-math">\(F=C(x-1)\oplus C(x-1)\oplus C(x-1)\oplus C(x-1)\text{.}\)</span></div></li>
-</ul>
-<div class="para">As each of these matrices is in <a href="" class="xref" data-knowl="./knowl/thm-rcf.html" title="Theorem 17.9: Rational Canonical Form">Rational Canonical Form</a>, they are explicit representatives for each similarity class.</div>
-</div>
-</div></div>
-</div></article></section><section class="subsection" id="subsection-57"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Section</span>
-</h3>
-<article class="problem example-like" id="problem-7"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">H.7</span><span class="period">.</span><span class="space"> </span><span class="title">Problem 7.</span>
-</h3>
-<div class="para" id="p-3500">Let <span class="process-math">\(L\)</span> be the splitting field of <span class="process-math">\(x^5 - 11\)</span> over <span class="process-math">\(\Q\)</span>
-</div> <div class="para logical" id="p-3501"><ol class="decimal">
-<li id="li-1001"><div class="para" id="p-derived-li-1001">Find, with justification, the degree of <span class="process-math">\(L\)</span> over <span class="process-math">\(\Q\text{.}\)</span>
-</div></li>
-<li id="li-1002"><div class="para" id="p-derived-li-1002">Let <span class="process-math">\(F = \Q(\zeta)\)</span> where <span class="process-math">\(\zeta = e^{2\pi i/5}\text{,}\)</span> a primitive <span class="process-math">\(5\th\)</span> root of unity. Prove <span class="process-math">\(x^5 - 11\)</span> is irreducible in <span class="process-math">\(F[x]\text{.}\)</span>
-</div></li>
-</ol></div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-169" id="solution-169"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-169"><div class="solution solution-like">
-<div class="para" id="p-3502">Let <span class="process-math">\(L\)</span> be the splitting field of <span class="process-math">\(f(x)=x^5 - 11\)</span> over <span class="process-math">\(\Q\)</span>
-</div> <div class="para logical" id="p-3503"><ol class="decimal">
-<li id="li-1003">
-<div class="para" id="p-3504">First, notice that by <a href="" class="xref" data-knowl="./knowl/thm-eisensteins-criterion.html" title="Theorem 18.18: Eisenstein's Criterion">Eisenstein's Criterion</a> (<span class="process-math">\(p=11\)</span>) we have <span class="process-math">\(f\)</span> irreducible in <span class="process-math">\(\Q\text{.}\)</span>
-</div>
-<div class="para logical" id="p-3505">
-<div class="para">The roots of <span class="process-math">\(f\)</span> are the following:</div>
-<ul class="disc">
-<li id="li-1004"><div class="para" id="p-3506"><span class="process-math">\(\displaystyle \a_1=\sqrt[5]{11}\z\)</span></div></li>
-<li id="li-1005"><div class="para" id="p-3507"><span class="process-math">\(\displaystyle \a_2=\sqrt[5]{11}\z^2\)</span></div></li>
-<li id="li-1006"><div class="para" id="p-3508"><span class="process-math">\(\displaystyle \a_3=\sqrt[5]{11}\z^3\)</span></div></li>
-<li id="li-1007"><div class="para" id="p-3509"><span class="process-math">\(\displaystyle \a_4=\sqrt[5]{11}\z^4\)</span></div></li>
-<li id="li-1008"><div class="para" id="p-3510"><span class="process-math">\(\displaystyle \a_5=\sqrt[5]{11}\z^5=\sqrt[5]{11}\)</span></div></li>
-</ul>
-</div>
-<div class="para" id="p-3511">As <span class="process-math">\(f\)</span> is monic and irreducible, it is the minimum polynomial of <span class="process-math">\(\a_5\text{.}\)</span> Let <span class="process-math">\(E=\Q(\a_5)\)</span> and notice <span class="process-math">\([E:\Q]=5\text{.}\)</span>
-</div>
-<div class="para" id="p-3512">Notice that <span class="process-math">\(\z\text{,}\)</span> a primitive <span class="process-math">\(5\)</span>-th root of unity, is the root of <span class="process-math">\(g(x)=x^4+x^3+x^2+x+1\text{,}\)</span> the fourth cyclotomic polynomial, which is monic and irreducible in <span class="process-math">\(\Q[x]\)</span> by <code class="code-inline tex2jax_ignore">[provisional cross-reference: prop-cylcotomic-irreducible]</code>. Thus <span class="process-math">\(g\)</span> is the minimum polynomial of <span class="process-math">\(\z\)</span> and <span class="process-math">\([F:\Q]=4\text{.}\)</span>
-</div>
-<div class="para logical" id="p-3513">
-<div class="para">We know that <span class="process-math">\(L=\Q(\sqrt[5]{11},\z)\text{,}\)</span> as every generator of <span class="process-math">\(L\)</span> can be written using <span class="process-math">\(\z\)</span> and <span class="process-math">\(\sqrt[5]{11}.\)</span> Let <span class="process-math">\([L:\Q]=n\text{,}\)</span> <span class="process-math">\([L:F]=p\text{,}\)</span> and <span class="process-math">\([L:E]=q\text{.}\)</span> By the <a href="" class="xref" data-knowl="./knowl/thm-degree-formula.html" title="Theorem 19.30: The Degree Formula">The Degree Formula</a>, we have</div>
-<ul class="disc">
-<li id="li-1009"><div class="para" id="p-3514">
-<span class="process-math">\([L:\Q]=[L:F][F:\Q]\text{,}\)</span> and thus <span class="process-math">\(n=4p\)</span>
-</div></li>
-<li id="li-1010"><div class="para" id="p-3515">
-<span class="process-math">\([L:\Q]=[L:E][E:\Q]\text{,}\)</span> and thus <span class="process-math">\(n=5q\)</span>
-</div></li>
-</ul>
-<div class="para">As <span class="process-math">\(E\neq L\)</span> and <span class="process-math">\(F\neq L\)</span> we know that <span class="process-math">\(p,q&gt;1\text{.}\)</span>
-</div>
-</div>
-<div class="para" id="p-3516">Thus we have <span class="process-math">\(n=20\text{.}\)</span>
-</div>
-</li>
-<li id="li-1011"><div class="para" id="p-3517">Let <span class="process-math">\(F = \Q(\zeta)\)</span> where <span class="process-math">\(\zeta = e^{2\pi i/5}\text{.}\)</span> From Part (a) we know <span class="process-math">\([L:F]=5\text{.}\)</span> As <span class="process-math">\(L=F(\a)\text{,}\)</span> we know that <span class="process-math">\(\mp_\a(x)\)</span> has degree <span class="process-math">\(5\text{.}\)</span> As <span class="process-math">\(f\)</span> is a monic polynomial of degree <span class="process-math">\(5\text{,}\)</span> we see that it is the minimum polynomial and thus irreducible.</div></li>
-</ol></div>
-</div></div>
-</div></article><article class="problem example-like" id="problem-8"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">H.8</span><span class="period">.</span><span class="space"> </span><span class="title">Problem 8.</span>
-</h3>
-<div class="para" id="p-3518">Let <span class="process-math">\(L\)</span> be the splitting field of <span class="process-math">\(x^4-2022\)</span> over <span class="process-math">\(\Q\text{.}\)</span> Prove there exists a unique intermediate field <span class="process-math">\(\Q\subseteq K\subseteq L\)</span> such that <span class="process-math">\([K : \Q] = 4\)</span> and <span class="process-math">\(\Q\subseteq K\)</span> is a Galois extension.</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-170" id="solution-170"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-170"><div class="solution solution-like">
-<div class="para" id="p-3519">Let <span class="process-math">\(L\)</span> be the splitting field of <span class="process-math">\(f(x)=x^4-2022\)</span> over <span class="process-math">\(\Q\text{.}\)</span> Let <span class="process-math">\(\z\)</span> be a primitive fourth root of unity. Thus <span class="process-math">\(\z=e^{2\pi i/4}=e^{\pi/2}=\cos(\pi/2)+i\sin(\pi/2)=i\text{.}\)</span>
-</div> <div class="para logical" id="p-3520">
-<div class="para">Notice that the roots of <span class="process-math">\(f\)</span> are the following:</div>
-<ul class="disc">
-<li id="li-1012"><div class="para" id="p-3521"><span class="process-math">\(\sqrt[4]{2022} i\text{,}\)</span></div></li>
-<li id="li-1013"><div class="para" id="p-3522"><span class="process-math">\(\sqrt[4]{2022}i^2=-\sqrt[4]{2022}\text{,}\)</span></div></li>
-<li id="li-1014"><div class="para" id="p-3523">
-<span class="process-math">\(\sqrt[4]{2022}i^3=-\sqrt[4]{2022}i\text{,}\)</span> and</div></li>
-<li id="li-1015"><div class="para" id="p-3524"><span class="process-math">\(\sqrt[4]{2022}i^4=\sqrt[4]{2022}\text{.}\)</span></div></li>
-</ul>
-<div class="para">Thus <span class="process-math">\(L=\Q(\sqrt[4]{2022},i)\text{.}\)</span>
-</div>
-</div> <div class="para" id="p-3525">Using <a href="" class="xref" data-knowl="./knowl/thm-eisensteins-criterion.html" title="Theorem 18.18: Eisenstein's Criterion">Eisenstein's Criterion</a> with <span class="process-math">\(p=2\)</span> we see that <span class="process-math">\(f\)</span> is irreducible in <span class="process-math">\(\Q[x]\text{.}\)</span> Let <span class="process-math">\(\a=\sqrt[4]{2022}\text{,}\)</span> and notice that <span class="process-math">\(f\)</span> is the minimum polynomial of <span class="process-math">\(\a\text{.}\)</span> Let <span class="process-math">\(K=\Q(\a)\)</span> and observe <span class="process-math">\([K:\Q]=4\text{.}\)</span>
-</div> <div class="para" id="p-3526">As <span class="process-math">\(i\)</span> is the root of the monic irreducible polynomial <span class="process-math">\(x^2+1\)</span> we have <span class="process-math">\([L:F]=2\)</span> and <span class="process-math">\([L:\Q]=[L:F][F:\Q]=2\cdot4=8\text{.}\)</span> Thus <span class="process-math">\(G=\Gal(L/\Q)\)</span> is isomorphic to a subgroup of <span class="process-math">\(S_4\)</span> of order <span class="process-math">\(8\text{,}\)</span> making it <span class="process-math">\(D_8\text{.}\)</span>
-</div> <div class="para" id="p-3527">Notice that <span class="process-math">\(K\)</span> is an extension of degree <span class="process-math">\(24\text{,}\)</span> and thus by the <a href="" class="xref" data-knowl="./knowl/thm-ftgt.html" title="Theorem 20.24: Fundamental Theorem of Galois Theory">Fundamental Theorem of Galois Theory</a> we have a subgroup <span class="process-math">\(H\leq G\)</span> such that <span class="process-math">\(H=\Gal(L/K)\text{.}\)</span> As <span class="process-math">\([L:\Q]=[L:K][K:\Q]\)</span> we have <span class="process-math">\(8=[L:K]\cdot 4\text{,}\)</span> and thus <span class="process-math">\(|H|=2\text{.}\)</span> This makes <span class="process-math">\(H\)</span> the cyclic subgroup of <span class="process-math">\(D_8\)</span> generated by a reflection, the only element of order <span class="process-math">\(2\)</span> in <span class="process-math">\(D_8\text{,}\)</span> making it unique. This is also a normal subgroup of <span class="process-math">\(D_8\text{,}\)</span> making <span class="process-math">\(K\)</span> Galois over <span class="process-math">\(\Q\text{.}\)</span>
-</div>
-</div></div>
-</div></article><article class="problem example-like" id="problem-9"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">H.9</span><span class="period">.</span><span class="space"> </span><span class="title">Problem 9.</span>
-</h3>
-<div class="para" id="p-3528">Assume <span class="process-math">\(F\subseteq L\)</span> is an algebraic field extension such that every non-constant polynomial in <span class="process-math">\(F[x]\)</span> splits completely into linear factors in <span class="process-math">\(L[x]\text{.}\)</span> Prove <span class="process-math">\(L\)</span> is an algebraic closure of <span class="process-math">\(F\text{.}\)</span>
-</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-171" id="solution-171"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-171"><div class="solution solution-like">
-<div class="para" id="p-3529">Let <span class="process-math">\(F\subseteq L\)</span> be an algebraic field extension such that every non-constant polynomial in <span class="process-math">\(F[x]\)</span> splits completely into linear factors in <span class="process-math">\(L[x]\text{.}\)</span>
-</div> <div class="para" id="p-3530">Let <span class="process-math">\(f\)</span> be a polynomial in <span class="process-math">\(L[x]\text{,}\)</span> so <span class="process-math">\(f=a_nx^n+\dots+a_1x+a_0\text{,}\)</span> with <span class="process-math">\(a_i\in L\text{,}\)</span> and let <span class="process-math">\(\a\)</span> be a root of <span class="process-math">\(f\text{.}\)</span> There [[Theorem – Existence and Uniqueness of Algebraic Closures|exists]] some field extension <span class="process-math">\(L\subseteq K\)</span> such that <span class="process-math">\(K\)</span> is algebraically closed, meaning <span class="process-math">\(\a\in K\text{.}\)</span> Notice that <span class="process-math">\(\a\)</span> is algebraic over <span class="process-math">\(L(\a)\text{.}\)</span>
-</div> <div class="para logical" id="p-3531">
-<div class="para">Consider the chain of field extensions</div>
-<div class="displaymath process-math">
-\begin{equation*}
-F\subseteq L\subseteq L(\a),
-\end{equation*}
-</div>
-<div class="para">making <span class="process-math">\(\a\)</span> algebraic over <span class="process-math">\(F\)</span> as well. As every non-constant polynomial in <span class="process-math">\(F[x]\)</span> splits completely into linear factors in <span class="process-math">\(L[x]\text{,}\)</span> this yields <span class="process-math">\(\a\in L\text{.}\)</span>
-</div>
-</div>
-</div></div>
-</div></article></section></section></div>
+<div class="para" id="p-3286">Coming soon!</div></section></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="appendix-quals.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-72.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+<a class="previous-button button" href="section-70.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="app-notation.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer">

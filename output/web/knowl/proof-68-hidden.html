@@ -10,6 +10,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para">If <span class="process-math">\(\igen x = \igen y\)</span> then <span class="process-math">\(x \in \igen y\)</span> and so <span class="process-math">\(x = yu\)</span> for some <span class="process-math">\(u\text{.}\)</span> Similarly <span class="process-math">\(y = xs\)</span> and hence <span class="process-math">\(y = yus\text{.}\)</span> Since <span class="process-math">\(R\)</span> is a domain, either <span class="process-math">\(y = 0\)</span> or <span class="process-math">\(su = 1\text{.}\)</span> If <span class="process-math">\(y= 0\text{,}\)</span> then <span class="process-math">\(x = 0 = 1 y\)</span> and otherwise <span class="process-math">\(u\)</span> is a unit.</div> <div class="para">If <span class="process-math">\(x = uy\)</span> for a unit <span class="process-math">\(u\text{,}\)</span> then <span class="process-math">\(y = u^{-1}x\)</span> and so <span class="process-math">\(x \in \igen y\)</span> and <span class="process-math">\(y \in \igen x\text{,}\)</span> from which is follows that <span class="process-math">\(\igen x \subseteq \igen y\)</span> and <span class="process-math">\(\igen y \subseteq \igen x\text{.}\)</span>
+<body class="ignore-math"><article class="hiddenproof"><div class="para logical">
+<div class="para">Consider and ascending chain of ideals of <span class="process-math">\(R\text{;}\)</span> it must have the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(a_1)\subseteq (a_2) \subseteq (a_3) \subseteq \cdots \subseteq (a_i)\subseteq (a_{i+1})\subseteq \cdots.
+\end{equation*}
+</div>
+<div class="para">Consider <span class="process-math">\(I=\bigcup_{i\geq 1} (a_i)\)</span> which is an ideal of <span class="process-math">\(R\)</span> by the argument given in Theorem . Since <span class="process-math">\(R\)</span> is a PID, <span class="process-math">\(I=(b)\)</span> for some <span class="process-math">\(b\in R\text{.}\)</span> Since <span class="process-math">\(b\in I=\bigcup_{i\geq 1} (a_i)\text{,}\)</span> we must have <span class="process-math">\(b\in (a_n)\)</span> for some <span class="process-math">\(n\text{.}\)</span> Then we see that <span class="process-math">\(I=(b)\subseteq (a_n)\subseteq (a_{n+1})\subseteq \cdots (a_j) \subseteq \cdots \subseteq I\)</span> for all <span class="process-math">\(j\geq n\text{,}\)</span> thus <span class="process-math">\(I=(a_j)\)</span> for <span class="process-math">\(j\geq n\)</span> and the chain stabilizes as desired.</div>
 </div></article></body>
 </html>

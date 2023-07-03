@@ -13,14 +13,19 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h3 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">H.37.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">H.54.1</span><span class="period">.</span>
 </h3>
-<div class="para logical"><ol class="decimal">
-<li><div class="para">Show the center is non-trivial, and thus has order <span class="process-math">\(p\)</span> or <span class="process-math">\(p^2\text{.}\)</span> If <span class="process-math">\(p^2\)</span> then <span class="process-math">\(Z(G)=G\)</span> and we're done. If <span class="process-math">\(|Z(G)|=p\text{,}\)</span> then the <a href="" class="xref" data-knowl="./knowl/thm-class-eq.html" title="Theorem 5.41: Class Equation">Class Equation</a> tells us <span class="process-math">\(p^2=p+\sum[G:C_G(g)]\text{.}\)</span> Since <span class="process-math">\(|G|=p^2\text{,}\)</span> <span class="process-math">\(C_G(g)=1,p\)</span> for each <span class="process-math">\(g\not\in Z(G)\text{.}\)</span> But there are <span class="process-math">\(p\)</span> elements, so there is only one conjugacy class for these elements. But since <span class="process-math">\(g\not\in Z(G)\)</span> there exists some <span class="process-math">\(x\in G\)</span> such that <span class="process-math">\(gx\neq xg\text{,}\)</span> and thus <span class="process-math">\(xgx\inv\neq g\text{.}\)</span> Since <span class="process-math">\(x\)</span> is not in the center and <span class="process-math">\(x\)</span> is not in the conjugacy class of <span class="process-math">\(g\text{,}\)</span> we have a contradiction. Alternatively, <span class="process-math">\(G/Z(G)\)</span> has <span class="process-math">\(p\)</span> elements, making it cyclic.</div></li>
-<li><div class="para">Consider <span class="process-math">\(H=C_p\)</span> and <span class="process-math">\(K=C_{p^2}\)</span> and the external semidirect product <span class="process-math">\(H\sdp_\rho K\text{,}\)</span> where <span class="process-math">\(\rho: K\to\Aut(H)\text{.}\)</span>
+<div class="para">Consider <span class="process-math">\(f (x) = x^5-4x-2 \in \Q[x]\text{.}\)</span>
+</div> <div class="para logical"><ol class="decimal">
+<li><div class="para">Using <a href="" class="xref" data-knowl="./knowl/thm-eisensteins-criterion.html" title="Theorem 18.18: Eisenstein's Criterion">Eisenstein's Criterion</a> with <span class="process-math">\(p=2\)</span> we see that <span class="process-math">\(f\)</span> is indeed irreducible in <span class="process-math">\(\Q[x]\text{.}\)</span>
 </div></li>
-</ol></div> <div class="para"></div> <div class="para"></div>
+<li>
+<div class="para">Let <span class="process-math">\(L\)</span> be a splitting field of <span class="process-math">\(f\)</span> over <span class="process-math">\(\Q\text{.}\)</span> As <span class="process-math">\(f\)</span> is monic and irreducible, it is the minimum polynomial for some <span class="process-math">\(\a\in L\)</span> such that <span class="process-math">\([\Q(\a):\Q]=5\text{.}\)</span> As <span class="process-math">\(f\)</span> has complex roots, we know that <span class="process-math">\(\Q(\a)\neq L\text{,}\)</span> and is thus an intermediate field. By the FTGT there exists a subgroup <span class="process-math">\(H\)</span> of <span class="process-math">\(\Gal(L/\Q)\)</span> such that <span class="process-math">\(H=\Gal(\Q(\a)/\Q)\text{.}\)</span> As <span class="process-math">\([\Q(\a):\Q]=5\)</span> we know <span class="process-math">\(|H|=5\text{,}\)</span> making <span class="process-math">\(H=\langle\s\rangle\)</span> for some <span class="process-math">\(\s\in H\text{.}\)</span> Thus <span class="process-math">\(\s\)</span> is an element of order <span class="process-math">\(5\)</span> in <span class="process-math">\(\Gal(L/\Q)\text{.}\)</span> As <span class="process-math">\(f\)</span> is a degree <span class="process-math">\(5\)</span> polynomial, we know <span class="process-math">\(\Gal(L/\Q)\)</span> is isomorphic to a subgroup of <span class="process-math">\(S_5\text{.}\)</span> Thus <span class="process-math">\(\s\)</span> must be a <span class="process-math">\(5\)</span>-cycle.</div>
+<div class="para">Recall that <span class="process-math">\(f\)</span> has exactly two complex roots. Thus <span class="process-math">\(\tau\text{,}\)</span> the complex conjugation automorphism, has order <span class="process-math">\(2\text{,}\)</span> making it a transposition. From the Gospel of Mark we were told that we did not need to prove that a transposition and an <span class="process-math">\(n\)</span>-cycle generate all of <span class="process-math">\(S_n\text{,}\)</span> and thus <span class="process-math">\(\Gal(L/\Q)\cong S_5\)</span>
 </div>
-<span class="incontext"><a href="section-75.html#solution-199" class="internal">in-context</a></span>
+</li>
+</ol></div>
+</div>
+<span class="incontext"><a href="section-77.html#solution-199" class="internal">in-context</a></span>
 </body>
 </html>

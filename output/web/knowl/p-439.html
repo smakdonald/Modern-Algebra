@@ -12,7 +12,26 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">if <span class="process-math">\(i&lt;0\)</span> then <span class="process-math">\(\varphi(x^i)=\varphi\left((x^{-i})^{-1}\right)=\varphi\left((x^{-i})\right)^{-1}=(y^{-i})^{-1}=y^i\text{,}\)</span> using the formula above for <span class="process-math">\(-i&gt;0\)</span>
+<div class="para logical">
+<div class="para">
+<em class="emphasis">Existence:</em> In either case, define <span class="process-math">\(\varphi(x^i) = y^i\)</span> for all relevant <span class="process-math">\(i\)</span> (i.e., in the first case, for <span class="process-math">\(0 \leq i \leq n-1\)</span> and in the second for all <span class="process-math">\(i \in\mathbb{Z}\)</span>). We need to show this function is a well-defined group homomorphism. To see that <span class="process-math">\(\varphi\)</span> is well defined, suppose <span class="process-math">\(x^i=x^j\)</span> for some <span class="process-math">\(i,j\in \mathbb{Z}\text{.}\)</span> Then, since <span class="process-math">\(x^{i-j}=e_G\text{,}\)</span> using <code class="code-inline tex2jax_ignore">[provisional cross-reference: prop96]</code> or the definition for order we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{cases}
+n\mid i-j &amp; \text{ if } |x|=n\\
+i-j=0 &amp; \text{ if } |x|=\infty\\
+\end{cases}
+\Rightarrow
+\begin{cases}
+y^ {i-j}=y^{nk} &amp; \text{ if } |x|=n\\
+y^{i-j}=y^0 &amp; \text{ if } |x|=\infty\\
+\end{cases}
+\Rightarrow y^ {i-j}=e_H
+\Rightarrow y^ i=y^j.
+\end{equation*}
+</div>
+<div class="para">Thus, if <span class="process-math">\(x^i=x^j\)</span> then <span class="process-math">\(\varphi(x^i)=y^i=y^j=\varphi(x^j)\text{.}\)</span>
+</div>
 </div>
 <span class="incontext"><a href="sec-cyclic.html#p-439" class="internal">in-context</a></span>
 </body>

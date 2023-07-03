@@ -10,15 +10,23 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para">Among the many things to check here, we will only check a couple.</div> <div class="para">We need to prove the rule for scaling by <span class="process-math">\(R\)</span> on <span class="process-math">\(M/N\)</span> is well-defined: If <span class="process-math">\(m+N=m'+N\)</span> then <span class="process-math">\(m-m'\in N\)</span> so <span class="process-math">\(r(m-m')\in N\)</span> by the definition of submodule. This gives that <span class="process-math">\(rm-rm'\in N\text{,}\)</span> hence <span class="process-math">\(rm+N=rm'+N\text{.}\)</span> The module axioms are then pretty straightforward. We already know from 817 that <span class="process-math">\(M/N\)</span> is an abelian group under <span class="process-math">\(+\text{.}\)</span>
-</div> <div class="para logical">
-<div class="para">Let us check one of the four axioms involving scaling. We have</div>
+<body class="ignore-math"><article class="hiddenproof"><div class="para logical">
+<div class="para">Given <span class="process-math">\(m \in M\text{,}\)</span> the fact that</div>
 <div class="displaymath process-math">
 \begin{equation*}
-r( (m_1 +N) + (m_2 +N)) = r((m_1 + m_2) + N) = (r(m_1+m_2)) + N = (rm_1 + rm_2) + N = (rm_1 + N) + (rm_2 + N),
+m = \sum_a r_a a
 \end{equation*}
 </div>
-<div class="para">which gives the third such axiom. The other three are also straightforward.</div>
-</div> <div class="para">The fact that <span class="process-math">\(\pi\)</span> is an <span class="process-math">\(R\)</span>-module homomorphism is also straightforward. Its kernel is <span class="process-math">\(\{m \in M \mid m + N = N\}\text{,}\)</span> which is equal to <span class="process-math">\(N\text{.}\)</span>
+<div class="para">for at least one family of elements <span class="process-math">\((r_a)_{a \in A}\)</span> with <span class="process-math">\(r_a = 0\)</span> for all but a finite number of <span class="process-math">\(a\)</span>'s is the definition of what it means for <span class="process-math">\(A\)</span> to generate <span class="process-math">\(M\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">Suppose <span class="process-math">\((s_a)_{a \in A}\)</span> is another such family with <span class="process-math">\(m = \sum_a s_a a\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0 = m-m = \sum_a r_a a - \sum_a s_a a = \sum_a (r_a - s_a) a.
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(A\)</span> is linearly independent, by definition <span class="process-math">\(r_a - s_a = 0\)</span> for all <span class="process-math">\(a\text{.}\)</span>
+</div>
 </div></article></body>
 </html>

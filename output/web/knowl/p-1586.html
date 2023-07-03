@@ -12,8 +12,22 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">I have not yet given an example of a module with an infinite basis; here is one. Let <span class="process-math">\(R\)</span> be any ring and <span class="process-math">\(M = R[x]\)</span> (which, recall, is an <span class="process-math">\(R\)</span>-module due to the evident ring map <span class="process-math">\(R \to R[x]\)</span>). Then the countably infinite set <span class="process-math">\(\{1,x,x^2,\dots, x^n,\dots\}\)</span> is a basis. The fact that this set is a basis is essentially part of the definition of <span class="process-math">\(R[x]\text{.}\)</span> The Lemma says that every polynomial is uniquely expressible as an <span class="process-math">\(R\)</span>-linear combination of (a finite subset of) <span class="process-math">\(1,x,x^2,\dots\text{.}\)</span>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(F\)</span> be a field. Given a basis <span class="process-math">\(B\)</span> of an <span class="process-math">\(F\)</span>-vector space <span class="process-math">\(V\)</span> and vector <span class="process-math">\(w \in V\text{,}\)</span> let</div>
+<div class="displaymath process-math">
+\begin{equation*}
+w = a_1 v_1 + \cdots + a_n v_n,
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec-bases.html#p-1586" class="internal">in-context</a></span>
+<div class="para">for <span class="process-math">\(n \geq 0\text{,}\)</span> <span class="process-math">\(0 \ne a_i \in F\)</span> and <span class="process-math">\(v_i \in B\)</span> for all <span class="process-math">\(i\text{,}\)</span> be the unique way of writing <span class="process-math">\(w\)</span> as a linear combination of some of the members of <span class="process-math">\(B\)</span> using non-zero coefficients. Then for any <span class="process-math">\(1 \leq i \leq n\text{,}\)</span> we have that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+B' := (B \setminus \{v_i\}) \cup \{w\}
+\end{equation*}
+</div>
+<div class="para">is also a basis of <span class="process-math">\(V\text{.}\)</span>
+</div>
+</div>
+<span class="incontext"><a href="sec-ranknul.html#p-1586" class="internal">in-context</a></span>
 </body>
 </html>

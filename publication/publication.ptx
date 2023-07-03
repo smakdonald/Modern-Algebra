@@ -97,6 +97,7 @@
       exercise-divisional="yes"
       exercise-worksheet="no"
       exercise-readingquestion="no"
+      aside="no"
     />
     <!-- Specify the style of the html by giving names to      -->
     <!-- override defaults.  Ex: to use "style_oscarlevin.css" -->

@@ -12,7 +12,30 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Let <span class="process-math">\(F \subseteq K \subseteq L\)</span> be extensions of fields, not necessarily finite.</div>
-<span class="incontext"><a href="section-84.html#p-4157" class="internal">in-context</a></span>
+<div class="para logical">
+<div class="para">First, notice that <span class="process-math">\(2\cdot 3=6=(1+\sqrt{-5})(1-\sqrt{-5})\text{.}\)</span> Define a function</div>
+<div class="displaymath process-math">
+\begin{equation*}
+N:\Z[\sqrt{-5}]\to\Z, N(a+b \sqrt{-5})=a^2+5b^2.
+\end{equation*}
+</div>
+<div class="para">Let <span class="process-math">\(\alpha,\beta\in\Z[\sqrt{-5}]\)</span> and behold</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{align}
+N(\alpha\beta)
+&amp;=N((a+b \sqrt{-5})(c+d \sqrt{-5}))\\
+&amp;=N(ac-5bd+ad \sqrt{-5}+bc \sqrt{-5})\\
+&amp;=(ac-5bd)^2+5(ad+bc)^2\\
+&amp;=((ac)^2-10acbd+25(bd)^2)+5((ad)^2+2abcd+(bc^2))\\
+&amp;=a^2c^2+25b^2d^2+5a^2d^2+5b^2c^2\\
+&amp;=(a^2c^2+5a^2d^2)+(5b^2c^2+25b^2d^2)\\
+&amp;=a^2(c^2+5d^2)+5b^2(c^2+5d^2)\\
+N(\alpha)N(\beta)&amp;=(a^2+5b^2)(c^2+5d^2).\end{align}
+\end{equation*}
+</div>
+<div class="para">So there's that done.</div>
+</div>
+<span class="incontext"><a href="section-87.html#p-4157" class="internal">in-context</a></span>
 </body>
 </html>
