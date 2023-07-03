@@ -12,7 +12,15 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Part (a) Let <span class="process-math">\(a,b\in K\text{.}\)</span> Notice that <span class="process-math">\(a\inv, ab,\)</span> and <span class="process-math">\(a+b\)</span> are contained in <span class="process-math">\(F(a,b)\text{.}\)</span> As <span class="process-math">\(b\in K\text{,}\)</span> there exists some polynomial with coefficients in <span class="process-math">\(F\)</span> such that <span class="process-math">\(b\)</span> is a root. However, this polynomial also lives in <span class="process-math">\(F(a)\text{,}\)</span> so we have <span class="process-math">\([F(a,b):F(a)]\)</span> algebraic. As <span class="process-math">\([F(a):F]\)</span> is also algebraic, we have <span class="process-math">\(F[a,b]\)</span> algebraic as well, as it is a finite extension by the  <a href="" class="xref" data-knowl="./knowl/thm-degree-formula.html" title="Theorem 19.30: The Degree Formula">The Degree Formula</a>. Thus <span class="process-math">\(a+b, a\inv,\)</span> and <span class="process-math">\(ab\)</span> are algebraic over <span class="process-math">\(F\)</span> as well, making <span class="process-math">\(K\)</span> a field.</div>
+<div class="para logical">
+<div class="para">Part (b) Let <span class="process-math">\(\a\in K\text{.}\)</span> Thus <span class="process-math">\(\a\)</span> is the root of a polynomial <span class="process-math">\(f(x)=a_nx^n+\dots+a_0\text{,}\)</span> where <span class="process-math">\(a_{i}\in F\text{.}\)</span> Notice that <span class="process-math">\(f\)</span> is a polynomial in <span class="process-math">\(F(a_n,\dots,a_0)\)</span> as well, and thus <span class="process-math">\(\a\)</span> is algebraic over this extension as well. Consider the chain of extensions</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-degree-formula.html">
+\begin{equation*}
+F \subseteq F(a_0) \subseteq F(a_0,a_1) \subseteq \cdots \subseteq F(a_0, a_1, \dots, a_{n-1} )\subseteq F(a_0, \dots, a_{n}, \a).
+\end{equation*}
+</div>
+<div class="para">As <span class="process-math">\(a_i\)</span> is algebraic over <span class="process-math">\(F\)</span> for all <span class="process-math">\(i\)</span> and <span class="process-math">\(\a\)</span> is algebraic over <span class="process-math">\(F(a_0,\dots,a_n)[x]\)</span> we see that each step in this chain has finite degree by. By the <a href="" class="xref" data-knowl="./knowl/thm-degree-formula.html" title="Theorem 19.30: The Degree Formula">The Degree Formula</a>, <span class="process-math">\([F(a_0, \dots, a_{n}, \a): F]\)</span> is finite and thus so is <span class="process-math">\([F(\a):F]\text{.}\)</span> Thus <span class="process-math">\(\a\)</span> is algebraic over <span class="process-math">\(F\text{,}\)</span> hence <span class="process-math">\(\a\in K\text{,}\)</span> making <span class="process-math">\(K\)</span> algebraically closed.</div>
+</div>
 <span class="incontext"><a href="section-80.html#p-4007" class="internal">in-context</a></span>
 </body>
 </html>

@@ -12,7 +12,16 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">The matrix is unique, but the basis <span class="process-math">\(B\)</span> that realizes it is, in general, not unique. As an extreme example illustrating this: Take <span class="process-math">\(g\)</span> to be the identity operator on a finite dimensional vector space <span class="process-math">\(V\text{.}\)</span> Then <span class="process-math">\([g]_B^B = I_n\)</span> holds for any basis <span class="process-math">\(B\text{.}\)</span> (Note that <span class="process-math">\(I_n\)</span> is indeed in rational canonical form: it is equal to <span class="process-math">\(C(x-1) \oplus \cdots \oplus C(x-1)\text{.}\)</span>)</div>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(A\)</span> be an <span class="process-math">\(n \times n\)</span> nilpotent matrix. Let <span class="process-math">\(\lambda\)</span> be some eigenvalue of <span class="process-math">\(A\text{.}\)</span> Thus there exists some vector <span class="process-math">\(v\)</span> such that <span class="process-math">\(A\lambda=\lambda v\text{.}\)</span> Let's consider this the base-case of some rather banal induction. Now assume that for <span class="process-math">\(n\)</span> we have <span class="process-math">\(A^nv=\lambda^nv\text{.}\)</span> Consider</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A^{n+1}v=A(A^nv)=A(\lambda^n v)=\lambda^n(Av)=\lambda^{n+1}v.
+\end{equation*}
+</div>
+<div class="para">Recall that as <span class="process-math">\(A\)</span> is nilpotent, there exists some <span class="process-math">\(m\in\N\)</span> such that <span class="process-math">\(A^m=0\text{.}\)</span> As <span class="process-math">\(\lambda\)</span> is an eigenvalue of <span class="process-math">\(A\text{,}\)</span> by the above induction we see that <span class="process-math">\(\lambda^m\)</span> is an eigenvalue for <span class="process-math">\(A^m=0\text{.}\)</span> As <span class="process-math">\(F\)</span> is a field and thus an integral domain, we see that <span class="process-math">\(\lambda^n=0\)</span> implies that <span class="process-math">\(\lambda=0\)</span> is as well. As this holds in the algebraic closure of <span class="process-math">\(F\)</span> as well, we see that when factored into linear terms all the <span class="process-math">\(\lambda=0\text{.}\)</span> Thus <span class="process-math">\(\cp_A(x)=x^n\text{.}\)</span>
+</div>
+</div>
 <span class="incontext"><a href="sec-rcf.html#p-2103" class="internal">in-context</a></span>
 </body>
 </html>

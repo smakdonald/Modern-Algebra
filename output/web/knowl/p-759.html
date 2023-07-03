@@ -12,8 +12,15 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">As all of them are conjugate, and conjugation induces an isomorphism on the group, we see that all three subgroups are isomorphic. Hence, we just need to show that <span class="process-math">\(S_4\)</span> contains a subgroup isomorphic to <span class="process-math">\(D_8\text{.}\)</span> Let <span class="process-math">\(X\)</span> be the set of left cosets of the subgroup <span class="process-math">\(\{e,s\}\)</span> of <span class="process-math">\(D_8\text{.}\)</span> Note that <span class="process-math">\(|X| = 4\text{.}\)</span> Let <span class="process-math">\(G\)</span> act on <span class="process-math">\(X\)</span> by left multiplication. This action induces a homomorphism <span class="process-math">\(\varphi : G \to P(X)\)</span> where <span class="process-math">\(P(X)\cong S_4\)</span> is the permutation group on <span class="process-math">\(X\text{.}\)</span> As shown in class, the kernel of this homomorphism is the largest normal subgroup contained in <span class="process-math">\(\{e,s\}\text{,}\)</span> which is <span class="process-math">\(\{e\}\text{.}\)</span> Thus, <span class="process-math">\(\varphi\)</span> is injective and the image of <span class="process-math">\(\varphi\)</span> is a subgroup of <span class="process-math">\(S_4\)</span> isomorphic to <span class="process-math">\(D_8\text{.}\)</span>
+<div class="para logical">
+<div class="para">So, we must resort to something really sneaky: let <span class="process-math">\(P_1, \dots, P_{10}\)</span> be all of the Sylow <span class="process-math">\(3\)</span>-subgroups. Observe that <em class="emphasis">if</em> <span class="process-math">\(P_i \cap P_j = \{e\}\)</span> for all <span class="process-math">\(i \ne j\text{,}\)</span> then we would have <span class="process-math">\(10 \cdot 8 = 80\)</span> elements of order <span class="process-math">\(3\)</span> or <span class="process-math">\(9\text{.}\)</span> This would give at least <span class="process-math">\(80+ 15 + 24\)</span> elements, which is not possible. So, it must be the case that at least two intersect non-trivially. Without loss, let's say <span class="process-math">\(H = P_1 \cap P_2\)</span> is such that <span class="process-math">\(\# H= 3\text{.}\)</span> We ponder <span class="process-math">\(N_G(H)\text{.}\)</span> Since <span class="process-math">\(P_1\)</span> is abelian and <span class="process-math">\(H \leq P_1\text{,}\)</span> <span class="process-math">\(P_1 \leq N_G(H)\text{,}\)</span> so that <span class="process-math">\(9 \mid \# N_G(H)\text{.}\)</span> Likewise, <span class="process-math">\(P_2 \leq N_G(H)\)</span> too, and since <span class="process-math">\(\#(P_1 \cup P_2) = 9 + 9 - 2 = 15\text{,}\)</span> we get <span class="process-math">\(15 \leq N_G(H)\text{.}\)</span> And of course <span class="process-math">\(\# N_G(H) \mid 90\text{.}\)</span> We get only three possibilities:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\# N_G(H) = 18, 45 \text{ or } 90.
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec-sylowthm.html#p-759" class="internal">in-context</a></span>
+<div class="para">Let us show that each is impossible:</div>
+</div>
+<span class="incontext"><a href="sec-simple-groups.html#p-759" class="internal">in-context</a></span>
 </body>
 </html>

@@ -666,13 +666,6 @@
               </p>
             </convention>
 
-            <historical><title>Magma</title>
-              <p>
-                The term <q>magma</q> was coined by the mathematician Benjamin Peirce in the 1870s to describe a set with a binary operation. 
-                The word <q>magma</q> is derived from the Latin word <q>magmus</q>, meaning <q>mass</q> or <q>heap</q>, which suggests a collection of objects with no particular order or structure.
-              </p>
-            </historical>
-
             <definition xml:id="def-algebraic-structures"><title>Algebraic Structures</title> 
               <statement>
                 <p>
@@ -715,12 +708,6 @@
                 </p>
               </statement>
             </definition>
-            
-            <historical><title>Monoid</title>
-              <p>
-                The word "monoid" was first used by the mathematician Garrett Birkhoff in his 1935 paper "On the Structure of Abstract Algebras".
-              </p>
-            </historical>
 
             <convention>
               <p>
@@ -736,16 +723,6 @@
               </p>
             </insight>
 
-            <historical><title>Groups</title>
-              <p>
-                The term <q>group</q> was introduced in 1831 by the French mathematician <xref text="title" ref="bio-galois"/> to describe a set of mathematical objects that exhibit certain symmetry properties.
-              </p>
-
-              <p>
-                It was later adopted and popularized by other mathematicians such as <xref text="title" ref="bio-cayley"/> and <xref text="title" ref="bio-cauchy"/>, though the axiomatic definition was not given until 1882 by Heinrich Weber.
-              </p>
-            </historical>
-
             <p>
               For those who appreciate a snazzy visual, here is a handy little graphic.
             </p>
@@ -754,13 +731,6 @@
               <caption>Relations between algebraic structures. <url href="https://q.uiver.app/?q=WzAsOCxbMiwwLCJcXHRleHR7TWFnbWF9Il0sWzIsMiwiXFx0ZXh0e1VuaXRhbCBNYWdtYX0iXSxbMiw0LCJcXHRleHR7SW52ZXJzZSBTZW1pZ3JvdXB9Il0sWzIsNiwiXFx0ZXh0e0dyb3VwfSJdLFs0LDQsIlxcdGV4dHtNb25vaWR9Il0sWzQsMiwiXFx0ZXh0e1NlbWlncm91cH0iXSxbMCwyLCJcXHRleHR7UXVhc2lncm91cH0iXSxbMCw0LCJcXHRleHR7TG9vcH0iXSxbNywzLCJcXHRleHR7YXNzb2NpYXRpdml0eX0iLDEseyJjb2xvdXIiOlsxMjAsNjAsNjBdfSxbMTIwLDYwLDYwLDFdXSxbNiwyLCJcXHRleHR7YXNzb2NpYXRpdml0eX0iLDAseyJsYWJlbF9wb3NpdGlvbiI6NDAsImNvbG91ciI6WzEyMCw2MCw2MF19LFsxMjAsNjAsNjAsMV1dLFsxLDQsIlxcdGV4dHthc3NvY2lhdGl2aXR5fSIsMCx7ImxhYmVsX3Bvc2l0aW9uIjo0MCwiY29sb3VyIjpbMTIwLDYwLDYwXX0sWzEyMCw2MCw2MCwxXV0sWzAsNSwiXFx0ZXh0e2Fzc29jaWF0aXZpdHl9IiwxLHsiY29sb3VyIjpbMTIwLDYwLDYwXX0sWzEyMCw2MCw2MCwxXV0sWzAsMSwiXFx0ZXh0e2lkZW50aXR5fSIsMSx7ImNvbG91ciI6WzI3MCw2MCw2MF19LFsyNzAsNjAsNjAsMV1dLFsyLDMsIlxcdGV4dHtpZGVudGl0eX0iLDEseyJjb2xvdXIiOlsyNzAsNjAsNjBdfSxbMjcwLDYwLDYwLDFdXSxbNiw3LCJcXHRleHR7aWRlbnRpdHl9IiwxLHsiY29sb3VyIjpbMjcwLDYwLDYwXX0sWzI3MCw2MCw2MCwxXV0sWzUsNCwiXFx0ZXh0e2lkZW50aXR5fSIsMSx7ImNvbG91ciI6WzI3MCw2MCw2MF19LFsyNzAsNjAsNjAsMV1dLFswLDYsIlxcdGV4dHtkaXZpc2liaWxpdHl9IiwxLHsiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXSxbMSw3LCJcXHRleHR7ZGl2aXNpYmlsaXR5fSIsMCx7ImxhYmVsX3Bvc2l0aW9uIjo2MCwiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXSxbNSwyLCJcXHRleHR7aW52ZXJzZXN9IiwwLHsibGFiZWxfcG9zaXRpb24iOjYwLCJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dLFs0LDMsIlxcdGV4dHtpbnZlcnNlc30iLDEseyJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dXQ==" visual="">Quiver</url></caption>
               <image source="images/magma.png" width="80%"/>
             </figure>
-
-            <historical><title>Abelian Groups</title>
-              <p>
-                The term <q>abelian groups</q> was introduced by the mathematician and physicist James Clerk Maxwell in the 1870s. 
-                Maxwell named these groups after the Norwegian mathematician <xref text="title" ref="bio-abel"/>.
-              </p>
-            </historical>
     
           </subsection>
 
@@ -802,7 +772,7 @@
                         The element <m>e</m> satisfying the <xref text="title" ref="identity-property"/> of <xref ref="def-monoid" /> is unique, and we thus refer to it as the <em>identity element</em><idx><h>identity element</h></idx> of <m>G</m>.
                       </p>
                     </li>
-                    
+
                     <li xml:id="list-unique-group-inverse"><title>Unique Inverses</title>
                       <p>
                         For each <m>x\in G</m>, the element satisfying the <xref text="title" ref="inverse-property"/> of <xref ref="def-group" /> is unique, and we thus refer to it as the <em>the inverse</em> of <m>x</m>.
@@ -1590,12 +1560,6 @@
               </statement>
             </definition>
 
-            <historical>
-              <p>
-                The name "dihedral group" is a natural choice for these groups, as they are intimately connected to the study of dihedral angles and the symmetries of regular polygons.
-              </p>
-            </historical>
-
             <example xml:id="ex-d2n-elements"><title>Rotations and Reflections</title>
               <p>
                 Assume that the regular <m>n</m>-gon <m>P_n</m> is drawn in the plane with its center at the origin and one vertex on the <m>x</m> axis.        
@@ -2027,15 +1991,6 @@
           <subsection xml:id="subsec-quat"><title>The Quaternions</title>
 
             <blockquote><p><q>Quaternions...though beautifully ingenious, have been an unmixed evil to those who have touched them in any way.</q></p><attribution>William Thomson</attribution></blockquote>
-                  
-            <historical><title>Quaternions</title>
-              <p>
-                Quaternions were invented by the Irish mathematician <xref text="title" ref="bio-hamilton"/> in 1843. 
-                Hamilton named them "quaternions" because they are a generalization of complex numbers, which he called "duads". 
-                Since quaternions involve four components instead of two, Hamilton chose the name "quaternions" to reflect this. 
-                The word "quaternion" itself means a group of four things or a fourfold entity, which is a fitting name for a mathematical object with four components.
-              </p>
-            </historical>
 
             <definition xml:id="def-quaternions"><title>Quaternions</title>
               <statement>
@@ -2101,16 +2056,6 @@
                 </p>
               </statement>
             </definition>
-
-            <historical><title>Homomorphism</title>
-              <p>
-                The word "homomorphism" comes from the Greek words "homo" meaning "same" and "morphe" meaning "form" or "shape".
-              </p>
-
-              <p>
-                Several mathematicians have been creditied with inventing / discovering homomorphisms, such as Frobenius, Galois, Klein, and Jordan.
-              </p>
-            </historical>
 
             <convention>
               <p>
@@ -2295,17 +2240,6 @@
               </statement>
             </definition>
 
-            <historical><title>Kernel</title>
-              <p>
-                The term <q>kernel</q> was first used in mathematics by the German mathematician <xref text="title" ref="bio-frobenius"/> in the late 19th century.
-              </p>
-
-              <p>
-                The term <q>kernel</q> comes from the German word <q>kern</q>, which means <q>core</q> or <q>nucleus</q>. 
-                In the context of a homomorphism, the kernel is the subgroup of the domain group that is <q>killed</q> by the homomorphism.
-              </p>
-            </historical>
-
             <theorem xml:id="thm-inj-surj-ghom"><title>Injective and Surjective Homomorphisms</title>
               <statement>
                 <p>
@@ -2384,15 +2318,7 @@
               </statement>
             </definition>
       
-            <historical>
-              <p>
-                The meaning of the word <q>isomorphism</q> in any context (sets, groups, rings, fields, topological spaces, whatever) is always <q>a morphism that has a two-sided inverse</q>. 
-                In many contexts this turns out to be equivalent to the notion of being <q>one-to-one and onto</q>. 
-                But there are contexts in which this is not the case. 
-                For example a one-to-one and onto continuous map of topological spaces need not be a homeomorphism. 
-                (A homeomorphism is a term one uses for isomorphism of topological spaces, for historical reasons.)
-              </p>
-            </historical>
+            
       
             <p>
               Intuitively, a group isomorphism establishes a one-to-one correspondence between the elements of two groups, such that they have exactly the same algebraic structure. 
@@ -2569,9 +2495,6 @@
               </solution>
             </exercise>
   
-            <p>
-              Now seems like an exceptional time to recall <xref ref="thm-ghom-composition"/>.
-            </p>
       
             <corollary xml:id="cor-composition-of-isos"><title>Composition of Isomorphisms</title>
               <statement>
@@ -3109,15 +3032,6 @@
                 </p>
               </statement>
             </theorem>
-
-            <historical><title>Cayly's Theorem</title>
-              <p>
-                Cayley's Theorem is named after the British mathematician Arthur Cayley. 
-                Cayley was a prolific mathematician who made significant contributions to a wide range of fields, including algebra, geometry, and graph theory. 
-                Cayley was also a strong advocate for women's education and played an important role in the movement to admit women to Cambridge University. 
-                In the 1860s, he was part of a group of academics who lobbied for women to be allowed to take the Cambridge Mathematical Tripos exam, which was the standard test for mathematics students at the time.
-              </p>
-            </historical>
 
             <remark>
               <p>
@@ -4275,12 +4189,6 @@
                 </p>
               </statement>
             </theorem>
-
-          <historical>
-            <p>
-              Lagrange stated his version of this theorem in 1770, but the first complete proof was given by Pietro Abbati roughly 30 years later.
-            </p>
-          </historical>
       
             <corollary xml:id="cor-lagrange"><title>Corollaries to Lagrange's Theorem</title>
               <statement>
@@ -6155,17 +6063,6 @@
             
           </definition>
     
-          <historical>
-            <p>
-              Sylow subgroups are named after the Norwegian mathematician Ludwig Sylow, who was the first to systematically study their properties in the late 19th century.
-            </p>
-    
-            <p>
-              Sylow was interested in understanding the structure of finite groups and in particular, how the existence of certain subgroups of prime power order could provide information about the structure of the group as a whole. 
-              He introduced the concept of a Sylow <m>p</m>-subgroupa and showed that such subgroups play a crucial role in the structure of finite groups.
-            </p>
-          </historical>
-    
           <remark>
             <p>
               We allow the case when <m>p\nmid |G|</m>, in which case <m>e = 0</m> and <m>G</m> has a unique Sylow <m>p</m>-subgroup, namely <m>\{e\}</m> which has order <m>p^0</m>.
@@ -6205,14 +6102,7 @@
             </statement>
           </theorem>
     
-          <historical>
-            <p>
-              Augustin-Louis Cauchy was a French mathematician who made important contributions to various branches of mathematics, including analysis, number theory, and geometry. 
-              He lived from 1789 to 1857 and is considered one of the greatest mathematicians of the 19th century. 
-              Cauchy proved his eponymous theorem in the early 19th century as part of his investigations into the theory of permutation groups. 
-              He was interested in understanding the structure of groups and their subgroups, and he realized that certain primes played a special role in this context.
-            </p>
-          </historical>
+
     
           <p>
             <xref text="title" ref="thm-cauchy"/> allows us to conclude the existence of certain elements in a group based solely on its order, which can be a powerful tool in studying the structure of groups. 
@@ -8125,12 +8015,6 @@
                 </statement>
               </definition>
 
-              <historical><title>Rings</title>
-                <p>
-                  Rings were first discovered (or created) by the German mathematician <xref text="title" ref="bio-hilbert"/> in the early 20th century, who used the term "Ring" because of the circular nature of the structure. The operations interact with each other in a circular way, such that multiplication distributes over addition, and addition and multiplication satisfy certain other algebraic properties.
-                </p>
-              </historical>
-
               <p>Here are some basic consequences of the axioms.</p>
   
               <proposition xml:id="prop-ring-arithmetic"><title>Ring Arithmetic</title>
@@ -8254,12 +8138,6 @@
                   </p>
                 </statement>
               </definition>
-
-              <historical><title>Fields</title>
-                <p>
-                  The term "Field" was first introduced by the German mathematician Ernst Steinitz in the early 20th century. It was chosen because of the analogy with the physical concept of a field, such as an electric field or a gravitational field, which also has a notion of addition and multiplication, and satisfies certain algebraic properties.
-                </p>
-              </historical>
 
               <p>Phew. That was pretty deep. Let's take a breather and see some examples.</p>
   
@@ -8528,16 +8406,6 @@
                     </p>
                 </statement>
               </definition>
-
-              <historical>
-                <p>
-                  The term "integral domain" was coined by <xref text="title" ref="bio-dedekind"/>, a German mathematician who lived in the 19th century.
-                </p>
-
-                <p>
-                  The word "integral" comes from the Latin "integer," meaning "whole" or "untouched," which is fitting because in an integral domain, the product of two nonzero elements is never "broken apart" into smaller pieces by a zerodivisor.
-                </p>
-              </historical>
 
               <remark><p>Note that by <xref ref="exe-1-is-0"/> saying that <m>1\neq0</m> is equivalent to saying that <m>R</m> is nontrivial.</p></remark>
 
@@ -9329,10 +9197,6 @@
                 </p>
               </statement>
             </definition>
-
-            <historical><title>Ideal</title>
-              <p>Ideals were first introduced by <xref ref="bio-dedekind"/> in the 1870s in his work on algebraic number theory. The term "ideal" was chosen by Dedekind to suggest the notion of an "ideal" number, which he saw as a kind of idealization of a real number. Similarly, Dedekind saw an ideal in a ring as an idealization of an element in the ring.</p>
-            </historical>
 
             <p>To simplify to an excessive degree, ideals are the normal subgroups of rings. This is not <q>accurate</q> in the techincal sense, but it does communicate the vibe of what ideals are and how we will be using them in this text.</p>
     
@@ -10407,11 +10271,6 @@
 
           <p>In a Euclidean domain, division with remainder is possible, and the remainder is always smaller than the divisor. This property is similar to the division algorithm for integers, which is what makes Euclidean domains so useful in number theory and algebra.</p>
 
-          <historical><title>Euclidean Domains</title>
-            <p>
-              Euclidean domains were named after the ancient Greek mathematician Euclid; however, it was actually Ernst Eduard Kummer, a German mathematician, who first introduced the concept of Euclidean domains in the 19th century.
-            </p>
-          </historical>
 
           <p>Lets take a look at some examples to deepen our understanding.</p>
 
@@ -10517,10 +10376,6 @@
               </p>
             </statement>
           </definition>
-
-          <historical><title>PIDs</title>
-            <p>The concept of principal ideal domains (PIDs) was introduced by the German mathematician Ernst Eduard Kummer in the 19th century, as a generalization of the concept of Euclidean domains.</p>
-          </historical>
     
           <exercise xml:id="exe-fx-is-a-pid"><title>Polynomial Rings over Fields are PIDs</title>
             <p>
@@ -10765,12 +10620,6 @@
               </p>
             </statement>
           </definition>
-
-          <historical><title>UFDs</title>
-            <p>The concept of unique factorization was first introduced by mathematicians Carl Friedrich Gauss and Ernst Eduard Kummer in the 19th century.</p>
-
-            <p>The term "unique factorization domain" was coined by Emmy Noether in the 20th century, to describe integral domains in which every non-zero, non-unit element has a unique factorization into irreducible elements.</p>
-          </historical>
     
           <example xml:id="ex-ufd-exs"><title>Examples of UFDs</title>
             <p><ol>
@@ -11040,12 +10889,6 @@
               </p>
             </statement>
           </definition>
-
-          <historical><title>Modules</title>
-            <p>
-              The term "module" comes from the Latin word "modulus", which means "measure". In mathematics, a module is a mathematical object that measures the size and shape of a vector space over a given ring. The term "module" is used to emphasize the idea that these objects are generalizations of vector spaces, and that they measure the extent to which a given vector space can be transformed using the ring operations.
-            </p>
-          </historical>
 
           <remark><p>If <m>R</m> is a commutative ring, then any left <m>R</m>-module <m>M</m> may be regarded as a right <m>R</m>-module by setting <m>m r = r m</m>. Likewise, any right <m>R</m>-module may be regarded as a left <m>R</m>-module. But for non-commutative rings, left and right modules are not the same: trying to make a left <m>R</m>-module <m>M</m> into a right one by setting <m>mr = rm</m> fails to satisfy the second axiom, since <m>m(rs) = (rs)m</m> and <m>(mr)s = (rm)s = s(rm) = (sr)m</m>, and, unless <m>rs =sr</m>, we cannot conclude that <m>m(rs) = (mr)s</m>.</p></remark>
 
@@ -26538,6 +26381,135 @@
           
         </paragraphs>
 
+      </appendix>
+
+      <appendix xml:id="appendix-etymology"><title>Etymology</title>
+
+        <paragraphs><title>Algebraic Structures</title>
+          <p>
+            The term <q>magma</q> was coined by the mathematician Benjamin Peirce in the 1870s to describe a set with a binary operation. 
+            The word <q>magma</q> is derived from the Latin word <q>magmus</q>, meaning <q>mass</q> or <q>heap</q>, which suggests a collection of objects with no particular order or structure.
+          </p>
+
+          <p>
+            The word "monoid" was first used by the mathematician Garrett Birkhoff in his 1935 paper "On the Structure of Abstract Algebras".
+          </p>
+
+          <p>
+            The term <q>group</q> was introduced in 1831 by the French mathematician <xref text="title" ref="bio-galois"/> to describe a set of mathematical objects that exhibit certain symmetry properties.
+          </p>
+
+          <p>
+            It was later adopted and popularized by other mathematicians such as <xref text="title" ref="bio-cayley"/> and <xref text="title" ref="bio-cauchy"/>, though the axiomatic definition was not given until 1882 by Heinrich Weber.
+          </p>
+
+          <p>
+            The term <q>abelian groups</q> was introduced by the mathematician and physicist James Clerk Maxwell in the 1870s. 
+            Maxwell named these groups after the Norwegian mathematician <xref text="title" ref="bio-abel"/>.
+          </p>
+
+          <p>
+            The name "dihedral group" is a natural choice for these groups, as they are intimately connected to the study of dihedral angles and the symmetries of regular polygons.
+          </p>
+
+          <p>
+            Quaternions were invented by the Irish mathematician <xref text="title" ref="bio-hamilton"/> in 1843. 
+            Hamilton named them "quaternions" because they are a generalization of complex numbers, which he called "duads". 
+            Since quaternions involve four components instead of two, Hamilton chose the name "quaternions" to reflect this. 
+            The word "quaternion" itself means a group of four things or a fourfold entity, which is a fitting name for a mathematical object with four components.
+          </p>
+
+          <p>
+            The word "homomorphism" comes from the Greek words "homo" meaning "same" and "morphe" meaning "form" or "shape".
+          </p>
+
+          <p>
+            Several mathematicians have been creditied with inventing / discovering homomorphisms, such as Frobenius, Galois, Klein, and Jordan.
+          </p>
+
+          <p>
+            The term <q>kernel</q> was first used in mathematics by the German mathematician <xref text="title" ref="bio-frobenius"/> in the late 19th century.
+          </p>
+
+          <p>
+            The term <q>kernel</q> comes from the German word <q>kern</q>, which means <q>core</q> or <q>nucleus</q>. 
+            In the context of a homomorphism, the kernel is the subgroup of the domain group that is <q>killed</q> by the homomorphism.
+          </p>
+
+
+          <p>
+            The meaning of the word <q>isomorphism</q> in any context (sets, groups, rings, fields, topological spaces, whatever) is always <q>a morphism that has a two-sided inverse</q>. 
+            In many contexts this turns out to be equivalent to the notion of being <q>one-to-one and onto</q>. 
+            But there are contexts in which this is not the case. 
+            For example a one-to-one and onto continuous map of topological spaces need not be a homeomorphism. 
+            (A homeomorphism is a term one uses for isomorphism of topological spaces, for historical reasons.)
+          </p>
+
+          <p>
+            Cayley's Theorem is named after the British mathematician Arthur Cayley. 
+            Cayley was a prolific mathematician who made significant contributions to a wide range of fields, including algebra, geometry, and graph theory. 
+            Cayley was also a strong advocate for women's education and played an important role in the movement to admit women to Cambridge University. 
+            In the 1860s, he was part of a group of academics who lobbied for women to be allowed to take the Cambridge Mathematical Tripos exam, which was the standard test for mathematics students at the time.
+          </p>
+
+          <p>
+            Lagrange stated his version of this theorem in 1770, but the first complete proof was given by Pietro Abbati roughly 30 years later.
+          </p>
+
+          <p>
+            Sylow subgroups are named after the Norwegian mathematician Ludwig Sylow, who was the first to systematically study their properties in the late 19th century.
+          </p>
+
+          <p>
+            Sylow was interested in understanding the structure of finite groups and in particular, how the existence of certain subgroups of prime power order could provide information about the structure of the group as a whole. 
+            He introduced the concept of a Sylow <m>p</m>-subgroupa and showed that such subgroups play a crucial role in the structure of finite groups.
+          </p>
+
+          <p>
+            Rings were first discovered (or created) by the German mathematician <xref text="title" ref="bio-hilbert"/> in the early 20th century, who used the term "Ring" because of the circular nature of the structure. 
+            The operations interact with each other in a circular way, such that multiplication distributes over addition, and addition and multiplication satisfy certain other algebraic properties.
+          </p>
+
+          <p>
+            The term "Field" was first introduced by the German mathematician Ernst Steinitz in the early 20th century. 
+            It was chosen because of the analogy with the physical concept of a field, such as an electric field or a gravitational field, which also has a notion of addition and multiplication, and satisfies certain algebraic properties.
+          </p>
+
+          <p>
+            The term "integral domain" was coined by <xref text="title" ref="bio-dedekind"/>, a German mathematician who lived in the 19th century.
+          </p>
+
+          <p>
+            The word "integral" comes from the Latin "integer," meaning "whole" or "untouched," which is fitting because in an integral domain, the product of two nonzero elements is never "broken apart" into smaller pieces by a zerodivisor.
+          </p>
+
+          <p>
+            Ideals were first introduced by <xref ref="bio-dedekind"/> in the 1870s in his work on algebraic number theory. 
+            The term "ideal" was chosen by Dedekind to suggest the notion of an "ideal" number, which he saw as a kind of idealization of a real number. 
+            Similarly, Dedekind saw an ideal in a ring as an idealization of an element in the ring.
+            </p>
+
+          <p>
+            Euclidean domains were named after the ancient Greek mathematician Euclid; however, it was actually Ernst Eduard Kummer, a German mathematician, who first introduced the concept of Euclidean domains in the 19th century.
+          </p>
+
+          <p>
+            The concept of principal ideal domains (PIDs) was introduced by the German mathematician Ernst Eduard Kummer in the 19th century, as a generalization of the concept of Euclidean domains.
+          </p>
+
+          <p>
+            The concept of unique factorization was first introduced by mathematicians Carl Friedrich Gauss and Ernst Eduard Kummer in the 19th century.
+          </p>
+
+          <p>
+            The term "unique factorization domain" was coined by Emmy Noether in the 20th century, to describe integral domains in which every non-zero, non-unit element has a unique factorization into irreducible elements.
+          </p>
+
+          <p>
+            The term "module" comes from the Latin word "modulus", which means "measure". In mathematics, a module is a mathematical object that measures the size and shape of a vector space over a given ring. 
+            The term "module" is used to emphasize the idea that these objects are generalizations of vector spaces, and that they measure the extent to which a given vector space can be transformed using the ring operations.
+          </p>
+        </paragraphs>
       </appendix>
 
       <appendix xml:id="appendix-quals"><title>Qualifying Exams</title>
