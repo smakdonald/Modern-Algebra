@@ -12,14 +12,57 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<div class="para logical">
-<div class="para">The first claim follows from multi-linearity and alternating properties: For notational simplicity say <span class="process-math">\(A = (v_1, v_2, \dots)\)</span> and <span class="process-math">\(B = (v_1 + rv_2, v_2, \dots)\text{.}\)</span> Then</div>
+<div class="para">We start by proving that <span class="process-math">\(\det\)</span> has these properties.</div> <div class="para logical">
+<div class="para">Let <span class="process-math">\(v_1, \dots, v_n\)</span> form the columns of a matrix <span class="process-math">\(A\text{.}\)</span> (I.e, the <span class="process-math">\(s\)</span>-th entry of <span class="process-math">\(v_t\)</span> is <span class="process-math">\(a_{s,t}\text{.}\)</span>) We have</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\det(B) = \det(v_1, v_2, \dots) + r \det(v_2, v_2, \dots) = \det(A) + r \cdot 0 = \det(A)
+\begin{aligned}
+\det(v_1, \dots, v_{i-1}, r v_i + v'_i, v_{i+1}, \dots, v_n) 
+&amp; =  \sum_{\s} \sign(\s) \prod_{j\ne i} a_{\s(j), j} \cdot (r a_{\s(i), i} + a'_{\s(i), i})\\
+&amp; =  r \sum_{\s} \sign(\s) \prod_{j\ne i} a_{\s(j), j} \cdot (a_{\s(i), i})  \\
+&amp; + \sum_{\s} \sign(\s) \prod_{j\ne i} a_{\s(j), j} \cdot (a'_{\s(i), i})  \\
+&amp; = r \det(v_1, \dots, v_{i-1}, v_i , v_{i+1}, \dots, v_n) +
+\det(v_1, \dots, v_{i-1},  v_i', v_{i+1}, \dots, v_n) \\
+\end{aligned}
 \end{equation*}
 </div>
-<div class="para">The second is immediate from (the second part of) <span class="process-math">\(R\)</span>-multi-linearity. The last is a special case of Lemma .</div>
+<div class="para">and this proves <span class="process-math">\(R\)</span>-multi-linearity.</div>
+</div> <div class="para logical">
+<div class="para">For the alternating property, for notational simplicity, let us assume that <span class="process-math">\(v_1 = v_2\)</span> (i.e., the first two columns of the matrix are equal). (The proof of the general case is essentially the same.) Note that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\det(A) = \sum_{(i,j, g)} \sign(i,j,g) a_{i,1} a_{j,2} a_{g(3), 3} a_{g(4), 4} \cdots a_{g(n), n}
+\end{equation*}
+</div>
+<div class="para">where the sum ranges over triples <span class="process-math">\((i,j,g)\)</span> where <span class="process-math">\(i \ne j\)</span> and <span class="process-math">\(g\)</span> is an injective function from <span class="process-math">\(\{3, \dots, n\}\)</span> to <span class="process-math">\(\{1, \dots, n\} \setminus \{i,j\}\)</span> and by <span class="process-math">\(\sign(i,j,g)\)</span> we mean the sign of the permutation sending <span class="process-math">\(1\)</span> to <span class="process-math">\(i\text{,}\)</span> <span class="process-math">\(2\)</span> to <span class="process-math">\(j\)</span> and <span class="process-math">\(s\)</span> to <span class="process-math">\(g(s)\)</span> for all other <span class="process-math">\(s\text{.}\)</span> For each <span class="process-math">\((i,j,g)\text{,}\)</span> we have <span class="process-math">\(\sign(i,j,g) = -\sign(j,i,g)\text{,}\)</span> since the corresponding permutations differ by a transposition. Since <span class="process-math">\(a_{i,1} = a_{i,2}\)</span> and <span class="process-math">\(a_{j,1} = a_{j,2}\text{,}\)</span> it follows that the terms in the formula for <span class="process-math">\(\det(A)\)</span> cancel in pairs to give <span class="process-math">\(0\text{.}\)</span>
+</div>
+</div> <div class="para">The property <span class="process-math">\(\det(I_n) = 1\)</span> follows from the formula. (See Example .)</div> <div class="para">Let us now prove the uniqueness part of the Theorem:</div> <div class="para logical">
+<div class="para">Let <span class="process-math">\(\phi\)</span> be any function with the three properties stated in the Theorem. Let <span class="process-math">\(A = (a_{i,j})\)</span> be any square matrix with columns <span class="process-math">\(v_1, \dots, v_n\text{.}\)</span> Note that <span class="process-math">\(v_j = \sum_i a_{i,j} e_i\)</span> where <span class="process-math">\(e_i\)</span> is the <span class="process-math">\(i\)</span>-th standard basis (column) vector. Using the <span class="process-math">\(R\)</span>-multi-linearity property repeatedly we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\phi(A) &amp; = \phi(\sum_{i_1} a_{i_1,1} e_{i_1},  \sum_{i_2} a_{i_2,2} e_{i_2}, \cdots, \sum_{i_n} a_{i_n,n} e_{i_n}) \\
+&amp; = \sum_{i_1} a_{i_1,1} \phi(e_{i_1},  \sum_{i_2} a_{i_2,2} e_{i_2}, \cdots, \sum_{i_n} a_{i_n,n} e_{i_n}) \\
+&amp; = \sum_{i_1}a_{i_1,1} \sum_{i_2} a_{i_2,2} \phi(e_{i_1},   e_{i_2}, \cdots, \sum_{i_n} a_{i_n,n} e_{i_n}) \\
+&amp; = \vdots \\
+&amp; = \sum_{ i_1, \dots, i_n } a_{i_1, 1} \cdots a_{i_n,n} \phi(e_{i_1}, \dots, e_{i_n}) \\
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">where each of <span class="process-math">\(i_1, \dots, i_n\)</span> ranges from <span class="process-math">\(1\)</span> to <span class="process-math">\(n\text{.}\)</span> By the alternating property <span class="process-math">\(\phi(e_{i_1}, \dots, e_{i_n}) = 0\)</span> unless all the <span class="process-math">\(i_1, \dots, i_n\)</span> are distinct. If they are distinct, then by Lemma  we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi(e_{i_1}, \dots, e_{i_n}) = \sign(\s) \phi(e_1, \dots, e_n)
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(\s\)</span> is the permutation defined as <span class="process-math">\(\s(t) = i_t\text{.}\)</span> Finally, recall <span class="process-math">\(\phi(e_1, \dots, e_n) = 1\)</span> by assumption. Putting all of this together gives</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi(A) = \sum_{\text{ distinct  $i_1, \dots, i_n$}} \sign(\text{the permutation $t \mapsto i_t$}) a_{i_1, 1} \cdots a_{i_n,n}.
+\end{equation*}
+</div>
+<div class="para">This is just a re-writing of the formula for <span class="process-math">\(\det\text{;}\)</span> so <span class="process-math">\(\phi = \det\text{.}\)</span>
+</div>
 </div></article><span class="incontext"><a href="section-70.html#proof-177" class="internal">in-context</a></span>
 </body>
 </html>

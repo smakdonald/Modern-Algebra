@@ -13,13 +13,20 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(E\)</span> be the field extension of <span class="process-math">\(\Q\)</span> obtained by adjoining to <span class="process-math">\(\Q\)</span> all four complex roots of the polynomial <span class="process-math">\(x^4 + 5\text{.}\)</span> (<span class="process-math">\(E\)</span> is what's known as the “splitting field" of <span class="process-math">\(x^4 + 5\)</span> over <span class="process-math">\(\Q\text{.}\)</span>) That is, <span class="process-math">\(E = \Q(\a_1, \a_2, \a_3, \a_4)\)</span> where <span class="process-math">\(\a_1 = e^{\pi i/4}\sqrt[4]{5}\text{,}\)</span> <span class="process-math">\(\a_2 = e^{3\pi i/4}\sqrt[4]{5}\text{,}\)</span> <span class="process-math">\(\a_3 = e^{5\pi i/4}\sqrt[4]{5}\text{,}\)</span> and <span class="process-math">\(\a_4 = e^{7\pi i/4}\sqrt[4]{5}\text{.}\)</span>
+<div class="para">Next, consider the monic polynomial <span class="process-math">\(x^4+2x^2+49\text{,}\)</span> and observe</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{align}
+0&amp;=x^4+2x^2+49\\
+-48&amp;=x^4+2x^2+1\\
+(16)(3)(-1)&amp;=(x^2+1)^2\\
+4\sqrt{3}i&amp;=(x^2+1)\\
+-1+4\sqrt{3}i&amp;=x^2.
+\end{align}
+\end{equation*}
 </div>
-<ol class="decimal">
-<li><div class="para">Prove that there exist a field extension <span class="process-math">\(\Q \subseteq F\)</span> such that <span class="process-math">\(F \subseteq E\text{,}\)</span> <span class="process-math">\(F \subseteq \R\)</span> and <span class="process-math">\([F :\Q]=4\text{.}\)</span> <em class="emphasis">Tip</em>: Note that <span class="process-math">\(\a_1 + \a_4\)</span> is real number; find it explicitly.</div></li>
-<li><div class="para">Determine, with justification, <span class="process-math">\([E : \Q]\text{.}\)</span>
-</div></li>
-</ol>
+<div class="para">However, as <span class="process-math">\(\gamma^2=-1+4\sqrt{3}i\text{,}\)</span> we see that <span class="process-math">\(\gamma\)</span> is the root of this polynomial. Since this is a monic polynomial of degree <span class="process-math">\(4=[K(i):\Q]\text{,}\)</span> it must be the minimal polynomial as well. Thus the minimal polynomial of <span class="process-math">\([K(i):\Q]=x^4+2x^2+49\text{.}\)</span>
+</div>
 </div>
 <span class="incontext"><a href="sec-algebraic.html#p-2509" class="internal">in-context</a></span>
 </body>

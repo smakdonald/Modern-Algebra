@@ -11,31 +11,42 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<div class="para logical">
-<div class="para">We have</div>
+<article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>
+<div class="para">We have previously shown <code class="code-inline tex2jax_ignore">[provisional cross-reference: cite]</code> that the quotient map <span class="process-math">\(\pi:G\to G/N\)</span> is a surjective group homomorphism. We show:</div> <div class="para logical"><ul class="disc">
+<li><div class="para">
+<span class="process-math">\(\Psi\)</span> is well defined (correct codomain) since for <span class="process-math">\(H\leq G\)</span> we have <span class="process-math">\(\pi(H)\leq G/N\)</span> (since images of subgroups through group homomorphisms are subgroups). <code class="code-inline tex2jax_ignore">[provisional cross-reference: cite]</code>
+</div></li>
+<li><div class="para logical">
+<div class="para">
+<span class="process-math">\(\Phi\)</span> is well defined (correct codomain) since for <span class="process-math">\(\mathcal{H}\leq G\)</span> we have <span class="process-math">\(\pi^{-1}(\mathcal{H})\leq G\)</span> (since preimages of subgroups through group homomorphisms are subgroups) <code class="code-inline tex2jax_ignore">[provisional cross-reference: cite]</code> and for any <span class="process-math">\(\mathcal{H}\leq G\)</span> we have <span class="process-math">\(\{e_GN\}\subseteq \mathcal{H}\text{,}\)</span> hence</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+N=\operatorname{Ker}(\pi)=\pi^{-1}(\{e_GN\})\subseteq \pi^{-1}(\mathcal{H})=\Phi(\mathcal{H}).
+\end{equation*}
+</div>
+</div></li>
+<li><div class="para logical">
+<div class="para">
+<span class="process-math">\(\Phi\)</span> and <span class="process-math">\(\Psi\)</span> are mutual inverses: <span class="process-math">\((\Psi\circ\Phi)(\mathcal{H})=\pi(\pi^{-1}(\mathcal{H}))=\mathcal{H}\)</span> since <span class="process-math">\(\pi\)</span> is surjective and <span class="process-math">\((\Phi\circ\Psi)(H)=\pi^{-1}(\pi(H))=\pi^{-1}(H/N)=H\text{,}\)</span> with the last equality justified by</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \begin{aligned}
-(\sigma_g\circ\sigma_{g^{-1}})(s) &amp;=\sigma_g(\sigma_{g^{-1}}(s)) &amp; \text{ (def of composition)}\\
-&amp;=g\cdot (g^{-1} \cdot s) &amp; (\text{ def for } \sigma_g \text{ and } \sigma_{g^{-1}})\\
-&amp;=(gg^{-1})\cdot s &amp; \text{ (first property of a group action)}\\
-&amp;=e_G\cdot s &amp; \text{ (group axiom)}\\
-&amp;= s &amp;\text{ (second property of a group action)}
+x\in \pi^{-1}(H/N) &amp;\iff \pi(x)\in H/N \iff xN=hN \text{ for some } h\in H \\
+&amp; \iff x\in hN \text{ for some } h\in H \iff x\in H \text{ (using that } N\subseteq H).\\
 \end{aligned}
 \end{equation*}
 </div>
-<div class="para">thus <span class="process-math">\(\sigma_g\circ\sigma_{g^{-1}}=\text{id}_S\)</span> and a similar argument shows that <span class="process-math">\(\sigma_{g^{-1}}\circ\sigma_{g}=\text{id}_S\)</span>
-</div>
+</div></li>
+</ul></div> <div class="para">Thus, the two functions defined in the statement are well-defined and are mutually inverse.</div> <div class="para">Since <span class="process-math">\(\pi\)</span> and <span class="process-math">\(\pi^{-1}\)</span> preserve containments, each of <span class="process-math">\(\Psi\text{,}\)</span> <span class="process-math">\(\Psi^{-1}\)</span> preserves the order relation of containment.</div> <div class="para">I will only prove some parts of statements (1), (2), (3) in the theorem.</div> <div class="para">(1) If <span class="process-math">\(N \leq H \leq G\)</span> and <span class="process-math">\(H \unlhd G\text{,}\)</span> then <span class="process-math">\(H/N \unlhd G/N\)</span> holds by part of the 3rd Isomorphism Theorem <code class="code-inline tex2jax_ignore">[provisional cross-reference: cite]</code> or by the exercise below, since <span class="process-math">\(\pi\)</span> is surjective. The fact that the inverse function also sends normal subgroups to normal subgroups is a consequence of the statement that inverse images of normal subgroups are normal subgroups (see HW 4). <code class="code-inline tex2jax_ignore">[provisional cross-reference: cite]</code>
 </div> <div class="para logical">
-<div class="para">Finally, we wish to show <span class="process-math">\(\rho(gg')=\rho(g) \circ \rho(g')\text{,}\)</span> equivalently <span class="process-math">\(\sigma_{gg'}=\sigma_g\circ\sigma_{g'}\text{.}\)</span> Since</div>
-<div class="displaymath process-math">
+<div class="para">(2) In the interest of time, I'll only prove the assertion about indices in the special case when <span class="process-math">\(H\)</span> is normal. In that case this fact is also an immediate consequence of the Third Isomorhism Theorem <code class="code-inline tex2jax_ignore">[provisional cross-reference: cite]</code> since for <span class="process-math">\(N \leq H \leq G\)</span> with <span class="process-math">\(H \unlhd G\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls=" ">
 \begin{equation*}
-\sigma_{gg'}(s) = (gg')\cdot s = g\cdot(g'\cdots) =\sigma_g\left(\sigma_{g'}(s)\right) = (\sigma_g\circ\sigma_{g'})(s),
+[G:H] = |G/H| = \left|(G/N)/(H/N)\right| = [G/N: H/N]=[\overline{G}:\overline{H}].
 \end{equation*}
 </div>
-<div class="para">holds for all <span class="process-math">\(s\text{,}\)</span> this proves <span class="process-math">\(\rho\)</span> is a homomorphism.</div>
-</div> <div class="para">Given a homomorphism <span class="process-math">\(\rho\text{,}\)</span> the function <span class="process-math">\(G \times S \to S\)</span> defined as <span class="process-math">\(g \cdot s = \rho(g)(s)\)</span> is an action because <span class="process-math">\(g'(gs) = \rho(g')(\rho(g)(s)) = (\rho(g') \circ\rho(g))(s) = \rho(gg')(s) = (gg')s\text{,}\)</span> and <span class="process-math">\(e_G s = \rho(e_G)(s) = \text{id}(s) = s\text{.}\)</span>
-</div></article><span class="incontext"><a href="graction.html#proof-31" class="internal">in-context</a></span>
+<div class="para">The general case is a consequence of an exercise from HW 5. <code class="code-inline tex2jax_ignore">[provisional cross-reference: cite]</code>
+</div>
+</div> <div class="para">(3) The proof of (3) is omitted.</div></article><span class="incontext"><a href="sec-quotient-groups.html#proof-31" class="internal">in-context</a></span>
 </body>
 </html>

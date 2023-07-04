@@ -12,7 +12,15 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">By the <a href="" class="xref" data-knowl="./knowl/thm-degree-formula.html" title="Theorem 19.30: The Degree Formula">The Degree Formula</a> we get <span class="process-math">\([L: \Q(i)] = 4\text{.}\)</span> Since <span class="process-math">\(L = \Q(i)(z_1)\text{,}\)</span> the degree of <span class="process-math">\(m_{z_1, \Q(i)}(x)\)</span> must be <span class="process-math">\(4\text{.}\)</span> This shows that <span class="process-math">\(x^4 - 2\)</span> must remain irreducible as a polynomial in <span class="process-math">\(\Q(i)[x]\text{;}\)</span> this is not obvious, but we have now proven it, and this fact will be useful in what we do next.</div>
+<div class="para logical">
+<div class="para">Let us compute <span class="process-math">\([L:\Q]\text{.}\)</span> Note that <span class="process-math">\(i \in L\)</span> since <span class="process-math">\(i = z_2/z_1\)</span> and in fact <span class="process-math">\(L = \Q(z_1, i)\text{.}\)</span> In the chain of extensions</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-eisensteins-criterion.html">
+\begin{equation*}
+\Q \subset \Q(z_1) \subset L = \Q(z_1)(i)
+\end{equation*}
+</div>
+<div class="para">the first one has degree <span class="process-math">\(4\text{,}\)</span> since <span class="process-math">\(x^4 - 2\)</span> is irreducible by <a href="" class="xref" data-knowl="./knowl/thm-eisensteins-criterion.html" title="Theorem 18.18: Eisenstein's Criterion">Eisenstein's Criterion</a>, and the second has degree at most <span class="process-math">\(2\)</span> since <span class="process-math">\(i\)</span> is a root of <span class="process-math">\(x^2 + 1\text{.}\)</span> It would be less than two if <span class="process-math">\(x^2+1\)</span> factors in <span class="process-math">\(\Q(z_2)[x]\text{.}\)</span> But since <span class="process-math">\(\Q(z_1) \subset \R\)</span> and <span class="process-math">\(L\)</span> is not contained in <span class="process-math">\(\R\text{,}\)</span> the second extension cannot be trivial and so must have degree exactly <span class="process-math">\(2\text{.}\)</span> We conclude <span class="process-math">\([L:\Q] = 8\text{.}\)</span> It follows from Proposition  that <span class="process-math">\(|\Aut(L/\Q)| \leq 8\text{.}\)</span> (In fact, since <span class="process-math">\(L\)</span> is the splitting field of a separable polynomial, the Theorem below will tell us that <span class="process-math">\(|\Aut(L/\Q)| = 8\text{.}\)</span> But we won't appeal to this fact here.)</div>
+</div>
 <span class="incontext"><a href="sec-galext.html#p-2822" class="internal">in-context</a></span>
 </body>
 </html>

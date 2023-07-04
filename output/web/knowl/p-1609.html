@@ -13,14 +13,18 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(F\)</span> be a field and let <span class="process-math">\(V\)</span> and <span class="process-math">\(W\)</span> be finite dimensional <span class="process-math">\(F\)</span>-vector spaces.</div>
-<ol class="decimal">
-<li><div class="para">Let <span class="process-math">\(\a: V \to W\)</span> be an <span class="process-math">\(F\)</span>-linear transformation. Prove <span class="process-math">\(\dim(\coker(\a)) - \dim(\ker(\a)) = \dim(W) - \dim(V)\text{,}\)</span> where by definition <span class="process-math">\(\coker(\a) := W/\im(\a)\text{.}\)</span>
-</div></li>
-<li><div class="para">Let <span class="process-math">\(\phi: V \to V\)</span> be an <span class="process-math">\(F\)</span>-linear transformation from <span class="process-math">\(V\)</span> to itself. Prove that if <span class="process-math">\(\phi \circ \phi = 0\text{,}\)</span> then <span class="process-math">\(\rank(\phi) \leq \frac12 \dim_F(V)\text{.}\)</span> (Note: Recall that, by definition, <span class="process-math">\(\rank(\phi) := \dim_F(\im(\phi))\text{.}\)</span>)</div></li>
-<li><div class="para">For extra credit: Let <span class="process-math">\(\phi: V \to V\)</span> be an <span class="process-math">\(F\)</span>-linear transformation from <span class="process-math">\(V\)</span> to itself. Prove that if <span class="process-math">\(\overbrace{\phi \circ \cdots \circ \phi}^{\text{n times}} = 0\)</span> for some <span class="process-math">\(n \geq 1\)</span> then <span class="process-math">\(\rank(\phi) \leq \frac{n-1}{n} \dim_F(V)\text{.}\)</span>
-</div></li>
-</ol>
+<div class="para">Let <span class="process-math">\(F\)</span> be a field and <span class="process-math">\(f: V \to W\)</span> an <span class="process-math">\(F\)</span>-linear transformation between <span class="process-math">\(F\)</span>-vector spaces <span class="process-math">\(V\)</span> and <span class="process-math">\(W\text{,}\)</span> and assume <span class="process-math">\(V\)</span> is finite dimensional. Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dim(V) = \rank(f) + \null(f)
+\end{equation*}
+</div>
+<div class="para">or equivalently</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dim(V) = \dim(\ker(f)) + \dim(\im(f)).
+\end{equation*}
+</div>
 </div>
 <span class="incontext"><a href="sec-ranknul.html#p-1609" class="internal">in-context</a></span>
 </body>

@@ -598,7 +598,7 @@
               </statement>
             </definition>
 
-            <example xml:id="ex-binop"><title>Binary Relation Examples</title>
+            <example xml:id="ex-binop"><title>Binary Relations</title>
               <p>
                 <ul>
                   <li>
@@ -618,7 +618,7 @@
                       <me>
                         -\cap-:\cP(A)\to \cP(A)\text{ given by } (X,Y)\mapsto X\cap Y 
                       </me>
-                      are both binary relations on <m>\cP(A)</m>.
+                      are both binary operations on <m>\cP(A)</m>.
                     </p>
                   </li>
 
@@ -629,7 +629,7 @@
                       <me>
                         -\circ-:F(A)\to F(A)\text{ given by } (f,g)\mapsto f\circ g
                       </me>
-                      is a binary relation on <m>F(A)</m>.
+                      is a binary operation on <m>F(A)</m>.
                     </p>
                   </li>
                 </ul>
@@ -1042,7 +1042,7 @@
                 </p>
               </solution>
             </exercise>
-            
+
             <theorem xml:id="thm-group-inverses"><title>Properties of Inverses</title>
               <statement>
                 <p>
@@ -1104,19 +1104,6 @@
               <statement>
                 <p>
                   If <m>G</m> is a group and <m>x_1,\ldots,x_n \in G</m>, then <m>(x_1 \dots x_n)^{-1} = x_n^{-1} \dots x_1^{-1}</m>. 
-                </p>
-              </statement>
-            </exercise>
-
-            <p>
-              It can also be specialized.
-            </p>
-
-            <exercise xml:id="exe-abelian-exponents"><title>Abelian Exponents</title>
-              <statement>
-                <p>
-                  Let <m>x,y\in G</m>. 
-                  The equation <m>(xy)^n=x^ny^n</m> holds for all <m>n\in\Z</m> if and only if <m>G</m> is abelian.
                 </p>
               </statement>
             </exercise>
@@ -1248,6 +1235,15 @@
                 </p>
               </proof>
             </theorem>
+
+            <exercise xml:id="exe-abelian-exponents"><title>Abelian Exponents</title>
+              <statement>
+                <p>
+                  Let <m>x,y\in G</m>. 
+                  The equation <m>(xy)^n=x^ny^n</m> holds for all <m>n\in\Z</m> if and only if <m>G</m> is abelian.
+                </p>
+              </statement>
+            </exercise>
 
           </subsection>
 
@@ -3867,7 +3863,7 @@
       
             <remark>
               <p>
-                This is a particular case of the universal mapping property of a presentation (which is covered in <xref ref="subsec-presentations"/>), since a cyclic group is either presented by <m>\langle x | x^n = e \rangle</m> or <m>\langle x \mid  -\rangle</m>.
+                This is a particular case of the universal mapping property of a presentation, since a cyclic group is either presented by <m>\langle x | x^n = e \rangle</m> or <m>\langle x \mid  -\rangle</m>.
               </p>
             </remark>
       
@@ -4058,6 +4054,15 @@
                 </p>
               </proof>
             </lemma>
+
+            <theorem xml:id="thm-coset-equivalence-relation">
+              <statement>
+                <p>
+                  
+                </p>
+              </statement>
+            </theorem>
+            
       
             <lemma xml:id="lem-cosetpartition"><title>Cosets Partition a Group</title>
               <statement>

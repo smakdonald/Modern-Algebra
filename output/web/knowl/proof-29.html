@@ -12,7 +12,24 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>
-<div class="para">By <a href="" class="xref" data-knowl="./knowl/thm-ump-quotient.html" title="Theorem 4.47: UMP for Quotients">Theorem 4.47</a>, there exists a homomorphism <span class="process-math">\(\overline{f}\)</span> such that <span class="process-math">\(\overline{f} \circ {\pi}= f\text{,}\)</span> and its kernel consists of just the one element <span class="process-math">\(\operatorname{Ker}(f)/\operatorname{Ker}(f)\)</span> of <span class="process-math">\(G/\operatorname{Ker}(f)\text{.}\)</span> So <span class="process-math">\(\overline{f}\)</span> is one-to-one, and the image of <span class="process-math">\(\overline{f}\)</span> is the same as the image of <span class="process-math">\(f\text{.}\)</span>
-</div></article><span class="incontext"><a href="sec-quotient-groups.html#proof-29" class="internal">in-context</a></span>
+<div class="para logical"><ol class="decimal">
+<li><div class="para logical">
+<div class="para">If such a <span class="process-math">\(\overline{\varphi}\)</span> exists, it is necessarily unique since <span class="process-math">\(G \twoheadrightarrow G/N\)</span> is onto. In fact, if <span class="process-math">\(\varphi=\pi\circ \overline{\varphi}\)</span> then <span class="process-math">\(\overline{\varphi}\)</span> has to be given by the formula</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\overline{\varphi}(gN) = \varphi(g).
+\end{equation*}
+</div>
+<div class="para">We now need to show that this formula determines a well-defined homomorphism: if <span class="process-math">\(xN = yN\text{,}\)</span> then <span class="process-math">\(y^{-1}x \in N \subseteq \operatorname{ker}(\varphi)\)</span> and so <span class="process-math">\(\varphi(y)^{-1} \varphi(x) = e\text{,}\)</span> whence <span class="process-math">\(\varphi(y) = \varphi(x)\text{.}\)</span> For any <span class="process-math">\(x,y\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\overline{\varphi}(xNyN) = \overline{\varphi}(xyN) = \varphi(xy) = \varphi(x)\varphi(y) =\overline{\varphi}(xN) \overline{\varphi}(yN).
+\end{equation*}
+</div>
+</div></li>
+<li><div class="para">The formula for <span class="process-math">\(\overline{\varphi}\)</span> given above ensures that <span class="process-math">\(\operatorname{im}\varphi=\operatorname{im}\overline{\varphi}\)</span> hence <span class="process-math">\(\varphi\)</span> is surjective if and only if <span class="process-math">\(\overline{\varphi}\)</span> is surjective.</div></li>
+<li><div class="para">We have <span class="process-math">\(\overline{\varphi}(xN) = e_H\)</span> iff <span class="process-math">\(\varphi(x) = e_H\)</span> iff <span class="process-math">\(x \in \operatorname{ker}(\varphi)\)</span> iff <span class="process-math">\(xN \in  \operatorname{ker}(\varphi)/N\text{.}\)</span> If <span class="process-math">\(xN \in \operatorname{ker}(\varphi)/N\)</span> for some <span class="process-math">\(x \in G\text{,}\)</span> then <span class="process-math">\(xN = yN\)</span> for some <span class="process-math">\(y \in \operatorname{ker}(\varphi)\)</span> and hence <span class="process-math">\(x = yz\)</span> for some <span class="process-math">\(z \in N\text{.}\)</span> Since <span class="process-math">\(N \subseteq \operatorname{ker}(\varphi)\text{,}\)</span> we have <span class="process-math">\(x \in \operatorname{ker}(\varphi)\text{.}\)</span>
+</div></li>
+</ol></div></article><span class="incontext"><a href="sec-quotient-groups.html#proof-29" class="internal">in-context</a></span>
 </body>
 </html>
