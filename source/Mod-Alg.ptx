@@ -303,15 +303,24 @@
 
     <!-- tikz package and libraries for images -->
     <latex-image-preamble>
-    \usepackage{tikz}
-    \usetikzlibrary{backgrounds}
-    \usetikzlibrary{arrows,matrix}
-    \usetikzlibrary{snakes}
+      \usepackage{tikz}
+      \usetikzlibrary{backgrounds}
+      \usetikzlibrary{snakes}
+      \usepackage{tkz-graph}
+      \usepackage{tkz-euclide}
+      \usetikzlibrary{patterns}
+      \usetikzlibrary{positioning}
+      \usetikzlibrary{matrix,arrows}
+      \usetikzlibrary{calc}
+      \usetikzlibrary{shapes}
+      \usetikzlibrary{through,intersections,decorations,shadows,fadings}
+      
+      \usepackage{pgfplots}
     </latex-image-preamble>
 
     <rename element="insight">Mark</rename>  
     <rename element="inlineexercise">Exploration</rename>
-    <rename element="exploration">Discussion</rename> 
+    <rename element="exploration">Discussion</rename>
 
   </docinfo>
   
@@ -413,14 +422,14 @@
           <p>
             Here are the types of environments you are likely to encounter throughout the text and what they are used for.
             <ul>
-              <li><title><term>Definition </term></title>
+              <li><title><term>Definition</term></title>
                 <p>
                   These are pretty standard and probably what you'd be expecting. 
                   The building blocks of what we'll be working with. 
                 </p>
               </li>
 
-              <li><title><term>Examples </term></title>
+              <li><title><term>Examples</term></title>
                 <p>
                   Specific instances of a definition.
                   For example, the empty set, <m>\emptyset</m> is an example of a set, and thus would be contained within an <q>example</q> environment.
@@ -428,63 +437,62 @@
                 </p>
               </li>
 
-              <li><title><term>Theorem </term></title>
+              <li><title><term>Theorem</term></title>
                 <p>
                   A result. 
                 </p>
               </li>
 
-              <li><title><term>Lemma </term></title>
+              <li><title><term>Lemma</term></title>
                 <p>
                   A more technical result used specifically in the proof of a larger result.
                 </p>
               </li>
 
-              <li><title><term>Corollary </term></title>
+              <li><title><term>Corollary</term></title>
                 <p>
                   An important result whose proof comes directly from a previous theorem.
                 </p>
               </li>
 
-              <li><title><term>Proposition </term></title>
+              <li><title><term>Proposition</term></title>
                 <p>
                   Results that require proof but are more specific and/or contained in a larger result coming later.
                 </p>
               </li>
 
-              <li><title><term>Exploration </term></title>
+              <li><title><term>Exploration</term></title>
                 <p>
                   Generalizations, specifics, smaller results, things are are less essential to the course or results who's proofs are usually skipped. 
                 </p>
               </li>
 
-              <li><title><term>Problem </term></title>
+              <li><title><term>Problem</term></title>
                 <p>
                   Used for qualifying exam problems.
                 </p>
               </li>
 
-              <li><title><term>Remark </term></title>
+              <li><title><term>Remark</term></title>
                 <p>
                   Providing context in the form of foreshadowing or content not covered in this text.
-
                   In general, there shouldn't be anything defined in a remark, they should be entirely optional. 
                 </p>
               </li>
 
-              <li><title><term>Discussion </term></title>
+              <li><title><term>Convention</term></title>
+                <p>
+                  
+                </p>
+              </li>
+
+              <li><title><term>Discussion</term></title>
                 <p>
                   Usually for arguing about notation.
                 </p>
               </li>
 
-              <li><title><term>Context </term></title>
-                <p>
-                  Historical and etymogical origins. 
-                </p>
-              </li>
-
-              <li><title><term>Footnotes </term></title>
+              <li><title><term>Footnotes</term></title>
                 <p>
                   Sometimes act like remarks. However, most are strictly for fun and add little to no educational value, at least in the traditional sense.<fn>It should really be <q>feetnote</q> if you think about it.</fn> 
                 </p>
@@ -2075,7 +2083,7 @@
             <definition xml:id="def-ghom"><title>Group Homomorphism</title>
               <statement>
                 <p>
-                  If <m>G</m> and <m>H</m> are groups, a <em>homomorphism</em><idx><h>group homomorphism</h></idx> from <m>G</m> is <m>H</m> is a function <m>\varphi: G \to H</m> such that <m>\varphi(x \cdot_G y) = f(x) \cdot_H f(y)</m>, where <m>\cdot_G</m> and <m>\cdot_H</m> denote the multiplication rules for <m>G</m> and <m>H</m>, respectively.
+                  If <m>G</m> and <m>H</m> are groups, a <em>homomorphism</em><idx><h>group homomorphism</h></idx> from <m>G</m> is <m>H</m> is a function <m>\varphi: G \to H</m> such that <m>\varphi(x \cdot_G y) = \varphi(x) \cdot_H \varphi(y)</m>, where <m>\cdot_G</m> and <m>\cdot_H</m> denote the multiplication rules for <m>G</m> and <m>H</m>, respectively.
                   <notation><usage><m>\varphi,\phi</m></usage><description>the common symbols we use to denote homomorphisms <m>\cdot</m></description></notation>          
                 </p>
               </statement>
@@ -2736,7 +2744,6 @@
             </definition>
       
             <theorem xml:id="thm-subgroup-test"><title>Subgroup Tests</title>
-              
               <statement>
                 <p>
                   <ol>
@@ -3013,29 +3020,35 @@
             </exercise>
 
             <theorem xml:id="thm-properties-of-group-homoms"><title>Group Homomorphisms and Subgroups</title>    
-                <statement>
-                  <p>
-                    <ol>
-                      <li><title>Images are Subgroups</title>
-                        <p>
-                          If <m>\varphi: G \to H</m> is a homomorphism of groups, then the image of <m>\varphi</m> is a subgroup of <m>H</m>.
-                        </p>
-                      </li>
-        
-                      <li><title>Kernels are Subgroups</title>
-                        <p>
-                          If <m>\varphi: G \to H</m> is a homomorphism of groups, then the kernel of <m>\varphi</m> is a subgroup of <m>G</m>.
-                        </p>
-                      </li>
-        
-                      <li><title>Preimages are Subgroups</title>
-                        <p>
-                         If <m>\varphi:G\to H</m> is a group homomorphism and <m>K\leq H</m> then the preimage of <m>K</m>, defined as <m>\varphi^{-1}(K)=\{g\in G | \varphi(g)\in K\}</m>, is a subgroup of <m>G</m>.
-                        </p>
-                      </li>
-                    </ol>
-                  </p>
-                </statement>
+              <statement>
+                <p>
+                  <ol>
+                    <li><title>Images are Subgroups</title>
+                      <p>
+                        If <m>\varphi: G \to H</m> is a homomorphism of groups, then the image of <m>\varphi</m> is a subgroup of <m>H</m>.
+                      </p>
+                    </li>
+      
+                    <li><title>Kernels are Subgroups</title>
+                      <p>
+                        If <m>\varphi: G \to H</m> is a homomorphism of groups, then the kernel of <m>\varphi</m> is a subgroup of <m>G</m>.
+                      </p>
+                    </li>
+      
+                    <li><title>Preimages are Subgroups</title>
+                      <p>
+                        If <m>\varphi:G\to H</m> is a group homomorphism and <m>K\leq H</m> then the preimage of <m>K</m>, defined as <m>\varphi^{-1}(K)=\{g\in G | \varphi(g)\in K\}</m>, is a subgroup of <m>G</m>.
+                      </p>
+                    </li>
+
+                    <li><title>Inclusions are Homomorphisms</title>
+                      <p>
+                        If <m>H</m> is a subgroup of a group <m>G</m>, then the inclusion <m>H\into G</m> is a group homomorphism.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
             </theorem>
 
             <theorem xml:id="thm-cayley"><title>Cayley's Theorem</title><creator><m>1854</m></creator>
@@ -3198,7 +3211,8 @@
               </p>
 
               <p>
-                The elements of <m>S</m> are known as <em>generators.</em><idx><h>generator</h></idx>
+                The elements of <m>S</m> are known as <em>generators</em>,
+                <idx><h>generator</h></idx>
               </p>
             </statement>
           </definition>

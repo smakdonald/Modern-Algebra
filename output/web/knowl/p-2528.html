@@ -12,7 +12,21 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Additionally, notice that <span class="process-math">\(e^{2\pi i/p}\)</span> and <span class="process-math">\(\sqrt[p]{2}\)</span> are both roots of <span class="process-math">\(x^p-2\text{.}\)</span> Thus they are both contained in <span class="process-math">\(L\text{.}\)</span> Observe <span class="process-math">\(\frac{e^{2\pi i/p}\sqrt[p]{2}}{\sqrt[p]{2}}=e^{2\pi i/p}\text{.}\)</span> Hence <span class="process-math">\(\Q(\sqrt[p]{2},e^{2\pi i/p})\subseteq L\text{,}\)</span> and thus we see that <span class="process-math">\(L=\Q(\sqrt[p]{2},e^{2\pi i/p})\text{.}\)</span> Therefore, <span class="process-math">\([L:\Q]=p(p-1)\text{.}\)</span>
+<div class="para logical">
+<div class="para">Next, note that <span class="process-math">\(\sqrt[p]{2}\)</span> is a root of the polynomial <span class="process-math">\(x^p-2\text{,}\)</span> making it algebraic over <span class="process-math">\(\Q\text{.}\)</span> Using <a href="" class="xref" data-knowl="./knowl/thm-eisensteins-criterion.html" title="Theorem 18.18: Eisenstein's Criterion">Eisenstein's Criterion</a> in conjunction with the prime <span class="process-math">\(q=2\)</span> we see that <span class="process-math">\(x^p-2\)</span> is irreducible in <span class="process-math">\(\Q[x]\text{.}\)</span> As <span class="process-math">\(\gcd(p,p-1)=1\text{,}\)</span> by Problem 5 on the previous homework we see that <span class="process-math">\(x^p-2\)</span> is irreducible in <span class="process-math">\(\Q(\sqrt[p]{2})\)</span> as well. As <span class="process-math">\(x^p-2\)</span> is irreducible and monic, we see that it is the minimal polynomial of <span class="process-math">\(\sqrt[p]{2}\)</span> in <span class="process-math">\(\Q(e^{2\pi i/p})[x]\text{,}\)</span> and thus</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-eisensteins-criterion.html ./knowl/thm-degree-formula.html">
+\begin{equation*}
+[\Q(e^{2\pi i/p},\sqrt[p]{2}):\Q(e^{2\pi i/p})]=p.
+\end{equation*}
+</div>
+<div class="para">Using the <a href="" class="xref" data-knowl="./knowl/thm-degree-formula.html" title="Theorem 19.30: The Degree Formula">The Degree Formula</a>, we see that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-eisensteins-criterion.html ./knowl/thm-degree-formula.html">
+\begin{equation*}
+[\Q(\sqrt[p]{2},e^{2\pi i/p}):\Q]=[\Q(e^{2\pi i/p},\sqrt[p]{2}):\Q(e^{2\pi i/p})][\Q(\sqrt[p]{2}):\Q]=p(p-1).
+\end{equation*}
+</div>
+<div class="para">Notice that <span class="process-math">\(\sqrt[p]{2}\cdot (e^{{2\pi i/p}^n})\text{,}\)</span> where <span class="process-math">\(1\leq n\leq p\text{,}\)</span> which are all roots of <span class="process-math">\(x^p-2\text{.}\)</span> By the Factor Theorem, there can be no other roots of this polynomial. Thus <span class="process-math">\(L\subseteq\Q(\sqrt[p]{2},e^{2\pi i/p})\text{.}\)</span>
+</div>
 </div>
 <span class="incontext"><a href="sec-algebraic.html#p-2528" class="internal">in-context</a></span>
 </body>

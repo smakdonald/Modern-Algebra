@@ -12,7 +12,23 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Some people (including I think the authors or our text) defined a Jordan block to be the transpose of what I have defined it to be.</div>
+<div class="para logical">
+<div class="para">Given a field <span class="process-math">\(F\text{,}\)</span> and integer <span class="process-math">\(n \geq 1\text{,}\)</span> and an element <span class="process-math">\(r\in F\text{,}\)</span> the <em class="emphasis">Jordan block</em> <span class="process-math">\(J_n(r)\)</span> is the <span class="process-math">\(n \times n\)</span> with entries in <span class="process-math">\(F\)</span> such that its diagonal entries are all <span class="process-math">\(r\text{,}\)</span> each entry just below the diagonal is a <span class="process-math">\(1\text{,}\)</span> and all other entries are <span class="process-math">\(0\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+J_n(r) = 
+\begin{bmatrix}
+r &amp; 0 &amp; 0 &amp; \cdots &amp; 0 \\
+1 &amp; r &amp; 0 &amp; \cdots &amp; 0 \\
+0 &amp; \ddots &amp; \ddots &amp;&amp; \vdots \\
+\vdots &amp;&amp; \ddots &amp; \ddots &amp; 0\\
+0 &amp; \cdots &amp; 0 &amp; 1 &amp; r \\
+\end{bmatrix}.
+\end{equation*}
+</div>
+<div class="para">(More precisely, <span class="process-math">\(a_{i,i} = r\)</span> for all <span class="process-math">\(1 \leq i \leq n\text{,}\)</span> <span class="process-math">\(a_{i,i-1} = 1\)</span> for all <span class="process-math">\(2 \leq i \leq n\text{,}\)</span> and <span class="process-math">\(a_{i,j} = 0\)</span> for all other <span class="process-math">\(i,j\text{.}\)</span>)</div>
+</div>
 <span class="incontext"><a href="sec-jcf.html#p-2145" class="internal">in-context</a></span>
 </body>
 </html>

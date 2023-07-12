@@ -12,8 +12,20 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">
-<span class="process-math">\((\Leftarrow)\)</span> Suppose that <span class="process-math">\(\rank(A)=\rank(B)\text{.}\)</span> From Part (a) we know <span class="process-math">\(\cp_A(x)=\cp_B(x)=x^n\text{.}\)</span>
+<div class="para logical">
+<div class="para">Next, observe</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\rank(AP\inv)&amp;=\rank((AP\inv)^T)\\
+&amp;=\rank(P^{-1^T}A^T)\\
+&amp;=\rank(A^T)\\
+&amp;=\rank(A),
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">as <span class="process-math">\((P^{-1})^T\)</span> is an invertible matrix. Thus <span class="process-math">\(\rank(B)=\rank(PAP\inv)=\rank(A)\text{.}\)</span>
+</div>
 </div>
 <span class="incontext"><a href="section-83.html#p-3997" class="internal">in-context</a></span>
 </body>

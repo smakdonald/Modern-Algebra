@@ -13,13 +13,11 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">For this proof it is useful to identity <span class="process-math">\(F[x]^n\)</span> with <span class="process-math">\(F^n[x]\)</span> where the latter refers to all expressions of the form <span class="process-math">\(\sum_i v_i x^i = v_0 + v_1 x + \cdots + v_m x^m\)</span> with <span class="process-math">\(v_i \in F^n\text{.}\)</span> For instance, (when <span class="process-math">\(n = 2\)</span>) we identify <span class="process-math">\(\vectwo{x^2 -3x + 1}{x^7 +x + 5}\)</span> with <span class="process-math">\(\vectwo{1}{5} + \vectwo{-3}{1} x + \vectwo{1}{0} x^2 + \vectwo{0}{1} x^7\text{.}\)</span> Using this identification we define</div>
+<div class="para">Let <span class="process-math">\(F\)</span> be a field and let <span class="process-math">\(A \in \Mat_{n \times n}(F)\text{.}\)</span> The matrix <span class="process-math">\(xI_n - A \in \Mat_{n \times n}(F[x])\)</span> presents the <span class="process-math">\(F[x]\)</span>-module <span class="process-math">\(F^n_A\text{;}\)</span> that is, there is an isomorphism of <span class="process-math">\(F[x]\)</span>-modules</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\phi:  F[x]^n = F^n[x] \to F^n_A
+F^n_A \cong \coker(xI_n -A) = F[x]^n/\im(xI_n - A).
 \end{equation*}
-</div>
-<div class="para">by <span class="process-math">\(\phi(\sum_i v_i x^i) = \sum_i A^i v_i\text{.}\)</span> Then <span class="process-math">\(\phi\)</span> is a <span class="process-math">\(F[x]\)</span>-module homomorphism — I leave it to you to verify this. <span class="process-math">\(\phi\)</span> is onto since, e.g., for any <span class="process-math">\(v \in F^n\)</span> we have <span class="process-math">\(\phi(vx^0) = v\text{.}\)</span>
 </div>
 </div>
 <span class="incontext"><a href="sec-rcf.html#p-1998" class="internal">in-context</a></span>
