@@ -8,7 +8,7 @@
 <html lang="en-US">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>p-groups and Sylow Subgroups</title>
+<title>p-groups and Sylow's Theorem</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -177,7 +177,7 @@ window.MathJax = {
 <span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
 </ol>
 </li>
-</ol></div></button><span class="treebuttons"><a class="previous-button button" href="ch-sylow.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-sylow.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="sec-sylowthm.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="ch-sylow.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-sylow.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="sec-simple-groups.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
 <input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
 </div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\def\ann{\operatorname{ann}}
 \newcommand{\Ass}{\operatorname{Ass}}
@@ -575,11 +575,17 @@ window.MathJax = {
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="ch-sylow.html" class="internal"><span class="codenumber">6</span> <span class="title">Sylow Theory</span></a></div>
+<div class="toc-item"><a href="ch-sylow.html" class="internal"><span class="codenumber">6</span> <span class="title">Simple and Prime Order Groups</span></a></div>
 <ul class="structural">
-<li class="active"><div class="toc-item"><a href="sec-p-groups.html" class="internal"><span class="codenumber">6.1</span> <span class="title"><span class="process-math">\(p\)</span>-groups and Sylow Subgroups</span></a></div></li>
-<li><div class="toc-item"><a href="sec-sylowthm.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Sylow's Theorem</span></a></div></li>
-<li><div class="toc-item"><a href="sec-simple-groups.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Simple Groups</span></a></div></li>
+<li class="active">
+<div class="toc-item"><a href="sec-p-groups.html" class="internal"><span class="codenumber">6.1</span> <span class="title"><span class="process-math">\(p\)</span>-groups and Sylow's Theorem</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-p-groups.html#subsec-p-groups" class="internal"><span class="title"><span class="process-math">\(p\)</span>-groups</span></a></div></li>
+<li><div class="toc-item"><a href="sec-p-groups.html#subsec-sylow" class="internal"><span class="title">Sylow Subgroups</span></a></div></li>
+<li><div class="toc-item"><a href="sec-p-groups.html#subsec-sylows-theorem" class="internal"><span class="title">Sylows-Theorem</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="sec-simple-groups.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Simple Groups</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -849,10 +855,7 @@ window.MathJax = {
 <li><div class="toc-item"><a href="sec-sets-functions.html#subsec-functions" class="internal"><span class="title">Functions</span></a></div></li>
 <li>
 <div class="toc-item"><a href="sec-sets-functions.html#subsec-set-constructions" class="internal"><span class="title">Set Constructions</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="sec-sets-functions.html#subsubsec-product-sets" class="internal"><span class="title">Product Sets</span></a></div></li>
-<li><div class="toc-item"><a href="sec-sets-functions.html#subsubsec-quotient-sets" class="internal"><span class="title">Equivalence Relations and Modular Arithmetic</span></a></div></li>
-</ul>
+<ul class="structural"><li><div class="toc-item"><a href="sec-sets-functions.html#subsubsec-quotient-sets" class="internal"><span class="title">Equivalence Relations and Modular Arithmetic</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -864,40 +867,24 @@ window.MathJax = {
 <li><div class="toc-item"><a href="sec-numbers-and-cardinality.html#subsec-cardinality" class="internal"><span class="title">Cardinality</span></a></div></li>
 </ul>
 </li>
-<li><div class="toc-item"><a href="sec-matrices.html" class="internal"><span class="codenumber">A.3</span> <span class="title">Matrices, Vector Spaces (*)</span></a></div></li>
-<li><div class="toc-item"><a href="sec-poset-lattice.html" class="internal"><span class="codenumber">A.4</span> <span class="title">Posets, Lattices, Chains (*)</span></a></div></li>
+<li><div class="toc-item"><a href="sec-poset-lattice.html" class="internal"><span class="codenumber">A.3</span> <span class="title">Posets, Lattices, Chains (*)</span></a></div></li>
 </ul>
 </li>
 <li>
 <div class="toc-item"><a href="app-extras.html" class="internal"><span class="codenumber">B</span> <span class="title">Extras</span></a></div>
 <ul class="structural">
 <li>
-<div class="toc-item"><a href="section-68.html" class="internal"><span class="codenumber">B.1</span> <span class="title">Group Theory</span></a></div>
+<div class="toc-item"><a href="section-66.html" class="internal"><span class="codenumber">B.1</span> <span class="title">Group Theory</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-68.html#subsec-magma" class="internal"><span class="title">Grouplike Structures</span></a></div></li>
-<li><div class="toc-item"><a href="section-68.html#subsec-torsion-subgroups" class="internal"><span class="title">Torsion Subgroups (*)</span></a></div></li>
-<li><div class="toc-item"><a href="section-68.html#subsec-composition-series" class="internal"><span class="title">Composition Series</span></a></div></li>
-<li><div class="toc-item"><a href="section-68.html#subsec-solvability" class="internal"><span class="title">Solvable Groups</span></a></div></li>
-<li><div class="toc-item"><a href="section-68.html#subsec-presentations" class="internal"><span class="title">Presentations (*)</span></a></div></li>
+<li><div class="toc-item"><a href="section-66.html#subsec-torsion-subgroups" class="internal"><span class="title">Torsion Subgroups (*)</span></a></div></li>
+<li><div class="toc-item"><a href="section-66.html#subsec-composition-series" class="internal"><span class="title">Composition Series</span></a></div></li>
+<li><div class="toc-item"><a href="section-66.html#subsec-solvability" class="internal"><span class="title">Solvable Groups</span></a></div></li>
+<li><div class="toc-item"><a href="section-66.html#subsec-presentations" class="internal"><span class="title">Presentations (*)</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="section-69.html" class="internal"><span class="codenumber">B.2</span> <span class="title">Ring Theory</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="section-69.html#subsec-nilradical" class="internal"><span class="title">Nilpotents and the Nilradical (*)</span></a></div></li>
-<li><div class="toc-item"><a href="section-69.html#subsec-group-rings" class="internal"><span class="title">Group Rings (*)</span></a></div></li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="section-70.html" class="internal"><span class="codenumber">B.3</span> <span class="title">Module Theory</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="section-70.html#subsec-determinants" class="internal"><span class="title">Determinants</span></a></div></li></ul>
-</li>
-<li>
-<div class="toc-item"><a href="section-71.html" class="internal"><span class="codenumber">B.4</span> <span class="title">Field Theory</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="section-71.html#subsec-solvability-by-radicals" class="internal"><span class="title">Solvability by Radicals (*)</span></a></div></li>
-<li><div class="toc-item"><a href="section-71.html#subsec-artins-theorem" class="internal"><span class="title">Artin's Theorem (*)</span></a></div></li>
-</ul>
+<div class="toc-item"><a href="section-67.html" class="internal"><span class="codenumber">B.2</span> <span class="title">Module Theory</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-67.html#subsec-determinants" class="internal"><span class="title">Determinants</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -910,163 +897,163 @@ window.MathJax = {
 <div class="toc-item"><a href="appendix-quals.html" class="internal"><span class="codenumber">H</span> <span class="title">Qualifying Exams</span></a></div>
 <ul class="structural">
 <li>
-<div class="toc-item"><a href="section-72.html" class="internal"><span class="codenumber">H.1</span> <span class="title">May 2022</span></a></div>
+<div class="toc-item"><a href="section-68.html" class="internal"><span class="codenumber">H.1</span> <span class="title">May 2022</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-72.html#subsection-55" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li><div class="toc-item"><a href="section-72.html#subsection-56" class="internal"><span class="title">Section</span></a></div></li>
-<li><div class="toc-item"><a href="section-72.html#subsection-57" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-68.html#subsection-53" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="section-68.html#subsection-54" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-68.html#subsection-55" class="internal"><span class="title">Section</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="section-73.html" class="internal"><span class="codenumber">H.2</span> <span class="title">January 2022</span></a></div>
+<div class="toc-item"><a href="section-69.html" class="internal"><span class="codenumber">H.2</span> <span class="title">January 2022</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-73.html#subsection-58" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li><div class="toc-item"><a href="section-73.html#subsection-59" class="internal"><span class="title">Section</span></a></div></li>
-<li><div class="toc-item"><a href="section-73.html#subsection-60" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-69.html#subsection-56" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="section-69.html#subsection-57" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-69.html#subsection-58" class="internal"><span class="title">Section</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="section-74.html" class="internal"><span class="codenumber">H.3</span> <span class="title">May 2021</span></a></div>
+<div class="toc-item"><a href="section-70.html" class="internal"><span class="codenumber">H.3</span> <span class="title">May 2021</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-74.html#subsection-61" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li><div class="toc-item"><a href="section-74.html#subsection-62" class="internal"><span class="title">Section</span></a></div></li>
-<li><div class="toc-item"><a href="section-74.html#subsection-63" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-70.html#subsection-59" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="section-70.html#subsection-60" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-70.html#subsection-61" class="internal"><span class="title">Section</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="section-75.html" class="internal"><span class="codenumber">H.4</span> <span class="title">January 2021</span></a></div>
+<div class="toc-item"><a href="section-71.html" class="internal"><span class="codenumber">H.4</span> <span class="title">January 2021</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-75.html#subsection-64" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li><div class="toc-item"><a href="section-75.html#subsection-65" class="internal"><span class="title">Section</span></a></div></li>
-<li><div class="toc-item"><a href="section-75.html#subsection-66" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-71.html#subsection-62" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="section-71.html#subsection-63" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-71.html#subsection-64" class="internal"><span class="title">Section</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="section-76.html" class="internal"><span class="codenumber">H.5</span> <span class="title">June 2020</span></a></div>
+<div class="toc-item"><a href="section-72.html" class="internal"><span class="codenumber">H.5</span> <span class="title">June 2020</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-76.html#subsection-67" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li><div class="toc-item"><a href="section-76.html#subsection-68" class="internal"><span class="title">Section</span></a></div></li>
-<li><div class="toc-item"><a href="section-76.html#subsection-69" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-72.html#subsection-65" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="section-72.html#subsection-66" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-72.html#subsection-67" class="internal"><span class="title">Section</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="section-77.html" class="internal"><span class="codenumber">H.6</span> <span class="title">January 2020</span></a></div>
+<div class="toc-item"><a href="section-73.html" class="internal"><span class="codenumber">H.6</span> <span class="title">January 2020</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-77.html#subsection-70" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li><div class="toc-item"><a href="section-77.html#subsection-71" class="internal"><span class="title">Section</span></a></div></li>
-<li><div class="toc-item"><a href="section-77.html#subsection-72" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-73.html#subsection-68" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="section-73.html#subsection-69" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-73.html#subsection-70" class="internal"><span class="title">Section</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="section-78.html" class="internal"><span class="codenumber">H.7</span> <span class="title">May 2019</span></a></div>
+<div class="toc-item"><a href="section-74.html" class="internal"><span class="codenumber">H.7</span> <span class="title">May 2019</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-78.html#subsection-73" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li><div class="toc-item"><a href="section-78.html#subsection-74" class="internal"><span class="title">Section</span></a></div></li>
-<li><div class="toc-item"><a href="section-78.html#subsection-75" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-74.html#subsection-71" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="section-74.html#subsection-72" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-74.html#subsection-73" class="internal"><span class="title">Section</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="section-79.html" class="internal"><span class="codenumber">H.8</span> <span class="title">January 2019</span></a></div>
+<div class="toc-item"><a href="section-75.html" class="internal"><span class="codenumber">H.8</span> <span class="title">January 2019</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-79.html#subsection-76" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li><div class="toc-item"><a href="section-79.html#subsection-77" class="internal"><span class="title">Section</span></a></div></li>
-<li><div class="toc-item"><a href="section-79.html#subsection-78" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-75.html#subsection-74" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="section-75.html#subsection-75" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-75.html#subsection-76" class="internal"><span class="title">Section</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="section-80.html" class="internal"><span class="codenumber">H.9</span> <span class="title">May 2018</span></a></div>
+<div class="toc-item"><a href="section-76.html" class="internal"><span class="codenumber">H.9</span> <span class="title">May 2018</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-80.html#subsection-79" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li><div class="toc-item"><a href="section-80.html#subsection-80" class="internal"><span class="title">Section</span></a></div></li>
-<li><div class="toc-item"><a href="section-80.html#subsection-81" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-76.html#subsection-77" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="section-76.html#subsection-78" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-76.html#subsection-79" class="internal"><span class="title">Section</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="section-81.html" class="internal"><span class="codenumber">H.10</span> <span class="title">May 2017</span></a></div>
+<div class="toc-item"><a href="section-77.html" class="internal"><span class="codenumber">H.10</span> <span class="title">May 2017</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-81.html#subsection-82" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li><div class="toc-item"><a href="section-81.html#subsection-83" class="internal"><span class="title">Section</span></a></div></li>
-<li><div class="toc-item"><a href="section-81.html#subsection-84" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-77.html#subsection-80" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="section-77.html#subsection-81" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-77.html#subsection-82" class="internal"><span class="title">Section</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="section-82.html" class="internal"><span class="codenumber">H.11</span> <span class="title">January 2017</span></a></div>
+<div class="toc-item"><a href="section-78.html" class="internal"><span class="codenumber">H.11</span> <span class="title">January 2017</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-82.html#subsection-85" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li><div class="toc-item"><a href="section-82.html#subsection-86" class="internal"><span class="title">Section</span></a></div></li>
-<li><div class="toc-item"><a href="section-82.html#subsection-87" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-78.html#subsection-83" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="section-78.html#subsection-84" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-78.html#subsection-85" class="internal"><span class="title">Section</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="section-83.html" class="internal"><span class="codenumber">H.12</span> <span class="title">May 2016</span></a></div>
+<div class="toc-item"><a href="section-79.html" class="internal"><span class="codenumber">H.12</span> <span class="title">May 2016</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-83.html#subsection-88" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li><div class="toc-item"><a href="section-83.html#subsection-89" class="internal"><span class="title">Section</span></a></div></li>
-<li><div class="toc-item"><a href="section-83.html#subsection-90" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-79.html#subsection-86" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="section-79.html#subsection-87" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-79.html#subsection-88" class="internal"><span class="title">Section</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="section-84.html" class="internal"><span class="codenumber">H.13</span> <span class="title">January 2016</span></a></div>
+<div class="toc-item"><a href="section-80.html" class="internal"><span class="codenumber">H.13</span> <span class="title">January 2016</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-84.html#subsection-91" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li><div class="toc-item"><a href="section-84.html#subsection-92" class="internal"><span class="title">Section</span></a></div></li>
-<li><div class="toc-item"><a href="section-84.html#subsection-93" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-80.html#subsection-89" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="section-80.html#subsection-90" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-80.html#subsection-91" class="internal"><span class="title">Section</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="section-85.html" class="internal"><span class="codenumber">H.14</span> <span class="title">January 2015</span></a></div>
+<div class="toc-item"><a href="section-81.html" class="internal"><span class="codenumber">H.14</span> <span class="title">January 2015</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-85.html#subsection-94" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li><div class="toc-item"><a href="section-85.html#subsection-95" class="internal"><span class="title">Section</span></a></div></li>
-<li><div class="toc-item"><a href="section-85.html#subsection-96" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-81.html#subsection-92" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="section-81.html#subsection-93" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-81.html#subsection-94" class="internal"><span class="title">Section</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="section-86.html" class="internal"><span class="codenumber">H.15</span> <span class="title">June 2014</span></a></div>
+<div class="toc-item"><a href="section-82.html" class="internal"><span class="codenumber">H.15</span> <span class="title">June 2014</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-86.html#subsection-97" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li><div class="toc-item"><a href="section-86.html#subsection-98" class="internal"><span class="title">Section</span></a></div></li>
-<li><div class="toc-item"><a href="section-86.html#subsection-99" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-82.html#subsection-95" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="section-82.html#subsection-96" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-82.html#subsection-97" class="internal"><span class="title">Section</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="section-87.html" class="internal"><span class="codenumber">H.16</span> <span class="title">January 2014</span></a></div>
+<div class="toc-item"><a href="section-83.html" class="internal"><span class="codenumber">H.16</span> <span class="title">January 2014</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-87.html#subsection-100" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li><div class="toc-item"><a href="section-87.html#subsection-101" class="internal"><span class="title">Section II</span></a></div></li>
-<li><div class="toc-item"><a href="section-87.html#subsection-102" class="internal"><span class="title">Section III</span></a></div></li>
+<li><div class="toc-item"><a href="section-83.html#subsection-98" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="section-83.html#subsection-99" class="internal"><span class="title">Section II</span></a></div></li>
+<li><div class="toc-item"><a href="section-83.html#subsection-100" class="internal"><span class="title">Section III</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="section-88.html" class="internal"><span class="codenumber">H.17</span> <span class="title">June 2012</span></a></div>
+<div class="toc-item"><a href="section-84.html" class="internal"><span class="codenumber">H.17</span> <span class="title">June 2012</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-88.html#subsection-103" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li><div class="toc-item"><a href="section-88.html#subsection-104" class="internal"><span class="title">Section</span></a></div></li>
-<li><div class="toc-item"><a href="section-88.html#subsection-105" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-84.html#subsection-101" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="section-84.html#subsection-102" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-84.html#subsection-103" class="internal"><span class="title">Section</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="section-89.html" class="internal"><span class="codenumber">H.18</span> <span class="title">January 2012</span></a></div>
+<div class="toc-item"><a href="section-85.html" class="internal"><span class="codenumber">H.18</span> <span class="title">January 2012</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-89.html#subsection-106" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li><div class="toc-item"><a href="section-89.html#subsection-107" class="internal"><span class="title">Section</span></a></div></li>
-<li><div class="toc-item"><a href="section-89.html#subsection-108" class="internal"><span class="title">Section III</span></a></div></li>
+<li><div class="toc-item"><a href="section-85.html#subsection-104" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="section-85.html#subsection-105" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-85.html#subsection-106" class="internal"><span class="title">Section III</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="section-90.html" class="internal"><span class="codenumber">H.19</span> <span class="title">June 2011</span></a></div>
+<div class="toc-item"><a href="section-86.html" class="internal"><span class="codenumber">H.19</span> <span class="title">June 2011</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-90.html#subsection-109" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li><div class="toc-item"><a href="section-90.html#subsection-110" class="internal"><span class="title">Section</span></a></div></li>
-<li><div class="toc-item"><a href="section-90.html#subsection-111" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-86.html#subsection-107" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="section-86.html#subsection-108" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-86.html#subsection-109" class="internal"><span class="title">Section</span></a></div></li>
 </ul>
 </li>
 <li>
-<div class="toc-item"><a href="section-91.html" class="internal"><span class="codenumber">H.20</span> <span class="title">June 2010</span></a></div>
+<div class="toc-item"><a href="section-87.html" class="internal"><span class="codenumber">H.20</span> <span class="title">June 2010</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="section-91.html#subsection-112" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
-<li><div class="toc-item"><a href="section-91.html#subsection-113" class="internal"><span class="title">Section</span></a></div></li>
-<li><div class="toc-item"><a href="section-91.html#subsection-114" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-87.html#subsection-110" class="internal"><span class="title">Section I: Group Theory</span></a></div></li>
+<li><div class="toc-item"><a href="section-87.html#subsection-111" class="internal"><span class="title">Section</span></a></div></li>
+<li><div class="toc-item"><a href="section-87.html#subsection-112" class="internal"><span class="title">Section</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -1077,53 +1064,134 @@ window.MathJax = {
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-p-groups"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">6.1</span> <span class="title"><span class="process-math">\(p\)</span>-groups and Sylow Subgroups</span>
+<span class="type">Section</span> <span class="codenumber">6.1</span> <span class="title"><span class="process-math">\(p\)</span>-groups and Sylow's Theorem</span>
 </h2>
+<section class="subsection" id="subsec-p-groups"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title"><span class="process-math">\(p\)</span>-groups</span>
+</h3>
 <blockquote class="blockquote" id="blockquote-26">
 <div class="para" id="p-712">“The greatest weakness of most humans is their hesitancy to tell others how much they love them while they're still alive.”</div> <cite class="attribution">―Optimus Prime</cite>
 </blockquote>
-<article class="definition definition-like" id="def-p-group"><h3 class="heading">
+<article class="definition definition-like" id="def-p-group"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.1</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(p\)</span>-group.</span>
-</h3> <div class="para" id="p-713">For a prime number <span class="process-math">\(p\text{,}\)</span> a <span class="process-math">\(p\)</span>-group is a group of order <span class="process-math">\(p^m\)</span> for some <span class="process-math">\(m\in \mathbb{Z},m &gt; 0\text{.}\)</span> </div></article><article class="theorem theorem-like" id="thm-center-pgroup"><h3 class="heading">
+</h4> <div class="para" id="p-713">For a prime number <span class="process-math">\(p\text{,}\)</span> a <span class="process-math">\(p\)</span>-group is a group of order <span class="process-math">\(p^m\)</span> for some <span class="process-math">\(m\in \mathbb{Z},m &gt; 0\text{.}\)</span> </div></article><article class="theorem theorem-like" id="thm-center-pgroup"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.2</span><span class="period">.</span><span class="space"> </span><span class="title">Center of <span class="process-math">\(p\)</span>-group is Nontrivial.</span>
-</h3>
-<div class="para" id="p-714">If <span class="process-math">\(p\)</span> is a prime number and <span class="process-math">\(G\)</span> is a finite group of order <span class="process-math">\(p^m\)</span> for some <span class="process-math">\(m &gt; 0\text{,}\)</span> then <span class="process-math">\(Z(G)\)</span> is not the trivial group (In fact <span class="process-math">\(|Z(G)|=p^a\)</span> for some <span class="process-math">\(a&gt;0\)</span>).</div></article><article class="hiddenproof" id="proof-39"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-39"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-39"><article class="hiddenproof"><div class="para" id="p-715">Let <span class="process-math">\(g_1,\ldots g_r \in G\)</span> be a list of unique representatives of all of the conjugacy classes of <span class="process-math">\(G\)</span> of size greater than <span class="process-math">\(1\)</span> as in <a href="" class="xref" data-knowl="./knowl/thm-class-eq.html" title="Theorem 5.41: Class Equation">Class Equation</a>. Then for each <span class="process-math">\(i\text{,}\)</span> <span class="process-math">\(C_G(g_i)\neq G\)</span> so <span class="process-math">\([G:C_G(g_i)]\neq 1\text{.}\)</span> Since <span class="process-math">\(1\neq [G:C_G(g_i)] \mid |G|=p^m\text{,}\)</span> it follows that <span class="process-math">\(p\mid [G:C_G(g_i)]\)</span> for each <span class="process-math">\(i\text{.}\)</span> From <a href="" class="xref" data-knowl="./knowl/thm-class-eq.html" title="Theorem 5.41: Class Equation">Class Equation</a> we deduce that <span class="process-math">\(p\mid |Z(G)|\)</span> so, <span class="process-math">\(|Z(G)|\neq 1\text{.}\)</span>
+</h4>
+<div class="para" id="p-714">If <span class="process-math">\(p\)</span> is a prime number and <span class="process-math">\(G\)</span> is a finite group of order <span class="process-math">\(p^m\)</span> for some <span class="process-math">\(m &gt; 0\text{,}\)</span> then <span class="process-math">\(Z(G)\)</span> is not the trivial group (In fact <span class="process-math">\(|Z(G)|=p^a\)</span> for some <span class="process-math">\(a&gt;0\)</span>).</div></article><article class="hiddenproof" id="proof-39"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-39"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-39"><article class="hiddenproof"><div class="para" id="p-715">Let <span class="process-math">\(g_1,\ldots g_r \in G\)</span> be a list of unique representatives of all of the conjugacy classes of <span class="process-math">\(G\)</span> of size greater than <span class="process-math">\(1\)</span> as in <a href="" class="xref" data-knowl="./knowl/thm-class-eq.html" title="Theorem 5.41: Class Equation">Class Equation</a>. Then for each <span class="process-math">\(i\text{,}\)</span> <span class="process-math">\(C_G(g_i)\neq G\)</span> so <span class="process-math">\([G:C_G(g_i)]\neq 1\text{.}\)</span> Since <span class="process-math">\(1\neq [G:C_G(g_i)] \mid |G|=p^m\text{,}\)</span> it follows that <span class="process-math">\(p\mid [G:C_G(g_i)]\)</span> for each <span class="process-math">\(i\text{.}\)</span> From <a href="" class="xref" data-knowl="./knowl/thm-class-eq.html" title="Theorem 5.41: Class Equation">Class Equation</a> we deduce that <span class="process-math">\(p\mid |Z(G)|\)</span> so, <span class="process-math">\(|Z(G)|\neq 1\text{.}\)</span>
 </div></article></div>
-<article class="remark remark-like" id="remark-22"><h3 class="heading">
+<article class="remark remark-like" id="remark-22"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">6.3</span><span class="period">.</span>
-</h3>
+</h4>
 <div class="para" id="p-716">
-<a href="" class="xref" data-knowl="./knowl/thm-center-pgroup.html" title="Theorem 6.2: Center of p-group is Nontrivial">Theorem 6.2</a> is dissimilar to <a href="" class="xref" data-knowl="./knowl/thm-cayley.html" title="Theorem 3.13: Cayley's Theorem">Cayley's Theorem</a> in that this theorem is useful.</div></article><article class="theorem theorem-like" id="thm-order-p-cyclic"><h3 class="heading">
+<a href="" class="xref" data-knowl="./knowl/thm-center-pgroup.html" title="Theorem 6.2: Center of p-group is Nontrivial">Theorem 6.2</a> is dissimilar to <a href="" class="xref" data-knowl="./knowl/thm-cayley.html" title="Theorem 3.13: Cayley's Theorem">Cayley's Theorem</a> in that this theorem is useful.</div></article><article class="theorem theorem-like" id="thm-order-p-cyclic"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.4</span><span class="period">.</span><span class="space"> </span><span class="title">Order <span class="process-math">\(p\)</span> and <span class="process-math">\(p^2\)</span>.</span>
-</h3>
+</h4>
 <div class="para logical" id="p-717">
 <div class="para">Let <span class="process-math">\(p\)</span> be prime.</div>
 <ol class="decimal">
 <li id="li-263"><div class="para" id="p-718">Any group of order <span class="process-math">\(p\)</span> is cyclic.</div></li>
 <li id="li-264"><div class="para" id="p-719">Any group of order <span class="process-math">\(p^2\)</span> is abelian.</div></li>
 </ol>
-</div></article><article class="definition definition-like" id="def-sylow-subgroup"><h3 class="heading">
+</div></article></section><section class="subsection" id="subsec-sylow"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Sylow Subgroups</span>
+</h3>
+<article class="definition definition-like" id="def-sylow-subgroup"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.5</span><span class="period">.</span><span class="space"> </span><span class="title">Sylow <span class="process-math">\(p\)</span>-subgroup.</span>
-</h3> <div class="para" id="p-720">Let <span class="process-math">\(G\)</span> be a finite group and <span class="process-math">\(p\)</span> a prime. Write the order of <span class="process-math">\(G\)</span> as <span class="process-math">\(|G| = p^e m\)</span> where <span class="process-math">\(p \nmid m\text{.}\)</span> A <em class="emphasis">Sylow <span class="process-math">\(p\)</span>-subgroup</em> of <span class="process-math">\(G\)</span> is a subgroup <span class="process-math">\(H \leq G\)</span> such that <span class="process-math">\(|H| = p^e\text{.}\)</span> That is, a Sylow <span class="process-math">\(p\)</span>-subgroup of <span class="process-math">\(G\)</span> is a subgroup whose order is the highest conceivable power of <span class="process-math">\(p\)</span> according to <a href="" class="xref" data-knowl="./knowl/thm-lagrange.html" title="Theorem 4.14: Lagrange's Theorem">Lagrange's Theorem</a>.</div> <div class="para" id="p-721">We set <span class="process-math">\(\operatorname{Syl}_p(G)\)</span> to be the collection of all Sylow <span class="process-math">\(p\)</span>-subgroups of <span class="process-math">\(G\)</span> and <span class="process-math">\(n_p=|\operatorname{Syl}_p(G)|\)</span> to be the number of Sylow <span class="process-math">\(p\)</span>-subgroups. </div></article><article class="remark remark-like" id="remark-23"><h3 class="heading">
+</h4> <div class="para" id="p-720">Let <span class="process-math">\(G\)</span> be a finite group and <span class="process-math">\(p\)</span> a prime. Write the order of <span class="process-math">\(G\)</span> as <span class="process-math">\(|G| = p^e m\)</span> where <span class="process-math">\(p \nmid m\text{.}\)</span> A <em class="emphasis">Sylow <span class="process-math">\(p\)</span>-subgroup</em> of <span class="process-math">\(G\)</span> is a subgroup <span class="process-math">\(H \leq G\)</span> such that <span class="process-math">\(|H| = p^e\text{.}\)</span> That is, a Sylow <span class="process-math">\(p\)</span>-subgroup of <span class="process-math">\(G\)</span> is a subgroup whose order is the highest conceivable power of <span class="process-math">\(p\)</span> according to <a href="" class="xref" data-knowl="./knowl/thm-lagrange.html" title="Theorem 4.14: Lagrange's Theorem">Lagrange's Theorem</a>.</div> <div class="para" id="p-721">We set <span class="process-math">\(\operatorname{Syl}_p(G)\)</span> to be the collection of all Sylow <span class="process-math">\(p\)</span>-subgroups of <span class="process-math">\(G\)</span> and <span class="process-math">\(n_p=|\operatorname{Syl}_p(G)|\)</span> to be the number of Sylow <span class="process-math">\(p\)</span>-subgroups. </div></article><article class="remark remark-like" id="remark-23"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">6.6</span><span class="period">.</span>
-</h3>
+</h4>
 <div class="para" id="p-722">We allow the case when <span class="process-math">\(p\nmid |G|\text{,}\)</span> in which case <span class="process-math">\(e = 0\)</span> and <span class="process-math">\(G\)</span> has a unique Sylow <span class="process-math">\(p\)</span>-subgroup, namely <span class="process-math">\(\{e\}\)</span> which has order <span class="process-math">\(p^0\text{.}\)</span>
-</div></article><article class="example example-like" id="ex-d2n-sylow"><h3 class="heading">
+</div></article><article class="example example-like" id="ex-d2n-sylow"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">6.7</span><span class="period">.</span><span class="space"> </span><span class="title">Sylow Subgroups in <span class="process-math">\(D_{2n}\)</span>.</span>
-</h3> <div class="para" id="p-723">In <span class="process-math">\(D_{2p}\)</span> for a prime <span class="process-math">\(p\text{,}\)</span> <span class="process-math">\(\langle r \rangle\)</span> is a Sylow <span class="process-math">\(p\)</span>-subgroup. If <span class="process-math">\(p &gt; 2\text{,}\)</span> there is only one Sylow <span class="process-math">\(p\)</span>-subgroup of <span class="process-math">\(D_{2p}\text{,}\)</span> so <span class="process-math">\(n_p=1\text{.}\)</span>
+</h4> <div class="para" id="p-723">In <span class="process-math">\(D_{2p}\)</span> for a prime <span class="process-math">\(p\text{,}\)</span> <span class="process-math">\(\langle r \rangle\)</span> is a Sylow <span class="process-math">\(p\)</span>-subgroup. If <span class="process-math">\(p &gt; 2\text{,}\)</span> there is only one Sylow <span class="process-math">\(p\)</span>-subgroup of <span class="process-math">\(D_{2p}\text{,}\)</span> so <span class="process-math">\(n_p=1\text{.}\)</span>
 </div> <div class="para" id="p-724">In <span class="process-math">\(D_{2n}\)</span> for <span class="process-math">\(n\)</span> odd, each of the subgroups <span class="process-math">\(\langle sr^j \rangle\text{,}\)</span> for <span class="process-math">\(j = 0, \dots, n-1\)</span> is a Sylow <span class="process-math">\(2\)</span>-subgroup, so <span class="process-math">\(n_2=p\text{.}\)</span>
-</div></article><article class="example example-like" id="ex-s5-sylow"><h3 class="heading">
+</div></article><article class="example example-like" id="ex-s5-sylow"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">6.8</span><span class="period">.</span><span class="space"> </span><span class="title">Sylow Subgroups in <span class="process-math">\(S_{5}\)</span>.</span>
-</h3> <div class="para" id="p-725">In <span class="process-math">\(S_5\text{,}\)</span> the Sylow <span class="process-math">\(5\)</span>-subgroups are the cyclic groups <span class="process-math">\(\langle \sigma \rangle\)</span> for any five cycle <span class="process-math">\(\sigma\text{,}\)</span> so <span class="process-math">\(n_5=6\)</span> because there are <span class="process-math">\(24\)</span> five cycles, but there are four of these in every Sylow <span class="process-math">\(5\)</span>-subgroup. The Sylow <span class="process-math">\(3\)</span>-subgroups are the cyclic groups <span class="process-math">\(\langle \sigma \rangle\)</span> for any three cycle <span class="process-math">\(\sigma\text{,}\)</span> so <span class="process-math">\(n_3=10\)</span> because there are <span class="process-math">\(20\)</span> three cycles, but there are two of these in every Sylow <span class="process-math">\(3\)</span>-subgroup.</div> <div class="para" id="p-726">A Sylow <span class="process-math">\(2\)</span>-subgroup of <span class="process-math">\(S_5\)</span> is any subgroup of order <span class="process-math">\(8\text{.}\)</span> For example <span class="process-math">\(\langle (1 \, 4)(2 \, 3) , (1 \, 2 \, 3 \, 4) \rangle\)</span> is a Sylow <span class="process-math">\(2\)</span>-subgroup. There are many others.</div></article><article class="theorem theorem-like" id="thm-cauchy"><h3 class="heading">
+</h4> <div class="para" id="p-725">In <span class="process-math">\(S_5\text{,}\)</span> the Sylow <span class="process-math">\(5\)</span>-subgroups are the cyclic groups <span class="process-math">\(\langle \sigma \rangle\)</span> for any five cycle <span class="process-math">\(\sigma\text{,}\)</span> so <span class="process-math">\(n_5=6\)</span> because there are <span class="process-math">\(24\)</span> five cycles, but there are four of these in every Sylow <span class="process-math">\(5\)</span>-subgroup. The Sylow <span class="process-math">\(3\)</span>-subgroups are the cyclic groups <span class="process-math">\(\langle \sigma \rangle\)</span> for any three cycle <span class="process-math">\(\sigma\text{,}\)</span> so <span class="process-math">\(n_3=10\)</span> because there are <span class="process-math">\(20\)</span> three cycles, but there are two of these in every Sylow <span class="process-math">\(3\)</span>-subgroup.</div> <div class="para" id="p-726">A Sylow <span class="process-math">\(2\)</span>-subgroup of <span class="process-math">\(S_5\)</span> is any subgroup of order <span class="process-math">\(8\text{.}\)</span> For example <span class="process-math">\(\langle (1 \, 4)(2 \, 3) , (1 \, 2 \, 3 \, 4) \rangle\)</span> is a Sylow <span class="process-math">\(2\)</span>-subgroup. There are many others.</div></article><article class="theorem theorem-like" id="thm-cauchy"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.9</span><span class="period">.</span><span class="space"> </span><span class="title">Cauchy's Theorem.</span>
-</h3>
+</h4>
 <div class="para" id="p-727">If <span class="process-math">\(G\)</span> is a finite group and <span class="process-math">\(p\)</span> is a prime number dividing <span class="process-math">\(|G|\text{,}\)</span> then <span class="process-math">\(G\)</span> has an element of order <span class="process-math">\(p\text{.}\)</span> (In fact, at least <span class="process-math">\(p-1\)</span> elements of order <span class="process-math">\(p\text{.}\)</span>)</div></article><div class="para" id="p-728">
 <a href="" class="xref" data-knowl="./knowl/thm-cauchy.html" title="Theorem 6.9: Cauchy's Theorem">Cauchy's Theorem</a> allows us to conclude the existence of certain elements in a group based solely on its order, which can be a powerful tool in studying the structure of groups.</div>
 <div class="para" id="p-729">For example, it can be used to prove the existence of subgroups of a given order in a group, and it is a key ingredient in the proof of <a href="" class="xref" data-knowl="./knowl/thm-sylow.html" title="Theorem 6.11: Sylow's Theorem">Sylow's Theorem</a>, which provides information about the structure of finite groups.</div>
 <div class="para" id="p-730">
-<a href="" class="xref" data-knowl="./knowl/thm-cauchy.html" title="Theorem 6.9: Cauchy's Theorem">Cauchy's Theorem</a> has since been generalized and extended in many ways, and it is now a fundamental result in the theory of finite groups, where it plays a central role in the classification of groups of small order.</div></section></div>
+<a href="" class="xref" data-knowl="./knowl/thm-cauchy.html" title="Theorem 6.9: Cauchy's Theorem">Cauchy's Theorem</a> has since been generalized and extended in many ways, and it is now a fundamental result in the theory of finite groups, where it plays a central role in the classification of groups of small order.</div></section><section class="subsection" id="subsec-sylows-theorem"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Sylows-Theorem</span>
+</h3>
+<blockquote class="blockquote" id="blockquote-27">
+<div class="para" id="p-731">“What makes me unique is that I'm normal.”</div> <cite class="attribution">―Scotty McCreery</cite>
+</blockquote>
+<article class="lemma theorem-like" id="lem-Syl-lem"><h4 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">6.10</span><span class="period">.</span><span class="space"> </span><span class="title">Sylow's Lemma.</span>
+</h4>
+<div class="para" id="p-732">Let <span class="process-math">\(G\)</span> be a finite group, <span class="process-math">\(p\)</span> a prime, <span class="process-math">\(P\)</span> a Sylow <span class="process-math">\(p\)</span>-subgroup of <span class="process-math">\(G\text{,}\)</span> and <span class="process-math">\(Q\)</span> any <span class="process-math">\(p\)</span>-subgroup of <span class="process-math">\(G\text{.}\)</span> Then <span class="process-math">\(Q \cap N_G(P) = Q \cap P\text{.}\)</span>
+</div></article><article class="hiddenproof" id="proof-40"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-40"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-40"><article class="hiddenproof"><div class="para logical" id="p-733">
+<div class="para">Since <span class="process-math">\(P \leq N_G(P)\text{,}\)</span> we have <span class="process-math">\(Q \cap P \leq Q \cap N_G(P)\text{.}\)</span> For the reverse containment, let <span class="process-math">\(H =  Q \cap N_G(P)\text{.}\)</span> Since <span class="process-math">\(H \subseteq N_G(P)\text{,}\)</span> <span class="process-math">\(PH\)</span> is a subgroup of <span class="process-math">\(G\text{.}\)</span> (Technically, we only proved <span class="process-math">\(PH\)</span> is a subgroup if <span class="process-math">\(N_G(P) = G\text{,}\)</span> but the proof applies verbatim provided the weaker condition <span class="process-math">\(H \subseteq N_G(P)\)</span> holds.) Also</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\#(PH) = \frac{(\#P) (\#H)}{\#(P \cap H)}
+\end{equation*}
+</div>
+<div class="para">and since each of <span class="process-math">\(\#P\text{,}\)</span> <span class="process-math">\(\#H\text{,}\)</span> and <span class="process-math">\(\#(P \cap H)\)</span> is a power of <span class="process-math">\(p\text{,}\)</span> <span class="process-math">\(PH\)</span> is a <span class="process-math">\(p\)</span>-subgroup of <span class="process-math">\(G\text{.}\)</span> But <span class="process-math">\(P \leq PH\)</span> and <span class="process-math">\(P\)</span> is a <span class="process-math">\(p\)</span>-subgroup of largest possible order. So <span class="process-math">\(P = PH\text{.}\)</span> This proves <span class="process-math">\(H \leq P\)</span> and thus <span class="process-math">\(H \leq Q\cap P\text{.}\)</span>
+</div>
+</div></article></div>
+<article class="theorem theorem-like" id="thm-sylow"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.11</span><span class="period">.</span><span class="space"> </span><span class="title">Sylow's Theorem.</span>
+</h4>
+<div class="para logical" id="p-734">
+<div class="para">Assume <span class="process-math">\(G\)</span> is a group of order <span class="process-math">\(p^e m\)</span> where <span class="process-math">\(p\)</span> is prime, <span class="process-math">\(e \geq 0\text{,}\)</span> and <span class="process-math">\(\operatorname{gcd}(p,m) = 1\text{.}\)</span>
+</div>
+<ol class="decimal">
+<li id="li-265"><div class="para" id="p-735">
+<span class="process-math">\(\operatorname{Syl}_p(G) \ne \emptyset\)</span> (there exists at least one Sylow <span class="process-math">\(p\)</span>-subgroup of <span class="process-math">\(G\)</span>).</div></li>
+<li id="li-266"><div class="para" id="p-736">If <span class="process-math">\(P\)</span> is a Sylow <span class="process-math">\(p\)</span>-subgroup of <span class="process-math">\(G\)</span> and <span class="process-math">\(Q \leq G\)</span> is any <span class="process-math">\(p\)</span>-subgroup of <span class="process-math">\(G\)</span> (i.e., a subgroup whose order is some power of <span class="process-math">\(p\)</span>), then there is a <span class="process-math">\(g\)</span> such that <span class="process-math">\(Q \leq gPg^{-1}\text{.}\)</span> In particular, the action of <span class="process-math">\(G\)</span> on <span class="process-math">\(\operatorname{Syl}_p(G)\)</span> by <a href="" class="xref" data-knowl="./knowl/ex-conj.html" title="Item 3: Conjugation">Conjugation</a> is transitive — i.e., any two Sylow <span class="process-math">\(p\)</span>-subgroups are conjugate.</div></li>
+<li id="li-267"><div class="para logical" id="p-737">
+<div class="para">We have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+|\operatorname{Syl}_p(G)| \equiv 1 \mod{p}.
+\end{equation*}
+</div>
+</div></li>
+<li id="li-268"><div class="para logical" id="p-738">
+<div class="para">For any <span class="process-math">\(P \in \operatorname{Syl}_p(G)\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+|\operatorname{Syl}_p(G)| = [G: N_G(P)],
+\end{equation*}
+</div>
+<div class="para">and hence</div>
+<div class="displaymath process-math">
+\begin{equation*}
+| \operatorname{Syl}_p(G)| \mid m.
+\end{equation*}
+</div>
+</div></li>
+</ol>
+</div></article><div class="para" id="p-739">
+<a href="" class="xref" data-knowl="./knowl/thm-sylow.html" title="Theorem 6.11: Sylow's Theorem">Sylow's Theorem</a> provides a systematic way of analyzing the subgroups of a finite group. It allows us to determine the number of subgroups of a given order, which is useful in many applications, such as studying the structure of solvable and simple groups. The theorems also provide information about the normalizers of subgroups, which can be used to study normal subgroups and quotient groups.</div>
+<article class="remark remark-like" id="remark-24"><h4 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">6.12</span><span class="period">.</span>
+</h4>
+<div class="para" id="p-740">In general, <a href="" class="xref" data-knowl="./knowl/thm-cauchy.html" title="Theorem 6.9: Cauchy's Theorem">Cauchy's Theorem</a> can be deduced from part one of <a href="" class="xref" data-knowl="./knowl/thm-sylow.html" title="Theorem 6.11: Sylow's Theorem">Sylow's Theorem</a>. For say <span class="process-math">\(p \mid |G|\text{.}\)</span> Then there exists a Sylow <span class="process-math">\(p\)</span>-subgroup <span class="process-math">\(P\)</span> of <span class="process-math">\(G\text{.}\)</span> Pick any <span class="process-math">\(x \in P\text{,}\)</span> <span class="process-math">\(x \ne e\text{.}\)</span> Then <span class="process-math">\(|x| = p^j\)</span> for some <span class="process-math">\(j \geq 1\text{.}\)</span> Then <span class="process-math">\(x^{p^{j-1}}\)</span> has order <span class="process-math">\(p\text{.}\)</span>
+</div></article><div class="para" id="p-741">Recalling <a href="" class="xref" data-knowl="./knowl/thm-unique-order-subgroup-normal.html" title="Theorem 4.24: Unique Order Subgroup is Normal">Theorem 4.24</a>, we have the following:</div>
+<article class="corollary theorem-like" id="cor-unique-sylow-normal"><h4 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">6.13</span><span class="period">.</span><span class="space"> </span><span class="title">Sylow Subgroup Normal iff Unique.</span>
+</h4>
+<div class="para" id="p-742">A Sylow <span class="process-math">\(p\)</span>-subgroup of a finite group <span class="process-math">\(G\)</span> is normal if and only if it is the only Sylow <span class="process-math">\(p\)</span>-subgroup of <span class="process-math">\(G\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exe-order-8-subgroups-of-s4"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-order-8-subgroups-of-s4"><h4 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">6.14</span><span class="period">.</span><span class="space"> </span><span class="title">Order <span class="process-math">\(8\)</span> of <span class="process-math">\(S_4\)</span>.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-order-8-subgroups-of-s4"><article class="exercise exercise-like"><div class="para" id="p-743">Prove that <span class="process-math">\(S_4\)</span> has precisely three distinct subgroups of order <span class="process-math">\(8\text{,}\)</span> all of which are isomorphic to <span class="process-math">\(D_8.\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-16" id="solution-16"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-16"><div class="solution solution-like">
+<div class="para" id="p-744">Any subgroup of <span class="process-math">\(S_4\)</span> of order <span class="process-math">\(8\)</span> is a Sylow <span class="process-math">\(2\)</span>-subgroup. By <a href="" class="xref" data-knowl="./knowl/thm-sylow.html" title="Theorem 6.11: Sylow's Theorem">Sylow's Theorem</a>, the number of Sylow <span class="process-math">\(2\)</span>-subgroups is either <span class="process-math">\(1\)</span> or <span class="process-math">\(3\text{.}\)</span> As any <span class="process-math">\(2\)</span>-cycle or <span class="process-math">\(4\)</span>-cycle must be contained in a Sylow <span class="process-math">\(2\)</span>-subgroup (since such elements generate subgroups of order <span class="process-math">\(2i\text{,}\)</span> for some <span class="process-math">\(i\)</span>) and there are six <span class="process-math">\(2\)</span>-cycles and six <span class="process-math">\(4\)</span>-cycles, there has to be more than one Sylow <span class="process-math">\(2\)</span>-subgroup. Hence, there are precisely <span class="process-math">\(3\)</span> distinct subgroups of order <span class="process-math">\(8\text{.}\)</span>
+</div> <div class="para" id="p-745">As all of them are conjugate, and conjugation induces an isomorphism on the group, we see that all three subgroups are isomorphic. Hence, we just need to show that <span class="process-math">\(S_4\)</span> contains a subgroup isomorphic to <span class="process-math">\(D_8\text{.}\)</span> Let <span class="process-math">\(X\)</span> be the set of left cosets of the subgroup <span class="process-math">\(\{e,s\}\)</span> of <span class="process-math">\(D_8\text{.}\)</span> Note that <span class="process-math">\(|X| = 4\text{.}\)</span> Let <span class="process-math">\(G\)</span> act on <span class="process-math">\(X\)</span> by left multiplication. This action induces a homomorphism <span class="process-math">\(\varphi : G \to P(X)\)</span> where <span class="process-math">\(P(X)\cong S_4\)</span> is the permutation group on <span class="process-math">\(X\text{.}\)</span> As shown in class, the kernel of this homomorphism is the largest normal subgroup contained in <span class="process-math">\(\{e,s\}\text{,}\)</span> which is <span class="process-math">\(\{e\}\text{.}\)</span> Thus, <span class="process-math">\(\varphi\)</span> is injective and the image of <span class="process-math">\(\varphi\)</span> is a subgroup of <span class="process-math">\(S_4\)</span> isomorphic to <span class="process-math">\(D_8\text{.}\)</span>
+</div>
+</div></div>
+</div></article></div></section></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="ch-sylow.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-sylowthm.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+<a class="previous-button button" href="ch-sylow.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-simple-groups.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer">

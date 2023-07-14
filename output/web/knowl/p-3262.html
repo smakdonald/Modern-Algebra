@@ -13,21 +13,37 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">If <span class="process-math">\(C\)</span> is another basis, then</div>
+<div class="para">Assume now that <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are both invertible. Then by Corollary  we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
-[\a]_C^C = P [\a]_B^B P^{-1}
+A = E_1 \cdots E_n
 \end{equation*}
 </div>
-<div class="para">for an invertible matrix <span class="process-math">\(P\)</span> (specifically, <span class="process-math">\(P = [\id]_B^C\)</span>). Then</div>
+<div class="para">and</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\det([\a]_C^C)  = \det(P [\a]_B^B P^{-1}) = \det(P) \det([\a]_B^B) \det(P^{-1}) =\det(P) \det(P^{-1}) \det([\a]_B^B) 
+B = F_1 \cdots F_m
 \end{equation*}
 </div>
-<div class="para">using the Theorem. Also by the Theorem <span class="process-math">\(\det(P) \det(P^{-1}) = \det(PP^{-1}) = \det(I_n) = 1\text{.}\)</span>
+<div class="para">and hence</div>
+<div class="displaymath process-math">
+\begin{equation*}
+AB = E_1 \cdots E_n F_1 \cdots F_m
+\end{equation*}
+</div>
+<div class="para">where the <span class="process-math">\(E_i\)</span>'s and <span class="process-math">\(F_j\)</span>'s are elementary matrices. Applying Corollary  repeatedly gives</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\det(AB) = \det(E_1 \cdots E_n F_1 \cdots F_{m-1}) \det(F_m) = \cdots= \det(E_1) \cdots \det(E_n) \det(F_1) \cdots \det(F_m)
+\end{equation*}
+</div>
+<div class="para">and similarly</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\det(A) \det(B) = \left(\det(E_1) \cdots \det(E_n)\right) \left( \det(F_1) \cdots \det(F_m)\right).
+\end{equation*}
 </div>
 </div>
-<span class="incontext"><a href="section-70.html#p-3262" class="internal">in-context</a></span>
+<span class="incontext"><a href="section-67.html#p-3262" class="internal">in-context</a></span>
 </body>
 </html>

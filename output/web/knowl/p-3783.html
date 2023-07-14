@@ -12,12 +12,32 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para logical"><ol class="decimal">
-<li><div class="para">Show that <span class="process-math">\(f\)</span> is irreducible in <span class="process-math">\(\Q[x]\text{.}\)</span>
-</div></li>
-<li><div class="para">Let <span class="process-math">\(L\)</span> be a splitting field of <span class="process-math">\(f\)</span> $over <span class="process-math">\(\Q\text{.}\)</span> Show that <span class="process-math">\(L/\Q\)</span> is a Galois extension and find the isomorphism class of the Galois group <span class="process-math">\(\Gal(L/\Q)\text{.}\)</span>
-</div></li>
-</ol></div>
-<span class="incontext"><a href="section-78.html#p-3783" class="internal">in-context</a></span>
+<div class="para logical">
+<div class="para">Note that the change of basis matrix for this operator is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{bmatrix}
+0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; \cdots &amp; 0 &amp; 0 \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\
+0 &amp; 0 &amp; \cdots &amp; 0 &amp; n-1 \\   
+\end{bmatrix},
+\end{equation*}
+</div>
+<div class="para">with the basis <span class="process-math">\(\{1,x,\dots,x^{n-1}\}\text{.}\)</span> Thus <span class="process-math">\(\cp_A(x)\)</span> will be given by the determinant of the matrix</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{bmatrix}
+x &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
+0 &amp; x-1 &amp; \cdots &amp; 0 &amp; 0 \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\
+0 &amp; 0 &amp; \cdots &amp; 0 &amp; x-(n-1) \\   
+\end{bmatrix},
+\end{equation*}
+</div>
+<div class="para">which is diagonal. Hence <span class="process-math">\(\cp_AT(x)=\displaystyle\prod_{i=0}^{n-1}(x-i)\text{.}\)</span>
+</div>
+</div>
+<span class="incontext"><a href="section-74.html#p-3783" class="internal">in-context</a></span>
 </body>
 </html>

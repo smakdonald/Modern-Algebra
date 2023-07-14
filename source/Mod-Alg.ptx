@@ -321,6 +321,7 @@
     <rename element="insight">Mark</rename>  
     <rename element="inlineexercise">Exploration</rename>
     <rename element="exploration">Discussion</rename>
+    <rename element="heuristic">Vague Semidefinition</rename>
 
   </docinfo>
   
@@ -606,7 +607,7 @@
               </statement>
             </definition>
 
-            <example xml:id="ex-binop"><title>Binary Relations</title>
+            <example xml:id="ex-binop"><title>Binary Operations</title>
               <p>
                 <ul>
                   <li>
@@ -617,16 +618,16 @@
 
                   <li>
                     <p>
-                      Let <m>\cP(A)</m> denote the power set of a set <m>S</m>.
+                      Let <m>\cP(S)</m> denote the power set of a set <m>S</m>.
                       Then 
                       <me>
-                        -\cup-:\cP(A)\to \cP(A)\text{ given by } (X,Y)\mapsto X\cup Y 
+                        -\cup-:\cP(S)\to \cP(S)\text{ given by } (X,Y)\mapsto X\cup Y 
                       </me>
                       and 
                       <me>
-                        -\cap-:\cP(A)\to \cP(A)\text{ given by } (X,Y)\mapsto X\cap Y 
+                        -\cap-:\cP(S)\to \cP(S)\text{ given by } (X,Y)\mapsto X\cap Y 
                       </me>
-                      are both binary operations on <m>\cP(A)</m>.
+                      are both binary operations on <m>\cP(S)</m>.
                     </p>
                   </li>
 
@@ -648,38 +649,38 @@
               <statement>
                 <p>
                   Let <m>-*-</m> be a binary operation on a set <m>S</m>.
-                  <ul>
-                    <li xml:id="associative-property"><title>Associative Property</title>
+                  <ol>
+                    <li xml:id="associative-property">
                       <p>
                         An operation satisfies the <em>associative property</em> if for all <m>x,y,z\in S</m> we have <m>(x*y)*z=x*(y*z)</m>.
                         <idx><h>associative property</h></idx>
                       </p>
                     </li>
 
-                    <li xml:id="commutative-axiom"><title>Commutative Property</title>
+                    <li xml:id="commutative-axiom">
                       <p>
-                        An operation satisfies the <em>commutative</em> property if <m>x * y = y * x</m> for all <m>x,y \in S</m>. 
+                        An operation satisfies the <em>commutative property</em> if <m>x * y = y * x</m> for all <m>x,y \in S</m>. 
                         <idx><h>commutative property</h></idx>
                       </p>
                     </li>
 
-                    <li xml:id="identity-property"><title>Identity Property</title>
+                    <li xml:id="identity-property">
                       <p>
-                        An operation satisfies the <em>identity</em> property if there exists <m>e\in G</m> such that <m>e*g=x*g=x</m> for all <m>g\in G</m>.
+                        An operation satisfies the <em>identity property</em> if there exists <m>e\in G</m> such that <m>e*g=x*g=x</m> for all <m>g\in G</m>.
                         Such an element <m>e</m> is called an <em>identity element</em>.
                         <notation><usage><m>e</m></usage><description>the identity element of a group</description></notation> 
                         <idx><h>identity property</h></idx>
                       </p>
                     </li>
 
-                    <li xml:id="inverse-property"><title>Inverse Property</title>
+                    <li xml:id="inverse-property">
                       <p>
-                        An operation satisfies the <em>inverse</em> property if for each <m>x\in S</m>, there is an element <m>y\in S</m> such that <m>x * y=e=y * x</m>, where <m>e</m> is an identity element of <m>S</m>.
+                        An operation satisfies the <em>inverse property</em> if for each <m>x\in S</m>, there is an element <m>y\in S</m> such that <m>x * y=e=y * x</m>, where <m>e</m> is an identity element of <m>S</m>.
                         Such an element <m>y</m> is called an <em>inverse</em> of the element <m>x</m>.
                         <idx><h>inverse property</h></idx>
                       </p>
                     </li>
-                  </ul>
+                  </ol>
                 </p>
               </statement>
             </definition>
@@ -701,7 +702,7 @@
               <statement>
                 <p>
                   <ul>
-                    <li xml:id="def-magma"><title>Magma</title>
+                    <li xml:id="def-magma">
                       <p>
                         A <em>magma</em> (or <term>binary structure</term>) is a pair <m>(G, *)</m> where <m>G</m> is a set and <m>*</m> is a binary operation on <m>G</m>.
                         <idx><h>magma</h></idx>
@@ -709,21 +710,21 @@
                       </p>
                     </li>
 
-                    <li xml:id="def-semigroup"><title>Semigroup</title>
+                    <li xml:id="def-semigroup">
                       <p>
                         A <em>semigroup</em> is a pair <m>(G, *)</m> where <m>G</m> is a set and <m>*</m> is a binary operation on <m>G</m> satisfying the associative property.
                         <idx><h>semigroup</h></idx>
                       </p>
                     </li>
 
-                    <li xml:id="def-monoid"><title>Monoid</title>
+                    <li xml:id="def-monoid">
                       <p>
                         A <em>monoid</em> is a pair <m>(G, *)</m> where <m>G</m> is a set and <m>*</m> is a binary operation on <m>G</m> satisfying the associative and identity properties.
                         <idx><h>monoid</h></idx>
                       </p>
                     </li>
 
-                    <li xml:id="def-group"><title>Group</title>
+                    <li xml:id="def-group">
                       <p>
                         A <em>group</em> is a pair <m>(G, *)</m> where <m>G</m> is a set and <m>*</m> is a binary operation on <m>G</m> satisfying the associative, identity, and inverse properties.
                         <notation><usage><m>(G,*)</m></usage><description>a group <m>G</m> and its binary operation <m>*</m></description></notation>
@@ -731,7 +732,7 @@
                       </p>
                     </li>
 
-                    <li xml:id="def-abelian"><title>Abelian Group</title>
+                    <li xml:id="def-abelian">
                       <p>
                         An <em>abelian group</em> is a pair <m>(G, *)</m> where <m>G</m> is a set and <m>*</m> is a binary operation on <m>G</m> satisfying the associative, identity, inverse, and commutative properties.
                         <idx><h>abelian group</h></idx>
@@ -802,14 +803,14 @@
                   <ol>
                     <li xml:id="list-unique-group-identity"><title>Unique Identity</title>
                       <p>
-                        The element <m>e\in G</m> satisfying the <xref text="title" ref="identity-property"/> of <xref ref="def-binary-properties"/> is unique, and we thus refer to it as the <em>identity element</em> of <m>G</m>.
+                        The element <m>e\in G</m> satisfying <xref ref="identity-property"/> of <xref ref="def-binary-properties"/> is unique, and we thus refer to it as the <em>identity element</em> of <m>G</m>.
                         <idx><h>identity element</h></idx>
                       </p>
                     </li>
 
                     <li xml:id="list-unique-group-inverse"><title>Unique Inverses</title>
                       <p>
-                        For each <m>x\in G</m>, the element satisfying the <xref text="title" ref="inverse-property"/> of <xref ref="def-binary-properties"/> is unique, and we thus refer to it as <em>the inverse</em> of <m>x</m>.
+                        For each <m>x\in G</m>, the element satisfying <xref ref="inverse-property"/> of <xref ref="def-binary-properties"/> is unique, and we thus refer to it as <em>the inverse</em> of <m>x</m>.
                       </p>
                     </li>
       
@@ -889,14 +890,14 @@
               <statement>
                 <p>
                   <ol>
-                    <li xml:id="trivial-group"> <title>Trivial Group</title>
+                    <li xml:id="trivial-group">
                       <p>
                         The <term>trivial group</term><idx><h>trivial group</h></idx> is the group with a single element <m>\{e\}</m>.
                         <notation><usage><m>\{e\}</m></usage><description>the trivial group: e.g. the group containing only an identity element</description></notation>          
                       </p>
                     </li>
       
-                    <li><title>Numerical Groups</title>
+                    <li>
                       <p>
                         <m>(\Z,+), (\Q,+), (\R,+),</m> and <m>(\C,+)</m> each form an abelian group, where <m>+</m> denotes traditional addition.
                         The axioms of arithmetic guarantee the validity of the group axioms as well as the commutativity of the group operation. 
@@ -904,7 +905,7 @@
                       </p>
                     </li>
       
-                    <li><title>General Linear Group</title>
+                    <li>
                       <p>
                         For any positive integer <m>n</m>, let 
                         <me>
@@ -915,7 +916,7 @@
                       </p>
                     </li>
       
-                    <li><title>Modular Groups</title>
+                    <li>
                       <p>
                         For any <m>n\in\N</m>, let <m>\Z/n</m> denote the <xref text="title" ref="def-integers-modulo"/>. 
                         Then <m>(\Z/n,+)</m> forms an abelian group where <m>+</m> denotes addition modulo <m>n</m>.
@@ -1677,10 +1678,10 @@
             <blockquote>
               <p>
                 <q>
-                  Every possible permutation is still in play.
+                  Symmetry is overrated. Overrated is symmetry.
                 </q>
               </p>
-              <attribution>Michael Cullen</attribution>
+              <attribution>Larry Wall</attribution>
             </blockquote>
       
             <p>
@@ -4305,7 +4306,7 @@
             </statement>
           </definition>
 
-          <exercise xml:id="exe-anything-but-normal"><title>Anything but Normal</title>
+          <exploration xml:id="exe-anything-but-normal"><title>Anything but Normal</title>
             <statement>
               <p>
                 Come up with a better name for normal subgroups than 'normal subgroup'. 
@@ -4336,7 +4337,7 @@
                 </ol>
               </p>
             </hint>
-          </exercise>
+          </exploration>
         
           <theorem xml:id="thm-equivdef-normal"><title>Equivalent Normal Definitions</title>
             <statement>
@@ -4366,7 +4367,7 @@
             </statement>
           </theorem>
     
-          <example xml:id="ex-normal-examples"><title>Examples of Normal Subgroups</title> 
+          <example xml:id="ex-normal-examples"><title>Normal Subgroups</title> 
             <p>
               <ol>
                 <li>
@@ -4462,7 +4463,7 @@
             </solution>
           </exercise>
     
-          <proposition xml:id="prop-normal-subgroups-and-homomorphisms"><title>Normal Subgroups and Homomorphisms</title>
+          <proposition xml:id="prop-normal-subgroups-and-homomorphisms"><title>Normal Preimages</title>
             <statement>
               <p>
                 If <m>\varphi:G\to H</m> is a group homomorphism and <m>K\nsg H</m> then the preimage of <m>K</m>, <m>\varphi^{-1}(K)=\{g\in G | \varphi(g)\in K\}</m>, is a normal subgroup of <m>G</m>.         
@@ -4684,7 +4685,7 @@
               </statement>
             </theorem>
 
-            <example xml:id="ex-old-friends">
+            <example xml:id="ex-old-friends"><title>Old Friends</title>
               <p>
                 Let <m>H = \langle n \rangle</m> in <m>G = (\mathbb{Z}, +)</m>. 
                 It is automatic that <m>H</m> is normal since <m>G</m> is abelian. 
@@ -4699,11 +4700,11 @@
               </p>
             </remark>
             
-             <exercise xml:id="exe-mod-n-iso">
+             <exploration xml:id="exe-mod-n-iso"><title>Modular Integer? Barely Know 'Er!</title>
               <p>
                 Argue amongst yourselves what the 'best' notation for the integers <m>\mod n</m> should be: <m>\Z/n</m> <m>\Z/n\Z</m>, <m>\Z/n</m>, <m>\Z_n</m>, <m>\Z/\igen n</m>, <m>\frac{\Z}{n}</m>, or whatever other horrors you can conjure.
               </p>
-            </exercise>
+            </exploration>
 
             <example xml:id="ex-dihedral-quotient"><title>Dihedral Quotient</title>
               <p>
@@ -4721,7 +4722,7 @@
                 </statement>
             </exercise>
 
-            <exercise xml:id="exe-gl-sl-iso">
+            <exercise xml:id="exe-gl-sl-iso"><title>Special Linear Quotients</title>
               <statement>
                 <p>
                   <m>\GL_n(\R)/\SL_n(\R)\cong\R^\times</m>
@@ -4743,7 +4744,7 @@
             </exercise>
 
             <p>
-              Recalling <xref text="title" ref="thm-lagrange"/>, we have the following corollary:
+              Recalling <xref text="title" ref="thm-lagrange"/>, we have yet another useful corollary:
             </p>
       
             <corollary xml:id="cor-order-of-quotient"><title>Order of Quotient Groups</title>
@@ -4763,7 +4764,7 @@
               </statement>
             </definition>
       
-            <lemma xml:id="lem-quotient-surj-hom"><title>Quotient Map is Surjective Homomorphism</title>
+            <proposition xml:id="prop-quotient-surj-hom"><title>Quotient Map is Surjective Homomorphism</title>
               <statement>
                 <p>
                   For any group <m>G</m> and normal subgroup <m>N</m> of <m>G</m>, the map <m>q:G \to G/N</m> defined by <m>q(g)=gN</m> is a surjective group homomorphism with kernel <m>\operatorname{ker}(q)=N</m>.
@@ -4780,7 +4781,7 @@
                   Finally, using <xref ref="lem-cosetfacts" />, we have <m>\operatorname{Ker}(\pi)=\{g\in G\mid gN=e_GN\}=N</m>.
                 </p>
               </proof>
-            </lemma>
+            </proposition>
       
             <theorem xml:id="thm-norm-iff-ker"><title>Normal Subgroup iff Kernel</title>
               <statement>
@@ -4796,7 +4797,7 @@
               </proof>
             </theorem>
 
-            <theorem xml:id="thm-gz-cyclic">
+            <theorem xml:id="thm-gz-cyclic"><title>Cyclic Center Quotients</title>
               <statement>
                 <p>
                   Let <m>G</m> be a group with center <m>Z(G)</m>. 
@@ -6013,281 +6014,287 @@
     
       </chapter>
 
-      <chapter xml:id="ch-sylow"><title>Sylow Theory</title>
+      <chapter xml:id="ch-sylow"><title>Simple and Prime Order Groups</title>
     
-        <section xml:id="sec-p-groups"><title><m>p</m>-groups and Sylow Subgroups</title>
-    
-          <blockquote>
-            <p>
-              <q>
-                The greatest weakness of most humans is their hesitancy to tell others how much they love them while they're still alive.
-              </q>
-            </p>
-            <attribution>Optimus Prime</attribution>
-          </blockquote>
+        <section xml:id="sec-p-groups"><title><m>p</m>-groups and Sylow's Theorem</title>
+
+          <subsection xml:id="subsec-p-groups"><title><m>p</m>-groups</title>
           
-          <definition xml:id="def-p-group"><title><m>p</m>-group</title>
-            <statement>
+            <blockquote>
               <p>
-                For a prime number <m>p</m>, a <m>p</m>-group is a group of order <m>p^m</m> for some <m>m\in \mathbb{Z},m &gt; 0</m>.
-                <idx><h><m>p</m>-group</h></idx>
+                <q>
+                  The greatest weakness of most humans is their hesitancy to tell others how much they love them while they're still alive.
+                </q>
               </p>
-            </statement>
-          </definition>
-    
-          <theorem xml:id="thm-center-pgroup"><title>Center of <m>p</m>-group is Nontrivial</title>
-            <statement>
-              <p>
-                If <m>p</m> is a prime number and <m>G</m> is a finite group of order <m>p^m</m> for some <m>m &gt; 0</m>, then <m>Z(G)</m> is not the trivial group (In fact <m>|Z(G)|=p^a</m> for some <m>a&gt;0</m>).
-              </p>
-            </statement>
-    
-            <proof>
-              <p>
-                Let <m>g_1,\ldots g_r \in G</m> be a list of unique representatives of all of the conjugacy classes of <m>G</m> of size greater than <m>1</m> as in <xref text="title" ref="thm-class-eq"/>. 
-                Then for each <m>i</m>, <m>C_G(g_i)\neq G</m> so <m>[G:C_G(g_i)]\neq 1</m>. 
-                Since <m>1\neq [G:C_G(g_i)] \mid |G|=p^m</m>, it follows that <m>p\mid [G:C_G(g_i)]</m> for each <m>i</m>. 
-                From <xref text="title" ref="thm-class-eq"/> we deduce that <m>p\mid |Z(G)|</m> so, <m>|Z(G)|\neq 1</m>.
-              </p>
-            </proof>
-          </theorem>
-    
-          <remark>
-            <p>
-              <xref ref="thm-center-pgroup"/> is dissimilar to <xref text="title" ref="thm-cayley"/> in that this theorem is useful.
-            </p>
-          </remark>
-
-          <theorem xml:id="thm-order-p-cyclic"><title>Order <m>p</m> and <m>p^2</m></title>
-            <statement>
-              <p>
-                Let <m>p</m> be prime. 
-                <ol>
-                  <li>
-                    <p>
-                      Any group of order <m>p</m> is cyclic.
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      Any group of order <m>p^2</m> is abelian.
-                    </p>
-                  </li>
-                </ol> 
-              </p>
-            </statement>
-          </theorem>         
-    
-          <definition xml:id="def-sylow-subgroup"><title>Sylow <m>p</m>-subgroup</title>
-            <statement>
-              <p>
-                Let <m>G</m> be a finite group and <m>p</m> a prime. 
-                Write the order of <m>G</m> as <m>|G| = p^e m</m> where <m>p \nmid m</m>. 
-                A <em>Sylow <m>p</m>-subgroup</em> of <m>G</m> is a subgroup <m>H \leq G</m> such that <m>|H| = p^e</m>. 
-                That is, a Sylow <m>p</m>-subgroup of <m>G</m> is a subgroup whose order is the highest conceivable power of <m>p</m> according to <xref text="title" ref="thm-lagrange"/>.
-              </p>
-    
-              <p>
-                We set <m>\operatorname{Syl}_p(G)</m> to be the collection of all Sylow <m>p</m>-subgroups of <m>G</m> and <m>n_p=|\operatorname{Syl}_p(G)|</m> to be the number of Sylow <m>p</m>-subgroups.
-                <notation><usage><m>\Syl_p(G)</m></usage><description>the collection of all Sylow <m>p</m>-subgroups of <m>G</m></description></notation>
-                <notation><usage><m>n_p</m></usage><description>the the number of Sylow <m>p</m>-subgroups</description></notation>
-                <idx><h>Sylow subgroup</h></idx>
-                <idx><h>Sylow <m>p</m>-subgroup</h></idx>
-              </p>
-            </statement>
-            
-          </definition>
-    
-          <remark>
-            <p>
-              We allow the case when <m>p\nmid |G|</m>, in which case <m>e = 0</m> and <m>G</m> has a unique Sylow <m>p</m>-subgroup, namely <m>\{e\}</m> which has order <m>p^0</m>.
-            </p>
-          </remark>
-    
-          <example xml:id="ex-d2n-sylow"><title>Sylow Subgroups in <m>D_{2n}</m></title>
-            <p>
-              In <m>D_{2p}</m> for a prime <m>p</m>, <m>\langle r \rangle</m> is a Sylow <m>p</m>-subgroup. 
-              If <m>p &gt; 2</m>, there is only one Sylow <m>p</m>-subgroup of <m>D_{2p}</m>, so <m>n_p=1</m>.
-            </p>
-    
-            <p>
-              In <m>D_{2n}</m> for <m>n</m> odd, each of the subgroups <m>\langle sr^j \rangle</m>, for <m>j = 0, \dots, n-1</m> is a Sylow <m>2</m>-subgroup, so <m>n_2=p</m>.
-            </p>
-          </example>
-    
-          <example xml:id="ex-s5-sylow"><title>Sylow Subgroups in <m>S_{5}</m></title>
-            <p>
-              In <m>S_5</m>, the Sylow <m>5</m>-subgroups are the cyclic groups <m>\langle \sigma \rangle</m> for any five cycle <m>\sigma</m>, so <m>n_5=6</m> because there are <m>24</m> five cycles, but there are four of these in every Sylow <m>5</m>-subgroup. 
-              The Sylow <m>3</m>-subgroups are the cyclic groups <m>\langle \sigma \rangle</m> for any three cycle <m>\sigma</m>, so <m>n_3=10</m> because there are <m>20</m> three cycles, but there are two of these in every Sylow <m>3</m>-subgroup.
-            </p>
-
-            <p>
-              A Sylow <m>2</m>-subgroup of <m>S_5</m> is any subgroup of order <m>8</m>. 
-              For example <m>\langle (1 \, 4)(2 \, 3) , (1 \, 2 \, 3 \, 4) \rangle</m> is a Sylow <m>2</m>-subgroup. 
-              There are many others.
-            </p>
-          </example>
-    
-          <theorem xml:id="thm-cauchy"><title>Cauchy's Theorem</title>
-            <statement>
-              <p>
-                If <m>G</m> is a finite group and <m>p</m> is a prime number dividing <m>|G|</m>, then <m>G</m> has an element of order <m>p</m>. 
-                (In fact, at least <m>p-1</m> elements of order <m>p</m>.)
-              </p>
-            </statement>
-          </theorem>
-    
-
-    
-          <p>
-            <xref text="title" ref="thm-cauchy"/> allows us to conclude the existence of certain elements in a group based solely on its order, which can be a powerful tool in studying the structure of groups. 
-          </p>
-    
-          <p>
-            For example, it can be used to prove the existence of subgroups of a given order in a group, and it is a key ingredient in the proof of <xref text="title" ref="thm-sylow"/>, which provides information about the structure of finite groups. 
-          </p>
-    
-          <p>
-            <xref text="title" ref="thm-cauchy"/> has since been generalized and extended in many ways, and it is now a fundamental result in the theory of finite groups, where it plays a central role in the classification of groups of small order.
-          </p>
-
-        </section>
-    
-        <section xml:id="sec-sylowthm"><title>Sylow's Theorem</title>
-    
-          <blockquote>
-            <p>
-              <q>
-                What makes me unique is that I'm normal.
-              </q>
-            </p>
-            <attribution>Scotty McCreery</attribution>
-          </blockquote>
-    
-          <lemma xml:id="lem-Syl-lem"><title>Sylow's Lemma</title>
-            <statement>
-              <p>
-                Let <m>G</m> be a finite group, <m>p</m> a prime, <m>P</m> a Sylow <m>p</m>-subgroup of <m>G</m>, and <m>Q</m> any <m>p</m>-subgroup of <m>G</m>. 
-                Then <m>Q \cap N_G(P) = Q \cap P</m>.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                Since <m>P \leq N_G(P)</m>, we have <m>Q \cap P \leq Q \cap N_G(P)</m>. 
-                For the reverse containment, let <m>H =  Q \cap N_G(P)</m>. 
-                Since <m>H \subseteq N_G(P)</m>, <m>PH</m> is a subgroup of <m>G</m>. 
-                (Technically, we only proved <m>PH</m> is a subgroup if <m>N_G(P) = G</m>, but the proof applies verbatim provided the weaker condition <m>H \subseteq N_G(P)</m> holds.) 
-                Also <me>\#(PH) = \frac{(\#P) (\#H)}{\#(P \cap H)}</me> and since each of <m>\#P</m>, <m>\#H</m>, and <m>\#(P \cap H)</m> is a power of <m>p</m>, <m>PH</m> is a <m>p</m>-subgroup of <m>G</m>. 
-                But <m>P \leq PH</m> and <m>P</m> is a <m>p</m>-subgroup of largest possible order. 
-                So <m>P = PH</m>. 
-                This proves <m>H \leq P</m> and thus <m>H \leq Q\cap P</m>.
-              </p>
-            </proof>
-          </lemma>
-    
-          <theorem xml:id="thm-sylow"><title>Sylow's Theorem</title>
-            
-            <statement>
-              <p>
-                Assume <m>G</m> is a group of order <m>p^e m</m> where <m>p</m> is prime, <m>e \geq 0</m>, and <m>\operatorname{gcd}(p,m) = 1</m>.
-                <ol>
-                  <li>
-                    <p>
-                      <m>\operatorname{Syl}_p(G) \ne \emptyset</m> (there exists at least one Sylow <m>p</m>-subgroup of <m>G</m>).
-                    </p>
-                  </li>
-    
-                  <li>
-                    <p>
-                      If <m>P</m> is a Sylow <m>p</m>-subgroup of <m>G</m> and <m>Q \leq G</m> is any <m>p</m>-subgroup of <m>G</m> (i.e., a subgroup whose order is some power of <m>p</m>), then there is a <m>g</m> such that <m>Q \leq gPg^{-1}</m>. 
-                      In particular, the action of <m>G</m> on <m>\operatorname{Syl}_p(G)</m> by <xref text="title" ref="ex-conj"/> is transitive — i.e., any two Sylow <m>p</m>-subgroups are conjugate.
-                    </p>
-                  </li>
-    
-                  <li>
-                    <p>
-                      We have 
-                      <me>
-                        |\operatorname{Syl}_p(G)| \equiv 1 \mod{p}.
-                      </me>
-                    </p>
-                  </li>
-    
-                  <li>
-                    <p>
-                      For any <m>P \in \operatorname{Syl}_p(G)</m>, 
-                      <me>
-                        |\operatorname{Syl}_p(G)| = [G: N_G(P)],
-                      </me> 
-                      and hence 
-                      <me>
-                        | \operatorname{Syl}_p(G)| \mid m.
-                      </me>
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-          </theorem>
-    
-          <p>
-            <xref text="title" ref="thm-sylow"/> provides a systematic way of analyzing the subgroups of a finite group. 
-            It allows us to determine the number of subgroups of a given order, which is useful in many applications, such as studying the structure of solvable and simple groups. 
-            The theorems also provide information about the normalizers of subgroups, which can be used to study normal subgroups and quotient groups.
-          </p>
-
-          <remark>
-            <p>
-              In general, <xref text="title" ref="thm-cauchy"/> can be deduced from part one of <xref text="title" ref="thm-sylow"/>.
-              For say <m>p \mid |G|</m>. 
-              Then there exists a Sylow <m>p</m>-subgroup <m>P</m> of <m>G</m>. 
-              Pick any <m>x \in P</m>, <m>x \ne e</m>. 
-              Then <m>|x| = p^j</m> for some <m>j \geq 1</m>. 
-              Then <m>x^{p^{j-1}}</m> has order <m>p</m>.
-            </p>
-          </remark>
-
-          <p>
-            Recalling <xref ref="thm-unique-order-subgroup-normal"/>, we have the following:
-          </p>
-
-          <corollary xml:id="cor-unique-sylow-normal"><title>Sylow Subgroup Normal iff Unique</title>
-            <statement>
-              <p>
-                A Sylow <m>p</m>-subgroup of a finite group <m>G</m> is normal if and only if it is the only Sylow <m>p</m>-subgroup of <m>G</m>.
-              </p>
-            </statement>
-          </corollary>
-
-          <exercise xml:id="exe-order-8-subgroups-of-s4"><title>Order <m>8</m> of <m>S_4</m></title>
-            <statement>
-              <p>
-                Prove that <m>S_4</m> has precisely three distinct subgroups of order <m>8</m>, all of which are isomorphic to <m>D_8.</m>
-              </p>
-            </statement>
-
-            <solution>
-              <p>
-                Any subgroup of <m>S_4</m> of order <m>8</m> is a Sylow <m>2</m>-subgroup. 
-                By <xref text="title" ref="thm-sylow"/>, the number of Sylow <m>2</m>-subgroups is either <m>1</m> or <m>3</m>. 
-                As any <m>2</m>-cycle or <m>4</m>-cycle must be contained in a Sylow <m>2</m>-subgroup (since such elements generate subgroups of order <m>2i</m>, for some <m>i</m>) and there are six <m>2</m>-cycles and six <m>4</m>-cycles, there has to be more than one Sylow <m>2</m>-subgroup. 
-                Hence, there are precisely <m>3</m> distinct subgroups of order <m>8</m>.                  
-              </p>
-
-              <p>
-                As all of them are conjugate, and conjugation induces an isomorphism on the group, we see that all three subgroups are isomorphic. 
-                Hence, we just need to show that <m>S_4</m> contains a subgroup isomorphic to <m>D_8</m>. Let <m>X</m> be the set of left cosets of the subgroup <m>\{e,s\}</m> of <m>D_8</m>. 
-                Note that <m>|X| = 4</m>. Let <m>G</m> act on <m>X</m> by left multiplication. 
-                This action induces a homomorphism <m>\varphi : G \to P(X)</m> where <m>P(X)\cong S_4</m> is the permutation group on <m>X</m>. 
-                As shown in class, the kernel of this homomorphism is the largest normal subgroup contained in <m>\{e,s\}</m>, which is <m>\{e\}</m>. 
-                Thus, <m>\varphi</m> is injective and the image of <m>\varphi</m> is a subgroup of <m>S_4</m> isomorphic to <m>D_8</m>.
-              </p>
-            </solution>
-            
-          </exercise>
+              <attribution>Optimus Prime</attribution>
+            </blockquote>
           
+            <definition xml:id="def-p-group"><title><m>p</m>-group</title>
+              <statement>
+                <p>
+                  For a prime number <m>p</m>, a <m>p</m>-group is a group of order <m>p^m</m> for some <m>m\in \mathbb{Z},m &gt; 0</m>.
+                  <idx><h><m>p</m>-group</h></idx>
+                </p>
+              </statement>
+            </definition>
+      
+            <theorem xml:id="thm-center-pgroup"><title>Center of <m>p</m>-group is Nontrivial</title>
+              <statement>
+                <p>
+                  If <m>p</m> is a prime number and <m>G</m> is a finite group of order <m>p^m</m> for some <m>m &gt; 0</m>, then <m>Z(G)</m> is not the trivial group (In fact <m>|Z(G)|=p^a</m> for some <m>a&gt;0</m>).
+                </p>
+              </statement>
+      
+              <proof>
+                <p>
+                  Let <m>g_1,\ldots g_r \in G</m> be a list of unique representatives of all of the conjugacy classes of <m>G</m> of size greater than <m>1</m> as in <xref text="title" ref="thm-class-eq"/>. 
+                  Then for each <m>i</m>, <m>C_G(g_i)\neq G</m> so <m>[G:C_G(g_i)]\neq 1</m>. 
+                  Since <m>1\neq [G:C_G(g_i)] \mid |G|=p^m</m>, it follows that <m>p\mid [G:C_G(g_i)]</m> for each <m>i</m>. 
+                  From <xref text="title" ref="thm-class-eq"/> we deduce that <m>p\mid |Z(G)|</m> so, <m>|Z(G)|\neq 1</m>.
+                </p>
+              </proof>
+            </theorem>
+      
+            <remark>
+              <p>
+                <xref ref="thm-center-pgroup"/> is dissimilar to <xref text="title" ref="thm-cayley"/> in that this theorem is useful.
+              </p>
+            </remark>
+
+            <theorem xml:id="thm-order-p-cyclic"><title>Order <m>p</m> and <m>p^2</m></title>
+              <statement>
+                <p>
+                  Let <m>p</m> be prime. 
+                  <ol>
+                    <li>
+                      <p>
+                        Any group of order <m>p</m> is cyclic.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Any group of order <m>p^2</m> is abelian.
+                      </p>
+                    </li>
+                  </ol> 
+                </p>
+              </statement>
+            </theorem>     
+
+          </subsection> 
+
+          <subsection xml:id="subsec-sylow"><title>Sylow Subgroups</title>
+      
+            <definition xml:id="def-sylow-subgroup"><title>Sylow <m>p</m>-subgroup</title>
+              <statement>
+                <p>
+                  Let <m>G</m> be a finite group and <m>p</m> a prime. 
+                  Write the order of <m>G</m> as <m>|G| = p^e m</m> where <m>p \nmid m</m>. 
+                  A <em>Sylow <m>p</m>-subgroup</em> of <m>G</m> is a subgroup <m>H \leq G</m> such that <m>|H| = p^e</m>. 
+                  That is, a Sylow <m>p</m>-subgroup of <m>G</m> is a subgroup whose order is the highest conceivable power of <m>p</m> according to <xref text="title" ref="thm-lagrange"/>.
+                </p>
+      
+                <p>
+                  We set <m>\operatorname{Syl}_p(G)</m> to be the collection of all Sylow <m>p</m>-subgroups of <m>G</m> and <m>n_p=|\operatorname{Syl}_p(G)|</m> to be the number of Sylow <m>p</m>-subgroups.
+                  <notation><usage><m>\Syl_p(G)</m></usage><description>the collection of all Sylow <m>p</m>-subgroups of <m>G</m></description></notation>
+                  <notation><usage><m>n_p</m></usage><description>the the number of Sylow <m>p</m>-subgroups</description></notation>
+                  <idx><h>Sylow subgroup</h></idx>
+                  <idx><h>Sylow <m>p</m>-subgroup</h></idx>
+                </p>
+              </statement>
+              
+            </definition>
+      
+            <remark>
+              <p>
+                We allow the case when <m>p\nmid |G|</m>, in which case <m>e = 0</m> and <m>G</m> has a unique Sylow <m>p</m>-subgroup, namely <m>\{e\}</m> which has order <m>p^0</m>.
+              </p>
+            </remark>
+      
+            <example xml:id="ex-d2n-sylow"><title>Sylow Subgroups in <m>D_{2n}</m></title>
+              <p>
+                In <m>D_{2p}</m> for a prime <m>p</m>, <m>\langle r \rangle</m> is a Sylow <m>p</m>-subgroup. 
+                If <m>p &gt; 2</m>, there is only one Sylow <m>p</m>-subgroup of <m>D_{2p}</m>, so <m>n_p=1</m>.
+              </p>
+      
+              <p>
+                In <m>D_{2n}</m> for <m>n</m> odd, each of the subgroups <m>\langle sr^j \rangle</m>, for <m>j = 0, \dots, n-1</m> is a Sylow <m>2</m>-subgroup, so <m>n_2=p</m>.
+              </p>
+            </example>
+      
+            <example xml:id="ex-s5-sylow"><title>Sylow Subgroups in <m>S_{5}</m></title>
+              <p>
+                In <m>S_5</m>, the Sylow <m>5</m>-subgroups are the cyclic groups <m>\langle \sigma \rangle</m> for any five cycle <m>\sigma</m>, so <m>n_5=6</m> because there are <m>24</m> five cycles, but there are four of these in every Sylow <m>5</m>-subgroup. 
+                The Sylow <m>3</m>-subgroups are the cyclic groups <m>\langle \sigma \rangle</m> for any three cycle <m>\sigma</m>, so <m>n_3=10</m> because there are <m>20</m> three cycles, but there are two of these in every Sylow <m>3</m>-subgroup.
+              </p>
+
+              <p>
+                A Sylow <m>2</m>-subgroup of <m>S_5</m> is any subgroup of order <m>8</m>. 
+                For example <m>\langle (1 \, 4)(2 \, 3) , (1 \, 2 \, 3 \, 4) \rangle</m> is a Sylow <m>2</m>-subgroup. 
+                There are many others.
+              </p>
+            </example>
+      
+            <theorem xml:id="thm-cauchy"><title>Cauchy's Theorem</title>
+              <statement>
+                <p>
+                  If <m>G</m> is a finite group and <m>p</m> is a prime number dividing <m>|G|</m>, then <m>G</m> has an element of order <m>p</m>. 
+                  (In fact, at least <m>p-1</m> elements of order <m>p</m>.)
+                </p>
+              </statement>
+            </theorem>
+    
+            <p>
+              <xref text="title" ref="thm-cauchy"/> allows us to conclude the existence of certain elements in a group based solely on its order, which can be a powerful tool in studying the structure of groups. 
+            </p>
+      
+            <p>
+              For example, it can be used to prove the existence of subgroups of a given order in a group, and it is a key ingredient in the proof of <xref text="title" ref="thm-sylow"/>, which provides information about the structure of finite groups. 
+            </p>
+      
+            <p>
+              <xref text="title" ref="thm-cauchy"/> has since been generalized and extended in many ways, and it is now a fundamental result in the theory of finite groups, where it plays a central role in the classification of groups of small order.
+            </p>
+
+          </subsection>
+
+          <subsection xml:id="subsec-sylows-theorem"><title>Sylows-Theorem</title>
+
+            <blockquote>
+              <p>
+                <q>
+                  What makes me unique is that I'm normal.
+                </q>
+              </p>
+              <attribution>Scotty McCreery</attribution>
+            </blockquote>
+      
+            <lemma xml:id="lem-Syl-lem"><title>Sylow's Lemma</title>
+              <statement>
+                <p>
+                  Let <m>G</m> be a finite group, <m>p</m> a prime, <m>P</m> a Sylow <m>p</m>-subgroup of <m>G</m>, and <m>Q</m> any <m>p</m>-subgroup of <m>G</m>. 
+                  Then <m>Q \cap N_G(P) = Q \cap P</m>.
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  Since <m>P \leq N_G(P)</m>, we have <m>Q \cap P \leq Q \cap N_G(P)</m>. 
+                  For the reverse containment, let <m>H =  Q \cap N_G(P)</m>. 
+                  Since <m>H \subseteq N_G(P)</m>, <m>PH</m> is a subgroup of <m>G</m>. 
+                  (Technically, we only proved <m>PH</m> is a subgroup if <m>N_G(P) = G</m>, but the proof applies verbatim provided the weaker condition <m>H \subseteq N_G(P)</m> holds.) 
+                  Also <me>\#(PH) = \frac{(\#P) (\#H)}{\#(P \cap H)}</me> and since each of <m>\#P</m>, <m>\#H</m>, and <m>\#(P \cap H)</m> is a power of <m>p</m>, <m>PH</m> is a <m>p</m>-subgroup of <m>G</m>. 
+                  But <m>P \leq PH</m> and <m>P</m> is a <m>p</m>-subgroup of largest possible order. 
+                  So <m>P = PH</m>. 
+                  This proves <m>H \leq P</m> and thus <m>H \leq Q\cap P</m>.
+                </p>
+              </proof>
+            </lemma>
+      
+            <theorem xml:id="thm-sylow"><title>Sylow's Theorem</title>
+              
+              <statement>
+                <p>
+                  Assume <m>G</m> is a group of order <m>p^e m</m> where <m>p</m> is prime, <m>e \geq 0</m>, and <m>\operatorname{gcd}(p,m) = 1</m>.
+                  <ol>
+                    <li>
+                      <p>
+                        <m>\operatorname{Syl}_p(G) \ne \emptyset</m> (there exists at least one Sylow <m>p</m>-subgroup of <m>G</m>).
+                      </p>
+                    </li>
+      
+                    <li>
+                      <p>
+                        If <m>P</m> is a Sylow <m>p</m>-subgroup of <m>G</m> and <m>Q \leq G</m> is any <m>p</m>-subgroup of <m>G</m> (i.e., a subgroup whose order is some power of <m>p</m>), then there is a <m>g</m> such that <m>Q \leq gPg^{-1}</m>. 
+                        In particular, the action of <m>G</m> on <m>\operatorname{Syl}_p(G)</m> by <xref text="title" ref="ex-conj"/> is transitive — i.e., any two Sylow <m>p</m>-subgroups are conjugate.
+                      </p>
+                    </li>
+      
+                    <li>
+                      <p>
+                        We have 
+                        <me>
+                          |\operatorname{Syl}_p(G)| \equiv 1 \mod{p}.
+                        </me>
+                      </p>
+                    </li>
+      
+                    <li>
+                      <p>
+                        For any <m>P \in \operatorname{Syl}_p(G)</m>, 
+                        <me>
+                          |\operatorname{Syl}_p(G)| = [G: N_G(P)],
+                        </me> 
+                        and hence 
+                        <me>
+                          | \operatorname{Syl}_p(G)| \mid m.
+                        </me>
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+            </theorem>
+      
+            <p>
+              <xref text="title" ref="thm-sylow"/> provides a systematic way of analyzing the subgroups of a finite group. 
+              It allows us to determine the number of subgroups of a given order, which is useful in many applications, such as studying the structure of solvable and simple groups. 
+              The theorems also provide information about the normalizers of subgroups, which can be used to study normal subgroups and quotient groups.
+            </p>
+
+            <remark>
+              <p>
+                In general, <xref text="title" ref="thm-cauchy"/> can be deduced from part one of <xref text="title" ref="thm-sylow"/>.
+                For say <m>p \mid |G|</m>. 
+                Then there exists a Sylow <m>p</m>-subgroup <m>P</m> of <m>G</m>. 
+                Pick any <m>x \in P</m>, <m>x \ne e</m>. 
+                Then <m>|x| = p^j</m> for some <m>j \geq 1</m>. 
+                Then <m>x^{p^{j-1}}</m> has order <m>p</m>.
+              </p>
+            </remark>
+
+            <p>
+              Recalling <xref ref="thm-unique-order-subgroup-normal"/>, we have the following:
+            </p>
+
+            <corollary xml:id="cor-unique-sylow-normal"><title>Sylow Subgroup Normal iff Unique</title>
+              <statement>
+                <p>
+                  A Sylow <m>p</m>-subgroup of a finite group <m>G</m> is normal if and only if it is the only Sylow <m>p</m>-subgroup of <m>G</m>.
+                </p>
+              </statement>
+            </corollary>
+
+            <exercise xml:id="exe-order-8-subgroups-of-s4"><title>Order <m>8</m> of <m>S_4</m></title>
+              <statement>
+                <p>
+                  Prove that <m>S_4</m> has precisely three distinct subgroups of order <m>8</m>, all of which are isomorphic to <m>D_8.</m>
+                </p>
+              </statement>
+
+              <solution>
+                <p>
+                  Any subgroup of <m>S_4</m> of order <m>8</m> is a Sylow <m>2</m>-subgroup. 
+                  By <xref text="title" ref="thm-sylow"/>, the number of Sylow <m>2</m>-subgroups is either <m>1</m> or <m>3</m>. 
+                  As any <m>2</m>-cycle or <m>4</m>-cycle must be contained in a Sylow <m>2</m>-subgroup (since such elements generate subgroups of order <m>2i</m>, for some <m>i</m>) and there are six <m>2</m>-cycles and six <m>4</m>-cycles, there has to be more than one Sylow <m>2</m>-subgroup. 
+                  Hence, there are precisely <m>3</m> distinct subgroups of order <m>8</m>.                  
+                </p>
+
+                <p>
+                  As all of them are conjugate, and conjugation induces an isomorphism on the group, we see that all three subgroups are isomorphic. 
+                  Hence, we just need to show that <m>S_4</m> contains a subgroup isomorphic to <m>D_8</m>. Let <m>X</m> be the set of left cosets of the subgroup <m>\{e,s\}</m> of <m>D_8</m>. 
+                  Note that <m>|X| = 4</m>. Let <m>G</m> act on <m>X</m> by left multiplication. 
+                  This action induces a homomorphism <m>\varphi : G \to P(X)</m> where <m>P(X)\cong S_4</m> is the permutation group on <m>X</m>. 
+                  As shown in class, the kernel of this homomorphism is the largest normal subgroup contained in <m>\{e,s\}</m>, which is <m>\{e\}</m>. 
+                  Thus, <m>\varphi</m> is injective and the image of <m>\varphi</m> is a subgroup of <m>S_4</m> isomorphic to <m>D_8</m>.
+                </p>
+              </solution>
+              
+            </exercise>
+            
+          </subsection>
+
         </section>
     
         <section xml:id="sec-simple-groups"><title>Simple Groups</title>
@@ -10506,6 +10513,15 @@
 
         <section xml:id="sec-defmod"><title>Module Basics</title>
 
+          <blockquote>
+              <p>
+                <q>
+                  Complexity that works is built up out of modules that work perfectly, layered one over the other.
+                </q>
+              </p>
+              <attribution>Kevin Kelly</attribution>
+            </blockquote>
+
           <definition xml:id="def-module"><title>Module</title>
             <statement>
               <p>
@@ -10815,6 +10831,15 @@
 
         <section xml:id="sec-modhom"><title>Module Homomorphisms</title>
 
+          <blockquote>
+              <p>
+                <q>
+                  Transformation rarely happens accidentally
+                </q>
+              </p>
+              <attribution>A.J. Sheppard</attribution>
+            </blockquote>
+
           <definition xml:id="def-module-homomorphism"><title>Module Homomorphism</title>
             <statement>
               <p>
@@ -11061,6 +11086,15 @@
 
         <section xml:id="sec-quote"><title>Quotient Modules</title>
 
+           <blockquote>
+              <p>
+                <q>
+                  The best way to solve a problem is to remove its cause.
+                </q>
+              </p>
+              <attribution>Martin Luther King Jr.</attribution>
+            </blockquote>
+
           <definition xml:id="def-quotient-module"><title>Quotient Module</title>
             <statement>
               <p>
@@ -11217,6 +11251,15 @@
 
         <section xml:id="sec-linear"><title>Linear Independence</title>
 
+           <blockquote>
+              <p>
+                <q>
+                  You need to learn independence. You have to be independent - it builds character.
+                </q>
+              </p>
+              <attribution>Mike Tyson</attribution>
+            </blockquote>
+
           <definition xml:id="def-linear-combination"><title>Linear Combination</title>
             <statement>
               <p>
@@ -11338,6 +11381,15 @@
         </section>
         
         <section xml:id="sec-modgen"><title>Generated Modules</title>
+
+           <blockquote>
+              <p>
+                <q>
+                  A peaceful mind generates power.
+                </q>
+              </p>
+              <attribution>Normal Vincent Peale</attribution>
+            </blockquote>
 
           <proposition><title>Finite Generation and Quotient Modules</title>
             <statement>
@@ -11902,6 +11954,15 @@
 
         <section xml:id="sec-bases"><title>Bases</title>
 
+           <blockquote>
+              <p>
+                <q>
+                  The basis of all good human behavior is kindness.
+                </q>
+              </p>
+              <attribution>Eleanor Roosevelt</attribution>
+            </blockquote>
+
           <definition xml:id="def-basis"><title>Basis</title>
             <statement>
               <p>
@@ -12400,6 +12461,15 @@
         -->
 
         <section xml:id="sec-vecbasis"><title>Existence of Bases</title>
+
+           <blockquote>
+              <p>
+                <q>
+                  His words span rivers and mountains, but his thoughts are still only six inches long.
+                </q>
+              </p>
+              <attribution>E.B. White</attribution>
+            </blockquote>
 
           <definition xml:id="def-span"><title>Span</title>
             <statement>
@@ -23133,29 +23203,97 @@
 
           <subsection xml:id="subsec-sets"><title>Sets</title>
 
-            <definition xml:id="def-subset"><title>Subset</title>
+            <heuristic xml:id="heur-set"><title>Set</title>
+              <statement>
+                <p>
+                  The basic undefined term we will use is that of a <em>set</em>, which we take to be any collection of objects, not necessarily mathematical ones.
+                </p>
+              </statement>
+            </heuristic>
+
+            <remark>
+              <p>
+                A more rigrorous description of sets can be found using the ZFC axioms for set theory, which are listed around here somewhere.
+              </p>
+            </remark>
+
+            <definition xml:id="def-subset"><title>Set Containments</title>
                 <statement>
                   <p>
-                    Let <m>A</m> be a set. A <em>subset</em> of <m>A</m> is a set of some (possibly none, possibly all, possibly neither) of the elements of <m>A</m>.
+                    Let <m>A</m> and <m>B</m> be sets. 
+                    <ol>
+                      <li>
+                        <p>
+                          The set <m>A</m> is a <term>subset</term> of the set <m>B</m>, denoted <m>A \subseteq B</m>, if <m>x\in  A</m> implies <m>x\in B</m>. 
+                        </p>
+                      </li>
+
+                      <li>
+                        <p>
+                          The set <m>A</m> <term>equals</term> the set <m>B</m>, denoted <m>A = B</m>, if <m>A \subseteq B</m> and <m>B \subseteq  A</m>. 
+                        </p>
+                      </li>
+
+                      <li>
+                        <p>
+                          The set <m>A</m> is a <term>proper subset</term> of the set <m>B</m>, denoted <m>A \subset B</m>, if <m>A \subseteq B</m> and <m>A \neq B</m>. 
+                        </p>
+                      </li>
+                    </ol>
                   </p>
                 </statement>
             </definition>
 
-            <definition xml:id="def-inclusion-map"><title>Inclusion Map</title>
+            <definition xml:id="def-union-intersection">
               <statement>
                 <p>
-                  Let <m>B \subseteq  A</m>. The<em>inclusion</em>map is the function <m>\iota :B \to  A</m> defined by <m>\iota(b) = b</m> for all <m>b \in  B</m>.
+                  Let <m>A</m> and <m>B</m> be sets. 
+                  The <term>union</term> of <m>A</m> and <m>B</m>, denoted <m>A \cup B</m>, is the set defined by 
+                  <me>
+                    A \cup B = \{x | x\in  A \text{ or } x\in B\}
+                  </me>.
+                  The <term>intersection</term> of <m>A</m> and <m>B</m>, denoted <m>A \cap B</m>, is the set defined by
+                  <me>
+                    A \cap B = \{x | x\in  A \text{ and }x\in B\}
+                  </me>. 
+              </p>
+              </statement>
+            </definition>
+
+            <definition xml:id="def-family-of-sets">
+              <statement>
+                <p>
+                  Let <m>\cA</m> be a set. 
+                  The set <m>\cA</m> is called a <term>family of sets</term> if all the elements of A are sets. 
+                  The family of sets <m>\cA</m> is <term>indexed</term> by <m>I</m>, denoted <m>\cA = \{A_i\}_{i\in I}</m>, if there is a non-empty set <m>I</m> such that there is an element <m>A_i\in \cA</m> for each <m>i\in  I</m>, and that every element of <m>\cA</m> equals <m>A_i</m> for exactly one <m>i\in  I</m>. 
                 </p>
               </statement>
             </definition>
 
-            <proposition xml:id="prop-inclusions-injective"><title>Inclusions are Injective</title>
+            <convention>
+              <p>
+                Notation for sets, elements of sets, and sets of sets: Small letters <m>a,b,c,x,y,z</m> for elements of sets, capital letters <m>A,B,C,X,Y,Z</m> for sets, calligraphic capital letters ℬ,𝒞,𝒯,𝒰 for collections of sets.
+              </p>
+            </convention>
+
+            <convention>
+              <p>
+                Notation for indices: <m>i,j,k,m,n</m> for finite or countably many indices, <m>\alpha ,\beta ,\dots</m> for arbitrarily many indices.
+              </p>
+            </convention>
+
+            <definition xml:id="def-union-intersection-2">
               <statement>
                 <p>
-                  If <m>B \subseteq  A</m> and <m>\iota:B \to  A</m> is the inclusion, then <m>\iota</m> is an injection.            
+                  Let <m>\cA</m> be a family of sets. 
+                  If <m>\cA = \{A_i\}i\in I</m> is indexed by a set <m>I</m>, then we write
+                  <me>
+                    \bigcup_{i\in I}A_i = \{x | x\in  A_i \text{ for some }i\in  I\} \text{ and } \bigcap_{i\in I}A_i = \{x | x\in  A_i \text{ for all } i\in  I\}
+                  </me> 
+                  to denote the <em>union</em> and <em>intersection</em> of the sets in <m>\cA</m>, respectively. 
                 </p>
               </statement>
-            </proposition>
+            </definition>
             
             <theorem xml:id="thm-distributive-laws"><title>Distributive Laws</title>
               <statement>
@@ -23172,35 +23310,38 @@
                 </p>
               </statement>
             </theorem>
+
+            <definition xml:id="def-cartesian-product"><title>Cartesian Product</title>
+              <statement>
+                <p>
+                  Let <m>A, B,</m> and <m>A_\alpha</m>  for <m>all \alpha  \in  J</m> be sets. The <em>Cartesian product</em> <m>A \times  B := \{(a,b) | a \in  A, b \in  B\}</m> and <m>\prod_{\alpha\in J} A_\alpha  := \{(a_\alpha )_{\alpha  \in  J} | a_\alpha  \in  A_\alpha\}</m>
+                </p>
+              </statement>
+            </definition>
+
+            <exercise xml:id="exe-cartesian-subsets"><title>Subsets of Cartesian Products</title>
+              <statement>
+                <p>
+                  If <m>A \subseteq  G</m> and <m>B \subseteq  H</m>, then <m>A \times  B \subseteq  G \times  H</m>.
+                </p>
+              </statement>
+            </exercise>
             
-            <remark><p>Notation for indices: <m>i,j,k,m,n</m> for finite or countably many indices, <m>\alpha ,\beta ,\dots</m> for arbitrarily many indices.</p></remark>
-
-            <remark><p>Notation for sets, elements of sets, and sets of sets: Small letters <m>a,b,c,x,y,z</m> for elements of sets, capital letters <m>A,B,C,X,Y,Z</m> for sets, calligraphic capital letters ℬ,𝒞,𝒯,𝒰 for collections of sets.</p></remark>
-
-            <p>Template to prove two sets are equal</p>
           </subsection>
 
           <subsection xml:id="subsec-functions"><title>Functions</title>
 
-            <definition xml:id="def-domain-codomain"><title>Domain and Codomain</title>
-              <statement>
-                <p>
-                  For a function <m>f: G \to  H</m>, the set <m>G</m> is the <em>domain</em>, the set <m>H</m> is the <em>codomain</em>.
-                </p>
-              </statement>
-            </definition>
-
             <definition xml:id="def-function"><title>Function</title>
               <statement>
                 <p>
-                  Let <m>A</m> and <m>B</m> be sets. A <em>function</em> (also called a <em>map</em>) <m>f</m> from <m>A</m> to <m>B</m>, denoted <m>f : A\to B</m>, is a subset <m>F \sse A \times B</m> such that for each <m>a \in A</m>, there is one and only one pair in <m>F</m> of the form <m>(a, b)</m>.
-                </p>
+                Let <m>A</m> and <m>B</m> be sets. 
+                A <term>function</term> (also called a <term>map</term>) <m>f</m> from <m>A</m> to <m>B</m>, denoted <m>f : A \to B</m>, is a subset <m>F \subseteq  A \times B</m> such that for each <m>a\in  A</m>, there is one and only one pair in <m>F</m> of the form <m>(a, b)</m>. 
+                The set <m>A</m> is called the <term>domain</term> of <m>f</m> and the set <m>B</m> is called the <term>codomain</term> of <m>f</m>. 
+              </p>
               </statement>
             </definition>
 
-            <p>Template to prove two functions are equal</p>
-
-            <definition xml:id="def-well-defined"><title>Welldefined Function</title>
+            <definition xml:id="def-well-defined"><title>Well-defined Function</title>
               <statement>
                 <p>
                   A function <m>f: G \to H</m> is <em>well-defined</em> if whenever <m>g,g' \in  G</m> and <m>g = g'</m>, then <m>f(g) = f(g')</m>.
@@ -23208,7 +23349,70 @@
               </statement>
             </definition>
 
-            <remark><p>All functions are well-defined.</p></remark>
+            <remark>
+              <p>
+                All functions are well-defined.
+              </p>
+            </remark>
+
+            <example xml:id="ex-common-functions"><title>Commonly Encountered Functions</title>
+              <p>
+              <ul>
+                <li>
+                  <p>
+                    A <term>constant map</term> <m>f : A \to B</m> is any function of the form <m>f (x) = b</m> for all <m>x\in  A</m>, where <m>b\in B</m> is some fixed element.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    The <term>identity map</term> on <m>A</m> is the function <m>1_A : A \to  A</m> defined by <m>1_A(x) = x</m> for all <m>x\in  A</m>.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    The <term>inclusion map</term> from <m>S</m> to <m>A</m> is the function <m>\iota : S \to  A</m> defined by <m>j(x) = x</m> for all <m>x\in  S</m>
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    If <m>f : A \to B</m> is a function, the <term>restriction</term> of <m>f</m> to <m>S</m>, denoted <m>f|_S</m>, is the function <m>f|_S : S \to B</m> defined by <m>f|_S(x) = f (x)</m> for all <m>x\in  S</m>.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    If <m>g : S \to B</m> is a function, an <term>extension</term> of <m>g</m> to <m>A</m> is any function <m>G : A \to B</m> such that <m>G|S = g</m>.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    The <term>projection maps</term> from <m>A \times B</m> are the functions <m>π_1 : A \times B \to  A</m> and <m>π_2 : A \times B \to B</m> defined by <m>π_1((a, b)) = a</m> and <m>π_2((a, b)) = b</m> for all <m>(a, b)\in A \times B</m>. 
+                    For any finite collection of sets <m>A1, \dots, A p</m>, projection maps
+                    <me>π_i : A1 \times\cdots \times  A p \to  A_i</me>
+                    for all <m>i\in  {1, \dots, p}</m> can be defined similarly.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Let <m>X</m> be a non-empty set, and let <m>S \subseteq  X</m> be a subset. 
+                    The <term>characteristic map</term> for <m>S</m> in <m>X</m>, denoted <m>χS</m>, is the function <m>χS : X \to  {0, 1}</m> defined by
+                    <me>
+                      χS(y) =
+                      \begin{cases}
+                        1, &amp; if y\in  S//
+                        0, &amp; if y\in  X - S.
+                      \end{cases}
+                    </me>
+                  </p>
+                </li>
+              </ul>
+            </p>
+            </example>
 
             <definition xml:id="def-jectivity"><title>Injective, Surjective, Bijective</title>
               <statement>
@@ -23217,13 +23421,13 @@
                   <ol>
                     <li>
                       <p>
-                        The function <m>f</m> is <em>one-to-one</em> (also called an<em>injection</em>and denoted <m>f: X \hookrightarrow  Y</m>) if whenever <m>x,x' \in  X</m> and <m>f(x) = f(x')</m> then <m>x = x'</m>.  
+                        The function <m>f</m> is <em>one-to-one</em> (also called an <em>injection</em> and denoted <m>f: X \hookrightarrow  Y</m>) if whenever <m>x,x' \in  X</m> and <m>f(x) = f(x')</m> then <m>x = x'</m>.  
                       </p>
                     </li>
 
                     <li>
                       <p>
-                        The function <m>f</m> is <em>onto</em> (also called a<em>surjection</em>and denoted <m>f: X ↠ Y</m>) if for every <m>y</m> in <m>Y</m>, there is an <m>x</m> in <m>X</m> with <m>f(x) = y</m>.
+                        The function <m>f</m> is <em>onto</em> (also called a <em>surjection</em> and denoted <m>f: X ↠ Y</m>) if for every <m>y</m> in <m>Y</m>, there is an <m>x</m> in <m>X</m> with <m>f(x) = y</m>.
                       </p>
                     </li>
 
@@ -23244,14 +23448,21 @@
             </definition>
 
             <exercise xml:id="surjective-iff-image"><title>Surjective iff Image is Codomain</title>
-              <p>A function <m>f:A\to B</m> is surjective iff <m>f(A)=B</m>.</p>
+              <p>
+                A function <m>f:A\to B</m> is surjective if and only if <m>f(A)=B</m>.
+              </p>
             </exercise>
 
             <definition xml:id="def-composition"><title>Composition</title>
               <statement>
                 <p>
-                  
-                </p>
+                Let <m>A</m>, <m>B</m> and <m>C</m> be sets, and let <m>f : A \to B</m> and <m>g : B \to  C</m> be functions.
+                The <term>composition</term> of <m>f</m> and <m>g</m> is the function <m>g \circ  f : A \to  C</m> defined by
+                <me>
+                  (g \circ  f )(x) = g( f (x))
+                </me>
+                for all <m>x\in  A</m>. 
+              </p>
               </statement>
             </definition>
 
@@ -23295,7 +23506,6 @@
               </statement>
             </theorem>
 
-
             <definition xml:id="def-image-preimage"><title>Image and Preimage</title>
               <statement>
                 <p>
@@ -23303,19 +23513,19 @@
                   <ol>
                     <li>
                       <p>
-                        The<em>image </em> of a subset <m>A</m> of <m>X</m> is <m>f(A) := \{f(a) | a \in  A\}</m>.  
+                        The <em>image</em> of a subset <m>A</m> of <m>X</m> is <m>f(A) := \{f(a) | a \in  A\}</m>.  
                       </p>
                     </li>
 
                     <li>
                       <p>
-                        The<em>preimage</em>of a subset <m>B</m> of <m>Y</m> is <m>f\inv(B) := \{g | g \in  X and f(g) \in  B\}</m>.  
+                        The <em>preimage</em> of a subset <m>B</m> of <m>Y</m> is <m>f\inv(B) := \{g | g \in  X and f(g) \in  B\}</m>.  
                       </p>
                     </li>
 
                     <li>
                       <p>
-                        The<em>image</em> <m>f</m> is <m>f(X)</m>.
+                        The <em>image</em> <m>f</m> is <m>f(X)</m>.
                       </p>
                     </li>
                   </ol>
@@ -23323,11 +23533,10 @@
               </statement>
             </definition>
 
-            <theorem xml:id="thm-pan"><title>PAN</title>
-              
+            <theorem xml:id="thm-pan"><title>PAN</title>   
               <statement>
                 <p>
-                  If <m>f: X \to  Y, E \subseteq  E' \subseteq  Y</m>, and <m>E\alpha  \subseteq  Y</m> for all <m>\alpha</m>, then 
+                  If <m>f: X \to  Y, E \subseteq  E' \subseteq  Y</m>, and <m>E_\alpha  \subseteq  Y</m> for all <m>\alpha</m>, then 
                   <ol>
                     <li>
                       <p>
@@ -23337,13 +23546,13 @@
 
                     <li>
                       <p>
-                        <m>f\inv(\cup \alpha  E\alpha ) = \cup \alpha f\inv(E\alpha )</m>. 
+                        <m>f\inv(\bigcup_\alpha  E_\alpha ) = \bigcup_\alpha f\inv(E_\alpha )</m>. 
                       </p>
                     </li>
 
                     <li>
                       <p>
-                        <m>f\inv(\cap \alpha  E\alpha ) = \cap \alpha f\inv(E\alpha )</m>. 
+                        <m>f\inv(\bigcap_\alpha  E_\alpha ) = \bigcap_\alpha f\inv(E_\alpha )</m>. 
                       </p>
                     </li>
 
@@ -23360,29 +23569,31 @@
             <theorem xml:id="thm-iasn"><title>IASN</title>
               <statement>
                 <p>
-                  If <m>f: X \to  Y, C \subseteq  C' \subseteq  X</m>, and <m>C\alpha  \subseteq  X</m> for all <m>\alpha</m>, then 
+                  If <m>f: X \to  Y, C \subseteq  C' \subseteq  X</m>, and <m>C_\alpha \subseteq  X</m> for all <m>\alpha</m>, then 
                   <ol>
                     <li>
                       <p>
-                        <m>f(C) \subseteq  f(C')</m>. 
+                        <m>f(C) \subseteq f(C')</m>. 
                       </p>
                     </li>
 
                     <li>
                       <p>
-                        <m>f(\cup \alpha  C\alpha ) = \cup \alpha  f(C\alpha )</m>. 
+                        <m>f(\bigcup_\alpha  C_\alpha ) = \bigcup_\alpha  f(C_\alpha )</m>. 
                       </p>
                     </li>
 
                     <li>
                       <p>
-                        <m>f(\cap \alpha  C\alpha ) \subseteq  \cap \alpha  f(C\alpha )</m>. If moreover <m>f</m> is injective, then <m>f(\cap \alpha  C\alpha ) = \cap \alpha  f(C\alpha )</m>. 
+                        <m>f(\bigcap_\alpha  C_\alpha ) \subseteq  \bigcap_\alpha  f(C_\alpha )</m>. 
+                        If moreover <m>f</m> is injective, then <m>f(\bigcap_\alpha  C_\alpha ) = \bigcap_\alpha  f(C_\alpha )</m>. 
                       </p>
                     </li>
 
                     <li>
                       <p>
-                        <m>f(C' \sm C) \supseteq  f(C') \sm f(C)</m>. If moreover <m>f</m> is injective, then <m>f(C' \sm C) = f(C') \sm f(C)</m>.
+                        <m>f(C' \sm C) \supseteq  f(C') \sm f(C)</m>. 
+                        If moreover <m>f</m> is injective, then <m>f(C' \sm C) = f(C') \sm f(C)</m>.
                       </p>
                     </li>
                   </ol>
@@ -23404,29 +23615,23 @@
 
                     <li>
                       <p>
-                        If <m>B \subseteq  Y</m> then <m>f(f\inv (B))</m> \subseteq  <m>B</m>; if moreover <m>f</m> is surjective then <m>f(f\inv(B)) = B</m>.
+                        If <m>B \subseteq  Y</m> then <m>f(f\inv (B)) \subseteq B</m>; if moreover <m>f</m> is surjective then <m>f(f\inv(B)) = B</m>.
                       </p>
                     </li>
                   </ol>
                 </p>
               </statement>
             </theorem>
-          
-          </subsection>
 
-          <subsection xml:id="subsec-set-constructions"><title>Set Constructions</title>
+            <proposition xml:id="prop-inclusions-injective"><title>Inclusions are Injective</title>
+              <statement>
+                <p>
+                  If <m>B \subseteq  A</m> and <m>\iota:B \to  A</m> is the inclusion, then <m>\iota</m> is an injection.            
+                </p>
+              </statement>
+            </proposition>
 
-            <subsubsection xml:id="subsubsec-product-sets"><title>Product Sets</title>
-
-              <definition xml:id="def-cartesian-product"><title>Cartesian Product</title>
-                <statement>
-                  <p>
-                    Let <m>A, B,</m> and <m>A_\alpha</m>  for <m>all \alpha  \in  J</m> be sets. The <em>Cartesian product</em> <m>A \times  B := \{(a,b) | a \in  A, b \in  B\}</m> and <m>\prod_{\alpha\in J} A_\alpha  := \{(a_\alpha )_{\alpha  \in  J} | a_\alpha  \in  A_\alpha\}</m>
-                  </p>
-                </statement>
-              </definition>
-
-              <definition xml:id="def-projection-map"><title>Projection Map</title>
+             <definition xml:id="def-projection-map"><title>Projection Map</title>
                 <statement>
                   <p>
                     Let <m>A_\alpha</m> for all <m>\alpha  \in  J</m> be sets and let <m>\beta  in J</m>. The <em>projection</em> map <m>\pi_\beta : \prod_{ \alpha  \in  J} A_\alpha  \to  A_\beta</m> is defined by <m>\pi_\beta ((a_\alpha )_{\alpha  \in  J}) = a_\beta  \text{ for all }(a_\alpha )_{\alpha  \in  J} \in  \prod_{\alpha  \in  J} A_\alpha</m> .
@@ -23461,22 +23666,17 @@
                   </p>
                 </statement>
               </theorem>
+          
+          </subsection>
 
-              <lemma xml:id="lem-cartesian-subsets"><title>Subsets of Cartesian Products</title>
-                <statement>
-                  <p>
-                    If <m>A \subseteq  G</m> and <m>B \subseteq  H</m>, then <m>A \times  B \subseteq  G \times  H</m>.
-                  </p>
-                </statement>
-              </lemma>
-            </subsubsection>
-              
+          <subsection xml:id="subsec-set-constructions"><title>Set Constructions</title>
+
             <subsubsection xml:id="subsubsec-quotient-sets"><title>Equivalence Relations and Modular Arithmetic</title>
 
               <definition xml:id="def-equivalence-relation"><title>Equivalence Relation</title>
                 <statement>
                   <p>
-                    An <em>equivalence relation</em> <m>\sim</m>  on a set <m>X</m> is a subset <m>S of X \times  X</m> (where <m>(a,b) \in  S</m> is written <m>a \sim  b</m>) that satisfies the following for all <m>a,b,c</m> in <m>X</m>: 
+                    An <em>equivalence relation</em> <m>\sim</m>  on a set <m>X</m> is a subset <m>S \sse X \times  X</m> (where <m>(a,b) \in  S</m> is written <m>a \sim  b</m>) that satisfies the following for all <m>a,b,c</m> in <m>X</m>: 
                     <ol>
                       <li><title>Reflexivity</title>
                         <p>
@@ -23499,15 +23699,15 @@
                   </p>
 
                   <p>
-                    The<em>equivalence class</em>of an element a of <m>X</m> is <m>[a]:= \{b | b \sim  a\}</m>.  
+                    The <em>equivalence class</em> of an element a of <m>X</m> is <m>[a]:= \{b | b \sim  a\}</m>.  
                   </p>
 
                   <p>
-                    The notation <m>X/\sim</m> denotes the<em>set of equivalence classes</em>, also called the<em>quotient</em>of <m>X</m> with respect to <m>\sim</m>.  
+                    The notation <m>X/\sim</m> denotes the <em>set of equivalence classes </em>, also called the <em>quotient</em> of <m>X</m> with respect to <m>\sim</m>.  
                   </p>
 
                   <p>
-                    The function <m>q:X \to  X/\sim</m>  defined by <m>q(p) := [p]</m> for all <m>p \in  X</m> is called the<em>quotient map</em>
+                    The function <m>q:X \to  X/\sim</m>  defined by <m>q(p) := [p]</m> for all <m>p \in  X</m> is called the <em>quotient map </em>.
                   </p>
                   
                 </statement>
@@ -23521,7 +23721,7 @@
                 </statement>
               </definition>
 
-              <theorem xml:id="prop-equiv-partition"><title>EPT</title>
+              <theorem xml:id="thm-equiv-partition"><title>EPT</title>
                 <statement>
                   <p>
                     Let <m>X</m> be a set. 
@@ -23542,17 +23742,23 @@
                 </statement>
               </theorem>
 
-              <definition xml:id="def-integers-modulo"><title>The Integers Modulo <m>n</m> (*)</title>
+              <definition xml:id="def-integers-modulo"><title>The Integers Modulo <m>n</m></title>
                 <statement>
                   <p>
-                    
+                    Let <m>n\in\N</m>, and let <m>a, b\in\Z</m>. 
+                    The number <m>a</m> is congruent to the number <m>b</m> modulo <m>n</m>, denoted <m>a \equiv  b (mod n)</m>, if <m>a - b = kn</m> for some <m>k\in\Z</m>.
+                  </p>
+
+                  <p>
+                    For each <m>n ∈ N</m>, we obtain a relation on <m>\Z</m> given by congruence modulo <m>n</m>, which we call <em>the integers modulo</em> <m>n</m>.
                   </p>
                 </statement>
               </definition>
 
             </subsubsection>  
 
-          </subsection>          
+          </subsection> 
+
         </section>
 
         <section xml:id="sec-numbers-and-cardinality"><title>Number Systems, Counting, Cardinality</title>
@@ -23783,12 +23989,6 @@
                         
         </section>
 
-        <section xml:id="sec-matrices"><title>Matrices, Vector Spaces (*)</title>
-
-          <p>Coming soon!</p>
-          
-        </section>
-
         <section xml:id="sec-poset-lattice"><title>Posets, Lattices, Chains (*)</title>
           <p>Coming soon!</p>
           
@@ -23799,30 +23999,6 @@
       <appendix xml:id="app-extras"><title>Extras</title>
 
         <section><title>Group Theory</title>
-
-          <subsection xml:id="subsec-magma"><title>Grouplike Structures</title>
-
-            
-
-            
-
-            <p>
-              Generalized Associative Law
-
-              xy\inv=y\invx\inv
-              
-              Powers of an element
-              x^0=e, x^1=x, x^-1 is inverse 
-              x^n+1=x^nx if n big 0
-              x^n=x^(-n)-1 if n less 0
-
-              Laws of Exponents
-
-              x^mx^n=x^m+n
-              (x^m)^n=x^mn=(x^n)^m
-            </p>
-            
-          </subsection>
 
           <subsection xml:id="subsec-torsion-subgroups"><title>Torsion Subgroups (*)</title>
 
@@ -24352,685 +24528,659 @@
           </subsection>
         </section>
 
-        <section><title>Ring Theory</title>
-
-          <subsection xml:id="subsec-nilradical"><title>Nilpotents and the Nilradical (*)</title>
-            <p>Coming soon!</p>
-          </subsection>
-
-          <subsection xml:id="subsec-group-rings"><title>Group Rings (*)</title>
-            <p>Coming soon!</p>
-          </subsection>
-
-        </section>
 
         <section><title>Module Theory</title>
 
           <subsection xml:id="subsec-determinants"><title>Determinants</title>
 
-          <definition xml:id="def-multilinear-and-alternating">
-            <statement>
-              <p>
-                For any commutative ring <m>R</m> and <m>R</m>-module <m>V</m>, given a function of the form <me>\phi: \overbrace{V \times \cdots \times V}^n \to R</me> we say: 
-                <ol>
-                  <li>
-                    <p>
-                      <m>\phi</m> is <m>R</m>-<em>mutli-linear</em> if, for each <m>i</m>, we have <me>\phi(v_1, \dots, v_{i-1}, v_i + v'_i, v_{i+1}, \dots, v_n) = \phi(v_1, \dots, v_{i-1}, v_i , v_{i+1}, \dots, v_n) +\phi(v_1, \dots, v_{i-1},  v_i', v_{i+1}, \dots, v_n)</me> and <me>\phi(v_1, \dots, v_{i-1}, r v_i, v_{i+1}, \dots, v_n) = r \phi(v_1, \dots, v_{i-1},  v_i, v_{i+1}, \dots, v_n) </me>for all elements <m>v_1, \dots, v_n, v_i'</m> in <m>V</m> and all <m>r \in R</m>. 
-                    </p>
-                  </li>
+            <definition xml:id="def-multilinear-and-alternating">
+              <statement>
+                <p>
+                  For any commutative ring <m>R</m> and <m>R</m>-module <m>V</m>, given a function of the form <me>\phi: \overbrace{V \times \cdots \times V}^n \to R</me> we say: 
+                  <ol>
+                    <li>
+                      <p>
+                        <m>\phi</m> is <m>R</m>-<em>mutli-linear</em> if, for each <m>i</m>, we have <me>\phi(v_1, \dots, v_{i-1}, v_i + v'_i, v_{i+1}, \dots, v_n) = \phi(v_1, \dots, v_{i-1}, v_i , v_{i+1}, \dots, v_n) +\phi(v_1, \dots, v_{i-1},  v_i', v_{i+1}, \dots, v_n)</me> and <me>\phi(v_1, \dots, v_{i-1}, r v_i, v_{i+1}, \dots, v_n) = r \phi(v_1, \dots, v_{i-1},  v_i, v_{i+1}, \dots, v_n) </me>for all elements <m>v_1, \dots, v_n, v_i'</m> in <m>V</m> and all <m>r \in R</m>. 
+                      </p>
+                    </li>
 
-                  <li>
-                    <p>
-                      <m>\phi</m> is <em>alternating</em> if <m>\phi(v_1, \dots, v_n) = 0</m> if <m>v_i = v_j</m> for some <m>i \ne j</m>.
-                    </p>
-                  </li>
-                </ol>
+                    <li>
+                      <p>
+                        <m>\phi</m> is <em>alternating</em> if <m>\phi(v_1, \dots, v_n) = 0</m> if <m>v_i = v_j</m> for some <m>i \ne j</m>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+            </definition>
+
+            <example xml:id="exe-multilinear-maps-when-n1"><title>Multilinear Maps when <m>n=1</m></title>
+
+              <p>
+                When <m>n=1</m>, a multi-linear map is the same thing as an <m>R</m>-module homomorphism.(The alternating condition is vacuous in this case.)
               </p>
-            </statement>
-          </definition>
 
-          <example xml:id="exe-multilinear-maps-when-n1"><title>Multilinear Maps when <m>n=1</m></title>
+            </example>
 
-            <p>
-              When <m>n=1</m>, a multi-linear map is the same thing as an <m>R</m>-module homomorphism.(The alternating condition is vacuous in this case.)
-            </p>
+            <example xml:id="exe-r-bilinear-maps-n2"><title><m>R</m>-Bilinear Maps (<m>n=2</m>)</title>
 
-          </example>
-
-          <example xml:id="exe-r-bilinear-maps-n2"><title><m>R</m>-Bilinear Maps (<m>n=2</m>)</title>
-
-            <p>
-              When <m>n= 2</m>, instead of <q><m>R</m>-multilinear</q> we say<q><m>R</m>-bilinear'</q>. If <m>\phi: V \times V \to R</m> is <m>R</m>-bilinear then 
-                <me>
-                  \phi(v+w, u+m) = \phi(v,u) + \phi(v,m) + \phi(w,u)+\phi(w,m).
-                </me> 
-                Also <m>\phi(rv,w) = r\phi(v,w) = \phi(v, rw)</m>. For any example of this, take <m>V = R^m</m>. Then the <q>dot product</q> <m>\phi:V \times V \to R</m> defined by <m>\phi((a_1, \dots, a_m)^\tau, (b_1, \dots, b_m)^\tau) = \sum_i a_i b_i</m> is <m>R</m>-bilinear. But the dot product isn't alternating.
-            </p>
-            
-          </example>
-
-          <example xml:id="exe-determinant-formula-using-bilinear-map"><title>Determinant Formula Using Bilinear Map</title>
-
-            <p>
-              For <m>n =2</m> and <m>V = R^2</m>, <m>\phi: V \times V \to R</m> defined by <me>\phi(\begin{bmatrix} x \\ y \end{bmatrix}, \begin{bmatrix} z \\ w \end{bmatrix}) = xw - yz</me>is both <m>R</m>-bilinear and alternating. This is of course the familiar determinant formula.
-            </p>
-          </example>
-
-          <remark>
-            <p>
-              The multi-linearity property of a function <m>\phi: V^{\times n} \to R</m> can equivalently be stated as follows: If we fixed <m>n-1</m> of the <m>n</m> inputs and let the remaining input vary, then the resulting function is an <m>R</m>-module homomorphism. More precisely: <m>\phi</m> is <m>R</m>-multi-linear if and only if for each <m>i</m> and for each choice of elements <m>v_1, \dots, v_{i-1}, v_{i+1}, \dots, v_n</m> in <m>V</m>, the function <me>
-              g: V \to R
-              </me> defined by <m>g(w) = \phi(v_1, \dots, v_{i-1}, w, v_{i+1}, \dots, v_n)</m> is a <m>R</m>-module homomorphism.
-            </p>
-          </remark>
-
-          <lemma xml:id="lem-multilinear-maps-and-permutations"><title>Multilinear Maps and Permutations</title>
-
-            <statement>
               <p>
-                Assume <m>\phi: V^{\times n} \to R</m> is <m>R</m>-multilinear and alternating. Then for any permutation <m>\tau \in S_n</m> and <m>v_1, \dots, v_n \in V</m>, we have <me>\phi(v_1, \dots, v_n) = \sign(\tau) \phi(v_{\tau(1)}, \dots, v_{\tau(n)})</me>where <m>\sign(\tau)</m> is the sign of the permutation <m>\tau</m>.
+                When <m>n= 2</m>, instead of <q><m>R</m>-multilinear</q> we say<q><m>R</m>-bilinear'</q>. If <m>\phi: V \times V \to R</m> is <m>R</m>-bilinear then 
+                  <me>
+                    \phi(v+w, u+m) = \phi(v,u) + \phi(v,m) + \phi(w,u)+\phi(w,m).
+                  </me> 
+                  Also <m>\phi(rv,w) = r\phi(v,w) = \phi(v, rw)</m>. For any example of this, take <m>V = R^m</m>. Then the <q>dot product</q> <m>\phi:V \times V \to R</m> defined by <m>\phi((a_1, \dots, a_m)^\tau, (b_1, \dots, b_m)^\tau) = \sum_i a_i b_i</m> is <m>R</m>-bilinear. But the dot product isn't alternating.
               </p>
-            </statement>
+              
+            </example>
 
-            <proof>
+            <example xml:id="exe-determinant-formula-using-bilinear-map"><title>Determinant Formula Using Bilinear Map</title>
+
               <p>
-                Let us first prove this in the case when <m>n = 2</m> and <m>\tau</m> is the only non-trivial element of <m>S_2</m>. Say<me>
+                For <m>n =2</m> and <m>V = R^2</m>, <m>\phi: V \times V \to R</m> defined by <me>\phi(\begin{bmatrix} x \\ y \end{bmatrix}, \begin{bmatrix} z \\ w \end{bmatrix}) = xw - yz</me>is both <m>R</m>-bilinear and alternating. This is of course the familiar determinant formula.
+              </p>
+            </example>
+
+            <remark>
+              <p>
+                The multi-linearity property of a function <m>\phi: V^{\times n} \to R</m> can equivalently be stated as follows: If we fixed <m>n-1</m> of the <m>n</m> inputs and let the remaining input vary, then the resulting function is an <m>R</m>-module homomorphism. More precisely: <m>\phi</m> is <m>R</m>-multi-linear if and only if for each <m>i</m> and for each choice of elements <m>v_1, \dots, v_{i-1}, v_{i+1}, \dots, v_n</m> in <m>V</m>, the function <me>
+                g: V \to R
+                </me> defined by <m>g(w) = \phi(v_1, \dots, v_{i-1}, w, v_{i+1}, \dots, v_n)</m> is a <m>R</m>-module homomorphism.
+              </p>
+            </remark>
+
+            <lemma xml:id="lem-multilinear-maps-and-permutations"><title>Multilinear Maps and Permutations</title>
+
+              <statement>
+                <p>
+                  Assume <m>\phi: V^{\times n} \to R</m> is <m>R</m>-multilinear and alternating. Then for any permutation <m>\tau \in S_n</m> and <m>v_1, \dots, v_n \in V</m>, we have <me>\phi(v_1, \dots, v_n) = \sign(\tau) \phi(v_{\tau(1)}, \dots, v_{\tau(n)})</me>where <m>\sign(\tau)</m> is the sign of the permutation <m>\tau</m>.
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  Let us first prove this in the case when <m>n = 2</m> and <m>\tau</m> is the only non-trivial element of <m>S_2</m>. Say<me>
+                    \psi: V^{\times 2} \to R
+                  </me>is <m>R</m>-multi-linear (<m>R</m>-bilinear) and alternating. The goal is to prove<me>
+                  \psi(v,w) = -\psi(w,v)</me>for any <m>v,w</m>.
+                </p>
+    
+                <p>
+                              We have <me>\psi(v+w, v+w) = 0</me>on the one hand and <me>\psi(v+w, v+w) = \psi(v, v+w) + \psi(w, v+w) = \psi(v,v) + \psi(v, w) + \psi(w,v) + \psi(w,w) = \psi(v, w) + \psi(w,v)  </me>on the other hand. It follows that <me>
+                  \psi(v, w) + \psi(w,v)  = 0
+                  </me>which proves the Lemma in this case.
+                </p>
+    
+                <p>
+                  Now let <m>n</m> be arbitrary and <m>\tau = (i \, j)</m> for some <m>1 \leq i &lt; j \leq n</m>. In this case we need to show<me>
+                  \phi(v_1, \dots, v_n) = - \phi(v_1, \dots, v_{i-1}, v_{j}, v_{i+1}, v_{i+2}, \dots, v_{j-1}, v_i, v_{j+1}, \dots, v_n)
+                  </me>for all <m>v_1, \dots, v_n \in V</m>. Fix <m>n-2</m> elements <m>v_1, \dots, v_{i-1}, v_{i+1}, \dots, v_{j-1}, v_{j+1}, \dots, v_n</m> and define <me>
                   \psi: V^{\times 2} \to R
-                </me>is <m>R</m>-multi-linear (<m>R</m>-bilinear) and alternating. The goal is to prove<me>
-                \psi(v,w) = -\psi(w,v)</me>for any <m>v,w</m>.
-              </p>
-  
-              <p>
-                            We have <me>\psi(v+w, v+w) = 0</me>on the one hand and <me>\psi(v+w, v+w) = \psi(v, v+w) + \psi(w, v+w) = \psi(v,v) + \psi(v, w) + \psi(w,v) + \psi(w,w) = \psi(v, w) + \psi(w,v)  </me>on the other hand. It follows that <me>
-                \psi(v, w) + \psi(w,v)  = 0
-                </me>which proves the Lemma in this case.
-              </p>
-  
-              <p>
-                Now let <m>n</m> be arbitrary and <m>\tau = (i \, j)</m> for some <m>1 \leq i &lt; j \leq n</m>. In this case we need to show<me>
-                \phi(v_1, \dots, v_n) = - \phi(v_1, \dots, v_{i-1}, v_{j}, v_{i+1}, v_{i+2}, \dots, v_{j-1}, v_i, v_{j+1}, \dots, v_n)
-                </me>for all <m>v_1, \dots, v_n \in V</m>. Fix <m>n-2</m> elements <m>v_1, \dots, v_{i-1}, v_{i+1}, \dots, v_{j-1}, v_{j+1}, \dots, v_n</m> and define <me>
-                \psi: V^{\times 2} \to R
-                </me>by<me>
-              \psi(v,w) = \phi(v_1, \dots, v_{i-1}, v, v_{i+1}, \dots, v_{j-1}, w,  v_{j+1}, \dots, v_n)
-                </me>for any <m>v,w \in V</m>. With this notation the goal is to show <me>\psi(v,w) = -\psi(w,v)</me>Since <m>\phi</m> is <m>R</m>-multi-linear and alternating, <m>\psi: V \times V\to R</m> is <m>R</m>-bilinear and alternating, and so the case already proven gives the result.
-              </p>
-  
-              <p>
-                Finally let <m>n</m> and <m>\tau</m> be arbitrary. Then <m>\tau</m> is a product of transpositions — say <m>\tau = \tau_r \cdots \tau_1</m> with each <m>\tau_i</m> a transposition. Proceed by induction on <m>r</m>. The previous case establishes the result when <m>r = 1</m>. If <m>r \geq 2</m>, then using the previous case gives <me>
-                \psi(v_\tau(1), \dots, v_\tau(n)) = -\psi(v_\tau'(1), \dots, v_\tau'(n))
-                </me> where <m>\tau' = \tau_{r-1} \cdots \tau_1</m> and by induction <m>\psi(v_\tau'(1), \dots, v_\tau'(n)) = (-1)^{r-1}\psi(v_1, \dots, v_n)</m>. Hence <me>
-                \psi(v_\tau(1), \dots, v_\tau(n)) = (-1)^{r}\psi(v_1, \dots, v_n)
-                </me> which proves the result.
-              </p>
-            </proof>
-          </lemma>
+                  </me>by<me>
+                \psi(v,w) = \phi(v_1, \dots, v_{i-1}, v, v_{i+1}, \dots, v_{j-1}, w,  v_{j+1}, \dots, v_n)
+                  </me>for any <m>v,w \in V</m>. With this notation the goal is to show <me>\psi(v,w) = -\psi(w,v)</me>Since <m>\phi</m> is <m>R</m>-multi-linear and alternating, <m>\psi: V \times V\to R</m> is <m>R</m>-bilinear and alternating, and so the case already proven gives the result.
+                </p>
+    
+                <p>
+                  Finally let <m>n</m> and <m>\tau</m> be arbitrary. Then <m>\tau</m> is a product of transpositions — say <m>\tau = \tau_r \cdots \tau_1</m> with each <m>\tau_i</m> a transposition. Proceed by induction on <m>r</m>. The previous case establishes the result when <m>r = 1</m>. If <m>r \geq 2</m>, then using the previous case gives <me>
+                  \psi(v_\tau(1), \dots, v_\tau(n)) = -\psi(v_\tau'(1), \dots, v_\tau'(n))
+                  </me> where <m>\tau' = \tau_{r-1} \cdots \tau_1</m> and by induction <m>\psi(v_\tau'(1), \dots, v_\tau'(n)) = (-1)^{r-1}\psi(v_1, \dots, v_n)</m>. Hence <me>
+                  \psi(v_\tau(1), \dots, v_\tau(n)) = (-1)^{r}\psi(v_1, \dots, v_n)
+                  </me> which proves the result.
+                </p>
+              </proof>
+            </lemma>
 
-          <definition xml:id="def-determinant-function"><title>Determinant Function</title>
-            <statement>
+            <definition xml:id="def-determinant-function"><title>Determinant Function</title>
+              <statement>
+                <p>
+                  Define the function <me>\det: \Mat_{n \times n} (R) \to R</me> by <me>\det(A) = \sum_{\s \in S_n} \sign(\s) \prod_{i=1}^n a_{\s(i), i}</me>where <m>S_n</m> is the group of all permutations of <m>\{1, \dots, n\}</m> and <m>\sign(\s)</m> refers to the sign of a permutation.
+                </p>
+              </statement>
+            </definition>
+        
+            <example xml:id="exe-determinant-when-n2"><title>Determinant When <m>n=2</m></title>
+
               <p>
-                Define the function <me>\det: \Mat_{n \times n} (R) \to R</me> by <me>\det(A) = \sum_{\s \in S_n} \sign(\s) \prod_{i=1}^n a_{\s(i), i}</me>where <m>S_n</m> is the group of all permutations of <m>\{1, \dots, n\}</m> and <m>\sign(\s)</m> refers to the sign of a permutation.
+                For <m>n = 2</m> we have <me>\det(\begin{bmatrix} a_{1,1} &amp; a_{1,2} \\ a_{2,1} &amp; a_{2,2} \end{bmatrix}) = a_{1,1} a_{2,2} - a_{2,1} a_{1,2}.</me>
               </p>
-            </statement>
-          </definition>
+            </example>
+
+            <example xml:id="exe-determinant-of-upper-triangular-matrix"><title>Determinant of Upper Triangular Matrix</title>
+
+              <p>
+                If <m>A</m> is upper triangular, then <m>\det(A) = \prod_i a_{i,i}</m>. For note that for such a matrix the only non-zero terms in the formula for <m>\det(A)</m> occur when <m>\s(i) \leq i</m> for all <m>i</m>, and this can only happen when <m>\s = \id</m>. Similarly, if <m>A</m> is lower triangular, then <m>\det(A) = \prod_i a_{i,i}</m>.
+              </p>
+    
+              <p>
+                In particular, if <m>E</m> is a Type I elementary matrix, then <m>\det(E) = 1</m> and if <m>E</m> is a type II elementary matrix with scalar <m>u \ne 0</m>, then <m>\det(E) = u</m>. We'll look at the determinants of Type III elementary matrices later.
+              </p>
+    
+              <p>
+                An even more special case is <m>\det(I_n) = 1</m>.
+              </p>
+            </example>
+
+            <example xml:id="exe-transpose-preserves-det"><title>Transpose Preserves Det</title>
+
+              <p>
+                Prove <m>\det(A) = \det(A^\tau)</m> where <m>\tau</m> denotes transpose.
+              </p>
+            </example>
+            
+            <remark>
+              <p>
+                Let us write elements of <m>\Mat_{n \times n}(R)</m> as <m>n</m>-tuples of columns vectors; that is, we identify <m>\Mat_{n \times n}(R)</m> with <m>\overbrace{R^n \times \cdots \times R^n}^n</m> by identifying a matrix with the <m>n</m>-tuple of its columns. Then <m>\det</m> is a function of the form <me>
+                \det: \overbrace{R^n \times \cdots \times R^n}^n \to R
+                </me> where for <m>v_1, \dots, v_n \in R^n</m>, we let <m>\det(v_1, \dots, v_n)</m> be the determinant of the <m>n \times n</m> matrix whose columns are <m>v_1, \dots, v_n</m>.
+              </p>
+            </remark>
+
+            <theorem xml:id="thm-uniqueness-of-determinant"><title>Uniqueness of Determinant</title>
+
+              <statement>
+                <p>
+                  For each fix positive integer <m>n</m> and non-zero commutative ring <m>R</m>, the determinant function is the unique function of the form <me>\phi: \overbrace{R^n \times \cdots \times R^n}^n \to R</me>such that 
+                  <ol>
+                    <li>
+                      <p>
+                        <m>\phi</m> is <m>R</m>-multilinear, 
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        <m>\phi</m> is alternating, and 
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        <m>\phi(I_n) =1</m> (i.e., <m>\phi(e_1, \dots, e_n) = 1</m> where <m>e_i</m> is the <m>i</m>-th standard column vector).
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  We start by proving that <m>\det</m> has these properties.
+                </p>
+    
+                <p>
+                  Let <m>v_1, \dots, v_n</m> form the columns of a matrix <m>A</m>. (I.e, the <m>s</m>-th entry of <m>v_t</m> is <m>a_{s,t}</m>.) We have <me>
+                  \begin{aligned}
+                  \det(v_1, \dots, v_{i-1}, r v_i + v'_i, v_{i+1}, \dots, v_n) 
+                  &amp; =  \sum_{\s} \sign(\s) \prod_{j\ne i} a_{\s(j), j} \cdot (r a_{\s(i), i} + a'_{\s(i), i})\\
+                  &amp; =  r \sum_{\s} \sign(\s) \prod_{j\ne i} a_{\s(j), j} \cdot (a_{\s(i), i})  \\
+                  &amp; + \sum_{\s} \sign(\s) \prod_{j\ne i} a_{\s(j), j} \cdot (a'_{\s(i), i})  \\
+                  &amp; = r \det(v_1, \dots, v_{i-1}, v_i , v_{i+1}, \dots, v_n) +
+                  \det(v_1, \dots, v_{i-1},  v_i', v_{i+1}, \dots, v_n) \\
+                  \end{aligned}
+                  </me> and this proves <m>R</m>-multi-linearity.
+                </p>
+    
+                <p>
+                  For the alternating property, for notational simplicity, let us assume that <m>v_1 = v_2</m> (i.e., the first two columns of the matrix are equal). (The proof of the general case is essentially the same.) Note that<me>
+                  \det(A) = \sum_{(i,j, g)} \sign(i,j,g) a_{i,1} a_{j,2} a_{g(3), 3} a_{g(4), 4} \cdots a_{g(n), n}
+                  </me>where the sum ranges over triples <m>(i,j,g)</m> where <m>i \ne j</m> and <m>g</m> is an injective function from <m>\{3, \dots, n\}</m> to <m>\{1, \dots, n\} \setminus \{i,j\}</m> and by <m>\sign(i,j,g)</m> we mean the sign of the permutation sending <m>1</m> to <m>i</m>, <m>2</m> to <m>j</m> and <m>s</m> to <m>g(s)</m> for all other <m>s</m>. For each <m>(i,j,g)</m>, we have <m>\sign(i,j,g) = -\sign(j,i,g)</m>, since the corresponding permutations differ by a transposition. Since <m>a_{i,1} = a_{i,2}</m> and <m>a_{j,1} = a_{j,2}</m>, it follows that the terms in the formula for <m>\det(A)</m> cancel in pairs to give <m>0</m>.
+                </p>
+    
+                <p>
+                  The property <m>\det(I_n) = 1</m> follows from the formula. (See Example .)
+                </p>
+    
+                <p>
+                  Let us now prove the uniqueness part of the Theorem:
+                </p>
+    
+                <p>
+                  Let <m>\phi</m> be any function with the three properties stated in the Theorem. Let <m>A = (a_{i,j})</m> be any square matrix with columns <m>v_1, \dots, v_n</m>. Note that <m>v_j = \sum_i a_{i,j} e_i</m> where <m>e_i</m> is the <m>i</m>-th standard basis (column) vector. Using the <m>R</m>-multi-linearity property repeatedly we have <me>
+                  \begin{aligned}
+                  \phi(A) &amp; = \phi(\sum_{i_1} a_{i_1,1} e_{i_1},  \sum_{i_2} a_{i_2,2} e_{i_2}, \cdots, \sum_{i_n} a_{i_n,n} e_{i_n}) \\
+                  &amp; = \sum_{i_1} a_{i_1,1} \phi(e_{i_1},  \sum_{i_2} a_{i_2,2} e_{i_2}, \cdots, \sum_{i_n} a_{i_n,n} e_{i_n}) \\
+                  &amp; = \sum_{i_1}a_{i_1,1} \sum_{i_2} a_{i_2,2} \phi(e_{i_1},   e_{i_2}, \cdots, \sum_{i_n} a_{i_n,n} e_{i_n}) \\
+                  &amp; = \vdots \\
+                  &amp; = \sum_{ i_1, \dots, i_n } a_{i_1, 1} \cdots a_{i_n,n} \phi(e_{i_1}, \dots, e_{i_n}) \\
+                  \end{aligned}
+                  </me> where each of <m>i_1, \dots, i_n</m> ranges from <m>1</m> to <m>n</m>. By the alternating property <m>\phi(e_{i_1}, \dots, e_{i_n}) = 0</m> unless all the <m>i_1, \dots, i_n</m> are distinct. If they are distinct, then by Lemma  we have <me>
+                  \phi(e_{i_1}, \dots, e_{i_n}) = \sign(\s) \phi(e_1, \dots, e_n)
+                  </me> where <m>\s</m> is the permutation defined as <m>\s(t) = i_t</m>. Finally, recall <m>\phi(e_1, \dots, e_n) = 1</m> by assumption. Putting all of this together gives<me>
+                  \phi(A) = \sum_{\text{ distinct  $i_1, \dots, i_n$}} \sign(\text{the permutation $t \mapsto i_t$}) a_{i_1, 1} \cdots a_{i_n,n}.
+                  </me>This is just a re-writing of the formula for <m>\det</m>; so <m>\phi = \det</m>.
+                </p>
+              </proof>
+            </theorem>
+
+            <proposition xml:id="prop-computing-determinant-of-square-matrix">
+              <statement>
+                <p>
+                  Let <m>R</m> be any non-zero commutative ring. Let <m>A</m> be a square matrix and let <m>B</m> be a matrix obtained form <m>A</m> by a single elementary column operation:
+                  <ol>
+                    <li>
+                      <p>
+                        If the operation is of type I, <m>\det(B) = \det(A)</m>. 
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        If the operation is of type II, given by multiplying a column of <m>A</m> by a unit <m>u</m>, then <m>\det(B)=u\det(A)</m>. 
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        If the operation is of type III, <m>\det(B)=-\det(A)</m>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+              
+              <proof>
+                <p>
+                  The first claim follows from multi-linearity and alternating properties: For notational simplicity say <m>A = (v_1, v_2, \dots)</m> and <m>B = (v_1 + rv_2, v_2, \dots)</m>. Then<me>
+                  \det(B) = \det(v_1, v_2, \dots) + r \det(v_2, v_2, \dots) = \det(A) + r \cdot 0 = \det(A)
+                  </me>The second is immediate from (the second part of) <m>R</m>-multi-linearity. The last is a special case of Lemma .
+                </p>
+              </proof>
+            </proposition>
+
+            <remark>
+              <p>
+                The previous Lemma gives an efficient method of computing the determinant of a square matrix: Apply Gaussian reduction to transform such a matrix <m>A</m> to <m>I_n</m>, keeping track of the operations used. Since <m>\det(I_n) = 1</m>, we can deduce what the <m>\det(A)</m> is in this way, using the Lemma.
+              </p>
+    
+              <p>
+                The number of type I (and type II) operations needed to transform <m>A</m> to <m>I_n</m> is at most about <me>2(n-1) + 2(n-2) + \cdots \approx n^2</me>Each operation involves at most at most <m>n-1</m> multiplications and additions. All total, the number of operations needed to compute the determinant of an <m>n \times n</m> matrix is a polynomial function of <m>n</m> (I think it is cubic, in fact). Observe that the determinant formula involves <m>n!</m> terms each with <m>n</m> products, which is certainly exponential in <m>n</m>.
+              </p>
+    
+              <p>
+                Thus, Gaussian elimination, among other things, gives a polynomial time solution to a computation that at first blush involves an exponential number of calculations.
+              </p>
+    
+              <p>
+                The “permanant'' of a square matrix is given by the same formula but without the signs. It too involves an exponential (in <m>n</m>) number of calculations. Unlike the determinant, there is no known polynomial time algorithm to compute it. Indeed, if one exists then <m>P = NP</m>! This is a Theorem of Leslie Valiant.
+              </p>
+            </remark>
+
+            <corollary xml:id="cor-det-splits-across-elementary-multiplication">
+              <statement>
+                <p>
+                  For any commutative ring <m>R</m>, if <m>A</m> is an <m>n \times n</m> matrix and <m>E</m> is an <m>n \times n</m> elementary matrix, then <me>\det(AE) = \det(A) \det(E)</me>
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  This follows from the Proposition and the fact that <m>AE</m> is the result of doing the corresponding column operation on <m>A</m> (see Lemma ), since <me>
+                  \det(E)  = \begin{cases}
+                    1 &amp; \text{if $E$ is elementary of type I} \\
+                    u &amp; \text{if $E$ is elementary of type II with a unit $u$ on the diagonal} \\
+                    -1 &amp; \text{if $E$ is elementary of type III.} \\
+                  \end{cases}</me>These formulas follow from the formula for the determinant of an upper or lower triangular matrix — see Example .
+                </p>
+              </proof>
+            </corollary>
+
+            <corollary xml:id="cor-det-not-0-iff-matrix-invertible"><title></title>
+              <statement>
+                <p>
+                  For <m>R = F</m> a field, we have <m>\det(A) \ne 0</m> if and only if <m>A</m> is invertible.
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  If <m>A</m> is not invertible, then the column space of <m>A</m> is a proper subspace of <m>F^n</m> and hence the columns of <m>A</m> must be linearly dependent. Say the <m>i\th</m> column is a linear combination of the rest: <m>v_i = \sum_{j \ne i} c_j v_j</m>. Then <me>
+                  \det(v_1, \dots, v_n) = \sum_{j \ne i} c_j \det(\text{a matrix with the $i$-th and $j$-th columns equal}) = 0.
+                  </me>If <m>A</m> is invertible, then by Corollary  <m>A</m> can be obtained from <m>I_n</m> via a sequence of elementary column operations. The result thus follows from Proposition  and the fact that <m>\det(I_n) = 1</m>.
+                </p>
+              </proof>
+            </corollary>
+
+            <remark>
+              <p>
+                For an arbitrary commutative ring <m>R</m>, the rule is: a square matrix <m>A</m> is invertible if and only if <m>\det(A)</m> is a unit of <m>R</m>. We'll give a proof later.
+              </p>
+            </remark>
+
+            <theorem xml:id="thm-det-splits-across-multiplication-fields"><title>Det Splits Across Multiplication: Fields</title>
+
+              <statement>
+                <p>
+                  For a field <m>F</m> and matrices <m>A, B \in \Mat_{n \times n}(F)</m> we have <me>\det(AB) = \det(A)\det(B).</me> 
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  If <m>A</m> is not invertible, neither is <m>AB</m>, since <m>\im(AB) \subseteq \im(A)</m>, and if <m>B</m> is not invertible, neither is is <m>AB</m>, since <m>\ker(AB) \supseteq \ker(A)</m>. So, by Corollary , if either <m>A</m> or <m>B</m> is not invertible, both sides of the equation are <m>0</m>.
+                </p>
       
-          <example xml:id="exe-determinant-when-n2"><title>Determinant When <m>n=2</m></title>
+                <p>
+                  Assume now that <m>A</m> and <m>B</m> are both invertible. Then by Corollary  we have <me>
+                  A = E_1 \cdots E_n</me>and<me>
+                  B = F_1 \cdots F_m
+                  </me>and hence <me>
+                  AB = E_1 \cdots E_n F_1 \cdots F_m
+                  </me>where the <m>E_i</m>'s and <m>F_j</m>'s are elementary matrices. Applying Corollary  repeatedly gives <me>\det(AB) = \det(E_1 \cdots E_n F_1 \cdots F_{m-1}) \det(F_m) = \cdots= \det(E_1) \cdots \det(E_n) \det(F_1) \cdots \det(F_m)</me> and similarly <me>
+                  \det(A) \det(B) = \left(\det(E_1) \cdots \det(E_n)\right) \left( \det(F_1) \cdots \det(F_m)\right).
+                  </me>
+                </p>
+              </proof>
+            </theorem>
 
-            <p>
-              For <m>n = 2</m> we have <me>\det(\begin{bmatrix} a_{1,1} &amp; a_{1,2} \\ a_{2,1} &amp; a_{2,2} \end{bmatrix}) = a_{1,1} a_{2,2} - a_{2,1} a_{1,2}.</me>
-            </p>
-          </example>
+            <lemma xml:id="lem-det-function-is-natural"><title>Det Function is Natural</title>
 
-          <example xml:id="exe-determinant-of-upper-triangular-matrix"><title>Determinant of Upper Triangular Matrix</title>
+              <statement>
+                <p>
+                  The determinant function <m>\det</m> is “natural": If <m>g: R \to S</m> is a homomorphism of non-zero commutative rings and <m>A \in \Mat_{n \times n}(R)</m>, then <me>g \det(A) = \det(g(A))</me> where <m>g(A)</m> denotes the matrix obtained by applying <m>g</m> to the entries of <m>A</m>.
+                </p>
+              </statement>
 
-            <p>
-              If <m>A</m> is upper triangular, then <m>\det(A) = \prod_i a_{i,i}</m>. For note that for such a matrix the only non-zero terms in the formula for <m>\det(A)</m> occur when <m>\s(i) \leq i</m> for all <m>i</m>, and this can only happen when <m>\s = \id</m>. Similarly, if <m>A</m> is lower triangular, then <m>\det(A) = \prod_i a_{i,i}</m>.
-            </p>
-  
-            <p>
-              In particular, if <m>E</m> is a Type I elementary matrix, then <m>\det(E) = 1</m> and if <m>E</m> is a type II elementary matrix with scalar <m>u \ne 0</m>, then <m>\det(E) = u</m>. We'll look at the determinants of Type III elementary matrices later.
-            </p>
-  
-            <p>
-              An even more special case is <m>\det(I_n) = 1</m>.
-            </p>
-          </example>
+              <proof>
+                <p>
+                  This follows from the formula for <m>\det</m>, since <m>g</m> commutes with sums and products.
+                </p>
+              </proof>
+            </lemma>
 
-          <example xml:id="exe-transpose-preserves-det"><title>Transpose Preserves Det</title>
+            <theorem xml:id="thm-det-splits-across-multiplication-commutative-ring"><title>Det Splits Across Multiplication: Commutative Ring</title>
+              <statement>
+                <p>
+                  For any non-zero commutative ring <m>R</m> and matrices <m>A, B \in \Mat_{n \times n}(R)</m>, we have <me>\det(AB) = \det(A) \det(B) \in R. </me>
+                </p>
+              </statement>
 
-            <p>
-              Prove <m>\det(A) = \det(A^\tau)</m> where <m>\tau</m> denotes transpose.
-            </p>
-          </example>
-          
-          <remark>
-            <p>
-              Let us write elements of <m>\Mat_{n \times n}(R)</m> as <m>n</m>-tuples of columns vectors; that is, we identify <m>\Mat_{n \times n}(R)</m> with <m>\overbrace{R^n \times \cdots \times R^n}^n</m> by identifying a matrix with the <m>n</m>-tuple of its columns. Then <m>\det</m> is a function of the form <me>
-              \det: \overbrace{R^n \times \cdots \times R^n}^n \to R
-              </me> where for <m>v_1, \dots, v_n \in R^n</m>, we let <m>\det(v_1, \dots, v_n)</m> be the determinant of the <m>n \times n</m> matrix whose columns are <m>v_1, \dots, v_n</m>.
-            </p>
-          </remark>
-
-          <theorem xml:id="thm-uniqueness-of-determinant"><title>Uniqueness of Determinant</title>
-
-            <statement>
-              <p>
-                For each fix positive integer <m>n</m> and non-zero commutative ring <m>R</m>, the determinant function is the unique function of the form <me>\phi: \overbrace{R^n \times \cdots \times R^n}^n \to R</me>such that 
-                <ol>
-                  <li>
-                    <p>
-                      <m>\phi</m> is <m>R</m>-multilinear, 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      <m>\phi</m> is alternating, and 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      <m>\phi(I_n) =1</m> (i.e., <m>\phi(e_1, \dots, e_n) = 1</m> where <m>e_i</m> is the <m>i</m>-th standard column vector).
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                We start by proving that <m>\det</m> has these properties.
-              </p>
-  
-              <p>
-                Let <m>v_1, \dots, v_n</m> form the columns of a matrix <m>A</m>. (I.e, the <m>s</m>-th entry of <m>v_t</m> is <m>a_{s,t}</m>.) We have <me>
+              <proof>
+                <p>
+                  We have already proven that this holds when <m>R</m> is a field.
+                </p>
+    
+                <p>
+                  We next show that it holds whenever <m>R</m> is an integral domain. In this case, <m>R</m> is a subring of a field <m>F</m> (namely, the field of fractions of <m>R</m>). So, we know that the equation <m>\det(AB) = \det(A) \det(B)</m> holds in <m>F</m> if we interpret <m>A</m> and <m>B</m> as belonging to <m>\Mat_{n \times n}(F)</m>. But the value of <m>\det</m> is the same if we interpret these matrices as having entries in <m>R</m> or in <m>F</m>. So <m>\det(AB) = \det(A) \det(B)</m> holds in <m>R</m>.
+                </p>
+    
+                <p>
+                  We finally prove that the Theorem for any non-zero commutative ring <m>R</m> by building on the fact that it holds for domains. We do so by contructing a ring homomorphism <m>g: S \to R</m> and matrices <m>X</m> and <m>Y</m> in <m>\Mat_{n \times n}(S)</m> such that <m>S</m> is an integral domain, <m>g(X) = A</m> and <m>g(Y) = B</m>. Granting such a <m>S, g, X</m> and <m>Y</m> exist, the result follows from the naturality of <m>\det</m> (Lemma ). In detail, we know <m>\det(XY) = \det(X) \det(Y)</m>, since <m>S</m> is a domain. Since the rule for multiplying matrices involves only sums and products of ring elements, we have <m>g(XY) = g(X)g(Y)</m>. So<me>
                 \begin{aligned}
-                \det(v_1, \dots, v_{i-1}, r v_i + v'_i, v_{i+1}, \dots, v_n) 
-                &amp; =  \sum_{\s} \sign(\s) \prod_{j\ne i} a_{\s(j), j} \cdot (r a_{\s(i), i} + a'_{\s(i), i})\\
-                &amp; =  r \sum_{\s} \sign(\s) \prod_{j\ne i} a_{\s(j), j} \cdot (a_{\s(i), i})  \\
-                &amp; + \sum_{\s} \sign(\s) \prod_{j\ne i} a_{\s(j), j} \cdot (a'_{\s(i), i})  \\
-                &amp; = r \det(v_1, \dots, v_{i-1}, v_i , v_{i+1}, \dots, v_n) +
-                \det(v_1, \dots, v_{i-1},  v_i', v_{i+1}, \dots, v_n) \\
-                \end{aligned}
-                </me> and this proves <m>R</m>-multi-linearity.
-              </p>
-  
-              <p>
-                For the alternating property, for notational simplicity, let us assume that <m>v_1 = v_2</m> (i.e., the first two columns of the matrix are equal). (The proof of the general case is essentially the same.) Note that<me>
-                \det(A) = \sum_{(i,j, g)} \sign(i,j,g) a_{i,1} a_{j,2} a_{g(3), 3} a_{g(4), 4} \cdots a_{g(n), n}
-                </me>where the sum ranges over triples <m>(i,j,g)</m> where <m>i \ne j</m> and <m>g</m> is an injective function from <m>\{3, \dots, n\}</m> to <m>\{1, \dots, n\} \setminus \{i,j\}</m> and by <m>\sign(i,j,g)</m> we mean the sign of the permutation sending <m>1</m> to <m>i</m>, <m>2</m> to <m>j</m> and <m>s</m> to <m>g(s)</m> for all other <m>s</m>. For each <m>(i,j,g)</m>, we have <m>\sign(i,j,g) = -\sign(j,i,g)</m>, since the corresponding permutations differ by a transposition. Since <m>a_{i,1} = a_{i,2}</m> and <m>a_{j,1} = a_{j,2}</m>, it follows that the terms in the formula for <m>\det(A)</m> cancel in pairs to give <m>0</m>.
-              </p>
-  
-              <p>
-                The property <m>\det(I_n) = 1</m> follows from the formula. (See Example .)
-              </p>
-  
-              <p>
-                Let us now prove the uniqueness part of the Theorem:
-              </p>
-  
-              <p>
-                Let <m>\phi</m> be any function with the three properties stated in the Theorem. Let <m>A = (a_{i,j})</m> be any square matrix with columns <m>v_1, \dots, v_n</m>. Note that <m>v_j = \sum_i a_{i,j} e_i</m> where <m>e_i</m> is the <m>i</m>-th standard basis (column) vector. Using the <m>R</m>-multi-linearity property repeatedly we have <me>
-                \begin{aligned}
-                \phi(A) &amp; = \phi(\sum_{i_1} a_{i_1,1} e_{i_1},  \sum_{i_2} a_{i_2,2} e_{i_2}, \cdots, \sum_{i_n} a_{i_n,n} e_{i_n}) \\
-                &amp; = \sum_{i_1} a_{i_1,1} \phi(e_{i_1},  \sum_{i_2} a_{i_2,2} e_{i_2}, \cdots, \sum_{i_n} a_{i_n,n} e_{i_n}) \\
-                &amp; = \sum_{i_1}a_{i_1,1} \sum_{i_2} a_{i_2,2} \phi(e_{i_1},   e_{i_2}, \cdots, \sum_{i_n} a_{i_n,n} e_{i_n}) \\
-                &amp; = \vdots \\
-                &amp; = \sum_{ i_1, \dots, i_n } a_{i_1, 1} \cdots a_{i_n,n} \phi(e_{i_1}, \dots, e_{i_n}) \\
-                \end{aligned}
-                </me> where each of <m>i_1, \dots, i_n</m> ranges from <m>1</m> to <m>n</m>. By the alternating property <m>\phi(e_{i_1}, \dots, e_{i_n}) = 0</m> unless all the <m>i_1, \dots, i_n</m> are distinct. If they are distinct, then by Lemma  we have <me>
-                \phi(e_{i_1}, \dots, e_{i_n}) = \sign(\s) \phi(e_1, \dots, e_n)
-                </me> where <m>\s</m> is the permutation defined as <m>\s(t) = i_t</m>. Finally, recall <m>\phi(e_1, \dots, e_n) = 1</m> by assumption. Putting all of this together gives<me>
-                \phi(A) = \sum_{\text{ distinct  $i_1, \dots, i_n$}} \sign(\text{the permutation $t \mapsto i_t$}) a_{i_1, 1} \cdots a_{i_n,n}.
-                </me>This is just a re-writing of the formula for <m>\det</m>; so <m>\phi = \det</m>.
-              </p>
-            </proof>
-          </theorem>
+                  \det(AB) &amp; = \det(g(X) g(Y)) 
+                  = \det(g(XY))  = g \det(XY) \\ 
+                  &amp; = g(\det(X) \det(Y)) = g(\det(X)) g(\det(Y)) = \det(g(X)) \det(g(Y)) = \det(A) \det(B).
+                \end{aligned}</me>It remains to prove such a <m>S</m>, <m>g</m>, <m>X</m> and <m>Y</m> exists. Suppose <m>A = (a_{i,j})</m> and <m>B = (b_{i,j})</m>. Form the polynomial ring<me>
+                  S := \Z[\{x_{i,j} \mid 1 \leq i \leq n, 1 \leq j \leq n\} \cup \{y_{i,j}\mid 1 \leq i \leq n, 1 \leq j \leq n\}]
+                  </me>of <m>2 n^2</m> variables with <m>\Z</m>-coefficients. By the UMP for polynomial rings with integer coefficients, since <m>R</m> is commutative, there is a (unique) ring map <m>g: S \to R</m> such that <m>g(x_{i,j}) = a_{i,j}</m> and <m>g(y_{i,j}) = b_{i,j}</m> for all <m>i,j</m>. That is, <m>g</m> is the evaluation map given by setting <m>x_{i,j} = a_{i,j}</m> and <m>y_{i,j} = b_{i,j}</m> for all <m>i,j</m>, and interpreting integers as elements of <m>R</m>. Let <me>X = (x_{i,j}), Y = (y_{i,j})  \in \Mat_{n \times n}(S)</me> be the evident matrices of indeterminants.Then <m>S</m> is a domain, <m>g: S \to R</m> is a ring homomorphism, <m>g(X) = A</m> and <m>g(Y) = B</m>, as desired.
+                </p>
+              </proof>
+            </theorem>
 
-          <proposition xml:id="prop-computing-determinant-of-square-matrix">
-            <statement>
+            <remark>
               <p>
-                Let <m>R</m> be any non-zero commutative ring. Let <m>A</m> be a square matrix and let <m>B</m> be a matrix obtained form <m>A</m> by a single elementary column operation:
-                <ol>
-                  <li>
-                    <p>
-                      If the operation is of type I, <m>\det(B) = \det(A)</m>. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      If the operation is of type II, given by multiplying a column of <m>A</m> by a unit <m>u</m>, then <m>\det(B)=u\det(A)</m>. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      If the operation is of type III, <m>\det(B)=-\det(A)</m>.
-                    </p>
-                  </li>
-                </ol>
+                Another way to deduce the Theorem for arbitrary commutative rings from the case of a domain is to use the following fact: If <m>R</m> is a non-zero commutative ring, there there exists a surjective ring homomorphism of the form <m>g: S \onto R</m> where <m>S</m> is a domain. So see this, let <m>X</m> be a (possibly very large) set of indeterminants such that there is a bijection of sets <m>\rho: X \to R</m>. Let <m>S = \Z[X]</m>, the polynomial ring with integer coefficients in the variables <m>X</m>. So, a typical element of <m>S</m> is a polynomial the form <m>f(x_1, \dots,x_n)</m> for some finite subset <m>\{x_1, \dots, x_n\}</m> of <m>X</m>. By the UMP for polynomial rings, there is a unique ring map <m>g: S \to R</m> such that <m>g(x) = \rho(x)</m> for all <m>x \in X</m>. That is, <m>g</m> sends <m>f(x_1, \dots, x_n)</m> as above to <m>f(\rho(x_1), \dots, \rho(x_n))</m>. The ring map <m>g</m> is clearly onto since for each <m>r \in R</m>, there is an <m>x \in X</m> with <m>\rho(x) = r</m> and hence <m>g(x) = r</m>. Finally, <m>S</m> is an integral domain.
               </p>
-            </statement>
-            
-            <proof>
+            </remark>
+
+            <remark>
               <p>
-                The first claim follows from multi-linearity and alternating properties: For notational simplicity say <m>A = (v_1, v_2, \dots)</m> and <m>B = (v_1 + rv_2, v_2, \dots)</m>. Then<me>
-                \det(B) = \det(v_1, v_2, \dots) + r \det(v_2, v_2, \dots) = \det(A) + r \cdot 0 = \det(A)
-                </me>The second is immediate from (the second part of) <m>R</m>-multi-linearity. The last is a special case of Lemma .
+                The key idea in the proof of the Theorem can be used to deduce many other identities over commutative rings from known identities over fields. E.g., it can be used to show that <me>
+                A A^{adj} = \det(A) I_n = A^{adj} A
+                </me> holds for any commutative ring <m>R</m> and for any <m>A \in \Mat_{n \times n}(R)</m>, where <m>A^{adj}</m> is the “adjugate'' of <m>A</m>, granting that this equation holds when <m>R</m> is a field. Recall <m>A^{adj}</m> is the <m>n \times n</m> matrix whose <m>(i,j)</m> entry is <m>(-1)^{i+j} \det(A_{i,j})</m> where <m>A_{i,j}</m> is the <m>(n-1) \times (n-1)</m> matrix obtained by deleting the <m>i</m>-th column and <m>j</m>-th row of <m>A</m>. I will likely have you do this as an exercise.
               </p>
-            </proof>
-          </proposition>
 
-          <remark>
-            <p>
-              The previous Lemma gives an efficient method of computing the determinant of a square matrix: Apply Gaussian reduction to transform such a matrix <m>A</m> to <m>I_n</m>, keeping track of the operations used. Since <m>\det(I_n) = 1</m>, we can deduce what the <m>\det(A)</m> is in this way, using the Lemma.
-            </p>
-  
-            <p>
-              The number of type I (and type II) operations needed to transform <m>A</m> to <m>I_n</m> is at most about <me>2(n-1) + 2(n-2) + \cdots \approx n^2</me>Each operation involves at most at most <m>n-1</m> multiplications and additions. All total, the number of operations needed to compute the determinant of an <m>n \times n</m> matrix is a polynomial function of <m>n</m> (I think it is cubic, in fact). Observe that the determinant formula involves <m>n!</m> terms each with <m>n</m> products, which is certainly exponential in <m>n</m>.
-            </p>
-  
-            <p>
-              Thus, Gaussian elimination, among other things, gives a polynomial time solution to a computation that at first blush involves an exponential number of calculations.
-            </p>
-  
-            <p>
-              The “permanant'' of a square matrix is given by the same formula but without the signs. It too involves an exponential (in <m>n</m>) number of calculations. Unlike the determinant, there is no known polynomial time algorithm to compute it. Indeed, if one exists then <m>P = NP</m>! This is a Theorem of Leslie Valiant.
-            </p>
-          </remark>
-
-          <corollary xml:id="cor-det-splits-across-elementary-multiplication">
-            <statement>
               <p>
-                For any commutative ring <m>R</m>, if <m>A</m> is an <m>n \times n</m> matrix and <m>E</m> is an <m>n \times n</m> elementary matrix, then <me>\det(AE) = \det(A) \det(E)</me>
+                Granting <m>A A^{adj} = \det(A) I_n = A^{adj} A</m> holds for any non-zero commutative ring <m>R,</m> we can prove the following:
               </p>
-            </statement>
+            </remark>
 
-            <proof>
+            <proposition xml:id="prop-determinantal-technique"><title>Determinantal Technique</title>
+              <statement>
+                <p>
+                  Let <m>R</m> be a non-zero commutative ring and <m>A \in \Mat_{n \times n}(R)</m>. Let <m>A^{adj}</m> denote the classical adjugate of <m>A</m> — the <m>(i,j)</m> entry of <m>A^{adj}</m> is defined to be <m>(-1)^{i+j} \det(A_{j,i})</m> where <m>A_{j,i}</m> is <m>(n-1) \times (n-1)</m> matrix obtained by deleting the <m>j</m>-th row and <m>i</m>-th column of <m>A</m>. You may assume without proof that when <m>R</m> is a field, we have <m>A A^{adj} = \det(A) I_n = A^{adj} A</m>. Prove <m>A A^{adj} = \det(A) I_n = A^{adj} A</m> holds for any non-zero commutative ring <m>R</m>.
+                </p>
+              </statement>
+            </proposition>
+
+            <proposition xml:id="prop-matrix-invertible-iff-det-is-a-unit"><title>Matrix Invertible iff Det is a Unit</title>
+
+              <statement>
+                <p>
+                  For any non-zero commutative ring <m>R</m> and any <m>A \in \Mat_{n \times n}(R)</m>, <m>A</m> is invertible if and only if <m>\det(A)</m> is a unit of <m>R</m>.
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  If <m>A</m> is invertible then <m>1 = \det(I_n) = \det(AA^{-1}) = \det(A) \det(A^{-1})</m> by the Theorem, and hence <m>\det(A)</m> is a unit.
+                </p>
+    
+                <p>
+                  If <m>\det(A)</m> is a unit, then, using the equation above, we have <me>
+                  A (A^{adj} \cdot \frac{1}{\det(A)}) =I_n = (A^{adj} \cdot \frac{1}{\det(A)}) A
+                  </me> which proves <m>A</m> has a two-sided inverse (namely, <m>A^{adj} \frac{1}{\det(A)}</m>).
+                </p>
+      
+              </proof>
+            </proposition>
+
+            <definition xml:id="def-determinant"><title>Determinant</title>
+              <statement>
+                <p>
+                  Let <m>R</m> be a commutative ring and <m>V</m> a free <m>R</m>-module of finite rank. Given an endomorphism <m>\a: V \to V</m>, we define its <em>determinant</em> to be <me>
+                    \det(\a) = \det([\a]_B^B)
+                    </me> where <m>B</m> is any basis of <m>V</m>.
+                </p>
+              </statement>
+            </definition>
+
+            <lemma xml:id="lem-det-independent-of-basis-choice"><title></title>
+              <statement>
+                <p>
+                  The definition of <m>\det(\a)</m> is independent of choice of <m>B</m>.
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  If <m>C</m> is another basis, then <me>
+                  [\a]_C^C = P [\a]_B^B P^{-1}
+                  </me> for an invertible matrix <m>P</m> (specifically, <m>P = [\id]_B^C</m>). Then <me>
+                  \det([\a]_C^C)  = \det(P [\a]_B^B P^{-1}) = \det(P) \det([\a]_B^B) \det(P^{-1}) =\det(P) \det(P^{-1}) \det([\a]_B^B) 
+                  </me> using the Theorem. Also by the Theorem <m>\det(P) \det(P^{-1}) = \det(PP^{-1}) = \det(I_n) = 1</m>.
+                </p>
+              </proof>
+            </lemma>
+
+            <example xml:id="exe-companion-matrix"><title>Companion Matrix</title>
+
               <p>
-                This follows from the Proposition and the fact that <m>AE</m> is the result of doing the corresponding column operation on <m>A</m> (see Lemma ), since <me>
-                \det(E)  = \begin{cases}
-                  1 &amp; \text{if $E$ is elementary of type I} \\
-                  u &amp; \text{if $E$ is elementary of type II with a unit $u$ on the diagonal} \\
-                  -1 &amp; \text{if $E$ is elementary of type III.} \\
-                \end{cases}</me>These formulas follow from the formula for the determinant of an upper or lower triangular matrix — see Example .
-              </p>
-            </proof>
-          </corollary>
-
-          <corollary xml:id="cor-det-not-0-iff-matrix-invertible"><title></title>
-            <statement>
-              <p>
-                For <m>R = F</m> a field, we have <m>\det(A) \ne 0</m> if and only if <m>A</m> is invertible.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                If <m>A</m> is not invertible, then the column space of <m>A</m> is a proper subspace of <m>F^n</m> and hence the columns of <m>A</m> must be linearly dependent. Say the <m>i\th</m> column is a linear combination of the rest: <m>v_i = \sum_{j \ne i} c_j v_j</m>. Then <me>
-                \det(v_1, \dots, v_n) = \sum_{j \ne i} c_j \det(\text{a matrix with the $i$-th and $j$-th columns equal}) = 0.
-                </me>If <m>A</m> is invertible, then by Corollary  <m>A</m> can be obtained from <m>I_n</m> via a sequence of elementary column operations. The result thus follows from Proposition  and the fact that <m>\det(I_n) = 1</m>.
-              </p>
-            </proof>
-          </corollary>
-
-          <remark>
-            <p>
-              For an arbitrary commutative ring <m>R</m>, the rule is: a square matrix <m>A</m> is invertible if and only if <m>\det(A)</m> is a unit of <m>R</m>. We'll give a proof later.
-            </p>
-          </remark>
-
-          <theorem xml:id="thm-det-splits-across-multiplication-fields"><title>Det Splits Across Multiplication: Fields</title>
-
-            <statement>
-              <p>
-                For a field <m>F</m> and matrices <m>A, B \in \Mat_{n \times n}(F)</m> we have <me>\det(AB) = \det(A)\det(B).</me> 
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                If <m>A</m> is not invertible, neither is <m>AB</m>, since <m>\im(AB) \subseteq \im(A)</m>, and if <m>B</m> is not invertible, neither is is <m>AB</m>, since <m>\ker(AB) \supseteq \ker(A)</m>. So, by Corollary , if either <m>A</m> or <m>B</m> is not invertible, both sides of the equation are <m>0</m>.
+                Let <m>V = F[x]/I</m> where <m>F</m> is a field, <m>I = F[x] \cdot f(x)</m> with <m>f</m> a monic polynomial. Say <m>f(x) = x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0</m>. Recall that every element of <m>V</m> is uniquely represented by a coset of the form <me>
+                \ov{p(x)} := p(x) + I
+                </me> where <m>p(x)</m> is a polynomial of degree at most <m>n-1</m>.
               </p>
     
               <p>
-                Assume now that <m>A</m> and <m>B</m> are both invertible. Then by Corollary  we have <me>
-                A = E_1 \cdots E_n</me>and<me>
-                B = F_1 \cdots F_m
-                </me>and hence <me>
-                AB = E_1 \cdots E_n F_1 \cdots F_m
-                </me>where the <m>E_i</m>'s and <m>F_j</m>'s are elementary matrices. Applying Corollary  repeatedly gives <me>\det(AB) = \det(E_1 \cdots E_n F_1 \cdots F_{m-1}) \det(F_m) = \cdots= \det(E_1) \cdots \det(E_n) \det(F_1) \cdots \det(F_m)</me> and similarly <me>
-                \det(A) \det(B) = \left(\det(E_1) \cdots \det(E_n)\right) \left( \det(F_1) \cdots \det(F_m)\right).
-                </me>
-              </p>
-            </proof>
-          </theorem>
-
-          <lemma xml:id="lem-det-function-is-natural"><title>Det Function is Natural</title>
-
-            <statement>
-              <p>
-                The determinant function <m>\det</m> is “natural": If <m>g: R \to S</m> is a homomorphism of non-zero commutative rings and <m>A \in \Mat_{n \times n}(R)</m>, then <me>g \det(A) = \det(g(A))</me> where <m>g(A)</m> denotes the matrix obtained by applying <m>g</m> to the entries of <m>A</m>.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                This follows from the formula for <m>\det</m>, since <m>g</m> commutes with sums and products.
-              </p>
-            </proof>
-          </lemma>
-
-          <theorem xml:id="thm-det-splits-across-multiplication-commutative-ring"><title>Det Splits Across Multiplication: Commutative Ring</title>
-            <statement>
-              <p>
-                For any non-zero commutative ring <m>R</m> and matrices <m>A, B \in \Mat_{n \times n}(R)</m>, we have <me>\det(AB) = \det(A) \det(B) \in R. </me>
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                We have already proven that this holds when <m>R</m> is a field.
-              </p>
-  
-              <p>
-                We next show that it holds whenever <m>R</m> is an integral domain. In this case, <m>R</m> is a subring of a field <m>F</m> (namely, the field of fractions of <m>R</m>). So, we know that the equation <m>\det(AB) = \det(A) \det(B)</m> holds in <m>F</m> if we interpret <m>A</m> and <m>B</m> as belonging to <m>\Mat_{n \times n}(F)</m>. But the value of <m>\det</m> is the same if we interpret these matrices as having entries in <m>R</m> or in <m>F</m>. So <m>\det(AB) = \det(A) \det(B)</m> holds in <m>R</m>.
-              </p>
-  
-              <p>
-                We finally prove that the Theorem for any non-zero commutative ring <m>R</m> by building on the fact that it holds for domains. We do so by contructing a ring homomorphism <m>g: S \to R</m> and matrices <m>X</m> and <m>Y</m> in <m>\Mat_{n \times n}(S)</m> such that <m>S</m> is an integral domain, <m>g(X) = A</m> and <m>g(Y) = B</m>. Granting such a <m>S, g, X</m> and <m>Y</m> exist, the result follows from the naturality of <m>\det</m> (Lemma ). In detail, we know <m>\det(XY) = \det(X) \det(Y)</m>, since <m>S</m> is a domain. Since the rule for multiplying matrices involves only sums and products of ring elements, we have <m>g(XY) = g(X)g(Y)</m>. So<me>
-              \begin{aligned}
-                \det(AB) &amp; = \det(g(X) g(Y)) 
-                = \det(g(XY))  = g \det(XY) \\ 
-                &amp; = g(\det(X) \det(Y)) = g(\det(X)) g(\det(Y)) = \det(g(X)) \det(g(Y)) = \det(A) \det(B).
-              \end{aligned}</me>It remains to prove such a <m>S</m>, <m>g</m>, <m>X</m> and <m>Y</m> exists. Suppose <m>A = (a_{i,j})</m> and <m>B = (b_{i,j})</m>. Form the polynomial ring<me>
-                S := \Z[\{x_{i,j} \mid 1 \leq i \leq n, 1 \leq j \leq n\} \cup \{y_{i,j}\mid 1 \leq i \leq n, 1 \leq j \leq n\}]
-                </me>of <m>2 n^2</m> variables with <m>\Z</m>-coefficients. By the UMP for polynomial rings with integer coefficients, since <m>R</m> is commutative, there is a (unique) ring map <m>g: S \to R</m> such that <m>g(x_{i,j}) = a_{i,j}</m> and <m>g(y_{i,j}) = b_{i,j}</m> for all <m>i,j</m>. That is, <m>g</m> is the evaluation map given by setting <m>x_{i,j} = a_{i,j}</m> and <m>y_{i,j} = b_{i,j}</m> for all <m>i,j</m>, and interpreting integers as elements of <m>R</m>. Let <me>X = (x_{i,j}), Y = (y_{i,j})  \in \Mat_{n \times n}(S)</me> be the evident matrices of indeterminants.Then <m>S</m> is a domain, <m>g: S \to R</m> is a ring homomorphism, <m>g(X) = A</m> and <m>g(Y) = B</m>, as desired.
-              </p>
-            </proof>
-          </theorem>
-
-          <remark>
-            <p>
-              Another way to deduce the Theorem for arbitrary commutative rings from the case of a domain is to use the following fact: If <m>R</m> is a non-zero commutative ring, there there exists a surjective ring homomorphism of the form <m>g: S \onto R</m> where <m>S</m> is a domain. So see this, let <m>X</m> be a (possibly very large) set of indeterminants such that there is a bijection of sets <m>\rho: X \to R</m>. Let <m>S = \Z[X]</m>, the polynomial ring with integer coefficients in the variables <m>X</m>. So, a typical element of <m>S</m> is a polynomial the form <m>f(x_1, \dots,x_n)</m> for some finite subset <m>\{x_1, \dots, x_n\}</m> of <m>X</m>. By the UMP for polynomial rings, there is a unique ring map <m>g: S \to R</m> such that <m>g(x) = \rho(x)</m> for all <m>x \in X</m>. That is, <m>g</m> sends <m>f(x_1, \dots, x_n)</m> as above to <m>f(\rho(x_1), \dots, \rho(x_n))</m>. The ring map <m>g</m> is clearly onto since for each <m>r \in R</m>, there is an <m>x \in X</m> with <m>\rho(x) = r</m> and hence <m>g(x) = r</m>. Finally, <m>S</m> is an integral domain.
-            </p>
-          </remark>
-
-          <remark>
-            <p>
-              The key idea in the proof of the Theorem can be used to deduce many other identities over commutative rings from known identities over fields. E.g., it can be used to show that <me>
-              A A^{adj} = \det(A) I_n = A^{adj} A
-              </me> holds for any commutative ring <m>R</m> and for any <m>A \in \Mat_{n \times n}(R)</m>, where <m>A^{adj}</m> is the “adjugate'' of <m>A</m>, granting that this equation holds when <m>R</m> is a field. Recall <m>A^{adj}</m> is the <m>n \times n</m> matrix whose <m>(i,j)</m> entry is <m>(-1)^{i+j} \det(A_{i,j})</m> where <m>A_{i,j}</m> is the <m>(n-1) \times (n-1)</m> matrix obtained by deleting the <m>i</m>-th column and <m>j</m>-th row of <m>A</m>. I will likely have you do this as an exercise.
-            </p>
-
-            <p>
-              Granting <m>A A^{adj} = \det(A) I_n = A^{adj} A</m> holds for any non-zero commutative ring <m>R,</m> we can prove the following:
-            </p>
-          </remark>
-
-          <proposition xml:id="prop-determinantal-technique"><title>Determinantal Technique</title>
-            <statement>
-              <p>
-                Let <m>R</m> be a non-zero commutative ring and <m>A \in \Mat_{n \times n}(R)</m>. Let <m>A^{adj}</m> denote the classical adjugate of <m>A</m> — the <m>(i,j)</m> entry of <m>A^{adj}</m> is defined to be <m>(-1)^{i+j} \det(A_{j,i})</m> where <m>A_{j,i}</m> is <m>(n-1) \times (n-1)</m> matrix obtained by deleting the <m>j</m>-th row and <m>i</m>-th column of <m>A</m>. You may assume without proof that when <m>R</m> is a field, we have <m>A A^{adj} = \det(A) I_n = A^{adj} A</m>. Prove <m>A A^{adj} = \det(A) I_n = A^{adj} A</m> holds for any non-zero commutative ring <m>R</m>.
-              </p>
-            </statement>
-          </proposition>
-
-          <proposition xml:id="prop-matrix-invertible-iff-det-is-a-unit"><title>Matrix Invertible iff Det is a Unit</title>
-
-            <statement>
-              <p>
-                For any non-zero commutative ring <m>R</m> and any <m>A \in \Mat_{n \times n}(R)</m>, <m>A</m> is invertible if and only if <m>\det(A)</m> is a unit of <m>R</m>.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                If <m>A</m> is invertible then <m>1 = \det(I_n) = \det(AA^{-1}) = \det(A) \det(A^{-1})</m> by the Theorem, and hence <m>\det(A)</m> is a unit.
-              </p>
-  
-              <p>
-                If <m>\det(A)</m> is a unit, then, using the equation above, we have <me>
-                A (A^{adj} \cdot \frac{1}{\det(A)}) =I_n = (A^{adj} \cdot \frac{1}{\det(A)}) A
-                </me> which proves <m>A</m> has a two-sided inverse (namely, <m>A^{adj} \frac{1}{\det(A)}</m>).
-              </p>
-    
-            </proof>
-          </proposition>
-
-          <definition xml:id="def-determinant"><title>Determinant</title>
-            <statement>
-              <p>
-                Let <m>R</m> be a commutative ring and <m>V</m> a free <m>R</m>-module of finite rank. Given an endomorphism <m>\a: V \to V</m>, we define its <em>determinant</em> to be <me>
-                  \det(\a) = \det([\a]_B^B)
-                  </me> where <m>B</m> is any basis of <m>V</m>.
-              </p>
-            </statement>
-          </definition>
-
-          <lemma xml:id="lem-det-independent-of-basis-choice"><title></title>
-            <statement>
-              <p>
-                The definition of <m>\det(\a)</m> is independent of choice of <m>B</m>.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                If <m>C</m> is another basis, then <me>
-                [\a]_C^C = P [\a]_B^B P^{-1}
-                </me> for an invertible matrix <m>P</m> (specifically, <m>P = [\id]_B^C</m>). Then <me>
-                \det([\a]_C^C)  = \det(P [\a]_B^B P^{-1}) = \det(P) \det([\a]_B^B) \det(P^{-1}) =\det(P) \det(P^{-1}) \det([\a]_B^B) 
-                </me> using the Theorem. Also by the Theorem <m>\det(P) \det(P^{-1}) = \det(PP^{-1}) = \det(I_n) = 1</m>.
-              </p>
-            </proof>
-          </lemma>
-
-          <example xml:id="exe-companion-matrix"><title>Companion Matrix</title>
-
-            <p>
-              Let <m>V = F[x]/I</m> where <m>F</m> is a field, <m>I = F[x] \cdot f(x)</m> with <m>f</m> a monic polynomial. Say <m>f(x) = x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0</m>. Recall that every element of <m>V</m> is uniquely represented by a coset of the form <me>
-              \ov{p(x)} := p(x) + I
-              </me> where <m>p(x)</m> is a polynomial of degree at most <m>n-1</m>.
-            </p>
-  
-            <p>
-              We will regard <m>V</m> as an <m>F</m>-vector space (via restriction of scalars along <m>F \into F[x]</m>). Then <m>V</m> is finite dimensional — for instance, a basis of <m>V</m> is given by <m>\ov{1}, \ov{x}, \dots, \ov{x^{n-1}}</m>.
-            </p>
-  
-            <p>
-              Let <m>g: V \to V</m> be the function given as multiplication by <m>x</m>. Then <m>g</m> is an <m>F</m>-linear operator, since <m>g(v+v') = x(v+v') = xv + xv' = g(v) + g(v')</m> and <m>g(cv) = x(cv) = c (xv) = c g(v)</m>. (In fact, <m>g</m> is <m>F[x]</m>-linear, but we won't use that fact.) Relative to the ordered basis <m>\ov{1}, \ov{x}, \dots, \ov{x^{n-1}}</m>, the matrix of <m>g</m> is <me>
-              C(f) :=
-              \begin{bmatrix}
-                0 &amp; 0 &amp; \cdots &amp; 0 &amp; -a_0 \\
-                1 &amp; 0 &amp; \cdots &amp; 0 &amp; -a_1 \\
-                0 &amp; 1 &amp; \cdots &amp; 0 &amp; -a_2 \\
-                \vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\
-                0 &amp; 0 &amp; \cdots &amp; 1 &amp; -a_{n-1} \\   
-              \end{bmatrix}
-              </me> The right-most column is due to the fact that, since <m>\overline{f(x)} = 0</m> in <m>V</m>, we have <me>
-              x \cdot \overline{x^{n-1}} =
-              \overline{x^n} = -a_{n-1} \overline{x^{n-1}} -a_{n-2} \overline{x^{n-2}} - \cdots - a_1 \overline{x} - a_0 \overline{1}.
-              </me> The matrix <m>C(f)</m> is known as the <term>companion matrix</term> of <m>f(x)</m> - it is defined for any monic polynomials with entries in a field.
-            </p>
-  
-            <p>
-              We have <m>\det(C(f)) = (-1)^n a_0</m>, since the only permutation that gives a non-zero term in the formula for <m>\det</m> is the <m>n</m>-cycle <m>\s = (2 \, 3 \, \dots \, n \, 1)</m>, and its has sign is <m>(-1)^{n-1}</m>. So <m>\det(g) = (-1)^n a_0</m>.
-            </p>
-            
-          </example>
-
-          <remark>
-            <p>
-              As we showed above, the determinant of linear operator on a free module of finite rank is an “invariant'' of the operator, in the sense that it is independent of how we represent the operator as a matrix. Here is another such invariant:
-            </p>
-          </remark>
-
-          <definition xml:id="def-trace"><title>Trace</title>
-            <statement>
-              <p>
-                For a commutative ring <m>R</m> and a square matrix <m>A \in \Mat_{n \times n}(R)</m>, the <em>trace</em> of <m>A</m>, written <m>\trace(A)</m>, is the sum of its diagonal entries: <m>\trace(A) = \sum_i a_{i,i}</m>.
+                We will regard <m>V</m> as an <m>F</m>-vector space (via restriction of scalars along <m>F \into F[x]</m>). Then <m>V</m> is finite dimensional — for instance, a basis of <m>V</m> is given by <m>\ov{1}, \ov{x}, \dots, \ov{x^{n-1}}</m>.
               </p>
     
               <p>
-                If <m>V</m> is a free <m>R</m>-module of finite rank and <m>g: V \to V</m> is an <m>R</m>-module homomorphism, we define <m>\trace(g)</m> to be <m>\trace([g]^B_B)</m> for any basis <m>B</m>.
-              </p>
-            </statement>
-          </definition>
-
-          <theorem xml:id="thm-trace-is-commutative-with-two-matrices"><title>Trace is Commutative with Two Matrices</title>
-
-            <statement>
-              <p>
-                If <m>R</m> is a commutative ring and <m>X \in \Mat_{m \times n}(R)</m> and <m>Y \in \Mat_{n \times m}(R)</m>, then <m>\trace(XY) = \trace(YX)</m>.
+                Let <m>g: V \to V</m> be the function given as multiplication by <m>x</m>. Then <m>g</m> is an <m>F</m>-linear operator, since <m>g(v+v') = x(v+v') = xv + xv' = g(v) + g(v')</m> and <m>g(cv) = x(cv) = c (xv) = c g(v)</m>. (In fact, <m>g</m> is <m>F[x]</m>-linear, but we won't use that fact.) Relative to the ordered basis <m>\ov{1}, \ov{x}, \dots, \ov{x^{n-1}}</m>, the matrix of <m>g</m> is <me>
+                C(f) :=
+                \begin{bmatrix}
+                  0 &amp; 0 &amp; \cdots &amp; 0 &amp; -a_0 \\
+                  1 &amp; 0 &amp; \cdots &amp; 0 &amp; -a_1 \\
+                  0 &amp; 1 &amp; \cdots &amp; 0 &amp; -a_2 \\
+                  \vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\
+                  0 &amp; 0 &amp; \cdots &amp; 1 &amp; -a_{n-1} \\   
+                \end{bmatrix}
+                </me> The right-most column is due to the fact that, since <m>\overline{f(x)} = 0</m> in <m>V</m>, we have <me>
+                x \cdot \overline{x^{n-1}} =
+                \overline{x^n} = -a_{n-1} \overline{x^{n-1}} -a_{n-2} \overline{x^{n-2}} - \cdots - a_1 \overline{x} - a_0 \overline{1}.
+                </me> The matrix <m>C(f)</m> is known as the <term>companion matrix</term> of <m>f(x)</m> - it is defined for any monic polynomials with entries in a field.
               </p>
     
               <p>
-                In particular, with the notation of the previous definition, <m>\trace(g)</m> is well-defined.
+                We have <m>\det(C(f)) = (-1)^n a_0</m>, since the only permutation that gives a non-zero term in the formula for <m>\det</m> is the <m>n</m>-cycle <m>\s = (2 \, 3 \, \dots \, n \, 1)</m>, and its has sign is <m>(-1)^{n-1}</m>. So <m>\det(g) = (-1)^n a_0</m>.
               </p>
-            </statement>
+              
+            </example>
 
-            <proof>
+            <remark>
               <p>
-                The <m>(i,i)</m> entry of <m>XY</m> is <m>\sum_l x_{i,l} y_{l, i}</m> and so <m>\trace(XY) = \sum_i \sum_l x_{i,l} y_{l,i}</m>. The <m>(j,j)</m> entry of <m>YX</m> is <m>\sum_t y_{j,t} x_{t,j}</m> and so <m>\trace(YX) = \sum_j \sum_t y_{j,t} x_{t,j}</m>. Since <m>R</m> is commutative, these are equal.
+                As we showed above, the determinant of linear operator on a free module of finite rank is an “invariant'' of the operator, in the sense that it is independent of how we represent the operator as a matrix. Here is another such invariant:
               </p>
-  
+            </remark>
+
+            <definition xml:id="def-trace"><title>Trace</title>
+              <statement>
+                <p>
+                  For a commutative ring <m>R</m> and a square matrix <m>A \in \Mat_{n \times n}(R)</m>, the <em>trace</em> of <m>A</m>, written <m>\trace(A)</m>, is the sum of its diagonal entries: <m>\trace(A) = \sum_i a_{i,i}</m>.
+                </p>
+      
+                <p>
+                  If <m>V</m> is a free <m>R</m>-module of finite rank and <m>g: V \to V</m> is an <m>R</m>-module homomorphism, we define <m>\trace(g)</m> to be <m>\trace([g]^B_B)</m> for any basis <m>B</m>.
+                </p>
+              </statement>
+            </definition>
+
+            <theorem xml:id="thm-trace-is-commutative-with-two-matrices"><title>Trace is Commutative with Two Matrices</title>
+
+              <statement>
+                <p>
+                  If <m>R</m> is a commutative ring and <m>X \in \Mat_{m \times n}(R)</m> and <m>Y \in \Mat_{n \times m}(R)</m>, then <m>\trace(XY) = \trace(YX)</m>.
+                </p>
+      
+                <p>
+                  In particular, with the notation of the previous definition, <m>\trace(g)</m> is well-defined.
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  The <m>(i,i)</m> entry of <m>XY</m> is <m>\sum_l x_{i,l} y_{l, i}</m> and so <m>\trace(XY) = \sum_i \sum_l x_{i,l} y_{l,i}</m>. The <m>(j,j)</m> entry of <m>YX</m> is <m>\sum_t y_{j,t} x_{t,j}</m> and so <m>\trace(YX) = \sum_j \sum_t y_{j,t} x_{t,j}</m>. Since <m>R</m> is commutative, these are equal.
+                </p>
+    
+                <p>
+                  Say <m>B</m> and <m>C</m> are two bases of <m>V</m>. Then <m>[g]_B^B = P [g]_{C}^{C} P^{-1}</m> for some invertible matrix <m>P</m> (namely, <m>P = [\id_V]_C^B</m>). Using the first part of the Lemma we have <me>\trace([g]_B^B) = \trace(P [g]_{C}^{C} P^{-1}) = \trace((P [g]_{C}^{C}) P^{-1}) = 
+                  \trace(P^{-1} (P [g]_{C}^{C})) =
+                  \trace((P^{-1} P) [g]_{C}^{C}) =
+                  \trace([g]_{C}^{C}).</me>
+                </p>
+              </proof>
+            </theorem>
+
+            <warning>
               <p>
-                Say <m>B</m> and <m>C</m> are two bases of <m>V</m>. Then <m>[g]_B^B = P [g]_{C}^{C} P^{-1}</m> for some invertible matrix <m>P</m> (namely, <m>P = [\id_V]_C^B</m>). Using the first part of the Lemma we have <me>\trace([g]_B^B) = \trace(P [g]_{C}^{C} P^{-1}) = \trace((P [g]_{C}^{C}) P^{-1}) = 
-                \trace(P^{-1} (P [g]_{C}^{C})) =
-                \trace((P^{-1} P) [g]_{C}^{C}) =
-                \trace([g]_{C}^{C}).</me>
+                The Lemma tells us that the trace of a product of two matrices in either order is the same, but it does not follow that the trace is unchanged if you permute arbitrarily a product of three of more matrices. For instance, <m>\trace(XYZ)</m> is usually not equal to <m>\trace(XZY)</m>.
               </p>
-            </proof>
-          </theorem>
-
-          <warning>
-            <p>
-              The Lemma tells us that the trace of a product of two matrices in either order is the same, but it does not follow that the trace is unchanged if you permute arbitrarily a product of three of more matrices. For instance, <m>\trace(XYZ)</m> is usually not equal to <m>\trace(XZY)</m>.
-            </p>
-  
-            <p>
-              It is true that trace is invariant under all “cyclic permutations'' of products of matrices. For instance, <m>\trace(XYZ) = \trace(ZXY) = \trace(YZX)</m> and more generally we have <me>
-              \trace(X_1 \cdots X_n) = \trace(X_i X_{i+1} \cdots X_n X_1 X_2 \cdots X_{i-1})
-              </me> for all <m>i</m>.
-            </p>
-          </warning>
-
-          <example xml:id="exe-trace-and-multiplication-by-x"><title>Trace and Multiplication by <m>x</m></title>
-
-            <p>
-              With the notation of Example , <m>\trace(g) = -a_{n-1}</m>.
-            </p>
-            
-          </example>
-
-          <example xml:id="exe-det-and-trace-of-c-and-linear-operator"><title>Det and Trace of <m>\C</m> and Linear Operator</title>
-
-            <p>
-              Let <m>\C</m> denote the complex numbers. We may regard <m>\C</m> as an <m>\R</m>-vector space. Given <m>z = a + bi \in \C</m>, multiplication by <m>z</m> on <m>\C</m> is an <m>\R</m>-linear operator. What are the determinant and trace of this operator?
-            </p>
-  
-            <p>
-              Relative to the basis <m>1, i</m> of <m>\C</m> as a real vector space, multiplication by <m>z = a = ib</m> is represented by the matrix <me>\begin{bmatrix}
-      a &amp; -b \\ 
-      b &amp; a   \\
-    \end{bmatrix}</me> and hence the determinant of this operator is <m>a^2 + b^2</m>, the square of the norm of <m>z</m>. The trace is <m>2a</m>. Note that the determinant of this operator is <m>\|z\|^2</m> the square of the usual complex norm.
-            </p>
-          </example>
-
-          <example xml:id="exe-matrix-of-field-extension"><title>Matrix of Field Extension</title>
-
-            <p>
-              Similarly, we may consider the field extension <m>\Q \subseteq \Q(\sqrt{-2})</m>. For any <m>a + b \sqrt{-2}</m> in the larger field, define <m>g: \Q(\sqrt{-2}) \to \Q(\sqrt{-2})</m> to be multiplication by <m>a + b \sqrt{-2}</m>. Then <m>\Q(\sqrt{-2})</m> is a <m>\Q</m>-vector space and <m>g</m> is a <m>\Q</m>-linear operator. A <m>\Q</m>-basis of <m>\Q(\sqrt{-2}</m> is given by <m>B = \{1, \sqrt{-2}\}</m> and relative to this basis the matrix representing <m>g</m> is <me>[g]_B^B = 
-              \begin{bmatrix}
-                a &amp; -2b \\ 
-                b &amp; a   \\
-              \end{bmatrix}</me> and hence <m>\det(g) = a^2 + 2b^2</m>, once again the square of the of usual complex norm of the element <m>a + b \sqrt{-2}</m>.
-            </p>
-
-          </example>
-
-          <definition xml:id="def-charpoly"><title>Characteristic Polynomial</title>
-            <statement>
+    
               <p>
-                Let <m>A \in \Mat_{n \times n}(F)</m> where <m>F</m> is a field. The <em>characteristic polynomial</em> of <m>A</m> is <me>\cp_A(x) := \det(x I_n - A) \in F[x].</me> Note that <m>\cp_A(x)</m> is a monic polynomial of degree <m>n</m> with coefficients in <m>F</m>. More generally, if <m>V</m> is a finite dimensional <m>F</m>-vector space and <m>g: V \to V</m> is an <m>F</m>-linear operator on <m>V</m>, then <me>\cp_g(x) := \cp_A(x)</me> where <m>A</m> is the matrix representing <m>g</m> with respect to a choice of basis of <m>V</m>.
+                It is true that trace is invariant under all “cyclic permutations'' of products of matrices. For instance, <m>\trace(XYZ) = \trace(ZXY) = \trace(YZX)</m> and more generally we have <me>
+                \trace(X_1 \cdots X_n) = \trace(X_i X_{i+1} \cdots X_n X_1 X_2 \cdots X_{i-1})
+                </me> for all <m>i</m>.
               </p>
-            </statement>
-          </definition>
+            </warning>
 
-          <remark>
-            <p>
-              We should pause to check that <m>\cp_g(x)</m> is well-defined: Say <m>B</m> and <m>C</m> are two ordered bases of <m>V</m>, so that <m>[g]_B^B</m> and <m>[g]_C^C</m> both represent <m>g</m>. Then <m>[g]_C^C = P [g]_B^B P^{-1}</m> for some invertible matrix <m>P</m> and hence <me>
-              P(xI_n - [g]_B^B)P^{-1} = PxI_nP^{-1} - P [g]_B^B P^{-1} = xI_n - [g]_C^C,
-              </me> since the scalar matrix <m>xI_n</m> commutes with all matrices. That is, <m>xI_n - [g]_B^B</m> and <m>xI_n - [g]_C^C</m> are similar matrices (with entries in <m>F[x]</m>), and it follows that <m>\det(xI_n - [g]_B^B) = \det(xI_n - [g]_C^C)</m>.
-            </p>
-  
-            <p>
-              The following two exercises show that the characteristic polynomial captures both the determinant and the trace of an operator:
-            </p>
-          </remark>
+            <example xml:id="exe-trace-and-multiplication-by-x"><title>Trace and Multiplication by <m>x</m></title>
 
-          <example xml:id="exe-cp0"><title><m>\cp(0)</m></title>
+              <p>
+                With the notation of Example , <m>\trace(g) = -a_{n-1}</m>.
+              </p>
+              
+            </example>
 
-            <p>
-              Show <m>\cp_g(0) = (-1)^n \det(g)</m>.
-            </p>
+            <example xml:id="exe-det-and-trace-of-c-and-linear-operator"><title>Det and Trace of <m>\C</m> and Linear Operator</title>
 
-          </example>
+              <p>
+                Let <m>\C</m> denote the complex numbers. We may regard <m>\C</m> as an <m>\R</m>-vector space. Given <m>z = a + bi \in \C</m>, multiplication by <m>z</m> on <m>\C</m> is an <m>\R</m>-linear operator. What are the determinant and trace of this operator?
+              </p>
+    
+              <p>
+                Relative to the basis <m>1, i</m> of <m>\C</m> as a real vector space, multiplication by <m>z = a = ib</m> is represented by the matrix <me>\begin{bmatrix}
+        a &amp; -b \\ 
+        b &amp; a   \\
+      \end{bmatrix}</me> and hence the determinant of this operator is <m>a^2 + b^2</m>, the square of the norm of <m>z</m>. The trace is <m>2a</m>. Note that the determinant of this operator is <m>\|z\|^2</m> the square of the usual complex norm.
+              </p>
+            </example>
 
-          <example xml:id="exe-charpoly-and-trace"><title>CharPoly and Trace</title>
-  
-            <p>
-              Show that if <m>\dim_F(V) = n</m>, then the coefficient of <m>x^{n-1}</m> in <m>\cp_g(x)</m> is <m>-\trace(g)</m>.
-            </p>
-  
-          </example>
-  
-          <example xml:id="exe-triangular-matrix-and-charpoly"><title>Triangular Matrix and CharPoly</title>
-  
-            <p>
-              If <m>A</m> is upper or lower triangular, then <m>\cp_A(x) = \prod_i (x - a_{i,i})</m>. As you may recall from an undergraduate class, in this case <m>a_{1,1}, \dots, a_{n,n}</m> are the eigenvalues of <m>A</m>. More on this later.
-            </p>
-  
-          </example>
-  
-          <example><title>Problem</title>
-  
-            <p>
-              Let <m>V</m> be the <m>\R</m>-vector space consisting of polynomials in the variable <m>x</m> of degree at most <m>3</m> and let <m>g: V \to V</m> be the <m>\R</m>-linear operator given by <me>g(p(x)) = p''(x) + (x+1) p'(x) + 7 p(x),</me>where <m>p''(x)</m> and <m>p'(x)</m> denote the first and second derivatives of <m>p(x)</m>. (You may take it on faith that <m>g</m> is <m>\R</m>-linear.) Find the determinant, the trace, and the characteristic polynomial of <m>g</m>.
-            </p>
-  
-          </example>
-  
-          <example><title>Problem</title>
-  
-            <p>
-              Let <m>F</m> be a field and <m>V = F[x]/I</m> with <m>I = F[x] \cdot f(x)</m> for some monic polynomial <m>f(x) = x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0</m>. Regard <m>V</m> as an <m>F</m>-vector space (via restriction of scalars along <m>F \into F[x]</m>), and recall that the function <m>g: V \to V</m> given by <m>g(v) = x \cdot v</m> is an <m>F</m>-linear operator on <m>V</m>.
-            </p>
-  
-            <p>
-              Prove that the characteristic polynomial of <m>g</m> is <m>f(x)</m>.
-            </p>
-  
-          </example>
+            <example xml:id="exe-matrix-of-field-extension"><title>Matrix of Field Extension</title>
 
-          </subsection>
-        </section>
+              <p>
+                Similarly, we may consider the field extension <m>\Q \subseteq \Q(\sqrt{-2})</m>. For any <m>a + b \sqrt{-2}</m> in the larger field, define <m>g: \Q(\sqrt{-2}) \to \Q(\sqrt{-2})</m> to be multiplication by <m>a + b \sqrt{-2}</m>. Then <m>\Q(\sqrt{-2})</m> is a <m>\Q</m>-vector space and <m>g</m> is a <m>\Q</m>-linear operator. A <m>\Q</m>-basis of <m>\Q(\sqrt{-2}</m> is given by <m>B = \{1, \sqrt{-2}\}</m> and relative to this basis the matrix representing <m>g</m> is <me>[g]_B^B = 
+                \begin{bmatrix}
+                  a &amp; -2b \\ 
+                  b &amp; a   \\
+                \end{bmatrix}</me> and hence <m>\det(g) = a^2 + 2b^2</m>, once again the square of the of usual complex norm of the element <m>a + b \sqrt{-2}</m>.
+              </p>
 
-        <section><title>Field Theory</title>
+            </example>
 
-          <subsection xml:id="subsec-solvability-by-radicals"><title>Solvability by Radicals (*)</title>
-            
-            <p>Coming soon!</p>
+            <definition xml:id="def-charpoly"><title>Characteristic Polynomial</title>
+              <statement>
+                <p>
+                  Let <m>A \in \Mat_{n \times n}(F)</m> where <m>F</m> is a field. The <em>characteristic polynomial</em> of <m>A</m> is <me>\cp_A(x) := \det(x I_n - A) \in F[x].</me> Note that <m>\cp_A(x)</m> is a monic polynomial of degree <m>n</m> with coefficients in <m>F</m>. More generally, if <m>V</m> is a finite dimensional <m>F</m>-vector space and <m>g: V \to V</m> is an <m>F</m>-linear operator on <m>V</m>, then <me>\cp_g(x) := \cp_A(x)</me> where <m>A</m> is the matrix representing <m>g</m> with respect to a choice of basis of <m>V</m>.
+                </p>
+              </statement>
+            </definition>
 
-          </subsection>
+            <remark>
+              <p>
+                We should pause to check that <m>\cp_g(x)</m> is well-defined: Say <m>B</m> and <m>C</m> are two ordered bases of <m>V</m>, so that <m>[g]_B^B</m> and <m>[g]_C^C</m> both represent <m>g</m>. Then <m>[g]_C^C = P [g]_B^B P^{-1}</m> for some invertible matrix <m>P</m> and hence <me>
+                P(xI_n - [g]_B^B)P^{-1} = PxI_nP^{-1} - P [g]_B^B P^{-1} = xI_n - [g]_C^C,
+                </me> since the scalar matrix <m>xI_n</m> commutes with all matrices. That is, <m>xI_n - [g]_B^B</m> and <m>xI_n - [g]_C^C</m> are similar matrices (with entries in <m>F[x]</m>), and it follows that <m>\det(xI_n - [g]_B^B) = \det(xI_n - [g]_C^C)</m>.
+              </p>
+    
+              <p>
+                The following two exercises show that the characteristic polynomial captures both the determinant and the trace of an operator:
+              </p>
+            </remark>
 
-          <subsection xml:id="subsec-artins-theorem"><title>Artin's Theorem (*)</title>
+            <example xml:id="exe-cp0"><title><m>\cp(0)</m></title>
 
-            <p>Coming soon!</p>
-            
+              <p>
+                Show <m>\cp_g(0) = (-1)^n \det(g)</m>.
+              </p>
+
+            </example>
+
+            <example xml:id="exe-charpoly-and-trace"><title>CharPoly and Trace</title>
+    
+              <p>
+                Show that if <m>\dim_F(V) = n</m>, then the coefficient of <m>x^{n-1}</m> in <m>\cp_g(x)</m> is <m>-\trace(g)</m>.
+              </p>
+    
+            </example>
+    
+            <example xml:id="exe-triangular-matrix-and-charpoly"><title>Triangular Matrix and CharPoly</title>
+    
+              <p>
+                If <m>A</m> is upper or lower triangular, then <m>\cp_A(x) = \prod_i (x - a_{i,i})</m>. As you may recall from an undergraduate class, in this case <m>a_{1,1}, \dots, a_{n,n}</m> are the eigenvalues of <m>A</m>. More on this later.
+              </p>
+    
+            </example>
+    
+            <example><title>Problem</title>
+    
+              <p>
+                Let <m>V</m> be the <m>\R</m>-vector space consisting of polynomials in the variable <m>x</m> of degree at most <m>3</m> and let <m>g: V \to V</m> be the <m>\R</m>-linear operator given by <me>g(p(x)) = p''(x) + (x+1) p'(x) + 7 p(x),</me>where <m>p''(x)</m> and <m>p'(x)</m> denote the first and second derivatives of <m>p(x)</m>. (You may take it on faith that <m>g</m> is <m>\R</m>-linear.) Find the determinant, the trace, and the characteristic polynomial of <m>g</m>.
+              </p>
+    
+            </example>
+    
+            <example><title>Problem</title>
+    
+              <p>
+                Let <m>F</m> be a field and <m>V = F[x]/I</m> with <m>I = F[x] \cdot f(x)</m> for some monic polynomial <m>f(x) = x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0</m>. Regard <m>V</m> as an <m>F</m>-vector space (via restriction of scalars along <m>F \into F[x]</m>), and recall that the function <m>g: V \to V</m> given by <m>g(v) = x \cdot v</m> is an <m>F</m>-linear operator on <m>V</m>.
+              </p>
+    
+              <p>
+                Prove that the characteristic polynomial of <m>g</m> is <m>f(x)</m>.
+              </p>
+    
+            </example>
+
           </subsection>
         </section>
 
@@ -26007,7 +26157,7 @@
 
           </subsection>
 
-        <subsection><title>Section </title>
+          <subsection><title>Section </title>
 
           <problem><title>Problem 4</title>
             <statement>
@@ -27616,7 +27766,8 @@
                   <p>
                           Let <m>A</m> denote the set of all subspaces of <m>V</m> such that <m>A\cap W=\{0\}</m>. We can order <m>A</m> with respect to inclusion. Let <m>X</m> be a totally ordered subset of <m>A</m>, and let <m>B</m> be the union of all the elements in <m>X</m>. Unions of subspaces are subspaces, and by 
                           DeMorgan's Laws 
-                          we see that <m>B\cap W=\{0\}</m>. Thus by 
+                          we see that <m>B\cap W=\{0\}</m>. 
+                          Thus by 
                           Zorn's Lemma 
                           there exists a maximal element of <m>A,</m> which we denote <m>U</m>. So <m>U\cap W=\{0\}</m> by definition.
 
@@ -32921,118 +33072,6 @@ Coming soon!
           </problem>
         </subsection>
         </section>
-
-
-        <!--
-        <section><title></title>
-        
-          
-
-          <problem><title>Problem 1</title>
-            <statement>
-              <p>Coming Soon!</p>
-            </statement>
-
-            <solution>
-              <p>Coming Soon!</p>
-            </solution>
-          
-          </problem>
-
-          <problem><title>Problem 2</title>
-            <statement>
-              <p>Coming Soon!</p>
-            </statement>
-
-            <solution>
-              <p>Coming Soon!</p>
-            </solution>
-          
-          </problem>
-
-          <problem><title>Problem 3</title>
-            <statement>
-              <p>Coming Soon!</p>
-            </statement>
-
-            <solution>
-              <p>Coming Soon!</p>
-            </solution>
-          
-          </problem>
-
-          </subsection>
-
-          <problem><title>Problem 4</title>
-            <statement>
-              <p>Coming Soon!</p>
-            </statement>
-
-            <solution>
-              <p>Coming Soon!</p>
-            </solution>
-          
-          </problem>
-
-          <problem><title>Problem 5</title>
-            <statement>
-              <p>Coming Soon!</p>
-            </statement>
-
-            <solution>
-              <p>Coming Soon!</p>
-            </solution>
-          
-          </problem>
-
-          <problem><title>Problem 6</title>
-            <statement>
-              <p>Coming Soon!</p>
-            </statement>
-
-            <solution>
-              <p>Coming Soon!</p>
-            </solution>
-          
-          </problem>
-
-          </subsection>
-
-          <problem><title>Problem 7</title>
-            <statement>
-              <p>Coming Soon!</p>
-            </statement>
-
-            <solution>
-              <p>Coming Soon!</p>
-            </solution>
-          
-          </problem>
-
-          <problem><title>Problem 8</title>
-            <statement>
-              <p>Coming Soon!</p>
-            </statement>
-
-            <solution>
-              <p>Coming Soon!</p>
-            </solution>
-          
-          </problem>
-
-          <problem><title>Problem 9</title>
-            <statement>
-              <p>Coming Soon!</p>
-            </statement>
-
-            <solution>
-              <p>Coming Soon!</p>
-            </solution>
-          
-          </problem>
-        
-        </section>
-        -->
 
       </appendix>
 
