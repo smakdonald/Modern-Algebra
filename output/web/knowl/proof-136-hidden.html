@@ -10,22 +10,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para">Let <span class="process-math">\(F \subseteq K \subseteq L\)</span> be extensions of fields, not necessarily finite.</div> <div class="para logical">
-<div class="para">Suppose that <span class="process-math">\(K/F\)</span> and <span class="process-math">\(L/K\)</span> are algebraic extensions. Let <span class="process-math">\(\a\in L\text{.}\)</span> Then <span class="process-math">\(\a\)</span> is the root of the polynomial</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-degree-formula.html">
-\begin{equation*}
-f(x)=a_nx^n+\dots+a_0,
-\end{equation*}
-</div>
-<div class="para">with <span class="process-math">\(a_{i}\in K\text{.}\)</span> Notice that <span class="process-math">\(f\)</span> is a polynomial in <span class="process-math">\(F(a_n,\dots,a_0)[x]\text{,}\)</span> making <span class="process-math">\(\a\)</span> is algebraic over this as well. Consider the chain of field extensions</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-degree-formula.html">
-\begin{equation*}
-F \subseteq F(a_0) \subseteq F(a_0,a_1) \subseteq \cdots \subseteq F(a_0, a_1, \dots, a_{n-1} )\subseteq F(a_0, \dots, a_{n}, \a)
-\end{equation*}
-</div>
-<div class="para">Since <span class="process-math">\(a_i\)</span> is algebraic over <span class="process-math">\(F\)</span> for all <span class="process-math">\(i\)</span> and <span class="process-math">\(\a\)</span> is algebraic over <span class="process-math">\(F(a_0, a_1, \dots, a_{n})\text{,}\)</span> by Theorem each step in this chain has finite degree. By the <a href="" class="xref" data-knowl="./knowl/thm-degree-formula.html" title="Theorem 19.30: The Degree Formula">The Degree Formula</a>, <span class="process-math">\([F(a_0, \dots, a_{n}, \a): F]\)</span> is finite and thus so is <span class="process-math">\([F(\a):F]\text{.}\)</span> By the Theorem again, <span class="process-math">\(\a\)</span> is algebraic over <span class="process-math">\(F\text{.}\)</span>
-</div>
-</div> <div class="para">Next suppose that <span class="process-math">\(L/F\)</span> is algebraic. Let <span class="process-math">\(\a\in K\text{.}\)</span> Then <span class="process-math">\(\a\in L\text{,}\)</span> and so it is algebraic over <span class="process-math">\(F\text{.}\)</span> Now let <span class="process-math">\(\b\in L\text{.}\)</span> Then <span class="process-math">\(\b\)</span> is the root of a polynomial in <span class="process-math">\(F\text{,}\)</span> which is also in <span class="process-math">\(K\text{,}\)</span> so <span class="process-math">\(L/K\)</span> is algebraic as well.</div> <div class="para">
-<span class="process-math">\(K=\Q(\sqrt{2})\)</span> is Galois over <span class="process-math">\(F=\Q\text{,}\)</span> and <span class="process-math">\(L=\Q(\sqrt{2},\sqrt[4]{2})\)</span> is Galois over <span class="process-math">\(K\text{,}\)</span> but <span class="process-math">\(L\)</span> is not Galois over <span class="process-math">\(F,\)</span> as the splitting field of <span class="process-math">\(x^4-2\)</span> has degree <span class="process-math">\(8\text{.}\)</span>
+<body class="ignore-math"><article class="hiddenproof"><div class="para">Let <span class="process-math">\(F\subseteq L\)</span> be fields and let <span class="process-math">\(x, y \in L\)</span> be algebraic elements over <span class="process-math">\(F\)</span> First, notice that <span class="process-math">\(xy\)</span> and <span class="process-math">\(x+y\)</span> are contained in <span class="process-math">\(F(x,y)\text{.}\)</span> As <span class="process-math">\(y\)</span> is algebraic over <span class="process-math">\(F\text{,}\)</span> it is the root of some polynomial <span class="process-math">\(f\)</span> with coefficients in <span class="process-math">\(f\text{.}\)</span> But <span class="process-math">\(f\)</span> is also contained in <span class="process-math">\(F(x)\text{,}\)</span> and thus the extension <span class="process-math">\([F(x,y):F(x)]\)</span> is algebraic. As <span class="process-math">\([F(x):F]\)</span> is algebraic as well, we see that <span class="process-math">\([F(x,y):F]\)</span> is an algebraic extension of fields. Thus <span class="process-math">\(xy\)</span> and <span class="process-math">\(x+y\)</span> are algebraic over <span class="process-math">\(F\text{.}\)</span>
 </div></article></body>
 </html>

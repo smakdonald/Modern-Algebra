@@ -13,15 +13,42 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h3 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">H.180.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">H.183.1</span><span class="period">.</span>
 </h3>
-<div class="para">Let <span class="process-math">\(I\)</span> be linearly independent in <span class="process-math">\(V\text{.}\)</span> Add elements to it until it spans <span class="process-math">\(V\text{,}\)</span> and denote this new set <span class="process-math">\(S\text{.}\)</span> Let <span class="process-math">\(\cP\)</span> denote the collection of all subsets <span class="process-math">\(X\)</span> of <span class="process-math">\(V\)</span> such that <span class="process-math">\(I\subseteq X \subseteq S\)</span> and <span class="process-math">\(X\)</span> is linearly independent. We make <span class="process-math">\(\cP\)</span> into a poset by the order relation <span class="process-math">\(\subseteq\text{,}\)</span> set containment.</div> <div class="para">We note that <span class="process-math">\(I \in \cP\text{.}\)</span>
-</div> <div class="para">Let <span class="process-math">\(\cT\)</span> be any totally ordered subset of <span class="process-math">\(\cP\text{.}\)</span> If <span class="process-math">\(\cT\)</span> is empty, then <span class="process-math">\(\cT\)</span> is (vacuously) bounded above by <span class="process-math">\(I\text{.}\)</span> Assume <span class="process-math">\(\cT\)</span> is non-empty. Let <span class="process-math">\(Z = \bigcup_{Y \in \cT} Y\text{.}\)</span> I claim <span class="process-math">\(Z \in \cP\text{.}\)</span>
-</div> <div class="para">Given <span class="process-math">\(z_1, \dots, z_m \in Z\text{,}\)</span> for each <span class="process-math">\(i\)</span> we have <span class="process-math">\(z_i \in Y_i\)</span> for some <span class="process-math">\(Y_i \in\cT\text{.}\)</span> Since <span class="process-math">\(\cT\)</span> is totally ordered, one of <span class="process-math">\(Y_1, \dots, Y_m\)</span> contains all the others and hence it contains all the <span class="process-math">\(z_i\)</span>'s. Since each <span class="process-math">\(Y_i\)</span> is linearly independent, this shows <span class="process-math">\(z_1, \dots, z_m\)</span> are linearly independent. We have shown that every finite subset of <span class="process-math">\(Z\)</span> is linearly independent, and hence <span class="process-math">\(Z\)</span> is linearly independent. Since <span class="process-math">\(\cT\)</span> is non-empty, <span class="process-math">\(Z \supseteq I\text{.}\)</span> Since each member of <span class="process-math">\(\cT\)</span> is contained in <span class="process-math">\(S\text{,}\)</span> <span class="process-math">\(Z \subseteq S\text{.}\)</span> Thus, <span class="process-math">\(Z \in \cP\text{,}\)</span> and it is clearly an upper bound for <span class="process-math">\(\cT\text{.}\)</span>
-</div> <div class="para">We may thus apply <a href="" class="xref" data-knowl="./knowl/lem-zorn.html" title="Lemma 10.44: Zorn's Lemma">Zorn's Lemma</a> to conclude that <span class="process-math">\(\cP\)</span> has at least one maximal element, <span class="process-math">\(B\text{.}\)</span> I claim <span class="process-math">\(B\)</span> is a basis of <span class="process-math">\(V\text{.}\)</span>
-</div> <div class="para">Note that <span class="process-math">\(B\)</span> is linearly independent and <span class="process-math">\(I \subseteq B \subseteq S\)</span> by construction. We need to show that it spans <span class="process-math">\(V\text{.}\)</span> Suppose not. Since <span class="process-math">\(S\)</span> spans <span class="process-math">\(V\text{,}\)</span> if <span class="process-math">\(S \subseteq \Span(B)\text{,}\)</span> then <span class="process-math">\(\Span(B)\)</span> would have to be all of <span class="process-math">\(V\text{.}\)</span> (For note that if <span class="process-math">\(\Span(S) = V\)</span> and <span class="process-math">\(S \subseteq \Span(B)\text{,}\)</span> then for any <span class="process-math">\(v \in V\)</span> we may write <span class="process-math">\(v = \sum_i c_i s_i\)</span> for <span class="process-math">\(s_i \in S\)</span> and <span class="process-math">\(s_i = \sum_j a_{i,j} b_{i,j}\)</span> with <span class="process-math">\(b_{i,j} \in B\)</span> and hence <span class="process-math">\(v= \sum_{i,j} c_i a_{i,j} b_{i,j}\text{,}\)</span> which implies <span class="process-math">\(\Span(B) = V\text{.}\)</span>)</div> <div class="para">Since we are assuming <span class="process-math">\(\Span(B) \ne V\text{,}\)</span> there must be at least one <span class="process-math">\(v \in S\)</span> such that <span class="process-math">\(v \notin \Span(B)\text{.}\)</span> Set <span class="process-math">\(X := B \cup \{v\}\text{.}\)</span> Clearly, <span class="process-math">\(I \subset X \subseteq S\)</span> and, by Lemma , <span class="process-math">\(X\)</span> is linearly independent. This shows that <span class="process-math">\(X\)</span> is an element of <span class="process-math">\(\cP\)</span> that is strictly bigger than <span class="process-math">\(B\text{,}\)</span> contrary to the maximality of <span class="process-math">\(B\text{.}\)</span> So, <span class="process-math">\(B\)</span> must span <span class="process-math">\(V\)</span> and hence it is a basis.</div> <div class="para">Thus <span class="process-math">\(I\)</span> is contained in the basis <span class="process-math">\(B\text{.}\)</span>
+<div class="para logical">
+<div class="para">Consider <span class="process-math">\(f(x) = x^6 + 3 \in \Q[x]\text{.}\)</span>
+</div>
+<ol class="decimal">
+<li><div class="para logical">
+<div class="para">Let <span class="process-math">\(a\)</span> be a root of <span class="process-math">\(f(x)\text{.}\)</span> Note that <span class="process-math">\((\frac{a^3+1}{2})^2=\frac{a^3-1}{2}\text{,}\)</span> and so</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(\frac{a^3+1}{2})^6=((\frac{a^3+1}{2})^2)^3=(\frac{a^3-1}{2})^3=1,
+\end{equation*}
+</div>
+<div class="para">so yay! It's primitive. Using one <span class="process-math">\(6\)</span>th primitive root we can obtain all the others, specifically <span class="process-math">\(e^{2\pi i/6}\text{.}\)</span> So we multiply each root by this to get all the others. So we have our splitting field.</div>
+</div></li>
+<li>
+<div class="para">Since <span class="process-math">\(\Q(a)\)</span> is Galois, we see that <span class="process-math">\([\Q(a):\Q]=6\text{.}\)</span> So <span class="process-math">\(\Gal(\Q(a)/\Q)\)</span> is either <span class="process-math">\(S_3\)</span> or <span class="process-math">\(\Z/6.\)</span> The roots of <span class="process-math">\(f\)</span> are <span class="process-math">\(\alpha_i=\sqrt[6]{3}e^{{(\pi i/6)}^{2i-1}}\)</span> for <span class="process-math">\(1\leq i\leq 6\text{.}\)</span>
+</div>
+<div class="para">By the Porism there exists a <span class="process-math">\(\sigma\in\Gal(\Q(a)/\Q)\)</span> such that <span class="process-math">\(\sigma(\alpha_1)=\alpha_2\text{.}\)</span> Let <span class="process-math">\(\zeta=e^{\pi i/3}\text{,}\)</span> and note that <span class="process-math">\(\alpha_i=\alpha_{i-1}\zeta\text{.}\)</span> Additionally, note that <span class="process-math">\(\frac{\alpha_i^3+1}{2}=\zeta\)</span> when <span class="process-math">\(i=1,3,5\)</span> and <span class="process-math">\(\frac{\alpha_i^3+1}{2}=\zeta^5\)</span> when <span class="process-math">\(i=2,4,6\text{.}\)</span>
+</div>
+<div class="para logical">
+<div class="para">Observe then that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sigma(\alpha_2)=\sigma(\alpha_1)\sigma(\zeta)=\alpha_2\frac{\sigma(\alpha_1)^3+1}{2}=\alpha_2\zeta^5=\alpha_1.
+\end{equation*}
+</div>
+<div class="para">Similarly, we see that <span class="process-math">\(\sigma(\alpha_3)=\alpha_6\)</span> and <span class="process-math">\(\sigma(\alpha_4)=\alpha_5\text{.}\)</span> Thus <span class="process-math">\(\sigma\)</span> corresponds to the permutation <span class="process-math">\((12)(36)(45)\text{.}\)</span>
 </div>
 </div>
-<span class="incontext"><a href="section-87.html#solution-325" class="internal">in-context</a></span>
+<div class="para">Using the Porism again we see there exists a <span class="process-math">\(\tau\in\Gal(\Q(a)/\Q)\)</span> such that <span class="process-math">\(\tau(\alpha_2)=\alpha_3\text{.}\)</span> Using a similar process as above we see that <span class="process-math">\(\tau\)</span> corresponds to <span class="process-math">\((14)(23)(46)\text{.}\)</span> However, observe that <span class="process-math">\(\sigma\tau=(153)(264)\text{,}\)</span> while <span class="process-math">\(\tau\sigma=(135)(246)\text{.}\)</span> Thus these elements do not commute, so we cannot be in <span class="process-math">\(\Z/6\text{.}\)</span> Thus <span class="process-math">\(\Gal(\Q(a)/\Q)\cong S_3\text{.}\)</span>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<span class="incontext"><a href="section-86.html#solution-325" class="internal">in-context</a></span>
 </body>
 </html>

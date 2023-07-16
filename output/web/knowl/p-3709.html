@@ -12,17 +12,16 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para logical">
-<div class="para">Let <span class="process-math">\(G\)</span> be a group of order <span class="process-math">\(3^2\cdot 11\cdot 17\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/thm-sylow.html" title="Theorem 6.11: Sylow's Theorem">Sylow's Theorem</a> we see the following:</div>
-<ul class="disc">
-<li><div class="para">
-<span class="process-math">\(n_{11}|153\)</span> and <span class="process-math">\(n_{11}\equiv 1\mod{11}\text{,}\)</span> and so <span class="process-math">\(n_{11}=1\text{.}\)</span>
-</div></li>
-<li><div class="para">
-<span class="process-math">\(n_{17}|99\)</span> and <span class="process-math">\(n_{17}\equiv 1\mod{17}\text{,}\)</span> and so <span class="process-math">\(n_{17}=1\)</span> as well. - <span class="process-math">\(n_3|187\)</span> and <span class="process-math">\(n_3\cong 1\mod{3}\text{,}\)</span> so actually <span class="process-math">\(n_3=1\)</span> too. Thus the unique Sylow <span class="process-math">\(11\)</span>-subgroup and Sylow <span class="process-math">\(17\)</span>-subgroup, denoted <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\text{,}\)</span> respectively, are normal in <span class="process-math">\(G\text{.}\)</span>
-</div></li>
-</ul>
+<div class="para logical"><ol class="decimal">
+<li>
+<div class="para">Notice that <span class="process-math">\(J\)</span> is a triangular matrix with <span class="process-math">\(0\)</span>'s along the diagonal. Thus <span class="process-math">\(\cp_J(x)=x^{2n}\text{,}\)</span> the product of the diagonal entries of the matrix <span class="process-math">\(J-xI\text{.}\)</span>
 </div>
-<span class="incontext"><a href="section-73.html#p-3709" class="internal">in-context</a></span>
+<div class="para">Squaring a triangular matrix moves everything one down (Proof?), and so <span class="process-math">\(x^{2n-1}\)</span> should do it. Squaring <span class="process-math">\(J\)</span> just moves us one closer, so <span class="process-math">\(x^{2n-2}\)</span>
+</div>
+</li>
+<li><div class="para">As <span class="process-math">\(\cp_{J^2}(x)=x^{2n}\text{,}\)</span> the only roots of it are <span class="process-math">\(0\text{,}\)</span> and thus these are the only elementary divisors of <span class="process-math">\(J^2\text{.}\)</span>
+</div></li>
+</ol></div>
+<span class="incontext"><a href="section-72.html#p-3709" class="internal">in-context</a></span>
 </body>
 </html>

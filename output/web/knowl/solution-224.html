@@ -13,33 +13,22 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h3 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">H.79.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">H.82.1</span><span class="period">.</span>
 </h3>
 <div class="para logical"><ol class="decimal">
-<li><div class="para logical">
-<div class="para">Notice <span class="process-math">\(\cp_A(x)=\det(A-xI)\text{.}\)</span> So we have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{align}\cp_A(x)&amp;=-x\det\begin{bmatrix} -x &amp; 0 \\ 1 &amp; -2-x\end{bmatrix}-(-1)\det\begin{bmatrix} 1 &amp; 0 \\ 0 &amp; -2-x\end{bmatrix}+2\det\begin{bmatrix} 1 &amp; -x \\ 0 &amp; 1\end{bmatrix}\\&amp;=-x(-x(-2-x))+(-2-x)+2(1)\\&amp;=-x^3-2x^2-x\\&amp;-x(x^2+2x+1)\\&amp;=-x(x+1)^2.\end{align}
-\end{equation*}
-</div>
-<div class="para">Not so bad! Now, the invariant factors all divide the characteristic polynomial and must divide the following factor, so our options for sets of invariant factors are the following: - <span class="process-math">\(\{-x(x+1)^2\}\)</span> - <span class="process-math">\(\{(x+1),-x(x+1)\}\)</span> However, the largest invariant factor is also the minimal polynomial. So we check to see if <span class="process-math">\(-A(A+I)=0\text{.}\)</span> Luckily, the very first calculation shows that this is not the case. Thus the minimum polynomial is the characteristic polynomial is the only invariant factor of <span class="process-math">\(A\text{.}\)</span> Thus the RCF of <span class="process-math">\(A\)</span> is</div>
-<div class="displaymath process-math">
-\begin{equation*}
-C(-x^3-2x^2-x)=\begin{bmatrix} 0 &amp; 0 &amp; 0 \\ 1 &amp; 0 &amp; 1 \\0 &amp; 1 &amp; 2\end{bmatrix}.
-\end{equation*}
-</div>
+<li><div class="para">First, note that <span class="process-math">\(f\)</span> is irreducible in <span class="process-math">\(\Q[x]\)</span> by <a href="" class="xref" data-knowl="./knowl/thm-eisensteins-criterion.html" title="Theorem 16.17: Eisenstein's Criterion">Eisenstein's Criterion</a> (<span class="process-math">\(p=3\)</span>) The roots of <span class="process-math">\(f\)</span> are - <span class="process-math">\(\sqrt[4]3\text{,}\)</span> - <span class="process-math">\(\sqrt[4]3i\text{,}\)</span> - <span class="process-math">\(-\sqrt[4]3\text{,}\)</span> and - <span class="process-math">\(-\sqrt[4]3i\text{.}\)</span> Let <span class="process-math">\(F=\Q(\sqrt[4]3)\)</span> and notice <span class="process-math">\([F:\Q]=4\text{.}\)</span> As <span class="process-math">\(F\subseteq\R\)</span> we see that <span class="process-math">\([F(i):F]=2\text{,}\)</span> and thus <span class="process-math">\([K:\Q]=8\text{,}\)</span> meaning our basis will have eight elements: 1. 1 2. <span class="process-math">\(\sqrt[4]3\)</span> 3. <span class="process-math">\((\sqrt[4]3)^2\)</span> 4. <span class="process-math">\((\sqrt[4]3)^3\)</span> 5. <span class="process-math">\(i\)</span> 6. <span class="process-math">\(\sqrt[4]3i\)</span> 7. <span class="process-math">\((\sqrt[4]3)^2i\)</span> 8. <span class="process-math">\((\sqrt[4]3)^3i\)</span>
 </div></li>
-<li><div class="para logical">
-<div class="para">Luckily for us, <span class="process-math">\(\cp_A(x)\)</span> factors completely into linear terms! So our elementary divisors are <span class="process-math">\(-x\)</span> and <span class="process-math">\((x+1)^2\text{.}\)</span> We see <span class="process-math">\(J_1(0)=\begin{bmatrix} 0 \end{bmatrix}\)</span> and <span class="process-math">\(J_2(-1)=\begin{bmatrix} -1 &amp; 0 \\ 1 &amp; -1\end{bmatrix}\text{,}\)</span> so the Jordan Canonical form of <span class="process-math">\(A\)</span> is</div>
-<div class="displaymath process-math">
-\begin{equation*}
-J=\begin{bmatrix} 0 &amp; 0 &amp; 0 \\ 0 &amp; -1 &amp; 0 \\0 &amp; 1 &amp; -1\end{bmatrix}.
-\end{equation*}
+<li>
+<div class="para">Now that <span class="process-math">\(K\)</span> has been verified to be a splitting field, we see that <span class="process-math">\(\Aut(K/Q)\)</span> is isomorphic to a subgroup of <span class="process-math">\(S_4\)</span> of degree <span class="process-math">\(8\text{.}\)</span>
 </div>
-</div></li>
-</ol></div> <div class="para"></div>
+<div class="para">Any subgroup of <span class="process-math">\(S_4\)</span> of order <span class="process-math">\(8\)</span> is a Sylow <span class="process-math">\(2\)</span>-subgroup. By <a href="" class="xref" data-knowl="./knowl/thm-sylow.html" title="Theorem 6.11: Sylow's Theorem">Sylow's Theorem</a>s, the number of Sylow <span class="process-math">\(2\)</span>-subgroups is either <span class="process-math">\(1\)</span> or <span class="process-math">\(3\text{.}\)</span>
 </div>
-<span class="incontext"><a href="section-76.html#solution-224" class="internal">in-context</a></span>
+<div class="para">If there are three they are all conjugate, and conjugation induces an isomorphism on the group, we see that all three subgroups are isomorphic.</div>
+<div class="para">Let <span class="process-math">\(X\)</span> be the set of left cosets of the subgroup <span class="process-math">\(\{e,s\}\)</span> of <span class="process-math">\(D_8\text{.}\)</span> Note that <span class="process-math">\(|X| = 4\text{.}\)</span> Let <span class="process-math">\(G\)</span> act on <span class="process-math">\(X\)</span> by left multiplication. This action induces a homomorphism <span class="process-math">\(\varphi : G \to P(X)\)</span> where <span class="process-math">\(P(X)\cong S_4\)</span> is the permutation group on <span class="process-math">\(X\text{.}\)</span> As shown in class, the kernel of this homomorphism is the largest normal subgroup contained in <span class="process-math">\(\{e,s\}\text{,}\)</span> which is <span class="process-math">\(\{e\}\text{.}\)</span> Thus, <span class="process-math">\(\varphi\)</span> is injective and the image of <span class="process-math">\(\varphi\)</span> is a subgroup of <span class="process-math">\(S_4\)</span> isomorphic to <span class="process-math">\(D_8\text{.}\)</span>
+</div>
+</li>
+</ol></div>
+</div>
+<span class="incontext"><a href="section-75.html#solution-224" class="internal">in-context</a></span>
 </body>
 </html>

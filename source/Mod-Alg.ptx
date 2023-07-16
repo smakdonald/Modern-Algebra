@@ -609,7 +609,7 @@
 
             <example xml:id="ex-binop"><title>Binary Operations</title>
               <p>
-                <ul>
+                <ol>
                   <li>
                     <p>
                       Addition (<m>-+-</m>) and multiplication (<m>-\cdot-</m>) are both binary operations on <m>\Z,\Q,\R,</m> and <m>\C</m>.
@@ -641,7 +641,7 @@
                       is a binary operation on <m>F(A)</m>.
                     </p>
                   </li>
-                </ul>
+                </ol>
               </p>
             </example>
 
@@ -10020,7 +10020,7 @@
     
       </chapter>
 
-      <chapter xml:id="ch-domains"><title>Domains</title>
+      <chapter xml:id="ch-domains"><title>Domains and Fraction Fields</title>
     
         <section xml:id="sec-eds"><title>Euclidian Domains</title>
 
@@ -10431,14 +10431,25 @@
     
         <section xml:id="subsec-noeth"><title>Noetherian Rings</title>
 
-          <blockquote><p><q>All good things must come to an end.</q></p><attribution>Geoffrey Chaucer</attribution></blockquote>
+          <blockquote>
+            <p>
+              <q>
+                All good things must come to an end.
+              </q>
+            </p>
+            <attribution>Geoffrey Chaucer</attribution>
+          </blockquote>
 
-          <p>Most rings that commutative algebraists naturally want to study are noetherian. Noetherian rings are named after Emmy Noether, who is in many ways the mother of modern commutative algebra.</p>
+          <p>
+            Most rings that commutative algebraists naturally want to study are noetherian. 
+            Noetherian rings are named after Emmy Noether, who is in many ways the mother of modern commutative algebra.
+          </p>
           
           <definition xml:id="def-noetherian-ring"><title>Noetherian Ring</title>
             <statement>
               <p>
-                Suppose <m>R</m> is a commutative ring. Then <m>R</m> is called a <em>noetherian ring</em> if <m>R</m> satisfies the ascending chain condition on ideals - i.e., for every chain of ideals of <m>R</m> 
+                Suppose <m>R</m> is a commutative ring. 
+                Then <m>R</m> is called a <em>noetherian ring</em> if <m>R</m> satisfies the ascending chain condition on ideals - i.e., for every chain of ideals of <m>R</m> 
                 <me>
                   I_1 \subseteq I_2  \subseteq I_3 \subseteq \cdots
                 </me> 
@@ -10447,7 +10458,13 @@
             </statement>
           </definition>
 
-          <remark><p>Unlike many modern sources, we choose not to capitalize <q>noetherian</q>. The convention of not capitalizing mathematical adjectives has a long history and is widely followed in mathematical literature. For example, other mathematical adjectives that are not capitalized include "abelian", "euclidean", and "gaussian" </p></remark>
+          <convention>
+            <p>
+              Unlike many modern sources, we choose not to capitalize <q>noetherian</q>. 
+              The convention of not capitalizing mathematical adjectives has a long history and is widely followed in mathematical literature. 
+              For example, other mathematical adjectives that are not capitalized include "abelian", "euclidean", and "gaussian" 
+            </p>
+          </convention>
     
           <theorem xml:id="lem-pids-are-noetherian"><title>PIDs are Noetherian</title>
             <statement>
@@ -10458,7 +10475,14 @@
     
             <proof>
               <p>
-                Consider and ascending chain of ideals of <m>R</m>; it must have the form <me>(a_1)\subseteq (a_2) \subseteq (a_3) \subseteq \cdots \subseteq (a_i)\subseteq (a_{i+1})\subseteq \cdots.</me> Consider <m>I=\bigcup_{i\geq 1} (a_i)</m> which is an ideal of <m>R</m> by the argument given in Theorem . Since <m>R</m> is a PID, <m>I=(b)</m> for some <m>b\in R</m>. Since <m>b\in I=\bigcup_{i\geq 1} (a_i)</m>, we must have <m>b\in (a_n)</m> for some <m>n</m>. Then we see that <m>I=(b)\subseteq (a_n)\subseteq (a_{n+1})\subseteq \cdots (a_j) \subseteq \cdots \subseteq I</m> for all <m>j\geq n</m>, thus <m>I=(a_j)</m> for <m>j\geq n</m> and the chain stabilizes as desired.
+                Consider and ascending chain of ideals of <m>R</m>; it must have the form 
+                <me>
+                  (a_1)\subseteq (a_2) \subseteq (a_3) \subseteq \cdots \subseteq (a_i)\subseteq (a_{i+1})\subseteq \cdots
+                </me> 
+                Consider <m>I=\bigcup_{i\geq 1} (a_i)</m> which is an ideal of <m>R</m> by the argument given in <xref provisional="something"/>. 
+                Since <m>R</m> is a PID, <m>I=(b)</m> for some <m>b\in R</m>. 
+                Since <m>b\in I=\bigcup_{i\geq 1} (a_i)</m>, we must have <m>b\in (a_n)</m> for some <m>n</m>. 
+                Then we see that <m>I=(b)\subseteq (a_n)\subseteq (a_{n+1})\subseteq \cdots (a_j) \subseteq \cdots \subseteq I</m> for all <m>j\geq n</m>, thus <m>I=(a_j)</m> for <m>j\geq n</m> and the chain stabilizes as desired.
               </p>
             </proof>
           </theorem>
@@ -10478,7 +10502,14 @@
     
             <proof>
               <p>
-                Pick <m>x \in R</m> with <m>x \ne 0</m> and <m>x \notin R^\times</m>. If <m>x</m> is irreducible, there is nothing to prove. Otherwise, we have <m>x = x_1 x_2</m> for non-units <m>x_1, x_2</m>. If both <m>x_1, x_2</m> are irreducible, the proof is complete. Otherwise, one or both of them factors non-trivially. We may express this conveniently by saying that <m>x_1 = x_3x_4</m> and <m>x_2 = x_5x_6</m> such that either <m>x_3</m> and <m>x_4</m> are both non-units or <m>x_5</m> and <m>x_6</m> are both non-units. (E.g., if <m>x_2</m> is irreducible, we could set <m>x_5 = x_2, x_6 = 1</m>.) Continuing in the this manner, we form a binary tree with <m>x</m> at the top, <m>x_1, x_2</m> one level down, <m>x_3,x_4,x_5,x_6</m> one level below that, etc.
+                Pick <m>x \in R</m> with <m>x \ne 0</m> and <m>x \notin R^\times</m>. 
+                If <m>x</m> is irreducible, there is nothing to prove. 
+                Otherwise, we have <m>x = x_1 x_2</m> for non-units <m>x_1, x_2</m>. 
+                If both <m>x_1, x_2</m> are irreducible, the proof is complete. 
+                Otherwise, one or both of them factors non-trivially. 
+                We may express this conveniently by saying that <m>x_1 = x_3x_4</m> and <m>x_2 = x_5x_6</m> such that either <m>x_3</m> and <m>x_4</m> are both non-units or <m>x_5</m> and <m>x_6</m> are both non-units. 
+                (E.g., if <m>x_2</m> is irreducible, we could set <m>x_5 = x_2, x_6 = 1</m>.) 
+                Continuing in the this manner, we form a binary tree with <m>x</m> at the top, <m>x_1, x_2</m> one level down, <m>x_3,x_4,x_5,x_6</m> one level below that, etc.
               </p>
     
               <p>
@@ -10486,7 +10517,10 @@
               </p>
     
               <p>
-                We need to rule out the possibility that the process never terminates. If it never terminates, we will have built an infinite binary tree with the property that some route downward through the tree consists of an infinite list of irreducible elements <m>y_1, y_2, y_3,\dots</m> such that <m>x = y_1z_1</m> for a non-unit <m>z_1</m> and, for each <m>i \geq 1</m>, <m>y_{i} = y_{i+1} z_{i+1}</m> for a non-unit <m>z_{i+1}</m>. Since <m>R</m> is an integral domain, we have <m>(x) \subsetneq (y_1)</m> and <m>(y_i) \subsetneq (y_{i+1})</m> for all <m>i \geq 1</m>. (E.g., if <m>(x) = (y_1)</m> then <m>y_1 = xv</m> and hence <m>x = xvz_1</m>, so that <m>vz_1 = 1</m>, contrary to <m>z_1</m> being a non-unit.)
+                We need to rule out the possibility that the process never terminates. 
+                If it never terminates, we will have built an infinite binary tree with the property that some route downward through the tree consists of an infinite list of irreducible elements <m>y_1, y_2, y_3,\dots</m> such that <m>x = y_1z_1</m> for a non-unit <m>z_1</m> and, for each <m>i \geq 1</m>, <m>y_{i} = y_{i+1} z_{i+1}</m> for a non-unit <m>z_{i+1}</m>. 
+                Since <m>R</m> is an integral domain, we have <m>(x) \subsetneq (y_1)</m> and <m>(y_i) \subsetneq (y_{i+1})</m> for all <m>i \geq 1</m>. 
+                (E.g., if <m>(x) = (y_1)</m> then <m>y_1 = xv</m> and hence <m>x = xvz_1</m>, so that <m>vz_1 = 1</m>, contrary to <m>z_1</m> being a non-unit.)
               </p>
     
               <p>
@@ -10499,7 +10533,165 @@
             </proof>
           </theorem>
 
-          <remark><p>For those mathematicians who refute the Axiom of Choice (though they are few and far between), noetherian rings provide a haven of sorts within the world of algebra. This is because the existence of a maximal ideal is guarenteed in noetherian rings, given that every ascending chain of ideals stabilizes.</p></remark>
+          <remark>
+            <p>
+              For those mathematicians who refute the Axiom of Choice (though they are few and far between), noetherian rings provide a haven of sorts within the world of algebra. 
+              This is because the existence of a maximal ideal is guarenteed in noetherian rings, given that every ascending chain of ideals stabilizes.
+            </p>
+          </remark>
+    
+        </section>
+
+        <section xml:id="sec-field-of-fractions"><title>Fields of Fractions</title>
+
+          <blockquote>
+            <p>
+              <q>Food is a common denominator for all people.</q>
+            </p>
+            <attribution>Guy Fieri</attribution>
+          </blockquote>
+          
+          <definition xml:id="def-multiplicatively-closed"><title>Multiplicately Closed Set</title>
+            <statement>
+              <p>
+                Suppose <m>R</m> is a commutative ring and <m>S \subseteq R</m> is a subset such that
+              </p>
+    
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      <m>1 \in S</m>,
+                    </p>
+                  </li>
+    
+                  <li>
+                    <p>
+                      <m>S</m> is closed under multiplication (i.e., if <m>x,y \in S</m>, then <m>xy \in S</m>), and
+                    </p>
+                  </li>
+    
+                  <li>
+                    <p>
+                      <m>S</m> does not contain <m>0</m> nor any zerodivisors.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+    
+              <p>
+                Such a subset <m>S</m> is called a <em>multiplicatively closed subset of non zerodivisors</em> of <m>R</m>.
+              </p>
+            </statement>
+          </definition>
+    
+          <example><title>Examples of Multaplicatively Closed Sets</title>
+            <p>
+              Two types of multiplicatively closed sets are most commonly used in practice:
+              <ul>
+                <li>
+                  <p>
+                    If <m>R</m> is a field then <m>S=R\setminus \{0\}</m> is a multiplicatively closed set of non zerodivisors.
+                  </p>
+                </li>
+    
+                <li>
+                  <p>
+                    If <m>R</m> is an arbitrary ring with <m>1\neq 0</m> and <m>x\in R</m> is a non zerodivisor then the set of non negative powers of <m>x</m>, <m>S=\{x^n \mid n\in \mathbb{Z}, n\geq 0\}</m>, is multiplicatively closed.
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </example>
+    
+          <definition xml:id="def-field-of-fractions"><title>Field of Fractions</title>
+            <statement>
+              <p>
+                If <m>R</m> is an integral domain and <m>S</m> is a multiplicatively closed subset of nonzerodivisors, the <em>field of fractions</em> <m>S^{-1}R</m> is the set of equivalence classes 
+                <me>
+                  S^{-1}R=\left\{\frac{r}{s} \mid r\in R,s\in S\right\}/\sim
+                </me> 
+                where the equivalence relation <m>\sim</m> is defined by 
+                <me>
+                  \frac{r}{s}\sim\frac{r'}{s'} \;\text{if and only if}\; rs'=r's.
+                </me>
+              </p>
+    
+              <p>
+                From now on we just write <m>=</m> instead of <m>\sim</m> when dealing with fractions.
+              </p>
+    
+              <p>
+                Addition and multiplication on <m>S^{-1}R</m> are given by 
+                <me>
+                  \frac{r}{s} + \frac{r'}{s'} = \frac{rs' + r's}{ss'} \;\text{and}\; \frac{r}{s} \cdot \frac{r'}{s'} = \frac{rr'}{ss'}.
+                </me>
+              </p>
+            </statement>
+          </definition>
+    
+          <theorem xml:id="thm-field-of-fractions-is-field"><title>Field of Fractions is a Field</title>
+            <statement>
+              <p>
+                If <m>R</m> is an integral domain and <m>S</m> is a multiplicatively closed subset of nonzerodivisors, the rules given in the above definition for <m>+</m> and <m>\cdot</m> make <m>S^{-1} R</m> into a field. Moreover, the function <m>R\to S^{-1}R</m> sending <m>r</m> to <m>\frac{r}{1}</m> is an injective ring homomorphism.
+              </p>
+            </statement>
+    
+            <proof>
+              <p>
+                There is a lot of small things to check and we'll just do a few. Right off the bat we need to be sure the given equivalence relation really is one. The reflexive and symmetric properties are clear. But the proof of transitivity illustrates a key point: Say <m>\frac{r}{s} \sim \frac{r'}{s'} \sim \frac{r''}{s''}</m>. Then <m>rs'= r's</m> and <m>r's'' = r''s'</m>. We need to deduce that <m>rs'' = r''s</m>. The given equations imply <m>rs's'' = r'ss'' = r''ss'</m> and since <m>s'</m> is a nonzerodivisor we conclude <m>rs'' = r''s</m>. This is in fact the only time that the fact that <m>S</m> consists of nonzerodivisors is used.
+              </p>
+    
+              <p>
+                We also need to be sure our rules for <m>+</m> and <m>\cdot</m> make sense and are independent of representation. They <q>make sense</q> since we assume <m>S</m> is closed under <m>\cdot</m>. To show <m>+</m> is independent of representations, say <m>\frac{r}{s} \sim \frac{r''}{s''}</m>, so that <m>rs'' = r''s</m>. Then <me>\frac{r}{s} + \frac{r'}{s'} := \frac{rs' + r's}{ss'}</me> and <me>\frac{r''}{s''} + \frac{r'}{s'} := \frac{r''s' + r's''}{s''s'}</me> and so we need to show <m>(rs' + r's)(s''s') \sim (r''s' + r's'')(ss')</m>. This is clear upon expaning out both sides and using <m>rs'' = r''s</m>. In a similar way one shows <m>\cdot</m> is well-defined.
+              </p>
+        
+              <p>
+                From now on we just write <m>=</m> instead of <m>\sim</m> when dealing with fractions.
+              </p>
+        
+              <p>
+                The associative and distributive axioms involve a straightfoward but tedious check, and we skip them entirely. The fact that <m>+</m> and <m>\cdot</m> are commutative is clear from their definitions. <m>S^{-1}R</m> is a group under addition since it has a <m>0</m> element, namely <m>\frac{0}{1}</m>, and <m>\frac{r}{s} +
+                \frac{-r}{s} = \frac{rs - rs}{s^2} = \frac{0}{s^2} = \frac{0}{1}</m>, with the last equality holding since <m>0 \cdot 1 = s^2 \cdot 0</m>. The <m>1</m> element is <m>\frac{1}{1}</m>. (Note that we have used that <m>1 \in S</m> a couple times here — indeed, without this assumption <m>S</m> could be empty and then <m>S^{-1}R</m> would be the empty set.)
+              </p>
+    
+              <p>
+                <m>R</m> being a domain means <m>xy=0</m> implies (<m>x=0</m> or <m>y=0</m>). The contrapositive to this statement is: if <m>x\neq 0</m> and <m>y\neq 0</m> then <m>xy\neq 0</m>, which shows <m>S</m> is a multiplicatively closed set of nonzerodivisors.
+              </p>
+    
+              <p>
+                It remains only to show every non-zero element of <m>S^{-1}R</m> is a unit. Given <m>\frac{r}{s} \ne 0</m>, note that <m>r \ne 0</m> and hence <m>r \in S</m>. So <m>\frac{s}{r}</m> is also an element of <m>S^{-1}R</m>. We have <m>\frac{r}{s} \frac{s}{r} = \frac{sr}{sr} = \frac{1}{1}</m>, where the last equation holds by the definition of <m>\sim</m>.
+              </p>
+    
+              <p>
+                The fact that <m>r \mapsto \frac{r}{1}</m> is a ring homomorphism is straightforward to check. Its injective since <m>\frac{r}{1} = \frac{0}{1}</m> implies <m>r = 0</m>.
+              </p>
+            </proof>
+          </theorem>
+    
+          <example><title>Examples of Fields of Fractions</title>
+            <p>
+              <ol>
+                <li>
+                  <p>
+                    For a specific example, the field of fractions of <m>\mathbb{Z}</m> is <m>\mathbb{Q}</m>.
+                  </p>
+                </li>
+    
+                <li>
+                  <p>
+                    or another, if <m>d</m> is a squarefree integer and <m>R = \mathbb{Z}[\sqrt{d}]</m> is an integral domain and we will show soon that its field of fractions is (isomorphic to) the field <m>\mathbb{Q}(\sqrt{d})</m>.
+                  </p>
+                </li>
+    
+                <li>
+                  <p>
+                    For yet another, <m>{\mathbb{R}}[x]</m> is an integral domain. Its field of fractions, usually denoted <m>{\mathbb{R}}(x)</m> constists of all <em>rational functions</em>. This last example could be generalized by replacing <m>{\mathbb{R}}</m> with any field and also by using any number of variables.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </example>
     
         </section>
         
@@ -11244,10 +11436,6 @@
           </theorem>
           
         </section>
-
-      </chapter>
-
-      <chapter xml:id="ch-freemod"><title>Free Modules</title>
 
         <section xml:id="sec-linear"><title>Linear Independence</title>
 
@@ -12452,13 +12640,7 @@
 
       </chapter>
 
-      <chapter xml:id="ch-vectors"><title>Vector Spaces</title>
-
-        <!--
-       ***************
-        Chapter: Vector Spaces
-       ****************
-        -->
+      <chapter xml:id="ch-vectors"><title>Vector Spaces and Linear Transformations</title>
 
         <section xml:id="sec-vecbasis"><title>Existence of Bases</title>
 
@@ -13274,16 +13456,6 @@
           </exercises>
           
         </section>
-
-      </chapter>
-
-      <chapter xml:id="sec-transforms"><title>Linear Transformations</title>
-
-        <!--
-       ***********************************
-        Chapter: Linear Transformations
-       ***********************************
-        -->
 
         <section xml:id="sec-basics"><title>Basics</title>
 
@@ -14539,12 +14711,6 @@
 
       <chapter xml:id="ch-modgen"><title>Finitely Generated Modules over PIDs</title>
 
-        <!--
-       ***************
-        Chapter: Finitely Generated Modules over PIDs
-       ****************
-        -->
-
         <section xml:id="sec-modpres"><title>Finitely Presented Modules</title>
 
           <remark>
@@ -14566,77 +14732,108 @@
           </definition>
 
           <example xml:id="exe-z-module-presentation"><title><m>\Z</m>-Module Presentation</title>
-
             <p>
-              What <m>\Z</m>-module <m>M</m> is presented by <me>
-  A =
-  \begin{bmatrix}
-  2 &amp; 1 &amp; 0 \\
-  3 &amp; 9 &amp; 5 \\
-  1 &amp; -2 &amp; 7 \\
-  0 &amp; 1 &amp; 2 \\
-  \end{bmatrix}?</me>Formally, <m>M</m> is the quotient module <m>M=\Z^4/\im(T_A)</m>, where <m>T_A:\Z^3\to \Z^4</m> is defined by <m>T_A(v)=Av</m>. Since <m>\Z^4</m> is generated by its standard basis elements <m>\{e_1,e_2,e_3,e_4\}</m>, it follows that <m>M=\Z^4/\im(T_A)</m> is generated by the cosets of the <m>e_i</m>. To keep the notation short, we set <m>m_i=e_i+\im(T_A)</m>.
+              What <m>\Z</m>-module <m>M</m> is presented by 
+              <me>
+                A =
+                \begin{bmatrix}
+                2 &amp; 1 &amp; 0 \\
+                3 &amp; 9 &amp; 5 \\
+                1 &amp; -2 &amp; 7 \\
+                0 &amp; 1 &amp; 2 \\
+                \end{bmatrix}?
+              </me>
+              Formally, <m>M</m> is the quotient module <m>M=\Z^4/\im(T_A)</m>, where <m>T_A:\Z^3\to \Z^4</m> is defined by <m>T_A(v)=Av</m>. 
+              Since <m>\Z^4</m> is generated by its standard basis elements <m>\{e_1,e_2,e_3,e_4\}</m>, it follows that <m>M=\Z^4/\im(T_A)</m> is generated by the cosets of the <m>e_i</m>. 
+              To keep the notation short, we set <m>m_i=e_i+\im(T_A)</m>.
             </p>
   
             <p>
-              Let <m>N=\im(T_A)</m> and note that <m>N</m> is the submodule of <m>\Z^4</m> generated by the columns of <m>A</m>, i.e. <me>
-  N=\Z \cdot \left\{\begin{bmatrix} 2 \\ 3 \\ 1\\
-  0 \end{bmatrix}, \begin{bmatrix} 1 \\ 9 \\ -2
-  \\1 \end{bmatrix},\begin{bmatrix} 0 \\ 5 \\
-  7\\2 \end{bmatrix}\right\}=
-  \Z \cdot \{2e_1 + 3e_2 +
-  e_3,e_1 + 9e_2 -2 e_3 + e_4, 5e_2 + 7 e_3 + 2 e_{4  \}.}</me>Since <m>N</m> maps to <m>0</m> under the quotient map <m>q:\Z^4\to M=\Z^4/N</m>, we have that the relations of <m>M</m> can be written as <me>
-  \begin{aligned}
-  2m_1 + 3m_2 + m_3 &amp; = 0 \\
-  m_1 + 9m_2 -2 m_3 + m_4 &amp; = 0 \\
-  5m_2 + 7 m_3 + 2 m_4 &amp; = 0. 
-  \end{aligned}
-  </me> We can now see that this is a rather inefficient presentation, since we can clearly use the first equation to solve for for <m>m_3=-2m_1 - 3m_2</m>. This implies that <m>M</m> can be generated using only <m>m_1, m_2</m> and <m>m_4,</m> that is <me>
-  M=\Z \cdot \{m_1,m_2,m_3,m_4\}= \Z \cdot \{m_1,m_2,m_4\}.
-  </me> This eliminates the first equation, and by substituting <m>m_3 = -2m_1 -3m_2</m> the latter two relations become <me>
-  \begin{aligned}
-  5m_1 + 15m_2 + m_4 &amp; = 0 \\
-  -14m_2  -16m_2 + 2m_4 &amp; = 0 \\
-  \end{aligned}
-  </me> Now we can also eliminate <m>m_4</m>, i.e leaving just two generators <m>m_1, m_2</m> that satisfy <me>
-  -24m_1 -46m_2 = 0.
-  </me> Let us notice that what we have really done is to perform certain transformations of the matrix <m>A</m>. In detail, we can use elementary row operations to “make zeros'' on the 1st and 2nd columns as follows: <me>
-  A =
-  \begin{bmatrix}
-  2 &amp; 1 &amp; 0 \\
-  3 &amp; 9 &amp; 5 \\
-  1 &amp; -2 &amp; 7 \\
-  0 &amp; 1 &amp; 2 \\
-  \end{bmatrix}
-  \rightarrow
-  \begin{bmatrix}
-  0 &amp; 5 &amp; -14 \\
-  0 &amp; 15 &amp; -16 \\
-  1 &amp; -2 &amp; 7 \\
-  0 &amp; 1 &amp; 2 \\
-  \end{bmatrix}
-  \rightarrow
-  \begin{bmatrix}
-  0 &amp; 0 &amp; -24 \\
-  0 &amp; 0 &amp; -46 \\
-  1 &amp; 0 &amp; 13\\
-  0 &amp; 1 &amp; 0 \\
-  \end{bmatrix}
-  </me> Eliminating the generators <m>m_3</m> and <m>m_4</m> amounts to dropping the first two columns (which are the 3rd and 4th standard basis vectors) as well as the last two rows. As we will prove soon, this shows that the <m>\Z</m>-module presented by <m>A</m> is isomorphic to the <m>\Z</m>-module presented by <me>
-  B=
-  \begin{bmatrix} -24 \\ - 46
-  \end{bmatrix}.
-  </me> We can go further. Set <m>m_1' := m_1 + 2m_2</m>. Then <m>m_1'</m> and <m>m_2</m> also form a generating set of <m>M</m>. The relation on <m>m_1, m_2</m> translates to <me>
-  -24m'_1  +2 m_2 = 0
-  </me> given by the matrix <me>
-  C = E_{1,2}(-2)B=
-  \begin{bmatrix} -24 \\ 2
-  \end{bmatrix}.
-  </me> Note that we have done a row operation (subtract twice row 1 from row 2) to get from <m>B</m> to <m>C</m>. Continuing in this fashion by subtracting 12 row 2 from row 1 we also form <me>
-  D = E_{1,2}(12)C=
-  \begin{bmatrix} 0 \\ 2
-  \end{bmatrix},
-  </me> The last matrix <m>D</m> presents the module <m>M'=\Z^2/\im(t_D)</m> with generators <m>a, b</m> <m>(a=e_1+\im(t_D), b=e_2+\im(t_D)</m>) and relation <m>2a = 0</m>. As we will see, this proves <m>M \cong \Z \oplus \Z/2</m>.
+              Let <m>N=\im(T_A)</m> and note that <m>N</m> is the submodule of <m>\Z^4</m> generated by the columns of <m>A</m>, i.e. 
+              <me>
+                N=\Z \cdot \left\{\begin{bmatrix} 2 \\ 3 \\ 1\\ 0 \end{bmatrix}, 
+                \begin{bmatrix} 1 \\ 9 \\ -2 \\1 \end{bmatrix},
+                \begin{bmatrix} 0 \\ 5 \\ 7\\2 \end{bmatrix}\right\}
+                =\Z \cdot \{2e_1 + 3e_2 + e_3,e_1 + 9e_2 -2 e_3 + e_4, 5e_2 + 7 e_3 + 2 e_{4  \}.}
+              </me>
+              Since <m>N</m> maps to <m>0</m> under the quotient map <m>q:\Z^4\to M=\Z^4/N</m>, we have that the relations of <m>M</m> can be written as 
+              <me>
+                \begin{aligned}
+                2m_1 + 3m_2 + m_3 &amp; = 0 \\
+                m_1 + 9m_2 -2 m_3 + m_4 &amp; = 0 \\
+                5m_2 + 7 m_3 + 2 m_4 &amp; = 0. 
+                \end{aligned}
+              </me> 
+              We can now see that this is a rather inefficient presentation, since we can clearly use the first equation to solve for for <m>m_3=-2m_1 - 3m_2</m>. 
+              This implies that <m>M</m> can be generated using only <m>m_1, m_2</m> and <m>m_4,</m> that is 
+              <me>
+                M=\Z \cdot \{m_1,m_2,m_3,m_4\}= \Z \cdot \{m_1,m_2,m_4\}.
+              </me> 
+              This eliminates the first equation, and by substituting <m>m_3 = -2m_1 -3m_2</m> the latter two relations become 
+              <me>
+                \begin{aligned}
+                5m_1 + 15m_2 + m_4 &amp; = 0 \\
+                -14m_2  -16m_2 + 2m_4 &amp; = 0 \\
+                \end{aligned}
+              </me> 
+              Now we can also eliminate <m>m_4</m>, i.e leaving just two generators <m>m_1, m_2</m> that satisfy 
+              <me>
+                -24m_1 -46m_2 = 0.
+              </me> 
+              Let us notice that what we have really done is to perform certain transformations of the matrix <m>A</m>. 
+              In detail, we can use elementary row operations to “make zeros'' on the 1st and 2nd columns as follows: 
+              <me>
+                A =
+                \begin{bmatrix}
+                2 &amp; 1 &amp; 0 \\
+                3 &amp; 9 &amp; 5 \\
+                1 &amp; -2 &amp; 7 \\
+                0 &amp; 1 &amp; 2 \\
+                \end{bmatrix}
+                \rightarrow
+                \begin{bmatrix}
+                0 &amp; 5 &amp; -14 \\
+                0 &amp; 15 &amp; -16 \\
+                1 &amp; -2 &amp; 7 \\
+                0 &amp; 1 &amp; 2 \\
+                \end{bmatrix}
+                \rightarrow
+                \begin{bmatrix}
+                0 &amp; 0 &amp; -24 \\
+                0 &amp; 0 &amp; -46 \\
+                1 &amp; 0 &amp; 13\\
+                0 &amp; 1 &amp; 0 \\
+                \end{bmatrix}
+              </me> 
+              Eliminating the generators <m>m_3</m> and <m>m_4</m> amounts to dropping the first two columns (which are the 3rd and 4th standard basis vectors) as well as the last two rows. 
+              As we will prove soon, this shows that the <m>\Z</m>-module presented by <m>A</m> is isomorphic to the <m>\Z</m>-module presented by 
+              <me>
+                B=
+                \begin{bmatrix} -24 \\ - 46
+                \end{bmatrix}.
+              </me> 
+              We can go further. 
+              Set <m>m_1' := m_1 + 2m_2</m>. 
+              Then <m>m_1'</m> and <m>m_2</m> also form a generating set of <m>M</m>. 
+              The relation on <m>m_1, m_2</m> translates to 
+              <me>
+                -24m'_1  +2 m_2 = 0
+              </me> 
+              given by the matrix 
+              <me>
+                C = E_{1,2}(-2)B=
+                \begin{bmatrix} -24 \\ 2
+                \end{bmatrix}.
+              </me> 
+              Note that we have done a row operation (subtract twice row 1 from row 2) to get from <m>B</m> to <m>C</m>. 
+              Continuing in this fashion by subtracting 12 row 2 from row 1 we also form 
+              <me>
+                D = E_{1,2}(12)C=
+                \begin{bmatrix} 0 \\ 2
+                \end{bmatrix},
+              </me> 
+              The last matrix <m>D</m> presents the module <m>M'=\Z^2/\im(t_D)</m> with generators <m>a, b</m> <m>(a=e_1+\im(t_D), b=e_2+\im(t_D)</m>) and relation <m>2a = 0</m>. 
+              As we will see, this proves <m>M \cong \Z \oplus \Z/2</m>.
             </p>
           </example>
 
@@ -14744,10 +14941,18 @@
 
             <proof>
               <p>
-                Assume <m>n \leq m</m> and define <m>g: R^m \to R/R \cdot d_1 \oplus R/R \cdot d_2 \oplus \cdots \oplus R/ R \cdot d_n \oplus R^{m-n}</m> to be the map sending <m>(r_1, \dots, r_m)^\tau</m> to <m>(\ov{r}_1, \dots, \ov{r}_n, r_{n+1}, \dots, r_m)</m> where <m>\ov{r}_i = r_i + R \cdot d_i</m> for <m>1 \leq i \leq n</m>. (I.e., <m>g</m> is the unique <m>R</m>-map sending the <m>i</m>-th standard basis vector <m>e_i</m> to <m>(0, \dots, 0, \ov{1}, 0, \dots, 0)</m> with <m>\ov{1}</m> in the <m>i</m>-th position, for <m>1 \leq i \leq n</m>, and to <m>e_i</m> itself for <m>i &gt; n</m>.) Then <m>g</m> is clearly onto and the kernel <m>\ker(g)</m> of <m>g</m> is the set of those tuples <m>(r_1, \dots, r_m)^\tau</m> such that <m>r_i = x_i d_i</m> for some <m>x_i</m> for all <m>1 \leq i \leq n</m> and <m>r_j = 0</m> for <m>j &gt; n</m>. Given such a tuple, <me> (r_1, \dots, r_m)^\tau = x_1 (d_1, 0, \dots, 0)^\tau + x_2 (0,d_2, 0, \dots, 0)^\tau + \cdots + x_n (0, \dots, 0, d_n, 0, \dots, 0)^\tau. </me> This proves <m>\ker(g)</m> is contained <me>
-  R \cdots (d_1, 0, \dots, 0)^\tau + R \cdot (0,d_2, 0, \dots, 0)^\tau 
-    + \cdots + R \cdot (0, \dots, 0, d_n, 0 \dots, 0)^\tau = \im(T_A).
-    </me>Arguing backwards we see that the opposite containment also holds, so that in fact <m>\ker(g) = \im(T_A)</m>.
+                Assume <m>n \leq m</m> and define <m>g: R^m \to R/R \cdot d_1 \oplus R/R \cdot d_2 \oplus \cdots \oplus R/ R \cdot d_n \oplus R^{m-n}</m> to be the map sending <m>(r_1, \dots, r_m)^\tau</m> to <m>(\ov{r}_1, \dots, \ov{r}_n, r_{n+1}, \dots, r_m)</m> where <m>\ov{r}_i = r_i + R \cdot d_i</m> for <m>1 \leq i \leq n</m>. 
+                (I.e., <m>g</m> is the unique <m>R</m>-map sending the <m>i</m>-th standard basis vector <m>e_i</m> to <m>(0, \dots, 0, \ov{1}, 0, \dots, 0)</m> with <m>\ov{1}</m> in the <m>i</m>-th position, for <m>1 \leq i \leq n</m>, and to <m>e_i</m> itself for <m>i &gt; n</m>.) 
+                Then <m>g</m> is clearly onto and the kernel <m>\ker(g)</m> of <m>g</m> is the set of those tuples <m>(r_1, \dots, r_m)^\tau</m> such that <m>r_i = x_i d_i</m> for some <m>x_i</m> for all <m>1 \leq i \leq n</m> and <m>r_j = 0</m> for <m>j &gt; n</m>. 
+                Given such a tuple, 
+                <me> 
+                  (r_1, \dots, r_m)^\tau = x_1 (d_1, 0, \dots, 0)^\tau + x_2 (0,d_2, 0, \dots, 0)^\tau + \cdots + x_n (0, \dots, 0, d_n, 0, \dots, 0)^\tau. 
+                </me> 
+                This proves <m>\ker(g)</m> is contained 
+                <me>
+                  R \cdots (d_1, 0, \dots, 0)^\tau + R \cdot (0,d_2, 0, \dots, 0)^\tau + \cdots + R \cdot (0, \dots, 0, d_n, 0 \dots, 0)^\tau = \im(T_A).
+                </me>
+                Arguing backwards we see that the opposite containment also holds, so that in fact <m>\ker(g) = \im(T_A)</m>.
               </p>
   
               <p>
@@ -15674,12 +15879,6 @@
       </chapter>
 
       <chapter xml:id="ch-canform"><title>Canonical Forms</title>
-
-        <!--
-       ****************************
-        Chapter: Canonical Forms
-       ****************************
-        -->
 
         <section xml:id="sec-rcf"><title>Rational Canonical Form</title>
 
@@ -17827,471 +18026,6 @@
     <part xml:id="part-fields"><title>Field Theory</title>
 
       <chapter xml:id="ch-irreducible"><title>Irreducibility</title>
-
-        <section xml:id="sec-field-of-fractions"><title>Fields of Fractions</title>
-
-          <blockquote>
-            <p>
-              <q>Food is a common denominator for all people.</q>
-            </p>
-            <attribution>Guy Fieri</attribution>
-          </blockquote>
-          
-          <definition xml:id="def-multiplicatively-closed"><title>Multiplicately Closed Set</title>
-            <statement>
-              <p>
-                Suppose <m>R</m> is a commutative ring and <m>S \subseteq R</m> is a subset such that
-              </p>
-    
-              <p>
-                <ol>
-                  <li>
-                    <p>
-                      <m>1 \in S</m>,
-                    </p>
-                  </li>
-    
-                  <li>
-                    <p>
-                      <m>S</m> is closed under multiplication (i.e., if <m>x,y \in S</m>, then <m>xy \in S</m>), and
-                    </p>
-                  </li>
-    
-                  <li>
-                    <p>
-                      <m>S</m> does not contain <m>0</m> nor any zerodivisors.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-    
-              <p>
-                Such a subset <m>S</m> is called a <em>multiplicatively closed subset of non zerodivisors</em> of <m>R</m>.
-              </p>
-            </statement>
-          </definition>
-    
-          <example><title>Examples of Multaplicatively Closed Sets</title>
-            <p>
-              Two types of multiplicatively closed sets are most commonly used in practice:
-              <ul>
-                <li>
-                  <p>
-                    If <m>R</m> is a field then <m>S=R\setminus \{0\}</m> is a multiplicatively closed set of non zerodivisors.
-                  </p>
-                </li>
-    
-                <li>
-                  <p>
-                    If <m>R</m> is an arbitrary ring with <m>1\neq 0</m> and <m>x\in R</m> is a non zerodivisor then the set of non negative powers of <m>x</m>, <m>S=\{x^n \mid n\in \mathbb{Z}, n\geq 0\}</m>, is multiplicatively closed.
-                  </p>
-                </li>
-              </ul>
-            </p>
-          </example>
-    
-          <definition xml:id="def-field-of-fractions"><title>Field of Fractions</title>
-            <statement>
-              <p>
-                If <m>R</m> is an integral domain and <m>S</m> is a multiplicatively closed subset of nonzerodivisors, the <em>field of fractions</em> <m>S^{-1}R</m> is the set of equivalence classes 
-                <me>
-                  S^{-1}R=\left\{\frac{r}{s} \mid r\in R,s\in S\right\}/\sim
-                </me> 
-                where the equivalence relation <m>\sim</m> is defined by 
-                <me>
-                  \frac{r}{s}\sim\frac{r'}{s'} \;\text{if and only if}\; rs'=r's.
-                </me>
-              </p>
-    
-              <p>
-                From now on we just write <m>=</m> instead of <m>\sim</m> when dealing with fractions.
-              </p>
-    
-              <p>
-                Addition and multiplication on <m>S^{-1}R</m> are given by 
-                <me>
-                  \frac{r}{s} + \frac{r'}{s'} = \frac{rs' + r's}{ss'} \;\text{and}\; \frac{r}{s} \cdot \frac{r'}{s'} = \frac{rr'}{ss'}.
-                </me>
-              </p>
-            </statement>
-          </definition>
-    
-          <theorem xml:id="thm-field-of-fractions-is-field"><title>Field of Fractions is a Field</title>
-            <statement>
-              <p>
-                If <m>R</m> is an integral domain and <m>S</m> is a multiplicatively closed subset of nonzerodivisors, the rules given in the above definition for <m>+</m> and <m>\cdot</m> make <m>S^{-1} R</m> into a field. Moreover, the function <m>R\to S^{-1}R</m> sending <m>r</m> to <m>\frac{r}{1}</m> is an injective ring homomorphism.
-              </p>
-            </statement>
-    
-            <proof>
-              <p>
-                There is a lot of small things to check and we'll just do a few. Right off the bat we need to be sure the given equivalence relation really is one. The reflexive and symmetric properties are clear. But the proof of transitivity illustrates a key point: Say <m>\frac{r}{s} \sim \frac{r'}{s'} \sim \frac{r''}{s''}</m>. Then <m>rs'= r's</m> and <m>r's'' = r''s'</m>. We need to deduce that <m>rs'' = r''s</m>. The given equations imply <m>rs's'' = r'ss'' = r''ss'</m> and since <m>s'</m> is a nonzerodivisor we conclude <m>rs'' = r''s</m>. This is in fact the only time that the fact that <m>S</m> consists of nonzerodivisors is used.
-              </p>
-    
-              <p>
-                We also need to be sure our rules for <m>+</m> and <m>\cdot</m> make sense and are independent of representation. They <q>make sense</q> since we assume <m>S</m> is closed under <m>\cdot</m>. To show <m>+</m> is independent of representations, say <m>\frac{r}{s} \sim \frac{r''}{s''}</m>, so that <m>rs'' = r''s</m>. Then <me>\frac{r}{s} + \frac{r'}{s'} := \frac{rs' + r's}{ss'}</me> and <me>\frac{r''}{s''} + \frac{r'}{s'} := \frac{r''s' + r's''}{s''s'}</me> and so we need to show <m>(rs' + r's)(s''s') \sim (r''s' + r's'')(ss')</m>. This is clear upon expaning out both sides and using <m>rs'' = r''s</m>. In a similar way one shows <m>\cdot</m> is well-defined.
-              </p>
-        
-              <p>
-                From now on we just write <m>=</m> instead of <m>\sim</m> when dealing with fractions.
-              </p>
-        
-              <p>
-                The associative and distributive axioms involve a straightfoward but tedious check, and we skip them entirely. The fact that <m>+</m> and <m>\cdot</m> are commutative is clear from their definitions. <m>S^{-1}R</m> is a group under addition since it has a <m>0</m> element, namely <m>\frac{0}{1}</m>, and <m>\frac{r}{s} +
-                \frac{-r}{s} = \frac{rs - rs}{s^2} = \frac{0}{s^2} = \frac{0}{1}</m>, with the last equality holding since <m>0 \cdot 1 = s^2 \cdot 0</m>. The <m>1</m> element is <m>\frac{1}{1}</m>. (Note that we have used that <m>1 \in S</m> a couple times here — indeed, without this assumption <m>S</m> could be empty and then <m>S^{-1}R</m> would be the empty set.)
-              </p>
-    
-              <p>
-                <m>R</m> being a domain means <m>xy=0</m> implies (<m>x=0</m> or <m>y=0</m>). The contrapositive to this statement is: if <m>x\neq 0</m> and <m>y\neq 0</m> then <m>xy\neq 0</m>, which shows <m>S</m> is a multiplicatively closed set of nonzerodivisors.
-              </p>
-    
-              <p>
-                It remains only to show every non-zero element of <m>S^{-1}R</m> is a unit. Given <m>\frac{r}{s} \ne 0</m>, note that <m>r \ne 0</m> and hence <m>r \in S</m>. So <m>\frac{s}{r}</m> is also an element of <m>S^{-1}R</m>. We have <m>\frac{r}{s} \frac{s}{r} = \frac{sr}{sr} = \frac{1}{1}</m>, where the last equation holds by the definition of <m>\sim</m>.
-              </p>
-    
-              <p>
-                The fact that <m>r \mapsto \frac{r}{1}</m> is a ring homomorphism is straightforward to check. Its injective since <m>\frac{r}{1} = \frac{0}{1}</m> implies <m>r = 0</m>.
-              </p>
-            </proof>
-          </theorem>
-    
-          <example><title>Examples of Fields of Fractions</title>
-            <p>
-              <ol>
-                <li>
-                  <p>
-                    For a specific example, the field of fractions of <m>\mathbb{Z}</m> is <m>\mathbb{Q}</m>.
-                  </p>
-                </li>
-    
-                <li>
-                  <p>
-                    or another, if <m>d</m> is a squarefree integer and <m>R = \mathbb{Z}[\sqrt{d}]</m> is an integral domain and we will show soon that its field of fractions is (isomorphic to) the field <m>\mathbb{Q}(\sqrt{d})</m>.
-                  </p>
-                </li>
-    
-                <li>
-                  <p>
-                    For yet another, <m>{\mathbb{R}}[x]</m> is an integral domain. Its field of fractions, usually denoted <m>{\mathbb{R}}(x)</m> constists of all <em>rational functions</em>. This last example could be generalized by replacing <m>{\mathbb{R}}</m> with any field and also by using any number of variables.
-                  </p>
-                </li>
-              </ol>
-            </p>
-          </example>
-    
-          <proposition xml:id="prop-fof-1"><title>Qual</title>
-            <statement>
-              <p>
-                Let <m>R</m> be a domain and let <m>F</m> be its fraction field. Show that <m>F</m> has the following universal property: if <m>K</m> is any field and <m>f\!: R \to K</m> is any injective ring homomorphism, then <m>f</m> extends to an injective ring homomorphism <m>\overline{f}\!: F \to K</m>, so that <m>\overline{f}|_R=f</m>.
-              </p>
-            </statement>
-          </proposition>
-    
-          <proposition xml:id="prop-fof-2"><title>June 2010 Problem <m>7</m></title>
-            
-            
-            <statement>
-              <p>
-                Let <m>R</m> be an integral domain with field of fractions <m>Q</m>. Let <m>P</m> be a prime ideal of <m>R</m> and let 
-                <me>
-                  S =  \bigg\{ \frac rd\in Q|d\not\in P\bigg\}.
-                </me>
-                <ol>
-                  <li>
-                    <p>
-                      Show that <m>S</m> is a subring of <m>Q</m>. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      Show that 
-                      <me>
-                        I =  \bigg\{ \frac pd|p\in P, d\not\in P\bigg\}
-                      </me> 
-                      is a prime ideal of <m>S</m>.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-          </proposition>
-    
-          <proposition xml:id="prop-fof-3"><title>June 2012 (7)</title>
-            <statement>
-              <p>
-                Let <m>R</m> be a commutative integral domain and <m>K</m> its field of fractions. Let <m>a</m> and <m>b</m> be nonzero elements of <m>R</m>, such that <m>(a) \cap(b) = (ab)</m>. Let <m>f : R[x] \to K</m> be the unique ring homomorphism with <m>f (r) = \frac{r}{1}</m> for <m>r \in R</m> and <m>f (x) = \frac{b}{a}</m>. Prove that a polynomial <m>p(x) \in R[x]</m> satisfies <m>f(p(x))=0</m> if and only if <m>p(x) = (ax - b)q(x)</m> for some polynomial <m>q(x) \in R[x]</m>. (Hint: one way is to use induction on deg(p(x)).)
-              </p>
-            </statement>
-          </proposition>
-    
-          <exercises>
-    
-            <exercisegroup>
-              <title>Computations and Examples</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-    
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-    
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          
-            <exercisegroup>
-              <title>Formal Proofs</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-    
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-    
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          
-            <exercisegroup>
-              <title>Qualifying Exam Problems</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-    
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-    
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          </exercises>
-          
-    
-        </section>
-
-        <section xml:id="sec-roots"><title>Roots of Unity</title>
-
-          <blockquote>
-            <p>
-              <q></q>
-            </p>
-            <attribution></attribution>
-          </blockquote>
-
-          <proposition>
-            <title>June 2011 (4)</title>
-            <statement>
-              <p>
-                Fix a prime number <m>p</m>, and let <m>A</m> denote the abelian group of all complex roots of unity whose orders are powers of <m>p</m>; that is 
-                <me>
-                  A = \{z \in \C | z^{p^n} = 1 \text{ for some integer } n \leq 1\} .
-                </me>
-                Prove the following statements. 
-                <ol>
-                  <li>
-                    <p>
-                      Every non-trivial subgroup of <m>A</m> contains the group of <m>p^{\text{th}}</m> roots of unity. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      Every proper subgroup of <m>A</m> is cyclic. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      If <m>B</m> and <m>C</m> are subgroups of <m>A</m>, then either <m>B \subseteq C</m> or <m>C \subseteq B</m>. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      For each <m>n \geq 0</m> there exists a unique subgroup of <m>A</m> with <m>p^n</m> elements.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                Let <m>H</m> be a non-trivial subgroup of <m>A</m>. Then there exists some <m>z</m> such that <m>z^{p^n}=1</m>. Then <m>z^{p^{n-1}}</m> yields a primitive <m>p\th</m> root of unity, which can be used to generate the other roots as well. Thus <m>H</m> contains the <m>p\th</m> roots of unity.
-              </p>
-
-              <p>
-                Suppose <m>H</m> is a proper subgroup of <m>A</m>, meaning it is missing some <m>p^{n{\th}}</m> root of unity. But the subgroup of those roots of unity is cyclic and is generated by every element, so that entire subgroup must be missing. But that subgroup can be generated with any primitive root of a higher power of <m>p</m>, so <m>H</m> must be finite and there must be some element of maximum order, which can be used to generate the whole group. Thus <m>H</m> is cyclic.
-              </p>
-
-              <p>
-                Suppose <m>B</m> and <m>C</m> are subgroups of <m>A</m> such that <m>B\not\subseteq C</m>. Then <m>C</m> is a proper subgroup of <m>A</m>, making it finite as seen above. If there exists a higher power of <m>p</m> in <m>B</m> then it generates <m>C</m>.
-              </p>
-
-              <p>
-                Let <m>n\geq 0</m>. Then the subgroup generated by the <m>p^{n^{\th}}</m> roots of unity have <m>p^n</m> elements, and it is unique since it is generated by every such root.
-              </p>
-            </proof>
-          </proposition>
-
-          <exercises>
-
-            <exercisegroup>
-              <title>Computations and Examples</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          
-            <exercisegroup>
-              <title>Formal Proofs</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          
-            <exercisegroup>
-              <title>Qualifying Exam Problems</title>
-              <introduction>
-                <p>
-                </p>
-              </introduction>
-          
-              <exercise>
-                <title></title>
-                
-                
-                <statement>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </statement>
-
-                <hint>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </hint>
-
-                <solution>
-                  <p>
-                    Coming soon to an OER near you!
-                  </p>
-                </solution>
-              </exercise>
-          
-            </exercisegroup>
-          </exercises>
-
-        </section>
 
         <section xml:id="sec-irrpoly"><title>Irredicuble Polynomials</title>
 

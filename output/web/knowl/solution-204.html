@@ -13,36 +13,21 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h3 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">H.59.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">H.62.1</span><span class="period">.</span>
 </h3>
-<div class="para">Consider <span class="process-math">\(2\in\Z[\sqrt{10}]\)</span> and the function <span class="process-math">\(N : \Z[\sqrt{10}]\to \Z, N (a + b\sqrt{10}) = a^2-10b^2\text{.}\)</span>
-</div> <div class="para logical">
-<div class="para">Let <span class="process-math">\(\alpha,\beta\in\Z[\sqrt{10}]\)</span> and behold</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{align}N(\alpha\beta)&amp;=N((a+b\sqrt{10})(c+d\sqrt{10}))\\
-&amp;=N(ac+10bd+(ad+bc)(\sqrt{10}))\\
-&amp;=(ac+10bd)^2-10(ad+bc)^2\\
-&amp;=((ac)^2+20acbd+100(bd)^2)+(-10(ad)^2-20abcd-10(bc)^2)\\
-&amp;=a^2c^2+100b^2d^2-10a^2d^2-10b^2c^2\\
-&amp;=(a^2c^2-10a^2d^2)+(-10b^2c^2-100b^2d^2)\\
-&amp;=a^2(c^2-10d^2)-10b^2(c^2-10d^2)\\
-N(\alpha)N(\beta)&amp;=(a^2-10b^2)(c^2-10d^2).\end{align}
-\end{equation*}
+<div class="para">Let <span class="process-math">\(E, K,\)</span> and <span class="process-math">\(L\)</span> be subfields of a field <span class="process-math">\(F\)</span> with <span class="process-math">\(E \subseteq K\)</span> and <span class="process-math">\(E \subseteq L\text{.}\)</span> Let <span class="process-math">\(k = [K : E]\)</span> and <span class="process-math">\(\ell = [L : E]\text{.}\)</span>
+</div> <div class="para logical"><ol class="decimal">
+<li><div class="para">Part (a) We're going to go slightly out of order. By Part (b), we see <span class="process-math">\([KL : E] = k\ell\)</span> when <span class="process-math">\(\gcd(k,\ell) = 1\text{.}\)</span> This is the largest possible size of <span class="process-math">\(KL\text{,}\)</span> as everything is irreducible where it can be. Thus <span class="process-math">\([KL : E] \leq k\ell\)</span>
+</div></li>
+<li>
+<div class="para">Part (b) Suppose <span class="process-math">\(\gcd(k,\ell) = 1\text{.}\)</span> As <span class="process-math">\(K\)</span> and <span class="process-math">\(L\)</span> are finite extensions of <span class="process-math">\(E\)</span> they are also algebraic. Thus there exists <span class="process-math">\(\a\in K\)</span> and <span class="process-math">\(\b\in L\)</span> such that <span class="process-math">\(\mp_\a(x)\)</span> has degree <span class="process-math">\(k\)</span> and <span class="process-math">\(\mp_\b(x)\)</span> has degree <span class="process-math">\(\ell\text{.}\)</span>
 </div>
-<div class="para">So there's that done.</div>
-</div> <div class="para logical">
-<div class="para">Suppose by way of contradiction there exist <span class="process-math">\(\a,\b\)</span> such that <span class="process-math">\(2=\a\b\text{.}\)</span> Then <span class="process-math">\(\a=a+b\sqrt{10}\)</span> and <span class="process-math">\(\b=c+d\sqrt{10}\text{,}\)</span> and</div>
-<div class="displaymath process-math">
-\begin{equation*}
-N(2)=4=N(\a\b)=N(\a)N(\b)=(a^2-10b^2)(c^2-10d^2).
-\end{equation*}
+<div class="para">Thus <span class="process-math">\(\gcd(\deg\mp_\a(x),\ell) = 1\text{,}\)</span> making <span class="process-math">\(\mp_\a(x)\)</span> irreducible in <span class="process-math">\(L[x]\text{.}\)</span> Thus <span class="process-math">\([L(\a):L]=k\text{.}\)</span> Notice that <span class="process-math">\(E(\a,\b)=KL\text{,}\)</span> as it is the smallest (with respect to containment) subfield of <span class="process-math">\(F\)</span> which satisfies <span class="process-math">\(K\subseteq KL\)</span> and <span class="process-math">\(L\subseteq KL\text{.}\)</span> Thus we have <span class="process-math">\([KL:E]=k\ell\text{,}\)</span> as desired.</div>
+</li>
+<li><div class="para">Part (c) Let <span class="process-math">\(E=\Q\text{,}\)</span> <span class="process-math">\(L=K=\Q(\sqrt2)\text{,}\)</span> and <span class="process-math">\(F=\Q(\sqrt2,i)\)</span> Notice that <span class="process-math">\(KL=K=L\text{,}\)</span> and thus <span class="process-math">\([KL:E]=[L:E]=\ell&lt;\ell^2=k\ell\text{.}\)</span>
+</div></li>
+</ol></div>
 </div>
-<div class="para">Thus <span class="process-math">\((a^2-10b^2)=\pm1,\pm2,\)</span> or <span class="process-math">\(\pm4\text{,}\)</span> as these are the only integer divisors of <span class="process-math">\(4\text{.}\)</span> However, there do not exist integers <span class="process-math">\(a,b\)</span> such that this is true. Thus <span class="process-math">\(2\)</span> is irreducible in <span class="process-math">\(\Z[\sqrt{10}]\text{.}\)</span>
-</div>
-</div> <div class="para">Suppose by way of contradiction that <span class="process-math">\(2\)</span> is prime in <span class="process-math">\(\Z[\sqrt{10}]\text{.}\)</span> Note that <span class="process-math">\(2|6=(4+\sqrt{10})(4-\sqrt{10})\text{.}\)</span> Thus <span class="process-math">\(2\)</span> divides one of these factors.</div> <div class="para">First, suppose there exists some <span class="process-math">\(a+b\sqrt{10}\)</span> such that <span class="process-math">\(2(a+b\sqrt{10})=(4\pm\sqrt{10})\text{.}\)</span> Thus <span class="process-math">\(2a+2b\sqrt{10}=4\pm\sqrt{10}\text{,}\)</span> and so <span class="process-math">\(2b=\pm1\text{.}\)</span> However, <span class="process-math">\(\pm\frac12\)</span> is not an integer, and thus <span class="process-math">\(2\)</span> cannot divide either of these factors. Thus <span class="process-math">\(2\)</span> is not prime in <span class="process-math">\(\Z[\sqrt{10}]\text{.}\)</span>
-</div>
-</div>
-<span class="incontext"><a href="section-74.html#solution-204" class="internal">in-context</a></span>
+<span class="incontext"><a href="section-73.html#solution-204" class="internal">in-context</a></span>
 </body>
 </html>
