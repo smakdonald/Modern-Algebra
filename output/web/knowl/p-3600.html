@@ -13,27 +13,53 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">The Second Isomorphism Theorem tells us that <span class="process-math">\(U+W/W\cong U/(U\cap W)\text{.}\)</span> We also know that</div>
-<div class="displaymath process-math">
+<div class="para">Recall that the invariant factors must divide all preceding invariant factors in RCF (See: <a href="" class="xref" data-knowl="./knowl/thm-rcf.html" title="Theorem 15.9: Rational Canonical Form">Rational Canonical Form</a>, and observe that <span class="process-math">\((x^4-1)\)</span> factors as <span class="process-math">\((x^2-1)(x^2+1)\)</span> and <span class="process-math">\((x^2-1)\)</span> factors as <span class="process-math">\((x-1)(x+1)\text{.}\)</span> Given this information, after some fiddling with the factors, we find four possible options for invariant factors of <span class="process-math">\(A\text{:}\)</span>
+</div>
+<ul class="disc">
+<li><div class="para"><span class="process-math">\(x^6-x^4-x^2+1=(x^2 -1)(x^4- 1)\text{,}\)</span></div></li>
+<li><div class="para"><span class="process-math">\((x^2-1),(x^4-1)\text{,}\)</span></div></li>
+<li><div class="para">
+<span class="process-math">\((x+1), (x-1)(x^4-1)\text{,}\)</span> and</div></li>
+<li><div class="para"><span class="process-math">\((x-1),(x+1)(x^4-1)\text{.}\)</span></div></li>
+</ul>
+<div class="para">Let <span class="process-math">\(f(x)=x^6-x^4-x^2+1, g(x)=(x^4-1),\)</span> <span class="process-math">\(h(x)=x^2-1\text{,}\)</span> <span class="process-math">\(j(x)=(x-1),\)</span> and <span class="process-math">\(k(x)=(x+1)\text{.}\)</span> Observe the companion matrices of each of these polynomials:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-rcf.html">
 \begin{equation*}
-\dim(U)-\dim(U\cap W)=\dim(U/U\cap W)=\dim(U+W/W)=\dim(U+W)-\dim(W).
+C(f)=\begin{bmatrix}
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; -1\\
+1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 1\\
+0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 1\\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0\\
+\end{bmatrix},
+C(g)=\begin{bmatrix}
+0 &amp; 0 &amp; 0 &amp; 1\\
+1 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 1 &amp; 0\\
+\end{bmatrix},
+C(h)=\begin{bmatrix}
+0 &amp; 1\\
+1 &amp; 0\\
+\end{bmatrix},
+C(j)=\begin{bmatrix}
+1\\ 
+\end{bmatrix}\textrm{ and } 
+C(k)=\begin{bmatrix}
+-1\\ 
+\end{bmatrix}
 \end{equation*}
 </div>
-<div class="para">Put succinctly,</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\dim(U)-\dim(U\cap W)=\dim(U+W)-\dim(W),
-\end{equation*}
+<div class="para">Behold: explicit representatives of each similarity class:</div>
+<ul class="disc">
+<li><div class="para"><span class="process-math">\(C(f)\text{,}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(C(g)\oplus C(h)\text{,}\)</span></div></li>
+<li><div class="para">
+<span class="process-math">\(C(k)\oplus C(gj)\text{,}\)</span> and</div></li>
+<li><div class="para"><span class="process-math">\(C(j)\oplus C(gk)\text{.}\)</span></div></li>
+</ul>
 </div>
-<div class="para">and thus</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\dim(U)+\dim(W)=\dim(U+W)+\dim(U\cap W).
-\end{equation*}
-</div>
-<div class="para">As <span class="process-math">\(U\cap W=\{0\}\text{,}\)</span> we see that <span class="process-math">\(\dim_F(V)=\dim_F(W)+\dim_F(U)\text{.}\)</span>
-</div>
-</div>
-<span class="incontext"><a href="section-70.html#p-3600" class="internal">in-context</a></span>
+<span class="incontext"><a href="section-71.html#p-3600" class="internal">in-context</a></span>
 </body>
 </html>

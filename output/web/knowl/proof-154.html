@@ -12,7 +12,17 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<div class="para">Let <span class="process-math">\(E\)</span> and <span class="process-math">\(K\)</span> be finite splitting fields over <span class="process-math">\(\Q\text{.}\)</span> So there exist polynomials <span class="process-math">\(f,g\in F[x]\)</span> such that <span class="process-math">\(f\)</span> splits in <span class="process-math">\(F\)</span> and <span class="process-math">\(g\)</span> splits in <span class="process-math">\(E\text{.}\)</span> Note that both <span class="process-math">\(E\)</span> and <span class="process-math">\(F\)</span> are finite extensions, as each can be reached by adjoining each of the roots of <span class="process-math">\(g\)</span> and <span class="process-math">\(f\text{,}\)</span> respectfully.</div> <div class="para">If <span class="process-math">\(E\cap F=\Q\)</span> then we have our splitting field, as <span class="process-math">\(\Q\)</span> is a splitting field over itself.</div> <div class="para">Let <span class="process-math">\(h\)</span> be an irreducible polynomial in <span class="process-math">\(F[x]\)</span> with a root in <span class="process-math">\(E\cap K\text{.}\)</span> Then <span class="process-math">\(h\)</span> has a root in <span class="process-math">\(E\)</span> and a root in <span class="process-math">\(F\text{.}\)</span> If a splitting field has one root of a polynomial it has them all, and so we see that <span class="process-math">\(h\)</span> splits in both of these fields. Thus it splits in <span class="process-math">\(E\cap K\text{.}\)</span>
+<div class="para">Let <span class="process-math">\(F\subseteq L\)</span> be an algebraic field extension such that every non-constant polynomial in <span class="process-math">\(F[x]\)</span> splits completely into linear factors in <span class="process-math">\(L[x]\text{.}\)</span>
+</div> <div class="para">Let <span class="process-math">\(f\)</span> be a polynomial in <span class="process-math">\(L[x]\text{,}\)</span> so <span class="process-math">\(f=a_nx^n+\dots+a_1x+a_0\text{,}\)</span> with <span class="process-math">\(a_i\in L\text{,}\)</span> and let <span class="process-math">\(\a\)</span> be a root of <span class="process-math">\(f\text{.}\)</span> There [[Theorem – Existence and Uniqueness of Algebraic Closures|exists]] some field extension <span class="process-math">\(L\subseteq K\)</span> such that <span class="process-math">\(K\)</span> is algebraically closed, meaning <span class="process-math">\(\a\in K\text{.}\)</span> Notice that <span class="process-math">\(\a\)</span> is algebraic over <span class="process-math">\(L(\a)\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Consider the chain of field extensions</div>
+<div class="displaymath process-math">
+\begin{equation*}
+F\subseteq L\subseteq L(\a),
+\end{equation*}
+</div>
+<div class="para">making <span class="process-math">\(\a\)</span> algebraic over <span class="process-math">\(F\)</span> as well. As every non-constant polynomial in <span class="process-math">\(F[x]\)</span> splits completely into linear factors in <span class="process-math">\(L[x]\text{,}\)</span> this yields <span class="process-math">\(\a\in L\text{.}\)</span>
+</div>
 </div></article><span class="incontext"><a href="sec-splitting.html#proof-154" class="internal">in-context</a></span>
 </body>
 </html>

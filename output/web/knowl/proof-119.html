@@ -12,9 +12,50 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<div class="para">We first show the following special case: If <span class="process-math">\(\cont(f) = 1\)</span> and <span class="process-math">\(\cont(g) = 1\text{,}\)</span> then <span class="process-math">\(\cont(fg) =1\text{.}\)</span>
-</div> <div class="para">To see this, pick a prime <span class="process-math">\(p \in R\)</span> and write <span class="process-math">\(\overline{f} \in (R/p)[x]\)</span> for the result of modding out the coefficients of <span class="process-math">\(f\)</span> by <span class="process-math">\(p\text{.}\)</span> Then <span class="process-math">\(\ov{fg} = \ov{f}\ov{g}\)</span> (since the map <span class="process-math">\(R[x] \to (R/p)[x]\)</span> sending <span class="process-math">\(f\)</span> to <span class="process-math">\(\ov{f}\)</span> is a ring map). Since <span class="process-math">\(\cont(f) =1 = \cont(g)\text{,}\)</span> we have that <span class="process-math">\(\ov{f} \ne 0\)</span> and <span class="process-math">\(\ov{g} \ne 0\text{.}\)</span> Since <span class="process-math">\((R/p)[x]\)</span> is a domain, it follows that <span class="process-math">\(\ov{fg} \ne 0\text{.}\)</span> This proves <span class="process-math">\(p\)</span> does not divide all of the coefficients of <span class="process-math">\(fg\text{.}\)</span> Since <span class="process-math">\(p\)</span> was arbitrary, <span class="process-math">\(\cont(fg) = 1\text{.}\)</span>
-</div> <div class="para">For the general case, let <span class="process-math">\(f = a h(x)\)</span> and <span class="process-math">\(g = b l(x)\)</span> where <span class="process-math">\(a =\cont(f)\)</span> and <span class="process-math">\(b = \cont(g)\text{.}\)</span> Note that <span class="process-math">\(\cont(h) = 1 = \cont(l)\)</span> and <span class="process-math">\(fg = (ab) hl\text{.}\)</span> By the case already proven, <span class="process-math">\(\cont(lh) =1\text{.}\)</span> It follows <span class="process-math">\(\cont (abhl) =ab \cont(hl) = ab = \cont(f) \cont(g)\text{.}\)</span>
+<div class="para">We have <span class="process-math">\(f(x) = \cont(f) \cdot l(x)\)</span> with <span class="process-math">\(l(x) \in R[x]\)</span> and <span class="process-math">\(\cont(l) = 1\text{.}\)</span> Since <span class="process-math">\(p\)</span> does not divide the leading coefficient of <span class="process-math">\(f\text{,}\)</span> we have <span class="process-math">\(p \nmid \cont(f)\text{.}\)</span> It therefore follows that the three assumptions involving the coefficients of <span class="process-math">\(f(x)\)</span> are also satisfied by the coefficients <span class="process-math">\(l(x)\text{.}\)</span> Moreover, <span class="process-math">\(f\)</span> is irreducible in <span class="process-math">\(F[x]\)</span> if and only if <span class="process-math">\(l(x)\)</span> is irreducible in <span class="process-math">\(F[x]\text{.}\)</span> We may therefore assume without loss of generality that <span class="process-math">\(\cont(f) = 1\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">By Gauss's Lemma we just need to prove it is irreducible in <span class="process-math">\(R[x]\text{.}\)</span> Suppose <span class="process-math">\(f(x) = g(x)h(x)\)</span> with <span class="process-math">\(g(x), h(x) \in R[x]\text{,}\)</span> where</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g(x) = b_m x^m + b_{m-1} x^{m-1} + \cdots + b_0
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+h(x) = c_l x^l + c_{l-1} x^{l-1} + \cdots + c_0
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(m+l = n\)</span> and <span class="process-math">\(b_m c_l = a_n\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">Upon modding out by <span class="process-math">\(p\)</span> we get</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\ov{f} = \ov{g} \ov{h} \in (R/p)[x].
+\end{equation*}
+</div>
+<div class="para">The assumptions on <span class="process-math">\(f\)</span> give that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\ov{f} = \ov{a_n} x^n
+\end{equation*}
+</div>
+<div class="para">with <span class="process-math">\(\ov{a_n} \ne 0\text{.}\)</span> Since <span class="process-math">\(R/p\)</span> is a domain, it follows that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\ov{g} = \ov{b_m} x^m \, \text{ and  } \, \ov{h} = \ov{c_l} x^l
+\end{equation*}
+</div>
+<div class="para">On the other hand, we also have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a_0 = b_0c_0,
+\end{equation*}
+</div>
+<div class="para">and since <span class="process-math">\(p^2 \nmid a_0\text{,}\)</span> we have that <span class="process-math">\(p \nmid b_0\)</span> or <span class="process-math">\(p \nmid c_0\text{.}\)</span> So <span class="process-math">\(\ov{b_0} \ne 0\)</span> or <span class="process-math">\(\ov{c_0} \ne 0\text{.}\)</span> This can only occur if <span class="process-math">\(m = 0\)</span> or <span class="process-math">\(l = 0\text{.}\)</span>
+</div>
+</div> <div class="para">We have shown that if <span class="process-math">\(f\)</span> factors in <span class="process-math">\(R[x]\)</span> as <span class="process-math">\(f = g \cdot h\text{,}\)</span> then at least one of <span class="process-math">\(g\)</span> of <span class="process-math">\(h\)</span> must be a constant polynomial. Since <span class="process-math">\(\cont(f) = 1\text{,}\)</span> this factor must be a unit. So <span class="process-math">\(f\)</span> is irreducible in <span class="process-math">\(R[x]\text{.}\)</span>
 </div></article><span class="incontext"><a href="sec-irrpoly.html#proof-119" class="internal">in-context</a></span>
 </body>
 </html>

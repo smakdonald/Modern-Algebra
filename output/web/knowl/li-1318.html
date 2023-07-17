@@ -14,7 +14,21 @@
 <article class="li"><h4 class="heading">
 <span class="type">Item</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span>
 </h4>
-<div class="para">Let <span class="process-math">\(L\)</span> be the algebraic closure of <span class="process-math">\(F\text{.}\)</span> Thus <span class="process-math">\(A\)</span> has a Jordan Canonical Form in <span class="process-math">\(L\text{.}\)</span> For each Jordan block <span class="process-math">\(J_i\)</span> in the JCF of <span class="process-math">\(A\text{,}\)</span> let <span class="process-math">\(B_i\)</span> denote the transpose of the identity matrix, and notice that <span class="process-math">\(B_iJ_iB_i\inv=J_i^T\text{.}\)</span> As this is the case for every Jordan block, we see that the JCF of <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(J\text{,}\)</span> is similar to its transpose. As the <span class="process-math">\(A\)</span> is similar to <span class="process-math">\(J\text{,}\)</span> <span class="process-math">\(A^T\)</span> is similar to <span class="process-math">\(J^T\text{,}\)</span> and <span class="process-math">\(J\)</span> is similar to <span class="process-math">\(J^T\text{,}\)</span> we see that <span class="process-math">\(A\sim A^T\)</span> in <span class="process-math">\(L\)</span> by transitivity. From Part (a), this yields <span class="process-math">\(A\sim A^T\)</span> in <span class="process-math">\(F\text{.}\)</span>
-</div></article><span class="incontext"><a href="section-85.html#li-1318" class="internal">in-context</a></span>
+<div class="para">Since <span class="process-math">\(\Q(a)\)</span> is Galois, we see that <span class="process-math">\([\Q(a):\Q]=6\text{.}\)</span> So <span class="process-math">\(\Gal(\Q(a)/\Q)\)</span> is either <span class="process-math">\(S_3\)</span> or <span class="process-math">\(\Z/6.\)</span> The roots of <span class="process-math">\(f\)</span> are <span class="process-math">\(\alpha_i=\sqrt[6]{3}e^{{(\pi i/6)}^{2i-1}}\)</span> for <span class="process-math">\(1\leq i\leq 6\text{.}\)</span>
+</div>
+<div class="para">By the Porism there exists a <span class="process-math">\(\sigma\in\Gal(\Q(a)/\Q)\)</span> such that <span class="process-math">\(\sigma(\alpha_1)=\alpha_2\text{.}\)</span> Let <span class="process-math">\(\zeta=e^{\pi i/3}\text{,}\)</span> and note that <span class="process-math">\(\alpha_i=\alpha_{i-1}\zeta\text{.}\)</span> Additionally, note that <span class="process-math">\(\frac{\alpha_i^3+1}{2}=\zeta\)</span> when <span class="process-math">\(i=1,3,5\)</span> and <span class="process-math">\(\frac{\alpha_i^3+1}{2}=\zeta^5\)</span> when <span class="process-math">\(i=2,4,6\text{.}\)</span>
+</div>
+<div class="para logical">
+<div class="para">Observe then that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sigma(\alpha_2)=\sigma(\alpha_1)\sigma(\zeta)=\alpha_2\frac{\sigma(\alpha_1)^3+1}{2}=\alpha_2\zeta^5=\alpha_1.
+\end{equation*}
+</div>
+<div class="para">Similarly, we see that <span class="process-math">\(\sigma(\alpha_3)=\alpha_6\)</span> and <span class="process-math">\(\sigma(\alpha_4)=\alpha_5\text{.}\)</span> Thus <span class="process-math">\(\sigma\)</span> corresponds to the permutation <span class="process-math">\((12)(36)(45)\text{.}\)</span>
+</div>
+</div>
+<div class="para">Using the Porism again we see there exists a <span class="process-math">\(\tau\in\Gal(\Q(a)/\Q)\)</span> such that <span class="process-math">\(\tau(\alpha_2)=\alpha_3\text{.}\)</span> Using a similar process as above we see that <span class="process-math">\(\tau\)</span> corresponds to <span class="process-math">\((14)(23)(46)\text{.}\)</span> However, observe that <span class="process-math">\(\sigma\tau=(153)(264)\text{,}\)</span> while <span class="process-math">\(\tau\sigma=(135)(246)\text{.}\)</span> Thus these elements do not commute, so we cannot be in <span class="process-math">\(\Z/6\text{.}\)</span> Thus <span class="process-math">\(\Gal(\Q(a)/\Q)\cong S_3\text{.}\)</span>
+</div></article><span class="incontext"><a href="section-83.html#li-1318" class="internal">in-context</a></span>
 </body>
 </html>

@@ -13,16 +13,80 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h3 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">H.104.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">E.107.1</span><span class="period">.</span>
 </h3>
-<div class="para">Let <span class="process-math">\(L\)</span> be the splitting field over <span class="process-math">\(\Q\)</span> of the polynomial <span class="process-math">\(f(x)=x^3-7\)</span>
-</div> <div class="para">Part (a) First, notice that <span class="process-math">\(f\)</span> is irreducible in <span class="process-math">\(\Q[x]\)</span> by <a href="" class="xref" data-knowl="./knowl/thm-eisensteins-criterion.html" title="Theorem 16.17: Eisenstein's Criterion">Eisenstein's Criterion</a> <span class="process-math">\((p=7)\text{.}\)</span> Let <span class="process-math">\(\z\)</span> denote a primitive third root of unity. The roots of <span class="process-math">\(f\)</span> are the following: 1. <span class="process-math">\(\a_1=\sqrt[3]{7}\z\text{,}\)</span> 2. <span class="process-math">\(\a_2=\sqrt[3]{7}\z^2\text{,}\)</span> and 3. <span class="process-math">\(\a_3=\sqrt[3]{7}\z^3=\sqrt[3]{7}\text{.}\)</span> As <span class="process-math">\(f\)</span> is irreducible and monic we see that it is the [[Mathematics/Definitions/Minimum Polynomial|minimum polynomial ]]of <span class="process-math">\(\a_3\)</span> over <span class="process-math">\(\Q\text{.}\)</span> Let <span class="process-math">\(E_1=\Q(\a_3)\)</span> and notice <span class="process-math">\([E_1:\Q]=3\text{.}\)</span>
-</div> <div class="para">Recall that <span class="process-math">\(G=\Gal(L/\Q)\)</span> is isomorphic to a subgroup of <span class="process-math">\(S_3\text{.}\)</span> As <span class="process-math">\(E_1\sse \R\)</span> and <span class="process-math">\(\a_1\not\in\R\text{,}\)</span> we see another extension is needed, and that extension will have at least degree <span class="process-math">\(2\text{.}\)</span> Thus, due to size constraints, we see <span class="process-math">\(G\cong S_3\text{.}\)</span>
-</div> <div class="para">By the <a href="" class="xref" data-knowl="./knowl/thm-ftgt.html" title="Theorem 18.24: Fundamental Theorem of Galois Theory">Fundamental Theorem of Galois Theory</a> each Galois intermediate extension between <span class="process-math">\(\Q\)</span> and <span class="process-math">\(L\)</span> corresponds to a normal subgroup of <span class="process-math">\(G\text{,}\)</span> which are the normal subgroups of <span class="process-math">\(S_3\text{.}\)</span>
-</div> <div class="para">The elements of <span class="process-math">\(S_3\)</span> are the following: 1. <span class="process-math">\((1)\)</span> 2. <span class="process-math">\((12)\)</span> 3. <span class="process-math">\((13)\)</span> 4. <span class="process-math">\((23)\)</span> 5. <span class="process-math">\((123)\)</span> 6. <span class="process-math">\((132)\)</span> The subgroup <span class="process-math">\(F=\langle(123)\rangle=\{(123),(132)\}\)</span> has index <span class="process-math">\(2\)</span> in <span class="process-math">\(G\)</span> and is thus normal. None of the order <span class="process-math">\(2\)</span> subgroups are normal in <span class="process-math">\(S_3\text{,}\)</span> so <span class="process-math">\(F\)</span> is the only strictly intermediate extension.</div> <div class="para">Recall <span class="process-math">\([E_1:\Q]=3\text{,}\)</span> meaning <span class="process-math">\(|\Gal(L/E_1)|=3\text{,}\)</span> so <span class="process-math">\(E\)</span> corresponds to a subgroup of order <span class="process-math">\(2\)</span> in <span class="process-math">\(G\text{,}\)</span> so its not Galois unfortunately. However, <span class="process-math">\(E_2=\Q(\z)\)</span> is a degree <span class="process-math">\(2\)</span> extension that is an intermediate field, as <span class="process-math">\(\z\)</span> is a root of the irreducible polynomial <span class="process-math">\(x^2+x+1\text{.}\)</span>
-</div> <div class="para">With all this in mind, notice: - <span class="process-math">\(\Q\)</span> is a splitting field of <span class="process-math">\(\Q\text{,}\)</span> and has the primitive generator by <span class="process-math">\(1\text{.}\)</span> - <span class="process-math">\(E_2\)</span> is our only strictly intermediate field, and has the primitive generator <span class="process-math">\(\z\)</span> - Finally, <span class="process-math">\(L\)</span> is Galois over <span class="process-math">\(\Q\text{,}\)</span> and has the primitive generator <span class="process-math">\(\z+\sqrt[3]{7}\text{.}\)</span>
-</div> <div class="para">Part (b)</div>
+<div class="para">Let <span class="process-math">\(F\)</span> be a field.</div> <div class="para logical">
+<div class="para">Part (a) Let <span class="process-math">\(A\)</span> be an <span class="process-math">\(n \times n\)</span> nilpotent matrix. Let <span class="process-math">\(\lambda\)</span> be some eigenvalue of <span class="process-math">\(A\text{.}\)</span> Thus there exists some vector <span class="process-math">\(v\)</span> such that <span class="process-math">\(A\lambda=\lambda v\text{.}\)</span> Let's consider this the base-case of some rather banal induction. Now assume that for <span class="process-math">\(n\)</span> we have <span class="process-math">\(A^nv=\lambda^nv\text{.}\)</span> Consider</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A^{n+1}v=A(A^nv)=A(\lambda^n v)=\lambda^n(Av)=\lambda^{n+1}v.
+\end{equation*}
 </div>
-<span class="incontext"><a href="section-78.html#solution-246" class="internal">in-context</a></span>
+<div class="para">Recall that as <span class="process-math">\(A\)</span> is nilpotent, there exists some <span class="process-math">\(m\in\N\)</span> such that <span class="process-math">\(A^m=0\text{.}\)</span> As <span class="process-math">\(\lambda\)</span> is an eigenvalue of <span class="process-math">\(A\text{,}\)</span> by the above induction we see that <span class="process-math">\(\lambda^m\)</span> is an eigenvalue for <span class="process-math">\(A^m=0\text{.}\)</span> As <span class="process-math">\(F\)</span> is a field and thus an integral domain, we see that <span class="process-math">\(\lambda^n=0\)</span> implies that <span class="process-math">\(\lambda=0\)</span> is as well. As this holds in the algebraic closure of <span class="process-math">\(F\)</span> as well, we see that when factored into linear terms all the <span class="process-math">\(\lambda=0\text{.}\)</span> Thus <span class="process-math">\(\cp_A(x)=x^n\text{.}\)</span>
+</div>
+</div> <div class="para">By the Cayley Hamilton Theorem we know <span class="process-math">\(\mp_A(x)|\cp_A(x)=x^n\text{,}\)</span> and thus <span class="process-math">\(A^n=0\text{.}\)</span>
+</div> <div class="para">Part (b) Assume <span class="process-math">\(n \leq 3\)</span> and let <span class="process-math">\(A,B\)</span> be nilpotent matrices with entries in <span class="process-math">\(F\text{.}\)</span>
+</div> <div class="para">
+<span class="process-math">\((\Rightarrow)\)</span> Suppose <span class="process-math">\(A\sim B\text{.}\)</span> Thus there exists some invertible matrix <span class="process-math">\(P\)</span> such that <span class="process-math">\(PAP\inv=B\)</span> by the definition of similar matrices. Let <span class="process-math">\(U\in\ker(PA)\text{.}\)</span> Thus <span class="process-math">\(PA(U)=0\)</span> and <span class="process-math">\(P(AU)=0\text{.}\)</span> We multiply both sides by <span class="process-math">\(P\inv\)</span> to see that <span class="process-math">\(AU=0\text{.}\)</span> Therefore the <span class="process-math">\(\ker(PA)=\ker(A)\text{,}\)</span> and hence the ranks of <span class="process-math">\(PA\)</span> and <span class="process-math">\(A\)</span> are equal by <a href="" class="xref" data-knowl="./knowl/thm-rank-nullity.html" title="Theorem 13.21: Rank Nullity Theorem">Rank Nullity Theorem</a>.</div> <div class="para logical">
+<div class="para">Next, observe</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+\rank(AP\inv)&amp;=\rank((AP\inv)^T)\\
+&amp;=\rank(P^{-1^T}A^T)\\
+&amp;=\rank(A^T)\\
+&amp;=\rank(A),
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">as <span class="process-math">\((P^{-1})^T\)</span> is an invertible matrix. Thus <span class="process-math">\(\rank(B)=\rank(PAP\inv)=\rank(A)\text{.}\)</span>
+</div>
+</div> <div class="para">
+<span class="process-math">\((\Leftarrow)\)</span> Suppose that <span class="process-math">\(\rank(A)=\rank(B)\text{.}\)</span> From Part (a) we know <span class="process-math">\(\cp_A(x)=\cp_B(x)=x^n\text{.}\)</span>
+</div> <div class="para">We consider the case where <span class="process-math">\(\cp_A(x)=\cp_B(x)=x^3\text{.}\)</span>
+</div> <div class="para">The only possible invariant factors involving <span class="process-math">\(x^3\)</span> are 1. <span class="process-math">\(x,x,x\text{;}\)</span> 2. <span class="process-math">\(x,x^2\text{;}\)</span> and 3. <span class="process-math">\(x^3\)</span> itself. However, if <span class="process-math">\(x,x,x\)</span> are the invariant factors then the rank of <span class="process-math">\(A\)</span> would be 3, making it invertible, contradicting the fact that 0 is an eigenvalue of <span class="process-math">\(A\text{.}\)</span> Thus we need only consider the latter two cases.</div> <div class="para logical">
+<div class="para">Note that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C(x)=[0], C(x^2)=
+\begin{bmatrix}
+0 &amp; 0\\
+1 &amp; 0\\
+\end{bmatrix}, 
+C(x)\oplus C(x^2)\begin{bmatrix}
+0 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 0\\
+\end{bmatrix}, \textrm{ and } C(x^3)=
+\begin{bmatrix}
+0 &amp; 0 &amp; 0\\
+1 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 0\\
+\end{bmatrix}.
+\end{equation*}
+</div>
+<div class="para">As <span class="process-math">\(C(x)\oplus C(x^2)\)</span> has rank 1 and <span class="process-math">\(C(x^3)\)</span> has rank 2, since <span class="process-math">\(\rank(A)=\rank(B)\)</span> we see that they must have the same invariant factors, making them similar.</div>
+</div> <div class="para">If <span class="process-math">\(n=2\)</span> then the only possible invariant factor is <span class="process-math">\(x^2\text{,}\)</span> as having two <span class="process-math">\(x\)</span>'s would make <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> invertible again. If <span class="process-math">\(n=1\)</span> then <span class="process-math">\(A=B=0\)</span> and we're done.</div> <div class="para">Part (c) Consider <span class="process-math">\(A=C(x^2)\oplus C(x^2)\)</span> and <span class="process-math">\(B=C(x)\oplus C(x^3)\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Thus</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A=\begin{bmatrix}
+0 &amp; 0 &amp; 0 &amp; 0\\
+1 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 1 &amp; 0\\
+\end{bmatrix} \textrm{ and } 
+B=\begin{bmatrix}
+0 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 1 &amp; 0\\
+\end{bmatrix},
+\end{equation*}
+</div>
+</div> <div class="para">both of which have rank <span class="process-math">\(2\)</span> and are in RCF. Thus they are not similar.</div>
+</div>
+<span class="incontext"><a href="section-75.html#solution-246" class="internal">in-context</a></span>
 </body>
 </html>

@@ -13,28 +13,26 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h3 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">H.44.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">E.47.1</span><span class="period">.</span>
 </h3>
-<div class="para">Let <span class="process-math">\(L\)</span> be the splitting field over <span class="process-math">\(\Q\)</span> of the polynomial <span class="process-math">\(f(x) = x^5 + 2 \in \Q[x].\)</span>
+<div class="para">Let <span class="process-math">\(G\)</span> be a group of order <span class="process-math">\(p^n\text{,}\)</span> for some prime <span class="process-math">\(p\text{,}\)</span> acting on a finite set <span class="process-math">\(X\text{.}\)</span>
 </div> <div class="para logical"><ol class="decimal">
 <li>
-<div class="para logical">
-<div class="para">Note that <span class="process-math">\(f\)</span> is irreducible in <span class="process-math">\(\Q[x]\)</span> by <a href="" class="xref" data-knowl="./knowl/thm-eisensteins-criterion.html" title="Theorem 16.17: Eisenstein's Criterion">Eisenstein's Criterion</a> (<span class="process-math">\(p=2\)</span>). The roots of <span class="process-math">\(f\)</span> are</div>
-<ul class="disc">
-<li><div class="para"><span class="process-math">\(\displaystyle \a_1=\sqrt[5]{2}e^{\pi i/5}\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\displaystyle \a_2=\sqrt[5]{2}e^{3\pi i/5}\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\displaystyle \a_3=\sqrt[5]{2}e^{5\pi i/5}=-\sqrt[5]{2}\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\displaystyle \a_4=\sqrt[5]{2}e^{7\pi i/5}\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\displaystyle \a_5=\sqrt[5]{2}e^{9\pi i/5}\)</span></div></li>
-</ul>
+<div class="para">Suppose there is no element in <span class="process-math">\(X\)</span> that is fixed by all elements of <span class="process-math">\(G\text{.}\)</span>
 </div>
-<div class="para">As <span class="process-math">\(f\)</span> is monic and irreducible it is the minimum polynomial of <span class="process-math">\(\sqrt[5]{2}\in\Q[x]\text{.}\)</span> Let <span class="process-math">\(F=\Q(\sqrt[5]{2})\text{,}\)</span> and notice <span class="process-math">\([F:\Q]=5\text{.}\)</span> Note that <span class="process-math">\(F\subseteq\R\)</span>
+<div class="para">By <a href="" class="xref" data-knowl="./knowl/cor-orbit-stabilizer.html" title="Corollary 5.30: Orbit-Stabilizer Theorem">Orbit-Stabilizer Theorem</a> we know that <span class="process-math">\(|\Orb_G(x)|\big||G|\)</span> for all <span class="process-math">\(x\in X\text{.}\)</span> Thus every orbit under this action has an order dividing <span class="process-math">\(p^n\text{,}\)</span> so either <span class="process-math">\(1\)</span> or some positive power of <span class="process-math">\(p.\)</span> However, as no element of <span class="process-math">\(X\)</span> is fixed by every element of <span class="process-math">\(G\text{,}\)</span> there exists no stabilizer which is all of <span class="process-math">\(G\text{,}\)</span> and thus there exist no orbits that have order <span class="process-math">\(1\text{.}\)</span>
 </div>
-<div class="para">Let <span class="process-math">\(\z=e^{\frac{\pi i}{5}}\)</span> be a primitive <span class="process-math">\(10\th\)</span> root of unity. This is the root a cyclotomic polynomial of degree <span class="process-math">\(9\)</span> which is irreducible in <span class="process-math">\(\Q[x]\text{.}\)</span> As this has relatively prime order to <span class="process-math">\(F\)</span> it is irreducible there as well. Let <span class="process-math">\(K=F(\z)\text{,}\)</span> and notice <span class="process-math">\([K:\Q]=40\text{.}\)</span> Notice that <span class="process-math">\(\a_1\cdot\a_3\inv=\z\text{,}\)</span> and so <span class="process-math">\(L=K\text{,}\)</span> completing the proof.</div>
+<div class="para">Recall that the orbits of this action partition <span class="process-math">\(X\text{,}\)</span> and thus <span class="process-math">\(|X|=\sum_{x\in X}|\Orb_G(x)|\text{.}\)</span> As every orbit is divisible by <span class="process-math">\(p\text{,}\)</span> so too must be <span class="process-math">\(X\text{.}\)</span>
+</div>
 </li>
-<li><div class="para">Coming soon!</div></li>
+<li>
+<div class="para">Suppose <span class="process-math">\(G\)</span> acts faithfully on <span class="process-math">\(X\text{.}\)</span> Thus the permutation representation homomorphism <span class="process-math">\(\rho:G\to\Perm(X)\)</span> is injective. Let <span class="process-math">\(k\)</span> denote the order of <span class="process-math">\(X\text{.}\)</span> Then <span class="process-math">\(\Perm(X)\cong S_k\text{,}\)</span> which as order <span class="process-math">\(k!\text{.}\)</span> As <span class="process-math">\(G\)</span> is injective, we see that <span class="process-math">\(|G|=|\im\rho|\leq S_k\text{,}\)</span> and thus <span class="process-math">\(p^n|k!\text{.}\)</span>
+</div>
+<div class="para">Thus <span class="process-math">\(p\)</span> must show up in the factorization of <span class="process-math">\(k!\)</span> at least <span class="process-math">\(n\)</span> times, meaning that <span class="process-math">\(|X| \geq np\text{.}\)</span>
+</div>
+</li>
 </ol></div>
 </div>
-<span class="incontext"><a href="section-71.html#solution-186" class="internal">in-context</a></span>
+<span class="incontext"><a href="section-69.html#solution-186" class="internal">in-context</a></span>
 </body>
 </html>

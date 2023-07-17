@@ -319,6 +319,7 @@
     </latex-image-preamble>
 
     <rename element="insight">Mark</rename>  
+    <rename element="investigation">Foreshadowing</rename>  
     <rename element="inlineexercise">Exploration</rename>
     <rename element="exploration">Discussion</rename>
     <rename element="heuristic">Vague Semidefinition</rename>
@@ -387,7 +388,7 @@
 
       </acknowledgement>
 
-      <preface><title>How to Use This Book (*)</title>
+      <preface><title>How to Use This Book</title>
 
         <p>
           I'm still in the process of figuring out exactly what this is for. Some possibilities include:
@@ -425,6 +426,9 @@
             <ul>
               <li><title><term>Definition</term></title>
                 <p>
+                  
+                </p>
+                <p>
                   These are pretty standard and probably what you'd be expecting. 
                   The building blocks of what we'll be working with. 
                 </p>
@@ -446,7 +450,7 @@
 
               <li><title><term>Lemma</term></title>
                 <p>
-                  A more technical result used specifically in the proof of a larger result.
+                  A true mathematical statement that was proven mainly to help in the proof of some theorem. 
                 </p>
               </li>
 
@@ -505,62 +509,6 @@
           
         </paragraphs>
 
-      </preface>
-
-      <preface><title>Guide to Proof Writing</title>
-
-        <p>
-          <ol>
-            <li>
-              <p>
-                Never use the words "obvious", "clearly", "trivial", "of course", or synonyms of these.
-              </p>
-            </li>
-
-            <li>
-              <p>
-                Write words rather than symbols or abbreviations - a long string of symbols isn't as readable as an English sentence. 
-                Specifically: For all proofs you hand in, write out "for all", "there is", "implies", "if and only if", "therefore", "because", "such that", "for example". 
-                (That is, the symbols ∀, ∃, ⇒, ⇔, ∴, ∵, and s.t., should be avoided.)
-              </p>
-            </li>
-
-            <li>
-              <p>
-                Every time you apply a definition, theorem, proposition, lemma, corollary, exercise, etc., in a proof that you are writing up, reference it. 
-                Reference a theorem, lemma, or proposition by its number in the text (for example <xref ref="thm-lagrange"/>); reference a definition as "the definition of ___" (or by its number in the text, such as <xref ref="def-group"/>). 
-              </p>
-            </li>
-
-            <li>
-              <p>
-                Write sentences and paragraphs, and use correct grammar and punctuation. 
-                (For example, every sentence should end with a period.)
-              </p>
-            </li>
-
-            <li>
-              <p>
-                Follow the standard mathematical conventions for notation.
-              </p>
-            </li>
-
-            <li>
-              <p>
-                Define every new variable letter at the first point it appears in your proof.
-              </p>
-            </li>
-
-            <li>
-              <p>
-                The first sentence of a proof should suppose the hypotheses, and the last sentence of a proof should conclude the conclusion.
-              </p>
-            </li>
-          </ol>
-        </p>
-      
-      
-        
       </preface>
 
     </frontmatter>
@@ -751,11 +699,18 @@
 
             <insight>
               <p>
-                Magmas, semigroups, and monoids won't show up all that much moving forward, but they are doing a surprising amount of leg work under the surface, and it's worth mentioning them. 
-                However, if you're feeling overwhelmed by the amount of new words buzzing around, those three are probably the ones you can worry about the least, at least in this text.
+                Some mathematicians choose to define a semigroup as we have defined a monoid (e.g. satisfying both the associative <em>and</em> identity properties).
+                We have yet to grasp why.
                 <fn>This is the one and only "Mark". All following "Marks" will be "Remarks".</fn>
               </p>
             </insight>
+
+            <remark>
+              <p>
+                Magmas, semigroups, and monoids won't show up all that much moving forward, but they are doing a surprising amount of leg work under the surface, and it's worth mentioning them. 
+                However, if you're feeling overwhelmed by the amount of new words buzzing around, those three are probably the ones you can worry about the least, at least in this text.
+              </p>
+            </remark>
 
             <p>
               For those who appreciate a snazzy visual, here is a handy little graphic.
@@ -1372,7 +1327,7 @@
       
                     <li>
                       <p>
-                        If <m>g^p=e</m> for <m>g\neq e</m> and <m>p</m> <xref text="title" ref="def-prime-number"/>, then <m>|g|=p</m>.
+                        If <m>g^p=e</m> for <m>g\neq e</m> and <xref text="title" ref="def-prime-number"/> <m>p</m>, then <m>|g|=p</m>.
                       </p>
                     </li>
                   </ol>
@@ -1692,7 +1647,11 @@
               <statement>
                 <p>
                   A <em>permutation</em><idx><h>permutation</h></idx> of a set <m>S</m> is a bijective function <m>\sigma:S\to S</m>. 
-                  The set of all permutations of a set <m>S</m> is denoted <m>\Perm(S)</m><idx><h>permutation group</h></idx>.
+                  The set of all permutations of a set <m>S</m> is denoted <m>\Perm(S)</m>.
+                  <idx><h>permutation group</h></idx>
+                  <idx><h><m>\Perm(S)</m></h></idx>
+                  <idx><h><m>\sigma:S\to S</m></h></idx>
+
                 </p>
               </statement>
             </definition>
@@ -1755,10 +1714,13 @@
                 <p>
                   If <m>i_1, \dots, i_m</m> are distinct integers between <m>1</m> and <m>n</m>, then <m>\sigma=(i_1 \, i_2 \, \dots i_m)</m> denotes the element of <m>S_n</m> that satisfies 
                   <me>
-                    \sigma(i_1)=i_2, \sigma(i_2)=i_3, \dots, \sigma(i_{m-1})=i_m, \sigma(i_m)=i_1 \text{ and } \sigma(k)=k \text{ for } k\in[n] \setminus \{i_1, \dots, i_m\}.
+                    \sigma(i_1)=i_2, \sigma(i_2)=i_3, \dots, \sigma(i_{m-1})=i_m, \sigma(i_m)=i_1 \text{ and } \sigma(k)=k
                   </me> 
-                  Such a permutation is called a <em>cycle</em><idx><h>cycle</h></idx> or an <m>m</m><em>-cycle</em> if we want to emphasize its length. 
-                  A <m>2</m>-cycle is often called a <em>transposition</em><idx><h>transposition</h></idx>.
+                  for <m>k\in[n] \setminus \{i_1, \dots, i_m\}</m>.
+                  Such a permutation is called a <em>cycle</em> or an <m>m</m><em>-cycle</em> if we want to emphasize its length. 
+                  A <m>2</m>-cycle is often called a <em>transposition</em>.
+                  <idx><h>cycle</h></idx>
+                  <idx><h>transposition</h></idx>
                 </p>
               </statement>
             </definition>
@@ -2244,14 +2206,14 @@
               </statement>
             </theorem>
 
-            <exercise xml:id="exe-group-hom"><title><m>\Hom</m> Sweet <m>\Hom</m></title>
+            <investigation xml:id="exe-group-hom"><title><m>\Hom</m> Sweet <m>\Hom</m></title>
               <statement>
                 <p>
                   Let <m>G</m> and <m>H</m> be abelian groups. 
                   Then the set <m>\Hom(G,H)</m> of all group homomorphisms from <m>G</m> to <m>H</m> is itself an abelian group.
                 </p>
               </statement>
-            </exercise>   
+            </investigation>   
 
             <!-- 
 
@@ -2998,7 +2960,7 @@
               </statement>
             </proposition>
 
-            <exercise xml:id="exe-torsion-subgroup"><title>Torsion Subgroups</title>    
+            <investigation xml:id="exe-torsion-subgroup"><title>Torsion Subgroups</title>    
               <statement>
                 <p>
                   <ol>
@@ -3018,7 +2980,7 @@
                   </ol>
                 </p>
               </statement>  
-            </exercise>
+            </investigation>
 
             <theorem xml:id="thm-properties-of-group-homoms"><title>Group Homomorphisms and Subgroups</title>    
               <statement>
@@ -4073,18 +4035,16 @@
             <theorem xml:id="thm-coset-equivalence-relation">
               <statement>
                 <p>
-                  
+                  For any <m>H\leq G</m> and any <m>g\in G</m>, the set of (left) cosets induces an equivalence relation on <m>G</m>, where two elements are related if they belong to the same left coset of <m>H</m> in <m>G</m>.
                 </p>
               </statement>
             </theorem>
-            
       
-            <lemma xml:id="lem-cosetpartition"><title>Cosets Partition a Group</title>
+            <corollary xml:id="cor-cosetpartition"><title>Cosets Partition a Group</title>
               <statement>
                 <p>
                   For <m>H \leq G</m>, the collection of left cosets of <m>H</m> in <m>G</m> form a partition of <m>G</m>, and similarly for the collection of right cosets. 
                   That is,
-      
                   <ul>
                     <li>
                       <p>
@@ -4097,7 +4057,6 @@
                         <m>\bigcup_{x\in G} xH=G</m>,                    
                       </p>
                     </li>
-      
                   </ul>
                   and similarly for right cosets. 
                   Moreover all left and right cosets have the same cardinality: <m>|xH| = |Hx|=|H|</m> for any <m>x\in G</m>.
@@ -4118,13 +4077,9 @@
                   Clearly <m>\rho</m> is onto and if <m>\rho(h) = \rho(h')</m> then <m>hg = h'g</m> and hence <m>h = h'</m>, so that <m>\rho</m> is also one-to-one.
                 </p>
               </proof>
-            </lemma>
+            </corollary>
 
-            <p>
-              As with any partition of a set, the collection of left cosets of <m>H</m> in <m>G</m> determine an equivalence relation on <m>G</m>, and similarly for the collection of right cosets.
-            </p>
-      
-            <corollary xml:id="cor-left-right-cosets"><title>Number of Left and Right Cosets</title>
+            <theorem xml:id="thm-lagrange"><title>Lagrange's Theorem</title>
               <statement>
                 <p>
                   If <m>G</m> is a finite group and <m>H \leq G</m>, then 
@@ -4134,27 +4089,19 @@
                     &amp; = |H| \cdot (\text{the number of right cosets of $H$ in $G$}). \\
                     \end{aligned}
                   </me> 
-                  In particular the number of left cosets of <m>H</m> in <m>G</m> is equal to the number of right cosets of <m>H</m> in <m>G</m>.
+                  In particular, <m>|H|</m> divides <m>|G|</m>.
+                </p>
+              </statement>
+            </theorem>
+
+            <corollary xml:id="cor-index-cor"><title>Equal Number of Left and Right Cosets</title>
+              <statement>
+                <p>
+                  The number of left cosets of <m>H</m> in <m>G</m> is equal to the number of right cosets of <m>H</m> in <m>G</m>.
                 </p>
               </statement>
             </corollary>
 
-            <exercise xml:id="exe-left-right-cosets"><title>Number of Left and Right Cosets (Ininite Version)</title>
-              <statement>
-                <p>
-                  Show that even if <m>G</m> is not finite the number of left and right cosets of a subgroup <m>H\leq G</m> is still the same.
-                </p>
-              </statement>
-
-              <hint>
-                <p>
-                  Consider the map <m>gH\mapsto Hg^{-1}</m> and show it's a bijection. 
-                  Why is the inverse needed?
-                </p>
-              </hint>
-  
-            </exercise>
-      
             <definition xml:id="def-index"><title>Index</title>
               <statement>
                 <p>
@@ -4164,7 +4111,7 @@
                 </p>
               </statement>
             </definition>
-
+            
             <example xml:id="ex-d2n-cosets"><title>Cosets in <m>D_{2n}</m></title>
               <p>
                 For <m>G =D_{2n}</m> and <m>H = \langle s \rangle = \{e,s\}</m>, the left cosets of <m>H</m> in <m>G</m> are 
@@ -4181,65 +4128,23 @@
             </example>
 
             <p>
-              The notion of index is most useful when it is finite, but note that this does not require that <m>G</m> to be finite. 
+              Now that we have proved <xref text="title" ref="thm-lagrange"/>, a host of other results now become available to us.
             </p>
 
-            <example xml:id="ex-z-cosets"><title>Finite Index in Infinite Group</title>
-              <p>
-                Let <m>G = \mathbb{Z}</m> and <m>H = 7\mathbb{Z}</m>. 
-                Then <m>[G:H] = 7</m> since the cosets are <m>H, 1 + H, 2 + H, \dots, 6 + H</m>. 
-                (Since <m>G</m> is abelian, left and right cosets are automatically the same.)
-              </p>
-            </example>
-
-            <p>
-              This seems like it might be important.
-            </p>
-
-            <theorem xml:id="thm-index-tower"><title>The Index Tower</title>
-              <statement>
-                <p>
-                  Let <m>G</m> be a group (possibly infinite) and <m>H \leq K</m> subgroups of <m>G</m>. 
-                  Suppose <m>[G : H]</m> is finite. 
-                  Then <m>[G : H] = [G : K][K : H]</m>.
-                </p>
-              </statement>
-            </theorem>
-
-          </subsection>
-
-          <subsection xml:id="subsec-lagrange"><title>Lagrange's Theorem and Corollaries</title>
-
-            <blockquote>
-              <p>
-                <q>
-                  Lagrange is the Lofty Pyramid of the Mathematical Sciences.
-                </q>
-              </p>
-              <attribution>Napoleon Bonaparte</attribution>
-            </blockquote>
-      
-            <theorem xml:id="thm-lagrange"><title>Lagrange's Theorem</title><creator><m>1770</m></creator>
-              <statement>
-                <p>
-                  If <m>H</m> is a subgroup of a finite group <m>G</m>, then <m>|H|</m> divides <m>|G|</m>.
-                </p>
-              </statement>
-            </theorem>
-      
             <corollary xml:id="cor-lagrange"><title>Corollaries to Lagrange's Theorem</title>
               <statement>
                 <p>
+                  Let <m>G</m> be a finite group.
                   <ol>
                     <li>
                       <p>
-                        If <m>x\in G</m> and <m>G</m> is a finite group, then <m>|x|</m> divides <m>|G|</m>.
+                        If <m>x\in G</m>, then <m>|x|</m> divides <m>|G|</m>.
                       </p>
                     </li>
       
                     <li>
                       <p>
-                        If <m>G</m> is a finite group, then <m>[G:H]=\frac{|G|}{|H|}</m>
+                        <m>[G:H]=\frac{|G|}{|H|}</m>
                       </p>
                     </li>
       
@@ -4255,7 +4160,48 @@
             </corollary>
 
             <p>
-              Here are some more.
+              The notion of index is most useful when it is finite, but note that this does not require that <m>G</m> to be finite. 
+            </p>
+
+             <example xml:id="ex-z-cosets"><title>Finite Index in Infinite Group</title>
+              <p>
+                Let <m>G = \mathbb{Z}</m> and <m>H = 7\mathbb{Z}</m>. 
+                Then <m>[G:H] = 7</m> since the cosets are <m>H, 1 + H, 2 + H, \dots, 6 + H</m>. 
+                (Since <m>G</m> is abelian, left and right cosets are automatically the same by <xref ref="exe-abelian-cosets"/>)
+              </p>
+            </example>
+
+            <exercise xml:id="exe-left-right-cosets"><title>Number of Left and Right Cosets (Ininite Version)</title>
+              <statement>
+                <p>
+                  Show that even if <m>G</m> is not finite the number of left and right cosets of a subgroup <m>H\leq G</m> is still the same.
+                </p>
+              </statement>
+
+              <hint>
+                <p>
+                  Consider the map <m>gH\mapsto Hg^{-1}</m> and show it's a bijection. 
+                  Why is the inverse needed?
+                </p>
+              </hint>
+            </exercise>
+
+            <p>
+              This seems like it might be important.
+            </p>
+
+            <theorem xml:id="thm-index-tower"><title>The Index Tower</title>
+              <statement>
+                <p>
+                  Let <m>G</m> be a group (possibly infinite) and <m>H \leq K</m> subgroups of <m>G</m>. 
+                  Suppose <m>[G : H]</m> is finite. 
+                  Then <m>[G : H] = [G : K][K : H]</m>.
+                </p>
+              </statement>
+            </theorem>
+      
+            <p>
+              Here are some more corollaries to <xref text="title" ref="thm-lagrange"/>.
             </p>
 
             <exercise xml:id="exe-nontrivial-subgroup">
@@ -4276,7 +4222,7 @@
             </exercise>
 
             <p>
-              If you can believe it, there's actually another important corollary to <xref text="title" ref="thm-lagrange"/>, but we'll cover it when its more relevant. 
+              If you can believe it, there's actually <em>another</em> important corollary to <xref text="title" ref="thm-lagrange"/>, but we'll cover it when its more relevant. 
               Wouldn't want to spoil all the fun at once, right?
               <fn>To spoil all the fun at once, see: <xref ref="thm-order-p-cyclic"/>, part (1).</fn>
             </p>
@@ -4295,7 +4241,7 @@
             </p>
             <attribution>Maya Angelou</attribution>
           </blockquote>
-    
+
           <definition xml:id="def-normal-subgroup"><title>Normal Subgroup</title>
             <statement>
               <p>
@@ -4360,6 +4306,12 @@
                   <li>
                     <p>
                       <m>gN = Ng</m> for all <m>g \in G</m>. 
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      The equivalence relations on <m>G</m> determined by the left and right cosets of <m>H</m> coincide.
                     </p>
                   </li>
                 </ol>
@@ -4626,40 +4578,36 @@
               </p>
               <attribution>Vincent Van Gogh</attribution>
             </blockquote>
+
+            <p>
+            We return now to the equivalence relation induced by the set of left (or right) cosets on a group <m>G</m>.
+            </p>
+
+            <p>
+              Let us ask a question: When does <m>G/\sim</m> aquire the structure of a group under the operation 
+              <me>
+                [x] \cdot [y] := [xy]?
+              </me> 
+              We need to be worried about whether this operation is independent of choice. 
+              That is, if <m>[x] = [x']</m> and <m>[y] = [y']</m> then must <m>[xy] = [x'y']</m>? 
+              In other words, if <m>x\sim x'</m> and <m>y \sim y'</m>, must <m>xy \sim x'y'</m>?
+            </p>
       
             <p>
-              In previous sections we have spent time discussing the existence and properties of cosets, but we have yet to lump them all together into one set. 
-              If one were to do so, a natural question to ask would be when such a set defines a group in its own right. 
-              Is it always? 
-              It sure would be nice if it was always.
-            </p>
-
-            <exercise><title>It is Not Always</title>
-              <p>
-                Prove that it is not always.
-              </p>
-            </exercise>
-
-            <p>
-              Darn. 
-              Is it sometimes? 
-              It sure would be nice if it was at least sometimes. 
-            </p>
-
-            <exercise><title>It is Sometimes</title>
-              <p>
-                Find an example of when it is.
-              </p>
-            </exercise>
-
-            <p>
-              Woohoo! 
-              So the set of cosets forms a group sometimes. 
-              But when? 
               As it turns out (serendipidous, I know) we discovered the exact property a subgroup needs to ensure its cosets form a well-defined group. 
               At least, normally they do...
               <fn>Get it?</fn>
             </p>
+
+            <theorem xml:id="thm-quotient-iff-normal"><title>Quotients and Normal Subgroups</title>
+              <creator>1889</creator>
+              <statement>
+                <p>
+                  Let <m>N\leq G</m>. 
+                  The set of (left cosets) <m>G/N</m> forms a group if and only if <m>N\nsg G</m>.
+                </p>
+              </statement>
+            </theorem>
             
             <definition xml:id="def-quotient-group"><title>Quotient Group</title>
               <statement>
@@ -4669,21 +4617,6 @@
                 </p>
               </statement>
             </definition>
-
-            <p>
-              Before we get too ahead of ourselves, we should probably verify that this thing is actually a well-defined bona-fide group. 
-              Don't take my word for it, I made this for fun, I could always be lying.
-            </p>
-      
-            <theorem xml:id="thm-quotient-iff-normal"><title>Quotients and Normal Subgroups</title>
-              <creator>1889</creator>
-              <statement>
-                <p>
-                  Let <m>N\leq G</m>. 
-                  Then <m>G/N</m> is a group if and only if <m>N\nsg G</m>.
-                </p>
-              </statement>
-            </theorem>
 
             <example xml:id="ex-old-friends"><title>Old Friends</title>
               <p>
@@ -5136,7 +5069,6 @@
                   </li>
                 </ol>
                 <idx><h>group action</h></idx>
-                <idx><h>action</h></idx>
               </p>
             </statement>
           </definition>
@@ -5147,7 +5079,7 @@
             </p>
           </convention>
     
-          <example xml:id="ex-group-actions"><title>Common Group Actions</title>
+          <example xml:id="ex-group-actions"><title>Group Actions on Arbitrary Sets</title>
             <p>
               <ol>
                 <li><title>Trivial Action</title>
@@ -5159,8 +5091,8 @@
 
                 <li xml:id="ex-left-mult"> <title>Left Multiplication</title>
                   <p>
-                    For any group <m>G</m> and any set <m>S</m>, <m>g \cdot s := gs</m> defines an action, the <em>left multiplication action</em>
-                    <fn>And similarly for right multiplication, yet we do not speak of that here.</fn>.
+                    For any group <m>G</m> and any set <m>S</m>, <m>g \cdot s := gs</m> defines an action, the <em>left multiplication action</em>.
+                    <fn>And similarly for right multiplication, yet we do not speak of that here.</fn>
                     <idx><h>left multiplication</h></idx>
                     <idx><h>left regular action</h></idx>
                   </p>
@@ -5172,20 +5104,16 @@
                     <idx><h>conjugation action</h></idx>
                   </p>
                 </li>
-
-                <li>
-                  <p>
-                    The group <m>S_n</m> acts on the set <m>X=\{1,2,\dots,n\}</m> such that <m>\sigma\cdot i=\sigma(i)</m>.
-                  </p>
-                </li>
-
-                <li>
-                  <p>
-                    The group <m>\GL_n(\R)</m> acts on vectors in <m>\R^n</m> by left multiplication: given <m>A\in\GL_n(\R)</m> and <m>\v\in\R^n</m>, we have <m>A\cdot\v=A\v</m>.
-                  </p>
-                </li>
               </ol>
             </p>
+          </example>
+
+          <example xml:id="ex-perm-act"><title>Permutation Action</title>
+            <statement>
+              <p>
+                The group <m>S_n</m> acts on the set <m>X=\{1,2,\dots,n\}</m> such that <m>\sigma\cdot i=\sigma(i)</m>.
+              </p>
+            </statement>
           </example>
 
           <remark>
@@ -5290,7 +5218,7 @@
             </statement>
           </definition>
 
-           <exploration>
+           <exploration><title>Losing Faith</title>
             <p>
               Should an action which is not faithful be called <em>unfaithful</em>? 
               <em>Adulterous</em>? 
@@ -5321,74 +5249,9 @@
             </p>
           </remark>
     
-          <!--
-          <example xml:id="ex-transitive-faithful-actions">
-            <title>Transitive and Faithful Actions</title>
-            <p>
-              <ol>
-                <li>
-                  <p>
-                    The action of the group of rotational symmetries of a regular polygon on the vertices of the polygon is transitive. Any vertex can be sent to any other vertex by a rotation of the polygon.
-                  </p>
-                </li>
-    
-                <li>
-                  <p>
-                    The action of the group of rigid motions of three-dimensional space on the points of a sphere is transitive. Any point on the sphere can be sent to any other point by a rotation or translation of space.              
-                  </p>
-                </li>
-    
-                <li>
-                  <p>
-                    The action of the group of invertible <m>2\times2</m> matrices on the complex plane by multiplication is faithful. Every non-identity matrix corresponds to a different transformation of the complex plane.              
-                  </p>
-                </li>
-    
-                <li>
-                  <p>
-                    The action of the group of permutations of a set <m>X</m> on the set <m>X</m> itself by permutation is faithful. Every permutation corresponds to a unique rearrangement of the elements of <m>X</m>.              
-                  </p>
-                </li>
-    
-                <li>
-                  <p>
-                    The action of the group of permutations of a set <m>X</m> on the set of all subsets of <m>X</m> by permutation is both transitive and faithful. Any subset can be sent to any other subset by permuting the elements of <m>X</m>, and every non-identity permutation corresponds to a different permutation of the subsets of <m>X</m>.             
-                  </p>
-                </li>
-              </ol>
-            </p>
-    
-          </example>
-          -->
-
-          <paragraphs> <title>Applications of Group Actions</title>
-            <p>
-              <ol>
-                <li>
-                  <p>
-                    Physics: group actions are used to study the symmetries of physical systems. For example, the group of rotations in three dimensions acts on the space of physical states of a rigid body. By studying this group action, we can understand the behavior of rigid bodies under rotations.
-                  </p>
-                </li>
-
-                <li>
-                  <p>
-                    Chemistry: group actions are used to study the symmetries of molecules. The group of symmetries of a molecule acts on the set of its atoms, and this group action can be used to understand the molecular structure and properties, such as its optical activity and reactivity.           
-                  </p>
-                </li>
-
-                <li>
-                  <p>
-                    Computer Science: group actions are used in algorithms for encryption and data compression. For example, the group action of a permutation group on a set of data can be used to shuffle and encrypt the data. Similarly, the group action of a linear group on a vector space can be used to compress and store data.             
-                  </p>
-                </li>
-              </ol>
-            </p>
-            
-          </paragraphs>
-    
         </section>
     
-        <section xml:id="sec-left-mult-conjugation"><title>Left Multiplication and Conjugation</title>
+        <section xml:id="sec-left-mult-conjugation"><title>Self Actions</title>
 
           <subsection xml:id="subsec-conjugation-action"><title>Conjugation</title>
 
@@ -5619,6 +5482,11 @@
               </p>
               <attribution>Arthur Wellesley</attribution>
             </blockquote>
+
+            <p>
+              The information encoded in a group action has two basic parts: one part tells us where points go and the other part tells us how points stay put. 
+              The following terminology refers to these ideas.
+            </p>
 
             <definition xml:id="def-orbit"><title>Orbit</title>
               <statement>
@@ -10428,6 +10296,8 @@
           </theorem>
        
         </section>
+
+        <!-- 
     
         <section xml:id="subsec-noeth"><title>Noetherian Rings</title>
 
@@ -10541,6 +10411,8 @@
           </remark>
     
         </section>
+
+        -->
 
         <section xml:id="sec-field-of-fractions"><title>Fields of Fractions</title>
 
@@ -22951,6 +22823,45 @@
               </p>
             </remark>
 
+            <definition xml:id="def-number-sets"><title>Sets of Numbers</title>
+              <statement>
+                <p>
+                  <ul>
+                    <li xml:id="def-natural-numbers"><title>Natural Numbers</title>
+                      <p>
+                        The set of <term>natural numbers</term> is denoted by <m>\N=\{1,2,3\dots\}</m>
+                      </p>
+                    </li>
+
+                    <li xml:id="def-integers"><title>Integers</title>
+                      <p>
+                        The set of <term>integers</term> is denoted by <m>\Z=\{\dots,-2,-1,0,1,2\dots\}</m>
+                      </p>
+                    </li>
+
+                    <li xml:id="def-rational-numbers"><title>Rational Numbers</title>
+                      <p>
+                        The set of <term>rational numbers</term> is denoted by <m>\Q=\{\frac{p}{q}|p,q\in\Z,q\neq 0\}</m>
+                      </p>
+                    </li>
+
+                    <li xml:id="def-real-numbers"><title>Real Numbers</title>
+                      <p>
+                        The set of <term>real numbers</term> is denoted by <m>\R</m>, and is a little trickier to define both rigorously and succinctly. 
+                        Heuristically, it is the set of all numbers on the number line.
+                      </p>
+                    </li>
+
+                    <li xml:id="def-complex-numbers"><title>Complex Numbers</title>
+                      <p>
+                        The set of <term>complex numbers</term> is denoted by <m>\C=\{a+bi|a,b\in\R\}</m>
+                      </p>
+                    </li>
+                  </ul>
+                </p>
+              </statement>
+            </definition>
+
             <definition xml:id="def-subset"><title>Set Containments</title>
                 <statement>
                   <p>
@@ -23499,56 +23410,22 @@
 
           <subsection xml:id="subsec-number-systems"><title>Number Systems (*)</title>
 
-            <definition xml:id="def-number-sets"><title>Sets of Numbers</title>
+            <definition xml:id="def-divides"><title>Divisibility</title>
               <statement>
                 <p>
-                  <ul>
-                    <li xml:id="def-natural-numbers"><title>Natural Numbers</title>
-                      <p>
-                        The set of <term>natural numbers</term> is denoted by <m>\N=\{1,2,3\dots\}</m>
-                      </p>
-                    </li>
-
-                    <li xml:id="def-integers"><title>Integers</title>
-                      <p>
-                        The set of <term>integers</term> is denoted by <m>\Z=\{\dots,-2,-1,0,1,2\dots\}</m>
-                      </p>
-                    </li>
-
-                    <li xml:id="def-rational-numbers"><title>Rational Numbers</title>
-                      <p>
-                        The set of <term>rational numbers</term> is denoted by <m>\Q=\{\frac{p}{q}|p,q\in\Z,q\neq 0}</m>
-                      </p>
-                    </li>
-
-                    <li xml:id="def-real-numbers"><title>Real Numbers</title>
-                      <p>
-                        The set of <term>real numbers</term> is denoted by <m>\R</m>, and is a little trickier to define both rigorously and succinctly. Heuristically, it is the set of all numbers on the number line.
-                      </p>
-                    </li>
-
-                    <li xml:id="def-complex-numbers"><title>Complex Numbers</title>
-                      <p>
-                        The set of <term>complex numbers</term> is denoted by <m>\C=\{a+bi|a,b\in\R}</m>
-                      </p>
-                    </li>
-                  </ul>
+                  Let <m>a</m> and <m>b</m> be integers. 
+                  The integer <m>a</m> <term>divides</term> the integer <m>b</m> if and only if there is some integer <m>q</m> such that <m>aq = b</m>. 
+                  If <m>a</m> divides <m>b</m>, we write <m>a|b</m>, and we say that <m>a</m> is a factor of <m>b</m>, and that <m>b</m> is <term>divisible</term> by <m>a</m>. 
                 </p>
               </statement>
             </definition>
 
-            <definition xml:id="def-divides"><title>Divide (*)</title>
+            <definition xml:id="def-prime-number"><title>Prime Integer</title>
               <statement>
                 <p>
-                  
-                </p>
-              </statement>
-            </definition>
-
-            <definition xml:id="def-prime-number"><title>Prime (*)</title>
-              <statement>
-                <p>
-                  
+                  Let <m>p</m> be an integer greater than <m>1</m>.
+                  The integer <m>p</m> is a <term>prime</term> number if and only if the only positive integers that divide <m>p</m> are <m>1</m> and <m>p</m>. 
+                  The integer <m>p</m> is a <term>composite</term> number iff it is not a prime number. 
                 </p>
               </statement>
             </definition>
@@ -23605,7 +23482,7 @@
             <definition xml:id="def-cardinality"><title>Cardinality</title>
               <statement>
                 <p>
-                  A set <m>X</m> is <em>finite</em> if there is a bijection <m>X \to  \{1,...,n\}</m> for some natural number <m>n</m>, or <m>X</m> is empty. In this case the number <m>n</m> is called the<em>cardinality</em>of <m>X</m>.  
+                  A set <m>X</m> is <em>finite</em> if there is a bijection <m>X \to  \{1,...,n\}</m> for some natural number <m>n</m>, or <m>X</m> is empty. In this case the number <m>n</m> is called the <em>cardinality</em> of <m>X</m>.  
                 </p>
 
                 <p>
@@ -23729,6 +23606,8 @@
         </section>
 
       </appendix>
+
+      <!--
 
       <appendix xml:id="app-extras"><title>Extras</title>
 
@@ -24261,7 +24140,6 @@
             <p>Coming soon!</p>
           </subsection>
         </section>
-
 
         <section><title>Module Theory</title>
 
@@ -24920,6 +24798,8 @@
 
       </appendix>
 
+      -->
+
       <appendix xml:id="app-notation"><title>Notation</title>
         <notation-list/>
 
@@ -25399,6 +25279,8 @@
         </table>
       </appendix>
 
+      <!--
+
       <appendix xml:id="appendix-list-definitions"><title>List of Definitions</title>
         <list-of elements="definition" divisions="chapter appendix" empty="no"/>
       </appendix>
@@ -25406,6 +25288,8 @@
       <appendix xml:id="appendix-list-results"><title>List of Results</title>
         <list-of elements="theorem lemma proposition corollary" divisions="chapter appendix" empty="yes"/>
       </appendix>
+
+      -->
 
       <appendix xml:id="appendix-biograhy"><title>Biographies</title>
 

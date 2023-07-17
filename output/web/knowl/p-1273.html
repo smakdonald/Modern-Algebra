@@ -13,16 +13,20 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Suppose <span class="process-math">\(R\)</span> is a commutative ring. Then <span class="process-math">\(R\)</span> is called a <em class="emphasis">noetherian ring</em> if <span class="process-math">\(R\)</span> satisfies the ascending chain condition on ideals - i.e., for every chain of ideals of <span class="process-math">\(R\)</span>
-</div>
+<div class="para">We also need to be sure our rules for <span class="process-math">\(+\)</span> and <span class="process-math">\(\cdot\)</span> make sense and are independent of representation. They “make sense” since we assume <span class="process-math">\(S\)</span> is closed under <span class="process-math">\(\cdot\text{.}\)</span> To show <span class="process-math">\(+\)</span> is independent of representations, say <span class="process-math">\(\frac{r}{s} \sim \frac{r''}{s''}\text{,}\)</span> so that <span class="process-math">\(rs'' = r''s\text{.}\)</span> Then</div>
 <div class="displaymath process-math">
 \begin{equation*}
-I_1 \subseteq I_2  \subseteq I_3 \subseteq \cdots
+\frac{r}{s} + \frac{r'}{s'} := \frac{rs' + r's}{ss'}
 \end{equation*}
 </div>
-<div class="para">there exists a positive integer <span class="process-math">\(n\)</span> such that <span class="process-math">\(I_n = I_{n+1} = I_{n+2} = \cdots=I_{n+k}\)</span> for all <span class="process-math">\(k\geq 0\text{.}\)</span>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{r''}{s''} + \frac{r'}{s'} := \frac{r''s' + r's''}{s''s'}
+\end{equation*}
 </div>
+<div class="para">and so we need to show <span class="process-math">\((rs' + r's)(s''s') \sim (r''s' + r's'')(ss')\text{.}\)</span> This is clear upon expaning out both sides and using <span class="process-math">\(rs'' = r''s\text{.}\)</span> In a similar way one shows <span class="process-math">\(\cdot\)</span> is well-defined.</div>
 </div>
-<span class="incontext"><a href="subsec-noeth.html#p-1273" class="internal">in-context</a></span>
+<span class="incontext"><a href="sec-field-of-fractions.html#p-1273" class="internal">in-context</a></span>
 </body>
 </html>

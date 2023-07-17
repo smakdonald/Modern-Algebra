@@ -13,13 +13,26 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h3 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">H.65.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">E.68.1</span><span class="period">.</span>
 </h3>
-<div class="para">Let <span class="process-math">\(G\)</span> be a group, <span class="process-math">\(N\)</span> is a normal subgroup of <span class="process-math">\(G\text{,}\)</span> and <span class="process-math">\(H\)</span> a characteristic subgroup of <span class="process-math">\(N\text{.}\)</span> Let <span class="process-math">\(g\in G\)</span> and consider the automorphism <span class="process-math">\(a_g:G\to G\)</span> given by <span class="process-math">\(a_g(g')=gg'g^{-1}\text{.}\)</span>
-</div> <div class="para">Let <span class="process-math">\(n\in N\)</span> and notice <span class="process-math">\(a_g(n)=gng\inv\in N\text{,}\)</span> as <span class="process-math">\(N\nsg G\text{.}\)</span> Thus <span class="process-math">\(a_g:N\to N\)</span> is well defined. Let <span class="process-math">\(n\in N\text{.}\)</span> As <span class="process-math">\(gNg\inv=N\text{,}\)</span> we can write <span class="process-math">\(n=gn'g\inv\)</span> for some <span class="process-math">\(n'\in N\text{.}\)</span> Then <span class="process-math">\(a_g(n')=gn'g\inv=n\text{,}\)</span> making <span class="process-math">\(a_g\)</span> surjective. As <span class="process-math">\(|N|=|N|\)</span> we see that <span class="process-math">\(a_g\)</span> is a bijection. The homomorphism piece we get for free from <span class="process-math">\(G\text{,}\)</span> making <span class="process-math">\(a_g\in\Aut(N)\text{.}\)</span>
-</div> <div class="para">Let <span class="process-math">\(h\in H\text{.}\)</span> As <span class="process-math">\(H\)</span> is a characteristic subgroup of <span class="process-math">\(N\text{,}\)</span> we see that <span class="process-math">\(a_g(h)=ghg\inv=h\)</span> for all <span class="process-math">\(h\in H\)</span> and for all <span class="process-math">\(g\in G\text{.}\)</span> Thus <span class="process-math">\(H\)</span> is normal in <span class="process-math">\(G\text{.}\)</span>
+<div class="para">Let <span class="process-math">\(f:\Q[x]\to\Q[\sqrt d]\)</span> such that <span class="process-math">\(f(x)=\sqrt{d}\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Let <span class="process-math">\(a+b\sqrt d\in\)</span><span class="process-math">\(\Q(\sqrt d)\text{,}\)</span> and notice that <span class="process-math">\(f(a+bx)=a+b\sqrt d\text{,}\)</span> giving us surjectivity. Also,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f((a+b\sqrt d)(p+q\sqrt d))=(a+bx)(p+qx)=f(a+b\sqrt d)f(p+q\sqrt d)
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f((a+b\sqrt d)+(p+q\sqrt d))=(a+bx)+(p+qx)=f(a+b\sqrt d)+f(p+q\sqrt d),
+\end{equation*}
+</div>
+<div class="para">making <span class="process-math">\(f\)</span> a homomorphism as well.</div>
+</div> <div class="para">Let <span class="process-math">\(K=\ker(f)\text{,}\)</span> and let <span class="process-math">\(p=a+bx\in K\text{.}\)</span> As <span class="process-math">\(\Q[x]\)</span> is a division ring we can write <span class="process-math">\(p(x)=(x^2-d)q(x)+r(x)\)</span> for some <span class="process-math">\(p(x),r(x)\)</span> such that <span class="process-math">\(r(x)=0\)</span> or <span class="process-math">\(\deg r(x)&lt;\deg (x^2-d)\text{.}\)</span> Thus <span class="process-math">\(r(x)\)</span> has degree <span class="process-math">\(1\text{,}\)</span> making <span class="process-math">\(r(x)=sx+t\text{.}\)</span>
 </div>
 </div>
-<span class="incontext"><a href="section-74.html#solution-207" class="internal">in-context</a></span>
+<span class="incontext"><a href="section-71.html#solution-207" class="internal">in-context</a></span>
 </body>
 </html>

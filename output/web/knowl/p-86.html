@@ -12,7 +12,20 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">Integer addition is associative, which means that for any three integers <span class="process-math">\(a, b\text{,}\)</span> and <span class="process-math">\(c\text{,}\)</span> the expression <span class="process-math">\((a + b) + c\)</span> is equal to <span class="process-math">\(a + (b + c)\text{.}\)</span> Thus, associativity is satisfied for <span class="process-math">\(\E\text{.}\)</span> The identity element for addition is <span class="process-math">\(0\text{.}\)</span> For any even integer <span class="process-math">\(a\text{,}\)</span> adding <span class="process-math">\(0\)</span> to it does not change its parity (evenness). Hence, the identity element property is satisfied for <span class="process-math">\(\E\text{.}\)</span> For every even integer <span class="process-math">\(a\text{,}\)</span> there exists an inverse element denoted as <span class="process-math">\(-a\)</span> such that <span class="process-math">\(a + (-a) = (-a) + a = 0\text{.}\)</span> The negative of an even integer is also an even integer. Adding an even integer to its negative results in <span class="process-math">\(0\text{,}\)</span> which is the identity element. Therefore, the inverse element property is satisfied for <span class="process-math">\(\E\text{.}\)</span> The identity element for addition is <span class="process-math">\(0\text{.}\)</span> However, <span class="process-math">\(0\)</span> is not an odd integer, so the identity element property is not satisfied for <span class="process-math">\(\O\text{.}\)</span>
+<div class="para logical">
+<div class="para">By definition, <span class="process-math">\((xy)\inv\)</span> is the inverse of the element <span class="process-math">\(xy\text{.}\)</span> However, we also have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-properties-of-groups.html">
+\begin{equation*}
+\begin{aligned}
+(xy)(y\inv x\inv) &amp;= x(yy\inv)x\inv \\
+&amp;= x(e)x\inv\\
+&amp;= (xe)x\inv \\
+&amp;= xx\inv \\
+&amp;= e.
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">Thus both <span class="process-math">\((xy)\inv\)</span> and <span class="process-math">\(y\inv x\inv\)</span> are inverses of <span class="process-math">\((xy)\text{,}\)</span> making them equal by part (2) of <a href="" class="xref" data-knowl="./knowl/thm-properties-of-groups.html" title="Theorem 1.10: Properties of Groups">Theorem 1.10</a>.</div>
 </div>
 <span class="incontext"><a href="sec-group-basics.html#p-86" class="internal">in-context</a></span>
 </body>

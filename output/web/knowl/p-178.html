@@ -12,7 +12,32 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">For example, <span class="process-math">\((1 \, 3 \, 7)\text{,}\)</span> regarded as an element of <span class="process-math">\(S_{13}\)</span> sends <span class="process-math">\(1\)</span> to <span class="process-math">\(3\text{,}\)</span> <span class="process-math">\(3\)</span> to <span class="process-math">\(7\)</span> and <span class="process-math">\(7\)</span> to <span class="process-math">\(1\text{,}\)</span> and it fixes <span class="process-math">\(2,4,5,7,8,9,10,11,12,13\text{.}\)</span> (Note that the value of <span class="process-math">\(n\)</span> in cycle notation is sometime ambiguous.)</div>
+<div class="para logical">
+<div class="para">Let's consider two disjoint cycles, denoted as <span class="process-math">\((a1 a2 ... am)\)</span> and <span class="process-math">\((b1 b2 ... bn)\text{,}\)</span> where <span class="process-math">\(ai\)</span>'s and <span class="process-math">\(bi\)</span>'s are distinct elements. Let's analyze the composition <span class="process-math">\((a1 a2 ... am) ∘ (b1 b2 ... bn)\text{:}\)</span> When we apply the composition to an element <span class="process-math">\(ai\text{,}\)</span> we have:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(a1 a2 ... am) ∘ (b1 b2 ... bn)(ai) = (a1 a2 ... am)(b1 b2 ... bn(ai)) = (a1 a2 ... am)(ai) = ai+1 (\text{ if } ai ≠ am) \text{ or }a1 (\text{ if }ai = am)
+\end{equation*}
+</div>
+<div class="para">Similarly, when we apply the composition to an element <span class="process-math">\(bj\text{,}\)</span> we have:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(b1 b2 ... bn) ∘ (a1 a2 ... am)(bj) = (b1 b2 ... bn)(a1 a2 ... am(bj)) = (b1 b2 ... bn)(bj) = bj+1 (\text{ if } bj ≠ bn) \text{ or }b1 (\text{ if } bj = bn)
+\end{equation*}
+</div>
+<div class="para">From these calculations, we can observe that the composition <span class="process-math">\((a1 a2 ... am) ∘ (b1 b2 ... bn)\)</span> maps each element <span class="process-math">\(ai\)</span> to <span class="process-math">\(ai+1\)</span> (if <span class="process-math">\(ai ≠ am\)</span>), and it maps <span class="process-math">\(am\)</span> to <span class="process-math">\(a1\text{.}\)</span> Similarly, the composition <span class="process-math">\((b1 b2 ... bn) ∘ (a1 a2 ... am)\)</span> maps each element <span class="process-math">\(bj\)</span> to <span class="process-math">\(bj+1\)</span> (if <span class="process-math">\(bj ≠ bn\)</span>), and it maps <span class="process-math">\(bn\)</span> to <span class="process-math">\(b1\text{.}\)</span> Now, let's consider the composition <span class="process-math">\((b1 b2 ... bn) ∘ (a1 a2 ... am)\)</span> and evaluate its effect on the elements ai and am:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(b1 b2 ... bn) ∘ (a1 a2 ... am)(ai) = (b1 b2 ... bn)(a1 a2 ... am(ai)) = (b1 b2 ... bn)(ai) = ai+1 (\text{ if } ai ≠ am) \text{ or } a1 (\text{ if } ai = am)
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(b1 b2 ... bn) ∘ (a1 a2 ... am)(am) = (b1 b2 ... bn)(a1 a2 ... am(am)) = (b1 b2 ... bn)(a1 a2 ... am) = am+1 (\text{ if } am ≠ a1) \text{ or } a2 (\text{ if } am = a1)
+\end{equation*}
+</div>
+<div class="para">Comparing these results with the previous composition, we see that the effects on <span class="process-math">\(ai\)</span> and <span class="process-math">\(am\)</span> are the same in both compositions. This implies that the compositions <span class="process-math">\((a1 a2 ... am) ∘ (b1 b2 ... bn)\)</span> and <span class="process-math">\((b1 b2 ... bn) ∘ (a1 a2 ... am)\)</span> are identical. Therefore, we have shown that disjoint cycles commute, meaning that the order in which they are composed does not affect the final result.</div>
+</div>
 <span class="incontext"><a href="sec-common-groups.html#p-178" class="internal">in-context</a></span>
 </body>
 </html>

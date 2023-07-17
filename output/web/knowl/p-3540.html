@@ -13,24 +13,17 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">which is diagonal. Hence</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\cp_AT(x)=\displaystyle\prod_{i=0}^{n-1}(x-i).
-\end{equation*}
+<div class="para">First, suppose <span class="process-math">\(p&lt;q\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/thm-sylow.html" title="Theorem 6.11: Sylow's Theorem">Sylow's Theorem</a> we know the following:</div>
+<ul class="disc">
+<li><div class="para">
+<span class="process-math">\(n_p|q\)</span> and <span class="process-math">\(n_p\equiv 1\mod{p}\text{,}\)</span> so <span class="process-math">\(n_p=1\)</span> or <span class="process-math">\(q\text{,}\)</span> so <span class="process-math">\(q\)</span>
+</div></li>
+<li><div class="para">
+<span class="process-math">\(n_q|p^2\)</span> and <span class="process-math">\(n_q\equiv 1\mod{q}\text{,}\)</span> so <span class="process-math">\(n_q=1\)</span> or <span class="process-math">\(p^2\text{,}\)</span> so <span class="process-math">\(p^2\text{.}\)</span>
+</div></li>
+</ul>
+<div class="para">We know there must be <span class="process-math">\((q-1)\cdot p^2=p^2q-p^2\)</span> elements of order <span class="process-math">\(p\text{.}\)</span> Luckily, there is more than one Sylow <span class="process-math">\(p\)</span>-subgroup with <span class="process-math">\(p^2\)</span> elements, so there isn't room for all of them.</div>
 </div>
-<div class="para">Thus <span class="process-math">\(\cp_AT(x)\)</span> factors into distinct linear polynomials, each of which is in the form <span class="process-math">\((x-i)\)</span> for <span class="process-math">\(0\leq i\leq n-1\text{.}\)</span> Thus each linear term is an elementary divisor, making each Jordan block a <span class="process-math">\(1\times1\)</span> matrix with <span class="process-math">\(i\)</span> as the only entry. Thus the Jordan Canonical form is</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{bmatrix}
-0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\
-0 &amp; 1 &amp; \cdots &amp; 0 &amp; 0 \\
-\vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\
-0 &amp; 0 &amp; \cdots &amp; 0 &amp; n-1 \\   
-\end{bmatrix}.
-\end{equation*}
-</div>
-</div>
-<span class="incontext"><a href="section-69.html#p-3540" class="internal">in-context</a></span>
+<span class="incontext"><a href="section-70.html#p-3540" class="internal">in-context</a></span>
 </body>
 </html>

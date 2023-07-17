@@ -11,16 +11,16 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(\rho: K \to \operatorname{Aut}(H)\)</span> be the permutation representation of the action of <span class="process-math">\(K\)</span> on <span class="process-math">\(H\)</span> via automorphisms given by <a href="" class="xref" data-knowl="./knowl/ex-conj.html" title="Item 3: Conjugation">Conjugation</a> in <span class="process-math">\(G\text{.}\)</span> (This means that for any <span class="process-math">\(k\in K\)</span> <span class="process-math">\(\rho(k)=c_k\text{,}\)</span> where <span class="process-math">\(c_k\in \operatorname{Aut}(H)\)</span> is the function <span class="process-math">\(c_k(h)=khk^{-1}\)</span> for all <span class="process-math">\(h\in H\text{.}\)</span>) Then the function</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/ex-conj.html ./knowl/thm-sdp.html">
+<div class="para">Using <a href="" class="xref" data-knowl="./knowl/prop-ump-cyclic.html" title="Proposition 3.49: UMP for Cyclic Groups">Proposition 3.49</a>, we let <span class="process-math">\(\psi: \mathbb{Z}\to \mathbb{Z}/(p_1^{e_1}) \times \cdots \times \mathbb{Z}/(p_l^{e_l})\)</span> be the unique homomorhism that sends <span class="process-math">\(1\)</span> to <span class="process-math">\(([1]_{{p_1}^{e_1}}, \cdots, [1]_{{p_l}^{e_l}})\text{.}\)</span> Then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-ump-cyclic.html ./knowl/thm-fit-group.html">
 \begin{equation*}
-\theta: H \rtimes_\rho K \to G
+\psi(j) = ([j]_{{p_1}^{e_1}}, \cdots, [j]_{{p_l}^{e_l}}).
 \end{equation*}
 </div>
-<div class="para">defined by <span class="process-math">\(\theta(y,x) = yx\)</span> is an isomorphism of groups. Moreover, under this isomorphism, <span class="process-math">\(K\)</span> corresponds to <span class="process-math">\(K'\)</span> and <span class="process-math">\(H\)</span> corresponds to <span class="process-math">\(H'\)</span> (referring to the notation in <a href="" class="xref" data-knowl="./knowl/thm-sdp.html" title="Theorem 7.25: Semidirect Products are Groups">Theorem 7.25</a> above).</div>
+<div class="para">Clearly <span class="process-math">\(m \in \operatorname{ker}(\psi)\)</span> and so <span class="process-math">\(\langle m \rangle \subseteq \operatorname{Ker}(\psi)\text{.}\)</span> Conversely, if <span class="process-math">\(\psi(n) = 0\text{,}\)</span> then <span class="process-math">\(p_i^{e_i} \mid n\)</span> for all <span class="process-math">\(i\)</span> and since <span class="process-math">\(p_1^{e_1}, \dots, p_l^{e_l}\)</span> are pairwise relatively prime, it follows that <span class="process-math">\(m \mid n\text{.}\)</span> This proves <span class="process-math">\(\operatorname{ker}(\psi) = \langle m \rangle\text{.}\)</span> The claim follows by the <a href="" class="xref" data-knowl="./knowl/thm-fit-group.html" title="Theorem 4.46: First Isomorphism Theorem">First Isomorphism Theorem</a>.</div>
 </div>
-<span class="incontext"><a href="sec-spds.html#p-857" class="internal">in-context</a></span>
+<span class="incontext"><a href="sec-ftfgag.html#p-857" class="internal">in-context</a></span>
 </body>
 </html>

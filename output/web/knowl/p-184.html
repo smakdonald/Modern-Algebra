@@ -12,32 +12,43 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
+<div class="para logical"><ol class="decimal">
+<li>
+<div class="para">First, note that the identity element of <span class="process-math">\(S_n\)</span> is the empty product of cycles.</div>
 <div class="para logical">
-<div class="para">Let's consider two disjoint cycles, denoted as <span class="process-math">\((a1 a2 ... am)\)</span> and <span class="process-math">\((b1 b2 ... bn)\text{,}\)</span> where <span class="process-math">\(ai\)</span>'s and <span class="process-math">\(bi\)</span>'s are distinct elements. Let's analyze the composition <span class="process-math">\((a1 a2 ... am) ∘ (b1 b2 ... bn)\text{:}\)</span> When we apply the composition to an element <span class="process-math">\(ai\text{,}\)</span> we have:</div>
+<div class="para">Fix <span class="process-math">\(\sigma\in S_n\)</span> and let <span class="process-math">\(G = \langle \sigma\rangle\text{.}\)</span> The homomorphism given as the inclusion of <span class="process-math">\(G\)</span> into <span class="process-math">\(S_n\)</span> determines an action of <span class="process-math">\(G\)</span> on the set <span class="process-math">\(X := \{1, \dots, n\}\text{.}\)</span> This action decomposes <span class="process-math">\(X\)</span> into disjoint orbits. Since <span class="process-math">\(\sigma\)</span> generates <span class="process-math">\(G\text{,}\)</span> <span class="process-math">\(i, j\)</span> belong to the same orbit iff <span class="process-math">\(\sigma^k(i) = j\)</span> for some <span class="process-math">\(k \geq 0\text{.}\)</span> Let <span class="process-math">\(O\)</span> be any one of these orbits with size at least <span class="process-math">\(2\text{.}\)</span> Now pick any element <span class="process-math">\(i \in O\text{.}\)</span> Consider the sequence</div>
 <div class="displaymath process-math">
 \begin{equation*}
-(a1 a2 ... am) ∘ (b1 b2 ... bn)(ai) = (a1 a2 ... am)(b1 b2 ... bn(ai)) = (a1 a2 ... am)(ai) = ai+1 (\text{ if } ai ≠ am) \text{ or }a1 (\text{ if }ai = am)
+i, \sigma(i), \sigma^2(i), \dots
 \end{equation*}
 </div>
-<div class="para">Similarly, when we apply the composition to an element <span class="process-math">\(bj\text{,}\)</span> we have:</div>
+<div class="para">of element of <span class="process-math">\(O\text{.}\)</span> The axioms of a group action gives us that the first time this sequence has a repitition occurs when <span class="process-math">\(\sigma^p(i_1) = i_1\text{,}\)</span> where <span class="process-math">\(p = \#O\text{.}\)</span> Let <span class="process-math">\(j_t =\sigma^{t+1}(i)\)</span> for <span class="process-math">\(t = 1, \dots, p\)</span> and let <span class="process-math">\(\tau_O\)</span> be the <span class="process-math">\(p\)</span>-cycle <span class="process-math">\((j_1 \, \dots \, j_p)\text{.}\)</span> Then <span class="process-math">\(\sigma\)</span> and <span class="process-math">\(\tau_O\)</span> “act the same” on <span class="process-math">\(O\text{.}\)</span> More formally,</div>
 <div class="displaymath process-math">
 \begin{equation*}
-(b1 b2 ... bn) ∘ (a1 a2 ... am)(bj) = (b1 b2 ... bn)(a1 a2 ... am(bj)) = (b1 b2 ... bn)(bj) = bj+1 (\text{ if } bj ≠ bn) \text{ or }b1 (\text{ if } bj = bn)
+\sigma\circ \tau_O^{-1}
 \end{equation*}
 </div>
-<div class="para">From these calculations, we can observe that the composition <span class="process-math">\((a1 a2 ... am) ∘ (b1 b2 ... bn)\)</span> maps each element <span class="process-math">\(ai\)</span> to <span class="process-math">\(ai+1\)</span> (if <span class="process-math">\(ai ≠ am\)</span>), and it maps <span class="process-math">\(am\)</span> to <span class="process-math">\(a1\text{.}\)</span> Similarly, the composition <span class="process-math">\((b1 b2 ... bn) ∘ (a1 a2 ... am)\)</span> maps each element <span class="process-math">\(bj\)</span> to <span class="process-math">\(bj+1\)</span> (if <span class="process-math">\(bj ≠ bn\)</span>), and it maps <span class="process-math">\(bn\)</span> to <span class="process-math">\(b1\text{.}\)</span> Now, let's consider the composition <span class="process-math">\((b1 b2 ... bn) ∘ (a1 a2 ... am)\)</span> and evaluate its effect on the elements ai and am:</div>
+<div class="para">fixes all elements of <span class="process-math">\(O\text{.}\)</span> Also, <span class="process-math">\(\tau_O\)</span> fixes <span class="process-math">\(\{1, \dots, n\} \setminus O\text{.}\)</span> It follows that</div>
 <div class="displaymath process-math">
 \begin{equation*}
-(b1 b2 ... bn) ∘ (a1 a2 ... am)(ai) = (b1 b2 ... bn)(a1 a2 ... am(ai)) = (b1 b2 ... bn)(ai) = ai+1 (\text{ if } ai ≠ am) \text{ or } a1 (\text{ if } ai = am)
+\sigma= \prod_{O} \tau_O
 \end{equation*}
 </div>
+<div class="para">where the product is taken over all orbits of size at least <span class="process-math">\(2\text{.}\)</span> This proves existense.</div>
+</div>
+<div class="para">For uniqueness, if <span class="process-math">\(\sigma= \prod_i \gamma_i\)</span> is a product of disjoint cycles, then the orbits <span class="process-math">\(X\)</span> under the action of <span class="process-math">\(G\)</span> are the one-element orbits along with the orbits of each <span class="process-math">\(\gamma_i\text{.}\)</span> Moreover, if the orbit of <span class="process-math">\(\gamma_i\)</span> is <span class="process-math">\(O\text{,}\)</span> then <span class="process-math">\(\gamma_i\)</span> and <span class="process-math">\(\sigma\)</span> act the same on <span class="process-math">\(O\)</span> and <span class="process-math">\(\gamma_i\)</span> fixes <span class="process-math">\(\{1, \dots, n\} \setminus O\text{.}\)</span> It follows that <span class="process-math">\(\gamma_i = \tau_O\text{.}\)</span>
+</div>
+</li>
+<li><div class="para logical">
+<div class="para">It suffices to prove this for a single cycle and, by symmetry, for the cycle <span class="process-math">\((1 \, 2 \, \cdots \, p)\text{.}\)</span> The equation</div>
 <div class="displaymath process-math">
 \begin{equation*}
-(b1 b2 ... bn) ∘ (a1 a2 ... am)(am) = (b1 b2 ... bn)(a1 a2 ... am(am)) = (b1 b2 ... bn)(a1 a2 ... am) = am+1 (\text{ if } am ≠ a1) \text{ or } a2 (\text{ if } am = a1)
+(1 \, 2 \, \cdots \, p) =  (1 \, 2) (2 \, 3) \cdots ((p-2) \, (p-1)) ((p-1) \, p)
 \end{equation*}
 </div>
-<div class="para">Comparing these results with the previous composition, we see that the effects on <span class="process-math">\(ai\)</span> and <span class="process-math">\(am\)</span> are the same in both compositions. This implies that the compositions <span class="process-math">\((a1 a2 ... am) ∘ (b1 b2 ... bn)\)</span> and <span class="process-math">\((b1 b2 ... bn) ∘ (a1 a2 ... am)\)</span> are identical. Therefore, we have shown that disjoint cycles commute, meaning that the order in which they are composed does not affect the final result.</div>
-</div>
+<div class="para">is seen to hold by direct calculation.</div>
+</div></li>
+</ol></div>
 <span class="incontext"><a href="sec-common-groups.html#p-184" class="internal">in-context</a></span>
 </body>
 </html>
