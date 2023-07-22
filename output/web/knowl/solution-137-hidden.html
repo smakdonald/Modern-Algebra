@@ -10,10 +10,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like"><div class="para logical"><ol class="lower-alpha">
-<li><div class="para">Invoking <a href="" class="xref" data-knowl="./knowl/thm-eisensteins-criterion.html" title="Theorem 16.9: Eisenstein's Criterion">Eisenstein's Criterion</a> and setting <span class="process-math">\(p=7\)</span> we see that <span class="process-math">\(x^3 - 7\)</span> is an irreducible cubic with exactly one real root. Thus <span class="process-math">\(\Gal(L/\Q)\cong S_3\text{.}\)</span> Thus the subgroups of <span class="process-math">\(\Gal(L/\Q)\)</span> are as follows: <span class="process-math">\(H_1\cong\langle(12)\rangle, H_2\cong\langle(13)\rangle, H_3\cong\langle(23)\rangle,\)</span> and <span class="process-math">\(H_4\cong\langle(123)\rangle.\)</span> By the Fundamental Theorem of Galois Theory there exist four intermediate field extensions: <span class="process-math">\(E_1=L^{H_1}, E_2=L^{H_2}, E_3=L^{H_3}\text{,}\)</span> and <span class="process-math">\(E_4=L^{H_4}\text{.}\)</span> Note that as <span class="process-math">\(H_1,H_2,\)</span> and <span class="process-math">\(H_3\)</span> are all Sylow-2 subgroups of <span class="process-math">\(S_3\text{,}\)</span> by <a href="" class="xref" data-knowl="./knowl/thm-sylow.html" title="Theorem 6.11: Sylow's Theorem">Sylow's Theorem</a> none are normal in <span class="process-math">\(S_3\text{.}\)</span> However, as <span class="process-math">\([G:H_4]=2\text{,}\)</span> the smallest prime dividing 6, we see that <span class="process-math">\(E_4\)</span> is the only strictly intermediate field that is Galois over <span class="process-math">\(\Q\text{.}\)</span>
-</div></li>
-<li><div class="para">As the identity map is the only automorphism from <span class="process-math">\(\Q\to\Q\)</span> that fixes <span class="process-math">\(\Q\)</span> and <span class="process-math">\([\Q:\Q]=1\text{,}\)</span> we see that <span class="process-math">\(\Q\)</span> is Galois over itself. As all finite extensions of fields with characteristic <span class="process-math">\(0\)</span> are separable, we see that <span class="process-math">\(L\)</span> is also Galois over <span class="process-math">\(\Q\text{.}\)</span> Thus <span class="process-math">\(\Q, L,\)</span> and <span class="process-math">\(E_4\)</span> are the only intermediate fields <span class="process-math">\(\Q \subseteq E \subseteq L\)</span> that are Galois over <span class="process-math">\(\Q\text{.}\)</span>
-</div></li>
-</ol></div></div></body>
+<body class="ignore-math"><div class="solution solution-like">
+<div class="para logical">
+<div class="para">Part (a) Let <span class="process-math">\(L\)</span> be a group, <span class="process-math">\(H\)</span> be a direct factor of <span class="process-math">\(G\text{,}\)</span> and <span class="process-math">\(\phi : H \to L\)</span> a group homomorphism. As <span class="process-math">\(H\)</span> is a direct factor of <span class="process-math">\(G\text{,}\)</span> there exists some <span class="process-math">\(K\nsg G\)</span> such that <span class="process-math">\(G=H\times K\text{.}\)</span> Thus there exists some isomorphism <span class="process-math">\(\psi:G\to H\times K\text{.}\)</span> Define <span class="process-math">\(\widetilde{\phi} : G \to L\)</span> such that <span class="process-math">\(\widetilde{\phi}(g)=h\text{,}\)</span> where <span class="process-math">\(\psi(g)=(h,k)\text{.}\)</span> Let <span class="process-math">\(x,y\in G\text{,}\)</span> and notice</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\psi(x)=(h,k)\psi(y)=(h',k')=(hh',kk')=\psi(xy),
+\end{equation*}
+</div>
+<div class="para">as <span class="process-math">\(\psi\)</span> is an isomorphism. Observe <span class="process-math">\(\widetilde{\phi}(xy)=hh'=\widetilde{\phi}(x)\widetilde{\phi}(y)\text{.}\)</span> Thus <span class="process-math">\(\widetilde{\phi}\)</span> is a homomorphism, and for any <span class="process-math">\(h\in H\)</span> we have <span class="process-math">\(\widetilde{\phi}(h)=h\text{.}\)</span>
+</div>
+</div> <div class="para">Part (b)</div>
+</div></body>
 </html>

@@ -13,14 +13,20 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(E\)</span> be the field extension of <span class="process-math">\(\Q\)</span> obtained by adjoining to <span class="process-math">\(\Q\)</span> all four complex roots of the polynomial <span class="process-math">\(x^4 + 5\text{.}\)</span> (<span class="process-math">\(E\)</span> is what's known as the “splitting field" of <span class="process-math">\(x^4 + 5\)</span> over <span class="process-math">\(\Q\text{.}\)</span>) That is, <span class="process-math">\(E = \Q(\a_1, \a_2, \a_3, \a_4)\)</span> where <span class="process-math">\(\a_1 = e^{\pi i/4}\sqrt[4]{5}\text{,}\)</span> <span class="process-math">\(\a_2 = e^{3\pi i/4}\sqrt[4]{5}\text{,}\)</span> <span class="process-math">\(\a_3 = e^{5\pi i/4}\sqrt[4]{5}\text{,}\)</span> and <span class="process-math">\(\a_4 = e^{7\pi i/4}\sqrt[4]{5}\text{.}\)</span>
+<div class="para">First note that if <span class="process-math">\(T\)</span> is a scalar of the identity matrix then its only eigenvalue is <span class="process-math">\(0\text{.}\)</span> Let <span class="process-math">\(\mu\)</span> be an eigenvalue of <span class="process-math">\(p(T)\text{.}\)</span> Thus <span class="process-math">\((p(T)-\mu I)v=0\)</span> for some <span class="process-math">\(v\text{.}\)</span> As <span class="process-math">\(\C\)</span> is algebraically closed we can factor the polynomial <span class="process-math">\(p(x)-\mu\)</span> into linear terms:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+p(x)-\mu=c(x-r_1)\dots(x-r_n)
+\end{equation*}
 </div>
-<ol class="decimal">
-<li><div class="para">Prove that there exist a field extension <span class="process-math">\(\Q \subseteq F\)</span> such that <span class="process-math">\(F \subseteq E\text{,}\)</span> <span class="process-math">\(F \subseteq \R\)</span> and <span class="process-math">\([F :\Q]=4\text{.}\)</span> <em class="emphasis">Tip</em>: Note that <span class="process-math">\(\a_1 + \a_4\)</span> is real number; find it explicitly.</div></li>
-<li><div class="para">Determine, with justification, <span class="process-math">\([E : \Q]\text{.}\)</span>
-</div></li>
-</ol>
+<div class="para">for roots <span class="process-math">\(r_i\text{.}\)</span> Note that <span class="process-math">\(p(r_i)-\mu=0\)</span> for all <span class="process-math">\(r_i\text{.}\)</span> Observe</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}(p(T)-\mu I)v&amp;=p(T)v-(\mu I)v\\&amp;=c(T-r_nI)\dots(T-r_1I)v\\&amp;=0.\end{aligned}
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec-algebraic.html#p-2455" class="internal">in-context</a></span>
+<div class="para">Thus one of these terms must be sent to zero. Note that if <span class="process-math">\(T-r_iI=0\)</span> for any <span class="process-math">\(I\)</span> this would make <span class="process-math">\(T\)</span> a scaler of the identity matrix. Thus there exists some <span class="process-math">\(i\)</span> such that <span class="process-math">\((T-r_iI)v=0\text{,}\)</span> making <span class="process-math">\(r_i\)</span> an eigenvalue of <span class="process-math">\(T\text{.}\)</span> Notice that as <span class="process-math">\(p(r_i)-\mu=0\)</span> we have <span class="process-math">\(p(r_i)=\mu\text{,}\)</span> completing the proof.</div>
+</div>
+<span class="incontext"><a href="section-66.html#p-2455" class="internal">in-context</a></span>
 </body>
 </html>
