@@ -3,10 +3,11 @@
 !.gitignore
 
 # don't track extra pages
-Mod-Alg copy.ptx
+storage.ptx
 # don't track unpublished builds
 
 # don't track assets generated from source
+
 
 # don't track node packages
 node_modules

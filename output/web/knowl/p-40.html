@@ -12,13 +12,36 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para logical"><ul class="disc">
-<li><div class="para">A <em class="emphasis">magma</em> (or <dfn class="terminology">binary structure</dfn>) is a pair <span class="process-math">\((G, *)\)</span> where <span class="process-math">\(G\)</span> is a set and <span class="process-math">\(*\)</span> is a binary operation on <span class="process-math">\(G\text{.}\)</span> </div></li>
-<li><div class="para">A <em class="emphasis">semigroup</em> is a pair <span class="process-math">\((G, *)\)</span> where <span class="process-math">\(G\)</span> is a set and <span class="process-math">\(*\)</span> is a binary operation on <span class="process-math">\(G\)</span> satisfying the associative property. </div></li>
-<li><div class="para">A <em class="emphasis">monoid</em> is a pair <span class="process-math">\((G, *)\)</span> where <span class="process-math">\(G\)</span> is a set and <span class="process-math">\(*\)</span> is a binary operation on <span class="process-math">\(G\)</span> satisfying the associative and identity properties. </div></li>
-<li><div class="para">A <em class="emphasis">group</em> is a pair <span class="process-math">\((G, *)\)</span> where <span class="process-math">\(G\)</span> is a set and <span class="process-math">\(*\)</span> is a binary operation on <span class="process-math">\(G\)</span> satisfying the associative, identity, and inverse properties. </div></li>
-<li><div class="para">An <em class="emphasis">abelian group</em> is a pair <span class="process-math">\((G, *)\)</span> where <span class="process-math">\(G\)</span> is a set and <span class="process-math">\(*\)</span> is a binary operation on <span class="process-math">\(G\)</span> satisfying the associative, identity, inverse, and commutative properties. </div></li>
-</ul></div>
+<div class="para logical"><ol class="decimal">
+<li><div class="para">Addition (<span class="process-math">\(-+-\)</span>) and multiplication (<span class="process-math">\(-\cdot-\)</span>) are both binary operations on <span class="process-math">\(\Z,\Q,\R,\)</span> and <span class="process-math">\(\C\text{.}\)</span>
+</div></li>
+<li><div class="para logical">
+<div class="para">Let <span class="process-math">\(\cP(S)\)</span> denote the power set of a set <span class="process-math">\(S\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+-\cup-:\cP(S)\to \cP(S)\text{ given by } (X,Y)\mapsto X\cup Y 
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+-\cap-:\cP(S)\to \cP(S)\text{ given by } (X,Y)\mapsto X\cap Y 
+\end{equation*}
+</div>
+<div class="para">are both binary operations on <span class="process-math">\(\cP(S)\text{.}\)</span>
+</div>
+</div></li>
+<li><div class="para logical">
+<div class="para">Let <span class="process-math">\(F(A)\)</span> denote the set of all functions from <span class="process-math">\(S\)</span> to itself. Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+-\circ-:F(A)\to F(A)\text{ given by } (f,g)\mapsto f\circ g
+\end{equation*}
+</div>
+<div class="para">is a binary operation on <span class="process-math">\(F(A)\text{.}\)</span>
+</div>
+</div></li>
+</ol></div>
 <span class="incontext"><a href="sec-group-basics.html#p-40" class="internal">in-context</a></span>
 </body>
 </html>

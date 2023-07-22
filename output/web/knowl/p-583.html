@@ -12,32 +12,32 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
+<div class="para logical"><ol class="decimal">
+<li>
+<div class="para">(normal) subgroups correspond to normal subgroups i.e.,</div>
 <div class="para logical"><ul class="disc">
 <li><div class="para">
-<span class="process-math">\(\Psi\)</span> is well defined (correct codomain) since for <span class="process-math">\(H\leq G\)</span> we have <span class="process-math">\(\pi(H)\leq G/N\)</span> (since images of subgroups through group homomorphisms are subgroups). <a href="" class="xref" data-knowl="./knowl/thm-properties-of-group-homoms.html" title="Theorem 3.11: Group Homomorphisms and Subgroups">Theorem 3.11</a>
+<span class="process-math">\(H\leq G\)</span> iff <span class="process-math">\(\overline{H}\leq \overline{G}\)</span> and <span class="process-math">\(\mathcal{H}\leq \overline{G}\)</span> iff <span class="process-math">\(\Phi(\mathcal{H})\leq G\)</span>
 </div></li>
-<li><div class="para logical">
-<div class="para">
-<span class="process-math">\(\Phi\)</span> is well defined (correct codomain) since for <span class="process-math">\(\mathcal{H}\leq G\)</span> we have <span class="process-math">\(\pi^{-1}(\mathcal{H})\leq G\)</span> (since preimages of subgroups through group homomorphisms are subgroups) <a href="" class="xref" data-knowl="./knowl/thm-properties-of-group-homoms.html" title="Theorem 3.11: Group Homomorphisms and Subgroups">Theorem 3.11</a> and for any <span class="process-math">\(\mathcal{H}\leq G\)</span> we have <span class="process-math">\(\{e_GN\}\subseteq \mathcal{H}\text{,}\)</span> hence</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-properties-of-group-homoms.html">
-\begin{equation*}
-N=\operatorname{Ker}(\pi)=\pi^{-1}(\{e_GN\})\subseteq \pi^{-1}(\mathcal{H})=\Phi(\mathcal{H}).
-\end{equation*}
-</div>
-</div></li>
-<li><div class="para logical">
-<div class="para">
-<span class="process-math">\(\Phi\)</span> and <span class="process-math">\(\Psi\)</span> are mutual inverses: <span class="process-math">\((\Psi\circ\Phi)(\mathcal{H})=\pi(\pi^{-1}(\mathcal{H}))=\mathcal{H}\)</span> since <span class="process-math">\(\pi\)</span> is surjective and <span class="process-math">\((\Phi\circ\Psi)(H)=\pi^{-1}(\pi(H))=\pi^{-1}(H/N)=H\text{,}\)</span> with the last equality justified by</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{aligned}
-x\in \pi^{-1}(H/N) &amp;\iff \pi(x)\in H/N \iff xN=hN \text{ for some } h\in H \\
-&amp; \iff x\in hN \text{ for some } h\in H \iff x\in H \text{ (using that } N\subseteq H).\\
-\end{aligned}
-\end{equation*}
-</div>
+<li><div class="para">
+<span class="process-math">\(H\mathrel{\unlhd}G\)</span> iff <span class="process-math">\(\overline{H}\mathrel{\unlhd}\overline{G}\)</span> and <span class="process-math">\(\mathcal{H}\mathrel{\unlhd}\overline{G}\)</span> iff <span class="process-math">\(\Phi(\mathcal{H})\mathrel{\unlhd}G\)</span>
 </div></li>
 </ul></div>
+</li>
+<li><div class="para">indices are preserved; i.e., <span class="process-math">\([G:H] = [\overline{G} : \overline{H}]\)</span> and <span class="process-math">\([G: \Phi(\mathcal{H})] = [\overline{G} : \mathcal{H}]\text{.}\)</span>
+</div></li>
+<li>
+<div class="para">the supremums and infimums are preserved (this makes <span class="process-math">\(\Phi\)</span> and <span class="process-math">\(\Psi\)</span> lattice isomorphisms)</div>
+<div class="para logical"><ul class="disc">
+<li><div class="para">
+<span class="process-math">\(\overline{H} \cap \overline{K} = \overline{H \cap H}\)</span> and <span class="process-math">\(\langle \overline{H}\cup \overline{K} \rangle = \overline{\langle H\cup K \rangle}\)</span>
+</div></li>
+<li><div class="para">
+<span class="process-math">\(\Phi(\mathcal{H}) \cap \Phi(\mathcal K) = \Phi(\mathcal{H}\cap \mathcal K)\)</span> and <span class="process-math">\(\langle \Phi(\mathcal{H})\cup\Phi(\mathcal K) \rangle = \Phi\left(\langle \mathcal{H}\cup\mathcal K\rangle\right)\)</span>
+</div></li>
+</ul></div>
+</li>
+</ol></div>
 <span class="incontext"><a href="sec-quotient-groups.html#p-583" class="internal">in-context</a></span>
 </body>
 </html>
