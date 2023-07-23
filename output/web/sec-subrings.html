@@ -623,7 +623,7 @@ window.MathJax = {
 <div class="toc-item"><a href="part-rings.html" class="internal"><span class="codenumber">II</span> <span class="title">Ring Theory</span></a></div>
 <ul class="structural">
 <li>
-<div class="toc-item"><a href="ch-rings.html" class="internal"><span class="codenumber">9</span> <span class="title">Rings</span></a></div>
+<div class="toc-item"><a href="ch-rings.html" class="internal"><span class="codenumber">9</span> <span class="title">Intro to Rings</span></a></div>
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-defn-ex.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Ring Basics</span></a></div>
@@ -682,7 +682,7 @@ window.MathJax = {
 <div class="toc-item"><a href="part-modules.html" class="internal"><span class="codenumber">III</span> <span class="title">Module Theory</span></a></div>
 <ul class="structural">
 <li>
-<div class="toc-item"><a href="ch-mod.html" class="internal"><span class="codenumber">12</span> <span class="title">Modules</span></a></div>
+<div class="toc-item"><a href="ch-mod.html" class="internal"><span class="codenumber">12</span> <span class="title">Intro to Modules</span></a></div>
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-defmod.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Module Basics</span></a></div>
@@ -699,9 +699,13 @@ window.MathJax = {
 <li><div class="toc-item"><a href="sec-modhom.html#subsec-quotient-modules" class="internal"><span class="title">Quotient Modules</span></a></div></li>
 </ul>
 </li>
-<li><div class="toc-item"><a href="sec-linear.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Linear Independence</span></a></div></li>
-<li><div class="toc-item"><a href="sec-modgen.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Generated Modules</span></a></div></li>
-<li><div class="toc-item"><a href="sec-bases.html" class="internal"><span class="codenumber">12.5</span> <span class="title">Bases</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-free-mod.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Generators, Bases, and Free Modules</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-free-mod.html#subsec-linear" class="internal"><span class="title">Linear Independence</span></a></div></li>
+<li><div class="toc-item"><a href="sec-free-mod.html#subsec-bases" class="internal"><span class="title">Bases</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
@@ -802,36 +806,36 @@ window.MathJax = {
 <span class="type">Section</span> <span class="codenumber">9.3</span> <span class="title">Subrings</span>
 </h2>
 <blockquote class="blockquote" id="blockquote-40">
-<div class="para" id="p-1041">“We all live in a yellow subma-ring”</div>
+<div class="para" id="p-1047">“We all live in a yellow subma-ring”</div>
 <cite class="attribution">―(Ring)o Starr</cite>
 </blockquote>
-<div class="para" id="p-1042">We will spend the first half of our exploration of rings following the same general structure as we did in <a href="part-group.html" class="internal" title="Part I: Group Theory">Group Theory</a>. First, we looked at rings in general, and now we will examine subrings, just as we did with subgroups. Then it's off to homomorphisms, isomorphisms, and quotients. It'll be just like old times.</div>
+<div class="para" id="p-1048">We will spend the first half of our exploration of rings following the same general structure as we did in <a href="part-group.html" class="internal" title="Part I: Group Theory">Group Theory</a>. First, we looked at rings in general, and now we will examine subrings, just as we did with subgroups. Then it's off to homomorphisms, isomorphisms, and quotients. It'll be just like old times.</div>
 <article class="definition definition-like" id="def-subring"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">9.40</span><span class="period">.</span><span class="space"> </span><span class="title">Subring.</span>
-</h3> <div class="para" id="p-1043">A <em class="emphasis">subring</em> of a ring <span class="process-math">\(R\)</span> is a subset <span class="process-math">\(S \subseteq R\)</span> such that <span class="process-math">\(S\)</span> is a ring under the operations of <span class="process-math">\(R\text{.}\)</span>
-</div> <div class="para" id="p-1044">When <span class="process-math">\(R\)</span> is a field we call <span class="process-math">\(S\)</span> a <em class="emphasis">subfield</em> of <span class="process-math">\(R\)</span><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-30" id="fn-30"><sup> 7 </sup></a>.</div></article><article class="remark remark-like" id="remark-39"><h3 class="heading">
+</h3> <div class="para" id="p-1049">A <em class="emphasis">subring</em> of a ring <span class="process-math">\(R\)</span> is a subset <span class="process-math">\(S \subseteq R\)</span> such that <span class="process-math">\(S\)</span> is a ring under the operations of <span class="process-math">\(R\text{.}\)</span>
+</div> <div class="para" id="p-1050">When <span class="process-math">\(R\)</span> is a field we call <span class="process-math">\(S\)</span> a <em class="emphasis">subfield</em> of <span class="process-math">\(R\)</span><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-30" id="fn-30"><sup> 7 </sup></a>.</div></article><article class="remark remark-like" id="remark-39"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">9.41</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1045">Unlike with groups, we generally do not use the notation “<span class="process-math">\(\leq\)</span>” to denote a subring. In fact, I'm not sure if we have any notation for it at all. You know what that means!</div></article><article class="exploration project-like" id="exploration-7"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-7"><h3 class="heading">
+<div class="para" id="p-1051">Unlike with groups, we generally do not use the notation “<span class="process-math">\(\leq\)</span>” to denote a subring. In fact, I'm not sure if we have any notation for it at all. You know what that means!</div></article><article class="exploration project-like" id="exploration-7"><a href="" data-knowl="" class="id-ref exploration-knowl original" data-refid="hk-exploration-7"><h3 class="heading">
 <span class="type">Discussion</span><span class="space"> </span><span class="codenumber">9.2</span><span class="period">.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-7"><article class="exploration project-like"><div class="para" id="p-1046">Come up with some spiffy new notation for a subring. I have absolutely no ideas, so good luck.</div></article></div>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exploration-7"><article class="exploration project-like"><div class="para" id="p-1052">Come up with some spiffy new notation for a subring. I have absolutely no ideas, so good luck.</div></article></div>
 <article class="lemma theorem-like" id="lem-subring-test"><h3 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">9.42</span><span class="period">.</span><span class="space"> </span><span class="title">Subring Test.</span>
 </h3>
-<div class="para logical" id="p-1047">
+<div class="para logical" id="p-1053">
 <div class="para">A nonempty subset <span class="process-math">\(S\)</span> of a ring <span class="process-math">\(R\)</span> is a subring if and only if either one of the following hold:</div>
 <ol class="decimal">
-<li id="li-336"><div class="para" id="p-1048">
+<li id="li-336"><div class="para" id="p-1054">
 <span class="process-math">\(S\)</span> is a subgroup of <span class="process-math">\(R\)</span> closed under multiplication.</div></li>
-<li id="li-337"><div class="para" id="p-1049">
+<li id="li-337"><div class="para" id="p-1055">
 <span class="process-math">\(S\)</span> is closed under subtraction and multiplication.</div></li>
 </ol>
 </div></article><article class="exercise exercise-like" id="exe-subring-preservations"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-subring-preservations"><h3 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">9.43</span><span class="period">.</span><span class="space"> </span><span class="title">Subring Preservations.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-subring-preservations"><article class="exercise exercise-like"><div class="para" id="p-1050">Any subring of a commutative ring is a commutative ring. Any unital subring of an integral domain is an integral domain.</div></article></div>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-subring-preservations"><article class="exercise exercise-like"><div class="para" id="p-1056">Any subring of a commutative ring is a commutative ring. Any unital subring of an integral domain is an integral domain.</div></article></div>
 <article class="example example-like" id="ex-subring-examples"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.44</span><span class="period">.</span><span class="space"> </span><span class="title">Examples of Subrings.</span>
-</h3> <div class="para logical" id="p-1051"><ul class="disc">
+</h3> <div class="para logical" id="p-1057"><ul class="disc">
 <li id="li-338"><div class="para" id="p-derived-li-338">
 <span class="process-math">\(\Z\)</span> is a subring of <span class="process-math">\(\Q\text{,}\)</span> which is a subring of <span class="process-math">\(\R\text{,}\)</span> which is a subring of <span class="process-math">\(\C\text{.}\)</span>
 </div></li>
@@ -845,24 +849,24 @@ window.MathJax = {
 </div></li>
 </ul></div></article><article class="exercise exercise-like" id="exercise-63"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-63"><h3 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">9.45</span><span class="period">.</span><span class="space"> </span><span class="title">Nilradical Radishes.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-63"><article class="exercise exercise-like"><div class="para" id="p-1052">Prove that the set of all nilpotent elements of a ring <span class="process-math">\(R\)</span> is a subring of <span class="process-math">\(R\text{,}\)</span> which we call the <dfn class="terminology">nilradical</dfn>.</div></article></div>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-63"><article class="exercise exercise-like"><div class="para" id="p-1058">Prove that the set of all nilpotent elements of a ring <span class="process-math">\(R\)</span> is a subring of <span class="process-math">\(R\text{,}\)</span> which we call the <dfn class="terminology">nilradical</dfn>.</div></article></div>
 <article class="exercise exercise-like" id="exe-finding-subring-counterexamples"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-finding-subring-counterexamples"><h3 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">9.46</span><span class="period">.</span><span class="space"> </span><span class="title">Fancy Subrings.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-finding-subring-counterexamples"><article class="exercise exercise-like"><div class="para logical" id="p-1053">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-finding-subring-counterexamples"><article class="exercise exercise-like"><div class="para logical" id="p-1059">
 <div class="para">If <span class="process-math">\(R\)</span> is a ring and <span class="process-math">\(S\)</span> is a subring of <span class="process-math">\(R\text{,}\)</span> it can happen that</div>
 <ol class="decimal">
-<li id="li-342"><div class="para" id="p-1054">
+<li id="li-342"><div class="para" id="p-1060">
 <span class="process-math">\(R\)</span> is unital but <span class="process-math">\(S\)</span> is not (e.g. <span class="process-math">\(S=2\Z\subset R= \Z\)</span>)</div></li>
-<li id="li-343"><div class="para" id="p-1055">
+<li id="li-343"><div class="para" id="p-1061">
 <span class="process-math">\(S\)</span> is unital but <span class="process-math">\(R\)</span> is not</div></li>
-<li id="li-344"><div class="para" id="p-1056">both <span class="process-math">\(R\)</span> and <span class="process-math">\(S\)</span> are unital but <span class="process-math">\(1_R\neq 1_S\)</span>
+<li id="li-344"><div class="para" id="p-1062">both <span class="process-math">\(R\)</span> and <span class="process-math">\(S\)</span> are unital but <span class="process-math">\(1_R\neq 1_S\)</span>
 </div></li>
 </ol>
 <div class="para">Find examples for each of these situations!</div>
 </div></article></div>
 <article class="definition definition-like" id="def-center-ring"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">9.47</span><span class="period">.</span><span class="space"> </span><span class="title">Center of a Ring.</span>
-</h3> <div class="para logical" id="p-1057">
+</h3> <div class="para logical" id="p-1063">
 <div class="para">The <em class="emphasis">center</em> of a ring <span class="process-math">\(R\)</span> is the set</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -872,16 +876,16 @@ Z(R)=\{z \in R \mid zr = rz \text{ for all }r \in R\}.
 </div></article><article class="lemma theorem-like" id="lem-center-is-subring"><h3 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">9.48</span><span class="period">.</span><span class="space"> </span><span class="title">Center is a Subring.</span>
 </h3>
-<div class="para" id="p-1058">The center <span class="process-math">\(Z(R)\)</span> is a subring of <span class="process-math">\(R\text{.}\)</span> If <span class="process-math">\(R\)</span> is a ring with identity <span class="process-math">\(1\)</span> then <span class="process-math">\(Z(R)\)</span> is a subring that contains the same <span class="process-math">\(1\text{.}\)</span>
-</div></article><div class="para" id="p-1059">Centers of rings don't show up as much in ring theory as they did with groups, but that might also be because there hasn't been a non-commutative ring spotted within twenty miles of UNL since 1977.</div>
+<div class="para" id="p-1064">The center <span class="process-math">\(Z(R)\)</span> is a subring of <span class="process-math">\(R\text{.}\)</span> If <span class="process-math">\(R\)</span> is a ring with identity <span class="process-math">\(1\)</span> then <span class="process-math">\(Z(R)\)</span> is a subring that contains the same <span class="process-math">\(1\text{.}\)</span>
+</div></article><div class="para" id="p-1065">Centers of rings don't show up as much in ring theory as they did with groups, but that might also be because there hasn't been a non-commutative ring spotted within twenty miles of UNL since 1977.</div>
 <article class="exercise exercise-like" id="exe-center-of-quaternion-ring"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-center-of-quaternion-ring"><h3 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">9.49</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(Z(\H)\)</span>.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-center-of-quaternion-ring"><article class="exercise exercise-like"><div class="para" id="p-1060">Determine the center of the real quaternion ring <span class="process-math">\(\mathbb{H}\text{.}\)</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-center-of-quaternion-ring"><article class="exercise exercise-like"><div class="para" id="p-1066">Determine the center of the real quaternion ring <span class="process-math">\(\mathbb{H}\text{.}\)</span>
 </div></article></div>
 <article class="lemma theorem-like" id="lem-quadratic-field"><h3 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">9.50</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\Q(\sqrt {d})\)</span>.</span>
 </h3>
-<div class="para logical" id="p-1061">
+<div class="para logical" id="p-1067">
 <div class="para">Let <span class="process-math">\(d\)</span> be a squarefree integer (that is, the prime factorization of <span class="process-math">\(d\)</span> has no repeated primes). Then the subset</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -890,8 +894,8 @@ Z(R)=\{z \in R \mid zr = rz \text{ for all }r \in R\}.
 </div>
 <div class="para">of <span class="process-math">\(\C\)</span> is a subring that is a field (called a <em class="emphasis">quadratic field</em>), and <span class="process-math">\(\Z[\sqrt{d}] = \{a + b\sqrt{d} | a,b \in \Z\}\)</span> is a subring of <span class="process-math">\(\Q(\sqrt{d})\text{.}\)</span>
 </div>
-</div></article><article class="hiddenproof" id="proof-54"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-54"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-54"><article class="hiddenproof"><div class="para" id="p-1062">Both <span class="process-math">\(\Q(\sqrt {d})\)</span> and <span class="process-math">\(\Z[\sqrt{d}]\)</span> are closed under subtraction and multiplication, so they are subrings of <span class="process-math">\(\C\text{.}\)</span>
-</div> <div class="para logical" id="p-1063">
+</div></article><article class="hiddenproof" id="proof-54"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-54"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-54"><article class="hiddenproof"><div class="para" id="p-1068">Both <span class="process-math">\(\Q(\sqrt {d})\)</span> and <span class="process-math">\(\Z[\sqrt{d}]\)</span> are closed under subtraction and multiplication, so they are subrings of <span class="process-math">\(\C\text{.}\)</span>
+</div> <div class="para logical" id="p-1069">
 <div class="para">The fact that <span class="process-math">\(\Q(\sqrt {d})\)</span> is a {} follows since <span class="process-math">\(\Q(\sqrt {d})\)</span> is also closed under taking inverses. Indeed the inverse of <span class="process-math">\(r + q \sqrt{d}\)</span> (from <span class="process-math">\(\C\)</span>) turns out to be</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -904,7 +908,7 @@ Z(R)=\{z \in R \mid zr = rz \text{ for all }r \in R\}.
 <article class="remark remark-like" id="remark-40"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">9.51</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1064">Note the difference in notation between <span class="process-math">\(\Q(\sqrt d)\)</span> and <span class="process-math">\(\Z[\sqrt d]\text{:}\)</span> one uses parenthesis and the other brackets. This is to denote that one (the one with parentheses) is a field, whereas the other [the one with brackets] is not. This is also some spicy foreshadowing that won't pay off until all the way down in <a href="part-fields.html" class="internal" title="Part IV: Field Theory">Part IV</a>. Stay tuned.</div></article></section><div class="hidden-content tex2jax_ignore" id="hk-fn-30"><div class="fn">We generally do not define subdomains, subcommutativerings, or subdivisionringswithidentity, but if you're feeling inspired I say go for it.</div></div>
+<div class="para" id="p-1070">Note the difference in notation between <span class="process-math">\(\Q(\sqrt d)\)</span> and <span class="process-math">\(\Z[\sqrt d]\text{:}\)</span> one uses parenthesis and the other brackets. This is to denote that one (the one with parentheses) is a field, whereas the other [the one with brackets] is not. This is also some spicy foreshadowing that won't pay off until all the way down in <a href="part-fields.html" class="internal" title="Part IV: Field Theory">Part IV</a>. Stay tuned.</div></article></section><div class="hidden-content tex2jax_ignore" id="hk-fn-30"><div class="fn">We generally do not define subdomains, subcommutativerings, or subdivisionringswithidentity, but if you're feeling inspired I say go for it.</div></div>
 </div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-units-zerodivisors.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-ring-hom.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

@@ -13,13 +13,19 @@
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
 <div class="para logical">
-<div class="para">Right off the bat we see that there are at least four:</div>
-<div class="displaymath process-math">
+<div class="para">Furthermore, since <span class="process-math">\(H\cap K\)</span> is a subgroup of both <span class="process-math">\(H\)</span> and <span class="process-math">\(K\)</span> we have by <a href="" class="xref" data-knowl="./knowl/thm-lagrange.html" title="Theorem 4.8: Lagrange's Theorem">Lagrange's Theorem</a> that <span class="process-math">\(|H\cap K|\mid \operatorname{gcd}(q,p)=1\text{,}\)</span> so that <span class="process-math">\(H\cap K=\{e_G\}\text{.}\)</span> From here it follows that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-lagrange.html ./knowl/thm-sdp-recognition.html ./knowl/prop-ump-cyclic.html">
 \begin{equation*}
-\mathbb{Z}/30, D_{30}, \mathbb{Z}/5 \times D_6, \mathbb{Z}/3 \times D_{10}.
+|HK|=\frac{|H||K|}{|H\cap K|}=\frac{q\cdot p}{1}=pq=|G|
 \end{equation*}
 </div>
-<div class="para">No two of these are isomorphic, as can be seen by looking at the sizes of their centers. The first is abelian, and we have <span class="process-math">\(|Z(D_{30})| = 2\text{,}\)</span> <span class="process-math">\(|Z(\mathbb{Z}/5 \times D_6)| = 5 \cdot 2 = 10\)</span> and <span class="process-math">\(|Z(\mathbb{Z}/3 \times D_{10})| = 3 \cdot 2 = 6\text{.}\)</span>
+<div class="para">and so <span class="process-math">\(HK=G\text{.}\)</span> <a href="" class="xref" data-knowl="./knowl/thm-sdp-recognition.html" title="Theorem 7.26: Recognition Theorem for Internal Semidirect Products">Theorem 7.26</a> now yields that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-lagrange.html ./knowl/thm-sdp-recognition.html ./knowl/prop-ump-cyclic.html">
+\begin{equation*}
+G \cong H \rtimes_\rho K \cong C_q\rtimes_\rho C_p
+\end{equation*}
+</div>
+<div class="para">for some homomorphism <span class="process-math">\(\rho: K \to \operatorname{Aut}(H)\text{,}\)</span> equivalently <span class="process-math">\(\rho: C_p \to \operatorname{Aut}(C_q)\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/prop-ump-cyclic.html" title="Proposition 3.49: UMP for Cyclic Groups">Proposition 3.49</a> to give such a homomorphism <span class="process-math">\(\rho\)</span> is equivalent to giving an element <span class="process-math">\(z\in \operatorname{Aut}(C_q)\)</span> so that <span class="process-math">\(z^p=\text{id}\text{,}\)</span> which will give <span class="process-math">\(\rho(y^j)=z^j\)</span> for <span class="process-math">\(C_p=\langle y\rangle\text{.}\)</span> Thus <span class="process-math">\(|z|\mid p\)</span> yielding that either <span class="process-math">\(|z|=1\)</span> or <span class="process-math">\(|z|=p\text{.}\)</span>
 </div>
 </div>
 <span class="incontext"><a href="sec-classifications.html#p-912" class="internal">in-context</a></span>

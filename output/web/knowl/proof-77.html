@@ -11,25 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<div class="para logical">
-<div class="para">Given <span class="process-math">\(m \in M\text{,}\)</span> the fact that</div>
-<div class="displaymath process-math">
-\begin{equation*}
-m = \sum_a r_a a
-\end{equation*}
-</div>
-<div class="para">for at least one family of elements <span class="process-math">\((r_a)_{a \in A}\)</span> with <span class="process-math">\(r_a = 0\)</span> for all but a finite number of <span class="process-math">\(a\)</span>'s is the definition of what it means for <span class="process-math">\(A\)</span> to generate <span class="process-math">\(M\text{.}\)</span>
-</div>
-</div> <div class="para logical">
-<div class="para">Suppose <span class="process-math">\((s_a)_{a \in A}\)</span> is another such family with <span class="process-math">\(m = \sum_a s_a a\text{.}\)</span> Then</div>
-<div class="displaymath process-math">
-\begin{equation*}
-0 = m-m = \sum_a r_a a - \sum_a s_a a = \sum_a (r_a - s_a) a.
-\end{equation*}
-</div>
-<div class="para">Since <span class="process-math">\(A\)</span> is linearly independent, by definition <span class="process-math">\(r_a - s_a = 0\)</span> for all <span class="process-math">\(a\text{.}\)</span>
-</div>
-</div></article><span class="incontext"><a href="sec-bases.html#proof-77" class="internal">in-context</a></span>
+<article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>
+<div class="para">Let <span class="process-math">\(h:M\to N\)</span> and <span class="process-math">\(h':N\to M\)</span> be the <span class="process-math">\(R\)</span>-module homomorphisms induced by the bijection <span class="process-math">\(j:A\to B\)</span> and its inverse <span class="process-math">\(j^{-1}:B\to A\text{,}\)</span> respectively, using <a href="" class="xref" data-knowl="./knowl/thm-ump-for-free-modules.html" title="Theorem 12.69: UMP for Free R-Modules">UMP for Free <span class="process-math">\(R\)</span>-Modules</a>. We'll show that <span class="process-math">\(h\)</span> and <span class="process-math">\(h'\)</span> are mutual inverses. For this note that <span class="process-math">\(h'\circ h:N\to N\)</span> is an <span class="process-math">\(R\)</span>-module homomorphism and <span class="process-math">\((h'\circ h)(b)=h'(j(b))=j^{-1}(j(b))=b\)</span> for every <span class="process-math">\(b\in B\text{.}\)</span> Since the identity map <span class="process-math">\(\id_N\)</span> is also an <span class="process-math">\(R\)</span>-module homomorphism such that <span class="process-math">\(id_N(b)=b\)</span> for every <span class="process-math">\(b\in B\text{,}\)</span> by the uniqueness clause in the <a href="" class="xref" data-knowl="./knowl/thm-ump-for-free-modules.html" title="Theorem 12.69: UMP for Free R-Modules">UMP for Free <span class="process-math">\(R\)</span>-Modules</a>, we have <span class="process-math">\(h'\circ h=\id_n\text{.}\)</span> Similarly <span class="process-math">\(h\circ h'=\id_M\text{.}\)</span>
+</div></article><span class="incontext"><a href="sec-free-mod.html#proof-77" class="internal">in-context</a></span>
 </body>
 </html>

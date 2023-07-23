@@ -543,7 +543,7 @@
             <aside><title>A Brief Notational Aside</title>
               <p>
                 At various points throughout this text, the author may use "mathcal" notation for definitions that do not normally require it (such as <m>\G</m> for a group, <m>\R</m> for a ring, etc.). 
-                In the realm of higher mathematics, this is what is known as a <em>typo</em>, and should be reported to the proper authorities as soon as possible.
+                In the realm of higher mathematics, this is what is known as a <term>typo</term>, and should be reported to the proper authorities as soon as possible.
               </p>
             </aside>
 
@@ -643,14 +643,14 @@
               </statement>
             </definition>
 
-            <convention> 
+            <convention><title>Arbitrary Binary Operations</title>
               <p>
                 The notation <m>*</m> is used for an arbitary binary operation.
                 When context is sufficient for understanding, we often write <m>xy</m> instead of <m>x * y</m> for simplicity.
               </p>
             </convention>
 
-            <aside>
+            <aside><title><m>*</m> vs. <m>\cdot</m></title>
               <p>
                 The notation <m>\cdot</m> is also sometimes used for an arbitary binary operation, though we avoid doing so here to prevent confusion with the mutliplication operation, as seen in in <xref ref="ex-binop"/>.
               </p>
@@ -681,33 +681,12 @@
                         <idx><h>monoid</h></idx>
                       </p>
                     </li>
-
-                    <li xml:id="def-group">
-                      <p>
-                        A <em>group</em> is a pair <m>(G, *)</m> where <m>G</m> is a set and <m>*</m> is a binary operation on <m>G</m> satisfying the associative, identity, and inverse properties.
-                        <notation><usage><m>(G,*)</m></usage><description>a group <m>G</m> and its binary operation <m>*</m></description></notation>
-                        <idx><h>group</h></idx>
-                      </p>
-                    </li>
-
-                    <li xml:id="def-abelian">
-                      <p>
-                        An <em>abelian group</em> is a pair <m>(G, *)</m> where <m>G</m> is a set and <m>*</m> is a binary operation on <m>G</m> satisfying the associative, identity, inverse, and commutative properties.
-                        <idx><h>abelian group</h></idx>
-                      </p>
-                    </li>
                   </ul>
                 </p>
               </statement>
             </definition>
 
-            <convention>
-              <p>
-                Though a group is a pair, we will usually refer to the group by only naming the underlying set, <m>G</m>.
-              </p>
-            </convention>
-
-            <insight>
+            <insight><title>Semigroups and Monoids</title>
               <p>
                 Some mathematicians choose to define a semigroup as we have defined a monoid (e.g. satisfying both the associative <em>and</em> identity properties).
                 We have yet to grasp why.
@@ -715,7 +694,7 @@
               </p>
             </insight>
 
-            <remark>
+            <remark><title></title>
               <p>
                 Magmas, semigroups, and monoids won't show up all that much moving forward, but they are doing a surprising amount of leg work under the surface, and it's worth mentioning them. 
                 However, if you're feeling overwhelmed by the amount of new words buzzing around, those three are probably the ones you can worry about the least, at least in this text.
@@ -730,19 +709,6 @@
               <caption>Relations between algebraic structures. <url href="https://q.uiver.app/?q=WzAsOCxbMiwwLCJcXHRleHR7TWFnbWF9Il0sWzIsMiwiXFx0ZXh0e1VuaXRhbCBNYWdtYX0iXSxbMiw0LCJcXHRleHR7SW52ZXJzZSBTZW1pZ3JvdXB9Il0sWzIsNiwiXFx0ZXh0e0dyb3VwfSJdLFs0LDQsIlxcdGV4dHtNb25vaWR9Il0sWzQsMiwiXFx0ZXh0e1NlbWlncm91cH0iXSxbMCwyLCJcXHRleHR7UXVhc2lncm91cH0iXSxbMCw0LCJcXHRleHR7TG9vcH0iXSxbNywzLCJcXHRleHR7YXNzb2NpYXRpdml0eX0iLDEseyJjb2xvdXIiOlsxMjAsNjAsNjBdfSxbMTIwLDYwLDYwLDFdXSxbNiwyLCJcXHRleHR7YXNzb2NpYXRpdml0eX0iLDAseyJsYWJlbF9wb3NpdGlvbiI6NDAsImNvbG91ciI6WzEyMCw2MCw2MF19LFsxMjAsNjAsNjAsMV1dLFsxLDQsIlxcdGV4dHthc3NvY2lhdGl2aXR5fSIsMCx7ImxhYmVsX3Bvc2l0aW9uIjo0MCwiY29sb3VyIjpbMTIwLDYwLDYwXX0sWzEyMCw2MCw2MCwxXV0sWzAsNSwiXFx0ZXh0e2Fzc29jaWF0aXZpdHl9IiwxLHsiY29sb3VyIjpbMTIwLDYwLDYwXX0sWzEyMCw2MCw2MCwxXV0sWzAsMSwiXFx0ZXh0e2lkZW50aXR5fSIsMSx7ImNvbG91ciI6WzI3MCw2MCw2MF19LFsyNzAsNjAsNjAsMV1dLFsyLDMsIlxcdGV4dHtpZGVudGl0eX0iLDEseyJjb2xvdXIiOlsyNzAsNjAsNjBdfSxbMjcwLDYwLDYwLDFdXSxbNiw3LCJcXHRleHR7aWRlbnRpdHl9IiwxLHsiY29sb3VyIjpbMjcwLDYwLDYwXX0sWzI3MCw2MCw2MCwxXV0sWzUsNCwiXFx0ZXh0e2lkZW50aXR5fSIsMSx7ImNvbG91ciI6WzI3MCw2MCw2MF19LFsyNzAsNjAsNjAsMV1dLFswLDYsIlxcdGV4dHtkaXZpc2liaWxpdHl9IiwxLHsiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXSxbMSw3LCJcXHRleHR7ZGl2aXNpYmlsaXR5fSIsMCx7ImxhYmVsX3Bvc2l0aW9uIjo2MCwiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXSxbNSwyLCJcXHRleHR7aW52ZXJzZXN9IiwwLHsibGFiZWxfcG9zaXRpb24iOjYwLCJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dLFs0LDMsIlxcdGV4dHtpbnZlcnNlc30iLDEseyJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dXQ==" visual="">Quiver</url></caption>
               <image source="images/magma.png" width="80%"/>
             </figure>
-    
-          </subsection>
-
-          <subsection xml:id="subsec-groups"><title>Groups</title>
-
-            <blockquote>
-              <p>
-                <q>
-                  Most great learning happens in groups.
-                </q>
-              </p>
-              <attribution>Ken Robinson</attribution>
-            </blockquote>
 
             <!--
 
@@ -760,6 +726,48 @@
             </exercise>
 
             -->
+    
+          </subsection>
+
+          <subsection xml:id="subsec-groups"><title>Groups</title>
+
+            <blockquote>
+              <p>
+                <q>
+                  Most great learning happens in groups.
+                </q>
+              </p>
+              <attribution>Ken Robinson</attribution>
+            </blockquote>
+
+            <definition xml:id="def-group"><title>Group</title>
+              <statement>
+                <p>
+                  <ol>
+                  <li>
+                      <p>
+                        A <em>group</em> is a pair <m>(G, *)</m> where <m>G</m> is a set and <m>*</m> is a binary operation on <m>G</m> satisfying the associative, identity, and inverse properties.
+                        <notation><usage><m>(G,*)</m></usage><description>a group <m>G</m> and its binary operation <m>*</m></description></notation>
+                        <idx><h>group</h></idx>
+                      </p>
+                    </li>
+
+                    <li xml:id="def-abelian">
+                      <p>
+                        An <em>abelian group</em> is a pair <m>(G, *)</m> where <m>G</m> is a set and <m>*</m> is a binary operation on <m>G</m> satisfying the associative, identity, inverse, and commutative properties.
+                        <idx><h>abelian group</h></idx>
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+            </definition>
+
+            <convention>
+              <p>
+                Though a group is a pair, we will usually refer to the group by only naming the underlying set, <m>G</m>.
+              </p>
+            </convention>
 
             <theorem xml:id="thm-properties-of-groups"><title>Properties of Groups</title>
               <statement>
@@ -912,29 +920,30 @@
             </p>
 
             <example xml:id="ex-group-of-units"><title>Groups of Units</title>
-                <statement>
-                  <p> Each of the following subsets form an abelian group under multiplication.
-                    <ol>
-                      <li>
-                        <p>
-                          The subset <m>\Z^\times=\{-1,1\}</m> of <m>\Z</m>.
-                        </p>
-                      </li>
-                      
-                      <li>
-                        <p>
-                          <m>\Q^\times=\Q\setminus\{0\}</m>, <m>\R^\times=\R\setminus\{0\}</m>, and <m>\C^\times=\C\setminus\{0\}</m>.
-                        </p>
-                      </li>
+              <statement>
+                <p> 
+                  Each of the following subsets form an abelian group under multiplication.
+                  <ol>
+                    <li>
+                      <p>
+                        The subset <m>\Z^\times=\{-1,1\}</m> of <m>\Z</m>.
+                      </p>
+                    </li>
+                    
+                    <li>
+                      <p>
+                        <m>\Q^\times=\Q\setminus\{0\}</m>, <m>\R^\times=\R\setminus\{0\}</m>, and <m>\C^\times=\C\setminus\{0\}</m>.
+                      </p>
+                    </li>
 
-                      <li>
-                        <p>
-                          For each <m>n\in\N</m>, the subset <m>\Z/n^\times=\{k\in\Z/n|\gcd(k,n)=1\}</m> of <m>\Z/n</m>.
-                        </p>
-                      </li>
-                    </ol>
-                  </p>
-                </statement>
+                    <li>
+                      <p>
+                        For each <m>n\in\N</m>, the subset <m>\Z/n^\times=\{k\in\Z/n|\gcd(k,n)=1\}</m> of <m>\Z/n</m>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
             </example>
 
             <aside>
@@ -957,19 +966,19 @@
                 <p>
                   <ul>
                     <li xml:id="exe-opposite-group"><title>Opposite Group</title>
-                        <p>
-                          Let <m>G</m> be a multiplicative group, and define <m>G^{op}</m><idx><h>opposite group</h></idx> be the set <m>G</m> equipped with the operation <m>*</m>, where <m>x*y=yx</m>.
-                          Then <m>G^{op}</m> is a group.
-                          <fn>Opposite groups are used in category theory to describe something called <q>duality</q> between algebraic structures.</fn> 
-                        </p>
-                      </li>
+                      <p>
+                        Let <m>G</m> be a multiplicative group, and define <m>G^{op}</m><idx><h>opposite group</h></idx> be the set <m>G</m> equipped with the operation <m>*</m>, where <m>x*y=yx</m>.
+                        Then <m>G^{op}</m> is a group.
+                        <fn>Opposite groups are used in category theory to describe something called <q>duality</q> between algebraic structures.</fn> 
+                      </p>
+                    </li>
 
-                      <li xml:id="ex-even-odd-groups"><title>Evening the Odds</title>
-                        <p>
-                          Let <m>\E</m> denote the set of even integers and <m>\O</m> denote the set of odd integers. 
-                          Then <m>(\E,+)</m> is a group, whereas <m>(\O,+)</m> is not.
-                        </p>
-                      </li>
+                    <li xml:id="ex-even-odd-groups"><title>Evening the Odds</title>
+                      <p>
+                        Let <m>\E</m> denote the set of even integers and <m>\O</m> denote the set of odd integers. 
+                        Then <m>(\E,+)</m> is a group, whereas <m>(\O,+)</m> is not.
+                      </p>
+                    </li>
                   </ul>
                 </p>
               </statement>
@@ -982,11 +991,15 @@
                         Since <m>G</m> is a group and its operation is associative, we have <m>(y · x) · z = y · (x · z)</m> for any elements <m>x</m>, <m>y</m>, <m>z</m> in <m>G</m>. 
                         This implies that <m>(z · y) · x = z · (y · x)</m> for any elements <m>x, y, z</m> in <m>G^{op}</m>. 
                         Thus, associativity is satisfied in <m>G^{op}</m>.
-
+                      </p>
+                      
+                      <p>
                         Let <m>e</m> be the identity element of <m>G</m>. 
                         In <m>G^{op}</m>, the identity element is still <m>e</m> because for any element <m>x</m> in <m>G^{op}</m>, we have <m>e · x = x · e = x</m>, where <m>·</m> denotes the operation in <m>G</m>. 
                         Therefore, the identity element property is satisfied in <m>G^{op}</m>.
+                      </p>
 
+                      <p>
                         Let <m>x</m> be an element in <m>G^{op}</m>. 
                         Since <m>x</m> is also in <m>G</m>, <m>G</m> being a group implies that there exists an inverse element <m>x\inv</m> in <m>G</m> such that <m>x · x\inv = x\inv · x = e</m>, where <m>e</m> is the identity element of <m>G</m>. 
                         This implies that <m>x\inv · x = x · x\inv = e</m> in <m>G^{op}</m> as well. 
@@ -998,18 +1011,24 @@
                       <p>
                         Integer addition is associative, which means that for any three integers <m>a, b</m>, and <m>c</m>, the expression <m>(a + b) + c</m> is equal to <m>a + (b + c)</m>. 
                         Thus, associativity is satisfied for <m>\E</m>.
+                      </p>
 
+                      <p>
                         The identity element for addition is <m>0</m>. 
                         For any even integer <m>a</m>, adding <m>0</m> to it does not change its parity (evenness). 
                         Hence, the identity element property is satisfied for <m>\E</m>.
+                      </p>
 
+                      <p>
                         For every even integer <m>a</m>, there exists an inverse element denoted as <m>-a</m> such that <m>a + (-a) = (-a) + a = 0</m>. 
                         The negative of an even integer is also an even integer. 
                         Adding an even integer to its negative results in <m>0</m>, which is the identity element. 
                         Therefore, the inverse element property is satisfied for <m>\E</m>.
+                      </p>
 
-
-                        The identity element for addition is <m>0</m>. However, <m>0</m> is not an odd integer, so the identity element property is not satisfied for <m>\O</m>.
+                      <p>
+                        The identity element for addition is <m>0</m>. 
+                        However, <m>0</m> is not an odd integer, so the identity element property is not satisfied for <m>\O</m>.
                       </p>
                     </li>
                   </ul>
@@ -7910,7 +7929,7 @@
 
     <part xml:id="part-rings"><title>Ring Theory</title>
     
-      <chapter xml:id="ch-rings"><title>Rings</title>
+      <chapter xml:id="ch-rings"><title>Intro to Rings</title>
 
         <section xml:id="sec-defn-ex"><title>Ring Basics</title>
     
@@ -10596,7 +10615,7 @@
 
     <part xml:id="part-modules"><title>Module Theory</title>
 
-      <chapter xml:id="ch-mod"><title>Modules</title>
+      <chapter xml:id="ch-mod"><title>Intro to Modules</title>
 
         <section xml:id="sec-defmod"><title>Module Basics</title>
 
@@ -11463,828 +11482,548 @@
           
         </section>
 
-        <section xml:id="sec-linear"><title>Linear Independence</title>
+        <section xml:id="sec-free-mod"><title>Generators, Bases, and Free Modules</title>
+          
+          <subsection xml:id="subsec-linear"><title>Linear Independence</title>
 
-           <blockquote>
+            <blockquote>
+                <p>
+                  <q>
+                    You need to learn independence. You have to be independent - it builds character.
+                  </q>
+                </p>
+                <attribution>Mike Tyson</attribution>
+              </blockquote>
+
+            <definition xml:id="def-linear-combination"><title>Linear Combination</title>
+              <statement>
+                <p>
+                  Let <m>M</m> be an <m>R</m>-module and <m>m_1, \dots, m_n \in M</m>. 
+                  An <m>R</m>-<em>linear combination</em> of <m>m_1, \dots, m_n</m> is an element of <m>M</m> of the form <m>r_1m_1 + \cdots + r_nm_n</m> for some <m>n \geq 0</m> and <m>r_1,\dots,r_n \in R</m>. 
+                  (If <m>n = 0</m>, this gives the empty sum which is interpreted to give <m>0_M</m>.)
+                </p>
+              </statement>
+            </definition>
+
+            <definition xml:id="def-generated-submodule">
+              <statement>
+                <p>
+                  Let <m>R</m> be a ring with <m>1 \ne 0</m> and let <m>M</m> be an <m>R</m>-module. 
+                  For a subset <m>A</m> of <m>M</m> , the submodule of <m>M</m> <term>generated</term> by <m>A</m> is 
+                  <me>RA := {r1a1 + · · · + rnan | n ≥ 0, ri ∈ R, ai ∈ A}.</me>
+                </p>
+
+                <p>
+                  We say <m>M</m> is <term>generated</term> by <m>A</m> if <m>M = RA</m>.
+                </p>
+              </statement>
+            </definition>
+
+            <convention><title>Generated vs. Span</title>
+              <p>
+                If <m>M</m> is an <m>F</m>-vector space, one usually uses the term <q>spanned</q> by instead of the term <q>generated by</q> by.
+              </p>
+            </convention>
+
+            <lemma xml:id="lem-rcdot-a-smallest-submodule-of-m-containing-a"><title><m>R\cdot A</m> Smallest Submodule of <m>M</m> Containing <m>A</m></title>
+              <statement>
+                <p>
+                  For any subset <m>A</m> of a <m>R</m>-module <m>M</m>, the subset <m>R \cdot A</m> is indeed a submodule of <m>M</m>, and it is the smallest submodule of <m>M</m> that contains <m>A</m> as a subset. 
+                  In fact, we have 
+                  <me>
+                    R \cdot A = \bigcap\limits_{A\subseteq N, N \text{ submodule of }M} N.
+                  </me>
+                </p>
+              </statement>
+            </lemma>
+
+            <definition xml:id="def-cyclic-module"><title>Cyclic Module</title>
+              <statement>
+                <p>
+                  If <m>M = R \cdot a</m> for some single element <m>a \in M</m>, we say that <m>M</m> is <em>cyclic</em>.
+                </p>
+              </statement>
+            </definition>
+
+            <example xml:id="exe-cyclic-z-module"><title>Cyclic <m>\Z</m>-module</title>
+              <p>
+                If <m>R = \Z</m>, then (recalling that a <m>\Z</m>-module is the same thing as an abelian group) we see that <m>M</m> is a cyclic <m>\Z</m>-module if and only if <m>M</m> is a cyclic group.
+              </p>
+            </example>
+
+            <exercise><title>Cyclic Modules and Ideals</title>
+              <statement>
+                <p>
+                  Show that the left <m>R</m>-module <m>M</m> is cyclic if and only if there exists a left ideal <m>I</m> of <m>R</m> such that <m>M \cong R/I</m>.
+                </p>
+              </statement>
+            </exercise>
+
+            <exercise xml:id="exe-every-cyclic-r-module-cong-to-ri-for-some-i"><title>Every Cyclic <m>R</m>-module <m>\cong</m> to <m>R/I</m> for some <m>I</m></title>
+              <statement>
+                <p>
+                  Every cyclic <m>R</m>-module is isomorphic to <m>R/I</m> for some left ideal <m>I</m>.
+                </p>
+              </statement>
+
+              <solution>
+                <p>
+                  Say <m>M</m> is cyclic and <m>m \in M</m> is a generator of <m>M</m>, so that <m>M = \{rm \mid r \in R\}</m>. Define <m>f: R \to M</m> to be the unique <m>R</m>-map with <m>f(1) = m</m>. Here I am applying the UMP for bases, using that <m>\{1\}</m> is a basis of <m>R</m> as a left <m>R</m>-modules. More explicitly, <me>f(r) = f(r\cdot 1) = r f(1) = rm</me> for all <m>r \in R</m>. Then <m>f</m> is onto, since <m>m</m> generates <m>M</m>. Its kernel is a left ideal <m>I</m> of <m>R</m>, since submodules of <m>R</m> are the same thing as left ideals. By the FIT, there is an isomorphism <m>R/I \xra{\cong} M</m> sending <m>r + I</m> to <m>rm</m>.
+                </p>
+              </solution>
+            </exercise>
+
+            <definition xml:id="def-finitely-generated-module"><title>Finitely Generated Module</title>
+              <statement>
+                <p>
+                  A module <m>M</m> is <em>finitely generated</em> if there exists some finite subset <m>A</m> of <m>M</m> such that <m>M = R \cdot A</m>.
+                </p>
+              </statement>
+            </definition>
+
+            <remark>
+              <p>
+                For any <m>R</m>-module <m>M</m>, we have <m>R \cdot \emptyset = \{0_M\}</m>. 
+                This is because the empty sum is interpreted as giving <m>0_M</m>.
+              </p>
+            </remark>
+
+            <example xml:id="ex-standard-free-module-finitely-generated"><title>Standard Free Module Finitely Generated</title>
+              <p>
+                Let <m>R</m> be a ring. 
+                The standard free <m>R</m>-module of rank <m>n</m>, <m>R^n</m>, is finitely generated, since it is generated by <m>e_1, \dots, e_n</m> where <m>e_i := \begin{bmatrix} 0 \\ \vdots \\ 0 \\ 1 \\ 0 \\ \vdots \\ 0 \end{bmatrix}</m>, with a <m>1</m> in the <m>i</m>-th position. 
+                This holds since given any element <m>v = \begin{bmatrix} r_1 \\ \vdots \\ r_n\end{bmatrix}</m> of <m>R^n</m> we have <m>v = \sum_i r_i e_i</m>.
+              </p>
+    
+              <p>
+                In particular, taking <m>n = 1</m>, <m>R</m> is cyclic as a module over itself, since <m>R = R \cdot 1</m>. 
+                More generally, for any (two sided) ideal <m>I</m>, <m>R/I</m> is a cyclic left <m>R</m>-module, generated by <m>\ov{1}</m>.
+              </p>
+            </example>
+
+            <exercise><title>Finite Generation and Quotient Modules</title>
+              <statement>
+                <p>
+                  Let <m>R</m> be a ring with <m>0\neq 1</m>. 
+                  Prove that if <m>M</m> is an <m>R</m>-module and <m>N</m> is a submodule of <m>M</m> such that <m>N</m> and <m>M/N</m> are finitely generated, then <m>M</m> is finitely generated.
+                </p>
+              </statement>
+            </exercise>
+
+            <definition xml:id="def-linearly-independent"><title>Linearly Independent</title>
+              <statement>
+                <p>
+                  Let <m>M</m> be an <m>R</m>-module and let <m>A</m> be a subset of <m>M</m>. 
+                  The set <m>A</m> is <em>linearly independent</em> if whenever <m>r_1,\ldots,r_n \in R</m> and <m>a_1,\ldots ,a_n</m> are distinct elements of <m>A</m> satisfying <m>r_1a_1 + \dots + r_na_n = 0</m>, then <m>r_1 = \dots = r_n = 0</m>. 
+                  Otherwise <m>A</m> is <em>linearly dependent</em>.
+                </p>
+              </statement>
+            </definition>
+
+            <remark>
+              <p>
+                The empty subset of any module is linearly independent (vacuously).
+              </p>
+            </remark>
+
+            <example xml:id="ex-one-element-subsets-of-r-mods"><title>One Element Subsets of <m>R</m>-Modules</title>
+              <p>
+                A one element subset <m>\{m\}</m> of an <m>R</m>-module <m>M</m> is linearly independent if and only if whenever <m>rm =0</m>, we have <m>r = 0</m>.
+              </p>
+    
+              <p>
+                But it is possible for one elements subsets to be linearly dependent: For example, let <m>R</m> be any ring and <m>I</m> and (two-sided) ideal such that <m>I \ne 0</m>. 
+                Then I claim that every non-empty subset of <m>M = R/I</m> is linearly dependent. 
+                For say <m>A</m> is a such a nonempty subset. 
+                For any <m>a \in A</m>, pick any <m>r \in I</m> such that <m>r \ne 0</m>. 
+                Then <m>ra = 0</m> (since <m>a = y + I</m> for some <m>y \in R</m> and hence <m>ra = ry + I = I = 0_M</m>) and this shows <m>A</m> is linearly dependent. 
+                In particular, even a one-element subset of <m>M</m> is linearly dependent.
+              </p>
+            </example>
+
+            <example xml:id="exe-3-linearly-independent-in-z"><title><m>\{3\}</m> Linearly Independent in <m>\Z</m></title>
+              <p>
+                The singleton <m>\{3\}</m> is a linearly independent subset of the <m>\Z</m>-module <m>M = \Z</m>. 
+                But it does not generate all of <m>M</m>. 
+                The subset <m>\{3, 5\}</m> does generate all of <m>M</m>, but it is not linearly independent, since <m>5 \cdot 3 + (-3) \cdot 5 = 0</m>. 
+                More on this later.
+              </p>
+            </example>
+            
+          </subsection>
+
+          <subsection xml:id="subsec-bases"><title>Bases</title>
+
+            <blockquote>
               <p>
                 <q>
-                  You need to learn independence. You have to be independent - it builds character.
+                  The basis of all good human behavior is kindness.
                 </q>
               </p>
-              <attribution>Mike Tyson</attribution>
+              <attribution>Eleanor Roosevelt</attribution>
             </blockquote>
 
-          <definition xml:id="def-linear-combination"><title>Linear Combination</title>
-            <statement>
+            <definition xml:id="def-basis-free-mod"><title>Basis and Free Module</title>
+              <statement>
+                <p>
+                  A subset <m>A</m> of an <m>R</m>-module <m>M</m> is a <em>basis</em> of <m>M</m>, if the set <m>A</m> generates <m>M</m> and is linearly independent.
+                  An <m>R</m>-module M is a <em>free</em> <m>R</m>-module if <m>M</m> admits at least one a basis.
+                </p>
+              </statement>
+            </definition>
+
+            <definition xml:id="def-rank-module"><title>Module Rank</title>
+              <statement>
+                <p>
+                  Let <m>R</m> be a non-zero commutative ring and let <m>M</m> be a free <m>R</m>-module. 
+                  The cardinality of any basis of <m>M</m> is called the <em>rank</em> of <m>M</m>.
+                </p>
+              </statement>
+            </definition>
+
+            <example xml:id="ex-free-modules"><title>Free Modules</title>
               <p>
-                Let <m>M</m> be an <m>R</m>-module and <m>m_1, \dots, m_n \in M</m>. 
-                An <m>R</m>-<em>linear combination</em> of <m>m_1, \dots, m_n</m> is an element of <m>M</m> of the form <m>r_1m_1 + \cdots + r_nm_n</m> for some <m>n \geq 0</m> and <m>r_1,\dots,r_n \in R</m>. 
-                (If <m>n = 0</m>, this gives the empty sum which is interpreted to give <m>0_M</m>.)
+                <ol>
+                  <li>
+                    <p>
+                      The zero module is free with <m>\emptyset</m> as (its only) basis. 
+                      This holds since the empty set is vacuously linearly independent and it generates <m>\{0\}</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>R</m> is free since <m>\{1\}</m> is a basis for <m>R</m>. 
+                      It clearly generates and if <m>r \cdot 1 = 0</m> then <m>r = 0</m>, so it is linearly independent.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      More generally, <m>R^n</m> is free since <m>e_1, \dots, e_n</m> is a basis. 
+                      This is called the <term>standard basis</term> of <m>R^n</m>. 
+                      We've already seen that <m>e_1, \dots, e_n</m> generates <m>R^n</m> as an <m>R</m>-module. 
+                      Suppose <m>\sum r_i e_i = 0</m>. 
+                      Then <m>\begin{bmatrix} r_1 \\ \vdots \\ r_n \end{bmatrix} = \begin{bmatrix} 0 \\ \vdots \\ 0 \end{bmatrix}</m> and hence <m>r_i = 0</m> for all <m>i</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      For any ring <m>R</m>, if <m>I</m> is a (two-sided) ideal such that <m>I \ne 0</m> and <m>I \ne R</m>, then <m>M = R/I</m> is not free. 
+                      Since <m>I \ne R</m>, <m>R/I</m> is not the zero module and hence the empty set isn't a basis. 
+                      Let <m>A</m> be any non-empty subset. 
+                      Then since <m>I \ne 0</m>, as shown above <m>A</m> is linearly dependent. 
+                      We conclude that no subset of <m>M</m> is a basis.
+                    </p>
+                  </li>
+                </ol>
               </p>
-            </statement>
-          </definition>
+            </example>
 
-          <remark>
-            <p>
-              If <m>M</m> is an <m>F</m>-vector space, one usually uses the term <q>spanned</q> by instead of the term <q>generated by</q> by.
-            </p>
-          </remark>
-
-          <lemma xml:id="lem-rcdot-a-smallest-submodule-of-m-containing-a"><title><m>R\cdot A</m> Smallest Submodule of <m>M</m> Containing <m>A</m></title>
-            <statement>
+            <example xml:id="ex-bases-are-not-unique"><title>Bases are not Unique</title>
               <p>
-                For any subset <m>A</m> of a <m>R</m>-module <m>M</m>, the subset <m>R \cdot A</m> is indeed a submodule of <m>M</m>, and it is the smallest submodule of <m>M</m> that contains <m>A</m> as a subset. 
-                In fact, we have 
+                Bases of free modules are rarely unique. 
+                Indeed, if <m>R</m> is any ring, then any single unit forms a basis for <m>R</m> as a module over itself. 
+                For another example, for any ring <m>R</m> and any fixed element <m>r \in R</m>, the set 
                 <me>
-                  R \cdot A = \bigcap\limits_{A\subseteq N, N \text{ submodule of }M} N.
-                </me>
+                  \left\{ \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \begin{bmatrix} r \\ 1 \end{bmatrix} \right \}
+                </me> 
+                forms a basis for the free <m>R</m>-module <m>R^2</m>.
               </p>
-            </statement>
-          </lemma>
+            </example>
 
-          <definition xml:id="def-finitely-generated-module"><title>Finitely Generated Module</title>
-            <statement>
+            <exercise><title>Every Module over a Field is Free</title>
+              <statement>
+                <p>
+                  Let <m>R</m> be a commutative ring with <m>1 \neq 0</m>. 
+                  Show that if every <m>R</m>-module is free then <m>R</m> is a field.
+                </p>
+              </statement>
+            </exercise>
+
+            <remark>
               <p>
-                A module <m>M</m> is <em>finitely generated</em> if there exists some finite subset <m>A</m> of <m>M</m> such that <m>M = R \cdot A</m>.
-              </p>
-            </statement>
-          </definition>
-
-          <remark>
-            <p>
-              For any <m>R</m>-module <m>M</m>, we have <m>R \cdot \emptyset = \{0_M\}</m>. 
-              This is because the empty sum is interpreted as giving <m>0_M</m>.
-            </p>
-          </remark>
-
-          <definition xml:id="def-cyclic-module"><title>Cyclic Module</title>
-            <statement>
-              <p>
-                If <m>M = R \cdot a</m> for some single element <m>a \in M</m>, we say that <m>M</m> is <em>cyclic</em>.
-              </p>
-            </statement>
-          </definition>
-
-          <example xml:id="exe-cyclic-z-module"><title>Cyclic <m>\Z</m>-module</title>
-            <p>
-              If <m>R = \Z</m>, then (recalling that a <m>\Z</m>-module is the same thing as an abelian group) we see that <m>M</m> is a cyclic <m>\Z</m>-module if and only if <m>M</m> is a cyclic group.
-            </p>
-          </example>
-
-          <exercise><title>Cyclic Modules and Ideals</title>
-            <statement>
-              <p>
-                Show that the left <m>R</m>-module <m>M</m> is cyclic if and only if there exists a left ideal <m>I</m> of <m>R</m> such that <m>M \cong R/I</m>.
-              </p>
-            </statement>
-          </exercise>
-
-          <proposition>
-            <statement>
-              <p>
-                Let <m>R</m> be a commutative a ring. 
-                Let <m>M</m> be an <m>R</m>-module, <m>I</m> an ideal in <m>R</m>, and let 
-                <me>
-                  N = \{ m \in M \mid am = 0 \textrm{ for all } a \in I \},
-                </me> which is an <m>R</m>-submodule of <m>M</m> by Problem 1. 
-                Show that 
-                <me>
-                  \Hom_R(R/I,M) \cong N.
-                </me>
-              </p>
-            </statement>
-          </proposition>
-
-          <example xml:id="ex-standard-free-module-finitely-generated"><title>Standard Free Module Finitely Generated</title>
-            <p>
-              Let <m>R</m> be a ring. 
-              The standard free <m>R</m>-module of rank <m>n</m>, <m>R^n</m>, is finitely generated, since it is generated by <m>e_1, \dots, e_n</m> where <m>e_i := \begin{bmatrix} 0 \\ \vdots \\ 0 \\ 1 \\ 0 \\ \vdots \\ 0 \end{bmatrix}</m>, with a <m>1</m> in the <m>i</m>-th position. 
-              This holds since given any element <m>v = \begin{bmatrix} r_1 \\ \vdots \\ r_n\end{bmatrix}</m> of <m>R^n</m> we have <m>v = \sum_i r_i e_i</m>.
-            </p>
-  
-            <p>
-              In particular, taking <m>n = 1</m>, <m>R</m> is cyclic as a module over itself, since <m>R = R \cdot 1</m>. 
-              More generally, for any (two sided) ideal <m>I</m>, <m>R/I</m> is a cyclic left <m>R</m>-module, generated by <m>\ov{1}</m>.
-            </p>
-          </example>
-
-          <definition xml:id="def-linearly-independent"><title>Linearly Independent</title>
-            <statement>
-              <p>
-                Let <m>M</m> be an <m>R</m>-module and let <m>A</m> be a subset of <m>M</m>. 
-                The set <m>A</m> is <em>linearly independent</em> if whenever <m>r_1,\ldots,r_n \in R</m> and <m>a_1,\ldots ,a_n</m> are distinct elements of <m>A</m> satisfying <m>r_1a_1 + \dots + r_na_n = 0</m>, then <m>r_1 = \dots = r_n = 0</m>. 
-                Equivalently, <m>A</m> is linearly independent if and only if given any equation of the form <m>\sum_a r_a a = 0</m> where <m>r_a \in R</m> for all <m>a \in A</m> and <m>r_a = 0</m> for all but a finite number of <m>a'</m>s, we must have <m>r_a = 0</m> for all <m>a</m>.
-              </p>
-            </statement>
-          </definition>
-
-          <definition xml:id="def-linearly-dependent"><title>Linearly Dependent</title>
-            <statement>
-              <p>
-                Let <m>M</m> be an <m>R</m>-module and let <m>A</m> be a subset of <m>M</m>. 
-                The set <m>A</m> is <em>linearly dependent</em> if and only if there is an equation of the form <m>\sum_a r_a a = 0</m> where <m>r_a \in R</m> for all <m>a \in A</m>, <m>r_a = 0</m> for all but a finite number of <m>a'</m>s, and <m>r_a \ne 0</m> for at least one <m>a</m>.
-              </p>
-            </statement>
-          </definition>
-
-          <remark>
-            <p>
-              The empty subset of any module is linearly independent (vacuously).
-            </p>
-          </remark>
-
-          <example xml:id="ex-one-element-subsets-of-r-mods"><title>One Element Subsets of <m>R</m>-Modules</title>
-            <p>
-              A one element subset <m>\{m\}</m> of an <m>R</m>-module <m>M</m> is linearly independent if and only if whenever <m>rm =0</m>, we have <m>r = 0</m>.
-            </p>
-  
-            <p>
-              But it is possible for one elements subsets to be linearly dependent: For example, let <m>R</m> be any ring and <m>I</m> and (two-sided) ideal such that <m>I \ne 0</m>. 
-              Then I claim that every non-empty subset of <m>M = R/I</m> is linearly dependent. 
-              For say <m>A</m> is a such a nonempty subset. 
-              For any <m>a \in A</m>, pick any <m>r \in I</m> such that <m>r \ne 0</m>. 
-              Then <m>ra = 0</m> (since <m>a = y + I</m> for some <m>y \in R</m> and hence <m>ra = ry + I = I = 0_M</m>) and this shows <m>A</m> is linearly dependent. 
-              In particular, even a one-element subset of <m>M</m> is linearly dependent.
-            </p>
-          </example>
-
-          <example xml:id="exe-3-linearly-independent-in-z"><title><m>\{3\}</m> Linearly Independent in <m>\Z</m></title>
-            <p>
-              The singleton <m>\{3\}</m> is a linearly independent subset of the <m>\Z</m>-module <m>M = \Z</m>. 
-              But it does not generate all of <m>M</m>. 
-              The subset <m>\{3, 5\}</m> does generate all of <m>M</m>, but it is not linearly independent, since <m>5 \cdot 3 + (-3) \cdot 5 = 0</m>. 
-              More on this later.
-            </p>
-          </example>
-          
-        </section>
-        
-        <section xml:id="sec-modgen"><title>Generated Modules</title>
-
-          <blockquote>
-            <p>
-              <q>
-                A peaceful mind generates power.
-              </q>
-            </p>
-            <attribution>Normal Vincent Peale</attribution>
-          </blockquote>
-
-          <proposition><title>Finite Generation and Quotient Modules</title>
-            <statement>
-              <p>
-                Let <m>R</m> be a ring with <m>0\neq 1</m>. Prove that if <m>M</m> is an <m>R</m>-module and <m>N</m> is a submodule of <m>M</m> such that <m>N</m> and <m>M/N</m> are finitely generated, then <m>M</m> is finitely generated.
-              </p>
-            </statement>
-          </proposition>
-
-          <proposition xml:id="prop-every-cyclic-r-module-cong-to-ri-for-some-i"><title>Every Cyclic <m>R</m>-module <m>\cong</m> to <m>R/I</m> for some <m>I</m></title>
-            <statement>
-              <p>
-                Every cyclic <m>R</m>-module is isomorphic to <m>R/I</m> for some left ideal <m>I</m>.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                Say <m>M</m> is cyclic and <m>m \in M</m> is a generator of <m>M</m>, so that <m>M = \{rm \mid r \in R\}</m>. Define <m>f: R \to M</m> to be the unique <m>R</m>-map with <m>f(1) = m</m>. Here I am applying the UMP for bases, using that <m>\{1\}</m> is a basis of <m>R</m> as a left <m>R</m>-modules. More explicitly, <me>f(r) = f(r\cdot 1) = r f(1) = rm</me> for all <m>r \in R</m>. Then <m>f</m> is onto, since <m>m</m> generates <m>M</m>. Its kernel is a left ideal <m>I</m> of <m>R</m>, since submodules of <m>R</m> are the same thing as left ideals. By the FIT, there is an isomorphism <m>R/I \xra{\cong} M</m> sending <m>r + I</m> to <m>rm</m>.
-              </p>
-            </proof>
-          </proposition>
-
-          <proposition>
-            <statement>
-              <p>
-                Let <m>R</m> be a ring. Recall that we proved in class that every cyclic <m>R</m>-module is isomorphic to <m>R/I</m> for some left ideal <m>I</m>. Prove the left ideal <m>I</m> occurring this statement is unique; that is, if a cyclic <m>R</m>-module is isomorphic to <m>R/I</m> and <m>R/J</m> for left ideals <m>I</m> and <m>J</m>, then <m>I = J</m>.
-              </p>
-            </statement>
-          </proposition>
-
-          <remark>
-            <p>
-              More generally, the same argument shows that if <m>M</m> is a finitely generated <m>R</m> module, say generated by <m>n</m> elements, then <m>M \cong R^n/N</m> for some submodule <m>N</m> of <m>R^n</m>.
-            </p>
-          </remark>
-
-          <lemma xml:id="lem-mim-is-an-ri-module"><title><m>M/IM</m> is an <m>R/I</m>-module</title>
-      
-            <statement>
-              <p>
-                For a commutative ring <m>R</m>, module <m>M</m> and ideal <m>I</m>, the rules for addition in <m>M/IM</m> and scaling by <m>R/I</m> on <m>M/IM</m> introduced above make <m>M/IM</m> into an <m>R/I</m>-module.
+                A key difference between free modules over rings that are not fields and vector spaces is that not every linearly independent subset of a free module can be extended to a basis. 
+                For example, <m>\{3\}</m> is a linearly independent subset of <m>\Z</m>, but it cannot be extended to a basis. 
+                Indeed, any set of the form <m>\{3, n \}</m> with <m>n \ne 3</m> is linearly dependent since <m>n \cdot 3 + (-3) \cdot n = 0</m>.
               </p>
     
               <p>
-                Moreover, given another <m>R</m>-module <m>N</m> and an <m>R</m>-map <m>f: M \to N</m>, the function <m>\ov{f}: M/IM \to N/IN</m> given by <m>\ov{f}(m + IM) = f(m) + IN</m> is a well-defined <m>R/I</m>-module homomorphism.
+                Likewise, over arbitrary rings, not every subset that generates a free module necessarily contains a basis. 
+                For instance, <m>\{3,5\}</m> generated <m>\Z</m> as a module over itself, but no subset of it is a basis.
               </p>
     
               <p>
-                Finally, if <m>g: N \to P</m> is yet another <m>R</m>-module homomorphism, then <m>\ov{g} \circ \ov{f} = \ov{g \circ f}</m>, and we also have <m>\ov{\id_M} = \id_{M/IM}</m> for any <m>R</m>-module <m>M</m>.
+                (Note that <m>\Z</m> has precisely two bases as a module over itself: <m>\{1\}</m> and <m>\{-1\}</m>. )
               </p>
-            </statement>
-
-            <proof>
-              <p>
-                I leave some of the details as an exercise, but I will check a few of the necessary things:
-              </p>
-  
-              <p>
-                We already showed that the rule for scaling is well defined, and we know from 817 that the rule for addition is well-defined and that <m>(M/IM, +)</m> is an abelian group. To show <m>M/IM</m> is an <m>R/I</m>-module, there remain four axioms to verify. For instance, <me>((r+I)(s+I))(m +IM) = (rs + I)(m + IM) = (rsm + IM) = (r+I)(sm +IM) = (r+I)((s+I)(m+IM)),</me>which verifies one of them; the other proofs are similar.
-              </p>
-  
-              <p>
-                Next, let me verify that the function <m>\ov{f}</m> is a well-defined <m>R/I</m>-map: Let <m>g: M \to N/IN</m> be the composition of <m>R</m>-maps <m>M \xra{f} N \to N/IN</m> (the second one being the canonical one), so that <m>g(m) = f(m) + IN</m>. Since <m>f(\sum_i a_i m_i) = \sum a_i f(m_i) \in IN</m> for any <m>a_i</m>'s belonging to <m>I</m> and <m>m_i</m>'s belonging to <m>M</m>, we have <m>IM \subseteq \ker(g)</m>. By the UMP for quotient modules, there is an induced <m>R</m>-map <m>\ov{f}: M/IM \to N/IN</m> given by <m>\ov{f}(m + IM) = f(m) + IN</m>. The map <m>\ov{f}</m> is so far only known to be an <m>R</m>-map, but it is in fact an <m>R/I</m>-map since <me>\ov{f}((r + I)(m +IM)) =   \ov{f}(rm +IM) = f(rm) + IN = rf(m) + IN = (r+I)(f(m) + IN).</me> The final assertions are clear from the formula for <m>\ov{f}</m> for an <m>R</m>-map <m>f</m>.
-              </p>
-            </proof>
-          </lemma>
-
-          <remark>
-            <p>
-              The Lemma shows that the rules <m>M \mapsto M/IM</m> and <m>f \mapsto \ov{f}</m> determine what is known as a functor from the category of <m>R</m>-modules to the category of <m>R/I</m>-modules.
-            </p>
-          </remark>
-
-          <example xml:id="ex-maximal-ideals-and-vector-spaces"><title>Maximal Ideals and Vector Spaces</title>
-            <p>
-              Suppose <m>I</m> is a maximal ideal of a commutative ring <m>R</m>. Then <m>R/I</m> is a field, and given an <m>R</m>-module <m>M</m>, <m>M/IM</m> is a module over the field <m>R/I</m>; i.e., it is a vector space over this field. Moreover, if <m>f: M \to N</m> is an <m>R</m>-map then <m>\ov{f}: M/IM \to N/IN</m> is an <m>R/I</m>-linear transformation.
-            </p>
-          </example>
-
-          <proposition>
-            <statement>
-              <p>
-                Let <m>R</m> be a non-zero commutative ring and suppose <m>p: R^m \to R^n</m> is a surjective homomorphism of <m>R</m>-modules for some non-negative integers <m>m</m> and <m>n</m>. 
-                <ol>
-                  <li>
-                    <p>
-                      Prove that if <m>R</m> is a field, then <m>m \geq n</m>. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      Prove that if <m>R</m> is any non-zero commutative ring, then <m>m \geq n</m>.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-          </proposition>
-
-          <proposition><title>Finitely Generated Modules and Submodules</title>
-            <statement>
-              <p>
-                Let <m>R</m> be a ring, let <m>M</m> be a left <m>R</m>-module and let <m>N \subseteq M</m> be a left <m>R</m>-submodule. 
-                <ol>
-                  <li>
-                    <p>
-                      Prove that if <m>M</m> is finitely generated (as an <m>R</m>-module), then so is <m>M/N</m>. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      Prove that if <m>M/N</m> and <m>N</m> are both finitely generated, then so is <m>M</m>. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      Prove the converse to the previous part is false, as follows: Let <m>F</m> be a field and <m>R = F[x_1, x_2, \dots]</m>, the ring of polynomials in the infinite list of variables <m>x_1, x_2, \dots</m>. (So, an element of <m>R</m> is a {} <m>F</m>-linear combination of monomials of the form <m>x_1^{e_1} \cdots x_n^{e_n}</m> for <m>n \geq 0</m> and <m>e_i \geq 1</m>. Note that each element of <m>R</m> involves only a finite number of variables, but there is no uniform bound on how many such variables can be involved in the elements of <m>R</m>.) You may assume without proof that <m>R</m> is a ring with the usual rules for adding and multiplying polynomials, which make sense since each element of <m>R</m> involves only a finite number of variables. Finally let <m>I</m> be the ideal of <m>R</m> generated by the variables <m>x_1, x_2, \dots</m>. Prove <m>R</m> is finitely generated as an <m>R</m>-module but the submodule <m>I</m> is not.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-          </proposition>
-
-          <proposition><title>Split Surjection</title>
-            <statement>
-              <p>
-                Let <m>R</m> be a ring, <m>M</m> and <m>N</m> left <m>R</m>-modules, and <m>p: M \to N</m> an <m>R</m>-module homomorphism. Assume that <m>p</m> is surjective. We say <m>p</m> is a <em>split surjection</em> if there exists an <m>R</m>-module homomorphism <m>j: N \to M</m> such that <m>p \circ j = id_N</m> (i.e., <m>p(j(n)) = n</m> for all <m>n \in N</m>). 
-                <ol>
-                  <li>
-                    <p>
-                      Prove that if <m>N</m> is free, then every surjective <m>R</m>-module homomorphism of the form <m>p: M \to N</m> is a split surjection. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      By giving an explicit example with justification, show the statement in part (1) would become false if <m>N</m> were not assumed to be free.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-          </proposition>
-
-          <proposition><title>Split Injection</title>
-            <statement>
-              <p>
-                Assume <m>R</m> is a ring, <m>W</m> an <m>R</m>-module, and <m>i: V \to W</m> an injective <m>R</m>-module homomorphism. We say <m>i</m> is a <em>split injection</em> if there exists an <m>R</m>-module homomorphism <m>q: W \to V</m> such that <m>q \circ i = id_V</m> (i.e., <m>q(i(v)) = v</m> for all <m>v \in V</m>).
-                <ol>
-                  <li>
-                    <p>
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      Prove that if <m>R</m> is a field, <m>V</m> is a subspace (i.e., submodule) of <m>W</m>, and <m>i</m> is the inclusion map, then <m>i</m> is a split injection. Note that since <m>i</m> is the inclusion map, what you need to prove is that there exists an <m>R</m>-module homomorphism <m>q: W \to V</m> such that <m>q(v) = v</m>. {}: Start by picking a basis <m>B</m> of <m>V</m> and use a theorem proven in class to show that <m>B</m> can be extended to a basis <m>C</m> of <m>W</m>. Use <m>C</m> to construct <m>q</m>. (I am assuming that <m>V</m> is a subspace of <m>W</m> and that <m>i</m> is the inclusion map just for simplicity — more generally, it is true that every injective <m>R</m>-module homomorphism is a split injection whenever <m>R</m> is a field.)
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      Assume <m>R</m> is a non-zero integral domain, but that it is not a field. Prove there exists an <m>R</m>-module homomorphism that is an injection but {} a split injection. {}: Pick <m>a \in R</m> such that <m>a \neq 0</m> and <m>a</m> is not a unit, let <m>I</m> be the proper ideal <m>I = R \cdot a</m> generated by <m>a</m> and show the inclusion map <m>i: I \to R</m> is not a split injection.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-          </proposition>
-
-          <proposition>
-            <statement>
-              <p>
-                Prove that if <m>R</m> is a commutative ring with <m>1\neq 0</m> then <m>R^m \cong R^n</m> as <m>R</m>-modules if and only if <m>m = n</m>. In order to do that, you will complete the following steps: 
-                <ol>
-                  <li>
-                    <p>
-                      Show that if <m>I</m> is any ideal of <m>R</m> and <m>M</m> is any <m>R</m>-module, then <m>M/IM</m> is an <m>R/I</m>-module via <me>(r + I) \cdot (m + IM) = rm + IM.</me> 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      Show that if <m>I</m> is any ideal of <m>R</m>, then <m>R^n/IR^n \cong (R/I)^n</m> as <m>R/I</m>-modules. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      Apply the previous part when <m>I = \fm</m> is a maximal ideal of <m>R</m>. You will need to use the following fact, which we shall prove in class very soon: if <m>F</m> is a field, then <m>F^n\cong F^m</m> as <m>F</m>-vector spaces if and only if <m>m=n</m>. 
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-          </proposition>
-
-          <theorem xml:id="thm-torsion-properties"><title>Properties of Torsion Submodules</title>
-            <statement>
-              <p>
-                Let <m>R</m> be a domain and let <m>M</m> be an <m>R</m>-module. The torsion submodule of <m>M</m> is <me>\Tor(M) = \{m \in M \mid rm = 0 \text{ for some } r \in R \textrm{ with } r \neq 0 \}.</me> Elements of <m>\Tor(M)</m> are called the torsion elements of <m>M</m>, and the module <m>M</m> is called <em>torsion</em> if <m>\Tor(M) = 0</m>. You may take for granted that this is actually a submodule of <m>M</m> without proof. 
-                <ol>
-                  <li>
-                    <p>
-                      Show that if <m>M</m> and <m>N</m> are <m>R</m>-modules, then <m>\Tor(M \oplus N) = \Tor(M) \oplus \Tor(N)</m>. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      Show that if <m>M \cong N</m>, then <m>\Tor(M) \cong \Tor(N)</m>. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      Show that if <m>M</m> is a free <m>R</m>-module then <m>\Tor(M)=0</m>. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      Show that if <m>I</m> is an ideal of <m>R</m> that is not principal, then <m>I</m> is a torsion-free <m>R</m>-module that is not a free <m>R</m>-module. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      Show that if <m>I\neq(0)</m> is an ideal of <m>R</m> then <m>\Tor(R/I)=R/I</m>. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      Suppose that R is a PID, and that <m>M</m> is a finitely generated <m>R</m>-module. Show that <m>M</m> is a torsion-free <m>R</m>-module if and only if <m>M</m> is a free <m>R</m>-module.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-          </theorem>
-
-          <proposition><title>Annihilators and Direct Sums</title>
-            <statement>
-              <p>
-                Let <m>R</m> be a commutative ring with <m>1 \neq 0</m>. Show that 
-                <me>
-                  \ann_R (M \oplus N) = \ann_R (M) \cap \ann_R (N)
-                </me>
-              </p>
-            </statement>
-          </proposition>
-
-        </section>
-
-        <section xml:id="sec-bases"><title>Bases</title>
-
-          <blockquote>
-            <p>
-              <q>
-                The basis of all good human behavior is kindness.
-              </q>
-            </p>
-            <attribution>Eleanor Roosevelt</attribution>
-          </blockquote>
-
-          <definition xml:id="def-basis"><title>Basis</title>
-            <statement>
-              <p>
-                A subset <m>A</m> of an <m>R</m>-module <m>M</m> is a <em>basis</em> of <m>M</m>, if the set <m>A</m> generates <m>M</m> and is linearly independent.
-              </p>
-            </statement>
-          </definition>
-
-          <definition xml:id="def-free-module"><title>Free Module</title>
-            <statement>
-              <p>
-                An <m>R</m>-module M is a <em>free</em> <m>R</m>-module if <m>M</m> admits at least one a basis.
-              </p>
-            </statement>
-          </definition>
-
-          <definition xml:id="def-rank-module"><title>Module Rank</title>
-            <statement>
-              <p>
-                Let <m>R</m> be a non-zero commutative ring and let <m>M</m> be a free <m>R</m>-module. 
-                The cardinality of any basis of <m>M</m> is called the <em>rank</em> of <m>M</m>.
-              </p>
-            </statement>
-          </definition>
-
-          <example xml:id="ex-zero-module-is-free"><title>Zero Module is Free</title>
-            <p>
-              <ol>
-                <li>
-                  <p>
-                    The zero module is free with <m>\emptyset</m> as (its only) basis. 
-                    This holds since the empty set is vacuously linearly independent and it generates <m>\{0\}</m>.
-                  </p>
-                </li>
-
-                <li>
-                  <p>
-                    <m>R</m> is free since <m>\{1\}</m> is a basis for <m>R</m>. 
-                    It clearly generates and if <m>r \cdot 1 = 0</m> then <m>r = 0</m>, so it is linearly independent.
-                  </p>
-                </li>
-
-                <li>
-                  <p>
-                    More generally, <m>R^n</m> is free since <m>e_1, \dots, e_n</m> is a basis. 
-                    This is called the <term>standard basis</term> of <m>R^n</m>. 
-                    We've already seen that <m>e_1, \dots, e_n</m> generates <m>R^n</m> as an <m>R</m>-module. 
-                    Suppose <m>\sum r_i e_i = 0</m>. 
-                    Then <m>\begin{bmatrix} r_1 \\ \vdots \\ r_n \end{bmatrix} = \begin{bmatrix} 0 \\ \vdots \\ 0 \end{bmatrix}</m> and hence <m>r_i = 0</m> for all <m>i</m>.
-                  </p>
-                </li>
-
-                <li>
-                  <p>
-                    For any ring <m>R</m>, if <m>I</m> is a (two-sided) ideal such that <m>I \ne 0</m> and <m>I \ne R</m>, then <m>M = R/I</m> is not free. 
-                    Since <m>I \ne R</m>, <m>R/I</m> is not the zero module and hence the empty set isn't a basis. 
-                    Let <m>A</m> be any non-empty subset. 
-                    Then since <m>I \ne 0</m>, as shown above <m>A</m> is linearly dependent. 
-                    We conclude that no subset of <m>M</m> is a basis.
-                  </p>
-                </li>
-              </ol>
-            </p>
-          </example>
-
-          <example xml:id="ex-bases-are-not-unique"><title>Bases are not Unique</title>
-            <p>
-              Bases of free modules are rarely unique. 
-              Indeed, if <m>R</m> is any ring, then any single unit forms a basis for <m>R</m> as a module over itself. 
-              For another example, for any ring <m>R</m> and any fixed element <m>r \in R</m>, the set 
-              <me>
-                \left\{ \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \begin{bmatrix} r \\ 1 \end{bmatrix} \right \}
-              </me> 
-              forms a basis for the free <m>R</m>-module <m>R^2</m>.
-            </p>
-          </example>
-
-          <exercise><title>Every Module over a Field is Free</title>
-            <statement>
-              <p>
-                Let <m>R</m> be a commutative ring with <m>1 \neq 0</m>. 
-                Show that if every <m>R</m>-module is free then <m>R</m> is a field.
-              </p>
-            </statement>
-          </exercise>
-
-          <exercise><title><m>\Q</m> is not a Free <m>\Z</m>-module</title>
-            <statement>
-              <p>
-                An abelian group <m>A</m> is called <em>divisible</em> if for each <m>a \in A</m> and <m>n \in \N</m>, there exists <m>b \in A</m> such that <m>a = nb</m>. 
-                Prove that if <m>A \neq\{0_A\}</m> is a divisible abelian group then <m>A</m> is not a free <m>\Z</m>-module. 
-                Deduce that <m>\Q</m> is not a free <m>\Z</m>-module.
-              </p>
-            </statement>
-          </exercise>
-
-          <exercise><title>Free Modules have Trivial Annihilators</title>
-            <statement>
-              <p>
-                Let <m>R</m> be a commutative ring with <m>1 \neq 0</m>. 
-                <ol>
-                  <li>
-                    <p>
-                      Show that if <m>M</m> is a free <m>R</m>-module, then <m>\ann(M) = 0</m>. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      Give an example of a ring <m>R</m> an a nonzero module <m>M</m> such that <m>\ann(M) \neq 0</m>.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-          </exercise>
-
-          <remark>
-            <p>
-              A key difference between free modules over rings that are not fields and vector spaces is that not every linearly independent subset of a free module can be extended to a basis. 
-              For example, <m>\{3\}</m> is a linearly independent subset of <m>\Z</m>, but it cannot be extended to a basis. 
-              Indeed, any set of the form <m>\{3, n \}</m> with <m>n \ne 3</m> is linearly dependent since <m>n \cdot 3 + (-3) \cdot n = 0</m>.
-            </p>
-  
-            <p>
-              Likewise, over arbitrary rings, not every subset that generates a free module necessarily contains a basis. 
-              For instance, <m>\{3,5\}</m> generated <m>\Z</m> as a module over itself, but no subset of it is a basis.
-            </p>
-  
-            <p>
-              (Note that <m>\Z</m> has precisely two bases as a module over itself: <m>\{1\}</m> and <m>\{-1\}</m>. )
-            </p>
-          </remark>
-
-          <remark>
-            <p>
-              If <m>R</m> is the zero ring, then there is (up to isomorphism) only one <m>R</m>-module, the zero module. 
-              (Proof: If <m>M</m> is any module over the <m>0</m> ring, then for each <m>m \in M</m> we have <m>m = 1_R \cdot m = 0_R \cdot m = 0_M</m>.) 
-              Checking the definition carefully, we see that both the empty set and the set <m>\{0\}</m> form bases for the zero module over the <m>0</m> ring. 
-              This gives an example of a module with two bases of different cardinalities. 
-            </p>
-          </remark>
-  
-          <lemma xml:id="lem-elements-uniquely-expressible-in-free-modules"><title>Elements Uniquely Expressible in Free Modules</title>
-            <statement>
-              <p>
-                Suppose <m>M</m> is a free <m>R</m>-module and <m>A</m> is a basis of <m>M</m>. Then every element of <m>M</m> is uniquely expressible as an <m>R</m>-linear combination of elements of <m>A</m>.
-              </p>
-
-              <p>
-                More precisely, for each <m>m</m> there is unique family of elements <m>(r_a)_{a \in A}</m>, with <m>r_a \in R</m> for all <m>a</m>, such that <m>r_a = 0</m> for all but a finite number of indices <m>a \in A</m> and <m>m = \sum_{a \in A} r_a a</m>.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                Given <m>m \in M</m>, the fact that <me>m = \sum_a r_a a</me> for at least one family of elements <m>(r_a)_{a \in A}</m> with <m>r_a = 0</m> for all but a finite number of <m>a</m>'s is the definition of what it means for <m>A</m> to generate <m>M</m>.
-              </p>
-  
-              <p>
-                Suppose <m>(s_a)_{a \in A}</m> is another such family with <m>m = \sum_a s_a a</m>. Then <me>0 = m-m = \sum_a r_a a - \sum_a s_a a = \sum_a (r_a - s_a) a.</me> Since <m>A</m> is linearly independent, by definition <m>r_a - s_a = 0</m> for all <m>a</m>.
-              </p>
-            </proof>
-          </lemma>
-
-          <p>
-            I have not yet given an example of a module with an infinite basis; here is one.
-          </p>
-
-          <example xml:id="exe-module-with-infinite-basis"><title>Module with Infinite Basis</title>
-            <p>
-              Let <m>R</m> be any ring and <m>M = R[x]</m> (which, recall, is an <m>R</m>-module due to the evident ring map <m>R \to R[x]</m>). 
-              Then the countably infinite set <m>\{1,x,x^2,\dots, x^n,\dots\}</m> is a basis. 
-              The fact that this set is a basis is essentially part of the definition of <m>R[x]</m>. 
-              <xref ref="lem-elements-uniquely-expressible-in-free-modules"/> says that every polynomial is uniquely expressible as an <m>R</m>-linear combination of (a finite subset of) <m>1,x,x^2,\dots</m>.
-            </p>
-          </example>
-
-          <theorem xml:id="thm-ump-for-free-modules"><title>UMP for Free <m>R</m>-Modules</title>
-            <statement>
-              <p>
-                Let <m>R</m> be a ring, let <m>M</m> be a free <m>R</m>-module with basis <m>B</m>, let <m>N</m> be an <m>R</m>-module, and let <m>j: B \to N</m> be any function. 
-                Then there is a unique <m>R</m>-module homomorphism <m>h: M \to N</m> such that <m>h(b) = j(b)</m> for all <m>b \in B</m>.
-              </p>
-    
-              <p>
-                In other words, there is a bijection of sets 
-                <me>
-                  \Hom_R(M,N) \leftrightarrow\Fun(B, N)
-                </me> 
-                given by sending a homomorphisms <m>f: M \to N</m> to its restriction <m>f|_B:B \to N</m> to <m>B</m>. 
-                (Here, <m>\Hom_R(M,N)</m> is the set of all <m>R</m>-module homomorphisms from <m>M</m> to <m>N</m> and <m>\Fun(B, N)</m> is the set of all functions from <m>B</m> to <m>N</m>.)
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                Given a function <m>j: B \to N</m>, define <m>f: M\to N</m> as follows: Given <m>m \in M</m>, by <xref ref="lem-elements-uniquely-expressible-in-free-modules"/> <m>m</m> can be written uniquely as a finite sum <m>m = \sum_{b \in B} r_b b</m>. 
-                We set 
-                <me>
-                  f(m) = \sum_{b \in B} r_b j(b).
-                </me> 
-                Note that <m>f</m> is a well-defined function by the uniqueness of the equation <m>m = \sum_{b \in B} r_b b</m>.
-              </p>
-  
-              <p>
-                We need to prove <m>f</m> is an <m>R</m>-module homomorphism. 
-                I'll just show it preserves scaling — the proof for addition is similar. 
-                Given <m>x \in R</m> and <m>m \in M</m>, we have <m>m = \sum_{b \in B} r_b b</m> for some <m>r_b \in R</m>, and hence <m>xm = \sum_b (xr_b) b</m>. 
-                By definition of <m>f</m>, 
-                <me>
-                  f(xm) = \sum_b (xr_b) j(b) = x \sum_b r_b j(b) = x f(m).
-                </me>
-              </p>
-  
-              <p>
-                Finally, for any <m>y \in B</m> we have <m>y = \sum_{b \in B} r_b b</m> where <m>r_b = 1</m> if <m>b = y</m> and <m>r_b = 0</m> if <m>b \ne y</m>. 
-                So <m>f(y) = j(y)</m> by construction. 
-                This proves existence.
-              </p>
-  
-              <p>
-                Let <m>g:M\to N</m> be another <m>R</m>-module homomorphism such that <m>g(b)=g(b)</m> for each <m>b \in B</m>. 
-                Given <m>m \in M</m> we have <m>m = \sum_{b \in B} r_b b</m> and hence 
-                <me>
-                  g(m) = \sum_b g(r_b (b))= \sum_b r_b g(b) =\sum_b r_b j(b) = f(m).
-                </me> 
-                and hence <m>g = f</m>.
-              </p>
-            </proof>
-          </theorem>
-
-          <remark>
-            <p>
-              The uniqueness only uses that <m>B</m> generates <m>M</m> as an <m>R</m>-module.
-            </p>
-          </remark>
-          
-          <corollary xml:id="cor-free-modules-with-equal-basis-elements-isomorphic"><title>Free Modules with Equal Basis Elements Isomorphic</title>
-            <statement>
-              <p>
-                If <m>M</m> and <m>N</m> are free <m>R</m>-modules having bases of the same cardinality, then <m>M</m> and <m>N</m> are isomorphic <m>R</m>-modules.
-              </p>
-    
-              <p>
-                More precisely, if <m>A</m> is a basis of <m>M</m> and <m>B</m> is a basis of <m>N</m> and <m>j:A\to B</m> is a bijection of sets, then there is a unique <m>R</m>-module isomorphism <m>h: M \xra{\cong} N</m> such that <m>h|_A = j</m>.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                Let <m>h:M\to N</m> and <m>h':N\to M</m> be the <m>R</m>-module homomorphisms induced by the bijection <m>j:A\to B</m> and its inverse <m>j^{-1}:B\to A</m>, respectively, using <xref text='title' ref="thm-ump-for-free-modules"/>. 
-                We'll show that <m>h</m> and <m>h'</m> are mutual inverses. 
-                For this note that <m>h'\circ h:N\to N</m> is an <m>R</m>-module homomorphism and <m>(h'\circ h)(b)=h'(j(b))=j^{-1}(j(b))=b</m> for every <m>b\in B</m>. 
-                Since the identity map <m>\id_N</m> is also an <m>R</m>-module homomorphism such that <m>id_N(b)=b</m> for every <m>b\in B</m>, by the uniqueness clause in the <xref text='title' ref="thm-ump-for-free-modules"/>, we have <m>h'\circ h=\id_n</m>. 
-                Similarly <m>h\circ h'=\id_M</m>.
-              </p>
-            </proof>
-          </corollary>
-
-          <example xml:id="exe-mcong-rn-as-r-modules"><title><m>M\cong R^n</m> as <m>R</m>-modules</title>
-            <p>
-              If <m>M</m> is a free <m>R</m>-module that has a basis of cardinality <m>n</m>, then <m>M \cong R^n</m> as <m>R</m>-modules. 
-              This holds since, as seen above, <m>R^n</m> has a basis of cardinality <m>n</m>, namely the standard basis <m>e_1, \dots, e_n</m>.
-            </p>
-  
-            <p>
-              More precisely, as the proof makes clear, if <m>B = \{x_1, \dots, x_n\}</m> is an (ordered) basis of <m>M</m>, there is an isomorphism <m>\phi_B: R^n \cong M</m> that sends <m>\begin{bmatrix} r_1 \\ \vdots \\ r_n \end{bmatrix}</m> to <m>\sum_i r_i x_i</m>.
-            </p>
-          </example>
-
-          <remark>
-            <p>
-              Beware that the cardinality of a basis of a free modules is not an isomorphism invariant in general! 
-              There exist rings <m>S</m> such that <m>S^n</m> and <m>S^m</m> are isomorphic <m>S</m>-modules for all positive integers <m>n</m> and <m>m</m>.
-            </p>
-          </remark>
-
-          <theorem xml:id="thm-uniqueness-of-rank-over-commutative-rings"><title>Uniqueness of Rank over Commutative Rings</title>
-            <statement>
-              <p>
-                Let <m>R</m> be a commutative ring such that <m>1 \ne 0</m> and let <m>M</m> be a free <m>R</m>-module with bases <m>A</m> and <m>B</m>. 
-                Then <m>A</m> and <m>B</m> have the same rank, i.e. there exists a (non unique) bijection of sets joining them.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                Let <m>R</m> be a non-zero commutative ring and let <m>M</m> be a free <m>R</m>-module with two bases, <m>A</m> and <m>B</m>. 
-                We need to show <m>A</m> and <m>B</m> have the same cardinality. 
-                Since <m>A</m> and <m>B</m> are finite, by Example <xref provisional="cite"/> the assertion is equivalent to the following statement:
-  
-                <cd>
-                \begin{quote} For a non-zero commutative ring $R$,
-                if there is an isomorphism $R^n \cong R^m$ of $R$-modules for some integers $n$ and $m$, then $n = m$.
-                \end{quote}
-                </cd>
-              </p>
-
-              <p>
-                I will prove this statement by taking it as already known that it holds in the special case when <m>R</m> is a field. 
-                (We will prove it for fields later.) <xref provisional="cite"/>
-              </p>
-  
-              <p>
-                Since <m>R</m> is not the zero ring, it contains at least one maximal ideal <m>I</m>. 
-                (This is proven using <xref text="title" ref="lem-zorn"/>.) 
-                Recall that <m>R/I</m> is a field by <xref provisional="cite"/>
-              </p>
-  
-              <p>
-                Given an isomorphism <m>f: R^n \xra{\cong} R^m</m> of <m>R</m>-modules, by Lemma <xref provisional="cite"/> we have an induced homomorphism of <m>R/I</m>-module <m>\ov{f}: R^n/IR^n \to R^m /IR^m</m>. 
-                Likewise, the inverse map <m>f^{-1}: R^m \xra{\cong} R^n</m> induces a map <m>\ov{f^{-1}}: R^m/IR^m \to R^n /IR^n</m>. 
-                Also by that Lemma <xref provisional="cite"/> we have <m>\ov{f} \circ \ov{f^{-1}} = \ov{f \circ f^{-1}} = \ov{\id} = \id</m> and similarly <m>\ov{f^{-1}} \circ \ov{f}</m> is the identity. 
-                That is, we have an isomorphism <m>R^n/IR^n \cong R^m /IR^m</m> of <m>R/I</m>-modules.
-              </p>
-  
-              <p>
-                Next, I claim that there is an isomorphism 
-                <me>
-                  R^n/IR^n \cong (R/I)^n
-                </me> 
-                of <m>R/I</m>-modules. 
-                Define <m>R^n \to (R/I)^n</m> in the evident way (modding out by <m>I</m> entry-wise). 
-                It is a surjective map of <m>R</m>-modules with kernel <m>I R^n</m> and thus, by the First Isomorphism Theorem, <xref provisional="cite"/> it induces an isomorphism 
-                <me>
-                  g: R^n/I R^n \xra{\cong} (R/I)^n
-                </me> 
-                given by <m>g((r_1, \dots, r_n)^\tau + IR^n) = (r_1 + I, \dots, r_n + I)^\tau</m> (where <m>\tau</m> denotes taking the transpose). 
-                Now, what we have said so far only shows that <m>g</m> is isomorphism of <m>R</m>-modules, but it is easy to see that <m>g</m> is in fact <m>R/I</m>-linear (I'll leave that to you) and thus it is an isomorphism of <m>R/I</m>-modules.
-              </p>
-  
-              <p>
-                Putting the results proven so far together, we conclude that <m>(R/I)^n</m> and <m>(R/I)^m</m> are isomorphic as <m>R/I</m>-modules. 
-                Since <m>R/I</m> is a field and since we are assuming the result holds for fields, we deduce that <m>n = m</m>.
-              </p>
-            </proof>
-          </theorem>
-
-          <exercise xml:id="prop-r-bases"><title>Bases of <m>R</m></title>          
-            <statement>
-              <p>
-                <ol>
-                  <li>
-                    <p>
-                      Let <m>R</m> be a non-zero, commutative ring. 
-                      Prove that a subset <m>A</m> of <m>R</m> is a basis of <m>R</m> as a module over itself if and only if <m>A =\{u\}</m> for some unit <m>u</m> of <m>R</m>. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      Let <m>R</m> be the ring of column-finite, infinite-by-infinite matrices with entries in a field <m>F</m>, as in exercise #3. 
-                      Prove that for each positive integer <m>n</m>, there is a subset of <m>R</m> of cardinality <m>n</m> that forms as a basis for <m>R</m> as a module over itself.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-          </exercise>
-
-          <exercise xml:id="prop-bases-of-ideals-in-commutative-rings"><title>Bases of ideals in commutative rings</title>
-            <statement>
-              <p>
-                <ol>
-                  <li>
-                    <p>
-                      Assume <m>R</m> is a non-zero, commutative ring and <m>I</m> is a non-zero ideal. 
-                      Prove <m>I</m> is free as an <m>R</m>-module if and only if <m>I = R \cdot a</m> for a non-zerodivisor <m>a</m>. 
-                      (Recall that an element <m>a</m> is a non-zerodivisor in <m>R</m> provided <m>a \ne 0</m> and <m>xa = 0</m> implies <m>x = 0</m> for all <m>x \in R</m>. ) 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      Let <m>F</m> be a field and <m>R = F[x,y]</m>. 
-                      Let <m>I = R \cdot \{x, y\}</m>, the ideal consisting of all polynomials with <m>0</m> constant term. 
-                      Prove <m>I</m> is not free as an <m>R</m>-module.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-          </exercise>
+            </remark>
             
+            <exercise>
+              <statement>
+                <p>
+                  If <m>R</m> is the zero ring, then there is (up to isomorphism) only one <m>R</m>-module, the zero module.
+                </p>
+              </statement>
+
+              <solution>
+                <p>
+                  If <m>M</m> is any module over the <m>0</m> ring, then for each <m>m \in M</m> we have <m>m = 1_R \cdot m = 0_R \cdot m = 0_M</m>.
+                </p>
+              </solution>
+            </exercise>
+
+            <remark>
+              <p>
+                Checking the definition carefully, we see that both the empty set and the set <m>\{0\}</m> form bases for the zero module over the <m>0</m> ring. 
+                This gives an example of a module with two bases of different cardinalities. 
+              </p>
+            </remark>
+    
+            <lemma xml:id="lem-elements-uniquely-expressible-in-free-modules"><title>Elements Uniquely Expressible in Free Modules</title>
+              <statement>
+                <p>
+                  Suppose <m>M</m> is a free <m>R</m>-module and <m>A</m> is a basis of <m>M</m>. Then every element of <m>M</m> is uniquely expressible as an <m>R</m>-linear combination of elements of <m>A</m>.
+                </p>
+
+                <p>
+                  More precisely, for each <m>m</m> there is unique family of elements <m>(r_a)_{a \in A}</m>, with <m>r_a \in R</m> for all <m>a</m>, such that <m>r_a = 0</m> for all but a finite number of indices <m>a \in A</m> and <m>m = \sum_{a \in A} r_a a</m>.
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  Given <m>m \in M</m>, the fact that <me>m = \sum_a r_a a</me> for at least one family of elements <m>(r_a)_{a \in A}</m> with <m>r_a = 0</m> for all but a finite number of <m>a</m>'s is the definition of what it means for <m>A</m> to generate <m>M</m>.
+                </p>
+    
+                <p>
+                  Suppose <m>(s_a)_{a \in A}</m> is another such family with <m>m = \sum_a s_a a</m>. Then <me>0 = m-m = \sum_a r_a a - \sum_a s_a a = \sum_a (r_a - s_a) a.</me> Since <m>A</m> is linearly independent, by definition <m>r_a - s_a = 0</m> for all <m>a</m>.
+                </p>
+              </proof>
+            </lemma>
+
+            <p>
+              I have not yet given an example of a module with an infinite basis; here is one.
+            </p>
+
+            <example xml:id="exe-module-with-infinite-basis"><title>Module with Infinite Basis</title>
+              <p>
+                Let <m>R</m> be any ring and <m>M = R[x]</m> (which, recall, is an <m>R</m>-module due to the evident ring map <m>R \to R[x]</m>). 
+                Then the countably infinite set <m>\{1,x,x^2,\dots, x^n,\dots\}</m> is a basis. 
+                The fact that this set is a basis is essentially part of the definition of <m>R[x]</m>. 
+                <xref ref="lem-elements-uniquely-expressible-in-free-modules"/> says that every polynomial is uniquely expressible as an <m>R</m>-linear combination of (a finite subset of) <m>1,x,x^2,\dots</m>.
+              </p>
+            </example>
+
+            <theorem xml:id="thm-ump-for-free-modules"><title>UMP for Free <m>R</m>-Modules</title>
+              <statement>
+                <p>
+                  Let <m>R</m> be a ring, let <m>M</m> be a free <m>R</m>-module with basis <m>B</m>, let <m>N</m> be an <m>R</m>-module, and let <m>j: B \to N</m> be any function. 
+                  Then there is a unique <m>R</m>-module homomorphism <m>h: M \to N</m> such that <m>h(b) = j(b)</m> for all <m>b \in B</m>.
+                </p>
+      
+                <p>
+                  In other words, there is a bijection of sets 
+                  <me>
+                    \Hom_R(M,N) \leftrightarrow\Fun(B, N)
+                  </me> 
+                  given by sending a homomorphisms <m>f: M \to N</m> to its restriction <m>f|_B:B \to N</m> to <m>B</m>. 
+                  (Here, <m>\Hom_R(M,N)</m> is the set of all <m>R</m>-module homomorphisms from <m>M</m> to <m>N</m> and <m>\Fun(B, N)</m> is the set of all functions from <m>B</m> to <m>N</m>.)
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  Given a function <m>j: B \to N</m>, define <m>f: M\to N</m> as follows: Given <m>m \in M</m>, by <xref ref="lem-elements-uniquely-expressible-in-free-modules"/> <m>m</m> can be written uniquely as a finite sum <m>m = \sum_{b \in B} r_b b</m>. 
+                  We set 
+                  <me>
+                    f(m) = \sum_{b \in B} r_b j(b).
+                  </me> 
+                  Note that <m>f</m> is a well-defined function by the uniqueness of the equation <m>m = \sum_{b \in B} r_b b</m>.
+                </p>
+    
+                <p>
+                  We need to prove <m>f</m> is an <m>R</m>-module homomorphism. 
+                  I'll just show it preserves scaling — the proof for addition is similar. 
+                  Given <m>x \in R</m> and <m>m \in M</m>, we have <m>m = \sum_{b \in B} r_b b</m> for some <m>r_b \in R</m>, and hence <m>xm = \sum_b (xr_b) b</m>. 
+                  By definition of <m>f</m>, 
+                  <me>
+                    f(xm) = \sum_b (xr_b) j(b) = x \sum_b r_b j(b) = x f(m).
+                  </me>
+                </p>
+    
+                <p>
+                  Finally, for any <m>y \in B</m> we have <m>y = \sum_{b \in B} r_b b</m> where <m>r_b = 1</m> if <m>b = y</m> and <m>r_b = 0</m> if <m>b \ne y</m>. 
+                  So <m>f(y) = j(y)</m> by construction. 
+                  This proves existence.
+                </p>
+    
+                <p>
+                  Let <m>g:M\to N</m> be another <m>R</m>-module homomorphism such that <m>g(b)=g(b)</m> for each <m>b \in B</m>. 
+                  Given <m>m \in M</m> we have <m>m = \sum_{b \in B} r_b b</m> and hence 
+                  <me>
+                    g(m) = \sum_b g(r_b (b))= \sum_b r_b g(b) =\sum_b r_b j(b) = f(m).
+                  </me> 
+                  and hence <m>g = f</m>.
+                </p>
+              </proof>
+            </theorem>
+
+            <remark>
+              <p>
+                The uniqueness only uses that <m>B</m> generates <m>M</m> as an <m>R</m>-module.
+              </p>
+            </remark>
+            
+            <corollary xml:id="cor-free-modules-with-equal-basis-elements-isomorphic"><title>Free Modules with Equal Basis Elements Isomorphic</title>
+              <statement>
+                <p>
+                  If <m>M</m> and <m>N</m> are free <m>R</m>-modules having bases of the same cardinality, then <m>M</m> and <m>N</m> are isomorphic <m>R</m>-modules.
+                </p>
+      
+                <p>
+                  More precisely, if <m>A</m> is a basis of <m>M</m> and <m>B</m> is a basis of <m>N</m> and <m>j:A\to B</m> is a bijection of sets, then there is a unique <m>R</m>-module isomorphism <m>h: M \xra{\cong} N</m> such that <m>h|_A = j</m>.
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  Let <m>h:M\to N</m> and <m>h':N\to M</m> be the <m>R</m>-module homomorphisms induced by the bijection <m>j:A\to B</m> and its inverse <m>j^{-1}:B\to A</m>, respectively, using <xref text='title' ref="thm-ump-for-free-modules"/>. 
+                  We'll show that <m>h</m> and <m>h'</m> are mutual inverses. 
+                  For this note that <m>h'\circ h:N\to N</m> is an <m>R</m>-module homomorphism and <m>(h'\circ h)(b)=h'(j(b))=j^{-1}(j(b))=b</m> for every <m>b\in B</m>. 
+                  Since the identity map <m>\id_N</m> is also an <m>R</m>-module homomorphism such that <m>id_N(b)=b</m> for every <m>b\in B</m>, by the uniqueness clause in the <xref text='title' ref="thm-ump-for-free-modules"/>, we have <m>h'\circ h=\id_n</m>. 
+                  Similarly <m>h\circ h'=\id_M</m>.
+                </p>
+              </proof>
+            </corollary>
+
+            <example xml:id="ex-mcong-rn-as-r-modules"><title><m>M\cong R^n</m> as <m>R</m>-modules</title>
+              <p>
+                If <m>M</m> is a free <m>R</m>-module that has a basis of cardinality <m>n</m>, then <m>M \cong R^n</m> as <m>R</m>-modules. 
+                This holds since, as seen above, <m>R^n</m> has a basis of cardinality <m>n</m>, namely the standard basis <m>e_1, \dots, e_n</m>.
+              </p>
+    
+              <p>
+                More precisely, as the proof makes clear, if <m>B = \{x_1, \dots, x_n\}</m> is an (ordered) basis of <m>M</m>, there is an isomorphism <m>\phi_B: R^n \cong M</m> that sends <m>\begin{bmatrix} r_1 \\ \vdots \\ r_n \end{bmatrix}</m> to <m>\sum_i r_i x_i</m>.
+              </p>
+            </example>
+
+            <remark>
+              <p>
+                Beware that the cardinality of a basis of a free modules is not an isomorphism invariant in general! 
+                There exist rings <m>S</m> such that <m>S^n</m> and <m>S^m</m> are isomorphic <m>S</m>-modules for all positive integers <m>n</m> and <m>m</m>.
+              </p>
+            </remark>
+
+            <theorem xml:id="thm-uniqueness-of-rank-over-commutative-rings"><title>Uniqueness of Rank over Commutative Rings</title>
+              <statement>
+                <p>
+                  Let <m>R</m> be a commutative ring such that <m>1 \ne 0</m> and let <m>M</m> be a free <m>R</m>-module with bases <m>A</m> and <m>B</m>. 
+                  Then <m>A</m> and <m>B</m> have the same rank, i.e. there exists a (non unique) bijection of sets joining them.
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  Let <m>R</m> be a non-zero commutative ring and let <m>M</m> be a free <m>R</m>-module with two bases, <m>A</m> and <m>B</m>. 
+                  We need to show <m>A</m> and <m>B</m> have the same cardinality. 
+                  Since <m>A</m> and <m>B</m> are finite, by Example <xref provisional="cite"/> the assertion is equivalent to the following statement:
+    
+                  <cd>
+                  \begin{quote} For a non-zero commutative ring $R$,
+                  if there is an isomorphism $R^n \cong R^m$ of $R$-modules for some integers $n$ and $m$, then $n = m$.
+                  \end{quote}
+                  </cd>
+                </p>
+
+                <p>
+                  I will prove this statement by taking it as already known that it holds in the special case when <m>R</m> is a field. 
+                  (We will prove it for fields later.) <xref provisional="cite"/>
+                </p>
+    
+                <p>
+                  Since <m>R</m> is not the zero ring, it contains at least one maximal ideal <m>I</m>. 
+                  (This is proven using <xref text="title" ref="lem-zorn"/>.) 
+                  Recall that <m>R/I</m> is a field by <xref provisional="cite"/>
+                </p>
+    
+                <p>
+                  Given an isomorphism <m>f: R^n \xra{\cong} R^m</m> of <m>R</m>-modules, by Lemma <xref provisional="cite"/> we have an induced homomorphism of <m>R/I</m>-module <m>\ov{f}: R^n/IR^n \to R^m /IR^m</m>. 
+                  Likewise, the inverse map <m>f^{-1}: R^m \xra{\cong} R^n</m> induces a map <m>\ov{f^{-1}}: R^m/IR^m \to R^n /IR^n</m>. 
+                  Also by that Lemma <xref provisional="cite"/> we have <m>\ov{f} \circ \ov{f^{-1}} = \ov{f \circ f^{-1}} = \ov{\id} = \id</m> and similarly <m>\ov{f^{-1}} \circ \ov{f}</m> is the identity. 
+                  That is, we have an isomorphism <m>R^n/IR^n \cong R^m /IR^m</m> of <m>R/I</m>-modules.
+                </p>
+    
+                <p>
+                  Next, I claim that there is an isomorphism 
+                  <me>
+                    R^n/IR^n \cong (R/I)^n
+                  </me> 
+                  of <m>R/I</m>-modules. 
+                  Define <m>R^n \to (R/I)^n</m> in the evident way (modding out by <m>I</m> entry-wise). 
+                  It is a surjective map of <m>R</m>-modules with kernel <m>I R^n</m> and thus, by the First Isomorphism Theorem, <xref provisional="cite"/> it induces an isomorphism 
+                  <me>
+                    g: R^n/I R^n \xra{\cong} (R/I)^n
+                  </me> 
+                  given by <m>g((r_1, \dots, r_n)^\tau + IR^n) = (r_1 + I, \dots, r_n + I)^\tau</m> (where <m>\tau</m> denotes taking the transpose). 
+                  Now, what we have said so far only shows that <m>g</m> is isomorphism of <m>R</m>-modules, but it is easy to see that <m>g</m> is in fact <m>R/I</m>-linear (I'll leave that to you) and thus it is an isomorphism of <m>R/I</m>-modules.
+                </p>
+    
+                <p>
+                  Putting the results proven so far together, we conclude that <m>(R/I)^n</m> and <m>(R/I)^m</m> are isomorphic as <m>R/I</m>-modules. 
+                  Since <m>R/I</m> is a field and since we are assuming the result holds for fields, we deduce that <m>n = m</m>.
+                </p>
+              </proof>
+            </theorem>
+
+            <exercise xml:id="prop-r-bases"><title>Bases of <m>R</m></title>          
+              <statement>
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        Let <m>R</m> be a non-zero, commutative ring. 
+                        Prove that a subset <m>A</m> of <m>R</m> is a basis of <m>R</m> as a module over itself if and only if <m>A =\{u\}</m> for some unit <m>u</m> of <m>R</m>. 
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Let <m>R</m> be the ring of column-finite, infinite-by-infinite matrices with entries in a field <m>F</m>, as in exercise #3. 
+                        Prove that for each positive integer <m>n</m>, there is a subset of <m>R</m> of cardinality <m>n</m> that forms as a basis for <m>R</m> as a module over itself.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+            </exercise>
+
+            <exercise xml:id="prop-bases-of-ideals-in-commutative-rings"><title>Bases of ideals in commutative rings</title>
+              <statement>
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        Assume <m>R</m> is a non-zero, commutative ring and <m>I</m> is a non-zero ideal. 
+                        Prove <m>I</m> is free as an <m>R</m>-module if and only if <m>I = R \cdot a</m> for a non-zerodivisor <m>a</m>. 
+                        (Recall that an element <m>a</m> is a non-zerodivisor in <m>R</m> provided <m>a \ne 0</m> and <m>xa = 0</m> implies <m>x = 0</m> for all <m>x \in R</m>. ) 
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Let <m>F</m> be a field and <m>R = F[x,y]</m>. 
+                        Let <m>I = R \cdot \{x, y\}</m>, the ideal consisting of all polynomials with <m>0</m> constant term. 
+                        Prove <m>I</m> is not free as an <m>R</m>-module.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+            </exercise>
+              
+          </subsection>
+
         </section>
 
       </chapter>

@@ -12,21 +12,8 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para logical">
-<div class="para">Let's find the minimum polynomial of</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{bmatrix}
-1 &amp; 1 &amp; 0 &amp; 0 \\
-0 &amp; 1 &amp; 0 &amp; 0 \\
-0 &amp;  0 &amp; 1 &amp; 1 \\
-0 &amp;  0 &amp; 0 &amp; 1 \\
-\end{bmatrix}
-\end{equation*}
+<div class="para">If <span class="process-math">\(f\)</span> did factor in <span class="process-math">\(\Z[x]\)</span> as a product of monic polynomials, then <span class="process-math">\(\ov{f} \in \Z/2[x]\)</span> would also factor in this way. Now <span class="process-math">\(\ov{f} = x^4 + x^3 + 1 \in \Z/2[x]\text{.}\)</span> This has no roots (the only possibilities are <span class="process-math">\(0\)</span> or <span class="process-math">\(1\)</span>) and so if it did factor it would have to factor as a product of two quadratic, irreducible polynomials. The only such polynomial in <span class="process-math">\(\Z/2[x]\)</span> is <span class="process-math">\(q = x^2+ x + 1\)</span> (the others all have roots). But <span class="process-math">\(q^2 \ne \ov{f}\text{.}\)</span> This proves <span class="process-math">\(\ov{f}\)</span> is irreducible in <span class="process-math">\((\Z/2)[x]\)</span> and hence <span class="process-math">\(f\)</span> must be irreducible in <span class="process-math">\(\Z[x]\text{.}\)</span>
 </div>
-<div class="para">As in the previous example, <span class="process-math">\(\cp_A(x) = (x-1)^4\)</span> and so by the Cayley-Hamilton Theorem <span class="process-math">\(\mp_A(x) = (x-1)^j\)</span> for some <span class="process-math">\(j \leq 4\text{.}\)</span> This time we notice that <span class="process-math">\((A-I_4)^2 = 0\)</span> and so, since <span class="process-math">\((A-I_4) \ne 0\text{,}\)</span> <span class="process-math">\(\mp_A(x) = \cp_A(x) = (x-1)^2\text{.}\)</span>
-</div>
-</div>
-<span class="incontext"><a href="sec-cayley-hamilton.html#p-1797" class="internal">in-context</a></span>
+<span class="incontext"><a href="sec-irrpoly.html#p-1797" class="internal">in-context</a></span>
 </body>
 </html>

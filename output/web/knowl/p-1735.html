@@ -13,33 +13,19 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">To find the IFF we start by finding the largest prime power order for each prime in the list of orders of the summands. These are <span class="process-math">\(9, 5, 4\text{.}\)</span> The CRT gives</div>
+<div class="para">Since <span class="process-math">\(\overline{\phi}\)</span> is <span class="process-math">\(F[x]\)</span>-linear it is certainly <span class="process-math">\(F\)</span>-linear. Since <span class="process-math">\(\dim_F(F^n_A) = n\text{,}\)</span> to prove <span class="process-math">\(\overline{\phi}\)</span> is one-to-one, it suffices to prove <span class="process-math">\(\dim_F \frac{F^n[x]}{\im(xI_n - A)} \leq n\)</span> (by Rank-Nullity). I claim the images of the standard basis <span class="process-math">\(e_1, \dots, e_n\)</span> in <span class="process-math">\(\frac{F^n[x]}{\im(xI_n - A)}\)</span> span it as an <span class="process-math">\(F\)</span>-vector space. To see this, note that <span class="process-math">\(x^je_i\text{,}\)</span> for <span class="process-math">\(1 \leq i \leq n\text{,}\)</span> <span class="process-math">\(j \geq 0\)</span> span <span class="process-math">\(F^n[x]\)</span> as an <span class="process-math">\(F\)</span>-vector space, and hence they span the quotient. It thus suffices to show <span class="process-math">\(\overline{x^j e_i}\)</span> lies in the span of <span class="process-math">\(\overline{e_1}, \dots, \overline{e_n}\)</span> in <span class="process-math">\(\frac{F^n[x]}{\im(xI_n - A)}\)</span> for all <span class="process-math">\(i\)</span> and <span class="process-math">\(j\text{.}\)</span> We have <span class="process-math">\(x^{j-1} \cdot (A - x) e_i \in \im(xI_n - A)\)</span> and thus</div>
 <div class="displaymath process-math">
 \begin{equation*}
-G \cong \Z/(9 \cdot 4 \cdot 5) \oplus \Z/2 \oplus \Z/9 \oplus \Z/2 \oplus \Z/3 \oplus \Z/3.
+\overline{x^j e_i} = \overline{x^{j-1} Ae_i}
 \end{equation*}
 </div>
-<div class="para">Then we find the highest prime power orders for each prime among the left-over summands: <span class="process-math">\(9, 2.\)</span> By the CRT we have</div>
+<div class="para">and by repeating this argument we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
-G \cong \Z/(9 \cdot 4 \cdot 5) \oplus \Z/(2 \cdot 9) \oplus   \Z/2 \oplus \Z/3 \oplus \Z/3.
+\overline{x^j e_i} =\overline{x^{j-1} Ae_i} = \overline{x^{j-2} A^2e_i} = \cdots =\overline{A^je_i} \in \Span_F(e_1, \dots, e_n).
 \end{equation*}
 </div>
-<div class="para">The highest orders of the prime power order not yet used are <span class="process-math">\(2\)</span> and <span class="process-math">\(3\text{,}\)</span> and we have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-G \cong \Z/(9 \cdot 4 \cdot 5) \oplus \Z/(2 \cdot 9) \oplus   \Z/(2 \cdot 3)  \oplus \Z/3.
-\end{equation*}
 </div>
-<div class="para">which can be rearranged to give</div>
-<div class="displaymath process-math">
-\begin{equation*}
-G \cong \Z/3 \oplus \Z/6 \oplus \Z/18 \oplus \Z/180.
-\end{equation*}
-</div>
-<div class="para">This is the IFF, and the invariant factors of <span class="process-math">\(G\)</span> are <span class="process-math">\(3,6,18,180\text{.}\)</span>
-</div>
-</div>
-<span class="incontext"><a href="sec-modclass.html#p-1735" class="internal">in-context</a></span>
+<span class="incontext"><a href="sec-rcf.html#p-1735" class="internal">in-context</a></span>
 </body>
 </html>
