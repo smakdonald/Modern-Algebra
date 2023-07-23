@@ -12,33 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para logical">
-<div class="para">For notational simplicity, let us assume <span class="process-math">\(i = j =1\text{;}\)</span> that is, the first column of <span class="process-math">\(A\)</span> is <span class="process-math">\(e_1\)</span> and <span class="process-math">\(B\)</span> is obtained by deleting the first row and column of <span class="process-math">\(A\text{,}\)</span> giving a <span class="process-math">\((m-1) \times (n-1)\)</span> matrix. So</div>
-<div class="displaymath process-math">
-\begin{equation*}
-A = \begin{bmatrix} 1 &amp; r \\ 0 &amp; B \\\end{bmatrix}
-\end{equation*}
-</div>
-<div class="para">where <span class="process-math">\(r\)</span> denotes some row vector and <span class="process-math">\(0\)</span> denotes a column of all <span class="process-math">\(0\)</span>'s. Let <span class="process-math">\(p: R^{m} \onto R^{m-1}\)</span> and <span class="process-math">\(q: R^{n} \onto R^{n-1}\)</span> be projection onto the last <span class="process-math">\(m-1\)</span> and <span class="process-math">\(n-1\)</span> components, respectively. Because of the nature of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> the diagram (page 40 in notes) commutes. Moreover, the kernel of <span class="process-math">\(q\)</span> is <span class="process-math">\(Re_1\)</span> and the kernel of <span class="process-math">\(p\)</span> is <span class="process-math">\(Re_1\text{,}\)</span> and since the first column of <span class="process-math">\(A\)</span> is <span class="process-math">\(e_1\text{,}\)</span> <span class="process-math">\(T_A\)</span> maps the kernel of <span class="process-math">\(q\)</span> bijectively onto the kernel of <span class="process-math">\(p\text{.}\)</span> A “diagram chase'' shows that <span class="process-math">\(\coker(T_A) \cong \coker(T_B)\text{.}\)</span> In detail: Since the diagram commutes, <span class="process-math">\(p(\im(T_A)) \subseteq \im(T_B)\)</span> and hence <span class="process-math">\(p\)</span> induces an <span class="process-math">\(R\)</span>-module homomorphism</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\ov{p}: R^m/\im(T_A)   \to R^{m-1}/\im(T_B).
-\end{equation*}
-</div>
-<div class="para">(by the <span class="process-math">\(0\)</span>-th isomorphism theorem). Since <span class="process-math">\(p\)</span> is onto, so is <span class="process-math">\(\ov{p}\text{.}\)</span> Suppose <span class="process-math">\(v + \im(T_A) \in \ker(\ov{p})\text{.}\)</span> So, <span class="process-math">\(p(v) \in \im(T_B)\text{.}\)</span> Say <span class="process-math">\(p(v) = B w\text{.}\)</span> Since <span class="process-math">\(q\)</span> is onto, <span class="process-math">\(w = q(u)\)</span> for some <span class="process-math">\(u\text{.}\)</span> Then</div>
-<div class="displaymath process-math">
-\begin{equation*}
-p(v - Au) = p(v) - pA(u) = p(v) - Bq(u) = p(v) - Bw = p(v) - p(v) = 0, 
-\end{equation*}
-</div>
-<div class="para">and thus <span class="process-math">\(v - Au \in \ker(p)\text{.}\)</span> As noted above, <span class="process-math">\(T_A\)</span> maps <span class="process-math">\(\ker(q)\)</span> onto <span class="process-math">\(\ker(p)\)</span> and hence</div>
-<div class="displaymath process-math">
-\begin{equation*}
-v - Au = Ay
-\end{equation*}
-</div>
-<div class="para">for some vector <span class="process-math">\(y\text{.}\)</span> This proves <span class="process-math">\(v = A(u+y) \in \im(T_A)\)</span> and hence that <span class="process-math">\(v +\im(T_A) = 0\)</span> in <span class="process-math">\(R^m/\im(T_A)\text{.}\)</span> This proves <span class="process-math">\(\ov{p}\)</span> is one-to-one.</div>
-</div>
-<span class="incontext"><a href="sec-modpres.html#p-1638" class="internal">in-context</a></span>
+<div class="para">But such a stap amounts to doing a row operation and simultaneously doing the inverse column operation. There is no simple algorithm, such as Gaussian reduction, to determine whether matrices are similar.</div>
+<span class="incontext"><a href="sec-operator.html#p-1638" class="internal">in-context</a></span>
 </body>
 </html>

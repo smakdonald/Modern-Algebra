@@ -12,8 +12,26 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">If <span class="process-math">\(f\)</span> did factor in <span class="process-math">\(\Z[x]\)</span> as a product of monic polynomials, then <span class="process-math">\(\ov{f} \in \Z/2[x]\)</span> would also factor in this way. Now <span class="process-math">\(\ov{f} = x^4 + x^3 + 1 \in \Z/2[x]\text{.}\)</span> This has no roots (the only possibilities are <span class="process-math">\(0\)</span> or <span class="process-math">\(1\)</span>) and so if it did factor it would have to factor as a product of two quadratic, irreducible polynomials. The only such polynomial in <span class="process-math">\(\Z/2[x]\)</span> is <span class="process-math">\(q = x^2+ x + 1\)</span> (the others all have roots). But <span class="process-math">\(q^2 \ne \ov{f}\text{.}\)</span> This proves <span class="process-math">\(\ov{f}\)</span> is irreducible in <span class="process-math">\((\Z/2)[x]\)</span> and hence <span class="process-math">\(f\)</span> must be irreducible in <span class="process-math">\(\Z[x]\text{.}\)</span>
+<div class="para logical">
+<div class="para">We found the Rational Canonical Form of this matrix before. In the process we showed that we have an isomorphism of <span class="process-math">\(\Q[x]\)</span>-module.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Q^3_A \cong \Q[x]/(x-1) \oplus \Q[x]/(x^2-1).
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec-irrpoly.html#p-1810" class="internal">in-context</a></span>
+<div class="para">By the Sunzi Remainder Theorem</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Q[x]/(x-1) \oplus \Q[x]/(x^2-1) \cong \Q[x]/(x-1) \oplus \Q[x]/(x-1) \oplus \Q[x]/(x+1)
+\end{equation*}
+</div>
+<div class="para">and thus the elementary divisors of <span class="process-math">\(\Q^3_A\)</span> are <span class="process-math">\(x-1, x-1, x+1\text{.}\)</span> By the Theorem this shows that the JCF of <span class="process-math">\(A\)</span> is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+J_1(1) \oplus J_1(1) \oplus J_1(-1) = \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; -1 \end{bmatrix}.
+\end{equation*}
+</div>
+</div>
+<span class="incontext"><a href="sec-jcf.html#p-1810" class="internal">in-context</a></span>
 </body>
 </html>
