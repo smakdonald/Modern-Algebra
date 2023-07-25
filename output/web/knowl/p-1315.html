@@ -11,14 +11,22 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para logical"><ol class="decimal">
-<li><div class="para">For any ring <span class="process-math">\(R\text{,}\)</span> the <em class="emphasis">trivial module</em> is <span class="process-math">\(0=\{0\}\)</span> with <span class="process-math">\(r0=0\)</span> for any <span class="process-math">\(r\in R\text{.}\)</span>
-</div></li>
-<li><div class="para">Every ring <span class="process-math">\(R\)</span> is a left module over itself with the rule for scaling given by the ring multiplication rule. It is also a right module over itself.</div></li>
-<li><div class="para">More generally, if <span class="process-math">\(R\)</span> is any ring and <span class="process-math">\(I\)</span> is a left ideal, then <span class="process-math">\(I\)</span> is a left-<span class="process-math">\(R\)</span>-module.</div></li>
-<li><div class="para">Let <span class="process-math">\(F\)</span> be a field and <span class="process-math">\(R = \Mat_{n \times n}(F)\)</span> (the ring of <span class="process-math">\(n \times n\)</span> matrices with entries in <span class="process-math">\(F\)</span>). Let <span class="process-math">\(M\)</span> be the collection of column vectors with entries in <span class="process-math">\(F\)</span> having <span class="process-math">\(n\)</span> entries. The usual rules for adding column vectors and multiplying column vectors on the left by matrices make <span class="process-math">\(M\)</span> into a left <span class="process-math">\(R\)</span>-module. Likewise if <span class="process-math">\(N\)</span> is the collection of all row vector with <span class="process-math">\(n\)</span> entries in <span class="process-math">\(F\text{,}\)</span> the <span class="process-math">\(N\)</span> is a right <span class="process-math">\(R\)</span>-module via addition and matrix multiplication.</div></li>
-</ol></div>
-<span class="incontext"><a href="sec-defmod.html#p-1315" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">Suppose <span class="process-math">\(f = gh\)</span> with <span class="process-math">\(g, h \in F[x]\text{.}\)</span> We can find an element <span class="process-math">\(M\)</span> of <span class="process-math">\(R\)</span> such that <span class="process-math">\(M \cdot g(x) \in R[x]\text{.}\)</span> (We can take <span class="process-math">\(M\)</span> to be the product of all the denominators of the coefficients of <span class="process-math">\(g\text{,}\)</span> for example; this is called “clearing denominators''.) Similarly, there is an <span class="process-math">\(N \in R\)</span> such that <span class="process-math">\(N \cdot h(x) \in R[x]\text{.}\)</span> Further, write <span class="process-math">\(M \cdot g(x) = a \cdot l(x)\)</span> where <span class="process-math">\(a = \cont(M g(x)) \in R\text{,}\)</span> <span class="process-math">\(l(x) \in R[x]\text{,}\)</span> and <span class="process-math">\(\cont(l) = 1,\)</span> and similarly <span class="process-math">\(N \cdot g(x) = b \cdot m(x)\)</span> where <span class="process-math">\(b = \cont(N h(x)) \in R\text{,}\)</span> <span class="process-math">\(m(x) \in R[x]\text{,}\)</span> and <span class="process-math">\(\cont(m) = 1\text{.}\)</span> We have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+abl(x)m(x) = MN f(x)
+\end{equation*}
+</div>
+<div class="para">Using Gauss's Lemma, Part 1, we have <span class="process-math">\(\cont(lm) = \cont(l) \cont(m) = 1\)</span> and hence</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\cont(ab l(x) m(x)) = ab \cont(l(x) m(x)) = ab.
+\end{equation*}
+</div>
+<div class="para">We also have <span class="process-math">\(\cont(MNf(x)) = MN\cont(f) = MN\)</span> (since we've already proven that <span class="process-math">\(\cont(f) = 1\)</span>).</div>
+</div>
+<span class="incontext"><a href="sec-irrpoly.html#p-1315" class="internal">in-context</a></span>
 </body>
 </html>

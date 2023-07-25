@@ -326,8 +326,7 @@
 
   </docinfo>
   
-  <book xml:id="modern-algebra"><title>Modern Algebra</title>
-    <subtitle>Groups, Rings, Modules, Fields</subtitle>
+  <book xml:id="modern-algebra"><title>Modern Algebra</title> <subtitle>Groups, Rings, Modules, Fields</subtitle>
 
     <frontmatter xml:id="frontmatter">
 
@@ -378,12 +377,12 @@
 
             <li>
               <p>
-                <url href="https://executivevc.unl.edu/faculty/faculty-affairs-team" visual="">Mark Walker</url><fn>Mark has somehow managed to be the only member of the mathematics faculty to not have so much as a single page on the UNL website. Luckily, there are workarounds.</fn>
+                <url href="https://executivevc.unl.edu/faculty/faculty-affairs-team" visual="">Mark Walker</url>
+                <fn>Mark has somehow managed to be the only member of the mathematics faculty to not have so much as a single page on the UNL website. Luckily, there are workarounds.</fn>
               </p>
             </li>
           </ul>
-          I am very thankful to Eloísa, Alexandra, and Mark for sharing their <em>.tex</em> files with me. 
-          Fittingly, I would also like to acknowledge Eloísa for having an acknowledgement section in her lecture notes, yielding a template for my own.
+          I am very thankful to Eloísa, Alexandra, and Mark for sharing their <em>.tex</em> files with me.
         </p>
 
         <p>
@@ -9930,7 +9929,7 @@
     
       </chapter>
 
-      <chapter xml:id="ch-domains"><title>Domains and Fraction Fields</title>
+      <chapter xml:id="ch-domains"><title>Commutative Domains</title>
     
         <section xml:id="sec-eds"><title>Euclidian Domains</title>
 
@@ -10455,6 +10454,10 @@
         </section>
 
         -->
+        
+      </chapter>
+
+      <chapter xml:id="ch-fof-poly-ufd"><title>Fields of Fractions and Polynomial UFDs</title>
 
         <section xml:id="sec-field-of-fractions"><title>Fields of Fractions</title>
 
@@ -10607,6 +10610,339 @@
             </p>
           </example>
     
+        </section>
+
+        <section xml:id="sec-irrpoly"><title>Irredicuble Polynomials</title>
+
+          <blockquote>
+            <p>
+              <q>
+                Eliminate all other factors, and the one which remains must be the truth.
+              </q>
+            </p>
+            <attribution>Sir Arthur Conan Doyle</attribution>
+          </blockquote>
+
+          <definition xml:id="def-irreducible-polynomial">
+            <statement>
+              <p>
+                For an integral domain <m>R</m>, a polynomial <m>p(x) \in R[x]</m> is called <em>irreducible</em> if <m>p(x)</m> is not a unit and whenever <m>p(x) = f(x) g(x)</m>, either <m>f(x)</m> or <m>g(x)</m> is a unit. 
+                (It follows that such a <m>p(x)</m> also cannot be <m>0</m>.)
+              </p>
+            </statement>
+          </definition>
+
+          <theorem xml:id="thm-degree-and-irreducibility">
+            <statement>
+              <p>
+                Let <m>F</m> be a field and <m>p(x) \in F[x]</m>. 
+                <ol>
+                  <li>
+                    <p>
+                      If <m>p</m> has degree one, it is irreducible. 
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      If <m>p</m> has a root <m>a \in F</m> and <m>\deg(p) \geq 2</m>, then <m>p(x)</m> is not irreducible (since it factors as <m>p = (x-a)q</m> for some <m>q</m> of degree at least <m>1</m>). 
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      If <m>2 \leq \deg(p) \leq 3</m>, then <m>p(x)</m> is irreducible if and only if <m>p(x)</m> has no roots. 
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      (Rational Root Test) If <m>p(x) \in \Q[x]</m> and all the coefficients of <m>p = a_n x^n + \cdots + a_0</m> are integers and <m>\frac{i}{j}</m> is a root of <m>p</m> with <m>i,j \in \Z</m>, then <m>j</m> divides <m>a_n</m> and <m>i</m> divides <m>a_0</m>. 
+                      More generally, the same holds with <m>\Z</m> replaced by any PID and <m>\Q</m> replaced by its field of fractions.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+          </theorem>
+
+          <remark>
+            <p>
+              Never, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever try to use the converse of (2) or a version of (3) for polynomials of degree more than <m>3</m>; they are false.
+            </p>
+          </remark>
+
+          <example xml:id="ex-does-it-have-roots">
+            <p>
+              Does <m>x^4 + 8x^3 + 21x^2 + 20x + 13 \in \Q[x]</m> have any roots? 
+              No. 
+              The only possible roots are <m>\pm 1</m> and <m>\pm 13</m>, and a careful check rules these out. 
+              Is <m>x^4 + 8x^3 + 21x^2 + 20x + 13 \in \Q[x]</m> irreducible? 
+              No, it factors as <m>x^2 + x + 1</m> times <m>x^2 + 7x + 13</m>
+            </p>
+          </example>
+
+          <definition xml:id="def-content">
+            <statement>
+              <p>
+                For a PID <m>R</m> and <m>f \in R[x]</m>, define the <em>content</em> of <m>f</m>, written <m>\cont(f)</m>, to be the gcd of the coefficients of <m>f</m>. 
+                Equivalently, <m>\cont(f)</m> is the generator of the principal ideal generated by the coefficients of <m>f</m>.
+              </p>
+            </statement>
+          </definition>
+
+          <theorem xml:id="thm-gausss-lemma-part-1"><title>Gauss's Lemma: Part 1</title>
+            <statement>
+              <p>
+                Let <m>f(x), g(x) \in R[x]</m> where <m>R</m> is a PID. 
+                Then <m>\cont(fg) = \cont(f) \cont(g)</m> (up to associates).
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                We first show the following special case: 
+                If <m>\cont(f) = 1</m> and <m>\cont(g) = 1</m>, then <m>\cont(fg) =1</m>.
+              </p>
+
+              <p>
+                To see this, pick a prime <m>p \in R</m> and write <m>\overline{f} \in (R/p)[x]</m> for the result of modding out the coefficients of <m>f</m> by <m>p</m>. 
+                Then <m>\ov{fg} = \ov{f}\ov{g}</m> (since the map <m>R[x] \to (R/p)[x]</m> sending <m>f</m> to <m>\ov{f}</m> is a ring map). 
+                Since <m>\cont(f) =1 = \cont(g)</m>, we have that <m>\ov{f} \ne 0</m> and <m>\ov{g} \ne 0</m>. 
+                Since <m>(R/p)[x]</m> is a domain, it follows that <m>\ov{fg} \ne 0</m>. 
+                This proves <m>p</m> does not divide all of the coefficients of <m>fg</m>. 
+                Since <m>p</m> was arbitrary, <m>\cont(fg) = 1</m>.
+              </p>
+
+              <p>
+                For the general case, let <m>f = a h(x)</m> and <m>g = b l(x)</m> where <m>a =\cont(f)</m> and <m>b = \cont(g)</m>. 
+                Note that <m>\cont(h) = 1 = \cont(l)</m> and <m>fg = (ab) hl</m>. 
+                By the case already proven, <m>\cont(lh) =1</m>. 
+                It follows <m>\cont (abhl) =ab \cont(hl) = ab = \cont(f) \cont(g)</m>.
+              </p>
+            </proof>
+          </theorem>
+
+          <theorem xml:id="thm-gausss-lemma-part-2"><title>Gauss's Lemma: Part 2</title>
+            <statement>
+              <p>
+                Let <m>R</m> be a PID and let <m>F</m> be its field of fractions, and assume <m>f(x) \in R[x]</m> is a non-constant polynomial with coefficients in <m>R</m>. 
+                <m>f(x)</m> is irreducible in <m>R[x]</m> if and only if it is irreducible in <m>F[x]</m> and <m>\cont(f) = 1</m>.
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                Suppose <m>f = gh</m> with <m>g, h \in F[x]</m>. 
+                We can find an element <m>M</m> of <m>R</m> such that <m>M \cdot g(x) \in R[x]</m>. 
+                (We can take <m>M</m> to be the product of all the denominators of the coefficients of <m>g</m>, for example; 
+                this is called “clearing denominators''.) 
+                Similarly, there is an <m>N \in R</m> such that <m>N \cdot h(x) \in R[x]</m>. 
+                Further, write <m>M \cdot g(x) = a \cdot l(x)</m> where <m>a = \cont(M g(x)) \in R</m>, <m>l(x) \in R[x]</m>, and <m>\cont(l) = 1,</m> and similarly <m>N \cdot g(x) = b \cdot m(x)</m> where <m>b = \cont(N h(x)) \in R</m>, <m>m(x) \in R[x]</m>, and <m>\cont(m) = 1</m>. 
+                We have 
+                <me>
+                  abl(x)m(x) = MN f(x)
+                </me>
+                Using Gauss's Lemma, Part 1, we have <m>\cont(lm) = \cont(l) \cont(m) = 1</m> and hence 
+                <me>
+                  \cont(ab l(x) m(x)) = ab \cont(l(x) m(x)) = ab.
+                </me> 
+                We also have <m>\cont(MNf(x)) = MN\cont(f) = MN</m> (since we've already proven that <m>\cont(f) = 1</m>).
+              </p>
+
+              <p>
+                So <m>ab = MN</m> and thus by dividing we arrive at 
+                <me>
+                  l(x) m(x) = f(x).
+                </me> 
+                But <m>f(x)</m> is irreducible in <m>R[x]</m>. It follows that either <m>l</m> or <m>m</m> must be a unit in <m>R[x]</m> (i.e., a unit in <m>R</m>) and it follows that either <m>g(x)</m> or <m>h(x)</m> is a unit in <m>F[x]</m>. This proves <m>f(x)</m> is irreducible in <m>F[x]</m>.
+              </p>
+
+              <p>
+                (<m>\Leftarrow</m>) Say <m>f(x) \in R[x]</m> irreducible in <m>F[x]</m> and <m>\cont(f) = 1</m>. If <m>f = q(x) r(x)</m> with <m>q,r \in R[x]</m> then, since <m>f</m> is irreducible in <m>F[x]</m>, one of <m>q</m> or <m>r</m> must be a constant. But since <m>\cont(f) = 1</m>, this constant must be <m>1</m>.
+              </p>
+
+            </proof>
+          </theorem>
+
+          <example xml:id="ex-irreducibility-and-gauss">
+            <p>
+              Let's prove <m>f = x^4 + 7x^3 + 16 x^2 + 124 x + 23 \in \Q[x]</m> is irreducible. 
+              By Gauss's Lemma, we just need to show it is irreducible in <m>\Z[x]</m>.
+            </p>
+
+            <p>
+              If <m>f</m> did factor in <m>\Z[x]</m> as a product of monic polynomials, then <m>\ov{f} \in \Z/2[x]</m> would also factor in this way. 
+              Now <m>\ov{f} = x^4 + x^3 + 1 \in \Z/2[x]</m>. 
+              This has no roots (the only possibilities are <m>0</m> or <m>1</m>) and so if it did factor it would have to factor as a product of two quadratic, irreducible polynomials. 
+              The only such polynomial in <m>\Z/2[x]</m> is <m>q = x^2+ x + 1</m> (the others all have roots). 
+              But <m>q^2 \ne \ov{f}</m>. 
+              This proves <m>\ov{f}</m> is irreducible in <m>(\Z/2)[x]</m> and hence <m>f</m> must be irreducible in <m>\Z[x]</m>.
+            </p>
+          </example>
+
+          <theorem xml:id="thm-eisensteins-criterion"><title>Eisenstein's Criterion</title>
+            <statement>
+              <p>
+                Let <m>R</m> be a PID with field of fractions <m>F</m> and assume <m>f(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_0 \in R[x]</m> is a polynomial. 
+                Suppose there is a prime element <m>p \in R</m> such that <m>p \nmid a_n</m>, <m>p \mid a_i</m> for all <m>0 \leq i \leq n-1</m>, and <m>p^2 \nmid a_0</m>. 
+                Then <m>f</m> is irreducible in <m>F[x]</m>.
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                We have <m>f(x) = \cont(f) \cdot l(x)</m> with <m>l(x) \in R[x]</m> and <m>\cont(l) = 1</m>. 
+                Since <m>p</m> does not divide the leading coefficient of <m>f</m>, we have <m>p \nmid \cont(f)</m>. 
+                It therefore follows that the three assumptions involving the coefficients of <m>f(x)</m> are also satisfied by the coefficients <m>l(x)</m>. 
+                Moreover, <m>f</m> is irreducible in <m>F[x]</m> if and only if <m>l(x)</m> is irreducible in <m>F[x]</m>. 
+                We may therefore assume without loss of generality that <m>\cont(f) = 1</m>.
+              </p>
+
+              <p>
+                By Gauss's Lemma we just need to prove it is irreducible in <m>R[x]</m>. 
+                Suppose <m>f(x) = g(x)h(x)</m> with <m>g(x), h(x) \in R[x]</m>, where 
+                <me>
+                  g(x) = b_m x^m + b_{m-1} x^{m-1} + \cdots + b_0
+                </me>
+                and 
+                <me>
+                  h(x) = c_l x^l + c_{l-1} x^{l-1} + \cdots + c_0
+                </me>
+                where <m>m+l = n</m> and <m>b_m c_l = a_n</m>.
+              </p>
+
+              <p>
+                Upon modding out by <m>p</m> we get <me>\ov{f} = \ov{g} \ov{h} \in (R/p)[x].</me>The assumptions on <m>f</m> give that <me>\ov{f} = \ov{a_n} x^n</me>with <m>\ov{a_n} \ne 0</m>. Since <m>R/p</m> is a domain, it follows that <me>\ov{g} = \ov{b_m} x^m \, \text{ and  } \, \ov{h} = \ov{c_l} x^l</me>On the other hand, we also have <me>a_0 = b_0c_0,</me>and since <m>p^2 \nmid a_0</m>, we have that <m>p \nmid b_0</m> or <m>p \nmid c_0</m>. So <m>\ov{b_0} \ne 0</m> or <m>\ov{c_0} \ne 0</m>. This can only occur if <m>m = 0</m> or <m>l = 0</m>.
+              </p>
+
+              <p>
+                We have shown that if <m>f</m> factors in <m>R[x]</m> as <m>f = g \cdot h</m>, then at least one of <m>g</m> of <m>h</m> must be a constant polynomial. 
+                Since <m>\cont(f) = 1</m>, this factor must be a unit. 
+                So <m>f</m> is irreducible in <m>R[x]</m>.
+              </p>
+            </proof>
+          </theorem>
+
+          <example xml:id="ex-using-eisenstein">
+            <p>
+              For instance, <m>5x^{11} - 30 x^4 +60 x^3 +360 x- 30</m> is irreducible in <m>\Q[x]</m> thanks to <xref text="title" ref="thm-eisensteins-criterion"/> applied with <m>p = 2</m>. 
+              (Note that it isn't irreducible in <m>\Z[x]</m> since it does not have unit content.)
+            </p>
+          </example>
+
+          <proposition xml:id="prop-cyclotomic-polynomial-irreducible">
+            <statement>
+              <p>
+                For any prime <m>p</m>, the <m>p</m>-th <em>cyclotomic polynomial</em> 
+                <me>
+                  f(x) = x^{p-1} + x^{p-2} + \cdots + x^2 + x+1 \in \Z[x]
+                </me>
+                is irreducible in <m>\Q[x]</m>.
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                Consider the ring isomorphism <m>\phi: \Q[x] \xra{\cong} \Q[y]</m> given by <m>\phi(h(x)) = h(y+1)</m>. 
+                I claim that 
+                <me>
+                  \phi(f(x)) = y^{p-1} + p y^{p-2} + {p \choose 2} y^{p-3} +{p \choose 3} y^{p-4} +\cdots + {p \choose p-1} y + p.
+                </me> 
+                To see this, we note that <m>f(x) (x-1) = x^p - 1</m> and by the binomial theorem we have 
+                <me>
+                  \phi(x^p-1) = (y+1)^p - 1 = y^p + p y^{p-1} + {p \choose 2} y^{p-2} + \cdots + py.
+                </me> 
+                Since <m>\phi(x^p-1) = \phi(f(x)) \phi(x-1) = \phi(f(x)) y</m>, the claim follows.
+              </p>
+
+              <p>
+                By <xref text="title" ref="thm-eisensteins-criterion"/>, <m>\phi(f(x))</m> is irreducible in <m>\Q[y]</m> and, since <m>\phi</m> is an isomorphism, it follows that <m>f(x)</m> is irreducible in <m>\Q[x]</m>.
+              </p>
+            </proof>
+          </proposition>
+
+          <proposition xml:id="prop-primes-and-irreducibility">
+            <statement>
+              <p>
+                Assume <m>R</m> is an integral domain and <m>f(x) \in R[x]</m> is a monic polynomial with coefficients in <m>R</m>. 
+                If there is a prime element <m>p \in R</m> such that <m>\ov{f} \in (R/p)[x]</m> is irreducible in <m>(R/p)[x]</m>, then <m>f</m> is irreducible in <m>R[x]</m>.
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                We prove the contrapositive. 
+                Suppose <m>f</m> is reducible in <m>R[x]</m>. 
+                Then we have <m>f(x) = g(x) h(x)</m> for some monic, non-constant polynomials <m>g</m> and <m>h</m> in <m>R[x]</m>. 
+                It follows that <m>\ov{f} = \ov{gh} = \ov{g} \ov{h}</m> holds in <m>(R/p)[x]</m>. 
+                But since <m>g</m> and <m>h</m> are monic, non-constant polynomials, <m>\ov{g}</m> and <m>\ov{h}</m> are both non-constant polynomials in <m>(R/p)[x]</m> and hence <m>\ov{f}</m> is reducible in <m>(R/p)[x]</m>.
+              </p>
+            </proof>
+          </proposition>
+
+          <example xml:id="ex-monic-is-necessary">
+            <p>
+              The assumption that <m>f</m> be monic in this Proposition is necessary. 
+              Consider for instance <m>f(x) = (3x+1)(x+1) = 3 x^2 + 4x + 1 \in \Z[x]</m>. 
+              Modding out by <m>3</m> yields a linear polynomial in <m>(\Z/3)[x]</m> which is thus irreducible. 
+              But <m>f</m> isn't irreducible in <m>\Z[x]</m>. 
+              (The Proposition can be generalized to non-monic polynomials by adding the assumption that <m>p</m> does not divided the leading coefficient of <m>f</m>.)
+            </p>
+          </example>
+
+          <proposition xml:id="prop-fields-and-group-of-units">
+            <statement>
+              <p>
+                Let <m>F</m> be a field and <m>G</m> a finite subgroup of the multiplicative group <m>F^\times</m>. Prove that <m>G</m> is cyclic.
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                Let <m>F</m> be a field and <m>G</m> a finite subgroup of order <m>n</m> the multiplicative group <m>F^\times</m>. Let <m>k</m> denote the LCM of all orders of elements in <m>G</m>. Notice that as <m>g^n=1</m> for all <m>g\in G</m> we have <m>k\leq n</m>.
+              </p>
+
+              <p>
+                However, as <m>g^k=1</m> for all <m>g\in G</m> we know that <m>g</m> is the root of the polynomial <m>f(x)=x^k-1</m> in <m>F[x]</m>. By the <xref text="title" ref="thm-factor-thm"/> there are thus at most <m>k</m> roots of <m>f</m>, but there are <m>n</m> distinct roots. Thus <m>k=n</m>.
+              </p>
+
+              <p>
+                Thus the LCM of all orders of elements in <m>G</m> is <m>n</m>. Notice that as <m>G</m> is abelian every Sylow <m>p</m>-subgroup of <m>G</m> is normal, and thus there is only one of each. This means that <m>G</m> can be written as a direct product of cyclic groups of relatively prime order; Hence <m>G</m> is itself cyclic.
+              </p>
+            </proof>
+          </proposition>
+
+          <proposition xml:id="prop-irreducible-poly">
+            <statement>
+              <p>
+                Show that <m>x^3+3x+2 \in \Q[x]</m> is irreducible.
+              </p>
+            </statement>
+          </proposition>
+
+          <proposition xml:id="prop-fields-and-group-of-units-1">
+            <statement>
+              <p>
+                Let <m>F</m> be a field and <m>G</m> a finite subgroup of the multiplicative group <m>F^\times</m>. Prove that <m>G</m> is cyclic.
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                Let <m>F</m> be a field and <m>G</m> a finite subgroup of order <m>n</m> the multiplicative group <m>F^\times</m>. Let <m>k</m> denote the LCM of all orders of elements in <m>G</m>. Notice that as <m>g^n=1</m> for all <m>g\in G</m> we have <m>k\leq n</m>.
+              </p>
+
+              <p>
+                However, as <m>g^k=1</m> for all <m>g\in G</m> we know that <m>g</m> is the root of the polynomial <m>f(x)=x^k-1</m> in <m>F[x]</m>. By the <xref text="title" ref="thm-factor-thm"/> there are thus at most <m>k</m> roots of <m>f</m>, but there are <m>n</m> distinct roots. Thus <m>k=n</m>.
+              </p>
+
+              <p>
+                Thus the LCM of all orders of elements in <m>G</m> is <m>n</m>. Notice that as <m>G</m> is abelian every Sylow <m>p</m>-subgroup of <m>G</m> is normal, and thus there is only one of each. This means that <m>G</m> can be written as a direct product of cyclic groups of relatively prime order; Hence <m>G</m> is itself cyclic.
+              </p> 
+            </proof>
+          </proposition>
+          
         </section>
         
       </chapter>
@@ -12812,7 +13148,10 @@
 
           <remark>
             <p>
-              You have seen presentations for groups in the past; these consisted of a set of generators and a set of relations among these generators. Presentations are important for modules as well. In the case of modules, the relations may be encoded by a matrix.
+              You have seen presentations for groups in the past; 
+              these consisted of a set of generators and a set of relations among these generators. 
+              Presentations are important for modules as well. 
+              In the case of modules, the relations may be encoded by a matrix.
             </p>
           </remark>
 
@@ -14188,285 +14527,18 @@
 
     <part xml:id="part-fields"><title>Field Theory</title>
 
-      <chapter xml:id="ch-irreducible"><title>Irreducibility</title>
-
-        <section xml:id="sec-irrpoly"><title>Irredicuble Polynomials</title>
-
-          <blockquote>
-            <p>
-              <q>Eliminate all other factors, and the one which remains must be the truth.</q>
-            </p>
-            <attribution>Sir Arthur Conan Doyle</attribution>
-          </blockquote>
-
-          <definition xml:id="def-irreducible-polynomial">
-            <statement>
-              <p>
-                For an integral domain <m>R</m>, a polynomial <m>p(x) \in R[x]</m> is called <em>irreducible</em> if <m>p(x)</m> is not a unit and whenever <m>p(x) = f(x) g(x)</m>, either <m>f(x)</m> or <m>g(x)</m> is a unit. (It follows that such a <m>p(x)</m> also cannot be <m>0</m>.)
-              </p>
-            </statement>
-          </definition>
-
-          <theorem xml:id="thm-degree-and-irreducibility">
-            <statement>
-              <p>
-                Let <m>F</m> be a field and <m>p(x) \in F[x]</m>. 
-                <ol>
-                  <li>
-                    <p>
-                      If <m>p</m> has degree one, it is irreducible. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      If <m>p</m> has a root <m>a \in F</m> and <m>\deg(p) \geq 2</m>, then <m>p(x)</m> is not irreducible (since it factors as <m>p = (x-a)q</m> for some <m>q</m> of degree at least <m>1</m>). 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      If <m>2 \leq \deg(p) \leq 3</m>, then <m>p(x)</m> is irreducible if and only if <m>p(x)</m> has no roots. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      (Rational Root Test) If <m>p(x) \in \Q[x]</m> and all the coefficients of <m>p = a_n x^n + \cdots + a_0</m> are integers and <m>\frac{i}{j}</m> is a root of <m>p</m> with <m>i,j \in \Z</m>, then <m>j</m> divides <m>a_n</m> and <m>i</m> divides <m>a_0</m>. More generally, the same holds with <m>\Z</m> replaced by any PID and <m>\Q</m> replaced by its field of fractions.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-          </theorem>
-
-          <remark>
-            <p>
-              Never, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever, ever try to use the converse of (2) or a version of (3) for polynomials of degree more than <m>3</m>; they are false.
-            </p>
-          </remark>
-
-          <example xml:id="ex-does-it-have-roots">
-            <p>
-              Does <m>x^4 + 8x^3 + 21x^2 + 20x + 13 \in \Q[x]</m> have any roots? No. The only possible roots are <m>\pm 1</m> and <m>\pm 13</m>, and a careful check rules these out. Is <m>x^4 + 8x^3 + 21x^2 + 20x + 13 \in \Q[x]</m> irreducible? No, it factors as <m>x^2 + x + 1</m> times <m>x^2 + 7x + 13</m>
-            </p>
-          </example>
-
-          <definition xml:id="def-content">
-            <statement>
-              <p>
-                For a PID <m>R</m> and <m>f \in R[x]</m>, define the <em>content</em> of <m>f</m>, written <m>\cont(f)</m>, to be the gcd of the coefficients of <m>f</m>. Equivalently, <m>\cont(f)</m> is the generator of the principal ideal generated by the coefficients of <m>f</m>.
-              </p>
-            </statement>
-          </definition>
-
-          <theorem xml:id="thm-gausss-lemma-part-1"><title>Gauss's Lemma: Part 1</title>
-            <statement>
-              <p>
-                Let <m>f(x), g(x) \in R[x]</m> where <m>R</m> is a PID. Then <m>\cont(fg) = \cont(f) \cont(g)</m> (up to associates).
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                We first show the following special case: If <m>\cont(f) = 1</m> and <m>\cont(g) = 1</m>, then <m>\cont(fg) =1</m>.
-              </p>
-
-              <p>
-                To see this, pick a prime <m>p \in R</m> and write <m>\overline{f} \in (R/p)[x]</m> for the result of modding out the coefficients of <m>f</m> by <m>p</m>. Then <m>\ov{fg} = \ov{f}\ov{g}</m> (since the map <m>R[x] \to (R/p)[x]</m> sending <m>f</m> to <m>\ov{f}</m> is a ring map). Since <m>\cont(f) =1 = \cont(g)</m>, we have that <m>\ov{f} \ne 0</m> and <m>\ov{g} \ne 0</m>. Since <m>(R/p)[x]</m> is a domain, it follows that <m>\ov{fg} \ne 0</m>. This proves <m>p</m> does not divide all of the coefficients of <m>fg</m>. Since <m>p</m> was arbitrary, <m>\cont(fg) = 1</m>.
-              </p>
-
-              <p>
-                For the general case, let <m>f = a h(x)</m> and <m>g = b l(x)</m> where <m>a =\cont(f)</m> and <m>b = \cont(g)</m>. Note that <m>\cont(h) = 1 = \cont(l)</m> and <m>fg = (ab) hl</m>. By the case already proven, <m>\cont(lh) =1</m>. It follows <m>\cont (abhl) =ab \cont(hl) = ab = \cont(f) \cont(g)</m>.
-              </p>
-            </proof>
-          </theorem>
-
-          <theorem xml:id="thm-gausss-lemma-part-2"><title>Gauss's Lemma: Part 2</title>
-            <statement>
-              <p>
-                Let <m>R</m> be a PID and let <m>F</m> be its field of fractions, and assume <m>f(x) \in R[x]</m> is a non-constant polynomial with coefficients in <m>R</m>. <m>f(x)</m> is irreducible in <m>R[x]</m> if and only if it is irreducible in <m>F[x]</m> and <m>\cont(f) = 1</m>.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                Suppose <m>f = gh</m> with <m>g, h \in F[x]</m>. We can find an element <m>M</m> of <m>R</m> such that <m>M \cdot g(x) \in R[x]</m>. (We can take <m>M</m> to be the product of all the denominators of the coefficients of <m>g</m>, for example; this is called “clearing denominators''.) Similarly, there is an <m>N \in R</m> such that <m>N \cdot h(x) \in R[x]</m>. Further, write <m>M \cdot g(x) = a \cdot l(x)</m> where <m>a = \cont(M g(x)) \in R</m>, <m>l(x) \in R[x]</m>, and <m>\cont(l) = 1,</m> and similarly <m>N \cdot g(x) = b \cdot m(x)</m> where <m>b = \cont(N h(x)) \in R</m>, <m>m(x) \in R[x]</m>, and <m>\cont(m) = 1</m>. We have 
-                <me>
-                  abl(x)m(x) = MN f(x)
-                </me>
-                Using Gauss's Lemma, Part 1, we have <m>\cont(lm) = \cont(l) \cont(m) = 1</m> and hence 
-                <me>
-                  \cont(ab l(x) m(x)) = ab \cont(l(x) m(x)) = ab.
-                </me> 
-                We also have <m>\cont(MNf(x)) = MN\cont(f) = MN</m> (since we've already proven that <m>\cont(f) = 1</m>).
-              </p>
-
-              <p>
-                So <m>ab = MN</m> and thus by dividing we arrive at 
-                <me>
-                  l(x) m(x) = f(x).
-                </me> 
-                But <m>f(x)</m> is irreducible in <m>R[x]</m>. It follows that either <m>l</m> or <m>m</m> must be a unit in <m>R[x]</m> (i.e., a unit in <m>R</m>) and it follows that either <m>g(x)</m> or <m>h(x)</m> is a unit in <m>F[x]</m>. This proves <m>f(x)</m> is irreducible in <m>F[x]</m>.
-              </p>
-
-              <p>
-                (<m>\Leftarrow</m>) Say <m>f(x) \in R[x]</m> irreducible in <m>F[x]</m> and <m>\cont(f) = 1</m>. If <m>f = q(x) r(x)</m> with <m>q,r \in R[x]</m> then, since <m>f</m> is irreducible in <m>F[x]</m>, one of <m>q</m> or <m>r</m> must be a constant. But since <m>\cont(f) = 1</m>, this constant must be <m>1</m>.
-              </p>
-
-            </proof>
-          </theorem>
-
-          <example xml:id="ex-irreducibility-and-gauss">
-            <p>
-              Let's prove <m>f = x^4 + 7x^3 + 16 x^2 + 124 x + 23 \in \Q[x]</m> is irreducible. By Gauss's Lemma, we just need to show it is irreducible in <m>\Z[x]</m>.
-            </p>
-
-            <p>
-              If <m>f</m> did factor in <m>\Z[x]</m> as a product of monic polynomials, then <m>\ov{f} \in \Z/2[x]</m> would also factor in this way. Now <m>\ov{f} = x^4 + x^3 + 1 \in \Z/2[x]</m>. This has no roots (the only possibilities are <m>0</m> or <m>1</m>) and so if it did factor it would have to factor as a product of two quadratic, irreducible polynomials. The only such polynomial in <m>\Z/2[x]</m> is <m>q = x^2+ x + 1</m> (the others all have roots). But <m>q^2 \ne \ov{f}</m>. This proves <m>\ov{f}</m> is irreducible in <m>(\Z/2)[x]</m> and hence <m>f</m> must be irreducible in <m>\Z[x]</m>.
-            </p>
-
-          </example>
-
-          <theorem xml:id="thm-eisensteins-criterion"><title>Eisenstein's Criterion</title>
-            
-            
-            <statement>
-              <p>
-                Let <m>R</m> be a PID with field of fractions <m>F</m> and assume <m>f(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_0 \in R[x]</m> is a polynomial. Suppose there is a prime element <m>p \in R</m> such that <m>p \nmid a_n</m>, <m>p \mid a_i</m> for all <m>0 \leq i \leq n-1</m>, and <m>p^2 \nmid a_0</m>. Then <m>f</m> is irreducible in <m>F[x]</m>.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-              We have <m>f(x) = \cont(f) \cdot l(x)</m> with <m>l(x) \in R[x]</m> and <m>\cont(l) = 1</m>. Since <m>p</m> does not divide the leading coefficient of <m>f</m>, we have <m>p \nmid \cont(f)</m>. It therefore follows that the three assumptions involving the coefficients of <m>f(x)</m> are also satisfied by the coefficients <m>l(x)</m>. Moreover, <m>f</m> is irreducible in <m>F[x]</m> if and only if <m>l(x)</m> is irreducible in <m>F[x]</m>. We may therefore assume without loss of generality that <m>\cont(f) = 1</m>.
-              </p>
-
-              <p>
-                By Gauss's Lemma we just need to prove it is irreducible in <m>R[x]</m>. Suppose <m>f(x) = g(x)h(x)</m> with <m>g(x), h(x) \in R[x]</m>, where <me>g(x) = b_m x^m + b_{m-1} x^{m-1} + \cdots + b_0</me>and <me>h(x) = c_l x^l + c_{l-1} x^{l-1} + \cdots + c_0</me>where <m>m+l = n</m> and <m>b_m c_l = a_n</m>.
-              </p>
-
-              <p>
-                Upon modding out by <m>p</m> we get <me>\ov{f} = \ov{g} \ov{h} \in (R/p)[x].</me>The assumptions on <m>f</m> give that <me>\ov{f} = \ov{a_n} x^n</me>with <m>\ov{a_n} \ne 0</m>. Since <m>R/p</m> is a domain, it follows that <me>\ov{g} = \ov{b_m} x^m \, \text{ and  } \, \ov{h} = \ov{c_l} x^l</me>On the other hand, we also have <me>a_0 = b_0c_0,</me>and since <m>p^2 \nmid a_0</m>, we have that <m>p \nmid b_0</m> or <m>p \nmid c_0</m>. So <m>\ov{b_0} \ne 0</m> or <m>\ov{c_0} \ne 0</m>. This can only occur if <m>m = 0</m> or <m>l = 0</m>.
-              </p>
-
-              <p>
-                We have shown that if <m>f</m> factors in <m>R[x]</m> as <m>f = g \cdot h</m>, then at least one of <m>g</m> of <m>h</m> must be a constant polynomial. Since <m>\cont(f) = 1</m>, this factor must be a unit. So <m>f</m> is irreducible in <m>R[x]</m>.
-              </p>
-            </proof>
-          </theorem>
-
-          <example xml:id="ex-using-eisenstein">
-            <p>
-              For instance, <m>5x^{11} - 30 x^4 +60 x^3 +360 x- 30</m> is irreducible in <m>\Q[x]</m> thanks to <xref text="title" ref="thm-eisensteins-criterion"/> applied with <m>p = 2</m>. (Note that it isn't irreducible in <m>\Z[x]</m> since it does not have unit content.)
-            </p>
-          </example>
-
-          <proposition xml:id="prop-cyclotomic-polynomial-irreducible">
-            <statement>
-              <p>
-                For any prime <m>p</m>, the <m>p</m>-th <em>cyclotomic polynomial</em> <me>f(x) = x^{p-1} + x^{p-2} + \cdots + x^2 + x+1 \in \Z[x]</me>is irreducible in <m>\Q[x]</m>.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                Consider the ring isomorphism <m>\phi: \Q[x] \xra{\cong} \Q[y]</m> given by <m>\phi(h(x)) = h(y+1)</m>. I claim that 
-                <me>
-                  \phi(f(x)) = y^{p-1} + p y^{p-2} + {p \choose 2} y^{p-3} +{p \choose 3} y^{p-4} +\cdots + {p \choose p-1} y + p.
-                </me> 
-                To see this, we note that <m>f(x) (x-1) = x^p - 1</m> and by the binomial theorem we have 
-                <me>
-                  \phi(x^p-1) = (y+1)^p - 1 = y^p + p y^{p-1} + {p \choose 2} y^{p-2} + \cdots + py.
-                </me> 
-                Since <m>\phi(x^p-1) = \phi(f(x)) \phi(x-1) = \phi(f(x)) y</m>, the claim follows.
-              </p>
-
-              <p>
-                By <xref text="title" ref="thm-eisensteins-criterion"/>, <m>\phi(f(x))</m> is irreducible in <m>\Q[y]</m> and, since <m>\phi</m> is an isomorphism, it follows that <m>f(x)</m> is irreducible in <m>\Q[x]</m>.
-              </p>
-            </proof>
-          </proposition>
-
-          <proposition xml:id="prop-primes-and-irreducibility">
-            <statement>
-              <p>
-                Assume <m>R</m> is an integral domain and <m>f(x) \in R[x]</m> is a monic polynomial with coefficients in <m>R</m>. If there is a prime element <m>p \in R</m> such that <m>\ov{f} \in (R/p)[x]</m> is irreducible in <m>(R/p)[x]</m>, then <m>f</m> is irreducible in <m>R[x]</m>.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                We prove the contra-positive. Suppose <m>f</m> is reducible in <m>R[x]</m>. Then we have <m>f(x) = g(x) h(x)</m> for some monic, non-constant polynomials <m>g</m> and <m>h</m> in <m>R[x]</m>. It follows that <m>\ov{f} = \ov{gh} = \ov{g} \ov{h}</m> holds in <m>(R/p)[x]</m>. But since <m>g</m> and <m>h</m> are monic, non-constant polynomials, <m>\ov{g}</m> and <m>\ov{h}</m> are both non-constant polynomials in <m>(R/p)[x]</m> and hence <m>\ov{f}</m> is reducible in <m>(R/p)[x]</m>.
-              </p>
-            </proof>
-          </proposition>
-
-          <example xml:id="ex-monic-is-necessary">
-            <p>
-              The assumption that <m>f</m> be monic in this Proposition is necessary. Consider for instance <m>f(x) = (3x+1)(x+1) = 3 x^2 + 4x + 1 \in \Z[x]</m>. Modding out by <m>3</m> yields a linear polynomial in <m>(\Z/3)[x]</m> which is thus irreducible. But clearly <m>f</m> isn't irreducible in <m>\Z[x]</m>. (The Proposition can be generalized to non-monic polynomials by adding the assumption that <m>p</m> does not divided the leading coefficient of <m>f</m>.)
-            </p>
-          </example>
-
-          <proposition xml:id="prop-fields-and-group-of-units">
-            <statement>
-              <p>
-                Let <m>F</m> be a field and <m>G</m> a finite subgroup of the multiplicative group <m>F^\times</m>. Prove that <m>G</m> is cyclic.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                Let <m>F</m> be a field and <m>G</m> a finite subgroup of order <m>n</m> the multiplicative group <m>F^\times</m>. Let <m>k</m> denote the LCM of all orders of elements in <m>G</m>. Notice that as <m>g^n=1</m> for all <m>g\in G</m> we have <m>k\leq n</m>.
-              </p>
-
-              <p>
-                However, as <m>g^k=1</m> for all <m>g\in G</m> we know that <m>g</m> is the root of the polynomial <m>f(x)=x^k-1</m> in <m>F[x]</m>. By the <xref text="title" ref="thm-factor-thm"/> there are thus at most <m>k</m> roots of <m>f</m>, but there are <m>n</m> distinct roots. Thus <m>k=n</m>.
-              </p>
-
-              <p>
-                Thus the LCM of all orders of elements in <m>G</m> is <m>n</m>. Notice that as <m>G</m> is abelian every Sylow <m>p</m>-subgroup of <m>G</m> is normal, and thus there is only one of each. This means that <m>G</m> can be written as a direct product of cyclic groups of relatively prime order; Hence <m>G</m> is itself cyclic.
-              </p>
-            </proof>
-          </proposition>
-
-          <proposition xml:id="prop-irreducible-poly">
-            <statement>
-              <p>
-                Show that <m>x^3+3x+2 \in \Q[x]</m> is irreducible.
-              </p>
-            </statement>
-          </proposition>
-
-          <proposition xml:id="prop-fields-and-group-of-units-1">
-            <statement>
-              <p>
-                Let <m>F</m> be a field and <m>G</m> a finite subgroup of the multiplicative group <m>F^\times</m>. Prove that <m>G</m> is cyclic.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                Let <m>F</m> be a field and <m>G</m> a finite subgroup of order <m>n</m> the multiplicative group <m>F^\times</m>. Let <m>k</m> denote the LCM of all orders of elements in <m>G</m>. Notice that as <m>g^n=1</m> for all <m>g\in G</m> we have <m>k\leq n</m>.
-              </p>
-
-              <p>
-                However, as <m>g^k=1</m> for all <m>g\in G</m> we know that <m>g</m> is the root of the polynomial <m>f(x)=x^k-1</m> in <m>F[x]</m>. By the <xref text="title" ref="thm-factor-thm"/> there are thus at most <m>k</m> roots of <m>f</m>, but there are <m>n</m> distinct roots. Thus <m>k=n</m>.
-              </p>
-
-              <p>
-                Thus the LCM of all orders of elements in <m>G</m> is <m>n</m>. Notice that as <m>G</m> is abelian every Sylow <m>p</m>-subgroup of <m>G</m> is normal, and thus there is only one of each. This means that <m>G</m> can be written as a direct product of cyclic groups of relatively prime order; Hence <m>G</m> is itself cyclic.
-              </p> 
-            </proof>
-          </proposition>
-          
-        </section>
-  
-      </chapter>
-
       <chapter xml:id="ch-extensions"><title>Field Extensions</title>
     
         <section xml:id="field-extension-basics"><title>Field Extension Basics</title>
+
+          <blockquote>
+            <p>
+              <q>
+                Give me extension and motion and I will construct the universe.
+              </q>
+            </p>
+            <attribution>René Descartes</attribution>
+          </blockquote>
   
           <definition xml:id="def-field-extension"><title>Field Extension</title>
             <statement>
@@ -14478,29 +14550,36 @@
   
           <remark>
             <p>
-              So a field extension is just another name for a subfield, but the emphasis is different. We think of <m>F</m> as coming first and <m>L</m> later.
+              A field extension is just another name for a subfield, but the emphasis is different. 
+              We think of <m>F</m> as coming first and <m>L</m> later.
             </p>
           </remark>
   
           <remark>
             <p>
-              Recall that if <m>F</m> and <m>E</m> are fields, then every ring homomorphism <m>\phi: F \to E</m> necessarily injective. <xref provisional="empty"/>(Proof: since <m>\phi(1) = 1</m>, <m>\ker(\phi)</m> is a proper ideal of <m>F</m>, and since <m>F</m> is a field, the only proper ideal of it is <m>0</m>.) Thus <m>\phi</m> maps <m>F</m> isomorphically onto its image <m>\phi(F)</m> and <m>\phi(F) \subseteq E</m> is a field extension. By abuse of notation we will typically think of <m>\phi</m> as being a field extension, even though it is technically just an injective homomorphism of fields.
+              Recall that if <m>F</m> and <m>E</m> are fields, then every ring homomorphism <m>\phi: F \to E</m> necessarily injective. <xref provisional="empty"/>
+              (Proof: since <m>\phi(1) = 1</m>, <m>\ker(\phi)</m> is a proper ideal of <m>F</m>, and since <m>F</m> is a field, the only proper ideal of it is <m>0</m>.) 
+              Thus <m>\phi</m> maps <m>F</m> isomorphically onto its image <m>\phi(F)</m> and <m>\phi(F) \subseteq E</m> is a field extension. 
+              By abuse of notation we will typically think of <m>\phi</m> as being a field extension, even though it is technically just an injective homomorphism of fields.
             </p>
           </remark>
   
-          <example xml:id="exe-classic-field-extensions"><title>Examples of Field Extensions</title>
+          <example xml:id="ex-classic-field-extensions"><title>Examples of Field Extensions</title>
             <p>
               <m>\Q \subseteq \R</m> and <m>\R \subseteq \C</m> are basic examples of field extensions.
             </p>
   
             <p>
-              Recall <xref provisional="empty"/> that <m>\Q[\sqrt{2}] = \{a + b \sqrt{2} \mid a, b \in \Q\}</m> is a field. So <m>\Q \subseteq \Q[\sqrt{2}]</m> is another example of a field extension.
+              Recall <xref provisional="empty"/> that <m>\Q[\sqrt{2}] = \{a + b \sqrt{2} \mid a, b \in \Q\}</m> is a field. 
+              So <m>\Q \subseteq \Q[\sqrt{2}]</m> is another example of a field extension.
             </p>
           </example>
   
           <remark>
             <p>
-              The latter is a typical sort of example for us: Starting with <m>\Q</m>, we would like to <q>adjoin</q> a root of the irreducible (in <m>\Q[x]</m>) polynomial <m>x^2 + 1</m>. Doing so yields <m>\Q[\sqrt{2}]</m>.
+              The latter is a typical sort of example for us: 
+              Starting with <m>\Q</m>, we would like to <q>adjoin</q> a root of the irreducible (in <m>\Q[x]</m>) polynomial <m>x^2 + 1</m>. 
+              Doing so yields <m>\Q[\sqrt{2}]</m>.
             </p>
   
             <p>
@@ -14510,55 +14589,83 @@
   
           <example xml:id="exe-more-field-extensions"><title>Yet More Field Extensions</title>
             <p>
-              Consider <m>x^3 - 2 \in \Q[x]</m>. It is irreducible (e.g., by <xref text="title" ref="thm-eisensteins-criterion"/>) and has roots <m>\a = \sqrt[3]{2}</m>, <m>\beta = e^{2 \pi i/3} \sqrt[3]{2}</m> and <m>\g = e^{4 \pi i/3} \sqrt[3]{2}</m> in <m>\C</m>. So there are three ways in which we could “adjoin a root" to <m>\Q</m>: First we could form the field 
+              Consider <m>x^3 - 2 \in \Q[x]</m>. 
+              It is irreducible (e.g., by <xref text="title" ref="thm-eisensteins-criterion"/>) and has roots <m>\a = \sqrt[3]{2}</m>, <m>\beta = e^{2 \pi i/3} \sqrt[3]{2}</m> and <m>\g = e^{4 \pi i/3} \sqrt[3]{2}</m> in <m>\C</m>. 
+              So there are three ways in which we could “adjoin a root" to <m>\Q</m>: 
+              First we could form the field 
               <me>
                 \Q[\a] = \{a + b \a + c \a^2 \mid a,b,c \in \Q\}.
               </me> 
-              It is not completely obvious this is a field, but we'll prove it latter. The reason that we don't need third or higher powers is that, e.g., <m>\a^3 = 2 \in \Q</m>. Or we could instead form the field <m>\Q[\beta]</m> or the field <m>\Q[\gamma]</m>. There are clearly not all equal since, for example, <m>\Q[\a] \subseteq \R</m> but <m>\beta</m> is not in <m>\R</m>. However, they are {} field extensions as we will prove below.
+              It is not completely obvious this is a field, but we'll prove it later. 
+              The reason that we don't need third or higher powers is that, e.g., <m>\a^3 = 2 \in \Q</m>. 
+              Or we could instead form the field <m>\Q[\beta]</m> or the field <m>\Q[\gamma]</m>. 
+              There are not all equal since, for example, <m>\Q[\a] \subseteq \R</m> but <m>\beta</m> is not in <m>\R</m>. 
+              However, they are {} field extensions as we will prove below.
             </p>
           </example>
   
           <definition xml:id="def-field-extension-element"><title><m>F(\a)</m></title>
             <statement>
               <p>
-                Given a field extension <m>F \subseteq L</m> and an element <m>\a \in L</m>, set <me>F[\a] = \{f(\a) \mid f(x) \in F[x]\}.</me>Then <m>F[\a]</m> is a subring of <m>L</m> and in fact it is the smallest subring of <m>L</m> that contains <m>F</m> and <m>\a.</m> We define <m>F(\a)</m> to be the field of fractions of <m>F[\a]</m>; that is, <me>F(\a) = \left\{\frac{f(\a)}{g(\a)} \mid f(x), g(x) \in F[x] \text{ such that $g(\a) \ne 0$} \right\}.</me> So, <m>F(\a)</m> is a subfield of <m>L</m> and it is the smallest subfield of <m>L</m> that contains <m>F</m> and <m>\a</m>.
+                Given a field extension <m>F \subseteq L</m> and an element <m>\a \in L</m>, set 
+                <me>
+                  F[\a] = \{f(\a) \mid f(x) \in F[x]\}.
+                </me>
+                Then <m>F[\a]</m> is a subring of <m>L</m> and in fact it is the smallest subring of <m>L</m> that contains <m>F</m> and <m>\a</m>.
+                We define <m>F(\a)</m> to be the field of fractions of <m>F[\a]</m>; that is, 
+                <me>
+                  F(\a) = \left\{\frac{f(\a)}{g(\a)} \mid f(x), g(x) \in F[x] \text{ such that $g(\a) \ne 0$} \right\}.
+                </me> 
+                So, <m>F(\a)</m> is a subfield of <m>L</m> and it is the smallest subfield of <m>L</m> that contains <m>F</m> and <m>\a</m>.
               </p>
             </statement>
           </definition>
   
           <remark>
             <p>
-              Note that, in the context of this definition, we have <m>F \subseteq F[\a] \subseteq F(\a) \subseteq L</m>, with each inclusion being a subring inclusion. <m>F, L</m> and <m>F(\a)</m> are all fields and in general <m>F[\a]</m> is only a ring. But, in some cases we have <m>F[\a] = F(\a)</m> (and hence it is a field). Indeed, this occurs whenever <m>\a</m> is the root of some polynomial with coefficients in <m>F</m>.
+              Note that, in the context of this definition, we have <m>F \subseteq F[\a] \subseteq F(\a) \subseteq L</m>, with each inclusion being a subring inclusion. 
+              <m>F, L</m> and <m>F(\a)</m> are all fields and in general <m>F[\a]</m> is only a ring.
+              But, in some cases we have <m>F[\a] = F(\a)</m> (and hence it is a field). 
+              Indeed, this occurs whenever <m>\a</m> is the root of some polynomial with coefficients in <m>F</m>.
             </p>
           </remark>
   
           <example xml:id="exe-qsqrt2">
             <p>
-              Take <m>F = \Q</m> and <m>\a = \sqrt{2}</m>. Then any expression of the form <m>\sum_i r_i \a^i</m> with <m>r_i \in \Q</m> is equal to one of the form <m>a + b \sqrt{2}</m> for <m>a, b \in \Q</m>. If <m>c + d \sqrt{2} \ne 0</m>, then 
+              Take <m>F = \Q</m> and <m>\a = \sqrt{2}</m>. 
+              Then any expression of the form <m>\sum_i r_i \a^i</m> with <m>r_i \in \Q</m> is equal to one of the form <m>a + b \sqrt{2}</m> for <m>a, b \in \Q</m>. 
+              If <m>c + d \sqrt{2} \ne 0</m>, then 
               <me>
                 \frac{1}{c + d \sqrt{2}} = \frac{c-d \sqrt{2}}{c^2 - 2 d^2}=c' + d' \sqrt{2}
               </me> 
-              with <m>c' = \frac{c}{c^2 - 2d^2}</m> and <m>d' = \frac{-d}{c^2 - 2d^2}</m> both in <m>\Q</m>. This proves that <m>\Q[\sqrt2] = \Q(\sqrt2) = \{a + b \sqrt2 \mid a,b \in \Q\}</m> and in particular that <m>\Q[\sqrt{2}]</m> is a field.
+              with <m>c' = \frac{c}{c^2 - 2d^2}</m> and <m>d' = \frac{-d}{c^2 - 2d^2}</m> both in <m>\Q</m>. 
+              This proves that <m>\Q[\sqrt2] = \Q(\sqrt2) = \{a + b \sqrt2 \mid a,b \in \Q\}</m> and in particular that <m>\Q[\sqrt{2}]</m> is a field.
             </p>
           </example>
   
           <example xml:id="exe-qpi"><title></title>
             <p>
-              <m>\Q[\pi]</m> is not a field (and so in particular it is not equal to <m>\Q(\pi)</m> since, for example, <m>\frac{1}{\pi} \notin \Q[\pi]</m>. (If it were, then we would have <m>\frac{1}{\pi} = \sum_{i=0}^n q_i \pi^i</m> for some <m>q_i \in \Q</m>, and hence <m>\sum_i q_i \pi^{i+1} - 1 = 0</m>, which would imply <m>\pi</m> is the root of a polynomial with rational coefficients. This is known to be not true.)
+              <m>\Q[\pi]</m> is not a field (and so in particular it is not equal to <m>\Q(\pi)</m> since, for example, <m>\frac{1}{\pi} \notin \Q[\pi]</m>. 
+              (If it were, then we would have <m>\frac{1}{\pi} = \sum_{i=0}^n q_i \pi^i</m> for some <m>q_i \in \Q</m>, and hence <m>\sum_i q_i \pi^{i+1} - 1 = 0</m>, which would imply <m>\pi</m> is the root of a polynomial with rational coefficients. 
+              This is known to be not true.)
             </p>
           </example>
   
           <definition xml:id="def-degree-field-extension"><title>Degree of a Field Extension</title>
             <statement>
               <p>
-                The <em>degree</em> of a field extension <m>F \subseteq L</m> is <me>[L:F] = \dm_F(L).</me>
+                The <em>degree</em> of a field extension <m>F \subseteq L</m> is 
+                <me>
+                  [L:F] = \dm_F(L).
+                </me>
               </p>
             </statement>
           </definition>
   
           <example xml:id="exe-degrees-of-common-extensions"><title>Degrees of Common Extensions</title>
             <p>
-              We have that <m>[\C: \R] = 2</m> and <m>[\R:\Q] = \infty</m>. (We could in fact say <m>[\R:\Q]</m> is the cardinality of <m>\R</m>, but in general we lump all infinite field extensions together when talking about degree.) 
+              We have that <m>[\C: \R] = 2</m> and <m>[\R:\Q] = \infty</m>. 
+              (We could in fact say <m>[\R:\Q]</m> is the cardinality of <m>\R</m>, but in general we lump all infinite field extensions together when talking about degree.) 
               We have <m>[\Q[\a]: \Q] = 3</m> where <m>\a = \sqrt[3]{2}</m>.
             </p>
           </example>
@@ -14566,11 +14673,14 @@
           <proposition xml:id="prop-properties-of-extension-degrees"><title>Properties of Extension Degrees</title>
             <statement>
               <p>
-                Assume <m>F</m> is a field and <m>p(x) = \sum_i a_i x^i \in F[x]</m> is an irreducible polynomial. Set <m>L = F[x]/(p(x))</m>, and for <m>f \in F[x]</m>, let <m>\ov{f}</m> denote the coset <m>f(x) + (p(x)) \in L</m>. The following hold: 
+                Assume <m>F</m> is a field and <m>p(x) = \sum_i a_i x^i \in F[x]</m> is an irreducible polynomial. 
+                Set <m>L = F[x]/(p(x))</m>, and for <m>f \in F[x]</m>, let <m>\ov{f}</m> denote the coset <m>f(x) + (p(x)) \in L</m>. 
+                The following hold: 
                 <ol>
                   <li>
                     <p>
-                      <m>F \into L</m> is a field extension via the map given by <m>a \mapsto \ov{a}</m> for <m>a \in F</m>. (This is technically an injective homomorphisms of fields.) 
+                      <m>F \into L</m> is a field extension via the map given by <m>a \mapsto \ov{a}</m> for <m>a \in F</m>. 
+                      (This is technically an injective homomorphisms of fields.) 
                     </p>
                   </li>
   
@@ -14582,7 +14692,8 @@
   
                   <li>
                     <p>
-                      <m>p(x)</m> has a root in <m>L</m>; in fact, the element <m>\ov{x} \in L</m> is a root of this polynomial: <m>\sum_i \ov{a_i} \cdot \ov{x}^i = 0 \in L</m>.
+                      <m>p(x)</m> has a root in <m>L</m>; 
+                      in fact, the element <m>\ov{x} \in L</m> is a root of this polynomial: <m>\sum_i \ov{a_i} \cdot \ov{x}^i = 0 \in L</m>.
                     </p>
                   </li>
                 </ol>
@@ -14591,7 +14702,10 @@
   
             <proof>
               <p>
-                Because <m>p(x)</m> is irreducible and <m>F[x]</m> is a PID, <m>(p(x))</m> is a maximal ideal <xref provisional="empty"/>. Thus <m>L = F[x]/(p(x))</m> is a field <xref provisional="empty"/>. The map <m>F \to L</m> given by <m>a \mapsto \ov{a}</m> is a ring map since it is the composition of the two ring maps <m>F \xra{can} F[x] \xra{can} F[x]/(p(x))</m> <xref provisional="empty"/>. Since it is a ring map between two fields, it is injective <xref provisional="empty"/>.
+                Because <m>p(x)</m> is irreducible and <m>F[x]</m> is a PID, <m>(p(x))</m> is a maximal ideal <xref provisional="empty"/>. 
+                Thus <m>L = F[x]/(p(x))</m> is a field <xref provisional="empty"/>. 
+                The map <m>F \to L</m> given by <m>a \mapsto \ov{a}</m> is a ring map since it is the composition of the two ring maps <m>F \xra{can} F[x] \xra{can} F[x]/(p(x))</m> <xref provisional="empty"/>. 
+                Since it is a ring map between two fields, it is injective <xref provisional="empty"/>.
               </p>
   
               <p>
@@ -14599,7 +14713,10 @@
               </p>
   
               <p>
-                The last assertion is tricky only because the notation is confusing. Say <m>p(x) = a_n x^n + \cdots + a_1 x + a_0</m> and just to keep things straight let's set <m>q(y) = \ov{a_n} y^n + \cdots + \ov{a_0} \in L[y]</m>. We need to show <m>q(\ov{x}) = 0</m>: We have 
+                The last assertion is tricky only because the notation is confusing. 
+                Say <m>p(x) = a_n x^n + \cdots + a_1 x + a_0</m> and just to keep things straight let's set <m>q(y) = \ov{a_n} y^n + \cdots + \ov{a_0} \in L[y]</m>. 
+                We need to show <m>q(\ov{x}) = 0</m>: 
+                We have 
                 <me>
                   q(\ov{x}) = \sum_i \ov{a_i} (\ov{x})^i =\sum_i \ov{a_i} (\ov{x^i}) = \ov{\sum_i a_i x_i}= \ov{p(x)}= 0.
                 </me>
@@ -14609,7 +14726,14 @@
   
           <example xml:id="exe-rxx21">
             <p>
-              The last part of the proposition is notationally confusing to prove in general but clear in examples. So let's do a simple one: Say <m>F = \R</m> and <m>p(x)= x^2 +1</m>. Then <m>L = \R[x]/(x^2+1)</m>. The assertion is that <m>\ov{x} := x + (x^2 + 1) \in L</m> is a root of the polynomial <m>x^2 + 1</m> viewed as having coefficients in <m>L</m>. In other words, this element has the property that its square is <m>-1</m>. Let's check: Since <m>\ov{x^2 + 1} = 0</m> and <m>\ov{x^2 + 1} = \ov{x}^2 + 1</m> we have <m>\ov{x}^2 = -1</m>. Indeed, there is a field isomorphism <m>L \cong \C</m> sending <m>\ov{x}</m> to <m>i</m> and more generally <m>\ov{f}</m> to <m>f(i).</m>
+              The last part of the proposition is notationally confusing to prove in general but clear in examples. 
+              So let's do a simple one: 
+              Say <m>F = \R</m> and <m>p(x)= x^2 +1</m>. 
+              Then <m>L = \R[x]/(x^2+1)</m>. 
+              The assertion is that <m>\ov{x} := x + (x^2 + 1) \in L</m> is a root of the polynomial <m>x^2 + 1</m> viewed as having coefficients in <m>L</m>. 
+              In other words, this element has the property that its square is <m>-1</m>. L
+              et's check: Since <m>\ov{x^2 + 1} = 0</m> and <m>\ov{x^2 + 1} = \ov{x}^2 + 1</m> we have <m>\ov{x}^2 = -1</m>. 
+              Indeed, there is a field isomorphism <m>L \cong \C</m> sending <m>\ov{x}</m> to <m>i</m> and more generally <m>\ov{f}</m> to <m>f(i)</m>.
             </p>
           </example>
   
@@ -14631,34 +14755,58 @@
   
           <example xml:id="exe-sqrt2-primitive">
             <p>
-              <m>\sqrt{2}</m> is a primitive element of the extension <m>\Q \subseteq\Q[\sqrt{2}] = \Q(\sqrt{2})</m>. So is <m>1 + \sqrt{2}</m> and, more generally, <m>a + b \sqrt{2}</m> for any <m>a, b \in \Q</m> with <m>b \ne 0</m>.
+              <m>\sqrt{2}</m> is a primitive element of the extension <m>\Q \subseteq\Q[\sqrt{2}] = \Q(\sqrt{2})</m>. 
+              So is <m>1 + \sqrt{2}</m> and, more generally, <m>a + b \sqrt{2}</m> for any <m>a, b \in \Q</m> with <m>b \ne 0</m>.
             </p>
           </example>
   
           <definition xml:id="def-generated-subfield"><title>Generated Subfield</title>
             <statement>
               <p>
-                If <m>F \subseteq L</m> is a field extension and <m>A</m> is any subset of <m>L</m>, we write <m>F(A)</m> for the smallest subfield of <m>L</m> that contains all of <m>F</m> and <m>A</m> and it is called the <em>subfield generated</em> by <m>A</m> over <m>F</m>. Since the intersection of any two subfields of <m>L</m> is again a subfield, <m>F(A)</m> exists and is <me>
+                If <m>F \subseteq L</m> is a field extension and <m>A</m> is any subset of <m>L</m>, we write <m>F(A)</m> for the smallest subfield of <m>L</m> that contains all of <m>F</m> and <m>A</m> and it is called the <em>subfield generated</em> by <m>A</m> over <m>F</m>. 
+                Since the intersection of any two subfields of <m>L</m> is again a subfield, <m>F(A)</m> exists and is 
+                <me>
                   F(A) = \bigcap_{\text{$E$ is a subfield of $L$ such that $E \supseteq F \cup A$}} E.
-                  </me> where <m>E</m> 
-                  <em>fix</em>
+                </me> 
+                where <m>E</m> 
+                
+                <em>fix</em>
                   
                   Nearly always <m>A</m> will be a finite set, <m>A = \{a_1, \dots, a_n\}</m>, and we write <m>F(a_1, \dots, a_n)</m> for <m>F(A)</m>.
               </p>
   
               <p>
-                In this case, we have <me> F(a_1, \dots, a_n) = \left\{ \frac{p(a_1, \dots, a_n)}{q(a_1, \dots, a_n)} \mid p, q \in F[x_1, \dots, x_n], q(a_1, \dots, a_n) \ne 0\right\}.</me>
+                In this case, we have 
+                <me> 
+                  F(a_1, \dots, a_n) = \left\{ \frac{p(a_1, \dots, a_n)}{q(a_1, \dots, a_n)} \mid p, q \in F[x_1, \dots, x_n], q(a_1, \dots, a_n) \ne 0\right\}.
+                </me>
               </p>
             </statement>
           </definition>
   
           <example xml:id="exe-qsqrt2sqrt3">
             <p>
-              Regard <m>\Q</m> as a subfield of <m>\C</m> and let <m>F = \Q(\sqrt{2}, \sqrt{3})</m>. We may also describe <m>F</m> as <m>F = E(\sqrt{3})</m> where we set <m>E =\Q(\sqrt{2})</m>.
+              Regard <m>\Q</m> as a subfield of <m>\C</m> and let <m>F = \Q(\sqrt{2}, \sqrt{3})</m>. 
+              We may also describe <m>F</m> as <m>F = E(\sqrt{3})</m> where we set <m>E =\Q(\sqrt{2})</m>.
             </p>
   
             <p>
-              I claim that <m>F</m> is in fact a simple extension of <m>\Q</m>. For example, say <m>\g = \sqrt{2} + \sqrt{3}</m>. I claim that <m>\Q(\sqrt{2} + \sqrt{3}) = F</m>. Note that <m>\g^2 = 5 + 2 \sqrt{6}</m> and <me>\g^3 = 5 \sqrt{2} + 5 \sqrt{3} + 4 \sqrt{3} + 6 \sqrt{2} = 11 \sqrt{2} + 9 \sqrt{3}.</me> So <m>\frac12(\g^3 - 9 \g) = \sqrt{2}</m>, and hence <m>\sqrt{2} \in \Q(\g)</m>. Likewise, <me>\sqrt{3} = -\frac12(\g^3 - 11 \g) \in \Q(\g).</me>So <m>\Q(\g) = \Q(\sqrt{2},\sqrt{3})</m>. This example is an illustration of the Primitive Element Theorem (which we might or might not have time to prove this semester): Every finite extension of <m>\Q</m> is generated by a single element (or, in other words, is simple). This example shows <m>\Q(\sqrt{2}, \sqrt{3})/\Q</m> is simple and <m>\sqrt{2} + \sqrt{3}</m> is a primitive element of this field extension.
+              I claim that <m>F</m> is in fact a simple extension of <m>\Q</m>. 
+              For example, say <m>\g = \sqrt{2} + \sqrt{3}</m>. 
+              I claim that <m>\Q(\sqrt{2} + \sqrt{3}) = F</m>. 
+              Note that <m>\g^2 = 5 + 2 \sqrt{6}</m> and 
+              <me>
+                \g^3 = 5 \sqrt{2} + 5 \sqrt{3} + 4 \sqrt{3} + 6 \sqrt{2} = 11 \sqrt{2} + 9 \sqrt{3}.
+              </me> 
+              So <m>\frac12(\g^3 - 9 \g) = \sqrt{2}</m>, and hence <m>\sqrt{2} \in \Q(\g)</m>. 
+              Likewise, 
+              <me>
+                \sqrt{3} = -\frac12(\g^3 - 11 \g) \in \Q(\g).
+              </me>
+              So <m>\Q(\g) = \Q(\sqrt{2},\sqrt{3})</m>. 
+              This example is an illustration of the Primitive Element Theorem (which we might or might not have time to prove this semester): 
+              Every finite extension of <m>\Q</m> is generated by a single element (or, in other words, is simple). 
+              This example shows <m>\Q(\sqrt{2}, \sqrt{3})/\Q</m> is simple and <m>\sqrt{2} + \sqrt{3}</m> is a primitive element of this field extension.
             </p>
           </example>
   
@@ -17579,18 +17727,6 @@
         </table>
       </appendix>
 
-      <!--
-
-      <appendix xml:id="appendix-list-definitions"><title>List of Definitions</title>
-        <list-of elements="definition" divisions="chapter appendix" empty="no"/>
-      </appendix>
-
-      <appendix xml:id="appendix-list-results"><title>List of Results</title>
-        <list-of elements="theorem lemma proposition corollary" divisions="chapter appendix" empty="yes"/>
-      </appendix>
-
-      -->
-
       <appendix xml:id="appendix-biograhy"><title>Biographies</title>
 
         <paragraphs xml:id="bio-abel"><title>Niels Henrik Abel</title>
@@ -17967,7 +18103,7 @@
       </index>
 
       <colophon>
-        <p> This book was authored in <pretext />. </p>
+        <p>This book was authored in <pretext />.</p>
       </colophon>
 
     </backmatter>

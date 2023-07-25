@@ -10,41 +10,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para logical">
-<div class="para">For this proof it is useful to identity <span class="process-math">\(F[x]^n\)</span> with <span class="process-math">\(F^n[x]\)</span> where the latter refers to all expressions of the form <span class="process-math">\(\sum_i v_i x^i = v_0 + v_1 x + \cdots + v_m x^m\)</span> with <span class="process-math">\(v_i \in F^n\text{.}\)</span> For instance, (when <span class="process-math">\(n = 2\)</span>) we identify <span class="process-math">\(\vectwo{x^2 -3x + 1}{x^7 +x + 5}\)</span> with <span class="process-math">\(\vectwo{1}{5} + \vectwo{-3}{1} x + \vectwo{1}{0} x^2 + \vectwo{0}{1} x^7\text{.}\)</span> Using this identification we define</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\phi:  F[x]^n = F^n[x] \to F^n_A
-\end{equation*}
-</div>
-<div class="para">by <span class="process-math">\(\phi(\sum_i v_i x^i) = \sum_i A^i v_i\text{.}\)</span> Then <span class="process-math">\(\phi\)</span> is a <span class="process-math">\(F[x]\)</span>-module homomorphism — I leave it to you to verify this. <span class="process-math">\(\phi\)</span> is onto since, e.g., for any <span class="process-math">\(v \in F^n\)</span> we have <span class="process-math">\(\phi(vx^0) = v\text{.}\)</span>
-</div>
-</div> <div class="para logical">
-<div class="para">We have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\phi((xI_n - A) \cdot \sum_i v_i x^i) = \phi(\sum_i v_i x^{i+1} - \sum_i (Av_i) x^i) = \sum_i A^{i+1}(v_i) - \sum_i A^i(Av_i) = 0
-\end{equation*}
-</div>
-<div class="para">and hence <span class="process-math">\(\ker(\phi) \supseteq \im(xI_n - A)\text{.}\)</span> By the <span class="process-math">\(0\)</span>-th isomorphism theorem, there is an induced <span class="process-math">\(F[x]\)</span>-module homomorphism</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\ov{\phi}: \frac{F^n[x]}{\im(xI_n - A)}  \onto F^n_A
-\end{equation*}
-</div>
-<div class="para">induced by <span class="process-math">\(\phi\text{,}\)</span> and it is onto since <span class="process-math">\(\phi\)</span> is onto. It remains to show this map is one-to-one.</div>
-</div> <div class="para logical">
-<div class="para">Since <span class="process-math">\(\overline{\phi}\)</span> is <span class="process-math">\(F[x]\)</span>-linear it is certainly <span class="process-math">\(F\)</span>-linear. Since <span class="process-math">\(\dim_F(F^n_A) = n\text{,}\)</span> to prove <span class="process-math">\(\overline{\phi}\)</span> is one-to-one, it suffices to prove <span class="process-math">\(\dim_F \frac{F^n[x]}{\im(xI_n - A)} \leq n\)</span> (by Rank-Nullity). I claim the images of the standard basis <span class="process-math">\(e_1, \dots, e_n\)</span> in <span class="process-math">\(\frac{F^n[x]}{\im(xI_n - A)}\)</span> span it as an <span class="process-math">\(F\)</span>-vector space. To see this, note that <span class="process-math">\(x^je_i\text{,}\)</span> for <span class="process-math">\(1 \leq i \leq n\text{,}\)</span> <span class="process-math">\(j \geq 0\)</span> span <span class="process-math">\(F^n[x]\)</span> as an <span class="process-math">\(F\)</span>-vector space, and hence they span the quotient. It thus suffices to show <span class="process-math">\(\overline{x^j e_i}\)</span> lies in the span of <span class="process-math">\(\overline{e_1}, \dots, \overline{e_n}\)</span> in <span class="process-math">\(\frac{F^n[x]}{\im(xI_n - A)}\)</span> for all <span class="process-math">\(i\)</span> and <span class="process-math">\(j\text{.}\)</span> We have <span class="process-math">\(x^{j-1} \cdot (A - x) e_i \in \im(xI_n - A)\)</span> and thus</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\overline{x^j e_i} = \overline{x^{j-1} Ae_i}
-\end{equation*}
-</div>
-<div class="para">and by repeating this argument we have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\overline{x^j e_i} =\overline{x^{j-1} Ae_i} = \overline{x^{j-2} A^2e_i} = \cdots =\overline{A^je_i} \in \Span_F(e_1, \dots, e_n).
-\end{equation*}
-</div>
-</div></article></body>
+<body class="ignore-math"><article class="hiddenproof"><div class="para">Assume every ideal is finitely generated and that such a chain is given. Let <span class="process-math">\(J = \cup_n I_n\text{.}\)</span> Then it is easy to see that <span class="process-math">\(J\)</span> is an ideal. (In detail, for <span class="process-math">\(a \in J, r \in R\)</span> we have <span class="process-math">\(a \in I_n\)</span> for some <span class="process-math">\(n\)</span> and hence <span class="process-math">\(ra \in I_n \subseteq J\text{.}\)</span>
+</div> <div class="para">If <span class="process-math">\(a,b \in J\text{,}\)</span> then <span class="process-math">\(a \in I_n\)</span> and <span class="process-math">\(b \in I_m\)</span> for some <span class="process-math">\(n,m\)</span> and hence there is a <span class="process-math">\(N\)</span> such that <span class="process-math">\(a,b \in I_N\text{.}\)</span> It follows that <span class="process-math">\(a \pm b \in I_N \subseteq J\text{.}\)</span> Finally <span class="process-math">\(0 \in J\text{.}\)</span>) Thus by assumption <span class="process-math">\(J\)</span> is finitely generated, say <span class="process-math">\(J = Rx_1 + \cdots + Rx_m\)</span> for some <span class="process-math">\(x_1, \dots, x_m \in J\text{.}\)</span>
+</div> <div class="para">Each <span class="process-math">\(x_i\)</span> belongs to one of the <span class="process-math">\(I_n\)</span>'s and hence, since there are only a finite number of such elements and ideas are nested, there is an <span class="process-math">\(N\)</span> such that <span class="process-math">\(x_1, \dots, x_m \in I_N\text{.}\)</span> It follows that <span class="process-math">\(I_N = J\)</span> and hence <span class="process-math">\(I_N = I_{N+1} = I_{N+2} = \cdots\text{.}\)</span>
+</div> <div class="para">Assume <span class="process-math">\(R\)</span> has the acc for ideals and let <span class="process-math">\(J\)</span> be any ideal. Pick any element <span class="process-math">\(a_1\in I\)</span> and set <span class="process-math">\(I_1 = Ra_1\text{.}\)</span> If <span class="process-math">\(J = I_1\)</span> we are done. If not, pick <span class="process-math">\(a_2 \in I \setminus I_1\)</span> and set <span class="process-math">\(I_2 = Ra_1 + Ra_2\text{.}\)</span> If <span class="process-math">\(J = I_2\)</span> we are done and if not pick <span class="process-math">\(a_3 \in I\setminus I_2\)</span> and let <span class="process-math">\(I_3 = Ra_1 + Ra_2 + Ra_3\text{.}\)</span> In this way we form a strictly ascending chain <span class="process-math">\(I_1 \subset I_2 \subset I_3 \subset\text{,}\)</span> and this process cannot be continued forever since <span class="process-math">\(R\)</span> has the acc. When it terminates, we have <span class="process-math">\(J = Ra_1 + Ra_2 + \cdots + Ra_N\)</span> for some <span class="process-math">\(a_1, \dots, a_N\)</span> and thus <span class="process-math">\(J\)</span> is finitely generated.</div></article></body>
 </html>

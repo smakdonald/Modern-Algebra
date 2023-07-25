@@ -13,29 +13,41 @@
 <body class="ignore-math">
 <article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
 <div class="para logical">
-<div class="para">Suppose <span class="process-math">\(f = gh\)</span> with <span class="process-math">\(g, h \in F[x]\text{.}\)</span> We can find an element <span class="process-math">\(M\)</span> of <span class="process-math">\(R\)</span> such that <span class="process-math">\(M \cdot g(x) \in R[x]\text{.}\)</span> (We can take <span class="process-math">\(M\)</span> to be the product of all the denominators of the coefficients of <span class="process-math">\(g\text{,}\)</span> for example; this is called “clearing denominators''.) Similarly, there is an <span class="process-math">\(N \in R\)</span> such that <span class="process-math">\(N \cdot h(x) \in R[x]\text{.}\)</span> Further, write <span class="process-math">\(M \cdot g(x) = a \cdot l(x)\)</span> where <span class="process-math">\(a = \cont(M g(x)) \in R\text{,}\)</span> <span class="process-math">\(l(x) \in R[x]\text{,}\)</span> and <span class="process-math">\(\cont(l) = 1,\)</span> and similarly <span class="process-math">\(N \cdot g(x) = b \cdot m(x)\)</span> where <span class="process-math">\(b = \cont(N h(x)) \in R\text{,}\)</span> <span class="process-math">\(m(x) \in R[x]\text{,}\)</span> and <span class="process-math">\(\cont(m) = 1\text{.}\)</span> We have</div>
+<div class="para">For this proof it is useful to identity <span class="process-math">\(F[x]^n\)</span> with <span class="process-math">\(F^n[x]\)</span> where the latter refers to all expressions of the form <span class="process-math">\(\sum_i v_i x^i = v_0 + v_1 x + \cdots + v_m x^m\)</span> with <span class="process-math">\(v_i \in F^n\text{.}\)</span> For instance, (when <span class="process-math">\(n = 2\)</span>) we identify <span class="process-math">\(\vectwo{x^2 -3x + 1}{x^7 +x + 5}\)</span> with <span class="process-math">\(\vectwo{1}{5} + \vectwo{-3}{1} x + \vectwo{1}{0} x^2 + \vectwo{0}{1} x^7\text{.}\)</span> Using this identification we define</div>
 <div class="displaymath process-math">
 \begin{equation*}
-abl(x)m(x) = MN f(x)
+\phi:  F[x]^n = F^n[x] \to F^n_A
 \end{equation*}
 </div>
-<div class="para">Using Gauss's Lemma, Part 1, we have <span class="process-math">\(\cont(lm) = \cont(l) \cont(m) = 1\)</span> and hence</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\cont(ab l(x) m(x)) = ab \cont(l(x) m(x)) = ab.
-\end{equation*}
+<div class="para">by <span class="process-math">\(\phi(\sum_i v_i x^i) = \sum_i A^i v_i\text{.}\)</span> Then <span class="process-math">\(\phi\)</span> is a <span class="process-math">\(F[x]\)</span>-module homomorphism — I leave it to you to verify this. <span class="process-math">\(\phi\)</span> is onto since, e.g., for any <span class="process-math">\(v \in F^n\)</span> we have <span class="process-math">\(\phi(vx^0) = v\text{.}\)</span>
 </div>
-<div class="para">We also have <span class="process-math">\(\cont(MNf(x)) = MN\cont(f) = MN\)</span> (since we've already proven that <span class="process-math">\(\cont(f) = 1\)</span>).</div>
 </div> <div class="para logical">
-<div class="para">So <span class="process-math">\(ab = MN\)</span> and thus by dividing we arrive at</div>
+<div class="para">We have</div>
 <div class="displaymath process-math">
 \begin{equation*}
-l(x) m(x) = f(x).
+\phi((xI_n - A) \cdot \sum_i v_i x^i) = \phi(\sum_i v_i x^{i+1} - \sum_i (Av_i) x^i) = \sum_i A^{i+1}(v_i) - \sum_i A^i(Av_i) = 0
 \end{equation*}
 </div>
-<div class="para">But <span class="process-math">\(f(x)\)</span> is irreducible in <span class="process-math">\(R[x]\text{.}\)</span> It follows that either <span class="process-math">\(l\)</span> or <span class="process-math">\(m\)</span> must be a unit in <span class="process-math">\(R[x]\)</span> (i.e., a unit in <span class="process-math">\(R\)</span>) and it follows that either <span class="process-math">\(g(x)\)</span> or <span class="process-math">\(h(x)\)</span> is a unit in <span class="process-math">\(F[x]\text{.}\)</span> This proves <span class="process-math">\(f(x)\)</span> is irreducible in <span class="process-math">\(F[x]\text{.}\)</span>
+<div class="para">and hence <span class="process-math">\(\ker(\phi) \supseteq \im(xI_n - A)\text{.}\)</span> By the <span class="process-math">\(0\)</span>-th isomorphism theorem, there is an induced <span class="process-math">\(F[x]\)</span>-module homomorphism</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\ov{\phi}: \frac{F^n[x]}{\im(xI_n - A)}  \onto F^n_A
+\end{equation*}
 </div>
-</div> <div class="para">(<span class="process-math">\(\Leftarrow\)</span>) Say <span class="process-math">\(f(x) \in R[x]\)</span> irreducible in <span class="process-math">\(F[x]\)</span> and <span class="process-math">\(\cont(f) = 1\text{.}\)</span> If <span class="process-math">\(f = q(x) r(x)\)</span> with <span class="process-math">\(q,r \in R[x]\)</span> then, since <span class="process-math">\(f\)</span> is irreducible in <span class="process-math">\(F[x]\text{,}\)</span> one of <span class="process-math">\(q\)</span> or <span class="process-math">\(r\)</span> must be a constant. But since <span class="process-math">\(\cont(f) = 1\text{,}\)</span> this constant must be <span class="process-math">\(1\text{.}\)</span>
-</div></article><span class="incontext"><a href="sec-irrpoly.html#proof-110" class="internal">in-context</a></span>
+<div class="para">induced by <span class="process-math">\(\phi\text{,}\)</span> and it is onto since <span class="process-math">\(\phi\)</span> is onto. It remains to show this map is one-to-one.</div>
+</div> <div class="para logical">
+<div class="para">Since <span class="process-math">\(\overline{\phi}\)</span> is <span class="process-math">\(F[x]\)</span>-linear it is certainly <span class="process-math">\(F\)</span>-linear. Since <span class="process-math">\(\dim_F(F^n_A) = n\text{,}\)</span> to prove <span class="process-math">\(\overline{\phi}\)</span> is one-to-one, it suffices to prove <span class="process-math">\(\dim_F \frac{F^n[x]}{\im(xI_n - A)} \leq n\)</span> (by Rank-Nullity). I claim the images of the standard basis <span class="process-math">\(e_1, \dots, e_n\)</span> in <span class="process-math">\(\frac{F^n[x]}{\im(xI_n - A)}\)</span> span it as an <span class="process-math">\(F\)</span>-vector space. To see this, note that <span class="process-math">\(x^je_i\text{,}\)</span> for <span class="process-math">\(1 \leq i \leq n\text{,}\)</span> <span class="process-math">\(j \geq 0\)</span> span <span class="process-math">\(F^n[x]\)</span> as an <span class="process-math">\(F\)</span>-vector space, and hence they span the quotient. It thus suffices to show <span class="process-math">\(\overline{x^j e_i}\)</span> lies in the span of <span class="process-math">\(\overline{e_1}, \dots, \overline{e_n}\)</span> in <span class="process-math">\(\frac{F^n[x]}{\im(xI_n - A)}\)</span> for all <span class="process-math">\(i\)</span> and <span class="process-math">\(j\text{.}\)</span> We have <span class="process-math">\(x^{j-1} \cdot (A - x) e_i \in \im(xI_n - A)\)</span> and thus</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\overline{x^j e_i} = \overline{x^{j-1} Ae_i}
+\end{equation*}
+</div>
+<div class="para">and by repeating this argument we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\overline{x^j e_i} =\overline{x^{j-1} Ae_i} = \overline{x^{j-2} A^2e_i} = \cdots =\overline{A^je_i} \in \Span_F(e_1, \dots, e_n).
+\end{equation*}
+</div>
+</div></article><span class="incontext"><a href="sec-rcf.html#proof-110" class="internal">in-context</a></span>
 </body>
 </html>
