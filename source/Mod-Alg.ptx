@@ -12062,27 +12062,36 @@
 
             <proof>
               <p>
-                We need to prove that every finite subset of <m>I \cup \{v\}</m> is linearly independent. Let <m>w_1, \dots, w_n</m> be a list of distinct elements of <m>I \cup \{v\}</m> and suppose <m>\sum_i c_i w_i = 0</m> for some <m>c_i \in F</m>. If <m>v \ne w_i</m> for all <m>i</m>, then <m>c_i = 0</m> for all <m>i</m> since <m>I</m> is linearly independent. Without loss, say <m>w_1 = v</m>. If <m>c_1 \ne 0</m>, then <m>v = \sum_{i \geq 2} c_1^{-1} c_i w_i \in \Span(I)</m>, contrary to the assumption. So we must have <m>c_1 =0</m>. But then <m>c_i = 0</m> for all <m>i \geq 2</m> by the same reasoning as in the first case.
+                We need to prove that every finite subset of <m>I \cup \{v\}</m> is linearly independent. 
+                Let <m>w_1, \dots, w_n</m> be a list of distinct elements of <m>I \cup \{v\}</m> and suppose <m>\sum_i c_i w_i = 0</m> for some <m>c_i \in F</m>. 
+                If <m>v \ne w_i</m> for all <m>i</m>, then <m>c_i = 0</m> for all <m>i</m> since <m>I</m> is linearly independent. 
+                Without loss, say <m>w_1 = v</m>. 
+                If <m>c_1 \ne 0</m>, then <m>v = \sum_{i \geq 2} c_1^{-1} c_i w_i \in \Span(I)</m>, contrary to the assumption. 
+                So we must have <m>c_1 =0</m>. 
+                But then <m>c_i = 0</m> for all <m>i \geq 2</m> by the same reasoning as in the first case.
               </p>
             </proof>
           </lemma>
 
           <remark>
             <p>
-              The only place where the fact that the ring of scalars is a field is to know that <m>c_1</m> has a multiplicative inverse when <m>c_1 \ne 0</m>. In particular, the Lemma holds when <m>F</m> is a division ring too.
+              The only place where the fact that the ring of scalars is a field is to know that <m>c_1</m> has a multiplicative inverse when <m>c_1 \ne 0</m>. 
+              In particular, <xref ref="lem-linear-independence-and-span"/> holds when <m>F</m> is a division ring too.
             </p>
           </remark>
 
           <theorem xml:id="thm-finding-intermediate-bases"><title>Finding Intermediate Bases</title>
             <statement>
               <p>
-                Let <m>V</m> be an <m>F</m>-vector space and assume <m>I \subseteq S \subseteq V</m> are subsets such that <m>I</m> is linearly independent and <m>S</m> spans <m>V</m>. Then there is a subset <m>B</m> such that <m>I \subseteq B \subseteq S</m> and <m>B</m> is a basis of <m>V.</m>
+                Let <m>V</m> be an <m>F</m>-vector space and assume <m>I \subseteq S \subseteq V</m> are subsets such that <m>I</m> is linearly independent and <m>S</m> spans <m>V</m>. 
+                Then there is a subset <m>B</m> such that <m>I \subseteq B \subseteq S</m> and <m>B</m> is a basis of <m>V.</m>
               </p>
             </statement>
 
             <proof>
               <p>
-                Let <m>\cP</m> denote the collection of all subsets <m>X</m> of <m>V</m> such that <m>I\subseteq X \subseteq S</m> and <m>X</m> is linearly independent. We make <m>\cP</m> into a poset by the order relation <m>\subseteq</m>, set containment.
+                Let <m>\cP</m> denote the collection of all subsets <m>X</m> of <m>V</m> such that <m>I\subseteq X \subseteq S</m> and <m>X</m> is linearly independent. 
+                We make <m>\cP</m> into a poset by the order relation <m>\subseteq</m>, set containment.
               </p>
   
               <p>
@@ -12090,15 +12099,35 @@
               </p>
   
               <p>
-                Let <m>\cT</m> be any totally ordered subset of <m>\cP</m>. If <m>\cT</m> is empty, then <m>\cT</m> is (vacuously) bounded above by <m>I</m>.
+                Let <m>\cT</m> be any totally ordered subset of <m>\cP</m>. 
+                If <m>\cT</m> is empty, then <m>\cT</m> is (vacuously) bounded above by <m>I</m>.
               </p>
   
               <p>
-                Assume <m>\cT</m> is non-empty. Let <m>Z = \bigcup_{Y \in \cT} Y</m>. I claim <m>Z \in \cP</m>. Given <m>z_1, \dots, z_m \in Z</m>, for each <m>i</m> we have <m>z_i \in Y_i</m> for some <m>Y_{i} \in \cT</m>. Since <m>\cT</m> is totally ordered, one of <m>Y_1, \dots, Y_m</m> contains all the others and hence it contains all the <m>z_i</m>'s. Since each <m>Y_i</m> is linearly independent, this shows <m>z_1, \dots, z_m</m> are linearly independent. We have shown that every finite subset of <m>Z</m> is linearly independent, and hence <m>Z</m> is linearly independent. Since <m>\cT</m> is non-empty, <m>Z \supseteq I</m>. Since each member of <m>\cT</m> is contained in <m>S</m>, <m>Z \subseteq S</m>. Thus, <m>Z \in \cP</m>, and it is clearly an upper bound for <m>\cT</m>.
+                Assume <m>\cT</m> is non-empty.
+                Let <m>Z = \bigcup_{Y \in \cT} Y</m>. 
+                I claim <m>Z \in \cP</m>. 
+                Given <m>z_1, \dots, z_m \in Z</m>, for each <m>i</m> we have <m>z_i \in Y_i</m> for some <m>Y_{i} \in \cT</m>. 
+                Since <m>\cT</m> is totally ordered, one of <m>Y_1, \dots, Y_m</m> contains all the others and hence it contains all the <m>z_i</m>'s. 
+                Since each <m>Y_i</m> is linearly independent, this shows <m>z_1, \dots, z_m</m> are linearly independent. 
+                We have shown that every finite subset of <m>Z</m> is linearly independent, and hence <m>Z</m> is linearly independent. 
+                Since <m>\cT</m> is non-empty, <m>Z \supseteq I</m>. 
+                Since each member of <m>\cT</m> is contained in <m>S</m>, <m>Z \subseteq S</m>. 
+                Thus, <m>Z \in \cP</m>, and it is an upper bound for <m>\cT</m>.
               </p>
   
               <p>
-                We may thus apply <xref text="title" ref="lem-zorn"/> to conclude that <m>\cP</m> has at least one maximal element, <m>B</m>. I claim <m>B</m> is a basis of <m>V</m>. Note that <m>B</m> is linearly independent and <m>I \subseteq B \subseteq S</m> by construction. We need to show that it spans <m>V</m>. Suppose not. Since <m>S</m> spans <m>V</m>, if <m>S \subseteq \Span(B)</m>, then <m>\Span(B)</m> would have to be all of <m>V</m>. (For note that if <m>\Span(S) = V</m> and <m>S \subseteq \Span(B)</m>, then for any <m>v \in V</m> we may write <m>v = \sum_i c_i s_i</m> for <m>s_i \in S</m> and <m>s_i = \sum_j a_{i,j} b_{i,j}</m> with <m>b_{i,j} \in B</m> and hence <m>v= \sum_{i,j} c_i a_{i,j} b_{i,j}</m>, which implies <m>\Span(B) = V</m>.) Since we are assuming <m>\Span(B) \ne V</m>, there must be at least one <m>v \in S</m> such that <m>v \notin \Span(B)</m>. Set <m>X := B \cup \{v\}</m>. Clearly, <m>I \subset X \subseteq S</m> and, by Lemma , <m>X</m> is linearly independent. This shows that <m>X</m> is an element of <m>\cP</m> that is strictly bigger than <m>B</m>, contrary to the maximality of <m>B</m>. So, <m>B</m> must span <m>V</m> and hence it is a basis.
+                We may thus apply <xref text="title" ref="lem-zorn"/> to conclude that <m>\cP</m> has at least one maximal element, <m>B</m>. 
+                I claim <m>B</m> is a basis of <m>V</m>. 
+                Note that <m>B</m> is linearly independent and <m>I \subseteq B \subseteq S</m> by construction. 
+                We need to show that it spans <m>V</m>. 
+                Suppose not. 
+                Since <m>S</m> spans <m>V</m>, if <m>S \subseteq \Span(B)</m>, then <m>\Span(B)</m> would have to be all of <m>V</m>. 
+                (For note that if <m>\Span(S) = V</m> and <m>S \subseteq \Span(B)</m>, then for any <m>v \in V</m> we may write <m>v = \sum_i c_i s_i</m> for <m>s_i \in S</m> and <m>s_i = \sum_j a_{i,j} b_{i,j}</m> with <m>b_{i,j} \in B</m> and hence <m>v= \sum_{i,j} c_i a_{i,j} b_{i,j}</m>, which implies <m>\Span(B) = V</m>.) 
+                Since we are assuming <m>\Span(B) \ne V</m>, there must be at least one <m>v \in S</m> such that <m>v \notin \Span(B)</m>. 
+                Set <m>X := B \cup \{v\}</m>. Then <m>I \subset X \subseteq S</m> and, by <xref ref="lem-linear-independence-and-span"/>, <m>X</m> is linearly independent. 
+                This shows that <m>X</m> is an element of <m>\cP</m> that is strictly bigger than <m>B</m>, contrary to the maximality of <m>B</m>. 
+                So, <m>B</m> must span <m>V</m> and hence it is a basis.
               </p>
             </proof>
           </theorem>
@@ -12107,53 +12136,61 @@
 
             <statement>
               <p>
-                Every <m>F</m>-vector space <m>V</m> has a basis. Moreover, every linearly independent subset of <m>V</m> is contained in some basis, and every set of vectors that spans <m>V</m> contains some basis.
+                Every <m>F</m>-vector space <m>V</m> has a basis. 
+                Moreover, every linearly independent subset of <m>V</m> is contained in some basis, and every set of vectors that spans <m>V</m> contains some basis.
               </p>
             </statement>
 
             <proof>
               <p>
-                For this first part, apply the theorem with <m>I = \emptyset</m> and <m>S = V</m>. For the second and third, use <m>I</m> arbitrary and <m>S = V</m> and <m>I = \emptyset</m> and <m>S</m> arbitrary, respectively.
+                For this first part, apply the <xref ref="thm-finding-intermediate-bases"/> with <m>I = \emptyset</m> and <m>S = V</m>. For the second and third, use <m>I</m> arbitrary and <m>S = V</m> and <m>I = \emptyset</m> and <m>S</m> arbitrary, respectively.
               </p>
             </proof>
           </corollary>
 
-          <remark>
+          <example>
             <p>
-              <m>\R</m> has a basis as a <m>\Q</m>-Vector Space <m>\R</m> has a basis as a <m>\Q</m>-vector space. Just don't ask me what it looks like.
+              <m>\R</m> has a basis as a <m>\Q</m>-Vector Space <m>\R</m> has a basis as a <m>\Q</m>-vector space. 
+              Just don't ask me what it looks like.
             </p>
-          </remark>
+          </example>
 
           <corollary xml:id="cor-basis-of-subspaces-extent"><title>Basis of Subspaces Extent</title>
             <statement>
               <p>
-                Suppose <m>F</m> is a field an <m>W</m> is a subspace (i.e., submodule) of the <m>F</m>-vector space (i.e., <m>F</m>-module) <m>V</m>. Then every basis of <m>W</m> extends to a basis of <m>V</m> - that is, if <m>B</m> is a basis of <m>W</m> then there exists a basis <m>\tilde{B}</m> of <m>V</m> such that <m>B</m> is a subset of <m>\tilde{B}</m>.
+                Suppose <m>F</m> is a field an <m>W</m> is a subspace (i.e., submodule) of the <m>F</m>-vector space (i.e., <m>F</m>-module) <m>V</m>. 
+                Then every basis of <m>W</m> extends to a basis of <m>V</m> - that is, if <m>B</m> is a basis of <m>W</m> then there exists a basis <m>\tilde{B}</m> of <m>V</m> such that <m>B</m> is a subset of <m>\tilde{B}</m>.
               </p>
             </statement>
 
             <proof>
               <p>
-                Just apply the Theorem with <m>B = I</m> and <m>S = V</m>. (Since <m>B</m> is a basis of <m>W</m>, it is linearly independent, and observe that <m>B</m> remains linearly independent when regarded as a subset of <m>V</m>.)
+                Apply <xref ref="cor-every-vector-space-has-a-basis"/> with <m>B = I</m> and <m>S = V</m>. 
+                (Since <m>B</m> is a basis of <m>W</m>, it is linearly independent, and observe that <m>B</m> remains linearly independent when regarded as a subset of <m>V</m>.)
               </p>
             </proof>
           </corollary>
 
           <remark>
             <p>
-              It is <em>not</em> true that, with the notation of the previous Corollary, if <m>\tilde{B}</m> is a basis of <m>V</m> then there exists a basis <m>B</m> of <m>W</m> such that <m>B</m> is a subset of <m>\tilde{B}</m>. For instance, take <m>F = \R</m>, <m>V = \R^2</m>, <m>\tilde{B} = \{(1,0), (0,1)\}</m> and <m>W</m> the subspace spanned by <m>(1,1)</m>.
+              It is <em>not</em> true that, with the notation of <xref ref="cor-basis-of-subspaces-extent"/>, if <m>\tilde{B}</m> is a basis of <m>V</m> then there exists a basis <m>B</m> of <m>W</m> such that <m>B</m> is a subset of <m>\tilde{B}</m>. 
+              For instance, take <m>F = \R</m>, <m>V = \R^2</m>, <m>\tilde{B} = \{(1,0), (0,1)\}</m> and <m>W</m> the subspace spanned by <m>(1,1)</m>.
             </p>
           </remark>
 
           <lemma xml:id="lem-exchange-lemma"><title>Exchange Lemma</title>
             <statement>
               <p>
-                Let <m>F</m> be a field, let <m>B</m> be a basis of an <m>F</m>-vector space <m>V</m>, and let <m>C</m> be any finite set of <m>m</m> linearly independent vectors in <m>V</m>. Then there are distinct vectors <m>v_1, \dots, v_m</m> in <m>B</m>, such that <m>(B \setminus \{v_1, \dots, v_m\}) \cup C</m> is also a basis <m>V</m>.
+                Let <m>F</m> be a field, let <m>B</m> be a basis of an <m>F</m>-vector space <m>V</m>, and let <m>C</m> be any finite set of <m>m</m> linearly independent vectors in <m>V</m>. 
+                Then there are distinct vectors <m>v_1, \dots, v_m</m> in <m>B</m>, such that <m>(B \setminus \{v_1, \dots, v_m\}) \cup C</m> is also a basis <m>V</m>.
               </p>
             </statement>
 
             <proof>
               <p>
-                Let <m>C = \{w_1, \dots, w_m\}</m>. As noted, the sublemma establishes the case <m>w = 1</m> of the Exchange Lemma. The general case proceeds recursively:
+                Let <m>C = \{w_1, \dots, w_m\}</m>. 
+                As noted, the sublemma establishes the case <m>w = 1</m> of the Exchange Lemma. 
+                The general case proceeds recursively:
               </p>
   
               <p>
@@ -12177,21 +12214,24 @@
               </p>
             </proof>
           </lemma>
-          
-        </section>
 
-        <section xml:id="sec-ranknul"><title>Dimension and Rank-Nullity</title>
+          <remark>
+            <p>
+              The <xref text="title" ref="lem-exchange-lemma"/> also holds for any division ring (using the exact same proof).
+            </p>
+          </remark>
 
           <definition xml:id="def-dimension-vector-space"><title>Dimension</title>
             <statement>
               <p>
-                The <em>dimension</em> of a vector space <m>V</m>, denoted <m>\dim_F(V)</m> or <m>\dim(V)</m>, is the cardinality of any of its bases. This is the same as the rank of <m>V</m> as an <m>F</m>-module.
+                The <em>dimension</em> of a vector space <m>V</m>, denoted <m>\dim_F(V)</m> or <m>\dim(V)</m>, is the cardinality of any of its bases. 
+                This is the same as the rank of <m>V</m> as an <m>F</m>-module.
+                A vector space is <term>finite dimensional</term> if there is spanned by a finite subset.
               </p>
             </statement>
           </definition>
 
           <theorem xml:id="thm-dimension-theorem"><title>Dimension Theorem</title>
-
             <statement>
               <p>
                 Any two bases of the same vector space have the same dimension.
@@ -12205,12 +12245,12 @@
   
               <p>
                 Suppose <m>F</m> is a field and <m>V</m> is a finite dimensional <m>F</m>-vector space. 
-                Then it has a finite basis <m>B</m>. 
-                Let <m>B'</m> be any other basis. 
+                Then it has a finite basis <m>B</m>.
+                Let <m>B'</m> be any other basis.
                 (Note that we cannot assume <m>B'</m> is necessarily finite.) 
                 For any non-negative integer <m>m</m>, suppose <m>C</m> is any <m>m</m>-element subset of <m>B'</m>. 
                 Then <m>C</m> is linearly independent and so, by the Exchange Lemma, there is an <m>m</m>-element subset <m>D</m> of <m>B</m> such that <m>(B \setminus D) \cup C</m> is also a basis of <m>V</m>. 
-                In particular, <m>m \leq |B|</m>. 
+                In particular, <m>m \leq |B|</m>.
                 Since this holds for all <m>m</m>, we conclude <m>|B|' \leq |B|</m>. 
                 By symmetry, <m>|B| \leq |B|'</m> and hence <m>|B|= |B'|</m>.
               </p>
@@ -12224,61 +12264,6 @@
             </p>
 
           </example>
-
-          <lemma xml:id="lem-sublemma"><title>SubLemma</title>
-
-            <statement>
-              <p>
-                Let <m>F</m> be a field. Given a basis <m>B</m> of an <m>F</m>-vector space <m>V</m> and vector <m>w \in V</m>, let <me>w = a_1 v_1 + \cdots + a_n v_n,</me>for <m>n \geq 0</m>, <m>0 \ne a_i \in F</m> and <m>v_i \in B</m> for all <m>i</m>, be the unique way of writing <m>w</m> as a linear combination of some of the members of <m>B</m> using non-zero coefficients. Then for any <m>1 \leq i \leq n</m>, we have that <me>B' := (B \setminus \{v_i\}) \cup \{w\}</me> is also a basis of <m>V</m>.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                If <m>w = 0</m> the sublemma is vacously true since <m>n = 0</m> in that case.
-              </p>
-  
-              <p>
-                For <m>w \ne 0</m>, we may as well assume (to simplify the notation) that <m>i =1</m>. We need to show <m>B' = (B \setminus \{v_1\}) \cup \{w\}</m> is linearly independent and spans.
-              </p>
-  
-              <p>
-                By solving for <m>v_1</m> (as we may since <m>a_1 \ne 0</m>) we obtain 
-                <me>
-                  v_1 = b_1 w + \sum_{j \geq 2} b_j v_j 
-                </me> 
-                for some <m>b_j \in F</m> and hence <m>v_1 \in \Span(B')</m>. Given any <m>u \in V</m>, since <m>B</m> spans, we have <m>u = \sum_i c_i u_i</m> for some <m>c_i \in F, u_i \in B</m>. If one of <m>u_i</m>'s is equal to <m>v_1</m>, then we may use the previous equation to replace the term <m>c_i u_i</m> with a linear combination of members of <m>B'</m>. This proves that <m>u \in \Span(B')</m>. So <m>B'</m> spans <m>V</m>.
-              </p>
-  
-              <p>
-                To show <m>B'</m> is linearly indepedent, suppose <me>
-                  cw + \sum_{i=1}^p c_i u_i= 0
-                  </me> for some <m>c, c_i \in F</m> and some <m>u_i \in (B \setminus \{v_1\})</m>. If <m>c \ne 0</m>, then we have <me>
-                  w = \sum_i d_i u_i
-                  </me> for some <m>d_i</m>. But this contradicts the uniqueness of <m>w = a_1 v_1 + \cdots + a_n v_n</m> (for note that <m>u_i \ne v_1</m> for all <m>i</m>). So we must have <m>c = 0</m>. But then we must also have <m>c_i = 0</m> for all <m>i</m> since <m>B</m> is linearly independent. This proves <m>B'</m> is linearly independent. This completes the proof of the sublemma.
-              </p>
-            </proof>
-          </lemma>
-
-          <example xml:id="exe-sublemma-and-r3"><title>SubLemma and <m>\R^3</m></title>
-
-            <p>
-              For a visual interpretation of the sublemma, suppose <m>V = \R^3</m> and <m>B =\{i,j,k\}</m> is its standard basis. Given <m>w \in\R^3</m>, if <m>w</m> is a non-zero multiple of one of the members of <m>B</m>, say <m>w = r i</m> for <m>r \ne 0</m>, then <m>\{w, j , k\}</m> is also basis of <m>\R^3</m>. If <m>w</m> lies one of the coordinate planes but is not on a axis, say <m>w = ri + s j</m> for <m>r, s \ne 0</m>, then both <m>\{w,j,k\}</m> and <m>\{i,w,k\}</m> are bases. If <m>w</m> lies on none of the coordinate planes, then <m>w = ri + s j + tk</m> for <m>r, s, t \ne 0</m> and each of <m>\{w,j,k\}</m>, <m>\{i,w,k\}</m> and <m>\{i,j,w\}</m> is a basis. So, the sublemma is saying that we can swap in <m>w</m> for any of the basis elements that occur with a non-zero coefficient in the unique expression of <m>w</m> as a linear combination of the basis. (This includes the case when <m>w = 0</m>, since no such basis vectors occur.)
-            </p>
-
-          </example>
-
-          <remark>
-            <p>
-              This completes the proof that, for a commutative ring <m>R</m> with <m>1 \ne 0</m>, any two finite bases of a free <m>R</m>-module have the same cardinality. (In the proof of this fact given above, we had assumed it held for fields.)
-            </p>
-          </remark>
-
-          <remark>
-            <p>
-              The Exchange Lemma also holds for any division ring (using the exact same proof).
-            </p>
-          </remark>
 
           <example xml:id="exe-rn"><title><m>\R^\N</m></title>
             
@@ -12374,16 +12359,24 @@
 
         <section xml:id="sec-basics"><title>Basics</title>
 
-          <remark><p>Recall that when <m>F</m> is a field an <m>F</m>-module homomorphism is called a <m>F</m>-linear transformation. Since every <m>F</m>-vector space has a basis, every linear transformation between finite dimensional vector spaces may be represented by a matrix, as we noted before.</p></remark>
+          <remark>
+            <p>
+              Recall that when <m>F</m> is a field an <m>F</m>-module homomorphism is called a <m>F</m>-linear transformation. 
+              Since every <m>F</m>-vector space has a basis, every linear transformation between finite dimensional vector spaces may be represented by a matrix, as we noted before.
+            </p>
+          </remark>
 
           <definition xml:id="def-matrix-of-free-module-homomorphism"><title>Matrix of Free Module Homomorphism</title>
             <statement>
               <p>
-                Let <m>R</m> be a non-zero commutative ring and let <m>V,W</m>, be <m>R</m>-modules of finite rank <m>n</m> and <m>m</m>, respectively. (For instance, <m>R</m> could be a field and <m>V</m> and <m>W</m> could be arbitrary finite dimensional vector spaces.) Let <m>B=\{b_1, \dots, b_n\}</m> and <m>C=\{c_1, \dots, c_m\}</m> be <em>ordered</em> bases of <m>V</m> and <m>W</m>. 
+                Let <m>R</m> be a non-zero commutative ring and let <m>V,W</m>, be <m>R</m>-modules of finite rank <m>n</m> and <m>m</m>, respectively. 
+                (For instance, <m>R</m> could be a field and <m>V</m> and <m>W</m> could be arbitrary finite dimensional vector spaces.) 
+                Let <m>B=\{b_1, \dots, b_n\}</m> and <m>C=\{c_1, \dots, c_m\}</m> be <em>ordered</em> bases of <m>V</m> and <m>W</m>. 
                 <ol>
                   <li>
                     <p>
-                      For each <m>v \in V</m>, let <m>[v]^B</m> denote the unique column vector <m>\begin{bmatrix} r_1 \\ \vdots \\ r_n \end{bmatrix}</m> such that <m>v = \sum_i r_i b_i</m>. Define <m>[w]^C</m> for <m>w \in W</m> similarly. 
+                      For each <m>v \in V</m>, let <m>[v]^B</m> denote the unique column vector <m>\begin{bmatrix} r_1 \\ \vdots \\ r_n \end{bmatrix}</m> such that <m>v = \sum_i r_i b_i</m>. 
+                      Define <m>[w]^C</m> for <m>w \in W</m> similarly. 
                     </p>
                   </li>
 
@@ -12399,52 +12392,61 @@
           </definition>
 
           <example xml:id="exe-r-vector-space-of-polynomials-p_n"><title><m>\R</m>-Vector Space of Polynomials (<m>P_n</m>)</title>
-
             <p>
-              Let <m>P_n</m> denote the the <m>\R</m>-vector space of polynomials of degree at most <m>n</m> (including the zero polynomial) and consider the linear transformation <m>\phi :P_3\to P_2</m> given by <m>\phi(f)=f'</m>, i.e. taking the derivative. Take <m>B=\{1,x,x^2,x^3\}</m> for an ordered basis of <m>P_3</m> and <m>C = \{1,x,x^2\}</m> for an ordered basis of <m>P_2</m>. Then for <m>p(x) = 5 + 3x + 2x^2 - 7x^3</m> we have <me>
-              [p(x)]^B = \begin{bmatrix} 5 \\ 3 \\ 2 \\ -7\end{bmatrix}
-              </me> and <me>
-              [\phi]_B^C= 
-              \begin{bmatrix}
-              0 &amp; 1 &amp;0 &amp; 0 \\
-              0 &amp;0 &amp; 2 &amp; 0 \\
-              0&amp; 0&amp; 0&amp; 3 \\
-              \end{bmatrix}.
-              </me> We have <me>
-              [\phi]_B^C \cdot [p(x)]^B =  
-              \begin{bmatrix} 3 \\ 4 \\ -21 \end{bmatrix} = [p'(x)]^C = [\phi(p(x))]^C
-              </me> confirming in this example one of the assertions of the Lemma.
+              Let <m>P_n</m> denote the the <m>\R</m>-vector space of polynomials of degree at most <m>n</m> (including the zero polynomial) and consider the linear transformation <m>\phi :P_3\to P_2</m> given by <m>\phi(f)=f'</m>, i.e. taking the derivative. 
+              Take <m>B=\{1,x,x^2,x^3\}</m> for an ordered basis of <m>P_3</m> and <m>C = \{1,x,x^2\}</m> for an ordered basis of <m>P_2</m>. 
+              Then for <m>p(x) = 5 + 3x + 2x^2 - 7x^3</m> we have 
+              <me>
+                [p(x)]^B = \begin{bmatrix} 5 \\ 3 \\ 2 \\ -7\end{bmatrix}
+              </me> 
+              and 
+              <me>
+                [\phi]_B^C= 
+                \begin{bmatrix}
+                0 &amp; 1 &amp;0 &amp; 0 \\
+                0 &amp;0 &amp; 2 &amp; 0 \\
+                0&amp; 0&amp; 0&amp; 3 \\
+                \end{bmatrix}.
+              </me> 
+              We have 
+              <me>
+                [\phi]_B^C \cdot [p(x)]^B =  
+                \begin{bmatrix} 3 \\ 4 \\ -21 \end{bmatrix} = [p'(x)]^C = [\phi(p(x))]^C
+              </me> 
+              confirming in this example one of the assertions of the Lemma.
             </p>
   
             <p>
-              Let <m>\psi: P_2 \to P_3</m> be the linear map <m>\psi(q(x)) = \int_0^x q(t) \, dt</m>. Then <me>
-              [\psi]_C^B= 
-              \begin{bmatrix}
-              0 &amp; 0 &amp;0  \\
-              1 &amp; 0 &amp; 0 \\
-              0&amp; 1/2&amp;  0 \\
-              0 &amp; 0  &amp; 1/3 \\
-              \end{bmatrix}.
-              </me> Note that <me>
-              [\phi]_B^C \cdot [\psi]_C^B = I_3  = [\phi \circ \psi]_C^C
-              </me> and <me>
-              [\psi]_C^B \cdot [\phi]_B^C =
-              \begin{bmatrix}
-              0 &amp; 0 &amp;0 &amp;0 \\
-              0 &amp; 1 &amp; 0 &amp;0\\
-              0&amp; 0&amp; 1&amp; 0 \\
-              0 &amp; 0  &amp; 0 &amp; 1\\
-              \end{bmatrix} = [\psi \circ \phi]_B^B
-              </me> as predicted by .
+              Let <m>\psi: P_2 \to P_3</m> be the linear map <m>\psi(q(x)) = \int_0^x q(t) \, dt</m>. 
+              Then 
+              <me>
+                [\psi]_C^B= 
+                \begin{bmatrix}
+                0 &amp; 0 &amp;0  \\
+                1 &amp; 0 &amp; 0 \\
+                0&amp; 1/2&amp;  0 \\
+                0 &amp; 0  &amp; 1/3 \\
+                \end{bmatrix}.
+                </me> Note that <me>
+                [\phi]_B^C \cdot [\psi]_C^B = I_3  = [\phi \circ \psi]_C^C
+                </me> and <me>
+                [\psi]_C^B \cdot [\phi]_B^C =
+                \begin{bmatrix}
+                0 &amp; 0 &amp;0 &amp;0 \\
+                0 &amp; 1 &amp; 0 &amp;0\\
+                0&amp; 0&amp; 1&amp; 0 \\
+                0 &amp; 0  &amp; 0 &amp; 1\\
+                \end{bmatrix} = [\psi \circ \phi]_B^B
+              </me> 
+              as predicted by .
             </p>
-  
-
           </example>   
 
           <example xml:id="exe-identity-automorphism-of-free-r-module"><title>Identity Automorphism of Free <m>R</m>-Module</title>
             <p>
-              If <m>\id_V: V \to V</m> is the identity automorphism of an <m>n</m>-dimensional free <m>R</m>-module <m>V</m>, then for any basis <m>B</m> of <m>V</m> we have <m>\id_V(b_i) = b_i</m> for all <m>i</m> and hence <me>
-              [\id_V]^B_B = I_n.
+              If <m>\id_V: V \to V</m> is the identity automorphism of an <m>n</m>-dimensional free <m>R</m>-module <m>V</m>, then for any basis <m>B</m> of <m>V</m> we have <m>\id_V(b_i) = b_i</m> for all <m>i</m> and hence 
+              <me>
+                [\id_V]^B_B = I_n.
               </me>
             </p>
           </example>
@@ -12518,7 +12520,7 @@
 
         <section xml:id="sec-cob"><title>Change of Basis</title>
 
-          <definition xml:id="def-change-of-basis-matrix"><title>Change of Basis Matrix (CoB)</title>
+          <definition xml:id="def-change-of-basis-matrix"><title>Change of Basis Matrix</title>
             <statement>
               <p>
                 Let <m>V</m> be a finite rank free module over a commutative ring <m>R</m>, and let <m>B</m> and <m>B'</m> be bases of <m>V</m>. Let <m>\id_V</m> be the identity map on <m>V</m>. Then <m>[\id_V]_B^{B'}</m> is called the <em>change of basis matrix</em> from <m>B</m> to <m>B'.</m>
@@ -12535,18 +12537,26 @@
           </remark>
 
           <example xml:id="exe-cob-matrix-and-standard-free-module"><title>CoB Matrix and Standard Free Module</title>
-
             <p>
-              Say <m>V = R^n</m>, <m>B</m> is the standard basis (so <m>b_i</m> is a column vector with a <m>1</m> in the <m>i</m>-th position and <m>0</m>'s elsewhere). Note that <m>[v]^B = v</m> for all <m>v</m>.
+              Say <m>V = R^n</m>, <m>B</m> is the standard basis (so <m>b_i</m> is a column vector with a <m>1</m> in the <m>i</m>-th position and <m>0</m>'s elsewhere). 
+              Note that <m>[v]^B = v</m> for all <m>v</m>.
             </p>
   
             <p>
-              Let <m>B' = \{b'_1, \dots, b'_b\}</m> be any other basis of <m>V</m>. Then <m>[b'_i]^B = b_i</m> and so the change of basis matrix <m>[\id_V]_{B'}^{B}</m> satisfies, on the one hand, <me>[\id_V]_{B'}^{B} [b'_i]^{B'}=[\id_V]_{B'}^{B} b_i = \text{the $i$-th column of $[\id_V]_{B'}^{B}$}</me> and, on the other hand, <me>[\id_V]_{B'}^{B} [b'_i]^{B'}=[b'_i]^B  = b'_i.</me> That is, <m>[\id_V]_{B'}^B</m> is the matrix whose columns are <m>b_1', \dots, b_n'</m>.
+              Let <m>B' = \{b'_1, \dots, b'_b\}</m> be any other basis of <m>V</m>. 
+              Then <m>[b'_i]^B = b_i</m> and so the change of basis matrix <m>[\id_V]_{B'}^{B}</m> satisfies, on the one hand, 
+              <me>
+                [\id_V]_{B'}^{B} [b'_i]^{B'}=[\id_V]_{B'}^{B} b_i = \text{the $i$-th column of $[\id_V]_{B'}^{B}$}
+              </me> 
+              and, on the other hand, 
+              <me>
+                [\id_V]_{B'}^{B} [b'_i]^{B'}=[b'_i]^B  = b'_i.
+              </me> 
+              That is, <m>[\id_V]_{B'}^B</m> is the matrix whose columns are <m>b_1', \dots, b_n'</m>.
             </p>
           </example>
 
           <example xml:id="exe-cob-and-p_n"><title>CoB and <m>P_n</m></title>
-
             <p>
               Consider <m>V = P_2</m>, let <m>B = \{1, x, x^2\}</m> and <m>B' = \{1,x-2,(x-2)^2\}</m> be bases of <m>V</m>. We calculate the change of basis matrix. We have <me>\begin{aligned}\id_V(1) &amp;=1 ,\\
               \id_V(x) &amp;=2\cdot1+1\cdot(x-2), \\
@@ -12560,14 +12570,16 @@
               1 + x + x^2 = 7 + 5(x-2) + (x-2)^2.
               </me>
             </p>
-            
           </example>
 
           <proposition xml:id="prop-cob-and-identity"><title>CoB and Identity</title>
-
             <statement>
               <p>
-                Let <m>V, W</m> be finitely generated free modules over a commutative ring <m>R</m>, let <m>B</m> and <m>B'</m> be bases of <m>V</m>, let <m>C</m> and <m>C'</m> be bases of <m>W</m>, and let <m>f: V \to W</m> be a homomorphism. Then <me>\begin{equation}[f]_{B'}^{C'} = [\id_W]_C^{C'} [f]_B^C [\id_V]_{B'}^{B}.\end{equation}</me>
+                Let <m>V, W</m> be finitely generated free modules over a commutative ring <m>R</m>, let <m>B</m> and <m>B'</m> be bases of <m>V</m>, let <m>C</m> and <m>C'</m> be bases of <m>W</m>, and let <m>f: V \to W</m> be a homomorphism. 
+                Then 
+                <me>
+                  [f]_{B'}^{C'} = [\id_W]_C^{C'} [f]_B^C [\id_V]_{B'}^{B}.
+                </me>
               </p>
             </statement>
 
@@ -12579,25 +12591,34 @@
           </proposition>
 
           <definition xml:id="def-equivalent-matrices"><title>Equivalent Matrices</title>
-
             <statement>
               <p>
-                Two <m>m \times n</m> matrices <m>X</m> and <m>Y</m> are <em>equivalent</em> if there exists invertible matrices <m>P</m> and <m>Q</m> (of the appropriate sizes) so that <m>Y = PXQ</m>.
+                Two <m>m \times n</m> matrices <m>X</m> and <m>Y</m> are <em>conjugate</em> if there exists an invertible matrix <m>P</m> such that that <m>Y = PXP\inv</m>.
               </p>
             </statement>
           </definition>
 
-          <remark><p>With this bit of terminology, we can say that two matrices representing the same linear transformation with respect to a different pair of bases are equivalent. The converse is also true: If two matrices are equivalent, then they represent the same linear transformation with respect to different bases.</p></remark>
+          <remark>
+            <p>
+              With this bit of terminology, we can say that two matrices representing the same linear transformation with respect to a different pair of bases are conjugate. 
+              The converse is also true: 
+              If two matrices are conjugate, then they represent the same linear transformation with respect to different bases.
+            </p>
+          </remark>
 
           <theorem xml:id="thm-finding-equivalent-matrices"><title>Finding Equivalent Matrices</title>
-
             <statement>
               <p>
-                Let <m>F</m> be a field. Given an <m>F</m>-linear transformation <m>g: V \to U</m> between finite dimensional <m>F</m>-vector spaces <m>V</m> and <m>U</m>, there are bases <m>B</m> and <m>C</m> of <m>V</m> and <m>U</m>, respectively, such that <me>[g]_B^C = 
-                \begin{bmatrix}
-                I_r &amp; 0 \\
-                0 &amp; 0 \\
-                \end{bmatrix}</me> where <m>r = \rank(g)</m> and the <m>0</m>'s denote appropriately sized matrices with all <m>0</m> entries.
+                Let <m>F</m> be a field. 
+                Given an <m>F</m>-linear transformation <m>g: V \to U</m> between finite dimensional <m>F</m>-vector spaces <m>V</m> and <m>U</m>, there are bases <m>B</m> and <m>C</m> of <m>V</m> and <m>U</m>, respectively, such that 
+                <me>
+                  [g]_B^C = 
+                  \begin{bmatrix}
+                  I_r &amp; 0 \\
+                  0 &amp; 0 \\
+                  \end{bmatrix}
+                </me> 
+                where <m>r = \rank(g)</m> and the <m>0</m>'s denote appropriately sized matrices with all <m>0</m> entries.
               </p>
             </statement>
 
@@ -12607,19 +12628,30 @@
               </p>
   
               <p>
-                Start by picking an ordered basis <m>C' = \{w_1, \dots, w_r\}</m> of the image of <m>g</m>. For each <m>i</m> pick <m>v_i \in V</m> such that <m>g(v_i) = w_i</m> and set <m>B' = \{v_1, \dots, v_r\}</m>. Then pick a basis <m>B''</m> of the kernel of <m>g</m>. Let us list the elements of <m>B''</m> as <m>\{v_{r+1}, \dots, v_n\}</m>.
+                Start by picking an ordered basis <m>C' = \{w_1, \dots, w_r\}</m> of the image of <m>g</m>. 
+                For each <m>i</m> pick <m>v_i \in V</m> such that <m>g(v_i) = w_i</m> and set <m>B' = \{v_1, \dots, v_r\}</m>. 
+                Then pick a basis <m>B''</m> of the kernel of <m>g</m>. 
+                Let us list the elements of <m>B''</m> as <m>\{v_{r+1}, \dots, v_n\}</m>.
               </p>
   
               <p>
-                I claim that <m>B := B' \cup B'' = \{v_1, \dots, v_n\}</m> is a basis of <m>V</m>. (Note that <m>B' \cap B'' = \emptyset</m> since <m>g(v_i) = w_i \ne 0</m> for all <m>i</m> with <m>1 \leq i \leq r</m> and <m>g(v_i) = 0</m> for all <m>i &gt; r</m>.) Pick <m>v \in V</m>. Then, since <m>C'</m> spans the image of <m>g</m>, we have <m>g(v) = \sum_{i=1}^r a_i w_i</m> for some scalars <m>a_i \in F</m>. It follows that <m>v - \sum_{i=1}^r a_i v_i \in \ker(g)</m> and hence, since the kernel is spanned by <m>B''</m>, we have<me>v - \sum_{i=1}^r a_i v_i = \sum_{i=r+1}^n a_i v_i,</me>for some <m>a_{r+1}, \dots, a_n \in F</m>. We rearranging this equation, we conclude <m>v \in \Span(B)</m> and thus <m>B</m> spans <m>V</m>.
+                I claim that <m>B := B' \cup B'' = \{v_1, \dots, v_n\}</m> is a basis of <m>V</m>. 
+                (Note that <m>B' \cap B'' = \emptyset</m> since <m>g(v_i) = w_i \ne 0</m> for all <m>i</m> with <m>1 \leq i \leq r</m> and <m>g(v_i) = 0</m> for all <m>i &gt; r</m>.) 
+                Pick <m>v \in V</m>. 
+                Then, since <m>C'</m> spans the image of <m>g</m>, we have <m>g(v) = \sum_{i=1}^r a_i w_i</m> for some scalars <m>a_i \in F</m>. 
+                It follows that <m>v - \sum_{i=1}^r a_i v_i \in \ker(g)</m> and hence, since the kernel is spanned by <m>B''</m>, we have
+                <me>
+                  v - \sum_{i=1}^r a_i v_i = \sum_{i=r+1}^n a_i v_i,
+                </me>
+                for some <m>a_{r+1}, \dots, a_n \in F</m>. 
+                By rearranging this equation, we conclude <m>v \in \Span(B)</m> and thus <m>B</m> spans <m>V</m>.
               </p>
   
               <p>
-                Now say <m>\sum_{i=1}^n c_i v_i = 0</m> for some <m>c_i</m>'s in <m>F</m>. Since <m>g(v_i) = 0</m> for all <m>i &gt; r</m> and <m>g(v_i) = w_i</m> for all <m>i \leq r</m>, this gives that <m>0 = g(0) = g(\sum_{i=1}^n c_i v_i) = \sum_{i=1}^n c_i g(v_i) =\sum_{i=1}^r c_i w_i = 0</m>. Since <m>C'</m> is linearly independent, we have <m>c_i = 0</m> for <m>1 \leq i \leq r</m>. Going back to the original equation
-              </p>
-  
-              <p>
-                <m>\sum_{i=1}^n c_i v_i = 0</m>, we see that <m>\sum_{i=1}^r c_i v_i = 0</m> and hence <m>c_i=0</m> for all <m>i</m>, since <m>B''</m> is linearly independent.
+                Now say <m>\sum_{i=1}^n c_i v_i = 0</m> for some <m>c_i</m>'s in <m>F</m>. 
+                Since <m>g(v_i) = 0</m> for all <m>i &gt; r</m> and <m>g(v_i) = w_i</m> for all <m>i \leq r</m>, this gives that <m>0 = g(0) = g(\sum_{i=1}^n c_i v_i) = \sum_{i=1}^n c_i g(v_i) =\sum_{i=1}^r c_i w_i = 0</m>. 
+                Since <m>C'</m> is linearly independent, we have <m>c_i = 0</m> for <m>1 \leq i \leq r</m>. 
+                Going back to the original equation <m>\sum_{i=1}^n c_i v_i = 0</m>, we see that <m>\sum_{i=1}^r c_i v_i = 0</m> and hence <m>c_i=0</m> for all <m>i</m>, since <m>B''</m> is linearly independent.
               </p>
   
               <p>
@@ -12627,24 +12659,27 @@
               </p>
   
               <p>
-                By our construction, for any <m>v_i \in B</m> we have <me>
-                g(v_i) = \begin{cases}
+                By our construction, for any <m>v_i \in B</m> we have 
+                <me>
+                  g(v_i) = \begin{cases}
                   w_i &amp; \text{for $1 \leq i \leq r$ and} \\
                   0 &amp; \text{for $r+1 \leq i \leq n$} \\
-                \end{cases}
-                </me> and hence <me>
-                [g]_B^C = 
-                \begin{bmatrix}
-                I_r &amp; 0 \\
-                0 &amp; 0 \\
-                \end{bmatrix}.
-                </me> Note that, in our construction, <m>r = \dim_F(\im(g)) = \rank(g)</m>.
+                  \end{cases}
+                </me> 
+                and hence 
+                <me>
+                  [g]_B^C = 
+                  \begin{bmatrix}
+                  I_r &amp; 0 \\
+                  0 &amp; 0 \\
+                  \end{bmatrix}.
+                </me> 
+                Note that, in our construction, <m>r = \dim_F(\im(g)) = \rank(g)</m>.
               </p>
             </proof>
           </theorem>
 
           <corollary xml:id="cor-every-mtimes-n-matrix-equivalent-to-unique-matrix"><title>Every <m>m\times n</m> Matrix Equivalent to Unique Matrix</title>
-
             <statement>
               <p>
                 Every <m>m \times n</m> matrix <m>A</m> with entries in a field is equivalent to a unique matrix of the form<me>\begin{bmatrix}
@@ -12656,16 +12691,26 @@
 
             <proof>
               <p>
-                Let <m>V = F^n</m> and <m>W = F^m</m> and <m>g: V \to W</m> be the linear transformation given by <m>g(v) = A \cdot v</m>, matrix multiplication. (I have called this map <m>T_A</m> in the past.) If <m>B'</m> and <m>C'</m> are the standard basis of <m>V</m> and <m>W</m> then <m>[g]_{B'}^{C'} = A</m>.
+                Let <m>V = F^n</m> and <m>W = F^m</m> and <m>g: V \to W</m> be the linear transformation given by <m>g(v) = A \cdot v</m>, matrix multiplication. 
+                (I have called this map <m>T_A</m> in the past.) 
+                If <m>B'</m> and <m>C'</m> are the standard basis of <m>V</m> and <m>W</m> then <m>[g]_{B'}^{C'} = A</m>.
               </p>
   
               <p>
-                The Theorem gives that there are bases <m>B</m> and <m>C</m> of <m>V</m> and <m>W</m> such that<me>[g]_B^C = 
-                \begin{bmatrix}
-                I_r &amp; 0 \\
-                0 &amp; 0 \\
-                \end{bmatrix}.</me>So, by Proposition , we have <me>A = [g]_{B'}^{C'} = [\id_W]_C^{C'}[g]_B^C [\id_V]_{B'}^{B}=P
-                \begin{bmatrix}I_r &amp; 0 \\0 &amp; 0 \\\end{bmatrix}Q</me> with <m>P := [\id_W]_C^{C'}</m> and <m>Q := [\id_V]_{B'}^{B}</m>. Note that <m>P, Q</m> are invertible since they are change of basis matrices (see ).
+                <xref ref="thm-finding-equivalent-matrices"/> gives that there are bases <m>B</m> and <m>C</m> of <m>V</m> and <m>W</m> such that
+                <me>
+                  [g]_B^C = 
+                  \begin{bmatrix}
+                  I_r &amp; 0 \\
+                  0 &amp; 0 \\
+                  \end{bmatrix}.
+                </me>
+                So, by Proposition , we have 
+                <me>
+                  A = [g]_{B'}^{C'} = [\id_W]_C^{C'}[g]_B^C [\id_V]_{B'}^{B}=P \begin{bmatrix}I_r &amp; 0 \\0 &amp; 0 \\\end{bmatrix}Q
+                </me> 
+                with <m>P := [\id_W]_C^{C'}</m> and <m>Q := [\id_V]_{B'}^{B}</m>. 
+                Note that <m>P, Q</m> are invertible since they are change of basis matrices (see ).
               </p>
   
               <p>
@@ -12673,10 +12718,6 @@
               </p>
             </proof>
           </corollary>
-          
-        </section>
-
-        <section xml:id="sec-elematix"><title>Elementary Matrices</title>
 
           <definition xml:id="def-elementary-basis-change-operations"><title>Elementary Basis Change Operations</title>
             <statement>
@@ -12761,254 +12802,6 @@
             </statement>
           </definition>
 
-          <remark><p>In particular, the Lemma and the fact that elementary matrices are invertible shows that if <m>A</m> is an <m>n \times n</m> invertible matrix, then the result of performing elementary row or column operations on <m>A</m> results in another invertible matrix.</p></remark>
-
-          <theorem xml:id="thm-properties-of-elementary-matrices"><title>Properties of Elementary Matrices</title>
-            <statement>
-              <p>
-                Let <m>E</m> be an <m>n \times n</m> elementary matrix. 
-                <ol>
-                  <li>
-                    <p>
-                      For a free <m>R</m>-module <m>V</m> with basis <m>B</m> such that <m>|B| = n</m>, <m>E</m> is the change of basis matrix <m>[\id_V]_{B'}^{B}</m>, where <m>B'</m> is the basis obtained from <m>B</m> by the corresponding elementary basis change operation. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      If <m>A \in \Mat_{n,q}(R)</m>, then the product matrix <m>E \cdot A</m> is the result of performing the corresponding elementary column operation on <m>A</m>. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      If <m>B \in \Mat_{m,n}(R)</m>, then the product matrix <m>B \cdot E</m> is the result of performing the corresponding elementary column operation on <m>B</m>.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-          </theorem>
-
-          <remark><p>This is true for commutative rings in general, but the proof is much harder.</p></remark>
-
-          <lemma xml:id="lem-matrix-invertible-iff-columns-span-fn"><title>Matrix Invertible iff Columns Span <m>F^n</m></title>
-            <statement>
-              <p>
-                Let <m>F</m> be a field and let <m>A</m> be an <m>n \times n</m> matrix for <m>n \geq 1</m>. <m>A</m> is invertible if and only if its columns span <m>F^n</m>.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                <m>A</m> is invertible if and only if the associated linear map <m>g: F^n \to F^n</m> given by <m>g(v) = Av</m> is an isomorphism. By the rank-nullity Theorem, <m>\rank(g) = n</m> if and only if <m>\ker(g) = \{0\}</m> if and only if <m>g</m> is an isomorphism. The result follows, since <m>\rank(g) = \dim_F \im(g)</m> and <m>\im(g)</m> is the span of the columns of <m>A</m>.
-              </p>
-            </proof>
-          </lemma>
-          
-          <remark>
-            <p>
-              The previous proof used the following fact implicitly:
-            </p>
-  
-            <blockquote>
-                        <p>
-              If <m>W</m> is a subspace of a finite dimensional <m>F</m>-vector space <m>V</m> (where <m>F</m> is a field) and <m>\dim_F(W) = \dim_F(V)</m>, then <m>W = V</m>.
-            </p>
-            </blockquote>
-  
-            <p>
-              This holds since any basis of <m>W</m> can be extended to a basis of <m>V</m> and hence if <m>W</m> is properly contained in <m>V</m> we must have <m>\dim_F(W) &lt; \dim_F(V)</m>.
-            </p>
-  
-            <p>
-              This fact fails for commutative rings in general. For instance, let <m>V = \Z</m> and <m>W = \Z \cdot 2</m>. Then <m>V</m> and <m>W</m> are free of rank one and <m>W</m> is a submodule of <m>V</m>, but <m>W \ne V</m>.
-            </p>
-          </remark>
-
-          <theorem xml:id="thm-gauss"><title>Gauss</title>
-
-            <statement>
-              <p>
-                Let <m>F</m> be a field and let <m>A</m> be an <m>n \times n</m> invertible matrix for <m>n \geq 1</m>. Then <m>A</m> can be transformed to a matrix of the form <me> \begin{bmatrix}
-                  u &amp; 0 &amp; 0 &amp; \cdots &amp; 0 \\
-                  0 &amp; 1 &amp; 0 &amp; \cdots &amp; 0 \\
-                  0 &amp; 0 &amp; \ddots &amp; \cdots &amp; 0 \\
-                  \vdots &amp; &amp; \ddots &amp; \ddots &amp; \vdots  \\
-                  0 &amp; 0 &amp; \cdots &amp; 0 &amp; 1 \\
-              \end{bmatrix}</me> for some <m>u \ne 0</m> via elementary column and column operations of type I.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                Proceed by induction on <m>n</m>. If <m>n = 1</m>, there is nothing to prove (since <m>A</m> cannot be the <m>0</m> matrix.) Assume <m>n &gt; 1</m> and that the result holds for <m>n-1</m> by <m>n-1</m> invertible matrices.
-              </p>
-  
-              <p>
-                Let <m>A = (a_{i,j})</m>. Since <m>A</m> is invertible, its column space must have dimension <m>n</m>, by the previous Lemma, and in particular none of its columns can be <m>0</m> (since otherwise the column space would be spanned by <m>n-1</m> vectors and would thus have dimension at most <m>n-1</m>). In particular, its second-to-last column has at least one non-zero entry. By either doing nothing or by adding a suitable row to the last row, we can assume <m>a_{n,n-1} \ne 0</m>. By adding <m>(1 -a_{n,n}) a_{n,n-1}^{-1}</m> times column <m>n-1</m> to column <m>n</m>, we obtain <m>a_{n,n} = 1</m>. Next do suitable column operations of type I to arrive at <m>a_{n,j} = 0</m> for all <m>j &lt; n</m>, and finally do row operations of type I to also get <m>a_{i,n} = 0</m> for all <m>i &lt; n</m>. We have thus transformed <m>A</m> to a matrix of the form <m>\begin{bmatrix} A' &amp; 0 \\ 0 &amp; 1 \end{bmatrix}</m>. Note that this matrix remains invertible (see Remark ) and so the columns of this matrix span <m>F^n</m> by the previous Lemma. Since <m>a_{n,j} = 0</m> for all <m>j &lt; n</m>, the columns of <m>A'</m> must span <m>F^{n-1}</m>. Thus <m>A'</m> is invertible by the previous Lemma. By induction, we can transform <m>A'</m> via type I row and column operations to a matrix of the form as in the statement. Notice that since the <m>a_{n,j} = 0</m> for all <m>j &lt; n</m> and <m>a_{i,n} = 0</m> for all <m>i &lt; n</m>, such operations will also put <m>A</m> into this form.
-              </p>
-            </proof>
-          </theorem>
-
-          <corollary xml:id="cor-invertible-matrices-and-identity-matrix"><title>Invertible Matrices and the Identity Matrix</title>
-            <statement>
-              <p>
-                If <m>A</m> is invertible then it can be transformed into <m>I_n</m> via elementary column and column operations of type I and II.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                Apply the Theorem and then use a single type II operator; i.e., multiply the first row by <m>u^{-1}</m>.
-              </p>
-            </proof>
-          </corollary>
-
-          <corollary xml:id="cor-square-matrix-invertible-iff-pi-of-elementary-matrices"><title>Square Matrix Invertibility</title>
-            <statement>
-              <p>
-                If <m>F</m> is a field, then a square matrix is invertible if and only if it is a product of elementary matrices.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                (<m>\Leftarrow</m>) Every elementary matrix is invertible and a product of invertible matrices is again invertible.
-              </p>
-  
-              <p>
-                (<m>\Rightarrow</m>) If <m>A</m> is invertible, then by the previous Corollary and Lemma  there exists elementary matrices <m>E_1, \dots, E_s</m>, <m>F_1, \dots, F_t</m> of type I or II such that <me>E_s \cdots E_1 \cdot A \cdot F_1 \cdots F_t= I_n</me> and hence <m>A = E_1^{-1} \cdots E_s^{-1}F_t^{-1} \cdots F^{-1}_1</m>. This proves the statement since the inverse of an elementary matrix is an elementary matrix.
-              </p>
-            </proof>
-          </corollary>
-
-          <corollary xml:id="cor-matrices-equivalent-iff-path-with-operations"><title>Equivalent Matrices Characterization</title>
-            <statement>
-              <p>
-                Given two <m>m \times n</m> matrices <m>A</m> and <m>B</m> with entries in a field, <m>A</m> and <m>B</m> are equivalent if and only if each can be transformed to the other via elementary column and column operations.
-              </p>
-            </statement>
-          </corollary>
-
-          <remark>
-            <p>
-              For a ring <m>R</m>, recall that <m>\GL_n(R)</m> is the group of invertible <m>n \times n</m> matrices with entries in <m>R</m>. Let <m>E_n(R)</m> be the subset of <m>\GL_n(R)</m> consisting of all products of elementary matrices of type I. Since the inverse of an elementary matrix of type I is again an elementary matrix of type I, <m>E_n(R)</m> is a subgroup of <m>\GL_n(R)</m>. In fact it is a normal subgroup, at least when <m>n \geq 3</m>, and hence the quotient group <m>\GL_n(R)/E_n(R)</m> is defined in this case.
-            </p>
-  
-            <p>
-              As a consequence of the Theorem above, if <m>R = F</m> is a field then there is an isomorphism of groups <m>\GL_n(F)/E_n(F) \cong F^\times</m> where <m>F^\times = (F \setminus \{0\}, \cdot)</m> is the group of units in <m>F</m>.
-            </p>
-  
-            <p>
-              For a general ring, the extent to which <m>\GL_n(R)/E_n(R)</m> is “larger'' than <m>R^\times</m> measure the extent to which Theorem fails.
-            </p>
-  
-            <p>
-              The algebraic <m>K</m>-group <m>K_1(R)</m> is defined to be <m>\GL_\infty(R)/E_\infty(R)</m> (and it is usually isomorphic to <m>\GL_n(R)/E_n(R)</m> for <m>n \gg 0</m>). Moreover, <m>E_\infty(R)</m> is the derived subgroup of <m>\GL_\infty(R)</m>, and hence <m>K_1(R)</m> is the abelianization of <m>\GL_\infty(R)</m>.
-            </p>
-          </remark>
-
-        </section>
-
-        <section xml:id="sec-operator"><title>Linear Operators on Free Modules</title>
-
-          <definition xml:id="def-linear-operator"><title>Linear Operator</title>
-            <statement>
-              <p>
-                By a <em>linear operator</em> (or <m>R</m>-linear operator) on <m>V</m> we mean an <m>R</m>-module endomorphism <m>g: V \to V</m> of <m>V</m>.
-              </p>
-            </statement>
-          </definition>
-
-          <remark><p>Let <m>R</m> be a commutative ring (with <m>1 \ne 0</m>) and assume <m>V</m> is a free <m>R</m>-module of finite rank <m>n</m>. Upon choosing an ordered basis <m>B = \{b_1, \dots, b_n\}</m> of <m>V</m>, we may represent <m>g</m> as a <m>n \times n</m> matrix <m>X = [g]_B^B</m> — a key point here is that for operators we usually use the same basis for both the source and target of the map.</p></remark>
-
-          <example xml:id="ex-representing-bases"><title>Representing Bases</title>
-            
-            <p>
-              Here is a concrete example. Let <m>R = \R</m>, <m>V</m> the collection of polynomials in <m>x</m> with coefficients in <m>\R</m> of degree at most <m>m</m>. Let <m>D: V \to V</m> be the map sending a polynomial to its derivative. The most obvious choice for a bases of <m>V</m> is <m>1, x, \dots, x^m</m>. With respect to this basis, the map <m>D</m> is represented by the <m>n \times n</m> matrix <me>
-              \begin{bmatrix}
-              0 &amp; 1 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 \\
-              0 &amp; 0 &amp; 2 &amp; 0 &amp; \cdots &amp; 0 \\
-              0 &amp; 0 &amp; 0 &amp; 3 &amp; \cdots &amp; 0 \\
-              0 &amp; 0 &amp; 0 &amp; 0 &amp; \ddots &amp; 0 \\
-              0 &amp; 0 &amp; 0 &amp; 0 &amp;  \cdots &amp; m \\
-              0 &amp; 0 &amp; 0 &amp; 0 &amp;  \cdots &amp; 0 \\
-              \end{bmatrix}.
-              </me>
-            </p>
-  
-            <p>
-              If, when <m>m = 2</m>, we instead used <m>1, x^2, 3x-7</m> as a basis, then the matrix for <m>D</m> would be <me>\begin{bmatrix}
-              0 &amp;  \frac{14}{3} &amp; 3 \\
-              0 &amp;  0 &amp; 0 \\
-              0 &amp;  \frac23   &amp; 0\\ 
-              \end{bmatrix}.</me>
-            </p>
-          </example>
-
-          <remark>
-            <p>
-              Say <m>X = [g]_B^B</m> is the square matrix representing <m>g</m> with respect to <m>B</m>. If <m>B'</m> is another basis of <m>V</m> and <m>Y = [g]_{B'}^{B'}</m> is the matrix representing <m>g</m> with respect to <m>B'</m> (used for both the source and target of the map), then we have <me>
-              Y = P X P^{-1}</me>where <m>P = [\id_V]_{B'}^{B}</m> is the change of basis matrix. This holds since <me>PXP^{-1} = [\id_V]_{B'}^{B} [g]_B^B [\id_V]_{B}^{B'} = [g]_{B'}^{B'} = Y.</me>
-            </p>
-          </remark>
-
-          <definition xml:id="def-similar-matrices"><title>Similar Matrices</title>
-
-            <statement>
-              <p>
-                Two <m>n \times n</m> matrices <m>X</m> and <m>Y</m> with entries in a commutative ring <m>R</m> are called <em>similar</em> if <m>Y = PXP^{-1}</m> for some invertible <m>n \times n</m> matrix <m>P</m>.
-              </p>
-            </statement>
-          </definition>
-
-          <remark>
-            <p>
-              It is easy to decide if two matrices with entries in a field are equivalent — just row reduce them to see if they have the same rank.
-            </p>
-  
-            <p>
-              But it is in general quite difficult to decide if two square matrices with entries in a field are similar. The operation <m>X \mapsto PXP^{-1}</m> can in principle be broken down into a sequence of steps by factoring <m>P</m> into elementary matrices. That is, two square matrices <m>X</m> and <m>Y</m> of the same size are similar if and only if one can be obtained from the other by a sequence of operations of the form <m>Z \mapsto EZE^{-1}</m> where <m>E</m> is an elementary matrix.
-            </p>
-  
-            <p>
-              But such a stap amounts to doing a row operation and simultaneously doing the inverse column operation. There is no simple algorithm, such as Gaussian reduction, to determine whether matrices are similar.
-            </p>
-          </remark>
-
-          <proposition xml:id="prop-linear-operators-and-bases"><title>Linear Operators and Bases</title>
-
-            <statement>
-              <p>
-                Let <m>R</m> be a non-zero commutative ring. Given a linear operator <m>g: V \to V</m> on a free <m>R</m>-module <m>V</m> of finite rank <m>n</m>, we have: 
-                <ol>
-                  <li>
-                    <p>
-                      The matrices representing <m>g</m> with respect to any two choices of bases of <m>V</m> are similar
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      If <m>X</m> represents <m>g</m> with respect to a basis <m>B</m> of <m>V</m> and if <m>Y</m> is similar to <m>X</m>, then there is a basis <m>C</m> of <m>V</m> such that the matrix representing <m>g</m> with respect to <m>C</m> is <m>Y</m>.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                We proved the first assertion above.
-              </p>
-  
-              <p>
-                Say <m>X = [g]_B^B</m> and <m>Y = PXP^{-1}</m> for some invertible matrix <m>P</m>. By Proposition  above, <m>P = [\id_V]_B^C</m> for a (unique) new basis <m>C</m>. So <m>Y = [\id]^C_{B} [g]_B^B [\id_V]_C^{B} = [g]_{C}^C</m>.
-              </p>
-            </proof>
-          </proposition>
-          
         </section>
 
       </chapter>

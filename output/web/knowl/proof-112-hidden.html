@@ -11,12 +11,19 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><article class="hiddenproof"><div class="para logical">
-<div class="para">If <span class="process-math">\(g(A) = 0\text{,}\)</span> then for each <span class="process-math">\(v \in F^n\text{,}\)</span> by definition of the action of <span class="process-math">\(F[x]\)</span> on <span class="process-math">\(F^n_A\)</span> we have</div>
+<div class="para">Consider the ring isomorphism <span class="process-math">\(\phi: \Q[x] \xra{\cong} \Q[y]\)</span> given by <span class="process-math">\(\phi(h(x)) = h(y+1)\text{.}\)</span> I claim that</div>
 <div class="displaymath process-math">
 \begin{equation*}
-g(x) \cdot v = g(A) v = 0
+\phi(f(x)) = y^{p-1} + p y^{p-2} + {p \choose 2} y^{p-3} +{p \choose 3} y^{p-4} +\cdots + {p \choose p-1} y + p.
 \end{equation*}
 </div>
-<div class="para">and so <span class="process-math">\(g(x)\)</span> annihilates <span class="process-math">\(F^n_A\text{.}\)</span> Conversely, if <span class="process-math">\(g(x)\)</span> annihilates <span class="process-math">\(F^n_A\text{,}\)</span> then <span class="process-math">\(g(A) \cdot v = 0\)</span> for all <span class="process-math">\(v \in F^n\text{.}\)</span> Taking <span class="process-math">\(v = e_i\)</span> for each <span class="process-math">\(i\text{,}\)</span> this says that each column of <span class="process-math">\(g(A)\)</span> is <span class="process-math">\(0\)</span> and hence <span class="process-math">\(g(A)\)</span> is the zero matrix.</div>
+<div class="para">To see this, we note that <span class="process-math">\(f(x) (x-1) = x^p - 1\)</span> and by the binomial theorem we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi(x^p-1) = (y+1)^p - 1 = y^p + p y^{p-1} + {p \choose 2} y^{p-2} + \cdots + py.
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(\phi(x^p-1) = \phi(f(x)) \phi(x-1) = \phi(f(x)) y\text{,}\)</span> the claim follows.</div>
+</div> <div class="para">By <a href="" class="xref" data-knowl="./knowl/thm-eisensteins-criterion.html" title="Theorem 16.9: Eisenstein's Criterion">Eisenstein's Criterion</a>, <span class="process-math">\(\phi(f(x))\)</span> is irreducible in <span class="process-math">\(\Q[y]\)</span> and, since <span class="process-math">\(\phi\)</span> is an isomorphism, it follows that <span class="process-math">\(f(x)\)</span> is irreducible in <span class="process-math">\(\Q[x]\text{.}\)</span>
 </div></article></body>
 </html>

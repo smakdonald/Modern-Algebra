@@ -11,19 +11,13 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><article class="hiddenproof"><div class="para logical">
-<div class="para">Consider the ring isomorphism <span class="process-math">\(\phi: \Q[x] \xra{\cong} \Q[y]\)</span> given by <span class="process-math">\(\phi(h(x)) = h(y+1)\text{.}\)</span> I claim that</div>
-<div class="displaymath process-math">
+<div class="para">Note that <span class="process-math">\(p(x)\)</span> is (up to a non-zero constant factor) the minimum polynomial of both <span class="process-math">\(\a\)</span> and <span class="process-math">\(\a'\text{.}\)</span> So, we may apply (3b) of the Theorem <code class="code-inline tex2jax_ignore">[provisional cross-reference: empty]</code> twice to give a pair of isomorphisms</div>
+<div class="displaymath process-math" data-contains-math-knowls=" ">
 \begin{equation*}
-\phi(f(x)) = y^{p-1} + p y^{p-2} + {p \choose 2} y^{p-3} +{p \choose 3} y^{p-4} +\cdots + {p \choose p-1} y + p.
+F(\a) \xla{\cong} F[x]/(p(x)) \xra{\cong} F(\a').
 \end{equation*}
 </div>
-<div class="para">To see this, we note that <span class="process-math">\(f(x) (x-1) = x^p - 1\)</span> and by the binomial theorem we have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\phi(x^p-1) = (y+1)^p - 1 = y^p + p y^{p-1} + {p \choose 2} y^{p-2} + \cdots + py.
-\end{equation*}
+<div class="para">of fields, given by sending <span class="process-math">\(\ov{f(x)}\)</span> to <span class="process-math">\(f(\a)\)</span> (for the left one) and <span class="process-math">\(f(\a')\)</span> (for the right one). Take <span class="process-math">\(\theta\)</span> to be the inverse of the one on the left composed with the right one. <code class="code-inline tex2jax_ignore">[provisional cross-reference: empty]</code>
 </div>
-<div class="para">Since <span class="process-math">\(\phi(x^p-1) = \phi(f(x)) \phi(x-1) = \phi(f(x)) y\text{,}\)</span> the claim follows.</div>
-</div> <div class="para">By <a href="" class="xref" data-knowl="./knowl/thm-eisensteins-criterion.html" title="Theorem 16.9: Eisenstein's Criterion">Eisenstein's Criterion</a>, <span class="process-math">\(\phi(f(x))\)</span> is irreducible in <span class="process-math">\(\Q[y]\)</span> and, since <span class="process-math">\(\phi\)</span> is an isomorphism, it follows that <span class="process-math">\(f(x)\)</span> is irreducible in <span class="process-math">\(\Q[x]\text{.}\)</span>
 </div></article></body>
 </html>
