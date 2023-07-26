@@ -10337,8 +10337,6 @@
           </theorem>
        
         </section>
-
-        <!-- 
     
         <section xml:id="subsec-noeth"><title>Noetherian Rings</title>
 
@@ -10355,6 +10353,14 @@
             Most rings that commutative algebraists naturally want to study are noetherian. 
             Noetherian rings are named after Emmy Noether, who is in many ways the mother of modern commutative algebra.
           </p>
+
+          <definition xml:id="def-ascending-chain-condition"><title>Ascending Chain Condition</title>
+            <statement>
+              <p>
+                A commutative ring <m>R</m> has the <em>ascending chain condition</em> (on ideals) if given any chain of ideals in <m>R</m> of the form <me>I_1 \subseteq I_2 \subseteq \cdots</me>there is an <m>N</m> such that <me>I_N = I_{N+1} = \cdots.</me>
+              </p>
+            </statement>
+          </definition>
           
           <definition xml:id="def-noetherian-ring"><title>Noetherian Ring</title>
             <statement>
@@ -10403,6 +10409,15 @@
               Every field is noetherian.
             </p>
           </corollary>
+
+          <exercise xml:id="exe-noetherian-quotients"><title>Quotient Rings Noetherian in Noetherian Rings</title>
+            <statement>
+              <p>
+                Let <m>R</m> be a commutative ring and <m>I</m> an ideal of <m>R</m>. 
+                Show that if <m>R</m> is noetherian then <m>R/I</m> is also noetherian.
+              </p>
+            </statement>
+          </exercise>
     
           <theorem xml:id="lem-factorization-in-noetherian-domains"><title>Factorization in Noetherian Domains</title>
             <statement>
@@ -10452,8 +10467,6 @@
           </remark>
     
         </section>
-
-        -->
         
       </chapter>
 
@@ -11620,207 +11633,208 @@
               <attribution>Martin Luther King Jr.</attribution>
             </blockquote>
 
-          <definition xml:id="def-quotient-module"><title>Quotient Module</title>
-            <statement>
-              <p>
-                Let <m>R</m> be a ring, let <m>M</m> be an <m>R</m>-module, and let <m>N</m> be a submodule of <m>M</m>. 
-                The <em>quotient module</em> <m>M/N</m> is the quotient group <m>M/N</m> under <m>+</m> (so elements of <m>M/N</m> are additive cosets of the form <m>m + N</m> with <m>m \in M</m> and addition is defined by <m>(m_1 + N) + (m_2 + N) = (m_1+m_2) + N</m>) and with the rule for scaling by <m>R</m> defined to be 
-                <me>
-                  r \cdot (m + N) = rm + N
-                </me> for all <m>r \in R</m> and <m>m + N \in M/N</m>.
-              </p>
-            </statement>
-          </definition>
+            <definition xml:id="def-quotient-module"><title>Quotient Module</title>
+              <statement>
+                <p>
+                  Let <m>R</m> be a ring, let <m>M</m> be an <m>R</m>-module, and let <m>N</m> be a submodule of <m>M</m>. 
+                  The <em>quotient module</em> <m>M/N</m> is the quotient group <m>M/N</m> under <m>+</m> (so elements of <m>M/N</m> are additive cosets of the form <m>m + N</m> with <m>m \in M</m> and addition is defined by <m>(m_1 + N) + (m_2 + N) = (m_1+m_2) + N</m>) and with the rule for scaling by <m>R</m> defined to be 
+                  <me>
+                    r \cdot (m + N) = rm + N
+                  </me> for all <m>r \in R</m> and <m>m + N \in M/N</m>.
+                </p>
+              </statement>
+            </definition>
 
-          <theorem xml:id="thm-quotient-module-well-defined"><title>Quotient Modules are Well Defined</title>
-            <statement>
-              <p>
-                Let <m>R</m> be a ring, let <m>M</m> be an <m>R</m>-module, and let <m>N</m> be a submodule of <m>M</m>. 
-                The rule for scaling introduced above is well-defined and it, along with the rule for <m>+</m>, makes <m>M/N</m> into an <m>R</m>-module.
-              </p>
-            </statement>
-          </theorem>
+            <theorem xml:id="thm-quotient-module-well-defined"><title>Quotient Modules are Well Defined</title>
+              <statement>
+                <p>
+                  Let <m>R</m> be a ring, let <m>M</m> be an <m>R</m>-module, and let <m>N</m> be a submodule of <m>M</m>. 
+                  The rule for scaling introduced above is well-defined and it, along with the rule for <m>+</m>, makes <m>M/N</m> into an <m>R</m>-module.
+                </p>
+              </statement>
+            </theorem>
 
-          <definition xml:id="def-module-quotient-map"><title>Module Quotient Map</title>
-            <statement>
-              <p>
-                Let <m>R</m> be a ring, let <m>M</m> be an <m>R</m>-module, and let <m>N</m> be a submodule of <m>M</m>. 
-                Define the canonical <em>quotient map</em> <m>\pi: M \to M/N</m> by <m>\pi(m) = m + N</m>.
-              </p>
-            </statement>
-          </definition>
+            <definition xml:id="def-module-quotient-map"><title>Module Quotient Map</title>
+              <statement>
+                <p>
+                  Let <m>R</m> be a ring, let <m>M</m> be an <m>R</m>-module, and let <m>N</m> be a submodule of <m>M</m>. 
+                  Define the canonical <em>quotient map</em> <m>\pi: M \to M/N</m> by <m>\pi(m) = m + N</m>.
+                </p>
+              </statement>
+            </definition>
 
-          <proposition xml:id="prop-quotient-map-is-r-module-homomorphism"><title>Quotient Map is an <m>R</m>-map</title>
-            <statement>
-              <p>
-                Let <m>R</m> be a ring, let <m>M</m> be an <m>R</m>-module, and let <m>N</m> be a submodule of <m>M</m>.
-                <ol>
-                  <li>
-                    <p>
-                      The quotient map <m>\pi: M \to M/N</m> is a n <m>R</m>-module homomorphism
-                    </p>
-                  </li>
+            <proposition xml:id="prop-quotient-map-is-r-module-homomorphism"><title>Quotient Map is an <m>R</m>-map</title>
+              <statement>
+                <p>
+                  Let <m>R</m> be a ring, let <m>M</m> be an <m>R</m>-module, and let <m>N</m> be a submodule of <m>M</m>.
+                  <ol>
+                    <li>
+                      <p>
+                        The quotient map <m>\pi: M \to M/N</m> is a n <m>R</m>-module homomorphism
+                      </p>
+                    </li>
 
-                  <li>
-                    <p>
-                      <m>\ker(\pi) = N</m>.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
+                    <li>
+                      <p>
+                        <m>\ker(\pi) = N</m>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
 
-            <proof>
-              <p>
-                Among the many things to check here, we will only check a couple.
-              </p>
-  
-              <p>
-                We need to prove the rule for scaling by <m>R</m> on <m>M/N</m> is well-defined: 
-                If <m>m+N=m'+N</m> then <m>m-m'\in N</m> so <m>r(m-m')\in N</m> by the definition of submodule.
-                This gives that <m>rm-rm'\in N</m>, hence <m>rm+N=rm'+N</m>. 
-                The module axioms are then pretty straightforward. 
-                We already know from 817 that <m>M/N</m> is an abelian group under <m>+</m>.
-              </p>
-  
-              <p>
-                Let us check one of the four axioms involving scaling. 
-                We have 
-                <me>
-                  r( (m_1 +N) + (m_2 +N)) = r((m_1 + m_2) + N) = (r(m_1+m_2)) + N = (rm_1 + rm_2) + N = (rm_1 + N) + (rm_2 + N),
-                </me> 
-                which gives the third such axiom. 
-                The other three are also straightforward.
-              </p>
-  
-              <p>
-                The fact that <m>\pi</m> is an <m>R</m>-module homomorphism is also straightforward. 
-                Its kernel is <m>\{m \in M \mid m + N = N\}</m>, which is equal to <m>N</m>.
-              </p>
-            </proof>
-          </proposition>
+              <proof>
+                <p>
+                  Among the many things to check here, we will only check a couple.
+                </p>
+    
+                <p>
+                  We need to prove the rule for scaling by <m>R</m> on <m>M/N</m> is well-defined: 
+                  If <m>m+N=m'+N</m> then <m>m-m'\in N</m> so <m>r(m-m')\in N</m> by the definition of submodule.
+                  This gives that <m>rm-rm'\in N</m>, hence <m>rm+N=rm'+N</m>. 
+                  The module axioms are then pretty straightforward. 
+                  We already know from 817 that <m>M/N</m> is an abelian group under <m>+</m>.
+                </p>
+    
+                <p>
+                  Let us check one of the four axioms involving scaling. 
+                  We have 
+                  <me>
+                    r( (m_1 +N) + (m_2 +N)) = r((m_1 + m_2) + N) = (r(m_1+m_2)) + N = (rm_1 + rm_2) + N = (rm_1 + N) + (rm_2 + N),
+                  </me> 
+                  which gives the third such axiom. 
+                  The other three are also straightforward.
+                </p>
+    
+                <p>
+                  The fact that <m>\pi</m> is an <m>R</m>-module homomorphism is also straightforward. 
+                  Its kernel is <m>\{m \in M \mid m + N = N\}</m>, which is equal to <m>N</m>.
+                </p>
+              </proof>
+            </proposition>
 
-          <example xml:id="exe-z-modules-and-quotients"><title><m>\Z</m>-modules and Quotients</title>
-            <p>
-              Recall that <m>\Z</m>-modules are the same as abelian groups by <xref ref="thm-abelian-groups-are-z-modules"/>. 
-              Submodules and quotient <m>\Z</m>-modules are the same things as subgroups and quotients of abelian groups.
-            </p>
-          </example>
+            <example xml:id="exe-z-modules-and-quotients"><title><m>\Z</m>-modules and Quotients</title>
+              <p>
+                Recall that <m>\Z</m>-modules are the same as abelian groups by <xref ref="thm-abelian-groups-are-z-modules"/>. 
+                Submodules and quotient <m>\Z</m>-modules are the same things as subgroups and quotients of abelian groups.
+              </p>
+            </example>
 
-          <theorem xml:id="thm-module-isomorphism-thms"><title>Module Isomorphism Theorems</title>
-            <statement>
-              <p>
-                Let <m>R</m> be a ring, and let <m>M</m> be a <m>R</m>-module. 
-                <ol>
-                  <li><title>UMP for Quotient Modules</title>
-                    <p>
-                      Let <m>N</m> be a submodule of <m>M</m>, let <m>T</m> be an <m>R</m>-module, and let <m>f: M \to T</m> be an <m>R</m>-module homomorphism. 
-                      If <m>f(M) = 0</m> (i.e., if <m>N \subseteq \ker(f)</m>) then the function <m>\ov{f}: M/N \to T</m> given by <m>\ov{f}(m + N) = f(m)</m> is a well-defined, <m>R</m>-module homomorphism. 
-                      In fact, <m>\ov{f}: M/N \to T</m> is the unique <m>R</m>-module homomorphism such that <m>\ov{f}\circ \can = f</m> where <m>\can</m> denotes the canonical surjection <m>M \onto M/N</m>. 
-                    </p>
-                  </li>
+            <theorem xml:id="thm-module-isomorphism-thms"><title>Module Isomorphism Theorems</title>
+              <statement>
+                <p>
+                  Let <m>R</m> be a ring, and let <m>M</m> be a <m>R</m>-module. 
+                  <ol>
+                    <li xml:id="ump-quotient-module"><title>UMP for Quotient Modules</title>
+                      <p>
+                        Let <m>N</m> be a submodule of <m>M</m>, let <m>T</m> be an <m>R</m>-module, and let <m>f: M \to T</m> be an <m>R</m>-module homomorphism. 
+                        If <m>f(M) = 0</m> (i.e., if <m>N \subseteq \ker(f)</m>) then the function <m>\ov{f}: M/N \to T</m> given by <m>\ov{f}(m + N) = f(m)</m> is a well-defined, <m>R</m>-module homomorphism. 
+                        In fact, <m>\ov{f}: M/N \to T</m> is the unique <m>R</m>-module homomorphism such that <m>\ov{f}\circ \can = f</m> where <m>\can</m> denotes the canonical surjection <m>M \onto M/N</m>. 
+                      </p>
+                    </li>
 
-                  <li><title>First Isomorphism Theorem</title>
-                    <p>
-                      Let <m>T</m> be an <m>R</m>-module and let <m>h: M \to T</m> be an <m>R</m>-module homomorphism. 
-                      Then <m>\ker(h)</m> is a submodule of <m>M</m> and there is an <m>R</m>-module isomorphism <m>M/\ker(h) \cong \im(h)</m> given by <m>m + \ker(h) \mapsto h(m)</m>. 
-                    </p>
-                  </li>
+                    <li xml:id="fit-module"><title>First Isomorphism Theorem for Modules</title>
+                      <p>
+                        Let <m>T</m> be an <m>R</m>-module and let <m>h: M \to T</m> be an <m>R</m>-module homomorphism. 
+                        Then <m>\ker(h)</m> is a submodule of <m>M</m> and there is an <m>R</m>-module isomorphism <m>M/\ker(h) \cong \im(h)</m> given by <m>m + \ker(h) \mapsto h(m)</m>. 
+                      </p>
+                    </li>
 
-                  <li><title>Second Isomorphism Theorem</title>
-                    <p>
-                      Let <m>A</m> and <m>B</m> be submodules of <m>M</m>, and define <m>A + B = \{a+b \mid a \in A, b \in B\}</m>. 
-                      Then <m>A + B</m> is a submodule of <m>M</m>, <m>A \cap B</m> is a submodule of <m>A</m>, and there is an <m>R</m>-module isomorphism <m>(A + B)/B \cong A/(A \cap B)</m>. 
-                    </p>
-                  </li>
+                    <li xml:id="sit-module"><title>Second Isomorphism Theorem for Modules</title>
+                      <p>
+                        Let <m>A</m> and <m>B</m> be submodules of <m>M</m>, and define <m>A + B = \{a+b \mid a \in A, b \in B\}</m>. 
+                        Then <m>A + B</m> is a submodule of <m>M</m>, <m>A \cap B</m> is a submodule of <m>A</m>, and there is an <m>R</m>-module isomorphism <m>(A + B)/B \cong A/(A \cap B)</m>. 
+                      </p>
+                    </li>
 
-                  <li><title>Third Isomorphism Theorem</title>
-                    <p>
-                      Let <m>A</m> and <m>B</m> be submodules of <m>M</m> with <m>A \subseteq B</m>. 
-                      Then <m>B/A</m> is a submodule of <m>M/A</m> and there is an <m>R</m>-module isomorphism <m>(M/A)/(B/A) \cong M/B</m> given by sending <m>(m + A) + B/A</m> to <m>m + B</m>. 
-                    </p>
-                  </li>
+                    <li xml:id="tit-module"><title>Third Isomorphism Theorem for Modules</title>
+                      <p>
+                        Let <m>A</m> and <m>B</m> be submodules of <m>M</m> with <m>A \subseteq B</m>. 
+                        Then <m>B/A</m> is a submodule of <m>M/A</m> and there is an <m>R</m>-module isomorphism <m>(M/A)/(B/A) \cong M/B</m> given by sending <m>(m + A) + B/A</m> to <m>m + B</m>. 
+                      </p>
+                    </li>
 
-                  <li><title>Lattice Isomorphism Theorem</title>
-                    <p>
-                      Let <m>R</m> be a ring, let <m>N</m> be a R-submodule of <m>M</m>, and let <m>\pi: M \to M/N</m> be the canonical quotient map. 
-                      Then the function 
-                      <me>
-                        \Psi : \{R-\text{submodules of } M \text{ containing }N\} \to \{R-\text{submodules of }M/N\}
-                      </me>
-                      defined by <m>\Psi(K) = K/N</m> is a bijection, with inverse given by <m>\Psi^{-1}(T) = \pi^{-1}(T)</m> for each <m>R</m> submodule <m>T</m> of <m>M/N</m>. 
-                      Moreover, <m>\Psi</m> and <m>\Psi^{-1}</m> preserve sums and intersections.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
+                    <li xml:id="lit-module"><title>Lattice Isomorphism Theorem for Modules</title>
+                      <p>
+                        Let <m>R</m> be a ring, let <m>N</m> be a R-submodule of <m>M</m>, and let <m>\pi: M \to M/N</m> be the canonical quotient map. 
+                        Then the function 
+                        <me>
+                          \Psi : \{R-\text{submodules of } M \text{ containing }N\} \to \{R-\text{submodules of }M/N\}
+                        </me>
+                        defined by <m>\Psi(K) = K/N</m> is a bijection, with inverse given by <m>\Psi^{-1}(T) = \pi^{-1}(T)</m> for each <m>R</m> submodule <m>T</m> of <m>M/N</m>. 
+                        Moreover, <m>\Psi</m> and <m>\Psi^{-1}</m> preserve sums and intersections.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
 
-            <proof>
-              <p>
-                Ignoring the rules for scaling by <m>R</m>, we know each of the first four results holds for abelian groups (and the maps are the same). 
-                So, we merely need to prove that the rules for scaling are respected in each case. 
-                In more detail:
-              </p>
-  
-              <p>
-                For the UMP, we already know that <m>\ov{f}</m> is a well-defined homomorphism of groups under <m>+</m> and that it is the unique one such that <m>\ov{f} \circ \can = f</m>. 
-                It remains only to show <m>\ov{f}</m> preserves scaling: 
-                This follows quickly from the definitions: 
-                <me>
-                  \ov{f}(r (m +N)) = \ov{f} (rm + N) = f(rm) = r f(m) = r \ov{f}(m + N).
-                </me> 
-                where the third equation uses that <m>f</m> preserves scaling.
-              </p>
-  
-              <p>
-                For the First Isomorphism Theorem, we already know that there is an isomorphism of abelian groups under <m>+</m>, 
-                <me>
-                  \ov{h}: M/\ker(h) \xra{\cong} \im(h),
-                </me> 
-                given by <m>\ov{h}(m + \ker(h)) = h(m)</m>, and it remains only to show this map preserves scaling. 
-                This is a special case of what we proved in part (0).
-              </p>
-  
-              <p>
-                For the second isomorphism theorem, we need to first check that <m>A+B</m> and <m>A \cap B</m> are submodules. 
-                From 817 we already know they are subgroups under <m>+</m>, and it is evident from the definitions that each is closed under scaling by elements of <m>R</m>. 
-                Now, we know from 817 that there is an isomorphism of abelian groups <m>h: A/(A \cap B) \xra{\cong} (A+B)/B</m> given by <m>h(a + (A\cap B)) = a + B</m>. 
-                It remains only to show <m>h</m> preserves scaling: 
-                <me>
-                  h(r(a+(A \cap B))) = h(ra + A \cap B) = ra + B = r(a +B) = rh(a + (A \cap B)).
-                </me>
-              </p>
-  
-              <p>
-                For the third, we already know (from 817) that <m>B/A</m> is a subgroup of <m>M/A</m> under <m>+</m>. 
-                Given <m>r \in R</m> and <m>b +A \in B/A</m> we have <m>r(b+A) = rb + A</m> which belongs to <m>B/A</m> since <m>rb \in B</m>. 
-                This proves <m>B/A</m> is a submodule of <m>M/A</m>. 
-                Also from 817 we know there is an isomorphism of abelian groups <m>h: (M/A)/(B/A) \to M/B</m> given by <m>h((m+A) + B/A) = m + B</m> and it remains only to show it is <m>R</m>-linear: 
-                <m>h(r((m+A) + B/A)) =h(r(m+A) + B/A) = h((rm + A) + B/A) = rm + B = r(m +B) = r h((m+A) + B/A)</m>.
-              </p>
-  
-              <p>
-                The Lattice Theorem is the most complicaed to gerenlize. 
-                From 817 we know thre is a bijection between the set of subgroups of <m>M</m> and that contain <m>N</m> and subgroups of the quotient group <m>M/N</m>, and the maps are the same as given in the statment. 
-                We just need to prove that these maps send submodules to submodules. 
-                If <m>K</m> is a submodule of <m>M</m> containing <m>N</m>, then by part (3) we know <m>K/N</m> is a submodule of <m>M/N</m>.
-              </p>
-  
-              <p>
-                If <m>T</m> is a submodule of <m>M/N</m>, then <m>\pi^{-1}(T)</m> is an abelian group. 
-                For <m>r \in R</m> adn <m>m \in \pi^{-1}(T)</m> we have <m>\pi(m) \in T</m> and hence <m>\pi(rm) = r\pi(m) \in T</m> too, since <m>T</m> is a submodule. 
-                This proves <m>\pi^{-1}(T)</m> is a submodule.
-              </p>
-            </proof>
-          </theorem>
+              <proof>
+                <p>
+                  Ignoring the rules for scaling by <m>R</m>, we know each of the first four results holds for abelian groups (and the maps are the same). 
+                  So, we merely need to prove that the rules for scaling are respected in each case. 
+                  In more detail:
+                </p>
+    
+                <p>
+                  For the UMP, we already know that <m>\ov{f}</m> is a well-defined homomorphism of groups under <m>+</m> and that it is the unique one such that <m>\ov{f} \circ \can = f</m>. 
+                  It remains only to show <m>\ov{f}</m> preserves scaling: 
+                  This follows quickly from the definitions: 
+                  <me>
+                    \ov{f}(r (m +N)) = \ov{f} (rm + N) = f(rm) = r f(m) = r \ov{f}(m + N).
+                  </me> 
+                  where the third equation uses that <m>f</m> preserves scaling.
+                </p>
+    
+                <p>
+                  For the First Isomorphism Theorem, we already know that there is an isomorphism of abelian groups under <m>+</m>, 
+                  <me>
+                    \ov{h}: M/\ker(h) \xra{\cong} \im(h),
+                  </me> 
+                  given by <m>\ov{h}(m + \ker(h)) = h(m)</m>, and it remains only to show this map preserves scaling. 
+                  This is a special case of what we proved in part (0).
+                </p>
+    
+                <p>
+                  For the second isomorphism theorem, we need to first check that <m>A+B</m> and <m>A \cap B</m> are submodules. 
+                  From 817 we already know they are subgroups under <m>+</m>, and it is evident from the definitions that each is closed under scaling by elements of <m>R</m>. 
+                  Now, we know from 817 that there is an isomorphism of abelian groups <m>h: A/(A \cap B) \xra{\cong} (A+B)/B</m> given by <m>h(a + (A\cap B)) = a + B</m>. 
+                  It remains only to show <m>h</m> preserves scaling: 
+                  <me>
+                    h(r(a+(A \cap B))) = h(ra + A \cap B) = ra + B = r(a +B) = rh(a + (A \cap B)).
+                  </me>
+                </p>
+    
+                <p>
+                  For the third, we already know (from 817) that <m>B/A</m> is a subgroup of <m>M/A</m> under <m>+</m>. 
+                  Given <m>r \in R</m> and <m>b +A \in B/A</m> we have <m>r(b+A) = rb + A</m> which belongs to <m>B/A</m> since <m>rb \in B</m>. 
+                  This proves <m>B/A</m> is a submodule of <m>M/A</m>. 
+                  Also from 817 we know there is an isomorphism of abelian groups <m>h: (M/A)/(B/A) \to M/B</m> given by <m>h((m+A) + B/A) = m + B</m> and it remains only to show it is <m>R</m>-linear: 
+                  <m>h(r((m+A) + B/A)) =h(r(m+A) + B/A) = h((rm + A) + B/A) = rm + B = r(m +B) = r h((m+A) + B/A)</m>.
+                </p>
+    
+                <p>
+                  The Lattice Theorem is the most complicaed to gerenlize. 
+                  From 817 we know thre is a bijection between the set of subgroups of <m>M</m> and that contain <m>N</m> and subgroups of the quotient group <m>M/N</m>, and the maps are the same as given in the statment. 
+                  We just need to prove that these maps send submodules to submodules. 
+                  If <m>K</m> is a submodule of <m>M</m> containing <m>N</m>, then by part (3) we know <m>K/N</m> is a submodule of <m>M/N</m>.
+                </p>
+    
+                <p>
+                  If <m>T</m> is a submodule of <m>M/N</m>, then <m>\pi^{-1}(T)</m> is an abelian group. 
+                  For <m>r \in R</m> adn <m>m \in \pi^{-1}(T)</m> we have <m>\pi(m) \in T</m> and hence <m>\pi(rm) = r\pi(m) \in T</m> too, since <m>T</m> is a submodule. 
+                  This proves <m>\pi^{-1}(T)</m> is a submodule.
+                </p>
+              </proof>
+            </theorem>
+
           </subsection>
           
         </section>
 
-        <section xml:id="sec-free-mod"><title>Generators, Bases, and Free Modules</title>
-          
-          <subsection xml:id="subsec-linear"><title>Linear Independence</title>
+        <section xml:id="sec-linear-ind-gen"><title>Linear Independence and Generated Modules</title>
+
+          <subsection xml:id="subsec-generated-modules"><title>Generated Modules</title>
 
             <blockquote>
                 <p>
@@ -11846,7 +11860,9 @@
                 <p>
                   Let <m>R</m> be a ring with <m>1 \ne 0</m> and let <m>M</m> be an <m>R</m>-module. 
                   For a subset <m>A</m> of <m>M</m> , the submodule of <m>M</m> <term>generated</term> by <m>A</m> is 
-                  <me>RA := {r1a1 + · · · + rnan | n ≥ 0, ri ∈ R, ai ∈ A}.</me>
+                  <me>
+                    RA := {r_1a_1 + · · · + r_na_n | n ≥ 0, r_i ∈ R, a_i ∈ A}.
+                  </me>
                 </p>
 
                 <p>
@@ -11937,14 +11953,44 @@
               </p>
             </example>
 
-            <exercise><title>Finite Generation and Quotient Modules</title>
+            <lemma xml:id="lem-fg-quotient-mod"><title>Finite Generation and Quotient Modules</title>
               <statement>
                 <p>
-                  Let <m>R</m> be a ring with <m>0\neq 1</m>. 
-                  Prove that if <m>M</m> is an <m>R</m>-module and <m>N</m> is a submodule of <m>M</m> such that <m>N</m> and <m>M/N</m> are finitely generated, then <m>M</m> is finitely generated.
+                  Let <m>R</m> be a ring with <m>1 \neq 0</m>, let <m>M</m> be an <m>R</m>-module, and let <m>N</m> be an <m>R</m> submodule of <m>M</m>.
+                  <ol>
+                    <li>
+                      <p>
+                        If <m>M</m> is finitely generated as an <m>R</m>-module, then so is <m>M / N</m>.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        If <m>N</m> and <m>M / N</m> are finitely generated as <m>R</m>-modules, then so is <m>M</m>.
+                      </p>
+                    </li>
+                  </ol>
                 </p>
               </statement>
-            </exercise>
+
+              <proof>
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        Note that if <m>M=R A</m> then <m>M / N=R \bar{A}</m>, where <m>\bar{A}=\{a+N \mid a \in A\}</m>.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </proof>
+            </lemma>
 
             <definition xml:id="def-linearly-independent"><title>Linearly Independent</title>
               <statement>
@@ -11987,7 +12033,11 @@
             </example>
             
           </subsection>
+          
+        </section>
 
+        <section xml:id="sec-free-mod"><title>Bases and Free Modules</title>
+          
           <subsection xml:id="subsec-bases"><title>Bases</title>
 
             <blockquote>
@@ -12057,10 +12107,13 @@
               </p>
             </example>
 
+            <p>
+              Bases of free modules are rarely unique. 
+            </p>
+
             <example xml:id="ex-bases-are-not-unique"><title>Bases are not Unique</title>
               <p>
-                Bases of free modules are rarely unique. 
-                Indeed, if <m>R</m> is any ring, then any single unit forms a basis for <m>R</m> as a module over itself. 
+                If <m>R</m> is any ring, then any single unit forms a basis for <m>R</m> as a module over itself. 
                 For another example, for any ring <m>R</m> and any fixed element <m>r \in R</m>, the set 
                 <me>
                   \left\{ \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \begin{bmatrix} r \\ 1 \end{bmatrix} \right \}
@@ -12119,7 +12172,8 @@
             <lemma xml:id="lem-elements-uniquely-expressible-in-free-modules"><title>Elements Uniquely Expressible in Free Modules</title>
               <statement>
                 <p>
-                  Suppose <m>M</m> is a free <m>R</m>-module and <m>A</m> is a basis of <m>M</m>. Then every element of <m>M</m> is uniquely expressible as an <m>R</m>-linear combination of elements of <m>A</m>.
+                  Suppose <m>M</m> is a free <m>R</m>-module and <m>A</m> is a basis of <m>M</m>. 
+                  Then every element of <m>M</m> is uniquely expressible as an <m>R</m>-linear combination of elements of <m>A</m>.
                 </p>
 
                 <p>
@@ -12133,7 +12187,12 @@
                 </p>
     
                 <p>
-                  Suppose <m>(s_a)_{a \in A}</m> is another such family with <m>m = \sum_a s_a a</m>. Then <me>0 = m-m = \sum_a r_a a - \sum_a s_a a = \sum_a (r_a - s_a) a.</me> Since <m>A</m> is linearly independent, by definition <m>r_a - s_a = 0</m> for all <m>a</m>.
+                  Suppose <m>(s_a)_{a \in A}</m> is another such family with <m>m = \sum_a s_a a</m>. 
+                  Then 
+                  <me>
+                    0 = m-m = \sum_a r_a a - \sum_a s_a a = \sum_a (r_a - s_a) a.
+                  </me> 
+                  Since <m>A</m> is linearly independent, by definition <m>r_a - s_a = 0</m> for all <m>a</m>.
                 </p>
               </proof>
             </lemma>
@@ -12315,21 +12374,8 @@
             <exercise xml:id="prop-r-bases"><title>Bases of <m>R</m></title>          
               <statement>
                 <p>
-                  <ol>
-                    <li>
-                      <p>
-                        Let <m>R</m> be a non-zero, commutative ring. 
-                        Prove that a subset <m>A</m> of <m>R</m> is a basis of <m>R</m> as a module over itself if and only if <m>A =\{u\}</m> for some unit <m>u</m> of <m>R</m>. 
-                      </p>
-                    </li>
-
-                    <li>
-                      <p>
-                        Let <m>R</m> be the ring of column-finite, infinite-by-infinite matrices with entries in a field <m>F</m>, as in exercise #3. 
-                        Prove that for each positive integer <m>n</m>, there is a subset of <m>R</m> of cardinality <m>n</m> that forms as a basis for <m>R</m> as a module over itself.
-                      </p>
-                    </li>
-                  </ol>
+                  Let <m>R</m> be a non-zero, commutative ring. 
+                  Prove that a subset <m>A</m> of <m>R</m> is a basis of <m>R</m> as a module over itself if and only if <m>A =\{u\}</m> for some unit <m>u</m> of <m>R</m>. 
                 </p>
               </statement>
             </exercise>
@@ -12366,777 +12412,737 @@
 
       <chapter xml:id="ch-vectors"><title>Vector Spaces and Linear Transformations</title>
 
-        <section xml:id="sec-vecbasis"><title>Existence of Bases</title>
+        <section xml:id="sec-vecbasis"><title>Dimension</title>
 
-          <blockquote>
-            <p>
-              <q>
-                His words span rivers and mountains, but his thoughts are still only six inches long.
-              </q>
-            </p>
-            <attribution>E.B. White</attribution>
-          </blockquote>
+          <subsection xml:id="subsec-span-dimension"><title><m>\Span</m> and the Dimension Theorem</title>
 
-          <definition xml:id="def-span"><title>Span</title>
-            <statement>
+            <blockquote>
               <p>
-                In keeping with standard convention, we use the term <q>span</q> instead of <q>submodule generated by</q>, but they mean exactly the same thing: for a subset <m>A</m> of an <m>F</m>-vector space <m>V</m>, the <em>span</em> of <m>A</m> is 
-                <me>
-                  \Span(A)=\{\sum_{i=1}^n c_ia_i \mid n\geq 0, c_i\in F, a_{i\in}A\}.
-                </me>
-                As with modules over general rings, the span of a subset of a vector space is a sub-vector space (i.e., sub-module).
+                <q>
+                  His words span rivers and mountains, but his thoughts are still only six inches long.
+                </q>
               </p>
-            </statement>
-          </definition>
+              <attribution>E.B. White</attribution>
+            </blockquote>
 
-          <lemma xml:id="lem-linear-independence-and-span"><title>Linear Independence and Span</title>
-            <statement>
+            <definition xml:id="def-span"><title>Span</title>
+              <statement>
+                <p>
+                  In keeping with standard convention, we use the term <q>span</q> instead of <q>submodule generated by</q>, but they mean exactly the same thing: for a subset <m>A</m> of an <m>F</m>-vector space <m>V</m>, the <em>span</em> of <m>A</m> is 
+                  <me>
+                    \Span(A)=\left\{\sum_{i=1}^n c_ia_i \mid n\geq 0, c_i\in F, a_{i\in}A\right\}.
+                  </me>
+                  As with modules over general rings, the span of a subset of a vector space is a sub-vector space (i.e., sub-module).
+                </p>
+              </statement>
+            </definition>
+
+            <lemma xml:id="lem-linear-independence-and-span"><title>Linear Independence and Span</title>
+              <statement>
+                <p>
+                  Suppose <m>I</m> is a linearly independent subset of an <m>F</m>-vector space <m>V</m> and <m>v \in V \setminus \Span(I)</m>, then <m>I \cup \{v\}</m> is also linearly independent.
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  We need to prove that every finite subset of <m>I \cup \{v\}</m> is linearly independent. 
+                  Let <m>w_1, \dots, w_n</m> be a list of distinct elements of <m>I \cup \{v\}</m> and suppose <m>\sum_i c_i w_i = 0</m> for some <m>c_i \in F</m>. 
+                  If <m>v \ne w_i</m> for all <m>i</m>, then <m>c_i = 0</m> for all <m>i</m> since <m>I</m> is linearly independent. 
+                  Without loss, say <m>w_1 = v</m>. 
+                  If <m>c_1 \ne 0</m>, then <m>v = \sum_{i \geq 2} c_1^{-1} c_i w_i \in \Span(I)</m>, contrary to the assumption. 
+                  So we must have <m>c_1 =0</m>. 
+                  But then <m>c_i = 0</m> for all <m>i \geq 2</m> by the same reasoning as in the first case.
+                </p>
+              </proof>
+            </lemma>
+
+            <remark>
               <p>
-                Suppose <m>I</m> is a linearly independent subset of an <m>F</m>-vector space <m>V</m> and <m>v \in V \setminus \Span(I)</m>, then <m>I \cup \{v\}</m> is also linearly independent.
+                The only place where the fact that the ring of scalars is a field is to know that <m>c_1</m> has a multiplicative inverse when <m>c_1 \ne 0</m>. 
+                In particular, <xref ref="lem-linear-independence-and-span"/> holds when <m>F</m> is a division ring too.
               </p>
-            </statement>
-
-            <proof>
-              <p>
-                We need to prove that every finite subset of <m>I \cup \{v\}</m> is linearly independent. 
-                Let <m>w_1, \dots, w_n</m> be a list of distinct elements of <m>I \cup \{v\}</m> and suppose <m>\sum_i c_i w_i = 0</m> for some <m>c_i \in F</m>. 
-                If <m>v \ne w_i</m> for all <m>i</m>, then <m>c_i = 0</m> for all <m>i</m> since <m>I</m> is linearly independent. 
-                Without loss, say <m>w_1 = v</m>. 
-                If <m>c_1 \ne 0</m>, then <m>v = \sum_{i \geq 2} c_1^{-1} c_i w_i \in \Span(I)</m>, contrary to the assumption. 
-                So we must have <m>c_1 =0</m>. 
-                But then <m>c_i = 0</m> for all <m>i \geq 2</m> by the same reasoning as in the first case.
-              </p>
-            </proof>
-          </lemma>
-
-          <remark>
-            <p>
-              The only place where the fact that the ring of scalars is a field is to know that <m>c_1</m> has a multiplicative inverse when <m>c_1 \ne 0</m>. 
-              In particular, <xref ref="lem-linear-independence-and-span"/> holds when <m>F</m> is a division ring too.
-            </p>
-          </remark>
-
-          <theorem xml:id="thm-finding-intermediate-bases"><title>Finding Intermediate Bases</title>
-            <statement>
-              <p>
-                Let <m>V</m> be an <m>F</m>-vector space and assume <m>I \subseteq S \subseteq V</m> are subsets such that <m>I</m> is linearly independent and <m>S</m> spans <m>V</m>. 
-                Then there is a subset <m>B</m> such that <m>I \subseteq B \subseteq S</m> and <m>B</m> is a basis of <m>V.</m>
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                Let <m>\cP</m> denote the collection of all subsets <m>X</m> of <m>V</m> such that <m>I\subseteq X \subseteq S</m> and <m>X</m> is linearly independent. 
-                We make <m>\cP</m> into a poset by the order relation <m>\subseteq</m>, set containment.
-              </p>
-  
-              <p>
-                We note that <m>I \in \cP</m>.
-              </p>
-  
-              <p>
-                Let <m>\cT</m> be any totally ordered subset of <m>\cP</m>. 
-                If <m>\cT</m> is empty, then <m>\cT</m> is (vacuously) bounded above by <m>I</m>.
-              </p>
-  
-              <p>
-                Assume <m>\cT</m> is non-empty.
-                Let <m>Z = \bigcup_{Y \in \cT} Y</m>. 
-                I claim <m>Z \in \cP</m>. 
-                Given <m>z_1, \dots, z_m \in Z</m>, for each <m>i</m> we have <m>z_i \in Y_i</m> for some <m>Y_{i} \in \cT</m>. 
-                Since <m>\cT</m> is totally ordered, one of <m>Y_1, \dots, Y_m</m> contains all the others and hence it contains all the <m>z_i</m>'s. 
-                Since each <m>Y_i</m> is linearly independent, this shows <m>z_1, \dots, z_m</m> are linearly independent. 
-                We have shown that every finite subset of <m>Z</m> is linearly independent, and hence <m>Z</m> is linearly independent. 
-                Since <m>\cT</m> is non-empty, <m>Z \supseteq I</m>. 
-                Since each member of <m>\cT</m> is contained in <m>S</m>, <m>Z \subseteq S</m>. 
-                Thus, <m>Z \in \cP</m>, and it is an upper bound for <m>\cT</m>.
-              </p>
-  
-              <p>
-                We may thus apply <xref text="title" ref="lem-zorn"/> to conclude that <m>\cP</m> has at least one maximal element, <m>B</m>. 
-                I claim <m>B</m> is a basis of <m>V</m>. 
-                Note that <m>B</m> is linearly independent and <m>I \subseteq B \subseteq S</m> by construction. 
-                We need to show that it spans <m>V</m>. 
-                Suppose not. 
-                Since <m>S</m> spans <m>V</m>, if <m>S \subseteq \Span(B)</m>, then <m>\Span(B)</m> would have to be all of <m>V</m>. 
-                (For note that if <m>\Span(S) = V</m> and <m>S \subseteq \Span(B)</m>, then for any <m>v \in V</m> we may write <m>v = \sum_i c_i s_i</m> for <m>s_i \in S</m> and <m>s_i = \sum_j a_{i,j} b_{i,j}</m> with <m>b_{i,j} \in B</m> and hence <m>v= \sum_{i,j} c_i a_{i,j} b_{i,j}</m>, which implies <m>\Span(B) = V</m>.) 
-                Since we are assuming <m>\Span(B) \ne V</m>, there must be at least one <m>v \in S</m> such that <m>v \notin \Span(B)</m>. 
-                Set <m>X := B \cup \{v\}</m>. Then <m>I \subset X \subseteq S</m> and, by <xref ref="lem-linear-independence-and-span"/>, <m>X</m> is linearly independent. 
-                This shows that <m>X</m> is an element of <m>\cP</m> that is strictly bigger than <m>B</m>, contrary to the maximality of <m>B</m>. 
-                So, <m>B</m> must span <m>V</m> and hence it is a basis.
-              </p>
-            </proof>
-          </theorem>
-
-          <corollary xml:id="cor-every-vector-space-has-a-basis"><title>Every Vector Space has a Basis</title>
-
-            <statement>
-              <p>
-                Every <m>F</m>-vector space <m>V</m> has a basis. 
-                Moreover, every linearly independent subset of <m>V</m> is contained in some basis, and every set of vectors that spans <m>V</m> contains some basis.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                For this first part, apply the <xref ref="thm-finding-intermediate-bases"/> with <m>I = \emptyset</m> and <m>S = V</m>. For the second and third, use <m>I</m> arbitrary and <m>S = V</m> and <m>I = \emptyset</m> and <m>S</m> arbitrary, respectively.
-              </p>
-            </proof>
-          </corollary>
-
-          <example>
-            <p>
-              <m>\R</m> has a basis as a <m>\Q</m>-Vector Space <m>\R</m> has a basis as a <m>\Q</m>-vector space. 
-              Just don't ask me what it looks like.
-            </p>
-          </example>
-
-          <corollary xml:id="cor-basis-of-subspaces-extent"><title>Basis of Subspaces Extent</title>
-            <statement>
-              <p>
-                Suppose <m>F</m> is a field an <m>W</m> is a subspace (i.e., submodule) of the <m>F</m>-vector space (i.e., <m>F</m>-module) <m>V</m>. 
-                Then every basis of <m>W</m> extends to a basis of <m>V</m> - that is, if <m>B</m> is a basis of <m>W</m> then there exists a basis <m>\tilde{B}</m> of <m>V</m> such that <m>B</m> is a subset of <m>\tilde{B}</m>.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                Apply <xref ref="cor-every-vector-space-has-a-basis"/> with <m>B = I</m> and <m>S = V</m>. 
-                (Since <m>B</m> is a basis of <m>W</m>, it is linearly independent, and observe that <m>B</m> remains linearly independent when regarded as a subset of <m>V</m>.)
-              </p>
-            </proof>
-          </corollary>
-
-          <remark>
-            <p>
-              It is <em>not</em> true that, with the notation of <xref ref="cor-basis-of-subspaces-extent"/>, if <m>\tilde{B}</m> is a basis of <m>V</m> then there exists a basis <m>B</m> of <m>W</m> such that <m>B</m> is a subset of <m>\tilde{B}</m>. 
-              For instance, take <m>F = \R</m>, <m>V = \R^2</m>, <m>\tilde{B} = \{(1,0), (0,1)\}</m> and <m>W</m> the subspace spanned by <m>(1,1)</m>.
-            </p>
-          </remark>
-
-          <lemma xml:id="lem-exchange-lemma"><title>Exchange Lemma</title>
-            <statement>
-              <p>
-                Let <m>F</m> be a field, let <m>B</m> be a basis of an <m>F</m>-vector space <m>V</m>, and let <m>C</m> be any finite set of <m>m</m> linearly independent vectors in <m>V</m>. 
-                Then there are distinct vectors <m>v_1, \dots, v_m</m> in <m>B</m>, such that <m>(B \setminus \{v_1, \dots, v_m\}) \cup C</m> is also a basis <m>V</m>.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                Let <m>C = \{w_1, \dots, w_m\}</m>. 
-                As noted, the sublemma establishes the case <m>w = 1</m> of the Exchange Lemma. 
-                The general case proceeds recursively:
-              </p>
-  
-              <p>
-                Suppose that for some <m>0 \leq k &lt; m</m>, we have found <m>v_1, \dots, v_k \in B</m> such that <m>B'' := (B \setminus \{v_1, \dots, v_k\}) \cup \{w_1, \dots, w_k\}</m> is a basis for some <m>k &lt; m</m>. We need to show we can “swap out one more''; that is, we need to prove there is a <m>v_{k+1} \in(B \setminus \{v_1, \dots, v_k\})</m> such that <m>(B'' \setminus \{v_{k+1}\}) \cup \{w_{k+1}\}</m> is also a basis.
-              </p>
-  
-              <p>
-                Since <m>B''</m> is a basis, there is a (unique) equation of the form 
-
-                <me>
-                  w_{k+1} = \sum_{i=1}^n a_i u_i
-                </me> 
-
-                with <m>u_i \in B''</m> and <m>a_i \ne 0</m>. Now, there must be at least one <m>u_i</m> that is not in <m>\{w_1, \dots, w_k\}</m>, for otherwise we would have <m>w_{k+1} \in \Span( w_1, \dots, w_k)</m>, contrary to <m>C</m> being linearly independent. Let <m>v_{k+1} = u_i</m> for such an <m>i</m>. Then by the sublemma
-
-                <me>
-                  (B'' \setminus \{v_{k+1}\}) \cup \{w_{k+1}\}
-                </me> 
-                
-                is a basis of <m>V</m>.
-              </p>
-            </proof>
-          </lemma>
-
-          <remark>
-            <p>
-              The <xref text="title" ref="lem-exchange-lemma"/> also holds for any division ring (using the exact same proof).
-            </p>
-          </remark>
-
-          <definition xml:id="def-dimension-vector-space"><title>Dimension</title>
-            <statement>
-              <p>
-                The <em>dimension</em> of a vector space <m>V</m>, denoted <m>\dim_F(V)</m> or <m>\dim(V)</m>, is the cardinality of any of its bases. 
-                This is the same as the rank of <m>V</m> as an <m>F</m>-module.
-                A vector space is <term>finite dimensional</term> if there is spanned by a finite subset.
-              </p>
-            </statement>
-          </definition>
-
-          <theorem xml:id="thm-dimension-theorem"><title>Dimension Theorem</title>
-            <statement>
-              <p>
-                Any two bases of the same vector space have the same dimension.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                We will only prove this in the case of finite dimensional vector spaces, but it is indeed true in general.
-              </p>
-  
-              <p>
-                Suppose <m>F</m> is a field and <m>V</m> is a finite dimensional <m>F</m>-vector space. 
-                Then it has a finite basis <m>B</m>.
-                Let <m>B'</m> be any other basis.
-                (Note that we cannot assume <m>B'</m> is necessarily finite.) 
-                For any non-negative integer <m>m</m>, suppose <m>C</m> is any <m>m</m>-element subset of <m>B'</m>. 
-                Then <m>C</m> is linearly independent and so, by the Exchange Lemma, there is an <m>m</m>-element subset <m>D</m> of <m>B</m> such that <m>(B \setminus D) \cup C</m> is also a basis of <m>V</m>. 
-                In particular, <m>m \leq |B|</m>.
-                Since this holds for all <m>m</m>, we conclude <m>|B|' \leq |B|</m>. 
-                By symmetry, <m>|B| \leq |B|'</m> and hence <m>|B|= |B'|</m>.
-              </p>
-            </proof>
-          </theorem>
-
-          <example xml:id="ex-dimension-of-fn-in-f"><title>Dimension of <m>F^n</m> in <m>F</m></title>
+            </remark>
 
             <p>
-              <m>\dim_F(F^n)=|\{e_1,e_2,\dots,e_n\}|=n.</m>
+              To prove that every vector space has a basis, we will need to use <xref text="title" ref="lem-zorn"/>.
             </p>
 
-          </example>
+            <theorem xml:id="thm-finding-intermediate-bases"><title>Finding Intermediate Bases</title>
+              <statement>
+                <p>
+                  Let <m>V</m> be an <m>F</m>-vector space and assume <m>I \subseteq S \subseteq V</m> are subsets such that <m>I</m> is linearly independent and <m>S</m> spans <m>V</m>. 
+                  Then there is a subset <m>B</m> such that <m>I \subseteq B \subseteq S</m> and <m>B</m> is a basis of <m>V.</m>
+                </p>
+              </statement>
 
-          <example xml:id="exe-rn"><title><m>\R^\N</m></title>
+              <proof>
+                <p>
+                  Let <m>\cP</m> denote the collection of all subsets <m>X</m> of <m>V</m> such that <m>I\subseteq X \subseteq S</m> and <m>X</m> is linearly independent. 
+                  We make <m>\cP</m> into a poset by the order relation <m>\subseteq</m>, set containment.
+                </p>
+    
+                <p>
+                  We note that <m>I \in \cP</m>.
+                </p>
+    
+                <p>
+                  Let <m>\cT</m> be any totally ordered subset of <m>\cP</m>. 
+                  If <m>\cT</m> is empty, then <m>\cT</m> is (vacuously) bounded above by <m>I</m>.
+                </p>
+    
+                <p>
+                  Assume <m>\cT</m> is non-empty.
+                  Let <m>Z = \bigcup_{Y \in \cT} Y</m>. 
+                  I claim <m>Z \in \cP</m>. 
+                  Given <m>z_1, \dots, z_m \in Z</m>, for each <m>i</m> we have <m>z_i \in Y_i</m> for some <m>Y_{i} \in \cT</m>. 
+                  Since <m>\cT</m> is totally ordered, one of <m>Y_1, \dots, Y_m</m> contains all the others and hence it contains all the <m>z_i</m>'s. 
+                  Since each <m>Y_i</m> is linearly independent, this shows <m>z_1, \dots, z_m</m> are linearly independent. 
+                  We have shown that every finite subset of <m>Z</m> is linearly independent, and hence <m>Z</m> is linearly independent. 
+                  Since <m>\cT</m> is non-empty, <m>Z \supseteq I</m>. 
+                  Since each member of <m>\cT</m> is contained in <m>S</m>, <m>Z \subseteq S</m>. 
+                  Thus, <m>Z \in \cP</m>, and it is an upper bound for <m>\cT</m>.
+                </p>
+    
+                <p>
+                  We may thus apply <xref text="title" ref="lem-zorn"/> to conclude that <m>\cP</m> has at least one maximal element, <m>B</m>. 
+                  I claim <m>B</m> is a basis of <m>V</m>. 
+                  Note that <m>B</m> is linearly independent and <m>I \subseteq B \subseteq S</m> by construction. 
+                  We need to show that it spans <m>V</m>. 
+                  Suppose not. 
+                  Since <m>S</m> spans <m>V</m>, if <m>S \subseteq \Span(B)</m>, then <m>\Span(B)</m> would have to be all of <m>V</m>. 
+                  (For note that if <m>\Span(S) = V</m> and <m>S \subseteq \Span(B)</m>, then for any <m>v \in V</m> we may write <m>v = \sum_i c_i s_i</m> for <m>s_i \in S</m> and <m>s_i = \sum_j a_{i,j} b_{i,j}</m> with <m>b_{i,j} \in B</m> and hence <m>v= \sum_{i,j} c_i a_{i,j} b_{i,j}</m>, which implies <m>\Span(B) = V</m>.) 
+                  Since we are assuming <m>\Span(B) \ne V</m>, there must be at least one <m>v \in S</m> such that <m>v \notin \Span(B)</m>. 
+                  Set <m>X := B \cup \{v\}</m>. Then <m>I \subset X \subseteq S</m> and, by <xref ref="lem-linear-independence-and-span"/>, <m>X</m> is linearly independent. 
+                  This shows that <m>X</m> is an element of <m>\cP</m> that is strictly bigger than <m>B</m>, contrary to the maximality of <m>B</m>. 
+                  So, <m>B</m> must span <m>V</m> and hence it is a basis.
+                </p>
+              </proof>
+            </theorem>
+
+            <corollary xml:id="cor-every-vector-space-has-a-basis"><title>Every Vector Space has a Basis</title>
+
+              <statement>
+                <p>
+                  Every <m>F</m>-vector space <m>V</m> has a basis. 
+                  Moreover, every linearly independent subset of <m>V</m> is contained in some basis, and every set of vectors that spans <m>V</m> contains some basis.
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  For this first part, apply the <xref ref="thm-finding-intermediate-bases"/> with <m>I = \emptyset</m> and <m>S = V</m>. For the second and third, use <m>I</m> arbitrary and <m>S = V</m> and <m>I = \emptyset</m> and <m>S</m> arbitrary, respectively.
+                </p>
+              </proof>
+            </corollary>
+
+            <p>
+              In particular, this says that every module over a field is free!
+            </p>
+
+            <example>
+              <p>
+                <m>\R</m> has a basis as a <m>\Q</m>-Vector Space <m>\R</m> has a basis as a <m>\Q</m>-vector space. 
+                Just don't ask me what it looks like.
+              </p>
+            </example>
+
+            <corollary xml:id="cor-basis-of-subspaces-extent"><title>Basis of Subspaces Extent</title>
+              <statement>
+                <p>
+                  Suppose <m>F</m> is a field an <m>W</m> is a subspace (i.e., submodule) of the <m>F</m>-vector space (i.e., <m>F</m>-module) <m>V</m>. 
+                  Then every basis of <m>W</m> extends to a basis of <m>V</m> - that is, if <m>B</m> is a basis of <m>W</m> then there exists a basis <m>\tilde{B}</m> of <m>V</m> such that <m>B</m> is a subset of <m>\tilde{B}</m>.
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  Apply <xref ref="cor-every-vector-space-has-a-basis"/> with <m>B = I</m> and <m>S = V</m>. 
+                  (Since <m>B</m> is a basis of <m>W</m>, it is linearly independent, and observe that <m>B</m> remains linearly independent when regarded as a subset of <m>V</m>.)
+                </p>
+              </proof>
+            </corollary>
+
+            <remark>
+              <p>
+                It is <em>not</em> true that, with the notation of <xref ref="cor-basis-of-subspaces-extent"/>, if <m>\tilde{B}</m> is a basis of <m>V</m> then there exists a basis <m>B</m> of <m>W</m> such that <m>B</m> is a subset of <m>\tilde{B}</m>. 
+                For instance, take <m>F = \R</m>, <m>V = \R^2</m>, <m>\tilde{B} = \{(1,0), (0,1)\}</m> and <m>W</m> the subspace spanned by <m>(1,1)</m>.
+              </p>
+            </remark>
+
+            <p>
+              In the language of modules, a finite dimensional vector space is just a finitely generated <m>F</m>-module.
+            </p>
+          
+            <p>
+              The following is an essential property of vector spaces that eventually will allow us to compare bases in terms of size.
+            </p>
+
+            <lemma xml:id="lem-exchange-lemma"><title>Exchange Lemma</title>
+              <statement>
+                <p>
+                  Let <m>F</m> be a field, let <m>B</m> be a basis of an <m>F</m>-vector space <m>V</m>, and let <m>C</m> be any finite set of <m>m</m> linearly independent vectors in <m>V</m>. 
+                  Then there are distinct vectors <m>v_1, \dots, v_m</m> in <m>B</m>, such that <m>(B \setminus \{v_1, \dots, v_m\}) \cup C</m> is also a basis <m>V</m>.
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  Let <m>C = \{w_1, \dots, w_m\}</m>. 
+                  As noted, the sublemma establishes the case <m>w = 1</m> of the Exchange Lemma. 
+                  The general case proceeds recursively:
+                </p>
+    
+                <p>
+                  Suppose that for some <m>0 \leq k &lt; m</m>, we have found <m>v_1, \dots, v_k \in B</m> such that <m>B'' := (B \setminus \{v_1, \dots, v_k\}) \cup \{w_1, \dots, w_k\}</m> is a basis for some <m>k &lt; m</m>. We need to show we can “swap out one more''; that is, we need to prove there is a <m>v_{k+1} \in(B \setminus \{v_1, \dots, v_k\})</m> such that <m>(B'' \setminus \{v_{k+1}\}) \cup \{w_{k+1}\}</m> is also a basis.
+                </p>
+    
+                <p>
+                  Since <m>B''</m> is a basis, there is a (unique) equation of the form 
+
+                  <me>
+                    w_{k+1} = \sum_{i=1}^n a_i u_i
+                  </me> 
+
+                  with <m>u_i \in B''</m> and <m>a_i \ne 0</m>. Now, there must be at least one <m>u_i</m> that is not in <m>\{w_1, \dots, w_k\}</m>, for otherwise we would have <m>w_{k+1} \in \Span( w_1, \dots, w_k)</m>, contrary to <m>C</m> being linearly independent. Let <m>v_{k+1} = u_i</m> for such an <m>i</m>. Then by the sublemma
+
+                  <me>
+                    (B'' \setminus \{v_{k+1}\}) \cup \{w_{k+1}\}
+                  </me> 
+                  
+                  is a basis of <m>V</m>.
+                </p>
+              </proof>
+            </lemma>
+
+            <remark>
+              <p>
+                The <xref text="title" ref="lem-exchange-lemma"/> also holds for any division ring (using the exact same proof).
+              </p>
+            </remark>
+
+            <definition xml:id="def-dimension-vector-space"><title>Dimension</title>
+              <statement>
+                <p>
+                  The <em>dimension</em> of a vector space <m>V</m>, denoted <m>\dim_F(V)</m> or <m>\dim(V)</m>, is the cardinality of any of its bases. 
+                  This is the same as the rank of <m>V</m> as an <m>F</m>-module.
+                  A vector space is <term>finite dimensional</term> if there is spanned by a finite subset.
+                </p>
+              </statement>
+            </definition>
+
+            <p>
+              But what if two bases of <m>V</m> have different cardinalities? I'm <em>so</em> glad you asked.
+            </p>
+
+            <theorem xml:id="thm-dimension"><title>Dimension Theorem</title>
+              <statement>
+                <p>
+                  Any two bases of the same vector space have the same dimension.
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  We will only prove this in the case of finite dimensional vector spaces, but it is indeed true in general.
+                </p>
+    
+                <p>
+                  Suppose <m>F</m> is a field and <m>V</m> is a finite dimensional <m>F</m>-vector space. 
+                  Then it has a finite basis <m>B</m>.
+                  Let <m>B'</m> be any other basis.
+                  (Note that we cannot assume <m>B'</m> is necessarily finite.) 
+                  For any non-negative integer <m>m</m>, suppose <m>C</m> is any <m>m</m>-element subset of <m>B'</m>. 
+                  Then <m>C</m> is linearly independent and so, by the Exchange Lemma, there is an <m>m</m>-element subset <m>D</m> of <m>B</m> such that <m>(B \setminus D) \cup C</m> is also a basis of <m>V</m>. 
+                  In particular, <m>m \leq |B|</m>.
+                  Since this holds for all <m>m</m>, we conclude <m>|B|' \leq |B|</m>. 
+                  By symmetry, <m>|B| \leq |B|'</m> and hence <m>|B|= |B'|</m>.
+                </p>
+              </proof>
+            </theorem>
+
+            <example xml:id="ex-dimension-of-fn-in-f"><title>Dimension of <m>F^n</m> in <m>F</m></title>
+
+              <p>
+                <m>\dim_F(F^n)=|\{e_1,e_2,\dots,e_n\}|=n.</m>
+              </p>
+
+            </example>
+
+            <example xml:id="exe-rn"><title><m>\R^\N</m></title>
+              
+              <p>
+                Consider <m>V = \R^\N=\R\times \R\times \R \times \dots</m>, and define rules for addition and scaling degree-wise in the evident way.
+              </p>
+    
+              <p>
+                It is not hard to see <m>V</m> is a <m>\R</m>-vector space. It can be identified with the collection of all sequences <m>\{a_n\}</m> of real numbers. One might be interested in a basis for this vector space. At first glance the most obvious choice would be <m>E=\{e_1,e_2,\ldots\}</m>, where <m>e_i</m> is the sequence with a <m>1</m> in the <m>i</m>-th position and <m>0</m>'s everywhere else.
+              </p>
+    
+              <p>
+                However, this set does not span <m>V</m> as <m>v = (1,1,\ldots)</m> can not be represented as a finite linear combination of these elements. (It turns out that <m>E</m> is the basis for the direct sum <m>\bigoplus_{i\in \N}\R</m>, which may be identified with all sequences having only a finite number of non-zero terms.)
+              </p>
+    
+              <p>
+                Now, since we know since <m>v</m> is not in <m>\Span(E)</m>, we have that <m>E \cup \{v\}</m> is a linearly independent set. However, this does not span either as <m>(1, 2, 3, 4, \dots)</m> is not in the span of this set. We know that <m>V</m> has a basis, but it can be shown that no countable collection of vectors forms a basis for this space, in fact <m>\dim_\R \R^\N =|\R|</m>. An explicit basis of this vector space is impossible to describe.
+              </p>
+
+            </example>
+
+          </subsection>
+
+          <subsection xml:id="subsec-rank-nullity"><title>Classification Theorem and Rank-Nullity</title>
+
+            <theorem xml:id="thm-fg-vs-classification"><title>Classification Theorem</title>
+              <statement>
+                <p>
+                  Let <m>F</m> be a field.
+                  <ol>
+                    <li>
+                      <p>
+                        Every finitely generated vector space over <m>F</m> is isomorphic to <m>F^{n}</m> for <m>n=\operatorname{dim}_{F}(V)</m>.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        For any <m>m, n \in \mathbb{Z}_{\geqslant 0}, F^{m} \cong F^{n}</m> if and only if <m>m=n</m>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        Let <m>V</m> be a finite dimensional <m>F</m>-vector space. 
+                        Then <m>F</m> has a finite spanning set <m>S</m> and by <xref ref="thm-finding-intermediate-bases"/> there is a basis <m>B \subseteq S</m> for <m>V</m>. 
+                        Notice that <m>B</m> is necessarily finite and <m>V=F B</m>. 
+                        Set <m>|B|=n</m> and <m>B=\left\{b_{1}, \ldots, b_{n}\right\}</m>. 
+                        By the <xref text="title" ref="thm-ump-for-free-modules"/>, there is a linear transformation <m>f: F^{n} \rightarrow V</m> such that <m>f\left(e_{i}\right)=b_{i}</m> as well as a linear transformation <m>g: V \rightarrow F^{n}</m> such that <m>g\left(b_{i}\right)=e_{i}</m>. 
+                        Then both <m>f \circ g: V \rightarrow V</m> and <m>g \circ f: F^{n} \rightarrow F^{n}</m> are linear transformation which agree with the identity map on a basis. 
+                        Hence by the uniqueness part of <xref text="title" ref="thm-ump-for-free-modules"/> we have <m>f \circ g=\mathrm{id}_{V}</m> and <m>g \circ f=\mathrm{id}_{F^{n}}</m>. 
+                        Therefore, these maps are the desired isomorphisms.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Let <m>\varphi: F^{m} \cong F^{n}</m> be a vector space isomorphism and let <m>B</m> be a basis of <m>F^{m}</m>. 
+                        We claim that <m>\varphi(B)</m> is a basis for <m>F^{n}</m>. 
+                        Indeed, if
+                        <me>
+                          \sum_{i=1}^{m} c_{i} \varphi\left(b_{i}\right)=0 \quad \text { then } \varphi\left(\sum_{i=1}^{m} c_{i} b_{i}\right)=0, \quad \text { so } \quad \sum_{i=1}^{m} c_{i} b_{i}=0
+                        </me>
+                        since <m>\varphi</m> is injective. 
+                        But <m>B</m> is linearly independent, so we must have <m>c_{i}=0</m> for all <m>1 \leqslant i \leqslant m</m>. 
+                        If <m>v \in F^{n}</m>, then since <m>B</m> spans <m>F^{m}</m> we have
+                        <me>
+                          \varphi^{-1}(v)=\sum_{i=1}^{m} c_{i} b_{i}
+                        </me>
+                        for some <m>c_{i}</m>. 
+                        Thus
+                        <me>
+                          v=\sum_{i=1}^{m} c_{i} \varphi\left(b_{i}\right)
+                        </me>
+                        which shows <m>\varphi(B)</m> spans <m>F^{n}</m>. 
+                        By the <xref text="title" ref="thm-dimension"/>, we have
+                        <me>
+                          \operatorname{dim}_{F}\left(F^{n}\right)=n=|\varphi(B)|=|B|=m.
+                        </me>
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </proof>
+            </theorem>
+
+            <corollary xml:id="cor-dim-iff-iso"><title>Finite Dimensional Vector Spaces over the same Field</title>
+              <statement>
+                <p>
+                  Two finite dimensional vector spaces <m>V</m> and <m>V^{\prime}</m> over the same field <m>F</m> are isomorphic if and only if <m>\operatorname{dim}_{F}(V)=\operatorname{dim}_{F}\left(V^{\prime}\right)</m>.
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  By the <xref text="title" ref="thm-fg-vs-classification"/>, <m>V</m> and <m>V^{\prime}</m> are both of the form <m>V \cong F^{m}</m> and <m>V^{\prime} \cong F^{n}</m>, while <m>F^{m} \cong F^{n}</m> if and only if <m>m=n</m>.
+                </p>
+              </proof>
+            </corollary>
+
+            <p>
+              We now deduce some formulas that relate the dimensions of various vector spaces.
+            </p>
+
+            <convention>
+              <p>
+                Here the dimension of a vector space is understood to be either a nonnegative integer or <m>\infty</m>, and the arithmetic of the formula is understood to follow the rules <m>n+\infty=\infty=\infty+\infty</m> for any <m>n \in \mathbb{Z}_{\geqslant 0}</m>.
+              </p>
+            </convention>
+
+            <theorem xml:id="thm-dimension-and-subspaces"><title>Dimension and Subspaces</title>
+              <statement>
+                <p>
+                  Let <m>F</m> be a field and let <m>W</m> be a subspace of a finite dimensional <m>F</m>-vector space <m>V</m>. 
+                  Then 
+                  <me>
+                    \dim(V) = \dim(W) + \dim(V/W).
+                  </me>
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  Pick a basis <m>X</m> of <m>W</m>. 
+                  Regarded as a subset of <m>V</m>, <m>X</m> remains linearly independent and thus it may be extended to a basis of <m>V</m> by Corollary . 
+                  Let us write this basis of <m>V</m> as <m>X \cup Y</m> with <m>X \cap Y = \emptyset</m>.
+                </p>
+    
+                <p>
+                  Let <m>Z := \{y + W \mid y \in Y\} \subseteq V/W</m>. 
+                  I claim that <m>Z</m> is a basis of <m>V/W</m>.
+                </p>
+    
+                <p>
+                  Given <m>v + W</m> we have <m>v = \sum_i a_i x_i + \sum_j b_j y_j</m> for some <m>x_i \in X, y_j \in Y</m> and scalars <m>a_i, b_j</m>. 
+                  Since <m>x + V = 0</m> for all <m>x \in X</m>, we have <m>v + W = \sum_j b_j z_j</m>. 
+                  This proves <m>Z</m> spans. 
+                  Say <m>\sum_j c_j y_j + W = 0</m> for some <m>y_1, \dots, y_m \in Y</m>. 
+                  Then <m>\sum_j c_j y_j \in W</m> and hence <m>\sum_j c_j y_j = \sum_i a_i x_i</m>, whence <m>\sum_j c_j y_j + \sum_i - a_i x_i = 0</m>. 
+                  Since <m>X \cup Y</m> is linearly independent, <m>c_j = 0</m> and <m>a_i = 0</m> for all <m>j, i</m>. 
+                  This proves <m>Z</m> is linearly independent.
+                </p>
+    
+                <p>
+                  We have 
+                  <me>
+                    \dim(V) = |X \cup Y| = |X| + |Y| = |X|+ |Z| = \dim(W) + \dim(V/W).
+                  </me>
+                  with the second equality holding since <m>X</m> and <m>Y</m> are disjoint.
+                </p>
+              </proof>
+            </theorem>
+          
+            <remark>
+              <p>
+                Suitably interpreted, this is valid even if <m>V</m> is infinite dimensional.
+              </p>
+            </remark>
+
+            <definition xml:id="def-nullspace"><title>Nullspace</title>
+              <statement>
+                <p>
+                  Let <m>f: V \to W</m> be a linear transformation. The <em>nullspace</em> of <m>f</m> is <m>\ker(f)</m>.
+                  The <em>nullity</em> of <m>f</m> is <m>\dim(\ker(f))</m>.
+                </p>
+              </statement>
+            </definition>
+
+            <p>
+              Recalling <xref ref="def-rank-module"/>, we have the following.
+            </p>
+
+            <theorem xml:id="thm-rank-nullity"><title>Rank-Nullity Theorem</title>
+              <statement>
+                <p>
+                  Let <m>F</m> be a field and <m>f: V \to W</m> an <m>F</m>-linear transformation between <m>F</m>-vector spaces <m>V</m> and <m>W</m>, and assume <m>V</m> is finite dimensional. 
+                  Then 
+                  <me>
+                    \dim(V) = \rank(f) + \null(f)
+                  </me> 
+                  or equivalently 
+                  <me>
+                    \dim(V) = \dim(\ker(f)) + \dim(\im(f)).
+                  </me>
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  By the <xref text="title" ref="fit-module"/> we have <m>V/\ker(f)\cong\im(f)</m>, thus <m>\dim\left(V/\ker(f)\right)=\dim(\im(f))</m>. 
+                  By the previous theorem we have 
+                  <me>
+                    \dim(V)=\dim(\ker(f)) \dim\left(V/\ker(f)\right) =\dim(\ker(V))+\dim(\im(f)).
+                  </me>
+                </p>
+              </proof>
+            </theorem>
+
+            <remark>
+              <p>
+                Suitably interpreted, this is valid even if <m>V</m> is infinite dimensional.
+              </p>
+            </remark>
             
-            <p>
-              Consider <m>V = \R^\N=\R\times \R\times \R \times \dots</m>, and define rules for addition and scaling degree-wise in the evident way.
-            </p>
-  
-            <p>
-              It is not hard to see <m>V</m> is a <m>\R</m>-vector space. It can be identified with the collection of all sequences <m>\{a_n\}</m> of real numbers. One might be interested in a basis for this vector space. At first glance the most obvious choice would be <m>E=\{e_1,e_2,\ldots\}</m>, where <m>e_i</m> is the sequence with a <m>1</m> in the <m>i</m>-th position and <m>0</m>'s everywhere else.
-            </p>
-  
-            <p>
-              However, this set does not span <m>V</m> as <m>v = (1,1,\ldots)</m> can not be represented as a finite linear combination of these elements. (It turns out that <m>E</m> is the basis for the direct sum <m>\bigoplus_{i\in \N}\R</m>, which may be identified with all sequences having only a finite number of non-zero terms.)
-            </p>
-  
-            <p>
-              Now, since we know since <m>v</m> is not in <m>\Span(E)</m>, we have that <m>E \cup \{v\}</m> is a linearly independent set. However, this does not span either as <m>(1, 2, 3, 4, \dots)</m> is not in the span of this set. We know that <m>V</m> has a basis, but it can be shown that no countable collection of vectors forms a basis for this space, in fact <m>\dim_\R \R^\N =|\R|</m>. An explicit basis of this vector space is impossible to describe.
-            </p>
-
-          </example>
-
-          <theorem xml:id="thm-dimension-and-subspaces"><title>Dimension and Subspaces</title>
-
-            <statement>
-              <p>
-                Let <m>F</m> be a field and let <m>W</m> be a subspace of a finite dimensional <m>F</m>-vector space <m>V</m>. Then <me>\dim(V) = \dim(W) + \dim(V/W).</me>
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                Pick a basis <m>X</m> of <m>W</m>. Regarded as a subset of <m>V</m>, <m>X</m> remains linearly independent and thus it may be extended to a basis of <m>V</m> by Corollary . Let us write this basis of <m>V</m> as <m>X \cup Y</m> with <m>X \cap Y = \emptyset</m>.
-              </p>
-  
-              <p>
-                Let <m>Z := \{y + W \mid y \in Y\} \subseteq V/W</m>. I claim that <m>Z</m> is a basis of <m>V/W</m>.
-              </p>
-  
-              <p>
-                Given <m>v + W</m> we have <m>v = \sum_i a_i x_i + \sum_j b_j y_j</m> for some <m>x_i \in X, y_j \in Y</m> and scalars <m>a_i, b_j</m>. Since <m>x + V = 0</m> for all <m>x \in X</m>, we have <m>v + W = \sum_j b_j z_j</m>. This proves <m>Z</m> spans. Say <m>\sum_j c_j y_j + W = 0</m> for some <m>y_1, \dots, y_m \in Y</m>. Then <m>\sum_j c_j y_j \in W</m> and hence <m>\sum_j c_j y_j = \sum_i a_i x_i</m>, whence <m>\sum_j c_j y_j + \sum_i - a_i x_i = 0</m>. Since <m>X \cup Y</m> is linearly independent, <m>c_j = 0</m> and <m>a_i = 0</m> for all <m>j, i</m>. This proves <m>Z</m> is linearly independent.
-              </p>
-  
-              <p>
-                We have <me>\dim(V) = |X \cup Y| = |X| + |Y| = |X|+ |Z| = \dim(W) + \dim(V/W).</me>with the second equality holding since <m>X</m> and <m>Y</m> are disjoint.
-              </p>
-            </proof>
-          </theorem>
-          
-          <remark>
-            <p>
-              Suitably interpreted, this is valid even if <m>V</m> is infinite dimensional, as the proof will show.
-            </p>
-          </remark>
-
-          <definition xml:id="def-nullspace"><title>Nullspace</title>
-
-            <statement>
-              <p>
-                Let <m>f: V \to W</m> be a linear transformation. The <em>nullspace</em> of <m>f</m> is <m>\ker(f)</m>.
-              </p>
-    
-              <p>
-                The <em>nullity</em> of <m>f</m> is <m>\dim(\ker(f))</m>.
-              </p>
-            </statement>
-          </definition>
-
-          <theorem xml:id="thm-rank-nullity"><title>Rank Nullity Theorem</title>
-
-            <statement>
-              <p>
-                Let <m>F</m> be a field and <m>f: V \to W</m> an <m>F</m>-linear transformation between <m>F</m>-vector spaces <m>V</m> and <m>W</m>, and assume <m>V</m> is finite dimensional. Then <me>\dim(V) = \rank(f) + \null(f)</me> or equivalently <me>\dim(V) = \dim(\ker(f)) + \dim(\im(f)).</me>
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                By the first isomorphism theorem for modules we have <m>V/\ker(f)\cong\im(f)</m>, thus <m>\dim\left(V/\ker(f)\right)=\dim(\im(f))</m>. By the previous theorem we have 
-                <me>
-                  \dim(V)=\dim(\ker(f)) \dim\left(V/\ker(f)\right) =\dim(\ker(V))+\dim(\im(f)).
-                </me>
-              </p>
-            </proof>
-          </theorem>
-
-          <remark>
-            <p>
-              Suitably interpreted, this is valid even if <m>V</m> is infinite dimensional.
-            </p>
-          </remark>
+          </subsection>   
           
         </section>
 
-        <section xml:id="sec-basics"><title>Basics</title>
+        <section xml:id="sec-cob"><title>Linear Transformations and Change of Basis</title>
 
-          <remark>
-            <p>
-              Recall that when <m>F</m> is a field an <m>F</m>-module homomorphism is called a <m>F</m>-linear transformation. 
-              Since every <m>F</m>-vector space has a basis, every linear transformation between finite dimensional vector spaces may be represented by a matrix, as we noted before.
-            </p>
-          </remark>
+          <subsection xml:id="sec-transforms"><title>Matrices of Linear Transformations</title>
 
-          <definition xml:id="def-matrix-of-free-module-homomorphism"><title>Matrix of Free Module Homomorphism</title>
-            <statement>
+            <remark>
               <p>
-                Let <m>R</m> be a non-zero commutative ring and let <m>V,W</m>, be <m>R</m>-modules of finite rank <m>n</m> and <m>m</m>, respectively. 
-                (For instance, <m>R</m> could be a field and <m>V</m> and <m>W</m> could be arbitrary finite dimensional vector spaces.) 
-                Let <m>B=\{b_1, \dots, b_n\}</m> and <m>C=\{c_1, \dots, c_m\}</m> be <em>ordered</em> bases of <m>V</m> and <m>W</m>. 
-                <ol>
-                  <li>
-                    <p>
-                      For each <m>v \in V</m>, let <m>[v]^B</m> denote the unique column vector <m>\begin{bmatrix} r_1 \\ \vdots \\ r_n \end{bmatrix}</m> such that <m>v = \sum_i r_i b_i</m>. 
-                      Define <m>[w]^C</m> for <m>w \in W</m> similarly. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      If <m>f: V \to W</m> is an <m>R</m>-module homomorphism then we define elements <m>a_{ij}\in R</m> for <m>1\leq i\leq m</m> and <m>1\leq j\leq n</m> by the formulas <m>\begin{equation} f(b_i) = \sum_{j=1}^m a_{j,i} c_j. \end{equation}</m> 
-                    </p>
-                  </li>
-                </ol>
-                Define <m>[f]_B^C</m> to be the matrix EMPTY
+                Recall that when <m>F</m> is a field an <m>F</m>-module homomorphism is called a <m>F</m>-linear transformation. 
+                Since every <m>F</m>-vector space has a basis, every linear transformation between finite dimensional vector spaces may be represented by a matrix, as we noted before.
               </p>
-            </statement>
-          </definition>
+            </remark>
 
-          <example xml:id="exe-r-vector-space-of-polynomials-p_n"><title><m>\R</m>-Vector Space of Polynomials (<m>P_n</m>)</title>
-            <p>
-              Let <m>P_n</m> denote the the <m>\R</m>-vector space of polynomials of degree at most <m>n</m> (including the zero polynomial) and consider the linear transformation <m>\phi :P_3\to P_2</m> given by <m>\phi(f)=f'</m>, i.e. taking the derivative. 
-              Take <m>B=\{1,x,x^2,x^3\}</m> for an ordered basis of <m>P_3</m> and <m>C = \{1,x,x^2\}</m> for an ordered basis of <m>P_2</m>. 
-              Then for <m>p(x) = 5 + 3x + 2x^2 - 7x^3</m> we have 
-              <me>
-                [p(x)]^B = \begin{bmatrix} 5 \\ 3 \\ 2 \\ -7\end{bmatrix}
-              </me> 
-              and 
-              <me>
-                [\phi]_B^C= 
-                \begin{bmatrix}
-                0 &amp; 1 &amp;0 &amp; 0 \\
-                0 &amp;0 &amp; 2 &amp; 0 \\
-                0&amp; 0&amp; 0&amp; 3 \\
-                \end{bmatrix}.
-              </me> 
-              We have 
-              <me>
-                [\phi]_B^C \cdot [p(x)]^B =  
-                \begin{bmatrix} 3 \\ 4 \\ -21 \end{bmatrix} = [p'(x)]^C = [\phi(p(x))]^C
-              </me> 
-              confirming in this example one of the assertions of the Lemma.
-            </p>
-  
-            <p>
-              Let <m>\psi: P_2 \to P_3</m> be the linear map <m>\psi(q(x)) = \int_0^x q(t) \, dt</m>. 
-              Then 
-              <me>
-                [\psi]_C^B= 
-                \begin{bmatrix}
-                0 &amp; 0 &amp;0  \\
-                1 &amp; 0 &amp; 0 \\
-                0&amp; 1/2&amp;  0 \\
-                0 &amp; 0  &amp; 1/3 \\
-                \end{bmatrix}.
-                </me> Note that <me>
-                [\phi]_B^C \cdot [\psi]_C^B = I_3  = [\phi \circ \psi]_C^C
-                </me> and <me>
-                [\psi]_C^B \cdot [\phi]_B^C =
-                \begin{bmatrix}
-                0 &amp; 0 &amp;0 &amp;0 \\
-                0 &amp; 1 &amp; 0 &amp;0\\
-                0&amp; 0&amp; 1&amp; 0 \\
-                0 &amp; 0  &amp; 0 &amp; 1\\
-                \end{bmatrix} = [\psi \circ \phi]_B^B
-              </me> 
-              as predicted by .
-            </p>
-          </example>   
+            <definition xml:id="def-matrix-of-free-module-homomorphism"><title>Matrix of Free Module Homomorphism</title>
+              <statement>
+                <p>
+                  Let <m>R</m> be a non-zero commutative ring and let <m>V,W</m>, be <m>R</m>-modules of finite rank <m>n</m> and <m>m</m>, respectively.
+                  Let <m>B=\{b_1, \dots, b_n\}</m> and <m>C=\{c_1, \dots, c_m\}</m> be ordered bases of <m>V</m> and <m>W</m>. 
+                  Given an <m>R</m>-module homomorphism <m>f: V \rightarrow W</m>, we define elements <m>a_{i j} \in R</m> for <m>1 \leqslant i \leqslant m</m> and <m>1 \leqslant j \leqslant n</m> by the formulas
+                  <me>
+                    f\left(b_{i}\right)=\sum_{j=1}^{m} a_{j, i} c_{j}.
+                  </me>
+                  The matrix
+                  <me>
+                    [f]_{B}^{C}=\left[\begin{array}{cccc}
+                    a_{1,1} &amp; a_{1,2} &amp; \cdots &amp; a_{1, n} \\
+                    a_{2,1} &amp; a_{2,2} &amp; \cdots &amp; a_{2, n} \\
+                    \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+                    a_{m, 1} &amp; a_{m, 2} &amp; \cdots &amp; a_{m, n}
+                    \end{array}\right]
+                  </me>
+                  is said to <em>represent</em> the homomorphism <m>f</m> with respect to the bases <m>B</m> and <m>C</m>.
+                  In the case that <m>V</m> and <m>W</m> are <m>F</m>-vector spaces, the matrix <m>[f]_{B}^{C}</m> is called the <em>matrix of the linear transformation</em> <m>f</m> with respect to the bases <m>B</m> and <m>C</m>.
+                </p>
+              </statement>
+            </definition>
 
-          <example xml:id="exe-identity-automorphism-of-free-r-module"><title>Identity Automorphism of Free <m>R</m>-Module</title>
-            <p>
-              If <m>\id_V: V \to V</m> is the identity automorphism of an <m>n</m>-dimensional free <m>R</m>-module <m>V</m>, then for any basis <m>B</m> of <m>V</m> we have <m>\id_V(b_i) = b_i</m> for all <m>i</m> and hence 
-              <me>
-                [\id_V]^B_B = I_n.
-              </me>
-            </p>
-          </example>
-          
-        </section>
-
-        <section xml:id="subsec-free-modules-and-matrices"><title>Free Modules and Matrices</title>
-          
-          <proposition xml:id="prop-bijection-of-matrices-and-hom-functor"><title>Bijection of Matrices and Hom Functor</title>
-            <statement>
+            <example xml:id="exe-identity-automorphism-of-free-r-module"><title>Identity Automorphism of Free <m>R</m>-Module</title>
               <p>
-                Suppose <m>R</m> is a ring and <m>F</m> and <m>E</m> are free <m>R</m>-modules with ordered bases <m>X = \{x_1, \dots, x_m\}</m> and <m>Y = \{y_1, \dots, y_n\}</m>, respectively. There is a bijective correspondence 
+                If <m>\id_V: V \to V</m> is the identity automorphism of an <m>n</m>-dimensional free <m>R</m>-module <m>V</m>, then for any basis <m>B</m> of <m>V</m> we have <m>\id_V(b_i) = b_i</m> for all <m>i</m> and hence 
                 <me>
-                  \Mat_{n \times m}(R) \to \Hom_R(F, E)
-                </me> 
-                that sends a matrix <m>A = (a_{i,j})_{1 \leq i \leq n, 1 \leq j \leq m}</m> to the unique <m>R</m>-module homomorphism <m>T_A: F \to E</m> satisfying <m>T_A(x_j)=\sum_{i= 1}^n a_{i,j} y_i</m> for each <m>1 \leq j \leq m</m>.
-              </p>
-            </statement>
-          </proposition>
-
-          <remark>
-            <p>It is of paramount importance to realize that the bijection between maps and matrices {}.</p>
-
-            <p>In particular, the <m>R</m>-map written as <m>T_A</m> that we associate to the matrix <m>S</m> in this proposition depends on the basis <m>X</m> and <m>Y</m>, and so it should really be written as something like <m>T_A^{X,Y}</m>. I will occasionally do so.</p>
-          </remark>
-
-          <remark>
-            <p>Let us rephrase the Proposition in terms of usual matrix multiplication in the case when <m>R</m> is {}.</p>
-
-            <p>Given an <m>R</m>-module homomorphism <m>f: F \to E</m> with <m>F</m> and <m>E</m> as in the proposition, let <m>A</m> be the matrix attached to it using the bases <m>X</m> and <m>Y</m> as described above. Then the diagram #empty</p>
-
-            <p>commutes, where <m>\phi^F_X</m> and <m>\phi^E_Y</m> are defined in  and  and by <m>A: R^m \to R^n</m> we mean the map <m>v \mapsto Av</m> where <m>Av</m> denotes the usual rule for matrix multiplication. (Recall elements of <m>R^m</m> are represented as column vectors.)</p>
-
-            <p>Conversely, given a matrix <m>A</m>, the corresponding map <m>T_A^{X,Y}: F \to E</m> is the unique one causing this square to commute; i.e. <m>T_A^{X,Y} = \phi_Y^E \circ A \circ (\phi^F_X)^{-1}</m>.</p>
-          </remark>
-
-          <remark><p>For non-commutative rings, there is a version of the previous remark that remains true: Replace the vertical map on the left in diagram with the map given by <m>v \mapsto (v^\tau A^\tau)^\tau</m> where the exponent <m>\tau</m> denotes taking the transpose of a matrix. (If <m>R</m> is commutative, we have <m>(AB)^\tau = (BA)^\tau</m> for all matrices <m>A</m> and <m>B</m> of an appropriate size, and thus <m>(v^\tau A^\tau)^\tau = (A^\tau)^\tau (v^\tau)^\tau = Av</m>. When <m>R</m> is not commutative, it is {} true in general that <m>(AB)^\tau = (BA)^\tau</m>.)</p></remark>
-
-          <theorem xml:id="thm-matrix-multiplication-is-associative"><title>Matrix Multiplication is Associative</title>
-            <statement>
-              <p>
-                Let <m>R</m> be a commutative ring, let <m>F, E, G</m> be free <m>R</m>-modules having finite bases <m>X = \{x_1, \dots, x_m\}, Y = \{y_1, \dots, y_n\}, Z = \{z_1, \dots, z_p\}</m> of size <m>m,n,p</m>, respectively. Given a <m>n \times m</m> matrix <m>A</m> and a <m>p \times n</m> matrix <m>B</m>, let <m>AB</m> denote the <m>p \times m</m> matrix obtained by the usual formula for matrix multiplication, and let <m>T_A^{X,Y}: F \to E</m>, <m>T_B^{Y,Z}: E \to G</m> and <m>T_{BA}^{X,Z}: F \to G</m> be the maps associated to these matrices relative to the specified bases, as given in Proposition. Then 
-                <me>
-                  T^{Y,Z}_B \circ T_A^{X,Y} = T_{BA}^{X,Z}.
-                </me> 
-                In particular, matrix multiplication is associative. 
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                For the first assertion we just need to check the two maps agree on <m>x_j</m> for all <m>j</m>: We have 
-                <me>
-                  T_B(T_A(x_j)) = T_B(\sum_i a_{i,j} y_i) = \sum_i a_{i,j} T_B(y_i) 
-                  = \sum_i \sum _l a_{i, j} b_{k, i} z_k
-                  </me> (with the second equation using that <m>T_B</m> is an <m>R</m>-map) and <me>
-                  T_{BA}(x_j) = \sum_k (BA)_{k,j} z_k = \sum_k \left(\sum _i b_{k, i} a_{i, j}\right) z_k.
-                </me> 
-                (I have left off the superscripts <m>(X,Y)</m> etc. for the sake of my sanity.) These two expressions agree since <m>R</m> is commutative.
-              </p>
-    
-              <p>
-                The second assertion holds since composition of functions is associative.
-              </p>
-            </proof>
-          </theorem>
-
-          <remark><p>The correct version of this for <m>R</m>-non commutative is that <m>T_B \circ T_A = T_{(A^\tau B^\tau)^\tau}</m> (again, with superscripts omitted).</p></remark>
-
-        </section>
-
-        <section xml:id="sec-cob"><title>Change of Basis</title>
-
-          <definition xml:id="def-change-of-basis-matrix"><title>Change of Basis Matrix</title>
-            <statement>
-              <p>
-                Let <m>V</m> be a finite rank free module over a commutative ring <m>R</m>, and let <m>B</m> and <m>B'</m> be bases of <m>V</m>. Let <m>\id_V</m> be the identity map on <m>V</m>. Then <m>[\id_V]_B^{B'}</m> is called the <em>change of basis matrix</em> from <m>B</m> to <m>B'.</m>
-              </p>
-            </statement>
-          </definition>
-
-          <remark>
-            <p>
-              By Proposition, <m>[\id_V]_B^{B'}</m> is an invertible matrix and its inverse <me>\begin{equation}
-              \left([\id_V]_B^{B'}\right)^{-1}=[\id_V]_{B'}^B.
-              \end{equation}</me> It follows from  that <me>[\id_V]_B^{B'} \cdot [v]^B = [v]^{B'};</me>that is, multiplication by <m>[\id_V]_B^{B'}</m> really does change the representation of vectors by column vectors from one basis to another.
-            </p>
-          </remark>
-
-          <example xml:id="exe-cob-matrix-and-standard-free-module"><title>CoB Matrix and Standard Free Module</title>
-            <p>
-              Say <m>V = R^n</m>, <m>B</m> is the standard basis (so <m>b_i</m> is a column vector with a <m>1</m> in the <m>i</m>-th position and <m>0</m>'s elsewhere). 
-              Note that <m>[v]^B = v</m> for all <m>v</m>.
-            </p>
-  
-            <p>
-              Let <m>B' = \{b'_1, \dots, b'_b\}</m> be any other basis of <m>V</m>. 
-              Then <m>[b'_i]^B = b_i</m> and so the change of basis matrix <m>[\id_V]_{B'}^{B}</m> satisfies, on the one hand, 
-              <me>
-                [\id_V]_{B'}^{B} [b'_i]^{B'}=[\id_V]_{B'}^{B} b_i = \text{the $i$-th column of $[\id_V]_{B'}^{B}$}
-              </me> 
-              and, on the other hand, 
-              <me>
-                [\id_V]_{B'}^{B} [b'_i]^{B'}=[b'_i]^B  = b'_i.
-              </me> 
-              That is, <m>[\id_V]_{B'}^B</m> is the matrix whose columns are <m>b_1', \dots, b_n'</m>.
-            </p>
-          </example>
-
-          <example xml:id="exe-cob-and-p_n"><title>CoB and <m>P_n</m></title>
-            <p>
-              Consider <m>V = P_2</m>, let <m>B = \{1, x, x^2\}</m> and <m>B' = \{1,x-2,(x-2)^2\}</m> be bases of <m>V</m>. We calculate the change of basis matrix. We have <me>\begin{aligned}\id_V(1) &amp;=1 ,\\
-              \id_V(x) &amp;=2\cdot1+1\cdot(x-2), \\
-              \id_V(x^2) &amp;=4\cdot1 +4\cdot(x-2)+1\cdot(x-2)^2.
-              \end{aligned}
-              </me> Thus, the change of basis matrix is given by <me>[\id_V]_B^{B'} = \begin{bmatrix}
-              1 &amp; 2 &amp; 4\\
-              0 &amp; 1 &amp; 4\\
-              0 &amp; 0 &amp; 1
-              \end{bmatrix}.</me> If we wish to represent <m>f(x) = 1 + x + x^2</m> in the basis <m>B'</m>, we start by noting <m>[f(x)]^B = (1,1,1)^\tau</m> (where recall <m>\tau</m> means to take the transpose) and compute <m>[\id_V]_B^{B'} \cdot (1,1,1)^\tau</m> to get <m>(7, 5, 1)^\tau</m>. This tells us that <me>
-              1 + x + x^2 = 7 + 5(x-2) + (x-2)^2.
-              </me>
-            </p>
-          </example>
-
-          <proposition xml:id="prop-cob-and-identity"><title>CoB and Identity</title>
-            <statement>
-              <p>
-                Let <m>V, W</m> be finitely generated free modules over a commutative ring <m>R</m>, let <m>B</m> and <m>B'</m> be bases of <m>V</m>, let <m>C</m> and <m>C'</m> be bases of <m>W</m>, and let <m>f: V \to W</m> be a homomorphism. 
-                Then 
-                <me>
-                  [f]_{B'}^{C'} = [\id_W]_C^{C'} [f]_B^C [\id_V]_{B'}^{B}.
+                  [\id_V]^B_B = I_n.
                 </me>
               </p>
-            </statement>
+            </example>
 
-            <proof>
+            <example xml:id="exe-r-vector-space-of-polynomials-p_n"><title>Matrix Representing the Derivative Operator</title>
               <p>
-                This is seen to hold by applying  twice (since <m>\id_W \circ f \circ \id_V = f</m>).
-              </p>
-            </proof>
-          </proposition>
-
-          <definition xml:id="def-equivalent-matrices"><title>Equivalent Matrices</title>
-            <statement>
-              <p>
-                Two <m>m \times n</m> matrices <m>X</m> and <m>Y</m> are <em>conjugate</em> if there exists an invertible matrix <m>P</m> such that that <m>Y = PXP\inv</m>.
-              </p>
-            </statement>
-          </definition>
-
-          <remark>
-            <p>
-              With this bit of terminology, we can say that two matrices representing the same linear transformation with respect to a different pair of bases are conjugate. 
-              The converse is also true: 
-              If two matrices are conjugate, then they represent the same linear transformation with respect to different bases.
-            </p>
-          </remark>
-
-          <theorem xml:id="thm-finding-equivalent-matrices"><title>Finding Equivalent Matrices</title>
-            <statement>
-              <p>
-                Let <m>F</m> be a field. 
-                Given an <m>F</m>-linear transformation <m>g: V \to U</m> between finite dimensional <m>F</m>-vector spaces <m>V</m> and <m>U</m>, there are bases <m>B</m> and <m>C</m> of <m>V</m> and <m>U</m>, respectively, such that 
-                <me>
-                  [g]_B^C = 
-                  \begin{bmatrix}
-                  I_r &amp; 0 \\
-                  0 &amp; 0 \\
-                  \end{bmatrix}
-                </me> 
-                where <m>r = \rank(g)</m> and the <m>0</m>'s denote appropriately sized matrices with all <m>0</m> entries.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                We form <m>B</m> and <m>C</m> in steps.
-              </p>
-  
-              <p>
-                Start by picking an ordered basis <m>C' = \{w_1, \dots, w_r\}</m> of the image of <m>g</m>. 
-                For each <m>i</m> pick <m>v_i \in V</m> such that <m>g(v_i) = w_i</m> and set <m>B' = \{v_1, \dots, v_r\}</m>. 
-                Then pick a basis <m>B''</m> of the kernel of <m>g</m>. 
-                Let us list the elements of <m>B''</m> as <m>\{v_{r+1}, \dots, v_n\}</m>.
-              </p>
-  
-              <p>
-                I claim that <m>B := B' \cup B'' = \{v_1, \dots, v_n\}</m> is a basis of <m>V</m>. 
-                (Note that <m>B' \cap B'' = \emptyset</m> since <m>g(v_i) = w_i \ne 0</m> for all <m>i</m> with <m>1 \leq i \leq r</m> and <m>g(v_i) = 0</m> for all <m>i &gt; r</m>.) 
-                Pick <m>v \in V</m>. 
-                Then, since <m>C'</m> spans the image of <m>g</m>, we have <m>g(v) = \sum_{i=1}^r a_i w_i</m> for some scalars <m>a_i \in F</m>. 
-                It follows that <m>v - \sum_{i=1}^r a_i v_i \in \ker(g)</m> and hence, since the kernel is spanned by <m>B''</m>, we have
-                <me>
-                  v - \sum_{i=1}^r a_i v_i = \sum_{i=r+1}^n a_i v_i,
+                Let <m>P_{3}</m> denote the the <m>F</m>-vector space of polynomials of degree at most <m>3</m> (including the zero polynomial) and consider the linear transformation <m>d: P_{3} \rightarrow P_{3}</m> given by taking the derivative <m>d(f)=f^{\prime}</m>. 
+                Let <m>B=\left\{1, x, x^{2}, x^{3}\right\}</m>. 
+                Then
+                <me>[f]_{B}^{B}=\left[\begin{array}{llll}
+                  0 &amp; 1 &amp; 0 &amp; 0 \\
+                  0 &amp; 0 &amp; 2 &amp; 0 \\
+                  0 &amp; 0 &amp; 0 &amp; 3 \\
+                  0 &amp; 0 &amp; 0 &amp; 0
+                  \end{array}\right]
                 </me>
-                for some <m>a_{r+1}, \dots, a_n \in F</m>. 
-                By rearranging this equation, we conclude <m>v \in \Span(B)</m> and thus <m>B</m> spans <m>V</m>.
               </p>
-  
+            </example>
+
+          </subsection>
+
+          <subsection xml:id="subsec-cob"><title>Change of Basis</title>
+
+            <definition xml:id="def-change-of-basis-matrix"><title>Change of Basis Matrix</title>
+              <statement>
+                <p>
+                  Let <m>V</m> be a finitely generated free module over a commutative ring <m>R</m>, and let <m>B</m> and <m>C</m> be bases of <m>V</m>. 
+                  Let <m>\operatorname{id}_{V}</m> be the identity map on <m>V</m>. 
+                  Then <m>\left[\operatorname{id}_{V}\right]_{B}^{C}</m> is a matrix called the change of basis matrix from <m>B</m> to <m>C</m>.
+                </p>
+              </statement>
+            </definition>
+
+            <remark>
               <p>
-                Now say <m>\sum_{i=1}^n c_i v_i = 0</m> for some <m>c_i</m>'s in <m>F</m>. 
-                Since <m>g(v_i) = 0</m> for all <m>i &gt; r</m> and <m>g(v_i) = w_i</m> for all <m>i \leq r</m>, this gives that <m>0 = g(0) = g(\sum_{i=1}^n c_i v_i) = \sum_{i=1}^n c_i g(v_i) =\sum_{i=1}^r c_i w_i = 0</m>. 
-                Since <m>C'</m> is linearly independent, we have <m>c_i = 0</m> for <m>1 \leq i \leq r</m>. 
-                Going back to the original equation <m>\sum_{i=1}^n c_i v_i = 0</m>, we see that <m>\sum_{i=1}^r c_i v_i = 0</m> and hence <m>c_i=0</m> for all <m>i</m>, since <m>B''</m> is linearly independent.
+                In <xref ref="thm-similar-cob"/> we will show that <m>\left[\mathrm{id}_{V}\right]_{B}^{C}</m> is invertible with inverse <m>\left(\left[\mathrm{id}_{V}\right]_{B}^{C}\right)^{-1}=\left[\mathrm{id}_{V}\right]_{C}^{B}</m>.
               </p>
-  
+            </remark>
+
+            <example xml:id="exe-cob-and-p_n"><title>CoB and <m>P_n</m></title>
               <p>
-                Finally we extend <m>C'</m> to an ordered basis <m>C = \{w_1, \dots, w_r, w_{r+1}, \dots, w_m\}</m> of <m>W</m> arbitrarily.
-              </p>
-  
-              <p>
-                By our construction, for any <m>v_i \in B</m> we have 
+                Consider <m>V = P_2</m>, let <m>B = \{1, x, x^2\}</m> and <m>B' = \{1,x-2,(x-2)^2\}</m> be bases of <m>V</m>. 
+                We calculate the change of basis matrix. 
+                We have 
                 <me>
-                  g(v_i) = \begin{cases}
-                  w_i &amp; \text{for $1 \leq i \leq r$ and} \\
-                  0 &amp; \text{for $r+1 \leq i \leq n$} \\
-                  \end{cases}
+                  \begin{aligned}\id_V(1) &amp;=1 ,\\
+                  \id_V(x) &amp;=2\cdot1+1\cdot(x-2), \\
+                  \id_V(x^2) &amp;=4\cdot1 +4\cdot(x-2)+1\cdot(x-2)^2.
+                  \end{aligned}
                 </me> 
-                and hence 
+                Thus, the change of basis matrix is given by 
                 <me>
-                  [g]_B^C = 
-                  \begin{bmatrix}
-                  I_r &amp; 0 \\
-                  0 &amp; 0 \\
+                  [\id_V]_B^{B'} = \begin{bmatrix}
+                  1 &amp; 2 &amp; 4\\
+                  0 &amp; 1 &amp; 4\\
+                  0 &amp; 0 &amp; 1
                   \end{bmatrix}.
                 </me> 
-                Note that, in our construction, <m>r = \dim_F(\im(g)) = \rank(g)</m>.
               </p>
-            </proof>
-          </theorem>
+            </example>
 
-          <corollary xml:id="cor-every-mtimes-n-matrix-equivalent-to-unique-matrix"><title>Every <m>m\times n</m> Matrix Equivalent to Unique Matrix</title>
-            <statement>
-              <p>
-                Every <m>m \times n</m> matrix <m>A</m> with entries in a field is equivalent to a unique matrix of the form<me>\begin{bmatrix}
-                  I_r &amp; 0 \\
-                  0 &amp; 0 \\
-                  \end{bmatrix}</me> where <m>r</m> is the rank of <m>A</m>.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                Let <m>V = F^n</m> and <m>W = F^m</m> and <m>g: V \to W</m> be the linear transformation given by <m>g(v) = A \cdot v</m>, matrix multiplication. 
-                (I have called this map <m>T_A</m> in the past.) 
-                If <m>B'</m> and <m>C'</m> are the standard basis of <m>V</m> and <m>W</m> then <m>[g]_{B'}^{C'} = A</m>.
-              </p>
-  
-              <p>
-                <xref ref="thm-finding-equivalent-matrices"/> gives that there are bases <m>B</m> and <m>C</m> of <m>V</m> and <m>W</m> such that
+            <lemma xml:id="lem-cob-and-identity"><title>CoB and Identity</title>
+              <statement>
+                <p>
+                If <m>V, W, U</m> are finitely generated free <m>R</m>-modules spaces with ordered bases <m>B</m>, <m>C</m>, and <m>D</m>, and if <m>f: V \rightarrow W</m> and <m>g: W \rightarrow U</m> are <m>R</m>-module homomorphisms, then
                 <me>
-                  [g]_B^C = 
-                  \begin{bmatrix}
-                  I_r &amp; 0 \\
-                  0 &amp; 0 \\
-                  \end{bmatrix}.
+                  [g \circ f]_{D}^{B}=[g]_{D}^{C} \cdot[f]_{C}^{B}
                 </me>
-                So, by Proposition , we have 
-                <me>
-                  A = [g]_{B'}^{C'} = [\id_W]_C^{C'}[g]_B^C [\id_V]_{B'}^{B}=P \begin{bmatrix}I_r &amp; 0 \\0 &amp; 0 \\\end{bmatrix}Q
-                </me> 
-                with <m>P := [\id_W]_C^{C'}</m> and <m>Q := [\id_V]_{B'}^{B}</m>. 
-                Note that <m>P, Q</m> are invertible since they are change of basis matrices (see ).
-              </p>
-  
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  Given <m>v \in V</m>, we have
+                  <me>
+                    (f \circ g)(v)=f(g(v))=f\left([g]_{B}^{C} v\right)=[f]_{C}^{D}\left([g]_{B}^{C} v\right)=\left([f]_{C}^{D}[g]_{B}^{C}\right)v
+                  </me>
+                  so <m>[f \circ g]_{B}^{B}=[f]_{B}^{B}[g]_{B}^{B}</m>.
+                </p>
+              </proof>
+            </lemma>
+
+            <definition xml:id="def-similar-matrices"><title>Similar Matrices</title>
+              <statement>
+                <p>
+                  Let <m>V</m> be a finitely generated free module over a commutative ring <m>R</m>. 
+                  Two <m>R</m>-module homomorphisms <m>f, g: V \rightarrow V</m> are <em>similar</em> if there is a bijective linear transformation <m>h: V \rightarrow V</m> such that <m>g=h \circ f \circ h^{-1}</m>. 
+                  Two <m>n \times n</m> matrices <m>A</m> and <m>B</m> with entries in <m>R</m> are <em>similar</em> if there is an invertible <m>n \times n</m> matrix <m>P</m> such that <m>B=P A P^{-1}</m>.
+                </p>
+              </statement>
+            </definition>
+
+            <remark>
               <p>
-                The uniqueness of <m>r</m> follows from the fact that <m>r = \rank_F(g)</m>, which does not depend on a choice of bases.
+                For elements <m>A, B \in \mathrm{GL}_{n}(R)</m>, the notions of similar and conjugate are the same.
               </p>
-            </proof>
-          </corollary>
+            </remark>
 
-          <definition xml:id="def-elementary-basis-change-operations"><title>Elementary Basis Change Operations</title>
-            <statement>
-              <p>
-                Let <m>R</m> be a commutative ring with <m>1 \neq 0</m>, let <m>M</m> be a free <m>R</m>-module of finite rank <m>n</m>, and let <m>B = \{b_1,\dots ,b_n\}</m> be an ordered basis for <m>M</m>. An <em>elementary basis change operation</em> on the basis <m>B</m> is one of the following three types of operations: 
-                <ol>
-                  <li>
-                    <p>
-                      (Type I) Replacing <m>b_i</m> by <m>b_i + rb_j</m> for some <m>i \neq j</m> and some <m>r\in R</m>. 
-                    </p>
-                  </li>
+            <theorem xml:id="thm-similar-cob"><title>Similar CoB Matrices</title>
+              <statement>
+                <p>
+                  Let <m>V, W</m> be finitely generated free modules over a commutative ring <m>R</m>, let <m>B</m> and <m>B^{\prime}</m> be bases of <m>V</m>, let <m>C</m> and <m>C^{\prime}</m> be bases of <m>W</m>, and let <m>f: V \rightarrow W</m> be a homomorphism. 
+                  Then
+                  <me>
+                    [f]_{B^{\prime}}^{C^{\prime}}=\left[\mathrm{id}_{W}\right]_{C}^{C^{\prime}}[f]_{B}^{C}\left[\mathrm{id}_{V}\right]_{B^{\prime}}^{B}
+                  </me>
+                  In particular, if <m>g: V \rightarrow V</m> is an <m>R</m>-module homomorphism, then <m>[g]_{B}^{B}</m> and <m>[g]_{B^{\prime}}^{B^{\prime}}</m> are similar.
+                </p>
+              </statement>
 
-                  <li>
-                    <p>
-                      (Type II) Replacing <m>b_i</m> by <m>ub_i</m> for some <m>i</m> and some unit <m>u</m> of <m>R</m>, 
-                    </p>
-                  </li>
+              <proof>
+                <p>
+                  Since <m>f=\mathrm{id}_{W} \circ f \circ \mathrm{id}_{V}</m>, by <xref ref="lem-cob-and-identity"/> we have
+                  <me>
+                    [f]_{B^{\prime}}^{C^{\prime}}=\left[\mathrm{id}_{W}\right]_{C}^{C^{\prime}}[f]_{B}^{C}\left[\mathrm{id}_{V}\right]_{B^{\prime}}^{B}
+                  </me>
+                  Setting <m>V=W, B=C, B^{\prime}=C^{\prime}</m>, and <m>f=\mathrm{id}_{V}</m> we have <m>\left[\mathrm{id}_{V}\right]_{B^{\prime}}^{B^{\prime}}=\left[\mathrm{id}_{V}\right]_{B}^{B^{\prime}}\left[\operatorname{id}_{V}\right]_{B}^{B}\left[\operatorname{id}_{V}\right]_{B^{\prime}}^{B}</m>. 
+                  Notice that <m>\left[\operatorname{id}_{V}\right]_{B}^{B}=\left[\operatorname{id}_{V}\right]_{B^{\prime}}^{B^{\prime}}=I</m> is the identity matrix, so the previous formula says that
+                  <me>
+                    I=\left[\mathrm{id}_{V}\right]_{B}^{B^{\prime}} I\left[\mathrm{id}_{V}\right]_{B^{\prime}}^{B}
+                  </me>
+                  Setting <m>P=\left[\mathrm{id}_{V}\right]_{B}^{B^{\prime}}</m>, we notice that the previous identity gives <m>P^{-1}=\left[\mathrm{id}_{V}\right]_{B^{\prime}}^{B}</m>.
+                </p>
 
-                  <li>
-                    <p>
-                      (Type III) Swapping the positions of <m>b_i</m> and <m>b_j</m> for some <m>i \neq j</m>.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-          </definition>
+                <p>
+                  Now set <m>V=W, B=C, B^{\prime}=C^{\prime}</m> and <m>f=g</m> to obtain
+                  <me>
+                    [g]_{B^{\prime}}^{B^{\prime}}=\left[\mathrm{id}_{V}\right]_{B}^{B^{\prime}}[g]_{B}^{B}\left[\mathrm{id}_{V}\right]_{B^{\prime}}^{B}=P[g]_{B}^{B} P^{-1}.
+                  </me>
+                </p>
+              </proof>
+            </theorem>
 
-          <definition xml:id="def-elementary-row-operations"><title>Elementary Row Operations</title>
-            <statement>
-              <p>
-                Let <m>R</m> be a commutative ring with <m>1 \neq 0</m>. An <em>elementary row (column) operation</em> on a matrix <m>A \in \Mat_{m,n}(R)</m> is one of the following three types of operations: 
-                <ol>
-                  <li>
-                    <p>
-                      (Type I) Adding an element of <m>R</m> times a row (column) of <m>A</m> to a different row column of <m>A</m>. 
-                    </p>
-                  </li>
+            <p>
+              We now come to certain special changes of basis and their matrices:
+            </p>
 
-                  <li>
-                    <p>
-                      (Type II) Multiplying a row (column) of <m>A</m> by a unit of <m>R</m>. 
-                    </p>
-                  </li>
+            <definition xml:id="def-elementary-basis-change-operations"><title>Elementary Basis Change Operations</title>
+              <statement>
+                <p>
+                  Let <m>R</m> be a commutative ring with <m>1 \neq 0</m>, let <m>M</m> be a free <m>R</m>-module of finite rank <m>n</m>, and let <m>B = \{b_1,\dots ,b_n\}</m> be an ordered basis for <m>M</m>. An <em>elementary basis change operation</em> on the basis <m>B</m> is one of the following three types of operations: 
+                  <ol>
+                    <li>
+                      <p>
+                        (Type I) Replacing <m>b_i</m> by <m>b_i + rb_j</m> for some <m>i \neq j</m> and some <m>r\in R</m>. 
+                      </p>
+                    </li>
 
-                  <li>
-                    <p>
-                      (Type III) Interchanging two rows (columns) of <m>A</m>.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-          </definition>
+                    <li>
+                      <p>
+                        (Type II) Replacing <m>b_i</m> by <m>ub_i</m> for some <m>i</m> and some unit <m>u</m> of <m>R</m>, 
+                      </p>
+                    </li>
 
-          <definition xml:id="def-elementary-matrix"><title>Elementary Matrix</title>
+                    <li>
+                      <p>
+                        (Type III) Swapping the positions of <m>b_i</m> and <m>b_j</m> for some <m>i \neq j</m>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+            </definition>
 
-            <statement>
-              <p>
-                Let <m>R</m> be a commutative ring with <m>1 \neq 0</m>. An <em>elementary matrix</em> over <m>R</m> is an <m>n \times n</m> matrix obtained from <m>I_n</m> by applying a single elementary column operation (or, equivalently, a single elementary column operation). In more detail: 
+            <definition xml:id="def-elementary-row-operations"><title>Elementary Row Operations</title>
+              <statement>
+                <p>
+                  Let <m>R</m> be a commutative ring with <m>1 \neq 0</m>. An <em>elementary row (column) operation</em> on a matrix <m>A \in \Mat_{m,n}(R)</m> is one of the following three types of operations: 
+                  <ol>
+                    <li>
+                      <p>
+                        (Type I) Adding an element of <m>R</m> times a row (column) of <m>A</m> to a different row column of <m>A</m>. 
+                      </p>
+                    </li>
 
-                <ol>
-                  <li>
-                    <p>
-                      (Type I) For <m>r \in R</m> and <m>1 \leq i,j \leq n</m> with <m>i \neq j</m>, let <m>E_{i,j}(r)</m> be the type I elementary matrix with <m>1</m>'s on the diagonal, <m>r</m> in the <m>(i,j)</m> position, and <m>0</m> everywhere else. 
-                    </p>
-                  </li>
+                    <li>
+                      <p>
+                        (Type II) Multiplying a row (column) of <m>A</m> by a unit of <m>R</m>. 
+                      </p>
+                    </li>
 
-                  <li>
-                    <p>
-                      (Type II) For <m>u \in R^\times</m> and <m>1\leq i \leq n</m> let <m>E_i(u)</m> be the type II elementary matrix with <m>(i,i)</m> entry <m>u</m>, <m>(j,j)</m> entry <m>1</m> for all <m>j \neq i</m>, and <m>0</m> everywhere else. 
-                    </p>
-                  </li>
+                    <li>
+                      <p>
+                        (Type III) Interchanging two rows (columns) of <m>A</m>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+            </definition>
 
-                  <li>
-                    <p>
-                      (Type III) For <m>1 \leq i,j \leq n</m> with <m>i \neq j</m>, let <m>E_{(i,j)}</m> be the type III elementary matrix with <m>1</m> in the <m>(i,j)</m> and <m>(j,i)</m> positions and in the <m>(l,l)</m> positions for all <m>l\not \in \{i,j\}</m>, and 0 in all other entries.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-          </definition>
+            <definition xml:id="def-elementary-matrix"><title>Elementary Matrix</title>
+
+              <statement>
+                <p>
+                  Let <m>R</m> be a commutative ring with <m>1 \neq 0</m>. An <em>elementary matrix</em> over <m>R</m> is an <m>n \times n</m> matrix obtained from <m>I_n</m> by applying a single elementary column operation (or, equivalently, a single elementary column operation). In more detail: 
+
+                  <ol>
+                    <li>
+                      <p>
+                        (Type I) For <m>r \in R</m> and <m>1 \leq i,j \leq n</m> with <m>i \neq j</m>, let <m>E_{i,j}(r)</m> be the type I elementary matrix with <m>1</m>'s on the diagonal, <m>r</m> in the <m>(i,j)</m> position, and <m>0</m> everywhere else. 
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        (Type II) For <m>u \in R^\times</m> and <m>1\leq i \leq n</m> let <m>E_i(u)</m> be the type II elementary matrix with <m>(i,i)</m> entry <m>u</m>, <m>(j,j)</m> entry <m>1</m> for all <m>j \neq i</m>, and <m>0</m> everywhere else. 
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        (Type III) For <m>1 \leq i,j \leq n</m> with <m>i \neq j</m>, let <m>E_{(i,j)}</m> be the type III elementary matrix with <m>1</m> in the <m>(i,j)</m> and <m>(j,i)</m> positions and in the <m>(l,l)</m> positions for all <m>l\not \in \{i,j\}</m>, and 0 in all other entries.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+            </definition>
+
+          </subsection>
 
         </section>
 
@@ -13145,257 +13151,503 @@
       <chapter xml:id="ch-modgen"><title>Finitely Generated Modules over PIDs</title>
 
         <section xml:id="sec-modpres"><title>Finitely Presented Modules</title>
+          
+          <subsection xml:id="subsec-fp-modules"><title>Finitely Presented Modules</title>
 
-          <remark>
+            <definition xml:id="def-module-presentation"><title><m>R</m>-Module Presentation</title>
+              <statement>
+                <p>
+                  Let <m>R</m> be a non-zero commutative ring, let <m>A \in \Mat_{m,n}(R)</m>, and let <m>T_A: R^n \to R^m</m> be the <m>R</m>-module homomorphism represented by <m>A</m> with respect to the standard bases; 
+                  that is, define <m>T_A(v)=A \cdot v</m>. 
+                  The <m>R</m>-<em>module presented by</em> <m>A</m> is the <m>R</m>-module <m>\coker(T_A) = R^m/\im(T_A)</m>.
+                </p>
+      
+                <p>
+                  Equivalently, the module presented by <m>A</m> is 
+                  <me>
+                    \frac{R^m}{R v_1 + \cdots + R v_n}
+                  </me> 
+                  where <m>v_1, \dots, v_n</m> are the columns of <m>A</m>.
+                </p>
+              </statement>
+            </definition>
+
+            <example>
+              <statement>
+                <p>
+                  The <m>\mathbb{Z}</m>-module <m>M=\mathbb{Z} / 6</m> is presented by
+                  <me>
+                    \mathbb{Z} \stackrel{6}{\rightarrow} \mathbb{Z}
+                  </me>
+                </p>
+              </statement>
+              <solution>
+                <p>
+                  Notice <m>M \cong \mathbb{Z} / \operatorname{im}\left(t_{6}\right)=\mathbb{Z} /(6)</m>. 
+                  Notice here we abused notation and wrote <m>6</m> instead of the <m>1 \times 1</m> matrix <m>[6]</m>.
+                </p>
+              </solution>
+            </example>
+
             <p>
-              You have seen presentations for groups in the past; 
-              these consisted of a set of generators and a set of relations among these generators. 
-              Presentations are important for modules as well. 
-              In the case of modules, the relations may be encoded by a matrix.
+              Conversely, we might be given a matrix and ask about what module it represents; 
+              one thing to keep in mind is that some presentations might be inefficient, either by having more generators or more relations than necessary. 
+              We want to answer to key questions: given a presentation for a module, how to find a more efficient presentation; and how to decide if two different presentations actually give us isomorphic modules. 
+              Keeping these goals in mind, let's try a more elaborate example.
             </p>
-          </remark>
 
-          <definition xml:id="def-module-presentation"><title><m>R</m>-Module Presentation</title>
-            <statement>
+            <example xml:id="exe-z-module-presentation"><title><m>\Z</m>-Module Presentation</title>
               <p>
-                Let <m>R</m> be a non-zero commutative ring, let <m>A \in \Mat_{m,n}(R)</m>, and let <m>T_A: R^n \to R^m</m> be the <m>R</m>-module homomorphism represented by <m>A</m> with respect to the standard bases; that is, define <m>T_A(v)=A \cdot v</m>. The <m>R</m>-<em>module presented by</em> <m>A</m> is the <m>R</m>-module <m>\coker(T_A) = R^m/\im(T_A)</m>.
-              </p>
-    
-              <p>
-                Equivalently, the module presented by <m>A</m> is <me>\frac{R^m}{R v_1 + \cdots + R v_n}</me> where <m>v_1, \dots, v_n</m> are the columns of <m>A</m>.
-              </p>
-            </statement>
-          </definition>
-
-          <example xml:id="exe-z-module-presentation"><title><m>\Z</m>-Module Presentation</title>
-            <p>
-              What <m>\Z</m>-module <m>M</m> is presented by 
-              <me>
-                A =
-                \begin{bmatrix}
-                2 &amp; 1 &amp; 0 \\
-                3 &amp; 9 &amp; 5 \\
-                1 &amp; -2 &amp; 7 \\
-                0 &amp; 1 &amp; 2 \\
-                \end{bmatrix}?
-              </me>
-              Formally, <m>M</m> is the quotient module <m>M=\Z^4/\im(T_A)</m>, where <m>T_A:\Z^3\to \Z^4</m> is defined by <m>T_A(v)=Av</m>. 
-              Since <m>\Z^4</m> is generated by its standard basis elements <m>\{e_1,e_2,e_3,e_4\}</m>, it follows that <m>M=\Z^4/\im(T_A)</m> is generated by the cosets of the <m>e_i</m>. 
-              To keep the notation short, we set <m>m_i=e_i+\im(T_A)</m>.
-            </p>
-  
-            <p>
-              Let <m>N=\im(T_A)</m> and note that <m>N</m> is the submodule of <m>\Z^4</m> generated by the columns of <m>A</m>, i.e. 
-              <me>
-                N=\Z \cdot \left\{\begin{bmatrix} 2 \\ 3 \\ 1\\ 0 \end{bmatrix}, 
-                \begin{bmatrix} 1 \\ 9 \\ -2 \\1 \end{bmatrix},
-                \begin{bmatrix} 0 \\ 5 \\ 7\\2 \end{bmatrix}\right\}
-                =\Z \cdot \{2e_1 + 3e_2 + e_3,e_1 + 9e_2 -2 e_3 + e_4, 5e_2 + 7 e_3 + 2 e_{4  \}.}
-              </me>
-              Since <m>N</m> maps to <m>0</m> under the quotient map <m>q:\Z^4\to M=\Z^4/N</m>, we have that the relations of <m>M</m> can be written as 
-              <me>
-                \begin{aligned}
-                2m_1 + 3m_2 + m_3 &amp; = 0 \\
-                m_1 + 9m_2 -2 m_3 + m_4 &amp; = 0 \\
-                5m_2 + 7 m_3 + 2 m_4 &amp; = 0. 
-                \end{aligned}
-              </me> 
-              We can now see that this is a rather inefficient presentation, since we can clearly use the first equation to solve for for <m>m_3=-2m_1 - 3m_2</m>. 
-              This implies that <m>M</m> can be generated using only <m>m_1, m_2</m> and <m>m_4,</m> that is 
-              <me>
-                M=\Z \cdot \{m_1,m_2,m_3,m_4\}= \Z \cdot \{m_1,m_2,m_4\}.
-              </me> 
-              This eliminates the first equation, and by substituting <m>m_3 = -2m_1 -3m_2</m> the latter two relations become 
-              <me>
-                \begin{aligned}
-                5m_1 + 15m_2 + m_4 &amp; = 0 \\
-                -14m_2  -16m_2 + 2m_4 &amp; = 0 \\
-                \end{aligned}
-              </me> 
-              Now we can also eliminate <m>m_4</m>, i.e leaving just two generators <m>m_1, m_2</m> that satisfy 
-              <me>
-                -24m_1 -46m_2 = 0.
-              </me> 
-              Let us notice that what we have really done is to perform certain transformations of the matrix <m>A</m>. 
-              In detail, we can use elementary row operations to “make zeros'' on the 1st and 2nd columns as follows: 
-              <me>
-                A =
-                \begin{bmatrix}
-                2 &amp; 1 &amp; 0 \\
-                3 &amp; 9 &amp; 5 \\
-                1 &amp; -2 &amp; 7 \\
-                0 &amp; 1 &amp; 2 \\
-                \end{bmatrix}
-                \rightarrow
-                \begin{bmatrix}
-                0 &amp; 5 &amp; -14 \\
-                0 &amp; 15 &amp; -16 \\
-                1 &amp; -2 &amp; 7 \\
-                0 &amp; 1 &amp; 2 \\
-                \end{bmatrix}
-                \rightarrow
-                \begin{bmatrix}
-                0 &amp; 0 &amp; -24 \\
-                0 &amp; 0 &amp; -46 \\
-                1 &amp; 0 &amp; 13\\
-                0 &amp; 1 &amp; 0 \\
-                \end{bmatrix}
-              </me> 
-              Eliminating the generators <m>m_3</m> and <m>m_4</m> amounts to dropping the first two columns (which are the 3rd and 4th standard basis vectors) as well as the last two rows. 
-              As we will prove soon, this shows that the <m>\Z</m>-module presented by <m>A</m> is isomorphic to the <m>\Z</m>-module presented by 
-              <me>
-                B=
-                \begin{bmatrix} -24 \\ - 46
-                \end{bmatrix}.
-              </me> 
-              We can go further. 
-              Set <m>m_1' := m_1 + 2m_2</m>. 
-              Then <m>m_1'</m> and <m>m_2</m> also form a generating set of <m>M</m>. 
-              The relation on <m>m_1, m_2</m> translates to 
-              <me>
-                -24m'_1  +2 m_2 = 0
-              </me> 
-              given by the matrix 
-              <me>
-                C = E_{1,2}(-2)B=
-                \begin{bmatrix} -24 \\ 2
-                \end{bmatrix}.
-              </me> 
-              Note that we have done a row operation (subtract twice row 1 from row 2) to get from <m>B</m> to <m>C</m>. 
-              Continuing in this fashion by subtracting 12 row 2 from row 1 we also form 
-              <me>
-                D = E_{1,2}(12)C=
-                \begin{bmatrix} 0 \\ 2
-                \end{bmatrix},
-              </me> 
-              The last matrix <m>D</m> presents the module <m>M'=\Z^2/\im(t_D)</m> with generators <m>a, b</m> <m>(a=e_1+\im(t_D), b=e_2+\im(t_D)</m>) and relation <m>2a = 0</m>. 
-              As we will see, this proves <m>M \cong \Z \oplus \Z/2</m>.
-            </p>
-          </example>
-
-          <theorem xml:id="thm-matrices-modules-and-isomorphisms"><title>Matrices, Modules, and Isomorphisms</title>
-            <statement>
-              <p>
-                Let <m>R</m> be a non-zero commutative ring and let <m>A \in \Mat_{m \times n}(R)</m> and <m>B \in Mat_{m' \times n'}(R)</m> for some <m>m,n,m',n' \geq 1</m>. Then <m>A</m> and <m>B</m> present isomorphic <m>R</m>-modules if <m>B</m> can be obtained from <m>A</m> by any finite sequence of operations of the following form: 
-                <ol>
-                  <li>
-                    <p>
-                      an elementary row operation, 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      an elementary column operation, 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      deletion of the <m>j</m>-th column and <m>i</m>-th row of a matrix whose <m>j</m>-th column is the vector <m>e_i</m>, 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      the reverse of (3), 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      deletion of a column of all <m>0</m>'s, 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      the reverse of (5).
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                Note: This proof was not covered in class. Assume <m>B</m> is obtained from <m>A</m> by a single one of the steps listed above. We need to prove that there is an isomorphism <m>R^m/\im(T_A) \cong R^{m'}/\im(T_B)</m> of <m>R</m>-modules. 
-                <ol>
-                  <li>
-                    <p>
-                      In this case, <m>B = E A</m> for some elementary matrix <m>E</m>. More generally, let <m>E</m> be any invertible matrix such that <m>B = EA</m>. Then <m>T_E: R^m \to R^m</m> is an isomorphism and it maps <m>\im(T_A)</m> bijectively onto <m>\im(T_B)</m>. It follows that the kernel of the composition <m>R^m \xra{T_E} R^m \onto R^m/\im(T_B)</m> is <m>\im(T_A)</m> and hence by the first isomorphism theorem it induces an isomorphism <me>R^m/\im(T_A) \xra{\cong} R^m/\im(T_B).</me> 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      In this case, <m>B=AE</m> for some elementary matrix <m>E</m>. More generally, assume <m>E</m> is any invertible matrix such that <m>B = AE</m>. Since <m>T_E</m> is an isomorphism, we have <me>\im(T_B) = \im(T_{AE})=\im(T_A\circ T_E)=\im(T_A)</me>and so <m>R^m/\im(T_A) = R^{m}/\im(T_B)</m>. (For this one we get equality, not merely an isomorphism.) 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      For notational simplicity, let us assume <m>i = j =1</m>; that is, the first column of <m>A</m> is <m>e_1</m> and <m>B</m> is obtained by deleting the first row and column of <m>A</m>, giving a <m>(m-1) \times (n-1)</m> matrix. So <me>A = \begin{bmatrix} 1 &amp; r \\ 0 &amp; B \\\end{bmatrix}</me>where <m>r</m> denotes some row vector and <m>0</m> denotes a column of all <m>0</m>'s. Let <m>p: R^{m} \onto R^{m-1}</m> and <m>q: R^{n} \onto R^{n-1}</m> be projection onto the last <m>m-1</m> and <m>n-1</m> components, respectively. Because of the nature of <m>A</m> and <m>B</m>, the diagram (page 40 in notes) commutes. Moreover, the kernel of <m>q</m> is <m>Re_1</m> and the kernel of <m>p</m> is <m>Re_1</m>, and since the first column of <m>A</m> is <m>e_1</m>, <m>T_A</m> maps the kernel of <m>q</m> bijectively onto the kernel of <m>p</m>. A “diagram chase'' shows that <m>\coker(T_A) \cong \coker(T_B)</m>. In detail: Since the diagram commutes, <m>p(\im(T_A)) \subseteq \im(T_B)</m> and hence <m>p</m> induces an <m>R</m>-module homomorphism <me>\ov{p}: R^m/\im(T_A)   \to R^{m-1}/\im(T_B).</me>(by the <m>0</m>-th isomorphism theorem). Since <m>p</m> is onto, so is <m>\ov{p}</m>. Suppose <m>v + \im(T_A) \in \ker(\ov{p})</m>. So, <m>p(v) \in \im(T_B)</m>. Say <m>p(v) = B w</m>. Since <m>q</m> is onto, <m>w = q(u)</m> for some <m>u</m>. Then <me>
-                        p(v - Au) = p(v) - pA(u) = p(v) - Bq(u) = p(v) - Bw = p(v) - p(v) = 0, </me> and thus <m>v - Au \in \ker(p)</m>. As noted above, <m>T_A</m> maps <m>\ker(q)</m> onto <m>\ker(p)</m> and hence <me>v - Au = Ay</me>for some vector <m>y</m>. This proves <m>v = A(u+y) \in \im(T_A)</m> and hence that <m>v +\im(T_A) = 0</m> in <m>R^m/\im(T_A)</m>. This proves <m>\ov{p}</m> is one-to-one. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      It is clear that the columns of <m>B</m> generate the same submodule of <m>R^m</m> as do the columns of <m>A</m>, and thus <m>\im(T_A) = \im(T_B)</m> and <m>R^m/\im(T_A) =R^m/\im(T_B)</m>. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      Since the isomorphism relation is reflexive, the statements of parts 3. &amp; 5. show that parts 4.&amp; 6. are true as well.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </proof>
-          </theorem>
-
-          <remark>
-            <p>
-              The converse is true for some rings <m>R</m>, including Euclidean domains.
-            </p>
-          </remark>
-
-          <remark>
-            <p>
-              In fact, if <m>A</m> and <m>B</m> are equivalent matrices, then <m>\coker(T_A) \cong \coker(T_B)</m>, as I shall prove below. This implies both (1) and (2) from the Theorem.
-            </p>
-          </remark>
-
-          <lemma xml:id="lem-diagonal-presentation"><title>Diagonal Presentation</title>
-            <statement>
-              <p>
-                Suppose <m>R</m> is a commutative ring and <m>A = (a_{i,j})</m> is a <m>m \times n</m> matrix such that <m>a_{i,j} = 0</m> for all <m>i \ne j</m> and set <m>d_i = a_{i,i}</m> for all <m>1 \leq i \leq \min\{m,n\}</m>. If <m>n \geq m</m> then <me>\coker(T_A) \cong R/R \cdot d_1 \oplus R/R\cdot d_2 \oplus \cdots \oplus R/R \cdot d_m </me> and if <m>n \leq m</m> then<me>\coker(T_A) \cong R/R \cdot d_1 \oplus R/R\cdot d_2 \oplus \cdots \oplus R/R \cdot d_n \oplus R^{m-n}.</me>
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                Assume <m>n \leq m</m> and define <m>g: R^m \to R/R \cdot d_1 \oplus R/R \cdot d_2 \oplus \cdots \oplus R/ R \cdot d_n \oplus R^{m-n}</m> to be the map sending <m>(r_1, \dots, r_m)^\tau</m> to <m>(\ov{r}_1, \dots, \ov{r}_n, r_{n+1}, \dots, r_m)</m> where <m>\ov{r}_i = r_i + R \cdot d_i</m> for <m>1 \leq i \leq n</m>. 
-                (I.e., <m>g</m> is the unique <m>R</m>-map sending the <m>i</m>-th standard basis vector <m>e_i</m> to <m>(0, \dots, 0, \ov{1}, 0, \dots, 0)</m> with <m>\ov{1}</m> in the <m>i</m>-th position, for <m>1 \leq i \leq n</m>, and to <m>e_i</m> itself for <m>i &gt; n</m>.) 
-                Then <m>g</m> is clearly onto and the kernel <m>\ker(g)</m> of <m>g</m> is the set of those tuples <m>(r_1, \dots, r_m)^\tau</m> such that <m>r_i = x_i d_i</m> for some <m>x_i</m> for all <m>1 \leq i \leq n</m> and <m>r_j = 0</m> for <m>j &gt; n</m>. 
-                Given such a tuple, 
-                <me> 
-                  (r_1, \dots, r_m)^\tau = x_1 (d_1, 0, \dots, 0)^\tau + x_2 (0,d_2, 0, \dots, 0)^\tau + \cdots + x_n (0, \dots, 0, d_n, 0, \dots, 0)^\tau. 
-                </me> 
-                This proves <m>\ker(g)</m> is contained 
+                Consider the matrix
                 <me>
-                  R \cdots (d_1, 0, \dots, 0)^\tau + R \cdot (0,d_2, 0, \dots, 0)^\tau + \cdots + R \cdot (0, \dots, 0, d_n, 0 \dots, 0)^\tau = \im(T_A).
+                  A=\left[\begin{array}{ccc}
+                  2 &amp; 1 &amp; 0 \\
+                  3 &amp; 9 &amp; 5 \\
+                  1 &amp; -2 &amp; 7 \\
+                  0 &amp; 1 &amp; 2
+                  \end{array}\right]
                 </me>
-                Arguing backwards we see that the opposite containment also holds, so that in fact <m>\ker(g) = \im(T_A)</m>.
+                What <m>\mathbb{Z}</m>-module <m>M</m> is presented by <m>A</m>? 
+                Formally, <m>M</m> is the quotient module <m>M=\mathbb{Z}^{4} / \operatorname{im}\left(t_{A}\right)</m>, where <m>t_{A}: \mathbb{Z}^{3} \rightarrow \mathbb{Z}^{4}</m> is defined by <m>t_{A}(v)=A v</m>. 
+                Since <m>\mathbb{Z}^{4}</m> is generated by its standard basis elements <m>\left\{e_{1}, e_{2}, e_{3}, e_{4}\right\}</m>, we deduce as in <xref ref="lem-fg-quotient-mod"/> that <m>M=\mathbb{Z}^{4} / \operatorname{im}\left(t_{A}\right)</m> is generated by the cosets of the <m>e_{i}</m>. 
+                To keep the notation short, we set <m>m_{i}=e_{i}+\operatorname{im}\left(t_{A}\right)</m>.
               </p>
-  
+
               <p>
-                By the First Isomorphism Theorem, <me> \coker(T_A) = R/\im(T_A) = R/\ker(g) \cong R/R \cdot d_1 \oplus \cdots \oplus R/R \cdot d_n \oplus R^{m-n}.</me>If <m>n \leq m</m> then, by deleting columns of all <m>0</m>'s, we may reduce to the case when <m>n = m</m>, which is included in the first case.
+                Let <m>N=\operatorname{im}\left(t_{A}\right)</m> and note that <m>N</m> is the submodule of <m>\mathbb{Z}^{4}</m> generated by the columns of <m>A</m>:
+                <me>
+                  N=R\left\{\left[\begin{array}{l}
+                  2 \\ 3 \\ 1 \\ 0
+                  \end{array}\right],\left[\begin{array}{c}
+                  1 \\ 9 \\ -2 \\ 1
+                  \end{array}\right],\left[\begin{array}{l}
+                  0 \\ 5 \\ 7 \\ 2
+                  \end{array}\right]\right\}=R\left\{2 e_{1}+3 e_{2}+e_{3}, e_{1}+9 e_{2}-2 e_{3}+e_{4}, 5 e_{2}+7 e_{3}+2 e_{4}\right\}
+                </me>
+                Since <m>N</m> maps to 0 under the quotient map <m>q: \mathbb{Z}^{4} \rightarrow M=\mathbb{Z}^{4} / N</m>, the relations of <m>M</m> can be written as
+                <me>
+                  \begin{cases}2 m_{1}+3 m_{2}+m_{3} &amp; =0 \\ m_{1}+9 m_{2}-2 m_{3}+m_{4} &amp; =0 \\ 5 m_{2}+7 m_{3}+2 m_{4} &amp; =0\end{cases}
+                </me>
+                We can now see that this is a rather inefficient presentation, since we can clearly use the first equation to solve for for <m>m_{3}=-2 m_{1}-3 m_{2}</m>. 
+                This implies that <m>M</m> can be generated using only <m>m_{1}, m_{2}</m> and <m>m_{4}</m>, that is
+                <me>
+                  M=R\left\{m_{1}, m_{2}, m_{3}, m_{4}\right\}=R\left\{m_{1}, m_{2}, m_{4}\right\}.
+                </me>
+                This eliminates the first equation and the latter two become
+                <me>
+                  \begin{cases}5 m_{1}+15 m_{2}+m_{4} &amp; =0 \\ -14 m_{2}-16 m_{2}+2 m_{4} &amp; =0\end{cases}
+                </me>
+                Now we can also eliminate <m>m_{4}</m>, i.e leaving just two generators <m>m_{1}, m_{2}</m> that satisfy
+                <me>
+                  -24 m_{1}-46 m_{2}=0.
+                </me>
               </p>
-            </proof>
-          </lemma>
+
+              <p>
+                Another way to do this is to look at the matrix <m>A</m> and use elementary row operations to "make zeros" on the 1st and 2nd columns, as follows:
+                <me>
+                  A=\left[\begin{array}{ccc}
+                  2 &amp; 1 &amp; 0 \\ 3 &amp; 9 &amp; 5 \\ 1 &amp; -2 &amp; 7 \\ 0 &amp; 1 &amp; 2
+                  \end{array}\right] \rightarrow\left[\begin{array}{ccc}
+                  0 &amp; 5 &amp; -14 \\ 0 &amp; 15 &amp; -16 \\ 1 &amp; -2 &amp; 7 \\ 0 &amp; 1 &amp; 2
+                  \end{array}\right] \rightarrow\left[\begin{array}{ccc}
+                  0 &amp; 0 &amp; -24 \\ 0 &amp; 0 &amp; -46 \\ 1 &amp; 0 &amp; 13 \\ 0 &amp; 1 &amp; 0
+                  \end{array}\right]
+                </me>
+              </p>
+
+              <p>
+                Eliminating the generators <m>m_{3}</m> and <m>m_{4}</m> amounts to dropping the first two columns (which are the 3rd and 4th standard basis vectors) as well as the last two rows. 
+                As we will prove soon, this shows that the <m>\mathbb{Z}</m>-module presented by <m>A</m> is isomorphic to the <m>\mathbb{Z}</m>-module presented by
+              </p>
+
+              <p>
+                <me>
+                  B=\left[\begin{array}{l} -24 \\ -46 \end{array}\right
+                </me>
+              </p>
+
+              <p>
+                We can go further. 
+                Set <m>m_{1}^{\prime}:=m_{1}+2 m_{2}</m>. 
+                Then <m>m_{1}^{\prime}</m> and <m>m_{2}</m> also form a generating set of <m>M</m>.
+                The relation on <m>m_{1}, m_{2}</m> translates to
+              </p>
+
+              <p>
+                <me>
+                  -24 m_{1}^{\prime}+2 m_{2}=0
+                </me>
+              </p>
+
+              <p>
+                given by the matrix
+              </p>
+
+              <p>
+                <me>
+                  C=E_{1,2}(-2) B=\left[\begin{array}{c} -24 \\ 2 \end{array}\right].
+                </me>
+              </p>
+
+              <p>
+                Note that we have done a row operation (subtract twice row 1 from row 2 ) to get from <m>B</m> to <m>C</m>. 
+                Continuing in this fashion by subtracting 12 row 2 from row 1 we also form
+              </p>
+
+              <p>
+                <me>
+                  D=E_{1,2}(12) C=\left[\begin{array}{l} 0 \\ 2 \end{array}\right],
+                </me>
+              </p>
+
+              <p>
+                The last matrix <m>D</m> presents the module <m>M^{\prime}=\mathbb{Z}^{2} / \operatorname{im}\left(t_{D}\right)</m> with generators <m>a, b</m>, where
+              </p>
+
+              <p>
+                <me>
+                  a=e_{1}+\operatorname{im}\left(t_{D}\right), \quad b=e_{2}+\operatorname{im}\left(t_{D}\right)
+                </me>
+              </p>
+
+              <p>
+                and relation <m>2 a=0</m>. 
+                This module <m>M^{\prime}</m> is isomorphic to our original module <m>M</m>. 
+                As we will see, this proves <m>M \cong \mathbb{Z} \oplus \mathbb{Z} / 2</m>. 
+                An explicit isomorphism between <m>M^{\prime}</m> and <m>\mathbb{Z} \oplus \mathbb{Z} / 2</m> is given by sending <m>\mathbb{Z}^{2} \rightarrow \mathbb{Z} \oplus \mathbb{Z} / 2</m> by the unique <m>\mathbb{Z}</m>-module homomorphism defined by
+              </p>
+
+              <p>
+                <me>
+                  e_{1} \mapsto(1,0) \text { and } e_{2} \mapsto\left(0,[1]_{2}\right)
+                </me>
+              </p>
+
+              <p>
+                Now notice that the kernel of this homomorphism is the submodule <m>\left(2 e_{2}\right) \mathbb{Z}=\operatorname{im}\left(t_{D}\right)</m>. 
+                Then the first isomorphism theorem gives <m>M^{\prime}=\mathbb{Z}^{2} / \operatorname{im}\left(t_{D}\right) \cong \mathbb{Z} \oplus \mathbb{Z} / 2</m>.
+              </p>
+              
+            </example>
+
+            <theorem xml:id="thm-matrices-modules-and-isomorphisms"><title>Matrices, Modules, and Isomorphisms</title>
+              <statement>
+                <p>
+                  Let <m>R</m> be a non-zero commutative ring and let <m>A \in \Mat_{m \times n}(R)</m> and <m>B \in Mat_{m' \times n'}(R)</m> for some <m>m,n,m',n' \geq 1</m>. 
+                  Then <m>A</m> and <m>B</m> present isomorphic <m>R</m>-modules if <m>B</m> can be obtained from <m>A</m> by any finite sequence of operations of the following form: 
+                  <ol>
+                    <li>
+                      <p>
+                        an elementary row operation, 
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        an elementary column operation, 
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        deletion of the <m>j</m>-th column and <m>i</m>-th row of a matrix whose <m>j</m>-th column is the vector <m>e_i</m>, 
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        the reverse of (3), 
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        deletion of a column of all <m>0</m>'s, 
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        the reverse of (5).
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  Note: This proof was not covered in class. 
+                  Assume <m>B</m> is obtained from <m>A</m> by a single one of the steps listed above. 
+                  We need to prove that there is an isomorphism <m>R^m/\im(T_A) \cong R^{m'}/\im(T_B)</m> of <m>R</m>-modules. 
+                  <ol>
+                    <li>
+                      <p>
+                        In this case, <m>B = E A</m> for some elementary matrix <m>E</m>. 
+                        More generally, let <m>E</m> be any invertible matrix such that <m>B = EA</m>. 
+                        Then <m>T_E: R^m \to R^m</m> is an isomorphism and it maps <m>\im(T_A)</m> bijectively onto <m>\im(T_B)</m>. 
+                        It follows that the kernel of the composition <m>R^m \xra{T_E} R^m \onto R^m/\im(T_B)</m> is <m>\im(T_A)</m> and hence by the first isomorphism theorem it induces an isomorphism 
+                        <me>
+                          R^m/\im(T_A) \xra{\cong} R^m/\im(T_B).
+                        </me> 
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        In this case, <m>B=AE</m> for some elementary matrix <m>E</m>. 
+                        More generally, assume <m>E</m> is any invertible matrix such that <m>B = AE</m>. 
+                        Since <m>T_E</m> is an isomorphism, we have 
+                        <me>
+                          \im(T_B) = \im(T_{AE})=\im(T_A\circ T_E)=\im(T_A)
+                        </me>
+                        and so <m>R^m/\im(T_A) = R^{m}/\im(T_B)</m>. 
+                        (For this one we get equality, not merely an isomorphism.) 
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        For notational simplicity, let us assume <m>i = j =1</m>; 
+                        that is, the first column of <m>A</m> is <m>e_1</m> and <m>B</m> is obtained by deleting the first row and column of <m>A</m>, giving a <m>(m-1) \times (n-1)</m> matrix. 
+                        So 
+                        <me>
+                          A = \begin{bmatrix} 1 &amp; r \\ 0 &amp; B \\\end{bmatrix}
+                        </me>
+                        where <m>r</m> denotes some row vector and <m>0</m> denotes a column of all <m>0</m>'s. 
+                        Let <m>p: R^{m} \onto R^{m-1}</m> and <m>q: R^{n} \onto R^{n-1}</m> be projection onto the last <m>m-1</m> and <m>n-1</m> components, respectively. 
+                        Because of the nature of <m>A</m> and <m>B</m>, the diagram (page 40 in notes) commutes. 
+                        Moreover, the kernel of <m>q</m> is <m>Re_1</m> and the kernel of <m>p</m> is <m>Re_1</m>, and since the first column of <m>A</m> is <m>e_1</m>, <m>T_A</m> maps the kernel of <m>q</m> bijectively onto the kernel of <m>p</m>. 
+                        A “diagram chase'' shows that <m>\coker(T_A) \cong \coker(T_B)</m>. 
+                        In detail: Since the diagram commutes, <m>p(\im(T_A)) \subseteq \im(T_B)</m> and hence <m>p</m> induces an <m>R</m>-module homomorphism 
+                        <me>
+                          \ov{p}: R^m/\im(T_A)   \to R^{m-1}/\im(T_B).
+                        </me>
+                        (by the <m>0</m>-th isomorphism theorem). 
+                        Since <m>p</m> is onto, so is <m>\ov{p}</m>. 
+                        Suppose <m>v + \im(T_A) \in \ker(\ov{p})</m>. 
+                        So, <m>p(v) \in \im(T_B)</m>. Say <m>p(v) = B w</m>. 
+                        Since <m>q</m> is onto, <m>w = q(u)</m> for some <m>u</m>. 
+                        Then 
+                        <me>
+                          p(v - Au) = p(v) - pA(u) = p(v) - Bq(u) = p(v) - Bw = p(v) - p(v) = 0, 
+                        </me> 
+                        and thus <m>v - Au \in \ker(p)</m>. 
+                        As noted above, <m>T_A</m> maps <m>\ker(q)</m> onto <m>\ker(p)</m> and hence 
+                        <me>
+                          v - Au = Ay
+                        </me>
+                        for some vector <m>y</m>. 
+                        This proves <m>v = A(u+y) \in \im(T_A)</m> and hence that <m>v +\im(T_A) = 0</m> in <m>R^m/\im(T_A)</m>. 
+                        This proves <m>\ov{p}</m> is one-to-one. 
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        The columns of <m>B</m> generate the same submodule of <m>R^m</m> as do the columns of <m>A</m>, and thus <m>\im(T_A) = \im(T_B)</m> and <m>R^m/\im(T_A) =R^m/\im(T_B)</m>. 
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Since the isomorphism relation is reflexive, the statements of parts 3. &amp; 5. show that parts 4.&amp; 6. are true as well.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </proof>
+            </theorem>
+
+            <remark>
+              <p>
+                The converse is true for some rings <m>R</m>, including Euclidean domains.
+              </p>
+            </remark>
+
+            <remark>
+              <p>
+                In fact, if <m>A</m> and <m>B</m> are equivalent matrices, then <m>\coker(T_A) \cong \coker(T_B)</m>, as I shall prove below. 
+                This implies both (1) and (2) from the Theorem.
+              </p>
+            </remark>
+
+            <lemma xml:id="lem-diagonal-presentation"><title>Diagonal Presentation</title>
+              <statement>
+                <p>
+                  Suppose <m>R</m> is a commutative ring and <m>A = (a_{i,j})</m> is a <m>m \times n</m> matrix such that <m>a_{i,j} = 0</m> for all <m>i \ne j</m> and set <m>d_i = a_{i,i}</m> for all <m>1 \leq i \leq \min\{m,n\}</m>. 
+                  If <m>n \geq m</m> then 
+                  <me>
+                    \coker(T_A) \cong R/R \cdot d_1 \oplus R/R\cdot d_2 \oplus \cdots \oplus R/R \cdot d_m 
+                  </me>
+                  and if <m>n \leq m</m> then
+                  <me>
+                    \coker(T_A) \cong R/R \cdot d_1 \oplus R/R\cdot d_2 \oplus \cdots \oplus R/R \cdot d_n \oplus R^{m-n}.
+                  </me>
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  Assume <m>n \leq m</m> and define <m>g: R^m \to R/R \cdot d_1 \oplus R/R \cdot d_2 \oplus \cdots \oplus R/ R \cdot d_n \oplus R^{m-n}</m> to be the map sending <m>(r_1, \dots, r_m)^\tau</m> to <m>(\ov{r}_1, \dots, \ov{r}_n, r_{n+1}, \dots, r_m)</m> where <m>\ov{r}_i = r_i + R \cdot d_i</m> for <m>1 \leq i \leq n</m>. 
+                  (I.e., <m>g</m> is the unique <m>R</m>-map sending the <m>i</m>-th standard basis vector <m>e_i</m> to <m>(0, \dots, 0, \ov{1}, 0, \dots, 0)</m> with <m>\ov{1}</m> in the <m>i</m>-th position, for <m>1 \leq i \leq n</m>, and to <m>e_i</m> itself for <m>i &gt; n</m>.) 
+                  Then <m>g</m> is clearly onto and the kernel <m>\ker(g)</m> of <m>g</m> is the set of those tuples <m>(r_1, \dots, r_m)^\tau</m> such that <m>r_i = x_i d_i</m> for some <m>x_i</m> for all <m>1 \leq i \leq n</m> and <m>r_j = 0</m> for <m>j &gt; n</m>. 
+                  Given such a tuple, 
+                  <me> 
+                    (r_1, \dots, r_m)^\tau = x_1 (d_1, 0, \dots, 0)^\tau + x_2 (0,d_2, 0, \dots, 0)^\tau + \cdots + x_n (0, \dots, 0, d_n, 0, \dots, 0)^\tau. 
+                  </me> 
+                  This proves <m>\ker(g)</m> is contained 
+                  <me>
+                    R \cdots (d_1, 0, \dots, 0)^\tau + R \cdot (0,d_2, 0, \dots, 0)^\tau + \cdots + R \cdot (0, \dots, 0, d_n, 0 \dots, 0)^\tau = \im(T_A).
+                  </me>
+                  Arguing backwards we see that the opposite containment also holds, so that in fact <m>\ker(g) = \im(T_A)</m>.
+                </p>
+    
+                <p>
+                  By the First Isomorphism Theorem, 
+                  <me> 
+                    \coker(T_A) = R/\im(T_A) = R/\ker(g) \cong R/R \cdot d_1 \oplus \cdots \oplus R/R \cdot d_n \oplus R^{m-n}.
+                  </me>
+                  If <m>n \leq m</m> then, by deleting columns of all <m>0</m>'s, we may reduce to the case when <m>n = m</m>, which is included in the first case.
+                </p>
+              </proof>
+            </lemma>
+
+          </subsection>
+
+          <subsection xml:id="subsec-noetherian-module"><title>Modules in Noetherian Rings</title>
+
+            <remark>
+              <p>
+                We now address the question of which modules have finite presentations. It is clear than any such module must be finitely generated (since the cosets of <m>e_1, \dots, e_m</m> generate <m>R^m/\im(T_A)</m> for any <m>m \times n</m> matrix <m>A</m>). If <m>M</m> is finitely generated, say by <m>m</m> elements, then we can find a surjective <m>R</m>-module homomorphism <me>
+                \pi: R^m \onto M.
+                </me> Provided the kernel of <m>\pi</m> is also finitely generated, say by <m>n</m> elements, then we may find a surjection <me>
+                g: R^n \onto \ker(\pi).
+                </me> The composition <m>R^n \xra{g} \ker(\pi) \subseteq R^m</m> is a map between free <m>R</m>-modules and is thus equal to <m>T_A</m> for some <m>n \times m</m> matrix <m>A</m>. Clearly <m>\im(T_A) = \ker(\pi)</m> and hence by the first isomorphism theorem <me>
+                R^m/\im(A) = R^m/\ker(\pi) \cong M,
+                </me> so that <m>M</m> is finitely presented.
+              </p>
+      
+              <p>
+                So the real question is: For a given ring <m>R</m>, is it the case that for all <m>m</m>, every submodule of <m>R^m</m> is finitely generated? The answer is “no'' in general, but it does hold for many rings of interest:
+              </p>
+            </remark>
+
+            <lemma xml:id="lem-noetherian-rings"><title>Noetherian Rings</title>
+              <statement>
+                <p>
+                  Suppose <m>R</m> is a commutative ring. The following conditions are equivalent: 
+                  <ol>
+                    <li>
+                      <p>
+                        <m>R</m> has the ascending chain condition on ideals. 
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        Every ideal of <m>R</m> is finitely generated — i.e., for every ideal <m>I</m>, there exists a finite set of elements <m>x_1, \dots, x_n</m> in <m>I</m> such that <m>I = R \cdot x_1 + \cdots + R \cdot x_n</m>. In this case we say <m>R</m> is <em>Noetherian</em>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  Assume every ideal is finitely generated and that such a chain is given. Let <m>J = \cup_n I_n</m>. Then it is easy to see that <m>J</m> is an ideal. (In detail, for <m>a \in J, r \in R</m> we have <m>a \in I_n</m> for some <m>n</m> and hence <m>ra \in I_n \subseteq J</m>.
+                </p>
+    
+                <p>
+                  If <m>a,b \in J</m>, then <m>a \in I_n</m> and <m>b \in I_m</m> for some <m>n,m</m> and hence there is a <m>N</m> such that <m>a,b \in I_N</m>. It follows that <m>a \pm b \in I_N \subseteq J</m>. Finally <m>0 \in J</m>.) Thus by assumption <m>J</m> is finitely generated, say <m>J = Rx_1 + \cdots + Rx_m</m> for some <m>x_1, \dots, x_m \in J</m>.
+                </p>
+    
+                <p>
+                  Each <m>x_i</m> belongs to one of the <m>I_n</m>'s and hence, since there are only a finite number of such elements and ideas are nested, there is an <m>N</m> such that <m>x_1, \dots, x_m \in I_N</m>. It follows that <m>I_N = J</m> and hence <m>I_N = I_{N+1} = I_{N+2} = \cdots</m>.
+                </p>
+    
+                <p>
+                  Assume <m>R</m> has the acc for ideals and let <m>J</m> be any ideal. Pick any element <m>a_1\in I</m> and set <m>I_1 = Ra_1</m>. If <m>J = I_1</m> we are done. If not, pick <m>a_2 \in I \setminus I_1</m> and set <m>I_2 = Ra_1 + Ra_2</m>. If <m>J = I_2</m> we are done and if not pick <m>a_3 \in I\setminus I_2</m> and let <m>I_3 = Ra_1 + Ra_2 + Ra_3</m>. In this way we form a strictly ascending chain <m>I_1 \subset I_2 \subset I_3 \subset</m>, and this process cannot be continued forever since <m>R</m> has the acc. When it terminates, we have <m>J = Ra_1 + Ra_2 + \cdots + Ra_N</m> for some <m>a_1, \dots, a_N</m> and thus <m>J</m> is finitely generated.
+                </p>
+              </proof>
+            </lemma>
+
+            <theorem xml:id="thm-submodules-of-fg-modules-are-fg-when-noetherian"><title>Finitely Generated Modules in Noetherian Rings</title>
+              <statement>
+                <p>
+                  If <m>R</m> is a noetherian commutative ring, then every submodule of a finitely generated module is again finitely generated.
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  I will just prove the following special case (since it is all we need): For each <m>n \geq 1</m>, every submodule of <m>R^n</m> is finitely generated. The base case <m>n=1</m> holds by definition (and Lemma ), since a submodule of <m>R^1</m> is the same thing as an ideal.
+                </p>
+    
+                <p>
+                  Assume <m>n &gt; 1</m> and the result holds for <m>R^{n-1}</m>. Let <m>M</m> be any submodule of <m>R^n</m>. Define <me>
+    \pi: R^n \onto R^1
+    </me> to be the projection onto the last component of <m>R^n</m>. The kernel of <m>\pi_n</m> may be identified with <m>R^{n-1}</m> and so <m>N := \ker(\pi) \cap M</m> is a submodule of <m>R^{n-1}</m>, and it is therefore finitely generated by assumption. The image <m>\pi(M)</m> of <m>M</m> under <m>\pi</m> is a submodule of <m>R^1</m>, that is, an ideal of <m>R</m>, and so it too is finitely generated by assumption (and Lemma ).
+                </p>
+    
+                <p>
+                  Furthermore, by the first isomorphism theorem <m>M/\ker(\pi)\cong \pi(M)</m> is also finitely generated. By a homework problem, we deduce that <m>M</m> is a finitely generated module.
+                </p>
+    
+                <p>
+                  % I'll just sketch the general case (which I don't think we'll actually need): let <m>T</m> be any finitely generated <m>R</m>-module and <m>N \subseteq T</m> any submodule. % Since <m>T</m> is finitely generated, there exists a surjective <m>R</m>-module homomorphism <m>q: R^n \onto T</m> for some <m>n</m>. Then <m>q^{-1}(N)</m> is a submodule of <m>R^n</m> and % hence it is finitely generated by the case we already proved. Moreover, <m>q</m> induces a surjective <m>R</m>-module homomorphism <m>q: q^{-1}(N) \onto N</m>, % and hence <m>N</m> is isomorphic to a quotient of a finitely generated <m>R</m>-module and thus it is also finitely generated.
+                </p>
+              </proof>
+            </theorem>
+
+            <p>
+              The converse is also true.
+            </p>
+
+            <remark>
+              <p>
+                If <m>R</m> is not noetherian, there there exists an ideal <m>I</m> that is not finitely generated (by <xref ref="lem-noetherian-rings"/>). 
+                This gives an example of a non-finitely-generated submodule, namely <m>I</m>, of a finitely generated module, namely <m>R</m>.
+              </p>
+            </remark>
+
+            <corollary xml:id="cor-fg-modules-finitely-presented-when-noetherian"><title>Finite Presentations in Noetherian Rings</title>
+              <statement>
+                <p>
+                  Any finitely generated module <m>M</m> over a noetherian ring <m>R</m> has a finite presentation; 
+                  that is, given such a module over such a ring, there exists an <m>m \times n</m> matrix <m>A</m> in <m>R</m> and an isomorphism 
+                  <me>
+                    M\cong R^m/\im(T_A).
+                  </me>
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  We basically already proved this, but let me recap it:
+                </p>
+    
+                <p>
+                  If <m>M</m> is finitely generated, then for some <m>m</m> we can find a surjective <m>R</m>-module homomorphism 
+                  <me>
+                    \pi: R^m \onto M.
+                  </me> 
+                  Since we assume <m>R</m> is noetherian, the kernel of <m>\pi</m> is also finitely generated by <xref ref="thm-submodules-of-fg-modules-are-fg-when-noetherian"/>, and so we may find a surjection of <m>R</m>-modules 
+                  <me>
+                    g: R^n \onto \ker(\pi)
+                  </me> 
+                  for some <m>n</m>. 
+                  The composition <m>R^n \xra{g} \ker(\pi) \subseteq R^m</m> is equal to <m>T_A</m> for some <m>n \times m</m> matrix <m>A</m>. 
+                  Since <m>\im(T_A) = \ker(\pi)</m>, the <xref text="title" ref="fit-module"/> gives an isomorphism 
+                  <me>
+                    R^m/\im(T_A) = R^m/\ker(\pi) \cong M.
+                  </me>
+                </p>
+              </proof>
+            </corollary>
+            
+          </subsection>
           
         </section>
 
@@ -13573,147 +13825,6 @@
             </p>
           </remark>
           
-        </section>
-
-        <section xml:id="sec-noeth"><title>Noetherian Rings</title>
-
-          <remark>
-            <p>
-              We now address the question of which modules have finite presentations. It is clear than any such module must be finitely generated (since the cosets of <m>e_1, \dots, e_m</m> generate <m>R^m/\im(T_A)</m> for any <m>m \times n</m> matrix <m>A</m>). If <m>M</m> is finitely generated, say by <m>m</m> elements, then we can find a surjective <m>R</m>-module homomorphism <me>
-    \pi: R^m \onto M.
-    </me> Provided the kernel of <m>\pi</m> is also finitely generated, say by <m>n</m> elements, then we may find a surjection <me>
-    g: R^n \onto \ker(\pi).
-    </me> The composition <m>R^n \xra{g} \ker(\pi) \subseteq R^m</m> is a map between free <m>R</m>-modules and is thus equal to <m>T_A</m> for some <m>n \times m</m> matrix <m>A</m>. Clearly <m>\im(T_A) = \ker(\pi)</m> and hence by the first isomorphism theorem <me>
-    R^m/\im(A) = R^m/\ker(\pi) \cong M,
-    </me> so that <m>M</m> is finitely presented.
-            </p>
-    
-            <p>
-              So the real question is: For a given ring <m>R</m>, is it the case that for all <m>m</m>, every submodule of <m>R^m</m> is finitely generated? The answer is “no'' in general, but it does hold for many rings of interest:
-            </p>
-          </remark>
-
-          <definition xml:id="def-ascending-chain-condition"><title>Ascending Chain Condition</title>
-            <statement>
-              <p>
-                A commutative ring <m>R</m> has the <em>ascending chain condition</em> (on ideals) if given any chain of ideals in <m>R</m> of the form <me>I_1 \subseteq I_2 \subseteq \cdots</me>there is an <m>N</m> such that <me>I_N = I_{N+1} = \cdots.</me>
-              </p>
-            </statement>
-          </definition>
-
-          <lemma xml:id="lem-noetherian-rings"><title>Noetherian Rings</title>
-            <statement>
-              <p>
-                Suppose <m>R</m> is a commutative ring. The following conditions are equivalent: 
-                <ol>
-                  <li>
-                    <p>
-                      <m>R</m> has the ascending chain condition on ideals. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      Every ideal of <m>R</m> is finitely generated — i.e., for every ideal <m>I</m>, there exists a finite set of elements <m>x_1, \dots, x_n</m> in <m>I</m> such that <m>I = R \cdot x_1 + \cdots + R \cdot x_n</m>. In this case we say <m>R</m> is <em>Noetherian</em>.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                Assume every ideal is finitely generated and that such a chain is given. Let <m>J = \cup_n I_n</m>. Then it is easy to see that <m>J</m> is an ideal. (In detail, for <m>a \in J, r \in R</m> we have <m>a \in I_n</m> for some <m>n</m> and hence <m>ra \in I_n \subseteq J</m>.
-              </p>
-  
-              <p>
-                If <m>a,b \in J</m>, then <m>a \in I_n</m> and <m>b \in I_m</m> for some <m>n,m</m> and hence there is a <m>N</m> such that <m>a,b \in I_N</m>. It follows that <m>a \pm b \in I_N \subseteq J</m>. Finally <m>0 \in J</m>.) Thus by assumption <m>J</m> is finitely generated, say <m>J = Rx_1 + \cdots + Rx_m</m> for some <m>x_1, \dots, x_m \in J</m>.
-              </p>
-  
-              <p>
-                Each <m>x_i</m> belongs to one of the <m>I_n</m>'s and hence, since there are only a finite number of such elements and ideas are nested, there is an <m>N</m> such that <m>x_1, \dots, x_m \in I_N</m>. It follows that <m>I_N = J</m> and hence <m>I_N = I_{N+1} = I_{N+2} = \cdots</m>.
-              </p>
-  
-              <p>
-                Assume <m>R</m> has the acc for ideals and let <m>J</m> be any ideal. Pick any element <m>a_1\in I</m> and set <m>I_1 = Ra_1</m>. If <m>J = I_1</m> we are done. If not, pick <m>a_2 \in I \setminus I_1</m> and set <m>I_2 = Ra_1 + Ra_2</m>. If <m>J = I_2</m> we are done and if not pick <m>a_3 \in I\setminus I_2</m> and let <m>I_3 = Ra_1 + Ra_2 + Ra_3</m>. In this way we form a strictly ascending chain <m>I_1 \subset I_2 \subset I_3 \subset</m>, and this process cannot be continued forever since <m>R</m> has the acc. When it terminates, we have <m>J = Ra_1 + Ra_2 + \cdots + Ra_N</m> for some <m>a_1, \dots, a_N</m> and thus <m>J</m> is finitely generated.
-              </p>
-            </proof>
-          </lemma>
-
-          <theorem xml:id="thm-hilberts-basis-theorem"><title>Hilbert's Basis Theorem</title>
-            <statement>
-              <p>
-                If <m>R</m> is a noetherian ring, then the polynomial rings <m>R[x_1,\dots,x_d]</m> and <m>R[[ x_1,\dots,x_d]]</m> are noetherian for any <m>d \geqslant 1</m>.
-              </p>
-            </statement>
-          </theorem>
-
-          <proposition xml:id="prop-submodules-of-fg-modules-are-fg-when-noetherian"><title>Finitely Generated Modules in Noetherian Rings</title>
-            <statement>
-              <p>
-                If <m>R</m> is a noetherian commutative ring, then every submodule of a finitely generated module is again finitely generated.
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                I will just prove the following special case (since it is all we need): For each <m>n \geq 1</m>, every submodule of <m>R^n</m> is finitely generated. The base case <m>n=1</m> holds by definition (and Lemma ), since a submodule of <m>R^1</m> is the same thing as an ideal.
-              </p>
-  
-              <p>
-                Assume <m>n &gt; 1</m> and the result holds for <m>R^{n-1}</m>. Let <m>M</m> be any submodule of <m>R^n</m>. Define <me>
-  \pi: R^n \onto R^1
-  </me> to be the projection onto the last component of <m>R^n</m>. The kernel of <m>\pi_n</m> may be identified with <m>R^{n-1}</m> and so <m>N := \ker(\pi) \cap M</m> is a submodule of <m>R^{n-1}</m>, and it is therefore finitely generated by assumption. The image <m>\pi(M)</m> of <m>M</m> under <m>\pi</m> is a submodule of <m>R^1</m>, that is, an ideal of <m>R</m>, and so it too is finitely generated by assumption (and Lemma ).
-              </p>
-  
-              <p>
-                Furthermore, by the first isomorphism theorem <m>M/\ker(\pi)\cong \pi(M)</m> is also finitely generated. By a homework problem, we deduce that <m>M</m> is a finitely generated module.
-              </p>
-  
-              <p>
-                % I'll just sketch the general case (which I don't think we'll actually need): let <m>T</m> be any finitely generated <m>R</m>-module and <m>N \subseteq T</m> any submodule. % Since <m>T</m> is finitely generated, there exists a surjective <m>R</m>-module homomorphism <m>q: R^n \onto T</m> for some <m>n</m>. Then <m>q^{-1}(N)</m> is a submodule of <m>R^n</m> and % hence it is finitely generated by the case we already proved. Moreover, <m>q</m> induces a surjective <m>R</m>-module homomorphism <m>q: q^{-1}(N) \onto N</m>, % and hence <m>N</m> is isomorphic to a quotient of a finitely generated <m>R</m>-module and thus it is also finitely generated.
-              </p>
-            </proof>
-          </proposition>
-
-          <remark>
-            <p>
-              The converse is also true: If <m>R</m> is not Noetherian, there there exists an ideal <m>I</m> that is not finitely generated (by the Lemma). This gives an example of a non-finitely-generated submodule, namely <m>I</m>, of a finitely generated module, namely <m>R</m>.
-            </p>
-          </remark>
-
-          <corollary xml:id="cor-fg-modules-finitely-presented-when-noetherian"><title>Finite Presentations in Noetherian Rings</title>
-            <statement>
-              <p>
-                Any finitely generated module <m>M</m> over a noetherian ring <m>R</m> has a finite presentation; that is, given such a module over such a ring, there exists an <m>m \times n</m> matrix <m>A</m> in <m>R</m> and an isomorphism <me>M\cong R^m/\im(T_A).</me>
-              </p>
-            </statement>
-
-            <proof>
-              <p>
-                We basically already proved this, but let me recap it:
-              </p>
-  
-              <p>
-                If <m>M</m> is finitely generated, then for some <m>m</m> we can find a surjective <m>R</m>-module homomorphism <me>
-  \pi: R^m \onto M.
-  </me> Since we assume <m>R</m> is Noetherian, the kernel of <m>\pi</m> is also finitely generated by the Proposition, and so we may find a surjection of <m>R</m>-modules <me>
-  g: R^n \onto \ker(\pi)
-  </me> for some <m>n</m>. The composition <m>R^n \xra{g} \ker(\pi) \subseteq R^m</m> is equal to <m>T_A</m> for some <m>n \times m</m> matrix <m>A</m>. Since <m>\im(T_A) = \ker(\pi)</m>, the first isomorphism theorem gives an isomorphism <me>
-  R^m/\im(T_A) = R^m/\ker(\pi) \cong M.
-  </me>
-              </p>
-            </proof>
-          </corollary>
-
-          <exercise><title>Quotient Rings Noetherian in Noetherian Rings</title>
-            <statement>
-              <p>
-                Let <m>R</m> be a commutative ring and <m>I</m> an ideal of <m>R</m>. Show that if <m>R</m> is noetherian then <m>R/I</m> is also noetherian.
-              </p>
-            </statement>
-          </exercise>
-
         </section>
 
         <section xml:id="sec-modclass"><title>Classifications</title>
@@ -14543,7 +14654,8 @@
           <definition xml:id="def-field-extension"><title>Field Extension</title>
             <statement>
               <p>
-                A <em>field extension</em> is an inclusion of one field <m>F</m> into a larger field <m>L</m>, making <m>F</m> into a subfield of <m>L</m>. We will write either <m>F \subseteq L</m> or <m>L/F</m> to signify that <m>L</m> is a field extension of <m>F</m>.
+                A <em>field extension</em> is an inclusion of one field <m>F</m> into a larger field <m>L</m>, making <m>F</m> into a subfield of <m>L</m>. 
+                We will write either <m>F \subseteq L</m> or <m>L/F</m> to signify that <m>L</m> is a field extension of <m>F</m>.
               </p>
             </statement>
           </definition>
@@ -14817,58 +14929,78 @@
           <definition xml:id="def-algebraic-element"><title>Algebraic Element</title>
             <statement>
               <p>
-                For a field extension <m>F \subseteq L</m> and <m>\a \in L</m>, we say <m>\a</m> is <em>algebraic</em> over <m>F</m> if <m>f(\a) = 0</m> for some non-zero polynomial <m>f(x) \in F[x]</m>. Otherwise, <m>\a</m> is <em>transcendental</em> over <m>F</m>.
+                For a field extension <m>F \subseteq L</m> and <m>\a \in L</m>, we say <m>\a</m> is <em>algebraic</em> over <m>F</m> if <m>f(\a) = 0</m> for some non-zero polynomial <m>f(x) \in F[x]</m>. 
+                Otherwise, <m>\a</m> is <em>transcendental</em> over <m>F</m>.
               </p>
             </statement>
           </definition>
   
           <example xml:id="exe-i-algebraic-over-r">
             <p>
-              <m>i \in \C</m> is algebraic over <m>\R</m>. Indeed, every element of <m>\C</m> is algebraic over <m>\R</m>. (E.g., <m>z = a + bi</m> is a root of <m>x^2 -2ax +a^2 + b^2</m>.) <m>e^{2 \pi i/n} \in \C</m> ia algebraic over <m>\Q</m>. So is <m>\sqrt{m}</m> for any <m>m \in \Z</m>. The numbers <m>\pi</m> and <m>e</m> of <m>\R</m> are transcendental over <m>\Q</m>; these are deep facts.
+              <m>i \in \C</m> is algebraic over <m>\R</m>. 
+              Indeed, every element of <m>\C</m> is algebraic over <m>\R</m>. 
+              (E.g., <m>z = a + bi</m> is a root of <m>x^2 -2ax +a^2 + b^2</m>.) 
+              <m>e^{2 \pi i/n} \in \C</m> ia algebraic over <m>\Q</m>. 
+              So is <m>\sqrt{m}</m> for any <m>m \in \Z</m>. 
+              The numbers <m>\pi</m> and <m>e</m> of <m>\R</m> are transcendental over <m>\Q</m>; these are deep facts.
             </p>
           </example>
   
           <theorem xml:id="thm-properties-of-algebraic-elements"><title>Properties of Algebraic Elements</title>
             <statement>
               <p>
-                Suppose <m>F \subseteq L</m> is a field extension and <m>\a \in L</m>. Define <me>I := \{f(x) \in F[x] \mid f(\a) = 0\},</me> a subset of <m>F[x]</m>.
+                Suppose <m>F \subseteq L</m> is a field extension and <m>\a \in L</m>. 
+                Define <me>I := \{f(x) \in F[x] \mid f(\a) = 0\},</me> a subset of <m>F[x]</m>.
               </p>
     
-              <p><ol>
-                <li>
-                The subset <m>I</m> is an ideal of <m>F[x]</m>.
-                </li>
+              <p>
+                <ol>
+                  <li>
+                    The subset <m>I</m> is an ideal of <m>F[x]</m>.
+                  </li>
+
+                  <li>
+                    <m>I = 0</m> if and only if <m>\a</m> is transcendental over <m>F</m>; so <m>I\neq 0</m> if and only if <m>\a</m> is algebraic over <m>F</m>.
+                  </li>
     
-                <li>
-                <m>I = 0</m> if and only if <m>\a</m> is transcendental over <m>F</m>; so <m>I\neq 0</m> if and only if <m>\a</m> is algebraic over <m>F</m>.
-                </li>
-    
-                <li>
-                Assume <m>\a</m> is algebraic over <m>F</m>.
-    
-              <ul>
-                <li>
-                The unique monic generator of <m>I</m>, which we will write as <m>m_{\a, F}(x)</m>, is irreducible (and hence <m>I</m> is a prime ideal).
-                </li>
-    
-                <li>
-                There is a unique isomorphism of fields <me>F[x]/(m_{\a, F}(x)) \cong F(\a)</me>sending <m>F</m> identically to <m>F</m> and sending <m>x</m> to <m>\a</m>.
-                </li>
-    
-                <li>
-                <m>F[\a] = F(\a)</m> and in particular <m>F[\a]</m> is a field.
-                </li>
-    
-              </ul>
-                </li>
-    
-                <li>
-                <m>\a</m> is algebraic over <m>F</m> if and only if <m>[F(\a): F] &lt; \infty</m>. In this case, <me>[F(\a): F] = \deg(m_{\a, F}(x)).</me>
-                </li>
-    
-                <li>
-                <m>\a</m> is transcendental over <m>F</m> if and only if <m>[F(\a): F] = \infty</m>. In this case, there is a unique isomorphism of fields <me>F(x) \cong F(\a)</me> sending <m>F</m> identically to <m>F</m> and sending <m>x</m> to <m>\a</m>. (Here, <m>F(x)=\left\{\frac{g(x)}{f(x)}\mid g\neq 0\right\}</m> is the field of fractions of <m>F[x]</m>.)
-                </li>
+                  <li>
+                    Assume <m>\a</m> is algebraic over <m>F</m>.
+                    <ul>
+                      <li>
+                        The unique monic generator of <m>I</m>, which we will write as <m>m_{\a, F}(x)</m>, is irreducible (and hence <m>I</m> is a prime ideal).
+                      </li>
+          
+                      <li>
+                        There is a unique isomorphism of fields 
+                        <me>
+                          F[x]/(m_{\a, F}(x)) \cong F(\a)
+                        </me>
+                        sending <m>F</m> identically to <m>F</m> and sending <m>x</m> to <m>\a</m>.
+                      </li>
+          
+                      <li>
+                        <m>F[\a] = F(\a)</m> and in particular <m>F[\a]</m> is a field.
+                      </li>
+                    </ul>
+                  </li>
+          
+                  <li>
+                    <m>\a</m> is algebraic over <m>F</m> if and only if <m>[F(\a): F] &lt; \infty</m>. 
+                    In this case, 
+                    <me>
+                      [F(\a): F] = \deg(m_{\a, F}(x)).
+                    </me>
+                  </li>
+      
+                  <li>
+                    <m>\a</m> is transcendental over <m>F</m> if and only if <m>[F(\a): F] = \infty</m>. 
+                    In this case, there is a unique isomorphism of fields 
+                    <me>
+                      (x) \cong F(\a)
+                    </me> 
+                    sending <m>F</m> identically to <m>F</m> and sending <m>x</m> to <m>\a</m>. 
+                    (Here, <m>F(x)=\left\{\frac{g(x)}{f(x)}\mid g\neq 0\right\}</m> is the field of fractions of <m>F[x]</m>.)
+                  </li>
     
               </ol></p>
             </statement>
