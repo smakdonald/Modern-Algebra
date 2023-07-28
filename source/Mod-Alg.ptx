@@ -1313,7 +1313,7 @@
             </example>   
 
             <p>
-              We arrive at one of the central conjectures of group theory, posed by none other tha UNL's Tom "Destroyer of Worlds" Marley. 
+              We arrive at one of the central conjectures of group theory, posed by none other than UNL's Tom "Destroyer of Worlds" Marley. 
               Best of luck.
               <fn>For the more astute reader, you may observe that this is one of the more solvable conjectures in mathematics. This is the first problem Tom assigns every time he teaches 817 and it's become a bit of a running joke.</fn>
             </p>        
@@ -14501,73 +14501,85 @@
 
         <section xml:id="sec-jcf"><title>Jordan Canonical Form</title>
 
-          <example xml:id="compantion-matrix-and-jordan-blocks"><title>Companion Matrix and Jordan Blocks</title>
+          <p>
+            We now turn to the Jordan canonical form. 
+            To motivate it, let us do an example.
+          </p>
 
+          <example xml:id="compantion-matrix-and-jordan-blocks"><title>Companion Matrix and Jordan Blocks</title>
             <p>
-              Let us consider the companion matrix of <m>(x-2)^3 = x^3 -6x^2 + 12x -8</m>: <me>
+              Let us consider the companion matrix of <m>(x-2)^3 = x^3 -6x^2 + 12x -8</m>: 
+              <me>
                 A =
-                \begin{bmatrix}
-                0 &amp; 0 &amp; 8 \\
-                1 &amp; 0 &amp; -12 \\
-                0 &amp; 1 &amp; 6 
-                \end{bmatrix}=C((x-2)^3)\in \M_{3 \times 3}(\Q).
-                </me> We can interpret this matrix as arising from the linear transformation <m>g</m> on <me>
+                \begin{bmatrix} 0 &amp; 0 &amp; 8 \\ 1 &amp; 0 &amp; -12 \\ 0 &amp; 1 &amp; 6 \end{bmatrix}=C((x-2)^3)\in \M_{3 \times 3}(\Q).
+              </me> 
+              We can interpret this matrix as arising from the linear transformation <m>g</m> on 
+              <me>
                 V := \Q[x]/(x-2)^3
-                </me> defined as multiplication by <m>x</m>. Recall that the ordered basis of <m>V</m> that gives the matrix <m>A</m> is the “obvious one'': <me>
+              </me> 
+              defined as multiplication by <m>x</m>. 
+              Recall that the ordered basis of <m>V</m> that gives the matrix <m>A</m> as: 
+              <me>
                 B=\{\ov{1}, \ov{x}, \ov{x^2}\}.
-                </me> But notice that <me>
+              </me> 
+              But notice that 
+              <me>
                 B'=\{\ov{1}, \ov{x-2}, \ov{(x-2)^2}\}
-                </me> is also a basis of <m>V</m>. Let us calculate what the operator <m>g</m> does to this alternative basis. We could work this out by brute force, but a cleaner way is to first compute what the operator <m>g -2 \cdot \id_V</m> does. Since <m>g - 2 \cdot \id_V</m> is multiplication by <m>x-2</m>, it sends each basis element to the next one, except for the last one, which is sent to <m>0</m>. It follows that the matrix of this operator relative to the ordered basis <m>B'</m> is <me>
+              </me> 
+              is also a basis of <m>V</m>. 
+              Let us calculate what the operator <m>g</m> does to this alternative basis. 
+              We could work this out by brute force, but a cleaner way is to first compute what the operator <m>g -2 \cdot \id_V</m> does. 
+              Since <m>g - 2 \cdot \id_V</m> is multiplication by <m>x-2</m>, it sends each basis element to the next one, except for the last one, which is sent to <m>0</m>. 
+              It follows that the matrix of this operator relative to the ordered basis <m>B'</m> is 
+              <me>
                 [g - 2 \cdot \id_V]_{B'}^{B'} = 
-                \begin{bmatrix}
-                0 &amp; 0 &amp; 0 \\
-                1 &amp; 0 &amp; 0 \\
-                0 &amp; 1 &amp; 0 \\
-                \end{bmatrix}
-                </me> and hence the matrix for <m>g</m> itself for this basis is <me>
+                \begin{bmatrix} 0 &amp; 0 &amp; 0 \\ 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ \end{bmatrix}
+              </me> 
+              and hence the matrix for <m>g</m> itself for this basis is 
+              <me>
                 [g]_{B'}^{B'} = 
-                \begin{bmatrix}
-                2 &amp; 0 &amp; 0 \\
-                1 &amp; 2 &amp; 0 \\
-                0 &amp; 1 &amp; 2 \\
-                \end{bmatrix} =: J_3(2).
-                </me> This is what's known as a Jordan Block.
+                \begin{bmatrix} 2 &amp; 0 &amp; 0 \\ 1 &amp; 2 &amp; 0 \\ 0 &amp; 1 &amp; 2 \\\end{bmatrix} =: J_3(2).
+              </me> 
+              This is what's known as a <em>Jordan Block</em>.
             </p>
           </example>
 
-          <remark><p>In this example, if we used the basis <m>\{ \ov{(x-2)^2}, \ov{x-2}, \ov{1}\}</m> instead we would have gotten the transpose of <m>J_3(2)</m>.</p></remark>
+          <remark>
+            <p>
+              In this example, if we used the basis <m>\{ \ov{(x-2)^2}, \ov{x-2}, \ov{1}\}</m> instead we would have gotten the transpose of <m>J_3(2)</m>.
+            </p>
+          </remark>
 
           <definition xml:id="def-jordan-block"><title>Jordan Block</title>
             <statement>
               <p>
-                Given a field <m>F</m>, and integer <m>n \geq 1</m>, and an element <m>r\in F</m>, the <em>Jordan block</em> <m>J_n(r)</m> is the <m>n \times n</m> with entries in <m>F</m> such that its diagonal entries are all <m>r</m>, each entry just below the diagonal is a <m>1</m>, and all other entries are <m>0</m>: <me>
-                J_n(r) = 
-                \begin{bmatrix}
-                r &amp; 0 &amp; 0 &amp; \cdots &amp; 0 \\
-                1 &amp; r &amp; 0 &amp; \cdots &amp; 0 \\
-                0 &amp; \ddots &amp; \ddots &amp;&amp; \vdots \\
-                \vdots &amp;&amp; \ddots &amp; \ddots &amp; 0\\
-                0 &amp; \cdots &amp; 0 &amp; 1 &amp; r \\
-                \end{bmatrix}.
-                </me> (More precisely, <m>a_{i,i} = r</m> for all <m>1 \leq i \leq n</m>, <m>a_{i,i-1} = 1</m> for all <m>2 \leq i \leq n</m>, and <m>a_{i,j} = 0</m> for all other <m>i,j</m>.)
+                Given a field <m>F</m>, and integer <m>n \geq 1</m>, and an element <m>r\in F</m>, the <em>Jordan block</em> <m>J_n(r)</m> is the <m>n \times n</m> with entries in <m>F</m> such that its diagonal entries are all <m>r</m>, each entry just below the diagonal is a <m>1</m>, and all other entries are <m>0</m>: 
+                <me>
+                  J_n(r) = \begin{bmatrix} r &amp; 0 &amp; 0 &amp; \cdots &amp; 0 \\ 1 &amp; r &amp; 0 &amp; \cdots &amp; 0 \\ 0 &amp; \ddots &amp; \ddots &amp;&amp; \vdots \\ \vdots &amp;&amp; \ddots &amp; \ddots &amp; 0\\ 0 &amp; \cdots &amp; 0 &amp; 1 &amp; r \\ \end{bmatrix}.
+                </me> 
+                (More precisely, <m>a_{i,i} = r</m> for all <m>1 \leq i \leq n</m>, <m>a_{i,i-1} = 1</m> for all <m>2 \leq i \leq n</m>, and <m>a_{i,j} = 0</m> for all other <m>i,j</m>.)
               </p>
             </statement>
           </definition>
 
-          <remark><p>Some people (including I think the authors or our text) defined a Jordan block to be the transpose of what I have defined it to be.</p></remark>
+          <remark>
+            <p>
+              Some people (including I think the authors or our text) defined a Jordan block to be the transpose of what I have defined it to be.
+            </p>
+          </remark>
 
           <theorem xml:id="thm-jcf"><title>Jordan Canonical Form</title>
 
             <statement>
               <p>
-                Let <m>F</m> be a field, let <m>V</m> be a finite dimensional <m>F</m>-vector space, and let <m>g: V \to V</m> be a linear transformation satisfying the property that the characteristic polynomial <m>\cp_g(x)</m> of <m>g</m> factors completely in <m>F[x]</m> into linear factors. Then there is an ordered basis <m>B</m> for <m>V</m> such that <me>[g]_B^B = J_{e_1}(r_1) \oplus \dots \oplus J_{e_s}(r_s)=
-      \begin{bmatrix}
-      J_{e_1}(r_1) &amp; 0 &amp; 0 &amp; \cdots &amp; 0 \\
-      0 &amp;  J_{e_2}(r_2)  &amp; 0 &amp; \cdots &amp; 0 \\
-      \vdots &amp; \vdots &amp; \ddots &amp;  &amp; \vdots \\
-      0 &amp; 0 &amp; \cdots &amp; 0 &amp;  J_{e_m}(r_m) \\
-      \end{bmatrix},
-      </me> where <m>m</m>, the <m>e_i</m>'s, and the <m>r_i</m>'s are such that <m>(x - r_1)^{e_1}, \ldots, (x - r_m)^{e^m}</m> are the elementary divisors of the <m>F[x]</m>-module <m>V_g</m>. Moreover, this matrix is unique up to ordering of the Jordan Blocks, and it is known as “the'' <em>Jordan Canonical Form</em> of <m>g</m>.
+                Let <m>F</m> be a field, let <m>V</m> be a finite dimensional <m>F</m>-vector space, and let <m>g: V \to V</m> be a linear transformation satisfying the property that the characteristic polynomial <m>\cp_g(x)</m> of <m>g</m> factors completely in <m>F[x]</m> into linear factors. 
+                Then there is an ordered basis <m>B</m> for <m>V</m> such that 
+                <me>
+                  [g]_B^B = J_{e_1}(r_1) \oplus \dots \oplus J_{e_s}(r_s)=
+                  \begin{bmatrix} J_{e_1}(r_1) &amp; 0 &amp; 0 &amp; \cdots &amp; 0 \\ 0 &amp;  J_{e_2}(r_2)  &amp; 0 &amp; \cdots &amp; 0 \\ \vdots &amp; \vdots &amp; \ddots &amp;  &amp; \vdots \\ 0 &amp; 0 &amp; \cdots &amp; 0 &amp;  J_{e_m}(r_m) \\ \end{bmatrix},
+                </me> 
+                where <m>m</m>, the <m>e_i</m>'s, and the <m>r_i</m>'s are such that <m>(x - r_1)^{e_1}, \ldots, (x - r_m)^{e^m}</m> are the elementary divisors of the <m>F[x]</m>-module <m>V_g</m>. 
+                Moreover, this matrix is unique up to ordering of the Jordan Blocks.
               </p>
             </statement>
 
@@ -14586,9 +14598,28 @@
             </proof>
           </theorem>
 
-          <remark><p>Not every operator has a Jordan Canonical Form: The Theorem only applies if <m>\cp_g(x)</m> factors completely, and, conversely, if an operator <m>g</m> is represented by any lower-triangular matrix, then its characteristic polynomial must be a product of linear polynomials. For algebraically closed fields, such as <m>\C</m>, every linear operator does indeed have a JCF.</p></remark>
+          <definition xml:id="def-jcf"><title>Jordan Canonical Form</title>
+            <statement>
+              <p>
+                Let <m>F</m> be a field, <m>V</m> be a finite dimensional vector space, and let <m>t: V \rightarrow V</m> be a linear transformation satisfying the property that the characteristic polynomial <m>c_{t}</m> of <m>t</m> factors completely into linear factors and has elementary divisors <m>\left(x-r_{1}\right)^{e_{1}}, \ldots,\left(x-r_{s}\right)^{e_{s}}</m>. 
+                The matrix <m>J_{e_{1}}\left(r_{1}\right) \oplus \cdots \oplus J_{e_{s}}\left(r_{s}\right)</m> is a Jordan canonical form (JCF) of <m>t</m>.
+              </p>
+            </statement>
+          </definition>
 
-          <remark><p>If we flip the order of each <m>B_i</m> in the proof, we would end up with the transpose of what I have defined the JCF to be. This is what our text does, and it defines the JCF as the transpose of what I have defined it to be.</p></remark>
+          <warning>
+            <p>
+              Not every operator has a Jordan Canonical Form: <xref ref="thm-jcf"/> only applies if <m>\cp_g(x)</m> factors completely, and, conversely, if an operator <m>g</m> is represented by any lower-triangular matrix, then its characteristic polynomial must be a product of linear polynomials. 
+              For algebraically closed fields, such as <m>\C</m>, every linear operator does indeed have a JCF.
+            </p>
+          </warning>
+
+          <remark>
+            <p>
+              If we flip the order of each <m>B_i</m> in the proof, we would end up with the transpose of what I have defined the JCF to be. 
+              This is what our text does, and it defines the JCF as the transpose of what I have defined it to be.
+            </p>
+          </remark>
 
           <corollary xml:id="cor-jcf-exists-if-charpoly-factors-linearly"><title>JCF Exists if CharPoly Factors Linearly</title>
             <statement>
@@ -14599,36 +14630,94 @@
           </corollary>
 
           <example xml:id="exe-finding-jcf"><title>Finding JCF</title>
-            
             <p>
-              Let us find the Jordan Canonical Form of <me>
-              A = 
-              \begin{bmatrix} 
-              1 &amp; -1 &amp; 1 \\
-              0 &amp; 0 &amp; 1 \\
-              0 &amp; 1 &amp; 0 \\
-              \end{bmatrix}
-              \in \Mat_{3 \times 3}(\Q).
+              Let us find the Jordan Canonical Form of 
+              <me>
+                  A = 
+                  \begin{bmatrix} 1 &amp; -1 &amp; 1 \\ 0 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; 0 \\ \end{bmatrix}
+                  \in \Mat_{3 \times 3}(\Q).
               </me>
             </p>
     
             <p>
-              We found the Rational Canonical Form of this matrix before. In the process we showed that we have an isomorphism of <m>\Q[x]</m>-module. <me>
-    \Q^3_A \cong \Q[x]/(x-1) \oplus \Q[x]/(x^2-1).
-    </me> By the Sunzi Remainder Theorem <me>
-    \Q[x]/(x-1) \oplus \Q[x]/(x^2-1) \cong \Q[x]/(x-1) \oplus \Q[x]/(x-1) \oplus \Q[x]/(x+1)
-    </me> and thus the elementary divisors of <m>\Q^3_A</m> are <m>x-1, x-1, x+1</m>. By the Theorem this shows that the JCF of <m>A</m> is <me>
-    J_1(1) \oplus J_1(1) \oplus J_1(-1) = \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; -1 \end{bmatrix}.</me>
+              We found the Rational Canonical Form of this matrix before. <xref provisional=""/>
+              In the process we showed that we have an isomorphism of <m>\Q[x]</m>-module. 
+              <me> 
+                \Q^3_A \cong \Q[x]/(x-1) \oplus \Q[x]/(x^2-1).
+              </me> 
+              By the Sunzi Remainder Theorem 
+              <me>
+                \Q[x]/(x-1) \oplus \Q[x]/(x^2-1) \cong \Q[x]/(x-1) \oplus \Q[x]/(x-1) \oplus \Q[x]/(x+1)
+              </me> 
+              and thus the elementary divisors of <m>\Q^3_A</m> are <m>x-1, x-1, x+1</m>. 
+              By <xref ref="thm-jcf"/> this shows that the JCF of <m>A</m> is 
+              <me>
+                J_1(1) \oplus J_1(1) \oplus J_1(-1) = \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; -1 \end{bmatrix}.
+              </me>
             </p>
           </example>
 
           <definition xml:id="def-diagonalizable"><title>Diagonalizable</title>
             <statement>
               <p>
-                Let <m>V</m> be a finite dimensional vector space over a field <m>F</m> and let <m>g: V \to V</m> be an <m>F</m>-linear operator. We say <m>g</m> is <em>diagonalizable</em> if there is a basis <m>B</m> for <m>V</m> such that the matrix <m>[g]_B^B</m> is a diagonal matrix.
+                Let <m>V</m> be a finite dimensional vector space over a field <m>F</m> and let <m>g: V \to V</m> be an <m>F</m>-linear operator. 
+                We say <m>g</m> is <em>diagonalizable</em> if there is a basis <m>B</m> for <m>V</m> such that the matrix <m>[g]_B^B</m> is a diagonal matrix.
               </p>
             </statement>
           </definition>
+
+          <theorem xml:id="thm-diagonalizable-thm"><title>Diagonalizable Characterization</title>
+            <statement>
+              <p>
+                Let <m>F</m> be a field, let <m>V</m> be a finite dimensional vector space, and consider a linear transformation <m>t: V \rightarrow V</m>. 
+                The following are equivalent:
+                <ol>
+                  <li>
+                    <p>
+                      <m>t</m> is diagonalizable.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>t</m> has a Jordan canonical form <m>A</m> and <m>A</m> is a diagonal matrix.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>t</m> has a Jordan canonical form and all elementary divisors are of the form <m>x-r</m> with <m>r \in F</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Each invariant factor of <m>t</m> is a product of linear polynomials with no repeated linear factors.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      The minimal polynomial of <m>t</m> is a product of linear polynomials with no repeated linear factors.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                Note that a diagonal matrix is an example of a matrix in JCF. 
+                By the uniqueness of the JCF, (1) holds if and only if (2) holds. 
+                Moreover, the equivalence of (2) and (3) follows by definition. 
+                A matrix has a JCF if and only if its invariant factors factor completely. 
+                In this case, the elementary divisors are constructed by decomposing each invariant factor into powers of distinct linear polynomials. 
+                This gives that (3) holds if and only if (4) holds. 
+                Finally, since the minimal polynomial is one of the invariant factors and every other invariant factor divides it, we get the equivalence between (4) and (5).
+              </p>
+            </proof>
+          </theorem>
+          
           
         </section>
         
@@ -14642,285 +14731,434 @@
     
         <section xml:id="field-extension-basics"><title>Field Extension Basics</title>
 
-          <blockquote>
-            <p>
-              <q>
-                Give me extension and motion and I will construct the universe.
-              </q>
-            </p>
-            <attribution>René Descartes</attribution>
-          </blockquote>
-  
-          <definition xml:id="def-field-extension"><title>Field Extension</title>
-            <statement>
+          <subsection xml:id="subsec-field-extensions"><title>Welcome to Field Extensions</title>
+
+            <blockquote>
               <p>
-                A <em>field extension</em> is an inclusion of one field <m>F</m> into a larger field <m>L</m>, making <m>F</m> into a subfield of <m>L</m>. 
-                We will write either <m>F \subseteq L</m> or <m>L/F</m> to signify that <m>L</m> is a field extension of <m>F</m>.
+                <q>
+                  Give me extension and motion and I will construct the universe.
+                </q>
               </p>
-            </statement>
-          </definition>
-  
-          <remark>
+              <attribution>René Descartes</attribution>
+            </blockquote>
+
             <p>
-              A field extension is just another name for a subfield, but the emphasis is different. 
-              We think of <m>F</m> as coming first and <m>L</m> later.
+              One motivation for studying field extensions is that we want to build fields in which certain polynomials have roots. 
+              Here is a classical example going back to Gauss: while over <m>\mathbb{R}</m> the polynomial <m>f=x^{2}+1 \in \mathbb{R}[x]</m> has no roots, if we want a field in which <m>f</m> does have a root we need to consider <m>\mathbb{C}=\mathbb{R}(i)=\{a+b i \mid a, b \in \mathbb{R}\}</m>.
             </p>
-          </remark>
-  
-          <remark>
+
             <p>
-              Recall that if <m>F</m> and <m>E</m> are fields, then every ring homomorphism <m>\phi: F \to E</m> necessarily injective. <xref provisional="empty"/>
-              (Proof: since <m>\phi(1) = 1</m>, <m>\ker(\phi)</m> is a proper ideal of <m>F</m>, and since <m>F</m> is a field, the only proper ideal of it is <m>0</m>.) 
-              Thus <m>\phi</m> maps <m>F</m> isomorphically onto its image <m>\phi(F)</m> and <m>\phi(F) \subseteq E</m> is a field extension. 
-              By abuse of notation we will typically think of <m>\phi</m> as being a field extension, even though it is technically just an injective homomorphism of fields.
+              Starting from a smaller field <m>F</m> and an irreducible polynomial <m>f \in F[x]</m>, we want to build a larger field <m>L</m>. 
+              One way to do this is to take a root <m>a</m> of <m>f</m> and adjoin it to <m>F</m> obtaining the field <m>L=F(a)</m>, which is the collection of all expressions that one can build using addition, subtraction, multiplication and division starting from the of elements of <m>F \cup\{a\}</m>. 
+              Another way to build a larger field <m>L</m> from a smaller field <m>F</m> and an irreducible polynomial <m>f \in F[x]</m> is to let <m>L=F[x] /(f(x))</m>. 
+              We will show below that these two ways of creating larger fields are one and the same.
             </p>
-          </remark>
-  
-          <example xml:id="ex-classic-field-extensions"><title>Examples of Field Extensions</title>
-            <p>
-              <m>\Q \subseteq \R</m> and <m>\R \subseteq \C</m> are basic examples of field extensions.
-            </p>
-  
-            <p>
-              Recall <xref provisional="empty"/> that <m>\Q[\sqrt{2}] = \{a + b \sqrt{2} \mid a, b \in \Q\}</m> is a field. 
-              So <m>\Q \subseteq \Q[\sqrt{2}]</m> is another example of a field extension.
-            </p>
-          </example>
-  
-          <remark>
-            <p>
-              The latter is a typical sort of example for us: 
-              Starting with <m>\Q</m>, we would like to <q>adjoin</q> a root of the irreducible (in <m>\Q[x]</m>) polynomial <m>x^2 + 1</m>. 
-              Doing so yields <m>\Q[\sqrt{2}]</m>.
-            </p>
-  
+    
+            <definition xml:id="def-field-extension"><title>Field Extension</title>
+              <statement>
+                <p>
+                  A <em>field extension</em> is an inclusion of one field <m>F</m> into a larger field <m>L</m>, making <m>F</m> into a subfield of <m>L</m>. 
+                  We will write either <m>F \subseteq L</m> or <m>L/F</m> to signify that <m>L</m> is a field extension of <m>F</m>.
+                </p>
+              </statement>
+            </definition>
+    
+            <remark>
+              <p>
+                Recall that if <m>F</m> and <m>E</m> are fields, then every ring homomorphism <m>\phi: F \to E</m> necessarily injective. <xref provisional="empty"/>
+                (Proof: since <m>\phi(1) = 1</m>, <m>\ker(\phi)</m> is a proper ideal of <m>F</m>, and since <m>F</m> is a field, the only proper ideal of it is <m>0</m>.) 
+                Thus <m>\phi</m> maps <m>F</m> isomorphically onto its image <m>\phi(F)</m> and <m>\phi(F) \subseteq E</m> is a field extension. 
+                By abuse of notation we will typically think of <m>\phi</m> as being a field extension, even though it is technically just an injective homomorphism of fields.
+              </p>
+            </remark>
+    
+            <example xml:id="ex-classic-field-extensions"><title>Field Extensions</title>
+              <p>
+                <m>\Q \subseteq \R</m> and <m>\R \subseteq \C</m> are basic examples of field extensions.
+              </p>
+    
+              <p>
+                Recall <xref provisional="empty"/> that <m>\Q[\sqrt{2}] = \{a + b \sqrt{2} \mid a, b \in \Q\}</m> is a field. 
+                So <m>\Q \subseteq \Q[\sqrt{2}]</m> is another example of a field extension.
+              </p>
+            </example>
+    
+            <remark>
+              <p>
+                The latter is a typical sort of example for us: 
+                Starting with <m>\Q</m>, we would like to <q>adjoin</q> a root of the irreducible (in <m>\Q[x]</m>) polynomial <m>x^2 + 1</m>. 
+                Doing so yields <m>\Q[\sqrt{2}]</m>.
+              </p>
+            </remark>
+
             <p>
               The previous example was a quadratic extension, which is misleadingly simple.
             </p>
-          </remark>
-  
-          <example xml:id="exe-more-field-extensions"><title>Yet More Field Extensions</title>
-            <p>
-              Consider <m>x^3 - 2 \in \Q[x]</m>. 
-              It is irreducible (e.g., by <xref text="title" ref="thm-eisensteins-criterion"/>) and has roots <m>\a = \sqrt[3]{2}</m>, <m>\beta = e^{2 \pi i/3} \sqrt[3]{2}</m> and <m>\g = e^{4 \pi i/3} \sqrt[3]{2}</m> in <m>\C</m>. 
-              So there are three ways in which we could “adjoin a root" to <m>\Q</m>: 
-              First we could form the field 
-              <me>
-                \Q[\a] = \{a + b \a + c \a^2 \mid a,b,c \in \Q\}.
-              </me> 
-              It is not completely obvious this is a field, but we'll prove it later. 
-              The reason that we don't need third or higher powers is that, e.g., <m>\a^3 = 2 \in \Q</m>. 
-              Or we could instead form the field <m>\Q[\beta]</m> or the field <m>\Q[\gamma]</m>. 
-              There are not all equal since, for example, <m>\Q[\a] \subseteq \R</m> but <m>\beta</m> is not in <m>\R</m>. 
-              However, they are {} field extensions as we will prove below.
-            </p>
-          </example>
-  
-          <definition xml:id="def-field-extension-element"><title><m>F(\a)</m></title>
-            <statement>
+
+            <example xml:id="exe-more-field-extensions"><title>Yet More Field Extensions</title>
               <p>
-                Given a field extension <m>F \subseteq L</m> and an element <m>\a \in L</m>, set 
+                Consider <m>x^3 - 2 \in \Q[x]</m>. 
+                It is irreducible (e.g., by <xref text="title" ref="thm-eisensteins-criterion"/>) and has roots <m>\a = \sqrt[3]{2}</m>, <m>\beta = e^{2 \pi i/3} \sqrt[3]{2}</m> and <m>\g = e^{4 \pi i/3} \sqrt[3]{2}</m> in <m>\C</m>. 
+                So there are three ways in which we could “adjoin a root" to <m>\Q</m>: 
+                First we could form the field 
                 <me>
-                  F[\a] = \{f(\a) \mid f(x) \in F[x]\}.
-                </me>
-                Then <m>F[\a]</m> is a subring of <m>L</m> and in fact it is the smallest subring of <m>L</m> that contains <m>F</m> and <m>\a</m>.
-                We define <m>F(\a)</m> to be the field of fractions of <m>F[\a]</m>; that is, 
-                <me>
-                  F(\a) = \left\{\frac{f(\a)}{g(\a)} \mid f(x), g(x) \in F[x] \text{ such that $g(\a) \ne 0$} \right\}.
+                  \Q[\a] = \{a + b \a + c \a^2 \mid a,b,c \in \Q\}.
                 </me> 
-                So, <m>F(\a)</m> is a subfield of <m>L</m> and it is the smallest subfield of <m>L</m> that contains <m>F</m> and <m>\a</m>.
+                It is not completely obvious this is a field, but we'll prove it later. 
+                The reason that we don't need third or higher powers is that, e.g., <m>\a^3 = 2 \in \Q</m>. 
+                Or we could instead form the field <m>\Q[\beta]</m> or the field <m>\Q[\gamma]</m>. 
+                There are not all equal since, for example, <m>\Q[\a] \subseteq \R</m> but <m>\beta</m> is not in <m>\R</m>. 
+                However, they are {} field extensions as we will prove below.
               </p>
-            </statement>
-          </definition>
-  
-          <remark>
+            </example>
+
+            <definition xml:id="def-field-extension-element"><title><m>F(\a)</m></title>
+              <statement>
+                <p>
+                  Given a field extension <m>F \subseteq L</m> and an element <m>\a \in L</m>, set 
+                  <me>
+                    F[\a] = \{f(\a) \mid f(x) \in F[x]\}.
+                  </me>
+                  Then <m>F[\a]</m> is a subring of <m>L</m> and in fact it is the smallest subring of <m>L</m> that contains <m>F</m> and <m>\a</m>.
+                  We define <m>F(\a)</m> to be the smallest subfield of <m>L</m> that contains <m>F</m> and <m>\a</m>.
+                </p>
+              </statement>
+            </definition>
+
+            <exercise><title>Intersection of Subfields</title>
+              <statement>
+                <p>
+                  Show that <m>F(\a)</m> exists by proving that the intersection of any two subfields is again a subfield.
+                </p>
+              </statement>
+            </exercise>
+
             <p>
-              Note that, in the context of this definition, we have <m>F \subseteq F[\a] \subseteq F(\a) \subseteq L</m>, with each inclusion being a subring inclusion. 
-              <m>F, L</m> and <m>F(\a)</m> are all fields and in general <m>F[\a]</m> is only a ring.
-              But, in some cases we have <m>F[\a] = F(\a)</m> (and hence it is a field). 
-              Indeed, this occurs whenever <m>\a</m> is the root of some polynomial with coefficients in <m>F</m>.
+              In some cases we have <m>F(\a)=F[\a]</m>
             </p>
-          </remark>
-  
-          <example xml:id="exe-qsqrt2">
+
+            <exercise><title>When <m>F(\a)=F[\a]</m></title>
+              <statement>
+                <p>
+                  Prove <m>F(\a)=F[\a]</m> whenever <m>\a</m> is the root of some polynomial with coefficients in <m>F</m>.
+                </p>
+              </statement>
+            </exercise>
+
+            <proposition xml:id="prop-field-ext-fof">
+              <statement>
+                <p>
+                  If <m>F \subseteq L</m> is a field extension and <m>\alpha \in L</m>, the field <m>F(\alpha)</m> is the fraction field of <m>F[\alpha]=\{f(\alpha) \mid f \in F[x]\}</m> : more precisely,
+                  <me>
+                    F(\alpha)=\left\{\frac{g(\alpha)}{f(\alpha)} \mid g(x), f(x) \in F[x], f(\alpha) \neq 0\right\}.
+                  </me>
+                </p>
+              </statement>
+            </proposition>
+
             <p>
-              Take <m>F = \Q</m> and <m>\a = \sqrt{2}</m>. 
-              Then any expression of the form <m>\sum_i r_i \a^i</m> with <m>r_i \in \Q</m> is equal to one of the form <m>a + b \sqrt{2}</m> for <m>a, b \in \Q</m>. 
-              If <m>c + d \sqrt{2} \ne 0</m>, then 
-              <me>
-                \frac{1}{c + d \sqrt{2}} = \frac{c-d \sqrt{2}}{c^2 - 2 d^2}=c' + d' \sqrt{2}
-              </me> 
-              with <m>c' = \frac{c}{c^2 - 2d^2}</m> and <m>d' = \frac{-d}{c^2 - 2d^2}</m> both in <m>\Q</m>. 
-              This proves that <m>\Q[\sqrt2] = \Q(\sqrt2) = \{a + b \sqrt2 \mid a,b \in \Q\}</m> and in particular that <m>\Q[\sqrt{2}]</m> is a field.
+              Soon we will give an even better description for <m>F(\alpha)</m> in the case where <m>\alpha</m> is the root of a polynomial <m>p \in F[x]</m>.
             </p>
-          </example>
-  
-          <example xml:id="exe-qpi"><title></title>
-            <p>
-              <m>\Q[\pi]</m> is not a field (and so in particular it is not equal to <m>\Q(\pi)</m> since, for example, <m>\frac{1}{\pi} \notin \Q[\pi]</m>. 
-              (If it were, then we would have <m>\frac{1}{\pi} = \sum_{i=0}^n q_i \pi^i</m> for some <m>q_i \in \Q</m>, and hence <m>\sum_i q_i \pi^{i+1} - 1 = 0</m>, which would imply <m>\pi</m> is the root of a polynomial with rational coefficients. 
-              This is known to be not true.)
-            </p>
-          </example>
-  
-          <definition xml:id="def-degree-field-extension"><title>Degree of a Field Extension</title>
-            <statement>
+
+            <example xml:id="exe-qsqrt2"><title><m>\Q[\sqrt 2]</m> is a Field</title>
               <p>
-                The <em>degree</em> of a field extension <m>F \subseteq L</m> is 
+                Take <m>F = \Q</m> and <m>\a = \sqrt{2}</m>. 
+                Then any expression of the form <m>\sum_i r_i \a^i</m> with <m>r_i \in \Q</m> is equal to one of the form <m>a + b \sqrt{2}</m> for <m>a, b \in \Q</m>. 
+                If <m>c + d \sqrt{2} \ne 0</m>, then 
                 <me>
-                  [L:F] = \dm_F(L).
-                </me>
-              </p>
-            </statement>
-          </definition>
-  
-          <example xml:id="exe-degrees-of-common-extensions"><title>Degrees of Common Extensions</title>
-            <p>
-              We have that <m>[\C: \R] = 2</m> and <m>[\R:\Q] = \infty</m>. 
-              (We could in fact say <m>[\R:\Q]</m> is the cardinality of <m>\R</m>, but in general we lump all infinite field extensions together when talking about degree.) 
-              We have <m>[\Q[\a]: \Q] = 3</m> where <m>\a = \sqrt[3]{2}</m>.
-            </p>
-          </example>
-  
-          <proposition xml:id="prop-properties-of-extension-degrees"><title>Properties of Extension Degrees</title>
-            <statement>
-              <p>
-                Assume <m>F</m> is a field and <m>p(x) = \sum_i a_i x^i \in F[x]</m> is an irreducible polynomial. 
-                Set <m>L = F[x]/(p(x))</m>, and for <m>f \in F[x]</m>, let <m>\ov{f}</m> denote the coset <m>f(x) + (p(x)) \in L</m>. 
-                The following hold: 
-                <ol>
-                  <li>
-                    <p>
-                      <m>F \into L</m> is a field extension via the map given by <m>a \mapsto \ov{a}</m> for <m>a \in F</m>. 
-                      (This is technically an injective homomorphisms of fields.) 
-                    </p>
-                  </li>
-  
-                  <li>
-                    <p>
-                      <m>[L:F]=\deg(p)</m>.
-                    </p>
-                  </li>
-  
-                  <li>
-                    <p>
-                      <m>p(x)</m> has a root in <m>L</m>; 
-                      in fact, the element <m>\ov{x} \in L</m> is a root of this polynomial: <m>\sum_i \ov{a_i} \cdot \ov{x}^i = 0 \in L</m>.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-  
-            <proof>
-              <p>
-                Because <m>p(x)</m> is irreducible and <m>F[x]</m> is a PID, <m>(p(x))</m> is a maximal ideal <xref provisional="empty"/>. 
-                Thus <m>L = F[x]/(p(x))</m> is a field <xref provisional="empty"/>. 
-                The map <m>F \to L</m> given by <m>a \mapsto \ov{a}</m> is a ring map since it is the composition of the two ring maps <m>F \xra{can} F[x] \xra{can} F[x]/(p(x))</m> <xref provisional="empty"/>. 
-                Since it is a ring map between two fields, it is injective <xref provisional="empty"/>.
-              </p>
-  
-              <p>
-                The equality <m>[L:F]=\deg(p)</m> holds since <m>1, \ov{x}, \dots, \ov{x^{\deg(p)-1}}</m> is a basis for <m>L</m> regarded as an <m>F</m>-vector space, as we have seen before <xref provisional="empty"/>.
-              </p>
-  
-              <p>
-                The last assertion is tricky only because the notation is confusing. 
-                Say <m>p(x) = a_n x^n + \cdots + a_1 x + a_0</m> and just to keep things straight let's set <m>q(y) = \ov{a_n} y^n + \cdots + \ov{a_0} \in L[y]</m>. 
-                We need to show <m>q(\ov{x}) = 0</m>: 
-                We have 
-                <me>
-                  q(\ov{x}) = \sum_i \ov{a_i} (\ov{x})^i =\sum_i \ov{a_i} (\ov{x^i}) = \ov{\sum_i a_i x_i}= \ov{p(x)}= 0.
-                </me>
-              </p>
-            </proof>
-          </proposition>
-  
-          <example xml:id="exe-rxx21">
-            <p>
-              The last part of the proposition is notationally confusing to prove in general but clear in examples. 
-              So let's do a simple one: 
-              Say <m>F = \R</m> and <m>p(x)= x^2 +1</m>. 
-              Then <m>L = \R[x]/(x^2+1)</m>. 
-              The assertion is that <m>\ov{x} := x + (x^2 + 1) \in L</m> is a root of the polynomial <m>x^2 + 1</m> viewed as having coefficients in <m>L</m>. 
-              In other words, this element has the property that its square is <m>-1</m>. L
-              et's check: Since <m>\ov{x^2 + 1} = 0</m> and <m>\ov{x^2 + 1} = \ov{x}^2 + 1</m> we have <m>\ov{x}^2 = -1</m>. 
-              Indeed, there is a field isomorphism <m>L \cong \C</m> sending <m>\ov{x}</m> to <m>i</m> and more generally <m>\ov{f}</m> to <m>f(i)</m>.
-            </p>
-          </example>
-  
-          <definition xml:id="def-simple-extension"><title>Simple Extension</title>
-            <statement>
-              <p>
-                A field extension <m>F \subseteq L</m> is called <em>simple</em> if <m>L = F(\a)</m> for some (typically, non-unique) element <m>\a</m> of <m>L</m>.
-              </p>
-            </statement>
-          </definition>
-  
-          <definition xml:id="def-primitive-element"><title>Primitive Element</title>
-            <statement>
-              <p>
-                primitive element goes here lol
-              </p>
-            </statement>
-          </definition>
-  
-          <example xml:id="exe-sqrt2-primitive">
-            <p>
-              <m>\sqrt{2}</m> is a primitive element of the extension <m>\Q \subseteq\Q[\sqrt{2}] = \Q(\sqrt{2})</m>. 
-              So is <m>1 + \sqrt{2}</m> and, more generally, <m>a + b \sqrt{2}</m> for any <m>a, b \in \Q</m> with <m>b \ne 0</m>.
-            </p>
-          </example>
-  
-          <definition xml:id="def-generated-subfield"><title>Generated Subfield</title>
-            <statement>
-              <p>
-                If <m>F \subseteq L</m> is a field extension and <m>A</m> is any subset of <m>L</m>, we write <m>F(A)</m> for the smallest subfield of <m>L</m> that contains all of <m>F</m> and <m>A</m> and it is called the <em>subfield generated</em> by <m>A</m> over <m>F</m>. 
-                Since the intersection of any two subfields of <m>L</m> is again a subfield, <m>F(A)</m> exists and is 
-                <me>
-                  F(A) = \bigcap_{\text{$E$ is a subfield of $L$ such that $E \supseteq F \cup A$}} E.
+                  \frac{1}{c + d \sqrt{2}} = \frac{c-d \sqrt{2}}{c^2 - 2 d^2}=c' + d' \sqrt{2}
                 </me> 
-                where <m>E</m> 
-                
-                <em>fix</em>
-                  
-                  Nearly always <m>A</m> will be a finite set, <m>A = \{a_1, \dots, a_n\}</m>, and we write <m>F(a_1, \dots, a_n)</m> for <m>F(A)</m>.
+                with <m>c' = \frac{c}{c^2 - 2d^2}</m> and <m>d' = \frac{-d}{c^2 - 2d^2}</m> both in <m>\Q</m>. 
+                This proves that <m>\Q[\sqrt2] = \Q(\sqrt2) = \{a + b \sqrt2 \mid a,b \in \Q\}</m> and in particular that <m>\Q[\sqrt{2}]</m> is a field.
               </p>
-  
+            </example>
+    
+            <example xml:id="exe-qpi"><title><m>\Q[\pi]</m> is not a Field</title>
               <p>
-                In this case, we have 
-                <me> 
-                  F(a_1, \dots, a_n) = \left\{ \frac{p(a_1, \dots, a_n)}{q(a_1, \dots, a_n)} \mid p, q \in F[x_1, \dots, x_n], q(a_1, \dots, a_n) \ne 0\right\}.
-                </me>
+                <m>\Q[\pi]</m> is not a field, and so in particular it is not equal to <m>\Q(\pi)</m> since, for example, <m>\frac{1}{\pi} \notin \Q[\pi]</m>. 
+                (If it were, then we would have <m>\frac{1}{\pi} = \sum_{i=0}^n q_i \pi^i</m> for some <m>q_i \in \Q</m>, and hence <m>\sum_i q_i \pi^{i+1} - 1 = 0</m>, which would imply <m>\pi</m> is the root of a polynomial with rational coefficients. 
+                This is known to be not true.)
               </p>
-            </statement>
-          </definition>
+            </example>
+
+          </subsection>
+
+          <subsection xml:id="subsec-field-ext-degree"><title>Degree of a Field Extension</title>
   
-          <example xml:id="exe-qsqrt2sqrt3">
+            <definition xml:id="def-degree-field-extension"><title>Degree of a Field Extension</title>
+              <statement>
+                <p>
+                  The <em>degree</em> of a field extension <m>F \subseteq L</m> is 
+                  <me>
+                    [L:F] = \dm_F(L).
+                  </me>
+                </p>
+              </statement>
+            </definition>
+    
+            <example xml:id="exe-degrees-of-common-extensions"><title>Degrees of Common Extensions</title>
+              <p>
+                We have that <m>[\C: \R] = 2</m> and <m>[\R:\Q] = \infty</m>. 
+                (We could in fact say <m>[\R:\Q]</m> is the cardinality of <m>\R</m>, but in general we lump all infinite field extensions together when talking about degree.) 
+                We have <m>[\Q[\a]: \Q] = 3</m> where <m>\a = \sqrt[3]{2}</m>.
+              </p>
+            </example>
+    
+            <theorem xml:id="thm-properties-of-extension-degrees"><title>Properties of Extension Degrees</title>
+              <statement>
+                <p>
+                  Assume <m>F</m> is a field and <m>p(x) = \sum_i a_i x^i \in F[x]</m> is an irreducible polynomial. 
+                  Set <m>L = F[x]/(p(x))</m>, and for <m>f \in F[x]</m>, let <m>\ov{f}</m> denote the coset <m>f(x) + (p(x)) \in L</m>. 
+                  The following hold: 
+                  <ol>
+                    <li>
+                      <p>
+                        <m>F \into L</m> is a field extension via the map given by <m>a \mapsto \ov{a}</m> for <m>a \in F</m>. 
+                        (This is technically an injective homomorphisms of fields.) 
+                      </p>
+                    </li>
+    
+                    <li>
+                      <p>
+                        <m>[L:F]=\deg(p)</m>.
+                      </p>
+                    </li>
+    
+                    <li>
+                      <p>
+                        <m>p(x)</m> has a root in <m>L</m>; 
+                        in fact, the element <m>\ov{x} \in L</m> is a root of this polynomial: <m>\sum_i \ov{a_i} \cdot \ov{x}^i = 0 \in L</m>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+    
+              <proof>
+                <p>
+                  Because <m>p(x)</m> is irreducible and <m>F[x]</m> is a PID, <m>(p(x))</m> is a maximal ideal <xref provisional="empty"/>. 
+                  Thus <m>L = F[x]/(p(x))</m> is a field <xref provisional="empty"/>. 
+                  The map <m>F \to L</m> given by <m>a \mapsto \ov{a}</m> is a ring map since it is the composition of the two ring maps <m>F \xra{can} F[x] \xra{can} F[x]/(p(x))</m> <xref provisional="empty"/>. 
+                  Since it is a ring map between two fields, it is injective <xref provisional="empty"/>.
+                </p>
+    
+                <p>
+                  The equality <m>[L:F]=\deg(p)</m> holds since <m>1, \ov{x}, \dots, \ov{x^{\deg(p)-1}}</m> is a basis for <m>L</m> regarded as an <m>F</m>-vector space, as we have seen before <xref provisional="empty"/>.
+                </p>
+    
+                <p>
+                  The last assertion is tricky only because the notation is confusing. 
+                  Say <m>p(x) = a_n x^n + \cdots + a_1 x + a_0</m> and just to keep things straight let's set <m>q(y) = \ov{a_n} y^n + \cdots + \ov{a_0} \in L[y]</m>. 
+                  We need to show <m>q(\ov{x}) = 0</m>: 
+                  We have 
+                  <me>
+                    q(\ov{x}) = \sum_i \ov{a_i} (\ov{x})^i =\sum_i \ov{a_i} (\ov{x^i}) = \ov{\sum_i a_i x_i}= \ov{p(x)}= 0.
+                  </me>
+                </p>
+              </proof>
+            </theorem>
+
             <p>
-              Regard <m>\Q</m> as a subfield of <m>\C</m> and let <m>F = \Q(\sqrt{2}, \sqrt{3})</m>. 
-              We may also describe <m>F</m> as <m>F = E(\sqrt{3})</m> where we set <m>E =\Q(\sqrt{2})</m>.
+              The last part of the proposition is notationally confusing to prove in general but clear in examples.
             </p>
-  
+    
+            <example xml:id="exe-rxx21">
+              <p>
+                Say <m>F = \R</m> and <m>p(x)= x^2 +1</m>. 
+                Then <m>L = \R[x]/(x^2+1)</m>. 
+                The assertion is that <m>\ov{x} := x + (x^2 + 1) \in L</m> is a root of the polynomial <m>x^2 + 1</m> viewed as having coefficients in <m>L</m>. 
+                In other words, this element has the property that its square is <m>-1</m>. 
+                Let's check: Since <m>\ov{x^2 + 1} = 0</m> and <m>\ov{x^2 + 1} = \ov{x}^2 + 1</m> we have <m>\ov{x}^2 = -1</m>. 
+                Indeed, there is a field isomorphism <m>L \cong \C</m> sending <m>\ov{x}</m> to <m>i</m> and more generally <m>\ov{f}</m> to <m>f(i)</m>.
+              </p>
+            </example>
+
+          </subsection>
+
+          <subsection xml:id="subsec-simple-gen-ext"><title>Simple and Generated Extensions</title>
+    
+            <definition xml:id="def-simple-extension"><title>Simple Extension, Primitive Element</title>
+              <statement>
+                <p>
+                  A field extension <m>L / F</m> is called simple if <m>L=F(\alpha)</m> for some element <m>\alpha</m> of <m>L</m>. 
+                  We call such an <m>\alpha</m> a primitive element for the extension.
+                </p>
+              </statement>
+            </definition>
+
+            <remark>
+              <p>
+                If <m>L / F</m> is a simple field extension, note that there might be many different elements <m>\alpha \in L</m> such that <m>L=F(\alpha)</m>. 
+                Thus primitive elements are not necessarily unique.
+              </p>
+            </remark>
+    
+            <example xml:id="exe-sqrt2-primitive">
+              <p>
+                <m>\sqrt{2}</m> is a primitive element of the extension <m>\Q \subseteq\Q[\sqrt{2}] = \Q(\sqrt{2})</m>. 
+                So is <m>1 + \sqrt{2}</m> and, more generally, <m>a + b \sqrt{2}</m> for any <m>a, b \in \Q</m> with <m>b \ne 0</m>.
+              </p>
+            </example>
+
             <p>
-              I claim that <m>F</m> is in fact a simple extension of <m>\Q</m>. 
-              For example, say <m>\g = \sqrt{2} + \sqrt{3}</m>. 
-              I claim that <m>\Q(\sqrt{2} + \sqrt{3}) = F</m>. 
-              Note that <m>\g^2 = 5 + 2 \sqrt{6}</m> and 
-              <me>
-                \g^3 = 5 \sqrt{2} + 5 \sqrt{3} + 4 \sqrt{3} + 6 \sqrt{2} = 11 \sqrt{2} + 9 \sqrt{3}.
-              </me> 
-              So <m>\frac12(\g^3 - 9 \g) = \sqrt{2}</m>, and hence <m>\sqrt{2} \in \Q(\g)</m>. 
-              Likewise, 
-              <me>
-                \sqrt{3} = -\frac12(\g^3 - 11 \g) \in \Q(\g).
-              </me>
-              So <m>\Q(\g) = \Q(\sqrt{2},\sqrt{3})</m>. 
-              This example is an illustration of the Primitive Element Theorem (which we might or might not have time to prove this semester): 
-              Every finite extension of <m>\Q</m> is generated by a single element (or, in other words, is simple). 
-              This example shows <m>\Q(\sqrt{2}, \sqrt{3})/\Q</m> is simple and <m>\sqrt{2} + \sqrt{3}</m> is a primitive element of this field extension.
+              We can generalize this to adjoining a subset instead of a single element.
             </p>
-          </example>
+    
+            <definition xml:id="def-generated-subfield"><title>Generated Subfield</title>
+              <statement>
+                <p>
+                  If <m>F \subseteq L</m> is a field extension and <m>A</m> is any subset of <m>L</m>, the subfield generated by <m>A</m> over <m>F</m>, denoted <m>F(A)</m>, is the smallest subfield of <m>L</m> that contains all of <m>F</m>. 
+                  If <m>A=\left\{a_{1}, \ldots, a_{n}\right\}</m> is a finite set, we write <m>F\left(a_{1}, \ldots, a_{n}\right)</m> for <m>F(A)</m>.
+                </p>
+              </statement>
+            </definition>
+    
+            <example xml:id="exe-qsqrt2sqrt3">
+              <p>
+                Regard <m>\Q</m> as a subfield of <m>\C</m> and let <m>F = \Q(\sqrt{2}, \sqrt{3})</m>. 
+                We may also describe <m>F</m> as <m>F = E(\sqrt{3})</m> where we set <m>E =\Q(\sqrt{2})</m>.
+              </p>
+    
+              <p>
+                I claim that <m>F</m> is in fact a simple extension of <m>\Q</m>. 
+                For example, say <m>\g = \sqrt{2} + \sqrt{3}</m>. 
+                I claim that <m>\Q(\sqrt{2} + \sqrt{3}) = F</m>. 
+                Note that <m>\g^2 = 5 + 2 \sqrt{6}</m> and 
+                <me>
+                  \g^3 = 5 \sqrt{2} + 5 \sqrt{3} + 4 \sqrt{3} + 6 \sqrt{2} = 11 \sqrt{2} + 9 \sqrt{3}.
+                </me> 
+                So <m>\frac12(\g^3 - 9 \g) = \sqrt{2}</m>, and hence <m>\sqrt{2} \in \Q(\g)</m>. 
+                Likewise, 
+                <me>
+                  \sqrt{3} = -\frac12(\g^3 - 11 \g) \in \Q(\g).
+                </me>
+                So <m>\Q(\g) = \Q(\sqrt{2},\sqrt{3})</m>. 
+                This example shows <m>\Q(\sqrt{2}, \sqrt{3})/\Q</m> is simple and <m>\sqrt{2} + \sqrt{3}</m> is a primitive element of this field extension.
+              </p>
+            </example>
+
+            <remark>
+              <p>
+                This example is an illustration of the Primitive Element Theorem (which we might or might not have time to prove this semester): 
+                Every finite extension of <m>\Q</m> is generated by a single element (or, in other words, is simple). 
+              </p>
+            </remark>
+
+          </subsection>
+
+          <subsection xml:id="subsec-unique-ext"><title>Uniqueness of Simple Extensions</title>
+
+            <p>
+              Next we will show that if <m>\alpha</m> is a root of a given polynomial <m>p(x) \in F[x]</m>, then <m>F(\alpha)</m> is determined by <m>p(x)</m> up to isomorphism.
+            </p>
+
+            <theorem xml:id="thm-">
+              <statement>
+                <p>
+                  Let <m>L / F</m> be a field extension and let <m>p(x) \in F[x]</m> be an irreducible polynomial. 
+                  If <m>p</m> has a root <m>\alpha \in L</m>, then there is an isomorphism <m>\phi</m> with <m>\phi|_{F}=\mathrm{id}_{F}</m> and
+                  <me>
+                    \begin{gathered}
+                    \frac{F[x]}{(p(x))} \longmapsto F(\alpha) \\
+                    x+(p(x)) \longmapsto \alpha \\
+                    f(x)+(p(x)) \longmapsto f(\alpha) .
+                    \end{gathered}
+                  </me>
+                </p>
+              </statement>
+
+              <proof>
+                <p>
+                  Let <m>\tilde{\phi}: F[x] \rightarrow F(\alpha)</m> be the evaluation homomorphism that sends <m>x \mapsto \alpha</m>; 
+                  more precisely, <m>\tilde{\phi}(f(x):=f(\alpha)</m>, and the restriction of this map to <m>F</m> is the identity on <m>F</m>. 
+                  Since <m>p(\alpha)=0</m>, we have <m>(p(x)) \subseteq \operatorname{ker}(\tilde{\phi})</m>, and since <m>(p(x))</m> is a maximal ideal and <m>\operatorname{ker}(\tilde{\phi}) \neq F[x]</m>, we conclude that <m>(p(x))=\operatorname{ker}(\tilde{\phi})</m>.
+                </p>
+
+                <p>
+                  Now by Theorem 1.43 we get an injective ring homomorphism
+                  <me>
+                    \phi: \frac{F[x]}{(p(x))} \rightarrow F(\alpha)
+                  </me>
+                  such that <m>\phi(f(x)+(p(x)))=\tilde{\phi}(f(x))=f(\alpha)</m>.
+                </p>
+
+                <p>
+                  It remains to be shown that <m>\phi</m> is surjective. 
+                  We will actually show more, namely that <m>\operatorname{im}(\phi)=F[\alpha]=F(\alpha)</m>. 
+                  Note first that by the definition of <m>\phi</m> above, the image of <m>\tilde{\phi}</m> on <m>F[x]</m> is <m>F[\alpha]</m>. 
+                  However, since <m>\phi</m> is injective the image of <m>\tilde{\phi}</m> is a field contained in <m>F(\alpha)</m>, and since the smallest field containing <m>F[\alpha]</m> is <m>F(\alpha)</m>, we must in fact have <m>\operatorname{im}(\tilde{\phi})=F(\alpha)</m>.
+                </p>
+              </proof>
+            </theorem>
+
+            <p>
+              Let's formalize the extra information we have obtained in the course of proving the theorem. 
+              First we used the following useful fact:
+            </p>
+
+            <exercise>
+              <statement>
+                <p>
+                  If <m>\phi: F \rightarrow L</m> is an injective ring homomorphism and <m>F</m> and <m>L</m> are fields then the image of <m>\phi</m> is a subfield of <m>L</m>.
+                </p>
+              </statement>
+            </exercise>
+            
+            <corollary xml:id="cor-equal-ext">
+              <statement>
+                <p>
+                  Let <m>L / F</m> be a field extension and let <m>p(x) \in F[x]</m> be irreducible having a root <m>\alpha \in L</m>. 
+                  Then <m>F[\alpha]=F(\alpha)</m>.
+                </p>
+              </statement>
+            </corollary>
+
+            <corollary xml:id="cor-unique-ext"><title>Uniqueness of <m>F(\alpha)</m></title>
+              <statement>
+                <p>
+                  Let <m>p(x) \in F[x]</m> be irreducible and let <m>\alpha</m> and <m>\beta</m> be two roots of <m>p(x)</m> in some extensions <m>L</m> and <m>K</m> of <m>F</m>. 
+                  Then <m>F(\alpha) \cong F(\beta)</m>, so that the two roots are algebraically indistinguishable.
+                </p>
+              </statement>
+            </corollary>
+
+            <example><title>Complex Conjugation</title>
+              <statement>
+                <p>
+                  Taking <m>p(x)=x^{2}+1 \in \mathbb{R}[x]</m> with roots <m>\alpha=i</m> and <m>\beta=-i</m> in <m>\mathbb{C}</m>, we actually obtain equal fields <m>\mathbb{R}(i)=\mathbb{C}=\mathbb{R}(-i)</m>. 
+                  But <xref ref="cor-unique-ext"/> gives that there is an interesting isomorphism <m>\phi: \mathbb{C} \stackrel{\cong}{\longrightarrow} \mathbb{C}</m> that sends <m>i</m> to <m>-i</m>. 
+                  In general, we have <m>\phi(a+b i)=a-b i</m> for <m>a, b \in \mathbb{R}</m>.
+                </p>
+              </statement>
+            </example>
+
+            <example>
+              <statement>
+                <p>
+                  Another example illustrating <xref ref="cor-unique-ext"/> is that <m>\mathbb{Q}(\sqrt{2})</m> and <m>\mathbb{Q}(-\sqrt{2})</m> are isomorphic fields. 
+                  In fact, the are equal: <m>\mathbb{Q}(\sqrt{2})=\mathbb{Q}(-\sqrt{2})</m>. 
+                  But again Corollary 5.25 gives that there is an interesting isomorphism <m>\phi: \mathbb{Q}(\sqrt{2}) \stackrel{\cong}{\longrightarrow} \mathbb{Q}(-\sqrt{2})=\mathbb{Q}(\sqrt{2})</m> that sends <m>\sqrt{2}</m> to <m>-\sqrt{2}</m>. 
+                  In general, we have <m>\phi(a+b \sqrt{2})=a-\sqrt{2}</m> for <m>a, b \in \mathbb{Q}</m>.
+                </p>
+              </statement>
+            </example>
+
+            <example xml:id="exe-cube-roots">
+              <p>
+                Let <m>\a=\sqrt[3]{2}</m> (the unique real cube-root of <m>2</m>) and <m>\beta = e^{2\pi i/3} \sqrt[3]{2}</m> (one of the two imaginary cube roots of <m>2</m>).
+              </p>
+    
+              <p>
+                Then by <xref ref="cor-unique-ext"/> (applied with <m>L = L' = \C</m>) there is an isomorphism <m>\Q(\a) \cong \Q(\beta)</m> of fields that restricts to the identity map on <m>\Q</m>. 
+                Note that these two fields are not equal since the former is contained in <m>\R</m> and the latter is not.
+              </p>
+            </example>
+
+            <p>
+              The two examples above preview the central idea of Galois theory.
+            </p>
+            
+          </subsection>
   
         </section>
   
@@ -14951,9 +15189,6 @@
               <p>
                 Suppose <m>F \subseteq L</m> is a field extension and <m>\a \in L</m>. 
                 Define <me>I := \{f(x) \in F[x] \mid f(\a) = 0\},</me> a subset of <m>F[x]</m>.
-              </p>
-    
-              <p>
                 <ol>
                   <li>
                     The subset <m>I</m> is an ideal of <m>F[x]</m>.
@@ -15001,8 +15236,8 @@
                     sending <m>F</m> identically to <m>F</m> and sending <m>x</m> to <m>\a</m>. 
                     (Here, <m>F(x)=\left\{\frac{g(x)}{f(x)}\mid g\neq 0\right\}</m> is the field of fractions of <m>F[x]</m>.)
                   </li>
-    
-              </ol></p>
+                </ol>
+              </p>
             </statement>
   
             <proof>
@@ -15011,38 +15246,62 @@
               </p>
   
               <p>
-                Let <m>\phi: F[x] \to L</m> be the evaluation homomorphism, given by sending <m>f(x)</m> to <m>f(\a)</m> <xref provisional="empty"/>. Note that <m>\phi</m> satisfies <m>\phi|_F = \id_F</m> and <m>\phi(x) = \alpha</m>. We have <m>\im(\phi) = F[\a]</m> by definition of the latter. The First Isomorphism Theorem for rings <xref provisional="empty"/> thus gives that <m>\phi</m> induces a ring isomorphism <me>\ov{\phi}: \frac{F[x]}{I}  \xra{\cong} F[\a]</me> given by <m>\ov{\phi}(f(x)+(p(x)))={\phi}(f(x))=f(\a)</m>. In particular, since <m>F[\a]</m> is a subring of <m>L</m>, it is an integral domain, <xref provisional="empty"/> and hence <m>I</m> must be a prime ideal (possibly the <m>0</m> ideal). <xref provisional="empty"/>
+                Let <m>\phi: F[x] \to L</m> be the evaluation homomorphism, given by sending <m>f(x)</m> to <m>f(\a)</m> <xref provisional="empty"/>. 
+                Note that <m>\phi</m> satisfies <m>\phi|_F = \id_F</m> and <m>\phi(x) = \alpha</m>. 
+                We have <m>\im(\phi) = F[\a]</m> by definition of the latter. 
+                The <xref text="title" ref="thm-ring-fit"/> thus gives that <m>\phi</m> induces a ring isomorphism 
+                <me>
+                  \ov{\phi}: \frac{F[x]}{I} \xra{\cong} F[\a]
+                </me>
+                given by <m>\ov{\phi}(f(x)+(p(x)))={\phi}(f(x))=f(\a)</m>. 
+                In particular, since <m>F[\a]</m> is a subring of <m>L</m>, it is an integral domain, <xref provisional="empty"/> and hence <m>I</m> must be a prime ideal (possibly the <m>0</m> ideal). <xref provisional="empty"/>
               </p>
   
               <p>
                 Let us now prove the various parts:
               </p>
   
-              <p><ol>
-                <li>
-                            <p>
-                holds because <m>I</m> is the kernel of the ring map <m>\phi</m>.
-              </p>
-                </li>
-  
-                <li>
-                            <p>
-                is by definition.
-              </p>
-                </li>
-  
-              </ol></p>
-  
               <p>
-                For (3) assume <m>\a</m> is algebraic. Then <m>I \ne 0</m> and hence it has a unique monic generator, which we write <m>m_{\a, F}(x)</m>. Since <m>I</m> is prime, <m>m_{\a, F}(x)</m> is irreducible <xref provisional="empty"/>; this proves (3a). Also, this shows that <m>\frac{F[x]}{(m_{\a,F}(x))}</m> is a field <xref provisional="empty"/> and hence so is <m>F[\a]</m>. Since <m>F[\a] \subseteq F(\a)</m>, <m>F[\a]</m> contains <m>F</m> and <m>\a</m>, and <m>F[\a]</m> is a field, we must have <m>F[\a] = F(\a)</m>. This proves (3b) and (3c).
+                <ol>
+                  <li>
+                    <p>
+                      holds because <m>I</m> is the kernel of the ring map <m>\phi</m>.
+                    </p>
+                  </li>
+  
+                  <li>
+                    <p>
+                    is by definition.
+                    </p>
+                  </li>
+                </ol>
               </p>
   
               <p>
-                For (4), if <m>\a</m> is algebraic over <m>F</m>, then <m>[F(\a):F] = \deg(m_{\a, F}(x)) &lt; \infty</m> by (3b) and Proposition <xref provisional="empty"/>. For the converse, if <m>[F(\a): F] &lt; \infty</m>, then the infinite list <m>1, \a, \a^2, \dots</m> of elements of <m>F(\a)</m> cannot be <m>F</m>-linearly independent <xref provisional="empty"/>. So, <m>a_0 + a_1 \a + \cdots a_n \a^n = 0</m> for some <m>n</m> and some <m>a_0, \dots, a_n \in F</m> not all of which are <m>0</m>. This shows <m>\a</m> is the root of a non-zero polynomial.
+                For (3) assume <m>\a</m> is algebraic. 
+                Then <m>I \ne 0</m> and hence it has a unique monic generator, which we write <m>m_{\a, F}(x)</m>. 
+                Since <m>I</m> is prime, <m>m_{\a, F}(x)</m> is irreducible <xref provisional="empty"/>; this proves (3a). 
+                Also, this shows that <m>\frac{F[x]}{(m_{\a,F}(x))}</m> is a field <xref provisional="empty"/> and hence so is <m>F[\a]</m>. 
+                Since <m>F[\a] \subseteq F(\a)</m>, <m>F[\a]</m> contains <m>F</m> and <m>\a</m>, and <m>F[\a]</m> is a field, we must have <m>F[\a] = F(\a)</m>. 
+                This proves (3b) and (3c).
               </p>
   
               <p>
-                For (5), if <m>\a</m> is transcendental, then <m>I = 0</m> and so <m>\phi: F[x] \into L</m> is injective. Since <m>L</m> is a field, <m>F[x]</m> is a domain <xref provisional="empty"/>, and <m>\phi</m> is injective <xref provisional="empty"/>, it can be extended to the field of fractions <m>F(x)</m> of <m>F[x]</m>, i.e. there is a ring homomorphism <me>\tilde{\phi}: F(x) \to L</me>given by <m>\tilde{\phi} \left(\frac{f(x)}{g(x)}\right) = \frac{f(\a)}{g(\a)}</m> for all <m>f(x), g(x) \in F[x]</m> with <m>g(x) \ne 0</m>. The image of <m>\tilde{\phi}</m> is precisely <m>F(\a)</m>. The map <m>\tilde{\phi}</m> is injective since it is a ring homomorphism whose source is a field. <xref provisional="empty"/>
+                For (4), if <m>\a</m> is algebraic over <m>F</m>, then <m>[F(\a):F] = \deg(m_{\a, F}(x)) &lt; \infty</m> by (3b) and Proposition <xref provisional="empty"/>. 
+                For the converse, if <m>[F(\a): F] &lt; \infty</m>, then the infinite list <m>1, \a, \a^2, \dots</m> of elements of <m>F(\a)</m> cannot be <m>F</m>-linearly independent <xref provisional="empty"/>. 
+                So, <m>a_0 + a_1 \a + \cdots a_n \a^n = 0</m> for some <m>n</m> and some <m>a_0, \dots, a_n \in F</m> not all of which are <m>0</m>. 
+                This shows <m>\a</m> is the root of a non-zero polynomial.
+              </p>
+  
+              <p>
+                For (5), if <m>\a</m> is transcendental, then <m>I = 0</m> and so <m>\phi: F[x] \into L</m> is injective. 
+                Since <m>L</m> is a field, <m>F[x]</m> is a domain <xref provisional="empty"/>, and <m>\phi</m> is injective <xref provisional="empty"/>, it can be extended to the field of fractions <m>F(x)</m> of <m>F[x]</m>, i.e. there is a ring homomorphism 
+                <me>
+                  \tilde{\phi}: F(x) \to L
+                </me> 
+                given by <m>\tilde{\phi} \left(\frac{f(x)}{g(x)}\right) = \frac{f(\a)}{g(\a)}</m> for all <m>f(x), g(x) \in F[x]</m> with <m>g(x) \ne 0</m>. 
+                The image of <m>\tilde{\phi}</m> is precisely <m>F(\a)</m>. 
+                The map <m>\tilde{\phi}</m> is injective since it is a ring homomorphism whose source is a field. <xref provisional="empty"/>
               </p>
             </proof>
           </theorem>
@@ -15050,74 +15309,92 @@
           <definition xml:id="def-minimum-polynomial"><title>Minimum Polynomial</title>
             <statement>
               <p>
-                If <m>\a \in L</m> is algebraic over the subfield <m>F</m>, the unique monic generator of the ideal <m>I</m> in the previous theorem, written <m>m_{\a, F}(x)</m>, is called the <em>minimum polynomial</em> of <m>\a</m> over <m>F</m>.
+                Let <m>F \subseteq L</m> be a field extension and <m>\alpha \in L</m>, and consider the ideal
+                <me>
+                  I=\{f(x) \in F[x] \mid f(\alpha)=0\}
+                </me>
+                from <xref ref="thm-properties-of-algebraic-elements"/>. 
+                The unique monic generator <m>m_{\alpha, F}(x)</m> for <m>I</m> is called the <em>minimal polynomial</em> of <m>\alpha</m> over <m>F</m>.
               </p>
             </statement>
           </definition>
   
           <remark>
             <p>
-              Note that the minimum polynomial of <m>\a</m> over <m>F</m> (if it exists) divides every polynomial in <m>F[x]</m> that has <m>\a</m> as a root. In particular, it is the unique monic, irreducible polynomial having <m>\a</m> as a root. It can also be characterized as the monic polynomial in <m>F[x]</m> of least degree having <m>\a</m> as a root.
+              Note that the minimum polynomial of <m>\a</m> over <m>F</m> (if it exists) divides every polynomial in <m>F[x]</m> that has <m>\a</m> as a root. 
+              In particular, it is the unique monic, irreducible polynomial having <m>\a</m> as a root. 
+              It can also be characterized as the monic polynomial in <m>F[x]</m> of least degree having <m>\a</m> as a root.
             </p>
           </remark>
-  
-          <example xml:id="exe-primitive-roots-of-unity">
-            <p>
-              For any prime integer <m>p</m>, set <m>\mu_p = e^{2 \pi i/p}</m>, a so-called “primitive <m>p</m>-th root of unity". Let us find <m>m_{\mu_p, \Q}(x)</m>. Note that <m>\mu_p</m> is a root of <m>x^p -1</m> which factors as <m>(x-1) g(x)</m> where <m>g(x) = x^{p-1} + \cdots + x + 1</m>. As we showed before <xref provisional="empty"/>, <m>g(x)</m> is irreducible in <m>\Q[x]</m>. Since <m>\mu_p</m> is not a root of <m>x-1</m>, it must be a root of <m>g(x)</m>, and since <m>g(x)</m> is irreducible, it must be <m>m_{\mu_p, \Q}(x)</m> (see the Remark).<xref provisional="empty"/>
-            </p>
-          </example>
-  
-          <corollary xml:id="cor-uniqueness-of-field-extensions"><title>Uniqueness of Field Extensions</title>
+
+          <example>
             <statement>
               <p>
-                Let <m>p(x)\in F[x]</m> be irreducible and let <m>\a</m> (respectively, <m>\a'</m>) be a root of <m>p(x)</m> in some field extension <m>L</m> (respectively, <m>L'</m>) of <m>F</m>. Then there is an isomorphism of fields <m>\theta: F(\a) \xra{\cong} F(\a')</m> such that <m>\theta|_F = \id_F</m> and <m>\theta(\a) = \a'</m>.
+                The minimal polynomial of <m>i</m> over <m>\mathbb{R}</m> is <m>m_{i, \mathbb{R}}(x)=x^{2}+1</m>.
               </p>
             </statement>
-  
-            <proof>
+            <solution>
               <p>
-                Note that <m>p(x)</m> is (up to a non-zero constant factor) the minimum polynomial of both <m>\a</m> and <m>\a'</m>. So, we may apply (3b) of the Theorem <xref provisional="empty"/> twice to give a pair of isomorphisms <me>F(\a) \xla{\cong} F[x]/(p(x)) \xra{\cong} F(\a').</me> of fields, given by sending <m>\ov{f(x)}</m> to <m>f(\a)</m> (for the left one) and <m>f(\a')</m> (for the right one). Take <m>\theta</m> to be the inverse of the one on the left composed with the right one. <xref provisional="empty"/>
+                
               </p>
-            </proof>
-          </corollary>
-  
-          <example xml:id="exe-qsqrt2congq-sqrt2">
-            <p>
-              A simple example illustrating the Corollary is that <m>\Q(\sqrt{2})</m> and <m>\Q(-\sqrt{2})</m> are isomorphic fields. In fact, the are equal: <m>\Q(\sqrt2) = \Q(-\sqrt{2})</m>. But the Corollary <xref provisional="empty"/> gives that there is an interesting isomorphism <m>\phi: \Q(\sqrt2) \xra{\cong} \Q(-\sqrt2) = \Q(\sqrt{2})</m> that sends <m>\sqrt2</m> to <m>-\sqrt{2}</m>. In general, we have <m>\phi(a + b \sqrt2) = a - \sqrt2</m> for <m>a,b \in \Q</m>. This previews the central idea of Galois theory.
-            </p>
+            </solution>
           </example>
   
-          <example xml:id="exe-cube-roots">
+          <example xml:id="ex-primitive-roots-of-unity">
             <p>
-              Let <m>\a=\sqrt[3]{2}</m> (the unique real cube-root of <m>2</m>) and <m>\beta = e^{2\pi i/3} \sqrt[3]{2}</m> (one of the two imaginary cube roots of <m>2</m>).
-            </p>
-  
-            <p>
-              Then by the Corollary (applied with <m>L = L' = \C</m>) <xref provisional="empty"/> there is an isomorphism <m>\Q(\a) \cong \Q(\beta)</m> of fields that restricts to the identity map on <m>\Q</m>. Note that these two fields are not equal since the former is contained in <m>\R</m> and the latter is not.
+              For any prime integer <m>p</m>, set <m>\mu_p = e^{2 \pi i/p}</m>, a so-called “primitive <m>p</m>-th root of unity". 
+              Let us find <m>m_{\mu_p, \Q}(x)</m>. 
+              Note that <m>\mu_p</m> is a root of <m>x^p -1</m> which factors as <m>(x-1) g(x)</m> where <m>g(x) = x^{p-1} + \cdots + x + 1</m>. 
+              As we showed before <xref provisional="empty"/>, <m>g(x)</m> is irreducible in <m>\Q[x]</m>. 
+              Since <m>\mu_p</m> is not a root of <m>x-1</m>, it must be a root of <m>g(x)</m>, and since <m>g(x)</m> is irreducible, it must be <m>m_{\mu_p, \Q}(x)</m> (see the Remark).<xref provisional="empty"/>
             </p>
           </example>
   
           <theorem xml:id="thm-degree-formula"><title>The Degree Formula</title>
-  
             <statement>
               <p>
-                Suppose <m>F \subseteq L \subseteq K</m> are field extensions. Then <me>
-  [K:F] = [K:L] [L:F].
-  </me> In particular, the composition of two finite extensions of fields is again a finite extension.
+                Suppose <m>F \subseteq L \subseteq K</m> are field extensions. 
+                Then 
+                <me>
+                  [K:F] = [K:L] [L:F].
+                </me> 
+                In particular, the composition of two finite extensions of fields is again a finite extension.
               </p>
             </statement>
   
             <proof>
               <p>
-                Let <m>A \subseteq K</m> be a basis for <m>K</m> as an <m>L</m>-vector space and let <m>B \subseteq L</m> be a basis for <m>L</m> as an <m>F</m>-vector space. Let <m>AB</m> denote the subset <m>\{ab \mid a \in A, b \in B\}</m> of <m>K</m>. The Proposition follows from the following two facts: 
-                - <m>AB</m> is a basis of <m>K</m> as an <m>F</m>-vector space and 
-                - the function <m>A \times B \to AB, (a,b) \mapsto ab</m> is bijective (so that the cardinality of <m>AB</m> is <m>|A| \cdot |B|</m>). 
-                
-                Concerning (a), for <m>\a \in K</m>, we have <m>\a = \sum_i l_i a_i</m> for some <m>a_1, \dots, a_m \in A</m> and <m>l_1, \dots, l_m \in L</m>. For each <m>i</m>, <m>l_i</m> is an <m>F</m>-linear combination of a finite set of elements of <m>B</m>. Combining these gives that <m>\a</m> is in the <m>F</m>-span of <m>AB</m>.
+                Let <m>A \subseteq K</m> be a basis for <m>K</m> as an <m>L</m>-vector space and let <m>B \subseteq L</m> be a basis for <m>L</m> as an <m>F</m>-vector space. 
+                Let <m>AB</m> denote the subset <m>\{ab \mid a \in A, b \in B\}</m> of <m>K</m>. 
+                The Theorem follows from the following two facts:
+                <ol>
+                  <li>
+                    <p>
+                      <m>AB</m> is a basis of <m>K</m> as an <m>F</m>-vector space and 
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      the function <m>A \times B \to AB, (a,b) \mapsto ab</m> is bijective (so that the cardinality of <m>AB</m> is <m>|A| \cdot |B|</m>). 
+                    </p>
+                  </li>
+                </ol> 
+                Concerning (a), for <m>\a \in K</m>, we have <m>\a = \sum_i l_i a_i</m> for some <m>a_1, \dots, a_m \in A</m> and <m>l_1, \dots, l_m \in L</m>. 
+                For each <m>i</m>, <m>l_i</m> is an <m>F</m>-linear combination of a finite set of elements of <m>B</m>. 
+                Combining these gives that <m>\a</m> is in the <m>F</m>-span of <m>AB</m>.
               </p>
   
               <p>
-                To prove linear independence, it suffices to prove that if <m>a_1, \dots, a_m</m> and <m>b_1, \dots, b_n</m> be distinct elements of <m>A</m> and <m>B</m> respectively, then the set <m>\{a_ib_j\}</m> is linearly independent. Suppose <m>\sum_{i,j} f_{i,j} a_i b_j = 0</m> for some <m>f_{i,j} \in F</m>. Since the <m>b_j</m>'s are <m>L</m>-linearly independent and <me>\sum_{i,j} f_{i,j} a_i b_j = \sum_j (\sum_i f_{i,j} a_i) b_j</me>and <m>f_{i,j} a_i \in L</m>, we get that, for each <m>j</m>, <m>\sum_i f_{i,j} a_i = 0</m>. Using now that the <m>a_i</m>'s are <m>F</m>-linearly independent, we have that for all <m>j</m> and all <m>i</m>, <m>f_{i,j} = 0</m>. This proves <m>\{a_i b_j \mid i = 1, \dots, m, j = 1, \dots, n\}</m> is linearly independent over <m>F</m>, and hence <m>AB</m> is linearly independent over <m>F</m>.
+                To prove linear independence, it suffices to prove that if <m>a_1, \dots, a_m</m> and <m>b_1, \dots, b_n</m> be distinct elements of <m>A</m> and <m>B</m> respectively, then the set <m>\{a_ib_j\}</m> is linearly independent. 
+                Suppose <m>\sum_{i,j} f_{i,j} a_i b_j = 0</m> for some <m>f_{i,j} \in F</m>. 
+                Since the <m>b_j</m>'s are <m>L</m>-linearly independent and 
+                <me>
+                  \sum_{i,j} f_{i,j} a_i b_j = \sum_j (\sum_i f_{i,j} a_i) b_j
+                </me>
+                and <m>f_{i,j} a_i \in L</m>, we get that, for each <m>j</m>, <m>\sum_i f_{i,j} a_i = 0</m>. 
+                Using now that the <m>a_i</m>'s are <m>F</m>-linearly independent, we have that for all <m>j</m> and all <m>i</m>, <m>f_{i,j} = 0</m>. 
+                This proves <m>\{a_i b_j \mid i = 1, \dots, m, j = 1, \dots, n\}</m> is linearly independent over <m>F</m>, and hence <m>AB</m> is linearly independent over <m>F</m>.
               </p>
   
               <p>
@@ -15128,31 +15405,48 @@
   
           <example xml:id="exe-rwc-for-all-wnotinr">
             <p>
-              Say <m>F \subseteq L</m> is a field extension of prime degree <m>p</m>. Given <m>w \in L \setminus F</m>, by the <xref text="title" ref="thm-degree-formula"/> we have <m>[L:F(w)][F(w):F] = [L:F] = p</m>. Since <m>w \notin F</m>, <m>F \subsetneq F(w)</m> and so <m>[F(w): F] &gt; 1</m>. It follows that <m>[L: F(w)] = 1</m>, whence <m>L = F(w)</m>. As a (very simple) example of this, since <m>[\C: \R]</m> is prime, <m>\R(w) = \C</m> for any complex number <m>w</m> that is not real.
+              Say <m>F \subseteq L</m> is a field extension of prime degree <m>p</m>. 
+              Given <m>w \in L \setminus F</m>, by the <xref text="title" ref="thm-degree-formula"/> we have <m>[L:F(w)][F(w):F] = [L:F] = p</m>. 
+              Since <m>w \notin F</m>, <m>F \subsetneq F(w)</m> and so <m>[F(w): F] &gt; 1</m>. 
+              It follows that <m>[L: F(w)] = 1</m>, whence <m>L = F(w)</m>. 
+              As a (very simple) example of this, since <m>[\C: \R]</m> is prime, <m>\R(w) = \C</m> for any complex number <m>w</m> that is not real.
             </p>
           </example>
   
           <example xml:id="exe-degree-and-x2-5">
             <p>
-              Let <m>F</m> be the result of adjoining to <m>\Q</m> all of the roots in <m>\C</m> of <m>x^2 - 5</m>. That is, <m>F = \Q(\a_1, \a_2, \a_3, \a_4)</m> where <m>\a_1 = \sqrt[4]{5}</m>, <m>\a_2 = i \sqrt[4]{5}</m>, <m>\a_3 = -\sqrt[4]{5}</m>, and <m>\a_4 = - i \sqrt[4]{5}</m>. As we shall see later, <m>F</m> is an example of a “splitting field". Let's find <m>[F: \Q]</m>.
+              Let <m>F</m> be the result of adjoining to <m>\Q</m> all of the roots in <m>\C</m> of <m>x^2 - 5</m>. 
+              That is, <m>F = \Q(\a_1, \a_2, \a_3, \a_4)</m> where <m>\a_1 = \sqrt[4]{5}</m>, <m>\a_2 = i \sqrt[4]{5}</m>, <m>\a_3 = -\sqrt[4]{5}</m>, and <m>\a_4 = - i \sqrt[4]{5}</m>. 
+              As we shall see later, <m>F</m> is an example of a “splitting field". 
+              Let's find <m>[F: \Q]</m>.
             </p>
   
             <p>
-              First, let us note that we can also describe <m>F</m> as <m>F = \Q(\sqrt[4]{5}, i)</m>. This holds since each of <m>\a_1, \dots, \a_4</m> belongs to <m>\Q(\sqrt[4]{5}, i)</m> and hence <m>F \subseteq \Q(\sqrt[4]{5}, i)</m>. The opposite containment holds because <m>\sqrt[4]{5}, i \in F</m>, with the latter being true because <m>i = \a_2/\a_1</m>.
+              First, let us note that we can also describe <m>F</m> as <m>F = \Q(\sqrt[4]{5}, i)</m>. 
+              This holds since each of <m>\a_1, \dots, \a_4</m> belongs to <m>\Q(\sqrt[4]{5}, i)</m> and hence <m>F \subseteq \Q(\sqrt[4]{5}, i)</m>. 
+              The opposite containment holds because <m>\sqrt[4]{5}, i \in F</m>, with the latter being true because <m>i = \a_2/\a_1</m>.
             </p>
   
             <p>
-              Set <m>E = \Q(i)</m>. Then <m>[E: \Q] = 2</m>. Since <m>F = E(\sqrt[4]{5})</m> and <m>\sqrt[4]{5}</m> is a root of <m>x^4-5</m>, we have <m>[F : E]</m> is at most <m>4</m> and it will be exactly <m>4</m> if and only if <m>x^4 -5</m> is irreducible in <m>\Q(i)[x]</m>. This is unclear.
+              Set <m>E = \Q(i)</m>. 
+              Then <m>[E: \Q] = 2</m>. 
+              Since <m>F = E(\sqrt[4]{5})</m> and <m>\sqrt[4]{5}</m> is a root of <m>x^4-5</m>, we have <m>[F : E]</m> is at most <m>4</m> and it will be exactly <m>4</m> if and only if <m>x^4 -5</m> is irreducible in <m>\Q(i)[x]</m>. 
+              This is unclear.
             </p>
   
             <p>
-              So instead let's try a different approach. Let <m>L = \Q(\sqrt[4]{5})</m>. Then since <m>x^4 - 5</m> is irreducible in <m>\Q[x]</m> by <xref text="title" ref="thm-eisensteins-criterion"/>, we have <m>[L: \Q] = 4</m>. Since <m>F = L(i)</m> and <m>i</m> is a root of <m>x^2 +1</m>, we have <m>[F:L] \leq 2</m>. But <m>F \ne L</m> since <m>F \subseteq \R</m>. Note that <m>[F:L] = 1</m> if and only if <m>F = L</m>. Thus <m>[F:L] = 2</m>.
+              So instead let's try a different approach. 
+              Let <m>L = \Q(\sqrt[4]{5})</m>. 
+              Then since <m>x^4 - 5</m> is irreducible in <m>\Q[x]</m> by <xref text="title" ref="thm-eisensteins-criterion"/>, we have <m>[L: \Q] = 4</m>. 
+              Since <m>F = L(i)</m> and <m>i</m> is a root of <m>x^2 +1</m>, we have <m>[F:L] \leq 2</m>. 
+              But <m>F \ne L</m> since <m>F \subseteq \R</m>. Note that <m>[F:L] = 1</m> if and only if <m>F = L</m>. 
+              Thus <m>[F:L] = 2</m>.
             </p>
   
             <p>
               By the <xref text="title" ref="thm-degree-formula"/> <xref provisional="empty"/> we conclude that 
               <me>
-                  [F: \Q] = [F:L][L:\Q] = 2 \cdot 4 = 8.
+                [F: \Q] = [F:L][L:\Q] = 2 \cdot 4 = 8.
               </me> 
               Note that, in hindsight, it must have been true that <m>x^4 - 5</m> is irreducible in <m>\Q(i)[x]</m>, since otherwise the <xref text="title" ref="thm-degree-formula"/> would give that <m>[F: \Q] &lt; 8</m>.
             </p>
@@ -15160,9 +15454,10 @@
   
           <definition xml:id="def-algebraic-extension"><title>Algebraic Extension</title>
             <statement>
-                <p>
-                    A field extension <m>F \subseteq L</m> is called <em>algebraic</em> if every element <m>\a \in L</m> is algebraic over <m>F</m> (i.e., if every element of <m>L</m> is the root of a non-zero polynomial with coefficients in <m>F</m>).
-                </p>
+              <p>
+                A field extension <m>F \subseteq L</m> is called <em>algebraic</em> if every element <m>\a \in L</m> is algebraic over <m>F</m> 
+                (i.e., if every element of <m>L</m> is the root of a non-zero polynomial with coefficients in <m>F</m>).
+              </p>
             </statement>
           </definition>
   
@@ -15175,14 +15470,25 @@
   
             <proof>
               <p>
-                Pick <m>\a \in L</m>. Since <m>F(\a)</m> is a <m>F</m>-vector subspace of <m>L</m> and <m>\dim_F(L) = [L: F] &lt; \infty</m> we have <m>[F(\a): F] &lt; \infty</m>. (One could also appeal to the <xref text="title" ref="thm-degree-formula"/> <xref provisional="empty"/> for this.) So by (4) of Theorem <xref provisional="empty"/>, <m>\a</m> is algebraic of <m>F</m>.
+                Pick <m>\a \in L</m>. 
+                Since <m>F(\a)</m> is a <m>F</m>-vector subspace of <m>L</m> and <m>\dim_F(L) = [L: F] &lt; \infty</m> we have <m>[F(\a): F] &lt; \infty</m>. 
+                (One could also appeal to the <xref text="title" ref="thm-degree-formula"/> for this.) 
+                So by (4) of Theorem <xref ref="thm-properties-of-algebraic-elements"/>, <m>\a</m> is algebraic of <m>F</m>.
               </p>
             </proof>
           </proposition>
   
           <example xml:id="exe-infinite-algebraic-extension"><title>Infinite Algebraic Extension</title>
             <p>
-              Let <m>E_n = \Q(\sqrt[n]{2})</m> and set <m>F = \bigcup_n E_n</m>. Then <m>F</m> is a subfield of <m>\C</m>: To see this, note first that <m>E_n \subseteq E_m</m> provided <m>n \mid m</m>. Given <m>a, b \in F</m>, we have <m>a \in E_n</m> and <m>b \in E_m</m> for some <m>n</m> and <m>m</m> and hence <m>a,b</m> are both in <m>E_{mn}</m>. Since <m>E_{mn}</m> is a field, we have <m>a + b</m>, <m>a-b</m>, <m>a \cdot b</m> and (provided <m>a \ne 0</m>) <m>\frac{1}{a}</m> all belong to <m>E_{mn}</m> and hence to <m>F</m>. This proves <m>F</m> is field extension of <m>\Q</m>. It is algebraic over <m>\Q</m> since each <m>E_n</m> is. But it is not a finite extension of <m>\Q</m>, since <m>[E_n: \Q] = n</m> (since <m>x^n - 2</m> is irreducible in <m>\Q[x]</m> by <xref text="title" ref="thm-eisensteins-criterion"/>) and hence <m>[F: \Q] \geq n</m> for all <m>n</m>. <xref provisional="empty"/>
+              Let <m>E_n = \Q(\sqrt[n]{2})</m> and set <m>F = \bigcup_n E_n</m>. 
+              Then <m>F</m> is a subfield of <m>\C</m>: 
+              To see this, note first that <m>E_n \subseteq E_m</m> provided <m>n \mid m</m>. 
+              Given <m>a, b \in F</m>, we have <m>a \in E_n</m> and <m>b \in E_m</m> for some <m>n</m> and <m>m</m> and hence <m>a,b</m> are both in <m>E_{mn}</m>. 
+              Since <m>E_{mn}</m> is a field, we have <m>a + b</m>, <m>a-b</m>, <m>a \cdot b</m> and (provided <m>a \ne 0</m>) <m>\frac{1}{a}</m> all belong to <m>E_{mn}</m> and hence to <m>F</m>. 
+              This proves <m>F</m> is field extension of <m>\Q</m>. 
+              It is algebraic over <m>\Q</m> since each <m>E_n</m> is. 
+              But it is not a finite extension of <m>\Q</m>, since <m>[E_n: \Q] = n</m> 
+              (since <m>x^n - 2</m> is irreducible in <m>\Q[x]</m> by <xref text="title" ref="thm-eisensteins-criterion"/>) and hence <m>[F: \Q] \geq n</m> for all <m>n</m>. <xref provisional="empty"/>
             </p>
           </example>
   
@@ -15192,16 +15498,17 @@
                 Let <m>F \subseteq K \subseteq L</m> be extensions of fields, not necessarily finite.
               </p>
     
-              <p><ol>
-                <li>
-                Prove that <m>K/F</m> and <m>L/K</m> are algebraic if and only if <m>L/F</m> is algebraic.
-                </li>
+              <p>
+                <ol>
+                  <li>
+                    Then <m>K/F</m> and <m>L/K</m> are algebraic if and only if <m>L/F</m> is algebraic.
+                  </li>
     
-                <li>
-                Give an example where <m>K/F</m> and <m>L/K</m> are Galois but <m>L/F</m> is not Galois.
-                </li>
-    
-              </ol></p>
+                  <li>
+                    Give an example where <m>K/F</m> and <m>L/K</m> are Galois but <m>L/F</m> is not Galois.
+                  </li>
+                </ol>
+              </p>
             </statement>
   
             <proof>
@@ -15210,11 +15517,29 @@
               </p>
   
               <p>
-                Suppose that <m>K/F</m> and <m>L/K</m> are algebraic extensions. Let <m>\a\in L</m>. Then <m>\a</m> is the root of the polynomial<me>f(x)=a_nx^n+\dots+a_0,</me>with <m>a_{i}\in K</m>. Notice that <m>f</m> is a polynomial in <m>F(a_n,\dots,a_0)[x]</m>, making <m>\a</m> is algebraic over this as well. Consider the chain of field extensions <me>F \subseteq F(a_0) \subseteq F(a_0,a_1) \subseteq \cdots \subseteq F(a_0, a_1, \dots, a_{n-1} )\subseteq F(a_0, \dots, a_{n}, \a)</me> Since <m>a_i</m> is algebraic over <m>F</m> for all <m>i</m> and <m>\a</m> is algebraic over <m>F(a_0, a_1, \dots, a_{n})</m>, by Theorem each step in this chain has finite degree. By the <xref text="title" ref="thm-degree-formula"/>, <m>[F(a_0, \dots, a_{n}, \a): F]</m> is finite and thus so is <m>[F(\a):F]</m>. By the Theorem again, <m>\a</m> is algebraic over <m>F</m>.
+                Suppose that <m>K/F</m> and <m>L/K</m> are algebraic extensions. 
+                Let <m>\a\in L</m>. 
+                Then <m>\a</m> is the root of the polynomial
+                <me>
+                  f(x)=a_nx^n+\dots+a_0,
+                </me>
+                with <m>a_{i}\in K</m>. 
+                Notice that <m>f</m> is a polynomial in <m>F(a_n,\dots,a_0)[x]</m>, making <m>\a</m> is algebraic over this as well. 
+                Consider the chain of field extensions 
+                <me>
+                  F \subseteq F(a_0) \subseteq F(a_0,a_1) \subseteq \cdots \subseteq F(a_0, a_1, \dots, a_{n-1} )\subseteq F(a_0, \dots, a_{n}, \a)
+                </me> 
+                Since <m>a_i</m> is algebraic over <m>F</m> for all <m>i</m> and <m>\a</m> is algebraic over <m>F(a_0, a_1, \dots, a_{n})</m>, by Theorem each step in this chain has finite degree. 
+                By the <xref text="title" ref="thm-degree-formula"/>, <m>[F(a_0, \dots, a_{n}, \a): F]</m> is finite and thus so is <m>[F(\a):F]</m>. 
+                By the Theorem again, <m>\a</m> is algebraic over <m>F</m>.
               </p>
   
               <p>
-                Next suppose that <m>L/F</m> is algebraic. Let <m>\a\in K</m>. Then <m>\a\in L</m>, and so it is algebraic over <m>F</m>. Now let <m>\b\in L</m>. Then <m>\b</m> is the root of a polynomial in <m>F</m>, which is also in <m>K</m>, so <m>L/K</m> is algebraic as well.
+                Next suppose that <m>L/F</m> is algebraic. 
+                Let <m>\a\in K</m>. 
+                Then <m>\a\in L</m>, and so it is algebraic over <m>F</m>. 
+                Now let <m>\b\in L</m>. 
+                Then <m>\b</m> is the root of a polynomial in <m>F</m>, which is also in <m>K</m>, so <m>L/K</m> is algebraic as well.
               </p>
   
               <p>
@@ -15225,81 +15550,60 @@
 
           <remark>
             <p>
-              The converse of this proposition is also true: Given field extensions <m>F \subseteq L \subseteq E</m>, if <m>F \subseteq E</m> is algebraic then so are <m>L \subseteq E</m> and <m>F \subseteq L</m>. This is more or less obvious from the definition.
+              The converse of this proposition is also true: 
+              Given field extensions <m>F \subseteq L \subseteq E</m>, if <m>F \subseteq E</m> is algebraic then so are <m>L \subseteq E</m> and <m>F \subseteq L</m>. 
             </p>
           </remark>
   
-          <proposition xml:id="prop-algebraic-but-not-finite-extension">
+          <theorem xml:id="thm-relatively-prime-extension">
             <statement>
-              <p><ol>
-                <li>
-                Show that any finite extension of fields <m>K/F</m> is algebraic.
-                </li>
-    
-                <li>
-                Let <m>\overline{\Q}</m> denote the subfield of <m>\C</m> consisting of all the complex numbers which are algebraic over <m>\Q</m>. (You may use that <m>\overline{\Q}</m> is a field without proof.) Show that <m>\overline{\Q}/\Q</m> is an algebraic extension, but not a finite extension.
-                </li>
-    
-              </ol></p>
+              <p>
+                Assume that <m>F \sse K</m> is a finite extension of fields of degree <m>n = [K : F ]</m>.
+                If <m>f \in F [x]</m> is irreducible of degree <m>d</m> and <m>\gcd(d, n) = 1</m> then <m>f</m> remains irreducible when regarded as an element of the ring <m>K[x]</m>.
+              </p>
             </statement>
   
             <proof>
               <p>
-                <ol>
-                  <li>
-                    <p>
-                      Let <m>K/F</m> be a finite extension of fields. Let <m>\a\in L</m>. By the  <xref text="title" ref="thm-degree-formula"/> we have <m>[K:F(a)]=[K:F(\a)][F(\a):F]</m>. Thus <m>[F(\a):F]</m> is finite, making <m>\a</m> algebraic over <m>F</m>. 
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      Notice that <m>\a_n\sqrt[n]2\in\overline{\Q}</m> for all <m>n\in\N</m> and that <m>\a_n</m> is a root of the polynomial <m>x^n-2</m>, which is irreducible in <m>\Q[x]</m> by <xref text="title" ref="thm-eisensteins-criterion"/> (<m>p=2</m>). Thus <m>[\Q(\a_n):\Q]=n</m>. As <m>\a_n</m> must be added to <m>\Q</m> for all <m>n</m>, we see that this extension is not finite.
-                    </p>
-                  </li>
-                </ol>
-                
+                Let <m>F \subseteq K</m> be a finite extension of fields of degree <m>n = [K : F ]</m>.
               </p>
-            </proof>
-          </proposition>
-  
-          <theorem xml:id="thm-relatively-prime-extension">
-          <statement>
-            <p>
-              Assume that <m>F \sse K</m> is a finite extension of fields of degree <m>n = [K : F ]</m>.
-                          </p>
-  
-                          <p><ol>
-                              <li>
-                              Prove that if <m>f \in F [x]</m> is irreducible of degree <m>d</m> and <m>\gcd(d, n) = 1</m> then <m>f</m> remains irreducible when regarded as an element of the ring <m>K[x]</m>.
-                              </li>
-  
-                              <li>
-                              Show, by means of an explicit example with justification, that the statement in part (a) would become false if the assumption that <m>\gcd(n, d) = 1</m> were omitted.
-                              </li>
-  
-                          </ol>
-            </p>
-          </statement>
-  
-          <proof>
-            <p>
-              Let <m>F \subseteq K</m> be a finite extension of fields of degree <m>n = [K : F ]</m>.
-            </p>
-  
-            <p>
+    
+              <p>
                 Suppose that <m>f \in F[x]</m> is irreducible of degree <m>d</m> and <m>\gcd(d, n) = 1</m>.
               </p>
-  
+
               <p>
-                  First, note that if <m>d=1</m> then <m>f(x)</m> will remain irreducible in <m>K[x]</m> <xref provisional="empty"/>. Suppose then that <m>d&gt;1</m>. There exists an algebraically closed extension <m>\widetilde F</m> such that <m>f</m> has a root <m>r</m> <xref provisional="empty"/>. Consider <m>K(r)</m>. As <m>r</m> is algebraic in <m>K(r)</m> we know there exists some unique irreducible minimum polynomial <m>g</m> of degree <m>q</m>, and thus that <m>[K(r):K]=q</m> <xref provisional="empty"/>. Using the <xref text="title" ref="thm-degree-formula"/> <xref provisional="empty"/> we see that <me>[K(r):F]=[K(r):K][K:F]=qn.</me> However, <m>[K(r):F]=[K(r):F(r)][F(r):F]</m> and so <m>qn=md</m> for some <m>m\in\Z</m>, so <m>d|qn</m>. As <m>\gcd(n,d)=1</m> we must have <m>d|q</m>. But <m>q</m> was defined to be the degree of <m>g</m>, which divides <m>f</m>. As <m>d|q</m> and <m>q\leq d</m>, we see that <m>d=q</m>, so so <m>f=kg</m> for some <m>k\in F</m>. As irreducible polynomials multiplied by a constant are still irreducible, we see that <m>f</m> is indeed irreducible in <m>K[x]</m>.
+                First, note that if <m>d=1</m> then <m>f(x)</m> will remain irreducible in <m>K[x]</m> <xref provisional="empty"/>. 
+                Suppose then that <m>d&gt;1</m>. 
+                There exists an algebraically closed extension <m>\widetilde F</m> such that <m>f</m> has a root <m>r</m> <xref provisional="empty"/>. 
+                Consider <m>K(r)</m>. 
+                As <m>r</m> is algebraic in <m>K(r)</m> we know there exists some unique irreducible minimum polynomial <m>g</m> of degree <m>q</m>, and thus that <m>[K(r):K]=q</m> <xref provisional="empty"/>. 
+                Using the <xref text="title" ref="thm-degree-formula"/> we see that 
+                <me>
+                  [K(r):F]=[K(r):K][K:F]=qn.
+                </me> 
+                However, <m>[K(r):F]=[K(r):F(r)][F(r):F]</m> and so <m>qn=md</m> for some <m>m\in\Z</m>, so <m>d|qn</m>. 
+                As <m>\gcd(n,d)=1</m> we must have <m>d|q</m>. 
+                But <m>q</m> was defined to be the degree of <m>g</m>, which divides <m>f</m>. 
+                As <m>d|q</m> and <m>q\leq d</m>, we see that <m>d=q</m>, so <m>f=kg</m> for some <m>k\in F</m>. 
+                As irreducible polynomials multiplied by a constant are still irreducible, we see that <m>f</m> is indeed irreducible in <m>K[x]</m>.
               </p>
-  
-            <p>
-              Let <m>p(x)</m> be a non-constant irreducible polynomial of degree <m>d</m> in <m>F[x]</m>. Let <m>K=F[x]/p(x)</m>. Because <m>p(x)</m> is irreducible and <m>F[x]</m> is a PID, <m>(p(x))</m> is a maximal ideal. Thus <m>K = F[x]/(p(x))</m> is a field <xref provisional="empty"/>, <m>[K:F]=d</m>, and <m>x+p(x)</m> is a root of <m>p(x)</m> in <m>K</m> <xref provisional="empty"/>. Hence <m>p(x)</m> is no longer irreducible by Theorem 2.2
-            </p>
-          </proof>
+            </proof>
           </theorem>
+
+          <p>
+            The statement in part (a) would become false if the assumption that <m>\gcd(n, d) = 1</m> were omitted.
+          </p>
+
+          <example>
+            <p>
+              Let <m>p(x)</m> be a non-constant irreducible polynomial of degree <m>d</m> in <m>F[x]</m>. 
+              Let <m>K=F[x]/p(x)</m>. 
+              Because <m>p(x)</m> is irreducible and <m>F[x]</m> is a PID, <m>(p(x))</m> is a maximal ideal. 
+              Thus <m>K = F[x]/(p(x))</m> is a field <xref provisional="empty"/>, <m>[K:F]=d</m>, and <m>x+p(x)</m> is a root of <m>p(x)</m> in <m>K</m> <xref provisional="empty"/>.
+              Hence <m>p(x)</m> is no longer irreducible by Theorem 2.2
+            </p>
+          </example>
         
         </section>
   

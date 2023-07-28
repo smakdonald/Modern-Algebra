@@ -250,7 +250,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.2",
   "title": "Order and Power",
-  "body": "Order and Power  Power    Having power is not nearly as important as what you choose to do with it.   Roald Dahl   Though it might seem natural to write the product using the notation , we have no notion of what that means in the world of groups. Do exponents behave the way we want them to in groups, or does something disasterous occur? Do exponents even exist? Do I ? In this section, we attempt to answer as many of these questions as is philosophically feasible.  power   Let be an element of a multiplicative group . For , the  power  of is defined recursively as follows:    , , and ; Convenient notation, isn't it? Almost like we planned it.      when ; and     when .     If was an additive group, then we would write intead of . This would be called a multiple of instead of a power.    Laws of Exponents   Let and be an element of a group . Then    and     .          Let and ; then by induction on and the definition . Multiplying on both sides by we deduce that and . Finally inversion of the equation yields . Hence the law is established in all cases.    If , it follows from (1) that . Now assume that ; then since .       Abelian Exponents  Let . The equation holds for all if and only if is abelian.    Order    Good order is the foundation of all things.   Edmund Burke   Order      In a group , the order of an element order of a group element  is the least positive integer such that . If no such exists, we say has infinite order. We write for the order of . Order of an element     The order of a group order of a group  is the of the set , denoted . Order of a group         Some authors use the notation or to refer to the order of a group. We won't name names, but they know who they are.   Order Examples      in every group .     in     In the additive groups , , , and every nonzero (i.e., nonidentity) element has infinite order. Groups with this property are known as torsion-free , a concept explored in more advanced contexts.     In the additve group , the element has order , as and .      We arrive at one of the central conjectures of group theory, posed by none other tha UNL's Tom \"Destroyer of Worlds\" Marley. Best of luck. For the more astute reader, you may observe that this is one of the more solvable conjectures in mathematics. This is the first problem Tom assigns every time he teaches 817 and it's become a bit of a running joke.   Marley's Conjecture  Every group of order is abelian.   Let be a group with elements, and suppose there are elements such that for some elements . Since , we must have , , and . Since has only elements and , either or . Without loss, say the former occurs. But implies and we know commutes with , and hence this is not possible. If , then and if then , both of which are impossible. Since were arbitrary, must be abelian.   Properties of Order      An element of a group has order if and only if .         If for and  , then .          Let be a group and consider an element in with order . By definition, the order of an element is the smallest positive integer such that , where is the identity element of . Since the order of is , we have . This implies that is equal to the identity element .       there or  If is a group such every non-identity element has order , then is abelian.   Element Order   Let be a group and any element.   If , then are all distinct elements of .    If , then for all integers (positive or negative) with .     .    If then .          Coming soon!    Coming soon!    Coming soon!    Let . We have for some by the division algorithm . We have and so, by the definition of order , it must be that        Order Hors d'oeuvre  Let be a group.   Let be an element of finite order. Show that has finite order for any integer , and in fact     Prove that for all in , holds.       "
+  "body": "Order and Power  Power    Having power is not nearly as important as what you choose to do with it.   Roald Dahl   Though it might seem natural to write the product using the notation , we have no notion of what that means in the world of groups. Do exponents behave the way we want them to in groups, or does something disasterous occur? Do exponents even exist? Do I ? In this section, we attempt to answer as many of these questions as is philosophically feasible.  power   Let be an element of a multiplicative group . For , the  power  of is defined recursively as follows:    , , and ; Convenient notation, isn't it? Almost like we planned it.      when ; and     when .     If was an additive group, then we would write intead of . This would be called a multiple of instead of a power.    Laws of Exponents   Let and be an element of a group . Then    and     .          Let and ; then by induction on and the definition . Multiplying on both sides by we deduce that and . Finally inversion of the equation yields . Hence the law is established in all cases.    If , it follows from (1) that . Now assume that ; then since .       Abelian Exponents  Let . The equation holds for all if and only if is abelian.    Order    Good order is the foundation of all things.   Edmund Burke   Order      In a group , the order of an element order of a group element  is the least positive integer such that . If no such exists, we say has infinite order. We write for the order of . Order of an element     The order of a group order of a group  is the of the set , denoted . Order of a group         Some authors use the notation or to refer to the order of a group. We won't name names, but they know who they are.   Order Examples      in every group .     in     In the additive groups , , , and every nonzero (i.e., nonidentity) element has infinite order. Groups with this property are known as torsion-free , a concept explored in more advanced contexts.     In the additve group , the element has order , as and .      We arrive at one of the central conjectures of group theory, posed by none other than UNL's Tom \"Destroyer of Worlds\" Marley. Best of luck. For the more astute reader, you may observe that this is one of the more solvable conjectures in mathematics. This is the first problem Tom assigns every time he teaches 817 and it's become a bit of a running joke.   Marley's Conjecture  Every group of order is abelian.   Let be a group with elements, and suppose there are elements such that for some elements . Since , we must have , , and . Since has only elements and , either or . Without loss, say the former occurs. But implies and we know commutes with , and hence this is not possible. If , then and if then , both of which are impossible. Since were arbitrary, must be abelian.   Properties of Order      An element of a group has order if and only if .         If for and  , then .          Let be a group and consider an element in with order . By definition, the order of an element is the smallest positive integer such that , where is the identity element of . Since the order of is , we have . This implies that is equal to the identity element .       there or  If is a group such every non-identity element has order , then is abelian.   Element Order   Let be a group and any element.   If , then are all distinct elements of .    If , then for all integers (positive or negative) with .     .    If then .          Coming soon!    Coming soon!    Coming soon!    Let . We have for some by the division algorithm . We have and so, by the definition of order , it must be that        Order Hors d'oeuvre  Let be a group.   Let be an element of finite order. Show that has finite order for any integer , and in fact     Prove that for all in , holds.       "
 },
 {
   "id": "def-power",
@@ -6334,7 +6334,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "16.3",
   "title": "Jordan Canonical Form",
-  "body": "Jordan Canonical Form  Companion Matrix and Jordan Blocks  Let us consider the companion matrix of : We can interpret this matrix as arising from the linear transformation on defined as multiplication by . Recall that the ordered basis of that gives the matrix is the “obvious one'': But notice that is also a basis of . Let us calculate what the operator does to this alternative basis. We could work this out by brute force, but a cleaner way is to first compute what the operator does. Since is multiplication by , it sends each basis element to the next one, except for the last one, which is sent to . It follows that the matrix of this operator relative to the ordered basis is and hence the matrix for itself for this basis is This is what's known as a Jordan Block.   In this example, if we used the basis instead we would have gotten the transpose of .  Jordan Block   Given a field , and integer , and an element , the Jordan block  is the with entries in such that its diagonal entries are all , each entry just below the diagonal is a , and all other entries are : (More precisely, for all , for all , and for all other .)    Some people (including I think the authors or our text) defined a Jordan block to be the transpose of what I have defined it to be.  Jordan Canonical Form   Let be a field, let be a finite dimensional -vector space, and let be a linear transformation satisfying the property that the characteristic polynomial of factors completely in into linear factors. Then there is an ordered basis for such that where , the 's, and the 's are such that are the elementary divisors of the -module . Moreover, this matrix is unique up to ordering of the Jordan Blocks, and it is known as “the'' Jordan Canonical Form of .    The proof is similar to the proof the RCF theorem, using the idea of Example above, but starting with the FTFGMPIDEDF (instead of the FTFGMPIDIFF). Here are the details:  We consider the -module . Since we assume factors completely, the only irreducible polynomials in its factorization are linear. Thus the invariant factors of are products of polynomials of the form for various and integers . It follows that the elementary divisors have this form too. The FTFGMPIDEDF therefore gives an isomorphism of -modules Now pick ordered bases for each of the summands and set to be their “ordered union'' just as we did for the proof of the Theorem on RCF. By the same argument as in Example applied to each summand individually, the matrix representing multiplication by on each summand is . This gives the existence of the JCF.  The uniqueness follows from the uniqueness clause in the FTFGMPIDEDF.    Not every operator has a Jordan Canonical Form: The Theorem only applies if factors completely, and, conversely, if an operator is represented by any lower-triangular matrix, then its characteristic polynomial must be a product of linear polynomials. For algebraically closed fields, such as , every linear operator does indeed have a JCF.  If we flip the order of each in the proof, we would end up with the transpose of what I have defined the JCF to be. This is what our text does, and it defines the JCF as the transpose of what I have defined it to be.  JCF Exists if CharPoly Factors Linearly   If is an matrix with entries in a field and factors completely into linear factors, then is similar to a matrix in Jordan Canonical Form, and this matrix is unique up to the ordering of the Jordan Blocks.    Finding JCF  Let us find the Jordan Canonical Form of   We found the Rational Canonical Form of this matrix before. In the process we showed that we have an isomorphism of -module. By the Sunzi Remainder Theorem and thus the elementary divisors of are . By the Theorem this shows that the JCF of is    Diagonalizable   Let be a finite dimensional vector space over a field and let be an -linear operator. We say is diagonalizable if there is a basis for such that the matrix is a diagonal matrix.    "
+  "body": "Jordan Canonical Form  We now turn to the Jordan canonical form. To motivate it, let us do an example.  Companion Matrix and Jordan Blocks  Let us consider the companion matrix of : We can interpret this matrix as arising from the linear transformation on defined as multiplication by . Recall that the ordered basis of that gives the matrix as: But notice that is also a basis of . Let us calculate what the operator does to this alternative basis. We could work this out by brute force, but a cleaner way is to first compute what the operator does. Since is multiplication by , it sends each basis element to the next one, except for the last one, which is sent to . It follows that the matrix of this operator relative to the ordered basis is and hence the matrix for itself for this basis is This is what's known as a Jordan Block .    In this example, if we used the basis instead we would have gotten the transpose of .   Jordan Block   Given a field , and integer , and an element , the Jordan block  is the with entries in such that its diagonal entries are all , each entry just below the diagonal is a , and all other entries are : (More precisely, for all , for all , and for all other .)     Some people (including I think the authors or our text) defined a Jordan block to be the transpose of what I have defined it to be.   Jordan Canonical Form   Let be a field, let be a finite dimensional -vector space, and let be a linear transformation satisfying the property that the characteristic polynomial of factors completely in into linear factors. Then there is an ordered basis for such that where , the 's, and the 's are such that are the elementary divisors of the -module . Moreover, this matrix is unique up to ordering of the Jordan Blocks.    The proof is similar to the proof the RCF theorem, using the idea of Example above, but starting with the FTFGMPIDEDF (instead of the FTFGMPIDIFF). Here are the details:  We consider the -module . Since we assume factors completely, the only irreducible polynomials in its factorization are linear. Thus the invariant factors of are products of polynomials of the form for various and integers . It follows that the elementary divisors have this form too. The FTFGMPIDEDF therefore gives an isomorphism of -modules Now pick ordered bases for each of the summands and set to be their “ordered union'' just as we did for the proof of the Theorem on RCF. By the same argument as in Example applied to each summand individually, the matrix representing multiplication by on each summand is . This gives the existence of the JCF.  The uniqueness follows from the uniqueness clause in the FTFGMPIDEDF.    Jordan Canonical Form   Let be a field, be a finite dimensional vector space, and let be a linear transformation satisfying the property that the characteristic polynomial of factors completely into linear factors and has elementary divisors . The matrix is a Jordan canonical form (JCF) of .     Not every operator has a Jordan Canonical Form: only applies if factors completely, and, conversely, if an operator is represented by any lower-triangular matrix, then its characteristic polynomial must be a product of linear polynomials. For algebraically closed fields, such as , every linear operator does indeed have a JCF.    If we flip the order of each in the proof, we would end up with the transpose of what I have defined the JCF to be. This is what our text does, and it defines the JCF as the transpose of what I have defined it to be.   JCF Exists if CharPoly Factors Linearly   If is an matrix with entries in a field and factors completely into linear factors, then is similar to a matrix in Jordan Canonical Form, and this matrix is unique up to the ordering of the Jordan Blocks.    Finding JCF  Let us find the Jordan Canonical Form of   We found the Rational Canonical Form of this matrix before. In the process we showed that we have an isomorphism of -module. By the Sunzi Remainder Theorem and thus the elementary divisors of are . By this shows that the JCF of is    Diagonalizable   Let be a finite dimensional vector space over a field and let be an -linear operator. We say is diagonalizable if there is a basis for such that the matrix is a diagonal matrix.    Diagonalizable Characterization   Let be a field, let be a finite dimensional vector space, and consider a linear transformation . The following are equivalent:    is diagonalizable.     has a Jordan canonical form and is a diagonal matrix.     has a Jordan canonical form and all elementary divisors are of the form with .    Each invariant factor of is a product of linear polynomials with no repeated linear factors.    The minimal polynomial of is a product of linear polynomials with no repeated linear factors.       Note that a diagonal matrix is an example of a matrix in JCF. By the uniqueness of the JCF, (1) holds if and only if (2) holds. Moreover, the equivalence of (2) and (3) follows by definition. A matrix has a JCF if and only if its invariant factors factor completely. In this case, the elementary divisors are constructed by decomposing each invariant factor into powers of distinct linear polynomials. This gives that (3) holds if and only if (4) holds. Finally, since the minimal polynomial is one of the invariant factors and every other invariant factor divides it, we get the equivalence between (4) and (5).    "
 },
 {
   "id": "compantion-matrix-and-jordan-blocks",
@@ -6343,7 +6343,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "16.28",
   "title": "Companion Matrix and Jordan Blocks.",
-  "body": "Companion Matrix and Jordan Blocks  Let us consider the companion matrix of : We can interpret this matrix as arising from the linear transformation on defined as multiplication by . Recall that the ordered basis of that gives the matrix is the “obvious one'': But notice that is also a basis of . Let us calculate what the operator does to this alternative basis. We could work this out by brute force, but a cleaner way is to first compute what the operator does. Since is multiplication by , it sends each basis element to the next one, except for the last one, which is sent to . It follows that the matrix of this operator relative to the ordered basis is and hence the matrix for itself for this basis is This is what's known as a Jordan Block.  "
+  "body": "Companion Matrix and Jordan Blocks  Let us consider the companion matrix of : We can interpret this matrix as arising from the linear transformation on defined as multiplication by . Recall that the ordered basis of that gives the matrix as: But notice that is also a basis of . Let us calculate what the operator does to this alternative basis. We could work this out by brute force, but a cleaner way is to first compute what the operator does. Since is multiplication by , it sends each basis element to the next one, except for the last one, which is sent to . It follows that the matrix of this operator relative to the ordered basis is and hence the matrix for itself for this basis is This is what's known as a Jordan Block .  "
 },
 {
   "id": "remark-80",
@@ -6352,7 +6352,7 @@ var ptx_lunr_docs = [
   "type": "Remark",
   "number": "16.29",
   "title": "",
-  "body": "In this example, if we used the basis instead we would have gotten the transpose of . "
+  "body": " In this example, if we used the basis instead we would have gotten the transpose of .  "
 },
 {
   "id": "def-jordan-block",
@@ -6370,7 +6370,7 @@ var ptx_lunr_docs = [
   "type": "Remark",
   "number": "16.31",
   "title": "",
-  "body": "Some people (including I think the authors or our text) defined a Jordan block to be the transpose of what I have defined it to be. "
+  "body": " Some people (including I think the authors or our text) defined a Jordan block to be the transpose of what I have defined it to be.  "
 },
 {
   "id": "thm-jcf",
@@ -6379,32 +6379,41 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "16.32",
   "title": "Jordan Canonical Form.",
-  "body": "Jordan Canonical Form   Let be a field, let be a finite dimensional -vector space, and let be a linear transformation satisfying the property that the characteristic polynomial of factors completely in into linear factors. Then there is an ordered basis for such that where , the 's, and the 's are such that are the elementary divisors of the -module . Moreover, this matrix is unique up to ordering of the Jordan Blocks, and it is known as “the'' Jordan Canonical Form of .    The proof is similar to the proof the RCF theorem, using the idea of Example above, but starting with the FTFGMPIDEDF (instead of the FTFGMPIDIFF). Here are the details:  We consider the -module . Since we assume factors completely, the only irreducible polynomials in its factorization are linear. Thus the invariant factors of are products of polynomials of the form for various and integers . It follows that the elementary divisors have this form too. The FTFGMPIDEDF therefore gives an isomorphism of -modules Now pick ordered bases for each of the summands and set to be their “ordered union'' just as we did for the proof of the Theorem on RCF. By the same argument as in Example applied to each summand individually, the matrix representing multiplication by on each summand is . This gives the existence of the JCF.  The uniqueness follows from the uniqueness clause in the FTFGMPIDEDF.   "
+  "body": "Jordan Canonical Form   Let be a field, let be a finite dimensional -vector space, and let be a linear transformation satisfying the property that the characteristic polynomial of factors completely in into linear factors. Then there is an ordered basis for such that where , the 's, and the 's are such that are the elementary divisors of the -module . Moreover, this matrix is unique up to ordering of the Jordan Blocks.    The proof is similar to the proof the RCF theorem, using the idea of Example above, but starting with the FTFGMPIDEDF (instead of the FTFGMPIDIFF). Here are the details:  We consider the -module . Since we assume factors completely, the only irreducible polynomials in its factorization are linear. Thus the invariant factors of are products of polynomials of the form for various and integers . It follows that the elementary divisors have this form too. The FTFGMPIDEDF therefore gives an isomorphism of -modules Now pick ordered bases for each of the summands and set to be their “ordered union'' just as we did for the proof of the Theorem on RCF. By the same argument as in Example applied to each summand individually, the matrix representing multiplication by on each summand is . This gives the existence of the JCF.  The uniqueness follows from the uniqueness clause in the FTFGMPIDEDF.   "
+},
+{
+  "id": "def-jcf",
+  "level": "2",
+  "url": "sec-jcf.html#def-jcf",
+  "type": "Definition",
+  "number": "16.33",
+  "title": "Jordan Canonical Form.",
+  "body": "Jordan Canonical Form   Let be a field, be a finite dimensional vector space, and let be a linear transformation satisfying the property that the characteristic polynomial of factors completely into linear factors and has elementary divisors . The matrix is a Jordan canonical form (JCF) of .   "
+},
+{
+  "id": "warning-3",
+  "level": "2",
+  "url": "sec-jcf.html#warning-3",
+  "type": "Warning",
+  "number": "16.34",
+  "title": "",
+  "body": " Not every operator has a Jordan Canonical Form: only applies if factors completely, and, conversely, if an operator is represented by any lower-triangular matrix, then its characteristic polynomial must be a product of linear polynomials. For algebraically closed fields, such as , every linear operator does indeed have a JCF.  "
 },
 {
   "id": "remark-82",
   "level": "2",
   "url": "sec-jcf.html#remark-82",
   "type": "Remark",
-  "number": "16.33",
+  "number": "16.35",
   "title": "",
-  "body": "Not every operator has a Jordan Canonical Form: The Theorem only applies if factors completely, and, conversely, if an operator is represented by any lower-triangular matrix, then its characteristic polynomial must be a product of linear polynomials. For algebraically closed fields, such as , every linear operator does indeed have a JCF. "
-},
-{
-  "id": "remark-83",
-  "level": "2",
-  "url": "sec-jcf.html#remark-83",
-  "type": "Remark",
-  "number": "16.34",
-  "title": "",
-  "body": "If we flip the order of each in the proof, we would end up with the transpose of what I have defined the JCF to be. This is what our text does, and it defines the JCF as the transpose of what I have defined it to be. "
+  "body": " If we flip the order of each in the proof, we would end up with the transpose of what I have defined the JCF to be. This is what our text does, and it defines the JCF as the transpose of what I have defined it to be.  "
 },
 {
   "id": "cor-jcf-exists-if-charpoly-factors-linearly",
   "level": "2",
   "url": "sec-jcf.html#cor-jcf-exists-if-charpoly-factors-linearly",
   "type": "Corollary",
-  "number": "16.35",
+  "number": "16.36",
   "title": "JCF Exists if CharPoly Factors Linearly.",
   "body": "JCF Exists if CharPoly Factors Linearly   If is an matrix with entries in a field and factors completely into linear factors, then is similar to a matrix in Jordan Canonical Form, and this matrix is unique up to the ordering of the Jordan Blocks.   "
 },
@@ -6413,18 +6422,27 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-jcf.html#exe-finding-jcf",
   "type": "Example",
-  "number": "16.36",
+  "number": "16.37",
   "title": "Finding JCF.",
-  "body": "Finding JCF  Let us find the Jordan Canonical Form of   We found the Rational Canonical Form of this matrix before. In the process we showed that we have an isomorphism of -module. By the Sunzi Remainder Theorem and thus the elementary divisors of are . By the Theorem this shows that the JCF of is   "
+  "body": "Finding JCF  Let us find the Jordan Canonical Form of   We found the Rational Canonical Form of this matrix before. In the process we showed that we have an isomorphism of -module. By the Sunzi Remainder Theorem and thus the elementary divisors of are . By this shows that the JCF of is   "
 },
 {
   "id": "def-diagonalizable",
   "level": "2",
   "url": "sec-jcf.html#def-diagonalizable",
   "type": "Definition",
-  "number": "16.37",
+  "number": "16.38",
   "title": "Diagonalizable.",
   "body": "Diagonalizable   Let be a finite dimensional vector space over a field and let be an -linear operator. We say is diagonalizable if there is a basis for such that the matrix is a diagonal matrix.   "
+},
+{
+  "id": "thm-diagonalizable-thm",
+  "level": "2",
+  "url": "sec-jcf.html#thm-diagonalizable-thm",
+  "type": "Theorem",
+  "number": "16.39",
+  "title": "Diagonalizable Characterization.",
+  "body": "Diagonalizable Characterization   Let be a field, let be a finite dimensional vector space, and consider a linear transformation . The following are equivalent:    is diagonalizable.     has a Jordan canonical form and is a diagonal matrix.     has a Jordan canonical form and all elementary divisors are of the form with .    Each invariant factor of is a product of linear polynomials with no repeated linear factors.    The minimal polynomial of is a product of linear polynomials with no repeated linear factors.       Note that a diagonal matrix is an example of a matrix in JCF. By the uniqueness of the JCF, (1) holds if and only if (2) holds. Moreover, the equivalence of (2) and (3) follows by definition. A matrix has a JCF if and only if its invariant factors factor completely. In this case, the elementary divisors are constructed by decomposing each invariant factor into powers of distinct linear polynomials. This gives that (3) holds if and only if (4) holds. Finally, since the minimal polynomial is one of the invariant factors and every other invariant factor divides it, we get the equivalence between (4) and (5).   "
 },
 {
   "id": "field-extension-basics",
@@ -6433,7 +6451,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "17.1",
   "title": "Field Extension Basics",
-  "body": "Field Extension Basics    Give me extension and motion and I will construct the universe.   René Descartes   Field Extension   A field extension is an inclusion of one field into a larger field , making into a subfield of . We will write either or to signify that is a field extension of .     A field extension is just another name for a subfield, but the emphasis is different. We think of as coming first and later.    Recall that if and are fields, then every ring homomorphism necessarily injective. (Proof: since , is a proper ideal of , and since is a field, the only proper ideal of it is .) Thus maps isomorphically onto its image and is a field extension. By abuse of notation we will typically think of as being a field extension, even though it is technically just an injective homomorphism of fields.   Examples of Field Extensions   and are basic examples of field extensions.  Recall that is a field. So is another example of a field extension.    The latter is a typical sort of example for us: Starting with , we would like to adjoin a root of the irreducible (in ) polynomial . Doing so yields .  The previous example was a quadratic extension, which is misleadingly simple.   Yet More Field Extensions  Consider . It is irreducible (e.g., by ) and has roots , and in . So there are three ways in which we could “adjoin a root\" to : First we could form the field It is not completely obvious this is a field, but we'll prove it later. The reason that we don't need third or higher powers is that, e.g., . Or we could instead form the field or the field . There are not all equal since, for example, but is not in . However, they are {} field extensions as we will prove below.     Given a field extension and an element , set Then is a subring of and in fact it is the smallest subring of that contains and . We define to be the field of fractions of ; that is, So, is a subfield of and it is the smallest subfield of that contains and .     Note that, in the context of this definition, we have , with each inclusion being a subring inclusion. and are all fields and in general is only a ring. But, in some cases we have (and hence it is a field). Indeed, this occurs whenever is the root of some polynomial with coefficients in .    Take and . Then any expression of the form with is equal to one of the form for . If , then with and both in . This proves that and in particular that is a field.     is not a field (and so in particular it is not equal to since, for example, . (If it were, then we would have for some , and hence , which would imply is the root of a polynomial with rational coefficients. This is known to be not true.)   Degree of a Field Extension   The degree of a field extension is     Degrees of Common Extensions  We have that and . (We could in fact say is the cardinality of , but in general we lump all infinite field extensions together when talking about degree.) We have where .   Properties of Extension Degrees   Assume is a field and is an irreducible polynomial. Set , and for , let denote the coset . The following hold:    is a field extension via the map given by for . (This is technically an injective homomorphisms of fields.)     .     has a root in ; in fact, the element is a root of this polynomial: .       Because is irreducible and is a PID, is a maximal ideal . Thus is a field . The map given by is a ring map since it is the composition of the two ring maps  . Since it is a ring map between two fields, it is injective .  The equality holds since is a basis for regarded as an -vector space, as we have seen before .  The last assertion is tricky only because the notation is confusing. Say and just to keep things straight let's set . We need to show : We have      The last part of the proposition is notationally confusing to prove in general but clear in examples. So let's do a simple one: Say and . Then . The assertion is that is a root of the polynomial viewed as having coefficients in . In other words, this element has the property that its square is . L et's check: Since and we have . Indeed, there is a field isomorphism sending to and more generally to .   Simple Extension   A field extension is called simple if for some (typically, non-unique) element of .    Primitive Element   primitive element goes here lol      is a primitive element of the extension . So is and, more generally, for any with .   Generated Subfield   If is a field extension and is any subset of , we write for the smallest subfield of that contains all of and and it is called the subfield generated by over . Since the intersection of any two subfields of is again a subfield, exists and is where  fix Nearly always will be a finite set, , and we write for .  In this case, we have      Regard as a subfield of and let . We may also describe as where we set .  I claim that is in fact a simple extension of . For example, say . I claim that . Note that and So , and hence . Likewise, So . This example is an illustration of the Primitive Element Theorem (which we might or might not have time to prove this semester): Every finite extension of is generated by a single element (or, in other words, is simple). This example shows is simple and is a primitive element of this field extension.   "
+  "body": "Field Extension Basics  Welcome to Field Extensions    Give me extension and motion and I will construct the universe.   René Descartes   One motivation for studying field extensions is that we want to build fields in which certain polynomials have roots. Here is a classical example going back to Gauss: while over the polynomial has no roots, if we want a field in which does have a root we need to consider .  Starting from a smaller field and an irreducible polynomial , we want to build a larger field . One way to do this is to take a root of and adjoin it to obtaining the field , which is the collection of all expressions that one can build using addition, subtraction, multiplication and division starting from the of elements of . Another way to build a larger field from a smaller field and an irreducible polynomial is to let . We will show below that these two ways of creating larger fields are one and the same.  Field Extension   A field extension is an inclusion of one field into a larger field , making into a subfield of . We will write either or to signify that is a field extension of .     Recall that if and are fields, then every ring homomorphism necessarily injective. (Proof: since , is a proper ideal of , and since is a field, the only proper ideal of it is .) Thus maps isomorphically onto its image and is a field extension. By abuse of notation we will typically think of as being a field extension, even though it is technically just an injective homomorphism of fields.   Field Extensions   and are basic examples of field extensions.  Recall that is a field. So is another example of a field extension.    The latter is a typical sort of example for us: Starting with , we would like to adjoin a root of the irreducible (in ) polynomial . Doing so yields .   The previous example was a quadratic extension, which is misleadingly simple.  Yet More Field Extensions  Consider . It is irreducible (e.g., by ) and has roots , and in . So there are three ways in which we could “adjoin a root\" to : First we could form the field It is not completely obvious this is a field, but we'll prove it later. The reason that we don't need third or higher powers is that, e.g., . Or we could instead form the field or the field . There are not all equal since, for example, but is not in . However, they are {} field extensions as we will prove below.     Given a field extension and an element , set Then is a subring of and in fact it is the smallest subring of that contains and . We define to be the smallest subfield of that contains and .    Intersection of Subfields  Show that exists by proving that the intersection of any two subfields is again a subfield.   In some cases we have   When  Prove whenever is the root of some polynomial with coefficients in .     If is a field extension and , the field is the fraction field of : more precisely,     Soon we will give an even better description for in the case where is the root of a polynomial .  is a Field  Take and . Then any expression of the form with is equal to one of the form for . If , then with and both in . This proves that and in particular that is a field.   is not a Field   is not a field, and so in particular it is not equal to since, for example, . (If it were, then we would have for some , and hence , which would imply is the root of a polynomial with rational coefficients. This is known to be not true.)    Degree of a Field Extension  Degree of a Field Extension   The degree of a field extension is     Degrees of Common Extensions  We have that and . (We could in fact say is the cardinality of , but in general we lump all infinite field extensions together when talking about degree.) We have where .   Properties of Extension Degrees   Assume is a field and is an irreducible polynomial. Set , and for , let denote the coset . The following hold:    is a field extension via the map given by for . (This is technically an injective homomorphisms of fields.)     .     has a root in ; in fact, the element is a root of this polynomial: .       Because is irreducible and is a PID, is a maximal ideal . Thus is a field . The map given by is a ring map since it is the composition of the two ring maps  . Since it is a ring map between two fields, it is injective .  The equality holds since is a basis for regarded as an -vector space, as we have seen before .  The last assertion is tricky only because the notation is confusing. Say and just to keep things straight let's set . We need to show : We have     The last part of the proposition is notationally confusing to prove in general but clear in examples.   Say and . Then . The assertion is that is a root of the polynomial viewed as having coefficients in . In other words, this element has the property that its square is . Let's check: Since and we have . Indeed, there is a field isomorphism sending to and more generally to .    Simple and Generated Extensions  Simple Extension, Primitive Element   A field extension is called simple if for some element of . We call such an a primitive element for the extension.     If is a simple field extension, note that there might be many different elements such that . Thus primitive elements are not necessarily unique.     is a primitive element of the extension . So is and, more generally, for any with .   We can generalize this to adjoining a subset instead of a single element.  Generated Subfield   If is a field extension and is any subset of , the subfield generated by over , denoted , is the smallest subfield of that contains all of . If is a finite set, we write for .     Regard as a subfield of and let . We may also describe as where we set .  I claim that is in fact a simple extension of . For example, say . I claim that . Note that and So , and hence . Likewise, So . This example shows is simple and is a primitive element of this field extension.    This example is an illustration of the Primitive Element Theorem (which we might or might not have time to prove this semester): Every finite extension of is generated by a single element (or, in other words, is simple).    Uniqueness of Simple Extensions  Next we will show that if is a root of a given polynomial , then is determined by up to isomorphism.    Let be a field extension and let be an irreducible polynomial. If has a root , then there is an isomorphism with and     Let be the evaluation homomorphism that sends ; more precisely, , and the restriction of this map to is the identity on . Since , we have , and since is a maximal ideal and , we conclude that .  Now by Theorem 1.43 we get an injective ring homomorphism such that .  It remains to be shown that is surjective. We will actually show more, namely that . Note first that by the definition of above, the image of on is . However, since is injective the image of is a field contained in , and since the smallest field containing is , we must in fact have .    Let's formalize the extra information we have obtained in the course of proving the theorem. First we used the following useful fact:   If is an injective ring homomorphism and and are fields then the image of is a subfield of .     Let be a field extension and let be irreducible having a root . Then .    Uniqueness of   Let be irreducible and let and be two roots of in some extensions and of . Then , so that the two roots are algebraically indistinguishable.    Complex Conjugation   Taking with roots and in , we actually obtain equal fields . But gives that there is an interesting isomorphism that sends to . In general, we have for .      Another example illustrating is that and are isomorphic fields. In fact, the are equal: . But again Corollary 5.25 gives that there is an interesting isomorphism that sends to . In general, we have for .     Let (the unique real cube-root of ) and (one of the two imaginary cube roots of ).  Then by (applied with ) there is an isomorphism of fields that restricts to the identity map on . Note that these two fields are not equal since the former is contained in and the latter is not.   The two examples above preview the central idea of Galois theory.   "
 },
 {
   "id": "def-field-extension",
@@ -6445,20 +6463,11 @@ var ptx_lunr_docs = [
   "body": "Field Extension   A field extension is an inclusion of one field into a larger field , making into a subfield of . We will write either or to signify that is a field extension of .   "
 },
 {
-  "id": "remark-84",
+  "id": "remark-83",
   "level": "2",
-  "url": "field-extension-basics.html#remark-84",
+  "url": "field-extension-basics.html#remark-83",
   "type": "Remark",
   "number": "17.2",
-  "title": "",
-  "body": " A field extension is just another name for a subfield, but the emphasis is different. We think of as coming first and later.  "
-},
-{
-  "id": "remark-85",
-  "level": "2",
-  "url": "field-extension-basics.html#remark-85",
-  "type": "Remark",
-  "number": "17.3",
   "title": "",
   "body": " Recall that if and are fields, then every ring homomorphism necessarily injective. (Proof: since , is a proper ideal of , and since is a field, the only proper ideal of it is .) Thus maps isomorphically onto its image and is a field extension. By abuse of notation we will typically think of as being a field extension, even though it is technically just an injective homomorphism of fields.  "
 },
@@ -6467,25 +6476,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "field-extension-basics.html#ex-classic-field-extensions",
   "type": "Example",
-  "number": "17.4",
-  "title": "Examples of Field Extensions.",
-  "body": "Examples of Field Extensions   and are basic examples of field extensions.  Recall that is a field. So is another example of a field extension.  "
+  "number": "17.3",
+  "title": "Field Extensions.",
+  "body": "Field Extensions   and are basic examples of field extensions.  Recall that is a field. So is another example of a field extension.  "
 },
 {
-  "id": "remark-86",
+  "id": "remark-84",
   "level": "2",
-  "url": "field-extension-basics.html#remark-86",
+  "url": "field-extension-basics.html#remark-84",
   "type": "Remark",
-  "number": "17.5",
+  "number": "17.4",
   "title": "",
-  "body": " The latter is a typical sort of example for us: Starting with , we would like to adjoin a root of the irreducible (in ) polynomial . Doing so yields .  The previous example was a quadratic extension, which is misleadingly simple.  "
+  "body": " The latter is a typical sort of example for us: Starting with , we would like to adjoin a root of the irreducible (in ) polynomial . Doing so yields .  "
 },
 {
   "id": "exe-more-field-extensions",
   "level": "2",
   "url": "field-extension-basics.html#exe-more-field-extensions",
   "type": "Example",
-  "number": "17.6",
+  "number": "17.5",
   "title": "Yet More Field Extensions.",
   "body": "Yet More Field Extensions  Consider . It is irreducible (e.g., by ) and has roots , and in . So there are three ways in which we could “adjoin a root\" to : First we could form the field It is not completely obvious this is a field, but we'll prove it later. The reason that we don't need third or higher powers is that, e.g., . Or we could instead form the field or the field . There are not all equal since, for example, but is not in . However, they are {} field extensions as we will prove below.  "
 },
@@ -6494,43 +6503,61 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "field-extension-basics.html#def-field-extension-element",
   "type": "Definition",
-  "number": "17.7",
+  "number": "17.6",
   "title": "<span class=\"process-math\">\\(F(\\a)\\)<\/span>.",
-  "body": "  Given a field extension and an element , set Then is a subring of and in fact it is the smallest subring of that contains and . We define to be the field of fractions of ; that is, So, is a subfield of and it is the smallest subfield of that contains and .   "
+  "body": "  Given a field extension and an element , set Then is a subring of and in fact it is the smallest subring of that contains and . We define to be the smallest subfield of that contains and .   "
 },
 {
-  "id": "remark-87",
+  "id": "exercise-104",
   "level": "2",
-  "url": "field-extension-basics.html#remark-87",
-  "type": "Remark",
+  "url": "field-extension-basics.html#exercise-104",
+  "type": "Exploration",
+  "number": "17.7",
+  "title": "Intersection of Subfields.",
+  "body": "Intersection of Subfields  Show that exists by proving that the intersection of any two subfields is again a subfield.  "
+},
+{
+  "id": "exercise-105",
+  "level": "2",
+  "url": "field-extension-basics.html#exercise-105",
+  "type": "Exploration",
   "number": "17.8",
+  "title": "When <span class=\"process-math\">\\(F(\\a)=F[\\a]\\)<\/span>.",
+  "body": "When  Prove whenever is the root of some polynomial with coefficients in .  "
+},
+{
+  "id": "prop-field-ext-fof",
+  "level": "2",
+  "url": "field-extension-basics.html#prop-field-ext-fof",
+  "type": "Proposition",
+  "number": "17.9",
   "title": "",
-  "body": " Note that, in the context of this definition, we have , with each inclusion being a subring inclusion. and are all fields and in general is only a ring. But, in some cases we have (and hence it is a field). Indeed, this occurs whenever is the root of some polynomial with coefficients in .  "
+  "body": "  If is a field extension and , the field is the fraction field of : more precisely,    "
 },
 {
   "id": "exe-qsqrt2",
   "level": "2",
   "url": "field-extension-basics.html#exe-qsqrt2",
   "type": "Example",
-  "number": "17.9",
-  "title": "",
-  "body": " Take and . Then any expression of the form with is equal to one of the form for . If , then with and both in . This proves that and in particular that is a field.  "
+  "number": "17.10",
+  "title": "<span class=\"process-math\">\\(\\Q[\\sqrt 2]\\)<\/span> is a Field.",
+  "body": "is a Field  Take and . Then any expression of the form with is equal to one of the form for . If , then with and both in . This proves that and in particular that is a field.  "
 },
 {
   "id": "exe-qpi",
   "level": "2",
   "url": "field-extension-basics.html#exe-qpi",
   "type": "Example",
-  "number": "17.10",
-  "title": ".",
-  "body": "  is not a field (and so in particular it is not equal to since, for example, . (If it were, then we would have for some , and hence , which would imply is the root of a polynomial with rational coefficients. This is known to be not true.)  "
+  "number": "17.11",
+  "title": "<span class=\"process-math\">\\(\\Q[\\pi]\\)<\/span> is not a Field.",
+  "body": "is not a Field   is not a field, and so in particular it is not equal to since, for example, . (If it were, then we would have for some , and hence , which would imply is the root of a polynomial with rational coefficients. This is known to be not true.)  "
 },
 {
   "id": "def-degree-field-extension",
   "level": "2",
   "url": "field-extension-basics.html#def-degree-field-extension",
   "type": "Definition",
-  "number": "17.11",
+  "number": "17.12",
   "title": "Degree of a Field Extension.",
   "body": "Degree of a Field Extension   The degree of a field extension is    "
 },
@@ -6539,16 +6566,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "field-extension-basics.html#exe-degrees-of-common-extensions",
   "type": "Example",
-  "number": "17.12",
+  "number": "17.13",
   "title": "Degrees of Common Extensions.",
   "body": "Degrees of Common Extensions  We have that and . (We could in fact say is the cardinality of , but in general we lump all infinite field extensions together when talking about degree.) We have where .  "
 },
 {
-  "id": "prop-properties-of-extension-degrees",
+  "id": "thm-properties-of-extension-degrees",
   "level": "2",
-  "url": "field-extension-basics.html#prop-properties-of-extension-degrees",
-  "type": "Proposition",
-  "number": "17.13",
+  "url": "field-extension-basics.html#thm-properties-of-extension-degrees",
+  "type": "Theorem",
+  "number": "17.14",
   "title": "Properties of Extension Degrees.",
   "body": "Properties of Extension Degrees   Assume is a field and is an irreducible polynomial. Set , and for , let denote the coset . The following hold:    is a field extension via the map given by for . (This is technically an injective homomorphisms of fields.)     .     has a root in ; in fact, the element is a root of this polynomial: .       Because is irreducible and is a PID, is a maximal ideal . Thus is a field . The map given by is a ring map since it is the composition of the two ring maps  . Since it is a ring map between two fields, it is injective .  The equality holds since is a basis for regarded as an -vector space, as we have seen before .  The last assertion is tricky only because the notation is confusing. Say and just to keep things straight let's set . We need to show : We have    "
 },
@@ -6557,34 +6584,34 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "field-extension-basics.html#exe-rxx21",
   "type": "Example",
-  "number": "17.14",
+  "number": "17.15",
   "title": "",
-  "body": " The last part of the proposition is notationally confusing to prove in general but clear in examples. So let's do a simple one: Say and . Then . The assertion is that is a root of the polynomial viewed as having coefficients in . In other words, this element has the property that its square is . L et's check: Since and we have . Indeed, there is a field isomorphism sending to and more generally to .  "
+  "body": " Say and . Then . The assertion is that is a root of the polynomial viewed as having coefficients in . In other words, this element has the property that its square is . Let's check: Since and we have . Indeed, there is a field isomorphism sending to and more generally to .  "
 },
 {
   "id": "def-simple-extension",
   "level": "2",
   "url": "field-extension-basics.html#def-simple-extension",
   "type": "Definition",
-  "number": "17.15",
-  "title": "Simple Extension.",
-  "body": "Simple Extension   A field extension is called simple if for some (typically, non-unique) element of .   "
+  "number": "17.16",
+  "title": "Simple Extension, Primitive Element.",
+  "body": "Simple Extension, Primitive Element   A field extension is called simple if for some element of . We call such an a primitive element for the extension.   "
 },
 {
-  "id": "def-primitive-element",
+  "id": "remark-85",
   "level": "2",
-  "url": "field-extension-basics.html#def-primitive-element",
-  "type": "Definition",
-  "number": "17.16",
-  "title": "Primitive Element.",
-  "body": "Primitive Element   primitive element goes here lol   "
+  "url": "field-extension-basics.html#remark-85",
+  "type": "Remark",
+  "number": "17.17",
+  "title": "",
+  "body": " If is a simple field extension, note that there might be many different elements such that . Thus primitive elements are not necessarily unique.  "
 },
 {
   "id": "exe-sqrt2-primitive",
   "level": "2",
   "url": "field-extension-basics.html#exe-sqrt2-primitive",
   "type": "Example",
-  "number": "17.17",
+  "number": "17.18",
   "title": "",
   "body": "  is a primitive element of the extension . So is and, more generally, for any with .  "
 },
@@ -6593,18 +6620,90 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "field-extension-basics.html#def-generated-subfield",
   "type": "Definition",
-  "number": "17.18",
+  "number": "17.19",
   "title": "Generated Subfield.",
-  "body": "Generated Subfield   If is a field extension and is any subset of , we write for the smallest subfield of that contains all of and and it is called the subfield generated by over . Since the intersection of any two subfields of is again a subfield, exists and is where  fix Nearly always will be a finite set, , and we write for .  In this case, we have    "
+  "body": "Generated Subfield   If is a field extension and is any subset of , the subfield generated by over , denoted , is the smallest subfield of that contains all of . If is a finite set, we write for .   "
 },
 {
   "id": "exe-qsqrt2sqrt3",
   "level": "2",
   "url": "field-extension-basics.html#exe-qsqrt2sqrt3",
   "type": "Example",
-  "number": "17.19",
+  "number": "17.20",
   "title": "",
-  "body": " Regard as a subfield of and let . We may also describe as where we set .  I claim that is in fact a simple extension of . For example, say . I claim that . Note that and So , and hence . Likewise, So . This example is an illustration of the Primitive Element Theorem (which we might or might not have time to prove this semester): Every finite extension of is generated by a single element (or, in other words, is simple). This example shows is simple and is a primitive element of this field extension.  "
+  "body": " Regard as a subfield of and let . We may also describe as where we set .  I claim that is in fact a simple extension of . For example, say . I claim that . Note that and So , and hence . Likewise, So . This example shows is simple and is a primitive element of this field extension.  "
+},
+{
+  "id": "remark-86",
+  "level": "2",
+  "url": "field-extension-basics.html#remark-86",
+  "type": "Remark",
+  "number": "17.21",
+  "title": "",
+  "body": " This example is an illustration of the Primitive Element Theorem (which we might or might not have time to prove this semester): Every finite extension of is generated by a single element (or, in other words, is simple).  "
+},
+{
+  "id": "thm-",
+  "level": "2",
+  "url": "field-extension-basics.html#thm-",
+  "type": "Theorem",
+  "number": "17.22",
+  "title": "",
+  "body": "  Let be a field extension and let be an irreducible polynomial. If has a root , then there is an isomorphism with and     Let be the evaluation homomorphism that sends ; more precisely, , and the restriction of this map to is the identity on . Since , we have , and since is a maximal ideal and , we conclude that .  Now by Theorem 1.43 we get an injective ring homomorphism such that .  It remains to be shown that is surjective. We will actually show more, namely that . Note first that by the definition of above, the image of on is . However, since is injective the image of is a field contained in , and since the smallest field containing is , we must in fact have .   "
+},
+{
+  "id": "exercise-106",
+  "level": "2",
+  "url": "field-extension-basics.html#exercise-106",
+  "type": "Exploration",
+  "number": "17.23",
+  "title": "",
+  "body": " If is an injective ring homomorphism and and are fields then the image of is a subfield of .  "
+},
+{
+  "id": "cor-equal-ext",
+  "level": "2",
+  "url": "field-extension-basics.html#cor-equal-ext",
+  "type": "Corollary",
+  "number": "17.24",
+  "title": "",
+  "body": "  Let be a field extension and let be irreducible having a root . Then .   "
+},
+{
+  "id": "cor-unique-ext",
+  "level": "2",
+  "url": "field-extension-basics.html#cor-unique-ext",
+  "type": "Corollary",
+  "number": "17.25",
+  "title": "Uniqueness of <span class=\"process-math\">\\(F(\\alpha)\\)<\/span>.",
+  "body": "Uniqueness of   Let be irreducible and let and be two roots of in some extensions and of . Then , so that the two roots are algebraically indistinguishable.   "
+},
+{
+  "id": "example-122",
+  "level": "2",
+  "url": "field-extension-basics.html#example-122",
+  "type": "Example",
+  "number": "17.26",
+  "title": "Complex Conjugation.",
+  "body": "Complex Conjugation   Taking with roots and in , we actually obtain equal fields . But gives that there is an interesting isomorphism that sends to . In general, we have for .   "
+},
+{
+  "id": "example-123",
+  "level": "2",
+  "url": "field-extension-basics.html#example-123",
+  "type": "Example",
+  "number": "17.27",
+  "title": "",
+  "body": "  Another example illustrating is that and are isomorphic fields. In fact, the are equal: . But again Corollary 5.25 gives that there is an interesting isomorphism that sends to . In general, we have for .   "
+},
+{
+  "id": "exe-cube-roots",
+  "level": "2",
+  "url": "field-extension-basics.html#exe-cube-roots",
+  "type": "Example",
+  "number": "17.28",
+  "title": "",
+  "body": " Let (the unique real cube-root of ) and (one of the two imaginary cube roots of ).  Then by (applied with ) there is an isomorphism of fields that restricts to the identity map on . Note that these two fields are not equal since the former is contained in and the latter is not.  "
 },
 {
   "id": "sec-algebraic",
@@ -6613,14 +6712,14 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "17.2",
   "title": "Algebraic Extensions",
-  "body": "Algebraic Extensions  Algebraic Element   For a field extension and , we say is algebraic over if for some non-zero polynomial . Otherwise, is transcendental over .      is algebraic over . Indeed, every element of is algebraic over . (E.g., is a root of .) ia algebraic over . So is for any . The numbers and of are transcendental over ; these are deep facts.   Properties of Algebraic Elements   Suppose is a field extension and . Define a subset of .    The subset is an ideal of .   if and only if is transcendental over ; so if and only if is algebraic over .  Assume is algebraic over .  The unique monic generator of , which we will write as , is irreducible (and hence is a prime ideal).  There is a unique isomorphism of fields sending identically to and sending to .   and in particular is a field.     is algebraic over if and only if . In this case,    is transcendental over if and only if . In this case, there is a unique isomorphism of fields sending identically to and sending to . (Here, is the field of fractions of .)     All parts use the following construction:  Let be the evaluation homomorphism, given by sending to  . Note that satisfies and . We have by definition of the latter. The First Isomorphism Theorem for rings thus gives that induces a ring isomorphism given by . In particular, since is a subring of , it is an integral domain, and hence must be a prime ideal (possibly the ideal).   Let us now prove the various parts:    holds because is the kernel of the ring map .    is by definition.    For (3) assume is algebraic. Then and hence it has a unique monic generator, which we write . Since is prime, is irreducible ; this proves (3a). Also, this shows that is a field and hence so is . Since , contains and , and is a field, we must have . This proves (3b) and (3c).  For (4), if is algebraic over , then by (3b) and Proposition . For the converse, if , then the infinite list of elements of cannot be -linearly independent . So, for some and some not all of which are . This shows is the root of a non-zero polynomial.  For (5), if is transcendental, then and so is injective. Since is a field, is a domain , and is injective , it can be extended to the field of fractions of , i.e. there is a ring homomorphism given by for all with . The image of is precisely . The map is injective since it is a ring homomorphism whose source is a field.     Minimum Polynomial   If is algebraic over the subfield , the unique monic generator of the ideal in the previous theorem, written , is called the minimum polynomial of over .     Note that the minimum polynomial of over (if it exists) divides every polynomial in that has as a root. In particular, it is the unique monic, irreducible polynomial having as a root. It can also be characterized as the monic polynomial in of least degree having as a root.    For any prime integer , set , a so-called “primitive -th root of unity\". Let us find . Note that is a root of which factors as where . As we showed before , is irreducible in . Since is not a root of , it must be a root of , and since is irreducible, it must be (see the Remark).    Uniqueness of Field Extensions   Let be irreducible and let (respectively, ) be a root of in some field extension (respectively, ) of . Then there is an isomorphism of fields such that and .    Note that is (up to a non-zero constant factor) the minimum polynomial of both and . So, we may apply (3b) of the Theorem twice to give a pair of isomorphisms of fields, given by sending to (for the left one) and (for the right one). Take to be the inverse of the one on the left composed with the right one.      A simple example illustrating the Corollary is that and are isomorphic fields. In fact, the are equal: . But the Corollary gives that there is an interesting isomorphism that sends to . In general, we have for . This previews the central idea of Galois theory.    Let (the unique real cube-root of ) and (one of the two imaginary cube roots of ).  Then by the Corollary (applied with ) there is an isomorphism of fields that restricts to the identity map on . Note that these two fields are not equal since the former is contained in and the latter is not.   The Degree Formula   Suppose are field extensions. Then In particular, the composition of two finite extensions of fields is again a finite extension.    Let be a basis for as an -vector space and let be a basis for as an -vector space. Let denote the subset of . The Proposition follows from the following two facts: - is a basis of as an -vector space and - the function is bijective (so that the cardinality of is ). Concerning (a), for , we have for some and . For each , is an -linear combination of a finite set of elements of . Combining these gives that is in the -span of .  To prove linear independence, it suffices to prove that if and be distinct elements of and respectively, then the set is linearly independent. Suppose for some . Since the 's are -linearly independent and and , we get that, for each , . Using now that the 's are -linearly independent, we have that for all and all , . This proves is linearly independent over , and hence is linearly independent over .  Concerning (b), if for some , then , and since the 's are -linearly independent, we must have and hence .     Say is a field extension of prime degree . Given , by the we have . Since , and so . It follows that , whence . As a (very simple) example of this, since is prime, for any complex number that is not real.    Let be the result of adjoining to all of the roots in of . That is, where , , , and . As we shall see later, is an example of a “splitting field\". Let's find .  First, let us note that we can also describe as . This holds since each of belongs to and hence . The opposite containment holds because , with the latter being true because .  Set . Then . Since and is a root of , we have is at most and it will be exactly if and only if is irreducible in . This is unclear.  So instead let's try a different approach. Let . Then since is irreducible in by , we have . Since and is a root of , we have . But since . Note that if and only if . Thus .  By the  we conclude that Note that, in hindsight, it must have been true that is irreducible in , since otherwise the would give that .   Algebraic Extension   A field extension is called algebraic if every element is algebraic over (i.e., if every element of is the root of a non-zero polynomial with coefficients in ).    Finite Extensions are Algebraic   If is a finite extension of fields, then it is algebraic.    Pick . Since is a -vector subspace of and we have . (One could also appeal to the  for this.) So by (4) of Theorem , is algebraic of .    Infinite Algebraic Extension  Let and set . Then is a subfield of : To see this, note first that provided . Given , we have and for some and and hence are both in . Since is a field, we have , , and (provided ) all belong to and hence to . This proves is field extension of . It is algebraic over since each is. But it is not a finite extension of , since (since is irreducible in by ) and hence for all .    Transitivity of Algebraic Extensions   Let be extensions of fields, not necessarily finite.   Prove that and are algebraic if and only if is algebraic.  Give an example where and are Galois but is not Galois.     Let be extensions of fields, not necessarily finite.  Suppose that and are algebraic extensions. Let . Then is the root of the polynomial with . Notice that is a polynomial in , making is algebraic over this as well. Consider the chain of field extensions Since is algebraic over for all and is algebraic over , by Theorem each step in this chain has finite degree. By the , is finite and thus so is . By the Theorem again, is algebraic over .  Next suppose that is algebraic. Let . Then , and so it is algebraic over . Now let . Then is the root of a polynomial in , which is also in , so is algebraic as well.   is Galois over , and is Galois over , but is not Galois over as the splitting field of has degree .     The converse of this proposition is also true: Given field extensions , if is algebraic then so are and . This is more or less obvious from the definition.      Show that any finite extension of fields is algebraic.  Let denote the subfield of consisting of all the complex numbers which are algebraic over . (You may use that is a field without proof.) Show that is an algebraic extension, but not a finite extension.        Let be a finite extension of fields. Let . By the we have . Thus is finite, making algebraic over .    Notice that for all and that is a root of the polynomial , which is irreducible in by ( ). Thus . As must be added to for all , we see that this extension is not finite.         Assume that is a finite extension of fields of degree .   Prove that if is irreducible of degree and then remains irreducible when regarded as an element of the ring .  Show, by means of an explicit example with justification, that the statement in part (a) would become false if the assumption that were omitted.      Let be a finite extension of fields of degree .  Suppose that is irreducible of degree and .  First, note that if then will remain irreducible in  . Suppose then that . There exists an algebraically closed extension such that has a root  . Consider . As is algebraic in we know there exists some unique irreducible minimum polynomial of degree , and thus that  . Using the  we see that However, and so for some , so . As we must have . But was defined to be the degree of , which divides . As and , we see that , so so for some . As irreducible polynomials multiplied by a constant are still irreducible, we see that is indeed irreducible in .  Let be a non-constant irreducible polynomial of degree in . Let . Because is irreducible and is a PID, is a maximal ideal. Thus is a field , , and is a root of in  . Hence is no longer irreducible by Theorem 2.2    "
+  "body": "Algebraic Extensions  Algebraic Element   For a field extension and , we say is algebraic over if for some non-zero polynomial . Otherwise, is transcendental over .      is algebraic over . Indeed, every element of is algebraic over . (E.g., is a root of .) ia algebraic over . So is for any . The numbers and of are transcendental over ; these are deep facts.   Properties of Algebraic Elements   Suppose is a field extension and . Define a subset of .  The subset is an ideal of .   if and only if is transcendental over ; so if and only if is algebraic over .  Assume is algebraic over .  The unique monic generator of , which we will write as , is irreducible (and hence is a prime ideal).  There is a unique isomorphism of fields sending identically to and sending to .   and in particular is a field.     is algebraic over if and only if . In this case,    is transcendental over if and only if . In this case, there is a unique isomorphism of fields sending identically to and sending to . (Here, is the field of fractions of .)      All parts use the following construction:  Let be the evaluation homomorphism, given by sending to  . Note that satisfies and . We have by definition of the latter. The thus gives that induces a ring isomorphism given by . In particular, since is a subring of , it is an integral domain, and hence must be a prime ideal (possibly the ideal).   Let us now prove the various parts:     holds because is the kernel of the ring map .    is by definition.     For (3) assume is algebraic. Then and hence it has a unique monic generator, which we write . Since is prime, is irreducible ; this proves (3a). Also, this shows that is a field and hence so is . Since , contains and , and is a field, we must have . This proves (3b) and (3c).  For (4), if is algebraic over , then by (3b) and Proposition . For the converse, if , then the infinite list of elements of cannot be -linearly independent . So, for some and some not all of which are . This shows is the root of a non-zero polynomial.  For (5), if is transcendental, then and so is injective. Since is a field, is a domain , and is injective , it can be extended to the field of fractions of , i.e. there is a ring homomorphism given by for all with . The image of is precisely . The map is injective since it is a ring homomorphism whose source is a field.     Minimum Polynomial   Let be a field extension and , and consider the ideal from . The unique monic generator for is called the minimal polynomial of over .     Note that the minimum polynomial of over (if it exists) divides every polynomial in that has as a root. In particular, it is the unique monic, irreducible polynomial having as a root. It can also be characterized as the monic polynomial in of least degree having as a root.     The minimal polynomial of over is .         For any prime integer , set , a so-called “primitive -th root of unity\". Let us find . Note that is a root of which factors as where . As we showed before , is irreducible in . Since is not a root of , it must be a root of , and since is irreducible, it must be (see the Remark).    The Degree Formula   Suppose are field extensions. Then In particular, the composition of two finite extensions of fields is again a finite extension.    Let be a basis for as an -vector space and let be a basis for as an -vector space. Let denote the subset of . The Theorem follows from the following two facts:    is a basis of as an -vector space and    the function is bijective (so that the cardinality of is ).   Concerning (a), for , we have for some and . For each , is an -linear combination of a finite set of elements of . Combining these gives that is in the -span of .  To prove linear independence, it suffices to prove that if and be distinct elements of and respectively, then the set is linearly independent. Suppose for some . Since the 's are -linearly independent and and , we get that, for each , . Using now that the 's are -linearly independent, we have that for all and all , . This proves is linearly independent over , and hence is linearly independent over .  Concerning (b), if for some , then , and since the 's are -linearly independent, we must have and hence .     Say is a field extension of prime degree . Given , by the we have . Since , and so . It follows that , whence . As a (very simple) example of this, since is prime, for any complex number that is not real.    Let be the result of adjoining to all of the roots in of . That is, where , , , and . As we shall see later, is an example of a “splitting field\". Let's find .  First, let us note that we can also describe as . This holds since each of belongs to and hence . The opposite containment holds because , with the latter being true because .  Set . Then . Since and is a root of , we have is at most and it will be exactly if and only if is irreducible in . This is unclear.  So instead let's try a different approach. Let . Then since is irreducible in by , we have . Since and is a root of , we have . But since . Note that if and only if . Thus .  By the  we conclude that Note that, in hindsight, it must have been true that is irreducible in , since otherwise the would give that .   Algebraic Extension   A field extension is called algebraic if every element is algebraic over (i.e., if every element of is the root of a non-zero polynomial with coefficients in ).    Finite Extensions are Algebraic   If is a finite extension of fields, then it is algebraic.    Pick . Since is a -vector subspace of and we have . (One could also appeal to the for this.) So by (4) of Theorem , is algebraic of .    Infinite Algebraic Extension  Let and set . Then is a subfield of : To see this, note first that provided . Given , we have and for some and and hence are both in . Since is a field, we have , , and (provided ) all belong to and hence to . This proves is field extension of . It is algebraic over since each is. But it is not a finite extension of , since (since is irreducible in by ) and hence for all .    Transitivity of Algebraic Extensions   Let be extensions of fields, not necessarily finite.    Then and are algebraic if and only if is algebraic.  Give an example where and are Galois but is not Galois.      Let be extensions of fields, not necessarily finite.  Suppose that and are algebraic extensions. Let . Then is the root of the polynomial with . Notice that is a polynomial in , making is algebraic over this as well. Consider the chain of field extensions Since is algebraic over for all and is algebraic over , by Theorem each step in this chain has finite degree. By the , is finite and thus so is . By the Theorem again, is algebraic over .  Next suppose that is algebraic. Let . Then , and so it is algebraic over . Now let . Then is the root of a polynomial in , which is also in , so is algebraic as well.   is Galois over , and is Galois over , but is not Galois over as the splitting field of has degree .     The converse of this proposition is also true: Given field extensions , if is algebraic then so are and .     Assume that is a finite extension of fields of degree . If is irreducible of degree and then remains irreducible when regarded as an element of the ring .    Let be a finite extension of fields of degree .  Suppose that is irreducible of degree and .  First, note that if then will remain irreducible in  . Suppose then that . There exists an algebraically closed extension such that has a root  . Consider . As is algebraic in we know there exists some unique irreducible minimum polynomial of degree , and thus that  . Using the we see that However, and so for some , so . As we must have . But was defined to be the degree of , which divides . As and , we see that , so for some . As irreducible polynomials multiplied by a constant are still irreducible, we see that is indeed irreducible in .    The statement in part (a) would become false if the assumption that were omitted.   Let be a non-constant irreducible polynomial of degree in . Let . Because is irreducible and is a PID, is a maximal ideal. Thus is a field , , and is a root of in  . Hence is no longer irreducible by Theorem 2.2   "
 },
 {
   "id": "def-algebraic-element",
   "level": "2",
   "url": "sec-algebraic.html#def-algebraic-element",
   "type": "Definition",
-  "number": "17.20",
+  "number": "17.29",
   "title": "Algebraic Element.",
   "body": "Algebraic Element   For a field extension and , we say is algebraic over if for some non-zero polynomial . Otherwise, is transcendental over .   "
 },
@@ -6629,7 +6728,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-algebraic.html#exe-i-algebraic-over-r",
   "type": "Example",
-  "number": "17.21",
+  "number": "17.30",
   "title": "",
   "body": "  is algebraic over . Indeed, every element of is algebraic over . (E.g., is a root of .) ia algebraic over . So is for any . The numbers and of are transcendental over ; these are deep facts.  "
 },
@@ -6638,79 +6737,61 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-algebraic.html#thm-properties-of-algebraic-elements",
   "type": "Theorem",
-  "number": "17.22",
+  "number": "17.31",
   "title": "Properties of Algebraic Elements.",
-  "body": "Properties of Algebraic Elements   Suppose is a field extension and . Define a subset of .    The subset is an ideal of .   if and only if is transcendental over ; so if and only if is algebraic over .  Assume is algebraic over .  The unique monic generator of , which we will write as , is irreducible (and hence is a prime ideal).  There is a unique isomorphism of fields sending identically to and sending to .   and in particular is a field.     is algebraic over if and only if . In this case,    is transcendental over if and only if . In this case, there is a unique isomorphism of fields sending identically to and sending to . (Here, is the field of fractions of .)     All parts use the following construction:  Let be the evaluation homomorphism, given by sending to  . Note that satisfies and . We have by definition of the latter. The First Isomorphism Theorem for rings thus gives that induces a ring isomorphism given by . In particular, since is a subring of , it is an integral domain, and hence must be a prime ideal (possibly the ideal).   Let us now prove the various parts:    holds because is the kernel of the ring map .    is by definition.    For (3) assume is algebraic. Then and hence it has a unique monic generator, which we write . Since is prime, is irreducible ; this proves (3a). Also, this shows that is a field and hence so is . Since , contains and , and is a field, we must have . This proves (3b) and (3c).  For (4), if is algebraic over , then by (3b) and Proposition . For the converse, if , then the infinite list of elements of cannot be -linearly independent . So, for some and some not all of which are . This shows is the root of a non-zero polynomial.  For (5), if is transcendental, then and so is injective. Since is a field, is a domain , and is injective , it can be extended to the field of fractions of , i.e. there is a ring homomorphism given by for all with . The image of is precisely . The map is injective since it is a ring homomorphism whose source is a field.    "
+  "body": "Properties of Algebraic Elements   Suppose is a field extension and . Define a subset of .  The subset is an ideal of .   if and only if is transcendental over ; so if and only if is algebraic over .  Assume is algebraic over .  The unique monic generator of , which we will write as , is irreducible (and hence is a prime ideal).  There is a unique isomorphism of fields sending identically to and sending to .   and in particular is a field.     is algebraic over if and only if . In this case,    is transcendental over if and only if . In this case, there is a unique isomorphism of fields sending identically to and sending to . (Here, is the field of fractions of .)      All parts use the following construction:  Let be the evaluation homomorphism, given by sending to  . Note that satisfies and . We have by definition of the latter. The thus gives that induces a ring isomorphism given by . In particular, since is a subring of , it is an integral domain, and hence must be a prime ideal (possibly the ideal).   Let us now prove the various parts:     holds because is the kernel of the ring map .    is by definition.     For (3) assume is algebraic. Then and hence it has a unique monic generator, which we write . Since is prime, is irreducible ; this proves (3a). Also, this shows that is a field and hence so is . Since , contains and , and is a field, we must have . This proves (3b) and (3c).  For (4), if is algebraic over , then by (3b) and Proposition . For the converse, if , then the infinite list of elements of cannot be -linearly independent . So, for some and some not all of which are . This shows is the root of a non-zero polynomial.  For (5), if is transcendental, then and so is injective. Since is a field, is a domain , and is injective , it can be extended to the field of fractions of , i.e. there is a ring homomorphism given by for all with . The image of is precisely . The map is injective since it is a ring homomorphism whose source is a field.    "
 },
 {
   "id": "def-minimum-polynomial",
   "level": "2",
   "url": "sec-algebraic.html#def-minimum-polynomial",
   "type": "Definition",
-  "number": "17.23",
+  "number": "17.32",
   "title": "Minimum Polynomial.",
-  "body": "Minimum Polynomial   If is algebraic over the subfield , the unique monic generator of the ideal in the previous theorem, written , is called the minimum polynomial of over .   "
+  "body": "Minimum Polynomial   Let be a field extension and , and consider the ideal from . The unique monic generator for is called the minimal polynomial of over .   "
 },
 {
-  "id": "remark-88",
+  "id": "remark-87",
   "level": "2",
-  "url": "sec-algebraic.html#remark-88",
+  "url": "sec-algebraic.html#remark-87",
   "type": "Remark",
-  "number": "17.24",
+  "number": "17.33",
   "title": "",
   "body": " Note that the minimum polynomial of over (if it exists) divides every polynomial in that has as a root. In particular, it is the unique monic, irreducible polynomial having as a root. It can also be characterized as the monic polynomial in of least degree having as a root.  "
 },
 {
-  "id": "exe-primitive-roots-of-unity",
+  "id": "example-126",
   "level": "2",
-  "url": "sec-algebraic.html#exe-primitive-roots-of-unity",
+  "url": "sec-algebraic.html#example-126",
   "type": "Example",
-  "number": "17.25",
+  "number": "17.34",
+  "title": "",
+  "body": "  The minimal polynomial of over is .       "
+},
+{
+  "id": "ex-primitive-roots-of-unity",
+  "level": "2",
+  "url": "sec-algebraic.html#ex-primitive-roots-of-unity",
+  "type": "Example",
+  "number": "17.35",
   "title": "",
   "body": " For any prime integer , set , a so-called “primitive -th root of unity\". Let us find . Note that is a root of which factors as where . As we showed before , is irreducible in . Since is not a root of , it must be a root of , and since is irreducible, it must be (see the Remark).   "
-},
-{
-  "id": "cor-uniqueness-of-field-extensions",
-  "level": "2",
-  "url": "sec-algebraic.html#cor-uniqueness-of-field-extensions",
-  "type": "Corollary",
-  "number": "17.26",
-  "title": "Uniqueness of Field Extensions.",
-  "body": "Uniqueness of Field Extensions   Let be irreducible and let (respectively, ) be a root of in some field extension (respectively, ) of . Then there is an isomorphism of fields such that and .    Note that is (up to a non-zero constant factor) the minimum polynomial of both and . So, we may apply (3b) of the Theorem twice to give a pair of isomorphisms of fields, given by sending to (for the left one) and (for the right one). Take to be the inverse of the one on the left composed with the right one.    "
-},
-{
-  "id": "exe-qsqrt2congq-sqrt2",
-  "level": "2",
-  "url": "sec-algebraic.html#exe-qsqrt2congq-sqrt2",
-  "type": "Example",
-  "number": "17.27",
-  "title": "",
-  "body": " A simple example illustrating the Corollary is that and are isomorphic fields. In fact, the are equal: . But the Corollary gives that there is an interesting isomorphism that sends to . In general, we have for . This previews the central idea of Galois theory.  "
-},
-{
-  "id": "exe-cube-roots",
-  "level": "2",
-  "url": "sec-algebraic.html#exe-cube-roots",
-  "type": "Example",
-  "number": "17.28",
-  "title": "",
-  "body": " Let (the unique real cube-root of ) and (one of the two imaginary cube roots of ).  Then by the Corollary (applied with ) there is an isomorphism of fields that restricts to the identity map on . Note that these two fields are not equal since the former is contained in and the latter is not.  "
 },
 {
   "id": "thm-degree-formula",
   "level": "2",
   "url": "sec-algebraic.html#thm-degree-formula",
   "type": "Theorem",
-  "number": "17.29",
+  "number": "17.36",
   "title": "The Degree Formula.",
-  "body": "The Degree Formula   Suppose are field extensions. Then In particular, the composition of two finite extensions of fields is again a finite extension.    Let be a basis for as an -vector space and let be a basis for as an -vector space. Let denote the subset of . The Proposition follows from the following two facts: - is a basis of as an -vector space and - the function is bijective (so that the cardinality of is ). Concerning (a), for , we have for some and . For each , is an -linear combination of a finite set of elements of . Combining these gives that is in the -span of .  To prove linear independence, it suffices to prove that if and be distinct elements of and respectively, then the set is linearly independent. Suppose for some . Since the 's are -linearly independent and and , we get that, for each , . Using now that the 's are -linearly independent, we have that for all and all , . This proves is linearly independent over , and hence is linearly independent over .  Concerning (b), if for some , then , and since the 's are -linearly independent, we must have and hence .   "
+  "body": "The Degree Formula   Suppose are field extensions. Then In particular, the composition of two finite extensions of fields is again a finite extension.    Let be a basis for as an -vector space and let be a basis for as an -vector space. Let denote the subset of . The Theorem follows from the following two facts:    is a basis of as an -vector space and    the function is bijective (so that the cardinality of is ).   Concerning (a), for , we have for some and . For each , is an -linear combination of a finite set of elements of . Combining these gives that is in the -span of .  To prove linear independence, it suffices to prove that if and be distinct elements of and respectively, then the set is linearly independent. Suppose for some . Since the 's are -linearly independent and and , we get that, for each , . Using now that the 's are -linearly independent, we have that for all and all , . This proves is linearly independent over , and hence is linearly independent over .  Concerning (b), if for some , then , and since the 's are -linearly independent, we must have and hence .   "
 },
 {
   "id": "exe-rwc-for-all-wnotinr",
   "level": "2",
   "url": "sec-algebraic.html#exe-rwc-for-all-wnotinr",
   "type": "Example",
-  "number": "17.30",
+  "number": "17.37",
   "title": "",
   "body": " Say is a field extension of prime degree . Given , by the we have . Since , and so . It follows that , whence . As a (very simple) example of this, since is prime, for any complex number that is not real.  "
 },
@@ -6719,7 +6800,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-algebraic.html#exe-degree-and-x2-5",
   "type": "Example",
-  "number": "17.31",
+  "number": "17.38",
   "title": "",
   "body": " Let be the result of adjoining to all of the roots in of . That is, where , , , and . As we shall see later, is an example of a “splitting field\". Let's find .  First, let us note that we can also describe as . This holds since each of belongs to and hence . The opposite containment holds because , with the latter being true because .  Set . Then . Since and is a root of , we have is at most and it will be exactly if and only if is irreducible in . This is unclear.  So instead let's try a different approach. Let . Then since is irreducible in by , we have . Since and is a root of , we have . But since . Note that if and only if . Thus .  By the  we conclude that Note that, in hindsight, it must have been true that is irreducible in , since otherwise the would give that .  "
 },
@@ -6728,7 +6809,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-algebraic.html#def-algebraic-extension",
   "type": "Definition",
-  "number": "17.32",
+  "number": "17.39",
   "title": "Algebraic Extension.",
   "body": "Algebraic Extension   A field extension is called algebraic if every element is algebraic over (i.e., if every element of is the root of a non-zero polynomial with coefficients in ).   "
 },
@@ -6737,16 +6818,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-algebraic.html#prop-finite-extensions-are-algebraic",
   "type": "Proposition",
-  "number": "17.33",
+  "number": "17.40",
   "title": "Finite Extensions are Algebraic.",
-  "body": "Finite Extensions are Algebraic   If is a finite extension of fields, then it is algebraic.    Pick . Since is a -vector subspace of and we have . (One could also appeal to the  for this.) So by (4) of Theorem , is algebraic of .   "
+  "body": "Finite Extensions are Algebraic   If is a finite extension of fields, then it is algebraic.    Pick . Since is a -vector subspace of and we have . (One could also appeal to the for this.) So by (4) of Theorem , is algebraic of .   "
 },
 {
   "id": "exe-infinite-algebraic-extension",
   "level": "2",
   "url": "sec-algebraic.html#exe-infinite-algebraic-extension",
   "type": "Example",
-  "number": "17.34",
+  "number": "17.41",
   "title": "Infinite Algebraic Extension.",
   "body": "Infinite Algebraic Extension  Let and set . Then is a subfield of : To see this, note first that provided . Given , we have and for some and and hence are both in . Since is a field, we have , , and (provided ) all belong to and hence to . This proves is field extension of . It is algebraic over since each is. But it is not a finite extension of , since (since is irreducible in by ) and hence for all .   "
 },
@@ -6755,36 +6836,36 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-algebraic.html#thm-algebraic-extensions-are-transitive",
   "type": "Theorem",
-  "number": "17.35",
+  "number": "17.42",
   "title": "Transitivity of Algebraic Extensions.",
-  "body": "Transitivity of Algebraic Extensions   Let be extensions of fields, not necessarily finite.   Prove that and are algebraic if and only if is algebraic.  Give an example where and are Galois but is not Galois.     Let be extensions of fields, not necessarily finite.  Suppose that and are algebraic extensions. Let . Then is the root of the polynomial with . Notice that is a polynomial in , making is algebraic over this as well. Consider the chain of field extensions Since is algebraic over for all and is algebraic over , by Theorem each step in this chain has finite degree. By the , is finite and thus so is . By the Theorem again, is algebraic over .  Next suppose that is algebraic. Let . Then , and so it is algebraic over . Now let . Then is the root of a polynomial in , which is also in , so is algebraic as well.   is Galois over , and is Galois over , but is not Galois over as the splitting field of has degree .   "
+  "body": "Transitivity of Algebraic Extensions   Let be extensions of fields, not necessarily finite.    Then and are algebraic if and only if is algebraic.  Give an example where and are Galois but is not Galois.      Let be extensions of fields, not necessarily finite.  Suppose that and are algebraic extensions. Let . Then is the root of the polynomial with . Notice that is a polynomial in , making is algebraic over this as well. Consider the chain of field extensions Since is algebraic over for all and is algebraic over , by Theorem each step in this chain has finite degree. By the , is finite and thus so is . By the Theorem again, is algebraic over .  Next suppose that is algebraic. Let . Then , and so it is algebraic over . Now let . Then is the root of a polynomial in , which is also in , so is algebraic as well.   is Galois over , and is Galois over , but is not Galois over as the splitting field of has degree .   "
 },
 {
-  "id": "remark-89",
+  "id": "remark-88",
   "level": "2",
-  "url": "sec-algebraic.html#remark-89",
+  "url": "sec-algebraic.html#remark-88",
   "type": "Remark",
-  "number": "17.36",
+  "number": "17.43",
   "title": "",
-  "body": " The converse of this proposition is also true: Given field extensions , if is algebraic then so are and . This is more or less obvious from the definition.  "
-},
-{
-  "id": "prop-algebraic-but-not-finite-extension",
-  "level": "2",
-  "url": "sec-algebraic.html#prop-algebraic-but-not-finite-extension",
-  "type": "Proposition",
-  "number": "17.37",
-  "title": "",
-  "body": "   Show that any finite extension of fields is algebraic.  Let denote the subfield of consisting of all the complex numbers which are algebraic over . (You may use that is a field without proof.) Show that is an algebraic extension, but not a finite extension.        Let be a finite extension of fields. Let . By the we have . Thus is finite, making algebraic over .    Notice that for all and that is a root of the polynomial , which is irreducible in by ( ). Thus . As must be added to for all , we see that this extension is not finite.      "
+  "body": " The converse of this proposition is also true: Given field extensions , if is algebraic then so are and .  "
 },
 {
   "id": "thm-relatively-prime-extension",
   "level": "2",
   "url": "sec-algebraic.html#thm-relatively-prime-extension",
   "type": "Theorem",
-  "number": "17.38",
+  "number": "17.44",
   "title": "",
-  "body": "  Assume that is a finite extension of fields of degree .   Prove that if is irreducible of degree and then remains irreducible when regarded as an element of the ring .  Show, by means of an explicit example with justification, that the statement in part (a) would become false if the assumption that were omitted.      Let be a finite extension of fields of degree .  Suppose that is irreducible of degree and .  First, note that if then will remain irreducible in  . Suppose then that . There exists an algebraically closed extension such that has a root  . Consider . As is algebraic in we know there exists some unique irreducible minimum polynomial of degree , and thus that  . Using the  we see that However, and so for some , so . As we must have . But was defined to be the degree of , which divides . As and , we see that , so so for some . As irreducible polynomials multiplied by a constant are still irreducible, we see that is indeed irreducible in .  Let be a non-constant irreducible polynomial of degree in . Let . Because is irreducible and is a PID, is a maximal ideal. Thus is a field , , and is a root of in  . Hence is no longer irreducible by Theorem 2.2   "
+  "body": "  Assume that is a finite extension of fields of degree . If is irreducible of degree and then remains irreducible when regarded as an element of the ring .    Let be a finite extension of fields of degree .  Suppose that is irreducible of degree and .  First, note that if then will remain irreducible in  . Suppose then that . There exists an algebraically closed extension such that has a root  . Consider . As is algebraic in we know there exists some unique irreducible minimum polynomial of degree , and thus that  . Using the we see that However, and so for some , so . As we must have . But was defined to be the degree of , which divides . As and , we see that , so for some . As irreducible polynomials multiplied by a constant are still irreducible, we see that is indeed irreducible in .   "
+},
+{
+  "id": "example-131",
+  "level": "2",
+  "url": "sec-algebraic.html#example-131",
+  "type": "Example",
+  "number": "17.45",
+  "title": "",
+  "body": " Let be a non-constant irreducible polynomial of degree in . Let . Because is irreducible and is a PID, is a maximal ideal. Thus is a field , , and is a root of in  . Hence is no longer irreducible by Theorem 2.2  "
 },
 {
   "id": "sec-closure",
@@ -6800,7 +6881,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-closure.html#def-algebraically-closed",
   "type": "Definition",
-  "number": "17.39",
+  "number": "17.46",
   "title": "Algebraic Closure.",
   "body": "Algebraic Closure   A field is algebraically closed if every non-constant polynomial has a root in    "
 },
@@ -6809,7 +6890,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-closure.html#exe-c-is-closed",
   "type": "Example",
-  "number": "17.40",
+  "number": "17.47",
   "title": "<span class=\"process-math\">\\(\\C\\)<\/span> is algebraically closed.",
   "body": "is algebraically closed   is algebraically closed. This is the Fundamental Theorem of Algebra.  "
 },
@@ -6818,7 +6899,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-closure.html#prop-equivalencies-of-algebraically-closed",
   "type": "Proposition",
-  "number": "17.41",
+  "number": "17.48",
   "title": "Equivalent Algebraically Closed Characterizations.",
   "body": "Equivalent Algebraically Closed Characterizations   The following are equivalent for a field :    is algebraically closed.    Every non-constant polynomial with coefficients in splits completely into (not necessarily distinct) linear factors.    There are no non-trivial algebraic extensions of : If is an algebraic field extension then .          (2): Given a non-constant , by assumption has a root and thus with . But then also has a root and so it too factors, and so on.     (3): Say is algebraic. Pick . Then is a root of some . But since factors completely, .     (1). Pick a non-constant . By Proposition , there there is finite extension of in which does have a root. By assumption and so this root must be in .     "
 },
@@ -6827,7 +6908,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-closure.html#def-algebraic-closure",
   "type": "Definition",
-  "number": "17.42",
+  "number": "17.49",
   "title": "Algebraic Closure.",
   "body": "Algebraic Closure   Given a field , a field is called an algebraic closure of if is an algebraic field extension of and is algebraically closed.   "
 },
@@ -6836,7 +6917,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-closure.html#exe-c-is-the-algebraic-closure-of-r",
   "type": "Example",
-  "number": "17.43",
+  "number": "17.50",
   "title": "",
   "body": "  is an algebraic closure of . This follows from the fact that is a finite extension, hence algebraic, and the Fundamental Theorem of Algebra, which we will not prove.  "
 },
@@ -6845,7 +6926,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-closure.html#prop-collection-of-algebraic-elements-is-closed",
   "type": "Proposition",
-  "number": "17.44",
+  "number": "17.51",
   "title": "Collection of Algebraic Elements is Algebraically Closed.",
   "body": "Collection of Algebraic Elements is Algebraically Closed   Let Then is an algebraic closure of .  More generally, if is a field extension and is algebraically closed, then the collection of elements of that are algebraic over is an algebraic closure of .    It is far from clear that is a subfield of , and so we first prove that: Given , we have that and are finite and hence so is . Thus, every element of is algebraic over ; that is, . Since is a field, it follows that contains , and if . This proves that is indeed a subfield of .  It is clear from the definition that is an algebraic field extension.  Given a non-constant , let be one of its roots in (which exists since we assume is algebraically closed). Then is an algebraic extension and hence so is by Proposition . This proves and hence that is algebraically closed.   "
 },
@@ -6854,7 +6935,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-closure.html#prop-algebraic-elements-closed",
   "type": "Proposition",
-  "number": "17.45",
+  "number": "17.52",
   "title": "",
   "body": "  Let be a field extension with algebraically closed. Consider the set    Show that is a field.    Show that is algebraically closed.       Let . Notice that and are contained in . As , there exists some polynomial with coefficients in such that is a root. However, this polynomial also lives in , so we have algebraic. As is also algebraic, we have algebraic as well, as it is a finite extension by the . Thus and are algebraic over as well, making a field.  Let . Thus is the root of a polynomial , where . Notice that is a polynomial in as well, and thus is algebraic over this extension as well. Consider the chain of extensions As is algebraic over for all and is algebraic over we see that each step in this chain has finite degree by. By the , is finite and thus so is . Thus is algebraic over , hence , making algebraically closed.   "
 },
@@ -6863,7 +6944,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-closure.html#thm-existence-and-uniqueness-of-algebraic-closures",
   "type": "Theorem",
-  "number": "17.46",
+  "number": "17.53",
   "title": "Existence and Uniqueness of Algebraic Closures.",
   "body": "Existence and Uniqueness of Algebraic Closures   For any field , there exists an algebraic closure of . If and are two algebraic closures of the same field , then there exists a field isomorphism such that (i.e., for all ).    Fake Proof of Existence  Let be the collection of all algebraic field extensions of . Make into a poset by declaring iff . We prove has a maximal element.  Let be any totally ordered subset of . If is empty, then is an upper bound for . If is non-empty, set . Using that is totally ordered, it is not hard to see that is indeed a field. It clearly contains as a subfield and every element of it is algebraic over . So and it is an upper bound for . By , has a maximal member .  By construction is algebraic over . If were not algebraically closed, then there would be a non-trivial algebraic extension of it, by Proposition . But then is algebraic by Proposition , and this contradicts the maximality of .  Why is this only a fake proof? It's because , as we've defined it, is not a {} but rather it is something bigger than that. Zorn's Lemma only applies to po{}. How annoying!   "
 },
@@ -6881,7 +6962,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-splitting.html#def-splitting-field",
   "type": "Definition",
-  "number": "17.47",
+  "number": "17.54",
   "title": "Splitting Field.",
   "body": "Splitting Field   For a field and non-constant polynomial , a splitting field of over is a field extension such that     splits completely into linear factors in ; that is, for some , and     ; that is, is the smallest subfield of that contains and all the roots of .      "
 },
@@ -6890,16 +6971,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-splitting.html#exe-common-splitting-fields",
   "type": "Example",
-  "number": "17.48",
+  "number": "17.55",
   "title": "Examples of Splitting Fields.",
   "body": "Examples of Splitting Fields   As a silly example, if already splits into linear factors over , then itself is the splitting field of over .  The splitting field of over is .  If is any irreducible quadratic polynomial in , then the splitting field of is .  In general, given , a splitting field of is given by where are all of the roots of in .   "
 },
 {
-  "id": "remark-90",
+  "id": "remark-89",
   "level": "2",
-  "url": "sec-splitting.html#remark-90",
+  "url": "sec-splitting.html#remark-89",
   "type": "Remark",
-  "number": "17.49",
+  "number": "17.56",
   "title": "",
   "body": " More generally, we may speak of the splitting field of a list of polynomials in : it is a field extension over which each polynomial factors completely and which is generated by all the roots of all the polynomials.  Note that given a finite list , a splitting field for this list is identical to a splitting field for their product .  "
 },
@@ -6908,16 +6989,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-splitting.html#thm-properties-of-splitting-fields",
   "type": "Theorem",
-  "number": "17.50",
+  "number": "17.57",
   "title": "Properties of Splitting Fields.",
   "body": "Properties of Splitting Fields   Let be a field and a non-constant polynomial.   There exists a splitting field for over .    If is another splitting field of over , then there is a field isomorphism such that .    The degree of any splitting field of is at most where .       For (1), let be an algebraic closure of , which exists by the previous Theorem. Let be the roots of in , and set .  It is clear is a splitting field.  To prove (2), we proceed by induction on the degree of . If is linear, then the only splitting field of over is itself and so the result is clear in this case. Say and are the roots of in and , respectively, and say they are ordered so that, and are roots of the same irreducible factor of in .  By Corollary there is an isomorphism that fixes . Note that factors as in and that is the splitting field of over , and similarly factors as in and that is the splitting field of over . If we blur our eyes slightly and pretend is the identity map, we can apply the inductive hypothesis, since , to conclude that there is an isomorphism as in the statement. I leave a more rigorous argument to your imaginations.  To prove (3), we also proceed by induction on the degree of , using the same notation as in the proof of (2).  Since is a root of , we have and hence In we have with and, as before, is the splitting field of over , so that by induction . By the     "
 },
 {
-  "id": "remark-91",
+  "id": "remark-90",
   "level": "2",
-  "url": "sec-splitting.html#remark-91",
+  "url": "sec-splitting.html#remark-90",
   "type": "Remark",
-  "number": "17.51",
+  "number": "17.58",
   "title": "",
   "body": " Recall from before that we proved there exists a field extension in which has at least one root. So for some and . We can then find a field extension of in which has at least one root , and so on. In this way we build a field extension such that factors in as for some . Finally, is a splitting field of .  "
 },
@@ -6926,7 +7007,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-splitting.html#exe-splitting-fields-and-x3-2",
   "type": "Example",
-  "number": "17.52",
+  "number": "17.59",
   "title": "",
   "body": " The splitting field of over is , where . It is not hard to see that . We have since is irreducible in (by ). Since and thus , the gives that . By the Theorem, and hence . (We could also have proven this without appealing to the Theorem.)  "
 },
@@ -6935,7 +7016,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-splitting.html#exe-splitting-fields-and-x4-5x26",
   "type": "Example",
-  "number": "17.53",
+  "number": "17.60",
   "title": "",
   "body": " The splitting field of is This holds since . It is not too hard to see that the degree of this splitting field over is , far smaller than the upper bound given by the Theorem.  "
 },
@@ -6944,7 +7025,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-splitting.html#exe-splitting-fields-and-xn-1",
   "type": "Example",
-  "number": "17.54",
+  "number": "17.61",
   "title": "",
   "body": " Let . Then splits completely in and its roots are the  -th roots of . One of these is . Notice that every other -th root of is a power of this one. We thus see that is the splitting field of over . This field is called the {} of roots of 1 over . This is a somewhat special example: upon joining one of the roots of we got all the others for free. This happens in other examples too, but is certainly {} a general principle.  In particular, we see that the degree of is at most , far less than the bound of given by the Proposition above. In fact, it is at most since factors as , and hence the minimum polynomial of is a divisor of .  When is prime, then is irreducible, as we proved before, and hence it must equal the minimum polynomial of . So, in this case, the degree of is exactly , but it can be smaller than in general; for example, when , and . Note that factors as and of course .  The irreducible polynomial is known as the {}.  "
 },
@@ -6953,7 +7034,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-splitting.html#cor-porism",
   "type": "Corollary",
-  "number": "17.55",
+  "number": "17.62",
   "title": "The Porism.",
   "body": "The Porism   If is the splitting field over of an irreducible polynomial and if are any two roots of , then there is a field automorphism such that and .    We basically already proved this, but since it is of large importance, let's do so again:  Since are roots of the same irreducible polynomial, by Corollary there is an isomorphism such that and . We have two field maps, (actual inclusion) and the composition of , and they realize as the splitting field of over in two different ways. Since splitting fields are unique, an isomorphism such as exists.   "
 },
@@ -6962,7 +7043,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-splitting.html#exe-porism-and-x3-2",
   "type": "Example",
-  "number": "17.56",
+  "number": "17.63",
   "title": "",
   "body": " Let be the splitting field of over ; so .  The Porism gives that there is a field automorphism of such that . This one is clear – complex conjugation gives such an isomorphism.  It also gives there is a field automorphism of such that . This is less obvious.  "
 },
@@ -6980,16 +7061,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separable.html#def-ring-characteristic",
   "type": "Definition",
-  "number": "17.57",
+  "number": "17.64",
   "title": "Characteristic.",
   "body": "Characteristic   Let R be a commutative ring. The characteristic of , written , is the unique non-negative generator of the kernel of the unique ring homomorphism . (Recall .)  Equivalently, is the smallest positive integer such that , if such and integer exists, and otherwise.   "
 },
 {
-  "id": "remark-92",
+  "id": "remark-91",
   "level": "2",
-  "url": "sec-separable.html#remark-92",
+  "url": "sec-separable.html#remark-91",
   "type": "Remark",
-  "number": "17.58",
+  "number": "17.65",
   "title": "",
   "body": " Observe that for any integer and commutative ring , we have in (i.e., ) if and only if .  "
 },
@@ -6998,7 +7079,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separable.html#exe-charz",
   "type": "Example",
-  "number": "17.59",
+  "number": "17.66",
   "title": "<span class=\"process-math\">\\(\\char(\\Z)\\)<\/span>.",
   "body": "   and for any .  "
 },
@@ -7007,7 +7088,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separable.html#def-prime-field",
   "type": "Definition",
-  "number": "17.60",
+  "number": "17.67",
   "title": "Prime Field.",
   "body": "Prime Field   For a field its prime field is the smallest subfield of ; i.e., it is the intersection of all subfields of .   "
 },
@@ -7016,7 +7097,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separable.html#prop-characteristic-and-prime-fields",
   "type": "Proposition",
-  "number": "17.61",
+  "number": "17.68",
   "title": "Prime Fields and Characteristic.",
   "body": "Prime Fields and Characteristic   Let F be a field.   The characteristic is either or a prime number .     if and only if the prime subfield of is isomorphic to ; for a prime integer if and only if the prime subfield of is isomorphic to .       For the first assertion, consider the unique ring homomorphism . Since is a domain, the kernel of is a prime ideal (since and is a subring of ). The result holds since the only prime ideals of are and for a prime integer . (Note that this proof shows that, more generally, the characteristic of an integral domain must be either or a prime.)  For the second assertion, observe that the smallest {} of is the image of the ring map , and by the first assertion, this image is isomorphic to either or . The latter is already a field and hence it is the prime field of . In the former case, the prime subfield is isomorphic to the field of fractions of , which is .   "
 },
@@ -7025,7 +7106,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separable.html#prop-no-homomorphisms-if-different-characteristics",
   "type": "Proposition",
-  "number": "17.62",
+  "number": "17.69",
   "title": "No Homomorphisms if Different Characteristics.",
   "body": "No Homomorphisms if Different Characteristics   If and are fields such that then there exist no ring homomorphisms from to (or vice versa).    Suppose and are fields and is a ring homomorphism. Let and be the unique ring maps from to and . Since is a ring map from to , we have by the uniqueness of . Since is a field and is not the zero ring, the map is injective. Since is injective, it follows that , and hence we obtain that . By definition of characteristic, we conclude .   "
 },
@@ -7034,7 +7115,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separable.html#def-root-multiplicity",
   "type": "Definition",
-  "number": "17.63",
+  "number": "17.70",
   "title": "Root Multiplicity.",
   "body": "Root Multiplicity   For a field and a polynomial , let be an algebraic closure of and a root of . The multiplicity of in is the number of times appears in the factorization of in . (This number is independent of choice of algebraic closure by uniqueness of such closures up to isomorphism.)   "
 },
@@ -7043,7 +7124,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separable.html#def-separable-polynomial",
   "type": "Definition",
-  "number": "17.64",
+  "number": "17.71",
   "title": "Separable (Polynomial).",
   "body": "Separable (Polynomial)   Let be a field and a polynomial in . If the multiplicity of every root is , we say is a separable polynomial ; i.e. is separable provided it has no repeated roots.   "
 },
@@ -7052,7 +7133,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separable.html#def-derivative",
   "type": "Definition",
-  "number": "17.65",
+  "number": "17.72",
   "title": "Derivative.",
   "body": "Derivative   For any field and , define its derivative to be    "
 },
@@ -7061,7 +7142,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separable.html#exe-derivatives-in-characteristic-p",
   "type": "Example",
-  "number": "17.66",
+  "number": "17.73",
   "title": "Derivatives in Characteristic <span class=\"process-math\">\\(p\\)<\/span>.",
   "body": "Derivatives in Characteristic  If and for , then . So beware that non-constant polynomials can have derivatives! Observe, however, that this cannot occur in characteristic .  "
 },
@@ -7070,7 +7151,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separable.html#lem-gcd-and-field-extensions",
   "type": "Lemma",
-  "number": "17.67",
+  "number": "17.74",
   "title": "GCD and Field Extensions.",
   "body": "GCD and Field Extensions   Let be a field. For , not both of which are , recall that denotes the unique monic generator of the ideal in generated by and .   For any field extension , .    Let be an algebraic closure of . if any only if and have no common roots in .       Let . To prove (1), we note that is the unique monic polynomial such that - for some , - for soem , and - for soem . Since is a subring of , these three properties also hold when we regard as belonging to and thus by the uniqueness property, we have .   is a consequence of (1), since if two polynomials factor completely into linear factors, then they are relatively prime if and only if they have no linear factors in common, which is equivalent to their having no roots in common.    "
 },
@@ -7079,7 +7160,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separable.html#prop-criteria-for-separability",
   "type": "Proposition",
-  "number": "17.68",
+  "number": "17.75",
   "title": "Criteria for Separability.",
   "body": "Criteria for Separability   Let be field and an algebraic closure of .   Given and , the multiplicity of in is at least if and only if and .     is separable if and only if in .    If is irreducible in , then is separable if and only if .       For (1), suppose is a root of of multiplicity at least two. Then in and hence , by the Product Rule. It follows that . Conversely, suppose . Since , we have and hence . Since it follows and thus has multiplicity at least two.  For the second assertion, by (1), we have that is separable if and only if and has no common roots in . The result thus follows from the Lemma.  For the final assertion, assume is irreducible. Since the degree of is strictly less than the degree of , we have that if and only if .   "
 },
@@ -7088,7 +7169,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separable.html#exe-separability-and-x4-x3-x1",
   "type": "Example",
-  "number": "17.69",
+  "number": "17.76",
   "title": "Separability and <span class=\"process-math\">\\((x^4-x^3-x+1)\\)<\/span>.",
   "body": "Separability and   is not separable sine is a double root (it factors as ). As predicted by the Theorem, it fails to be relatively prime to its derivative, which is , since each are divisible by .   is separable in because it has 3 distinct roots in , namely . As predicted by the Theorem, it is relatively prime to its derivative .  Now interpret as belonging to . Then is not separable. As predicted by the Theorem, it is not relatively prime to its derivative, which is .  "
 },
@@ -7097,7 +7178,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separable.html#exe-zpy",
   "type": "Example",
-  "number": "17.70",
+  "number": "17.77",
   "title": "<span class=\"process-math\">\\(\\Z\/p(y)\\)<\/span>.",
   "body": " Let be a field of characteristic and assume is an element such that for all .Then is irreducible but not separable. It is not separable since in we have where . Also note that its derivative is .  It is less obvious that it is irreducible, but we can see that this is indeed the case in a specific example: Take (the field of fractions of the polynomial ring ) and let . In this case, is seen to be irreducible, by , but not separable.  "
 },
@@ -7106,7 +7187,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separable.html#cor-separability-and-characteristic-zero",
   "type": "Corollary",
-  "number": "17.71",
+  "number": "17.78",
   "title": "Separability and Characteristic Zero.",
   "body": "Separability and Characteristic Zero   If is an irreducible polynomial with coefficients in a field of characteristic , then is separable. More generally, if is irreducible of degree and , then is separable.   "
 },
@@ -7115,7 +7196,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separable.html#def-separable-field-extension",
   "type": "Definition",
-  "number": "17.72",
+  "number": "17.79",
   "title": "Separable (Field Extension).",
   "body": "Separable (Field Extension)   An algebraic field extension is called separable if for every its minimum polynomial is separable (i.e., has no repeated roots in an algebraic closure of ).   "
 },
@@ -7124,7 +7205,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separable.html#cor-separability-algebraic-extensions-and-char-zero",
   "type": "Corollary",
-  "number": "17.73",
+  "number": "17.80",
   "title": "Separability, Algebraic Extensions, and Char Zero.",
   "body": "Separability, Algebraic Extensions, and Char Zero   If , then every algebraic field extension is separable.    Suppose is an algebraic extension and let be algebraic over . Then the minimal polynomial of over has coefficients in and is of the form where . We need to show that is separable, i.e., has no repeated roots in its splitting field.  Suppose has a repeated root in some splitting field of , i.e., for some polynomial . Since is also a root of , we have . Since is an algebraic extension, is algebraic over , so . It follows that , i.e., , which means that is a repeated root of , contradicting the assumption that has no repeated roots. Hence is separable, and since was an arbitrary algebraic element of , we conclude that is a separable extension.   "
 },
@@ -7133,7 +7214,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-separable.html#exe-f-zpy-subseteq-zpz-l",
   "type": "Example",
-  "number": "17.74",
+  "number": "17.81",
   "title": "<span class=\"process-math\">\\(F = (\\Z\/p)(y) \\subseteq (\\Z\/p)(z) = L\\)<\/span>.",
   "body": " Let and be indeterminants. The extension of fields given by identifying with is not separable. Somewhat more precisely, is isomorphism to the subfield of consisting of elements of the form , with the isomorphism given by sending to .  Then is a root of the polynomial . Moreover since is the field of fractions of the PID and is a prime element of , we may apply (and Gauss) to conclude that is irreducible in . This proves that . This polynomial is not separable since in it is equal to and hence has a repeated root. (Or, you may use that its derivative is .)  "
 },
@@ -7273,9 +7354,9 @@ var ptx_lunr_docs = [
   "body": "Galois Extension   A finite extension of fields is a Galois extension if the three equivalence conditions of this theorem hold:        The extension is both normal and separable.     is the splitting field of some separable polynomial with coefficients in .     In this case it is customary to write for the group and to refer to it as the Galois group of the extension - they are exactly the same group, but the former is used only when the extension is Galois.   "
 },
 {
-  "id": "remark-93",
+  "id": "remark-92",
   "level": "2",
-  "url": "sec-galext.html#remark-93",
+  "url": "sec-galext.html#remark-92",
   "type": "Remark",
   "number": "18.15",
   "title": "",
@@ -7345,9 +7426,9 @@ var ptx_lunr_docs = [
   "body": "Intermediate Extensions are Galois   If is a (finite) Galois extension, then so is for any intermediate field .    This is immediate from the definition: If is the splitting field over of a separable polynomial , then is also the splitting field over of the same polynomial, now regarded as belonging to .   "
 },
 {
-  "id": "warning-3",
+  "id": "warning-4",
   "level": "2",
-  "url": "sec-ftgt.html#warning-3",
+  "url": "sec-ftgt.html#warning-4",
   "type": "Warning",
   "number": "18.22",
   "title": "",
@@ -7399,9 +7480,9 @@ var ptx_lunr_docs = [
   "body": "Cyclotomic Extensions Revisited  Let be a field, let be a positive integer such that does not divide , and let be the algebraic closure of . If is a primitive -th root of 1 over , then is a finite Galois extension, and is a cyclic group that is isomorphic to a subgroup of .  "
 },
 {
-  "id": "remark-94",
+  "id": "remark-93",
   "level": "2",
-  "url": "sec-ftgt.html#remark-94",
+  "url": "sec-ftgt.html#remark-93",
   "type": "Remark",
   "number": "18.28",
   "title": "",
@@ -7444,9 +7525,9 @@ var ptx_lunr_docs = [
   "body": "Set   The basic undefined term we will use is that of a set , which we take to be any collection of objects, not necessarily mathematical ones.   "
 },
 {
-  "id": "remark-95",
+  "id": "remark-94",
   "level": "2",
-  "url": "sec-sets-functions.html#remark-95",
+  "url": "sec-sets-functions.html#remark-94",
   "type": "Remark",
   "number": "A.2",
   "title": "",
@@ -7570,9 +7651,9 @@ var ptx_lunr_docs = [
   "body": "Well-defined Function   A function is well-defined if whenever and , then .   "
 },
 {
-  "id": "remark-96",
+  "id": "remark-95",
   "level": "2",
-  "url": "sec-sets-functions.html#remark-96",
+  "url": "sec-sets-functions.html#remark-95",
   "type": "Remark",
   "number": "A.16",
   "title": "",
@@ -7651,9 +7732,9 @@ var ptx_lunr_docs = [
   "body": "IASN   If , and for all , then    .     .     . If moreover is injective, then .     . If moreover is injective, then .      "
 },
 {
-  "id": "theorem-131",
+  "id": "theorem-134",
   "level": "2",
-  "url": "sec-sets-functions.html#theorem-131",
+  "url": "sec-sets-functions.html#theorem-134",
   "type": "Theorem",
   "number": "A.25",
   "title": "Containments of Images, Preimages.",
