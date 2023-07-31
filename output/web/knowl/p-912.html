@@ -11,23 +11,36 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Furthermore, since <span class="process-math">\(H\cap K\)</span> is a subgroup of both <span class="process-math">\(H\)</span> and <span class="process-math">\(K\)</span> we have by <a href="" class="xref" data-knowl="./knowl/thm-lagrange.html" title="Theorem 4.8: Lagrange's Theorem">Lagrange's Theorem</a> that <span class="process-math">\(|H\cap K|\mid \operatorname{gcd}(q,p)=1\text{,}\)</span> so that <span class="process-math">\(H\cap K=\{e_G\}\text{.}\)</span> From here it follows that</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-lagrange.html ./knowl/thm-sdp-recognition.html ./knowl/prop-ump-cyclic.html">
+<div class="para">Say I tell you</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-sunzi.html">
 \begin{equation*}
-|HK|=\frac{|H||K|}{|H\cap K|}=\frac{q\cdot p}{1}=pq=|G|
+G \cong \mathbb{Z}^{3} \times \mathbb{Z}/4 \times \mathbb{Z}/8 \times \mathbb{Z}/9 \times \mathbb{Z}/27 \times \mathbb{Z}/25.
 \end{equation*}
 </div>
-<div class="para">and so <span class="process-math">\(HK=G\text{.}\)</span> <a href="" class="xref" data-knowl="./knowl/thm-sdp-recognition.html" title="Theorem 7.26: Recognition Theorem for Internal Semidirect Products">Theorem 7.26</a> now yields that</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-lagrange.html ./knowl/thm-sdp-recognition.html ./knowl/prop-ump-cyclic.html">
+<div class="para">
+<a href="" class="xref" data-knowl="./knowl/thm-sunzi.html" title="Theorem 6.25: Sunzi's Remainder Theorem">Sunzi's Remainder Theorem</a> gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-sunzi.html">
 \begin{equation*}
-G \cong H \rtimes_\rho K \cong C_q\rtimes_\rho C_p
+\mathbb{Z}/8 \times \mathbb{Z}/27 \times \mathbb{Z}/25 \cong \mathbb{Z}/(8 \cdot 27 \cdot 25)
 \end{equation*}
 </div>
-<div class="para">for some homomorphism <span class="process-math">\(\rho: K \to \operatorname{Aut}(H)\text{,}\)</span> equivalently <span class="process-math">\(\rho: C_p \to \operatorname{Aut}(C_q)\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/prop-ump-cyclic.html" title="Proposition 3.49: UMP for Cyclic Groups">Proposition 3.49</a> to give such a homomorphism <span class="process-math">\(\rho\)</span> is equivalent to giving an element <span class="process-math">\(z\in \operatorname{Aut}(C_q)\)</span> so that <span class="process-math">\(z^p=\text{id}\text{,}\)</span> which will give <span class="process-math">\(\rho(y^j)=z^j\)</span> for <span class="process-math">\(C_p=\langle y\rangle\text{.}\)</span> Thus <span class="process-math">\(|z|\mid p\)</span> yielding that either <span class="process-math">\(|z|=1\)</span> or <span class="process-math">\(|z|=p\text{.}\)</span>
+<div class="para">and</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-sunzi.html">
+\begin{equation*}
+\mathbb{Z}/4\times \mathbb{Z}/9  \cong \mathbb{Z}/(4 \cdot 9)
+\end{equation*}
+</div>
+<div class="para">so that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-sunzi.html">
+\begin{equation*}
+G \cong \mathbb{Z}^{3} \times \mathbb{Z}/(4 \cdot 9) \times \mathbb{Z}/(8 \cdot 27 \cdot 25).
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(n_2:=(4 \cdot 9) \mid n_1:=(8 \cdot 27 \cdot 25)\text{,}\)</span> this is in invariant factor form, and hence the rank of <span class="process-math">\(A\)</span> is <span class="process-math">\(3\)</span> and the invariant factors of <span class="process-math">\(A\)</span> are <span class="process-math">\(4 \cdot 9\)</span> and <span class="process-math">\(8 \cdot 27 \cdot 25\text{.}\)</span>
 </div>
 </div>
-<span class="incontext"><a href="sec-classifications.html#p-912" class="internal">in-context</a></span>
+<span class="incontext"><a href="sec-ftfgag.html#p-912" class="internal">in-context</a></span>
 </body>
 </html>

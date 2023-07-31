@@ -12,9 +12,33 @@
 </head>
 <body class="ignore-math">
 <article class="li"><h5 class="heading">
-<span class="type">Item</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span>
+<span class="type">Item</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span>
 </h5>
-<div class="para">More generally, <span class="process-math">\(R^n\)</span> is free since <span class="process-math">\(e_1, \dots, e_n\)</span> is a basis. This is called the <dfn class="terminology">standard basis</dfn> of <span class="process-math">\(R^n\text{.}\)</span> We've already seen that <span class="process-math">\(e_1, \dots, e_n\)</span> generates <span class="process-math">\(R^n\)</span> as an <span class="process-math">\(R\)</span>-module. Suppose <span class="process-math">\(\sum r_i e_i = 0\text{.}\)</span> Then <span class="process-math">\(\begin{bmatrix} r_1 \\ \vdots \\ r_n \end{bmatrix} = \begin{bmatrix} 0 \\ \vdots \\ 0 \end{bmatrix}\)</span> and hence <span class="process-math">\(r_i = 0\)</span> for all <span class="process-math">\(i\text{.}\)</span>
-</div></article><span class="incontext"><a href="sec-free-mod.html#li-469" class="internal">in-context</a></span>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(\varphi: F^{m} \cong F^{n}\)</span> be a vector space isomorphism and let <span class="process-math">\(B\)</span> be a basis of <span class="process-math">\(F^{m}\text{.}\)</span> We claim that <span class="process-math">\(\varphi(B)\)</span> is a basis for <span class="process-math">\(F^{n}\text{.}\)</span> Indeed, if</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-dimension.html">
+\begin{equation*}
+\sum_{i=1}^{m} c_{i} \varphi\left(b_{i}\right)=0 \quad \text { then } \varphi\left(\sum_{i=1}^{m} c_{i} b_{i}\right)=0, \quad \text { so } \quad \sum_{i=1}^{m} c_{i} b_{i}=0
+\end{equation*}
+</div>
+<div class="para">since <span class="process-math">\(\varphi\)</span> is injective. But <span class="process-math">\(B\)</span> is linearly independent, so we must have <span class="process-math">\(c_{i}=0\)</span> for all <span class="process-math">\(1 \leqslant i \leqslant m\text{.}\)</span> If <span class="process-math">\(v \in F^{n}\text{,}\)</span> then since <span class="process-math">\(B\)</span> spans <span class="process-math">\(F^{m}\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-dimension.html">
+\begin{equation*}
+\varphi^{-1}(v)=\sum_{i=1}^{m} c_{i} b_{i}
+\end{equation*}
+</div>
+<div class="para">for some <span class="process-math">\(c_{i}\text{.}\)</span> Thus</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-dimension.html">
+\begin{equation*}
+v=\sum_{i=1}^{m} c_{i} \varphi\left(b_{i}\right)
+\end{equation*}
+</div>
+<div class="para">which shows <span class="process-math">\(\varphi(B)\)</span> spans <span class="process-math">\(F^{n}\text{.}\)</span> By the <a href="" class="xref" data-knowl="./knowl/thm-dimension.html" title="Theorem 12.12: Dimension Theorem">Dimension Theorem</a>, we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-dimension.html">
+\begin{equation*}
+\operatorname{dim}_{F}\left(F^{n}\right)=n=|\varphi(B)|=|B|=m.
+\end{equation*}
+</div>
+</div></article><span class="incontext"><a href="sec-vecbasis.html#li-469" class="internal">in-context</a></span>
 </body>
 </html>

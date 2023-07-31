@@ -543,9 +543,13 @@ window.MathJax = {
 <li><div class="toc-item"><a href="sec-normal-subgroups.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Normal Subgroups</span></a></div></li>
 <li>
 <div class="toc-item"><a href="sec-quotient-groups.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Quotient Groups</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-quotient-groups.html#subsec-quotients" class="internal"><span class="title">Quotient Groups</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-products-iso-thms.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Products and the Isomorphism Theorems</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-quotient-groups.html#subsec-quotients" class="internal"><span class="title">Quotient Groups</span></a></div></li>
-<li><div class="toc-item"><a href="sec-quotient-groups.html#subsec-isomorphism-thms" class="internal"><span class="title">The Isomorphism Theorems</span></a></div></li>
+<li><div class="toc-item"><a href="sec-products-iso-thms.html#subsec-isomorphism-thms" class="internal"><span class="title">The First Isomorphism Theorem</span></a></div></li>
+<li><div class="toc-item"><a href="sec-products-iso-thms.html#subsec-hk" class="internal"><span class="title">Products</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -591,7 +595,6 @@ window.MathJax = {
 <div class="toc-item"><a href="sec-dps.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Direct Products</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="sec-dps.html#subsec-external-dps-revisited" class="internal"><span class="title">Direct Products: Revisited</span></a></div></li>
-<li><div class="toc-item"><a href="sec-dps.html#subsec-HK" class="internal"><span class="title"><span class="process-math">\(HK\)</span></span></a></div></li>
 <li><div class="toc-item"><a href="sec-dps.html#subsec-internal-recognition" class="internal"><span class="title">Recognition Theorem</span></a></div></li>
 </ul>
 </li>
@@ -832,137 +835,143 @@ window.MathJax = {
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Isomorphisms</span>
 </h3>
 <blockquote class="blockquote" id="blockquote-9">
-<div class="para" id="p-253">“The test of a first-rate intelligence is the ability to hold two opposed ideas in mind at the same time and still retain the ability to function.”</div> <cite class="attribution">―F. Scott Fitzgerald</cite>
+<div class="para" id="p-256">“The test of a first-rate intelligence is the ability to hold two opposed ideas in mind at the same time and still retain the ability to function.”</div> <cite class="attribution">―F. Scott Fitzgerald</cite>
 </blockquote>
 <article class="definition definition-like" id="def-gpiso"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.9</span><span class="period">.</span><span class="space"> </span><span class="title">Group Ismorphism.</span>
-</h4> <div class="para" id="p-254">A homomorphism <span class="process-math">\(\varphi: G \to H\)</span> is called an <em class="emphasis">isomorphism</em> if there exists a homomorphism <span class="process-math">\(\phi: H \to G\)</span> such that <span class="process-math">\(\varphi \circ \phi = \operatorname{id}_H\)</span> and <span class="process-math">\(\phi \circ \varphi = \operatorname{id}_G\text{.}\)</span>
-</div> <div class="para" id="p-255">If <span class="process-math">\(\varphi:G\to H\)</span> is an isomorphism, <span class="process-math">\(G\)</span> and <span class="process-math">\(H\)</span> are called <em class="emphasis">isomorphic</em>, written <span class="process-math">\(G\cong H\text{.}\)</span> </div></article><div class="para" id="p-256">Intuitively, a group isomorphism establishes a one-to-one correspondence between the elements of two groups, such that they have exactly the same algebraic structure. This means that the groups are essentially the same, up to a relabeling of their elements.</div>
+</h4> <div class="para" id="p-257">A homomorphism <span class="process-math">\(\varphi: G \to H\)</span> is called an <em class="emphasis">isomorphism</em> if there exists a homomorphism <span class="process-math">\(\phi: H \to G\)</span> such that <span class="process-math">\(\varphi \circ \phi = \operatorname{id}_H\)</span> and <span class="process-math">\(\phi \circ \varphi = \operatorname{id}_G\text{.}\)</span>
+</div> <div class="para" id="p-258">If <span class="process-math">\(\varphi:G\to H\)</span> is an isomorphism, <span class="process-math">\(G\)</span> and <span class="process-math">\(H\)</span> are called <em class="emphasis">isomorphic</em>, written <span class="process-math">\(G\cong H\text{.}\)</span> </div></article><div class="para" id="p-259">Intuitively, a group isomorphism establishes a one-to-one correspondence between the elements of two groups, such that they have exactly the same algebraic structure. This means that the groups are essentially the same, up to a relabeling of their elements.</div>
 <article class="theorem theorem-like" id="thm-iso-def"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.10</span><span class="period">.</span><span class="space"> </span><span class="title">Equivalent Isomorphism Characterization.</span>
 </h4>
-<div class="para" id="p-257">Suppose <span class="process-math">\(\varphi: G \to H\)</span> is a group homomorphism. Then <span class="process-math">\(\varphi\)</span> an isomorphism if and only if <span class="process-math">\(\varphi\)</span> is bijective (one-to-one and onto).</div></article><article class="hiddenproof" id="proof-12"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-12"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-12"><article class="hiddenproof"><div class="para" id="p-258">We start by recalling that a function <span class="process-math">\(\alpha: X \to Y\)</span> between two sets is bijective if and only if there is a function <span class="process-math">\(\beta: Y \to X\)</span> such that <span class="process-math">\(\alpha\circ \beta= \operatorname{id}_Y\)</span> and <span class="process-math">\(\beta\circ \alpha= \operatorname{id}_X\text{.}\)</span>
-</div> <div class="para" id="p-259">The <span class="process-math">\(\Leftarrow\)</span> is thus immediate. For the <span class="process-math">\(\Rightarrow\)</span> direction, if <span class="process-math">\(\varphi\)</span> is bijective homomorphism, then it certainly has a <em class="emphasis">set-theoretic</em> two-sided inverse <span class="process-math">\(\phi\text{.}\)</span> But we need to show <span class="process-math">\(\phi\)</span> is actually a homomorphism: for <span class="process-math">\(x,y \in H\)</span> we have <span class="process-math">\(\varphi(\phi(xy)) = xy = (\phi(x))\varphi(g(y)) = \varphi(\phi(x)\phi(y))\text{.}\)</span> Since <span class="process-math">\(\varphi\)</span> is one-to-one, <span class="process-math">\(\phi(xy) = \phi(x)\phi(y)\text{.}\)</span>
+<div class="para" id="p-260">Suppose <span class="process-math">\(\varphi: G \to H\)</span> is a group homomorphism. Then <span class="process-math">\(\varphi\)</span> an isomorphism if and only if <span class="process-math">\(\varphi\)</span> is bijective (one-to-one and onto).</div></article><article class="hiddenproof" id="proof-12"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-12"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-12"><article class="hiddenproof"><div class="para" id="p-261">We start by recalling that a function <span class="process-math">\(\alpha: X \to Y\)</span> between two sets is bijective if and only if there is a function <span class="process-math">\(\beta: Y \to X\)</span> such that <span class="process-math">\(\alpha\circ \beta= \operatorname{id}_Y\)</span> and <span class="process-math">\(\beta\circ \alpha= \operatorname{id}_X\text{.}\)</span>
+</div> <div class="para" id="p-262">The <span class="process-math">\(\Leftarrow\)</span> is thus immediate. For the <span class="process-math">\(\Rightarrow\)</span> direction, if <span class="process-math">\(\varphi\)</span> is bijective homomorphism, then it certainly has a <em class="emphasis">set-theoretic</em> two-sided inverse <span class="process-math">\(\phi\text{.}\)</span> But we need to show <span class="process-math">\(\phi\)</span> is actually a homomorphism: for <span class="process-math">\(x,y \in H\)</span> we have <span class="process-math">\(\varphi(\phi(xy)) = xy = (\phi(x))\varphi(g(y)) = \varphi(\phi(x)\phi(y))\text{.}\)</span> Since <span class="process-math">\(\varphi\)</span> is one-to-one, <span class="process-math">\(\phi(xy) = \phi(x)\phi(y)\text{.}\)</span>
 </div></article></div>
 <article class="remark remark-like" id="remark-8"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.11</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-260">Moving forward, we will essentially treat <a href="" class="xref" data-knowl="./knowl/thm-iso-def.html" title="Theorem 2.10: Equivalent Isomorphism Characterization">Theorem 2.10</a> as the de-facto definition of a group isomorphism. Rather than end every proof with a reference to <a href="" class="xref" data-knowl="./knowl/thm-iso-def.html" title="Theorem 2.10: Equivalent Isomorphism Characterization">Theorem 2.10</a>, we will instead enshrine its monumental achievements of <a href="" class="xref" data-knowl="./knowl/thm-iso-def.html" title="Theorem 2.10: Equivalent Isomorphism Characterization">Theorem 2.10</a> within this remark. To alleviate some of the corresponding guilt asociated with this decision I am referencing <a href="" class="xref" data-knowl="./knowl/thm-iso-def.html" title="Theorem 2.10: Equivalent Isomorphism Characterization">Theorem 2.10</a> as many times as possible, as <a href="" class="xref" data-knowl="./knowl/thm-iso-def.html" title="Theorem 2.10: Equivalent Isomorphism Characterization">Theorem 2.10</a> is important and <a href="" class="xref" data-knowl="./knowl/thm-iso-def.html" title="Theorem 2.10: Equivalent Isomorphism Characterization">Theorem 2.10</a> should not be forgotten.</div></article><article class="example example-like" id="ex-group-iso-examples"><h4 class="heading">
+<div class="para" id="p-263">Moving forward, we will essentially treat <a href="" class="xref" data-knowl="./knowl/thm-iso-def.html" title="Theorem 2.10: Equivalent Isomorphism Characterization">Theorem 2.10</a> as the de-facto definition of a group isomorphism. Rather than end every proof with a reference to <a href="" class="xref" data-knowl="./knowl/thm-iso-def.html" title="Theorem 2.10: Equivalent Isomorphism Characterization">Theorem 2.10</a>, we will instead enshrine its monumental achievements of <a href="" class="xref" data-knowl="./knowl/thm-iso-def.html" title="Theorem 2.10: Equivalent Isomorphism Characterization">Theorem 2.10</a> within this remark. To alleviate some of the corresponding guilt asociated with this decision I am referencing <a href="" class="xref" data-knowl="./knowl/thm-iso-def.html" title="Theorem 2.10: Equivalent Isomorphism Characterization">Theorem 2.10</a> as many times as possible, as <a href="" class="xref" data-knowl="./knowl/thm-iso-def.html" title="Theorem 2.10: Equivalent Isomorphism Characterization">Theorem 2.10</a> is important and <a href="" class="xref" data-knowl="./knowl/thm-iso-def.html" title="Theorem 2.10: Equivalent Isomorphism Characterization">Theorem 2.10</a> should not be forgotten.</div></article><article class="example example-like" id="ex-group-iso-examples"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.12</span><span class="period">.</span><span class="space"> </span><span class="title">Isomorphism Examples.</span>
-</h4> <div class="para logical" id="p-261"><ol class="decimal">
-<li id="li-111"><div class="para" id="p-262">The identity map is a group isomomorphism for any group <span class="process-math">\(G\text{.}\)</span>
+</h4> <div class="para logical" id="p-264"><ol class="decimal">
+<li id="li-113"><div class="para" id="p-265">The identity map is a group isomomorphism for any group <span class="process-math">\(G\text{.}\)</span>
 </div></li>
-<li id="li-112"><div class="para" id="p-263">
-<span class="process-math">\((\Z,+)\cong(\E,+)\text{,}\)</span> where <span class="process-math">\((\E,+)\)</span> is as defined in <a href="" class="xref" data-knowl="./knowl/exe-extra-groups.html" title="Exploration 1.18: Some Extra Groups">Exploration 1.18</a>.</div></li>
-<li id="li-113"><div class="para" id="p-264"><span class="process-math">\(\displaystyle (\R,+)\cong(\R^\times,\cdot)\)</span></div></li>
-<li id="li-114"><div class="para" id="p-265">The exponential and natural logarithm maps from <a href="" class="xref" data-knowl="./knowl/ex-group-homom-examples.html" title="Example 2.3: Homormophism Examples">Example 2.3</a> are inverses, making them isomorphisms as well.</div></li>
+<li id="li-114"><div class="para" id="p-266">
+<span class="process-math">\((\Z,+)\cong(\E,+)\text{,}\)</span> where <span class="process-math">\((\E,+)\)</span> is as defined in <a href="" class="xref" data-knowl="./knowl/exe-extra-groups.html" title="Exploration 1.19: Some Extra Groups">Exploration 1.19</a>.</div></li>
+<li id="li-115"><div class="para" id="p-267"><span class="process-math">\(\displaystyle (\R,+)\cong(\R^\times,\cdot)\)</span></div></li>
+<li id="li-116"><div class="para" id="p-268">The exponential and natural logarithm maps from <a href="" class="xref" data-knowl="./knowl/ex-group-homom-examples.html" title="Example 2.3: Homormophism Examples">Example 2.3</a> are inverses, making them isomorphisms as well.</div></li>
 </ol></div></article><article class="exercise exercise-like" id="exe-isomorphic-to-opposite"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-isomorphic-to-opposite"><h4 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.13</span><span class="period">.</span><span class="space"> </span><span class="title">Opposite Day.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-isomorphic-to-opposite"><article class="exercise exercise-like"><div class="para" id="p-266">Let <span class="process-math">\(G\)</span> be a group and <span class="process-math">\(G^{op}\)</span> the <a href="" class="xref" data-knowl="./knowl/exe-opposite-group.html" title="Item: Opposite Group">Opposite Group</a> of <span class="process-math">\(G\text{.}\)</span> Then <span class="process-math">\(G\cong G^{op}\text{.}\)</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-isomorphic-to-opposite"><article class="exercise exercise-like"><div class="para" id="p-269">Let <span class="process-math">\(G\)</span> be a group and <span class="process-math">\(G^{op}\)</span> the <a href="" class="xref" data-knowl="./knowl/exe-opposite-group.html" title="Item: Opposite Group">Opposite Group</a> of <span class="process-math">\(G\text{.}\)</span> Then <span class="process-math">\(G\cong G^{op}\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-7" id="solution-7"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-7"><div class="solution solution-like"><div class="para" id="p-267">Coming soon!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-7" id="solution-7"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-7"><div class="solution solution-like"><div class="para" id="p-270">Coming soon!</div></div></div>
 </div></article></div>
 <article class="theorem theorem-like" id="thm-iso-inv"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.14</span><span class="period">.</span><span class="space"> </span><span class="title">Isomorphism Invariants.</span>
 </h4>
-<div class="para" id="p-268">Let <span class="process-math">\(G\)</span> and <span class="process-math">\(H\)</span> be groups. If <span class="process-math">\(\varphi:G\to H\)</span> is an isomorphism, then the following hold:</div> <div class="para logical" id="p-269"><ol class="decimal">
-<li id="li-115"><div class="para" id="p-270"><span class="process-math">\(\displaystyle |G|=|H|\)</span></div></li>
-<li id="li-116"><div class="para" id="p-271">
+<div class="para" id="p-271">Let <span class="process-math">\(G\)</span> and <span class="process-math">\(H\)</span> be groups. If <span class="process-math">\(\varphi:G\to H\)</span> is an isomorphism, then the following hold:</div> <div class="para logical" id="p-272"><ol class="decimal">
+<li id="li-117"><div class="para" id="p-273"><span class="process-math">\(\displaystyle |G|=|H|\)</span></div></li>
+<li id="li-118"><div class="para" id="p-274">
 <span class="process-math">\(|g|=|\varphi(g)|\)</span> for all <span class="process-math">\(g\in G\)</span> and <span class="process-math">\(|h|=|\varphi\inv(h)|\)</span> for all <span class="process-math">\(h\in H\)</span>
 </div></li>
-<li id="li-117"><div class="para" id="p-272">
+<li id="li-119"><div class="para" id="p-275">
 <span class="process-math">\(G\)</span> is abelian if and only if <span class="process-math">\(H\)</span> is abelian</div></li>
-<li id="li-118"><div class="para" id="p-273"><span class="process-math">\(\displaystyle |Z(G)|=|Z(H)|\)</span></div></li>
-<li id="li-119"><div class="para" id="p-274">
+<li id="li-120"><div class="para" id="p-276"><span class="process-math">\(\displaystyle |Z(G)|=|Z(H)|\)</span></div></li>
+<li id="li-121"><div class="para" id="p-277">
 <span class="process-math">\(G\)</span> is finitely generated if and only if <span class="process-math">\(H\)</span> is finitely generated.</div></li>
 </ol></div></article><article class="exercise exercise-like" id="exe-not-isomorphic"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-not-isomorphic"><h4 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.15</span><span class="period">.</span><span class="space"> </span><span class="title">Something's Missing.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-not-isomorphic"><article class="exercise exercise-like"><div class="para logical" id="p-275">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-not-isomorphic"><article class="exercise exercise-like"><div class="para logical" id="p-278">
 <div class="para">Justify why the following pairs of groups are <em class="emphasis">not</em> isomorphic.</div>
 <ol class="decimal">
-<li id="li-120"><div class="para" id="p-276">
+<li id="li-122"><div class="para" id="p-279">
 <span class="process-math">\(Q_8\)</span> and <span class="process-math">\(D_8\)</span>
 </div></li>
-<li id="li-121"><div class="para" id="p-277">
+<li id="li-123"><div class="para" id="p-280">
 <span class="process-math">\(\Z/6\)</span> and <span class="process-math">\(S_3\)</span>
 </div></li>
-<li id="li-122"><div class="para" id="p-278">
+<li id="li-124"><div class="para" id="p-281">
 <span class="process-math">\(D_{24}\)</span> and <span class="process-math">\(S_4\)</span>
 </div></li>
-<li id="li-123"><div class="para" id="p-279">
+<li id="li-125"><div class="para" id="p-282">
 <span class="process-math">\(\Q\)</span> and <span class="process-math">\(\Q^\times\)</span>
 </div></li>
 </ol>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-8" id="solution-8"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-8"><div class="solution solution-like"><div class="para" id="p-280">Coming soon!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-8" id="solution-8"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-8"><div class="solution solution-like"><div class="para" id="p-283">Coming soon!</div></div></div>
 </div></article></div>
-<article class="theorem theorem-like" id="thm-iso-equivalence-relation"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.16</span><span class="period">.</span><span class="space"> </span><span class="title">Isomorphisms form “Equivalence” Relation.</span>
+<article class="exercise exercise-like" id="exercise-19"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-19"><h4 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.16</span><span class="period">.</span><span class="space"> </span><span class="title">There Can Only Be One....</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-19"><article class="exercise exercise-like"><div class="para" id="p-284">All trivial groups are (canonically) isomorphic.</div></article></div>
+<article class="convention remark-like" id="convention-5"><h4 class="heading">
+<span class="type">Convention</span><span class="space"> </span><span class="codenumber">2.17</span><span class="period">.</span>
 </h4>
-<div class="para logical" id="p-281"><ol class="decimal">
-<li id="li-124"><div class="para" id="p-282"><span class="process-math">\(\displaystyle G\cong G\)</span></div></li>
-<li id="li-125"><div class="para" id="p-283">If <span class="process-math">\(G\cong H\text{,}\)</span> then <span class="process-math">\(H\cong G\)</span>
+<div class="para" id="p-285">Hence, we usually speak of <em class="emphasis">the</em> trivial group.</div></article><article class="theorem theorem-like" id="thm-iso-equivalence-relation"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.18</span><span class="period">.</span><span class="space"> </span><span class="title">Isomorphisms form “Equivalence” Relation.</span>
+</h4>
+<div class="para logical" id="p-286"><ol class="decimal">
+<li id="li-126"><div class="para" id="p-287"><span class="process-math">\(\displaystyle G\cong G\)</span></div></li>
+<li id="li-127"><div class="para" id="p-288">If <span class="process-math">\(G\cong H\text{,}\)</span> then <span class="process-math">\(H\cong G\)</span>
 </div></li>
-<li id="li-126"><div class="para" id="p-284">If <span class="process-math">\(G\cong H\)</span> and <span class="process-math">\(H\cong K\text{,}\)</span> then <span class="process-math">\(G\cong K\)</span>
+<li id="li-128"><div class="para" id="p-289">If <span class="process-math">\(G\cong H\)</span> and <span class="process-math">\(H\cong K\text{,}\)</span> then <span class="process-math">\(G\cong K\)</span>
 </div></li>
-</ol></div></article><article class="hiddenproof" id="proof-13"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-13"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-13"><article class="hiddenproof"><div class="para" id="p-285">Coming soon!</div></article></div></section><section class="subsection" id="subsec-automorphisms"><h3 class="heading hide-type">
+</ol></div></article><article class="hiddenproof" id="proof-13"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-13"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-13"><article class="hiddenproof"><div class="para" id="p-290">Coming soon!</div></article></div></section><section class="subsection" id="subsec-automorphisms"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Automorphisms</span>
 </h3>
 <blockquote class="blockquote" id="blockquote-10">
-<div class="para" id="p-286">“Self preservation is the first law of nature.”</div> <cite class="attribution">―Samuel Butler</cite>
+<div class="para" id="p-291">“Self preservation is the first law of nature.”</div> <cite class="attribution">―Samuel Butler</cite>
 </blockquote>
 <article class="definition definition-like" id="def-gp-automorphism"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.17</span><span class="period">.</span><span class="space"> </span><span class="title">Group Automorphism.</span>
-</h4> <div class="para" id="p-287">Let <span class="process-math">\(G\)</span> be a group. An isomorphism <span class="process-math">\(\varphi:G\to G\)</span> is called an <em class="emphasis">automorphism</em> of <span class="process-math">\(G\text{.}\)</span> The set of automorphisms of a group <span class="process-math">\(G\)</span> is called the <dfn class="terminology">automorphism group</dfn> of <span class="process-math">\(G\)</span> and denoted <span class="process-math">\(\Aut(G)\text{.}\)</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.19</span><span class="period">.</span><span class="space"> </span><span class="title">Group Automorphism.</span>
+</h4> <div class="para" id="p-292">Let <span class="process-math">\(G\)</span> be a group. An isomorphism <span class="process-math">\(\varphi:G\to G\)</span> is called an <em class="emphasis">automorphism</em> of <span class="process-math">\(G\text{.}\)</span> The set of automorphisms of a group <span class="process-math">\(G\)</span> is called the <dfn class="terminology">automorphism group</dfn> of <span class="process-math">\(G\)</span> and denoted <span class="process-math">\(\Aut(G)\text{.}\)</span>
 </div></article><article class="example example-like" id="ex-identity-automorphism"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.18</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.20</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-288">In <a href="" class="xref" data-knowl="./knowl/ex-group-iso-examples.html" title="Example 2.12: Isomorphism Examples">Example 2.12</a> we saw that the identity map is a group isomomorphism from a group to itself, making <span class="process-math">\(\id\)</span> an automorphism. This may prove (pun intended) useful in the following proposition.</div></article><article class="proposition theorem-like" id="prop-aut-is-group"><h4 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.19</span><span class="period">.</span><span class="space"> </span><span class="title">The Automorphism Group.</span>
+<div class="para" id="p-293">In <a href="" class="xref" data-knowl="./knowl/ex-group-iso-examples.html" title="Example 2.12: Isomorphism Examples">Example 2.12</a> we saw that the identity map is a group isomomorphism from a group to itself, making <span class="process-math">\(\id\)</span> an automorphism. This may prove (pun intended) useful in the following proposition.</div></article><article class="proposition theorem-like" id="prop-aut-is-group"><h4 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.21</span><span class="period">.</span><span class="space"> </span><span class="title">The Automorphism Group.</span>
 </h4>
-<div class="para" id="p-289">The set of automorphisms of <span class="process-math">\(G\text{,}\)</span> denoted <span class="process-math">\(\operatorname{Aut}(G)\text{,}\)</span> is a group under composition. </div></article><article class="hiddenproof" id="proof-14"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-14"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-14"><article class="hiddenproof"><div class="para" id="p-290">Coming soon!</div></article></div>
+<div class="para" id="p-294">The set of automorphisms of <span class="process-math">\(G\text{,}\)</span> denoted <span class="process-math">\(\operatorname{Aut}(G)\text{,}\)</span> is a group under composition. </div></article><article class="hiddenproof" id="proof-14"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-14"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-14"><article class="hiddenproof"><div class="para" id="p-295">Coming soon!</div></article></div>
 <article class="exercise exercise-like" id="exe-complex-conjugation-automorphism"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-complex-conjugation-automorphism"><h4 class="heading">
-<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.20</span><span class="period">.</span><span class="space"> </span><span class="title">Complex Conjugation Automorphism.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-complex-conjugation-automorphism"><article class="exercise exercise-like"><div class="para" id="p-291">Prove that the function <span class="process-math">\(\phi:\C\to\C\)</span> given by <span class="process-math">\(\phi(a+bi)=a-bi\)</span> is an automorphism.</div>
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.22</span><span class="period">.</span><span class="space"> </span><span class="title">Complex Conjugation Automorphism.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-complex-conjugation-automorphism"><article class="exercise exercise-like"><div class="para" id="p-296">Prove that the function <span class="process-math">\(\phi:\C\to\C\)</span> given by <span class="process-math">\(\phi(a+bi)=a-bi\)</span> is an automorphism.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-9" id="solution-9"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-9"><div class="solution solution-like"><div class="para" id="p-292">Coming soon!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-9" id="solution-9"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-9"><div class="solution solution-like"><div class="para" id="p-297">Coming soon!</div></div></div>
 </div></article></div>
 <article class="exercise exercise-like" id="ex-z-aut"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-z-aut"><h4 class="heading">
-<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.21</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\Aut(\Z)\)</span>.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-z-aut"><article class="exercise exercise-like"><div class="para" id="p-293"><span class="process-math">\(\Aut(\Z)\cong\Z/2\)</span></div>
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.23</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(\Aut(\Z)\)</span>.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-z-aut"><article class="exercise exercise-like"><div class="para" id="p-298"><span class="process-math">\(\Aut(\Z)\cong\Z/2\)</span></div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-10" id="solution-10"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-10"><div class="solution solution-like"><div class="para" id="p-294">Coming soon!</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-10" id="solution-10"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-10"><div class="solution solution-like"><div class="para" id="p-299">Coming soon!</div></div></div>
 </div></article></div>
 <article class="remark remark-like" id="remark-9"><h4 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.22</span><span class="period">.</span>
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.24</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-295">Notice that we have actually shown that the composition of automorphisms is an automorphism, both through <a href="" class="xref" data-knowl="./knowl/thm-iso-equivalence-relation.html" title='Theorem 2.16: Isomorphisms form "Equivalence" Relation'>Theorem 2.16</a> (as automorphisms are isomorphisms) and <a href="" class="xref" data-knowl="./knowl/prop-aut-is-group.html" title="Proposition 2.19: The Automorphism Group">Proposition 2.19</a> (as groups are closed under their operation)</div></article><div class="para" id="p-296">Automorphism groups may also give us information about whether or not our group is abelian.</div>
+<div class="para" id="p-300">Notice that we have actually shown that the composition of automorphisms is an automorphism, both through <a href="" class="xref" data-knowl="./knowl/thm-iso-equivalence-relation.html" title='Theorem 2.18: Isomorphisms form "Equivalence" Relation'>Theorem 2.18</a> (as automorphisms are isomorphisms) and <a href="" class="xref" data-knowl="./knowl/prop-aut-is-group.html" title="Proposition 2.21: The Automorphism Group">Proposition 2.21</a> (as groups are closed under their operation)</div></article><div class="para" id="p-301">Automorphism groups may also give us information about whether or not our group is abelian.</div>
 <article class="exercise exercise-like" id="exe-inverse-map-and-abelian"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-inverse-map-and-abelian"><h4 class="heading">
-<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.23</span><span class="period">.</span><span class="space"> </span><span class="title">Abelian Groups and Automorphisms.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-inverse-map-and-abelian"><article class="exercise exercise-like"><div class="para logical" id="p-297">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.25</span><span class="period">.</span><span class="space"> </span><span class="title">Abelian Groups and Automorphisms.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-inverse-map-and-abelian"><article class="exercise exercise-like"><div class="para logical" id="p-302">
 <div class="para">Let <span class="process-math">\(G\)</span> be a group.</div>
 <ol class="decimal">
-<li id="li-127"><div class="para" id="p-298">The map <span class="process-math">\(\varphi:G\to G\)</span> given by <span class="process-math">\(\varphi(a)=a^{-1}\)</span> for all <span class="process-math">\(a\in G\)</span> is an automorphism if and only if <span class="process-math">\(G\)</span> is abelian.</div></li>
-<li id="li-128"><div class="para" id="p-299">If <span class="process-math">\(\Aut(G)=\{e\}\)</span> then <span class="process-math">\(G\)</span> is abelian and every non-identity element of <span class="process-math">\(G\)</span> has order <span class="process-math">\(2\text{.}\)</span>
+<li id="li-129"><div class="para" id="p-303">The map <span class="process-math">\(\varphi:G\to G\)</span> given by <span class="process-math">\(\varphi(a)=a^{-1}\)</span> for all <span class="process-math">\(a\in G\)</span> is an automorphism if and only if <span class="process-math">\(G\)</span> is abelian.</div></li>
+<li id="li-130"><div class="para" id="p-304">If <span class="process-math">\(\Aut(G)=\{e\}\)</span> then <span class="process-math">\(G\)</span> is abelian and every non-identity element of <span class="process-math">\(G\)</span> has order <span class="process-math">\(2\text{.}\)</span>
 </div></li>
 </ol>
 </div></article></div>
 <article class="definition definition-like" id="def-inner-automorphisms"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.24</span><span class="period">.</span><span class="space"> </span><span class="title">Inner Automorphism.</span>
-</h4> <div class="para" id="p-300">Let <span class="process-math">\(G\)</span> be a group and <span class="process-math">\(x\in G\text{.}\)</span> The function <span class="process-math">\(\psi_x:G\to G\)</span> defined by <span class="process-math">\(\psi_x(a)=xax^{-1}\)</span> is called the <em class="emphasis">inner automorphism</em> of <span class="process-math">\(G\)</span> induced by <span class="process-math">\(x\text{.}\)</span> The set of <em class="emphasis">inner automorphisms</em> of <span class="process-math">\(G\)</span> is denoted <span class="process-math">\(\Inn(G)=\{\psi_x\mid x\in G\}\text{.}\)</span>
-</div></article><div class="para" id="p-301">Let's make sure this is indeed an automorphism to avoid any potential awkwardness down the line.</div>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.26</span><span class="period">.</span><span class="space"> </span><span class="title">Inner Automorphism.</span>
+</h4> <div class="para" id="p-305">Let <span class="process-math">\(G\)</span> be a group and <span class="process-math">\(x\in G\text{.}\)</span> The function <span class="process-math">\(\psi_x:G\to G\)</span> defined by <span class="process-math">\(\psi_x(a)=xax^{-1}\)</span> is called the <em class="emphasis">inner automorphism</em> of <span class="process-math">\(G\)</span> induced by <span class="process-math">\(x\text{.}\)</span> The set of <em class="emphasis">inner automorphisms</em> of <span class="process-math">\(G\)</span> is denoted <span class="process-math">\(\Inn(G)=\{\psi_x\mid x\in G\}\text{.}\)</span>
+</div></article><div class="para" id="p-306">Let's make sure this is indeed an automorphism to avoid any potential awkwardness down the line.</div>
 <article class="proposition theorem-like" id="prop-conjugation-automorphism"><h4 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.25</span><span class="period">.</span><span class="space"> </span><span class="title">The Conjugation Automorphism.</span>
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.27</span><span class="period">.</span><span class="space"> </span><span class="title">The Conjugation Automorphism.</span>
 </h4>
-<div class="para" id="p-302">Let <span class="process-math">\(G\)</span> be a group and <span class="process-math">\(x\in G\text{.}\)</span> Then <span class="process-math">\(\psi_x\in \operatorname{Aut}(G)\)</span> for all <span class="process-math">\(x\in G\text{.}\)</span>
-</div></article><article class="hiddenproof" id="proof-15"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-15"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-15"><article class="hiddenproof"><div class="para" id="p-303">Notice <span class="process-math">\(\psi_g(xy) = gxyg^{-1} = gxg^{-1} gyg^{-1} = \psi_g(x) \psi_g(y)\text{,}\)</span> proving that <span class="process-math">\(c_g\)</span> is a homomorhism from <span class="process-math">\(G\)</span> to itself.</div> <div class="para" id="p-304">Observe that for any <span class="process-math">\(g, h \in G\text{,}\)</span> we have <span class="process-math">\(\psi_g \circ \psi_h = \psi_{gh}\)</span> since <span class="process-math">\(\psi_g(c_h(x)) = ghxh^{-1} g^{-1} = ghx(gh)^{-1} = \psi_{gh}(x)\text{.}\)</span> Also, <span class="process-math">\(\psi_e = \operatorname{id}_G\text{,}\)</span> which is obvious. It follows that <span class="process-math">\(\psi_g \circ \psi_{g^{-1}} = \operatorname{id}_G\)</span> and <span class="process-math">\(\psi_{g^{-1}} \circ \psi_g = \operatorname{id}_G\text{.}\)</span> This proves <span class="process-math">\(\psi_g\)</span> has a two-sided inveerse and hence is an isomorphism. In fact, it shows that <span class="process-math">\((\psi_g)^{-1} = \psi_{g^{-1}}\text{.}\)</span>
+<div class="para" id="p-307">Let <span class="process-math">\(G\)</span> be a group and <span class="process-math">\(x\in G\text{.}\)</span> Then <span class="process-math">\(\psi_x\in \operatorname{Aut}(G)\)</span> for all <span class="process-math">\(x\in G\text{.}\)</span>
+</div></article><article class="hiddenproof" id="proof-15"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-15"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-15"><article class="hiddenproof"><div class="para" id="p-308">Notice <span class="process-math">\(\psi_g(xy) = gxyg^{-1} = gxg^{-1} gyg^{-1} = \psi_g(x) \psi_g(y)\text{,}\)</span> proving that <span class="process-math">\(c_g\)</span> is a homomorhism from <span class="process-math">\(G\)</span> to itself.</div> <div class="para" id="p-309">Observe that for any <span class="process-math">\(g, h \in G\text{,}\)</span> we have <span class="process-math">\(\psi_g \circ \psi_h = \psi_{gh}\)</span> since <span class="process-math">\(\psi_g(c_h(x)) = ghxh^{-1} g^{-1} = ghx(gh)^{-1} = \psi_{gh}(x)\text{.}\)</span> Also, <span class="process-math">\(\psi_e = \operatorname{id}_G\text{,}\)</span> which is obvious. It follows that <span class="process-math">\(\psi_g \circ \psi_{g^{-1}} = \operatorname{id}_G\)</span> and <span class="process-math">\(\psi_{g^{-1}} \circ \psi_g = \operatorname{id}_G\text{.}\)</span> This proves <span class="process-math">\(\psi_g\)</span> has a two-sided inveerse and hence is an isomorphism. In fact, it shows that <span class="process-math">\((\psi_g)^{-1} = \psi_{g^{-1}}\text{.}\)</span>
 </div></article></div>
 <article class="remark remark-like" id="remark-10"><h4 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.26</span><span class="period">.</span>
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.28</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-305">There is indeed a notion of “outer automorphisms” as well, though we currently lack the tools to define them rigorously.</div></article></section></section></div>
+<div class="para" id="p-310">There is indeed a notion of “outer automorphisms” as well, though we currently lack the tools to define them rigorously.</div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-gphoms.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="ch-subgroup-cyclic.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

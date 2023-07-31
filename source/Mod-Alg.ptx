@@ -319,9 +319,10 @@
     </latex-image-preamble>
 
     <rename element="insight">Mark</rename>  
-    <rename element="investigation">Foreshadowing</rename>  
-    <rename element="inlineexercise">Exploration</rename>
+    <rename element="investigation">Exploreation</rename>  
+    <rename element="inlineexercise">Exercise</rename>
     <rename element="exploration">Discussion</rename>
+    <rename element="activity">Problem</rename>
     <rename element="heuristic">Vague Semidefinition</rename>
 
   </docinfo>
@@ -913,6 +914,26 @@
                 <fn>To jump ahead and discover what those are, see: <xref ref="def-field"/>.</fn>
               </p>
             </remark>
+
+            <exercise><title>Not Quite Groups</title>
+              <statement>
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        The natural numbers <m>\N</m> do <em>not</em> form a group with respect to addition.
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        The rational numbers <m>\Q</m> do <em>not</em> form a group with respect to multiplication.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+            </exercise>
 
             <p>
               The following example illustrates a few important examples of something called a <xref text="title" ref="def-group-of-units"/>, which is defined explicitely in terms of rings (whatever those are) in the aptly named <xref text="title" ref="part-rings"/>.
@@ -2053,11 +2074,7 @@
           </subsection>
           
         </section>
-      
-      </chapter> 
 
-      <chapter xml:id="ch-gp-homs"><title>Homomorphisms and Isomorphisms</title>
-    
         <section xml:id="sec-gphoms"><title>Group Homomorphisms</title>
 
           <subsection xml:id="subsec-homom"><title>Homomorphism? I Barely Know 'em!</title>
@@ -2313,10 +2330,6 @@
             </exercise>
 
           </subsection>
-    
-        </section>
-    
-        <section xml:id="sec-gpisos"><title>Group Isomorphisms</title>
 
           <subsection xml:id="subsec-isomorphisms"><title>Isomorphisms</title>
 
@@ -2443,7 +2456,7 @@
               </p>
             </exercise>
             -->
-      
+
             <theorem xml:id="thm-iso-inv"><title>Isomorphism Invariants</title>
               <statement>
                 <p>
@@ -2516,6 +2529,20 @@
                 </p>
               </solution>
             </exercise>
+
+            <exercise><title>There Can Only Be One...</title>
+              <statement>
+                <p>
+                  All trivial groups are (canonically) isomorphic.
+                </p>
+              </statement>
+            </exercise>
+
+            <convention>
+              <p>
+                Hence, we usually speak of <em>the</em> trivial group.
+              </p>
+            </convention>
 
             <theorem xml:id="thm-iso-equivalence-relation"><title>Isomorphisms form <q>Equivalence</q> Relation</title>
               <statement>
@@ -2698,8 +2725,8 @@
           </subsection>
     
         </section>
-    
-      </chapter>
+      
+      </chapter> 
 
       <chapter xml:id="ch-subgroup-cyclic"><title>Subgroups and Cyclic Groups</title>
         
@@ -4277,6 +4304,13 @@
             <attribution>Maya Angelou</attribution>
           </blockquote>
 
+          <p>
+            Sometimes it is convenient to ignore a certain subobject of a given object and to focus on the remaining properties. 
+            Formally, this is done by taking quotients. 
+            In contrast to the theory of vector spaces, where the quotient of any vector space by any subspace again naturally forms a vector space, we have to be a little bit more careful in the world of groups. 
+            Only special subgroups lead to quotient <em>groups</em>:
+          </p>
+
           <definition xml:id="def-normal-subgroup"><title>Normal Subgroup</title>
             <statement>
               <p>
@@ -4779,8 +4813,12 @@
             </theorem>
 
           </subsection>
+          
+        </section>
 
-          <subsection xml:id="subsec-isomorphism-thms"><title>The Isomorphism Theorems</title>
+        <section xml:id="sec-products-iso-thms"><title>Products and the Isomorphism Theorems</title>
+
+          <subsection xml:id="subsec-isomorphism-thms"><title>The First Isomorphism Theorem</title>
 
             <blockquote>
               <p>
@@ -4915,7 +4953,198 @@
                   </p>
               </statement>
             </exercise>
+            
+          </subsection>
+
+          <subsection xml:id="subsec-hk"><title>Products</title>
+
+            <blockquote>
+              <p>
+                <q>
+                  Outside of a dog, a book is a man's best friend. 
+                  Inside of a dog it's too dark to read.
+                </q>
+              </p>
+              <attribution>Groucho Marx</attribution>
+            </blockquote>
+
+            <exercise xml:id="exe-trivially-intersecting-normal-subgroups"><title>Trivially Intersecting Normal Subgroups</title>
+              <statement>
+                <p>
+                  Let <m>H</m> and <m>K</m> be normal subgroups of a group <m>G</m> such that <m>H\cap K=\{1\}</m>. 
+                  Prove that <m>xy=yx</m> for all <m>x\in H, y\in K</m>.
+                </p>
+              </statement>
+            </exercise>
+
+            <definition xml:id="def-HK"><title>Group Product (<m>HK</m>)</title>
+              <statement>
+                <p>
+                  Let <m>H</m> and <m>K</m> be subgroups of a group and define the set 
+                  <me>
+                    HK = \{hk \mid h \in H, k\in K\}.
+                  </me>
+                  <notation><usage><m>HK</m></usage><description>the product of the groups <m>H</m> and <m>K</m></description></notation> 
+                  <idx><h><m>HK</m></h></idx>         
+                </p>
+              </statement>
+            </definition>
+
+           <warning><title>Product vs. Direct Product</title>
+            <p>
+              The product and direct product
+              <fn>Whatever that is</fn>
+              are not always the same. 
+              We will explore this later in <xref ref="ch-group-products"/>
+            </p>
+           </warning>
       
+            <theorem xml:id="hk-normal"><title>Product Subgroup Criteria</title>
+              <statement>
+                <p>
+                  Let <m>G</m> be a group with subgroups <m>H, K</m>. 
+                  Recall the notation 
+                  <me>
+                    HK=\{hk \mid h\in H, k\in K\}.
+                  </me> 
+                  <ol>
+                    <li>
+                      <p>
+                        <m>HK\leq G</m> if and only if <m>HK=KH</m>. 
+                      </p>
+                    </li>
+        
+                    <li>
+                      <p>
+                        If either one of <m>H</m> or <m>K</m> is a normal subgroup of <m>G</m>, then <m>HK\leq G</m> and <m>HK=KH=\langle H\cup K\rangle</m>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+            </theorem>
+
+            <theorem xml:id="thm-hk-order"><title>Product Order</title>
+              <statement>
+                <p>
+                  For two finite subgroups <m>H,K\leq G</m>, <m>|HK|=\frac{|H|\cdot|K|}{|H\cap K|}</m>.
+                </p>
+              </statement>
+            </theorem>
+
+            <theorem xml:id="thm-hn-normal"><title>Products and Normality</title>
+              <statement>
+                <p>
+                  Let <m>G</m> be a group, <m>H \leq G</m> and <m>N \nsg G</m>. Then 
+                  <ol>
+                    <li>
+                      <p>
+                        <m>HN \leq G</m>,
+                      </p>
+                    </li>
+  
+                    <li>
+                      <p>
+                        <m>N \cap H \nsg H</m>, and
+                      </p>
+                    </li>
+  
+                    <li>
+                      <p>
+                        <m>N \nsg HN</m>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+            </theorem>
+  
+            <warning>
+              <p>
+                The identity <m>HK=KH</m> does not mean that every pair of elements from <m>H</m> and <m>K</m> must commute.
+              </p>
+            </warning>
+
+            <example xml:id="ex-hk-non-commuting-elements"><title><m>HK=KH</m> but not Abelian</title>
+              <statement>
+                <p>
+                  In <m>D_{2n}</m>, let <m>H=\langle s\rangle</m> and <m>K=\langle r\rangle</m>. 
+                  Then <m>HK=KH=D_{2n}</m> but <m>r</m> and <m>s</m> do not commute. 
+                  The fact that <m>HK=KH</m> can also be justified by observing that <m>K\nsg D_{2n}</m>.
+                </p>
+              </statement>
+            </example>
+
+            <p>
+              The second isomorphism theorem, also known as the diamond isomorphism theorem or the modular law, provides information about the structure of subgroups and their intersections.
+            </p>
+      
+            <theorem xml:id="thm-sit-group"><title>Second Isomorphism Theorem</title>          
+              <statement>
+                <p>
+                  Let <m>G</m> be a group, <m>H \leq G</m> and <m>N \unlhd G</m>. 
+                  Then there is an isomorphism
+                  <me>
+                    \frac{H}{N \cap H} \xrightarrow{\cong} \frac{HN}{N}
+                  </me> 
+                  given by 
+                  <me>
+                    h \cdot (N \cap H) \mapsto hN.
+                  </me>
+                </p>
+              </statement>
+      
+              <proof>
+                <p>
+                    The first two assertions are left as exercises and since <m>N \unlhd G</m> we have <m>N \unlhd HN</m>. 
+                    Define a homomorphism <m>\varphi: H \to \frac{HN}{N}</m> by <m>\varphi(h) = hN</m>. 
+                    This is a homomorphism since it is the composition <xref provisional="cite"/> 
+                  <me>
+                    \varphi:H \hookrightarrow HN \xrightarrow{{\pi}} \frac{HN}{N}
+                  </me> 
+                  of homomorphisms. 
+                  <m>\varphi</m> is onto since for all <m>h,n</m> we have <m>hnN = hN = \varphi(h)</m>. 
+                  The kernel of <m>\varphi</m> is <m>\operatorname{ker}(\varphi)=\{h \mid hN = N\} = H \cap N</m>. 
+                  The result thus follows from the <xref text="title" ref="thm-fit-group"/>.
+                </p>
+              </proof>
+            </theorem>
+      
+            <p>
+              The third isomorphism theorem, also known as the factor or quotient theorem, gives a relationship between normal subgroups of a group and their quotient groups.
+            </p>
+            
+            <theorem xml:id="thm-tit-group"><title>Third Isomorphism Theorem</title>     
+              <statement>
+                <p>
+                  Suppose <m>G</m> is a group, <m>M \leq N \leq G</m>, <m>M \unlhd G</m> and <m>N \unlhd G</m>. 
+                  Then <m>M \unlhd N</m>, <m>N/M \unlhd G/M</m> and there is an isomorphism 
+                  <me>
+                    (G/M)/(N/M) \xrightarrow{\cong} G/N
+                  </me>
+                  given by sending the coset of <m>(G/M)/(N/M)</m> represented by <m>gM</m> to <m>gN</m>.
+                </p>
+              </statement>
+      
+              <proof>
+                <p>
+                  The first two assertions are immediate from the definitions.
+                </p>
+      
+                <p>
+                  The kernel of the canonical map <m>{\pi}: G \twoheadrightarrow G/N</m> contains <m>M</m> and so by <xref ref="thm-ump-quotient"/> we get an induced homomorhism 
+                  <me>
+                    \phi: G/M \to G/N
+                  </me>
+                  with <m>\phi(gM) = {\pi}(g) = gN</m>. Moreover, we know 
+                  <me>
+                    \operatorname{Ker}(\phi) = \operatorname{Ker}({\pi})/M = N/M.
+                  </me> 
+                  Finally apply the <xref text="title" ref="thm-fit-group"/> to <m>\phi</m>.
+                </p>
+              </proof>
+            </theorem>
+
             <theorem xml:id="thm-lattice-iso-group"><title>The Lattice Isomorphism Theorem</title>
               <statement>
                 <p>
@@ -5059,9 +5288,9 @@
                 </p>
               </proof>
             </theorem>
-            
+              
           </subsection>
-          
+            
         </section>
         
       </chapter>
@@ -6607,218 +6836,6 @@
             
           </subsection>
 
-          <subsection xml:id="subsec-HK"><title><m>HK</m></title>
-
-            <blockquote>
-              <p>
-                <q>
-                  Outside of a dog, a book is a man's best friend. 
-                  Inside of a dog it's too dark to read.
-                </q>
-              </p>
-              <attribution>Groucho Marx</attribution>
-            </blockquote>
-
-            <exercise xml:id="exe-trivially-intersecting-normal-subgroups"><title>Trivially Intersecting Normal Subgroups</title>
-              <statement>
-                <p>
-                  Let <m>H</m> and <m>K</m> be normal subgroups of a group <m>G</m> such that <m>H\cap K=\{1\}</m>. 
-                  Prove that <m>xy=yx</m> for all <m>x\in H, y\in K</m>.
-                </p>
-              </statement>
-            </exercise>
-
-            <definition xml:id="def-HK"><title><m>HK</m></title>
-              <statement>
-                <p>
-                  Let <m>H</m> and <m>K</m> be subgroups of a group and define the set 
-                  <me>
-                    HK = \{hk \mid h \in H, k\in K\}.
-                  </me>
-                  <notation><usage><m>HK</m></usage><description>I wish this had a name other than "HK"</description></notation> 
-                  <idx><h><m>HK</m></h></idx>         
-                </p>
-              </statement>
-            </definition>
-
-            <exploration>
-              <p>
-                There has to be a better name for this, right? 
-                I can't think of one, but maybe you can. 
-                Discuss.
-              </p>
-            </exploration>
-      
-            <theorem xml:id="hk-normal"><title><m>HK</m> Subgroup Criteria</title>
-              <statement>
-                <p>
-                  Let <m>G</m> be a group with subgroups <m>H, K</m>. 
-                  Recall the notation 
-                  <me>
-                    HK=\{hk \mid h\in H, k\in K\}.
-                  </me> 
-                  <ol>
-                    <li>
-                      <p>
-                        <m>HK\leq G</m> if and only if <m>HK=KH</m>. 
-                      </p>
-                    </li>
-        
-                    <li>
-                      <p>
-                        If either one of <m>H</m> or <m>K</m> is a normal subgroup of <m>G</m>, then <m>HK\leq G</m> and <m>HK=KH=\langle H\cup K\rangle</m>.
-                      </p>
-                    </li>
-                  </ol>
-                </p>
-              </statement>
-            </theorem>
-
-            <theorem xml:id="thm-hk-order"><title>Order of <m>HK</m></title>
-              <statement>
-                <p>
-                  For two finite subgroups <m>H,K\leq G</m>, <m>|HK|=\frac{|H|\cdot|K|}{|H\cap K|}</m>.
-                </p>
-              </statement>
-            </theorem>
-
-            <theorem xml:id="thm-hn-normal"><title>HK and Normality</title>
-              <statement>
-                <p>
-                  Let <m>G</m> be a group, <m>H \leq G</m> and <m>N \nsg G</m>. Then 
-                  <ol>
-                    <li>
-                      <p>
-                        <m>HN \leq G</m>,
-                      </p>
-                    </li>
-  
-                    <li>
-                      <p>
-                        <m>N \cap H \nsg H</m>, and
-                      </p>
-                    </li>
-  
-                    <li>
-                      <p>
-                        <m>N \nsg HN</m>.
-                      </p>
-                    </li>
-                  </ol>
-                </p>
-              </statement>
-            </theorem>
-  
-            <warning>
-              <p>
-                The identity <m>HK=KH</m> does not mean that every pair of elements from <m>H</m> and <m>K</m> must commute.
-              </p>
-            </warning>
-
-            <example xml:id="ex-hk-non-commuting-elements"><title><m>HK=KH</m> but not Abelian</title>
-              <statement>
-                <p>
-                  In <m>D_{2n}</m>, let <m>H=\langle s\rangle</m> and <m>K=\langle r\rangle</m>. 
-                  Then <m>HK=KH=D_{2n}</m> but <m>r</m> and <m>s</m> do not commute. 
-                  The fact that <m>HK=KH</m> can also be justified by observing that <m>K\nsg D_{2n}</m>.
-                </p>
-              </statement>
-            </example>
-
-            <p>
-              The second isomorphism theorem, also known as the diamond isomorphism theorem or the modular law, provides information about the structure of subgroups and their intersections.
-            </p>
-      
-            <theorem xml:id="thm-sit-group"><title>Second Isomorphism Theorem</title>          
-              <statement>
-                <p>
-                  Let <m>G</m> be a group, <m>H \leq G</m> and <m>N \unlhd G</m>. 
-                  Then there is an isomorphism
-                  <me>
-                    \frac{H}{N \cap H} \xrightarrow{\cong} \frac{HN}{N}
-                  </me> 
-                  given by 
-                  <me>
-                    h \cdot (N \cap H) \mapsto hN.
-                  </me>
-                </p>
-              </statement>
-      
-              <proof>
-                <p>
-                    The first two assertions are left as exercises and since <m>N \unlhd G</m> we have <m>N \unlhd HN</m>. 
-                    Define a homomorphism <m>\varphi: H \to \frac{HN}{N}</m> by <m>\varphi(h) = hN</m>. 
-                    This is a homomorphism since it is the composition <xref provisional="cite"/> 
-                  <me>
-                    \varphi:H \hookrightarrow HN \xrightarrow{{\pi}} \frac{HN}{N}
-                  </me> 
-                  of homomorphisms. 
-                  <m>\varphi</m> is onto since for all <m>h,n</m> we have <m>hnN = hN = \varphi(h)</m>. 
-                  The kernel of <m>\varphi</m> is <m>\operatorname{ker}(\varphi)=\{h \mid hN = N\} = H \cap N</m>. 
-                  The result thus follows from the <xref text="title" ref="thm-fit-group"/>.
-                </p>
-              </proof>
-            </theorem>
-      
-            <p>
-              The third isomorphism theorem, also known as the factor or quotient theorem, gives a relationship between normal subgroups of a group and their quotient groups.
-            </p>
-            
-            <theorem xml:id="thm-tit-group"><title>Third Isomorphism Theorem</title>     
-              <statement>
-                <p>
-                  Suppose <m>G</m> is a group, <m>M \leq N \leq G</m>, <m>M \unlhd G</m> and <m>N \unlhd G</m>. 
-                  Then <m>M \unlhd N</m>, <m>N/M \unlhd G/M</m> and there is an isomorphism 
-                  <me>
-                    (G/M)/(N/M) \xrightarrow{\cong} G/N
-                  </me>
-                  given by sending the coset of <m>(G/M)/(N/M)</m> represented by <m>gM</m> to <m>gN</m>.
-                </p>
-              </statement>
-      
-              <proof>
-                <p>
-                  The first two assertions are immediate from the definitions.
-                </p>
-      
-                <p>
-                  The kernel of the canonical map <m>{\pi}: G \twoheadrightarrow G/N</m> contains <m>M</m> and so by <xref ref="thm-ump-quotient"/> we get an induced homomorhism 
-                  <me>
-                    \phi: G/M \to G/N
-                  </me>
-                  with <m>\phi(gM) = {\pi}(g) = gN</m>. Moreover, we know 
-                  <me>
-                    \operatorname{Ker}(\phi) = \operatorname{Ker}({\pi})/M = N/M.
-                  </me> 
-                  Finally apply the <xref text="title" ref="thm-fit-group"/> to <m>\phi</m>.
-                </p>
-              </proof>
-            </theorem>
-
-            <exercise xml:id="exe-hk-sylow"><title><m>HK</m> and Sylow Subgroups</title>
-              <statement>
-                <p>
-                  Let <m>G</m> be a finite group and <m>K</m> a normal subgroup of <m>G</m>. 
-                  Let <m>P</m> be a Sylow <m>p</m>-subgroup of <m>K</m> (for some prime <m>p</m> dividing the order of <m>K</m>). 
-                  Prove that <m>G=KN_G(P)</m>.
-                </p>
-              </statement>
-
-              <hint>
-                <p>
-                  Let <m>g\in G</m>. Then <m>gPg^{-1}</m> is a Sylow <m>p</m>-subgroup of <m>K</m> and hence conjugate in <m>K</m> to <m>P</m>.
-                </p>
-              </hint>
-
-              <solution>
-                <p>
-                  As in the hint, for <m>g \in G</m>, we have <m>gPg\inv = kPk\inv</m> for some <m>k \in K</m>. Thus, <m>(k\inv g)P(k\inv g)\inv = P</m>, which means <m>k\inv g \in N_G(P)</m>. Hence, <m>g \in KN_G(P)</m>.
-                </p>
-              </solution>
-              
-            </exercise>
-          </subsection>
-
           <subsection xml:id="subsec-internal-recognition"><title>Recognition Theorem</title>
 
             <blockquote>
@@ -7341,11 +7358,128 @@
             </theorem>
           </subsection>
 
-        </section>
+          <subsection xml:id="subsec-order-pq"><title>Groups of Order <m>pq</m></title>
+  
+            <blockquote>
+              <p>
+                <q>
+                  I did not know I was in my prime until afterwards.
+                </q>
+              </p>
+              <attribution>Mason Cooley</attribution>
+            </blockquote>
+  
+            <theorem xml:id="thm-groups-of-order-6"><title>Groups of Order <m>6</m></title>
+  
+              <statement>
+                <p>
+                  Any group of order <m>6</m> is isomorphic either to <m>C_6</m> or to <m>D_6</m>.
+                </p>
+              </statement>
+  
+              <proof>
+                <p>
+                  Let <m>G</m> be a group of order <m>6</m>. 
+                  <xref text="title" ref="thm-cayley"/> gives that there exist elements <m>x,y\in G</m> with <m>|x|=2</m> and <m>|y|=3</m>. 
+                  Let <m>K=\langle x \rangle</m> and <m>H=\langle y\rangle</m>. 
+                  Since <m>[G:H]=2</m>, <m>H</m> is a normal subgroup of <m>G</m> and since <m>H\cap K</m> is a common subgroup of <m>H</m> and <m>K</m> <xref text="title" ref="thm-lagrange"/> gives that <m>|H\cap K|\mid \operatorname{gcd}(|H|,|K|)=1</m>. 
+                  Thus <m>H\cap K=\{e\}</m> and since <m>|HK|=\frac{|H||K|}{|H\cap K|}=6=|G|</m> we deduce that <m>HK=G</m>. 
+                  <xref ref="thm-sdp-recognition"/> now gives that <m>G</m> is the internal semidirect product of <m>H</m> and <m>K</m>. 
+                  More to the point, <m>G\cong H\rtimes_\rho K</m>, where <m>\rho:K\to \operatorname{Aut}(H)</m> gives the action of <m>K</m> on <m>H</m> by <xref text="title" ref="ex-conj"/>.
+                </p>
         
-      </chapter>
+                <p>
+                  We now analyze the possibilities for <m>\rho</m>. 
+                  By <xref ref="thm-aut-cn" />, <m>\operatorname{Aut}(H)\cong\operatorname{Aut}(\mathbb{Z}/3)\cong (\mathbb{Z}/3^\times, \cdot)=(\{\pm 1\},\cdot)</m>. 
+                  There are two possibilities for the image of <m>\rho</m>: either <m>\operatorname{Im}(\rho)=\{\text{id}_H\}</m> or <m>\operatorname{Im}(\rho)=\operatorname{Aut}(H)</m>.
+                </p>
+        
+                <p>
+                  If <m>\operatorname{Im}(\rho)=\{\text{id}_H\}</m>, then <m>\rho(x)=c_x=\text{id}_H</m> (which implies <m>xy=yx</m>) and <m>H\rtimes_\rho K=H\times K</m>. 
+                  Therefore, in this case <m>G\cong H\times K\cong C_3\times C_2\cong C_6</m>, where the last isomorphism uses the <xref text="title" ref="thm-sunzi"/>.
+                </p>
+        
+                <p>
+                  If <m>\operatorname{Im}(\rho)=\operatorname{Aut}(H)</m>, then <m>\rho(x)</m> is the map <m>y^i\mapsto y^{-1}</m> and by an earlier example for this <m>\rho</m> we have <m>H\rtimes_\rho K\cong D_6</m>, so <m>G\cong D_6</m>.
+                </p>
+        
+                <p>
+                  Finally, <m>C_6\not \cong D_6</m> because the former is abelian and the latter is not.
+                </p>
+              </proof>
+            </theorem>
+      
+            <p>
+              Let's repeat the previous example for classifying groups of order <m>p\cdot q</m> with <m>p, q</m> distinct primes into isomorphism classes.
+            </p>
+  
+            <theorem xml:id="thm-order-pq"><title>Classification for Groups of Order <m>pq</m></title>
+              <statement>
+                <p>
+                  Let <m>p&lt;q</m> be primes.
+                </p>
+        
+                <p>
+                  <ol>
+                    <li>
+                      <p>
+                        If <m>p\nmid q-1</m> there is a unique group of order <m>pq</m> up to isomorphism, namely <m>C_{pq}</m>.
+                      </p>
+                    </li>
+        
+                    <li>
+                      <p>
+                        If <m>p\mid q-1</m> there are exactly two groups of order <m>pq</m> up to isomorphism, namely <m>C_{pq}</m> and a non-abelian group.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+  
+              <proof>
+                <p>
+                  Let <m>G</m> be a group of order <m>pq</m> and let <m>H, K</m> be Sylow subgroups of order <m>q</m> and <m>p</m> respectively. 
+                  We see that <m>H</m> is a normal subgroup using a HW problem, since <m>[G:H]=p</m> is the smallest prime that divides <m>|G|</m>.
+                </p>
+        
+                <p>
+                  Furthermore, since <m>H\cap K</m> is a subgroup of both <m>H</m> and <m>K</m> we have by <xref text="title" ref="thm-lagrange"/> that <m>|H\cap K|\mid \operatorname{gcd}(q,p)=1</m>, so that <m>H\cap K=\{e_G\}</m>. 
+                  From here it follows that 
+                  <me>
+                    |HK|=\frac{|H||K|}{|H\cap K|}=\frac{q\cdot p}{1}=pq=|G|
+                  </me> 
+                  and so <m>HK=G</m>. 
+                  <xref ref="thm-sdp-recognition"/> now yields that 
+                  <me>
+                    G \cong H \rtimes_\rho K \cong C_q\rtimes_\rho C_p
+                  </me> 
+                  for some homomorphism <m>\rho: K \to \operatorname{Aut}(H)</m>, equivalently <m>\rho: C_p \to \operatorname{Aut}(C_q)</m>. 
+                  By <xref ref="prop-ump-cyclic" /> to give such a homomorphism <m>\rho</m> is equivalent to giving an element <m>z\in \operatorname{Aut}(C_q)</m> so that <m>z^p=\text{id}</m>, which will give <m>\rho(y^j)=z^j</m> for <m>C_p=\langle y\rangle</m>. 
+                  Thus <m>|z|\mid p</m> yielding that either <m>|z|=1</m> or <m>|z|=p</m>.
+                </p>
+        
+                <p>
+                  <em>Case 1:</em> if <m>|z|=1</m> then <m>\rho</m> is the trivial homomorphism and thus <m>G\cong C_q\times C_p\cong C_{pq}</m>.
+                </p>
+        
+                <p>
+                  <em>Case 2:</em> if <m>|z|=p</m> then it must be the case by Lagrange that <m>p\mid |\operatorname{Aut}(C_q)</m>. 
+                  By <xref ref="cor-aut-cp" /> we know that <m>\operatorname{Aut}(C_q)\cong C_{p-1}</m> is a cyclic group. 
+                  Therefore we have that <m>p\mid (q-1)</m> if and only if there exists an element <m>z\in \operatorname{Aut}(C_q)</m> of order <m>p</m> by <xref provisional="thm:cyclic" /> (2).
+                  Moreover any such element <m>z</m> generates a subgroup of <m>\operatorname{Aut}(C_q)</m> of order <m>p</m>. 
+                  Since there is a unique subgroup of a cyclic group of a given order by Theorem <xref provisional="thm:cyclic" /> (2) we see that the image of <m>\rho</m> is independent of the choice of <m>z</m>. 
+                  Thus by <xref provisional="prop:conjugateAut" /> we conclude that all subgroups resulting from any choice of <m>z</m> of order <m>p</m> are isomorphic.
+                </p>
+        
+                <p>
+                  Moreover, from the explicit presentation of semidirect products of cyclic groups given in a homework problem we see that the resulting group is non-abelian; in particular it is not isomorphic to <m>C_{pq}</m>.
+                </p>
+              </proof>
+            </theorem>
+            
+          </subsection>
 
-      <chapter xml:id="ch-group-classifications"><title>Classifications</title>
+        </section>
 
         <section xml:id="sec-ftfgag"><title>Finitely Generated Abelian Groups</title>
 
@@ -7595,333 +7729,7 @@
           </example>
 
         </section>
-
-        <section xml:id="sec-classifications"><title>Groups of Specific Order</title>
-          
-          <subsection xml:id="sec-order-pq"><title>Groups of Order <m>pq</m></title>
-  
-            <blockquote>
-              <p>
-                <q>
-                  I did not know I was in my prime until afterwards.
-                </q>
-              </p>
-              <attribution>Mason Cooley</attribution>
-            </blockquote>
-  
-            <theorem xml:id="thm-groups-of-order-6"><title>Groups of Order <m>6</m></title>
-
-              <statement>
-                <p>
-                  Any group of order <m>6</m> is isomorphic either to <m>C_6</m> or to <m>D_6</m>.
-                </p>
-              </statement>
-  
-              <proof>
-                <p>
-                  Let <m>G</m> be a group of order <m>6</m>. 
-                  <xref text="title" ref="thm-cayley"/> gives that there exist elements <m>x,y\in G</m> with <m>|x|=2</m> and <m>|y|=3</m>. 
-                  Let <m>K=\langle x \rangle</m> and <m>H=\langle y\rangle</m>. 
-                  Since <m>[G:H]=2</m>, <m>H</m> is a normal subgroup of <m>G</m> and since <m>H\cap K</m> is a common subgroup of <m>H</m> and <m>K</m> <xref text="title" ref="thm-lagrange"/> gives that <m>|H\cap K|\mid \operatorname{gcd}(|H|,|K|)=1</m>. 
-                  Thus <m>H\cap K=\{e\}</m> and since <m>|HK|=\frac{|H||K|}{|H\cap K|}=6=|G|</m> we deduce that <m>HK=G</m>. 
-                  <xref ref="thm-sdp-recognition"/> now gives that <m>G</m> is the internal semidirect product of <m>H</m> and <m>K</m>. 
-                  More to the point, <m>G\cong H\rtimes_\rho K</m>, where <m>\rho:K\to \operatorname{Aut}(H)</m> gives the action of <m>K</m> on <m>H</m> by <xref text="title" ref="ex-conj"/>.
-                </p>
         
-                <p>
-                  We now analyze the possibilities for <m>\rho</m>. 
-                  By <xref ref="thm-aut-cn" />, <m>\operatorname{Aut}(H)\cong\operatorname{Aut}(\mathbb{Z}/3)\cong (\mathbb{Z}/3^\times, \cdot)=(\{\pm 1\},\cdot)</m>. 
-                  There are two possibilities for the image of <m>\rho</m>: either <m>\operatorname{Im}(\rho)=\{\text{id}_H\}</m> or <m>\operatorname{Im}(\rho)=\operatorname{Aut}(H)</m>.
-                </p>
-        
-                <p>
-                  If <m>\operatorname{Im}(\rho)=\{\text{id}_H\}</m>, then <m>\rho(x)=c_x=\text{id}_H</m> (which implies <m>xy=yx</m>) and <m>H\rtimes_\rho K=H\times K</m>. 
-                  Therefore, in this case <m>G\cong H\times K\cong C_3\times C_2\cong C_6</m>, where the last isomorphism uses the <xref text="title" ref="thm-sunzi"/>.
-                </p>
-        
-                <p>
-                  If <m>\operatorname{Im}(\rho)=\operatorname{Aut}(H)</m>, then <m>\rho(x)</m> is the map <m>y^i\mapsto y^{-1}</m> and by an earlier example for this <m>\rho</m> we have <m>H\rtimes_\rho K\cong D_6</m>, so <m>G\cong D_6</m>.
-                </p>
-        
-                <p>
-                  Finally, <m>C_6\not \cong D_6</m> because the former is abelian and the latter is not.
-                </p>
-              </proof>
-            </theorem>
-      
-            <p>
-              Let's repeat the previous example for classifying groups of order <m>p\cdot q</m> with <m>p, q</m> distinct primes into isomorphism classes.
-            </p>
-  
-            <theorem xml:id="thm-order-pq"><title>Classification for Groups of Order <m>pq</m></title>
-              <statement>
-                <p>
-                  Let <m>p&lt;q</m> be primes.
-                </p>
-        
-                <p>
-                  <ol>
-                    <li>
-                      <p>
-                        If <m>p\nmid q-1</m> there is a unique group of order <m>pq</m> up to isomorphism, namely <m>C_{pq}</m>.
-                      </p>
-                    </li>
-        
-                    <li>
-                      <p>
-                        If <m>p\mid q-1</m> there are exactly two groups of order <m>pq</m> up to isomorphism, namely <m>C_{pq}</m> and a non-abelian group.
-                      </p>
-                    </li>
-                  </ol>
-                </p>
-              </statement>
-  
-              <proof>
-                <p>
-                  Let <m>G</m> be a group of order <m>pq</m> and let <m>H, K</m> be Sylow subgroups of order <m>q</m> and <m>p</m> respectively. 
-                  We see that <m>H</m> is a normal subgroup using a HW problem, since <m>[G:H]=p</m> is the smallest prime that divides <m>|G|</m>.
-                </p>
-        
-                <p>
-                  Furthermore, since <m>H\cap K</m> is a subgroup of both <m>H</m> and <m>K</m> we have by <xref text="title" ref="thm-lagrange"/> that <m>|H\cap K|\mid \operatorname{gcd}(q,p)=1</m>, so that <m>H\cap K=\{e_G\}</m>. 
-                  From here it follows that 
-                  <me>
-                    |HK|=\frac{|H||K|}{|H\cap K|}=\frac{q\cdot p}{1}=pq=|G|
-                  </me> 
-                  and so <m>HK=G</m>. 
-                  <xref ref="thm-sdp-recognition"/> now yields that 
-                  <me>
-                    G \cong H \rtimes_\rho K \cong C_q\rtimes_\rho C_p
-                  </me> 
-                  for some homomorphism <m>\rho: K \to \operatorname{Aut}(H)</m>, equivalently <m>\rho: C_p \to \operatorname{Aut}(C_q)</m>. 
-                  By <xref ref="prop-ump-cyclic" /> to give such a homomorphism <m>\rho</m> is equivalent to giving an element <m>z\in \operatorname{Aut}(C_q)</m> so that <m>z^p=\text{id}</m>, which will give <m>\rho(y^j)=z^j</m> for <m>C_p=\langle y\rangle</m>. 
-                  Thus <m>|z|\mid p</m> yielding that either <m>|z|=1</m> or <m>|z|=p</m>.
-                </p>
-        
-                <p>
-                  <em>Case 1:</em> if <m>|z|=1</m> then <m>\rho</m> is the trivial homomorphism and thus <m>G\cong C_q\times C_p\cong C_{pq}</m>.
-                </p>
-        
-                <p>
-                  <em>Case 2:</em> if <m>|z|=p</m> then it must be the case by Lagrange that <m>p\mid |\operatorname{Aut}(C_q)</m>. 
-                  By <xref ref="cor-aut-cp" /> we know that <m>\operatorname{Aut}(C_q)\cong C_{p-1}</m> is a cyclic group. 
-                  Therefore we have that <m>p\mid (q-1)</m> if and only if there exists an element <m>z\in \operatorname{Aut}(C_q)</m> of order <m>p</m> by <xref provisional="thm:cyclic" /> (2).
-                  Moreover any such element <m>z</m> generates a subgroup of <m>\operatorname{Aut}(C_q)</m> of order <m>p</m>. 
-                  Since there is a unique subgroup of a cyclic group of a given order by Theorem <xref provisional="thm:cyclic" /> (2) we see that the image of <m>\rho</m> is independent of the choice of <m>z</m>. 
-                  Thus by <xref provisional="prop:conjugateAut" /> we conclude that all subgroups resulting from any choice of <m>z</m> of order <m>p</m> are isomorphic.
-                </p>
-        
-                <p>
-                  Moreover, from the explicit presentation of semidirect products of cyclic groups given in a homework problem we see that the resulting group is non-abelian; in particular it is not isomorphic to <m>C_{pq}</m>.
-                </p>
-              </proof>
-            </theorem>
-            
-          </subsection>
-
-          <subsection xml:id="subsec-small-order"><title>Groups of Small Order</title>
-
-            <blockquote>
-              <p>
-                <q>To be beyond any existing classification has always pleased me.</q>
-              </p>
-              <attribution>Boyd Rice</attribution>
-            </blockquote>
-
-            <example xml:id="ex-order-30"><title>Groups of Order <m>30</m></title>
-              <statement>
-                <p>
-                  Let's classify all groups of order <m>30 = 2 \cdot 3 \cdot 5</m>.
-                </p>
-              </statement>
-
-              <solution>
-                <p>
-                  Right off the bat we see that there are at least four: 
-                  <me>
-                    \mathbb{Z}/30, D_{30}, \mathbb{Z}/5 \times D_6, \mathbb{Z}/3 \times D_{10}.
-                  </me> 
-                  No two of these are isomorphic, as can be seen by looking at the sizes of their centers. 
-                  The first is abelian, and we have <m>|Z(D_{30})| = 2</m>, <m>|Z(\mathbb{Z}/5 \times D_6)| = 5 \cdot 2 = 10</m> and <m>|Z(\mathbb{Z}/3 \times D_{10})| = 3 \cdot 2 = 6</m>.
-                </p>
-
-                <p>
-                  Let's show this list is complete. 
-                  If <m>G</m> is a group of order <m>30</m>, then <m>|\operatorname{Syl}_2(G)| \in \{1, 3, 5, 15\}</m>, <m>|\operatorname{Syl}_3(G)| \in \{1, 10\}</m>, <m>|\operatorname{Syl}_5(G)| \in \{1,6\}</m>. 
-                  The usual counting argument shows that <m>|\operatorname{Syl}_3(G)| = 10</m> and <m>|\operatorname{Syl}_5(G)| = 6</m> cannot both occur. 
-                  So, letting <m>P \in \operatorname{Syl}_3(G)</m> and <m>Q \in \operatorname{Syl}_5(G)</m>, since at least one is normal, we have that <m>N := PQ</m> is a subgroup of <m>G</m> of order <m>15</m>. 
-                  Since it has index two, <m>N \unlhd G</m>.
-                  Moreover, since <m>|N| = 15</m>, by Sylow Theory, <m>N</m> has normal subgroups of order <m>3</m> and <m>5</m>, from which it follows that <m>N \cong \mathbb{Z}/3 \times \mathbb{Z}/5 \cong \mathbb{Z}/15</m>.
-                  Let <m>H</m> be a Sylow <m>2</m>-subgroup. 
-                  Then <me>G \cong N \rtimes_\rho H</me> for some homomorphism <me>\rho: H \to \operatorname{Aut}(N),</me> where 
-                  <me>
-                    H \cong \mathbb{Z}/2 { \text{ and } }N \cong \mathbb{Z}/3 \times \mathbb{Z}/5 \cong \mathbb{Z}/15.
-                  </me>
-                </p>
-          
-                <p>
-                  SInce <m>H \cong \mathbb{Z}/2</m>, each non-trivial map <m>\rho</m> is given by an element of order <m>2</m> in <m>\operatorname{Aut}(N)</m>. 
-                  Now <m>|\operatorname{Aut}(N)| = \phi(15) = 8</m>, but this is not enough information to figure out how many elements have order <m>2</m>. 
-                  We need to find <m>\operatorname{Aut}(N)</m> up to isomorphism.
-                </p>
-          
-                <p>
-                  There is an evident homomorphism <me>\theta: \operatorname{Aut}(\mathbb{Z}/3) \times \operatorname{Aut}(\mathbb{Z}/5) \to \operatorname{Aut}(\mathbb{Z}/3 \times \mathbb{Z}/5)</me> given by sending <m>(\alpha, \beta)</m> to the function <m>(i,j) \mapsto (\alpha(i), \beta(j))</m>. 
-                  It's easy to see <m>\theta</m> is one-to-one and hence bijective by the pigeon-hole principle. 
-                  It follows that 
-                  <me>
-                    \operatorname{Aut}(N) \cong (\mathbb{Z}/3)^\times \times (\mathbb{Z}/5)^\times \cong \mathbb{Z}/2 \times \mathbb{Z}/4.
-                  </me> 
-                  In particuar, <m>\operatorname{Aut}(N)</m> has exactly <m>3</m> elements of order two, corresponding to <m>(1,0), (0,2), (1,2)</m> in <m>\mathbb{Z}/2 \times \mathbb{Z}/4</m>. 
-                  (One could also use that <m>\operatorname{Aut}(N) \cong (\mathbb{Z}/15)^{\times}</m> and then hunt around for elements of order <m>2</m>.) 
-                  This gives exactly four choices for <m>\rho</m>, including the trivial map, and hence there are at most four groups of order <m>30</m>.
-                </p>
-              </solution>
-            </example>
-
-            <example xml:id="ex-order-12"><title>Groups of Order <m>12</m></title>
-              <statement>
-                <p>
-                  Let's classify all groups of order <m>12</m>.
-                </p>
-              </statement>
-
-              <solution>
-                <p>
-                  As we will show below, every such group is a semi-direct product. 
-                  Let's start by building all the groups we can as semi-direct products. 
-                  As a matter of noation, let's write <m>C_n</m> for a cyclic group of order <m>n</m>. 
-                  Let's consider the four possibilities:              
-                </p>
-
-                <p>
-                  <ol>
-                    <li>
-                      <p>
-                        <m>C_4 \rtimes_\rho C_3</m>,
-                      </p>
-                    </li>
-          
-                    <li>
-                      <p>
-                        <m>(C_2 \times C_2) \rtimes_\rho C_3</m>,
-                      </p>
-                    </li>
-          
-                    <li>
-                      <p>
-                        <m>C_3 \rtimes_\rho C_4</m>,
-                      </p>
-                    </li>
-          
-                    <li>
-                      <p>
-                        <m>C_3 \rtimes_\rho (C_2 \times C_2)</m>.
-                      </p>
-                    </li>
-                  </ol>
-                </p>
-          
-                <p>
-                  In case (1), since <m>|\operatorname{Aut}(C_4)| = 2</m>, we have only the abelian group <m>C_4 \times C_3</m>.
-                </p>
-          
-                <p>
-                  In case (2), <m>|\operatorname{Aut}(C_2 \times C_2)| = |\operatorname{GL}_2(\mathbb{F}_2)| = 6</m> and so there is a unique subgroup of order <m>3</m>. 
-                  This leads to three possibities for <m>\rho</m>, including the trivial one. 
-                  The two non-trivial maps have conjugate (in fact, equal) images. 
-                  By the homework problem, we get just two possible groups: one is the abelian group <m>C_2 \times C_2 \times C_3</m> and the other is non-abelian.
-                </p>
-          
-                <p>
-                  In case (3), <m>|\operatorname{Aut}(C_3)| = 2</m> and so there are two possibilities for <m>\rho</m> including the trivial map. 
-                  These leads to <m>C_3 \times C_4</m> and a non-abelian group.
-                </p>
-          
-                <p>
-                  Case (4) is more complicated. 
-                  We have <m>\operatorname{Aut}(C_3)</m> is itself cyclic of order <m>2</m>. 
-                  Switching to additive notation, the map 
-                  <me>
-                    \rho: C_2 \times C_2 \to \operatorname{Aut}(C_3)
-                  </me> 
-                  is given as a map 
-                  <me>
-                    \rho: \mathbb{Z}/2 \times \mathbb{Z}/2 \to \mathbb{Z}/2,
-                  </me> 
-                  of elementary abelian <m>2</m>-groups.
-                  Thus, <m>\rho</m> may be represented by a <m>1 \times 2</m> matrix with entries in <m>\mathbb{F}_2</m>; there are <m>4</m> such maps. 
-                  But, using linear algebra, if <m>\rho_1, \rho_2</m> are any two non-trivial maps of this form, then there is an automorhism <m>\beta</m> of <m>\mathbb{Z}/2 \times \mathbb{Z}/2</m> such that <m>\rho_2 = \rho_1 \circ \beta</m>. 
-                  Using the Lemma below, this proves that 
-                  <me>
-                    (\mathbb{Z}/2 \times \mathbb{Z}/2) \rtimes_{\rho_1} \mathbb{Z}/2 \cong (\mathbb{Z}/2 \times \mathbb{Z}/2) \rtimes_{\rho_2} \mathbb{Z}/2
-                  </me> 
-                  for any two non-trivial map. 
-                  Thus, in case (4) we again get just two groups up to isomorphism: the abelian group <m>C_3 \times C_2 \times C_2</m> and a non-abelian one.
-                </p>
-          
-                <p>
-                  We must now beware to toss out reptitions: we've counted each abelian group twice. 
-                  So, in total we've found at most five groups of order <m>12</m>:
-                </p>
-          
-                <p>
-                  <ol>
-                    <li>
-                      <p>
-                        <m>C_4 \times C_3</m>,
-                      </p>
-                    </li>
-          
-                    <li>
-                      <p>
-                        <m>C_2 \times C_2 \times C_3</m>,
-                      </p>
-                    </li>
-          
-                    <li>
-                      <p>
-                        <m>(C_2 \times C_2) \rtimes_{\rho_1} C_3</m>,
-                      </p>
-                    </li>
-          
-                    <li>
-                      <p>
-                        <m>C_3 \rtimes_{\rho_2} C_4</m>,
-                      </p>
-                    </li>
-          
-                    <li>
-                      <p>
-                        <m>C_3 \rtimes_{\rho_3} (C_2 \times C_2)</m>,
-                      </p>
-                    </li>
-                  </ol>
-                </p>
-          
-                <p>
-                  where each of <m>\rho_1, \rho_2, \rho_3</m> is non-trivial.
-                </p>
-          
-                <p>
-                  To see that no two of these are isomorphic, note that (a) and (b) are abelian and (c), (d), and (e) are not. 
-                  Every Sylow <m>2</m>-subgroup of (d) is <m>C_4</m> whereas the Sylow <m>2</m>-subgroups for (c) and (e) are <m>C_2 \times C_2</m>. 
-                  Finally, (c) and (e) are not isomorphic since the former has a normal Sylow <m>2</m>-subgroup and the latter does not.
-                </p>
-          
-                <p>
-                  Finally, we need to prove we've found all groups of order <m>12</m>. 
-                  If <m>|G| = 12</m>, then <m>\operatorname{Syl}_2(G) \in \{1, 3\}</m> and <m>\operatorname{Syl}_3(G) \in \{1, 4\}</m>. 
-                  <m>\operatorname{Syl}_2(G) = 3</m> and <m>\operatorname{Syl}_3(G) = 4</m> cannot both occur since that would lead to at least <m>8 + 6</m> elements. 
-                  This gives the existence of <m>N \unlhd G</m> and <m>H \leq G</m> with either <m>|N| = 4, |H| = 3</m> or <m>|N| = 3, |H| = 4</m>. 
-                  The usual reasoning gives <m>H \cap N  = \{e\}</m> and <m>HN = G</m>, so that <m>G \cong N \rtimes_\rho H</m> for some <m>\rho: H \to \operatorname{Aut}(N)</m>.
-                </p>
-              </solution>
-            </example>
-            
-          </subsection>
-
-        </section>
       </chapter>
 
     </part>
@@ -12693,6 +12501,15 @@
 
           <subsection xml:id="subsec-rank-nullity"><title>Classification Theorem and Rank-Nullity</title>
 
+            <blockquote>
+              <p>
+                <q>
+                  O, my offence is rank, it smells to heaven.
+                </q>
+              </p>
+              <attribution>William Shakespeare</attribution>
+            </blockquote>
+
             <theorem xml:id="thm-fg-vs-classification"><title>Classification Theorem</title>
               <statement>
                 <p>
@@ -12886,6 +12703,15 @@
 
           <subsection xml:id="sec-transforms"><title>Matrices of Linear Transformations</title>
 
+            <blockquote>
+              <p>
+                <q>
+                  No one can be told what the matrix is. You have to see it for yourself.
+                </q>
+              </p>
+              <attribution>Morpheus</attribution>
+            </blockquote>
+
             <remark>
               <p>
                 Recall that when <m>F</m> is a field an <m>F</m>-module homomorphism is called a <m>F</m>-linear transformation. 
@@ -12944,6 +12770,15 @@
           </subsection>
 
           <subsection xml:id="subsec-cob"><title>Change of Basis</title>
+
+            <blockquote>
+              <p>
+                <q>
+                  Change brings opportunity.
+                </q>
+              </p>
+              <attribution>Nido R. Qubein</attribution>
+            </blockquote>
 
             <definition xml:id="def-change-of-basis-matrix"><title>Change of Basis Matrix</title>
               <statement>
@@ -13153,6 +12988,15 @@
         <section xml:id="sec-modpres"><title>Finitely Presented Modules</title>
           
           <subsection xml:id="subsec-fp-modules"><title>Finitely Presented Modules</title>
+
+            <blockquote>
+              <p>
+                <q>
+                  The success of your presentation will be judged not by the knowledge you send but by what the listener receives.
+                </q>
+              </p>
+              <attribution>Lily Walters</attribution>
+            </blockquote>
 
             <definition xml:id="def-module-presentation"><title><m>R</m>-Module Presentation</title>
               <statement>
@@ -13517,6 +13361,15 @@
           </subsection>
 
           <subsection xml:id="subsec-noetherian-module"><title>Modules in Noetherian Rings</title>
+
+            <blockquote>
+              <p>
+                <q>
+                  A chain is no stronger than its weakest link.
+                </q>
+              </p>
+              <attribution>William James</attribution>
+            </blockquote>
 
             <remark>
               <p>
@@ -14022,6 +13875,15 @@
 
         <section xml:id="sec-rcf"><title>Rational Canonical Form</title>
 
+          <blockquote>
+              <p>
+                <q>
+                  If everything on Earth were rational, nothing would happen.
+                </q>
+              </p>
+              <attribution>Fyodor Dostoevsky</attribution>
+            </blockquote>
+
           <remark>
             <p>
               Suppose <m>F</m> is a field and <m>M</m> is a <m>F[x]</m>-module. 
@@ -14362,6 +14224,15 @@
 
         <section xml:id="sec-cayley-hamilton"><title>The Cayley-Hamilton Theorem</title>
 
+          <blockquote>
+              <p>
+                <q>
+                  If you stand for nothing, Burr, what will you fall for?
+                </q>
+              </p>
+              <attribution>Hamilton</attribution>
+            </blockquote>
+
           <remark><p>Given a square matrix <m>A</m> and polynomial <m>g(x) = \sum_i a_i x^i</m>, recall that <m>g(A)</m> refers to the square matrix <m>\sum_i a_i A^i</m>.</p></remark>
     
           <proposition xml:id="prop-ideals-and-gx"><title>Ideals and <m>g(x)</m></title>
@@ -14500,6 +14371,15 @@
         </section>
 
         <section xml:id="sec-jcf"><title>Jordan Canonical Form</title>
+
+          <blockquote>
+              <p>
+                <q>
+                  Success doesn't stop when you get there.
+                </q>
+              </p>
+              <attribution>Michael Jordan</attribution>
+            </blockquote>
 
           <p>
             We now turn to the Jordan canonical form. 
@@ -15403,7 +15283,7 @@
             </proof>
           </theorem>
   
-          <example xml:id="exe-rwc-for-all-wnotinr">
+          <example xml:id="ex-rwc-for-all-wnotinr">
             <p>
               Say <m>F \subseteq L</m> is a field extension of prime degree <m>p</m>. 
               Given <m>w \in L \setminus F</m>, by the <xref text="title" ref="thm-degree-formula"/> we have <m>[L:F(w)][F(w):F] = [L:F] = p</m>. 
@@ -15413,7 +15293,7 @@
             </p>
           </example>
   
-          <example xml:id="exe-degree-and-x2-5">
+          <example xml:id="ex-degree-and-x2-5">
             <p>
               Let <m>F</m> be the result of adjoining to <m>\Q</m> all of the roots in <m>\C</m> of <m>x^2 - 5</m>. 
               That is, <m>F = \Q(\a_1, \a_2, \a_3, \a_4)</m> where <m>\a_1 = \sqrt[4]{5}</m>, <m>\a_2 = i \sqrt[4]{5}</m>, <m>\a_3 = -\sqrt[4]{5}</m>, and <m>\a_4 = - i \sqrt[4]{5}</m>. 
@@ -15803,25 +15683,26 @@
             </statement>
           </definition>
   
-          <example xml:id="exe-common-splitting-fields"><title>Examples of Splitting Fields</title>
-            <p><ul>
-              <li>
-              As a silly example, if <m>f(x)</m> already splits into linear factors over <m>F[x]</m>, then <m>F</m> itself is the splitting field of <m>f(x)</m> over <m>F</m>.
-              </li>
+          <example xml:id="exe-common-splitting-fields"><title>Splitting Fields</title>
+            <p>
+              <ul>
+                <li>
+                  As a silly example, if <m>f(x)</m> already splits into linear factors over <m>F[x]</m>, then <m>F</m> itself is the splitting field of <m>f(x)</m> over <m>F</m>.
+                </li>
   
-              <li>
-              The splitting field of <m>x^2 + 1</m> over <m>\R</m> is <m>\C</m>.
-              </li>
-  
-              <li>
-              If <m>q(x)</m> is any irreducible quadratic polynomial in <m>\R[x]</m>, then the splitting field of <m>q(x)</m> is <m>\C</m>.
-              </li>
-  
-              <li>
-              In general, given <m>f(x) \in \Q[x]</m>, a splitting field of <m>f(x)</m> is given by <m>\Q(\a_1, \dots, \a_n)</m> where <m>\a_1, \dots, \a_n \in \C</m> are all of the roots of <m>f(x)</m> in <m>\C</m>.
-              </li>
-  
-            </ul></p>
+                <li>
+                  The splitting field of <m>x^2 + 1</m> over <m>\R</m> is <m>\C</m>.
+                </li>
+    
+                <li>
+                  If <m>q(x)</m> is any irreducible quadratic polynomial in <m>\R[x]</m>, then the splitting field of <m>q(x)</m> is <m>\C</m>.
+                </li>
+    
+                <li>
+                  In general, given <m>f(x) \in \Q[x]</m>, a splitting field of <m>f(x)</m> is given by <m>\Q(\a_1, \dots, \a_n)</m> where <m>\a_1, \dots, \a_n \in \C</m> are all of the roots of <m>f(x)</m> in <m>\C</m>.
+                </li>
+              </ul>
+            </p>
           </example>
   
           <remark>
@@ -15862,7 +15743,8 @@
   
             <proof>
               <p>
-                For (1), let <m>\ov{F}</m> be an algebraic closure of <m>F</m>, which exists by the previous Theorem. Let <m>\a_1, \dots, \a_m</m> be the roots of <m>f(x)</m> in <m>\ov{F}</m>, and set <m>L = F(\a_1, \dots, \a_m)</m>.
+                For (1), let <m>\ov{F}</m> be an algebraic closure of <m>F</m>, which exists by the previous Theorem. 
+                Let <m>\a_1, \dots, \a_m</m> be the roots of <m>f(x)</m> in <m>\ov{F}</m>, and set <m>L = F(\a_1, \dots, \a_m)</m>.
               </p>
   
               <p>
@@ -15870,11 +15752,16 @@
               </p>
   
               <p>
-                To prove (2), we proceed by induction on the degree of <m>f(x)</m>. If <m>f</m> is linear, then the only splitting field of <m>f</m> over <m>F</m> is <m>F</m> itself and so the result is clear in this case. Say <m>\a_1, \dots, \a_m</m> and <m>\a'_1, \dots, \a'_m</m> are the roots of <m>f(x)</m> in <m>L</m> and <m>L'</m>, respectively, and say they are ordered so that, <m>\a_m</m> and <m>\a'_m</m> are roots of the same irreducible factor of <m>f(x)</m> in <m>F[x]</m>.
+                To prove (2), we proceed by induction on the degree of <m>f(x)</m>. 
+                If <m>f</m> is linear, then the only splitting field of <m>f</m> over <m>F</m> is <m>F</m> itself and so the result is clear in this case. 
+                Say <m>\a_1, \dots, \a_m</m> and <m>\a'_1, \dots, \a'_m</m> are the roots of <m>f(x)</m> in <m>L</m> and <m>L'</m>, respectively, and say they are ordered so that, <m>\a_m</m> and <m>\a'_m</m> are roots of the same irreducible factor of <m>f(x)</m> in <m>F[x]</m>.
               </p>
   
               <p>
-                By Corollary  there is an isomorphism <m>\phi: F(\a_n) \xra{\cong} F(\a_n')</m> that fixes <m>F</m>. Note that <m>f(x)</m> factors as <m>(x-\a_n) g(x)</m> in <m>F(\a_n)[x]</m> and that <m>L</m> is the splitting field of <m>g(x)</m> over <m>F(\a_n)</m>, and similarly <m>f(x)</m> factors as <m>(x-\a'_n) g'(x)</m> in <m>F(\a'_n)[x]</m> and that <m>L</m> is the splitting field of <m>g'(x)</m> over <m>F(\a'_n)</m>. If we blur our eyes slightly and pretend <m>\phi</m> is the identity map, we can apply the inductive hypothesis, since <m>\deg(g) &lt; \deg(f)</m>, to conclude that there is an isomorphism <m>\s</m> as in the statement. I leave a more rigorous argument to your imaginations.
+                By Corollary  there is an isomorphism <m>\phi: F(\a_n) \xra{\cong} F(\a_n')</m> that fixes <m>F</m>. 
+                Note that <m>f(x)</m> factors as <m>(x-\a_n) g(x)</m> in <m>F(\a_n)[x]</m> and that <m>L</m> is the splitting field of <m>g(x)</m> over <m>F(\a_n)</m>, and similarly <m>f(x)</m> factors as <m>(x-\a'_n) g'(x)</m> in <m>F(\a'_n)[x]</m> and that <m>L</m> is the splitting field of <m>g'(x)</m> over <m>F(\a'_n)</m>. 
+                If we blur our eyes slightly and pretend <m>\phi</m> is the identity map, we can apply the inductive hypothesis, since <m>\deg(g) &lt; \deg(f)</m>, to conclude that there is an isomorphism <m>\s</m> as in the statement.
+                I leave a more rigorous argument to your imaginations.
               </p>
   
               <p>
@@ -15882,42 +15769,71 @@
               </p>
   
               <p>
-                Since <m>\a_n</m> is a root of <m>f(x)</m>, we have <m>m_{F,\a_n} \mid f(x)</m> and hence <me>[F(\a_n): F] = \deg(m_{F,\a_n})  \leq n.</me> In <m>F(\a_n)</m> we have <m>f(x) = (x-\a_n) g(x)</m> with <m>g(x) \in F(\a_n)[x]</m> and, as before, <m>L</m> is the splitting field of <m>g(x)</m> over <m>F(\a_n)</m>, so that by induction <m>[L: F(\a_n)] \leq (n-1)!</m>. By the <xref text="title" ref="thm-degree-formula"/> <me>[L: F] = [L: F(\a_n)][F(\a_n): F] \leq (n-1)! \cdot n = n!.</me>
+                Since <m>\a_n</m> is a root of <m>f(x)</m>, we have <m>m_{F,\a_n} \mid f(x)</m> and hence 
+                <me>
+                  [F(\a_n): F] = \deg(m_{F,\a_n})  \leq n.
+                </me> 
+                In <m>F(\a_n)</m> we have <m>f(x) = (x-\a_n) g(x)</m> with <m>g(x) \in F(\a_n)[x]</m> and, as before, <m>L</m> is the splitting field of <m>g(x)</m> over <m>F(\a_n)</m>, so that by induction <m>[L: F(\a_n)] \leq (n-1)!</m>. 
+                By the <xref text="title" ref="thm-degree-formula"/> 
+                <me>
+                  [L: F] = [L: F(\a_n)][F(\a_n): F] \leq (n-1)! \cdot n = n!.
+                </me>
               </p>
             </proof>
           </theorem>
   
           <remark>
             <p>
-              Recall from before that we proved there exists a field extension <m>F \subseteq E</m> in which <m>f(x)</m> has at least one root. So <m>f(x) = (x-\a_1) g(x)</m> for some <m>\a_1 \in E</m> and <m>g(x) \in E[x]</m>. We can then find a field extension of <m>E</m> in which <m>g</m> has at least one root <m>\a_2</m>, and so on. In this way we build a field extension <m>F \subseteq K</m> such that <m>g</m> factors in <m>K</m> as <m>c\prod_{i=1}^n (x - \a_i)</m> for some <m>c, \a_1, \dots, \a_n \in K</m>. Finally, <m>L = F(\a_1, \dots, \a_n)</m> is a splitting field of <m>f</m>.
+              Recall from before that we proved there exists a field extension <m>F \subseteq E</m> in which <m>f(x)</m> has at least one root. So <m>f(x) = (x-\a_1) g(x)</m> for some <m>\a_1 \in E</m> and <m>g(x) \in E[x]</m>. 
+              We can then find a field extension of <m>E</m> in which <m>g</m> has at least one root <m>\a_2</m>, and so on. 
+              In this way we build a field extension <m>F \subseteq K</m> such that <m>g</m> factors in <m>K</m> as <m>c\prod_{i=1}^n (x - \a_i)</m> for some <m>c, \a_1, \dots, \a_n \in K</m>. 
+              Finally, <m>L = F(\a_1, \dots, \a_n)</m> is a splitting field of <m>f</m>.
             </p>
           </remark>
           
           <example xml:id="exe-splitting-fields-and-x3-2">
             <p>
-              The splitting field <m>L</m> of <m>x^3 -2</m> over <m>\Q</m> is <m>L = \Q(\sqrt[3]{2}, \zeta_3 \sqrt[3]{2}, \zeta_3^2 \sqrt[3]{2})</m>, where <m>\zeta_3 = e^{\frac{2 \pi i}{3}}</m>. It is not hard to see that <m>L = \Q(\sqrt[3]{2}, \zeta_3)</m>. We have <m>[\Q(\sqrt[3]{2}): \Q] = 3</m> since <m>x^3 - 2</m> is irreducible in <m>\Q[x]</m> (by <xref text="title" ref="thm-eisensteins-criterion"/>). Since <m>\Q(\sqrt[3]{2}) \subseteq \R</m> and thus <m>\Q(\sqrt[3]{2}) \ne L</m>, the <xref text="title" ref="thm-degree-formula"/> gives that <m>[L: \Q] \geq 6</m>. By the Theorem, <m>[L: \Q] \leq 6</m> and hence <m>[L: \Q] = 6</m>. (We could also have proven this without appealing to the Theorem.)
+              The splitting field <m>L</m> of <m>x^3 -2</m> over <m>\Q</m> is <m>L = \Q(\sqrt[3]{2}, \zeta_3 \sqrt[3]{2}, \zeta_3^2 \sqrt[3]{2})</m>, where <m>\zeta_3 = e^{\frac{2 \pi i}{3}}</m>. 
+              It is not hard to see that <m>L = \Q(\sqrt[3]{2}, \zeta_3)</m>. 
+              We have <m>[\Q(\sqrt[3]{2}): \Q] = 3</m> since <m>x^3 - 2</m> is irreducible in <m>\Q[x]</m> (by <xref text="title" ref="thm-eisensteins-criterion"/>). 
+              Since <m>\Q(\sqrt[3]{2}) \subseteq \R</m> and thus <m>\Q(\sqrt[3]{2}) \ne L</m>, the <xref text="title" ref="thm-degree-formula"/> gives that <m>[L: \Q] \geq 6</m>. 
+              By the Theorem, <m>[L: \Q] \leq 6</m> and hence <m>[L: \Q] = 6</m>. 
+              (We could also have proven this without appealing to the Theorem.)
             </p>
           </example>
   
           <example xml:id="exe-splitting-fields-and-x4-5x26">
             <p>
-              The splitting field of <m>f(x) = x^4 - 5x^2 + 6</m> is <me>
-  \Q(\sqrt{2}, -\sqrt{2}, \sqrt{3}, -\sqrt{3}) = \Q(\sqrt{2}, \sqrt{3}) = \Q(\sqrt{2} + \sqrt{3}).
-  </me> This holds since <m>f(x) = (x^2-3)(x^2-2)</m>. It is not too hard to see that the degree of this splitting field over <m>\Q</m> is <m>4</m>, far smaller than the <m>4!</m> upper bound given by the Theorem.
+              The splitting field of <m>f(x) = x^4 - 5x^2 + 6</m> is 
+              <me>
+                \Q(\sqrt{2}, -\sqrt{2}, \sqrt{3}, -\sqrt{3}) = \Q(\sqrt{2}, \sqrt{3}) = \Q(\sqrt{2} + \sqrt{3}).
+              </me> 
+              This holds since <m>f(x) = (x^2-3)(x^2-2)</m>. 
+              It is not too hard to see that the degree of this splitting field over <m>\Q</m> is <m>4</m>, far smaller than the <m>4!</m> upper bound given by the Theorem.
             </p>
           </example>
   
           <example xml:id="exe-splitting-fields-and-xn-1">
             <p>
-              Let <m>f(x) = x^n -1 \in \Q[x]</m>. Then <m>f(x)</m> splits completely in <m>\C[x]</m> and its roots are the <m>n</m> <m>n</m>-th roots of <m>1</m>. One of these is <m>\zeta_n := e^{2 \pi i/n}</m>. Notice that every other <m>n</m>-th root of <m>1</m> is a power of this one. We thus see that <m>\Q(\zeta_n)</m> is the splitting field of <m>x^n-1</m> over <m>\Q</m>. This field is called the {} of <m>n-th</m> roots of 1 over <m>\Q</m>. This is a somewhat special example: upon joining one of the roots of <m>f</m> we got all the others for free. This happens in other examples too, but is certainly {} a general principle.
+              Let <m>f(x) = x^n -1 \in \Q[x]</m>. 
+              Then <m>f(x)</m> splits completely in <m>\C[x]</m> and its roots are the <m>n</m> <m>n</m>-th roots of <m>1</m>. 
+              One of these is <m>\zeta_n := e^{2 \pi i/n}</m>. 
+              Notice that every other <m>n</m>-th root of <m>1</m> is a power of this one. 
+              We thus see that <m>\Q(\zeta_n)</m> is the splitting field of <m>x^n-1</m> over <m>\Q</m>. 
+              This field is called the {} of <m>n-th</m> roots of 1 over <m>\Q</m>. 
+              This is a somewhat special example: upon joining one of the roots of <m>f</m> we got all the others for free. 
+              This happens in other examples too, but is certainly {} a general principle.
             </p>
   
             <p>
-              In particular, we see that the degree of <m>\Q \subseteq \Q(\zeta_n)</m> is at most <m>n</m>, far less than the bound of <m>n!</m> given by the Proposition above. In fact, it is at most <m>n-1</m> since <m>f</m> factors as <m>(x-1)(x^{n-1} + \cdots + x + 1)</m>, and hence the minimum polynomial of <m>\zeta_n</m> is a divisor of <m>x^{n-1} + \cdots + x + 1</m>.
+              In particular, we see that the degree of <m>\Q \subseteq \Q(\zeta_n)</m> is at most <m>n</m>, far less than the bound of <m>n!</m> given by the Proposition above. 
+              In fact, it is at most <m>n-1</m> since <m>f</m> factors as <m>(x-1)(x^{n-1} + \cdots + x + 1)</m>, and hence the minimum polynomial of <m>\zeta_n</m> is a divisor of <m>x^{n-1} + \cdots + x + 1</m>.
             </p>
   
             <p>
-              When <m>n = p</m> is prime, then <m>x^{p-1} + \cdots + x + 1</m> is irreducible, as we proved before, and hence it must equal the minimum polynomial of <m>\zeta_p</m>. So, in this case, the degree of <m>\Q \subseteq \Q(\zeta_p)</m> is exactly <m>p-1</m>, but it can be smaller than <m>n-1</m> in general; for example, when <m>n = 4</m>, <m>\zeta_4= i</m> and <m>[\Q(i): \Q] = 2</m>. Note that <m>x^3 + x^2 + x + 1</m> factors as <m>(x^2+1)(x+1)</m> and of course <m>m_{i, \Q}(x) = x^2 + 1</m>.
+              When <m>n = p</m> is prime, then <m>x^{p-1} + \cdots + x + 1</m> is irreducible, as we proved before, and hence it must equal the minimum polynomial of <m>\zeta_p</m>. 
+              So, in this case, the degree of <m>\Q \subseteq \Q(\zeta_p)</m> is exactly <m>p-1</m>, but it can be smaller than <m>n-1</m> in general; 
+              for example, when <m>n = 4</m>, <m>\zeta_4= i</m> and <m>[\Q(i): \Q] = 2</m>. Note that <m>x^3 + x^2 + x + 1</m> factors as <m>(x^2+1)(x+1)</m> and of course <m>m_{i, \Q}(x) = x^2 + 1</m>.
             </p>
   
             <p>
@@ -15938,7 +15854,9 @@
               </p>
   
               <p>
-                Since <m>\a, \beta</m> are roots of the same irreducible polynomial, by Corollary  there is an isomorphism <m>\tau: F(\a) \to F(\beta)</m> such that <m>\tau|_F = \id_F</m> and <m>\tau(\a) = \beta</m>. We have two field maps, <m>F(\a) \into L</m> (actual inclusion) and the composition of <m>F(\a) \xra{\tau} F(\beta)\into L</m>, and they realize <m>L</m> as the splitting field of <m>f(x)</m> over <m>F(\a)</m> in two different ways. Since splitting fields are unique, an isomorphism such as <m>\s</m> exists.
+                Since <m>\a, \beta</m> are roots of the same irreducible polynomial, by Corollary  there is an isomorphism <m>\tau: F(\a) \to F(\beta)</m> such that <m>\tau|_F = \id_F</m> and <m>\tau(\a) = \beta</m>. 
+                We have two field maps, <m>F(\a) \into L</m> (actual inclusion) and the composition of <m>F(\a) \xra{\tau} F(\beta)\into L</m>, and they realize <m>L</m> as the splitting field of <m>f(x)</m> over <m>F(\a)</m> in two different ways. 
+                Since splitting fields are unique, an isomorphism such as <m>\s</m> exists.
               </p>
             </proof>
           </corollary>
@@ -15949,11 +15867,13 @@
             </p>
   
             <p>
-              The Porism gives that there is a field automorphism <m>\s</m> of <m>L</m> such that <m>\s(e^{2 \pi i/3}\sqrt[3]{2}) = e^{4 \pi i/3}\sqrt[3]{2}</m>. This one is clear – complex conjugation gives such an isomorphism.
+              <xref ref="cor-porism"/> gives that there is a field automorphism <m>\s</m> of <m>L</m> such that <m>\s(e^{2 \pi i/3}\sqrt[3]{2}) = e^{4 \pi i/3}\sqrt[3]{2}</m>. 
+              This one is clear – complex conjugation gives such an isomorphism.
             </p>
   
             <p>
-              It also gives there is a field automorphism <m>\tau</m> of <m>L</m> such that <m>\tau(\sqrt[3]{2}) = e^{2 \pi i/3}\sqrt[3]{2}</m>. This is less obvious.
+              It also gives there is a field automorphism <m>\tau</m> of <m>L</m> such that <m>\tau(\sqrt[3]{2}) = e^{2 \pi i/3}\sqrt[3]{2}</m>. 
+              This is less obvious.
             </p>
           </example>
   
@@ -16272,42 +16192,66 @@
           </example>
 
           <example xml:id="exe-aut-and-x3-2"><title><m>\Aut</m> and <m>(x^3-2)</m></title>
-
             <p>
-              For a more complicated example, let <m>K</m> be the splitting field of <m>x^3 - 2</m> over <m>\Q</m>. Recall <me>
-  K= \Q(\a_1, \a_2, \a_3)
-  </me> <me>
-  \a_1 = \sqrt[3]{2}, \a_2 = e^{2 \pi i/3}\sqrt[3]{2}, \a_3 = e^{4 \pi i/3}\sqrt[3]{2}.
-  </me> Let us ponder how big <m>\Aut(K/\Q)</m> could be. Pick any <m>\s \in \Aut(K/\Q)</m>. Since <m>\s</m> is a ring homomorphism, for any <m>i</m> we have <me>
-  \s(\a_i)^3 = \s(\a_i^3) = \s(2) = 2
-  </me> and thus <m>\s(\a_i)</m> is also a root of <m>x^2 - 2</m>. In other words, for each <m>i</m> we have <m>\s(\a_i) = \a_j</m> for some <m>j</m>. Moreover, since <m>K</m> is generated as a field extension of <m>\Q</m> by <m>\a_1, \a_2, \a_3</m>, the action of <m>\s</m> on the three roots completely determines the action of <m>\s</m> on all of <m>K</m>. In more detail, every element of <m>K</m> is given taking <m>\Q</m>-linear combinations of sums and products and quotients of these roots, and any element of <m>\Aut(K/\Q)</m> preserves sums, products and <m>\Q</m>-linear combinations.
+              For a more complicated example, let <m>K</m> be the splitting field of <m>x^3 - 2</m> over <m>\Q</m>. 
+              Recall 
+              <me>
+                K= \Q(\a_1, \a_2, \a_3)
+              </me> 
+              <me>
+                \a_1 = \sqrt[3]{2}, \a_2 = e^{2 \pi i/3}\sqrt[3]{2}, \a_3 = e^{4 \pi i/3}\sqrt[3]{2}.
+              </me> 
+              Let us ponder how big <m>\Aut(K/\Q)</m> could be. 
+              Pick any <m>\s \in \Aut(K/\Q)</m>. 
+              Since <m>\s</m> is a ring homomorphism, for any <m>i</m> we have 
+              <me>
+                \s(\a_i)^3 = \s(\a_i^3) = \s(2) = 2
+              </me> 
+              and thus <m>\s(\a_i)</m> is also a root of <m>x^2 - 2</m>. 
+              In other words, for each <m>i</m> we have <m>\s(\a_i) = \a_j</m> for some <m>j</m>. 
+              Moreover, since <m>K</m> is generated as a field extension of <m>\Q</m> by <m>\a_1, \a_2, \a_3</m>, the action of <m>\s</m> on the three roots completely determines the action of <m>\s</m> on all of <m>K</m>. 
+              In more detail, every element of <m>K</m> is given taking <m>\Q</m>-linear combinations of sums and products and quotients of these roots, and any element of <m>\Aut(K/\Q)</m> preserves sums, products and <m>\Q</m>-linear combinations.
             </p>
   
             <p>
-              To summarize, we have proven that there are {} <m>3! = 6</m> possibilities for <m>\s</m>. In fact, more is true: The function <me>
-  \phi: \Aut(K/\Q) \to \Perm(\{\a_1, \a_2, \a_3\})
-  </me> given by sending <m>\s \in \Aut(K/\Q)</m> to its restriction to the subset <m>\{\a_1, \a_2, \a_3\}</m> is an injective group homomorphism. Thus <m>\Aut(K/\Q)</m> is isomorphic to a subgroup of <m>S_3</m>. I claim that <m>|\Aut(K/\Q)| = 6</m> and hence <m>\Aut(K/\Q) \cong S_3</m>. I will prove this directly - we will learn of fancier methods to do so later.
+              To summarize, we have proven that there are {} <m>3! = 6</m> possibilities for <m>\s</m>. 
+              In fact, more is true: 
+              The function 
+              <me>
+                \phi: \Aut(K/\Q) \to \Perm(\{\a_1, \a_2, \a_3\})
+              </me> 
+              given by sending <m>\s \in \Aut(K/\Q)</m> to its restriction to the subset <m>\{\a_1, \a_2, \a_3\}</m> is an injective group homomorphism. 
+              Thus <m>\Aut(K/\Q)</m> is isomorphic to a subgroup of <m>S_3</m>. 
+              I claim that <m>|\Aut(K/\Q)| = 6</m> and hence <m>\Aut(K/\Q) \cong S_3</m>. 
+              I will prove this directly - we will learn of fancier methods to do so later.
             </p>
   
             <p>
-              First we notice that the field automorphism of <m>\C</m> given by complex conjugation, namely <m>\C \to \C, z \mapsto \overline{z}</m>, permutes the roots of <m>x^3 - 2</m> and hence it restricts to a field map from <m>K</m> into <m>K</m>. Since this map is <m>\Q</m>-linear and injective (as are all field maps) and <m>K</m> is a finite dimensional <m>\Q</m>-vector space, this map must be onto as well. So, we obtain an element <m>\a \in \Aut(K/\Q)</m> given by <m>\a(z) = \overline{z}</m> for all <m>z \in K</m>. It corresponds <m>(2 \, 3) \in S_3</m>.
+              First we notice that the field automorphism of <m>\C</m> given by complex conjugation, namely <m>\C \to \C, z \mapsto \overline{z}</m>, permutes the roots of <m>x^3 - 2</m> and hence it restricts to a field map from <m>K</m> into <m>K</m>. 
+              Since this map is <m>\Q</m>-linear and injective (as are all field maps) and <m>K</m> is a finite dimensional <m>\Q</m>-vector space, this map must be onto as well. 
+              So, we obtain an element <m>\a \in \Aut(K/\Q)</m> given by <m>\a(z) = \overline{z}</m> for all <m>z \in K</m>. 
+              It corresponds <m>(2 \, 3) \in S_3</m>.
             </p>
   
             <p>
-              Next, we apply Porism , which gives <m>\gamma \in \Aut(K/\Q)</m> such that <m>\gamma(\sqrt[3]{2})=e^{2 \pi i/3} \sqrt[3]{2}</m>. So, in the numbering above, <m>\gamma</m> corresponds to either <m>(1 \, 2)</m> or <m>(1 \, 2 \, 3)</m> in <m>S_3</m>. We don't really know which of these it is. (In fact, both will occur — the map <m>\gamma</m> is not unique.) But either way we have proven the claim: For notice that both subsets <m>\{ (2 \, 3), (1 \, 2)\}</m> and <m>\{ (2 \, 3), (1 \, 2 \, 3)\}</m> of <m>S_3</m> generated all of <m>S_3</m>.
+              Next, we apply <xref ref="cor-porism"/>, which gives <m>\gamma \in \Aut(K/\Q)</m> such that <m>\gamma(\sqrt[3]{2})=e^{2 \pi i/3} \sqrt[3]{2}</m>. 
+              So, in the numbering above, <m>\gamma</m> corresponds to either <m>(1 \, 2)</m> or <m>(1 \, 2 \, 3)</m> in <m>S_3</m>. 
+              We don't really know which of these it is. 
+              (In fact, both will occur — the map <m>\gamma</m> is not unique.) 
+              But either way we have proven the claim: For notice that both subsets <m>\{ (2 \, 3), (1 \, 2)\}</m> and <m>\{ (2 \, 3), (1 \, 2 \, 3)\}</m> of <m>S_3</m> generated all of <m>S_3</m>.
             </p>
   
             <p>
-              In other words, every possible permutation of roots of <m>x^3 - 2</m> arises as a field automorphism of its splitting field over <m>\Q</m>. This is what I meant before when I said that the roots of <m>x^3 - 2</m> are “as symmetric as possible''.
+              In other words, every possible permutation of roots of <m>x^3 - 2</m> arises as a field automorphism of its splitting field over <m>\Q</m>. 
+              This is what I meant before when I said that the roots of <m>x^3 - 2</m> are “as symmetric as possible''.
             </p>
-            
           </example>
           
           <proposition xml:id="prop-automorphisms-and-permutations-fields"><title>Automorphisms and Permutations (Fields)</title>
-
             <statement>
               <p>
-                Suppose <m>F \subseteq K</m> is a field extension and <m>f(x) = F[x]</m>. Let <m>R = \{\a \in K \mid f(\a) = 0\}</m>, the set of roots of <m>f</m> in <m>K</m>. 
+                Suppose <m>F \subseteq K</m> is a field extension and <m>f(x) = F[x]</m>. 
+                Let <m>R = \{\a \in K \mid f(\a) = 0\}</m>, the set of roots of <m>f</m> in <m>K</m>. 
                 <ol>
                   <li>
                     <p>
@@ -16338,33 +16282,67 @@
 
             <proof>
               <p>
-                Say <m>f = \sum_i c_i x^i</m> with <m>c_i \in F</m>. Then <me>\s(f(\a)) = \s \left(\sum_i c_i \a^i\right) = \sum_i \s(c_i) \s(\a)^i = \sum_i c_i \s(\a)^i = f(\s(\a)).</me>This proves (1) and (2) is an immediate consequence.
+                Say <m>f = \sum_i c_i x^i</m> with <m>c_i \in F</m>. 
+                Then 
+                <me>
+                  \s(f(\a)) = \s \left(\sum_i c_i \a^i\right) = \sum_i \s(c_i) \s(\a)^i = \sum_i c_i \s(\a)^i = f(\s(\a)).
+                </me>
+                This proves (1) and (2) is an immediate consequence.
               </p>
   
               <p>
-                To show (3) we need to first prove that for all <m>\s \in \Aut(K/F)</m>, the function <m>\phi(\s): R \to R</m> is a bijection. (The target of this function is indeed <m>R</m> by (2).) Since <m>R</m> is finite, we just need to show its one-to-one. This holds since <m>\s</m> itself is one-to-one. (If <m>\phi(\s)(\a) = \phi(\s)(\a')</m> for <m>\a, \a' \in R</m> then <m>\s(\a) = \s(\a')</m> and, since <m>\s</m> is one-to-one, we have <m>\a = \a'</m>.) Since the group laws of <m>\Aut(K/F)</m> and <m>\Perm(R)</m> are both given as function composition, it is clear that <m>\phi</m> is a group homomorphism. In detail, <me>\phi(\s \circ \tau)(\a) = \s(\tau(\a)) = (\phi(\s)\circ \phi(\tau))(\a)</me> for all <m>\a</m> and so <m>\phi(\s \circ \tau) = \phi(\s) \circ \phi(\tau)</m>.
+                To show (3) we need to first prove that for all <m>\s \in \Aut(K/F)</m>, the function <m>\phi(\s): R \to R</m> is a bijection. 
+                (The target of this function is indeed <m>R</m> by (2).) 
+                Since <m>R</m> is finite, we just need to show its one-to-one.
+                This holds since <m>\s</m> itself is one-to-one. 
+                (If <m>\phi(\s)(\a) = \phi(\s)(\a')</m> for <m>\a, \a' \in R</m> then <m>\s(\a) = \s(\a')</m> and, since <m>\s</m> is one-to-one, we have <m>\a = \a'</m>.) 
+                Since the group laws of <m>\Aut(K/F)</m> and <m>\Perm(R)</m> are both given as function composition, it is clear that <m>\phi</m> is a group homomorphism. 
+                In detail, 
+                <me>
+                  \phi(\s \circ \tau)(\a) = \s(\tau(\a)) = (\phi(\s)\circ \phi(\tau))(\a)
+                </me> 
+                for all <m>\a</m> and so <m>\phi(\s \circ \tau) = \phi(\s) \circ \phi(\tau)</m>.
               </p>
   
               <p>
-                Now asssume <m>K = F(R)</m>. We show <m>\phi</m> is one-to-one by showing its kernel is trivial. Suppose <m>\phi(\s) = \id_{\Perm(R)}</m>; that is, suppose <m>\s(\a) = \a</m> for all <m>\a \in R</m>. We show <m>\s = \id_K</m>. Define <me>K^\sigma := \{\beta \in K \mid \s(\beta) = \beta\},</me> the so-called {} of <m>\s</m>. Note that <m>F \subseteq K^\s</m> since <m>\s \in \Aut(K/F)</m> and we also have <m>R \subseteq K^\s</m> by assumption. It is easy to see that <m>K^\s</m> is a subfield of <m>K</m>. (Here are the details: Clearly <m>1 \in K^\s</m>. For <m>\beta_1, \beta_2 \in K^\s</m>, we have <me>
-  \s(\beta_1 \pm \beta_2) = \s(\beta_1) \pm \s(\beta_2)  = \beta_1 \pm \beta_2,</me><me>\s(\beta_1 \cdot\beta_2) = \s(\beta_1) \cdot \s(\beta_2)  = \beta_1 \cdot \beta_2,</me>and, if <m>\beta_2 \ne 0</m>, <me>\s(1/\beta_2) =1 /\s(\beta_2)  =1/ \beta_2,</me> and thus <m>\beta_1 \pm \beta_2, \beta_1 \cdot \beta_2, 1/\beta_2 \in K^\s</m>.) So, <m>K^\s</m> is a subfield of <m>K</m> that contains <m>F</m> and <m>R</m>, but recall that <m>F(R)</m> is the {} subfield of <m>K</m> that contains <m>F</m> and <m>R</m>, and so we must have <m>K^\s = K</m>. But then <m>\s(\a) = \a</m> for all <m>\a \in K</m> and hence <m>\s = \id_K</m>.
+                Now asssume <m>K = F(R)</m>. We show <m>\phi</m> is one-to-one by showing its kernel is trivial. 
+                Suppose <m>\phi(\s) = \id_{\Perm(R)}</m>; that is, suppose <m>\s(\a) = \a</m> for all <m>\a \in R</m>. 
+                We show <m>\s = \id_K</m>.
+                Define 
+                <me>
+                  K^\sigma := \{\beta \in K \mid \s(\beta) = \beta\},
+                </me> 
+                the so-called <em>fixed fielf</em> of <m>\s</m>. 
+                Note that <m>F \subseteq K^\s</m> since <m>\s \in \Aut(K/F)</m> and we also have <m>R \subseteq K^\s</m> by assumption. 
+                It is easy to see that <m>K^\s</m> is a subfield of <m>K</m>. 
+                (Here are the details: <m>1 \in K^\s</m>. For <m>\beta_1, \beta_2 \in K^\s</m>, we have 
+                <me>
+                  \s(\beta_1 \pm \beta_2) = \s(\beta_1) \pm \s(\beta_2)  = \beta_1 \pm \beta_2,</me><me>\s(\beta_1 \cdot\beta_2) = \s(\beta_1) \cdot \s(\beta_2)  = \beta_1 \cdot \beta_2,
+                </me>
+                and, if <m>\beta_2 \ne 0</m>, 
+                <me>
+                  \s(1/\beta_2) =1 /\s(\beta_2)  =1/ \beta_2,
+                </me> 
+                and thus <m>\beta_1 \pm \beta_2, \beta_1 \cdot \beta_2, 1/\beta_2 \in K^\s</m>.) 
+                So, <m>K^\s</m> is a subfield of <m>K</m> that contains <m>F</m> and <m>R</m>, but recall that <m>F(R)</m> is the {} subfield of <m>K</m> that contains <m>F</m> and <m>R</m>, and so we must have <m>K^\s = K</m>. 
+                But then <m>\s(\a) = \a</m> for all <m>\a \in K</m> and hence <m>\s = \id_K</m>.
               </p>
             </proof>
           </proposition>
 
           <definition xml:id="def-fixed-field"><title>Fixed Field</title>
-
             <statement>
               <p>
-                Let <m>\s\in\Aut(K)</m>. Define <me>
+                Let <m>\s\in\Aut(K)</m>. Define 
+                <me>
                   K^\sigma := \{\beta \in K \mid \s(\beta) = \beta\},
-                  </me> the so-called <em>fixed field</em> of <m>\s</m>.
+                </me> 
+                the so-called <em>fixed field</em> of <m>\s</m>.
               </p>
             </statement>
           </definition>
           
           <corollary xml:id="cor-automorphisms-and-group-actions-fields"><title>Automorphisms and Group Actions (Fields)</title>
-
             <statement>
               <p>
                 Let <m>K</m> be the spitting field of some <m>f(x) \in F[x]</m>. 
@@ -16392,31 +16370,49 @@
 
             <proof>
               <p>
-                We proceed by induction on <m>[L:F]</m>. When <m>[L:F]=1</m>, we have <m>L = F</m> and <m>\Aut(L/F)</m> is the one element group.
+                We proceed by induction on <m>[L:F]</m>. 
+                When <m>[L:F]=1</m>, we have <m>L = F</m> and <m>\Aut(L/F)</m> is the one element group.
               </p>
   
               <p>
-                For <m>[L: F] &gt; 1</m>, pick <m>\a \in L \setminus F</m> and let <m>p(x) = m_{\a, F}(x)</m>. Consider the extension <m>F \subseteq F(\a)</m>. Note that <m>H = \Aut(L/F(\a))</m> is a subgroup of <m>G = \Aut(L/F)</m>, by definition. By induction we have <m>|H| \leq [L: F(\a)]</m>. Using the <xref text="title" ref="thm-degree-formula"/> and the fact that <m>|G| = |H| \cdot [G:H]</m>, it suffices to prove <m>[G:H] \leq [F(\a):F]</m>. This follows from:
+                For <m>[L: F] &gt; 1</m>, pick <m>\a \in L \setminus F</m> and let <m>p(x) = m_{\a, F}(x)</m>. 
+                Consider the extension <m>F \subseteq F(\a)</m>.
+                Note that <m>H = \Aut(L/F(\a))</m> is a subgroup of <m>G = \Aut(L/F)</m>, by definition. 
+                By induction we have <m>|H| \leq [L: F(\a)]</m>.
+                Using the <xref text="title" ref="thm-degree-formula"/> and the fact that <m>|G| = |H| \cdot [G:H]</m>, it suffices to prove <m>[G:H] \leq [F(\a):F]</m>. 
+                This follows from:
               </p>
   
               <p>
-                {} Let <m>R</m> be the set of roots of <m>p(x)</m> that belong to <m>L</m>. Then the function <me>\begin{equation}
-  \theta: G/H  \to R
-  \end{equation}</me> given by <m>\theta(gH) = g(\a)</m> is well-defined and injective. (Note: <m>H</m> is not necessarily normal, and so <m>G/H</m> isn't a group. By <m>G/H</m> I just mean the {} of left cosets of <m>H</m> in <m>G</m>.)
+                <em>Claim</em> Let <m>R</m> be the set of roots of <m>p(x)</m> that belong to <m>L</m>. 
+                Then the function 
+                <me>
+                  \begin{equation}
+                  \theta: G/H  \to R
+                  \end{equation}
+                </me> 
+                given by <m>\theta(gH) = g(\a)</m> is well-defined and injective. 
+                (Note: <m>H</m> is not necessarily normal, and so <m>G/H</m> isn't a group. 
+                By <m>G/H</m> I just mean the set of left cosets of <m>H</m> in <m>G</m>.)
               </p>
   
               <p>
-                By Proposition , for each <m>g \in G</m> we have <m>g(\a) \in R</m>. Moreover, by definition of <m>H</m>, for all <m>h \in H</m>, we have <m>h(\a) = \a</m> and hence <m>gh(\a)=g(h(\a))=g(\a)</m>. This proves <m>\theta</m> is a well-defined function (i.e., it is independent of left coset representative). For <m>g_1, g_2 \in G</m>, if <m>g_1(\a) = g_2(\a)</m> then <m>g_2^{-1}g_1(\a) = \a</m> which implies <m>g_2^{-1}g_1 \in H</m> (since if an automorphism of <m>L</m> fixes <m>F</m> and <m>\a</m> then it fixes <m>F(\a)</m>). Thus <m>g_1(\a) = g_2(\a)</m> implies <m>g_1H = g_2H</m> and hence <m>\theta</m> is one-to-one.
+                By Proposition , for each <m>g \in G</m> we have <m>g(\a) \in R</m>. 
+                Moreover, by definition of <m>H</m>, for all <m>h \in H</m>, we have <m>h(\a) = \a</m> and hence <m>gh(\a)=g(h(\a))=g(\a)</m>. 
+                This proves <m>\theta</m> is a well-defined function (i.e., it is independent of left coset representative). 
+                For <m>g_1, g_2 \in G</m>, if <m>g_1(\a) = g_2(\a)</m> then <m>g_2^{-1}g_1(\a) = \a</m> which implies <m>g_2^{-1}g_1 \in H</m> 
+                (since if an automorphism of <m>L</m> fixes <m>F</m> and <m>\a</m> then it fixes <m>F(\a)</m>). 
+                Thus <m>g_1(\a) = g_2(\a)</m> implies <m>g_1H = g_2H</m> and hence <m>\theta</m> is one-to-one.
               </p>
   
               <p>
-                Since <m>\deg(p(x)) = [F(\a): F]</m>, we conclude from the claim that <m>[G:H] =|G/H|\leq [F(\a): F]</m>. Putting all this together gives <m>|G| = |H|\cdot [G:H] \leq [L:F(\a)][F(\a):F] = [L:F]</m>.
+                Since <m>\deg(p(x)) = [F(\a): F]</m>, we conclude from the claim that <m>[G:H] =|G/H|\leq [F(\a): F]</m>. 
+                Putting all this together gives <m>|G| = |H|\cdot [G:H] \leq [L:F(\a)][F(\a):F] = [L:F]</m>.
               </p>
             </proof>
           </corollary>
 
           <proposition xml:id="prop-automorphisms-and-finite-extension-degree"><title>Automorphisms and Finite Extension Degree</title>
-
             <statement>
               <p>
                 If <m>F \subseteq L</m> is a finite extension of fields, then <m>|\Aut(L/F)| \leq [L : F]</m>.
@@ -16425,11 +16421,16 @@
 
             <proof>
               <p>
-                We proceed by induction on <m>[L:F]</m>. When <m>[L:F]=1</m>, we have <m>L = F</m> and <m>\Aut(L/F)</m> is the one element group.
+                We proceed by induction on <m>[L:F]</m>. 
+                When <m>[L:F]=1</m>, we have <m>L = F</m> and <m>\Aut(L/F)</m> is the one element group.
               </p>
   
               <p>
-                For <m>[L: F] &gt; 1</m>, pick <m>\a \in L \setminus F</m> and let <m>p(x) = m_{\a, F}(x)</m>. Consider the extension <m>F \subseteq F(\a)</m>. Note that <m>H = \Aut(L/F(\a))</m> is a subgroup of <m>G = \Aut(L/F)</m>, by definition. By induction we have <m>|H| \leq [L: F(\a)]</m>. Using the <xref text="title" ref="thm-degree-formula"/> and the fact that <m>|G| = |H| \cdot [G:H]</m>, it suffices to prove <m>[G:H] \leq [F(\a):F]</m>. This follows from:
+                For <m>[L: F] &gt; 1</m>, pick <m>\a \in L \setminus F</m> and let <m>p(x) = m_{\a, F}(x)</m>. 
+                Consider the extension <m>F \subseteq F(\a)</m>. 
+                Note that <m>H = \Aut(L/F(\a))</m> is a subgroup of <m>G = \Aut(L/F)</m>, by definition. 
+                By induction we have <m>|H| \leq [L: F(\a)]</m>. 
+                Using the <xref text="title" ref="thm-degree-formula"/> and the fact that <m>|G| = |H| \cdot [G:H]</m>, it suffices to prove <m>[G:H] \leq [F(\a):F]</m>. This follows from:
               </p>
   
               <p>
@@ -16445,46 +16446,71 @@
           </proposition>
 
           <example xml:id="exe-lq-and-x4-2"><title><m>[L:\Q]</m> and <m>(x^4-2)</m></title>
-
             <p>
-              Let <m>L</m> be the splitting field of the irreducible polynomial <m>q(x) = x^4 - 2 \in \Q[x]</m>. So <m>L = \Q(R)</m> where <m>R = \{z_1 = \sqrt[4]{2}, z_2 = i \sqrt[4]{2}, z_3= - \sqrt[4]{2}, z_4 = - i\sqrt[4]{2})\}</m>. By the Corollary above, the action of <m>\Aut(L/\Q)</m> on <m>R</m> is faithful so that we have an injective group homomorphism <m>\Aut(L/\Q) \to \Perm(R)</m>.
+              Let <m>L</m> be the splitting field of the irreducible polynomial <m>q(x) = x^4 - 2 \in \Q[x]</m>. 
+              So <m>L = \Q(R)</m> where <m>R = \{z_1 = \sqrt[4]{2}, z_2 = i \sqrt[4]{2}, z_3= - \sqrt[4]{2}, z_4 = - i\sqrt[4]{2})\}</m>. 
+              By <xref ref="cor-automorphisms-and-group-actions-fields"/>, the action of <m>\Aut(L/\Q)</m> on <m>R</m> is faithful so that we have an injective group homomorphism <m>\Aut(L/\Q) \to \Perm(R)</m>.
             </p>
   
             <p>
-              Note that this map cannot possibly be onto: there is no <m>\s \in \Aut(L/\Q)</m> such that <m>\s(z_1) = z_2</m>, <m>\s(z_2) = z_1</m>, <m>\s(z_3) = z_3</m>, and <m>\s(z_4) =z_4</m>; i.e., the permutation <m>(1 \, 2)</m> of these roots is not realizable by a field automorphism. To see this note that if <m>\s(z_1) = z_2</m> then <m>\s(z_3) = \s(-z_1) = - \s(z_1) = - z_2 = z_4</m>. So, any field automorphism that interchanges <m>z_1</m> and <m>z_2</m> would have to also interchange <m>z_3</m> and <m>z_4</m>. In fact, as we shall see, <m>|\Aut(L/\Q)| = 8</m>, considerably smaller than <m>4!</m>.
+              Note that this map cannot possibly be onto: there is no <m>\s \in \Aut(L/\Q)</m> such that <m>\s(z_1) = z_2</m>, <m>\s(z_2) = z_1</m>, <m>\s(z_3) = z_3</m>, and <m>\s(z_4) =z_4</m>; 
+              i.e., the permutation <m>(1 \, 2)</m> of these roots is not realizable by a field automorphism. 
+              To see this note that if <m>\s(z_1) = z_2</m> then <m>\s(z_3) = \s(-z_1) = - \s(z_1) = - z_2 = z_4</m>. 
+              So, any field automorphism that interchanges <m>z_1</m> and <m>z_2</m> would have to also interchange <m>z_3</m> and <m>z_4</m>. 
+              In fact, as we shall see, <m>|\Aut(L/\Q)| = 8</m>, considerably smaller than <m>4!</m>.
             </p>
   
             <p>
-              Let us compute <m>[L:\Q]</m>. Note that <m>i \in L</m> since <m>i = z_2/z_1</m> and in fact <m>L = \Q(z_1, i)</m>. In the chain of extensions <me>
-  \Q \subset \Q(z_1) \subset L = \Q(z_1)(i)
-  </me> the first one has degree <m>4</m>, since <m>x^4 - 2</m> is irreducible by <xref text="title" ref="thm-eisensteins-criterion"/>, and the second has degree at most <m>2</m> since <m>i</m> is a root of <m>x^2 + 1</m>. It would be less than two if <m>x^2+1</m> factors in <m>\Q(z_2)[x]</m>. But since <m>\Q(z_1) \subset \R</m> and <m>L</m> is not contained in <m>\R</m>, the second extension cannot be trivial and so must have degree exactly <m>2</m>. We conclude <m>[L:\Q] = 8</m>. It follows from Proposition  that <m>|\Aut(L/\Q)| \leq 8</m>. (In fact, since <m>L</m> is the splitting field of a separable polynomial, the Theorem below will tell us that <m>|\Aut(L/\Q)| = 8</m>. But we won't appeal to this fact here.)
+              Let us compute <m>[L:\Q]</m>. 
+              Note that <m>i \in L</m> since <m>i = z_2/z_1</m> and in fact <m>L = \Q(z_1, i)</m>. 
+              In the chain of extensions 
+              <me>
+                \Q \subset \Q(z_1) \subset L = \Q(z_1)(i)
+              </me> 
+              the first one has degree <m>4</m>, since <m>x^4 - 2</m> is irreducible by <xref text="title" ref="thm-eisensteins-criterion"/>, and the second has degree at most <m>2</m> since <m>i</m> is a root of <m>x^2 + 1</m>. 
+              It would be less than two if <m>x^2+1</m> factors in <m>\Q(z_2)[x]</m>. 
+              But since <m>\Q(z_1) \subset \R</m> and <m>L</m> is not contained in <m>\R</m>, the second extension cannot be trivial and so must have degree exactly <m>2</m>. 
+              We conclude <m>[L:\Q] = 8</m>. 
+              It follows from Proposition  that <m>|\Aut(L/\Q)| \leq 8</m>. 
+              (In fact, since <m>L</m> is the splitting field of a separable polynomial, the Theorem below will tell us that <m>|\Aut(L/\Q)| = 8</m>. 
+              But we won't appeal to this fact here.)
             </p>
   
             <p>
-              We claim <m>|\Aut(L/\Q)| = 8</m> and <m>\Aut(L/\Q)</m> is isomorphic to the subgroup <m>H</m> of <m>S_4</m> generated by <m>(2 \, 4)</m> and <m>(1 \,2 \, 3 \,4)</m>. (This is isomorphic to <m>D_8</m>.)
+              We claim <m>|\Aut(L/\Q)| = 8</m> and <m>\Aut(L/\Q)</m> is isomorphic to the subgroup <m>H</m> of <m>S_4</m> generated by <m>(2 \, 4)</m> and <m>(1 \,2 \, 3 \,4)</m>. 
+              (This is isomorphic to <m>D_8</m>.)
             </p>
   
             <p>
-              The map <m>\C \to \C</m> given by complex conjugation permutes the roots of <m>x^4 - 2</m> and it restricts to an automorphism of <m>L</m> — specially, it fixes <m>z_1, z_3</m> and interchanges <m>z_2</m> and <m>z_4</m>. It follows that complex conjugation determines an element <m>\s \in \Aut(L/\Q)</m> that corresponds to <m>(2 \, 4) \in H \leq S_4</m>.
+              The map <m>\C \to \C</m> given by complex conjugation permutes the roots of <m>x^4 - 2</m> and it restricts to an automorphism of <m>L</m> — specially, it fixes <m>z_1, z_3</m> and interchanges <m>z_2</m> and <m>z_4</m>. 
+              It follows that complex conjugation determines an element <m>\s \in \Aut(L/\Q)</m> that corresponds to <m>(2 \, 4) \in H \leq S_4</m>.
             </p>
   
             <p>
-              By the <xref text="title" ref="thm-degree-formula"/> we get <m>[L: \Q(i)] = 4</m>. Since <m>L = \Q(i)(z_1)</m>, the degree of <m>m_{z_1, \Q(i)}(x)</m> must be <m>4</m>. This shows that <m>x^4 - 2</m> must remain irreducible as a polynomial in <m>\Q(i)[x]</m>; this is not obvious, but we have now proven it, and this fact will be useful in what we do next.
+              By the <xref text="title" ref="thm-degree-formula"/> we get <m>[L: \Q(i)] = 4</m>. 
+              Since <m>L = \Q(i)(z_1)</m>, the degree of <m>m_{z_1, \Q(i)}(x)</m> must be <m>4</m>. 
+              This shows that <m>x^4 - 2</m> must remain irreducible as a polynomial in <m>\Q(i)[x]</m>; 
+              this is not obvious, but we have now proven it, and this fact will be useful in what we do next.
             </p>
   
             <p>
-              To construct another element of <m>\Aut(L/\Q)</m>, we use that that <m>L</m> is the splitting field of the polynomial <m>x^4 - 2</m> over <m>\Q(i)</m> and that, as we just showed, <m>x^4 - 2</m> is irreducible in <m>\Q(i)[x]</m>. We may thus apply Porism  (also stated in the Corollary) to get that there is an element <m>\tau \in \Aut(L/\Q(i))</m> such that <m>\tau(z_1) = z_2</m>. We may regard <m>\tau</m> as an element of <m>\Aut(L/\Q)</m> since, by definition, <m>\Aut(L/\Q(i))</m> is a subgroup of <m>\Aut(L/\Q)</m>. We have <me>
-  \tau(z_2) = \tau(i z_1) = \tau(i) \tau(z_1) = i z_2 = z_3
-  </me> since <m>\tau(i) = i</m> by construction. A key point here is that if we had merely specified <m>\tau</m> to be an element of <m>\Aut(L/\Q)</m> sending <m>z_1</m> to <m>z_2</m>, then we would have no idea what <m>\tau</m> does to <m>z_2</m> — it was key to define <m>\tau \in \Aut(L/\Q(i))</m> as we did. We then also get <m>\tau(z_3) = z_4</m> and <m>\tau(z_4) = z_1</m>. So <m>\tau</m> corresponds to the permutation <m>(1 \,2 \, 3 \,4)</m>.
+              To construct another element of <m>\Aut(L/\Q)</m>, we use that that <m>L</m> is the splitting field of the polynomial <m>x^4 - 2</m> over <m>\Q(i)</m> and that, as we just showed, <m>x^4 - 2</m> is irreducible in <m>\Q(i)[x]</m>. 
+              We may thus apply Porism  (also stated in the Corollary) to get that there is an element <m>\tau \in \Aut(L/\Q(i))</m> such that <m>\tau(z_1) = z_2</m>. We may regard <m>\tau</m> as an element of <m>\Aut(L/\Q)</m> since, by definition, <m>\Aut(L/\Q(i))</m> is a subgroup of <m>\Aut(L/\Q)</m>. 
+              We have 
+              <me>
+                \tau(z_2) = \tau(i z_1) = \tau(i) \tau(z_1) = i z_2 = z_3
+              </me> since <m>\tau(i) = i</m> by construction. 
+              A key point here is that if we had merely specified <m>\tau</m> to be an element of <m>\Aut(L/\Q)</m> sending <m>z_1</m> to <m>z_2</m>, then we would have no idea what <m>\tau</m> does to <m>z_2</m> — it was key to define <m>\tau \in \Aut(L/\Q(i))</m> as we did.
+              We then also get <m>\tau(z_3) = z_4</m> and <m>\tau(z_4) = z_1</m>. So <m>\tau</m> corresponds to the permutation <m>(1 \,2 \, 3 \,4)</m>.
             </p>
   
             <p>
-              We have proven that <m>\Aut(L/\Q)</m> is isomorphic to a subgroup of <m>S_4</m> having order at most <m>8</m> (by the Proposition above) and that it contains <m>(2 \, 4)</m> and <m>(1 \,2 \, 3 \,4)</m>. Since the subgroup generated by these two elements has order <m>8</m>, the claim follows.
+              We have proven that <m>\Aut(L/\Q)</m> is isomorphic to a subgroup of <m>S_4</m> having order at most <m>8</m> (by the Proposition above) and that it contains <m>(2 \, 4)</m> and <m>(1 \,2 \, 3 \,4)</m>. 
+              Since the subgroup generated by these two elements has order <m>8</m>, the claim follows.
             </p>
           </example>
 
           <definition xml:id="def-normal-extension"><title>Normal Extension</title>
-
             <statement>
               <p>
                 A finite extension <m>F \subseteq L</m> is called <em>normal</em> if <m>L</m> is the splitting field of some (non-unique) polynomial <m>f(x) \in F[x]</m>.
@@ -16493,26 +16519,25 @@
           </definition>
 
           <example xml:id="exe-normal-extension"><title>Normal Extension</title>
-
             <p>
               <m>L = \Q(\sqrt[3]{2}, e^{2 \pi i/3})</m> is a normal extension of <m>\Q</m> since it is the splitting field of <m>x^3-2</m>.
             </p>
-
           </example>
 
           <example xml:id="exe-qsqrt32-not-normal"><title><m>\Q(\sqrt[3]2)</m> not Normal</title>
-
             <p>
-              Is <m>\Q(\sqrt[3]{2})</m> normal? It isn't the splitting field of <m>x^3 -2</m> clearly, but maybe it somehow is the splitting field of some other polynomial. It in fact is not normal, but it is not so obvious that it isn't. The next Theorem will allow us to prove it isn't normal.
+              Is <m>\Q(\sqrt[3]{2})</m> normal? 
+              It isn't the splitting field of <m>x^3 -2</m>, but maybe it somehow is the splitting field of some other polynomial. 
+              It in fact is not normal, but it is not so obvious that it isn't. 
+              The next Theorem will allow us to prove it isn't normal.
             </p>
-
           </example>
 
           <theorem xml:id="thm-galois-extension-equivalencies"><title>Galois Extension Equivalencies</title>
-
             <statement>
               <p>
-                Let <m>F \subseteq L</m> be a finite extension of fields. The following are equivalent. 
+                Let <m>F \subseteq L</m> be a finite extension of fields. 
+                The following are equivalent. 
                 <ol>
                   <li>
                     <p>
@@ -16537,7 +16562,6 @@
           </theorem>
 
           <definition xml:id="def-galois-extension"><title>Galois Extension</title>
-
             <statement>
               <p>
                 A finite extension of fields is a Galois extension if the three equivalence conditions of this theorem hold: 
@@ -16570,50 +16594,63 @@
 
           <remark>
             <p>
-              Recall from the Proposition above that <m>|\Aut(L/F)| \leq [L:F]</m> holds for any finite field extension. So, such an extension is Galois if and only if its automorphism group is as large as is allowed by the Proposition.
+              Recall from the Proposition above that <m>|\Aut(L/F)| \leq [L:F]</m> holds for any finite field extension. 
+              So, such an extension is Galois if and only if its automorphism group is as large as is allowed by the Proposition.
             </p>
           </remark>
 
           <example xml:id="exe-galois-extension"><title>Galois Extension</title>
-            
             <p>
-              <m>L = \Q(\sqrt[3]{2}, e^{2 \pi i/3})</m> is a Galois extension of <m>\Q</m>, since it the splitting field of <m>x^3 - 2</m>. We proved above that <m>\Aut(L/\Q)</m> has six elements and <m>[L: \Q] = 6</m>, as the Theorem predicts.
+              <m>L = \Q(\sqrt[3]{2}, e^{2 \pi i/3})</m> is a Galois extension of <m>\Q</m>, since it the splitting field of <m>x^3 - 2</m>. 
+              We proved above that <m>\Aut(L/\Q)</m> has six elements and <m>[L: \Q] = 6</m>, as the Theorem predicts.
             </p>
           </example>
 
           <example xml:id="exe-qsqrt32-not-galois"><title><m>\Q(\sqrt[3]2)</m> not Galois</title>
-
             <p>
-              I claim <m>L = \Q(\sqrt[3]{2})</m> is not a Galois extension of <m>\Q</m>. Let <m>R</m> be the set of all roots of <m>x^3-2</m> in <m>L</m>. Since <m>L \subseteq \R</m>, <m>R</m> has just one element: <m>R = \{\sqrt[3]{2}\}</m>. Since <m>L = \Q(R)</m>, the function <m>\phi: \Aut(L/\Q) \to \Perm(R)</m> is injective by Proposition  and so since <m>|R| = 1</m>, we have <m>|\Aut(L/\Q)| = 1</m>. Thus it isn't Galois. Since it is separable, <m>L</m> must not be a normal extension of <m>\Q</m>.
+              I claim <m>L = \Q(\sqrt[3]{2})</m> is not a Galois extension of <m>\Q</m>. 
+              Let <m>R</m> be the set of all roots of <m>x^3-2</m> in <m>L</m>. 
+              Since <m>L \subseteq \R</m>, <m>R</m> has just one element: <m>R = \{\sqrt[3]{2}\}</m>. 
+              Since <m>L = \Q(R)</m>, the function <m>\phi: \Aut(L/\Q) \to \Perm(R)</m> is injective by Proposition  and so since <m>|R| = 1</m>, we have <m>|\Aut(L/\Q)| = 1</m>. 
+              Thus it isn't Galois. 
+              Since it is separable, <m>L</m> must not be a normal extension of <m>\Q</m>.
             </p>
-            
           </example>
 
           <proposition xml:id="prop-one-root-to-factor-them-all"><title>One Root to Factor them All</title>
-
             <statement>
               <p>
-                Suppose <m>F \subseteq L</m> is a finite extension of fields and <m>f(x)\in F[x]</m> is an irreducible polynomial. If <m>F \subseteq L</m> is a normal extension and <m>f</m> has at least one root in <m>L</m>, then <m>f</m> factors completely in <m>L</m>.
+                Suppose <m>F \subseteq L</m> is a finite extension of fields and <m>f(x)\in F[x]</m> is an irreducible polynomial. 
+                If <m>F \subseteq L</m> is a normal extension and <m>f</m> has at least one root in <m>L</m>, then <m>f</m> factors completely in <m>L</m>.
               </p>
             </statement>
 
             <proof>
               <p>
-                Say <m>L</m> is the splitting field of <m>g(x) \in F[x]</m>. Let <m>K</m> be the splitting field of <m>g(x) \cdot f(x)</m>. So <m>F \subseteq L \subseteq K</m>. Say <m>\a</m> is a root of <m>f</m> that belongs to <m>L</m>, and let <m>\beta \in K</m> be any other root. We aim to prove <m>\beta \in L</m>.
+                Say <m>L</m> is the splitting field of <m>g(x) \in F[x]</m>. 
+                Let <m>K</m> be the splitting field of <m>g(x) \cdot f(x)</m>. So <m>F \subseteq L \subseteq K</m>. 
+                Say <m>\a</m> is a root of <m>f</m> that belongs to <m>L</m>, and let <m>\beta \in K</m> be any other root. 
+                We aim to prove <m>\beta \in L</m>.
               </p>
   
               <p>
-                Recall that we know that if <m>E</m> is a splitting field over <m>F</m> of an {} polynomial, then <m>\Aut(E/F)</m> acts transitively on the roots of this polynomial. Something more general is true: If <m>E</m> is the splitting field over <m>F</m> of some possibly reducible polynomial <m>h(x)</m>, then for each irreducible factors <m>p(x)</m>, <m>\Aut(E/F)</m> acts transitively on the roots of <m>p(x)</m>. I won't prove this, but will apply it to <m>F \subseteq K</m>. Since <m>f(x)</m> is irreducible, we get that there is there a <m>\s \in \Aut(K/F)</m> such that <m>\s(\a) = \beta</m>. Let <m>c_1, \dots, c_m \in L</m> be all the roots of <m>g</m>, so that <m>L = F(c_1, \dots, c_m)</m>. Since <m>\s</m> fixes <m>F</m>, it must permute these roots. In particular, <m>\s(L) \subseteq L</m>. But then <m>\beta = \s(\a) \in L</m>.
+                Recall that we know that if <m>E</m> is a splitting field over <m>F</m> of an <em>irreducible</em> polynomial, then <m>\Aut(E/F)</m> acts transitively on the roots of this polynomial. 
+                Something more general is true: 
+                If <m>E</m> is the splitting field over <m>F</m> of some possibly reducible polynomial <m>h(x)</m>, then for each irreducible factors <m>p(x)</m>, <m>\Aut(E/F)</m> acts transitively on the roots of <m>p(x)</m>. 
+                I won't prove this, but will apply it to <m>F \subseteq K</m>. 
+                Since <m>f(x)</m> is irreducible, we get that there is there a <m>\s \in \Aut(K/F)</m> such that <m>\s(\a) = \beta</m>. 
+                Let <m>c_1, \dots, c_m \in L</m> be all the roots of <m>g</m>, so that <m>L = F(c_1, \dots, c_m)</m>. 
+                Since <m>\s</m> fixes <m>F</m>, it must permute these roots. 
+                In particular, <m>\s(L) \subseteq L</m>. But then <m>\beta = \s(\a) \in L</m>.
               </p>
             </proof>
           </proposition>
 
           <example xml:id="exe-galois-and-characteristic-p"><title>Galois and Characteristic <m>p</m></title>
-
             <p>
-              Let <m>F</m> be a field of characteristic <m>p</m>, for a prime integer <m>p</m>, and assume <m>L</m> is a finite field extension of <m>F</m> such that there exists an element <m>a</m> of <m>L</m> with <m>a \notin F</m> but <m>a^p \in F</m>. Then <m>F \subseteq L</m> is not Galois since <m>|\Aut(L/K)| &lt; [L:K]</m> in this case. You will prove this in the Homework.
+              Let <m>F</m> be a field of characteristic <m>p</m>, for a prime integer <m>p</m>, and assume <m>L</m> is a finite field extension of <m>F</m> such that there exists an element <m>a</m> of <m>L</m> with <m>a \notin F</m> but <m>a^p \in F</m>. 
+              Then <m>F \subseteq L</m> is not Galois since <m>|\Aut(L/K)| &lt; [L:K]</m> in this case. 
             </p>
-
           </example>
           
         </section>
@@ -18531,6 +18568,618 @@
             The term "module" is used to emphasize the idea that these objects are generalizations of vector spaces, and that they measure the extent to which a given vector space can be transformed using the ring operations.
           </p>
         </paragraphs>
+      </appendix>
+
+      <appendix><title>Qualifying Exams</title>
+
+        <paragraphs><title>May 2022</title>
+          
+          <activity><title>Problem 1</title>
+            <statement>
+              <p>
+                Let <m>G</m> be a finite <m>p</m>-group for some prime <m>p</m> and <m>N\neq {1}</m> a normal subgroup of <m>G</m>. 
+                Prove that <m>N\cap Z(G)\neq{1}</m>, where <m>Z(G)</m> is the center of <m>G</m>.
+              </p>
+            </statement>
+
+            <solution>
+              <p>
+                Let <m>G</m> be a finite <m>p</m>-group for some prime <m>p</m> and <m>N\neq {1}</m> a normal subgroup of <m>G</m>.
+              </p>
+
+              <p>
+                First, we show that the center of <m>G</m> is nontrivial. 
+                Suppose by way of contradiction that <m>Z(G)=\{e\}</m>. 
+                We examine the conjugacy classes of <m>G</m>. 
+                From the <xref text="title" ref="thm-class-eq"/>, we know
+                <me>
+                  |G| = |Z(G)| + \sum_i^r [G : C_G(g_i)].
+                </me>
+                Note that <m>|G|=p^n</m> for some <m>n\in\N</m>, meaning that the only divisors of <m>|G|</m> are powers of <m>p</m>. 
+                In finite groups, each conjugacy class must divide the order of the group by <xref ref="thm-conjugacy-divides-order"/>. 
+                By <xref text="title" ref="thm-lagrange"/>, <m>[G : C_G(g_i)]=\frac{|G|}{|C_G(g_i)|}=\frac{p^n}{p^m}=p^k</m>, where <m>m,k\in\N</m>. 
+                Since <m>|Z(G)|=1</m>, we see that <m>\sum_i^r |G : C_G(g_i)|\bigg|p^n-1</m>, which is impossible given that <m>p^{n-1} \not\mid p^n</m>. 
+                Thus <m>Z(G)\neq\{e\}</m>.
+              </p>
+
+              <p>
+                As <m>N\nsg G</m>, by <xref ref="cor-normal-union-of-conjugacy-classes"/> it is a union of conjugacy classes of the elements it contains, one of which is <m>e</m>. 
+                Assume by way of contradiction that <m>N\cap Z(G)={e}</m>, meaning that <m>e</m> is the only element in <m>N</m> whose conjugacy class is a singleton. 
+                This yields 
+                <me>
+                  |N| = 1+ \sum_i^r |G : C_G(g_i)|.
+                </me> 
+                However, by <xref text="title" ref="thm-lagrange"/> <m>N</m> must also be a <m>p-</m>group, and thus by an analogous element counting argument as above we see that there exists some <m>x\in N</m> such that <m>C_G(x)=\{x\}</m>, or that <m>gxg\inv=x</m> for all <m>g\in G</m>. 
+                Thankfully, this means that <m>x\in Z(G)</m>, and thus we have <m>Z(G)\cap N\neq 1</m>.
+              </p>
+            </solution>
+          
+          </activity>
+
+          <activity><title>Problem 2</title>
+            <statement>
+              <p>
+                A non-abelian group of order <m>27</m>. 
+                <ol>
+                  <li>
+                    <p>
+                      Prove there exists a non-abelian group of <m>27</m>. 
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Find, with justification, a presentation of the group you found in part (1).
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+
+            <hint>
+              <p>
+                Use a semi-direct product.
+              </p>
+            </hint>
+
+            <solution>
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      Let <m>C_3 = \langle a \rangle</m> be the cyclic group of order <m>3</m>, and let <m>C_9 = \langle b \rangle</m> be the cyclic group of order <m>9</m>. 
+                      Let <m>\phi \colon C_9 \to \operatorname{Aut}(C_3)</m> be the homomorphism defined by <m>\phi(b^i)(a) = a^i</m> for <m>0 \le i \le 8</m>, where we identify <m>\operatorname{Aut}(C_3)</m> with <m>C_2</m> via the isomorphism <m>\operatorname{Aut}(C_3) \cong C_2</m> given by sending the non-identity automorphism to the generator of <m>C_2</m>.
+                    </p>
+
+                    <p>
+                      Then the semi-direct product <m>G = C_3 \rtimes_{\phi} C_9</m> has order <m>27</m> and is non-abelian. 
+                      To see that <m>G</m> is non-abelian, note that <m>bab^{-1} \neq a</m> for any <m>b \in C_9 \setminus {1}</m>, since <m>a</m> has no non-trivial automorphisms.
+                    </p>
+                  </li>
+                    
+                  <li>
+                    <p>
+                      To find a presentation of <m>G</m>, we need to identify the generators and relations. 
+                      Since <m>C_3</m> and <m>C_9</m> are both cyclic, we can take the generators to be <m>a</m> and <m>b</m> respectively. 
+                      Moreover, since <m>C_3</m> is normal in <m>G</m>, we have <m>bab^{-1} = a^i</m> for some <m>i \in {1, 2}</m>.
+                    </p>
+
+                    <p>
+                      To determine the value of <m>i</m>, note that <m>C_9</m> acts on <m>C_3</m> by automorphisms, and the non-identity automorphism of <m>C_3</m> is inversion <m>a \mapsto a^{-1}</m>. 
+                      Since <m>bab^{-1} \neq a^{-1}</m>, we must have <m>i = 2</m>.
+                    </p>
+
+                    <p>
+                      Therefore, a presentation of <m>G</m> is given by <m>\langle a, b \mid a^3 = b^9 = 1, bab^{-1} = a^2\rangle</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </solution>
+          
+          </activity>
+
+          <activity><title>Problem 3</title>
+            <statement>
+              <p>
+                Let G be a group of order <m>2^5\cdot 7^3</m>. 
+                Prove that <m>G</m> is not simple.
+              </p>
+            </statement>
+
+            <solution>
+              <p>
+                By <xref text="title" ref="thm-sylow"/> we know that <m>\Syl_7(G)\equiv 1\mod{7}</m> and <m>\Syl_7(G)|2^5=32</m>. 
+                Thus our options are <m>1</m> and <m>8</m>. 
+                Suppose that <m>\Syl_7(G)=8</m>.
+              </p>
+
+              <p>
+                Let <m>G</m> act on <m>\Syl_7(G)</m> by conjugation, yielding the homomorphism <m>\rho: G \to S_8</m> via the <xref text="title" ref="thm-permrep"/>. 
+                This map is non-trivial from part (2) of <xref text="title" ref="thm-sylow"/>, but <m>2^5\cdot 7^3</m> does not divide <m>|S_8|=8!</m>, and thus <m>\rho</m> cannot be injective. 
+                Then the kernel of this homomorphism is non-trivial, normal subgroup of <m>G</m> by <xref ref="thm-norm-iff-ker"/>. 
+                Thus <m>G</m> is not simple.
+              </p>
+            </solution>
+          
+          </activity>
+
+          <activity><title>Problem 4</title>
+            <statement>
+              <p>
+                Let <m>R</m> be a commutative ring with identity, and assume <m>1\neq0</m>. 
+                Let <m>I</m> and <m>J</m> be ideals such that <m>I + J = R</m>.
+              </p>
+
+              <p>
+                <ol>
+                  <li>
+                    Prove <m>IJ = I\cap J</m>. 
+                  </li>
+
+                  <li>
+                    Prove the following special case of <xref text="title" ref="thm-sunzi"/>: 
+                    There is an isomorphism of rings of the form <m>R/(I \cap J)\cong R/I \times R/J</m>.
+                  </li>
+                </ol>
+              </p>
+            </statement>
+
+            <solution>
+              <p>
+                Let <m>R</m> be a commutative ring with identity, and assume <m>1\neq0</m>. 
+                Let <m>I</m> and <m>J</m> be ideals such that <m>I + J = R</m>.
+              </p>
+
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      Let <m>x\in IJ</m>. 
+                      Thus <m>x=\sum a_ib_j</m>, where each <m>a_i\in I</m> and <m>b_j\in J</m>. 
+                      As <m>I</m> and <m>J</m> are both ideals, each term in this sum is contained both in <m>I</m> and <m>J</m>. 
+                      Thus, by absorption, <m>x\in I\cap J</m>. Hence <m>IJ\subseteq I\cap J</m>.
+                    </p>
+
+                    <p>
+                      Let <m>x\in I\cap J</m>. 
+                      Thus <m>x\in I</m> and <m>x\in J</m>. 
+                      Note that as <m>I+J=R</m>, there exists some <m>a\in I</m> and <m>b\in J</m> such that <m>a+b=1</m>. 
+                      So <m>x=x1=xa+xb</m>. 
+                      As <m>x\in I\cap J</m> we see that <m>x=ax+xb</m>, with <m>a,x\in I</m> and <m>b,x\in J</m>. 
+                      Thus <m>x\in IJ</m>, yielding <m>IJ=I\cap J</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Let <m>f:R\to R/I\times R/J</m> be defined by <m>f(x)=(x+I,x+J)</m>.
+                    </p>
+
+                    <p>
+                      Notice that if <m>x\in I\cap J</m>, we have <m>f(x)=(I,J)</m>, and so <m>x\in\ker(f)</m>. 
+                      Let <m>x\in\ker(f)</m>. 
+                      Thus <m>x+I=I</m> and <m>x+J=J</m>, and so <m>x\in I</m> and <m>x\in J</m>. 
+                      Hence <m>x\in I\cap J</m>, and so <m>\ker(f)=I\cap J</m>.
+                    </p>
+
+                    <p>
+                      Observe 
+                      <me>
+                        \begin{aligned}
+                        f(x+y)=&amp;((x+y)+I,(x+y)+J)\\
+                        =&amp;((x+I)+(y+I),(x+J)+(y+J))\\
+                        =&amp;((x+I),(x+J))+(y+I),(y+J)\\
+                        =&amp;f(x)+f(y),
+                        \end{aligned}
+                      </me> 
+                      making <m>f</m> a homomorphism of rings.
+                    </p>
+
+                    <p>
+                      Let <m>(a+I,b+J)\in R/I\times R/J</m>. 
+                      As <m>R=I+J</m>, we can write <m>a</m> and <m>b</m> as <m>a_i+a_j</m> and <m>b_i+b_j</m>. 
+                      However, as <m>a_i\in I</m> and <m>b_j\in J</m>, we have <m>(a+I,b+J)=(a_j+I, b_i+J)</m>.
+                    </p>
+
+                    <p>
+                      Consider the element <m>x=(a_j+b_i)\in R</m>, and observe 
+                      <me>
+                        f(x)=f(a_j+b_i)=(a_j+b_i+I, b_i+a_j+J).
+                      </me>
+                      However, as <m>b_i\in I</m> and <m>a_j\in J</m>, we see 
+                      <me>
+                        (a_j+b_i+I, b_i+a_j+J)=(a_j+I,b_i+J)=(a+I,b+J).
+                      </me> 
+                      Thus <m>f</m> is a surjective homomorphism. 
+                      Hence, by the <xref text="title" ref="thm-ring-fit"/>, we see <m>R/(I \cap J)\cong R/I \times R/J</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </solution>
+          
+          </activity>
+
+          <activity><title>Problem 5</title>
+            <statement>
+              <p>
+					      Prove the Rank-Nullity Theorem: If <m>F</m> is a field, <m>V</m> and <m>W</m> are a finite dimensional <m>F</m> -vector spaces, and <m>g : V \to W</m> is an <m>F</m>-linear transformation, then <me>\rank(g) + \operatorname{nullity}(g) = \dim(V). </me>(Recall the <em>rank</em> of <m>g</m> is the dimension of its image and the nullity of <m>g</m> is the dimension of its kernel.)
+				      </p>
+            </statement>
+
+            <solution>
+              <p>
+                See: <xref text="title" ref="thm-rank-nullity"/>
+              </p>
+            </solution>
+          
+          </activity>
+
+          <activity><title>Problem 6</title>
+            <statement>
+              <p>
+                Let <m>F</m> be a field and <m>n</m> a positive integer. 
+                We say an <m>n\times n</m> matrix <m>A</m> with entries in <m>F</m> is <em>unipotent</em> if <m>A-In</m> is nilpotent (i.e., <m>(A-In)^k = 0</m> for some <m>k \geq 1</m>). 
+                For the field <m>F = \Q</m>, find (with complete justification) the number of similarity classes of <m>4\times 4</m> unipotent matrices and give an explicit representative for each class.
+              </p>
+            </statement>
+
+            <solution>
+              <p>
+                Let <m>F=\Q</m>, <m>n</m> a positive integer, and <m>A</m> a unipotent <m>4\times 4</m> matrix with entries in <m>F</m>. 
+                Thus <m>A-I</m> is nilpotent. 
+                Let <m>\l</m> be an eigenvalue of <m>A-I</m>. 
+                Then <m>(A-I)v=\l v</m>, so <m>Av-Iv=\l v</m> and <m>Av=\l v+Iv</m>. 
+                As <m>Iv=v</m>, we have <m>Av=\l v+v</m> and <m>Av=(\l+1)v</m>.
+              </p>
+
+              <p>
+                Notice that as <m>\l</m> is an eigenvalue of <m>I</m>, we have <m>\l +1</m> as an eigenvalue of <m>A</m>.
+              </p>
+
+              <p>
+                Assume inductively that <m>\l^{n-1}</m> is an eigenvalue of <m>(A-I)^{n-1}</m>.
+                Notice 
+                <me>
+                  (A+I)^nv=(A+I)(A+I)^{n-1}v=(A+I)\l^{n-1}v=\l^{n-1}(A+I)v=\l^{n-1}\l=\l^n,
+                </me>
+                making <m>\l</m> an eigenvalue of <m>(A+I)^n</m>. 
+                Thus if <m>\l</m> is an eigenvalue of <m>A-I</m>, it is an eigenvalue of <m>(A-I)^n</m> as well. 
+                As <m>(A-I)</m> is nilpotent, there exists some <m>k</m> such that <m>(A-I)^k=0</m>. 
+                This means that <m>\l^kv=0</m>. 
+                As <m>v\neq 0</m> and <m>\l^k</m> is a scalar in a field (and hence integral domain) we have <m>\l=0</m>. 
+                Thus the only eigenvalue of <m>(A-I)</m> is <m>0</m>, meaning that the only eigenvalue of <m>A</m> is <m>1</m>.
+              </p>
+
+              <p>
+                Eigenvalues of <m>A</m> correspond to the roots of <m>\cp_A(x)</m>, which is a monic quartic polynomial, as <m>A</m> is a <m>4\times 4</m> matrix. 
+                Thus <m>\cp_A(x)=(x-1)^4</m>, as all roots must be <m>1</m>.
+              </p>
+
+              <p>
+                Two matrices are similar if and only if they share the same invariant factors. 
+                Given that invariant factors divide <m>\cp_A(x)</m> and each invariant factor must divide the following one, the possible sets of invariant factors for <m>A</m> are the following: 
+                <ul>
+                  <li>
+                    <p>
+                      <m>\{(x-1)^4\}</m>, 
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>\{(x-1),(x-1)^3\}</m>, 
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>\{(x-1), (x-1), (x-1)^2\}</m>, 
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>\{(x-1)^2, (x-1)^2\}</m>, and 
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>\{(x-1), (x-1), (x-1), (x-1)\}</m>. 
+                    </p>
+                  </li>
+                </ul>
+                We identify the companion matrices for each possible invariant factor: 
+                <ul>
+                  <li>
+                    <p>
+                      <me>
+                        C(x-1)=\begin{bmatrix} 1 \end{bmatrix},
+                      </me>
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <me>
+                        C((x-1)^2)=C(x^2-2x+1)=\begin{bmatrix} 0 &amp; -1 \\ 1 &amp; 2\end{bmatrix},
+                      </me> 
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <me>
+                        C((x-1)^3)=C(x^3+3x^2+3x-1)=\begin{bmatrix} 0 &amp; 0 &amp; 1 \\ 1 &amp; 0 &amp; -3 \\ 0 &amp; 1 &amp; -3\end{bmatrix},
+                      </me> 
+                      and
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <me>
+                        C((x-1)^4)=C(x^4-4x^3+6x^2-4x+1)=\begin{bmatrix} 0 &amp; 0 &amp; 0 &amp; -1 \\ 1 &amp; 0 &amp; 0 &amp; 4 \\ 0 &amp; 1 &amp; 0 &amp; -6 \\ 0 &amp; 0 &amp; 1 &amp; 4\end{bmatrix}.
+                      </me> 
+                    </p>
+                  </li>
+                </ul>
+                We define the following: 
+                <ul>
+                  <li>
+                    <p>
+                        <m>B=C((x-1)^4)</m>, 
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>C=C(x-1)\oplus C((x-1)^3)</m>, 
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>D=C(x-1)\oplus C(x-1)\oplus C((x-1)^2)</m>, 
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>E=C((x-1)^2)\oplus C((x-1)^2)</m>, and 
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>F=C(x-1)\oplus C(x-1)\oplus C(x-1)\oplus C(x-1)</m>.
+                    </p>
+                  </li>
+                </ul>
+                As each of these matrices is in <xref text="title" ref="thm-rcf"/>, they are explicit representatives for each similarity class.
+              </p>
+            </solution>
+          </activity>
+
+          <activity><title>Problem 7</title>
+            <statement>
+              <p>
+                Let <m>L</m> be the splitting field of <m>x^5 - 11</m> over <m>\Q</m>.
+              </p>
+
+              <p>
+                <ol>
+                  <li>
+                    Find, with justification, the degree of <m>L</m> over <m>\Q</m>.
+                  </li>
+
+                  <li>
+                    Let <m>F = \Q(\zeta)</m> where <m>\zeta = e^{2\pi i/5}</m>, a primitive <m>5\th</m> root of unity. 
+                    Prove <m>x^5 - 11</m> is irreducible in <m>F[x]</m>.
+                  </li>
+                </ol>
+              </p>
+            </statement>
+
+            <solution>
+              <p>
+                Let <m>L</m> be the splitting field of <m>f(x)=x^5 - 11</m> over <m>\Q</m>.
+              </p>
+
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      First, notice that by <xref text="title" ref="thm-eisensteins-criterion"/> (<m>p=11</m>) we have <m>f</m> irreducible in <m>\Q</m>.
+                    </p>
+
+                    <p>
+                      The roots of <m>f</m> are the following: 
+                      <ul>
+                        <li>
+                          <p>
+                            <m>\a_1=\sqrt[5]{11}\z</m> 
+                          </p>
+                        </li>
+
+                        <li>
+                          <p>
+                            <m>\a_2=\sqrt[5]{11}\z^2</m> 
+                          </p>
+                        </li>
+
+                        <li>
+                          <p>
+                            <m>\a_3=\sqrt[5]{11}\z^3</m> 
+                          </p>
+                        </li>
+
+                        <li>
+                          <p>
+                            <m>\a_4=\sqrt[5]{11}\z^4</m> 
+                          </p>
+                        </li>
+
+                        <li>
+                          <p>
+                            <m>\a_5=\sqrt[5]{11}\z^5=\sqrt[5]{11}</m>
+                          </p>
+                        </li>
+                      </ul>
+                    </p>
+
+                    <p>
+                      As <m>f</m> is monic and irreducible, it is the minimum polynomial of <m>\a_5</m>. 
+                      Let <m>E=\Q(\a_5)</m> and notice <m>[E:\Q]=5</m>.
+                    </p>
+
+                    <p>
+                      Notice that <m>\z</m>, a primitive <m>5</m>-th root of unity, is the root of <m>g(x)=x^4+x^3+x^2+x+1</m>, the fourth cyclotomic polynomial, which is monic and irreducible in <m>\Q[x]</m> by <xref provisional="prop-cylcotomic-irreducible"/>. 
+                      Thus <m>g</m> is the minimum polynomial of <m>\z</m> and <m>[F:\Q]=4</m>.
+                    </p>
+
+                    <p>
+                      We know that <m>L=\Q(\sqrt[5]{11},\z)</m>, as every generator of <m>L</m> can be written using <m>\z</m> and <m>\sqrt[5]{11}</m>.
+                      Let <m>[L:\Q]=n</m>, <m>[L:F]=p</m>, and <m>[L:E]=q</m>. 
+                      By the <xref text="title" ref="thm-degree-formula"/>, we have 
+                      <ul>
+                        <li>
+                          <p>
+                            <m>[L:\Q]=[L:F][F:\Q]</m>, and thus <m>n=4p</m> 
+                          </p>
+                        </li>
+
+                        <li>
+                          <p>
+                            <m>[L:\Q]=[L:E][E:\Q]</m>, and thus <m>n=5q</m>
+                          </p>
+                        </li>
+                      </ul>
+                      As <m>E\neq L</m> and <m>F\neq L</m> we know that <m>p,q&gt;1</m>.
+                    </p>
+
+                    <p>
+                      Thus we have <m>n=20</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Let <m>F = \Q(\zeta)</m> where <m>\zeta = e^{2\pi i/5}</m>. 
+                      From Part (a) we know <m>[L:F]=5</m>. 
+                      As <m>L=F(\a)</m>, we know that <m>\mp_\a(x)</m> has degree <m>5</m>. 
+                      As <m>f</m> is a monic polynomial of degree <m>5</m>, we see that it is the minimum polynomial and thus irreducible.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+
+            </solution>
+          
+          </activity>
+
+          <activity><title>Problem 8</title>
+            <statement>
+              <p>
+                Let <m>L</m> be the splitting field of <m>x^4-2022</m> over <m>\Q</m>. 
+                Prove there exists a unique intermediate field <m>\Q\subseteq K\subseteq L</m> such that <m>[K : \Q] = 4</m> and <m>\Q\subseteq K</m> is a Galois extension.
+              </p>
+            </statement>
+
+            <solution>
+              <p>
+                Let <m>L</m> be the splitting field of <m>f(x)=x^4-2022</m> over <m>\Q</m>. 
+                Let <m>\z</m> be a primitive fourth root of unity.
+                 Thus <m>\z=e^{2\pi i/4}=e^{\pi/2}=\cos(\pi/2)+i\sin(\pi/2)=i</m>.
+              </p>
+
+              <p>
+                Notice that the roots of <m>f</m> are the following: 
+                <ul>
+                  <li>
+                    <p>
+                      <m>\sqrt[4]{2022} i</m>, 
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>\sqrt[4]{2022}i^2=-\sqrt[4]{2022}</m>, 
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>\sqrt[4]{2022}i^3=-\sqrt[4]{2022}i</m>, and 
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>\sqrt[4]{2022}i^4=\sqrt[4]{2022}</m>. 
+                    </p>
+                  </li>
+                </ul>
+                Thus <m>L=\Q(\sqrt[4]{2022},i)</m>.
+              </p>
+
+              <p>
+                Using <xref text="title" ref="thm-eisensteins-criterion"/> with <m>p=2</m> we see that <m>f</m> is irreducible in <m>\Q[x]</m>. 
+                Let <m>\a=\sqrt[4]{2022}</m>, and notice that <m>f</m> is the minimum polynomial of <m>\a</m>. 
+                Let <m>K=\Q(\a)</m> and observe <m>[K:\Q]=4</m>.
+              </p>
+
+              <p>
+                As <m>i</m> is the root of the monic irreducible polynomial <m>x^2+1</m> we have <m>[L:F]=2</m> and <m>[L:\Q]=[L:F][F:\Q]=2\cdot4=8</m>. 
+                Thus <m>G=\Gal(L/\Q)</m> is isomorphic to a subgroup of <m>S_4</m> of order <m>8</m>, making it <m>D_8</m>.
+              </p>
+
+              <p>
+                Notice that <m>K</m> is an extension of degree <m>24</m>, and thus by the <xref text="title" ref="thm-ftgt"/> we have a subgroup <m>H\leq G</m> such that <m>H=\Gal(L/K)</m>. 
+                As <m>[L:\Q]=[L:K][K:\Q]</m> we have <m>8=[L:K]\cdot 4</m>, and thus <m>|H|=2</m>. 
+                This makes <m>H</m> the cyclic subgroup of <m>D_8</m> generated by a reflection, the only element of order <m>2</m> in <m>D_8</m>, making it unique. 
+                This is also a normal subgroup of <m>D_8</m>, making <m>K</m> Galois over <m>\Q</m>.
+              </p>
+            </solution>
+          
+          </activity>
+
+          <activity><title>Problem 9</title>
+            <statement>
+              <p>
+                Assume <m>F\subseteq L</m> is an algebraic field extension such that every non-constant polynomial in <m>F[x]</m> splits completely into linear factors in <m>L[x]</m>. 
+                Prove <m>L</m> is an algebraic closure of <m>F</m>.
+              </p>
+            </statement>
+
+            <solution>
+              <p>
+                Let <m>F\subseteq L</m> be an algebraic field extension such that every non-constant polynomial in <m>F[x]</m> splits completely into linear factors in <m>L[x]</m>.
+              </p>
+
+              <p>
+                Let <m>f</m> be a polynomial in <m>L[x]</m>, so <m>f=a_nx^n+\dots+a_1x+a_0</m>, with <m>a_i\in L</m>, and let <m>\a</m> be a root of <m>f</m>. 
+                There [[Theorem – Existence and Uniqueness of Algebraic Closures|exists]] 
+                some field extension <m>L\subseteq K</m> such that <m>K</m> is algebraically closed, meaning <m>\a\in K</m>. 
+                Notice that <m>\a</m> is algebraic over <m>L(\a)</m>.
+              </p>
+
+              <p>
+                Consider the chain of field extensions
+                <me>
+                  F\subseteq L\subseteq L(\a),
+                </me>
+                making <m>\a</m> algebraic over <m>F</m> as well. 
+                As every non-constant polynomial in <m>F[x]</m> splits completely into linear factors in <m>L[x]</m>, this yields <m>\a\in L</m>.
+              </p>
+            </solution>
+          
+          </activity>
+
+        </paragraphs>
+
       </appendix>
 
       <index>

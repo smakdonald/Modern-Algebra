@@ -12,11 +12,20 @@
 </head>
 <body class="ignore-math">
 <div class="solution solution-like">
-<h3 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">11.23.1</span><span class="period">.</span>
-</h3>
-<div class="para">Since <span class="process-math">\(\C[x,y]/\igen{x^2-y^3}\cong \C[t^3, t^2]\subseteq \C[t]\)</span> this ring is a domain. The element <span class="process-math">\(y\)</span> is irreducible for degree reasons. The ideal <span class="process-math">\(\igen{y}\)</span> contains <span class="process-math">\(x^2\)</span> but doesn't contain <span class="process-math">\(x\)</span> so <span class="process-math">\(y\)</span> is not prime.</div>
+<h4 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">11.50.1</span><span class="period">.</span>
+</h4>
+<div class="para logical">
+<div class="para">Say <span class="process-math">\(M\)</span> is cyclic and <span class="process-math">\(m \in M\)</span> is a generator of <span class="process-math">\(M\text{,}\)</span> so that <span class="process-math">\(M = \{rm \mid r \in R\}\text{.}\)</span> Define <span class="process-math">\(f: R \to M\)</span> to be the unique <span class="process-math">\(R\)</span>-map with <span class="process-math">\(f(1) = m\text{.}\)</span> Here I am applying the UMP for bases, using that <span class="process-math">\(\{1\}\)</span> is a basis of <span class="process-math">\(R\)</span> as a left <span class="process-math">\(R\)</span>-modules. More explicitly,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(r) = f(r\cdot 1) = r f(1) = rm
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec-pids.html#solution-26" class="internal">in-context</a></span>
+<div class="para">for all <span class="process-math">\(r \in R\text{.}\)</span> Then <span class="process-math">\(f\)</span> is onto, since <span class="process-math">\(m\)</span> generates <span class="process-math">\(M\text{.}\)</span> Its kernel is a left ideal <span class="process-math">\(I\)</span> of <span class="process-math">\(R\text{,}\)</span> since submodules of <span class="process-math">\(R\)</span> are the same thing as left ideals. By the FIT, there is an isomorphism <span class="process-math">\(R/I \xra{\cong} M\)</span> sending <span class="process-math">\(r + I\)</span> to <span class="process-math">\(rm\text{.}\)</span>
+</div>
+</div>
+</div>
+<span class="incontext"><a href="sec-linear-ind-gen.html#solution-26" class="internal">in-context</a></span>
 </body>
 </html>

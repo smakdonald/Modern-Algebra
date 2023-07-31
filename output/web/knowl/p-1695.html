@@ -13,14 +13,15 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">Assume <span class="process-math">\(R\)</span> is a PID and <span class="process-math">\(A \in \Mat_{m \times n}(R)\text{.}\)</span> Suppose <span class="process-math">\(S \in \Mat_{m \times n}(R)\)</span> can be obtained from <span class="process-math">\(A\)</span> via a sequence of elementary column and column operations and that <span class="process-math">\(S\)</span> is diagonal with diagonal entries <span class="process-math">\(d_1, d_2, \dots\)</span> such that <span class="process-math">\(d_1 \mid d_2 \mid \cdots\text{.}\)</span> Then</div>
+<div class="para">First write <span class="process-math">\(M\)</span> in invariant factor form <span class="process-math">\(M \cong R^r \oplus R/(d_1) \oplus \dots \oplus R/(d_k)\text{.}\)</span> For any non-zero, non-unit element <span class="process-math">\(d\)</span> of <span class="process-math">\(R\text{,}\)</span> we have <span class="process-math">\(d = p_1^{e_1} \cdots p_m^{e_m}\)</span> for some distinct (non-associate) prime elements <span class="process-math">\(p_j\)</span> and integers <span class="process-math">\(e_j \geq 1\text{.}\)</span> By the Chinese remainder theorem (applied over and over again) we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
-d_1 = \gcd_1(A), d_2 = \frac{\gcd_2(A)}{\gcd_1(A)}, d_3 = \frac{\gcd_3(A)}{\gcd_2(A)}, \cdots.
+R/(d)\cong R/(p_1^{e_1})  \oplus \cdots \oplus R/(p_m^{e_m})
 \end{equation*}
 </div>
-<div class="para">In particular, the SNF of a matrix is unique up to associates.</div>
+<div class="para">Doing this for each fact <span class="process-math">\(R/(d_i)\)</span> in the invariant factor form of <span class="process-math">\(M\)</span> we obtain the existence of an elementary divisor form of <span class="process-math">\(M\text{.}\)</span>
 </div>
-<span class="incontext"><a href="sec-snf.html#p-1695" class="internal">in-context</a></span>
+</div>
+<span class="incontext"><a href="sec-modclass.html#p-1695" class="internal">in-context</a></span>
 </body>
 </html>
