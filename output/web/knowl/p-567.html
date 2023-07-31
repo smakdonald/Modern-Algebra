@@ -13,15 +13,15 @@
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
 <div class="para logical">
-<div class="para">Define a map <span class="process-math">\(f: F \setminus \{0\}\to G/H\)</span> as the composition of</div>
-<div class="displaymath process-math">
+<div class="para">Let <span class="process-math">\(G\)</span> be any group, and recall the <a href="" class="xref" data-knowl="./knowl/ex-commutator-subgroup.html" title="Example 2.29: Commutator Subgroup">Commutator Subgroup</a>. In <a href="" class="xref" data-knowl="./knowl/ex-normal-examples.html" title="Example 3.19: Normal Subgroups">Example 3.19</a> we saw <span class="process-math">\(G'\nsg G\text{.}\)</span> Now let <span class="process-math">\(\varphi: G \to A\)</span> be any group homomorphism from <span class="process-math">\(G\)</span> to an abelian group <span class="process-math">\(A\text{.}\)</span> Since <span class="process-math">\(\varphi([x,y]) = [\varphi(x),\varphi(y)] = e\)</span> for all <span class="process-math">\(x, y \in G\)</span> (since <span class="process-math">\(A\)</span> is abelian), we have that <span class="process-math">\(\operatorname{ker}(\varphi)\)</span> must contain <span class="process-math">\(G'\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/thm-ump-quotient.html" title="Theorem 3.42: UMP for Quotients">Theorem 3.42</a>, we get that <span class="process-math">\(\varphi\)</span> factors as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/ex-commutator-subgroup.html ./knowl/ex-normal-examples.html ./knowl/thm-ump-quotient.html">
 \begin{equation*}
-F \setminus \{0\} \xrightarrow{g} \operatorname{GL}_n(F) \twoheadrightarrow\operatorname{GL}_n(F)/\operatorname{SL}_n(F)
+\varphi:G \xrightarrow{{\pi}} G/G' \xrightarrow{\overline{\varphi}} A
 \end{equation*}
 </div>
-<div class="para">where <span class="process-math">\(g(x)\)</span> is the <span class="process-math">\(n \times n\)</span> matrix with <span class="process-math">\(x\)</span> in the upper-left corner, <span class="process-math">\(1\)</span>'s along the rest of the diaganal, and <span class="process-math">\(0\)</span>'s everywhere else, and the second map is the canonical surjection. Then <span class="process-math">\(g\)</span> is easily seen to be a homomorphism and hence so is <span class="process-math">\(f\)</span> (since the composition of homomorhisms is a homomorphism). I claim <span class="process-math">\(f\)</span> is one-to-one and onto. For any <span class="process-math">\(A \in \operatorname{GL}_n(F)\text{,}\)</span> let <span class="process-math">\(x = \det(A)\)</span> and note that <span class="process-math">\(g(x)^{-1} \cdot A\)</span> has determinant <span class="process-math">\(1\)</span> and thus belongs to <span class="process-math">\(\operatorname{SL}_n(F)\text{.}\)</span> So <span class="process-math">\(f(x) = g(x)\operatorname{SL}_n(F) = A \operatorname{SL}_n(F)\text{.}\)</span> This proves <span class="process-math">\(f\)</span> is onto. If <span class="process-math">\(f(x) = e\text{,}\)</span> then <span class="process-math">\(g(x) \operatorname{SL}_n(F) = \operatorname{SL}_n(F)\)</span> and so <span class="process-math">\(g(x) \in \operatorname{SL}_n(F)\text{.}\)</span> Clearly this means <span class="process-math">\(x = 1\text{.}\)</span>
+<div class="para">for a unique group homomorphism <span class="process-math">\(\overline{\varphi}\text{.}\)</span>
 </div>
 </div>
-<span class="incontext"><a href="sec-quotient-groups.html#p-567" class="internal">in-context</a></span>
+<span class="incontext"><a href="sec-products-iso-thms.html#p-567" class="internal">in-context</a></span>
 </body>
 </html>

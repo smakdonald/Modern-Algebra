@@ -319,7 +319,7 @@
     </latex-image-preamble>
 
     <rename element="insight">Mark</rename>  
-    <rename element="investigation">Exploreation</rename>  
+    <rename element="investigation">Exploration</rename>  
     <rename element="inlineexercise">Exercise</rename>
     <rename element="exploration">Discussion</rename>
     <rename element="activity">Problem</rename>
@@ -565,44 +565,6 @@
               </statement>
             </definition>
 
-            <example xml:id="ex-binop"><title>Binary Operations</title>
-              <p>
-                <ol>
-                  <li>
-                    <p>
-                      Addition (<m>-+-</m>) and multiplication (<m>-\cdot-</m>) are both binary operations on <m>\Z,\Q,\R,</m> and <m>\C</m>.
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      Let <m>\cP(S)</m> denote the power set of a set <m>S</m>.
-                      Then 
-                      <me>
-                        -\cup-:\cP(S)\to \cP(S)\text{ given by } (X,Y)\mapsto X\cup Y 
-                      </me>
-                      and 
-                      <me>
-                        -\cap-:\cP(S)\to \cP(S)\text{ given by } (X,Y)\mapsto X\cap Y 
-                      </me>
-                      are both binary operations on <m>\cP(S)</m>.
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      Let <m>F(A)</m> denote the set of all functions from <m>S</m> to itself.
-                      Then 
-                      <me>
-                        -\circ-:F(A)\to F(A)\text{ given by } (f,g)\mapsto f\circ g
-                      </me>
-                      is a binary operation on <m>F(A)</m>.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </example>
-
             <definition xml:id="def-binary-properties"><title>Binary Properties</title> 
               <statement>
                 <p>
@@ -643,63 +605,21 @@
               </statement>
             </definition>
 
-            <convention><title>Arbitrary Binary Operations</title>
-              <p>
-                The notation <m>*</m> is used for an arbitary binary operation.
-                When context is sufficient for understanding, we often write <m>xy</m> instead of <m>x * y</m> for simplicity.
-              </p>
-            </convention>
-
-            <aside><title><m>*</m> vs. <m>\cdot</m></title>
-              <p>
-                The notation <m>\cdot</m> is also sometimes used for an arbitary binary operation, though we avoid doing so here to prevent confusion with the mutliplication operation, as seen in in <xref ref="ex-binop"/>.
-              </p>
-            </aside>
-
-            <definition xml:id="def-algebraic-structures"><title>Algebraic Structures</title> 
+            <definition xml:id="def-monoid"><title>Monoid</title> 
               <statement>
                 <p>
-                  <ul>
-                    <li xml:id="def-magma">
-                      <p>
-                        A <em>magma</em> (or <term>binary structure</term>) is a pair <m>(G, *)</m> where <m>G</m> is a set and <m>*</m> is a binary operation on <m>G</m>.
-                        <idx><h>magma</h></idx>
-                        <idx><h>binary structure</h></idx>
-                      </p>
-                    </li>
-
-                    <li xml:id="def-semigroup">
-                      <p>
-                        A <em>semigroup</em> is a pair <m>(G, *)</m> where <m>G</m> is a set and <m>*</m> is a binary operation on <m>G</m> satisfying the associative property.
-                        <idx><h>semigroup</h></idx>
-                      </p>
-                    </li>
-
-                    <li xml:id="def-monoid">
-                      <p>
-                        A <em>monoid</em> is a pair <m>(G, *)</m> where <m>G</m> is a set and <m>*</m> is a binary operation on <m>G</m> satisfying the associative and identity properties.
-                        <idx><h>monoid</h></idx>
-                      </p>
-                    </li>
-                  </ul>
+                  A <em>monoid</em> is a pair <m>(G, *)</m> where <m>G</m> is a set and <m>*</m> is a binary operation on <m>G</m> satisfying the associative and identity properties.
+                  <idx><h>monoid</h></idx>   
                 </p>
               </statement>
             </definition>
 
-            <insight><title>Semigroups and Monoids</title>
+            <aside><title>Semigroups and Monoids</title>
               <p>
-                Some mathematicians choose to define a semigroup as we have defined a monoid (e.g. satisfying both the associative <em>and</em> identity properties).
+                Some mathematicians choose to define a <em>semigroup</em> as we have defined a monoid (e.g. satisfying both the associative <em>and</em> identity properties).
                 We have yet to grasp why.
-                <fn>This is the one and only "Mark". All following "Marks" will be "Remarks".</fn>
               </p>
-            </insight>
-
-            <remark><title></title>
-              <p>
-                Magmas, semigroups, and monoids won't show up all that much moving forward, but they are doing a surprising amount of leg work under the surface, and it's worth mentioning them. 
-                However, if you're feeling overwhelmed by the amount of new words buzzing around, those three are probably the ones you can worry about the least, at least in this text.
-              </p>
-            </remark>
+            </aside>
 
             <p>
               For those who appreciate a snazzy visual, here is a handy little graphic.
@@ -709,23 +629,6 @@
               <caption>Relations between algebraic structures. <url href="https://q.uiver.app/?q=WzAsOCxbMiwwLCJcXHRleHR7TWFnbWF9Il0sWzIsMiwiXFx0ZXh0e1VuaXRhbCBNYWdtYX0iXSxbMiw0LCJcXHRleHR7SW52ZXJzZSBTZW1pZ3JvdXB9Il0sWzIsNiwiXFx0ZXh0e0dyb3VwfSJdLFs0LDQsIlxcdGV4dHtNb25vaWR9Il0sWzQsMiwiXFx0ZXh0e1NlbWlncm91cH0iXSxbMCwyLCJcXHRleHR7UXVhc2lncm91cH0iXSxbMCw0LCJcXHRleHR7TG9vcH0iXSxbNywzLCJcXHRleHR7YXNzb2NpYXRpdml0eX0iLDEseyJjb2xvdXIiOlsxMjAsNjAsNjBdfSxbMTIwLDYwLDYwLDFdXSxbNiwyLCJcXHRleHR7YXNzb2NpYXRpdml0eX0iLDAseyJsYWJlbF9wb3NpdGlvbiI6NDAsImNvbG91ciI6WzEyMCw2MCw2MF19LFsxMjAsNjAsNjAsMV1dLFsxLDQsIlxcdGV4dHthc3NvY2lhdGl2aXR5fSIsMCx7ImxhYmVsX3Bvc2l0aW9uIjo0MCwiY29sb3VyIjpbMTIwLDYwLDYwXX0sWzEyMCw2MCw2MCwxXV0sWzAsNSwiXFx0ZXh0e2Fzc29jaWF0aXZpdHl9IiwxLHsiY29sb3VyIjpbMTIwLDYwLDYwXX0sWzEyMCw2MCw2MCwxXV0sWzAsMSwiXFx0ZXh0e2lkZW50aXR5fSIsMSx7ImNvbG91ciI6WzI3MCw2MCw2MF19LFsyNzAsNjAsNjAsMV1dLFsyLDMsIlxcdGV4dHtpZGVudGl0eX0iLDEseyJjb2xvdXIiOlsyNzAsNjAsNjBdfSxbMjcwLDYwLDYwLDFdXSxbNiw3LCJcXHRleHR7aWRlbnRpdHl9IiwxLHsiY29sb3VyIjpbMjcwLDYwLDYwXX0sWzI3MCw2MCw2MCwxXV0sWzUsNCwiXFx0ZXh0e2lkZW50aXR5fSIsMSx7ImNvbG91ciI6WzI3MCw2MCw2MF19LFsyNzAsNjAsNjAsMV1dLFswLDYsIlxcdGV4dHtkaXZpc2liaWxpdHl9IiwxLHsiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXSxbMSw3LCJcXHRleHR7ZGl2aXNpYmlsaXR5fSIsMCx7ImxhYmVsX3Bvc2l0aW9uIjo2MCwiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXSxbNSwyLCJcXHRleHR7aW52ZXJzZXN9IiwwLHsibGFiZWxfcG9zaXRpb24iOjYwLCJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dLFs0LDMsIlxcdGV4dHtpbnZlcnNlc30iLDEseyJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dXQ==" visual="">Quiver</url></caption>
               <image source="images/magma.png" width="80%"/>
             </figure>
-
-            <!--
-
-            <exercise xml:id="exe-lr-inverses"><title>Left and Right Inverses</title>
-              <statement>
-                <p>
-                  Give an example of a monoid <m>(G,\cdot)</m> and an element of <m>G</m> that has a <em>left</em> inverse but not a <em>right</em> inverse.
-                </p>
-              </statement>
-              <solution>
-                <p>
-                  Consider the set <m>\Fun(\N,\N)</m> of all functions from <m>\N</m> to itself.
-                </p>
-              </solution>
-            </exercise>
-
-            -->
     
           </subsection>
 
@@ -744,9 +647,10 @@
               <statement>
                 <p>
                   <ol>
-                  <li>
+                    <li>
                       <p>
                         A <em>group</em> is a pair <m>(G, *)</m> where <m>G</m> is a set and <m>*</m> is a binary operation on <m>G</m> satisfying the associative, identity, and inverse properties.
+                        <fn>For specifics, see: <xref ref="def-binary-properties"/>.</fn>
                         <notation><usage><m>(G,*)</m></usage><description>a group <m>G</m> and its binary operation <m>*</m></description></notation>
                         <idx><h>group</h></idx>
                       </p>
@@ -763,11 +667,11 @@
               </statement>
             </definition>
 
-            <convention>
+            <aside>
               <p>
                 Though a group is a pair, we will usually refer to the group by only naming the underlying set, <m>G</m>.
               </p>
-            </convention>
+            </aside>
 
             <theorem xml:id="thm-properties-of-groups"><title>Properties of Groups</title>
               <statement>
@@ -847,17 +751,18 @@
               </proof>
             </theorem>
 
-            <remark>
+            <insight>
               <p>
                  The <xref text="title" ref="list-unique-group-identity"/> property of <xref ref="thm-properties-of-groups"/> holds in monoids (and unital magmas) as well.
+                 <fn>This is the one and only "Mark". All following "Marks" will be "Remarks".</fn>
               </p>
-            </remark>
+            </insight>
 
-            <convention>
+            <aside>
               <p>
                 The inverse of an element <m>x</m> is often written <m>x\inv</m>, for reasons we will see in the next section.
               </p>
-            </convention>
+            </aside>
 
             <example xml:id="ex-group-examples"><title>Group Examples</title>
               <statement>
@@ -1199,9 +1104,9 @@
                 </p>
 
                 <p>
-                If <m>G</m> was an additive group, then we would write <m>nx</m> intead of <m>x^n</m>. 
-                This would be called a <term>multiple</term> of <m>x</m> instead of a power.
-              </p>
+                  If <m>G</m> was an additive group, then we would write <m>nx</m> intead of <m>x^n</m>. 
+                  This would be called a <term>multiple</term> of <m>x</m> instead of a power.
+                </p>
               </statement>
             </definition>
 
@@ -1302,7 +1207,7 @@
               </p>
             </aside>
       
-            <example xml:id="ex-order"><title>Order Examples</title>
+            <example xml:id="ex-order"><title>Order</title>
               <p>
                 <ol>
                   <li>
@@ -1554,11 +1459,10 @@
 
                 <li>
                   <p>
-                    and translations: in the latter the point (x, y) is moved to (x + a, y + b) for some fixed a, b.
+                    and translations: in the latter the point <m>(x, y)</m> is moved to <m>(x + a, y + b)</m> for some fixed <m>a, b</m>.
                   </p>
                 </li>
               </ol>
-
               It can be shown that every isometry is a rotation, a translation, a reflection, or the product of a reflection and a translation.
             </p>
 
@@ -1700,7 +1604,6 @@
                   <idx><h>permutation group</h></idx>
                   <idx><h><m>\Perm(S)</m></h></idx>
                   <idx><h><m>\sigma:S\to S</m></h></idx>
-
                 </p>
               </statement>
             </definition>
@@ -1881,6 +1784,8 @@
                 </p>
               </statement>
 
+              <!--
+
               <proof>
                 <p>
                   <ol>
@@ -1922,6 +1827,8 @@
                   </ol>
                 </p>
               </proof>
+
+              -->
             </theorem>
       
             <remark>
@@ -2014,18 +1921,18 @@
 
               <solution>
                 <p>
-                  For an element to be in An, it must be an even permutation. 
+                  For an element to be in <m>A_n</m>, it must be an even permutation. 
                   This means it can be expressed as a product of an even number of transpositions. 
                   Each transposition in the product swaps two elements. 
-                  There are n choices for the first element, and after fixing the first element, there are (n-1) choices for the second element. 
-                  This gives us n * (n-1) choices for the first transposition.
-                  For the second transposition, there are (n-2) choices for the first element and (n-3) choices for the second element. 
-                  Continuing this process, we have (n-2) * (n-3) * ... * 2 * 1 choices for the remaining transpositions.
-                  In total, the number of even permutations (elements in An) is given by n * (n-1) * (n-2) * ... * 2 * 1, which is equal to n!.
+                  There are <m>n</m> choices for the first element, and after fixing the first element, there are <m>(n-1)</m> choices for the second element. 
+                  This gives us <m>n * (n-1)</m> choices for the first transposition.
+                  For the second transposition, there are <m>(n-2)</m> choices for the first element and <m>(n-3)</m> choices for the second element. 
+                  Continuing this process, we have <m>(n-2) * (n-3) * ... * 2 * 1</m> choices for the remaining transpositions.
+                  In total, the number of even permutations (elements in <m>A_n</m>) is given by <m>n * (n-1) * (n-2) * ... * 2 * 1</m>, which is equal to <m>n!</m>.
                   However, we have counted each even permutation twice because we can write a given even permutation as a product in different orders. 
-                  For example, (1 2) * (3 4) is the same as (3 4) * (1 2).
-                  Therefore, we divide the total number of even permutations (n!) by 2 to remove the duplicate counting.
-                  Hence, the order of the alternating group An is n!/2.
+                  For example, <m>(1 2) * (3 4)</m> is the same as <m>(3 4) * (1 2)</m>.
+                  Therefore, we divide the total number of even permutations <m>(n!)</m> by <m>2</m> to remove the duplicate counting.
+                  Hence, the order of the alternating group <m>A_n</m> is <m>n!/2</m>.
                 </p>
               </solution>
             </exercise>
@@ -2034,7 +1941,14 @@
       
           <subsection xml:id="subsec-quat"><title>The Quaternions</title>
 
-            <blockquote><p><q>Quaternions...though beautifully ingenious, have been an unmixed evil to those who have touched them in any way.</q></p><attribution>William Thomson</attribution></blockquote>
+            <blockquote>
+              <p>
+                <q>
+                  Quaternions...though beautifully ingenious, have been an unmixed evil to those who have touched them in any way.
+                </q>
+              </p>
+              <attribution>William Thomson</attribution>
+            </blockquote>
 
             <definition xml:id="def-quaternions"><title>Quaternions</title>
               <statement>
@@ -2097,15 +2011,11 @@
               </statement>
             </definition>
 
-            <convention>
-              <p>
-                We use <m>\varphi</m> to denote an arbitrary homomorphism instead of <m>f</m> to differentiate between homormorphisms and ordinary functions. 
-                Other greek letters, such as <m>\psi,\rho,</m> and <m>\lambda</m> are used for more specific homomorphisms, as we will see in the coming sections.
-                <fn>For those interested, <m>\psi</m> is used for inner automorphisms, <m>\rho</m> is used permutation representations corresponding to group actions, and <m>\lambda</m> is used for permutation representations of the left regular action.</fn>
-              </p>
-            </convention>
-
             <aside>
+              <p>
+                We use <m>\varphi</m> to denote an arbitrary homomorphism instead of <m>f</m> to differentiate between homormorphisms and ordinary functions.
+              </p>
+
               <p>
                 Some folk use <m>f</m> for homomorphisms as well as functions that are not homomorphisms. 
                 They should be avoided and probably smell weird.
@@ -2158,58 +2068,6 @@
                 </ol>
               </p>
             </example>
-
-            <!--
-
-            <exercise xml:id="exe-homom-determinations"><title>Determining Group Homomorphisms</title>
-              
-              <p>
-                Determine (with justification) which of the following functions are group homomorphisms
-                <ol>
-                  <li>
-                    <p>
-                      The function <m>f: \Z\to \Z</m> defined by <m>f(n) = 2n</m>.
-                    </p>
-                  </li>
-    
-                  <li>
-                    <p>
-                      The function <m>f: \R \to \R</m> defined by <m>f(x) = x^2</m>.
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      The function <m>f: \R^\times \to \R^\times</m> defined by <m>f(x) = x^2</m>.
-                    </p>
-                  </li>
-    
-                  <li>
-                    <p>
-                      The function <m>f: \Z/6\to\Z/3</m> defined by <m>f([n]_6) = [n]_3</m>
-                    </p>
-                  </li>
-                </ol>
-              </p>
-    
-            </exercise>
-
-            <exercise xml:id="exe-injective-homoms"><title>Finding Injective Homomorphisms</title>
-              
-              <p>
-                <ol>
-                  <li>
-                    Find, with justification, an injective group homomorphism <m>f:S_n \to \GL_n(\R)</m>.
-                  </li>
-      
-                  <li>
-                    Find, with justification, an injective group homomorphism <m>g:D_{2n}\to S_n</m>.
-                  </li>
-                </ol>
-              </p>
-            </exercise>
-
-            -->
       
             <p>
               Specifically, homomorphisms will preserve the additive structure, such as the identity element and inverse elements.
@@ -2259,14 +2117,6 @@
                 </p>
               </statement>
             </investigation>   
-
-            <!-- 
-
-            <blockquote><p><q>May your passion be the kernel of corn stuck between your molars, always reminding you there's something to tend to.</q></p><attribution>Jeb Dickerson</attribution></blockquote>
-
-            <blockquote><p><q>The image is one thing and the human being is another. It's very hard to live up to an image, put it that way.</q></p><attribution>Elvis Presley</attribution></blockquote>
-
-            --> 
             
             <definition xml:id="def-group-kernel"><title>Kernel</title>
               <statement>
@@ -2435,28 +2285,6 @@
               </solution>
             </exercise>
 
-            <!--
-            <exercise>
-              <p>
-                Prove that there are group isomorphisms between the following pairs of groups: 
-      
-                <ol>
-                  <li>
-                    <p>
-                      <m>\left(\Q/\Z, +\right)\cong \left(\mu,\cdot\right)</m>, where <m>\mu=\{z\in \C \mid z^n=1 \text{ for some integer } n\}</m>. 
-                    </p>
-                  </li>
-      
-                  <li>
-                    <p>
-                      <m>(\C^\times,\cdot)/\mu_m\cong (\C^\times,\cdot)</m> for any integer <m>m\geq 1</m>, where <m>\mu_m=\{z\in \C \mid z^m=1\}</m>.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </exercise>
-            -->
-
             <theorem xml:id="thm-iso-inv"><title>Isomorphism Invariants</title>
               <statement>
                 <p>
@@ -2538,11 +2366,11 @@
               </statement>
             </exercise>
 
-            <convention>
+            <aside>
               <p>
                 Hence, we usually speak of <em>the</em> trivial group.
               </p>
-            </convention>
+            </aside>
 
             <theorem xml:id="thm-iso-equivalence-relation"><title>Isomorphisms form <q>Equivalence</q> Relation</title>
               <statement>
@@ -2575,6 +2403,14 @@
                 </p>
               </proof>
             </theorem>
+
+            <remark>
+              <p>
+                The quotation marks in the title of this result are importnat. 
+                Equivalenve relations as we know them are only defined on <em>sets</em>, but there is no set of groups.
+                This dips into the realm of Russel's Paradox and higher category theory, which we will steer clear of for the time being.
+              </p>
+            </remark>
             
           </subsection>
 
@@ -2654,31 +2490,6 @@
               </p>
             </remark>
       
-            <p>
-              Automorphism groups may also give us information about whether or not our group is abelian.
-            </p>
-
-            <exercise xml:id="exe-inverse-map-and-abelian"><title>Abelian Groups and Automorphisms</title>
-              <statement>
-                <p>
-                  Let <m>G</m> be a group.
-                  <ol>
-                    <li>
-                      <p>
-                        The map <m>\varphi:G\to G</m> given by <m>\varphi(a)=a^{-1}</m> for all <m>a\in G</m> is an automorphism if and only if <m>G</m> is abelian.
-                      </p>
-                    </li>
-      
-                    <li>
-                      <p>
-                        If <m>\Aut(G)=\{e\}</m> then <m>G</m> is abelian and every non-identity element of <m>G</m> has order <m>2</m>.
-                      </p>
-                    </li>
-                  </ol>
-                </p>
-              </statement>
-            </exercise>
-
             <definition xml:id="def-inner-automorphisms"><title>Inner Automorphism</title>
               <statement>
                 <p>
@@ -3107,63 +2918,6 @@
                 </p>
               </statement>
             </definition>
-
-            <!--
-
-            <example xml:id="ex-group-centers"><title>Centers of Common Groups</title>
-              
-              <p>
-                <ol>
-                  <li>
-                    <p>
-                      The center of any abelian group <m>G</m> is <m>G</m> itself. (In fact, this statement is an if and only if)
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      <m>Z(S_n)=\{e\}</m> for <m>n&gt;2</m>.
-                    </p>
-                  </li>
-                </ol>
-              </p>
-              
-
-            </example>
-
-            <exercise xml:id="exe-finding-centers"><title>Finding Centers</title>
-              <p>
-                Determine the following:
-                <ol>
-                  <li>
-                    <p>
-                      <m>Z(D_{2n})</m> for <m>n \geq 3</m>. Your answer will depend on whether <m>n</m> is even or odd.
-                    </p>
-                  </li>
-    
-                  <li>
-                    <p>
-                      <m>Z(S_n)</m> for <m>n \geq 3</m>.
-                    </p>
-                  </li>
-    
-                  <li>
-                    <p>
-                      <m>Z(A_n)</m> for <m>n \geq 3</m>.
-                    </p>
-                  </li>
-    
-                  <li>
-                    <p>
-                      <m>Z(\GL_n(\C))</m>.
-                    </p>
-                  </li>
-                </ol>
-                
-              </p>
-            </exercise>
-
-            -->
       
             <proposition xml:id="prop-center-is-subgroup"><title>Center is a Subgroup</title>
               <statement>
@@ -3346,7 +3100,7 @@
           <remark>
             <p>
               Note that in <xref ref="thm-cycledecomp"/> we showed <m>S_n</m> is generated by transpositions. 
-              However, there's more than one way to fry an egg (or in this case, to generate one) 
+              However, there's more than one way to generate an egg. 
             </p>
           </remark>
 
@@ -3562,7 +3316,7 @@
               </statement>
             </proposition>
 
-            <example xml:id="ex-cyclic-examples"><title>Examples of Cyclic Groups</title>
+            <example xml:id="ex-cyclic-examples"><title>Cyclic Groups</title>
               <statement>
                 <p>
                   <ol>
@@ -3575,12 +3329,6 @@
                     <li>
                       <p>
                         <m>(\Z/n,+)</m> is a cyclic group.
-                      </p>
-                    </li>
-
-                    <li>
-                      <p>
-                        The group <m>L=\{1,-1,i,-i\}</m> is cyclic.
                       </p>
                     </li>
                   </ol>
@@ -3599,12 +3347,6 @@
                     <li>
                       <p>
                         <m>(\Z/n,+)\igen{1}</m>, for example.
-                      </p>
-                    </li>
-
-                    <li>
-                      <p>
-                        <m>L=\{1,-1,i,-i\}=\igen i</m>, for example. 
                       </p>
                     </li>
                   </ol>
@@ -3980,11 +3722,11 @@
               </statement>
             </exercise>
       
-            <remark>
+            <aside>
               <p>
                 Though mostly a matter of preference, we will focus primarily on left cosets.
               </p>
-            </remark>
+            </aside>
 
             <proposition xml:id="prop-coset-properties"><title>Basic Coset Properties</title>
               <statement>
@@ -5341,11 +5083,11 @@
             </statement>
           </definition>
     
-          <convention>
+          <aside>
             <p>
               To make the first axiom clearer, throughout this section we will write <m>\cdot</m> for the action of <m>G</m> on <m>S</m> and no symbol (concatenation) for the multiplication of two elements in the group <m>G</m>.
             </p>
-          </convention>
+          </aside>
     
           <example xml:id="ex-group-actions"><title>Group Actions on Arbitrary Sets</title>
             <p>
@@ -5836,12 +5578,12 @@
               </statement>
             </definition>
 
-            <convention>
+            <aside>
               <p>
                 Sometimes (including on old qualifying exams) the notation <m>G_s</m> is used to denote the stabilizer. 
                 Given that this notation gives no context as to what the set <m>G_s</m> is or what it does, we will stick to <m>\Stab_G(s)</m>.
               </p>
-            </convention>
+            </aside>
       
             <exercise xml:id="exe-stabilizer-is-subgroup"><title>Stabilizers are Subgroups</title>
               <statement>
@@ -6007,12 +5749,12 @@
               </statement>
             </definition>
 
-            <convention>
+            <aside>
               <p>
                 Many texts use the notation <m>C_G(g)</m> for the centralzier and <m>[g]_c</m> for conjugacy classes. 
                 However, given that the center of a group is denoted with <m>Z(G)</m>, we argue that <m>Z_G(g)</m> makes more intuitive sense for the centralizer, freeing up <m>C_G(g)</m> for conjugacy classes.
               </p>
-            </convention>
+            </aside>
 
              <exercise xml:id="exe-stabilizer-intersection-is-center"><title>Center is Intersection of Stabilizers</title>
               <statement>
@@ -10183,13 +9925,13 @@
             </statement>
           </definition>
 
-          <convention>
+          <aside>
             <p>
               Unlike many modern sources, we choose not to capitalize <q>noetherian</q>. 
               The convention of not capitalizing mathematical adjectives has a long history and is widely followed in mathematical literature. 
               For example, other mathematical adjectives that are not capitalized include "abelian", "euclidean", and "gaussian" 
             </p>
-          </convention>
+          </aside>
     
           <theorem xml:id="lem-pids-are-noetherian"><title>PIDs are Noetherian</title>
             <statement>
@@ -11679,11 +11421,11 @@
               </statement>
             </definition>
 
-            <convention><title>Generated vs. Span</title>
+            <aside><title>Generated vs. Span</title>
               <p>
                 If <m>M</m> is an <m>F</m>-vector space, one usually uses the term <q>spanned</q> by instead of the term <q>generated by</q> by.
               </p>
-            </convention>
+            </aside>
 
             <lemma xml:id="lem-rcdot-a-smallest-submodule-of-m-containing-a"><title><m>R\cdot A</m> Smallest Submodule of <m>M</m> Containing <m>A</m></title>
               <statement>
@@ -12236,7 +11978,8 @@
             <definition xml:id="def-span"><title>Span</title>
               <statement>
                 <p>
-                  In keeping with standard convention, we use the term <q>span</q> instead of <q>submodule generated by</q>, but they mean exactly the same thing: for a subset <m>A</m> of an <m>F</m>-vector space <m>V</m>, the <em>span</em> of <m>A</m> is 
+                  In keeping with standard convention, we use the term <q>span</q> instead of <q>submodule generated by</q>, but they mean exactly the same thing: 
+                  for a subset <m>A</m> of an <m>F</m>-vector space <m>V</m>, the <em>span</em> of <m>A</m> is 
                   <me>
                     \Span(A)=\left\{\sum_{i=1}^n c_ia_i \mid n\geq 0, c_i\in F, a_{i\in}A\right\}.
                   </me>
@@ -12595,11 +12338,11 @@
               We now deduce some formulas that relate the dimensions of various vector spaces.
             </p>
 
-            <convention>
+            <aside>
               <p>
                 Here the dimension of a vector space is understood to be either a nonnegative integer or <m>\infty</m>, and the arithmetic of the formula is understood to follow the rules <m>n+\infty=\infty=\infty+\infty</m> for any <m>n \in \mathbb{Z}_{\geqslant 0}</m>.
               </p>
-            </convention>
+            </aside>
 
             <theorem xml:id="thm-dimension-and-subspaces"><title>Dimension and Subspaces</title>
               <statement>
@@ -13526,7 +13269,8 @@
       g &amp; 0 \\
       0 &amp; B \\
       \end{bmatrix}
-      </me> for some <m>(n-1) \times (m-1)</m> matrix <m>B</m> and where <m>g = \gcd(A)</m>. (We adopt the convention that if <m>A</m> is the matrix of all <m>0</m>'s, then <m>g = 0</m>.) Note that, by Lemma , we have <m>\gcd(A) = \gcd(A')</m> and thus <m>g \mid \gcd(B)</m>.
+      </me> for some <m>(n-1) \times (m-1)</m> matrix <m>B</m> and where <m>g = \gcd(A)</m>. 
+      (We adopt the convention that if <m>A</m> is the matrix of all <m>0</m>'s, then <m>g = 0</m>.) Note that, by Lemma , we have <m>\gcd(A) = \gcd(A')</m> and thus <m>g \mid \gcd(B)</m>.
               </p>
       
               <p>
@@ -17028,18 +16772,6 @@
                 </p>
               </statement>
             </definition>
-
-            <convention>
-              <p>
-                Notation for sets, elements of sets, and sets of sets: Small letters <m>a,b,c,x,y,z</m> for elements of sets, capital letters <m>A,B,C,X,Y,Z</m> for sets, calligraphic capital letters ℬ,𝒞,𝒯,𝒰 for collections of sets.
-              </p>
-            </convention>
-
-            <convention>
-              <p>
-                Notation for indices: <m>i,j,k,m,n</m> for finite or countably many indices, <m>\alpha ,\beta ,\dots</m> for arbitrarily many indices.
-              </p>
-            </convention>
 
             <definition xml:id="def-union-intersection-2">
               <statement>

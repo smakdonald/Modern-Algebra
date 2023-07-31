@@ -12,7 +12,20 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">A <em class="emphasis">group</em> is a pair <span class="process-math">\((G, *)\)</span> where <span class="process-math">\(G\)</span> is a set and <span class="process-math">\(*\)</span> is a binary operation on <span class="process-math">\(G\)</span> satisfying the associative, identity, and inverse properties. </div>
+<div class="para logical">
+<div class="para">Suppose <span class="process-math">\(xy = xz\)</span> for some <span class="process-math">\(x,y,z\in G\text{.}\)</span> By the <a href="" class="xref" data-knowl="./knowl/inverse-property.html" title="Item 4">Item 4</a>, there exists some <span class="process-math">\(x\inv\in G\)</span> such that <span class="process-math">\(xx\inv=e=x\inv x\text{.}\)</span> Observe</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/inverse-property.html">
+\begin{equation*}
+\begin{aligned}
+xy &amp;= xz \\
+x\inv(xy) &amp;= x\inv(xz) &amp; \text{multiplying on the left by }x\inv \\
+(x\inv x)y &amp;= (x\inv x)z &amp; \text{associativity} \\
+(e)y &amp;= (e)z &amp; \text{inverses}\\
+y &amp;= z &amp; \text{identity}.
+\end{aligned}
+\end{equation*}
+</div>
+</div>
 <span class="incontext"><a href="sec-group-basics.html#p-60" class="internal">in-context</a></span>
 </body>
 </html>
