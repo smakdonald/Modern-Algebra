@@ -13,31 +13,14 @@
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
 <div class="para logical">
-<div class="para">For any commutative ring <span class="process-math">\(R\text{,}\)</span> the <em class="emphasis">polynomial ring in the variable</em> <span class="process-math">\(x\text{,}\)</span> written <span class="process-math">\(R[x]\text{,}\)</span> is the set</div>
+<div class="para">The fact that <span class="process-math">\(\Q(\sqrt {d})\)</span> is a {} follows since <span class="process-math">\(\Q(\sqrt {d})\)</span> is also closed under taking inverses. Indeed the inverse of <span class="process-math">\(r + q \sqrt{d}\)</span> (from <span class="process-math">\(\C\)</span>) turns out to be</div>
 <div class="displaymath process-math">
 \begin{equation*}
-R[x]=\{a_nx^n+\ldots+a_0\mid  n\in \Z, n\geq 0, a_i\in R\}
+(r + q \sqrt{d})^{-1} = \frac{r - q \sqrt{d}}{r^2 - d q^2} \in \Q(\sqrt {d})
 \end{equation*}
 </div>
-<div class="para">with addition defined by</div>
-<div class="displaymath process-math">
-\begin{equation*}
-(a_nx^n+\ldots+a_0)+(b_nx^n+\ldots+b_0)=(a_n+b_n)x^n+\ldots++(a_0+b_0)
-\end{equation*}
+<div class="para">whenever <span class="process-math">\(r + q \sqrt{d}\neq 0\text{.}\)</span> A slightly subtle point here is that the fraction above makes sense since <span class="process-math">\(r^2 -d q^2 \ne 0\)</span> provided <span class="process-math">\(r\)</span> and <span class="process-math">\(q\)</span> are not simultaneously <span class="process-math">\(0\text{.}\)</span> This is because, if <span class="process-math">\(r^2 -d q^2 = 0\)</span> then either <span class="process-math">\(d=(r/q)^2\text{,}\)</span> which contradicts the assumption that <span class="process-math">\(d\)</span> is squarefree, or <span class="process-math">\(r=q=0\text{,}\)</span> which contradicts the assumption <span class="process-math">\(r + q \sqrt{d}\neq 0\text{.}\)</span>
 </div>
-<div class="para">and multiplication defined by</div>
-<div class="displaymath process-math">
-\begin{equation*}
-(a_nx^n+\ldots+a_0)(b_mx^n+\ldots+b_0)=\sum_{k=0}^{n+m}\left(\sum_{i=0}^k a_ib_{k-i}\right)x^i.
-\end{equation*}
-</div>
-<div class="para">For any commutative ring <span class="process-math">\(R\text{,}\)</span> the <em class="emphasis">polynomial ring in</em> <span class="process-math">\(x_1, \dots, x_n\text{,}\)</span> written <span class="process-math">\(R[x_1, \dots, x_n]\text{,}\)</span> is defined inductively as <span class="process-math">\(R[x_1, \dots, x_n]=R[x_1, \dots, x_{n-1}][x_n]\text{,}\)</span> but more easily thought of as the set consisting of (finite) sums of the form</div>
-<div class="displaymath process-math">
-\begin{equation*}
-R[x_1, \dots, x_n]=\left\{\sum_{e_1, \dots, e_n \in \Z_{\geq 0}} r_{e_1, \dots, e_n} x_1^{e_1} x_2^{e_2} \cdots x_n^{e_n}\right\}
-\end{equation*}
-</div>
-<div class="para">with addition and multiplication defined by rules similar to the ones seen above.</div>
 </div>
 <span class="incontext"><a href="sec-sub-poly.html#p-1021" class="internal">in-context</a></span>
 </body>

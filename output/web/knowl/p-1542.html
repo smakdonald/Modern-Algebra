@@ -13,15 +13,20 @@
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
 <div class="para logical">
-<div class="para">Let <span class="process-math">\(R\)</span> be a commutative ring with <span class="process-math">\(1 \neq 0\text{,}\)</span> let <span class="process-math">\(M\)</span> be a free <span class="process-math">\(R\)</span>-module of finite rank <span class="process-math">\(n\text{,}\)</span> and let <span class="process-math">\(B = \{b_1,\dots ,b_n\}\)</span> be an ordered basis for <span class="process-math">\(M\text{.}\)</span> An <em class="emphasis">elementary basis change operation</em> on the basis <span class="process-math">\(B\)</span> is one of the following three types of operations:</div>
-<ol class="decimal">
-<li><div class="para">(Type I) Replacing <span class="process-math">\(b_i\)</span> by <span class="process-math">\(b_i + rb_j\)</span> for some <span class="process-math">\(i \neq j\)</span> and some <span class="process-math">\(r\in R\text{.}\)</span>
-</div></li>
-<li><div class="para">(Type II) Replacing <span class="process-math">\(b_i\)</span> by <span class="process-math">\(ub_i\)</span> for some <span class="process-math">\(i\)</span> and some unit <span class="process-math">\(u\)</span> of <span class="process-math">\(R\text{,}\)</span>
-</div></li>
-<li><div class="para">(Type III) Swapping the positions of <span class="process-math">\(b_i\)</span> and <span class="process-math">\(b_j\)</span> for some <span class="process-math">\(i \neq j\text{.}\)</span>
-</div></li>
-</ol>
+<div class="para">Since <span class="process-math">\(f=\mathrm{id}_{W} \circ f \circ \mathrm{id}_{V}\text{,}\)</span> by <a href="" class="xref" data-knowl="./knowl/lem-cob-and-identity.html" title="Lemma 12.29: CoB and Identity">Lemma 12.29</a> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/lem-cob-and-identity.html">
+\begin{equation*}
+[f]_{B^{\prime}}^{C^{\prime}}=\left[\mathrm{id}_{W}\right]_{C}^{C^{\prime}}[f]_{B}^{C}\left[\mathrm{id}_{V}\right]_{B^{\prime}}^{B}
+\end{equation*}
+</div>
+<div class="para">Setting <span class="process-math">\(V=W, B=C, B^{\prime}=C^{\prime}\text{,}\)</span> and <span class="process-math">\(f=\mathrm{id}_{V}\)</span> we have <span class="process-math">\(\left[\mathrm{id}_{V}\right]_{B^{\prime}}^{B^{\prime}}=\left[\mathrm{id}_{V}\right]_{B}^{B^{\prime}}\left[\operatorname{id}_{V}\right]_{B}^{B}\left[\operatorname{id}_{V}\right]_{B^{\prime}}^{B}\text{.}\)</span> Notice that <span class="process-math">\(\left[\operatorname{id}_{V}\right]_{B}^{B}=\left[\operatorname{id}_{V}\right]_{B^{\prime}}^{B^{\prime}}=I\)</span> is the identity matrix, so the previous formula says that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/lem-cob-and-identity.html">
+\begin{equation*}
+I=\left[\mathrm{id}_{V}\right]_{B}^{B^{\prime}} I\left[\mathrm{id}_{V}\right]_{B^{\prime}}^{B}
+\end{equation*}
+</div>
+<div class="para">Setting <span class="process-math">\(P=\left[\mathrm{id}_{V}\right]_{B}^{B^{\prime}}\text{,}\)</span> we notice that the previous identity gives <span class="process-math">\(P^{-1}=\left[\mathrm{id}_{V}\right]_{B^{\prime}}^{B}\text{.}\)</span>
+</div>
 </div>
 <span class="incontext"><a href="sec-cob.html#p-1542" class="internal">in-context</a></span>
 </body>

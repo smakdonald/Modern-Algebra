@@ -518,6 +518,25 @@
           </p>
           
         </paragraphs>
+        
+        <paragraphs><title>Supplementary / Source Material</title>
+          <p>
+            <ul>
+                <li>
+                  <p>
+                    <url href="https://aseceleanu.github.io/teaching/817-818Notes.pdf" visual="">Alexandra Seceleanu's Algebra Lecture Notes</url>
+                  </p>
+                </li>
+
+              <li>
+                <p>
+                  <url href="https://eloisagrifo.github.io/Teaching/818/index.html" visual="">Eloísa Grifo's 818 Lecture Notes</url>
+                </p>
+              </li>
+            </ul>
+          </p>  
+          
+        </paragraphs>
 
       </preface>
 
@@ -17384,7 +17403,7 @@
       <appendix><title>Qualifying Exams</title>
 
         <p>
-          <url href="https://math.unl.edu/graduate/exams/quals/algebra/817-818Qualifier_Syllabus.pdf" visual="">UNL Algebra Qualifyin Exam Syllabus</url>
+          <url href="https://math.unl.edu/graduate/exams/quals/algebra/817-818Qualifier_Syllabus.pdf" visual="">UNL Algebra Qualifying Exam Syllabus</url>
         </p>
 
         <paragraphs><title>May 2022</title>
