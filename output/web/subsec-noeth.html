@@ -611,18 +611,20 @@ window.MathJax = {
 <ul class="structural">
 <li>
 <div class="toc-item"><a href="sec-defn-ex.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Ring Basics</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="sec-defn-ex.html#subsec-rings" class="internal"><span class="title">From Rings to Fields</span></a></div></li></ul>
-</li>
-<li>
-<div class="toc-item"><a href="sec-units-zerodivisors.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Units and Zerodivisors</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-units-zerodivisors.html#subsec-units" class="internal"><span class="title">Absolute Units</span></a></div></li>
-<li><div class="toc-item"><a href="sec-units-zerodivisors.html#subsec-zerodivisors" class="internal"><span class="title">A Zero Divided Cannot Stand</span></a></div></li>
+<li><div class="toc-item"><a href="sec-defn-ex.html#subsec-rings" class="internal"><span class="title">From Rings to Fields</span></a></div></li>
+<li><div class="toc-item"><a href="sec-defn-ex.html#subsec-units" class="internal"><span class="title">Absolute Units</span></a></div></li>
+<li><div class="toc-item"><a href="sec-defn-ex.html#subsec-zerodivisors" class="internal"><span class="title">A Zero Divided Cannot Stand</span></a></div></li>
 </ul>
 </li>
-<li><div class="toc-item"><a href="sec-subrings.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Subrings</span></a></div></li>
-<li><div class="toc-item"><a href="sec-ring-hom.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Homomorphisms</span></a></div></li>
-<li><div class="toc-item"><a href="sec-polyrings.html" class="internal"><span class="codenumber">7.5</span> <span class="title">Polynomial Rings</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-sub-poly.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Subrings and Polynomial Rings</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-sub-poly.html#subsec-subrings" class="internal"><span class="title">Subrings</span></a></div></li>
+<li><div class="toc-item"><a href="sec-sub-poly.html#subsec-polyrings" class="internal"><span class="title">Polynomial Rings</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="sec-ring-hom.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Homomorphisms</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -814,12 +816,12 @@ window.MathJax = {
 <span class="type">Section</span> <span class="codenumber">9.4</span> <span class="title">Noetherian Rings</span>
 </h2>
 <blockquote class="blockquote" id="blockquote-51">
-<div class="para" id="p-1224">“All good things must come to an end.”</div> <cite class="attribution">―Geoffrey Chaucer</cite>
+<div class="para" id="p-1212">“All good things must come to an end.”</div> <cite class="attribution">―Geoffrey Chaucer</cite>
 </blockquote>
-<div class="para" id="p-1225">Most rings that commutative algebraists naturally want to study are noetherian. Noetherian rings are named after Emmy Noether, who is in many ways the mother of modern commutative algebra.</div>
+<div class="para" id="p-1213">Most rings that commutative algebraists naturally want to study are noetherian. Noetherian rings are named after Emmy Noether, who is in many ways the mother of modern commutative algebra.</div>
 <article class="definition definition-like" id="def-ascending-chain-condition"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">9.31</span><span class="period">.</span><span class="space"> </span><span class="title">Ascending Chain Condition.</span>
-</h3> <div class="para logical" id="p-1226">
+</h3> <div class="para logical" id="p-1214">
 <div class="para">A commutative ring <span class="process-math">\(R\)</span> has the <em class="emphasis">ascending chain condition</em> (on ideals) if given any chain of ideals in <span class="process-math">\(R\)</span> of the form</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -834,7 +836,7 @@ I_N = I_{N+1} = \cdots.
 </div>
 </div></article><article class="definition definition-like" id="def-noetherian-ring"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">9.32</span><span class="period">.</span><span class="space"> </span><span class="title">Noetherian Ring.</span>
-</h3> <div class="para logical" id="p-1227">
+</h3> <div class="para logical" id="p-1215">
 <div class="para">Suppose <span class="process-math">\(R\)</span> is a commutative ring. Then <span class="process-math">\(R\)</span> is called a <em class="emphasis">noetherian ring</em> if <span class="process-math">\(R\)</span> satisfies the ascending chain condition on ideals - i.e., for every chain of ideals of <span class="process-math">\(R\)</span>
 </div>
 <div class="displaymath process-math">
@@ -844,10 +846,10 @@ I_1 \subseteq I_2  \subseteq I_3 \subseteq \cdots
 </div>
 <div class="para">there exists a positive integer <span class="process-math">\(n\)</span> such that <span class="process-math">\(I_n = I_{n+1} = I_{n+2} = \cdots=I_{n+k}\)</span> for all <span class="process-math">\(k\geq 0\text{.}\)</span>
 </div>
-</div></article><aside class="aside aside-like" id="aside-17"><div class="para" id="p-1228">Unlike many modern sources, we choose not to capitalize “noetherian”. The convention of not capitalizing mathematical adjectives has a long history and is widely followed in mathematical literature. For example, other mathematical adjectives that are not capitalized include "abelian", "euclidean", and "gaussian"</div></aside><article class="theorem theorem-like" id="lem-pids-are-noetherian"><h3 class="heading">
+</div></article><aside class="aside aside-like" id="aside-19"><div class="para" id="p-1216">Unlike many modern sources, we choose not to capitalize “noetherian”. The convention of not capitalizing mathematical adjectives has a long history and is widely followed in mathematical literature. For example, other mathematical adjectives that are not capitalized include "abelian", "euclidean", and "gaussian"</div></aside><article class="theorem theorem-like" id="lem-pids-are-noetherian"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.33</span><span class="period">.</span><span class="space"> </span><span class="title">PIDs are Noetherian.</span>
 </h3>
-<div class="para" id="p-1229">If <span class="process-math">\(R\)</span> is a PID then <span class="process-math">\(R\)</span> is noetherian.</div></article><article class="hiddenproof" id="proof-68"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-68"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-68"><article class="hiddenproof"><div class="para logical" id="p-1230">
+<div class="para" id="p-1217">If <span class="process-math">\(R\)</span> is a PID then <span class="process-math">\(R\)</span> is noetherian.</div></article><article class="hiddenproof" id="proof-68"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-68"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-68"><article class="hiddenproof"><div class="para logical" id="p-1218">
 <div class="para">Consider and ascending chain of ideals of <span class="process-math">\(R\text{;}\)</span> it must have the form</div>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
@@ -859,13 +861,13 @@ I_1 \subseteq I_2  \subseteq I_3 \subseteq \cdots
 <article class="corollary theorem-like" id="cor-fields-are-noetherian"><h3 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">9.34</span><span class="period">.</span><span class="space"> </span><span class="title">Fields are Noetherian.</span>
 </h3>
-<div class="para" id="p-1231">Every field is noetherian.</div></article><article class="exercise exercise-like" id="exe-noetherian-quotients"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-noetherian-quotients"><h3 class="heading">
+<div class="para" id="p-1219">Every field is noetherian.</div></article><article class="exercise exercise-like" id="exe-noetherian-quotients"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exe-noetherian-quotients"><h3 class="heading">
 <span class="type">Exercise</span><span class="space"> </span><span class="codenumber">9.35</span><span class="period">.</span><span class="space"> </span><span class="title">Quotient Rings Noetherian in Noetherian Rings.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-noetherian-quotients"><article class="exercise exercise-like"><div class="para" id="p-1232">Let <span class="process-math">\(R\)</span> be a commutative ring and <span class="process-math">\(I\)</span> an ideal of <span class="process-math">\(R\text{.}\)</span> Show that if <span class="process-math">\(R\)</span> is noetherian then <span class="process-math">\(R/I\)</span> is also noetherian.</div></article></div>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-noetherian-quotients"><article class="exercise exercise-like"><div class="para" id="p-1220">Let <span class="process-math">\(R\)</span> be a commutative ring and <span class="process-math">\(I\)</span> an ideal of <span class="process-math">\(R\text{.}\)</span> Show that if <span class="process-math">\(R\)</span> is noetherian then <span class="process-math">\(R/I\)</span> is also noetherian.</div></article></div>
 <article class="theorem theorem-like" id="lem-factorization-in-noetherian-domains"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.36</span><span class="period">.</span><span class="space"> </span><span class="title">Factorization in Noetherian Domains.</span>
 </h3>
-<div class="para" id="p-1233">If <span class="process-math">\(R\)</span> is a noetherian integral domain, then every non-zero, not-unit element factors into a finite product of irreducible elements.</div></article><article class="hiddenproof" id="proof-69"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-69"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-69"><article class="hiddenproof"><div class="para" id="p-1234">Pick <span class="process-math">\(x \in R\)</span> with <span class="process-math">\(x \ne 0\)</span> and <span class="process-math">\(x \notin R^\times\text{.}\)</span> If <span class="process-math">\(x\)</span> is irreducible, there is nothing to prove. Otherwise, we have <span class="process-math">\(x = x_1 x_2\)</span> for non-units <span class="process-math">\(x_1, x_2\text{.}\)</span> If both <span class="process-math">\(x_1, x_2\)</span> are irreducible, the proof is complete. Otherwise, one or both of them factors non-trivially. We may express this conveniently by saying that <span class="process-math">\(x_1 = x_3x_4\)</span> and <span class="process-math">\(x_2 = x_5x_6\)</span> such that either <span class="process-math">\(x_3\)</span> and <span class="process-math">\(x_4\)</span> are both non-units or <span class="process-math">\(x_5\)</span> and <span class="process-math">\(x_6\)</span> are both non-units. (E.g., if <span class="process-math">\(x_2\)</span> is irreducible, we could set <span class="process-math">\(x_5 = x_2, x_6 = 1\text{.}\)</span>) Continuing in the this manner, we form a binary tree with <span class="process-math">\(x\)</span> at the top, <span class="process-math">\(x_1, x_2\)</span> one level down, <span class="process-math">\(x_3,x_4,x_5,x_6\)</span> one level below that, etc.</div> <div class="para" id="p-1235">We halt the process of building the tree if at some stage all the leaves of the tree are irreducible elements, at which point we will have proven that <span class="process-math">\(x\)</span> factors in to a product of the irreducible elements given by these leaves.</div> <div class="para" id="p-1236">We need to rule out the possibility that the process never terminates. If it never terminates, we will have built an infinite binary tree with the property that some route downward through the tree consists of an infinite list of irreducible elements <span class="process-math">\(y_1, y_2, y_3,\dots\)</span> such that <span class="process-math">\(x = y_1z_1\)</span> for a non-unit <span class="process-math">\(z_1\)</span> and, for each <span class="process-math">\(i \geq 1\text{,}\)</span> <span class="process-math">\(y_{i} = y_{i+1} z_{i+1}\)</span> for a non-unit <span class="process-math">\(z_{i+1}\text{.}\)</span> Since <span class="process-math">\(R\)</span> is an integral domain, we have <span class="process-math">\((x) \subsetneq (y_1)\)</span> and <span class="process-math">\((y_i) \subsetneq (y_{i+1})\)</span> for all <span class="process-math">\(i \geq 1\text{.}\)</span> (E.g., if <span class="process-math">\((x) = (y_1)\)</span> then <span class="process-math">\(y_1 = xv\)</span> and hence <span class="process-math">\(x = xvz_1\text{,}\)</span> so that <span class="process-math">\(vz_1 = 1\text{,}\)</span> contrary to <span class="process-math">\(z_1\)</span> being a non-unit.)</div> <div class="para logical" id="p-1237">
+<div class="para" id="p-1221">If <span class="process-math">\(R\)</span> is a noetherian integral domain, then every non-zero, not-unit element factors into a finite product of irreducible elements.</div></article><article class="hiddenproof" id="proof-69"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-69"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-69"><article class="hiddenproof"><div class="para" id="p-1222">Pick <span class="process-math">\(x \in R\)</span> with <span class="process-math">\(x \ne 0\)</span> and <span class="process-math">\(x \notin R^\times\text{.}\)</span> If <span class="process-math">\(x\)</span> is irreducible, there is nothing to prove. Otherwise, we have <span class="process-math">\(x = x_1 x_2\)</span> for non-units <span class="process-math">\(x_1, x_2\text{.}\)</span> If both <span class="process-math">\(x_1, x_2\)</span> are irreducible, the proof is complete. Otherwise, one or both of them factors non-trivially. We may express this conveniently by saying that <span class="process-math">\(x_1 = x_3x_4\)</span> and <span class="process-math">\(x_2 = x_5x_6\)</span> such that either <span class="process-math">\(x_3\)</span> and <span class="process-math">\(x_4\)</span> are both non-units or <span class="process-math">\(x_5\)</span> and <span class="process-math">\(x_6\)</span> are both non-units. (E.g., if <span class="process-math">\(x_2\)</span> is irreducible, we could set <span class="process-math">\(x_5 = x_2, x_6 = 1\text{.}\)</span>) Continuing in the this manner, we form a binary tree with <span class="process-math">\(x\)</span> at the top, <span class="process-math">\(x_1, x_2\)</span> one level down, <span class="process-math">\(x_3,x_4,x_5,x_6\)</span> one level below that, etc.</div> <div class="para" id="p-1223">We halt the process of building the tree if at some stage all the leaves of the tree are irreducible elements, at which point we will have proven that <span class="process-math">\(x\)</span> factors in to a product of the irreducible elements given by these leaves.</div> <div class="para" id="p-1224">We need to rule out the possibility that the process never terminates. If it never terminates, we will have built an infinite binary tree with the property that some route downward through the tree consists of an infinite list of irreducible elements <span class="process-math">\(y_1, y_2, y_3,\dots\)</span> such that <span class="process-math">\(x = y_1z_1\)</span> for a non-unit <span class="process-math">\(z_1\)</span> and, for each <span class="process-math">\(i \geq 1\text{,}\)</span> <span class="process-math">\(y_{i} = y_{i+1} z_{i+1}\)</span> for a non-unit <span class="process-math">\(z_{i+1}\text{.}\)</span> Since <span class="process-math">\(R\)</span> is an integral domain, we have <span class="process-math">\((x) \subsetneq (y_1)\)</span> and <span class="process-math">\((y_i) \subsetneq (y_{i+1})\)</span> for all <span class="process-math">\(i \geq 1\text{.}\)</span> (E.g., if <span class="process-math">\((x) = (y_1)\)</span> then <span class="process-math">\(y_1 = xv\)</span> and hence <span class="process-math">\(x = xvz_1\text{,}\)</span> so that <span class="process-math">\(vz_1 = 1\text{,}\)</span> contrary to <span class="process-math">\(z_1\)</span> being a non-unit.)</div> <div class="para logical" id="p-1225">
 <div class="para">But then we have arrived at an infinite ascending chain of ideals in <span class="process-math">\(R\text{,}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -875,10 +877,10 @@ I_1 \subseteq I_2  \subseteq I_3 \subseteq \cdots
 </div>
 <div class="para">which is not possible in a Noetherian ring.</div>
 </div></article></div>
-<article class="remark remark-like" id="remark-43"><h3 class="heading">
+<article class="remark remark-like" id="remark-41"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">9.37</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1238">For those mathematicians who refute the Axiom of Choice (though they are few and far between), noetherian rings provide a haven of sorts within the world of algebra. This is because the existence of a maximal ideal is guarenteed in noetherian rings, given that every ascending chain of ideals stabilizes.</div></article></section></div>
+<div class="para" id="p-1226">For those mathematicians who refute the Axiom of Choice (though they are few and far between), noetherian rings provide a haven of sorts within the world of algebra. This is because the existence of a maximal ideal is guarenteed in noetherian rings, given that every ascending chain of ideals stabilizes.</div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="subsec-ufds.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="ch-fof-poly-ufd.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

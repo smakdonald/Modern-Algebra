@@ -7793,10 +7793,6 @@
               </theorem>         
   
           </subsection>  
-    
-        </section>
-
-        <section xml:id="sec-units-zerodivisors"><title>Units and Zerodivisors</title>
 
           <subsection xml:id="subsec-units"><title>Absolute Units</title>
 
@@ -8163,184 +8159,363 @@
               </exercise>
   
           </subsection>
-          
+    
         </section>
-    
-        <section xml:id="sec-subrings"><title>Subrings</title>
 
-          <blockquote>
+        <section xml:id="sec-sub-poly"> <title>Subrings and Polynomial Rings</title>
+         
+          <subsection xml:id="subsec-subrings"><title>Subrings</title>
+
+            <blockquote>
+              <p>
+                <q>
+                  We all live in a yellow subma-ring
+                </q>
+              </p>
+              <attribution>(Ring)o Starr</attribution>
+            </blockquote>
+  
             <p>
-              <q>
-                We all live in a yellow subma-ring
-              </q>
+              We will spend the first half of our exploration of rings following the same general structure as we did in <xref text="title" ref="part-group"/>. 
+              First, we looked at rings in general, and now we will examine subrings, just as we did with subgroups. 
+              Then it's off to homomorphisms, isomorphisms, and quotients. 
+              It'll be just like old times.
             </p>
-            <attribution>(Ring)o Starr</attribution>
-          </blockquote>
-
-          <p>
-            We will spend the first half of our exploration of rings following the same general structure as we did in <xref text="title" ref="part-group"/>. 
-            First, we looked at rings in general, and now we will examine subrings, just as we did with subgroups. 
-            Then it's off to homomorphisms, isomorphisms, and quotients. 
-            It'll be just like old times.
-          </p>
-    
-          <definition xml:id="def-subring"><title>Subring</title>
-            <statement>
+      
+            <definition xml:id="def-subring"><title>Subring</title>
+              <statement>
+                <p>
+                  A <em>subring</em> of a ring <m>R</m> is a subset <m>S \subseteq R</m> such that <m>S</m> is a ring under the operations of <m>R</m>.
+                </p>
+  
+                <p>
+                  When <m>R</m> is a field we call <m>S</m> a <em>subfield</em> of <m>R</m>
+                  <fn>We generally do not define subdomains, subcommutativerings, or subdivisionringswithidentity, but if you're feeling inspired I say go for it.</fn>.
+                </p>
+              </statement>
+            </definition>
+      
+            <lemma xml:id="lem-subring-test"><title>Subring Test</title>
+              <statement>
+                <p>
+                  A nonempty subset <m>S</m> of a ring <m>R</m> is a subring if and only if either one of the following hold:
+                  <ol>
+                    <li>
+                      <p>
+                        <m>S</m> is a subgroup of <m>R</m> closed under multiplication.
+                      </p>
+                    </li>
+      
+                    <li>
+                      <p>
+                        <m>S</m> is closed under subtraction and multiplication.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+            </lemma>
+  
+            <exercise xml:id="exe-subring-preservations"><title>Subring Preservations</title>
               <p>
-                A <em>subring</em> of a ring <m>R</m> is a subset <m>S \subseteq R</m> such that <m>S</m> is a ring under the operations of <m>R</m>.
+                Any subring of a commutative ring is a commutative ring. Any unital subring of an integral domain is an integral domain.
               </p>
-
+            </exercise>
+      
+            <example xml:id="ex-subring-examples"><title>Examples of Subrings</title>
               <p>
-                When <m>R</m> is a field we call <m>S</m> a <em>subfield</em> of <m>R</m>
-                <fn>We generally do not define subdomains, subcommutativerings, or subdivisionringswithidentity, but if you're feeling inspired I say go for it.</fn>.
+                <ul>
+                  <li>
+                    <m>\Z</m> is a subring of <m>\Q</m>, which is a subring of <m>\R</m>, which is a subring of <m>\C</m>.
+                  </li>
+        
+                  <li>
+                    <m>n\Z</m> is a subring without <m>1</m> of the ring <m>\Z</m> with <m>1</m>.
+                  </li>
+        
+                  <li>
+                    The set of continuous functions mapping <m>[0,1]\to \R</m> is a subring of <m>\Fun([0,1],\R)</m>, denoted <m>\cC([0,1])</m>.
+                  </li>
+        
+                  <li>
+                    <m>\Z[i]</m>, the ring of Gaussian Integers, is a subring of <m>\C</m>.
+                  </li>
+                </ul>
               </p>
-            </statement>
-          </definition>
-    
-          <lemma xml:id="lem-subring-test"><title>Subring Test</title>
-            <statement>
+            </example>
+  
+            <investigation><title>Nilradical Radishes</title>
               <p>
-                A nonempty subset <m>S</m> of a ring <m>R</m> is a subring if and only if either one of the following hold:
+                Prove that the set of all nilpotent elements of a ring <m>R</m> is a subring of <m>R</m>, which we call the <term>nilradical</term>.
+              </p>
+            </investigation>
+  
+            <exercise xml:id="exe-finding-subring-counterexamples"><title>Fancy Subrings</title>
+              <p>
+                If <m>R</m> is a ring and <m>S</m> is a subring of <m>R</m>, it can happen that 
                 <ol>
                   <li>
                     <p>
-                      <m>S</m> is a subgroup of <m>R</m> closed under multiplication.
+                      <m>R</m> is unital but <m>S</m> is not (e.g. <m>S=2\Z\subset R= \Z</m>) 
                     </p>
                   </li>
-    
+                  
                   <li>
                     <p>
-                      <m>S</m> is closed under subtraction and multiplication.
+                      <m>S</m> is unital but <m>R</m> is not 
+                    </p>
+                  </li>
+      
+                  <li>
+                    <p>
+                      both <m>R</m> and <m>S</m> are unital but <m>1_R\neq 1_S</m> 
                     </p>
                   </li>
                 </ol>
+                Find examples for each of these situations!
               </p>
-            </statement>
-          </lemma>
-
-          <exercise xml:id="exe-subring-preservations"><title>Subring Preservations</title>
-            <p>
-              Any subring of a commutative ring is a commutative ring. Any unital subring of an integral domain is an integral domain.
-            </p>
-          </exercise>
-    
-          <example xml:id="ex-subring-examples"><title>Examples of Subrings</title>
-            <p>
-              <ul>
-                <li>
-                  <m>\Z</m> is a subring of <m>\Q</m>, which is a subring of <m>\R</m>, which is a subring of <m>\C</m>.
-                </li>
+            </exercise>
       
-                <li>
-                  <m>n\Z</m> is a subring without <m>1</m> of the ring <m>\Z</m> with <m>1</m>.
-                </li>
+            <definition xml:id="def-center-ring"><title>Center of a Ring</title>
+              <statement>
+                <p>
+                  The <em>center</em> of a ring <m>R</m> is the set 
+                  <me>
+                    Z(R)=\{z \in R \mid zr = rz \text{ for all }r \in R\}.
+                  </me>
+                </p>
+              </statement>
+            </definition>
       
-                <li>
-                  The set of continuous functions mapping <m>[0,1]\to \R</m> is a subring of <m>\Fun([0,1],\R)</m>, denoted <m>\cC([0,1])</m>.
-                </li>
-      
-                <li>
-                  <m>\Z[i]</m>, the ring of Gaussian Integers, is a subring of <m>\C</m>.
-                </li>
-              </ul>
-            </p>
-          </example>
-
-          <investigation><title>Nilradical Radishes</title>
-            <p>
-              Prove that the set of all nilpotent elements of a ring <m>R</m> is a subring of <m>R</m>, which we call the <term>nilradical</term>.
-            </p>
-          </investigation>
-
-          <exercise xml:id="exe-finding-subring-counterexamples"><title>Fancy Subrings</title>
-            <p>
-              If <m>R</m> is a ring and <m>S</m> is a subring of <m>R</m>, it can happen that 
-              <ol>
-                <li>
-                  <p>
-                    <m>R</m> is unital but <m>S</m> is not (e.g. <m>S=2\Z\subset R= \Z</m>) 
-                  </p>
-                </li>
-                
-                <li>
-                  <p>
-                    <m>S</m> is unital but <m>R</m> is not 
-                  </p>
-                </li>
-    
-                <li>
-                  <p>
-                    both <m>R</m> and <m>S</m> are unital but <m>1_R\neq 1_S</m> 
-                  </p>
-                </li>
-              </ol>
-              Find examples for each of these situations!
-            </p>
-          </exercise>
-    
-          <definition xml:id="def-center-ring"><title>Center of a Ring</title>
-            <statement>
-              <p>
-                The <em>center</em> of a ring <m>R</m> is the set 
-                <me>
-                  Z(R)=\{z \in R \mid zr = rz \text{ for all }r \in R\}.
-                </me>
-              </p>
-            </statement>
-          </definition>
-    
-          <lemma xml:id="lem-center-is-subring"><title>Center is a Subring</title>
-            <statement>
-              <p>
-                The center <m>Z(R)</m> is a subring of <m>R</m>. 
-                If <m>R</m> is a ring with identity <m>1</m> then <m>Z(R)</m> is a subring that contains the same <m>1</m>.
-              </p>
-            </statement>
-          </lemma>
-
-          <p>
-            Centers of rings don't show up as much in ring theory as they did with groups, but that might also be because there hasn't been a non-commutative ring spotted within twenty miles of UNL since 1977.
-          </p>
-    
-          <lemma xml:id="lem-quadratic-field"><title><m>\Q(\sqrt {d})</m></title>
-            <statement>
-              <p>
-                Let <m>d</m> be a squarefree integer (that is, the prime factorization of <m>d</m> has no repeated primes). 
-                Then the subset 
-                <me>
-                  \Q(\sqrt {d}) = \{a + b\sqrt{d} \mid a,b \in \Q\}
-                </me> 
-                of <m>\C</m> is a subring that is a field (called a <em>quadratic field</em>), and <m>\Z[\sqrt{d}] = \{a + b\sqrt{d} | a,b \in \Z\}</m> is a subring of <m>\Q(\sqrt{d})</m>.
-              </p>
-            </statement>
-    
-            <proof>
-              <p>
-                Both <m>\Q(\sqrt {d})</m> and <m>\Z[\sqrt{d}]</m> are closed under subtraction and multiplication, so they are subrings of <m>\C</m>.
-              </p>
-    
-              <p>
-                The fact that <m>\Q(\sqrt {d})</m> is a {} follows since <m>\Q(\sqrt {d})</m> is also closed under taking inverses. 
-                Indeed the inverse of <m>r + q \sqrt{d}</m> (from <m>\C</m>) turns out to be 
-                <me> 
-                  (r + q \sqrt{d})^{-1} = \frac{r - q \sqrt{d}}{r^2 - d q^2} \in \Q(\sqrt {d})
-                </me> 
-                whenever <m>r + q \sqrt{d}\neq 0</m>. 
-                A slightly subtle point here is that the fraction above makes sense since <m>r^2 -d q^2 \ne 0</m> provided <m>r</m> and <m>q</m> are not simultaneously <m>0</m>. 
-                This is because, if <m>r^2 -d q^2 = 0</m> then either <m>d=(r/q)^2</m>, which contradicts the assumption that <m>d</m> is squarefree, or <m>r=q=0</m>, which contradicts the assumption <m>r + q \sqrt{d}\neq 0</m>.
-              </p>
-            </proof>
-          </lemma>
+            <lemma xml:id="lem-center-is-subring"><title>Center is a Subring</title>
+              <statement>
+                <p>
+                  The center <m>Z(R)</m> is a subring of <m>R</m>. 
+                  If <m>R</m> is a ring with identity <m>1</m> then <m>Z(R)</m> is a subring that contains the same <m>1</m>.
+                </p>
+              </statement>
+            </lemma>
   
-          <remark>
             <p>
-              Note the difference in notation between <m>\Q(\sqrt d)</m> and <m>\Z[\sqrt d]</m>: one uses parenthesis and the other brackets. 
-              This is to denote that one (the one with parentheses) is a field, whereas the other [the one with brackets] is not. 
-              This is also some spicy foreshadowing that won't pay off until all the way down in <xref text="title" ref="part-fields"/>. 
-              Stay tuned.
+              Centers of rings don't show up as much in ring theory as they did with groups, but that might also be because there hasn't been a non-commutative ring spotted within twenty miles of UNL since 1977.
             </p>
-          </remark>
+      
+            <lemma xml:id="lem-quadratic-field"><title><m>\Q(\sqrt {d})</m></title>
+              <statement>
+                <p>
+                  Let <m>d</m> be a squarefree integer (that is, the prime factorization of <m>d</m> has no repeated primes). 
+                  Then the subset 
+                  <me>
+                    \Q(\sqrt {d}) = \{a + b\sqrt{d} \mid a,b \in \Q\}
+                  </me> 
+                  of <m>\C</m> is a subring that is a field (called a <em>quadratic field</em>), and <m>\Z[\sqrt{d}] = \{a + b\sqrt{d} | a,b \in \Z\}</m> is a subring of <m>\Q(\sqrt{d})</m>.
+                </p>
+              </statement>
+      
+              <proof>
+                <p>
+                  Both <m>\Q(\sqrt {d})</m> and <m>\Z[\sqrt{d}]</m> are closed under subtraction and multiplication, so they are subrings of <m>\C</m>.
+                </p>
+      
+                <p>
+                  The fact that <m>\Q(\sqrt {d})</m> is a {} follows since <m>\Q(\sqrt {d})</m> is also closed under taking inverses. 
+                  Indeed the inverse of <m>r + q \sqrt{d}</m> (from <m>\C</m>) turns out to be 
+                  <me> 
+                    (r + q \sqrt{d})^{-1} = \frac{r - q \sqrt{d}}{r^2 - d q^2} \in \Q(\sqrt {d})
+                  </me> 
+                  whenever <m>r + q \sqrt{d}\neq 0</m>. 
+                  A slightly subtle point here is that the fraction above makes sense since <m>r^2 -d q^2 \ne 0</m> provided <m>r</m> and <m>q</m> are not simultaneously <m>0</m>. 
+                  This is because, if <m>r^2 -d q^2 = 0</m> then either <m>d=(r/q)^2</m>, which contradicts the assumption that <m>d</m> is squarefree, or <m>r=q=0</m>, which contradicts the assumption <m>r + q \sqrt{d}\neq 0</m>.
+                </p>
+              </proof>
+            </lemma>
     
+            <remark>
+              <p>
+                Note the difference in notation between <m>\Q(\sqrt d)</m> and <m>\Z[\sqrt d]</m>: one uses parenthesis and the other brackets. 
+                This is to denote that one (the one with parentheses) is a field, whereas the other [the one with brackets] is not. 
+                This is also some spicy foreshadowing that won't pay off until all the way down in <xref text="title" ref="part-fields"/>. 
+                Stay tuned.
+              </p>
+            </remark>
+      
+          </subsection>
+  
+          <subsection xml:id="subsec-polyrings"><title>Polynomial Rings</title>
+  
+            <blockquote>
+              <p>
+                <q>
+                  I had a polynomial once. My doctor removed it.
+                </q>
+              </p>
+              <attribution>Michael Grant</attribution>
+            </blockquote>
+  
+            <definition xml:id="def-polynomial-ring"><title>Polynomial Ring</title>
+              <statement>
+                <p>
+                  For any commutative ring <m>R</m>, the <em>polynomial ring in the variable</em> <m>x</m>, written <m>R[x]</m>, is the set 
+                  <me>
+                    R[x]=\{a_nx^n+\ldots+a_0\mid  n\in \Z, n\geq 0, a_i\in R\}
+                  </me> 
+                  with addition defined by 
+                  <me>
+                    (a_nx^n+\ldots+a_0)+(b_nx^n+\ldots+b_0)=(a_n+b_n)x^n+\ldots++(a_0+b_0)
+                  </me>and multiplication defined by 
+                  <me>
+                    (a_nx^n+\ldots+a_0)(b_mx^n+\ldots+b_0)=\sum_{k=0}^{n+m}\left(\sum_{i=0}^k a_ib_{k-i}\right)x^i.
+                  </me>
+                  For any commutative ring <m>R</m>, the <em>polynomial ring in</em> <m>x_1, \dots, x_n</m>, written <m>R[x_1, \dots, x_n]</m>, is defined inductively as <m>R[x_1, \dots, x_n]=R[x_1, \dots, x_{n-1}][x_n]</m>, but more easily thought of as the set consisting of (finite) sums of the form 
+                  <me> 
+                    R[x_1, \dots, x_n]=\left\{\sum_{e_1, \dots, e_n \in \Z_{\geq 0}} r_{e_1, \dots, e_n} x_1^{e_1} x_2^{e_2} \cdots x_n^{e_n}\right\}
+                  </me>
+                  with addition and multiplication defined by rules similar to the ones seen above.
+                </p>
+              </statement>
+            </definition>
+          
+            <remark>
+              <p>
+                One often views <m>R</m> as the subring of <m>R[x_1, \dots, x_n]</m> consisting of the constant polynomials.
+              </p>
+            </remark>
+  
+            <p>
+              Let's remind ourselves of some classic notions of polynomials.
+            </p>
+  
+            <definition xml:id="def-degree"><title>Degree</title>
+              <statement>
+                <p>
+                  Let <m>f(x)\in R[x]</m>, <m>f(x)\neq0</m>. Say <m>f(x)=a_nx^n+\cdots+a_1x+a_0</m>, where <m>a_n\neq0</m>. 
+                  Then <m>n</m> is the <em>degree</em>of <m>f</m>.
+                </p>
+              </statement>
+            </definition>
+  
+            <definition xml:id="def-monic"><title>Monic</title>
+              <statement>
+                <p>
+                  A polynomial <m>f(x)=a_nx^n+\cdots+a_1x+a_0</m> is <em>monic</em> if <m>a_n=1</m>.
+                  <fn>Please do not confuse this with the notion of a <em>yonic</em> polynomial, which does not yet exist and should probably stay that way. Algebraists are already on very thin ice for some of the things they've named over the years.</fn>
+                </p>
+              </statement>
+            </definition>
+            
+            <proposition xml:id="prop-polynomials-domains-degrees-units"><title>Polynomials, Domains, Degrees, Units</title>
+              <statement>
+                <p>
+                  If <m>R</m> is a domain, then 
+                  <ol>
+                    <li>
+                      <p>
+                        <m>R[x]</m> is a domain 
+                      </p>
+                    </li>
+      
+                    <li>
+                      <p>
+                        for any nonzero polynomials <m>f,g\in R[x]</m>, <m>\deg(fg)=\deg(f)+\deg(g)</m>
+                      </p>
+                    </li>
+      
+                    <li>
+                      <p>
+                        the units of <m>R[x]</m> are the units of <m>R</m> (<m>R[x]^\times=R^\times</m>)
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+              </statement>
+            </proposition>
+  
+            <p>
+              Its been far too long since we've had ourselves a universal mapping property, I think we've earned one. 
+              As a treat.
+            </p>
+  
+            <theorem xml:id="thm-ump-for-polynomial-rings"><title>UMP for Polynomial Rings</title>
+              <statement>
+                <p>
+                  Let <m>R</m> and <m>S</m> be commutative rings, <m>\phi: R \to S</m> is a ring homomorphism and <m>s_1, \dots, s_n</m> arbitrary elements of <m>S</m>. Then there exists a unique ring homomorphism 
+                  <me>
+                    \tilde{\phi}: R[x_1, \dots, x_n] \to S
+                  </me> 
+                  such that <m>\tilde{\phi}|_R = \phi</m> and <m>\tilde{\phi}(x_i) = s_i</m> for all <m>i</m>, namely 
+                  <me>
+                    \tilde{\phi}\left(\sum_{e_1, \dots, e_n \geq 0} r_{e_1, \dots, e_n} x_1^{e_1} \cdots x_n^{e_n}\right) =\sum_{e_1, \dots, e_n \geq 0} \phi(r_{e_1, \dots, e_n}) s_1^{e_1} \cdots s_n^{e_n}
+                  </me>
+                </p>
+              </statement>
+      
+              <proof>
+                <p>
+                  Let's observe first that if such a map exists it is unique. For if <m>\tilde\phi: R[x_1, \dots, x_n] \to S</m> is a ring map extending <m>\phi</m> and sending <m>x_i</m> to <m>s_i</m>. Then <me>\begin{aligned*}
+                    \tilde\phi(\sum_{e_1, \dots, e_n \geq 0} r_{e_1, \dots, e_n} x_1^{e_1} \cdots x_n^{e_n}) &amp;=
+                    \sum_{e_1, \dots, e_n \geq 0} \phi(r_{e_1, \dots, e_n}) \phi(x_1)^{e_1} \cdots \phi(x_n)^{e_n} \\
+                    &amp;=
+                    \sum_{e_1, \dots, e_n \geq 0} \phi(r_{e_1, \dots, e_n}) s_1^{e_1} \cdots s_n^{e_n},
+                    \end{aligned*}</me> using that <m>\tilde\phi</m> preserves <m>+</m> and <m>\cdot</m>.
+                </p>
+                <p>
+                  For existence, let's assume <m>n = 1</m> at first. Given <m>\phi: R \to S</m> and <m>s \in S</m>, define <me>
+                  \tilde{\phi}: R[x] \to S
+                  </me> by <me>
+                  \tilde{\phi}(\sum_i r_i x^i) = \sum_i \phi(r_i) s^i.
+                  </me> It is elementary (but tedious) to check <m>\tilde{\phi}</m> really is a ring homomorphism. The fact that it restricts to <m>\phi</m> is clear, however.
+                </p>
+      
+                <p>
+                  For the general case, we proceed by induction on the number of variables <m>n</m>. The induction hypothesis shows that there is a ring homomorphism <me>
+                  \psi: R[x_1, \dots, x_{n-1}] \to S
+                  </me> such that <m>\psi|_R = \phi</m> and <m>\psi(x_i) = s_i</m>, <m>i = 1, \dots, n-1</m>. Applying the <m>n=1</m> case to <m>\psi</m> gives <me>
+                  \tilde{\psi}: (R[x_1, \dots, x_{n-1}])[x_n] \to S
+                  </me> with <m>\tilde\psi|_{R[x_1, \dots, x_{n-1}]} = \psi</m> and <m>\tilde{\psi}(x_n) = s_n</m>. Setting <m>\tilde\phi=\tilde\psi</m> gives a map <m>\tilde{\phi}</m> with the needed properties.
+                </p>
+              </proof>
+            </theorem>
+      
+            <exercise xml:id="exe-evaluation-homomorphism"><title>Evalutation Homomorphism</title>
+              <p>
+                If <m>R\subseteq S</m> are commutative rings with <m>1\neq 0</m> and <m>a\in S</m>, then the evaluation at <m>a</m> function <m>\phi:R[x]\to S</m> given by <m>\phi(f(x))=f(a)</m> is a ring homomorphism.
+              </p>
+            </exercise>
+      
+            <example xml:id="ex-applying-ring-homomorphism-to-coefficients"><title>Ring Maps and Coefficients</title>
+              <p>
+                Given a ring map <m>\phi: R \to S</m> between commutative rings, we may apply <xref ref="thm-ump-for-polynomial-rings"/> to the composition <m>R \xra{\phi} S \hookrightarrow S[x]</m> using the element <m>s = x</m> of <m>S[x]</m> to get an induced ring map 
+                <me>\tilde{\phi}: R[x] \to S[x]</me>
+                that sends <m>\sum_i r_i x^i</m> to <m>\sum_i \phi(r_i) x^i</m>. That is, the map <m>\tilde{\phi}</m> applies <m>\phi</m> to the coefficients of a polynomial. This can be generalized to more than one variable in the obvious way.       
+              </p>
+            </example>
+      
+            <exercise xml:id="exe-the-reduction-homomorphism"><title>Reduction Homomorphism</title>
+              <p>
+                Continuing with <xref ref="ex-applying-ring-homomorphism-to-coefficients"/>, we could have <m>S = R/I</m> for an ideal <m>I</m> of <m>R</m> and <m>\phi</m> could be the quotient map. Then 
+                <me>\tilde{\phi}: R[x_1, \dots, x_n] \to (R/I)[x_1, \dots, x_n]</me> 
+                takes a polynomial and <q>reduces </q> its coefficients modulo <m>I</m>. We will usually denote the image of <m>f(x)</m> through the reduction homomorphism by <m>\ov{f}(x)</m>.
+              </p>
+            </exercise>
+  
+            <theorem xml:id="thm-polynomial-division-algorithm"><title>Polynomial Division Algorithm</title>
+              <statement>
+                <p>
+                  Let <m>R</m> be a commutative ring with identity and <m>f,g\in R[x]</m>. Assume the leading coefficient of <m>g</m> is a unit in <m>R</m>. Then there exists a unique <m>q,r\in R[x]</m> such that <m>f=gq+r</m>, and <m>\operatorname{deg}r&lt;\operatorname{deg}g=n</m>.
+                </p>
+              </statement>
+            </theorem>
+  
+            <theorem xml:id="thm-factor-thm"><title>Factor Theorem</title>
+              <statement>
+                <p>
+                  Let <m>R</m> be a commutative ring with identity, <m>f(x)\in R[x]</m> and <m>a\in R</m>. Then <m>f(a)=0</m> if and only if <m>(x-a)|f(x)</m>. 
+                </p>
+              </statement>
+            </theorem>
+            
+          </subsection>
+
         </section>
     
         <section xml:id="sec-ring-hom"><title>Homomorphisms</title>
@@ -8520,236 +8695,6 @@
           
         </section>
 
-        <section xml:id="sec-polyrings"><title>Polynomial Rings</title>
-
-          <blockquote><p><q>I had a polynomial once. My doctor removed it.</q></p><attribution>Michael Grant, <em>Gone</em></attribution></blockquote>
-
-          <definition xml:id="def-polynomial-ring"><title>Polynomial Ring</title>
-            <statement>
-              <p>
-                For any commutative ring <m>R</m>, the <em>polynomial ring in the variable</em> <m>x</m>, written <m>R[x]</m>, is the set 
-                <me>
-                  R[x]=\{a_nx^n+\ldots+a_0\mid  n\in \Z, n\geq 0, a_i\in R\}
-                </me> 
-                with addition defined by 
-                <me>
-                  (a_nx^n+\ldots+a_0)+(b_nx^n+\ldots+b_0)=(a_n+b_n)x^n+\ldots++(a_0+b_0)
-                </me>and multiplication defined by 
-                <me>
-                  (a_nx^n+\ldots+a_0)(b_mx^n+\ldots+b_0)=\sum_{k=0}^{n+m}\left(\sum_{i=0}^k a_ib_{k-i}\right)x^i.
-                </me>
-                For any commutative ring <m>R</m>, the <em>polynomial ring in</em> <m>x_1, \dots, x_n</m>, written <m>R[x_1, \dots, x_n]</m>, is defined inductively as <m>R[x_1, \dots, x_n]=R[x_1, \dots, x_{n-1}][x_n]</m>, but more easily thought of as the set consisting of (finite) sums of the form 
-                <me> 
-                  R[x_1, \dots, x_n]=\left\{\sum_{e_1, \dots, e_n \in \Z_{\geq 0}} r_{e_1, \dots, e_n} x_1^{e_1} x_2^{e_2} \cdots x_n^{e_n}\right\}
-                </me>
-                with addition and multiplication defined by rules similar to the ones seen above.
-              </p>
-            </statement>
-          </definition>
-        
-          <remark><p>One often views <m>R</m> as the subring of <m>R[x_1, \dots, x_n]</m> consisting of the constant polynomials.</p></remark>
-
-          <p>Let's remind ourselves of some classic notions of polynomials.</p>
-
-          <definition xml:id="def-degree"><title>Degree</title>
-            <statement>
-              <p>
-                Let <m>f(x)\in R[x]</m>, <m>f(x)\neq0</m>. Say <m>f(x)=a_nx^n+\cdots+a_1x+a_0</m>, where <m>a_n\neq0</m>. Then <m>n</m> is the <em>degree</em>of <m>f</m>.
-              </p>
-            </statement>
-          </definition>
-
-          <definition xml:id="def-monic"><title>Monic</title>
-            <statement>
-              <p>
-                A polynomial <m>f(x)=a_nx^n+\cdots+a_1x+a_0</m> is <em>monic</em> if <m>a_n=1</m>.<fn>Please do not confuse this with the notion of a <em>yonic</em> polynomial, which does not yet exist and should probably stay that way. Algebraists are already on very thin ice for some of the things they've named over the years.</fn>
-              </p>
-            </statement>
-          </definition>
-          
-          <proposition xml:id="prop-polynomials-domains-degrees-units"><title>Polynomials, Domains, Degrees, Units</title>
-            <statement>
-              <p>
-                If <m>R</m> is a domain, then 
-                <ol>
-                  <li>
-                    <p>
-                      <m>R[x]</m> is a domain 
-                    </p>
-                  </li>
-    
-                  <li>
-                    <p>
-                      for any nonzero polynomials <m>f,g\in R[x]</m>, <m>\deg(fg)=\deg(f)+\deg(g)</m>
-                    </p>
-                  </li>
-    
-                  <li>
-                    <p>
-                      the units of <m>R[x]</m> are the units of <m>R</m> (<m>R[x]^\times=R^\times</m>)
-                    </p>
-                  </li>
-                </ol>
-              </p>
-            </statement>
-          </proposition>
-
-          <!--
-          <exercise xml:id="exe-units-and-nilpotents-in-polynomial-rings"><title>Units, Nilpotents in Polynomial Rings</title>
-            <p>
-              Let <m>R</m> be a ring and 
-              <me>f=a_{0}+a_{1}x+\dots+a_{n}x^{n}\in R[x].</me>
-            </p>
-    
-            <p><ol>
-              <li>
-              <m>f</m> is a unit in <m>R[x]</m> if and only if <m>a_{0}</m> is a unit in <m>R</m> and <m>\adots</m> are nilpotent.
-              </li>
-    
-              <li>
-              <m>f</m> is nilpotent if and only if <m>a_{i}</m> nilpotent for all <m>i</m>.
-              </li>
-    
-              <li>
-              <m>f</m> is a zerodivisor if and only if there exists <m>a\neq0</m> in <m>A</m> such that <m>af=0</m>.
-              </li>
-    
-            </ol></p>
-          </exercise>
-
-          <p>Here is a nice application of the First Isomorphism Theorem.</p>
-    
-          <example xml:id="ex-rxx21"><title><m>R/\igen{x^2+1}\cong\C</m></title>
-            <p>
-              Consider the ring <m>\R[x]</m> and let <m>I = \igen{x^2 + 1}</m> be the principal ideals generated by <m>x^2+1</m>. Since <m>\R[x]</m> is commutative, we have 
-              <me>\igen{x^2 + 1} = \{ g(x)(x^2 + 1) \mid g(x)\in \R[x] \},</me> 
-              so <m>\igen{x^2 + 1}</m> is simply the collection of polynomials having <m>x^2 + 1</m> as a factor. I claim that <m>\R[x]/\igen{x^2 + 1}</m> is isomorphic as a ring to <m>\C</m>. To prove this we define a map <me>\phi: \R[x] \to \C</me> sending <m>f(x)</m> to <m>f(i)</m>, the evaluation of <m>f</m> at <m>i</m>. It is easy to check <m>\phi</m> is a ring homomorphism and it is onto since elements of the form <m>a + bx</m> in the source map to all possible complex numbers under <m>\phi</m>. We claim the kernel of <m>\phi</m> is <m>(x^2 +1)</m>. It is clear that <m>x^2 + 1 \in \ker(\phi)</m> and it follows that <m>\igen{x^2 + 1} \subseteq \ker(\phi),</m> since <m>\ker(\phi)</m> is a two-sided ideal. Suppose <m>\phi(f(x)) = 0</m> and write <m>f(x) = (x^2 + 1)q(x) + r(x)</m> with degree of <m>r(x)</m> at most one, using the division algorithm in the polynomial ring <m>\R[x]</m>. So <m>r(x) = a + bx</m> for real numbers <m>a,b</m>. If <m>r(x) \ne 0</m>, then <m>r(i) \ne 0</m>, which would contradict <m>f(i) = 0</m>. So we must have <m>r(x) = 0</m> and hence <m>f(x) \in (x^2 +1)</m>. Applying the First Isomorphism Theorem for Rings, we get <me>\R[x]/(x^2+1) \cong \C</me>via the map sending <m>f(x) + (x^2 + 1)</m> to <m>f(i)</m>. Intuitively, we have adjoined a formal symbol <m>x</m> to the real numbers, and by modding out <m>x^2 + 1</m> we have forced <m>x</m> to be a square root of <m>-1</m>. That is, we have adjoined <m>i</m> to the real numbers, obtaining <m>\C</m>.
-            </p>
-          </example>
-    
-          <example xml:id="ex-ideal-of-zx-and-isomorphism"><title><m>\Z[x]/(2) =\Z[x]/(2) \cong (\Z/2)[x]</m></title>
-            <p>
-              Consider the ideal <m>J = \igen{2, x^2 + x + 1}</m> of <m>\Z[x]</m>. Explicitly, by Lemma <xref provisional="cite"/> we have <me>J =\{ p(x)\cdot 2 + q(x)(x^2 + x+ 1) \mid p(x),q(x)\in\Z[x]\}.</me> Suppose we want to understand <m>\Z[x]/J</m>. Then the Third Isomorphism Theorem is our friend. Set <m>I=(2)</m> and note that <m>I \subseteq J</m>, and so by the Third Isomorphism Theorem <me>\Z[x]/J \cong \frac{\Z[x]/I}{J/I}.</me> Next we express both the numerator and the denominator in better terms. I claim <me>\Z[x]/I =\Z[x]/(2) \cong (\Z/2)[x].</me> To see this consider the reduction homomorphism <m>\rho: \Z[x] \to (\Z/2)[x]</m> sending a polynomial <m>p(x)</m> to its reduction modulo <m>2</m>. The kernel of this surjective ring map is <m>I</m>, establishing our claim by the First Isomorphism Theorem.
-            </p>
-    
-            <p>
-                Recall that <m>J/I</m> denotes the image of <m>J</m> under the quotient map <m>\pi:\Z[x]\to \Z[x]/I</m>. Therefore we have 
-                <md>
-                    <mrow> J/I &amp;=\pi(J)=\{\pi( p(x) \cdot 2 + q(x)(x^2 + x+ 1)) \mid p(x),q(x)\in\Z[x]\} </mrow>
-                    <mrow> &amp;=\{\pi( p(x)) \cdot \pi(2) + \pi(q(x))\pi(x^2 + x+ 1) \mid p(x),q(x)\in\Z[x]\} </mrow>
-                    <mrow> &amp;=\{\pi( p(x)) \cdot 0 + \pi(q(x))\pi(x^2 + x+ 1) \mid p(x),q(x)\in\Z[x]\} </mrow>
-                    <mrow> &amp;=\{ f(x)\pi(x^2 + x+ 1) \mid f(x)\in\Z[x]/I\}=\left((x^2+x+1)+I\right). </mrow>
-                </md> 
-                In other words, <m>J/I</m> is the ideal generated by the coset of <m>x^2+x+1</m> in <m>\Z[x]/(2)</m>. Moreover, under the isomorphism <m>\bar\rho:\Z[x]/I \to (\Z/2)[x]</m> discussed above, we have that <m>f(x)+I\mapsto \ov{f}(x)</m>, where <m>\ov{f}(x)</m> denotes the reduction of the coefficients of <m>f</m> modulo 2. Therefore <m>\bar \rho(J/I)=([1]x^2+[1]x+[1]),</m> where <m>[1]</m> denotes the congruence class of <m>1</m> modulo 2. Now we put everything together: consider the ring homomorphism <m>\varphi=\pi'\circ \bar \rho</m> where 
-                <me>
-                    \Z[x]/I\stackrel{\bar \rho}{\rightarrow}(\Z/2)[x] \stackrel{\pi'}\rightarrow \frac{(\Z/2)[x]}{([1]x^2+[1]x+[1])}.
-                </me> 
-                Notice that since <m>\bar\rho</m> and <m>\pi'</m> are surjective, so is <m>\varphi</m>, thus <m>\im(\varphi)=\frac{(\Z/2)[x]}{([1]x^2+[1]x+[1])}</m> and 
-                <me>
-                    \ker(\varphi)=\ker(\pi'\circ \bar \rho)=\ker(\pi')=([1]x^2+[1]x+[1])
-                </me> 
-                since <m>\bar\rho</m> is an isomorphism and <m>\pi'</m> is a quotient map. Applying the <xref text="title" ref="thm-ring-fit"/> to <m>\varphi</m> gives 
-                <me>
-                    \frac{\Z[x]/I}{J/I}\cong \frac{(\Z/2)[x]}{([1]x^2+[1]x+[1])}
-                </me> 
-                and combining this with the <xref text="title" ref="thm-ring-tit"/> to <m>\varphi</m> further yields 
-                <me>
-                    \Z[x]/J \cong \frac{(\Z/2)[x]}{([1]x^2+[1]x+[1])}.
-                </me>
-            </p>
-          </example>
-    
-          <example xml:id="ex-ideal-and-lit">
-            <p>
-              It turns out that the ring <m>F=\frac{(\Z/2)[x]}{([1]x^2+[1]x+[1])}</m> we discussed in <xref ref="ex-ideal-of-zx-and-isomorphism"/> to <m>\varphi</m> is a field and by a problem from HW 11, any field <m>F</m> has only two ideals <m>(0)</m> and <m>F</m> itself. This implies via the <xref text="title" ref="thm-ring-lit"/> to <m>\varphi</m> that there are only two ideals in <m>(\Z/2)[x]</m> which contain <m>([1]x^2+[1]x+[1])</m>, namely <m>([1]x^2+[1]x+[1])=\pi^{-1}(0)</m> and <m>(\Z/2)[x]=\pi^{-1}(F)</m>.
-            </p>
-          </example>
-
-          -->
-
-          <p>Its been far too long since we've had ourselves a universal mapping property, I think we've earned one.</p>
-
-          <theorem xml:id="thm-ump-for-polynomial-rings"><title>UMP for Polynomial Rings</title>
-            <statement>
-              <p>
-                Let <m>R</m> and <m>S</m> be commutative rings, <m>\phi: R \to S</m> is a ring homomorphism and <m>s_1, \dots, s_n</m> arbitrary elements of <m>S</m>. Then there exists a unique ring homomorphism 
-                <me>
-                  \tilde{\phi}: R[x_1, \dots, x_n] \to S
-                </me> 
-                such that <m>\tilde{\phi}|_R = \phi</m> and <m>\tilde{\phi}(x_i) = s_i</m> for all <m>i</m>, namely 
-                <me>
-                  \tilde{\phi}\left(\sum_{e_1, \dots, e_n \geq 0} r_{e_1, \dots, e_n} x_1^{e_1} \cdots x_n^{e_n}\right) =\sum_{e_1, \dots, e_n \geq 0} \phi(r_{e_1, \dots, e_n}) s_1^{e_1} \cdots s_n^{e_n}
-                </me>
-              </p>
-            </statement>
-    
-            <proof>
-              <p>
-                Let's observe first that if such a map exists it is unique. For if <m>\tilde\phi: R[x_1, \dots, x_n] \to S</m> is a ring map extending <m>\phi</m> and sending <m>x_i</m> to <m>s_i</m>. Then <me>\begin{aligned*}
-                  \tilde\phi(\sum_{e_1, \dots, e_n \geq 0} r_{e_1, \dots, e_n} x_1^{e_1} \cdots x_n^{e_n}) &amp;=
-                  \sum_{e_1, \dots, e_n \geq 0} \phi(r_{e_1, \dots, e_n}) \phi(x_1)^{e_1} \cdots \phi(x_n)^{e_n} \\
-                  &amp;=
-                  \sum_{e_1, \dots, e_n \geq 0} \phi(r_{e_1, \dots, e_n}) s_1^{e_1} \cdots s_n^{e_n},
-                  \end{aligned*}</me> using that <m>\tilde\phi</m> preserves <m>+</m> and <m>\cdot</m>.
-              </p>
-              <p>
-                For existence, let's assume <m>n = 1</m> at first. Given <m>\phi: R \to S</m> and <m>s \in S</m>, define <me>
-                \tilde{\phi}: R[x] \to S
-                </me> by <me>
-                \tilde{\phi}(\sum_i r_i x^i) = \sum_i \phi(r_i) s^i.
-                </me> It is elementary (but tedious) to check <m>\tilde{\phi}</m> really is a ring homomorphism. The fact that it restricts to <m>\phi</m> is clear, however.
-              </p>
-    
-              <p>
-                For the general case, we proceed by induction on the number of variables <m>n</m>. The induction hypothesis shows that there is a ring homomorphism <me>
-                \psi: R[x_1, \dots, x_{n-1}] \to S
-                </me> such that <m>\psi|_R = \phi</m> and <m>\psi(x_i) = s_i</m>, <m>i = 1, \dots, n-1</m>. Applying the <m>n=1</m> case to <m>\psi</m> gives <me>
-                \tilde{\psi}: (R[x_1, \dots, x_{n-1}])[x_n] \to S
-                </me> with <m>\tilde\psi|_{R[x_1, \dots, x_{n-1}]} = \psi</m> and <m>\tilde{\psi}(x_n) = s_n</m>. Setting <m>\tilde\phi=\tilde\psi</m> gives a map <m>\tilde{\phi}</m> with the needed properties.
-              </p>
-            </proof>
-          </theorem>
-    
-          <exercise xml:id="exe-evaluation-homomorphism"><title>Evalutation Homomorphism</title>
-            <p>
-              If <m>R\subseteq S</m> are commutative rings with <m>1\neq 0</m> and <m>a\in S</m>, then the evaluation at <m>a</m> function <m>\phi:R[x]\to S</m> given by <m>\phi(f(x))=f(a)</m> is a ring homomorphism.
-            </p>
-          </exercise>
-    
-          <example xml:id="ex-applying-ring-homomorphism-to-coefficients"><title>Ring Maps and Coefficients</title>
-            <p>
-              Given a ring map <m>\phi: R \to S</m> between commutative rings, we may apply <xref ref="thm-ump-for-polynomial-rings"/> to the composition <m>R \xra{\phi} S \hookrightarrow S[x]</m> using the element <m>s = x</m> of <m>S[x]</m> to get an induced ring map 
-              <me>\tilde{\phi}: R[x] \to S[x]</me>
-              that sends <m>\sum_i r_i x^i</m> to <m>\sum_i \phi(r_i) x^i</m>. That is, the map <m>\tilde{\phi}</m> applies <m>\phi</m> to the coefficients of a polynomial. This can be generalized to more than one variable in the obvious way.       
-            </p>
-          </example>
-    
-          <exercise xml:id="exe-the-reduction-homomorphism"><title>Reduction Homomorphism</title>
-            <p>
-              Continuing with <xref ref="ex-applying-ring-homomorphism-to-coefficients"/>, we could have <m>S = R/I</m> for an ideal <m>I</m> of <m>R</m> and <m>\phi</m> could be the quotient map. Then 
-              <me>\tilde{\phi}: R[x_1, \dots, x_n] \to (R/I)[x_1, \dots, x_n]</me> 
-              takes a polynomial and <q>reduces </q> its coefficients modulo <m>I</m>. We will usually denote the image of <m>f(x)</m> through the reduction homomorphism by <m>\ov{f}(x)</m>.
-            </p>
-          </exercise>
-
-          <theorem xml:id="thm-polynomial-division-algorithm"><title>Polynomial Division Algorithm</title>
-            <statement>
-              <p>
-                Let <m>R</m> be a commutative ring with identity and <m>f,g\in R[x]</m>. Assume the leading coefficient of <m>g</m> is a unit in <m>R</m>. Then there exists a unique <m>q,r\in R[x]</m> such that <m>f=gq+r</m>, and <m>\operatorname{deg}r&lt;\operatorname{deg}g=n</m>.
-              </p>
-            </statement>
-          </theorem>
-
-          <theorem xml:id="thm-factor-thm"><title>Factor Theorem</title>
-            <statement>
-              <p>
-                Let <m>R</m> be a commutative ring with identity, <m>f(x)\in R[x]</m> and <m>a\in R</m>. Then <m>f(a)=0</m> if and only if <m>(x-a)|f(x)</m>. 
-              </p>
-            </statement>
-          </theorem>
-          
-        </section>
-
       </chapter>
 
       <chapter xml:id="ch-idealquot"><title>Ideals and Quotient Rings</title>
@@ -8758,7 +8703,15 @@
     
           <subsection xml:id="subsec-ideal-def"><title>Ideal or No Deal</title>
 
-            <blockquote><p><q>It is a useless life that is not consecrated to a great ideal. It is like a stone wasted on the field without becoming a part of any edifice.</q></p><attribution>Jose Rizal</attribution></blockquote>
+            <blockquote>
+              <p>
+                <q>
+                  It is a useless life that is not consecrated to a great ideal. 
+                  It is like a stone wasted on the field without becoming a part of any edifice.
+                </q>
+              </p>
+              <attribution>Jose Rizal</attribution>
+            </blockquote>
             
             <definition xml:id="def-ideal"><title>Ideal</title>
               <statement>
@@ -8777,15 +8730,12 @@
                       </p>
                     </li>
                   </ol>
-    
                   For a ring <m>R</m>, a <em>proper ideal</em> is an ideal <m>I</m> such that <m>I\neq R</m>.
                 </p>
               </statement>
             </definition>
-
-            <p>To simplify to an excessive degree, ideals are the normal subgroups of rings. This is not <q>accurate</q> in the techincal sense, but it does communicate the vibe of what ideals are and how we will be using them in this text.</p>
     
-            <example xml:id="ex-ideal-examples"><title>Examples of Ideals</title>
+            <example xml:id="ex-ideal-examples"><title>Ideals</title>
               <p>
                 <ul>
                   <li>
@@ -8813,7 +8763,9 @@
               </p>
             </example>
 
-            <p>A fun fact about ideals is that they are subrings.</p>
+            <p>
+              A fun fact about ideals is that they are subrings.
+            </p>
 
             <proposition xml:id="prop-ideals-are-subrings"><title>Ideals are Subrings</title>
               <statement>
@@ -8823,178 +8775,126 @@
               </statement>
             </proposition>
 
-            <p>The converse need not be true, however.</p>
+            <p>
+              The converse need not be true, however.
+            </p>
 
             <exercise><title>Subrings Need not be Ideals</title>
-            <statement>
-              <p>
-                Find, with justification, a subring which is not an ideal.
-              </p>
-            </statement>
+              <statement>
+                <p>
+                  Find, with justification, a subring which is not an ideal.
+                </p>
+              </statement>
     
               <solution>
                 <p>
-                  For example, in <m>\R[x]</m>, the set <m>S</m> of polynomials for which every term has even degree is a subring (it's closed under subtraction and multiplication), but it is not an ideal because it is not closed under multiplication by arbitrary polynomials. Indeed, <m>p(x)=x^2\in S</m>, but <m>xp(x)=x^3\not\in S</m>.
+                  In <m>\R[x]</m>, the set <m>S</m> of polynomials for which every term has even degree is a subring (it's closed under subtraction and multiplication), but it is not an ideal because it is not closed under multiplication by arbitrary polynomials. 
+                  Indeed, <m>p(x)=x^2\in S</m>, but <m>xp(x)=x^3\not\in S</m>.
                 </p>
               </solution>
             </exercise>
 
-            <p>Another fun fact is that we can combine ideals in all sorts of ways to get new ones!</p>
+            <p>
+              Another fun fact is that we can combine ideals in all sorts of ways to get new ones!
+            </p>
 
-            <proposition xml:id="prop-properties-of-ideals"><title>Combinations of Ideals</title>
-            <statement>
-              <p>
-                Let <m>R</m> be a ring and let <m>I,J</m> be ideals of <m>R</m>. Then 
-                <ol>
-                  <li>
-                    <p>
-                      <m>I + J := \{a + b \mid a \in I, b \in J\}</m> is an ideal 
-                    </p>
-                  </li>
-  
-                  <li>
-                    <p>
-                      <m>I\cap J</m> is an ideal 
-                    </p>
-                  </li>
-  
-                  <li>
-                    <p>
-                      <m>IJ=\{\sum_{i=1}^n a_ib_j \mid n\geq 0, a_i\in I, b_j\in J\}</m> is an ideal and <m>IJ\subseteq I\cap J</m>. 
-                    </p>
-                  </li>
-  
-                  <li>
-                    <p>
-                      The intersection <m>\bigcap_{\a\in J} I_\a</m> of any collection of ideals <m>I_\a</m> of <m>R</m> is an ideal. 
-                    </p>
-                  </li>
-                </ol>
-                
-                The set of all ideals of a ring <m>R</m> is a lattice with respect to the partial order given by containment. In this lattice, the supremum of a pair of ideals <m>I,J</m> is <m>I+J</m> and the infimum is <m>I\cap J</m>.
-              </p>
-            </statement>
-            </proposition>
+            <theorem xml:id="thm-properties-of-ideals"><title>Combinations of Ideals</title>
+              <statement>
+                <p>
+                  Let <m>R</m> be a ring and let <m>I,J</m> be ideals of <m>R</m>. 
+                  Then 
+                  <ol>
+                    <li>
+                      <p>
+                        <m>I + J := \{a + b \mid a \in I, b \in J\}</m> is an ideal 
+                      </p>
+                    </li>
+    
+                    <li>
+                      <p>
+                        <m>I\cap J</m> is an ideal 
+                      </p>
+                    </li>
+    
+                    <li>
+                      <p>
+                        <m>IJ=\{\sum_{i=1}^n a_ib_j \mid n\geq 0, a_i\in I, b_j\in J\}</m> is an ideal and <m>IJ\subseteq I\cap J</m>. 
+                      </p>
+                    </li>
+    
+                    <li>
+                      <p>
+                        The intersection <m>\bigcap_{\a\in J} I_\a</m> of any collection of ideals <m>I_\a</m> of <m>R</m> is an ideal. 
+                      </p>
+                    </li>
+                  </ol>
+                  The set of all ideals of a ring <m>R</m> forms a lattice with respect to the partial order given by containment. 
+                  In this lattice, the supremum of a pair of ideals <m>I,J</m> is <m>I+J</m> and the infimum is <m>I\cap J</m>.
+                </p>
+              </statement>
+            </theorem>
 
             <exercise xml:id="exe-the-union-of-ideals-need-not-be-an-ideal"><title>Union of Ideals Need not be an Ideal</title>
               <p>
-              Give an example
-              </p>
-            </exercise>
-    
-            <p>Ideals are also commutative and associative. This is taken for granted or stated as tedious in most cases, but we include it here to be thorough.</p>
-  
-            <exercise xml:id="exe-ideals-are-commutative-and-associative"><title>Ideals Commute and Associate</title>
-              <p>
-                Let <m>I,J,K</m> be ideals in <m>R</m>. Then 
-                <ul>
-                  <li>
-                    <p>
-                      <m>I+J=J+I</m> 
-                    </p>
-                  </li>
-    
-                  <li>
-                    <p>
-                      <m>(I+J)+K=I+(J+K)</m> 
-                    </p>
-                  </li>
-    
-                  <li>
-                    <p>
-                      <m>I\cap J=J\cap I</m> 
-                    </p>
-                  </li>
-    
-                  <li>
-                    <p>
-                      <m>(I\cap J)\cap K=I\cap(J\cap K)</m> 
-                    </p>
-                  </li>
-    
-                  <li>
-                    <p>
-                      <m>IJ=JI</m> 
-                    </p>
-                  </li>
-    
-                  <li>
-                    <p>
-                      <m>(IJ)K=I(JK)</m>
-                    </p>
-                  </li>
-                </ul>
-              </p>
-            </exercise>
-
-            <p>For those interested in digging a little deeper into ideal arithmetic, here are some more properties to investigate.</p>
-
-            <exercise xml:id="exe-ideals-distribute-in-z"><title>Ideals Distribute in <m>\Z</m></title>
-              <p>
-                Let <m>I,J,K</m> be ideals in <m>\Z</m>. Then 
-                <me>
-                  I(J+K)=IJ+IK
-                </me>
-              </p>
-            </exercise>
-    
-            <exercise xml:id="exe-ideals-do-not-distribute-in-general"><title>Ideals Don't Distribute in General</title>
-              <p>
-                Give an example of a ring where ideals do not distribute.
+                Give an example
               </p>
             </exercise>
     
             <exercise xml:id="exe-modular-law"><title>Modular Law</title>
               <p>
-                Let <m>I,J,K</m> be ideals in <m>R</m> such that <m>J\sse I</m> or <m>K\sse I</m>. Then 
+                Let <m>I,J,K</m> be ideals in <m>R</m> such that <m>J\sse I</m> or <m>K\sse I</m>. 
+                Then 
                 <me>
                   I\cap(J+K)=I\cap J+I\cap K
                 </me>
               </p>
             </exercise>
 
-            <p>And here are some important properties to wrap up on.</p>
+            <p>
+              And here are some important properties to wrap up on.
+            </p>
 
             <proposition xml:id="prop-proper-ideals"><title>Proper Ideals, Fields, and Units</title>
               <statement>
                 <p>
-                  An ideal <m>I</m> of a unital ring <m>R</m> is proper if and only if <m>I</m> contains no units. Moreover, if <m>F</m> is a field it has only two ideals <m>\{0\}</m> and <m>F</m>.
+                  An ideal <m>I</m> of a unital ring <m>R</m> is proper if and only if <m>I</m> contains no units. 
+                  Moreover, if <m>F</m> is a field it has only two ideals <m>\{0\}</m> and <m>F</m>.
                 </p>
               </statement>
             </proposition>
     
-            <proposition xml:id="prop-homomorphisms-and-ideals"><title>Homomorphisms and Ideals</title>
+            <theorem xml:id="thm-homomorphisms-and-ideals"><title>Homomorphisms and Ideals</title>
               <statement>
                 <p>
-                  If <m>f: R \to S</m> is a ring homomorphism, then 
+                  If <m>\varphi: R \to S</m> is a ring homomorphism, then 
                   <ol>
                     <li>
                       <p>
-                        the image of <m>f</m> is a subring of <m>S</m> and 
+                        the image of <m>\varphi</m> is a subring of <m>S</m> and 
                       </p>
                     </li>
     
                     <li>
                       <p>
-                        the kernel of <m>f</m> is an ideal of <m>R</m>. 
+                        the kernel of <m>\varphi</m> is an ideal of <m>R</m>. 
                       </p>
                     </li>
     
                     <li>
                       <p>
-                        <m>f</m> is injective if and only if <m>\ker(f)=\{0\}</m>. 
+                        <m>\varphi</m> is injective if and only if <m>\ker(\varphi)=\{0\}</m>. 
                       </p>
                     </li>
     
                     <li>
                       <p>
-                        if <m>I</m> is an ideal of <m>R</m> then <m>f(I)</m> is an ideal of <m>f(R)</m>. 
+                        if <m>I</m> is an ideal of <m>R</m> then <m>\varphi(I)</m> is an ideal of <m>\varphi(R)</m>. 
                       </p>
                     </li>
     
                     <li>
                       <p>
-                        if <m>J</m> is an ideal of <m>S</m> then <m>f^{-1}(J)</m> is an ideal of <m>R</m>.
+                        if <m>J</m> is an ideal of <m>S</m> then <m>\varphi^{-1}(J)</m> is an ideal of <m>R</m>.
                       </p>
                     </li>
                   </ol>
@@ -9005,12 +8905,15 @@
                 <p>
                   <ol>
                     <li>
-                    Since <m>f</m> is a ring homomorphism, it is in particular a group homomorphism <m>(R,+)\to (S,+)</m>. We know the kernel of a group homomorphism is a subgroup, so <m>\ker(f)\leq (S,+)</m>. All that remains to be shown is that for any <m>r\in R</m> <m>r\ker(f)\subseteq \ker(f)</m> and <m>\ker(f)r\subseteq \ker(f)</m>. Let <m>x\in \ker(f)</m>; then <m>f(x)=0</m> and <m>f(rx)=f(r)f(x)=0</m>, <m>f(xr)=f(x)f(r)=0</m> show <m>rx,xr\in \ker(f)</m>.
+                      Since <m></m> is a ring homomorphism, it is in particular a group homomorphism <m>(R,+)\to (S,+)</m>. 
+                      We know the kernel of a group homomorphism is a subgroup, so <m>\ker(f)\leq (S,+)</m>. 
+                      All that remains to be shown is that for any <m>r\in R</m> <m>r\ker(f)\subseteq \ker(f)</m> and <m>\ker(f)r\subseteq \ker(f)</m>. 
+                      Let <m>x\in \ker(f)</m>; then <m>f(x)=0</m> and <m>f(rx)=f(r)f(x)=0</m>, <m>f(xr)=f(x)f(r)=0</m> show <m>rx,xr\in \ker(f)</m>.
                     </li>
                   </ol>
                 </p>
               </proof>
-            </proposition>
+            </theorem>
     
           </subsection>
     
@@ -9018,7 +8921,9 @@
 
             <blockquote>
               <p>
-                <q>If you make yourself more than just a man, if you devote yourself to an ideal, you become something else entirely.</q>
+                <q>
+                  If you make yourself more than just a man, if you devote yourself to an ideal, you become something else entirely.
+                </q>
               </p>
               <attribution>Liam Neeson, Batman Begins</attribution>
             </blockquote>
@@ -9035,11 +8940,18 @@
               </statement>
             </definition>
 
-            <remark><p>It is common for <m>\igen A</m> to be written as <m>(A)</m>; this is often taken as the standard notation. We will not do so here to maintain notational consistency and to avoid confusion.</p></remark>
+            <aside>
+              <p>
+                It is common for <m>\igen A</m> to be written as <m>(A)</m>; 
+                this is often taken as the standard notation. 
+                We will not do so here to maintain notational consistency and to avoid confusion.
+              </p>
+            </aside>
     
             <remark>
               <p>
-                By Proposition, <m>\igen A</m> is an ideal and it is the smallest ideal of <m>R</m> that contains <m>A</m>.
+                By <xref ref="thm-properties-of-ideals"/>, <m>\igen A</m> is an ideal. 
+                It is also the smallest ideal of <m>R</m> that contains <m>A</m>.
               </p>
             </remark>
     
@@ -9063,13 +8975,17 @@
                 <ul>
                   <li>
                     <p>
-                      In the commutative ring <m>\Z</m>, we have <m>\igen{2,3}=\igen 1=\Z</m>. Indeed any element <m>n\in \Z</m> can be written as <m>n=(-n)\cdot 2+n\cdot 3=n\cdot 1</m>. Note that <m>1=\gcd(2,3)</m>.
+                      In the commutative ring <m>\Z</m>, we have <m>\igen{2,3}=\igen 1=\Z</m>. 
+                      Indeed any element <m>n\in \Z</m> can be written as <m>n=(-n)\cdot 2+n\cdot 3=n\cdot 1</m>. 
+                      Note that <m>1=\gcd(2,3)</m>.
                     </p>
                   </li>
     
                   <li>
                     <p>
-                      In the commutative ring <m>\Z</m>, we have <m>\igen{2,4}=\igen 2=2\Z</m>, the set of all even integers. Notice this shows that different sets can generate the same ideal. Also note that <m>2=\gcd(2,4)</m>.
+                      In the commutative ring <m>\Z</m>, we have <m>\igen{2,4}=\igen 2=2\Z</m>, the set of all even integers. 
+                      Notice this shows that different sets can generate the same ideal. 
+                      Also note that <m>2=\gcd(2,4)</m>.
                     </p>
                   </li>
                 </ul>
@@ -9078,14 +8994,15 @@
     
             <exercise xml:id="exe-finite-generated-ideal-and-nilpotent"><title>Finitely Generated Ideals and Nilpotent Elements </title>
               <p>
-                Let <m>I</m> be a finitely generated ideal of <m>R</m>. Suppose every element of <m>I</m> is nilpotent. Prove that there exists an integer <m>n\geq 1</m> such that <m>b^n=0</m> for all <m>b\in I</m>.
+                Let <m>I</m> be a finitely generated ideal of <m>R</m>. 
+                Suppose every element of <m>I</m> is nilpotent. 
+                Prove that there exists an integer <m>n\geq 1</m> such that <m>b^n=0</m> for all <m>b\in I</m>.
               </p>
             </exercise>
     
             <exercise><title>Infinitely Generated Ideal</title>
               <p>
                 Let <m>I=\{f\in \cC[0,1]|f(x)=0\text{ on } [0,b]\;\text{for some}\; b&gt;0\}</m>
-    
                 <ol>
                   <li>
                     <p>
@@ -9112,7 +9029,9 @@
 
             <blockquote>
               <p>
-                <q>Fools ignore complexity. Pragmatists suffer it. Some can avoid it. Geniuses remove it.</q>
+                <q>
+                  Fools ignore complexity. Pragmatists suffer it. Some can avoid it. Geniuses remove it.
+                </q>
               </p>
               <attribution>Alan Perlis</attribution>
             </blockquote>
@@ -9120,7 +9039,8 @@
             <lemma xml:id="lem-cosets-abelian"><title>Additive Cosets form Abelian Group</title>
               <statement>
                 <p>
-                  For a two-sided ideal <m>I</m> of <m>R</m>, the set of additive cosets modulo <m>I</m> is <m>R/I=\{r+I : r\in R\}.</m> This is an abelian group with respect to addition given by <m>(r + I) + (s + I) = (r +s ) + I</m>.
+                  For a two-sided ideal <m>I</m> of <m>R</m>, the set of additive cosets modulo <m>I</m> is <m>R/I=\{r+I : r\in R\}.</m> 
+                  This is an abelian group with respect to addition given by <m>(r + I) + (s + I) = (r +s ) + I</m>.
                 </p>
               </statement>
             </lemma>
@@ -9128,7 +9048,7 @@
             <definition xml:id="def-quotient-ring"><title>Quotient Ring</title>
               <statement>
                 <p>
-                  For a two-sided ideal <m>I</m> of <m>R</m> The <em>quotient ring</em> of <m>R</m> modulo <m>I</m> is the set <m>R/I</m> with addition defined as above and multiplication given by <m>(r + I) \cdot (s + I) = (rs) + I.</m>
+                  For a two-sided ideal <m>I</m> of <m>R</m> The <em>quotient ring</em> of <m>R</m> modulo <m>I</m> is the set <m>R/I</m> with addition defined as above and multiplication given by <m>(r + I) \cdot (s + I) = (rs) + I</m>.
                 </p>
               </statement>
             </definition>
@@ -9139,7 +9059,9 @@
               </p>
             </exercise>
 
-            <p>Just like we had with groups, it turns out our dear friend <m>\Z/n</m> has been a quotient all along.</p>
+            <p>
+              Just like we had with groups, it turns out our dear friend <m>\Z/n</m> has been a quotient all along.
+            </p>
     
             <example xml:id="ex-quotient-of-z"><title>Quotients of <m>\Z</m></title>
               <p>
@@ -9147,9 +9069,15 @@
               </p>
             </example>
 
-            <remark><p>This is where the common notation <m>\Z/(n)</m> comes from, even though it should be <m>\Z/\igen n</m> anyway.</p></remark>
+            <aside>
+              <p>
+                This is where the common notation <m>\Z/(n)</m> comes from, even though it should be <m>\Z/\igen n</m> anyway.
+              </p>
+            </aside>
 
-            <p>And, once again, we have a quotient map that turns out to be a homomorphism.</p>
+            <p>
+              And, once again, we have a quotient map that turns out to be a homomorphism.
+            </p>
     
             <exercise xml:id="quotient-map-is-surjective-homomorphism"><title>Quotient Map is Surjective Ring Map</title>
               <p>
@@ -9157,12 +9085,16 @@
               </p>
             </exercise>
 
-            <p>Last but certainly not least, we have an analogue of <xref ref="thm-norm-iff-ker"/> for ideals.<fn>Once again, I would like to suggest that <q>ideal subgroup</q> is a far better name for a normal subgroup.</fn></p>
+            <p>
+              Last but certainly not least, we have an analogue of <xref ref="thm-norm-iff-ker"/> for ideals.
+              <fn>Once again, I would like to suggest that <q>ideal subgroup</q> is a far better name for a normal subgroup.</fn>
+            </p>
     
             <theorem xml:id="thm-ideal-iff-kernel-of-ring-map"><title>Ideal iff Kernel of Ring Map</title>
               <statement>
                 <p>
-                  Let <m>R</m> be a ring. A subset <m>I</m> of <m>R</m> is an ideal of <m>R</m> if and only if there exists a ring homomorphism <m>\varphi</m> such that <m>\ker(\varphi)=I</m>.
+                  Let <m>R</m> be a ring. 
+                  A subset <m>I</m> of <m>R</m> is an ideal of <m>R</m> if and only if there exists a ring homomorphism <m>\varphi</m> such that <m>\ker(\varphi)=I</m>.
                 </p>
               </statement>
             </theorem>         
@@ -9171,21 +9103,32 @@
     
           <subsection xml:id="subsec-ring-iso-thms"><title>The Ring Isomorphism Theorems</title>
 
-            <blockquote><p><q>I'm not a very structured person, so when I get some structure, it's cool; it's good for me.</q></p><attribution>J. Cole</attribution></blockquote>
+            <blockquote>
+              <p>
+                <q>
+                  I'm not a very structured person, so when I get some structure, it's cool; it's good for me.
+                </q>
+              </p><attribution>J. Cole</attribution>
+            </blockquote>
 
-            <p>We arrive at the isomorphism theorems for rings. We've seen most of this stuff before in different packaging, so lets jump right in.</p>
+            <p>
+              We arrive at the isomorphism theorems for rings. 
+              We've seen most of this stuff before in different packaging, so lets jump right in.
+            </p>
 
             <theorem xml:id="thm-ump-for-quotient-rings"><title>UMP for Quotient Rings</title>
-              
               <statement>
                 <p>
-                  If <m>f: R \to S</m> is a ring homomorphism and <m>I \subseteq R</m> is an ideal such that <m>I \subseteq \ker(f)</m>, there exists a well defined ring homomorphism <m>\overline{f}: R/I \to S</m> such that <m>\overline{f} (r+I) = f(r)</m>. Furthermore, if <m>f</m> is surjective then <m>\overline{f}</m> is surjective and if <m>I=\ker(f)</m> then <m>\overline{f}</m> is injective.
+                  If <m>f: R \to S</m> is a ring homomorphism and <m>I \subseteq R</m> is an ideal such that <m>I \subseteq \ker(f)</m>, there exists a well defined ring homomorphism <m>\overline{f}: R/I \to S</m> such that <m>\overline{f} (r+I) = f(r)</m>. 
+                  Furthermore, if <m>f</m> is surjective then <m>\overline{f}</m> is surjective and if <m>I=\ker(f)</m> then <m>\overline{f}</m> is injective.
                 </p>
               </statement>
     
               <proof>
                 <p>
-                  Ignoring <m>\cdot</m> for a minute, we know that there is a unique homomorphism <m>\overline{f}</m> of abelian groups from <m>(R/I, +)</m> to <m>(S, +)</m> such that <m>\overline{f} (r+I) = f(r)</m>. It remains only to check that <m>\overline{f}</m> preserves multiplication: Given elements <m>r + I, s + I \in R/I</m>, their product is <m>rs + I</m>, and we have 
+                  Ignoring <m>\cdot</m> for a minute, we know that there is a unique homomorphism <m>\overline{f}</m> of abelian groups from <m>(R/I, +)</m> to <m>(S, +)</m> such that <m>\overline{f} (r+I) = f(r)</m>. 
+                  It remains only to check that <m>\overline{f}</m> preserves multiplication: 
+                  Given elements <m>r + I, s + I \in R/I</m>, their product is <m>rs + I</m>, and we have 
                   <me>
                     \overline{f}(rs + I) = f(rs) = f(r)f(s) = f(r + I) f(s +I),
                   </me> 
@@ -9194,8 +9137,7 @@
               </proof>
             </theorem>
     
-            <theorem xml:id="thm-ring-fit"><title>First Isomorphism Theorem for Rings</title>
-               
+            <theorem xml:id="thm-ring-fit"><title>First Isomorphism Theorem for Rings</title>           
               <statement>
                 <p>
                   If <m>f: R \to S</m> is a ring homomorphism, then <m>R/\ker(f)\cong \im(f)</m> via the map <m>\overline{f}</m> given by <m>\ov{f}(r + \ker(f)) = f(r)</m>.
@@ -9204,16 +9146,17 @@
     
               <proof>
                 <p>
-                  The map <m>\overline{f}</m> is a well-defined ring homomorphism by <xref ref="thm-ump-for-quotient-rings"/>. By the <xref text="title" ref="thm-fit-group"/> for groups, the map <m>\ov{f}</m> is bijective, finishing the proof.
+                  The map <m>\overline{f}</m> is a well-defined ring homomorphism by <xref ref="thm-ump-for-quotient-rings"/>. 
+                  By the <xref text="title" ref="thm-fit-group"/> for groups, the map <m>\ov{f}</m> is bijective, finishing the proof.
                 </p>
               </proof>
             </theorem>
     
             <theorem xml:id="thm-ring-sit"><title>Second Isomorphism Theorem for Rings</title>
- 
               <statement>
                 <p>
-                  Let <m>S</m> be a subring and let <m>I</m> be an ideal of <m>R</m>. Then <m>S + I = \{s + i \mid s \in S, i \in I\}</m> is a subring of <m>R</m>, <m>S \cap I</m> is an ideal of <m>S</m>, and 
+                  Let <m>S</m> be a subring and let <m>I</m> be an ideal of <m>R</m>. 
+                  Then <m>S + I = \{s + i \mid s \in S, i \in I\}</m> is a subring of <m>R</m>, <m>S \cap I</m> is an ideal of <m>S</m>, and 
                   <me>
                     \frac{S+I}{I}\cong \frac{S}{S\cap I}.
                   </me>                
@@ -9222,7 +9165,6 @@
             </theorem>
     
             <theorem xml:id="thm-ring-tit"><title>Third Isomorphism Theorem for Rings</title>
-              
               <statement>
                 <p>
                   If <m>R</m> is a ring and <m>I \subseteq J</m> are two ideals of <m>R</m>, then <m>J/I</m> is an ideal of <m>R/I</m> and 
@@ -9234,10 +9176,10 @@
             </theorem>
     
             <theorem xml:id="thm-ring-lit"><title>Lattice Isomorphism Theorem for Quotient Rings</title>
-         
               <statement>
                 <p>
-                  Suppose <m>R</m> is a ring and <m>I</m> is a two-sided ideal of <m>R,</m> and write <m>\pi: R \to R/I</m> for the quotient ring homomorphism. There is a bijection 
+                  Suppose <m>R</m> is a ring and <m>I</m> is a two-sided ideal of <m>R,</m> and write <m>\pi: R \to R/I</m> for the quotient ring homomorphism. 
+                  There is a bijection 
                   <me>
                     \Psi:\{\text{subrings of }R\text{ containing }I\}\to \{\text{subrings of }R/I\}, \Psi(S)=\pi(S)=S/I
                   </me> 
